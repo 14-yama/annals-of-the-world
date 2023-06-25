@@ -1,0 +1,103 @@
+----------------------------------------
+|                Person                   |
+----------------------------------------
+| - name: string                          |
+| - gender: string                        |
+| - father: Person                        |
+| - mother: Person                        |
+| - children: Person[]                    |
+| - socialStatus: string                  |  Commoner:Prostitute, Shepard; 
+| - misfortunes: string[]                 |
+----------------------------------------
+| + getName(): string                     |
+| + getGender(): string                   |
+| + getFather(): Person                   |
+| + getMother(): Person                   |
+| + getChildren(): Person[]               |
+| + setFather(father: Person)             |
+| + setMother(mother: Person)             |
+| + addChild(child: Person)               |
+| + getSocialStatus(): string             |
+| + setSocialStatus(status: string)       |
+| + getMisfortunes(): string[]            |
+| + addMisfortune(misfortune: string)     |
+----------------------------------------
+
+
+----------------------------------------
+|             SocialBehavior            |
+----------------------------------------
+| - greet(person: Person): void         |
+| - engageInConversation(): void        |
+| - offerHelp(): void                    |
+| - shareExperiences(): void            |
+| - expressGratitude(): void            |
+| - sayGoodbye(): void                  |
+| - offerGifts(): void                  |
+| - hostCeremonies(): void              |
+| - grantAudiences(): void              |
+| - participateInPatronage(): void      |
+| - engageInDiplomaticMarriages(): void |
+| - demonstrateEtiquette(): void        |
+| - promoteArtsAndCulture(): void       |
+| - engageInRituals(): void             |
+| - showcaseWealth(): void              |
+| - exchangeGifts(): void               |
+| - maintainCourt(): void               |
+----------------------------------------
+| + greet(person: Person): void         |
+| + engageInConversation(): void        |
+| + offerHelp(): void                    |
+| + shareExperiences(): void            |
+| + expressGratitude(): void            |
+| + sayGoodbye(): void                  |
+| + offerGifts(): void                  |
+| + hostCeremonies(): void              |
+| + grantAudiences(): void              |
+| + participateInPatronage(): void      |
+| + engageInDiplomaticMarriages(): void |
+| + demonstrateEtiquette(): void        |
+| + promoteArtsAndCulture(): void       |
+| + engageInRituals(): void             |
+| + showcaseWealth(): void              |
+| + exchangeGifts(): void               |
+| + maintainCourt(): void               |
+----------------------------------------
+----------------------------------------
+|           ConflictBehavior           |
+----------------------------------------
+| - commandArmies(): void              |
+| - leadTroops(): void                 |
+| - initiateMilitaryCampaign(): void   |
+| - negotiateTreaties(): void          |
+| - engageInEspionage(): void          |
+| - enactTradeEmbargoes(): void        |
+| - deployDiplomaticEnvoys(): void      |
+| - engageInPropaganda(): void         |
+| - formAlliances(): void              |
+| - conductSieges(): void              |
+| - captureTerritories(): void         |
+| - seekDiplomaticSupport(): void      |
+| - demandTributes(): void             |
+| - enslaveInhabitants(): void         |
+| - plunderCountries(): void           |
+| - plunderCities(): void              |
+----------------------------------------
+| + commandArmies(): void              |
+| + leadTroops(): void                 |
+| + initiateMilitaryCampaign(): void   |
+| + negotiateTreaties(): void          |
+| + engageInEspionage(): void          |
+| + enactTradeEmbargoes(): void        |
+| + deployDiplomaticEnvoys(): void      |
+| + engageInPropaganda(): void         |
+| + formAlliances(): void              |
+| + conductSieges(): void              |
+| + captureTerritories(): void         |
+| + seekDiplomaticSupport(): void      |
+| + demandTributes(): void             |
+| + enslaveInhabitants(): void         |
+| + plunderCountries(): void           |
+| + plunderCities(): void              |
+----------------------------------------
+
