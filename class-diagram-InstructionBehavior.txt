@@ -11,3 +11,32 @@ and followInstructionsFrom(Person). Joshua, Aaron, and Miriam are individuals wh
 Additionally, Jethro is another person who can delegateTaskTo(Person). 
 These behaviors demonstrate the interaction between different individuals in terms of giving instructions,
 performing tasks, delegating tasks, and following instructions.
+
+***********************************************************************************************************
+Certainly! Here are some examples from the Bible that demonstrate the usage of the InstructionBehavior class with its properties:
+
+Instructing Task:
+
+Person: Moses
+Task: Build the tabernacle according to the instructions given on Mount Sinai.
+Reference: Exodus 25-31
+Method Call: Instruct(Moses, "Build the tabernacle", "Exodus 25-31")
+Performing Task:
+
+Person: Bezalel
+Task: Create the artistic elements and furnishings for the tabernacle as instructed by Moses.
+Reference: Exodus 35:30-35
+Method Call: PerformTask("Create artistic elements", "Exodus 35:30-35")
+Delegating Task:
+
+Person: Moses
+Task: Appoint Joshua as the leader to lead the Israelites into the Promised Land.
+Reference: Numbers 27:18-23
+Method Call: DelegateTask(Moses, "Appoint Joshua as leader", "Numbers 27:18-23")
+Following Instructions:
+
+Person: Israelites
+Instructions: Observe the Passover by sacrificing a lamb and applying its blood to the doorposts.
+Reference: Exodus 12:1-28
+Method Call: FollowInstructions(["Observe the Passover"], "Exodus 12:1-28")
+These examples demonstrate how the InstructionBehavior class can be used to represent different instances of instructing, performing, delegating, and following instructions in the Bible, with each example providing a specific task, reference, and involved individuals.
