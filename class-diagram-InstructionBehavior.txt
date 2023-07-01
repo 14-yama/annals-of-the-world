@@ -1,0 +1,13 @@
+ ---------------------------------------
+|        InstructionBehavior            |
+ ---------------------------------------
+| - Instruct(person: Person, task: string, reference: string): void |
+| - PerformTask(task: string, reference: string): void     |
+| - DelegateTask(person: Person, task: string, reference: string): void |
+| - FollowInstructions(instructions: string[], reference: string): void |
+ ---------------------------------------
+In this example, we have Moses as the central person who can instructAndDoTask(), delegateTaskTo(Person), 
+and followInstructionsFrom(Person). Joshua, Aaron, and Miriam are individuals who can performTask() based on instructions received.
+Additionally, Jethro is another person who can delegateTaskTo(Person). 
+These behaviors demonstrate the interaction between different individuals in terms of giving instructions,
+performing tasks, delegating tasks, and following instructions.
