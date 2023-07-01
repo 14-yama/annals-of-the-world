@@ -5,7 +5,9 @@
 | - PerformTask(task: string, reference: string): void     |
 | - DelegateTask(person: Person, task: string, reference: string): void |
 | - FollowInstructions(instructions: string[], reference: string): void |
+| - Request(person: Person, task: string, reference: string): void |
  ---------------------------------------
+
 In this example, we have Moses as the central person who can instructAndDoTask(), delegateTaskTo(Person), 
 and followInstructionsFrom(Person). Joshua, Aaron, and Miriam are individuals who can performTask() based on instructions received.
 Additionally, Jethro is another person who can delegateTaskTo(Person). 
