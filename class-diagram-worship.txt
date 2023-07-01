@@ -34,3 +34,37 @@ In this updated diagram, the functions are grouped into two categories: Personal
 The Corporate Worship section includes functions related to communal or group worship activities such as engaging in corporate worship, attending the Sabbath, attending various feasts (Passover, Unleavened Bread, Firstfruits, Pentecost, Trumpets, Day of Atonement, Tabernacles), performing the ritual of circumcision, observing ritual purification, and participating in ritual sacrifices.
 
 This ordering reflects the distinction between personal and communal worship practices in the context of Israelite worship.
+
+ ---------------------------------------
+|              Prophecy                 |
+ ---------------------------------------
+| - ProphecyMaker: King Henry VIII      |
+| - ProphecyRecipients: [Person, City, Place]|
+| - Fulfilled: boolean                  |
+| - ProphecyDetails: string             |
+| - ProphecyType: string ("Positive" or "Negative")|
+| - Reference: string                   |
+| - ProphecyContributors: [Person, MilitaryCampaign]|
+ ---------------------------------------
+
+ ------------------------------------
+|                Curse                |
+ ------------------------------------
+| - CurseDetails: string              |
+| - Recipient: Person, City, or Place |
+| - Caster: Person                     |
+| - Reference: string                  |
+| - Contributors: [Person, MilitaryCampaign]|
+| - Fulfilled: boolean                 |
+ ------------------------------------
+
+ -------------------------------------
+|              Blessing               |
+ -------------------------------------
+| - BlessingDetails: string           |
+| - Recipient: Person, City, or Place |
+| - Caster: Person                     |
+| - Reference: string                  |
+| - Contributors: [Person, MilitaryCampaign]|
+| - Fulfilled: boolean                 |
+ ------------------------------------
