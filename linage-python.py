@@ -121,7 +121,7 @@ add_children("Nahor", family_tree["Terah"].uuid, ["Uz", "Buz", "Kemuel", "Chesed
 add_children("Haran", family_tree["Terah"].uuid, ["Milcah", "Lot", "Iscah"])
 
 # 21 Generation
-add_children("Isaac", family_tree["Abraham (Abram)"].uuid, ["Esau", "Jacob (Israel)"])
+add_children("Isaac", family_tree["Abraham (Abram)"].uuid, ["Esau", "Jacob"])
 add_children("Ishmael", family_tree["Abraham (Abram)"].uuid, ["Nabaioth (Nebajoth)", "Kedar", "Adbeel", "Mibsam", "Mishma", "Dumah", "Massa", "Hadad", "Tema", "Jetur", "Napsish", "Kedemah", "Mahalath", "Bashemath"])
 add_children("Jokshan", family_tree["Abraham (Abram)"].uuid, ["Sheba", "Dedan"])
 add_children("Midian", family_tree["Abraham (Abram)"].uuid, ["Ephah", "Epher", "Hanoch", "Abida", "Eldaah"])
@@ -131,25 +131,25 @@ add_children("Lot", family_tree["Haran"].uuid, ["First Daughter", "Second Daught
 
 # 22 Generation
 add_children("Esau", family_tree["Isaac"].uuid, ["Timnah*", "Aliah*", "Jetheth*", "Oholibamah*", "Elah*", "Pinon*", "Mibzar*", "Magdiel*", "Iram*", "Eliphaz", "Jeush", "Jaalam", "Korah", "Reuel"])
-add_children("Jacob (Israel)", family_tree["Isaac"].uuid, ["Reuben", "Simeon", "Levi", "Judah", "Issachar", "Zebulun", "Dinah", "Joseph", "Benjamin", "Dan", "Naphtali", "Gad", "Asher"])
+add_children("Jacob", family_tree["Isaac"].uuid, ["Reuben", "Simeon", "Levi", "Judah", "Issachar", "Zebulun", "Dinah", "Joseph", "Benjamin", "Dan", "Naphtali", "Gad", "Asher"])
 add_children("Dedan", family_tree["Jokshan"].uuid, ["Asshurim", "Letushim", "Leummim"])
 add_children("Laban", family_tree["Bethuel"].uuid, ["Leah", "Rachel"])
 
 # 23 Generation
 add_children("Eliphaz", family_tree["Esau"].uuid, ["Teman", "Omar", "Zepho", "Gatam", "Kenaz", "Korah", "Timna", "Amalek"])
 add_children("Reuel", family_tree["Esau"].uuid, ["Nahath*", "Zerah*", "Shammah*", "Mizzah*"])
-add_children("Reuben", family_tree["Jacob (Israel)"].uuid, ["Hanoch", "Pallu", "Hezron", "Carmi", "Bohan*", "Elizur*", "Zaccur*", "Joel*", "Joel*", "Zichri*"])
-add_children("Simeon", family_tree["Jacob (Israel)"].uuid, ["Jemuel (Nemuel)", "Jamin", "Ohad", "Jarib", "Zerah", "Shaul", "Hori*"])
-add_children("Levi", family_tree["Jacob (Israel)"].uuid, ["Gershon", "Kohath", "Merari", "Jochebed", "Kemuel*", "Shimei*"])
-add_children("Judah", family_tree["Jacob (Israel)"].uuid, ["Er", "Onan", "Shelah", "Perez", "Zerah", "Shobal"])
-add_children("Issachar", family_tree["Jacob (Israel)"].uuid, ["Tola", "Puah", "Jashub (Job)", "Shimron", "Zuar*", "Michael*", "Dodo*", "Azzan*", "Joseph*"])
-add_children("Zebulun", family_tree["Jacob (Israel)"].uuid, ["Sered", "Elon", "Jahleel", "Elon*", "Helon*", "Sodi*", "Parnach*", "Obadiah*"])
-add_children("Joseph", family_tree["Jacob (Israel)"].uuid, ["Manasseh", "Ephraim"])
-add_children("Benjamin", family_tree["Jacob (Israel)"].uuid, ["Bela", "Jediael", "Becher", "Ashbel", "Gera", "Naaman", "Ehi", "Rosh", "Muppim", "Huppin", "Ard", "Aharah", "Nohah", "Rapha", "Aphiah*", "Matri*", "Gideoni*", "Raphu*", "Shaharaim*", "Chislon*", "Bichri*", "Rimmon*"])
-add_children("Dan", family_tree["Jacob (Israel)"].uuid, ["Hushim", "Ammiahaddai*", "Gemalli*", "Ahisamach*", "Dibri*", "Manoah*"])
-add_children("Naphtali", family_tree["Jacob (Israel)"].uuid, ["Jahzeel", "Geni", "Jezer", "Shillem", "Vopshi*", "Ammihud*", "Asiel*", "Enan*", "Azrel*"])
-add_children("Gad", family_tree["Jacob (Israel)"].uuid, ["Ziphion", "Haggi", "Shuni", "Ezbon", "Eri", "Arodi", "Areli", "Deuel*", "Machi*", "Unknown*", "Bani*", "Buz*", "Guni*", "Unknown Descendant of Gad*", "Joel*", "Shapham*", "Jannai*", "Shaphat*"])
-add_children("Asher", family_tree["Jacob (Israel)"].uuid, ["Imnah (Jimnah)", "Ishauah", "Isui", "Beriah", "Sarah", "Jether*", "Phanuel*", "Michael*"])
+add_children("Reuben", family_tree["Jacob"].uuid, ["Hanoch", "Pallu", "Hezron", "Carmi", "Bohan*", "Elizur*", "Zaccur*", "Joel*", "Joel*", "Zichri*"])
+add_children("Simeon", family_tree["Jacob"].uuid, ["Jemuel (Nemuel)", "Jamin", "Ohad", "Jarib", "Zerah", "Shaul", "Hori*"])
+add_children("Levi", family_tree["Jacob"].uuid, ["Gershon", "Kohath", "Merari", "Jochebed", "Kemuel*", "Shimei*"])
+add_children("Judah", family_tree["Jacob"].uuid, ["Er", "Onan", "Shelah", "Perez", "Zerah", "Shobal"])
+add_children("Issachar", family_tree["Jacob"].uuid, ["Tola", "Puah", "Jashub (Job)", "Shimron", "Zuar*", "Michael*", "Dodo*", "Azzan*", "Joseph*"])
+add_children("Zebulun", family_tree["Jacob"].uuid, ["Sered", "Elon", "Jahleel", "Elon*", "Helon*", "Sodi*", "Parnach*", "Obadiah*"])
+add_children("Joseph", family_tree["Jacob"].uuid, ["Manasseh", "Ephraim"])
+add_children("Benjamin", family_tree["Jacob"].uuid, ["Bela", "Jediael", "Becher", "Ashbel", "Gera", "Naaman", "Ehi", "Rosh", "Muppim", "Huppin", "Ard", "Aharah", "Nohah", "Rapha", "Aphiah*", "Matri*", "Gideoni*", "Raphu*", "Shaharaim*", "Chislon*", "Bichri*", "Rimmon*"])
+add_children("Dan", family_tree["Jacob"].uuid, ["Hushim", "Ammiahaddai*", "Gemalli*", "Ahisamach*", "Dibri*", "Manoah*"])
+add_children("Naphtali", family_tree["Jacob"].uuid, ["Jahzeel", "Geni", "Jezer", "Shillem", "Vopshi*", "Ammihud*", "Asiel*", "Enan*", "Azrel*"])
+add_children("Gad", family_tree["Jacob"].uuid, ["Ziphion", "Haggi", "Shuni", "Ezbon", "Eri", "Arodi", "Areli", "Deuel*", "Machi*", "Unknown*", "Bani*", "Buz*", "Guni*", "Unknown Descendant of Gad*", "Joel*", "Shapham*", "Jannai*", "Shaphat*"])
+add_children("Asher", family_tree["Jacob"].uuid, ["Imnah (Jimnah)", "Ishauah", "Isui", "Beriah", "Sarah", "Jether*", "Phanuel*", "Michael*"])
 # 24 Generation
 add_children("Reuben (1st)", family_tree[None].uuid, ["Pallu", "Zaccur*", "Joel*", "Joel*"])
 add_children("Pallu", family_tree["Reuben (1st)"].uuid, ["Eliab", "Peleth*"])
