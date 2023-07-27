@@ -368,6 +368,138 @@ add_children("Imna", family_tree["Hotham (Helem)"].uuid, [])
 add_children("Shelesh", family_tree["Hotham (Helem)"].uuid, [])
 add_children("Amal", family_tree["Hotham (Helem)"].uuid, [])
 
+#27 Generation
+# ... (Previous code for the 26th Generation)
+
+add_children("Shimei", family_tree["Gog"].uuid, [])
+add_children("Micah", family_tree["Shimei"].uuid, [])
+
+add_children("Mishma", family_tree["Mibsam"].uuid, [])
+add_children("Hammuel", family_tree["Mishma"].uuid, [])
+
+add_children("Zimmah", family_tree["Shimel"].uuid, [])
+add_children("Ethan", family_tree["Zimmah"].uuid, [])
+
+add_children("Ebiasaph", family_tree["Korah"].uuid, [])
+add_children("Assir", family_tree["Ebiasaph"].uuid, [])
+
+add_children("Shimei", family_tree["Libni"].uuid, [])
+add_children("Uzzah", family_tree["Shimei"].uuid, [])
+
+add_children("Shemer", family_tree["Mahli"].uuid, [])
+add_children("Bani", family_tree["Shemer"].uuid, [])
+
+add_children("Reaiah", family_tree["Shobel"].uuid, [])
+add_children("Jahath", family_tree["Reaiah"].uuid, [])
+
+add_children("Kiriath-jearim", family_tree["Shobel"].uuid, [])
+add_children("Ithrites", family_tree["Kiriath-jearim"].uuid, [])
+add_children("Puhites", family_tree["Kiriath-jearim"].uuid, [])
+add_children("Shumathites", family_tree["Kiriath-jearim"].uuid, [])
+add_children("Mishraites", family_tree["Kiriath-jearim"].uuid, [])
+
+add_children("Abinadab*", family_tree["Salma"].uuid, [])
+add_children("Eleazar", family_tree["Abinadab*"].uuid, [])
+add_children("Uzzah", family_tree["Abinadab*"].uuid, [])
+
+add_children("Shimon*", family_tree["Salma"].uuid, [])
+add_children("Amnon", family_tree["Shimon*"].uuid, [])
+add_children("Rinnah", family_tree["Shimon*"].uuid, [])
+add_children("Benhanan", family_tree["Shimon*"].uuid, [])
+add_children("Tilon", family_tree["Shimon*"].uuid, [])
+
+add_children("Phinehas", family_tree["Eleazer"].uuid, [])
+add_children("Abishua", family_tree["Phinehas"].uuid, [])
+
+add_children("Eli", family_tree["Ithamar"].uuid, [])
+add_children("Hophni", family_tree["Eli"].uuid, [])
+add_children("Phinehas", family_tree["Eli"].uuid, [])
+
+add_children("Jonathan", family_tree["Gershom"].uuid, [])
+add_children("Jeahdeiah", family_tree["Jonathan"].uuid, [])
+
+add_children("Ram", family_tree["Jerahmeel"].uuid, [])
+add_children("Maaz", family_tree["Ram"].uuid, [])
+add_children("Jamin", family_tree["Ram"].uuid, [])
+add_children("Eker", family_tree["Ram"].uuid, [])
+
+add_children("Onam", family_tree["Jerahmeel"].uuid, [])
+
+add_children("Amminadab", family_tree["Ram"].uuid, [])
+add_children("Nahshon (Naashon)", family_tree["Amminadab"].uuid, [])
+add_children("Elisheba", family_tree["Amminadab"].uuid, [])
+
+add_children("Juphunneh*", family_tree["Caleb (Chelubai)"].uuid, [])
+add_children("Caleb", family_tree["Juphunneh*"].uuid, [])
+add_children("Kenaz", family_tree["Juphunneh*"].uuid, [])
+add_children("Jehallele*", family_tree["Juphunneh*"].uuid, [])
+
+add_children("Mareshah", family_tree["Caleb (Chelubai)"].uuid, [])
+add_children("Hebron", family_tree["Mareshah"].uuid, [])
+
+add_children("Jahdai", family_tree["Caleb (Chelubai)"].uuid, [])
+add_children("Regem", family_tree["Jahdai"].uuid, [])
+add_children("Jotham", family_tree["Jahdai"].uuid, [])
+add_children("Geshan", family_tree["Jahdai"].uuid, [])
+add_children("Pelet", family_tree["Jahdai"].uuid, [])
+add_children("Ephah", family_tree["Jahdai"].uuid, [])
+add_children("Shaaph", family_tree["Jahdai"].uuid, [])
+
+add_children("Koz (Coz)", family_tree["Ashhur"].uuid, [])
+add_children("Anub", family_tree["Koz (Coz)"].uuid, [])
+add_children("Zobebah", family_tree["Koz (Coz)"].uuid, [])
+add_children("Harum", family_tree["Koz (Coz)"].uuid, [])
+
+add_children("Ulam", family_tree["Sheresh"].uuid, [])
+add_children("Bedan", family_tree["Ulam"].uuid, [])
+
+add_children("Shemida*", family_tree["Gilead"].uuid, [])
+add_children("Ahian", family_tree["Shemida*"].uuid, [])
+add_children("Shechem", family_tree["Shemida*"].uuid, [])
+add_children("Likhi", family_tree["Shemida*"].uuid, [])
+add_children("Aniam", family_tree["Shemida*"].uuid, [])
+
+add_children("Hepher*", family_tree["Gilead"].uuid, [])
+add_children("Zelophehad", family_tree["Hepher*"].uuid, [])
+
+add_children("Abiezer", family_tree["Hammolechet"].uuid, [])
+add_children("Joash*", family_tree["Abiezer"].uuid, [])
+
+add_children("Tahath", family_tree["Bered"].uuid, [])
+add_children("Eleadah", family_tree["Tahath"].uuid, [])
+
+add_children("Resheph", family_tree["Rephah"].uuid, [])
+add_children("Resheph", family_tree["Resheph"].uuid, [])
+
+add_children("Elihu", family_tree["Tohu"].uuid, [])
+add_children("Jeroham", family_tree["Elihu"].uuid, [])
+
+add_children("Abiel", family_tree["Zeror"].uuid, [])
+add_children("Kish", family_tree["Abiel"].uuid, [])
+add_children("Ner", family_tree["Abiel"].uuid, [])
+
+add_children("Gabael", family_tree["Raphael"].uuid, [])
+add_children("Aduel", family_tree["Gabael"].uuid, [])
+
+add_children("Michael", family_tree["Jeshishai"].uuid, [])
+add_children("Gilead", family_tree["Michael"].uuid, [])
+
+add_children("Zophah", family_tree["Hotham (Helem)"].uuid, [])
+add_children("Shuh", family_tree["Zophah"].uuid, [])
+add_children("Harnepher", family_tree["Zophah"].uuid, [])
+add_children("Shual", family_tree["Zophah"].uuid, [])
+add_children("Beri", family_tree["Zophah"].uuid, [])
+add_children("Imrah", family_tree["Zophah"].uuid, [])
+add_children("Bezer", family_tree["Zophah"].uuid, [])
+add_children("Hod", family_tree["Zophah"].uuid, [])
+add_children("Shamma", family_tree["Zophah"].uuid, [])
+add_children("Shilshah", family_tree["Zophah"].uuid, [])
+add_children("Ithran", family_tree["Zophah"].uuid, [])
+add_children("Beera", family_tree["Zophah"].uuid, [])
+
+# ... (Continuing for other individuals)
+
+
 
 
 # Function to print the family tree recursively
