@@ -150,6 +150,81 @@ add_children("Dan", family_tree["Jacob (Israel)"].uuid, ["Hushim", "Ammiahaddai*
 add_children("Naphtali", family_tree["Jacob (Israel)"].uuid, ["Jahzeel", "Geni", "Jezer", "Shillem", "Vopshi*", "Ammihud*", "Asiel*", "Enan*", "Azrel*"])
 add_children("Gad", family_tree["Jacob (Israel)"].uuid, ["Ziphion", "Haggi", "Shuni", "Ezbon", "Eri", "Arodi", "Areli", "Deuel*", "Machi*", "Unknown*", "Bani*", "Buz*", "Guni*", "Unknown Descendant of Gad*", "Joel*", "Shapham*", "Jannai*", "Shaphat*"])
 add_children("Asher", family_tree["Jacob (Israel)"].uuid, ["Imnah (Jimnah)", "Ishauah", "Isui", "Beriah", "Sarah", "Jether*", "Phanuel*", "Michael*"])
+# 24 Generation
+add_children("Reuben (1st)", family_tree[None].uuid, ["Pallu", "Zaccur*", "Joel*", "Joel*"])
+add_children("Pallu", family_tree["Reuben (1st)"].uuid, ["Eliab", "Peleth*"])
+add_children("Zaccur*", family_tree["Reuben (1st)"].uuid, ["Shammua"])
+add_children("Joel*", family_tree["Reuben (1st)"].uuid, ["Shemaiah"])
+add_children("Joel*", family_tree["Reuben (1st)"].uuid, ["Shema"])
+
+add_children("Simeon (2nd)", family_tree[None].uuid, ["Shaul", "Hori*"])
+add_children("Shaul", family_tree["Simeon (2nd)"].uuid, ["Shallum"])
+add_children("Hori*", family_tree["Simeon (2nd)"].uuid, ["Shaphat"])
+
+add_children("Levi (3rd)", family_tree[None].uuid, ["Gershon", "Kohath", "Merari", "Kemuel*", "Shimei*"])
+add_children("Gershon", family_tree["Levi (3rd)"].uuid, ["Libni (Ladan)", "Shimei", "Lael*", "Jahath"])
+add_children("Kohath", family_tree["Levi (3rd)"].uuid, ["Amram", "Izhar", "Hebron", "Uzziel"])
+add_children("Merari", family_tree["Levi (3rd)"].uuid, ["Mahli", "Mushi", "Hosah*", "Jaaziah*", "Abdi*"])
+add_children("Kemuel*", family_tree["Levi (3rd)"].uuid, ["Hashabiah"])
+add_children("Shimei*", family_tree["Levi (3rd)"].uuid, ["Shelomoth", "Haziel", "Haran", "Jahath", "Zina", "Jeush", "Beriah"])
+
+add_children("Judah (4th)", family_tree[None].uuid, ["Shelah", "Perez", "Zerah", "Shobal"])
+add_children("Shelah", family_tree["Judah (4th)"].uuid, ["Er", "Laadah", "Jokim", "Joash", "Saraph"])
+add_children("Perez", family_tree["Judah (4th)"].uuid, ["Hezron", "Hamul"])
+add_children("Zerah", family_tree["Judah (4th)"].uuid, ["Zimri (Zabdi)", "Ethan", "Heman", "Calcol", "Dara"])
+add_children("Shobal", family_tree["Judah (4th)"].uuid, ["Reaiah"])
+
+add_children("Issachar (9th)", family_tree[None].uuid, ["Tola", "Zuar*", "Michael*", "Dodo*", "Azzan*"])
+add_children("Tola", family_tree["Issachar (9th)"].uuid, ["Uzzi", "Rephaiah", "Jeriel", "Jahmai", "Ibsam", "Shemuel"])
+add_children("Zuar*", family_tree["Issachar (9th)"].uuid, ["Nethanel"])
+add_children("Michael*", family_tree["Issachar (9th)"].uuid, ["Omri"])
+add_children("Dodo*", family_tree["Issachar (9th)"].uuid, ["Puah"])
+add_children("Azzan*", family_tree["Issachar (9th)"].uuid, ["Paltiel"])
+
+add_children("Joseph (11th)", family_tree[None].uuid, ["Manasseh", "Ephraim"])
+add_children("Manasseh", family_tree["Joseph (11th)"].uuid, ["Asriel", "Machir", "Unknown"])
+add_children("Ephraim", family_tree["Joseph (11th)"].uuid, ["Shuthelah", "Beriah", "Shiphtan*", "Hillel*", "Azaziah*", "Zuph*"])
+
+add_children("Benjamin (12th)", family_tree[None].uuid, ["Bela", "Jediael", "Gera", "Aphiah*", "Matri*", "Gideoni*", "Raphu*", "Bichri*", "Rimmon*"])
+add_children("Bela", family_tree["Benjamin (12th)"].uuid, ["Ard (Addar)", "Naaman", "Ezbon", "Uzzi", "Uzziel", "Jerimoth", "Iri", "Gera"])
+add_children("Jediael", family_tree["Benjamin (12th)"].uuid, ["Bilhan"])
+add_children("Gera", family_tree["Benjamin (12th)"].uuid, ["Shimei*", "Ehud*"])
+add_children("Aphiah*", family_tree["Benjamin (12th)"].uuid, ["Bechorah"])
+add_children("Matri*", family_tree["Benjamin (12th)"].uuid, ["Jeiel*"])
+add_children("Gideoni*", family_tree["Benjamin (12th)"].uuid, ["Abidan"])
+add_children("Raphu*", family_tree["Benjamin (12th)"].uuid, ["Palti"])
+add_children("Bichri*", family_tree["Benjamin (12th)"].uuid, ["Sheba"])
+add_children("Rimmon*", family_tree["Benjamin (12th)"].uuid, ["Baanah", "Rechab"])
+
+add_children("Dan (5th)", family_tree[None].uuid, ["Ammiahaddai*", "Gemalli*", "Ahisamach*", "Dibri*", "Manoah*"])
+add_children("Ammiahaddai*", family_tree["Dan (5th)"].uuid, ["Ahiezer"])
+add_children("Gemalli*", family_tree["Dan (5th)"].uuid, ["Ammiel"])
+add_children("Ahisamach*", family_tree["Dan (5th)"].uuid, ["Oholiab"])
+add_children("Dibri*", family_tree["Dan (5th)"].uuid, ["Shelomith"])
+add_children("Manoah*", family_tree["Dan (5th)"].uuid, ["Samson"])
+
+add_children("Naphtali (6th)", family_tree[None].uuid, ["Vopshi*", "Ammihud*", "Asiel*", "Enan*", "Azrel*"])
+add_children("Vopshi*", family_tree["Naphtali (6th)"].uuid, ["Nahbi"])
+add_children("Ammihud*", family_tree["Naphtali (6th)"].uuid, ["Pedahel"])
+add_children("Asiel*", family_tree["Naphtali (6th)"].uuid, ["Raguel*"])
+add_children("Enan*", family_tree["Naphtali (6th)"].uuid, ["Ahira"])
+add_children("Azrel*", family_tree["Naphtali (6th)"].uuid, ["Jerimoth"])
+
+add_children("Gad (7th)", family_tree[None].uuid, ["Deuel*", "Machi*", "Unknown*", "Buz*", "Guni*", "Unknown Descendant of Gad*", "Rimmon*"])
+add_children("Deuel*", family_tree["Gad (7th)"].uuid, ["Eliasaph"])
+add_children("Machi*", family_tree["Gad (7th)"].uuid, ["Geuel"])
+add_children("Unknown*", family_tree["Gad (7th)"].uuid, ["Ezer*", "Obadiah*", "Eliab*", "Mishmannah*", "Jeremiah*", "Attai*", "Eliel*", "Johanan*", "Elzabad*", "Jeremiah*", "Machbanai*"])
+add_children("Buz*", family_tree["Gad (7th)"].uuid, ["Jahdo"])
+add_children("Guni*", family_tree["Gad (7th)"].uuid, ["Abdiel"])
+add_children("Unknown Descendant of Gad*", family_tree["Gad (7th)"].uuid, ["Joel*", "Shapham*", "Jannai*", "Shaphat*"])
+add_children("Rimmon*", family_tree["Gad (7th)"].uuid, ["Baanah", "Rechab"])
+
+add_children("Asher (8th)", family_tree[None].uuid, ["Beriah", "Jether*", "Phanuel*", "Michael*"])
+add_children("Beriah", family_tree["Asher (8th)"].uuid, ["Heber", "Malchiel"])
+add_children("Jether*", family_tree["Asher (8th)"].uuid, ["Jephunneh", "Pispa", "Ara"])
+add_children("Phanuel*", family_tree["Asher (8th)"].uuid, ["Anna"])
+add_children("Michael*", family_tree["Asher (8th)"].uuid, ["Sethur"])
+
 
 # Function to print the family tree recursively
 def print_family_tree(person, generation=1):
