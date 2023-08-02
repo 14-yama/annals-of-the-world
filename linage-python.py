@@ -300,7 +300,7 @@ Merari_uuid = family_tree[Levi_uuid].children[2].uuid
 Kemuel_D_uuid = family_tree[Levi_uuid].children[4].uuid
 Shimei_D_uuid = family_tree[Levi_uuid].children[5].uuid
 add_children("Gershon", Gershon_uuid, [
-             "Libni (Ladan)", "Shimei", "Lael_D", "Jahath"])
+             "Libni", "Shimei", "Lael_D", "Jahath"])
 add_children("Kohath", Kohath_uuid, ["Amram", "Izhar", "Hebron", "Uzziel"])
 add_children("Merari", Merari_uuid, [
              "Mahli", "Mushi", "Hosah_D", "Jaaziah_D", "Abdi_D"])
@@ -369,42 +369,122 @@ add_children(
 add_children("Dibri_D", family_tree[Dan_uuid].children[4].uuid, ["Shelomith"])
 add_children("Manoah_D", family_tree[Dan_uuid].children[5].uuid, ["Samson"])
 
-
+Vopshi_D_uuid = family_tree[Naphtali_uuid].children[4].uuid
+Ammihud_D_uuid = family_tree[Naphtali_uuid].children[5].uuid
+Asiel_D_uuid = family_tree[Naphtali_uuid].children[6].uuid
+Enan_D_uuid = family_tree[Naphtali_uuid].children[7].uuid
+Azrel_D_uuid = family_tree[Naphtali_uuid].children[8].uuid
+Aphiah_D_uuid = family_tree[Benjamin_uuid].children[14].uuid
 add_children(
-    "Vopshi_D", family_tree[Naphtali_uuid].children[4].uuid, ["Nahbi"])
+    "Vopshi_D", Vopshi_D_uuid, ["Nahbi"])
 add_children(
-    "Ammihud_D", family_tree[Naphtali_uuid].children[5].uuid, ["Pedahel"])
+    "Ammihud_D", Ammihud_D_uuid, ["Pedahel"])
 add_children(
-    "Asiel_D", family_tree[Naphtali_uuid].children[6].uuid, ["Raguel_D"])
-add_children("Enan_D", family_tree[Naphtali_uuid].children[7].uuid, ["Ahira"])
+    "Asiel_D", Asiel_D_uuid, ["Raguel_D"])
+add_children("Enan_D", Enan_D_uuid, ["Ahira"])
 add_children(
-    "Azrel_D", family_tree[Naphtali_uuid].children[8].uuid, ["Jerimoth"])
+    "Azrel_D", Azrel_D_uuid, ["Jerimoth"])
 add_children(
-    "Aphiah_D", family_tree[Benjamin_uuid].children[14].uuid, ["Bechorah"])
+    "Aphiah_D", Enan_D_uuid, ["Bechorah"])
 
 add_children("Gad", Gad_uuid, ["Ziphion", "Haggi", "Shuni", "Ezbon", "Eri", "Arodi", "Areli", "Deuel_D", "Machi_D",
              "Unknown_D", "Bani_D", "Buz_D", "Guni_D", "Unknown Descendant of Gad_D", "Joel_D", "Shapham_D", "Jannai_D", "Shaphat_D"])
 
-
-add_children("Deuel_D", family_tree[Gad_uuid].children[7].uuid, ["Eliasaph"])
-add_children("Machi_D", family_tree[Gad_uuid].children[8].uuid, ["Geuel"])
-add_children("Unknown_D", family_tree[Gad_uuid].children[9].uuid, ["Ezer_D", "Obadiah_D", "Eliab_D",
+Deuel_D_uuid = family_tree[Gad_uuid].children[7].uuid
+Machi_D_uuid = family_tree[Gad_uuid].children[8].uuid
+Unknown_D_uuid = family_tree[Gad_uuid].children[9].uuid
+Buz_D_uuid = family_tree[Gad_uuid].children[11].uuid
+Guni_D_uuid = family_tree[Gad_uuid].children[12].uuid
+Unknown_Descendant_of_Gad_D_uuid = family_tree[Gad_uuid].children[13].uuid
+add_children("Deuel_D", Deuel_D_uuid, ["Eliasaph"])
+add_children("Machi_D", Machi_D_uuid, ["Geuel"])
+add_children("Unknown_D", Machi_D_uuid, ["Ezer_D", "Obadiah_D", "Eliab_D",
              "Mishmannah_D", "Jeremiah_D", "Attai_D", "Eliel_D", "Johanan_D", "Elzabad_D", "Jeremiah_D", "Machbanai_D"])
-add_children("Buz_D", family_tree[Gad_uuid].children[11].uuid, ["Jahdo"])
-add_children("Guni_D", family_tree[Gad_uuid].children[12].uuid, ["Abdiel"])
-add_children("Unknown Descendant of Gad_D", family_tree[Gad_uuid].children[13].uuid, [
+add_children("Buz_D", Buz_D_uuid, ["Jahdo"])
+add_children("Guni_D", Guni_D_uuid, ["Abdiel"])
+add_children("Unknown Descendant of Gad_D", Unknown_Descendant_of_Gad_D_uuid, [
              "Joel_D", "Shapham_D", "Jannai_D", "Shaphat_D"])
 
-add_children("Asher", Asher_uuid, ["Imnah", "Ishauah",
-             "Isui", "Beriah", "Sarah", "Jether_D", "Phanuel_D", "Michael_D"])
+Beriah_uuid = family_tree[Asher_uuid].children[3].uuid
+Jether_D_uuid = family_tree[Asher_uuid].children[5].uuid
+Phanuel_D_uuid = family_tree[Asher_uuid].children[6].uuid,
+Michael_D_uuid = family_tree[Asher_uuid].children[7].uuid
 
-add_children("Beriah", family_tree[Asher_uuid].children[3].uuid, [
+add_children("Beriah", Beriah_uuid, [
              "Heber", "Malchiel"])
-add_children("Jether_D", family_tree[Asher_uuid].children[5].uuid, [
+add_children("Jether_D", Jether_D_uuid, [
              "Jephunneh", "Pispa", "Ara"])
-add_children("Phanuel_D", family_tree[Asher_uuid].children[6].uuid, ["Anna"])
-add_children("Michael_D", family_tree[Asher_uuid].children[7].uuid, ["Sethur"])
+add_children("Phanuel_D", Phanuel_D_uuid, ["Anna"])
+add_children("Michael_D", Michael_D_uuid, ["Sethur"])
+##############################################
 
+Eliab_uuid = family_tree[Pallu_uuid].children[0].uuid
+Peleth_uuid = family_tree[Pallu_uuid].children[1].uuid
+add_children("Eliab", Eliab_uuid, ["Nemuel", "Dathan", "Abiram"])
+add_children("Peleth_D", Peleth_uuid, ["On"])
+
+
+Shemaiah_uuid = family_tree[Joel_D_uuid].children[0].uuid
+Shema_uuid = family_tree[Joel_D_uuid].children[1].uuid
+add_children("Shemaiah", Shemaiah_uuid, ["Gog"])
+add_children("Shema", Shema_uuid, ["Azaz"])
+
+Shallum_uuid = family_tree[Shaul_uuid].children[0].uuid
+add_children("Shallum", ["Mibsam"])
+
+Lael_uuid = family_tree[Gershon_uuid].children[2].uuid
+Jahath_uuid = family_tree[Gershon_uuid].children[3].uuid
+add_children("Lael", Lael_uuid, ["Eliasaph"])
+add_children("Jahath", ["Shimel"])
+
+
+Izhar_uuid = family_tree[Kohath_uuid].children[1].uuid
+add_children("Izhar", ["Korah", "Nepheg", "Zichri"])
+############### INCOMPLETE##############################################
+add_children("Hebron", ["Jeriah", "Amariah", "Jehaziel", "Jekameam"])
+add_children("Uzziel", ["Mishael", "Elzaphan", "Sithri", "Micah", "Isshiah"])
+add_children("Mahli", ["Eleazar", "Kish", "Libni"])
+add_children("Mushi", ["Mahli", "Eder", "Jeremoth"])
+add_children("Hosah", ["Shimri", "Hilkaih", "Tebaliah", "Zechariah"])
+add_children("Jaaziah", ["Beno", "Shoham", "Zaccur", "Ibri"])
+add_children("Abdi", ["Kish"])
+add_children("Abihail", ["Zuriel"])
+add_children("Miriam", ["Uri", "Shobel", "Salma",
+             "Hareph", "Etam", "Ishi", "Abinadab"])
+add_children("Aaron", ["Nadab", "Abihu", "Eleazer", "Ithamar"])
+add_children("Moses", ["Gershom", "Eliezer"])
+add_children("Hashabiah", ["Laadan"])
+add_children("Er", ["Lecah"])
+add_children("Laadah", ["Mareshah"])
+add_children("Saraph", ["Jashubilehem"])
+add_children("Hezron", ["Jerahmeel", "Ram",
+             "Caleb (Chelubai)", "Segub", "Ashhur"])
+add_children("Zimri (Zabdi)", ["Carmi"])
+add_children("Ethan", ["Azariah"])
+add_children("Reaiah", ["Jahath"])
+add_children("Uzzi", ["Izrahiah"])
+add_children("Puah", ["Tola"])
+add_children("Machir", ["Peresh", "Sheresh", "Gilead",
+             "Hammolechet", "Daughter of Machir"])
+add_children("Unknown", ["Adnah*", "Jozabad*", "Jediael*", "Michael*", "Jediael*", "Elihu*", "Zillethai*", "Epher*", "Ishi*", "Eliel*",
+                         "Azriel*", "Jeremiah*", "Hodaviah*", "Jahdie*", "Pedahzur*", "Susi*", "Ephod*", "Jair*", "Nobah*"])
+add_children("Shuthelah", ["Bered (Becher)"])
+add_children("Beriah", ["Sheerah", "Rephah"])
+add_children("Shiphtan*", ["Kemuel"])
+add_children("Hillel*", ["Abdon"])
+add_children("Azaziah*", ["Hoshea"])
+add_children("Zuph*", ["Tohu"])
+add_children("Bilhan", ["Jeush", "Benjamin", "Ehud",
+             "Chenaana", "Zethan", "Tarshish", "Ahishahar"])
+add_children("Bechorah", ["Zeror"])
+add_children("Raguel*", ["Raphael"])
+add_children("Jahdo", ["Jeshishai"])
+add_children("Abdiel", ["Ahi"])
+add_children("Heber", ["Japhlet", "Shomer", "Hotham (Helem)", "Shua"])
+add_children("Malchiel", ["Birzaith"])
+
+
+####################################################
 
 def print_family_tree(person, generation=1):
     indentation = "    " * generation
