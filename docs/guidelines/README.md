@@ -4,14 +4,14 @@ This folder contains human-readable governance, schema, and curator guidance for
 
 Contents
 
-- `classification.md` — call-number taxonomy and corpus registry
-- `features_by_version.md` — versioned feature timeline (v1 → v5)
-- `schema.md` — v4 schema reference and example Cypher
-- `workflow.md` — curator workflow detailed steps
-- `audit_queries.md` — runnable Cypher QA checks (diagnostics)
-- `curator_runbook.md` — one-page curator checklist and provenance snippets
-- `crosswalk_crm_prov.md` — CRM/PROV → Neo4j verb crosswalk
-- `framework_matrix.md` — Active-voice framework→verb matrix
+- [classification.md](./classification.md) — call-number taxonomy and corpus registry
+- [features_by_version.md](./features_by_version.md) — versioned feature timeline (v1 → v5)
+- [schema.md](./schema.md) — v4 schema reference and example Cypher
+- [workflow.md](./workflow.md) — curator workflow detailed steps
+- [audit_queries.md](./audit_queries.md) — runnable Cypher QA checks (diagnostics)
+- [curator_runbook.md](./curator_runbook.md) — one-page curator checklist and provenance snippets
+- [crosswalk_crm_prov.md](./crosswalk_crm_prov.md) — CRM/PROV → Neo4j verb crosswalk
+- [framework_matrix.md](./framework_matrix.md) — Active-voice framework→verb matrix
 
 Recommended first reads
 

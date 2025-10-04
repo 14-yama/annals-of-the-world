@@ -34,12 +34,12 @@ QA, ingestion, and scale
 
 Where to read more
 
-- Schema & implementation notes: [docs/guidelines/schema.md](docs/guidelines/schema.md)
-- Curator workflow: [docs/guidelines/workflow.md](docs/guidelines/workflow.md)
-- Classification & call numbers: [docs/guidelines/classification.md](docs/guidelines/classification.md)
-- Feature timeline: [docs/guidelines/features_by_version.md](docs/guidelines/features_by_version.md)
+- Schema & implementation notes: [docs/guidelines/schema.md](./guidelines/schema.md)
+- Curator workflow: [docs/guidelines/workflow.md](./guidelines/workflow.md)
+- Classification & call numbers: [docs/guidelines/classification.md](./guidelines/classification.md)
+- Feature timeline: [docs/guidelines/features_by_version.md](./guidelines/features_by_version.md)
 
 Next options
 
-- I can add `docs/guidelines/README.md` as a guidelines index, or create `docs/guidelines/audit_queries.md` with runnable Cypher checks. Tell me which to do next.
+- I can add [docs/guidelines/README.md](./guidelines/README.md) as a guidelines index, or create [docs/guidelines/audit_queries.md](./guidelines/audit_queries.md) with runnable Cypher checks. Tell me which to do next.
 
