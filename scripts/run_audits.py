@@ -1,7 +1,7 @@
 """Run audit queries and write a JSON report.
 
 This script is tolerant if the neo4j driver is not installed or no DB is configured.
-It loads a hard-coded set of queries (kept small) mirroring `docs/guidelines/audit_queries.md`.
+ It loads a hard-coded set of queries (kept small) mirroring [docs/guidelines/audit_queries.md](../docs/guidelines/audit_queries.md).
 """
 import json
 from datetime import datetime
