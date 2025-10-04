@@ -34,10 +34,10 @@ QA, ingestion, and scale
 
 Where to read more
 
-- Schema & implementation notes: `docs/guidelines/schema.md`
-- Curator workflow: `docs/guidelines/workflow.md`
-- Classification & call numbers: `docs/guidelines/classification.md`
-- Feature timeline: `docs/guidelines/features_by_version.md`
+- Schema & implementation notes: [docs/guidelines/schema.md](docs/guidelines/schema.md)
+- Curator workflow: [docs/guidelines/workflow.md](docs/guidelines/workflow.md)
+- Classification & call numbers: [docs/guidelines/classification.md](docs/guidelines/classification.md)
+- Feature timeline: [docs/guidelines/features_by_version.md](docs/guidelines/features_by_version.md)
 
 Next options
 
