@@ -418,3 +418,90 @@ Relationship node types (PROPOSED)
 ---
 
 Generated: PROPOSED Hebrew Bible cluster scaffold for Timeframes (class 9).
+
+---
+
+## Logic Alignment Guide (Pattern Only)
+Purpose: Ensure this Hebrew cluster applies the same structural logic patterns previously validated in another technology cluster (used only as a methodological guide). No external domain content is imported—only framework mechanics.
+
+### 1. Node Identity & Slugs
+- Use kebab-case slugs (e.g., `jeremiah`, `second-temple-destruction-70ce`, `septuagint`).
+- Human name canonical form: Given + Cognomen/Descriptor (e.g., `Abraham`, `Abraham_Joshua_Heschel` internally -> slug `abraham-joshua-heschel`).
+- Period classification is via class.division (9.1xx..9.6xx) while chronological ordering will later use a computed `chron_key`.
+
+### 2. Edge Semantics (Active Voice Only)
+Adopt a curated verb set to avoid drift. Suggested canonical verbs (extend cautiously):
+CAUSES, DIFFUSES, TRANSMITS, CANONIZES, STANDARDIZES, INTERPRETS, REFORMS, DISPUTES, FRAMES, INFLUENCES, ADOPTS, REJECTS, TRANSLATES, SYSTEMATIZES, SCHISMS_FROM, RECONCILES_WITH, OCCURS_IN, ESTABLISHES, PRESERVES, COMMENTATES_ON.
+
+Verb Governance Rules:
+1. One semantic intent per verb (no overlapping synonyms in different periods).
+2. Past-tense or gerund forms not used in edge labels (edge labels stay infinitive/uppercase, e.g., `CANONIZES`).
+3. New verb proposal requires: definition, 1 example triple, evidence tier justification.
+
+### 3. Framework Lenses (First-Class)
+Introduce interpretive nodes (label: Framework) analogous to pattern guide:
+- TEXTUAL_TRANSMISSION
+- DOCTRINE_DEVELOPMENT
+- CULTURAL_DIFFUSION
+- LEGAL_INTERPRETATION
+- RITUAL_STANDARDIZATION
+- GEOPOLITICAL_LINKAGE
+- CONFLICT_AND_RESOLUTION
+- ADAPTATION
+- CAUSE_AND_EFFECT
+- TEMPORAL_LINKAGE
+
+Usage: Content node --VERB--> Content node optionally --FRAMED_BY--> Framework. Avoid using Framework nodes as generic targets for all edges; only attach where a lens adds explanatory value.
+
+### 4. Evidence Tiering (A / B / D)
+- Tier A (Primary): manuscripts, inscriptions, papyri, archaeological context reports, council acta.
+- Tier B (Peer Reviewed): monographs, critical editions, journal scholarship.
+- Tier D (Institutional): curated databases, major dictionary/encyclopedia entries, museum catalogs.
+
+Promotion Rule:
+- Reusable source (appears on ≥2 edges) => promote to (:Evidence { slug, title, tier, ref }).
+- Single-use narrow citation (unique folio/page) => remain inline `evidence:"A: <short ref>"` property on that edge.
+- Escalation path: inline (draft) -> proposed Evidence node -> approved Evidence node (with validation hash/identifier if needed).
+
+### 5. Minimal Property Contract
+Node base: { slug, name, class:9, division: <int code>, status: 'PROPOSED' }
+Optional: { start_year, end_year, place_slug[], summary }
+Edge base: { verb, status:'PROPOSED', evidence: '<tier: short ref>' }
+If FRAMED_BY: { lens:'<FRAMEWORK_SLUG>', citation:'<tier: short ref>' }
+
+### 6. Consistency QA Checklist
+| Check | Rule | Automation Hint |
+|-------|------|-----------------|
+| Verb whitelist | All edges use approved set | Cypher: MATCH ()-[r]->() WHERE NOT r.verb IN [...] RETURN r LIMIT 20 |
+| Evidence promotion | Reused inline refs converted to nodes | Aggregate counts per evidence string |
+| Orphan nodes | Every node has ≥1 outgoing or incoming edge | MATCH (n) WHERE NOT (n)-- RETURN n |
+| Framework misuse | Framework nodes only targeted by FRAMED_BY | MATCH ()-[r]->(f:Framework) WHERE type(r) <> 'FRAMED_BY' RETURN r LIMIT 20 |
+| Slug uniqueness | No duplicate slugs | Constraint: CREATE CONSTRAINT unique_slug IF NOT EXISTS ON (n) ASSERT n.slug IS UNIQUE |
+
+### 7. Roadmap Delta (Next Enhancements)
+1. Add Master Curator list with slugs (People, Ideas, Texts) normalized.
+2. Define verb dictionary file (`docs/guidelines/relations_vocabulary.md`).
+3. Generate seed CSVs: `nodes_class9.csv`, `rels_class9.csv` (draft stage uses only inline evidence strings).
+4. Promote multi-use sources (e.g., Dead Sea Scrolls publication, Septuagint critical edition) to Evidence nodes.
+5. Run QA Cypher batch to tag orphan nodes for curator review.
+
+### 8. Example Normalized Triples (Pattern Only)
+Person -> Text: ("Maimonides") - SYSTEMATIZES -> ("Mishneh Torah") evidence: "B: scholarly edition"
+Text -> Idea: ("Septuagint") - TRANSMITS -> ("Hebrew Scriptures Greek Tradition") evidence: "B: critical edition intro"
+Institution -> Doctrine: ("Council_of_Nicaea") - DEFINES -> ("Christological Formula") evidence: "A: conciliar acta"
+Movement -> Place: ("Diaspora_Judean") - DIFFUSES -> ("Alexandria") evidence: "A: papyri; B: monograph"
+
+### 9. Inclusion / Exclusion Guidelines
+Include nodes that:
+- Influence at least one cross-tradition development (Jewish ↔ Christian ↔ Islamic) OR
+- Serve as textual transmission pivots OR
+- Anchor legal/doctrinal standardization.
+Exclude (or defer) if purely local with no downstream relation yet defined.
+
+### 10. Naming Conventions Recap
+- People: slug without honorifics (e.g., `abraham-joshua-heschel`).
+- Composite Events: `descriptor-year` or `descriptor-startyear-endyear`.
+- Text Families: `mishnah`, `jerusalem-talmud`, `babylonian-talmud` (avoid redundancy like `talmud-babylonian`).
+- Framework nodes: UPPER_SNAKE_CASE.
+
+End Logic Alignment Guide.
