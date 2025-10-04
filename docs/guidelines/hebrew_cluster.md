@@ -408,6 +408,7 @@ Relationship node types (PROPOSED)
 - Classification-first: every node sits under class 9 → division 910/920/930/940/950/960.
 - Keep nodes generic vs. contextual (e.g., generic `Jerusalem` plus contextual `Second Temple destruction (70 CE)`).
 - Relationships later must be active-voice (e.g., `EXPLAINS`, `INFLUENCES`, `OCCURRED_IN`, `FRAMES`).
+ - Use the canonical verb set and governance rules in [relations_vocabulary.md](./relations_vocabulary.md) for all edge labels and proposal procedures.
 
 ## Next steps
 
