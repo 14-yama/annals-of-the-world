@@ -10,7 +10,7 @@ Quick checklist
 - [ ] Cite: attach at least one `:Evidence` node (A-tier preferred) or inline citation on relationship.
 - [ ] Frame: add `FRAMED_BY` (or active verb equivalent) to a `:Framework` node with citation metadata.
 - [ ] Place: assign `Timeframe` and anchor to `Place` nodes with active spatial verbs (e.g., `HAPPENS_IN`).
-- [ ] QA: run `docs/guidelines/audit_queries.md` checks (missing FRAMED_BY, temporal sanity, orphan nodes, passive verbs).
+- [ ] QA: run [docs/guidelines/audit_queries.md](./audit_queries.md) checks (missing FRAMED_BY, temporal sanity, orphan nodes, passive verbs).
 - [ ] Publish: set `status: "REVIEWED"` and add provenance (user, timestamp, change_reason).
 
 Provenance pattern (minimal)

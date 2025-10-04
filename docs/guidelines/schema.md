@@ -139,7 +139,7 @@ SET r.evidence_url='https://doi.org/…', r.citation_style='Chicago 17', r.page_
 
 ## Next steps (recommended)
 
-- Add `docs/guidelines/audit_queries.md` with ready-to-run Cypher for QA checks (missing FRAMED_BY, passive verbs, orphan nodes).
+- Add [docs/guidelines/audit_queries.md](./audit_queries.md) with ready-to-run Cypher for QA checks (missing FRAMED_BY, passive verbs, orphan nodes).
 - Create `src/annals/models.py` with dataclasses or Pydantic models reflecting these node shapes.
 - Add unit tests that verify constraint creation and a small integration test that runs sample MERGE + audit queries against a test Neo4j instance.
 

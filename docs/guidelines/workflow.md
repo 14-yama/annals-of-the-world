@@ -140,7 +140,7 @@ This section restates the pipeline in operational terms:
 
 ## Next steps
 
-- Add example Cypher audit queries to `docs/guidelines/audit_queries.md`.
+- Add example Cypher audit queries to [docs/guidelines/audit_queries.md](./audit_queries.md).
 - Produce a swimlane diagram (SVG) for the lifecycle and add it to this folder.
 - Optionally recast relationship grammar (edge verbs) into the same active-voice, class-subject format.
 

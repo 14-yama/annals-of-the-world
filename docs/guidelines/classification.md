@@ -130,7 +130,7 @@ Example: `4.430.rome-27bce` or `2.210.plato` — the call number is used as a st
 
 ---
 
-For the project feature timeline (v1–v5) see `features_by_version.md` in this folder.
+For the project feature timeline (v1–v5) see [features_by_version.md](./features_by_version.md) in this folder.
 
 ---
 
