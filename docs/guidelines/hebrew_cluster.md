@@ -59,6 +59,7 @@ People
 - Jeremiah, Ezekiel, Daniel
 - Nehemiah, Esther
 - Hasmoneans (Judas Maccabeus, John Hyrcanus)
+- Early Christian figures (Jesus of Nazareth — as an historical actor in 1st c. CE contexts, Paul of Tarsus)
 
 Institutions
 - Tribal confederacy
@@ -83,6 +84,8 @@ Events
 - Maccabean Revolt (167–160 BCE)
 - Roman conquest (63 BCE)
 - Second Temple destruction (70 CE)
+- Emergence of early Christian communities (1st century CE)
+
 
 Movements
 - Prophetic schools
@@ -97,6 +100,7 @@ Texts / Artifacts
 - Writings (Psalms, Proverbs, Job, Ruth, etc.)
 - Septuagint (Greek translation)
 - Dead Sea Scrolls (biblical + sectarian)
+- Early Christian texts in circulation (Gospel traditions, Pauline letters)
 
 Evidence
 - Ketef Hinnom amulets (7th c. BCE priestly blessing)
@@ -112,6 +116,8 @@ Ideas
 - Synagogue liturgy
 - Jewish philosophy (rationalism/Aristotelian synthesis)
 - Mystical readings (early Kabbalah)
+- Christian doctrinal consolidation (ecumenical councils, Christology debates)
+- Islamic theological and legal formation (Qur'anic exegesis, Sharia formation)
 
 People
 - Yohanan ben Zakkai (Yavneh)
@@ -123,6 +129,8 @@ People
 - Maimonides
 - Nachmanides (Ramban)
 - Gersonides (Ralbag)
+- Early Christian leaders and theologians (Ambrose, Augustine — late antique influence continuing into medieval)
+- Early Islamic figures (Muhammad, Abu Bakr, Umar, Uthman, Ali — formative figures of 7th century that shaped medieval Islamic institutions)
 
 Institutions
 - Yavneh academy
@@ -131,6 +139,8 @@ Institutions
 - Gaonic leadership
 - Spanish Jewish courts & yeshivot
 - Kabbalistic circles (Gerona; later Safed)
+- Byzantine church institutions (patriarchates, monastic centers)
+- Early Islamic caliphates and madrasas
 
 Texts / Artifacts
 - Mishnah (c. 200)
@@ -141,21 +151,29 @@ Texts / Artifacts
 - Rashi’s commentary
 - Mishneh Torah (Maimonides)
 - Zohar (13th c. Spain)
+- Qur'an (canonized in the 7th century) and early tafsir traditions
+- Christian patristic writings and liturgical texts
 
 Movements
 - Rabbinic Judaism
 - Kabbalistic movement
 - Karaite sects
 - Jewish communities in the Islamic Golden Age
+- Monasticism and the growth of Christian scholastic institutions
+- Islamic Golden Age intellectual movements (translation movement, Kalam)
 
 Places
 - Baghdad, Cordoba, Toledo
 - Ashkenaz (Rhineland)
 - Safed (later mystical hub)
+- Constantinople, Rome (Christian centers)
+- Kufa, Basra, Damascus (early Islamic centers)
 
 Evidence
 - Roman/Byzantine/Islamic decrees touching Jewish law & status
 - Synagogue inscriptions (e.g., Dura-Europos)
+- Church councils' canons and episcopal letters
+- Early Islamic inscriptions, coins and administrative records
 
 ## 940 — Early Modern (1500–1800 CE)
 status: PROPOSED
@@ -164,26 +182,37 @@ Ideas
 - Humanism applied to Hebrew Bible
 - Reformation uses of Hebrew text
 - Enlightenment critique
+- Catholic Reformation and confessionalization
+- Ottoman administrative/Islamic law continuities and reform impulses
 
 People
 - Azariah dei Rossi
 - Spinoza
 - Moses Mendelssohn
+- Reformers and Catholic leaders (Martin Luther, John Calvin; Council of Trent figures)
+- Ottoman-era Muslim scholars and officials (e.g., printing and legal reform actors)
 
 Institutions
 - Printing houses (Venice, Amsterdam)
 - Haskalah (Jewish Enlightenment) schools
+- Protestant and Catholic seminaries and missionary societies
+- Ottoman madrasa networks and imperial printing/publishing centers
 
 Texts
 - Christian Hebraists’ Bibles
 - Early critical editions of Tanakh
+- Vernacular Christian Bibles and confessional catechisms
+- Ottoman-era legal codes and fatwas (where preserved)
 
 Movements
 - Protestant reliance on Hebrew Bible
 - Jewish Haskalah
+- Catholic Counter-Reformation
+- Sufi and reform movements within Islam
 
 Evidence
 - Early printed Hebrew Bibles & paratexts
+- Missionary records, travel accounts, Ottoman archives
 
 ## 950 — Modern (1800–1945)
 status: PROPOSED
@@ -192,32 +221,43 @@ Ideas
 - Nationalism & the Bible (identity text)
 - Secular Bible criticism
 - Reform / Orthodoxy splits
+- Christian missionary expansion and Biblical scholarship in universities
+- Islamic modernist reform and responses to colonialism
 
 People
 - Theodor Herzl
 - Samson Raphael Hirsch (Orthodox)
 - Abraham Geiger (Reform)
 - Julius Wellhausen (Documentary Hypothesis)
+- Christian figures (missionaries, bishops, biblical scholars in Europe and America)
+- Islamic modernists and activists (Jamal al-Din al-Afghani, Muhammad Abduh — late 19th c.)
 
 Institutions
 - World Zionist Congress / Organization (from 1897)
 - Modern seminaries (HUC, JTS)
+- Missionary societies and colonial-era universities
+- Ottoman/Territorial reform institutions (Tanzimat-era reforms)
 
 Texts
 - Documentary Hypothesis publications
 - Concordances & lexicons (modern philology)
+- Islamic reformist writings, translations of Qur'anic exegesis into modern print
 
 Movements
 - Reform Judaism
 - Orthodox Judaism
 - Zionism
 - Biblical Criticism
+- Islamic constitutionalist and reform movements
+- Christian social movements (social gospel, ecumenical beginnings)
 
 Events
 - Holocaust (Shoah)
+- Ottoman collapse and post-WWI territorial settlements affecting Jewish/Christian/Islamic communities
 
 Evidence
 - Congress records, rabbinic responsa, academic monographs
+- Missionary archives, colonial records, reformist periodicals
 
 ## 960 — Contemporary (1945–Present)
 status: PROPOSED
@@ -226,34 +266,48 @@ Ideas
 - Post-Holocaust theology
 - Interfaith scriptural reading
 - Biblical archaeology as a discipline
+- Vatican II and major Christian ecumenical developments
+- Islamic revivalism and transnational Islamic movements
 
 People
 - David Ben-Gurion
 - Abraham Joshua Heschel
 - Elie Wiesel
+- Christian leaders and theologians (e.g., influential postwar ecumenical figures)
+- Islamic thinkers and leaders (Hassan al-Banna, Sayyid Qutb, modern reformers and scholars)
 
 Institutions
 - State of Israel (1948)
 - Yad Vashem
 - Modern yeshivot & universities
+- Vatican (modern role), national churches and ecumenical bodies
+- Modern Islamic institutions (Muslim Brotherhood origins, modern universities, NGOs)
 
 Movements
 - Ongoing Zionism (religious & secular)
 - Modern Orthodox, Conservative, Reform streams
 - Liberation theologies drawing on Exodus
+- Christian ecumenism and global missionary/aid networks
+- Political Islam, Islamic revival and reform movements
 
 Texts & Evidence
 - Dead Sea Scrolls publication (post-1947)
 - Modern Bible translations (JPS, NIV, etc.)
 - Archaeology (e.g., City of David excavations; inscriptions)
+- Modern Qur'anic translations and tafsir, Islamic media and print culture
+- Vatican II documents, ecumenical declarations, interfaith statements
 
 Places
 - Israel (modern state)
 - Jerusalem, Brooklyn (modern hubs)
+- Vatican City, major global Christian centers
+- Riyadh, Cairo, Istanbul as modern Islamic hubs
 
 Events
 - Founding of Israel (1948)
 - Ongoing Middle East conflicts with biblical dimensions
+- Vatican II (1962–65) and major ecumenical conferences
+- Rise of postwar Islamic movements and regional political shifts (mid–late 20th c.)
 
 ---
 
