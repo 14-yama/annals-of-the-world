@@ -1,0 +1,42 @@
+# Virtualenv
+venv/
+
+# Env files
+.env
+.env.*
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Data
+/data/processed/
+venv/lib/python3.12/site-packages/pandas/tests/io/test_stata.py
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Credentials and keys
+credentials.json
+credentials-*.json
+credentials-backup-*.json
+
+# Logs and runtime
+*.log
+.log*
+tmp/
+temp/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+

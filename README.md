@@ -1,0 +1,116 @@
+
+# 📖 Annals of the World — Historical Knowledge Graph
+
+This repository contains the **Annals of the World** project: a Neo4j-based historical knowledge graph designed to model people, ideas, places, events, institutions, texts, and evidence **across time and space** using international scholarly conventions.
+
+The project provides a **source of truth** for historical data, ensuring relationships are active-voice, evidence-backed, and version-controlled.
+
+---
+
+## Table of Contents
+
+- [Project summary](docs/summary.md)
+- [Schema & guidelines](docs/guidelines/README.md) (index for workflow, schema, classification)
+- [Features by version](docs/guidelines/features_by_version.md)
+- [Audit queries (planned)](docs/guidelines/audit_queries.md)
+- [Getting started / scripts](scripts/)
+
+
+## 🎯 Purpose
+
+* Build a **scalable, queryable knowledge graph** for world history.
+* Capture **core ideas, people, institutions, places, events, texts, movements, evidence** in a structured form.
+* Apply **historian frameworks** (Cause & Effect, Continuity & Change, Cultural Diffusion, etc.) to interpret history consistently.
+* Ensure **auditability** with evidence citations (DOI, URL, Chicago 17 style).
+* Support **cross-civilizational comparisons** (e.g., Hebrew Bible cluster vs. Gunpowder cluster).
+
+---
+
+## 🏗️ Schema Overview
+
+We follow the **v4 optimized schema**【v4.pdf】:
+
+### Core Labels
+
+* `:Idea` — Abstract concepts (Monotheism, Covenant, Meritocracy).
+* `:Person` — Historical figures (Abraham, Maimonides, Spinoza).
+* `:Institution` — Organized bodies (Second Temple Priesthood, Zionist Congress).
+* `:Place` — Geographic nodes (Jerusalem, Babylon, Alexandria).
+* `:Event` — Historical occurrences (Exodus, Babylonian Exile, Holocaust).
+* `:Movement` — Social/religious/cultural trends (Rabbinic Judaism, Kabbalah, Zionism).
+* `:Artifact` / `:Text` — Material culture or texts (Dead Sea Scrolls, Masoretic Text, Zohar).
+* `:Evidence` — Primary sources & archaeological finds (Ketef Hinnom amulets, Tel Dan Stele).
+* `:Corpus` — Canonical text groupings (BIBLICAL_CORPUS, RABBINIC_CORPUS).
+* `:Timeframe` — Parent nodes for eras (910 Prehistoric, 920 Classical, 930 Medieval, 940 Early Modern, 950 Modern, 960 Contemporary).
+* `:Framework` — Historian interpretive lenses (Cause & Effect, Continuity & Change, Cultural Diffusion, etc.).
+
+### Key Relationship Types
+
+* `(:Event)-[:OCCURRED_IN]->(:Place)`
+* `(:Person)-[:INFLUENCES]->(:Idea)`
+* `(:Institution)-[:CODIFIES]->(:Text)`
+* `(:EventWindow)-[:FRAMED_BY {citation,…}]->(:Framework)`
+* `(:Evidence)-[:BELONGS_TO]->(:Corpus)`
+* `(:Movement)-[:ARISES_FROM]->(:Event)`
+* `(:Place)-[:CONTAINS]->(:Institution)`
+
+All relationship names are **active voice** (per Active Relationship Standard).
+
+---
+
+## 🗂️ Workflow
+
+The curator workflow follows a **7-stage process**:
+
+1. **Propose** — Curator drafts node(s) with `status:"PROPOSED"`.
+2. **Cite** — Attach evidence: primary manuscripts, scholarly works, archaeological data.
+3. **Frame** — Apply frameworks (FRAMED_BY edges with citation metadata).
+4. **Place** — Anchor to Timeframes and contextualize with places/eras.
+5. **Review** — QA check for redundancy, active voice, evidence compliance.
+6. **Publish** — Nodes updated to `status:"REVIEWED"` and locked for queries.
+7. **Version** — Updates tracked with deprecated flags and new versions created.
+
+---
+
+## 📊 Governance Rules
+
+* **Active Voice Only:** No passive relationships (`CONTROLLED_BY` → ❌, `CONTROLS` → ✅).
+* **Generic vs. Contextual Nodes:** Places and ideas are generic hubs; contextual supporting nodes (e.g., *Babylonian Exile 586 BCE*) provide historical anchoring【Guidelines for Generic Nodes.pdf】.
+* **Citation Integrity:** Each FRAMED_BY must have:
+
+  * `citation_style: "Chicago 17"`
+  * `evidence_url` (stable DOI/URL)
+  * `page_refs`
+  * `source_note`
+* **Chronology:** BCE as negative integers, CE as positive, ensuring numeric sortability【v2.pdf】.
+* **Versioning:** Nodes can be superseded but never silently deleted.
+
+---
+
+## 📂 Example Cluster: Hebrew Bible
+
+**Timeframe → Nodes**
+
+* **920 Classical:** Exodus, Babylonian Exile, Prophets, Second Temple Priesthood, Dead Sea Scrolls.
+* **930 Medieval:** Maimonides, Rashi, Zohar, Babylonian Talmud, Kabbalah.
+* **940 Early Modern:** Spinoza, Printing houses, Enlightenment critiques.
+* **950 Modern:** Herzl, Geiger, Hirsch, Zionism, Biblical Criticism.
+* **960 Contemporary:** Holocaust, Founding of Israel, Dead Sea Scrolls publication, Heschel, Wiesel.
+
+---
+
+## ✅ QA & Best Practices
+
+* **No label explosion** → use `:Person {category:…}` instead of separate labels.
+* **Evidence-first culture** → no relationship published without at least one citation.
+* **Sharding strategy** → Eras (Prehistoric, Classical, Medieval, etc.) serve as partitions for scalability【v2.pdf】.
+* **Audit queries** (examples included in docs) detect missing FRAMED_BY, passive voice, orphan nodes.
+
+---
+
+## 📅 Status
+
+* Gunpowder cluster: Seeded, in review.
+* Hebrew Bible cluster: Expanded scaffold drafted (≈200 nodes, spanning Creation → today).
+* Other clusters (Islamic Philosophy, Meritocracy, etc.): Upcoming.
+
