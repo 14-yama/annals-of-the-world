@@ -5,11 +5,16 @@ version: 0.2
 summary: Canonical active-voice edge verbs, semantics, allowed node-type pairs, and governance rules for Hebrew cluster (pattern aligned to prior methodology).
 ---
 
-# Relations Vocabulary
+# Relations Vocabulary (Single Source of Truth)
 
-Purpose: Provide a controlled, auditable verb set for active-voice relationships. Prevent synonym drift, ensure consistent analytics, and separate core semantic intents from specialized verbs.
+Purpose: Provide a controlled, auditable verb set for active-voice relationships. Prevent synonym drift, ensure consistent analytics, and separate core semantic intents from specialized verbs. This file is the single source of truth for the project’s relationship verbs (Core + Supplementary).
 
 Applies to: Hebrew cluster (class 9) and derivative sub-clusters using the same governance.
+
+Curator workflow (verbs)
+- Contributors must choose verbs from the Core or Supplementary lists in this file.
+- To propose a new verb or change semantics/allowed pairs, open an issue titled "Verb Proposal: <VERB>" and include: (1) definition, (2) allowed pairs, (3) 1–2 example triples, (4) minimal evidence plan. The curator will review, decide, and update this file.
+- Curators maintain this file as the canonical registry and will run normalization/audits to prevent synonym drift.
 
 See also: Interaction Matrix for allowed node-type pairs and example triples — [node_interaction_matrix.md](./node_interaction_matrix.md) • Jump to: [Quick Pair Matrix](./node_interaction_matrix.md#quick-pair-matrix-overview).
 
