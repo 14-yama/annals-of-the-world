@@ -250,12 +250,29 @@ Relationships by Type (PROPOSED)
 - Person → Text
   - Judah haNasi → EDITS → Mishnah — evidence: cite:930-ev1
   - Rashi → COMMENTATES_ON → Talmud — evidence: cite:930-pp1
+  - Maimonides → AUTHORS → Mishneh Torah — evidence: cite:930-tx1
 - Person → Doctrine/Idea
   - Maimonides → INTERPRETS → Jewish philosophy — evidence: cite:930-mv1
+  - Rashi → INTERPRETS → Oral Torah — evidence: cite:930-id1
 - Person → Institution/Event
   - Muhammad → ESTABLISHES → Qur'an canonization process — evidence: cite:930-pp2
+  - Yohanan ben Zakkai → ESTABLISHES → Yavneh academy — evidence: cite:930-inst1
 - Institution → Doctrine/Idea
   - Church councils → DEFINES → Christian doctrinal consolidation — evidence: cite:930-mv2
+  - Babylonian academies → STANDARDIZES → Halakhic development — evidence: cite:930-id2
+  - Gaonic leadership → PRESERVES → Synagogue liturgy — evidence: cite:930-id3
+ - Institution → Text
+  - Babylonian academies → PRESERVES → Babylonian Talmud — evidence: cite:930-tx2
+ - Text → Doctrine/Idea
+  - Mishnah → EXEMPLIFIES → Oral Torah — evidence: cite:930-id4
+  - Zohar → INTERPRETS → Mystical readings — evidence: cite:930-id5
+  - Mishneh Torah → DEFINES → Halakhic development — evidence: cite:930-id6
+ - Text → Movement
+  - Zohar → INFLUENCES → Kabbalistic movement — evidence: cite:930-mv3
+ - Text ↔ Text
+  - Mishnah → PRECEDES → Jerusalem Talmud — evidence: cite:930-chron1
+  - Jerusalem Talmud → PRECEDES → Babylonian Talmud — evidence: cite:930-chron2
+  - Rashi’s commentary → QUOTES → Talmud — evidence: cite:930-tx3
 
 
 Movements
@@ -318,10 +335,24 @@ Relationships by Type (PROPOSED)
 - Person → Doctrine/Idea
   - Spinoza → CRITIQUES → Traditional theology — evidence: cite:940-ev1
   - Azariah dei Rossi → ADVOCATES → Humanism applied to Hebrew Bible — evidence: cite:940-pp1
+  - Reformers and Catholic leaders → DEFINES → Catholic Reformation and confessionalization — evidence: cite:940-id1
 - Person → Movement
   - Moses Mendelssohn → ADVOCATES → Haskalah — evidence: cite:940-pp2
+  - Reformers and Catholic leaders → PROMOTES → Protestant reliance on Hebrew Bible — evidence: cite:940-mv2
 - Institution → Text
   - Printing houses → DISTRIBUTES → Vernacular Christian Bibles — evidence: cite:940-mv1
+  - Protestant and Catholic seminaries and missionary societies → PUBLISHES → Vernacular Christian Bibles and confessional catechisms — evidence: cite:940-tx1
+  - Ottoman madrasa networks and imperial printing/publishing centers → PROMULGATES → Ottoman-era legal codes and fatwas — evidence: cite:940-tx2
+ - Institution → Doctrine/Idea
+  - Protestant and Catholic seminaries and missionary societies → STANDARDIZES → Catholic Reformation and confessionalization — evidence: cite:940-id2
+ - Text → Doctrine/Idea
+  - Early critical editions of Tanakh → EXEMPLIFIES → Enlightenment critique — evidence: cite:940-id3
+  - Christian Hebraists’ Bibles → INTERPRETS → Humanism applied to Hebrew Bible — evidence: cite:940-id4
+  - Ottoman-era legal codes and fatwas → INTERPRETS → Ottoman administrative/Islamic law continuities and reform impulses — evidence: cite:940-id5
+ - Text → Movement
+  - Vernacular Christian Bibles → INFLUENCES → Protestant reliance on Hebrew Bible — evidence: cite:940-mv3
+ - Text ↔ Text
+  - Christian Hebraists’ Bibles → TRANSLATES → Torah (Pentateuch) — evidence: cite:940-tx3
 
 
 Movements
