@@ -36,6 +36,13 @@ Governance mandate (read first)
 - You MUST read the governance policy: `docs/governance/GOVERNANCE.md`.
 - All accepted changes MUST be logged in `docs/governance/audit_log.md` with date, category, rationale, and touched files. If your PR triggers a governance change, include the draft audit entry in the PR description; maintainers will finalize it on merge.
 
+5c) Sensitive verbs policy (P→P lethal outcomes)
+- When using KILLS, MURDERS, ASSASSINATES, or EXECUTES:
+	- Provide contextual properties (e.g., `context:"battle/self-defense/political"`, `victim_role`, `legal_authority`).
+	- Supply Tier A/B evidence where possible; summarize ambiguity in `evidence_detail` if contested.
+	- Prefer EXECUTES as I→P when carried out by an institution; include authority/source.
+	- New edge patterns or semantics changes require an issue and an audit log entry upon merge.
+
 Pre-PR compliance checklist
 - [ ] All relationship labels are present in `relations_vocabulary.md`.
 - [ ] If proposing a new/changed verb, there is a linked `Verb Proposal: <VERB>` issue.

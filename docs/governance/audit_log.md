@@ -47,6 +47,13 @@ Purpose: Track approved changes to the verb source of truth, interaction matrix,
 - Rationale: Align source of truth with usage in 910 and ensure the matrix matches the accepted verbs.
 - Breaking changes: None.
 
+2025-10-11 — Add person-to-person killing verbs (supplementary) [vocabulary, matrix]
+- Added verbs (Supplementary): KILLS (P→P), MURDERS (P→P), ASSASSINATES (P→P), EXECUTES (P/I→P) to relations_vocabulary.md with clear semantics and constraints.
+- Updated node_interaction_matrix.md Quick Pair and P↔P sections to include these verbs under P interactions.
+- Rationale: Model historical killings with appropriate specificity (generic vs. unlawful vs. political/religious vs. formal execution) while maintaining active-voice consistency.
+- Constraints: Require contextual properties (e.g., victim role, legal authority, wartime context) and tiered evidence; prefer I→P for EXECUTES when institutional.
+- Breaking changes: None.
+
 ## Process
 - Proposals are filed as issues titled `Verb Proposal: <VERB>` with definition, allowed pairs, examples, and evidence plan.
 - Upon approval, maintainers update `relations_vocabulary.md` and synchronize `node_interaction_matrix.md` and affected cluster docs.
