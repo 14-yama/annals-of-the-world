@@ -84,16 +84,31 @@ P = Person | I = Institution | T = Text/Artifact | D = Doctrine/Idea | M = Movem
 | SURVIVES | P → E | Endures/continues through an event | Use for survival through cataclysmic events |
 | ADVOCATES | P → M/D | Public support of movement/idea | Distinct from ESTABLISHES |
 | PARENT_OF | P → P | Genealogical parent → child | Directional; inverse can be CHILD_OF (if added later) |
+| ADOPTS_AS_CHILD | P → P | Legal adoption creating parent–child tie | Distinct from PARENT_OF (biological); include legal context |
+| ENDORSES | P → P | Publicly supports a person (office/teaching) | Person-targeted; for ideas use ADVOCATES/PROMOTES; include context |
+| HEALS | P → P | Provides curative/medical/spiritual healing | Require explicit evidence; include method/context |
 | TEACHES | P → P | Teacher → student relation | Optionally pair with STUDIES_UNDER |
 | STUDIES_UNDER | P → P | Student → teacher relation | Optionally pair with TEACHES |
 | ASSASSINATES | P → P | Targeted killing of a public/political/religious figure | Provide victim role/title; political/religious motive usually present |
 | MURDERS | P → P | Unlawful killing with intent | Requires evidence of unlawfulness/intent; avoid for wartime combat |
 | SUCCEEDS | P → P; I → I | Succeeds to office/role/lineage | Provide office/context in properties |
 | MARRIES | P ↔ P | Marital tie (reciprocal) | Record one reciprocal edge or two directed edges consistently |
+| COLLABORATES_WITH | P ↔ P | Works jointly on a specific text/event/project | Reciprocal; include target ref (text/event id) |
+| CORRESPONDS_WITH | P ↔ P | Documented exchange of letters | Reciprocal; cite correspondence |
+| DIVORCES | P ↔ P | Formal dissolution of marriage | Reciprocal; include date/jurisdiction |
 | DEBATES | P ↔ P; P → D | Structured disputation | Use reciprocal edges sparingly |
 | PROMULGATES | P/I → D/T | Formally publishes/enacts law/edict | Prefer CANONIZES for status decisions |
 | PARTICIPATES_IN | P/I → E | General involvement in an event (non-organizer) | Avoid for organizers; use ORGANIZES/LEADS |
 | LEADS | P/I → E/M | Directs or commands an event/movement | Distinct from ORGANIZES (planning) |
+| APPOINTS | P/I → P | Selects a person for an office/role | Include office/term; distinct from INVESTS (installation) |
+| INVESTS | P/I → P | Formally confers office/authority | Include ceremony/office; distinct from APPOINTS (selection) |
+| DISMISSES | P/I → P | Removes from office via normal procedure | Include authority/reason; distinct from DEPOSES (coercive) |
+| DEPOSES | P/I → P | Forcibly removes from high office | Extraordinary/coercive removal; include method/context |
+| ORDAINS | P/I → P | Confers religious/clerical status | Include rite/order/see; use for religious office |
+| EXCOMMUNICATES | P/I → P | Expels from religious communion | Include canon/act reference |
+| PARDONS | P/I → P | Grants legal clemency | Include issuing authority/instrument |
+| IMPRISONS | P/I → P | Places a person in custody | Include location/term |
+| SPONSORS | P/I → P | Provides material/financial support to a person | Distinct from COMMISSIONS (I→T/E) |
 | EXECUTES | P/I → P | Carries out a formal capital punishment | Prefer I → P when by an institution; include legal authority in properties |
 | COPIES | P/I → T | Scribal reproduction of a text | Provide source reference in properties |
 | COMPILES | P/I → T | Anthologizes/assembles a text from sources | Provide compilation scope |
