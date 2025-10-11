@@ -54,6 +54,22 @@ Purpose: Track approved changes to the verb source of truth, interaction matrix,
 - Constraints: Require contextual properties (e.g., victim role, legal authority, wartime context) and tiered evidence; prefer I→P for EXECUTES when institutional.
 - Breaking changes: None.
 
+2025-10-11 — Add non-overlapping person interaction verbs (supplementary) [vocabulary]
+- Added verbs (Supplementary, Person interactions):
+  - P → P: ADOPTS_AS_CHILD, ENDORSES, HEALS
+  - P ↔ P: COLLABORATES_WITH, CORRESPONDS_WITH, DIVORCES
+  - P/I → P: APPOINTS, INVESTS, DISMISSES, DEPOSES, ORDAINS, EXCOMMUNICATES, PARDONS, IMPRISONS, SPONSORS, EXECUTES (already present; repositioned within sorted table)
+- Rationale: Cover common interpersonal, legal, and religious actions without overlapping existing semantics; maintain active-voice precision and evidenceability.
+- Constraints & non-overlap notes:
+  - APPOINTS (selection) vs INVESTS (installation);
+  - DISMISSES (routine/legal) vs DEPOSES (extraordinary/coercive);
+  - ORDAINS/EXCOMMUNICATES (religious) vs institutional APPOINTS/DISMISSES;
+  - SPONSORS targets persons; COMMISSIONS targets texts/events;
+  - ENDORSES targets persons; ideas use ADVOCATES/PROMOTES.
+- Files updated:
+  - docs/guidelines/relations_vocabulary.md — Supplementary table rows added; kept sorted by Allowed column.
+- Breaking changes: None (additive only).
+
 ## Process
 - Proposals are filed as issues titled `Verb Proposal: <VERB>` with definition, allowed pairs, examples, and evidence plan.
 - Upon approval, maintainers update `relations_vocabulary.md` and synchronize `node_interaction_matrix.md` and affected cluster docs.
