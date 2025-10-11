@@ -1,7 +1,7 @@
 ---
 title: Relations Vocabulary (Class 9 Clusters)
 status: DRAFT
-version: 0.1
+version: 0.2
 summary: Canonical active-voice edge verbs, semantics, allowed node-type pairs, and governance rules for Hebrew cluster (pattern aligned to prior methodology).
 ---
 
@@ -25,44 +25,77 @@ P = Person | I = Institution | T = Text/Artifact | D = Doctrine/Idea | M = Movem
 | Verb | Semantics | Allowed (Subject→Object) | Notes / Disallow | Evidence Tier Guidance |
 |------|-----------|--------------------------|------------------|------------------------|
 | CAUSES | Direct causal contribution | E/T/D/M → E/D | Not for weak correlation | A or B |
+| ENABLES | Necessary precondition without direct causation | T/I/P/E → T/D/M/E | Distinguish from CAUSES (indirect) | A or B |
+| TRANSFORMS | Deep structural change | E/T/M → D/I/T | Provide before/after note | A or B |
 | DIFFUSES | Spreads across geography/traditions | M/P/I → L/M/D/T | Must show transmission vector | A + B (or D for modern stats) |
 | TRANSMITS | Conveys textual/ritual content | T/P/I → T/D/M | Use for copying/translation chains | A or B |
+| TRANSLATES | Renders text language/script | P/I → T | Not for paraphrase; requires linguistic shift | A or B |
+| INTERPRETS | Provides exegesis/theological reading | P/T → T/D | Use for commentary/exegesis broadly | A (commentary ms) or B |
+| COMMENTATES_ON | Writes a formal commentary on | P → T/D | More specific than INTERPRETS | A or B |
+| AUTHORS | Creates an original text/work | P/I → T | Alias: WRITES | A or B |
+| PUBLISHES | Issues a work publicly | P/I → T | First issuance; editions use EDITS | A or B |
+| EDITS | Produces an edited/redacted form | P/I → T | Include edition descriptor | A or B |
 | CANONIZES | Confers canonical status | I/P → T/D | Only when formal recognition | A primary record |
-| STANDARDIZES | Imposes uniform practice/text | I/P → D/T/Ritual | Distinct from CANONIZES (authority vs status) | A + B |
-| INTERPRETS | Provides exegesis/theological reading | P/T → T/D | Use when producing commentary | A (commentary ms) or B |
-| SYSTEMATIZES | Produces organized legal/doctrinal corpus | P/I → D/T | Large-scale synthetic work | B |
-| TRANSLATES | Renders text language/script | P/I → T | Not for paraphrase; must have linguistic shift | A or B |
+| STANDARDIZES | Imposes uniform practice/text | I/P → D/T | Distinct from CANONIZES (status vs. uniformity) | A + B |
+| DEFINES | Establishes doctrinal/textual definition | I/P/T → D/T | Use for councils, doctrinal formulae | A or B |
+| ESTABLISHES | Founds institution/practice | P/I → I/D | Not for minor reforms | A or B |
+| ORGANIZES | Coordinates congress/campaign/event | P/I → E/M | Event node must exist | A or B |
+| PRESERVES | Actively conserves text/practice | I/P → T/D | Use when continuity risk documented | A or B |
 | ADOPTS | Takes up doctrine/practice | P/I/M → D/T | Distinct from STANDARDIZES (scope) | A or B |
 | REJECTS | Formally repudiates | P/I/M → D/T | Needs explicit rejection evidence | A or B |
-| INFLUENCES | Non-mechanical intellectual impact | P/I/T/D/M → P/I/T/D/M | Last-resort; specify stronger verb if possible | B |
-| FRAMES | Lenses an interpretation (edge to Framework) | (Any content) → F | Only with explicit interpretive layer | B or D |
+| INFLUENCES | Non-mechanical intellectual impact | P/I/T/D/M → P/I/T/D/M | Prefer a more specific verb if possible | B |
+| FRAMES | Lenses an interpretation (to Framework) | (Any content) → F | Only with explicit interpretive layer | B or D |
 | OCCURS_IN | Event/Process location anchor | E → L | Single primary place per edge; replicate for multiplex locales | A |
-| ESTABLISHES | Founds institution/practice | P/I → I/D | Not for minor reforms | A or B |
-| PRESERVES | Actively conserves text/practice | I/P → T/D | Use when continuity risk documented | A or B |
-| COMMENTATES_ON | Writes commentary/exegesis | P → T/D | More specific than INTERPRETS | A or B |
 | SCHISMS_FROM | Formal separation / split | M/I → M/I | Must have structural or doctrinal rupture | A + B |
 | RECONCILES_WITH | Restores communion/unity | M/I → M/I | Reciprocal edge optional | A + B |
 | DECLARES | Announces formal status/event | P/I → E/D | Public proclamation | A |
 
-## 4. Supplementary Verbs (Contextual)
-| Verb | Use Case | Example Subject→Object | Constraint |
-|------|---------|------------------------|-----------|
-| PROPHESIES_DURING | Prophetic activity within event | P → E | Only for recognized prophetic figures |
-| DELIVERS (LEGACY) | Provides covenant/law | P → D | Prefer CANONIZES / PROMULGATES later |
-| DEBATES | Engages in structured disputation | P ↔ P / P → D | Use reciprocal edges sparingly |
-| CRITIQUES | Critical evaluation of doctrine/text | P → D/T | Provide focus (which aspect) in note |
-| ADVOCATES | Publicly supports movement/idea | P → M/D | Distinct from ESTABLISHES |
-| DISTRIBUTES | Enables material/text dissemination | I/P → T | Supply scope (region) in property |
-| ORGANIZES | Coordinates congress/campaign | P/I → E/M | Event node must exist |
-| PROMOTES | Accelerates adoption without founding | P/I/M → D/T | Use metrics if available |
-| PUBLISHES | Issues written work | P/I → T | Use only for first issuance |
-| EDITS | Produces edited/redacted form | P/I → T | Include edition descriptor |
-| COMMENTS_ON | (Alias of COMMENTATES_ON) | P → T/D | Prefer COMMENTATES_ON; deprecate alias |
-| COLLABORATES_WITH | Joint action toward shared goal | P ↔ P | Provide project scope |
-| SURVIVES | Persists through catastrophic event | P/I/T → E | Use sparingly (transformational events) |
-| EXEMPLIFIES | Embodies idea/doctrine | E/P/T → D | Not generic; idea must be abstract node |
-| TRANSFORMS | Deep structural change | E/T/M → D/I/T | Provide before/after note |
-| ENABLES | Provides necessary precondition | T/I/P/E → T/D/M | Distinguish from CAUSES (indirect) |
+## 4. Supplementary Verbs (Contextual / Specialized)
+| Verb | Allowed (Subject→Object) | Use Case / Semantics | Constraint / Notes |
+|------|---------------------------|----------------------|--------------------|
+| PROPHESIES_DURING | P → E | Prophetic activity within event | Recognized prophetic figures only |
+| DEBATES | P ↔ P; P → D | Structured disputation | Use reciprocal edges sparingly |
+| CRITIQUES | P → D/T | Critical evaluation of doctrine/text | Specify focus in note |
+| ADVOCATES | P → M/D | Public support of movement/idea | Distinct from ESTABLISHES |
+| PROMOTES | P/I/M → D/T | Accelerates adoption without founding | Provide metric/note when possible |
+| DISTRIBUTES | I/P → T | Material/text dissemination | Supply scope (region) in property |
+| COMMISSIONS | I → T/E | Institution commissions text/event | Provide commission record if possible |
+| PROHIBITS | I → T/D/M/P | Institutional prohibition | Provide decree/edict reference |
+| PRESIDES_OVER | I → E/P | Chairs or formally oversees | Use for councils, courts |
+| ORDERS | I → P/E | Issues binding instruction | Distinct from DECLARES |
+| SANCTIONS | I/P → E/D/T | Grants formal approval | Provide edict/act reference |
+| PARTNERS_WITH | I ↔ I | Institutional partnership | Reciprocal optional |
+| COMPETES_WITH | I ↔ I/M | Institutional competition | Reciprocal optional |
+| REGULATES | I → I/M/P/T | Regulatory oversight | Provide policy/regulatory reference |
+| QUOTES | T → T | Text cites another text | Provide citation location |
+| REFUTES | T → T/D | Text argues against | Provide citation location |
+| INTRODUCES | P/I/M → T/D/E | Introduces idea/tech/event to context | Provide vector/context |
+| USES | E/P/I → T | Uses artifact/text in activity | Distinct from DEPLOYS |
+| DEPLOYS | I/M/P → T/E | Operational/strategic use | For organized use (e.g., corps, offices) |
+| INVENTS | P/I → T | Invents an artifact/technique | Provide invention evidence |
+| DESIGNS | P/I → T | Designs an artifact/technique | Distinct from INVENTS |
+| SYMBOLIZES | T/E → D/M | Stands for/represents | Use when symbolic reading is explicit |
+| EMERGES_FROM | M/T → E/D | Originates from prior event/idea | Prefer ARISES_FROM for Movement → Event |
+| ARISES_FROM | M → E | Movement emergence from event | Canonical for Movement genesis |
+| IS_PART_OF | E/T → E/T | Membership/composition relation | Use for part–whole only (not causality) |
+| PRECEDES | E/T → E/T | Temporal ordering | Use with chronological evidence |
+| HOSTS | L/I → E/P | Place/Institution hosts people/events | Avoid generic Place → X unless justified |
+| IS_CENTER_OF | L → M/D | Place as recognized center | Use sparingly, provide source |
+| ATTRIBUTES | V → P/T/E | Evidence attributes authorship/date | Evidence-only; see evidence verbs |
+| ATTESTS_TO | V → P/T/E/D | Evidence attests to content | Evidence-only |
+| DOCUMENTS | V → P/I/T/D/M/E | Evidence documents content | Evidence-only |
+| CORROBORATES | V → P/T/E/D | Evidence corroborates content | Evidence-only |
+| DATES | V → E/T | Evidence dates event/text | Evidence-only |
+| VALIDATES | V → P/I/T/D/M/E | Confirms measurement/claim | Evidence-only |
+| PROVIDES | V → T/D/M/E | Supplies resource/context | Evidence-only |
+| REPORTS | V → E/T/D | Summarizes/aggregates | Evidence-only |
+
+Aliases & Deprecations
+- FOUNDS → ESTABLISHES (use ESTABLISHES)
+- WRITES → AUTHORS (use AUTHORS)
+- COMMENTS_ON → COMMENTATES_ON (use COMMENTATES_ON)
+- SPREADS_VIA → DIFFUSES (use DIFFUSES)
+- DELIVERS → PROMULGATES or CANONIZES (project still evaluating; prefer CANONIZES for status, PROMULGATES for law publication)
 
 ## 5. Deprecation & Synonym Policy
 - If two verbs overlap >70% in intended use, mark one DEPRECATED in this file; reject new edges using it.
@@ -78,7 +111,13 @@ Orphan verb check:
 `MATCH ()-[r]->() WHERE r.verb IS NULL RETURN r LIMIT 20;`
 
 Non-whitelisted verb check (adjust list):
-`MATCH ()-[r]->() WHERE NOT type(r) IN ["CAUSES","DIFFUSES","TRANSMITS","CANONIZES","STANDARDIZES","INTERPRETS","SYSTEMATIZES","TRANSLATES","ADOPTS","REJECTS","INFLUENCES","FRAMES","OCCURS_IN","ESTABLISHES","PRESERVES","COMMENTATES_ON","SCHISMS_FROM","RECONCILES_WITH","DECLARES"] RETURN DISTINCT type(r);`
+`MATCH ()-[r]->() WHERE NOT type(r) IN [
+	"CAUSES","ENABLES","TRANSFORMS","DIFFUSES","TRANSMITS","TRANSLATES",
+	"INTERPRETS","COMMENTATES_ON","AUTHORS","PUBLISHES","EDITS","CANONIZES",
+	"STANDARDIZES","DEFINES","ESTABLISHES","ORGANIZES","PRESERVES","ADOPTS",
+	"REJECTS","INFLUENCES","FRAMES","OCCURS_IN","SCHISMS_FROM","RECONCILES_WITH",
+	"DECLARES"
+] RETURN DISTINCT type(r);`
 
 Promotion candidates:
 `MATCH ()-[r]->() WITH r.evidence AS ev, count(*) AS c WHERE c > 1 AND ev CONTAINS ':' RETURN ev, c ORDER BY c DESC;`
@@ -87,6 +126,7 @@ Framework misuse:
 `MATCH ()-[r]->(f:Framework) WHERE type(r) <> 'FRAMED_BY' RETURN r LIMIT 25;`
 
 ## 8. Change Log
+- 0.2 Expanded core canon (ENABLES, TRANSFORMS, AUTHORS, PUBLISHES, EDITS, DEFINES, ORGANIZES); expanded supplementary set (institutional, textual, temporal, evidence verbs); added aliases/deprecations; updated whitelist.
 - 0.1 Initial draft (core + supplementary verbs; governance + QA snippets).
 
 ## 9. TODO
