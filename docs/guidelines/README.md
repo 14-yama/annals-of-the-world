@@ -15,6 +15,11 @@ Contents
 
 Recommended first reads
 
-1. `curator_runbook.md` — short checklist for everyday curation
-2. `audit_queries.md` — run these queries before publishing a cluster
-3. `schema.md` — authoritative node/relationship shapes and constraints
+1. [curator_runbook.md](./curator_runbook.md) — short checklist for everyday curation
+2. [audit_queries.md](./audit_queries.md) — run these queries before publishing a cluster
+3. [schema.md](./schema.md) — authoritative node/relationship shapes and constraints
+
+Related lookups
+
+- [relations_vocabulary.md](./relations_vocabulary.md)
+- [node_interaction_matrix.md](./node_interaction_matrix.md)
