@@ -37,13 +37,36 @@ Ideas
 - Sacrifice as covenant practice
 
 People
-- Adam, Eve, Noah, Abraham, Sarah, Isaac, Jacob, Joseph
+- Adam, Eve, Cain, Abel, Noah, Abraham, Sarah, Isaac, Jacob, Joseph
 
 Events
 - Creation
+- Fall (of Man)
+- Expulsion from Eden
+- Cain and Abel
 - Flood
+- Noahic Covenant
 - Tower of Babel
+- Call of Abram
+- Abram’s Migration to Canaan
 - Abrahamic Covenant
+- Destruction of Sodom and Gomorrah
+- Binding of Isaac (Akedah)
+ - Birth of Isaac
+ - Hagar and Ishmael (expulsion)
+ - Birth of Esau and Jacob
+ - Esau sells birthright
+ - Jacob deceives Isaac (blessing of Jacob)
+ - Jacob’s Ladder at Bethel
+ - Jacob wrestles at Peniel (name changed to Israel)
+ - Joseph’s dreams
+ - Sale of Joseph into slavery
+ - Joseph interprets dreams in Egypt
+ - Joseph’s rise to power in Egypt
+ - Seven-year famine in Egypt and Canaan
+ - Migration of Jacob’s family to Egypt
+ - Death of Jacob
+ - Death of Joseph
 
 
 Relationships by Type (PROPOSED)
@@ -52,6 +75,16 @@ Relationships by Type (PROPOSED)
   - Noah → SURVIVES → Flood — evidence: cite:910-ev1
   - Adam → PARTICIPATES_IN → Creation — evidence: cite:910-ev3
   - Eve → PARTICIPATES_IN → Creation — evidence: cite:910-ev4
+  - Adam → PARTICIPATES_IN → Fall (of Man) — evidence: cite:910-ev9
+  - Eve → PARTICIPATES_IN → Fall (of Man) — evidence: cite:910-ev10
+  - Adam → PARTICIPATES_IN → Expulsion from Eden — evidence: cite:910-ev11
+  - Eve → PARTICIPATES_IN → Expulsion from Eden — evidence: cite:910-ev12
+  - Cain → PARTICIPATES_IN → Cain and Abel — evidence: cite:910-ev13
+  - Abel → PARTICIPATES_IN → Cain and Abel — evidence: cite:910-ev14
+  - Noah → DECLARES → Noahic Covenant — evidence: cite:910-ev15
+  - Abraham → PARTICIPATES_IN → Call of Abram — evidence: cite:910-ev16
+  - Abraham → PARTICIPATES_IN → Abram’s Migration to Canaan — evidence: cite:910-ev17
+  - Isaac → PARTICIPATES_IN → Binding of Isaac (Akedah) — evidence: cite:910-ev18
   - Sarah → PARTICIPATES_IN → Abrahamic Covenant — evidence: cite:910-ev5
   - Isaac → PARTICIPATES_IN → Abrahamic Covenant — evidence: cite:910-ev6
   - Jacob → PARTICIPATES_IN → Abrahamic Covenant — evidence: cite:910-ev7
@@ -73,12 +106,26 @@ Relationships by Type (PROPOSED)
   - Creation → PRECEDES → Flood — evidence: cite:910-chron1
   - Flood → PRECEDES → Tower of Babel — evidence: cite:910-chron2
   - Tower of Babel → PRECEDES → Abrahamic Covenant — evidence: cite:910-chron3
+  - Creation → PRECEDES → Fall (of Man) — evidence: cite:910-chron4
+  - Fall (of Man) → PRECEDES → Expulsion from Eden — evidence: cite:910-chron5
+  - Expulsion from Eden → PRECEDES → Cain and Abel — evidence: cite:910-chron6
+  - Cain and Abel → PRECEDES → Flood — evidence: cite:910-chron7
+  - Flood → PRECEDES → Noahic Covenant — evidence: cite:910-chron8
+  - Noahic Covenant → PRECEDES → Tower of Babel — evidence: cite:910-chron9
+  - Tower of Babel → PRECEDES → Call of Abram — evidence: cite:910-chron10
+  - Call of Abram → PRECEDES → Abram’s Migration to Canaan — evidence: cite:910-chron11
+  - Abram’s Migration to Canaan → PRECEDES → Abrahamic Covenant — evidence: cite:910-chron12
+  - Abrahamic Covenant → PRECEDES → Destruction of Sodom and Gomorrah — evidence: cite:910-chron13
+  - Destruction of Sodom and Gomorrah → PRECEDES → Binding of Isaac (Akedah) — evidence: cite:910-chron14
 - Event → Doctrine/Idea
   - Creation → SYMBOLIZES → Primeval history themes — evidence: cite:910-mv2
   - Flood → SYMBOLIZES → Primeval history themes — evidence: cite:910-mv3
   - Tower of Babel → SYMBOLIZES → Primeval history themes — evidence: cite:910-mv1
   - Abrahamic Covenant → ENABLES → Chosenness / Election — evidence: cite:910-id1
   - Abrahamic Covenant → ENABLES → Sacrifice as covenant practice — evidence: cite:910-id2
+  - Noahic Covenant → ENABLES → Sacrifice as covenant practice — evidence: cite:910-id5
+  - Call of Abram → ENABLES → Chosenness / Election — evidence: cite:910-id4
+  - Binding of Isaac (Akedah) → EXEMPLIFIES → Sacrifice as covenant practice — evidence: cite:910-id6
 
 
 ## 920 — Classical (Ancient Israelite & Second Temple; c. 1200 BCE–70 CE)
@@ -125,13 +172,33 @@ Places
 
 Events
 - Exodus
+- Sojourn and Oppression in Egypt
+- Sinai Theophany (Giving of the Law)
+- Wilderness Wanderings (40 years)
+- Crossing of the Jordan
+- Period of the Judges
+- Establishment of the United Monarchy
+- Samuel anoints Saul (first king)
+- David captures Jerusalem (City of David)
+- Solomon builds First Temple
 - Conquest of Canaan
 - Division of the Kingdom
+- Sennacherib’s siege of Jerusalem (701 BCE)
+- Josiah’s Reform (Deuteronomic Reform)
 - Assyrian conquest (722 BCE)
+- First Deportation to Babylon (597 BCE)
 - Babylonian Exile (586 BCE)
 - Persian Edict of Cyrus (538 BCE)
+- Return under Zerubbabel (First Return)
+- Second Temple completed (516 BCE)
+- Ezra’s return and Torah reading (c. 458 BCE)
+- Nehemiah rebuilds Jerusalem’s walls (c. 445 BCE)
 - Maccabean Revolt (167–160 BCE)
+- Temple rededication (Hanukkah, 164 BCE)
+- Hasmonean independence (c. 140 BCE)
 - Roman conquest (63 BCE)
+- Herod’s Temple renovation (from 20 BCE)
+- Great Jewish Revolt (66–73 CE)
 - Second Temple destruction (70 CE)
 - Emergence of early Christian communities (1st century CE)
 
