@@ -45,48 +45,59 @@ Events
 - Tower of Babel
 - Abrahamic Covenant
 
-Relationships (PROPOSED)
-- (Adam) - MARRIES -> (Eve) — evidence: cite:910-pp1
-- (Noah) - SURVIVES -> (Flood) — evidence: cite:910-ev1
-- (Abraham) - ESTABLISHES -> (Abrahamic Covenant) — evidence: cite:910-ev2
-- (Tower_of_Babel) - EXEMPLIFIES -> (Primeval_History_Themes) — evidence: cite:910-mv1
 
-Relationship node types (PROPOSED)
-- Person ↔ Person: (e.g., ALLIES, MARRIES, SUCCEEDS, INFLUENCES) — person-to-person relations
-- Person → Event: (e.g., LEADS, PARTICIPATES_IN, PROPHESIES_DURING) — person-to-event relations
-- Person → Movement: (e.g., FOUNDS, ADVANCES, JOINS) — person-to-movement relations
-- Person → Idea/Institution: (e.g., ADVOCATES_FOR, SERVES_IN, ESTABLISHES)
-- Event → Event: (e.g., PRECEDES, TRIGGERS, IS_PART_OF)
-- Event → Movement/Text: (e.g., INSPIRES, GENERATES, IS_DOCUMENTED_BY)
-- Place → Event/Person: (e.g., OCCURS_IN, HOSTS, IS_CENTER_OF)
-- Text → Idea/Institution: (e.g., DEFINES, SUPPORTS, CHALLENGES)
-- Evidence → Event/Text/Person: (e.g., ATTTESTS_TO, DOCUMENTS, CITES)
+Relationships by Type (PROPOSED)
+- Person ↔ Person
+  - Adam ↔ MARRIES ↔ Eve — evidence: cite:910-pp1
+  - Abraham ↔ MARRIES ↔ Sarah — evidence: cite:910-pp2
+  - Isaac ↔ SUCCEEDS ↔ Abraham — evidence: cite:910-pp3
+  - Jacob ↔ SUCCEEDS ↔ Isaac — evidence: cite:910-pp4
+- Person → Event
+  - Adam → PARTICIPATES_IN → Creation — evidence: cite:910-ev3
+  - Eve → PARTICIPATES_IN → Creation — evidence: cite:910-ev4
+  - Noah → SURVIVES → Flood — evidence: cite:910-ev1
+  - Abraham → ESTABLISHES → Abrahamic Covenant — evidence: cite:910-ev2
+  - Sarah → PARTICIPATES_IN → Abrahamic Covenant — evidence: cite:910-ev5
+  - Isaac → PARTICIPATES_IN → Abrahamic Covenant — evidence: cite:910-ev6
+  - Jacob → PARTICIPATES_IN → Abrahamic Covenant — evidence: cite:910-ev7
+  - Joseph → PARTICIPATES_IN → Abrahamic Covenant — evidence: cite:910-ev8
+- Event ↔ Event
+  - Creation → PRECEDES → Flood — evidence: cite:910-chron1
+  - Flood → PRECEDES → Tower of Babel — evidence: cite:910-chron2
+  - Tower of Babel → PRECEDES → Abrahamic Covenant — evidence: cite:910-chron3
+- Event → Idea
+  - Creation → EXEMPLIFIES → Primeval history themes — evidence: cite:910-mv2
+  - Flood → EXEMPLIFIES → Primeval history themes — evidence: cite:910-mv3
+  - Tower of Babel → EXEMPLIFIES → Primeval history themes — evidence: cite:910-mv1
+  - Abrahamic Covenant → ESTABLISHES → Chosenness / Election — evidence: cite:910-id1
+  - Abrahamic Covenant → ESTABLISHES → Sacrifice as covenant practice — evidence: cite:910-id2
 
 
 ## 920 — Classical (Ancient Israelite & Second Temple; c. 1200 BCE–70 CE)
 status: PROPOSED
+Relationships by Type (PROPOSED)
+- Person ↔ Person
+  - (Adam) - MARRIES -> (Eve) — evidence: cite:910-pp1
+  - (Abraham) - MARRIES -> (Sarah) — evidence: cite:910-pp2
+  - (Isaac) - SUCCEEDS -> (Abraham) — evidence: cite:910-pp3
+  - (Jacob) - SUCCEEDS -> (Isaac) — evidence: cite:910-pp4
+- Person → Event
+  - (Adam) - PARTICIPATES_IN -> (Creation) — evidence: cite:910-ev3
+  - (Eve) - PARTICIPATES_IN -> (Creation) — evidence: cite:910-ev4
+  - (Noah) - SURVIVES -> (Flood) — evidence: cite:910-ev1
+  - (Abraham) - ESTABLISHES -> (Abrahamic Covenant) — evidence: cite:910-ev2
+  - (Sarah) - PARTICIPATES_IN -> (Abrahamic Covenant) — evidence: cite:910-ev5
+  - (Isaac) - PARTICIPATES_IN -> (Abrahamic Covenant) — evidence: cite:910-ev6
+  - (Jacob) - PARTICIPATES_IN -> (Abrahamic Covenant) — evidence: cite:910-ev7
+  - (Joseph) - PARTICIPATES_IN -> (Abrahamic Covenant) — evidence: cite:910-ev8
+- Event → Idea
+  - (Creation) - EXEMPLIFIES -> (Primeval_History_Themes) — evidence: cite:910-mv2
+  - (Flood) - EXEMPLIFIES -> (Primeval_History_Themes) — evidence: cite:910-mv3
+  - (Tower_of_Babel) - EXEMPLIFIES -> (Primeval_History_Themes) — evidence: cite:910-mv1
+  - (Abrahamic Covenant) - ESTABLISHES -> (Chosenness / Election) — evidence: cite:910-id1
+  - (Abrahamic Covenant) - ESTABLISHES -> (Sacrifice as covenant practice) — evidence: cite:910-id2
 
-Ideas
-- Mosaic Covenant / Sinai Law
-- Kingship as divine office
-- Prophetic justice (Amos, Micah)
-- Apocalyptic eschatology (Daniel; later prophets)
-
-People
-- Joshua, Samuel, Solomon, Elijah, Elisha
-- Jeremiah, Ezekiel, Daniel
-- Nehemiah, Esther
-- Hasmoneans (Judas Maccabeus, John Hyrcanus)
-- Early Christian figures (Jesus of Nazareth — as an historical actor in 1st c. CE contexts, Paul of Tarsus)
-
-Institutions
-- Tribal confederacy
-- United Monarchy
-- Northern Kingdom (Israel)
-- Southern Kingdom (Judah)
-- Second Temple priesthood
-- Sanhedrin (early form)
-
+## 920 — Classical (Ancient Israelite & Second Temple; c. 1200 BCE–70 CE)
 Places
 - Sinai, Canaan, Samaria, Nineveh, Persia
 - Alexandria (diaspora hub)
@@ -111,14 +122,15 @@ Relationships (PROPOSED)
 - (Paul_of_Tarsus) - FOUNDS -> (Early_Christian_Communities) — evidence: cite:920-mv1
 - (Septuagint) - ENABLES -> (Early_Christian_texts_in_circulation) — evidence: cite:920-tx1
 
-Relationship node types (PROPOSED)
-- Person ↔ Person: (e.g., MENTORS, SUCCEEDS, CORRESPONDS_WITH)
-- Person → Event: (e.g., LEADS, INITIATES, SURVIVES)
-- Person → Movement: (e.g., FOUNDS, PROMOTES, RESISTS)
-- Text → Movement/Person: (e.g., INFORMS, TRANSLATES_FOR, IS_USED_BY)
-- Institution → Person/Event: (e.g., ORDERS, SANCTIONS, PRESIDES_OVER)
-- Movement → Event: (e.g., CAUSES, RESPONDS_TO)
-- Evidence → Text/Event/Person: (e.g., CORROBORATES, DATES, ATTRIBUTES)
+Relationships by Type (PROPOSED)
+- Person → Event
+  - Moses → DELIVERS → Mosaic Covenant / Sinai Law — evidence: cite:920-pp1
+  - Joshua → LEADS → Conquest of Canaan — evidence: cite:920-ev1
+  - Jeremiah → PROPHESIES_DURING → Babylonian Exile — evidence: cite:920-ev2
+- Person → Movement
+  - Paul of Tarsus → FOUNDS → Early Christian communities — evidence: cite:920-mv1
+- Text → Movement
+  - Septuagint → ENABLES → Early Christian texts in circulation — evidence: cite:920-tx1
 
 
 
@@ -193,16 +205,19 @@ Relationships (PROPOSED)
 - (Judah_haNasi) - EDITS -> (Mishnah) — evidence: cite:930-ev1
 - (Rashi) - COMMENTS_ON -> (Talmud) — evidence: cite:930-pp1
 - (Maimonides) - SYSTEMATIZES -> (Jewish_Philosophy) — evidence: cite:930-mv1
-- (Muhammad) - FOUNDs -> (Qur'an_canonization_process) — evidence: cite:930-pp2
-- (Church_Councils) - DEFINE -> (Christian_doctrinal_consolidation) — evidence: cite:930-mv2
+- (Muhammad) - FOUNDS -> (Qur'an_canonization_process) — evidence: cite:930-pp2
+- (Church_Councils) - DEFINES -> (Christian_doctrinal_consolidation) — evidence: cite:930-mv2
 
-Relationship node types (PROPOSED)
-- Person ↔ Text: (e.g., WRITES, EDITS, COMMENTS_ON)
-- Person → Institution: (e.g., LEADS, FOUNDS, TEACHES_AT)
-- Institution → Text/Event: (e.g., COMMISSIONS, PRESERVES, PROHIBITS)
-- Text → Text: (e.g., QUOTES, TRANSLATES, REFUTES)
-- Movement → Institution/Person: (e.g., INFORMS, MOBILIZES, COUNTERACTS)
-- Evidence → Institution/Text: (e.g., VALIDATES, ATTRIBUTES)
+Relationships by Type (PROPOSED)
+- Person → Text
+  - Judah haNasi → EDITS → Mishnah — evidence: cite:930-ev1
+  - Rashi → COMMENTS_ON → Talmud — evidence: cite:930-pp1
+- Person → Idea
+  - Maimonides → SYSTEMATIZES → Jewish philosophy — evidence: cite:930-mv1
+- Person → Process/Institution
+  - Muhammad → FOUNDS → Qur'an canonization process — evidence: cite:930-pp2
+- Institution → Idea/Doctrine
+  - Church councils → DEFINES → Christian doctrinal consolidation — evidence: cite:930-mv2
 
 
 Movements
@@ -261,12 +276,14 @@ Relationships (PROPOSED)
 - (Printing_houses) - DISTRIBUTES -> (Vernacular_Christian_Bibles) — evidence: cite:940-mv1
 - (Moses_Mendelssohn) - ADVOCATES -> (Haskalah) — evidence: cite:940-pp2
 
-Relationship node types (PROPOSED)
-- Person ↔ Institution: (e.g., SERVES_AS, PETITIONS, IS_EXPELLED_FROM)
-- Institution ↔ Text: (e.g., PRINTS, CENSORS, ENDORSES)
-- Person → Idea/Text: (e.g., ARGUES_FOR, TRANSLATES, PUBLISHES)
-- Movement → Text/Place: (e.g., SPREADS_VIA, ORGANIZES_IN)
-- Evidence → Person/Text/Institution: (e.g., DOCUMENTS, RECORDS, PRESERVES)
+Relationships by Type (PROPOSED)
+- Person ↔ Group
+  - Azariah dei Rossi ↔ DEBATES ↔ Christian Hebraists — evidence: cite:940-pp1
+- Person → Idea/Movement
+  - Spinoza → CRITIQUES → Traditional theology — evidence: cite:940-ev1
+  - Moses Mendelssohn → ADVOCATES → Haskalah — evidence: cite:940-pp2
+- Institution → Text
+  - Printing houses → DISTRIBUTES → Vernacular Christian Bibles — evidence: cite:940-mv1
 
 
 Movements
@@ -326,12 +343,14 @@ Relationships (PROPOSED)
 - (Muhammad_Abduh) - PROMOTES -> (Islamic_Modernism) — evidence: cite:950-mv1
 - (Holocaust) - TRANSFORMS -> (Post-Holocaust_theology) — evidence: cite:950-ev2
 
-Relationship node types (PROPOSED)
-- Person ↔ Movement: (e.g., LEADS, ORGANIZES, BREAKS_WITH)
-- Movement → Institution/Text: (e.g., REFORMS, TARGETS, PRODUCES)
-- Event ↔ Institution: (e.g., OCCURS_UNDER, RECONFIGURES)
-- Text → Movement/Person: (e.g., MOBILIZES, EDUCATES)
-- Evidence → Event/Person/Movement: (e.g., TESTIFIES_TO, ARCHIVES)
+Relationships by Type (PROPOSED)
+- Person → Institution/Movement
+  - Theodor Herzl → ORGANIZES → World Zionist Congress — evidence: cite:950-pp1
+  - Muhammad Abduh → PROMOTES → Islamic Modernism — evidence: cite:950-mv1
+- Person → Text/Idea
+  - Julius Wellhausen → PUBLISHES → Documentary Hypothesis — evidence: cite:950-ev1
+- Event → Idea
+  - Holocaust → TRANSFORMS → Post-Holocaust theology — evidence: cite:950-ev2
 
 
 Evidence
@@ -394,12 +413,15 @@ Relationships (PROPOSED)
 - (Sayyid_Qutb) - INFLUENCES -> (Political_Islam_Movements) — evidence: cite:960-mv1
 - (Vatican_II) - ENABLES -> (Christian_ecumenism) — evidence: cite:960-ev2
 
-Relationship node types (PROPOSED)
-- Person ↔ Place: (e.g., VISITS, RESIDES_IN, LEADS_FROM)
-- Institution ↔ Institution: (e.g., PARTNERS_WITH, COMPETES_WITH, REGULATES)
-- Movement ↔ Movement: (e.g., ALLIES_WITH, RADICALIZES, MERGES)
-- Text ↔ Evidence/Media: (e.g., IS_CITED_BY, IS_REPUBLISHED_IN)
-- Person ↔ Evidence: (e.g., IS_DOCUMENTED_BY, IS_CITED_IN)
+Relationships by Type (PROPOSED)
+- Person → Event
+  - David Ben-Gurion → DECLARES → Founding of Israel (1948) — evidence: cite:960-ev1
+- Person ↔ Person
+  - Abraham Joshua Heschel ↔ COLLABORATES_WITH ↔ Martin Luther King — evidence: cite:960-pp1
+- Person → Movement
+  - Sayyid Qutb → INFLUENCES → Political Islam movements — evidence: cite:960-mv1
+- Institution/Event → Movement
+  - Vatican II → ENABLES → Christian ecumenism — evidence: cite:960-ev2
 
 ---
 
@@ -419,6 +441,72 @@ Relationship node types (PROPOSED)
 ---
 
 Generated: PROPOSED Hebrew Bible cluster scaffold for Timeframes (class 9).
+
+---
+
+## Matrix — Direct Links to Evidence Nodes (Reusable Sources)
+
+Primary Sources (Corpus Tier A)
+
+Evidence Node
+Linked Nodes / Relationships
+- Dead Sea Scrolls (Qumran manuscripts facsimile)
+  - Dead_Sea_Scrolls -> DOCUMENTS -> Sectarian_Texts
+  - Dead_Sea_Scrolls -> CORROBORATES -> Textual_Variants_of_Torah
+  - Community_of_Qumran -> PRODUCES -> Dead_Sea_Scrolls
+
+- Ketef Hinnom Amulets (7th c. BCE facsimile)
+  - Ketef_Hinnom_Amulets -> ATTESTS_TO -> Priestly_Blessing_Formulas
+  - Ketef_Hinnom_Amulets -> DATES -> Priesthood_Usage
+
+- Elephantine Papyri (5th c. BCE transcriptions)
+  - Elephantine_Papyri -> DOCUMENTS -> Elephantine_Community_Practices
+  - Elephantine_Papyri -> CORROBORATES -> Diaspora_Temple_Administration
+
+- Leningrad Codex (Masoretic Text facsimile)
+  - Leningrad_Codex -> STANDARDIZES -> Masoretic_Text
+  - Leningrad_Codex -> DOCUMENTS -> Torah_Text_Family
+
+- Septuagint critical edition (facsimile / edition)
+  - Septuagint -> TRANSLATES -> Hebrew_Scriptures
+  - Septuagint -> INFORMS -> Greek_Language_Traditions
+
+
+Peer-Reviewed Works (Corpus Tier B)
+
+Evidence Node
+Linked Nodes / Relationships
+- Emanuel Tov — Textual Criticism of the Hebrew Bible (critical edition & commentary)
+  - Tov_Textual_Criticism -> FRAMES -> Textual_Transmission
+  - Tov_Textual_Criticism -> CORROBORATES -> Dead_Sea_Scrolls_vs_Masoretic_Variants
+
+- Finkelstein & Silberman — The Bible Unearthed
+  - Bible_Unearthed -> FRAMES -> Archaeological_Interpretation_of_Biblical_Narratives
+  - Archaeological_Sites (Megiddo, Hazor, Lachish) -> SUPPORTS -> Settlement_Phases (linked in 920)
+
+- Emanuel Tov / DJD editions (Discoveries in the Judaean Desert)
+  - DJD_Editions -> DOCUMENT -> Dead_Sea_Scrolls_Volumes
+  - DJD_Editions -> ENABLES -> Comparative_Textual_Analysis
+
+
+Institutional / Policy Sources (Corpus Tier D)
+
+Evidence Node
+Linked Nodes / Relationships
+- Israel Antiquities Authority (excavation reports / catalog entries)
+  - IAA_Reports -> DOCUMENT -> Excavation_Findings (City_of_David, etc.)
+  - IAA_Reports -> FRAMES -> Archaeological_Chronologies
+
+- Cambridge Genizah Collection / Taylor-Schechter Catalogue
+  - Cairo_Genizah -> PRESERVES -> Medieval_Manuscripts
+  - Cairo_Genizah -> ENABLES -> Philological_Studies (MSS transmission nodes)
+
+- Dead Sea Scrolls Digital Project / Major Library Facsimiles
+  - Digital_DSS -> PROVIDES -> High-Resolution_Facsimiles
+  - Digital_DSS -> FACILITATES -> Evidence_Reuse_Across_Eras
+
+✅ Key Takeaway
+These are the proposed evidence nodes that act as reusable hubs across the Hebrew cluster: prefer linking edges to these Evidence nodes rather than repeating inline citations. This boosts consistency, auditability, and scalability.
 
 ---
 
@@ -481,7 +569,7 @@ If FRAMED_BY: { lens:'<FRAMEWORK_SLUG>', citation:'<tier: short ref>' }
 
 ### 7. Roadmap Delta (Next Enhancements)
 1. Add Master Curator list with slugs (People, Ideas, Texts) normalized.
-2. Define verb dictionary file (`docs/guidelines/relations_vocabulary.md`).
+2. Define verb dictionary file ([relations_vocabulary.md](./relations_vocabulary.md)).
 3. Generate seed CSVs: `nodes_class9.csv`, `rels_class9.csv` (draft stage uses only inline evidence strings).
 4. Promote multi-use sources (e.g., Dead Sea Scrolls publication, Septuagint critical edition) to Evidence nodes.
 5. Run QA Cypher batch to tag orphan nodes for curator review.
@@ -500,9 +588,64 @@ Include nodes that:
 Exclude (or defer) if purely local with no downstream relation yet defined.
 
 ### 10. Naming Conventions Recap
-- People: slug without honorifics (e.g., `abraham-joshua-heschel`).
+- People: slug without honorifics (e.g., `abraham-joshua-heshel`).
 - Composite Events: `descriptor-year` or `descriptor-startyear-endyear`.
 - Text Families: `mishnah`, `jerusalem-talmud`, `babylonian-talmud` (avoid redundancy like `talmud-babylonian`).
 - Framework nodes: UPPER_SNAKE_CASE.
 
 End Logic Alignment Guide.
+
+## Refinements & Suggested Additional Nodes
+
+Below are compact, high-value node additions that will make the cluster more complete and easier to analyze across time. For each Timeframe I list candidate nodes (Nodes), short rationale (Why), and a brief seeding note (How/Where).
+
+### 910 — Prehistoric
+- Nodes: Proto-Canaanite religious practices, Early pastoral/tribal chiefdoms, Linguistic stage: Proto-Semitic/Hebrew precursors.
+- Why: Anchors long-term cultural practices and provides continuity for later covenantal themes.
+- Seed: add short `Idea`/`Place` nodes and mark as archaeological/legendary evidence (tier D or A when archaeological).
+
+### 920 — Classical
+- Nodes: Major archaeological sites (Megiddo, Hazor, Lachish, Samaria), Script stages (Paleo-Hebrew), Early synagogue/household cult practices, Temple administration (High Priest lineage nodes), Diaspora pockets (Elephantine community node expanded).
+- Why: Material culture and institutions clarify transmission of texts and administrative authority.
+- Seed: add `Place`, `Institution`, and `Artifact` nodes with `startYear`/`endYear` where known and attach primary evidence (inscriptions, ostraca).
+
+### 930 — Medieval
+- Nodes: Major genizah finds (Cairo Genizah as `Corpus`), Prominent academies by century (Sura/Pumbedita subnodes by era), Lurianic Kabbalah (Safed schools, Isaac Luria), Key translators (Saadiah as translator), Judeo-Arabic and Hebrew manuscript traditions.
+- Why: Manuscript transmission and language nodes enable tracing textual variants and commentarial traditions.
+- Seed: add `Corpus` and `Text` nodes with `evidence` pointers to codices and genizah catalog entries.
+
+### 940 — Early Modern
+- Nodes: Major printing houses (Typographia Condal/Amsterdam press owners), Expulsion nodes (Spanish Expulsion 1492), Crypto-Jewish communities (Marranos), Safed Kabbalah personalities (Isaac Luria, Joseph Karo), Early Christian Hebraists (Johann Reuchlin).
+- Why: Printing and expulsions reshape textual circulation and demographic patterns; Kabbalah and print culture shift intellectual networks.
+- Seed: add `Institution`, `Event`, and `Person` nodes with publication artifact links.
+
+### 950 — Modern
+- Nodes: Key journals and periodicals (Ha-Melitz, Ha-Shachar), Academic institutions (Hebrew University, JTS), Prominent modern thinkers (Ahad Ha'am, Buber, Ben Yehuda), Major archaeological expeditions (Conder, Wilson, later 19th c digs), Colonial administration records as `Evidence`.
+- Why: Modern print and academic institutions institutionalize scholarship and politicized readings of scripture.
+- Seed: add `Corpus`, `Institution`, and `Evidence` nodes with archival refs and DOI-style identifiers where available.
+
+### 960 — Contemporary
+- Nodes: Major Israeli archaeological projects (City-of-David project, IAA nodes), Digital corpora (Dead Sea Scrolls online editions, digital manuscript repositories), Major NGOs and museums (Yad Vashem, Bible Lands Museum), Academic journals, Media outlets shaping public biblical discourse.
+- Why: Contemporary nodes connect scholarship, public memory, and politics in ways that affect framing and reception.
+- Seed: treat digital corpora as `Evidence`/`Corpus` nodes and museums/NGOs as `Institution` with modern `startYear`.
+
+### Cross-cutting additions (all periods)
+- Language nodes: add `Hebrew`, `Aramaic`, `Greek`, `Latin`, `Arabic` as `Idea`/`Category` nodes with `USED_IN` relations to texts.
+- Script & manuscript-stage nodes: `Paleo-Hebrew`, `Square_Script`, `Masoretic_Text`, `Leningrad_Codex`, `Aleppo_Codex`.
+- Economic nodes: `Trade_Route` (e.g., Via Maris), `Taxation_System`, `Agricultural_Practice` to capture causes for migrations and conflicts.
+- Demographic/community nodes: `Diaspora_Community` subnodes by city/century to track mobility.
+
+## Recommended next steps (short)
+1. Create a seed CSV for the additional high-value nodes above grouped by Timeframe (columns: label, slug, name, startYear, endYear, status, evidence_slug).
+2. Run `scripts/run_audits.py` locally (after securing NEO4J creds) to detect missing FRAMED_BY or orphan nodes after seeding.
+3. Normalize relationship verbs in seeded triples against `docs/guidelines/relations_vocabulary.md` using a small script (`scripts/normalize_verbs.py`) that reports non-canonical verbs.
+4. Promote frequently used inline citations to `:Evidence` nodes (run the reuse candidate query in [audit_queries.md](./audit_queries.md)).
+
+## Short modelling notes
+- Prefer `Corpus` for manuscript corpora and `Evidence` for individual publication/edition nodes.
+- Use `Place(kind='culture-area')` for broad cultural regions (e.g., 'Diaspora_Greece') and reserve geographic `Place` nodes for mappable locations.
+- Attach `language` and `script` properties to `Text` nodes to make textual transmission queries easier.
+
+---
+
+End of suggested refinements.
