@@ -47,55 +47,75 @@ Events
 
 
 Relationships by Type (PROPOSED)
-- Person ↔ Person
-  - Adam ↔ MARRIES ↔ Eve — evidence: cite:910-pp1
-  - Abraham ↔ MARRIES ↔ Sarah — evidence: cite:910-pp2
-  - Isaac ↔ SUCCEEDS ↔ Abraham — evidence: cite:910-pp3
-  - Jacob ↔ SUCCEEDS ↔ Isaac — evidence: cite:910-pp4
 - Person → Event
+  - Abraham → DECLARES → Abrahamic Covenant — evidence: cite:910-ev2
+  - Noah → SURVIVES → Flood — evidence: cite:910-ev1
   - Adam → PARTICIPATES_IN → Creation — evidence: cite:910-ev3
   - Eve → PARTICIPATES_IN → Creation — evidence: cite:910-ev4
-  - Noah → SURVIVES → Flood — evidence: cite:910-ev1
-  - Abraham → ESTABLISHES → Abrahamic Covenant — evidence: cite:910-ev2
   - Sarah → PARTICIPATES_IN → Abrahamic Covenant — evidence: cite:910-ev5
   - Isaac → PARTICIPATES_IN → Abrahamic Covenant — evidence: cite:910-ev6
   - Jacob → PARTICIPATES_IN → Abrahamic Covenant — evidence: cite:910-ev7
   - Joseph → PARTICIPATES_IN → Abrahamic Covenant — evidence: cite:910-ev8
+- Person → Doctrine/Idea
+  - Abraham → DEFINES → Chosenness / Election — evidence: cite:910-id1
+  - Abraham → ADOPTS → Sacrifice as covenant practice — evidence: cite:910-id2
+  - Noah → ADOPTS → Sacrifice as covenant practice — evidence: cite:910-id3
+- Person ↔ Person
+  - Adam ↔ MARRIES ↔ Eve — evidence: cite:910-p1
+  - Abraham ↔ MARRIES ↔ Sarah — evidence: cite:910-p2
+  - Abraham → PARENT_OF → Isaac — evidence: cite:910-g1
+  - Sarah → PARENT_OF → Isaac — evidence: cite:910-g2
+  - Isaac → PARENT_OF → Jacob — evidence: cite:910-g3
+  - Jacob → PARENT_OF → Joseph — evidence: cite:910-g4
+  - Isaac → SUCCEEDS → Abraham — evidence: cite:910-s1
+  - Jacob → SUCCEEDS → Isaac — evidence: cite:910-s2
 - Event ↔ Event
   - Creation → PRECEDES → Flood — evidence: cite:910-chron1
   - Flood → PRECEDES → Tower of Babel — evidence: cite:910-chron2
   - Tower of Babel → PRECEDES → Abrahamic Covenant — evidence: cite:910-chron3
-- Event → Idea
-  - Creation → EXEMPLIFIES → Primeval history themes — evidence: cite:910-mv2
-  - Flood → EXEMPLIFIES → Primeval history themes — evidence: cite:910-mv3
-  - Tower of Babel → EXEMPLIFIES → Primeval history themes — evidence: cite:910-mv1
-  - Abrahamic Covenant → ESTABLISHES → Chosenness / Election — evidence: cite:910-id1
-  - Abrahamic Covenant → ESTABLISHES → Sacrifice as covenant practice — evidence: cite:910-id2
+- Event → Doctrine/Idea
+  - Creation → SYMBOLIZES → Primeval history themes — evidence: cite:910-mv2
+  - Flood → SYMBOLIZES → Primeval history themes — evidence: cite:910-mv3
+  - Tower of Babel → SYMBOLIZES → Primeval history themes — evidence: cite:910-mv1
+  - Abrahamic Covenant → ENABLES → Chosenness / Election — evidence: cite:910-id1
+  - Abrahamic Covenant → ENABLES → Sacrifice as covenant practice — evidence: cite:910-id2
 
 
 ## 920 — Classical (Ancient Israelite & Second Temple; c. 1200 BCE–70 CE)
 status: PROPOSED
 Relationships by Type (PROPOSED)
-- Person ↔ Person
-  - (Adam) - MARRIES -> (Eve) — evidence: cite:910-pp1
-  - (Abraham) - MARRIES -> (Sarah) — evidence: cite:910-pp2
-  - (Isaac) - SUCCEEDS -> (Abraham) — evidence: cite:910-pp3
-  - (Jacob) - SUCCEEDS -> (Isaac) — evidence: cite:910-pp4
 - Person → Event
-  - (Adam) - PARTICIPATES_IN -> (Creation) — evidence: cite:910-ev3
-  - (Eve) - PARTICIPATES_IN -> (Creation) — evidence: cite:910-ev4
-  - (Noah) - SURVIVES -> (Flood) — evidence: cite:910-ev1
-  - (Abraham) - ESTABLISHES -> (Abrahamic Covenant) — evidence: cite:910-ev2
-  - (Sarah) - PARTICIPATES_IN -> (Abrahamic Covenant) — evidence: cite:910-ev5
-  - (Isaac) - PARTICIPATES_IN -> (Abrahamic Covenant) — evidence: cite:910-ev6
-  - (Jacob) - PARTICIPATES_IN -> (Abrahamic Covenant) — evidence: cite:910-ev7
-  - (Joseph) - PARTICIPATES_IN -> (Abrahamic Covenant) — evidence: cite:910-ev8
-- Event → Idea
-  - (Creation) - EXEMPLIFIES -> (Primeval_History_Themes) — evidence: cite:910-mv2
-  - (Flood) - EXEMPLIFIES -> (Primeval_History_Themes) — evidence: cite:910-mv3
-  - (Tower_of_Babel) - EXEMPLIFIES -> (Primeval_History_Themes) — evidence: cite:910-mv1
-  - (Abrahamic Covenant) - ESTABLISHES -> (Chosenness / Election) — evidence: cite:910-id1
-  - (Abrahamic Covenant) - ESTABLISHES -> (Sacrifice as covenant practice) — evidence: cite:910-id2
+  - Joshua → LEADS → Conquest of Canaan — evidence: cite:920-ev1
+  - Jeremiah → PROPHESIES_DURING → Babylonian Exile — evidence: cite:920-ev2
+  - Moses → LEADS → Exodus — evidence: cite:920-ev3
+- Person → Doctrine/Idea
+  - Moses → PROMULGATES → Mosaic Covenant / Sinai Law — evidence: cite:920-pp1
+- Person → Movement
+  - Paul of Tarsus → PROMOTES → Early Christian communities — evidence: cite:920-mv1
+- Text → Movement
+  - Septuagint → ENABLES → Early Christian texts in circulation — evidence: cite:920-tx1
+ - Text → Text
+  - Septuagint → TRANSLATES → Torah (Pentateuch) — evidence: cite:920-tx2
+  - Dead Sea Scrolls → TRANSMITS → Torah (Pentateuch) — evidence: cite:920-tx3
+ - Event → Place
+  - Exodus → OCCURS_IN → Sinai — evidence: cite:920-l1
+  - Conquest of Canaan → OCCURS_IN → Canaan — evidence: cite:920-l2
+  - Assyrian conquest (722 BCE) → OCCURS_IN → Samaria — evidence: cite:920-l3
+  - Persian Edict of Cyrus (538 BCE) → OCCURS_IN → Persia — evidence: cite:920-l4
+ - Event ↔ Event
+  - Exodus → PRECEDES → Conquest of Canaan — evidence: cite:920-chron1
+  - Conquest of Canaan → PRECEDES → Division of the Kingdom — evidence: cite:920-chron2
+  - Division of the Kingdom → PRECEDES → Assyrian conquest (722 BCE) — evidence: cite:920-chron3
+  - Assyrian conquest (722 BCE) → PRECEDES → Babylonian Exile (586 BCE) — evidence: cite:920-chron4
+  - Babylonian Exile (586 BCE) → PRECEDES → Persian Edict of Cyrus (538 BCE) — evidence: cite:920-chron5
+  - Persian Edict of Cyrus (538 BCE) → PRECEDES → Maccabean Revolt (167–160 BCE) — evidence: cite:920-chron6
+  - Maccabean Revolt (167–160 BCE) → PRECEDES → Roman conquest (63 BCE) — evidence: cite:920-chron7
+  - Roman conquest (63 BCE) → PRECEDES → Second Temple destruction (70 CE) — evidence: cite:920-chron8
+  - Second Temple destruction (70 CE) → PRECEDES → Emergence of early Christian communities (1st century CE) — evidence: cite:920-chron9
+ - Event → Doctrine/Idea
+  - Exodus → ENABLES → Mosaic Covenant / Sinai Law — evidence: cite:920-id1
+ - Text → Doctrine/Idea
+  - Torah (Pentateuch) → TRANSMITS → Mosaic Covenant / Sinai Law — evidence: cite:920-id2
 
 ## 920 — Classical (Ancient Israelite & Second Temple; c. 1200 BCE–70 CE)
 Places
@@ -116,21 +136,39 @@ Events
 - Emergence of early Christian communities (1st century CE)
 
 Relationships (PROPOSED)
-- (Moses) - DELIVERS -> (Mosaic Covenant / Sinai Law) — evidence: cite:920-pp1
+- (Moses) - PROMULGATES -> (Mosaic_Covenant / Sinai_Law) — evidence: cite:920-pp1
 - (Joshua) - LEADS -> (Conquest_of_Canaan) — evidence: cite:920-ev1
 - (Jeremiah) - PROPHESIES_DURING -> (Babylonian Exile) — evidence: cite:920-ev2
-- (Paul_of_Tarsus) - FOUNDS -> (Early_Christian_Communities) — evidence: cite:920-mv1
+- (Paul_of_Tarsus) - PROMOTES -> (Early_Christian_Communities) — evidence: cite:920-mv1
 - (Septuagint) - ENABLES -> (Early_Christian_texts_in_circulation) — evidence: cite:920-tx1
 
 Relationships by Type (PROPOSED)
 - Person → Event
-  - Moses → DELIVERS → Mosaic Covenant / Sinai Law — evidence: cite:920-pp1
   - Joshua → LEADS → Conquest of Canaan — evidence: cite:920-ev1
   - Jeremiah → PROPHESIES_DURING → Babylonian Exile — evidence: cite:920-ev2
 - Person → Movement
-  - Paul of Tarsus → FOUNDS → Early Christian communities — evidence: cite:920-mv1
+  - Paul of Tarsus → PROMOTES → Early Christian communities — evidence: cite:920-mv1
 - Text → Movement
   - Septuagint → ENABLES → Early Christian texts in circulation — evidence: cite:920-tx1
+
+- Person → Doctrine/Idea
+  - Moses → PROMULGATES → Mosaic Covenant / Sinai Law — evidence: cite:920-pp1
+- Event ↔ Event
+  - Exodus → PRECEDES → Conquest of Canaan — evidence: cite:920-chron1
+  - Conquest of Canaan → PRECEDES → Division of the Kingdom — evidence: cite:920-chron2
+  - Division of the Kingdom → PRECEDES → Assyrian conquest (722 BCE) — evidence: cite:920-chron3
+  - Assyrian conquest (722 BCE) → PRECEDES → Babylonian Exile (586 BCE) — evidence: cite:920-chron4
+  - Babylonian Exile (586 BCE) → PRECEDES → Persian Edict of Cyrus (538 BCE) — evidence: cite:920-chron5
+  - Persian Edict of Cyrus (538 BCE) → PRECEDES → Maccabean Revolt (167–160 BCE) — evidence: cite:920-chron6
+  - Maccabean Revolt (167–160 BCE) → PRECEDES → Roman conquest (63 BCE) — evidence: cite:920-chron7
+  - Roman conquest (63 BCE) → PRECEDES → Second Temple destruction (70 CE) — evidence: cite:920-chron8
+  - Second Temple destruction (70 CE) → PRECEDES → Emergence of early Christian communities (1st century CE) — evidence: cite:920-chron9
+- Event → Doctrine/Idea
+  - Exodus → ENABLES → Mosaic Covenant / Sinai Law — evidence: cite:920-id1
+- Text → Doctrine/Idea
+  - Torah (Pentateuch) → TRANSMITS → Mosaic Covenant / Sinai Law — evidence: cite:920-id2
+- Text → Text
+  - Septuagint → TRANSLATES → Torah (Pentateuch) — evidence: cite:920-tx2
 
 
 
@@ -203,20 +241,20 @@ Texts / Artifacts
 
 Relationships (PROPOSED)
 - (Judah_haNasi) - EDITS -> (Mishnah) — evidence: cite:930-ev1
-- (Rashi) - COMMENTS_ON -> (Talmud) — evidence: cite:930-pp1
-- (Maimonides) - SYSTEMATIZES -> (Jewish_Philosophy) — evidence: cite:930-mv1
-- (Muhammad) - FOUNDS -> (Qur'an_canonization_process) — evidence: cite:930-pp2
+- (Rashi) - COMMENTATES_ON -> (Talmud) — evidence: cite:930-pp1
+- (Maimonides) - INTERPRETS -> (Jewish_Philosophy) — evidence: cite:930-mv1
+- (Muhammad) - ESTABLISHES -> (Qur'an_canonization_process) — evidence: cite:930-pp2
 - (Church_Councils) - DEFINES -> (Christian_doctrinal_consolidation) — evidence: cite:930-mv2
 
 Relationships by Type (PROPOSED)
 - Person → Text
   - Judah haNasi → EDITS → Mishnah — evidence: cite:930-ev1
-  - Rashi → COMMENTS_ON → Talmud — evidence: cite:930-pp1
-- Person → Idea
-  - Maimonides → SYSTEMATIZES → Jewish philosophy — evidence: cite:930-mv1
-- Person → Process/Institution
-  - Muhammad → FOUNDS → Qur'an canonization process — evidence: cite:930-pp2
-- Institution → Idea/Doctrine
+  - Rashi → COMMENTATES_ON → Talmud — evidence: cite:930-pp1
+- Person → Doctrine/Idea
+  - Maimonides → INTERPRETS → Jewish philosophy — evidence: cite:930-mv1
+- Person → Institution/Event
+  - Muhammad → ESTABLISHES → Qur'an canonization process — evidence: cite:930-pp2
+- Institution → Doctrine/Idea
   - Church councils → DEFINES → Christian doctrinal consolidation — evidence: cite:930-mv2
 
 
@@ -277,10 +315,10 @@ Relationships (PROPOSED)
 - (Moses_Mendelssohn) - ADVOCATES -> (Haskalah) — evidence: cite:940-pp2
 
 Relationships by Type (PROPOSED)
-- Person ↔ Group
-  - Azariah dei Rossi ↔ DEBATES ↔ Christian Hebraists — evidence: cite:940-pp1
-- Person → Idea/Movement
+- Person → Doctrine/Idea
   - Spinoza → CRITIQUES → Traditional theology — evidence: cite:940-ev1
+  - Azariah dei Rossi → ADVOCATES → Humanism applied to Hebrew Bible — evidence: cite:940-pp1
+- Person → Movement
   - Moses Mendelssohn → ADVOCATES → Haskalah — evidence: cite:940-pp2
 - Institution → Text
   - Printing houses → DISTRIBUTES → Vernacular Christian Bibles — evidence: cite:940-mv1
@@ -347,9 +385,9 @@ Relationships by Type (PROPOSED)
 - Person → Institution/Movement
   - Theodor Herzl → ORGANIZES → World Zionist Congress — evidence: cite:950-pp1
   - Muhammad Abduh → PROMOTES → Islamic Modernism — evidence: cite:950-mv1
-- Person → Text/Idea
+- Person → Text/Doctrine
   - Julius Wellhausen → PUBLISHES → Documentary Hypothesis — evidence: cite:950-ev1
-- Event → Idea
+- Event → Doctrine/Idea
   - Holocaust → TRANSFORMS → Post-Holocaust theology — evidence: cite:950-ev2
 
 
@@ -420,7 +458,7 @@ Relationships by Type (PROPOSED)
   - Abraham Joshua Heschel ↔ COLLABORATES_WITH ↔ Martin Luther King — evidence: cite:960-pp1
 - Person → Movement
   - Sayyid Qutb → INFLUENCES → Political Islam movements — evidence: cite:960-mv1
-- Institution/Event → Movement
+- Institution → Movement
   - Vatican II → ENABLES → Christian ecumenism — evidence: cite:960-ev2
 
 ---
@@ -519,8 +557,7 @@ Purpose: Ensure this Hebrew cluster applies the same structural logic patterns p
 - Period classification is via class.division (9.1xx..9.6xx) while chronological ordering will later use a computed `chron_key`.
 
 ### 2. Edge Semantics (Active Voice Only)
-Adopt a curated verb set to avoid drift. Suggested canonical verbs (extend cautiously):
-CAUSES, DIFFUSES, TRANSMITS, CANONIZES, STANDARDIZES, INTERPRETS, REFORMS, DISPUTES, FRAMES, INFLUENCES, ADOPTS, REJECTS, TRANSLATES, SYSTEMATIZES, SCHISMS_FROM, RECONCILES_WITH, OCCURS_IN, ESTABLISHES, PRESERVES, COMMENTATES_ON.
+Adopt the curated verb set from the source of truth. Core examples: CAUSES, ENABLES, TRANSFORMS, DIFFUSES, TRANSMITS, TRANSLATES, INTERPRETS, COMMENTATES_ON, AUTHORS, PUBLISHES, EDITS, CANONIZES, STANDARDIZES, DEFINES, ESTABLISHES, ORGANIZES, PRESERVES, ADOPTS, REJECTS, INFLUENCES, FRAMES, OCCURS_IN, SCHISMS_FROM, RECONCILES_WITH, DECLARES. Use Supplementary as needed (e.g., PROPHESIES_DURING, CRITIQUES, ADVOCATES, PROMOTES, DISTRIBUTES, PRECEDES, IS_PART_OF, SYMBOLIZES).
 
 Verb Governance Rules:
 1. One semantic intent per verb (no overlapping synonyms in different periods).
@@ -575,7 +612,7 @@ If FRAMED_BY: { lens:'<FRAMEWORK_SLUG>', citation:'<tier: short ref>' }
 5. Run QA Cypher batch to tag orphan nodes for curator review.
 
 ### 8. Example Normalized Triples (Pattern Only)
-Person -> Text: ("Maimonides") - SYSTEMATIZES -> ("Mishneh Torah") evidence: "B: scholarly edition"
+Person -> Text: ("Maimonides") - AUTHORS -> ("Mishneh Torah") evidence: "B: scholarly edition"
 Text -> Idea: ("Septuagint") - TRANSMITS -> ("Hebrew Scriptures Greek Tradition") evidence: "B: critical edition intro"
 Institution -> Doctrine: ("Council_of_Nicaea") - DEFINES -> ("Christological Formula") evidence: "A: conciliar acta"
 Movement -> Place: ("Diaspora_Judean") - DIFFUSES -> ("Alexandria") evidence: "A: papyri; B: monograph"

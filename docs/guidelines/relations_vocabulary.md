@@ -16,7 +16,7 @@ Curator workflow (verbs)
 - To propose a new verb or change semantics/allowed pairs, open an issue titled "Verb Proposal: <VERB>" and include: (1) definition, (2) allowed pairs, (3) 1–2 example triples, (4) minimal evidence plan. The curator will review, decide, and update this file.
 - Curators maintain this file as the canonical registry and will run normalization/audits to prevent synonym drift.
 
-See also: Interaction Matrix for allowed node-type pairs and example triples — [node_interaction_matrix.md](./node_interaction_matrix.md) • Jump to: [Quick Pair Matrix](./node_interaction_matrix.md#quick-pair-matrix-overview).
+See also: Interaction Matrix for allowed node-type pairs and example triples — [node_interaction_matrix.md](./node_interaction_matrix.md) • Jump to: [Quick Pair Matrix](./node_interaction_matrix.md#quick-pair-matrix-overview). Governance: [Policy](../governance/GOVERNANCE.md) • [Audit Log](../governance/audit_log.md)
 
 ## 1. Format Standard
 - Edge labels: UPPER_SNAKE_CASE (preferred) or UPPER single word. (Temporary mixed usage from legacy examples acceptable until normalization pass.)
@@ -59,11 +59,21 @@ P = Person | I = Institution | T = Text/Artifact | D = Doctrine/Idea | M = Movem
 | Verb | Allowed (Subject→Object) | Use Case / Semantics | Constraint / Notes |
 |------|---------------------------|----------------------|--------------------|
 | PROPHESIES_DURING | P → E | Prophetic activity within event | Recognized prophetic figures only |
+| SURVIVES | P → E | Endures/continues through an event | Use for survival through cataclysmic events |
+| PARTICIPATES_IN | P/I → E | General involvement in an event (non-organizer) | Avoid for organizers; use ORGANIZES/LEADS |
+| LEADS | P/I → E/M | Directs or commands an event/movement | Distinct from ORGANIZES (planning) |
+| MARRIES | P ↔ P | Marital tie (reciprocal) | Record one reciprocal edge or two directed edges consistently |
+| PARENT_OF | P → P | Genealogical parent → child | Directional; inverse can be CHILD_OF (if added later) |
+| SUCCEEDS | P → P; I → I | Succeeds to office/role/lineage | Provide office/context in properties |
+| TEACHES | P → P | Teacher → student relation | Optionally pair with STUDIES_UNDER |
+| STUDIES_UNDER | P → P | Student → teacher relation | Optionally pair with TEACHES |
 | DEBATES | P ↔ P; P → D | Structured disputation | Use reciprocal edges sparingly |
 | CRITIQUES | P → D/T | Critical evaluation of doctrine/text | Specify focus in note |
 | ADVOCATES | P → M/D | Public support of movement/idea | Distinct from ESTABLISHES |
 | PROMOTES | P/I/M → D/T | Accelerates adoption without founding | Provide metric/note when possible |
 | DISTRIBUTES | I/P → T | Material/text dissemination | Supply scope (region) in property |
+| PRODUCES | P/I → T/E | Creates an artifact/text or produces an event | Prefer ORGANIZES for event planning |
+| PROMULGATES | P/I → D/T | Formally publishes/enacts law/edict | Prefer CANONIZES for status decisions |
 | COMMISSIONS | I → T/E | Institution commissions text/event | Provide commission record if possible |
 | PROHIBITS | I → T/D/M/P | Institutional prohibition | Provide decree/edict reference |
 | PRESIDES_OVER | I → E/P | Chairs or formally oversees | Use for councils, courts |
@@ -74,12 +84,15 @@ P = Person | I = Institution | T = Text/Artifact | D = Doctrine/Idea | M = Movem
 | REGULATES | I → I/M/P/T | Regulatory oversight | Provide policy/regulatory reference |
 | QUOTES | T → T | Text cites another text | Provide citation location |
 | REFUTES | T → T/D | Text argues against | Provide citation location |
+| COPIES | P/I → T | Scribal reproduction of a text | Provide source reference in properties |
+| COMPILES | P/I → T | Anthologizes/assembles a text from sources | Provide compilation scope |
 | INTRODUCES | P/I/M → T/D/E | Introduces idea/tech/event to context | Provide vector/context |
 | USES | E/P/I → T | Uses artifact/text in activity | Distinct from DEPLOYS |
 | DEPLOYS | I/M/P → T/E | Operational/strategic use | For organized use (e.g., corps, offices) |
 | INVENTS | P/I → T | Invents an artifact/technique | Provide invention evidence |
 | DESIGNS | P/I → T | Designs an artifact/technique | Distinct from INVENTS |
 | SYMBOLIZES | T/E → D/M | Stands for/represents | Use when symbolic reading is explicit |
+| EXEMPLIFIES | T/E/P → D | Concrete instance embodying an idea/doctrine | Provide the aspect exemplified |
 | EMERGES_FROM | M/T → E/D | Originates from prior event/idea | Prefer ARISES_FROM for Movement → Event |
 | ARISES_FROM | M → E | Movement emergence from event | Canonical for Movement genesis |
 | IS_PART_OF | E/T → E/T | Membership/composition relation | Use for part–whole only (not causality) |
@@ -100,7 +113,7 @@ Aliases & Deprecations
 - WRITES → AUTHORS (use AUTHORS)
 - COMMENTS_ON → COMMENTATES_ON (use COMMENTATES_ON)
 - SPREADS_VIA → DIFFUSES (use DIFFUSES)
-- DELIVERS → PROMULGATES or CANONIZES (project still evaluating; prefer CANONIZES for status, PROMULGATES for law publication)
+- DELIVERS → PROMULGATES or CANONIZES (prefer PROMULGATES for law publication; CANONIZES for status)
 
 ## 5. Deprecation & Synonym Policy
 - If two verbs overlap >70% in intended use, mark one DEPRECATED in this file; reject new edges using it.
