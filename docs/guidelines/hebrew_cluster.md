@@ -500,6 +500,7 @@ Relationships by Type (PROPOSED)
 - Keep nodes generic vs. contextual (e.g., generic `Jerusalem` plus contextual `Second Temple destruction (70 CE)`).
 - Relationships later must be active-voice (e.g., `EXPLAINS`, `INFLUENCES`, `OCCURRED_IN`, `FRAMES`).
  - Use the canonical verb set and governance rules in [relations_vocabulary.md](./relations_vocabulary.md) for all edge labels and proposal procedures.
+ - Compliance: Do not introduce verbs outside the vocabulary. Any change to verbs or semantics must follow CONTRIBUTING and be recorded in the Audit Log.
 
 ## Next steps
 

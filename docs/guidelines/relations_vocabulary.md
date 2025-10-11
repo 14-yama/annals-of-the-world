@@ -9,6 +9,10 @@ summary: Canonical active-voice edge verbs, semantics, allowed node-type pairs, 
 
 Purpose: Provide a controlled, auditable verb set for active-voice relationships. Prevent synonym drift, ensure consistent analytics, and separate core semantic intents from specialized verbs. This file is the single source of truth for the project’s relationship verbs (Core + Supplementary).
 
+Compliance
+- You MUST select verbs from this file; PRs with non-canonical verbs will be requested to normalize.
+- Changes to this file require an approved issue and MUST be recorded in `../governance/audit_log.md`.
+
 Applies to: Hebrew cluster (class 9) and derivative sub-clusters using the same governance.
 
 Curator workflow (verbs)

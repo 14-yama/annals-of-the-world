@@ -2,6 +2,10 @@
 
 This folder contains human-readable governance, schema, and curator guidance for the project. Use this index to navigate the curator and developer docs.
 
+Mandate
+- All contributors MUST use only relationship verbs defined in `relations_vocabulary.md`.
+- Any change to verbs, interaction rules, schema, or cluster semantics MUST follow `CONTRIBUTING.md` and be recorded in `governance/audit_log.md`.
+
 Contents
 
 - [classification.md](./classification.md) — call-number taxonomy and corpus registry
@@ -23,3 +27,4 @@ Related lookups
 
 - [relations_vocabulary.md](./relations_vocabulary.md)
 - [node_interaction_matrix.md](./node_interaction_matrix.md)
+- Governance: [Policy](../governance/GOVERNANCE.md) • [Audit Log](../governance/audit_log.md)

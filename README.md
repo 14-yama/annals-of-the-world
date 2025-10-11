@@ -20,6 +20,7 @@ The project provides a **source of truth** for historical data, ensuring relatio
 - [Audit queries](docs/guidelines/audit_queries.md)
 - [Roadmap](docs/ROADMAP.md)
 - [Contributing](CONTRIBUTING.md)
+- Governance: [Policy](docs/governance/GOVERNANCE.md) • [Audit Log](docs/governance/audit_log.md)
 - [Getting started / scripts](scripts/)
 
 
@@ -29,9 +30,9 @@ The project provides a **source of truth** for historical data, ensuring relatio
 * Capture **core ideas, people, institutions, places, events, texts, movements, evidence** in a structured form.
 * Apply **historian frameworks** (Cause & Effect, Continuity & Change, Cultural Diffusion, etc.) to interpret history consistently.
 * Ensure **auditability** with evidence citations (DOI, URL, Chicago 17 style).
+* Enforce **strict verb governance**: use only verbs from the source of truth and record any governance change in the Audit Log.
 * Support **cross-civilizational comparisons** (e.g., Hebrew Bible cluster vs. Gunpowder cluster).
 
----
 
 ## 🏗️ Schema Overview
 
