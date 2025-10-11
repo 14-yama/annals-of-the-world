@@ -1,5 +1,10 @@
 Thank you for contributing to Annals of the World — this file explains how to file issues, propose changes, and submit pull requests.
 
+Governance mandate (read first)
+- Strict adherence to the relationship verb source of truth is required. Use only verbs in `docs/guidelines/relations_vocabulary.md`.
+- Any change to verbs, interaction rules, schema, or cluster semantics must follow this CONTRIBUTING guide and be recorded in `docs/governance/audit_log.md`.
+- PRs that introduce non-canonical verbs or skip audit entries will not be merged.
+
 1) Code of Conduct
 - Be respectful and constructive. Please follow the project's Code of Conduct (add `CODE_OF_CONDUCT.md` if you want to formalize it).
 
@@ -23,8 +28,19 @@ Thank you for contributing to Annals of the World — this file explains how to 
 - Include a small README or manifest describing source, license, and evidence provenance.
 
 5a) Relationship verbs (source of truth)
-- Use only verbs listed in `docs/guidelines/relations_vocabulary.md` (Core + Supplementary). That file is the single source of truth.
+- You MUST use only verbs listed in `docs/guidelines/relations_vocabulary.md` (Core + Supplementary). That file is the single source of truth.
 - To propose a new verb or change semantics/allowed pairs, open an issue titled `Verb Proposal: <VERB>` and include definition, allowed pairs, example triples, and an evidence plan. A curator will review and update the vocabulary if accepted.
+- PRs using verbs not defined in the vocabulary will be rejected or asked to normalize before review.
+
+5b) Governance & decision records
+- You MUST read the governance policy: `docs/governance/GOVERNANCE.md`.
+- All accepted changes MUST be logged in `docs/governance/audit_log.md` with date, category, rationale, and touched files. If your PR triggers a governance change, include the draft audit entry in the PR description; maintainers will finalize it on merge.
+
+Pre-PR compliance checklist
+- [ ] All relationship labels are present in `relations_vocabulary.md`.
+- [ ] If proposing a new/changed verb, there is a linked `Verb Proposal: <VERB>` issue.
+- [ ] If governance docs (vocabulary/matrix/schema/cluster semantics) are changed, a matching entry is added to `docs/governance/audit_log.md`.
+- [ ] Audit queries pass locally or have a rationale for exceptions.
 
 6) Audits and dry-runs
 - Use `scripts/run_audits.py` to run QA queries before publishing seed data. When possible, run with a test/dry-run Neo4j instance.
