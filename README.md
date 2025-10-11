@@ -10,9 +10,16 @@ The project provides a **source of truth** for historical data, ensuring relatio
 ## Table of Contents
 
 - [Project summary](docs/summary.md)
-- [Schema & guidelines](docs/guidelines/README.md) (index for workflow, schema, classification)
+- [Schema & guidelines index](docs/guidelines/README.md)
+- [Relations vocabulary](docs/guidelines/relations_vocabulary.md)
+- [Node interaction matrix](docs/guidelines/node_interaction_matrix.md#quick-pair-matrix-overview)
+- [Hebrew cluster scaffold](docs/guidelines/hebrew_cluster.md)
+- [Framework matrix](docs/guidelines/framework_matrix.md)
+- [CRM/PROV crosswalk](docs/guidelines/crosswalk_crm_prov.md)
 - [Features by version](docs/guidelines/features_by_version.md)
-- [Audit queries (planned)](docs/guidelines/audit_queries.md)
+- [Audit queries](docs/guidelines/audit_queries.md)
+- [Roadmap](docs/ROADMAP.md)
+- [Contributing](CONTRIBUTING.md)
 - [Getting started / scripts](scripts/)
 
 
