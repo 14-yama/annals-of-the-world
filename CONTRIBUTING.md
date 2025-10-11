@@ -22,6 +22,10 @@ Thank you for contributing to Annals of the World — this file explains how to 
 - Put seed CSVs in `data/` and reference the corresponding guideline file (e.g., `docs/guidelines/hebrew_cluster.md`).
 - Include a small README or manifest describing source, license, and evidence provenance.
 
+5a) Relationship verbs (source of truth)
+- Use only verbs listed in `docs/guidelines/relations_vocabulary.md` (Core + Supplementary). That file is the single source of truth.
+- To propose a new verb or change semantics/allowed pairs, open an issue titled `Verb Proposal: <VERB>` and include definition, allowed pairs, example triples, and an evidence plan. A curator will review and update the vocabulary if accepted.
+
 6) Audits and dry-runs
 - Use `scripts/run_audits.py` to run QA queries before publishing seed data. When possible, run with a test/dry-run Neo4j instance.
 
