@@ -19,8 +19,8 @@ Phases are calibrated to a multi-year program. Exact durations depend on contrib
 
 ### Phase 0 — Hygiene & Governance (0–2 months)
 - Rotate and remove any credentials in the repo (`.env.local`); enforce `.gitignore` (do this now).
-- Add LICENSE (recommend CC0 or CC-BY-SA for data; choose and document clearly) and `CONTRIBUTING.md`.
-- Publish a short `lint_checklist.md` for curators and an `ISSUE_TEMPLATE` + `PR_TEMPLATE`.
+- Add LICENSE (recommend CC0 or CC-BY-SA for data; choose and document clearly) and [CONTRIBUTING.md](../CONTRIBUTING.md).
+- Publish a short lint_checklist.md for curators and an ISSUE_TEMPLATE + PR_TEMPLATE.
 - Wire basic CI to run `scripts/run_audits.py` (dry-run mode) and unit tests on PRs.
 
 Key deliverables
@@ -100,8 +100,8 @@ Key deliverables
 
 ## 8. Immediate next actions (first sprint)
 1. Rotate credentials now; remove `.env.local` from repo and ensure `.gitignore` covers local env files.
-2. Add LICENSE (recommend CC0 for maximal Wikimedia compatibility) and `CONTRIBUTING.md`.
-3. Commit this roadmap as `docs/ROADMAP.md` and link it from `README.md` and `docs/summary.md`.
+2. Add LICENSE (recommend CC0 for maximal Wikimedia compatibility) and [CONTRIBUTING.md](../CONTRIBUTING.md).
+3. Commit this roadmap as [docs/ROADMAP.md](./ROADMAP.md) and link it from [README.md](../README.md) and [docs/summary.md](./summary.md).
 4. Create `docs/guidelines/lint_checklist.md` and a `scripts/normalize_verbs.py` report script.
 5. Wire a CI job to run `scripts/run_audits.py` on PRs (dry-run mode) and surface results in PR checks.
 
