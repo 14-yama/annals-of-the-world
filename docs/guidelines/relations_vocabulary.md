@@ -11,6 +11,8 @@ Purpose: Provide a controlled, auditable verb set for active-voice relationships
 
 Applies to: Hebrew cluster (class 9) and derivative sub-clusters using the same governance.
 
+See also: Interaction Matrix for allowed node-type pairs and example triples — `interaction_matrix.md`.
+
 ## 1. Format Standard
 - Edge labels: UPPER_SNAKE_CASE (preferred) or UPPER single word. (Temporary mixed usage from legacy examples acceptable until normalization pass.)
 - Verbs express a single semantic action; no tense inflection.
