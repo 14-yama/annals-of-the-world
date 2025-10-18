@@ -162,7 +162,7 @@ P = Person | I = Institution | T = Text/Artifact | D = Doctrine/Idea | M = Movem
 | OBSERVES | P/I → D | Keeps an observance/commanded practice | Use for compliance/keeping; prefer PARTICIPATES_IN for general attendance; use LEADS for leadership |
 | PRESCRIBES | I/D/T → D | Normatively mandates a ritual/observance | Cite source (council canons, legal code, liturgical rubrics) |
 | DESCRIBES | T → D | Descriptive account of a ritual/observance | Not prescriptive; use PRESCRIBES when normative |
-| DEDICATES | P/I → T/L/I | Formally dedicates object/place/institution | Use when non-sacral or civic dedication; use CONSECRATES for sacral |
+| DEDICATES | P/I → T/L/I | Formally dedicates object/place/institution | Canonical term for dedication; if sacral, record rite/instrument in properties (e.g., consecration_rite) |
 | ANOINTS | P/I → P/T | Performs anointing on a person/object | Include oil/rite context; distinct from ORDAINS (office) |
 | PURIFIES | P/I → P/T/L | Performs ritual purification | Specify rite/means; do not use for doctrinal purification |
 | PILGRIMAGES_TO | P → L | Undertakes pilgrimage to a sacred place | Include date/route if available; distinct from DIFFUSES |
