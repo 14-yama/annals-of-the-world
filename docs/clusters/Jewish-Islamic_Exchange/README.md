@@ -13,6 +13,19 @@ Boundary: Standalone cluster tree; interfaces to Hebrew_Tradition (Medieval_and_
       - Events (E): Abbasid_Translation_Movement
       - Places (L): Baghdad; Basra
       - Suggested clusters: Baghdad_Translation_and_Judeo‑Arabic; Saadia_Gaon_Philosophy
+      - Edges (canonical triples)
+        - I/P → E
+          - (Bayt_al‑Hikma_(House_of_Wisdom)) ORGANIZES (Abbasid_Translation_Movement)
+          - (Geonic_Academies_(Sura,_Pumbedita)) PARTICIPATES_IN (Abbasid_Translation_Movement)
+        - P/T ↔ T/D
+          - (Hunayn_ibn_Ishaq) TRANSLATES (Arabic_Paraphrases_of_Aristotle)
+          - (Saadia_Gaon_Writings) INTERPRETS (Kalam_in_Jewish_Thought)
+          - (Judeo‑Arabic_Corpus) TRANSMITS (Kalam_in_Jewish_Thought)
+          - (Al‑Farabi) CITES (Arabic_Paraphrases_of_Aristotle)
+        - P ↔ P/M
+          - (Saadia_Gaon) CORRESPONDS_WITH (Dunash_ibn_Tamim)
+        - E → L
+          - (Abbasid_Translation_Movement) OCCURS_IN (Baghdad)
     - Andalusian_Golden_Age_(10th–12th_c.) (D)
   - Persons (P): Hasdai_ibn_Shaprut; Judah_Halevi; Ibn_Gabirol; Bahya_ibn_Paquda; Jonah_ibn_Janah
       - Institutions (I): Cordoba_Court; Granada_Court; Andalusian_Jewish_Communities
@@ -21,6 +34,20 @@ Boundary: Standalone cluster tree; interfaces to Hebrew_Tradition (Medieval_and_
       - Events (E): Court_Patronage_Phases
       - Places (L): Cordoba; Granada; Fez
       - Suggested clusters: Andalusian_Courts_and_Hebrew_Poetry; Science_and_Medicine_Exchange
+      - Edges (canonical triples)
+        - I/P → E
+          - (Cordoba_Court) ORGANIZES (Court_Patronage_Phases)
+          - (Granada_Court) ORGANIZES (Court_Patronage_Phases)
+          - (Hasdai_ibn_Shaprut) LEADS (Court_Patronage_Phases)
+        - P/I → T/D
+          - (Andalusian_Jewish_Communities) PUBLISHES (Andalusian_Hebrew_Poetry)
+          - (Judah_Halevi) COMMENTATES_ON (Andalusian_Hebrew_Poetry)
+          - (Ibn_Gabirol) COMMENTATES_ON (Philosophical_Works_(Ibn_Gabirol,_et_al.))
+          - (Bahya_ibn_Paquda) INTERPRETS (Aristotelian_Rationalism_in_Judaism)
+        - T ↔ T
+          - (Hebrew‑Arabic_Lexica) TRANSLATES (Philosophical_Works_(Ibn_Gabirol,_et_al.))
+        - E → L
+          - (Court_Patronage_Phases) OCCURS_IN (Cordoba)
     - Maghrebi/Egyptian_Transitions_(12th–13th_c.) (D)
   - Persons (P): Moses_ben_Maimon_(Maimonides); Abraham_ibn_Ezra; Ibn_Tufayl; Ibn_Bajja
       - Institutions (I): Fustat/Cairo_Rabbinic_Court
@@ -29,6 +56,17 @@ Boundary: Standalone cluster tree; interfaces to Hebrew_Tradition (Medieval_and_
       - Events (E): Almohad_Pressures_and_Migration
       - Places (L): Fustat/Cairo; Fez
       - Suggested clusters: Maimonidean_Codification_and_Reception
+      - Edges (canonical triples)
+        - P/I → T/D/M
+          - (Moses_ben_Maimon_(Maimonides)) INTERPRETS (Guide_for_the_Perplexed)
+          - (Moses_ben_Maimon_(Maimonides)) ENDORSES (Maimonidean_Codification)
+          - (Fustat/Cairo_Rabbinic_Court) APPROVES (Maimonidean_Codification) — where applicable
+        - T ↔ D/M
+          - (Mishneh_Torah) STANDARDIZES (Maimonidean_Codification)
+          - (Guide_for_the_Perplexed) INTERPRETS (Aristotelian_Rationalism_in_Judaism)
+        - E → L/M
+          - (Almohad_Pressures_and_Migration) OCCURS_IN (Fez)
+          - (Almohad_Pressures_and_Migration) ENABLES (Maimonidean_Codification)
     - Provençal_Receptions_(12th–14th_c.) (D)
   - Persons (P): Samuel_ibn_Tibbon; Judah_ibn_Tibbon; Gersonides_(Levi_ben_Gershon); Ibn_Rushd_(Averroes)
       - Institutions (I): Provence_Communities; Toledo_Translation_School (interface)
@@ -37,6 +75,19 @@ Boundary: Standalone cluster tree; interfaces to Hebrew_Tradition (Medieval_and_
       - Events (E): Bans_in_the_Maimonidean_Controversy; Toledo_Translation_Phase
       - Places (L): Narbonne; Montpellier; Toledo
       - Suggested clusters: Ibn_Tibbon_Translators_Network; Maimonidean_Controversy; Reception_of_Averroes
+      - Edges (canonical triples)
+        - P/I → T
+          - (Samuel_ibn_Tibbon) TRANSLATES (Guide_for_the_Perplexed)
+          - (Judah_ibn_Tibbon) TRANSLATES (Philosophical_Works_(Ibn_Gabirol,_et_al.))
+          - (Toledo_Translation_School) ORGANIZES (Toledo_Translation_Phase)
+        - P ↔ T/D
+          - (Gersonides_(Levi_ben_Gershon)) COMMENTATES_ON (Hebrew_translations_of_Averroes)
+          - (Ibn_Rushd_(Averroes)) COMMENTATES_ON (Aristotelian_Rationalism_in_Judaism) — interface influence
+        - I/E → T/M
+          - (Provence_Communities) CENSORS (Maimonidean_Codification) — in controversy phases
+          - (Bans_in_the_Maimonidean_Controversy) CENSORS (Guide_for_the_Perplexed)
+        - E → L
+          - (Toledo_Translation_Phase) OCCURS_IN (Toledo)
 
 ## Interfaces to other clusters
 - Hebrew_Tradition (Medieval interface): TRANSLATES; COMMENTATES_ON; CITES; CORRESPONDS_WITH; STUDIES_UNDER; INFLUENCES; APPROVES/CENSORS (I→T/D)
