@@ -159,6 +159,13 @@ P = Person | I = Institution | T = Text/Artifact | D = Doctrine/Idea | M = Movem
 | RATIFIES | P/I → T | Ratifies a previously signed instrument | Provide ratifying body/date; distinct from CANONIZES |
 | MEDIATES | P/I → P/I | Facilitates settlement between parties | Use when acting as third-party; not a party to dispute |
 | ARBITRATES | P/I → P/I | Issues binding decision between parties | Provide forum/award; distinct from MEDIATES |
+| OBSERVES | P/I → D | Keeps an observance/commanded practice | Use for compliance/keeping; prefer PARTICIPATES_IN for general attendance; use LEADS for leadership |
+| PRESCRIBES | I/D/T → D | Normatively mandates a ritual/observance | Cite source (council canons, legal code, liturgical rubrics) |
+| DESCRIBES | T → D | Descriptive account of a ritual/observance | Not prescriptive; use PRESCRIBES when normative |
+| DEDICATES | P/I → T/L/I | Formally dedicates object/place/institution | Use when non-sacral or civic dedication; use CONSECRATES for sacral |
+| ANOINTS | P/I → P/T | Performs anointing on a person/object | Include oil/rite context; distinct from ORDAINS (office) |
+| PURIFIES | P/I → P/T/L | Performs ritual purification | Specify rite/means; do not use for doctrinal purification |
+| PILGRIMAGES_TO | P → L | Undertakes pilgrimage to a sacred place | Include date/route if available; distinct from DIFFUSES |
 | DATES | V → E/T | Evidence dates event/text | Evidence-only |
 | REPORTS | V → E/T/D | Summarizes/aggregates | Evidence-only |
 | DOCUMENTS | V → P/I/T/D/M/E | Evidence documents content | Evidence-only |
@@ -180,6 +187,10 @@ Aliases & Deprecations
 - COMMENTS_ON → COMMENTATES_ON (use COMMENTATES_ON)
 - SPREADS_VIA → DIFFUSES (use DIFFUSES)
 - DELIVERS → PROMULGATES or CANONIZES (prefer PROMULGATES for law publication; CANONIZES for status)
+ - PERFORMS → PARTICIPATES_IN (use PARTICIPATES_IN for event instances) or OBSERVES (for ongoing practice)
+ - OFFICIATES → PRESIDES_OVER or LEADS (use PRESIDES_OVER for procedural chairing; LEADS for directing)
+ - CELEBRATES → PARTICIPATES_IN (event instance) or OBSERVES (feast as practice)
+ - CONSECRATES → DEDICATES (use DEDICATES; include note if sacral consecration)
 
 ## 5. Deprecation & Synonym Policy
 - If two verbs overlap >70% in intended use, mark one DEPRECATED in this file; reject new edges using it.

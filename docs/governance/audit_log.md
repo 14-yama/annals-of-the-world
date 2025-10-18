@@ -90,6 +90,33 @@ Purpose: Track approved changes to the verb source of truth, interaction matrix,
 - Guideline reference: CONTRIBUTING §5a (Verb Proposal workflow); §5c (Sensitive verbs policy) for EXILES/INTERDICTS when context is coercive.
 - Breaking changes: None (additive; matrix updated as a view of canon).
 
+2025-10-17 — Add ritual/observance verbs (supplementary) [vocabulary]
+- Added verbs (Supplementary) to model religious observances/ritual actions without introducing a new node type:
+  - P → D/E: PERFORMS (discrete rite instance or ongoing practice)
+  - P/I → D: OBSERVES (keeping observance/commanded practice)
+  - P/I → E: OFFICIATES (leads ritual event/service)
+  - P/I → E/D: CELEBRATES (festival occurrence vs. feast concept)
+  - I/D/T → D: PRESCRIBES (normative mandate of rite/observance)
+  - T → D: DESCRIBES (descriptive account of ritual)
+  - P/I → T/L/I: CONSECRATES, DEDICATES (sacral vs. civic dedication)
+  - P/I → P/T: ANOINTS (ritual anointing of person/object)
+  - P/I → P/T/L: PURIFIES (ritual purification)
+  - P → L: PILGRIMAGES_TO (undertakes pilgrimage to a sacred place)
+- File updated: docs/guidelines/relations_vocabulary.md.
+- Rationale: Capture ritual performance, prescription, officiation, dedication/consecration, purification, and pilgrimage using existing node types (Person/Institution/Text/Doctrine/Event/Place) with clear, non-overlapping semantics.
+- Guideline reference: CONTRIBUTING §5a (Verb Proposal workflow) and §5c (Sensitive verbs) when rites intersect with coercion.
+- Breaking changes: None (additive; matrix sync to follow as needed).
+
+2025-10-18 — Consolidate ritual verbs to avoid overlap; deprecate specialized forms [vocabulary]
+- Deprecated in favor of generalized verbs:
+  - PERFORMS → PARTICIPATES_IN (event instance) or OBSERVES (ongoing practice)
+  - OFFICIATES → PRESIDES_OVER (procedural) or LEADS (directional)
+  - CELEBRATES → PARTICIPATES_IN (instance) or OBSERVES (practice)
+  - CONSECRATES → DEDICATES (retain sacral note in properties)
+- Kept: OBSERVES, PRESCRIBES, DESCRIBES, DEDICATES, ANOINTS, PURIFIES, PILGRIMAGES_TO.
+- Rationale: Maintain a minimal, standardized canon with non-overlapping semantics; map specialized verbs to existing generalized ones for consistency.
+- Breaking changes: None (marking aliases/deprecations only).
+
 ## Process
 - Proposals are filed as issues titled `Verb Proposal: <VERB>` with definition, allowed pairs, examples, and evidence plan.
 - Upon approval, maintainers update `relations_vocabulary.md` and synchronize `node_interaction_matrix.md` and affected cluster docs.
