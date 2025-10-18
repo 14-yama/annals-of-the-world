@@ -70,6 +70,26 @@ Purpose: Track approved changes to the verb source of truth, interaction matrix,
   - docs/guidelines/relations_vocabulary.md — Supplementary table rows added; kept sorted by Allowed column.
 - Breaking changes: None (additive only).
 
+2025-10-11 — Sort vocabulary tables; clarify constraints; sync matrix and examples [vocabulary, matrix, docs]
+- Updated: docs/guidelines/relations_vocabulary.md — Sorted Core and Supplementary tables by Allowed (Subject→Object); clarified semantics and constraints for lethal verbs (KILLS, MURDERS, ASSASSINATES, EXECUTES) and disambiguations (APPOINTS vs INVESTS, DISMISSES vs DEPOSES, ORDAINS/EXCOMMUNICATES vs APPOINTS/DISMISSES); repositioned EXECUTES under P/I→P.
+- Updated: docs/guidelines/node_interaction_matrix.md — Synced P↔P and P/I→P rows to include newly accepted person-interaction verbs; expanded examples and Annex quick-pair index.
+- Updated: docs/guidelines/hebrew_cluster.md — Ensured example edges use only canonical verbs and normalized section structure (nodes-first, one relationships block per period).
+- Rationale: Maintain a single source of truth, improve readability and auditability, and ensure examples reflect the accepted canon.
+- Breaking changes: None.
+
+2025-10-18 — Add justice/selection/exile/interdict/treaty/dispute-resolution verbs; sync matrix [vocabulary, matrix]
+- Added verbs (Supplementary):
+  - Justice/selection/exile (I → P): CONVICTS, ACQUITS, SENTENCES, ELECTS, EXILES
+  - Interdict (I → L/I): INTERDICTS
+  - Treaty/instrument (P/I → T): SIGNS, RATIFIES
+  - Dispute resolution (third-party) (P/I → P/I or ↔ I): MEDIATES, ARBITRATES
+- Files updated:
+  - docs/guidelines/relations_vocabulary.md — Added rows with semantics, allowed pairs, and constraints.
+  - docs/guidelines/node_interaction_matrix.md — Synced Quick Pair Matrix, detailed sections (P→I, P→T, I↔I, I→P, I→T, I→L), and Annex index to reflect new verbs.
+- Rationale: Cover justice workflows (trial, verdict, sentencing), selection via election, territorial exile and ecclesiastical interdict, formal instrument workflows (signing/ratification), and third‑party dispute resolution; maintain non-overlap with existing verbs.
+- Guideline reference: CONTRIBUTING §5a (Verb Proposal workflow); §5c (Sensitive verbs policy) for EXILES/INTERDICTS when context is coercive.
+- Breaking changes: None (additive; matrix updated as a view of canon).
+
 ## Process
 - Proposals are filed as issues titled `Verb Proposal: <VERB>` with definition, allowed pairs, examples, and evidence plan.
 - Upon approval, maintainers update `relations_vocabulary.md` and synchronize `node_interaction_matrix.md` and affected cluster docs.

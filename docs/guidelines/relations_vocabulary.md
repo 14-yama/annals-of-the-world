@@ -42,7 +42,7 @@ P = Person | I = Institution | T = Text/Artifact | D = Doctrine/Idea | M = Movem
 | PRESERVES | Actively conserves text/practice | I/P → T/D | Use when continuity risk documented | A or B |
 | DEFINES | Establishes doctrinal/textual definition | I/P/T → D/T | Use for councils, doctrinal formulae | A or B |
 | SCHISMS_FROM | Formal separation / split | M/I → M/I | Must have structural or doctrinal rupture | A + B |
-| RECONCILES_WITH | Restores communion/unity | M/I → M/I | Reciprocal edge optional | A + B |
+| RECONCILES_WITH | Restores communion/unity | M/I/P → M/I/P | Reciprocal edge optional; persons may reconcile post-conflict | A + B |
 | DIFFUSES | Spreads across geography/traditions | M/P/I → L/M/D/T | Must show transmission vector | A + B (or D for modern stats) |
 | COMMENTATES_ON | Writes a formal commentary on | P → T/D | More specific than INTERPRETS | A or B |
 | DECLARES | Announces formal status/event | P/I → E/D | Public proclamation | A |
@@ -62,6 +62,34 @@ P = Person | I = Institution | T = Text/Artifact | D = Doctrine/Idea | M = Movem
 ## 4. Supplementary Verbs (Contextual / Specialized)
 | Verb | Allowed (Subject→Object) | Use Case / Semantics | Constraint / Notes |
 |------|---------------------------|----------------------|--------------------|
+| MEETS_WITH | P ↔ P | In-person encounter/meeting | Neutral; use COLLABORATES_WITH if joint work is the point |
+| BLESSES | P → P | Confers religious/ritual blessing on a person | Distinct from ORDAINS (office) and PARDONS (legal) |
+| CURSES | P → P | Pronounces malediction against a person | Provide context/evidence; avoid sensational use |
+| SERVES_IN | P → I | Member/official serving within an institution | Include role/tenure; distinct from LEADS |
+| PETITIONS | P → I | Files a formal request to an institution | Include docket/ref if available |
+| RESIGNS_FROM | P → I | Relinquishes office/membership in an institution | Include date/authority if formalized |
+| AWARDS | I → P | Grants prize/decoration/honor | Include award name/date |
+| HONORS | I → P | Confers non-monetary recognition/tribute | Use AWARDS when formal prize; HONORS for ceremonial |
+| CENSURES | I → P | Issues formal reprimand without removal | Distinct from DISMISSES/DEPOSES |
+| FINES | I → P | Imposes monetary penalty | Include instrument/reference |
+| SUMMONS | I → P | Orders a person to appear (hearing/trial/council) | Provide writ/act citation |
+| LICENSES | I → P | Grants license/permission to act | Include scope/term |
+| ACCREDITS | I → P | Certifies competence/authority | Include accrediting body/scope |
+| ANNOTATES | P → T | Adds notes/marginalia to a text | Distinct from COMMENTATES_ON (full commentary) |
+| GLOSSES | P → T | Provides brief lexical/explanatory notes | Use ANNOTATES for broader notes |
+| REDACTS | P/I → T | Substantively edits/structures a text | Use EDITS for edition work; REDACTS for content shaping |
+| ILLUSTRATES | P → T | Creates visual artwork for a text/artifact | Provide medium/context |
+| CENSORS | I → T | Removes/modifies content under authority | Distinct from BANS (prohibits entirely) |
+| BANS | I → T/D/M/P | Prohibits circulation/possession | Provide decree/edict reference |
+| APPROVES | I → T | Grants imprimatur/nihil obstat/official approval | Include approver/body |
+| CITES | T → T | References another text without direct quotation | Distinct from QUOTES |
+| ADAPTS | T → T | Transforms text for new context/genre | Provide target genre/context |
+| PARAPHRASES | T → T | Restates content in different wording | Use sparingly; provide scope |
+| ABROGATES | I → D | Formally repeals doctrine/norm | Provide abrogating instrument |
+| RECRUITS | M → P | Enlists a person into a movement | Include role/status if relevant |
+| EXPELS | M → P | Removes a person from a movement | Provide cause/context |
+| INCITES | M → E | Agitates to spark a specific event | Use CAUSES for direct causation if warranted |
+| WITNESSES | P → E | Person is present and observes/records an event | Provide evidence (memoir, deposition, report) |
 | USES | E/P/I → T | Uses artifact/text in activity | Distinct from DEPLOYS |
 | IS_PART_OF | E/T → E/T | Membership/composition relation | Use for part–whole only (not causality) |
 | PRECEDES | E/T → E/T | Temporal ordering | Use with chronological evidence |
@@ -121,6 +149,16 @@ P = Person | I = Institution | T = Text/Artifact | D = Doctrine/Idea | M = Movem
 | REFUTES | T → T/D | Text argues against | Provide citation location |
 | SYMBOLIZES | T/E → D/M | Stands for/represents | Use when symbolic reading is explicit |
 | EXEMPLIFIES | T/E/P → D | Concrete instance embodying an idea/doctrine | Provide the aspect exemplified |
+| CONVICTS | I → P | Officially finds a person guilty | Include court/charge; distinct from SENTENCES (punishment) |
+| ACQUITS | I → P | Officially finds a person not guilty | Include court/case reference |
+| SENTENCES | I → P | Imposes punishment upon conviction | Include term/type; separate edges for IMPRISONS/FINES/EXECUTES |
+| ELECTS | I → P | Selects via voting process | Distinct from APPOINTS (top-down selection) |
+| EXILES | I → P | Expels a person from a territory | Include jurisdiction/term; distinct from IMPRISONS |
+| INTERDICTS | I → L/I | Suspends rites/services in a realm or institution | Provide instrument/scope; place or institution target |
+| SIGNS | P/I → T | Signs a treaty/edict/instrument | Provide instrument id/date; distinct from PUBLISHES |
+| RATIFIES | P/I → T | Ratifies a previously signed instrument | Provide ratifying body/date; distinct from CANONIZES |
+| MEDIATES | P/I → P/I | Facilitates settlement between parties | Use when acting as third-party; not a party to dispute |
+| ARBITRATES | P/I → P/I | Issues binding decision between parties | Provide forum/award; distinct from MEDIATES |
 | DATES | V → E/T | Evidence dates event/text | Evidence-only |
 | REPORTS | V → E/T/D | Summarizes/aggregates | Evidence-only |
 | DOCUMENTS | V → P/I/T/D/M/E | Evidence documents content | Evidence-only |
