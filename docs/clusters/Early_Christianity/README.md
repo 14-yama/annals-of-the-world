@@ -13,6 +13,22 @@ Boundary: Standalone cluster tree; interfaces to Hebrew_Tradition (Second_Temple
       - Events (E): Crucifixion; Resurrection_Proclamations; Pentecost; Council_of_Jerusalem_(c._49_CE); Temple_Destruction_70_CE
       - Places (L): Judea; Galilee; Jerusalem; Antioch
       - Suggested clusters: Jerusalem_Church_and_Apostolic_Leadership; Pauline_Mission_and_Gentile_Inclusion; Council_of_Jerusalem
+      - Edges (canonical triples)
+        - P/I → E
+          - (Jerusalem_Church) ORGANIZES (Council_of_Jerusalem_(c._49_CE))
+          - (Peter) LEADS (Council_of_Jerusalem_(c._49_CE))
+          - (Paul) PARTICIPATES_IN (Council_of_Jerusalem_(c._49_CE))
+        - E → L
+          - (Crucifixion) OCCURS_IN (Jerusalem)
+          - (Pentecost) OCCURS_IN (Jerusalem)
+        - T ↔ E/M
+          - (Acts_(early_narratives)) FRAMES (Pentecost)
+          - (Early_Pauline_Epistles) TRANSMITS (Pauline_Communities)
+        - T ↔ T
+          - (Synoptic_Traditions_(source_strata)) TRANSMITS (Synoptic_Gospels)
+        - P ↔ P/M
+          - (Paul) DEBATES (Peter)
+          - (Barnabas) CORRESPONDS_WITH (Paul)
     - Subapostolic_Age_(c._70–100_CE) (D)
   - Persons (P): Clement_of_Rome; Ignatius_of_Antioch; Polycarp; John_(trad.); Author_of_Didache
       - Institutions (I): Emerging_Episcopal_Structure; Local_Churches
@@ -20,6 +36,17 @@ Boundary: Standalone cluster tree; interfaces to Hebrew_Tradition (Second_Temple
       - Movements (M): Proto‑Orthodox_Formations; Johannine_Community
       - Events (E): Post_70_Reconfiguration; Early_Regional_Synods
       - Suggested clusters: Johannine_Community_and_Texts; Synoptic_Source_Trajectories
+      - Edges (canonical triples)
+        - I → E
+          - (Emerging_Episcopal_Structure) ORGANIZES (Early_Regional_Synods)
+        - P ↔ I/M
+          - (Ignatius_of_Antioch) CORRESPONDS_WITH (Local_Churches)
+          - (Clement_of_Rome) ENDORSES (Emerging_Episcopal_Structure)
+        - T ↔ T
+          - (1_Clement) CITES (Synoptic_Gospels)
+          - (Gospel_of_John) INTERPRETS (Synoptic_Traditions_(source_strata))
+        - E → L
+          - (Early_Regional_Synods) OCCURS_IN (Asia_Minor)
     - Ante‑Nicene_Period_(c._100–325_CE) (D)
   - Persons (P): Justin_Martyr; Irenaeus; Tertullian; Origen; Clement_of_Alexandria; Hippolytus; Cyprian
       - Institutions (I): Rome_Church; Alexandria; Antioch; Early_Synods
@@ -28,6 +55,21 @@ Boundary: Standalone cluster tree; interfaces to Hebrew_Tradition (Second_Temple
       - Events (E): Persecutions_(Neronian,_Decian,_Diocletianic); Edict_of_Milan_313
       - Places (L): Rome; Alexandria; Asia_Minor; Carthage
       - Suggested clusters: Apologists_and_Hellenistic_Engagement; Gnostic_and_Proto‑Orthodox_Debates; Persecution_Phases; Emergence_of_Episcopal_Structure; Canon_Formation
+      - Edges (canonical triples)
+        - I → E/T/D
+          - (Rome_Church) ORGANIZES (Early_Synods)
+        - P ↔ M/T
+          - (Justin_Martyr) COMMENTATES_ON (Gospel_of_John)
+          - (Origen) COMMENTATES_ON (Gospel_of_John)
+          - (Irenaeus) CITES (Muratorian_Fragment)
+        - M ↔ M
+          - (Proto‑Orthodox) DEBATES (Gnostic_Schools)
+          - (Proto‑Orthodox) DISPUTES (Marcionite)
+        - T ↔ M
+          - (Shepherd_of_Hermas) EXEMPLIFIES (Proto‑Orthodox)
+        - E → L
+          - (Persecutions_(Neronian,_Decian,_Diocletianic)) OCCURS_IN (Rome)
+          - (Persecutions_(Neronian,_Decian,_Diocletianic)) OCCURS_IN (Carthage)
 
 ## Interfaces to other clusters
 - Hebrew_Tradition (Second_Temple interface): INTERPRETS; CITES; DEBATES; PARTICIPATES_IN/LEADS (Temple/Synagogue contexts); OCCURS_IN (E→L)
