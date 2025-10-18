@@ -9,7 +9,7 @@ A curated cluster covering the Scottish Reformation from early evangelical curre
 		- Kirk_Consolidation_and_Conflicts_(1560–1603) (D)
 
 - Pre-Reformation_Currents_(1520s–1559) (D)
-	- Persons (P): John_Knox; George_Wishart; Cardinal_David_Beaton; Mary_of_Guise; Lords_of_the_Congregation; John_Willum; John_Calvin (interface)
+	- Persons (P): John_Knox; George_Wishart; Cardinal_David_Beaton; Mary_of_Guise; Lords_of_the_Congregation; John_Willock; John_Calvin (interface)
 	- Institutions (I): University_of_St_Andrews; Scottish_Regency_Council; Papacy
 	- Texts (T): Wishart_Sermons; Knox_Writings_1558_The_First_Blast
 	- Movements (M): Evangelical_Currents_in_Scotland; Presbyterianism; Iconoclasm_Waves
@@ -87,7 +87,7 @@ A curated cluster covering the Scottish Reformation from early evangelical curre
 | Cardinal_David_Beaton | C | Prelate opposing evangelical currents. |
 | Mary_of_Guise | C | Regent navigating French/Scottish politics. |
 | Lords_of_the_Congregation | C | Noble coalition advancing reform. |
-| John_Willum | C | Early evangelical actor in Scotland. |
+| John_Willock | C | Early evangelical actor in Scotland. |
 | John_Calvin | C | Geneva reformer advising Scots (interface). |
 | James_Stewart_(Earl_of_Moray) | C | Regent and reform ally. |
 | William_Maitland | C | Statesman shaping settlement politics. |

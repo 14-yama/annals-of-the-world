@@ -20,7 +20,7 @@ A curated cluster for the Radical Reformation: Swiss Brethren origins, diffusion
 		- P/I → E
 			- (Conrad_Grebel) ORGANIZES (First_Adult_Baptisms_Zurich_1525)
 			- (Zurich_City_Council) DECLARES (Zurich_Edicts_Against_Anabaptists_1526)
-			- (City_Magistrates_Zurich) CENSORS (Anabaptist_Movement)
+			- (Zurich_City_Council) CENSORS (Anabaptist_Movement)
 		- T ↔ M
 			- (Schleitheim_Confession_1527) STANDARDIZES (Anabaptist_Movement)
 		- P ↔ M

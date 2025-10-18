@@ -138,7 +138,7 @@ Count: 189
 | John_Hooper | C | Reformer advocating further changes. | English_Reformation |
 | John_Knox | C | Leading preacher and organizer of the settlement. | Scottish_Reformation |
 | John_Whitgift | C | Archbishop enforcing conformity. | English_Reformation |
-| John_Willum | C | Early evangelical actor in Scotland. | Scottish_Reformation |
+| John_Willock | C | Early evangelical actor in Scotland. | Scottish_Reformation |
 | Jonah_ibn_Janah | C | Grammarian shaping Hebrew linguistic science. | Jewish-Islamic_Exchange |
 | Joseph | C | Son of Jacob associated with rise to prominence in Egypt. | Hebrew_Tradition |
 | Josiah | C | Judean king noted for centralizing reforms. | Hebrew_Tradition |
