@@ -130,41 +130,12 @@ Relationships by Type (PROPOSED)
 
 ## 920 — Classical (Ancient Israelite & Second Temple; c. 1200 BCE–70 CE)
 status: PROPOSED
-Relationships by Type (PROPOSED)
-- Person → Event
-  - Joshua → LEADS → Conquest of Canaan — evidence: cite:920-ev1
-  - Jeremiah → PROPHESIES_DURING → Babylonian Exile — evidence: cite:920-ev2
-  - Moses → LEADS → Exodus — evidence: cite:920-ev3
-- Person → Doctrine/Idea
-  - Moses → PROMULGATES → Mosaic Covenant / Sinai Law — evidence: cite:920-pp1
-- Person → Movement
-  - Paul of Tarsus → PROMOTES → Early Christian communities — evidence: cite:920-mv1
-- Text → Movement
-  - Septuagint → ENABLES → Early Christian texts in circulation — evidence: cite:920-tx1
- - Text → Text
-  - Septuagint → TRANSLATES → Torah (Pentateuch) — evidence: cite:920-tx2
-  - Dead Sea Scrolls → TRANSMITS → Torah (Pentateuch) — evidence: cite:920-tx3
- - Event → Place
-  - Exodus → OCCURS_IN → Sinai — evidence: cite:920-l1
-  - Conquest of Canaan → OCCURS_IN → Canaan — evidence: cite:920-l2
-  - Assyrian conquest (722 BCE) → OCCURS_IN → Samaria — evidence: cite:920-l3
-  - Persian Edict of Cyrus (538 BCE) → OCCURS_IN → Persia — evidence: cite:920-l4
- - Event ↔ Event
-  - Exodus → PRECEDES → Conquest of Canaan — evidence: cite:920-chron1
-  - Conquest of Canaan → PRECEDES → Division of the Kingdom — evidence: cite:920-chron2
-  - Division of the Kingdom → PRECEDES → Assyrian conquest (722 BCE) — evidence: cite:920-chron3
-  - Assyrian conquest (722 BCE) → PRECEDES → Babylonian Exile (586 BCE) — evidence: cite:920-chron4
-  - Babylonian Exile (586 BCE) → PRECEDES → Persian Edict of Cyrus (538 BCE) — evidence: cite:920-chron5
-  - Persian Edict of Cyrus (538 BCE) → PRECEDES → Maccabean Revolt (167–160 BCE) — evidence: cite:920-chron6
-  - Maccabean Revolt (167–160 BCE) → PRECEDES → Roman conquest (63 BCE) — evidence: cite:920-chron7
-  - Roman conquest (63 BCE) → PRECEDES → Second Temple destruction (70 CE) — evidence: cite:920-chron8
-  - Second Temple destruction (70 CE) → PRECEDES → Emergence of early Christian communities (1st century CE) — evidence: cite:920-chron9
- - Event → Doctrine/Idea
-  - Exodus → ENABLES → Mosaic Covenant / Sinai Law — evidence: cite:920-id1
- - Text → Doctrine/Idea
-  - Torah (Pentateuch) → TRANSMITS → Mosaic Covenant / Sinai Law — evidence: cite:920-id2
+Ideas
+- Mosaic Covenant / Sinai Law
 
-## 920 — Classical (Ancient Israelite & Second Temple; c. 1200 BCE–70 CE)
+People
+- Moses, Joshua, Jeremiah, Paul of Tarsus
+
 Places
 - Sinai, Canaan, Samaria, Nineveh, Persia
 - Alexandria (diaspora hub)
@@ -202,43 +173,6 @@ Events
 - Second Temple destruction (70 CE)
 - Emergence of early Christian communities (1st century CE)
 
-Relationships (PROPOSED)
-- (Moses) - PROMULGATES -> (Mosaic_Covenant / Sinai_Law) — evidence: cite:920-pp1
-- (Joshua) - LEADS -> (Conquest_of_Canaan) — evidence: cite:920-ev1
-- (Jeremiah) - PROPHESIES_DURING -> (Babylonian Exile) — evidence: cite:920-ev2
-- (Paul_of_Tarsus) - PROMOTES -> (Early_Christian_Communities) — evidence: cite:920-mv1
-- (Septuagint) - ENABLES -> (Early_Christian_texts_in_circulation) — evidence: cite:920-tx1
-
-Relationships by Type (PROPOSED)
-- Person → Event
-  - Joshua → LEADS → Conquest of Canaan — evidence: cite:920-ev1
-  - Jeremiah → PROPHESIES_DURING → Babylonian Exile — evidence: cite:920-ev2
-- Person → Movement
-  - Paul of Tarsus → PROMOTES → Early Christian communities — evidence: cite:920-mv1
-- Text → Movement
-  - Septuagint → ENABLES → Early Christian texts in circulation — evidence: cite:920-tx1
-
-- Person → Doctrine/Idea
-  - Moses → PROMULGATES → Mosaic Covenant / Sinai Law — evidence: cite:920-pp1
-- Event ↔ Event
-  - Exodus → PRECEDES → Conquest of Canaan — evidence: cite:920-chron1
-  - Conquest of Canaan → PRECEDES → Division of the Kingdom — evidence: cite:920-chron2
-  - Division of the Kingdom → PRECEDES → Assyrian conquest (722 BCE) — evidence: cite:920-chron3
-  - Assyrian conquest (722 BCE) → PRECEDES → Babylonian Exile (586 BCE) — evidence: cite:920-chron4
-  - Babylonian Exile (586 BCE) → PRECEDES → Persian Edict of Cyrus (538 BCE) — evidence: cite:920-chron5
-  - Persian Edict of Cyrus (538 BCE) → PRECEDES → Maccabean Revolt (167–160 BCE) — evidence: cite:920-chron6
-  - Maccabean Revolt (167–160 BCE) → PRECEDES → Roman conquest (63 BCE) — evidence: cite:920-chron7
-  - Roman conquest (63 BCE) → PRECEDES → Second Temple destruction (70 CE) — evidence: cite:920-chron8
-  - Second Temple destruction (70 CE) → PRECEDES → Emergence of early Christian communities (1st century CE) — evidence: cite:920-chron9
-- Event → Doctrine/Idea
-  - Exodus → ENABLES → Mosaic Covenant / Sinai Law — evidence: cite:920-id1
-- Text → Doctrine/Idea
-  - Torah (Pentateuch) → TRANSMITS → Mosaic Covenant / Sinai Law — evidence: cite:920-id2
-- Text → Text
-  - Septuagint → TRANSLATES → Torah (Pentateuch) — evidence: cite:920-tx2
-
-
-
 Movements
 - Prophetic schools
 - Deuteronomistic reform (Josiah)
@@ -257,6 +191,39 @@ Texts / Artifacts
 Evidence
 - Ketef Hinnom amulets (7th c. BCE priestly blessing)
 - Elephantine Papyri (5th c. BCE diaspora life)
+Relationships by Type (PROPOSED)
+- Person → Event
+  - Joshua → LEADS → Conquest of Canaan — evidence: cite:920-ev1
+  - Jeremiah → PROPHESIES_DURING → Babylonian Exile — evidence: cite:920-ev2
+  - Moses → LEADS → Exodus — evidence: cite:920-ev3
+- Person → Doctrine/Idea
+  - Moses → PROMULGATES → Mosaic Covenant / Sinai Law — evidence: cite:920-pp1
+- Person → Movement
+  - Paul of Tarsus → PROMOTES → Early Christian communities — evidence: cite:920-mv1
+- Text → Movement
+  - Septuagint → ENABLES → Early Christian texts in circulation — evidence: cite:920-tx1
+ - Text → Text
+  - Septuagint → TRANSLATES → Torah (Pentateuch) — evidence: cite:920-tx2
+  - Dead Sea Scrolls → TRANSMITS → Torah (Pentateuch) — evidence: cite:920-tx3
+ - Event → Place
+  - Exodus → OCCURS_IN → Sinai — evidence: cite:920-l1
+  - Conquest of Canaan → OCCURS_IN → Canaan — evidence: cite:920-l2
+  - Assyrian conquest (722 BCE) → OCCURS_IN → Samaria — evidence: cite:920-l3
+  - Persian Edict of Cyrus (538 BCE) → OCCURS_IN → Persia — evidence: cite:920-l4
+ - Event ↔ Event
+  - Exodus → PRECEDES → Conquest of Canaan — evidence: cite:920-chron1
+  - Conquest of Canaan → PRECEDES → Division of the Kingdom — evidence: cite:920-chron2
+  - Division of the Kingdom → PRECEDES → Assyrian conquest (722 BCE) — evidence: cite:920-chron3
+  - Assyrian conquest (722 BCE) → PRECEDES → Babylonian Exile (586 BCE) — evidence: cite:920-chron4
+  - Babylonian Exile (586 BCE) → PRECEDES → Persian Edict of Cyrus (538 BCE) — evidence: cite:920-chron5
+  - Persian Edict of Cyrus (538 BCE) → PRECEDES → Maccabean Revolt (167–160 BCE) — evidence: cite:920-chron6
+  - Maccabean Revolt (167–160 BCE) → PRECEDES → Roman conquest (63 BCE) — evidence: cite:920-chron7
+  - Roman conquest (63 BCE) → PRECEDES → Second Temple destruction (70 CE) — evidence: cite:920-chron8
+  - Second Temple destruction (70 CE) → PRECEDES → Emergence of early Christian communities (1st century CE) — evidence: cite:920-chron9
+ - Event → Doctrine/Idea
+  - Exodus → ENABLES → Mosaic Covenant / Sinai Law — evidence: cite:920-id1
+ - Text → Doctrine/Idea
+  - Torah (Pentateuch) → TRANSMITS → Mosaic Covenant / Sinai Law — evidence: cite:920-id2
 
 ## 930 — Medieval (Late Antiquity & Middle Ages; 70–1500 CE)
 status: PROPOSED
@@ -294,6 +261,13 @@ Institutions
 - Byzantine church institutions (patriarchates, monastic centers)
 - Early Islamic caliphates and madrasas
 
+Places
+- Baghdad, Cordoba, Toledo
+- Ashkenaz (Rhineland)
+- Safed (later mystical hub)
+- Constantinople, Rome (Christian centers)
+- Kufa, Basra, Damascus (early Islamic centers)
+
 Texts / Artifacts
 - Mishnah (c. 200)
 - Jerusalem Talmud (c. 400)
@@ -306,12 +280,19 @@ Texts / Artifacts
 - Qur'an (canonized in the 7th century) and early tafsir traditions
 - Christian patristic writings and liturgical texts
 
-Relationships (PROPOSED)
-- (Judah_haNasi) - EDITS -> (Mishnah) — evidence: cite:930-ev1
-- (Rashi) - COMMENTATES_ON -> (Talmud) — evidence: cite:930-pp1
-- (Maimonides) - INTERPRETS -> (Jewish_Philosophy) — evidence: cite:930-mv1
-- (Muhammad) - ESTABLISHES -> (Qur'an_canonization_process) — evidence: cite:930-pp2
-- (Church_Councils) - DEFINES -> (Christian_doctrinal_consolidation) — evidence: cite:930-mv2
+Movements
+- Rabbinic Judaism
+- Kabbalistic movement
+- Karaite sects
+- Jewish communities in the Islamic Golden Age
+- Monasticism and the growth of Christian scholastic institutions
+- Islamic Golden Age intellectual movements (translation movement, Kalam)
+
+Evidence
+- Roman/Byzantine/Islamic decrees touching Jewish law & status
+- Synagogue inscriptions (e.g., Dura-Europos)
+- Church councils' canons and episcopal letters
+- Early Islamic inscriptions, coins and administrative records
 
 Relationships by Type (PROPOSED)
 - Person → Text
@@ -341,28 +322,6 @@ Relationships by Type (PROPOSED)
   - Jerusalem Talmud → PRECEDES → Babylonian Talmud — evidence: cite:930-chron2
   - Rashi’s commentary → QUOTES → Talmud — evidence: cite:930-tx3
 
-
-Movements
-- Rabbinic Judaism
-- Kabbalistic movement
-- Karaite sects
-- Jewish communities in the Islamic Golden Age
-- Monasticism and the growth of Christian scholastic institutions
-- Islamic Golden Age intellectual movements (translation movement, Kalam)
-
-Places
-- Baghdad, Cordoba, Toledo
-- Ashkenaz (Rhineland)
-- Safed (later mystical hub)
-- Constantinople, Rome (Christian centers)
-- Kufa, Basra, Damascus (early Islamic centers)
-
-Evidence
-- Roman/Byzantine/Islamic decrees touching Jewish law & status
-- Synagogue inscriptions (e.g., Dura-Europos)
-- Church councils' canons and episcopal letters
-- Early Islamic inscriptions, coins and administrative records
-
 ## 940 — Early Modern (1500–1800 CE)
 status: PROPOSED
 
@@ -386,17 +345,23 @@ Institutions
 - Protestant and Catholic seminaries and missionary societies
 - Ottoman madrasa networks and imperial printing/publishing centers
 
+Places
+
 Texts
 - Christian Hebraists’ Bibles
 - Early critical editions of Tanakh
 - Vernacular Christian Bibles and confessional catechisms
 - Ottoman-era legal codes and fatwas (where preserved)
 
-Relationships (PROPOSED)
-- (Azariah_dei_Rossi) - DEBATES -> (Christian_Hebraists) — evidence: cite:940-pp1
-- (Spinoza) - CRITIQUES -> (Traditional_theology) — evidence: cite:940-ev1
-- (Printing_houses) - DISTRIBUTES -> (Vernacular_Christian_Bibles) — evidence: cite:940-mv1
-- (Moses_Mendelssohn) - ADVOCATES -> (Haskalah) — evidence: cite:940-pp2
+Movements
+- Protestant reliance on Hebrew Bible
+- Jewish Haskalah
+- Catholic Counter-Reformation
+- Sufi and reform movements within Islam
+
+Evidence
+- Early printed Hebrew Bibles & paratexts
+- Missionary records, travel accounts, Ottoman archives
 
 Relationships by Type (PROPOSED)
 - Person → Doctrine/Idea
@@ -420,17 +385,6 @@ Relationships by Type (PROPOSED)
   - Vernacular Christian Bibles → INFLUENCES → Protestant reliance on Hebrew Bible — evidence: cite:940-mv3
  - Text ↔ Text
   - Christian Hebraists’ Bibles → TRANSLATES → Torah (Pentateuch) — evidence: cite:940-tx3
-
-
-Movements
-- Protestant reliance on Hebrew Bible
-- Jewish Haskalah
-- Catholic Counter-Reformation
-- Sufi and reform movements within Islam
-
-Evidence
-- Early printed Hebrew Bibles & paratexts
-- Missionary records, travel accounts, Ottoman archives
 
 ## 950 — Modern (1800–1945)
 status: PROPOSED
@@ -473,11 +427,9 @@ Events
 - Holocaust (Shoah)
 - Ottoman collapse and post-WWI territorial settlements affecting Jewish/Christian/Islamic communities
 
-Relationships (PROPOSED)
-- (Theodor_Herzl) - ORGANIZES -> (World_Zionist_Congress) — evidence: cite:950-pp1
-- (Julius_Wellhausen) - PUBLISHES -> (Documentary_Hypothesis) — evidence: cite:950-ev1
-- (Muhammad_Abduh) - PROMOTES -> (Islamic_Modernism) — evidence: cite:950-mv1
-- (Holocaust) - TRANSFORMS -> (Post-Holocaust_theology) — evidence: cite:950-ev2
+Evidence
+- Congress records, rabbinic responsa, academic monographs
+- Missionary archives, colonial records, reformist periodicals
 
 Relationships by Type (PROPOSED)
 - Person → Institution/Movement
@@ -487,11 +439,6 @@ Relationships by Type (PROPOSED)
   - Julius Wellhausen → PUBLISHES → Documentary Hypothesis — evidence: cite:950-ev1
 - Event → Doctrine/Idea
   - Holocaust → TRANSFORMS → Post-Holocaust theology — evidence: cite:950-ev2
-
-
-Evidence
-- Congress records, rabbinic responsa, academic monographs
-- Missionary archives, colonial records, reformist periodicals
 
 ## 960 — Contemporary (1945–Present)
 status: PROPOSED
@@ -542,12 +489,6 @@ Events
 - Ongoing Middle East conflicts with biblical dimensions
 - Vatican II (1962–65) and major ecumenical conferences
 - Rise of postwar Islamic movements and regional political shifts (mid–late 20th c.)
-
-Relationships (PROPOSED)
-- (David_Ben-Gurion) - DECLARES -> (Founding_of_Israel_1948) — evidence: cite:960-ev1
-- (Abraham_Joshua_Heschel) - COLLABORATES_WITH -> (Martin_Luther_King) — evidence: cite:960-pp1
-- (Sayyid_Qutb) - INFLUENCES -> (Political_Islam_Movements) — evidence: cite:960-mv1
-- (Vatican_II) - ENABLES -> (Christian_ecumenism) — evidence: cite:960-ev2
 
 Relationships by Type (PROPOSED)
 - Person → Event
