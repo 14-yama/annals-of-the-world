@@ -10,11 +10,23 @@ Note: Use Doctrine/Idea (D) nodes for period/category taxonomies; Institutions (
 - Hebrew_Tradition (D)
   - Periods (D)
     - Patriarchal_and_Early_Israel (D)
-  - Persons (P): Abraham; Sarah; Isaac; Jacob; Joseph
+      - Persons (P): Abraham; Sarah; Isaac; Jacob; Joseph; Moses; Aaron
       - Institutions (I): Early_Priesthood (proto)
       - Texts (T): Torah_Pentateuch (foundational strata)
       - Events (E): Exodus; Sinai_Covenant
       - Suggested clusters: Exodus_and_Sinai_Covenant; Conquest_and_Settlement
+      - Edges (canonical triples)
+        - P/I → E
+          - (Moses) LEADS (Exodus)
+          - (Moses) DECLARES (Sinai_Covenant)
+          - (Aaron) PARTICIPATES_IN (Sinai_Covenant)
+          - (Early_Priesthood) PARTICIPATES_IN (Sinai_Covenant)
+        - T ↔ E
+          - (Torah_Pentateuch) FRAMES (Exodus)
+          - (Torah_Pentateuch) FRAMES (Sinai_Covenant)
+        - P ↔ P
+          - (Abraham) ENDORSES (Isaac) — lineage legitimacy context (narrative authority)
+          - (Jacob) ENDORSES (Joseph) — narrative authority
     - First_Temple_Period_(c._1000–586_BCE) (D)
   - Persons (P): David; Solomon; Hezekiah; Josiah; Isaiah; Jeremiah
       - Institutions (I): First_Temple; Monarchy_of_Israel; Monarchy_of_Judah; Levitical_Priesthood
@@ -22,12 +34,39 @@ Note: Use Doctrine/Idea (D) nodes for period/category taxonomies; Institutions (
       - Movements (M): Prophetic_Tradition (broad)
       - Events (E): Assyrian_Conquest_of_Israel; Hezekiah_Reforms; Josiah_Reforms
       - Suggested clusters: Davidic_Monarchy; Hezekiah_Reforms; Josiah_Centralization
+      - Edges (canonical triples)
+        - P/I → E
+          - (Hezekiah) LEADS (Hezekiah_Reforms)
+          - (Josiah) LEADS (Josiah_Reforms)
+          - (Monarchy_of_Judah) DECLARES (Josiah_Reforms)
+          - (Levitical_Priesthood) ORGANIZES (Temple_Rituals) — within reform contexts
+        - P → E
+          - (Isaiah) PROPHESIES_DURING (Assyrian_Conquest_of_Israel)
+          - (Jeremiah) PROPHESIES_DURING (Assyrian_Conquest_of_Israel)
+        - E → I
+          - (Assyrian_Conquest_of_Israel) TRANSFORMS (Monarchy_of_Israel)
+        - T ↔ E
+          - (Samuel_Kings) FRAMES (Hezekiah_Reforms)
+          - (Prophetic_Writings_(early)) FRAMES (Josiah_Reforms)
+        - T ↔ T
+          - (Psalms_early_layers) TRANSMITS (Temple_Liturgy) — poetic strata inform cultic usage
     - Exilic_Period_(586–538_BCE) (D)
   - Persons (P): Ezekiel; Jeremiah; Cyrus_the_Great (interface)
       - Places (L): Babylon; Jerusalem
       - Texts (T): Ezekiel; Isaiah_(exilic_layers); Lamentations
       - Events (E): Babylonian_Exile; Cyrus_Edict
       - Suggested clusters: Exile_Community_in_Babylon; Return_Decrees_and_Restoration
+      - Edges (canonical triples)
+        - P → E
+          - (Jeremiah) PROPHESIES_DURING (Babylonian_Exile)
+          - (Ezekiel) PROPHESIES_DURING (Babylonian_Exile)
+          - (Cyrus_the_Great) DECLARES (Cyrus_Edict)
+        - E → L
+          - (Babylonian_Exile) OCCURS_IN (Babylon)
+          - (Cyrus_Edict) OCCURS_IN (Babylon) — administrative proclamation locus
+        - T ↔ E
+          - (Lamentations) FRAMES (Babylonian_Exile)
+          - (Isaiah_(exilic_layers)) FRAMES (Cyrus_Edict)
     - Second_Temple_Period_(538_BCE–70_CE) (D)
   - Persons (P): Ezra; Nehemiah; Judas_Maccabeus; Hillel; Shammai; Herod
       - Institutions (I): Second_Temple; Sanhedrin; Synagogue_Network; Hasmonean_State; Herodian_Kingship; Roman_Administration_Judea
@@ -35,6 +74,23 @@ Note: Use Doctrine/Idea (D) nodes for period/category taxonomies; Institutions (
       - Movements (M): Pharisees; Sadducees; Essenes; Zealots; Qumran_Community
       - Events (E): Maccabean_Revolt; Hasmonean_Expansion; Roman_Conquest; Temple_Destruction_70_CE
       - Suggested clusters: Hasmonean_Revolt_and_Independence; Qumran_Community_and_Texts; Temple_Cult_and_Pilgrimage; Pharisees_vs_Sadducees
+      - Edges (canonical triples)
+        - P/I → E
+          - (Ezra) LEADS (Torah_Public_Reading) — component of restoration events
+          - (Nehemiah) ORGANIZES (Jerusalem_Rebuilding) — component of restoration events
+          - (Judas_Maccabeus) LEADS (Maccabean_Revolt)
+          - (Sanhedrin) DECLARES (Legal_Decisions) — generic judicial events
+          - (Roman_Administration_Judea) DECLARES (Roman_Conquest)
+        - E → I
+          - (Temple_Destruction_70_CE) TRANSFORMS (Second_Temple)
+        - P ↔ P / M ↔ M
+          - (Hillel) DEBATES (Shammai)
+          - (Pharisees) DEBATES (Sadducees)
+        - T ↔ T
+          - (Septuagint) TRANSLATES (Torah_Canonization)
+          - (Dead_Sea_Scrolls_Corpus) TRANSMITS (Torah_Canonization)
+        - M ↔ I/E
+          - (Qumran_Community) ORGANIZES (Sectarian_Practices) — event placeholder
     - Rabbinic_Antiquity_(70–600_CE) (D)
   - Persons (P): Yohanan_ben_Zakkai; Rabbi_Akiva; Judah_haNasi; Rav; Shmuel; Rava
       - Institutions (I): Yavneh_Center; Patriarchate; Academies_Tiberias; Academies_Sura; Academies_Pumbedita
@@ -42,6 +98,21 @@ Note: Use Doctrine/Idea (D) nodes for period/category taxonomies; Institutions (
       - Movements (M): Rabbinic_Judaism
       - Events (E): Mishnah_Codification; Talmud_Redactions; Canon_and_Masorah_Development
       - Suggested clusters: Yavneh_Setting_and_Reform; Mishnah_Codification; Babylonian_Talmud_Redaction
+      - Edges (canonical triples)
+        - P/I → E
+          - (Judah_haNasi) LEADS (Mishnah_Codification)
+          - (Yavneh_Center) ORGANIZES (Yavneh_Reform) — institutional normalization event
+          - (Academies_Sura) ORGANIZES (Talmud_Redactions)
+          - (Academies_Pumbedita) ORGANIZES (Talmud_Redactions)
+        - T ↔ T
+          - (Talmud_Jerusalem) COMMENTATES_ON (Mishnah)
+          - (Talmud_Babylon) COMMENTATES_ON (Mishnah)
+          - (Early_Midrashim) COMMENTATES_ON (Torah_Pentateuch)
+        - E → T/I
+          - (Canon_and_Masorah_Development) ENABLES (Masoretic_Tradition)
+          - (Mishnah_Codification) STANDARDIZES (Mishnah) — formalization outcome via Patriarchate
+        - P ↔ P
+          - (Rav) DEBATES (Shmuel)
     - Medieval_and_Early_Modern_(600–1800_CE) (D)
   - Persons (P): Saadia_Gaon; Rashi; Maimonides; Nachmanides; Yosef_Karo; Isaac_Luria
       - Institutions (I): Geonic_Academies; Sefardi_Communities; Ashkenazi_Communities; Rabbinic_Courts; Responsa_Networks
@@ -49,6 +120,20 @@ Note: Use Doctrine/Idea (D) nodes for period/category taxonomies; Institutions (
       - Movements (M): Karaite_Judaism; Kabbalah_(Safed); Early_Haskalah
       - Events (E): Expulsion_from_Spain_1492; Printing_Revolution
       - Suggested clusters: Rashi_and_Tosafists; Maimonidean_Codification_and_Reception; Safed_Kabbalah_and_Liturgy
+      - Edges (canonical triples)
+        - P ↔ T
+          - (Rashi) COMMENTATES_ON (Talmud_Babylon)
+          - (Maimonides) COMMENTATES_ON (Torah_Pentateuch)
+          - (Nachmanides) COMMENTATES_ON (Mishneh_Torah) — reception history
+        - I → T/D
+          - (Geonic_Academies) PUBLISHES (Geonic_Responsa)
+          - (Rabbinic_Courts) STANDARDIZES (Shulchan_Aruch)
+          - (Responsa_Networks) TRANSMITS (Codes_and_Commentaries)
+        - E → T/M
+          - (Printing_Revolution) ENABLES (Codes_and_Commentaries)
+          - (Expulsion_from_Spain_1492) FRAMES (Sefardi_Communities) — diaspora reconfiguration
+        - M ↔ T
+          - (Kabbalah_(Safed)) INTERPRETS (Guide_for_the_Perplexed) — contrasting readings
     - Modern_and_Contemporary_(1800–present) (D)
   - Persons (P): Moses_Mendelssohn; Samson_Raphael_Hirsch; Theodor_Herzl; Rav_Kook; A.J._Heschel
       - Institutions (I): Chief_Rabbinate_(various); Seminaries; Academic_Bible_Scholarship
@@ -56,6 +141,20 @@ Note: Use Doctrine/Idea (D) nodes for period/category taxonomies; Institutions (
       - Movements (M): Reform_Judaism; Orthodox_Judaism; Conservative_Judaism; Haskalah; Zionist_Movement
       - Events (E): Emancipation; Shoah; State_of_Israel_Founding
       - Suggested clusters: Haskalah_and_Emancipation; Modern_Codes_and_Responsa; Zionism_and_Religious_Institutions
+      - Edges (canonical triples)
+        - P ↔ M
+          - (Moses_Mendelssohn) ENDORSES (Haskalah)
+          - (Samson_Raphael_Hirsch) ENDORSES (Orthodox_Judaism)
+          - (Theodor_Herzl) ENDORSES (Zionist_Movement)
+          - (Rav_Kook) INTERPRETS (Zionist_Movement)
+        - I → T/D/M
+          - (Chief_Rabbinate_(various)) STANDARDIZES (New_Codes)
+          - (Seminaries) PROMULGATES (Orthodox_Judaism) — curricular policy
+          - (Academic_Bible_Scholarship) PUBLISHES (Critical_Editions)
+        - E → I/T/M
+          - (Emancipation) ENABLES (Reform_Judaism)
+          - (State_of_Israel_Founding) ENABLES (Chief_Rabbinate_(various))
+          - (Shoah) FRAMES (Modern_Responsa)
 
 ## Interfaces to other clusters
 - Early_Christianity (Second_Temple interface) — cross‑reference where relevant.
