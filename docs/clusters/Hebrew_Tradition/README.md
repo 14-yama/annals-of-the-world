@@ -289,6 +289,281 @@ Note: Use Doctrine/Idea (D) nodes for period/category taxonomies; Institutions (
           - (Eichmann_Trial_1961) OCCURS_IN (Jerusalem)
           - (State_of_Israel_Founding) OCCURS_IN (Tel_Aviv)
 
+## Glossary (source of truth): Generic vs Contextual
+
+Legend: [G] is_generic=true (timeless hub); [C] is_generic=false (contextual/periodized)
+
+- Root and Periods (D)
+  - Hebrew_Tradition [G]
+  - Periods [C]: Patriarchal_and_Early_Israel; First_Temple_Period_(c._1000–586_BCE); Exilic_Period_(586–538_BCE); Second_Temple_Period_(538_BCE–70_CE); Rabbinic_Antiquity_(70–600_CE); Medieval_and_Early_Modern_(600–1800_CE); Modern_and_Contemporary_(1800–present)
+
+- Places (L) [G]
+  - Canaan; Egypt; Sinai; Bethel; Babylon; Jerusalem; Samaria; Judea; Galilee; Qumran; Yavneh; Tiberias; Sura; Pumbedita; Usha; Mainz; Worms; Speyer; Spain; Portugal; Safed; Russia; France; Germany; London; Tel_Aviv
+
+- Institutions (I) [C]
+  - Early_Priesthood; First_Temple; Monarchy_of_Israel; Monarchy_of_Judah; Levitical_Priesthood; Second_Temple; Sanhedrin; Synagogue_Network; Hasmonean_State; Herodian_Kingship; Roman_Administration_Judea; Yavneh_Center; Patriarchate; Academies_Tiberias; Academies_Sura; Academies_Pumbedita; Geonic_Academies; Sefardi_Communities; Ashkenazi_Communities; Rabbinic_Courts; Responsa_Networks; Chief_Rabbinate_(various); Seminaries; Academic_Bible_Scholarship
+
+- Texts/Artifacts (T)
+  - [G] corpora/families: Torah_Pentateuch; Septuagint; Dead_Sea_Scrolls_Corpus; Apocrypha/Deuterocanon; Wisdom_Literature; Early_Liturgical_Texts; Mishnah; Tosefta; Talmud_Jerusalem; Talmud_Babylon; Early_Midrashim; Masoretic_Tradition; Geonic_Responsa; Rashi_Commentary; Tosafot; Codes_and_Commentaries; Critical_Editions; Modern_Responsa; New_Codes
+  - [C] specific/phase‑bound: Samuel_Kings; Psalms_early_layers; Prophetic_Writings_(early); Ezekiel; Isaiah_(exilic_layers); Lamentations; Torah_Canonization; Maimonides_Mishneh_Torah; Guide_for_the_Perplexed; Shulchan_Aruch
+  - Also used: Temple_Liturgy [G]
+
+- Movements (M) [C]
+  - Prophetic_Tradition; Pharisees; Sadducees; Essenes; Zealots; Qumran_Community; Rabbinic_Judaism; Karaite_Judaism; Kabbalah_(Safed); Early_Haskalah; Reform_Judaism; Orthodox_Judaism; Conservative_Judaism; Haskalah; Zionist_Movement
+
+- Events (E) [C]
+  - Exodus; Sinai_Covenant; Abrahamic_Covenant; Binding_of_Isaac; Jacob_Bethel_Vision; Joseph_in_Egypt; Wilderness_Wanderings; Conquest_of_Canaan
+  - Assyrian_Conquest_of_Israel; Hezekiah_Reforms; Josiah_Reforms; Building_of_First_Temple; Temple_Dedication; Division_of_the_Kingdom; Assyrian_Siege_of_Jerusalem_701_BCE; Fall_of_Samaria_722_BCE; Babylonian_Siege_597_BCE; Destruction_of_First_Temple_586_BCE
+  - Babylonian_Exile; Cyrus_Edict
+  - Return_to_Zion; Second_Temple_Dedication_515_BCE; Antiochus_IV_Decrees; Temple_Rededication_(Hanukkah); Pompey_Annexation_63_BCE; Herodian_Temple_Renovation; Maccabean_Revolt; Hasmonean_Expansion; Roman_Conquest; Great_Jewish_Revolt_66_70; Temple_Destruction_70_CE
+  - Mishnah_Codification; Talmud_Redactions; Canon_and_Masorah_Development; Bar_Kokhba_Revolt; Hadrianic_Decrees; Council_of_Usha; Yavneh_Reform
+  - First_Crusade_1096; Expulsion_from_England_1290; Black_Death_Persecutions_1348_1351; Spanish_Inquisition_1478; Expulsion_from_Spain_1492; Expulsion_from_Portugal_1497; Printing_Revolution
+  - Emancipation; Russian_Pogroms_1881_1884; Dreyfus_Affair_1894_1906; Balfour_Declaration_1917; Nuremberg_Laws_1935; UN_Partition_Plan_1947; State_of_Israel_Founding; Law_of_Return_1950; Eichmann_Trial_1961; Six_Day_War_1967; Yom_Kippur_War_1973; Shoah
+  - Also used (contextual event types referenced in edges): Torah_Public_Reading; Jerusalem_Rebuilding; Temple_Rituals; Legal_Decisions; Sectarian_Practices
+
+- Persons (P) [C]
+  - Abraham; Sarah; Isaac; Jacob; Joseph; Moses; Aaron; David; Solomon; Hezekiah; Josiah; Isaiah; Jeremiah; Ezekiel; Cyrus_the_Great; Ezra; Nehemiah; Judas_Maccabeus; Hillel; Shammai; Herod; Yohanan_ben_Zakkai; Rabbi_Akiva; Judah_haNasi; Rav; Shmuel; Rava; Saadia_Gaon; Rashi; Maimonides; Nachmanides; Yosef_Karo; Isaac_Luria; Moses_Mendelssohn; Samson_Raphael_Hirsch; Theodor_Herzl; Rav_Kook; A.J._Heschel
+
+### Descriptions (one‑liners)
+
+#### Root and Periods (D)
+
+| Node | G/C | Description |
+| --- | --- | --- |
+| Hebrew_Tradition | G | Curated view of the Jewish/Hebrew civilizational tradition across time. |
+| Patriarchal_and_Early_Israel | C | Ancestral narratives and formative covenantal moments. |
+| First_Temple_Period_(c._1000–586_BCE) | C | Monarchic era centered on the First Temple. |
+| Exilic_Period_(586–538_BCE) | C | Babylonian exile and theological/liturgical responses. |
+| Second_Temple_Period_(538_BCE–70_CE) | C | Restoration, sectarian diversity, and Roman rule. |
+| Rabbinic_Antiquity_(70–600_CE) | C | Post‑Temple rabbinic consolidation and canon formation. |
+| Medieval_and_Early_Modern_(600–1800_CE) | C | Diasporic scholasticism, codification, mysticism. |
+| Modern_and_Contemporary_(1800–present) | C | Emancipation, denominationalization, nationalism, statehood. |
+
+#### Persons (P)
+
+| Node | G/C | Description |
+| --- | --- | --- |
+| Abraham | C | Patriarchal ancestor associated with covenant foundations. |
+| Sarah | C | Matriarch, spouse of Abraham, mother of Isaac. |
+| Isaac | C | Patriarch, son of Abraham and Sarah. |
+| Jacob | C | Patriarch renamed Israel; progenitor of the tribes. |
+| Joseph | C | Son of Jacob associated with rise to prominence in Egypt. |
+| Moses | C | Exodus leader and lawgiver associated with Sinai covenant. |
+| Aaron | C | Brother of Moses; archetypal priestly figure. |
+| David | C | Monarch of Israel linked with Jerusalem consolidation. |
+| Solomon | C | Successor to David; builder associated with First Temple. |
+| Hezekiah | C | Judean king known for religious reforms and defenses. |
+| Josiah | C | Judean king noted for centralizing reforms. |
+| Isaiah | C | Prophet associated with monarchic crises and Assyrian threat. |
+| Jeremiah | C | Prophet active around the fall and exile. |
+| Ezekiel | C | Exilic prophet with visionary temple imagery. |
+| Cyrus_the_Great | C | Persian ruler associated with return edict. |
+| Ezra | C | Scribe/reformer linked to Torah public reading. |
+| Nehemiah | C | Governor associated with Jerusalem rebuilding. |
+| Judas_Maccabeus | C | Leader of revolt against Seleucid policies. |
+| Hillel | C | Pharisaic sage noted for lenient legal approach. |
+| Shammai | C | Pharisaic sage noted for stricter rulings. |
+| Herod | C | Client king tied to grand temple renovations. |
+| Yohanan_ben_Zakkai | C | Sage linked to Yavneh reorganization. |
+| Rabbi_Akiva | C | Tannaitic sage associated with legal development and revolt era. |
+| Judah_haNasi | C | Patriarch credited with Mishnah redaction. |
+| Rav | C | Early Babylonian Amora and legal authority. |
+| Shmuel | C | Early Babylonian Amora with legal/astronomical expertise. |
+| Rava | C | Later Babylonian Amora noted for dialectical analysis. |
+| Saadia_Gaon | C | Geonic head and philosopher of Judeo‑Arabic tradition. |
+| Rashi | C | Medieval exegete known for lucid Bible/Talmud commentaries. |
+| Maimonides | C | Philosopher and codifier (Mishneh Torah; Guide). |
+| Nachmanides | C | Medieval exegete and halakhist with mystical inflections. |
+| Yosef_Karo | C | Author of Shulchan Aruch; legal codifier. |
+| Isaac_Luria | C | Safed kabbalist associated with Lurianic system. |
+| Moses_Mendelssohn | C | Haskalah thinker bridging tradition and modernity. |
+| Samson_Raphael_Hirsch | C | Neo‑Orthodox leader articulating Torah im Derech Eretz. |
+| Theodor_Herzl | C | Organizer of political Zionism. |
+| Rav_Kook | C | Religious Zionist thinker synthesizing tradition and nationalism. |
+| A.J._Heschel | C | 20th‑century Jewish theologian and activist. |
+
+#### Institutions (I)
+
+| Node | G/C | Description |
+| --- | --- | --- |
+| Early_Priesthood | C | Proto‑priestly service prior to formal temple orders. |
+| First_Temple | C | Jerusalem sanctuary of the united/divided monarchy era. |
+| Monarchy_of_Israel | C | Northern kingdom’s royal governance. |
+| Monarchy_of_Judah | C | Southern kingdom’s royal governance. |
+| Levitical_Priesthood | C | Priestly clan service within temple cult. |
+| Second_Temple | C | Rebuilt Jerusalem sanctuary of post‑exilic period. |
+| Sanhedrin | C | Rabbinic/judicial council for legal decisions. |
+| Synagogue_Network | C | Local assemblies for prayer/study and communal life. |
+| Hasmonean_State | C | Judean polity established after the revolt. |
+| Herodian_Kingship | C | Client dynastic rule under Roman aegis. |
+| Roman_Administration_Judea | C | Provincial governance structures in Judea. |
+| Yavneh_Center | C | Early rabbinic assembly locale after 70 CE. |
+| Patriarchate | C | Rabbinic leadership office of late antiquity. |
+| Academies_Tiberias | C | Galilean rabbinic study center. |
+| Academies_Sura | C | Babylonian academy producing Amoraic scholarship. |
+| Academies_Pumbedita | C | Babylonian academy with dialectical tradition. |
+| Geonic_Academies | C | Post‑Talmudic leadership schools issuing responsa. |
+| Sefardi_Communities | C | Iberian/Maghrebi Jewish communal networks. |
+| Ashkenazi_Communities | C | Northern/Central European Jewish communities. |
+| Rabbinic_Courts | C | Halakhic judiciary adjudicating communal law. |
+| Responsa_Networks | C | Epistolary legal exchange across regions. |
+| Chief_Rabbinate_(various) | C | Modern office of official rabbinic authority. |
+| Seminaries | C | Modern institutions training rabbis/educators. |
+| Academic_Bible_Scholarship | C | Modern critical study institutions and programs. |
+
+#### Texts/Artifacts (T)
+
+| Node | G/C | Description |
+| --- | --- | --- |
+| Torah_Pentateuch | G | Foundational five‑book corpus of Torah. |
+| Septuagint | G | Greek translation tradition of Hebrew scriptures. |
+| Dead_Sea_Scrolls_Corpus | G | Qumran manuscript collection. |
+| Apocrypha/Deuterocanon | G | Second Temple era Judaic writings beyond the Tanakh canon. |
+| Wisdom_Literature | G | Sapiential texts emphasizing instruction and reflection. |
+| Early_Liturgical_Texts | G | Early prayers/benedictions for temple/synagogue. |
+| Mishnah | G | Tannaitic legal corpus forming rabbinic foundation. |
+| Tosefta | G | Supplementary tannaitic compilation paralleling the Mishnah. |
+| Talmud_Jerusalem | G | Palestinian Talmudic compilation. |
+| Talmud_Babylon | G | Babylonian Talmudic compilation. |
+| Early_Midrashim | G | Early rabbinic exegetical compilations on scripture. |
+| Masoretic_Tradition | G | Textual transmission with vocalization/accent systems. |
+| Geonic_Responsa | G | Legal responsa corpus from Geonic leadership. |
+| Rashi_Commentary | G | Rashi’s unified commentary tradition. |
+| Tosafot | G | Medieval gloss tradition expanding Talmud exegesis. |
+| Codes_and_Commentaries | G | Broad corpus of halakhic codes and commentaries. |
+| Critical_Editions | G | Modern scholarly editions of classical texts. |
+| Modern_Responsa | G | Contemporary corpus of halakhic responses. |
+| New_Codes | G | Modern codifications of Jewish law. |
+| Samuel_Kings | C | Narrative accounts of Israelite/Judean monarchies. |
+| Psalms_early_layers | C | Earliest poetic strata within Psalms tradition. |
+| Prophetic_Writings_(early) | C | Early prophetic materials framing reforms/crises. |
+| Ezekiel | C | Prophetic book associated with exile visions. |
+| Isaiah_(exilic_layers) | C | Exilic portions of the Isaiah tradition. |
+| Lamentations | C | Poetic laments reflecting the destruction and exile. |
+| Torah_Canonization | C | Milestone/process in formation of Torah canon. |
+| Maimonides_Mishneh_Torah | C | Legal code systematically organizing halakha. |
+| Guide_for_the_Perplexed | C | Philosophical work synthesizing reason and revelation. |
+| Shulchan_Aruch | C | Early modern legal code standardizing practice. |
+| Temple_Liturgy | G | Liturgical repertoire associated with temple service. |
+
+#### Movements (M)
+
+| Node | G/C | Description |
+| --- | --- | --- |
+| Prophetic_Tradition | C | Broad stream of prophetic discourse and practice. |
+| Pharisees | C | Late Second Temple movement emphasizing oral law. |
+| Sadducees | C | Priestly/elite movement tied to temple centrality. |
+| Essenes | C | Sectarian movement linked to ascetic/communal practices. |
+| Zealots | C | Radical anti‑imperial movement of the revolt era. |
+| Qumran_Community | C | Sectarian community associated with DSS corpus. |
+| Rabbinic_Judaism | C | Late antique rabbinic movement shaping post‑Temple life. |
+| Karaite_Judaism | C | Scripturalist movement rejecting rabbinic oral law. |
+| Kabbalah_(Safed) | C | Mystical movement centered in 16th‑century Safed. |
+| Early_Haskalah | C | Jewish Enlightenment precursors and networks. |
+| Reform_Judaism | C | Modern movement emphasizing religious reform. |
+| Orthodox_Judaism | C | Traditionalist adherence within modernity. |
+| Conservative_Judaism | C | Modern movement balancing tradition and change. |
+| Haskalah | C | Jewish Enlightenment emphasizing integration and reason. |
+| Zionist_Movement | C | National movement seeking Jewish self‑determination. |
+
+#### Events (E)
+
+| Node | G/C | Description |
+| --- | --- | --- |
+| Abrahamic_Covenant | C | Foundational covenant scene with Abraham. |
+| Binding_of_Isaac | C | Narrative of Isaac’s binding as a test of faith. |
+| Jacob_Bethel_Vision | C | Jacob’s vision and vow at Bethel. |
+| Joseph_in_Egypt | C | Joseph’s rise to prominence in Egypt. |
+| Exodus | C | Departure from Egypt toward covenantal destiny. |
+| Sinai_Covenant | C | Covenant proclamation associated with Torah giving. |
+| Wilderness_Wanderings | C | Period of itinerancy after the Exodus. |
+| Conquest_of_Canaan | C | Settlement/conflict narratives in the land. |
+| Building_of_First_Temple | C | Construction of the Jerusalem sanctuary. |
+| Temple_Dedication | C | Dedication rites for the First Temple. |
+| Division_of_the_Kingdom | C | Split into northern and southern kingdoms. |
+| Assyrian_Siege_of_Jerusalem_701_BCE | C | Assyrian campaign against Judah’s capital. |
+| Fall_of_Samaria_722_BCE | C | Fall of northern capital to Assyria. |
+| Babylonian_Siege_597_BCE | C | Babylonian assault preceding exile. |
+| Destruction_of_First_Temple_586_BCE | C | Ruin of the First Temple by Babylon. |
+| Assyrian_Conquest_of_Israel | C | Overthrow of northern kingdom by Assyria. |
+| Hezekiah_Reforms | C | Royal reforms addressing cultic practice. |
+| Josiah_Reforms | C | Royal centralization and law‑book reforms. |
+| Babylonian_Exile | C | Deportations and life in Babylon. |
+| Cyrus_Edict | C | Decree enabling return and restoration. |
+| Return_to_Zion | C | Post‑exilic repatriation to Judah/Jerusalem. |
+| Second_Temple_Dedication_515_BCE | C | Dedication of the rebuilt temple. |
+| Antiochus_IV_Decrees | C | Hellenistic policies restricting Judean practice. |
+| Temple_Rededication_(Hanukkah) | C | Rededication after temple defilement. |
+| Pompey_Annexation_63_BCE | C | Roman annexation of Judea under Pompey. |
+| Herodian_Temple_Renovation | C | Grand expansion of the temple complex. |
+| Maccabean_Revolt | C | Revolt against Seleucid policies leading to autonomy. |
+| Hasmonean_Expansion | C | Territorial consolidation by Hasmonean rule. |
+| Roman_Conquest | C | Roman takeover shaping Judean governance. |
+| Great_Jewish_Revolt_66_70 | C | Major uprising against Roman rule. |
+| Temple_Destruction_70_CE | C | Roman destruction of the Second Temple. |
+| Yavneh_Reform | C | Post‑70 reorganization of rabbinic institutions. |
+| Mishnah_Codification | C | Redaction of the Mishnah. |
+| Talmud_Redactions | C | Compilation/redaction phases of Talmuds. |
+| Canon_and_Masorah_Development | C | Stabilization of textual tradition. |
+| Bar_Kokhba_Revolt | C | Second‑century revolt against Rome. |
+| Hadrianic_Decrees | C | Roman measures restricting Jewish practices. |
+| Council_of_Usha | C | Rabbinic council decisions standardizing norms. |
+| First_Crusade_1096 | C | Crusader violence impacting Ashkenazi communities. |
+| Expulsion_from_England_1290 | C | Royal edict expelling Jews from England. |
+| Black_Death_Persecutions_1348_1351 | C | Anti‑Jewish violence during plague. |
+| Spanish_Inquisition_1478 | C | Institutional inquisition impacting conversos/Jews. |
+| Expulsion_from_Spain_1492 | C | Edict expelling Jews from Spain. |
+| Expulsion_from_Portugal_1497 | C | Expulsion/forced conversion policies. |
+| Printing_Revolution | C | Technology enabling mass textual transmission. |
+| Emancipation | C | Granting of civil rights in modern Europe. |
+| Russian_Pogroms_1881_1884 | C | Anti‑Jewish violence in the Russian Empire. |
+| Dreyfus_Affair_1894_1906 | C | Political scandal galvanizing Zionist sentiment. |
+| Balfour_Declaration_1917 | C | Statement supporting a national home in Palestine. |
+| Nuremberg_Laws_1935 | C | Racial legal regime against Jews in Germany. |
+| UN_Partition_Plan_1947 | C | UN proposal partitioning Mandatory Palestine. |
+| State_of_Israel_Founding | C | Establishment of the State of Israel. |
+| Law_of_Return_1950 | C | Israeli law granting Jewish immigration rights. |
+| Eichmann_Trial_1961 | C | Trial articulating Holocaust testimonies in Israel. |
+| Six_Day_War_1967 | C | Brief conflict reshaping regional realities. |
+| Yom_Kippur_War_1973 | C | Regional war with strategic impact. |
+| Shoah | C | Holocaust; systematic annihilation of European Jewry. |
+| Torah_Public_Reading | C | Communal reading event of Torah as part of restoration. |
+| Jerusalem_Rebuilding | C | Reconstruction and fortification activities in Jerusalem. |
+| Temple_Rituals | C | Cultic service sequences conducted at the temple. |
+| Legal_Decisions | C | Judicial rulings issued by authorized bodies. |
+| Sectarian_Practices | C | Community‑specific rites and observances. |
+
+#### Places (L)
+
+| Node | G/C | Description |
+| --- | --- | --- |
+| Canaan | G | Levantine region associated with early Israelite settlement. |
+| Egypt | G | North‑East African Nile region; timeless geographic hub. |
+| Sinai | G | Peninsula and wilderness region between Egypt and Canaan. |
+| Bethel | G | Hill‑country site associated with ancestral narratives. |
+| Babylon | G | Mesopotamian city/region on the Euphrates. |
+| Jerusalem | G | Hill‑country city serving as cultic/administrative center. |
+| Samaria | G | Region/city associated with northern kingdom. |
+| Judea | G | Southern highland region around Jerusalem. |
+| Galilee | G | Northern region with rural/urban centers. |
+| Qumran | G | Dead Sea vicinity site linked to DSS caves/settlement area. |
+| Yavneh | G | Coastal‑plain town associated with rabbinic assembly. |
+| Tiberias | G | Galilean city and rabbinic center. |
+| Sura | G | Babylonian locality of a major academy. |
+| Pumbedita | G | Babylonian locality of a major academy. |
+| Usha | G | Galilean locality of rabbinic council. |
+| Mainz | G | Rhineland city in Ashkenazic orbit. |
+| Worms | G | Rhineland city in Ashkenazic orbit. |
+| Speyer | G | Rhineland city in Ashkenazic orbit. |
+| Spain | G | Iberian geographic region. |
+| Portugal | G | Iberian geographic region. |
+| Safed | G | Galilean city associated with 16th‑century kabbalah. |
+| Russia | G | Geographic/political region of Eastern Europe/Asia. |
+| France | G | Western European country. |
+| Germany | G | Central European country. |
+| London | G | English metropolis and administrative center. |
+| Tel_Aviv | G | Coastal city in modern Israel. |
+
 ## Interfaces to other clusters
 - Early_Christianity (Second_Temple interface) — cross‑reference where relevant.
 - Jewish–Islamic_Intellectual_Exchange (Medieval interface) — cross‑pollination in philosophy/mysticism.
@@ -314,6 +589,7 @@ Note: Use Doctrine/Idea (D) nodes for period/category taxonomies; Institutions (
 - Reuse global nodes (persons, texts, institutions); do not duplicate across clusters.
 - Keep cross‑cluster edges documented in Interfaces here (or a dedicated interfaces file) and tag where supported (crosslink=true, interface="Second_Temple"/"Medieval").
 - Use only verbs from `../../guidelines/relations_vocabulary.md`.
+ - Author node one‑liners following `../../guidelines/node_descriptions.md` (keep [G] generic and atemporal; [C] contextualized).
 
 ## Change log (cluster‑local)
 - 2025‑10‑18: Initial cluster tree created and standardized to match Early_Christianity pattern.
