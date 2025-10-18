@@ -2,18 +2,24 @@
 
 Source of truth for node one‑line descriptions. Generated from cluster READMEs. Do not hand‑edit this file; edit cluster tables instead and re‑generate.
 
-Total nodes: 787
+Total nodes: 926
 
 ## Doctrines & Periods (D)
 
-Count: 27
+Count: 38
 
 | Node | G/C | Description | Clusters |
 | --- | --- | --- | --- |
+| Catholic_Reformation | G | Curated view of Catholic renewal and response. | Catholic_Reformation |
 | Consolidation_(1550–1600) | C | Mennonite/Hutterite structures and doctrine. | Radical_Reformation |
 | Consolidation_and_Confessions_(1521–1530) | C | Translation, city reforms, and Augsburg Confession. | German_Reformation |
+| Council_of_Trent_and_Implementation_(1545–1563) | C | Council sessions and immediate enforcement. | Catholic_Reformation |
+| Danish-Norwegian_Lutheran_Settlement_(1536–1580s) | C | Danish-Norwegian consolidation under crown. | Scandinavian_Reformations |
 | Diffusion_and_Divergence_(1528–1550) | C | Spread and diversification under pressure. | Radical_Reformation |
 | Divergence_and_Consolidation_(1526–1541) | C | Swiss confessions and city reforms. | Swiss_Reformation |
+| Dordt_and_Confessional_Settlement_(1588–1619) | C | Doctrinal settlement and church order. | Dutch_Reformation |
+| Dutch_Reformation | G | Curated view of the Dutch Reformation. | Dutch_Reformation |
+| Early_Currents_and_Beeldenstorm_(1560–1567) | C | Iconoclasm and early organization. | Dutch_Reformation |
 | Early_Evangelical_Currents_(1510s–1534) | C | Evangelical humanism and shocks of 1534. | French_Reformation |
 | Early_Lutheran_Phase_(1517–1521) | C | Initiation from Theses to Worms. | German_Reformation |
 | Early_Swiss_Brethren_(1525–1527) | C | Emergence of adult baptism communities. | Radical_Reformation |
@@ -30,17 +36,22 @@ Count: 27
 | Modern_and_Contemporary_(1800–present) | C | Emancipation, denominationalization, nationalism, statehood. | Hebrew_Tradition |
 | Organization_and_Persecutions_(1534–1562) | C | Consistorial networks and pressures. | French_Reformation |
 | Patriarchal_and_Early_Israel | C | Ancestral narratives and formative covenantal moments. | Hebrew_Tradition |
+| Post-Tridentine_Consolidation_(1563–1600) | C | Liturgical/doctrinal consolidation and missions. | Catholic_Reformation |
 | Pre-Reformation_Currents_(1520s–1559) | C | Evangelical agitation under regency. | Scottish_Reformation |
+| Pre-Tridentine_Reform_Currents_(1490s–1545) | C | Currents of reform before Trent. | Catholic_Reformation |
 | Rabbinic_Antiquity_(70–600_CE) | C | Post‑Temple rabbinic consolidation and canon formation. | Hebrew_Tradition |
 | Reformation_Parliament_and_Settlement_1560 | C | Settlement via parliament and kirk structures. | Scottish_Reformation |
+| Revolt_and_Church_Formation_(1568–1588) | C | Church structuring during revolt. | Dutch_Reformation |
+| Scandinavian_Reformations | G | Curated view of Nordic Lutheran settlements. | Scandinavian_Reformations |
 | Scottish_Reformation | G | Curated view of the Scottish Presbyterian Reformation. | Scottish_Reformation |
 | Second_Temple_Period_(538_BCE–70_CE) | C | Restoration, sectarian diversity, and Roman rule. | Hebrew_Tradition |
+| Swedish_Lutheran_Settlement_(1527–1593) | C | Swedish royal reforms to Uppsala Synod. | Scandinavian_Reformations |
 | Swiss_Reformation | G | Curated view of Swiss/Reformed developments. | Swiss_Reformation |
 | Wars_of_Religion_and_Settlement_(1562–1598) | C | Civil wars culminating in the Edict of Nantes. | French_Reformation |
 
 ## Persons (P)
 
-Count: 189
+Count: 221
 
 | Node | G/C | Description | Clusters |
 | --- | --- | --- | --- |
@@ -63,18 +74,23 @@ Count: 189
 | Bahya_ibn_Paquda | C | Ethical philosopher blending kalam and piety. | Jewish-Islamic_Exchange |
 | Barnabas | C | Early missionary and collaborator with Paul. | Early_Christianity |
 | Cardinal_David_Beaton | C | Prelate opposing evangelical currents. | Scottish_Reformation |
+| Caspar_Olevianus | C | Catechism co-author and organizer. | Dutch_Reformation |
 | Caspar_Schwenckfeld | C | Spiritualist theologian advocating inner reform. | Radical_Reformation |
 | Catherine_de_Medici | C | Royal figure seeking balances amid conflicts. | French_Reformation |
 | Catherine_of_Aragon | C | Queen contesting the annulment proceedings. | English_Reformation |
+| Charles_Borromeo | C | Archbishop implementing Tridentine reform. | Catholic_Reformation |
 | Charles_V | C | Holy Roman Emperor opposing early reform. | German_Reformation |
+| Christian_III_of_Denmark | C | King establishing Lutheranism in Denmark. | Scandinavian_Reformations |
 | City_Magistrates_Zurich | C | Zurich civic leaders executing reform policy. | Swiss_Reformation |
 | Clement_of_Alexandria | C | Alexandrian teacher synthesizing faith and philosophy. | Early_Christianity |
 | Clement_of_Rome | C | Early Roman leader and author of 1 Clement. | Early_Christianity |
 | Conrad_Grebel | C | Swiss Brethren pioneer (interface to Radical). | Radical_Reformation,Swiss_Reformation |
+| Contarini | C | Reformist cardinal in early curial efforts. | Catholic_Reformation |
 | Cyprian | C | Bishop of Carthage addressing persecution and unity. | Early_Christianity |
 | Cyrus_the_Great | C | Persian ruler associated with return edict. | Hebrew_Tradition |
 | David | C | Monarch of Israel linked with Jerusalem consolidation. | Hebrew_Tradition |
 | Desiderius_Erasmus | C | Humanist scholar influencing reform discourse. | German_Reformation |
+| Duke_Charles_(Charles_IX) | C | Royal supporter of Lutheran consolidation. | Scandinavian_Reformations |
 | Duke_of_Anjou | C | Royal actor during wars of religion. | French_Reformation |
 | Duke_of_Guise | C | Catholic magnate opposing Huguenots. | French_Reformation |
 | Dunash_ben_Labrat | C | Poet‑grammarian debating metrics and grammar. | Jewish-Islamic_Exchange |
@@ -89,12 +105,20 @@ Count: 189
 | Ezekiel | C | Exilic prophet with visionary temple imagery. | Hebrew_Tradition |
 | Ezra | C | Scribe/reformer linked to Torah public reading. | Hebrew_Tradition |
 | Felix_Manz | C | Early Anabaptist martyred in Zurich (interface). | Radical_Reformation,Swiss_Reformation |
+| Francis_Xavier | C | Missionary expanding Catholic presence in Asia. | Catholic_Reformation |
+| Franciscus_Gomarus | C | Theologian defending strict predestination. | Dutch_Reformation |
 | Frederick_the_Wise | C | Saxon elector protecting Luther. | German_Reformation |
+| Frederik_II_of_Denmark | C | Monarch continuing consolidation. | Scandinavian_Reformations |
 | George_Blaurock | C | Early Swiss Brethren evangelist. | Radical_Reformation |
 | George_Wishart | C | Martyr preacher influencing Knox. | Scottish_Reformation |
 | Gersonides_(Levi_ben_Gershon) | C | Philosopher‑exegete engaging Averroist ideas. | Jewish-Islamic_Exchange |
+| Gian_Pietro_Carafa_(Paul_IV) | C | Inquisitor/reformer and later pope. | Catholic_Reformation |
+| Granvelle | C | Regent’s advisor opposing reforms. | Dutch_Reformation |
+| Guido_de_Bres | C | Author of the Belgic Confession. | Dutch_Reformation |
 | Guillaume_Farel | C | Evangelist instrumental in Geneva reforms. | French_Reformation,Swiss_Reformation |
+| Gustav_Vasa | C | Swedish king initiating reforms. | Scandinavian_Reformations |
 | Hai_Gaon | C | Last prominent Gaon known for responsa and lexicography. | Jewish-Islamic_Exchange |
+| Hans_Tausen | C | Danish reformer and translator. | Scandinavian_Reformations |
 | Hasdai_ibn_Shaprut | C | Cordoban courtier and patron of Jewish scholarship. | Jewish-Islamic_Exchange |
 | Heinrich_Bullinger | C | Zurich successor systematizing Reformed doctrine. | Swiss_Reformation |
 | Henry_IV | C | Monarch issuing the Edict of Nantes. | French_Reformation |
@@ -113,12 +137,14 @@ Count: 189
 | Ibn_Rushd_(Averroes) | C | Aristotelian commentator influencing Jewish thought. | Jewish-Islamic_Exchange |
 | Ibn_Tufayl | C | Andalusian philosopher and author of Hayy ibn Yaqzan. | Jewish-Islamic_Exchange |
 | Ignatius_of_Antioch | C | Bishop and letter‑writer en route to martyrdom. | Early_Christianity |
+| Ignatius_of_Loyola | C | Jesuit founder shaping Catholic renewal. | Catholic_Reformation |
 | Irenaeus | C | Bishop of Lyons opposing heresies. | Early_Christianity |
 | Isaac | C | Patriarch, son of Abraham and Sarah. | Hebrew_Tradition |
 | Isaac_Luria | C | Safed kabbalist associated with Lurianic system. | Hebrew_Tradition |
 | Isaiah | C | Prophet associated with monarchic crises and Assyrian threat. | Hebrew_Tradition |
 | Jacob | C | Patriarch renamed Israel; progenitor of the tribes. | Hebrew_Tradition |
 | Jacob_Anatoli | C | Translator bridging Arabic science into Hebrew. | Jewish-Islamic_Exchange |
+| Jacobus_Arminius | C | Theologian advocating conditional election. | Dutch_Reformation |
 | Jacques_Lefevre_d’Etaples | C | Humanist translator and exegete. | French_Reformation |
 | Jakob_Hutter | C | Founder figure for Hutterite communal tradition. | Radical_Reformation |
 | James_Stewart_(Earl_of_Moray) | C | Regent and reform ally. | Scottish_Reformation |
@@ -126,6 +152,7 @@ Count: 189
 | James_VI | C | Monarch favoring episcopal structures. | Scottish_Reformation |
 | Jeremiah | C | Prophet active around the fall and exile. | Hebrew_Tradition |
 | Jesus_of_Nazareth | C | Teacher and movement founder associated with crucifixion and resurrection proclamations. | Early_Christianity |
+| Johan_van_Oldenbarnevelt | C | Statesman advocating moderation; executed in 1619. | Dutch_Reformation |
 | Johann_Tetzel | C | Indulgence preacher triggering critique. | German_Reformation |
 | Johannes_Eck | C | Theologian debating Luther at Leipzig. | German_Reformation |
 | Johannes_Faber | C | Catholic theologian debating reforms. | Swiss_Reformation |
@@ -136,7 +163,9 @@ Count: 189
 | John_Foxe | C | Author of Acts and Monuments chronicling martyrs. | English_Reformation |
 | John_Frederick_I_of_Saxony | C | Elector leading the Schmalkaldic League. | German_Reformation |
 | John_Hooper | C | Reformer advocating further changes. | English_Reformation |
+| John_III_of_Sweden | C | King negotiating liturgical policy. | Scandinavian_Reformations |
 | John_Knox | C | Leading preacher and organizer of the settlement. | Scottish_Reformation |
+| John_of_the_Cross | C | Mystic and co-reformer of Carmel (interface). | Catholic_Reformation |
 | John_Whitgift | C | Archbishop enforcing conformity. | English_Reformation |
 | John_Willock | C | Early evangelical actor in Scotland. | Scottish_Reformation |
 | Jonah_ibn_Janah | C | Grammarian shaping Hebrew linguistic science. | Jewish-Islamic_Exchange |
@@ -149,9 +178,11 @@ Count: 189
 | Justin_Martyr | C | Apologist engaging Greco‑Roman philosophy. | Early_Christianity |
 | King_Francis_I | C | Monarch managing early evangelical tensions. | French_Reformation |
 | Lactantius | C | Latin Christian author addressing imperial policies. | Early_Christianity |
+| Laurentius_Petri | C | Archbishop guiding church order. | Scandinavian_Reformations |
 | Leo_Jud | C | Translator and Zurich reform collaborator. | Radical_Reformation,Swiss_Reformation |
 | Lords_of_the_Congregation | C | Noble coalition advancing reform. | Scottish_Reformation |
 | Maimonides | C | Philosopher and codifier (Mishneh Torah; Guide). | Hebrew_Tradition |
+| Margaret_of_Parma | C | Regent during pre-revolt tensions. | Dutch_Reformation |
 | Marguerite_de_Navarre | C | Royal patron fostering evangelical circles. | French_Reformation |
 | Martin_Bucer | C | Strasbourg reformer mediating between streams. | Swiss_Reformation |
 | Martin_Luther | C | Augustinian monk and theologian central to German reform. | German_Reformation |
@@ -159,6 +190,7 @@ Count: 189
 | Mary_Magdalene | C | Early witness associated with resurrection reports. | Early_Christianity |
 | Mary_of_Guise | C | Regent navigating French/Scottish politics. | Scottish_Reformation |
 | Mary_Queen_of_Scots | C | Monarch whose reign intersected reform. | English_Reformation,Scottish_Reformation |
+| Matteo_Ricci | C | Jesuit missionary to China (interface). | Catholic_Reformation |
 | Matthew_Parker | C | Archbishop shaping the settlement and articles. | English_Reformation |
 | Maurice_of_Saxony | C | Saxon prince pivotal in mid‑century conflicts. | German_Reformation |
 | Menachem_Meiri | C | Provençal rabbi and commentator systematizing halakha. | Jewish-Islamic_Exchange |
@@ -175,18 +207,25 @@ Count: 189
 | Nehemiah | C | Governor associated with Jerusalem rebuilding. | Hebrew_Tradition |
 | Nicholas_Ridley | C | Bishop martyred during Marian persecutions. | English_Reformation |
 | Novatian | C | Roman presbyter advocating rigorist stance. | Early_Christianity |
+| Olaus_Petri | C | Reformer and preacher in Stockholm. | Scandinavian_Reformations |
 | Origen | C | Alexandrian exegete and theologian. | Early_Christianity |
 | Papias_of_Hierapolis | C | Collector of apostolic traditions and expositions. | Early_Christianity |
 | Paul | C | Missionary to the nations; author of early epistles. | Early_Christianity |
+| Peder_Palladius | C | Bishop enforcing visitation ordinances. | Scandinavian_Reformations |
 | Peter | C | Apostolic leader linked with Jerusalem and early mission. | Early_Christianity |
 | Peter_Riedemann | C | Hutterite theologian and apologist. | Radical_Reformation |
 | Philip_the_Evangelist | C | Early evangelist in Acts narratives. | Early_Christianity |
 | Philipp_Melanchthon | C | Lutheran systematizer in colloquies. | German_Reformation,Swiss_Reformation |
 | Pierre_Viret | C | Evangelist/organizer aiding French congregations. | French_Reformation |
 | Pilgram_Marpeck | C | South German/Austrian Anabaptist organizer. | Radical_Reformation |
+| Pius_IV | C | Pope concluding Trent and issuing catechism. | Catholic_Reformation |
+| Pius_V | C | Pope standardizing the Roman rite. | Catholic_Reformation |
 | Polycarp | C | Bishop of Smyrna and early martyr tradition. | Early_Christianity |
 | Pope_Clement_VII | C | Pope involved in annulment diplomacy. | English_Reformation |
 | Pope_Leo_X | C | Pope excommunicating Luther. | German_Reformation |
+| Pope_Paul_III | C | Pope convening the Council of Trent. | Catholic_Reformation |
+| Preaching_Field_Ministers | C | Itinerant preachers organizing field meetings. | Dutch_Reformation |
+| Prince_Maurice | C | Stadtholder consolidating the republic. | Dutch_Reformation |
 | Priscilla | C | Early teacher and collaborator with Paul. | Early_Christianity |
 | Quadratus_of_Athens | C | Early apologist addressing authorities. | Early_Christianity |
 | Rabbi_Akiva | C | Tannaitic sage associated with legal development and revolt era. | Hebrew_Tradition |
@@ -198,6 +237,7 @@ Count: 189
 | Reginald_Pole | C | Papal legate and archbishop under Mary. | English_Reformation |
 | Richard_Hooker | C | Theologian articulating via media. | English_Reformation |
 | Robert_Parsons | C | Jesuit organizer of English mission. | English_Reformation |
+| Roberto_Bellarmino | C | Theologian defending post-Tridentine doctrine. | Catholic_Reformation |
 | Saadia_Gaon | C | Geonic leader and philosopher articulating Judeo‑Arabic kalam. | Hebrew_Tradition,Jewish-Islamic_Exchange |
 | Salah_ad‑Din | C | Ayyubid ruler shaping patronage context in Egypt. | Jewish-Islamic_Exchange |
 | Samson_Raphael_Hirsch | C | Neo‑Orthodox leader articulating Torah im Derech Eretz. | Hebrew_Tradition |
@@ -213,6 +253,7 @@ Count: 189
 | Solomon_ben_Aderet_(Rashba) | C | Leading rabbinic authority issuing responsa and bans. | Jewish-Islamic_Exchange |
 | Sorbonne_Theologians | C | Theological faculty opposing innovations. | French_Reformation |
 | Stephen | C | Early witness associated with Jerusalem persecution. | Early_Christianity |
+| Teresa_of_Avila | C | Mystic and reformer of Carmel (interface). | Catholic_Reformation |
 | Tertullian | C | North African apologist and theologian. | Early_Christianity |
 | Theodor_Herzl | C | Organizer of political Zionism. | Hebrew_Tradition |
 | Theodore_Beza | C | Calvin’s successor; theologian and educator. | French_Reformation,Swiss_Reformation |
@@ -226,6 +267,7 @@ Count: 189
 | Ulrich_Zwingli | C | Zurich reformer initiating Swiss Reformation. | German_Reformation,Radical_Reformation,Swiss_Reformation |
 | William_Cecil | C | Principal minister guiding governance. | English_Reformation |
 | William_Maitland | C | Statesman shaping settlement politics. | Scottish_Reformation |
+| William_of_Orange | C | Leader of revolt and protector of reforms. | Dutch_Reformation |
 | William_Tyndale | C | English Bible translator influencing reforms. | English_Reformation |
 | Yaqub_al_Qirqisani | C | Karaite scholar authoring legal and historiographic works. | Jewish-Islamic_Exchange |
 | Yefet_ben_Ali | C | Karaite exegete producing Arabic Bible commentaries. | Jewish-Islamic_Exchange |
@@ -233,10 +275,11 @@ Count: 189
 | Yonah_Gerondi | C | Anti‑Maimonidean polemicist turned ethicist. | Jewish-Islamic_Exchange |
 | Yosef_ben_Yehuda_ibn_Aknin | C | Student and interlocutor of Maimonides. | Jewish-Islamic_Exchange |
 | Yosef_Karo | C | Author of Shulchan Aruch; legal codifier. | Hebrew_Tradition |
+| Zacharias_Ursinus | C | Catechism co-author shaping doctrine. | Dutch_Reformation |
 
 ## Institutions (I)
 
-Count: 112
+Count: 135
 
 | Node | G/C | Description | Clusters |
 | --- | --- | --- | --- |
@@ -263,14 +306,20 @@ Count: 112
 | Catechetical_School_of_Alexandria | C | Instructional center for doctrine and exegesis. | Early_Christianity |
 | Catholic_League | C | Catholic confederation resisting Huguenots. | French_Reformation |
 | Chief_Rabbinate_(various) | C | Modern office of official rabbinic authority. | Hebrew_Tradition |
+| Church_of_Denmark | C | National Lutheran church in Denmark. | Scandinavian_Reformations |
 | Church_of_England | C | National church reconfigured under the Tudors. | English_Reformation |
+| Church_of_Sweden | C | National Lutheran church in Sweden. | Scandinavian_Reformations |
 | City_Council_Augsburg | C | Urban magistracy hosting imperial diets. | German_Reformation |
 | City_Council_Wittenberg | C | Urban magistracy implementing reform. | German_Reformation |
 | City_Council_Zurich | C | Urban magistracy of Zurich (interface). | German_Reformation |
+| Copenhagen_University | C | Academic institution in Danish reforms. | Scandinavian_Reformations |
 | Cordoba_Court | C | Andalusian court patronage center. | Jewish-Islamic_Exchange |
 | Corinth_Church | C | Community associated with Pauline correspondence. | Early_Christianity |
+| Council_of_Trent | C | Ecumenical council defining doctrine/discipline. | Catholic_Reformation |
 | Court_of_Augmentations | C | Office managing monastic properties post‑dissolution. | English_Reformation |
 | Court_of_High_Commission | C | Ecclesiastical commission enforcing conformity. | English_Reformation |
+| Diocesan_Structures | C | Local governance implementing reforms. | Catholic_Reformation |
+| Discalced_Carmelites | C | Reformed Carmelite branch (interface). | Catholic_Reformation |
 | Dutch_Mennonite_Congregations | C | Dutch congregations institutionalizing Mennonite life. | Radical_Reformation |
 | Early_Priesthood | C | Proto‑priestly service prior to formal temple orders. | Hebrew_Tradition |
 | Early_Synods | C | Early conciliar gatherings across regions. | Early_Christianity |
@@ -279,6 +328,7 @@ Count: 112
 | English_Parliament | C | Legislative body enacting religious statutes. | English_Reformation |
 | English_Seminaries_Douai_Rheims | C | Overseas seminaries training English clergy. | English_Reformation |
 | Ephesus_Church | C | Community associated with mission and elders. | Early_Christianity |
+| Field_Consistories | C | Ad hoc bodies guiding congregations. | Dutch_Reformation |
 | First_Temple | C | Jerusalem sanctuary of the united/divided monarchy era. | Hebrew_Tradition |
 | Fustat/Cairo_Rabbinic_Court | C | Egyptian rabbinic judiciary. | Jewish-Islamic_Exchange |
 | General_Assembly_of_the_Kirk | C | Representative body governing the kirk. | Scottish_Reformation |
@@ -296,9 +346,11 @@ Count: 112
 | Huguenot_Consistories | C | Local governing bodies of Reformed congregations. | French_Reformation |
 | Hutterite_Brotherhood | C | Communal society practicing goods in common. | Radical_Reformation |
 | Imperial_Diet | C | Assembly of estates deliberating imperial policy. | German_Reformation |
+| Index_Congregation | C | Office compiling forbidden books lists. | Catholic_Reformation |
 | Jerusalem_Church | C | Early community centered in Jerusalem. | Early_Christianity |
 | Karaite_Beit_Din | C | Karaite judicial authority for legal rulings. | Jewish-Islamic_Exchange |
 | Karaite_Communities_Baghdad | C | Karaite communal structures in Abbasid Iraq. | Jewish-Islamic_Exchange |
+| Leiden_University | C | University shaping theological debates. | Dutch_Reformation |
 | Levitical_Priesthood | C | Priestly clan service within temple cult. | Hebrew_Tradition |
 | Local_Churches | C | City/regional congregations in correspondence. | Early_Christianity |
 | Lord_Protectorate | C | Regency governance under Edward VI. | English_Reformation |
@@ -312,7 +364,9 @@ Count: 112
 | Nagidate_of_Egypt | C | Office of Jewish leadership (Nagid) in Egypt. | Jewish-Islamic_Exchange |
 | National_Synods_of_France | C | Representative assemblies of Reformed churches. | French_Reformation |
 | Netherlandish_Anabaptist_Gatherings | C | Networks of Dutch congregations. | Radical_Reformation |
-| Papacy | C | Roman see and curial authority. | English_Reformation,German_Reformation,Scottish_Reformation,Swiss_Reformation |
+| Norwegian_Dioceses | C | Ecclesiastical sees under Danish crown. | Scandinavian_Reformations |
+| Oratory_of_Divine_Love | C | Lay clerical circle seeking moral reform. | Catholic_Reformation |
+| Papacy | C | Roman see and curial authority. | Catholic_Reformation,English_Reformation,German_Reformation,Scottish_Reformation,Swiss_Reformation |
 | Paris_Parlement | C | Judicial body in Paris (duplicate naming clarified). | French_Reformation |
 | Paris_University | C | Medieval university implicated in Talmud censorship. | Jewish-Islamic_Exchange |
 | Parlement_of_Paris | C | Judicial body enforcing religious policy. | French_Reformation |
@@ -320,11 +374,17 @@ Count: 112
 | Privy_Council | C | Executive advisory body. | English_Reformation |
 | Privy_Council_of_Scotland | C | Executive council implementing policy. | Scottish_Reformation |
 | Provence_Communities | C | Provençal Jewish communal structures. | Jewish-Islamic_Exchange |
+| Provincial_Synods | C | Regional synods coordinating doctrine. | Dutch_Reformation |
 | Rabbinic_Courts | C | Halakhic judiciary adjudicating communal law. | Hebrew_Tradition |
+| Reformed_Church_of_the_Netherlands | C | National church organization. | Dutch_Reformation |
 | Responsa_Networks | C | Epistolary legal exchange across regions. | Hebrew_Tradition |
+| Rigsraadet_Denmark | C | Council advising Danish monarchy. | Scandinavian_Reformations |
+| Riksdag_of_Sweden | C | Estates assembly enacting reforms. | Scandinavian_Reformations |
 | Roman_Administration_Judea | C | Provincial governance structures in Judea. | Hebrew_Tradition |
 | Roman_Catholic_Church | C | Catholic hierarchy and institutions. | English_Reformation |
+| Roman_Curia | C | Administrative apparatus of the church. | Catholic_Reformation |
 | Roman_Curial_Courts | C | Ecclesiastical legal apparatus issuing decisions. | German_Reformation |
+| Roman_Inquisition | C | Tribunal addressing doctrinal offenses. | Catholic_Reformation |
 | Rome_Church | C | Roman congregation and episcopal seat. | Early_Christianity |
 | Royal_Court | C | Monarchical governance apparatus. | English_Reformation |
 | Royal_Court_of_France | C | Monarchical governance structures. | French_Reformation |
@@ -335,27 +395,33 @@ Count: 112
 | Scottish_Regency_Council | C | Governance during minority/regency. | Scottish_Reformation |
 | Second_Temple | C | Rebuilt Jerusalem sanctuary of post‑exilic period. | Hebrew_Tradition |
 | Sefardi_Communities | C | Iberian/Maghrebi Jewish communal networks. | Hebrew_Tradition |
-| Seminaries | C | Modern institutions training rabbis/educators. | Hebrew_Tradition |
+| Seminaries | C | Modern institutions training rabbis/educators. | Catholic_Reformation,Hebrew_Tradition |
 | Smyrna_Church | C | Community associated with Polycarp. | Early_Christianity |
-| Society_of_Jesus | C | Jesuit order coordinating missions. | English_Reformation |
+| Society_of_Jesus | C | Jesuit order coordinating missions/education. | Catholic_Reformation,English_Reformation |
 | Sorbonne | C | Theological faculty shaping condemnations. | French_Reformation |
+| Spanish_Regency | C | Royal administration prior to revolt. | Dutch_Reformation |
 | Star_Chamber | C | Council court involved in censorship/enforcement. | English_Reformation |
+| States-General | C | Federal assembly of the Netherlands. | Dutch_Reformation |
+| States_Provincial | C | Provincial estates with local authority. | Dutch_Reformation |
 | Strasbourg_Church | C | Reformed center mediating dialogues. | Swiss_Reformation |
 | Strasbourg_Magistracy | C | Civic authority confronting dissenters. | Radical_Reformation |
 | Swiss_Brethren_Communities | C | Early gathered churches practicing adult baptism. | Radical_Reformation |
 | Synagogue_Context | C | Jewish communal setting of early proclamation. | Early_Christianity |
 | Synagogue_Network | C | Local assemblies for prayer/study and communal life. | Hebrew_Tradition |
+| Synod_of_Dordt | C | National synod settling the controversy. | Dutch_Reformation |
 | Toledo_Translation_School | C | Iberian hub coordinating Latin translations. | Jewish-Islamic_Exchange |
 | University_of_Cambridge | C | English university shaping clergy and thought. | English_Reformation |
 | University_of_Oxford | C | English university shaping clergy and thought. | English_Reformation |
 | University_of_St_Andrews | C | Academic and clerical training center. | Scottish_Reformation |
 | University_of_Wittenberg | C | Academic hub for Luther and colleagues. | German_Reformation |
+| Uppsala_Chapter | C | Cathedral chapter shaping policy. | Scandinavian_Reformations |
+| Uppsala_University | C | Academic center tied to clergy formation. | Scandinavian_Reformations |
 | Yavneh_Center | C | Early rabbinic assembly locale after 70 CE. | Hebrew_Tradition |
 | Zurich_City_Council | C | Urban magistracy steering Zurich reform. | Radical_Reformation,Swiss_Reformation |
 
 ## Texts/Artifacts (T)
 
-Count: 134
+Count: 155
 
 | Node | G/C | Description | Clusters |
 | --- | --- | --- | --- |
@@ -375,6 +441,7 @@ Count: 134
 | Augsburg_Interim_1548 | C | Imperial interim settlement attempting compromise. | German_Reformation |
 | Babylonian_Captivity_of_the_Church_1520 | C | Treatise critiquing sacramental system. | German_Reformation |
 | Basel_Church_Order_1529 | C | Basel’s liturgical/disciplinary order. | Swiss_Reformation |
+| Belgic_Confession_1561 | C | Confessional standard for Dutch churches. | Dutch_Reformation |
 | Bishops_Bible_1568 | C | Authorized Elizabethan Bible. | English_Reformation |
 | Bishops_Book_1537 | C | The Institution of a Christian Man. | English_Reformation |
 | Black_Acts_1584 | C | Statutes favoring royal/episcopal control. | Scottish_Reformation |
@@ -383,12 +450,19 @@ Count: 134
 | Book_of_Common_Prayer_1552 | C | Revised English liturgy book. | English_Reformation |
 | Book_of_Homilies_1547 | C | Authorized sermons for instruction. | English_Reformation |
 | Book_of_Homilies_1571 | C | Second book of homilies. | English_Reformation |
+| Breviarium_Romanum_1568 | C | Standard Roman breviary. | Catholic_Reformation |
+| Canons_of_Dort_1619 | C | Doctrinal canons against Remonstrants. | Dutch_Reformation |
 | Catholic_Restoration_Decrees | C | Measures restoring Catholic structures. | English_Reformation |
 | Chantries_Act_1547 | C | Suppression of chantries and endowments. | English_Reformation |
+| Christian_III_Bible_1550 | C | Danish Bible translation. | Scandinavian_Reformations |
+| Church_Order_Articles | C | Early governance articles for churches. | Dutch_Reformation |
+| Church_Order_of_Dort_1619 | C | Governance order for the Reformed churches. | Dutch_Reformation |
 | Codes_and_Commentaries | G | Broad corpus of halakhic codes and commentaries. | Hebrew_Tradition |
 | Consensus_Tigurinus_1549 | C | Zurich‑Geneva concord on the Lord’s Supper. | Swiss_Reformation |
+| Constitutions_of_the_Society_of_Jesus | C | Governing norms for Jesuit order. | Catholic_Reformation |
 | Cranmer_Annulment_Decree | C | Decision enabling annulment proceedings. | English_Reformation |
 | Critical_Editions | G | Modern scholarly editions of classical texts. | Hebrew_Tradition |
+| Danish_Church_Ordinance_1537 | C | Danish church polity/discipline. | Scandinavian_Reformations |
 | Dead_Sea_Scrolls_Corpus | G | Qumran manuscript collection. | Hebrew_Tradition |
 | Didache | C | Early church manual of teaching and practice. | Early_Christianity |
 | Diwan_Moses_ibn_Ezra | C | Collected poems of Moses ibn Ezra. | Jewish-Islamic_Exchange |
@@ -417,13 +491,17 @@ Count: 134
 | Gospel_of_John | C | Johannine gospel tradition. | Early_Christianity |
 | Great_Bible_1539 | C | Authorized English Bible for churches. | English_Reformation |
 | Guide_for_the_Perplexed | C | Maimonides’ philosophical summa. | Hebrew_Tradition,Jewish-Islamic_Exchange |
+| Gustav_Vasa_Bible_1541 | C | Swedish Bible translation. | Scandinavian_Reformations |
 | Hai_Gaon_Responsa | C | Responsa corpus attributed to Hai Gaon. | Jewish-Islamic_Exchange |
 | Hebrew_translations_of_Averroes | C | Hebrew reception corpus of Averroes. | Jewish-Islamic_Exchange |
 | Hebrew‑Arabic_Lexica | C | Lexicographic works bridging Hebrew and Arabic. | Jewish-Islamic_Exchange |
+| Hedge_Preachings_Texts | C | Sermons/outlines used in field meetings. | Dutch_Reformation |
+| Heidelberg_Catechism_1563 | C | Catechism influential in Dutch churches. | Dutch_Reformation |
 | Heresy_Acts | C | Legal framework enabling prosecutions. | English_Reformation |
 | Hutterite_Confessional_Writings | C | Theological/disciplinary texts of Hutterites. | Radical_Reformation |
 | Ibn_Tibbon_Translations | C | Hebrew translations of Arabic/Judeo‑Arabic works. | Jewish-Islamic_Exchange |
 | Ignatian_Letters | C | Letters of Ignatius to various churches. | Early_Christianity |
+| Index_Librorum_Prohibitorum_1559 | C | List of forbidden books. | Catholic_Reformation |
 | Injunctions_1547 | C | Early Edwardian reform directives. | English_Reformation |
 | Institutes_1559 | C | Calvin’s mature theological summa. | Swiss_Reformation |
 | Irenaeus_Against_Hereses | C | Anti‑heretical theological work. | Early_Christianity |
@@ -443,12 +521,14 @@ Count: 134
 | Menno_Foundation_1539 | C | Menno’s Foundation of Christian Doctrine. | Radical_Reformation |
 | Mishnah | G | Tannaitic legal corpus forming rabbinic foundation. | Hebrew_Tradition |
 | Mishneh_Torah | C | Maimonides’ legal code. | Jewish-Islamic_Exchange |
+| Missale_Romanum_1570 | C | Standard Roman liturgical missal. | Catholic_Reformation |
 | Modern_Responsa | G | Contemporary corpus of halakhic responses. | Hebrew_Tradition |
 | Muratorian_Fragment | C | Early list touching on canonical books. | Early_Christianity |
 | New_Codes | G | Modern codifications of Jewish law. | Hebrew_Tradition |
 | Ninety-Five_Theses_1517 | C | Disputation points critiquing indulgences. | German_Reformation |
 | Of_the_Laws_of_Ecclesiastical_Polity | C | Hooker’s defense of the settlement. | English_Reformation |
 | Origen_On_First_Principles | C | Systematic theological exposition. | Early_Christianity |
+| Palladius_Visitations | C | Visitations enforcing discipline. | Scandinavian_Reformations |
 | Papias_Expositions | C | Expositions of the sayings of the Lord. | Early_Christianity |
 | Peace_of_Augsburg_1555 | C | Legal settlement establishing cuius regio, eius religio. | German_Reformation |
 | Philosophical_Works_(Ibn_Gabirol,_et_al.) | C | Andalusian philosophical treatises. | Jewish-Islamic_Exchange |
@@ -458,7 +538,10 @@ Count: 134
 | Qirqisani_Kitab_al‑Anwar | C | Karaite compendium on law and sectarian history. | Jewish-Islamic_Exchange |
 | Rashba_Responsa | C | Responsa of Solomon ben Aderet. | Jewish-Islamic_Exchange |
 | Rashi_Commentary | G | Rashi’s unified commentary tradition. | Hebrew_Tradition |
+| Regimini_Militantis_Ecclesiae_1540 | C | Papal bull establishing the Society of Jesus. | Catholic_Reformation |
+| Remonstrance_1610 | C | Statement of Arminian positions. | Dutch_Reformation |
 | Rheims_New_Testament_1582 | C | Catholic English translation with annotations. | English_Reformation |
+| Roman_Catechism_1566 | C | Catechism expounding Tridentine doctrine. | Catholic_Reformation |
 | Royal_Edicts_on_Heresy | C | Edicts regulating/penalizing heresy. | French_Reformation |
 | Royal_Injunctions_1536 | C | Reform directives to clergy and laity. | English_Reformation |
 | Royal_Injunctions_1538 | C | Directives mandating English Bible placement. | English_Reformation |
@@ -476,6 +559,8 @@ Count: 134
 | Shulchan_Aruch | C | Early modern legal code standardizing practice. | Hebrew_Tradition |
 | Six_Articles_1539 | C | Doctrinal reaffirmations under Henry VIII. | English_Reformation |
 | Sixty-Seven_Articles_1523 | C | Zwingli’s propositions at Zurich disputations. | Swiss_Reformation |
+| Spiritual_Exercises | C | Ignatius’s manual for discernment and formation. | Catholic_Reformation |
+| Swedish_Church_Ordinance_1531 | C | Early Swedish church polity document. | Scandinavian_Reformations |
 | Synoptic_Gospels | C | Canonical synoptic gospel collection. | Early_Christianity |
 | Synoptic_Traditions_(source_strata) | C | Pre‑gospel source layers and oral traditions. | Early_Christianity |
 | Talmud_Babylon | G | Babylonian Talmudic compilation. | Hebrew_Tradition |
@@ -488,6 +573,8 @@ Count: 134
 | Torah_Pentateuch | G | Foundational five‑book corpus of Torah. | Hebrew_Tradition |
 | Tosafot | G | Medieval gloss tradition expanding Talmud exegesis. | Hebrew_Tradition |
 | Tosefta | G | Supplementary tannaitic compilation paralleling the Mishnah. | Hebrew_Tradition |
+| Tridentine_Decrees | C | Doctrinal/disciplinary canons of Trent. | Catholic_Reformation |
+| Uppsala_Synod_Decrees_1593 | C | Doctrinal settlement affirming Lutheranism. | Scandinavian_Reformations |
 | Valor_Ecclesiasticus_1535 | C | Survey of ecclesiastical wealth. | English_Reformation |
 | Wisdom_Literature | G | Sapiential texts emphasizing instruction and reflection. | Hebrew_Tradition |
 | Wishart_Sermons | C | Preaching texts fueling evangelical sentiment. | Scottish_Reformation |
@@ -496,7 +583,7 @@ Count: 134
 
 ## Movements (M)
 
-Count: 76
+Count: 86
 
 | Node | G/C | Description | Clusters |
 | --- | --- | --- | --- |
@@ -507,14 +594,21 @@ Count: 76
 | Apocalyptic_Radicalism | C | Militant/apocalyptic strains within radical circles. | Radical_Reformation |
 | Apologetic_Tradition | C | Defense and engagement with Greco‑Roman culture. | Early_Christianity |
 | Aristotelian_Rationalism_in_Judaism | C | Aristotelian currents in medieval Jewish philosophy. | Jewish-Islamic_Exchange |
+| Arminian_Remonstrant | C | Movement supporting Remonstrant views. | Dutch_Reformation |
 | Believers_Baptism | C | Commitment to adult/confessor baptism. | Radical_Reformation |
 | Catechetical_Tradition | C | Instructional lineage from Alexandria. | Early_Christianity |
 | Catholic_League_Movement | C | Catholic coalition mobilization. | French_Reformation |
+| Catholic_Reform | C | Renewal of discipline, doctrine, and spirituality. | Catholic_Reformation |
 | Catholic_Restoration | C | Reinstatement of Catholic practices and structures. | English_Reformation |
+| Clerical_Formation | C | Training/standardization of clergy. | Catholic_Reformation |
 | Communal_Living | C | Shared goods and common life patterns. | Radical_Reformation |
-| Confessionalization | C | Territorial structuring of religious identity and practice. | German_Reformation |
+| Confessionalization | C | Territorial structuring of religious identity and practice. | Catholic_Reformation,Dutch_Reformation,German_Reformation,Scandinavian_Reformations |
 | Conservative_Judaism | C | Modern movement balancing tradition and change. | Hebrew_Tradition |
+| Contra-Remonstrant | C | Movement opposing Remonstrants. | Dutch_Reformation |
+| Counter_Reformation | C | Response to Protestant expansion. | Catholic_Reformation |
 | Covenanter_Precursors | C | Early roots of later covenanting. | Scottish_Reformation |
+| Doctrinal_Standardization | C | Harmonization of teaching and catechesis. | Catholic_Reformation |
+| Dutch_Reformed | C | Reformed tradition in the Netherlands. | Dutch_Reformation |
 | Early_Haskalah | C | Jewish Enlightenment precursors and networks. | Hebrew_Tradition |
 | English_Bible_Translation | C | Push to render scripture in English. | English_Reformation |
 | Episcopacy_in_Scotland | C | Bishops’ governance model. | Scottish_Reformation |
@@ -528,7 +622,7 @@ Count: 76
 | Humanism_in_England | C | Intellectual currents shaping reformers and opponents. | English_Reformation |
 | Humanism_in_Germany | C | Intellectual currents shaping reform reception. | German_Reformation |
 | Hutterite_Community_of_Goods | C | Communal ownership and discipline tradition. | Radical_Reformation |
-| Iconoclasm_Waves | C | Episodes of image removal in Swiss cities. | English_Reformation,German_Reformation,Scottish_Reformation,Swiss_Reformation |
+| Iconoclasm_Waves | C | Episodes of image removal in Swiss cities. | Dutch_Reformation,English_Reformation,German_Reformation,Scottish_Reformation,Swiss_Reformation |
 | Indulgence_Critique | C | Opposition to indulgence practices. | German_Reformation,Swiss_Reformation |
 | Jerusalem_Community | C | Earliest Jerusalem‑based believers. | Early_Christianity |
 | Jesuit_Mission_in_England | C | Organized missionary activity by Jesuits. | English_Reformation |
@@ -538,12 +632,14 @@ Count: 76
 | Kabbalah_(Safed) | C | Mystical movement centered in 16th‑century Safed. | Hebrew_Tradition |
 | Kalam_in_Jewish_Thought | C | Adoption and adaptation of kalam methods by Jewish thinkers. | Jewish-Islamic_Exchange |
 | Karaite_Judaism | C | Scripturalist movement diverging from rabbinic oral law. | Hebrew_Tradition,Jewish-Islamic_Exchange |
-| Lutheran_Reformation | C | Reform stream centered on Wittenberg theology. | German_Reformation |
+| Lutheran_Reformation | C | Reform stream centered on Wittenberg theology. | German_Reformation,Scandinavian_Reformations |
 | Maimonidean_Codification | C | Legal standardization around Maimonides’ code. | Jewish-Islamic_Exchange |
 | Maimonidean_Controversy | C | Disputes over philosophical study and Maimonides’ works. | Jewish-Islamic_Exchange |
 | Marcionite | C | Movement shaped by Marcion’s canon and doctrine. | Early_Christianity |
 | Marian_Persecutions | C | Campaigns against Protestant dissent under Mary. | English_Reformation |
+| Mission_Expansion | C | Global missionary expansion. | Catholic_Reformation |
 | Montanism | C | Prophetic renewal and rigor movement. | Early_Christianity |
+| Mystical_Reform | C | Interior renewal via mystical practices. | Catholic_Reformation |
 | Nonresistance | C | Refusal to bear arms or use force. | Radical_Reformation |
 | Novatianist | C | Rigorist movement separating from Roman church. | Early_Christianity |
 | Orthodox_Judaism | C | Traditionalist adherence within modernity. | Hebrew_Tradition |
@@ -556,7 +652,7 @@ Count: 76
 | Presbyterian_Reform_in_England | C | Efforts to reshape church polity along presbyterian lines. | English_Reformation |
 | Presbyterianism | C | Church polity emphasizing elders and assemblies. | Scottish_Reformation |
 | Prophetic_Tradition | C | Broad stream of prophetic discourse and practice. | Hebrew_Tradition |
-| Protestant_Consolidation | C | Institutionalization of reforms via orders/confessions. | Swiss_Reformation |
+| Protestant_Consolidation | C | Institutionalization of reforms via orders/confessions. | Dutch_Reformation,Scandinavian_Reformations,Swiss_Reformation |
 | Protestant_Doctrine_in_England | C | Protestant teachings adopted in England. | English_Reformation |
 | Proto‑Orthodox | C | Mainstream doctrinal trajectory. | Early_Christianity |
 | Proto‑Orthodox_Formations | C | Early consensus stream toward orthodoxy. | Early_Christianity |
@@ -568,6 +664,7 @@ Count: 76
 | Reform_Judaism | C | Modern movement emphasizing religious reform. | Hebrew_Tradition |
 | Reformed_Tradition | C | Swiss/Calvinist doctrinal and ecclesial reforms. | French_Reformation,German_Reformation,Swiss_Reformation |
 | Royal_Supremacy | C | Consolidation of monarch’s authority over the church. | English_Reformation |
+| Royal_Supremacy_(Nordic) | C | Crown governance over church. | Scandinavian_Reformations |
 | Royal_Supremacy_(Scotland) | C | Crown’s claim to church governance. | Scottish_Reformation |
 | Sadducees | C | Priestly/elite movement tied to temple centrality. | Hebrew_Tradition |
 | Separatist_Movement | C | Congregational separation from established church. | English_Reformation |
@@ -579,7 +676,7 @@ Count: 76
 
 ## Events (E)
 
-Count: 165
+Count: 187
 
 | Node | G/C | Description | Clusters |
 | --- | --- | --- | --- |
@@ -593,6 +690,7 @@ Count: 165
 | Almohad_Pressures_and_Migration | C | Displacement and policy pressures driving movement of Jewish scholars. | Jewish-Islamic_Exchange |
 | Annulment_Proceedings | C | Legal and ecclesiastical process to end Henry’s marriage. | English_Reformation |
 | Antiochus_IV_Decrees | C | Hellenistic policies restricting Judean practice. | Hebrew_Tradition |
+| Arminius_Controversy_1603_1609 | C | Debates over predestination and grace. | Dutch_Reformation |
 | Articles_Promulgation | C | Issuance of the Thirty‑Nine Articles. | English_Reformation |
 | Assyrian_Conquest_of_Israel | C | Overthrow of northern kingdom by Assyria. | Hebrew_Tradition |
 | Assyrian_Siege_of_Jerusalem_701_BCE | C | Assyrian campaign against Judah’s capital. | Hebrew_Tradition |
@@ -616,7 +714,11 @@ Count: 165
 | Conquest_of_Canaan | C | Settlement/conflict narratives in the land. | Hebrew_Tradition |
 | Council_of_Carthage_256 | C | Synod addressing rebaptism and unity. | Early_Christianity |
 | Council_of_Jerusalem_(c._49_CE) | C | Deliberation on gentile inclusion and practice. | Early_Christianity |
+| Council_of_Trent_Sessions_1545_1547 | C | Opening period of the council. | Catholic_Reformation |
+| Council_of_Trent_Sessions_1551_1552 | C | Reopened council sessions. | Catholic_Reformation |
+| Council_of_Trent_Sessions_1562_1563 | C | Final sessions producing decrees. | Catholic_Reformation |
 | Council_of_Usha | C | Rabbinic council decisions standardizing norms. | Hebrew_Tradition |
+| Counts_War_1534_1536 | C | War determining Denmark’s confession. | Scandinavian_Reformations |
 | Court_Patronage_Phases | C | Cycles of elite support for Jewish scholars and poets in Andalusian courts. | Jewish-Islamic_Exchange |
 | Crucifixion | C | Execution event central to early proclamation. | Early_Christianity |
 | Cyrus_Edict | C | Decree enabling return and restoration. | Hebrew_Tradition |
@@ -624,12 +726,14 @@ Count: 165
 | Decian_Persecution_250 | C | Empire‑wide requirement to sacrifice causing trials. | Early_Christianity |
 | Destruction_of_First_Temple_586_BCE | C | Ruin of the First Temple by Babylon. | Hebrew_Tradition |
 | Diet_of_Augsburg_1530 | C | Imperial diet receiving the Augsburg Confession. | German_Reformation |
+| Diet_of_Vaesteras_1527 | C | Estates decision enabling royal control. | Scandinavian_Reformations |
 | Diet_of_Worms_1521 | C | Imperial hearing culminating in the Edict of Worms. | German_Reformation |
 | Diocletianic_Persecution_303 | C | Late imperial crackdown on assemblies and texts. | Early_Christianity |
 | Dissolution_of_the_Monasteries | C | Suppression and redistribution of monastic houses. | English_Reformation |
 | Division_of_the_Kingdom | C | Split into northern and southern kingdoms. | Hebrew_Tradition |
 | Doctrinal_Articles_Promulgation | C | Issuance of doctrinal articles. | English_Reformation |
 | Dreyfus_Affair_1894_1906 | C | Political scandal galvanizing Zionist sentiment. | Hebrew_Tradition |
+| Early_Curial_Committees_for_Reform | C | Pre-Trent planning for reform. | Catholic_Reformation |
 | Early_Regional_Synods | C | Local gatherings addressing doctrine and practice. | Early_Christianity |
 | Easter_Controversy_(Quartodeciman) | C | Dispute over the dating of the Pascha. | Early_Christianity |
 | Edict_of_Milan_313 | C | Agreement establishing legal toleration of Christianity. | Early_Christianity |
@@ -638,12 +742,14 @@ Count: 165
 | Edict_of_Toleration_311 | C | Toleration measure preceding broader legalization. | Early_Christianity |
 | Eichmann_Trial_1961 | C | Trial articulating Holocaust testimonies in Israel. | Hebrew_Tradition |
 | Emancipation | C | Granting of civil rights in modern Europe. | Hebrew_Tradition |
+| Establishment_of_Lutheranism_Denmark_1536 | C | Formal establishment under Christian III. | Scandinavian_Reformations |
 | Evangelical_Preachings_Meaux | C | Early evangelical activities around Meaux. | French_Reformation |
 | Execution_of_Mary_Queen_of_Scots_1587 | C | Execution impacting Catholic and foreign policy. | English_Reformation |
 | Exodus | C | Departure from Egypt toward covenantal destiny. | Hebrew_Tradition |
 | Expulsion_from_England_1290 | C | Royal edict expelling Jews from England. | Hebrew_Tradition |
 | Expulsion_from_Portugal_1497 | C | Expulsion/forced conversion policies. | Hebrew_Tradition |
 | Expulsion_from_Spain_1492 | C | Edict expelling Jews from Spain. | Hebrew_Tradition |
+| Fall_of_Antwerp_1585 | C | Strategic shift concentrating refugees north. | Dutch_Reformation |
 | Fall_of_Samaria_722_BCE | C | Fall of northern capital to Assyria. | Hebrew_Tradition |
 | First_Adult_Baptisms_Zurich_1525 | C | Initiation of adult baptisms among Swiss Brethren. | Radical_Reformation |
 | First_Crusade_1096 | C | Crusader violence impacting Ashkenazi communities. | Hebrew_Tradition |
@@ -651,20 +757,24 @@ Count: 165
 | First_National_Synod_1559 | C | First nationwide synod of French churches. | French_Reformation |
 | First_War_of_Religion_1562_1563 | C | Outbreak of civil conflict over religion. | French_Reformation |
 | Formation_of_French_Consistories | C | Organization of Reformed congregations. | French_Reformation |
+| Founding_of_Society_of_Jesus_1540 | C | Papal approval of the Jesuit order. | Catholic_Reformation |
 | Geonic_Responsa_Network_Expansion | C | Growth of legal correspondence linking diaspora communities to Geonic centers. | Jewish-Islamic_Exchange |
 | Golden_Act_Passage_1592 | C | Statute affirming presbyterian governance. | Scottish_Reformation |
 | Granada_Massacre_1066 | C | Violent outbreak targeting the Jewish community in Granada. | Jewish-Islamic_Exchange |
 | Great_Jewish_Revolt_66_70 | C | Major uprising against Roman rule. | Hebrew_Tradition |
 | Hadrianic_Decrees | C | Roman measures restricting Jewish practices. | Hebrew_Tradition |
 | Hasmonean_Expansion | C | Territorial consolidation by Hasmonean rule. | Hebrew_Tradition |
+| Hedge_Preachings_1560s | C | Outdoor field preaching assemblies. | Dutch_Reformation |
 | Heresy_Persecutions | C | Prosecutions for heresy under Mary. | English_Reformation |
 | Herodian_Temple_Renovation | C | Grand expansion of the temple complex. | Hebrew_Tradition |
 | Hezekiah_Reforms | C | Royal reforms addressing cultic practice. | Hebrew_Tradition |
 | Hutterite_Migrations_16c | C | Movements seeking toleration and continuity. | Radical_Reformation |
+| Iconoclastic_Fury_1566 | C | Beeldenstorm sweeping churches. | Dutch_Reformation |
 | Ignatian_Martyrdom | C | Execution of Ignatius marking witness tradition. | Early_Christianity |
 | Jacob_Bethel_Vision | C | Jacob’s vision and vow at Bethel. | Hebrew_Tradition |
 | Jerusalem_Rebuilding | C | Reconstruction and fortification activities in Jerusalem. | Hebrew_Tradition |
 | Jesuit_Mission_1580s | C | Organized Jesuit mission to England. | English_Reformation |
+| Jesuit_Missions_India_China | C | Missionary endeavors in Asia. | Catholic_Reformation |
 | Joseph_in_Egypt | C | Joseph’s rise to prominence in Egypt. | Hebrew_Tradition |
 | Josiah_Reforms | C | Royal centralization and law‑book reforms. | Hebrew_Tradition |
 | Judeo_Arabic_Bible_Translation_Phase | C | Period of systematic rendering of Hebrew scriptures into Judeo‑Arabic. | Jewish-Islamic_Exchange |
@@ -688,6 +798,7 @@ Count: 165
 | Neronian_Persecution_64 | C | Roman actions against Christians after the fire. | Early_Christianity |
 | Northern_Rebellion_1569 | C | Northern earls’ revolt with religious dimension. | English_Reformation |
 | Nuremberg_Laws_1935 | C | Racial legal regime against Jews in Germany. | Hebrew_Tradition |
+| Oldenbarnevelt_Execution_1619 | C | Execution following political-theological conflict. | Dutch_Reformation |
 | Oxford_Martyrs_1555_1556 | C | Executions of Latimer, Ridley, and Cranmer. | English_Reformation |
 | Paris_Talmud_Burning_1242 | C | Destruction of Talmud manuscripts in Paris impacting transmission. | Jewish-Islamic_Exchange |
 | Parish_Bible_Installations | C | Placement of English Bibles in parish churches. | English_Reformation |
@@ -708,6 +819,7 @@ Count: 165
 | Reconciliation_with_Rome | C | Restoration of communion with Papacy. | English_Reformation |
 | Reconquista_of_Toledo_1085 | C | Christian conquest of Toledo opening cross‑lingual scholarly channels. | Jewish-Islamic_Exchange |
 | Recusancy_Fines_Regime | C | Enforcement of penalties for non‑attendance. | English_Reformation |
+| Reduction_Policies_1540s | C | Confiscations and reallocation of church wealth. | Scandinavian_Reformations |
 | Reformation_Parliament_1560 | C | Parliament enacting the settlement. | Scottish_Reformation |
 | Regnans_in_Excelsis_1570 | C | Papal bull excommunicating Elizabeth I. | English_Reformation |
 | Resurrection_Proclamations | C | Announcements of resurrection shaping community identity. | Early_Christianity |
@@ -718,6 +830,7 @@ Count: 165
 | Schmalkaldic_War_1546_1547 | C | Conflict between imperial and Schmalkaldic forces. | German_Reformation |
 | Second_Temple_Dedication_515_BCE | C | Dedication of the rebuilt temple. | Hebrew_Tradition |
 | Sectarian_Practices | C | Community‑specific rites and observances. | Hebrew_Tradition |
+| Seminaries_Proliferation | C | Expansion of seminaries across dioceses. | Catholic_Reformation |
 | Seminary_Priests_Mission_1580s | C | Deployment of seminary clergy into England. | English_Reformation |
 | Servetus_Execution_1553 | C | Execution for anti‑trinitarian teachings. | Swiss_Reformation |
 | Settlement_Passage | C | Enactment of the Elizabethan settlement. | English_Reformation |
@@ -728,7 +841,10 @@ Count: 165
 | Spanish_Armada_1588 | C | Spanish naval campaign against England. | English_Reformation |
 | Spanish_Inquisition_1478 | C | Institutional inquisition impacting conversos/Jews. | Hebrew_Tradition |
 | St_Bartholomews_Day_Massacre_1572 | C | Mass killings of Huguenots in Paris. | French_Reformation |
+| Standardization_of_Roman_Rite_1570 | C | Missal/Breviary standardization. | Catholic_Reformation |
 | State_of_Israel_Founding | C | Establishment of the State of Israel. | Hebrew_Tradition |
+| Synod_of_Dordt_1618_1619 | C | National synod issuing canons. | Dutch_Reformation |
+| Synod_of_Emden_1571 | C | Offshore synod organizing the churches. | Dutch_Reformation |
 | Taifa_Fragmentation | C | Political breakup of the Caliphate affecting patronage and scholarly life. | Jewish-Islamic_Exchange |
 | Talmud_Redactions | C | Compilation/redaction phases of Talmuds. | Hebrew_Tradition |
 | Temple_Dedication | C | Dedication rites for the First Temple. | Hebrew_Tradition |
@@ -738,7 +854,10 @@ Count: 165
 | Toledo_Translation_Phase | C | Coordination of Arabic‑to‑Latin translations in Iberian centers. | Jewish-Islamic_Exchange |
 | Torah_Public_Reading | C | Communal reading event of Torah as part of restoration. | Hebrew_Tradition |
 | UN_Partition_Plan_1947 | C | UN proposal partitioning Mandatory Palestine. | Hebrew_Tradition |
+| Union_of_Utrecht_1579 | C | Federal alliance enabling religious pluralism. | Dutch_Reformation |
+| Uppsala_Synod_1593 | C | Synod affirming Lutheran doctrine. | Scandinavian_Reformations |
 | Vestiarian_Controversy_1566 | C | Dispute over clerical vestments. | English_Reformation |
+| Visitations_and_Implementations_1540s | C | Enforcement of discipline across dioceses. | Scandinavian_Reformations |
 | Wartburg_Translation_1521_1522 | C | Luther’s seclusion producing the German NT. | German_Reformation |
 | Western_Rebellion_1549 | C | Resistance to Prayer Book and reforms in the West. | English_Reformation |
 | Wilderness_Wanderings | C | Period of itinerancy after the Exodus. | Hebrew_Tradition |
@@ -751,12 +870,15 @@ Count: 165
 
 ## Places (L)
 
-Count: 84
+Count: 104
 
 | Node | G/C | Description | Clusters |
 | --- | --- | --- | --- |
+| Amsterdam | G | Commercial center with Reformed growth. | Dutch_Reformation |
+| Antwerp | G | Southern city and iconoclasm flashpoint. | Dutch_Reformation |
 | Asia_Minor | G | Anatolian regions of early synods and communities. | Early_Christianity |
 | Augsburg | G | Imperial city hosting multiple diets. | German_Reformation |
+| Avila | G | Spanish city associated with mysticism. | Catholic_Reformation |
 | Babylon | G | Mesopotamian city/region on the Euphrates. | Hebrew_Tradition |
 | Baghdad | G | Abbasid capital and hub of translation and interfaith scholarship. | Jewish-Islamic_Exchange |
 | Barcelona | G | Catalan city tied to bans and controversy networks. | Jewish-Islamic_Exchange |
@@ -765,18 +887,22 @@ Count: 84
 | Bern | G | Swiss city adopting Reformed changes. | Swiss_Reformation |
 | Bethel | G | Hill‑country site associated with ancestral narratives. | Hebrew_Tradition |
 | Bithynia | G | Province associated with Roman legal correspondence. | Early_Christianity |
+| Bologna | G | Italian city where sessions convened. | Catholic_Reformation |
 | Cambridge | G | University city shaping clergy and thought. | English_Reformation |
 | Canaan | G | Levantine region associated with early Israelite settlement. | Hebrew_Tradition |
 | Canterbury | G | Seat of the Archbishop of Canterbury. | English_Reformation |
 | Carthage | G | North African center of Christian activity. | Early_Christianity |
+| Copenhagen | G | Danish capital and university city. | Scandinavian_Reformations |
 | Cordoba | G | Umayyad/Andalusian cultural center with Jewish courtly activity. | Jewish-Islamic_Exchange |
 | Corinth | G | Greek city hosting an early assembly. | Early_Christianity |
 | Cornwall | G | Southwestern English county. | English_Reformation |
 | Damascus | G | City associated with early mission and transitions. | Early_Christianity |
 | Devon | G | Western English county. | English_Reformation |
+| Dordrecht | G | Synod city for Dordt. | Dutch_Reformation |
 | Douai | G | Continental seminary city for English clergy. | English_Reformation |
 | Edinburgh | G | Scottish capital and parliamentary seat. | Scottish_Reformation |
 | Egypt | G | North‑East African Nile region; timeless geographic hub. | Hebrew_Tradition |
+| Emden | G | Refuge/organizing city for exiles. | Dutch_Reformation |
 | Ephesus | G | Asia Minor port city with active community. | Early_Christianity |
 | Fez | G | Maghrebi city intersecting Jewish and Islamic scholarly routes. | Jewish-Islamic_Exchange |
 | France | G | Western European country. | Hebrew_Tradition |
@@ -784,19 +910,24 @@ Count: 84
 | Galilee | G | Northern region with rural/urban centers. | Early_Christianity,Hebrew_Tradition |
 | Geneva | G | Reformed center under Calvin and successors. | German_Reformation,Swiss_Reformation |
 | Germany | G | Central European country. | Hebrew_Tradition |
+| Ghent | G | City impacted by reforms. | Dutch_Reformation |
 | Glasgow | G | Urban center with kirk activity. | Scottish_Reformation |
+| Goa | G | Portuguese colony and mission hub. | Catholic_Reformation |
 | Granada | G | Andalusian city with notable Jewish courtly presence and 1066 crisis. | Jewish-Islamic_Exchange |
 | Jerusalem | G | Hill‑country city serving as cultic/administrative center. | Early_Christianity,Hebrew_Tradition |
 | Judea | G | Southern highland region around Jerusalem. | Early_Christianity,Hebrew_Tradition |
 | Kappel | G | Canton locale for inter‑canton conflicts. | Swiss_Reformation |
 | La_Rochelle | G | Huguenot stronghold and port. | French_Reformation |
+| Leiden | G | University city shaping debates. | Dutch_Reformation |
 | Leipzig | G | Saxon city hosting key debates. | German_Reformation |
 | London | G | English metropolis and administrative center. | English_Reformation,Hebrew_Tradition |
 | Lyon | G | Commercial city with Reformed presence. | French_Reformation |
 | Lyons | G | Gallic city with notable community and persecution. | Early_Christianity |
+| Macau | G | Chinese port and mission gateway. | Catholic_Reformation |
 | Mainz | G | Rhineland city in Ashkenazic orbit. | Hebrew_Tradition |
 | Marburg | G | Hessian city of the colloquy. | German_Reformation,Swiss_Reformation |
 | Meaux | G | Site of early evangelical circle. | French_Reformation |
+| Milan | G | Archdiocesan center of reform. | Catholic_Reformation |
 | Montpellier | G | Provençal center involved in Maimonidean controversy. | Jewish-Islamic_Exchange |
 | Moravia | G | Region hosting communal Anabaptist settlements. | Radical_Reformation |
 | Muenster | G | Westphalian city of radical takeover. | German_Reformation,Radical_Reformation |
@@ -807,6 +938,7 @@ Count: 84
 | Nimes | G | Southern city notable in conflicts. | French_Reformation |
 | Norfolk | G | Eastern English county. | English_Reformation |
 | Nuremberg | G | Imperial city and print hub. | German_Reformation |
+| Oslo | G | Norwegian city under Danish crown. | Scandinavian_Reformations |
 | Oxford | G | University city and site of martyrdoms. | English_Reformation |
 | Paris | G | Scholastic center implicated in censorship of Jewish texts. | French_Reformation,Jewish-Islamic_Exchange |
 | Perth | G | Burgh involved in early risings. | Scottish_Reformation |
@@ -816,7 +948,8 @@ Count: 84
 | Pumbedita | G | Babylonian locality of a major Geonic academy. | Hebrew_Tradition,Jewish-Islamic_Exchange |
 | Qumran | G | Dead Sea vicinity site linked to DSS caves/settlement area. | Hebrew_Tradition |
 | Rheims | G | Continental seminary city for English clergy. | English_Reformation |
-| Rome | G | Papal city and curial center. | Early_Christianity,English_Reformation,German_Reformation |
+| Ribe | G | Danish episcopal city. | Scandinavian_Reformations |
+| Rome | G | Papal city and curial center. | Catholic_Reformation,Early_Christianity,English_Reformation,German_Reformation |
 | Russia | G | Geographic/political region of Eastern Europe/Asia. | Hebrew_Tradition |
 | Safed | G | Galilean city associated with 16th‑century kabbalah. | Hebrew_Tradition |
 | Samaria | G | Region/city associated with northern kingdom. | Hebrew_Tradition |
@@ -825,14 +958,20 @@ Count: 84
 | Spain | G | Iberian geographic region. | Hebrew_Tradition |
 | Speyer | G | Rhineland city in Ashkenazic orbit. | German_Reformation,Hebrew_Tradition |
 | St_Andrews | G | University/episcopal city and early hotspot. | Scottish_Reformation |
+| Stockholm | G | Swedish capital and reform hub. | Scandinavian_Reformations |
 | Strasbourg | G | Imperial city with religious ferment. | Radical_Reformation |
 | Sura | G | Babylonian locality of a major Geonic academy. | Hebrew_Tradition,Jewish-Islamic_Exchange |
 | Tel_Aviv | G | Coastal city in modern Israel. | Hebrew_Tradition |
+| The_Hague | G | Political center of the republic. | Dutch_Reformation |
 | Thessalonica | G | Macedonian city on mission routes. | Early_Christianity |
 | Thuringia | G | Central German region of social unrest. | German_Reformation |
 | Tiberias | G | Galilean city and rabbinic center. | Hebrew_Tradition |
 | Toledo | G | Iberian hub for translation activities across languages. | Jewish-Islamic_Exchange |
+| Trent | G | Alpine city hosting the council. | Catholic_Reformation |
+| Uppsala | G | Ecclesiastical/academic center. | Scandinavian_Reformations |
 | Usha | G | Galilean locality of rabbinic council. | Hebrew_Tradition |
+| Utrecht | G | City of federal union. | Dutch_Reformation |
+| Vaesteras | G | City hosting decisive diet. | Scandinavian_Reformations |
 | Wartburg | G | Castle where Luther translated the NT. | German_Reformation |
 | Wittenberg | G | Saxon university town and reform hub. | German_Reformation |
 | Worms | G | Rhineland city in Ashkenazic orbit. | German_Reformation,Hebrew_Tradition |
