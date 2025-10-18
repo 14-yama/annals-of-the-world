@@ -38,6 +38,31 @@ For large-text fields use `description` and consider full-text indices rather th
 
 ---
 
+## Generic vs Contextual nodes (policy banner)
+
+Keep content nodes generic and free from time/place; add time and space through contextual support nodes and relationships.
+
+- When `is_generic = true`
+  - Use for timeless hubs: e.g., Place: "Egypt"; Idea: "Monotheism"; Text family: "Torah_Corpus".
+  - `description` must be neutral and atemporal (no dates, regimes, or period‑specific claims). Examples are fine but not era‑bound.
+  - Do not set `startYear`/`endYear`; do not duplicate the node by era/dynasty.
+- When contextual (default)
+  - Model era/state‑specific constructs as support nodes and connect them to the generic hub via edges:
+    - `(:Event|:EventWindow)-[:OCCURS_IN]->(:Place)`
+    - `(:EventWindow)-[:OCCURS_DURING]->(:Timeframe)`
+    - `(:Institution)-[:ADMINISTERS|HOSTS]->(:Place)` or `(:Place)-[:CONTAINS]->(:Institution)` per vocabulary
+- Naming & IDs
+  - Generic slugs omit dates: `egypt`, `monotheism`, `torah_corpus`.
+  - Contextual slugs carry scope/time: `ptolemaic_egypt_state`, `second_temple_destruction_70ce`.
+- Example
+  - Generic Place node: `(:Place {slug:'egypt', name:'Egypt', is_generic:true, description:'North‑East African region centered on the Nile; used as a timeless geographic hub across periods.'})`
+  - Contextual nodes: `(:Institution {slug:'ptolemaic_kingdom', startYear:-305, endYear:-30})-[:ADMINISTERS]->(:Place {slug:'egypt'})` and `(:Event {slug:'octavian_conquest_30bce'})-[:OCCURS_IN]->(:Place {slug:'egypt'})`.
+- Validation tips
+  - If `is_generic = true`, block/flag `startYear`/`endYear` and year‑like tokens in `description`.
+  - Period/place membership belongs to relationships (`OCCURS_IN`, `OCCURS_DURING`), not baked into node `slug`/`name`.
+
+---
+
 ## Relationship types (active-voice — required)
 
 Use active verbs. Relationship properties should include provenance metadata when applicable.
