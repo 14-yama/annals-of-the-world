@@ -6,6 +6,7 @@ Boundary: Standalone cluster tree; interfaces to Hebrew_Tradition (Medieval_and_
 - Jewish–Islamic_Intellectual_Exchange (D)
   - Phases/Regions (D)
     - Abbasid_Baghdad_(9th–10th_c.) (D)
+  - Persons (P): Saadia_Gaon; Hunayn_ibn_Ishaq; Al‑Kindi; Al‑Farabi; Dunash_ibn_Tamim
       - Institutions (I): Bayt_al‑Hikma_(House_of_Wisdom); Geonic_Academies_(Sura,_Pumbedita)
       - Texts (T): Judeo‑Arabic_Corpus; Saadia_Gaon_Writings; Arabic_Paraphrases_of_Aristotle
       - Movements (M): Judeo‑Arabic_Scholarship; Kalam_in_Jewish_Thought
@@ -13,6 +14,7 @@ Boundary: Standalone cluster tree; interfaces to Hebrew_Tradition (Medieval_and_
       - Places (L): Baghdad; Basra
       - Suggested clusters: Baghdad_Translation_and_Judeo‑Arabic; Saadia_Gaon_Philosophy
     - Andalusian_Golden_Age_(10th–12th_c.) (D)
+  - Persons (P): Hasdai_ibn_Shaprut; Judah_Halevi; Ibn_Gabirol; Bahya_ibn_Paquda; Jonah_ibn_Janah
       - Institutions (I): Cordoba_Court; Granada_Court; Andalusian_Jewish_Communities
       - Texts (T): Andalusian_Hebrew_Poetry; Hebrew‑Arabic_Lexica; Philosophical_Works_(Ibn_Gabirol,_et_al.)
       - Movements (M): Andalusian_Hebrew_Poetry; Aristotelian_Rationalism_in_Judaism
@@ -20,6 +22,7 @@ Boundary: Standalone cluster tree; interfaces to Hebrew_Tradition (Medieval_and_
       - Places (L): Cordoba; Granada; Fez
       - Suggested clusters: Andalusian_Courts_and_Hebrew_Poetry; Science_and_Medicine_Exchange
     - Maghrebi/Egyptian_Transitions_(12th–13th_c.) (D)
+  - Persons (P): Moses_ben_Maimon_(Maimonides); Abraham_ibn_Ezra; Ibn_Tufayl; Ibn_Bajja
       - Institutions (I): Fustat/Cairo_Rabbinic_Court
       - Texts (T): Mishneh_Torah; Guide_for_the_Perplexed
       - Movements (M): Maimonidean_Codification
@@ -27,6 +30,7 @@ Boundary: Standalone cluster tree; interfaces to Hebrew_Tradition (Medieval_and_
       - Places (L): Fustat/Cairo; Fez
       - Suggested clusters: Maimonidean_Codification_and_Reception
     - Provençal_Receptions_(12th–14th_c.) (D)
+  - Persons (P): Samuel_ibn_Tibbon; Judah_ibn_Tibbon; Gersonides_(Levi_ben_Gershon); Ibn_Rushd_(Averroes)
       - Institutions (I): Provence_Communities; Toledo_Translation_School (interface)
       - Texts (T): Ibn_Tibbon_Translations; Hebrew_translations_of_Averroes
       - Movements (M): Maimonidean_Controversy

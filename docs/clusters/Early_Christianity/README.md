@@ -6,6 +6,7 @@ Boundary: Standalone cluster tree; interfaces to Hebrew_Tradition (Second_Temple
 - Early_Christianity (D)
   - Periods (D)
     - Apostolic_Age_(c._30–70_CE) (D)
+  - Persons (P): Jesus_of_Nazareth; Peter; Paul; James_the_Just; John; Barnabas; Stephen
       - Institutions (I): Jerusalem_Church; Apostolic_Leadership; Synagogue_Context
       - Texts (T): Synoptic_Traditions_(source_strata); Early_Pauline_Epistles; Acts_(early_narratives)
       - Movements (M): Jesus_Movement; Pauline_Communities
@@ -13,12 +14,14 @@ Boundary: Standalone cluster tree; interfaces to Hebrew_Tradition (Second_Temple
       - Places (L): Judea; Galilee; Jerusalem; Antioch
       - Suggested clusters: Jerusalem_Church_and_Apostolic_Leadership; Pauline_Mission_and_Gentile_Inclusion; Council_of_Jerusalem
     - Subapostolic_Age_(c._70–100_CE) (D)
+  - Persons (P): Clement_of_Rome; Ignatius_of_Antioch; Polycarp; John_(trad.); Author_of_Didache
       - Institutions (I): Emerging_Episcopal_Structure; Local_Churches
       - Texts (T): Synoptic_Gospels; Gospel_of_John; Didache; 1_Clement
       - Movements (M): Proto‑Orthodox_Formations; Johannine_Community
       - Events (E): Post_70_Reconfiguration; Early_Regional_Synods
       - Suggested clusters: Johannine_Community_and_Texts; Synoptic_Source_Trajectories
     - Ante‑Nicene_Period_(c._100–325_CE) (D)
+  - Persons (P): Justin_Martyr; Irenaeus; Tertullian; Origen; Clement_of_Alexandria; Hippolytus; Cyprian
       - Institutions (I): Rome_Church; Alexandria; Antioch; Early_Synods
       - Texts (T): Ignatian_Letters; Shepherd_of_Hermas; Apologists_(Justin,_Tertullian,_Origen); Muratorian_Fragment
       - Movements (M): Proto‑Orthodox; Gnostic_Schools; Marcionite; Montanism; Apologetic_Tradition
