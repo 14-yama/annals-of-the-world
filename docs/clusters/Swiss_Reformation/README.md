@@ -1,5 +1,7 @@
 # Swiss_Reformation (Zurich/Basel/Bern → Geneva)
 
+[Reformations Overview](../Reformations/README.md) · [Interfaces Map](../Reformations/interfaces.md)
+
 A curated cluster covering the Swiss/Reformed stream from Zwingli’s Zurich reforms through Calvin’s Geneva and consolidation.
 
 - Root and Periods (D)

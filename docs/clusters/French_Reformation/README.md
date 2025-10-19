@@ -1,5 +1,7 @@
 # French_Reformation (Huguenot movement)
 
+[Reformations Overview](../Reformations/README.md) · [Interfaces Map](../Reformations/interfaces.md)
+
 A curated cluster for the French Reformation from early evangelical shocks to the Edict of Nantes, with interfaces to Geneva and wider Reformed networks.
 
 - Root and Periods (D)

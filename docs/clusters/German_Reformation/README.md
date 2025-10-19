@@ -1,5 +1,7 @@
 # German_Reformation (interface to Swiss/Reformed and Radical)
 
+[Reformations Overview](../Reformations/README.md) · [Interfaces Map](../Reformations/interfaces.md)
+
 A curated cluster covering the German (Lutheran) Reformation from 1517 through the Peace of Augsburg, with interfaces to Swiss/Reformed and Radical (Anabaptist) streams.
 
 - Root and Periods (D)

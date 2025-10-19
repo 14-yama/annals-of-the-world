@@ -1,5 +1,7 @@
 # Scottish_Reformation (Presbyterian stream)
 
+[Reformations Overview](../Reformations/README.md) · [Interfaces Map](../Reformations/interfaces.md)
+
 A curated cluster covering the Scottish Reformation from early evangelical currents through the 1560 settlement and kirk consolidation.
 
 - Root and Periods (D)

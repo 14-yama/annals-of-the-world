@@ -1,5 +1,7 @@
 # Scandinavian_Reformations (Sweden and Denmark–Norway)
 
+[Reformations Overview](../Reformations/README.md) · [Interfaces Map](../Reformations/interfaces.md)
+
 A curated cluster covering the Nordic Lutheran settlements in Sweden and Denmark–Norway, from early royal reforms to confessional consolidation.
 
 - Root and Periods (D)

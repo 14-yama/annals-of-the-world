@@ -1,5 +1,7 @@
 # Catholic_Reformation (Counter‑Reformation)
 
+[Reformations Overview](../Reformations/README.md) · [Interfaces Map](../Reformations/interfaces.md)
+
 A curated cluster for Catholic renewal and response, from late medieval reform currents through Trent and post‑Tridentine consolidation, with interfaces to missions and mysticism.
 
 - Root and Periods (D)
