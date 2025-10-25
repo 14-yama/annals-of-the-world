@@ -70,6 +70,33 @@ Below is the complete list of corpora recognized in the project, grouped by civi
 - MILITARY_TECHNICAL_CORPUS_EARLY: Chinese, Islamic, and European ordnance treatises
 - EARLY_MODERN_SCIENCE_CORPUS: Philosophical Transactions, early academies and natural philosophy papers
 
+### Europe & Mediterranean (Post-Classical Traditions)
+- BYZANTINE_CORPUS: Byzantine chronicles, legal codes, theological treatises
+- SLAVIC_ORTHODOX_CORPUS: Russian Primary Chronicle, Orthodox liturgical texts
+- MEDIEVAL_LATIN_CORPUS: Scholastic treatises, papal bulls, monastic rules
+- CAROLINGIAN_FRANKISH_CORPUS: Capitularies, royal annals, Carolingian Renaissance texts
+- IBERIAN_CORPUS: Mozarabic liturgy, Cantigas, fueros, chronicles
+- ITALIAN_COMMUNAL_CORPUS: City statutes, communal chronicles, merchant manuals
+- FRENCH_MEDIEVAL_CORPUS: Chansons de geste, Capetian chronicles, legal codes
+- GERMANIC_MEDIEVAL_CORPUS: Sachsenspiegel, Nibelungenlied, imperial records
+- CELTIC_MEDIEVAL_CORPUS: Irish annals, Welsh law codes, bardic poetry
+- VIKING_NORDIC_CORPUS: Sagas, runic inscriptions, law codes
+- OTTOMAN_BALKAN_CORPUS: Defters, imperial decrees, Balkan chronicles
+- JUDEO_SEPHARDIC_CORPUS: Responsa, Ladino literature, communal records
+- ARMENIAN_CORPUS: Medieval chronicles, liturgical texts, legal codes
+- GEORGIAN_CORPUS: Chronicles, hagiographies, legal texts
+- MAGYAR_HUNGARIAN_CORPUS: Gesta Hungarorum, medieval laws, chronicles
+- POLISH_LITHUANIAN_CORPUS: Statutes, chronicles, union documents
+- CZECH_BOHEMIAN_CORPUS: Hussite chronicles, law codes, annals
+- BALKAN_SLAVIC_CORPUS: Serbian, Bulgarian, Croatian chronicles, legal codes
+- ROMANIAN_MOLDAVIAN_CORPUS: Chronicles, princely decrees, church records
+- VENETIAN_CORPUS: State archives, merchant manuals, chronicles
+- SICILIAN_NORMAN_CORPUS: Multilingual chronicles, legal codes, poetry
+- MALTESE_CORPUS: Notarial records, chronicles, legal codes
+- CYPRIOT_CORPUS: Lusignan chronicles, legal codes, church records
+- GREEK_MEDIEVAL_CORPUS: Byzantine, post-Byzantine chronicles, legal codes
+- ALBANIAN_CORPUS: Chronicles, oral epics, legal codes
+
 ---
 
 ## 5. Corpus Tiers (A–F)
