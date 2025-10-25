@@ -1,11 +1,7 @@
----
-title: International Call Number & Subject Heading System for the Knowledge Graph
-status: DRAFT
-summary: A scalable, schema-aligned classification and subject heading system for historical knowledge graphs, with "Idea" as the core class.
----
 
-# 📚 International Call Number & Subject Heading System for the Knowledge Graph
+# System Overview & Rationale: Why "Idea" Is the Generative Core
 
+This document presents a scalable, schema-aligned classification and subject heading system for historical knowledge graphs. It explains the top-level and second-level classes, call number format, subject headings, and node categories. The system is built with **"Idea" as the generative core**, reflecting the principle that all historical change and structure originates from ideas. "Idea" is the root of causality and intellectual lineage, while "Timeframe" provides universal context. This approach aligns with international scholarly conventions and supports robust, queryable graph modeling.
 This system provides a universal, production-ready way to classify, anchor, and navigate nodes in the Annals of the World knowledge graph. It is inspired by Dewey/LCC, but tailored for graph schema and international conventions. "Idea" is the core class (0), reflecting the generative role of ideas in human history.
 
 ---
@@ -283,7 +279,16 @@ Each node gets one or more controlled subject headings for scholarly navigation.
 
 ---
 
-## 9. Relationship Diagram: Core Classes
+
+## 9. Why "Idea" Is the Core of the System
+
+> **Ideas are the generative source of all historical change and structure.**
+> - Every person, institution, movement, event, artifact, and even evidence ultimately traces back to an originating idea.
+> - Ideas drive innovation, causality, and the formation of all other entities in the knowledge graph.
+> - Placing "Idea" at the core supports intellectual lineage, causality, and the ability to query how concepts shape history.
+> - This approach aligns with international scholarly conventions and graph modeling best practices, where ideas are the root of human civilization and all other nodes are derived or contextualized by them.
+
+## 10. Relationship Diagram: Core Classes
 
 Below is a conceptual diagram showing how the core classes relate, with **Idea** as the generative core and **Timeframe** as the universal context:
 
