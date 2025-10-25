@@ -37,6 +37,7 @@ Where to read more
 - Schema & implementation notes: [docs/guidelines/schema.md](./guidelines/schema.md)
 - Curator workflow: [docs/guidelines/workflow.md](./guidelines/workflow.md)
 - Classification & call numbers: [docs/guidelines/classification.md](./guidelines/classification.md)
+- International call number & subject heading system: [docs/guidelines/call_number_subject_heading_system.md](./guidelines/call_number_subject_heading_system.md)
 - Feature timeline: [docs/guidelines/features_by_version.md](./guidelines/features_by_version.md)
 
 Next options

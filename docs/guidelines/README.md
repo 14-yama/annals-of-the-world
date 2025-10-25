@@ -8,6 +8,7 @@ Mandate
 
 Contents
 
+- [call_number_subject_heading_system.md](./call_number_subject_heading_system.md) — international call number & subject heading system (core classification guide)
 - [classification.md](./classification.md) — call-number taxonomy and corpus registry
 - [features_by_version.md](./features_by_version.md) — versioned feature timeline (v1 → v5)
 - [schema.md](./schema.md) — v4 schema reference and example Cypher

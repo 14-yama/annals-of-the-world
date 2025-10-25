@@ -22,6 +22,7 @@ Governance mandate (read first)
 - Python: follow PEP8 conventions. The codebase uses `src/annals` with Pydantic models; prefer type-safe changes.
 - Tests: add unit tests to `tests/` for new functionality.
 - Docs: update `docs/` when adding or changing governance rules, schemas, or guidelines.
+	See [call_number_subject_heading_system.md](docs/guidelines/call_number_subject_heading_system.md) for the classification and call number system.
 
 5) Data contributions (seed CSVs)
 - Put seed CSVs in `data/` and reference the corresponding guideline file (e.g., `docs/guidelines/hebrew_cluster.md`).

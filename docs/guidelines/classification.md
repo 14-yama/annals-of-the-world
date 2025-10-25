@@ -1,5 +1,7 @@
 # International Call Number & Subject Heading System for the Knowledge Graph
 
+See also: [call_number_subject_heading_system.md](./call_number_subject_heading_system.md) — full contributor guide and rationale for the classification system.
+
 This document defines the project call-number taxonomy (class.division.id), second-level divisions, call-number format, versioned feature list (v1–v5), and a Canonical Corpus Registry for primary cultural/textual traditions.
 
 ---
