@@ -30,6 +30,25 @@ See also: Interaction Matrix for allowed node-type pairs and example triples —
 ## 2. Node Type Abbreviations
 P = Person | I = Institution | T = Text/Artifact | D = Doctrine/Idea | M = Movement | E = Event | L = Place | F = Framework lens | V = Evidence node.
 
+## Corpus Node Abbreviation
+- C = Corpus (canonical grouping of texts, traditions, or cultural artifacts)
+
+See: [Contributor Guide: Corpus](./contributor_guide_corpus.md) | [Node Interaction Matrix](./node_interaction_matrix.md)
+
+## Corpus Node Verbs (Canonical)
+- CONTAINS, INCLUDES, ORGANIZES, CANONIZES (C → T)
+- DEFINES, EXEMPLIFIES, INFLUENCES (C → D)
+- INFLUENCES (C → M)
+- FRAMES (C → F)
+- DOCUMENTS, BELONGS_TO (C ↔ V)
+- SUBSUMES, SPLITS_INTO, IS_PART_OF (C ↔ C)
+
+Example triples:
+- (BIBLICAL_CORPUS) CONTAINS (Hebrew_Bible)
+- (BIBLICAL_CORPUS) EXEMPLIFIES (Monotheism)
+- (BIBLICAL_CORPUS) DOCUMENTS (Dead_Sea_Scrolls)
+- (BIBLICAL_CORPUS) SUBSUMES (JUDAIC_RABBINIC_CORPUS)
+
 ## 3. Core Canon (High-Frequency)
 | Verb | Semantics | Allowed (Subject→Object) | Notes / Disallow | Evidence Tier Guidance |
 |------|-----------|--------------------------|------------------|------------------------|
