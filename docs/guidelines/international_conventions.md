@@ -67,5 +67,27 @@ Here’s a crisp, “use-this-in-production” guide for applying international 
 
 ---
 
-If you want the above distilled into a one-page “lint checklist” for curators and ingest scripts, say the word and I’ll output it as a copy-pasteable policy block for your repo.
+
+---
+
+## Contributor Checklist
+
+- [ ] Use globally recognized era bins and numeric year encoding (BCE = negative, CE = positive).
+- [ ] Normalize regions and place types using UNESCO/Oxford standards.
+- [ ] Model provenance with Framework nodes and Chicago-style citations; never leave interpretive links uncited.
+- [ ] Use broad labels and category properties; avoid label explosion.
+- [ ] Enforce active-voice, verb-first relationships with uniform directionality.
+- [ ] Create uniqueness constraints, range indexes, and relationship fingerprints.
+- [ ] Use MERGE for nodes/edges and slugs for uniqueness.
+- [ ] Run QA queries for missing Era/Place, anachronisms, and duplicate frameworks.
+- [ ] Follow Neo4j modeling house style and restrict relationship paths to sensible pairs.
+
+---
+
+## Related Guides
+
+- [Schema Reference](./schema.md)
+- [Classification & Corpus Registry](./classification.md)
+- [Contributor Guide: Corpus](./contributor_guide_corpus.md)
+- [Node Descriptions](./node_descriptions.md)
 
