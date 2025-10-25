@@ -1,8 +1,16 @@
+# Contributor Guide: Understanding the Classification & Call Number System
 
-# System Overview & Rationale: Why "Idea" Is the Generative Core
+Welcome, contributor! This guide explains the classification and subject heading system used in the Annals of the World knowledge graph. Before making a contribution, review this document to understand how nodes are organized, how to assign class numbers, and why "Idea" is the generative core of our schema.
 
-This document presents a scalable, schema-aligned classification and subject heading system for historical knowledge graphs. It explains the top-level and second-level classes, call number format, subject headings, and node categories. The system is built with **"Idea" as the generative core**, reflecting the principle that all historical change and structure originates from ideas. "Idea" is the root of causality and intellectual lineage, while "Timeframe" provides universal context. This approach aligns with international scholarly conventions and supports robust, queryable graph modeling.
-This system provides a universal, production-ready way to classify, anchor, and navigate nodes in the Annals of the World knowledge graph. It is inspired by Dewey/LCC, but tailored for graph schema and international conventions. "Idea" is the core class (0), reflecting the generative role of ideas in human history.
+## Why "Idea" Is the Generative Core
+
+All historical change and structure in our graph originates from ideas. Every person, institution, movement, event, artifact, and even evidence ultimately traces back to an originating idea. "Idea" is the root of causality and intellectual lineage, while "Timeframe" provides universal context. This approach aligns with international scholarly conventions and supports robust, queryable graph modeling.
+
+**Key Principles:**
+- Nodes are classified by type and assigned a class number (see below).
+- "Idea" is always Class 0—the generative source for all other nodes.
+- "Timeframe" (Class 9) anchors nodes in history but does not drive causality.
+- Use call numbers and subject headings for navigation, curation, and scholarly search.
 
 ---
 
@@ -134,95 +142,8 @@ Each node gets one or more controlled subject headings for scholarly navigation.
   - Subject Heading: Events — Technological Breakthroughs — Britain — Modern
   - Call Number: 560.01-industrial-revolution
 
----
 
-## 5. Expanded Global Node Categories
-
-### Idea
-- Political Systems & Governance
-- Ethical Systems
-- Legal Systems & Law
-- Economic Systems & Theories
-- Social & Cultural Theories
-- Scientific Paradigms
-- Technological Innovations
-- Religious & Philosophical Concepts
-- Environmental & Ecological Ideas
-- Artistic & Aesthetic Movements
-
-### Person
-- Philosophers & Thinkers
-- Political Leaders
-- Legal Figures
-- Scientists & Inventors
-- Religious Figures
-- Artists & Writers
-- Activists & Reformers
-
-### Institution
-- Political Institutions
-- Legal Institutions
-- Economic Institutions
-- Scientific Institutions
-- Religious Institutions
-- Cultural Institutions
-- International Organizations
-
-### Place
-- Continent
-- Region
-- Country/Polity
-- City
-- Empire/Dynasty
-- Civilization
-- Culture Area
-
-### Event / EventWindow
-- Wars & Conflicts
-- Revolutions & Uprisings
-- Elections & Political Shifts
-- Legal Cases
-- Scientific Discoveries
-- Technological Breakthroughs
-- Religious Events
-- Environmental Events
-
-### Movement
-- Political Movements
-- Social Movements
-- Religious Movements
-- Cultural Movements
-- Scientific Movements
-- Technological Movements
-- Environmental Movements
-
-### Artifact / Text
-- Constitutions & Charters
-- Legal Codes
-- Religious Texts
-- Philosophical Works
-- Scientific Texts
-- Artworks
-- Technological Artifacts
-
-### Evidence
-- Primary Source
-- Secondary Source
-- Archaeological Evidence
-- Quantitative Data
-- Oral Tradition
-
-### Period / Era / Epoch
-- Prehistoric
-- Classical
-- Medieval
-- Early Modern
-- Modern
-- Contemporary
-
----
-
-## 6. Why This Matters
+## 5. Why This Matters
 - Every node has a fixed anchor (call number) for navigation and reference.
 - Subject headings support scholarly search and comparison.
 - The system is scalable: new categories slot into the schedule without breaking structure.
@@ -230,7 +151,7 @@ Each node gets one or more controlled subject headings for scholarly navigation.
 
 ---
 
-## 7. Real Historical Examples (Graph Links)
+## 6. Real Historical Examples (Graph Links)
 
 **Event + Primary Evidence**
 - Event: Assassination of Archduke Franz Ferdinand (1914)
@@ -266,7 +187,7 @@ Each node gets one or more controlled subject headings for scholarly navigation.
 
 ---
 
-## 8. Directional Cheat-Sheet (Canonical Verbs)
+## 7. Directional Cheat-Sheet (Canonical Verbs)
 - Idea INFLUENCES Idea
 - Idea CAUSES Event
 - Event RESULTS_IN Idea
@@ -277,18 +198,8 @@ Each node gets one or more controlled subject headings for scholarly navigation.
 - Event OCCURS_IN Place; FALLS_WITHIN Period/Era/Epoch; EventWindow DELINEATES Event
 - Evidence EVIDENCES (Idea | Event | Person | Institution | Movement | Artifact | Place)
 
----
 
-
-## 9. Why "Idea" Is the Core of the System
-
-> **Ideas are the generative source of all historical change and structure.**
-> - Every person, institution, movement, event, artifact, and even evidence ultimately traces back to an originating idea.
-> - Ideas drive innovation, causality, and the formation of all other entities in the knowledge graph.
-> - Placing "Idea" at the core supports intellectual lineage, causality, and the ability to query how concepts shape history.
-> - This approach aligns with international scholarly conventions and graph modeling best practices, where ideas are the root of human civilization and all other nodes are derived or contextualized by them.
-
-## 10. Relationship Diagram: Core Classes
+## 8. Relationship Diagram: Core Classes
 
 Below is a conceptual diagram showing how the core classes relate, with **Idea** as the generative core and **Timeframe** as the universal context:
 
@@ -325,7 +236,7 @@ Below is a conceptual diagram showing how the core classes relate, with **Idea**
 
 ---
 
-## 10. Next Steps
+## 9. Next Steps
 - Integrate call numbers and subject headings into node metadata.
 - Use this schedule for curation, ingestion, and scholarly navigation.
 - Optionally, formalize Evidence schema for Neo4j (enums, constraints, citation fields).
