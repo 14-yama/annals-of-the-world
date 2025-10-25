@@ -320,3 +320,7 @@ Notes
 ## Change Log
 - 0.2 Added overview matrix and per-section tables for readability.
 - 0.1 Initial matrix drafted from current `relations_vocabulary.md` canon + limited contextual verbs.
+
+## Quick Reference
+- [Contributor Guide: Corpus](./contributor_guide_corpus.md)
+- [Relations Vocabulary](./relations_vocabulary.md)
