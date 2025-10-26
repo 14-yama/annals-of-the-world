@@ -151,3 +151,20 @@ A curated cluster for the Dutch Reformation from the Beeldenstorm through the Sy
 | Dordrecht | G | Synod city for Dordt. |
 | Leiden | G | University city shaping debates. |
 | The_Hague | G | Political center of the republic. |
+
+## Evidence Nodes & Relationships
+
+Evidence nodes document the sources and artifacts supporting the cluster's major periods, texts, and events. These nodes are linked to texts, events, or institutions using BELONGS_TO, SUPPORTS, or FRAMES relationships.
+
+### Example Evidence Connections (with Type & Tier)
+- **Early_Currents_and_Beeldenstorm**
+  - Evidence: Belgic_Confession_1561 (BELONGS_TO: DUTCH_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Modern_Scholarly_Editions (BELONGS_TO: DUTCH_REFORMATION_CORPUS) — Type: Secondary, Tier: B
+- **Revolt_and_Church_Formation**
+  - Evidence: Heidelberg_Catechism_1563 (BELONGS_TO: DUTCH_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Church_Order_Articles (BELONGS_TO: DUTCH_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Oral_Traditions (BELONGS_TO: DUTCH_REFORMATION_CORPUS) — Type: Oral, Tier: F
+- **Dordt_and_Confessional_Settlement**
+  - Evidence: Canons_of_Dort_1619 (BELONGS_TO: DUTCH_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Remonstrance_1610 (BELONGS_TO: DUTCH_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Church_Historians (BELONGS_TO: DUTCH_REFORMATION_CORPUS) — Type: Secondary, Tier: B
