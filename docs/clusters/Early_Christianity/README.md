@@ -302,3 +302,32 @@ Boundary: Standalone cluster tree; interfaces to Hebrew_Tradition (Second_Temple
 
 ## Change log (cluster‑local)
 - 2025‑10‑18: Restructured into hierarchical tree model; interfaces and verb palette retained.
+
+## Evidence Nodes & Relationships
+
+Evidence nodes document the sources and artifacts supporting the cluster's major periods, texts, and events. These nodes are linked to texts, events, or institutions using BELONGS_TO, SUPPORTS, or FRAMES relationships.
+
+### Example Evidence Connections (with Type & Tier)
+- **Apostolic_Age**
+  - Evidence: Synoptic_Traditions_(source_strata) (BELONGS_TO: CHRISTIAN_CANON_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Early_Pauline_Epistles (BELONGS_TO: CHRISTIAN_CANON_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Acts_(early_narratives) (BELONGS_TO: CHRISTIAN_CANON_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Modern_Scholarly_Editions (BELONGS_TO: CHRISTIAN_CANON_CORPUS) — Type: Secondary, Tier: B
+- **Subapostolic_Age**
+  - Evidence: Clement_of_Rome_Writings (BELONGS_TO: CHRISTIAN_CANON_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Didache (BELONGS_TO: CHRISTIAN_CANON_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Patristic_Commentaries (BELONGS_TO: CHRISTIAN_CANON_CORPUS) — Type: Secondary, Tier: B
+- **Later Periods**
+  - Evidence: Early_Johannine_Traditions (BELONGS_TO: CHRISTIAN_CANON_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Ignatius_of_Antioch_Letters (BELONGS_TO: CHRISTIAN_CANON_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Church_Historians (BELONGS_TO: CHRISTIAN_CANON_CORPUS) — Type: Secondary, Tier: B
+  - Evidence: Oral_Traditions (BELONGS_TO: CHRISTIAN_CANON_CORPUS) — Type: Oral, Tier: F
+
+#### Cypher Example
+```
+MERGE (e:Evidence {slug:'early_pauline_epistles'})
+MERGE (t:Text {slug:'Early_Pauline_Epistles'})
+MERGE (c:Corpus {slug:'christian_canon_corpus'})
+MERGE (e)-[:BELONGS_TO]->(c)
+MERGE (t)-[:SUPPORTED_BY]->(e)
+```
