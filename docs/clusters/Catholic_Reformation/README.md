@@ -160,3 +160,23 @@ A curated cluster for Catholic renewal and response, from late medieval reform c
 | Milan | G | Archdiocesan center of reform. |
 | Goa | G | Portuguese colony and mission hub. |
 | Macau | G | Chinese port and mission gateway. |
+
+## Evidence Nodes & Relationships
+
+Evidence nodes document the sources and artifacts supporting the cluster's major periods, texts, and events. These nodes are linked to texts, events, or institutions using BELONGS_TO, SUPPORTS, or FRAMES relationships.
+
+### Example Evidence Connections (with Type & Tier)
+- **Pre-Tridentine_Reform_Currents**
+  - Evidence: Spiritual_Exercises (BELONGS_TO: CATHOLIC_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Regimini_Militantis_Ecclesiae_1540 (BELONGS_TO: CATHOLIC_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Modern_Scholarly_Editions (BELONGS_TO: CATHOLIC_REFORMATION_CORPUS) — Type: Secondary, Tier: B
+- **Council_of_Trent_and_Implementation**
+  - Evidence: Tridentine_Decrees (BELONGS_TO: CATHOLIC_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Index_Librorum_Prohibitorum_1559 (BELONGS_TO: CATHOLIC_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Roman_Catechism_1566 (BELONGS_TO: CATHOLIC_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Church_Historians (BELONGS_TO: CATHOLIC_REFORMATION_CORPUS) — Type: Secondary, Tier: B
+- **Post-Tridentine_Consolidation**
+  - Evidence: Missale_Romanum_1570 (BELONGS_TO: CATHOLIC_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Breviarium_Romanum_1568 (BELONGS_TO: CATHOLIC_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Constitutions_of_the_Society_of_Jesus (BELONGS_TO: CATHOLIC_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Oral_Traditions (BELONGS_TO: CATHOLIC_REFORMATION_CORPUS) — Type: Oral, Tier: F
