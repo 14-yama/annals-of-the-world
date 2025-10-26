@@ -360,3 +360,25 @@ Boundary: Standalone cluster tree; interfaces to Roman_Catholic_Church, Continen
 ## See also
 - ../Early_Christianity/README.md (interface patterns for institutions/law)
 - ../Hebrew_Tradition/README.md (ritual/doctrine modeling patterns)
+
+## Evidence Nodes & Relationships
+
+Evidence nodes document the sources and artifacts supporting the cluster's major periods, texts, and events. These nodes are linked to texts, events, or institutions using BELONGS_TO, SUPPORTS, or FRAMES relationships.
+
+### Example Evidence Connections
+- **Henrician_Reformation**
+  - Evidence: Act_of_Supremacy_1534 (BELONGS_TO: ENGLISH_REFORMATION_CORPUS)
+  - Evidence: Great_Bible_1539 (BELONGS_TO: ENGLISH_REFORMATION_CORPUS)
+  - Evidence: Valor_Ecclesiasticus_1535 (BELONGS_TO: ENGLISH_REFORMATION_CORPUS)
+- **Elizabethan_Reformation**
+  - Evidence: Thirty-Nine_Articles_1563 (BELONGS_TO: ENGLISH_REFORMATION_CORPUS)
+  - Evidence: Book_of_Common_Prayer_1559 (BELONGS_TO: ENGLISH_REFORMATION_CORPUS)
+
+#### Cypher Example
+```
+MERGE (e:Evidence {slug:'great_bible_1539'})
+MERGE (t:Text {slug:'Great_Bible_1539'})
+MERGE (c:Corpus {slug:'english_reformation_corpus'})
+MERGE (e)-[:BELONGS_TO]->(c)
+MERGE (t)-[:SUPPORTED_BY]->(e)
+```

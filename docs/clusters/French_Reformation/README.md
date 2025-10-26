@@ -138,7 +138,7 @@ A curated cluster for the French Reformation from early evangelical shocks to th
 | Edict_of_Saint-Germain_Passage_1562 | C | Enactment of limited toleration. |
 | First_War_of_Religion_1562_1563 | C | Outbreak of civil conflict over religion. |
 | St_Bartholomews_Day_Massacre_1572 | C | Mass killings of Huguenots in Paris. |
-| Day_of_the_Barricades_1588 | C | Paris uprising led by the League. |
+| Day_of
 | Edict_of_Nantes_Passage_1598 | C | Formalization of settlement by Henry IV. |
 
 #### Places (L)

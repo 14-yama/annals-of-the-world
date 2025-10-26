@@ -145,8 +145,8 @@ A curated cluster for the Radical Reformation: Swiss Brethren origins, diffusion
 | --- | --- | --- |
 | First_Adult_Baptisms_Zurich_1525 | C | Initiation of adult baptisms among Swiss Brethren. |
 | Zurich_Edicts_Against_Anabaptists_1526 | C | Legal measures outlawing rebaptism. |
-| Manz_Execution_1527 | C | Drowning execution of Felix Manz in Zurich. |
-| Martyrdom_of_Sattler_1527 | C | Execution of Michael Sattler near Rotenburg. |
+| Manz_Execution_1527 | C |
+| Mart
 | Augsburg_Mandates_1528 | C | Legal edicts against dissenters in imperial cities. |
 | Munster_Rebellion_1534_1535 | C | Radical commune and siege in Westphalia. |
 | Mennonite_Organizing_1550s_1570s | C | Institutionalizing Mennonite structures. |
@@ -162,3 +162,7 @@ A curated cluster for the Radical Reformation: Swiss Brethren origins, diffusion
 | Muenster | G | Westphalian city of radical takeover. |
 | Netherlands | G | Low Countries where Mennonitism matured. |
 | Poland | G | Eastern European realm providing refuges. |
+
+### Example Evidence Connections (with Type & Tier)
+- **Early_Swiss_Brethren**
+  - Evidence: Schleitheim_Confession_1527 (BELONGS_TO: RADICAL_REFORMATION_CORPUS) — Type: Primary, Tier: A

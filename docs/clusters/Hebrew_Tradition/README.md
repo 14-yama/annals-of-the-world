@@ -289,6 +289,45 @@ Note: Use Doctrine/Idea (D) nodes for period/category taxonomies; Institutions (
           - (Eichmann_Trial_1961) OCCURS_IN (Jerusalem)
           - (State_of_Israel_Founding) OCCURS_IN (Tel_Aviv)
 
+## Evidence Nodes & Relationships
+
+Evidence nodes document the sources and artifacts supporting the cluster's major periods, texts, and events. These nodes are linked to texts, events, or institutions using BELONGS_TO, SUPPORTS, or FRAMES relationships.
+
+### Example Evidence Connections (with Type & Tier)
+- **Patriarchal_and_Early_Israel**
+  - Evidence: Torah_Pentateuch (BELONGS_TO: BIBLICAL_CORPUS) — Type: Primary, Tier: A
+- **First_Temple_Period**
+  - Evidence: Samuel_Kings (BELONGS_TO: BIBLICAL_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Psalms_early_layers (BELONGS_TO: BIBLICAL_CORPUS) — Type: Primary, Tier: A
+- **Exilic_Period**
+  - Evidence: Lamentations (BELONGS_TO: BIBLICAL_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Isaiah_(exilic_layers) (BELONGS_TO: BIBLICAL_CORPUS) — Type: Primary, Tier: A
+- **Second_Temple_Period**
+  - Evidence: Dead_Sea_Scrolls_Corpus (BELONGS_TO: BIBLICAL_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Septuagint (BELONGS_TO: BIBLICAL_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Apocrypha/Deuterocanon (BELONGS_TO: BIBLICAL_CORPUS) — Type: Primary, Tier: A
+- **Rabbinic_Antiquity**
+  - Evidence: Mishnah (BELONGS_TO: JUDAIC_RABBINIC_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Talmud_Jerusalem (BELONGS_TO: JUDAIC_RABBINIC_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Talmud_Babylon (BELONGS_TO: JUDAIC_RABBINIC_CORPUS) — Type: Primary, Tier: A
+- **Medieval_and_Early_Modern**
+  - Evidence: Geonic_Responsa (BELONGS_TO: JUDAIC_RABBINIC_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Rashi_Commentary (BELONGS_TO: JUDAIC_RABBINIC_CORPUS) — Type: Secondary, Tier: B
+  - Evidence: Maimonides_Mishneh_Torah (BELONGS_TO: JUDAIC_RABBINIC_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Shulchan_Aruch (BELONGS_TO: JUDAIC_RABBINIC_CORPUS) — Type: Primary, Tier: A
+- **Modern_and_Contemporary**
+  - Evidence: Modern_Responsa (BELONGS_TO: JUDAIC_RABBINIC_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Critical_Editions (BELONGS_TO: JUDAIC_RABBINIC_CORPUS) — Type: Secondary, Tier: B
+
+#### Cypher Example
+```
+MERGE (e:Evidence {slug:'dead_sea_scrolls'})
+MERGE (t:Text {slug:'Dead_Sea_Scrolls_Corpus'})
+MERGE (c:Corpus {slug:'biblical_corpus'})
+MERGE (e)-[:BELONGS_TO]->(c)
+MERGE (t)-[:SUPPORTED_BY]->(e)
+```
+
 ## Glossary (source of truth): Generic vs Contextual
 
 Legend: [G] is_generic=true (timeless hub); [C] is_generic=false (contextual/periodized)
@@ -318,7 +357,7 @@ Legend: [G] is_generic=true (timeless hub); [C] is_generic=false (contextual/per
   - Return_to_Zion; Second_Temple_Dedication_515_BCE; Antiochus_IV_Decrees; Temple_Rededication_(Hanukkah); Pompey_Annexation_63_BCE; Herodian_Temple_Renovation; Maccabean_Revolt; Hasmonean_Expansion; Roman_Conquest; Great_Jewish_Revolt_66_70; Temple_Destruction_70_CE
   - Mishnah_Codification; Talmud_Redactions; Canon_and_Masorah_Development; Bar_Kokhba_Revolt; Hadrianic_Decrees; Council_of_Usha; Yavneh_Reform
   - First_Crusade_1096; Expulsion_from_England_1290; Black_Death_Persecutions_1348_1351; Spanish_Inquisition_1478; Expulsion_from_Spain_1492; Expulsion_from_Portugal_1497; Printing_Revolution
-  - Emancipation; Russian_Pogroms_1881_1884; Dreyfus_Affair_1894_1906; Balfour_Declaration_1917; Nuremberg_Laws_1935; UN_Partition_Plan_1947; State_of_Israel_Founding; Law_of_Return_1950; Eichmann_Trial_1961; Six_Day_War_1967; Yom_Kippur_War_1973; Shoah
+  - Emancipation; Russian_Pogroms_1881_1884; Dreyfus_Affair_1894_1906; Balfour_Declaration_1917; Nuremberg_Laws_1935; UN_Partition_Plan_1947; State_of_Israel_Founding; Law_of_Return_1950; Eichmann_Trial_1961; Six_Day_War_1967; Yom_Kippur_War_1973
   - Also used (contextual event types referenced in edges): Torah_Public_Reading; Jerusalem_Rebuilding; Temple_Rituals; Legal_Decisions; Sectarian_Practices
 
 - Persons (P) [C]
@@ -526,7 +565,7 @@ Legend: [G] is_generic=true (timeless hub); [C] is_generic=false (contextual/per
 | Eichmann_Trial_1961 | C | Trial articulating Holocaust testimonies in Israel. |
 | Six_Day_War_1967 | C | Brief conflict reshaping regional realities. |
 | Yom_Kippur_War_1973 | C | Regional war with strategic impact. |
-| Shoah | C | Holocaust; systematic annihilation of European Jewry. |
+| Shoah | C | Holocaust; systematic annih
 | Torah_Public_Reading | C | Communal reading event of Torah as part of restoration. |
 | Jerusalem_Rebuilding | C | Reconstruction and fortification activities in Jerusalem. |
 | Temple_Rituals | C | Cultic service sequences conducted at the temple. |

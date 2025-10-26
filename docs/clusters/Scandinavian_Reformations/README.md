@@ -122,3 +122,17 @@ A curated cluster covering the Nordic Lutheran settlements in Sweden and Denmark
 | Copenhagen | G | Danish capital and university city. |
 | Oslo | G | Norwegian city under Danish crown. |
 | Ribe | G | Danish episcopal city. |
+
+## Evidence Nodes & Relationships
+
+Evidence nodes document the sources and artifacts supporting the cluster's major periods, texts, and events. These nodes are linked to texts, events, or institutions using BELONGS_TO, SUPPORTS, or FRAMES relationships.
+
+### Example Evidence Connections (with Type & Tier)
+- **Swedish_Lutheran_Settlement**
+  - Evidence: Swedish_Church_Ordinance_1531 (BELONGS_TO: SCANDINAVIAN_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Gustav_Vasa_Bible_1541 (BELONGS_TO: SCANDINAVIAN_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Modern_Scholarly_Editions (BELONGS_TO: SCANDINAVIAN_REFORMATION_CORPUS) — Type: Secondary, Tier: B
+- **Danish-Norwegian_Lutheran_Settlement**
+  - Evidence: Danish_Church_Ordinance_1537 (BELONGS_TO: SCANDINAVIAN_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Christian_III_Bible_1550 (BELONGS_TO: SCANDINAVIAN_REFORMATION_CORPUS) — Type: Primary, Tier: A
+  - Evidence: Oral_Traditions (BELONGS_TO: SCANDINAVIAN_REFORMATION_CORPUS) — Type: Oral, Tier: F
