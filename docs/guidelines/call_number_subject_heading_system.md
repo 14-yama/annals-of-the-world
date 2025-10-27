@@ -28,6 +28,7 @@ All historical change and structure in our graph originates from ideas. Every pe
 | 7     | Artifacts & Texts          | Constitutions, Codes, Scriptures, Scientific Works, Artworks, Technologies |
 | 8     | Evidence                   | Primary, Secondary, Archaeological, Quantitative, Oral |
 | 9     | Timeframes                 | Period, Era, Epoch |
+| 10    | Corpus                     | Canonical Texts, Traditions, Artifacts |
 
 ---
 
@@ -109,6 +110,11 @@ Each class subdivides into thematic categories, e.g.:
   - 940 Early Modern
   - 950 Modern
   - 960 Contemporary
+- **10 – Corpus**
+  - 101 Canonical Textual Corpora
+  - 102 Cultural Artifact Groupings
+  - 103 Scholarly Tradition Registries
+  - 104 Comparative Corpus Sets
 
 ---
 
@@ -124,6 +130,7 @@ Each class subdivides into thematic categories, e.g.:
 - `030.21-constitutional-law` → Legal Systems, Constitutional Law
 - `510.34-ww2-asia` → Event, War, WWII in Asia
 - `710.05-magna-carta` → Artifact/Text, Constitution, Magna Carta
+- `10.101.biblical_corpus` → Corpus, Canonical Textual Corpora, Biblical Corpus
 
 ---
 
@@ -141,6 +148,9 @@ Each node gets one or more controlled subject headings for scholarly navigation.
 - Industrial Revolution
   - Subject Heading: Events — Technological Breakthroughs — Britain — Modern
   - Call Number: 560.01-industrial-revolution
+- Biblical Corpus
+  - Subject Heading: Religious Texts — Canonical — Judeo-Christian
+  - Call Number: 10.101.biblical_corpus
 
 
 ## 5. Why This Matters
