@@ -11,45 +11,111 @@ class BaseNode(BaseModel):
     updated_at: Optional[str]
     created_by: Optional[str]
     status: Optional[str]
+    # v4+ registry fields
+    alt_names: Optional[List[str]] = None
+    category: Optional[str] = None
+    class_number: Optional[str] = None
+    division_code: Optional[str] = None
+    call_number: Optional[str] = None
+    subject_headings: Optional[List[str]] = None
+    is_generic: Optional[bool] = None
+    intl_status: Optional[str] = None
+    status_by: Optional[str] = None
+    version: Optional[int] = None
+    corpus: Optional[List[str]] = None
+    lang: Optional[str] = None
+    script: Optional[str] = None
+    # v5-ready additions
+    source_origin: Optional[str] = None
+    source_id: Optional[str] = None
+    reviewed_by: Optional[List[str]] = None
+    review_date: Optional[str] = None
+    deprecated_reason: Optional[str] = None
+    external_links: Optional[List[str]] = None
+    ontology_class: Optional[str] = None
+    thesaurus_ref: Optional[str] = None
+    wikidata_qid: Optional[str] = None
+    schema_context: Optional[str] = None
+    importance_score: Optional[float] = None
+    citation_count: Optional[int] = None
+    connectedness: Optional[float] = None
+    review_status: Optional[str] = None
+    qa_notes: Optional[str] = None
+    cultural_context: Optional[str] = None
+    translation_status: Optional[str] = None
+    translators: Optional[List[str]] = None
+    orthography_note: Optional[str] = None
+    midYear: Optional[int] = None
+    duration: Optional[int] = None
+    periodic_overlap: Optional[List[str]] = None
+    spatial_extent: Optional[str] = None
+    geo_precision: Optional[str] = None
+    isbn: Optional[str] = None
+    issn: Optional[str] = None
+    edition: Optional[str] = None
+    pages_total: Optional[int] = None
+    license: Optional[str] = None
+    workflow_stage: Optional[str] = None
+    governance_version: Optional[int] = None
+    validation_hash: Optional[str] = None
+    display_label: Optional[str] = None
+    era_ref: Optional[str] = None
+    citation_density: Optional[int] = None
+    has_geo: Optional[bool] = None
+    has_text: Optional[bool] = None
 
 
 class Idea(BaseNode):
-    category: Optional[str]
-    is_generic: Optional[bool] = False
+    idea_index: Optional[int] = None
 
 
 class Person(BaseNode):
-    category: Optional[str]
-    birth_year: Optional[int]
-    death_year: Optional[int]
+    birthYear: Optional[int] = None
+    deathYear: Optional[int] = None
+    titles: Optional[List[str]] = None
+    aliases: Optional[List[str]] = None
 
 
 class Place(BaseNode):
-    place_type: Optional[str]
-    region: Optional[str]
+    kind: Optional[str] = None
+    region: Optional[str] = None
+    geo_lat: Optional[float] = None
+    geo_lon: Optional[float] = None
+    iso: Optional[str] = None
 
 
 class EventWindow(BaseNode):
-    startYear: Optional[int]
-    endYear: Optional[int]
-    chron_key: Optional[int]
-    place_slug: Optional[str]
+    startYear: Optional[int] = None
+    endYear: Optional[int] = None
+    chron_key: Optional[int] = None
+    context: Optional[str] = None
+    confidence_score: Optional[float] = None
+    summary: Optional[str] = None
+    significance: Optional[str] = None
+    score: Optional[float] = None
+    tags: Optional[List[str]] = None
 
 
 class Evidence(BaseNode):
-    evidence_url: Optional[str]
-    citation_style: Optional[str]
-    page_refs: Optional[str]
-    corpus: Optional[str]
-    corpus_tier: Optional[str]
+    title: Optional[str] = None
+    author: Optional[str] = None
+    year: Optional[int] = None
+    publisher: Optional[str] = None
+    doi_or_url: Optional[str] = None
+    lang: Optional[str] = None
+    script: Optional[str] = None
+    corpus_tier: Optional[str] = None
 
 
 class Corpus(BaseNode):
-    tier: Optional[str]
+    corpus_tier: Optional[str] = None
 
 
 class Framework(BaseNode):
-    framework_type: Optional[str]
+    code: Optional[str] = None
+    category: Optional[str] = None
+    definition: Optional[str] = None
+    notes: Optional[str] = None
 
 
 __all__ = [
