@@ -27,6 +27,13 @@ This glossary defines key terms, node types, relationships, conventions, and wor
 - **Subject Heading**: Topical label for classification.
 - **Registry**: Canonical list of recognized corpora, clusters, or entities.
 
+## Corpus Node
+- **Corpus Node**: Canonical grouping of texts, traditions, or cultural artifacts. Now a top-level class (Class 10) in the call number and subject heading system. See `call_number_subject_heading_system.md` for details and `attribute-registry.md` for attributes.
+- **Corpus Classification**: Corpus nodes use class numbers like `10.101.biblical_corpus` and are linked to evidence via `(:Evidence)-[:BELONGS_TO]->(:Corpus)`.
+
+## Attribute Registry
+- **Canonical Attribute Registry**: See `attribute-registry.md` for the full v4+ and v5-ready attribute tables, including corpus node fields, provenance, QA, and semantic extensions.
+
 ## Project Structure & Workflow
 - **Cluster**: Thematic or civilizational grouping of nodes (e.g., Reformation, Hebrew, Early Christianity).
 - **Zone**: Civilizational area (Ancient Near East, East Asia, Americas, etc.).
