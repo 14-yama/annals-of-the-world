@@ -13,6 +13,9 @@ USER     = "e7860001"
 PASSWORD = "MmS8BbqX1_qgs7ayqoq2GJr7MWj8fLRV7ldaRP_B-9Y"
 
 # -------------------- Data --------------------
+# ISO 3166-1 Country Code Registry
+# See: docs/registry/iso3166_country_codes.md for the full list of country codes.
+# Use this registry to validate Place node 'iso' property and ensure standardized country references.
 CONTINENTS = ["Africa","Americas","Antarctica","Asia","Europe","Oceania"]
 
 HIER = {
