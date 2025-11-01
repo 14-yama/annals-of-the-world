@@ -32,6 +32,29 @@
 | `context`              | Descriptive temporal scope                    | `skos:scopeNote`            | "Second Temple Era"  |
 | `confidence_score`     | Certainty level of chronology (0–1)           | `cidoc:P148 has certainty`  | 0.9                   |
 
+### 📌 Guidance — definition vs description
+
+Why this matters: the registry distinguishes a short, authoritative "definition" from a richer, contextual "description". Clear usage improves UI tooltips, search indexing, exports, and curator workflows.
+
+Policy (recommended):
+- Use `definition` as a concise, dictionary-style statement for conceptual or institutional nodes (best for labels: `Institution`, `Movement`, `Idea`). Keep this short (one sentence / ≤160 characters). Example: `"Court of Augmentations: Tudor administrative body managing monastic revenues."`
+- Use `description` as the narrative/contextual field for time-bound, textual, or biographical nodes (best for labels: `Person`, `Place`, `Text`, `Event`, `Artifact`, `Evidence`). This should contain a short summary, contextual details (dates, roles, significance), and optional pointers to relationships. Example for a person: `"Patriarch in the Hebrew Bible; father of Isaac and ancestor of the Israelites. Central figure in Jewish, Christian, and Islamic traditions."`
+- It's acceptable for both fields to exist and overlap; prefer non-identical content where possible (definition = label/essence; description = context/detail).
+
+Conventions and practical guidance:
+- If a contributor must choose one field, follow the label guidance above. For conceptual/institutional nodes prefer `definition`; for biographical/textual nodes prefer `description`.
+- Keep `definition` terse — it's used for tooltips, compact lists, and RDF skos:prefLabel-style exports.
+- Put richer, human-readable summaries, evidence pointers, and short biographies in `description` (50–300 words as needed).
+- When available, populate structured fields (`birthYear`, `deathYear`, `year`, `tags[]`, `wikidata_qid`, `source_origin`) rather than embedding everything in `description`.
+
+Normalizer behavior:
+- The repository includes `scripts/normalize_nodes.py` which conservatively harmonizes nodes to the registry rules: it will copy `definition` → `description` or `summary` → `description` when `description` is missing, and it will ensure `definition` exists for labels that prefer it. Running the normalizer is a safe way to enforce these conventions across the seed file.
+
+Editorial notes:
+- Avoid long-form narrative inside `definition`. If a node needs a multi-paragraph treatment, keep that in `description` and link to `:Evidence` nodes.
+- Aim for consistency across clusters: choose the label-driven convention and apply it when adding new nodes.
+
+
 ---
 
 ### 🧠 3. Label-Specific Attributes
