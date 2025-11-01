@@ -2,14 +2,17 @@
 
 This is a refactor of the previous `arua.py` seeder moved into `scripts/`.
 """
+
 from neo4j import GraphDatabase
 from datetime import datetime
 import os
+from dotenv import load_dotenv
 
-# Credentials are expected in environment or .env
-URI = os.getenv("NEO4J_URI", "neo4j+s://e7860001.databases.neo4j.io")
-USER = os.getenv("NEO4J_USER", "e7860001")
-PASSWORD = os.getenv("NEO4J_PASSWORD", "")
+# Load environment from .env.local
+load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '../.env.local'))
+URI = os.getenv("NEO4J_URI", "bolt://localhost:7687")
+USER = os.getenv("NEO4J_USER", "neo4j")
+PASSWORD = os.getenv("NEO4J_PASSWORD", "neo4j")
 
 # -------------------- Data --------------------
 CONTINENTS = ["Africa","Americas","Antarctica","Asia","Europe","Oceania"]
