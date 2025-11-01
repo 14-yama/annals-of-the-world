@@ -5,6 +5,7 @@ This registry lists all nodes in the project, grouped by cluster and node type. 
 ---
 
 ## English Reformation
+**Total nodes:** 119 (Persons: 27, Institutions: 16, Texts: 27, Movements: 13, Events: 25, Places: 11)
 | Type             | Nodes |
 |------------------|-------|
 | Persons (P)      | Henry_VIII, Catherine_of_Aragon, Anne_Boleyn, Thomas_Cranmer, Thomas_More, Pope_Clement_VII, Thomas_Cromwell, Hugh_Latimer, William_Tyndale, Miles_Coverdale, Edward_VI, John_Dudley_(Northumberland), Edward_Seymour_(Somerset), John_Hooper, Mary_I, Reginald_Pole, Nicholas_Ridley, Elizabeth_I, Matthew_Parker, Edmund_Grindal, John_Whitgift, Richard_Hooker, William_Cecil, Edmund_Campion, Robert_Parsons, Mary_Queen_of_Scots, John_Foxe |
@@ -17,6 +18,7 @@ This registry lists all nodes in the project, grouped by cluster and node type. 
 ---
 
 ## Scandinavian Reformations
+**Total nodes:** 39 (Persons: 9, Institutions: 8, Texts: 6, Movements: 4, Events: 6, Places: 6)
 | Type             | Nodes |
 |------------------|-------|
 | Persons (P)      | Gustav_Vasa, Olaus_Petri, Laurentius_Petri, John_III_of_Sweden, Duke_Charles_(Charles_IX), Christian_III_of_Denmark, Hans_Tausen, Peder_Palladius, Frederik_II_of_Denmark |
@@ -29,6 +31,7 @@ This registry lists all nodes in the project, grouped by cluster and node type. 
 ---
 
 ## Radical Reformation
+**Total nodes:** 47 (Persons: 12, Institutions: 8, Texts: 5, Movements: 8, Events: 8, Places: 6)
 | Type             | Nodes |
 |------------------|-------|
 | Persons (P)      | Conrad_Grebel, Felix_Manz, George_Blaurock, Ulrich_Zwingli, Leo_Jud, Michael_Sattler, Pilgram_Marpeck, Menno_Simons, Thomas_Muenzter, Caspar_Schwenckfeld, Jakob_Hutter, Peter_Riedemann |
@@ -41,6 +44,7 @@ This registry lists all nodes in the project, grouped by cluster and node type. 
 ---
 
 ## Early Christianity
+**Total nodes:** 122 (Persons: 34, Institutions: 19, Texts: 18, Movements: 13, Events: 19, Places: 19)
 | Type             | Nodes |
 |------------------|-------|
 | Persons (P)      | Jesus_of_Nazareth, Peter, Paul, James_the_Just, John, Barnabas, Stephen, Philip_the_Evangelist, Thomas, Apollos, Priscilla, Aquila, Silas, Timothy, Titus, Mary_Magdalene, Clement_of_Rome, Ignatius_of_Antioch, Polycarp, John_(trad.), Author_of_Didache, Papias_of_Hierapolis, Quadratus_of_Athens, Hermas, Justin_Martyr, Irenaeus, Tertullian, Origen, Clement_of_Alexandria, Hippolytus, Cyprian, Novatian, Lactantius, Eusebius_of_Caesarea |
@@ -53,6 +57,7 @@ This registry lists all nodes in the project, grouped by cluster and node type. 
 ---
 
 ## Dutch Reformation
+**Total nodes:** 48 (Persons: 11, Institutions: 8, Texts: 7, Movements: 6, Events: 8, Places: 8)
 | Type             | Nodes |
 |------------------|-------|
 | Persons (P)      | William_of_Orange, Guido_de_Bres, Granvelle, Margaret_of_Parma, Preaching_Field_Ministers, Prince_Maurice, Johan_van_Oldenbarnevelt, Zacharias_Ursinus, Caspar_Olevianus, Jacobus_Arminius, Franciscus_Gomarus |
@@ -65,6 +70,7 @@ This registry lists all nodes in the project, grouped by cluster and node type. 
 ---
 
 ## German Reformation
+**Total nodes:** 56 (Persons: 13, Institutions: 9, Texts: 10, Movements: 7, Events: 7, Places: 10)
 | Type             | Nodes |
 |------------------|-------|
 | Persons (P)      | Martin_Luther, Johann_Tetzel, Andreas_Karlstadt, Frederick_the_Wise, Charles_V, Pope_Leo_X, Johannes_Eck, Desiderius_Erasmus, Philipp_Melanchthon, Thomas_Muenzter, Ulrich_Zwingli, Johannes_Eck, Huldrych_Zwingli |
