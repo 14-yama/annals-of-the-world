@@ -71,9 +71,9 @@ All relationship names are **active voice** (per Active Relationship Standard).
 
 ### Curator Workflow: File-First, Database-Second (Resilient)
 
-All data and workflow stages are managed in versioned seed files stored in the repository. JSON is the preferred canonical seed format for nodes because it preserves native arrays, nested maps, and precise types; CSV is still supported for simple edits and bulk spreadsheets.
+All data and workflow stages are managed in versioned seed files stored in the repository. JSON is the preferred canonical seed format for seed files (nodes, relationships, and exports) because it preserves native arrays, nested maps, typed values, and is easier for humans to read and review. CSV/TSV remains supported for quick spreadsheet-style edits and bulk exports, but contributors should prefer JSON for any canonical or nested data.
 
-Seed files live under `/data/` (for example `data/nodes.json` and `data/relationships.csv`). The database is treated as a cache and can be reseeded at any time from these files.
+Seed files live under `/data/` (for example `data/nodes.json` and `data/relationships.json`). The database is treated as a cache and can be reseeded at any time from these files.
 
 **Stages:**
 
@@ -96,8 +96,8 @@ Seed files live under `/data/` (for example `data/nodes.json` and `data/relation
 
 ```
 /data/
-  nodes.csv
-  relationships.csv
+  nodes.json        # canonical nodes seed (preferred)
+  relationships.json  # canonical relationships seed (preferred)
 /scripts/
   ingest_nodes.py
   ingest_relationships.py
