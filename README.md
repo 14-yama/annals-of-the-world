@@ -71,7 +71,9 @@ All relationship names are **active voice** (per Active Relationship Standard).
 
 ### Curator Workflow: File-First, Database-Second (Resilient)
 
-All data and workflow stages are managed in versioned seed files (CSV, JSON, YAML, or Cypher) stored in the repository. The database is treated as a cache and can be reseeded at any time.
+All data and workflow stages are managed in versioned seed files stored in the repository. JSON is the preferred canonical seed format for nodes because it preserves native arrays, nested maps, and precise types; CSV is still supported for simple edits and bulk spreadsheets.
+
+Seed files live under `/data/` (for example `data/nodes.json` and `data/relationships.csv`). The database is treated as a cache and can be reseeded at any time from these files.
 
 **Stages:**
 
@@ -84,6 +86,7 @@ All data and workflow stages are managed in versioned seed files (CSV, JSON, YAM
 7. **Version** — Mark deprecated and new versions in seed files; all changes are tracked in Git.
 
 **Best Practice:**
+- Prefer `data/nodes.json` as the canonical nodes seed. The file may contain a top-level `_meta` object and a `nodes` array (see `data/nodes.json` for an example and inline guidance). This lets us include human-readable comments and schema hints while keeping valid JSON.
 - All changes are made to seed files and committed via pull requests.
 - Ingest scripts load seed files into Neo4j; contributors never edit the database directly.
 - If the database is lost or compromised, reseed by running ingest scripts on the latest seed files.
@@ -104,10 +107,18 @@ All data and workflow stages are managed in versioned seed files (CSV, JSON, YAM
   contributor_guide.md
 ```
 
-**Reseeding Steps:**
+**Reseeding Steps (quick):**
 1. Clone repo.
-2. Run ingest scripts on seed files.
-3. Database is restored to latest committed state.
+2. Ensure `.env.local` points to your Neo4j instance (NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD).
+3. Run the nodes importer (defaults to `data/nodes.json`):
+
+```bash
+python scripts/ingest_nodes.py         # reads data/nodes.json (preferred)
+python scripts/ingest_nodes.py data/nodes.csv  # or explicitly import CSV
+```
+
+4. Run `scripts/ingest_relationships.py` to apply relationships (if present).
+5. Database is restored to latest committed state.
 
 ---
 
