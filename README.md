@@ -68,15 +68,46 @@ All relationship names are **active voice** (per Active Relationship Standard).
 
 ## 🗂️ Workflow
 
-The curator workflow follows a **7-stage process**:
 
-1. **Propose** — Curator drafts node(s) with `status:"PROPOSED"`.
-2. **Cite** — Attach evidence: primary manuscripts, scholarly works, archaeological data.
-3. **Frame** — Apply frameworks (FRAMED_BY edges with citation metadata).
-4. **Place** — Anchor to Timeframes and contextualize with places/eras.
-5. **Review** — QA check for redundancy, active voice, evidence compliance.
-6. **Publish** — Nodes updated to `status:"REVIEWED"` and locked for queries.
-7. **Version** — Updates tracked with deprecated flags and new versions created.
+### Curator Workflow: File-First, Database-Second (Resilient)
+
+All data and workflow stages are managed in versioned seed files (CSV, JSON, YAML, or Cypher) stored in the repository. The database is treated as a cache and can be reseeded at any time.
+
+**Stages:**
+
+1. **Propose** — Curator drafts node(s) and relationships in seed files with `status:"PROPOSED"`.
+2. **Cite** — Add evidence fields (manuscripts, scholarly works, archaeological data) in seed files.
+3. **Frame** — Add framework relationships (e.g., FRAMED_BY edges with citation metadata) in seed files.
+4. **Place** — Assign timeframes and places in seed files.
+5. **Review** — Update status in seed files after QA for redundancy, active voice, and evidence compliance.
+6. **Publish** — Change status to `"REVIEWED"` in seed files; nodes are locked for queries.
+7. **Version** — Mark deprecated and new versions in seed files; all changes are tracked in Git.
+
+**Best Practice:**
+- All changes are made to seed files and committed via pull requests.
+- Ingest scripts load seed files into Neo4j; contributors never edit the database directly.
+- If the database is lost or compromised, reseed by running ingest scripts on the latest seed files.
+- Regularly export the database to files for backup and disaster recovery.
+
+**Example Directory Structure:**
+
+```
+/data/
+  nodes.csv
+  relationships.csv
+/scripts/
+  ingest_nodes.py
+  ingest_relationships.py
+  export_graph.py
+/docs/
+  workflow.md
+  contributor_guide.md
+```
+
+**Reseeding Steps:**
+1. Clone repo.
+2. Run ingest scripts on seed files.
+3. Database is restored to latest committed state.
 
 ---
 
