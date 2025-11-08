@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Update node descriptions in data/nodes.json using docs/nodes/node-description.md
+"""Update node descriptions in data/Nodes/nodes.json using docs/nodes/node-description.md
 
 Conservative rules:
 - If a node's description is missing, equals the node's name, or is very short, try to replace it.
@@ -15,7 +15,7 @@ from pathlib import Path
 import re
 
 HERE = Path(__file__).resolve().parent.parent
-NODES_PATH = HERE / "data" / "nodes.json"
+NODES_PATH = HERE / "data" / "Nodes" / "nodes.json"
 DOC_PATH = HERE / "docs" / "nodes" / "node-description.md"
 
 def load_json(path):

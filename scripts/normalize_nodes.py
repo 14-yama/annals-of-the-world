@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Conservative normalizer for data/nodes.json
+"""Conservative normalizer for data/Nodes/nodes.json
 
 Idempotent, safe changes:
 - rename 'aliases' -> 'alt_names' (merge when both exist)
@@ -16,7 +16,7 @@ import datetime
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent.parent
-NODES_PATH = HERE / "data" / "nodes.json"
+NODES_PATH = HERE / "data" / "Nodes" / "nodes.json"
 
 DEFS_LABELS = {"institution", "movement", "idea"}
 DESC_LABELS = {"person", "place", "text", "event", "artifact", "evidence"}

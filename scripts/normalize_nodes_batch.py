@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Batch normalizer for data/nodes.json
+"""Batch normalizer for data/Nodes/nodes.json
 
 This script finds nodes missing either 'definition' or 'description' depending on label
 and updates them in manageable batches. It also renames 'aliases' -> 'alt_names' (merging
@@ -17,7 +17,7 @@ import argparse
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent.parent
-NODES_PATH = HERE / "data" / "nodes.json"
+NODES_PATH = HERE / "data" / "Nodes" / "nodes.json"
 
 DEFS_LABELS = {"institution", "movement", "idea"}
 DESC_LABELS = {"person", "place", "text", "event", "artifact", "evidence"}

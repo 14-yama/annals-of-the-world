@@ -3,7 +3,7 @@
 Small, resilient importer for nodes from JSON or CSV seed files into Neo4j.
 
 Behavior
-- Default input: `data/nodes.json` (preferred). Falls back to `data/nodes.csv`.
+- Default input: `data/Nodes/nodes.json` (preferred). Falls back to `data/Nodes/nodes.csv`.
 - For each record: MERGE node by `slug` and label (specified in `label` field).
 - Sets/overwrites properties with the record's keys (except internal `id`).
 
@@ -92,8 +92,10 @@ def ingest(records: List[Dict[str, Any]]):
 
 def main(argv=None):
     argv = argv or sys.argv[1:]
-    default_json = os.path.join(os.path.dirname(__file__), '../data/nodes.json')
-    default_csv = os.path.join(os.path.dirname(__file__), '../data/nodes.csv')
+    # Prefer the consolidated per-cluster split or canonical nodes file under data/Nodes
+    default_json = os.path.join(os.path.dirname(__file__), '../data/Nodes/nodes.json')
+    # legacy fallback
+    default_csv = os.path.join(os.path.dirname(__file__), '../data/Nodes/nodes.csv')
 
     path = argv[0] if argv else (default_json if os.path.exists(default_json) else default_csv)
 
