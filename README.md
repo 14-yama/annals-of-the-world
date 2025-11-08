@@ -73,7 +73,7 @@ All relationship names are **active voice** (per Active Relationship Standard).
 
 All data and workflow stages are managed in versioned seed files stored in the repository. JSON is the preferred canonical seed format for seed files (nodes, relationships, and exports) because it preserves native arrays, nested maps, typed values, and is easier for humans to read and review. CSV/TSV remains supported for quick spreadsheet-style edits and bulk exports, but contributors should prefer JSON for any canonical or nested data.
 
-Seed files live under `/data/` (for example `data/nodes.json` and `data/relationships.json`). The database is treated as a cache and can be reseeded at any time from these files.
+Seed files live under `/data/`. Nodes are now organized under `data/Nodes/` (per-cluster JSON files, plus an optional consolidated `data/Nodes/nodes.json`) and relationships under `data/Relationships/` (per-cluster relationship files). The database is treated as a cache and can be reseeded at any time from these files.
 
 **Stages:**
 
@@ -86,7 +86,7 @@ Seed files live under `/data/` (for example `data/nodes.json` and `data/relation
 7. **Version** — Mark deprecated and new versions in seed files; all changes are tracked in Git.
 
 **Best Practice:**
-- Prefer `data/nodes.json` as the canonical nodes seed. The file may contain a top-level `_meta` object and a `nodes` array (see `data/nodes.json` for an example and inline guidance). This lets us include human-readable comments and schema hints while keeping valid JSON.
+- Prefer a canonical nodes seed under `data/Nodes/` (for example `data/Nodes/nodes.json`) or per-cluster files `data/Nodes/nodes.<Cluster>.json`. Each file may contain a top-level `_meta` object and a `nodes` array. This lets us include human-readable comments and schema hints while keeping valid JSON.
 - All changes are made to seed files and committed via pull requests.
 - Ingest scripts load seed files into Neo4j; contributors never edit the database directly.
 - If the database is lost or compromised, reseed by running ingest scripts on the latest seed files.
@@ -110,11 +110,11 @@ Seed files live under `/data/` (for example `data/nodes.json` and `data/relation
 **Reseeding Steps (quick):**
 1. Clone repo.
 2. Ensure `.env.local` points to your Neo4j instance (NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD).
-3. Run the nodes importer (defaults to `data/nodes.json`):
+3. Run the nodes importer (defaults to `data/Nodes/nodes.json` or per-cluster files):
 
 ```bash
-python scripts/ingest_nodes.py         # reads data/nodes.json (preferred)
-python scripts/ingest_nodes.py data/nodes.csv  # or explicitly import CSV
+python scripts/ingest_nodes.py         # reads data/Nodes/nodes.json (preferred) or a per-cluster file
+python scripts/ingest_nodes.py data/Nodes/nodes.csv  # or explicitly import CSV
 ```
 
 4. Run `scripts/ingest_relationships.py` to apply relationships (if present).

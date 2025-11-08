@@ -1,0 +1,29 @@
+{
+  "name": "annals-ui",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 5173",
+    "chakra:typegen": "npx @chakra-ui/cli typegen src",
+    "chakra:snippet": "npx @chakra-ui/cli snippet",
+    "chakra:eject": "npx @chakra-ui/cli eject"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@chakra-ui/react": "^3.0.0",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "framer-motion": "^10.12.16"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "typescript": "^5.0.0",
+    "@chakra-ui/cli": "^1.0.0",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0"
+  }
+}
