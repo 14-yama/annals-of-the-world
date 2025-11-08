@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "cluster": "Scandinavian_Reformations",
+    "notes": "Relationships for the Scandinavian Reformations cluster. Use 'start_slug' and 'end_slug' to reference nodes by slug.",
+    "registry": "docs/guidelines/node-relationship-vocabulary.md",
+    "schema_doc": "docs/guidelines/schema.md",
+    "conventions": [
+      "All records use 'start_slug' and 'end_slug' for node references (slug is the canonical identity for file-first workflow).",
+      "Keep 'id' as a unique numeric handle for the edge record (not used for node identity).",
+      "Use 'description' for a short human summary; carry structured evidence fields (evidence_url, citation_style, page_refs, source_note) when available.",
+      "When evidence is reused across multiple edges, prefer an ':Evidence' node and link to it via SUPPORTS/FRAMES/SUPPORTED_BY relationships.",
+      "Status values: PROPOSED | REVIEWED | APPROVED. Ingest will set provenance fields on import if missing."
+    ]
+  },
+  "relationships": []
+}

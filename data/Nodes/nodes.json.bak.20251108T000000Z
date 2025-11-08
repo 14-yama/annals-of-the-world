@@ -1,0 +1,165 @@
+{
+  "_meta": {
+    "notes": "Backup of original data/nodes.json before splitting into cluster files.",
+    "created_at": "2025-11-08T00:00Z",
+    "source": "data/nodes.json"
+  },
+  "nodes_json_snapshot":
+    {
+      "_meta": {
+        "notes": "This file is the canonical nodes seed for the project. Prefer editing JSON and follow docs/schema/attribute-registry.md for field names and types. See docs/guidelines/node-relationship-vocabulary.md and docs/guidelines/schema.md for relationship attribute conventions.",
+        "registry": "docs/schema/attribute-registry.md",
+        "relationship_registry": "docs/guidelines/node-relationship-vocabulary.md",
+        "relationship_schema": "docs/guidelines/schema.md",
+        "conventions": [
+          "Each record must include 'slug' (unique) and 'label' (e.g., Person, Place, Idea)",
+          "Use ISO dates or numeric years (BCE as negative integers).",
+          "Use arrays for repeated fields (e.g., alt_names, tags, corpus).",
+          "Geo: use 'geo_lat' and 'geo_lon' or add a 'geo' map. Ingest will convert if configured.",
+          "Do not rely on the 'id' field for identity in Neo4j: ingestion MERGEs by slug.",
+          "When adding new nodes, cross-check required governance fields: status, created_at, created_by, version, workflow_stage."
+        ]
+      },
+      "nodes": [
+        {
+          "id": 1,
+          "label": "Person",
+          "slug": "abraham",
+          "name": "Abraham",
+          "alt_names": [
+            "Avraham",
+            "Ibrahim"
+          ],
+          "definition": "Patriarch in Hebrew Bible",
+          "description": "Patriarch in the Hebrew Bible; father of Isaac and ancestor of the Israelites. Central figure in Jewish, Christian, and Islamic traditions, associated with the covenant promise.",
+          "category": "Religious Figure",
+          "class_number": "1.140.03",
+          "division_code": "140",
+          "call_number": "1.140.03",
+          "subject_headings": [
+            "Theology—Monotheism"
+          ],
+          "is_generic": true,
+          "status": "PROPOSED",
+          "intl_status": "ALIGNED",
+          "created_at": "2025-10-31T20:00Z",
+          "updated_at": "2025-10-31T20:00Z",
+          "created_by": "curator_42",
+          "modified_by": "curator_42",
+          "status_by": "curator_42",
+          "version": 4,
+          "corpus": [
+            "BIBLICAL_CORPUS"
+          ],
+          "lang": "en",
+          "script": "Latn",
+          "startYear": -2000,
+          "endYear": -1800,
+          "chron_key": -2000,
+          "context": "Bronze Age",
+          "confidence_score": 0.95,
+          "birthYear": -2000,
+          "deathYear": -1800,
+          "titles": [
+            "Patriarch"
+          ],
+          "summary": "Founder of monotheism",
+          "significance": "Introduced covenant",
+          "score": 0.99,
+          "tags": [
+            "Monotheism",
+            "Covenant"
+          ],
+          "kind": "patriarch",
+          "region": "West Asia",
+          "geo_lat": 32.54,
+          "geo_lon": 44.42,
+          "iso": "IL",
+          "author": "Abraham",
+          "year": "-2000",
+          "publisher": "Cambridge University Press",
+          "doi_or_url": "https://doi.org/10.1234/abraham",
+          "corpus_tier": "B",
+          "code": "CAUSE_EFFECT",
+          "notes": "Direct causal linkage between events.",
+          "source_origin": "Curator Seed",
+          "source_id": "Q42887",
+          "reviewed_by": [
+            "curator_12",
+            "curator_47"
+          ],
+          "review_date": "2025-09-10T18:00Z",
+          "external_links": [
+            "https://www.wikidata.org/wiki/Q42887"
+          ],
+          "ontology_class": "E39 Actor",
+          "wikidata_qid": "Q42887",
+          "importance_score": 0.85,
+          "citation_count": 12,
+          "review_status": "PASSED",
+          "cultural_context": "Hellenistic",
+          "midYear": -1900,
+          "duration": 100,
+          "geo_precision": "exact",
+          "isbn": "978-0521834205",
+          "issn": "1471-5457",
+          "license": "CC-BY-NC-SA 4.0",
+          "workflow_stage": "REVIEWED",
+          "governance_version": 5,
+          "display_label": "Abraham (Bronze Age)",
+          "era_ref": "bronze-age",
+          "has_geo": true,
+          "has_text": false
+        },
+        {
+          "id": 2,
+          "label": "Place",
+          "slug": "jerusalem",
+          "name": "Jerusalem",
+          "alt_names": [
+            "Yerushalayim",
+            "Al-Quds"
+          ],
+          "definition": "Ancient city in the Levant",
+          "description": "Ancient city in the Levant",
+          "category": "City",
+          "class_number": "1.140.04",
+          "division_code": "140",
+          "call_number": "1.140.04",
+          "subject_headings": [
+            "Cities—Ancient"
+          ],
+          "is_generic": false,
+          "status": "PROPOSED",
+          "intl_status": "ALIGNED",
+          "created_at": "2025-10-31T20:00Z",
+          "updated_at": "2025-10-31T20:00Z",
+          "created_by": "curator_42",
+          "modified_by": "curator_42",
+          "status_by": "curator_42",
+          "version": 4,
+          "corpus": [
+            "BIBLICAL_CORPUS"
+          ],
+          "lang": "en",
+          "script": "Latn",
+          "startYear": -1000,
+          "endYear": -2023,
+          "chron_key": -1000,
+          "context": "Iron Age",
+          "confidence_score": 0.9,
+          "kind": "city",
+          "region": "West Asia",
+          "geo_lat": 31.78,
+          "geo_lon": 35.22,
+          "iso": "IL",
+          "display_label": "Jerusalem (Iron Age)",
+          "era_ref": "iron-age",
+          "has_geo": true,
+          "has_text": false,
+          "workflow_stage": "PROPOSED",
+          "governance_version": 5
+        }
+      ]
+    }
+}
