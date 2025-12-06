@@ -28,4 +28,12 @@ python3 scripts/generate_relationships_from_readmes.py
 - Run `git status` to confirm only the expected README and JSON files changed.
 - Commit with a message that captures both the README edits and regenerated data, e.g. `Update English_Reformation wiring and regen data`.
 
+## 5. Seed Neo4j from per-cluster JSON
+```
+python3 admin/seed_neo4j_from_clusters.py --clusters English_Reformation
+```
+- Loads the per-cluster JSON files under `data/Nodes/` and `data/Relationships/` into Neo4j using the credentials in `.env.local`.
+- Omit `--clusters` to seed every cluster. Add `--dry-run` to verify counts without writing.
+- Use `--skip-nodes` or `--skip-relationships` to focus on one data type when re-seeding.
+
 Following this sequence keeps README tables, JSON exports, and schema normalizers in sync with minimal manual effort.
