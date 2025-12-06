@@ -29,5 +29,8 @@ This index groups all Reformation clusters, links to each, and outlines a miniâ€
 - [Bohemian_Moravian_Reformation](../Bohemian_Moravian_Reformation/README.md)
 - [Polish_Lithuanian_Reformation](../Polish_Lithuanian_Reformation/README.md)
 - [Catholic_Reformation](../Catholic_Reformation/README.md)
+ - [Early_Christianity](../Early_Christianity/README.md)
+ - [Hebrew_Tradition](../Hebrew_Tradition/README.md)
+ - [Jewish-Islamic_Exchange](../Jewish-Islamic_Exchange/README.md)
 
 See also: [interfaces map](interfaces.md)
