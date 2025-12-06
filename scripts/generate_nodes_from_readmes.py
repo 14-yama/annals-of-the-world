@@ -69,10 +69,30 @@ def parse_readme(readme_path: Path, cluster_slug: str):
             if slug in seen:
                 continue
             seen.add(slug)
-            
             name = slug.replace('_', ' ').replace('-', ' ')
-            label = current_type or 'Concept'
-            
+
+            # Determine label: prefer explicit G/C code column when present,
+            # otherwise fall back to section-based mapping.
+            label = None
+            if len(parts) > 1:
+                gc = parts[1].upper()
+                if gc == 'P':
+                    label = 'Person'
+                elif gc == 'I':
+                    label = 'Institution'
+                elif gc == 'T':
+                    label = 'Text'
+                elif gc == 'A':
+                    label = 'Artifact'
+                elif gc == 'M':
+                    label = 'Movement'
+                elif gc == 'E':
+                    label = 'Event'
+                elif gc == 'G':
+                    label = 'Place'
+            if label is None:
+                label = current_type or 'Concept'
+
             # Build node with registry-compliant attributes
             node = {
                 'slug': slug,
