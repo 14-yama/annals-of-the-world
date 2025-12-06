@@ -97,8 +97,8 @@ def normalize_node(node):
 
 def main():
     if not NODES_PATH.exists():
-        print(f"nodes file not found: {NODES_PATH}")
-        return 2
+        print(f"nodes file not found: {NODES_PATH} (skipping)")
+        return 0
 
     data = load_nodes(NODES_PATH)
     nodes = data.get("nodes") or []
