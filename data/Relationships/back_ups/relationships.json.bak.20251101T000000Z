@@ -1,0 +1,135 @@
+{
+  "_meta": {
+    "notes": "Canonical relationships seed for the project. Prefer editing JSON and follow docs/guidelines/node-relationship-vocabulary.md and docs/guidelines/schema.md for field names and types and evidence rules.",
+    "registry": "docs/guidelines/node-relationship-vocabulary.md",
+    "schema_doc": "docs/guidelines/schema.md",
+    "conventions": [
+      "Each record should include numeric 'id', 'start_id', 'end_id', and 'type' (relationship verb).",
+      "Use 'description' for a short human summary; carry structured evidence fields (evidence_url, citation_style, page_refs, source_note) when available.",
+      "When the same evidence is reused across multiple edges, prefer an ':Evidence' node and link to it.",
+      "Status values: PROPOSED | REVIEWED | APPROVED. Ingest will set provenance fields on import if missing."
+    ]
+  },
+  "relationships": [
+    {
+      "id": 1,
+      "start_id": 1,
+      "end_id": 2,
+      "type": "OCCURRED_IN",
+      "description": "Abraham traveled to Jerusalem",
+      "status": "PROPOSED",
+      "evidence_url": "https://doi.org/10.1234/abraham",
+      "citation_style": "Chicago 17",
+      "page_refs": "12-15",
+      "source_note": "Genesis 12-25"
+    },
+    {
+      "id": 2,
+      "start_id": 3,
+      "end_id": 4,
+      "type": "MARRIED_TO",
+      "description": "Henry VIII married Catherine of Aragon",
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": null
+    },
+    {
+      "id": 3,
+      "start_id": 3,
+      "end_id": 5,
+      "type": "MARRIED_TO",
+      "description": "Henry VIII married Anne Boleyn",
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": null
+    },
+    {
+      "id": 4,
+      "start_id": 3,
+      "end_id": 20,
+      "type": "PARENT_OF",
+      "description": "Henry VIII is parent of Elizabeth I",
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": null
+    },
+    {
+      "id": 5,
+      "start_id": 6,
+      "end_id": 31,
+      "type": "AUTHORED",
+      "description": "Thomas Cranmer authored the Book of Common Prayer",
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": null
+    },
+    {
+      "id": 6,
+      "start_id": 11,
+      "end_id": 33,
+      "type": "AUTHORED",
+      "description": "William Tyndale authored early English Bible translations",
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": null
+    },
+    {
+      "id": 7,
+      "start_id": 30,
+      "end_id": 34,
+      "type": "OCCURRED_IN",
+      "description": "Act of Supremacy (1534) associated with London",
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": null
+    },
+    {
+      "id": 8,
+      "start_id": 30,
+      "end_id": 40,
+      "type": "FRAMED_BY",
+      "description": "Act of Supremacy framed by Royal Supremacy movement",
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": null
+    },
+    {
+      "id": 9,
+      "start_id": 31,
+      "end_id": 34,
+      "type": "OCCURRED_IN",
+      "description": "Book of Common Prayer (1549) usage centered in London",
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": null
+    },
+    {
+      "id": 10,
+      "start_id": 32,
+      "end_id": 34,
+      "type": "OCCURRED_IN",
+      "description": "Great Bible (1539) printing tied to London",
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": null
+    }
+  ]
+}
