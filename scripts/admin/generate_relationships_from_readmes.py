@@ -18,7 +18,7 @@ import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CLUSTERS_DIR = ROOT / 'docs' / 'clusters'
 
 
@@ -164,7 +164,7 @@ def write_relationships(cluster_slug: str, rels: list, readme_path: Path):
             'schema_doc': 'docs/guidelines/schema.md',
             'source': str(readme_path.relative_to(ROOT)),
             'generated_at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%MZ'),
-            'generator': 'scripts/generate_relationships_from_readmes.py',
+            'generator': 'scripts/admin/generate_relationships_from_readmes.py',
         },
         'relationships': rels,
     }

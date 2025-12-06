@@ -7,7 +7,7 @@ For each docs/clusters/*/README.md:
 - Consolidate all edges into a Markdown table under a `### Relationships` heading.
 
 Intended use: run once before generating relationship JSONs so that
-`scripts/generate_relationships_from_readmes.py` can read the
+`scripts/admin/generate_relationships_from_readmes.py` can read the
 rich tables for every cluster.
 """
 from __future__ import annotations

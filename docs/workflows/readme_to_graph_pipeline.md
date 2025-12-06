@@ -9,7 +9,7 @@ This playbook covers how to take curated cluster README files and regenerate the
 
 ## 2. Generate per-cluster node JSON
 ```
-python3 scripts/generate_nodes_from_readmes.py
+python3 scripts/admin/generate_nodes_from_readmes.py
 ```
 - Creates `data/Nodes/nodes.<cluster>.json` with registry-compliant attributes.
 - Each file receives a timestamped backup before being overwritten.
@@ -17,7 +17,7 @@ python3 scripts/generate_nodes_from_readmes.py
 
 ## 3. Generate per-cluster relationship JSON
 ```
-python3 scripts/generate_relationships_from_readmes.py
+python3 scripts/admin/generate_relationships_from_readmes.py
 ```
 - Reads the refreshed `### Relationships` tables plus any `Parent root` / `Interfaces` sections.
 - Writes `data/Relationships/relationships.<cluster>.json` and backs up the previous version.
