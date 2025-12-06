@@ -1,0 +1,125 @@
+{
+  "_meta": {
+    "cluster": "Hebrew_Tradition",
+    "notes": "Nodes related to Hebrew/Biblical tradition (extracted from data/nodes.json).",
+    "source": "data/nodes.json (split)",
+    "registry": "docs/schema/attribute-registry.md"
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Person",
+      "slug": "abraham",
+      "name": "Abraham",
+      "alt_names": [
+        "Avraham",
+        "Ibrahim"
+      ],
+      "birthYear": -2000,
+      "call_number": "1.140.03",
+      "category": "Religious Figure",
+      "chron_key": -2000,
+      "citation_count": 12,
+      "class_number": "1.140.03",
+      "confidence_score": 0.95,
+      "context": "Bronze Age",
+      "corpus": [
+        "BIBLICAL_CORPUS"
+      ],
+      "created_at": "2025-10-31T20:00Z",
+      "created_by": "curator_42",
+      "cultural_context": "Hellenistic",
+      "deathYear": -1800,
+      "definition": "Patriarch in Hebrew Bible",
+      "description": "Patriarch in the Hebrew Bible; father of Isaac and ancestor of the Israelites. Central figure in Jewish, Christian, and Islamic traditions, associated with the covenant promise.",
+      "display_label": "Abraham (Bronze Age)",
+      "division_code": "140",
+      "duration": 200,
+      "endYear": -1800,
+      "era_ref": "bronze-age",
+      "geo_precision": "exact",
+      "governance_version": 5,
+      "has_geo": false,
+      "has_text": true,
+      "importance_score": 0.85,
+      "intl_status": "ALIGNED",
+      "is_generic": true,
+      "kind": "patriarch",
+      "lang": "en",
+      "license": "CC-BY-NC-SA 4.0",
+      "midYear": -1900,
+      "modified_by": "curator_42",
+      "region": "West Asia",
+      "review_status": "PASSED",
+      "score": 0.99,
+      "script": "Latn",
+      "significance": "Introduced covenant",
+      "startYear": -2000,
+      "status": "PROPOSED",
+      "status_by": "curator_42",
+      "subject_headings": [
+        "Theology—Monotheism"
+      ],
+      "summary": "Founder of monotheism",
+      "tags": [
+        "Monotheism",
+        "Covenant"
+      ],
+      "titles": [
+        "Patriarch"
+      ],
+      "updated_at": "2025-10-31T20:00Z",
+      "version": 4,
+      "wikidata_qid": "Q42887",
+      "workflow_stage": "REVIEWED"
+    },
+    {
+      "id": 2,
+      "label": "Place",
+      "slug": "jerusalem",
+      "name": "Jerusalem",
+      "alt_names": [
+        "Yerushalayim",
+        "Al-Quds"
+      ],
+      "call_number": "1.140.04",
+      "category": "City",
+      "chron_key": -1000,
+      "class_number": "1.140.04",
+      "confidence_score": 0.9,
+      "context": "Iron Age",
+      "corpus": [
+        "BIBLICAL_CORPUS"
+      ],
+      "created_at": "2025-10-31T20:00Z",
+      "created_by": "curator_42",
+      "definition": "Ancient city in the Levant",
+      "description": "Ancient city in the Levant",
+      "display_label": "Jerusalem (Iron Age)",
+      "division_code": "140",
+      "duration": -1023,
+      "endYear": -2023,
+      "era_ref": "iron-age",
+      "governance_version": 5,
+      "has_geo": false,
+      "has_text": true,
+      "intl_status": "ALIGNED",
+      "is_generic": false,
+      "kind": "city",
+      "lang": "en",
+      "midYear": -1512,
+      "modified_by": "curator_42",
+      "region": "West Asia",
+      "script": "Latn",
+      "startYear": -1000,
+      "status": "PROPOSED",
+      "status_by": "curator_42",
+      "subject_headings": [
+        "Cities—Ancient"
+      ],
+      "updated_at": "2025-10-31T20:00Z",
+      "version": 4,
+      "workflow_stage": "PROPOSED"
+    }
+  ]
+}
