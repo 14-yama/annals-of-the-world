@@ -20,10 +20,18 @@ import re
 from pathlib import Path
 from typing import Dict, List, Optional, Sequence
 
-from dotenv import load_dotenv
-from neo4j import GraphDatabase, Driver
+try:
+    from dotenv import load_dotenv
+except Exception:  # pragma: no cover - optional dev dependency
+    def load_dotenv(*args, **kwargs):
+        return None
+try:
+    from neo4j import GraphDatabase, Driver
+except Exception:  # pragma: no cover - allow running dry-run without neo4j installed
+    GraphDatabase = None
+    Driver = None
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_ENV = ROOT / ".env.local"
 NODES_DIR = ROOT / "data" / "Nodes"
 RELS_DIR = ROOT / "data" / "Relationships"
@@ -102,7 +110,18 @@ class ClusterSeeder:
         self.user = user
         self.password = password
         self.dry_run = dry_run
-        self.driver: Optional[Driver] = None if dry_run else GraphDatabase.driver(uri, auth=(user, password))
+        # Delay / guard driver creation so we can provide a clear error
+        # message when the `neo4j` package isn't installed. In dry-run
+        # mode no driver is required.
+        self.driver: Optional[Driver]
+        if dry_run:
+            self.driver = None
+        else:
+            if GraphDatabase is None:
+                raise SystemExit(
+                    "neo4j Python driver not found. Install the 'neo4j' package or run with --dry-run."
+                )
+            self.driver = GraphDatabase.driver(uri, auth=(user, password))
 
     def close(self) -> None:
         if self.driver:
@@ -228,8 +247,23 @@ def main() -> int:
     password = os.getenv("NEO4J_PASSWORD", "neo4j")
 
     clusters = discover_clusters()
+    # Diagnostic help: if discovery fails, print resolved paths so we can
+    # understand why the script isn't seeing the files on the user's machine.
     if not clusters:
         print("No per-cluster JSON files found under data/Nodes or data/Relationships.")
+        try:
+            print("DEBUG: script resolved paths:")
+            print(f"  __file__ -> {Path(__file__).resolve()}")
+            print(f"  cwd -> {Path.cwd()}")
+            print(f"  ROOT -> {ROOT}")
+            print(f"  NODES_DIR -> {NODES_DIR} (exists={NODES_DIR.exists()})")
+            if NODES_DIR.exists():
+                print("  sample node files:", [p.name for p in sorted(NODES_DIR.glob('nodes.*.json'))][:10])
+            print(f"  RELS_DIR -> {RELS_DIR} (exists={RELS_DIR.exists()})")
+            if RELS_DIR.exists():
+                print("  sample rel files:", [p.name for p in sorted(RELS_DIR.glob('relationships.*.json'))][:10])
+        except Exception as exc:  # pragma: no cover - best effort diagnostics
+            print("DEBUG: failed to print diagnostic info:", exc)
         return 1
 
     selected = args.clusters or sorted(clusters.keys())
