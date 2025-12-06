@@ -1,8 +1,180 @@
 # Hebrew_Tradition (Cluster Tree)
 
-Parent root: Hebrew_Tradition (D)
-Scope: Patriarchal era to present; organized by major periods and interfaces.
-Boundary: Standalone cluster tree; interfaces to Early_Christianity (Second_Temple), Jewish–Islamic_Exchange (Medieval), and others.
+### Relationships
+
+_Auto-generated from wiring; edit freely for nuance._
+
+| Start | Type | End | Description |
+| ----- | ---- | --- | ----------- |
+| Hebrew_Tradition | IS_PART_OF | Hebrew_Tradition | Hebrew Tradition has parent root Hebrew Tradition. |
+| Hebrew_Tradition | INTERFACES_WITH | Early_Christianity | Hebrew Tradition interfaces with Early Christianity. |
+| Hebrew_Tradition | INTERFACES_WITH | Jewish | Hebrew Tradition interfaces with Jewish. |
+| Moses | LEADS | Exodus | Moses leads Exodus. |
+| Moses | DECLARES | Sinai_Covenant | Moses declares Sinai Covenant. |
+| Aaron | PARTICIPATES_IN | Sinai_Covenant | Aaron participates in Sinai Covenant. |
+| Early_Priesthood | PARTICIPATES_IN | Sinai_Covenant | Early Priesthood participates in Sinai Covenant. |
+| Abraham | PARTICIPATES_IN | Abrahamic_Covenant | Abraham participates in Abrahamic Covenant. |
+| Isaac | PARTICIPATES_IN | Binding_of_Isaac | Isaac participates in Binding of Isaac. |
+| Jacob | PARTICIPATES_IN | Jacob_Bethel_Vision | Jacob participates in Jacob Bethel Vision. |
+| Joseph | PARTICIPATES_IN | Joseph_in_Egypt | Joseph participates in Joseph in Egypt. |
+| Moses | LEADS | Wilderness_Wanderings | Moses leads Wilderness Wanderings. |
+| Torah_Pentateuch | FRAMES | Exodus | Torah Pentateuch frames Exodus. |
+| Torah_Pentateuch | FRAMES | Sinai_Covenant | Torah Pentateuch frames Sinai Covenant. |
+| Torah_Pentateuch | FRAMES | Abrahamic_Covenant | Torah Pentateuch frames Abrahamic Covenant. |
+| Torah_Pentateuch | FRAMES | Binding_of_Isaac | Torah Pentateuch frames Binding of Isaac. |
+| Torah_Pentateuch | FRAMES | Jacob_Bethel_Vision | Torah Pentateuch frames Jacob Bethel Vision. |
+| Torah_Pentateuch | FRAMES | Joseph_in_Egypt | Torah Pentateuch frames Joseph in Egypt. |
+| Torah_Pentateuch | FRAMES | Wilderness_Wanderings | Torah Pentateuch frames Wilderness Wanderings. |
+| Torah_Pentateuch | FRAMES | Conquest_of_Canaan | Torah Pentateuch frames Conquest of Canaan. |
+| Exodus | OCCURS_IN | Egypt | Exodus occurs in Egypt. |
+| Wilderness_Wanderings | OCCURS_IN | Sinai | Wilderness Wanderings occurs in Sinai. |
+| Conquest_of_Canaan | OCCURS_IN | Canaan | Conquest of Canaan occurs in Canaan. |
+| Jacob_Bethel_Vision | OCCURS_IN | Bethel | Jacob Bethel Vision occurs in Bethel. |
+| Joseph_in_Egypt | OCCURS_IN | Egypt | Joseph in Egypt occurs in Egypt. |
+| Abraham | ENDORSES | Isaac | Abraham endorses Isaac. |
+| Jacob | ENDORSES | Joseph | Jacob endorses Joseph. |
+| Sarah | ENDORSES | Isaac | Sarah endorses Isaac. |
+| Hezekiah | LEADS | Hezekiah_Reforms | Hezekiah leads Hezekiah Reforms. |
+| Josiah | LEADS | Josiah_Reforms | Josiah leads Josiah Reforms. |
+| Monarchy_of_Judah | DECLARES | Josiah_Reforms | Monarchy of Judah declares Josiah Reforms. |
+| Levitical_Priesthood | ORGANIZES | Temple_Rituals | Levitical Priesthood organizes Temple Rituals. |
+| Solomon | LEADS | Building_of_First_Temple | Solomon leads Building of First Temple. |
+| Levitical_Priesthood | ORGANIZES | Temple_Dedication | Levitical Priesthood organizes Temple Dedication. |
+| Isaiah | PROPHESIES_DURING | Assyrian_Conquest_of_Israel | Isaiah prophesies during Assyrian Conquest of Israel. |
+| Jeremiah | PROPHESIES_DURING | Assyrian_Conquest_of_Israel | Jeremiah prophesies during Assyrian Conquest of Israel. |
+| Isaiah | PROPHESIES_DURING | Assyrian_Siege_of_Jerusalem_701_BCE | Isaiah prophesies during Assyrian Siege of Jerusalem 701 BCE. |
+| Assyrian_Conquest_of_Israel | TRANSFORMS | Monarchy_of_Israel | Assyrian Conquest of Israel transforms Monarchy of Israel. |
+| Josiah_Reforms | STANDARDIZES | First_Temple | Josiah Reforms standardizes First Temple. |
+| Division_of_the_Kingdom | TRANSFORMS | Monarchy_of_Israel | Division of the Kingdom transforms Monarchy of Israel. |
+| Destruction_of_First_Temple_586_BCE | TRANSFORMS | First_Temple | Destruction of First Temple 586 BCE transforms First Temple. |
+| Samuel_Kings | FRAMES | Hezekiah_Reforms | Samuel Kings frames Hezekiah Reforms. |
+| Samuel_Kings | FRAMES | Building_of_First_Temple | Samuel Kings frames Building of First Temple. |
+| Psalms_early_layers | TRANSMITS | Temple_Liturgy | Psalms early layers transmits Temple Liturgy. |
+| Monarchy_of_Israel | APPOINTS | David | Monarchy of Israel appoints David. |
+| Monarchy_of_Judah | APPOINTS | Solomon | Monarchy of Judah appoints Solomon. |
+| Prophetic_Tradition | TRANSMITS | Prophetic_Writings_(early | Prophetic Tradition transmits Prophetic Writings (early. |
+| Building_of_First_Temple | OCCURS_IN | Jerusalem | Building of First Temple occurs in Jerusalem. |
+| Temple_Dedication | OCCURS_IN | Jerusalem | Temple Dedication occurs in Jerusalem. |
+| Assyrian_Conquest_of_Israel | OCCURS_IN | Samaria | Assyrian Conquest of Israel occurs in Samaria. |
+| Fall_of_Samaria_722_BCE | OCCURS_IN | Samaria | Fall of Samaria 722 BCE occurs in Samaria. |
+| Assyrian_Siege_of_Jerusalem_701_BCE | OCCURS_IN | Jerusalem | Assyrian Siege of Jerusalem 701 BCE occurs in Jerusalem. |
+| Babylonian_Siege_597_BCE | OCCURS_IN | Jerusalem | Babylonian Siege 597 BCE occurs in Jerusalem. |
+| Destruction_of_First_Temple_586_BCE | OCCURS_IN | Jerusalem | Destruction of First Temple 586 BCE occurs in Jerusalem. |
+| Jeremiah | PROPHESIES_DURING | Babylonian_Exile | Jeremiah prophesies during Babylonian Exile. |
+| Ezekiel | PROPHESIES_DURING | Babylonian_Exile | Ezekiel prophesies during Babylonian Exile. |
+| Cyrus_the_Great | DECLARES | Cyrus_Edict | Cyrus the Great declares Cyrus Edict. |
+| Babylonian_Exile | OCCURS_IN | Babylon | Babylonian Exile occurs in Babylon. |
+| Cyrus_Edict | OCCURS_IN | Babylon | Cyrus Edict occurs in Babylon. |
+| Babylonian_Exile | OCCURS_IN | Jerusalem | Babylonian Exile occurs in Jerusalem. |
+| Lamentations | FRAMES | Babylonian_Exile | Lamentations frames Babylonian Exile. |
+| Ezekiel | FRAMES | Babylonian_Exile | Ezekiel frames Babylonian Exile. |
+| Ezra | LEADS | Torah_Public_Reading | Ezra leads Torah Public Reading. |
+| Nehemiah | ORGANIZES | Jerusalem_Rebuilding | Nehemiah organizes Jerusalem Rebuilding. |
+| Judas_Maccabeus | LEADS | Maccabean_Revolt | Judas Maccabeus leads Maccabean Revolt. |
+| Sanhedrin | DECLARES | Legal_Decisions | Sanhedrin declares Legal Decisions. |
+| Roman_Administration_Judea | DECLARES | Roman_Conquest | Roman Administration Judea declares Roman Conquest. |
+| Hasmonean_State | ORGANIZES | Hasmonean_Expansion | Hasmonean State organizes Hasmonean Expansion. |
+| Hasmonean_State | ORGANIZES | Temple_Rededication_(Hanukkah | Hasmonean State organizes Temple Rededication (Hanukkah. |
+| Roman_Administration_Judea | DECLARES | Pompey_Annexation_63_BCE | Roman Administration Judea declares Pompey Annexation 63 BCE. |
+| Herodian_Kingship | ORGANIZES | Herodian_Temple_Renovation | Herodian Kingship organizes Herodian Temple Renovation. |
+| Temple_Destruction_70_CE | TRANSFORMS | Second_Temple | Temple Destruction 70 CE transforms Second Temple. |
+| Second_Temple_Dedication_515_BCE | ENABLES | Second_Temple | Second Temple Dedication 515 BCE enables Second Temple. |
+| Hillel | DEBATES | Shammai | Hillel debates Shammai. |
+| Pharisees | DEBATES | Sadducees | Pharisees debates Sadducees. |
+| Septuagint | TRANSLATES | Torah_Canonization | Septuagint translates Torah Canonization. |
+| Dead_Sea_Scrolls_Corpus | TRANSMITS | Torah_Canonization | Dead Sea Scrolls Corpus transmits Torah Canonization. |
+| Dead_Sea_Scrolls_Corpus | FRAMES | Great_Jewish_Revolt_66_70 | Dead Sea Scrolls Corpus frames Great Jewish Revolt 66 70. |
+| Qumran_Community | ORGANIZES | Sectarian_Practices | Qumran Community organizes Sectarian Practices. |
+| Herodian_Kingship | APPOINTS | Herod | Herodian Kingship appoints Herod. |
+| Synagogue_Network | TRANSMITS | Early_Liturgical_Texts | Synagogue Network transmits Early Liturgical Texts. |
+| Septuagint | TRANSMITS | Apocrypha/Deuterocanon | Septuagint transmits Apocrypha/Deuterocanon. |
+| Wisdom_Literature | TRANSMITS | Early_Liturgical_Texts | Wisdom Literature transmits Early Liturgical Texts. |
+| Dead_Sea_Scrolls_Corpus | EXEMPLIFIES | Essenes | Dead Sea Scrolls Corpus exemplifies Essenes. |
+| Zealots | PARTICIPATES_IN | Temple_Destruction_70_CE | Zealots participates in Temple Destruction 70 CE. |
+| Pharisees | PARTICIPATES_IN | Second_Temple_Dedication_515_BCE | Pharisees participates in Second Temple Dedication 515 BCE. |
+| Second_Temple_Dedication_515_BCE | OCCURS_IN | Jerusalem | Second Temple Dedication 515 BCE occurs in Jerusalem. |
+| Antiochus_IV_Decrees | OCCURS_IN | Jerusalem | Antiochus IV Decrees occurs in Jerusalem. |
+| Pompey_Annexation_63_BCE | OCCURS_IN | Jerusalem | Pompey Annexation 63 BCE occurs in Jerusalem. |
+| Herodian_Temple_Renovation | OCCURS_IN | Jerusalem | Herodian Temple Renovation occurs in Jerusalem. |
+| Hasmonean_Expansion | OCCURS_IN | Judea | Hasmonean Expansion occurs in Judea. |
+| Return_to_Zion | OCCURS_IN | Jerusalem | Return to Zion occurs in Jerusalem. |
+| Great_Jewish_Revolt_66_70 | OCCURS_IN | Judea | Great Jewish Revolt 66 70 occurs in Judea. |
+| Judah_haNasi | LEADS | Mishnah_Codification | Judah haNasi leads Mishnah Codification. |
+| Yavneh_Center | ORGANIZES | Yavneh_Reform | Yavneh Center organizes Yavneh Reform. |
+| Academies_Sura | ORGANIZES | Talmud_Redactions | Academies Sura organizes Talmud Redactions. |
+| Academies_Pumbedita | ORGANIZES | Talmud_Redactions | Academies Pumbedita organizes Talmud Redactions. |
+| Yohanan_ben_Zakkai | ORGANIZES | Yavneh_Reform | Yohanan ben Zakkai organizes Yavneh Reform. |
+| Rabbi_Akiva | PARTICIPATES_IN | Mishnah_Codification | Rabbi Akiva participates in Mishnah Codification. |
+| Rabbi_Akiva | PARTICIPATES_IN | Bar_Kokhba_Revolt | Rabbi Akiva participates in Bar Kokhba Revolt. |
+| Patriarchate | ORGANIZES | Council_of_Usha | Patriarchate organizes Council of Usha. |
+| Talmud_Jerusalem | COMMENTATES_ON | Mishnah | Talmud Jerusalem commentates on Mishnah. |
+| Talmud_Babylon | COMMENTATES_ON | Mishnah | Talmud Babylon commentates on Mishnah. |
+| Early_Midrashim | COMMENTATES_ON | Torah_Pentateuch | Early Midrashim commentates on Torah Pentateuch. |
+| Tosefta | COMMENTATES_ON | Mishnah | Tosefta commentates on Mishnah. |
+| Canon_and_Masorah_Development | ENABLES | Masoretic_Tradition | Canon and Masorah Development enables Masoretic Tradition. |
+| Mishnah_Codification | STANDARDIZES | Mishnah | Mishnah Codification standardizes Mishnah. |
+| Hadrianic_Decrees | FRAMES | Rabbinic_Judaism | Hadrianic Decrees frames Rabbinic Judaism. |
+| Rav | DEBATES | Shmuel | Rav debates Shmuel. |
+| Rava | COMMENTATES_ON | Mishnah | Rava commentates on Mishnah. |
+| Patriarchate | ORGANIZES | Mishnah_Codification | Patriarchate organizes Mishnah Codification. |
+| Academies_Tiberias | ORGANIZES | Talmud_Redactions | Academies Tiberias organizes Talmud Redactions. |
+| Rabbinic_Judaism | TRANSMITS | Mishnah | Rabbinic Judaism transmits Mishnah. |
+| Yavneh_Reform | OCCURS_IN | Yavneh | Yavneh Reform occurs in Yavneh. |
+| Council_of_Usha | OCCURS_IN | Usha | Council of Usha occurs in Usha. |
+| Talmud_Redactions | OCCURS_IN | Sura | Talmud Redactions occurs in Sura. |
+| Talmud_Redactions | OCCURS_IN | Pumbedita | Talmud Redactions occurs in Pumbedita. |
+| Talmud_Redactions | OCCURS_IN | Tiberias | Talmud Redactions occurs in Tiberias. |
+| Rashi | COMMENTATES_ON | Talmud_Babylon | Rashi commentates on Talmud Babylon. |
+| Maimonides | COMMENTATES_ON | Torah_Pentateuch | Maimonides commentates on Torah Pentateuch. |
+| Nachmanides | COMMENTATES_ON | Maimonides_Mishneh_Torah | Nachmanides commentates on Maimonides Mishneh Torah. |
+| Saadia_Gaon | COMMENTATES_ON | Geonic_Responsa | Saadia Gaon commentates on Geonic Responsa. |
+| Yosef_Karo | COMMENTATES_ON | Shulchan_Aruch | Yosef Karo commentates on Shulchan Aruch. |
+| Geonic_Academies | PUBLISHES | Geonic_Responsa | Geonic Academies publishes Geonic Responsa. |
+| Rabbinic_Courts | STANDARDIZES | Shulchan_Aruch | Rabbinic Courts standardizes Shulchan Aruch. |
+| Responsa_Networks | TRANSMITS | Codes_and_Commentaries | Responsa Networks transmits Codes and Commentaries. |
+| Ashkenazi_Communities | PUBLISHES | Tosafot | Ashkenazi Communities publishes Tosafot. |
+| Printing_Revolution | ENABLES | Codes_and_Commentaries | Printing Revolution enables Codes and Commentaries. |
+| Expulsion_from_Spain_1492 | FRAMES | Sefardi_Communities | Expulsion from Spain 1492 frames Sefardi Communities. |
+| Printing_Revolution | ENABLES | Early_Haskalah | Printing Revolution enables Early Haskalah. |
+| First_Crusade_1096 | FRAMES | Ashkenazi_Communities | First Crusade 1096 frames Ashkenazi Communities. |
+| Expulsion_from_England_1290 | FRAMES | Ashkenazi_Communities | Expulsion from England 1290 frames Ashkenazi Communities. |
+| Black_Death_Persecutions_1348_1351 | FRAMES | Responsa_Networks | Black Death Persecutions 1348 1351 frames Responsa Networks. |
+| Spanish_Inquisition_1478 | FRAMES | Sefardi_Communities | Spanish Inquisition 1478 frames Sefardi Communities. |
+| Expulsion_from_Portugal_1497 | FRAMES | Sefardi_Communities | Expulsion from Portugal 1497 frames Sefardi Communities. |
+| First_Crusade_1096 | OCCURS_IN | Mainz | First Crusade 1096 occurs in Mainz. |
+| First_Crusade_1096 | OCCURS_IN | Worms | First Crusade 1096 occurs in Worms. |
+| First_Crusade_1096 | OCCURS_IN | Speyer | First Crusade 1096 occurs in Speyer. |
+| Expulsion_from_Spain_1492 | OCCURS_IN | Spain | Expulsion from Spain 1492 occurs in Spain. |
+| Spanish_Inquisition_1478 | OCCURS_IN | Spain | Spanish Inquisition 1478 occurs in Spain. |
+| Expulsion_from_Portugal_1497 | OCCURS_IN | Portugal | Expulsion from Portugal 1497 occurs in Portugal. |
+| Rashi_Commentary | COMMENTATES_ON | Talmud_Babylon | Rashi Commentary commentates on Talmud Babylon. |
+| Karaite_Judaism | DISPUTES | Rabbinic_Judaism | Karaite Judaism disputes Rabbinic Judaism. |
+| Isaac_Luria | INTERPRETS | Kabbalah_(Safed | Isaac Luria interprets Kabbalah (Safed. |
+| Moses_Mendelssohn | ENDORSES | Haskalah | Moses Mendelssohn endorses Haskalah. |
+| Samson_Raphael_Hirsch | ENDORSES | Orthodox_Judaism | Samson Raphael Hirsch endorses Orthodox Judaism. |
+| Theodor_Herzl | ENDORSES | Zionist_Movement | Theodor Herzl endorses Zionist Movement. |
+| Rav_Kook | INTERPRETS | Zionist_Movement | Rav Kook interprets Zionist Movement. |
+| A.J._Heschel | ENDORSES | Conservative_Judaism | A.J. Heschel endorses Conservative Judaism. |
+| Seminaries | PROMULGATES | Orthodox_Judaism | Seminaries promulgates Orthodox Judaism. |
+| Academic_Bible_Scholarship | PUBLISHES | Critical_Editions | Academic Bible Scholarship publishes Critical Editions. |
+| Emancipation | ENABLES | Reform_Judaism | Emancipation enables Reform Judaism. |
+| State_of_Israel_Founding | ENABLES | Chief_Rabbinate_(various | State of Israel Founding enables Chief Rabbinate (various. |
+| Shoah | FRAMES | Modern_Responsa | Shoah frames Modern Responsa. |
+| Russian_Pogroms_1881_1884 | ENABLES | Zionist_Movement | Russian Pogroms 1881 1884 enables Zionist Movement. |
+| Dreyfus_Affair_1894_1906 | FRAMES | Zionist_Movement | Dreyfus Affair 1894 1906 frames Zionist Movement. |
+| Balfour_Declaration_1917 | ENABLES | Zionist_Movement | Balfour Declaration 1917 enables Zionist Movement. |
+| Nuremberg_Laws_1935 | FRAMES | Modern_Responsa | Nuremberg Laws 1935 frames Modern Responsa. |
+| UN_Partition_Plan_1947 | ENABLES | Zionist_Movement | UN Partition Plan 1947 enables Zionist Movement. |
+| Law_of_Return_1950 | STANDARDIZES | New_Codes | Law of Return 1950 standardizes New Codes. |
+| Eichmann_Trial_1961 | FRAMES | Modern_Responsa | Eichmann Trial 1961 frames Modern Responsa. |
+| Six_Day_War_1967 | FRAMES | Modern_Responsa | Six Day War 1967 frames Modern Responsa. |
+| Yom_Kippur_War_1973 | FRAMES | Modern_Responsa | Yom Kippur War 1973 frames Modern Responsa. |
+| Russian_Pogroms_1881_1884 | OCCURS_IN | Russia | Russian Pogroms 1881 1884 occurs in Russia. |
+| Dreyfus_Affair_1894_1906 | OCCURS_IN | France | Dreyfus Affair 1894 1906 occurs in France. |
+| Balfour_Declaration_1917 | OCCURS_IN | London | Balfour Declaration 1917 occurs in London. |
+| Nuremberg_Laws_1935 | OCCURS_IN | Germany | Nuremberg Laws 1935 occurs in Germany. |
+| Eichmann_Trial_1961 | OCCURS_IN | Jerusalem | Eichmann Trial 1961 occurs in Jerusalem. |
+| State_of_Israel_Founding | OCCURS_IN | Tel_Aviv | State of Israel Founding occurs in Tel Aviv. |
 
 ## Comprehensive Hebrew Cluster Tree (Periods, Institutions, Texts, Doctrines, Movements, Events)
 Note: Use Doctrine/Idea (D) nodes for period/category taxonomies; Institutions (I) for organized bodies; Texts/Artifacts (T) for corpora/works; Movements (M) for socio‑religious groupings; Events (E) for dated processes; Places (L) for geography. Clusters are curated subgraphs under the relevant parent (period/theme).
