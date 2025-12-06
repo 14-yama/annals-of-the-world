@@ -12,7 +12,7 @@ from pathlib import Path
 import shutil
 from datetime import datetime, timezone
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 CLUSTERS_DIR = ROOT / 'docs' / 'clusters'
 
 
@@ -54,7 +54,8 @@ def parse_readme(readme_path: Path, cluster_slug: str):
                     current_type = None
             continue
 
-        if line.strip().startswith('|') and '---' not in line:
+        # Treat any Markdown row inside a recognized section as a node row.
+        if current_type and line.strip().startswith('|') and '---' not in line:
             parts = [p.strip() for p in line.split('|')[1:-1]]
             if not parts:
                 continue
@@ -71,27 +72,12 @@ def parse_readme(readme_path: Path, cluster_slug: str):
             seen.add(slug)
             name = slug.replace('_', ' ').replace('-', ' ')
 
-            # Determine label: prefer explicit G/C code column when present,
-            # otherwise fall back to section-based mapping.
-            label = None
-            if len(parts) > 1:
-                gc = parts[1].upper()
-                if gc == 'P':
-                    label = 'Person'
-                elif gc == 'I':
-                    label = 'Institution'
-                elif gc == 'T':
-                    label = 'Text'
-                elif gc == 'A':
-                    label = 'Artifact'
-                elif gc == 'M':
-                    label = 'Movement'
-                elif gc == 'E':
-                    label = 'Event'
-                elif gc == 'G':
-                    label = 'Place'
-            if label is None:
-                label = current_type or 'Concept'
+            # Use the section-derived type as the canonical node label.
+            # Sections are already grouped as Persons (P), Institutions (I),
+            # Texts/Artifacts (T), Movements (M), Events (E), Places (L).
+            # The G/C column in the README is a generic/concrete marker
+            # and should NOT override the semantic label.
+            label = current_type or 'Concept'
 
             # Build node with registry-compliant attributes
             node = {
@@ -160,7 +146,7 @@ def write_nodes(cluster_slug: str, nodes: list, readme_path: Path):
             'registry': 'docs/nodes/node-attribute-registry.md',
             'source': str(readme_path.relative_to(ROOT)),
             'generated_at': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%MZ'),
-            'generator': 'scripts/generate_nodes_from_readmes.py'
+            'generator': 'scripts/admin/generate_nodes_from_readmes.py'
         },
         'nodes': nodes
     }
