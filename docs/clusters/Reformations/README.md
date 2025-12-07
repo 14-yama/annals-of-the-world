@@ -4,22 +4,23 @@
 
 _Auto-generated from wiring; edit freely for nuance._
 
-| Start | Type | End | Description |
-| ----- | ---- | --- | ----------- |
-| Reformations | INCLUDES | English_Reformation | English Reformation is part of the broader Reformations landscape. |
-| Reformations | INCLUDES | German_Reformation | German Reformation is part of the broader Reformations landscape. |
-| Reformations | INCLUDES | Swiss_Reformation | Swiss Reformation is part of the broader Reformations landscape. |
-| Reformations | INCLUDES | Radical_Reformation | Radical Reformation is cataloged within the Reformations overview. |
-| Reformations | INCLUDES | Scottish_Reformation | Scottish Reformation is part of the broader Reformations landscape. |
-| Reformations | INCLUDES | French_Reformation | French Reformation is part of the broader Reformations landscape. |
-| Reformations | INCLUDES | Dutch_Reformation | Dutch Reformation is part of the broader Reformations landscape. |
-| Reformations | INCLUDES | Scandinavian_Reformations | Scandinavian Reformations are part of the broader Reformations landscape. |
-| Reformations | INCLUDES | Bohemian_Moravian_Reformation | Bohemian/Moravian Reformation feeds into the broader Reformations narrative. |
-| Reformations | INCLUDES | Polish_Lithuanian_Reformation | Polish-Lithuanian Reformation is tracked within the Reformations overview. |
-| Reformations | INCLUDES | Catholic_Reformation | Catholic Reformation is cataloged within the Reformations overview. |
-| Reformations | CONNECTS | Early_Christianity | Early Christianity connects to Reformation-era developments. |
-| Reformations | CONNECTS | Hebrew_Tradition | Hebrew Tradition connects to Reformation-era developments. |
-| Reformations | CONNECTS | Jewish-Islamic_Exchange | Jewish-Islamic Exchange connects to Reformation-era developments. |
+| Start | Type | End | Description | Evidence URL | Citation Style (Chicago 17) | Page Refs | Source Note |
+| ----- | ---- | --- | ----------- | ------------ | ------------------------- | --------- | ----------- |
+| ----- | ---- | --- | ----------- |  | Chicago 17 |  |  |
+| Reformations | INCLUDES | English_Reformation | English Reformation is part of the broader Reformations landscape. |  | Chicago 17 |  |  |
+| Reformations | INCLUDES | German_Reformation | German Reformation is part of the broader Reformations landscape. |  | Chicago 17 |  |  |
+| Reformations | INCLUDES | Swiss_Reformation | Swiss Reformation is part of the broader Reformations landscape. |  | Chicago 17 |  |  |
+| Reformations | INCLUDES | Radical_Reformation | Radical Reformation is cataloged within the Reformations overview. |  | Chicago 17 |  |  |
+| Reformations | INCLUDES | Scottish_Reformation | Scottish Reformation is part of the broader Reformations landscape. |  | Chicago 17 |  |  |
+| Reformations | INCLUDES | French_Reformation | French Reformation is part of the broader Reformations landscape. |  | Chicago 17 |  |  |
+| Reformations | INCLUDES | Dutch_Reformation | Dutch Reformation is part of the broader Reformations landscape. |  | Chicago 17 |  |  |
+| Reformations | INCLUDES | Scandinavian_Reformations | Scandinavian Reformations are part of the broader Reformations landscape. |  | Chicago 17 |  |  |
+| Reformations | INCLUDES | Bohemian_Moravian_Reformation | Bohemian/Moravian Reformation feeds into the broader Reformations narrative. |  | Chicago 17 |  |  |
+| Reformations | INCLUDES | Polish_Lithuanian_Reformation | Polish-Lithuanian Reformation is tracked within the Reformations overview. |  | Chicago 17 |  |  |
+| Reformations | INCLUDES | Catholic_Reformation | Catholic Reformation is cataloged within the Reformations overview. |  | Chicago 17 |  |  |
+| Reformations | CONNECTS | Early_Christianity | Early Christianity connects to Reformation-era developments. |  | Chicago 17 |  |  |
+| Reformations | CONNECTS | Hebrew_Tradition | Hebrew Tradition connects to Reformation-era developments. |  | Chicago 17 |  |  |
+| Reformations | CONNECTS | Jewish-Islamic_Exchange | Jewish-Islamic Exchange connects to Reformation-era developments. |  | Chicago 17 |  |  |
 
 ## Taxonomy
 
