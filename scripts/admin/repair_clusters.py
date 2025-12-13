@@ -120,7 +120,7 @@ def create_stub_node(slug: str, cluster: str) -> dict:
     return {
         "slug": slug,
         "name": name,
-        "label": "Concept",
+        "label": "Idea",
         "status": "PROPOSED",
         "workflow_stage": "PROPOSED",
         "governance_version": 5,

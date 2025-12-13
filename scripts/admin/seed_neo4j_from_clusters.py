@@ -95,7 +95,7 @@ def load_relationships(path: Path) -> List[Dict]:
 
 
 def sanitize_label(value: Optional[str]) -> str:
-    return (value or "Concept").strip().replace(" ", "_")
+    return (value or "Idea").strip().replace(" ", "_")
 
 
 def sanitize_rel_type(value: Optional[str]) -> str:
