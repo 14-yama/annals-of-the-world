@@ -1,0 +1,148 @@
+# Cluster Repair Report
+
+Generated: 2025-12-13T18:16Z
+
+Mode: PRODUCTION
+
+## Summary
+- Clusters processed: 15
+- Total nodes added: 971
+- Total relationships removed: 0
+- Total relationships fixed: 1926
+
+## Per-Cluster Details
+
+### Bohemian_Moravian_Reformation
+- Clean nodes: 110
+- Clean relationships: 69
+- Nodes added: 62
+- Relationships removed: 0
+- Relationships fixed: 118
+- Isolated nodes: 0
+- Added nodes: Programmatic_statement_of_Hussite_demands, Bohemian_town_linked_to_printingeducation, De_Ecclesia_Hus, Practicedoctrine_of_communion_in_both_kinds, Settlement_recognizing_Utraquist_practice, Nonviolence_and_simplicity_ideals, Confessional_texts_Kralice_Bible_toward_exile, Ecumenical_council_condemning_Huss_teachings, Council_participants_shaping_decisions, Czech_Bible_translation_by_the_Brethren, Council_authority_emphasis_over_papal_primacy, Curated_view_of_HussiteUtraquist_and_Brethren_reforms, Lutheran_doctrinalpolity_reforms, Preachertheologian_advocating_reform_executed_at_Constance, Unity_of_the_Brethren_Formation_14571520, Council_sessions_condemning_teachings, Defeat_leading_to_re-Catholicization_and_exile, Presses_disseminating_vernacular_works, Hussite_military_leader, University_fostering_reform_discourse...
+
+### Catholic_Reformation
+- Clean nodes: 112
+- Clean relationships: 77
+- Nodes added: 61
+- Relationships removed: 0
+- Relationships fixed: 120
+- Isolated nodes: 0
+- Added nodes: Pope_concluding_Trent_and_issuing_catechism, Administrative_apparatus_of_the_church, Chinese_port_and_mission_gateway, Renewal_of_discipline_doctrine_and_spirituality, Papal_city_and_curial_center, Missionary_expanding_Catholic_presence_in_Asia, Jesuit_order_coordinating_missionseducation, Ignatiuss_manual_for_discernment_and_formation, Jesuit_founder_shaping_Catholic_renewal, Response_to_Protestant_expansion, Ecumenical_council_defining_doctrinediscipline, Governing_norms_for_Jesuit_order, Standard_Roman_breviary, Tribunal_addressing_doctrinal_offenses, Papal_bull_establishing_the_Society_of_Jesus, Opening_period_of_the_council, Pre-Tridentine_Reform_Currents_1490s1545, Theologian_defending_post-Tridentine_doctrine, Trainingstandardization_of_clergy, Structuring_of_religious_life_under_authorities...
+
+### Dutch_Reformation
+- Clean nodes: 103
+- Clean relationships: 68
+- Nodes added: 55
+- Relationships removed: 0
+- Relationships fixed: 110
+- Isolated nodes: 0
+- Added nodes: Itinerant_preachers_organizing_field_meetings, Author_of_the_Belgic_Confession, City_impacted_by_reforms, University_shaping_theological_debates, Leader_of_revolt_and_protector_of_reforms, Movement_supporting_Remonstrant_views, Southern_city_and_iconoclasm_flashpoint, Curated_view_of_the_Dutch_Reformation, Dordt_and_Confessional_Settlement_15881619, Iconoclasm_and_early_organization, Governance_order_for_the_Reformed_churches, National_church_organization, Movement_opposing_Remonstrants, Catechism_influential_in_Dutch_churches, Catechism_co-author_and_organizer, Ad_hoc_bodies_guiding_congregations, Early_governance_articles_for_churches, Dutch_Reformation, Provincial_estates_with_local_authority, Regents_advisor_opposing_reforms...
+
+### Early_Christianity
+- Clean nodes: 242
+- Clean relationships: 198
+- Nodes added: 132
+- Relationships removed: 0
+- Relationships fixed: 263
+- Isolated nodes: 0
+- Added nodes: Roman_destruction_of_the_Jerusalem_temple, Roman_actions_against_Christians_after_the_fire, Christian_Tradition, Author_associated_with_the_Shepherd, Execution_event_central_to_early_proclamation, Synoptic_Traditions_source_strata, Alexandrian_church_and_catechetical_tradition, North_African_episcopal_seat, Bishop_and_letterwriter_en_route_to_martyrdom, Early_community_centered_in_Jerusalem, Apostolic_leader_linked_with_Jerusalem_and_early_mission, Macedonian_city_with_an_early_assembly, Roman_Empire, Early_church_manual_of_teaching_and_practice, Compiler_of_early_teaching_manual, Instructional_lineage_from_Alexandria, Bishop_of_Carthage_addressing_persecution_and_unity, Apologist_engaging_GrecoRoman_philosophy, Southern_highland_region_around_Jerusalem, Egyptian_metropolis_and_teaching_center...
+
+### English_Reformation
+- Clean nodes: 239
+- Clean relationships: 221
+- Nodes added: 121
+- Relationships removed: 0
+- Relationships fixed: 244
+- Isolated nodes: 0
+- Added nodes: University_city_and_site_of_martyrdoms, Authorized_Elizabethan_Bible, Spanish_naval_campaign_against_England, Regent_advancing_Protestant_policies, English_Realm, Measures_restoring_Catholic_structures, Enactment_of_the_Elizabethan_settlement, Marianera_episcopal_leadership, Boy_king_under_Protestant_reforms, John_Foxes_martyrology, Lord_Protector_leading_early_reforms, Bishop_martyred_during_Marian_persecutions, Reform_movement_seeking_further_changes, Authorized_sermons_for_instruction, Prosecutions_for_heresy_under_Mary, Issuance_of_the_ThirtyNine_Articles, Southwestern_English_county, English_university_shaping_clergy_and_thought, Overseas_seminaries_training_English_clergy, University_city_shaping_clergy_and_thought...
+
+### French_Reformation
+- Clean nodes: 100
+- Clean relationships: 66
+- Nodes added: 54
+- Relationships removed: 0
+- Relationships fixed: 106
+- Isolated nodes: 0
+- Added nodes: Commercial_city_with_Reformed_presence, Confession_adopted_by_French_churches, Evangelical_humanism_and_shocks_of_1534, Southern_city_notable_in_conflicts, Organization_of_Reformed_congregations, Wars_of_Religion_and_Settlement_15621598, Early_Evangelical_Currents_1510s1534, Evangelistorganizer_aiding_French_congregations, Catholic_confederation_resisting_Huguenots, Judicial_body_enforcing_religious_policy, Catholic_magnate_opposing_Huguenots, Antimass_placards_crisis_provoking_repression, Enactment_of_limited_toleration, Settlement_granting_limited_rights_to_Huguenots, Huguenot_leader_and_royal_advisor, Theological_faculty_shaping_condemnations, Humanist_translator_and_exegete, Ecclesiastical_discipline_body_interface, Formalization_of_settlement_by_Henry_IV, Royal_patron_fostering_evangelical_circles...
+
+### German_Reformation
+- Clean nodes: 154
+- Clean relationships: 124
+- Nodes added: 80
+- Relationships removed: 0
+- Relationships fixed: 164
+- Isolated nodes: 0
+- Added nodes: Imperial_city_hosting_multiple_diets, Translation_city_reforms_and_Augsburg_Confession, Luthers_seclusion_producing_the_German_NT, Ecclesiastical_legal_apparatus_issuing_decisions, Expansion_Conflict_and_Settlement_15301555, Central_German_region_of_social_unrest, Wittenberg_reformer_engaged_in_early_iconoclasm, Urban_magistracy_implementing_reform, Opposition_to_indulgence_preaching_and_abuses, Saxon_elector_protecting_Luther, Legal_settlement_establishing_cuius_regio_eius_religio, Publicating_of_theses_sparking_disputation, Settlement_legalizing_Lutheranism_in_the_empire, Radical_reform_leader_tied_to_the_Peasants_War, Former_priest_shaping_Anabaptist_tradition, Colloquy_seeking_agreement_on_the_Eucharist, Imperial_city_hosting_the_1521_diet, Disputation_points_critiquing_indulgences, Saxon_city_hosting_key_debates, Episodes_of_image_removal_during_urban_reforms...
+
+### Hebrew_Tradition
+- Clean nodes: 196
+- Clean relationships: 169
+- Nodes added: 7
+- Relationships removed: 0
+- Relationships fixed: 4
+- Isolated nodes: 4
+- Added nodes: Chief_Rabbinate_various, Kabbalah_Safed, jerusalem, Prophetic_Writings_early, abraham, Temple_Rededication_Hanukkah, Jewish
+
+### Jewish-Islamic_Exchange
+- Clean nodes: 226
+- Clean relationships: 196
+- Nodes added: 125
+- Relationships removed: 0
+- Relationships fixed: 245
+- Isolated nodes: 0
+- Added nodes: Hebrew_translations_of_ArabicJudeoArabic_works, Violent_outbreak_targeting_the_Jewish_community_in_Granada, Jewish_participation_in_Arabiclanguage_intellectual_culture, Lexicographic_works_bridging_Hebrew_and_Arabic, Karaite_compendium_on_law_and_sectarian_history, Andalusian_philosopher_and_author_of_Hayy_ibn_Yaqzan, Philosopherexegete_engaging_Averroist_ideas, Rabbinic_study_institutions_in_Andalusia, Devotional_renewal_associated_with_Abraham_Maimonides, Gulf_port_city_and_scholarly_node_in_early_Abbasid_networks, Barcelona_Bans_1305, Poetgrammarian_debating_metrics_and_grammar, Philosopher_synthesizing_logic_and_political_theory, Student_and_interlocutor_of_Maimonides, Karaite_judicial_authority_for_legal_rulings, Maimonides_philosophical_summa, Provençal_rabbinic_court_in_controversy, Accrual_of_communal_documents_preserved_in_the_Ben_Ezra_synagogue_geniza, Grammarian_shaping_Hebrew_linguistic_science, Translator_bridging_Arabic_science_into_Hebrew...
+
+### Polish_Lithuanian_Reformation
+- Clean nodes: 102
+- Clean relationships: 67
+- Nodes added: 57
+- Relationships removed: 0
+- Relationships fixed: 116
+- Isolated nodes: 0
+- Added nodes: Royalacademic_city_in_Poland, Suppression_of_the_academy, Diversification_and_Brethren_1560s1590s, Nobles_reformism_and_early_church_orders, City_of_union_and_printing, Unions_bans_and_exiles_shaping_outcomes, Catholic_educational_institutions, Periods_of_relative_religious_toleration, Coordinating_synod_among_Reformed_groups, Jesuit_polemicist_and_preacher, Noble_elites_driving_regional_outcomes, Noble-led_reform_initiatives, Reformed_hub_in_Lesser_Poland, Assemblies_coordinating_Reformed_groups, Polish_Bible_translation_influencing_reforms, Statesman_involved_in_religious_policies, Monarchical_administration, Articles_codifying_confession_for_communities, Union_forming_the_Uniate_Greek_Catholic_Church, Monarch_during_late_confessional_settlements...
+
+### Radical_Reformation
+- Clean nodes: 99
+- Clean relationships: 74
+- Nodes added: 52
+- Relationships removed: 0
+- Relationships fixed: 106
+- Isolated nodes: 0
+- Added nodes: Hutterite_theologian_and_apologist, Theologicaldisciplinary_texts_of_Hutterites, Martyrdom_of_Sattler_1527, Early_gathered_churches_practicing_adult_baptism, Initiation_of_adult_baptisms_among_Swiss_Brethren, Former_monk_and_Anabaptist_leadermartyr, Mennos_Foundation_of_Christian_Doctrine, Imperial_city_with_religious_ferment, Region_hosting_communal_Anabaptist_settlements, Chronicle_preserving_martyr_testimonies, Zurich_collaborator_involved_in_disputes_interface, Spread_and_diversification_under_pressure, Consolidation_15501600, Assemblies_coordinating_doctrine_and_practice, Early_Swiss_Brethren_evangelist, Spiritualist_theologian_advocating_inner_reform, Curated_view_of_Anabaptist_and_related_radical_streams, Collective_remembrance_via_martyrologies, Networks_of_Dutch_congregations, Eastern_European_realm_providing_refuges...
+
+### Reformations
+- Clean nodes: 9
+- Clean relationships: 14
+- Nodes added: 4
+- Relationships removed: 0
+- Relationships fixed: 0
+- Isolated nodes: 4
+- Added nodes: Reformations, Swiss_Reformation, Scandinavian_Reformations, Scottish_Reformation
+
+### Scandinavian_Reformations
+- Clean nodes: 81
+- Clean relationships: 53
+- Nodes added: 44
+- Relationships removed: 0
+- Relationships fixed: 92
+- Isolated nodes: 0
+- Added nodes: Swedish_Bible_translation, Cathedral_chapter_shaping_policy, Confiscations_and_reallocation_of_church_wealth, Academic_institution_in_Danish_reforms, National_Lutheran_church_in_Denmark, Council_advising_Danish_monarchy, Ecclesiastical_sees_under_Danish_crown, Swedish_king_initiating_reforms, Danish-Norwegian_consolidation_under_crown, Curated_view_of_Nordic_Lutheran_settlements, Monarch_continuing_consolidation, Danish_Bible_translation, Swedish_Lutheran_Settlement_15271593, Danish_church_politydiscipline, War_determining_Denmarks_confession, King_negotiating_liturgical_policy, Swedish_royal_reforms_to_Uppsala_Synod, National_Lutheran_church_in_Sweden, Reformer_and_preacher_in_Stockholm, Estates_decision_enabling_royal_control...
+
+### Scottish_Reformation
+- Clean nodes: 105
+- Clean relationships: 74
+- Nodes added: 59
+- Relationships removed: 0
+- Relationships fixed: 118
+- Isolated nodes: 0
+- Added nodes: Settlement_via_parliament_and_kirk_structures, Noble_coalition_advancing_reform, Executive_council_implementing_policy, Doctrinal_ratification_by_parliament, Regent_navigating_FrenchScottish_politics, Statute_affirming_presbyterian_governance, English_intervention_leaders_interface, Preaching_texts_fueling_evangelical_sentiment, Parliament_enacting_the_settlement, Academic_and_clerical_training_center, Royal_Supremacy_Scotland, Reformation_Parliament_and_Settlement_1560, Church_polity_emphasizing_elders_and_assemblies, Doctrinal_basis_of_the_settlement, Governance_during_minorityregency, Noble_coalition_acting_as_proto-institution, Seizure_of_the_king_by_nobles, Pre-Reformation_Currents_1520s1559, Statutes_curtailing_kirk_autonomy, Mature_presbyterian_polity_treatise...
+
+### Swiss_Reformation
+- Clean nodes: 111
+- Clean relationships: 82
+- Nodes added: 58
+- Relationships removed: 0
+- Relationships fixed: 120
+- Isolated nodes: 0
+- Added nodes: Swiss_Brethren_pioneer_interface_to_Radical, Swiss_city_adopting_Reformed_changes, Zwinglis_propositions_at_Zurich_disputations, Liturgical_and_church_order_for_Zurich, Genevan_Ascendancy_15411564, Conflicts_between_Catholic_and_Reformed_cantons, Basels_liturgicaldisciplinary_order, Evangelist_instrumental_in_Geneva_reforms, Ecclesiastical_discipline_body_in_Geneva, Translator_and_Zurich_reform_collaborator, University_city_with_humanist_networks, Establishment_of_Geneva_Academy, Institutionalization_of_reforms_via_ordersconfessions, Public_debates_grounding_Zurich_reform, Articles_from_colloquy_attempting_concord, Early_Zurich_Reform_15191525, Debate_leading_to_Bernese_reform, Early_Anabaptist_martyred_in_Zurich_interface, Swiss_urban_hub_of_early_reforms, Challenges_to_Trinitarian_doctrine_interface...

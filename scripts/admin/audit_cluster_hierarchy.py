@@ -40,6 +40,28 @@ def load_relationships():
     return rels
 
 
+def load_nodes():
+    nodes = {}  # cluster -> set(slugs)
+    for p in sorted((ROOT / 'data' / 'Nodes').iterdir()):
+        if p.suffix != '.json':
+            continue
+        if 'bak.' in p.name:
+            continue
+        try:
+            data = json.loads(p.read_text(encoding='utf-8'))
+        except Exception:
+            continue
+        cluster = data.get('_meta', {}).get('cluster')
+        slugs = set()
+        for n in data.get('nodes', []):
+            slug = n.get('slug')
+            if slug:
+                slugs.add(slug)
+        if cluster:
+            nodes[cluster] = slugs
+    return nodes
+
+
 def build_graph(clusters, rels):
     parents = defaultdict(list)  # child -> [parents]
     children = defaultdict(list)  # parent -> [children]
@@ -132,6 +154,18 @@ def write_report(clusters, parents, children, rel_index, roots, cycles, depths):
     lines.append('## Per-cluster details')
     lines.append('| cluster | parents | parent_files | children_count | depth | note |')
     lines.append('|---|---|---|---:|---:|---|')
+    # augment with node coverage checks
+    nodes_map = load_nodes()
+    # build map of relationships by cluster file
+    rels_by_file = defaultdict(list)
+    for fname, r in rel_index.items():
+        # rel_index maps slug -> list of (file, rel), but we want file -> rels
+        pass
+    # build file-level relationships
+    file_rels = defaultdict(list)
+    for fname, r in load_relationships():
+        file_rels[fname].append(r)
+
     for c in sorted(clusters):
         ps = parents.get(c, [])
         parent_names = ', '.join(p for p,_ in ps) if ps else ''
@@ -143,7 +177,63 @@ def write_report(clusters, parents, children, rel_index, roots, cycles, depths):
             note = 'multiple parents'
         elif len(ps) == 0:
             note = 'root'
-        lines.append(f'| {c} | {parent_names} | {parent_files} | {child_count} | {d if d is not None else "?"} | {note} |')
+        # node coverage
+        node_slugs = nodes_map.get(c, set())
+        # collect slugs referenced in relationships for this cluster file
+        rel_file = f'relationships.{c}.json'
+        referenced = set()
+        missing_refs = set()
+        for r in file_rels.get(rel_file, []):
+            s = r.get('start_slug')
+            e = r.get('end_slug')
+            if s:
+                referenced.add(s)
+                if not any(s in sset for sset in nodes_map.values()):
+                    missing_refs.add(s)
+            if e:
+                referenced.add(e)
+                if not any(e in sset for sset in nodes_map.values()):
+                    missing_refs.add(e)
+        nodes_without_edges = sorted(node_slugs - referenced)
+        note_extra = ''
+        if nodes_without_edges:
+            note_extra = f' nodes_without_edges={len(nodes_without_edges)}'
+        if missing_refs:
+            note_extra += f' missing_node_refs={len(missing_refs)}'
+        combined_note = (note + note_extra).strip()
+        lines.append(f'| {c} | {parent_names} | {parent_files} | {child_count} | {d if d is not None else "?"} | {combined_note} |')
+
+    # Add detailed per-cluster node reports
+    lines.append('')
+    lines.append('## Per-cluster node coverage')
+    for c in sorted(clusters):
+        node_slugs = nodes_map.get(c, set())
+        rel_file = f'relationships.{c}.json'
+        referenced = set()
+        missing_refs = set()
+        for r in file_rels.get(rel_file, []):
+            s = r.get('start_slug')
+            e = r.get('end_slug')
+            if s:
+                referenced.add(s)
+                if not any(s in sset for sset in nodes_map.values()):
+                    missing_refs.add((s, 'start', r.get('_key')))
+            if e:
+                referenced.add(e)
+                if not any(e in sset for sset in nodes_map.values()):
+                    missing_refs.add((e, 'end', r.get('_key')))
+        nodes_without_edges = sorted(node_slugs - referenced)
+        lines.append(f'### {c}')
+        lines.append(f'- total nodes: {len(node_slugs)}')
+        lines.append(f'- nodes without relationships in {rel_file}: {len(nodes_without_edges)}')
+        if nodes_without_edges:
+            for n in nodes_without_edges[:50]:
+                lines.append(f'  - {n}')
+        lines.append(f'- missing node references in relationships: {len(missing_refs)}')
+        if missing_refs:
+            for m in list(missing_refs)[:50]:
+                lines.append(f'  - {m[0]} ({m[1]}) referenced in rel _key={m[2]}')
+        lines.append('')
 
     lines.append('\n')
     lines.append('## Cycles')
