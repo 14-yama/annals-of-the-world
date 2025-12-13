@@ -1,0 +1,27 @@
+{
+  "_meta": {
+    "cluster": "European_Reformations",
+    "notes": "Minimal relationships file to place European_Reformations under Reformations",
+    "registry": "docs/guidelines/node-relationship-vocabulary.md",
+    "schema_doc": "docs/guidelines/schema.md",
+    "source": "auto:script",
+    "generated_at": "2025-12-13T00:00Z",
+    "generator": "scripts/admin/ensure_is_part_of.py"
+  },
+  "relationships": [
+    {
+      "id": 1,
+      "start_slug": "European_Reformations",
+      "end_slug": "Reformations",
+      "type": "IS_PART_OF",
+      "description": "European_Reformations has parent root Reformations.",
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": "Chicago 17",
+      "page_refs": null,
+      "source_note": "auto:added:attach_european_to_reformations",
+      "_key": "European_Reformations|IS_PART_OF|Reformations",
+      "confidence_score": null
+    }
+  ]
+}
