@@ -164,3 +164,11 @@ python scripts/ingest_nodes.py data/Nodes/nodes.csv  # or explicitly import CSV
 * Hebrew Bible cluster: Expanded scaffold drafted (≈200 nodes, spanning Creation → today).
 * Other clusters (Islamic Philosophy, Meritocracy, etc.): Upcoming.
 
+**New Important Docs**
+
+- **Reformation framework edges:** [docs/clusters/reformation_framework_edges.md](docs/clusters/reformation_framework_edges.md) — human-friendly table mapping each Reformation cluster edge to the interpretive framework verb used during curation.
+- **Reformations cluster diagram:** [data/Relationships/cluster_tree_mermaid.md](data/Relationships/cluster_tree_mermaid.md) — updated Mermaid top→down tree for the Reformations clusters (single top node with four second-tier parents).
+- **Cluster hierarchy audit:** [data/Relationships/cluster_hierarchy_audit.md](data/Relationships/cluster_hierarchy_audit.md) — results of the repo-wide IS_PART_OF normalization and hierarchy checks.
+- **Cluster repair report:** [data/Relationships/cluster_repair_report.md](data/Relationships/cluster_repair_report.md) — detailed list of relationship edits and backups created during normalization.
+- **Relations vocabulary update:** [docs/guidelines/node-relationship-vocabulary.md](docs/guidelines/node-relationship-vocabulary.md) — vocabulary governance file (recently updated to include `IS_PART_OF`).
+

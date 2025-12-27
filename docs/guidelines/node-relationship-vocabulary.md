@@ -56,6 +56,7 @@ Example triples:
 | OCCURS_IN | Event/Process location anchor | E → L | Single primary place per edge; replicate for multiplex locales | A |
 | CAUSES | Direct causal contribution | E/T/D/M → E/D | Not for weak correlation | A or B |
 | TRANSFORMS | Deep structural change | E/T/M → D/I/T | Provide before/after note | A or B |
+| IS_PART_OF | Membership / part–whole relation | C/E/T → C/E/T | Use for structural/component membership only; not for causality or loose association | A |
 | STANDARDIZES | Imposes uniform practice/text | I/P → D/T | Distinct from CANONIZES (status vs. uniformity) | A + B |
 | CANONIZES | Confers canonical status | I/P → T/D | Only when formal recognition | A primary record |
 | PRESERVES | Actively conserves text/practice | I/P → T/D | Use when continuity risk documented | A or B |
