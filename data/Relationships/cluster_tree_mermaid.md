@@ -6,15 +6,18 @@ Paste this block into any Markdown file that supports Mermaid (GitHub, GitLab, M
 
 ```mermaid
 flowchart TB
-  %% Top-level parents
+  %% Top-level parents (single top → second level as in sketch)
   Reformations["Reformations"]
   European_Reformations["European Reformations"]
   Christian_Tradition["Christian Tradition"]
   Interreligious_Exchange["Interreligious Exchange"]
   Hebrew_Tradition_root["Hebrew Tradition (root)"]
 
-  %% Children of European_Reformations
+  %% Children / second tier under Reformations
   Reformations --> European_Reformations["European Reformations"]
+  Reformations --> Christian_Tradition["Christian Tradition"]
+  Reformations --> Interreligious_Exchange["Interreligious Exchange"]
+  Reformations --> Hebrew_Tradition_root["Hebrew Tradition (root)"]
   European_Reformations --> English_Reformation["English Reformation"]
   European_Reformations --> German_Reformation["German Reformation"]
   European_Reformations --> Swiss_Reformation["Swiss Reformation"]
