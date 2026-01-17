@@ -42,3 +42,16 @@ build/
 
 ## Node modules
 ui/node_modules
+
+# Virtual environment used by this project
+.venv/
+
+# Backup and temporary relationship exports
+data/Relationships/*.bak*
+
+# Seed examples and local demo files (not for production)
+data/Nodes/nodes.seed_*.json
+data/Relationships/relationships.seed_*.json
+
+# Scaffold and generated docs
+scaffold/
