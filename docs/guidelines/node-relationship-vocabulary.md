@@ -221,6 +221,39 @@ Aliases & Deprecations
 - Promote to Evidence node when same short-ref appears on ≥2 distinct edges across periods or node types.
 - Optional property `evidence_detail` for page/folio; keep concise (e.g., "p. 47b–48a").
 
+### DOCUMENTS (Evidence canonical verb)
+
+- Definition: `DOCUMENTS` is the canonical Evidence→content verb. Use when an Evidence node (book, article, report, archival item) provides documentary support for a person, institution, text, doctrine, movement, or event.
+- Semantics: A `:DOCUMENTS` edge asserts that the Evidence node contains, records, or attests to the factual or interpretive material relevant to the target node. Prefer active voice: the Evidence documents the content.
+- Properties recommended on `DOCUMENTS` edges:
+	- `page_refs` (string): precise page or folio range when applicable.
+	- `cited_rel_id` or `relationship_id` (int): references the relationship object this citation supports, if relevant.
+	- `note` (string): brief curator note or fragment description (optional).
+- When to use:
+	- Use `DOCUMENTS` when the source is reusable, bibliographic, or will be cited more than once.
+	- Keep relationship-level `page_refs` or inline citation if the citation is highly local (exact fragment) and you also want the Evidence node recorded for reuse.
+- Example triples:
+
+	- (evidence_Duffy_2009_Fires_of_Faith)-[:DOCUMENTS {page_refs:'23-44', cited_rel_id:47}]->(Lord_Protectorate)
+	- (evidence_Duffy_2009_Fires_of_Faith)-[:DOCUMENTS {page_refs:'56-94', cited_rel_id:53}]->(Western_Rebellion_1549)
+
+Notes:
+- `DOCUMENTS` is the canonical Evidence→content verb; traverse “content → evidence” using incoming `DOCUMENTS` edges (i.e., `MATCH (e:Evidence)-[:DOCUMENTS]->(n)`), rather than maintaining a second inverse verb.
+- Adding `isbn`, `doi`, or other identifier properties to `:Evidence` nodes is encouraged to improve discoverability and external linking.
+
+Data modeling recommendation (source-of-truth):
+- Keep citations centralized on the relationship objects in the cluster relationship JSON (e.g., `evidence_slug`, `page_refs`, `citation_style`).
+- Materialize graph-level Evidence→content edges (`DOCUMENTS`) during ingest/linking as a derived view.
+- Avoid maintaining a separate curated JSON file that lists all `DOCUMENTS` edges, because it duplicates the same facts and will drift from the relationship file over time.
+
+Relationship JSON evidence fields (operational semantics):
+- `evidence_slug`: preferred; points to a reusable Evidence record (see `data/Evidence/*.json`) and to a Neo4j `(:Evidence {slug})` node.
+- `evidence_url`: inline-only citation URL (use when the citation is one-off or you do not yet have an Evidence node).
+- `citation_style`: e.g. "Chicago 17".
+- `page_refs`: page/folio range for the claim.
+- `inline_evidence`: derived boolean; `true` when `evidence_url` is non-null.
+- `evidence_node_present`: derived boolean; `true` when an `:Evidence` node with `evidence_slug` exists in Neo4j at the last status check.
+
 ## 7. Validation Cypher Snippets (Reference)
 Orphan verb check:
 `MATCH ()-[r]->() WHERE r.verb IS NULL RETURN r LIMIT 20;`
