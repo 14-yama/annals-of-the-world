@@ -6,7 +6,19 @@
     "schema_doc": "docs/guidelines/schema.md",
     "source": "docs/clusters/Scandinavian_Reformations/README.md",
     "generated_at": "2025-12-13T18:16Z",
-    "generator": "scripts/admin/repair_clusters.py"
+    "generator": "scripts/admin/repair_clusters.py",
+    "evidence_model": {
+      "source_of_truth": "Relationship objects carry citations; graph derives Evidence→content edges.",
+      "graph_edge": "(Evidence)-[:DOCUMENTS {cited_rel_id, relationship_id, page_refs}]->(Entity)",
+      "relationship_fields": {
+        "evidence_slug": "Preferred. Slug of reusable Evidence record (data/Evidence/*.json) and Neo4j (:Evidence {slug}).",
+        "evidence_url": "Inline-only citation URL (use when not promoting to an Evidence node yet).",
+        "citation_style": "e.g. Chicago 17.",
+        "page_refs": "Page/folio range supporting the claim.",
+        "inline_evidence": "Derived boolean: true when evidence_url is non-null.",
+        "evidence_node_present": "Derived boolean: true when :Evidence node exists in Neo4j for evidence_slug at last status update."
+      }
+    }
   },
   "relationships": [
     {

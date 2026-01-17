@@ -6,7 +6,19 @@
     "schema_doc": "docs/guidelines/schema.md",
     "source": "docs/clusters/English_Reformation/README.md",
     "generated_at": "2025-12-13T18:16Z",
-    "generator": "scripts/admin/repair_clusters.py"
+    "generator": "scripts/admin/repair_clusters.py",
+    "evidence_model": {
+      "source_of_truth": "Relationship objects carry citations; graph derives Evidence→content edges.",
+      "graph_edge": "(Evidence)-[:DOCUMENTS {cited_rel_id, relationship_id, page_refs}]->(Entity)",
+      "relationship_fields": {
+        "evidence_slug": "Preferred. Slug of reusable Evidence record (data/Evidence/*.json) and Neo4j (:Evidence {slug}).",
+        "evidence_url": "Inline-only citation URL (use when not promoting to an Evidence node yet).",
+        "citation_style": "e.g. Chicago 17.",
+        "page_refs": "Page/folio range supporting the claim.",
+        "inline_evidence": "Derived boolean: true when evidence_url is non-null.",
+        "evidence_node_present": "Derived boolean: true when :Evidence node exists in Neo4j for evidence_slug at last status update."
+      }
+    }
   },
   "relationships": [
     {
@@ -20,7 +32,9 @@
       "page_refs": "1-50",
       "_key": "English_Reformation|INTERFACES_WITH|Roman_Catholic_Church",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence.Haigh_1993_English_Reformations"
+      "evidence_slug": "evidence.Haigh_1993_English_Reformations",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 2,
@@ -33,7 +47,9 @@
       "page_refs": "168-195",
       "_key": "English_Reformation|INTERFACES_WITH|Continental_Reformations",
       "confidence_score": 0.85,
-      "evidence_slug": "evidence_Marshall_2017_Heretics_and_Believers_926b84"
+      "evidence_slug": "evidence_Marshall_2017_Heretics_and_Believers_926b84",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 3,
@@ -46,7 +62,9 @@
       "page_refs": "174-220",
       "_key": "English_Reformation|INTERFACES_WITH|English_Parliament",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence.Elton_1982_Tudor_Constitution"
+      "evidence_slug": "evidence.Elton_1982_Tudor_Constitution",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 4,
@@ -59,7 +77,9 @@
       "page_refs": "1-25",
       "_key": "English_Reformation|IS_PART_OF|European_Reformations",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence_Cameron_2012_The_European_Reformation_863269"
+      "evidence_slug": "evidence_Cameron_2012_The_European_Reformation_863269",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 5,
@@ -72,7 +92,9 @@
       "page_refs": "152-198",
       "_key": "Henry_VIII|PETITIONS|Papacy",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.Scarisbrick_1968_Henry_VIII"
+      "evidence_slug": "evidence.Scarisbrick_1968_Henry_VIII",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 6,
@@ -85,7 +107,9 @@
       "page_refs": "88-106",
       "_key": "Thomas_Cranmer|DECLARES|Annulment_Proceedings",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.MacCulloch_1996_Thomas_Cranmer"
+      "evidence_slug": "evidence_MacCulloch_1996_Thomas_Cranmer",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 7,
@@ -98,202 +122,191 @@
       "page_refs": "355-364",
       "_key": "English_Parliament|PROMULGATES|Act_of_Supremacy_1534",
       "confidence_score": 0.98,
-      "evidence_slug": "evidence.Bernard_2005_The_Kings_Reformation"
+      "evidence_slug": "evidence.Bernard_2005_The_Kings_Reformation",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 8,
+      "start_slug": "Henry_VIII",
+      "end_slug": "Papacy",
+      "type": "PETITIONS",
+      "description": "Henry VIII petitions Papacy.",
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": "auto:from_readme:relationships_table",
+      "inline_evidence": false
+    },
+    {
+      "id": 9,
+      "start_slug": "Thomas_Cranmer",
+      "end_slug": "Annulment_Proceedings",
+      "type": "DECLARES",
+      "description": "Thomas Cranmer declares Annulment Proceedings.",
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": "auto:from_readme:relationships_table",
+      "inline_evidence": false
+    },
+    {
+      "id": 10,
+      "start_slug": "English_Parliament",
+      "end_slug": "Act_of_Supremacy_1534",
+      "type": "PROMULGATES",
+      "description": "English Parliament promulgates Act of Supremacy 1534.",
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": "auto:from_readme:relationships_table",
+      "inline_evidence": false
+    },
+    {
+      "id": 11,
       "start_slug": "Royal_Court",
       "end_slug": "Dissolution_of_the_Monasteries",
       "type": "ORGANIZES",
       "description": "Royal Court organizes Dissolution of the Monasteries.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "244-290",
-      "_key": "Royal_Court|ORGANIZES|Dissolution_of_the_Monasteries",
-      "confidence_score": 0.9,
-      "evidence_slug": "evidence_Youings_1971_The_Dissolution_of_265636"
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": "auto:from_readme:relationships_table",
+      "inline_evidence": false
     },
     {
-      "id": 9,
+      "id": 12,
       "start_slug": "Anne_Boleyn",
       "end_slug": "Break_with_Rome",
       "type": "INFLUENCES",
       "description": "Anne Boleyn influences Break with Rome.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "78-203",
-      "_key": "Anne_Boleyn|INFLUENCES|Break_with_Rome",
-      "confidence_score": 0.88,
-      "evidence_slug": "evidence_Ives_2004_The_Life_and_47247b"
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": "auto:from_readme:relationships_table",
+      "inline_evidence": false
     },
     {
-      "id": 10,
+      "id": 13,
       "start_slug": "Catherine_of_Aragon",
       "end_slug": "Annulment_Proceedings",
       "type": "DISPUTES",
       "description": "Catherine of Aragon disputes Annulment Proceedings.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "198-245",
-      "_key": "Catherine_of_Aragon|DISPUTES|Annulment_Proceedings",
-      "confidence_score": 0.92,
-      "evidence_slug": "evidence_Tremlett_2010_Catherine_of_Aragon_56c97f"
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": "auto:from_readme:relationships_table",
+      "inline_evidence": false
     },
     {
-      "id": 11,
+      "id": 14,
       "start_slug": "Ecclesiastical_Courts_England",
       "end_slug": "Annulment_Proceedings",
       "type": "ORGANIZES",
       "description": "Ecclesiastical Courts England organizes Annulment Proceedings.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "88-120",
-      "_key": "Ecclesiastical_Courts_England|ORGANIZES|Annulment_Proceedings",
-      "confidence_score": 0.85,
-      "evidence_slug": "evidence_Helmholz_1990_H_72f084"
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": "auto:from_readme:relationships_table",
+      "inline_evidence": false
     },
     {
-      "id": 12,
+      "id": 15,
       "start_slug": "Thomas_Cromwell",
       "end_slug": "Dissolution_of_the_Monasteries",
       "type": "ORGANIZES",
       "description": "Thomas Cromwell organizes Dissolution of the Monasteries.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "276-340",
-      "_key": "Thomas_Cromwell|ORGANIZES|Dissolution_of_the_Monasteries",
-      "confidence_score": 0.95,
-      "evidence_slug": "evidence.MacCulloch_1996_Thomas_Cranmer"
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": "auto:from_readme:relationships_table",
+      "inline_evidence": false
     },
     {
-      "id": 13,
+      "id": 16,
       "start_slug": "English_Parliament",
       "end_slug": "Six_Articles_1539",
       "type": "PROMULGATES",
       "description": "English Parliament promulgates Six Articles 1539.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "415-432",
-      "_key": "English_Parliament|PROMULGATES|Six_Articles_1539",
-      "confidence_score": 0.95,
-      "evidence_slug": "evidence.Bernard_2005_The_Kings_Reformation"
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": "auto:from_readme:relationships_table",
+      "inline_evidence": false
     },
     {
-      "id": 14,
+      "id": 17,
       "start_slug": "Royal_Court",
       "end_slug": "Royal_Injunctions_1536",
       "type": "DECLARES",
       "description": "Royal Court declares Royal Injunctions 1536.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "1-12",
-      "_key": "Royal_Court|DECLARES|Royal_Injunctions_1536",
-      "confidence_score": 0.9,
-      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation"
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": "auto:from_readme:relationships_table",
+      "inline_evidence": false
     },
     {
-      "id": 15,
+      "id": 18,
       "start_slug": "Royal_Court",
       "end_slug": "Royal_Injunctions_1538",
       "type": "DECLARES",
       "description": "Royal Court declares Royal Injunctions 1538.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "175-188",
-      "_key": "Royal_Court|DECLARES|Royal_Injunctions_1538",
-      "confidence_score": 0.9,
-      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation"
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": "auto:from_readme:relationships_table",
+      "inline_evidence": false
     },
     {
-      "id": 16,
+      "id": 19,
       "start_slug": "Court_of_Augmentations",
       "end_slug": "Dissolution_of_the_Monasteries",
       "type": "ADMINISTERS",
       "description": "Court of Augmentations administers Dissolution of the Monasteries.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "1-45",
-      "_key": "Court_of_Augmentations|ADMINISTERS|Dissolution_of_the_Monasteries",
-      "confidence_score": 0.92,
-      "evidence_slug": "evidence_Richardson_1961_C_1df57d"
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": "auto:from_readme:relationships_table",
+      "inline_evidence": false
     },
     {
-      "id": 17,
+      "id": 20,
       "start_slug": "Papacy",
       "end_slug": "Henry_VIII",
       "type": "EXCOMMUNICATES",
       "description": "Papacy excommunicates Henry VIII.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "299-320",
-      "_key": "Papacy|EXCOMMUNICATES|Henry_VIII",
-      "confidence_score": 0.98,
-      "evidence_slug": "evidence.Scarisbrick_1968_Henry_VIII"
-    },
-    {
-      "id": 18,
-      "start_slug": "Church_of_England",
-      "end_slug": "Thomas_Cranmer",
-      "type": "APPOINTS",
-      "description": "Church of England appoints Thomas Cranmer.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "70-92",
-      "_key": "Church_of_England|APPOINTS|Thomas_Cranmer",
-      "confidence_score": 0.95,
-      "evidence_slug": "evidence.MacCulloch_1996_Thomas_Cranmer"
-    },
-    {
-      "id": 19,
-      "start_slug": "Pope_Clement_VII",
-      "end_slug": "Henry_VIII",
-      "type": "CORRESPONDS_WITH",
-      "description": "Pope Clement VII corresponds with Henry VIII.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "163-195",
-      "_key": "Pope_Clement_VII|CORRESPONDS_WITH|Henry_VIII",
-      "confidence_score": 0.9,
-      "evidence_slug": "evidence.Scarisbrick_1968_Henry_VIII"
-    },
-    {
-      "id": 20,
-      "start_slug": "Act_of_Supremacy_Passage",
-      "end_slug": "Church_of_England",
-      "type": "TRANSFORMS",
-      "description": "Act of Supremacy Passage transforms Church of England.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "174-195",
-      "_key": "Act_of_Supremacy_Passage|TRANSFORMS|Church_of_England",
-      "confidence_score": 0.95,
-      "evidence_slug": "evidence.Elton_1982_Tudor_Constitution"
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": "auto:from_readme:relationships_table",
+      "inline_evidence": false
     },
     {
       "id": 21,
       "start_slug": "Church_of_England",
-      "end_slug": "Royal_Supremacy",
-      "type": "STANDARDIZES",
-      "description": "Church of England standardizes Royal Supremacy.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "363-395",
-      "_key": "Church_of_England|STANDARDIZES|Royal_Supremacy",
-      "confidence_score": 0.92,
-      "evidence_slug": "evidence.Bernard_2005_The_Kings_Reformation"
-    },
-    {
-      "id": 22,
-      "start_slug": "Royal_Supremacy",
-      "end_slug": "Papal_Supremacy",
-      "type": "REJECTS",
-      "description": "Royal Supremacy rejects Papal Supremacy.",
-      "status": "REVIEWED",
-      "citation_style": "Chicago 17",
-      "page_refs": "355-380",
-      "_key": "Royal_Supremacy|REJECTS|Papal_Supremacy",
-      "confidence_score": 0.95,
-      "evidence_slug": "evidence.Bernard_2005_The_Kings_Reformation"
+      "end_slug": "Thomas_Cranmer",
+      "type": "APPOINTS",
+      "description": "Church of England appoints Thomas Cranmer.",
+      "status": "PROPOSED",
+      "evidence_url": null,
+      "citation_style": null,
+      "page_refs": null,
+      "source_note": "auto:from_readme:relationships_table",
+      "inline_evidence": false
     },
     {
       "id": 23,
@@ -306,7 +319,9 @@
       "page_refs": "162-174",
       "_key": "Ten_Articles_1536|DEFINES|Royal_Supremacy",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation"
+      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 24,
@@ -319,7 +334,9 @@
       "page_refs": "118-211",
       "_key": "Bishops_Book_1537|DEFINES|Royal_Supremacy",
       "confidence_score": 0.88,
-      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation"
+      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 25,
@@ -332,7 +349,9 @@
       "page_refs": "222-232",
       "_key": "Six_Articles_1539|DEFINES|Royal_Supremacy",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation"
+      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 26,
@@ -345,7 +364,9 @@
       "page_refs": "73-115",
       "_key": "Great_Bible_1539|TRANSMITS|English_Bible_Translation",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.Daniell_2003_The_Bible_in_English"
+      "evidence_slug": "evidence.Daniell_2003_The_Bible_in_English",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 27,
@@ -358,7 +379,9 @@
       "page_refs": "174-195",
       "_key": "Act_of_Supremacy_1534|ENABLES|Act_of_Supremacy_Passage",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.Elton_1982_Tudor_Constitution"
+      "evidence_slug": "evidence.Elton_1982_Tudor_Constitution",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 28,
@@ -371,7 +394,9 @@
       "page_refs": "85-102",
       "_key": "Cranmer_Annulment_Decree|FRAMES|Annulment_Proceedings",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence.MacCulloch_1996_Thomas_Cranmer"
+      "evidence_slug": "evidence_MacCulloch_1996_Thomas_Cranmer",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 29,
@@ -384,7 +409,9 @@
       "page_refs": "175-188",
       "_key": "Royal_Injunctions_1538|ENABLES|Parish_Bible_Installations",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation"
+      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 30,
@@ -397,7 +424,9 @@
       "page_refs": "12-45",
       "_key": "Valor_Ecclesiasticus_1535|FRAMES|Dissolution_of_the_Monasteries",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence_Youings_1971_The_Dissolution_of_cf9ff3"
+      "evidence_slug": "evidence_Youings_1971_The_Dissolution_of_cf9ff3",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 31,
@@ -410,7 +439,9 @@
       "page_refs": "174-178",
       "_key": "Act_of_Supremacy_Passage|OCCURS_IN|London",
       "confidence_score": 0.98,
-      "evidence_slug": "evidence.Elton_1982_Tudor_Constitution"
+      "evidence_slug": "evidence.Elton_1982_Tudor_Constitution",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 32,
@@ -423,7 +454,9 @@
       "page_refs": "198-230",
       "_key": "Annulment_Proceedings|OCCURS_IN|Rome",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence.Scarisbrick_1968_Henry_VIII"
+      "evidence_slug": "evidence.Scarisbrick_1968_Henry_VIII",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 33,
@@ -436,7 +469,9 @@
       "page_refs": "1-330",
       "_key": "Pilgrimage_of_Grace_1536|OCCURS_IN|York",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence_Hoyle_2001_W_9d1e92"
+      "evidence_slug": "evidence_Hoyle_2001_W_9d1e92",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 34,
@@ -449,7 +484,9 @@
       "page_refs": "195-220",
       "_key": "Parish_Bible_Installations|OCCURS_IN|Canterbury",
       "confidence_score": 0.88,
-      "evidence_slug": "evidence.Daniell_2003_The_Bible_in_English"
+      "evidence_slug": "evidence.Daniell_2003_The_Bible_in_English",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 35,
@@ -462,7 +499,9 @@
       "page_refs": "275-350",
       "_key": "Thomas_More|DISPUTES|Royal_Supremacy",
       "confidence_score": 0.98,
-      "evidence_slug": "evidence_Guy_2000_Thomas_More_1f2d39"
+      "evidence_slug": "evidence_Guy_2000_Thomas_More_1f2d39",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 36,
@@ -475,7 +514,9 @@
       "page_refs": "50-120",
       "_key": "Thomas_More|ENDORSES|Humanism_in_England",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence_Guy_2000_Thomas_More_1f2d39"
+      "evidence_slug": "evidence_Guy_2000_Thomas_More_1f2d39",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 37,
@@ -488,7 +529,9 @@
       "page_refs": "1-450",
       "_key": "William_Tyndale|ENDORSES|English_Bible_Translation",
       "confidence_score": 0.98,
-      "evidence_slug": "evidence.Daniell_2003_The_Bible_in_English"
+      "evidence_slug": "evidence.Daniell_2003_The_Bible_in_English",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 38,
@@ -501,7 +544,9 @@
       "page_refs": "154-178",
       "_key": "Miles_Coverdale|ENDORSES|English_Bible_Translation",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence.Daniell_2003_The_Bible_in_English"
+      "evidence_slug": "evidence.Daniell_2003_The_Bible_in_English",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 39,
@@ -514,7 +559,9 @@
       "page_refs": "222-280",
       "_key": "Church_of_England|PROMULGATES|Book_of_Common_Prayer_1549",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.MacCulloch_1996_Thomas_Cranmer"
+      "evidence_slug": "evidence_MacCulloch_1996_Thomas_Cranmer",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 40,
@@ -527,7 +574,9 @@
       "page_refs": "501-530",
       "_key": "Church_of_England|PROMULGATES|Book_of_Common_Prayer_1552",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.MacCulloch_1996_Thomas_Cranmer"
+      "evidence_slug": "evidence_MacCulloch_1996_Thomas_Cranmer",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 41,
@@ -540,7 +589,9 @@
       "page_refs": "531-545",
       "_key": "Church_of_England|PROMULGATES|Forty-Two_Articles_1553",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence.MacCulloch_1996_Thomas_Cranmer"
+      "evidence_slug": "evidence_MacCulloch_1996_Thomas_Cranmer",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 42,
@@ -553,7 +604,9 @@
       "page_refs": "356-380",
       "_key": "Church_of_England|PROMULGATES|Book_of_Homilies_1547",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence.MacCulloch_1996_Thomas_Cranmer"
+      "evidence_slug": "evidence_MacCulloch_1996_Thomas_Cranmer",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 43,
@@ -566,7 +619,9 @@
       "page_refs": "247-260",
       "_key": "Lord_Protectorate|PROMULGATES|Injunctions_1547",
       "confidence_score": 0.88,
-      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation"
+      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 44,
@@ -579,7 +634,9 @@
       "page_refs": "95-120",
       "_key": "Privy_Council|PROMULGATES|Chantries_Act_1547",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence_Kreider_1979_English_Chantries_The_47c6db"
+      "evidence_slug": "evidence_Kreider_1979_English_Chantries_The_47c6db",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 45,
@@ -592,7 +649,9 @@
       "page_refs": "410-450",
       "_key": "Thomas_Cranmer|LEADS|Prayer_Book_Reform",
       "confidence_score": 0.98,
-      "evidence_slug": "evidence.MacCulloch_1996_Thomas_Cranmer"
+      "evidence_slug": "evidence_MacCulloch_1996_Thomas_Cranmer",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 46,
@@ -605,7 +664,9 @@
       "page_refs": "190-215",
       "_key": "Privy_Council|ORGANIZES|Doctrinal_Articles_Promulgation",
       "confidence_score": 0.85,
-      "evidence_slug": "evidence_Loades_1987_The_Tudor_Court_5c9b30"
+      "evidence_slug": "evidence_Loades_1987_The_Tudor_Court_5c9b30",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 47,
@@ -618,7 +679,9 @@
       "page_refs": "1-250",
       "_key": "Lord_Protectorate|ORGANIZES|Western_Rebellion_1549",
       "confidence_score": 0.88,
-      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith"
+      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 48,
@@ -631,7 +694,9 @@
       "page_refs": "501-530",
       "_key": "Book_of_Common_Prayer_1552|STANDARDIZES|Protestant_Doctrine_in_England",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.MacCulloch_1996_Thomas_Cranmer"
+      "evidence_slug": "evidence_MacCulloch_1996_Thomas_Cranmer",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 49,
@@ -644,7 +709,9 @@
       "page_refs": "356-380",
       "_key": "Book_of_Homilies_1547|TRANSMITS|Protestant_Doctrine_in_England",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence.MacCulloch_1996_Thomas_Cranmer"
+      "evidence_slug": "evidence_MacCulloch_1996_Thomas_Cranmer",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 50,
@@ -657,7 +724,9 @@
       "page_refs": "1-320",
       "_key": "Edward_VI|ENDORSES|Protestant_Doctrine_in_England",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.MacCulloch_1996_Thomas_Cranmer"
+      "evidence_slug": "evidence_MacCulloch_1996_Thomas_Cranmer",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 51,
@@ -670,7 +739,9 @@
       "page_refs": "355-380",
       "_key": "Doctrinal_Articles_Promulgation|OCCURS_IN|London",
       "confidence_score": 0.88,
-      "evidence_slug": "evidence.Haigh_1993_English_Reformations"
+      "evidence_slug": "evidence.Haigh_1993_English_Reformations",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 52,
@@ -683,7 +754,9 @@
       "page_refs": "1-250",
       "_key": "Western_Rebellion_1549|OCCURS_IN|Devon",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith"
+      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 53,
@@ -696,7 +769,9 @@
       "page_refs": "1-250",
       "_key": "Western_Rebellion_1549|OCCURS_IN|Cornwall",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith"
+      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 54,
@@ -709,7 +784,9 @@
       "page_refs": "1-350",
       "_key": "Ketts_Rebellion_1549|OCCURS_IN|Norfolk",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence_Land_1977_Kett_s_Rebellion_92af0f"
+      "evidence_slug": "evidence_Land_1977_Kett_s_Rebellion_92af0f",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 55,
@@ -722,7 +799,9 @@
       "page_refs": "1-100",
       "_key": "Roman_Catholic_Church|PARDONS|English_Realm",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith"
+      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 56,
@@ -735,7 +814,9 @@
       "page_refs": "79-175",
       "_key": "Roman_Catholic_Church|CENSORS|Protestant_Doctrine_in_England",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith"
+      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 57,
@@ -748,7 +829,9 @@
       "page_refs": null,
       "_key": "Mary_I|DECLARES|Reconciliation_with_Rome",
       "confidence_score": 0.85,
-      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith"
+      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 58,
@@ -761,7 +844,9 @@
       "page_refs": "1-50",
       "_key": "Reginald_Pole|ORGANIZES|Reconciliation_with_Rome",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith"
+      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 59,
@@ -774,7 +859,9 @@
       "page_refs": "1-79",
       "_key": "Reconciliation_with_Rome|TRANSFORMS|Church_of_England",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith"
+      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 60,
@@ -787,7 +874,9 @@
       "page_refs": "79-175",
       "_key": "Heresy_Persecutions|CENSORS|Protestant_Doctrine_in_England",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith"
+      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 61,
@@ -800,7 +889,9 @@
       "page_refs": "79-100",
       "_key": "Heresy_Persecutions|OCCURS_IN|London",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith"
+      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 62,
@@ -813,7 +904,9 @@
       "page_refs": "1-300",
       "_key": "Wyatts_Rebellion_1554|OCCURS_IN|London",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence_Loades_1965_Two_Tudor_Conspiracies_6a147a"
+      "evidence_slug": "evidence_Loades_1965_Two_Tudor_Conspiracies_6a147a",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 63,
@@ -826,7 +919,9 @@
       "page_refs": "550-600",
       "_key": "Oxford_Martyrs_1555_1556|OCCURS_IN|Oxford",
       "confidence_score": 0.98,
-      "evidence_slug": "evidence.MacCulloch_1996_Thomas_Cranmer"
+      "evidence_slug": "evidence_MacCulloch_1996_Thomas_Cranmer",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 64,
@@ -839,7 +934,9 @@
       "page_refs": "25-50",
       "_key": "Pole_Reconciliation_Decrees|FRAMES|Reconciliation_with_Rome",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith"
+      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 65,
@@ -852,7 +949,9 @@
       "page_refs": "79-100",
       "_key": "Heresy_Acts|ENABLES|Heresy_Persecutions",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith"
+      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 66,
@@ -865,7 +964,9 @@
       "page_refs": "1-78",
       "_key": "Mary_I|ENDORSES|Catholic_Restoration",
       "confidence_score": 0.98,
-      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith"
+      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 67,
@@ -878,7 +979,9 @@
       "page_refs": "25-50",
       "_key": "Reconciliation_with_Rome|OCCURS_IN|Rome",
       "confidence_score": 0.88,
-      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith"
+      "evidence_slug": "evidence.Duffy_2009_Fires_of_Faith",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 68,
@@ -891,7 +994,9 @@
       "page_refs": "363-384",
       "_key": "English_Parliament|PROMULGATES|Act_of_Supremacy_1559",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation"
+      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 69,
@@ -904,7 +1009,9 @@
       "page_refs": "318-327",
       "_key": "English_Parliament|PROMULGATES|Act_of_Uniformity_1559",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation"
+      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 70,
@@ -917,7 +1024,9 @@
       "page_refs": "284-311",
       "_key": "Church_of_England|PROMULGATES|Thirty-Nine_Articles_1563",
       "confidence_score": 0.98,
-      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation"
+      "evidence_slug": "evidence.Bray_1994_Documents_of_the_English_Reformation",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 71,
@@ -930,7 +1039,9 @@
       "page_refs": "1-50",
       "_key": "Church_of_England|PROMULGATES|Book_of_Homilies_1571",
       "confidence_score": 0.88,
-      "evidence_slug": "evidence_Jones_2002_The_English_Reformation_632253"
+      "evidence_slug": "evidence_Jones_2002_The_English_Reformation_632253",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 72,
@@ -943,7 +1054,9 @@
       "page_refs": "220-250",
       "_key": "Court_of_High_Commission|CENSORS|Recusant_Catholicism",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence.Elton_1982_Tudor_Constitution"
+      "evidence_slug": "evidence.Elton_1982_Tudor_Constitution",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 73,
@@ -956,7 +1069,9 @@
       "page_refs": "1-250",
       "_key": "Star_Chamber|CENSORS|Martin_Marprelate_Controversy_1588_1589",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence_Black_2008_The_Martin_Marprelate_fb379e"
+      "evidence_slug": "evidence_Black_2008_The_Martin_Marprelate_fb379e",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 74,
@@ -969,7 +1084,9 @@
       "page_refs": "1-75",
       "_key": "Act_of_Uniformity_1559|ENABLES|Settlement_Passage",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence_Jones_1982_Faith_by_Statute_161bc3"
+      "evidence_slug": "evidence_Jones_1982_Faith_by_Statute_161bc3",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 75,
@@ -982,7 +1099,9 @@
       "page_refs": "1-320",
       "_key": "Thirty-Nine_Articles_1563|STANDARDIZES|Via_Media",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence.MacCulloch_1996_Thomas_Cranmer"
+      "evidence_slug": "evidence_MacCulloch_1996_Thomas_Cranmer",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 76,
@@ -995,7 +1114,9 @@
       "page_refs": "340-370",
       "_key": "Bishops_Bible_1568|TRANSMITS|Via_Media",
       "confidence_score": 0.88,
-      "evidence_slug": "evidence.Daniell_2003_The_Bible_in_English"
+      "evidence_slug": "evidence.Daniell_2003_The_Bible_in_English",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 77,
@@ -1008,7 +1129,9 @@
       "page_refs": "291-340",
       "_key": "Geneva_Bible_1560|TRANSMITS|Puritan_Movement",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence.Daniell_2003_The_Bible_in_English"
+      "evidence_slug": "evidence.Daniell_2003_The_Bible_in_English",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 78,
@@ -1021,7 +1144,9 @@
       "page_refs": "370-400",
       "_key": "Rheims_New_Testament_1582|TRANSMITS|Recusant_Catholicism",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence.Daniell_2003_The_Bible_in_English"
+      "evidence_slug": "evidence.Daniell_2003_The_Bible_in_English",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 79,
@@ -1034,7 +1159,9 @@
       "page_refs": "1-450",
       "_key": "Acts_and_Monuments_1563|FRAMES|Marian_Persecutions",
       "confidence_score": 0.98,
-      "evidence_slug": "evidence_Freeman_2011_and_Elizabeth_Evenden_9e2cf0"
+      "evidence_slug": "evidence_Freeman_2011_and_Elizabeth_Evenden_9e2cf0",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 80,
@@ -1047,7 +1174,9 @@
       "page_refs": "1-500",
       "_key": "Of_the_Laws_of_Ecclesiastical_Polity|INTERPRETS|Via_Media",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence_McGrade_1997_S_bda1fa"
+      "evidence_slug": "evidence_McGrade_1997_S_bda1fa",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 81,
@@ -1060,7 +1189,9 @@
       "page_refs": "1-120",
       "_key": "Elizabeth_I|ENDORSES|Via_Media",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence_Doran_1994_Elizabeth_I_and_792615"
+      "evidence_slug": "evidence_Doran_1994_Elizabeth_I_and_792615",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 82,
@@ -1073,7 +1204,9 @@
       "page_refs": "1-400",
       "_key": "Matthew_Parker|ENDORSES|Via_Media",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence_Brook_1962_J_7651d1"
+      "evidence_slug": "evidence_Brook_1962_A_Life_of_Archbishop_Parker",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 83,
@@ -1086,7 +1219,9 @@
       "page_refs": "1-500",
       "_key": "Richard_Hooker|ENDORSES|Via_Media",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence_McGrade_1997_S_bda1fa"
+      "evidence_slug": "evidence_McGrade_1997_S_bda1fa",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 84,
@@ -1099,7 +1234,9 @@
       "page_refs": "200-280",
       "_key": "Edmund_Grindal|DISPUTES|Jesuit_Mission_in_England",
       "confidence_score": 0.88,
-      "evidence_slug": "evidence_Collinson_1979_Archbishop_Grindal_1519_f3ad34"
+      "evidence_slug": "evidence_Collinson_1979_Archbishop_Grindal_1519_f3ad34",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 85,
@@ -1112,7 +1249,9 @@
       "page_refs": "1-350",
       "_key": "John_Whitgift|CENSORS|Presbyterian_Reform_in_England",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence_Lake_1988_Anglicans_and_Puritans_afd7c4"
+      "evidence_slug": "evidence_Lake_1988_Anglicans_and_Puritans_afd7c4",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 86,
@@ -1125,7 +1264,9 @@
       "page_refs": "1-350",
       "_key": "Puritan_Movement|DISPUTES|Via_Media",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence_Collinson_1967_The_Elizabethan_Puritan_17e4c6"
+      "evidence_slug": "evidence_Collinson_1967_The_Elizabethan_Puritan_17e4c6",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 87,
@@ -1138,7 +1279,9 @@
       "page_refs": "1-300",
       "_key": "Recusant_Catholicism|DISPUTES|Via_Media",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence.Bossy_1975_English_Catholic_Community"
+      "evidence_slug": "evidence.Bossy_1975_English_Catholic_Community",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 88,
@@ -1151,7 +1294,9 @@
       "page_refs": "1-75",
       "_key": "Settlement_Passage|OCCURS_IN|London",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence_Jones_1982_Faith_by_Statute_161bc3"
+      "evidence_slug": "evidence_Jones_1982_Faith_by_Statute_161bc3",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 89,
@@ -1164,7 +1309,9 @@
       "page_refs": "66-97",
       "_key": "Vestiarian_Controversy_1566|OCCURS_IN|London",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence_Collinson_1967_The_Elizabethan_Puritan_17e4c6"
+      "evidence_slug": "evidence_Collinson_1967_The_Elizabethan_Puritan_17e4c6",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 90,
@@ -1177,7 +1324,9 @@
       "page_refs": "1-400",
       "_key": "Northern_Rebellion_1569|OCCURS_IN|York",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence_Fletcher_2004_Tudor_Rebellions_f10cb6"
+      "evidence_slug": "evidence_Fletcher_2004_Tudor_Rebellions_f10cb6",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 91,
@@ -1190,7 +1339,9 @@
       "page_refs": "145-180",
       "_key": "Regnans_in_Excelsis_1570|OCCURS_IN|Rome",
       "confidence_score": 0.98,
-      "evidence_slug": "evidence_Doran_1994_Elizabeth_I_and_792615"
+      "evidence_slug": "evidence_Doran_1994_Elizabeth_I_and_792615",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 92,
@@ -1203,7 +1354,9 @@
       "page_refs": "1-150",
       "_key": "Seminary_Priests_Mission_1580s|OCCURS_IN|Rheims",
       "confidence_score": 0.88,
-      "evidence_slug": "evidence.Bossy_1975_English_Catholic_Community"
+      "evidence_slug": "evidence.Bossy_1975_English_Catholic_Community",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 93,
@@ -1216,7 +1369,9 @@
       "page_refs": "1-350",
       "_key": "Jesuit_Mission_1580s|OCCURS_IN|Douai",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence_McCoog_1996_The_Society_of_83c2aa"
+      "evidence_slug": "evidence_McCoog_1996_The_Society_of_83c2aa",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 94,
@@ -1229,7 +1384,9 @@
       "page_refs": "1-600",
       "_key": "Execution_of_Mary_Queen_of_Scots_1587|OCCURS_IN|London",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence_Guy_2004_My_Heart_Is_56f806"
+      "evidence_slug": "evidence_Guy_2004_My_Heart_Is_56f806",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 95,
@@ -1242,7 +1399,9 @@
       "page_refs": "1-500",
       "_key": "Spanish_Armada_1588|OCCURS_IN|London",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence_Martin_1999_The_Spanish_Armada_b6e0c5"
+      "evidence_slug": "evidence_Martin_1999_The_Spanish_Armada_b6e0c5",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 96,
@@ -1255,7 +1414,9 @@
       "page_refs": "1-250",
       "_key": "Martin_Marprelate_Controversy_1588_1589|OCCURS_IN|London",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence_Black_2008_The_Martin_Marprelate_fb379e"
+      "evidence_slug": "evidence_Black_2008_The_Martin_Marprelate_fb379e",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 97,
@@ -1268,7 +1429,9 @@
       "page_refs": "1-350",
       "_key": "Society_of_Jesus|ORGANIZES|Jesuit_Mission_1580s",
       "confidence_score": 0.95,
-      "evidence_slug": "evidence_McCoog_1996_The_Society_of_83c2aa"
+      "evidence_slug": "evidence_McCoog_1996_The_Society_of_83c2aa",
+      "evidence_node_present": true,
+      "inline_evidence": false
     },
     {
       "id": 98,
@@ -1281,7 +1444,9 @@
       "page_refs": "1-150",
       "_key": "English_Seminaries_Douai_Rheims|ORGANIZES|Seminary_Priests_Mission_1580s",
       "confidence_score": 0.92,
-      "evidence_slug": "evidence.Bossy_1975_English_Catholic_Community"
+      "evidence_slug": "evidence.Bossy_1975_English_Catholic_Community",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 99,
@@ -1294,7 +1459,9 @@
       "page_refs": "150-200",
       "_key": "Privy_Council|DECLARES|Recusancy_Fines_Regime",
       "confidence_score": 0.9,
-      "evidence_slug": "evidence.Bossy_1975_English_Catholic_Community"
+      "evidence_slug": "evidence.Bossy_1975_English_Catholic_Community",
+      "evidence_node_present": false,
+      "inline_evidence": false
     },
     {
       "id": 100,
@@ -1307,7 +1474,9 @@
       "page_refs": "220-250",
       "_key": "Court_of_High_Commission|ORGANIZES|Recusancy_Fines_Regime",
       "confidence_score": 0.88,
-      "evidence_slug": "evidence.Elton_1982_Tudor_Constitution"
+      "evidence_slug": "evidence.Elton_1982_Tudor_Constitution",
+      "evidence_node_present": false,
+      "inline_evidence": false
     }
   ]
 }
