@@ -186,6 +186,23 @@ def repair_cluster(cluster: str, global_nodes: dict, cluster_rels: dict, dry_run
             rel_meta = meta
         for r in rels:
             all_rels.append((fname, r))
+
+    # Ensure evidence model documentation exists in relationship metadata
+    rel_meta.setdefault(
+        "evidence_model",
+        {
+            "source_of_truth": "Relationship objects carry citations; graph derives Evidence→content edges.",
+            "graph_edge": "(Evidence)-[:DOCUMENTS {cited_rel_id, relationship_id, page_refs}]->(Entity)",
+            "relationship_fields": {
+                "evidence_slug": "Preferred. Slug of reusable Evidence record (data/Evidence/*.json) and Neo4j (:Evidence {slug}).",
+                "evidence_url": "Inline-only citation URL (use when not promoting to an Evidence node yet).",
+                "citation_style": "e.g. Chicago 17.",
+                "page_refs": "Page/folio range supporting the claim.",
+                "inline_evidence": "Derived boolean: true when evidence_url is non-null.",
+                "evidence_node_present": "Derived boolean: true when :Evidence node exists in Neo4j for evidence_slug at last status update.",
+            },
+        },
+    )
     
     # Identify all referenced slugs
     referenced_slugs = set()
