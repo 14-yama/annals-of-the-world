@@ -498,7 +498,7 @@ MERGE (e:Evidence {slug:'dead_sea_scrolls'})
 MERGE (t:Text {slug:'Dead_Sea_Scrolls_Corpus'})
 MERGE (c:Corpus {slug:'biblical_corpus'})
 MERGE (e)-[:BELONGS_TO]->(c)
-MERGE (t)-[:SUPPORTED_BY]->(e)
+MERGE (e)-[:DOCUMENTS]->(t)
 ```
 
 ## Glossary (source of truth): Generic vs Contextual

@@ -217,8 +217,35 @@ Aliases & Deprecations
 - Introduce new verb only via proposal record (add stub row + rationale + 1 example triple + evidence plan).
 
 ## 6. Evidence Annotation Rules
+
+This project supports two complementary citation patterns:
+
+- Relationship-level citation attributes (the source-of-truth in cluster relationship JSON): keep citations attached to the relationship object via fields like `evidence_slug`, `page_refs`, `citation_style`, and/or `evidence_url`.
+- Evidence nodes + `DOCUMENTS` (the reusable graph view): create a reusable `(:Evidence {slug})` node and materialize `(Evidence)-[:DOCUMENTS]->(content)` during ingest/linking.
+
+Use relationship-level attributes when:
+
+- The citation is edge-specific (most citations are): the relationship object is where `page_refs` and any edge-scoped citation detail belongs.
+- You are still triaging/collecting sources and don’t have a stable Evidence record yet.
+- The source is a one-off URL or an ephemeral web page and you don’t expect to reuse it.
+- You are citing something that isn’t worth curating as a reusable bibliographic record (e.g., a single quick reference).
+
+Create an Evidence node (and use `evidence_slug`) when:
+
+- The same source will be cited by multiple relationships and you want one canonical bibliographic record.
+- The source is a stable publication/record (book, article, archival item) where reuse and discoverability matter.
+- You want graph queries like “show me everything documented by this source” without depending on relationship JSON parsing.
+
+When NOT to create an Evidence node (use relationship attributes / inline-only instead):
+
+- The “citation” is actually a curator inference with no external source yet.
+- The only available reference is unstable (temporary link, private note) and you don’t want to immortalize it as a record.
+- The content is too granular/edge-specific to benefit from a reusable Evidence record (e.g., one relationship with one quick pointer).
+
+Promotion heuristic:
+
 - Inline property `evidence: "<Tier>: <short-ref>"` for single-use citations.
-- Promote to Evidence node when same short-ref appears on ≥2 distinct edges across periods or node types.
+- Promote to an Evidence node when the same short-ref appears on ≥2 distinct edges across periods or node types.
 - Optional property `evidence_detail` for page/folio; keep concise (e.g., "p. 47b–48a").
 
 ### DOCUMENTS (Evidence canonical verb)
@@ -231,7 +258,12 @@ Aliases & Deprecations
 	- `note` (string): brief curator note or fragment description (optional).
 - When to use:
 	- Use `DOCUMENTS` when the source is reusable, bibliographic, or will be cited more than once.
-	- Keep relationship-level `page_refs` or inline citation if the citation is highly local (exact fragment) and you also want the Evidence node recorded for reuse.
+	- Keep relationship-level `page_refs` (and other edge-scoped citation details) on the relationship object even when you also create an Evidence node; `DOCUMENTS` is a derived view, not the citation source-of-truth.
+	- Prefer `evidence_url` (inline-only) when the reference is one-off, unstable, or not yet ready to be promoted into `data/Evidence/*.json`.
+
+- When not to use:
+	- Don’t use `DOCUMENTS` as a substitute for modeling the underlying domain relationship (e.g., `DECLARES`, `PROMULGATES`, `INFLUENCES`). `DOCUMENTS` is only for Evidence→content support.
+	- Don’t create an Evidence node for every single edge by default; promote sources selectively when reuse/discoverability justify it.
 - Example triples:
 
 	- (evidence_Duffy_2009_Fires_of_Faith)-[:DOCUMENTS {page_refs:'23-44', cited_rel_id:47}]->(Lord_Protectorate)

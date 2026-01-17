@@ -227,15 +227,31 @@ Notes
 
 | From | To | Evidence verbs (proposed) | Example |
 |:--|:--|:--|:--|
-| V | P/I/T/D/M | ATTESTS_TO; DOCUMENTS; CORROBORATES; VALIDATES; PROVIDES | DSS Publication DOCUMENTS Dead_Sea_Scrolls |
+| V | P/I/T/D/M | DOCUMENTS; ATTESTS_TO; CORROBORATES; VALIDATES; PROVIDES | DSS Publication DOCUMENTS Dead_Sea_Scrolls |
 | V | E | DATES; DOCUMENTS | IAA Reports DATES Excavation_Findings |
 | V | L/F/V | — | — |
-- Evidence-only verbs (proposed; register in vocabulary if reused broadly)
-  - ATTESTS_TO, DOCUMENTS, CORROBORATES, DATES, VALIDATES, PROVIDES, FACILITATES, REPORTS
-  - Examples:
-    - (Dead_Sea_Scrolls_Publication) DOCUMENTS (Dead_Sea_Scrolls)
-    - (Ketef_Hinnom_Amulets) ATTESTS_TO (Priestly_Blessing_Formulas)
-    - (IAA_Reports) DATES (Excavation_Findings)
+
+Evidence verb policy (updated)
+
+- Canonical Evidence→content verb: **DOCUMENTS** — use when an Evidence node is a reusable bibliographic or primary source that documents people, institutions, texts, ideas, movements, or events. Prefer `DOCUMENTS` as the canonical, active-voice verb for Evidence nodes to keep the graph semantics consistent and discoverable.
+- Traverse content → evidence using incoming `DOCUMENTS` edges (i.e., `MATCH (e:Evidence)-[:DOCUMENTS]->(n)`), rather than maintaining an inverse verb.
+- When to use inline citation vs `:Evidence` nodes:
+  - Inline relationship citation: use when the citation is single-use, ephemeral, or you prefer to keep the reference local to one relationship. Store `page_refs`, `citation_style` and `evidence_url` on the relationship object.
+  - `:Evidence` node (`DOCUMENTS`): use when the source is reusable, needs bibliographic metadata, will be cited multiple times, or should be discoverable independently (supports `isbn`, `author`, `publisher`, etc.).
+- Modeling guidance:
+  - Record precise page ranges on the evidence edge (`page_refs`) and include `cited_rel_id` or `relationship_id` so the citation can be traced back to a particular relationship object.
+  - Keep the relationship-level inline citation if it records exact fragment-level references; keep the `:Evidence` node for bibliographic metadata and reuse.
+
+Examples:
+
+- Evidence → content (canonical):
+
+  (evidence_Duffy_2009_Fires_of_Faith)-[:DOCUMENTS {page_refs:'23-44', cited_rel_id:47}]->(Lord_Protectorate)
+
+- Content → Evidence (operational inverse):
+
+  (evidence_Duffy_2009_Fires_of_Faith)-[:DOCUMENTS {page_refs:'23-44', cited_rel_id:47}]->(Lord_Protectorate)
+
 
 ## C (Corpus) → …
 

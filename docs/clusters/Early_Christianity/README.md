@@ -210,7 +210,7 @@ MERGE (e:Evidence {slug:'early_pauline_epistles'})
 MERGE (t:Text {slug:'Early_Pauline_Epistles'})
 MERGE (c:Corpus {slug:'christian_canon_corpus'})
 MERGE (e)-[:BELONGS_TO]->(c)
-MERGE (t)-[:SUPPORTED_BY]->(e)
+MERGE (e)-[:DOCUMENTS]->(t)
 ```
 
 ### Nodes

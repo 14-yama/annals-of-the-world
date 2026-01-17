@@ -1,5 +1,43 @@
 # English_Reformation
 
+## Cluster Overview
+
+The English Reformation cluster documents the transformation of Christianity in England from the 1520s through the late Elizabethan period, covering the break with Rome, Protestant reforms, Catholic restoration, and the establishment of the Elizabethan settlement.
+
+### Statistics (Updated January 2026)
+
+| Category | Count |
+|----------|-------|
+| **Total Nodes** | 182 |
+| **Total Relationships** | 423 |
+| Persons | 45 |
+| Events | 40 |
+| Texts | 39 |
+| Institutions | 20 |
+| Places | 18 |
+| Movements | 17 |
+| Ideas | 3 |
+
+### Key Periods
+
+1. **Henrician Reformation (c. 1527–1547)**: Break with Rome, Royal Supremacy, Dissolution of Monasteries
+2. **Edwardian Reformation (1547–1553)**: Protestant liturgical and doctrinal reform
+3. **Marian Restoration (1553–1558)**: Catholic restoration and persecution of Protestants
+4. **Elizabethan Settlement (1558–1603)**: Via Media, conflicts with Puritans and Catholics
+
+### Most Connected Nodes
+
+| Node | Type | Edges |
+|------|------|-------|
+| Henry_VIII | Person | 29 |
+| Elizabeth_I | Person | 25 |
+| Mary_I | Person | 23 |
+| Church_of_England | Institution | 21 |
+| Protestant_Doctrine_in_England | Movement | 19 |
+| Thomas_Cranmer | Person | 15 |
+
+---
+
 ### Relationships
 
 _Auto-generated from wiring; edit freely for nuance._
@@ -483,7 +521,7 @@ MERGE (e:Evidence {slug:'great_bible_1539'})
 MERGE (t:Text {slug:'Great_Bible_1539'})
 MERGE (c:Corpus {slug:'english_reformation_corpus'})
 MERGE (e)-[:BELONGS_TO]->(c)
-MERGE (t)-[:SUPPORTED_BY]->(e)
+MERGE (e)-[:DOCUMENTS]->(t)
 ```
 
 ### Nodes
