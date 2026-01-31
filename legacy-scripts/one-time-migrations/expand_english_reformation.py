@@ -593,8 +593,7 @@ NEW_RELATIONSHIPS = [
      "Knox's First Blast offended Elizabeth I despite being aimed at Mary I."),
     
     # === PHILIP II OF SPAIN ===
-    ("Philip_II_of_Spain", "MARRIES", "Mary_I", 
-     "Philip II of Spain married Mary I in 1554."),
+    # marriage modeled as an Event + participation edges; see MARRIAGES below
     ("Philip_II_of_Spain", "SUPPORTS", "Catholic_Restoration", 
      "Philip II supported Catholic restoration during Mary I's reign."),
     ("Philip_II_of_Spain", "LAUNCHES", "Spanish_Armada_1588", 
@@ -605,8 +604,7 @@ NEW_RELATIONSHIPS = [
      "Wyatt's Rebellion opposed Mary I's marriage to Philip II."),
     
     # === JANE SEYMOUR ===
-    ("Jane_Seymour", "MARRIES", "Henry_VIII", 
-     "Jane Seymour married Henry VIII in 1536."),
+    # marriage modeled as an Event + participation edges; see MARRIAGES below
     ("Jane_Seymour", "MOTHER_OF", "Edward_VI", 
      "Jane Seymour was the mother of Edward VI."),
     ("Jane_Seymour", "SUCCEEDS", "Anne_Boleyn", 
@@ -944,13 +942,11 @@ NEW_RELATIONSHIPS = [
     
     ("Anne_Boleyn", "MOTHER_OF", "Elizabeth_I", 
      "Anne Boleyn was the mother of Elizabeth I."),
-    ("Anne_Boleyn", "MARRIES", "Henry_VIII", 
-     "Anne Boleyn married Henry VIII in 1533."),
+    # marriage modeled as an Event + participation edges; see MARRIAGES below
     ("Anne_Boleyn", "DIES_IN", "Execution_of_Anne_Boleyn_1536", 
      "Anne Boleyn died in her execution in 1536."),
     
-    ("Catherine_of_Aragon", "MARRIES", "Henry_VIII", 
-     "Catherine of Aragon was Henry VIII's first wife."),
+    # marriage modeled as an Event + participation edges; see MARRIAGES below
     ("Catherine_of_Aragon", "MOTHER_OF", "Mary_I", 
      "Catherine of Aragon was the mother of Mary I."),
     ("Catherine_of_Aragon", "DEFENDED_BY", "John_Fisher", 
@@ -981,8 +977,7 @@ NEW_RELATIONSHIPS = [
     # === MARY I ADDITIONAL ===
     ("Mary_I", "DAUGHTER_OF", "Catherine_of_Aragon", 
      "Mary I was the daughter of Catherine of Aragon."),
-    ("Mary_I", "MARRIES", "Philip_II_of_Spain", 
-     "Mary I married Philip II of Spain in 1554."),
+    # marriage modeled as an Event + participation edges; see MARRIAGES below
     ("Mary_I", "RESTORES", "Roman_Catholic_Church", 
      "Mary I restored the Roman Catholic Church in England."),
     
@@ -1005,6 +1000,15 @@ NEW_RELATIONSHIPS = [
      "Edward VI succeeded Henry VIII in 1547."),
 ]
 
+# Marriage is modeled as an Event + participation edges (not P↔P).
+# Format: (spouse_a_slug, spouse_b_slug, description)
+MARRIAGES = [
+    ("Philip_II_of_Spain", "Mary_I", "Philip II of Spain married Mary I in 1554."),
+    ("Jane_Seymour", "Henry_VIII", "Jane Seymour married Henry VIII in 1536."),
+    ("Anne_Boleyn", "Henry_VIII", "Anne Boleyn married Henry VIII in 1533."),
+    ("Catherine_of_Aragon", "Henry_VIII", "Catherine of Aragon was Henry VIII's first wife."),
+]
+
 # ============================================================================
 # SCRIPT LOGIC
 # ============================================================================
@@ -1016,6 +1020,27 @@ def load_json(path):
 def save_json(path, data):
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+
+def get_or_create_marriage_event(nodes_data: dict, spouse_a: str, spouse_b: str, description: str):
+    a, b = sorted([spouse_a, spouse_b])
+    event_slug = f"Marriage_{a}_{b}"
+    existing = {n['slug'] for n in nodes_data.get('nodes', [])}
+    if event_slug in existing:
+        return event_slug, False
+
+    nodes_data['nodes'].append({
+        "slug": event_slug,
+        "name": f"Marriage: {a} × {b}",
+        "label": "Event",
+        "kind": "Marriage",
+        "cluster": "English_Reformation",
+        "status": "PROPOSED",
+        "workflow_stage": "PROPOSED",
+        "created_at": datetime.now(timezone.utc).isoformat(),
+        "created_by": "expand_english_reformation.py",
+        "description": description,
+    })
+    return event_slug, True
 
 def main():
     nodes_path = Path('data/Nodes/nodes.English_Reformation.json')
@@ -1090,6 +1115,43 @@ def main():
         next_id += 1
         added_rels += 1
         print(f"  + ({start})-[{rel_type}]->({end})")
+
+    # Add marriage-as-event modeling
+    marriage_nodes_added = 0
+    marriage_edges_added = 0
+    for spouse_a, spouse_b, desc in MARRIAGES:
+        if spouse_a not in existing_slugs or spouse_b not in existing_slugs:
+            continue
+
+        marriage_slug, created = get_or_create_marriage_event(nodes_data, spouse_a, spouse_b, desc)
+        if created:
+            existing_slugs.add(marriage_slug)
+            marriage_nodes_added += 1
+            print(f"  + Node: {marriage_slug} (Event/Marriage)")
+
+        for spouse in (spouse_a, spouse_b):
+            key = (spouse, "PARTICIPATES_IN", marriage_slug)
+            if key in existing_rels:
+                continue
+            new_rel = {
+                "id": next_id,
+                "start_slug": spouse,
+                "end_slug": marriage_slug,
+                "type": "PARTICIPATES_IN",
+                "role": "spouse",
+                "description": f"{spouse} participated as a spouse in {marriage_slug}.",
+                "status": "PROPOSED",
+                "evidence_url": None,
+                "citation_style": "Chicago 17",
+                "page_refs": None,
+                "source_note": "curator:deep_expansion_2025",
+                "inline_evidence": False
+            }
+            rels_data['relationships'].append(new_rel)
+            existing_rels.add(key)
+            next_id += 1
+            marriage_edges_added += 1
+            print(f"  + ({spouse})-[PARTICIPATES_IN {{role:spouse}}]->({marriage_slug})")
     
     if missing_nodes:
         print(f"\nMissing nodes (skipped): {sorted(missing_nodes)}")
@@ -1099,6 +1161,8 @@ def main():
     print(f"  Relationships added: {added_rels}")
     print(f"  Relationships skipped (exists): {skipped_exists}")
     print(f"  Relationships skipped (missing): {skipped_missing}")
+    print(f"  Marriage event nodes added: {marriage_nodes_added}")
+    print(f"  Marriage participation edges added: {marriage_edges_added}")
     print(f"  Total nodes now: {len(nodes_data['nodes'])}")
     print(f"  Total relationships now: {len(rels_data['relationships'])}")
     

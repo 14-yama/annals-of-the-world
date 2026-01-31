@@ -140,7 +140,7 @@ Example triples:
 | ASSASSINATES | P → P | Targeted killing of a public/political/religious figure | Provide victim role/title; political/religious motive usually present |
 | MURDERS | P → P | Unlawful killing with intent | Requires evidence of unlawfulness/intent; avoid for wartime combat |
 | SUCCEEDS | P → P; I → I | Succeeds to office/role/lineage | Provide office/context in properties |
-| MARRIES | P ↔ P | Marital tie (reciprocal) | Record one reciprocal edge or two directed edges consistently |
+| MARRIES | (DEPRECATED) | Do not model marriage as P↔P | Model marriage as an `:Event` with `kind:"Marriage"` and connect spouses via `PARTICIPATES_IN {role:"spouse"}`; attach `OCCURS_DURING` / `OCCURS_IN` / startYear/endYear to the marriage event/window |
 | COLLABORATES_WITH | P ↔ P | Works jointly on a specific text/event/project | Reciprocal; include target ref (text/event id) |
 | CORRESPONDS_WITH | P ↔ P | Documented exchange of letters | Reciprocal; cite correspondence |
 | DIVORCES | P ↔ P | Formal dissolution of marriage | Reciprocal; include date/jurisdiction |

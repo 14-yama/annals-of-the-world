@@ -32,9 +32,18 @@ def create_constraints():
         "CREATE INDEX event_category_index IF NOT EXISTS FOR (e:Event) ON (e.category)",
         "CREATE INDEX event_status_index IF NOT EXISTS FOR (e:Event) ON (e.status)",
         "CREATE INDEX event_timeframe_index IF NOT EXISTS FOR (e:Event) ON (e.timeframe)",
+        "CREATE INDEX event_kind_index IF NOT EXISTS FOR (e:Event) ON (e.kind)",
+
+        # TIMEFRAME LOOKUP CONSTRAINTS
+        "CREATE CONSTRAINT timeframe_slug_unique IF NOT EXISTS FOR (t:Timeframe) REQUIRE t.slug IS UNIQUE",
+        "CREATE CONSTRAINT timeframe_division_unique IF NOT EXISTS FOR (t:Timeframe) REQUIRE t.division IS UNIQUE",
+        "CREATE INDEX timeframe_name_index IF NOT EXISTS FOR (t:Timeframe) ON (t.name)",
+
+        # FRAMEWORK LOOKUP CONSTRAINTS
+        "CREATE CONSTRAINT framework_slug_unique IF NOT EXISTS FOR (f:Framework) REQUIRE f.slug IS UNIQUE",
 
         # PLACE NODE CONSTRAINTS
-        "CREATE CONSTRAINT place_name_unique IF NOT EXISTS FOR (pl:Place) REQUIRE pl.name IS UNIQUE",
+        "CREATE INDEX place_name_index IF NOT EXISTS FOR (pl:Place) ON (pl.name)",
         "CREATE CONSTRAINT place_slug_unique IF NOT EXISTS FOR (pl:Place) REQUIRE pl.slug IS UNIQUE",
         "CREATE INDEX place_category_index IF NOT EXISTS FOR (pl:Place) ON (pl.category)",
         "CREATE INDEX place_status_index IF NOT EXISTS FOR (pl:Place) ON (pl.status)",

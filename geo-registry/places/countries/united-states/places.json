@@ -1,266 +1,271 @@
 {
-  "slug": "united-states",
-  "name": "United States",
-  "iso": "US",
-  "wikidata_id": "Q30",
-  "names": [
-    {
-      "name": "United States",
-      "lang": "en",
-      "is_primary": true,
-      "is_endonym": true
-    },
-    {
-      "name": "United States of America",
-      "lang": "en",
-      "is_endonym": true
-    },
-    {
-      "name": "USA",
-      "lang": "en",
-      "note": "Abbreviation"
-    },
-    {
-      "name": "États-Unis",
-      "lang": "fr"
-    },
-    {
-      "name": "Estados Unidos",
-      "lang": "es"
+  "_meta": {
+        "country_slug": "united-states",
+        "node_kind": "places",
+        "registry": "docs/nodes/node-attribute-registry.md",
+        "generated_at": "2026-01-31T13:56:07.943374Z",
+        "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+        "timeframe_coverage": [
+          "910",
+          "920",
+          "930",
+          "940",
+          "950",
+          "960"
+        ],
+        "grouped_by": "timeframe"
+      },
+      "thematic_clusters": {
+        "910": [
+          {
+            "slug": "Blackwater_Draw_Clovis_Site",
+            "name": "Blackwater Draw",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "Archaeological_Site",
+            "description": "Clovis site with Paleoindian artifacts and faunal remains.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "New Mexico"
+            }
+          },
+          {
+            "slug": "Meadowcroft_Rockshelter",
+            "name": "Meadowcroft Rockshelter",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "Archaeological_Site",
+            "description": "Prehistoric site with evidence of early human occupation.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "Pennsylvania"
+            }
+          },
+          {
+            "slug": "White_Sands_Footprints",
+            "name": "White Sands Footprints",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "Archaeological_Site",
+            "description": "Ancient human footprints preserved in gypsum lakebeds.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "New Mexico"
+            }
+          }
+        ],
+        "920": [
+          {
+            "slug": "Poverty_Point",
+            "name": "Poverty Point",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "Earthworks",
+            "description": "Archaic earthworks complex and trade center.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "Louisiana"
+            }
+          },
+          {
+            "slug": "Hopewell_Earthworks",
+            "name": "Hopewell Earthworks",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "Earthworks",
+            "description": "Ceremonial and burial earthworks associated with Hopewell cultures.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "Ohio"
+            }
+          }
+        ],
+        "930": [
+          {
+            "slug": "Cahokia",
+            "name": "Cahokia",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "City",
+            "description": "Major Mississippian urban center with monumental mounds.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "Illinois"
+            }
+          },
+          {
+            "slug": "Chaco_Canyon",
+            "name": "Chaco Canyon",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "Cultural_Center",
+            "description": "Ancestral Puebloan cultural center with great houses and ceremonial kivas.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "New Mexico"
+            }
+          },
+          {
+            "slug": "Mesa_Verde",
+            "name": "Mesa Verde",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "Cliff_Dwellings",
+            "description": "Cliff dwellings built by Ancestral Puebloans in the late medieval period.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "Colorado"
+            }
+          }
+        ],
+        "940": [
+          {
+            "slug": "Jamestown",
+            "name": "Jamestown",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "Settlement",
+            "description": "First permanent English settlement in North America.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "Virginia"
+            }
+          },
+          {
+            "slug": "Plymouth_Colony",
+            "name": "Plymouth Colony",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "Settlement",
+            "description": "English colonial settlement established by the Pilgrims.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "Massachusetts"
+            }
+          },
+          {
+            "slug": "Philadelphia",
+            "name": "Philadelphia",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "City",
+            "description": "Colonial and early U.S. political center; site of the Declaration and Constitution.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "Pennsylvania"
+            }
+          }
+        ],
+        "950": [
+          {
+            "slug": "New_York_City",
+            "name": "New York City",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "City",
+            "description": "Major economic and cultural center of the United States.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "New York"
+            }
+          },
+          {
+            "slug": "Chicago",
+            "name": "Chicago",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "City",
+            "description": "Industrial and transportation hub of the Midwest during the 19th and 20th centuries.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "Illinois"
+            }
+          },
+          {
+            "slug": "San_Francisco",
+            "name": "San Francisco",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "City",
+            "description": "West Coast city associated with the Gold Rush, finance, and technology sectors.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "California"
+            }
+          }
+        ],
+        "960": [
+          {
+            "slug": "Washington_DC",
+            "name": "Washington, D.C.",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "Capital",
+            "description": "Federal capital city and seat of U.S. government.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "District of Columbia"
+            }
+          },
+          {
+            "slug": "Los_Angeles",
+            "name": "Los Angeles",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "City",
+            "description": "Major metropolitan area known for entertainment, trade, and aerospace industries.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "California"
+            }
+          },
+          {
+            "slug": "Silicon_Valley",
+            "name": "Silicon Valley",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "en",
+            "script": "Latn",
+            "place_kind": "Region",
+            "description": "Technology and innovation hub in Northern California.",
+            "location": {
+              "country_slug": "united-states",
+              "place_note": "California"
+            }
+          }
+        ]
+      }
     }
-  ],
-  "cities": {
-    "washington-dc": {
-      "name": "Washington, D.C.",
-      "wikidata_id": "Q61",
-      "names": [
-        {
-          "name": "Washington, D.C.",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        },
-        {
-          "name": "Washington",
-          "lang": "en",
-          "note": "Short form"
-        }
-      ]
-    },
-    "new-york-city": {
-      "name": "New York City",
-      "wikidata_id": "Q60",
-      "names": [
-        {
-          "name": "New York City",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        },
-        {
-          "name": "New York",
-          "lang": "en",
-          "note": "Common short form"
-        },
-        {
-          "name": "NYC",
-          "lang": "en",
-          "note": "Abbreviation"
-        }
-      ],
-      "former_names": [
-        {
-          "name": "New Amsterdam",
-          "lang": "nl",
-          "startYear": 1626,
-          "endYear": 1664,
-          "change_reason": "CONQUEST_OR_POLITICAL_TAKEOVER",
-          "note": "Dutch colonial name"
-        }
-      ]
-    },
-    "los-angeles": {
-      "name": "Los Angeles",
-      "wikidata_id": "Q65",
-      "names": [
-        {
-          "name": "Los Angeles",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        },
-        {
-          "name": "LA",
-          "lang": "en",
-          "note": "Abbreviation"
-        }
-      ]
-    },
-    "chicago": {
-      "name": "Chicago",
-      "wikidata_id": "Q1297",
-      "names": [
-        {
-          "name": "Chicago",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ]
-    },
-    "philadelphia": {
-      "name": "Philadelphia",
-      "wikidata_id": "Q1345",
-      "names": [
-        {
-          "name": "Philadelphia",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        },
-        {
-          "name": "Philly",
-          "lang": "en",
-          "note": "Informal"
-        }
-      ]
-    },
-    "boston": {
-      "name": "Boston",
-      "wikidata_id": "Q100",
-      "names": [
-        {
-          "name": "Boston",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ]
-    },
-    "san-francisco": {
-      "name": "San Francisco",
-      "wikidata_id": "Q62",
-      "names": [
-        {
-          "name": "San Francisco",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        },
-        {
-          "name": "SF",
-          "lang": "en",
-          "note": "Abbreviation"
-        }
-      ],
-      "former_names": [
-        {
-          "name": "Yerba Buena",
-          "lang": "es",
-          "endYear": 1847,
-          "change_reason": "CONQUEST_OR_POLITICAL_TAKEOVER"
-        }
-      ]
-    },
-    "miami": {
-      "name": "Miami",
-      "wikidata_id": "Q8652",
-      "names": [
-        {
-          "name": "Miami",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ]
-    },
-    "new-orleans": {
-      "name": "New Orleans",
-      "wikidata_id": "Q34404",
-      "names": [
-        {
-          "name": "New Orleans",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        },
-        {
-          "name": "La Nouvelle-Orléans",
-          "lang": "fr"
-        }
-      ]
-    },
-    "seattle": {
-      "name": "Seattle",
-      "wikidata_id": "Q5083",
-      "names": [
-        {
-          "name": "Seattle",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ]
-    },
-    "denver": {
-      "name": "Denver",
-      "wikidata_id": "Q16554",
-      "names": [
-        {
-          "name": "Denver",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ]
-    },
-    "atlanta": {
-      "name": "Atlanta",
-      "wikidata_id": "Q23556",
-      "names": [
-        {
-          "name": "Atlanta",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ]
-    },
-    "houston": {
-      "name": "Houston",
-      "wikidata_id": "Q16555",
-      "names": [
-        {
-          "name": "Houston",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ]
-    },
-    "dallas": {
-      "name": "Dallas",
-      "wikidata_id": "Q16557",
-      "names": [
-        {
-          "name": "Dallas",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ]
-    },
-    "san-antonio": {
-      "name": "San Antonio",
-      "wikidata_id": "Q975",
-      "names": [
-        {
-          "name": "San Antonio",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ]
-    }
-  }
 }

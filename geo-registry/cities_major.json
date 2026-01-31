@@ -1,0 +1,63 @@
+{
+  "_meta": {
+    "description": "Starter set of major cities with name variants. Expand over time.",
+    "last_updated": "2026-01-30"
+  },
+  "cities": [
+    {
+      "slug": "jerusalem",
+      "name": "Jerusalem",
+      "kind": "city",
+      "wikidata_id": "Q1218",
+      "names": [
+        {"name": "Jerusalem", "lang": "en", "script": "Latn", "is_primary": true},
+        {"name": "Jebus", "lang": "und", "script": "Latn", "startYear": -3000, "endYear": -1000},
+        {"name": "Aelia Capitolina", "lang": "la", "script": "Latn", "startYear": 135, "endYear": 638}
+      ]
+    },
+    {
+      "slug": "istanbul",
+      "name": "Istanbul",
+      "kind": "city",
+      "wikidata_id": "Q406",
+      "names": [
+        {"name": "Istanbul", "lang": "tr", "script": "Latn", "is_primary": true, "startYear": 1930},
+        {"name": "Constantinople", "lang": "en", "script": "Latn", "startYear": 330, "endYear": 1930},
+        {"name": "Byzantium", "lang": "grc", "script": "Latn", "startYear": -700, "endYear": 330}
+      ]
+    },
+    {
+      "slug": "saint-petersburg",
+      "name": "Saint Petersburg",
+      "kind": "city",
+      "wikidata_id": "Q656",
+      "names": [
+        {"name": "Saint Petersburg", "lang": "en", "script": "Latn", "is_primary": true},
+        {"name": "Petrograd", "lang": "ru", "script": "Latn", "startYear": 1914, "endYear": 1924},
+        {"name": "Leningrad", "lang": "ru", "script": "Latn", "startYear": 1924, "endYear": 1991}
+      ]
+    },
+    {
+      "slug": "mumbai",
+      "name": "Mumbai",
+      "kind": "city",
+      "wikidata_id": "Q1156",
+      "names": [
+        {"name": "Mumbai", "lang": "en", "script": "Latn", "is_primary": true, "startYear": 1995},
+        {"name": "Bombay", "lang": "en", "script": "Latn", "startYear": 1661, "endYear": 1995}
+      ]
+    },
+    {
+      "slug": "beijing",
+      "name": "Beijing",
+      "kind": "city",
+      "wikidata_id": "Q956",
+      "names": [
+        {"name": "北京", "lang": "zh", "script": "Hani", "is_endonym": true},
+        {"name": "Beijing", "lang": "en", "script": "Latn", "is_primary": true},
+        {"name": "Peking", "lang": "en", "script": "Latn"},
+        {"name": "Peiping", "lang": "en", "script": "Latn", "startYear": 1928, "endYear": 1949}
+      ]
+    }
+  ]
+}

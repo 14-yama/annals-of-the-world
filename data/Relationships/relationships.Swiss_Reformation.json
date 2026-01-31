@@ -18,7 +18,9 @@
         "inline_evidence": "Derived boolean: true when evidence_url is non-null.",
         "evidence_node_present": "Derived boolean: true when :Evidence node exists in Neo4j for evidence_slug at last status update."
       }
-    }
+    },
+    "timeframe_edges_generated_at": "2026-01-24T02:12:29.942368+00:00",
+    "timeframe_edges_generator": "scripts/generate_timeframe_edges.py"
   },
   "relationships": [
     {
@@ -356,6 +358,194 @@
       "source_note": "auto:from_script:ensure_is_part_of",
       "_key": "Swiss_Reformation|IS_PART_OF|European_Reformations",
       "confidence_score": null
+    }
+  ],
+  "timeframe_edges": [
+    {
+      "node_slug": "Abolition_of_the_Mass_Zurich_1525",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Academy_Founding_1559",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Affair_of_the_Sausages_1522",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Basel",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Basel_Church_Order_1529",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Basel_Reform_1529",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Bern",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Bern_Disputation_1528",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Calvin_Return_to_Geneva_1541",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "City_Magistrates_Zurich",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Consensus_Tigurinus_1549",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Ecclesiastical_Ordinances_1541",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "European_Reformations",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "First_Helvetic_Confession_1536",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Geneva",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Geneva_Bible_1560",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Heinrich_Bullinger",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Institutes_1559",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "John_Calvin",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Kappel",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Kappel_Wars_1529_1531",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Lutheran_Reformation",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Reformed_Tradition",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Servetus_Execution_1553",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Sixty-Seven_Articles_1523",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Swiss_Reformation",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Ulrich_Zwingli",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Zurich",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Zurich_Church_Order_1525",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Zurich_City_Council",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Zurich_Disputations_1523",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
     }
   ]
 }

@@ -130,8 +130,6 @@ PERSON_RELATIONSHIPS = [
      "Henry VIII promulgated the Act of Supremacy establishing royal headship of the church."),
     ("Henry_VIII", "ORGANIZES", "Dissolution_of_the_Monasteries", 
      "Henry VIII ordered the dissolution of English monasteries."),
-    ("Henry_VIII", "MARRIES", "Anne_Boleyn", 
-     "Henry VIII married Anne Boleyn after the annulment of his first marriage."),
     
     # Edward VI
     ("Edward_VI", "PROMULGATES", "Book_of_Common_Prayer_1549", 
@@ -198,6 +196,13 @@ PERSON_RELATIONSHIPS = [
      "Edmund Grindal showed tolerance toward Puritan prophesyings."),
     ("Edmund_Grindal", "SUSPENDED_BY", "Elizabeth_I", 
      "Edmund Grindal was suspended by Elizabeth I for refusing to suppress prophesyings."),
+]
+
+# Marriage is modeled as an Event + participation edges (not P↔P).
+# Format: (spouse_a_slug, spouse_b_slug, description)
+MARRIAGES = [
+    ("Henry_VIII", "Anne_Boleyn",
+     "Henry VIII married Anne Boleyn after the annulment of his first marriage."),
 ]
 
 TEXT_RELATIONSHIPS = [
@@ -358,6 +363,30 @@ def get_existing_nodes(nodes_path: Path) -> set:
     data = load_json(nodes_path)
     return {n['slug'] for n in data.get('nodes', [])}
 
+def get_next_node_slug_set(nodes_data: dict) -> set:
+    return {n['slug'] for n in nodes_data.get('nodes', [])}
+
+def get_or_create_marriage_event(nodes_data: dict, cluster: str, spouse_a: str, spouse_b: str, description: str):
+    a, b = sorted([spouse_a, spouse_b])
+    event_slug = f"Marriage_{a}_{b}"
+    existing = get_next_node_slug_set(nodes_data)
+    if event_slug in existing:
+        return event_slug, False
+
+    nodes_data.setdefault('nodes', []).append({
+        "slug": event_slug,
+        "name": f"Marriage: {a} × {b}",
+        "label": "Event",
+        "kind": "Marriage",
+        "cluster": cluster,
+        "status": "PROPOSED",
+        "workflow_stage": "PROPOSED",
+        "created_at": datetime.now(timezone.utc).isoformat(),
+        "created_by": "add_comprehensive_relationships.py",
+        "description": description,
+    })
+    return event_slug, True
+
 def add_relationships(cluster: str, dry_run: bool = False):
     """Add comprehensive relationships to the cluster."""
     base = Path('data')
@@ -372,7 +401,8 @@ def add_relationships(cluster: str, dry_run: bool = False):
         return
     
     # Load existing data
-    existing_nodes = get_existing_nodes(nodes_path)
+    nodes_data = load_json(nodes_path)
+    existing_nodes = {n['slug'] for n in nodes_data.get('nodes', [])}
     rels_data = load_json(rels_path)
     relationships = rels_data.get('relationships', [])
     
@@ -424,22 +454,66 @@ def add_relationships(cluster: str, dry_run: bool = False):
         next_id += 1
         added += 1
         print(f"  + ({start})-[{rel_type}]->({end})")
+
+    # Add marriage-as-event modeling
+    marriage_events_added = 0
+    marriage_edges_added = 0
+    for spouse_a, spouse_b, desc in MARRIAGES:
+        if spouse_a not in existing_nodes:
+            missing_nodes.add(spouse_a)
+            continue
+        if spouse_b not in existing_nodes:
+            missing_nodes.add(spouse_b)
+            continue
+
+        marriage_slug, created = get_or_create_marriage_event(nodes_data, cluster, spouse_a, spouse_b, desc)
+        if created:
+            existing_nodes.add(marriage_slug)
+            marriage_events_added += 1
+            print(f"  + Node: {marriage_slug} (Event/Marriage)")
+
+        for spouse in (spouse_a, spouse_b):
+            if relationship_exists(relationships, spouse, "PARTICIPATES_IN", marriage_slug):
+                continue
+            new_rel = {
+                "id": next_id,
+                "start_slug": spouse,
+                "end_slug": marriage_slug,
+                "type": "PARTICIPATES_IN",
+                "role": "spouse",
+                "description": f"{spouse} participated as a spouse in {marriage_slug}.",
+                "status": "PROPOSED",
+                "evidence_url": None,
+                "citation_style": "Chicago 17",
+                "page_refs": None,
+                "source_note": "curator:comprehensive_edges_2025",
+                "inline_evidence": False,
+            }
+            relationships.append(new_rel)
+            next_id += 1
+            marriage_edges_added += 1
+            print(f"  + ({spouse})-[PARTICIPATES_IN {{role:spouse}}]->({marriage_slug})")
     
     if missing_nodes:
         print(f"\nMissing nodes (relationships skipped): {sorted(missing_nodes)}")
     
     print(f"\n=== Summary ===")
     print(f"  Added: {added}")
+    print(f"  Marriage event nodes added: {marriage_events_added}")
+    print(f"  Marriage participation edges added: {marriage_edges_added}")
     print(f"  Skipped (already exists): {skipped_exists}")
     print(f"  Skipped (missing nodes): {skipped_missing}")
     print(f"  Total relationships now: {len(relationships)}")
     
-    if not dry_run and added > 0:
+    if not dry_run and (added > 0 or marriage_events_added > 0 or marriage_edges_added > 0):
         # Update metadata
         rels_data['relationships'] = relationships
         rels_data['_meta']['last_updated'] = datetime.now(timezone.utc).isoformat()
         rels_data['_meta']['comprehensive_edges_added'] = datetime.now(timezone.utc).isoformat()
-        
+
+        nodes_data.setdefault('_meta', {})['last_updated'] = datetime.now(timezone.utc).isoformat()
+
+        save_json(nodes_path, nodes_data)
         save_json(rels_path, rels_data)
         print(f"\nSaved to {rels_path}")
     elif dry_run:

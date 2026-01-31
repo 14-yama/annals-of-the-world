@@ -18,7 +18,9 @@
         "inline_evidence": "Derived boolean: true when evidence_url is non-null.",
         "evidence_node_present": "Derived boolean: true when :Evidence node exists in Neo4j for evidence_slug at last status update."
       }
-    }
+    },
+    "timeframe_edges_generated_at": "2026-01-24T02:12:29.930900+00:00",
+    "timeframe_edges_generator": "scripts/generate_timeframe_edges.py"
   },
   "relationships": [
     {
@@ -230,6 +232,140 @@
       "source_note": "auto:from_script:ensure_is_part_of",
       "_key": "French_Reformation|IS_PART_OF|European_Reformations",
       "confidence_score": null
+    }
+  ],
+  "timeframe_edges": [
+    {
+      "node_slug": "Affair_of_the_Placards_1534",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Catholic_League",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Day_of_the_Barricades_1588",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Edict_of_Nantes_1598",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Edict_of_Nantes_Passage_1598",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Edict_of_Saint-Germain_1562",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "European_Reformations",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Evangelical_Humanism_in_France",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "First_National_Synod_1559",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Formation_of_French_Consistories",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "French_Confession_of_Faith_1559",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "French_Reformation",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Huguenot_Movement",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "La_Rochelle",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Meaux_Bible_Circle_Writings",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "National_Synods_of_France",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Nimes",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Paris",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Parlement_of_Paris",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Politiques",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Royal_Court_of_France",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "St_Bartholomews_Day_Massacre_1572",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
     }
   ]
 }

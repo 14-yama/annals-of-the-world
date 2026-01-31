@@ -1,16 +1,22 @@
-# seed_places_inline.py
+# geo_registry.py
 # Seeding Continents → Regions → Countries with Canonical Attribute Registry
-# Neo4j 5 / Aura compatible. No APOC. No env/CLI.
+# Neo4j 5 compatible. Uses .env.local for credentials.
 
+import os
+from pathlib import Path
 from neo4j import GraphDatabase
 from datetime import datetime
 
-# -------------------- Aura credentials (inline) --------------------
-# ❗ Replace <YOUR-AURA-ENDPOINT> with your Aura host (neo4j+s://...databases.neo4j.io)
-# ❗ If you hardcode a password, rotate it afterwards.
-URI      = "neo4j+s://e7860001.databases.neo4j.io"
-USER     = "e7860001"
-PASSWORD = "MmS8BbqX1_qgs7ayqoq2GJr7MWj8fLRV7ldaRP_B-9Y"
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).parent / ".env.local")
+except ImportError:
+    pass  # dotenv optional; fall back to env vars
+
+# -------------------- Credentials from .env.local --------------------
+URI      = os.getenv("NEO4J_URI", "bolt://localhost:7687")
+USER     = os.getenv("NEO4J_USER", "neo4j")
+PASSWORD = os.getenv("NEO4J_PASSWORD", "neo4j")
 
 # -------------------- Data --------------------
 # ISO 3166-1 Country Code Registry
@@ -68,13 +74,10 @@ def now_iso() -> str:
     return datetime.utcnow().isoformat(timespec="seconds") + "Z"
 
 # -------------------- Cypher --------------------
-C_CONSTRAINTS = """
-CREATE CONSTRAINT place_slug_unique IF NOT EXISTS
-FOR (n:Place) REQUIRE n.slug IS UNIQUE;
-
-CREATE INDEX place_region_slug_idx IF NOT EXISTS
-FOR (n:Place) ON (n.region, n.slug);
-"""
+C_CONSTRAINTS = [
+    "CREATE CONSTRAINT place_slug_unique IF NOT EXISTS FOR (n:Place) REQUIRE n.slug IS UNIQUE",
+    "CREATE INDEX place_region_slug_idx IF NOT EXISTS FOR (n:Place) ON (n.region, n.slug)",
+]
 
 C_UPSERT = """
 MERGE (p:Place {slug: $slug})
@@ -107,16 +110,19 @@ def upsert_place(tx, *, name: str, kind: str, region: str, division_code: str, s
            status=status, intl_status=intl_status, ts=now_iso())
     return slug
 
-def seed(tx):
-    # 1) constraints
-    tx.run(C_CONSTRAINTS)
+def seed_schema(tx):
+    """Run schema changes (constraints/indexes) in a separate transaction."""
+    for stmt in C_CONSTRAINTS:
+        tx.run(stmt)
 
-    # 2) continents (treated as macro-regions)
+def seed_data(tx):
+    """Seed geo hierarchy data."""
+    # 1) continents (treated as macro-regions)
     for cont in CONTINENTS:
         upsert_place(tx, name=cont, kind="region", region=cont,
                      division_code="400", status="PROPOSED", intl_status="ALIGNED")
 
-    # 3) regions & countries
+    # 2) regions & countries
     for continent, regions in HIER.items():
         cont_slug = slugify(continent)
         for rname, countries in regions.items():
@@ -128,7 +134,7 @@ def seed(tx):
                                      division_code="430", intl_status="NEEDS_REVIEW")
                 tx.run(C_CONTAINS, a=rslug, b=pslug)
 
-    # 4) Antarctica housekeeping
+    # 3) Antarctica housekeeping
     a_slug = slugify("Antarctica")
     tx.run("""
         MATCH (c:Place {slug:$s})
@@ -138,9 +144,17 @@ def seed(tx):
 def main():
     driver = GraphDatabase.driver(URI, auth=(USER, PASSWORD))
     with driver.session() as sess:
-        info = sess.run("CALL db.info() YIELD version RETURN version").single()
-        print(f"Connected to Neo4j {info['version']} @ {URI}")
-        sess.execute_write(seed)
+        # Version check compatible with Neo4j 5+
+        try:
+            info = sess.run("CALL dbms.components() YIELD name, versions RETURN versions[0] AS version LIMIT 1").single()
+            print(f"Connected to Neo4j {info['version']} @ {URI}")
+        except Exception:
+            print(f"Connected to Neo4j @ {URI}")
+        
+        # Schema changes must be in a separate transaction from data changes
+        sess.execute_write(seed_schema)
+        sess.execute_write(seed_data)
+        
         res = sess.run("""
             MATCH (c:Place {kind:'region'})-[:CONTAINS]->(r:Place {kind:'region'})-[:CONTAINS]->(p:Place {kind:'country'})
             RETURN count(DISTINCT c) AS continents, count(DISTINCT r) AS regions, count(DISTINCT p) AS countries

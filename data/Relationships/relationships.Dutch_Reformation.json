@@ -18,7 +18,9 @@
         "inline_evidence": "Derived boolean: true when evidence_url is non-null.",
         "evidence_node_present": "Derived boolean: true when :Evidence node exists in Neo4j for evidence_slug at last status update."
       }
-    }
+    },
+    "timeframe_edges_generated_at": "2026-01-24T02:12:29.922419+00:00",
+    "timeframe_edges_generator": "scripts/generate_timeframe_edges.py"
   },
   "relationships": [
     {
@@ -230,6 +232,158 @@
       "source_note": "auto:from_script:ensure_is_part_of",
       "_key": "Dutch_Reformation|IS_PART_OF|European_Reformations",
       "confidence_score": null
+    }
+  ],
+  "timeframe_edges": [
+    {
+      "node_slug": "Antwerp",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Arminian_Remonstrant",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Belgic_Confession_1561",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Canons_of_Dort_1619",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Church_Order_of_Dort_1619",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Contra-Remonstrant",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Dordrecht",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Dutch_Reformation",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Dutch_Reformed",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Emden",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "European_Reformations",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Hedge_Preachings_1560s",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Heidelberg_Catechism_1563",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Iconoclastic_Fury_1566",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Oldenbarnevelt_Execution_1619",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Preaching_Field_Ministers",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Provincial_Synods",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Reformed_Church_of_the_Netherlands",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Remonstrance_1610",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "States-General",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Synod_of_Dordt",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Synod_of_Dordt_1618_1619",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Synod_of_Emden_1571",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Union_of_Utrecht_1579",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Utrecht",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
     }
   ]
 }

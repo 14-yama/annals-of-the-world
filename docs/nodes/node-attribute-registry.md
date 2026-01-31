@@ -93,6 +93,16 @@ Editorial notes:
 | `geo.lat`, `geo.lon` | Coordinates (decimal, WGS84)                    | 32.54, 44.42     |
 | `iso`                | Modern ISO-3166 code                            | "IQ"            |
 
+Place naming policy (international convention)
+
+- Use `Place.slug` as the stable identifier for the physical location (never changes).
+- Use `Place.name` as the current/preferred display label.
+- Use `Place.alt_names[]` as a denormalized list of known labels (endonyms, exonyms, romanizations) for search/autocomplete.
+- Use time-scoped names as graph structure: `(:Place)-[:PREVIOUSLY_KNOWN_AS {startYear,endYear,is_primary,change_reason}]->(:PlaceName)`.
+- Optional derived edges for readability:
+	- `(:Place)-[:ENDONYM]->(:PlaceName)` — current native/local names
+	- `(:Place)-[:EXONYM]->(:PlaceName)` — current foreign-language names
+
 #### Movement
 | Attribute              | Description                     | Example                  |
 | ---------------------- | ------------------------------- | ------------------------ |

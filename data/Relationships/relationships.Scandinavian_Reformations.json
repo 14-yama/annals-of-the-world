@@ -18,7 +18,9 @@
         "inline_evidence": "Derived boolean: true when evidence_url is non-null.",
         "evidence_node_present": "Derived boolean: true when :Evidence node exists in Neo4j for evidence_slug at last status update."
       }
-    }
+    },
+    "timeframe_edges_generated_at": "2026-01-24T02:12:29.941322+00:00",
+    "timeframe_edges_generator": "scripts/generate_timeframe_edges.py"
   },
   "relationships": [
     {
@@ -160,6 +162,110 @@
       "source_note": "auto:from_script:ensure_is_part_of",
       "_key": "Scandinavian_Reformations|IS_PART_OF|European_Reformations",
       "confidence_score": null
+    }
+  ],
+  "timeframe_edges": [
+    {
+      "node_slug": "Christian_III_Bible_1550",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Confessionalization",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Copenhagen",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Counts_War_1534_1536",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Danish_Church_Ordinance_1537",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Diet_of_Vaesteras_1527",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Establishment_of_Lutheranism_Denmark_1536",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "European_Reformations",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Gustav_Vasa_Bible_1541",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Lutheran_Reformation",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Rigsraadet_Denmark",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Riksdag_of_Sweden",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Scandinavian_Reformations",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Swedish_Church_Ordinance_1531",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Uppsala",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Uppsala_Synod_1593",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Uppsala_Synod_Decrees_1593",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
     }
   ]
 }

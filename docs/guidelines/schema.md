@@ -1,5 +1,7 @@
 # Schema Reference — v4 (Human-readable)
 
+> **Last updated:** 2026-01-24
+
 This file records the project's v4 schema in a compact, human-readable form: core labels, recommended properties, key relationship types (active-voice), and example constraints / indexes. Use this as the working schema reference for curators, ingesters, and developers.
 
 ---
@@ -9,14 +11,16 @@ This file records the project's v4 schema in a compact, human-readable form: cor
 - `:Idea` — Abstract concepts (e.g., Monotheism, Covenant, Meritocracy).
 - `:Person` — Historical agents and figures (e.g., Abraham, Maimonides).
 - `:Institution` — Organized bodies (e.g., Second Temple Priesthood, Zionist Congress).
-- `:Place` — Geographic nodes (e.g., Jerusalem, Babylon, Alexandria).
-- `:Event` / `:EventWindow` — Historical occurrences or temporally bounded windows.
+- `:Place` — Geographic nodes (e.g., Jerusalem, Babylon, Alexandria). Represents stable physical locations; names are time-scoped via `:PlaceName`. See [Geographic Naming Conventions](./geo_naming.md).
+- `:PlaceName` — Time-scoped name variant for a Place (e.g., Jebus → Jerusalem → Aelia Capitolina). Linked via `HAS_NAME`.
+- `:Event` / `:EventWindow` — Historical occurrences or temporally bounded windows. See [Event Kind Vocabulary](../schema/event-kinds.md) for the canonical `kind` property values.
 - `:Movement` — Social/religious/cultural trends (e.g., Rabbinic Judaism, Zionism).
 - `:Artifact` / `:Text` — Material culture or texts (Dead Sea Scrolls, Masoretic Text).
 - `:Evidence` — Primary sources & archaeological finds (Ketef Hinnom amulets).
 - `:Corpus` — Canonical groupings (BIBLICAL_CORPUS, RABBINIC_CORPUS).
 - `:Timeframe` — Parent nodes for eras (e.g., 920 Classical, 930 Medieval).
 - `:Framework` — Interpretive lenses (Cause & Effect, Continuity & Change).
+- `:Polity` — Time-scoped political entities (e.g., Kingdom of England, Ottoman Empire). Linked to Places via `GOVERNED_BY`.
 
 ---
 
@@ -33,6 +37,7 @@ This file records the project's v4 schema in a compact, human-readable form: cor
 - `version` — integer version counter
 - `is_generic` — boolean (for place/idea hubs)
 - `class_number`, `division_code`, `call_number` — library-like classification (optional)
+- `kind` — (**Event nodes only**) canonical event category (e.g., `Marriage`, `Council`, `Battle`). See [Event Kind Vocabulary](../schema/event-kinds.md).
 
 For large-text fields use `description` and consider full-text indices rather than many properties.
 
@@ -67,17 +72,27 @@ Keep content nodes generic and free from time/place; add time and space through 
 
 Use active verbs. Relationship properties should include provenance metadata when applicable.
 
-- `(:Event)-[:OCCURRED_IN]->(:Place)`
-- `(:Event)-[:OCCURRED_AT]->(:Place)` (if precise site)
+- `(:Event)-[:OCCURS_IN]->(:Place)`
+- `(:Event)-[:OCCURS_AT]->(:Place)` (if precise site)
+- `(:Event)-[:OCCURS_DURING]->(:Timeframe)`
 - `(:Person)-[:INFLUENCES]->(:Idea)`
 - `(:Person)-[:LEADS]->(:Institution)`
+- `(:Person)-[:PARTICIPATES_IN {role}]->(:Event)`
 - `(:Institution)-[:CODIFIES]->(:Text)`
 - `(:EventWindow)-[:FRAMED_BY {citation_style,…}]->(:Framework)`
 - `(:Evidence)-[:BELONGS_TO]->(:Corpus)`
 - `(:Movement)-[:ARISES_FROM]->(:Event)`
+- `(:Place)-[:CONTAINS]->(:Place)` (geo hierarchy)
 - `(:Place)-[:CONTAINS]->(:Institution)`
 - `(:Text)-[:CITES]->(:Text)`
 - `(:Person)-[:AUTHOR_OF]->(:Text)`
+
+**Geographic naming relationships** (see [geo_naming.md](./geo_naming.md)):
+- `(:Place)-[:PREVIOUSLY_KNOWN_AS {startYear, endYear, is_primary, change_reason}]->(:PlaceName)` — authoritative, time-scoped name variants
+- `(:Place)-[:ENDONYM]->(:PlaceName)` — optional, derived edge for current native/local names
+- `(:Place)-[:EXONYM]->(:PlaceName)` — optional, derived edge for current foreign-language names
+- `(:Place)-[:GOVERNED_BY {startYear, endYear}]->(:Polity)` — political sovereignty
+- `(:Place)-[:LOCATED_IN]->(:Place)` — extinct place → modern container
 
 Relationship properties (recommended for FRAMED_BY / evidence-carrying edges):
 - `evidence_url` (stable DOI/URL)
@@ -111,14 +126,97 @@ CREATE INDEX person_category_index IF NOT EXISTS FOR (p:Person) ON (p.category);
 CREATE INDEX place_region_index IF NOT EXISTS FOR (pl:Place) ON (pl.region);
 ```
 
-Keep constraint creation under a single migration script (`scripts/migrate_schema.py` or `setup_constraints.py`).
+Keep constraint creation under the unified pipeline script (`scripts/seed_backend.py`).
 
 ---
 
 ## Time & chronology
 
 - Store years as integers: BCE negative, CE positive (e.g., `-586` for 586 BCE) for numeric sortability and range queries.
-- Use `Timeframe` nodes for eras and link `EventWindow` nodes with `OCCURS_DURING`.
+- Use `Timeframe` nodes for eras and link content nodes with `OCCURS_DURING`.
+
+### Timeframe nodes (Class 9 divisions)
+
+Create canonical Timeframe nodes for temporal anchoring:
+
+| Division | Slug | Name | Year Range |
+|----------|------|------|------------|
+| 910 | `910_Prehistoric` | Prehistoric | before -3000 |
+| 920 | `920_Classical` | Classical | -3000 to 70 |
+| 930 | `930_Medieval` | Medieval | 70 to 1500 |
+| 940 | `940_Early_Modern` | Early Modern | 1500 to 1800 |
+| 950 | `950_Modern` | Modern | 1800 to 1945 |
+| 960 | `960_Contemporary` | Contemporary | 1945 to present |
+
+Cypher setup:
+
+```cypher
+CREATE (t:Timeframe {slug: '910_Prehistoric', division: 910, name: 'Prehistoric', startYear: -10000000, endYear: -3000})
+CREATE (t:Timeframe {slug: '920_Classical', division: 920, name: 'Classical', startYear: -3000, endYear: 70})
+CREATE (t:Timeframe {slug: '930_Medieval', division: 930, name: 'Medieval', startYear: 70, endYear: 1500})
+CREATE (t:Timeframe {slug: '940_Early_Modern', division: 940, name: 'Early Modern', startYear: 1500, endYear: 1800})
+CREATE (t:Timeframe {slug: '950_Modern', division: 950, name: 'Modern', startYear: 1800, endYear: 1945})
+CREATE (t:Timeframe {slug: '960_Contemporary', division: 960, name: 'Contemporary', startYear: 1945, endYear: 2100})
+
+CREATE INDEX timeframe_division IF NOT EXISTS FOR (t:Timeframe) ON (t.division)
+CREATE INDEX timeframe_slug IF NOT EXISTS FOR (t:Timeframe) ON (t.slug)
+```
+
+### OCCURS_DURING edges (best practice for scale)
+
+For efficient temporal queries at 1M+ nodes, use explicit `OCCURS_DURING` edges to Timeframe nodes rather than inline relationship properties.
+
+**Why explicit edges are faster:**
+- Node property indexes are more performant than relationship property indexes
+- Queries start from indexed Timeframe node and traverse outward
+- Neo4j optimizes graph traversal patterns over property filtering
+- Enables intersection queries (e.g., "institutions opposing persons in division 930")
+
+**Pattern:**
+
+```cypher
+// Link any content node to its timeframe
+(:Person)-[:OCCURS_DURING]->(:Timeframe)
+(:Event)-[:OCCURS_DURING]->(:Timeframe)
+(:Institution)-[:OCCURS_DURING]->(:Timeframe)
+(:Movement)-[:OCCURS_DURING]->(:Timeframe)
+(:Cluster)-[:OCCURS_DURING]->(:Timeframe)
+```
+
+**Example queries (efficient at scale):**
+
+```cypher
+// All clusters in Medieval period (division 930)
+MATCH (t:Timeframe {division: 930})<-[:OCCURS_DURING]-(c:Cluster)
+RETURN c.slug, c.name
+
+// All events in Modern period (division 950)
+MATCH (t:Timeframe {division: 950})<-[:OCCURS_DURING]-(e:Event)
+RETURN e.slug, e.name, e.startYear
+
+// Institutions opposing persons in Medieval period
+MATCH (t:Timeframe {division: 930})<-[:OCCURS_DURING]-(i:Institution)
+MATCH (t)<-[:OCCURS_DURING]-(p:Person)
+MATCH (i)-[:OPPOSES]->(p)
+RETURN i.slug, p.slug
+```
+
+**Seed file format:**
+
+Include `timeframe_edges` array in relationship JSON files:
+
+```json
+{
+  "_meta": { "cluster": "Example_Cluster" },
+  "relationships": [ ... ],
+  "timeframe_edges": [
+    { "node_slug": "Henry_VIII", "timeframe_slug": "940_Early_Modern", "division": 940 },
+    { "node_slug": "Act_of_Supremacy_1534", "timeframe_slug": "940_Early_Modern", "division": 940 }
+  ]
+}
+```
+
+Run `scripts/generate_timeframe_edges.py` to auto-generate timeframe_edges from cluster relationships.
 
 ---
 
@@ -149,6 +247,95 @@ MATCH (e:EventWindow {slug:'exodus-1'})
 MATCH (f:Framework {slug:'cause-and-effect'})
 MERGE (e)-[r:FRAMED_BY]->(f)
 SET r.evidence_url='https://doi.org/…', r.citation_style='Chicago 17', r.page_refs='12-18'
+```
+
+---
+
+## Geographic hierarchy (geo registry)
+
+The backend includes a hierarchical geo registry as the **source of truth** for geographic queries.
+
+### Hierarchy levels
+
+All geographic entities are modeled as `:Place` nodes with a `kind` property:
+
+```
+(:Place {kind:"continent"}) -[:CONTAINS]-> (:Place {kind:"region"})
+(:Place {kind:"region"})    -[:CONTAINS]-> (:Place {kind:"country"})
+(:Place {kind:"country"})   -[:CONTAINS]-> (:Place {kind:"subnational"})
+```
+
+**Structure:**
+- **6 Continents**: Africa, Americas, Asia, Europe, Oceania, Antarctica (kind="region")
+- **22 Regions**: Northern Europe, Western Europe, Southern Asia, etc. (kind="region", UN M.49)
+- **Countries**: seeded from the project registry (currently 196 in `docs/registry/iso3166_country_codes.md`) (kind="country")
+- **Subnational Places**: england, london, westminster, etc. (linked via CONTAINS)
+
+### Name variants (geo-registry)
+
+For international best practice and queryability, place name variants are modeled in two layers:
+
+- Denormalized: `Place.alt_names[]` (SKOS `altLabel` style; great for search)
+- Canonical: `(:Place)-[:HAS_NAME]->(:PlaceName)` (time-scoped, used for historical accuracy)
+
+The JSON source-of-truth lives under `geo-registry/` (see `geo-registry/README.md`).
+
+### Seed command
+
+```bash
+python scripts/seed_backend.py --clusters English_Reformation
+```
+
+### Node shapes
+
+**Continent/Region:**
+```json
+{ 
+  "slug": "europe", 
+  "name": "Europe", 
+  "kind": "region",
+  "region": "Europe",
+  "category": "Place",
+  "is_generic": true,
+  "class_number": 4,
+  "division_code": "400"
+}
+```
+
+**Country:**
+```json
+{ 
+  "slug": "united-kingdom", 
+  "name": "United Kingdom", 
+  "kind": "country",
+  "region": "Europe",
+  "category": "Place",
+  "is_generic": true,
+  "division_code": "430"
+}
+```
+
+### Query patterns
+
+**Events in a country:**
+```cypher
+MATCH (c:Place {slug: 'united-kingdom'})-[:CONTAINS*0..3]->(p:Place)
+MATCH (e:Event)-[:OCCURS_IN]->(p)
+RETURN e.name, p.name
+```
+
+**Events in a region:**
+```cypher
+MATCH (r:Place {name: 'Northern Europe', kind: 'region'})-[:CONTAINS*0..4]->(p:Place)
+MATCH (e:Event)-[:OCCURS_IN]->(p)
+RETURN e.name, p.name
+```
+
+**Events in a continent:**
+```cypher
+MATCH (c:Place {name: 'Europe'})-[:CONTAINS*0..5]->(p:Place)
+MATCH (e:Event)-[:OCCURS_IN]->(p)
+RETURN e.name, p.name
 ```
 
 ---

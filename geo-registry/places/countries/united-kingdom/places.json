@@ -1,4 +1,552 @@
 {
+  "_meta": {
+    "country_slug": "united-kingdom",
+    "node_kind": "places",
+    "registry": "docs/nodes/node-attribute-registry.md",
+    "generated_at": "2026-01-31T13:57:41.083135Z",
+    "notes": "Extracted from country Place file (_associated_nodes).",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Stonehenge_Site",
+        "name": "Stonehenge",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Monument",
+        "description": "Prehistoric stone circle and ceremonial landscape in Wiltshire.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Wiltshire, England"
+        }
+      },
+      {
+        "slug": "Avebury",
+        "name": "Avebury",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Henge",
+        "description": "Neolithic henge monument and stone circle complex.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Wiltshire, England"
+        }
+      },
+      {
+        "slug": "Skara_Brae_Site",
+        "name": "Skara Brae",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Archaeological_Site",
+        "description": "Neolithic settlement with preserved stone-built dwellings.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Orkney, Scotland"
+        }
+      },
+      {
+        "slug": "Maiden_Castle_Hillfort",
+        "name": "Maiden Castle",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Hillfort",
+        "description": "Large Iron Age hillfort with extensive earthworks.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Dorset, England"
+        }
+      }
+    ],
+    "920": [
+      {
+        "slug": "Londinium",
+        "name": "Londinium",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "la",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Roman settlement that became the administrative and commercial center of Britannia.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "London, England"
+        }
+      },
+      {
+        "slug": "Hadrians_Wall_Site",
+        "name": "Hadrian's Wall",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Fortification",
+        "description": "Roman frontier wall marking the northern boundary of Britannia.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Northern England"
+        }
+      },
+      {
+        "slug": "Aquae_Sulis",
+        "name": "Aquae Sulis (Bath)",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "la",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Roman spa town centered on thermal springs and temple complex.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Bath, England"
+        }
+      },
+      {
+        "slug": "Vindolanda",
+        "name": "Vindolanda",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Fort",
+        "description": "Roman auxiliary fort known for the Vindolanda writing tablets.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Northumberland, England"
+        }
+      }
+    ],
+    "930": [
+      {
+        "slug": "Durham_Cathedral",
+        "name": "Durham Cathedral",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Cathedral",
+        "description": "Norman cathedral and monastic complex, a major medieval pilgrimage site.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Durham, England"
+        }
+      },
+      {
+        "slug": "Windsor_Castle",
+        "name": "Windsor Castle",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Castle",
+        "description": "Royal residence founded in the 11th century and continuously occupied by the monarchy.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Berkshire, England"
+        }
+      },
+      {
+        "slug": "Westminster_Hall",
+        "name": "Westminster Hall",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Hall",
+        "description": "Medieval great hall and ceremonial space within the Palace of Westminster.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "London, England"
+        }
+      }
+    ],
+    "940": [
+      {
+        "slug": "Blackfriars_London",
+        "name": "Blackfriars (London)",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Monastery",
+        "description": "Dominican priory in London; site of the Legatine Court (trial of Henry VIII’s marriage).",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "London, England"
+        }
+      },
+      {
+        "slug": "Canterbury",
+        "name": "Canterbury",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Cathedral city in Kent; historic seat of the Archbishop of Canterbury.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Kent, England"
+        }
+      },
+      {
+        "slug": "Cambridge",
+        "name": "Cambridge",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "University city in England; significant in theology and reformist thought.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Cambridgeshire, England"
+        }
+      },
+      {
+        "slug": "Cardiff",
+        "name": "Cardiff",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Capital of Wales; later administrative and economic hub.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Wales"
+        }
+      },
+      {
+        "slug": "Dublin",
+        "name": "Dublin",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Capital of Ireland; included for Reformation-era connections in the British Isles.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Cross-border reference (Ireland)"
+        }
+      },
+      {
+        "slug": "Edinburgh",
+        "name": "Edinburgh",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Capital of Scotland; center of Scottish Reformation and governance.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Scotland"
+        }
+      },
+      {
+        "slug": "Glasgow",
+        "name": "Glasgow",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Major Scottish city; significant in religious and economic history.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Scotland"
+        }
+      },
+      {
+        "slug": "Hampton_Court_Palace",
+        "name": "Hampton Court Palace",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Palace",
+        "description": "Royal palace on the River Thames; associated with Henry VIII and Tudor court.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "London, England"
+        }
+      },
+      {
+        "slug": "London",
+        "name": "London",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Capital city of England and the United Kingdom; major political, economic, and cultural center.",
+        "location": {
+          "country_slug": "united-kingdom"
+        }
+      },
+      {
+        "slug": "Oxford",
+        "name": "Oxford",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "University city in England; major academic and religious center.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Oxfordshire, England"
+        }
+      },
+      {
+        "slug": "Rome",
+        "name": "Rome",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Seat of the Papacy; key reference point in Reformation-era conflicts.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Cross-border reference (Italy)"
+        }
+      },
+      {
+        "slug": "St_Giles_Cathedral",
+        "name": "St Giles’ Cathedral",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Cathedral",
+        "description": "Principal church of Edinburgh; associated with John Knox and Scottish Reformation.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Edinburgh, Scotland"
+        }
+      },
+      {
+        "slug": "St_Marys_Church_Oxford",
+        "name": "St Mary’s Church (Oxford)",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Church",
+        "description": "University Church of St Mary the Virgin; site of key Reformation events.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Oxford, England"
+        }
+      },
+      {
+        "slug": "St_Pauls_Cathedral",
+        "name": "St. Paul’s Cathedral",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Cathedral",
+        "description": "Major Anglican cathedral in London; religious and cultural landmark.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "London, England"
+        }
+      },
+      {
+        "slug": "Tower_of_London",
+        "name": "Tower of London",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Fortress",
+        "description": "Historic castle and fortress in London; royal residence and prison.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "London, England"
+        }
+      },
+      {
+        "slug": "Westminster",
+        "name": "Westminster",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Political center of the UK; site of Parliament and Westminster Abbey.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "London, England"
+        }
+      },
+      {
+        "slug": "Westminster_Abbey",
+        "name": "Westminster Abbey",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Abbey",
+        "description": "Royal church and coronation site in London.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "London, England"
+        }
+      },
+      {
+        "slug": "Whitehall_Palace",
+        "name": "Whitehall Palace",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Palace",
+        "description": "Principal royal residence in Tudor and Stuart periods; site of key state events.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "London, England"
+        }
+      },
+      {
+        "slug": "Wittenberg",
+        "name": "Wittenberg",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "University town in present-day Germany; linked to Reformation, included due to English Reformation connections.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Cross-border reference (Germany)"
+        }
+      },
+      {
+        "slug": "York",
+        "name": "York",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Historic city in northern England; major ecclesiastical center.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "North Yorkshire, England"
+        }
+      }
+    ],
+    "950": [
+      {
+        "slug": "Manchester",
+        "name": "Manchester",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Industrial city central to textile manufacturing and urbanization in modern Britain.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Greater Manchester, England"
+        }
+      },
+      {
+        "slug": "Liverpool",
+        "name": "Liverpool",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Major port city associated with maritime trade and industrial-era growth.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Merseyside, England"
+        }
+      },
+      {
+        "slug": "Birmingham",
+        "name": "Birmingham",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Industrial and manufacturing hub of the Midlands during the 19th century.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "West Midlands, England"
+        }
+      }
+    ],
+    "960": [
+      {
+        "slug": "Canary_Wharf",
+        "name": "Canary Wharf",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "District",
+        "description": "Modern financial district developed in London's Docklands.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "London, England"
+        }
+      },
+      {
+        "slug": "Milton_Keynes",
+        "name": "Milton Keynes",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "New_Town",
+        "description": "Planned new town established in the late 20th century.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Buckinghamshire, England"
+        }
+      },
+      {
+        "slug": "Silicon_Fen",
+        "name": "Silicon Fen",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "place_kind": "Region",
+        "description": "Technology cluster around Cambridge associated with high-tech industry and research.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Cambridgeshire, England"
+        }
+      }
+    ]
+  }
+}{
   "slug": "united-kingdom",
   "name": "United Kingdom",
   "iso": "GB",
@@ -47,151 +595,309 @@
         {
           "name": "Londres",
           "lang": "es"
+        {
+          "_meta": {
+            "country_slug": "united-kingdom",
+            "node_kind": "places",
+            "registry": "docs/nodes/node-attribute-registry.md",
+            "generated_at": "2026-01-31T13:57:41.083135Z",
+            "notes": "Extracted from country Place file (_associated_nodes).",
+            "timeframe_coverage": [
+              "910",
+              "920",
+              "930",
+              "940",
+              "950",
+              "960"
+            ],
+            "grouped_by": "timeframe"
+          },
+          "thematic_clusters": {
+            "910": [],
+            "920": [],
+            "930": [],
+            "940": [
+              {
+                "slug": "Blackfriars_London",
+                "name": "Blackfriars (London)",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "Monastery",
+                "description": "Dominican priory in London; site of the Legatine Court (trial of Henry VIII’s marriage).",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "London, England"
+                }
+              },
+              {
+                "slug": "Canterbury",
+                "name": "Canterbury",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "City",
+                "description": "Cathedral city in Kent; historic seat of the Archbishop of Canterbury.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "Kent, England"
+                }
+              },
+              {
+                "slug": "Cambridge",
+                "name": "Cambridge",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "City",
+                "description": "University city in England; significant in theology and reformist thought.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "Cambridgeshire, England"
+                }
+              },
+              {
+                "slug": "Cardiff",
+                "name": "Cardiff",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "City",
+                "description": "Capital of Wales; later administrative and economic hub.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "Wales"
+                }
+              },
+              {
+                "slug": "Dublin",
+                "name": "Dublin",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "City",
+                "description": "Capital of Ireland; included for Reformation-era connections in the British Isles.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "Cross-border reference (Ireland)"
+                }
+              },
+              {
+                "slug": "Edinburgh",
+                "name": "Edinburgh",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "City",
+                "description": "Capital of Scotland; center of Scottish Reformation and governance.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "Scotland"
+                }
+              },
+              {
+                "slug": "Glasgow",
+                "name": "Glasgow",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "City",
+                "description": "Major Scottish city; significant in religious and economic history.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "Scotland"
+                }
+              },
+              {
+                "slug": "Hampton_Court_Palace",
+                "name": "Hampton Court Palace",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "Palace",
+                "description": "Royal palace on the River Thames; associated with Henry VIII and Tudor court.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "London, England"
+                }
+              },
+              {
+                "slug": "London",
+                "name": "London",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "City",
+                "description": "Capital city of England and the United Kingdom; major political, economic, and cultural center.",
+                "location": {
+                  "country_slug": "united-kingdom"
+                }
+              },
+              {
+                "slug": "Oxford",
+                "name": "Oxford",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "City",
+                "description": "University city in England; major academic and religious center.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "Oxfordshire, England"
+                }
+              },
+              {
+                "slug": "Rome",
+                "name": "Rome",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "City",
+                "description": "Seat of the Papacy; key reference point in Reformation-era conflicts.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "Cross-border reference (Italy)"
+                }
+              },
+              {
+                "slug": "St_Giles_Cathedral",
+                "name": "St Giles’ Cathedral",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "Cathedral",
+                "description": "Principal church of Edinburgh; associated with John Knox and Scottish Reformation.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "Edinburgh, Scotland"
+                }
+              },
+              {
+                "slug": "St_Marys_Church_Oxford",
+                "name": "St Mary’s Church (Oxford)",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "Church",
+                "description": "University Church of St Mary the Virgin; site of key Reformation events.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "Oxford, England"
+                }
+              },
+              {
+                "slug": "St_Pauls_Cathedral",
+                "name": "St. Paul’s Cathedral",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "Cathedral",
+                "description": "Major Anglican cathedral in London; religious and cultural landmark.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "London, England"
+                }
+              },
+              {
+                "slug": "Tower_of_London",
+                "name": "Tower of London",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "Fortress",
+                "description": "Historic castle and fortress in London; royal residence and prison.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "London, England"
+                }
+              },
+              {
+                "slug": "Westminster",
+                "name": "Westminster",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "City",
+                "description": "Political center of the UK; site of Parliament and Westminster Abbey.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "London, England"
+                }
+              },
+              {
+                "slug": "Westminster_Abbey",
+                "name": "Westminster Abbey",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "Abbey",
+                "description": "Royal church and coronation site in London.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "London, England"
+                }
+              },
+              {
+                "slug": "Whitehall_Palace",
+                "name": "Whitehall Palace",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "Palace",
+                "description": "Principal royal residence in Tudor and Stuart periods; site of key state events.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "London, England"
+                }
+              },
+              {
+                "slug": "Wittenberg",
+                "name": "Wittenberg",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "City",
+                "description": "University town in present-day Germany; linked to Reformation, included due to English Reformation connections.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "Cross-border reference (Germany)"
+                }
+              },
+              {
+                "slug": "York",
+                "name": "York",
+                "label": "Place",
+                "status": "PROPOSED",
+                "lang": "en",
+                "script": "Latn",
+                "place_kind": "City",
+                "description": "Historic city in northern England; major ecclesiastical center.",
+                "location": {
+                  "country_slug": "united-kingdom",
+                  "place_note": "North Yorkshire, England"
+                }
+              }
+            ],
+            "950": [],
+            "960": []
+          }
         }
-      ],
-      "former_names": [
-        {
-          "name": "Londinium",
-          "lang": "la",
-          "endYear": 410,
-          "change_reason": "CONQUEST_OR_POLITICAL_TAKEOVER",
-          "note": "Roman Britain"
-        }
-      ]
-    },
-    "westminster": {
-      "name": "Westminster",
-      "wikidata_id": "Q179351",
-      "names": [
-        {
-          "name": "Westminster",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ],
-      "former_names": [
-        {
-          "name": "City of Westminster",
-          "lang": "en",
-          "note": "Formal local-authority name"
-        }
-      ]
-    },
-    "oxford": {
-      "name": "Oxford",
-      "wikidata_id": "Q34266",
-      "names": [
-        {
-          "name": "Oxford",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ]
-    },
-    "bath": {
-      "name": "Bath",
-      "wikidata_id": "Q4869",
-      "names": [
-        {
-          "name": "Bath",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ],
-      "former_names": [
-        {
-          "name": "Aquae Sulis",
-          "lang": "la",
-          "note": "Roman-era name"
-        }
-      ]
-    },
-    "edinburgh": {
-      "name": "Edinburgh",
-      "wikidata_id": "Q23436",
-      "names": [
-        {
-          "name": "Edinburgh",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        },
-        {
-          "name": "Dùn Èideann",
-          "lang": "gd",
-          "script": "Latn",
-          "is_endonym": true
-        },
-        {
-          "name": "Édimbourg",
-          "lang": "fr"
-        }
-      ]
-    },
-    "manchester": {
-      "name": "Manchester",
-      "wikidata_id": "Q18125",
-      "names": [
-        {
-          "name": "Manchester",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ],
-      "former_names": [
-        {
-          "name": "Mamucium",
-          "lang": "la",
-          "note": "Roman fort"
-        }
-      ]
-    },
-    "york": {
-      "name": "York",
-      "wikidata_id": "Q42462",
-      "names": [
-        {
-          "name": "York",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ],
-      "former_names": [
-        {
-          "name": "Eboracum",
-          "lang": "la",
-          "note": "Roman Britain"
-        },
-        {
-          "name": "Jórvík",
-          "lang": "non",
-          "note": "Viking Age"
-        }
-      ]
-    },
-    "canterbury": {
-      "name": "Canterbury",
-      "wikidata_id": "Q29303",
-      "names": [
-        {
-          "name": "Canterbury",
-          "lang": "en",
-          "is_primary": true,
-          "is_endonym": true
-        }
-      ],
-      "former_names": [
-        {
-          "name": "Durovernum Cantiacorum",
-          "lang": "la",
-          "note": "Roman Britain"
-        }
-      ]
-    }
-  }
-}

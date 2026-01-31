@@ -1,9 +1,130 @@
 # Development Log — Annals of the World
 
-Date: 2025-10-03
-Timestamp: 2025-10-04T03:35:44Z
+> This log tracks major development milestones, schema changes, and infrastructure updates.
 
-## Update — 2025-10-04T03:36:16Z (most recent)
+---
+
+## Update — 2026-01-24T19:45:00Z (most recent)
+
+### Geographic Naming Conventions
+
+Added comprehensive guideline for handling place names that change over time.
+
+**New documentation:** [docs/guidelines/geo_naming.md](./guidelines/geo_naming.md)
+
+**Key schema additions:**
+- `:PlaceName` — Time-scoped name variant nodes
+- `:Polity` — Time-scoped political entities
+- `(:Place)-[:HAS_NAME {startYear, endYear}]->(:PlaceName)`
+- `(:Place)-[:GOVERNED_BY {startYear, endYear}]->(:Polity)`
+
+**Naming change categories standardized:**
+1. Conquest/political takeover (Jebus → Jerusalem, Constantinople → Istanbul)
+2. Regime change (St. Petersburg → Leningrad → St. Petersburg)
+3. Decolonization (Bombay → Mumbai, Ceylon → Sri Lanka)
+4. Exonyms vs endonyms (Deutschland vs Germany)
+5. Script/transliteration variants (Beijing vs Peking)
+6. Extinct/ancient places (Babylon, Troy, Carthage)
+7. Border changes (place stays, country changes)
+8. City mergers/administrative changes
+
+**External ID standards:**
+- `wikidata_id` — Universal (all places)
+- `geonames_id` — Modern places
+- `pleiades_id` — Ancient/classical places
+
+---
+
+## Update — 2026-01-24T19:15:00Z
+
+### Major Infrastructure Overhaul
+
+**1. Unified Seeding Pipeline** (`scripts/seed_backend.py`)
+
+Created a single-entry-point script for all backend seeding operations:
+- Step 1: Apply 38 constraints and indexes
+- Step 2: Seed geo registry (6 continents, 22 regions, 198 countries)
+- Step 3: Seed cluster data (nodes, relationships, edge arrays)
+- Step 4: Link cluster places to geo hierarchy
+- Step 5: Post-seed validation
+
+Usage:
+```bash
+python scripts/seed_backend.py --clusters English_Reformation
+python scripts/seed_backend.py --dry-run  # Preview without changes
+```
+
+**2. Geographic Hierarchy Integration** (`geo_registry.py`)
+
+- Seeded hierarchical geo registry as source of truth for geographic queries
+- Structure: Continent → Region → Country → Subnational
+- Linked UK subnational places (England, Westminster, London, etc.) to hierarchy
+- Enables queries like "all events in Europe" via traversal
+
+**3. Event Modeling Enhancements**
+
+- Added `kind` property to Event nodes (25 canonical values)
+- Added `Event.kind` index for efficient filtering
+- Backfilled `OCCURS_IN` edges for Events via `place_edges` array
+- Marriage-as-Event migration: MARRIES → Marriage Event + PARTICIPATES_IN
+
+**4. Legacy Script Cleanup**
+
+Archived 39 scripts to `legacy-scripts/`:
+- `one-time-migrations/`: Completed schema migrations
+- `superseded/`: Replaced by unified pipeline
+- `utilities/`: Unused utilities
+
+Retained 27 active scripts in `scripts/` and `scripts/admin/`.
+
+**5. Documentation Updates**
+
+- Updated `docs/guidelines/schema.md` with geo hierarchy section
+- Added `legacy-scripts/README.md` documenting archived scripts
+- Updated constraint/index examples for Neo4j 5+ syntax
+
+### Current Backend State
+
+```
+Production cluster: English_Reformation
+- Nodes: 186
+- Relationships: 425
+- Timeframe edges: 187
+- FRAMED_BY edges: 423
+- Place edges: 46
+
+Geo hierarchy:
+- Continents: 6
+- Regions: 22
+- Countries: 198
+- UK subnational: 9 (linked)
+
+Post-seed validation:
+- Events missing kind: 0
+- Events missing OCCURS_DURING: 0
+- Events missing OCCURS_IN: 0
+```
+
+### Next Steps
+
+1. Expand to additional clusters (Early_Christianity, etc.)
+2. Add curator tooling for event kind assignment
+3. Implement place linking for non-UK clusters
+4. Create automated validation reports
+
+---
+
+## Update — 2025-12-XX (English Reformation Curation)
+
+- Expanded English_Reformation cluster significantly
+- Normalized relationships to active-voice verbs
+- Added Chicago 17 citation_style to all relationships
+- Filled node definitions and descriptions
+- Added comprehensive timeframe_edges and framed_by_edges
+
+---
+
+## Update — 2025-10-04T03:36:16Z
 
 - Added [docs/guidelines/relations_vocabulary.md](./guidelines/relations_vocabulary.md) (canonical verbs, evidence rules, QA snippets).
 - Added [docs/guidelines/historian_framework.md](./guidelines/historian_framework.md) (framework provenance, FRAMED_BY rules, evidence promotion).
@@ -74,7 +195,5 @@ Notes & Rationale
 
 - The recent additions are intentionally pattern-only when borrowing the gun cluster's logic: no domain content from that cluster was imported, only structural and governance patterns (evidence tiers, active-voice verbs, framework lens usage, promotion rules).
 - These governance docs reduce ad-hoc curation and make it easier to automate QA and ingestion while preserving scholarly traceability.
-
-If you'd like, I can start task (1) and run a normalization pass across [docs/guidelines/hebrew_cluster.md](./guidelines/hebrew_cluster.md) to align verbs with [relations_vocabulary.md](./guidelines/relations_vocabulary.md), then run the passive-verb audit and report results.
 
 NOTE: Going forward, all appended log entries will include an ISO8601 timestamp in UTC (e.g., `YYYY-MM-DDTHH:MM:SSZ`) immediately after the word "Update" to ensure precise provenance of documentation changes.

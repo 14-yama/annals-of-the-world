@@ -10,6 +10,7 @@ in a dry-run mode for planning.
 Example:
     python admin/seed_neo4j_from_clusters.py --clusters English_Reformation
     python admin/seed_neo4j_from_clusters.py --dry-run
+    python admin/seed_neo4j_from_clusters.py --clusters English_Reformation --ingest-edge-arrays
 """
 from __future__ import annotations
 
@@ -18,18 +19,23 @@ import json
 import os
 import re
 from pathlib import Path
-from typing import Dict, List, Optional, Sequence
+from typing import Any, Dict, List, Optional, Sequence, TYPE_CHECKING
 
 try:
     from dotenv import load_dotenv
 except Exception:  # pragma: no cover - optional dev dependency
-    def load_dotenv(*args, **kwargs):
-        return None
+    def load_dotenv(*args, **kwargs) -> bool:
+        return False
 try:
     from neo4j import GraphDatabase, Driver
 except Exception:  # pragma: no cover - allow running dry-run without neo4j installed
     GraphDatabase = None
     Driver = None
+
+if TYPE_CHECKING:  # pragma: no cover
+    from neo4j import Driver as Neo4jDriver
+else:  # pragma: no cover
+    Neo4jDriver = Any
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_ENV = ROOT / ".env.local"
@@ -94,6 +100,21 @@ def load_relationships(path: Path) -> List[Dict]:
     raise ValueError(f"Unsupported JSON shape in {path}")
 
 
+def load_relationship_payload(path: Path) -> Dict:
+    """Load relationship file and preserve any edge-array keys.
+
+    Returns a dict with at least a 'relationships' key.
+    """
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if isinstance(payload, dict):
+        if "relationships" not in payload:
+            raise ValueError(f"JSON {path} missing 'relationships' array")
+        return payload
+    if isinstance(payload, list):
+        return {"relationships": list(payload)}
+    raise ValueError(f"Unsupported JSON shape in {path}")
+
+
 def sanitize_label(value: Optional[str]) -> str:
     return (value or "Idea").strip().replace(" ", "_")
 
@@ -113,7 +134,7 @@ class ClusterSeeder:
         # Delay / guard driver creation so we can provide a clear error
         # message when the `neo4j` package isn't installed. In dry-run
         # mode no driver is required.
-        self.driver: Optional[Driver]
+        self.driver: Optional[Neo4jDriver]
         if dry_run:
             self.driver = None
         else:
@@ -126,6 +147,271 @@ class ClusterSeeder:
     def close(self) -> None:
         if self.driver:
             self.driver.close()
+
+    # ---- edge-array ingestion ----------------------------------------
+    def ingest_edge_arrays(self, cluster: str, payload: Dict, edge_types: Optional[Sequence[str]] = None) -> Dict[str, int]:
+        """Ingest edge arrays embedded in a relationships payload.
+
+        Supported arrays:
+        - timeframe_edges -> (n)-[:OCCURS_DURING]->(:Timeframe)
+        - framed_by_edges -> (start)-[:FRAMED_BY {context_end, relationship_id,...}]->(:Framework)
+        - place_edges -> (n)-[:OCCURS_IN]->(:Place)
+        """
+        results = {"timeframe": 0, "framed_by": 0, "place": 0}
+        if self.dry_run:
+            tf_count = len(payload.get("timeframe_edges", []) or [])
+            fb_count = len(payload.get("framed_by_edges", []) or [])
+            pl_count = len(payload.get("place_edges", []) or [])
+            selected = set(edge_types or ["timeframe", "framed_by", "place"])
+            if "timeframe" in selected and tf_count:
+                print(f"[dry-run] Would ingest {tf_count} timeframe_edges for {cluster}")
+                results["timeframe"] = tf_count
+            if "framed_by" in selected and fb_count:
+                print(f"[dry-run] Would ingest {fb_count} framed_by_edges for {cluster}")
+                results["framed_by"] = fb_count
+            if "place" in selected and pl_count:
+                print(f"[dry-run] Would ingest {pl_count} place_edges for {cluster}")
+                results["place"] = pl_count
+            return results
+
+        assert self.driver
+        selected = set(edge_types or ["timeframe", "framed_by", "place"])
+        with self.driver.session() as session:
+            if "timeframe" in selected:
+                tf_edges = payload.get("timeframe_edges") or []
+                if tf_edges:
+                    results["timeframe"] = session.execute_write(self._ingest_timeframe_edges, tf_edges)
+
+            if "framed_by" in selected:
+                fb_edges = payload.get("framed_by_edges") or []
+                rels = payload.get("relationships") or []
+                if fb_edges and rels:
+                    derived = self._derive_framed_by_rows(fb_edges, rels)
+                    if derived:
+                        results["framed_by"] = session.execute_write(self._ingest_framed_by_edges, derived)
+
+            if "place" in selected:
+                pl_edges = payload.get("place_edges") or []
+                if pl_edges:
+                    results["place"] = session.execute_write(self._ingest_place_edges, pl_edges)
+
+        return results
+
+    @staticmethod
+    def _ingest_timeframe_edges(tx, edges: Sequence[Dict]) -> int:
+        # Ensure Timeframe nodes exist (MERGE by slug when available).
+        timeframes = {}
+        normalized = []
+        for edge in edges:
+            node_slug = edge.get("node_slug")
+            tf_slug = edge.get("timeframe_slug")
+            division = edge.get("division") or edge.get("timeframe_division")
+            tf_name = edge.get("timeframe_name")
+            if not node_slug:
+                continue
+            normalized.append(
+                {
+                    "node_slug": node_slug,
+                    "tf_slug": tf_slug,
+                    "division": division,
+                }
+            )
+            if tf_slug:
+                timeframes.setdefault(
+                    tf_slug,
+                    {"slug": tf_slug, "division": division, "name": tf_name},
+                )
+
+        if timeframes:
+            tx.run(
+                """
+                UNWIND $timeframes AS tf
+                MERGE (t:Timeframe {slug: tf.slug})
+                ON CREATE SET t.created_at = datetime()
+                SET t.division = coalesce(tf.division, t.division),
+                    t.name = coalesce(tf.name, t.name)
+                """,
+                timeframes=list(timeframes.values()),
+            )
+
+        result = tx.run(
+            """
+            UNWIND $edges AS edge
+            MATCH (n {slug: edge.node_slug})
+            WITH n, edge
+                        CALL (edge) {
+                            WITH edge
+                            WITH edge WHERE edge.tf_slug IS NOT NULL
+                            MATCH (t:Timeframe {slug: edge.tf_slug})
+                            RETURN t
+                            UNION
+                            WITH edge
+                            WITH edge WHERE edge.tf_slug IS NULL AND edge.division IS NOT NULL
+                            MERGE (t:Timeframe {division: edge.division})
+                            ON CREATE SET t.created_at = datetime()
+                            RETURN t
+                        }
+            MERGE (n)-[r:OCCURS_DURING]->(t)
+            ON CREATE SET r.created_at = datetime()
+            SET r.division = coalesce(edge.division, r.division)
+            RETURN count(r) AS merged
+            """,
+            edges=normalized,
+        )
+        record = result.single()
+        return int(record["merged"]) if record else 0
+
+    @staticmethod
+    def _derive_framed_by_rows(framed_by_edges: Sequence[Dict], relationships: Sequence[Dict]) -> List[Dict]:
+        rel_lookup = {rel.get("id"): rel for rel in relationships if rel.get("id") is not None}
+        rows: List[Dict] = []
+
+        for edge in framed_by_edges:
+            rel_id = edge.get("relationship_id")
+            framework_slug = edge.get("framework_slug")
+            if rel_id is None or not framework_slug:
+                continue
+            rel = rel_lookup.get(rel_id)
+            if not rel:
+                continue
+
+            start_slug = rel.get("start_slug")
+            end_slug = rel.get("end_slug")
+            if not start_slug or not end_slug:
+                continue
+
+            evidence_url = rel.get("evidence_url")
+            if not evidence_url:
+                evidence_slug = rel.get("evidence_slug")
+                if evidence_slug:
+                    evidence_url = f"data/Evidence/{evidence_slug}.json"
+            if not evidence_url:
+                # Must not be null due to FRAMED_BY property constraints.
+                evidence_url = "data/Evidence/UNKNOWN.json"
+
+            rows.append(
+                {
+                    "start_slug": start_slug,
+                    "end_slug": end_slug,
+                    "framework_slug": framework_slug,
+                    "relationship_id": rel_id,
+                    "citation_style": rel.get("citation_style") or "Chicago 17",
+                    "evidence_url": evidence_url,
+                    "page_refs": rel.get("page_refs") or "passim",
+                    "source_note": f"Framing relationship between {start_slug} and {end_slug}",
+                }
+            )
+
+        return rows
+
+    @staticmethod
+    def _ingest_framed_by_edges(tx, rows: Sequence[Dict]) -> int:
+        # Ensure Framework nodes exist.
+        frameworks = [
+            {
+                "slug": "cause_and_effect",
+                "name": "Cause and Effect",
+                "description": "Causal relationships between historical events and phenomena",
+            },
+            {
+                "slug": "cultural_diffusion",
+                "name": "Cultural Diffusion",
+                "description": "Spread of ideas, practices, and innovations across cultures",
+            },
+            {
+                "slug": "continuity_and_change",
+                "name": "Continuity and Change",
+                "description": "Patterns of persistence and transformation over time",
+            },
+            {
+                "slug": "conflict_and_cooperation",
+                "name": "Conflict and Cooperation",
+                "description": "Opposition and alliance dynamics between actors",
+            },
+            {
+                "slug": "spatial_analysis",
+                "name": "Spatial Analysis",
+                "description": "Geographic and spatial dimensions of historical events",
+            },
+            {
+                "slug": "intellectual_history",
+                "name": "Intellectual History",
+                "description": "Development and transmission of ideas and texts",
+            },
+            {
+                "slug": "political_analysis",
+                "name": "Political Analysis",
+                "description": "Power structures, governance, and political dynamics",
+            },
+            {
+                "slug": "historical_context",
+                "name": "Historical Context",
+                "description": "General historical situating and background",
+            },
+        ]
+
+        tx.run(
+            """
+            UNWIND $frameworks AS fw
+            MERGE (f:Framework {slug: fw.slug})
+            ON CREATE SET f.created_at = datetime()
+            SET f.name = coalesce(fw.name, f.name),
+                f.description = coalesce(fw.description, f.description)
+            """,
+            frameworks=frameworks,
+        )
+
+        result = tx.run(
+            """
+            UNWIND $rows AS row
+            MATCH (n {slug: row.start_slug})
+            MATCH (f:Framework {slug: row.framework_slug})
+            MERGE (n)-[r:FRAMED_BY {context_end: row.end_slug, relationship_id: row.relationship_id}]->(f)
+            ON CREATE SET r.created_at = datetime()
+            SET r.citation_style = row.citation_style,
+                r.evidence_url = row.evidence_url,
+                r.page_refs = row.page_refs,
+                r.source_note = row.source_note
+            RETURN count(r) AS merged
+            """,
+            rows=list(rows),
+        )
+        record = result.single()
+        return int(record["merged"]) if record else 0
+
+    @staticmethod
+    def _ingest_place_edges(tx, edges: Sequence[Dict]) -> int:
+        place_slugs = sorted({str(edge["place_slug"]) for edge in edges if edge.get("place_slug")})
+        if place_slugs:
+            tx.run(
+                """
+                UNWIND $places AS slug
+                MERGE (p:Place {slug: slug})
+                ON CREATE SET p.created_at = datetime(),
+                              p.name = replace(slug, '_', ' '),
+                              p.description = 'Place: ' + replace(slug, '_', ' ')
+                """,
+                places=place_slugs,
+            )
+
+        normalized = [
+            {"node_slug": e.get("node_slug"), "place_slug": e.get("place_slug")}
+            for e in edges
+            if e.get("node_slug") and e.get("place_slug")
+        ]
+        result = tx.run(
+            """
+            UNWIND $edges AS edge
+            MATCH (n {slug: edge.node_slug})
+            MATCH (p:Place {slug: edge.place_slug})
+            MERGE (n)-[r:OCCURS_IN]->(p)
+            ON CREATE SET r.created_at = datetime()
+            RETURN count(r) AS merged
+            """,
+            edges=normalized,
+        )
+        record = result.single()
+        return int(record["merged"]) if record else 0
 
     # ---- node ingestion -------------------------------------------------
     def ingest_nodes(self, cluster: str, nodes: Sequence[Dict]) -> int:
@@ -230,6 +516,18 @@ def parse_args() -> argparse.Namespace:
         help="Skip relationship ingestion",
     )
     parser.add_argument(
+        "--ingest-edge-arrays",
+        action="store_true",
+        help="Also ingest timeframe_edges/framed_by_edges/place_edges from relationship files",
+    )
+    parser.add_argument(
+        "--edge-type",
+        choices=["timeframe", "framed_by", "place"],
+        action="append",
+        dest="edge_types",
+        help="Only ingest specific edge array types (can be repeated; default: all)",
+    )
+    parser.add_argument(
         "--env-file",
         default=str(DEFAULT_ENV),
         help="Path to .env-style file with NEO4J_URI/USER/PASSWORD (default: .env.local)",
@@ -279,6 +577,7 @@ def main() -> int:
     seeder = ClusterSeeder(uri, user, password, dry_run=args.dry_run)
     total_nodes = 0
     total_rels = 0
+    total_edge_arrays = {"timeframe": 0, "framed_by": 0, "place": 0}
 
     try:
         if not args.skip_nodes:
@@ -294,17 +593,32 @@ def main() -> int:
         else:
             print("Skipping node ingestion per flag.")
 
-        if not args.skip_relationships:
-            for cluster in ordered:
-                path = clusters[cluster].get("relationships")
-                if path is None:
-                    print(f"No relationship file for {cluster}; skipping relationships")
-                    continue
-                rels = load_relationships(path)
+        for cluster in ordered:
+            path = clusters[cluster].get("relationships")
+            if path is None:
+                print(f"No relationship file for {cluster}; skipping relationships")
+                continue
+            payload = load_relationship_payload(path)
+
+            if not args.skip_relationships:
+                rels = payload.get("relationships", [])
                 count = seeder.ingest_relationships(cluster, rels)
                 total_rels += count
                 print(f"Cluster {cluster}: ingested {count} relationships")
-        else:
+            else:
+                print(f"Skipping relationship ingestion for {cluster} per flag.")
+
+            if args.ingest_edge_arrays:
+                results = seeder.ingest_edge_arrays(cluster, payload, edge_types=args.edge_types)
+                total_edge_arrays["timeframe"] += results.get("timeframe", 0)
+                total_edge_arrays["framed_by"] += results.get("framed_by", 0)
+                total_edge_arrays["place"] += results.get("place", 0)
+                if any(results.values()):
+                    print(
+                        f"Cluster {cluster}: edge arrays ingested "
+                        f"(timeframe={results['timeframe']}, framed_by={results['framed_by']}, place={results['place']})"
+                    )
+        if args.skip_relationships:
             print("Skipping relationship ingestion per flag.")
     finally:
         seeder.close()
@@ -313,6 +627,13 @@ def main() -> int:
     print(f"  Clusters processed: {len(ordered)}")
     print(f"  Nodes ingested: {total_nodes}")
     print(f"  Relationships ingested: {total_rels}")
+    if args.ingest_edge_arrays:
+        print(
+            "  Edge arrays ingested: "
+            f"timeframe={total_edge_arrays['timeframe']}, "
+            f"framed_by={total_edge_arrays['framed_by']}, "
+            f"place={total_edge_arrays['place']}"
+        )
     if args.dry_run:
         print("(Dry-run mode: no changes were written.)")
     return 0

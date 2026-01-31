@@ -5,7 +5,9 @@
     "registry": "docs/nodes/node-attribute-registry.md",
     "source": "docs/clusters/Hebrew_Tradition/README.md",
     "generated_at": "2025-12-13T18:16Z",
-    "generator": "scripts/admin/repair_clusters.py"
+    "generator": "scripts/admin/repair_clusters.py",
+    "event_kinds_assigned_at": "2026-01-24T03:49:12.898728+00:00",
+    "event_kinds_script": "scripts/admin/assign_event_kinds.py"
   },
   "nodes": [
     {
@@ -46,7 +48,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Abrahamic Covenant from Hebrew_Tradition cluster"
+      "description": "Abrahamic Covenant from Hebrew_Tradition cluster",
+      "kind": "Covenant"
     },
     {
       "slug": "Academic_Bible_Scholarship",
@@ -111,7 +114,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Antiochus IV Decrees from Hebrew_Tradition cluster"
+      "description": "Antiochus IV Decrees from Hebrew_Tradition cluster",
+      "kind": "Decree"
     },
     {
       "slug": "Apocrypha/Deuterocanon",
@@ -150,7 +154,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Assyrian Conquest of Israel from Hebrew_Tradition cluster"
+      "description": "Assyrian Conquest of Israel from Hebrew_Tradition cluster",
+      "kind": "War"
     },
     {
       "slug": "Assyrian_Siege_of_Jerusalem_701_BCE",
@@ -163,7 +168,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Assyrian Siege of Jerusalem 701 BCE from Hebrew_Tradition cluster"
+      "description": "Assyrian Siege of Jerusalem 701 BCE from Hebrew_Tradition cluster",
+      "kind": "Siege"
     },
     {
       "slug": "Babylon",
@@ -189,7 +195,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Babylonian Exile from Hebrew_Tradition cluster"
+      "description": "Babylonian Exile from Hebrew_Tradition cluster",
+      "kind": "Exile"
     },
     {
       "slug": "Babylonian_Siege_597_BCE",
@@ -202,7 +209,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Babylonian Siege 597 BCE from Hebrew_Tradition cluster"
+      "description": "Babylonian Siege 597 BCE from Hebrew_Tradition cluster",
+      "kind": "Siege"
     },
     {
       "slug": "Balfour_Declaration_1917",
@@ -215,7 +223,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Balfour Declaration 1917 from Hebrew_Tradition cluster"
+      "description": "Balfour Declaration 1917 from Hebrew_Tradition cluster",
+      "kind": "Decree"
     },
     {
       "slug": "Bar_Kokhba_Revolt",
@@ -228,7 +237,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Bar Kokhba Revolt from Hebrew_Tradition cluster"
+      "description": "Bar Kokhba Revolt from Hebrew_Tradition cluster",
+      "kind": "Rebellion"
     },
     {
       "slug": "Bethel",
@@ -254,7 +264,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Binding of Isaac from Hebrew_Tradition cluster"
+      "description": "Binding of Isaac from Hebrew_Tradition cluster",
+      "kind": "Sacred"
     },
     {
       "slug": "Black_Death_Persecutions_1348_1351",
@@ -267,7 +278,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Black Death Persecutions 1348 1351 from Hebrew_Tradition cluster"
+      "description": "Black Death Persecutions 1348 1351 from Hebrew_Tradition cluster",
+      "kind": "Persecution"
     },
     {
       "slug": "Building_of_First_Temple",
@@ -280,7 +292,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Building of First Temple from Hebrew_Tradition cluster"
+      "description": "Building of First Temple from Hebrew_Tradition cluster",
+      "kind": "Founding"
     },
     {
       "slug": "Canaan",
@@ -306,7 +319,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Canon and Masorah Development from Hebrew_Tradition cluster"
+      "description": "Canon and Masorah Development from Hebrew_Tradition cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Chief_Rabbinate_various",
@@ -346,7 +360,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Conquest of Canaan from Hebrew_Tradition cluster"
+      "description": "Conquest of Canaan from Hebrew_Tradition cluster",
+      "kind": "Sacred"
     },
     {
       "slug": "Conservative_Judaism",
@@ -372,7 +387,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Council of Usha from Hebrew_Tradition cluster"
+      "description": "Council of Usha from Hebrew_Tradition cluster",
+      "kind": "Council"
     },
     {
       "slug": "Critical_Editions",
@@ -398,7 +414,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Cyrus Edict from Hebrew_Tradition cluster"
+      "description": "Cyrus Edict from Hebrew_Tradition cluster",
+      "kind": "Decree"
     },
     {
       "slug": "Cyrus_the_Great",
@@ -450,7 +467,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Destruction of First Temple 586 BCE from Hebrew_Tradition cluster"
+      "description": "Destruction of First Temple 586 BCE from Hebrew_Tradition cluster",
+      "kind": "War"
     },
     {
       "slug": "Division_of_the_Kingdom",
@@ -463,7 +481,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Division of the Kingdom from Hebrew_Tradition cluster"
+      "description": "Division of the Kingdom from Hebrew_Tradition cluster",
+      "kind": "Reign"
     },
     {
       "slug": "Dreyfus_Affair_1894_1906",
@@ -476,7 +495,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Dreyfus Affair 1894 1906 from Hebrew_Tradition cluster"
+      "description": "Dreyfus Affair 1894 1906 from Hebrew_Tradition cluster",
+      "kind": "Trial"
     },
     {
       "slug": "Early_Haskalah",
@@ -554,7 +574,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Eichmann Trial 1961 from Hebrew_Tradition cluster"
+      "description": "Eichmann Trial 1961 from Hebrew_Tradition cluster",
+      "kind": "Trial"
     },
     {
       "slug": "Emancipation",
@@ -567,7 +588,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Emancipation from Hebrew_Tradition cluster"
+      "description": "Emancipation from Hebrew_Tradition cluster",
+      "kind": "Legislative"
     },
     {
       "slug": "Essenes",
@@ -593,7 +615,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Exodus from Hebrew_Tradition cluster"
+      "description": "Exodus from Hebrew_Tradition cluster",
+      "kind": "Sacred"
     },
     {
       "slug": "Expulsion_from_England_1290",
@@ -606,7 +629,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Expulsion from England 1290 from Hebrew_Tradition cluster"
+      "description": "Expulsion from England 1290 from Hebrew_Tradition cluster",
+      "kind": "Exile"
     },
     {
       "slug": "Expulsion_from_Portugal_1497",
@@ -619,7 +643,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Expulsion from Portugal 1497 from Hebrew_Tradition cluster"
+      "description": "Expulsion from Portugal 1497 from Hebrew_Tradition cluster",
+      "kind": "Exile"
     },
     {
       "slug": "Expulsion_from_Spain_1492",
@@ -632,7 +657,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Expulsion from Spain 1492 from Hebrew_Tradition cluster"
+      "description": "Expulsion from Spain 1492 from Hebrew_Tradition cluster",
+      "kind": "Exile"
     },
     {
       "slug": "Ezekiel",
@@ -671,7 +697,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Fall of Samaria 722 BCE from Hebrew_Tradition cluster"
+      "description": "Fall of Samaria 722 BCE from Hebrew_Tradition cluster",
+      "kind": "Siege"
     },
     {
       "slug": "First_Crusade_1096",
@@ -684,7 +711,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "First Crusade 1096 from Hebrew_Tradition cluster"
+      "description": "First Crusade 1096 from Hebrew_Tradition cluster",
+      "kind": "Persecution"
     },
     {
       "slug": "First_Temple",
@@ -775,7 +803,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Great Jewish Revolt 66 70 from Hebrew_Tradition cluster"
+      "description": "Great Jewish Revolt 66 70 from Hebrew_Tradition cluster",
+      "kind": "Rebellion"
     },
     {
       "slug": "Guide_for_the_Perplexed",
@@ -801,7 +830,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Hadrianic Decrees from Hebrew_Tradition cluster"
+      "description": "Hadrianic Decrees from Hebrew_Tradition cluster",
+      "kind": "Decree"
     },
     {
       "slug": "Haskalah",
@@ -827,7 +857,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Hasmonean Expansion from Hebrew_Tradition cluster"
+      "description": "Hasmonean Expansion from Hebrew_Tradition cluster",
+      "kind": "Reign"
     },
     {
       "slug": "Hasmonean_State",
@@ -879,7 +910,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Herodian Temple Renovation from Hebrew_Tradition cluster"
+      "description": "Herodian Temple Renovation from Hebrew_Tradition cluster",
+      "kind": "Founding"
     },
     {
       "slug": "Hezekiah",
@@ -905,7 +937,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Hezekiah Reforms from Hebrew_Tradition cluster"
+      "description": "Hezekiah Reforms from Hebrew_Tradition cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Hillel",
@@ -983,7 +1016,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Jacob Bethel Vision from Hebrew_Tradition cluster"
+      "description": "Jacob Bethel Vision from Hebrew_Tradition cluster",
+      "kind": "Sacred"
     },
     {
       "slug": "Jeremiah",
@@ -1022,7 +1056,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Jerusalem Rebuilding from Hebrew_Tradition cluster"
+      "description": "Jerusalem Rebuilding from Hebrew_Tradition cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Jewish",
@@ -1062,7 +1097,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Joseph in Egypt from Hebrew_Tradition cluster"
+      "description": "Joseph in Egypt from Hebrew_Tradition cluster",
+      "kind": "Sacred"
     },
     {
       "slug": "Josiah",
@@ -1088,7 +1124,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Josiah Reforms from Hebrew_Tradition cluster"
+      "description": "Josiah Reforms from Hebrew_Tradition cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Judah_haNasi",
@@ -1180,7 +1217,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Law of Return 1950 from Hebrew_Tradition cluster"
+      "description": "Law of Return 1950 from Hebrew_Tradition cluster",
+      "kind": "Decree"
     },
     {
       "slug": "Legal_Decisions",
@@ -1193,7 +1231,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Legal Decisions from Hebrew_Tradition cluster"
+      "description": "Legal Decisions from Hebrew_Tradition cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Levitical_Priesthood",
@@ -1232,7 +1271,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Maccabean Revolt from Hebrew_Tradition cluster"
+      "description": "Maccabean Revolt from Hebrew_Tradition cluster",
+      "kind": "Rebellion"
     },
     {
       "slug": "Maimonides",
@@ -1310,7 +1350,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Mishnah Codification from Hebrew_Tradition cluster"
+      "description": "Mishnah Codification from Hebrew_Tradition cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Modern_Responsa",
@@ -1427,7 +1468,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Nuremberg Laws 1935 from Hebrew_Tradition cluster"
+      "description": "Nuremberg Laws 1935 from Hebrew_Tradition cluster",
+      "kind": "Decree"
     },
     {
       "slug": "Orthodox_Judaism",
@@ -1479,7 +1521,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Pompey Annexation 63 BCE from Hebrew_Tradition cluster"
+      "description": "Pompey Annexation 63 BCE from Hebrew_Tradition cluster",
+      "kind": "War"
     },
     {
       "slug": "Portugal",
@@ -1505,7 +1548,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Printing Revolution from Hebrew_Tradition cluster"
+      "description": "Printing Revolution from Hebrew_Tradition cluster",
+      "kind": "Publication"
     },
     {
       "slug": "Prophetic_Tradition",
@@ -1727,7 +1771,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Return to Zion from Hebrew_Tradition cluster"
+      "description": "Return to Zion from Hebrew_Tradition cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Roman_Administration_Judea",
@@ -1753,7 +1798,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Roman Conquest from Hebrew_Tradition cluster"
+      "description": "Roman Conquest from Hebrew_Tradition cluster",
+      "kind": "War"
     },
     {
       "slug": "Russia",
@@ -1779,7 +1825,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Russian Pogroms 1881 1884 from Hebrew_Tradition cluster"
+      "description": "Russian Pogroms 1881 1884 from Hebrew_Tradition cluster",
+      "kind": "Persecution"
     },
     {
       "slug": "Saadia_Gaon",
@@ -1909,7 +1956,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Second Temple Dedication 515 BCE from Hebrew_Tradition cluster"
+      "description": "Second Temple Dedication 515 BCE from Hebrew_Tradition cluster",
+      "kind": "Founding"
     },
     {
       "slug": "Sectarian_Practices",
@@ -1922,7 +1970,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Sectarian Practices from Hebrew_Tradition cluster"
+      "description": "Sectarian Practices from Hebrew_Tradition cluster",
+      "kind": "Rite"
     },
     {
       "slug": "Sefardi_Communities",
@@ -2000,7 +2049,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Shoah from Hebrew_Tradition cluster"
+      "description": "Shoah from Hebrew_Tradition cluster",
+      "kind": "Persecution"
     },
     {
       "slug": "Shulchan_Aruch",
@@ -2039,7 +2089,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Sinai Covenant from Hebrew_Tradition cluster"
+      "description": "Sinai Covenant from Hebrew_Tradition cluster",
+      "kind": "Covenant"
     },
     {
       "slug": "Six_Day_War_1967",
@@ -2052,7 +2103,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Six Day War 1967 from Hebrew_Tradition cluster"
+      "description": "Six Day War 1967 from Hebrew_Tradition cluster",
+      "kind": "War"
     },
     {
       "slug": "Solomon",
@@ -2091,7 +2143,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Spanish Inquisition 1478 from Hebrew_Tradition cluster"
+      "description": "Spanish Inquisition 1478 from Hebrew_Tradition cluster",
+      "kind": "Persecution"
     },
     {
       "slug": "Speyer",
@@ -2117,7 +2170,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "State of Israel Founding from Hebrew_Tradition cluster"
+      "description": "State of Israel Founding from Hebrew_Tradition cluster",
+      "kind": "Founding"
     },
     {
       "slug": "Sura",
@@ -2182,7 +2236,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Talmud Redactions from Hebrew_Tradition cluster"
+      "description": "Talmud Redactions from Hebrew_Tradition cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Tel_Aviv",
@@ -2208,7 +2263,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Temple Dedication from Hebrew_Tradition cluster"
+      "description": "Temple Dedication from Hebrew_Tradition cluster",
+      "kind": "Rite"
     },
     {
       "slug": "Temple_Destruction_70_CE",
@@ -2221,7 +2277,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Temple Destruction 70 CE from Hebrew_Tradition cluster"
+      "description": "Temple Destruction 70 CE from Hebrew_Tradition cluster",
+      "kind": "War"
     },
     {
       "slug": "Temple_Liturgy",
@@ -2261,7 +2318,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Temple Rituals from Hebrew_Tradition cluster"
+      "description": "Temple Rituals from Hebrew_Tradition cluster",
+      "kind": "Rite"
     },
     {
       "slug": "Theodor_Herzl",
@@ -2326,7 +2384,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Torah Public Reading from Hebrew_Tradition cluster"
+      "description": "Torah Public Reading from Hebrew_Tradition cluster",
+      "kind": "Rite"
     },
     {
       "slug": "Tosafot",
@@ -2365,7 +2424,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "UN Partition Plan 1947 from Hebrew_Tradition cluster"
+      "description": "UN Partition Plan 1947 from Hebrew_Tradition cluster",
+      "kind": "Decree"
     },
     {
       "slug": "Usha",
@@ -2391,7 +2451,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Wilderness Wanderings from Hebrew_Tradition cluster"
+      "description": "Wilderness Wanderings from Hebrew_Tradition cluster",
+      "kind": "Sacred"
     },
     {
       "slug": "Wisdom_Literature",
@@ -2456,7 +2517,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Yavneh Reform from Hebrew_Tradition cluster"
+      "description": "Yavneh Reform from Hebrew_Tradition cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Yohanan_ben_Zakkai",
@@ -2482,7 +2544,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Yom Kippur War 1973 from Hebrew_Tradition cluster"
+      "description": "Yom Kippur War 1973 from Hebrew_Tradition cluster",
+      "kind": "War"
     },
     {
       "slug": "Yosef_Karo",

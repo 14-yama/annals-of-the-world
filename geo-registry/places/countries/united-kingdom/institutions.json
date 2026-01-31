@@ -4,44 +4,477 @@
     "node_kind": "institutions",
     "registry": "docs/nodes/node-attribute-registry.md",
     "generated_at": "2026-01-31T13:57:41.082878Z",
-    "notes": "Extracted from country Place file (_associated_nodes)."
+    "notes": "Extracted from country Place file (_associated_nodes).",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
   },
-  "nodes": [
-    {
-      "slug": "Oxford_University",
-      "name": "University of Oxford",
-      "label": "Institution",
-      "status": "PROPOSED",
-      "lang": "en",
-      "script": "Latn",
-      "category": "Education",
-      "alt_names": [
-        "Oxford University"
-      ],
-      "foundedYear": 1096,
-      "description": "Collegiate research university in Oxford, England; one of the oldest universities in continuous operation.",
-      "location": {
-        "country_slug": "united-kingdom",
-        "place_note": "Oxford, England"
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Druidic_Priesthood",
+        "name": "Druidic Priesthood",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "category": "Religious",
+        "foundedYear": -400,
+        "dissolvedYear": 100,
+        "definition": "Religious and intellectual class in Iron Age Britain associated with Celtic ritual practice."
       }
-    },
-    {
-      "slug": "Houses_of_Parliament",
-      "name": "Houses of Parliament",
-      "label": "Institution",
-      "status": "PROPOSED",
-      "lang": "en",
-      "script": "Latn",
-      "category": "Government",
-      "alt_names": [
-        "Palace of Westminster",
-        "UK Parliament"
-      ],
-      "description": "Seat of the Parliament of the United Kingdom at the Palace of Westminster in London.",
-      "location": {
-        "country_slug": "united-kingdom",
-        "place_note": "Westminster, London"
+    ],
+    "920": [
+      {
+        "slug": "Archbishopric_of_Canterbury",
+        "name": "Archbishopric of Canterbury",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "category": "Religious",
+        "foundedYear": 597,
+        "definition": "Senior episcopal see of the Church in England, established with the Augustinian mission.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Canterbury, England"
+        }
+      },
+      {
+        "slug": "Legio_II_Augusta",
+        "name": "Legio II Augusta",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "category": "Military",
+        "foundedYear": 43,
+        "dissolvedYear": 410,
+        "definition": "Roman legion stationed in Britain, involved in conquest and garrisoning of the province.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Roman Britain"
+        }
       }
-    }
-  ]
+    ],
+    "930": [
+      {
+        "slug": "Oxford_University",
+        "name": "University of Oxford",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "category": "Education",
+        "alt_names": [
+          "Oxford University"
+        ],
+        "foundedYear": 1096,
+        "description": "Collegiate research university in Oxford, England; one of the oldest universities in continuous operation.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Oxford, England"
+        }
+      }
+    ],
+    "940": [
+      {
+        "slug": "Church_of_England",
+        "name": "Church of England",
+        "label": "Institution",
+        "status": "REVIEWED",
+        "workflow_stage": "REVIEWED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "National church of England, separated from papal authority and under royal supremacy since the 1530s.",
+        "description": "The established church in England, separated from papal authority under Henry VIII in 1534. Underwent significant doctrinal and liturgical changes under Edward VI, brief Catholic restoration under Mary I, and achieved its distinctive Via Media character under Elizabeth I.",
+        "modified_at": "2026-01-17T21:18Z",
+        "modified_by": "curator:systematic_definitions_update",
+        "reviewed_at": "2026-01-24T02:42:34.229892+00:00",
+        "reviewed_by": "complete_curator_workflow.py"
+      },
+      {
+        "slug": "Convocation_of_Canterbury",
+        "label": "Institution",
+        "name": "Convocation of Canterbury",
+        "description": "The assembly of clergy of the province of Canterbury, the senior provincial synod of the Church of England with legislative powers over church matters.",
+        "cluster": "English_Reformation",
+        "status": "REVIEWED",
+        "workflow_stage": "REVIEWED",
+        "reviewed_at": "2026-01-24T02:42:34.230203+00:00",
+        "reviewed_by": "complete_curator_workflow.py"
+      },
+      {
+        "slug": "Council_of_the_North",
+        "label": "Institution",
+        "name": "Council of the North",
+        "description": "Administrative body based in York exercising royal authority in northern England, strengthened after the Pilgrimage of Grace.",
+        "cluster": "English_Reformation",
+        "status": "REVIEWED",
+        "workflow_stage": "REVIEWED",
+        "reviewed_at": "2026-01-24T02:42:34.230205+00:00",
+        "reviewed_by": "complete_curator_workflow.py"
+      },
+      {
+        "slug": "Court_of_Augmentations",
+        "name": "Court of Augmentations",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "workflow_stage": "PROPOSED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "Court of Augmentations (English_Reformation cluster node)"
+      },
+      {
+        "slug": "Court_of_High_Commission",
+        "name": "Court of High Commission",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "workflow_stage": "PROPOSED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "Ecclesiastical tribunal enforcing religious uniformity under royal authority.",
+        "modified_at": "2026-01-17T21:18Z",
+        "modified_by": "curator:systematic_definitions_update"
+      },
+      {
+        "slug": "Doctors_Commons",
+        "label": "Institution",
+        "name": "Doctors' Commons",
+        "description": "London college of civil and canon lawyers who handled ecclesiastical and admiralty cases, including annulment proceedings.",
+        "cluster": "English_Reformation",
+        "status": "REVIEWED",
+        "workflow_stage": "REVIEWED",
+        "reviewed_at": "2026-01-24T02:42:34.230210+00:00",
+        "reviewed_by": "complete_curator_workflow.py"
+      },
+      {
+        "slug": "Ecclesiastical_Courts_England",
+        "name": "Ecclesiastical Courts England",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "workflow_stage": "PROPOSED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "Ecclesiastical Courts England (English_Reformation cluster node)"
+      },
+      {
+        "slug": "English_College_Rome",
+        "label": "Institution",
+        "name": "English College Rome",
+        "description": "Seminary in Rome (founded 1579) training Catholic priests for the English mission, complementing Douai-Rheims.",
+        "cluster": "English_Reformation",
+        "status": "REVIEWED",
+        "workflow_stage": "REVIEWED",
+        "reviewed_at": "2026-01-24T02:42:34.230208+00:00",
+        "reviewed_by": "complete_curator_workflow.py"
+      },
+      {
+        "slug": "English_Parliament",
+        "name": "English Parliament",
+        "label": "Institution",
+        "status": "REVIEWED",
+        "workflow_stage": "REVIEWED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "English Parliament (English_Reformation cluster node)",
+        "description": "The bicameral legislature of England. The Reformation Parliament (1529-1536) passed the legislation severing ties with Rome and establishing royal supremacy.",
+        "modified_at": "2026-01-17T20:50Z",
+        "modified_by": "curator:historical_descriptions_cleanup",
+        "reviewed_at": "2026-01-24T02:42:34.229923+00:00",
+        "reviewed_by": "complete_curator_workflow.py"
+      },
+      {
+        "slug": "English_Seminaries_Douai_Rheims",
+        "name": "English Seminaries Douai Rheims",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "workflow_stage": "PROPOSED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "English Seminaries Douai Rheims (English_Reformation cluster node)"
+      },
+      {
+        "slug": "Houses_of_Parliament",
+        "name": "Houses of Parliament",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "category": "Government",
+        "alt_names": [
+          "Palace of Westminster",
+          "UK Parliament"
+        ],
+        "description": "Seat of the Parliament of the United Kingdom at the Palace of Westminster in London.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Westminster, London"
+        }
+      },
+      {
+        "slug": "Lord_Protectorate",
+        "name": "Lord Protectorate",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "workflow_stage": "PROPOSED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "Lord Protectorate (English_Reformation cluster node)"
+      },
+      {
+        "slug": "Marian_Episcopate",
+        "name": "Marian Episcopate",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "workflow_stage": "PROPOSED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "Marian Episcopate (English_Reformation cluster node)"
+      },
+      {
+        "slug": "Papacy",
+        "name": "Papacy",
+        "label": "Institution",
+        "status": "REVIEWED",
+        "workflow_stage": "REVIEWED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "Papacy (English_Reformation cluster node)",
+        "description": "The office and jurisdiction of the Pope as head of the Roman Catholic Church. English rejection of papal supremacy was central to the Reformation.",
+        "modified_at": "2026-01-17T20:50Z",
+        "modified_by": "curator:historical_descriptions_cleanup",
+        "reviewed_at": "2026-01-24T02:42:34.229997+00:00",
+        "reviewed_by": "complete_curator_workflow.py"
+      },
+      {
+        "slug": "Privy_Council",
+        "name": "Privy Council",
+        "label": "Institution",
+        "status": "REVIEWED",
+        "workflow_stage": "REVIEWED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "Principal advisory body to the monarch, overseeing administration and policy.",
+        "description": "The principal advisory body to the English monarch, playing key roles in religious policy during the Reformation, including administration of conformity and persecution.",
+        "modified_at": "2026-01-17T21:18Z",
+        "modified_by": "curator:systematic_definitions_update",
+        "reviewed_at": "2026-01-24T02:42:34.230011+00:00",
+        "reviewed_by": "complete_curator_workflow.py"
+      },
+      {
+        "slug": "Roman_Catholic_Church",
+        "name": "Roman Catholic Church",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "workflow_stage": "PROPOSED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "Roman Catholic Church (English_Reformation cluster node)"
+      },
+      {
+        "slug": "Royal_Court",
+        "name": "Royal Court",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "workflow_stage": "PROPOSED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "Royal Court (English_Reformation cluster node)"
+      },
+      {
+        "slug": "Society_of_Jesus",
+        "name": "Society of Jesus",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "workflow_stage": "PROPOSED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "Jesuit order: Catholic religious society founded by Ignatius of Loyola, active in missions and education.",
+        "modified_at": "2026-01-17T21:18Z",
+        "modified_by": "curator:systematic_definitions_update"
+      },
+      {
+        "slug": "Star_Chamber",
+        "name": "Star Chamber",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "workflow_stage": "PROPOSED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "Prerogative court handling cases without jury, used for censorship and political control.",
+        "modified_at": "2026-01-17T21:18Z",
+        "modified_by": "curator:systematic_definitions_update"
+      },
+      {
+        "slug": "University_of_Cambridge",
+        "name": "University of Cambridge",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "workflow_stage": "PROPOSED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "University of Cambridge (English_Reformation cluster node)"
+      },
+      {
+        "slug": "University_of_Oxford",
+        "name": "University of Oxford",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "workflow_stage": "PROPOSED",
+        "governance_version": 5,
+        "created_at": "2025-12-06T04:54Z",
+        "created_by": "auto:from_readme",
+        "lang": "en",
+        "script": "Latn",
+        "definition": "University of Oxford (English_Reformation cluster node)"
+      }
+    ],
+    "950": [
+      {
+        "slug": "Metropolitan_Police",
+        "name": "Metropolitan Police",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "category": "Government",
+        "foundedYear": 1829,
+        "definition": "London's primary police force, established to professionalize urban policing.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "London, England"
+        }
+      },
+      {
+        "slug": "British_Broadcasting_Corporation",
+        "name": "British Broadcasting Corporation",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "category": "Media",
+        "foundedYear": 1922,
+        "definition": "Public service broadcaster providing radio, television, and digital services in the UK.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "United Kingdom"
+        }
+      },
+      {
+        "slug": "British_Railways",
+        "name": "British Railways",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "category": "Transportation",
+        "foundedYear": 1948,
+        "dissolvedYear": 1997,
+        "definition": "State-owned railway operator responsible for Britain's national rail network.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "United Kingdom"
+        }
+      }
+    ],
+    "960": [
+      {
+        "slug": "Scottish_Parliament",
+        "name": "Scottish Parliament",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "category": "Government",
+        "foundedYear": 1999,
+        "definition": "Devolved legislature for Scotland established after the 1997 devolution referendum.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Edinburgh, Scotland"
+        }
+      },
+      {
+        "slug": "Welsh_Senedd",
+        "name": "Senedd Cymru (Welsh Parliament)",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "category": "Government",
+        "foundedYear": 1999,
+        "definition": "Devolved legislature for Wales, formerly the National Assembly for Wales.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "Cardiff, Wales"
+        }
+      },
+      {
+        "slug": "UK_Supreme_Court",
+        "name": "Supreme Court of the United Kingdom",
+        "label": "Institution",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "category": "Judiciary",
+        "foundedYear": 2009,
+        "definition": "Highest court in the UK for civil cases and criminal cases from England, Wales, and Northern Ireland.",
+        "location": {
+          "country_slug": "united-kingdom",
+          "place_note": "London, England"
+        }
+      }
+    ]
+  }
 }

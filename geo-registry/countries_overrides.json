@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "description": "Hand-maintained overrides for countries.json: match-name fixes, endonyms/exonyms, former names.",
+    "last_updated": "2026-01-30"
+  },
+  "overrides": {
+    "côte-d'ivoire": {
+      "match_names": ["Côte d’Ivoire", "Côte d'Ivoire"],
+      "names": [
+        {"name": "Côte d’Ivoire", "lang": "fr", "script": "Latn", "is_endonym": true, "is_official": true},
+        {"name": "Ivory Coast", "lang": "en", "script": "Latn", "is_endonym": false}
+      ]
+    },
+    "türkiye": {
+      "match_names": ["Türkiye", "Turkey"],
+      "names": [
+        {"name": "Türkiye", "lang": "tr", "script": "Latn", "is_endonym": true, "is_official": true, "is_primary": true},
+        {"name": "Turkey", "lang": "en", "script": "Latn", "is_endonym": false}
+      ],
+      "former_names": [
+        {"name": "Ottoman Empire", "startYear": 1299, "endYear": 1922, "note": "Political entity; only treat as former name if modeling continuity for queries."}
+      ]
+    },
+    "germany": {
+      "match_names": ["Germany"],
+      "names": [
+        {"name": "Deutschland", "lang": "de", "script": "Latn", "is_endonym": true},
+        {"name": "Germany", "lang": "en", "script": "Latn", "is_primary": true},
+        {"name": "Allemagne", "lang": "fr", "script": "Latn"},
+        {"name": "Alemania", "lang": "es", "script": "Latn"}
+      ]
+    },
+    "sri-lanka": {
+      "match_names": ["Sri Lanka", "Ceylon"],
+      "names": [
+        {"name": "Sri Lanka", "lang": "en", "script": "Latn", "is_primary": true},
+        {"name": "Ceylon", "lang": "en", "script": "Latn"}
+      ],
+      "former_names": [
+        {"name": "Ceylon", "startYear": 1505, "endYear": 1972, "note": "Colonial-era name"}
+      ]
+    },
+    "israel": {
+      "match_names": ["Israel"],
+      "names": [
+        {"name": "Israel", "lang": "en", "script": "Latn", "is_primary": true},
+        {"name": "יִשְׂרָאֵל", "lang": "he", "script": "Hebr", "is_endonym": true}
+      ]
+    }
+  }
+}

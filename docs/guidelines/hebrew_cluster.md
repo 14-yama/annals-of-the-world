@@ -94,8 +94,10 @@ Relationships by Type (PROPOSED)
   - Abraham → ADOPTS → Sacrifice as covenant practice — evidence: cite:910-id2
   - Noah → ADOPTS → Sacrifice as covenant practice — evidence: cite:910-id3
 - Person ↔ Person
-  - Adam ↔ MARRIES ↔ Eve — evidence: cite:910-p1
-  - Abraham ↔ MARRIES ↔ Sarah — evidence: cite:910-p2
+  - Adam → PARTICIPATES_IN {role:"spouse"} → Marriage_Adam_Eve — evidence: cite:910-p1
+  - Eve → PARTICIPATES_IN {role:"spouse"} → Marriage_Adam_Eve — evidence: cite:910-p1
+  - Abraham → PARTICIPATES_IN {role:"spouse"} → Marriage_Abraham_Sarah — evidence: cite:910-p2
+  - Sarah → PARTICIPATES_IN {role:"spouse"} → Marriage_Abraham_Sarah — evidence: cite:910-p2
   - Abraham → PARENT_OF → Isaac — evidence: cite:910-g1
   - Sarah → PARENT_OF → Isaac — evidence: cite:910-g2
   - Isaac → PARENT_OF → Jacob — evidence: cite:910-g3

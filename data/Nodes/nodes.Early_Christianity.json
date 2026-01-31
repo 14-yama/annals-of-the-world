@@ -5,7 +5,9 @@
     "registry": "docs/nodes/node-attribute-registry.md",
     "source": "docs/clusters/Early_Christianity/README.md",
     "generated_at": "2025-12-13T18:16Z",
-    "generator": "scripts/admin/repair_clusters.py"
+    "generator": "scripts/admin/repair_clusters.py",
+    "event_kinds_assigned_at": "2026-01-24T03:49:12.887971+00:00",
+    "event_kinds_script": "scripts/admin/assign_event_kinds.py"
   },
   "nodes": [
     {
@@ -844,7 +846,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Council of Carthage 256 from Early_Christianity cluster"
+      "description": "Council of Carthage 256 from Early_Christianity cluster",
+      "kind": "Council"
     },
     {
       "slug": "Council_of_Jerusalem_c_49_CE",
@@ -871,7 +874,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Crucifixion from Early_Christianity cluster"
+      "description": "Crucifixion from Early_Christianity cluster",
+      "kind": "Sacred"
     },
     {
       "slug": "Cyprian",
@@ -911,7 +915,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Decian Persecution 250 from Early_Christianity cluster"
+      "description": "Decian Persecution 250 from Early_Christianity cluster",
+      "kind": "Persecution"
     },
     {
       "slug": "Defense_and_engagement_with_GrecoRoman_culture",
@@ -965,7 +970,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Diocletianic Persecution 303 from Early_Christianity cluster"
+      "description": "Diocletianic Persecution 303 from Early_Christianity cluster",
+      "kind": "Persecution"
     },
     {
       "slug": "Dispute_over_the_dating_of_the_Pascha",
@@ -1101,7 +1107,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Early Regional Synods from Early_Christianity cluster"
+      "description": "Early Regional Synods from Early_Christianity cluster",
+      "kind": "Council"
     },
     {
       "slug": "Early_Roman_leader_and_author_of_1_Clement",
@@ -1379,7 +1386,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Edict of Milan 313 from Early_Christianity cluster"
+      "description": "Edict of Milan 313 from Early_Christianity cluster",
+      "kind": "Decree"
     },
     {
       "slug": "Edict_of_Toleration_311",
@@ -1392,7 +1400,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Edict of Toleration 311 from Early_Christianity cluster"
+      "description": "Edict of Toleration 311 from Early_Christianity cluster",
+      "kind": "Decree"
     },
     {
       "slug": "Egyptian_metropolis_and_teaching_center",
@@ -1759,7 +1768,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Ignatian Martyrdom from Early_Christianity cluster"
+      "description": "Ignatian Martyrdom from Early_Christianity cluster",
+      "kind": "Martyrdom"
     },
     {
       "slug": "Ignatius_of_Antioch",
@@ -2279,7 +2289,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Martyrdoms in Lyons 177 from Early_Christianity cluster"
+      "description": "Martyrdoms in Lyons 177 from Early_Christianity cluster",
+      "kind": "Martyrdom"
     },
     {
       "slug": "Mary_Magdalene",
@@ -2416,7 +2427,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Neronian Persecution 64 from Early_Christianity cluster"
+      "description": "Neronian Persecution 64 from Early_Christianity cluster",
+      "kind": "Persecution"
     },
     {
       "slug": "Nicaea",
@@ -2619,7 +2631,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Pauline Mission Journeys from Early_Christianity cluster"
+      "description": "Pauline Mission Journeys from Early_Christianity cluster",
+      "kind": "Mission"
     },
     {
       "slug": "Pauline_delegate_and_coworker",
@@ -2660,7 +2673,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Pentecost from Early_Christianity cluster"
+      "description": "Pentecost from Early_Christianity cluster",
+      "kind": "Sacred"
     },
     {
       "slug": "Persecution_episode_impacting_the_Lyons_community",
@@ -2742,7 +2756,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Pliny Trajan Correspondence from Early_Christianity cluster"
+      "description": "Pliny Trajan Correspondence from Early_Christianity cluster",
+      "kind": "Decree"
     },
     {
       "slug": "Polycarp",
@@ -2769,7 +2784,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Post 70 Reconfiguration from Early_Christianity cluster"
+      "description": "Post 70 Reconfiguration from Early_Christianity cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Pregospel_source_layers_and_oral_traditions",
@@ -2892,7 +2908,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Resurrection Proclamations from Early_Christianity cluster"
+      "description": "Resurrection Proclamations from Early_Christianity cluster",
+      "kind": "Sacred"
     },
     {
       "slug": "Rigorist_movement_separating_from_Roman_church",
@@ -3193,7 +3210,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Temple Destruction 70 CE from Early_Christianity cluster"
+      "description": "Temple Destruction 70 CE from Early_Christianity cluster",
+      "kind": "War"
     },
     {
       "slug": "Tertullian",

@@ -5,7 +5,9 @@
     "registry": "docs/nodes/node-attribute-registry.md",
     "source": "docs/clusters/Scottish_Reformation/README.md",
     "generated_at": "2025-12-13T18:16Z",
-    "generator": "scripts/admin/repair_clusters.py"
+    "generator": "scripts/admin/repair_clusters.py",
+    "event_kinds_assigned_at": "2026-01-24T03:49:12.907769+00:00",
+    "event_kinds_script": "scripts/admin/assign_event_kinds.py"
   },
   "nodes": [
     {
@@ -87,7 +89,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Black Acts Passage 1584 from Scottish_Reformation cluster"
+      "description": "Black Acts Passage 1584 from Scottish_Reformation cluster",
+      "kind": "Legislative"
     },
     {
       "slug": "Book_of_Common_Order",
@@ -154,7 +157,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Congregation Risings 1559 from Scottish_Reformation cluster"
+      "description": "Congregation Risings 1559 from Scottish_Reformation cluster",
+      "kind": "Rebellion"
     },
     {
       "slug": "Consolidation_and_jurisdictional_contests",
@@ -441,7 +445,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "First General Assembly 1560 from Scottish_Reformation cluster"
+      "description": "First General Assembly 1560 from Scottish_Reformation cluster",
+      "kind": "Council"
     },
     {
       "slug": "General_Assembly_of_the_Kirk",
@@ -520,7 +525,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Golden Act Passage 1592 from Scottish_Reformation cluster"
+      "description": "Golden Act Passage 1592 from Scottish_Reformation cluster",
+      "kind": "Legislative"
     },
     {
       "slug": "Governance_during_minorityregency",
@@ -749,7 +755,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Mary Queen of Scots Deposition 1567 from Scottish_Reformation cluster"
+      "description": "Mary Queen of Scots Deposition 1567 from Scottish_Reformation cluster",
+      "kind": "Reign"
     },
     {
       "slug": "Mary_of_Guise",
@@ -995,7 +1002,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Ratification of Scots Confession 1560 from Scottish_Reformation cluster"
+      "description": "Ratification of Scots Confession 1560 from Scottish_Reformation cluster",
+      "kind": "Legislative"
     },
     {
       "slug": "Reformation_Parliament_1560",
@@ -1008,7 +1016,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Reformation Parliament 1560 from Scottish_Reformation cluster"
+      "description": "Reformation Parliament 1560 from Scottish_Reformation cluster",
+      "kind": "Council"
     },
     {
       "slug": "Reformation_Parliament_and_Settlement_1560",
@@ -1118,7 +1127,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Ruthven Raid 1582 from Scottish_Reformation cluster"
+      "description": "Ruthven Raid 1582 from Scottish_Reformation cluster",
+      "kind": "Plot"
     },
     {
       "slug": "Scots_Confession_1560",
@@ -1239,7 +1249,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Siege of St Andrews Castle 1546 1547 from Scottish_Reformation cluster"
+      "description": "Siege of St Andrews Castle 1546 1547 from Scottish_Reformation cluster",
+      "kind": "Siege"
     },
     {
       "slug": "St_Andrews",
@@ -1417,7 +1428,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Wishart Execution 1546 from Scottish_Reformation cluster"
+      "description": "Wishart Execution 1546 from Scottish_Reformation cluster",
+      "kind": "Martyrdom"
     },
     {
       "slug": "Wishart_Sermons",

@@ -18,7 +18,9 @@
         "inline_evidence": "Derived boolean: true when evidence_url is non-null.",
         "evidence_node_present": "Derived boolean: true when :Evidence node exists in Neo4j for evidence_slug at last status update."
       }
-    }
+    },
+    "timeframe_edges_generated_at": "2026-01-24T02:12:29.923107+00:00",
+    "timeframe_edges_generator": "scripts/generate_timeframe_edges.py"
   },
   "relationships": [
     {
@@ -1112,6 +1114,584 @@
       "source_note": "auto:from_readme:relationships_table",
       "_key": "Hippolytus|DISPUTES|Rome_Church",
       "confidence_score": null
+    }
+  ],
+  "timeframe_edges": [
+    {
+      "node_slug": "1_Clement",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Alexandria",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Antioch",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Apollos",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Apologetic_Tradition",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Apologists_Justin_Tertullian_Origen",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Apostolic_Leadership",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Aquila",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Asia_Minor",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Author_of_Didache",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Barnabas",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Bithynia",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Carthage",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Carthage_Church",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Catechetical_School_Phases",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Catechetical_School_of_Alexandria",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Catechetical_Tradition",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Christian_Tradition",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Clement_of_Alexandria",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Clement_of_Rome",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Corinth",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Council_of_Carthage_256",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Council_of_Jerusalem_c_49_CE",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Crucifixion",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Cyprian",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Damascus",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Decian_Persecution_250",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Didache",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Diocletianic_Persecution_303",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Early_Christianity",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Early_Johannine_Traditions",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Early_Pauline_Epistles",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Early_Regional_Synods",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Early_Synods",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Edict_of_Milan_313",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Edict_of_Toleration_311",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Emerging_Episcopal_Structure",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Ephesus",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Galilee",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Gnostic_Schools",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Gospel_of_John",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Hebrew_Tradition",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Hellenistic_Philosophy",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Hippolytus",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Ignatian_Letters",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Ignatian_Martyrdom",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Ignatius_of_Antioch",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Irenaeus",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "James_the_Just",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Jerusalem",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Jerusalem_Church",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Jesus_Movement",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Jesus_of_Nazareth",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Johannine_Community",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "John",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Judea",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Justin_Martyr",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Late_Antique_Christianity",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Local_Churches",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Lyons",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Marcionite",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Martyrdoms_in_Lyons_177",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Montanism",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Muratorian_Fragment",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Neronian_Persecution_64",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Nicomedia",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Novatian",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Origen",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Papias_of_Hierapolis",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Paul",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Pauline_Communities",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Pauline_Mission_Journeys",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Pentecost",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Persecution_in_Jerusalem_c_35_CE",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Peter",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Philippi",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Pliny_Trajan_Correspondence",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Polycarp",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Priscilla",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Proto‑Orthodox",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Proto‑Orthodox_Formations",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Quadratus_of_Athens",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Resurrection_Proclamations",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Roman_Empire",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Rome",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Rome_Church",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Shepherd_of_Hermas",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Silas",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Stephen",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Synagogue_Context",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Synoptic_Gospels",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Synoptic_Traditions_source_strata",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Temple_Destruction_70_CE",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Tertullian",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Thessalonica",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
+    },
+    {
+      "node_slug": "Timothy",
+      "timeframe_slug": "920_Classical",
+      "division": 920,
+      "timeframe_name": "Classical"
     }
   ]
 }

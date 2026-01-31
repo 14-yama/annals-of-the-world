@@ -28,6 +28,11 @@ Here’s a crisp, “use-this-in-production” guide for applying international 
 
 - Use broad labels (`:Person`, `:Event`, `:Place`, `:Institution`, `:Idea`, `:Artifact`, `:Evidence`) with **category** as a property; avoid label explosion.
 - Enforce **active-voice, verb-first** relationships (e.g., `INFLUENCES`, `OCCURS_DURING`, `FRAMED_BY`) with uniform directionality.
+- For **symmetric social ties** that carry rich metadata (date, place, legal context), model them as **events** rather than P↔P edges.
+	- Example: marriage as `(:Event {kind:"Marriage"})` plus `(:Person)-[:PARTICIPATES_IN {role:"spouse"}]->(:Event)`.
+	- Attach time/place to the marriage event (`OCCURS_DURING`, `OCCURS_IN`, `startYear`, `endYear`) instead of encoding direction or gender.
+- For **place appearance / extinction**, keep the `:Place` generic and attach an `:EventWindow` for its attested existence.
+	- Example: `(:Place)-[:HAS_EXISTENCE]->(:EventWindow {startYear:-55, endYear:23})-[:OCCURS_DURING]->(:Timeframe)`.
 
 ## 5. Data hygiene (constraints, indices, QA)
 

@@ -5,7 +5,9 @@
     "registry": "docs/nodes/node-attribute-registry.md",
     "source": "docs/clusters/Dutch_Reformation/README.md",
     "generated_at": "2025-12-13T18:16Z",
-    "generator": "scripts/admin/repair_clusters.py"
+    "generator": "scripts/admin/repair_clusters.py",
+    "event_kinds_assigned_at": "2026-01-24T03:49:12.886206+00:00",
+    "event_kinds_script": "scripts/admin/assign_event_kinds.py"
   },
   "nodes": [
     {
@@ -72,7 +74,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Arminius Controversy 1603 1609 from Dutch_Reformation cluster"
+      "description": "Arminius Controversy 1603 1609 from Dutch_Reformation cluster",
+      "kind": "Controversy"
     },
     {
       "slug": "Author_of_the_Belgic_Confession",
@@ -481,7 +484,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Fall of Antwerp 1585 from Dutch_Reformation cluster"
+      "description": "Fall of Antwerp 1585 from Dutch_Reformation cluster",
+      "kind": "Siege"
     },
     {
       "slug": "Federal_alliance_enabling_religious_pluralism",
@@ -601,7 +605,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Hedge Preachings 1560s from Dutch_Reformation cluster"
+      "description": "Hedge Preachings 1560s from Dutch_Reformation cluster",
+      "kind": "Rebellion"
     },
     {
       "slug": "Hedge_Preachings_Texts",
@@ -667,7 +672,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Iconoclastic Fury 1566 from Dutch_Reformation cluster"
+      "description": "Iconoclastic Fury 1566 from Dutch_Reformation cluster",
+      "kind": "Rebellion"
     },
     {
       "slug": "Image-breaking_episodes_during_tensions",
@@ -885,7 +891,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Oldenbarnevelt Execution 1619 from Dutch_Reformation cluster"
+      "description": "Oldenbarnevelt Execution 1619 from Dutch_Reformation cluster",
+      "kind": "Execution"
     },
     {
       "slug": "Outdoor_field_preaching_assemblies",
@@ -1266,7 +1273,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Synod of Dordt 1618 1619 from Dutch_Reformation cluster"
+      "description": "Synod of Dordt 1618 1619 from Dutch_Reformation cluster",
+      "kind": "Council"
     },
     {
       "slug": "Synod_of_Emden_1571",
@@ -1279,7 +1287,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Synod of Emden 1571 from Dutch_Reformation cluster"
+      "description": "Synod of Emden 1571 from Dutch_Reformation cluster",
+      "kind": "Council"
     },
     {
       "slug": "The_Hague",
@@ -1333,7 +1342,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Union of Utrecht 1579 from Dutch_Reformation cluster"
+      "description": "Union of Utrecht 1579 from Dutch_Reformation cluster",
+      "kind": "Legislative"
     },
     {
       "slug": "University_city_shaping_debates",

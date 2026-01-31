@@ -1,0 +1,378 @@
+{
+  "_meta": {
+    "description": "Human-readable geo registry: countries with name variants and nested cities.",
+    "convention": "Modern name as slug; all variants (endonyms, exonyms, historical) in names array.",
+    "last_updated": "2026-01-30"
+  },
+
+  "israel": {
+    "name": "Israel",
+    "iso": "IL",
+    "wikidata_id": "Q801",
+    "names": [
+      { "name": "Israel", "lang": "en", "is_primary": true },
+      { "name": "יִשְׂרָאֵל", "lang": "he", "script": "Hebr", "is_endonym": true },
+      { "name": "إسرائيل", "lang": "ar", "script": "Arab" }
+    ],
+    "cities": {
+      "jerusalem": {
+        "name": "Jerusalem",
+        "wikidata_id": "Q1218",
+        "names": [
+          { "name": "Jerusalem", "lang": "en", "is_primary": true },
+          { "name": "יְרוּשָׁלַיִם", "lang": "he", "script": "Hebr", "is_endonym": true },
+          { "name": "القُدس", "lang": "ar", "script": "Arab", "note": "Al-Quds" },
+          { "name": "Jebus", "lang": "und", "startYear": -3000, "endYear": -1000, "note": "Pre-Davidic Canaanite" },
+          { "name": "Aelia Capitolina", "lang": "la", "startYear": 135, "endYear": 638, "note": "Roman period" }
+        ]
+      },
+      "tel-aviv": {
+        "name": "Tel Aviv",
+        "wikidata_id": "Q33935",
+        "names": [
+          { "name": "Tel Aviv", "lang": "en", "is_primary": true },
+          { "name": "תֵּל אָבִיב", "lang": "he", "script": "Hebr", "is_endonym": true },
+          { "name": "Tel Aviv-Yafo", "lang": "en", "note": "Official merged name since 1950" }
+        ]
+      },
+      "haifa": {
+        "name": "Haifa",
+        "wikidata_id": "Q41621",
+        "names": [
+          { "name": "Haifa", "lang": "en", "is_primary": true },
+          { "name": "חֵיפָה", "lang": "he", "script": "Hebr", "is_endonym": true },
+          { "name": "حيفا", "lang": "ar", "script": "Arab" }
+        ]
+      },
+      "rishon-lezion": {
+        "name": "Rishon LeZion",
+        "wikidata_id": "Q131556",
+        "names": [
+          { "name": "Rishon LeZion", "lang": "en", "is_primary": true },
+          { "name": "רִאשׁוֹן לְצִיּוֹן", "lang": "he", "script": "Hebr", "is_endonym": true }
+        ]
+      },
+      "petah-tikva": {
+        "name": "Petah Tikva",
+        "wikidata_id": "Q179182",
+        "names": [
+          { "name": "Petah Tikva", "lang": "en", "is_primary": true },
+          { "name": "פֶּתַח תִּקְוָה", "lang": "he", "script": "Hebr", "is_endonym": true }
+        ]
+      },
+      "netanya": {
+        "name": "Netanya",
+        "wikidata_id": "Q181281",
+        "names": [
+          { "name": "Netanya", "lang": "en", "is_primary": true },
+          { "name": "נְתַנְיָה", "lang": "he", "script": "Hebr", "is_endonym": true }
+        ]
+      },
+      "ashdod": {
+        "name": "Ashdod",
+        "wikidata_id": "Q174844",
+        "names": [
+          { "name": "Ashdod", "lang": "en", "is_primary": true },
+          { "name": "אַשְׁדּוֹד", "lang": "he", "script": "Hebr", "is_endonym": true },
+          { "name": "Azotus", "lang": "grc", "note": "Ancient Greek name" }
+        ]
+      },
+      "bnei-brak": {
+        "name": "Bnei Brak",
+        "wikidata_id": "Q189013",
+        "names": [
+          { "name": "Bnei Brak", "lang": "en", "is_primary": true },
+          { "name": "בְּנֵי בְּרַק", "lang": "he", "script": "Hebr", "is_endonym": true }
+        ]
+      },
+      "holon": {
+        "name": "Holon",
+        "wikidata_id": "Q180556",
+        "names": [
+          { "name": "Holon", "lang": "en", "is_primary": true },
+          { "name": "חוֹלוֹן", "lang": "he", "script": "Hebr", "is_endonym": true }
+        ]
+      },
+      "beersheba": {
+        "name": "Beersheba",
+        "wikidata_id": "Q170897",
+        "names": [
+          { "name": "Beersheba", "lang": "en", "is_primary": true },
+          { "name": "בְּאֵר שֶׁבַע", "lang": "he", "script": "Hebr", "is_endonym": true },
+          { "name": "بئر السبع", "lang": "ar", "script": "Arab" },
+          { "name": "Beer-sheba", "lang": "en", "note": "Biblical spelling" }
+        ]
+      },
+      "ramat-gan": {
+        "name": "Ramat Gan",
+        "wikidata_id": "Q182128",
+        "names": [
+          { "name": "Ramat Gan", "lang": "en", "is_primary": true },
+          { "name": "רָמַת גַּן", "lang": "he", "script": "Hebr", "is_endonym": true }
+        ]
+      },
+      "rehovot": {
+        "name": "Rehovot",
+        "wikidata_id": "Q193811",
+        "names": [
+          { "name": "Rehovot", "lang": "en", "is_primary": true },
+          { "name": "רְחוֹבוֹת", "lang": "he", "script": "Hebr", "is_endonym": true }
+        ]
+      }
+    }
+  },
+
+  "germany": {
+    "name": "Germany",
+    "iso": "DE",
+    "wikidata_id": "Q183",
+    "names": [
+      { "name": "Germany", "lang": "en", "is_primary": true },
+      { "name": "Deutschland", "lang": "de", "is_endonym": true },
+      { "name": "Allemagne", "lang": "fr" },
+      { "name": "Alemania", "lang": "es" },
+      { "name": "Germania", "lang": "it" },
+      { "name": "Германия", "lang": "ru", "script": "Cyrl" }
+    ],
+    "former_names": [
+      { "name": "West Germany", "startYear": 1949, "endYear": 1990, "note": "Federal Republic of Germany (Cold War)" },
+      { "name": "East Germany", "startYear": 1949, "endYear": 1990, "note": "German Democratic Republic (Cold War)" }
+    ],
+    "cities": {
+      "berlin": {
+        "name": "Berlin",
+        "wikidata_id": "Q64",
+        "names": [
+          { "name": "Berlin", "lang": "en", "is_primary": true },
+          { "name": "Berlin", "lang": "de", "is_endonym": true }
+        ]
+      },
+      "munich": {
+        "name": "Munich",
+        "wikidata_id": "Q1726",
+        "names": [
+          { "name": "Munich", "lang": "en", "is_primary": true },
+          { "name": "München", "lang": "de", "is_endonym": true }
+        ]
+      }
+    }
+  },
+
+  "türkiye": {
+    "name": "Türkiye",
+    "iso": "TR",
+    "wikidata_id": "Q43",
+    "names": [
+      { "name": "Türkiye", "lang": "tr", "is_primary": true, "is_endonym": true },
+      { "name": "Turkey", "lang": "en" }
+    ],
+    "former_names": [
+      { "name": "Ottoman Empire", "startYear": 1299, "endYear": 1922, "note": "Political predecessor" }
+    ],
+    "cities": {
+      "istanbul": {
+        "name": "Istanbul",
+        "wikidata_id": "Q406",
+        "names": [
+          { "name": "Istanbul", "lang": "tr", "is_primary": true, "is_endonym": true, "startYear": 1930 },
+          { "name": "İstanbul", "lang": "tr", "script": "Latn", "is_endonym": true },
+          { "name": "Constantinople", "lang": "en", "startYear": 330, "endYear": 1930 },
+          { "name": "Κωνσταντινούπολις", "lang": "grc", "script": "Grek", "startYear": 330, "endYear": 1453 },
+          { "name": "Byzantium", "lang": "en", "startYear": -700, "endYear": 330 },
+          { "name": "Βυζάντιον", "lang": "grc", "script": "Grek", "startYear": -700, "endYear": 330 }
+        ]
+      },
+      "ankara": {
+        "name": "Ankara",
+        "wikidata_id": "Q3854",
+        "names": [
+          { "name": "Ankara", "lang": "tr", "is_primary": true, "is_endonym": true },
+          { "name": "Angora", "lang": "en", "endYear": 1930 },
+          { "name": "Ancyra", "lang": "la", "note": "Ancient Roman name" }
+        ]
+      }
+    }
+  },
+
+  "india": {
+    "name": "India",
+    "iso": "IN",
+    "wikidata_id": "Q668",
+    "names": [
+      { "name": "India", "lang": "en", "is_primary": true },
+      { "name": "भारत", "lang": "hi", "script": "Deva", "is_endonym": true, "note": "Bharat" },
+      { "name": "Hindustan", "lang": "ur" }
+    ],
+    "cities": {
+      "mumbai": {
+        "name": "Mumbai",
+        "wikidata_id": "Q1156",
+        "names": [
+          { "name": "Mumbai", "lang": "en", "is_primary": true, "startYear": 1995 },
+          { "name": "मुंबई", "lang": "mr", "script": "Deva", "is_endonym": true },
+          { "name": "Bombay", "lang": "en", "startYear": 1661, "endYear": 1995, "note": "Colonial-era name" }
+        ]
+      },
+      "chennai": {
+        "name": "Chennai",
+        "wikidata_id": "Q1352",
+        "names": [
+          { "name": "Chennai", "lang": "en", "is_primary": true, "startYear": 1996 },
+          { "name": "சென்னை", "lang": "ta", "script": "Taml", "is_endonym": true },
+          { "name": "Madras", "lang": "en", "startYear": 1639, "endYear": 1996, "note": "Colonial-era name" }
+        ]
+      },
+      "kolkata": {
+        "name": "Kolkata",
+        "wikidata_id": "Q1348",
+        "names": [
+          { "name": "Kolkata", "lang": "en", "is_primary": true, "startYear": 2001 },
+          { "name": "কলকাতা", "lang": "bn", "script": "Beng", "is_endonym": true },
+          { "name": "Calcutta", "lang": "en", "startYear": 1690, "endYear": 2001, "note": "Colonial-era name" }
+        ]
+      }
+    }
+  },
+
+  "russia": {
+    "name": "Russia",
+    "iso": "RU",
+    "wikidata_id": "Q159",
+    "names": [
+      { "name": "Russia", "lang": "en", "is_primary": true },
+      { "name": "Россия", "lang": "ru", "script": "Cyrl", "is_endonym": true },
+      { "name": "Russie", "lang": "fr" }
+    ],
+    "cities": {
+      "saint-petersburg": {
+        "name": "Saint Petersburg",
+        "wikidata_id": "Q656",
+        "names": [
+          { "name": "Saint Petersburg", "lang": "en", "is_primary": true },
+          { "name": "Санкт-Петербург", "lang": "ru", "script": "Cyrl", "is_endonym": true },
+          { "name": "Petrograd", "lang": "ru", "startYear": 1914, "endYear": 1924, "note": "WWI anti-German" },
+          { "name": "Leningrad", "lang": "ru", "startYear": 1924, "endYear": 1991, "note": "Soviet era" }
+        ]
+      },
+      "moscow": {
+        "name": "Moscow",
+        "wikidata_id": "Q649",
+        "names": [
+          { "name": "Moscow", "lang": "en", "is_primary": true },
+          { "name": "Москва", "lang": "ru", "script": "Cyrl", "is_endonym": true },
+          { "name": "Moscou", "lang": "fr" }
+        ]
+      }
+    }
+  },
+
+  "china": {
+    "name": "China",
+    "iso": "CN",
+    "wikidata_id": "Q148",
+    "names": [
+      { "name": "China", "lang": "en", "is_primary": true },
+      { "name": "中国", "lang": "zh", "script": "Hani", "is_endonym": true },
+      { "name": "Zhōngguó", "lang": "zh", "script": "Latn", "note": "Pinyin" }
+    ],
+    "cities": {
+      "beijing": {
+        "name": "Beijing",
+        "wikidata_id": "Q956",
+        "names": [
+          { "name": "Beijing", "lang": "en", "is_primary": true },
+          { "name": "北京", "lang": "zh", "script": "Hani", "is_endonym": true },
+          { "name": "Peking", "lang": "en", "note": "Postal romanization (historical)" },
+          { "name": "Peiping", "lang": "en", "startYear": 1928, "endYear": 1949, "note": "Northern Peace" }
+        ]
+      }
+    }
+  },
+
+  "sri-lanka": {
+    "name": "Sri Lanka",
+    "iso": "LK",
+    "wikidata_id": "Q854",
+    "names": [
+      { "name": "Sri Lanka", "lang": "en", "is_primary": true, "startYear": 1972 },
+      { "name": "ශ්‍රී ලංකාව", "lang": "si", "script": "Sinh", "is_endonym": true },
+      { "name": "இலங்கை", "lang": "ta", "script": "Taml", "is_endonym": true },
+      { "name": "Ceylon", "lang": "en", "startYear": 1505, "endYear": 1972, "note": "Colonial-era name" }
+    ],
+    "cities": {
+      "colombo": {
+        "name": "Colombo",
+        "wikidata_id": "Q35381",
+        "names": [
+          { "name": "Colombo", "lang": "en", "is_primary": true },
+          { "name": "කොළඹ", "lang": "si", "script": "Sinh", "is_endonym": true }
+        ]
+      }
+    }
+  },
+
+  "egypt": {
+    "name": "Egypt",
+    "iso": "EG",
+    "wikidata_id": "Q79",
+    "names": [
+      { "name": "Egypt", "lang": "en", "is_primary": true },
+      { "name": "مصر", "lang": "ar", "script": "Arab", "is_endonym": true, "note": "Misr" },
+      { "name": "Égypte", "lang": "fr" }
+    ],
+    "cities": {
+      "cairo": {
+        "name": "Cairo",
+        "wikidata_id": "Q85",
+        "names": [
+          { "name": "Cairo", "lang": "en", "is_primary": true },
+          { "name": "القاهرة", "lang": "ar", "script": "Arab", "is_endonym": true, "note": "Al-Qahira" }
+        ]
+      },
+      "alexandria": {
+        "name": "Alexandria",
+        "wikidata_id": "Q87",
+        "names": [
+          { "name": "Alexandria", "lang": "en", "is_primary": true },
+          { "name": "الإسكندرية", "lang": "ar", "script": "Arab", "is_endonym": true },
+          { "name": "Ἀλεξάνδρεια", "lang": "grc", "script": "Grek", "note": "Ancient Greek" }
+        ]
+      }
+    }
+  },
+
+  "iraq": {
+    "name": "Iraq",
+    "iso": "IQ",
+    "wikidata_id": "Q796",
+    "names": [
+      { "name": "Iraq", "lang": "en", "is_primary": true },
+      { "name": "العراق", "lang": "ar", "script": "Arab", "is_endonym": true },
+      { "name": "عێراق", "lang": "ku", "script": "Arab", "is_endonym": true }
+    ],
+    "extinct_places": {
+      "babylon": {
+        "name": "Babylon",
+        "kind": "site",
+        "status": "EXTINCT",
+        "wikidata_id": "Q5684",
+        "pleiades_id": "893951",
+        "names": [
+          { "name": "Babylon", "lang": "en", "is_primary": true },
+          { "name": "Bābilim", "lang": "akk", "note": "Akkadian: Gate of God" }
+        ]
+      },
+      "nineveh": {
+        "name": "Nineveh",
+        "kind": "site",
+        "status": "EXTINCT",
+        "wikidata_id": "Q5765",
+        "pleiades_id": "874621",
+        "names": [
+          { "name": "Nineveh", "lang": "en", "is_primary": true },
+          { "name": "Ninua", "lang": "akk" }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "_meta": {
+    "cluster": "English_Reformation",
+    "notes": "Example seed showing inline relationship evidence vs evidence-node references",
+    "registry": "docs/nodes/node-attribute-registry.md",
+    "generated_at": "2026-01-03T00:00Z",
+    "author": "curator_example"
+  },
+  "relationships": [
+    {
+      "id": 1,
+      "start_slug": "Mary_Tudor",
+      "end_slug": "Persecution_of_Protestants",
+      "type": "INITIATES",
+      "description": "Mary Tudor's reign initiates persecution of Protestants in England.",
+      "status": "PROPOSED",
+      "citation_style": "Chicago 17",
+      "page_refs": "45-67",
+      "source_note": "Duffy, Eamon. Fires of Faith: Catholic England under Mary Tudor. Yale University Press, 2009.",
+      "evidence_url": "https://search.worldcat.org/title/310400939"
+    },
+
+    {
+      "id": 2,
+      "start_slug": "Act_of_Supremacy_1534",
+      "end_slug": "Church_of_England",
+      "type": "ESTABLISHES",
+      "description": "The Act of Supremacy 1534 establishes the legal status of the Church of England.",
+      "status": "REVIEWED",
+      "citation_style": "Chicago 17",
+      "evidence_slug": "evidence_Bernard_2005_The_Kings_Reformation",
+      "page_refs": "152-198"
+    },
+
+    {
+      "id": 3,
+      "start_slug": "Thomas_Cranmer",
+      "end_slug": "Annulment_Proceedings",
+      "type": "DECLARES",
+      "description": "Thomas Cranmer declares the annulment proceedings that shape Henry VIII's marital settlement.",
+      "status": "REVIEWED",
+      "citation_style": "Chicago 17",
+      "evidence_slug": "evidence_MacCulloch_1996_Thomas_Cranmer",
+      "page_refs": "88-106"
+    }
+  ]
+}

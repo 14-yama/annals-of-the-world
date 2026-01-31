@@ -18,7 +18,9 @@
         "inline_evidence": "Derived boolean: true when evidence_url is non-null.",
         "evidence_node_present": "Derived boolean: true when :Evidence node exists in Neo4j for evidence_slug at last status update."
       }
-    }
+    },
+    "timeframe_edges_generated_at": "2026-01-24T02:12:29.941713+00:00",
+    "timeframe_edges_generator": "scripts/generate_timeframe_edges.py"
   },
   "relationships": [
     {
@@ -286,6 +288,170 @@
       "source_note": "auto:from_script:ensure_is_part_of",
       "_key": "Scottish_Reformation|IS_PART_OF|European_Reformations",
       "confidence_score": null
+    }
+  ],
+  "timeframe_edges": [
+    {
+      "node_slug": "Andrew_Melville",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Black_Acts_1584",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Book_of_Common_Order",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Cardinal_David_Beaton",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Congregation_Risings_1559",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Edinburgh",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Episcopacy_in_Scotland",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "European_Reformations",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Evangelical_Currents_in_Scotland",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "First_Book_of_Discipline_1560",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "General_Assembly_of_the_Kirk",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Golden_Act_1592",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "James_VI",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "John_Knox",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Knox_Writings_1558_The_First_Blast",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Lords_of_the_Congregation",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Perth",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Presbyterianism",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Reformation_Parliament_1560",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Ruthven_Raid_1582",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Scots_Confession_1560",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Scottish_Parliament",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Scottish_Reformation",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Scottish_Regency_Council",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Second_Book_of_Discipline_1578",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "St_Andrews",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
+    },
+    {
+      "node_slug": "Wishart_Execution_1546",
+      "timeframe_slug": "940_Early_Modern",
+      "division": 940,
+      "timeframe_name": "Early Modern"
     }
   ]
 }

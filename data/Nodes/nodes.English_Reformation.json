@@ -9,15 +9,27 @@
     "last_updated": "2026-01-17T21:30Z",
     "description_cleanup_notes": "Added 27 proper historical descriptions for key nodes",
     "definitions_update_notes": "Systematic update of 1 node descriptions/definitions per registry guidelines",
-    "last_expanded": "2026-01-17T22:42:09.035803+00:00"
+    "last_expanded": "2026-01-17T22:42:09.035803+00:00",
+    "curator_workflow_completed_at": "2026-01-24T02:42:34.231067+00:00",
+    "curator_workflow_script": "scripts/complete_curator_workflow.py",
+    "marriage_migration": {
+      "migrated_at": "2026-01-24T03:29:46.857164+00:00",
+      "script": "scripts/migrate_marriages_to_events.py",
+      "cluster": "English_Reformation",
+      "added_event_nodes": 4,
+      "added_participates_in_relationships": 8,
+      "removed_marries_relationships": 6
+    },
+    "event_kinds_assigned_at": "2026-01-24T03:49:12.890658+00:00",
+    "event_kinds_script": "scripts/admin/assign_event_kinds.py"
   },
   "nodes": [
     {
       "slug": "Act_of_Supremacy_1534",
       "name": "Act of Supremacy 1534",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -25,14 +37,16 @@
       "script": "Latn",
       "description": "Parliamentary statute declaring the monarch Supreme Head of the Church of England, severing ties with papal Rome.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229839+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Act_of_Supremacy_1559",
       "name": "Act of Supremacy 1559",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -40,14 +54,16 @@
       "script": "Latn",
       "description": "Elizabethan statute re-establishing royal supremacy over the Church of England. Styled the monarch as Supreme Governor.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229844+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Act_of_Supremacy_Passage",
       "name": "Act of Supremacy Passage",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -55,14 +71,17 @@
       "script": "Latn",
       "description": "Parliamentary passage of the Act of Supremacy (1534), declaring Henry VIII Supreme Head of the Church of England.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229848+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Legislative"
     },
     {
       "slug": "Act_of_Uniformity_1559",
       "name": "Act of Uniformity 1559",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -70,14 +89,16 @@
       "script": "Latn",
       "description": "Elizabethan statute requiring the use of the Book of Common Prayer in all churches.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229851+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Acts_and_Monuments_1563",
       "name": "Acts and Monuments 1563",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -85,14 +106,16 @@
       "script": "Latn",
       "description": "John Foxe's martyrology documenting Protestant persecution, popularly known as the 'Book of Martyrs.'",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229853+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Anne_Boleyn",
       "name": "Anne Boleyn",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -100,14 +123,16 @@
       "script": "Latn",
       "description": "Queen of England 1533-1536. Second wife of Henry VIII. Her marriage to the king required the break with papal authority. Mother of Elizabeth I. Executed 1536.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229855+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Annulment_Proceedings",
       "name": "Annulment Proceedings",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -115,14 +140,17 @@
       "script": "Latn",
       "description": "Henry VIII's efforts (1527-1533) to obtain papal annulment of his marriage to Catherine of Aragon. The papacy's refusal led to the Break with Rome.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229858+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Trial"
     },
     {
       "slug": "Articles_Promulgation",
       "name": "Articles Promulgation",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -130,14 +158,17 @@
       "script": "Latn",
       "description": "Official promulgation of doctrinal articles defining the faith of the Church of England.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229860+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Legislative"
     },
     {
       "slug": "Bishops_Bible_1568",
       "name": "Bishops Bible 1568",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -145,14 +176,16 @@
       "script": "Latn",
       "description": "English Bible authorized by the bishops under Archbishop Matthew Parker (1568).",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229863+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Bishops_Book_1537",
       "name": "Bishops Book 1537",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -160,14 +193,16 @@
       "script": "Latn",
       "description": "Bishops' Book (The Institution of a Christian Man), doctrinal manual issued in 1537.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229865+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Book_of_Common_Prayer_1549",
       "name": "Book of Common Prayer 1549",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -175,14 +210,16 @@
       "script": "Latn",
       "description": "First English-language liturgical book, compiled by Thomas Cranmer.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229868+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Book_of_Common_Prayer_1552",
       "name": "Book of Common Prayer 1552",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -190,14 +227,16 @@
       "script": "Latn",
       "description": "Revised Prayer Book with more Protestant character, replacing the 1549 version.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229870+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Book_of_Homilies_1547",
       "name": "Book of Homilies 1547",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -205,14 +244,16 @@
       "script": "Latn",
       "description": "First Book of Homilies (1547), authorized sermons for parish instruction under Edward VI.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229873+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Book_of_Homilies_1571",
       "name": "Book of Homilies 1571",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -220,14 +261,16 @@
       "script": "Latn",
       "description": "Second Book of Homilies (1571), authorized sermons reaffirming Elizabethan doctrine.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229875+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Break_with_Rome",
       "name": "Break with Rome",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -235,14 +278,17 @@
       "script": "Latn",
       "description": "The separation of the Church of England from papal authority (1532-1534), accomplished through parliamentary statutes including the Act of Supremacy.",
       "modified_at": "2026-01-17T20:50Z",
-      "modified_by": "curator:historical_descriptions_cleanup"
+      "modified_by": "curator:historical_descriptions_cleanup",
+      "reviewed_at": "2026-01-24T02:42:34.229877+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Legislative"
     },
     {
       "slug": "Cambridge",
       "name": "Cambridge",
       "label": "Place",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -251,14 +297,16 @@
       "description": "University city in eastern England on the River Cam; historic center of learning and scholarship.",
       "is_generic": true,
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229879+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Canterbury",
       "name": "Canterbury",
       "label": "Place",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -267,14 +315,16 @@
       "description": "City in southeast England; traditional seat of the senior bishop of the Church of England.",
       "is_generic": true,
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229882+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Catherine_of_Aragon",
       "name": "Catherine of Aragon",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -282,7 +332,9 @@
       "script": "Latn",
       "description": "Queen of England 1509-1533. First wife of Henry VIII. Spanish princess and daughter of Ferdinand and Isabella. Her contested annulment precipitated the English Reformation.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229885+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Catholic_Restoration",
@@ -301,8 +353,8 @@
       "slug": "Catholic_Restoration_Decrees",
       "name": "Catholic Restoration Decrees",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -310,14 +362,16 @@
       "script": "Latn",
       "description": "Marian-era decrees restoring papal jurisdiction and Catholic worship in England.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229887+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Chantries_Act_1547",
       "name": "Chantries Act 1547",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -325,14 +379,16 @@
       "script": "Latn",
       "description": "Act dissolving chantries and guilds, transferring endowments to the Crown (1547).",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229890+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Church_of_England",
       "name": "Church of England",
       "label": "Institution",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -341,14 +397,16 @@
       "definition": "National church of England, separated from papal authority and under royal supremacy since the 1530s.",
       "description": "The established church in England, separated from papal authority under Henry VIII in 1534. Underwent significant doctrinal and liturgical changes under Edward VI, brief Catholic restoration under Mary I, and achieved its distinctive Via Media character under Elizabeth I.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229892+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Continental_Reformations",
       "name": "Continental Reformations",
       "label": "Idea",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-13T18:16Z",
       "created_by": "auto:repair_clusters",
@@ -357,14 +415,16 @@
       "description": "Protestant reform movements originating in German, Swiss, and French territories.",
       "definition": "Protestant reform movements originating in German, Swiss, and French territories.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229894+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Cornwall",
       "name": "Cornwall",
       "label": "Place",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -373,7 +433,9 @@
       "description": "Southwestern peninsula county of England, bounded by the Atlantic Ocean and English Channel.",
       "is_generic": true,
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229896+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Court_of_Augmentations",
@@ -407,8 +469,8 @@
       "slug": "Cranmer_Annulment_Decree",
       "name": "Cranmer Annulment Decree",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -416,14 +478,16 @@
       "script": "Latn",
       "description": "Archiepiscopal decree (1533) declaring Henry VIII's marriage to Catherine of Aragon invalid.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229899+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Devon",
       "name": "Devon",
       "label": "Place",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -432,14 +496,16 @@
       "description": "County in southwest England between Cornwall and Dorset; varied landscape of moors, coasts, and farmland.",
       "is_generic": true,
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229902+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Dissolution_of_the_Monasteries",
       "name": "Dissolution of the Monasteries",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -447,14 +513,17 @@
       "script": "Latn",
       "description": "Crown seizure of monastic properties (1536-1541), dissolving religious houses and transferring their wealth to the crown.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229904+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Legislative"
     },
     {
       "slug": "Doctrinal_Articles_Promulgation",
       "name": "Doctrinal Articles Promulgation",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -462,14 +531,17 @@
       "script": "Latn",
       "description": "Promulgation of doctrinal articles establishing official teaching for the English church.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229906+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Legislative"
     },
     {
       "slug": "Douai",
       "name": "Douai",
       "label": "Place",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -478,7 +550,9 @@
       "description": "City in northern France; historic center for English-language Catholic scholarship and publishing.",
       "is_generic": true,
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229909+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Ecclesiastical_Courts_England",
@@ -497,8 +571,8 @@
       "slug": "Edmund_Campion",
       "name": "Edmund Campion",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -506,14 +580,16 @@
       "script": "Latn",
       "description": "Jesuit priest and missionary. Led the 1580 English Jesuit mission with Robert Parsons; executed for treason in 1581.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229911+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Edmund_Grindal",
       "name": "Edmund Grindal",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -521,14 +597,16 @@
       "script": "Latn",
       "description": "Archbishop of Canterbury 1575-1583. Refused to suppress prophesyings and was sequestered by Elizabeth I. Earlier served as Bishop of London and Archbishop of York.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229913+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Edward_VI",
       "name": "Edward VI",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -536,14 +614,16 @@
       "script": "Latn",
       "description": "King of England 1547-1553. Son of Henry VIII and Jane Seymour. His minority reign saw significant Protestant reforms under the protectorates of Somerset and Northumberland.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229916+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Elizabeth_I",
       "name": "Elizabeth I",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -551,14 +631,16 @@
       "script": "Latn",
       "description": "Queen of England 1558-1603. Daughter of Henry VIII and Anne Boleyn. Established the Elizabethan Settlement, creating a moderate Protestant church.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229918+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "English_Bible_Translation",
       "name": "English Bible Translation",
       "label": "Movement",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -567,14 +649,16 @@
       "definition": "English Bible Translation (English_Reformation cluster node)",
       "description": "The movement to produce authorized English translations of Scripture, including Tyndale's New Testament (1526), Coverdale Bible (1535), Great Bible (1539), and Geneva Bible (1560).",
       "modified_at": "2026-01-17T20:50Z",
-      "modified_by": "curator:historical_descriptions_cleanup"
+      "modified_by": "curator:historical_descriptions_cleanup",
+      "reviewed_at": "2026-01-24T02:42:34.229921+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "English_Parliament",
       "name": "English Parliament",
       "label": "Institution",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -583,14 +667,16 @@
       "definition": "English Parliament (English_Reformation cluster node)",
       "description": "The bicameral legislature of England. The Reformation Parliament (1529-1536) passed the legislation severing ties with Rome and establishing royal supremacy.",
       "modified_at": "2026-01-17T20:50Z",
-      "modified_by": "curator:historical_descriptions_cleanup"
+      "modified_by": "curator:historical_descriptions_cleanup",
+      "reviewed_at": "2026-01-24T02:42:34.229923+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "English_Realm",
       "name": "English Realm",
       "label": "Idea",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-13T18:16Z",
       "created_by": "auto:repair_clusters",
@@ -599,14 +685,16 @@
       "description": "The kingdom of England as a sovereign political entity.",
       "definition": "The kingdom of England as a sovereign political entity.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229927+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "English_Reformation",
       "name": "English Reformation",
       "label": "Idea",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-13T18:16Z",
       "created_by": "auto:repair_clusters",
@@ -615,7 +703,9 @@
       "description": "Religious transformation separating the English church from papal authority.",
       "definition": "Religious transformation separating the English church from papal authority.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229930+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "English_Seminaries_Douai_Rheims",
@@ -634,8 +724,8 @@
       "slug": "Execution_of_Mary_Queen_of_Scots_1587",
       "name": "Execution of Mary Queen of Scots 1587",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -643,14 +733,17 @@
       "script": "Latn",
       "description": "Execution of Mary, Queen of Scots (1587) at Fotheringhay Castle for treason.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229932+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Execution"
     },
     {
       "slug": "Forty-Two_Articles_1553",
       "name": "Forty Two Articles 1553",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -658,14 +751,16 @@
       "script": "Latn",
       "description": "Forty-Two Articles of Religion (1553), doctrinal statement under Edward VI.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229934+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Geneva_Bible_1560",
       "name": "Geneva Bible 1560",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -673,14 +768,16 @@
       "script": "Latn",
       "description": "Geneva Bible (1560), influential English translation with Calvinist annotations.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229937+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Great_Bible_1539",
       "name": "Great Bible 1539",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -688,14 +785,16 @@
       "script": "Latn",
       "description": "Great Bible (1539), authorized for public reading in every parish church.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229940+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Henry_VIII",
       "name": "Henry VIII",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -703,14 +802,16 @@
       "script": "Latn",
       "description": "King of England 1509-1547. Broke with papal authority to annul his marriage to Catherine of Aragon and marry Anne Boleyn. Declared Supreme Head of the Church of England.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229942+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Heresy_Acts",
       "name": "Heresy Acts",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -718,14 +819,16 @@
       "script": "Latn",
       "description": "Statutes defining heresy and penalties in Tudor England.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229945+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Heresy_Persecutions",
       "name": "Heresy Persecutions",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -733,14 +836,17 @@
       "script": "Latn",
       "description": "Prosecutions and executions for heresy, especially during the Marian restoration (1555-1558).",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229947+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Persecution"
     },
     {
       "slug": "Hugh_Latimer",
       "name": "Hugh Latimer",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -748,7 +854,9 @@
       "script": "Latn",
       "description": "Bishop of Worcester and Protestant preacher. Resigned his see in 1539 over the Six Articles. Burned at the stake in Oxford 1555 during the Marian persecutions.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229949+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Humanism_in_England",
@@ -780,8 +888,8 @@
       "slug": "Injunctions_1547",
       "name": "Injunctions 1547",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -789,14 +897,16 @@
       "script": "Latn",
       "description": "Royal Injunctions of 1547, reform directives issued at the start of Edward VI's reign.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229952+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Jesuit_Mission_1580s",
       "name": "Jesuit Mission 1580s",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -804,7 +914,10 @@
       "script": "Latn",
       "description": "Jesuit mission to England in the 1580s, led by Edmund Campion and Robert Parsons.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229954+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Mission"
     },
     {
       "slug": "Jesuit_Mission_in_England",
@@ -823,8 +936,8 @@
       "slug": "John_Foxe",
       "name": "John Foxe",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -832,14 +945,16 @@
       "script": "Latn",
       "description": "Protestant martyrologist. Author of Acts and Monuments (1563), documenting Protestant persecution. His work shaped English Protestant identity for generations.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229957+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "John_Hooper",
       "name": "John Hooper",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -847,14 +962,16 @@
       "script": "Latn",
       "description": "Protestant reformer and Bishop of Gloucester. Advocate of further reform; executed for heresy in 1555.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229959+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "John_Whitgift",
       "name": "John Whitgift",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -862,14 +979,16 @@
       "script": "Latn",
       "description": "Archbishop of Canterbury 1583-1604. Enforced conformity against Puritans. Supported royal supremacy and episcopal authority.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229961+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Ketts_Rebellion_1549",
       "name": "Ketts Rebellion 1549",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -877,14 +996,17 @@
       "script": "Latn",
       "description": "Kett's Rebellion (1549), popular uprising in Norfolk against enclosure and local grievances.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229964+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Rebellion"
     },
     {
       "slug": "London",
       "name": "London",
       "label": "Place",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -893,7 +1015,9 @@
       "description": "Capital city of England on the River Thames; historic center of commerce, government, and culture.",
       "is_generic": true,
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229966+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Lord_Protectorate",
@@ -925,8 +1049,8 @@
       "slug": "Marian_Persecutions",
       "name": "Marian Persecutions",
       "label": "Movement",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -935,14 +1059,16 @@
       "definition": "Marian Persecutions (English_Reformation cluster node)",
       "description": "The execution of approximately 280 Protestants for heresy during Mary I's reign (1553-1558), documented in John Foxe's Acts and Monuments.",
       "modified_at": "2026-01-17T20:50Z",
-      "modified_by": "curator:historical_descriptions_cleanup"
+      "modified_by": "curator:historical_descriptions_cleanup",
+      "reviewed_at": "2026-01-24T02:42:34.229968+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Martin_Marprelate_Controversy_1588_1589",
       "name": "Martin Marprelate Controversy 1588 1589",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -950,14 +1076,17 @@
       "script": "Latn",
       "description": "Pamphlet war (1588-1589) attacking episcopal governance in the Church of England.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229971+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Controversy"
     },
     {
       "slug": "Mary_I",
       "name": "Mary I",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -965,14 +1094,16 @@
       "script": "Latn",
       "description": "Queen of England 1553-1558. Daughter of Henry VIII and Catherine of Aragon. Restored papal authority and Catholic practice; oversaw the Marian persecutions.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229973+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Mary_Queen_of_Scots",
       "name": "Mary Queen of Scots",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -980,14 +1111,16 @@
       "script": "Latn",
       "description": "Queen of Scots (1542-1567) and Catholic claimant to the English throne. Executed in 1587 for treason.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229975+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Matthew_Parker",
       "name": "Matthew Parker",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -995,14 +1128,16 @@
       "script": "Latn",
       "description": "Archbishop of Canterbury 1559-1575. First Elizabethan archbishop. Supervised the Bishops' Bible translation and defended the via media.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229978+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Miles_Coverdale",
       "name": "Miles Coverdale",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1010,14 +1145,16 @@
       "script": "Latn",
       "description": "Bible translator and bishop. Produced the first complete printed English Bible (1535); later Bishop of Exeter.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229980+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Nicholas_Ridley",
       "name": "Nicholas Ridley",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1025,14 +1162,16 @@
       "script": "Latn",
       "description": "Bishop of London. Protestant reformer who helped draft the 1552 Prayer Book. Burned at the stake in Oxford 1555 with Hugh Latimer.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229983+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Norfolk",
       "name": "Norfolk",
       "label": "Place",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1041,14 +1180,16 @@
       "description": "Geographic location: Norfolk.",
       "is_generic": true,
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229985+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Northern_Rebellion_1569",
       "name": "Northern Rebellion 1569",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1056,14 +1197,17 @@
       "script": "Latn",
       "description": "Rising of the North (1569), Catholic rebellion led by northern earls.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229987+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Rebellion"
     },
     {
       "slug": "Of_the_Laws_of_Ecclesiastical_Polity",
       "name": "Of the Laws of Ecclesiastical Polity",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1071,14 +1215,16 @@
       "script": "Latn",
       "description": "Richard Hooker's treatise defending the theology and polity of the Elizabethan church.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229989+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Oxford",
       "name": "Oxford",
       "label": "Place",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1087,14 +1233,16 @@
       "description": "University city in south-central England on the River Thames; historic center of learning and theology.",
       "is_generic": true,
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229992+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Oxford_Martyrs_1555_1556",
       "name": "Oxford Martyrs 1555 1556",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1102,14 +1250,17 @@
       "script": "Latn",
       "description": "Executions of Latimer, Ridley (1555), and Cranmer (1556) at Oxford during the Marian persecutions.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229994+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Martyrdom"
     },
     {
       "slug": "Papacy",
       "name": "Papacy",
       "label": "Institution",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1118,7 +1269,9 @@
       "definition": "Papacy (English_Reformation cluster node)",
       "description": "The office and jurisdiction of the Pope as head of the Roman Catholic Church. English rejection of papal supremacy was central to the Reformation.",
       "modified_at": "2026-01-17T20:50Z",
-      "modified_by": "curator:historical_descriptions_cleanup"
+      "modified_by": "curator:historical_descriptions_cleanup",
+      "reviewed_at": "2026-01-24T02:42:34.229997+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Papal_Supremacy",
@@ -1137,8 +1290,8 @@
       "slug": "Parish_Bible_Installations",
       "name": "Parish Bible Installations",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1146,14 +1299,17 @@
       "script": "Latn",
       "description": "Installation of authorized English Bibles in parish churches following royal injunctions.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.229999+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Publication"
     },
     {
       "slug": "Pilgrimage_of_Grace_1536",
       "name": "Pilgrimage of Grace 1536",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1161,14 +1317,17 @@
       "script": "Latn",
       "description": "Northern rebellion (1536) against monastic dissolution and royal religious policy.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230001+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Rebellion"
     },
     {
       "slug": "Pole_Reconciliation_Decrees",
       "name": "Pole Reconciliation Decrees",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1176,14 +1335,16 @@
       "script": "Latn",
       "description": "Legatine decrees under Cardinal Pole reconciling England to Rome (1554-1555).",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230004+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Pope_Clement_VII",
       "name": "Pope Clement VII",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1191,14 +1352,16 @@
       "script": "Latn",
       "description": "Pope from 1523 to 1534. His handling of Henry VIII's annulment request helped precipitate the Break with Rome.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230006+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Prayer_Book_Reform",
       "name": "Prayer Book Reform",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1206,7 +1369,10 @@
       "script": "Latn",
       "description": "Introduction and revision of the English Book of Common Prayer (1549, 1552).",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230009+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Reform"
     },
     {
       "slug": "Presbyterian_Reform_in_England",
@@ -1225,8 +1391,8 @@
       "slug": "Privy_Council",
       "name": "Privy Council",
       "label": "Institution",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1235,14 +1401,16 @@
       "definition": "Principal advisory body to the monarch, overseeing administration and policy.",
       "description": "The principal advisory body to the English monarch, playing key roles in religious policy during the Reformation, including administration of conformity and persecution.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230011+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Protestant_Doctrine_in_England",
       "name": "Protestant Doctrine in England",
       "label": "Movement",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1251,14 +1419,16 @@
       "definition": "Protestant Doctrine in England (English_Reformation cluster node)",
       "description": "Reformed theological positions including justification by faith, scriptural authority, and rejection of purgatory, transubstantiation, and papal authority that gained ground in England from the 1530s.",
       "modified_at": "2026-01-17T20:50Z",
-      "modified_by": "curator:historical_descriptions_cleanup"
+      "modified_by": "curator:historical_descriptions_cleanup",
+      "reviewed_at": "2026-01-24T02:42:34.230013+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Puritan_Movement",
       "name": "Puritan Movement",
       "label": "Movement",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1267,14 +1437,16 @@
       "definition": "Puritan Movement (English_Reformation cluster node)",
       "description": "Reformed Protestant movement seeking further purification of the Church of England from Catholic practices. Advocated simpler worship, stricter Sabbath observance, and Presbyterian or congregational church governance.",
       "modified_at": "2026-01-17T20:50Z",
-      "modified_by": "curator:historical_descriptions_cleanup"
+      "modified_by": "curator:historical_descriptions_cleanup",
+      "reviewed_at": "2026-01-24T02:42:34.230016+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Reconciliation_with_Rome",
       "name": "Reconciliation with Rome",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1282,14 +1454,17 @@
       "script": "Latn",
       "description": "Reconciliation of England with the papacy under Mary I (1554-1555).",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230018+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Legislative"
     },
     {
       "slug": "Recusancy_Fines_Regime",
       "name": "Recusancy Fines Regime",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1297,7 +1472,10 @@
       "script": "Latn",
       "description": "System of fines and penalties for nonattendance at Church of England services.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230020+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Legislative"
     },
     {
       "slug": "Recusant_Catholicism",
@@ -1316,8 +1494,8 @@
       "slug": "Reginald_Pole",
       "name": "Reginald Pole",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1325,14 +1503,16 @@
       "script": "Latn",
       "description": "Cardinal and Archbishop of Canterbury 1556-1558. Papal legate who reconciled England to Rome under Mary I. Last Catholic Archbishop of Canterbury.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230023+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Regnans_in_Excelsis_1570",
       "name": "Regnans in Excelsis 1570",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1340,14 +1520,17 @@
       "script": "Latn",
       "description": "Papal bull (1570) excommunicating Elizabeth I and releasing subjects from obedience.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230026+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Decree"
     },
     {
       "slug": "Rheims",
       "name": "Rheims",
       "label": "Place",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1356,14 +1539,16 @@
       "description": "Geographic location: Rheims.",
       "is_generic": true,
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230028+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Rheims_New_Testament_1582",
       "name": "Rheims New Testament 1582",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1371,14 +1556,16 @@
       "script": "Latn",
       "description": "Catholic English New Testament published at Rheims in 1582.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230030+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Richard_Hooker",
       "name": "Richard Hooker",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1386,14 +1573,16 @@
       "script": "Latn",
       "description": "Theologian and apologist. Author of Of the Laws of Ecclesiastical Polity, defending the Elizabethan church order against Puritan criticism.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230033+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Robert_Parsons",
       "name": "Robert Parsons",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1401,7 +1590,9 @@
       "script": "Latn",
       "description": "Jesuit priest. Co-leader with Edmund Campion of the 1580 Jesuit mission to England. Later directed seminary training from the continent.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230035+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Roman_Catholic_Church",
@@ -1420,8 +1611,8 @@
       "slug": "Rome",
       "name": "Rome",
       "label": "Place",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1430,7 +1621,9 @@
       "description": "City in central Italy on the Tiber River; historic seat of the papacy and center of the Roman Catholic Church.",
       "is_generic": true,
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230038+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Royal_Court",
@@ -1449,8 +1642,8 @@
       "slug": "Royal_Injunctions_1536",
       "name": "Royal Injunctions 1536",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1458,14 +1651,16 @@
       "script": "Latn",
       "description": "Henrician Injunctions of 1536 ordering reforms and visitation in the English church.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230040+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Royal_Injunctions_1538",
       "name": "Royal Injunctions 1538",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1473,14 +1668,16 @@
       "script": "Latn",
       "description": "Henrician Injunctions of 1538 requiring Bible provision and regulating images and relics.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230042+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Royal_Supremacy",
       "name": "Royal Supremacy",
       "label": "Movement",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1489,14 +1686,16 @@
       "definition": "Royal Supremacy (English_Reformation cluster node)",
       "description": "The doctrine that the English monarch holds supreme authority over the Church of England, superseding papal jurisdiction. Established by the Act of Supremacy 1534.",
       "modified_at": "2026-01-17T20:50Z",
-      "modified_by": "curator:historical_descriptions_cleanup"
+      "modified_by": "curator:historical_descriptions_cleanup",
+      "reviewed_at": "2026-01-24T02:42:34.230045+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Seminary_Priests_Mission_1580s",
       "name": "Seminary Priests Mission 1580s",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1504,7 +1703,10 @@
       "script": "Latn",
       "description": "Mission of seminary-trained priests to England in the 1580s to sustain Catholic communities.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230047+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Mission"
     },
     {
       "slug": "Separatist_Movement",
@@ -1523,8 +1725,8 @@
       "slug": "Settlement_Passage",
       "name": "Settlement Passage",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1532,14 +1734,17 @@
       "script": "Latn",
       "description": "Parliamentary passage of the 1559 Acts of Supremacy and Uniformity establishing the Elizabethan Settlement.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230050+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Legislative"
     },
     {
       "slug": "Six_Articles_1539",
       "name": "Six Articles 1539",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1547,7 +1752,9 @@
       "script": "Latn",
       "description": "Act of Six Articles (1539), reaffirming traditional doctrine and sacramental practice.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230052+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Society_of_Jesus",
@@ -1568,8 +1775,8 @@
       "slug": "Spanish_Armada_1588",
       "name": "Spanish Armada 1588",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1577,7 +1784,10 @@
       "script": "Latn",
       "description": "Spanish Armada campaign (1588) against England, defeated by English forces and weather.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230055+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "War"
     },
     {
       "slug": "Star_Chamber",
@@ -1598,8 +1808,8 @@
       "slug": "Ten_Articles_1536",
       "name": "Ten Articles 1536",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1607,14 +1817,16 @@
       "script": "Latn",
       "description": "Ten Articles (1536), early Henrician doctrinal statement blending reform and tradition.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230058+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Thirty-Nine_Articles_1563",
       "name": "Thirty Nine Articles 1563",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1622,14 +1834,16 @@
       "script": "Latn",
       "description": "The doctrinal statements of the Church of England, finalizing the Via Media position between Catholic and Reformed traditions.",
       "modified_at": "2026-01-17T20:50Z",
-      "modified_by": "curator:historical_descriptions_cleanup"
+      "modified_by": "curator:historical_descriptions_cleanup",
+      "reviewed_at": "2026-01-24T02:42:34.230061+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Thomas_Cranmer",
       "name": "Thomas Cranmer",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1637,14 +1851,16 @@
       "script": "Latn",
       "description": "Archbishop of Canterbury 1533-1556. Principal architect of the English Reformation. Authored the Book of Common Prayer. Burned at the stake in Oxford 1556.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230063+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Thomas_Cromwell",
       "name": "Thomas Cromwell",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1652,14 +1868,16 @@
       "script": "Latn",
       "description": "Chief minister to Henry VIII 1532-1540. Orchestrated the dissolution of the monasteries and the administrative break with Rome. Executed 1540.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230066+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Thomas_More",
       "name": "Thomas More",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1667,7 +1885,9 @@
       "script": "Latn",
       "description": "Lord Chancellor 1529-1532. Humanist scholar and author of Utopia. Refused to accept royal supremacy. Executed 1535; later canonized.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230068+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "University_of_Cambridge",
@@ -1699,8 +1919,8 @@
       "slug": "Valor_Ecclesiasticus_1535",
       "name": "Valor Ecclesiasticus 1535",
       "label": "Text",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1708,14 +1928,16 @@
       "script": "Latn",
       "description": "Crown survey of ecclesiastical wealth commissioned by Henry VIII in 1535.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230071+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Vestiarian_Controversy_1566",
       "name": "Vestiarian Controversy 1566",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1723,14 +1945,17 @@
       "script": "Latn",
       "description": "Dispute (1566) over clerical vestments, exposing tensions between conformists and Puritans.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230073+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Controversy"
     },
     {
       "slug": "Via_Media",
       "name": "Via Media",
       "label": "Movement",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1739,14 +1964,16 @@
       "definition": "Via Media (English_Reformation cluster node)",
       "description": "The 'middle way' of the Elizabethan Church of England, seeking to balance Protestant theology with traditional Catholic ceremonial and episcopal church governance.",
       "modified_at": "2026-01-17T20:50Z",
-      "modified_by": "curator:historical_descriptions_cleanup"
+      "modified_by": "curator:historical_descriptions_cleanup",
+      "reviewed_at": "2026-01-24T02:42:34.230075+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Western_Rebellion_1549",
       "name": "Western Rebellion 1549",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1754,14 +1981,17 @@
       "script": "Latn",
       "description": "Prayer Book Rebellion (Western Rising) in Devon and Cornwall against the 1549 Prayer Book.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230078+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Rebellion"
     },
     {
       "slug": "William_Cecil",
       "name": "William Cecil",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1769,14 +1999,16 @@
       "script": "Latn",
       "description": "Lord Burghley. Principal Secretary and Lord Treasurer under Elizabeth I. Chief architect of Elizabethan religious and foreign policy.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230080+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "William_Tyndale",
       "name": "William Tyndale",
       "label": "Person",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1784,14 +2016,16 @@
       "script": "Latn",
       "description": "Scholar and translator. Produced the first printed English New Testament (1526). His translations influenced later English Bibles. Executed for heresy 1536.",
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230083+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Wyatts_Rebellion_1554",
       "name": "Wyatts Rebellion 1554",
       "label": "Event",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1799,14 +2033,17 @@
       "script": "Latn",
       "description": "Wyatt's Rebellion (1554), uprising against Mary I's proposed marriage to Philip of Spain.",
       "modified_at": "2026-01-17T21:30Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230085+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Rebellion"
     },
     {
       "slug": "York",
       "name": "York",
       "label": "Place",
-      "status": "PROPOSED",
-      "workflow_stage": "PROPOSED",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
       "governance_version": 5,
       "created_at": "2025-12-06T04:54Z",
       "created_by": "auto:from_readme",
@@ -1815,364 +2052,585 @@
       "description": "City in northern England at the confluence of the Rivers Ouse and Foss; historic ecclesiastical and political center.",
       "is_generic": true,
       "modified_at": "2026-01-17T21:18Z",
-      "modified_by": "curator:systematic_definitions_update"
+      "modified_by": "curator:systematic_definitions_update",
+      "reviewed_at": "2026-01-24T02:42:34.230087+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Thomas_Wolsey",
       "label": "Person",
       "name": "Thomas Wolsey",
       "description": "Cardinal and Lord Chancellor (c. 1473–1530) who dominated English politics under Henry VIII until his failure to secure the royal annulment led to his downfall and death.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230090+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Stephen_Gardiner",
       "label": "Person",
       "name": "Stephen Gardiner",
       "description": "Bishop of Winchester (c. 1483–1555) who served Henry VIII as diplomat, opposed Protestant reforms under Edward VI, and became Lord Chancellor under Mary I, enforcing Catholic restoration.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230092+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Edmund_Bonner",
       "label": "Person",
       "name": "Edmund Bonner",
       "description": "Bishop of London (c. 1500–1569), known as 'Bloody Bonner,' who conducted heresy trials and ordered numerous Protestant burnings during the Marian persecutions.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230094+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "John_Fisher",
       "label": "Person",
       "name": "John Fisher",
       "description": "Bishop of Rochester (1469–1535) and humanist scholar who defended Catherine of Aragon and papal supremacy, executed for refusing to accept the Act of Supremacy.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230096+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Lady_Jane_Grey",
       "label": "Person",
       "name": "Lady Jane Grey",
       "description": "The 'Nine Days Queen' (1537–1554), great-granddaughter of Henry VII, briefly proclaimed queen in 1553 before Mary I's accession; executed for treason.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230098+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "John_Dudley_Northumberland",
       "label": "Person",
       "name": "John Dudley, Duke of Northumberland",
       "description": "Lord President of the Council (1504–1553) who dominated Edward VI's government from 1550, promoted Protestant reforms, and attempted to place Lady Jane Grey on the throne.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230100+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Edward_Seymour_Somerset",
       "label": "Person",
       "name": "Edward Seymour, Duke of Somerset",
       "description": "Lord Protector (c. 1500–1552) during Edward VI's minority who oversaw initial Protestant reforms including the first Book of Common Prayer.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230103+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Martin_Bucer",
       "label": "Person",
       "name": "Martin Bucer",
       "description": "Continental reformer (1491–1551) from Strasbourg who came to England in 1549, influenced Cranmer's theology, and was Regius Professor of Divinity at Cambridge.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230105+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Peter_Martyr_Vermigli",
       "label": "Person",
       "name": "Peter Martyr Vermigli",
       "description": "Italian Protestant reformer (1499–1562) who served as Regius Professor of Divinity at Oxford under Edward VI and influenced English eucharistic theology.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230107+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "John_Knox",
       "label": "Person",
       "name": "John Knox",
       "description": "Scottish reformer (c. 1514–1572) who served as royal chaplain under Edward VI, later led the Scottish Reformation, and influenced English Puritanism through his writings.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230109+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Philip_II_of_Spain",
       "label": "Person",
       "name": "Philip II of Spain",
       "description": "King of Spain (1527–1598) who married Mary I in 1554, supported Catholic restoration in England, and later launched the Spanish Armada against Elizabeth I.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230112+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Jane_Seymour",
       "label": "Person",
       "name": "Jane Seymour",
       "description": "Third queen consort of Henry VIII (c. 1508–1537), mother of Edward VI, whose family rose to prominence during the Protestant reforms.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230114+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Thomas_Wyatt_the_Younger",
       "label": "Person",
       "name": "Thomas Wyatt the Younger",
       "description": "English rebel (c. 1521–1554) who led Wyatt's Rebellion in 1554 against Mary I's Spanish marriage; executed for treason.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230116+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Robert_Aske",
       "label": "Person",
       "name": "Robert Aske",
       "description": "Yorkshire lawyer (c. 1500–1537) who led the Pilgrimage of Grace in 1536, the largest rebellion against Henry VIII's religious policies; executed for treason.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230118+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "William_Allen",
       "label": "Person",
       "name": "William Allen",
       "description": "English Catholic cardinal (1532–1594) who founded the English College at Douai to train missionary priests for the reconversion of England.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230121+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "John_Jewel",
       "label": "Person",
       "name": "John Jewel",
       "description": "Bishop of Salisbury (1522–1571) whose Apology of the Church of England (1562) became a foundational defense of the Elizabethan settlement.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230123+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Thomas_Cartwright",
       "label": "Person",
       "name": "Thomas Cartwright",
       "description": "Cambridge theologian (1535–1603) and leading Presbyterian who challenged the episcopal structure of the Church of England.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230126+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Walter_Travers",
       "label": "Person",
       "name": "Walter Travers",
       "description": "Puritan theologian (c. 1548–1635) who debated Richard Hooker at the Temple Church and advocated Presbyterian church government.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230128+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Robert_Browne",
       "label": "Person",
       "name": "Robert Browne",
       "description": "English Separatist (c. 1550–1633) whose writings advocating congregational independence influenced later Separatist and Congregationalist movements.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230130+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Henry_Barrow",
       "label": "Person",
       "name": "Henry Barrow",
       "description": "Separatist leader (c. 1550–1593) executed for sedition, whose writings advocated complete separation from the Church of England.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230133+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Tyndale_New_Testament_1526",
       "label": "Text",
       "name": "Tyndale's New Testament (1526)",
       "description": "First printed English New Testament, translated by William Tyndale from Greek and printed in Worms; formed the basis of all subsequent English Bible translations.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230135+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Coverdale_Bible_1535",
       "label": "Text",
       "name": "Coverdale Bible (1535)",
       "description": "First complete printed English Bible, translated by Miles Coverdale; dedicated to Henry VIII and Anne Boleyn.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230138+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Matthew_Bible_1537",
       "label": "Text",
       "name": "Matthew Bible (1537)",
       "description": "English Bible combining Tyndale's and Coverdale's work, edited by John Rogers under the pseudonym Thomas Matthew; the first English Bible officially authorized for public use.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230140+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Defense_of_the_Seven_Sacraments_1521",
       "label": "Text",
       "name": "Defense of the Seven Sacraments (1521)",
       "description": "Henry VIII's theological treatise against Martin Luther, for which Pope Leo X granted him the title 'Defender of the Faith.'",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230142+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Kings_Book_1543",
       "label": "Text",
       "name": "The King's Book (1543)",
       "description": "A Necessary Doctrine and Erudition for Any Christian Man, a conservative doctrinal formulary issued under Henry VIII that modified the Bishops' Book.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230145+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Apology_of_the_Church_of_England_1562",
       "label": "Text",
       "name": "Apology of the Church of England (1562)",
       "description": "John Jewel's Latin treatise defending the Church of England against Catholic criticism, foundational for Anglican ecclesiology.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230147+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Admonition_to_Parliament_1572",
       "label": "Text",
       "name": "Admonition to the Parliament (1572)",
       "description": "Puritan manifesto by John Field and Thomas Wilcox calling for Presbyterian reform of the Church of England.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230149+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Book_of_Martyrs_1563",
       "label": "Text",
       "name": "Foxe's Book of Martyrs (1563)",
       "description": "Popular name for John Foxe's Acts and Monuments; the most influential English Protestant text after the Bible.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230151+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "First_Blast_of_the_Trumpet_1558",
       "label": "Text",
       "name": "First Blast of the Trumpet Against the Monstrous Regiment of Women (1558)",
       "description": "John Knox's polemic against female rulers, written against Mary I but creating diplomatic difficulties with Elizabeth I.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230153+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Recusancy_Acts",
       "label": "Text",
       "name": "Recusancy Acts",
       "description": "Series of parliamentary statutes (1581, 1587, 1593) imposing fines and penalties on Catholics who refused to attend Church of England services.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230156+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Act_Against_Jesuits_1585",
       "label": "Text",
       "name": "Act Against Jesuits and Seminary Priests (1585)",
       "description": "Elizabethan statute making it treason for Catholic priests ordained abroad to enter England.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230158+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Bond_of_Association_1584",
       "label": "Text",
       "name": "Bond of Association (1584)",
       "description": "Document pledging signatories to execute anyone who attempted to assassinate Elizabeth I or claim the throne, aimed at Mary Queen of Scots.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230161+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Execution_of_Anne_Boleyn_1536",
       "label": "Event",
       "name": "Execution of Anne Boleyn (1536)",
       "description": "The beheading of Queen Anne Boleyn on May 19, 1536, on charges of adultery and treason, enabling Henry VIII to marry Jane Seymour.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230163+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Execution"
     },
     {
       "slug": "Execution_of_Thomas_More_1535",
       "label": "Event",
       "name": "Execution of Thomas More (1535)",
       "description": "The beheading of Sir Thomas More on July 6, 1535, for refusing to acknowledge Henry VIII as Supreme Head of the Church of England.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230166+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Execution"
     },
     {
       "slug": "Execution_of_John_Fisher_1535",
       "label": "Event",
       "name": "Execution of John Fisher (1535)",
       "description": "The beheading of Bishop John Fisher on June 22, 1535, for denying royal supremacy; he had been made cardinal by the Pope two weeks earlier.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230172+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Execution"
     },
     {
       "slug": "Burning_of_William_Tyndale_1536",
       "label": "Event",
       "name": "Burning of William Tyndale (1536)",
       "description": "The execution of Bible translator William Tyndale by strangulation and burning at Vilvoorde near Brussels on October 6, 1536.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230175+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Martyrdom"
     },
     {
       "slug": "Lady_Jane_Grey_Reign_1553",
       "label": "Event",
       "name": "Lady Jane Grey's Reign (1553)",
       "description": "The nine-day reign of Lady Jane Grey (July 10-19, 1553), proclaimed queen by Northumberland before Mary I's successful claim to the throne.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230178+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Reign"
     },
     {
       "slug": "Babington_Plot_1586",
       "label": "Event",
       "name": "Babington Plot (1586)",
       "description": "Catholic conspiracy to assassinate Elizabeth I and place Mary Queen of Scots on the throne, whose discovery led to Mary's trial and execution.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230180+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Plot"
     },
     {
       "slug": "Throckmorton_Plot_1583",
       "label": "Event",
       "name": "Throckmorton Plot (1583)",
       "description": "Catholic conspiracy involving Francis Throckmorton to invade England with Spanish support and place Mary Queen of Scots on the throne.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230183+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Plot"
     },
     {
       "slug": "Ridolfi_Plot_1571",
       "label": "Event",
       "name": "Ridolfi Plot (1571)",
       "description": "Catholic conspiracy organized by Roberto Ridolfi to replace Elizabeth I with Mary Queen of Scots, involving the Duke of Norfolk.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230185+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Plot"
     },
     {
       "slug": "Trial_of_Mary_Queen_of_Scots_1586",
       "label": "Event",
       "name": "Trial of Mary Queen of Scots (1586)",
       "description": "The trial of Mary Queen of Scots at Fotheringhay Castle for complicity in the Babington Plot, resulting in her conviction and death sentence.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230187+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Trial"
     },
     {
       "slug": "Fall_of_Wolsey_1529",
       "label": "Event",
       "name": "Fall of Wolsey (1529)",
       "description": "Cardinal Wolsey's dismissal as Lord Chancellor in October 1529 after failing to secure Henry VIII's annulment; died en route to trial in 1530.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230189+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Reign"
     },
     {
       "slug": "Submission_of_the_Clergy_1532",
       "label": "Event",
       "name": "Submission of the Clergy (1532)",
       "description": "The English clergy's surrender of legislative independence to the Crown, a crucial step toward royal supremacy over the church.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230192+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Legislative"
     },
     {
       "slug": "Convocation_of_1563",
       "label": "Event",
       "name": "Convocation of 1563",
       "description": "Meeting of the Canterbury Convocation that approved the Thirty-Nine Articles and narrowly rejected further Puritan reforms.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230194+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Council"
     },
     {
       "slug": "Prophesyings_Controversy_1576",
       "label": "Event",
       "name": "Prophesyings Controversy (1576)",
       "description": "Dispute over clerical training exercises ('prophesyings') between Archbishop Grindal, who supported them, and Elizabeth I, who ordered their suppression.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230196+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Controversy"
     },
     {
       "slug": "Execution_of_Edmund_Campion_1581",
       "label": "Event",
       "name": "Execution of Edmund Campion (1581)",
       "description": "The hanging, drawing, and quartering of Jesuit priest Edmund Campion at Tyburn on December 1, 1581, for treason.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230198+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Execution"
     },
     {
       "slug": "Act_of_Succession_1534",
       "label": "Event",
       "name": "Act of Succession (1534)",
       "description": "Parliamentary act establishing the succession through Anne Boleyn's children and requiring an oath accepting the king's supremacy.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230201+00:00",
+      "reviewed_by": "complete_curator_workflow.py",
+      "kind": "Legislative"
     },
     {
       "slug": "Convocation_of_Canterbury",
       "label": "Institution",
       "name": "Convocation of Canterbury",
       "description": "The assembly of clergy of the province of Canterbury, the senior provincial synod of the Church of England with legislative powers over church matters.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230203+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Council_of_the_North",
       "label": "Institution",
       "name": "Council of the North",
       "description": "Administrative body based in York exercising royal authority in northern England, strengthened after the Pilgrimage of Grace.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230205+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "English_College_Rome",
       "label": "Institution",
       "name": "English College Rome",
       "description": "Seminary in Rome (founded 1579) training Catholic priests for the English mission, complementing Douai-Rheims.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230208+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Doctors_Commons",
       "label": "Institution",
       "name": "Doctors' Commons",
       "description": "London college of civil and canon lawyers who handled ecclesiastical and admiralty cases, including annulment proceedings.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230210+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Smithfield",
@@ -2180,7 +2638,11 @@
       "name": "Smithfield",
       "description": "Site in London where numerous Protestant martyrs were burned during the Marian persecutions, becoming a symbol of Protestant suffering.",
       "is_generic": true,
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230212+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Tower_of_London",
@@ -2188,7 +2650,11 @@
       "name": "Tower of London",
       "description": "Royal fortress and prison where many figures of the Reformation were held and executed, including More, Fisher, and Anne Boleyn.",
       "is_generic": true,
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230214+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Fotheringhay",
@@ -2196,7 +2662,11 @@
       "name": "Fotheringhay",
       "description": "Castle in Northamptonshire where Mary Queen of Scots was tried and executed in 1586-1587.",
       "is_generic": true,
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230216+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Wittenberg",
@@ -2204,7 +2674,11 @@
       "name": "Wittenberg",
       "description": "German university town where Martin Luther initiated the Protestant Reformation, influencing English reformers through theological exchanges.",
       "is_generic": true,
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230218+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Geneva",
@@ -2212,7 +2686,11 @@
       "name": "Geneva",
       "description": "Swiss city under John Calvin's influence where Marian exiles produced the Geneva Bible and absorbed Reformed theology.",
       "is_generic": true,
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230221+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Antwerp",
@@ -2220,7 +2698,11 @@
       "name": "Antwerp",
       "description": "Flemish city where Tyndale printed his New Testament and other Protestant works were published for smuggling into England.",
       "is_generic": true,
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230223+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Strasbourg",
@@ -2228,28 +2710,94 @@
       "name": "Strasbourg",
       "description": "Imperial city where Martin Bucer led reform and English exiles including Coverdale sought refuge during Mary's reign.",
       "is_generic": true,
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "reviewed_at": "2026-01-24T02:42:34.230225+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     },
     {
       "slug": "Marian_Exile",
       "label": "Movement",
       "name": "Marian Exile",
       "definition": "The flight of approximately 800 English Protestants to continental Europe during Mary I's reign (1553-1558), many returning with more radical Reformed ideas.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "PROPOSED",
+      "workflow_stage": "PROPOSED"
     },
     {
       "slug": "Counter_Reformation_in_England",
       "label": "Movement",
       "name": "Counter-Reformation in England",
       "definition": "Catholic efforts to reverse the English Reformation through diplomatic pressure, seminary priests, Jesuit missions, and plots against Elizabeth I.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "PROPOSED",
+      "workflow_stage": "PROPOSED"
     },
     {
       "slug": "Erastianism",
       "label": "Movement",
       "name": "Erastianism",
       "definition": "The doctrine that the state has authority over the church in ecclesiastical matters, a key principle underlying royal supremacy.",
-      "cluster": "English_Reformation"
+      "cluster": "English_Reformation",
+      "status": "PROPOSED",
+      "workflow_stage": "PROPOSED"
+    },
+    {
+      "slug": "Marriage_Anne_Boleyn_Henry_VIII",
+      "name": "Marriage: Anne_Boleyn × Henry_VIII",
+      "label": "Event",
+      "kind": "Marriage",
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "created_at": "2026-01-24T03:29:46.857028+00:00",
+      "created_by": "migrate_marriages_to_events.py",
+      "description": "Henry VIII married Anne Boleyn after the annulment of his first marriage.",
+      "reviewed_at": "2026-01-24T02:42:34.230357+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
+    },
+    {
+      "slug": "Marriage_Catherine_of_Aragon_Henry_VIII",
+      "name": "Marriage: Catherine_of_Aragon × Henry_VIII",
+      "label": "Event",
+      "kind": "Marriage",
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "created_at": "2026-01-24T03:29:46.857103+00:00",
+      "created_by": "migrate_marriages_to_events.py",
+      "description": "Catherine of Aragon was Henry VIII's first wife.",
+      "reviewed_at": "2026-01-24T02:42:34.230989+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
+    },
+    {
+      "slug": "Marriage_Henry_VIII_Jane_Seymour",
+      "name": "Marriage: Henry_VIII × Jane_Seymour",
+      "label": "Event",
+      "kind": "Marriage",
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "created_at": "2026-01-24T03:29:46.857128+00:00",
+      "created_by": "migrate_marriages_to_events.py",
+      "description": "Jane Seymour married Henry VIII in 1536.",
+      "reviewed_at": "2026-01-24T02:42:34.230664+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
+    },
+    {
+      "slug": "Marriage_Mary_I_Philip_II_of_Spain",
+      "name": "Marriage: Mary_I × Philip_II_of_Spain",
+      "label": "Event",
+      "kind": "Marriage",
+      "cluster": "English_Reformation",
+      "status": "REVIEWED",
+      "workflow_stage": "REVIEWED",
+      "created_at": "2026-01-24T03:29:46.857147+00:00",
+      "created_by": "migrate_marriages_to_events.py",
+      "description": "Philip II of Spain married Mary I in 1554.",
+      "reviewed_at": "2026-01-24T02:42:34.230653+00:00",
+      "reviewed_by": "complete_curator_workflow.py"
     }
   ]
 }

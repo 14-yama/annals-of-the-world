@@ -5,7 +5,9 @@
     "registry": "docs/nodes/node-attribute-registry.md",
     "source": "docs/clusters/Swiss_Reformation/README.md",
     "generated_at": "2025-12-13T18:16Z",
-    "generator": "scripts/admin/repair_clusters.py"
+    "generator": "scripts/admin/repair_clusters.py",
+    "event_kinds_assigned_at": "2026-01-24T03:49:12.908877+00:00",
+    "event_kinds_script": "scripts/admin/assign_event_kinds.py"
   },
   "nodes": [
     {
@@ -19,7 +21,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Abolition of the Mass Zurich 1525 from Swiss_Reformation cluster"
+      "description": "Abolition of the Mass Zurich 1525 from Swiss_Reformation cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Academy_Founding_1559",
@@ -32,7 +35,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Academy Founding 1559 from Swiss_Reformation cluster"
+      "description": "Academy Founding 1559 from Swiss_Reformation cluster",
+      "kind": "Founding"
     },
     {
       "slug": "Academy_of_Geneva_1559",
@@ -58,7 +62,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Affair of the Sausages 1522 from Swiss_Reformation cluster"
+      "description": "Affair of the Sausages 1522 from Swiss_Reformation cluster",
+      "kind": "Controversy"
     },
     {
       "slug": "Anti_Trinitarianism",
@@ -152,7 +157,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Basel Reform 1529 from Swiss_Reformation cluster"
+      "description": "Basel Reform 1529 from Swiss_Reformation cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Basel_University",
@@ -218,7 +224,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Bern Disputation 1528 from Swiss_Reformation cluster"
+      "description": "Bern Disputation 1528 from Swiss_Reformation cluster",
+      "kind": "Debate"
     },
     {
       "slug": "Bernese_civic_council_advancing_reform",
@@ -245,7 +252,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Calvin Return to Geneva 1541 from Swiss_Reformation cluster"
+      "description": "Calvin Return to Geneva 1541 from Swiss_Reformation cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Calvin_recalled_to_organize_Geneva_church",
@@ -925,7 +933,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Kappel Wars 1529 1531 from Swiss_Reformation cluster"
+      "description": "Kappel Wars 1529 1531 from Swiss_Reformation cluster",
+      "kind": "War"
     },
     {
       "slug": "Lenten_meateating_episode_catalyzing_debate",
@@ -1019,7 +1028,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Marburg Colloquy 1529 from Swiss_Reformation cluster"
+      "description": "Marburg Colloquy 1529 from Swiss_Reformation cluster",
+      "kind": "Debate"
     },
     {
       "slug": "Martin_Bucer",
@@ -1193,7 +1203,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Servetus Execution 1553 from Swiss_Reformation cluster"
+      "description": "Servetus Execution 1553 from Swiss_Reformation cluster",
+      "kind": "Execution"
     },
     {
       "slug": "Sixty-Seven_Articles_1523",
@@ -1437,7 +1448,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Zurich Disputations 1523 from Swiss_Reformation cluster"
+      "description": "Zurich Disputations 1523 from Swiss_Reformation cluster",
+      "kind": "Debate"
     },
     {
       "slug": "Zurich_civic_leaders_executing_reform_policy",

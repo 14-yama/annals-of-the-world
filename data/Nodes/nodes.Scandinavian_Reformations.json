@@ -5,7 +5,9 @@
     "registry": "docs/nodes/node-attribute-registry.md",
     "source": "docs/clusters/Scandinavian_Reformations/README.md",
     "generated_at": "2025-12-13T18:16Z",
-    "generator": "scripts/admin/repair_clusters.py"
+    "generator": "scripts/admin/repair_clusters.py",
+    "event_kinds_assigned_at": "2026-01-24T03:49:12.906911+00:00",
+    "event_kinds_script": "scripts/admin/assign_event_kinds.py"
   },
   "nodes": [
     {
@@ -222,7 +224,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Counts War 1534 1536 from Scandinavian_Reformations cluster"
+      "description": "Counts War 1534 1536 from Scandinavian_Reformations cluster",
+      "kind": "War"
     },
     {
       "slug": "Crown_governance_over_church",
@@ -374,7 +377,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Diet of Vaesteras 1527 from Scandinavian_Reformations cluster"
+      "description": "Diet of Vaesteras 1527 from Scandinavian_Reformations cluster",
+      "kind": "Council"
     },
     {
       "slug": "Doctrinal_settlement_affirming_Lutheranism",
@@ -471,7 +475,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Establishment of Lutheranism Denmark 1536 from Scandinavian_Reformations cluster"
+      "description": "Establishment of Lutheranism Denmark 1536 from Scandinavian_Reformations cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Estates_assembly_enacting_reforms",
@@ -793,7 +798,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Reduction Policies 1540s from Scandinavian_Reformations cluster"
+      "description": "Reduction Policies 1540s from Scandinavian_Reformations cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Reformer_and_preacher_in_Stockholm",
@@ -1023,7 +1029,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Uppsala Synod 1593 from Scandinavian_Reformations cluster"
+      "description": "Uppsala Synod 1593 from Scandinavian_Reformations cluster",
+      "kind": "Council"
     },
     {
       "slug": "Uppsala_Synod_Decrees_1593",
@@ -1075,7 +1082,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Visitations and Implementations 1540s from Scandinavian_Reformations cluster"
+      "description": "Visitations and Implementations 1540s from Scandinavian_Reformations cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Visitations_enforcing_discipline",

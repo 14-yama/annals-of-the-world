@@ -18,7 +18,9 @@
         "inline_evidence": "Derived boolean: true when evidence_url is non-null.",
         "evidence_node_present": "Derived boolean: true when :Evidence node exists in Neo4j for evidence_slug at last status update."
       }
-    }
+    },
+    "timeframe_edges_generated_at": "2026-01-24T02:27:36.854441+00:00",
+    "timeframe_edges_generator": "scripts/generate_timeframe_edges.py"
   },
   "relationships": [
     {
@@ -1196,6 +1198,590 @@
       "source_note": "auto:from_script:ensure_is_part_of",
       "_key": "Jewish-Islamic_Exchange|IS_PART_OF|Interreligious_Exchange",
       "confidence_score": null
+    }
+  ],
+  "timeframe_edges": [
+    {
+      "node_slug": "Abbasid_Translation_Movement",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Abraham_Maimonides",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Abraham_Maimonides_Writings",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Abraham_ibn_Daud",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Abraham_ibn_Ezra",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Almohad_Pressures_and_Migration",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Al‑Farabi",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Al‑Kindi",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Andalusian_Hebrew_Poetry",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Andalusian_Jewish_Communities",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Arabic_Paraphrases_of_Aristotle",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Aristotelian_Rationalism_in_Judaism",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Ayyubid_Administration",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Ayyubid_Patronage_Phases",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Baghdad",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Bahya_ibn_Paquda",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Bans_in_the_Maimonidean_Controversy",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Barcelona",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Barcelona_Bans_1305",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Basra",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Cairo_Geniza_Document_Accumulation",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Christian_Scholasticism",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Cordoba",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Cordoba_Court",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Court_Patronage_Phases",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Diwan_Moses_ibn_Ezra",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Dunash_ben_Labrat",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Dunash_ibn_Tamim",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Fez",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Fustat/Cairo",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Fustat/Cairo_Rabbinic_Court",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Geonic_Responsa",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Geonic_Responsa_Network_Expansion",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Granada",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Granada_Court",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Granada_Massacre_1066",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Guide_for_the_Perplexed",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Hai_Gaon",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Hasdai_ibn_Shaprut",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Hebrew_Grammatical_Reform",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Hebrew_Tradition",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Hebrew‑Arabic_Lexica",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Hunayn_ibn_Ishaq",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Ibn_Bajja",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Ibn_Gabirol",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Ibn_Tibbon_Translations",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Ibn_Tufayl",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Interreligious_Exchange",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Islamic_Thought",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Jacob_Anatoli",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Jewish-Islamic_Exchange",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Jonah_ibn_Janah",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Judah_Halevi",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Judah_ibn_Tibbon",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Judeo_Arabic_Bible_Translation_Phase",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Judeo‑Arabic_Corpus",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Judeo‑Arabic_Scholarship",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Kalam_in_Jewish_Thought",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Karaite_Beit_Din",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Karaite_Judaism",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Latin_Translation_Movement_12th_c",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Maimonidean_Codification",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Maimonidean_Dissemination_Phases",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Menachem_Meiri",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Menahem_ben_Saruk",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Mishneh_Torah",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Montpellier",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Montpellier_Rabbinic_Court",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Moses_ben_Maimon_Maimonides",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Moses_ibn_Ezra",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Narbonne",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Paris",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Paris_Talmud_Burning_1242",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Philosophical_Works_Ibn_Gabirol_et_al",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Pietist_Renewal_in_Egypt",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Provence_Communities",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Pumbedita",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Qirqisani_Kitab_al‑Anwar",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Rabbanite_Karaite_Polemics_Baghdad",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Reconquista_of_Toledo_1085",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Saadia_Arabic_Torah_Translation",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Saadia_Gaon",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Saadia_Gaon_Writings",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Salah_ad‑Din",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Samuel_ben_Hofni_Gaon",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Samuel_ibn_Tibbon",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Sefer_ha‑Qabbalah",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Sherira_Gaon",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Sura",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Taifa_Fragmentation",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Toledo",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Toledo_Translation_Phase",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Toledo_Translation_School",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Torah_Pentateuch",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Yaqub_al_Qirqisani",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Yefet_ben_Ali_Commentary",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
+    },
+    {
+      "node_slug": "Yosef_ben_Yehuda_ibn_Aknin",
+      "timeframe_slug": "930_Medieval",
+      "division": 930,
+      "timeframe_name": "Medieval"
     }
   ]
 }

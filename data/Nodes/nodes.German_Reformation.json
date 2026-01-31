@@ -5,7 +5,9 @@
     "registry": "docs/nodes/node-attribute-registry.md",
     "source": "docs/clusters/German_Reformation/README.md",
     "generated_at": "2025-12-13T18:16Z",
-    "generator": "scripts/admin/repair_clusters.py"
+    "generator": "scripts/admin/repair_clusters.py",
+    "event_kinds_assigned_at": "2026-01-24T03:49:12.895841+00:00",
+    "event_kinds_script": "scripts/admin/assign_event_kinds.py"
   },
   "nodes": [
     {
@@ -411,7 +413,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Diet of Augsburg 1530 from German_Reformation cluster"
+      "description": "Diet of Augsburg 1530 from German_Reformation cluster",
+      "kind": "Council"
     },
     {
       "slug": "Diet_of_Worms_1521",
@@ -424,7 +427,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Diet of Worms 1521 from German_Reformation cluster"
+      "description": "Diet of Worms 1521 from German_Reformation cluster",
+      "kind": "Council"
     },
     {
       "slug": "Disputation_points_critiquing_indulgences",
@@ -1065,7 +1069,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Leipzig Debate 1519 from German_Reformation cluster"
+      "description": "Leipzig Debate 1519 from German_Reformation cluster",
+      "kind": "Debate"
     },
     {
       "slug": "Leipzig_Debate_Proceedings_1519",
@@ -1198,7 +1203,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Marburg Colloquy 1529 from German_Reformation cluster"
+      "description": "Marburg Colloquy 1529 from German_Reformation cluster",
+      "kind": "Debate"
     },
     {
       "slug": "Martin_Luther",
@@ -1277,7 +1283,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Munster Rebellion 1534 1535 from German_Reformation cluster"
+      "description": "Munster Rebellion 1534 1535 from German_Reformation cluster",
+      "kind": "Rebellion"
     },
     {
       "slug": "Ninety-Five_Theses_1517",
@@ -1369,7 +1376,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Peasants War 1524 1525 from German_Reformation cluster"
+      "description": "Peasants War 1524 1525 from German_Reformation cluster",
+      "kind": "War"
     },
     {
       "slug": "Philipp_Melanchthon",
@@ -1422,7 +1430,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Posting of Theses 1517 from German_Reformation cluster"
+      "description": "Posting of Theses 1517 from German_Reformation cluster",
+      "kind": "Reform"
     },
     {
       "slug": "Princes_Protest_of_Speyer_1529",
@@ -1435,7 +1444,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Princes Protest of Speyer 1529 from German_Reformation cluster"
+      "description": "Princes Protest of Speyer 1529 from German_Reformation cluster",
+      "kind": "Legislative"
     },
     {
       "slug": "Publicating_of_theses_sparking_disputation",
@@ -1706,7 +1716,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Schmalkaldic War 1546 1547 from German_Reformation cluster"
+      "description": "Schmalkaldic War 1546 1547 from German_Reformation cluster",
+      "kind": "War"
     },
     {
       "slug": "Settlement_legalizing_Lutheranism_in_the_empire",
@@ -2007,7 +2018,8 @@
       "created_by": "auto:from_readme",
       "lang": "en",
       "script": "Latn",
-      "description": "Wartburg Translation 1521 1522 from German_Reformation cluster"
+      "description": "Wartburg Translation 1521 1522 from German_Reformation cluster",
+      "kind": "Publication"
     },
     {
       "slug": "Westphalian_city_of_radical_takeover",

@@ -32,7 +32,7 @@ Purpose: Track approved changes to the verb source of truth, interaction matrix,
 - Breaking changes: None; content semantics preserved, labels normalized.
 
 2025-10-10 — Add targeted supplementary verbs for Hebrew cluster context
-- Added verbs (Supplementary): PARTICIPATES_IN (P/I→E), LEADS (P/I→E/M), MARRIES (P↔P), PARENT_OF (P→P), SUCCEEDS (P→P; I→I), TEACHES (P→P), STUDIES_UNDER (P→P), PRODUCES (P/I→T/E), PROMULGATES (P/I→D/T), COPIES (P/I→T), COMPILES (P/I→T), EXEMPLIFIES (T/E/P→D).
+- Added verbs (Supplementary): PARTICIPATES_IN (P/I→E), LEADS (P/I→E/M), MARRIES (P↔P; deprecated — model as `:Event {kind:"Marriage"}` + `PARTICIPATES_IN {role:"spouse"}`), PARENT_OF (P→P), SUCCEEDS (P→P; I→I), TEACHES (P→P), STUDIES_UNDER (P→P), PRODUCES (P/I→T/E), PROMULGATES (P/I→D/T), COPIES (P/I→T), COMPILES (P/I→T), EXEMPLIFIES (T/E/P→D).
 - Rationale: Improve modeling of participation, leadership, genealogy, pedagogy, production, legal publication, and textual workflows in Hebrew cluster.
 - Files updated:
   - relations_vocabulary.md — Supplementary verbs section expanded; alias note updated for DELIVERS→PROMULGATES.
