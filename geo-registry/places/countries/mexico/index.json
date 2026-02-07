@@ -1,0 +1,589 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "mexico",
+    "country_name": "Mexico",
+    "region": "North America",
+    "continent": "Americas",
+    "iso3166_alpha2": "MX",
+    "iso3166_alpha3": "MEX",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z"
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Olmec_Mother_Culture",
+        "name": "Olmec Civilization (Mother Culture)",
+        "year_range": [-1500, -400],
+        "status": "PLANNED",
+        "description": "First major Mesoamerican civilization: colossal heads, ceremonial centres at San Lorenzo and La Venta, ballgame, calendar systems.",
+        "sub_clusters": [
+          {
+            "slug": "San_Lorenzo_Olmec",
+            "name": "San Lorenzo Phase",
+            "year_range": [-1500, -900],
+            "description": "Earliest Olmec centre, colossal basalt heads, monumental earthworks, hierarchical society."
+          },
+          {
+            "slug": "La_Venta_Olmec",
+            "name": "La Venta Phase",
+            "year_range": [-900, -400],
+            "description": "Great Pyramid, jade offerings, Olmec artistic and religious influence spreads across Mesoamerica.",
+            "key_events": ["La_Venta_Pyramid_Construction"]
+          },
+          {
+            "slug": "Olmec_Legacy_Spread",
+            "name": "Olmec Cultural Diffusion",
+            "year_range": [-1200, -400],
+            "description": "Spread of Olmec iconography, writing, ballgame, Long Count calendar origins to successor cultures."
+          }
+        ]
+      },
+      {
+        "slug": "Preclassic_Maya_Mexico",
+        "name": "Preclassic Maya in Mexico",
+        "year_range": [-2000, 250],
+        "status": "PLANNED",
+        "description": "Early Maya development in Chiapas, Tabasco, and the Yucatán Peninsula before the Classic period.",
+        "sub_clusters": [
+          {
+            "slug": "Early_Maya_Settlements",
+            "name": "Early Maya Settlements",
+            "year_range": [-2000, -400],
+            "description": "Village agriculture, early pottery, emergence of social complexity at sites like Cuello and Lamanai."
+          },
+          {
+            "slug": "Late_Preclassic_Maya",
+            "name": "Late Preclassic Maya",
+            "year_range": [-400, 250],
+            "description": "Monumental architecture, E-Group complexes, early writing, Kaminaljuyú and Calakmul precursors."
+          }
+        ]
+      },
+      {
+        "slug": "Zapotec_Monte_Alban",
+        "name": "Zapotec Civilization and Monte Albán",
+        "year_range": [-500, 900],
+        "status": "PLANNED",
+        "description": "Oaxacan highland civilization: Monte Albán, earliest Mesoamerican writing, Danzantes reliefs.",
+        "sub_clusters": [
+          {
+            "slug": "Monte_Alban_Rise",
+            "name": "Rise of Monte Albán",
+            "year_range": [-500, 200],
+            "description": "Hilltop capital construction, conquest slabs, astronomical observatory.",
+            "key_events": ["Monte_Alban_Foundation_c500BCE"]
+          },
+          {
+            "slug": "Monte_Alban_Classic",
+            "name": "Classic Monte Albán",
+            "year_range": [200, 700],
+            "description": "Peak population, Teotihuacan contacts, elaborate tombs, Zapotec script."
+          },
+          {
+            "slug": "Mixtec_Successor",
+            "name": "Mixtec Successor States",
+            "year_range": [700, 1521],
+            "description": "Mixtec takeover of Oaxacan sites, codices, goldworking, political fragmentation."
+          }
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Teotihuacan_Metropolis",
+        "name": "Teotihuacan — City of the Gods",
+        "year_range": [100, 750],
+        "status": "PLANNED",
+        "description": "One of the largest cities in the ancient world: Pyramids of the Sun and Moon, Avenue of the Dead, pan-Mesoamerican influence.",
+        "sub_clusters": [
+          {
+            "slug": "Teotihuacan_Rise",
+            "name": "Rise of Teotihuacan",
+            "year_range": [100, 350],
+            "description": "Monumental construction, Pyramid of the Sun, planned grid city, population over 100,000."
+          },
+          {
+            "slug": "Teotihuacan_Apex",
+            "name": "Teotihuacan at Apex",
+            "year_range": [350, 550],
+            "description": "Talud-tablero architecture, murals, long-distance trade, diplomatic influence on Maya cities.",
+            "key_events": ["Teotihuacan_Peak_Population_c450"]
+          },
+          {
+            "slug": "Teotihuacan_Collapse",
+            "name": "Collapse of Teotihuacan",
+            "year_range": [550, 750],
+            "description": "Ritual burning of ceremonial centre, population decline, political fragmentation."
+          }
+        ]
+      },
+      {
+        "slug": "Classic_Maya_Mexico",
+        "name": "Classic Maya in Mexican Territory",
+        "year_range": [250, 900],
+        "status": "PLANNED",
+        "description": "Flourishing Maya city-states in Chiapas, Campeche, and Yucatán: Palenque, Calakmul, Uxmal.",
+        "sub_clusters": [
+          {
+            "slug": "Palenque_Dynasty",
+            "name": "Palenque and the Dynasty of Pakal",
+            "year_range": [431, 799],
+            "description": "K'inich Janaab Pakal's reign, Temple of the Inscriptions, exquisite stucco art.",
+            "key_events": ["Pakal_Accession_615"]
+          },
+          {
+            "slug": "Calakmul_Superpower",
+            "name": "Calakmul — Snake Dynasty Superpower",
+            "year_range": [500, 800],
+            "description": "Rival to Tikal, Kaan dynasty, vast political network across the Petén and beyond."
+          },
+          {
+            "slug": "Terminal_Classic_Puuc",
+            "name": "Terminal Classic and Puuc Style",
+            "year_range": [800, 1000],
+            "description": "Uxmal, Kabah, Sayil; elaborately decorated façades, Maya collapse dynamics in the lowlands."
+          }
+        ]
+      },
+      {
+        "slug": "Toltec_Empire",
+        "name": "Toltec Empire",
+        "year_range": [900, 1168],
+        "status": "PLANNED",
+        "description": "Post-Classic warrior state at Tula (Tollan), Quetzalcoatl legend, Mesoamerican militarism.",
+        "sub_clusters": [
+          {
+            "slug": "Tula_Founding",
+            "name": "Founding of Tula",
+            "year_range": [900, 1000],
+            "description": "Toltec capital establishment, Atlantean warrior columns, Quetzalcoatl–Tezcatlipoca mythology."
+          },
+          {
+            "slug": "Toltec_Influence",
+            "name": "Toltec Influence and Chichén Itzá",
+            "year_range": [1000, 1168],
+            "description": "Toltec stylistic impact on Chichén Itzá, feathered serpent imagery, Tula's eventual destruction."
+          }
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Aztec_Empire",
+        "name": "Aztec Empire (Mexica Triple Alliance)",
+        "year_range": [1325, 1521],
+        "status": "PLANNED",
+        "description": "Rise of Tenochtitlan, Mexica dominance over central Mexico, tribute empire, Aztec cosmology and sacrifice.",
+        "sub_clusters": [
+          {
+            "slug": "Tenochtitlan_Foundation",
+            "name": "Foundation of Tenochtitlan",
+            "year_range": [1325, 1428],
+            "description": "Founding on Lake Texcoco island, eagle-on-cactus legend, Mexica rise from tributary status.",
+            "key_events": ["Tenochtitlan_Founded_1325"]
+          },
+          {
+            "slug": "Triple_Alliance_Expansion",
+            "name": "Triple Alliance and Imperial Expansion",
+            "year_range": [1428, 1502],
+            "description": "Itzcoatl and Montezuma I forge the Triple Alliance with Texcoco and Tlacopan; rapid conquest, flower wars."
+          },
+          {
+            "slug": "Aztec_Apex_Montezuma_II",
+            "name": "Montezuma II and Aztec Apex",
+            "year_range": [1502, 1520],
+            "description": "Empire at maximum extent, tribute economy, Templo Mayor, population of 5-6 million subjects."
+          }
+        ]
+      },
+      {
+        "slug": "Spanish_Conquest_Mexico",
+        "name": "Spanish Conquest of Mexico",
+        "year_range": [1519, 1521],
+        "status": "PLANNED",
+        "description": "Hernán Cortés's expedition, Tlaxcalan alliance, fall of Tenochtitlan, and the end of the Aztec world.",
+        "sub_clusters": [
+          {
+            "slug": "Cortes_Expedition",
+            "name": "Cortés Expedition and March Inland",
+            "year_range": [1519, 1520],
+            "description": "Landing at Veracruz, Tlaxcalan alliance, Cholula massacre, Montezuma's capture, Noche Triste.",
+            "key_events": ["Cortes_Lands_Veracruz_1519", "Noche_Triste_1520"]
+          },
+          {
+            "slug": "Fall_of_Tenochtitlan",
+            "name": "Siege and Fall of Tenochtitlan",
+            "year_range": [1521, 1521],
+            "description": "80-day siege, smallpox devastation, Cuauhtémoc's surrender, destruction of the city.",
+            "key_events": ["Fall_of_Tenochtitlan_1521"]
+          }
+        ]
+      },
+      {
+        "slug": "New_Spain_Viceroyalty",
+        "name": "Viceroyalty of New Spain",
+        "year_range": [1521, 1821],
+        "status": "PLANNED",
+        "description": "Three centuries of Spanish colonial rule: encomienda, casta system, silver mining, Baroque culture, Bourbon reforms.",
+        "sub_clusters": [
+          {
+            "slug": "Colonial_Foundations",
+            "name": "Colonial Foundations and Encomienda",
+            "year_range": [1521, 1600],
+            "description": "Mexico City built on Tenochtitlan ruins, encomienda system, mass conversion, demographic collapse."
+          },
+          {
+            "slug": "Silver_Mining_Economy",
+            "name": "Silver Mining Economy",
+            "year_range": [1546, 1810],
+            "description": "Zacatecas, Guanajuato, Potosí supply chain; silver peso as global currency, mita/repartimiento labour.",
+            "key_events": ["Zacatecas_Silver_Discovery_1546"]
+          },
+          {
+            "slug": "Colonial_Baroque_Culture",
+            "name": "Colonial Baroque Culture",
+            "year_range": [1600, 1750],
+            "description": "Sor Juana Inés de la Cruz, cathedral construction, syncretic religiosity, Churrigueresque architecture."
+          },
+          {
+            "slug": "Bourbon_Reforms",
+            "name": "Bourbon Reforms",
+            "year_range": [1700, 1810],
+            "description": "Administrative centralisation, economic liberalisation, Creole resentment, Enlightenment ideas."
+          }
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "Mexican_Independence",
+        "name": "Mexican Independence",
+        "year_range": [1810, 1821],
+        "status": "PLANNED",
+        "description": "Independence struggle from Hidalgo's Grito de Dolores to Iturbide's Plan de Iguala.",
+        "sub_clusters": [
+          {
+            "slug": "Hidalgo_Revolt",
+            "name": "Hidalgo's Revolt",
+            "year_range": [1810, 1811],
+            "description": "Grito de Dolores (16 Sep 1810), peasant army, Virgin of Guadalupe banner, Hidalgo's capture and execution.",
+            "key_events": ["Grito_de_Dolores_1810"]
+          },
+          {
+            "slug": "Morelos_Campaign",
+            "name": "Morelos and the Insurgent State",
+            "year_range": [1811, 1815],
+            "description": "José María Morelos continues the fight, Congress of Chilpancingo, Sentimientos de la Nación, royalist victory."
+          },
+          {
+            "slug": "Iturbide_Independence",
+            "name": "Iturbide and Final Independence",
+            "year_range": [1820, 1821],
+            "description": "Plan de Iguala, Three Guarantees, Iturbide's short-lived empire, independence declared 1821."
+          }
+        ]
+      },
+      {
+        "slug": "Early_Republic_Instability",
+        "name": "Early Republic and Instability",
+        "year_range": [1822, 1855],
+        "status": "PLANNED",
+        "description": "First Empire, Republic, caudillo politics, Texas secession, and the catastrophic Mexican-American War.",
+        "sub_clusters": [
+          {
+            "slug": "First_Empire_Republic",
+            "name": "First Empire and Federal Republic",
+            "year_range": [1822, 1835],
+            "description": "Iturbide's empire collapses, 1824 Constitution, federalist vs. centralist struggles."
+          },
+          {
+            "slug": "Texas_Secession",
+            "name": "Texas Secession",
+            "year_range": [1835, 1836],
+            "description": "Texan revolt, Santa Anna at the Alamo and San Jacinto, loss of Texas.",
+            "key_events": ["Battle_of_the_Alamo_1836"]
+          },
+          {
+            "slug": "Mexican_American_War",
+            "name": "Mexican-American War",
+            "year_range": [1846, 1848],
+            "description": "US invasion, fall of Mexico City, Treaty of Guadalupe Hidalgo — Mexico loses half its territory.",
+            "key_events": ["Treaty_of_Guadalupe_Hidalgo_1848"]
+          }
+        ]
+      },
+      {
+        "slug": "La_Reforma_French_Intervention",
+        "name": "La Reforma and French Intervention",
+        "year_range": [1855, 1876],
+        "status": "PLANNED",
+        "description": "Juárez's liberal reforms, War of the Reform, French occupation, Emperor Maximilian, and the restored Republic.",
+        "sub_clusters": [
+          {
+            "slug": "Juarez_Reform_Laws",
+            "name": "Juárez and the Reform Laws",
+            "year_range": [1855, 1861],
+            "description": "Ley Juárez, Ley Lerdo, separation of church and state, War of the Reform (1858-61)."
+          },
+          {
+            "slug": "French_Intervention_Maximilian",
+            "name": "French Intervention and Emperor Maximilian",
+            "year_range": [1861, 1867],
+            "description": "Napoleon III's intervention, Battle of Puebla (5 May 1862), Maximilian's Habsburg empire, Juárez's resistance, Maximilian's execution.",
+            "key_events": ["Battle_of_Puebla_1862", "Maximilian_Execution_1867"]
+          }
+        ]
+      },
+      {
+        "slug": "Porfiriato",
+        "name": "The Porfiriato",
+        "year_range": [1876, 1911],
+        "status": "PLANNED",
+        "description": "Porfirio Díaz's long dictatorship: modernisation, railroads, foreign investment, inequality, and repression.",
+        "sub_clusters": [
+          {
+            "slug": "Porfirian_Modernization",
+            "name": "Porfirian Modernization",
+            "year_range": [1876, 1900],
+            "description": "Railway expansion, mining concessions, científicos, order and progress at the cost of land dispossession."
+          },
+          {
+            "slug": "Porfirian_Crisis",
+            "name": "Crisis of the Porfiriato",
+            "year_range": [1900, 1911],
+            "description": "Cananea and Río Blanco strikes, Madero's challenge, Plan de San Luis Potosí, Díaz's exile."
+          }
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Mexican_Revolution",
+        "name": "Mexican Revolution",
+        "year_range": [1910, 1920],
+        "status": "PLANNED",
+        "description": "Decade of armed upheaval: Madero, Zapata, Villa, Carranza, Constitution of 1917.",
+        "sub_clusters": [
+          {
+            "slug": "Madero_Uprising",
+            "name": "Madero Uprising and Decena Trágica",
+            "year_range": [1910, 1913],
+            "description": "Madero's revolution, presidency, Huerta coup and assassination.",
+            "key_events": ["Mexican_Revolution_Begins_1910"]
+          },
+          {
+            "slug": "Zapatismo_Villismo",
+            "name": "Zapatismo and Villismo",
+            "year_range": [1911, 1919],
+            "description": "Plan de Ayala, Zapata's agrarian revolution, Villa's División del Norte, Columbus raid.",
+            "key_events": ["Plan_de_Ayala_1911"]
+          },
+          {
+            "slug": "Constitution_1917",
+            "name": "Constitution of 1917",
+            "year_range": [1916, 1917],
+            "description": "Revolutionary charter: Article 27 (land reform), Article 123 (labour rights), Article 3 (secular education).",
+            "key_events": ["Mexican_Constitution_1917"]
+          },
+          {
+            "slug": "Revolutionary_Aftermath",
+            "name": "Revolutionary Aftermath",
+            "year_range": [1917, 1920],
+            "description": "Carranza's presidency, Zapata's assassination (1919), Obregón's coup, revolution's consolidation."
+          }
+        ]
+      },
+      {
+        "slug": "Post_Revolutionary_Mexico",
+        "name": "Post-Revolutionary Mexico and PRI Era",
+        "year_range": [1920, 1968],
+        "status": "PLANNED",
+        "description": "Institutional revolution: PNR/PRM/PRI, Cárdenas oil nationalisation, Mexican Miracle, cultural renaissance.",
+        "sub_clusters": [
+          {
+            "slug": "Institutional_Revolution",
+            "name": "Institutional Revolution (Calles to Cárdenas)",
+            "year_range": [1920, 1940],
+            "description": "Maximato, Cristero War, PNR creation (1929), Cárdenas land reform, PEMEX oil expropriation (1938).",
+            "key_events": ["Oil_Expropriation_1938"]
+          },
+          {
+            "slug": "Mexican_Miracle",
+            "name": "Mexican Miracle (Import Substitution)",
+            "year_range": [1940, 1970],
+            "description": "Rapid industrialization, GDP growth, urbanization, 1968 Olympics, Tlatelolco massacre.",
+            "key_events": ["Tlatelolco_Massacre_1968"]
+          },
+          {
+            "slug": "Muralism_Cultural_Renaissance",
+            "name": "Muralism and Cultural Renaissance",
+            "year_range": [1920, 1960],
+            "description": "Rivera, Orozco, Siqueiros murals; Frida Kahlo, Octavio Paz, national cultural identity."
+          }
+        ]
+      },
+      {
+        "slug": "Late_PRI_Crisis",
+        "name": "Late PRI Era and Crises",
+        "year_range": [1968, 2000],
+        "status": "PLANNED",
+        "description": "Dirty War, 1982 debt crisis, 1985 earthquake, NAFTA, Zapatista uprising, democratic transition.",
+        "sub_clusters": [
+          {
+            "slug": "Dirty_War_Echeverria",
+            "name": "Dirty War and Political Repression",
+            "year_range": [1968, 1982],
+            "description": "State repression of dissent, Halconazo (1971), guerrilla movements, disappearances."
+          },
+          {
+            "slug": "Debt_Crisis_Neoliberalism",
+            "name": "Debt Crisis and Neoliberal Turn",
+            "year_range": [1982, 1994],
+            "description": "1982 default, structural adjustment, privatisation, Salinas reforms, NAFTA (1994)."
+          },
+          {
+            "slug": "Zapatista_Uprising",
+            "name": "Zapatista Uprising (EZLN)",
+            "year_range": [1994, 2000],
+            "description": "Indigenous revolt in Chiapas on NAFTA launch day, Subcomandante Marcos, San Andrés Accords.",
+            "key_events": ["Zapatista_Uprising_1994"]
+          }
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Democratic_Transition",
+        "name": "Democratic Transition",
+        "year_range": [2000, 2012],
+        "status": "PLANNED",
+        "description": "End of 71-year PRI rule, Fox and Calderón presidencies, electoral democracy, drug war escalation.",
+        "sub_clusters": [
+          {
+            "slug": "Fox_Victory_2000",
+            "name": "Fox's Victory and End of PRI Hegemony",
+            "year_range": [2000, 2006],
+            "description": "Vicente Fox (PAN) wins 2000 election, democratic alternation, limited reform.",
+            "key_events": ["Fox_Election_Victory_2000"]
+          },
+          {
+            "slug": "Calderon_Drug_War",
+            "name": "Calderón and the War on Drugs",
+            "year_range": [2006, 2012],
+            "description": "Military offensive against cartels, 60,000+ killed, Sinaloa-Zetas rivalry, human rights crisis.",
+            "key_events": ["Calderon_Drug_War_Declared_2006"]
+          }
+        ]
+      },
+      {
+        "slug": "Drug_Trafficking_Violence",
+        "name": "Drug Trafficking and Organised Violence",
+        "year_range": [1990, 2025],
+        "status": "PLANNED",
+        "description": "Rise of cartels, narco-violence, Ayotzinapa disappearances, militarised security, migration consequences.",
+        "sub_clusters": [
+          {
+            "slug": "Cartel_Wars",
+            "name": "Cartel Wars and Fragmentation",
+            "year_range": [2006, 2025],
+            "description": "Sinaloa, CJNG, Zetas; territorial control, mass graves, journalists targeted."
+          },
+          {
+            "slug": "Ayotzinapa_Disappearances",
+            "name": "Ayotzinapa Disappearances",
+            "year_range": [2014, 2025],
+            "description": "43 Normalista students disappeared in Iguala, state complicity, ongoing investigation.",
+            "key_events": ["Ayotzinapa_Disappearances_2014"]
+          }
+        ]
+      },
+      {
+        "slug": "AMLO_Fourth_Transformation",
+        "name": "AMLO and the Fourth Transformation (4T)",
+        "year_range": [2018, 2025],
+        "status": "PLANNED",
+        "description": "López Obrador's MORENA presidency, social programmes, austerity, judicial reform, Sheinbaum succession.",
+        "sub_clusters": [
+          {
+            "slug": "AMLO_Presidency",
+            "name": "AMLO Presidency",
+            "year_range": [2018, 2024],
+            "description": "Landslide victory, austerity, Tren Maya, National Guard, 'abrazos no balazos' security policy.",
+            "key_events": ["AMLO_Inauguration_2018"]
+          },
+          {
+            "slug": "USMCA_Trade",
+            "name": "USMCA/T-MEC and Trade Relations",
+            "year_range": [2020, 2025],
+            "description": "NAFTA renegotiation, nearshoring boom, Tesla Gigafactory, US-Mexico migration diplomacy."
+          },
+          {
+            "slug": "Sheinbaum_Era",
+            "name": "Sheinbaum and Post-AMLO Era",
+            "year_range": [2024, 2025],
+            "description": "First woman president, judicial reform controversy, 4T continuity, climate and energy debates."
+          }
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {
+    "note": "Events not yet assigned to a thematic cluster",
+    "slugs": []
+  },
+  "cross_cluster_interfaces": [
+    {
+      "cluster": "Olmec_Mother_Culture",
+      "interfaces_with": ["Preclassic_Maya_Mesoamerica", "Zapotec_Monte_Alban"]
+    },
+    {
+      "cluster": "Teotihuacan_Metropolis",
+      "interfaces_with": ["Classic_Maya_Guatemala", "Zapotec_Monte_Alban"]
+    },
+    {
+      "cluster": "Aztec_Empire",
+      "interfaces_with": ["Toltec_Empire", "Maya_Postclassic"]
+    },
+    {
+      "cluster": "Spanish_Conquest_Mexico",
+      "interfaces_with": ["Spanish_Colonial_Empire", "Columbian_Exchange"]
+    },
+    {
+      "cluster": "Mexican_Independence",
+      "interfaces_with": ["Latin_American_Independence", "Napoleonic_Wars"]
+    },
+    {
+      "cluster": "Mexican_American_War",
+      "interfaces_with": ["American_Westward_Expansion", "Manifest_Destiny"]
+    },
+    {
+      "cluster": "Mexican_Revolution",
+      "interfaces_with": ["Russian_Revolution", "Latin_American_Revolutions"]
+    },
+    {
+      "cluster": "Late_PRI_Crisis",
+      "interfaces_with": ["NAFTA_Trade_Bloc", "Zapatista_Global_Solidarity"]
+    },
+    {
+      "cluster": "Drug_Trafficking_Violence",
+      "interfaces_with": ["US_War_on_Drugs", "Central_American_Migration_Crisis"]
+    }
+  ],
+  "statistics": {
+    "total_level4_clusters": 16,
+    "total_level5_subclusters": 42,
+    "active_clusters": 0,
+    "planned_clusters": 16,
+    "timeframe_distribution": {
+      "910": 3,
+      "920": 3,
+      "930": 3,
+      "940": 4,
+      "950": 3,
+      "960": 3
+    }
+  }
+}

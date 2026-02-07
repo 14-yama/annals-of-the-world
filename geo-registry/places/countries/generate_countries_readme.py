@@ -124,6 +124,134 @@ def count_nodes(obj) -> int:
     return 0
 
 
+def iter_node_dicts(obj):
+    """Yield node-like dicts from a country JSON payload.
+
+    Supports the same shapes as count_nodes():
+    - {"nodes": [...]} where each entry is expected to be a dict
+    - {"thematic_clusters": {"910": [...], ...}} where each entry is expected to be a dict
+    """
+    if obj is None:
+        return
+    if isinstance(obj, list):
+        for item in obj:
+            if isinstance(item, dict):
+                yield item
+        return
+    if not isinstance(obj, dict):
+        return
+
+    nodes = obj.get('nodes')
+    if isinstance(nodes, list):
+        for item in nodes:
+            if isinstance(item, dict):
+                yield item
+        return
+
+    clusters = obj.get('thematic_clusters')
+    if isinstance(clusters, dict):
+        for v in clusters.values():
+            if isinstance(v, list):
+                for item in v:
+                    if isinstance(item, dict):
+                        yield item
+
+
+def fmt_int(n: int) -> str:
+    return f"{n:,}"
+
+def count_key_event_refs(obj) -> int:
+    if not isinstance(obj, dict):
+        return 0
+    ke = obj.get('key_events')
+    if isinstance(ke, list):
+        return sum(1 for x in ke if isinstance(x, str) and x.strip())
+    return 0
+
+def summarize_index(index_obj: object) -> dict[str, int]:
+    """Summarize potential node counts from a country index.json.
+
+    Treats Level-4 clusters and Level-5 sub-clusters as potential :Cluster nodes
+    (per docs/guidelines/global_cluster_management.md).
+    """
+    l4 = 0
+    l5 = 0
+    key_event_refs = 0
+    unassigned_refs = 0
+    cross_interfaces = 0
+    l4_by_timeframe: dict[str, int] = {}
+
+    if not isinstance(index_obj, dict):
+        return {
+            'l4': 0,
+            'l5': 0,
+            'cluster_nodes_total': 0,
+            'key_event_refs': 0,
+            'unassigned_refs': 0,
+            'event_refs_total': 0,
+            'cross_interfaces': 0,
+            'l4_910': 0,
+            'l4_920': 0,
+            'l4_930': 0,
+            'l4_940': 0,
+            'l4_950': 0,
+            'l4_960': 0,
+        }
+
+    clusters = index_obj.get('thematic_clusters')
+    if isinstance(clusters, dict):
+        for tf, cluster_list in clusters.items():
+            if not isinstance(cluster_list, list):
+                continue
+            tf_key = str(tf)
+            l4_by_timeframe[tf_key] = l4_by_timeframe.get(tf_key, 0) + len(cluster_list)
+            for c in cluster_list:
+                if not isinstance(c, dict):
+                    continue
+                l4 += 1
+                key_event_refs += count_key_event_refs(c)
+
+                subs = c.get('sub_clusters')
+                if isinstance(subs, list):
+                    for sc in subs:
+                        if isinstance(sc, dict):
+                            l5 += 1
+                            key_event_refs += count_key_event_refs(sc)
+
+    ue = index_obj.get('unassigned_events')
+    if isinstance(ue, dict):
+        slugs = ue.get('slugs')
+        if isinstance(slugs, list):
+            unassigned_refs += sum(1 for x in slugs if isinstance(x, str) and x.strip())
+        cnt = ue.get('count')
+        if isinstance(cnt, int) and cnt > unassigned_refs:
+            # Prefer explicit slugs when present; fall back to count.
+            unassigned_refs = cnt
+
+    cci = index_obj.get('cross_cluster_interfaces')
+    if isinstance(cci, list):
+        cross_interfaces = sum(1 for x in cci if isinstance(x, dict))
+
+    # Normalize timeframe keys we commonly use.
+    for tf in ['910', '920', '930', '940', '950', '960']:
+        l4_by_timeframe.setdefault(tf, 0)
+
+    return {
+        'l4': l4,
+        'l5': l5,
+        'cluster_nodes_total': l4 + l5,
+        'key_event_refs': key_event_refs,
+        'unassigned_refs': unassigned_refs,
+        'event_refs_total': key_event_refs + unassigned_refs,
+        'cross_interfaces': cross_interfaces,
+        'l4_910': l4_by_timeframe['910'],
+        'l4_920': l4_by_timeframe['920'],
+        'l4_930': l4_by_timeframe['930'],
+        'l4_940': l4_by_timeframe['940'],
+        'l4_950': l4_by_timeframe['950'],
+        'l4_960': l4_by_timeframe['960'],
+    }
+
 def main():
     here = Path(__file__).resolve().parent
     repo_root = find_repo_root(here)
@@ -215,6 +343,59 @@ def main():
     curated_any = sum(1 for r in rows if (r.get('core_nodes_total') or 0) > 0)
     curated_none = total_countries - curated_any
 
+    # Aggregate counts across the entire countries registry.
+    kinds = [fn[:-5] for fn in core_expected]
+    total_nodes_by_kind: dict[str, int] = {k: 0 for k in kinds}
+    countries_with_nodes_by_kind: dict[str, int] = {k: 0 for k in kinds}
+    for r in rows:
+        kind_counts = r.get('kind_counts') or {}
+        for k in kinds:
+            v = int(kind_counts.get(k) or 0)
+            total_nodes_by_kind[k] += v
+            if v > 0:
+                countries_with_nodes_by_kind[k] += 1
+    total_core_nodes = sum(total_nodes_by_kind.values())
+
+    # Aggregate potential nodes from index.json files.
+    index_summaries: list[dict[str, int]] = []
+    for r in rows:
+        if not r.get('index'):
+            continue
+        idx_path = countries_dir / r['slug'] / 'index.json'
+        idx_obj = safe_load_json(idx_path)
+        index_summaries.append(summarize_index(idx_obj))
+
+    index_cluster_l4 = sum(s.get('l4', 0) for s in index_summaries)
+    index_cluster_l5 = sum(s.get('l5', 0) for s in index_summaries)
+    index_cluster_total = index_cluster_l4 + index_cluster_l5
+    index_event_refs_total = sum(s.get('event_refs_total', 0) for s in index_summaries)
+    index_key_event_refs = sum(s.get('key_event_refs', 0) for s in index_summaries)
+    index_unassigned_refs = sum(s.get('unassigned_refs', 0) for s in index_summaries)
+    index_cross_interfaces = sum(s.get('cross_interfaces', 0) for s in index_summaries)
+    index_l4_by_tf = {
+        '910': sum(s.get('l4_910', 0) for s in index_summaries),
+        '920': sum(s.get('l4_920', 0) for s in index_summaries),
+        '930': sum(s.get('l4_930', 0) for s in index_summaries),
+        '940': sum(s.get('l4_940', 0) for s in index_summaries),
+        '950': sum(s.get('l4_950', 0) for s in index_summaries),
+        '960': sum(s.get('l4_960', 0) for s in index_summaries),
+    }
+    # Optional: breakdown of Event nodes by their schema `kind` property.
+    event_kind_counts: dict[str, int] = {}
+    event_kind_missing = 0
+    for r in rows:
+        d = countries_dir / r['slug']
+        fp = d / 'events.json'
+        if not fp.exists():
+            continue
+        obj = safe_load_json(fp)
+        for node in iter_node_dicts(obj):
+            ek = node.get('kind')
+            if isinstance(ek, str) and ek.strip():
+                event_kind_counts[ek.strip()] = event_kind_counts.get(ek.strip(), 0) + 1
+            else:
+                event_kind_missing += 1
+
     index_slugs = sorted(r['slug'] for r in rows if r.get('index'))
 
     unmapped = sorted({r['slug'] for r in rows if r.get('continent') == 'Unknown' or r.get('region') == 'Unknown'})
@@ -268,6 +449,23 @@ def main():
         preview = ', '.join(unmapped[:20])
         suffix = '' if len(unmapped) <= 20 else f" (+{len(unmapped) - 20} more)"
         md_lines.append(f"- Not mapped to a HIER continent/region: {preview}{suffix}")
+
+    md_lines.append('')
+    md_lines.append('## Index-derived potential nodes')
+    md_lines.append('')
+    md_lines.append('These counts are derived from country `index.json` files (thematic cluster catalogs). They represent what could be generated as graph nodes from the index structure alone.')
+    md_lines.append('')
+    md_lines.append(f'- Countries with `index.json`: **{with_index}**')
+    md_lines.append(f'- Potential `:Cluster` nodes from indexes: **{fmt_int(index_cluster_total)}** (L4 clusters: {fmt_int(index_cluster_l4)}, L5 sub-clusters: {fmt_int(index_cluster_l5)})')
+    md_lines.append(f'- Potential `:Event` references from indexes: **{fmt_int(index_event_refs_total)}** (key_events refs: {fmt_int(index_key_event_refs)}, unassigned refs/count: {fmt_int(index_unassigned_refs)})')
+    md_lines.append(f'- Cross-cluster interface entries: **{fmt_int(index_cross_interfaces)}**')
+    md_lines.append('')
+    md_lines.append('| Timeframe | L4 clusters |')
+    md_lines.append('|---|---:|')
+    for tf in ['910', '920', '930', '940', '950', '960']:
+        md_lines.append(f'| {tf} | {fmt_int(index_l4_by_tf.get(tf, 0))} |')
+    md_lines.append('')
+    md_lines.append('Note: People/Institutions/Texts/Artifacts are not enumerated in `index.json`; those nodes are counted from core country JSON files in the next sections.')
     md_lines.append('')
 
     md_lines.append('## Curation coverage (meaningful node data)')
@@ -276,6 +474,31 @@ def main():
     md_lines.append('')
     md_lines.append(f'- Curated countries (any nodes): **{curated_any}**')
     md_lines.append(f'- Not yet curated (all core files empty): **{curated_none}**')
+
+    md_lines.append('')
+    md_lines.append('## Node inventory (core JSON only)')
+    md_lines.append('')
+    md_lines.append('Counts below are the total number of nodes currently present in country core JSON files under `geo-registry/places/countries/*/` (excludes `index.json`).')
+    md_lines.append('')
+    md_lines.append(f'- Total core nodes across all countries: **{fmt_int(total_core_nodes)}**')
+    md_lines.append('')
+    md_lines.append('| Kind | Total nodes | Countries with ≥1 | File |')
+    md_lines.append('|---|---:|---:|---|')
+    for k in kinds:
+        md_lines.append(f'| {k} | {fmt_int(total_nodes_by_kind.get(k, 0))} | {countries_with_nodes_by_kind.get(k, 0)} | {k}.json |')
+
+    if event_kind_counts or event_kind_missing:
+        md_lines.append('')
+        md_lines.append('### Events by kind')
+        md_lines.append('')
+        md_lines.append('Event nodes should include a `kind` property per `docs/schema/event-kinds.md`.')
+        md_lines.append('')
+        md_lines.append('| Event kind | Count |')
+        md_lines.append('|---|---:|')
+        for ek, n in sorted(event_kind_counts.items(), key=lambda kv: (-kv[1], kv[0])):
+            md_lines.append(f'| {ek} | {fmt_int(n)} |')
+        if event_kind_missing:
+            md_lines.append(f'| (missing/blank) | {fmt_int(event_kind_missing)} |')
     md_lines.append('')
 
     curated_rows = [r for r in rows if (r.get('core_nodes_total') or 0) > 0]
