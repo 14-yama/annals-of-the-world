@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "western-sahara",
+    "country_name": "Western Sahara",
+    "region": "North Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "EH",
+    "iso3166_alpha3": "ESH",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for Western Sahara (disputed territory)."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Prehistoric_Western_Sahara",
+        "name": "Prehistoric Western Sahara",
+        "year_range": [-10000, -1000],
+        "status": "PLANNED",
+        "description": "Green Sahara; rock engravings; pastoralist transition to desert.",
+        "sub_clusters": [
+          {"slug": "Green_Sahara_WS", "name": "Green Sahara and Rock Art", "year_range": [-10000, -3000], "description": "Humid period; pastoral rock engravings; gradual desertification."}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Sanhaja_Berber_Period",
+        "name": "Sanhaja Berber and Trans-Saharan Trade",
+        "year_range": [300, 1500],
+        "status": "PLANNED",
+        "description": "Sanhaja nomads; Almoravid origins; trans-Saharan caravan routes.",
+        "sub_clusters": [
+          {"slug": "Sanhaja_Nomads", "name": "Sanhaja Berber Nomads", "year_range": [300, 1040], "description": "Litham-veiled nomads control western Saharan trade routes."},
+          {"slug": "Almoravid_Origins_WS", "name": "Almoravid Origins", "year_range": [1040, 1060], "description": "Ibn Yasin's ribat on Tidra Island; Almoravid movement launches from Western Sahara."}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Hassaniya_Arab_Period",
+        "name": "Hassaniya Arab and Sahrawi Formation",
+        "year_range": [1500, 1884],
+        "status": "PLANNED",
+        "description": "Beni Hassan Arab migration; Hassaniya culture; Sahrawi identity formation.",
+        "sub_clusters": [
+          {"slug": "Beni_Hassan_Migration", "name": "Beni Hassan Migration", "year_range": [1500, 1700], "description": "Arab tribes migrate; warrior-marabout social stratification; Hassaniya Arabic."},
+          {"slug": "Sahrawi_Tribal_System", "name": "Sahrawi Tribal System", "year_range": [1700, 1884], "description": "Tekna, Reguibat, Ouled Delim confederations; pastoral nomadism."}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "Spanish_Sahara",
+        "name": "Spanish Sahara",
+        "year_range": [1884, 1975],
+        "status": "PLANNED",
+        "description": "Spanish colonial claim; minimal development; phosphate discovery.",
+        "sub_clusters": [
+          {"slug": "Spanish_Colonisation_WS", "name": "Spanish Colonisation", "year_range": [1884, 1958], "description": "Río de Oro and Saguia el-Hamra; Villa Cisneros; minimal penetration."},
+          {"slug": "Bou_Craa_Phosphate", "name": "Bou Craa Phosphate Discovery", "year_range": [1963, 1975], "description": "Massive phosphate deposits; world's longest conveyor belt; economic value drives conflict."}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Decolonisation_Crisis_WS",
+        "name": "Decolonisation Crisis",
+        "year_range": [1973, 1991],
+        "status": "PLANNED",
+        "description": "Polisario founded; Green March; guerrilla war; ceasefire.",
+        "sub_clusters": [
+          {"slug": "Polisario_Founded", "name": "Polisario Front Founded", "year_range": [1973, 1975], "description": "Sahrawi liberation movement; demands self-determination; Spanish withdrawal."},
+          {"slug": "Green_March_Occupation", "name": "Green March and Moroccan/Mauritanian Occupation", "year_range": [1975, 1979], "description": "350,000 Moroccan marchers; Madrid Accords; Sahrawi refugee exodus to Tindouf.", "key_events": ["Green_March_1975"]},
+          {"slug": "Polisario_Guerrilla_War", "name": "Polisario Guerrilla War", "year_range": [1975, 1991], "description": "Desert warfare; Moroccan Berm wall built; SADR declared; OAU membership."},
+          {"slug": "UN_Ceasefire_MINURSO", "name": "UN Ceasefire and MINURSO", "year_range": [1991, 1991], "description": "Ceasefire; MINURSO peacekeeping mission; promised referendum never held."}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Frozen_Conflict_WS",
+        "name": "Frozen Conflict and Diplomatic Struggle",
+        "year_range": [1991, 2026],
+        "status": "PLANNED",
+        "description": "Stalled peace process; autonomy vs independence; great power recognition shifts.",
+        "sub_clusters": [
+          {"slug": "Baker_Plans", "name": "Baker Plans and Failed Negotiations", "year_range": [1997, 2004], "description": "James Baker UN envoys; referendum obstacles; autonomy proposals."},
+          {"slug": "Tindouf_Refugee_Camps", "name": "Tindouf Refugee Camps", "year_range": [1975, 2026], "description": "Sahrawi refugees in Algeria for 50 years; SADR government-in-exile."},
+          {"slug": "US_Recognition_Morocco_WS", "name": "US Recognition of Moroccan Sovereignty", "year_range": [2020, 2020], "description": "Trump recognises Moroccan sovereignty as part of Abraham Accords."},
+          {"slug": "Guerguerat_Crisis", "name": "Guerguerat Crisis and Renewed Hostilities", "year_range": [2020, 2026], "description": "Polisario declares ceasefire over; low-level hostilities resume."}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "Decolonisation_Crisis_WS", "interfaces_with": ["Green_March", "Spanish_Decolonisation"]},
+    {"cluster": "Frozen_Conflict_WS", "interfaces_with": ["Western_Sahara_Issue", "Abraham_Accords"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 8,
+    "total_level5_subclusters": 18,
+    "active_clusters": 0,
+    "planned_clusters": 8,
+    "timeframe_distribution": {"910": 1, "920": 1, "930": 1, "940": 1, "950": 1, "960": 1}
+  }
+}

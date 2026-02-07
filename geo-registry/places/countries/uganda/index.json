@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "uganda",
+    "country_name": "Uganda",
+    "region": "East Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "UG",
+    "iso3166_alpha3": "UGA",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for Uganda covering Bunyoro-Kitara, Buganda Kingdom, Speke/Baker source of the Nile, British protectorate, Obote, Idi Amin, Bush War, Museveni/NRM, LRA/Joseph Kony, and oil discovery."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Early_Peoples_Uganda",
+        "name": "Early Peoples and Iron Age",
+        "year_range": [-50000, 1000],
+        "status": "PLANNED",
+        "description": "Hunter-gatherer communities; Bantu and Nilotic migrations; development of iron-working and agricultural societies in the Great Lakes region.",
+        "sub_clusters": [
+          {"slug": "Hunter_Gatherers_UG", "name": "Early Hunter-Gatherer Communities", "year_range": [-50000, -1000], "description": "Batwa and other hunter-gatherer communities; Stone Age sites in western Uganda; forest-dwelling peoples."},
+          {"slug": "Bantu_Nilotic_UG", "name": "Bantu and Nilotic Migrations", "year_range": [-1000, 1000], "description": "Bantu-speaking peoples arrive from west; Nilotic (Luo, Acholi, Langi) and Nilo-Hamitic peoples from the north; iron smelting traditions."}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Great_Lakes_Kingdoms_UG",
+        "name": "Great Lakes Kingdoms",
+        "year_range": [1000, 1800],
+        "status": "PLANNED",
+        "description": "Rise of Bunyoro-Kitara empire; emergence of Buganda, Ankole, Toro, and Busoga kingdoms; cattle and banana-based civilisations.",
+        "sub_clusters": [
+          {"slug": "Bunyoro_Kitara", "name": "Bunyoro-Kitara Empire", "year_range": [1000, 1800], "description": "Bunyoro-Kitara as dominant Great Lakes kingdom; Bachwezi dynasty legends; control of salt, iron, and cattle.", "key_events": ["Bunyoro_Kitara_Empire"]},
+          {"slug": "Buganda_Kingdom_Rise", "name": "Rise of Buganda Kingdom", "year_range": [1300, 1800], "description": "Buganda emerges as tributary of Bunyoro; gradually expands; kabaka (king) centralised power; maritime control of Lake Victoria."},
+          {"slug": "Ankole_Toro_Kingdoms", "name": "Ankole and Toro Kingdoms", "year_range": [1400, 1900], "description": "Ankole (Nkore) and Toro kingdoms; Hima-Iru social stratification; pastoral aristocracies."}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Buganda_Expansion",
+        "name": "Buganda Expansion and European Exploration",
+        "year_range": [1750, 1894],
+        "status": "PLANNED",
+        "description": "Buganda becomes dominant power; Arab trade contacts; Speke and Baker seek source of the Nile; religious wars.",
+        "sub_clusters": [
+          {"slug": "Buganda_Dominance", "name": "Buganda Dominance", "year_range": [1750, 1884], "description": "Buganda supplants Bunyoro as regional power; standing army; sophisticated administrative system; Arab trade in guns and cloth."},
+          {"slug": "Speke_Baker_Nile", "name": "Speke and Baker: Source of the Nile", "year_range": [1858, 1864], "description": "John Hanning Speke reaches Lake Victoria 1858; identifies source of the Nile; Samuel Baker discovers Lake Albert.", "key_events": ["Speke_Source_Of_Nile_1862"]},
+          {"slug": "Religious_Wars_Buganda", "name": "Religious Wars in Buganda", "year_range": [1885, 1892], "description": "Catholic, Protestant, and Muslim factions battle for influence; Uganda Martyrs 1885-1887; Kabaka Mwanga's resistance."}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "British_Protectorate_UG",
+        "name": "British Protectorate",
+        "year_range": [1894, 1962],
+        "status": "PLANNED",
+        "description": "Imperial British East Africa Company; Uganda Agreement 1900; Buganda privileged position; cotton and coffee economy; path to independence.",
+        "sub_clusters": [
+          {"slug": "IBEAC_Uganda", "name": "IBEAC and Early British Control", "year_range": [1888, 1894], "description": "Imperial British East Africa Company; Lugard arrives 1890; British protectorate declared 1894."},
+          {"slug": "Uganda_Agreement_1900", "name": "Uganda Agreement 1900", "year_range": [1900, 1900], "description": "Agreement between Britain and Buganda; mailo land system; Buganda chiefs become landed gentry; indirect rule.", "key_events": ["Uganda_Agreement_1900"]},
+          {"slug": "Colonial_Economy_UG", "name": "Colonial Economy", "year_range": [1900, 1962], "description": "Cotton and coffee cash crops; Asian commercial class; railway extension; north-south development divide."},
+          {"slug": "Buganda_Crisis_1953", "name": "Buganda Crisis and Path to Independence", "year_range": [1953, 1962], "description": "Kabaka Mutesa II exiled 1953; returns 1955; Buganda federalism question dominates; independence 9 October 1962."}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Post_Independence_UG",
+        "name": "Post-Independence Turmoil",
+        "year_range": [1962, 1986],
+        "status": "PLANNED",
+        "description": "Obote's centralisation; Idi Amin's reign of terror; Tanzanian invasion; second Obote regime; Bush War; Museveni victory.",
+        "sub_clusters": [
+          {"slug": "Obote_First_Regime", "name": "Obote First Government", "year_range": [1962, 1971], "description": "Milton Obote PM then president; abolishes kingdoms 1967; 'Move to the Left'; Buganda crisis; increasing authoritarianism."},
+          {"slug": "Idi_Amin_Regime", "name": "Idi Amin's Reign of Terror", "year_range": [1971, 1979], "description": "Idi Amin seizes power; expulsion of 80,000 Asians 1972; State Research Bureau; estimated 100,000-500,000 killed; Entebbe raid 1976.", "key_events": ["Idi_Amin_Coup_1971"]},
+          {"slug": "Tanzania_War_Amin_Fall", "name": "Tanzania War and Amin's Fall", "year_range": [1978, 1979], "description": "Amin invades Kagera strip; Tanzania counterattacks and captures Kampala April 1979; Amin flees."},
+          {"slug": "Bush_War_NRM", "name": "Bush War and NRM Victory", "year_range": [1981, 1986], "description": "Museveni's NRA/NRM wages guerrilla war from Luwero Triangle; captures Kampala January 1986; 'fundamental change'.", "key_events": ["NRM_Victory_Uganda_1986"]}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Museveni_Modern_UG",
+        "name": "Museveni Era and Modern Uganda",
+        "year_range": [1986, 2026],
+        "status": "PLANNED",
+        "description": "NRM governance; economic recovery; HIV/AIDS response; LRA insurgency; oil discovery; multiparty transition; democratic backsliding.",
+        "sub_clusters": [
+          {"slug": "NRM_Reconstruction", "name": "NRM Economic Reconstruction", "year_range": [1986, 2000], "description": "Museveni stabilises economy; 'no-party' Movement system; structural adjustment; praised as 'new breed' African leader."},
+          {"slug": "HIV_AIDS_Response_UG", "name": "HIV/AIDS Response", "year_range": [1986, 2010], "description": "Uganda's early and effective HIV/AIDS response; prevalence drops from 15% to 5%; ABC campaign; global model."},
+          {"slug": "LRA_Joseph_Kony", "name": "LRA Insurgency and Joseph Kony", "year_range": [1987, 2017], "description": "Lord's Resistance Army under Joseph Kony terrorises northern Uganda; child abduction; ICC warrants; Kony 2012 campaign.", "key_events": ["LRA_Insurgency_Uganda"]},
+          {"slug": "Oil_Discovery_UG", "name": "Oil Discovery in Albertine Graben", "year_range": [2006, 2026], "description": "Commercial oil discovered in Lake Albert region; pipeline to Tanzania planned; resource curse concerns; environmental issues."},
+          {"slug": "Democratic_Regression_UG", "name": "Democratic Regression", "year_range": [2005, 2026], "description": "Term limits removed 2005; age limit removed 2017; Bobi Wine opposition; disputed 2021 elections; authoritarian consolidation."}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "Great_Lakes_Kingdoms_UG", "interfaces_with": ["Great_Lakes_Kingdoms", "Kingdom_Of_Rwanda", "Bunyoro_Kitara"]},
+    {"cluster": "Speke_Baker_Nile", "interfaces_with": ["Source_Of_Nile_Exploration", "Victorian_Exploration_Africa"]},
+    {"cluster": "British_Protectorate_UG", "interfaces_with": ["Scramble_For_Africa", "British_Colonial_Empire", "Indian_Diaspora_East_Africa"]},
+    {"cluster": "Idi_Amin_Regime", "interfaces_with": ["Cold_War_Africa", "Entebbe_Raid_1976", "Asian_Expulsion_Uganda"]},
+    {"cluster": "Bush_War_NRM", "interfaces_with": ["African_Guerrilla_Movements", "Tanzania_Uganda_Relations"]},
+    {"cluster": "LRA_Joseph_Kony", "interfaces_with": ["Child_Soldiers", "ICC_International_Justice", "Central_African_Conflicts"]},
+    {"cluster": "Oil_Discovery_UG", "interfaces_with": ["African_Oil_Discoveries", "Resource_Curse", "East_African_Infrastructure"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 8,
+    "total_level5_subclusters": 24,
+    "active_clusters": 0,
+    "planned_clusters": 8,
+    "timeframe_distribution": {"910": 1, "920": 1, "930": 1, "940": 1, "950": 1, "960": 1}
+  }
+}

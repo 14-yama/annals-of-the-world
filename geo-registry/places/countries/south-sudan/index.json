@@ -1,0 +1,129 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "south-sudan",
+    "country_name": "South Sudan",
+    "region": "East Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "SS",
+    "iso3166_alpha3": "SSD",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for South Sudan covering Nilotic peoples, Shilluk Kingdom, Mahdist and Anglo-Egyptian Sudan, civil wars, CPA 2005, independence 2011 (world's newest country), civil war 2013-2020, and humanitarian crisis."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Early_Peoples_South_Sudan",
+        "name": "Early Nilotic Peoples",
+        "year_range": [-10000, 1000],
+        "status": "PLANNED",
+        "description": "Nilotic peoples settle the Sudd and upper Nile region; pastoralist and agro-pastoralist communities including Dinka, Nuer, and Shilluk ancestors.",
+        "sub_clusters": [
+          {"slug": "Nilotic_Migration_SS", "name": "Nilotic Peoples Migration", "year_range": [-10000, -1000], "description": "Nilotic-speaking peoples migrate from Nile Valley into the Sudd wetlands and surrounding highlands."},
+          {"slug": "Pastoral_Societies_SS", "name": "Pastoral Society Development", "year_range": [-3000, 1000], "description": "Dinka, Nuer, and other Nilotic groups develop cattle-centred cultures; seasonal transhumance in Sudd region."}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Shilluk_Kingdom_SS",
+        "name": "Shilluk Kingdom and Pre-Colonial States",
+        "year_range": [1490, 1820],
+        "status": "PLANNED",
+        "description": "Shilluk Kingdom as the most centralised pre-colonial state; Azande kingdoms; Dinka and Nuer segmentary societies.",
+        "sub_clusters": [
+          {"slug": "Shilluk_Kingdom", "name": "Shilluk Kingdom (Chollo)", "year_range": [1490, 1865], "description": "Shilluk Kingdom along White Nile founded by Nyikang; divine kingship (reth); most centralised Nilotic state.", "key_events": ["Shilluk_Kingdom_Founded"]},
+          {"slug": "Azande_Kingdoms_SS", "name": "Azande Kingdoms", "year_range": [1500, 1900], "description": "Azande kingdoms in western Equatoria; Avungara ruling clan; resistance to slave raiding."},
+          {"slug": "Dinka_Nuer_Societies", "name": "Dinka and Nuer Segmentary Societies", "year_range": [1000, 1900], "description": "Decentralised Dinka and Nuer societies; cattle culture; age-set systems; prophetic leadership."}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Slave_Trade_SS",
+        "name": "Slave Trade and External Incursions",
+        "year_range": [1820, 1898],
+        "status": "PLANNED",
+        "description": "Turco-Egyptian invasion; devastating slave raids (zariba system); European explorers; Mahdist conquest.",
+        "sub_clusters": [
+          {"slug": "Turco_Egyptian_SS", "name": "Turco-Egyptian Conquest", "year_range": [1820, 1881], "description": "Muhammad Ali's Egypt conquers Sudan; southern raids for slaves and ivory; zariba trading stations devastate populations.", "key_events": ["Turco_Egyptian_Conquest_Sudan"]},
+          {"slug": "Ivory_Slave_Raids_SS", "name": "Ivory and Slave Raiding Era", "year_range": [1840, 1880], "description": "Khartoum-based traders devastate southern populations; Zubayr Rahma Mansur; massive depopulation and suffering."},
+          {"slug": "Mahdist_Period_SS", "name": "Mahdist Conquest of the South", "year_range": [1881, 1898], "description": "Mahdist state extends control over parts of the south; resistance by Azande and other groups; Emin Pasha relief expedition."}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "Anglo_Egyptian_SS",
+        "name": "Anglo-Egyptian Condominium",
+        "year_range": [1898, 1956],
+        "status": "PLANNED",
+        "description": "British reconquest; Southern Policy separates north and south; minimal development; missionaries and education; Juba Conference 1947.",
+        "sub_clusters": [
+          {"slug": "Condominium_South_SS", "name": "Condominium Rule in the South", "year_range": [1898, 1947], "description": "Anglo-Egyptian Condominium; British 'Southern Policy' isolates south from Arab north; Christian missionaries; English language introduced."},
+          {"slug": "Southern_Policy_SS", "name": "British Southern Policy", "year_range": [1922, 1947], "description": "Closed Districts Ordinance separates south; intention to attach south to British East Africa; policy reversed at Juba Conference 1947."},
+          {"slug": "Juba_Conference_1947", "name": "Juba Conference 1947", "year_range": [1947, 1947], "description": "Southern leaders pressured into union with north for Sudanese independence; seeds of future conflict sown.", "key_events": ["Juba_Conference_1947"]}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "First_Civil_War_SS",
+        "name": "First Sudanese Civil War",
+        "year_range": [1955, 1972],
+        "status": "PLANNED",
+        "description": "Anyanya rebellion; southern resistance to northern Arabisation and Islamisation; Addis Ababa Agreement grants autonomy.",
+        "sub_clusters": [
+          {"slug": "Torit_Mutiny", "name": "Torit Mutiny and Anyanya Rebellion", "year_range": [1955, 1969], "description": "Southern soldiers mutiny at Torit 1955; Anyanya guerrilla movement; brutal northern military campaigns."},
+          {"slug": "Addis_Ababa_Agreement", "name": "Addis Ababa Agreement 1972", "year_range": [1972, 1972], "description": "Nimeiry and Anyanya sign Addis Ababa Agreement; Southern Sudan Autonomous Region created; fragile peace."}
+        ]
+      },
+      {
+        "slug": "Second_Civil_War_SS",
+        "name": "Second Sudanese Civil War",
+        "year_range": [1983, 2005],
+        "status": "PLANNED",
+        "description": "SPLA/M under John Garang fights Khartoum; 2 million dead; oil factor; CPA 2005 ends war.",
+        "sub_clusters": [
+          {"slug": "SPLM_Founded", "name": "SPLA/M Founded under Garang", "year_range": [1983, 1991], "description": "John Garang de Mabior founds SPLA/SPLM; fights for united secular Sudan; Nimeiry abrogates Addis Ababa Agreement.", "key_events": ["SPLM_SPLA_Founded_1983"]},
+          {"slug": "Civil_War_Devastation_SS", "name": "Devastating Civil War", "year_range": [1983, 2005], "description": "Over 2 million dead; 4 million displaced; famine; Nuer-Dinka split 1991; child soldiers; oil fuels war."},
+          {"slug": "CPA_2005", "name": "Comprehensive Peace Agreement", "year_range": [2005, 2005], "description": "CPA signed January 2005; provides for autonomous government and independence referendum; Garang dies July 2005.", "key_events": ["CPA_Sudan_2005"]}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Independence_Modern_SS",
+        "name": "Independence and Modern South Sudan",
+        "year_range": [2005, 2026],
+        "status": "PLANNED",
+        "description": "Interim period; independence referendum 2011; world's newest country; civil war 2013-2020; humanitarian crisis; fragile peace.",
+        "sub_clusters": [
+          {"slug": "Independence_2011_SS", "name": "Independence of South Sudan", "year_range": [2011, 2011], "description": "Independence referendum 9 January 2011; 98.83% vote for separation; independence 9 July 2011; Salva Kiir president.", "key_events": ["Independence_South_Sudan_2011"]},
+          {"slug": "Civil_War_2013_SS", "name": "South Sudan Civil War 2013-2020", "year_range": [2013, 2020], "description": "President Kiir dismisses VP Machar; civil war erupts December 2013; ethnic violence; 400,000 dead; mass displacement."},
+          {"slug": "Humanitarian_Crisis_SS", "name": "Humanitarian Crisis", "year_range": [2013, 2026], "description": "Worst food crisis in the world; famine declared 2017; millions displaced; child soldier recruitment; sexual violence."},
+          {"slug": "Revitalised_Peace_SS", "name": "Revitalised Peace Agreement", "year_range": [2018, 2026], "description": "R-ARCSS peace agreement 2018; Machar returns as VP; transitional government; elections postponed; fragile stability."},
+          {"slug": "Oil_Economy_SS", "name": "Oil Economy and Abyei Dispute", "year_range": [2005, 2026], "description": "South Sudan depends on oil revenue (98% of budget); Abyei border dispute with Sudan; oil shutdown 2012; economic collapse."}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "Shilluk_Kingdom_SS", "interfaces_with": ["Nilotic_Kingdoms", "Great_Lakes_Polities"]},
+    {"cluster": "Slave_Trade_SS", "interfaces_with": ["East_African_Slave_Trade", "Ottoman_Egypt", "Mahdist_State"]},
+    {"cluster": "Anglo_Egyptian_SS", "interfaces_with": ["British_Colonial_Empire", "Anglo_Egyptian_Sudan", "Scramble_For_Africa"]},
+    {"cluster": "Second_Civil_War_SS", "interfaces_with": ["Sudanese_Civil_Wars", "Cold_War_Africa", "Oil_And_Conflict"]},
+    {"cluster": "Independence_2011_SS", "interfaces_with": ["Self_Determination_Movements", "African_Borders_Debate", "UN_Peacekeeping"]},
+    {"cluster": "Civil_War_2013_SS", "interfaces_with": ["Ethnic_Conflict_Africa", "Humanitarian_Crises", "African_Union_Mediation"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 8,
+    "total_level5_subclusters": 22,
+    "active_clusters": 0,
+    "planned_clusters": 8,
+    "timeframe_distribution": {"910": 1, "920": 1, "930": 1, "940": 1, "950": 2, "960": 1}
+  }
+}

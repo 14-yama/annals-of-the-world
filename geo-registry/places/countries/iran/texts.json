@@ -4,7 +4,210 @@
     "node_kind": "texts",
     "registry": "docs/nodes/node-attribute-registry.md",
     "generated_at": "2026-01-31T13:56:07.837252Z",
-    "notes": "Country-scoped curated nodes; link via relationships during ingest."
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "grouped_by": "timeframe"
   },
-  "nodes": []
+  "thematic_clusters": {
+    "910": {
+      "label": "Ancient / Pre-Classical",
+      "nodes": [
+        {
+          "slug": "avesta",
+          "name": "Avesta",
+          "label": "Avesta",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Sacred texts of Zoroastrianism containing the Gathas attributed to Zoroaster and liturgical compositions."
+        },
+        {
+          "slug": "gathas-of-zoroaster",
+          "name": "Gathas of Zoroaster",
+          "label": "Gathas of Zoroaster",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Oldest Avestan hymns attributed directly to Zoroaster, expressing foundational theological concepts."
+        }
+      ]
+    },
+    "920": {
+      "label": "Classical / Late Antiquity",
+      "nodes": [
+        {
+          "slug": "behistun-inscription",
+          "name": "Behistun Inscription",
+          "label": "Behistun Inscription",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Trilingual inscription of Darius I on cliff face recording his rise to power and conquests."
+        },
+        {
+          "slug": "persepolis-tablets",
+          "name": "Persepolis Administrative Tablets",
+          "label": "Persepolis Administrative Tablets",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Archive of Elamite cuneiform tablets documenting Achaemenid imperial administration."
+        },
+        {
+          "slug": "bundahishn",
+          "name": "Bundahishn",
+          "label": "Bundahishn",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Zoroastrian encyclopedic text on cosmogony, mythology, and world history compiled in late antiquity."
+        }
+      ]
+    },
+    "930": {
+      "label": "Medieval / Post-Classical",
+      "nodes": [
+        {
+          "slug": "shahnameh",
+          "name": "Shahnameh (Book of Kings)",
+          "label": "Shahnameh",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Ferdowsi's epic poem recounting Persian mythological and historical kings, foundational to Iranian identity."
+        },
+        {
+          "slug": "rubaiyat-omar-khayyam",
+          "name": "Rubaiyat of Omar Khayyam",
+          "label": "Rubaiyat of Omar Khayyam",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Collection of quatrains attributed to the mathematician-poet exploring themes of mortality and pleasure."
+        },
+        {
+          "slug": "masnavi-rumi",
+          "name": "Masnavi of Rumi",
+          "label": "Masnavi of Rumi",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Spiritual epic poem by Rumi, called 'the Quran in Persian,' teaching Sufi mysticism through stories."
+        }
+      ]
+    },
+    "940": {
+      "label": "Early Modern",
+      "nodes": [
+        {
+          "slug": "divan-hafez",
+          "name": "Divan of Hafez",
+          "label": "Divan of Hafez",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Collected ghazals of Hafez, beloved for their mystical ambiguity and literary perfection."
+        },
+        {
+          "slug": "alam-ara-yi-abbasi",
+          "name": "Alam-ara-yi Abbasi",
+          "label": "Alam-ara-yi Abbasi",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Official chronicle of Shah Abbas I's reign, key source for Safavid history."
+        },
+        {
+          "slug": "safavid-royal-manuscripts",
+          "name": "Safavid Royal Manuscripts",
+          "label": "Safavid Royal Manuscripts",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Illuminated manuscripts produced in Safavid royal workshops combining calligraphy and miniature painting."
+        }
+      ]
+    },
+    "950": {
+      "label": "Modern",
+      "nodes": [
+        {
+          "slug": "persian-constitution-1906",
+          "name": "Persian Constitution of 1906",
+          "label": "Persian Constitution of 1906",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Iran's first constitution establishing parliamentary government and fundamental rights."
+        },
+        {
+          "slug": "blind-owl-hedayat",
+          "name": "The Blind Owl",
+          "label": "The Blind Owl",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Sadegh Hedayat's modernist novel exploring alienation and obsession, landmark of Persian literature."
+        },
+        {
+          "slug": "nima-yushij-poetry",
+          "name": "Poetry of Nima Yushij",
+          "label": "Poetry of Nima Yushij",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Revolutionary free verse poetry breaking from classical forms, founding modern Persian poetry."
+        }
+      ]
+    },
+    "960": {
+      "label": "Contemporary",
+      "nodes": [
+        {
+          "slug": "iranian-constitution-1979",
+          "name": "Iranian Constitution of 1979",
+          "label": "Iranian Constitution of 1979",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Foundational document of the Islamic Republic establishing velayat-e faqih governance."
+        },
+        {
+          "slug": "reading-lolita-in-tehran",
+          "name": "Reading Lolita in Tehran",
+          "label": "Reading Lolita in Tehran",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Azar Nafisi's memoir about secret literature classes in post-revolutionary Iran."
+        },
+        {
+          "slug": "persepolis-graphic-novel",
+          "name": "Persepolis",
+          "label": "Persepolis",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Marjane Satrapi's autobiographical graphic novel depicting childhood during the Islamic Revolution."
+        }
+      ]
+    }
+  }
 }

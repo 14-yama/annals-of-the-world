@@ -1,134 +1,293 @@
 {
-  "slug": "iraq",
-  "name": "Iraq",
-  "iso": "IQ",
-  "wikidata_id": "Q796",
-  "names": [
-    {
-      "name": "Iraq",
-      "lang": "en",
-      "is_primary": true
-    },
-    {
-      "name": "العراق",
-      "lang": "ar",
-      "script": "Arab",
-      "is_endonym": true
-    },
-    {
-      "name": "عێراق",
-      "lang": "ku",
-      "script": "Arab",
-      "is_endonym": true
-    }
-  ],
-  "cities": {
-    "baghdad": {
-      "name": "Baghdad",
-      "wikidata_id": "Q1530",
-      "names": [
-        {
-          "name": "Baghdad",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "بغداد",
-          "lang": "ar",
-          "script": "Arab",
-          "is_endonym": true
-        }
-      ]
-    },
-    "mosul": {
-      "name": "Mosul",
-      "wikidata_id": "Q3820",
-      "names": [
-        {
-          "name": "Mosul",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "الموصل",
-          "lang": "ar",
-          "script": "Arab",
-          "is_endonym": true
-        }
-      ]
-    },
-    "basra": {
-      "name": "Basra",
-      "wikidata_id": "Q8036",
-      "names": [
-        {
-          "name": "Basra",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "البصرة",
-          "lang": "ar",
-          "script": "Arab",
-          "is_endonym": true
-        }
-      ]
-    }
+  "_meta": {
+    "country_slug": "iraq",
+    "node_kind": "places",
+    "registry": "docs/nodes/node-attribute-registry.md",
+    "generated_at": "2026-01-31T13:56:07.837700Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "grouped_by": "timeframe"
   },
-  "extinct_places": {
-    "babylon": {
-      "name": "Babylon",
-      "kind": "site",
-      "status": "EXTINCT",
-      "wikidata_id": "Q5684",
-      "pleiades_id": "893951",
-      "names": [
+  "thematic_clusters": {
+    "910": {
+      "label": "Ancient / Pre-Classical",
+      "nodes": [
         {
-          "name": "Babylon",
+          "slug": "uruk",
+          "name": "Uruk",
+          "label": "Uruk",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
           "lang": "en",
-          "is_primary": true
+          "script": "Latn",
+          "description": "One of the world's earliest cities in southern Mesopotamia.",
+          "location": {
+            "lat": 31.3222,
+            "lon": 45.6384
+          }
         },
         {
-          "name": "Bābilim",
-          "lang": "akk",
-          "note": "Akkadian: Gate of God"
-        }
-      ]
-    },
-    "nineveh": {
-      "name": "Nineveh",
-      "kind": "site",
-      "status": "EXTINCT",
-      "wikidata_id": "Q5765",
-      "pleiades_id": "874621",
-      "names": [
-        {
-          "name": "Nineveh",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "Ninua",
-          "lang": "akk"
-        }
-      ]
-    },
-    "ur": {
-      "name": "Ur",
-      "kind": "site",
-      "status": "EXTINCT",
-      "wikidata_id": "Q5765",
-      "pleiades_id": "912986",
-      "names": [
-        {
+          "slug": "ur",
           "name": "Ur",
+          "label": "Ur",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
           "lang": "en",
-          "is_primary": true
+          "script": "Latn",
+          "description": "Sumerian city-state and major religious center of the moon god Nanna.",
+          "location": {
+            "lat": 30.9639,
+            "lon": 46.1030
+          }
         },
         {
-          "name": "Urim",
-          "lang": "sux",
-          "note": "Sumerian"
+          "slug": "eridu",
+          "name": "Eridu",
+          "label": "Eridu",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Ancient Sumerian city linked to early temple building and creation myths.",
+          "location": {
+            "lat": 30.8206,
+            "lon": 45.9968
+          }
+        }
+      ]
+    },
+    "920": {
+      "label": "Classical / Late Antiquity",
+      "nodes": [
+        {
+          "slug": "babylon",
+          "name": "Babylon",
+          "label": "Babylon",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Capital of the Babylonian empires, famed for monumental architecture and scholarship.",
+          "location": {
+            "lat": 32.5364,
+            "lon": 44.4200
+          }
+        },
+        {
+          "slug": "nineveh",
+          "name": "Nineveh",
+          "label": "Nineveh",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Assyrian capital on the Tigris near modern Mosul.",
+          "location": {
+            "lat": 36.3650,
+            "lon": 43.1520
+          }
+        },
+        {
+          "slug": "ctesiphon",
+          "name": "Ctesiphon",
+          "label": "Ctesiphon",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Parthian and Sasanian capital on the Tigris with the Taq Kasra arch.",
+          "location": {
+            "lat": 33.0936,
+            "lon": 44.5817
+          }
+        }
+      ]
+    },
+    "930": {
+      "label": "Medieval / Post-Classical",
+      "nodes": [
+        {
+          "slug": "baghdad-abbasid",
+          "name": "Baghdad (Abbasid Capital)",
+          "label": "Baghdad",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Center of Abbasid administration and scholarship during the Islamic Golden Age.",
+          "location": {
+            "lat": 33.3152,
+            "lon": 44.3661
+          }
+        },
+        {
+          "slug": "samarra",
+          "name": "Samarra",
+          "label": "Samarra",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Abbasid capital noted for the Great Mosque and spiral minaret.",
+          "location": {
+            "lat": 34.1959,
+            "lon": 43.8743
+          }
+        },
+        {
+          "slug": "basra",
+          "name": "Basra",
+          "label": "Basra",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Port city on the Shatt al-Arab, early center of Islamic scholarship and trade.",
+          "location": {
+            "lat": 30.5085,
+            "lon": 47.7835
+          }
+        }
+      ]
+    },
+    "940": {
+      "label": "Early Modern",
+      "nodes": [
+        {
+          "slug": "najaf",
+          "name": "Najaf",
+          "label": "Najaf",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Shia holy city and center of religious learning.",
+          "location": {
+            "lat": 31.9957,
+            "lon": 44.3146
+          }
+        },
+        {
+          "slug": "karbala",
+          "name": "Karbala",
+          "label": "Karbala",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Holy city of Imam Husayn's shrine and major pilgrimage destination.",
+          "location": {
+            "lat": 32.6160,
+            "lon": 44.0249
+          }
+        },
+        {
+          "slug": "mosul",
+          "name": "Mosul",
+          "label": "Mosul",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Northern city on the Tigris, an Ottoman provincial center.",
+          "location": {
+            "lat": 36.3456,
+            "lon": 43.1575
+          }
+        }
+      ]
+    },
+    "950": {
+      "label": "Modern",
+      "nodes": [
+        {
+          "slug": "baghdad-modern",
+          "name": "Baghdad (Modern)",
+          "label": "Baghdad",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Capital of the Kingdom and Republic of Iraq, expanded with modern infrastructure.",
+          "location": {
+            "lat": 33.3152,
+            "lon": 44.3661
+          }
+        },
+        {
+          "slug": "kirkuk",
+          "name": "Kirkuk",
+          "label": "Kirkuk",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Oil-rich city and contested region central to Iraqi politics and economy.",
+          "location": {
+            "lat": 35.4681,
+            "lon": 44.3922
+          }
+        },
+        {
+          "slug": "basra-modern",
+          "name": "Basra (Modern)",
+          "label": "Basra",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Modern port city and center of oil exports and maritime trade.",
+          "location": {
+            "lat": 30.5085,
+            "lon": 47.7835
+          }
+        }
+      ]
+    },
+    "960": {
+      "label": "Contemporary",
+      "nodes": [
+        {
+          "slug": "erbil",
+          "name": "Erbil",
+          "label": "Erbil",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Capital of the Kurdistan Region, major political and economic hub.",
+          "location": {
+            "lat": 36.1911,
+            "lon": 44.0092
+          }
+        },
+        {
+          "slug": "mosul-contemporary",
+          "name": "Mosul (Contemporary)",
+          "label": "Mosul",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Major northern city undergoing post-conflict reconstruction after ISIS occupation.",
+          "location": {
+            "lat": 36.3456,
+            "lon": 43.1575
+          }
+        },
+        {
+          "slug": "najaf-contemporary",
+          "name": "Najaf (Contemporary)",
+          "label": "Najaf",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Contemporary center of Shia authority and pilgrimage economy.",
+          "location": {
+            "lat": 31.9957,
+            "lon": 44.3146
+          }
         }
       ]
     }

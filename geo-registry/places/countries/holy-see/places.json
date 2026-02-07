@@ -1,43 +1,288 @@
 {
-  "slug": "holy-see",
-  "name": "Holy See",
-  "iso": "VA",
-  "wikidata_id": "Q159583",
-  "names": [
-    {
-      "name": "Holy See",
-      "lang": "en",
-      "is_primary": true
-    },
-    {
-      "name": "Vatican City",
-      "lang": "en"
-    },
-    {
-      "name": "Sancta Sedes",
-      "lang": "la",
-      "is_endonym": true
-    },
-    {
-      "name": "Città del Vaticano",
-      "lang": "it",
-      "is_endonym": true
-    }
-  ],
-  "cities": {
-    "vatican-city": {
-      "name": "Vatican City",
-      "wikidata_id": "Q237",
-      "names": [
+  "_meta": {
+    "country_slug": "holy-see",
+    "node_kind": "places",
+    "registry": "docs/nodes/node-attribute-registry.md",
+    "generated_at": "2026-01-31T13:56:07.831700Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": ["920", "930", "940", "950", "960"],
+    "grouped_by": "timeframe"
+  },
+  "thematic_clusters": {
+    "920": {
+      "label": "Classical / Late Antiquity",
+      "nodes": [
         {
-          "name": "Vatican City",
+          "slug": "vatican-hill",
+          "name": "Vatican Hill",
+          "label": "Vatican Hill",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
           "lang": "en",
-          "is_primary": true
+          "script": "Latn",
+          "description": "Hill west of the Tiber associated with early Christian burial grounds and Peter's tomb.",
+          "location": {
+            "lat": 41.9029,
+            "lon": 12.4534
+          }
         },
         {
-          "name": "Città del Vaticano",
-          "lang": "it",
-          "is_endonym": true
+          "slug": "vatican-necropolis",
+          "name": "Vatican Necropolis",
+          "label": "Vatican Necropolis",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Ancient burial complex beneath St. Peter's Basilica linked to early Christian graves.",
+          "location": {
+            "lat": 41.9022,
+            "lon": 12.4539
+          }
+        },
+        {
+          "slug": "old-st-peters-basilica-site",
+          "name": "Old St. Peter's Basilica Site",
+          "label": "Old St. Peter's Basilica Site",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Site of the 4th-century basilica constructed over Peter's tomb.",
+          "location": {
+            "lat": 41.9022,
+            "lon": 12.4539
+          }
+        },
+        {
+          "slug": "lateran-basilica-site",
+          "name": "Lateran Basilica",
+          "label": "Lateran Basilica",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Cathedral of the Bishop of Rome and principal church of the Latin Church.",
+          "location": {
+            "lat": 41.8859,
+            "lon": 12.5052
+          }
+        },
+        {
+          "slug": "lateran-palace",
+          "name": "Lateran Palace",
+          "label": "Lateran Palace",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Historic papal residence adjacent to the Lateran Basilica.",
+          "location": {
+            "lat": 41.8854,
+            "lon": 12.5056
+          }
+        },
+        {
+          "slug": "saint-pauls-outside-walls",
+          "name": "St. Paul Outside the Walls",
+          "label": "St. Paul Outside the Walls",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Major basilica built over the tomb of Saint Paul.",
+          "location": {
+            "lat": 41.8587,
+            "lon": 12.4768
+          }
+        }
+      ]
+    },
+    "930": {
+      "label": "Medieval / Post-Classical",
+      "nodes": [
+        {
+          "slug": "vatican-palace",
+          "name": "Vatican Palace",
+          "label": "Vatican Palace",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Medieval papal residence complex developing near St. Peter's.",
+          "location": {
+            "lat": 41.9022,
+            "lon": 12.4539
+          }
+        },
+        {
+          "slug": "apostolic-library",
+          "name": "Vatican Apostolic Library",
+          "label": "Vatican Apostolic Library",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Library collecting manuscripts and texts for papal administration and scholarship.",
+          "location": {
+            "lat": 41.9035,
+            "lon": 12.4536
+          }
+        },
+        {
+          "slug": "borgo-district",
+          "name": "Borgo District",
+          "label": "Borgo District",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Medieval neighborhood of Rome adjoining the Vatican, home to pilgrims and clergy.",
+          "location": {
+            "lat": 41.9042,
+            "lon": 12.4556
+          }
+        }
+      ]
+    },
+    "940": {
+      "label": "Early Modern",
+      "nodes": [
+        {
+          "slug": "sistine-chapel",
+          "name": "Sistine Chapel",
+          "label": "Sistine Chapel",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Papal chapel famed for Michelangelo's frescoes and conclaves.",
+          "location": {
+            "lat": 41.9029,
+            "lon": 12.4545
+          }
+        },
+        {
+          "slug": "st-peters-basilica",
+          "name": "St. Peter's Basilica",
+          "label": "St. Peter's Basilica",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Renaissance and Baroque basilica built over Peter's tomb.",
+          "location": {
+            "lat": 41.9022,
+            "lon": 12.4539
+          }
+        },
+        {
+          "slug": "st-peters-square",
+          "name": "St. Peter's Square",
+          "label": "St. Peter's Square",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Bernini-designed square serving as ceremonial forecourt of the basilica.",
+          "location": {
+            "lat": 41.9022,
+            "lon": 12.4570
+          }
+        }
+      ]
+    },
+    "950": {
+      "label": "Modern",
+      "nodes": [
+        {
+          "slug": "vatican-city-state",
+          "name": "Vatican City State",
+          "label": "Vatican City State",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Sovereign city-state established in 1929 by the Lateran Treaty.",
+          "location": {
+            "lat": 41.9029,
+            "lon": 12.4534
+          }
+        },
+        {
+          "slug": "vatican-gardens",
+          "name": "Vatican Gardens",
+          "label": "Vatican Gardens",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Landscaped gardens within Vatican City used for retreat and ceremonies.",
+          "location": {
+            "lat": 41.9042,
+            "lon": 12.4513
+          }
+        },
+        {
+          "slug": "vatican-railway-station",
+          "name": "Vatican Railway Station",
+          "label": "Vatican Railway Station",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Rail terminal built in the 1930s for papal travel and goods transport.",
+          "location": {
+            "lat": 41.9017,
+            "lon": 12.4485
+          }
+        }
+      ]
+    },
+    "960": {
+      "label": "Contemporary",
+      "nodes": [
+        {
+          "slug": "vatican-museums-campus",
+          "name": "Vatican Museums Complex",
+          "label": "Vatican Museums",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Museum complex housing major art collections and the Sistine Chapel access.",
+          "location": {
+            "lat": 41.9065,
+            "lon": 12.4536
+          }
+        },
+        {
+          "slug": "domus-sanctae-marthae",
+          "name": "Domus Sanctae Marthae",
+          "label": "Domus Sanctae Marthae",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Guesthouse within Vatican City used for conclaves and papal residence.",
+          "location": {
+            "lat": 41.9033,
+            "lon": 12.4535
+          }
+        },
+        {
+          "slug": "vatican-media-center",
+          "name": "Vatican Media Center",
+          "label": "Vatican Media Center",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Contemporary hub for Vatican communications and press briefings.",
+          "location": {
+            "lat": 41.9038,
+            "lon": 12.4522
+          }
         }
       ]
     }

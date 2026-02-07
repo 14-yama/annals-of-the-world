@@ -227,7 +227,7 @@ Relationships by Type (PROPOSED)
  - Text → Doctrine/Idea
   - Torah (Pentateuch) → TRANSMITS → Mosaic Covenant / Sinai Law — evidence: cite:920-id2
 
-## 930 — Medieval (Late Antiquity & Middle Ages; 70–1500 CE)
+## 930 — Medieval (Late Antiquity & Middle Ages; 500–1500 CE)
 status: PROPOSED
 
 Ideas

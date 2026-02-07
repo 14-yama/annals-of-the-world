@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "chad",
+    "country_name": "Chad",
+    "region": "Central Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "TD",
+    "iso3166_alpha3": "TCD",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for Chad covering Sahelian rock art, Sao civilisation, Kanem-Bornu Empire, Wadai and Bagirmi sultanates, French conquest, Tombalbaye, Libyan-Chadian conflict, Déby dynasty, and the Lake Chad environmental crisis."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Saharan_Rock_Art_TD",
+        "name": "Saharan Rock Art and Early Peoples",
+        "year_range": [-10000, -1000],
+        "status": "PLANNED",
+        "description": "The Ennedi and Tibesti massifs preserve stunning Saharan rock art depicting a green Sahara; pastoralist and agricultural communities thrive before desertification.",
+        "sub_clusters": [
+          {"slug": "Ennedi_Tibesti_Rock_Art", "name": "Ennedi and Tibesti Rock Art", "year_range": [-10000, -3000], "description": "Rock paintings and engravings in the Ennedi Plateau and Tibesti Mountains show cattle herding, hunting, and ritual scenes from the African Humid Period.", "key_events": ["Ennedi_Rock_Art"]},
+          {"slug": "Green_Sahara_Desiccation_TD", "name": "Green Sahara Desiccation and Migration", "year_range": [-3000, -1000], "description": "Sahara dries out; populations migrate southward to the Lake Chad basin and Sahel; foundation for later sedentary civilisations."}
+        ]
+      },
+      {
+        "slug": "Sao_Civilisation_TD",
+        "name": "Sao Civilisation",
+        "year_range": [-500, 1500],
+        "status": "PLANNED",
+        "description": "The Sao people build walled settlements around Lake Chad; terracotta and bronze artistic traditions; eventually absorbed by Kanem-Bornu.",
+        "sub_clusters": [
+          {"slug": "Sao_Settlements_TD", "name": "Sao Walled Settlements and Art", "year_range": [-500, 1000], "description": "Sao communities construct mound settlements in the Lake Chad floodplain; renowned terracotta figurines and funerary traditions."},
+          {"slug": "Sao_Absorption_TD", "name": "Sao Absorption into Kanem-Bornu", "year_range": [1000, 1500], "description": "Kanem Empire gradually incorporates Sao communities; Kotoko city-states emerge as Sao successor polities."}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Kanem_Empire_TD",
+        "name": "Kanem Empire",
+        "year_range": [700, 1380],
+        "status": "PLANNED",
+        "description": "The Kanem Empire, ruled by the Saifawa dynasty, dominates the Lake Chad region; Islam adopted c.1085; trans-Saharan trade flourishes.",
+        "sub_clusters": [
+          {"slug": "Saifawa_Dynasty_Rise", "name": "Rise of the Saifawa Dynasty", "year_range": [700, 1085], "description": "Duguwa and Saifawa rulers unite Kanem; control of trans-Saharan trade routes linking Fezzan and the Nile Valley."},
+          {"slug": "Islam_Kanem_TD", "name": "Islamisation of Kanem", "year_range": [1085, 1250], "description": "Mai Hummay adopts Islam c.1085; Kanem becomes a centre of Islamic learning; diplomatic links with North Africa and Egypt.", "key_events": ["Kanem_Converts_Islam_1085"]},
+          {"slug": "Kanem_Expansion_Decline", "name": "Kanem Expansion and Bulala Challenge", "year_range": [1250, 1380], "description": "Kanem reaches greatest extent under Mai Dunama Dibalami; Bulala attacks force Saifawa retreat westward to Bornu."}
+        ]
+      },
+      {
+        "slug": "Bornu_Empire_TD",
+        "name": "Bornu Empire",
+        "year_range": [1380, 1893],
+        "status": "PLANNED",
+        "description": "The Saifawa dynasty re-establishes power west of Lake Chad as the Bornu Empire; Idris Alooma's golden age; gradual decline.",
+        "sub_clusters": [
+          {"slug": "Bornu_Renaissance_TD", "name": "Bornu Renaissance under Idris Alooma", "year_range": [1564, 1596], "description": "Mai Idris Alooma modernises the army with firearms; diplomatic ties with Ottoman Tripoli; Bornu recaptures Kanem heartland.", "key_events": ["Idris_Alooma_Reign_1564"]},
+          {"slug": "Bornu_Decline_Rabih_TD", "name": "Bornu Decline and Rabih az-Zubayr", "year_range": [1800, 1900], "description": "Fulani jihad pressures Bornu; El-Kanemi sheikhs supplant Saifawa; Rabih az-Zubayr conquers Bornu 1893; end of millennium-old dynasty."}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Wadai_Bagirmi_TD",
+        "name": "Wadai and Bagirmi Sultanates",
+        "year_range": [1500, 1912],
+        "status": "PLANNED",
+        "description": "The Sultanate of Wadai and the Kingdom of Bagirmi emerge as major powers east and south of Lake Chad; slave trading and Islamic culture.",
+        "sub_clusters": [
+          {"slug": "Bagirmi_Kingdom_TD", "name": "Kingdom of Bagirmi", "year_range": [1500, 1897], "description": "Bagirmi kingdom centered on Massenya; vassal to Bornu then Wadai; slave raiding in the south; French conquest 1897."},
+          {"slug": "Wadai_Sultanate_TD", "name": "Sultanate of Wadai", "year_range": [1635, 1912], "description": "Wadai sultanate centred on Abéché; controls Saharan trade routes to Benghazi; defeats Bornu influence; last independent sultanate falls to France 1912.", "key_events": ["Wadai_Falls_France_1912"]}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "French_Chad",
+        "name": "French Conquest and Colonial Chad",
+        "year_range": [1897, 1960],
+        "status": "PLANNED",
+        "description": "France conquers Chad in stages; Territoire Militaire du Tchad within AEF; forced cotton cultivation in the south; Félix Éboué rallies Chad to Free France.",
+        "sub_clusters": [
+          {"slug": "French_Conquest_TD", "name": "French Conquest and Battle of Kousséri", "year_range": [1897, 1920], "description": "Three French columns converge and defeat Rabih at Kousséri (1900); progressive pacification of the north; last Senoussi resistance 1920.", "key_events": ["Battle_Kousseri_1900"]},
+          {"slug": "Colonial_Exploitation_TD", "name": "Colonial Exploitation: Le Tchad Utile", "year_range": [1920, 1960], "description": "France develops only 'le Tchad utile' (useful south); forced cotton cultivation; Muslim north neglected; Éboué rallies Chad to Free France 1940; post-war political awakening."},
+          {"slug": "Eboue_Free_France_TD", "name": "Félix Éboué and Free France", "year_range": [1940, 1944], "description": "Governor Éboué makes Chad first colony to join Free France August 1940; Leclerc's column departs from Faya-Largeau; Chad's strategic role in WWII.", "key_events": ["Chad_Joins_Free_France_1940"]}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Tombalbaye_Independence_TD",
+        "name": "Independence and Tombalbaye Era",
+        "year_range": [1960, 1975],
+        "status": "PLANNED",
+        "description": "François (Ngarta) Tombalbaye leads independence; southern Christian domination; northern Muslim rebellion (FROLINAT); increasing authoritarianism and assassination.",
+        "sub_clusters": [
+          {"slug": "Chad_Independence_TD", "name": "Independence and One-Party Rule", "year_range": [1960, 1966], "description": "Chad independent 11 August 1960; Tombalbaye's PPT becomes sole party; southern-dominated government alienates the Muslim north.", "key_events": ["Chad_Independence_1960"]},
+          {"slug": "FROLINAT_Rebellion_TD", "name": "FROLINAT Northern Rebellion", "year_range": [1966, 1975], "description": "Front de Libération Nationale du Tchad (FROLINAT) launches insurgency; French military intervention (Operation Bison); Tombalbaye assassinated in military coup April 1975.", "key_events": ["Tombalbaye_Assassinated_1975"]}
+        ]
+      },
+      {
+        "slug": "Civil_Wars_Libya_TD",
+        "name": "Civil Wars and Libyan Intervention",
+        "year_range": [1975, 1990],
+        "status": "PLANNED",
+        "description": "Chadian civil wars intensify; Libya annexes the Aouzou Strip; Habré and Goukouni factions clash; Toyota War drives out Libyan forces.",
+        "sub_clusters": [
+          {"slug": "Malloum_Habre_Goukouni_TD", "name": "Malloum, Habré, and Goukouni Power Struggles", "year_range": [1975, 1982], "description": "General Malloum overthrown; Goukouni's GUNT vs Habré's FAN; Libyan troops invited then expelled; Habré seizes N'Djamena 1982."},
+          {"slug": "Libyan_Chadian_Conflict_TD", "name": "Libyan-Chadian Conflict and Toyota War", "year_range": [1978, 1987], "description": "Gaddafi's Libya occupies Aouzou Strip and intervenes repeatedly; Toyota War (1987) sees Chad rout Libyan forces using pickup trucks; ICJ awards Aouzou to Chad 1994.", "key_events": ["Toyota_War_1987"]},
+          {"slug": "Habre_DDS_Repression_TD", "name": "Habré Regime and DDS Repression", "year_range": [1982, 1990], "description": "Hissène Habré rules through secret police (DDS); estimated 40,000 killed; later convicted of crimes against humanity in Senegal."}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Deby_Dynasty_TD",
+        "name": "Déby Dynasty and Contemporary Chad",
+        "year_range": [1990, 2026],
+        "status": "PLANNED",
+        "description": "Idriss Déby seizes power 1990; 30-year rule; oil revenues; regional military power; killed in battle 2021; son Mahamat Déby takes over.",
+        "sub_clusters": [
+          {"slug": "Idriss_Deby_Rise_TD", "name": "Idriss Déby's Rise and Consolidation", "year_range": [1990, 2005], "description": "Déby overthrows Habré December 1990; multiparty constitution 1996; eliminates term limits; oil pipeline to Cameroon opens 2003.", "key_events": ["Deby_Seizes_Power_1990"]},
+          {"slug": "Chad_Oil_Era_TD", "name": "Oil Revenues and Regional Power", "year_range": [2003, 2020], "description": "Doba oil fields transform economy; World Bank transparency experiment fails; Chad becomes key French and US counterterrorism partner in Sahel."},
+          {"slug": "Deby_Death_Succession_TD", "name": "Idriss Déby Death and Mahamat Succession", "year_range": [2021, 2026], "description": "Idriss Déby killed visiting frontlines April 2021; military council installs son Mahamat Idriss Déby; contested transition; October 2022 protests violently suppressed.", "key_events": ["Idriss_Deby_Killed_2021"]},
+          {"slug": "Lake_Chad_Crisis_TD", "name": "Lake Chad Environmental and Security Crisis", "year_range": [2000, 2026], "description": "Lake Chad shrinks dramatically; humanitarian crisis affecting millions; Boko Haram attacks on Chadian shores; food insecurity and displacement."}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "Saharan_Rock_Art_TD", "interfaces_with": ["Saharan_Neolithic", "African_Rock_Art", "Green_Sahara"]},
+    {"cluster": "Kanem_Empire_TD", "interfaces_with": ["Trans_Saharan_Trade", "Islamic_Civilisation", "Lake_Chad_Basin"]},
+    {"cluster": "Bornu_Empire_TD", "interfaces_with": ["Kanem_Bornu_Legacy", "Ottoman_North_Africa", "Fulani_Jihads_West_Africa"]},
+    {"cluster": "Wadai_Bagirmi_TD", "interfaces_with": ["Saharan_Slave_Trade", "Sudanic_Sultanates", "Islamic_Reform_Movements"]},
+    {"cluster": "French_Chad", "interfaces_with": ["French_Equatorial_Africa", "Scramble_For_Africa", "Free_France_WWII"]},
+    {"cluster": "Libyan_Chadian_Conflict_TD", "interfaces_with": ["Gaddafi_Libya", "Cold_War_Africa", "Aouzou_Strip_Dispute"]},
+    {"cluster": "Deby_Dynasty_TD", "interfaces_with": ["Sahel_Security_Crisis", "African_Oil_Politics", "War_On_Terror_Africa"]},
+    {"cluster": "Lake_Chad_Crisis_TD", "interfaces_with": ["Climate_Change_Africa", "Boko_Haram_Insurgency", "Environmental_Security"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 10,
+    "total_level5_subclusters": 24,
+    "active_clusters": 0,
+    "planned_clusters": 10,
+    "timeframe_distribution": {"910": 2, "920": 2, "930": 1, "940": 1, "950": 2, "960": 1}
+  }
+}

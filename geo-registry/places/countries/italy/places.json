@@ -1,161 +1,284 @@
 {
-  "slug": "italy",
-  "name": "Italy",
-  "iso": "IT",
-  "wikidata_id": "Q38",
-  "names": [
-    {
-      "name": "Italy",
-      "lang": "en",
-      "is_primary": true
-    },
-    {
-      "name": "Italia",
-      "lang": "it",
-      "is_endonym": true
-    },
-    {
-      "name": "Italie",
-      "lang": "fr"
-    },
-    {
-      "name": "Italien",
-      "lang": "de"
-    }
-  ],
-  "cities": {
-    "rome": {
-      "name": "Rome",
-      "wikidata_id": "Q220",
-      "names": [
-        {
-          "name": "Rome",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "Roma",
-          "lang": "it",
-          "is_endonym": true
-        },
-        {
-          "name": "Roma",
-          "lang": "la"
+  "_meta": {
+    "country_slug": "italy",
+    "node_kind": "places",
+    "registry": "docs/nodes/node-attribute-registry.md",
+    "generated_at": "2026-01-31T13:56:07.840014Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Tarquinia",
+        "name": "Tarquinia",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "ett",
+        "script": "Ital",
+        "place_kind": "Archaeological_Site",
+        "description": "Etruscan city noted for painted tombs and necropolis.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Lazio"
         }
-      ]
-    },
-    "milan": {
-      "name": "Milan",
-      "wikidata_id": "Q490",
-      "names": [
-        {
-          "name": "Milan",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "Milano",
-          "lang": "it",
-          "is_endonym": true
-        },
-        {
-          "name": "Mailand",
-          "lang": "de"
+      },
+      {
+        "slug": "Veii",
+        "name": "Veii",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "ett",
+        "script": "Ital",
+        "place_kind": "Archaeological_Site",
+        "description": "Major Etruscan city near Rome, conquered by the Romans.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Lazio"
         }
-      ],
-      "former_names": [
-        {
-          "name": "Mediolanum",
-          "lang": "la",
-          "note": "Roman name"
+      },
+      {
+        "slug": "Nuraghe_Su_Nuraxi",
+        "name": "Su Nuraxi (Barumini)",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "und",
+        "script": "Zyyy",
+        "place_kind": "Archaeological_Site",
+        "description": "Nuragic Bronze Age complex in Sardinia.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Sardinia"
         }
-      ]
-    },
-    "naples": {
-      "name": "Naples",
-      "wikidata_id": "Q2634",
-      "names": [
-        {
-          "name": "Naples",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "Napoli",
-          "lang": "it",
-          "is_endonym": true
+      }
+    ],
+    "920": [
+      {
+        "slug": "Rome",
+        "name": "Rome",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "it",
+        "script": "Latn",
+        "place_kind": "Ancient_Capital",
+        "description": "Capital of the Roman Republic and Empire.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Lazio"
         }
-      ],
-      "former_names": [
-        {
-          "name": "Neapolis",
-          "lang": "grc",
-          "note": "Greek colony: New City"
+      },
+      {
+        "slug": "Pompeii",
+        "name": "Pompeii",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "la",
+        "script": "Latn",
+        "place_kind": "Archaeological_Site",
+        "description": "Roman city preserved by the eruption of Mount Vesuvius.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Campania"
         }
-      ]
-    },
-    "florence": {
-      "name": "Florence",
-      "wikidata_id": "Q2044",
-      "names": [
-        {
-          "name": "Florence",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "Firenze",
-          "lang": "it",
-          "is_endonym": true
+      },
+      {
+        "slug": "Milan_Mediolanum",
+        "name": "Mediolanum (Milan)",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "la",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Major Roman city in northern Italy.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Lombardy"
         }
-      ],
-      "former_names": [
-        {
-          "name": "Florentia",
-          "lang": "la",
-          "note": "Roman colony"
+      }
+    ],
+    "930": [
+      {
+        "slug": "Ravenna",
+        "name": "Ravenna",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "it",
+        "script": "Latn",
+        "place_kind": "Historic_City",
+        "description": "Late Roman and Byzantine capital in Italy.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Emilia-Romagna"
         }
-      ]
-    },
-    "venice": {
-      "name": "Venice",
-      "wikidata_id": "Q641",
-      "names": [
-        {
-          "name": "Venice",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "Venezia",
-          "lang": "it",
-          "is_endonym": true
-        },
-        {
-          "name": "Venedig",
-          "lang": "de"
+      },
+      {
+        "slug": "Florence",
+        "name": "Florence",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "it",
+        "script": "Latn",
+        "place_kind": "Historic_City",
+        "description": "Medieval commune that became a Renaissance center.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Tuscany"
         }
-      ]
-    },
-    "genoa": {
-      "name": "Genoa",
-      "wikidata_id": "Q1449",
-      "names": [
-        {
-          "name": "Genoa",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "Genova",
-          "lang": "it",
-          "is_endonym": true
-        },
-        {
-          "name": "Gênes",
-          "lang": "fr"
+      },
+      {
+        "slug": "Venice",
+        "name": "Venice",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "it",
+        "script": "Latn",
+        "place_kind": "City_State",
+        "description": "Maritime republic and trading hub of the medieval Adriatic.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Veneto"
         }
-      ]
-    }
+      }
+    ],
+    "940": [
+      {
+        "slug": "Genoa",
+        "name": "Genoa",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "it",
+        "script": "Latn",
+        "place_kind": "Port_City",
+        "description": "Renaissance-era maritime republic and commercial center.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Liguria"
+        }
+      },
+      {
+        "slug": "Naples",
+        "name": "Naples",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "it",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Major early modern city and capital of the Kingdom of Naples.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Campania"
+        }
+      },
+      {
+        "slug": "Turin",
+        "name": "Turin",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "it",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Capital of the Duchy of Savoy and later Kingdom of Sardinia.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Piedmont"
+        }
+      }
+    ],
+    "950": [
+      {
+        "slug": "Turin_Industrial",
+        "name": "Turin (Industrial Center)",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "it",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Industrializing city and early capital of unified Italy.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Piedmont"
+        }
+      },
+      {
+        "slug": "Milan",
+        "name": "Milan",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "it",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Major industrial and financial center in modern Italy.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Lombardy"
+        }
+      },
+      {
+        "slug": "Rome_Modern",
+        "name": "Rome (Modern Capital)",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "it",
+        "script": "Latn",
+        "place_kind": "Capital",
+        "description": "Capital of unified Italy from 1871 onward.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Lazio"
+        }
+      }
+    ],
+    "960": [
+      {
+        "slug": "Bologna",
+        "name": "Bologna",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "it",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "University city and regional hub in contemporary Italy.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Emilia-Romagna"
+        }
+      },
+      {
+        "slug": "Palermo",
+        "name": "Palermo",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "it",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Capital of Sicily and major Mediterranean port.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Sicily"
+        }
+      },
+      {
+        "slug": "Bari",
+        "name": "Bari",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "it",
+        "script": "Latn",
+        "place_kind": "City",
+        "description": "Adriatic port city and regional center in southern Italy.",
+        "location": {
+          "country_slug": "italy",
+          "place_note": "Apulia"
+        }
+      }
+    ]
   }
 }

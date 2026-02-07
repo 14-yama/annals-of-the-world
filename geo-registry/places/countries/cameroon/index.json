@@ -1,0 +1,148 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "cameroon",
+    "country_name": "Cameroon",
+    "region": "Central Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "CM",
+    "iso3166_alpha3": "CMR",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for Cameroon covering Bantu origins and migrations, Sao civilisation, Kanem-Bornu and Fulani influences, German Kamerun, French/British mandate split, Ahidjo and Biya presidencies, Anglophone crisis, and Boko Haram spillover."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Bantu_Origins_CM",
+        "name": "Bantu Origins and Early Peoples of Cameroon",
+        "year_range": [-3000, 500],
+        "status": "PLANNED",
+        "description": "The Cameroon-Nigeria borderland is the probable Bantu homeland; early ironworking and agricultural communities spread across the region.",
+        "sub_clusters": [
+          {"slug": "Bantu_Cradle_CM", "name": "Bantu Cradle and Proto-Bantu Dispersal", "year_range": [-3000, -500], "description": "Linguistic and archaeological evidence places the proto-Bantu homeland in the Cameroon Grassfields; initial southward and eastward migrations begin.", "key_events": ["Proto_Bantu_Dispersal"]},
+          {"slug": "Early_Ironworking_CM", "name": "Early Ironworking and Settlement", "year_range": [-500, 500], "description": "Iron smelting develops in the Mandara Mountains and Grassfields; yam and oil-palm cultivation supports population growth."}
+        ]
+      },
+      {
+        "slug": "Sao_Civilisation_CM",
+        "name": "Sao Civilisation of the Lake Chad Basin",
+        "year_range": [500, 1500],
+        "status": "PLANNED",
+        "description": "The Sao people build fortified settlements in the Logone-Chari floodplain; terracotta figurines and bronze-working flourish.",
+        "sub_clusters": [
+          {"slug": "Sao_Settlements_CM", "name": "Sao Walled Settlements", "year_range": [500, 1200], "description": "Sao mound settlements along the Logone and Chari rivers; distinctive terracotta sculpture tradition; fishing and agriculture."},
+          {"slug": "Sao_Decline_CM", "name": "Sao Decline and Kotoko Succession", "year_range": [1200, 1500], "description": "Kanem-Bornu expansion absorbs Sao communities; Kotoko city-states emerge as successors in the far north."}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Kanem_Bornu_Influence_CM",
+        "name": "Kanem-Bornu Influence in Northern Cameroon",
+        "year_range": [1000, 1800],
+        "status": "PLANNED",
+        "description": "The Kanem-Bornu Empire extends suzerainty over Mandara, Kotoko, and other northern Cameroon polities; Islam spreads via trade and conquest.",
+        "sub_clusters": [
+          {"slug": "Mandara_Sultanate_CM", "name": "Mandara Sultanate", "year_range": [1500, 1800], "description": "Mandara kingdom in the Mandara Mountains converts to Islam; mediates between Bornu and southern highland peoples."},
+          {"slug": "Trans_Saharan_Links_CM", "name": "Trans-Saharan and Trans-Sudanic Trade", "year_range": [1000, 1800], "description": "Slave, ivory, and cloth trade links northern Cameroon to Bornu, Tripoli, and the Hausa states."}
+        ]
+      },
+      {
+        "slug": "Grassfields_Kingdoms_CM",
+        "name": "Grassfields Kingdoms and Bamoun Sultanate",
+        "year_range": [1300, 1900],
+        "status": "PLANNED",
+        "description": "Tikar-related chiefdoms and the Bamoun Sultanate develop centralised kingdoms in the western highlands; artistic traditions flourish.",
+        "sub_clusters": [
+          {"slug": "Bamoun_Sultanate_CM", "name": "Bamoun Sultanate and King Njoya", "year_range": [1394, 1933], "description": "The Bamoun Sultanate under Sultan Njoya develops a unique script (Shu Mom), converts to Islam, and creates an elaborate court culture.", "key_events": ["Njoya_Script_Invention"]},
+          {"slug": "Bamileke_Chiefdoms_CM", "name": "Bamileke and Tikar Chiefdoms", "year_range": [1300, 1900], "description": "Decentralised but hierarchical Bamileke chiefdoms in the western highlands; elaborate secret societies and masquerade traditions."}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Fulani_Jihad_CM",
+        "name": "Fulani Jihad and Adamawa Emirate",
+        "year_range": [1804, 1903],
+        "status": "PLANNED",
+        "description": "Modibbo Adama leads Fulani jihad into northern Cameroon as part of the Sokoto Caliphate; Adamawa Emirate transforms the region.",
+        "sub_clusters": [
+          {"slug": "Adamawa_Emirate_CM", "name": "Founding of the Adamawa Emirate", "year_range": [1809, 1903], "description": "Modibbo Adama receives a flag from Usman dan Fodio; establishes Yola as capital; subordinate lamidates across northern Cameroon.", "key_events": ["Adamawa_Emirate_Founded_1809"]},
+          {"slug": "Fulani_Slave_Raids_CM", "name": "Fulani Slave Raiding and Resistance", "year_range": [1820, 1900], "description": "Fulani lamidates raid non-Muslim 'kirdi' peoples of the Mandara Mountains and Adamawa Plateau; fierce resistance from Gbaya and other groups."}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "German_Kamerun",
+        "name": "German Kamerun (1884–1916)",
+        "year_range": [1884, 1916],
+        "status": "PLANNED",
+        "description": "Germany establishes Kamerun protectorate; plantation economy on the coast; expansion into interior; World War I campaigns end German rule.",
+        "sub_clusters": [
+          {"slug": "German_Annexation_CM", "name": "German Annexation and Gustav Nachtigal", "year_range": [1884, 1895], "description": "Gustav Nachtigal signs treaties with Douala chiefs; Kamerun protectorate proclaimed at Scramble for Africa; coastal plantation economy (cocoa, rubber, palm oil).", "key_events": ["German_Kamerun_Proclaimed_1884"]},
+          {"slug": "German_Interior_Conquest_CM", "name": "German Conquest of the Interior", "year_range": [1895, 1911], "description": "Military expeditions subdue Adamawa, Bamoun, and Bamileke areas; forced labour for railways and plantations; Neukamerun acquired from France 1911."},
+          {"slug": "WWI_Kamerun_Campaign", "name": "World War I Kamerun Campaign", "year_range": [1914, 1916], "description": "Allied (British, French, Belgian) forces invade; Germans resist until Mora garrison surrenders February 1916; colony partitioned.", "key_events": ["Fall_Mora_1916"]}
+        ]
+      },
+      {
+        "slug": "Mandate_Trusteeship_CM",
+        "name": "French and British Mandates (1916–1960)",
+        "year_range": [1916, 1961],
+        "status": "PLANNED",
+        "description": "League of Nations mandates divide Cameroon; French Cameroun (80%) and British Cameroons develop under different colonial systems.",
+        "sub_clusters": [
+          {"slug": "French_Cameroun_Mandate", "name": "French Cameroun Mandate and Trusteeship", "year_range": [1916, 1960], "description": "Indigénat system; forced labour for infrastructure; UPC nationalist movement; brutal suppression of Bamileke insurrection (1955–1960).", "key_events": ["UPC_Rebellion_1955"]},
+          {"slug": "British_Cameroons_Mandate", "name": "British Cameroons and the Plebiscite", "year_range": [1916, 1961], "description": "British Cameroons administered as part of Nigeria; 1961 plebiscite: Northern Cameroons joins Nigeria, Southern Cameroons joins Cameroun Republic."}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Ahidjo_Era_CM",
+        "name": "Ahmadou Ahidjo and Nation-Building",
+        "year_range": [1960, 1982],
+        "status": "PLANNED",
+        "description": "Ahidjo leads independent Cameroon; federal then unitary state; one-party CNU rule; suppression of UPC insurgency; oil economy begins.",
+        "sub_clusters": [
+          {"slug": "Independence_Reunification_CM", "name": "Independence and Reunification", "year_range": [1960, 1961], "description": "French Cameroun independent 1 January 1960; Southern Cameroons reunification creates Federal Republic 1 October 1961.", "key_events": ["Cameroon_Independence_1960"]},
+          {"slug": "Ahidjo_One_Party_CM", "name": "Ahidjo's Unitary One-Party State", "year_range": [1966, 1982], "description": "Federation abolished 1972 (United Republic); single-party CNU regime; political centralisation; Ahidjo resigns 1982, hands power to Biya."}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Biya_Era_CM",
+        "name": "Paul Biya Era (1982–Present)",
+        "year_range": [1982, 2026],
+        "status": "PLANNED",
+        "description": "Biya becomes one of Africa's longest-ruling leaders; multiparty transition; economic crisis; Anglophone crisis escalates to armed conflict; Boko Haram spillover in the Far North.",
+        "sub_clusters": [
+          {"slug": "Biya_Consolidation_CM", "name": "Biya's Consolidation of Power", "year_range": [1982, 1992], "description": "Failed 1984 coup; Ahidjo exiled; CPDM replaces CNU; austerity under structural adjustment; democratic opening under pressure."},
+          {"slug": "Multiparty_Cameroon_CM", "name": "Multiparty Politics and Ghost Towns", "year_range": [1990, 2010], "description": "Villes mortes (ghost town) campaign; opposition leader John Fru Ndi; contested elections; oil revenues sustain patronage networks."},
+          {"slug": "Anglophone_Crisis_CM", "name": "Anglophone Crisis and Armed Conflict", "year_range": [2016, 2026], "description": "Lawyers' and teachers' strikes escalate; Ambazonia separatist declaration; military crackdown; humanitarian crisis displacing hundreds of thousands.", "key_events": ["Ambazonia_Declaration_2017"]},
+          {"slug": "Boko_Haram_Far_North_CM", "name": "Boko Haram in the Far North", "year_range": [2013, 2026], "description": "Boko Haram and ISWAP attacks spill from Nigeria into Cameroon's Far North; multinational joint task force; civilian displacement.", "key_events": ["Boko_Haram_Cameroon_2014"]}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "Bantu_Origins_CM", "interfaces_with": ["Bantu_Migration", "Niger_Congo_Languages", "African_Ironworking"]},
+    {"cluster": "Sao_Civilisation_CM", "interfaces_with": ["Lake_Chad_Basin", "Kanem_Bornu_Empire", "Sahel_Civilisations"]},
+    {"cluster": "Fulani_Jihad_CM", "interfaces_with": ["Sokoto_Caliphate", "Fulani_Jihads_West_Africa", "Islamic_Reform_Movements"]},
+    {"cluster": "German_Kamerun", "interfaces_with": ["Scramble_For_Africa", "German_Colonial_Empire", "WWI_African_Campaigns"]},
+    {"cluster": "Mandate_Trusteeship_CM", "interfaces_with": ["League_Of_Nations_Mandates", "French_Colonial_Empire", "British_Colonial_Empire"]},
+    {"cluster": "Anglophone_Crisis_CM", "interfaces_with": ["Linguistic_Nationalism_Africa", "Self_Determination_Movements", "African_Federalism"]},
+    {"cluster": "Boko_Haram_Far_North_CM", "interfaces_with": ["Boko_Haram_Insurgency", "Lake_Chad_Crisis", "Sahel_Security_Crisis"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 9,
+    "total_level5_subclusters": 23,
+    "active_clusters": 0,
+    "planned_clusters": 9,
+    "timeframe_distribution": {"910": 2, "920": 2, "930": 1, "940": 2, "950": 1, "960": 1}
+  }
+}

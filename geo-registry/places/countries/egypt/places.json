@@ -1,154 +1,284 @@
 {
-  "slug": "egypt",
-  "name": "Egypt",
-  "iso": "EG",
-  "wikidata_id": "Q79",
-  "names": [
-    {
-      "name": "Egypt",
-      "lang": "en",
-      "is_primary": true
-    },
-    {
-      "name": "مصر",
-      "lang": "ar",
-      "script": "Arab",
-      "is_endonym": true,
-      "note": "Misr"
-    },
-    {
-      "name": "Égypte",
-      "lang": "fr"
-    }
-  ],
-  "cities": {
-    "cairo": {
-      "name": "Cairo",
-      "wikidata_id": "Q85",
-      "names": [
-        {
-          "name": "Cairo",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "القاهرة",
-          "lang": "ar",
-          "script": "Arab",
-          "is_endonym": true,
-          "note": "Al-Qahira"
+  "_meta": {
+    "country_slug": "egypt",
+    "node_kind": "places",
+    "registry": "docs/nodes/node-attribute-registry.md",
+    "generated_at": "2026-01-31T13:56:07.815131Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Naqada",
+        "name": "Naqada",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "egy",
+        "script": "Egyp",
+        "place_kind": "Archaeological_Site",
+        "description": "Predynastic cultural center associated with Naqada I–III periods.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Upper Egypt"
         }
-      ]
-    },
-    "alexandria": {
-      "name": "Alexandria",
-      "wikidata_id": "Q87",
-      "names": [
-        {
-          "name": "Alexandria",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "الإسكندرية",
-          "lang": "ar",
-          "script": "Arab",
-          "is_endonym": true
-        },
-        {
-          "name": "Ἀλεξάνδρεια",
-          "lang": "grc",
-          "script": "Grek",
-          "note": "Ancient Greek"
+      },
+      {
+        "slug": "Hierakonpolis",
+        "name": "Hierakonpolis",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "egy",
+        "script": "Egyp",
+        "place_kind": "Archaeological_Site",
+        "description": "Predynastic urban and religious center near modern Kom el-Ahmar.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Upper Egypt"
         }
-      ]
-    },
-    "luxor": {
-      "name": "Luxor",
-      "wikidata_id": "Q84178",
-      "names": [
-        {
-          "name": "Luxor",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "الأقصر",
-          "lang": "ar",
-          "script": "Arab",
-          "is_endonym": true
+      },
+      {
+        "slug": "Abydos",
+        "name": "Abydos",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "egy",
+        "script": "Egyp",
+        "place_kind": "Archaeological_Site",
+        "description": "Sacred burial site and early dynastic center in Upper Egypt.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Sohag"
         }
-      ],
-      "former_names": [
-        {
-          "name": "Thebes",
-          "lang": "grc",
-          "note": "Ancient Greek name"
-        },
-        {
-          "name": "Waset",
-          "lang": "egy",
-          "note": "Ancient Egyptian name"
+      }
+    ],
+    "920": [
+      {
+        "slug": "Memphis",
+        "name": "Memphis",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "egy",
+        "script": "Egyp",
+        "place_kind": "Ancient_Capital",
+        "description": "Ancient capital near modern Cairo, center of royal administration.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Lower Egypt"
         }
-      ]
-    },
-    "aswan": {
-      "name": "Aswan",
-      "wikidata_id": "Q163645",
-      "names": [
-        {
-          "name": "Aswan",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "أسوان",
-          "lang": "ar",
-          "script": "Arab",
-          "is_endonym": true
+      },
+      {
+        "slug": "Giza_Plateau",
+        "name": "Giza Plateau",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "egy",
+        "script": "Egyp",
+        "place_kind": "Archaeological_Site",
+        "description": "Site of major pyramid complexes and the Great Sphinx.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Giza"
         }
-      ],
-      "former_names": [
-        {
-          "name": "Syene",
-          "lang": "grc",
-          "note": "Ancient Greek name"
+      },
+      {
+        "slug": "Thebes",
+        "name": "Thebes (Waset)",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "egy",
+        "script": "Egyp",
+        "place_kind": "Ancient_Capital",
+        "description": "Major New Kingdom capital associated with Karnak and Luxor.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Luxor"
         }
-      ]
-    },
-    "giza": {
-      "name": "Giza",
-      "wikidata_id": "Q83077",
-      "names": [
-        {
-          "name": "Giza",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "الجيزة",
-          "lang": "ar",
-          "script": "Arab",
-          "is_endonym": true
+      }
+    ],
+    "930": [
+      {
+        "slug": "Fustat",
+        "name": "Fustat",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "place_kind": "Historic_City",
+        "description": "Early Islamic administrative capital near modern Cairo.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Cairo"
         }
-      ]
-    },
-    "port-said": {
-      "name": "Port Said",
-      "wikidata_id": "Q134509",
-      "names": [
-        {
-          "name": "Port Said",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "بور سعيد",
-          "lang": "ar",
-          "script": "Arab",
-          "is_endonym": true
+      },
+      {
+        "slug": "Cairo",
+        "name": "Cairo",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "place_kind": "Capital",
+        "description": "Medieval and modern capital founded in the Fatimid period.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Cairo"
         }
-      ]
-    }
+      },
+      {
+        "slug": "Alexandria",
+        "name": "Alexandria",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "grc",
+        "script": "Grek",
+        "place_kind": "City",
+        "description": "Major Mediterranean port and cultural center founded by Alexander the Great.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Mediterranean Coast"
+        }
+      }
+    ],
+    "940": [
+      {
+        "slug": "Damietta",
+        "name": "Damietta",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "place_kind": "Port_City",
+        "description": "Strategic Nile Delta port city with medieval and early modern prominence.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Nile Delta"
+        }
+      },
+      {
+        "slug": "Rosetta",
+        "name": "Rosetta (Rashid)",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "place_kind": "City",
+        "description": "Delta town known for the discovery of the Rosetta Stone.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Nile Delta"
+        }
+      },
+      {
+        "slug": "Suez",
+        "name": "Suez",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "place_kind": "Port_City",
+        "description": "Red Sea port city at the southern terminus of the Suez Canal.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Red Sea"
+        }
+      }
+    ],
+    "950": [
+      {
+        "slug": "Port_Said",
+        "name": "Port Said",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "place_kind": "Port_City",
+        "description": "Mediterranean port established with the construction of the Suez Canal.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Suez Canal"
+        }
+      },
+      {
+        "slug": "Aswan",
+        "name": "Aswan",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "place_kind": "City",
+        "description": "Upper Egyptian city near the First Cataract and dam projects.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Upper Egypt"
+        }
+      },
+      {
+        "slug": "Luxor",
+        "name": "Luxor",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "place_kind": "City",
+        "description": "Modern city adjacent to ancient Thebes and major temple complexes.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Upper Egypt"
+        }
+      }
+    ],
+    "960": [
+      {
+        "slug": "Sharm_el_Sheikh",
+        "name": "Sharm el-Sheikh",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "place_kind": "Resort_City",
+        "description": "Tourism and conference city on the southern Sinai Peninsula.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "South Sinai"
+        }
+      },
+      {
+        "slug": "New_Administrative_Capital",
+        "name": "New Administrative Capital",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "place_kind": "City",
+        "description": "Planned capital city east of Cairo intended to host government institutions.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Greater Cairo"
+        }
+      },
+      {
+        "slug": "Alexandria_Modern",
+        "name": "Alexandria (Modern)",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "place_kind": "City",
+        "description": "Major modern Egyptian port city on the Mediterranean.",
+        "location": {
+          "country_slug": "egypt",
+          "place_note": "Mediterranean Coast"
+        }
+      }
+    ]
   }
 }

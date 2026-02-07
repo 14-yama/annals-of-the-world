@@ -1,0 +1,153 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "dr-congo",
+    "country_name": "Democratic Republic of the Congo",
+    "region": "Central Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "CD",
+    "iso3166_alpha3": "COD",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for the Democratic Republic of the Congo covering Bantu migration, Kongo, Luba, and Lunda kingdoms, King Leopold's Congo Free State (rubber terror), Belgian Congo, Lumumba assassination, Mobutu/Zaire, Congo Wars (Africa's World War), Kabila era, and conflict minerals."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Early_Peoples_CD",
+        "name": "Early Peoples and Bantu Migration",
+        "year_range": [-10000, 500],
+        "status": "PLANNED",
+        "description": "Hunter-gatherer Pygmy peoples (Mbuti, Twa) inhabit the Ituri rainforest; Bantu-speaking farmers migrate into the Congo Basin bringing agriculture and ironworking.",
+        "sub_clusters": [
+          {"slug": "Pygmy_Peoples_CD", "name": "Mbuti, Twa, and Forest Peoples", "year_range": [-10000, 500], "description": "Indigenous hunter-gatherer communities in the equatorial forest; symbiotic relationships with later Bantu farming arrivals."},
+          {"slug": "Bantu_Expansion_CD", "name": "Bantu Expansion into the Congo Basin", "year_range": [-2000, 500], "description": "Bantu-speaking farmers spread across the Congo Basin; introduce iron smelting, pottery, and banana cultivation; population growth transforms the landscape."}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Kongo_Kingdom_CD",
+        "name": "Kongo Kingdom",
+        "year_range": [1300, 1800],
+        "status": "PLANNED",
+        "description": "The Kongo Kingdom, centered on Mbanza-Kongo, becomes one of Africa's most powerful states; early contact with Portugal; Christianity adopted; kingdom fragmentsover time.",
+        "sub_clusters": [
+          {"slug": "Kongo_Foundation_CD", "name": "Foundation and Expansion of Kongo", "year_range": [1300, 1491], "description": "Lukeni lua Nimi founds the Kongo Kingdom; capital at Mbanza-Kongo; control of trade in copper, iron, raffia, and nzimbu shell currency."},
+          {"slug": "Kongo_Portuguese_Contact_CD", "name": "Portuguese Contact and Afonso I", "year_range": [1482, 1543], "description": "Diogo Cão reaches Kongo 1482; King Afonso I converts to Christianity; diplomatic relations with Portugal and the Vatican; slave trade begins.", "key_events": ["Portuguese_Contact_Kongo_1482"]},
+          {"slug": "Kongo_Decline_CD", "name": "Battle of Mbwila and Kongo Decline", "year_range": [1665, 1800], "description": "Kongo defeated by Portuguese at Battle of Mbwila (Ambuila) 1665; king killed; kingdom fragments into warring factions; civil wars until 18th century.", "key_events": ["Battle_Mbwila_1665"]}
+        ]
+      },
+      {
+        "slug": "Luba_Lunda_Empires_CD",
+        "name": "Luba and Lunda Empires",
+        "year_range": [1400, 1900],
+        "status": "PLANNED",
+        "description": "The Luba and Lunda empires dominate the savanna of southeastern Congo; sophisticated political systems, copper/salt trade, and far-reaching influence.",
+        "sub_clusters": [
+          {"slug": "Luba_Empire_CD", "name": "Luba Empire", "year_range": [1400, 1889], "description": "Luba kingdom in the Upemba Depression; sacred kingship (mulopwe); elaborate political philosophy; copper-cross currency; ironworking centres."},
+          {"slug": "Lunda_Empire_CD", "name": "Lunda Empire and Mwata Yamvo", "year_range": [1500, 1900], "description": "Lunda Empire expands under the Mwata Yamvo title; extensive tributary system; trade in slaves, ivory, and wax reaching both Atlantic and Indian Ocean coasts."},
+          {"slug": "Yeke_Kingdom_CD", "name": "Msiri's Yeke Kingdom (Katanga)", "year_range": [1856, 1891], "description": "Nyamwezi trader Msiri establishes Yeke Kingdom in copper-rich Katanga; controls long-distance trade; killed by Belgian expedition 1891."}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Slave_Trade_Exploration_CD",
+        "name": "Slave Trade and European Exploration",
+        "year_range": [1500, 1885],
+        "status": "PLANNED",
+        "description": "Atlantic and East African slave trades devastate the population; Arab-Swahili traders penetrate from the east; Stanley's exploration opens the Congo to European imperialism.",
+        "sub_clusters": [
+          {"slug": "Atlantic_Slave_Trade_CD", "name": "Atlantic Slave Trade from Congo", "year_range": [1500, 1850], "description": "Millions enslaved from the Congo region; Loango, Cabinda, and Kongo ports; internal wars fuelled by demand for captives; demographic catastrophe."},
+          {"slug": "Arab_Swahili_Slave_Trade_CD", "name": "Arab-Swahili Slave and Ivory Trade", "year_range": [1800, 1890], "description": "Tippu Tip and other traders establish slaving networks from Zanzibar deep into eastern Congo; Manyema devastated; Nyangwe massacre 1871."},
+          {"slug": "Stanley_Exploration_CD", "name": "Stanley's Exploration of the Congo", "year_range": [1874, 1884], "description": "Henry Morton Stanley traverses the Congo River 1874–77; later signs treaties for Leopold II; maps the Congo for European exploitation.", "key_events": ["Stanley_Congo_Expedition_1877"]}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "Congo_Free_State_CD",
+        "name": "King Leopold's Congo Free State (1885–1908)",
+        "year_range": [1885, 1908],
+        "status": "PLANNED",
+        "description": "King Leopold II's personal colony; rubber terror regime kills millions; mutilations and forced labour; international outcry leads to Belgian takeover.",
+        "sub_clusters": [
+          {"slug": "Berlin_Conference_CFS", "name": "Berlin Conference and Congo Free State", "year_range": [1884, 1891], "description": "Berlin Conference (1884–85) recognises Leopold's International Association as sovereign of the Congo; Force Publique established; rubber exploitation begins.", "key_events": ["Berlin_Conference_1885"]},
+          {"slug": "Rubber_Terror_CFS", "name": "Rubber Terror and Atrocities", "year_range": [1891, 1906], "description": "Forced rubber quotas enforced by mutilation (hand-cutting), hostage-taking, and murder; population estimated to have halved; Casement Report (1904) and E.D. Morel's campaign expose horrors.", "key_events": ["Casement_Report_1904"]},
+          {"slug": "Belgian_Annexation_CD", "name": "Belgian Annexation (Belgian Congo)", "year_range": [1908, 1960], "description": "Belgium annexes Congo Free State 1908; paternalistic colonial rule; mining economy (Union Minière du Haut-Katanga); limited African education; no political rights until late 1950s."}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Independence_Lumumba_CD",
+        "name": "Independence, Lumumba, and Congo Crisis",
+        "year_range": [1958, 1965],
+        "status": "PLANNED",
+        "description": "Rapid decolonisation; Patrice Lumumba becomes first PM; Congo Crisis erupts with Katanga secession, Lumumba assassination, and UN intervention.",
+        "sub_clusters": [
+          {"slug": "Independence_Crisis_CD", "name": "Independence and the Congo Crisis", "year_range": [1960, 1963], "description": "Congo independent 30 June 1960; Force Publique mutiny; Katanga secession under Tshombe; Lumumba assassinated January 1961 with Belgian and CIA complicity; UN intervention.", "key_events": ["Congo_Independence_1960", "Lumumba_Assassination_1961"]},
+          {"slug": "Katanga_Secession_CD", "name": "Katanga Secession and Resolution", "year_range": [1960, 1963], "description": "Moïse Tshombe declares Katanga independent backed by Belgian mining interests and mercenaries; UN operations end secession by January 1963."}
+        ]
+      },
+      {
+        "slug": "Mobutu_Zaire_CD",
+        "name": "Mobutu and Zaïre (1965–1997)",
+        "year_range": [1965, 1997],
+        "status": "PLANNED",
+        "description": "Mobutu Sese Seko seizes power; renames country Zaïre; Authenticité campaign; Cold War ally; massive corruption; economic collapse; ousted by AFDL.",
+        "sub_clusters": [
+          {"slug": "Mobutu_Coup_Consolidation_CD", "name": "Mobutu's Coup and Consolidation", "year_range": [1965, 1975], "description": "Lieutenant-General Mobutu seizes power November 1965; single-party MPR state; nationalises Union Minière (Gécamines); Zaïrianisation of economy.", "key_events": ["Mobutu_Coup_1965"]},
+          {"slug": "Authenticite_Zaire_CD", "name": "Authenticité and Cold War Patronage", "year_range": [1971, 1990], "description": "Country renamed Zaïre; Authenticité campaign; Shaba invasions repelled with Western help; Mobutu as Cold War anti-communist ally; kleptocracy hollows out the state."},
+          {"slug": "Mobutu_Decline_CD", "name": "Mobutu's Decline and Fall", "year_range": [1990, 1997], "description": "Cold War ends; Western support withdrawn; sovereign national conference; Rwandan genocide spillover; Laurent-Désiré Kabila's AFDL marches on Kinshasa; Mobutu flees May 1997."}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Congo_Wars_CD",
+        "name": "Congo Wars: Africa's World War",
+        "year_range": [1996, 2003],
+        "status": "PLANNED",
+        "description": "Two Congo Wars (1996–97, 1998–2003) draw in nine African nations; estimated 5.4 million excess deaths; deadliest conflict since WWII.",
+        "sub_clusters": [
+          {"slug": "First_Congo_War_CD", "name": "First Congo War (1996–1997)", "year_range": [1996, 1997], "description": "Rwanda and Uganda back AFDL; Rwandan Hutu refugee camps dismantled; Kabila topples Mobutu; DRC declared."},
+          {"slug": "Second_Congo_War_CD", "name": "Second Congo War (1998–2003)", "year_range": [1998, 2003], "description": "Kabila turns against Rwandan/Ugandan allies; nine African nations involved; RCD and MLC rebel groups; Lusaka Ceasefire; Laurent Kabila assassinated January 2001; Joseph Kabila succeeds.", "key_events": ["Second_Congo_War_1998", "Laurent_Kabila_Assassinated_2001"]}
+        ]
+      },
+      {
+        "slug": "Post_War_DRC_CD",
+        "name": "Post-War DRC: Kabila Era and Beyond",
+        "year_range": [2003, 2026],
+        "status": "PLANNED",
+        "description": "Transitional government; Joseph Kabila's presidency; delayed elections; Felix Tshisekedi elected 2019; ongoing eastern insurgency; conflict minerals.",
+        "sub_clusters": [
+          {"slug": "Joseph_Kabila_CD", "name": "Joseph Kabila Presidency", "year_range": [2001, 2019], "description": "Joseph Kabila oversees transition; elections 2006 and 2011; refuses to leave after term expires; eventually transfers power to Tshisekedi 2019."},
+          {"slug": "Eastern_DRC_Conflict_CD", "name": "Eastern DRC: Endless Insurgency", "year_range": [2003, 2026], "description": "Over 100 armed groups in Kivu; CNDP, M23, ADF-NALU, Mai-Mai; Rwanda-backed M23 captures Goma 2012 and resurges 2022–2023; MONUSCO peacekeeping.", "key_events": ["M23_Captures_Goma_2012"]},
+          {"slug": "Conflict_Minerals_CD", "name": "Conflict Minerals and Resource Curse", "year_range": [2000, 2026], "description": "Coltan, cobalt, tin, and gold fund armed groups; DRC holds world's largest cobalt reserves critical for batteries; Dodd-Frank Section 1502; artisanal mining abuses."},
+          {"slug": "Tshisekedi_Era_CD", "name": "Tshisekedi Presidency", "year_range": [2019, 2026], "description": "Félix Tshisekedi wins disputed election January 2019; breaks coalition with Kabila's FCC; re-elected 2023; M23 crisis and Rwanda tensions escalate."}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "Kongo_Kingdom_CD", "interfaces_with": ["Kongo_Kingdom", "Portuguese_Africa", "Atlantic_Slave_Trade"]},
+    {"cluster": "Luba_Lunda_Empires_CD", "interfaces_with": ["Bantu_Kingdoms", "Long_Distance_Trade_Africa", "Copper_Trade_Central_Africa"]},
+    {"cluster": "Congo_Free_State_CD", "interfaces_with": ["Scramble_For_Africa", "Leopold_II_Belgium", "Humanitarian_Movements", "Berlin_Conference"]},
+    {"cluster": "Rubber_Terror_CFS", "interfaces_with": ["Colonial_Atrocities", "Congo_Reform_Association", "Heart_Of_Darkness"]},
+    {"cluster": "Independence_Lumumba_CD", "interfaces_with": ["Cold_War_Africa", "CIA_Covert_Operations", "UN_Peacekeeping", "Belgian_Decolonisation"]},
+    {"cluster": "Mobutu_Zaire_CD", "interfaces_with": ["Cold_War_Africa", "African_Dictatorships", "Kleptocracy", "Authenticite_Movement"]},
+    {"cluster": "Congo_Wars_CD", "interfaces_with": ["Rwandan_Genocide_Aftermath", "Great_Lakes_Crisis", "African_World_War"]},
+    {"cluster": "Conflict_Minerals_CD", "interfaces_with": ["Global_Supply_Chains", "Cobalt_Economy", "Resource_Curse_Africa", "Technology_Supply_Chain"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 10,
+    "total_level5_subclusters": 26,
+    "active_clusters": 0,
+    "planned_clusters": 10,
+    "timeframe_distribution": {"910": 1, "920": 2, "930": 1, "940": 1, "950": 2, "960": 2}
+  }
+}

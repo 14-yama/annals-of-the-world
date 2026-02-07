@@ -1,0 +1,151 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "angola",
+    "country_name": "Angola",
+    "region": "Southern Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "AO",
+    "iso3166_alpha3": "AGO",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for Angola covering Kongo Kingdom, Ndongo/Mbundu (Queen Njinga), Portuguese colonisation (oldest in sub-Saharan Africa 1575–1975), Atlantic slave trade centre, liberation movements (MPLA/FNLA/UNITA), civil war 1975–2002 (Cold War proxy), dos Santos era, oil wealth, and Lourenço reforms."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Early_Inhabitants_AO",
+        "name": "Early Inhabitants and Stone Age Angola",
+        "year_range": [-500000, 500],
+        "status": "PLANNED",
+        "description": "Stone Age occupation of Angola; San/Khoisan hunter-gatherers in the south; earliest Bantu migration begins.",
+        "sub_clusters": [
+          {"slug": "Stone_Age_AO", "name": "Stone Age Populations", "year_range": [-500000, -5000], "description": "Archaeological sites across Angola show Early, Middle, and Late Stone Age occupation; rock shelters in the central highlands; Khoisan hunter-gatherers in southern Angola."},
+          {"slug": "Early_Bantu_Migration_AO", "name": "Early Bantu Migration into Angola", "year_range": [-1000, 500], "description": "Bantu-speaking peoples begin migrating from the Cameroon-Nigeria borderlands through the Congo Basin into Angola; introduction of iron-working, pottery, and agriculture."}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Kongo_Kingdom_AO",
+        "name": "Kingdom of Kongo",
+        "year_range": [1390, 1700],
+        "status": "PLANNED",
+        "description": "The Kingdom of Kongo, one of Africa's most powerful states, dominates the region with its capital at Mbanza Kongo; early contact and conversion to Christianity through Portugal.",
+        "sub_clusters": [
+          {"slug": "Kongo_Foundation", "name": "Foundation and Expansion of Kongo", "year_range": [1390, 1483], "description": "Lukeni lua Nimi founds the Kongo Kingdom c.1390; capital at Mbanza Kongo; federation of provinces (Mbata, Soyo, Mpangu, Mbamba, Nsundi); agriculture, trade, and raffia cloth currency."},
+          {"slug": "Kongo_Portuguese_Contact", "name": "Kongo-Portuguese Contact and Christianity", "year_range": [1483, 1543], "description": "Diogo Cão reaches Kongo 1483; Manikongo Nzinga a Nkuwu baptised as João I 1491; his son Afonso I (Mvemba a Nzinga) embraces Christianity and literacy; diplomatic exchanges with Vatican and Lisbon.", "key_events": ["Portuguese_Contact_Kongo_1483", "Afonso_I_Kongo_Reign"]},
+          {"slug": "Kongo_Decline_AO", "name": "Kongo Kingdom Decline", "year_range": [1543, 1700], "description": "Slave trade undermines royal authority; Battle of Mbwila 1665 (Portuguese defeat Kongo, kill King António I); kingdom fragments into warring factions; Kimpa Vita's Antonian movement 1704.", "key_events": ["Battle_Mbwila_1665"]}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Ndongo_Queen_Njinga",
+        "name": "Kingdom of Ndongo and Queen Njinga",
+        "year_range": [1500, 1700],
+        "status": "PLANNED",
+        "description": "The Mbundu Kingdom of Ndongo resists Portuguese colonisation; Queen Njinga (Ana de Sousa Nzinga Mbande) becomes one of Africa's most celebrated resistance leaders.",
+        "sub_clusters": [
+          {"slug": "Ndongo_Kingdom_AO", "name": "Kingdom of Ndongo", "year_range": [1500, 1617], "description": "Mbundu kingdom of Ndongo ruled by the ngola (king, from which 'Angola' derives); iron-working; resistance to Portuguese slave raids and fortification at Luanda."},
+          {"slug": "Queen_Njinga_AO", "name": "Queen Njinga's Resistance", "year_range": [1624, 1663], "description": "Njinga becomes queen of Ndongo 1624; legendary negotiation with Portuguese governor (chair incident); allies with Dutch against Portugal; conquers Matamba; fights for decades; makes peace 1657.", "key_events": ["Queen_Njinga_Resistance_1624"]},
+          {"slug": "Portuguese_Luanda_AO", "name": "Portuguese Foundation of Luanda", "year_range": [1575, 1650], "description": "Paulo Dias de Novais founds São Paulo de Luanda 1575 — oldest European-founded city in sub-Saharan Africa; becomes primary slave-trading port; Portuguese penetration into interior.", "key_events": ["Luanda_Founded_1575"]}
+        ]
+      },
+      {
+        "slug": "Atlantic_Slave_Trade_AO",
+        "name": "Angola and the Atlantic Slave Trade",
+        "year_range": [1500, 1867],
+        "status": "PLANNED",
+        "description": "Angola becomes the single largest source of enslaved Africans for the Atlantic slave trade; an estimated 5.7 million people are shipped from Angolan ports, primarily to Brazil.",
+        "sub_clusters": [
+          {"slug": "Slave_Trade_Expansion_AO", "name": "Slave Trade Expansion", "year_range": [1500, 1750], "description": "Portuguese slavers (pombeiros) penetrate interior; Luanda and Benguela as major embarkation ports; wars of enslavement; presídios (forts) along trade routes."},
+          {"slug": "Brazil_Connection_AO", "name": "Angola-Brazil Slave Trade Axis", "year_range": [1600, 1867], "description": "Direct Angola-Brazil trade route dominates the South Atlantic; Brazilian cachaça, tobacco, and textiles exchanged for enslaved peoples; cultural connections persist; trade continues illegally after 1836 ban.", "key_events": ["Angola_Slave_Trade_Peak"]}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "Portuguese_Colonial_Rule_AO",
+        "name": "Portuguese Colonial Rule",
+        "year_range": [1867, 1961],
+        "status": "PLANNED",
+        "description": "Portugal consolidates colonial control after abolition of slave trade; forced labour (contrato), plantation economy, and racial hierarchy; longest European colonisation in sub-Saharan Africa.",
+        "sub_clusters": [
+          {"slug": "Colonial_Consolidation_AO", "name": "Colonial Consolidation and Pacification Wars", "year_range": [1867, 1930], "description": "Portugal's 'pacification campaigns' against Ovimbundu, Kwanyama, and Dembos peoples; Berlin Conference confirms Portuguese claims; Angola's borders fixed by treaties with Britain and Germany."},
+          {"slug": "Forced_Labour_AO", "name": "Forced Labour and Contract System", "year_range": [1899, 1961], "description": "Abolition of slavery replaced by contrato (contract) forced labour; cotton, coffee, and sisal plantations; indígena/assimilado racial classification; Henrique Galvão's damning 1947 report.", "key_events": ["Galvao_Report_1947"]},
+          {"slug": "Colonial_Economy_AO", "name": "Colonial Coffee Economy and White Settlement", "year_range": [1930, 1961], "description": "Angola becomes world's fourth-largest coffee producer; Salazar's Estado Novo encourages Portuguese settlement; settler population rises from 44,000 (1940) to 340,000 (1974)."}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Liberation_Movements_AO",
+        "name": "Liberation Movements and Independence War",
+        "year_range": [1956, 1975],
+        "status": "PLANNED",
+        "description": "Three rival liberation movements — MPLA, FNLA, and UNITA — wage a 14-year war against Portuguese colonial rule; Carnation Revolution in Lisbon precipitates independence.",
+        "sub_clusters": [
+          {"slug": "MPLA_FNLA_UNITA_Formation", "name": "Formation of Liberation Movements", "year_range": [1956, 1966], "description": "MPLA (Agostinho Neto, 1956); FNLA (Holden Roberto, 1962); UNITA (Jonas Savimbi, 1966); ethnic and ideological divides: MPLA (Mbundu/Luanda creoles/Marxist), FNLA (Bakongo), UNITA (Ovimbundu).", "key_events": ["MPLA_Founded_1956"]},
+          {"slug": "Colonial_War_AO", "name": "Angolan War of Independence", "year_range": [1961, 1974], "description": "Luanda prison attack and Baixa de Cassange cotton revolt (4 February 1961); UPA/FNLA massacre in northern Angola; Portuguese counter-insurgency; war drains Portugal.", "key_events": ["Angola_War_Begins_1961"]},
+          {"slug": "Independence_1975_AO", "name": "Independence and Immediate Civil War", "year_range": [1974, 1976], "description": "Carnation Revolution in Lisbon April 1974; Alvor Accords January 1975; transitional government collapses; MPLA takes Luanda; independence 11 November 1975; South African invasion; Cuban intervention; FNLA defeated.", "key_events": ["Angola_Independence_1975"]}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Civil_War_AO",
+        "name": "Angolan Civil War (1975–2002)",
+        "year_range": [1975, 2002],
+        "status": "PLANNED",
+        "description": "One of Africa's longest and deadliest civil wars; Cold War proxy conflict between Soviet/Cuban-backed MPLA and US/South African-backed UNITA; devastation of infrastructure and millions displaced.",
+        "sub_clusters": [
+          {"slug": "Cold_War_Proxy_AO", "name": "Cold War Proxy Phase", "year_range": [1975, 1991], "description": "Soviet arms and Cuban troops support MPLA; US CIA and South African military back UNITA/FNLA; Cuito Cuanavale battle 1988; New York Accords link Namibian independence to Cuban withdrawal.", "key_events": ["Battle_Cuito_Cuanavale_1988"]},
+          {"slug": "Failed_Peace_Resumed_War_AO", "name": "Failed Peace and Resumed War", "year_range": [1991, 2002], "description": "Bicesse Accords 1991; elections 1992 (MPLA wins, Savimbi rejects results); war resumes; Lusaka Protocol 1994; diamond-fueled UNITA insurgency; siege of Huambo and Kuito; Savimbi killed February 2002; ceasefire.", "key_events": ["Savimbi_Killed_2002"]}
+        ]
+      },
+      {
+        "slug": "Dos_Santos_Era_AO",
+        "name": "Dos Santos Era and Oil State",
+        "year_range": [1979, 2017],
+        "status": "PLANNED",
+        "description": "José Eduardo dos Santos rules for 38 years; Angola becomes Africa's second-largest oil producer; Sonangol and Futungo elite amass enormous wealth amid mass poverty.",
+        "sub_clusters": [
+          {"slug": "Dos_Santos_Presidency_AO", "name": "Dos Santos Presidency", "year_range": [1979, 2017], "description": "Dos Santos succeeds Neto 1979; MPLA transitions from Marxism to market economy 1990s; constitutional changes consolidate power; daughter Isabel dos Santos becomes Africa's richest woman."},
+          {"slug": "Oil_Economy_AO", "name": "Oil Wealth and Resource Curse", "year_range": [1990, 2017], "description": "Oil revenues soar (peak $60 billion+ annually); Luanda becomes world's most expensive city; extreme inequality; 'Angolagate' corruption scandal; missing $32 billion IMF query."}
+        ]
+      },
+      {
+        "slug": "Lourenco_Reforms_AO",
+        "name": "Lourenço Era and Reform Agenda",
+        "year_range": [2017, 2026],
+        "status": "PLANNED",
+        "description": "João Lourenço succeeds dos Santos; anti-corruption campaign targets dos Santos family; economic diversification efforts; demographic youth bulge and unemployment.",
+        "sub_clusters": [
+          {"slug": "Lourenco_Anti_Corruption_AO", "name": "Lourenço Anti-Corruption Drive", "year_range": [2017, 2022], "description": "Lourenço removes dos Santos loyalists; Isabel dos Santos charged with fraud; Generals Kopelipa and Dino arrested; Sonangol restructured; international asset freezes.", "key_events": ["Isabel_Dos_Santos_Charged_2020"]},
+          {"slug": "Economic_Diversification_AO", "name": "Economic Diversification Challenges", "year_range": [2020, 2026], "description": "Oil price crash and COVID-19 hammer economy; privatisation programme (ProPriv); agriculture and mining diversification; IMF programme; 60% of population under 25 faces unemployment."},
+          {"slug": "Angola_Regional_Role_AO", "name": "Angola's Regional Diplomacy", "year_range": [2022, 2026], "description": "Lourenço mediates DRC-Rwanda tensions; Angola brokers Great Lakes peace efforts; Atlantic coast LNG projects; growing role in African Union diplomacy."}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "Kongo_Kingdom_AO", "interfaces_with": ["Kongo_Kingdom_DRC", "Portuguese_Exploration", "Christianity_Africa", "Central_African_States"]},
+    {"cluster": "Ndongo_Queen_Njinga", "interfaces_with": ["African_Resistance_Movements", "Portuguese_Colonial_Empire", "Dutch_Colonial_Empire"]},
+    {"cluster": "Atlantic_Slave_Trade_AO", "interfaces_with": ["Atlantic_Slave_Trade", "Brazilian_Slavery", "Middle_Passage", "Abolition_Movements"]},
+    {"cluster": "Portuguese_Colonial_Rule_AO", "interfaces_with": ["Portuguese_Colonial_Empire", "Forced_Labour_Africa", "Scramble_For_Africa"]},
+    {"cluster": "Liberation_Movements_AO", "interfaces_with": ["Portuguese_Colonial_Wars", "Carnation_Revolution", "Pan_Africanism"]},
+    {"cluster": "Civil_War_AO", "interfaces_with": ["Cold_War_Africa", "Cuban_Internationalism", "South_African_Border_War", "Blood_Diamonds"]},
+    {"cluster": "Dos_Santos_Era_AO", "interfaces_with": ["Oil_Politics_Africa", "Resource_Curse", "African_Corruption"]},
+    {"cluster": "Lourenco_Reforms_AO", "interfaces_with": ["Anti_Corruption_Africa", "Great_Lakes_Peace", "Energy_Transition"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 12,
+    "total_level5_subclusters": 30,
+    "active_clusters": 0,
+    "planned_clusters": 12,
+    "timeframe_distribution": {"910": 1, "920": 1, "930": 2, "940": 1, "950": 1, "960": 3}
+  }
+}

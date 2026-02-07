@@ -1,0 +1,115 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "cabo-verde",
+    "country_name": "Cabo Verde",
+    "region": "West Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "CV",
+    "iso3166_alpha3": "CPV",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for Cabo Verde covering uninhabited discovery, Portuguese colonisation, slave trade hub, PAIGC independence, and diaspora."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Geological_Cabo_Verde",
+        "name": "Geological and Pre-Human History",
+        "year_range": [-20000000, 1456],
+        "status": "PLANNED",
+        "description": "Volcanic archipelago formation; no indigenous human population; uninhabited until European arrival.",
+        "sub_clusters": [
+          {"slug": "Volcanic_Formation_CV", "name": "Volcanic Formation of the Archipelago", "year_range": [-20000000, -100000], "description": "Hotspot volcanism creates ten islands and several islets off the West African coast."},
+          {"slug": "Uninhabited_Archipelago", "name": "Uninhabited Archipelago", "year_range": [-100000, 1456], "description": "No evidence of pre-European settlement; possible visits by Arab and African sailors."}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Portuguese_Discovery_CV",
+        "name": "Portuguese Discovery and Early Settlement",
+        "year_range": [1456, 1600],
+        "status": "PLANNED",
+        "description": "Genoese-Portuguese discovery; settlement of Santiago; founding of Ribeira Grande.",
+        "sub_clusters": [
+          {"slug": "Discovery_1456", "name": "Discovery by Cadamosto and da Noli", "year_range": [1456, 1462], "description": "António de Noli and Alvise Cadamosto discover the uninhabited islands for Portugal.", "key_events": ["Discovery_Cabo_Verde_1456"]},
+          {"slug": "Ribeira_Grande_Founded", "name": "Founding of Ribeira Grande", "year_range": [1462, 1533], "description": "First European city in the tropics; Cidade Velha; receives city charter 1533.", "key_events": ["Ribeira_Grande_Founded_1462"]}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Slave_Trade_Hub_CV",
+        "name": "Atlantic Slave Trade Hub",
+        "year_range": [1500, 1876],
+        "status": "PLANNED",
+        "description": "Cabo Verde as crucial waystation and slave depot in the transatlantic slave trade; Creole society formation.",
+        "sub_clusters": [
+          {"slug": "Santiago_Slave_Depot", "name": "Santiago Slave Depot", "year_range": [1500, 1700], "description": "Enslaved Africans from Guinea coast processed through Santiago before shipment to Americas."},
+          {"slug": "Creole_Society_CV", "name": "Criolo Society Formation", "year_range": [1500, 1800], "description": "Mestiço Creole population; Kriolu language development; unique Afro-Portuguese culture."},
+          {"slug": "Piracy_Decline_CV", "name": "Piracy and Economic Decline", "year_range": [1585, 1800], "description": "Drake sacks Ribeira Grande 1585; pirate raids; economic decline as trade routes shift.", "key_events": ["Drake_Sacks_Ribeira_Grande_1585"]}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "Late_Colonial_CV",
+        "name": "Late Colonial Cabo Verde",
+        "year_range": [1800, 1974],
+        "status": "PLANNED",
+        "description": "Abolition of slavery; recurring famines; Mindelo coaling station; colonial neglect.",
+        "sub_clusters": [
+          {"slug": "Abolition_CV", "name": "Abolition of Slavery in Cabo Verde", "year_range": [1856, 1878], "description": "Gradual emancipation; contract labour replaces slavery; plantation system declines."},
+          {"slug": "Famines_CV", "name": "Recurring Famines", "year_range": [1830, 1950], "description": "Devastating droughts and famines kill tens of thousands; 1941–1943 famine kills ~30,000; Portuguese neglect.", "key_events": ["Great_Famine_CV_1941"]},
+          {"slug": "Mindelo_Coaling_Station", "name": "Mindelo Coaling Station", "year_range": [1850, 1950], "description": "São Vicente becomes major coal resupply port for transatlantic steamships; British investment."},
+          {"slug": "Claridade_Movement", "name": "Claridade Literary Movement", "year_range": [1936, 1960], "description": "Cultural and literary movement asserting Cabo Verdean Creole identity; forerunner of nationalism."}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Liberation_PAIGC_CV",
+        "name": "PAIGC Liberation and Independence",
+        "year_range": [1956, 1980],
+        "status": "PLANNED",
+        "description": "Amílcar Cabral's PAIGC; Guinea-Bissau-Cabo Verde joint liberation; independence 1975; 1980 split.",
+        "sub_clusters": [
+          {"slug": "PAIGC_Founded_CV", "name": "PAIGC Founded (Cabo Verde Wing)", "year_range": [1956, 1974], "description": "Amílcar Cabral founds PAIGC for dual liberation of Guinea-Bissau and Cabo Verde."},
+          {"slug": "Independence_1975_CV", "name": "Independence of Cabo Verde", "year_range": [1975, 1975], "description": "Independence 5 July 1975 after Portuguese Carnation Revolution; Aristides Pereira president.", "key_events": ["Independence_Cabo_Verde_1975"]},
+          {"slug": "PAICV_Single_Party", "name": "PAICV Single-Party State", "year_range": [1975, 1990], "description": "One-party socialist state; Guinea-Bissau unity plan abandoned after 1980 coup; PAIGC becomes PAICV."}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Democratic_Cabo_Verde",
+        "name": "Democratic Cabo Verde",
+        "year_range": [1990, 2026],
+        "status": "PLANNED",
+        "description": "Multiparty democracy; PAICV-MpD alternation; economic liberalisation; diaspora connections.",
+        "sub_clusters": [
+          {"slug": "Multiparty_Transition_CV", "name": "Multiparty Transition", "year_range": [1990, 1991], "description": "Constitutional reform; MpD wins 1991 elections; peaceful democratic transition."},
+          {"slug": "Economic_Development_CV", "name": "Economic Development Model", "year_range": [1991, 2026], "description": "Tourism-led growth; ECOWAS integration; graduation from LDC status 2007; mid-income aspirations."},
+          {"slug": "Cabo_Verdean_Diaspora", "name": "Cabo Verdean Diaspora", "year_range": [1900, 2026], "description": "More Cabo Verdeans abroad than on the islands; communities in US, Portugal, Senegal; remittance economy."}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "Slave_Trade_Hub_CV", "interfaces_with": ["Atlantic_Slave_Trade", "Portuguese_Maritime_Empire"]},
+    {"cluster": "Liberation_PAIGC_CV", "interfaces_with": ["PAIGC_Liberation_War", "Portuguese_Colonial_Wars", "Amilcar_Cabral"]},
+    {"cluster": "Famines_CV", "interfaces_with": ["Colonial_Famines", "Portuguese_Colonial_Neglect"]},
+    {"cluster": "Creole_Society_CV", "interfaces_with": ["Creole_Societies", "African_Diaspora_Culture"]},
+    {"cluster": "Cabo_Verdean_Diaspora", "interfaces_with": ["African_Diaspora", "Migration_Atlantic"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 7,
+    "total_level5_subclusters": 18,
+    "active_clusters": 0,
+    "planned_clusters": 7,
+    "timeframe_distribution": {"910": 1, "920": 1, "930": 1, "940": 1, "950": 1, "960": 1}
+  }
+}

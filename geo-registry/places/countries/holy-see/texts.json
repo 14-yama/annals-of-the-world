@@ -4,7 +4,215 @@
     "node_kind": "texts",
     "registry": "docs/nodes/node-attribute-registry.md",
     "generated_at": "2026-01-31T13:56:07.831972Z",
-    "notes": "Country-scoped curated nodes; link via relationships during ingest."
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": ["920", "930", "940", "950", "960"],
+    "grouped_by": "timeframe"
   },
-  "nodes": []
+  "thematic_clusters": {
+    "920": {
+      "label": "Classical / Late Antiquity",
+      "nodes": [
+        {
+          "slug": "letter-to-romans",
+          "name": "Epistle to the Romans",
+          "label": "Epistle to the Romans",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "New Testament letter by Paul addressing the Roman Christian community."
+        },
+        {
+          "slug": "first-letter-clement",
+          "name": "First Letter of Clement",
+          "label": "First Letter of Clement",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Early Roman Church letter emphasizing unity and order, traditionally attributed to Clement of Rome."
+        },
+        {
+          "slug": "roman-catacomb-inscriptions",
+          "name": "Roman Catacomb Inscriptions",
+          "label": "Roman Catacomb Inscriptions",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Early Christian epitaphs and symbols from catacombs in Rome."
+        },
+        {
+          "slug": "vulgate",
+          "name": "Vulgate Bible",
+          "label": "Vulgate Bible",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "la",
+          "script": "Latn",
+          "description": "Latin translation of the Bible by Jerome, authoritative in the Western Church."
+        },
+        {
+          "slug": "tome-of-leo",
+          "name": "Tome of Leo",
+          "label": "Tome of Leo",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "la",
+          "script": "Latn",
+          "description": "Pope Leo I's doctrinal letter on Christology read at the Council of Chalcedon."
+        },
+        {
+          "slug": "liber-pontificalis",
+          "name": "Liber Pontificalis",
+          "label": "Liber Pontificalis",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "la",
+          "script": "Latn",
+          "description": "Collection of papal biographies and historical notes from late antiquity."
+        }
+      ]
+    },
+    "930": {
+      "label": "Medieval / Post-Classical",
+      "nodes": [
+        {
+          "slug": "decretum-gratiani",
+          "name": "Decretum Gratiani",
+          "label": "Decretum Gratiani",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "la",
+          "script": "Latn",
+          "description": "Foundational compilation of canon law from the 12th century."
+        },
+        {
+          "slug": "dictatus-papae",
+          "name": "Dictatus Papae",
+          "label": "Dictatus Papae",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "la",
+          "script": "Latn",
+          "description": "Statements asserting papal authority attributed to Pope Gregory VII."
+        },
+        {
+          "slug": "summa-theologiae",
+          "name": "Summa Theologiae",
+          "label": "Summa Theologiae",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "la",
+          "script": "Latn",
+          "description": "Thomas Aquinas's theological synthesis central to Catholic doctrine."
+        }
+      ]
+    },
+    "940": {
+      "label": "Early Modern",
+      "nodes": [
+        {
+          "slug": "decrees-of-trent",
+          "name": "Decrees of the Council of Trent",
+          "label": "Decrees of Trent",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "la",
+          "script": "Latn",
+          "description": "Doctrinal and disciplinary decrees of the Council of Trent (1545–1563)."
+        },
+        {
+          "slug": "roman-missal-1570",
+          "name": "Roman Missal (1570)",
+          "label": "Roman Missal (1570)",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "la",
+          "script": "Latn",
+          "description": "Standardized liturgical book promulgated after Trent by Pope Pius V."
+        },
+        {
+          "slug": "index-librorum-prohibitorum",
+          "name": "Index Librorum Prohibitorum",
+          "label": "Index Librorum Prohibitorum",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "la",
+          "script": "Latn",
+          "description": "List of prohibited books maintained by the Holy See in the early modern period."
+        }
+      ]
+    },
+    "950": {
+      "label": "Modern",
+      "nodes": [
+        {
+          "slug": "rerum-novarum",
+          "name": "Rerum Novarum",
+          "label": "Rerum Novarum",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "la",
+          "script": "Latn",
+          "description": "Papal encyclical by Leo XIII (1891) on labor and social justice."
+        },
+        {
+          "slug": "pastor-aeternus",
+          "name": "Pastor Aeternus",
+          "label": "Pastor Aeternus",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "la",
+          "script": "Latn",
+          "description": "Vatican I constitution defining papal primacy and infallibility."
+        },
+        {
+          "slug": "lateran-treaty-text",
+          "name": "Lateran Treaty",
+          "label": "Lateran Treaty",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "it",
+          "script": "Latn",
+          "description": "1929 treaty establishing Vatican City and regulating relations with Italy."
+        }
+      ]
+    },
+    "960": {
+      "label": "Contemporary",
+      "nodes": [
+        {
+          "slug": "lumen-gentium",
+          "name": "Lumen Gentium",
+          "label": "Lumen Gentium",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "la",
+          "script": "Latn",
+          "description": "Vatican II Dogmatic Constitution on the Church."
+        },
+        {
+          "slug": "gaudium-et-spes",
+          "name": "Gaudium et Spes",
+          "label": "Gaudium et Spes",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "la",
+          "script": "Latn",
+          "description": "Vatican II Pastoral Constitution on the Church in the modern world."
+        },
+        {
+          "slug": "laudato-si",
+          "name": "Laudato Si'",
+          "label": "Laudato Si'",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "la",
+          "script": "Latn",
+          "description": "Papal encyclical (2015) on care for creation and environmental stewardship."
+        }
+      ]
+    }
+  }
 }

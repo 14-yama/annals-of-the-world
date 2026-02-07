@@ -4,7 +4,353 @@
     "node_kind": "events",
     "registry": "docs/nodes/node-attribute-registry.md",
     "generated_at": "2026-01-31T13:56:07.803477Z",
-    "notes": "Country-scoped curated nodes; link via relationships during ingest."
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
   },
-  "nodes": []
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Neolithic_Agriculture_Yellow_River",
+        "name": "Neolithic Agriculture in the Yellow River Basin",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Transition",
+        "timeframe": "910",
+        "cluster": "Neolithic_China",
+        "startYear": -7000,
+        "endYear": -5000,
+        "description": "Adoption of millet farming and settled village life in northern China.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Yellow River Basin"
+        }
+      },
+      {
+        "slug": "Yangshao_Culture_Emergence",
+        "name": "Yangshao Culture Emergence",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Cultural",
+        "timeframe": "910",
+        "cluster": "Neolithic_China",
+        "startYear": -5000,
+        "endYear": -3000,
+        "description": "Development of painted pottery villages and regional exchange in the middle Yellow River.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Henan and Shaanxi"
+        }
+      },
+      {
+        "slug": "Longshan_Culture",
+        "name": "Longshan Culture",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Cultural",
+        "timeframe": "910",
+        "cluster": "Neolithic_China",
+        "startYear": -3000,
+        "endYear": -1900,
+        "description": "Late Neolithic culture known for black pottery and early urbanization.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "North China"
+        }
+      }
+    ],
+    "920": [
+      {
+        "slug": "Qin_Unification_221_BCE",
+        "name": "Qin Unification (221 BCE)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Political",
+        "timeframe": "920",
+        "cluster": "Qin_Dynasty",
+        "startYear": -221,
+        "endYear": -221,
+        "description": "Qin state unified rival kingdoms, founding the first centralized imperial dynasty.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "North China"
+        }
+      },
+      {
+        "slug": "Han_Dynasty_Founded_202_BCE",
+        "name": "Han Dynasty Founded (202 BCE)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Political",
+        "timeframe": "920",
+        "cluster": "Han_Dynasty",
+        "startYear": -202,
+        "endYear": -202,
+        "description": "Liu Bang established the Han dynasty after the collapse of the Qin.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Chang'an (Xi'an)"
+        }
+      },
+      {
+        "slug": "Silk_Road_Opened",
+        "name": "Opening of the Silk Road",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Trade",
+        "timeframe": "920",
+        "cluster": "Han_Dynasty",
+        "startYear": -130,
+        "endYear": -130,
+        "description": "Han diplomatic missions enabled long-distance trade routes linking China to Central Asia.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Northwest China"
+        }
+      }
+    ],
+    "930": [
+      {
+        "slug": "Tang_Dynasty_Founded_618",
+        "name": "Tang Dynasty Founded (618)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Political",
+        "timeframe": "930",
+        "cluster": "Tang_Dynasty",
+        "startYear": 618,
+        "endYear": 618,
+        "description": "Li Yuan founded the Tang dynasty, initiating a period of cultural and political flourishing.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Chang'an (Xi'an)"
+        }
+      },
+      {
+        "slug": "An_Lushan_Rebellion_755",
+        "name": "An Lushan Rebellion (755–763)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Rebellion",
+        "timeframe": "930",
+        "cluster": "Tang_Dynasty",
+        "startYear": 755,
+        "endYear": 763,
+        "description": "Major rebellion that weakened Tang authority and devastated northern China.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Northern China"
+        }
+      },
+      {
+        "slug": "Song_Dynasty_Founded_960",
+        "name": "Song Dynasty Founded (960)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Political",
+        "timeframe": "930",
+        "cluster": "Song_Dynasty",
+        "startYear": 960,
+        "endYear": 960,
+        "description": "Zhao Kuangyin established the Song dynasty, ushering in economic and cultural growth.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Kaifeng"
+        }
+      }
+    ],
+    "940": [
+      {
+        "slug": "Ming_Dynasty_Founded_1368",
+        "name": "Ming Dynasty Founded (1368)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Political",
+        "timeframe": "940",
+        "cluster": "Ming_Dynasty",
+        "startYear": 1368,
+        "endYear": 1368,
+        "description": "Zhu Yuanzhang established the Ming dynasty after overthrowing Yuan rule.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Nanjing"
+        }
+      },
+      {
+        "slug": "Zheng_He_Voyages_1405_1433",
+        "name": "Zheng He Voyages (1405–1433)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Maritime",
+        "timeframe": "940",
+        "cluster": "Ming_Dynasty",
+        "startYear": 1405,
+        "endYear": 1433,
+        "description": "State-sponsored naval expeditions that projected Ming influence across the Indian Ocean.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Southeast Asia and Indian Ocean"
+        }
+      },
+      {
+        "slug": "Qing_Dynasty_Established_1644",
+        "name": "Qing Dynasty Established (1644)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Political",
+        "timeframe": "940",
+        "cluster": "Qing_Dynasty",
+        "startYear": 1644,
+        "endYear": 1644,
+        "description": "Manchu forces captured Beijing and established the Qing dynasty.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Beijing"
+        }
+      }
+    ],
+    "950": [
+      {
+        "slug": "First_Opium_War_1839_1842",
+        "name": "First Opium War (1839–1842)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "War",
+        "timeframe": "950",
+        "cluster": "Late_Qing",
+        "startYear": 1839,
+        "endYear": 1842,
+        "description": "Conflict between Qing China and Britain that resulted in unequal treaties.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Coastal China"
+        }
+      },
+      {
+        "slug": "Xinhai_Revolution_1911",
+        "name": "Xinhai Revolution (1911)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Revolution",
+        "timeframe": "950",
+        "cluster": "Republican_China",
+        "startYear": 1911,
+        "endYear": 1912,
+        "description": "Revolution that overthrew the Qing dynasty and established the Republic of China.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Wuchang and nationwide"
+        }
+      },
+      {
+        "slug": "Second_Sino_Japanese_War_1937_1945",
+        "name": "Second Sino-Japanese War (1937–1945)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "War",
+        "timeframe": "950",
+        "cluster": "World_War_II_Asia",
+        "startYear": 1937,
+        "endYear": 1945,
+        "description": "Full-scale war between China and Japan, part of the wider Second World War.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "China"
+        }
+      }
+    ],
+    "960": [
+      {
+        "slug": "PRC_Founded_1949",
+        "name": "People's Republic of China Founded (1949)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Political",
+        "timeframe": "960",
+        "cluster": "PRC_Era",
+        "startYear": 1949,
+        "endYear": 1949,
+        "description": "Proclamation of the People's Republic of China in Beijing.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Beijing"
+        }
+      },
+      {
+        "slug": "Reform_and_Opening_1978",
+        "name": "Reform and Opening (1978)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Policy",
+        "timeframe": "960",
+        "cluster": "PRC_Era",
+        "startYear": 1978,
+        "endYear": 1978,
+        "description": "Economic reforms that introduced market mechanisms and opened China to global trade.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "China"
+        }
+      },
+      {
+        "slug": "Hong_Kong_Handover_1997",
+        "name": "Hong Kong Handover (1997)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Treaty",
+        "timeframe": "960",
+        "cluster": "PRC_Era",
+        "startYear": 1997,
+        "endYear": 1997,
+        "description": "Transfer of sovereignty over Hong Kong from the United Kingdom to China.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Hong Kong"
+        }
+      }
+    ]
+  }
 }

@@ -1,185 +1,284 @@
 {
-  "slug": "china",
-  "name": "China",
-  "iso": "CN",
-  "wikidata_id": "Q148",
-  "names": [
-    {
-      "name": "China",
-      "lang": "en",
-      "is_primary": true
-    },
-    {
-      "name": "中国",
-      "lang": "zh",
-      "script": "Hani",
-      "is_endonym": true
-    },
-    {
-      "name": "Zhōngguó",
-      "lang": "zh",
-      "script": "Latn",
-      "note": "Pinyin"
-    },
-    {
-      "name": "Chine",
-      "lang": "fr"
-    }
-  ],
-  "cities": {
-    "beijing": {
-      "name": "Beijing",
-      "wikidata_id": "Q956",
-      "names": [
-        {
-          "name": "Beijing",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "北京",
-          "lang": "zh",
-          "script": "Hani",
-          "is_endonym": true
+  "_meta": {
+    "country_slug": "china",
+    "node_kind": "places",
+    "registry": "docs/nodes/node-attribute-registry.md",
+    "generated_at": "2026-01-31T13:56:07.803544Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Banpo",
+        "name": "Banpo",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "Archaeological_Site",
+        "description": "Neolithic village site associated with the Yangshao culture.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Shaanxi"
         }
-      ],
-      "former_names": [
-        {
-          "name": "Peking",
-          "lang": "en",
-          "change_reason": "STANDARDIZATION_OR_LANGUAGE_POLICY",
-          "note": "Postal romanization (historical)"
-        },
-        {
-          "name": "Peiping",
-          "lang": "en",
-          "startYear": 1928,
-          "endYear": 1949,
-          "change_reason": "REGIME_OR_SYSTEM_CHANGE",
-          "note": "Northern Peace (Nationalist era)"
-        },
-        {
-          "name": "Dadu",
-          "lang": "zh",
-          "startYear": 1271,
-          "endYear": 1368,
-          "note": "Yuan dynasty capital"
+      },
+      {
+        "slug": "Liangzhu",
+        "name": "Liangzhu",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "Archaeological_Site",
+        "description": "Neolithic cultural center known for jade artifacts and complex society.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Zhejiang"
         }
-      ]
-    },
-    "shanghai": {
-      "name": "Shanghai",
-      "wikidata_id": "Q8686",
-      "names": [
-        {
-          "name": "Shanghai",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "上海",
-          "lang": "zh",
-          "script": "Hani",
-          "is_endonym": true
+      },
+      {
+        "slug": "Jiahu",
+        "name": "Jiahu",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "Archaeological_Site",
+        "description": "Early Neolithic site with evidence of rice cultivation and symbolic markings.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Henan"
         }
-      ]
-    },
-    "guangzhou": {
-      "name": "Guangzhou",
-      "wikidata_id": "Q16572",
-      "names": [
-        {
-          "name": "Guangzhou",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "广州",
-          "lang": "zh",
-          "script": "Hani",
-          "is_endonym": true
+      }
+    ],
+    "920": [
+      {
+        "slug": "Anyang",
+        "name": "Anyang",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "Ancient_Capital",
+        "description": "Late Shang capital associated with oracle bone inscriptions.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Henan"
         }
-      ],
-      "former_names": [
-        {
-          "name": "Canton",
-          "lang": "en",
-          "change_reason": "STANDARDIZATION_OR_LANGUAGE_POLICY",
-          "note": "Western name"
+      },
+      {
+        "slug": "Luoyang",
+        "name": "Luoyang",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "Ancient_Capital",
+        "description": "Major imperial capital during multiple dynasties including Han and Tang.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Henan"
         }
-      ]
-    },
-    "xian": {
-      "name": "Xi'an",
-      "wikidata_id": "Q5826",
-      "names": [
-        {
-          "name": "Xi'an",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "西安",
-          "lang": "zh",
-          "script": "Hani",
-          "is_endonym": true
+      },
+      {
+        "slug": "Xian_Changan",
+        "name": "Chang'an (Xi'an)",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "Ancient_Capital",
+        "description": "Capital of the Han and Tang dynasties and a major Silk Road hub.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Shaanxi"
         }
-      ],
-      "former_names": [
-        {
-          "name": "Chang'an",
-          "lang": "zh",
-          "note": "Tang dynasty capital"
+      }
+    ],
+    "930": [
+      {
+        "slug": "Kaifeng",
+        "name": "Kaifeng",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "Capital",
+        "description": "Capital of the Northern Song dynasty and a major urban center.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Henan"
         }
-      ]
-    },
-    "nanjing": {
-      "name": "Nanjing",
-      "wikidata_id": "Q16666",
-      "names": [
-        {
-          "name": "Nanjing",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "南京",
-          "lang": "zh",
-          "script": "Hani",
-          "is_endonym": true
+      },
+      {
+        "slug": "Hangzhou",
+        "name": "Hangzhou",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "Capital",
+        "description": "Southern Song capital, famed for commerce and cultural life.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Zhejiang"
         }
-      ],
-      "former_names": [
-        {
-          "name": "Nanking",
-          "lang": "en",
-          "change_reason": "STANDARDIZATION_OR_LANGUAGE_POLICY",
-          "note": "Postal romanization"
+      },
+      {
+        "slug": "Dunhuang",
+        "name": "Dunhuang",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "Oasis_Town",
+        "description": "Key Silk Road oasis with Buddhist cave temples and manuscript collections.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Gansu"
         }
-      ]
-    },
-    "hong-kong": {
-      "name": "Hong Kong",
-      "wikidata_id": "Q8646",
-      "names": [
-        {
-          "name": "Hong Kong",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "香港",
-          "lang": "zh",
-          "script": "Hani",
-          "is_endonym": true
-        },
-        {
-          "name": "Xiānggǎng",
-          "lang": "zh",
-          "script": "Latn",
-          "note": "Pinyin"
+      }
+    ],
+    "940": [
+      {
+        "slug": "Beijing",
+        "name": "Beijing",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "Capital",
+        "description": "Imperial and modern capital city of China, central to Ming and Qing governance.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Beijing"
         }
-      ]
-    }
+      },
+      {
+        "slug": "Nanjing",
+        "name": "Nanjing",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "Capital",
+        "description": "Early Ming capital and major cultural center of the lower Yangtze.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Jiangsu"
+        }
+      },
+      {
+        "slug": "Suzhou",
+        "name": "Suzhou",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "City",
+        "description": "Ming–Qing era city known for gardens, silk production, and commerce.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Jiangsu"
+        }
+      }
+    ],
+    "950": [
+      {
+        "slug": "Shanghai",
+        "name": "Shanghai",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "City",
+        "description": "Modern port and commercial center, pivotal in 19th–20th century China.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Shanghai"
+        }
+      },
+      {
+        "slug": "Guangzhou",
+        "name": "Guangzhou",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "City",
+        "description": "Southern port city central to maritime trade and reform-era commerce.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Guangdong"
+        }
+      },
+      {
+        "slug": "Wuhan",
+        "name": "Wuhan",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "City",
+        "description": "Central China metropolis and early 20th-century political center.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Hubei"
+        }
+      }
+    ],
+    "960": [
+      {
+        "slug": "Shenzhen",
+        "name": "Shenzhen",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "City",
+        "description": "Special Economic Zone emblematic of Reform and Opening.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Guangdong"
+        }
+      },
+      {
+        "slug": "Chongqing",
+        "name": "Chongqing",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "Municipality",
+        "description": "Major inland city and wartime capital during the Second Sino-Japanese War.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Chongqing"
+        }
+      },
+      {
+        "slug": "Hong_Kong",
+        "name": "Hong Kong",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "zh",
+        "script": "Hani",
+        "place_kind": "Special_Administrative_Region",
+        "description": "Global finance hub returned to Chinese sovereignty in 1997.",
+        "location": {
+          "country_slug": "china",
+          "place_note": "Hong Kong"
+        }
+      }
+    ]
   }
 }

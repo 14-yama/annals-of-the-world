@@ -1,0 +1,143 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "tunisia",
+    "country_name": "Tunisia",
+    "region": "North Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "TN",
+    "iso3166_alpha3": "TUN",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for Tunisia."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Prehistoric_Tunisia",
+        "name": "Prehistoric Tunisia",
+        "year_range": [-100000, -1100],
+        "status": "PLANNED",
+        "description": "Capsian culture heartland; early North African pastoralism.",
+        "sub_clusters": [
+          {"slug": "Capsian_Culture_Tunisia", "name": "Capsian Culture Heartland", "year_range": [-10000, -6000], "description": "Eponymous site at Gafsa; Mesolithic industry; shell mound settlements."}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Carthage",
+        "name": "Carthage — Phoenician Superpower",
+        "year_range": [-814, -146],
+        "status": "PLANNED",
+        "description": "Phoenician colony becomes Mediterranean superpower; Punic Wars.",
+        "sub_clusters": [
+          {"slug": "Carthage_Founded", "name": "Founding of Carthage", "year_range": [-814, -500], "description": "Dido/Elissa founds Carthage; maritime trade empire; Tophet sanctuary."},
+          {"slug": "Punic_Wars", "name": "Punic Wars", "year_range": [-264, -146], "description": "Three wars with Rome; Hannibal crosses Alps; Scipio destroys Carthage.", "key_events": ["Fall_of_Carthage_146BC"]},
+          {"slug": "Hannibal_Barca", "name": "Hannibal Barca", "year_range": [-247, -183], "description": "Greatest military commander of antiquity; elephant crossing of Alps."}
+        ]
+      },
+      {
+        "slug": "Roman_Byzantine_Tunisia",
+        "name": "Roman and Byzantine Tunisia",
+        "year_range": [-146, 698],
+        "status": "PLANNED",
+        "description": "Africa Proconsularis; El Djem amphitheatre; Vandal Kingdom; Byzantine reconquest.",
+        "sub_clusters": [
+          {"slug": "Roman_Africa_Tunisia", "name": "Roman Africa Proconsularis", "year_range": [-146, 430], "description": "Granary of Rome; Dougga, El Djem; Tertullian and early Christianity."},
+          {"slug": "Vandal_Byzantine_Tunisia", "name": "Vandal and Byzantine Periods", "year_range": [430, 698], "description": "Genseric's Vandal Kingdom; Belisarius reconquest; decline."}
+        ]
+      },
+      {
+        "slug": "Islamic_Tunisia",
+        "name": "Islamic Tunisia — Ifriqiya",
+        "year_range": [670, 1574],
+        "status": "PLANNED",
+        "description": "Arab conquest; Kairouan; Aghlabids; Hafsids.",
+        "sub_clusters": [
+          {"slug": "Kairouan_Founded", "name": "Kairouan — Fourth Holiest City", "year_range": [670, 800], "description": "Uqba ibn Nafi founds Kairouan; Great Mosque; Islamic learning centre."},
+          {"slug": "Aghlabid_Dynasty_Tunisia", "name": "Aghlabid Dynasty", "year_range": [800, 909], "description": "Autonomous governors; Sicily conquest; ribat architecture."},
+          {"slug": "Hafsid_Dynasty", "name": "Hafsid Dynasty", "year_range": [1229, 1574], "description": "Tunis capital; Alhambra refugees; al-Zaytouna University; Ottoman takeover."}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Ottoman_Tunisia",
+        "name": "Ottoman Tunisia (Beylik of Tunis)",
+        "year_range": [1574, 1881],
+        "status": "PLANNED",
+        "description": "Husainid dynasty; corsairs; Tunisian Fundamental Pact; French ambitions.",
+        "sub_clusters": [
+          {"slug": "Husainid_Beys", "name": "Husainid Dynasty", "year_range": [1705, 1881], "description": "Semi-autonomous beys; Ahmad Bey modernisation; first constitution in Muslim world 1861."},
+          {"slug": "Tunisian_Reforms", "name": "Tunisian Reform Movement", "year_range": [1837, 1881], "description": "Abolition of slavery 1846 (first in Muslim world); Fundamental Pact 1857."}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "French_Protectorate_Tunisia",
+        "name": "French Protectorate",
+        "year_range": [1881, 1956],
+        "status": "PLANNED",
+        "description": "French colonial rule; Destour and Neo-Destour parties; Bourguiba's rise.",
+        "sub_clusters": [
+          {"slug": "Treaty_of_Bardo", "name": "Treaty of Bardo", "year_range": [1881, 1881], "description": "France imposes protectorate; settler colonialism begins."},
+          {"slug": "Neo_Destour_Party", "name": "Neo-Destour and Bourguiba", "year_range": [1934, 1952], "description": "Habib Bourguiba founds Neo-Destour; modern nationalist movement; prison and exile."},
+          {"slug": "Tunisian_WWII", "name": "WWII — Tunisia Campaign", "year_range": [1942, 1943], "description": "Kasserine Pass; Axis defeat in North Africa; Allied springboard to Sicily."}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Tunisian_Independence",
+        "name": "Independence and Bourguiba Era",
+        "year_range": [1956, 1987],
+        "status": "PLANNED",
+        "description": "Independence; radical modernisation; women's rights; single-party state.",
+        "sub_clusters": [
+          {"slug": "Tunisia_Independence", "name": "Tunisia Independence (1956)", "year_range": [1956, 1956], "description": "Independence 20 March 1956; Bourguiba first PM, then president.", "key_events": ["Tunisia_Independence_1956"]},
+          {"slug": "Bourguiba_Modernisation", "name": "Bourguiba's Modernisation", "year_range": [1956, 1987], "description": "Personal Status Code; women's rights; secular education; Francophone elite."},
+          {"slug": "Bourguiba_Deposed", "name": "Ben Ali Deposes Bourguiba", "year_range": [1987, 1987], "description": "'Medical coup'; Ben Ali takes power; initial liberalisation hopes."}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Ben_Ali_Era",
+        "name": "Ben Ali Era",
+        "year_range": [1987, 2011],
+        "status": "PLANNED",
+        "description": "Police state; economic growth; corruption; repression.",
+        "sub_clusters": [
+          {"slug": "Ben_Ali_Dictatorship", "name": "Ben Ali Dictatorship", "year_range": [1987, 2011], "description": "Economic liberalisation; tourism; systematic repression; Trabelsi clan corruption."}
+        ]
+      },
+      {
+        "slug": "Tunisian_Revolution",
+        "name": "Tunisian Revolution and Democratic Experiment",
+        "year_range": [2010, 2026],
+        "status": "PLANNED",
+        "description": "Jasmine Revolution sparks Arab Spring; democratic transition; Saied regression.",
+        "sub_clusters": [
+          {"slug": "Jasmine_Revolution", "name": "Jasmine Revolution", "year_range": [2010, 2011], "description": "Bouazizi self-immolation; mass protests; Ben Ali flees; sparks Arab Spring.", "key_events": ["Tunisian_Revolution_2011"]},
+          {"slug": "Democratic_Transition_Tunisia", "name": "Democratic Transition", "year_range": [2011, 2021], "description": "National Dialogue Quartet (Nobel Peace Prize 2015); new constitution; fragile democracy."},
+          {"slug": "Saied_Autocracy", "name": "Saied's Authoritarian Turn", "year_range": [2021, 2026], "description": "President Saied suspends parliament; new constitution; democratic backsliding."}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "Carthage", "interfaces_with": ["Roman_Republic", "Punic_Wars"]},
+    {"cluster": "Tunisian_Revolution", "interfaces_with": ["Arab_Spring", "Egyptian_Revolution"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 10,
+    "total_level5_subclusters": 26,
+    "active_clusters": 0,
+    "planned_clusters": 10,
+    "timeframe_distribution": {"910": 1, "920": 3, "930": 1, "940": 1, "950": 1, "960": 2}
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "libya",
+    "country_name": "Libya",
+    "region": "North Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "LY",
+    "iso3166_alpha3": "LBY",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for Libya."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Prehistoric_Libya",
+        "name": "Prehistoric Libya",
+        "year_range": [-100000, -3000],
+        "status": "PLANNED",
+        "description": "Saharan rock art; Fezzan cave paintings; Garamantian origins.",
+        "sub_clusters": [
+          {"slug": "Acacus_Rock_Art", "name": "Tadrart Acacus Rock Art", "year_range": [-12000, -100], "description": "UNESCO World Heritage; rock paintings showing green Sahara."},
+          {"slug": "Green_Sahara_Libya", "name": "Green Sahara Period", "year_range": [-10000, -3000], "description": "Humid period; pastoralism; lakes in Fezzan."}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Ancient_Libya",
+        "name": "Ancient Libya — Garamantes, Greeks, Romans",
+        "year_range": [-1000, 642],
+        "status": "PLANNED",
+        "description": "Garamantian civilisation, Greek Cyrenaica, Roman Tripolitania, Byzantine era.",
+        "sub_clusters": [
+          {"slug": "Garamantes_Civilisation", "name": "Garamantes Civilisation", "year_range": [-1000, 600], "description": "Saharan irrigation empire in Fezzan; underground foggaras; trans-Saharan trade."},
+          {"slug": "Greek_Cyrenaica", "name": "Greek Cyrenaica", "year_range": [-631, -96], "description": "Cyrene founded by Thera colonists; Pentapolis; Eratosthenes born here."},
+          {"slug": "Roman_Libya", "name": "Roman Tripolitania and Cyrenaica", "year_range": [-96, 430], "description": "Leptis Magna (Septimius Severus' birthplace); Sabratha; prosperous provinces."}
+        ]
+      },
+      {
+        "slug": "Islamic_Libya",
+        "name": "Islamic Libya",
+        "year_range": [642, 1551],
+        "status": "PLANNED",
+        "description": "Arab conquest; various dynasties; trans-Saharan trade.",
+        "sub_clusters": [
+          {"slug": "Arab_Conquest_Libya", "name": "Arab Conquest", "year_range": [642, 700], "description": "Amr ibn al-As; Berber Islamisation; decline of ancient cities."},
+          {"slug": "Medieval_Dynasties_Libya", "name": "Medieval Dynasties", "year_range": [800, 1551], "description": "Aghlabids, Fatimids, Hafsids control parts of Libya; Fezzan trade routes."}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Ottoman_Libya",
+        "name": "Ottoman Libya",
+        "year_range": [1551, 1911],
+        "status": "PLANNED",
+        "description": "Tripoli Regency; Karamanli dynasty; Barbary Wars; Senussi order.",
+        "sub_clusters": [
+          {"slug": "Tripoli_Regency", "name": "Tripoli Regency", "year_range": [1551, 1711], "description": "Ottoman Tripolitania; corsair economy; rivalry with Malta and European navies."},
+          {"slug": "Karamanli_Dynasty", "name": "Karamanli Dynasty", "year_range": [1711, 1835], "description": "Semi-autonomous dynasty; First Barbary War with US; shores of Tripoli.", "key_events": ["First_Barbary_War_1801"]},
+          {"slug": "Senussi_Order", "name": "Senussi Order", "year_range": [1843, 1969], "description": "Sufi-Islamic revivalist order in Cyrenaica; resistance to colonisation."}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "Italian_Colonisation_Libya",
+        "name": "Italian Colonisation",
+        "year_range": [1911, 1943],
+        "status": "PLANNED",
+        "description": "Italo-Turkish War; brutal pacification; concentration camps; WWII theatre.",
+        "sub_clusters": [
+          {"slug": "Italo_Turkish_War_Libya", "name": "Italo-Turkish War", "year_range": [1911, 1912], "description": "Italy invades; Ottoman cession; resistance continues."},
+          {"slug": "Omar_Mukhtar_Resistance", "name": "Omar Mukhtar Resistance", "year_range": [1923, 1931], "description": "Lion of the Desert; 20-year guerrilla war; Italian genocide kills ~100,000 Libyans.", "key_events": ["Omar_Mukhtar_Execution_1931"]},
+          {"slug": "WWII_North_Africa_Libya", "name": "WWII — North African Campaign", "year_range": [1940, 1943], "description": "Desert Fox Rommel; Tobruk; El Alamein; Allied liberation."}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Libyan_Independence",
+        "name": "Independence and Kingdom of Libya",
+        "year_range": [1951, 1969],
+        "status": "PLANNED",
+        "description": "UN-brokered independence; King Idris; oil discovery transforms economy.",
+        "sub_clusters": [
+          {"slug": "Kingdom_of_Libya", "name": "Kingdom of Libya", "year_range": [1951, 1969], "description": "King Idris I; federal then unitary monarchy; oil discovered 1959; rapid modernisation.", "key_events": ["Libya_Independence_1951"]}
+        ]
+      },
+      {
+        "slug": "Gaddafi_Revolution",
+        "name": "Gaddafi Revolution",
+        "year_range": [1969, 1986],
+        "status": "PLANNED",
+        "description": "Muammar Gaddafi coup; Green Book; Jamahiriya; state sponsor of terrorism.",
+        "sub_clusters": [
+          {"slug": "September_Revolution_Libya", "name": "September 1969 Revolution", "year_range": [1969, 1977], "description": "27-year-old captain seizes power; Arab nationalism; oil nationalisation."},
+          {"slug": "Jamahiriya_System", "name": "Jamahiriya — 'State of the Masses'", "year_range": [1977, 2011], "description": "Green Book ideology; revolutionary committees; suppression of dissent."},
+          {"slug": "International_Terrorism_Libya", "name": "State-Sponsored Terrorism", "year_range": [1979, 1988], "description": "Support for global insurgencies; Lockerbie bombing; US bombing of Tripoli 1986."}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Libyan_Civil_War",
+        "name": "Libyan Civil Wars",
+        "year_range": [2011, 2026],
+        "status": "PLANNED",
+        "description": "Arab Spring revolution; NATO intervention; Gaddafi killed; ongoing instability.",
+        "sub_clusters": [
+          {"slug": "2011_Revolution_Libya", "name": "2011 Revolution", "year_range": [2011, 2011], "description": "Benghazi uprising; NATO intervention; Gaddafi killed in Sirte.", "key_events": ["Libyan_Revolution_2011"]},
+          {"slug": "Post_Gaddafi_Chaos", "name": "Post-Gaddafi Fragmentation", "year_range": [2012, 2019], "description": "Militia rule; dual governments (Tripoli/Tobruk); Haftar offensive; migrant crisis."},
+          {"slug": "Derna_Flood_2023", "name": "Derna Flood Disaster (2023)", "year_range": [2023, 2023], "description": "Storm Daniel; dam collapse; 11,000+ killed; governance failure exposed."}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "Roman_Libya", "interfaces_with": ["Roman_Empire", "Roman_Province_Africa"]},
+    {"cluster": "Omar_Mukhtar_Resistance", "interfaces_with": ["Italian_Fascism", "Anti_Colonial_Resistance"]},
+    {"cluster": "Libyan_Civil_War", "interfaces_with": ["Arab_Spring", "War_on_Terror_Era"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 10,
+    "total_level5_subclusters": 25,
+    "active_clusters": 0,
+    "planned_clusters": 10,
+    "timeframe_distribution": {"910": 1, "920": 2, "930": 1, "940": 1, "950": 2, "960": 1}
+  }
+}

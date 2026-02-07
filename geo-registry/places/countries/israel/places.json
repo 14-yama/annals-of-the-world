@@ -5,272 +5,286 @@
   "wikidata_id": "Q801",
   "names": [
     {
-      "name": "Israel",
-      "lang": "en",
-      "is_primary": true
-    },
-    {
-      "name": "יִשְׂרָאֵל",
-      "lang": "he",
-      "script": "Hebr",
-      "is_endonym": true
-    },
-    {
-      "name": "إسرائيل",
-      "lang": "ar",
-      "script": "Arab"
+      "_meta": {
+        "country_slug": "israel",
+        "node_kind": "places",
+        "registry": "docs/nodes/node-attribute-registry.md",
+        "generated_at": "2026-01-31T13:56:07.839140Z",
+        "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+        "timeframe_coverage": [
+          "910",
+          "920",
+          "930",
+          "940",
+          "950",
+          "960"
+        ],
+        "grouped_by": "timeframe"
+      },
+      "thematic_clusters": {
+        "910": [
+          {
+            "slug": "Jericho",
+            "name": "Jericho",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "ar",
+            "script": "Arab",
+            "place_kind": "Ancient_Settlement",
+            "description": "One of the world's oldest cities with Neolithic remains.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Jordan Valley"
+            }
+          },
+          {
+            "slug": "Ein_Gedi",
+            "name": "Ein Gedi",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "Oasis",
+            "description": "Desert oasis on the western shore of the Dead Sea with ancient habitation.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Dead Sea"
+            }
+          },
+          {
+            "slug": "Beersheba_Tel",
+            "name": "Tel Beersheba",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "Archaeological_Site",
+            "description": "Archaeological mound with Iron Age remains in the Negev.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Negev"
+            }
+          }
+        ],
+        "920": [
+          {
+            "slug": "Jerusalem",
+            "name": "Jerusalem",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "Ancient_Capital",
+            "description": "Religious and political center associated with the First and Second Temples.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Judean Hills"
+            }
+          },
+          {
+            "slug": "Samaria",
+            "name": "Samaria",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "Ancient_Capital",
+            "description": "Capital of the ancient Kingdom of Israel.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Central Highlands"
+            }
+          },
+          {
+            "slug": "Megiddo",
+            "name": "Megiddo",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "Archaeological_Site",
+            "description": "Strategic tell controlling ancient trade routes in the Jezreel Valley.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Jezreel Valley"
+            }
+          }
+        ],
+        "930": [
+          {
+            "slug": "Tiberias",
+            "name": "Tiberias",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "Historic_City",
+            "description": "City on the Sea of Galilee and center of rabbinic scholarship.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Sea of Galilee"
+            }
+          },
+          {
+            "slug": "Acre",
+            "name": "Acre (Akko)",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "Port_City",
+            "description": "Medieval port city prominent during Crusader and Mamluk periods.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Mediterranean Coast"
+            }
+          },
+          {
+            "slug": "Safed",
+            "name": "Safed",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "Historic_City",
+            "description": "Mountain city associated with Jewish scholarship and mysticism.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Upper Galilee"
+            }
+          }
+        ],
+        "940": [
+          {
+            "slug": "Jaffa",
+            "name": "Jaffa (Yafo)",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "Port_City",
+            "description": "Historic port city with Ottoman and early modern significance.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Mediterranean Coast"
+            }
+          },
+          {
+            "slug": "Hebron",
+            "name": "Hebron",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "ar",
+            "script": "Arab",
+            "place_kind": "Historic_City",
+            "description": "Ancient city with religious significance and Ottoman-era institutions.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Judean Hills"
+            }
+          },
+          {
+            "slug": "Ramla",
+            "name": "Ramla",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "ar",
+            "script": "Arab",
+            "place_kind": "Historic_City",
+            "description": "City founded in the early Islamic period, later an Ottoman administrative center.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Central Coastal Plain"
+            }
+          }
+        ],
+        "950": [
+          {
+            "slug": "Tel_Aviv",
+            "name": "Tel Aviv",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "City",
+            "description": "Modern city founded in 1909; major economic and cultural center.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Gush Dan"
+            }
+          },
+          {
+            "slug": "Haifa",
+            "name": "Haifa",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "City",
+            "description": "Major port city on the slopes of Mount Carmel.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Northern Coast"
+            }
+          },
+          {
+            "slug": "Rishon_LeZion",
+            "name": "Rishon LeZion",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "City",
+            "description": "Early Zionist settlement that grew into a major modern city.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Central District"
+            }
+          }
+        ],
+        "960": [
+          {
+            "slug": "Ashdod",
+            "name": "Ashdod",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "Port_City",
+            "description": "Modern planned port city and industrial hub.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Southern Coast"
+            }
+          },
+          {
+            "slug": "Beersheba",
+            "name": "Beersheba",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "City",
+            "description": "Modern city and regional hub in the Negev.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Negev"
+            }
+          },
+          {
+            "slug": "Eilat",
+            "name": "Eilat",
+            "label": "Place",
+            "status": "PROPOSED",
+            "lang": "he",
+            "script": "Hebr",
+            "place_kind": "Resort_City",
+            "description": "Red Sea resort city and port at Israel's southern tip.",
+            "location": {
+              "country_slug": "israel",
+              "place_note": "Gulf of Aqaba"
+            }
+          }
+        ]
+      }
     }
-  ],
-  "cities": {
-    "jerusalem": {
-      "name": "Jerusalem",
-      "wikidata_id": "Q1218",
-      "names": [
-        {
-          "name": "Jerusalem",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "יְרוּשָׁלַיִם",
-          "lang": "he",
-          "script": "Hebr",
-          "is_endonym": true
-        },
-        {
-          "name": "القُدس",
-          "lang": "ar",
-          "script": "Arab",
-          "note": "Al-Quds"
-        }
-      ],
-      "former_names": [
-        {
-          "name": "Jebus",
-          "lang": "und",
-          "startYear": -3000,
-          "endYear": -1000,
-          "change_reason": "CONQUEST_OR_POLITICAL_TAKEOVER",
-          "note": "Pre-Davidic Canaanite"
-        },
-        {
-          "name": "Aelia Capitolina",
-          "lang": "la",
-          "startYear": 135,
-          "endYear": 638,
-          "change_reason": "CONQUEST_OR_POLITICAL_TAKEOVER",
-          "note": "Roman period"
-        }
-      ]
-    },
-    "tel-aviv": {
-      "name": "Tel Aviv",
-      "wikidata_id": "Q33935",
-      "names": [
-        {
-          "name": "Tel Aviv",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "תֵּל אָבִיב",
-          "lang": "he",
-          "script": "Hebr",
-          "is_endonym": true
-        },
-        {
-          "name": "Tel Aviv-Yafo",
-          "lang": "en",
-          "note": "Official merged name since 1950"
-        }
-      ]
-    },
-    "haifa": {
-      "name": "Haifa",
-      "wikidata_id": "Q41621",
-      "names": [
-        {
-          "name": "Haifa",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "חֵיפָה",
-          "lang": "he",
-          "script": "Hebr",
-          "is_endonym": true
-        },
-        {
-          "name": "حيفا",
-          "lang": "ar",
-          "script": "Arab"
-        }
-      ]
-    },
-    "rishon-lezion": {
-      "name": "Rishon LeZion",
-      "wikidata_id": "Q131556",
-      "names": [
-        {
-          "name": "Rishon LeZion",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "רִאשׁוֹן לְצִיּוֹן",
-          "lang": "he",
-          "script": "Hebr",
-          "is_endonym": true
-        }
-      ]
-    },
-    "petah-tikva": {
-      "name": "Petah Tikva",
-      "wikidata_id": "Q179182",
-      "names": [
-        {
-          "name": "Petah Tikva",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "פֶּתַח תִּקְוָה",
-          "lang": "he",
-          "script": "Hebr",
-          "is_endonym": true
-        }
-      ]
-    },
-    "netanya": {
-      "name": "Netanya",
-      "wikidata_id": "Q181281",
-      "names": [
-        {
-          "name": "Netanya",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "נְתַנְיָה",
-          "lang": "he",
-          "script": "Hebr",
-          "is_endonym": true
-        }
-      ]
-    },
-    "ashdod": {
-      "name": "Ashdod",
-      "wikidata_id": "Q174844",
-      "names": [
-        {
-          "name": "Ashdod",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "אַשְׁדּוֹד",
-          "lang": "he",
-          "script": "Hebr",
-          "is_endonym": true
-        }
-      ],
-      "former_names": [
-        {
-          "name": "Azotus",
-          "lang": "grc",
-          "note": "Ancient Greek name"
-        }
-      ]
-    },
-    "bnei-brak": {
-      "name": "Bnei Brak",
-      "wikidata_id": "Q189013",
-      "names": [
-        {
-          "name": "Bnei Brak",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "בְּנֵי בְּרַק",
-          "lang": "he",
-          "script": "Hebr",
-          "is_endonym": true
-        }
-      ]
-    },
-    "holon": {
-      "name": "Holon",
-      "wikidata_id": "Q180556",
-      "names": [
-        {
-          "name": "Holon",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "חוֹלוֹן",
-          "lang": "he",
-          "script": "Hebr",
-          "is_endonym": true
-        }
-      ]
-    },
-    "beersheba": {
-      "name": "Beersheba",
-      "wikidata_id": "Q170897",
-      "names": [
-        {
-          "name": "Beersheba",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "בְּאֵר שֶׁבַע",
-          "lang": "he",
-          "script": "Hebr",
-          "is_endonym": true
-        },
-        {
-          "name": "بئر السبع",
-          "lang": "ar",
-          "script": "Arab"
-        }
-      ]
-    },
-    "ramat-gan": {
-      "name": "Ramat Gan",
-      "wikidata_id": "Q182128",
-      "names": [
-        {
-          "name": "Ramat Gan",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "רָמַת גַּן",
-          "lang": "he",
-          "script": "Hebr",
-          "is_endonym": true
-        }
-      ]
-    },
-    "rehovot": {
-      "name": "Rehovot",
-      "wikidata_id": "Q193811",
-      "names": [
-        {
-          "name": "Rehovot",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "רְחוֹבוֹת",
-          "lang": "he",
-          "script": "Hebr",
-          "is_endonym": true
-        }
-      ]
-    }
-  }
-}

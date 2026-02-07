@@ -1,0 +1,182 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "egypt",
+    "country_name": "Egypt",
+    "region": "North Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "EG",
+    "iso3166_alpha3": "EGY",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for Egypt."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Predynastic_Egypt",
+        "name": "Predynastic and Early Dynastic Egypt",
+        "year_range": [-5000, -2686],
+        "status": "PLANNED",
+        "description": "Nile Valley civilisation emerges; unification under Narmer.",
+        "sub_clusters": [
+          {"slug": "Naqada_Culture", "name": "Naqada Culture", "year_range": [-4400, -3000], "description": "Upper Egyptian Predynastic culture; Naqada I-III; emergence of social hierarchy."},
+          {"slug": "Unification_Egypt", "name": "Unification of Egypt", "year_range": [-3100, -2686], "description": "Narmer/Menes unifies Upper and Lower Egypt; Memphis founded; Early Dynastic period."}
+        ]
+      },
+      {
+        "slug": "Old_Kingdom_Egypt",
+        "name": "Old Kingdom — Age of Pyramids",
+        "year_range": [-2686, -2181],
+        "status": "PLANNED",
+        "description": "Pyramid building; divine kingship; centralised bureaucracy.",
+        "sub_clusters": [
+          {"slug": "Great_Pyramids_Giza", "name": "Great Pyramids of Giza", "year_range": [-2580, -2510], "description": "Khufu, Khafre, Menkaure pyramids; Great Sphinx; engineering marvels.", "key_events": ["Great_Pyramid_Construction"]},
+          {"slug": "Old_Kingdom_Collapse", "name": "First Intermediate Period", "year_range": [-2181, -2055], "description": "Central authority collapses; regional warlords; climate crisis."}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Middle_New_Kingdom_Egypt",
+        "name": "Middle and New Kingdom Egypt",
+        "year_range": [-2055, -1070],
+        "status": "PLANNED",
+        "description": "Classical Egyptian civilisation; Thebes; imperial expansion.",
+        "sub_clusters": [
+          {"slug": "Middle_Kingdom", "name": "Middle Kingdom", "year_range": [-2055, -1650], "description": "Reunification; Mentuhotep II; literature flourishes; Faiyum development."},
+          {"slug": "New_Kingdom_Egypt", "name": "New Kingdom", "year_range": [-1550, -1070], "description": "Hatshepsut, Thutmose III, Akhenaten, Tutankhamun, Ramesses II; Valley of Kings."},
+          {"slug": "Amarna_Revolution", "name": "Amarna Revolution", "year_range": [-1353, -1336], "description": "Akhenaten's monotheistic revolution; Nefertiti; Amarna art style."}
+        ]
+      },
+      {
+        "slug": "Late_Period_Ptolemaic_Egypt",
+        "name": "Late Period and Ptolemaic Egypt",
+        "year_range": [-1070, -30],
+        "status": "PLANNED",
+        "description": "Third Intermediate Period; Persian conquest; Alexander; Ptolemaic dynasty.",
+        "sub_clusters": [
+          {"slug": "Persian_Egypt", "name": "Persian Conquest", "year_range": [-525, -332], "description": "Achaemenid rule; Cambyses; Egyptian revolts; Nectanebo II last native pharaoh."},
+          {"slug": "Ptolemaic_Egypt", "name": "Ptolemaic Dynasty", "year_range": [-305, -30], "description": "Greek-speaking dynasty; Alexandria; Library; Cleopatra VII; Roman annexation."}
+        ]
+      },
+      {
+        "slug": "Roman_Byzantine_Islamic_Egypt",
+        "name": "Roman, Byzantine, and Islamic Egypt",
+        "year_range": [-30, 1517],
+        "status": "PLANNED",
+        "description": "Roman province; Coptic Christianity; Arab conquest; Fatimids; Mamluks.",
+        "sub_clusters": [
+          {"slug": "Roman_Coptic_Egypt", "name": "Roman and Coptic Egypt", "year_range": [-30, 641], "description": "Granary of Rome; Desert Fathers; Council of Chalcedon; Coptic identity."},
+          {"slug": "Arab_Conquest_Egypt", "name": "Arab Conquest and Islamic Egypt", "year_range": [641, 969], "description": "Amr ibn al-As conquers Egypt; Fustat founded; Umayyad and Abbasid rule."},
+          {"slug": "Fatimid_Cairo", "name": "Fatimid Dynasty and Cairo", "year_range": [969, 1171], "description": "Cairo founded; Al-Azhar University; Shi'a caliphate."},
+          {"slug": "Mamluk_Egypt", "name": "Mamluk Sultanate", "year_range": [1250, 1517], "description": "Slave-soldier dynasty; defeats Mongols at Ain Jalut; architectural flowering."}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Ottoman_Egypt",
+        "name": "Ottoman Egypt",
+        "year_range": [1517, 1798],
+        "status": "PLANNED",
+        "description": "Ottoman province; Mamluk beys retain power; economic stagnation.",
+        "sub_clusters": [
+          {"slug": "Ottoman_Conquest_Egypt", "name": "Ottoman Conquest", "year_range": [1517, 1517], "description": "Selim I defeats Mamluks; Egypt becomes Ottoman province."},
+          {"slug": "Ali_Bey_Revolt", "name": "Ali Bey's Revolt", "year_range": [1768, 1773], "description": "Mamluk bey briefly declares independence; foreshadows Muhammad Ali."}
+        ]
+      },
+      {
+        "slug": "Napoleon_Egypt",
+        "name": "Napoleonic Expedition",
+        "year_range": [1798, 1801],
+        "status": "PLANNED",
+        "description": "French invasion; Rosetta Stone; birth of Egyptology.",
+        "sub_clusters": [
+          {"slug": "French_Expedition_Egypt", "name": "French Expedition", "year_range": [1798, 1801], "description": "Battle of the Pyramids; Description de l'Égypte; Rosetta Stone discovered.", "key_events": ["Rosetta_Stone_Discovery_1799"]}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "Muhammad_Ali_Dynasty",
+        "name": "Muhammad Ali Dynasty",
+        "year_range": [1805, 1952],
+        "status": "PLANNED",
+        "description": "Modernisation; Suez Canal; British occupation; nominal independence.",
+        "sub_clusters": [
+          {"slug": "Muhammad_Ali_Modernisation", "name": "Muhammad Ali's Modernisation", "year_range": [1805, 1848], "description": "Massacre of Mamluks; industrialisation; military reform; Egyptian expansion."},
+          {"slug": "Suez_Canal_Opening", "name": "Suez Canal", "year_range": [1859, 1869], "description": "Ferdinand de Lesseps; 10-year construction; strategic waterway opens.", "key_events": ["Suez_Canal_Opening_1869"]},
+          {"slug": "British_Occupation_Egypt", "name": "British Occupation", "year_range": [1882, 1922], "description": "Urabi Revolt crushed; Lord Cromer; de facto British control."},
+          {"slug": "1919_Revolution_Egypt", "name": "1919 Revolution and Nominal Independence", "year_range": [1919, 1936], "description": "Saad Zaghloul; Wafd Party; partial independence 1922; Anglo-Egyptian Treaty 1936."}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Nasser_Revolution",
+        "name": "Free Officers Revolution and Nasser Era",
+        "year_range": [1952, 1970],
+        "status": "PLANNED",
+        "description": "Military revolution; pan-Arabism; Suez Crisis; Six-Day War.",
+        "sub_clusters": [
+          {"slug": "Free_Officers_Coup", "name": "Free Officers Revolution", "year_range": [1952, 1954], "description": "Naguib and Nasser overthrow King Farouk; republic declared."},
+          {"slug": "Suez_Crisis_1956", "name": "Suez Crisis", "year_range": [1956, 1956], "description": "Nasser nationalises Suez Canal; Anglo-French-Israeli invasion; Cold War turning point.", "key_events": ["Suez_Crisis_1956"]},
+          {"slug": "UAR_Pan_Arabism", "name": "United Arab Republic and Pan-Arabism", "year_range": [1958, 1967], "description": "Union with Syria; Non-Aligned Movement; Aswan High Dam."},
+          {"slug": "Six_Day_War_Egypt", "name": "Six-Day War", "year_range": [1967, 1967], "description": "Devastating defeat; Sinai lost; Nasser's decline.", "key_events": ["Six_Day_War_1967"]}
+        ]
+      },
+      {
+        "slug": "Sadat_Era",
+        "name": "Sadat Era",
+        "year_range": [1970, 1981],
+        "status": "PLANNED",
+        "description": "October War; Camp David; infitah; assassination.",
+        "sub_clusters": [
+          {"slug": "October_War_1973", "name": "October War (Yom Kippur)", "year_range": [1973, 1973], "description": "Egyptian crossing of Suez Canal; restored national pride."},
+          {"slug": "Camp_David_Accords", "name": "Camp David Accords", "year_range": [1978, 1979], "description": "Peace with Israel; Sinai returned; Sadat and Begin Nobel Peace Prize.", "key_events": ["Camp_David_Accords_1978"]},
+          {"slug": "Sadat_Assassination", "name": "Sadat Assassination", "year_range": [1981, 1981], "description": "Killed by Islamic Jihad during military parade."}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Mubarak_Era",
+        "name": "Mubarak Era",
+        "year_range": [1981, 2011],
+        "status": "PLANNED",
+        "description": "30-year authoritarian rule; economic liberalisation; emergency law.",
+        "sub_clusters": [
+          {"slug": "Mubarak_Rule", "name": "Mubarak's Three Decades", "year_range": [1981, 2011], "description": "Political stagnation; tourism economy; Islamist insurgency; succession crisis."}
+        ]
+      },
+      {
+        "slug": "Egyptian_Revolution",
+        "name": "Egyptian Revolution and Aftermath",
+        "year_range": [2011, 2026],
+        "status": "PLANNED",
+        "description": "Arab Spring; Tahrir Square; Morsi; Sisi counter-revolution.",
+        "sub_clusters": [
+          {"slug": "January_25_Revolution", "name": "January 25 Revolution", "year_range": [2011, 2011], "description": "Tahrir Square protests; 18 days; Mubarak ousted.", "key_events": ["Egyptian_Revolution_2011"]},
+          {"slug": "Morsi_Muslim_Brotherhood", "name": "Morsi and Muslim Brotherhood", "year_range": [2012, 2013], "description": "First free election; Islamist presidency; polarisation."},
+          {"slug": "Sisi_Era", "name": "Sisi Era", "year_range": [2013, 2026], "description": "Military coup; Rabaa massacre; authoritarian restoration; mega-projects."}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "Old_Kingdom_Egypt", "interfaces_with": ["Ancient_Near_East", "Mesopotamian_Civilisation"]},
+    {"cluster": "Ptolemaic_Egypt", "interfaces_with": ["Hellenistic_World", "Roman_Republic"]},
+    {"cluster": "Suez_Crisis_1956", "interfaces_with": ["Cold_War_Superpower_Rivalry", "British_Decolonisation"]},
+    {"cluster": "Egyptian_Revolution", "interfaces_with": ["Arab_Spring", "Political_Islam_Global"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 13,
+    "total_level5_subclusters": 35,
+    "active_clusters": 0,
+    "planned_clusters": 13,
+    "timeframe_distribution": {"910": 2, "920": 3, "930": 2, "940": 1, "950": 2, "960": 2}
+  }
+}

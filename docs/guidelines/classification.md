@@ -112,12 +112,12 @@ Each top-level class subdivides into more specific divisions (library-style sche
 - 850 Oral Traditions
 
 9 – Timeframes
-- 910 Prehistoric
-- 920 Classical
-- 930 Medieval
-- 940 Early Modern
-- 950 Modern
-- 960 Contemporary
+- 910 Prehistoric (Before 3000 BCE)
+- 920 Classical (3000 BCE – 500 CE)
+- 930 Medieval (500 – 1500 CE)
+- 940 Early Modern (1500 – 1800 CE)
+- 950 Modern (1800 – 1945 CE)
+- 960 Contemporary (1945 CE – Present)
 
 ---
 

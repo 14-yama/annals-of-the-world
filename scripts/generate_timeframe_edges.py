@@ -12,12 +12,12 @@ Usage:
     python scripts/generate_timeframe_edges.py --ingest           # Also ingest to Neo4j
 
 Timeframe Divisions (Class 9):
-    910 - Prehistoric (before -3000)
-    920 - Classical (-3000 to 70)
-    930 - Medieval (70 to 1500)
-    940 - Early Modern (1500 to 1800)
-    950 - Modern (1800 to 1945)
-    960 - Contemporary (1945 to present)
+    910 - Prehistoric (before 3000 BCE)
+    920 - Classical (3000 BCE to 500 CE)
+    930 - Medieval (500 to 1500 CE)
+    940 - Early Modern (1500 to 1800 CE)
+    950 - Modern (1800 to 1945 CE)
+    960 - Contemporary (1945 CE to present)
 """
 
 import argparse
@@ -63,8 +63,8 @@ CLUSTER_TIMEFRAME_MAP = {
 # Timeframe node definitions
 TIMEFRAMES = {
     910: {"slug": "910_Prehistoric", "name": "Prehistoric", "startYear": -10000000, "endYear": -3000},
-    920: {"slug": "920_Classical", "name": "Classical", "startYear": -3000, "endYear": 70},
-    930: {"slug": "930_Medieval", "name": "Medieval", "startYear": 70, "endYear": 1500},
+    920: {"slug": "920_Classical", "name": "Classical", "startYear": -3000, "endYear": 500},
+    930: {"slug": "930_Medieval", "name": "Medieval", "startYear": 500, "endYear": 1500},
     940: {"slug": "940_Early_Modern", "name": "Early Modern", "startYear": 1500, "endYear": 1800},
     950: {"slug": "950_Modern", "name": "Modern", "startYear": 1800, "endYear": 1945},
     960: {"slug": "960_Contemporary", "name": "Contemporary", "startYear": 1945, "endYear": 2100},

@@ -1,0 +1,152 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "mali",
+    "country_name": "Mali",
+    "region": "West Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "ML",
+    "iso3166_alpha3": "MLI",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for Mali covering Djenné-Djenno, Ghana Empire, Mali Empire (Sundiata/Mansa Musa), Songhai Empire, Timbuktu scholarship, French Sudan, Keita/Traoré eras, 2012 crisis, and jihadist insurgency."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Ancient_Mali_Civilisations",
+        "name": "Ancient Civilisations of the Niger Bend",
+        "year_range": [-3000, 300],
+        "status": "PLANNED",
+        "description": "Early ironworking, agricultural settlement, and rise of Djenné-Djenno as one of Africa's oldest cities.",
+        "sub_clusters": [
+          {"slug": "Saharan_Neolithic_ML", "name": "Saharan Neolithic and Early Settlement", "year_range": [-3000, -500], "description": "Pastoral and agricultural communities in the desiccating Sahara migrate southward to the Niger River basin."},
+          {"slug": "Djenne_Djenno", "name": "Djenné-Djenno Urban Centre", "year_range": [-250, 800], "description": "One of sub-Saharan Africa's earliest urban centres; iron smelting, rice cultivation, and long-distance trade without centralised state.", "key_events": ["Djenne_Djenno_Founded"]}
+        ]
+      },
+      {
+        "slug": "Ghana_Empire",
+        "name": "Ghana Empire (Wagadu)",
+        "year_range": [300, 1200],
+        "status": "PLANNED",
+        "description": "Soninke-led Ghana Empire dominates trans-Saharan gold-salt trade from its capital Koumbi Saleh.",
+        "sub_clusters": [
+          {"slug": "Rise_Ghana_Empire", "name": "Rise of the Ghana Empire", "year_range": [300, 800], "description": "Soninke clans unify under the Ghana (war chief); control of gold fields of Bambuk and Bure."},
+          {"slug": "Ghana_TransSaharan_Trade", "name": "Trans-Saharan Gold-Salt Trade", "year_range": [800, 1076], "description": "Ghana taxes gold-salt exchange; Arab geographers describe fabulous wealth; Koumbi Saleh flourishes."},
+          {"slug": "Almoravid_Decline_Ghana", "name": "Almoravid Pressure and Decline", "year_range": [1054, 1200], "description": "Almoravid conquest or pressure on Ghana c.1076; empire fragments into successor states.", "key_events": ["Almoravid_Sack_Ghana_1076"]}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Mali_Empire",
+        "name": "Mali Empire",
+        "year_range": [1235, 1600],
+        "status": "PLANNED",
+        "description": "Sundiata Keita founds the Mali Empire; Mansa Musa's legendary hajj; Timbuktu becomes centre of Islamic learning.",
+        "sub_clusters": [
+          {"slug": "Sundiata_Keita", "name": "Sundiata Keita and the Battle of Kirina", "year_range": [1235, 1270], "description": "Sundiata defeats Sumanguru at Kirina 1235; Kouroukan Fouga charter; Mande heartland unified.", "key_events": ["Battle_Kirina_1235"]},
+          {"slug": "Mansa_Musa_Hajj", "name": "Mansa Musa and the Golden Hajj", "year_range": [1312, 1337], "description": "Mansa Musa's 1324 pilgrimage to Mecca distributes so much gold it depresses Cairo markets; Mali appears on European maps.", "key_events": ["Mansa_Musa_Hajj_1324"]},
+          {"slug": "Timbuktu_Scholarship", "name": "Timbuktu as Centre of Learning", "year_range": [1300, 1600], "description": "Sankore Mosque and university; manuscript tradition; Islamic jurisprudence; scholars like Ahmed Baba."},
+          {"slug": "Mali_Empire_Decline", "name": "Decline of the Mali Empire", "year_range": [1400, 1600], "description": "Succession crises; Songhai and Mossi raids; loss of peripheral provinces; Mali reduced to Mande core."}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Songhai_Empire",
+        "name": "Songhai Empire",
+        "year_range": [1464, 1591],
+        "status": "PLANNED",
+        "description": "Songhai Empire under Sunni Ali and Askia Muhammad becomes the largest empire in African history; Moroccan invasion ends it.",
+        "sub_clusters": [
+          {"slug": "Sunni_Ali_Ber", "name": "Sunni Ali Ber's Conquests", "year_range": [1464, 1492], "description": "Sunni Ali captures Timbuktu (1468) and Djenné (1473); builds Songhai into a major empire.", "key_events": ["Sunni_Ali_Captures_Timbuktu_1468"]},
+          {"slug": "Askia_Muhammad", "name": "Askia Muhammad's Golden Age", "year_range": [1493, 1528], "description": "Askia Muhammad usurps power; pilgrimage to Mecca; administrative reforms; Islamic scholarship peaks.", "key_events": ["Askia_Muhammad_Hajj_1496"]},
+          {"slug": "Moroccan_Invasion_1591", "name": "Moroccan Invasion and Fall of Songhai", "year_range": [1591, 1620], "description": "Saadian Morocco's musketeers defeat Songhai at Battle of Tondibi 1591; empire collapses; region fragments.", "key_events": ["Battle_Tondibi_1591"]}
+        ]
+      },
+      {
+        "slug": "Post_Songhai_States_ML",
+        "name": "Post-Songhai Successor States",
+        "year_range": [1591, 1850],
+        "status": "PLANNED",
+        "description": "Bambara kingdoms (Ségou, Kaarta), Fulani jihad states, and Toucouleur Empire fill the power vacuum.",
+        "sub_clusters": [
+          {"slug": "Bambara_Kingdoms", "name": "Bambara Kingdoms of Ségou and Kaarta", "year_range": [1640, 1861], "description": "Biton Coulibaly founds Ségou kingdom; Bambara resist Islam; slave-raiding warrior states."},
+          {"slug": "Masina_Fulani_Jihad", "name": "Fulani Jihad State of Masina", "year_range": [1818, 1862], "description": "Seku Amadu's jihad establishes theocratic Masina Empire based at Hamdallahi; strict Islamic governance.", "key_events": ["Masina_Jihad_1818"]}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "French_Sudan_ML",
+        "name": "French Sudan (Colonial Mali)",
+        "year_range": [1850, 1960],
+        "status": "PLANNED",
+        "description": "French military conquest; resistance of Samori Ture and El Hadj Umar; French Sudan within AOF.",
+        "sub_clusters": [
+          {"slug": "Umar_Tall_Resistance", "name": "El Hadj Umar Tall's Toucouleur Empire", "year_range": [1848, 1893], "description": "Umar Tall's jihad conquers Bambara states; Toucouleur Empire resists French expansion until defeated.", "key_events": ["Umar_Tall_Jihad_1848"]},
+          {"slug": "French_Conquest_ML", "name": "French Military Conquest", "year_range": [1880, 1898], "description": "Gallieni and Archinard campaigns; fall of Ségou 1890; Samori Ture captured 1898; colony established.", "key_events": ["Samori_Ture_Captured_1898"]},
+          {"slug": "French_Sudan_AOF", "name": "French Sudan within AOF", "year_range": [1898, 1960], "description": "Forced labour, head tax, cotton cultivation; Office du Niger irrigation scheme; slow urbanisation."}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Independence_Keita_ML",
+        "name": "Independence and Modibo Keita Era",
+        "year_range": [1958, 1968],
+        "status": "PLANNED",
+        "description": "Mali Federation with Senegal; independence 1960; Keita's socialist one-party state; 1968 military coup.",
+        "sub_clusters": [
+          {"slug": "Mali_Federation", "name": "Mali Federation with Senegal", "year_range": [1959, 1960], "description": "Short-lived Mali Federation; Senegal secedes August 1960; Republic of Mali declared.", "key_events": ["Mali_Federation_1959"]},
+          {"slug": "Keita_Socialist_State", "name": "Modibo Keita's Socialist State", "year_range": [1960, 1968], "description": "Single-party US-RDA rule; nationalisation; withdrawal from CFA franc; economic difficulties.", "key_events": ["Independence_Mali_1960"]}
+        ]
+      },
+      {
+        "slug": "Traore_Military_Rule",
+        "name": "Moussa Traoré Military Rule",
+        "year_range": [1968, 1991],
+        "status": "PLANNED",
+        "description": "Lieutenant Traoré overthrows Keita; single-party UDPM rule; Sahel droughts; democratic movement topples him.",
+        "sub_clusters": [
+          {"slug": "Traore_Coup_1968", "name": "Traoré Coup and UDPM Rule", "year_range": [1968, 1991], "description": "Military junta becomes single-party state; Sahel famines 1970s–1980s; Tuareg grievances mount.", "key_events": ["Traore_Coup_1968"]},
+          {"slug": "Democratic_Revolution_1991_ML", "name": "1991 Democratic Revolution", "year_range": [1991, 1992], "description": "Pro-democracy protests; Amadou Toumani Touré leads military ouster of Traoré; transition to democracy.", "key_events": ["Traore_Overthrown_1991"]}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Democratic_Mali",
+        "name": "Democratic Mali and the 2012 Crisis",
+        "year_range": [1992, 2026],
+        "status": "PLANNED",
+        "description": "Multiparty democracy; Tuareg rebellions; 2012 crisis (MNLA, Ansar Dine, French intervention); ongoing jihadist insurgency; military coups.",
+        "sub_clusters": [
+          {"slug": "Third_Republic_ML", "name": "Third Republic Democracy", "year_range": [1992, 2012], "description": "Alpha Oumar Konaré and ATT presidencies; Mali hailed as African democratic model; decentralisation."},
+          {"slug": "Northern_Mali_Crisis_2012", "name": "2012 Northern Mali Crisis", "year_range": [2012, 2013], "description": "Tuareg MNLA rebellion; Ansar Dine and AQIM seize northern Mali; coup in Bamako; French Operation Serval.", "key_events": ["Mali_Coup_2012", "Operation_Serval_2013"]},
+          {"slug": "Jihadist_Insurgency_ML", "name": "Ongoing Jihadist Insurgency", "year_range": [2013, 2026], "description": "JNIM and ISGS attacks spread to central Mali; UN MINUSMA peacekeepers; intercommunal violence."},
+          {"slug": "Military_Transition_2020s_ML", "name": "2020–2021 Military Coups and Wagner Era", "year_range": [2020, 2026], "description": "Coups in 2020 and 2021; Colonel Assimi Goïta leads junta; France expelled; Russian Wagner Group deployed; MINUSMA withdrawn.", "key_events": ["Mali_Coup_2020", "Mali_Coup_2021"]}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "Ghana_Empire", "interfaces_with": ["Trans_Saharan_Trade", "Almoravid_Movement", "West_African_Gold"]},
+    {"cluster": "Mali_Empire", "interfaces_with": ["Trans_Saharan_Trade", "Islamic_Civilisation", "Mande_Expansion"]},
+    {"cluster": "Songhai_Empire", "interfaces_with": ["Trans_Saharan_Trade", "Moroccan_Saadian_Dynasty", "Islamic_Scholarship"]},
+    {"cluster": "French_Sudan_ML", "interfaces_with": ["French_Colonial_Empire_AOF", "Samori_Ture_Resistance", "Scramble_For_Africa"]},
+    {"cluster": "Northern_Mali_Crisis_2012", "interfaces_with": ["Tuareg_Rebellions", "AQIM_Sahel", "French_Military_Africa"]},
+    {"cluster": "Jihadist_Insurgency_ML", "interfaces_with": ["Sahel_Security_Crisis", "ISGS_Sahel", "UN_Peacekeeping"]},
+    {"cluster": "Timbuktu_Scholarship", "interfaces_with": ["Islamic_Golden_Age", "African_Manuscript_Tradition"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 10,
+    "total_level5_subclusters": 27,
+    "active_clusters": 0,
+    "planned_clusters": 10,
+    "timeframe_distribution": {"910": 2, "920": 1, "930": 2, "940": 1, "950": 2, "960": 1}
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "lesotho",
+    "country_name": "Lesotho",
+    "region": "Southern Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "LS",
+    "iso3166_alpha3": "LSO",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for Lesotho covering San rock art, Moshoeshoe I (nation builder), Basotho nation formation, Gun War, Basutoland protectorate, independence 1966, mountain kingdom (entirely above 1000m), Lesotho Highlands Water Project (LHWP), and political instability."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "San_Rock_Art_LS",
+        "name": "San Rock Art and Early Inhabitants",
+        "year_range": [-40000, 500],
+        "status": "PLANNED",
+        "description": "San hunter-gatherers inhabit the Maloti-Drakensberg mountains for tens of thousands of years, leaving one of the richest rock-art traditions in southern Africa.",
+        "sub_clusters": [
+          {"slug": "Stone_Age_Highlands_LS", "name": "Stone Age Highland Settlements", "year_range": [-40000, -5000], "description": "Middle and Later Stone Age tools found in rock shelters across the Lesotho highlands; evidence of seasonal transhumance patterns."},
+          {"slug": "San_Rock_Art_Maloti", "name": "San Rock Art of the Maloti-Drakensberg", "year_range": [-5000, 1800], "description": "Thousands of polychrome rock paintings depicting eland hunts, rain-making rituals, and therianthropic (half-human/half-animal) trance figures; among the finest in the world.", "key_events": ["Maloti_Drakensberg_Rock_Art"]}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Bantu_Settlement_LS",
+        "name": "Bantu Migration and Early Sotho Communities",
+        "year_range": [200, 1500],
+        "status": "PLANNED",
+        "description": "Bantu-speaking peoples settle the region; Sotho-Tswana communities develop distinct cultural and political identities in the highlands.",
+        "sub_clusters": [
+          {"slug": "Early_Bantu_LS", "name": "Early Bantu Settlement", "year_range": [200, 1000], "description": "Bantu-speaking farmers arrive from the north, introducing iron-working, sorghum cultivation, and cattle keeping; interaction with and gradual displacement of San populations."},
+          {"slug": "Sotho_Chiefdoms_Formation", "name": "Formation of Sotho Chiefdoms", "year_range": [1000, 1500], "description": "Sotho-speaking groups (Bakwena, Bafokeng, Bataung, Basia) establish chiefdoms in the highland valleys; cattle-based economy; stone-walled settlement sites."}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Moshoeshoe_I_Nation_Builder",
+        "name": "Moshoeshoe I and the Basotho Nation",
+        "year_range": [1786, 1870],
+        "status": "PLANNED",
+        "description": "Moshoeshoe I (c.1786–1870), one of Africa's greatest statesmen, unites diverse refugees of the Difaqane into the Basotho nation from his mountain fortress of Thaba Bosiu.",
+        "sub_clusters": [
+          {"slug": "Moshoeshoe_Early_Life", "name": "Moshoeshoe's Rise and Thaba Bosiu", "year_range": [1786, 1824], "description": "Born Lepoqo of the Bamokoteli; renamed Moshoeshoe ('the Shaver'); moves followers to impregnable flat-topped mountain of Thaba Bosiu in 1824."},
+          {"slug": "Basotho_Nation_Formation", "name": "Basotho Nation Formation during Difaqane", "year_range": [1820, 1840], "description": "Moshoeshoe shelters and absorbs refugees from Zulu, Ndebele, and Griqua raids; builds a new multi-clan nation through diplomacy, cattle-loaning (mafisa), and strategic marriages.", "key_events": ["Thaba_Bosiu_Defence_1831"]},
+          {"slug": "Boer_Wars_Moshoeshoe", "name": "Wars with Orange Free State Boers", "year_range": [1858, 1868], "description": "Three wars with the Orange Free State over fertile lowlands; Moshoeshoe loses the Conquered Territory but successfully appeals to Queen Victoria for British protection.", "key_events": ["Moshoeshoe_Requests_British_Protection_1868"]}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "Basutoland_Protectorate",
+        "name": "Basutoland Protectorate",
+        "year_range": [1868, 1966],
+        "status": "PLANNED",
+        "description": "British Basutoland protectorate preserved from South African incorporation; the Gun War demonstrates Basotho resistance; migrant labour to South African mines reshapes society.",
+        "sub_clusters": [
+          {"slug": "Gun_War_1880", "name": "The Gun War (1880–1881)", "year_range": [1880, 1881], "description": "Basotho refuse Cape Colony's attempt to disarm them; successful resistance leads to direct British imperial control rather than Cape administration; only southern African people never fully conquered.", "key_events": ["Gun_War_1880"]},
+          {"slug": "Colonial_Administration_LS", "name": "British Colonial Administration", "year_range": [1884, 1960], "description": "Indirect rule through paramount chief and district chiefs; Basutoland National Council established 1903; deliberate underdevelopment; territory remains surrounded by South Africa."},
+          {"slug": "Migrant_Labour_LS", "name": "Migrant Labour System", "year_range": [1870, 1966], "description": "Basotho men become major workforce in South African gold and diamond mines; remittances become economic backbone; social disruption of absent husbands and fathers."}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Independence_LS",
+        "name": "Independence and Early Political Struggles",
+        "year_range": [1960, 1986],
+        "status": "PLANNED",
+        "description": "Lesotho gains independence in 1966; Chief Leabua Jonathan's authoritarian rule; conflict between BNP and BCP; South African economic and military pressure.",
+        "sub_clusters": [
+          {"slug": "Independence_1966_LS", "name": "Lesotho Independence 1966", "year_range": [1960, 1966], "description": "Constitutional development; Basutoland Congress Party (BCP) vs Basotho National Party (BNP); independence on 4 October 1966 under King Moshoeshoe II and PM Leabua Jonathan.", "key_events": ["Lesotho_Independence_1966"]},
+          {"slug": "Jonathan_Authoritarian_Rule", "name": "Leabua Jonathan's Authoritarian Rule", "year_range": [1970, 1986], "description": "Jonathan suspends constitution after losing 1970 election; declares state of emergency; Lesotho Liberation Army insurgency; South African blockade 1986 leads to military coup.", "key_events": ["Jonathan_Suspends_Constitution_1970"]}
+        ]
+      },
+      {
+        "slug": "Military_Rule_Transition_LS",
+        "name": "Military Rule and Democratic Transition",
+        "year_range": [1986, 1998],
+        "status": "PLANNED",
+        "description": "Military junta 1986–1993; democratic transition; King Moshoeshoe II's exile and return; political instability continues.",
+        "sub_clusters": [
+          {"slug": "Military_Junta_LS", "name": "Military Junta 1986–1993", "year_range": [1986, 1993], "description": "General Lekhanya overthrows Jonathan; restores executive powers to King Moshoeshoe II then exiles him; Major General Ramaema takes over 1991; transition to elections."},
+          {"slug": "Democratic_Elections_1993_LS", "name": "1993 Democratic Elections", "year_range": [1993, 1998], "description": "BCP wins all 65 seats; factional politics; King Moshoeshoe II returns and dies in car accident 1996; King Letsie III ascends; 1998 election dispute triggers SADC intervention.", "key_events": ["SADC_Intervention_Lesotho_1998"]}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Mountain_Kingdom_Modern_LS",
+        "name": "Modern Lesotho: Mountain Kingdom Challenges",
+        "year_range": [1998, 2026],
+        "status": "PLANNED",
+        "description": "Lesotho navigates post-intervention reforms, the Highlands Water Project, HIV/AIDS crisis, political instability, and economic dependence on South Africa.",
+        "sub_clusters": [
+          {"slug": "LHWP_Water_Project", "name": "Lesotho Highlands Water Project", "year_range": [1986, 2026], "description": "Massive engineering project supplying water to South Africa's Gauteng province; Phase I completed 2003; Phase II (Polihali Dam) under construction; royalties fund Lesotho's budget.", "key_events": ["LHWP_Phase_I_Completed_2003"]},
+          {"slug": "Political_Instability_2010s_LS", "name": "Political Instability and Attempted Coups", "year_range": [2012, 2020], "description": "PM Tom Thabane's coalition politics; Lieutenant General Kamoli's 2014 attempted coup; SADC mediates; Thabane charged with murder of ex-wife; multiple snap elections."},
+          {"slug": "HIV_Textile_Economy_LS", "name": "HIV/AIDS and Textile Economy", "year_range": [2000, 2026], "description": "Second-highest HIV prevalence globally; AGOA-driven textile industry becomes largest private employer; decline of mine remittances; food insecurity in highlands."},
+          {"slug": "Constitutional_Reform_LS", "name": "Constitutional Reform Process", "year_range": [2017, 2026], "description": "SADC-mandated constitutional reforms (Phumaphi Commission) to address political instability; debates over powers of prime minister, monarchy, and military; implementation delays."}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "San_Rock_Art_LS", "interfaces_with": ["San_Khoisan_Southern_Africa", "Rock_Art_Traditions", "Maloti_Drakensberg_Heritage"]},
+    {"cluster": "Moshoeshoe_I_Nation_Builder", "interfaces_with": ["Mfecane_Southern_Africa", "Boer_Republics", "British_Colonial_Empire"]},
+    {"cluster": "Gun_War_1880", "interfaces_with": ["Cape_Colony_Expansion", "African_Resistance_Movements", "Firearms_Trade_Southern_Africa"]},
+    {"cluster": "Basutoland_Protectorate", "interfaces_with": ["South_African_Mining_Industry", "Migrant_Labour_Systems", "British_High_Commission_Territories"]},
+    {"cluster": "Independence_LS", "interfaces_with": ["African_Independence_Movements", "Apartheid_South_Africa", "Cold_War_Africa"]},
+    {"cluster": "LHWP_Water_Project", "interfaces_with": ["Water_Security_Southern_Africa", "South_Africa_Gauteng", "Engineering_Megaprojects"]},
+    {"cluster": "Political_Instability_2010s_LS", "interfaces_with": ["SADC_Mediation", "African_Governance_Challenges", "Coalition_Politics_Africa"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 9,
+    "total_level5_subclusters": 24,
+    "active_clusters": 0,
+    "planned_clusters": 9,
+    "timeframe_distribution": {"910": 1, "920": 1, "930": 1, "940": 1, "950": 2, "960": 1}
+  }
+}

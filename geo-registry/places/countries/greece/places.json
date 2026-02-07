@@ -1,83 +1,284 @@
 {
-  "slug": "greece",
-  "name": "Greece",
-  "iso": "GR",
-  "wikidata_id": "Q41",
-  "names": [
-    {
-      "name": "Greece",
-      "lang": "en",
-      "is_primary": true
-    },
-    {
-      "name": "Ελλάδα",
-      "lang": "el",
-      "script": "Grek",
-      "is_endonym": true,
-      "note": "Elláda"
-    },
-    {
-      "name": "Hellas",
-      "lang": "el",
-      "is_endonym": true
-    },
-    {
-      "name": "Grèce",
-      "lang": "fr"
-    },
-    {
-      "name": "Griechenland",
-      "lang": "de"
-    }
-  ],
-  "cities": {
-    "athens": {
-      "name": "Athens",
-      "wikidata_id": "Q1524",
-      "names": [
-        {
-          "name": "Athens",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "Αθήνα",
-          "lang": "el",
-          "script": "Grek",
-          "is_endonym": true,
-          "note": "Athína"
-        },
-        {
-          "name": "Athènes",
-          "lang": "fr"
+  "_meta": {
+    "country_slug": "greece",
+    "node_kind": "places",
+    "registry": "docs/nodes/node-attribute-registry.md",
+    "generated_at": "2026-01-31T13:56:07.826471Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Knossos",
+        "name": "Knossos",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "Archaeological_Site",
+        "description": "Major Minoan palace center on Crete.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Crete"
         }
-      ]
-    },
-    "thessaloniki": {
-      "name": "Thessaloniki",
-      "wikidata_id": "Q17151",
-      "names": [
-        {
-          "name": "Thessaloniki",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "Θεσσαλονίκη",
-          "lang": "el",
-          "script": "Grek",
-          "is_endonym": true
-        },
-        {
-          "name": "Salonika",
-          "lang": "en",
-          "note": "Historical English"
-        },
-        {
-          "name": "Selanik",
-          "lang": "tr"
+      },
+      {
+        "slug": "Mycenae",
+        "name": "Mycenae",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "Archaeological_Site",
+        "description": "Fortified Mycenaean palace complex in the Argolid.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Peloponnese"
         }
-      ]
-    }
+      },
+      {
+        "slug": "Akrotiri",
+        "name": "Akrotiri",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "Archaeological_Site",
+        "description": "Bronze Age settlement on Santorini preserved by volcanic ash.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Cyclades"
+        }
+      }
+    ],
+    "920": [
+      {
+        "slug": "Athens",
+        "name": "Athens",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "Ancient_Capital",
+        "description": "Classical city-state and center of Athenian democracy.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Attica"
+        }
+      },
+      {
+        "slug": "Sparta",
+        "name": "Sparta",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "City_State",
+        "description": "Classical city-state known for military culture.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Laconia"
+        }
+      },
+      {
+        "slug": "Delphi",
+        "name": "Delphi",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "Sanctuary",
+        "description": "Panhellenic sanctuary and oracle site of Apollo.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Phocis"
+        }
+      }
+    ],
+    "930": [
+      {
+        "slug": "Thessaloniki",
+        "name": "Thessaloniki",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "Historic_City",
+        "description": "Major Byzantine city and commercial hub in northern Greece.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Macedonia"
+        }
+      },
+      {
+        "slug": "Mystras",
+        "name": "Mystras",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "Medieval_Town",
+        "description": "Byzantine fortified town and cultural center in the late medieval period.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Peloponnese"
+        }
+      },
+      {
+        "slug": "Mount_Athos",
+        "name": "Mount Athos",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "Monastic_Region",
+        "description": "Autonomous monastic peninsula and spiritual center.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Chalkidiki"
+        }
+      }
+    ],
+    "940": [
+      {
+        "slug": "Ioannina",
+        "name": "Ioannina",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "Historic_City",
+        "description": "Ottoman-era regional center with notable Greek communities.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Epirus"
+        }
+      },
+      {
+        "slug": "Nafplio",
+        "name": "Nafplio",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "Port_City",
+        "description": "Strategic port with Venetian and Ottoman fortifications.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Argolis"
+        }
+      },
+      {
+        "slug": "Chania",
+        "name": "Chania",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "Port_City",
+        "description": "Cretan city shaped by Venetian and Ottoman rule.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Crete"
+        }
+      }
+    ],
+    "950": [
+      {
+        "slug": "Athens_Modern",
+        "name": "Athens (Modern Capital)",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "Capital",
+        "description": "Capital of the modern Greek state from 1834 onward.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Attica"
+        }
+      },
+      {
+        "slug": "Piraeus",
+        "name": "Piraeus",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "Port_City",
+        "description": "Major port of Athens and maritime hub in modern Greece.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Attica"
+        }
+      },
+      {
+        "slug": "Patras",
+        "name": "Patras",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "City",
+        "description": "Major western Greek port and commercial center.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Peloponnese"
+        }
+      }
+    ],
+    "960": [
+      {
+        "slug": "Thessaloniki_Modern",
+        "name": "Thessaloniki (Modern)",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "City",
+        "description": "Contemporary metropolitan city and economic hub in northern Greece.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Macedonia"
+        }
+      },
+      {
+        "slug": "Heraklion",
+        "name": "Heraklion",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "City",
+        "description": "Largest city on Crete and major regional center.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Crete"
+        }
+      },
+      {
+        "slug": "Larissa",
+        "name": "Larissa",
+        "label": "Place",
+        "status": "PROPOSED",
+        "lang": "el",
+        "script": "Grek",
+        "place_kind": "City",
+        "description": "Modern city and agricultural hub in Thessaly.",
+        "location": {
+          "country_slug": "greece",
+          "place_note": "Thessaly"
+        }
+      }
+    ]
   }
 }

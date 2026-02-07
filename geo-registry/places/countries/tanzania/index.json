@@ -1,0 +1,133 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "tanzania",
+    "country_name": "Tanzania",
+    "region": "East Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "TZ",
+    "iso3166_alpha3": "TZA",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for Tanzania covering Olduvai Gorge, Kilwa Sultanate, Zanzibar slave trade, German East Africa (Maji Maji), British Tanganyika, Nyerere ujamaa socialism, Zanzibar revolution, union, and Serengeti/Ngorongoro heritage."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Cradle_Humanity_TZ",
+        "name": "Cradle of Humanity and Early Peoples",
+        "year_range": [-3600000, -10000],
+        "status": "PLANNED",
+        "description": "Olduvai Gorge and Laetoli among the most important hominin fossil sites on Earth; earliest stone tools; anatomically modern humans.",
+        "sub_clusters": [
+          {"slug": "Olduvai_Gorge", "name": "Olduvai Gorge Fossil Record", "year_range": [-3600000, -15000], "description": "Australopithecus, Homo habilis, Homo erectus fossils; Oldowan and Acheulean stone tool industries; Leakey discoveries.", "key_events": ["Olduvai_Gorge_Discoveries"]},
+          {"slug": "Laetoli_Footprints", "name": "Laetoli Hominin Footprints", "year_range": [-3700000, -3600000], "description": "3.66-million-year-old Australopithecus afarensis footprints preserved in volcanic ash; proof of bipedal locomotion."},
+          {"slug": "Early_Pastoralists_TZ", "name": "Early Pastoral and Farming Communities", "year_range": [-5000, -500], "description": "Pastoral Neolithic peoples; Later Stone Age hunter-gatherers; early Bantu and Cushitic migration into the region."}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Kilwa_Sultanate_TZ",
+        "name": "Kilwa Sultanate and Swahili Coast",
+        "year_range": [800, 1500],
+        "status": "PLANNED",
+        "description": "Rise of Kilwa Kisiwani as dominant Indian Ocean trading sultanate; Swahili civilisation along Tanzanian coast; gold trade monopoly.",
+        "sub_clusters": [
+          {"slug": "Kilwa_Kisiwani", "name": "Kilwa Kisiwani Sultanate", "year_range": [957, 1513], "description": "Kilwa dominates East African gold trade; Great Mosque; Husuni Kubwa palace; UNESCO World Heritage Site.", "key_events": ["Kilwa_Sultanate_Peak"]},
+          {"slug": "Swahili_Towns_TZ", "name": "Swahili Coastal Towns", "year_range": [800, 1500], "description": "Bagamoyo, Pangani, Mafia Island, and other Swahili towns; Indian Ocean commerce; Bantu-Arab cultural synthesis."},
+          {"slug": "Interior_Chiefdoms_TZ", "name": "Interior Bantu Chiefdoms", "year_range": [1000, 1800], "description": "Sukuma, Chagga, Haya, Nyamwezi, and Ha chiefdoms; agriculture and iron-working; long-distance trade networks."}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Zanzibar_Trade_Empire",
+        "name": "Zanzibar and the Slave/Spice Trade",
+        "year_range": [1500, 1890],
+        "status": "PLANNED",
+        "description": "Portuguese then Omani control of coast; Zanzibar as slave trade and clove trade capital; Tippu Tip's empire; European exploration.",
+        "sub_clusters": [
+          {"slug": "Portuguese_Coast_TZ", "name": "Portuguese Coastal Presence", "year_range": [1498, 1698], "description": "Portuguese seize Kilwa and other Swahili towns; Fort Jesus at Mombasa; Omani-Swahili alliance expels Portuguese 1698."},
+          {"slug": "Omani_Zanzibar", "name": "Omani Sultanate of Zanzibar", "year_range": [1698, 1890], "description": "Said bin Sultan moves capital to Zanzibar 1840; clove plantations; island becomes East Africa's commercial hub.", "key_events": ["Omani_Capital_Zanzibar_1840"]},
+          {"slug": "Zanzibar_Slave_Trade", "name": "Zanzibar Slave Trade", "year_range": [1770, 1873], "description": "Zanzibar as largest slave market in East Africa; up to 50,000 enslaved persons per year; abolition treaty 1873."},
+          {"slug": "Tippu_Tip_Ivory", "name": "Tippu Tip's Ivory-Slave Empire", "year_range": [1860, 1895], "description": "Hamed bin Mohammed (Tippu Tip) controls vast ivory and slave trading network from Zanzibar into eastern Congo."}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "German_East_Africa_TZ",
+        "name": "German East Africa",
+        "year_range": [1885, 1919],
+        "status": "PLANNED",
+        "description": "German colonial conquest; Maji Maji Rebellion; WWI East African Campaign; transfer to British mandate.",
+        "sub_clusters": [
+          {"slug": "German_Colonisation_TZ", "name": "German Colonisation", "year_range": [1885, 1905], "description": "Carl Peters' treaties; German East Africa Company; Abushiri revolt 1888; direct imperial rule from 1891."},
+          {"slug": "Maji_Maji_Rebellion", "name": "Maji Maji Rebellion", "year_range": [1905, 1907], "description": "Mass uprising against forced cotton cultivation and hut tax; 'maji' sacred water; German scorched-earth response kills 200,000-300,000.", "key_events": ["Maji_Maji_Rebellion_1905"]},
+          {"slug": "WWI_East_Africa", "name": "WWI East African Campaign", "year_range": [1914, 1918], "description": "Paul von Lettow-Vorbeck leads guerrilla campaign; devastation of Tanganyikan population; British conquest."}
+        ]
+      },
+      {
+        "slug": "British_Tanganyika",
+        "name": "British Tanganyika",
+        "year_range": [1919, 1961],
+        "status": "PLANNED",
+        "description": "League of Nations mandate; indirect rule; groundnut scheme; rise of TANU nationalism.",
+        "sub_clusters": [
+          {"slug": "Mandate_Tanganyika", "name": "British Mandate Period", "year_range": [1919, 1946], "description": "League of Nations mandate; indirect rule through traditional chiefs; limited economic development; racial segregation."},
+          {"slug": "TANU_Nationalism", "name": "TANU and Rise of Nationalism", "year_range": [1954, 1961], "description": "Julius Nyerere founds TANU 1954; peaceful nationalist movement; Tanganyika achieves independence 9 December 1961."}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Nyerere_Ujamaa",
+        "name": "Nyerere, Ujamaa, and the Union",
+        "year_range": [1961, 1985],
+        "status": "PLANNED",
+        "description": "Independence; Zanzibar revolution; union of Tanganyika and Zanzibar; Arusha Declaration; ujamaa villagisation; economic decline.",
+        "sub_clusters": [
+          {"slug": "Zanzibar_Revolution", "name": "Zanzibar Revolution 1964", "year_range": [1964, 1964], "description": "Afro-Shirazi Party overthrows Arab sultanate; thousands killed; Cold War tensions; hasty merger with Tanganyika.", "key_events": ["Zanzibar_Revolution_1964"]},
+          {"slug": "Union_Tanganyika_Zanzibar", "name": "Union of Tanganyika and Zanzibar", "year_range": [1964, 1964], "description": "United Republic of Tanzania formed 26 April 1964; Nyerere president; semi-autonomous Zanzibar retains own government."},
+          {"slug": "Arusha_Declaration_Ujamaa", "name": "Arusha Declaration and Ujamaa", "year_range": [1967, 1985], "description": "Nyerere's Arusha Declaration 1967; African socialism; forced villagisation of 11 million people; economic stagnation.", "key_events": ["Arusha_Declaration_1967"]},
+          {"slug": "Uganda_Tanzania_War", "name": "Uganda-Tanzania War", "year_range": [1978, 1979], "description": "Tanzania invades Uganda after Amin's aggression; ousts Idi Amin; restores Obote; costly for Tanzanian economy."}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Modern_Tanzania",
+        "name": "Modern Tanzania",
+        "year_range": [1985, 2026],
+        "status": "PLANNED",
+        "description": "Economic liberalisation under Mwinyi; multiparty democracy; CCM dominance; mining boom; Magufuli era; Samia Suluhu Hassan.",
+        "sub_clusters": [
+          {"slug": "Economic_Liberalisation_TZ", "name": "Economic Liberalisation", "year_range": [1985, 2005], "description": "Ali Hassan Mwinyi liberalises economy; IMF structural adjustment; privatisation; end of ujamaa experiment."},
+          {"slug": "Multiparty_Democracy_TZ", "name": "Multiparty Democracy", "year_range": [1992, 2026], "description": "Multiparty elections from 1995; CCM (Chama Cha Mapinduzi) dominance; Zanzibar election violence; democratic backsliding concerns."},
+          {"slug": "Magufuli_Era", "name": "Magufuli Era and Aftermath", "year_range": [2015, 2021], "description": "John Magufuli 'The Bulldozer'; infrastructure development; authoritarian tendencies; COVID denial; dies in office 2021."},
+          {"slug": "Samia_Presidency", "name": "Samia Suluhu Hassan Presidency", "year_range": [2021, 2026], "description": "First female president in East Africa; diplomatic reopening; economic reforms; tourism recovery."},
+          {"slug": "Serengeti_Conservation", "name": "Serengeti and Conservation Heritage", "year_range": [1951, 2026], "description": "Serengeti, Ngorongoro, Kilimanjaro, Selous as world-class conservation areas; wildlife tourism; Maasai land rights tensions."}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "Cradle_Humanity_TZ", "interfaces_with": ["Human_Evolution", "Paleoanthropology", "Leakey_Discoveries"]},
+    {"cluster": "Kilwa_Sultanate_TZ", "interfaces_with": ["Indian_Ocean_Trade", "Swahili_Civilisation", "Great_Zimbabwe"]},
+    {"cluster": "Zanzibar_Trade_Empire", "interfaces_with": ["East_African_Slave_Trade", "Omani_Empire", "Indian_Ocean_Commerce"]},
+    {"cluster": "Maji_Maji_Rebellion", "interfaces_with": ["Anticolonial_Resistance_Africa", "German_Colonial_Empire"]},
+    {"cluster": "Nyerere_Ujamaa", "interfaces_with": ["African_Socialism", "Cold_War_Africa", "Pan_Africanism"]},
+    {"cluster": "Uganda_Tanzania_War", "interfaces_with": ["Idi_Amin_Uganda", "African_Interstate_Wars"]},
+    {"cluster": "Serengeti_Conservation", "interfaces_with": ["Wildlife_Conservation_Africa", "UNESCO_World_Heritage", "Maasai_Land_Rights"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 9,
+    "total_level5_subclusters": 27,
+    "active_clusters": 0,
+    "planned_clusters": 9,
+    "timeframe_distribution": {"910": 1, "920": 1, "930": 1, "940": 2, "950": 1, "960": 1}
+  }
+}

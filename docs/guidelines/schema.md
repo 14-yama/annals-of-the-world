@@ -141,19 +141,19 @@ Create canonical Timeframe nodes for temporal anchoring:
 
 | Division | Slug | Name | Year Range |
 |----------|------|------|------------|
-| 910 | `910_Prehistoric` | Prehistoric | before -3000 |
-| 920 | `920_Classical` | Classical | -3000 to 70 |
-| 930 | `930_Medieval` | Medieval | 70 to 1500 |
-| 940 | `940_Early_Modern` | Early Modern | 1500 to 1800 |
-| 950 | `950_Modern` | Modern | 1800 to 1945 |
-| 960 | `960_Contemporary` | Contemporary | 1945 to present |
+| 910 | `910_Prehistoric` | Prehistoric | before 3000 BCE |
+| 920 | `920_Classical` | Classical | 3000 BCE – 500 CE |
+| 930 | `930_Medieval` | Medieval | 500 – 1500 CE |
+| 940 | `940_Early_Modern` | Early Modern | 1500 – 1800 CE |
+| 950 | `950_Modern` | Modern | 1800 – 1945 CE |
+| 960 | `960_Contemporary` | Contemporary | 1945 CE – present |
 
 Cypher setup:
 
 ```cypher
 CREATE (t:Timeframe {slug: '910_Prehistoric', division: 910, name: 'Prehistoric', startYear: -10000000, endYear: -3000})
-CREATE (t:Timeframe {slug: '920_Classical', division: 920, name: 'Classical', startYear: -3000, endYear: 70})
-CREATE (t:Timeframe {slug: '930_Medieval', division: 930, name: 'Medieval', startYear: 70, endYear: 1500})
+CREATE (t:Timeframe {slug: '920_Classical', division: 920, name: 'Classical', startYear: -3000, endYear: 500})
+CREATE (t:Timeframe {slug: '930_Medieval', division: 930, name: 'Medieval', startYear: 500, endYear: 1500})
 CREATE (t:Timeframe {slug: '940_Early_Modern', division: 940, name: 'Early Modern', startYear: 1500, endYear: 1800})
 CREATE (t:Timeframe {slug: '950_Modern', division: 950, name: 'Modern', startYear: 1800, endYear: 1945})
 CREATE (t:Timeframe {slug: '960_Contemporary', division: 960, name: 'Contemporary', startYear: 1945, endYear: 2100})

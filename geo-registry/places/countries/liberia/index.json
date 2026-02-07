@@ -1,0 +1,141 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "liberia",
+    "country_name": "Liberia",
+    "region": "West Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "LR",
+    "iso3166_alpha3": "LBR",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for Liberia covering indigenous Kru/Mande peoples, American Colonization Society settlement, Americo-Liberian dominance, True Whig Party era, Samuel Doe coup, Charles Taylor civil wars, Ebola crisis, and Ellen Johnson Sirleaf presidency."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Indigenous_Peoples_Liberia",
+        "name": "Indigenous Peoples of the Pepper Coast",
+        "year_range": [-3000, 1400],
+        "status": "PLANNED",
+        "description": "Migration and settlement of Kru, Mande, Mel, and other indigenous groups across the Grain/Pepper Coast region.",
+        "sub_clusters": [
+          {"slug": "Kru_Mande_Migrations", "name": "Kru and Mande Migrations", "year_range": [-3000, 500], "description": "Successive waves of Mande-speaking and Kru-speaking peoples settle the forested Pepper Coast."},
+          {"slug": "Dei_Bassa_Kpelle_Societies", "name": "Dei, Bassa, and Kpelle Societies", "year_range": [500, 1400], "description": "Formation of decentralised chieftaincies; Poro and Sande secret societies shape governance and culture."}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Pepper_Coast_Trade",
+        "name": "Pepper Coast Trade and European Contact",
+        "year_range": [1400, 1700],
+        "status": "PLANNED",
+        "description": "Malagueta pepper trade attracts Portuguese and other European traders; coastal exchange networks develop.",
+        "sub_clusters": [
+          {"slug": "Portuguese_Contact_Pepper", "name": "Portuguese Exploration of the Grain Coast", "year_range": [1461, 1550], "description": "Portuguese sailors trade for malagueta pepper and ivory; name the region 'Grain Coast'."},
+          {"slug": "European_Trade_Posts_LR", "name": "European Trade Posts and Coastal Exchange", "year_range": [1550, 1700], "description": "Dutch, English, and French traders establish scattered factories; firearms and cloth for pepper, ivory, and captives."}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "Slave_Trade_Grain_Coast",
+        "name": "Slave Trade on the Grain Coast",
+        "year_range": [1650, 1820],
+        "status": "PLANNED",
+        "description": "Transatlantic slave trade affects coastal and interior populations; Kru sailors become notable maritime labourers.",
+        "sub_clusters": [
+          {"slug": "Captive_Trade_LR", "name": "Captive Trade and Coastal Raids", "year_range": [1650, 1808], "description": "European slavers extract captives; internal wars fuelled by demand; coastal communities disrupted."},
+          {"slug": "Kru_Maritime_Labour", "name": "Kru Maritime Labourers", "year_range": [1700, 1900], "description": "Kru seamen hire onto European ships as skilled sailors; avoid enslavement through maritime bargaining power."}
+        ]
+      },
+      {
+        "slug": "ACS_Settlement",
+        "name": "American Colonization Society and Settlement",
+        "year_range": [1816, 1847],
+        "status": "PLANNED",
+        "description": "ACS founded to resettle free Black Americans; Monrovia established 1822; settler-indigenous tensions.",
+        "sub_clusters": [
+          {"slug": "ACS_Founded", "name": "Founding of the American Colonization Society", "year_range": [1816, 1822], "description": "ACS created 1816 by Robert Finley and others; first settlers arrive at Cape Mesurado 1822.", "key_events": ["ACS_Founded_1816"]},
+          {"slug": "Monrovia_Founded", "name": "Founding of Monrovia", "year_range": [1822, 1838], "description": "Jehudi Ashmun leads colony; Monrovia named after President Monroe; settler governance established.", "key_events": ["Monrovia_Founded_1822"]},
+          {"slug": "Commonwealth_Period_LR", "name": "Commonwealth of Liberia", "year_range": [1838, 1847], "description": "Thomas Buchanan as governor; Commonwealth status; push toward full sovereignty."}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "Republic_Liberia_Founded",
+        "name": "Republic of Liberia and Americo-Liberian Dominance",
+        "year_range": [1847, 1944],
+        "status": "PLANNED",
+        "description": "Independence declared 1847; Americo-Liberian elite control politics; True Whig Party hegemony; Firestone concession.",
+        "sub_clusters": [
+          {"slug": "Independence_1847_LR", "name": "Declaration of Independence", "year_range": [1847, 1847], "description": "Liberia declares independence 26 July 1847; Joseph Jenkins Roberts first president; Africa's first republic.", "key_events": ["Independence_Liberia_1847"]},
+          {"slug": "True_Whig_Party_Era", "name": "True Whig Party Hegemony", "year_range": [1878, 1980], "description": "True Whig Party monopolises power for over a century; indigenous majority excluded from governance."},
+          {"slug": "Firestone_Concession", "name": "Firestone Rubber Concession", "year_range": [1926, 1980], "description": "Firestone obtains million-acre lease for rubber plantations; shapes Liberian economy and labour relations.", "key_events": ["Firestone_Concession_1926"]},
+          {"slug": "League_Slavery_Scandal", "name": "League of Nations Forced Labour Scandal", "year_range": [1929, 1936], "description": "Christy Commission reveals government complicity in forced labour akin to slavery; President King resigns.", "key_events": ["Christy_Report_1930"]}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Tubman_Tolbert_LR",
+        "name": "Tubman and Tolbert Presidencies",
+        "year_range": [1944, 1980],
+        "status": "PLANNED",
+        "description": "William Tubman's Open Door Policy; William Tolbert's reforms; growing indigenous dissent leading to 1980 coup.",
+        "sub_clusters": [
+          {"slug": "Tubman_Open_Door", "name": "Tubman's Open Door Policy", "year_range": [1944, 1971], "description": "President Tubman attracts foreign investment; cosmetic unification policy; authoritarian control persists."},
+          {"slug": "Tolbert_Reforms", "name": "Tolbert's Reforms and Rice Riots", "year_range": [1971, 1980], "description": "Tolbert attempts modernisation; 1979 rice riots reveal deep inequality; indigenous opposition grows.", "key_events": ["Rice_Riots_1979"]}
+        ]
+      },
+      {
+        "slug": "Doe_Coup_Civil_Wars",
+        "name": "Samuel Doe Coup and Civil Wars",
+        "year_range": [1980, 2003],
+        "status": "PLANNED",
+        "description": "Doe's 1980 coup ends Americo-Liberian rule; ethnic violence; Charles Taylor's NPFL insurgency; two devastating civil wars.",
+        "sub_clusters": [
+          {"slug": "Doe_Coup_1980", "name": "Samuel Doe's 1980 Coup", "year_range": [1980, 1989], "description": "Master Sergeant Doe overthrows Tolbert; executes cabinet on beach; ethnic Krahn favouritism; authoritarian rule.", "key_events": ["Doe_Coup_1980"]},
+          {"slug": "First_Liberian_Civil_War", "name": "First Liberian Civil War", "year_range": [1989, 1997], "description": "Charles Taylor's NPFL invasion from Côte d'Ivoire; Doe killed 1990; ECOMOG intervention; ~200,000 dead.", "key_events": ["Taylor_Invasion_1989", "Doe_Killed_1990"]},
+          {"slug": "Taylor_Presidency", "name": "Charles Taylor Presidency", "year_range": [1997, 2003], "description": "Taylor elected 1997; sponsors RUF in Sierra Leone; widespread human rights abuses; ICC indictment."},
+          {"slug": "Second_Liberian_Civil_War", "name": "Second Liberian Civil War", "year_range": [1999, 2003], "description": "LURD and MODEL rebel groups challenge Taylor; Accra peace agreement 2003; Taylor exiled to Nigeria.", "key_events": ["Accra_Peace_2003"]}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Post_Conflict_Liberia",
+        "name": "Post-Conflict Reconstruction and Democracy",
+        "year_range": [2003, 2026],
+        "status": "PLANNED",
+        "description": "UN peacekeeping; Ellen Johnson Sirleaf's historic presidency; Ebola crisis; George Weah presidency; ongoing recovery.",
+        "sub_clusters": [
+          {"slug": "Johnson_Sirleaf_Presidency", "name": "Ellen Johnson Sirleaf Presidency", "year_range": [2006, 2018], "description": "Africa's first elected female head of state; Nobel Peace Prize 2011; post-war reconstruction and debt relief.", "key_events": ["Johnson_Sirleaf_Elected_2005", "Nobel_Peace_Prize_Sirleaf_2011"]},
+          {"slug": "Ebola_Crisis_LR", "name": "Ebola Crisis in Liberia", "year_range": [2014, 2016], "description": "West African Ebola epidemic devastates Liberia; ~5,000 dead; overwhelms health system; international response.", "key_events": ["Ebola_Outbreak_LR_2014"]},
+          {"slug": "Weah_Presidency", "name": "George Weah Presidency", "year_range": [2018, 2024], "description": "Football legend George Weah elected president 2017; struggles with corruption and economic stagnation."},
+          {"slug": "Boakai_Presidency", "name": "Boakai Presidency and Democratic Consolidation", "year_range": [2024, 2026], "description": "Joseph Boakai wins 2023 election; peaceful transfer of power; democratic maturation continues."}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "ACS_Settlement", "interfaces_with": ["American_Colonization_Society", "African_Diaspora", "Abolitionism"]},
+    {"cluster": "Slave_Trade_Grain_Coast", "interfaces_with": ["Atlantic_Slave_Trade", "West_African_Coastal_Trade"]},
+    {"cluster": "Doe_Coup_Civil_Wars", "interfaces_with": ["Cold_War_Africa", "ECOWAS_Interventions", "Sierra_Leone_Civil_War"]},
+    {"cluster": "Taylor_Presidency", "interfaces_with": ["RUF_Sierra_Leone", "Blood_Diamonds", "ICC_Prosecutions"]},
+    {"cluster": "Ebola_Crisis_LR", "interfaces_with": ["West_African_Ebola_Epidemic", "Global_Health_Emergencies"]},
+    {"cluster": "Firestone_Concession", "interfaces_with": ["Colonial_Extractive_Economies", "American_Corporate_Imperialism"]},
+    {"cluster": "Johnson_Sirleaf_Presidency", "interfaces_with": ["Women_In_African_Leadership", "Post_Conflict_Reconstruction"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 9,
+    "total_level5_subclusters": 25,
+    "active_clusters": 0,
+    "planned_clusters": 9,
+    "timeframe_distribution": {"910": 1, "920": 1, "930": 2, "940": 1, "950": 2, "960": 1}
+  }
+}

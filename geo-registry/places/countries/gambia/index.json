@@ -1,0 +1,136 @@
+{
+  "_meta": {
+    "container_type": "country",
+    "country_slug": "gambia",
+    "country_name": "Gambia",
+    "region": "West Africa",
+    "continent": "Africa",
+    "iso3166_alpha2": "GM",
+    "iso3166_alpha3": "GMB",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "created_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "notes": "Comprehensive index for Gambia covering Senegambia, Kunta Kinte heritage, British colony, Jammeh dictatorship, and 2016 crisis."
+  },
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Prehistoric_Gambia",
+        "name": "Prehistoric Gambia and Megaliths",
+        "year_range": [-5000, -200],
+        "status": "PLANNED",
+        "description": "Stone circles of Senegambia; early settlement along the Gambia River.",
+        "sub_clusters": [
+          {"slug": "Stone_Circles_Senegambia", "name": "Senegambian Stone Circles", "year_range": [-5000, 1600], "description": "UNESCO World Heritage megalithic complexes at Wassu and Kerbatch; burial monuments."},
+          {"slug": "Early_River_Settlement_GM", "name": "Early Gambia River Settlement", "year_range": [-3000, -200], "description": "Communities settle along the Gambia River; fishing and early agriculture."}
+        ]
+      }
+    ],
+    "920": [
+      {
+        "slug": "Senegambia_Kingdoms",
+        "name": "Senegambian Kingdoms",
+        "year_range": [300, 1600],
+        "status": "PLANNED",
+        "description": "Ghana Empire periphery; Mandinka expansion; Jolof, Kaabu influence along the Gambia.",
+        "sub_clusters": [
+          {"slug": "Mandinka_Settlement_GM", "name": "Mandinka Settlement", "year_range": [1200, 1500], "description": "Mali Empire traders and settlers along the Gambia River; Mandinka become dominant group."},
+          {"slug": "Kaabu_Influence_GM", "name": "Kaabu Empire Influence", "year_range": [1200, 1600], "description": "Kaabu (Gabu) province of Mali Empire extends authority over Gambia River region."}
+        ]
+      }
+    ],
+    "930": [
+      {
+        "slug": "European_Contact_Slave_Trade_GM",
+        "name": "European Contact and Slave Trade",
+        "year_range": [1455, 1857],
+        "status": "PLANNED",
+        "description": "Portuguese arrival; English trading posts; James Island slave depot; Kunta Kinte story.",
+        "sub_clusters": [
+          {"slug": "Portuguese_Arrival_GM", "name": "Portuguese Exploration", "year_range": [1455, 1588], "description": "Cadamosto explores Gambia River 1455; Portuguese trading posts established."},
+          {"slug": "James_Island_Slave_Trade", "name": "James Island and the Slave Trade", "year_range": [1651, 1857], "description": "English fort on James Island; major slave embarkation point; Kunta Kinte legacy.", "key_events": ["James_Island_Fort_1651"]},
+          {"slug": "Kunta_Kinte_Roots", "name": "Kunta Kinte and Roots Heritage", "year_range": [1750, 1977], "description": "Juffureh village; Kunta Kinte story popularised by Alex Haley's Roots (1976); cultural tourism.", "key_events": ["Roots_Published_1976"]}
+        ]
+      },
+      {
+        "slug": "Senegambia_Jihads_GM",
+        "name": "Senegambian Jihads and Soninke-Marabout Wars",
+        "year_range": [1850, 1901],
+        "status": "PLANNED",
+        "description": "Islamic reform movements; Soninke-Marabout wars along the Gambia River.",
+        "sub_clusters": [
+          {"slug": "Soninke_Marabout_Wars", "name": "Soninke-Marabout Wars", "year_range": [1850, 1901], "description": "Conflicts between traditional rulers and Muslim reformers; reshapes political landscape."},
+          {"slug": "Maba_Diakhou_Ba", "name": "Maba Diakhou Bâ Jihad", "year_range": [1861, 1867], "description": "Maba Diakhou Bâ's jihad in Saloum; impacts Gambia region; killed 1867.", "key_events": ["Maba_Diakhou_Ba_Jihad_1861"]}
+        ]
+      }
+    ],
+    "940": [
+      {
+        "slug": "British_Gambia",
+        "name": "British Gambia Colony and Protectorate",
+        "year_range": [1816, 1965],
+        "status": "PLANNED",
+        "description": "Bathurst founded; Crown Colony; protectorate; groundnut monoculture; path to independence.",
+        "sub_clusters": [
+          {"slug": "Bathurst_Founded", "name": "Bathurst (Banjul) Founded", "year_range": [1816, 1889], "description": "Captain Alexander Grant establishes Bathurst to suppress slave trade; becomes colonial capital.", "key_events": ["Bathurst_Founded_1816"]},
+          {"slug": "Crown_Colony_Protectorate_GM", "name": "Crown Colony and Protectorate", "year_range": [1889, 1945], "description": "Colony (Bathurst) and Protectorate (hinterland); groundnut economy; minimal development."},
+          {"slug": "Path_Independence_GM", "name": "Path to Independence", "year_range": [1945, 1965], "description": "Dawda Jawara and PPP; internal self-government 1963; independence 18 February 1965.", "key_events": ["Independence_Gambia_1965"]}
+        ]
+      }
+    ],
+    "950": [
+      {
+        "slug": "Jawara_Republic",
+        "name": "Jawara Republic",
+        "year_range": [1965, 1994],
+        "status": "PLANNED",
+        "description": "Dawda Jawara presidency; republic 1970; 1981 coup attempt; Senegambia Confederation.",
+        "sub_clusters": [
+          {"slug": "Jawara_Presidency", "name": "Jawara Presidency", "year_range": [1965, 1994], "description": "Multi-party democracy; groundnut dependency; reputation as stable democracy."},
+          {"slug": "Senegambia_Confederation", "name": "Senegambia Confederation", "year_range": [1982, 1989], "description": "Confederation with Senegal after 1981 coup attempt; Senegalese troops intervene; dissolved 1989.", "key_events": ["Senegambia_Confederation_1982"]},
+          {"slug": "Coup_1994_GM", "name": "1994 Military Coup", "year_range": [1994, 1994], "description": "Lt. Yahya Jammeh overthrows Jawara in bloodless coup; Armed Forces Provisional Ruling Council.", "key_events": ["Jammeh_Coup_1994"]}
+        ]
+      }
+    ],
+    "960": [
+      {
+        "slug": "Jammeh_Dictatorship",
+        "name": "Jammeh Dictatorship",
+        "year_range": [1994, 2017],
+        "status": "PLANNED",
+        "description": "Jammeh's authoritarian rule; human rights abuses; faith-healing claims; 2016 election crisis.",
+        "sub_clusters": [
+          {"slug": "Jammeh_Rule", "name": "Jammeh Authoritarian Rule", "year_range": [1996, 2016], "description": "Elected president 1996; increasingly repressive; disappearances; anti-gay persecution; claim to cure HIV."},
+          {"slug": "Election_Crisis_2016", "name": "2016 Election Crisis", "year_range": [2016, 2017], "description": "Adama Barrow defeats Jammeh; Jammeh refuses to leave; ECOWAS military intervention threat; exile.", "key_events": ["Barrow_Wins_Election_2016", "Jammeh_Exiled_2017"]}
+        ]
+      },
+      {
+        "slug": "Barrow_Transition",
+        "name": "Barrow Era and Democratic Transition",
+        "year_range": [2017, 2026],
+        "status": "PLANNED",
+        "description": "Adama Barrow presidency; TRRC truth commission; new constitution process; reconciliation.",
+        "sub_clusters": [
+          {"slug": "TRRC_Truth_Commission", "name": "Truth, Reconciliation and Reparations Commission", "year_range": [2018, 2022], "description": "TRRC investigates Jammeh-era human rights abuses; testimonies; reparation recommendations."},
+          {"slug": "New_Republic_GM", "name": "Third Republic and Constitution", "year_range": [2020, 2026], "description": "Draft new constitution; Barrow wins 2021 re-election; Jammeh extradition debates."}
+        ]
+      }
+    ]
+  },
+  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "cross_cluster_interfaces": [
+    {"cluster": "Stone_Circles_Senegambia", "interfaces_with": ["Senegambian_Megaliths", "UNESCO_World_Heritage"]},
+    {"cluster": "James_Island_Slave_Trade", "interfaces_with": ["Atlantic_Slave_Trade", "British_Slave_Trade"]},
+    {"cluster": "Kunta_Kinte_Roots", "interfaces_with": ["African_Diaspora", "African_American_Heritage"]},
+    {"cluster": "Senegambia_Confederation", "interfaces_with": ["Senegal_Gambia_Relations", "West_African_Integration"]},
+    {"cluster": "Election_Crisis_2016", "interfaces_with": ["ECOWAS_Intervention", "African_Democratisation"]},
+    {"cluster": "TRRC_Truth_Commission", "interfaces_with": ["Transitional_Justice", "Truth_Commissions_Africa"]}
+  ],
+  "statistics": {
+    "total_level4_clusters": 9,
+    "total_level5_subclusters": 21,
+    "active_clusters": 0,
+    "planned_clusters": 9,
+    "timeframe_distribution": {"910": 1, "920": 1, "930": 2, "940": 1, "950": 1, "960": 2}
+  }
+}

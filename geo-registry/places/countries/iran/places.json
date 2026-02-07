@@ -1,83 +1,293 @@
 {
-  "slug": "iran",
-  "name": "Iran",
-  "iso": "IR",
-  "wikidata_id": "Q794",
-  "names": [
-    {
-      "name": "Iran",
-      "lang": "en",
-      "is_primary": true
-    },
-    {
-      "name": "ایران",
-      "lang": "fa",
-      "script": "Arab",
-      "is_endonym": true
-    }
-  ],
-  "former_names": [
-    {
-      "name": "Persia",
-      "lang": "en",
-      "endYear": 1935,
-      "change_reason": "STANDARDIZATION_OR_LANGUAGE_POLICY"
-    }
-  ],
-  "cities": {
-    "tehran": {
-      "name": "Tehran",
-      "wikidata_id": "Q3616",
-      "names": [
+  "_meta": {
+    "country_slug": "iran",
+    "node_kind": "places",
+    "registry": "docs/nodes/node-attribute-registry.md",
+    "generated_at": "2026-01-31T13:56:07.837000Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "grouped_by": "timeframe"
+  },
+  "thematic_clusters": {
+    "910": {
+      "label": "Ancient / Pre-Classical",
+      "nodes": [
         {
+          "slug": "susa-ancient",
+          "name": "Susa",
+          "label": "Susa",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Ancient capital of Elam and later Achaemenid winter capital, one of oldest continuously inhabited cities.",
+          "location": {
+            "lat": 32.1877,
+            "lon": 48.2570
+          }
+        },
+        {
+          "slug": "ecbatana",
+          "name": "Ecbatana (Hamadan)",
+          "label": "Ecbatana",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Capital of the Median Empire and summer residence of Achaemenid and later Persian kings.",
+          "location": {
+            "lat": 34.7989,
+            "lon": 48.5146
+          }
+        },
+        {
+          "slug": "jiroft-site",
+          "name": "Jiroft Archaeological Site",
+          "label": "Jiroft",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Bronze Age urban center revealing sophisticated early Iranian civilization.",
+          "location": {
+            "lat": 28.6769,
+            "lon": 57.7403
+          }
+        }
+      ]
+    },
+    "920": {
+      "label": "Classical / Late Antiquity",
+      "nodes": [
+        {
+          "slug": "persepolis",
+          "name": "Persepolis",
+          "label": "Persepolis",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Ceremonial capital of Achaemenid Empire, UNESCO World Heritage site with monumental ruins.",
+          "location": {
+            "lat": 29.9352,
+            "lon": 52.8914
+          }
+        },
+        {
+          "slug": "pasargadae",
+          "name": "Pasargadae",
+          "label": "Pasargadae",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "First capital of Achaemenid Empire founded by Cyrus the Great, containing his tomb.",
+          "location": {
+            "lat": 30.1939,
+            "lon": 53.1680
+          }
+        },
+        {
+          "slug": "ctesiphon",
+          "name": "Ctesiphon",
+          "label": "Ctesiphon",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Sasanian imperial capital on the Tigris, featuring the great Taq Kasra arch.",
+          "location": {
+            "lat": 33.0936,
+            "lon": 44.5817
+          }
+        }
+      ]
+    },
+    "930": {
+      "label": "Medieval / Post-Classical",
+      "nodes": [
+        {
+          "slug": "alamut-fortress",
+          "name": "Alamut Fortress",
+          "label": "Alamut Fortress",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Mountain stronghold of Ismaili Nizaris (Assassins) in the Alborz mountains.",
+          "location": {
+            "lat": 36.4353,
+            "lon": 50.5803
+          }
+        },
+        {
+          "slug": "nishapur-medieval",
+          "name": "Nishapur",
+          "label": "Nishapur",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Major center of learning and ceramics production, birthplace of Omar Khayyam.",
+          "location": {
+            "lat": 36.2132,
+            "lon": 58.7962
+          }
+        },
+        {
+          "slug": "sultaniyya",
+          "name": "Sultaniyya",
+          "label": "Sultaniyya",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Ilkhanid capital featuring the Mausoleum of Öljaitü, largest brick dome in world.",
+          "location": {
+            "lat": 36.4372,
+            "lon": 48.7972
+          }
+        }
+      ]
+    },
+    "940": {
+      "label": "Early Modern",
+      "nodes": [
+        {
+          "slug": "isfahan-safavid",
+          "name": "Isfahan (Safavid Capital)",
+          "label": "Isfahan",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Safavid capital rebuilt by Shah Abbas I, called 'half the world' for its magnificence.",
+          "location": {
+            "lat": 32.6546,
+            "lon": 51.6680
+          }
+        },
+        {
+          "slug": "naqsh-e-jahan-square",
+          "name": "Naqsh-e Jahan Square",
+          "label": "Naqsh-e Jahan Square",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Monumental public square in Isfahan, UNESCO World Heritage site, center of Safavid power.",
+          "location": {
+            "lat": 32.6567,
+            "lon": 51.6775
+          }
+        },
+        {
+          "slug": "ardabil-shrine",
+          "name": "Ardabil Shrine",
+          "label": "Ardabil Shrine",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Shrine of Sheikh Safi al-Din, spiritual ancestor of Safavid dynasty.",
+          "location": {
+            "lat": 38.2500,
+            "lon": 48.2833
+          }
+        }
+      ]
+    },
+    "950": {
+      "label": "Modern",
+      "nodes": [
+        {
+          "slug": "tehran-capital",
           "name": "Tehran",
+          "label": "Tehran",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
           "lang": "en",
-          "is_primary": true
+          "script": "Latn",
+          "description": "Capital of Iran since Qajar era, transformed into modern metropolis under Pahlavis.",
+          "location": {
+            "lat": 35.6892,
+            "lon": 51.3890
+          }
         },
         {
-          "name": "تهران",
-          "lang": "fa",
-          "script": "Arab",
-          "is_endonym": true
+          "slug": "golestan-palace",
+          "name": "Golestan Palace",
+          "label": "Golestan Palace",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Qajar royal palace complex in Tehran, UNESCO World Heritage site.",
+          "location": {
+            "lat": 35.6839,
+            "lon": 51.4217
+          }
+        },
+        {
+          "slug": "abadan-refinery",
+          "name": "Abadan Refinery",
+          "label": "Abadan Refinery",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Once world's largest oil refinery, center of Anglo-Iranian oil operations.",
+          "location": {
+            "lat": 30.3392,
+            "lon": 48.3044
+          }
         }
       ]
     },
-    "isfahan": {
-      "name": "Isfahan",
-      "wikidata_id": "Q7877",
-      "names": [
+    "960": {
+      "label": "Contemporary",
+      "nodes": [
         {
-          "name": "Isfahan",
+          "slug": "tehran-contemporary",
+          "name": "Tehran (Contemporary)",
+          "label": "Tehran",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
           "lang": "en",
-          "is_primary": true
+          "script": "Latn",
+          "description": "Capital of the Islamic Republic, political and cultural center of modern Iran.",
+          "location": {
+            "lat": 35.6892,
+            "lon": 51.3890
+          }
         },
         {
-          "name": "اصفهان",
-          "lang": "fa",
-          "script": "Arab",
-          "is_endonym": true
+          "slug": "qom",
+          "name": "Qom",
+          "label": "Qom",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
+          "lang": "en",
+          "script": "Latn",
+          "description": "Holy city and center of Shia scholarship, home to major seminaries and shrines.",
+          "location": {
+            "lat": 34.6401,
+            "lon": 50.8764
+          }
         },
         {
-          "name": "Esfahan",
+          "slug": "mashhad",
+          "name": "Mashhad",
+          "label": "Mashhad",
+          "status": "PROPOSED",
+          "workflow_stage": "PROPOSED",
           "lang": "en",
-          "note": "Alternative romanization"
-        }
-      ]
-    },
-    "shiraz": {
-      "name": "Shiraz",
-      "wikidata_id": "Q6397",
-      "names": [
-        {
-          "name": "Shiraz",
-          "lang": "en",
-          "is_primary": true
-        },
-        {
-          "name": "شیراز",
-          "lang": "fa",
-          "script": "Arab",
-          "is_endonym": true
+          "script": "Latn",
+          "description": "Iran's holiest city, site of Imam Reza shrine attracting millions of pilgrims annually.",
+          "location": {
+            "lat": 36.2605,
+            "lon": 59.6168
+          }
         }
       ]
     }
