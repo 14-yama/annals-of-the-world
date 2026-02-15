@@ -7,17 +7,33 @@
     "continent": "Africa",
     "iso3166_alpha2": "RW",
     "iso3166_alpha3": "RWA",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-06T00:00:00Z",
     "notes": "Comprehensive index for Rwanda covering Kingdom of Rwanda, mwami monarchy, German/Belgian colonial manipulation of Hutu-Tutsi identities, 1959 revolution, 1994 genocide against the Tutsi, RPF victory, Kagame reconstruction, and economic transformation."
   },
   "country_profile": {
     "capital": "Kigali",
-    "official_languages": ["Kinyarwanda", "French", "English", "Swahili"],
+    "official_languages": [
+      "Kinyarwanda",
+      "French",
+      "English",
+      "Swahili"
+    ],
     "government_type": "Unitary dominant-party presidential republic",
     "currency": "Rwandan franc (RWF)",
-    "population": {"estimate": 14400000, "year": 2024, "source": "World Bank"},
+    "population": {
+      "estimate": 14400000,
+      "year": 2024,
+      "source": "World Bank"
+    },
     "area_km2": 26338,
     "gdp": {
       "nominal_total": "$14.1 billion",
@@ -27,7 +43,12 @@
       "year": 2024,
       "source": "IMF"
     },
-    "hdi": {"value": 0.534, "rank": 165, "year": 2022, "category": "Low"},
+    "hdi": {
+      "value": 0.534,
+      "rank": 165,
+      "year": 2022,
+      "category": "Low"
+    },
     "religion": {
       "Christianity": "93.5%",
       "Protestant": "49.5%",
@@ -38,14 +59,30 @@
       "None": "4.6%"
     },
     "ethnic_groups": [
-      {"name": "Hutu", "percentage": 85, "notes": "Majority Bantu-speaking agricultural population; pre-colonial social category hardened into ethnic identity by Belgian colonial racial classification; 1959 revolution established Hutu political dominance"},
-      {"name": "Tutsi", "percentage": 14, "notes": "Historically pastoralist elite; ruled pre-colonial kingdom; Belgian-assigned 'racial' identity cards; victims of 1994 genocide (~800,000 killed); RPF led by Tutsi diaspora from Uganda; post-genocide policy discourages ethnic identification"},
-      {"name": "Twa (Batwa)", "percentage": 1, "notes": "Indigenous forest-dwelling Pygmy people; potters and entertainers in kingdom; marginalised; also targeted in genocide; oldest inhabitants"}
+      {
+        "name": "Hutu",
+        "percentage": 85,
+        "notes": "Majority Bantu-speaking agricultural population; pre-colonial social category hardened into ethnic identity by Belgian colonial racial classification; 1959 revolution established Hutu political dominance"
+      },
+      {
+        "name": "Tutsi",
+        "percentage": 14,
+        "notes": "Historically pastoralist elite; ruled pre-colonial kingdom; Belgian-assigned 'racial' identity cards; victims of 1994 genocide (~800,000 killed); RPF led by Tutsi diaspora from Uganda; post-genocide policy discourages ethnic identification"
+      },
+      {
+        "name": "Twa (Batwa)",
+        "percentage": 1,
+        "notes": "Indigenous forest-dwelling Pygmy people; potters and entertainers in kingdom; marginalised; also targeted in genocide; oldest inhabitants"
+      }
     ],
     "calling_code": "+250",
-    "iso3166_code": "RW/RWA",
+    "iso3166_alpha2": "RW",
+    "iso3166_alpha3": "RWA",
     "time_zone": "CAT (UTC+2)",
-    "independence": {"date": "1962-07-01", "from": "Belgium"},
+    "independence": {
+      "date": "1962-07-01",
+      "from": "Belgium"
+    },
     "continent": "Africa",
     "notes_unique": "Highest percentage of women in parliament globally (61%+); post-genocide policy bans ethnic identification; 'Singapore of Africa' aspiration"
   },
@@ -60,10 +97,22 @@
       "name": "Édouard Ngirente",
       "since": "2017-08-30"
     },
-    "former_presidents": [
-      {"name": "Grégoire Kayibanda", "term": "1962–1973", "notes": "First president; Hutu; PARMEHUTU; anti-Tutsi policies; overthrown by Habyarimana"},
-      {"name": "Juvénal Habyarimana", "term": "1973–1994", "notes": "Military dictator; MRND; his assassination (plane shot down 6 April 1994) triggered the genocide"},
-      {"name": "Pasteur Bizimungu", "term": "1994–2000", "notes": "Hutu figurehead president under RPF; resigned; imprisoned 2002–2007"}
+    "former_leaders": [
+      {
+        "name": "Grégoire Kayibanda",
+        "term": "1962–1973",
+        "notes": "First president; Hutu; PARMEHUTU; anti-Tutsi policies; overthrown by Habyarimana"
+      },
+      {
+        "name": "Juvénal Habyarimana",
+        "term": "1973–1994",
+        "notes": "Military dictator; MRND; his assassination (plane shot down 6 April 1994) triggered the genocide"
+      },
+      {
+        "name": "Pasteur Bizimungu",
+        "term": "1994–2000",
+        "notes": "Hutu figurehead president under RPF; resigned; imprisoned 2002–2007"
+      }
     ]
   },
   "thematic_clusters": {
@@ -71,12 +120,31 @@
       {
         "slug": "Early_Peoples_Rwanda",
         "name": "Early Settlement and Iron Age",
-        "year_range": [-10000, 1000],
+        "year_range": [
+          -10000,
+          1000
+        ],
         "status": "PLANNED",
         "description": "Twa hunter-gatherer communities; Bantu migration bringing agriculture and ironworking to the Great Lakes region.",
         "sub_clusters": [
-          {"slug": "Twa_Peoples_RW", "name": "Twa Forest Communities", "year_range": [-10000, 1000], "description": "Twa (Batwa) hunter-gatherers as earliest known inhabitants of the forested highlands."},
-          {"slug": "Bantu_Settlers_RW", "name": "Bantu Migration into Rwanda", "year_range": [-500, 700], "description": "Bantu-speaking peoples settle the region; introduction of iron smelting, banana cultivation, and cattle-keeping."}
+          {
+            "slug": "Twa_Peoples_RW",
+            "name": "Twa Forest Communities",
+            "year_range": [
+              -10000,
+              1000
+            ],
+            "description": "Twa (Batwa) hunter-gatherers as earliest known inhabitants of the forested highlands."
+          },
+          {
+            "slug": "Bantu_Settlers_RW",
+            "name": "Bantu Migration into Rwanda",
+            "year_range": [
+              -500,
+              700
+            ],
+            "description": "Bantu-speaking peoples settle the region; introduction of iron smelting, banana cultivation, and cattle-keeping."
+          }
         ]
       }
     ],
@@ -84,13 +152,40 @@
       {
         "slug": "Kingdom_Of_Rwanda",
         "name": "Kingdom of Rwanda",
-        "year_range": [1000, 1700],
+        "year_range": [
+          1000,
+          1700
+        ],
         "status": "PLANNED",
         "description": "Emergence of the Kingdom of Rwanda under mwami (king) rule; development of clan structures, cattle-based social organisation, and centralised monarchy.",
         "sub_clusters": [
-          {"slug": "Mwami_Monarchy_Origins", "name": "Origins of Mwami Monarchy", "year_range": [1000, 1400], "description": "Emergence of small Hutu and Tutsi kingdoms; gradual consolidation under Tutsi mwami dynasty."},
-          {"slug": "Expansion_Rwanda_Kingdom", "name": "Expansion of the Kingdom", "year_range": [1400, 1700], "description": "Rwanda kingdom expands through military conquest and cattle clientship (ubuhake); highly centralised state emerges."},
-          {"slug": "Ubuhake_System", "name": "Ubuhake Clientship System", "year_range": [1400, 1954], "description": "Cattle-based patron-client relationships between Tutsi elites and Hutu agriculturalists; social stratification crystallises."}
+          {
+            "slug": "Mwami_Monarchy_Origins",
+            "name": "Origins of Mwami Monarchy",
+            "year_range": [
+              1000,
+              1400
+            ],
+            "description": "Emergence of small Hutu and Tutsi kingdoms; gradual consolidation under Tutsi mwami dynasty."
+          },
+          {
+            "slug": "Expansion_Rwanda_Kingdom",
+            "name": "Expansion of the Kingdom",
+            "year_range": [
+              1400,
+              1700
+            ],
+            "description": "Rwanda kingdom expands through military conquest and cattle clientship (ubuhake); highly centralised state emerges."
+          },
+          {
+            "slug": "Ubuhake_System",
+            "name": "Ubuhake Clientship System",
+            "year_range": [
+              1400,
+              1954
+            ],
+            "description": "Cattle-based patron-client relationships between Tutsi elites and Hutu agriculturalists; social stratification crystallises."
+          }
         ]
       }
     ],
@@ -98,12 +193,34 @@
       {
         "slug": "Rwanda_Kingdom_Peak",
         "name": "Peak of Rwandan Kingdom",
-        "year_range": [1700, 1890],
+        "year_range": [
+          1700,
+          1890
+        ],
         "status": "PLANNED",
         "description": "Rwandan kingdom reaches maximum power under great mwami; military expansion; intore warrior traditions; first European contact.",
         "sub_clusters": [
-          {"slug": "Kigeli_Rwabugiri", "name": "Reign of Kigeli IV Rwabugiri", "year_range": [1853, 1895], "description": "Rwanda's most powerful mwami; military campaigns expand borders; highly centralised administration; resists early European intrusion.", "key_events": ["Kigeli_Rwabugiri_Reign"]},
-          {"slug": "First_European_Contact_RW", "name": "First European Contact", "year_range": [1894, 1897], "description": "Count von Götzen becomes first European to enter Rwanda 1894; kingdom remains largely autonomous."}
+          {
+            "slug": "Kigeli_Rwabugiri",
+            "name": "Reign of Kigeli IV Rwabugiri",
+            "year_range": [
+              1853,
+              1895
+            ],
+            "description": "Rwanda's most powerful mwami; military campaigns expand borders; highly centralised administration; resists early European intrusion.",
+            "key_events": [
+              "Kigeli_Rwabugiri_Reign"
+            ]
+          },
+          {
+            "slug": "First_European_Contact_RW",
+            "name": "First European Contact",
+            "year_range": [
+              1894,
+              1897
+            ],
+            "description": "Count von Götzen becomes first European to enter Rwanda 1894; kingdom remains largely autonomous."
+          }
         ]
       }
     ],
@@ -111,14 +228,55 @@
       {
         "slug": "Colonial_Rwanda",
         "name": "German and Belgian Colonial Rule",
-        "year_range": [1897, 1962],
+        "year_range": [
+          1897,
+          1962
+        ],
         "status": "PLANNED",
         "description": "German indirect rule; Belgian League of Nations mandate; racial ideology imposed on Hutu-Tutsi identities; identity cards; growing tensions.",
         "sub_clusters": [
-          {"slug": "German_East_Africa_RW", "name": "German East Africa Period", "year_range": [1897, 1916], "description": "Rwanda incorporated into German East Africa; indirect rule through mwami; minimal administrative presence."},
-          {"slug": "Belgian_Mandate_RW", "name": "Belgian Mandate and Trusteeship", "year_range": [1916, 1962], "description": "Belgium seizes Rwanda in WWI; League of Nations mandate; racial theories harden Hutu-Tutsi divisions."},
-          {"slug": "Identity_Cards_RW", "name": "Ethnic Identity Cards Introduced", "year_range": [1933, 1933], "description": "Belgian administration introduces ethnic identity cards classifying all Rwandans as Hutu, Tutsi, or Twa; biological racism codified.", "key_events": ["Rwanda_Ethnic_ID_Cards_1933"]},
-          {"slug": "Hutu_Revolution_1959", "name": "Hutu Revolution of 1959", "year_range": [1959, 1962], "description": "Hutu uprising overthrows Tutsi monarchy; mwami flees; mass Tutsi refugee exodus; Belgian-supported transition.", "key_events": ["Hutu_Revolution_1959"]}
+          {
+            "slug": "German_East_Africa_RW",
+            "name": "German East Africa Period",
+            "year_range": [
+              1897,
+              1916
+            ],
+            "description": "Rwanda incorporated into German East Africa; indirect rule through mwami; minimal administrative presence."
+          },
+          {
+            "slug": "Belgian_Mandate_RW",
+            "name": "Belgian Mandate and Trusteeship",
+            "year_range": [
+              1916,
+              1962
+            ],
+            "description": "Belgium seizes Rwanda in WWI; League of Nations mandate; racial theories harden Hutu-Tutsi divisions."
+          },
+          {
+            "slug": "Identity_Cards_RW",
+            "name": "Ethnic Identity Cards Introduced",
+            "year_range": [
+              1933,
+              1933
+            ],
+            "description": "Belgian administration introduces ethnic identity cards classifying all Rwandans as Hutu, Tutsi, or Twa; biological racism codified.",
+            "key_events": [
+              "Rwanda_Ethnic_ID_Cards_1933"
+            ]
+          },
+          {
+            "slug": "Hutu_Revolution_1959",
+            "name": "Hutu Revolution of 1959",
+            "year_range": [
+              1959,
+              1962
+            ],
+            "description": "Hutu uprising overthrows Tutsi monarchy; mwami flees; mass Tutsi refugee exodus; Belgian-supported transition.",
+            "key_events": [
+              "Hutu_Revolution_1959"
+            ]
+          }
         ]
       }
     ],
@@ -126,25 +284,82 @@
       {
         "slug": "Hutu_Republics_RW",
         "name": "First and Second Hutu Republics",
-        "year_range": [1962, 1994],
+        "year_range": [
+          1962,
+          1994
+        ],
         "status": "PLANNED",
         "description": "Independence under Kayibanda; Habyarimana coup; Tutsi exile and periodic pogroms; RPF invasion from Uganda.",
         "sub_clusters": [
-          {"slug": "First_Republic_RW", "name": "Kayibanda First Republic", "year_range": [1962, 1973], "description": "Independence 1 July 1962; Grégoire Kayibanda president; Hutu dominance; anti-Tutsi violence 1963, 1967."},
-          {"slug": "Habyarimana_Regime", "name": "Habyarimana Second Republic", "year_range": [1973, 1994], "description": "Juvénal Habyarimana seizes power; one-party MRND rule; northern Hutu elite; Tutsi excluded from power."},
-          {"slug": "RPF_Invasion_1990", "name": "RPF Invasion from Uganda", "year_range": [1990, 1993], "description": "Rwandan Patriotic Front invades from Uganda October 1990; civil war; Arusha Accords 1993."}
+          {
+            "slug": "First_Republic_RW",
+            "name": "Kayibanda First Republic",
+            "year_range": [
+              1962,
+              1973
+            ],
+            "description": "Independence 1 July 1962; Grégoire Kayibanda president; Hutu dominance; anti-Tutsi violence 1963, 1967."
+          },
+          {
+            "slug": "Habyarimana_Regime",
+            "name": "Habyarimana Second Republic",
+            "year_range": [
+              1973,
+              1994
+            ],
+            "description": "Juvénal Habyarimana seizes power; one-party MRND rule; northern Hutu elite; Tutsi excluded from power."
+          },
+          {
+            "slug": "RPF_Invasion_1990",
+            "name": "RPF Invasion from Uganda",
+            "year_range": [
+              1990,
+              1993
+            ],
+            "description": "Rwandan Patriotic Front invades from Uganda October 1990; civil war; Arusha Accords 1993."
+          }
         ]
       },
       {
         "slug": "Genocide_Against_Tutsi",
         "name": "1994 Genocide Against the Tutsi",
-        "year_range": [1994, 1994],
+        "year_range": [
+          1994,
+          1994
+        ],
         "status": "PLANNED",
         "description": "Systematic genocide kills approximately 800,000 Tutsi and moderate Hutu in 100 days; RPF victory ends the genocide.",
         "sub_clusters": [
-          {"slug": "Habyarimana_Assassination", "name": "Assassination of Habyarimana", "year_range": [1994, 1994], "description": "Presidential plane shot down 6 April 1994; genocide begins within hours; Interahamwe and army carry out mass killings."},
-          {"slug": "Hundred_Days_Genocide", "name": "The Hundred Days", "year_range": [1994, 1994], "description": "Approximately 800,000 Tutsi and moderate Hutu systematically murdered April–July 1994; international community fails to intervene.", "key_events": ["Rwandan_Genocide_1994"]},
-          {"slug": "RPF_Victory_1994", "name": "RPF Victory and End of Genocide", "year_range": [1994, 1994], "description": "RPF under Paul Kagame captures Kigali July 1994; genocide ends; mass Hutu refugee exodus to Zaire."}
+          {
+            "slug": "Habyarimana_Assassination",
+            "name": "Assassination of Habyarimana",
+            "year_range": [
+              1994,
+              1994
+            ],
+            "description": "Presidential plane shot down 6 April 1994; genocide begins within hours; Interahamwe and army carry out mass killings."
+          },
+          {
+            "slug": "Hundred_Days_Genocide",
+            "name": "The Hundred Days",
+            "year_range": [
+              1994,
+              1994
+            ],
+            "description": "Approximately 800,000 Tutsi and moderate Hutu systematically murdered April–July 1994; international community fails to intervene.",
+            "key_events": [
+              "Rwandan_Genocide_1994"
+            ]
+          },
+          {
+            "slug": "RPF_Victory_1994",
+            "name": "RPF Victory and End of Genocide",
+            "year_range": [
+              1994,
+              1994
+            ],
+            "description": "RPF under Paul Kagame captures Kigali July 1994; genocide ends; mass Hutu refugee exodus to Zaire."
+          }
         ]
       }
     ],
@@ -152,32 +367,117 @@
       {
         "slug": "Post_Genocide_Rwanda",
         "name": "Post-Genocide Reconstruction and Modern Rwanda",
-        "year_range": [1994, 2026],
+        "year_range": [
+          1994,
+          2026
+        ],
         "status": "PLANNED",
         "description": "Kagame-led reconstruction; Gacaca courts; economic transformation; regional military involvement; authoritarian governance debates.",
         "sub_clusters": [
-          {"slug": "Gacaca_Courts", "name": "Gacaca Community Justice Courts", "year_range": [2001, 2012], "description": "Community-based transitional justice courts process nearly 2 million genocide cases; reconciliation model."},
-          {"slug": "Congo_Wars_RW", "name": "Rwanda in Congo Wars", "year_range": [1996, 2003], "description": "Rwanda intervenes in First and Second Congo Wars; pursuit of genocide perpetrators; resource extraction controversies."},
-          {"slug": "Economic_Transformation_RW", "name": "Economic Transformation (Vision 2020/2050)", "year_range": [2000, 2026], "description": "Kagame's development model; ICT hub; Kigali modernisation; high growth rates; Singapore of Africa aspirations."},
-          {"slug": "Kagame_Governance", "name": "Kagame Governance and Human Rights Debates", "year_range": [2000, 2026], "description": "Paul Kagame dominant leadership; constitutional amendments; press restrictions; international criticism alongside development success."}
+          {
+            "slug": "Gacaca_Courts",
+            "name": "Gacaca Community Justice Courts",
+            "year_range": [
+              2001,
+              2012
+            ],
+            "description": "Community-based transitional justice courts process nearly 2 million genocide cases; reconciliation model."
+          },
+          {
+            "slug": "Congo_Wars_RW",
+            "name": "Rwanda in Congo Wars",
+            "year_range": [
+              1996,
+              2003
+            ],
+            "description": "Rwanda intervenes in First and Second Congo Wars; pursuit of genocide perpetrators; resource extraction controversies."
+          },
+          {
+            "slug": "Economic_Transformation_RW",
+            "name": "Economic Transformation (Vision 2020/2050)",
+            "year_range": [
+              2000,
+              2026
+            ],
+            "description": "Kagame's development model; ICT hub; Kigali modernisation; high growth rates; Singapore of Africa aspirations."
+          },
+          {
+            "slug": "Kagame_Governance",
+            "name": "Kagame Governance and Human Rights Debates",
+            "year_range": [
+              2000,
+              2026
+            ],
+            "description": "Paul Kagame dominant leadership; constitutional amendments; press restrictions; international criticism alongside development success."
+          }
         ]
       }
     ]
   },
-  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "unassigned_events": {
+    "note": "Events not yet assigned to a thematic cluster",
+    "slugs": []
+  },
   "cross_cluster_interfaces": [
-    {"cluster": "Kingdom_Of_Rwanda", "interfaces_with": ["Great_Lakes_Kingdoms", "Bunyoro_Kitara", "Buganda_Kingdom"]},
-    {"cluster": "Colonial_Rwanda", "interfaces_with": ["Scramble_For_Africa", "Belgian_Colonial_Empire", "German_East_Africa"]},
-    {"cluster": "Identity_Cards_RW", "interfaces_with": ["Colonial_Racial_Classification", "Ethnic_Engineering"]},
-    {"cluster": "Genocide_Against_Tutsi", "interfaces_with": ["UN_Peacekeeping_Failures", "International_Criminal_Tribunal", "Burundi_Ethnic_Conflict"]},
-    {"cluster": "Congo_Wars_RW", "interfaces_with": ["First_Congo_War", "Second_Congo_War", "Great_African_War"]},
-    {"cluster": "Economic_Transformation_RW", "interfaces_with": ["African_Development_Models", "East_African_Community"]}
+    {
+      "cluster": "Kingdom_Of_Rwanda",
+      "interfaces_with": [
+        "Great_Lakes_Kingdoms",
+        "Bunyoro_Kitara",
+        "Buganda_Kingdom"
+      ]
+    },
+    {
+      "cluster": "Colonial_Rwanda",
+      "interfaces_with": [
+        "Scramble_For_Africa",
+        "Belgian_Colonial_Empire",
+        "German_East_Africa"
+      ]
+    },
+    {
+      "cluster": "Identity_Cards_RW",
+      "interfaces_with": [
+        "Colonial_Racial_Classification",
+        "Ethnic_Engineering"
+      ]
+    },
+    {
+      "cluster": "Genocide_Against_Tutsi",
+      "interfaces_with": [
+        "UN_Peacekeeping_Failures",
+        "International_Criminal_Tribunal",
+        "Burundi_Ethnic_Conflict"
+      ]
+    },
+    {
+      "cluster": "Congo_Wars_RW",
+      "interfaces_with": [
+        "First_Congo_War",
+        "Second_Congo_War",
+        "Great_African_War"
+      ]
+    },
+    {
+      "cluster": "Economic_Transformation_RW",
+      "interfaces_with": [
+        "African_Development_Models",
+        "East_African_Community"
+      ]
+    }
   ],
   "statistics": {
     "total_level4_clusters": 8,
     "total_level5_subclusters": 21,
     "active_clusters": 0,
     "planned_clusters": 8,
-    "timeframe_distribution": {"910": 1, "920": 1, "930": 1, "940": 1, "950": 2, "960": 1}
+    "timeframe_distribution": {
+      "910": 1,
+      "920": 1,
+      "930": 1,
+      "940": 1,
+      "950": 2,
+      "960": 1
+    }
   }
 }

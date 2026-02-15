@@ -7,17 +7,40 @@
     "continent": "Africa",
     "iso3166_alpha2": "ZA",
     "iso3166_alpha3": "ZAF",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-06T00:00:00Z",
     "notes": "Comprehensive index for South Africa covering Cradle of Humankind, San/Khoikhoi peoples, Bantu migration, Dutch East India Company/Cape Colony, Great Trek/Boer Republics, Zulu Kingdom (Shaka), Anglo-Zulu War, Anglo-Boer Wars, Union of South Africa, apartheid system, ANC/Mandela, Sharpeville/Soweto, democratic transition 1994, post-apartheid challenges, and load shedding crisis."
   },
   "country_profile": {
     "capital": "Pretoria (executive) / Cape Town (legislative) / Bloemfontein (judicial)",
-    "official_languages": ["Zulu", "Xhosa", "Afrikaans", "English", "Northern Sotho (Sepedi)", "Tswana", "Sotho", "Tsonga", "Swati", "Venda", "Ndebele"],
+    "official_languages": [
+      "Zulu",
+      "Xhosa",
+      "Afrikaans",
+      "English",
+      "Northern Sotho (Sepedi)",
+      "Tswana",
+      "Sotho",
+      "Tsonga",
+      "Swati",
+      "Venda",
+      "Ndebele"
+    ],
     "government_type": "Unitary parliamentary constitutional republic",
     "currency": "South African rand (ZAR)",
-    "population": {"estimate": 62000000, "year": 2024, "source": "Stats SA"},
+    "population": {
+      "estimate": 62000000,
+      "year": 2024,
+      "source": "Stats SA"
+    },
     "area_km2": 1221037,
     "gdp": {
       "nominal_total": "$373 billion",
@@ -27,7 +50,12 @@
       "year": 2024,
       "source": "IMF"
     },
-    "hdi": {"value": 0.713, "rank": 109, "year": 2022, "category": "High"},
+    "hdi": {
+      "value": 0.713,
+      "rank": 109,
+      "year": 2022,
+      "category": "High"
+    },
     "religion": {
       "Christianity": "86%",
       "Zion_Christian_Church": "11.1%",
@@ -43,25 +71,86 @@
       "None": "5.7%"
     },
     "ethnic_groups": [
-      {"name": "Zulu", "percentage": 22.7, "notes": "Largest group; KwaZulu-Natal; Nguni Bantu; Shaka Zulu kingdom heritage; IFP political base; isiZulu most-spoken home language"},
-      {"name": "Xhosa", "percentage": 16, "notes": "Eastern Cape; Nguni; ANC heartland; Mandela and Thabo Mbeki's ethnic group; click consonants; amaXhosa clans include Thembu, Mpondo, Bomvana"},
-      {"name": "Coloured", "percentage": 8.9, "notes": "Mixed heritage; Western and Northern Cape; Afrikaans-speaking; descended from Khoisan, slaves (Malay, Malagasy), settlers; Cape Malay community; distinct identity"},
-      {"name": "Northern Sotho (Pedi/Sepedi)", "percentage": 9.4, "notes": "Limpopo; Sotho-Tswana; Pedi kingdom; Sepedi language"},
-      {"name": "Tswana", "percentage": 8, "notes": "North West Province; Sotho-Tswana; cross-border with Botswana; eight main chieftaincies"},
-      {"name": "Sotho", "percentage": 7.6, "notes": "Free State; Sotho-Tswana; cross-border with Lesotho; Sesotho language"},
-      {"name": "Tsonga/Shangaan", "percentage": 4.5, "notes": "Limpopo and Mpumalanga; cross-border with Mozambique; Xi'Tsonga language"},
-      {"name": "Swati/Swazi", "percentage": 2.6, "notes": "Mpumalanga; Nguni; cross-border with Eswatini"},
-      {"name": "Venda", "percentage": 2.4, "notes": "Limpopo (far north); historical Venda kingdom; distinct from other SA Bantus; links to Great Zimbabwe"},
-      {"name": "Ndebele", "percentage": 2.1, "notes": "Limpopo/Mpumalanga; two groups: Northern (Ndzundza) and Southern; famous for geometric mural art"},
-      {"name": "White South African", "percentage": 7.3, "notes": "Afrikaner (60% of white pop; Dutch/French Huguenot/German descent; Afrikaans) and English-speaking (40%; British descent); historically ruling minority under apartheid"},
-      {"name": "Indian/Asian", "percentage": 2.6, "notes": "KwaZulu-Natal (Durban); arrived as indentured sugar cane labourers 1860s; Tamil, Hindi, Gujarati, Urdu heritage; Gandhi lived in SA 1893-1914"},
-      {"name": "Khoisan (San/Bushmen and Khoikhoi)", "percentage": 0.5, "notes": "Oldest inhabitants; hunter-gatherers (San) and pastoralists (Khoikhoi); near-extinct languages with clicks; Griqua sub-group; Northern Cape"},
-      {"name": "Other", "percentage": 5.4, "notes": "Immigrant communities from rest of Africa, Asia, Europe"}
+      {
+        "name": "Zulu",
+        "percentage": 22.7,
+        "notes": "Largest group; KwaZulu-Natal; Nguni Bantu; Shaka Zulu kingdom heritage; IFP political base; isiZulu most-spoken home language"
+      },
+      {
+        "name": "Xhosa",
+        "percentage": 16,
+        "notes": "Eastern Cape; Nguni; ANC heartland; Mandela and Thabo Mbeki's ethnic group; click consonants; amaXhosa clans include Thembu, Mpondo, Bomvana"
+      },
+      {
+        "name": "Coloured",
+        "percentage": 8.9,
+        "notes": "Mixed heritage; Western and Northern Cape; Afrikaans-speaking; descended from Khoisan, slaves (Malay, Malagasy), settlers; Cape Malay community; distinct identity"
+      },
+      {
+        "name": "Northern Sotho (Pedi/Sepedi)",
+        "percentage": 9.4,
+        "notes": "Limpopo; Sotho-Tswana; Pedi kingdom; Sepedi language"
+      },
+      {
+        "name": "Tswana",
+        "percentage": 8,
+        "notes": "North West Province; Sotho-Tswana; cross-border with Botswana; eight main chieftaincies"
+      },
+      {
+        "name": "Sotho",
+        "percentage": 7.6,
+        "notes": "Free State; Sotho-Tswana; cross-border with Lesotho; Sesotho language"
+      },
+      {
+        "name": "Tsonga/Shangaan",
+        "percentage": 4.5,
+        "notes": "Limpopo and Mpumalanga; cross-border with Mozambique; Xi'Tsonga language"
+      },
+      {
+        "name": "Swati/Swazi",
+        "percentage": 2.6,
+        "notes": "Mpumalanga; Nguni; cross-border with Eswatini"
+      },
+      {
+        "name": "Venda",
+        "percentage": 2.4,
+        "notes": "Limpopo (far north); historical Venda kingdom; distinct from other SA Bantus; links to Great Zimbabwe"
+      },
+      {
+        "name": "Ndebele",
+        "percentage": 2.1,
+        "notes": "Limpopo/Mpumalanga; two groups: Northern (Ndzundza) and Southern; famous for geometric mural art"
+      },
+      {
+        "name": "White South African",
+        "percentage": 7.3,
+        "notes": "Afrikaner (60% of white pop; Dutch/French Huguenot/German descent; Afrikaans) and English-speaking (40%; British descent); historically ruling minority under apartheid"
+      },
+      {
+        "name": "Indian/Asian",
+        "percentage": 2.6,
+        "notes": "KwaZulu-Natal (Durban); arrived as indentured sugar cane labourers 1860s; Tamil, Hindi, Gujarati, Urdu heritage; Gandhi lived in SA 1893-1914"
+      },
+      {
+        "name": "Khoisan (San/Bushmen and Khoikhoi)",
+        "percentage": 0.5,
+        "notes": "Oldest inhabitants; hunter-gatherers (San) and pastoralists (Khoikhoi); near-extinct languages with clicks; Griqua sub-group; Northern Cape"
+      },
+      {
+        "name": "Other",
+        "percentage": 5.4,
+        "notes": "Immigrant communities from rest of Africa, Asia, Europe"
+      }
     ],
     "calling_code": "+27",
-    "iso3166_code": "ZA/ZAF",
+    "iso3166_alpha2": "ZA",
+    "iso3166_alpha3": "ZAF",
     "time_zone": "SAST (UTC+2)",
-    "independence": {"date": "1910-05-31 (Union) / 1961-05-31 (Republic)", "from": "United Kingdom", "notes": "Democratic majority rule from 1994-04-27"},
+    "independence": {
+      "date": "1910-05-31 (Union) / 1961-05-31 (Republic)",
+      "from": "United Kingdom",
+      "notes": "Democratic majority rule from 1994-04-27"
+    },
     "continent": "Africa",
     "notes_unique": "Only country with three capitals; Rainbow Nation; most industrialised economy in Africa; 11 official languages; BRICS member"
   },
@@ -72,13 +161,37 @@
       "since": "2018-02-15",
       "notes": "ANC; former trade union leader (NUM); Mandela's chosen successor; first GNU coalition government since 1994 after ANC lost majority in 2024 elections; Phala Phala farm scandal"
     },
-    "former_presidents": [
-      {"name": "Nelson Mandela", "term": "1994\u20131999", "notes": "Anti-apartheid icon; 27 years in prison; first Black president; ANC; Nobel Peace Prize 1993; Truth & Reconciliation Commission; died 2013"},
-      {"name": "Thabo Mbeki", "term": "1999\u20132008", "notes": "ANC; NEPAD architect; AIDS denialism; GEAR economic policy; recalled by ANC 2008"},
-      {"name": "Jacob Zuma", "term": "2009\u20132018", "notes": "ANC; state capture/Gupta scandal; Nkandla; MK party 2024; jailed 2021 (contempt); July 2021 riots"},
-      {"name": "F.W. de Klerk", "term": "1989\u20131994", "notes": "Last apartheid-era president; NP; unbanned ANC; released Mandela; Nobel Peace Prize 1993; died 2021"},
-      {"name": "P.W. Botha", "term": "1984\u20131989", "notes": "First state president; NP; 'Total Strategy'; partial reforms; Rubicon speech; finger-wagging"},
-      {"name": "Hendrik Verwoerd", "term": "1958\u20131966", "notes": "'Architect of apartheid'; Bantustan policy; assassinated in parliament"}
+    "former_leaders": [
+      {
+        "name": "Nelson Mandela",
+        "term": "1994–1999",
+        "notes": "Anti-apartheid icon; 27 years in prison; first Black president; ANC; Nobel Peace Prize 1993; Truth & Reconciliation Commission; died 2013"
+      },
+      {
+        "name": "Thabo Mbeki",
+        "term": "1999–2008",
+        "notes": "ANC; NEPAD architect; AIDS denialism; GEAR economic policy; recalled by ANC 2008"
+      },
+      {
+        "name": "Jacob Zuma",
+        "term": "2009–2018",
+        "notes": "ANC; state capture/Gupta scandal; Nkandla; MK party 2024; jailed 2021 (contempt); July 2021 riots"
+      },
+      {
+        "name": "F.W. de Klerk",
+        "term": "1989–1994",
+        "notes": "Last apartheid-era president; NP; unbanned ANC; released Mandela; Nobel Peace Prize 1993; died 2021"
+      },
+      {
+        "name": "P.W. Botha",
+        "term": "1984–1989",
+        "notes": "First state president; NP; 'Total Strategy'; partial reforms; Rubicon speech; finger-wagging"
+      },
+      {
+        "name": "Hendrik Verwoerd",
+        "term": "1958–1966",
+        "notes": "'Architect of apartheid'; Bantustan policy; assassinated in parliament"
+      }
     ]
   },
   "thematic_clusters": {
@@ -86,23 +199,67 @@
       {
         "slug": "Cradle_Of_Humankind_ZA",
         "name": "Cradle of Humankind and Human Origins",
-        "year_range": [-3500000, -100000],
+        "year_range": [
+          -3500000,
+          -100000
+        ],
         "status": "PLANNED",
         "description": "South Africa's Cradle of Humankind UNESCO site contains some of the world's most significant hominin fossils, placing the region at the centre of human evolution.",
         "sub_clusters": [
-          {"slug": "Australopithecus_Fossils_ZA", "name": "Australopithecus Discoveries", "year_range": [-3500000, -2000000], "description": "Taung Child (Australopithecus africanus) discovered 1924 by Raymond Dart; Mrs Ples (Sterkfontein); Little Foot (Stw 573); fundamental to understanding human evolution.", "key_events": ["Taung_Child_Discovery_1924"]},
-          {"slug": "Homo_Naledi_ZA", "name": "Homo naledi Discovery", "year_range": [-300000, -200000], "description": "Homo naledi discovered in Rising Star Cave 2013–2015 by Lee Berger's team; over 1,500 specimens; evidence of deliberate body disposal challenges assumptions about cognitive evolution.", "key_events": ["Homo_Naledi_Discovery_2013"]}
+          {
+            "slug": "Australopithecus_Fossils_ZA",
+            "name": "Australopithecus Discoveries",
+            "year_range": [
+              -3500000,
+              -2000000
+            ],
+            "description": "Taung Child (Australopithecus africanus) discovered 1924 by Raymond Dart; Mrs Ples (Sterkfontein); Little Foot (Stw 573); fundamental to understanding human evolution.",
+            "key_events": [
+              "Taung_Child_Discovery_1924"
+            ]
+          },
+          {
+            "slug": "Homo_Naledi_ZA",
+            "name": "Homo naledi Discovery",
+            "year_range": [
+              -300000,
+              -200000
+            ],
+            "description": "Homo naledi discovered in Rising Star Cave 2013–2015 by Lee Berger's team; over 1,500 specimens; evidence of deliberate body disposal challenges assumptions about cognitive evolution.",
+            "key_events": [
+              "Homo_Naledi_Discovery_2013"
+            ]
+          }
         ]
       },
       {
         "slug": "San_Khoikhoi_ZA",
         "name": "San and Khoikhoi First Peoples",
-        "year_range": [-100000, 1700],
+        "year_range": [
+          -100000,
+          1700
+        ],
         "status": "PLANNED",
         "description": "San hunter-gatherers and Khoikhoi pastoralists are the indigenous peoples of southern Africa, with the oldest genetic lineages of any living human population.",
         "sub_clusters": [
-          {"slug": "San_Hunter_Gatherers_ZA", "name": "San Hunter-Gatherer Civilisation", "year_range": [-100000, 1800], "description": "San peoples develop sophisticated knowledge of ecology; Drakensberg rock art traditions; trance healing; |Xam language and mythology recorded by Bleek and Lloyd."},
-          {"slug": "Khoikhoi_Pastoralists_ZA", "name": "Khoikhoi Pastoral Society", "year_range": [-2000, 1700], "description": "Khoikhoi ('people of people') herders keep fat-tailed sheep and cattle; seasonal transhumance; chiefdoms at the Cape; first contact with Portuguese navigators 1488."}
+          {
+            "slug": "San_Hunter_Gatherers_ZA",
+            "name": "San Hunter-Gatherer Civilisation",
+            "year_range": [
+              -100000,
+              1800
+            ],
+            "description": "San peoples develop sophisticated knowledge of ecology; Drakensberg rock art traditions; trance healing; |Xam language and mythology recorded by Bleek and Lloyd."
+          },
+          {
+            "slug": "Khoikhoi_Pastoralists_ZA",
+            "name": "Khoikhoi Pastoral Society",
+            "year_range": [
+              -2000,
+              1700
+            ],
+            "description": "Khoikhoi ('people of people') herders keep fat-tailed sheep and cattle; seasonal transhumance; chiefdoms at the Cape; first contact with Portuguese navigators 1488."
+          }
         ]
       }
     ],
@@ -110,13 +267,43 @@
       {
         "slug": "Bantu_Migration_ZA",
         "name": "Bantu Migration and Iron Age States",
-        "year_range": [200, 1500],
+        "year_range": [
+          200,
+          1500
+        ],
         "status": "PLANNED",
         "description": "Bantu-speaking peoples migrate into South Africa, establishing farming communities, iron-working centres, and complex states like Mapungubwe.",
         "sub_clusters": [
-          {"slug": "Early_Bantu_Settlement_ZA", "name": "Early Bantu Settlement", "year_range": [200, 900], "description": "Bantu-speaking farmers settle eastern South Africa; bring iron smelting, pottery, agriculture, and cattle; interact with and gradually displace Khoisan populations."},
-          {"slug": "Mapungubwe_Kingdom", "name": "Kingdom of Mapungubwe", "year_range": [900, 1300], "description": "First class-based society in southern Africa; gold-trading state at confluence of Limpopo and Shashe rivers; famous golden rhinoceros; precursor to Great Zimbabwe; UNESCO World Heritage site.", "key_events": ["Mapungubwe_Kingdom_Peak_1075"]},
-          {"slug": "Nguni_Sotho_States_ZA", "name": "Nguni and Sotho State Formation", "year_range": [1300, 1500], "description": "Nguni-speaking peoples (Zulu, Xhosa, Swazi) settle along eastern seaboard; Sotho-Tswana groups occupy central plateau; distinct chiefdom structures develop."}
+          {
+            "slug": "Early_Bantu_Settlement_ZA",
+            "name": "Early Bantu Settlement",
+            "year_range": [
+              200,
+              900
+            ],
+            "description": "Bantu-speaking farmers settle eastern South Africa; bring iron smelting, pottery, agriculture, and cattle; interact with and gradually displace Khoisan populations."
+          },
+          {
+            "slug": "Mapungubwe_Kingdom",
+            "name": "Kingdom of Mapungubwe",
+            "year_range": [
+              900,
+              1300
+            ],
+            "description": "First class-based society in southern Africa; gold-trading state at confluence of Limpopo and Shashe rivers; famous golden rhinoceros; precursor to Great Zimbabwe; UNESCO World Heritage site.",
+            "key_events": [
+              "Mapungubwe_Kingdom_Peak_1075"
+            ]
+          },
+          {
+            "slug": "Nguni_Sotho_States_ZA",
+            "name": "Nguni and Sotho State Formation",
+            "year_range": [
+              1300,
+              1500
+            ],
+            "description": "Nguni-speaking peoples (Zulu, Xhosa, Swazi) settle along eastern seaboard; Sotho-Tswana groups occupy central plateau; distinct chiefdom structures develop."
+          }
         ]
       }
     ],
@@ -124,25 +311,92 @@
       {
         "slug": "VOC_Cape_Colony",
         "name": "Dutch East India Company and Cape Colony",
-        "year_range": [1652, 1806],
+        "year_range": [
+          1652,
+          1806
+        ],
         "status": "PLANNED",
         "description": "The VOC establishes a refreshment station at the Cape in 1652; settler colonialism, slavery, and frontier warfare with Khoikhoi and Xhosa reshape the region.",
         "sub_clusters": [
-          {"slug": "Van_Riebeeck_Settlement", "name": "Jan van Riebeeck and Cape Settlement", "year_range": [1652, 1700], "description": "VOC commander Jan van Riebeeck establishes refreshment station 1652; Khoikhoi dispossession begins; slaves imported from East Africa, Madagascar, and Southeast Asia; Cape Town grows.", "key_events": ["Van_Riebeeck_Arrives_1652"]},
-          {"slug": "Cape_Slave_Society", "name": "Cape Slave Society", "year_range": [1658, 1834], "description": "Slavery shapes Cape society; enslaved peoples from Indonesia, India, East Africa, and Madagascar; Cape Malay culture; creolisation; slave lodge; emancipation 1834."},
-          {"slug": "Frontier_Wars_Xhosa", "name": "Cape-Xhosa Frontier Wars", "year_range": [1779, 1879], "description": "Nine frontier wars over a century as the Cape Colony expands eastward into Xhosa territory; land dispossession; Nongqawuse cattle-killing movement 1856–1857.", "key_events": ["Xhosa_Cattle_Killing_1856"]}
+          {
+            "slug": "Van_Riebeeck_Settlement",
+            "name": "Jan van Riebeeck and Cape Settlement",
+            "year_range": [
+              1652,
+              1700
+            ],
+            "description": "VOC commander Jan van Riebeeck establishes refreshment station 1652; Khoikhoi dispossession begins; slaves imported from East Africa, Madagascar, and Southeast Asia; Cape Town grows.",
+            "key_events": [
+              "Van_Riebeeck_Arrives_1652"
+            ]
+          },
+          {
+            "slug": "Cape_Slave_Society",
+            "name": "Cape Slave Society",
+            "year_range": [
+              1658,
+              1834
+            ],
+            "description": "Slavery shapes Cape society; enslaved peoples from Indonesia, India, East Africa, and Madagascar; Cape Malay culture; creolisation; slave lodge; emancipation 1834."
+          },
+          {
+            "slug": "Frontier_Wars_Xhosa",
+            "name": "Cape-Xhosa Frontier Wars",
+            "year_range": [
+              1779,
+              1879
+            ],
+            "description": "Nine frontier wars over a century as the Cape Colony expands eastward into Xhosa territory; land dispossession; Nongqawuse cattle-killing movement 1856–1857.",
+            "key_events": [
+              "Xhosa_Cattle_Killing_1856"
+            ]
+          }
         ]
       },
       {
         "slug": "Zulu_Kingdom_ZA",
         "name": "Zulu Kingdom and the Mfecane",
-        "year_range": [1816, 1879],
+        "year_range": [
+          1816,
+          1879
+        ],
         "status": "PLANNED",
         "description": "Shaka kaSenzangakhona transforms the Zulu into a major military power; the resulting Mfecane reshapes the entire subcontinent.",
         "sub_clusters": [
-          {"slug": "Shaka_Zulu", "name": "Shaka and the Rise of the Zulu Kingdom", "year_range": [1816, 1828], "description": "Shaka revolutionises Zulu military organisation: iklwa short stabbing spear, bull-horn formation, age-regiment (amabutho) system; expands Zulu territory dramatically; assassination 1828.", "key_events": ["Shaka_Zulu_Rise_1816"]},
-          {"slug": "Mfecane_Difaqane_ZA", "name": "Mfecane/Difaqane", "year_range": [1815, 1840], "description": "Massive upheaval across southern and eastern Africa triggered by Zulu expansion; displacement of Ndebele, Ngoni, Sotho, and others; new states formed (Lesotho, Gaza, Ndebele)."},
-          {"slug": "Anglo_Zulu_War_ZA", "name": "Anglo-Zulu War 1879", "year_range": [1879, 1879], "description": "British invasion of Zululand; stunning Zulu victory at Battle of Isandlwana; British defence at Rorke's Drift; final Zulu defeat at Ulundi; Zulu kingdom dismembered.", "key_events": ["Battle_Isandlwana_1879", "Battle_Rorkes_Drift_1879"]}
+          {
+            "slug": "Shaka_Zulu",
+            "name": "Shaka and the Rise of the Zulu Kingdom",
+            "year_range": [
+              1816,
+              1828
+            ],
+            "description": "Shaka revolutionises Zulu military organisation: iklwa short stabbing spear, bull-horn formation, age-regiment (amabutho) system; expands Zulu territory dramatically; assassination 1828.",
+            "key_events": [
+              "Shaka_Zulu_Rise_1816"
+            ]
+          },
+          {
+            "slug": "Mfecane_Difaqane_ZA",
+            "name": "Mfecane/Difaqane",
+            "year_range": [
+              1815,
+              1840
+            ],
+            "description": "Massive upheaval across southern and eastern Africa triggered by Zulu expansion; displacement of Ndebele, Ngoni, Sotho, and others; new states formed (Lesotho, Gaza, Ndebele)."
+          },
+          {
+            "slug": "Anglo_Zulu_War_ZA",
+            "name": "Anglo-Zulu War 1879",
+            "year_range": [
+              1879,
+              1879
+            ],
+            "description": "British invasion of Zululand; stunning Zulu victory at Battle of Isandlwana; British defence at Rorke's Drift; final Zulu defeat at Ulundi; Zulu kingdom dismembered.",
+            "key_events": [
+              "Battle_Isandlwana_1879",
+              "Battle_Rorkes_Drift_1879"
+            ]
+          }
         ]
       }
     ],
@@ -150,25 +404,95 @@
       {
         "slug": "Great_Trek_Boer_Republics",
         "name": "Great Trek and Boer Republics",
-        "year_range": [1835, 1902],
+        "year_range": [
+          1835,
+          1902
+        ],
         "status": "PLANNED",
         "description": "Afrikaner Voortrekkers leave the Cape Colony; establish Boer republics (Transvaal, Orange Free State); gold and diamond discoveries trigger imperial rivalry and the Anglo-Boer Wars.",
         "sub_clusters": [
-          {"slug": "Great_Trek_ZA", "name": "The Great Trek", "year_range": [1835, 1845], "description": "~15,000 Boers trek inland to escape British rule; Battle of Blood River (Ncome) against Zulu 1838; founding of Natal, Transvaal, and Orange Free State republics.", "key_events": ["Battle_Blood_River_1838"]},
-          {"slug": "Diamond_Gold_ZA", "name": "Diamond and Gold Discoveries", "year_range": [1867, 1886], "description": "Diamond discovery at Kimberley 1867; gold on the Witwatersrand 1886; Johannesburg founded; Cecil Rhodes and De Beers; Randlords; massive immigration; African migrant labour system.", "key_events": ["Witwatersrand_Gold_Rush_1886"]},
-          {"slug": "Anglo_Boer_Wars_ZA", "name": "Anglo-Boer Wars", "year_range": [1880, 1902], "description": "First Boer War (1880–1881) — Boer victory at Majuba Hill. Second Boer War (1899–1902) — scorched earth, concentration camps (26,000 Boer and 20,000+ African deaths); British victory; Treaty of Vereeniging.", "key_events": ["Second_Boer_War_1899", "Treaty_Vereeniging_1902"]}
+          {
+            "slug": "Great_Trek_ZA",
+            "name": "The Great Trek",
+            "year_range": [
+              1835,
+              1845
+            ],
+            "description": "~15,000 Boers trek inland to escape British rule; Battle of Blood River (Ncome) against Zulu 1838; founding of Natal, Transvaal, and Orange Free State republics.",
+            "key_events": [
+              "Battle_Blood_River_1838"
+            ]
+          },
+          {
+            "slug": "Diamond_Gold_ZA",
+            "name": "Diamond and Gold Discoveries",
+            "year_range": [
+              1867,
+              1886
+            ],
+            "description": "Diamond discovery at Kimberley 1867; gold on the Witwatersrand 1886; Johannesburg founded; Cecil Rhodes and De Beers; Randlords; massive immigration; African migrant labour system.",
+            "key_events": [
+              "Witwatersrand_Gold_Rush_1886"
+            ]
+          },
+          {
+            "slug": "Anglo_Boer_Wars_ZA",
+            "name": "Anglo-Boer Wars",
+            "year_range": [
+              1880,
+              1902
+            ],
+            "description": "First Boer War (1880–1881) — Boer victory at Majuba Hill. Second Boer War (1899–1902) — scorched earth, concentration camps (26,000 Boer and 20,000+ African deaths); British victory; Treaty of Vereeniging.",
+            "key_events": [
+              "Second_Boer_War_1899",
+              "Treaty_Vereeniging_1902"
+            ]
+          }
         ]
       },
       {
         "slug": "Union_Segregation_ZA",
         "name": "Union of South Africa and Segregation Era",
-        "year_range": [1910, 1948],
+        "year_range": [
+          1910,
+          1948
+        ],
         "status": "PLANNED",
         "description": "Union of South Africa formed 1910; systematic racial legislation (Natives Land Act 1913); ANC founded; segregation deepens before formal apartheid.",
         "sub_clusters": [
-          {"slug": "Union_1910_ZA", "name": "Union of South Africa 1910", "year_range": [1910, 1913], "description": "Union unites Cape, Natal, Transvaal, and Orange River colonies; only whites can sit in parliament; Natives Land Act 1913 restricts Black land ownership to 7% of territory.", "key_events": ["Natives_Land_Act_1913"]},
-          {"slug": "ANC_Founded_ZA", "name": "ANC Founded and Early Resistance", "year_range": [1912, 1948], "description": "South African Native National Congress (later ANC) founded 1912 by John Dube, Pixley ka Isaka Seme, and Sol Plaatje; petitions, delegations, and passive resistance; ICU trade unionism; Hertzog's segregation laws.", "key_events": ["ANC_Founded_1912"]},
-          {"slug": "Afrikaner_Nationalism_ZA", "name": "Rise of Afrikaner Nationalism", "year_range": [1914, 1948], "description": "Afrikaner Rebellion 1914; Broederbond secret society; National Party under Hertzog and Malan; Voortrekker Monument symbolism; 1948 election victory on apartheid platform."}
+          {
+            "slug": "Union_1910_ZA",
+            "name": "Union of South Africa 1910",
+            "year_range": [
+              1910,
+              1913
+            ],
+            "description": "Union unites Cape, Natal, Transvaal, and Orange River colonies; only whites can sit in parliament; Natives Land Act 1913 restricts Black land ownership to 7% of territory.",
+            "key_events": [
+              "Natives_Land_Act_1913"
+            ]
+          },
+          {
+            "slug": "ANC_Founded_ZA",
+            "name": "ANC Founded and Early Resistance",
+            "year_range": [
+              1912,
+              1948
+            ],
+            "description": "South African Native National Congress (later ANC) founded 1912 by John Dube, Pixley ka Isaka Seme, and Sol Plaatje; petitions, delegations, and passive resistance; ICU trade unionism; Hertzog's segregation laws.",
+            "key_events": [
+              "ANC_Founded_1912"
+            ]
+          },
+          {
+            "slug": "Afrikaner_Nationalism_ZA",
+            "name": "Rise of Afrikaner Nationalism",
+            "year_range": [
+              1914,
+              1948
+            ],
+            "description": "Afrikaner Rebellion 1914; Broederbond secret society; National Party under Hertzog and Malan; Voortrekker Monument symbolism; 1948 election victory on apartheid platform."
+          }
         ]
       }
     ],
@@ -176,25 +500,87 @@
       {
         "slug": "Apartheid_System_ZA",
         "name": "Apartheid System",
-        "year_range": [1948, 1976],
+        "year_range": [
+          1948,
+          1976
+        ],
         "status": "PLANNED",
         "description": "The National Party implements apartheid — a comprehensive system of racial segregation and white supremacy — through legislation, forced removals, and bantustans.",
         "sub_clusters": [
-          {"slug": "Apartheid_Laws_ZA", "name": "Apartheid Legislation", "year_range": [1948, 1960], "description": "Population Registration Act, Group Areas Act, Bantu Education Act, Immorality Act, pass laws; Hendrik Verwoerd as architect of 'grand apartheid'; bantustan policy."},
-          {"slug": "Sharpeville_Massacre_ZA", "name": "Sharpeville Massacre 1960", "year_range": [1960, 1964], "description": "Police kill 69 anti-pass protesters at Sharpeville 21 March 1960; ANC and PAC banned; Mandela and others go underground; Rivonia Trial 1963–1964; Mandela sentenced to life imprisonment.", "key_events": ["Sharpeville_Massacre_1960", "Rivonia_Trial_1964"]},
-          {"slug": "Soweto_Uprising_ZA", "name": "Soweto Uprising 1976", "year_range": [1976, 1977], "description": "Students in Soweto protest compulsory Afrikaans instruction; police open fire; Hector Pieterson killed; uprising spreads nationwide; Black Consciousness Movement (Steve Biko murdered 1977).", "key_events": ["Soweto_Uprising_1976", "Steve_Biko_Death_1977"]}
+          {
+            "slug": "Apartheid_Laws_ZA",
+            "name": "Apartheid Legislation",
+            "year_range": [
+              1948,
+              1960
+            ],
+            "description": "Population Registration Act, Group Areas Act, Bantu Education Act, Immorality Act, pass laws; Hendrik Verwoerd as architect of 'grand apartheid'; bantustan policy."
+          },
+          {
+            "slug": "Sharpeville_Massacre_ZA",
+            "name": "Sharpeville Massacre 1960",
+            "year_range": [
+              1960,
+              1964
+            ],
+            "description": "Police kill 69 anti-pass protesters at Sharpeville 21 March 1960; ANC and PAC banned; Mandela and others go underground; Rivonia Trial 1963–1964; Mandela sentenced to life imprisonment.",
+            "key_events": [
+              "Sharpeville_Massacre_1960",
+              "Rivonia_Trial_1964"
+            ]
+          },
+          {
+            "slug": "Soweto_Uprising_ZA",
+            "name": "Soweto Uprising 1976",
+            "year_range": [
+              1976,
+              1977
+            ],
+            "description": "Students in Soweto protest compulsory Afrikaans instruction; police open fire; Hector Pieterson killed; uprising spreads nationwide; Black Consciousness Movement (Steve Biko murdered 1977).",
+            "key_events": [
+              "Soweto_Uprising_1976",
+              "Steve_Biko_Death_1977"
+            ]
+          }
         ]
       },
       {
         "slug": "Liberation_Struggle_ZA",
         "name": "Liberation Struggle and International Sanctions",
-        "year_range": [1960, 1990],
+        "year_range": [
+          1960,
+          1990
+        ],
         "status": "PLANNED",
         "description": "ANC armed struggle (Umkhonto we Sizwe); international anti-apartheid movement; sanctions; township revolts; state of emergency; negotiations begin.",
         "sub_clusters": [
-          {"slug": "MK_Armed_Struggle_ZA", "name": "Umkhonto we Sizwe Armed Struggle", "year_range": [1961, 1990], "description": "MK (Spear of the Nation) launched 16 December 1961; sabotage campaign; exile in Zambia, Tanzania, Angola; ANC military and political strategies; Chris Hani leadership."},
-          {"slug": "International_Sanctions_ZA", "name": "International Anti-Apartheid Movement", "year_range": [1960, 1990], "description": "UN arms embargo; cultural and sporting boycotts; disinvestment campaigns; Free Mandela movement; Comprehensive Anti-Apartheid Act (US 1986); growing isolation."},
-          {"slug": "Township_Revolts_ZA", "name": "Township Revolts and States of Emergency", "year_range": [1984, 1990], "description": "Vaal Triangle uprising 1984; UDF formed; necklacing; state of emergency declared 1985; COSATU founded; total strategy vs. total onslaught; secret talks with Mandela begin."}
+          {
+            "slug": "MK_Armed_Struggle_ZA",
+            "name": "Umkhonto we Sizwe Armed Struggle",
+            "year_range": [
+              1961,
+              1990
+            ],
+            "description": "MK (Spear of the Nation) launched 16 December 1961; sabotage campaign; exile in Zambia, Tanzania, Angola; ANC military and political strategies; Chris Hani leadership."
+          },
+          {
+            "slug": "International_Sanctions_ZA",
+            "name": "International Anti-Apartheid Movement",
+            "year_range": [
+              1960,
+              1990
+            ],
+            "description": "UN arms embargo; cultural and sporting boycotts; disinvestment campaigns; Free Mandela movement; Comprehensive Anti-Apartheid Act (US 1986); growing isolation."
+          },
+          {
+            "slug": "Township_Revolts_ZA",
+            "name": "Township Revolts and States of Emergency",
+            "year_range": [
+              1984,
+              1990
+            ],
+            "description": "Vaal Triangle uprising 1984; UDF formed; necklacing; state of emergency declared 1985; COSATU founded; total strategy vs. total onslaught; secret talks with Mandela begin."
+          }
         ]
       }
     ],
@@ -202,50 +588,219 @@
       {
         "slug": "Democratic_Transition_ZA",
         "name": "Democratic Transition and TRC",
-        "year_range": [1990, 1999],
+        "year_range": [
+          1990,
+          1999
+        ],
         "status": "PLANNED",
         "description": "De Klerk unbans ANC; Mandela released; negotiations; CODESA; 1994 elections; Truth and Reconciliation Commission; Mandela presidency.",
         "sub_clusters": [
-          {"slug": "Mandela_Released_ZA", "name": "Mandela Released and Negotiations", "year_range": [1990, 1993], "description": "F.W. de Klerk unbans ANC 2 February 1990; Mandela walks free after 27 years; CODESA negotiations; Chris Hani assassination 1993; Inkatha-ANC violence threatens peace.", "key_events": ["Mandela_Released_1990"]},
-          {"slug": "1994_Elections_ZA", "name": "1994 Democratic Elections", "year_range": [1994, 1994], "description": "First fully democratic elections 27 April 1994; ANC wins 62%; Nelson Mandela inaugurated as first Black president; Government of National Unity; Freedom Day.", "key_events": ["South_Africa_1994_Elections"]},
-          {"slug": "TRC_ZA", "name": "Truth and Reconciliation Commission", "year_range": [1996, 1998], "description": "Archbishop Desmond Tutu chairs TRC; amnesty for politically motivated crimes in exchange for full disclosure; victims' hearings; controversial but groundbreaking transitional justice model."},
-          {"slug": "Mandela_Presidency_ZA", "name": "Mandela Presidency", "year_range": [1994, 1999], "description": "Reconciliation policy; new constitution 1996 (most progressive in the world); RDP housing; macro-economic shift to GEAR; Mandela as global icon; steps down after one term."}
+          {
+            "slug": "Mandela_Released_ZA",
+            "name": "Mandela Released and Negotiations",
+            "year_range": [
+              1990,
+              1993
+            ],
+            "description": "F.W. de Klerk unbans ANC 2 February 1990; Mandela walks free after 27 years; CODESA negotiations; Chris Hani assassination 1993; Inkatha-ANC violence threatens peace.",
+            "key_events": [
+              "Mandela_Released_1990"
+            ]
+          },
+          {
+            "slug": "1994_Elections_ZA",
+            "name": "1994 Democratic Elections",
+            "year_range": [
+              1994,
+              1994
+            ],
+            "description": "First fully democratic elections 27 April 1994; ANC wins 62%; Nelson Mandela inaugurated as first Black president; Government of National Unity; Freedom Day.",
+            "key_events": [
+              "South_Africa_1994_Elections"
+            ]
+          },
+          {
+            "slug": "TRC_ZA",
+            "name": "Truth and Reconciliation Commission",
+            "year_range": [
+              1996,
+              1998
+            ],
+            "description": "Archbishop Desmond Tutu chairs TRC; amnesty for politically motivated crimes in exchange for full disclosure; victims' hearings; controversial but groundbreaking transitional justice model."
+          },
+          {
+            "slug": "Mandela_Presidency_ZA",
+            "name": "Mandela Presidency",
+            "year_range": [
+              1994,
+              1999
+            ],
+            "description": "Reconciliation policy; new constitution 1996 (most progressive in the world); RDP housing; macro-economic shift to GEAR; Mandela as global icon; steps down after one term."
+          }
         ]
       },
       {
         "slug": "Post_Apartheid_ZA",
         "name": "Post-Apartheid South Africa",
-        "year_range": [1999, 2026],
+        "year_range": [
+          1999,
+          2026
+        ],
         "status": "PLANNED",
         "description": "Mbeki, Zuma, and Ramaphosa presidencies; HIV/AIDS crisis; state capture; load shedding; persistent inequality; coalition era begins.",
         "sub_clusters": [
-          {"slug": "Mbeki_Presidency_ZA", "name": "Thabo Mbeki Presidency", "year_range": [1999, 2008], "description": "African Renaissance vision; NEPAD; controversial AIDS denialism delays antiretroviral rollout (estimated 330,000 preventable deaths); Zimbabwe 'quiet diplomacy'; recalled by ANC 2008."},
-          {"slug": "Zuma_State_Capture_ZA", "name": "Zuma Presidency and State Capture", "year_range": [2009, 2018], "description": "Jacob Zuma presidency; Gupta family state capture; Marikana massacre 2012 (34 miners killed); Nkandla scandal; Fees Must Fall student protests; ANC factionalism.", "key_events": ["Marikana_Massacre_2012"]},
-          {"slug": "Load_Shedding_Crisis_ZA", "name": "Eskom and Load Shedding Crisis", "year_range": [2007, 2026], "description": "Eskom power utility collapses under corruption, coal supply crises, and maintenance failures; rolling blackouts (load shedding) devastate economy; renewable energy transition begins."},
-          {"slug": "Ramaphosa_Coalition_ZA", "name": "Ramaphosa and Coalition Era", "year_range": [2018, 2026], "description": "Cyril Ramaphosa succeeds Zuma; Zondo Commission on state capture; COVID-19 impact; ANC loses majority in 2024 elections for first time; Government of National Unity with DA; land reform debate continues.", "key_events": ["ANC_Loses_Majority_2024"]}
+          {
+            "slug": "Mbeki_Presidency_ZA",
+            "name": "Thabo Mbeki Presidency",
+            "year_range": [
+              1999,
+              2008
+            ],
+            "description": "African Renaissance vision; NEPAD; controversial AIDS denialism delays antiretroviral rollout (estimated 330,000 preventable deaths); Zimbabwe 'quiet diplomacy'; recalled by ANC 2008."
+          },
+          {
+            "slug": "Zuma_State_Capture_ZA",
+            "name": "Zuma Presidency and State Capture",
+            "year_range": [
+              2009,
+              2018
+            ],
+            "description": "Jacob Zuma presidency; Gupta family state capture; Marikana massacre 2012 (34 miners killed); Nkandla scandal; Fees Must Fall student protests; ANC factionalism.",
+            "key_events": [
+              "Marikana_Massacre_2012"
+            ]
+          },
+          {
+            "slug": "Load_Shedding_Crisis_ZA",
+            "name": "Eskom and Load Shedding Crisis",
+            "year_range": [
+              2007,
+              2026
+            ],
+            "description": "Eskom power utility collapses under corruption, coal supply crises, and maintenance failures; rolling blackouts (load shedding) devastate economy; renewable energy transition begins."
+          },
+          {
+            "slug": "Ramaphosa_Coalition_ZA",
+            "name": "Ramaphosa and Coalition Era",
+            "year_range": [
+              2018,
+              2026
+            ],
+            "description": "Cyril Ramaphosa succeeds Zuma; Zondo Commission on state capture; COVID-19 impact; ANC loses majority in 2024 elections for first time; Government of National Unity with DA; land reform debate continues.",
+            "key_events": [
+              "ANC_Loses_Majority_2024"
+            ]
+          }
         ]
       }
     ]
   },
-  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "unassigned_events": {
+    "note": "Events not yet assigned to a thematic cluster",
+    "slugs": []
+  },
   "cross_cluster_interfaces": [
-    {"cluster": "Cradle_Of_Humankind_ZA", "interfaces_with": ["Human_Origins_Africa", "Palaeoanthropology", "UNESCO_World_Heritage"]},
-    {"cluster": "San_Khoikhoi_ZA", "interfaces_with": ["San_Khoisan_Southern_Africa", "Rock_Art_Traditions", "Indigenous_Knowledge_Systems"]},
-    {"cluster": "VOC_Cape_Colony", "interfaces_with": ["Dutch_Colonial_Empire", "Atlantic_Slave_Trade", "Indian_Ocean_Trade"]},
-    {"cluster": "Zulu_Kingdom_ZA", "interfaces_with": ["Mfecane_Southern_Africa", "British_Colonial_Empire", "Military_History"]},
-    {"cluster": "Great_Trek_Boer_Republics", "interfaces_with": ["Boer_Republics", "British_Imperialism", "Diamond_Gold_Mining"]},
-    {"cluster": "Anglo_Boer_Wars_ZA", "interfaces_with": ["British_Imperial_Wars", "Concentration_Camp_Origins", "Guerrilla_Warfare"]},
-    {"cluster": "Apartheid_System_ZA", "interfaces_with": ["Racial_Segregation_Global", "Cold_War_Africa", "Human_Rights_Movements"]},
-    {"cluster": "Liberation_Struggle_ZA", "interfaces_with": ["Anti_Apartheid_Movement", "International_Sanctions", "Frontline_States"]},
-    {"cluster": "Democratic_Transition_ZA", "interfaces_with": ["Transitional_Justice", "Democratic_Transitions_Global", "Nelson_Mandela_Legacy"]},
-    {"cluster": "Zuma_State_Capture_ZA", "interfaces_with": ["Corruption_Governance_Africa", "Mining_Industry_Global", "Student_Movements"]},
-    {"cluster": "Load_Shedding_Crisis_ZA", "interfaces_with": ["Energy_Crisis_Global", "Renewable_Energy_Transition", "State_Owned_Enterprises"]}
+    {
+      "cluster": "Cradle_Of_Humankind_ZA",
+      "interfaces_with": [
+        "Human_Origins_Africa",
+        "Palaeoanthropology",
+        "UNESCO_World_Heritage"
+      ]
+    },
+    {
+      "cluster": "San_Khoikhoi_ZA",
+      "interfaces_with": [
+        "San_Khoisan_Southern_Africa",
+        "Rock_Art_Traditions",
+        "Indigenous_Knowledge_Systems"
+      ]
+    },
+    {
+      "cluster": "VOC_Cape_Colony",
+      "interfaces_with": [
+        "Dutch_Colonial_Empire",
+        "Atlantic_Slave_Trade",
+        "Indian_Ocean_Trade"
+      ]
+    },
+    {
+      "cluster": "Zulu_Kingdom_ZA",
+      "interfaces_with": [
+        "Mfecane_Southern_Africa",
+        "British_Colonial_Empire",
+        "Military_History"
+      ]
+    },
+    {
+      "cluster": "Great_Trek_Boer_Republics",
+      "interfaces_with": [
+        "Boer_Republics",
+        "British_Imperialism",
+        "Diamond_Gold_Mining"
+      ]
+    },
+    {
+      "cluster": "Anglo_Boer_Wars_ZA",
+      "interfaces_with": [
+        "British_Imperial_Wars",
+        "Concentration_Camp_Origins",
+        "Guerrilla_Warfare"
+      ]
+    },
+    {
+      "cluster": "Apartheid_System_ZA",
+      "interfaces_with": [
+        "Racial_Segregation_Global",
+        "Cold_War_Africa",
+        "Human_Rights_Movements"
+      ]
+    },
+    {
+      "cluster": "Liberation_Struggle_ZA",
+      "interfaces_with": [
+        "Anti_Apartheid_Movement",
+        "International_Sanctions",
+        "Frontline_States"
+      ]
+    },
+    {
+      "cluster": "Democratic_Transition_ZA",
+      "interfaces_with": [
+        "Transitional_Justice",
+        "Democratic_Transitions_Global",
+        "Nelson_Mandela_Legacy"
+      ]
+    },
+    {
+      "cluster": "Zuma_State_Capture_ZA",
+      "interfaces_with": [
+        "Corruption_Governance_Africa",
+        "Mining_Industry_Global",
+        "Student_Movements"
+      ]
+    },
+    {
+      "cluster": "Load_Shedding_Crisis_ZA",
+      "interfaces_with": [
+        "Energy_Crisis_Global",
+        "Renewable_Energy_Transition",
+        "State_Owned_Enterprises"
+      ]
+    }
   ],
   "statistics": {
     "total_level4_clusters": 14,
     "total_level5_subclusters": 37,
     "active_clusters": 0,
     "planned_clusters": 14,
-    "timeframe_distribution": {"910": 2, "920": 1, "930": 2, "940": 2, "950": 2, "960": 2}
+    "timeframe_distribution": {
+      "910": 2,
+      "920": 1,
+      "930": 2,
+      "940": 2,
+      "950": 2,
+      "960": 2
+    }
   }
 }

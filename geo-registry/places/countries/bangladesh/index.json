@@ -7,17 +7,30 @@
     "continent": "Asia",
     "iso_alpha2": "BD",
     "iso_alpha3": "BGD",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-07T00:00:00Z",
     "notes": "Comprehensive index for Bangladesh covering ancient Vanga and Pundra kingdoms, Mauryan-Gupta integration, Pala dynasty Buddhist golden age, Sena dynasty, Delhi Sultanate and independent Bengal Sultanate, Mughal Bengal (richest province), British Raj (Bengal Presidency), Partition 1947 (East Pakistan), Language Movement 1952, Six Points, 1971 Liberation War/genocide, Mujib era, military coups, Ershad/Zia/Khaleda/Hasina political dynasties, garment industry revolution, and climate vulnerability."
   },
   "country_profile": {
     "capital": "Dhaka",
-    "official_languages": ["Bengali (Bangla)"],
+    "official_languages": [
+      "Bengali (Bangla)"
+    ],
     "government_type": "Unitary parliamentary republic (interim government since August 2024)",
     "currency": "Bangladeshi taka (BDT)",
-    "population": {"estimate": 173000000, "year": 2024, "source": "BBS"},
+    "population": {
+      "estimate": 173000000,
+      "year": 2024,
+      "source": "BBS"
+    },
     "area_km2": 147570,
     "gdp": {
       "nominal_total": "$437 billion",
@@ -27,7 +40,12 @@
       "year": 2024,
       "source": "IMF"
     },
-    "hdi": {"value": 0.670, "rank": 129, "year": 2022, "category": "Medium"},
+    "hdi": {
+      "value": 0.67,
+      "rank": 129,
+      "year": 2022,
+      "category": "Medium"
+    },
     "religion": {
       "Islam_Sunni_Hanafi": "90.4%",
       "Hinduism": "8.2%",
@@ -36,19 +54,56 @@
       "Other": "0.4%"
     },
     "ethnic_groups": [
-      {"name": "Bengali", "percentage": 98, "notes": "Indo-Aryan; Bengal delta; Bangla language and culture; predominantly Muslim in Bangladesh (Hindu in West Bengal, India); world's 7th most-spoken language"},
-      {"name": "Chakma", "percentage": 0.4, "notes": "Chittagong Hill Tracts (CHT); Tibeto-Burman Buddhist; largest indigenous group; Chakma Circle chief; Shanti Bahini insurgency ended 1997 (CHT Accord)"},
-      {"name": "Marma", "percentage": 0.2, "notes": "CHT; Tibeto-Burman Buddhist; related to Arakanese/Rakhine of Myanmar; Bohmong and Mong circles"},
-      {"name": "Tripura (Tipra)", "percentage": 0.1, "notes": "CHT and Comilla; Tibeto-Burman; Hindu; cross-border with Tripura state, India"},
-      {"name": "Garo", "percentage": 0.1, "notes": "Mymensingh/Sylhet; Tibeto-Burman; matrilineal; Christian convert majority; cross-border with Meghalaya, India"},
-      {"name": "Santal", "percentage": 0.1, "notes": "Rajshahi/Rangpur; Austroasiatic (Munda); tribal; cross-border with India; historically marginalised; Santal Rebellion 1855"},
-      {"name": "Other indigenous (45+ groups)", "percentage": 0.6, "notes": "Mro, Tanchangya, Bawm, Khasi, Koch, Hajong, Oraon, Munda, Khumi, Rakhine; ~54 indigenous groups in CHT and plains; collectively called 'Adivasi'"},
-      {"name": "Bihari (Urdu-speaking/Stranded Pakistanis)", "percentage": 0.5, "notes": "Urdu-speaking; mostly in Geneva Camp, Dhaka; 'stranded Pakistanis' from 1971; stateless for decades; many now citizens"}
+      {
+        "name": "Bengali",
+        "percentage": 98,
+        "notes": "Indo-Aryan; Bengal delta; Bangla language and culture; predominantly Muslim in Bangladesh (Hindu in West Bengal, India); world's 7th most-spoken language"
+      },
+      {
+        "name": "Chakma",
+        "percentage": 0.4,
+        "notes": "Chittagong Hill Tracts (CHT); Tibeto-Burman Buddhist; largest indigenous group; Chakma Circle chief; Shanti Bahini insurgency ended 1997 (CHT Accord)"
+      },
+      {
+        "name": "Marma",
+        "percentage": 0.2,
+        "notes": "CHT; Tibeto-Burman Buddhist; related to Arakanese/Rakhine of Myanmar; Bohmong and Mong circles"
+      },
+      {
+        "name": "Tripura (Tipra)",
+        "percentage": 0.1,
+        "notes": "CHT and Comilla; Tibeto-Burman; Hindu; cross-border with Tripura state, India"
+      },
+      {
+        "name": "Garo",
+        "percentage": 0.1,
+        "notes": "Mymensingh/Sylhet; Tibeto-Burman; matrilineal; Christian convert majority; cross-border with Meghalaya, India"
+      },
+      {
+        "name": "Santal",
+        "percentage": 0.1,
+        "notes": "Rajshahi/Rangpur; Austroasiatic (Munda); tribal; cross-border with India; historically marginalised; Santal Rebellion 1855"
+      },
+      {
+        "name": "Other indigenous (45+ groups)",
+        "percentage": 0.6,
+        "notes": "Mro, Tanchangya, Bawm, Khasi, Koch, Hajong, Oraon, Munda, Khumi, Rakhine; ~54 indigenous groups in CHT and plains; collectively called 'Adivasi'"
+      },
+      {
+        "name": "Bihari (Urdu-speaking/Stranded Pakistanis)",
+        "percentage": 0.5,
+        "notes": "Urdu-speaking; mostly in Geneva Camp, Dhaka; 'stranded Pakistanis' from 1971; stateless for decades; many now citizens"
+      }
     ],
     "calling_code": "+880",
-    "iso3166_code": "BD/BGD",
+    "iso3166_alpha2": "BD",
+    "iso3166_alpha3": "BGD",
     "time_zone": "BST (UTC+6)",
-    "independence": {"date": "1971-03-26", "from": "Pakistan", "notes": "Victory Day 16 December 1971; 3 million killed in genocide"},
+    "independence": {
+      "date": "1971-03-26",
+      "from": "Pakistan",
+      "notes": "Victory Day 16 December 1971; 3 million killed in genocide"
+    },
     "continent": "Asia",
     "notes_unique": "Most densely populated large country (1,265/km²); world's 2nd-largest garment exporter; Bengal delta extremely climate-vulnerable; International Mother Language Day (Feb 21) commemorates 1952 Language Movement"
   },
@@ -60,11 +115,31 @@
       "notes": "Nobel Peace Prize laureate (2006, microfinance/Grameen Bank); heads interim government after Sheikh Hasina ousted by student-led revolution July-August 2024"
     },
     "former_presidents_and_pms": [
-      {"name": "Sheikh Mujibur Rahman", "term": "1971\u20131975", "notes": "'Bangabandhu' (Father of the Nation); Awami League; led independence movement; assassination with family August 15, 1975 (military coup); declared Dec 16 as Victory Day"},
-      {"name": "Ziaur Rahman", "term": "1977\u20131981", "notes": "BNP founder; military; declared independence on behalf of Mujib; multiparty system; assassinated May 1981"},
-      {"name": "Hussain Muhammad Ershad", "term": "1982\u20131990", "notes": "Military dictator; Jatiya Party; Islam as state religion 1988; ousted by popular uprising December 1990"},
-      {"name": "Khaleda Zia", "term": "1991\u20131996, 2001\u20132006", "notes": "BNP; Zia's widow; first female PM; rivalry with Hasina; jailed 2018 on corruption charges"},
-      {"name": "Sheikh Hasina", "term": "1996\u20132001, 2009\u20132024", "notes": "Awami League; Mujib's daughter; longest-serving PM; economic transformation; authoritarian drift; fled to India August 5, 2024; student/anti-quota movement toppled her"}
+      {
+        "name": "Sheikh Mujibur Rahman",
+        "term": "1971–1975",
+        "notes": "'Bangabandhu' (Father of the Nation); Awami League; led independence movement; assassination with family August 15, 1975 (military coup); declared Dec 16 as Victory Day"
+      },
+      {
+        "name": "Ziaur Rahman",
+        "term": "1977–1981",
+        "notes": "BNP founder; military; declared independence on behalf of Mujib; multiparty system; assassinated May 1981"
+      },
+      {
+        "name": "Hussain Muhammad Ershad",
+        "term": "1982–1990",
+        "notes": "Military dictator; Jatiya Party; Islam as state religion 1988; ousted by popular uprising December 1990"
+      },
+      {
+        "name": "Khaleda Zia",
+        "term": "1991–1996, 2001–2006",
+        "notes": "BNP; Zia's widow; first female PM; rivalry with Hasina; jailed 2018 on corruption charges"
+      },
+      {
+        "name": "Sheikh Hasina",
+        "term": "1996–2001, 2009–2024",
+        "notes": "Awami League; Mujib's daughter; longest-serving PM; economic transformation; authoritarian drift; fled to India August 5, 2024; student/anti-quota movement toppled her"
+      }
     ]
   },
   "thematic_clusters": {
@@ -72,20 +147,29 @@
       {
         "slug": "ancient-vanga-and-pundra",
         "name": "Ancient Vanga and Pundra",
-        "year_range": [-1500, -300],
+        "year_range": [
+          -1500,
+          -300
+        ],
         "status": "PLANNED",
         "description": "The earliest references to Bengal in Vedic and epic literature, the Mahajanapada kingdoms of Vanga, Pundra, and Anga, and the pre-Mauryan tribal societies of the Ganges-Brahmaputra delta.",
         "sub_clusters": [
           {
             "slug": "vedic-bengal-and-mahajanapadas",
             "name": "Vedic Bengal and Mahajanapadas",
-            "year_range": [-1500, -500],
+            "year_range": [
+              -1500,
+              -500
+            ],
             "description": "The Vedic references to Bengal as a distant, marshy frontier, the kingdoms of Anga and Vanga, and the region's reputation as a land of non-Aryan peoples."
           },
           {
             "slug": "mauryan-integration",
             "name": "Mauryan Integration",
-            "year_range": [-321, -185],
+            "year_range": [
+              -321,
+              -185
+            ],
             "description": "Bengal's incorporation into the Maurya Empire, the spread of Buddhism, Ashoka's edicts in the region, and the development of trade routes connecting Bengal to the broader Indian subcontinent."
           }
         ]
@@ -93,14 +177,20 @@
       {
         "slug": "gupta-and-pala-golden-ages",
         "name": "Gupta and Pala Golden Ages",
-        "year_range": [-300, 1200],
+        "year_range": [
+          -300,
+          1200
+        ],
         "status": "PLANNED",
         "description": "Bengal under the Gupta Empire, the independent Gauda kingdom under Shashanka, and the magnificent Buddhist Pala dynasty that ruled Bengal for four centuries and founded Nalanda and Vikramashila.",
         "sub_clusters": [
           {
             "slug": "gupta-period-bengal",
             "name": "Gupta Period Bengal",
-            "year_range": [-300, 600],
+            "year_range": [
+              -300,
+              600
+            ],
             "description": "Bengal as part of the Gupta Empire's eastern provinces, the development of Tamralipta (Tamluk) as a major Indian Ocean port, and the rise of the independent kingdom of Gauda under King Shashanka.",
             "key_events": [
               "King Shashanka of Gauda emerges as Bengal's first significant independent ruler (c. 600 AD)"
@@ -109,7 +199,10 @@
           {
             "slug": "pala-dynasty-and-buddhist-civilization",
             "name": "Pala Dynasty and Buddhist Civilization",
-            "year_range": [750, 1161],
+            "year_range": [
+              750,
+              1161
+            ],
             "description": "The Pala dynasty's four-century rule as the last great Buddhist empire in India, the founding of Vikramashila and Somapura Mahavihara, Bengali artistic traditions, and the spread of Buddhism to Tibet.",
             "key_events": [
               "Dharmapala founds Vikramashila university and extends Pala rule across northern India (c. 790 AD)",
@@ -119,7 +212,10 @@
           {
             "slug": "sena-dynasty-and-hindu-revival",
             "name": "Sena Dynasty and Hindu Revival",
-            "year_range": [1070, 1230],
+            "year_range": [
+              1070,
+              1230
+            ],
             "description": "The Sena dynasty's Hindu revival displacing the Buddhist Palas, Ballala Sena's social reorganization, the promotion of Sanskrit learning, and the sudden Khalji conquest."
           }
         ]
@@ -129,14 +225,20 @@
       {
         "slug": "delhi-sultanate-bengal",
         "name": "Delhi Sultanate Bengal",
-        "year_range": [1204, 1576],
+        "year_range": [
+          1204,
+          1576
+        ],
         "status": "PLANNED",
         "description": "Bakhtiyar Khalji's conquest of Bengal, the independent Bengal Sultanate, the spread of Islam through Sufi saints, and the development of a distinctive Bengalese Muslim culture.",
         "sub_clusters": [
           {
             "slug": "khalji-conquest-and-early-muslim-bengal",
             "name": "Khalji Conquest and Early Muslim Bengal",
-            "year_range": [1204, 1342],
+            "year_range": [
+              1204,
+              1342
+            ],
             "description": "Bakhtiyar Khalji's devastating raid that destroyed Nalanda and the Sena kingdom, the establishment of Muslim rule in Bengal, and the initial Delhi Sultanate governance.",
             "key_events": [
               "Bakhtiyar Khalji conquers Bengal and destroys Nalanda and Vikramashila universities (1202–1206)"
@@ -145,7 +247,10 @@
           {
             "slug": "independent-bengal-sultanate",
             "name": "Independent Bengal Sultanate",
-            "year_range": [1342, 1576],
+            "year_range": [
+              1342,
+              1576
+            ],
             "description": "The Ilyas Shahi and Husain Shahi independent sultanates, the construction of great mosques, the spread of Islam through Sufi pirs, and Bengal's prosperous maritime trade with Southeast Asia.",
             "key_events": [
               "Sultan Husain Shah presides over a golden age of religious tolerance and cultural fusion (1494–1519)"
@@ -156,14 +261,20 @@
       {
         "slug": "mughal-bengal-and-economic-powerhouse",
         "name": "Mughal Bengal and Economic Powerhouse",
-        "year_range": [1576, 1757],
+        "year_range": [
+          1576,
+          1757
+        ],
         "status": "PLANNED",
         "description": "Bengal as the richest province of the Mughal Empire, the muslin and silk industries, Dhaka as a grand Mughal city, the Nawabs of Bengal, and the arrival of European trading companies.",
         "sub_clusters": [
           {
             "slug": "mughal-conquest-and-dhaka",
             "name": "Mughal Conquest and Dhaka",
-            "year_range": [1576, 1700],
+            "year_range": [
+              1576,
+              1700
+            ],
             "description": "Akbar's conquest of Bengal, Dhaka (Jahangir Nagar) as the Mughal provincial capital, the famous Dhaka muslin industry, and Bengal's position as the wealthiest region of the Mughal Empire.",
             "key_events": [
               "Islam Khan moves the Mughal capital to Dhaka, which becomes one of the world's great cities (1610)"
@@ -172,7 +283,10 @@
           {
             "slug": "nawabs-of-bengal-and-european-arrival",
             "name": "Nawabs of Bengal and European Arrival",
-            "year_range": [1700, 1757],
+            "year_range": [
+              1700,
+              1757
+            ],
             "description": "The semi-independent Nawabs of Bengal at Murshidabad, the enormous wealth that attracted European trading companies, and the fateful confrontation with the British East India Company.",
             "key_events": [
               "Nawab Siraj ud-Daulah captures Calcutta and the Black Hole incident (1756)"
@@ -185,14 +299,20 @@
       {
         "slug": "british-east-india-company-rule",
         "name": "British East India Company Rule",
-        "year_range": [1757, 1858],
+        "year_range": [
+          1757,
+          1858
+        ],
         "status": "PLANNED",
         "description": "The Battle of Plassey, the Company's exploitation of Bengal, the devastating famine of 1770, the Permanent Settlement, and the Bengal Renaissance's intellectual and cultural awakening.",
         "sub_clusters": [
           {
             "slug": "battle-of-plassey-and-company-raj",
             "name": "Battle of Plassey and Company Raj",
-            "year_range": [1757, 1793],
+            "year_range": [
+              1757,
+              1793
+            ],
             "description": "Robert Clive's victory at Plassey through treachery, the Diwani grant giving the Company Bengal's revenues, the catastrophic famine of 1770 killing a third of Bengal's population, and the Permanent Settlement.",
             "key_events": [
               "Battle of Plassey — British East India Company defeats Nawab Siraj ud-Daulah through conspiracy (1757)",
@@ -202,7 +322,10 @@
           {
             "slug": "bengal-renaissance",
             "name": "Bengal Renaissance",
-            "year_range": [1793, 1858],
+            "year_range": [
+              1793,
+              1858
+            ],
             "description": "The remarkable intellectual awakening led by Ram Mohan Roy, the founding of modern educational institutions, the reform of Hindu practices, and the emergence of modern Bengali literature and journalism.",
             "key_events": [
               "Ram Mohan Roy campaigns to abolish sati, leading to its ban by Lord Bentinck (1829)"
@@ -215,14 +338,20 @@
       {
         "slug": "british-raj-and-bengali-nationalism",
         "name": "British Raj and Bengali Nationalism",
-        "year_range": [1858, 1947],
+        "year_range": [
+          1858,
+          1947
+        ],
         "status": "PLANNED",
         "description": "Bengal under the British Crown, the 1905 Partition and Swadeshi movement, the rise of both Hindu and Muslim nationalism, the Bengal famine of 1943, and the communal Partition of 1947.",
         "sub_clusters": [
           {
             "slug": "partition-of-bengal-1905-and-swadeshi",
             "name": "Partition of Bengal 1905 and Swadeshi Movement",
-            "year_range": [1905, 1911],
+            "year_range": [
+              1905,
+              1911
+            ],
             "description": "Lord Curzon's partition of Bengal along communal lines, the explosive Swadeshi movement of boycotts and nationalist agitation, revolutionary terrorism, and the reunification of Bengal.",
             "key_events": [
               "Partition of Bengal sparks the Swadeshi movement, one of India's first mass nationalist campaigns (1905)"
@@ -231,7 +360,10 @@
           {
             "slug": "communalism-famine-and-1947-partition",
             "name": "Communalism, Famine, and 1947 Partition",
-            "year_range": [1911, 1947],
+            "year_range": [
+              1911,
+              1947
+            ],
             "description": "The growth of Muslim League politics, the devastating Bengal Famine of 1943 killing 3 million, the Calcutta riots of 1946, and the traumatic Partition creating East Pakistan.",
             "key_events": [
               "Bengal Famine of 1943 kills approximately 3 million people (1943)",
@@ -243,14 +375,20 @@
       {
         "slug": "east-pakistan-period",
         "name": "East Pakistan Period",
-        "year_range": [1947, 1971],
+        "year_range": [
+          1947,
+          1971
+        ],
         "status": "PLANNED",
         "description": "East Bengal / East Pakistan under Pakistani rule, economic exploitation by West Pakistan, the Bengali Language Movement, the Awami League, and the political crisis leading to the Liberation War.",
         "sub_clusters": [
           {
             "slug": "language-movement-and-bengali-identity",
             "name": "Language Movement and Bengali Identity",
-            "year_range": [1947, 1958],
+            "year_range": [
+              1947,
+              1958
+            ],
             "description": "East Pakistan's subordination to West Pakistan, the Bengali Language Movement of 1952 demanding recognition of Bangla, the formation of the Awami League, and growing Bengali nationalist consciousness.",
             "key_events": [
               "Language Movement — police kill student protesters demanding Bengali as a state language (21 February 1952)"
@@ -259,7 +397,10 @@
           {
             "slug": "six-point-movement-and-political-crisis",
             "name": "Six-Point Movement and Political Crisis",
-            "year_range": [1958, 1971],
+            "year_range": [
+              1958,
+              1971
+            ],
             "description": "Military rule under Ayub Khan, Sheikh Mujibur Rahman's Six-Point autonomy demand, the 1970 election landslide for the Awami League, and West Pakistan's refusal to transfer power.",
             "key_events": [
               "Awami League wins a landslide in the 1970 election; West Pakistan refuses to accept results"
@@ -272,14 +413,20 @@
       {
         "slug": "liberation-war-and-independence",
         "name": "Liberation War and Independence",
-        "year_range": [1971, 1975],
+        "year_range": [
+          1971,
+          1975
+        ],
         "status": "PLANNED",
         "description": "The 1971 Bangladesh Liberation War — one of the 20th century's most devastating conflicts — Indian intervention, independence, Sheikh Mujib's government, and his assassination.",
         "sub_clusters": [
           {
             "slug": "1971-liberation-war",
             "name": "1971 Liberation War",
-            "year_range": [1971, 1971],
+            "year_range": [
+              1971,
+              1971
+            ],
             "description": "Operation Searchlight, the Pakistani military's genocide targeting Bengali intellectuals and Hindus, the Mukti Bahini guerrilla resistance, 10 million refugees fleeing to India, and Indian military intervention leading to Pakistan's surrender.",
             "key_events": [
               "Sheikh Mujibur Rahman declares Bangladesh's independence (26 March 1971)",
@@ -289,7 +436,10 @@
           {
             "slug": "mujib-era-and-assassination",
             "name": "Mujib Era and Assassination",
-            "year_range": [1972, 1975],
+            "year_range": [
+              1972,
+              1975
+            ],
             "description": "Sheikh Mujibur Rahman's leadership of the new nation, the devastating 1974 famine, growing authoritarianism with BAKSAL one-party rule, and his assassination along with most of his family.",
             "key_events": [
               "Sheikh Mujibur Rahman and most of his family assassinated in a military coup (15 August 1975)"
@@ -300,14 +450,20 @@
       {
         "slug": "military-rule-and-democratization",
         "name": "Military Rule and Democratization",
-        "year_range": [1975, 1991],
+        "year_range": [
+          1975,
+          1991
+        ],
         "status": "PLANNED",
         "description": "The turbulent period of military coups, Ziaur Rahman and Ershad's authoritarian regimes, the garment industry's emergence, and the mass movement restoring parliamentary democracy.",
         "sub_clusters": [
           {
             "slug": "zia-and-ershad-military-governments",
             "name": "Zia and Ershad Military Governments",
-            "year_range": [1975, 1990],
+            "year_range": [
+              1975,
+              1990
+            ],
             "description": "General Ziaur Rahman's founding of the BNP and assassination, General Ershad's military rule, the growth of the NGO sector including Grameen Bank, and the pro-democracy movement.",
             "key_events": [
               "Muhammad Yunus founds Grameen Bank, pioneering microfinance (1983)"
@@ -316,7 +472,10 @@
           {
             "slug": "democracy-movement-1990",
             "name": "Democracy Movement of 1990",
-            "year_range": [1990, 1991],
+            "year_range": [
+              1990,
+              1991
+            ],
             "description": "The mass popular uprising against Ershad's military regime, the alliance between the Awami League and BNP, Ershad's fall, and the restoration of parliamentary democracy."
           }
         ]
@@ -326,14 +485,20 @@
       {
         "slug": "democratic-era-and-economic-transformation",
         "name": "Democratic Era and Economic Transformation",
-        "year_range": [1991, 2025],
+        "year_range": [
+          1991,
+          2025
+        ],
         "status": "PLANNED",
         "description": "The alternating BNP-Awami League governments, Bangladesh's garment industry boom making it the world's second-largest exporter, climate vulnerability, and the Rohingya refugee crisis.",
         "sub_clusters": [
           {
             "slug": "two-party-democracy-and-garment-boom",
             "name": "Two-Party Democracy and Garment Boom",
-            "year_range": [1991, 2009],
+            "year_range": [
+              1991,
+              2009
+            ],
             "description": "The rivalry between Khaleda Zia's BNP and Sheikh Hasina's Awami League, the ready-made garment industry transforming the economy, devastating cyclones and floods, and political instability.",
             "key_events": [
               "Bangladesh becomes the world's second-largest garment exporter, transforming its economy"
@@ -342,7 +507,10 @@
           {
             "slug": "hasina-government-and-development",
             "name": "Hasina Government and Development",
-            "year_range": [2009, 2024],
+            "year_range": [
+              2009,
+              2024
+            ],
             "description": "Sheikh Hasina's extended rule, rapid GDP growth, the Padma Bridge, the Rana Plaza disaster, the 1971 war crimes tribunals, the Rohingya refugee crisis, and growing authoritarianism.",
             "key_events": [
               "Rana Plaza garment factory collapse kills over 1,100 workers (April 2013)",
@@ -352,7 +520,10 @@
           {
             "slug": "2024-political-transition",
             "name": "2024 Political Transition",
-            "year_range": [2024, 2025],
+            "year_range": [
+              2024,
+              2025
+            ],
             "description": "Mass student-led protests against job quota policies escalating into broader anti-government movement, Sheikh Hasina's resignation and flight to India, and the interim government under Muhammad Yunus."
           }
         ]
@@ -366,39 +537,57 @@
   "cross_cluster_interfaces": [
     {
       "cluster": "ancient-vanga-and-pundra",
-      "interfaces_with": ["gupta-and-pala-golden-ages"]
+      "interfaces_with": [
+        "gupta-and-pala-golden-ages"
+      ]
     },
     {
       "cluster": "gupta-and-pala-golden-ages",
-      "interfaces_with": ["delhi-sultanate-bengal"]
+      "interfaces_with": [
+        "delhi-sultanate-bengal"
+      ]
     },
     {
       "cluster": "delhi-sultanate-bengal",
-      "interfaces_with": ["mughal-bengal-and-economic-powerhouse"]
+      "interfaces_with": [
+        "mughal-bengal-and-economic-powerhouse"
+      ]
     },
     {
       "cluster": "mughal-bengal-and-economic-powerhouse",
-      "interfaces_with": ["british-east-india-company-rule"]
+      "interfaces_with": [
+        "british-east-india-company-rule"
+      ]
     },
     {
       "cluster": "british-east-india-company-rule",
-      "interfaces_with": ["british-raj-and-bengali-nationalism"]
+      "interfaces_with": [
+        "british-raj-and-bengali-nationalism"
+      ]
     },
     {
       "cluster": "british-raj-and-bengali-nationalism",
-      "interfaces_with": ["east-pakistan-period"]
+      "interfaces_with": [
+        "east-pakistan-period"
+      ]
     },
     {
       "cluster": "east-pakistan-period",
-      "interfaces_with": ["liberation-war-and-independence"]
+      "interfaces_with": [
+        "liberation-war-and-independence"
+      ]
     },
     {
       "cluster": "liberation-war-and-independence",
-      "interfaces_with": ["military-rule-and-democratization"]
+      "interfaces_with": [
+        "military-rule-and-democratization"
+      ]
     },
     {
       "cluster": "military-rule-and-democratization",
-      "interfaces_with": ["democratic-era-and-economic-transformation"]
+      "interfaces_with": [
+        "democratic-era-and-economic-transformation"
+      ]
     }
   ],
   "statistics": {

@@ -7,18 +7,35 @@
     "continent": "Africa",
     "iso3166_alpha2": "DJ",
     "iso3166_alpha3": "DJI",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-06T00:00:00Z",
     "notes": "Comprehensive index for Djibouti covering Afar and Issa peoples, French Somaliland, strategic location at Bab el-Mandeb, independence 1977, foreign military bases, and the Guelleh era."
   },
   "country_profile": {
     "capital": "Djibouti City",
-    "official_languages": ["French", "Arabic"],
-    "national_languages": ["Somali (Issa)", "Afar"],
+    "official_languages": [
+      "French",
+      "Arabic"
+    ],
+    "other_languages": [
+      "Somali (Issa)",
+      "Afar"
+    ],
     "government_type": "Unitary dominant-party presidential republic",
     "currency": "Djiboutian franc (DJF)",
-    "population": {"estimate": 1120000, "year": 2024, "source": "World Bank"},
+    "population": {
+      "estimate": 1120000,
+      "year": 2024,
+      "source": "World Bank"
+    },
     "area_km2": 23200,
     "gdp": {
       "nominal_total": "$4.0 billion",
@@ -28,22 +45,51 @@
       "year": 2024,
       "source": "IMF"
     },
-    "hdi": {"value": 0.509, "rank": 171, "year": 2022, "category": "Low"},
+    "hdi": {
+      "value": 0.509,
+      "rank": 171,
+      "year": 2022,
+      "category": "Low"
+    },
     "religion": {
       "Islam_Sunni": "94%",
       "Christianity": "6%"
     },
     "ethnic_groups": [
-      {"name": "Somali (Issa)", "percentage": 60, "notes": "Issa clan of the Dir Somali; dominant in Djibouti City and south; historically linked to Somali clan system"},
-      {"name": "Afar", "percentage": 35, "notes": "Cushitic-speaking pastoralists; northern and western regions; straddle Djibouti-Ethiopia-Eritrea borders; Sultanate of Tadjoura heritage"},
-      {"name": "Arab", "percentage": 3, "notes": "Yemeni and other Arab traders; commercial communities"},
-      {"name": "French/European", "percentage": 1, "notes": "Military base personnel and residents"},
-      {"name": "Other (Somali minority clans)", "percentage": 1, "notes": "Gadabursi, Isaaq, and other Somali clans"}
+      {
+        "name": "Somali (Issa)",
+        "percentage": 60,
+        "notes": "Issa clan of the Dir Somali; dominant in Djibouti City and south; historically linked to Somali clan system"
+      },
+      {
+        "name": "Afar",
+        "percentage": 35,
+        "notes": "Cushitic-speaking pastoralists; northern and western regions; straddle Djibouti-Ethiopia-Eritrea borders; Sultanate of Tadjoura heritage"
+      },
+      {
+        "name": "Arab",
+        "percentage": 3,
+        "notes": "Yemeni and other Arab traders; commercial communities"
+      },
+      {
+        "name": "French/European",
+        "percentage": 1,
+        "notes": "Military base personnel and residents"
+      },
+      {
+        "name": "Other (Somali minority clans)",
+        "percentage": 1,
+        "notes": "Gadabursi, Isaaq, and other Somali clans"
+      }
     ],
     "calling_code": "+253",
-    "iso3166_code": "DJ/DJI",
+    "iso3166_alpha2": "DJ",
+    "iso3166_alpha3": "DJI",
     "time_zone": "EAT (UTC+3)",
-    "independence": {"date": "1977-06-27", "from": "France"},
+    "independence": {
+      "date": "1977-06-27",
+      "from": "France"
+    },
     "continent": "Africa"
   },
   "leadership": {
@@ -57,8 +103,12 @@
       "name": "Abdoulkader Kamil Mohamed",
       "since": "2013-03-31"
     },
-    "former_presidents": [
-      {"name": "Hassan Gouled Aptidon", "term": "1977–1999", "notes": "Founding president; Issa leader; single-party rule; Afar civil war 1991–1994"}
+    "former_leaders": [
+      {
+        "name": "Hassan Gouled Aptidon",
+        "term": "1977–1999",
+        "notes": "Founding president; Issa leader; single-party rule; Afar civil war 1991–1994"
+      }
     ]
   },
   "thematic_clusters": {
@@ -66,13 +116,40 @@
       {
         "slug": "Ancient_Djibouti",
         "name": "Ancient Peoples and Early Trade Routes",
-        "year_range": [-3000, 700],
+        "year_range": [
+          -3000,
+          700
+        ],
         "status": "PLANNED",
         "description": "Ancient habitation at the crossroads of Africa and Arabia; early pastoralist cultures; rock art; links to the Land of Punt.",
         "sub_clusters": [
-          {"slug": "Prehistoric_Djibouti", "name": "Prehistoric Rock Art and Pastoralists", "year_range": [-3000, -500], "description": "Neolithic rock art at Abourma and Balho; early Cushitic-speaking pastoralists in the Afar depression."},
-          {"slug": "Land_Of_Punt_DJ", "name": "Possible Link to Land of Punt", "year_range": [-2500, -1000], "description": "Djibouti region as possible part of the ancient Land of Punt; Egyptian trade expeditions for myrrh, frankincense, and gold."},
-          {"slug": "Afar_Issa_Settlement", "name": "Afar and Issa Settlement", "year_range": [-500, 700], "description": "Afar and Issa (Dir Somali) peoples establish pastoral and trading communities; Afar dominance in the north, Issa in the south."}
+          {
+            "slug": "Prehistoric_Djibouti",
+            "name": "Prehistoric Rock Art and Pastoralists",
+            "year_range": [
+              -3000,
+              -500
+            ],
+            "description": "Neolithic rock art at Abourma and Balho; early Cushitic-speaking pastoralists in the Afar depression."
+          },
+          {
+            "slug": "Land_Of_Punt_DJ",
+            "name": "Possible Link to Land of Punt",
+            "year_range": [
+              -2500,
+              -1000
+            ],
+            "description": "Djibouti region as possible part of the ancient Land of Punt; Egyptian trade expeditions for myrrh, frankincense, and gold."
+          },
+          {
+            "slug": "Afar_Issa_Settlement",
+            "name": "Afar and Issa Settlement",
+            "year_range": [
+              -500,
+              700
+            ],
+            "description": "Afar and Issa (Dir Somali) peoples establish pastoral and trading communities; Afar dominance in the north, Issa in the south."
+          }
         ]
       }
     ],
@@ -80,12 +157,34 @@
       {
         "slug": "Islamic_Sultanates_DJ",
         "name": "Islamic Sultanates and Trade",
-        "year_range": [700, 1600],
+        "year_range": [
+          700,
+          1600
+        ],
         "status": "PLANNED",
         "description": "Islamisation of the region; Ifat and Adal sultanates; Djibouti as part of broader Horn of Africa Islamic polities; Red Sea trade.",
         "sub_clusters": [
-          {"slug": "Islamisation_DJ", "name": "Islamisation of the Afar and Issa", "year_range": [700, 1200], "description": "Spread of Islam through Arab traders and scholars; conversion of Afar and Issa peoples; mosque construction."},
-          {"slug": "Adal_Sultanate_DJ", "name": "Adal Sultanate Influence", "year_range": [1200, 1577], "description": "Djibouti region under influence of Adal Sultanate; Ahmed Gran's jihad against Ethiopia; Zeila as major port.", "key_events": ["Adal_Sultanate_Peak"]}
+          {
+            "slug": "Islamisation_DJ",
+            "name": "Islamisation of the Afar and Issa",
+            "year_range": [
+              700,
+              1200
+            ],
+            "description": "Spread of Islam through Arab traders and scholars; conversion of Afar and Issa peoples; mosque construction."
+          },
+          {
+            "slug": "Adal_Sultanate_DJ",
+            "name": "Adal Sultanate Influence",
+            "year_range": [
+              1200,
+              1577
+            ],
+            "description": "Djibouti region under influence of Adal Sultanate; Ahmed Gran's jihad against Ethiopia; Zeila as major port.",
+            "key_events": [
+              "Adal_Sultanate_Peak"
+            ]
+          }
         ]
       }
     ],
@@ -93,12 +192,31 @@
       {
         "slug": "Ottoman_Egyptian_Influence_DJ",
         "name": "Ottoman and Egyptian Influence",
-        "year_range": [1500, 1862],
+        "year_range": [
+          1500,
+          1862
+        ],
         "status": "PLANNED",
         "description": "Ottoman Empire and Egyptian Khedivate contest control of the Red Sea coast; Afar sultanates maintain local autonomy.",
         "sub_clusters": [
-          {"slug": "Ottoman_Red_Sea_DJ", "name": "Ottoman Red Sea Expansion", "year_range": [1500, 1800], "description": "Ottoman influence on the Red Sea coast; Afar sultanate of Tadjoura maintains semi-autonomy under Ottoman suzerainty."},
-          {"slug": "Egyptian_Expansion_DJ", "name": "Egyptian Khedivate and Regional Rivalry", "year_range": [1820, 1885], "description": "Egyptian expansion into Horn of Africa; brief control of ports; rivalry with Ethiopia and European powers."}
+          {
+            "slug": "Ottoman_Red_Sea_DJ",
+            "name": "Ottoman Red Sea Expansion",
+            "year_range": [
+              1500,
+              1800
+            ],
+            "description": "Ottoman influence on the Red Sea coast; Afar sultanate of Tadjoura maintains semi-autonomy under Ottoman suzerainty."
+          },
+          {
+            "slug": "Egyptian_Expansion_DJ",
+            "name": "Egyptian Khedivate and Regional Rivalry",
+            "year_range": [
+              1820,
+              1885
+            ],
+            "description": "Egyptian expansion into Horn of Africa; brief control of ports; rivalry with Ethiopia and European powers."
+          }
         ]
       }
     ],
@@ -106,14 +224,55 @@
       {
         "slug": "French_Somaliland",
         "name": "French Somaliland",
-        "year_range": [1862, 1977],
+        "year_range": [
+          1862,
+          1977
+        ],
         "status": "PLANNED",
         "description": "French acquisition of Obock then Djibouti city; strategic coaling station; Addis Ababa–Djibouti railway; WWII and Cold War developments.",
         "sub_clusters": [
-          {"slug": "French_Acquisition_DJ", "name": "French Acquisition and Obock", "year_range": [1862, 1896], "description": "France acquires Obock from Afar sultans 1862; establishes Djibouti city 1888 as capital; coal and supply port.", "key_events": ["France_Acquires_Obock_1862"]},
-          {"slug": "Railway_Addis_Ababa", "name": "Addis Ababa–Djibouti Railway", "year_range": [1897, 1917], "description": "Franco-Ethiopian railway constructed 1897-1917; transforms Djibouti into Ethiopia's primary trade outlet.", "key_events": ["Djibouti_Railway_Completed_1917"]},
-          {"slug": "WWII_Vichy_DJ", "name": "WWII: Vichy then Free France", "year_range": [1940, 1945], "description": "French Somaliland under Vichy control; British blockade; switches to Free France 1942; famine during blockade."},
-          {"slug": "Referendums_DJ", "name": "Referendums and TFAI Period", "year_range": [1958, 1977], "description": "1958 and 1967 referendums retain French status; renamed Territory of the Afars and Issas (TFAI) 1967; Issa majority pushes for independence."}
+          {
+            "slug": "French_Acquisition_DJ",
+            "name": "French Acquisition and Obock",
+            "year_range": [
+              1862,
+              1896
+            ],
+            "description": "France acquires Obock from Afar sultans 1862; establishes Djibouti city 1888 as capital; coal and supply port.",
+            "key_events": [
+              "France_Acquires_Obock_1862"
+            ]
+          },
+          {
+            "slug": "Railway_Addis_Ababa",
+            "name": "Addis Ababa–Djibouti Railway",
+            "year_range": [
+              1897,
+              1917
+            ],
+            "description": "Franco-Ethiopian railway constructed 1897-1917; transforms Djibouti into Ethiopia's primary trade outlet.",
+            "key_events": [
+              "Djibouti_Railway_Completed_1917"
+            ]
+          },
+          {
+            "slug": "WWII_Vichy_DJ",
+            "name": "WWII: Vichy then Free France",
+            "year_range": [
+              1940,
+              1945
+            ],
+            "description": "French Somaliland under Vichy control; British blockade; switches to Free France 1942; famine during blockade."
+          },
+          {
+            "slug": "Referendums_DJ",
+            "name": "Referendums and TFAI Period",
+            "year_range": [
+              1958,
+              1977
+            ],
+            "description": "1958 and 1967 referendums retain French status; renamed Territory of the Afars and Issas (TFAI) 1967; Issa majority pushes for independence."
+          }
         ]
       }
     ],
@@ -121,13 +280,43 @@
       {
         "slug": "Independence_Gouled_DJ",
         "name": "Independence and Gouled Presidency",
-        "year_range": [1977, 1999],
+        "year_range": [
+          1977,
+          1999
+        ],
         "status": "PLANNED",
         "description": "Independence 27 June 1977; Hassan Gouled Aptidon's single-party rule; Afar insurgency; limited multiparty opening.",
         "sub_clusters": [
-          {"slug": "Independence_1977_DJ", "name": "Independence of Djibouti", "year_range": [1977, 1977], "description": "Djibouti gains independence 27 June 1977; Hassan Gouled Aptidon becomes first president; French military remains.", "key_events": ["Independence_Djibouti_1977"]},
-          {"slug": "Gouled_Single_Party", "name": "Gouled Single-Party Rule", "year_range": [1977, 1991], "description": "RPP single-party state; Issa-dominated governance; marginalisation of Afar community; French security guarantee."},
-          {"slug": "Afar_Insurgency_DJ", "name": "Afar Insurgency and Civil Conflict", "year_range": [1991, 1994], "description": "FRUD (Front for the Restoration of Unity and Democracy) Afar insurgency; ethnic conflict; 1994 peace accord."}
+          {
+            "slug": "Independence_1977_DJ",
+            "name": "Independence of Djibouti",
+            "year_range": [
+              1977,
+              1977
+            ],
+            "description": "Djibouti gains independence 27 June 1977; Hassan Gouled Aptidon becomes first president; French military remains.",
+            "key_events": [
+              "Independence_Djibouti_1977"
+            ]
+          },
+          {
+            "slug": "Gouled_Single_Party",
+            "name": "Gouled Single-Party Rule",
+            "year_range": [
+              1977,
+              1991
+            ],
+            "description": "RPP single-party state; Issa-dominated governance; marginalisation of Afar community; French security guarantee."
+          },
+          {
+            "slug": "Afar_Insurgency_DJ",
+            "name": "Afar Insurgency and Civil Conflict",
+            "year_range": [
+              1991,
+              1994
+            ],
+            "description": "FRUD (Front for the Restoration of Unity and Democracy) Afar insurgency; ethnic conflict; 1994 peace accord."
+          }
         ]
       }
     ],
@@ -135,31 +324,112 @@
       {
         "slug": "Guelleh_Era_DJ",
         "name": "Guelleh Era and Strategic Hub",
-        "year_range": [1999, 2026],
+        "year_range": [
+          1999,
+          2026
+        ],
         "status": "PLANNED",
         "description": "Ismaïl Omar Guelleh's presidency; Djibouti as global military base hub; post-9/11 strategic importance; economic modernisation.",
         "sub_clusters": [
-          {"slug": "Guelleh_Presidency", "name": "Guelleh Consolidation of Power", "year_range": [1999, 2010], "description": "Guelleh succeeds Gouled 1999; constitutional amendment removes term limits 2010; opposition suppressed."},
-          {"slug": "Foreign_Military_Bases_DJ", "name": "Foreign Military Bases", "year_range": [2001, 2026], "description": "US Camp Lemonnier (2001); French Forces Djibouti; Chinese PLA base (2017, first overseas); Japanese and other installations; rent income.", "key_events": ["China_Opens_Djibouti_Base_2017"]},
-          {"slug": "Economic_Modernisation_DJ", "name": "Economic Modernisation and Port Expansion", "year_range": [2006, 2026], "description": "Doraleh Container Terminal; new Addis Ababa–Djibouti electric railway (2018); free trade zones; rivalry with Berbera."},
-          {"slug": "Regional_Diplomacy_DJ", "name": "Regional Diplomacy and Stability Role", "year_range": [2000, 2026], "description": "IGAD headquarters; mediation in Somali conflicts; balancing Ethiopia, Eritrea, and Gulf state interests."}
+          {
+            "slug": "Guelleh_Presidency",
+            "name": "Guelleh Consolidation of Power",
+            "year_range": [
+              1999,
+              2010
+            ],
+            "description": "Guelleh succeeds Gouled 1999; constitutional amendment removes term limits 2010; opposition suppressed."
+          },
+          {
+            "slug": "Foreign_Military_Bases_DJ",
+            "name": "Foreign Military Bases",
+            "year_range": [
+              2001,
+              2026
+            ],
+            "description": "US Camp Lemonnier (2001); French Forces Djibouti; Chinese PLA base (2017, first overseas); Japanese and other installations; rent income.",
+            "key_events": [
+              "China_Opens_Djibouti_Base_2017"
+            ]
+          },
+          {
+            "slug": "Economic_Modernisation_DJ",
+            "name": "Economic Modernisation and Port Expansion",
+            "year_range": [
+              2006,
+              2026
+            ],
+            "description": "Doraleh Container Terminal; new Addis Ababa–Djibouti electric railway (2018); free trade zones; rivalry with Berbera."
+          },
+          {
+            "slug": "Regional_Diplomacy_DJ",
+            "name": "Regional Diplomacy and Stability Role",
+            "year_range": [
+              2000,
+              2026
+            ],
+            "description": "IGAD headquarters; mediation in Somali conflicts; balancing Ethiopia, Eritrea, and Gulf state interests."
+          }
         ]
       }
     ]
   },
-  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "unassigned_events": {
+    "note": "Events not yet assigned to a thematic cluster",
+    "slugs": []
+  },
   "cross_cluster_interfaces": [
-    {"cluster": "Islamic_Sultanates_DJ", "interfaces_with": ["Adal_Sultanate", "Indian_Ocean_Trade", "Islamic_Expansion_Horn_Africa"]},
-    {"cluster": "French_Somaliland", "interfaces_with": ["French_Colonial_Empire", "Scramble_For_Africa", "Ethiopian_Trade_Routes"]},
-    {"cluster": "Afar_Insurgency_DJ", "interfaces_with": ["Afar_People_Horn_Africa", "Ethnic_Conflicts_Africa"]},
-    {"cluster": "Foreign_Military_Bases_DJ", "interfaces_with": ["War_On_Terror", "Chinese_Belt_Road_Initiative", "Gulf_Of_Aden_Security"]},
-    {"cluster": "Guelleh_Era_DJ", "interfaces_with": ["African_Authoritarian_Governance", "Horn_Of_Africa_Geopolitics"]}
+    {
+      "cluster": "Islamic_Sultanates_DJ",
+      "interfaces_with": [
+        "Adal_Sultanate",
+        "Indian_Ocean_Trade",
+        "Islamic_Expansion_Horn_Africa"
+      ]
+    },
+    {
+      "cluster": "French_Somaliland",
+      "interfaces_with": [
+        "French_Colonial_Empire",
+        "Scramble_For_Africa",
+        "Ethiopian_Trade_Routes"
+      ]
+    },
+    {
+      "cluster": "Afar_Insurgency_DJ",
+      "interfaces_with": [
+        "Afar_People_Horn_Africa",
+        "Ethnic_Conflicts_Africa"
+      ]
+    },
+    {
+      "cluster": "Foreign_Military_Bases_DJ",
+      "interfaces_with": [
+        "War_On_Terror",
+        "Chinese_Belt_Road_Initiative",
+        "Gulf_Of_Aden_Security"
+      ]
+    },
+    {
+      "cluster": "Guelleh_Era_DJ",
+      "interfaces_with": [
+        "African_Authoritarian_Governance",
+        "Horn_Of_Africa_Geopolitics"
+      ]
+    }
   ],
   "statistics": {
     "total_level4_clusters": 7,
     "total_level5_subclusters": 20,
     "active_clusters": 0,
     "planned_clusters": 7,
-    "timeframe_distribution": {"910": 1, "920": 1, "930": 1, "940": 1, "950": 1, "960": 1}
+    "timeframe_distribution": {
+      "910": 1,
+      "920": 1,
+      "930": 1,
+      "940": 1,
+      "950": 1,
+      "960": 1
+    }
   }
 }

@@ -7,18 +7,35 @@
     "continent": "Africa",
     "iso3166_alpha2": "NG",
     "iso3166_alpha3": "NGA",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-06T00:00:00Z",
     "notes": "Comprehensive index for Nigeria covering Nok culture, Ife and Benin bronzes, Hausa-Fulani emirates, Oyo and Benin empires, Atlantic slave trade, British colonisation and indirect rule, Biafra civil war, oil economy, military dictatorships, Fourth Republic, and Boko Haram insurgency."
   },
   "country_profile": {
     "capital": "Abuja",
-    "official_languages": ["English"],
-    "national_languages": ["Hausa", "Yoruba", "Igbo"],
+    "official_languages": [
+      "English"
+    ],
+    "other_languages": [
+      "Hausa",
+      "Yoruba",
+      "Igbo"
+    ],
     "government_type": "Federal presidential constitutional republic",
     "currency": "Nigerian naira (NGN)",
-    "population": {"estimate": 230000000, "year": 2024, "source": "World Bank"},
+    "population": {
+      "estimate": 230000000,
+      "year": 2024,
+      "source": "World Bank"
+    },
     "area_km2": 923768,
     "gdp": {
       "nominal_total": "$253 billion",
@@ -28,7 +45,12 @@
       "year": 2024,
       "source": "IMF"
     },
-    "hdi": {"value": 0.535, "rank": 163, "year": 2022, "category": "Low"},
+    "hdi": {
+      "value": 0.535,
+      "rank": 163,
+      "year": 2022,
+      "category": "Low"
+    },
     "religion": {
       "Islam": "53.5%",
       "Christianity": "45.9%",
@@ -38,25 +60,85 @@
       "Traditional": "0.6%"
     },
     "ethnic_groups": [
-      {"name": "Hausa", "percentage": 30, "notes": "Largest group; northern Nigeria; Hausa city-states heritage; predominantly Muslim; intermarried with Fulani post-jihad; Hausa language widest-spoken in West Africa"},
-      {"name": "Yoruba", "percentage": 15.5, "notes": "Southwestern Nigeria; Oyo Empire and Ife kingdom heritage; complex Orisha religious tradition; Lagos/Ibadan; Nollywood"},
-      {"name": "Igbo (Ibo)", "percentage": 15.2, "notes": "Southeastern Nigeria; republican/decentralised tradition; Biafra War 1967–1970; commercial dynamism; Christianity dominant"},
-      {"name": "Fulani (Fulbe/Peul)", "percentage": 6, "notes": "Pastoralists and settled; Sokoto Caliphate heritage (Usman dan Fodio); northern Nigeria; Muslim; Fulani-herder conflicts"},
-      {"name": "Ijaw", "percentage": 3.5, "notes": "Niger Delta; Nigeria's fourth-largest; oil-producing region; MEND militants; Isaac Adaka Boro's republic; Bayelsa"},
-      {"name": "Kanuri", "percentage": 3, "notes": "Northeastern Nigeria; Borno State; Kanem-Bornu Empire (1000+ years); Boko Haram heartland"},
-      {"name": "Ibibio", "percentage": 2.2, "notes": "Akwa Ibom State; southeastern coast; related to Annang and Efik"},
-      {"name": "Tiv", "percentage": 2.2, "notes": "Benue State; Middle Belt; segmentary society; historically resisted centralised authority"},
-      {"name": "Nupe", "percentage": 1.2, "notes": "Niger and Kwara States; Nupe Kingdom; Middle Belt"},
-      {"name": "Edo/Bini", "percentage": 1, "notes": "Benin City; Benin Empire and Benin Bronzes; Oba of Benin; Edo State"},
-      {"name": "Urhobo", "percentage": 1, "notes": "Delta State; oil-producing region"},
-      {"name": "Igala", "percentage": 0.8, "notes": "Kogi State; ancient Igala kingdom; confluence of Niger and Benue"},
-      {"name": "Efik", "percentage": 0.6, "notes": "Cross River State; Calabar; historical trade and European contact; Old Calabar slave trade"},
-      {"name": "Other (250+ ethnic groups)", "percentage": 18.8, "notes": "Nigeria has over 250 ethnic groups; Jukun, Idoma, Berom, Ebira, Gwari, Ogoni (Ken Saro-Wiwa), etc.; extreme diversity"}
+      {
+        "name": "Hausa",
+        "percentage": 30,
+        "notes": "Largest group; northern Nigeria; Hausa city-states heritage; predominantly Muslim; intermarried with Fulani post-jihad; Hausa language widest-spoken in West Africa"
+      },
+      {
+        "name": "Yoruba",
+        "percentage": 15.5,
+        "notes": "Southwestern Nigeria; Oyo Empire and Ife kingdom heritage; complex Orisha religious tradition; Lagos/Ibadan; Nollywood"
+      },
+      {
+        "name": "Igbo (Ibo)",
+        "percentage": 15.2,
+        "notes": "Southeastern Nigeria; republican/decentralised tradition; Biafra War 1967–1970; commercial dynamism; Christianity dominant"
+      },
+      {
+        "name": "Fulani (Fulbe/Peul)",
+        "percentage": 6,
+        "notes": "Pastoralists and settled; Sokoto Caliphate heritage (Usman dan Fodio); northern Nigeria; Muslim; Fulani-herder conflicts"
+      },
+      {
+        "name": "Ijaw",
+        "percentage": 3.5,
+        "notes": "Niger Delta; Nigeria's fourth-largest; oil-producing region; MEND militants; Isaac Adaka Boro's republic; Bayelsa"
+      },
+      {
+        "name": "Kanuri",
+        "percentage": 3,
+        "notes": "Northeastern Nigeria; Borno State; Kanem-Bornu Empire (1000+ years); Boko Haram heartland"
+      },
+      {
+        "name": "Ibibio",
+        "percentage": 2.2,
+        "notes": "Akwa Ibom State; southeastern coast; related to Annang and Efik"
+      },
+      {
+        "name": "Tiv",
+        "percentage": 2.2,
+        "notes": "Benue State; Middle Belt; segmentary society; historically resisted centralised authority"
+      },
+      {
+        "name": "Nupe",
+        "percentage": 1.2,
+        "notes": "Niger and Kwara States; Nupe Kingdom; Middle Belt"
+      },
+      {
+        "name": "Edo/Bini",
+        "percentage": 1,
+        "notes": "Benin City; Benin Empire and Benin Bronzes; Oba of Benin; Edo State"
+      },
+      {
+        "name": "Urhobo",
+        "percentage": 1,
+        "notes": "Delta State; oil-producing region"
+      },
+      {
+        "name": "Igala",
+        "percentage": 0.8,
+        "notes": "Kogi State; ancient Igala kingdom; confluence of Niger and Benue"
+      },
+      {
+        "name": "Efik",
+        "percentage": 0.6,
+        "notes": "Cross River State; Calabar; historical trade and European contact; Old Calabar slave trade"
+      },
+      {
+        "name": "Other (250+ ethnic groups)",
+        "percentage": 18.8,
+        "notes": "Nigeria has over 250 ethnic groups; Jukun, Idoma, Berom, Ebira, Gwari, Ogoni (Ken Saro-Wiwa), etc.; extreme diversity"
+      }
     ],
     "calling_code": "+234",
-    "iso3166_code": "NG/NGA",
+    "iso3166_alpha2": "NG",
+    "iso3166_alpha3": "NGA",
     "time_zone": "WAT (UTC+1)",
-    "independence": {"date": "1960-10-01", "from": "United Kingdom"},
+    "independence": {
+      "date": "1960-10-01",
+      "from": "United Kingdom"
+    },
     "continent": "Africa",
     "notes_unique": "Most populous country in Africa; largest economy in Africa by GDP"
   },
@@ -67,17 +149,57 @@
       "since": "2023-05-29",
       "notes": "APC; former Lagos governor; 'Asiwaju' (leader); fuel subsidy removal; naira reforms; contested election vs Obi and Atiku"
     },
-    "former_presidents": [
-      {"name": "Nnamdi Azikiwe", "term": "1963–1966", "notes": "First Republic president (ceremonial); Igbo leader; 'Zik of Africa'; previously Governor-General 1960–1963"},
-      {"name": "Yakubu Gowon", "term": "1966–1975", "notes": "Military head of state; Biafra War; 'No victor, no vanquished'; 12-state structure; oil boom"},
-      {"name": "Murtala Muhammed", "term": "1975–1976", "notes": "Reformist military ruler; assassinated in Dimka coup attempt; Abuja decision"},
-      {"name": "Olusegun Obasanjo", "term": "1976–1979, 1999–2007", "notes": "Military ruler then elected president; handed power to Shagari 1979; returned 1999 as first Fourth Republic president; PDP"},
-      {"name": "Shehu Shagari", "term": "1979–1983", "notes": "Second Republic; NPN; overthrown by Buhari"},
-      {"name": "Muhammadu Buhari", "term": "1983–1985, 2015–2023", "notes": "Military ruler 1983–85; returned as elected president 2015 (APC); anti-corruption; economic challenges"},
-      {"name": "Ibrahim Babangida", "term": "1985–1993", "notes": "'IBB'; Structural Adjustment; annulled June 12, 1993 election (MKO Abiola); 'stepped aside'"},
-      {"name": "Sani Abacha", "term": "1993–1998", "notes": "Most repressive military dictator; Ken Saro-Wiwa execution; international isolation; died in office"},
-      {"name": "Umaru Yar'Adua", "term": "2007–2010", "notes": "PDP; first Nigerian leader to acknowledge election flaws; died in office"},
-      {"name": "Goodluck Jonathan", "term": "2010–2015", "notes": "First Niger Delta president; PDP; Chibok girls kidnapping; lost to Buhari 2015; first sitting president to concede peacefully"}
+    "former_leaders": [
+      {
+        "name": "Nnamdi Azikiwe",
+        "term": "1963–1966",
+        "notes": "First Republic president (ceremonial); Igbo leader; 'Zik of Africa'; previously Governor-General 1960–1963"
+      },
+      {
+        "name": "Yakubu Gowon",
+        "term": "1966–1975",
+        "notes": "Military head of state; Biafra War; 'No victor, no vanquished'; 12-state structure; oil boom"
+      },
+      {
+        "name": "Murtala Muhammed",
+        "term": "1975–1976",
+        "notes": "Reformist military ruler; assassinated in Dimka coup attempt; Abuja decision"
+      },
+      {
+        "name": "Olusegun Obasanjo",
+        "term": "1976–1979, 1999–2007",
+        "notes": "Military ruler then elected president; handed power to Shagari 1979; returned 1999 as first Fourth Republic president; PDP"
+      },
+      {
+        "name": "Shehu Shagari",
+        "term": "1979–1983",
+        "notes": "Second Republic; NPN; overthrown by Buhari"
+      },
+      {
+        "name": "Muhammadu Buhari",
+        "term": "1983–1985, 2015–2023",
+        "notes": "Military ruler 1983–85; returned as elected president 2015 (APC); anti-corruption; economic challenges"
+      },
+      {
+        "name": "Ibrahim Babangida",
+        "term": "1985–1993",
+        "notes": "'IBB'; Structural Adjustment; annulled June 12, 1993 election (MKO Abiola); 'stepped aside'"
+      },
+      {
+        "name": "Sani Abacha",
+        "term": "1993–1998",
+        "notes": "Most repressive military dictator; Ken Saro-Wiwa execution; international isolation; died in office"
+      },
+      {
+        "name": "Umaru Yar'Adua",
+        "term": "2007–2010",
+        "notes": "PDP; first Nigerian leader to acknowledge election flaws; died in office"
+      },
+      {
+        "name": "Goodluck Jonathan",
+        "term": "2010–2015",
+        "notes": "First Niger Delta president; PDP; Chibok girls kidnapping; lost to Buhari 2015; first sitting president to concede peacefully"
+      }
     ]
   },
   "thematic_clusters": {
@@ -85,23 +207,70 @@
       {
         "slug": "Ancient_Civilisations_NG",
         "name": "Ancient Civilisations of Nigeria",
-        "year_range": [-1500, 500],
+        "year_range": [
+          -1500,
+          500
+        ],
         "status": "PLANNED",
         "description": "Nok culture terracottas; early ironworking; foundational cultures of the Nigerian region.",
         "sub_clusters": [
-          {"slug": "Nok_Culture", "name": "Nok Culture", "year_range": [-1500, 200], "description": "Nok terracotta sculptures in central Nigeria; earliest known large-scale iron smelting in West Africa; distinctive artistic tradition.", "key_events": ["Nok_Culture_Discovery"]},
-          {"slug": "Early_Iron_Age_NG", "name": "Early Iron Age Communities", "year_range": [-500, 500], "description": "Ironworking spreads across Nigeria; foundation for later Yoruba, Igbo, and other civilisations."}
+          {
+            "slug": "Nok_Culture",
+            "name": "Nok Culture",
+            "year_range": [
+              -1500,
+              200
+            ],
+            "description": "Nok terracotta sculptures in central Nigeria; earliest known large-scale iron smelting in West Africa; distinctive artistic tradition.",
+            "key_events": [
+              "Nok_Culture_Discovery"
+            ]
+          },
+          {
+            "slug": "Early_Iron_Age_NG",
+            "name": "Early Iron Age Communities",
+            "year_range": [
+              -500,
+              500
+            ],
+            "description": "Ironworking spreads across Nigeria; foundation for later Yoruba, Igbo, and other civilisations."
+          }
         ]
       },
       {
         "slug": "Ife_Kingdom",
         "name": "Kingdom of Ife",
-        "year_range": [500, 1500],
+        "year_range": [
+          500,
+          1500
+        ],
         "status": "PLANNED",
         "description": "Ife as spiritual and artistic centre of Yorubaland; naturalistic bronze and terracotta heads.",
         "sub_clusters": [
-          {"slug": "Ife_Bronzes", "name": "Ife Bronze and Terracotta Art", "year_range": [1100, 1500], "description": "Naturalistic bronze heads produced using lost-wax casting; Ooni of Ife as spiritual progenitor of Yoruba kingdoms.", "key_events": ["Ife_Bronze_Heads"]},
-          {"slug": "Igbo_Ukwu", "name": "Igbo-Ukwu Bronze Culture", "year_range": [800, 1000], "description": "Sophisticated bronze casting at Igbo-Ukwu; evidence of long-distance trade; early Igbo political complexity.", "key_events": ["Igbo_Ukwu_Bronzes"]}
+          {
+            "slug": "Ife_Bronzes",
+            "name": "Ife Bronze and Terracotta Art",
+            "year_range": [
+              1100,
+              1500
+            ],
+            "description": "Naturalistic bronze heads produced using lost-wax casting; Ooni of Ife as spiritual progenitor of Yoruba kingdoms.",
+            "key_events": [
+              "Ife_Bronze_Heads"
+            ]
+          },
+          {
+            "slug": "Igbo_Ukwu",
+            "name": "Igbo-Ukwu Bronze Culture",
+            "year_range": [
+              800,
+              1000
+            ],
+            "description": "Sophisticated bronze casting at Igbo-Ukwu; evidence of long-distance trade; early Igbo political complexity.",
+            "key_events": [
+              "Igbo_Ukwu_Bronzes"
+            ]
+          }
         ]
       }
     ],
@@ -109,14 +278,56 @@
       {
         "slug": "Medieval_States_NG",
         "name": "Medieval States and Empires",
-        "year_range": [1000, 1600],
+        "year_range": [
+          1000,
+          1600
+        ],
         "status": "PLANNED",
         "description": "Hausa city-states, Kanem-Bornu in the northeast, Benin Kingdom, and Oyo Empire emerge as major powers.",
         "sub_clusters": [
-          {"slug": "Hausa_City_States", "name": "Hausa City-States (Hausa Bakwai)", "year_range": [1000, 1804], "description": "Kano, Katsina, Zaria, and other walled city-states; trans-Saharan trade; leather, textile, and dye industries."},
-          {"slug": "Kanem_Bornu_NG", "name": "Kanem-Bornu Empire in Northeast Nigeria", "year_range": [900, 1900], "description": "Mai (king) dynasty; Birni Gazargamo capital; Islam adopted early; controls Lake Chad basin trade routes."},
-          {"slug": "Benin_Kingdom", "name": "Kingdom of Benin", "year_range": [1180, 1897], "description": "Edo people's powerful kingdom; Oba dynasty; renowned Benin Bronzes; Portuguese contact from 1485.", "key_events": ["Benin_Bronzes", "Portuguese_Contact_Benin_1485"]},
-          {"slug": "Oyo_Empire", "name": "Oyo Empire", "year_range": [1300, 1836], "description": "Yoruba military empire; cavalry power; Alaafin constitutional system; dominates southwestern Nigeria.", "key_events": ["Oyo_Empire_Peak"]}
+          {
+            "slug": "Hausa_City_States",
+            "name": "Hausa City-States (Hausa Bakwai)",
+            "year_range": [
+              1000,
+              1804
+            ],
+            "description": "Kano, Katsina, Zaria, and other walled city-states; trans-Saharan trade; leather, textile, and dye industries."
+          },
+          {
+            "slug": "Kanem_Bornu_NG",
+            "name": "Kanem-Bornu Empire in Northeast Nigeria",
+            "year_range": [
+              900,
+              1900
+            ],
+            "description": "Mai (king) dynasty; Birni Gazargamo capital; Islam adopted early; controls Lake Chad basin trade routes."
+          },
+          {
+            "slug": "Benin_Kingdom",
+            "name": "Kingdom of Benin",
+            "year_range": [
+              1180,
+              1897
+            ],
+            "description": "Edo people's powerful kingdom; Oba dynasty; renowned Benin Bronzes; Portuguese contact from 1485.",
+            "key_events": [
+              "Benin_Bronzes",
+              "Portuguese_Contact_Benin_1485"
+            ]
+          },
+          {
+            "slug": "Oyo_Empire",
+            "name": "Oyo Empire",
+            "year_range": [
+              1300,
+              1836
+            ],
+            "description": "Yoruba military empire; cavalry power; Alaafin constitutional system; dominates southwestern Nigeria.",
+            "key_events": [
+              "Oyo_Empire_Peak"
+            ]
+          }
         ]
       }
     ],
@@ -124,13 +335,44 @@
       {
         "slug": "Slave_Trade_NG",
         "name": "Atlantic Slave Trade and Nigeria",
-        "year_range": [1500, 1850],
+        "year_range": [
+          1500,
+          1850
+        ],
         "status": "PLANNED",
         "description": "Nigeria as major source of enslaved Africans; Bight of Benin and Bight of Biafra; internal wars fuelled by trade.",
         "sub_clusters": [
-          {"slug": "Bight_Benin_Slave_Trade", "name": "Bight of Benin Slave Coast", "year_range": [1550, 1850], "description": "Millions exported through Lagos, Badagry, and coastal ports; Oyo and Dahomey wars produce captives."},
-          {"slug": "Bight_Biafra_Trade", "name": "Bight of Biafra and Igbo Hinterland", "year_range": [1600, 1840], "description": "Old Calabar, Bonny, and Elem Kalabari as slave ports; Aro Confederacy controls hinterland trade networks."},
-          {"slug": "Sokoto_Caliphate", "name": "Sokoto Caliphate (Fulani Jihad)", "year_range": [1804, 1903], "description": "Usman dan Fodio's jihad overthrows Hausa kings; Sokoto Caliphate becomes Africa's largest 19th-century state.", "key_events": ["Usman_Dan_Fodio_Jihad_1804", "Sokoto_Caliphate_Founded_1809"]}
+          {
+            "slug": "Bight_Benin_Slave_Trade",
+            "name": "Bight of Benin Slave Coast",
+            "year_range": [
+              1550,
+              1850
+            ],
+            "description": "Millions exported through Lagos, Badagry, and coastal ports; Oyo and Dahomey wars produce captives."
+          },
+          {
+            "slug": "Bight_Biafra_Trade",
+            "name": "Bight of Biafra and Igbo Hinterland",
+            "year_range": [
+              1600,
+              1840
+            ],
+            "description": "Old Calabar, Bonny, and Elem Kalabari as slave ports; Aro Confederacy controls hinterland trade networks."
+          },
+          {
+            "slug": "Sokoto_Caliphate",
+            "name": "Sokoto Caliphate (Fulani Jihad)",
+            "year_range": [
+              1804,
+              1903
+            ],
+            "description": "Usman dan Fodio's jihad overthrows Hausa kings; Sokoto Caliphate becomes Africa's largest 19th-century state.",
+            "key_events": [
+              "Usman_Dan_Fodio_Jihad_1804",
+              "Sokoto_Caliphate_Founded_1809"
+            ]
+          }
         ]
       }
     ],
@@ -138,14 +380,59 @@
       {
         "slug": "British_Colonisation_NG",
         "name": "British Colonisation and Amalgamation",
-        "year_range": [1851, 1960],
+        "year_range": [
+          1851,
+          1960
+        ],
         "status": "PLANNED",
         "description": "British annexation of Lagos; Royal Niger Company; Lugard's indirect rule; amalgamation 1914; colonial economy.",
         "sub_clusters": [
-          {"slug": "Lagos_Colony", "name": "Annexation of Lagos and Oil Rivers", "year_range": [1851, 1900], "description": "British bombard Lagos 1851; Crown Colony 1861; Oil Rivers Protectorate; palm oil trade replaces slave trade.", "key_events": ["British_Annex_Lagos_1861"]},
-          {"slug": "Royal_Niger_Company", "name": "Royal Niger Company and Conquest", "year_range": [1886, 1903], "description": "George Goldie's chartered company; conquest of Ilorin, Nupe, and Sokoto Caliphate; British control consolidated.", "key_events": ["Fall_Sokoto_1903"]},
-          {"slug": "Lugard_Indirect_Rule", "name": "Lugard's Amalgamation and Indirect Rule", "year_range": [1914, 1945], "description": "Frederick Lugard amalgamates Northern and Southern Nigeria 1914; indirect rule through traditional chiefs; Aba Women's War 1929.", "key_events": ["Nigeria_Amalgamation_1914", "Aba_Women_War_1929"]},
-          {"slug": "Nationalism_NG", "name": "Nigerian Nationalism and Constitutional Advance", "year_range": [1945, 1960], "description": "Nnamdi Azikiwe, Obafemi Awolowo, Ahmadu Bello lead regional parties; Richards and Macpherson constitutions; path to independence."}
+          {
+            "slug": "Lagos_Colony",
+            "name": "Annexation of Lagos and Oil Rivers",
+            "year_range": [
+              1851,
+              1900
+            ],
+            "description": "British bombard Lagos 1851; Crown Colony 1861; Oil Rivers Protectorate; palm oil trade replaces slave trade.",
+            "key_events": [
+              "British_Annex_Lagos_1861"
+            ]
+          },
+          {
+            "slug": "Royal_Niger_Company",
+            "name": "Royal Niger Company and Conquest",
+            "year_range": [
+              1886,
+              1903
+            ],
+            "description": "George Goldie's chartered company; conquest of Ilorin, Nupe, and Sokoto Caliphate; British control consolidated.",
+            "key_events": [
+              "Fall_Sokoto_1903"
+            ]
+          },
+          {
+            "slug": "Lugard_Indirect_Rule",
+            "name": "Lugard's Amalgamation and Indirect Rule",
+            "year_range": [
+              1914,
+              1945
+            ],
+            "description": "Frederick Lugard amalgamates Northern and Southern Nigeria 1914; indirect rule through traditional chiefs; Aba Women's War 1929.",
+            "key_events": [
+              "Nigeria_Amalgamation_1914",
+              "Aba_Women_War_1929"
+            ]
+          },
+          {
+            "slug": "Nationalism_NG",
+            "name": "Nigerian Nationalism and Constitutional Advance",
+            "year_range": [
+              1945,
+              1960
+            ],
+            "description": "Nnamdi Azikiwe, Obafemi Awolowo, Ahmadu Bello lead regional parties; Richards and Macpherson constitutions; path to independence."
+          }
         ]
       }
     ],
@@ -153,33 +440,96 @@
       {
         "slug": "Independence_First_Republic_NG",
         "name": "Independence and First Republic",
-        "year_range": [1960, 1966],
+        "year_range": [
+          1960,
+          1966
+        ],
         "status": "PLANNED",
         "description": "Independence 1960; federal structure; regional tensions; census crises; 1966 coups.",
         "sub_clusters": [
-          {"slug": "Independence_1960_NG", "name": "Independence of Nigeria", "year_range": [1960, 1963], "description": "Nigeria independent 1 October 1960; Abubakar Tafawa Balewa PM; republic 1963; Azikiwe president.", "key_events": ["Independence_Nigeria_1960"]},
-          {"slug": "First_Republic_Crisis", "name": "First Republic Political Crises", "year_range": [1962, 1966], "description": "Western Region crisis; rigged 1964 elections; Tiv riots; January and July 1966 coups.", "key_events": ["January_Coup_1966_NG"]}
+          {
+            "slug": "Independence_1960_NG",
+            "name": "Independence of Nigeria",
+            "year_range": [
+              1960,
+              1963
+            ],
+            "description": "Nigeria independent 1 October 1960; Abubakar Tafawa Balewa PM; republic 1963; Azikiwe president.",
+            "key_events": [
+              "Independence_Nigeria_1960"
+            ]
+          },
+          {
+            "slug": "First_Republic_Crisis",
+            "name": "First Republic Political Crises",
+            "year_range": [
+              1962,
+              1966
+            ],
+            "description": "Western Region crisis; rigged 1964 elections; Tiv riots; January and July 1966 coups.",
+            "key_events": [
+              "January_Coup_1966_NG"
+            ]
+          }
         ]
       },
       {
         "slug": "Biafra_Civil_War",
         "name": "Nigerian Civil War (Biafra)",
-        "year_range": [1967, 1970],
+        "year_range": [
+          1967,
+          1970
+        ],
         "status": "PLANNED",
         "description": "Eastern Region secedes as Republic of Biafra; devastating civil war; famine; 1–3 million dead.",
         "sub_clusters": [
-          {"slug": "Biafra_Secession", "name": "Biafra Secession and War", "year_range": [1967, 1970], "description": "Ojukwu declares Biafra May 1967; federal blockade; Biafran famine shocks the world; surrender January 1970.", "key_events": ["Biafra_Secession_1967", "Biafra_Surrender_1970"]}
+          {
+            "slug": "Biafra_Secession",
+            "name": "Biafra Secession and War",
+            "year_range": [
+              1967,
+              1970
+            ],
+            "description": "Ojukwu declares Biafra May 1967; federal blockade; Biafran famine shocks the world; surrender January 1970.",
+            "key_events": [
+              "Biafra_Secession_1967",
+              "Biafra_Surrender_1970"
+            ]
+          }
         ]
       },
       {
         "slug": "Military_Oil_Era_NG",
         "name": "Military Rule and Oil Boom",
-        "year_range": [1970, 1999],
+        "year_range": [
+          1970,
+          1999
+        ],
         "status": "PLANNED",
         "description": "Post-war military regimes; oil boom and bust; Murtala/Obasanjo, Buhari, Babangida, Abacha dictatorships.",
         "sub_clusters": [
-          {"slug": "Oil_Boom_NG", "name": "Oil Boom and Dutch Disease", "year_range": [1970, 1985], "description": "OPEC-era oil revenues transform economy; agriculture neglected; corruption and mega-projects; oil bust 1980s."},
-          {"slug": "Babangida_Abacha", "name": "Babangida and Abacha Military Dictatorships", "year_range": [1985, 1998], "description": "Babangida annuls June 12 1993 election; Abacha seizes power; executes Ken Saro-Wiwa 1995; international pariah.", "key_events": ["June_12_Election_Annulled_1993", "Saro_Wiwa_Executed_1995"]}
+          {
+            "slug": "Oil_Boom_NG",
+            "name": "Oil Boom and Dutch Disease",
+            "year_range": [
+              1970,
+              1985
+            ],
+            "description": "OPEC-era oil revenues transform economy; agriculture neglected; corruption and mega-projects; oil bust 1980s."
+          },
+          {
+            "slug": "Babangida_Abacha",
+            "name": "Babangida and Abacha Military Dictatorships",
+            "year_range": [
+              1985,
+              1998
+            ],
+            "description": "Babangida annuls June 12 1993 election; Abacha seizes power; executes Ken Saro-Wiwa 1995; international pariah.",
+            "key_events": [
+              "June_12_Election_Annulled_1993",
+              "Saro_Wiwa_Executed_1995"
+            ]
+          }
         ]
       }
     ],
@@ -187,35 +537,148 @@
       {
         "slug": "Fourth_Republic_NG",
         "name": "Fourth Republic and Contemporary Nigeria",
-        "year_range": [1999, 2026],
+        "year_range": [
+          1999,
+          2026
+        ],
         "status": "PLANNED",
         "description": "Democratic Fourth Republic; Obasanjo-Yar'Adua-Jonathan-Buhari-Tinubu presidencies; Boko Haram; Niger Delta militancy; economic diversification.",
         "sub_clusters": [
-          {"slug": "Democratic_Transition_NG", "name": "Fourth Republic Democratic Transition", "year_range": [1999, 2007], "description": "Olusegun Obasanjo elected 1999; anti-corruption efforts (EFCC); debt relief; Sharia law expansion in north."},
-          {"slug": "Boko_Haram_NG", "name": "Boko Haram Insurgency", "year_range": [2009, 2026], "description": "Mohammed Yusuf's Boko Haram escalates after 2009 crackdown; Chibok kidnapping 2014; northeast devastation; ISWAP faction.", "key_events": ["Boko_Haram_Uprising_2009", "Chibok_Kidnapping_2014"]},
-          {"slug": "Niger_Delta_Militancy", "name": "Niger Delta Militancy and Oil Pollution", "year_range": [1995, 2026], "description": "MEND attacks on oil infrastructure; amnesty programme 2009; Ogoniland environmental devastation; resource justice."},
-          {"slug": "Tinubu_Era_NG", "name": "Tinubu Presidency and Reforms", "year_range": [2023, 2026], "description": "Bola Tinubu elected 2023; fuel subsidy removal; naira devaluation; economic pain and reform ambitions.", "key_events": ["Tinubu_Elected_2023"]}
+          {
+            "slug": "Democratic_Transition_NG",
+            "name": "Fourth Republic Democratic Transition",
+            "year_range": [
+              1999,
+              2007
+            ],
+            "description": "Olusegun Obasanjo elected 1999; anti-corruption efforts (EFCC); debt relief; Sharia law expansion in north."
+          },
+          {
+            "slug": "Boko_Haram_NG",
+            "name": "Boko Haram Insurgency",
+            "year_range": [
+              2009,
+              2026
+            ],
+            "description": "Mohammed Yusuf's Boko Haram escalates after 2009 crackdown; Chibok kidnapping 2014; northeast devastation; ISWAP faction.",
+            "key_events": [
+              "Boko_Haram_Uprising_2009",
+              "Chibok_Kidnapping_2014"
+            ]
+          },
+          {
+            "slug": "Niger_Delta_Militancy",
+            "name": "Niger Delta Militancy and Oil Pollution",
+            "year_range": [
+              1995,
+              2026
+            ],
+            "description": "MEND attacks on oil infrastructure; amnesty programme 2009; Ogoniland environmental devastation; resource justice."
+          },
+          {
+            "slug": "Tinubu_Era_NG",
+            "name": "Tinubu Presidency and Reforms",
+            "year_range": [
+              2023,
+              2026
+            ],
+            "description": "Bola Tinubu elected 2023; fuel subsidy removal; naira devaluation; economic pain and reform ambitions.",
+            "key_events": [
+              "Tinubu_Elected_2023"
+            ]
+          }
         ]
       }
     ]
   },
-  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "unassigned_events": {
+    "note": "Events not yet assigned to a thematic cluster",
+    "slugs": []
+  },
   "cross_cluster_interfaces": [
-    {"cluster": "Nok_Culture", "interfaces_with": ["Early_African_Art", "West_African_Iron_Age"]},
-    {"cluster": "Ife_Kingdom", "interfaces_with": ["Yoruba_Civilisation", "African_Bronze_Casting"]},
-    {"cluster": "Benin_Kingdom", "interfaces_with": ["Benin_Bronzes_Restitution", "Portuguese_Maritime_Empire", "Scramble_For_Africa"]},
-    {"cluster": "Sokoto_Caliphate", "interfaces_with": ["Fulani_Jihads", "Islamic_Reform_Movements", "Hausa_City_States"]},
-    {"cluster": "Slave_Trade_NG", "interfaces_with": ["Atlantic_Slave_Trade", "African_Diaspora", "Abolition_Movement"]},
-    {"cluster": "British_Colonisation_NG", "interfaces_with": ["British_Colonial_Empire", "Indirect_Rule", "Scramble_For_Africa"]},
-    {"cluster": "Biafra_Civil_War", "interfaces_with": ["African_Secessionist_Wars", "Cold_War_Africa", "Humanitarian_Crises"]},
-    {"cluster": "Boko_Haram_NG", "interfaces_with": ["Sahel_Security_Crisis", "Islamic_State_Affiliates", "Lake_Chad_Basin"]},
-    {"cluster": "Oil_Boom_NG", "interfaces_with": ["OPEC", "Petro_States", "Resource_Curse"]}
+    {
+      "cluster": "Nok_Culture",
+      "interfaces_with": [
+        "Early_African_Art",
+        "West_African_Iron_Age"
+      ]
+    },
+    {
+      "cluster": "Ife_Kingdom",
+      "interfaces_with": [
+        "Yoruba_Civilisation",
+        "African_Bronze_Casting"
+      ]
+    },
+    {
+      "cluster": "Benin_Kingdom",
+      "interfaces_with": [
+        "Benin_Bronzes_Restitution",
+        "Portuguese_Maritime_Empire",
+        "Scramble_For_Africa"
+      ]
+    },
+    {
+      "cluster": "Sokoto_Caliphate",
+      "interfaces_with": [
+        "Fulani_Jihads",
+        "Islamic_Reform_Movements",
+        "Hausa_City_States"
+      ]
+    },
+    {
+      "cluster": "Slave_Trade_NG",
+      "interfaces_with": [
+        "Atlantic_Slave_Trade",
+        "African_Diaspora",
+        "Abolition_Movement"
+      ]
+    },
+    {
+      "cluster": "British_Colonisation_NG",
+      "interfaces_with": [
+        "British_Colonial_Empire",
+        "Indirect_Rule",
+        "Scramble_For_Africa"
+      ]
+    },
+    {
+      "cluster": "Biafra_Civil_War",
+      "interfaces_with": [
+        "African_Secessionist_Wars",
+        "Cold_War_Africa",
+        "Humanitarian_Crises"
+      ]
+    },
+    {
+      "cluster": "Boko_Haram_NG",
+      "interfaces_with": [
+        "Sahel_Security_Crisis",
+        "Islamic_State_Affiliates",
+        "Lake_Chad_Basin"
+      ]
+    },
+    {
+      "cluster": "Oil_Boom_NG",
+      "interfaces_with": [
+        "OPEC",
+        "Petro_States",
+        "Resource_Curse"
+      ]
+    }
   ],
   "statistics": {
     "total_level4_clusters": 11,
     "total_level5_subclusters": 26,
     "active_clusters": 0,
     "planned_clusters": 11,
-    "timeframe_distribution": {"910": 2, "920": 1, "930": 1, "940": 1, "950": 3, "960": 1}
+    "timeframe_distribution": {
+      "910": 2,
+      "920": 1,
+      "930": 1,
+      "940": 1,
+      "950": 3,
+      "960": 1
+    }
   }
 }

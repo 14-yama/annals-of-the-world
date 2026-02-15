@@ -7,17 +7,32 @@
     "continent": "Africa",
     "iso3166_alpha2": "BI",
     "iso3166_alpha3": "BDI",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-06T00:00:00Z",
     "notes": "Comprehensive index for Burundi covering the Kingdom of Burundi, mwami monarchy, German and Belgian colonialism, Hutu-Tutsi dynamics, 1972 genocide, civil war 1993-2005, and Nkurunziza third-term crisis."
   },
   "country_profile": {
     "capital": "Gitega (political), Bujumbura (economic)",
-    "official_languages": ["Kirundi", "French", "English"],
+    "official_languages": [
+      "Kirundi",
+      "French",
+      "English"
+    ],
     "government_type": "Unitary presidential constitutional republic",
     "currency": "Burundian franc (BIF)",
-    "population": {"estimate": 13200000, "year": 2024, "source": "World Bank"},
+    "population": {
+      "estimate": 13200000,
+      "year": 2024,
+      "source": "World Bank"
+    },
     "area_km2": 27834,
     "gdp": {
       "nominal_total": "$3.1 billion",
@@ -27,7 +42,12 @@
       "year": 2024,
       "source": "IMF"
     },
-    "hdi": {"value": 0.426, "rank": 187, "year": 2022, "category": "Low"},
+    "hdi": {
+      "value": 0.426,
+      "rank": 187,
+      "year": 2022,
+      "category": "Low"
+    },
     "religion": {
       "Christianity": "93%",
       "Roman_Catholic": "62%",
@@ -38,14 +58,30 @@
       "Other": "0.9%"
     },
     "ethnic_groups": [
-      {"name": "Hutu", "percentage": 85, "notes": "Majority ethnic group; traditionally agriculturalists; Bantu-speaking"},
-      {"name": "Tutsi", "percentage": 14, "notes": "Historically dominant minority; pastoralist origins; same Kirundi language as Hutu"},
-      {"name": "Twa", "percentage": 1, "notes": "Indigenous pygmy people; oldest inhabitants; hunter-gatherers; marginalised; potters and entertainers"}
+      {
+        "name": "Hutu",
+        "percentage": 85,
+        "notes": "Majority ethnic group; traditionally agriculturalists; Bantu-speaking"
+      },
+      {
+        "name": "Tutsi",
+        "percentage": 14,
+        "notes": "Historically dominant minority; pastoralist origins; same Kirundi language as Hutu"
+      },
+      {
+        "name": "Twa",
+        "percentage": 1,
+        "notes": "Indigenous pygmy people; oldest inhabitants; hunter-gatherers; marginalised; potters and entertainers"
+      }
     ],
     "calling_code": "+257",
-    "iso3166_code": "BI/BDI",
+    "iso3166_alpha2": "BI",
+    "iso3166_alpha3": "BDI",
     "time_zone": "CAT (UTC+2)",
-    "independence": {"date": "1962-07-01", "from": "Belgium (UN Trust Territory)"},
+    "independence": {
+      "date": "1962-07-01",
+      "from": "Belgium (UN Trust Territory)"
+    },
     "continent": "Africa"
   },
   "leadership": {
@@ -55,17 +91,57 @@
       "since": "2020-06-18",
       "notes": "CNDD-FDD candidate; took office after death of Nkurunziza"
     },
-    "former_presidents": [
-      {"name": "Mwambutsa IV", "term": "1962–1966", "notes": "Last mwami (king); fled after 1965 coup attempt"},
-      {"name": "Ntare V", "term": "1966 (Jul–Nov)", "notes": "Last king; deposed by Micombero; killed 1972"},
-      {"name": "Michel Micombero", "term": "1966–1976", "notes": "First republic president; 1972 genocide against Hutu"},
-      {"name": "Jean-Baptiste Bagaza", "term": "1976–1987", "notes": "Military coup; modernisation attempts; anti-Church policies"},
-      {"name": "Pierre Buyoya", "term": "1987–1993, 1996–2003", "notes": "Two terms via coup; opened multiparty system; Arusha Accords"},
-      {"name": "Melchior Ndadaye", "term": "1993 (Jun–Oct)", "notes": "First Hutu and democratically elected president; assassinated; triggered civil war"},
-      {"name": "Cyprien Ntaryamira", "term": "1994 (Feb–Apr)", "notes": "Killed in same plane crash as Rwandan President Habyarimana"},
-      {"name": "Sylvestre Ntibantunganya", "term": "1994–1996", "notes": "Acting president during civil war; ousted by Buyoya"},
-      {"name": "Domitien Ndayizeye", "term": "2003–2005", "notes": "Transitional president under Arusha Accords"},
-      {"name": "Pierre Nkurunziza", "term": "2005–2020", "notes": "Former FDD rebel leader; third-term crisis 2015; died in office June 2020"}
+    "former_leaders": [
+      {
+        "name": "Mwambutsa IV",
+        "term": "1962–1966",
+        "notes": "Last mwami (king); fled after 1965 coup attempt"
+      },
+      {
+        "name": "Ntare V",
+        "term": "1966 (Jul–Nov)",
+        "notes": "Last king; deposed by Micombero; killed 1972"
+      },
+      {
+        "name": "Michel Micombero",
+        "term": "1966–1976",
+        "notes": "First republic president; 1972 genocide against Hutu"
+      },
+      {
+        "name": "Jean-Baptiste Bagaza",
+        "term": "1976–1987",
+        "notes": "Military coup; modernisation attempts; anti-Church policies"
+      },
+      {
+        "name": "Pierre Buyoya",
+        "term": "1987–1993, 1996–2003",
+        "notes": "Two terms via coup; opened multiparty system; Arusha Accords"
+      },
+      {
+        "name": "Melchior Ndadaye",
+        "term": "1993 (Jun–Oct)",
+        "notes": "First Hutu and democratically elected president; assassinated; triggered civil war"
+      },
+      {
+        "name": "Cyprien Ntaryamira",
+        "term": "1994 (Feb–Apr)",
+        "notes": "Killed in same plane crash as Rwandan President Habyarimana"
+      },
+      {
+        "name": "Sylvestre Ntibantunganya",
+        "term": "1994–1996",
+        "notes": "Acting president during civil war; ousted by Buyoya"
+      },
+      {
+        "name": "Domitien Ndayizeye",
+        "term": "2003–2005",
+        "notes": "Transitional president under Arusha Accords"
+      },
+      {
+        "name": "Pierre Nkurunziza",
+        "term": "2005–2020",
+        "notes": "Former FDD rebel leader; third-term crisis 2015; died in office June 2020"
+      }
     ]
   },
   "thematic_clusters": {
@@ -73,12 +149,31 @@
       {
         "slug": "Early_Settlement_Burundi",
         "name": "Early Settlement and Bantu Migration",
-        "year_range": [-1000, 1100],
+        "year_range": [
+          -1000,
+          1100
+        ],
         "status": "PLANNED",
         "description": "Twa hunter-gatherers as earliest inhabitants; Bantu-speaking Hutu agriculturalists arrive; later Tutsi pastoralists migrate into the region.",
         "sub_clusters": [
-          {"slug": "Twa_Hunter_Gatherers_BI", "name": "Twa Hunter-Gatherer Communities", "year_range": [-1000, 500], "description": "Indigenous Twa (Pygmy) peoples as the earliest known inhabitants of the Great Lakes highlands."},
-          {"slug": "Bantu_Migration_BI", "name": "Bantu Migration into Burundi", "year_range": [500, 1100], "description": "Bantu-speaking agriculturalists settle the highlands; iron-working and farming transform the region."}
+          {
+            "slug": "Twa_Hunter_Gatherers_BI",
+            "name": "Twa Hunter-Gatherer Communities",
+            "year_range": [
+              -1000,
+              500
+            ],
+            "description": "Indigenous Twa (Pygmy) peoples as the earliest known inhabitants of the Great Lakes highlands."
+          },
+          {
+            "slug": "Bantu_Migration_BI",
+            "name": "Bantu Migration into Burundi",
+            "year_range": [
+              500,
+              1100
+            ],
+            "description": "Bantu-speaking agriculturalists settle the highlands; iron-working and farming transform the region."
+          }
         ]
       }
     ],
@@ -86,13 +181,43 @@
       {
         "slug": "Kingdom_Burundi",
         "name": "Kingdom of Burundi",
-        "year_range": [1100, 1890],
+        "year_range": [
+          1100,
+          1890
+        ],
         "status": "PLANNED",
         "description": "Emergence of the Kingdom of Burundi under the mwami; Ganwa princely class; complex social stratification between Hutu, Tutsi, and Twa.",
         "sub_clusters": [
-          {"slug": "Mwami_Monarchy_Origins", "name": "Origins of the Mwami Monarchy", "year_range": [1100, 1600], "description": "Founding myths of the Burundian kingdom; consolidation of royal authority under early mwami."},
-          {"slug": "Ntare_Rushatsi_Dynasty", "name": "Ntare Rushatsi and Dynasty Consolidation", "year_range": [1600, 1800], "description": "Ntare Rushatsi traditionally credited as kingdom founder; Ganwa princes and the ubushingantahe council system.", "key_events": ["Ntare_Rushatsi_Founds_Kingdom"]},
-          {"slug": "Social_Stratification_BI", "name": "Hutu-Tutsi-Twa Social System", "year_range": [1400, 1890], "description": "Complex clan-based social structure; patron-client relations (ubugabire); Ganwa ruling class distinct from both Hutu and Tutsi."}
+          {
+            "slug": "Mwami_Monarchy_Origins",
+            "name": "Origins of the Mwami Monarchy",
+            "year_range": [
+              1100,
+              1600
+            ],
+            "description": "Founding myths of the Burundian kingdom; consolidation of royal authority under early mwami."
+          },
+          {
+            "slug": "Ntare_Rushatsi_Dynasty",
+            "name": "Ntare Rushatsi and Dynasty Consolidation",
+            "year_range": [
+              1600,
+              1800
+            ],
+            "description": "Ntare Rushatsi traditionally credited as kingdom founder; Ganwa princes and the ubushingantahe council system.",
+            "key_events": [
+              "Ntare_Rushatsi_Founds_Kingdom"
+            ]
+          },
+          {
+            "slug": "Social_Stratification_BI",
+            "name": "Hutu-Tutsi-Twa Social System",
+            "year_range": [
+              1400,
+              1890
+            ],
+            "description": "Complex clan-based social structure; patron-client relations (ubugabire); Ganwa ruling class distinct from both Hutu and Tutsi."
+          }
         ]
       }
     ],
@@ -100,12 +225,31 @@
       {
         "slug": "German_Colonial_Burundi",
         "name": "German Colonial Period",
-        "year_range": [1890, 1916],
+        "year_range": [
+          1890,
+          1916
+        ],
         "status": "PLANNED",
         "description": "Incorporation into German East Africa; indirect rule through the mwami; limited European penetration.",
         "sub_clusters": [
-          {"slug": "Berlin_Conference_BI", "name": "Berlin Conference and German Claim", "year_range": [1884, 1899], "description": "Burundi assigned to German sphere of influence; gradual exploration and treaty-making with the mwami."},
-          {"slug": "Indirect_Rule_GEA", "name": "Indirect Rule under German East Africa", "year_range": [1899, 1916], "description": "Germans administer Burundi through existing royal structures; minimal infrastructure development; World War I disruption."}
+          {
+            "slug": "Berlin_Conference_BI",
+            "name": "Berlin Conference and German Claim",
+            "year_range": [
+              1884,
+              1899
+            ],
+            "description": "Burundi assigned to German sphere of influence; gradual exploration and treaty-making with the mwami."
+          },
+          {
+            "slug": "Indirect_Rule_GEA",
+            "name": "Indirect Rule under German East Africa",
+            "year_range": [
+              1899,
+              1916
+            ],
+            "description": "Germans administer Burundi through existing royal structures; minimal infrastructure development; World War I disruption."
+          }
         ]
       }
     ],
@@ -113,13 +257,43 @@
       {
         "slug": "Belgian_Mandate_Burundi",
         "name": "Belgian Mandate and Trusteeship",
-        "year_range": [1916, 1962],
+        "year_range": [
+          1916,
+          1962
+        ],
         "status": "PLANNED",
         "description": "Belgian administration under League of Nations mandate and later UN trusteeship; ethnic identity cards; hardening of Hutu-Tutsi divisions.",
         "sub_clusters": [
-          {"slug": "Belgian_Takeover_BI", "name": "Belgian Takeover and Mandate Period", "year_range": [1916, 1946], "description": "Belgium occupies Ruanda-Urundi during WWI; League of Nations mandate; consolidation of Tutsi chiefly authority."},
-          {"slug": "Ethnic_Identity_Cards_BI", "name": "Ethnic Identity Cards and Hardened Divisions", "year_range": [1933, 1962], "description": "Belgian introduction of ethnic identity cards rigidifies previously fluid Hutu-Tutsi categories; favouring Tutsi elite in administration.", "key_events": ["Ethnic_ID_Cards_Introduced_1933"]},
-          {"slug": "Road_Independence_BI", "name": "Road to Independence", "year_range": [1958, 1962], "description": "Prince Louis Rwagasore's UPRONA party; Rwagasore assassination 1961; independence 1 July 1962 under Mwami Mwambutsa IV."}
+          {
+            "slug": "Belgian_Takeover_BI",
+            "name": "Belgian Takeover and Mandate Period",
+            "year_range": [
+              1916,
+              1946
+            ],
+            "description": "Belgium occupies Ruanda-Urundi during WWI; League of Nations mandate; consolidation of Tutsi chiefly authority."
+          },
+          {
+            "slug": "Ethnic_Identity_Cards_BI",
+            "name": "Ethnic Identity Cards and Hardened Divisions",
+            "year_range": [
+              1933,
+              1962
+            ],
+            "description": "Belgian introduction of ethnic identity cards rigidifies previously fluid Hutu-Tutsi categories; favouring Tutsi elite in administration.",
+            "key_events": [
+              "Ethnic_ID_Cards_Introduced_1933"
+            ]
+          },
+          {
+            "slug": "Road_Independence_BI",
+            "name": "Road to Independence",
+            "year_range": [
+              1958,
+              1962
+            ],
+            "description": "Prince Louis Rwagasore's UPRONA party; Rwagasore assassination 1961; independence 1 July 1962 under Mwami Mwambutsa IV."
+          }
         ]
       }
     ],
@@ -127,24 +301,76 @@
       {
         "slug": "Post_Independence_Turmoil_BI",
         "name": "Post-Independence Turmoil and Genocide",
-        "year_range": [1962, 1993],
+        "year_range": [
+          1962,
+          1993
+        ],
         "status": "PLANNED",
         "description": "Coups, ethnic massacres, the 1972 genocide against Hutu intellectuals, and Tutsi military dominance.",
         "sub_clusters": [
-          {"slug": "Monarchy_Overthrown_BI", "name": "Monarchy Overthrown and Republic", "year_range": [1962, 1972], "description": "Mwami overthrown 1966 by Captain Michel Micombero; Republic proclaimed; escalating ethnic violence."},
-          {"slug": "Genocide_1972_BI", "name": "1972 Burundi Genocide", "year_range": [1972, 1973], "description": "Selective genocide against educated Hutu; estimated 100,000-300,000 killed; mass refugee exodus.", "key_events": ["Burundi_Genocide_1972"]},
-          {"slug": "Buyoya_First_Presidency", "name": "Buyoya and Controlled Reforms", "year_range": [1987, 1993], "description": "Major Pierre Buyoya seizes power 1987; limited liberalisation; first democratic elections 1993 elect Melchior Ndadaye (Hutu)."}
+          {
+            "slug": "Monarchy_Overthrown_BI",
+            "name": "Monarchy Overthrown and Republic",
+            "year_range": [
+              1962,
+              1972
+            ],
+            "description": "Mwami overthrown 1966 by Captain Michel Micombero; Republic proclaimed; escalating ethnic violence."
+          },
+          {
+            "slug": "Genocide_1972_BI",
+            "name": "1972 Burundi Genocide",
+            "year_range": [
+              1972,
+              1973
+            ],
+            "description": "Selective genocide against educated Hutu; estimated 100,000-300,000 killed; mass refugee exodus.",
+            "key_events": [
+              "Burundi_Genocide_1972"
+            ]
+          },
+          {
+            "slug": "Buyoya_First_Presidency",
+            "name": "Buyoya and Controlled Reforms",
+            "year_range": [
+              1987,
+              1993
+            ],
+            "description": "Major Pierre Buyoya seizes power 1987; limited liberalisation; first democratic elections 1993 elect Melchior Ndadaye (Hutu)."
+          }
         ]
       },
       {
         "slug": "Civil_War_Burundi",
         "name": "Burundi Civil War",
-        "year_range": [1993, 2005],
+        "year_range": [
+          1993,
+          2005
+        ],
         "status": "PLANNED",
         "description": "Assassination of President Ndadaye triggers civil war; Arusha Peace Accords; estimated 300,000 dead.",
         "sub_clusters": [
-          {"slug": "Ndadaye_Assassination", "name": "Assassination of Ndadaye and War Onset", "year_range": [1993, 1996], "description": "First Hutu president Melchior Ndadaye assassinated October 1993 by Tutsi soldiers; civil war erupts.", "key_events": ["Ndadaye_Assassination_1993"]},
-          {"slug": "Arusha_Accords_BI", "name": "Arusha Peace and Power-Sharing", "year_range": [1998, 2005], "description": "Mandela-brokered Arusha Accords 2000; power-sharing government; ceasefire with last rebel group FNL 2006."}
+          {
+            "slug": "Ndadaye_Assassination",
+            "name": "Assassination of Ndadaye and War Onset",
+            "year_range": [
+              1993,
+              1996
+            ],
+            "description": "First Hutu president Melchior Ndadaye assassinated October 1993 by Tutsi soldiers; civil war erupts.",
+            "key_events": [
+              "Ndadaye_Assassination_1993"
+            ]
+          },
+          {
+            "slug": "Arusha_Accords_BI",
+            "name": "Arusha Peace and Power-Sharing",
+            "year_range": [
+              1998,
+              2005
+            ],
+            "description": "Mandela-brokered Arusha Accords 2000; power-sharing government; ceasefire with last rebel group FNL 2006."
+          }
         ]
       }
     ],
@@ -152,30 +378,101 @@
       {
         "slug": "Nkurunziza_Era_BI",
         "name": "Nkurunziza Era and Third-Term Crisis",
-        "year_range": [2005, 2020],
+        "year_range": [
+          2005,
+          2020
+        ],
         "status": "PLANNED",
         "description": "Pierre Nkurunziza's presidency; controversial 2015 third-term bid; failed coup; repression and refugee crisis.",
         "sub_clusters": [
-          {"slug": "Nkurunziza_Presidency", "name": "Nkurunziza Consolidation of Power", "year_range": [2005, 2015], "description": "Former FDD rebel leader becomes president; initial stability; growing authoritarianism."},
-          {"slug": "Third_Term_Crisis_2015", "name": "2015 Third-Term Crisis", "year_range": [2015, 2018], "description": "Nkurunziza seeks unconstitutional third term; mass protests; failed coup May 2015; 400,000+ refugees flee.", "key_events": ["Nkurunziza_Third_Term_Crisis_2015"]},
-          {"slug": "Post_Nkurunziza_BI", "name": "Post-Nkurunziza Transition", "year_range": [2020, 2026], "description": "Nkurunziza dies June 2020; Évariste Ndayishimiye succeeds; cautious diplomatic reopening."}
+          {
+            "slug": "Nkurunziza_Presidency",
+            "name": "Nkurunziza Consolidation of Power",
+            "year_range": [
+              2005,
+              2015
+            ],
+            "description": "Former FDD rebel leader becomes president; initial stability; growing authoritarianism."
+          },
+          {
+            "slug": "Third_Term_Crisis_2015",
+            "name": "2015 Third-Term Crisis",
+            "year_range": [
+              2015,
+              2018
+            ],
+            "description": "Nkurunziza seeks unconstitutional third term; mass protests; failed coup May 2015; 400,000+ refugees flee.",
+            "key_events": [
+              "Nkurunziza_Third_Term_Crisis_2015"
+            ]
+          },
+          {
+            "slug": "Post_Nkurunziza_BI",
+            "name": "Post-Nkurunziza Transition",
+            "year_range": [
+              2020,
+              2026
+            ],
+            "description": "Nkurunziza dies June 2020; Évariste Ndayishimiye succeeds; cautious diplomatic reopening."
+          }
         ]
       }
     ]
   },
-  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "unassigned_events": {
+    "note": "Events not yet assigned to a thematic cluster",
+    "slugs": []
+  },
   "cross_cluster_interfaces": [
-    {"cluster": "Kingdom_Burundi", "interfaces_with": ["Great_Lakes_Kingdoms", "Bantu_Expansion"]},
-    {"cluster": "Belgian_Mandate_Burundi", "interfaces_with": ["Belgian_Colonial_Empire", "League_of_Nations_Mandates"]},
-    {"cluster": "Genocide_1972_BI", "interfaces_with": ["African_Genocides", "Hutu_Tutsi_Conflict"]},
-    {"cluster": "Civil_War_Burundi", "interfaces_with": ["Rwandan_Genocide_1994", "Great_Lakes_Refugee_Crisis", "African_Peace_Processes"]},
-    {"cluster": "Nkurunziza_Era_BI", "interfaces_with": ["African_Third_Term_Crises", "East_African_Community"]}
+    {
+      "cluster": "Kingdom_Burundi",
+      "interfaces_with": [
+        "Great_Lakes_Kingdoms",
+        "Bantu_Expansion"
+      ]
+    },
+    {
+      "cluster": "Belgian_Mandate_Burundi",
+      "interfaces_with": [
+        "Belgian_Colonial_Empire",
+        "League_of_Nations_Mandates"
+      ]
+    },
+    {
+      "cluster": "Genocide_1972_BI",
+      "interfaces_with": [
+        "African_Genocides",
+        "Hutu_Tutsi_Conflict"
+      ]
+    },
+    {
+      "cluster": "Civil_War_Burundi",
+      "interfaces_with": [
+        "Rwandan_Genocide_1994",
+        "Great_Lakes_Refugee_Crisis",
+        "African_Peace_Processes"
+      ]
+    },
+    {
+      "cluster": "Nkurunziza_Era_BI",
+      "interfaces_with": [
+        "African_Third_Term_Crises",
+        "East_African_Community"
+      ]
+    }
   ],
   "statistics": {
     "total_level4_clusters": 7,
     "total_level5_subclusters": 19,
     "active_clusters": 0,
     "planned_clusters": 7,
-    "timeframe_distribution": {"910": 1, "920": 1, "930": 1, "940": 1, "950": 2, "960": 1}
+    "timeframe_distribution": {
+      "910": 1,
+      "920": 1,
+      "930": 1,
+      "940": 1,
+      "950": 2,
+      "960": 1
+    }
   }
 }

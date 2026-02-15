@@ -7,17 +7,30 @@
     "continent": "Asia",
     "iso_alpha2": "NP",
     "iso_alpha3": "NPL",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-07T00:00:00Z",
     "notes": "Comprehensive index for Nepal covering ancient Kirat dynasty, Licchavi era, medieval Malla kingdoms (Kathmandu/Patan/Bhaktapur), Prithvi Narayan Shah's unification 1768, Gorkha expansionism, Anglo-Nepalese War 1814-16 (Gurkha reputation), Rana oligarchy 1846-1951, monarchy restoration, Panchayat system, Maoist insurgency 1996-2006, royal massacre 2001, abolition of monarchy 2008, federal democratic republic, earthquakes, and India-China geopolitical balancing."
   },
   "country_profile": {
     "capital": "Kathmandu",
-    "official_languages": ["Nepali"],
+    "official_languages": [
+      "Nepali"
+    ],
     "government_type": "Federal parliamentary republic",
     "currency": "Nepalese rupee (NPR)",
-    "population": {"estimate": 30900000, "year": 2024, "source": "CBS Nepal"},
+    "population": {
+      "estimate": 30900000,
+      "year": 2024,
+      "source": "CBS Nepal"
+    },
     "area_km2": 147516,
     "gdp": {
       "nominal_total": "$42.8 billion",
@@ -27,7 +40,12 @@
       "year": 2024,
       "source": "IMF"
     },
-    "hdi": {"value": 0.601, "rank": 146, "year": 2022, "category": "Medium"},
+    "hdi": {
+      "value": 0.601,
+      "rank": 146,
+      "year": 2022,
+      "category": "Medium"
+    },
     "religion": {
       "Hinduism": "81.3%",
       "Buddhism": "9%",
@@ -38,21 +56,65 @@
       "note": "Hindu-Buddhist syncretism common; Pashupatinath (holiest Hindu temple); Lumbini (Buddha's birthplace, UNESCO); formerly only Hindu kingdom globally (until 2006 secular declaration); caste system legally abolished but socially persistent"
     },
     "ethnic_groups": [
-      {"name": "Chhettri (Kshatriya)", "percentage": 16.6, "notes": "Hill Hindu warrior caste; Indo-Aryan; politically dominant; Nepali-speaking; Prithvi Narayan Shah was Chhettri; ruling elite"},
-      {"name": "Brahmin (Hill and Terai)", "percentage": 12.2, "notes": "Hindu priestly caste; Indo-Aryan; educated elite; disproportionate political power; Bahun (hill Brahmin) vs Madhesi Brahmin"},
-      {"name": "Magar", "percentage": 7.1, "notes": "Tibeto-Burman; hill people; historically martial (Gurkhas); shamanic traditions; Nepal's largest indigenous group"},
-      {"name": "Tharu", "percentage": 6.6, "notes": "Terai (lowland plains); indigenous; farming; bonded labour (Kamaiya system) abolished 2000; jungle specialists"},
-      {"name": "Tamang", "percentage": 5.8, "notes": "Tibeto-Burman; Kathmandu valley hills; Buddhist; close to Tibetan culture; historically marginalised"},
-      {"name": "Newar", "percentage": 5, "notes": "Indigenous to Kathmandu valley; Malla kingdom heirs; Tibeto-Burman language; urban; merchants; Buddhism-Hinduism syncretic; Newari architecture; festivals (Indra Jatra)"},
-      {"name": "Kami (Dalit)", "percentage": 4.8, "notes": "Blacksmiths; 'untouchable' Dalit caste; discrimination persists despite legal equality; poorest"},
-      {"name": "Muslim (Madhesi and Pahari)", "percentage": 4.4, "notes": "Terai Muslims; cross-border with India; Urdu/Maithili; some hill Muslims"},
-      {"name": "Yadav (Madhesi)", "percentage": 4, "notes": "Terai plains; culturally close to Bihar (India); Maithili language; Hindu; farming"},
-      {"name": "Rai, Gurung, Limbu, Sherpa, Other", "percentage": 33.5, "notes": "Numerous Tibeto-Burman hill tribes; Sherpa (Solu-Khumbu, Buddhist, mountaineering); Gurung (Gurkhas); Rai/Limbu (Kirat); 125 ethnic groups, 123 languages; great diversity"}
+      {
+        "name": "Chhettri (Kshatriya)",
+        "percentage": 16.6,
+        "notes": "Hill Hindu warrior caste; Indo-Aryan; politically dominant; Nepali-speaking; Prithvi Narayan Shah was Chhettri; ruling elite"
+      },
+      {
+        "name": "Brahmin (Hill and Terai)",
+        "percentage": 12.2,
+        "notes": "Hindu priestly caste; Indo-Aryan; educated elite; disproportionate political power; Bahun (hill Brahmin) vs Madhesi Brahmin"
+      },
+      {
+        "name": "Magar",
+        "percentage": 7.1,
+        "notes": "Tibeto-Burman; hill people; historically martial (Gurkhas); shamanic traditions; Nepal's largest indigenous group"
+      },
+      {
+        "name": "Tharu",
+        "percentage": 6.6,
+        "notes": "Terai (lowland plains); indigenous; farming; bonded labour (Kamaiya system) abolished 2000; jungle specialists"
+      },
+      {
+        "name": "Tamang",
+        "percentage": 5.8,
+        "notes": "Tibeto-Burman; Kathmandu valley hills; Buddhist; close to Tibetan culture; historically marginalised"
+      },
+      {
+        "name": "Newar",
+        "percentage": 5,
+        "notes": "Indigenous to Kathmandu valley; Malla kingdom heirs; Tibeto-Burman language; urban; merchants; Buddhism-Hinduism syncretic; Newari architecture; festivals (Indra Jatra)"
+      },
+      {
+        "name": "Kami (Dalit)",
+        "percentage": 4.8,
+        "notes": "Blacksmiths; 'untouchable' Dalit caste; discrimination persists despite legal equality; poorest"
+      },
+      {
+        "name": "Muslim (Madhesi and Pahari)",
+        "percentage": 4.4,
+        "notes": "Terai Muslims; cross-border with India; Urdu/Maithili; some hill Muslims"
+      },
+      {
+        "name": "Yadav (Madhesi)",
+        "percentage": 4,
+        "notes": "Terai plains; culturally close to Bihar (India); Maithili language; Hindu; farming"
+      },
+      {
+        "name": "Rai, Gurung, Limbu, Sherpa, Other",
+        "percentage": 33.5,
+        "notes": "Numerous Tibeto-Burman hill tribes; Sherpa (Solu-Khumbu, Buddhist, mountaineering); Gurung (Gurkhas); Rai/Limbu (Kirat); 125 ethnic groups, 123 languages; great diversity"
+      }
     ],
     "calling_code": "+977",
-    "iso3166_code": "NP/NPL",
+    "iso3166_alpha2": "NP",
+    "iso3166_alpha3": "NPL",
     "time_zone": "NPT (UTC+5:45)",
-    "independence": {"date": "N/A (never colonised)", "from": "United Kingdom recognised independence in treaty 1923; unified by Prithvi Narayan Shah 1768"},
+    "independence": {
+      "date": "N/A (never colonised)",
+      "from": "United Kingdom recognised independence in treaty 1923; unified by Prithvi Narayan Shah 1768"
+    },
     "continent": "Asia",
     "notes_unique": "Only country with non-rectangular flag; home to Mount Everest (Sagarmatha, 8,849m); never colonised; Gurkha soldiers famous globally (British/Indian armies); 2001 royal massacre (Crown Prince Dipendra killed family); 2015 earthquake killed 9,000; Maoist insurgency (1996-2006, ~17,000 dead); abolished monarchy 2008; remittances ~25% GDP (Gulf workers); Lumbini (Buddha's birthplace)"
   },
@@ -69,21 +131,69 @@
       "since": "2024-07-15",
       "notes": "CPN-UML (Communist Party of Nepal - Unified Marxist-Leninist); third term as PM; nationalist; pro-China tilt; territorial disputes with India; kidney transplant recipient"
     },
-    "former_prime_ministers": [
-      {"name": "Pushpa Kamal Dahal (Prachanda)", "term": "2022\u20132024", "notes": "Maoist chairman; led insurgency 1996-2006; three terms as PM; 'Prachanda Path' ideology; coalition politics"},
-      {"name": "Sher Bahadur Deuba", "term": "2021\u20132022", "notes": "Nepali Congress; five terms as PM (various stints); 1990s democratic era veteran"},
-      {"name": "KP Sharma Oli", "term": "2018\u20132021", "notes": "Second term; dissolved parliament (controversial); lost confidence vote"},
-      {"name": "Pushpa Kamal Dahal (Prachanda)", "term": "2016\u20132017", "notes": "Post-earthquake reconstruction; new constitution"},
-      {"name": "Baburam Bhattarai", "term": "2011\u20132013", "notes": "Maoist; economist; peace process"},
-      {"name": "Girija Prasad Koirala", "term": "2006\u20132008", "notes": "Nepali Congress; oversaw end of monarchy; peace agreement with Maoists; died 2010"},
-      {"name": "Gyanendra (as King)", "term": "2005\u20132006", "notes": "Dismissed government; absolute rule; Jana Andolan II protests forced restoration of parliament; last King"},
-      {"name": "Sher Bahadur Deuba", "term": "2001\u20132002", "notes": "During royal massacre aftermath and Maoist insurgency escalation"}
-    ],
     "former_kings": [
-      {"name": "Gyanendra Bir Bikram Shah", "term": "2001\u20132008", "notes": "Last King; ascended after royal massacre (brother Birendra killed); autocratic 2005; deposed by parliament 2008; now private citizen"},
-      {"name": "Birendra Bir Bikram Shah", "term": "1972\u20132001", "notes": "Popular king; constitutional monarchy; killed in royal massacre 2001 by son Crown Prince Dipendra (disputed)"},
-      {"name": "Mahendra Bir Bikram Shah", "term": "1955\u20131972", "notes": "Panchayat system (partyless democracy); consolidated power"},
-      {"name": "Tribhuvan Bir Bikram Shah", "term": "1911\u20131955", "notes": "Anti-Rana; fled to India 1950; restored with democracy; end of Rana oligarchy"}
+      {
+        "name": "Gyanendra Bir Bikram Shah",
+        "term": "2001–2008",
+        "notes": "Last King; ascended after royal massacre (brother Birendra killed); autocratic 2005; deposed by parliament 2008; now private citizen"
+      },
+      {
+        "name": "Birendra Bir Bikram Shah",
+        "term": "1972–2001",
+        "notes": "Popular king; constitutional monarchy; killed in royal massacre 2001 by son Crown Prince Dipendra (disputed)"
+      },
+      {
+        "name": "Mahendra Bir Bikram Shah",
+        "term": "1955–1972",
+        "notes": "Panchayat system (partyless democracy); consolidated power"
+      },
+      {
+        "name": "Tribhuvan Bir Bikram Shah",
+        "term": "1911–1955",
+        "notes": "Anti-Rana; fled to India 1950; restored with democracy; end of Rana oligarchy"
+      }
+    ],
+    "former_leaders": [
+      {
+        "name": "Pushpa Kamal Dahal (Prachanda)",
+        "term": "2022–2024",
+        "notes": "Maoist chairman; led insurgency 1996-2006; three terms as PM; 'Prachanda Path' ideology; coalition politics"
+      },
+      {
+        "name": "Sher Bahadur Deuba",
+        "term": "2021–2022",
+        "notes": "Nepali Congress; five terms as PM (various stints); 1990s democratic era veteran"
+      },
+      {
+        "name": "KP Sharma Oli",
+        "term": "2018–2021",
+        "notes": "Second term; dissolved parliament (controversial); lost confidence vote"
+      },
+      {
+        "name": "Pushpa Kamal Dahal (Prachanda)",
+        "term": "2016–2017",
+        "notes": "Post-earthquake reconstruction; new constitution"
+      },
+      {
+        "name": "Baburam Bhattarai",
+        "term": "2011–2013",
+        "notes": "Maoist; economist; peace process"
+      },
+      {
+        "name": "Girija Prasad Koirala",
+        "term": "2006–2008",
+        "notes": "Nepali Congress; oversaw end of monarchy; peace agreement with Maoists; died 2010"
+      },
+      {
+        "name": "Gyanendra (as King)",
+        "term": "2005–2006",
+        "notes": "Dismissed government; absolute rule; Jana Andolan II protests forced restoration of parliament; last King"
+      },
+      {
+        "name": "Sher Bahadur Deuba",
+        "term": "2001–2002",
+        "notes": "During royal massacre aftermath and Maoist insurgency escalation"
+      }
     ]
   },
   "thematic_clusters": {
@@ -91,20 +201,29 @@
       {
         "slug": "ancient-nepal-and-kirata-period",
         "name": "Ancient Nepal and Kirata Period",
-        "year_range": [-3000, 300],
+        "year_range": [
+          -3000,
+          300
+        ],
         "status": "PLANNED",
         "description": "The earliest settlements in the Kathmandu Valley, the legendary Kirata dynasty, the birth of Siddhartha Gautama (the Buddha) in Lumbini, and the region's connections to the Maurya Empire.",
         "sub_clusters": [
           {
             "slug": "prehistoric-kathmandu-valley",
             "name": "Prehistoric Kathmandu Valley",
-            "year_range": [-3000, -600],
+            "year_range": [
+              -3000,
+              -600
+            ],
             "description": "The geological legend of the Kathmandu Valley as a drained lake, early Neolithic settlements, the Kirata tribal kingdoms, and the valley's development as a fertile agricultural center."
           },
           {
             "slug": "birth-of-buddha-and-mauryan-connections",
             "name": "Birth of the Buddha and Mauryan Connections",
-            "year_range": [-563, 300],
+            "year_range": [
+              -563,
+              300
+            ],
             "description": "The birth of Siddhartha Gautama at Lumbini in the Shakya republic, Ashoka's pilgrimage to Lumbini and his Ashokan pillar, and the spread of Buddhism in the Kathmandu Valley.",
             "key_events": [
               "Siddhartha Gautama (the Buddha) born at Lumbini in the Shakya republic (c. 563 BC)",
@@ -116,14 +235,20 @@
       {
         "slug": "licchavi-dynasty",
         "name": "Licchavi Dynasty",
-        "year_range": [400, 879],
+        "year_range": [
+          400,
+          879
+        ],
         "status": "PLANNED",
         "description": "The Licchavi dynasty's golden age in the Kathmandu Valley, the development of Newari art and architecture, Princess Bhrikuti's marriage to the Tibetan emperor, and Nepal's role as a cultural bridge between India and Tibet.",
         "sub_clusters": [
           {
             "slug": "licchavi-golden-age",
             "name": "Licchavi Golden Age",
-            "year_range": [400, 600],
+            "year_range": [
+              400,
+              600
+            ],
             "description": "The Licchavi kings' patronage of art and religion, the Changu Narayan and Pashupatinath temples, the development of distinctive Newari art, and early inscriptions in Sanskrit and Newari.",
             "key_events": [
               "Changu Narayan Temple inscriptions — the oldest inscriptions in Nepal (c. 464 AD)"
@@ -132,7 +257,10 @@
           {
             "slug": "nepal-as-cultural-bridge",
             "name": "Nepal as Cultural Bridge to Tibet",
-            "year_range": [600, 879],
+            "year_range": [
+              600,
+              879
+            ],
             "description": "Princess Bhrikuti's marriage to Tibetan Emperor Songtsen Gampo, Nepal's crucial role in transmitting Buddhism and Indian culture to Tibet, and the Licchavi diplomatic balance between India and Tibet.",
             "key_events": [
               "Licchavi Princess Bhrikuti marries Songtsen Gampo, spreading Buddhism to Tibet (c. 640 AD)"
@@ -145,14 +273,20 @@
       {
         "slug": "medieval-malla-kingdoms",
         "name": "Medieval Malla Kingdoms",
-        "year_range": [1200, 1768],
+        "year_range": [
+          1200,
+          1768
+        ],
         "status": "PLANNED",
         "description": "The Malla dynasty's remarkable rule of the Kathmandu Valley, the three rival kingdoms of Kathmandu, Patan, and Bhaktapur, their extraordinary architectural competition, and the Newari cultural zenith.",
         "sub_clusters": [
           {
             "slug": "early-malla-period",
             "name": "Early Malla Period",
-            "year_range": [1200, 1482],
+            "year_range": [
+              1200,
+              1482
+            ],
             "description": "The establishment of Malla rule, the codification of the Newari caste system, the development of distinctive pagoda-style architecture (later adopted in East Asia), and Nepal's survival as Hindu kingdoms fell to Muslim conquests.",
             "key_events": [
               "Jayasthiti Malla codifies the caste system and legal code of Nepal (c. 1382)"
@@ -161,7 +295,10 @@
           {
             "slug": "three-kingdoms-rivalry",
             "name": "Three Kingdoms Rivalry",
-            "year_range": [1482, 1768],
+            "year_range": [
+              1482,
+              1768
+            ],
             "description": "The division into three rival Malla kingdoms — Kathmandu, Lalitpur (Patan), and Bhaktapur — whose architectural competition produced Durbar Squares, the Nyatapola Temple, and some of the finest pagodas in the world.",
             "key_events": [
               "The Nyatapola Temple, Nepal's tallest pagoda, built in Bhaktapur through inter-kingdom rivalry (1702)"
@@ -172,20 +309,29 @@
       {
         "slug": "thakuri-transitional-and-western-nepal",
         "name": "Thakuri Transitional Period and Western Kingdoms",
-        "year_range": [879, 1200],
+        "year_range": [
+          879,
+          1200
+        ],
         "status": "PLANNED",
         "description": "The obscure Thakuri transitional period after the Licchavis, the Khas Malla kingdom of western Nepal, and the fragmentation of Nepal into numerous small hill principalities.",
         "sub_clusters": [
           {
             "slug": "thakuri-period",
             "name": "Thakuri Period",
-            "year_range": [879, 1200],
+            "year_range": [
+              879,
+              1200
+            ],
             "description": "The post-Licchavi Thakuri dynasty's rule during a period of sparse historical records, the continued development of Newari Buddhist and Hindu traditions, and the proliferation of competing petty kingdoms."
           },
           {
             "slug": "khas-malla-western-kingdom",
             "name": "Khas Malla Western Kingdom",
-            "year_range": [1100, 1400],
+            "year_range": [
+              1100,
+              1400
+            ],
             "description": "The Khas Malla kingdom controlling a vast territory in western Nepal and parts of western Tibet, the spread of the Khas language (ancestor of modern Nepali), and the kingdom's eventual fragmentation."
           }
         ]
@@ -195,14 +341,20 @@
       {
         "slug": "gorkha-unification",
         "name": "Gorkha Unification",
-        "year_range": [1743, 1816],
+        "year_range": [
+          1743,
+          1816
+        ],
         "status": "PLANNED",
         "description": "Prithvi Narayan Shah's unification of Nepal from the small Gorkha kingdom, the conquest of the Kathmandu Valley, the creation of modern Nepal, and the Anglo-Nepalese War defining the nation's borders.",
         "sub_clusters": [
           {
             "slug": "prithvi-narayan-shah-conquests",
             "name": "Prithvi Narayan Shah's Conquests",
-            "year_range": [1743, 1775],
+            "year_range": [
+              1743,
+              1775
+            ],
             "description": "King Prithvi Narayan Shah of Gorkha's decades-long campaign to conquer the Kathmandu Valley, his famous description of Nepal as 'a garden of four castes and thirty-six ethnicities,' and the founding of the Shah dynasty.",
             "key_events": [
               "Prithvi Narayan Shah conquers the Kathmandu Valley, unifying Nepal (1768–1769)"
@@ -211,7 +363,10 @@
           {
             "slug": "expansion-and-anglo-nepalese-war",
             "name": "Expansion and Anglo-Nepalese War",
-            "year_range": [1775, 1816],
+            "year_range": [
+              1775,
+              1816
+            ],
             "description": "The aggressive expansion of the Gorkha Empire from Kashmir to Sikkim, the Anglo-Nepalese War against the British East India Company, and the Treaty of Sugauli establishing Nepal's modern borders.",
             "key_events": [
               "Anglo-Nepalese War — Treaty of Sugauli establishes Nepal's modern borders and cedes territory to the British (1816)"
@@ -222,14 +377,20 @@
       {
         "slug": "rana-oligarchy",
         "name": "Rana Oligarchy",
-        "year_range": [1846, 1951],
+        "year_range": [
+          1846,
+          1951
+        ],
         "status": "PLANNED",
         "description": "Jung Bahadur Rana's seizure of power through the Kot Massacre, the Rana hereditary prime ministers' autocratic dynasty, the deliberate isolation of Nepal, and the alliance with British India.",
         "sub_clusters": [
           {
             "slug": "jung-bahadur-and-rana-foundation",
             "name": "Jung Bahadur and Rana Foundation",
-            "year_range": [1846, 1901],
+            "year_range": [
+              1846,
+              1901
+            ],
             "description": "Jung Bahadur Rana's Kot Massacre coup establishing the Rana hereditary prime ministership, reducing the Shah kings to figureheads, his visit to Europe, and the codification of the Muluki Ain legal code.",
             "key_events": [
               "Kot Massacre — Jung Bahadur seizes power and establishes the Rana hereditary prime ministership (1846)"
@@ -238,7 +399,10 @@
           {
             "slug": "late-rana-isolation-and-fall",
             "name": "Late Rana Period, Isolation, and Fall",
-            "year_range": [1901, 1951],
+            "year_range": [
+              1901,
+              1951
+            ],
             "description": "The Rana rulers' deliberate isolation of Nepal from modernization, the Gurkha military alliance with Britain, the growing anti-Rana movement, and King Tribhuvan's flight to India triggering the revolution.",
             "key_events": [
               "King Tribhuvan flees to India; the anti-Rana revolution ends 104 years of Rana rule (1950–1951)"
@@ -251,14 +415,20 @@
       {
         "slug": "panchayat-era-and-democracy-struggle",
         "name": "Panchayat Era and Democracy Struggle",
-        "year_range": [1951, 1990],
+        "year_range": [
+          1951,
+          1990
+        ],
         "status": "PLANNED",
         "description": "The brief democratic experiment, King Mahendra's partyless Panchayat system, Nepal's Cold War neutrality between India and China, and the People's Movement restoring multi-party democracy.",
         "sub_clusters": [
           {
             "slug": "brief-democracy-and-royal-coup",
             "name": "Brief Democracy and Royal Coup",
-            "year_range": [1951, 1962],
+            "year_range": [
+              1951,
+              1962
+            ],
             "description": "The restoration of Shah monarchy, the first democratic elections under B.P. Koirala, King Mahendra's royal coup dissolving parliament, and the imposition of the partyless Panchayat system.",
             "key_events": [
               "King Mahendra dissolves parliament and bans political parties, establishing the Panchayat system (1960)"
@@ -267,7 +437,10 @@
           {
             "slug": "panchayat-system-and-1990-revolution",
             "name": "Panchayat System and 1990 Revolution",
-            "year_range": [1962, 1990],
+            "year_range": [
+              1962,
+              1990
+            ],
             "description": "Thirty years of royal-controlled Panchayat governance, Nepal between India and China, development challenges, the 1989 Indian trade blockade, and the Jana Andolan (People's Movement) restoring democracy.",
             "key_events": [
               "Jana Andolan I (People's Movement) forces King Birendra to restore multi-party democracy (1990)"
@@ -280,14 +453,20 @@
       {
         "slug": "maoist-insurgency-and-royal-massacre",
         "name": "Maoist Insurgency and Royal Massacre",
-        "year_range": [1996, 2006],
+        "year_range": [
+          1996,
+          2006
+        ],
         "status": "PLANNED",
         "description": "The Maoist People's War, the horrific royal palace massacre, King Gyanendra's authoritarian rule, and the second People's Movement leading to the end of the Hindu monarchy.",
         "sub_clusters": [
           {
             "slug": "maoist-peoples-war",
             "name": "Maoist People's War",
-            "year_range": [1996, 2006],
+            "year_range": [
+              1996,
+              2006
+            ],
             "description": "The Communist Party of Nepal (Maoist) launches a devastating insurgency from rural Nepal, the 'people's war' killing over 17,000, the displacement of hundreds of thousands, and the transformation of Nepali society.",
             "key_events": [
               "CPN-Maoist launches the People's War from Rolpa and Rukum districts (13 February 1996)"
@@ -296,7 +475,10 @@
           {
             "slug": "royal-massacre-and-gyanendra",
             "name": "Royal Massacre and King Gyanendra",
-            "year_range": [2001, 2006],
+            "year_range": [
+              2001,
+              2006
+            ],
             "description": "The shocking Narayanhiti Royal Massacre killing King Birendra and most of the royal family, King Gyanendra's assumption of power, his authoritarian direct rule, and Jana Andolan II ending the monarchy.",
             "key_events": [
               "Narayanhiti Royal Massacre — Crown Prince Dipendra kills King Birendra and 8 family members (1 June 2001)",
@@ -308,14 +490,20 @@
       {
         "slug": "republican-transition",
         "name": "Republican Transition",
-        "year_range": [2006, 2015],
+        "year_range": [
+          2006,
+          2015
+        ],
         "status": "PLANNED",
         "description": "The Comprehensive Peace Agreement ending the civil war, the abolition of the 240-year monarchy, the Constituent Assembly process, and the promulgation of a new republican constitution.",
         "sub_clusters": [
           {
             "slug": "peace-process-and-monarchy-abolished",
             "name": "Peace Process and Monarchy Abolished",
-            "year_range": [2006, 2008],
+            "year_range": [
+              2006,
+              2008
+            ],
             "description": "The Comprehensive Peace Agreement between the government and Maoists, the Constituent Assembly elections, and the historic vote abolishing the monarchy and declaring Nepal a federal democratic republic.",
             "key_events": [
               "Nepal's Constituent Assembly abolishes the 240-year-old monarchy and declares a federal democratic republic (28 May 2008)"
@@ -324,7 +512,10 @@
           {
             "slug": "constitution-drafting-and-2015-earthquake",
             "name": "Constitution Drafting and 2015 Earthquake",
-            "year_range": [2008, 2015],
+            "year_range": [
+              2008,
+              2015
+            ],
             "description": "The protracted constitution-drafting process, political instability with rapid prime minister changes, the devastating 2015 earthquake killing nearly 9,000, and the eventual promulgation of the new constitution.",
             "key_events": [
               "Nepal earthquake kills nearly 9,000 and damages cultural heritage including Dharahara tower (25 April 2015)",
@@ -338,14 +529,20 @@
       {
         "slug": "federal-democratic-republic",
         "name": "Federal Democratic Republic",
-        "year_range": [2015, 2025],
+        "year_range": [
+          2015,
+          2025
+        ],
         "status": "PLANNED",
         "description": "The implementation of federalism with seven provinces, the Madhesh border blockade, political realignments, the COVID-19 impact, and Nepal navigating between India and China.",
         "sub_clusters": [
           {
             "slug": "federalism-implementation",
             "name": "Federalism Implementation",
-            "year_range": [2015, 2020],
+            "year_range": [
+              2015,
+              2020
+            ],
             "description": "The controversial Madhesh movement and Indian border blockade over the constitution, the first provincial and federal elections under the new system, and the communist alliance government of KP Sharma Oli.",
             "key_events": [
               "Madhesh-origin protests and Indian border blockade over Nepal's new constitution (2015–2016)"
@@ -354,7 +551,10 @@
           {
             "slug": "contemporary-challenges",
             "name": "Contemporary Challenges",
-            "year_range": [2020, 2025],
+            "year_range": [
+              2020,
+              2025
+            ],
             "description": "Political instability with frequent government changes, the COVID-19 pandemic impact, the Kalapani border dispute with India, youth emigration crisis, and Nepal's balancing act between India and China.",
             "key_events": [
               "Nepal updates its map to include Kalapani, Lipulekh, and Limpiyadhura, disputed with India (2020)"
@@ -371,39 +571,57 @@
   "cross_cluster_interfaces": [
     {
       "cluster": "ancient-nepal-and-kirata-period",
-      "interfaces_with": ["licchavi-dynasty"]
+      "interfaces_with": [
+        "licchavi-dynasty"
+      ]
     },
     {
       "cluster": "licchavi-dynasty",
-      "interfaces_with": ["thakuri-transitional-and-western-nepal"]
+      "interfaces_with": [
+        "thakuri-transitional-and-western-nepal"
+      ]
     },
     {
       "cluster": "thakuri-transitional-and-western-nepal",
-      "interfaces_with": ["medieval-malla-kingdoms"]
+      "interfaces_with": [
+        "medieval-malla-kingdoms"
+      ]
     },
     {
       "cluster": "medieval-malla-kingdoms",
-      "interfaces_with": ["gorkha-unification"]
+      "interfaces_with": [
+        "gorkha-unification"
+      ]
     },
     {
       "cluster": "gorkha-unification",
-      "interfaces_with": ["rana-oligarchy"]
+      "interfaces_with": [
+        "rana-oligarchy"
+      ]
     },
     {
       "cluster": "rana-oligarchy",
-      "interfaces_with": ["panchayat-era-and-democracy-struggle"]
+      "interfaces_with": [
+        "panchayat-era-and-democracy-struggle"
+      ]
     },
     {
       "cluster": "panchayat-era-and-democracy-struggle",
-      "interfaces_with": ["maoist-insurgency-and-royal-massacre"]
+      "interfaces_with": [
+        "maoist-insurgency-and-royal-massacre"
+      ]
     },
     {
       "cluster": "maoist-insurgency-and-royal-massacre",
-      "interfaces_with": ["republican-transition"]
+      "interfaces_with": [
+        "republican-transition"
+      ]
     },
     {
       "cluster": "republican-transition",
-      "interfaces_with": ["federal-democratic-republic"]
+      "interfaces_with": [
+        "federal-democratic-republic"
+      ]
     }
   ],
   "statistics": {

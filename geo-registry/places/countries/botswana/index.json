@@ -7,18 +7,34 @@
     "continent": "Africa",
     "iso3166_alpha2": "BW",
     "iso3166_alpha3": "BWA",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-06T00:00:00Z",
     "notes": "Comprehensive index for Botswana covering San/Bushmen (oldest continuous inhabitants), Tswana kingdoms, Bechuanaland protectorate, Seretse Khama interracial marriage controversy, independence 1966, diamond economy (Debswana), and Africa's democratic success story with highest HDI growth."
   },
   "country_profile": {
     "capital": "Gaborone",
-    "official_languages": ["English"],
-    "national_languages": ["Setswana", "English"],
+    "official_languages": [
+      "English"
+    ],
+    "other_languages": [
+      "Setswana",
+      "English"
+    ],
     "government_type": "Unitary parliamentary constitutional republic",
     "currency": "Botswana pula (BWP)",
-    "population": {"estimate": 2630000, "year": 2024, "source": "World Bank"},
+    "population": {
+      "estimate": 2630000,
+      "year": 2024,
+      "source": "World Bank"
+    },
     "area_km2": 581730,
     "gdp": {
       "nominal_total": "$20.4 billion",
@@ -28,7 +44,12 @@
       "year": 2024,
       "source": "IMF"
     },
-    "hdi": {"value": 0.693, "rank": 117, "year": 2022, "category": "Medium"},
+    "hdi": {
+      "value": 0.693,
+      "rank": 117,
+      "year": 2022,
+      "category": "Medium"
+    },
     "religion": {
       "Christianity": "79.1%",
       "No_religion": "15.2%",
@@ -37,26 +58,90 @@
       "Other": "1.2%"
     },
     "ethnic_groups": [
-      {"name": "Tswana", "percentage": 79, "notes": "Dominant ethnic group comprising multiple sub-groups (see below); Setswana language"},
-      {"name": "Bangwato", "percentage": null, "notes": "Largest Tswana subgroup; Seretse Khama's royal house; central district"},
-      {"name": "Bakwena", "percentage": null, "notes": "Traditional royal group; associated with Molepolole; Livingstone's hosts"},
-      {"name": "Bangwaketse", "percentage": null, "notes": "Southern Tswana group; Kanye capital"},
-      {"name": "Batawana", "percentage": null, "notes": "Northwestern Tswana group; Maun/Okavango region"},
-      {"name": "Barolong", "percentage": null, "notes": "Border region with South Africa"},
-      {"name": "Bakgatla", "percentage": null, "notes": "Eastern Botswana; straddle SA border"},
-      {"name": "Balete", "percentage": null, "notes": "Small Tswana chieftaincy"},
-      {"name": "Batlokwa", "percentage": null, "notes": "Small Tswana chieftaincy"},
-      {"name": "Kalanga", "percentage": 11, "notes": "Second-largest group; northeastern Botswana; related to Shona; historically linked to Butua/Rozvi states"},
-      {"name": "San/Basarwa", "percentage": 3, "notes": "Indigenous hunter-gatherers; Kalahari; multiple groups (Gǀui, Gǁana, ǂHoan, !Kung); marginalised; land rights controversies"},
-      {"name": "Herero", "percentage": 2, "notes": "Arrived from Namibia after German genocide; cattle pastoralists in Ngamiland/Ghanzi"},
-      {"name": "Kgalagadi", "percentage": 3, "notes": "Kalahari region; culturally affiliated with Tswana but historically subordinate"},
-      {"name": "Mbukushu", "percentage": 1, "notes": "Okavango Delta; fishing and farming communities"},
-      {"name": "Subiya/Lozi", "percentage": 1, "notes": "Northern Botswana; Chobe district"}
+      {
+        "name": "Tswana",
+        "percentage": 79,
+        "notes": "Dominant ethnic group comprising multiple sub-groups (see below); Setswana language"
+      },
+      {
+        "name": "Bangwato",
+        "percentage": null,
+        "notes": "Largest Tswana subgroup; Seretse Khama's royal house; central district"
+      },
+      {
+        "name": "Bakwena",
+        "percentage": null,
+        "notes": "Traditional royal group; associated with Molepolole; Livingstone's hosts"
+      },
+      {
+        "name": "Bangwaketse",
+        "percentage": null,
+        "notes": "Southern Tswana group; Kanye capital"
+      },
+      {
+        "name": "Batawana",
+        "percentage": null,
+        "notes": "Northwestern Tswana group; Maun/Okavango region"
+      },
+      {
+        "name": "Barolong",
+        "percentage": null,
+        "notes": "Border region with South Africa"
+      },
+      {
+        "name": "Bakgatla",
+        "percentage": null,
+        "notes": "Eastern Botswana; straddle SA border"
+      },
+      {
+        "name": "Balete",
+        "percentage": null,
+        "notes": "Small Tswana chieftaincy"
+      },
+      {
+        "name": "Batlokwa",
+        "percentage": null,
+        "notes": "Small Tswana chieftaincy"
+      },
+      {
+        "name": "Kalanga",
+        "percentage": 11,
+        "notes": "Second-largest group; northeastern Botswana; related to Shona; historically linked to Butua/Rozvi states"
+      },
+      {
+        "name": "San/Basarwa",
+        "percentage": 3,
+        "notes": "Indigenous hunter-gatherers; Kalahari; multiple groups (Gǀui, Gǁana, ǂHoan, !Kung); marginalised; land rights controversies"
+      },
+      {
+        "name": "Herero",
+        "percentage": 2,
+        "notes": "Arrived from Namibia after German genocide; cattle pastoralists in Ngamiland/Ghanzi"
+      },
+      {
+        "name": "Kgalagadi",
+        "percentage": 3,
+        "notes": "Kalahari region; culturally affiliated with Tswana but historically subordinate"
+      },
+      {
+        "name": "Mbukushu",
+        "percentage": 1,
+        "notes": "Okavango Delta; fishing and farming communities"
+      },
+      {
+        "name": "Subiya/Lozi",
+        "percentage": 1,
+        "notes": "Northern Botswana; Chobe district"
+      }
     ],
     "calling_code": "+267",
-    "iso3166_code": "BW/BWA",
+    "iso3166_alpha2": "BW",
+    "iso3166_alpha3": "BWA",
     "time_zone": "CAT (UTC+2)",
-    "independence": {"date": "1966-09-30", "from": "United Kingdom"},
+    "independence": {
+      "date": "1966-09-30",
+      "from": "United Kingdom"
+    },
     "continent": "Africa"
   },
   "leadership": {
@@ -66,12 +151,32 @@
       "since": "2024-11-01",
       "notes": "Umbrella for Democratic Change (UDC) leader; first non-BDP president in Botswana's history"
     },
-    "former_presidents": [
-      {"name": "Seretse Khama", "term": "1966–1980", "notes": "Founding president; BDP leader; diamond economy architect; died in office"},
-      {"name": "Quett Masire", "term": "1980–1998", "notes": "Continued prudent governance; economic growth; peacefully retired"},
-      {"name": "Festus Mogae", "term": "1998–2008", "notes": "Managed HIV/AIDS crisis; Mo Ibrahim Prize winner; peacefully retired"},
-      {"name": "Ian Khama", "term": "2008–2018", "notes": "Son of Seretse Khama; conservation focus; later split from BDP"},
-      {"name": "Mokgweetsi Masisi", "term": "2018–2024", "notes": "Lost 2024 election; first BDP president to lose power"}
+    "former_leaders": [
+      {
+        "name": "Seretse Khama",
+        "term": "1966–1980",
+        "notes": "Founding president; BDP leader; diamond economy architect; died in office"
+      },
+      {
+        "name": "Quett Masire",
+        "term": "1980–1998",
+        "notes": "Continued prudent governance; economic growth; peacefully retired"
+      },
+      {
+        "name": "Festus Mogae",
+        "term": "1998–2008",
+        "notes": "Managed HIV/AIDS crisis; Mo Ibrahim Prize winner; peacefully retired"
+      },
+      {
+        "name": "Ian Khama",
+        "term": "2008–2018",
+        "notes": "Son of Seretse Khama; conservation focus; later split from BDP"
+      },
+      {
+        "name": "Mokgweetsi Masisi",
+        "term": "2018–2024",
+        "notes": "Lost 2024 election; first BDP president to lose power"
+      }
     ]
   },
   "thematic_clusters": {
@@ -79,13 +184,43 @@
       {
         "slug": "San_Bushmen_Ancient_BW",
         "name": "San/Bushmen – Oldest Continuous Inhabitants",
-        "year_range": [-100000, 200],
+        "year_range": [
+          -100000,
+          200
+        ],
         "status": "PLANNED",
         "description": "The San (Bushmen) are among the world's oldest continuous populations, with deep archaeological and genetic roots in the Kalahari and broader southern Africa.",
         "sub_clusters": [
-          {"slug": "Early_Stone_Age_BW", "name": "Early and Middle Stone Age Occupation", "year_range": [-100000, -20000], "description": "Stone tool sites across Botswana, including Tsodilo Hills, indicate continuous human occupation for over 100,000 years."},
-          {"slug": "Tsodilo_Hills_Rock_Art", "name": "Tsodilo Hills Rock Art", "year_range": [-20000, 500], "description": "UNESCO World Heritage site with over 4,500 rock paintings; 'Louvre of the Desert'; sacred to the San and later Bantu-speaking peoples.", "key_events": ["Tsodilo_Hills_Rock_Art"]},
-          {"slug": "San_Hunter_Gatherer_Society", "name": "San Hunter-Gatherer Society", "year_range": [-20000, 1800], "description": "Sophisticated knowledge of Kalahari ecology; trance healing dances; egalitarian social organisation; click languages of Khoisan family."}
+          {
+            "slug": "Early_Stone_Age_BW",
+            "name": "Early and Middle Stone Age Occupation",
+            "year_range": [
+              -100000,
+              -20000
+            ],
+            "description": "Stone tool sites across Botswana, including Tsodilo Hills, indicate continuous human occupation for over 100,000 years."
+          },
+          {
+            "slug": "Tsodilo_Hills_Rock_Art",
+            "name": "Tsodilo Hills Rock Art",
+            "year_range": [
+              -20000,
+              500
+            ],
+            "description": "UNESCO World Heritage site with over 4,500 rock paintings; 'Louvre of the Desert'; sacred to the San and later Bantu-speaking peoples.",
+            "key_events": [
+              "Tsodilo_Hills_Rock_Art"
+            ]
+          },
+          {
+            "slug": "San_Hunter_Gatherer_Society",
+            "name": "San Hunter-Gatherer Society",
+            "year_range": [
+              -20000,
+              1800
+            ],
+            "description": "Sophisticated knowledge of Kalahari ecology; trance healing dances; egalitarian social organisation; click languages of Khoisan family."
+          }
         ]
       }
     ],
@@ -93,13 +228,40 @@
       {
         "slug": "Bantu_Migration_Tswana_BW",
         "name": "Bantu Migration and Rise of Tswana Kingdoms",
-        "year_range": [200, 1500],
+        "year_range": [
+          200,
+          1500
+        ],
         "status": "PLANNED",
         "description": "Bantu-speaking peoples migrate into the region, introducing pastoralism, agriculture, and iron-working; Tswana chiefdoms begin to form.",
         "sub_clusters": [
-          {"slug": "Bantu_Arrival_BW", "name": "Bantu Migration into Botswana", "year_range": [200, 900], "description": "Iron Age Bantu-speaking farmers settle in eastern Botswana; cattle pastoralism becomes central to social organisation."},
-          {"slug": "Toutswe_Tradition", "name": "Toutswe Tradition and Early States", "year_range": [700, 1300], "description": "Toutswe hilltop settlements in eastern Botswana; cattle-based hierarchy; trade links with Mapungubwe and Great Zimbabwe."},
-          {"slug": "Tswana_Chiefdoms_Formation", "name": "Formation of Tswana Chiefdoms", "year_range": [1200, 1500], "description": "Tswana-speaking groups (Bakwena, Bangwaketse, Bangwato, Batawana) emerge as distinct polities with centralised leadership under kgosi (chief)."}
+          {
+            "slug": "Bantu_Arrival_BW",
+            "name": "Bantu Migration into Botswana",
+            "year_range": [
+              200,
+              900
+            ],
+            "description": "Iron Age Bantu-speaking farmers settle in eastern Botswana; cattle pastoralism becomes central to social organisation."
+          },
+          {
+            "slug": "Toutswe_Tradition",
+            "name": "Toutswe Tradition and Early States",
+            "year_range": [
+              700,
+              1300
+            ],
+            "description": "Toutswe hilltop settlements in eastern Botswana; cattle-based hierarchy; trade links with Mapungubwe and Great Zimbabwe."
+          },
+          {
+            "slug": "Tswana_Chiefdoms_Formation",
+            "name": "Formation of Tswana Chiefdoms",
+            "year_range": [
+              1200,
+              1500
+            ],
+            "description": "Tswana-speaking groups (Bakwena, Bangwaketse, Bangwato, Batawana) emerge as distinct polities with centralised leadership under kgosi (chief)."
+          }
         ]
       }
     ],
@@ -107,12 +269,34 @@
       {
         "slug": "Tswana_Kingdoms_Expansion",
         "name": "Tswana Kingdoms and the Difaqane",
-        "year_range": [1500, 1840],
+        "year_range": [
+          1500,
+          1840
+        ],
         "status": "PLANNED",
         "description": "Tswana kingdoms consolidate and expand; the Difaqane/Mfecane disruptions reshape the political landscape of the region.",
         "sub_clusters": [
-          {"slug": "Tswana_Political_System", "name": "Tswana Political System and Kgotla", "year_range": [1500, 1800], "description": "Tswana governance through kgotla (public assembly); bogosi (chieftainship) traditions; cattle as wealth and status; large towns like Dithakong."},
-          {"slug": "Difaqane_Impact_BW", "name": "Difaqane/Mfecane Impact on Botswana", "year_range": [1820, 1840], "description": "Zulu expansion and Ndebele raids under Mzilikazi devastate Tswana communities; massive population displacement and political reconfiguration.", "key_events": ["Ndebele_Raids_Tswana_1820s"]}
+          {
+            "slug": "Tswana_Political_System",
+            "name": "Tswana Political System and Kgotla",
+            "year_range": [
+              1500,
+              1800
+            ],
+            "description": "Tswana governance through kgotla (public assembly); bogosi (chieftainship) traditions; cattle as wealth and status; large towns like Dithakong."
+          },
+          {
+            "slug": "Difaqane_Impact_BW",
+            "name": "Difaqane/Mfecane Impact on Botswana",
+            "year_range": [
+              1820,
+              1840
+            ],
+            "description": "Zulu expansion and Ndebele raids under Mzilikazi devastate Tswana communities; massive population displacement and political reconfiguration.",
+            "key_events": [
+              "Ndebele_Raids_Tswana_1820s"
+            ]
+          }
         ]
       }
     ],
@@ -120,24 +304,76 @@
       {
         "slug": "European_Contact_Bechuanaland",
         "name": "European Contact and Bechuanaland Protectorate",
-        "year_range": [1840, 1966],
+        "year_range": [
+          1840,
+          1966
+        ],
         "status": "PLANNED",
         "description": "Missionary influence, Boer encroachment, and the establishment of British Bechuanaland Protectorate; Tswana chiefs' diplomacy preserves autonomy.",
         "sub_clusters": [
-          {"slug": "Missionaries_Livingstone_BW", "name": "Missionaries and David Livingstone", "year_range": [1840, 1870], "description": "Robert Moffat and David Livingstone establish missions among the Bakwena; Livingstone marries Mary Moffat at Kuruman; Christianity and literacy spread."},
-          {"slug": "Three_Chiefs_London", "name": "Three Chiefs' Petition to London 1895", "year_range": [1885, 1895], "description": "Chiefs Khama III, Bathoen I, and Sebele I travel to London in 1895 to prevent Cecil Rhodes's British South Africa Company from absorbing Bechuanaland; protectorate preserved.", "key_events": ["Three_Chiefs_London_1895"]},
-          {"slug": "Bechuanaland_Protectorate", "name": "Bechuanaland Protectorate Administration", "year_range": [1885, 1966], "description": "Minimal British administration governed from Mafikeng (outside the territory); indirect rule through Tswana chiefs; deliberate underdevelopment; resistance to incorporation into South Africa."}
+          {
+            "slug": "Missionaries_Livingstone_BW",
+            "name": "Missionaries and David Livingstone",
+            "year_range": [
+              1840,
+              1870
+            ],
+            "description": "Robert Moffat and David Livingstone establish missions among the Bakwena; Livingstone marries Mary Moffat at Kuruman; Christianity and literacy spread."
+          },
+          {
+            "slug": "Three_Chiefs_London",
+            "name": "Three Chiefs' Petition to London 1895",
+            "year_range": [
+              1885,
+              1895
+            ],
+            "description": "Chiefs Khama III, Bathoen I, and Sebele I travel to London in 1895 to prevent Cecil Rhodes's British South Africa Company from absorbing Bechuanaland; protectorate preserved.",
+            "key_events": [
+              "Three_Chiefs_London_1895"
+            ]
+          },
+          {
+            "slug": "Bechuanaland_Protectorate",
+            "name": "Bechuanaland Protectorate Administration",
+            "year_range": [
+              1885,
+              1966
+            ],
+            "description": "Minimal British administration governed from Mafikeng (outside the territory); indirect rule through Tswana chiefs; deliberate underdevelopment; resistance to incorporation into South Africa."
+          }
         ]
       },
       {
         "slug": "Seretse_Khama_Controversy",
         "name": "Seretse Khama Interracial Marriage Controversy",
-        "year_range": [1948, 1956],
+        "year_range": [
+          1948,
+          1956
+        ],
         "status": "PLANNED",
         "description": "Seretse Khama's marriage to Englishwoman Ruth Williams triggers an international scandal driven by apartheid South Africa's pressure on Britain.",
         "sub_clusters": [
-          {"slug": "Seretse_Ruth_Marriage", "name": "Seretse Khama–Ruth Williams Marriage", "year_range": [1948, 1950], "description": "Seretse Khama, heir to the Bangwato chieftainship, marries Ruth Williams in London 1948; apartheid South Africa and the Bangwato regent oppose the union.", "key_events": ["Seretse_Ruth_Marriage_1948"]},
-          {"slug": "Seretse_Exile", "name": "British Exile of Seretse Khama", "year_range": [1950, 1956], "description": "Britain exiles Seretse to appease apartheid South Africa and protect uranium supplies; international outcry; Seretse renounces chieftainship to return in 1956."}
+          {
+            "slug": "Seretse_Ruth_Marriage",
+            "name": "Seretse Khama–Ruth Williams Marriage",
+            "year_range": [
+              1948,
+              1950
+            ],
+            "description": "Seretse Khama, heir to the Bangwato chieftainship, marries Ruth Williams in London 1948; apartheid South Africa and the Bangwato regent oppose the union.",
+            "key_events": [
+              "Seretse_Ruth_Marriage_1948"
+            ]
+          },
+          {
+            "slug": "Seretse_Exile",
+            "name": "British Exile of Seretse Khama",
+            "year_range": [
+              1950,
+              1956
+            ],
+            "description": "Britain exiles Seretse to appease apartheid South Africa and protect uranium supplies; international outcry; Seretse renounces chieftainship to return in 1956."
+          }
         ]
       }
     ],
@@ -145,13 +381,46 @@
       {
         "slug": "Independence_BW",
         "name": "Independence and Nation Building",
-        "year_range": [1960, 1980],
+        "year_range": [
+          1960,
+          1980
+        ],
         "status": "PLANNED",
         "description": "Seretse Khama leads Botswana to independence in 1966; founds Botswana Democratic Party; discovery of diamonds transforms one of the world's poorest countries.",
         "sub_clusters": [
-          {"slug": "BDP_Independence_1966", "name": "Botswana Democratic Party and Independence", "year_range": [1962, 1966], "description": "Seretse Khama founds BDP 1962; leads Bechuanaland to independence on 30 September 1966; becomes first president of Botswana.", "key_events": ["Botswana_Independence_1966"]},
-          {"slug": "Diamond_Discovery_Orapa", "name": "Diamond Discovery at Orapa", "year_range": [1967, 1975], "description": "Discovery of Orapa diamond pipe 1967; Jwaneng (richest mine by value) found 1972; Debswana partnership (50/50 with De Beers) established.", "key_events": ["Orapa_Diamond_Discovery_1967"]},
-          {"slug": "Seretse_Presidency", "name": "Seretse Khama's Presidency", "year_range": [1966, 1980], "description": "Prudent management of diamond revenues; investment in education and infrastructure; multiparty democracy maintained; Seretse dies in office 1980."}
+          {
+            "slug": "BDP_Independence_1966",
+            "name": "Botswana Democratic Party and Independence",
+            "year_range": [
+              1962,
+              1966
+            ],
+            "description": "Seretse Khama founds BDP 1962; leads Bechuanaland to independence on 30 September 1966; becomes first president of Botswana.",
+            "key_events": [
+              "Botswana_Independence_1966"
+            ]
+          },
+          {
+            "slug": "Diamond_Discovery_Orapa",
+            "name": "Diamond Discovery at Orapa",
+            "year_range": [
+              1967,
+              1975
+            ],
+            "description": "Discovery of Orapa diamond pipe 1967; Jwaneng (richest mine by value) found 1972; Debswana partnership (50/50 with De Beers) established.",
+            "key_events": [
+              "Orapa_Diamond_Discovery_1967"
+            ]
+          },
+          {
+            "slug": "Seretse_Presidency",
+            "name": "Seretse Khama's Presidency",
+            "year_range": [
+              1966,
+              1980
+            ],
+            "description": "Prudent management of diamond revenues; investment in education and infrastructure; multiparty democracy maintained; Seretse dies in office 1980."
+          }
         ]
       }
     ],
@@ -159,33 +428,130 @@
       {
         "slug": "African_Success_Story_BW",
         "name": "Botswana: Africa's Democratic Success Story",
-        "year_range": [1980, 2026],
+        "year_range": [
+          1980,
+          2026
+        ],
         "status": "PLANNED",
         "description": "Botswana achieves highest sustained economic growth in the world; stable multiparty democracy; highest HDI growth rate in Africa; navigates HIV/AIDS crisis and economic diversification.",
         "sub_clusters": [
-          {"slug": "Masire_Mogae_Presidencies", "name": "Masire and Mogae Presidencies", "year_range": [1980, 2008], "description": "Quett Masire (1980–1998) and Festus Mogae (1998–2008) continue prudent governance; Pula Fund sovereign wealth management; anti-corruption institutions."},
-          {"slug": "HIV_AIDS_Crisis_BW", "name": "HIV/AIDS Crisis and Response", "year_range": [1990, 2015], "description": "Botswana hit by one of the world's highest HIV prevalence rates (nearly 40% at peak); pioneering free antiretroviral treatment program under Mogae."},
-          {"slug": "Economic_Diversification_BW", "name": "Economic Diversification and Diamond Dependence", "year_range": [2000, 2026], "description": "Efforts to diversify beyond diamonds into tourism (Okavango Delta UNESCO site), financial services, and beef exports; De Beers moves aggregation to Gaborone."},
-          {"slug": "Democratic_Transition_2024_BW", "name": "2024 Democratic Transition", "year_range": [2019, 2026], "description": "President Mokgweetsi Masisi and BDP face increasing opposition; first-ever transfer of power from BDP to opposition in 2024 elections; deepening of democratic norms.", "key_events": ["BDP_Loses_Power_2024"]}
+          {
+            "slug": "Masire_Mogae_Presidencies",
+            "name": "Masire and Mogae Presidencies",
+            "year_range": [
+              1980,
+              2008
+            ],
+            "description": "Quett Masire (1980–1998) and Festus Mogae (1998–2008) continue prudent governance; Pula Fund sovereign wealth management; anti-corruption institutions."
+          },
+          {
+            "slug": "HIV_AIDS_Crisis_BW",
+            "name": "HIV/AIDS Crisis and Response",
+            "year_range": [
+              1990,
+              2015
+            ],
+            "description": "Botswana hit by one of the world's highest HIV prevalence rates (nearly 40% at peak); pioneering free antiretroviral treatment program under Mogae."
+          },
+          {
+            "slug": "Economic_Diversification_BW",
+            "name": "Economic Diversification and Diamond Dependence",
+            "year_range": [
+              2000,
+              2026
+            ],
+            "description": "Efforts to diversify beyond diamonds into tourism (Okavango Delta UNESCO site), financial services, and beef exports; De Beers moves aggregation to Gaborone."
+          },
+          {
+            "slug": "Democratic_Transition_2024_BW",
+            "name": "2024 Democratic Transition",
+            "year_range": [
+              2019,
+              2026
+            ],
+            "description": "President Mokgweetsi Masisi and BDP face increasing opposition; first-ever transfer of power from BDP to opposition in 2024 elections; deepening of democratic norms.",
+            "key_events": [
+              "BDP_Loses_Power_2024"
+            ]
+          }
         ]
       }
     ]
   },
-  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "unassigned_events": {
+    "note": "Events not yet assigned to a thematic cluster",
+    "slugs": []
+  },
   "cross_cluster_interfaces": [
-    {"cluster": "San_Bushmen_Ancient_BW", "interfaces_with": ["San_Khoisan_Southern_Africa", "Human_Origins_Africa", "Rock_Art_Traditions"]},
-    {"cluster": "Bantu_Migration_Tswana_BW", "interfaces_with": ["Bantu_Expansion", "Great_Zimbabwe_Trade", "Iron_Age_Southern_Africa"]},
-    {"cluster": "Difaqane_Impact_BW", "interfaces_with": ["Zulu_Kingdom_Expansion", "Mfecane_Southern_Africa", "Ndebele_State"]},
-    {"cluster": "Seretse_Khama_Controversy", "interfaces_with": ["Apartheid_South_Africa", "British_Colonial_Policy", "Cold_War_Africa"]},
-    {"cluster": "Three_Chiefs_London", "interfaces_with": ["Scramble_For_Africa", "Cecil_Rhodes_Expansion", "British_Protectorates"]},
-    {"cluster": "Independence_BW", "interfaces_with": ["African_Independence_Movements", "Diamond_Industry_Global", "Frontline_States"]},
-    {"cluster": "African_Success_Story_BW", "interfaces_with": ["HIV_AIDS_Pandemic_Africa", "Resource_Governance_Models", "African_Democracy"]}
+    {
+      "cluster": "San_Bushmen_Ancient_BW",
+      "interfaces_with": [
+        "San_Khoisan_Southern_Africa",
+        "Human_Origins_Africa",
+        "Rock_Art_Traditions"
+      ]
+    },
+    {
+      "cluster": "Bantu_Migration_Tswana_BW",
+      "interfaces_with": [
+        "Bantu_Expansion",
+        "Great_Zimbabwe_Trade",
+        "Iron_Age_Southern_Africa"
+      ]
+    },
+    {
+      "cluster": "Difaqane_Impact_BW",
+      "interfaces_with": [
+        "Zulu_Kingdom_Expansion",
+        "Mfecane_Southern_Africa",
+        "Ndebele_State"
+      ]
+    },
+    {
+      "cluster": "Seretse_Khama_Controversy",
+      "interfaces_with": [
+        "Apartheid_South_Africa",
+        "British_Colonial_Policy",
+        "Cold_War_Africa"
+      ]
+    },
+    {
+      "cluster": "Three_Chiefs_London",
+      "interfaces_with": [
+        "Scramble_For_Africa",
+        "Cecil_Rhodes_Expansion",
+        "British_Protectorates"
+      ]
+    },
+    {
+      "cluster": "Independence_BW",
+      "interfaces_with": [
+        "African_Independence_Movements",
+        "Diamond_Industry_Global",
+        "Frontline_States"
+      ]
+    },
+    {
+      "cluster": "African_Success_Story_BW",
+      "interfaces_with": [
+        "HIV_AIDS_Pandemic_Africa",
+        "Resource_Governance_Models",
+        "African_Democracy"
+      ]
+    }
   ],
   "statistics": {
     "total_level4_clusters": 8,
     "total_level5_subclusters": 22,
     "active_clusters": 0,
     "planned_clusters": 8,
-    "timeframe_distribution": {"910": 1, "920": 1, "930": 1, "940": 2, "950": 1, "960": 1}
+    "timeframe_distribution": {
+      "910": 1,
+      "920": 1,
+      "930": 1,
+      "940": 2,
+      "950": 1,
+      "960": 1
+    }
   }
 }

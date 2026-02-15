@@ -7,18 +7,39 @@
     "continent": "Africa",
     "iso3166_alpha2": "NA",
     "iso3166_alpha3": "NAM",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-06T00:00:00Z",
     "notes": "Comprehensive index for Namibia covering San rock art (Twyfelfontein), Bantu migration, Herero/Nama peoples, German South-West Africa, Herero/Nama genocide (1904–1908, first genocide of the 20th century), South African mandate, SWAPO liberation struggle, independence 1990 (last African colony), and Skeleton Coast."
   },
   "country_profile": {
     "capital": "Windhoek",
-    "official_languages": ["English"],
-    "national_languages": ["Oshiwambo", "Khoekhoegowab (Nama/Damara)", "Afrikaans", "German", "Otjiherero", "RuKwangali", "SiLozi"],
+    "official_languages": [
+      "English"
+    ],
+    "other_languages": [
+      "Oshiwambo",
+      "Khoekhoegowab (Nama/Damara)",
+      "Afrikaans",
+      "German",
+      "Otjiherero",
+      "RuKwangali",
+      "SiLozi"
+    ],
     "government_type": "Unitary dominant-party semi-presidential republic",
     "currency": "Namibian dollar (NAD), South African rand (ZAR)",
-    "population": {"estimate": 2640000, "year": 2024, "source": "World Bank"},
+    "population": {
+      "estimate": 2640000,
+      "year": 2024,
+      "source": "World Bank"
+    },
     "area_km2": 825615,
     "gdp": {
       "nominal_total": "$13.9 billion",
@@ -28,7 +49,12 @@
       "year": 2024,
       "source": "IMF"
     },
-    "hdi": {"value": 0.615, "rank": 139, "year": 2022, "category": "Medium"},
+    "hdi": {
+      "value": 0.615,
+      "rank": 139,
+      "year": 2022,
+      "category": "Medium"
+    },
     "religion": {
       "Christianity": "97.5%",
       "Lutheran": "50%",
@@ -38,23 +64,76 @@
       "Other": "1.1%"
     },
     "ethnic_groups": [
-      {"name": "Ovambo (Aawambo)", "percentage": 50, "notes": "Largest group; northern Namibia; Ovamboland; Oshiwambo-speaking; 8 sub-groups including Kwanyama, Ndonga, Kwambi; SWAPO political base"},
-      {"name": "Kavango", "percentage": 9, "notes": "Northeastern Namibia; Okavango River; five ethnic groups: Kwangali, Mbunza, Sambyu, Gciriku, Mbukushu"},
-      {"name": "Damara", "percentage": 7, "notes": "Ancient Khoisan-speaking people; historically displaced by Nama and Herero; Khoekhoegowab language"},
-      {"name": "Herero", "percentage": 7, "notes": "Bantu pastoralists; central Namibia; 1904–1908 genocide victims (80% killed); Victorian dress legacy; Omaheke; related groups: Himba, Mbanderu"},
-      {"name": "White Namibians", "percentage": 6, "notes": "Afrikaner, German, Portuguese, British; commercial farming; Afrikaans/German/English-speaking"},
-      {"name": "Nama", "percentage": 5, "notes": "Khoekhoe people; southern Namibia; Khoekhoegowab; 1904–1908 genocide; distinct from Damara despite shared language"},
-      {"name": "Coloured", "percentage": 4.1, "notes": "Mixed-race; Rehoboth Basters semi-autonomous community; Afrikaans-speaking"},
-      {"name": "Caprivian (Lozi/Masubia)", "percentage": 3.7, "notes": "Zambezi Region (Caprivi Strip); Lozi and related peoples; cross-border with Zambia; distinct from rest of Namibia; secessionist tensions"},
-      {"name": "San/Bushmen", "percentage": 2.9, "notes": "Indigenous hunter-gatherers; oldest inhabitants; marginalized; !Kung, Ju/'hoansi, Hai//om groups; click languages"},
-      {"name": "Tswana", "percentage": 0.6, "notes": "Eastern border; cross-border with Botswana"},
-      {"name": "Himba", "percentage": null, "notes": "Remote northwestern Namibia; Kunene; Herero-related pastoralists; distinctive ochre body decoration; traditional lifestyle preserved"},
-      {"name": "Other", "percentage": 4.7, "notes": "Various smaller groups"}
+      {
+        "name": "Ovambo (Aawambo)",
+        "percentage": 50,
+        "notes": "Largest group; northern Namibia; Ovamboland; Oshiwambo-speaking; 8 sub-groups including Kwanyama, Ndonga, Kwambi; SWAPO political base"
+      },
+      {
+        "name": "Kavango",
+        "percentage": 9,
+        "notes": "Northeastern Namibia; Okavango River; five ethnic groups: Kwangali, Mbunza, Sambyu, Gciriku, Mbukushu"
+      },
+      {
+        "name": "Damara",
+        "percentage": 7,
+        "notes": "Ancient Khoisan-speaking people; historically displaced by Nama and Herero; Khoekhoegowab language"
+      },
+      {
+        "name": "Herero",
+        "percentage": 7,
+        "notes": "Bantu pastoralists; central Namibia; 1904–1908 genocide victims (80% killed); Victorian dress legacy; Omaheke; related groups: Himba, Mbanderu"
+      },
+      {
+        "name": "White Namibians",
+        "percentage": 6,
+        "notes": "Afrikaner, German, Portuguese, British; commercial farming; Afrikaans/German/English-speaking"
+      },
+      {
+        "name": "Nama",
+        "percentage": 5,
+        "notes": "Khoekhoe people; southern Namibia; Khoekhoegowab; 1904–1908 genocide; distinct from Damara despite shared language"
+      },
+      {
+        "name": "Coloured",
+        "percentage": 4.1,
+        "notes": "Mixed-race; Rehoboth Basters semi-autonomous community; Afrikaans-speaking"
+      },
+      {
+        "name": "Caprivian (Lozi/Masubia)",
+        "percentage": 3.7,
+        "notes": "Zambezi Region (Caprivi Strip); Lozi and related peoples; cross-border with Zambia; distinct from rest of Namibia; secessionist tensions"
+      },
+      {
+        "name": "San/Bushmen",
+        "percentage": 2.9,
+        "notes": "Indigenous hunter-gatherers; oldest inhabitants; marginalized; !Kung, Ju/'hoansi, Hai//om groups; click languages"
+      },
+      {
+        "name": "Tswana",
+        "percentage": 0.6,
+        "notes": "Eastern border; cross-border with Botswana"
+      },
+      {
+        "name": "Himba",
+        "percentage": null,
+        "notes": "Remote northwestern Namibia; Kunene; Herero-related pastoralists; distinctive ochre body decoration; traditional lifestyle preserved"
+      },
+      {
+        "name": "Other",
+        "percentage": 4.7,
+        "notes": "Various smaller groups"
+      }
     ],
     "calling_code": "+264",
-    "iso3166_code": "NA/NAM",
+    "iso3166_alpha2": "NA",
+    "iso3166_alpha3": "NAM",
     "time_zone": "CAT (UTC+2)",
-    "independence": {"date": "1990-03-21", "from": "South Africa", "notes": "Last African country to gain independence"},
+    "independence": {
+      "date": "1990-03-21",
+      "from": "South Africa",
+      "notes": "Last African country to gain independence"
+    },
     "continent": "Africa"
   },
   "leadership": {
@@ -69,10 +148,22 @@
       "title": "President-elect",
       "notes": "SWAPO; first female president of Namibia; won November 2024 election; takes office March 2025; veteran SWAPO leader"
     },
-    "former_presidents": [
-      {"name": "Sam Nujoma", "term": "1990–2005", "notes": "Founding president; SWAPO leader since 1960; father of the nation; three terms; retired voluntarily"},
-      {"name": "Hifikepunye Pohamba", "term": "2005–2015", "notes": "SWAPO; Mo Ibrahim Prize 2014 for good governance; voluntarily stepped down"},
-      {"name": "Hage Geingob", "term": "2015–2024", "notes": "SWAPO; first PM 1990–2002; died in office February 2024 from cancer"}
+    "former_leaders": [
+      {
+        "name": "Sam Nujoma",
+        "term": "1990–2005",
+        "notes": "Founding president; SWAPO leader since 1960; father of the nation; three terms; retired voluntarily"
+      },
+      {
+        "name": "Hifikepunye Pohamba",
+        "term": "2005–2015",
+        "notes": "SWAPO; Mo Ibrahim Prize 2014 for good governance; voluntarily stepped down"
+      },
+      {
+        "name": "Hage Geingob",
+        "term": "2015–2024",
+        "notes": "SWAPO; first PM 1990–2002; died in office February 2024 from cancer"
+      }
     ]
   },
   "thematic_clusters": {
@@ -80,12 +171,34 @@
       {
         "slug": "San_Rock_Art_NA",
         "name": "San Rock Art and Early Inhabitants",
-        "year_range": [-30000, 500],
+        "year_range": [
+          -30000,
+          500
+        ],
         "status": "PLANNED",
         "description": "San hunter-gatherers inhabit Namibia for tens of thousands of years; Twyfelfontein rock engravings are a UNESCO World Heritage site; Damara and Nama Khoikhoi peoples also ancient inhabitants.",
         "sub_clusters": [
-          {"slug": "Twyfelfontein_Rock_Art", "name": "Twyfelfontein Rock Engravings", "year_range": [-6000, 500], "description": "UNESCO World Heritage site in Kunene region with over 2,500 rock engravings and paintings; depict animals, human footprints, and geometric designs; created by San hunter-gatherers.", "key_events": ["Twyfelfontein_Rock_Art"]},
-          {"slug": "San_Damara_Ancient_NA", "name": "San and Damara Ancient Populations", "year_range": [-30000, 1500], "description": "San (Bushmen) hunter-gatherers are the earliest inhabitants; Damara people (Khoikhoi linguistic group) establish pastoral communities; diverse ecological adaptations across desert, savanna, and coastal environments."}
+          {
+            "slug": "Twyfelfontein_Rock_Art",
+            "name": "Twyfelfontein Rock Engravings",
+            "year_range": [
+              -6000,
+              500
+            ],
+            "description": "UNESCO World Heritage site in Kunene region with over 2,500 rock engravings and paintings; depict animals, human footprints, and geometric designs; created by San hunter-gatherers.",
+            "key_events": [
+              "Twyfelfontein_Rock_Art"
+            ]
+          },
+          {
+            "slug": "San_Damara_Ancient_NA",
+            "name": "San and Damara Ancient Populations",
+            "year_range": [
+              -30000,
+              1500
+            ],
+            "description": "San (Bushmen) hunter-gatherers are the earliest inhabitants; Damara people (Khoikhoi linguistic group) establish pastoral communities; diverse ecological adaptations across desert, savanna, and coastal environments."
+          }
         ]
       }
     ],
@@ -93,12 +206,31 @@
       {
         "slug": "Bantu_Migration_NA",
         "name": "Bantu Migration and Pastoral Peoples",
-        "year_range": [500, 1700],
+        "year_range": [
+          500,
+          1700
+        ],
         "status": "PLANNED",
         "description": "Bantu-speaking peoples migrate into northern and central Namibia; Herero pastoralists and Ovambo agro-pastoralists establish distinct societies.",
         "sub_clusters": [
-          {"slug": "Ovambo_Settlement_NA", "name": "Ovambo Settlement in Northern Namibia", "year_range": [500, 1500], "description": "Ovambo-speaking peoples settle in the well-watered Cuvelai drainage system (Owamboland); develop mixed farming economy; become the largest ethnic group in Namibia."},
-          {"slug": "Herero_Arrival_NA", "name": "Herero Migration into Central Namibia", "year_range": [1500, 1700], "description": "Herero pastoralists migrate from East Africa via the Kaokoveld into central Namibia; cattle-centred culture; holy fire (okuruwo) ritual traditions; competition with Nama for grazing."}
+          {
+            "slug": "Ovambo_Settlement_NA",
+            "name": "Ovambo Settlement in Northern Namibia",
+            "year_range": [
+              500,
+              1500
+            ],
+            "description": "Ovambo-speaking peoples settle in the well-watered Cuvelai drainage system (Owamboland); develop mixed farming economy; become the largest ethnic group in Namibia."
+          },
+          {
+            "slug": "Herero_Arrival_NA",
+            "name": "Herero Migration into Central Namibia",
+            "year_range": [
+              1500,
+              1700
+            ],
+            "description": "Herero pastoralists migrate from East Africa via the Kaokoveld into central Namibia; cattle-centred culture; holy fire (okuruwo) ritual traditions; competition with Nama for grazing."
+          }
         ]
       }
     ],
@@ -106,13 +238,40 @@
       {
         "slug": "Nama_Herero_Conflicts",
         "name": "Nama-Herero Conflicts and European Contact",
-        "year_range": [1700, 1884],
+        "year_range": [
+          1700,
+          1884
+        ],
         "status": "PLANNED",
         "description": "Nama-Herero wars over cattle and grazing; Oorlam groups introduce firearms; European missionaries and traders arrive; Jonker Afrikaner's dominance.",
         "sub_clusters": [
-          {"slug": "Nama_Herero_Wars_Early", "name": "Nama-Herero Wars and Oorlam Impact", "year_range": [1700, 1860], "description": "Nama clans clash with Herero over central highlands grazing; Oorlam Afrikaners (Jonker Afrikaner) dominate from Windhoek with firearms and horse tactics."},
-          {"slug": "Maharero_Consolidation", "name": "Maharero's Herero Consolidation", "year_range": [1860, 1884], "description": "Maharero unites Herero groups; negotiates with German traders and missionaries; Battle of Otjimbingwe 1880; fragile peace between Herero and Nama before German colonisation."},
-          {"slug": "Skeleton_Coast_NA", "name": "Skeleton Coast and European Maritime Contact", "year_range": [1486, 1884], "description": "Portuguese navigator Diogo Cão reaches Cape Cross 1486; treacherous Skeleton Coast (shipwrecks, fog, desert); whaling and guano stations; Walvis Bay claimed by Britain 1878."}
+          {
+            "slug": "Nama_Herero_Wars_Early",
+            "name": "Nama-Herero Wars and Oorlam Impact",
+            "year_range": [
+              1700,
+              1860
+            ],
+            "description": "Nama clans clash with Herero over central highlands grazing; Oorlam Afrikaners (Jonker Afrikaner) dominate from Windhoek with firearms and horse tactics."
+          },
+          {
+            "slug": "Maharero_Consolidation",
+            "name": "Maharero's Herero Consolidation",
+            "year_range": [
+              1860,
+              1884
+            ],
+            "description": "Maharero unites Herero groups; negotiates with German traders and missionaries; Battle of Otjimbingwe 1880; fragile peace between Herero and Nama before German colonisation."
+          },
+          {
+            "slug": "Skeleton_Coast_NA",
+            "name": "Skeleton Coast and European Maritime Contact",
+            "year_range": [
+              1486,
+              1884
+            ],
+            "description": "Portuguese navigator Diogo Cão reaches Cape Cross 1486; treacherous Skeleton Coast (shipwrecks, fog, desert); whaling and guano stations; Walvis Bay claimed by Britain 1878."
+          }
         ]
       }
     ],
@@ -120,24 +279,78 @@
       {
         "slug": "German_SWA",
         "name": "German South-West Africa",
-        "year_range": [1884, 1915],
+        "year_range": [
+          1884,
+          1915
+        ],
         "status": "PLANNED",
         "description": "Germany colonises Namibia as South-West Africa; land confiscation and cattle seizure provoke the Herero and Nama uprisings; the resulting genocide is the first of the 20th century.",
         "sub_clusters": [
-          {"slug": "German_Colonisation_NA", "name": "German Colonisation and Land Seizure", "year_range": [1884, 1903], "description": "Heinrich Göring (father of Hermann) as imperial commissioner; Schutztruppe garrisons; treaties of protection then systematic land and cattle confiscation from Herero and Nama peoples."},
-          {"slug": "Herero_Nama_Genocide", "name": "Herero and Nama Genocide (1904–1908)", "year_range": [1904, 1908], "description": "Herero revolt January 1904 under Samuel Maharero; Battle of Waterberg August 1904; General Lothar von Trotha's extermination order (Vernichtungsbefehl); Herero driven into Omaheke Desert; Nama uprising under Hendrik Witbooi; concentration camps (Shark Island); ~65,000 Herero (80%) and ~10,000 Nama (50%) killed. Recognised as the first genocide of the 20th century.", "key_events": ["Herero_Revolt_1904", "Vernichtungsbefehl_1904", "Shark_Island_Concentration_Camp"]},
-          {"slug": "German_SWA_Final_Years", "name": "German South-West Africa: Final Years", "year_range": [1908, 1915], "description": "Diamond rush at Lüderitz 1908; settler colonialism intensifies; World War I — South African forces invade and Germany surrenders South-West Africa in 1915."}
+          {
+            "slug": "German_Colonisation_NA",
+            "name": "German Colonisation and Land Seizure",
+            "year_range": [
+              1884,
+              1903
+            ],
+            "description": "Heinrich Göring (father of Hermann) as imperial commissioner; Schutztruppe garrisons; treaties of protection then systematic land and cattle confiscation from Herero and Nama peoples."
+          },
+          {
+            "slug": "Herero_Nama_Genocide",
+            "name": "Herero and Nama Genocide (1904–1908)",
+            "year_range": [
+              1904,
+              1908
+            ],
+            "description": "Herero revolt January 1904 under Samuel Maharero; Battle of Waterberg August 1904; General Lothar von Trotha's extermination order (Vernichtungsbefehl); Herero driven into Omaheke Desert; Nama uprising under Hendrik Witbooi; concentration camps (Shark Island); ~65,000 Herero (80%) and ~10,000 Nama (50%) killed. Recognised as the first genocide of the 20th century.",
+            "key_events": [
+              "Herero_Revolt_1904",
+              "Vernichtungsbefehl_1904",
+              "Shark_Island_Concentration_Camp"
+            ]
+          },
+          {
+            "slug": "German_SWA_Final_Years",
+            "name": "German South-West Africa: Final Years",
+            "year_range": [
+              1908,
+              1915
+            ],
+            "description": "Diamond rush at Lüderitz 1908; settler colonialism intensifies; World War I — South African forces invade and Germany surrenders South-West Africa in 1915."
+          }
         ]
       },
       {
         "slug": "South_African_Mandate_NA",
         "name": "South African Mandate and Apartheid Rule",
-        "year_range": [1915, 1966],
+        "year_range": [
+          1915,
+          1966
+        ],
         "status": "PLANNED",
         "description": "South Africa administers Namibia under League of Nations mandate; extends apartheid system; reserves (bantustans) created; resistance grows.",
         "sub_clusters": [
-          {"slug": "League_Mandate_NA", "name": "League of Nations Mandate", "year_range": [1920, 1946], "description": "South Africa receives Class C mandate; treats territory as de facto fifth province; white settlement encouraged; contract labour system for Ovambo workers."},
-          {"slug": "Apartheid_Extension_NA", "name": "Apartheid Extended to Namibia", "year_range": [1948, 1966], "description": "South Africa extends apartheid laws; Odendaal Commission (1964) creates bantustans; forced removals; pass laws; Old Location shooting in Windhoek 1959.", "key_events": ["Old_Location_Shooting_1959"]}
+          {
+            "slug": "League_Mandate_NA",
+            "name": "League of Nations Mandate",
+            "year_range": [
+              1920,
+              1946
+            ],
+            "description": "South Africa receives Class C mandate; treats territory as de facto fifth province; white settlement encouraged; contract labour system for Ovambo workers."
+          },
+          {
+            "slug": "Apartheid_Extension_NA",
+            "name": "Apartheid Extended to Namibia",
+            "year_range": [
+              1948,
+              1966
+            ],
+            "description": "South Africa extends apartheid laws; Odendaal Commission (1964) creates bantustans; forced removals; pass laws; Old Location shooting in Windhoek 1959.",
+            "key_events": [
+              "Old_Location_Shooting_1959"
+            ]
+          }
         ]
       }
     ],
@@ -145,13 +358,50 @@
       {
         "slug": "SWAPO_Liberation_NA",
         "name": "SWAPO Liberation Struggle",
-        "year_range": [1960, 1990],
+        "year_range": [
+          1960,
+          1990
+        ],
         "status": "PLANNED",
         "description": "SWAPO leads armed liberation struggle against South African occupation; international legal battles at ICJ; UN recognises Namibian independence right; Border War/Bush War.",
         "sub_clusters": [
-          {"slug": "SWAPO_Founded_NA", "name": "SWAPO Formation and Early Resistance", "year_range": [1960, 1966], "description": "South West Africa People's Organisation (SWAPO) founded 1960 by Sam Nujoma and others; ICJ rules on South Africa's obligations; UN revokes mandate 1966.", "key_events": ["SWAPO_Founded_1960"]},
-          {"slug": "Armed_Struggle_NA", "name": "Armed Struggle and Border War", "year_range": [1966, 1988], "description": "PLAN (People's Liberation Army of Namibia) launches armed struggle at Omgulumbashe 26 August 1966; South African Border War/Bush War; Angolan theatre; Cassinga massacre 1978.", "key_events": ["Battle_Omgulumbashe_1966", "Cassinga_Massacre_1978"]},
-          {"slug": "UN_Resolution_435_NA", "name": "UN Resolution 435 and Independence Process", "year_range": [1978, 1990], "description": "UN Security Council Resolution 435 (1978) mandates supervised elections; linked to Cuban troop withdrawal from Angola; Battle of Cuito Cuanavale 1988 breaks stalemate; elections November 1989; independence 21 March 1990.", "key_events": ["Namibia_Independence_1990"]}
+          {
+            "slug": "SWAPO_Founded_NA",
+            "name": "SWAPO Formation and Early Resistance",
+            "year_range": [
+              1960,
+              1966
+            ],
+            "description": "South West Africa People's Organisation (SWAPO) founded 1960 by Sam Nujoma and others; ICJ rules on South Africa's obligations; UN revokes mandate 1966.",
+            "key_events": [
+              "SWAPO_Founded_1960"
+            ]
+          },
+          {
+            "slug": "Armed_Struggle_NA",
+            "name": "Armed Struggle and Border War",
+            "year_range": [
+              1966,
+              1988
+            ],
+            "description": "PLAN (People's Liberation Army of Namibia) launches armed struggle at Omgulumbashe 26 August 1966; South African Border War/Bush War; Angolan theatre; Cassinga massacre 1978.",
+            "key_events": [
+              "Battle_Omgulumbashe_1966",
+              "Cassinga_Massacre_1978"
+            ]
+          },
+          {
+            "slug": "UN_Resolution_435_NA",
+            "name": "UN Resolution 435 and Independence Process",
+            "year_range": [
+              1978,
+              1990
+            ],
+            "description": "UN Security Council Resolution 435 (1978) mandates supervised elections; linked to Cuban troop withdrawal from Angola; Battle of Cuito Cuanavale 1988 breaks stalemate; elections November 1989; independence 21 March 1990.",
+            "key_events": [
+              "Namibia_Independence_1990"
+            ]
+          }
         ]
       }
     ],
@@ -159,33 +409,132 @@
       {
         "slug": "Independent_Namibia",
         "name": "Independent Namibia",
-        "year_range": [1990, 2026],
+        "year_range": [
+          1990,
+          2026
+        ],
         "status": "PLANNED",
         "description": "Namibia becomes the last African colony to gain independence; SWAPO dominates politics; reconciliation policy; land reform debates; Germany acknowledges genocide.",
         "sub_clusters": [
-          {"slug": "Nujoma_Presidency_NA", "name": "Sam Nujoma's Presidency", "year_range": [1990, 2005], "description": "Nujoma serves three terms; policy of national reconciliation; progressive constitution; Caprivi secessionist attempt 1999; land redistribution begins slowly."},
-          {"slug": "Pohamba_Geingob_NA", "name": "Pohamba and Geingob Presidencies", "year_range": [2005, 2024], "description": "Hifikepunye Pohamba (2005–2015) wins Mo Ibrahim Prize; Hage Geingob (2015–2024) faces corruption allegations; SWAPO dominance slowly erodes; youth unemployment crisis."},
-          {"slug": "Genocide_Recognition_NA", "name": "German Genocide Recognition", "year_range": [2004, 2026], "description": "Germany formally acknowledges Herero and Nama genocide in 2021; €1.1 billion development aid offer; Herero and Nama representatives reject terms as inadequate; reparations debate continues.", "key_events": ["Germany_Acknowledges_Genocide_2021"]},
-          {"slug": "Land_Reform_Economy_NA", "name": "Land Reform and Economic Challenges", "year_range": [1990, 2026], "description": "Willing-seller-willing-buyer land reform; white farmers still own disproportionate land; uranium and diamond mining; conservation economy (communal conservancies); Nana Mbumba becomes first female president 2024."}
+          {
+            "slug": "Nujoma_Presidency_NA",
+            "name": "Sam Nujoma's Presidency",
+            "year_range": [
+              1990,
+              2005
+            ],
+            "description": "Nujoma serves three terms; policy of national reconciliation; progressive constitution; Caprivi secessionist attempt 1999; land redistribution begins slowly."
+          },
+          {
+            "slug": "Pohamba_Geingob_NA",
+            "name": "Pohamba and Geingob Presidencies",
+            "year_range": [
+              2005,
+              2024
+            ],
+            "description": "Hifikepunye Pohamba (2005–2015) wins Mo Ibrahim Prize; Hage Geingob (2015–2024) faces corruption allegations; SWAPO dominance slowly erodes; youth unemployment crisis."
+          },
+          {
+            "slug": "Genocide_Recognition_NA",
+            "name": "German Genocide Recognition",
+            "year_range": [
+              2004,
+              2026
+            ],
+            "description": "Germany formally acknowledges Herero and Nama genocide in 2021; €1.1 billion development aid offer; Herero and Nama representatives reject terms as inadequate; reparations debate continues.",
+            "key_events": [
+              "Germany_Acknowledges_Genocide_2021"
+            ]
+          },
+          {
+            "slug": "Land_Reform_Economy_NA",
+            "name": "Land Reform and Economic Challenges",
+            "year_range": [
+              1990,
+              2026
+            ],
+            "description": "Willing-seller-willing-buyer land reform; white farmers still own disproportionate land; uranium and diamond mining; conservation economy (communal conservancies); Nana Mbumba becomes first female president 2024."
+          }
         ]
       }
     ]
   },
-  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "unassigned_events": {
+    "note": "Events not yet assigned to a thematic cluster",
+    "slugs": []
+  },
   "cross_cluster_interfaces": [
-    {"cluster": "San_Rock_Art_NA", "interfaces_with": ["San_Khoisan_Southern_Africa", "Rock_Art_Traditions", "Human_Origins_Africa"]},
-    {"cluster": "Nama_Herero_Conflicts", "interfaces_with": ["Khoikhoi_Cape_History", "Oorlam_Migrations", "Firearms_Trade_Southern_Africa"]},
-    {"cluster": "Herero_Nama_Genocide", "interfaces_with": ["German_Colonial_Empire", "Genocide_Studies", "Concentration_Camp_Origins", "Reparations_Justice"]},
-    {"cluster": "South_African_Mandate_NA", "interfaces_with": ["Apartheid_South_Africa", "League_Of_Nations_Mandates", "UN_Trusteeship"]},
-    {"cluster": "SWAPO_Liberation_NA", "interfaces_with": ["Angolan_Civil_War", "Cuban_Internationalism", "South_African_Border_War", "Cold_War_Africa"]},
-    {"cluster": "Genocide_Recognition_NA", "interfaces_with": ["Transitional_Justice", "Reparations_Movements", "German_Colonial_Legacy"]},
-    {"cluster": "Independent_Namibia", "interfaces_with": ["African_Democracy", "Land_Reform_Southern_Africa", "Conservation_Economy"]}
+    {
+      "cluster": "San_Rock_Art_NA",
+      "interfaces_with": [
+        "San_Khoisan_Southern_Africa",
+        "Rock_Art_Traditions",
+        "Human_Origins_Africa"
+      ]
+    },
+    {
+      "cluster": "Nama_Herero_Conflicts",
+      "interfaces_with": [
+        "Khoikhoi_Cape_History",
+        "Oorlam_Migrations",
+        "Firearms_Trade_Southern_Africa"
+      ]
+    },
+    {
+      "cluster": "Herero_Nama_Genocide",
+      "interfaces_with": [
+        "German_Colonial_Empire",
+        "Genocide_Studies",
+        "Concentration_Camp_Origins",
+        "Reparations_Justice"
+      ]
+    },
+    {
+      "cluster": "South_African_Mandate_NA",
+      "interfaces_with": [
+        "Apartheid_South_Africa",
+        "League_Of_Nations_Mandates",
+        "UN_Trusteeship"
+      ]
+    },
+    {
+      "cluster": "SWAPO_Liberation_NA",
+      "interfaces_with": [
+        "Angolan_Civil_War",
+        "Cuban_Internationalism",
+        "South_African_Border_War",
+        "Cold_War_Africa"
+      ]
+    },
+    {
+      "cluster": "Genocide_Recognition_NA",
+      "interfaces_with": [
+        "Transitional_Justice",
+        "Reparations_Movements",
+        "German_Colonial_Legacy"
+      ]
+    },
+    {
+      "cluster": "Independent_Namibia",
+      "interfaces_with": [
+        "African_Democracy",
+        "Land_Reform_Southern_Africa",
+        "Conservation_Economy"
+      ]
+    }
   ],
   "statistics": {
     "total_level4_clusters": 10,
     "total_level5_subclusters": 25,
     "active_clusters": 0,
     "planned_clusters": 10,
-    "timeframe_distribution": {"910": 1, "920": 1, "930": 1, "940": 2, "950": 1, "960": 1}
+    "timeframe_distribution": {
+      "910": 1,
+      "920": 1,
+      "930": 1,
+      "940": 2,
+      "950": 1,
+      "960": 1
+    }
   }
 }

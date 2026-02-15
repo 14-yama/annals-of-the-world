@@ -7,18 +7,30 @@
     "continent": "Africa",
     "iso3166_alpha2": "ZM",
     "iso3166_alpha3": "ZMB",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-06T00:00:00Z",
     "notes": "Comprehensive index for Zambia covering Bantu migration, Lozi/Bemba kingdoms, Livingstone/Victoria Falls, Northern Rhodesia, copper belt, Kaunda/UNIP, Chiluba multiparty transition, and copper dependency."
   },
   "country_profile": {
     "capital": "Lusaka",
-    "official_languages": ["English"],
-    "major_languages": ["Bemba", "Nyanja (Chewa)", "Tonga", "Lozi", "Kaonde", "Lunda", "Luvale"],
+    "official_languages": [
+      "English"
+    ],
     "government_type": "Unitary presidential constitutional republic",
     "currency": "Zambian kwacha (ZMW)",
-    "population": {"estimate": 20600000, "year": 2024, "source": "ZamStats"},
+    "population": {
+      "estimate": 20600000,
+      "year": 2024,
+      "source": "ZamStats"
+    },
     "area_km2": 752612,
     "gdp": {
       "nominal_total": "$29.8 billion",
@@ -28,7 +40,12 @@
       "year": 2024,
       "source": "IMF"
     },
-    "hdi": {"value": 0.565, "rank": 154, "year": 2022, "category": "Medium"},
+    "hdi": {
+      "value": 0.565,
+      "rank": 154,
+      "year": 2022,
+      "category": "Medium"
+    },
     "religion": {
       "Christianity": "95.5%",
       "Protestant": "75.3%",
@@ -39,26 +56,95 @@
       "note": "Constitution declares Zambia a 'Christian nation' (1991 amendment)"
     },
     "ethnic_groups": [
-      {"name": "Bemba", "percentage": 21, "notes": "Northern/Copperbelt provinces; Bantu; Bemba Kingdom (Chitimukulu paramount chief); largest group; mining/urban dominant; Bemba language widely spoken beyond ethnic Bemba"},
-      {"name": "Tonga", "percentage": 13.6, "notes": "Southern Province; Bantu; cattle pastoralists; displaced by Kariba Dam 1958; Tonga Plateau; agricultural"},
-      {"name": "Chewa (Nyanja)", "percentage": 7.4, "notes": "Eastern Province; Bantu; cross-border with Malawi/Mozambique; Gule Wamkulu secret society (UNESCO); Nyanja lingua franca in Lusaka"},
-      {"name": "Lozi (Barotse)", "percentage": 5.7, "notes": "Western Province; Barotseland Kingdom; Litunga (king); Kuomboka ceremony (UNESCO); Barotseland Agreement 1964; separatist sentiment"},
-      {"name": "Nsenga", "percentage": 5.3, "notes": "Eastern Province; Bantu; farming; Petauke area"},
-      {"name": "Tumbuka", "percentage": 4.4, "notes": "Eastern/Northern; Bantu; cross-border with Malawi; historically Ngoni-influenced"},
-      {"name": "Ngoni", "percentage": 4, "notes": "Eastern Province; Bantu; Zulu origin (Mfecane migration); warrior heritage; Mpezeni paramount chief; adopted Chewa language"},
-      {"name": "Lala", "percentage": 3.1, "notes": "Central Province; Bantu; Serenje/Mkushi; Lala-Bisa grouping; farming"},
-      {"name": "Kaonde", "percentage": 2.9, "notes": "Northwestern Province; Bantu; one of the seven 'official' language groups; mining area"},
-      {"name": "Lunda", "percentage": 2.6, "notes": "Northwestern Province; Bantu; cross-border with DR Congo/Angola; Lunda Empire heritage; Mwata Kazembe"},
-      {"name": "Luvale", "percentage": 2.2, "notes": "Northwestern Province; Bantu; Makishi masquerade (UNESCO); cross-border with Angola"},
-      {"name": "Mambwe-Lungu", "percentage": 2.5, "notes": "Northern Province; Lake Tanganyika area; farming/fishing"},
-      {"name": "Namwanga", "percentage": 2.8, "notes": "Muchinga/Northern; Bantu; cross-border with Tanzania; Nakonde area"},
-      {"name": "Other (70+ groups)", "percentage": 22.5, "notes": "Ila, Lenje, Soli, Bisa, Tabwa, Ushi, Mbunda, Nkoya, Tokaleya, and others; 73 ethnic groups / 7 official language groups; Zambia is notably peaceful inter-ethnically"}
+      {
+        "name": "Bemba",
+        "percentage": 21,
+        "notes": "Northern/Copperbelt provinces; Bantu; Bemba Kingdom (Chitimukulu paramount chief); largest group; mining/urban dominant; Bemba language widely spoken beyond ethnic Bemba"
+      },
+      {
+        "name": "Tonga",
+        "percentage": 13.6,
+        "notes": "Southern Province; Bantu; cattle pastoralists; displaced by Kariba Dam 1958; Tonga Plateau; agricultural"
+      },
+      {
+        "name": "Chewa (Nyanja)",
+        "percentage": 7.4,
+        "notes": "Eastern Province; Bantu; cross-border with Malawi/Mozambique; Gule Wamkulu secret society (UNESCO); Nyanja lingua franca in Lusaka"
+      },
+      {
+        "name": "Lozi (Barotse)",
+        "percentage": 5.7,
+        "notes": "Western Province; Barotseland Kingdom; Litunga (king); Kuomboka ceremony (UNESCO); Barotseland Agreement 1964; separatist sentiment"
+      },
+      {
+        "name": "Nsenga",
+        "percentage": 5.3,
+        "notes": "Eastern Province; Bantu; farming; Petauke area"
+      },
+      {
+        "name": "Tumbuka",
+        "percentage": 4.4,
+        "notes": "Eastern/Northern; Bantu; cross-border with Malawi; historically Ngoni-influenced"
+      },
+      {
+        "name": "Ngoni",
+        "percentage": 4,
+        "notes": "Eastern Province; Bantu; Zulu origin (Mfecane migration); warrior heritage; Mpezeni paramount chief; adopted Chewa language"
+      },
+      {
+        "name": "Lala",
+        "percentage": 3.1,
+        "notes": "Central Province; Bantu; Serenje/Mkushi; Lala-Bisa grouping; farming"
+      },
+      {
+        "name": "Kaonde",
+        "percentage": 2.9,
+        "notes": "Northwestern Province; Bantu; one of the seven 'official' language groups; mining area"
+      },
+      {
+        "name": "Lunda",
+        "percentage": 2.6,
+        "notes": "Northwestern Province; Bantu; cross-border with DR Congo/Angola; Lunda Empire heritage; Mwata Kazembe"
+      },
+      {
+        "name": "Luvale",
+        "percentage": 2.2,
+        "notes": "Northwestern Province; Bantu; Makishi masquerade (UNESCO); cross-border with Angola"
+      },
+      {
+        "name": "Mambwe-Lungu",
+        "percentage": 2.5,
+        "notes": "Northern Province; Lake Tanganyika area; farming/fishing"
+      },
+      {
+        "name": "Namwanga",
+        "percentage": 2.8,
+        "notes": "Muchinga/Northern; Bantu; cross-border with Tanzania; Nakonde area"
+      },
+      {
+        "name": "Other (70+ groups)",
+        "percentage": 22.5,
+        "notes": "Ila, Lenje, Soli, Bisa, Tabwa, Ushi, Mbunda, Nkoya, Tokaleya, and others; 73 ethnic groups / 7 official language groups; Zambia is notably peaceful inter-ethnically"
+      }
     ],
     "calling_code": "+260",
-    "iso3166_code": "ZM/ZMB",
+    "iso3166_alpha2": "ZM",
+    "iso3166_alpha3": "ZMB",
     "time_zone": "CAT (UTC+2)",
-    "independence": {"date": "1964-10-24", "from": "United Kingdom (as Northern Rhodesia)"},
-    "continent": "Africa"
+    "independence": {
+      "date": "1964-10-24",
+      "from": "United Kingdom (as Northern Rhodesia)"
+    },
+    "continent": "Africa",
+    "major_languages": [
+      "Bemba",
+      "Nyanja (Chewa)",
+      "Tonga",
+      "Lozi",
+      "Kaonde",
+      "Lunda",
+      "Luvale"
+    ]
   },
   "leadership": {
     "current_leader": {
@@ -67,13 +153,37 @@
       "since": "2021-08-24",
       "notes": "UPND; Tonga; businessman (cattle ranching); defeated Lungu in landslide after 6th attempt; economic reform focus; debt restructuring"
     },
-    "former_presidents": [
-      {"name": "Kenneth Kaunda", "term": "1964\u20131991", "notes": "Father of the Nation; UNIP; one-party state from 1972; 'KK'; Zambian humanism; copper nationalisation; frontline state against apartheid; peacefully accepted multiparty election loss 1991; died 2021"},
-      {"name": "Frederick Chiluba", "term": "1991\u20132001", "notes": "MMD; trade unionist; declared Zambia a 'Christian nation'; privatisation; tried to change constitution for third term; corruption convictions posthumously"},
-      {"name": "Levy Mwanawasa", "term": "2002\u20132008", "notes": "MMD; anti-corruption drive; prosecuted Chiluba; died in office (stroke) August 2008"},
-      {"name": "Rupiah Banda", "term": "2008\u20132011", "notes": "MMD; VP who succeeded Mwanawasa; lost to Sata 2011"},
-      {"name": "Michael Sata", "term": "2011\u20132014", "notes": "PF; 'King Cobra'; populist; died in office October 2014"},
-      {"name": "Edgar Lungu", "term": "2015\u20132021", "notes": "PF; completed Sata's term then won 2016; authoritarian drift; debt distress; lost to Hichilema 2021"}
+    "former_leaders": [
+      {
+        "name": "Kenneth Kaunda",
+        "term": "1964–1991",
+        "notes": "Father of the Nation; UNIP; one-party state from 1972; 'KK'; Zambian humanism; copper nationalisation; frontline state against apartheid; peacefully accepted multiparty election loss 1991; died 2021"
+      },
+      {
+        "name": "Frederick Chiluba",
+        "term": "1991–2001",
+        "notes": "MMD; trade unionist; declared Zambia a 'Christian nation'; privatisation; tried to change constitution for third term; corruption convictions posthumously"
+      },
+      {
+        "name": "Levy Mwanawasa",
+        "term": "2002–2008",
+        "notes": "MMD; anti-corruption drive; prosecuted Chiluba; died in office (stroke) August 2008"
+      },
+      {
+        "name": "Rupiah Banda",
+        "term": "2008–2011",
+        "notes": "MMD; VP who succeeded Mwanawasa; lost to Sata 2011"
+      },
+      {
+        "name": "Michael Sata",
+        "term": "2011–2014",
+        "notes": "PF; 'King Cobra'; populist; died in office October 2014"
+      },
+      {
+        "name": "Edgar Lungu",
+        "term": "2015–2021",
+        "notes": "PF; completed Sata's term then won 2016; authoritarian drift; debt distress; lost to Hichilema 2021"
+      }
     ]
   },
   "thematic_clusters": {
@@ -81,13 +191,43 @@
       {
         "slug": "Early_Peoples_Zambia",
         "name": "Early Peoples and Bantu Migration",
-        "year_range": [-300000, 1000],
+        "year_range": [
+          -300000,
+          1000
+        ],
         "status": "PLANNED",
         "description": "Khoisan hunter-gatherers; Bantu migration introduces farming, iron-working, and new linguistic families to the Zambian plateau.",
         "sub_clusters": [
-          {"slug": "Khoisan_Gatherers_ZM", "name": "Khoisan Hunter-Gatherer Communities", "year_range": [-300000, -500], "description": "San/Khoisan peoples as earliest inhabitants; Later Stone Age sites; Nachikufu cave culture."},
-          {"slug": "Bantu_Migration_ZM", "name": "Bantu Migration into Zambia", "year_range": [-300, 1000], "description": "Bantu-speaking peoples migrate into Zambia bringing iron smelting, pottery, and settled agriculture; displacement of Khoisan.", "key_events": ["Bantu_Migration_Southern_Africa"]},
-          {"slug": "Iron_Age_Zambia", "name": "Iron Age Societies", "year_range": [300, 1000], "description": "Chondwe, Kalambo Falls, and Ingombe Ilede archaeological sites; early copper smelting; long-distance trade emerges."}
+          {
+            "slug": "Khoisan_Gatherers_ZM",
+            "name": "Khoisan Hunter-Gatherer Communities",
+            "year_range": [
+              -300000,
+              -500
+            ],
+            "description": "San/Khoisan peoples as earliest inhabitants; Later Stone Age sites; Nachikufu cave culture."
+          },
+          {
+            "slug": "Bantu_Migration_ZM",
+            "name": "Bantu Migration into Zambia",
+            "year_range": [
+              -300,
+              1000
+            ],
+            "description": "Bantu-speaking peoples migrate into Zambia bringing iron smelting, pottery, and settled agriculture; displacement of Khoisan.",
+            "key_events": [
+              "Bantu_Migration_Southern_Africa"
+            ]
+          },
+          {
+            "slug": "Iron_Age_Zambia",
+            "name": "Iron Age Societies",
+            "year_range": [
+              300,
+              1000
+            ],
+            "description": "Chondwe, Kalambo Falls, and Ingombe Ilede archaeological sites; early copper smelting; long-distance trade emerges."
+          }
         ]
       }
     ],
@@ -95,14 +235,52 @@
       {
         "slug": "Pre_Colonial_Kingdoms_ZM",
         "name": "Pre-Colonial Kingdoms and Chiefdoms",
-        "year_range": [1000, 1800],
+        "year_range": [
+          1000,
+          1800
+        ],
         "status": "PLANNED",
         "description": "Development of major kingdoms: Lozi (Barotseland), Bemba, Lunda, Kazembe; trade networks linking central and southern Africa.",
         "sub_clusters": [
-          {"slug": "Lozi_Kingdom", "name": "Lozi Kingdom (Barotseland)", "year_range": [1600, 1900], "description": "Lozi Kingdom of the Zambezi floodplain; Litunga (king); annual Kuomboka ceremony; sophisticated flood management.", "key_events": ["Lozi_Kingdom_Barotseland"]},
-          {"slug": "Bemba_Kingdom", "name": "Bemba Kingdom", "year_range": [1700, 1900], "description": "Bemba Kingdom of the Crocodile Clan; paramount chief Chitimukulu; territorial expansion; ivory and slave trade."},
-          {"slug": "Lunda_Kazembe_ZM", "name": "Lunda-Kazembe Kingdom", "year_range": [1700, 1899], "description": "Eastern Lunda Kingdom of Kazembe in Luapula valley; trade links to both Atlantic and Indian Ocean coasts."},
-          {"slug": "Ingombe_Ilede_Trade", "name": "Ingombe Ilede and Long-Distance Trade", "year_range": [1000, 1500], "description": "Ingombe Ilede archaeological site on Zambezi; evidence of cross-continental gold, copper, and cloth trade."}
+          {
+            "slug": "Lozi_Kingdom",
+            "name": "Lozi Kingdom (Barotseland)",
+            "year_range": [
+              1600,
+              1900
+            ],
+            "description": "Lozi Kingdom of the Zambezi floodplain; Litunga (king); annual Kuomboka ceremony; sophisticated flood management.",
+            "key_events": [
+              "Lozi_Kingdom_Barotseland"
+            ]
+          },
+          {
+            "slug": "Bemba_Kingdom",
+            "name": "Bemba Kingdom",
+            "year_range": [
+              1700,
+              1900
+            ],
+            "description": "Bemba Kingdom of the Crocodile Clan; paramount chief Chitimukulu; territorial expansion; ivory and slave trade."
+          },
+          {
+            "slug": "Lunda_Kazembe_ZM",
+            "name": "Lunda-Kazembe Kingdom",
+            "year_range": [
+              1700,
+              1899
+            ],
+            "description": "Eastern Lunda Kingdom of Kazembe in Luapula valley; trade links to both Atlantic and Indian Ocean coasts."
+          },
+          {
+            "slug": "Ingombe_Ilede_Trade",
+            "name": "Ingombe Ilede and Long-Distance Trade",
+            "year_range": [
+              1000,
+              1500
+            ],
+            "description": "Ingombe Ilede archaeological site on Zambezi; evidence of cross-continental gold, copper, and cloth trade."
+          }
         ]
       }
     ],
@@ -110,13 +288,43 @@
       {
         "slug": "Exploration_Livingstone_ZM",
         "name": "European Exploration and Missionary Era",
-        "year_range": [1798, 1890],
+        "year_range": [
+          1798,
+          1890
+        ],
         "status": "PLANNED",
         "description": "David Livingstone's explorations; Victoria Falls discovery; missionary stations; Lozi-British relations; slave trade disruption.",
         "sub_clusters": [
-          {"slug": "Livingstone_Victoria_Falls", "name": "Livingstone and Victoria Falls", "year_range": [1851, 1873], "description": "David Livingstone reaches Mosi-oa-Tunya (Victoria Falls) 1855; transcontinental journey; anti-slave trade advocacy.", "key_events": ["Livingstone_Victoria_Falls_1855"]},
-          {"slug": "Missionary_Stations_ZM", "name": "Missionary Stations", "year_range": [1860, 1900], "description": "Paris Evangelical Mission in Barotseland; London Missionary Society; White Fathers; Christianity and literacy introduced."},
-          {"slug": "Slave_Trade_Disruption_ZM", "name": "Slave Trade and Its Disruption", "year_range": [1800, 1890], "description": "Arab-Swahili and Portuguese slave trading in eastern Zambia; Livingstone's campaigns; British anti-slavery intervention."}
+          {
+            "slug": "Livingstone_Victoria_Falls",
+            "name": "Livingstone and Victoria Falls",
+            "year_range": [
+              1851,
+              1873
+            ],
+            "description": "David Livingstone reaches Mosi-oa-Tunya (Victoria Falls) 1855; transcontinental journey; anti-slave trade advocacy.",
+            "key_events": [
+              "Livingstone_Victoria_Falls_1855"
+            ]
+          },
+          {
+            "slug": "Missionary_Stations_ZM",
+            "name": "Missionary Stations",
+            "year_range": [
+              1860,
+              1900
+            ],
+            "description": "Paris Evangelical Mission in Barotseland; London Missionary Society; White Fathers; Christianity and literacy introduced."
+          },
+          {
+            "slug": "Slave_Trade_Disruption_ZM",
+            "name": "Slave Trade and Its Disruption",
+            "year_range": [
+              1800,
+              1890
+            ],
+            "description": "Arab-Swahili and Portuguese slave trading in eastern Zambia; Livingstone's campaigns; British anti-slavery intervention."
+          }
         ]
       }
     ],
@@ -124,14 +332,55 @@
       {
         "slug": "Northern_Rhodesia",
         "name": "Northern Rhodesia (Colonial Period)",
-        "year_range": [1889, 1964],
+        "year_range": [
+          1889,
+          1964
+        ],
         "status": "PLANNED",
         "description": "BSAC charter; Northern Rhodesia colony; copper belt development; Federation of Rhodesia and Nyasaland; African resistance.",
         "sub_clusters": [
-          {"slug": "BSAC_Northern_Rhodesia", "name": "BSAC and Colonial Conquest", "year_range": [1889, 1924], "description": "British South Africa Company secures mineral rights through treaties; amalgamation of North-Western and North-Eastern Rhodesia 1911; Crown colony 1924.", "key_events": ["BSAC_Northern_Rhodesia"]},
-          {"slug": "Copper_Belt_Development", "name": "Copper Belt Development", "year_range": [1928, 1964], "description": "Major copper deposits exploited from 1928; migrant labour system; copper belt towns; African mine workers' unions."},
-          {"slug": "Federation_Rhodesia_Nyasaland", "name": "Federation of Rhodesia and Nyasaland", "year_range": [1953, 1963], "description": "Central African Federation imposed despite African opposition; copper revenues benefit Southern Rhodesia; dissolution 1963."},
-          {"slug": "UNIP_Independence_Movement", "name": "UNIP and Independence Movement", "year_range": [1958, 1964], "description": "Kenneth Kaunda leads UNIP; Cha Cha Cha civil disobedience campaign; independence 24 October 1964.", "key_events": ["Independence_Zambia_1964"]}
+          {
+            "slug": "BSAC_Northern_Rhodesia",
+            "name": "BSAC and Colonial Conquest",
+            "year_range": [
+              1889,
+              1924
+            ],
+            "description": "British South Africa Company secures mineral rights through treaties; amalgamation of North-Western and North-Eastern Rhodesia 1911; Crown colony 1924.",
+            "key_events": [
+              "BSAC_Northern_Rhodesia"
+            ]
+          },
+          {
+            "slug": "Copper_Belt_Development",
+            "name": "Copper Belt Development",
+            "year_range": [
+              1928,
+              1964
+            ],
+            "description": "Major copper deposits exploited from 1928; migrant labour system; copper belt towns; African mine workers' unions."
+          },
+          {
+            "slug": "Federation_Rhodesia_Nyasaland",
+            "name": "Federation of Rhodesia and Nyasaland",
+            "year_range": [
+              1953,
+              1963
+            ],
+            "description": "Central African Federation imposed despite African opposition; copper revenues benefit Southern Rhodesia; dissolution 1963."
+          },
+          {
+            "slug": "UNIP_Independence_Movement",
+            "name": "UNIP and Independence Movement",
+            "year_range": [
+              1958,
+              1964
+            ],
+            "description": "Kenneth Kaunda leads UNIP; Cha Cha Cha civil disobedience campaign; independence 24 October 1964.",
+            "key_events": [
+              "Independence_Zambia_1964"
+            ]
+          }
         ]
       }
     ],
@@ -139,14 +388,49 @@
       {
         "slug": "Kaunda_Era_ZM",
         "name": "Kaunda and One-Party State",
-        "year_range": [1964, 1991],
+        "year_range": [
+          1964,
+          1991
+        ],
         "status": "PLANNED",
         "description": "Kaunda's humanist one-party state; nationalisation; front-line state against apartheid; copper price collapse; economic crisis.",
         "sub_clusters": [
-          {"slug": "Kaunda_Humanism", "name": "Kaunda's Zambian Humanism", "year_range": [1964, 1972], "description": "Kenneth Kaunda first president; Zambian Humanism philosophy; nationalisation of mines (Zambia Industrial and Mining Corporation)."},
-          {"slug": "One_Party_State_ZM", "name": "One-Party State", "year_range": [1972, 1991], "description": "Second Republic; UNIP sole legal party; authoritarian governance; economic mismanagement; opposition suppressed."},
-          {"slug": "Front_Line_State_ZM", "name": "Front-Line State Against Apartheid", "year_range": [1964, 1990], "description": "Zambia hosts ANC, SWAPO, and Zimbabwean liberation movements; Rhodesian and South African attacks; TAZARA railway built with Chinese aid."},
-          {"slug": "Copper_Crisis_ZM", "name": "Copper Price Collapse", "year_range": [1975, 1991], "description": "Global copper price crash devastates economy; GDP decline; mounting debt; IMF structural adjustment; food riots 1986-1990."}
+          {
+            "slug": "Kaunda_Humanism",
+            "name": "Kaunda's Zambian Humanism",
+            "year_range": [
+              1964,
+              1972
+            ],
+            "description": "Kenneth Kaunda first president; Zambian Humanism philosophy; nationalisation of mines (Zambia Industrial and Mining Corporation)."
+          },
+          {
+            "slug": "One_Party_State_ZM",
+            "name": "One-Party State",
+            "year_range": [
+              1972,
+              1991
+            ],
+            "description": "Second Republic; UNIP sole legal party; authoritarian governance; economic mismanagement; opposition suppressed."
+          },
+          {
+            "slug": "Front_Line_State_ZM",
+            "name": "Front-Line State Against Apartheid",
+            "year_range": [
+              1964,
+              1990
+            ],
+            "description": "Zambia hosts ANC, SWAPO, and Zimbabwean liberation movements; Rhodesian and South African attacks; TAZARA railway built with Chinese aid."
+          },
+          {
+            "slug": "Copper_Crisis_ZM",
+            "name": "Copper Price Collapse",
+            "year_range": [
+              1975,
+              1991
+            ],
+            "description": "Global copper price crash devastates economy; GDP decline; mounting debt; IMF structural adjustment; food riots 1986-1990."
+          }
         ]
       }
     ],
@@ -154,33 +438,127 @@
       {
         "slug": "Multiparty_Modern_ZM",
         "name": "Multiparty Zambia and Modern Era",
-        "year_range": [1991, 2026],
+        "year_range": [
+          1991,
+          2026
+        ],
         "status": "PLANNED",
         "description": "Chiluba democratic transition; copper privatisation; presidential term debates; Lungu; Hichilema; economic diversification efforts.",
         "sub_clusters": [
-          {"slug": "Chiluba_Transition", "name": "Chiluba and Democratic Transition", "year_range": [1991, 2001], "description": "Frederick Chiluba's MMD defeats Kaunda in multiparty elections 1991; economic liberalisation; copper mine privatisation; corruption.", "key_events": ["Zambia_Multiparty_Elections_1991"]},
-          {"slug": "Copper_Dependency_ZM", "name": "Copper Dependency and Diversification", "year_range": [2000, 2026], "description": "Copper supercycle benefits then challenges Zambia; Chinese investment; debt crisis; diversification into agriculture and tourism."},
-          {"slug": "Democratic_Consolidation_ZM", "name": "Democratic Consolidation Challenges", "year_range": [2001, 2026], "description": "Mwanawasa, Banda, Sata, Lungu presidencies; third-term debates; Hichilema wins 2021; democratic renewal."},
-          {"slug": "Debt_Crisis_ZM", "name": "Debt Crisis and IMF Programme", "year_range": [2020, 2026], "description": "Zambia defaults on Eurobond debt November 2020; first African COVID-era sovereign default; IMF programme; debt restructuring."}
+          {
+            "slug": "Chiluba_Transition",
+            "name": "Chiluba and Democratic Transition",
+            "year_range": [
+              1991,
+              2001
+            ],
+            "description": "Frederick Chiluba's MMD defeats Kaunda in multiparty elections 1991; economic liberalisation; copper mine privatisation; corruption.",
+            "key_events": [
+              "Zambia_Multiparty_Elections_1991"
+            ]
+          },
+          {
+            "slug": "Copper_Dependency_ZM",
+            "name": "Copper Dependency and Diversification",
+            "year_range": [
+              2000,
+              2026
+            ],
+            "description": "Copper supercycle benefits then challenges Zambia; Chinese investment; debt crisis; diversification into agriculture and tourism."
+          },
+          {
+            "slug": "Democratic_Consolidation_ZM",
+            "name": "Democratic Consolidation Challenges",
+            "year_range": [
+              2001,
+              2026
+            ],
+            "description": "Mwanawasa, Banda, Sata, Lungu presidencies; third-term debates; Hichilema wins 2021; democratic renewal."
+          },
+          {
+            "slug": "Debt_Crisis_ZM",
+            "name": "Debt Crisis and IMF Programme",
+            "year_range": [
+              2020,
+              2026
+            ],
+            "description": "Zambia defaults on Eurobond debt November 2020; first African COVID-era sovereign default; IMF programme; debt restructuring."
+          }
         ]
       }
     ]
   },
-  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "unassigned_events": {
+    "note": "Events not yet assigned to a thematic cluster",
+    "slugs": []
+  },
   "cross_cluster_interfaces": [
-    {"cluster": "Pre_Colonial_Kingdoms_ZM", "interfaces_with": ["Lunda_Empire", "Great_Zimbabwe", "Indian_Ocean_Trade"]},
-    {"cluster": "Livingstone_Victoria_Falls", "interfaces_with": ["Victorian_Exploration_Africa", "Abolition_Movements"]},
-    {"cluster": "BSAC_Northern_Rhodesia", "interfaces_with": ["Cecil_Rhodes", "Scramble_For_Africa", "British_South_Africa_Company"]},
-    {"cluster": "Copper_Belt_Development", "interfaces_with": ["African_Mining_Labour", "Urbanisation_Africa"]},
-    {"cluster": "Front_Line_State_ZM", "interfaces_with": ["Anti_Apartheid_Movement", "Southern_African_Liberation", "TAZARA_Railway"]},
-    {"cluster": "Copper_Crisis_ZM", "interfaces_with": ["Commodity_Dependency", "IMF_Structural_Adjustment", "African_Debt_Crisis"]},
-    {"cluster": "Chiluba_Transition", "interfaces_with": ["African_Democratisation", "Third_Wave_Democracy"]}
+    {
+      "cluster": "Pre_Colonial_Kingdoms_ZM",
+      "interfaces_with": [
+        "Lunda_Empire",
+        "Great_Zimbabwe",
+        "Indian_Ocean_Trade"
+      ]
+    },
+    {
+      "cluster": "Livingstone_Victoria_Falls",
+      "interfaces_with": [
+        "Victorian_Exploration_Africa",
+        "Abolition_Movements"
+      ]
+    },
+    {
+      "cluster": "BSAC_Northern_Rhodesia",
+      "interfaces_with": [
+        "Cecil_Rhodes",
+        "Scramble_For_Africa",
+        "British_South_Africa_Company"
+      ]
+    },
+    {
+      "cluster": "Copper_Belt_Development",
+      "interfaces_with": [
+        "African_Mining_Labour",
+        "Urbanisation_Africa"
+      ]
+    },
+    {
+      "cluster": "Front_Line_State_ZM",
+      "interfaces_with": [
+        "Anti_Apartheid_Movement",
+        "Southern_African_Liberation",
+        "TAZARA_Railway"
+      ]
+    },
+    {
+      "cluster": "Copper_Crisis_ZM",
+      "interfaces_with": [
+        "Commodity_Dependency",
+        "IMF_Structural_Adjustment",
+        "African_Debt_Crisis"
+      ]
+    },
+    {
+      "cluster": "Chiluba_Transition",
+      "interfaces_with": [
+        "African_Democratisation",
+        "Third_Wave_Democracy"
+      ]
+    }
   ],
   "statistics": {
     "total_level4_clusters": 8,
     "total_level5_subclusters": 26,
     "active_clusters": 0,
     "planned_clusters": 8,
-    "timeframe_distribution": {"910": 1, "920": 1, "930": 1, "940": 1, "950": 1, "960": 1}
+    "timeframe_distribution": {
+      "910": 1,
+      "920": 1,
+      "930": 1,
+      "940": 1,
+      "950": 1,
+      "960": 1
+    }
   }
 }

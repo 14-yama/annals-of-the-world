@@ -7,17 +7,30 @@
     "continent": "Asia",
     "iso_alpha2": "CN",
     "iso_alpha3": "CHN",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-07T00:00:00Z",
     "notes": "Comprehensive index for China covering Neolithic cultures (Yangshao, Longshan), Xia-Shang-Zhou dynasties, Warring States, Qin unification, Han dynasty and Silk Road, Three Kingdoms, Tang golden age, Song innovations, Yuan (Mongol), Ming (Great Wall/Forbidden City/Zheng He), Qing dynasty, Opium Wars, Taiping Rebellion, Republic (Sun Yat-sen), warlords, Japanese invasion, Chinese Civil War, PRC (Mao/Great Leap Forward/Cultural Revolution), Deng Xiaoping reforms, Tiananmen 1989, economic miracle, Xi Jinping era, and Belt and Road Initiative."
   },
   "country_profile": {
     "capital": "Beijing",
-    "official_languages": ["Standard Chinese (Mandarin/Putonghua)"],
+    "official_languages": [
+      "Standard Chinese (Mandarin/Putonghua)"
+    ],
     "government_type": "Unitary Marxist-Leninist one-party socialist republic",
     "currency": "Renminbi / Chinese yuan (CNY/RMB)",
-    "population": {"estimate": 1410000000, "year": 2024, "source": "NBS China"},
+    "population": {
+      "estimate": 1410000000,
+      "year": 2024,
+      "source": "NBS China"
+    },
     "area_km2": 9596961,
     "gdp": {
       "nominal_total": "$18.5 trillion",
@@ -27,7 +40,12 @@
       "year": 2024,
       "source": "IMF"
     },
-    "hdi": {"value": 0.788, "rank": 75, "year": 2022, "category": "High"},
+    "hdi": {
+      "value": 0.788,
+      "rank": 75,
+      "year": 2022,
+      "category": "High"
+    },
     "religion": {
       "Unaffiliated_Folk_religion": "73.6%",
       "Buddhism": "15.9%",
@@ -38,23 +56,76 @@
       "note": "Officially atheist state; folk religion includes ancestor worship, Confucian values, Taoist/Buddhist syncretism; underground Catholic and Protestant churches; Muslim Hui and Uyghur minorities"
     },
     "ethnic_groups": [
-      {"name": "Han Chinese", "percentage": 91.1, "notes": "World's largest ethnic group; diverse sub-groups by dialect/region: Mandarin, Wu (Shanghainese), Cantonese (Yue), Min (Hokkien/Teochew), Hakka, Gan, Xiang; unified by Chinese characters"},
-      {"name": "Zhuang", "percentage": 1.27, "notes": "Largest minority; Tai-speaking; Guangxi; closely related to Thai/Lao; rice terraces; historically Nanyue cultural sphere"},
-      {"name": "Uyghur", "percentage": 0.76, "notes": "Turkic Muslim; Xinjiang; Uyghur language; East Turkestan independence movement; mass internment camps ('re-education') since 2017; UN: possible crimes against humanity"},
-      {"name": "Hui", "percentage": 0.79, "notes": "Chinese-speaking Muslims; dispersed nationwide; Ningxia Hui Autonomous Region; descended from Arab/Persian traders and Chinese converts; Dungan"},
-      {"name": "Manchu", "percentage": 0.78, "notes": "Tungusic; Manchuria/northeast; founded Qing dynasty (1644-1912); largely assimilated; Manchu language nearly extinct"},
-      {"name": "Miao (Hmong)", "percentage": 0.65, "notes": "Guizhou, Yunnan, Hunan; Hmong-Mien; highland farming; silver jewellery; many fled to Southeast Asia/US after Vietnam War"},
-      {"name": "Yi (Lolo)", "percentage": 0.65, "notes": "Tibeto-Burman; Sichuan, Yunnan; Nuosu script; traditionally caste-based society"},
-      {"name": "Tujia", "percentage": 0.63, "notes": "Hunan, Hubei; Tibeto-Burman; mountain areas; largely assimilated into Han"},
-      {"name": "Tibetan", "percentage": 0.47, "notes": "Tibeto-Burman; Tibet, Qinghai, Sichuan, Gansu, Yunnan; Vajrayana Buddhist; Dalai Lama in exile since 1959; contested autonomy"},
-      {"name": "Mongol", "percentage": 0.44, "notes": "Inner Mongolia; Mongolic; pastoralists; Yuan dynasty heritage; cross-border with Mongolia"},
-      {"name": "Korean", "percentage": 0.14, "notes": "Yanbian Autonomous Prefecture, Jilin; Korean-speaking; cross-border with North Korea"},
-      {"name": "Other (55 recognised nationalities total)", "percentage": 2.32, "notes": "Dong, Yao, Bai, Hani, Kazakh, Dai (Thai), Li, Lisu, Wa, She, Lahu, Shui, Naxi, Qiang, Tu, Mulao, Xibe, Kirgiz, Daur, Jingpo, Salar, Blang, Tajik, Achang, Pumi, Ewenki, Nu, Jino, De'ang, Bonan, Russian, Yugur, Uzbek, Monba, Oroqen, Derung, Tatar, Hezhen, Lhoba, Gaoshan"}
+      {
+        "name": "Han Chinese",
+        "percentage": 91.1,
+        "notes": "World's largest ethnic group; diverse sub-groups by dialect/region: Mandarin, Wu (Shanghainese), Cantonese (Yue), Min (Hokkien/Teochew), Hakka, Gan, Xiang; unified by Chinese characters"
+      },
+      {
+        "name": "Zhuang",
+        "percentage": 1.27,
+        "notes": "Largest minority; Tai-speaking; Guangxi; closely related to Thai/Lao; rice terraces; historically Nanyue cultural sphere"
+      },
+      {
+        "name": "Uyghur",
+        "percentage": 0.76,
+        "notes": "Turkic Muslim; Xinjiang; Uyghur language; East Turkestan independence movement; mass internment camps ('re-education') since 2017; UN: possible crimes against humanity"
+      },
+      {
+        "name": "Hui",
+        "percentage": 0.79,
+        "notes": "Chinese-speaking Muslims; dispersed nationwide; Ningxia Hui Autonomous Region; descended from Arab/Persian traders and Chinese converts; Dungan"
+      },
+      {
+        "name": "Manchu",
+        "percentage": 0.78,
+        "notes": "Tungusic; Manchuria/northeast; founded Qing dynasty (1644-1912); largely assimilated; Manchu language nearly extinct"
+      },
+      {
+        "name": "Miao (Hmong)",
+        "percentage": 0.65,
+        "notes": "Guizhou, Yunnan, Hunan; Hmong-Mien; highland farming; silver jewellery; many fled to Southeast Asia/US after Vietnam War"
+      },
+      {
+        "name": "Yi (Lolo)",
+        "percentage": 0.65,
+        "notes": "Tibeto-Burman; Sichuan, Yunnan; Nuosu script; traditionally caste-based society"
+      },
+      {
+        "name": "Tujia",
+        "percentage": 0.63,
+        "notes": "Hunan, Hubei; Tibeto-Burman; mountain areas; largely assimilated into Han"
+      },
+      {
+        "name": "Tibetan",
+        "percentage": 0.47,
+        "notes": "Tibeto-Burman; Tibet, Qinghai, Sichuan, Gansu, Yunnan; Vajrayana Buddhist; Dalai Lama in exile since 1959; contested autonomy"
+      },
+      {
+        "name": "Mongol",
+        "percentage": 0.44,
+        "notes": "Inner Mongolia; Mongolic; pastoralists; Yuan dynasty heritage; cross-border with Mongolia"
+      },
+      {
+        "name": "Korean",
+        "percentage": 0.14,
+        "notes": "Yanbian Autonomous Prefecture, Jilin; Korean-speaking; cross-border with North Korea"
+      },
+      {
+        "name": "Other (55 recognised nationalities total)",
+        "percentage": 2.32,
+        "notes": "Dong, Yao, Bai, Hani, Kazakh, Dai (Thai), Li, Lisu, Wa, She, Lahu, Shui, Naxi, Qiang, Tu, Mulao, Xibe, Kirgiz, Daur, Jingpo, Salar, Blang, Tajik, Achang, Pumi, Ewenki, Nu, Jino, De'ang, Bonan, Russian, Yugur, Uzbek, Monba, Oroqen, Derung, Tatar, Hezhen, Lhoba, Gaoshan"
+      }
     ],
     "calling_code": "+86",
-    "iso3166_code": "CN/CHN",
+    "iso3166_alpha2": "CN",
+    "iso3166_alpha3": "CHN",
     "time_zone": "CST (UTC+8, single time zone for entire country)",
-    "independence": {"date": "1949-10-01 (PRC founded)", "from": "N/A (continuous civilisation)", "notes": "Republic of China 1912; PRC proclaimed 1949; ROC government retreated to Taiwan"},
+    "independence": {
+      "date": "1949-10-01 (PRC founded)",
+      "from": "N/A (continuous civilisation)",
+      "notes": "Republic of China 1912; PRC proclaimed 1949; ROC government retreated to Taiwan"
+    },
     "continent": "Asia",
     "notes_unique": "World's most populous country (until 2023, surpassed by India); 5,000+ year continuous civilisation; permanent UNSC member; world's largest GDP by PPP; 56 recognised ethnic groups"
   },
@@ -71,12 +142,36 @@
       "since": "2023-03-11"
     },
     "former_leaders": [
-      {"name": "Mao Zedong", "term": "1949\u20131976", "notes": "Founder of PRC; CCP Chairman; Long March; Great Leap Forward (famine: 15-55 million dead); Cultural Revolution; died September 1976"},
-      {"name": "Deng Xiaoping", "term": "1978\u20131989 (paramount leader)", "notes": "'Reform and Opening Up'; Special Economic Zones; Tiananmen Square crackdown 1989; 'Socialism with Chinese Characteristics'; 'It doesn't matter whether the cat is black or white'"},
-      {"name": "Jiang Zemin", "term": "1989\u20132002", "notes": "CCP General Secretary; Shanghai faction; WTO accession 2001; Three Represents; died 2022"},
-      {"name": "Hu Jintao", "term": "2002\u20132012", "notes": "CCP; 'Harmonious Society'; economic boom; 2008 Olympics; collective leadership; removed from 2022 Party Congress podium"},
-      {"name": "Sun Yat-sen", "term": "1912 (provisional president)", "notes": "'Father of the Nation' (ROC); Xinhai Revolution; Three Principles of the People; KMT founder"},
-      {"name": "Chiang Kai-shek", "term": "1928\u20131949 (mainland)", "notes": "KMT; Nationalist government; Northern Expedition; WWII leader; lost civil war; retreated to Taiwan"}
+      {
+        "name": "Mao Zedong",
+        "term": "1949–1976",
+        "notes": "Founder of PRC; CCP Chairman; Long March; Great Leap Forward (famine: 15-55 million dead); Cultural Revolution; died September 1976"
+      },
+      {
+        "name": "Deng Xiaoping",
+        "term": "1978–1989 (paramount leader)",
+        "notes": "'Reform and Opening Up'; Special Economic Zones; Tiananmen Square crackdown 1989; 'Socialism with Chinese Characteristics'; 'It doesn't matter whether the cat is black or white'"
+      },
+      {
+        "name": "Jiang Zemin",
+        "term": "1989–2002",
+        "notes": "CCP General Secretary; Shanghai faction; WTO accession 2001; Three Represents; died 2022"
+      },
+      {
+        "name": "Hu Jintao",
+        "term": "2002–2012",
+        "notes": "CCP; 'Harmonious Society'; economic boom; 2008 Olympics; collective leadership; removed from 2022 Party Congress podium"
+      },
+      {
+        "name": "Sun Yat-sen",
+        "term": "1912 (provisional president)",
+        "notes": "'Father of the Nation' (ROC); Xinhai Revolution; Three Principles of the People; KMT founder"
+      },
+      {
+        "name": "Chiang Kai-shek",
+        "term": "1928–1949 (mainland)",
+        "notes": "KMT; Nationalist government; Northern Expedition; WWII leader; lost civil war; retreated to Taiwan"
+      }
     ]
   },
   "thematic_clusters": {
@@ -84,20 +179,29 @@
       {
         "slug": "prehistoric-and-neolithic-china",
         "name": "Prehistoric and Neolithic China",
-        "year_range": [-7000, -2070],
+        "year_range": [
+          -7000,
+          -2070
+        ],
         "status": "PLANNED",
         "description": "The earliest civilizations of China from Neolithic cultures to the legendary Xia dynasty, including the Yangshao, Longshan, and Liangzhu cultures that laid the foundations of Chinese civilization.",
         "sub_clusters": [
           {
             "slug": "yangshao-and-early-neolithic-cultures",
             "name": "Yangshao and Early Neolithic Cultures",
-            "year_range": [-7000, -3000],
+            "year_range": [
+              -7000,
+              -3000
+            ],
             "description": "The development of millet and rice agriculture along the Yellow and Yangtze Rivers, painted pottery traditions, and early village settlements that formed the cradle of Chinese civilization."
           },
           {
             "slug": "longshan-and-late-neolithic-cultures",
             "name": "Longshan and Late Neolithic Cultures",
-            "year_range": [-3000, -2070],
+            "year_range": [
+              -3000,
+              -2070
+            ],
             "description": "The Longshan black pottery culture, the jade-carving Liangzhu culture, proto-urban walled settlements, and the legendary sage kings Yao, Shun, and Yu.",
             "key_events": [
               "Liangzhu culture develops advanced jade-working and proto-urban centers (c. 3300–2300 BC)",
@@ -109,20 +213,29 @@
       {
         "slug": "shang-dynasty",
         "name": "Shang Dynasty",
-        "year_range": [-1600, -1046],
+        "year_range": [
+          -1600,
+          -1046
+        ],
         "status": "PLANNED",
         "description": "China's first archaeologically verified dynasty, renowned for oracle bone inscriptions, magnificent bronze casting, ancestor worship, and the development of Chinese writing.",
         "sub_clusters": [
           {
             "slug": "early-shang-and-erligang-culture",
             "name": "Early Shang and Erligang Culture",
-            "year_range": [-1600, -1300],
+            "year_range": [
+              -1600,
+              -1300
+            ],
             "description": "The early Shang capital at Zhengzhou, the Erligang bronze tradition, the expansion of Shang political influence, and the development of urban centers with palace-temple complexes."
           },
           {
             "slug": "late-shang-at-anyang",
             "name": "Late Shang at Anyang",
-            "year_range": [-1300, -1046],
+            "year_range": [
+              -1300,
+              -1046
+            ],
             "description": "The Shang capital at Yin (Anyang), oracle bone divination and the earliest Chinese writing, the spectacular bronze vessels of Fu Hao's tomb, and the tyrannical last king Zhou.",
             "key_events": [
               "Oracle bone inscriptions at Anyang — earliest substantial Chinese writing (c. 1200 BC)",
@@ -134,14 +247,20 @@
       {
         "slug": "zhou-dynasty",
         "name": "Zhou Dynasty",
-        "year_range": [-1046, -256],
+        "year_range": [
+          -1046,
+          -256
+        ],
         "status": "PLANNED",
         "description": "The longest dynasty in Chinese history, encompassing the Western Zhou's Mandate of Heaven, the Spring and Autumn period of Confucius, and the Warring States era of philosophical flourishing.",
         "sub_clusters": [
           {
             "slug": "western-zhou",
             "name": "Western Zhou",
-            "year_range": [-1046, -771],
+            "year_range": [
+              -1046,
+              -771
+            ],
             "description": "King Wu's conquest of the Shang, the Duke of Zhou's regency, the feudal fengjian system, the concept of the Mandate of Heaven, and the collapse after the sack of Haojing.",
             "key_events": [
               "Battle of Muye — King Wu defeats the Shang and establishes the Zhou dynasty (1046 BC)"
@@ -150,7 +269,10 @@
           {
             "slug": "spring-and-autumn-period",
             "name": "Spring and Autumn Period",
-            "year_range": [-771, -476],
+            "year_range": [
+              -771,
+              -476
+            ],
             "description": "The era of hegemonic lords (ba), the life and teachings of Confucius, Sun Tzu's Art of War, the decline of Zhou royal authority, and the rise of powerful regional states.",
             "key_events": [
               "Confucius born in the state of Lu; his teachings shape Chinese civilization (551 BC)",
@@ -160,7 +282,10 @@
           {
             "slug": "warring-states-period",
             "name": "Warring States Period",
-            "year_range": [-476, -221],
+            "year_range": [
+              -476,
+              -221
+            ],
             "description": "The era of total warfare among seven major states, the Hundred Schools of Thought (Mohism, Daoism, Legalism), iron technology, mass armies, and the rise of the state of Qin.",
             "key_events": [
               "Mencius, Zhuangzi, and other philosophers flourish during the Hundred Schools era",
@@ -172,14 +297,20 @@
       {
         "slug": "qin-and-han-dynasties",
         "name": "Qin and Han Dynasties",
-        "year_range": [-221, 220],
+        "year_range": [
+          -221,
+          220
+        ],
         "status": "PLANNED",
         "description": "The first unification of China under Qin Shi Huang, the enduring Han dynasty that defined Chinese civilization, the Silk Road, Confucian state ideology, and groundbreaking inventions.",
         "sub_clusters": [
           {
             "slug": "qin-unification",
             "name": "Qin Unification",
-            "year_range": [-221, -206],
+            "year_range": [
+              -221,
+              -206
+            ],
             "description": "Qin Shi Huang's conquest and unification of China, standardization of weights, measures, currency, and writing, the Great Wall, the Terracotta Army, and the brutal Legalist regime.",
             "key_events": [
               "Qin Shi Huang unifies China and becomes the First Emperor (221 BC)",
@@ -189,7 +320,10 @@
           {
             "slug": "western-han-dynasty",
             "name": "Western Han Dynasty",
-            "year_range": [-206, 9],
+            "year_range": [
+              -206,
+              9
+            ],
             "description": "Liu Bang's founding of the Han, Emperor Wu's expansion and adoption of Confucianism as state ideology, Zhang Qian's opening of the Silk Road, and Sima Qian's Records of the Grand Historian.",
             "key_events": [
               "Emperor Wu adopts Confucianism as the state ideology (136 BC)",
@@ -199,7 +333,10 @@
           {
             "slug": "eastern-han-dynasty",
             "name": "Eastern Han Dynasty",
-            "year_range": [25, 220],
+            "year_range": [
+              25,
+              220
+            ],
             "description": "The restoration under Emperor Guangwu, the invention of paper by Cai Lun, the arrival of Buddhism, the eunuch-scholar faction struggles, and the Yellow Turban Rebellion leading to collapse.",
             "key_events": [
               "Cai Lun improves papermaking — one of China's Four Great Inventions (105 AD)",
@@ -213,14 +350,20 @@
       {
         "slug": "three-kingdoms-to-sui-reunification",
         "name": "Three Kingdoms to Sui Reunification",
-        "year_range": [220, 618],
+        "year_range": [
+          220,
+          618
+        ],
         "status": "PLANNED",
         "description": "The romantic Three Kingdoms era, the period of division between north and south, the spread of Buddhism, the brief Sui reunification, and the Grand Canal construction.",
         "sub_clusters": [
           {
             "slug": "three-kingdoms-and-jin-dynasty",
             "name": "Three Kingdoms and Jin Dynasty",
-            "year_range": [220, 420],
+            "year_range": [
+              220,
+              420
+            ],
             "description": "The rivalry of Wei, Shu, and Wu immortalized in the Romance of the Three Kingdoms, the brief Jin unification, the catastrophic War of the Eight Princes, and the fall of northern China to nomadic peoples.",
             "key_events": [
               "Battle of Red Cliffs — decisive battle shaping the Three Kingdoms (208 AD)",
@@ -230,13 +373,19 @@
           {
             "slug": "northern-and-southern-dynasties",
             "name": "Northern and Southern Dynasties",
-            "year_range": [420, 589],
+            "year_range": [
+              420,
+              589
+            ],
             "description": "The cultural flourishing of the southern courts, the Sinicization of northern nomadic rulers, the Buddhist cave temples of Yungang and Longmen, and the seeds of reunification."
           },
           {
             "slug": "sui-dynasty",
             "name": "Sui Dynasty",
-            "year_range": [581, 618],
+            "year_range": [
+              581,
+              618
+            ],
             "description": "Emperor Wen's reunification of China, the Grand Canal connecting north and south, Emperor Yang's ruinous campaigns against Goguryeo, and the rapid collapse of the dynasty.",
             "key_events": [
               "Grand Canal completed — linking the Yellow River to the Yangtze (610 AD)"
@@ -247,14 +396,20 @@
       {
         "slug": "tang-dynasty",
         "name": "Tang Dynasty",
-        "year_range": [618, 907],
+        "year_range": [
+          618,
+          907
+        ],
         "status": "PLANNED",
         "description": "The cosmopolitan golden age of Chinese civilization, Tang Chang'an as the world's largest city, Li Bai and Du Fu's poetry, the only female emperor Wu Zetian, and the An Lushan Rebellion.",
         "sub_clusters": [
           {
             "slug": "early-tang-and-empress-wu",
             "name": "Early Tang and Empress Wu",
-            "year_range": [618, 712],
+            "year_range": [
+              618,
+              712
+            ],
             "description": "Emperor Taizong's 'Reign of Zhenguan' as a model of governance, the expansion into Central Asia, Wu Zetian's unprecedented reign as female emperor, and the flourishing of Buddhism.",
             "key_events": [
               "Emperor Taizong's 'Reign of Zhenguan' — regarded as the golden age of Chinese governance (626–649)",
@@ -264,7 +419,10 @@
           {
             "slug": "tang-zenith-and-an-lushan-rebellion",
             "name": "Tang Zenith and An Lushan Rebellion",
-            "year_range": [712, 763],
+            "year_range": [
+              712,
+              763
+            ],
             "description": "Emperor Xuanzong's brilliant court, the poetry of Li Bai and Du Fu, the Battle of Talas against the Abbasids, and the catastrophic An Lushan Rebellion that killed millions.",
             "key_events": [
               "Battle of Talas — Tang defeated by Abbasids; papermaking spreads westward (751)",
@@ -274,7 +432,10 @@
           {
             "slug": "late-tang-decline",
             "name": "Late Tang Decline",
-            "year_range": [763, 907],
+            "year_range": [
+              763,
+              907
+            ],
             "description": "The eunuch domination of the court, the Huang Chao Rebellion's devastating sack of Chang'an, the great Buddhist persecution of 845, and the final fragmentation into the Five Dynasties."
           }
         ]
@@ -282,14 +443,20 @@
       {
         "slug": "song-dynasty",
         "name": "Song Dynasty",
-        "year_range": [960, 1279],
+        "year_range": [
+          960,
+          1279
+        ],
         "status": "PLANNED",
         "description": "China's economic and technological revolution: gunpowder, the compass, movable type printing, paper money, a population exceeding 100 million, and the sophisticated Neo-Confucian philosophy.",
         "sub_clusters": [
           {
             "slug": "northern-song",
             "name": "Northern Song",
-            "year_range": [960, 1127],
+            "year_range": [
+              960,
+              1127
+            ],
             "description": "Zhao Kuangyin's reunification, the world's first paper currency, Bi Sheng's movable type, the reforms of Wang Anshi, and the vibrant commercial economy with cities like Kaifeng.",
             "key_events": [
               "Bi Sheng invents movable type printing — centuries before Gutenberg (c. 1040)",
@@ -299,7 +466,10 @@
           {
             "slug": "southern-song",
             "name": "Southern Song",
-            "year_range": [1127, 1279],
+            "year_range": [
+              1127,
+              1279
+            ],
             "description": "The Jurchen Jin conquest of the north, the southern court at Hangzhou, maritime trade dominance, Zhu Xi's Neo-Confucianism, and the final Mongol conquest.",
             "key_events": [
               "Jingkang Incident — Jurchen capture the Song emperor and sack Kaifeng (1127)",
@@ -313,14 +483,20 @@
       {
         "slug": "yuan-dynasty",
         "name": "Yuan (Mongol) Dynasty",
-        "year_range": [1271, 1368],
+        "year_range": [
+          1271,
+          1368
+        ],
         "status": "PLANNED",
         "description": "Kublai Khan's establishment of the first non-Han dynasty to rule all of China, Marco Polo's visits, the integration of China into the Mongol world system, and growing Chinese resentment.",
         "sub_clusters": [
           {
             "slug": "kublai-khan-and-yuan-founding",
             "name": "Kublai Khan and Yuan Founding",
-            "year_range": [1271, 1294],
+            "year_range": [
+              1271,
+              1294
+            ],
             "description": "Kublai Khan's proclamation of the Yuan dynasty, the construction of Dadu (Beijing), failed invasions of Japan, Marco Polo's account of China, and the four-class social hierarchy.",
             "key_events": [
               "Kublai Khan proclaims the Yuan dynasty with its capital at Dadu (Beijing) (1271)",
@@ -330,7 +506,10 @@
           {
             "slug": "yuan-decline-and-red-turban-rebellion",
             "name": "Yuan Decline and Red Turban Rebellion",
-            "year_range": [1294, 1368],
+            "year_range": [
+              1294,
+              1368
+            ],
             "description": "Succession crises, inflation from paper money over-issuance, the devastating Yellow River floods, and the Red Turban Rebellion that spawned the Ming dynasty founder Zhu Yuanzhang."
           }
         ]
@@ -338,14 +517,20 @@
       {
         "slug": "ming-dynasty",
         "name": "Ming Dynasty",
-        "year_range": [1368, 1644],
+        "year_range": [
+          1368,
+          1644
+        ],
         "status": "PLANNED",
         "description": "The restoration of Han Chinese rule, Zheng He's great maritime voyages, the Forbidden City and the Great Wall's final form, the vibrant commercial economy, and the late Ming crisis.",
         "sub_clusters": [
           {
             "slug": "early-ming-and-zheng-he-voyages",
             "name": "Early Ming and Zheng He Voyages",
-            "year_range": [1368, 1435],
+            "year_range": [
+              1368,
+              1435
+            ],
             "description": "Zhu Yuanzhang's founding of the Ming, the Yongle Emperor's construction of the Forbidden City, Zheng He's seven epic voyages to Southeast Asia, India, and East Africa, and the shift to maritime isolationism.",
             "key_events": [
               "Zhu Yuanzhang expels the Mongols and founds the Ming dynasty (1368)",
@@ -355,7 +540,10 @@
           {
             "slug": "mid-ming-prosperity-and-great-wall",
             "name": "Mid-Ming Prosperity and Great Wall",
-            "year_range": [1435, 1572],
+            "year_range": [
+              1435,
+              1572
+            ],
             "description": "The Tumu Crisis and capture of the emperor by Mongols, the reconstruction of the Great Wall in its iconic stone form, the growth of the silver economy, and the flourishing of porcelain production.",
             "key_events": [
               "Tumu Crisis — Ming Emperor Yingzong captured by Mongol Oirats (1449)"
@@ -364,7 +552,10 @@
           {
             "slug": "late-ming-crisis-and-fall",
             "name": "Late Ming Crisis and Fall",
-            "year_range": [1572, 1644],
+            "year_range": [
+              1572,
+              1644
+            ],
             "description": "The Wanli Emperor's decades-long court strike, the silver crisis, the Little Ice Age famines, Li Zicheng's peasant rebellion, and the fall of Beijing.",
             "key_events": [
               "Li Zicheng captures Beijing; the last Ming emperor hangs himself on Coal Hill (1644)"
@@ -377,14 +568,20 @@
       {
         "slug": "qing-dynasty",
         "name": "Qing Dynasty",
-        "year_range": [1644, 1912],
+        "year_range": [
+          1644,
+          1912
+        ],
         "status": "PLANNED",
         "description": "The Manchu conquest and China's last imperial dynasty, encompassing the Kangxi-Qianlong golden age, the largest territorial extent in Chinese history, and the traumatic 19th-century decline.",
         "sub_clusters": [
           {
             "slug": "manchu-conquest-and-consolidation",
             "name": "Manchu Conquest and Consolidation",
-            "year_range": [1644, 1722],
+            "year_range": [
+              1644,
+              1722
+            ],
             "description": "The Manchu entry through the Shanhai Pass, the brutal conquest of the south, the Kangxi Emperor's 61-year reign, the conquest of Taiwan, and the Treaty of Nerchinsk with Russia.",
             "key_events": [
               "Manchu forces enter Beijing through the Shanhai Pass (1644)",
@@ -394,7 +591,10 @@
           {
             "slug": "qing-golden-age",
             "name": "Qing Golden Age",
-            "year_range": [1722, 1796],
+            "year_range": [
+              1722,
+              1796
+            ],
             "description": "The Yongzheng and Qianlong Emperors' reigns, the Ten Great Campaigns, the compilation of the Siku Quanshu, the population explosion to 300 million, and the conquest of Xinjiang and Tibet.",
             "key_events": [
               "Qianlong Emperor's Ten Great Campaigns expand the empire to its maximum extent",
@@ -404,7 +604,10 @@
           {
             "slug": "opium-wars-and-century-of-humiliation",
             "name": "Opium Wars and Century of Humiliation",
-            "year_range": [1839, 1912],
+            "year_range": [
+              1839,
+              1912
+            ],
             "description": "The Opium Wars and unequal treaties, the Taiping Rebellion killing 20–30 million, the Self-Strengthening Movement, the Boxer Rebellion, and the Xinhai Revolution ending 2,000 years of imperial rule.",
             "key_events": [
               "Treaty of Nanjing — China cedes Hong Kong and opens treaty ports (1842)",
@@ -419,14 +622,20 @@
       {
         "slug": "republic-of-china-and-warlord-era",
         "name": "Republic of China and Warlord Era",
-        "year_range": [1912, 1949],
+        "year_range": [
+          1912,
+          1949
+        ],
         "status": "PLANNED",
         "description": "The fragile republic, the May Fourth Movement, the Nationalist-Communist rivalry, the Japanese invasion, and the Chinese Civil War that ended with Mao's victory.",
         "sub_clusters": [
           {
             "slug": "early-republic-and-warlord-era",
             "name": "Early Republic and Warlord Era",
-            "year_range": [1912, 1928],
+            "year_range": [
+              1912,
+              1928
+            ],
             "description": "Sun Yat-sen's provisional presidency, Yuan Shikai's abortive monarchy, the fragmentation into warlord fiefdoms, the May Fourth Movement's cultural revolution, and the founding of the CCP.",
             "key_events": [
               "May Fourth Movement — students protest the Treaty of Versailles and call for modernization (1919)",
@@ -436,7 +645,10 @@
           {
             "slug": "nationalist-era-and-japanese-invasion",
             "name": "Nationalist Era and Japanese Invasion",
-            "year_range": [1928, 1945],
+            "year_range": [
+              1928,
+              1945
+            ],
             "description": "Chiang Kai-shek's Northern Expedition and Nanjing decade, the Long March, the Nanjing Massacre, the United Front against Japan, and China's role in World War II.",
             "key_events": [
               "The Long March — CCP retreats 6,000 miles and Mao emerges as leader (1934–1935)",
@@ -446,7 +658,10 @@
           {
             "slug": "chinese-civil-war",
             "name": "Chinese Civil War",
-            "year_range": [1945, 1949],
+            "year_range": [
+              1945,
+              1949
+            ],
             "description": "The resumed civil war between Nationalists and Communists, the rapid CCP military victories, the Nationalist retreat to Taiwan, and Mao Zedong's proclamation of the People's Republic.",
             "key_events": [
               "Mao Zedong proclaims the People's Republic of China in Tiananmen Square (October 1, 1949)"
@@ -457,14 +672,20 @@
       {
         "slug": "mao-era-peoples-republic",
         "name": "Mao-Era People's Republic",
-        "year_range": [1949, 1976],
+        "year_range": [
+          1949,
+          1976
+        ],
         "status": "PLANNED",
         "description": "Mao Zedong's radical transformation of China through land reform, the Great Leap Forward famine, the Sino-Soviet split, and the Cultural Revolution's decade of chaos.",
         "sub_clusters": [
           {
             "slug": "great-leap-forward",
             "name": "Great Leap Forward",
-            "year_range": [1958, 1962],
+            "year_range": [
+              1958,
+              1962
+            ],
             "description": "Mao's disastrous campaign to rapidly industrialize through collectivization and backyard steel furnaces, resulting in the Great Chinese Famine that killed an estimated 15–55 million people.",
             "key_events": [
               "Great Chinese Famine — the deadliest famine in human history (1959–1961)"
@@ -473,7 +694,10 @@
           {
             "slug": "cultural-revolution",
             "name": "Cultural Revolution",
-            "year_range": [1966, 1976],
+            "year_range": [
+              1966,
+              1976
+            ],
             "description": "Mao's mobilization of the Red Guards to purge 'capitalist roaders,' the destruction of cultural heritage, the persecution of intellectuals, and the chaos that only ended with Mao's death.",
             "key_events": [
               "Red Guards unleashed — millions of youth terrorize 'class enemies' (1966)",
@@ -487,14 +711,20 @@
       {
         "slug": "reform-era-and-rise-of-china",
         "name": "Reform Era and Rise of China",
-        "year_range": [1978, 2025],
+        "year_range": [
+          1978,
+          2025
+        ],
         "status": "PLANNED",
         "description": "Deng Xiaoping's 'Reform and Opening Up,' China's transformation into the world's second-largest economy, the Tiananmen Square crisis, WTO accession, and Xi Jinping's consolidation of power.",
         "sub_clusters": [
           {
             "slug": "deng-xiaoping-reforms",
             "name": "Deng Xiaoping Reforms",
-            "year_range": [1978, 1992],
+            "year_range": [
+              1978,
+              1992
+            ],
             "description": "Deng Xiaoping's pragmatic economic reforms, the Special Economic Zones, the household responsibility system, the Tiananmen Square protests and massacre, and the post-Tiananmen political tightening.",
             "key_events": [
               "Third Plenum launches 'Reform and Opening Up' — transforming China's economy (1978)",
@@ -504,7 +734,10 @@
           {
             "slug": "economic-miracle-and-wto-accession",
             "name": "Economic Miracle and WTO Accession",
-            "year_range": [1992, 2012],
+            "year_range": [
+              1992,
+              2012
+            ],
             "description": "Deng's Southern Tour reigniting reform, double-digit GDP growth, WTO accession, the 2008 Beijing Olympics, the Three Gorges Dam, and China's emergence as the 'world's factory.'",
             "key_events": [
               "China joins the World Trade Organization (2001)",
@@ -514,7 +747,10 @@
           {
             "slug": "xi-jinping-era",
             "name": "Xi Jinping Era",
-            "year_range": [2012, 2025],
+            "year_range": [
+              2012,
+              2025
+            ],
             "description": "Xi Jinping's anti-corruption campaign, the Belt and Road Initiative, the abolition of presidential term limits, Hong Kong's national security law, and rising US-China strategic competition.",
             "key_events": [
               "Belt and Road Initiative launched — massive global infrastructure program (2013)",
@@ -532,51 +768,75 @@
   "cross_cluster_interfaces": [
     {
       "cluster": "prehistoric-and-neolithic-china",
-      "interfaces_with": ["shang-dynasty"]
+      "interfaces_with": [
+        "shang-dynasty"
+      ]
     },
     {
       "cluster": "shang-dynasty",
-      "interfaces_with": ["zhou-dynasty"]
+      "interfaces_with": [
+        "zhou-dynasty"
+      ]
     },
     {
       "cluster": "zhou-dynasty",
-      "interfaces_with": ["qin-and-han-dynasties"]
+      "interfaces_with": [
+        "qin-and-han-dynasties"
+      ]
     },
     {
       "cluster": "qin-and-han-dynasties",
-      "interfaces_with": ["three-kingdoms-to-sui-reunification"]
+      "interfaces_with": [
+        "three-kingdoms-to-sui-reunification"
+      ]
     },
     {
       "cluster": "three-kingdoms-to-sui-reunification",
-      "interfaces_with": ["tang-dynasty"]
+      "interfaces_with": [
+        "tang-dynasty"
+      ]
     },
     {
       "cluster": "tang-dynasty",
-      "interfaces_with": ["song-dynasty"]
+      "interfaces_with": [
+        "song-dynasty"
+      ]
     },
     {
       "cluster": "song-dynasty",
-      "interfaces_with": ["yuan-dynasty"]
+      "interfaces_with": [
+        "yuan-dynasty"
+      ]
     },
     {
       "cluster": "yuan-dynasty",
-      "interfaces_with": ["ming-dynasty"]
+      "interfaces_with": [
+        "ming-dynasty"
+      ]
     },
     {
       "cluster": "ming-dynasty",
-      "interfaces_with": ["qing-dynasty"]
+      "interfaces_with": [
+        "qing-dynasty"
+      ]
     },
     {
       "cluster": "qing-dynasty",
-      "interfaces_with": ["republic-of-china-and-warlord-era"]
+      "interfaces_with": [
+        "republic-of-china-and-warlord-era"
+      ]
     },
     {
       "cluster": "republic-of-china-and-warlord-era",
-      "interfaces_with": ["mao-era-peoples-republic"]
+      "interfaces_with": [
+        "mao-era-peoples-republic"
+      ]
     },
     {
       "cluster": "mao-era-peoples-republic",
-      "interfaces_with": ["reform-era-and-rise-of-china"]
+      "interfaces_with": [
+        "reform-era-and-rise-of-china"
+      ]
     }
   ],
   "statistics": {

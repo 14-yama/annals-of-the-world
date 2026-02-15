@@ -7,17 +7,31 @@
     "continent": "Africa",
     "iso3166_alpha2": "MA",
     "iso3166_alpha3": "MAR",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-06T00:00:00Z",
     "notes": "Comprehensive index for Morocco covering Berber heritage, Phoenician/Roman Mauretania, Arab conquest, Idrisid dynasty, Almoravid/Almohad empires, Marinid/Saadian/Alaouite dynasties, French/Spanish protectorates, independence under Mohammed V, Hassan II's Years of Lead, and Western Sahara claim."
   },
   "country_profile": {
     "capital": "Rabat",
-    "official_languages": ["Arabic", "Berber (Tamazight)"],
+    "official_languages": [
+      "Arabic",
+      "Berber (Tamazight)"
+    ],
     "government_type": "Unitary parliamentary constitutional monarchy",
     "currency": "Moroccan dirham (MAD)",
-    "population": {"estimate": 37800000, "year": 2024, "source": "World Bank"},
+    "population": {
+      "estimate": 37800000,
+      "year": 2024,
+      "source": "World Bank"
+    },
     "area_km2": 446550,
     "gdp": {
       "nominal_total": "$152.4 billion",
@@ -27,23 +41,52 @@
       "year": 2024,
       "source": "IMF"
     },
-    "hdi": {"value": 0.698, "rank": 115, "year": 2022, "category": "Medium"},
+    "hdi": {
+      "value": 0.698,
+      "rank": 115,
+      "year": 2022,
+      "category": "Medium"
+    },
     "religion": {
       "Islam_Sunni_Maliki": "99%",
       "Christianity": "1%",
       "Judaism": "<1%"
     },
     "ethnic_groups": [
-      {"name": "Arab/Arabised Berber", "percentage": 99, "notes": "Majority Arab or Arabised; Arabic-speaking; historically Berber populations Arabised post-7th century; ethnic boundaries fluid"},
-      {"name": "Berber (Amazigh)", "percentage": null, "notes": "Indigenous North Africans; three major groups: Riffians (North, Rif Mountains, Tarifit language), Berbers of Middle Atlas and Eastern High Atlas (Tamazight), Shilha/Tashelhit-speakers (Souss Valley, Anti-Atlas, Western High Atlas); Berber majority in rural mountain areas"},
-      {"name": "Haratin", "percentage": null, "notes": "Black Moroccans; Saharan oases; Draa and Tafilalt; historically marginalised"},
-      {"name": "Gnawa", "percentage": null, "notes": "Descendants of sub-Saharan slaves; distinct musical and spiritual tradition"},
-      {"name": "Other (Sahrawi, European, Jewish)", "percentage": 1, "notes": "Sahrawi Arabs (Western Sahara); small French community; historically significant Jewish community (mostly emigrated post-1948)"}
+      {
+        "name": "Arab/Arabised Berber",
+        "percentage": 99,
+        "notes": "Majority Arab or Arabised; Arabic-speaking; historically Berber populations Arabised post-7th century; ethnic boundaries fluid"
+      },
+      {
+        "name": "Berber (Amazigh)",
+        "percentage": null,
+        "notes": "Indigenous North Africans; three major groups: Riffians (North, Rif Mountains, Tarifit language), Berbers of Middle Atlas and Eastern High Atlas (Tamazight), Shilha/Tashelhit-speakers (Souss Valley, Anti-Atlas, Western High Atlas); Berber majority in rural mountain areas"
+      },
+      {
+        "name": "Haratin",
+        "percentage": null,
+        "notes": "Black Moroccans; Saharan oases; Draa and Tafilalt; historically marginalised"
+      },
+      {
+        "name": "Gnawa",
+        "percentage": null,
+        "notes": "Descendants of sub-Saharan slaves; distinct musical and spiritual tradition"
+      },
+      {
+        "name": "Other (Sahrawi, European, Jewish)",
+        "percentage": 1,
+        "notes": "Sahrawi Arabs (Western Sahara); small French community; historically significant Jewish community (mostly emigrated post-1948)"
+      }
     ],
     "calling_code": "+212",
-    "iso3166_code": "MA/MAR",
+    "iso3166_alpha2": "MA",
+    "iso3166_alpha3": "MAR",
     "time_zone": "WET (UTC+0/+1)",
-    "independence": {"date": "1956-03-02", "from": "France and Spain"},
+    "independence": {
+      "date": "1956-03-02",
+      "from": "France and Spain"
+    },
     "continent": "Africa"
   },
   "leadership": {
@@ -59,8 +102,16 @@
       "notes": "RNI party; billionaire businessman"
     },
     "former_monarchs": [
-      {"name": "Sultan Mohammed V", "term": "1927–1961 (Sultan 1927–1957, King 1957–1961)", "notes": "Led independence movement; resisted Vichy deportation of Jews; exiled by France 1953–1955; father of the nation"},
-      {"name": "King Hassan II", "term": "1961–1999", "notes": "38-year reign; survived coup attempts 1971/1972; Years of Lead (Les Années de Plomb) repression; Green March 1975 (Western Sahara); late reforms"}
+      {
+        "name": "Sultan Mohammed V",
+        "term": "1927–1961 (Sultan 1927–1957, King 1957–1961)",
+        "notes": "Led independence movement; resisted Vichy deportation of Jews; exiled by France 1953–1955; father of the nation"
+      },
+      {
+        "name": "King Hassan II",
+        "term": "1961–1999",
+        "notes": "38-year reign; survived coup attempts 1971/1972; Years of Lead (Les Années de Plomb) repression; Green March 1975 (Western Sahara); late reforms"
+      }
     ]
   },
   "thematic_clusters": {
@@ -68,12 +119,31 @@
       {
         "slug": "Prehistoric_Morocco",
         "name": "Prehistoric Morocco",
-        "year_range": [-300000, -1000],
+        "year_range": [
+          -300000,
+          -1000
+        ],
         "status": "PLANNED",
         "description": "Jebel Irhoud (earliest Homo sapiens); Iberomaurusian; Neolithic.",
         "sub_clusters": [
-          {"slug": "Jebel_Irhoud", "name": "Jebel Irhoud — Oldest Homo Sapiens", "year_range": [-300000, -300000], "description": "315,000-year-old fossils; oldest known Homo sapiens remains."},
-          {"slug": "Iberomaurusian_Morocco", "name": "Iberomaurusian and Capsian Cultures", "year_range": [-22000, -6000], "description": "North African Upper Paleolithic; cave sites at Taforalt."}
+          {
+            "slug": "Jebel_Irhoud",
+            "name": "Jebel Irhoud — Oldest Homo Sapiens",
+            "year_range": [
+              -300000,
+              -300000
+            ],
+            "description": "315,000-year-old fossils; oldest known Homo sapiens remains."
+          },
+          {
+            "slug": "Iberomaurusian_Morocco",
+            "name": "Iberomaurusian and Capsian Cultures",
+            "year_range": [
+              -22000,
+              -6000
+            ],
+            "description": "North African Upper Paleolithic; cave sites at Taforalt."
+          }
         ]
       }
     ],
@@ -81,16 +151,67 @@
       {
         "slug": "Ancient_Medieval_Morocco",
         "name": "Ancient and Medieval Morocco",
-        "year_range": [-800, 1554],
+        "year_range": [
+          -800,
+          1554
+        ],
         "status": "PLANNED",
         "description": "Phoenicians, Mauretania, Roman Volubilis, Berber dynasties.",
         "sub_clusters": [
-          {"slug": "Phoenician_Mauretania", "name": "Phoenician and Mauretanian Period", "year_range": [-800, 40], "description": "Phoenician trading posts; Kingdom of Mauretania; Juba II."},
-          {"slug": "Roman_Volubilis", "name": "Roman Volubilis", "year_range": [40, 285], "description": "Roman provincial city; olive oil production; UNESCO World Heritage."},
-          {"slug": "Idrisid_Dynasty", "name": "Idrisid Dynasty — First Moroccan State", "year_range": [789, 985], "description": "Idris I founds Fes; first independent Islamic dynasty in Morocco."},
-          {"slug": "Almoravid_Dynasty", "name": "Almoravid Dynasty", "year_range": [1040, 1147], "description": "Berber Saharan dynasty; Marrakech founded; al-Andalus defence."},
-          {"slug": "Almohad_Dynasty", "name": "Almohad Dynasty", "year_range": [1121, 1269], "description": "Reform movement; Koutoubia Mosque; empire spanning NW Africa and Iberia."},
-          {"slug": "Marinid_Dynasty", "name": "Marinid Dynasty", "year_range": [1244, 1465], "description": "Fes develops as intellectual centre; madrasas; Bou Inania."}
+          {
+            "slug": "Phoenician_Mauretania",
+            "name": "Phoenician and Mauretanian Period",
+            "year_range": [
+              -800,
+              40
+            ],
+            "description": "Phoenician trading posts; Kingdom of Mauretania; Juba II."
+          },
+          {
+            "slug": "Roman_Volubilis",
+            "name": "Roman Volubilis",
+            "year_range": [
+              40,
+              285
+            ],
+            "description": "Roman provincial city; olive oil production; UNESCO World Heritage."
+          },
+          {
+            "slug": "Idrisid_Dynasty",
+            "name": "Idrisid Dynasty — First Moroccan State",
+            "year_range": [
+              789,
+              985
+            ],
+            "description": "Idris I founds Fes; first independent Islamic dynasty in Morocco."
+          },
+          {
+            "slug": "Almoravid_Dynasty",
+            "name": "Almoravid Dynasty",
+            "year_range": [
+              1040,
+              1147
+            ],
+            "description": "Berber Saharan dynasty; Marrakech founded; al-Andalus defence."
+          },
+          {
+            "slug": "Almohad_Dynasty",
+            "name": "Almohad Dynasty",
+            "year_range": [
+              1121,
+              1269
+            ],
+            "description": "Reform movement; Koutoubia Mosque; empire spanning NW Africa and Iberia."
+          },
+          {
+            "slug": "Marinid_Dynasty",
+            "name": "Marinid Dynasty",
+            "year_range": [
+              1244,
+              1465
+            ],
+            "description": "Fes develops as intellectual centre; madrasas; Bou Inania."
+          }
         ]
       }
     ],
@@ -98,13 +219,40 @@
       {
         "slug": "Saadian_Alaouite_Morocco",
         "name": "Saadian and Early Alaouite Dynasties",
-        "year_range": [1554, 1830],
+        "year_range": [
+          1554,
+          1830
+        ],
         "status": "PLANNED",
         "description": "Saadian glory; Battle of Three Kings; Alaouite dynasty (current).",
         "sub_clusters": [
-          {"slug": "Saadian_Dynasty", "name": "Saadian Dynasty", "year_range": [1554, 1659], "description": "Battle of Three Kings 1578; Ahmed al-Mansur; Songhai conquest; sugar wealth."},
-          {"slug": "Moulay_Ismail", "name": "Moulay Ismail's Reign", "year_range": [1672, 1727], "description": "Alaouite Sultan; Meknes capital; 150,000-strong slave army; Versailles rival."},
-          {"slug": "Barbary_Piracy_Morocco", "name": "Salé Rovers and Barbary Piracy", "year_range": [1627, 1800], "description": "Republic of Salé; corsair raids on Europe; Morocco-US Treaty 1786 (oldest US treaty)."}
+          {
+            "slug": "Saadian_Dynasty",
+            "name": "Saadian Dynasty",
+            "year_range": [
+              1554,
+              1659
+            ],
+            "description": "Battle of Three Kings 1578; Ahmed al-Mansur; Songhai conquest; sugar wealth."
+          },
+          {
+            "slug": "Moulay_Ismail",
+            "name": "Moulay Ismail's Reign",
+            "year_range": [
+              1672,
+              1727
+            ],
+            "description": "Alaouite Sultan; Meknes capital; 150,000-strong slave army; Versailles rival."
+          },
+          {
+            "slug": "Barbary_Piracy_Morocco",
+            "name": "Salé Rovers and Barbary Piracy",
+            "year_range": [
+              1627,
+              1800
+            ],
+            "description": "Republic of Salé; corsair raids on Europe; Morocco-US Treaty 1786 (oldest US treaty)."
+          }
         ]
       }
     ],
@@ -112,13 +260,43 @@
       {
         "slug": "Colonial_Morocco",
         "name": "European Colonisation",
-        "year_range": [1830, 1956],
+        "year_range": [
+          1830,
+          1956
+        ],
         "status": "PLANNED",
         "description": "Moroccan Crises; French and Spanish protectorates; Rif War.",
         "sub_clusters": [
-          {"slug": "Moroccan_Crises", "name": "Moroccan Crises", "year_range": [1905, 1912], "description": "Tangier Crisis 1905; Agadir Crisis 1911; great power rivalry."},
-          {"slug": "French_Protectorate_Morocco", "name": "French Protectorate", "year_range": [1912, 1956], "description": "Lyautey's indirect rule; Casablanca development; ville nouvelle urbanism."},
-          {"slug": "Rif_War", "name": "Rif War — Abdelkrim", "year_range": [1921, 1926], "description": "Abdelkrim's Republic of the Rif; defeats Spanish at Annual; French intervention.", "key_events": ["Battle_of_Annual_1921"]}
+          {
+            "slug": "Moroccan_Crises",
+            "name": "Moroccan Crises",
+            "year_range": [
+              1905,
+              1912
+            ],
+            "description": "Tangier Crisis 1905; Agadir Crisis 1911; great power rivalry."
+          },
+          {
+            "slug": "French_Protectorate_Morocco",
+            "name": "French Protectorate",
+            "year_range": [
+              1912,
+              1956
+            ],
+            "description": "Lyautey's indirect rule; Casablanca development; ville nouvelle urbanism."
+          },
+          {
+            "slug": "Rif_War",
+            "name": "Rif War — Abdelkrim",
+            "year_range": [
+              1921,
+              1926
+            ],
+            "description": "Abdelkrim's Republic of the Rif; defeats Spanish at Annual; French intervention.",
+            "key_events": [
+              "Battle_of_Annual_1921"
+            ]
+          }
         ]
       }
     ],
@@ -126,13 +304,46 @@
       {
         "slug": "Moroccan_Independence",
         "name": "Independence and Hassan II Era",
-        "year_range": [1944, 1999],
+        "year_range": [
+          1944,
+          1999
+        ],
         "status": "PLANNED",
         "description": "Nationalist movement; Mohammed V; Hassan II's 'Years of Lead'.",
         "sub_clusters": [
-          {"slug": "Independence_Movement_Morocco", "name": "Independence Movement", "year_range": [1944, 1956], "description": "Istiqlal Party; exile and return of Mohammed V; independence 1956.", "key_events": ["Morocco_Independence_1956"]},
-          {"slug": "Hassan_II_Years_of_Lead", "name": "Hassan II — Years of Lead", "year_range": [1961, 1999], "description": "Authoritarian rule; Tazmamart prison; two coup attempts; Green March."},
-          {"slug": "Green_March", "name": "Green March — Western Sahara", "year_range": [1975, 1975], "description": "350,000 Moroccans march into Spanish Sahara; Morocco claims territory.", "key_events": ["Green_March_1975"]}
+          {
+            "slug": "Independence_Movement_Morocco",
+            "name": "Independence Movement",
+            "year_range": [
+              1944,
+              1956
+            ],
+            "description": "Istiqlal Party; exile and return of Mohammed V; independence 1956.",
+            "key_events": [
+              "Morocco_Independence_1956"
+            ]
+          },
+          {
+            "slug": "Hassan_II_Years_of_Lead",
+            "name": "Hassan II — Years of Lead",
+            "year_range": [
+              1961,
+              1999
+            ],
+            "description": "Authoritarian rule; Tazmamart prison; two coup attempts; Green March."
+          },
+          {
+            "slug": "Green_March",
+            "name": "Green March — Western Sahara",
+            "year_range": [
+              1975,
+              1975
+            ],
+            "description": "350,000 Moroccans march into Spanish Sahara; Morocco claims territory.",
+            "key_events": [
+              "Green_March_1975"
+            ]
+          }
         ]
       }
     ],
@@ -140,29 +351,92 @@
       {
         "slug": "Contemporary_Morocco",
         "name": "Contemporary Morocco",
-        "year_range": [1999, 2026],
+        "year_range": [
+          1999,
+          2026
+        ],
         "status": "PLANNED",
         "description": "Mohammed VI reforms; 2011 protests; Abraham Accords; earthquake.",
         "sub_clusters": [
-          {"slug": "Mohammed_VI_Reforms", "name": "Mohammed VI Reforms", "year_range": [1999, 2010], "description": "Truth and Reconciliation Commission; Mudawwana family law reform; economic modernisation."},
-          {"slug": "Feb20_Movement", "name": "February 20 Movement (2011)", "year_range": [2011, 2011], "description": "Arab Spring protests; constitutional reform; elected Islamist PM."},
-          {"slug": "Western_Sahara_Issue", "name": "Western Sahara Issue", "year_range": [1975, 2026], "description": "Polisario conflict; UN mission; US recognition of sovereignty 2020."},
-          {"slug": "Al_Haouz_Earthquake", "name": "Al Haouz Earthquake (2023)", "year_range": [2023, 2023], "description": "6.8 magnitude; 2,900+ killed; Marrakech and Atlas Mountains devastation."}
+          {
+            "slug": "Mohammed_VI_Reforms",
+            "name": "Mohammed VI Reforms",
+            "year_range": [
+              1999,
+              2010
+            ],
+            "description": "Truth and Reconciliation Commission; Mudawwana family law reform; economic modernisation."
+          },
+          {
+            "slug": "Feb20_Movement",
+            "name": "February 20 Movement (2011)",
+            "year_range": [
+              2011,
+              2011
+            ],
+            "description": "Arab Spring protests; constitutional reform; elected Islamist PM."
+          },
+          {
+            "slug": "Western_Sahara_Issue",
+            "name": "Western Sahara Issue",
+            "year_range": [
+              1975,
+              2026
+            ],
+            "description": "Polisario conflict; UN mission; US recognition of sovereignty 2020."
+          },
+          {
+            "slug": "Al_Haouz_Earthquake",
+            "name": "Al Haouz Earthquake (2023)",
+            "year_range": [
+              2023,
+              2023
+            ],
+            "description": "6.8 magnitude; 2,900+ killed; Marrakech and Atlas Mountains devastation."
+          }
         ]
       }
     ]
   },
-  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "unassigned_events": {
+    "note": "Events not yet assigned to a thematic cluster",
+    "slugs": []
+  },
   "cross_cluster_interfaces": [
-    {"cluster": "Almoravid_Dynasty", "interfaces_with": ["Al_Andalus", "Trans_Saharan_Trade"]},
-    {"cluster": "Rif_War", "interfaces_with": ["Spanish_Colonialism", "Anti_Colonial_Resistance"]},
-    {"cluster": "Green_March", "interfaces_with": ["Spanish_Decolonisation", "Polisario_Conflict"]}
+    {
+      "cluster": "Almoravid_Dynasty",
+      "interfaces_with": [
+        "Al_Andalus",
+        "Trans_Saharan_Trade"
+      ]
+    },
+    {
+      "cluster": "Rif_War",
+      "interfaces_with": [
+        "Spanish_Colonialism",
+        "Anti_Colonial_Resistance"
+      ]
+    },
+    {
+      "cluster": "Green_March",
+      "interfaces_with": [
+        "Spanish_Decolonisation",
+        "Polisario_Conflict"
+      ]
+    }
   ],
   "statistics": {
     "total_level4_clusters": 8,
     "total_level5_subclusters": 28,
     "active_clusters": 0,
     "planned_clusters": 8,
-    "timeframe_distribution": {"910": 1, "920": 1, "930": 1, "940": 1, "950": 1, "960": 1}
+    "timeframe_distribution": {
+      "910": 1,
+      "920": 1,
+      "930": 1,
+      "940": 1,
+      "950": 1,
+      "960": 1
+    }
   }
 }

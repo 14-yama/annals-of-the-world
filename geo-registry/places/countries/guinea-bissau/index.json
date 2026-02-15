@@ -7,18 +7,36 @@
     "continent": "Africa",
     "iso3166_alpha2": "GW",
     "iso3166_alpha3": "GNB",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-06T00:00:00Z",
     "notes": "Comprehensive index for Guinea-Bissau covering Kaabu Empire, Portuguese Guinea, Amílcar Cabral's PAIGC liberation war, coups, and narco-state dynamics."
   },
   "country_profile": {
     "capital": "Bissau",
-    "official_languages": ["Portuguese"],
-    "national_languages": ["Kriol (Guinean Creole)", "Fula", "Mandinka", "Balanta"],
+    "official_languages": [
+      "Portuguese"
+    ],
+    "other_languages": [
+      "Kriol (Guinean Creole)",
+      "Fula",
+      "Mandinka",
+      "Balanta"
+    ],
     "government_type": "Unitary semi-presidential republic",
     "currency": "West African CFA franc (XOF)",
-    "population": {"estimate": 2160000, "year": 2024, "source": "World Bank"},
+    "population": {
+      "estimate": 2160000,
+      "year": 2024,
+      "source": "World Bank"
+    },
     "area_km2": 36125,
     "gdp": {
       "nominal_total": "$2.0 billion",
@@ -28,7 +46,12 @@
       "year": 2024,
       "source": "IMF"
     },
-    "hdi": {"value": 0.483, "rank": 177, "year": 2022, "category": "Low"},
+    "hdi": {
+      "value": 0.483,
+      "rank": 177,
+      "year": 2022,
+      "category": "Low"
+    },
     "religion": {
       "Islam_Sunni": "45.1%",
       "Christianity": "22.1%",
@@ -37,22 +60,71 @@
       "Other": "2.0%"
     },
     "ethnic_groups": [
-      {"name": "Balanta", "percentage": 30, "notes": "Largest group; southern Guinea-Bissau; rice farmers; stateless society tradition; majority animist; dominated PAIGC liberation army"},
-      {"name": "Fula/Fulani (Fula/Fulbe)", "percentage": 20, "notes": "Northern and eastern regions; Gabú; Fouta Djallon links; predominantly Muslim; pastoralist heritage; commercial and political influence"},
-      {"name": "Manjaco (Manjak)", "percentage": 14, "notes": "Northwestern coastal; Cacheu region; rice cultivation; cross-border with Senegal (Casamance)"},
-      {"name": "Mandinka (Mandinga)", "percentage": 13, "notes": "Eastern Guinea-Bissau; Gabú region; remnants of Kaabu Empire; Muslim; Mande people; strong Mali Empire heritage"},
-      {"name": "Papel (Pepel)", "percentage": 7, "notes": "Bissau and Biombo region; coastal agriculturalists; rice growers"},
-      {"name": "Bijagó (Bissagos Islanders)", "percentage": 3.5, "notes": "Bijagós Archipelago; distinct maritime culture; matrilineal; historically resisted Portuguese until 20th century"},
-      {"name": "Mancanha", "percentage": 3, "notes": "Central coastal; related to Papel and Manjaco"},
-      {"name": "Beafada", "percentage": 1.5, "notes": "Central Guinea-Bissau; related to Tenda group"},
-      {"name": "Felupe/Jola", "percentage": 1.5, "notes": "Southern border; rice farmers; Casamance cultural area"},
-      {"name": "Nalu", "percentage": 1, "notes": "Northwestern coastal; related to Guinea groups"},
-      {"name": "Other (including Cape Verdean, Lebanese, Portuguese)", "percentage": 5.5, "notes": "Cape Verdean Creoles influential; Lebanese traders; small Portuguese community"}
+      {
+        "name": "Balanta",
+        "percentage": 30,
+        "notes": "Largest group; southern Guinea-Bissau; rice farmers; stateless society tradition; majority animist; dominated PAIGC liberation army"
+      },
+      {
+        "name": "Fula/Fulani (Fula/Fulbe)",
+        "percentage": 20,
+        "notes": "Northern and eastern regions; Gabú; Fouta Djallon links; predominantly Muslim; pastoralist heritage; commercial and political influence"
+      },
+      {
+        "name": "Manjaco (Manjak)",
+        "percentage": 14,
+        "notes": "Northwestern coastal; Cacheu region; rice cultivation; cross-border with Senegal (Casamance)"
+      },
+      {
+        "name": "Mandinka (Mandinga)",
+        "percentage": 13,
+        "notes": "Eastern Guinea-Bissau; Gabú region; remnants of Kaabu Empire; Muslim; Mande people; strong Mali Empire heritage"
+      },
+      {
+        "name": "Papel (Pepel)",
+        "percentage": 7,
+        "notes": "Bissau and Biombo region; coastal agriculturalists; rice growers"
+      },
+      {
+        "name": "Bijagó (Bissagos Islanders)",
+        "percentage": 3.5,
+        "notes": "Bijagós Archipelago; distinct maritime culture; matrilineal; historically resisted Portuguese until 20th century"
+      },
+      {
+        "name": "Mancanha",
+        "percentage": 3,
+        "notes": "Central coastal; related to Papel and Manjaco"
+      },
+      {
+        "name": "Beafada",
+        "percentage": 1.5,
+        "notes": "Central Guinea-Bissau; related to Tenda group"
+      },
+      {
+        "name": "Felupe/Jola",
+        "percentage": 1.5,
+        "notes": "Southern border; rice farmers; Casamance cultural area"
+      },
+      {
+        "name": "Nalu",
+        "percentage": 1,
+        "notes": "Northwestern coastal; related to Guinea groups"
+      },
+      {
+        "name": "Other (including Cape Verdean, Lebanese, Portuguese)",
+        "percentage": 5.5,
+        "notes": "Cape Verdean Creoles influential; Lebanese traders; small Portuguese community"
+      }
     ],
     "calling_code": "+245",
-    "iso3166_code": "GW/GNB",
+    "iso3166_alpha2": "GW",
+    "iso3166_alpha3": "GNB",
     "time_zone": "GMT (UTC+0)",
-    "independence": {"date": "1973-09-24 (declared), 1974-09-10 (recognized by Portugal)", "from": "Portugal", "notes": "After 11-year PAIGC liberation war"},
+    "independence": {
+      "date": "1973-09-24 (declared), 1974-09-10 (recognized by Portugal)",
+      "from": "Portugal",
+      "notes": "After 11-year PAIGC liberation war"
+    },
     "continent": "Africa"
   },
   "leadership": {
@@ -66,11 +138,27 @@
       "name": "Rui Duarte de Barros",
       "since": "2023-12-20"
     },
-    "former_presidents": [
-      {"name": "Luís Cabral", "term": "1973–1980", "notes": "Half-brother of Amílcar Cabral; first president; Cape Verdean; overthrown by Vieira"},
-      {"name": "João Bernardo 'Nino' Vieira", "term": "1980–1999, 2005–2009", "notes": "Led 1980 coup; civil war 1998–1999; returned via 2005 election; assassinated March 2009 in retaliation for military chief killing"},
-      {"name": "Kumba Ialá", "term": "2000–2003", "notes": "First elected post-civil war president; deposed by military; died 2014"},
-      {"name": "José Mário Vaz", "term": "2014–2020", "notes": "First president to complete full term without coup or assassination; PAIGC"}
+    "former_leaders": [
+      {
+        "name": "Luís Cabral",
+        "term": "1973–1980",
+        "notes": "Half-brother of Amílcar Cabral; first president; Cape Verdean; overthrown by Vieira"
+      },
+      {
+        "name": "João Bernardo 'Nino' Vieira",
+        "term": "1980–1999, 2005–2009",
+        "notes": "Led 1980 coup; civil war 1998–1999; returned via 2005 election; assassinated March 2009 in retaliation for military chief killing"
+      },
+      {
+        "name": "Kumba Ialá",
+        "term": "2000–2003",
+        "notes": "First elected post-civil war president; deposed by military; died 2014"
+      },
+      {
+        "name": "José Mário Vaz",
+        "term": "2014–2020",
+        "notes": "First president to complete full term without coup or assassination; PAIGC"
+      }
     ]
   },
   "thematic_clusters": {
@@ -78,12 +166,31 @@
       {
         "slug": "Prehistoric_Guinea_Bissau",
         "name": "Prehistoric Guinea-Bissau",
-        "year_range": [-5000, -200],
+        "year_range": [
+          -5000,
+          -200
+        ],
         "status": "PLANNED",
         "description": "Early settlement of the Bijagós archipelago and coastal mainland; rice cultivation origins.",
         "sub_clusters": [
-          {"slug": "Bijagos_Early_Settlement", "name": "Bijagós Archipelago Early Settlement", "year_range": [-5000, -200], "description": "Settlement of the Bijagós Islands; maritime adaptation; early fishing communities."},
-          {"slug": "Coastal_Rice_Origins_GW", "name": "Coastal Rice Cultivation Origins", "year_range": [-3000, -200], "description": "Indigenous African rice (Oryza glaberrima) cultivation in coastal wetlands; Balanta paddy systems."}
+          {
+            "slug": "Bijagos_Early_Settlement",
+            "name": "Bijagós Archipelago Early Settlement",
+            "year_range": [
+              -5000,
+              -200
+            ],
+            "description": "Settlement of the Bijagós Islands; maritime adaptation; early fishing communities."
+          },
+          {
+            "slug": "Coastal_Rice_Origins_GW",
+            "name": "Coastal Rice Cultivation Origins",
+            "year_range": [
+              -3000,
+              -200
+            ],
+            "description": "Indigenous African rice (Oryza glaberrima) cultivation in coastal wetlands; Balanta paddy systems."
+          }
         ]
       }
     ],
@@ -91,23 +198,64 @@
       {
         "slug": "Kaabu_Empire",
         "name": "Kaabu Empire",
-        "year_range": [1200, 1867],
+        "year_range": [
+          1200,
+          1867
+        ],
         "status": "PLANNED",
         "description": "Mandinka Kaabu successor state of Mali Empire; powerful kingdom dominating Guinea-Bissau and southern Senegal.",
         "sub_clusters": [
-          {"slug": "Kaabu_Foundation", "name": "Foundation as Mali Province", "year_range": [1200, 1537], "description": "Kaabu established as westernmost province of Mali Empire; Mandinka nyanthio warrior aristocracy."},
-          {"slug": "Kaabu_Independent_Kingdom", "name": "Independent Kaabu Kingdom", "year_range": [1537, 1867], "description": "Kaabu becomes independent after Mali decline; controls trade routes; capital at Kansala."},
-          {"slug": "Battle_Kansala", "name": "Battle of Kansala", "year_range": [1867, 1867], "description": "Fouta Djallon Fulbe army destroys Kansala; end of Kaabu Empire; last Mandinka resistance.", "key_events": ["Battle_Kansala_1867"]}
+          {
+            "slug": "Kaabu_Foundation",
+            "name": "Foundation as Mali Province",
+            "year_range": [
+              1200,
+              1537
+            ],
+            "description": "Kaabu established as westernmost province of Mali Empire; Mandinka nyanthio warrior aristocracy."
+          },
+          {
+            "slug": "Kaabu_Independent_Kingdom",
+            "name": "Independent Kaabu Kingdom",
+            "year_range": [
+              1537,
+              1867
+            ],
+            "description": "Kaabu becomes independent after Mali decline; controls trade routes; capital at Kansala."
+          },
+          {
+            "slug": "Battle_Kansala",
+            "name": "Battle of Kansala",
+            "year_range": [
+              1867,
+              1867
+            ],
+            "description": "Fouta Djallon Fulbe army destroys Kansala; end of Kaabu Empire; last Mandinka resistance.",
+            "key_events": [
+              "Battle_Kansala_1867"
+            ]
+          }
         ]
       },
       {
         "slug": "Bijagos_Maritime_Culture",
         "name": "Bijagós Maritime Culture",
-        "year_range": [500, 1900],
+        "year_range": [
+          500,
+          1900
+        ],
         "status": "PLANNED",
         "description": "Bijagó people of the archipelago; seafaring warriors; matrilineal society; resistance to colonialism.",
         "sub_clusters": [
-          {"slug": "Bijagos_Warrior_Society", "name": "Bijagós Warrior Society", "year_range": [500, 1900], "description": "Maritime raiding; age-grade initiation; matrilineal inheritance; sacred islands."}
+          {
+            "slug": "Bijagos_Warrior_Society",
+            "name": "Bijagós Warrior Society",
+            "year_range": [
+              500,
+              1900
+            ],
+            "description": "Maritime raiding; age-grade initiation; matrilineal inheritance; sacred islands."
+          }
         ]
       }
     ],
@@ -115,13 +263,43 @@
       {
         "slug": "Portuguese_Guinea_Early",
         "name": "Portuguese Contact and Slave Trade",
-        "year_range": [1446, 1870],
+        "year_range": [
+          1446,
+          1870
+        ],
         "status": "PLANNED",
         "description": "Portuguese exploration; Cacheu and Bissau trading posts; slave trade; lançados and grumetes.",
         "sub_clusters": [
-          {"slug": "Portuguese_Exploration_GW", "name": "Portuguese Exploration", "year_range": [1446, 1558], "description": "Nuno Tristão explores coast 1446; Cacheu established; trade in wax, hides, and slaves."},
-          {"slug": "Cacheu_Bissau_Slave_Trade", "name": "Cacheu and Bissau Slave Trade", "year_range": [1558, 1870], "description": "Cacheu becomes major slave port; Bissau fortress 1687; lançados (Portuguese-African traders).", "key_events": ["Bissau_Fortress_Founded_1687"]},
-          {"slug": "Lancados_Grumetes", "name": "Lançados and Creole Society", "year_range": [1500, 1870], "description": "Portuguese-African intermediaries; Kriol language formation; Creole Catholic communities."}
+          {
+            "slug": "Portuguese_Exploration_GW",
+            "name": "Portuguese Exploration",
+            "year_range": [
+              1446,
+              1558
+            ],
+            "description": "Nuno Tristão explores coast 1446; Cacheu established; trade in wax, hides, and slaves."
+          },
+          {
+            "slug": "Cacheu_Bissau_Slave_Trade",
+            "name": "Cacheu and Bissau Slave Trade",
+            "year_range": [
+              1558,
+              1870
+            ],
+            "description": "Cacheu becomes major slave port; Bissau fortress 1687; lançados (Portuguese-African traders).",
+            "key_events": [
+              "Bissau_Fortress_Founded_1687"
+            ]
+          },
+          {
+            "slug": "Lancados_Grumetes",
+            "name": "Lançados and Creole Society",
+            "year_range": [
+              1500,
+              1870
+            ],
+            "description": "Portuguese-African intermediaries; Kriol language formation; Creole Catholic communities."
+          }
         ]
       }
     ],
@@ -129,13 +307,43 @@
       {
         "slug": "Colonial_Portuguese_Guinea",
         "name": "Colonial Portuguese Guinea",
-        "year_range": [1879, 1963],
+        "year_range": [
+          1879,
+          1963
+        ],
         "status": "PLANNED",
         "description": "Colony formally established; pacification campaigns; forced labour; groundnut economy; minimal development.",
         "sub_clusters": [
-          {"slug": "Pacification_Campaigns_GW", "name": "Pacification Campaigns", "year_range": [1879, 1936], "description": "Colony proclaimed 1879; decades of resistance; Bijagós not subdued until 1936."},
-          {"slug": "Colonial_Economy_GW", "name": "Colonial Economy and Forced Labour", "year_range": [1900, 1963], "description": "Groundnut monoculture; forced labour; extreme underdevelopment; poorest Portuguese colony."},
-          {"slug": "Pidjiguiti_Massacre", "name": "Pidjiguiti Dock Strike and Massacre", "year_range": [1959, 1959], "description": "Dock workers strike in Bissau; Portuguese massacre of strikers; radicalises independence movement.", "key_events": ["Pidjiguiti_Massacre_1959"]}
+          {
+            "slug": "Pacification_Campaigns_GW",
+            "name": "Pacification Campaigns",
+            "year_range": [
+              1879,
+              1936
+            ],
+            "description": "Colony proclaimed 1879; decades of resistance; Bijagós not subdued until 1936."
+          },
+          {
+            "slug": "Colonial_Economy_GW",
+            "name": "Colonial Economy and Forced Labour",
+            "year_range": [
+              1900,
+              1963
+            ],
+            "description": "Groundnut monoculture; forced labour; extreme underdevelopment; poorest Portuguese colony."
+          },
+          {
+            "slug": "Pidjiguiti_Massacre",
+            "name": "Pidjiguiti Dock Strike and Massacre",
+            "year_range": [
+              1959,
+              1959
+            ],
+            "description": "Dock workers strike in Bissau; Portuguese massacre of strikers; radicalises independence movement.",
+            "key_events": [
+              "Pidjiguiti_Massacre_1959"
+            ]
+          }
         ]
       }
     ],
@@ -143,14 +351,58 @@
       {
         "slug": "PAIGC_Liberation_War_GW",
         "name": "PAIGC Liberation War",
-        "year_range": [1956, 1974],
+        "year_range": [
+          1956,
+          1974
+        ],
         "status": "PLANNED",
         "description": "Amílcar Cabral founds PAIGC; guerrilla war; liberated zones; Cabral assassination; independence.",
         "sub_clusters": [
-          {"slug": "PAIGC_Founded_GW", "name": "PAIGC Founded", "year_range": [1956, 1963], "description": "Amílcar Cabral founds PAIGC 1956 in Bissau; political mobilisation; armed struggle begins 1963.", "key_events": ["PAIGC_Founded_1956"]},
-          {"slug": "Liberation_War_GW", "name": "Liberation War", "year_range": [1963, 1974], "description": "PAIGC controls 2/3 of territory by 1968; 'People's Stores'; liberated zone governance."},
-          {"slug": "Cabral_Assassination", "name": "Assassination of Amílcar Cabral", "year_range": [1973, 1973], "description": "Cabral assassinated in Conakry January 1973; suspected Portuguese PIDE involvement.", "key_events": ["Amilcar_Cabral_Assassinated_1973"]},
-          {"slug": "Independence_GW", "name": "Independence of Guinea-Bissau", "year_range": [1973, 1974], "description": "Unilateral declaration September 1973; recognised after Portuguese Carnation Revolution 1974.", "key_events": ["Independence_Guinea_Bissau_1973"]}
+          {
+            "slug": "PAIGC_Founded_GW",
+            "name": "PAIGC Founded",
+            "year_range": [
+              1956,
+              1963
+            ],
+            "description": "Amílcar Cabral founds PAIGC 1956 in Bissau; political mobilisation; armed struggle begins 1963.",
+            "key_events": [
+              "PAIGC_Founded_1956"
+            ]
+          },
+          {
+            "slug": "Liberation_War_GW",
+            "name": "Liberation War",
+            "year_range": [
+              1963,
+              1974
+            ],
+            "description": "PAIGC controls 2/3 of territory by 1968; 'People's Stores'; liberated zone governance."
+          },
+          {
+            "slug": "Cabral_Assassination",
+            "name": "Assassination of Amílcar Cabral",
+            "year_range": [
+              1973,
+              1973
+            ],
+            "description": "Cabral assassinated in Conakry January 1973; suspected Portuguese PIDE involvement.",
+            "key_events": [
+              "Amilcar_Cabral_Assassinated_1973"
+            ]
+          },
+          {
+            "slug": "Independence_GW",
+            "name": "Independence of Guinea-Bissau",
+            "year_range": [
+              1973,
+              1974
+            ],
+            "description": "Unilateral declaration September 1973; recognised after Portuguese Carnation Revolution 1974.",
+            "key_events": [
+              "Independence_Guinea_Bissau_1973"
+            ]
+          }
         ]
       }
     ],
@@ -158,43 +410,158 @@
       {
         "slug": "Postcolonial_Instability_GW",
         "name": "Postcolonial Instability",
-        "year_range": [1974, 2003],
+        "year_range": [
+          1974,
+          2003
+        ],
         "status": "PLANNED",
         "description": "Luís Cabral; Nino Vieira coup; single-party state; 1998-1999 civil war.",
         "sub_clusters": [
-          {"slug": "Luis_Cabral_Era", "name": "Luís Cabral Era", "year_range": [1974, 1980], "description": "Luís Cabral president; Guinea-Bissau–Cabo Verde unity plan; economic difficulties."},
-          {"slug": "Nino_Vieira_First_Era", "name": "Nino Vieira Coup and Rule", "year_range": [1980, 1998], "description": "João Bernardo 'Nino' Vieira coup 1980; single-party then multiparty rule; growing instability.", "key_events": ["Vieira_Coup_1980"]},
-          {"slug": "Civil_War_1998", "name": "1998-1999 Civil War", "year_range": [1998, 1999], "description": "Ansumane Mané rebellion; Senegalese and Guinean intervention; Vieira ousted.", "key_events": ["Guinea_Bissau_Civil_War_1998"]}
+          {
+            "slug": "Luis_Cabral_Era",
+            "name": "Luís Cabral Era",
+            "year_range": [
+              1974,
+              1980
+            ],
+            "description": "Luís Cabral president; Guinea-Bissau–Cabo Verde unity plan; economic difficulties."
+          },
+          {
+            "slug": "Nino_Vieira_First_Era",
+            "name": "Nino Vieira Coup and Rule",
+            "year_range": [
+              1980,
+              1998
+            ],
+            "description": "João Bernardo 'Nino' Vieira coup 1980; single-party then multiparty rule; growing instability.",
+            "key_events": [
+              "Vieira_Coup_1980"
+            ]
+          },
+          {
+            "slug": "Civil_War_1998",
+            "name": "1998-1999 Civil War",
+            "year_range": [
+              1998,
+              1999
+            ],
+            "description": "Ansumane Mané rebellion; Senegalese and Guinean intervention; Vieira ousted.",
+            "key_events": [
+              "Guinea_Bissau_Civil_War_1998"
+            ]
+          }
         ]
       },
       {
         "slug": "Narco_State_Crisis_GW",
         "name": "Narco-State Crisis and Chronic Instability",
-        "year_range": [2003, 2026],
+        "year_range": [
+          2003,
+          2026
+        ],
         "status": "PLANNED",
         "description": "Cocaine trafficking hub; assassinations; serial coups; Embaló presidency.",
         "sub_clusters": [
-          {"slug": "Vieira_Return_Assassination", "name": "Vieira Return and Assassination", "year_range": [2005, 2009], "description": "Vieira returns as president 2005; assassinated March 2009 hours after army chief killed.", "key_events": ["Vieira_Assassinated_2009"]},
-          {"slug": "Narco_Trafficking_GW", "name": "Cocaine Trafficking Hub", "year_range": [2005, 2026], "description": "Guinea-Bissau becomes Latin American cocaine transhipment point to Europe; military complicity."},
-          {"slug": "Embalo_Era", "name": "Embaló Presidency and 2022 Coup Attempt", "year_range": [2020, 2026], "description": "Umaro Sissoco Embaló elected 2019; disputed; February 2022 coup attempt; dissolved parliament 2023.", "key_events": ["Coup_Attempt_GW_2022"]}
+          {
+            "slug": "Vieira_Return_Assassination",
+            "name": "Vieira Return and Assassination",
+            "year_range": [
+              2005,
+              2009
+            ],
+            "description": "Vieira returns as president 2005; assassinated March 2009 hours after army chief killed.",
+            "key_events": [
+              "Vieira_Assassinated_2009"
+            ]
+          },
+          {
+            "slug": "Narco_Trafficking_GW",
+            "name": "Cocaine Trafficking Hub",
+            "year_range": [
+              2005,
+              2026
+            ],
+            "description": "Guinea-Bissau becomes Latin American cocaine transhipment point to Europe; military complicity."
+          },
+          {
+            "slug": "Embalo_Era",
+            "name": "Embaló Presidency and 2022 Coup Attempt",
+            "year_range": [
+              2020,
+              2026
+            ],
+            "description": "Umaro Sissoco Embaló elected 2019; disputed; February 2022 coup attempt; dissolved parliament 2023.",
+            "key_events": [
+              "Coup_Attempt_GW_2022"
+            ]
+          }
         ]
       }
     ]
   },
-  "unassigned_events": {"note": "Events not yet assigned to a thematic cluster", "slugs": []},
+  "unassigned_events": {
+    "note": "Events not yet assigned to a thematic cluster",
+    "slugs": []
+  },
   "cross_cluster_interfaces": [
-    {"cluster": "Kaabu_Empire", "interfaces_with": ["Mali_Empire", "Senegambia_States", "Mandinka_Expansion"]},
-    {"cluster": "PAIGC_Liberation_War_GW", "interfaces_with": ["Portuguese_Colonial_Wars", "Amilcar_Cabral", "PAIGC_Cabo_Verde", "Decolonisation_Africa"]},
-    {"cluster": "Cacheu_Bissau_Slave_Trade", "interfaces_with": ["Atlantic_Slave_Trade", "Portuguese_Maritime_Empire"]},
-    {"cluster": "Narco_Trafficking_GW", "interfaces_with": ["Global_Drug_Trade", "West_African_Narcotics"]},
-    {"cluster": "Civil_War_1998", "interfaces_with": ["ECOWAS_Intervention", "West_African_Civil_Wars"]},
-    {"cluster": "Bijagos_Maritime_Culture", "interfaces_with": ["African_Maritime_Cultures", "Matrilineal_Societies"]}
+    {
+      "cluster": "Kaabu_Empire",
+      "interfaces_with": [
+        "Mali_Empire",
+        "Senegambia_States",
+        "Mandinka_Expansion"
+      ]
+    },
+    {
+      "cluster": "PAIGC_Liberation_War_GW",
+      "interfaces_with": [
+        "Portuguese_Colonial_Wars",
+        "Amilcar_Cabral",
+        "PAIGC_Cabo_Verde",
+        "Decolonisation_Africa"
+      ]
+    },
+    {
+      "cluster": "Cacheu_Bissau_Slave_Trade",
+      "interfaces_with": [
+        "Atlantic_Slave_Trade",
+        "Portuguese_Maritime_Empire"
+      ]
+    },
+    {
+      "cluster": "Narco_Trafficking_GW",
+      "interfaces_with": [
+        "Global_Drug_Trade",
+        "West_African_Narcotics"
+      ]
+    },
+    {
+      "cluster": "Civil_War_1998",
+      "interfaces_with": [
+        "ECOWAS_Intervention",
+        "West_African_Civil_Wars"
+      ]
+    },
+    {
+      "cluster": "Bijagos_Maritime_Culture",
+      "interfaces_with": [
+        "African_Maritime_Cultures",
+        "Matrilineal_Societies"
+      ]
+    }
   ],
   "statistics": {
     "total_level4_clusters": 9,
     "total_level5_subclusters": 23,
     "active_clusters": 0,
     "planned_clusters": 9,
-    "timeframe_distribution": {"910": 1, "920": 2, "930": 1, "940": 1, "950": 1, "960": 2}
+    "timeframe_distribution": {
+      "910": 1,
+      "920": 2,
+      "930": 1,
+      "940": 1,
+      "950": 1,
+      "960": 2
+    }
   }
 }

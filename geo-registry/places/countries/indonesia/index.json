@@ -7,17 +7,30 @@
     "continent": "Asia",
     "iso_alpha2": "ID",
     "iso_alpha3": "IDN",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-07T00:00:00Z",
     "notes": "Comprehensive index for Indonesia covering Java Man (Homo erectus), Hindu-Buddhist kingdoms (Srivijaya, Majapahit, Mataram), spread of Islam, Portuguese/Spanish contact, VOC Dutch East India Company, Dutch East Indies, Japanese occupation, Proclamation of Independence 1945, Sukarno's guided democracy, 1965 anti-communist massacres, Suharto's New Order, East Timor, 1998 Reformasi, Aceh/Papua conflicts, tsunami 2004, democratic consolidation, and Jokowi/Prabowo era."
   },
   "country_profile": {
     "capital": "Jakarta (transitioning to Nusantara, East Kalimantan)",
-    "official_languages": ["Indonesian (Bahasa Indonesia)"],
+    "official_languages": [
+      "Indonesian (Bahasa Indonesia)"
+    ],
     "government_type": "Unitary presidential constitutional republic",
     "currency": "Indonesian rupiah (IDR)",
-    "population": {"estimate": 279000000, "year": 2024, "source": "BPS Indonesia"},
+    "population": {
+      "estimate": 279000000,
+      "year": 2024,
+      "source": "BPS Indonesia"
+    },
     "area_km2": 1904569,
     "gdp": {
       "nominal_total": "$1.42 trillion",
@@ -27,7 +40,12 @@
       "year": 2024,
       "source": "IMF"
     },
-    "hdi": {"value": 0.713, "rank": 112, "year": 2022, "category": "High"},
+    "hdi": {
+      "value": 0.713,
+      "rank": 112,
+      "year": 2022,
+      "category": "High"
+    },
     "religion": {
       "Islam_Sunni": "86.7%",
       "Christianity_Protestant": "7.6%",
@@ -39,27 +57,96 @@
       "note": "Pancasila state ideology mandates belief in one God; six recognised religions; world's largest Muslim-majority country"
     },
     "ethnic_groups": [
-      {"name": "Javanese", "percentage": 40.1, "notes": "Java; Austronesian; largest group; Javanese language; refined court culture (kraton); wayang (shadow puppets); batik; politically dominant"},
-      {"name": "Sundanese", "percentage": 15.5, "notes": "West Java; Austronesian; second-largest; Sundanese language; more devoutly Islamic than Javanese; angklung music"},
-      {"name": "Malay", "percentage": 3.7, "notes": "Sumatra coasts, Kalimantan; Austronesian; related to Malaysian/Bruneian Malays; historically maritime/trading"},
-      {"name": "Batak", "percentage": 3.6, "notes": "North Sumatra; Austronesian; six sub-groups (Toba, Karo, Mandailing, Simalungun, Pakpak, Angkola); originally animist; majority Christian (Protestant); clan-based (marga)"},
-      {"name": "Madurese", "percentage": 3.3, "notes": "Madura island/East Java; Austronesian; cattle; bull racing (karapan sapi); migrant communities in Kalimantan (conflict with Dayak)"},
-      {"name": "Betawi", "percentage": 2.9, "notes": "Jakarta; creole Malay-Javanese-Chinese-Arab-Portuguese mix; indigenous Jakartans; Ondel-ondel tradition"},
-      {"name": "Minangkabau", "percentage": 2.7, "notes": "West Sumatra; Austronesian; world's largest matrilineal society; devoutly Muslim; rantau (migration tradition); Padang cuisine (nasi padang)"},
-      {"name": "Bugis", "percentage": 2.7, "notes": "South Sulawesi; Austronesian; historically seafarers/pirates ('boogeyman' etymology debated); five genders (bissu); Lontara script"},
-      {"name": "Bantenese", "percentage": 2, "notes": "Banten, western Java; Austronesian; Sultanate of Banten heritage; Debus martial art"},
-      {"name": "Banjarese", "percentage": 1.7, "notes": "South Kalimantan; Austronesian; Muslim; river-based culture; diamond mining heritage"},
-      {"name": "Acehnese", "percentage": 1.4, "notes": "Aceh, northern Sumatra; Austronesian; devoutly Islamic; Sharia law province; separatist GAM conflict ended 2005 (Helsinki MOU after tsunami)"},
-      {"name": "Dayak (collective)", "percentage": 2.5, "notes": "Borneo/Kalimantan interior; Austronesian; diverse groups (Iban, Ngaju, Kayan, Kenyah); formerly headhunters; animist/Christian; longhouse culture; cross-border with Malaysia (Sarawak/Sabah)"},
-      {"name": "Chinese Indonesian", "percentage": 1.2, "notes": "Hokkien, Hakka, Teochew, Cantonese; commercial class; 1965 and 1998 anti-Chinese violence; Suharto-era assimilation laws; now freer; include peranakan (assimilated)"},
-      {"name": "Balinese", "percentage": 1.5, "notes": "Bali; Austronesian; Hindu; unique Hindu-animist culture distinct from rest of Indonesia; temple ceremonies; tourism economy"},
-      {"name": "Papuan", "percentage": 1.5, "notes": "Papua and West Papua; Melanesian; 250+ tribal groups; OPM separatist movement; least developed; gold/copper (Freeport Grasberg mine)"},
-      {"name": "Other (1,300+ ethnic groups)", "percentage": 13.7, "notes": "Sasak (Lombok), Makassarese, NTT (Manggarai, Sumbanese, Timorese), Torajan (Sulawesi, death rituals), Mentawai, Asmat, Dani, Nias; Indonesia has world's highest ethnic diversity; 700+ languages"}
+      {
+        "name": "Javanese",
+        "percentage": 40.1,
+        "notes": "Java; Austronesian; largest group; Javanese language; refined court culture (kraton); wayang (shadow puppets); batik; politically dominant"
+      },
+      {
+        "name": "Sundanese",
+        "percentage": 15.5,
+        "notes": "West Java; Austronesian; second-largest; Sundanese language; more devoutly Islamic than Javanese; angklung music"
+      },
+      {
+        "name": "Malay",
+        "percentage": 3.7,
+        "notes": "Sumatra coasts, Kalimantan; Austronesian; related to Malaysian/Bruneian Malays; historically maritime/trading"
+      },
+      {
+        "name": "Batak",
+        "percentage": 3.6,
+        "notes": "North Sumatra; Austronesian; six sub-groups (Toba, Karo, Mandailing, Simalungun, Pakpak, Angkola); originally animist; majority Christian (Protestant); clan-based (marga)"
+      },
+      {
+        "name": "Madurese",
+        "percentage": 3.3,
+        "notes": "Madura island/East Java; Austronesian; cattle; bull racing (karapan sapi); migrant communities in Kalimantan (conflict with Dayak)"
+      },
+      {
+        "name": "Betawi",
+        "percentage": 2.9,
+        "notes": "Jakarta; creole Malay-Javanese-Chinese-Arab-Portuguese mix; indigenous Jakartans; Ondel-ondel tradition"
+      },
+      {
+        "name": "Minangkabau",
+        "percentage": 2.7,
+        "notes": "West Sumatra; Austronesian; world's largest matrilineal society; devoutly Muslim; rantau (migration tradition); Padang cuisine (nasi padang)"
+      },
+      {
+        "name": "Bugis",
+        "percentage": 2.7,
+        "notes": "South Sulawesi; Austronesian; historically seafarers/pirates ('boogeyman' etymology debated); five genders (bissu); Lontara script"
+      },
+      {
+        "name": "Bantenese",
+        "percentage": 2,
+        "notes": "Banten, western Java; Austronesian; Sultanate of Banten heritage; Debus martial art"
+      },
+      {
+        "name": "Banjarese",
+        "percentage": 1.7,
+        "notes": "South Kalimantan; Austronesian; Muslim; river-based culture; diamond mining heritage"
+      },
+      {
+        "name": "Acehnese",
+        "percentage": 1.4,
+        "notes": "Aceh, northern Sumatra; Austronesian; devoutly Islamic; Sharia law province; separatist GAM conflict ended 2005 (Helsinki MOU after tsunami)"
+      },
+      {
+        "name": "Dayak (collective)",
+        "percentage": 2.5,
+        "notes": "Borneo/Kalimantan interior; Austronesian; diverse groups (Iban, Ngaju, Kayan, Kenyah); formerly headhunters; animist/Christian; longhouse culture; cross-border with Malaysia (Sarawak/Sabah)"
+      },
+      {
+        "name": "Chinese Indonesian",
+        "percentage": 1.2,
+        "notes": "Hokkien, Hakka, Teochew, Cantonese; commercial class; 1965 and 1998 anti-Chinese violence; Suharto-era assimilation laws; now freer; include peranakan (assimilated)"
+      },
+      {
+        "name": "Balinese",
+        "percentage": 1.5,
+        "notes": "Bali; Austronesian; Hindu; unique Hindu-animist culture distinct from rest of Indonesia; temple ceremonies; tourism economy"
+      },
+      {
+        "name": "Papuan",
+        "percentage": 1.5,
+        "notes": "Papua and West Papua; Melanesian; 250+ tribal groups; OPM separatist movement; least developed; gold/copper (Freeport Grasberg mine)"
+      },
+      {
+        "name": "Other (1,300+ ethnic groups)",
+        "percentage": 13.7,
+        "notes": "Sasak (Lombok), Makassarese, NTT (Manggarai, Sumbanese, Timorese), Torajan (Sulawesi, death rituals), Mentawai, Asmat, Dani, Nias; Indonesia has world's highest ethnic diversity; 700+ languages"
+      }
     ],
     "calling_code": "+62",
-    "iso3166_code": "ID/IDN",
+    "iso3166_alpha2": "ID",
+    "iso3166_alpha3": "IDN",
     "time_zone": "WIB/WITA/WIT (UTC+7 to UTC+9, 3 time zones)",
-    "independence": {"date": "1945-08-17", "from": "Netherlands (declared) / Japan (de facto)", "notes": "Dutch recognised sovereignty 1949; world's largest archipelagic state"},
+    "independence": {
+      "date": "1945-08-17",
+      "from": "Netherlands (declared) / Japan (de facto)",
+      "notes": "Dutch recognised sovereignty 1949; world's largest archipelagic state"
+    },
     "continent": "Asia",
     "notes_unique": "World's largest archipelago (17,000+ islands); largest Muslim-majority country; 4th most populous nation; Ring of Fire; Komodo dragons; Borobudur (largest Buddhist temple); new capital Nusantara under construction"
   },
@@ -70,13 +157,37 @@
       "since": "2024-10-20",
       "notes": "Gerindra; former special forces general; Suharto's son-in-law; linked to 1998 activist disappearances; won 2024 election with Jokowi's son as VP; 'continuity' platform"
     },
-    "former_presidents": [
-      {"name": "Sukarno", "term": "1945\u20131967", "notes": "Founding father; Pancasila ideology; Non-Aligned Movement; Guided Democracy; Konfrontasi with Malaysia; toppled after 1965 coup attempt"},
-      {"name": "Suharto", "term": "1967\u20131998", "notes": "'New Order'; 32-year authoritarian rule; 1965 anti-communist purge (500,000-1M killed); East Timor invasion 1975; economic development; KKN (corruption); fell in 1998 Asian financial crisis/Reformasi"},
-      {"name": "Abdurrahman Wahid (Gus Dur)", "term": "1999\u20132001", "notes": "First democratically elected; NU (Nahdlatul Ulama); religious pluralist; impeached"},
-      {"name": "Megawati Sukarnoputri", "term": "2001\u20132004", "notes": "PDI-P; Sukarno's daughter; first female president; Bali bombing 2002 on watch"},
-      {"name": "Susilo Bambang Yudhoyono (SBY)", "term": "2004\u20132014", "notes": "Demokrat; first directly elected president; stability; Aceh peace; tsunami response; two terms"},
-      {"name": "Joko Widodo (Jokowi)", "term": "2014\u20132024", "notes": "PDI-P then independent; first non-elite president; infrastructure (toll roads, MRT); new capital Nusantara; son Gibran as Prabowo's VP"}
+    "former_leaders": [
+      {
+        "name": "Sukarno",
+        "term": "1945–1967",
+        "notes": "Founding father; Pancasila ideology; Non-Aligned Movement; Guided Democracy; Konfrontasi with Malaysia; toppled after 1965 coup attempt"
+      },
+      {
+        "name": "Suharto",
+        "term": "1967–1998",
+        "notes": "'New Order'; 32-year authoritarian rule; 1965 anti-communist purge (500,000-1M killed); East Timor invasion 1975; economic development; KKN (corruption); fell in 1998 Asian financial crisis/Reformasi"
+      },
+      {
+        "name": "Abdurrahman Wahid (Gus Dur)",
+        "term": "1999–2001",
+        "notes": "First democratically elected; NU (Nahdlatul Ulama); religious pluralist; impeached"
+      },
+      {
+        "name": "Megawati Sukarnoputri",
+        "term": "2001–2004",
+        "notes": "PDI-P; Sukarno's daughter; first female president; Bali bombing 2002 on watch"
+      },
+      {
+        "name": "Susilo Bambang Yudhoyono (SBY)",
+        "term": "2004–2014",
+        "notes": "Demokrat; first directly elected president; stability; Aceh peace; tsunami response; two terms"
+      },
+      {
+        "name": "Joko Widodo (Jokowi)",
+        "term": "2014–2024",
+        "notes": "PDI-P then independent; first non-elite president; infrastructure (toll roads, MRT); new capital Nusantara; son Gibran as Prabowo's VP"
+      }
     ]
   },
   "thematic_clusters": {
@@ -84,14 +195,20 @@
       {
         "slug": "prehistoric-indonesia-and-early-humans",
         "name": "Prehistoric Indonesia and Early Humans",
-        "year_range": [-1800000, -500],
+        "year_range": [
+          -1800000,
+          -500
+        ],
         "status": "PLANNED",
         "description": "The discovery of Homo erectus (Java Man), the arrival of Homo sapiens, Austronesian migrations, and the development of early agricultural and maritime cultures across the Indonesian archipelago.",
         "sub_clusters": [
           {
             "slug": "java-man-and-early-hominids",
             "name": "Java Man and Early Hominids",
-            "year_range": [-1800000, -40000],
+            "year_range": [
+              -1800000,
+              -40000
+            ],
             "description": "The discovery of Homo erectus fossils at Trinil and Sangiran by Eugène Dubois, the Flores hobbit (Homo floresiensis), and the deep prehistory of human habitation in the Indonesian archipelago.",
             "key_events": [
               "Eugène Dubois discovers Homo erectus ('Java Man') at Trinil (1891)"
@@ -100,7 +217,10 @@
           {
             "slug": "austronesian-expansion-and-dongson-culture",
             "name": "Austronesian Expansion and Dongson Culture",
-            "year_range": [-3000, -500],
+            "year_range": [
+              -3000,
+              -500
+            ],
             "description": "The Austronesian migration into the Indonesian archipelago, the spread of rice cultivation and outrigger canoe technology, and the arrival of Dongson bronze culture."
           }
         ]
@@ -108,14 +228,20 @@
       {
         "slug": "early-indianized-kingdoms",
         "name": "Early Indianized Kingdoms",
-        "year_range": [100, 700],
+        "year_range": [
+          100,
+          700
+        ],
         "status": "PLANNED",
         "description": "The emergence of the earliest Hindu-Buddhist polities in the archipelago, including Kutai in Borneo, Tarumanagara in West Java, and the early inscription-attested kingdoms.",
         "sub_clusters": [
           {
             "slug": "kutai-and-tarumanagara",
             "name": "Kutai and Tarumanagara",
-            "year_range": [100, 500],
+            "year_range": [
+              100,
+              500
+            ],
             "description": "The earliest Sanskrit inscriptions in Southeast Asia from Kutai in East Kalimantan, the Tarumanagara kingdom in West Java, and the initial diffusion of Indian religious and political concepts.",
             "key_events": [
               "Mulavarman's Yupa inscriptions at Kutai — earliest evidence of Indianized kingship in Indonesia (c. 400 AD)"
@@ -124,7 +250,10 @@
           {
             "slug": "kalingga-and-early-javanese-polities",
             "name": "Kalingga and Early Javanese Polities",
-            "year_range": [500, 700],
+            "year_range": [
+              500,
+              700
+            ],
             "description": "The kingdom of Kalingga (Ho-ling) in Central Java mentioned in Chinese records, Queen Sima's legendary rule of law, and the foundations for the great temple-building kingdoms."
           }
         ]
@@ -134,14 +263,20 @@
       {
         "slug": "srivijaya-maritime-empire",
         "name": "Srivijaya Maritime Empire",
-        "year_range": [670, 1025],
+        "year_range": [
+          670,
+          1025
+        ],
         "status": "PLANNED",
         "description": "The Malay Buddhist maritime empire based in Sumatra that controlled the Strait of Malacca, dominated Southeast Asian trade, and served as a major center of Buddhist learning.",
         "sub_clusters": [
           {
             "slug": "srivijaya-rise-and-trade-dominance",
             "name": "Srivijaya Rise and Trade Dominance",
-            "year_range": [670, 900],
+            "year_range": [
+              670,
+              900
+            ],
             "description": "The Kedukan Bukit inscription, Srivijaya's control of the Strait of Malacca, its relations with Tang China and the Abbasid Caliphate, and its role as a center for Buddhist scholarship visited by I Tsing.",
             "key_events": [
               "Chinese monk I Tsing studies at Srivijaya, describing it as a major Buddhist center (671 AD)",
@@ -151,7 +286,10 @@
           {
             "slug": "srivijaya-decline-and-chola-raids",
             "name": "Srivijaya Decline and Chola Raids",
-            "year_range": [900, 1025],
+            "year_range": [
+              900,
+              1025
+            ],
             "description": "The rivalry with the Javanese Mataram and Sailendra dynasties, the devastating Chola naval raids from South India, and the gradual fragmentation of Srivijayan power.",
             "key_events": [
               "Chola Emperor Rajendra I raids and devastates Srivijayan ports (1025 AD)"
@@ -162,14 +300,20 @@
       {
         "slug": "classical-javanese-kingdoms",
         "name": "Classical Javanese Kingdoms",
-        "year_range": [732, 1293],
+        "year_range": [
+          732,
+          1293
+        ],
         "status": "PLANNED",
         "description": "The great Hindu-Buddhist kingdoms of Central and East Java — the Sailendra and Mataram dynasties, the construction of Borobudur and Prambanan, and the maritime empire of Singhasari.",
         "sub_clusters": [
           {
             "slug": "sailendra-dynasty-and-borobudur",
             "name": "Sailendra Dynasty and Borobudur",
-            "year_range": [732, 929],
+            "year_range": [
+              732,
+              929
+            ],
             "description": "The Buddhist Sailendra dynasty, the construction of Borobudur — the world's largest Buddhist monument, the Hindu Mataram kingdom's construction of Prambanan, and the shift of power to East Java.",
             "key_events": [
               "Construction of Borobudur, the world's largest Buddhist monument (c. 780–830 AD)",
@@ -179,7 +323,10 @@
           {
             "slug": "east-javanese-kingdoms-and-singhasari",
             "name": "East Javanese Kingdoms and Singhasari",
-            "year_range": [929, 1293],
+            "year_range": [
+              929,
+              1293
+            ],
             "description": "The shift of Javanese power to the east under Mpu Sindok, the Kediri and Singhasari kingdoms, Kertanegara's aggressive expansionism, and the Mongol invasion that ended Singhasari.",
             "key_events": [
               "Ken Arok founds the Singhasari kingdom, unifying East Java (1222)",
@@ -193,14 +340,20 @@
       {
         "slug": "majapahit-empire",
         "name": "Majapahit Empire",
-        "year_range": [1293, 1527],
+        "year_range": [
+          1293,
+          1527
+        ],
         "status": "PLANNED",
         "description": "The greatest pre-Islamic Indonesian empire, Majapahit's unification of the archipelago under Gajah Mada, the literary and cultural golden age, and the empire's eventual decline and Islamization.",
         "sub_clusters": [
           {
             "slug": "founding-and-gajah-mada",
             "name": "Founding and Gajah Mada's Palapa Oath",
-            "year_range": [1293, 1389],
+            "year_range": [
+              1293,
+              1389
+            ],
             "description": "Raden Wijaya's founding of Majapahit after exploiting the Mongol invasion, the reign of Hayam Wuruk and Prime Minister Gajah Mada, the Palapa Oath to unify the archipelago, and Prapanca's Nagarakretagama.",
             "key_events": [
               "Raden Wijaya founds Majapahit by turning the Mongol expedition against his rivals (1293)",
@@ -210,7 +363,10 @@
           {
             "slug": "majapahit-decline-and-islamization",
             "name": "Majapahit Decline and Islamization",
-            "year_range": [1389, 1527],
+            "year_range": [
+              1389,
+              1527
+            ],
             "description": "Succession wars after Hayam Wuruk, the Paregreg civil war, the spread of Islam through north coast trading ports, and the final collapse of Majapahit as Islamic sultanates rose."
           }
         ]
@@ -218,14 +374,20 @@
       {
         "slug": "islamic-sultanates-era",
         "name": "Islamic Sultanates Era",
-        "year_range": [1292, 1600],
+        "year_range": [
+          1292,
+          1600
+        ],
         "status": "PLANNED",
         "description": "The spread of Islam through trade networks, the establishment of major sultanates across the archipelago — Samudra-Pasai, Demak, Ternate, Tidore, Makassar, Aceh — and their rivalry with arriving Europeans.",
         "sub_clusters": [
           {
             "slug": "early-islamic-sultanates",
             "name": "Early Islamic Sultanates",
-            "year_range": [1292, 1500],
+            "year_range": [
+              1292,
+              1500
+            ],
             "description": "The establishment of Samudra-Pasai as the first Islamic sultanate, the gravestone of Sultan Malik al-Salih, the Islamization of the north Javanese coast, and the Sultanate of Malacca's role in spreading Islam.",
             "key_events": [
               "Marco Polo notes the Islamic conversion of Samudra-Pasai during his visit (1292)"
@@ -234,7 +396,10 @@
           {
             "slug": "sultanate-rivalries-and-european-arrival",
             "name": "Sultanate Rivalries and European Arrival",
-            "year_range": [1500, 1600],
+            "year_range": [
+              1500,
+              1600
+            ],
             "description": "The Sultanate of Demak's conquest of Hindu Java, the spice sultanates of Ternate and Tidore, the Portuguese capture of Malacca, the arrival of the Spanish and Dutch, and the beginning of colonial intrusion.",
             "key_events": [
               "Portuguese conquer Malacca, disrupting existing trade networks (1511)",
@@ -248,14 +413,20 @@
       {
         "slug": "dutch-east-india-company-era",
         "name": "Dutch East India Company Era",
-        "year_range": [1602, 1800],
+        "year_range": [
+          1602,
+          1800
+        ],
         "status": "PLANNED",
         "description": "The VOC's ruthless monopolization of the spice trade, the conquest of Jakarta (Batavia), the exploitation of Java, the Banda massacre, and the gradual Dutch territorial expansion across the archipelago.",
         "sub_clusters": [
           {
             "slug": "voc-establishment-and-spice-monopoly",
             "name": "VOC Establishment and Spice Monopoly",
-            "year_range": [1602, 1700],
+            "year_range": [
+              1602,
+              1700
+            ],
             "description": "The founding of the VOC, Jan Pieterszoon Coen's establishment of Batavia, the Banda massacre to enforce nutmeg monopoly, the Mataram wars, and the VOC's trade empire across the archipelago.",
             "key_events": [
               "Jan Pieterszoon Coen founds Batavia (modern Jakarta) as VOC headquarters (1619)",
@@ -265,7 +436,10 @@
           {
             "slug": "voc-expansion-and-javanese-wars",
             "name": "VOC Expansion and Javanese Wars",
-            "year_range": [1700, 1800],
+            "year_range": [
+              1700,
+              1800
+            ],
             "description": "The Javanese Wars of Succession, Mataram's fragmentation into Surakarta and Yogyakarta, the Chinese massacre in Batavia, the VOC's bankruptcy, and its dissolution in 1799.",
             "key_events": [
               "Chinese massacre in Batavia — thousands of ethnic Chinese killed (1740)",
@@ -277,14 +451,20 @@
       {
         "slug": "dutch-east-indies-colonial-state",
         "name": "Dutch East Indies Colonial State",
-        "year_range": [1800, 1942],
+        "year_range": [
+          1800,
+          1942
+        ],
         "status": "PLANNED",
         "description": "The transition from VOC to direct Dutch colonial rule, the Java War, the Cultivation System, the Ethical Policy, the rise of Indonesian nationalism, and the emergence of the independence movement.",
         "sub_clusters": [
           {
             "slug": "java-war-and-cultivation-system",
             "name": "Java War and Cultivation System",
-            "year_range": [1800, 1870],
+            "year_range": [
+              1800,
+              1870
+            ],
             "description": "The Napoleonic interlude under Daendels and Raffles, the Java War (Diponegoro War), the exploitative Cultivation System (Cultuurstelsel), and the Padri and Aceh Wars in Sumatra.",
             "key_events": [
               "Java War — Prince Diponegoro's rebellion against Dutch rule (1825–1830)",
@@ -294,7 +474,10 @@
           {
             "slug": "ethical-policy-and-nationalist-awakening",
             "name": "Ethical Policy and Nationalist Awakening",
-            "year_range": [1870, 1942],
+            "year_range": [
+              1870,
+              1942
+            ],
             "description": "The Liberal and Ethical Policy periods, the Aceh War's brutal conclusion, Budi Utomo and Sarekat Islam, the founding of the PNI by Sukarno, the Youth Pledge of 1928, and pre-war nationalist activism.",
             "key_events": [
               "Youth Pledge — 'One Nation, One People, One Language' unifies the nationalist movement (28 October 1928)",
@@ -308,14 +491,20 @@
       {
         "slug": "japanese-occupation-and-revolution",
         "name": "Japanese Occupation and Revolution",
-        "year_range": [1942, 1949],
+        "year_range": [
+          1942,
+          1949
+        ],
         "status": "PLANNED",
         "description": "The Japanese occupation, its mobilization of Indonesians, the proclamation of independence by Sukarno and Hatta, the revolutionary war against the returning Dutch, and the achievement of sovereignty.",
         "sub_clusters": [
           {
             "slug": "japanese-occupation",
             "name": "Japanese Occupation",
-            "year_range": [1942, 1945],
+            "year_range": [
+              1942,
+              1945
+            ],
             "description": "The rapid Japanese conquest, the exploitation of resources and forced labor (romusha), the formation of PETA and other auxiliary forces, and the preparation for independence.",
             "key_events": [
               "Japanese forces conquer the entire Dutch East Indies within three months (March 1942)"
@@ -324,7 +513,10 @@
           {
             "slug": "proclamation-and-revolution",
             "name": "Proclamation and Revolution",
-            "year_range": [1945, 1949],
+            "year_range": [
+              1945,
+              1949
+            ],
             "description": "Sukarno and Hatta's Proclamation of Independence, the Battle of Surabaya, Dutch military 'Police Actions', international diplomacy, and the Dutch recognition of Indonesian sovereignty.",
             "key_events": [
               "Sukarno and Hatta proclaim Indonesian independence (17 August 1945)",
@@ -337,14 +529,20 @@
       {
         "slug": "guided-democracy-and-transition-to-new-order",
         "name": "Guided Democracy and Transition to New Order",
-        "year_range": [1949, 1966],
+        "year_range": [
+          1949,
+          1966
+        ],
         "status": "PLANNED",
         "description": "Sukarno's parliamentary democracy and its instability, the shift to 'Guided Democracy', the Bandung Conference, Konfrontasi with Malaysia, and the catastrophic 1965 anti-communist purge.",
         "sub_clusters": [
           {
             "slug": "parliamentary-period-and-bandung",
             "name": "Parliamentary Period and Bandung Conference",
-            "year_range": [1949, 1959],
+            "year_range": [
+              1949,
+              1959
+            ],
             "description": "The parliamentary democracy period, regional rebellions (PRRI/Permesta), the Bandung Conference of 1955 founding the Non-Aligned Movement, and Sukarno's dissolution of parliament.",
             "key_events": [
               "Asian-African Conference at Bandung launches the Non-Aligned Movement (April 1955)"
@@ -353,7 +551,10 @@
           {
             "slug": "guided-democracy-and-1965-crisis",
             "name": "Guided Democracy and 1965 Crisis",
-            "year_range": [1959, 1966],
+            "year_range": [
+              1959,
+              1966
+            ],
             "description": "Sukarno's Guided Democracy, Konfrontasi against Malaysia, the Nasakom ideology, the 30 September Movement, and the army-led anti-communist massacres killing an estimated 500,000–1,000,000 people.",
             "key_events": [
               "30 September Movement — attempted coup triggers mass anti-communist killings (1965–1966)",
@@ -367,14 +568,20 @@
       {
         "slug": "new-order-suharto-era",
         "name": "New Order (Suharto Era)",
-        "year_range": [1966, 1998],
+        "year_range": [
+          1966,
+          1998
+        ],
         "status": "PLANNED",
         "description": "Suharto's authoritarian New Order regime, rapid economic development, the invasion and occupation of East Timor, state repression, corruption, and the 1997 Asian financial crisis that brought the regime down.",
         "sub_clusters": [
           {
             "slug": "new-order-development-and-repression",
             "name": "New Order Development and Repression",
-            "year_range": [1966, 1997],
+            "year_range": [
+              1966,
+              1997
+            ],
             "description": "Suharto's economic stabilization and 'development' ideology, the Green Revolution, oil boom wealth, the invasion and brutal occupation of East Timor, transmigration, and systematic corruption.",
             "key_events": [
               "Indonesia invades East Timor following Portuguese withdrawal (7 December 1975)",
@@ -384,7 +591,10 @@
           {
             "slug": "asian-crisis-and-fall-of-suharto",
             "name": "Asian Financial Crisis and Fall of Suharto",
-            "year_range": [1997, 1998],
+            "year_range": [
+              1997,
+              1998
+            ],
             "description": "The 1997 Asian financial crisis devastating the Indonesian economy, IMF intervention, the May 1998 riots, the Trisakti shootings, and Suharto's resignation after 32 years in power.",
             "key_events": [
               "Asian financial crisis collapses the Indonesian rupiah (1997)",
@@ -396,14 +606,20 @@
       {
         "slug": "reformasi-and-democratic-indonesia",
         "name": "Reformasi and Democratic Indonesia",
-        "year_range": [1998, 2025],
+        "year_range": [
+          1998,
+          2025
+        ],
         "status": "PLANNED",
         "description": "The Reformasi democratic transition, East Timor independence, decentralization, the rise of democratic politics, the 2004 tsunami, Jokowi's presidency, and Indonesia's emergence as a major regional power.",
         "sub_clusters": [
           {
             "slug": "democratic-transition-and-east-timor",
             "name": "Democratic Transition and East Timor Independence",
-            "year_range": [1998, 2004],
+            "year_range": [
+              1998,
+              2004
+            ],
             "description": "The Reformasi movement, presidents Habibie, Wahid, and Megawati, the East Timor independence referendum and militia violence, the Bali bombings, and democratic consolidation.",
             "key_events": [
               "East Timor votes for independence; pro-Indonesian militias devastate the territory (1999)",
@@ -413,7 +629,10 @@
           {
             "slug": "contemporary-indonesia",
             "name": "Contemporary Indonesia",
-            "year_range": [2004, 2025],
+            "year_range": [
+              2004,
+              2025
+            ],
             "description": "The 2004 Indian Ocean tsunami's devastation of Aceh, the Aceh peace agreement, Yudhoyono and Jokowi presidencies, infrastructure development, the new capital Nusantara, and Indonesia's G20 role.",
             "key_events": [
               "Indian Ocean tsunami devastates Aceh, killing over 170,000 in Indonesia (26 December 2004)",
@@ -431,47 +650,71 @@
   "cross_cluster_interfaces": [
     {
       "cluster": "prehistoric-indonesia-and-early-humans",
-      "interfaces_with": ["early-indianized-kingdoms"]
+      "interfaces_with": [
+        "early-indianized-kingdoms"
+      ]
     },
     {
       "cluster": "early-indianized-kingdoms",
-      "interfaces_with": ["srivijaya-maritime-empire", "classical-javanese-kingdoms"]
+      "interfaces_with": [
+        "srivijaya-maritime-empire",
+        "classical-javanese-kingdoms"
+      ]
     },
     {
       "cluster": "srivijaya-maritime-empire",
-      "interfaces_with": ["classical-javanese-kingdoms", "islamic-sultanates-era"]
+      "interfaces_with": [
+        "classical-javanese-kingdoms",
+        "islamic-sultanates-era"
+      ]
     },
     {
       "cluster": "classical-javanese-kingdoms",
-      "interfaces_with": ["majapahit-empire"]
+      "interfaces_with": [
+        "majapahit-empire"
+      ]
     },
     {
       "cluster": "majapahit-empire",
-      "interfaces_with": ["islamic-sultanates-era"]
+      "interfaces_with": [
+        "islamic-sultanates-era"
+      ]
     },
     {
       "cluster": "islamic-sultanates-era",
-      "interfaces_with": ["dutch-east-india-company-era"]
+      "interfaces_with": [
+        "dutch-east-india-company-era"
+      ]
     },
     {
       "cluster": "dutch-east-india-company-era",
-      "interfaces_with": ["dutch-east-indies-colonial-state"]
+      "interfaces_with": [
+        "dutch-east-indies-colonial-state"
+      ]
     },
     {
       "cluster": "dutch-east-indies-colonial-state",
-      "interfaces_with": ["japanese-occupation-and-revolution"]
+      "interfaces_with": [
+        "japanese-occupation-and-revolution"
+      ]
     },
     {
       "cluster": "japanese-occupation-and-revolution",
-      "interfaces_with": ["guided-democracy-and-transition-to-new-order"]
+      "interfaces_with": [
+        "guided-democracy-and-transition-to-new-order"
+      ]
     },
     {
       "cluster": "guided-democracy-and-transition-to-new-order",
-      "interfaces_with": ["new-order-suharto-era"]
+      "interfaces_with": [
+        "new-order-suharto-era"
+      ]
     },
     {
       "cluster": "new-order-suharto-era",
-      "interfaces_with": ["reformasi-and-democratic-indonesia"]
+      "interfaces_with": [
+        "reformasi-and-democratic-indonesia"
+      ]
     }
   ],
   "statistics": {
