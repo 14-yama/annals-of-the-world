@@ -7,18 +7,37 @@
     "continent": "Europe",
     "iso_alpha2": "UA",
     "iso_alpha3": "UKR",
-    "timeframe_coverage": ["910", "920", "930", "940", "950", "960"],
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
     "created_at": "2026-02-06T00:00:00Z",
-    "updated_at": "2026-02-06T00:00:00Z",
+    "updated_at": "2026-02-15T13:31:47.878219Z",
     "notes": "Comprehensive index for Ukraine covering Scythians, Kievan Rus' (9th-13th century, cradle of East Slavic civilization, Christianization 988), Mongol invasion 1240, Polish-Lithuanian Commonwealth, Cossack Hetmanate (Zaporizhian Sich), Russian Empire annexation, Holodomor 1932-33 (Stalin-engineered famine, 3.5-7.5M dead, genocide debate), WWII (Nazi occupation, Babi Yar massacre, OUN/UPA complex legacy, 8M dead), Chernobyl 1986, independence 1991, Orange Revolution 2004, Euromaidan 2014, Crimea annexation/Donbas war, Zelenskyy election 2019, Russian full-scale invasion Feb 24 2022 (ongoing)."
   },
   "country_profile": {
     "capital": "Kyiv (Kiev)",
-    "official_languages": ["Ukrainian"],
-    "other_languages": ["Russian", "Crimean Tatar", "Romanian", "Polish", "Hungarian"],
+    "official_languages": [
+      "Ukrainian"
+    ],
+    "other_languages": [
+      "Russian",
+      "Crimean Tatar",
+      "Romanian",
+      "Polish",
+      "Hungarian"
+    ],
     "government_type": "Unitary semi-presidential republic (martial law since Feb 24, 2022)",
     "currency": "Ukrainian hryvnia (UAH)",
-    "population": {"estimate": 37000000, "year": 2024, "source": "State Statistics Service (pre-war ~43M, but millions fled, millions in occupied territories, displaced, killed; exact count impossible during war)"},
+    "population": {
+      "estimate": 37000000,
+      "year": 2024,
+      "source": "State Statistics Service (pre-war ~43M, but millions fled, millions in occupied territories, displaced, killed; exact count impossible during war)"
+    },
     "area_km2": 603628,
     "gdp": {
       "nominal_total": "$195 billion (estimated)",
@@ -28,7 +47,12 @@
       "year": 2024,
       "source": "IMF (war-affected, uncertain)"
     },
-    "hdi": {"value": 0.734, "rank": 77, "year": 2021, "category": "High (pre-war; degraded since 2022)"},
+    "hdi": {
+      "value": 0.734,
+      "rank": 77,
+      "year": 2021,
+      "category": "High (pre-war; degraded since 2022)"
+    },
     "religion": {
       "Christianity_Orthodox": "87.3%",
       "Christianity_Catholic_Greek": "7.7%",
@@ -38,18 +62,128 @@
       "note": "Orthodox Church of Ukraine (autocephalous since 2019, Tomos from Constantinople, 60%+ of parishes, Zelenskyy supports); Ukrainian Orthodox Church (Moscow Patriarchate, historically dominant, banned 2022-23 after war started, pro-Russian accusations though declared independence); Greek Catholic (Uniate, Eastern rite but papal authority, Western Ukraine/Lviv, banned under USSR 1946-89, revived); Crimean Tatars Muslim (~250k, mostly exiled 1944, returned 1990s, oppressed under Russian occupation); Jewish (historically ~2M, 1.5M murdered Holocaust, emigration to Israel, now ~50-100k, Zelenskyy Jewish but secular); religious identity intertwined with national identity (anti-Russian); 988 Christianization of Kievan Rus' by Volodymyr (both Ukraine and Russia claim this legacy, heritage conflict)"
     },
     "ethnic_groups": [
-      {"name": "Ukrainian", "percentage": 77.8, "notes": "East Slavic; Cossack heritage (Zaporizhian Sich, hetman state, free warriors); blue and yellow flag (wheat fields, sky); embroidered vyshyvanka (identity symbol); language close to Russian/Belarusian but distinct (Cyrillic); post-Soviet identity formation (1991 independence, bilingualism common, Euromaidan 2014 crystallized identity); decommunization laws; war (2022+) unified national consciousness; 'we are not Russian' assertion; regional differences (Western pro-EU, Eastern historically Russian-speaking but post-2022 Ukrainianization surged)"}, 
-      {"name": "Russian", "percentage": 17.3, "notes": "Pre-war ~8M; concentrated in East/South (Donbas, Kharkiv, Odesa, Crimea); Russian language dominant historically but Ukrainian rising; post-2014 (Euromaidan, Crimea, Donbas war) identity shifted (many Russian-speakers now pro-Ukraine, bilingualism, 'Russian-speaking Ukrainian patriots'); occupied territories (Crimea 2014, Donetsk/Luhansk/Zaporizhzhia/Kherson 2022, fake referendums); collaborators vs resisters; Putin's 'protect Russians' pretext for invasion false (Ukrainian Russians overwhelmingly support Ukraine, 2022 unified country against Russia); post-war anti-Russian sentiment"},  
-      {"name": "Crimean Tatar", "percentage": 0.5, "notes": "~250k (pre-2014, now mostly under occupation or fled); indigenous to Crimea; Turkic/Muslim; 1944 Stalin deportation to Central Asia (political deportation, ~46% died, genocide recognition, returned 1990s after USSR collapse); Mejlis (parliament, banned by Russia 2016); pro-Ukraine (Russia annexed Crimea 2014, repression, disappearances, torture); Zelenskyy promised return; post-war liberation hope"}, 
-      {"name": "Other", "percentage": 4.4, "notes": "Belarusian (~275k), Romanian/Moldovan (~260k, Chernivtsi oblast), Crimean Tatar, Bulgarians (~205k, Odesa oblast), Hungarian (~150k, Zakarpattia, tensions over language/autonomy), Polish (~145k), Jewish (~50-100k, historically 2M+, Holocaust/emigration decimated, Zelenskyy Jewish, Babi Yar 1941 massacre 33k), Greeks, Armenians; Nazi genocide (1.5M Jews murdered including Babi Yar); post-2014 refugees from Donbas ~1.5M internally displaced; post-2022 war: 8M refugees abroad (mostly Poland/Germany), millions internally displaced, occupied territories population uncertain"}
+      {
+        "name": "Ukrainian",
+        "percentage": 77.8,
+        "notes": "East Slavic; Cossack heritage (Zaporizhian Sich, hetman state, free warriors); blue and yellow flag (wheat fields, sky); embroidered vyshyvanka (identity symbol); language close to Russian/Belarusian but distinct (Cyrillic); post-Soviet identity formation (1991 independence, bilingualism common, Euromaidan 2014 crystallized identity); decommunization laws; war (2022+) unified national consciousness; 'we are not Russian' assertion; regional differences (Western pro-EU, Eastern historically Russian-speaking but post-2022 Ukrainianization surged)"
+      },
+      {
+        "name": "Russian",
+        "percentage": 17.3,
+        "notes": "Pre-war ~8M; concentrated in East/South (Donbas, Kharkiv, Odesa, Crimea); Russian language dominant historically but Ukrainian rising; post-2014 (Euromaidan, Crimea, Donbas war) identity shifted (many Russian-speakers now pro-Ukraine, bilingualism, 'Russian-speaking Ukrainian patriots'); occupied territories (Crimea 2014, Donetsk/Luhansk/Zaporizhzhia/Kherson 2022, fake referendums); collaborators vs resisters; Putin's 'protect Russians' pretext for invasion false (Ukrainian Russians overwhelmingly support Ukraine, 2022 unified country against Russia); post-war anti-Russian sentiment"
+      },
+      {
+        "name": "Crimean Tatar",
+        "percentage": 0.5,
+        "notes": "~250k (pre-2014, now mostly under occupation or fled); indigenous to Crimea; Turkic/Muslim; 1944 Stalin deportation to Central Asia (political deportation, ~46% died, genocide recognition, returned 1990s after USSR collapse); Mejlis (parliament, banned by Russia 2016); pro-Ukraine (Russia annexed Crimea 2014, repression, disappearances, torture); Zelenskyy promised return; post-war liberation hope"
+      },
+      {
+        "name": "Other",
+        "percentage": 4.4,
+        "notes": "Belarusian (~275k), Romanian/Moldovan (~260k, Chernivtsi oblast), Crimean Tatar, Bulgarians (~205k, Odesa oblast), Hungarian (~150k, Zakarpattia, tensions over language/autonomy), Polish (~145k), Jewish (~50-100k, historically 2M+, Holocaust/emigration decimated, Zelenskyy Jewish, Babi Yar 1941 massacre 33k), Greeks, Armenians; Nazi genocide (1.5M Jews murdered including Babi Yar); post-2014 refugees from Donbas ~1.5M internally displaced; post-2022 war: 8M refugees abroad (mostly Poland/Germany), millions internally displaced, occupied territories population uncertain"
+      }
     ],
     "calling_code": "+380",
     "iso3166_alpha2": "UA",
     "iso3166_alpha3": "UKR",
     "time_zone": "EET (UTC+2) / EEST (UTC+3)",
-    "independence": {"date": "1991-08-24", "from": "Soviet Union (referendum December 1, 1991, 90.32% yes, including Crimea/Donbas voted yes overwhelmingly, USSR dissolved weeks later)"},
+    "independence": {
+      "date": "1991-08-24",
+      "from": "Soviet Union (referendum December 1, 1991, 90.32% yes, including Crimea/Donbas voted yes overwhelmingly, USSR dissolved weeks later)"
+    },
     "continent": "Europe",
-    "notes_unique": "Russian invasion (February 24, 2022, largest European war since WWII, Putin denied Ukrainian nationhood/'brotherly people', Zelenskyy rallied resistance 'I need ammunition not a ride', Kyiv offensive failed, Bucha massacre, Mariupol destroyed, Kharkiv/Kherson liberated 2022, Bakhmut, Avdiivka, Western arms aid, HIMARS, Patriot, F-16s, grain corridor, drone warfare, war crimes, ICC arrest warrant for Putin March 2023, ongoing 3rd year 2025, hundreds of thousands dead); Holodomor (1932-33, Stalin-engineered famine, collectivization, grain requisition, 3.5-7.5M Ukrainians starved to death, terror-famine/genocide debate, recognized as genocide by Ukraine/US/EU Parliament/30+ countries, Russia denies, national trauma); Chernobyl (April 26, 1986, nuclear disaster, reactor 4 explosion, 31 immediate deaths, cancer/evacuations, Pripyat ghost town, exclusion zone, worst nuclear accident, USSR cover-up, Gorbachev glasnost catalyst, 2022 Russians occupied site briefly irradiated selves); Euromaidan (Nov 2013-Feb 2014, EuroMaidan protests, Yanukovych rejected EU Association Agreement, Revolution of Dignity, 100+ killed by Berkut, Yanukovych fled to Russia, pro-EU turn, triggered Crimea annexation/Donbas war); Crimea annexation (March 2014, 'little green men'/Russian soldiers, sham referendum, Russia annexed, illegal under international law, UN General Assembly condemned, Crimean Tatars oppressed); Donbas war (2014-22, Donetsk/Luhansk 'People's Republics', Russian-backed separatists, Minsk Agreements failed, 14k dead before 2022); Orange Revolution (2004, Yushchenko poisoned/dioxin, election fraud, protests, revote, pro-Western turn, later disappointed); Kievan Rus' (9th-13th century, first East Slavic state, Kyiv capital, Christianization 988 Volodymyr, both Ukraine and Russia claim heritage, identity conflict); Cossacks (Zaporizhian Sich 16th-18th century, Khmelnytsky Uprising 1648, hetman state, free warriors, Cossack identity central to Ukrainian nationalism); Babi Yar (Sept 29-30, 1941, Nazi massacre, 33,771 Jews killed in two days, ravine outside Kyiv, Holocaust); OUN/UPA (Stepan Bandera, Ukrainian nationalists, WWII fought Nazis and Soviets, collaboration accusations, ethnic cleansing of Poles, polarizing legacy, Western Ukraine hero/Eastern villain, Russia uses for propaganda); Nuclear weapons (3rd largest arsenal inherited 1991, gave up 1994 Budapest Memorandum in exchange for security guarantees from Russia/US/UK, Russia violated 2014/2022, regret); Breadbasket (fertile black soil/chernozem, major grain exporter, wheat/corn/sunflower, 2022 blockade disrupted global food)" 
+    "notes_unique": "Russian invasion (February 24, 2022, largest European war since WWII, Putin denied Ukrainian nationhood/'brotherly people', Zelenskyy rallied resistance 'I need ammunition not a ride', Kyiv offensive failed, Bucha massacre, Mariupol destroyed, Kharkiv/Kherson liberated 2022, Bakhmut, Avdiivka, Western arms aid, HIMARS, Patriot, F-16s, grain corridor, drone warfare, war crimes, ICC arrest warrant for Putin March 2023, ongoing 3rd year 2025, hundreds of thousands dead); Holodomor (1932-33, Stalin-engineered famine, collectivization, grain requisition, 3.5-7.5M Ukrainians starved to death, terror-famine/genocide debate, recognized as genocide by Ukraine/US/EU Parliament/30+ countries, Russia denies, national trauma); Chernobyl (April 26, 1986, nuclear disaster, reactor 4 explosion, 31 immediate deaths, cancer/evacuations, Pripyat ghost town, exclusion zone, worst nuclear accident, USSR cover-up, Gorbachev glasnost catalyst, 2022 Russians occupied site briefly irradiated selves); Euromaidan (Nov 2013-Feb 2014, EuroMaidan protests, Yanukovych rejected EU Association Agreement, Revolution of Dignity, 100+ killed by Berkut, Yanukovych fled to Russia, pro-EU turn, triggered Crimea annexation/Donbas war); Crimea annexation (March 2014, 'little green men'/Russian soldiers, sham referendum, Russia annexed, illegal under international law, UN General Assembly condemned, Crimean Tatars oppressed); Donbas war (2014-22, Donetsk/Luhansk 'People's Republics', Russian-backed separatists, Minsk Agreements failed, 14k dead before 2022); Orange Revolution (2004, Yushchenko poisoned/dioxin, election fraud, protests, revote, pro-Western turn, later disappointed); Kievan Rus' (9th-13th century, first East Slavic state, Kyiv capital, Christianization 988 Volodymyr, both Ukraine and Russia claim heritage, identity conflict); Cossacks (Zaporizhian Sich 16th-18th century, Khmelnytsky Uprising 1648, hetman state, free warriors, Cossack identity central to Ukrainian nationalism); Babi Yar (Sept 29-30, 1941, Nazi massacre, 33,771 Jews killed in two days, ravine outside Kyiv, Holocaust); OUN/UPA (Stepan Bandera, Ukrainian nationalists, WWII fought Nazis and Soviets, collaboration accusations, ethnic cleansing of Poles, polarizing legacy, Western Ukraine hero/Eastern villain, Russia uses for propaganda); Nuclear weapons (3rd largest arsenal inherited 1991, gave up 1994 Budapest Memorandum in exchange for security guarantees from Russia/US/UK, Russia violated 2014/2022, regret); Breadbasket (fertile black soil/chernozem, major grain exporter, wheat/corn/sunflower, 2022 blockade disrupted global food)",
+    "demographics": {
+      "median_age": 0,
+      "urbanization_pct": 0,
+      "fertility_rate": 0,
+      "life_expectancy": 0,
+      "infant_mortality_per_1k": 0,
+      "literacy_rate_pct": 0,
+      "net_migration_rate": 0
+    },
+    "natural_resources": {
+      "primary": [],
+      "resource_dependency_pct_gdp": 0,
+      "notes": ""
+    },
+    "military": {
+      "budget_usd": "",
+      "pct_of_gdp": 0,
+      "active_personnel": 0,
+      "reserve_personnel": 0,
+      "nuclear_status": "Non-nuclear",
+      "alliances": [],
+      "notes": ""
+    },
+    "trade": {
+      "top_exports": [],
+      "top_imports": [],
+      "major_partners": [],
+      "trade_balance": "",
+      "remittances_pct_gdp": 0
+    },
+    "infrastructure": {
+      "internet_penetration_pct": 0,
+      "electricity_access_pct": 0,
+      "mobile_subscriptions_per_100": 0,
+      "railway_km": 0,
+      "paved_roads_pct": 0
+    },
+    "international_memberships": [],
+    "governance_indices": {
+      "corruption_perception_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "press_freedom_index": {
+        "rank": 0,
+        "year": 0
+      },
+      "democracy_index": {
+        "score": 0,
+        "category": "",
+        "year": 0
+      },
+      "fragile_states_index": {
+        "score": 0,
+        "year": 0
+      }
+    },
+    "climate_environment": {
+      "climate_zones": [],
+      "co2_emissions_mt": 0,
+      "renewable_energy_pct": 0,
+      "natural_hazards": [],
+      "protected_areas_pct": 0
+    },
+    "debt_aid": {
+      "national_debt_pct_gdp": 0,
+      "foreign_aid_received_usd": "",
+      "notes": ""
+    },
+    "education": {
+      "primary_enrollment_pct": 0,
+      "secondary_enrollment_pct": 0,
+      "tertiary_enrollment_pct": 0,
+      "pisa_participation": false,
+      "top_universities": [],
+      "notes": ""
+    },
+    "diaspora_migration": {
+      "diaspora_population": "",
+      "refugees_hosted": 0,
+      "refugees_produced": 0,
+      "remittances_usd": "",
+      "notes": ""
+    },
+    "digital_economy": {
+      "e_government_index": 0,
+      "mobile_money_adoption": "",
+      "tech_hubs": [],
+      "notes": ""
+    }
   },
   "leadership": {
     "current_leader": {
@@ -65,33 +199,71 @@
       "notes": "Servant of the People; technocrat; wartime economy manager; coordinates Western aid; reconstruction planning"
     },
     "former_leaders": [
-      {"name": "Petro Poroshenko", "term": "2014–2019 (President)", "notes": "Post-Euromaidan; 'Chocolate King' oligarch; Roshen confections; Army/Language/Faith slogan; built up military after 2014; Tomos (autocephalous Orthodox Church 2019); Minsk Agreements (failed peace); lost to Zelenskyy (corruption fatigue); pro-Ukrainian but oligarch taint; still active in politics/defense"}, 
-      {"name": "Viktor Yanukovych", "term": "2010–2014 (President)", "notes": "Party of Regions; pro-Russia; imprisoned Tymoshenko; rejected EU Association Nov 2013 (triggered Euromaidan); Berkut violence (100+ killed, Heavenly Hundred); fled to Russia Feb 2014; convicted of treason in absentia; Putin's puppet"}, 
-      {"name": "Yulia Tymoshenko", "term": "2005, 2007–2010 (PM)", "notes": "'Gas Princess' turned Orange Revolution icon; blonde braid; PM twice; oligarch background; imprisoned 2012-14 by Yanukovych (political persecution, international outcry); freed Euromaidan; ran for president 2014/19 (lost); controversial but influential, pro-EU"}, 
-      {"name": "Viktor Yushchenko", "term": "2005–2010 (President)", "notes": "Orange Revolution leader; poisoned 2004 (dioxin, face disfigured, Russia suspected); pro-Western; NATO aspirations (blocked at Bucharest 2008); Holodomor genocide recognition; OUN/UPA controversial rehabilitation; divided country; economic crisis; lost 2010"}, 
-      {"name": "Leonid Kuchma", "term": "1994–2004 (President)", "notes": "Post-Soviet transition; Gongadze murder 2000 (journalist, tapes implicated Kuchma, 'Ukraine without Kuchma' protests); oligarch consolidation; Minsk Agreements negotiator 2014-15; ambiguous legacy"}, 
-      {"name": "Leonid Kravchuk", "term": "1991–1994 (President)", "notes": "First president; independence referendum 1991 (90% yes); USSR dissolution negotiator (Belovezha Accords Dec 1991 with Yeltsin/Shushkevich ended USSR); nuclear disarmament; founding father; died 2022 during invasion"}
-    ]
+      {
+        "name": "Petro Poroshenko",
+        "term": "2014–2019 (President)",
+        "notes": "Post-Euromaidan; 'Chocolate King' oligarch; Roshen confections; Army/Language/Faith slogan; built up military after 2014; Tomos (autocephalous Orthodox Church 2019); Minsk Agreements (failed peace); lost to Zelenskyy (corruption fatigue); pro-Ukrainian but oligarch taint; still active in politics/defense"
+      },
+      {
+        "name": "Viktor Yanukovych",
+        "term": "2010–2014 (President)",
+        "notes": "Party of Regions; pro-Russia; imprisoned Tymoshenko; rejected EU Association Nov 2013 (triggered Euromaidan); Berkut violence (100+ killed, Heavenly Hundred); fled to Russia Feb 2014; convicted of treason in absentia; Putin's puppet"
+      },
+      {
+        "name": "Yulia Tymoshenko",
+        "term": "2005, 2007–2010 (PM)",
+        "notes": "'Gas Princess' turned Orange Revolution icon; blonde braid; PM twice; oligarch background; imprisoned 2012-14 by Yanukovych (political persecution, international outcry); freed Euromaidan; ran for president 2014/19 (lost); controversial but influential, pro-EU"
+      },
+      {
+        "name": "Viktor Yushchenko",
+        "term": "2005–2010 (President)",
+        "notes": "Orange Revolution leader; poisoned 2004 (dioxin, face disfigured, Russia suspected); pro-Western; NATO aspirations (blocked at Bucharest 2008); Holodomor genocide recognition; OUN/UPA controversial rehabilitation; divided country; economic crisis; lost 2010"
+      },
+      {
+        "name": "Leonid Kuchma",
+        "term": "1994–2004 (President)",
+        "notes": "Post-Soviet transition; Gongadze murder 2000 (journalist, tapes implicated Kuchma, 'Ukraine without Kuchma' protests); oligarch consolidation; Minsk Agreements negotiator 2014-15; ambiguous legacy"
+      },
+      {
+        "name": "Leonid Kravchuk",
+        "term": "1991–1994 (President)",
+        "notes": "First president; independence referendum 1991 (90% yes); USSR dissolution negotiator (Belovezha Accords Dec 1991 with Yeltsin/Shushkevich ended USSR); nuclear disarmament; founding father; died 2022 during invasion"
+      }
+    ],
+    "head_of_state": {
+      "name": "",
+      "title": "",
+      "since": ""
+    }
   },
   "thematic_clusters": {
     "910": [
       {
         "slug": "trypillia-and-ancient-civilisations",
         "name": "Trypillia Culture & Ancient Civilisations",
-        "year_range": [-5500, -200],
+        "year_range": [
+          -5500,
+          -200
+        ],
         "status": "PLANNED",
         "description": "Ukraine's territory hosted some of Europe's earliest and most sophisticated cultures: the Trypillia (Cucuteni-Trypillia) civilisation built proto-cities of up to 15,000 inhabitants, while Scythians and Greek colonies flourished on the Pontic steppe and Black Sea coast.",
         "sub_clusters": [
           {
             "slug": "trypillia-culture",
             "name": "Trypillia (Cucuteni-Trypillia) Culture",
-            "year_range": [-5500, -2750],
+            "year_range": [
+              -5500,
+              -2750
+            ],
             "description": "One of Europe's earliest civilisations: massive proto-urban settlements (Talianki — 15,000 inhabitants), sophisticated pottery, agriculture, and the mysterious ritual burning of settlements. A foundational element of Ukrainian identity."
           },
           {
             "slug": "scythians-and-greek-colonies",
             "name": "Scythians & Greek Colonies",
-            "year_range": [-750, -200],
+            "year_range": [
+              -750,
+              -200
+            ],
             "description": "The Scythian kingdom of the Pontic steppe: remarkable gold art (Pectoral from Tovsta Mohyla), kurgan burials, and interaction with Greek colonies (Olbia, Chersonesus, Panticapaeum) that brought Hellenistic culture to the northern Black Sea."
           }
         ]
@@ -99,20 +271,29 @@
       {
         "slug": "migration-period-and-early-slavs",
         "name": "Migration Period & Early Slavs",
-        "year_range": [-200, 862],
+        "year_range": [
+          -200,
+          862
+        ],
         "status": "PLANNED",
         "description": "Sarmatians, Goths, Huns, and Avars swept across Ukrainian territory. East Slavic tribal unions (Poliane, Drevliane, Siverianie) settled the Dnieper basin, establishing the agricultural and cultural foundation for Kievan Rus'.",
         "sub_clusters": [
           {
             "slug": "sarmatian-gothic-and-hunnic-eras",
             "name": "Sarmatian, Gothic & Hunnic Eras",
-            "year_range": [-200, 550],
+            "year_range": [
+              -200,
+              550
+            ],
             "description": "Sarmatian domination of the steppe, the Gothic Kingdom of Oium (Chernyakhov culture), Attila's Hunnic Empire sweeping through Ukrainian territory, and the subsequent Avar Khaganate's influence."
           },
           {
             "slug": "east-slavic-tribal-unions",
             "name": "East Slavic Tribal Unions",
-            "year_range": [550, 862],
+            "year_range": [
+              550,
+              862
+            ],
             "description": "The Poliane (around Kyiv), Drevliane, Siverianie, Ulichi, and Tivertsi tribal unions settled the Dnieper, Desna, and Bug river basins. The founding of Kyiv (legendary founding by Kyi, Shchek, and Khoryv) and the emergence of the Varangian trade routes."
           }
         ]
@@ -122,14 +303,20 @@
       {
         "slug": "kievan-rus-and-kyiv-as-capital",
         "name": "Kievan Rus' & Kyiv as Capital",
-        "year_range": [862, 1240],
+        "year_range": [
+          862,
+          1240
+        ],
         "status": "PLANNED",
         "description": "Kyiv became the capital of Kievan Rus' — the largest European state of its era. The Baptism of Rus' (988) under Prince Volodymyr, Yaroslav the Wise's golden age, and the gradual fragmentation into rival principalities preceded the Mongol catastrophe.",
         "sub_clusters": [
           {
             "slug": "founding-and-baptism-of-rus",
             "name": "Founding of Kievan Rus' & Baptism",
-            "year_range": [862, 1015],
+            "year_range": [
+              862,
+              1015
+            ],
             "description": "Oleh's unification of Novgorod and Kyiv (882), Princess Olha's conversion to Christianity, Sviatoslav's military campaigns, and Volodymyr the Great's Baptism of Rus' (988) — the civilisational choice that oriented the East Slavic world toward Byzantine Christianity.",
             "key_events": [
               "Baptism of Rus' in Kyiv under Volodymyr the Great (988)"
@@ -138,13 +325,19 @@
           {
             "slug": "yaroslav-the-wise-golden-age",
             "name": "Yaroslav the Wise & Kievan Golden Age",
-            "year_range": [1015, 1132],
+            "year_range": [
+              1015,
+              1132
+            ],
             "description": "Yaroslav the Wise's golden age: construction of Saint Sophia Cathedral (Kyiv), the Ruska Pravda law code, diplomatic marriages connecting Kyiv to European royal houses, and Kyiv's status as one of Europe's largest and wealthiest cities."
           },
           {
             "slug": "fragmentation-and-galicia-volhynia",
             "name": "Fragmentation & Galicia-Volhynia",
-            "year_range": [1132, 1240],
+            "year_range": [
+              1132,
+              1240
+            ],
             "description": "The fragmentation of Kievan Rus' into rival principalities. The Principality of Galicia-Volhynia under Roman the Great and Daniel of Halych (Galicia) emerged as the most powerful successor state in Ukrainian territory, maintaining European diplomatic ties."
           }
         ]
@@ -152,14 +345,20 @@
       {
         "slug": "mongol-devastation-and-lithuanian-rule",
         "name": "Mongol Devastation & Lithuanian Rule",
-        "year_range": [1237, 1500],
+        "year_range": [
+          1237,
+          1500
+        ],
         "status": "PLANNED",
         "description": "The Mongol invasion (1240) destroyed Kyiv and devastated Ukraine. Ukrainian lands were subsequently divided between the Golden Horde, the Grand Duchy of Lithuania, and the Kingdom of Poland, with Lithuanian rule proving relatively benign.",
         "sub_clusters": [
           {
             "slug": "mongol-invasion-and-golden-horde",
             "name": "Mongol Invasion & Golden Horde",
-            "year_range": [1237, 1362],
+            "year_range": [
+              1237,
+              1362
+            ],
             "description": "Batu Khan's destruction of Kyiv (December 6, 1240) — a catastrophe that reduced the city to ruins. The Mongol/Golden Horde domination of the southern steppe, while the principality of Galicia-Volhynia maintained a degree of independence under Daniel of Halych.",
             "key_events": [
               "Mongol destruction of Kyiv (December 6, 1240)"
@@ -168,7 +367,10 @@
           {
             "slug": "lithuanian-and-polish-rule",
             "name": "Lithuanian & Polish Rule",
-            "year_range": [1362, 1500],
+            "year_range": [
+              1362,
+              1500
+            ],
             "description": "The Battle of Blue Waters (1362) brought most Ukrainian lands under Lithuanian control. The Grand Duchy of Lithuania adopted Ruthenian (Old Ukrainian/Belarusian) as its official language. The Union of Krewo (1385) and increasing Polish influence transformed the region's political landscape."
           }
         ]
@@ -178,20 +380,29 @@
       {
         "slug": "cossack-era-and-hetmanate",
         "name": "Cossack Era & Hetmanate",
-        "year_range": [1500, 1764],
+        "year_range": [
+          1500,
+          1764
+        ],
         "status": "PLANNED",
         "description": "The Zaporizhian Cossacks created a unique military-democratic society on the frontier. Bohdan Khmelnytsky's uprising (1648) established the Cossack Hetmanate — a foundational moment in Ukrainian national history — but the Pereyaslav Agreement (1654) with Moscow ultimately led to Russian domination.",
         "sub_clusters": [
           {
             "slug": "zaporizhian-sich-and-cossack-society",
             "name": "Zaporizhian Sich & Cossack Society",
-            "year_range": [1500, 1648],
+            "year_range": [
+              1500,
+              1648
+            ],
             "description": "The emergence of the Zaporizhian Cossacks on the Dnieper rapids: their unique military democracy (Sich), elected hetmans, raids against Ottoman and Tatar forces, the Registered Cossacks under Polish authority, and the growing tensions with Polish-Lithuanian magnates over serfdom and religious discrimination."
           },
           {
             "slug": "khmelnytsky-uprising-and-hetmanate",
             "name": "Khmelnytsky Uprising & Hetmanate",
-            "year_range": [1648, 1687],
+            "year_range": [
+              1648,
+              1687
+            ],
             "description": "Bohdan Khmelnytsky's uprising (1648) against Polish rule — a defining event in Ukrainian history — the establishment of the Cossack Hetmanate, the controversial Pereyaslav Agreement (1654) with Muscovy, the Ruin (internecine Cossack wars), and the Partition of Ukraine between Russia and Poland (Andrusovo, 1667).",
             "key_events": [
               "Khmelnytsky Uprising begins (1648)",
@@ -201,7 +412,10 @@
           {
             "slug": "mazepa-and-hetmanate-decline",
             "name": "Mazepa & Hetmanate's Decline",
-            "year_range": [1687, 1764],
+            "year_range": [
+              1687,
+              1764
+            ],
             "description": "Hetman Ivan Mazepa's alliance with Sweden against Peter the Great, the Battle of Poltava (1709) crushing Ukrainian autonomy, the destruction of the Zaporizhian Sich (1709), Hetman Orlyk's exile constitution (1710), and Catherine the Great's final abolition of the Hetmanate (1764)."
           }
         ]
@@ -211,14 +425,20 @@
       {
         "slug": "russian-and-austrian-partition",
         "name": "Russian & Austrian Partition of Ukraine",
-        "year_range": [1764, 1914],
+        "year_range": [
+          1764,
+          1914
+        ],
         "status": "PLANNED",
         "description": "Ukrainian lands were divided between the Russian Empire (Left-Bank, Sloboda, New Russia, and Right-Bank after partitions of Poland) and the Habsburg Austrian Empire (Galicia, Bukovina, Transcarpathia). Imperial policies of Russification clashed with a Ukrainian national revival.",
         "sub_clusters": [
           {
             "slug": "russian-empire-and-russification",
             "name": "Russian Empire & Russification",
-            "year_range": [1764, 1905],
+            "year_range": [
+              1764,
+              1905
+            ],
             "description": "Catherine's abolition of the Hetmanate and Sich, settlement of 'New Russia' and the Crimea (Potemkin), the Ems Decree (1876) banning Ukrainian-language publications, and the Ukrainian national awakening: Taras Shevchenko's Kobzar (1840), the Brotherhood of Saints Cyril and Methodius, and Mykhailo Hrushevsky's historical scholarship.",
             "key_events": [
               "Taras Shevchenko publishes Kobzar (1840) — birth of modern Ukrainian literature"
@@ -227,7 +447,10 @@
           {
             "slug": "galicia-and-habsburg-ukraine",
             "name": "Galicia & Habsburg Ukraine",
-            "year_range": [1772, 1914],
+            "year_range": [
+              1772,
+              1914
+            ],
             "description": "Eastern Galicia under Austrian rule became the centre of Ukrainian national life (the 'Ukrainian Piedmont'): the Greek Catholic Church, the Shevchenko Scientific Society, Ukrainian political parties, and the vibrant cultural life that the tsarist ban on Ukrainian language made impossible in Russian Ukraine."
           }
         ]
@@ -235,14 +458,20 @@
       {
         "slug": "ukrainian-revolution-and-independence-struggle",
         "name": "Ukrainian Revolution & Independence Struggle",
-        "year_range": [1914, 1921],
+        "year_range": [
+          1914,
+          1921
+        ],
         "status": "PLANNED",
         "description": "WWI, the 1917 Revolution, and the struggle for Ukrainian independence: the Central Rada, the Ukrainian People's Republic (1918), the West Ukrainian People's Republic, Hetman Skoropadsky, the Directorate, and the ultimate defeat by Bolshevik, White, and Polish forces.",
         "sub_clusters": [
           {
             "slug": "wwi-and-central-rada",
             "name": "WWI & Central Rada",
-            "year_range": [1914, 1918],
+            "year_range": [
+              1914,
+              1918
+            ],
             "description": "Ukrainians fighting on both sides of WWI (Russian and Austrian armies), the Ukrainian Central Rada (March 1917), the Four Universals progressively declaring Ukrainian autonomy and independence, and the Ukrainian People's Republic (January 22, 1918).",
             "key_events": [
               "Ukrainian People's Republic proclaimed (January 22, 1918)"
@@ -251,7 +480,10 @@
           {
             "slug": "war-of-independence",
             "name": "War of Independence & Defeat",
-            "year_range": [1918, 1921],
+            "year_range": [
+              1918,
+              1921
+            ],
             "description": "The chaotic multi-sided war: Hetman Skoropadsky's German-backed state, the Directorate under Petliura, the West Ukrainian People's Republic (ZUNR), Bolshevik invasions, White Russian forces, the Polish-Ukrainian alliance and the Treaty of Warsaw (1920), and the final Bolshevik victory — the Treaty of Riga (1921) partitioning Ukraine."
           }
         ]
@@ -261,14 +493,20 @@
       {
         "slug": "soviet-ukraine-holodomor-and-wwii",
         "name": "Soviet Ukraine: Holodomor & WWII",
-        "year_range": [1921, 1945],
+        "year_range": [
+          1921,
+          1945
+        ],
         "status": "PLANNED",
         "description": "Soviet Ukraine experienced a brief cultural renaissance (Ukrainisation, 1920s) followed by Stalin's genocidal famine — the Holodomor (1932–33) — and the devastating WWII, which killed 8 million Ukrainians and destroyed 700 cities and 28,000 villages.",
         "sub_clusters": [
           {
             "slug": "ukrainisation-and-holodomor",
             "name": "Ukrainisation & the Holodomor",
-            "year_range": [1921, 1939],
+            "year_range": [
+              1921,
+              1939
+            ],
             "description": "The Ukrainian SSR under Korenizatsiya/Ukrainisation policy (1920s), the cultural renaissance (Executed Renaissance of Ukrainian intellectuals), Stalin's forced collectivisation, and the Holodomor (1932–33) — the deliberate famine that killed 3.5–7.5 million Ukrainians, now recognised as genocide by many nations.",
             "key_events": [
               "Holodomor — Stalin's genocidal famine in Ukraine (1932–1933)"
@@ -277,7 +515,10 @@
           {
             "slug": "wwii-and-devastation",
             "name": "WWII & Total Devastation",
-            "year_range": [1939, 1945],
+            "year_range": [
+              1939,
+              1945
+            ],
             "description": "Soviet annexation of Western Ukraine (1939), Nazi invasion (1941) and brutal occupation, Babi Yar massacre (33,771 Jews shot in two days, September 1941), the Ukrainian Insurgent Army (UPA), partisan warfare, the Volhynia tragedy, and liberation at the cost of 8 million Ukrainian lives.",
             "key_events": [
               "Babi Yar massacre (September 29–30, 1941)"
@@ -288,20 +529,29 @@
       {
         "slug": "post-war-soviet-ukraine-and-chernobyl",
         "name": "Post-War Soviet Ukraine & Chernobyl",
-        "year_range": [1945, 1991],
+        "year_range": [
+          1945,
+          1991
+        ],
         "status": "PLANNED",
         "description": "Ukraine became a founding member of the United Nations (1945) while remaining a Soviet republic. Post-war reconstruction, Khrushchev's transfer of Crimea (1954), the dissident movement, and the Chernobyl disaster (1986) fuelled the independence movement.",
         "sub_clusters": [
           {
             "slug": "reconstruction-and-crimea-transfer",
             "name": "Reconstruction & Crimea Transfer",
-            "year_range": [1945, 1972],
+            "year_range": [
+              1945,
+              1972
+            ],
             "description": "Post-war reconstruction, the annexation of Carpatho-Ukraine, Khrushchev's transfer of Crimea from RSFSR to Ukrainian SSR (1954), de-Stalinisation, and the shistdesiatnyky (Sixties) generation of Ukrainian dissidents."
           },
           {
             "slug": "dissidents-and-chernobyl",
             "name": "Dissidents & Chernobyl",
-            "year_range": [1972, 1991],
+            "year_range": [
+              1972,
+              1991
+            ],
             "description": "Shcherbytsky's repressive rule, the Ukrainian Helsinki Group (1976), the Chernobyl nuclear disaster (April 26, 1986) — the world's worst nuclear accident — the Rukh popular movement, the Act of Declaration of Independence (August 24, 1991), and the December 1991 independence referendum (90.3% in favour).",
             "key_events": [
               "Chernobyl nuclear disaster (April 26, 1986)",
@@ -315,20 +565,29 @@
       {
         "slug": "independent-ukraine-and-orange-revolution",
         "name": "Independent Ukraine & Orange Revolution",
-        "year_range": [1991, 2014],
+        "year_range": [
+          1991,
+          2014
+        ],
         "status": "PLANNED",
         "description": "Independent Ukraine navigated nuclear disarmament (Budapest Memorandum, 1994), oligarchic politics, the Orange Revolution (2004) defending democratic elections, and the Euromaidan Revolution (2013–14) that toppled the Yanukovych regime but triggered Russian aggression.",
         "sub_clusters": [
           {
             "slug": "early-independence-and-nuclear-disarmament",
             "name": "Early Independence & Nuclear Disarmament",
-            "year_range": [1991, 2004],
+            "year_range": [
+              1991,
+              2004
+            ],
             "description": "Kravchuk and Kuchma presidencies, the transfer of nuclear weapons to Russia, the Budapest Memorandum security assurances (1994), economic crisis and oligarchic capitalism, the Cassette Scandal (Gongadze murder), and the rise of competitive politics."
           },
           {
             "slug": "orange-revolution-and-aftermath",
             "name": "Orange Revolution & Aftermath",
-            "year_range": [2004, 2013],
+            "year_range": [
+              2004,
+              2013
+            ],
             "description": "The Orange Revolution (November–December 2004) — massive protests overturning fraudulent elections in favour of Viktor Yushchenko — Euro 2012, the dysfunction of the Yushchenko-Tymoshenko rivalry, Yanukovych's return to power (2010), and Tymoshenko's imprisonment.",
             "key_events": [
               "Orange Revolution (November–December 2004)"
@@ -339,14 +598,20 @@
       {
         "slug": "euromaidan-crimea-and-russian-invasion",
         "name": "Euromaidan, Crimea & Russian Invasion",
-        "year_range": [2013, 2026],
+        "year_range": [
+          2013,
+          2026
+        ],
         "status": "PLANNED",
         "description": "The Euromaidan Revolution (2013–14), Russia's annexation of Crimea and the Donbas proxy war, Ukraine's reform path and EU aspirations, and Russia's full-scale invasion (February 24, 2022) — the largest European war since 1945 — testing Ukrainian national resilience and Western solidarity.",
         "sub_clusters": [
           {
             "slug": "euromaidan-revolution",
             "name": "Euromaidan Revolution",
-            "year_range": [2013, 2014],
+            "year_range": [
+              2013,
+              2014
+            ],
             "description": "Yanukovych's rejection of the EU Association Agreement (November 2013) triggered the Euromaidan protests. The Heavenly Hundred killed by security forces (February 18–20, 2014), Yanukovych's flight, and the Revolution of Dignity establishing a pro-European government.",
             "key_events": [
               "Euromaidan Revolution of Dignity (November 2013 – February 2014)"
@@ -355,7 +620,10 @@
           {
             "slug": "crimea-annexation-and-donbas-war",
             "name": "Crimea Annexation & Donbas War",
-            "year_range": [2014, 2022],
+            "year_range": [
+              2014,
+              2022
+            ],
             "description": "Russia's covert seizure and annexation of Crimea (March 2014), the shooting down of MH17 (July 2014), the Donbas proxy war (Russian-backed separatists in Donetsk and Luhansk), the Minsk agreements, Zelensky's election (2019), and Ukraine's reform and EU integration efforts.",
             "key_events": [
               "Russia annexes Crimea (March 2014)",
@@ -365,7 +633,10 @@
           {
             "slug": "full-scale-russian-invasion",
             "name": "Full-Scale Russian Invasion",
-            "year_range": [2022, 2026],
+            "year_range": [
+              2022,
+              2026
+            ],
             "description": "Russia's full-scale invasion (February 24, 2022): the failed assault on Kyiv, the Bucha massacre, the siege of Mariupol (Azovstal), the Kharkiv and Kherson counter-offensives, massive Western military and financial support, Ukraine's EU candidate status (June 2022), and the ongoing war reshaping European security.",
             "key_events": [
               "Russia launches full-scale invasion of Ukraine (February 24, 2022)",
@@ -383,43 +654,72 @@
   "cross_cluster_interfaces": [
     {
       "cluster": "migration-period-and-early-slavs",
-      "interfaces_with": ["trypillia-and-ancient-civilisations", "kievan-rus-and-kyiv-as-capital"]
+      "interfaces_with": [
+        "trypillia-and-ancient-civilisations",
+        "kievan-rus-and-kyiv-as-capital"
+      ]
     },
     {
       "cluster": "kievan-rus-and-kyiv-as-capital",
-      "interfaces_with": ["migration-period-and-early-slavs", "mongol-devastation-and-lithuanian-rule"]
+      "interfaces_with": [
+        "migration-period-and-early-slavs",
+        "mongol-devastation-and-lithuanian-rule"
+      ]
     },
     {
       "cluster": "mongol-devastation-and-lithuanian-rule",
-      "interfaces_with": ["kievan-rus-and-kyiv-as-capital", "cossack-era-and-hetmanate"]
+      "interfaces_with": [
+        "kievan-rus-and-kyiv-as-capital",
+        "cossack-era-and-hetmanate"
+      ]
     },
     {
       "cluster": "cossack-era-and-hetmanate",
-      "interfaces_with": ["mongol-devastation-and-lithuanian-rule", "russian-and-austrian-partition"]
+      "interfaces_with": [
+        "mongol-devastation-and-lithuanian-rule",
+        "russian-and-austrian-partition"
+      ]
     },
     {
       "cluster": "russian-and-austrian-partition",
-      "interfaces_with": ["cossack-era-and-hetmanate", "ukrainian-revolution-and-independence-struggle"]
+      "interfaces_with": [
+        "cossack-era-and-hetmanate",
+        "ukrainian-revolution-and-independence-struggle"
+      ]
     },
     {
       "cluster": "ukrainian-revolution-and-independence-struggle",
-      "interfaces_with": ["russian-and-austrian-partition", "soviet-ukraine-holodomor-and-wwii"]
+      "interfaces_with": [
+        "russian-and-austrian-partition",
+        "soviet-ukraine-holodomor-and-wwii"
+      ]
     },
     {
       "cluster": "soviet-ukraine-holodomor-and-wwii",
-      "interfaces_with": ["ukrainian-revolution-and-independence-struggle", "post-war-soviet-ukraine-and-chernobyl"]
+      "interfaces_with": [
+        "ukrainian-revolution-and-independence-struggle",
+        "post-war-soviet-ukraine-and-chernobyl"
+      ]
     },
     {
       "cluster": "post-war-soviet-ukraine-and-chernobyl",
-      "interfaces_with": ["soviet-ukraine-holodomor-and-wwii", "independent-ukraine-and-orange-revolution"]
+      "interfaces_with": [
+        "soviet-ukraine-holodomor-and-wwii",
+        "independent-ukraine-and-orange-revolution"
+      ]
     },
     {
       "cluster": "independent-ukraine-and-orange-revolution",
-      "interfaces_with": ["post-war-soviet-ukraine-and-chernobyl", "euromaidan-crimea-and-russian-invasion"]
+      "interfaces_with": [
+        "post-war-soviet-ukraine-and-chernobyl",
+        "euromaidan-crimea-and-russian-invasion"
+      ]
     },
     {
       "cluster": "euromaidan-crimea-and-russian-invasion",
-      "interfaces_with": ["independent-ukraine-and-orange-revolution"]
+      "interfaces_with": [
+        "independent-ukraine-and-orange-revolution"
+      ]
     }
   ],
   "statistics": {
