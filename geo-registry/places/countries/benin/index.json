@@ -17,7 +17,10 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.860225Z",
-    "notes": "Comprehensive index for Benin covering Dahomey Kingdom, Atlantic slave trade, French colonialism, and democratic transition."
+    "notes": "Comprehensive index for Benin covering Dahomey Kingdom, Atlantic slave trade, French colonialism, and democratic transition.",
+    "sub_region": "",
+    "iso3166_numeric": "000",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Porto-Novo (official), Cotonou (seat of government)",
@@ -124,7 +127,22 @@
       "life_expectancy": 62.8,
       "infant_mortality_per_1k": 56.0,
       "literacy_rate_pct": 45.8,
-      "net_migration_rate": -0.3
+      "net_migration_rate": -0.3,
+      "population_growth_rate_pct": 2.7,
+      "urban_population_growth_rate_pct": 3.9,
+      "life_expectancy_male": 60.0,
+      "life_expectancy_female": 63.0,
+      "under5_mortality_per_1k": 90,
+      "sex_ratio": 1.01,
+      "dependency_ratio": 82.0,
+      "population_density_per_km2": 115,
+      "age_structure": {
+        "0_14_pct": 42,
+        "15_24_pct": 20,
+        "25_54_pct": 31,
+        "55_64_pct": 4,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -135,7 +153,8 @@
         "cotton"
       ],
       "resource_dependency_pct_gdp": 8,
-      "notes": "Limited natural resources; cotton principal cash crop (top 15 global producer); transit economy—Port of Cotonou serves landlocked Niger/Burkina Faso; offshore oil exploration ongoing"
+      "notes": "Limited natural resources; cotton principal cash crop (top 15 global producer); transit economy—Port of Cotonou serves landlocked Niger/Burkina Faso; offshore oil exploration ongoing",
+      "resource_curse_risk": "Low (not resource-dependent)"
     },
     "military": {
       "budget_usd": "230 million",
@@ -147,7 +166,10 @@
         "AU",
         "ECOWAS"
       ],
-      "notes": "Small military; UN peacekeeping contributor; growing jihadist insurgency from Sahel spilling into northern Atacora/Alibori departments (Parc W area); French military cooperation"
+      "notes": "Small military; UN peacekeeping contributor; growing jihadist insurgency from Sahel spilling into northern Atacora/Alibori departments (Parc W area); French military cooperation",
+      "paramilitary_personnel": 2500,
+      "conscription": true,
+      "global_firepower_rank": 120
     },
     "trade": {
       "top_exports": [
@@ -172,14 +194,51 @@
         "Vietnam"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 2.5
+      "remittances_pct_gdp": 2.5,
+      "total_exports_usd": "$3.7 billion",
+      "total_imports_usd": "$4.2 billion",
+      "top_export_destinations": [
+        "Bangladesh (cotton)",
+        "India",
+        "Nigeria",
+        "China",
+        "Niger"
+      ],
+      "top_import_origins": [
+        "China",
+        "India",
+        "France",
+        "Togo",
+        "Thailand"
+      ],
+      "trade_as_pct_gdp": 42,
+      "current_account_balance_usd": "-$500 million",
+      "trade_agreements": [
+        "ECOWAS",
+        "WAEMU",
+        "AfCFTA"
+      ],
+      "special_economic_zones": [
+        "Glo-Djigbé Industrial Zone (GDIZ)"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 34.0,
       "electricity_access_pct": 42.0,
       "mobile_subscriptions_per_100": 88,
       "railway_km": 438,
-      "paved_roads_pct": 20
+      "paved_roads_pct": 20,
+      "broadband_subscriptions_per_100": 0.3,
+      "4g_coverage_pct": 45,
+      "5g_availability": false,
+      "road_network_km": 16000,
+      "waterways_km": 150,
+      "submarine_cables": [
+        "SAT-3/WASC",
+        "ACE",
+        "MainOne"
+      ],
+      "notes": "Glo-Djigbé Industrial Zone (2022) textile/agro hub; Cotonou-Niamey railway planned; RNIE1 highway; zémidjan motorcycle taxis."
     },
     "international_memberships": [
       "UN",
@@ -208,6 +267,26 @@
       "fragile_states_index": {
         "score": 74.2,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.45,
+        "rank": 89,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.3,
+        "percentile": 35,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.15,
+        "percentile": 42,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.15,
+        "percentile": 38,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -222,12 +301,42 @@
         "floods (south)",
         "desertification"
       ],
-      "protected_areas_pct": 26
+      "protected_areas_pct": 26,
+      "average_temperature_c": 27,
+      "average_rainfall_mm": 1100,
+      "co2_per_capita_t": 0.6,
+      "deforestation_rate_pct": 2.5,
+      "water_stress_level": "Low-Medium",
+      "environmental_performance_index": {
+        "score": 28.6,
+        "rank": 155,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified (2016)",
+      "biodiversity": {
+        "known_species": 3200,
+        "endemic_species": 50,
+        "threatened_species": 45
+      },
+      "notes": "W-Arly-Pendjari transboundary biosphere reserve; coastal erosion threatening Cotonou; Lama Forest remnant; rapid deforestation for firewood and farming."
     },
     "debt_aid": {
       "national_debt_pct_gdp": 54.2,
       "foreign_aid_received_usd": "630 million",
-      "notes": "Aid-dependent; World Bank/IMF programs; Talon's economic reforms attracted FDI; Chinese infrastructure loans (Cotonou-Niamey railway); EU budget support"
+      "notes": "Aid-dependent; World Bank/IMF programs; Talon's economic reforms attracted FDI; Chinese infrastructure loans (Cotonou-Niamey railway); EU budget support",
+      "external_debt_usd": "$5 billion",
+      "debt_service_pct_revenue": 15,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "EU",
+        "France",
+        "World Bank",
+        "China",
+        "AfDB"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Completed (2003)"
     },
     "education": {
       "primary_enrollment_pct": 95,
@@ -238,14 +347,41 @@
         "University of Abomey-Calavi",
         "University of Parakou"
       ],
-      "notes": "Low literacy especially among women (31% female vs 54% male); French-language instruction; Quranic schools in north; historical 'Quartier Latin of Africa' (educated elite tradition from Dahomey)"
+      "notes": "Low literacy especially among women (31% female vs 54% male); French-language instruction; Quranic schools in north; historical 'Quartier Latin of Africa' (educated elite tradition from Dahomey)",
+      "education_expenditure_pct_gdp": 3.0,
+      "primary_completion_rate_pct": 70,
+      "gender_parity_index": 0.87,
+      "mean_years_of_schooling": 3.8,
+      "expected_years_of_schooling": 12.6,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 47,
+      "out_of_school_children": 500000,
+      "academic_freedom_index": 0.55
     },
     "diaspora_migration": {
       "diaspora_population": "450,000 (Nigeria, Côte d'Ivoire, France, Gabon)",
       "refugees_hosted": 5000,
       "refugees_produced": 800,
       "remittances_usd": "430 million",
-      "notes": "Historic Dahomey diaspora; significant cross-border movement with Nigeria/Togo; Zémidjan (motorcycle taxi) drivers from Benin widespread in West Africa"
+      "notes": "Historic Dahomey diaspora; significant cross-border movement with Nigeria/Togo; Zémidjan (motorcycle taxi) drivers from Benin widespread in West Africa",
+      "diaspora_top_destinations": [
+        "Nigeria",
+        "Togo",
+        "France",
+        "Côte d'Ivoire",
+        "Gabon"
+      ],
+      "asylum_seekers": 500,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 5000,
+      "immigration_policy": "Open borders (ECOWAS free movement)",
+      "remittances_pct_gdp": 3.0,
+      "net_migration_rate_per_1k": 0.5
     },
     "digital_economy": {
       "e_government_index": 0.38,
@@ -254,16 +390,382 @@
         "Cotonou (Sèmè City tech hub)",
         "EtriLabs"
       ],
-      "notes": "Sèmè City special economic zone for tech/innovation (government flagship); mobile money expanding rapidly; fiber backbone under construction; digital ID rollout"
+      "notes": "Sèmè City special economic zone for tech/innovation (government flagship); mobile money expanding rapidly; fiber backbone under construction; digital ID rollout",
+      "e_participation_index": 0.35,
+      "ict_development_index": 2.0,
+      "mobile_money_accounts": 4000000,
+      "digital_payments_pct_adults": 20,
+      "fintech_companies": 8,
+      "startup_ecosystem_value_usd": "$20 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 30.0,
+      "innovation_index_score": 18.0,
+      "innovation_index_rank": 121,
+      "ai_readiness_index": 22.0
     },
-    "notes_unique": ""
+    "notes_unique": "Historical cradle of the Vodun (Voodoo) religion; the Kingdom of Dahomey fielded the famous all-female Mino ('Amazons') warrior regiment.",
+    "capital_coordinates": {
+      "lat": 6.4969,
+      "lon": 2.6289
+    },
+    "other_major_cities": [
+      "Cotonou (economic capital)",
+      "Abomey-Calavi",
+      "Parakou",
+      "Djougou",
+      "Bohicon"
+    ],
+    "national_motto": "Fellowship, Justice, Labour",
+    "national_anthem": "L'Aube Nouvelle (The New Dawn)",
+    "currency_code": "XOF",
+    "internet_tld": ".bj",
+    "utc_offset": "UTC+1",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 9.3077,
+        "lon": 2.3158
+      },
+      "bounding_box": {
+        "north": 12.42,
+        "south": 6.22,
+        "east": 3.84,
+        "west": 0.77
+      },
+      "land_area_km2": 112622,
+      "water_area_km2": 2000,
+      "coastline_km": 121,
+      "borders": [
+        "Togo",
+        "Burkina Faso",
+        "Niger",
+        "Nigeria"
+      ],
+      "border_lengths_km": {
+        "Togo": 651,
+        "Burkina Faso": 386,
+        "Niger": 277,
+        "Nigeria": 809
+      },
+      "highest_point": {
+        "name": "Mont Sokbaro",
+        "elevation_m": 658
+      },
+      "lowest_point": {
+        "name": "Atlantic Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Flat coastal plain; marshy lagoons; forested plateau (centre); savanna (north); Atacora mountains (northwest)",
+      "land_use": {
+        "agricultural_pct": 31.3,
+        "arable_pct": 22.9,
+        "forest_pct": 40.2,
+        "other_pct": 28.5
+      },
+      "major_rivers": [
+        "Ouémé",
+        "Niger (border)",
+        "Mono (border)"
+      ],
+      "major_lakes": [
+        "Lake Nokoué",
+        "Lake Ahémé"
+      ],
+      "exclusive_economic_zone_km2": 31313,
+      "landlocked": false,
+      "notes": "Narrow strip of land between Togo and Nigeria; Ganvié (lake village) is 'Venice of Africa'; Pendjari National Park (W-Arly-Pendjari complex, UNESCO)."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$19 billion",
+      "gdp_ppp_usd": "$49 billion",
+      "gdp_per_capita_nominal_usd": 1412,
+      "gdp_per_capita_ppp_usd": 3680,
+      "gdp_growth_rate_pct": 6.0,
+      "inflation_rate_pct": 3.0,
+      "unemployment_rate_pct": 1.5,
+      "youth_unemployment_rate_pct": 3.5,
+      "poverty_rate_pct": 38.5,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 37.8,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 25,
+        "industry_pct_gdp": 23,
+        "services_pct_gdp": 52
+      },
+      "labor_force": 5200000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 38,
+        "industry_pct": 14,
+        "services_pct": 48
+      },
+      "fdi_inflow_usd": "$250 million",
+      "fdi_outflow_usd": "$10 million",
+      "foreign_exchange_reserves_usd": "$1.5 billion",
+      "ease_of_doing_business_rank": 149,
+      "economic_freedom_index_score": 56.0,
+      "credit_rating": {
+        "moodys": "B1",
+        "sp": "B+",
+        "fitch": "B+"
+      },
+      "notes": "Strong recent growth (6%+); cotton is #1 agricultural export; informal trade with Nigeria dominates; Cotonou Port transit hub; PAG (Programme d'Actions du Gouvernement) development plan; Eurobonds issued 2019/2021."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 2.4,
+      "health_expenditure_per_capita_usd": 34,
+      "physicians_per_1k": 0.1,
+      "nurses_midwives_per_1k": 0.5,
+      "hospital_beds_per_1k": 0.5,
+      "maternal_mortality_per_100k": 397,
+      "hiv_prevalence_pct": 0.9,
+      "malaria_incidence_per_1k": 180,
+      "tuberculosis_incidence_per_100k": 56,
+      "access_to_clean_water_pct": 65,
+      "access_to_sanitation_pct": 19,
+      "vaccination_coverage_pct": 68,
+      "stunting_under5_pct": 32,
+      "obesity_rate_pct": 9.6,
+      "universal_health_coverage_index": 40,
+      "leading_causes_of_death": [
+        "Malaria",
+        "Neonatal disorders",
+        "Lower respiratory infections",
+        "Diarrheal diseases"
+      ],
+      "notes": "Severe doctor shortage; ARCH health insurance scheme expanding coverage; traditional medicine widely used; Vodun (voodoo) healing practices."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 40.0,
+      "food_security_index_rank": 98,
+      "arable_land_pct": 22.9,
+      "agricultural_land_pct": 31.3,
+      "irrigated_land_pct": 2,
+      "major_crops": [
+        "cotton",
+        "maize",
+        "cassava",
+        "yams",
+        "palm oil",
+        "pineapple",
+        "cashew nuts",
+        "shea nuts"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "sheep",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 20,
+      "cereal_yield_kg_per_hectare": 1300,
+      "agricultural_employment_pct": 38,
+      "prevalence_of_undernourishment_pct": 7.5,
+      "notes": "Africa's largest cotton exporter by volume (some years); cashew production growing; informal food trade with Nigeria; pineapple for export; palm oil production."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 50,
+        "hydroelectric_pct": 5,
+        "solar_pct": 3,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 42
+      },
+      "installed_capacity_mw": 500,
+      "electricity_production_gwh": 600,
+      "electricity_consumption_per_capita_kwh": 100,
+      "energy_imports_pct": 85,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 48000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 10,
+      "energy_access_urban_pct": 65,
+      "notes": "Imports 85% of electricity from Nigeria/Ghana; Maria Gléta gas power plant; solar projects in north; biomass (wood/charcoal) dominant for cooking."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Cadjehoun Airport (Cotonou)"
+      ],
+      "major_airports_domestic": [
+        "Parakou",
+        "Natitingou",
+        "Tourou (new Glo-Djigbé)"
+      ],
+      "national_airline": "None currently (Benin Airlines proposed)",
+      "major_seaports": [
+        "Cotonou"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 6,
+      "registered_vehicles_per_1k": 20,
+      "road_fatalities_per_100k": 28,
+      "notes": "Cotonou Port handles transit cargo for Niger, Burkina Faso, Chad, Mali; zémidjan (motorcycle taxis) dominant urban transport; new Glo-Djigbé airport under construction."
+    },
+    "tourism": {
+      "annual_visitors": 320000,
+      "tourism_revenue_usd": "$200 million",
+      "tourism_pct_gdp": 1.1,
+      "tourism_employment_pct": 4,
+      "unesco_world_heritage_sites": 2,
+      "unesco_sites_list": [
+        "Royal Palaces of Abomey",
+        "Koutammakou (shared with Togo)"
+      ],
+      "major_attractions": [
+        "Royal Palaces of Abomey (Dahomey Kingdom)",
+        "Ganvié (lake village)",
+        "Ouidah (slave route)",
+        "Pendjari National Park",
+        "Route des Pêches"
+      ],
+      "visa_free_access_countries": 50,
+      "henley_passport_rank": 88,
+      "notes": "Birthplace of Vodun (voodoo) — international Vodun festival in Ouidah (Jan 10); Abomey Amazons (Agojie) inspiration for film; Talon government investing heavily in tourism infrastructure."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 54,
+      "gender_inequality_index": 0.564,
+      "gender_inequality_rank": 142,
+      "gender_gap_index_score": 0.633,
+      "women_in_parliament_pct": 7.2,
+      "women_labor_force_participation_pct": 68,
+      "maternal_mortality_per_100k": 397,
+      "child_marriage_pct": 26,
+      "fgm_prevalence_pct": 9,
+      "lgbtq_legal_status": "Legal (no specific laws)",
+      "death_penalty_status": "Abolitionist (2022 new penal code)",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 40,
+      "notes": "Democratic governance tradition (multi-party since 1991); Talon era political restrictions (opposition candidates barred); vidomégon (child domestic servants) practice; FGM declining."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.0,
+      "global_peace_index_rank": 88,
+      "terrorism_index_score": 3.0,
+      "terrorism_index_rank": 48,
+      "homicide_rate_per_100k": 3.0,
+      "active_conflicts": [
+        "Jihadist incursions in north (Alibori, Atacora — JNIM, ISGS spillover from Sahel)"
+      ],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 700,
+      "arms_imports_usd": "$20 million",
+      "internally_displaced_persons": 5000,
+      "notes": "Northern terrorism threat growing (2022-24 attacks in Pendjari/W park area); historically stable democracy; no coups in democratic era; Operation Mirador counter-terrorism."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "Leopard"
+      ],
+      "national_animal": "Leopard",
+      "national_flower": "",
+      "national_dish": "Amiwo (corn dough with tomato sauce)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Vodun Day (January 10)",
+        "Gani Festival (January, Nikki)",
+        "Independence Day (August 1)",
+        "Gelede masquerade"
+      ],
+      "cuisine_highlights": [
+        "Amiwo",
+        "Akassa (fermented corn dough)",
+        "Pâte with sauce (gombo, arachide)",
+        "Piron (yam fufu)"
+      ],
+      "music_art_traditions": [
+        "Vodun ceremonies",
+        "Gèlèdé masquerade (UNESCO)",
+        "Tchink System music",
+        "Afro-beat"
+      ],
+      "film_industry": "Small but growing (FESPACO participant)",
+      "intangible_heritage_items": [
+        "Gèlèdé oral heritage",
+        "Ifá divination system (shared with Nigeria/Togo)"
+      ],
+      "notable_historical_figures": [
+        "King Ghezo (Dahomey)",
+        "Béhanzin (Last king of Dahomey)",
+        "Mathieu Kérékou",
+        "Angélique Kidjo (Grammy winner)"
+      ],
+      "world_heritage_sites": [
+        "Royal Palaces of Abomey",
+        "Koutammakou (shared with Togo)"
+      ],
+      "media_landscape": "Diverse private media; ORTB state broadcaster; several private radio/TV stations; online media expanding",
+      "notes": "Birthplace of Vodun religion; Kingdom of Dahomey historical legacy; Angélique Kidjo internationally renowned; restitution of royal treasures from France (2021, 26 objects)."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (French-influenced)",
+      "constitution_year": 1990,
+      "sharia_applicability": "None",
+      "customary_law_role": "Recognised in family/land matters",
+      "icc_membership": "Member",
+      "judicial_independence_score": 0.4,
+      "contract_enforcement_days": 750,
+      "property_rights_index": 42.0,
+      "notes": "1990 constitution model for Francophone Africa (Conférence Nationale); Constitutional Court active; 2019 reforms restricted political competition; ECOWAS Court of Justice in Porto-Novo."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 16,
+        "global_rank": 77
+      },
+      "area": {
+        "continent_rank": 31,
+        "global_rank": 101
+      },
+      "gdp_nominal": {
+        "continent_rank": 21,
+        "global_rank": 107
+      },
+      "gdp_per_capita": {
+        "continent_rank": 33,
+        "global_rank": 157
+      },
+      "hdi": {
+        "continent_rank": 36,
+        "global_rank": 166
+      },
+      "life_expectancy": {
+        "continent_rank": 27,
+        "global_rank": 141
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 38,
+        "global_rank": 149
+      },
+      "internet_penetration": {
+        "continent_rank": 22,
+        "global_rank": 120
+      },
+      "press_freedom": {
+        "continent_rank": 15,
+        "global_rank": 57
+      },
+      "global_peace_index": {
+        "continent_rank": 14,
+        "global_rank": 88
+      },
+      "innovation_index": {
+        "continent_rank": 30,
+        "global_rank": 121
+      },
+      "notes": "One of Africa's first democracies (1991 Conférence Nationale); cotton powerhouse; fast-growing economy."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Patrice Talon",
       "title": "President",
       "since": "2016-04-06",
-      "notes": "Business tycoon turned president; re-elected 2021; controversial opposition exclusion"
+      "notes": "Business tycoon turned president; re-elected 2021; controversial opposition exclusion",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -315,7 +817,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

@@ -17,7 +17,10 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.857793Z",
-    "notes": "Comprehensive index for Angola covering Kongo Kingdom, Ndongo/Mbundu (Queen Njinga), Portuguese colonisation (oldest in sub-Saharan Africa 1575–1975), Atlantic slave trade centre, liberation movements (MPLA/FNLA/UNITA), civil war 1975–2002 (Cold War proxy), dos Santos era, oil wealth, and Lourenço reforms."
+    "notes": "Comprehensive index for Angola covering Kongo Kingdom, Ndongo/Mbundu (Queen Njinga), Portuguese colonisation (oldest in sub-Saharan Africa 1575–1975), Atlantic slave trade centre, liberation movements (MPLA/FNLA/UNITA), civil war 1975–2002 (Cold War proxy), dos Santos era, oil wealth, and Lourenço reforms.",
+    "sub_region": "",
+    "iso3166_numeric": "000",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Luanda",
@@ -124,7 +127,22 @@
       "life_expectancy": 62.1,
       "infant_mortality_per_1k": 51.0,
       "literacy_rate_pct": 72.0,
-      "net_migration_rate": 0.8
+      "net_migration_rate": 0.8,
+      "population_growth_rate_pct": 3.2,
+      "urban_population_growth_rate_pct": 4.4,
+      "life_expectancy_male": 59.0,
+      "life_expectancy_female": 65.0,
+      "under5_mortality_per_1k": 69,
+      "sex_ratio": 0.99,
+      "dependency_ratio": 92.0,
+      "population_density_per_km2": 29,
+      "age_structure": {
+        "0_14_pct": 47,
+        "15_24_pct": 18,
+        "25_54_pct": 29,
+        "55_64_pct": 3,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -139,7 +157,8 @@
         "uranium"
       ],
       "resource_dependency_pct_gdp": 50,
-      "notes": "Sub-Saharan Africa's second-largest oil producer (1.2M bpd); Catoca diamond mine world's 4th largest; extreme resource curse—oil wealth concentrated in elite hands while 54% live in poverty; deepwater offshore fields (Block 17/18); LNG plant at Soyo"
+      "notes": "Sub-Saharan Africa's second-largest oil producer (1.2M bpd); Catoca diamond mine world's 4th largest; extreme resource curse—oil wealth concentrated in elite hands while 54% live in poverty; deepwater offshore fields (Block 17/18); LNG plant at Soyo",
+      "resource_curse_risk": "High (oil dependency >90% of exports; 'Futungo' elite capture)"
     },
     "military": {
       "budget_usd": "2.5 billion",
@@ -151,7 +170,10 @@
         "AU",
         "SADC"
       ],
-      "notes": "Battle-hardened from 27-year civil war; Cuban troops deployed 1975-91 (peak 55k); intervened in DRC (both Congo wars); South African apartheid forces opposed MPLA; Cold War proxy battlefield"
+      "notes": "Battle-hardened from 27-year civil war; Cuban troops deployed 1975-91 (peak 55k); intervened in DRC (both Congo wars); South African apartheid forces opposed MPLA; Cold War proxy battlefield",
+      "paramilitary_personnel": 10000,
+      "conscription": true,
+      "global_firepower_rank": 55
     },
     "trade": {
       "top_exports": [
@@ -176,14 +198,52 @@
         "South Korea"
       ],
       "trade_balance": "surplus",
-      "remittances_pct_gdp": 0.1
+      "remittances_pct_gdp": 0.1,
+      "total_exports_usd": "$34 billion",
+      "total_imports_usd": "$13 billion",
+      "top_export_destinations": [
+        "China (60%)",
+        "India",
+        "Spain",
+        "USA",
+        "France"
+      ],
+      "top_import_origins": [
+        "China",
+        "Portugal",
+        "Belgium",
+        "USA",
+        "Brazil"
+      ],
+      "trade_as_pct_gdp": 63,
+      "current_account_balance_usd": "$5 billion",
+      "trade_agreements": [
+        "SADC",
+        "AfCFTA"
+      ],
+      "special_economic_zones": [
+        "Luanda-Bengo SEZ",
+        "Viana Industrial Park"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 36.0,
       "electricity_access_pct": 47.0,
       "mobile_subscriptions_per_100": 44,
       "railway_km": 2852,
-      "paved_roads_pct": 12
+      "paved_roads_pct": 12,
+      "broadband_subscriptions_per_100": 0.5,
+      "4g_coverage_pct": 40,
+      "5g_availability": false,
+      "road_network_km": 76028,
+      "waterways_km": 1300,
+      "submarine_cables": [
+        "SAT-3/WASC",
+        "WACS",
+        "SACS (South Atlantic Cable System, to Brazil)",
+        "Monet"
+      ],
+      "notes": "SACS cable connects Angola directly to Brazil; Lobito Corridor railway revitalisation; Luanda expressway; critical infrastructure still war-damaged."
     },
     "international_memberships": [
       "UN",
@@ -213,6 +273,26 @@
       "fragile_states_index": {
         "score": 87.3,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.33,
+        "rank": 119,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -1.0,
+        "percentile": 14,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.85,
+        "percentile": 16,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.2,
+        "percentile": 39,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -227,13 +307,42 @@
         "droughts",
         "landmines (estimated 10-20M from civil war)"
       ],
-      "protected_areas_pct": 12.4
+      "protected_areas_pct": 12.4,
+      "average_temperature_c": 21,
+      "average_rainfall_mm": 1010,
+      "co2_per_capita_t": 0.8,
+      "deforestation_rate_pct": 0.6,
+      "water_stress_level": "Low-Medium",
+      "environmental_performance_index": {
+        "score": 29.0,
+        "rank": 152,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified (2020)",
+      "biodiversity": {
+        "known_species": 5100,
+        "endemic_species": 200,
+        "threatened_species": 78
+      },
+      "notes": "Giant sable antelope (national symbol, endemic, critically endangered); Okavango River source; mangrove forests along coast; charcoal deforestation."
     },
     "debt_aid": {
       "national_debt_pct_gdp": 84.9,
       "foreign_aid_received_usd": "260 million",
       "sovereign_wealth_fund": "Fundo Soberano de Angola ($5B)",
-      "notes": "Chinese oil-backed loans ~$25B; Isabel dos Santos scandal ($3.7B alleged embezzlement); Lourenço anti-corruption drive post-2017"
+      "notes": "Chinese oil-backed loans ~$25B; Isabel dos Santos scandal ($3.7B alleged embezzlement); Lourenço anti-corruption drive post-2017",
+      "external_debt_usd": "$52 billion",
+      "debt_service_pct_revenue": 45,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA (PEPFAR)",
+        "EU",
+        "World Bank",
+        "China"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "N/A"
     },
     "education": {
       "primary_enrollment_pct": 80,
@@ -245,14 +354,41 @@
         "Catholic University of Angola",
         "Metodista University"
       ],
-      "notes": "Civil war destroyed education infrastructure; Portuguese-language instruction; severe teacher shortage; 30% of children out of school; gender gap significant in rural areas"
+      "notes": "Civil war destroyed education infrastructure; Portuguese-language instruction; severe teacher shortage; 30% of children out of school; gender gap significant in rural areas",
+      "education_expenditure_pct_gdp": 3.4,
+      "primary_completion_rate_pct": 54,
+      "gender_parity_index": 0.8,
+      "mean_years_of_schooling": 5.1,
+      "expected_years_of_schooling": 11.8,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 45,
+      "out_of_school_children": 2000000,
+      "academic_freedom_index": 0.45
     },
     "diaspora_migration": {
       "diaspora_population": "600,000 (Portugal, Brazil, Namibia, DRC)",
       "refugees_hosted": 55000,
       "refugees_produced": 8000,
       "remittances_usd": "100 million",
-      "notes": "DRC refugees hosted; Chinese workers ~260k (infrastructure projects); retornados (Portuguese settlers who left 1975, ~300k); significant student diaspora in Portugal/Brazil"
+      "notes": "DRC refugees hosted; Chinese workers ~260k (infrastructure projects); retornados (Portuguese settlers who left 1975, ~300k); significant student diaspora in Portugal/Brazil",
+      "diaspora_top_destinations": [
+        "Portugal",
+        "Brazil",
+        "South Africa",
+        "UK",
+        "Namibia"
+      ],
+      "asylum_seekers": 3000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 5000,
+      "immigration_policy": "Moderate; work permits for Chinese/Portuguese workers",
+      "remittances_pct_gdp": 0.1,
+      "net_migration_rate_per_1k": 0.2
     },
     "digital_economy": {
       "e_government_index": 0.36,
@@ -260,16 +396,385 @@
       "tech_hubs": [
         "Luanda"
       ],
-      "notes": "Among most expensive internet in Africa; submarine cable (SACS to Brazil) improved connectivity; Unitel dominant mobile operator; oil dependence limits tech diversification; fintech growing"
+      "notes": "Among most expensive internet in Africa; submarine cable (SACS to Brazil) improved connectivity; Unitel dominant mobile operator; oil dependence limits tech diversification; fintech growing",
+      "e_participation_index": 0.3,
+      "ict_development_index": 2.3,
+      "mobile_money_accounts": 3000000,
+      "digital_payments_pct_adults": 15,
+      "fintech_companies": 10,
+      "startup_ecosystem_value_usd": "$50 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 27.0,
+      "innovation_index_score": 13.0,
+      "innovation_index_rank": 137,
+      "ai_readiness_index": 20.0
     },
-    "notes_unique": ""
+    "notes_unique": "Sub-Saharan Africa's second-largest oil producer; endured a 27-year civil war (1975–2002) between MPLA and UNITA that shaped Cold War proxy dynamics in Africa.",
+    "capital_coordinates": {
+      "lat": -8.839,
+      "lon": 13.2894
+    },
+    "other_major_cities": [
+      "Huambo",
+      "Lobito",
+      "Benguela",
+      "Lubango",
+      "Malanje",
+      "Cabinda"
+    ],
+    "national_motto": "Virtue is Stronger United",
+    "national_anthem": "Angola Avante! (Forward Angola!)",
+    "currency_code": "AOA",
+    "internet_tld": ".ao",
+    "utc_offset": "UTC+1",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": -11.2027,
+        "lon": 17.8739
+      },
+      "bounding_box": {
+        "north": -4.37,
+        "south": -18.04,
+        "east": 24.08,
+        "west": 11.67
+      },
+      "land_area_km2": 1246700,
+      "water_area_km2": 0,
+      "coastline_km": 1600,
+      "borders": [
+        "DR Congo",
+        "Republic of Congo",
+        "Zambia",
+        "Namibia"
+      ],
+      "border_lengths_km": {
+        "DR Congo": 2646,
+        "Republic of Congo": 231,
+        "Zambia": 1065,
+        "Namibia": 1427
+      },
+      "highest_point": {
+        "name": "Morro de Moco",
+        "elevation_m": 2620
+      },
+      "lowest_point": {
+        "name": "Atlantic Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Narrow coastal plain; vast interior plateau (1000-2000m); tropical rainforest in north (Cabinda); semi-arid in south",
+      "land_use": {
+        "agricultural_pct": 45.7,
+        "arable_pct": 3.9,
+        "forest_pct": 46.3,
+        "other_pct": 8
+      },
+      "major_rivers": [
+        "Kwanza (Cuanza)",
+        "Cunene",
+        "Cubango/Okavango",
+        "Zambezi (headwaters)",
+        "Cassai"
+      ],
+      "major_lakes": [
+        "Dilolo"
+      ],
+      "exclusive_economic_zone_km2": 518433,
+      "landlocked": false,
+      "notes": "Cabinda province is an exclave separated by DR Congo; Kwanza River is longest wholly within Angola; Okavango Delta fed by rivers from Angolan highlands."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$74 billion",
+      "gdp_ppp_usd": "$217 billion",
+      "gdp_per_capita_nominal_usd": 2040,
+      "gdp_per_capita_ppp_usd": 5980,
+      "gdp_growth_rate_pct": 0.8,
+      "inflation_rate_pct": 13.5,
+      "unemployment_rate_pct": 30.0,
+      "youth_unemployment_rate_pct": 56.0,
+      "poverty_rate_pct": 32.3,
+      "poverty_line_definition": "National poverty line ($1.90/day)",
+      "gini_coefficient": 51.3,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 10,
+        "industry_pct_gdp": 49,
+        "services_pct_gdp": 41
+      },
+      "labor_force": 14000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 51,
+        "industry_pct": 13,
+        "services_pct": 36
+      },
+      "fdi_inflow_usd": "$-3.1 billion",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$14.5 billion",
+      "ease_of_doing_business_rank": 177,
+      "economic_freedom_index_score": 50.5,
+      "credit_rating": {
+        "moodys": "B3",
+        "sp": "B-",
+        "fitch": "B-"
+      },
+      "notes": "Oil-dependent (90%+ of exports); Sonangol national oil company; IMF programme 2018-21; kwanza devaluation; diversification efforts; Lobito Corridor rail project (US/EU funded)."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 2.6,
+      "health_expenditure_per_capita_usd": 53,
+      "physicians_per_1k": 0.2,
+      "nurses_midwives_per_1k": 0.4,
+      "hospital_beds_per_1k": 0.8,
+      "maternal_mortality_per_100k": 222,
+      "hiv_prevalence_pct": 1.8,
+      "malaria_incidence_per_1k": 190,
+      "tuberculosis_incidence_per_100k": 325,
+      "access_to_clean_water_pct": 57,
+      "access_to_sanitation_pct": 52,
+      "vaccination_coverage_pct": 55,
+      "stunting_under5_pct": 38,
+      "obesity_rate_pct": 8.2,
+      "universal_health_coverage_index": 37,
+      "leading_causes_of_death": [
+        "Malaria",
+        "Lower respiratory infections",
+        "Neonatal disorders",
+        "Diarrheal diseases",
+        "HIV/AIDS"
+      ],
+      "notes": "Severe healthcare worker shortage; urban-rural gap extreme; malaria #1 killer; yellow fever vaccination required; post-civil war healthcare infrastructure still recovering."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 34.5,
+      "food_security_index_rank": 104,
+      "arable_land_pct": 3.9,
+      "agricultural_land_pct": 45.7,
+      "irrigated_land_pct": 3,
+      "major_crops": [
+        "cassava",
+        "maize",
+        "bananas",
+        "sweet potatoes",
+        "sugarcane",
+        "coffee",
+        "palm oil"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "pigs"
+      ],
+      "food_import_dependency_pct": 50,
+      "cereal_yield_kg_per_hectare": 800,
+      "agricultural_employment_pct": 51,
+      "prevalence_of_undernourishment_pct": 19,
+      "notes": "Massive agricultural potential (pre-war was coffee exporter); landmines still obstruct farming; cassava staple food; Chinese and Brazilian agricultural partnerships."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 45,
+        "hydroelectric_pct": 54,
+        "solar_pct": 0.5,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0.5
+      },
+      "installed_capacity_mw": 6800,
+      "electricity_production_gwh": 20000,
+      "electricity_consumption_per_capita_kwh": 350,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 1100000,
+      "oil_consumption_bpd": 130000,
+      "natural_gas_production_bcm": 7.5,
+      "energy_access_rural_pct": 8,
+      "energy_access_urban_pct": 72,
+      "notes": "Africa's 2nd-largest oil producer; OPEC member; Laúca hydropower dam (2070MW); Caculo Cabaça dam under construction (2172MW); massive rural electrification gap; LNG plant (Soyo)."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Quatro de Fevereiro (Luanda)",
+        "Catumbela (Benguela)"
+      ],
+      "major_airports_domestic": [
+        "Lubango",
+        "Malanje",
+        "Cabinda",
+        "Huambo",
+        "Soyo"
+      ],
+      "national_airline": "TAAG Angola Airlines",
+      "major_seaports": [
+        "Luanda",
+        "Lobito",
+        "Namibe",
+        "Cabinda",
+        "Soyo"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 40,
+      "registered_vehicles_per_1k": 40,
+      "road_fatalities_per_100k": 24,
+      "notes": "New Luanda International Airport (NAIL/Dr António Agostinho Neto) opened; Lobito Corridor railway rehabilitation (Benguela Railway to DRC/Zambia); road infrastructure heavily damaged by civil war."
+    },
+    "tourism": {
+      "annual_visitors": 218000,
+      "tourism_revenue_usd": "$490 million",
+      "tourism_pct_gdp": 0.7,
+      "tourism_employment_pct": 3,
+      "unesco_world_heritage_sites": 1,
+      "unesco_sites_list": [
+        "Mbanza-Kongo (2017)"
+      ],
+      "major_attractions": [
+        "Kalandula Falls",
+        "Tundavala Gap",
+        "Kissama National Park",
+        "Luanda waterfront",
+        "Namibe Desert"
+      ],
+      "visa_free_access_countries": 49,
+      "henley_passport_rank": 83,
+      "notes": "Tourism largely undeveloped; high costs (Luanda among world's most expensive cities); visa-on-arrival introduced; ecotourism potential in national parks; civil war legacy constrains infrastructure."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 31,
+      "gender_inequality_index": 0.536,
+      "gender_inequality_rank": 132,
+      "gender_gap_index_score": 0.638,
+      "women_in_parliament_pct": 33,
+      "women_labor_force_participation_pct": 75,
+      "maternal_mortality_per_100k": 222,
+      "child_marriage_pct": 30,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Legal (decriminalised 2021)",
+      "death_penalty_status": "Abolitionist",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 24,
+      "notes": "MPLA single-party dominance; LGBTQ+ decriminalised in 2021 penal code; high child labour in agriculture; Isabel dos Santos corruption scandal; limited press freedom."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.96,
+      "global_peace_index_rank": 82,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 4.8,
+      "active_conflicts": [
+        "Cabinda separatism (low-level, FLEC)"
+      ],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 50,
+      "arms_imports_usd": "$30 million",
+      "internally_displaced_persons": 0,
+      "notes": "Post-civil war stability (2002 ceasefire); Cabinda FLEC separatism largely dormant; security forces credibly accused of extra-judicial killings in Lunda; landmines remain (~60,000+ still buried)."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "Palanca Negra (Giant sable antelope)"
+      ],
+      "national_animal": "Giant sable antelope (Palanca Negra)",
+      "national_flower": "Welwitschia mirabilis",
+      "national_dish": "Muamba de galinha (chicken palm oil stew)",
+      "national_sport": "Football, Basketball",
+      "major_festivals": [
+        "Independence Day (11 November)",
+        "Carnival (Luanda)",
+        "Armed Forces Day",
+        "MPLA Foundation Day"
+      ],
+      "cuisine_highlights": [
+        "Muamba de galinha",
+        "Calulu (fish stew)",
+        "Funge (cassava paste)",
+        "Mufete (grilled fish)"
+      ],
+      "music_art_traditions": [
+        "Semba",
+        "Kuduro",
+        "Kizomba (originated in Angola)",
+        "Rebita"
+      ],
+      "film_industry": "Emerging (Growing documentary scene)",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "Queen Njinga Mbande",
+        "Agostinho Neto",
+        "Jonas Savimbi",
+        "José Eduardo dos Santos"
+      ],
+      "world_heritage_sites": [
+        "Mbanza-Kongo"
+      ],
+      "media_landscape": "State-controlled TV/radio (TPA, RNA); private newspapers; internet access growing; press freedom limited",
+      "notes": "Kizomba dance/music originated in Luanda; Kuduro music global influence; strong oral tradition; Mbanza-Kongo capital of ancient Kongo Kingdom; carnival tradition."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (Portuguese-influenced)",
+      "constitution_year": 2010,
+      "sharia_applicability": "None",
+      "customary_law_role": "Recognised for local matters in rural areas",
+      "icc_membership": "Non-member",
+      "judicial_independence_score": 0.25,
+      "contract_enforcement_days": 1296,
+      "property_rights_index": 30.0,
+      "notes": "2010 constitution established presidential republic; Supreme Court; Constitutional Court; customary courts in rural areas; slow judicial reform."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 6,
+        "global_rank": 42
+      },
+      "area": {
+        "continent_rank": 7,
+        "global_rank": 23
+      },
+      "gdp_nominal": {
+        "continent_rank": 5,
+        "global_rank": 61
+      },
+      "gdp_per_capita": {
+        "continent_rank": 17,
+        "global_rank": 131
+      },
+      "hdi": {
+        "continent_rank": 33,
+        "global_rank": 148
+      },
+      "life_expectancy": {
+        "continent_rank": 33,
+        "global_rank": 152
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 52,
+        "global_rank": 177
+      },
+      "internet_penetration": {
+        "continent_rank": 28,
+        "global_rank": 135
+      },
+      "press_freedom": {
+        "continent_rank": 39,
+        "global_rank": 132
+      },
+      "global_peace_index": {
+        "continent_rank": 13,
+        "global_rank": 82
+      },
+      "innovation_index": {
+        "continent_rank": 42,
+        "global_rank": 137
+      },
+      "notes": "Africa's 2nd-largest oil producer; vast underutilised agricultural potential."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "João Lourenço",
       "title": "President",
       "since": "2017-09-26",
-      "notes": "Elected in 2017; re-elected 2022; anti-corruption agenda targeting dos Santos era"
+      "notes": "Elected in 2017; re-elected 2022; anti-corruption agenda targeting dos Santos era",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -286,7 +791,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

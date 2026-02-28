@@ -17,7 +17,10 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.856879Z",
-    "notes": "Comprehensive index for Algeria."
+    "notes": "Comprehensive index for Algeria.",
+    "sub_region": "",
+    "iso3166_numeric": "000",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Algiers",
@@ -109,7 +112,22 @@
       "life_expectancy": 77.1,
       "infant_mortality_per_1k": 19.6,
       "literacy_rate_pct": 81.4,
-      "net_migration_rate": -0.9
+      "net_migration_rate": -0.9,
+      "population_growth_rate_pct": 1.5,
+      "urban_population_growth_rate_pct": 2.8,
+      "life_expectancy_male": 76.0,
+      "life_expectancy_female": 79.0,
+      "under5_mortality_per_1k": 23,
+      "sex_ratio": 1.02,
+      "dependency_ratio": 55.0,
+      "population_density_per_km2": 18.9,
+      "age_structure": {
+        "0_14_pct": 29,
+        "15_24_pct": 14,
+        "25_54_pct": 42,
+        "55_64_pct": 8,
+        "65_plus_pct": 7
+      }
     },
     "natural_resources": {
       "primary": [
@@ -122,7 +140,8 @@
         "zinc"
       ],
       "resource_dependency_pct_gdp": 30,
-      "notes": "Third-largest African oil producer; gas reserves among world's top 10; Saharan hydrocarbons backbone of economy; Hassi Messaoud/Hassi R'Mel fields; Dutch disease symptoms; In Salah carbon capture project; shale gas potential (third-largest global reserves, unexploited due to water/fracking opposition)"
+      "notes": "Third-largest African oil producer; gas reserves among world's top 10; Saharan hydrocarbons backbone of economy; Hassi Messaoud/Hassi R'Mel fields; Dutch disease symptoms; In Salah carbon capture project; shale gas potential (third-largest global reserves, unexploited due to water/fracking opposition)",
+      "resource_curse_risk": "Moderate (Dutch disease symptoms; hydrocarbon dependency)"
     },
     "military": {
       "budget_usd": "9.1 billion",
@@ -134,7 +153,10 @@
         "AU",
         "Arab League"
       ],
-      "notes": "Largest military budget in Africa; non-interventionist doctrine; Soviet-era equipment being modernized (Russian arms primary supplier); French nuclear tests at Reggane 1960-66 (17 tests); compulsory 12-month military service; ANP (People's National Army) historically dominant political force"
+      "notes": "Largest military budget in Africa; non-interventionist doctrine; Soviet-era equipment being modernized (Russian arms primary supplier); French nuclear tests at Reggane 1960-66 (17 tests); compulsory 12-month military service; ANP (People's National Army) historically dominant political force",
+      "paramilitary_personnel": 187000,
+      "conscription": true,
+      "global_firepower_rank": 26
     },
     "trade": {
       "top_exports": [
@@ -158,14 +180,50 @@
         "Germany"
       ],
       "trade_balance": "surplus",
-      "remittances_pct_gdp": 1.0
+      "remittances_pct_gdp": 1.0,
+      "total_exports_usd": "$38 billion",
+      "total_imports_usd": "$35 billion",
+      "top_export_destinations": [
+        "Italy",
+        "France",
+        "Spain",
+        "USA",
+        "Turkey"
+      ],
+      "top_import_origins": [
+        "China",
+        "France",
+        "Italy",
+        "Germany",
+        "Spain"
+      ],
+      "trade_as_pct_gdp": 37,
+      "current_account_balance_usd": "$5 billion",
+      "trade_agreements": [
+        "GAFTA",
+        "AfCFTA",
+        "EU Association Agreement"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 71.0,
       "electricity_access_pct": 99.8,
       "mobile_subscriptions_per_100": 104,
       "railway_km": 4020,
-      "paved_roads_pct": 75
+      "paved_roads_pct": 75,
+      "broadband_subscriptions_per_100": 8.5,
+      "4g_coverage_pct": 75,
+      "5g_availability": false,
+      "road_network_km": 108302,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "SeaMeWe-4",
+        "Alpal-2",
+        "Orval",
+        "Medex"
+      ],
+      "notes": "East-West Highway; Algiers Metro; national broadband (Algérie Telecom); Algiers-Oran high-speed rail planned."
     },
     "international_memberships": [
       "UN",
@@ -196,6 +254,26 @@
       "fragile_states_index": {
         "score": 76.5,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.36,
+        "rank": 113,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.59,
+        "percentile": 26,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.88,
+        "percentile": 15,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.74,
+        "percentile": 20,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -214,13 +292,41 @@
         "desertification",
         "locust swarms"
       ],
-      "protected_areas_pct": 8.2
+      "protected_areas_pct": 8.2,
+      "average_temperature_c": 22,
+      "average_rainfall_mm": 89,
+      "co2_per_capita_t": 3.7,
+      "deforestation_rate_pct": 0.5,
+      "water_stress_level": "High",
+      "environmental_performance_index": {
+        "score": 38.5,
+        "rank": 118,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified (2016)",
+      "biodiversity": {
+        "known_species": 5800,
+        "endemic_species": 300,
+        "threatened_species": 84
+      },
+      "notes": "Sahara expanding southward; Great Green Wall participant (limited); water scarcity acute in south; Mediterranean ecosystems under pressure."
     },
     "debt_aid": {
       "national_debt_pct_gdp": 48.7,
       "foreign_aid_received_usd": "130 million",
       "sovereign_wealth_fund": "Revenue Regulation Fund (depleted from $77B peak 2014 to ~$40B)",
-      "notes": "Historically refused IMF/World Bank structural adjustment; paid off all foreign debt by 2006 using oil revenues; now re-accumulating debt as oil prices fell"
+      "notes": "Historically refused IMF/World Bank structural adjustment; paid off all foreign debt by 2006 using oil revenues; now re-accumulating debt as oil prices fell",
+      "external_debt_usd": "$5 billion",
+      "debt_service_pct_revenue": 2,
+      "foreign_aid_given_usd": "$100 million",
+      "top_donors": [
+        "EU",
+        "France",
+        "Germany"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": "N/A"
     },
     "education": {
       "primary_enrollment_pct": 97,
@@ -233,14 +339,41 @@
         "University of Oran",
         "University of Constantine"
       ],
-      "notes": "Free education through university; Arabization policy post-1962 replaced French with Arabic; significant brain drain to France; highest R&D spending in Africa after South Africa; 1.7M university students"
+      "notes": "Free education through university; Arabization policy post-1962 replaced French with Arabic; significant brain drain to France; highest R&D spending in Africa after South Africa; 1.7M university students",
+      "education_expenditure_pct_gdp": 7.0,
+      "primary_completion_rate_pct": 97,
+      "gender_parity_index": 1.05,
+      "mean_years_of_schooling": 8.0,
+      "expected_years_of_schooling": 14.7,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 23,
+      "out_of_school_children": 150000,
+      "academic_freedom_index": 0.35
     },
     "diaspora_migration": {
       "diaspora_population": "1.8 million (largest in France ~800k)",
       "refugees_hosted": 98000,
       "refugees_produced": 6400,
       "remittances_usd": "1.8 billion",
-      "notes": "Sahrawi refugees hosted in Tindouf camps since 1975 (~170k claimed, disputed); Algerian diaspora in France dates to colonial labour migration; harkis (Algerians who fought for France) controversy"
+      "notes": "Sahrawi refugees hosted in Tindouf camps since 1975 (~170k claimed, disputed); Algerian diaspora in France dates to colonial labour migration; harkis (Algerians who fought for France) controversy",
+      "diaspora_top_destinations": [
+        "France",
+        "Spain",
+        "Canada",
+        "UK",
+        "Germany"
+      ],
+      "asylum_seekers": 5000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Restrictive; transit country for sub-Saharan migrants",
+      "remittances_pct_gdp": 1.0,
+      "net_migration_rate_per_1k": -0.5
     },
     "digital_economy": {
       "e_government_index": 0.52,
@@ -248,16 +381,417 @@
       "tech_hubs": [
         "Algiers"
       ],
-      "notes": "Yassir ride-hailing unicorn; government digitization push; startup law 2022; internet censorship during protests (Hirak 2019-20); 4G coverage expanding; e-payment adoption growing slowly"
+      "notes": "Yassir ride-hailing unicorn; government digitization push; startup law 2022; internet censorship during protests (Hirak 2019-20); 4G coverage expanding; e-payment adoption growing slowly",
+      "e_participation_index": 0.42,
+      "ict_development_index": 4.7,
+      "mobile_money_accounts": 500000,
+      "digital_payments_pct_adults": 20,
+      "fintech_companies": 15,
+      "startup_ecosystem_value_usd": "$100 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 48.0,
+      "innovation_index_score": 20.2,
+      "innovation_index_rank": 120,
+      "ai_readiness_index": 30.0
     },
-    "notes_unique": ""
+    "notes_unique": "Largest country in Africa by area; fought an eight-year war of independence from France (1954–1962) that became a model for anti-colonial struggles worldwide.",
+    "capital_coordinates": {
+      "lat": 36.7538,
+      "lon": 3.0588
+    },
+    "other_major_cities": [
+      "Oran",
+      "Constantine",
+      "Annaba",
+      "Blida",
+      "Batna",
+      "Sétif"
+    ],
+    "national_motto": "By the People and for the People",
+    "national_anthem": "Kassaman (We Pledge)",
+    "currency_code": "DZD",
+    "internet_tld": ".dz",
+    "utc_offset": "UTC+1",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 28.0339,
+        "lon": 1.6596
+      },
+      "bounding_box": {
+        "north": 37.09,
+        "south": 18.96,
+        "east": 11.99,
+        "west": -8.67
+      },
+      "land_area_km2": 2381741,
+      "water_area_km2": 0,
+      "coastline_km": 998,
+      "borders": [
+        "Tunisia",
+        "Libya",
+        "Niger",
+        "Mali",
+        "Mauritania",
+        "Western Sahara",
+        "Morocco"
+      ],
+      "border_lengths_km": {
+        "Tunisia": 1034,
+        "Libya": 989,
+        "Niger": 951,
+        "Mali": 1359,
+        "Mauritania": 460,
+        "Western Sahara": 41,
+        "Morocco": 1941
+      },
+      "highest_point": {
+        "name": "Mount Tahat",
+        "elevation_m": 2908
+      },
+      "lowest_point": {
+        "name": "Chott Melrhir",
+        "elevation_m": -40
+      },
+      "terrain": "Mostly high plateau and desert; Atlas Mountains in the north; Sahara covers 80%+ of territory",
+      "land_use": {
+        "agricultural_pct": 17.4,
+        "arable_pct": 3.2,
+        "forest_pct": 0.8,
+        "other_pct": 81.8
+      },
+      "major_rivers": [
+        "Chelif",
+        "Sebaou",
+        "Medjerda"
+      ],
+      "major_lakes": [
+        "Chott ech Chergui",
+        "Chott Melrhir"
+      ],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": false,
+      "notes": "Largest country in Africa by area; 80%+ Saharan desert; Tell Atlas and Saharan Atlas mountain ranges; Mediterranean coast."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$195 billion",
+      "gdp_ppp_usd": "$580 billion",
+      "gdp_per_capita_nominal_usd": 4345,
+      "gdp_per_capita_ppp_usd": 12929,
+      "gdp_growth_rate_pct": 4.1,
+      "inflation_rate_pct": 9.3,
+      "unemployment_rate_pct": 11.7,
+      "youth_unemployment_rate_pct": 29.7,
+      "poverty_rate_pct": 5.5,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 27.6,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 13,
+        "industry_pct_gdp": 39,
+        "services_pct_gdp": 48
+      },
+      "labor_force": 12700000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 10,
+        "industry_pct": 31,
+        "services_pct": 59
+      },
+      "fdi_inflow_usd": "$1.6 billion",
+      "fdi_outflow_usd": "$120 million",
+      "foreign_exchange_reserves_usd": "$56 billion",
+      "ease_of_doing_business_rank": 157,
+      "economic_freedom_index_score": 49.7,
+      "credit_rating": {
+        "moodys": "B1",
+        "sp": "",
+        "fitch": "B+"
+      },
+      "notes": "Hydrocarbon-dependent economy (95% of export revenue); Sonatrach state oil company; heavy state subsidies on fuel, housing, food; import substitution policy; strict FDI regulations (51/49 rule relaxed 2020)."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 6.3,
+      "health_expenditure_per_capita_usd": 274,
+      "physicians_per_1k": 1.8,
+      "nurses_midwives_per_1k": 2.2,
+      "hospital_beds_per_1k": 1.9,
+      "maternal_mortality_per_100k": 112,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 70,
+      "access_to_clean_water_pct": 94,
+      "access_to_sanitation_pct": 88,
+      "vaccination_coverage_pct": 90,
+      "stunting_under5_pct": 11,
+      "obesity_rate_pct": 27.4,
+      "universal_health_coverage_index": 67,
+      "leading_causes_of_death": [
+        "Cardiovascular diseases",
+        "Cancer",
+        "Diabetes",
+        "Road accidents"
+      ],
+      "notes": "Free public healthcare; well-developed hospital network; growing NCD burden; medical tourism to France/Tunisia for specialised care."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 57.5,
+      "food_security_index_rank": 68,
+      "arable_land_pct": 3.2,
+      "agricultural_land_pct": 17.4,
+      "irrigated_land_pct": 13,
+      "major_crops": [
+        "wheat",
+        "barley",
+        "potatoes",
+        "tomatoes",
+        "dates",
+        "citrus",
+        "olives",
+        "grapes"
+      ],
+      "major_livestock": [
+        "sheep",
+        "goats",
+        "cattle",
+        "camels"
+      ],
+      "food_import_dependency_pct": 40,
+      "cereal_yield_kg_per_hectare": 1700,
+      "agricultural_employment_pct": 10,
+      "prevalence_of_undernourishment_pct": 3.0,
+      "notes": "Major wheat/barley importer; date palm oases in Sahara (Ghardaia, Biskra); PNDA agricultural renewal programme; dairy sector growing; limited arable land constrains self-sufficiency."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 99,
+        "hydroelectric_pct": 0.3,
+        "solar_pct": 0.5,
+        "wind_pct": 0.1,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0.1
+      },
+      "installed_capacity_mw": 21000,
+      "electricity_production_gwh": 76000,
+      "electricity_consumption_per_capita_kwh": 1600,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 972000,
+      "oil_consumption_bpd": 430000,
+      "natural_gas_production_bcm": 100,
+      "energy_access_rural_pct": 99,
+      "energy_access_urban_pct": 100,
+      "notes": "Africa's largest natural gas reserves; OPEC member; Sonatrach 5th-largest gas company globally; Hassi Messaoud oil field; Hassi R'Mel gas field; solar potential enormous (Sahara) but underdeveloped; Tafouk1 solar project planned."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Houari Boumediene (Algiers)",
+        "Ahmed Ben Bella (Oran)",
+        "Mohamed Boudiaf (Constantine)"
+      ],
+      "major_airports_domestic": [
+        "Batna",
+        "Annaba",
+        "Sétif",
+        "Tlemcen",
+        "Hassi Messaoud"
+      ],
+      "national_airline": "Air Algérie",
+      "major_seaports": [
+        "Algiers",
+        "Oran",
+        "Skikda",
+        "Arzew",
+        "Béjaïa",
+        "Annaba"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 57,
+      "registered_vehicles_per_1k": 120,
+      "road_fatalities_per_100k": 23,
+      "notes": "East-West Highway (1,216 km, connects Morocco border to Tunisia); Trans-Saharan Highway; Algiers Metro (2011); extensive domestic air network to connect Saharan south."
+    },
+    "tourism": {
+      "annual_visitors": 3200000,
+      "tourism_revenue_usd": "$265 million",
+      "tourism_pct_gdp": 0.1,
+      "tourism_employment_pct": 2,
+      "unesco_world_heritage_sites": 7,
+      "unesco_sites_list": [
+        "Al Qal'a of Beni Hammad",
+        "Djémila",
+        "M'Zab Valley",
+        "Kasbah of Algiers",
+        "Timgad",
+        "Tipasa",
+        "Tassili n'Ajjer"
+      ],
+      "major_attractions": [
+        "Casbah of Algiers",
+        "Tassili n'Ajjer rock art",
+        "Timgad Roman ruins",
+        "Ghardaia M'zab",
+        "Sahara excursions",
+        "Mediterranean coast"
+      ],
+      "visa_free_access_countries": 51,
+      "henley_passport_rank": 92,
+      "notes": "Underdeveloped tourism despite enormous potential; visa restrictions; limited hotel infrastructure outside cities; Saharan tourism growing; Roman ruins rival those in Tunisia."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 32,
+      "gender_inequality_index": 0.438,
+      "gender_inequality_rank": 104,
+      "gender_gap_index_score": 0.602,
+      "women_in_parliament_pct": 8,
+      "women_labor_force_participation_pct": 15,
+      "maternal_mortality_per_100k": 112,
+      "child_marriage_pct": 3,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Illegal (up to 2 years imprisonment)",
+      "death_penalty_status": "Abolitionist in practice (moratorium since 1993)",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 5,
+      "notes": "Family Code governs personal status; Amazigh cultural rights recognised (2016 constitution); Hirak protest movement 2019-21; press restrictions; women's rights progress mixed."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.14,
+      "global_peace_index_rank": 96,
+      "terrorism_index_score": 3.9,
+      "terrorism_index_rank": 41,
+      "homicide_rate_per_100k": 1.4,
+      "active_conflicts": [],
+      "border_disputes": [
+        "Western Sahara (supports Polisario/SADR)"
+      ],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$1 billion",
+      "internally_displaced_persons": 0,
+      "notes": "Relatively stable post-Civil War (1991-2002); strong security apparatus; closed border with Morocco since 1994; arms buildup (largest African military budget); AQIM largely expelled but residual threat in Sahel margins."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "Fennec fox",
+        "Star and crescent"
+      ],
+      "national_animal": "Fennec fox",
+      "national_flower": "Iris",
+      "national_dish": "Couscous",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Independence Day (5 July)",
+        "Revolution Day (1 November)",
+        "Yennayer (Amazigh New Year, 12 January)",
+        "Eid al-Fitr",
+        "Eid al-Adha"
+      ],
+      "cuisine_highlights": [
+        "Couscous",
+        "Chakchouka",
+        "Mechoui",
+        "Makroud",
+        "Brik/Bourek",
+        "Mint tea"
+      ],
+      "music_art_traditions": [
+        "Raï (Cheb Khaled, Cheb Mami)",
+        "Chaabi",
+        "Andalusi classical music",
+        "Kabyle music",
+        "Tuareg Saharan blues"
+      ],
+      "film_industry": "Notable (Z, Battle of Algiers co-production legacy; Algerian Film Commission)",
+      "intangible_heritage_items": [
+        "Sbaa ritual",
+        "Ahellil of Gourara",
+        "Annual pilgrimage to the mausoleum of Sidi Abd el-Qader Ben Mohammed"
+      ],
+      "notable_historical_figures": [
+        "Emir Abdelkader",
+        "Jugurtha",
+        "Saint Augustine",
+        "Albert Camus",
+        "Frantz Fanon",
+        "Kateb Yacine"
+      ],
+      "world_heritage_sites": [
+        "Djémila",
+        "Timgad",
+        "Tipasa",
+        "M'Zab Valley",
+        "Tassili n'Ajjer",
+        "Kasbah of Algiers",
+        "Al Qal'a of Beni Hammad"
+      ],
+      "media_landscape": "State-dominated (ENTV, Radio Algérienne); private newspapers; online media growing; press freedom limited",
+      "notes": "Rich blend of Amazigh, Arab, Ottoman, French cultural influences; raï music originated in Oran; Algerian literature in French and Arabic; 2022 film 'The Last Queen' international recognition."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (French-influenced) with Islamic law for personal status",
+      "constitution_year": 2020,
+      "sharia_applicability": "Personal status (family law, inheritance)",
+      "customary_law_role": "Limited (some Amazigh customary practices in Kabylie)",
+      "icc_membership": "Non-member",
+      "judicial_independence_score": 0.35,
+      "contract_enforcement_days": 630,
+      "property_rights_index": 37.7,
+      "notes": "Dual French-Islamic legal heritage; 2020 constitutional referendum; Council of State (administrative); Supreme Court; Constitutional Court; state of emergency provisions used historically."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global. 'rank' = 1 is best/largest.",
+      "population": {
+        "continent_rank": 1,
+        "global_rank": 32
+      },
+      "area": {
+        "continent_rank": 1,
+        "global_rank": 10
+      },
+      "gdp_nominal": {
+        "continent_rank": 4,
+        "global_rank": 56
+      },
+      "gdp_per_capita": {
+        "continent_rank": 10,
+        "global_rank": 113
+      },
+      "hdi": {
+        "continent_rank": 7,
+        "global_rank": 91
+      },
+      "life_expectancy": {
+        "continent_rank": 8,
+        "global_rank": 79
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 46,
+        "global_rank": 157
+      },
+      "internet_penetration": {
+        "continent_rank": 8,
+        "global_rank": 80
+      },
+      "press_freedom": {
+        "continent_rank": 40,
+        "global_rank": 136
+      },
+      "global_peace_index": {
+        "continent_rank": 18,
+        "global_rank": 96
+      },
+      "innovation_index": {
+        "continent_rank": 17,
+        "global_rank": 120
+      },
+      "notes": "Africa's largest country by area; top 5 GDP on continent; major gas exporter."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Abdelmadjid Tebboune",
       "title": "President",
       "since": "2019-12-19",
-      "notes": "Elected after Hirak-forced resignation of Bouteflika"
+      "notes": "Elected after Hirak-forced resignation of Bouteflika",
+      "party": ""
     },
     "prime_minister": {
       "name": "Nadir Larbaoui",
@@ -303,7 +837,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {
