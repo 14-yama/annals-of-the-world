@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.895172Z",
-    "notes": "Comprehensive index for Sudan covering Kingdom of Kush (Meroe and Napata), Nubian Christian kingdoms (Makuria, Alodia, Nobatia), Islamic sultanates (Funj, Darfur), Turco-Egyptian rule, Mahdist State, Anglo-Egyptian Condominium, independence 1956, Abboud and Nimeiry military eras, Omar al-Bashir (30-year Islamist rule), Darfur genocide, South Sudan secession 2011, 2019 revolution, and 2023 civil war (RSF vs SAF)."
+    "notes": "Comprehensive index for Sudan covering Kingdom of Kush (Meroe and Napata), Nubian Christian kingdoms (Makuria, Alodia, Nobatia), Islamic sultanates (Funj, Darfur), Turco-Egyptian rule, Mahdist State, Anglo-Egyptian Condominium, independence 1956, Abboud and Nimeiry military eras, Omar al-Bashir (30-year Islamist rule), Darfur genocide, South Sudan secession 2011, 2019 revolution, and 2023 civil war (RSF vs SAF).",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Khartoum",
@@ -122,7 +123,22 @@
       "life_expectancy": 66.1,
       "infant_mortality_per_1k": 41.0,
       "literacy_rate_pct": 60.7,
-      "net_migration_rate": -3.0
+      "net_migration_rate": -3.0,
+      "population_growth_rate_pct": 2.5,
+      "urban_population_growth_rate_pct": 3.5,
+      "life_expectancy_male": 64,
+      "life_expectancy_female": 68,
+      "under5_mortality_per_1k": 56,
+      "sex_ratio": 1.02,
+      "dependency_ratio": 80,
+      "population_density_per_km2": 25,
+      "age_structure": {
+        "0_14_pct": 40,
+        "15_24_pct": 21,
+        "25_54_pct": 32,
+        "55_64_pct": 4,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -153,7 +169,10 @@
         "IGAD",
         "OIC"
       ],
-      "notes": "Civil war since April 2023 between SAF (Sudanese Armed Forces, Gen. al-Burhan) and RSF (Rapid Support Forces, Gen. Hemedti, evolved from Janjaweed); devastating humanitarian crisis; Wagner Group ties to RSF; US/ICC sanctions history; Darfur atrocities ongoing."
+      "notes": "Civil war since April 2023 between SAF (Sudanese Armed Forces, Gen. al-Burhan) and RSF (Rapid Support Forces, Gen. Hemedti, evolved from Janjaweed); devastating humanitarian crisis; Wagner Group ties to RSF; US/ICC sanctions history; Darfur atrocities ongoing.",
+      "paramilitary_personnel": 100000,
+      "conscription": false,
+      "global_firepower_rank": 75
     },
     "trade": {
       "top_exports": [
@@ -184,14 +203,47 @@
         "Qatar"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 3.0
+      "remittances_pct_gdp": 3.0,
+      "total_exports_usd": "$5 billion",
+      "total_imports_usd": "$8 billion",
+      "top_export_destinations": [
+        "UAE",
+        "China",
+        "Saudi Arabia",
+        "India",
+        "Egypt"
+      ],
+      "top_import_origins": [
+        "China",
+        "India",
+        "UAE",
+        "Egypt",
+        "Turkey"
+      ],
+      "trade_as_pct_gdp": 40,
+      "current_account_balance_usd": "-$3 billion",
+      "trade_agreements": [
+        "COMESA",
+        "GAFTA",
+        "AfCFTA"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 28.0,
       "electricity_access_pct": 54.0,
       "mobile_subscriptions_per_100": 68,
       "railway_km": 4725,
-      "paved_roads_pct": 6
+      "paved_roads_pct": 6,
+      "broadband_subscriptions_per_100": 0.5,
+      "4g_coverage_pct": 30,
+      "5g_availability": false,
+      "road_network_km": 31000,
+      "waterways_km": 4068,
+      "submarine_cables": [
+        "EASSy (via Port Sudan)"
+      ],
+      "notes": "MTN, Zain, Sudani telecoms; infrastructure heavily damaged by 2023 war; Port Sudan now hub; Nile waterways."
     },
     "international_memberships": [
       "UN",
@@ -222,6 +274,26 @@
       "fragile_states_index": {
         "score": 108.1,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -1.5,
+        "percentile": 5,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -1.5,
+        "percentile": 5,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -2.7,
+        "percentile": 1,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -238,12 +310,41 @@
         "floods (Nile)",
         "desertification"
       ],
-      "protected_areas_pct": 6
+      "protected_areas_pct": 6,
+      "average_temperature_c": 28,
+      "average_rainfall_mm": 400,
+      "co2_per_capita_t": 0.3,
+      "deforestation_rate_pct": 0.8,
+      "water_stress_level": "High",
+      "environmental_performance_index": {
+        "score": 25,
+        "rank": 168,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 3000,
+        "endemic_species": 50,
+        "threatened_species": 40
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 186.0,
       "foreign_aid_received_usd": "1.5 billion",
-      "notes": "Catastrophic civil war (2023–) has destroyed economy; HIPC debt relief process was progressing before war; US sanctions partially lifted (2017) then re-applied; hyperinflation; currency black market; GDP collapsed; humanitarian appeal $2.7B+ (2024)."
+      "notes": "Catastrophic civil war (2023–) has destroyed economy; HIPC debt relief process was progressing before war; US sanctions partially lifted (2017) then re-applied; hyperinflation; currency black market; GDP collapsed; humanitarian appeal $2.7B+ (2024).",
+      "external_debt_usd": "$56 billion",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA",
+        "EU",
+        "World Bank",
+        "Saudi Arabia",
+        "UAE"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Decision point (2021, stalled by war)"
     },
     "education": {
       "primary_enrollment_pct": 65,
@@ -256,14 +357,41 @@
         "Sudan University of Science and Technology",
         "University of Gezira"
       ],
-      "notes": "University of Khartoum historically prestigious; 2023 war destroyed campuses and displaced students; Arabic main language of instruction; Arabicization policy since 1990s; Khalwa (Islamic schools) widespread; north-south education gap persists after South Sudan split."
+      "notes": "University of Khartoum historically prestigious; 2023 war destroyed campuses and displaced students; Arabic main language of instruction; Arabicization policy since 1990s; Khalwa (Islamic schools) widespread; north-south education gap persists after South Sudan split.",
+      "education_expenditure_pct_gdp": 2,
+      "primary_completion_rate_pct": 55,
+      "gender_parity_index": 0.9,
+      "mean_years_of_schooling": 3.8,
+      "expected_years_of_schooling": 7.9,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 38,
+      "out_of_school_children": 3000000,
+      "academic_freedom_index": 0.1
     },
     "diaspora_migration": {
       "diaspora_population": "4 million+ (Saudi Arabia, UAE, Egypt, Chad, South Sudan, UK, USA, Gulf states)",
       "refugees_hosted": 1100000,
       "refugees_produced": 1500000,
       "remittances_usd": "900 million",
-      "notes": "2023 civil war created 8 million displaced (largest displacement crisis globally); 1.5M+ refugees to Chad, Egypt, South Sudan, Ethiopia; hosts Eritrean, Ethiopian, South Sudanese refugees; Darfur IDPs (since 2003); Gulf diaspora remittances were vital pre-war."
+      "notes": "2023 civil war created 8 million displaced (largest displacement crisis globally); 1.5M+ refugees to Chad, Egypt, South Sudan, Ethiopia; hosts Eritrean, Ethiopian, South Sudanese refugees; Darfur IDPs (since 2003); Gulf diaspora remittances were vital pre-war.",
+      "diaspora_top_destinations": [
+        "Saudi Arabia",
+        "UAE",
+        "Egypt",
+        "Chad",
+        "South Sudan"
+      ],
+      "asylum_seekers": 50000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 9000000,
+      "immigration_policy": "Massive displacement crisis; borders with Chad/Egypt overwhelmed",
+      "remittances_pct_gdp": 3,
+      "net_migration_rate_per_1k": -5
     },
     "digital_economy": {
       "e_government_index": 0.28,
@@ -271,7 +399,18 @@
       "tech_hubs": [
         "Khartoum (249Startups — disrupted by war)"
       ],
-      "notes": "Telecom infrastructure severely damaged in 2023 war; Zain Sudan, MTN Sudan, Sudani operators; internet shutdowns during protests and war; pre-war fintech growth (Bankak app); submarine cable via Egypt; war has set digital development back years."
+      "notes": "Telecom infrastructure severely damaged in 2023 war; Zain Sudan, MTN Sudan, Sudani operators; internet shutdowns during protests and war; pre-war fintech growth (Bankak app); submarine cable via Egypt; war has set digital development back years.",
+      "e_participation_index": 0.2,
+      "ict_development_index": 2.0,
+      "mobile_money_accounts": 2000000,
+      "digital_payments_pct_adults": 10,
+      "fintech_companies": 5,
+      "startup_ecosystem_value_usd": "$10 million",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0.15,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 5
     },
     "other_languages": [
       "Nubian languages",
@@ -279,14 +418,387 @@
       "Fur",
       "Zaghawa",
       "Nuba languages"
-    ]
+    ],
+    "capital_coordinates": {
+      "lat": 15.5007,
+      "lon": 32.5599
+    },
+    "other_major_cities": [
+      "Omdurman",
+      "Khartoum North (Bahri)",
+      "Port Sudan",
+      "Kassala",
+      "Nyala",
+      "El Obeid"
+    ],
+    "national_motto": "Al-naṣr lana (Victory Is Ours)",
+    "national_anthem": "Nahnu Jund Allah, Jund Al-watan (We Are the Soldiers of God, Soldiers of the Homeland)",
+    "currency_code": "SDG",
+    "internet_tld": ".sd",
+    "utc_offset": "UTC+2",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 12.8628,
+        "lon": 30.2176
+      },
+      "bounding_box": {
+        "north": 22.22,
+        "south": 8.68,
+        "east": 38.61,
+        "west": 21.84
+      },
+      "land_area_km2": 1861484,
+      "water_area_km2": 0,
+      "coastline_km": 853,
+      "borders": [
+        "Egypt",
+        "Libya",
+        "Chad",
+        "Central African Republic",
+        "South Sudan",
+        "Ethiopia",
+        "Eritrea"
+      ],
+      "border_lengths_km": {
+        "Egypt": 1276,
+        "Libya": 382,
+        "Chad": 1403,
+        "Central African Republic": 174,
+        "South Sudan": 2158,
+        "Ethiopia": 744,
+        "Eritrea": 682
+      },
+      "highest_point": {
+        "name": "Deriba Caldera (Jebel Marra)",
+        "elevation_m": 3042
+      },
+      "lowest_point": {
+        "name": "Red Sea",
+        "elevation_m": 0
+      },
+      "terrain": "Nubian Desert (north); Nile Valley (central); Darfur Plateau (west); Jebel Marra volcanic massif; Red Sea Hills (east); savanna (south)",
+      "land_use": {
+        "agricultural_pct": 30,
+        "arable_pct": 15.7,
+        "forest_pct": 10,
+        "other_pct": 60
+      },
+      "major_rivers": [
+        "Blue Nile",
+        "White Nile",
+        "Atbara",
+        "Dinder"
+      ],
+      "major_lakes": [
+        "Nubia (Lake Nasser extension)"
+      ],
+      "exclusive_economic_zone_km2": 91600,
+      "landlocked": false,
+      "notes": "3rd largest in Africa after Algeria/DR Congo; confluence of Blue and White Nile at Khartoum; Meroe pyramids (Nubia, UNESCO); 2023 war (SAF vs RSF); Darfur crisis."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$26 billion",
+      "gdp_ppp_usd": "$180 billion",
+      "gdp_per_capita_nominal_usd": 550,
+      "gdp_per_capita_ppp_usd": 3800,
+      "gdp_growth_rate_pct": -12,
+      "inflation_rate_pct": 170,
+      "unemployment_rate_pct": 30,
+      "youth_unemployment_rate_pct": 45,
+      "poverty_rate_pct": 65,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 34.2,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 20,
+        "industry_pct_gdp": 25,
+        "services_pct_gdp": 55
+      },
+      "labor_force": 12000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 40,
+        "industry_pct": 15,
+        "services_pct": 45
+      },
+      "fdi_inflow_usd": "$500 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$200 million",
+      "ease_of_doing_business_rank": 171,
+      "economic_freedom_index_score": 39.1,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Economy devastated by 2023 war (SAF vs RSF); lost 75% oil revenue with South Sudan secession; gold mining (#3 Africa); agriculture (gum arabic #1 global); hyperinflation; US sanctions removed 2020, reimposed concerns."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 4.5,
+      "health_expenditure_per_capita_usd": 20,
+      "physicians_per_1k": 0.3,
+      "nurses_midwives_per_1k": 0.6,
+      "hospital_beds_per_1k": 0.7,
+      "maternal_mortality_per_100k": 270,
+      "hiv_prevalence_pct": 0.2,
+      "malaria_incidence_per_1k": 20,
+      "tuberculosis_incidence_per_100k": 60,
+      "access_to_clean_water_pct": 60,
+      "access_to_sanitation_pct": 35,
+      "vaccination_coverage_pct": 55,
+      "stunting_under5_pct": 34,
+      "obesity_rate_pct": 6.6,
+      "universal_health_coverage_index": 30,
+      "leading_causes_of_death": [
+        "neonatal disorders",
+        "lower respiratory infections",
+        "cardiovascular diseases",
+        "diarrheal diseases",
+        "malaria"
+      ],
+      "notes": "Health system collapsing due to 2023 war; 70%+ hospitals non-functional in conflict zones; disease outbreaks (cholera, dengue); massive displacement overwhelming remaining facilities."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 20,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 15.7,
+      "agricultural_land_pct": 30,
+      "irrigated_land_pct": 4,
+      "major_crops": [
+        "sorghum",
+        "millet",
+        "wheat",
+        "sesame",
+        "groundnuts",
+        "gum arabic",
+        "sugarcane",
+        "cotton"
+      ],
+      "major_livestock": [
+        "cattle",
+        "sheep",
+        "goats",
+        "camels"
+      ],
+      "food_import_dependency_pct": 35,
+      "cereal_yield_kg_per_hectare": 700,
+      "agricultural_employment_pct": 40,
+      "prevalence_of_undernourishment_pct": 20,
+      "notes": "World's largest gum arabic producer (80%+ global supply, acacia senegal); Gezira Scheme (one of world's largest irrigation); war disrupting agriculture; famine risk 2024."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 70,
+        "hydroelectric_pct": 25,
+        "solar_pct": 3,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 2
+      },
+      "installed_capacity_mw": 3600,
+      "electricity_production_gwh": 12000,
+      "electricity_consumption_per_capita_kwh": 250,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 60000,
+      "oil_consumption_bpd": 100000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 20,
+      "energy_access_urban_pct": 60,
+      "notes": "Merowe Dam (largest in Africa at completion, 1250 MW); oil production reduced after South Sudan secession; Roseires Dam (upgraded); war damaging infrastructure."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Khartoum International Airport (partially destroyed in 2023 war)",
+        "Port Sudan Airport (functional)"
+      ],
+      "major_airports_domestic": [
+        "Nyala",
+        "El Fasher",
+        "El Obeid",
+        "Kassala"
+      ],
+      "national_airline": "Sudan Airways (barely operational)",
+      "major_seaports": [
+        "Port Sudan (Red Sea, now de facto capital hub)"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 20,
+      "registered_vehicles_per_1k": 15,
+      "road_fatalities_per_100k": 25,
+      "notes": "Khartoum airport destroyed in 2023 conflict; Port Sudan now main entry point; limited railway (Atbara-Khartoum-Port Sudan); roads poor."
+    },
+    "tourism": {
+      "annual_visitors": 50000,
+      "tourism_revenue_usd": "$50 million",
+      "tourism_pct_gdp": 0,
+      "tourism_employment_pct": 1,
+      "unesco_world_heritage_sites": 3,
+      "unesco_sites_list": [
+        "Archaeological Sites of the Island of Meroe",
+        "Gebel Barkal and the Sites of the Napatan Region",
+        "Sanganeb Marine National Park and Dungonab Bay"
+      ],
+      "major_attractions": [
+        "Meroe Pyramids (Nubian)",
+        "Gebel Barkal (holy mountain)",
+        "Suakin (ruined Ottoman port)",
+        "Red Sea diving (Sanganeb)",
+        "Nile confluence at Khartoum"
+      ],
+      "visa_free_access_countries": 43,
+      "henley_passport_rank": 95,
+      "notes": "Tourism collapsed due to 2023 war; Meroe pyramids (more pyramids than Egypt, 200+); Red Sea coral reefs; Nubian heritage; was developing adventure tourism."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 8,
+      "gender_inequality_index": 0,
+      "gender_inequality_rank": 0,
+      "gender_gap_index_score": 0.56,
+      "women_in_parliament_pct": 0,
+      "women_labor_force_participation_pct": 24,
+      "maternal_mortality_per_100k": 270,
+      "child_marriage_pct": 38,
+      "fgm_prevalence_pct": 87,
+      "lgbtq_legal_status": "Illegal (death penalty possible)",
+      "death_penalty_status": "Retentionist",
+      "human_trafficking_tier": "Tier 3",
+      "child_labor_pct": 20,
+      "notes": "FGM ban (2020 law, limited enforcement); 2023 war created massive humanitarian crisis; conflict-related sexual violence (RSF/Darfur); 2019 revolution hopes dashed."
+    },
+    "security_stability": {
+      "global_peace_index_score": 3.3,
+      "global_peace_index_rank": 157,
+      "terrorism_index_score": 5,
+      "terrorism_index_rank": 17,
+      "homicide_rate_per_100k": 5,
+      "active_conflicts": [
+        "SAF vs RSF civil war (April 2023-ongoing)",
+        "Darfur ethnic violence",
+        "Eastern Sudan tensions"
+      ],
+      "border_disputes": [
+        "Hala'ib Triangle (disputed with Egypt)",
+        "Abyei Area (disputed with South Sudan)"
+      ],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$200 million",
+      "internally_displaced_persons": 9000000,
+      "notes": "Full-scale war (April 2023, SAF vs RSF); 9M+ internally displaced (largest displacement crisis globally); ethnic cleansing in Darfur (RSF/Janjaweed); famine looming."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "secretary bird"
+      ],
+      "national_animal": "secretary bird",
+      "national_flower": "",
+      "national_dish": "Ful medames (fava beans) and kisra (sorghum flatbread)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Eid al-Fitr",
+        "Eid al-Adha",
+        "Sufi festivals (mawlid celebrations)",
+        "Independence Day (1 January)"
+      ],
+      "cuisine_highlights": [
+        "ful medames (fava beans)",
+        "kisra (sorghum flatbread)",
+        "shaya (grilled meat)",
+        "moukhbaza (banana paste)",
+        "hilumur (spiced sorghum drink)",
+        "jabana coffee (traditional)"
+      ],
+      "music_art_traditions": [
+        "Sufi dhikr ceremonies and music",
+        "Daluka (women's drum)",
+        "Haqiba music tradition",
+        "Mohammed Wardi (legendary singer)",
+        "Mohammed el-Amin (singer)"
+      ],
+      "film_industry": "Emerging revival (Suhaib Gasmelbari's 'Talking About Trees', Berlinale award)",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "Muhammad Ahmad (the Mahdi)",
+        "Abdallah al-Taishi (Khalifa)",
+        "Omar al-Bashir (dictator 1989-2019)",
+        "Ahmed al-Burhan (SAF leader)",
+        "Alaa Salah ('Kandaka/Nubian Queen', revolution icon)"
+      ],
+      "world_heritage_sites": [
+        "Meroe",
+        "Gebel Barkal/Napatan region",
+        "Sanganeb/Dungonab Bay"
+      ],
+      "media_landscape": "SUNA state agency; press severely restricted; war further constraining information; social media key; internet shutdowns",
+      "notes": "Nubian civilization (Kush/Meroe); 200+ pyramids; Sufi Islam (distinct traditions); 2019 revolution; 2023 war catastrophe; Nile confluence culture."
+    },
+    "legal_system": {
+      "legal_tradition": "Mixed: Islamic Sharia and English common law",
+      "constitution_year": 2019,
+      "sharia_applicability": "Significant: personal status, criminal law (hudud partially); 2020 reforms separated religion from state (partially reversed by war)",
+      "customary_law_role": "Traditional mediation in Darfur and other regions (judiya reconciliation)",
+      "icc_membership": "Non-state party (ICC warrants for Bashir pending)",
+      "judicial_independence_score": 0.1,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 10,
+      "notes": "Transitional constitutional framework (collapsed with 2023 war); ICC warrants for Bashir (genocide, war crimes); 2020 Juba Peace Agreement; judiciary non-functional in much of country."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 8,
+        "global_rank": 35
+      },
+      "area": {
+        "continent_rank": 3,
+        "global_rank": 16
+      },
+      "gdp_nominal": {
+        "continent_rank": 15,
+        "global_rank": 87
+      },
+      "gdp_per_capita": {
+        "continent_rank": 45,
+        "global_rank": 180
+      },
+      "hdi": {
+        "continent_rank": 43,
+        "global_rank": 172
+      },
+      "life_expectancy": {
+        "continent_rank": 30,
+        "global_rank": 140
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 44,
+        "global_rank": 171
+      },
+      "internet_penetration": {
+        "continent_rank": 35,
+        "global_rank": 140
+      },
+      "press_freedom": {
+        "continent_rank": 53,
+        "global_rank": 172
+      },
+      "global_peace_index": {
+        "continent_rank": 39,
+        "global_rank": 157
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": "3rd largest African country; catastrophic 2023 war."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Abdel Fattah al-Burhan",
       "title": "Chairman of Sovereignty Council / SAF Commander",
       "since": "2019-08-20",
-      "notes": "Led 2021 military coup dissolving civilian-military transition; at war with RSF since April 2023"
+      "notes": "Led 2021 military coup dissolving civilian-military transition; at war with RSF since April 2023",
+      "party": ""
     },
     "rival_rsf_leader": {
       "name": "Mohamed Hamdan Dagalo (Hemeti)",
@@ -328,7 +840,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.892266Z",
-    "notes": "Comprehensive index for Sierra Leone covering indigenous Temne and Mende peoples, Province of Freedom, Freetown settlement, Krio culture, British colony and protectorate, Hut Tax War, independence, RUF civil war (blood diamonds), Ebola crisis, and post-conflict recovery."
+    "notes": "Comprehensive index for Sierra Leone covering indigenous Temne and Mende peoples, Province of Freedom, Freetown settlement, Krio culture, British colony and protectorate, Hut Tax War, independence, RUF civil war (blood diamonds), Ebola crisis, and post-conflict recovery.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Freetown",
@@ -136,7 +137,22 @@
       "life_expectancy": 55.9,
       "infant_mortality_per_1k": 78.0,
       "literacy_rate_pct": 43.2,
-      "net_migration_rate": -1.0
+      "net_migration_rate": -1.0,
+      "population_growth_rate_pct": 2.1,
+      "urban_population_growth_rate_pct": 3.0,
+      "life_expectancy_male": 53,
+      "life_expectancy_female": 56,
+      "under5_mortality_per_1k": 100,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 76,
+      "population_density_per_km2": 115,
+      "age_structure": {
+        "0_14_pct": 41,
+        "15_24_pct": 19,
+        "25_54_pct": 32,
+        "55_64_pct": 4,
+        "65_plus_pct": 4
+      }
     },
     "natural_resources": {
       "primary": [
@@ -163,7 +179,10 @@
         "MRU",
         "Commonwealth"
       ],
-      "notes": "Republic of Sierra Leone Armed Forces (RSLAF); rebuilt by UK International Military Advisory and Training Team (IMATT) after civil war; Kamajor militia (civil defence) disbanded; UN peacekeeping contributor."
+      "notes": "Republic of Sierra Leone Armed Forces (RSLAF); rebuilt by UK International Military Advisory and Training Team (IMATT) after civil war; Kamajor militia (civil defence) disbanded; UN peacekeeping contributor.",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -192,14 +211,47 @@
         "UK"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 3.5
+      "remittances_pct_gdp": 3.5,
+      "total_exports_usd": "$600 million",
+      "total_imports_usd": "$1.5 billion",
+      "top_export_destinations": [
+        "Belgium",
+        "Netherlands",
+        "China",
+        "USA",
+        "India"
+      ],
+      "top_import_origins": [
+        "China",
+        "India",
+        "Turkey",
+        "USA",
+        "Netherlands"
+      ],
+      "trade_as_pct_gdp": 50,
+      "current_account_balance_usd": "-$500 million",
+      "trade_agreements": [
+        "ECOWAS",
+        "Mano River Union",
+        "AfCFTA"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 17.0,
       "electricity_access_pct": 26.0,
       "mobile_subscriptions_per_100": 54,
       "railway_km": 0,
-      "paved_roads_pct": 8
+      "paved_roads_pct": 8,
+      "broadband_subscriptions_per_100": 0.01,
+      "4g_coverage_pct": 30,
+      "5g_availability": false,
+      "road_network_km": 11700,
+      "waterways_km": 800,
+      "submarine_cables": [
+        "ACE"
+      ],
+      "notes": "Orange, Africell telecoms; poor roads; no functioning railway; Lungi-Freetown crossing challenge."
     },
     "international_memberships": [
       "UN",
@@ -230,6 +282,26 @@
       "fragile_states_index": {
         "score": 85.7,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.42,
+        "rank": 96,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -1.0,
+        "percentile": 8,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.7,
+        "percentile": 16,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.1,
+        "percentile": 38,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -245,12 +317,41 @@
         "coastal erosion",
         "deforestation"
       ],
-      "protected_areas_pct": 5
+      "protected_areas_pct": 5,
+      "average_temperature_c": 27,
+      "average_rainfall_mm": 3000,
+      "co2_per_capita_t": 0.1,
+      "deforestation_rate_pct": 1.5,
+      "water_stress_level": "Low",
+      "environmental_performance_index": {
+        "score": 27,
+        "rank": 170,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 3000,
+        "endemic_species": 50,
+        "threatened_species": 60
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 77.0,
       "foreign_aid_received_usd": "700 million",
-      "notes": "Heavily aid-dependent; HIPC/MDRI debt relief; economy devastated by civil war (1991-2002) then Ebola (2014-16); iron ore price collapse; IMF ECF programme; Le (leone) has depreciated significantly."
+      "notes": "Heavily aid-dependent; HIPC/MDRI debt relief; economy devastated by civil war (1991-2002) then Ebola (2014-16); iron ore price collapse; IMF ECF programme; Le (leone) has depreciated significantly.",
+      "external_debt_usd": "$2 billion",
+      "debt_service_pct_revenue": 15,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA",
+        "UK",
+        "World Bank",
+        "EU",
+        "AfDB"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 86,
@@ -262,14 +363,41 @@
         "Njala University",
         "Eastern Technical University"
       ],
-      "notes": "Fourah Bay College ('Athens of West Africa') trained elites across British West Africa; Free Quality School Education (FQSE) 2018; civil war destroyed 1,270+ schools; low female secondary enrollment; teacher motivation issues."
+      "notes": "Fourah Bay College ('Athens of West Africa') trained elites across British West Africa; Free Quality School Education (FQSE) 2018; civil war destroyed 1,270+ schools; low female secondary enrollment; teacher motivation issues.",
+      "education_expenditure_pct_gdp": 7.7,
+      "primary_completion_rate_pct": 68,
+      "gender_parity_index": 0.93,
+      "mean_years_of_schooling": 3.7,
+      "expected_years_of_schooling": 10.2,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 35,
+      "out_of_school_children": 200000,
+      "academic_freedom_index": 0.5
     },
     "diaspora_migration": {
       "diaspora_population": "500,000+ (UK, USA, Guinea, Gambia, Liberia)",
       "refugees_hosted": 500,
       "refugees_produced": 5000,
       "remittances_usd": "150 million",
-      "notes": "Civil war created massive diaspora (especially UK, US); Krio community globally dispersed; returnees contribute to reconstruction; diaspora engagement strategy launched."
+      "notes": "Civil war created massive diaspora (especially UK, US); Krio community globally dispersed; returnees contribute to reconstruction; diaspora engagement strategy launched.",
+      "diaspora_top_destinations": [
+        "UK",
+        "USA",
+        "Gambia",
+        "Guinea",
+        "Liberia"
+      ],
+      "asylum_seekers": 2000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "ECOWAS free movement",
+      "remittances_pct_gdp": 4.0,
+      "net_migration_rate_per_1k": -1.0
     },
     "digital_economy": {
       "e_government_index": 0.29,
@@ -277,7 +405,359 @@
       "tech_hubs": [
         "Freetown (Sensi Tech Hub, Innovation SL)"
       ],
-      "notes": "ACE submarine cable; Africell and Orange SL primary operators; Directorate of Science, Technology and Innovation (DSTI) driving government tech adoption; open data initiative; low broadband penetration."
+      "notes": "ACE submarine cable; Africell and Orange SL primary operators; Directorate of Science, Technology and Innovation (DSTI) driving government tech adoption; open data initiative; low broadband penetration.",
+      "e_participation_index": 0.2,
+      "ict_development_index": 1.3,
+      "mobile_money_accounts": 2000000,
+      "digital_payments_pct_adults": 15,
+      "fintech_companies": 5,
+      "startup_ecosystem_value_usd": "$5 million",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0.1,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 5
+    },
+    "capital_coordinates": {
+      "lat": 8.484,
+      "lon": -13.2344
+    },
+    "other_major_cities": [
+      "Bo",
+      "Kenema",
+      "Makeni",
+      "Koidu"
+    ],
+    "national_motto": "Unity, Freedom, Justice",
+    "national_anthem": "High We Exalt Thee, Realm of the Free",
+    "currency_code": "SLE",
+    "internet_tld": ".sl",
+    "utc_offset": "UTC+0",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 8.4606,
+        "lon": -11.7799
+      },
+      "bounding_box": {
+        "north": 10.0,
+        "south": 6.93,
+        "east": -10.28,
+        "west": -13.3
+      },
+      "land_area_km2": 71740,
+      "water_area_km2": 120,
+      "coastline_km": 402,
+      "borders": [
+        "Guinea",
+        "Liberia"
+      ],
+      "border_lengths_km": {
+        "Guinea": 794,
+        "Liberia": 299
+      },
+      "highest_point": {
+        "name": "Loma Mansa (Bintimani)",
+        "elevation_m": 1948
+      },
+      "lowest_point": {
+        "name": "Atlantic Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Coastal mangrove swamps; wooded hill country; upland plateau; mountains in northeast; beaches",
+      "land_use": {
+        "agricultural_pct": 56.2,
+        "arable_pct": 23.4,
+        "forest_pct": 37.5,
+        "other_pct": 6.3
+      },
+      "major_rivers": [
+        "Rokel (Sierra Leone)",
+        "Jong",
+        "Sewa",
+        "Mano",
+        "Moa"
+      ],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 155700,
+      "landlocked": false,
+      "notes": "Named 'Lion Mountains' by Portuguese; Freetown—founded 1792 for freed slaves; diamonds (blood diamonds/conflict); Ebola 2014-16; Tacugama Chimpanzee Sanctuary."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$4.3 billion",
+      "gdp_ppp_usd": "$16 billion",
+      "gdp_per_capita_nominal_usd": 510,
+      "gdp_per_capita_ppp_usd": 1900,
+      "gdp_growth_rate_pct": 3.5,
+      "inflation_rate_pct": 40,
+      "unemployment_rate_pct": 5,
+      "youth_unemployment_rate_pct": 9,
+      "poverty_rate_pct": 56.8,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 35.7,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 60,
+        "industry_pct_gdp": 7,
+        "services_pct_gdp": 33
+      },
+      "labor_force": 2800000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 62,
+        "industry_pct": 8,
+        "services_pct": 30
+      },
+      "fdi_inflow_usd": "$100 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$500 million",
+      "ease_of_doing_business_rank": 163,
+      "economic_freedom_index_score": 49.2,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Diamonds (Kimberley Process); iron ore (Marampa); rutile/bauxite; agriculture-based; post-civil war/Ebola recovery; high inflation (40%+); new leone redenomination (2022)."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 8.5,
+      "health_expenditure_per_capita_usd": 35,
+      "physicians_per_1k": 0.03,
+      "nurses_midwives_per_1k": 0.2,
+      "hospital_beds_per_1k": 0.4,
+      "maternal_mortality_per_100k": 443,
+      "hiv_prevalence_pct": 1.5,
+      "malaria_incidence_per_1k": 300,
+      "tuberculosis_incidence_per_100k": 295,
+      "access_to_clean_water_pct": 60,
+      "access_to_sanitation_pct": 16,
+      "vaccination_coverage_pct": 70,
+      "stunting_under5_pct": 26,
+      "obesity_rate_pct": 8,
+      "universal_health_coverage_index": 32,
+      "leading_causes_of_death": [
+        "malaria",
+        "lower respiratory infections",
+        "neonatal disorders",
+        "diarrheal diseases",
+        "tuberculosis"
+      ],
+      "notes": "Ebola outbreak 2014-16 devastated health system (nearly 4000 deaths); Free Health Care Initiative (2010, pregnant women/children under 5); among world's worst physician ratios."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 25,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 23.4,
+      "agricultural_land_pct": 56.2,
+      "irrigated_land_pct": 1,
+      "major_crops": [
+        "rice",
+        "cassava",
+        "palm oil",
+        "coffee",
+        "cocoa",
+        "groundnuts",
+        "sweet potatoes"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "sheep",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 30,
+      "cereal_yield_kg_per_hectare": 1200,
+      "agricultural_employment_pct": 62,
+      "prevalence_of_undernourishment_pct": 26,
+      "notes": "Rice is staple but deficit; palm oil production; subsistence farming dominates; inland valley swamp rice cultivation."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 60,
+        "hydroelectric_pct": 30,
+        "solar_pct": 5,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 5
+      },
+      "installed_capacity_mw": 150,
+      "electricity_production_gwh": 250,
+      "electricity_consumption_per_capita_kwh": 25,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 9000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 1,
+      "energy_access_urban_pct": 30,
+      "notes": "Bumbuna hydroelectric dam; EDSA/EGTC utilities; extremely low access (especially rural); Turkey Karpowership (floating power); solar expanding."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Lungi International Airport (Freetown)"
+      ],
+      "major_airports_domestic": [
+        "Bo",
+        "Kenema"
+      ],
+      "national_airline": "None",
+      "major_seaports": [
+        "Freetown (Queen Elizabeth II Quay)",
+        "Pepel (iron ore)"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 450,
+      "registered_vehicles_per_1k": 5,
+      "road_fatalities_per_100k": 30,
+      "notes": "Lungi airport across estuary (ferry/water taxi/hovercraft to Freetown); limited road network; no railway (dismantled)."
+    },
+    "tourism": {
+      "annual_visitors": 100000,
+      "tourism_revenue_usd": "$40 million",
+      "tourism_pct_gdp": 1,
+      "tourism_employment_pct": 3,
+      "unesco_world_heritage_sites": 0,
+      "unesco_sites_list": [],
+      "major_attractions": [
+        "Freetown Cotton Tree",
+        "Bunce Island (slave trade)",
+        "River No. 2 Beach",
+        "Tacugama Chimpanzee Sanctuary",
+        "Banana Islands",
+        "Tiwai Island (wildlife)"
+      ],
+      "visa_free_access_countries": 46,
+      "henley_passport_rank": 88,
+      "notes": "Beautiful beaches; limited infrastructure; Ebola/conflict legacy; ecotourism potential; Bunce Island slave history; Krio heritage."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 63,
+      "gender_inequality_index": 0.641,
+      "gender_inequality_rank": 160,
+      "gender_gap_index_score": 0.67,
+      "women_in_parliament_pct": 30,
+      "women_labor_force_participation_pct": 56,
+      "maternal_mortality_per_100k": 443,
+      "child_marriage_pct": 30,
+      "fgm_prevalence_pct": 83,
+      "lgbtq_legal_status": "Illegal (life imprisonment)",
+      "death_penalty_status": "Abolitionist (2021)",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 28,
+      "notes": "Abolished death penalty (2021, landmark); FGM very prevalent (Bondo society); Gender Equality and Women's Empowerment Act (2022, 30% quota); 2023 election disputed."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.8,
+      "global_peace_index_rank": 56,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 2,
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 600,
+      "arms_imports_usd": "$5 million",
+      "internally_displaced_persons": 0,
+      "notes": "Post-civil war (1991-2002) recovery; UNAMSIL peacekeeping success; Special Court for Sierra Leone (Charles Taylor trial); relatively peaceful since; August 2023 election tensions."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "cotton tree (Freetown, landmark)"
+      ],
+      "national_animal": "lion",
+      "national_flower": "",
+      "national_dish": "Cassava leaf sauce with rice",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Freetown Music Festival",
+        "Lantern Festival (Fanals)",
+        "Independence Day (27 April)"
+      ],
+      "cuisine_highlights": [
+        "cassava leaves (palaver sauce)",
+        "groundnut soup",
+        "jollof rice",
+        "fried plantain",
+        "palm wine",
+        "ginger beer",
+        "pepper soup"
+      ],
+      "music_art_traditions": [
+        "Palm wine music (S.E. Rogie, Ebenezer Calendar)",
+        "Gumbe/Goombay music",
+        "Krio Creole culture",
+        "Secret societies (Poro, Sande/Bondo)",
+        "Country cloth weaving"
+      ],
+      "film_industry": "Minimal (Blood Diamond filmed about Sierra Leone)",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "Ahmad Tejan Kabbah (president, peace)",
+        "Sengbe Pieh (Joseph Cinqué, Amistad rebellion)",
+        "Julius Maada Bio (current president)",
+        "Bai Bureh (anti-colonial resistance leader)"
+      ],
+      "world_heritage_sites": [],
+      "media_landscape": "SLBC state; Awareness Times; Concord Times; Politico; limited but diverse press",
+      "notes": "Krio (Creole) culture from freed slaves; cotton tree symbol; Bunce Island slave fort; diamond history; palm wine music tradition; secret societies."
+    },
+    "legal_system": {
+      "legal_tradition": "English common law and customary law",
+      "constitution_year": 1991,
+      "sharia_applicability": "None (small Muslim population uses informal Sharia for personal matters)",
+      "customary_law_role": "Chiefs and customary courts significant in rural areas (Local Courts Act)",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.35,
+      "contract_enforcement_days": 515,
+      "property_rights_index": 30,
+      "notes": "Special Court for Sierra Leone (2002-13, hybrid UN/national court); Truth and Reconciliation Commission; dual legal system (formal + customary)."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 28,
+        "global_rank": 104
+      },
+      "area": {
+        "continent_rank": 35,
+        "global_rank": 117
+      },
+      "gdp_nominal": {
+        "continent_rank": 38,
+        "global_rank": 150
+      },
+      "gdp_per_capita": {
+        "continent_rank": 49,
+        "global_rank": 183
+      },
+      "hdi": {
+        "continent_rank": 53,
+        "global_rank": 181
+      },
+      "life_expectancy": {
+        "continent_rank": 53,
+        "global_rank": 190
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 38,
+        "global_rank": 163
+      },
+      "internet_penetration": {
+        "continent_rank": 44,
+        "global_rank": 169
+      },
+      "press_freedom": {
+        "continent_rank": 27,
+        "global_rank": 75
+      },
+      "global_peace_index": {
+        "continent_rank": 4,
+        "global_rank": 56
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": "Among lowest life expectancy globally."
     }
   },
   "leadership": {
@@ -285,7 +765,8 @@
       "name": "Julius Maada Bio",
       "title": "President",
       "since": "2018-04-04",
-      "notes": "SLPP; former military junta leader (1996, briefly); re-elected 2023 (disputed); Free Quality Education policy"
+      "notes": "SLPP; former military junta leader (1996, briefly); re-elected 2023 (disputed); Free Quality Education policy",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -322,7 +803,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

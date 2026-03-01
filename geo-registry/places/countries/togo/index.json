@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.897201Z",
-    "notes": "Comprehensive index for Togo covering Ewe, Kabye, and other peoples, Slave Coast trade, German Togoland, French and British mandates, Sylvanus Olympio assassination, Gnassingbé dynasty (Africa's longest ruling family), and contemporary politics."
+    "notes": "Comprehensive index for Togo covering Ewe, Kabye, and other peoples, Slave Coast trade, German Togoland, French and British mandates, Sylvanus Olympio assassination, Gnassingbé dynasty (Africa's longest ruling family), and contemporary politics.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Lomé",
@@ -134,7 +135,22 @@
       "life_expectancy": 61.4,
       "infant_mortality_per_1k": 42.0,
       "literacy_rate_pct": 66.5,
-      "net_migration_rate": -0.5
+      "net_migration_rate": -0.5,
+      "population_growth_rate_pct": 2.4,
+      "urban_population_growth_rate_pct": 3.5,
+      "life_expectancy_male": 61,
+      "life_expectancy_female": 64,
+      "under5_mortality_per_1k": 67,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 80,
+      "population_density_per_km2": 155,
+      "age_structure": {
+        "0_14_pct": 41,
+        "15_24_pct": 20,
+        "25_54_pct": 32,
+        "55_64_pct": 4,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -159,7 +175,10 @@
         "AU",
         "ECOWAS"
       ],
-      "notes": "Forces Armées Togolaises (FAT); military dominated politics (Gnassingbé dynasty since 1967); deployed in Sahel counter-terrorism; growing jihadist threat in northern Savanes region; French military cooperation; ECOWAS mediator role."
+      "notes": "Forces Armées Togolaises (FAT); military dominated politics (Gnassingbé dynasty since 1967); deployed in Sahel counter-terrorism; growing jihadist threat in northern Savanes region; French military cooperation; ECOWAS mediator role.",
+      "paramilitary_personnel": 750,
+      "conscription": true,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -190,14 +209,51 @@
         "Belgium"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 5.5
+      "remittances_pct_gdp": 5.5,
+      "total_exports_usd": "$1.5 billion",
+      "total_imports_usd": "$3 billion",
+      "top_export_destinations": [
+        "India",
+        "Benin",
+        "Burkina Faso",
+        "Ghana",
+        "Niger"
+      ],
+      "top_import_origins": [
+        "China",
+        "France",
+        "Netherlands",
+        "India",
+        "South Korea"
+      ],
+      "trade_as_pct_gdp": 55,
+      "current_account_balance_usd": "-$500 million",
+      "trade_agreements": [
+        "UEMOA",
+        "ECOWAS",
+        "AfCFTA"
+      ],
+      "special_economic_zones": [
+        "Lomé Free Zone (PIA)"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 25.0,
       "electricity_access_pct": 54.0,
       "mobile_subscriptions_per_100": 65,
       "railway_km": 568,
-      "paved_roads_pct": 21
+      "paved_roads_pct": 21,
+      "broadband_subscriptions_per_100": 0.5,
+      "4g_coverage_pct": 60,
+      "5g_availability": false,
+      "road_network_km": 11652,
+      "waterways_km": 50,
+      "submarine_cables": [
+        "WACS",
+        "ACE",
+        "MainOne"
+      ],
+      "notes": "Togocom, Moov (Maroc Telecom) telecoms; fibre backbone; Port of Lomé connectivity."
     },
     "international_memberships": [
       "UN",
@@ -228,6 +284,26 @@
       "fragile_states_index": {
         "score": 82.0,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.38,
+        "rank": 105,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.8,
+        "percentile": 15,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.4,
+        "percentile": 30,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.3,
+        "percentile": 30,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -243,12 +319,41 @@
         "coastal erosion",
         "deforestation"
       ],
-      "protected_areas_pct": 11
+      "protected_areas_pct": 11,
+      "average_temperature_c": 27,
+      "average_rainfall_mm": 1100,
+      "co2_per_capita_t": 0.4,
+      "deforestation_rate_pct": 3,
+      "water_stress_level": "Low-Medium",
+      "environmental_performance_index": {
+        "score": 30,
+        "rank": 158,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 3500,
+        "endemic_species": 20,
+        "threatened_species": 30
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 69.0,
       "foreign_aid_received_usd": "350 million",
-      "notes": "Lomé port drives transit trade economy for landlocked neighbours; CFA franc zone (BCEAO); Gnassingbé family in power since 1967; PND (Plan National de Développement); growing security costs from Sahel jihadist spillover."
+      "notes": "Lomé port drives transit trade economy for landlocked neighbours; CFA franc zone (BCEAO); Gnassingbé family in power since 1967; PND (Plan National de Développement); growing security costs from Sahel jihadist spillover.",
+      "external_debt_usd": "$3 billion",
+      "debt_service_pct_revenue": 15,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "France",
+        "World Bank",
+        "EU",
+        "AfDB",
+        "Germany"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 94,
@@ -259,14 +364,41 @@
         "University of Lomé (1970)",
         "University of Kara"
       ],
-      "notes": "French language of instruction; free primary education since 2008; north-south education gap; gender gap narrowing; Koranic schools alongside secular; University of Lomé overcrowded (~70,000 students); PASEC assessments."
+      "notes": "French language of instruction; free primary education since 2008; north-south education gap; gender gap narrowing; Koranic schools alongside secular; University of Lomé overcrowded (~70,000 students); PASEC assessments.",
+      "education_expenditure_pct_gdp": 5.0,
+      "primary_completion_rate_pct": 80,
+      "gender_parity_index": 0.9,
+      "mean_years_of_schooling": 4.9,
+      "expected_years_of_schooling": 12.6,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 36,
+      "out_of_school_children": 100000,
+      "academic_freedom_index": 0.3
     },
     "diaspora_migration": {
       "diaspora_population": "500,000+ (Ghana, Nigeria, France, Germany, USA, Benin)",
       "refugees_hosted": 3000,
       "refugees_produced": 10000,
       "remittances_usd": "500 million",
-      "notes": "Historical migration to Ghana (Ewe cross-border community); traders across West Africa; protest-related emigration (2005, 2017 political crises); diaspora contributes to political opposition; Nana Benz market women historical trading class."
+      "notes": "Historical migration to Ghana (Ewe cross-border community); traders across West Africa; protest-related emigration (2005, 2017 political crises); diaspora contributes to political opposition; Nana Benz market women historical trading class.",
+      "diaspora_top_destinations": [
+        "Ghana",
+        "Nigeria",
+        "France",
+        "USA",
+        "Germany"
+      ],
+      "asylum_seekers": 2000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 50000,
+      "immigration_policy": "ECOWAS free movement; northern displacement from Sahel threat",
+      "remittances_pct_gdp": 6,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0.38,
@@ -274,7 +406,370 @@
       "tech_hubs": [
         "Lomé (Woelab, first FabLab in West Africa)"
       ],
-      "notes": "Woelab famous for building 3D printer from e-waste; TogoFirst.com economic information portal; Togocel and Moov Africa operators; ACE submarine cable (Lomé landing); digital ID system; e-government services expanding."
+      "notes": "Woelab famous for building 3D printer from e-waste; TogoFirst.com economic information portal; Togocel and Moov Africa operators; ACE submarine cable (Lomé landing); digital ID system; e-government services expanding.",
+      "e_participation_index": 0.3,
+      "ict_development_index": 2.0,
+      "mobile_money_accounts": 5000000,
+      "digital_payments_pct_adults": 20,
+      "fintech_companies": 15,
+      "startup_ecosystem_value_usd": "$15 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.35,
+      "innovation_index_score": 15,
+      "innovation_index_rank": 120,
+      "ai_readiness_index": 10
+    },
+    "capital_coordinates": {
+      "lat": 6.1256,
+      "lon": 1.2254
+    },
+    "other_major_cities": [
+      "Sokodé",
+      "Kara",
+      "Kpalimé",
+      "Atakpamé",
+      "Dapaong"
+    ],
+    "national_motto": "Travail, Liberté, Patrie (Work, Liberty, Homeland)",
+    "national_anthem": "Terre de nos aïeux (Land of Our Forefathers)",
+    "currency_code": "XOF",
+    "internet_tld": ".tg",
+    "utc_offset": "UTC+0",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 8.6195,
+        "lon": 0.8248
+      },
+      "bounding_box": {
+        "north": 11.14,
+        "south": 6.1,
+        "east": 1.81,
+        "west": -0.15
+      },
+      "land_area_km2": 56785,
+      "water_area_km2": 2400,
+      "coastline_km": 56,
+      "borders": [
+        "Ghana",
+        "Burkina Faso",
+        "Benin"
+      ],
+      "border_lengths_km": {
+        "Ghana": 877,
+        "Burkina Faso": 131,
+        "Benin": 651
+      },
+      "highest_point": {
+        "name": "Mont Agou",
+        "elevation_m": 986
+      },
+      "lowest_point": {
+        "name": "Atlantic Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Coastal lagoons and marshes; Togo Mountains (north-south chain); savanna plateau (center/north); Mono River plain",
+      "land_use": {
+        "agricultural_pct": 67.4,
+        "arable_pct": 45.2,
+        "forest_pct": 3.5,
+        "other_pct": 29.1
+      },
+      "major_rivers": [
+        "Mono",
+        "Oti",
+        "Kara",
+        "Haho"
+      ],
+      "major_lakes": [
+        "Lake Togo"
+      ],
+      "exclusive_economic_zone_km2": 15000,
+      "landlocked": false,
+      "notes": "Narrow country (50-150 km wide, 560 km long); Togoville (historical capital on Lake Togo); phosphate mining; Port of Lomé (only deep-water port in West Africa)."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$8.5 billion",
+      "gdp_ppp_usd": "$22 billion",
+      "gdp_per_capita_nominal_usd": 950,
+      "gdp_per_capita_ppp_usd": 2500,
+      "gdp_growth_rate_pct": 5.5,
+      "inflation_rate_pct": 4.0,
+      "unemployment_rate_pct": 4,
+      "youth_unemployment_rate_pct": 8,
+      "poverty_rate_pct": 45.5,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 42.4,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 22,
+        "industry_pct_gdp": 33,
+        "services_pct_gdp": 45
+      },
+      "labor_force": 3500000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 65,
+        "industry_pct": 10,
+        "services_pct": 25
+      },
+      "fdi_inflow_usd": "$500 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$700 million",
+      "ease_of_doing_business_rank": 97,
+      "economic_freedom_index_score": 52.4,
+      "credit_rating": {
+        "moodys": "B3",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Phosphate exporter (#5 globally); Port of Lomé (only deep-water port in region, transshipment hub); clinker/cement manufacturing; Gnassingbé dynasty (father-son since 1967); PND 2018-2022 development plan."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 6,
+      "health_expenditure_per_capita_usd": 50,
+      "physicians_per_1k": 0.06,
+      "nurses_midwives_per_1k": 0.3,
+      "hospital_beds_per_1k": 0.7,
+      "maternal_mortality_per_100k": 399,
+      "hiv_prevalence_pct": 2.0,
+      "malaria_incidence_per_1k": 150,
+      "tuberculosis_incidence_per_100k": 36,
+      "access_to_clean_water_pct": 64,
+      "access_to_sanitation_pct": 18,
+      "vaccination_coverage_pct": 70,
+      "stunting_under5_pct": 24,
+      "obesity_rate_pct": 8.4,
+      "universal_health_coverage_index": 35,
+      "leading_causes_of_death": [
+        "malaria",
+        "lower respiratory infections",
+        "neonatal disorders",
+        "HIV/AIDS",
+        "diarrheal diseases"
+      ],
+      "notes": "Universal health insurance introduced (INAM); traditional medicine prevalent; maternal mortality high; healthcare improving slowly."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 30,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 45.2,
+      "agricultural_land_pct": 67.4,
+      "irrigated_land_pct": 1,
+      "major_crops": [
+        "cassava",
+        "maize",
+        "yams",
+        "sorghum",
+        "millet",
+        "coffee",
+        "cocoa",
+        "cotton",
+        "palm oil"
+      ],
+      "major_livestock": [
+        "goats",
+        "sheep",
+        "cattle",
+        "poultry",
+        "pigs"
+      ],
+      "food_import_dependency_pct": 20,
+      "cereal_yield_kg_per_hectare": 1200,
+      "agricultural_employment_pct": 65,
+      "prevalence_of_undernourishment_pct": 17,
+      "notes": "Subsistence farming dominates; yam production significant; coffee/cocoa in Kpalimé plateau; cotton in north; food self-sufficiency improving."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 50,
+        "hydroelectric_pct": 30,
+        "solar_pct": 10,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 10
+      },
+      "installed_capacity_mw": 250,
+      "electricity_production_gwh": 400,
+      "electricity_consumption_per_capita_kwh": 150,
+      "energy_imports_pct": 60,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 12000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 10,
+      "energy_access_urban_pct": 75,
+      "notes": "Nangbéto Dam (shared with Benin); CEET utility; imports electricity from Ghana/Nigeria; Blitta solar plant; energy access programme accelerating."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Gnassingbé Eyadéma International Airport (Lomé)"
+      ],
+      "major_airports_domestic": [
+        "Niamtougou"
+      ],
+      "national_airline": "ASKY Airlines (pan-African, HQ Lomé, Ethiopian Airlines affiliate)",
+      "major_seaports": [
+        "Port of Lomé (only deep-water port in West Africa, transshipment hub)"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 400,
+      "registered_vehicles_per_1k": 10,
+      "road_fatalities_per_100k": 25,
+      "notes": "Port of Lomé (transshipment hub, Bolloré/MSC); ASKY Airlines (regional success); limited railway; motorcycle transport (zémidjans) ubiquitous."
+    },
+    "tourism": {
+      "annual_visitors": 500000,
+      "tourism_revenue_usd": "$100 million",
+      "tourism_pct_gdp": 1,
+      "tourism_employment_pct": 5,
+      "unesco_world_heritage_sites": 1,
+      "unesco_sites_list": [
+        "Koutammakou, the Land of the Batammariba"
+      ],
+      "major_attractions": [
+        "Koutammakou (Tamberma Valley, tower houses, UNESCO)",
+        "Togoville (Lake Togo)",
+        "Lomé Grand Marché",
+        "Fazao-Malfakassa National Park",
+        "Togo Mountains (Kpalimé waterfalls)",
+        "Aneho (colonial town)"
+      ],
+      "visa_free_access_countries": 52,
+      "henley_passport_rank": 79,
+      "notes": "Koutammakou (Tamberma Valley, one of West Africa's most unique sites); Voodoo culture; Akodessewa Fetish Market (Lomé, voodoo); transit/port city Lomé."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 32,
+      "gender_inequality_index": 0.573,
+      "gender_inequality_rank": 153,
+      "gender_gap_index_score": 0.66,
+      "women_in_parliament_pct": 18,
+      "women_labor_force_participation_pct": 63,
+      "maternal_mortality_per_100k": 399,
+      "child_marriage_pct": 25,
+      "fgm_prevalence_pct": 3,
+      "lgbtq_legal_status": "Illegal (1-3 years)",
+      "death_penalty_status": "Abolitionist (2009)",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 33,
+      "notes": "Gnassingbé dynasty (over 50 years); 2024 constitutional amendment (parliament-elected president, opposition outcry); protests repressed; abolished death penalty (2009)."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.0,
+      "global_peace_index_rank": 80,
+      "terrorism_index_score": 2,
+      "terrorism_index_rank": 40,
+      "homicide_rate_per_100k": 9,
+      "active_conflicts": [
+        "Northern jihadist threat (Sahel spillover)"
+      ],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 1200,
+      "arms_imports_usd": "$20 million",
+      "internally_displaced_persons": 50000,
+      "notes": "Sahel security threat spreading south (Burkina Faso border); 2024 constitutional reform crisis; history of political instability; peacekeeping contributor."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "palm tree"
+      ],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "Fufu with sauce d'arachide (peanut sauce)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Evala (Kabye wrestling initiation)",
+        "Ayiza (Cotocoli fire festival)",
+        "Agbogbo-Za (Ewe harvest)",
+        "Gadao (Tem wrestling)"
+      ],
+      "cuisine_highlights": [
+        "fufu with peanut/palm nut soup",
+        "akpan (corn porridge)",
+        "koklo meme (grilled chicken)",
+        "akoumé (corn dough)",
+        "tchoukoutou (sorghum beer)",
+        "gboma dessi (spinach stew)"
+      ],
+      "music_art_traditions": [
+        "Agbadja dance (Ewe)",
+        "Drums of Kabye",
+        "Voodoo traditions",
+        "Bella Bellow (legendary singer)",
+        "King Mensah (popular artist)"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "Gnassingbé Eyadéma (president 1967-2005)",
+        "Faure Gnassingbé (current president, 2005-)",
+        "Sylvanus Olympio (1st president, assassinated 1963)",
+        "Bella Bellow (singer)"
+      ],
+      "world_heritage_sites": [
+        "Koutammakou"
+      ],
+      "media_landscape": "TVT state; mostly state-controlled; some private radio; press restrictions",
+      "notes": "Voodoo heartland (alongside Benin); Koutammakou (Tamberma tower houses unique architecture); Akodessewa Fetish Market; Ewe/Kabye cultural duality."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (French system) with customary law",
+      "constitution_year": 1992,
+      "sharia_applicability": "None",
+      "customary_law_role": "Traditional chiefs mediate disputes; customary law for land/family in rural areas",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.3,
+      "contract_enforcement_days": 588,
+      "property_rights_index": 35,
+      "notes": "2024 constitutional amendment controversy (Fifth Republic, parliamentary system concentrating power); OHADA business law; Cour Constitutionnelle."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 27,
+        "global_rank": 100
+      },
+      "area": {
+        "continent_rank": 37,
+        "global_rank": 123
+      },
+      "gdp_nominal": {
+        "continent_rank": 30,
+        "global_rank": 130
+      },
+      "gdp_per_capita": {
+        "continent_rank": 42,
+        "global_rank": 167
+      },
+      "hdi": {
+        "continent_rank": 35,
+        "global_rank": 167
+      },
+      "life_expectancy": {
+        "continent_rank": 35,
+        "global_rank": 145
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 7,
+        "global_rank": 97
+      },
+      "internet_penetration": {
+        "continent_rank": 28,
+        "global_rank": 130
+      },
+      "press_freedom": {
+        "continent_rank": 35,
+        "global_rank": 100
+      },
+      "global_peace_index": {
+        "continent_rank": 8,
+        "global_rank": 80
+      },
+      "innovation_index": {
+        "continent_rank": 23,
+        "global_rank": 120
+      },
+      "notes": "Port of Lomé gives outsized economic importance; Gnassingbé dynasty among Africa's longest."
     }
   },
   "leadership": {
@@ -282,7 +777,8 @@
       "name": "Faure Gnassingbé",
       "title": "President",
       "since": "2005-05-04",
-      "notes": "RPT/UNIR; son of Gnassingbé Eyadéma; succeeded father on his death; widely contested elections; constitutional changes 2024 to extend rule; Gnassingbé family has ruled since 1967"
+      "notes": "RPT/UNIR; son of Gnassingbé Eyadéma; succeeded father on his death; widely contested elections; constitutional changes 2024 to extend rule; Gnassingbé family has ruled since 1967",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -304,7 +800,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

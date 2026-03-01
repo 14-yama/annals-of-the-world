@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.891836Z",
-    "notes": "Comprehensive index for Seychelles covering uninhabited period, French settlement, British colony, spice trade, independence 1976, René coup and socialism, democratic transition, ocean conservation, and tourism economy."
+    "notes": "Comprehensive index for Seychelles covering uninhabited period, French settlement, British colony, spice trade, independence 1976, René coup and socialism, democratic transition, ocean conservation, and tourism economy.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Victoria",
@@ -105,7 +106,22 @@
       "life_expectancy": 73.4,
       "infant_mortality_per_1k": 10.0,
       "literacy_rate_pct": 95.9,
-      "net_migration_rate": 1.0
+      "net_migration_rate": 1.0,
+      "population_growth_rate_pct": 0.7,
+      "urban_population_growth_rate_pct": 1.0,
+      "life_expectancy_male": 71,
+      "life_expectancy_female": 78,
+      "under5_mortality_per_1k": 12,
+      "sex_ratio": 1.04,
+      "dependency_ratio": 44,
+      "population_density_per_km2": 220,
+      "age_structure": {
+        "0_14_pct": 19,
+        "15_24_pct": 14,
+        "25_54_pct": 47,
+        "55_64_pct": 10,
+        "65_plus_pct": 10
+      }
     },
     "natural_resources": {
       "primary": [
@@ -130,7 +146,10 @@
         "SADC",
         "Commonwealth"
       ],
-      "notes": "Seychelles People's Defence Forces; Coast Guard primary capability; anti-piracy operations (Indian Ocean); Indian naval station (Assumption Island debated); maritime domain awareness critical."
+      "notes": "Seychelles People's Defence Forces; Coast Guard primary capability; anti-piracy operations (Indian Ocean); Indian naval station (Assumption Island debated); maritime domain awareness critical.",
+      "paramilitary_personnel": 0,
+      "conscription": true,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -157,14 +176,49 @@
         "South Africa"
       ],
       "trade_balance": "deficit (offset by tourism revenue)",
-      "remittances_pct_gdp": 1.0
+      "remittances_pct_gdp": 1.0,
+      "total_exports_usd": "$550 million",
+      "total_imports_usd": "$1.5 billion",
+      "top_export_destinations": [
+        "France",
+        "UK",
+        "Japan",
+        "Italy",
+        "USA"
+      ],
+      "top_import_origins": [
+        "UAE",
+        "France",
+        "South Africa",
+        "Spain",
+        "India"
+      ],
+      "trade_as_pct_gdp": 100,
+      "current_account_balance_usd": "-$200 million",
+      "trade_agreements": [
+        "SADC",
+        "COMESA",
+        "AfCFTA",
+        "IOC"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 79.0,
       "electricity_access_pct": 100.0,
       "mobile_subscriptions_per_100": 198,
       "railway_km": 0,
-      "paved_roads_pct": 96
+      "paved_roads_pct": 96,
+      "broadband_subscriptions_per_100": 18,
+      "4g_coverage_pct": 95,
+      "5g_availability": false,
+      "road_network_km": 508,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "SEAS",
+        "LION2"
+      ],
+      "notes": "Cable & Wireless (Airtel); high connectivity; small but modern infrastructure."
     },
     "international_memberships": [
       "UN",
@@ -196,6 +250,26 @@
       "fragile_states_index": {
         "score": 50.3,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.52,
+        "rank": 56,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": 0.2,
+        "percentile": 58,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": 0.0,
+        "percentile": 50,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": 0.8,
+        "percentile": 80,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -210,12 +284,41 @@
         "coral bleaching",
         "sea-level rise"
       ],
-      "protected_areas_pct": 50
+      "protected_areas_pct": 50,
+      "average_temperature_c": 27,
+      "average_rainfall_mm": 2300,
+      "co2_per_capita_t": 5.5,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "Medium",
+      "environmental_performance_index": {
+        "score": 55,
+        "rank": 47,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 1100,
+        "endemic_species": 250,
+        "threatened_species": 60
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 63.0,
       "foreign_aid_received_usd": "25 million",
-      "notes": "Highest GDP per capita in Africa; high-income economy; Blue Bond pioneer (world's first sovereign blue bond, $15M, 2018); debt restructuring 2009 (post financial crisis); tourism ~30% GDP; innovative debt-for-nature swaps."
+      "notes": "Highest GDP per capita in Africa; high-income economy; Blue Bond pioneer (world's first sovereign blue bond, $15M, 2018); debt restructuring 2009 (post financial crisis); tourism ~30% GDP; innovative debt-for-nature swaps.",
+      "external_debt_usd": "$4 billion",
+      "debt_service_pct_revenue": 20,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "UAE",
+        "India",
+        "China",
+        "France",
+        "EU"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": "Not applicable"
     },
     "education": {
       "primary_enrollment_pct": 99,
@@ -225,14 +328,41 @@
       "top_universities": [
         "University of Seychelles (2009)"
       ],
-      "notes": "Free compulsory education; one of Africa's highest literacy rates; most students go abroad for university (UK, Australia, Mauritius); Creole, English, and French all used in education; small scale limits specialisation."
+      "notes": "Free compulsory education; one of Africa's highest literacy rates; most students go abroad for university (UK, Australia, Mauritius); Creole, English, and French all used in education; small scale limits specialisation.",
+      "education_expenditure_pct_gdp": 5.2,
+      "primary_completion_rate_pct": 100,
+      "gender_parity_index": 1.02,
+      "mean_years_of_schooling": 10.0,
+      "expected_years_of_schooling": 16.0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 13,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0.6
     },
     "diaspora_migration": {
       "diaspora_population": "15,000+ (UK, Australia, France)",
       "refugees_hosted": 0,
       "refugees_produced": 50,
       "remittances_usd": "15 million",
-      "notes": "Small population means diaspora proportionally significant; foreign workers (~15% of workforce) from India, Bangladesh, Philippines, Madagascar for construction and services; brain drain concern."
+      "notes": "Small population means diaspora proportionally significant; foreign workers (~15% of workforce) from India, Bangladesh, Philippines, Madagascar for construction and services; brain drain concern.",
+      "diaspora_top_destinations": [
+        "UK",
+        "France",
+        "Australia",
+        "UAE",
+        "South Africa"
+      ],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Work permits for tourism/construction; migrant labor (India, Bangladesh)",
+      "remittances_pct_gdp": 1.0,
+      "net_migration_rate_per_1k": 1.0
     },
     "digital_economy": {
       "e_government_index": 0.57,
@@ -240,19 +370,368 @@
       "tech_hubs": [
         "Victoria (nascent)"
       ],
-      "notes": "SEAS submarine cable (2012) transformed connectivity; Cable & Wireless (Airtel) and Intelvision operators; high mobile penetration (nearly 200%); Blue Economy digital initiatives; e-government services advancing."
+      "notes": "SEAS submarine cable (2012) transformed connectivity; Cable & Wireless (Airtel) and Intelvision operators; high mobile penetration (nearly 200%); Blue Economy digital initiatives; e-government services advancing.",
+      "e_participation_index": 0.5,
+      "ict_development_index": 5.0,
+      "mobile_money_accounts": 30000,
+      "digital_payments_pct_adults": 40,
+      "fintech_companies": 5,
+      "startup_ecosystem_value_usd": "$5 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.5,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 40
     },
     "other_languages": [
       "Seychellois Creole",
       "French"
-    ]
+    ],
+    "capital_coordinates": {
+      "lat": -4.6191,
+      "lon": 55.4513
+    },
+    "other_major_cities": [
+      "Anse Royale",
+      "Beau Vallon",
+      "Takamaka"
+    ],
+    "national_motto": "Finis Coronat Opus (The End Crowns the Work)",
+    "national_anthem": "Koste Seselwa (Come Together, Seychellois)",
+    "currency_code": "SCR",
+    "internet_tld": ".sc",
+    "utc_offset": "UTC+4",
+    "drives_on": "left",
+    "geography": {
+      "coordinates": {
+        "lat": -4.6796,
+        "lon": 55.492
+      },
+      "bounding_box": {
+        "north": -3.71,
+        "south": -10.23,
+        "east": 56.28,
+        "west": 46.2
+      },
+      "land_area_km2": 459,
+      "water_area_km2": 0,
+      "coastline_km": 491,
+      "borders": [],
+      "border_lengths_km": {},
+      "highest_point": {
+        "name": "Morne Seychellois",
+        "elevation_m": 905
+      },
+      "lowest_point": {
+        "name": "Indian Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "115 islands: 41 granitic (inner, mountainous) + 74 coralline (outer, flat atolls); tropical rainforest; white sand beaches; coral reefs",
+      "land_use": {
+        "agricultural_pct": 6.5,
+        "arable_pct": 2.2,
+        "forest_pct": 88.5,
+        "other_pct": 5
+      },
+      "major_rivers": [],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 1336559,
+      "landlocked": false,
+      "notes": "Smallest African country by population (~100k); 115 islands; only granitic oceanic islands worldwide; Vallée de Mai (coco de mer palms, UNESCO); Aldabra Atoll (UNESCO, largest raised coral atoll); highest GDP per capita in Africa."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$2 billion",
+      "gdp_ppp_usd": "$4 billion",
+      "gdp_per_capita_nominal_usd": 18500,
+      "gdp_per_capita_ppp_usd": 37000,
+      "gdp_growth_rate_pct": 5.0,
+      "inflation_rate_pct": 3.0,
+      "unemployment_rate_pct": 3,
+      "youth_unemployment_rate_pct": 10,
+      "poverty_rate_pct": 10,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 32.1,
+      "income_classification": "High income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 2,
+        "industry_pct_gdp": 11,
+        "services_pct_gdp": 87
+      },
+      "labor_force": 50000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 3,
+        "industry_pct": 14,
+        "services_pct": 83
+      },
+      "fdi_inflow_usd": "$200 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$700 million",
+      "ease_of_doing_business_rank": 100,
+      "economic_freedom_index_score": 64,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Highest GDP per capita in Africa; tourism-dependent (60%+ GDP); tuna fishing/canning (Indian Ocean Tuna Ltd); offshore financial center; blue economy strategy."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 5.3,
+      "health_expenditure_per_capita_usd": 900,
+      "physicians_per_1k": 2.5,
+      "nurses_midwives_per_1k": 8,
+      "hospital_beds_per_1k": 3.6,
+      "maternal_mortality_per_100k": 3,
+      "hiv_prevalence_pct": 0,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 12,
+      "access_to_clean_water_pct": 100,
+      "access_to_sanitation_pct": 100,
+      "vaccination_coverage_pct": 98,
+      "stunting_under5_pct": 0,
+      "obesity_rate_pct": 14,
+      "universal_health_coverage_index": 70,
+      "leading_causes_of_death": [
+        "cardiovascular diseases",
+        "cancer",
+        "diabetes",
+        "respiratory diseases",
+        "road injuries"
+      ],
+      "notes": "Free universal healthcare; best health indicators in Africa; heroin epidemic challenge; non-communicable diseases dominate; small hospital system."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 55,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 2.2,
+      "agricultural_land_pct": 6.5,
+      "irrigated_land_pct": 5,
+      "major_crops": [
+        "coconut",
+        "cinnamon",
+        "vanilla",
+        "sweet potatoes",
+        "cassava",
+        "bananas",
+        "tea"
+      ],
+      "major_livestock": [
+        "poultry",
+        "pigs",
+        "goats"
+      ],
+      "food_import_dependency_pct": 90,
+      "cereal_yield_kg_per_hectare": 0,
+      "agricultural_employment_pct": 3,
+      "prevalence_of_undernourishment_pct": 3,
+      "notes": "90% food imported; tuna fishing major industry; cinnamon and vanilla exports; limited arable land; aquaculture developing; food price vulnerability."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 90,
+        "hydroelectric_pct": 0,
+        "solar_pct": 5,
+        "wind_pct": 3,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 2
+      },
+      "installed_capacity_mw": 100,
+      "electricity_production_gwh": 400,
+      "electricity_consumption_per_capita_kwh": 3800,
+      "energy_imports_pct": 100,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 6000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 100,
+      "energy_access_urban_pct": 100,
+      "notes": "PUC (Public Utilities Corporation); diesel/heavy fuel dependent; target 15% renewables by 2030; floating solar pilot; wind turbines on Mahé."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Seychelles International Airport (Mahé)"
+      ],
+      "major_airports_domestic": [
+        "Praslin Airport"
+      ],
+      "national_airline": "Air Seychelles",
+      "major_seaports": [
+        "Port Victoria"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 10,
+      "registered_vehicles_per_1k": 200,
+      "road_fatalities_per_100k": 10,
+      "notes": "Inter-island ferries (Cat Cocos/Cat Rose); small road network; helicopter transfers; Praslin-La Digue ferry."
+    },
+    "tourism": {
+      "annual_visitors": 350000,
+      "tourism_revenue_usd": "$600 million",
+      "tourism_pct_gdp": 30,
+      "tourism_employment_pct": 30,
+      "unesco_world_heritage_sites": 2,
+      "unesco_sites_list": [
+        "Aldabra Atoll",
+        "Vallée de Mai Nature Reserve"
+      ],
+      "major_attractions": [
+        "Anse Source d'Argent (La Digue, most photographed beach)",
+        "Vallée de Mai (coco de mer, prehistoric palms)",
+        "Aldabra Atoll (giant tortoises)",
+        "Anse Lazio (Praslin)",
+        "Morne Seychellois NP",
+        "Bird Island",
+        "Beau Vallon beach"
+      ],
+      "visa_free_access_countries": 153,
+      "henley_passport_rank": 25,
+      "notes": "Best passport in Africa; luxury eco-tourism; honeymooner paradise; coco de mer unique; Aldabra giant tortoises; sustainability focus; seabird colonies."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Free",
+      "freedom_house_score": 78,
+      "gender_inequality_index": 0,
+      "gender_inequality_rank": 0,
+      "gender_gap_index_score": 0.75,
+      "women_in_parliament_pct": 24,
+      "women_labor_force_participation_pct": 60,
+      "maternal_mortality_per_100k": 3,
+      "child_marriage_pct": 0,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Legal (decriminalized 2016)",
+      "death_penalty_status": "Abolitionist",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 0,
+      "notes": "Multi-party democracy since 1993; 2020 first opposition victory; progressive social policies; drug trafficking concern; matrilineal culture historically."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.4,
+      "global_peace_index_rank": 18,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 7,
+      "active_conflicts": [],
+      "border_disputes": [
+        "Chagos Archipelago (supports Mauritius claim vs UK)"
+      ],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$0",
+      "internally_displaced_persons": 0,
+      "notes": "One of most peaceful globally; piracy concern (Somali waters proximity); drug trafficking route; small military (SPDF—300 personnel)."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "coco de mer palm",
+        "giant tortoise"
+      ],
+      "national_animal": "giant tortoise",
+      "national_flower": "tropicbird orchid",
+      "national_dish": "Grilled fish with Creole sauce and rice",
+      "national_sport": "Football / Sailing",
+      "major_festivals": [
+        "Festival Kreol (Creole Festival, October)",
+        "Carnival of Carnivals",
+        "Independence Day (29 June)",
+        "FetAfrik"
+      ],
+      "cuisine_highlights": [
+        "octopus curry",
+        "grilled fish with Creole sauce",
+        "bat curry (chauve-souris)",
+        "breadfruit",
+        "ladob (plantain/sweet potato in coconut milk)",
+        "shark chutney"
+      ],
+      "music_art_traditions": [
+        "Sega (Creole dance)",
+        "Moutya (traditional drum dance, UNESCO)",
+        "Kamtole (Creole storytelling)",
+        "George Camille (artist/poet)"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [
+        "Moutya (UNESCO)",
+        "Traditional Seychellois Sega (submitted)"
+      ],
+      "notable_historical_figures": [
+        "James Mancham (1st president)",
+        "France-Albert René (coup/2nd president)",
+        "Wavel Ramkalawan (current president, 1st opposition win)",
+        "Antoine Abel (poet)"
+      ],
+      "world_heritage_sites": [
+        "Aldabra Atoll",
+        "Vallée de Mai Nature Reserve"
+      ],
+      "media_landscape": "SBC state; Le Seychellois Hebdo; Nation newspaper; small but diverse media",
+      "notes": "Creole culture (African+European+Asian fusion); coco de mer (largest seed in world); giant tortoises; Festival Kreol; matrilineal influences."
+    },
+    "legal_system": {
+      "legal_tradition": "Hybrid: English common law (criminal) and French civil law (property, civil)",
+      "constitution_year": 1993,
+      "sharia_applicability": "None",
+      "customary_law_role": "Limited",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.55,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 60,
+      "notes": "Supreme Court and Court of Appeal; Anti-piracy courts (regional jurisdiction under UNODC); small but effective legal system."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 55,
+        "global_rank": 198
+      },
+      "area": {
+        "continent_rank": 55,
+        "global_rank": 188
+      },
+      "gdp_nominal": {
+        "continent_rank": 48,
+        "global_rank": 170
+      },
+      "gdp_per_capita": {
+        "continent_rank": 1,
+        "global_rank": 50
+      },
+      "hdi": {
+        "continent_rank": 1,
+        "global_rank": 72
+      },
+      "life_expectancy": {
+        "continent_rank": 1,
+        "global_rank": 48
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 10,
+        "global_rank": 100
+      },
+      "internet_penetration": {
+        "continent_rank": 2,
+        "global_rank": 38
+      },
+      "press_freedom": {
+        "continent_rank": 5,
+        "global_rank": 28
+      },
+      "global_peace_index": {
+        "continent_rank": 1,
+        "global_rank": 18
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": "#1 HDI, GDP per capita, and life expectancy in Africa."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Wavel Ramkalawan",
       "title": "President",
       "since": "2020-10-26",
-      "notes": "LDS party; Anglican priest; first opposition president; ended 43 years of SPPF/PL rule"
+      "notes": "LDS party; Anglican priest; first opposition president; ended 43 years of SPPF/PL rule",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -279,7 +758,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

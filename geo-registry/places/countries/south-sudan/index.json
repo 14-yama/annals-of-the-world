@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.894352Z",
-    "notes": "Comprehensive index for South Sudan covering Nilotic peoples, Shilluk Kingdom, Mahdist and Anglo-Egyptian Sudan, civil wars, CPA 2005, independence 2011 (world's newest country), civil war 2013-2020, and humanitarian crisis."
+    "notes": "Comprehensive index for South Sudan covering Nilotic peoples, Shilluk Kingdom, Mahdist and Anglo-Egyptian Sudan, civil wars, CPA 2005, independence 2011 (world's newest country), civil war 2013-2020, and humanitarian crisis.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Juba",
@@ -138,7 +139,22 @@
       "life_expectancy": 58.0,
       "infant_mortality_per_1k": 64.0,
       "literacy_rate_pct": 34.5,
-      "net_migration_rate": -5.0
+      "net_migration_rate": -5.0,
+      "population_growth_rate_pct": 1.0,
+      "urban_population_growth_rate_pct": 3.5,
+      "life_expectancy_male": 56,
+      "life_expectancy_female": 59,
+      "under5_mortality_per_1k": 96,
+      "sex_ratio": 1.02,
+      "dependency_ratio": 83,
+      "population_density_per_km2": 18,
+      "age_structure": {
+        "0_14_pct": 43,
+        "15_24_pct": 21,
+        "25_54_pct": 30,
+        "55_64_pct": 3,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -170,7 +186,10 @@
         "IGAD",
         "EAC"
       ],
-      "notes": "SSPDF (South Sudan People's Defence Forces); merged with opposition fighters (SPLA-IO) under 2018 peace agreement; ethnic Dinka/Nuer divisions within military; UNMISS peacekeeping force (~19,000); arms embargo (partially lifted); political-military elite control."
+      "notes": "SSPDF (South Sudan People's Defence Forces); merged with opposition fighters (SPLA-IO) under 2018 peace agreement; ethnic Dinka/Nuer divisions within military; UNMISS peacekeeping force (~19,000); arms embargo (partially lifted); political-military elite control.",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -195,14 +214,43 @@
         "UAE"
       ],
       "trade_balance": "surplus (oil exports)",
-      "remittances_pct_gdp": 6.0
+      "remittances_pct_gdp": 6.0,
+      "total_exports_usd": "$3 billion",
+      "total_imports_usd": "$2 billion",
+      "top_export_destinations": [
+        "China",
+        "Japan",
+        "India"
+      ],
+      "top_import_origins": [
+        "Uganda",
+        "Kenya",
+        "China",
+        "UAE",
+        "Sudan"
+      ],
+      "trade_as_pct_gdp": 100,
+      "current_account_balance_usd": "$500 million",
+      "trade_agreements": [
+        "EAC",
+        "IGAD",
+        "AfCFTA"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 8.0,
       "electricity_access_pct": 7.0,
       "mobile_subscriptions_per_100": 30,
       "railway_km": 0,
-      "paved_roads_pct": 2
+      "paved_roads_pct": 2,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 5,
+      "5g_availability": false,
+      "road_network_km": 7000,
+      "waterways_km": 1700,
+      "submarine_cables": [],
+      "notes": "MTN, Zain telecoms; extremely poor infrastructure; landlocked; Juba-Nimule road only paved highway; White Nile river transport."
     },
     "international_memberships": [
       "UN",
@@ -230,6 +278,26 @@
       "fragile_states_index": {
         "score": 108.5,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -2.0,
+        "percentile": 2,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -2.0,
+        "percentile": 2,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -2.5,
+        "percentile": 1,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -246,12 +314,41 @@
         "locust invasions",
         "disease outbreaks"
       ],
-      "protected_areas_pct": 13
+      "protected_areas_pct": 13,
+      "average_temperature_c": 27,
+      "average_rainfall_mm": 800,
+      "co2_per_capita_t": 0.2,
+      "deforestation_rate_pct": 2,
+      "water_stress_level": "Low-Medium",
+      "environmental_performance_index": {
+        "score": 22,
+        "rank": 175,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 2500,
+        "endemic_species": 20,
+        "threatened_species": 40
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 52.0,
       "foreign_aid_received_usd": "2.5 billion",
-      "notes": "World's youngest nation (2011); humanitarian crisis (famine risk, 7.7 million food insecure); oil production declined from 350k to ~135k bpd; Revitalised ARCSS peace agreement (2018); transitional government (elections delayed); inflation ~300%+."
+      "notes": "World's youngest nation (2011); humanitarian crisis (famine risk, 7.7 million food insecure); oil production declined from 350k to ~135k bpd; Revitalised ARCSS peace agreement (2018); transitional government (elections delayed); inflation ~300%+.",
+      "external_debt_usd": "$2 billion",
+      "debt_service_pct_revenue": 10,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA",
+        "UK",
+        "Norway",
+        "World Bank",
+        "EU"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Not yet eligible"
     },
     "education": {
       "primary_enrollment_pct": 35,
@@ -263,14 +360,41 @@
         "Upper Nile University (Malakal)",
         "University of Bahr el Ghazal"
       ],
-      "notes": "One of the world's lowest education indicators; conflict closed majority of schools; 2.8 million children out of school; extreme teacher shortages (South Sudan had 20x fewer teachers per capita than regional average); English language of instruction but most teachers trained in Arabic."
+      "notes": "One of the world's lowest education indicators; conflict closed majority of schools; 2.8 million children out of school; extreme teacher shortages (South Sudan had 20x fewer teachers per capita than regional average); English language of instruction but most teachers trained in Arabic.",
+      "education_expenditure_pct_gdp": 1.5,
+      "primary_completion_rate_pct": 25,
+      "gender_parity_index": 0.5,
+      "mean_years_of_schooling": 4.4,
+      "expected_years_of_schooling": 5.3,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 50,
+      "out_of_school_children": 2200000,
+      "academic_freedom_index": 0.1
     },
     "diaspora_migration": {
       "diaspora_population": "2.3 million+ refugees (Uganda, Sudan, Ethiopia, Kenya, DR Congo)",
       "refugees_hosted": 340000,
       "refugees_produced": 2300000,
       "remittances_usd": "300 million",
-      "notes": "Second-largest refugee crisis in Africa; 2.3 million refugees plus 1.8 million IDPs; Bidibidi settlement in Uganda is world's largest refugee settlement; Sudanese refugees fleeing 2023 Sudan war crossing into South Sudan; remittances via informal channels."
+      "notes": "Second-largest refugee crisis in Africa; 2.3 million refugees plus 1.8 million IDPs; Bidibidi settlement in Uganda is world's largest refugee settlement; Sudanese refugees fleeing 2023 Sudan war crossing into South Sudan; remittances via informal channels.",
+      "diaspora_top_destinations": [
+        "Uganda",
+        "Sudan",
+        "Kenya",
+        "Ethiopia",
+        "USA"
+      ],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 2200000,
+      "immigration_policy": "Open borders de facto; massive displacement",
+      "remittances_pct_gdp": 5,
+      "net_migration_rate_per_1k": -10
     },
     "digital_economy": {
       "e_government_index": 0.12,
@@ -278,7 +402,372 @@
       "tech_hubs": [
         "Juba (218 Space)"
       ],
-      "notes": "Extremely limited telecom infrastructure; Zain and MTN operators; no submarine cable (landlocked); relies on satellite and fibre from Uganda/Kenya; internet extremely expensive; mobile money adoption growing from very low base; power outages limit connectivity."
+      "notes": "Extremely limited telecom infrastructure; Zain and MTN operators; no submarine cable (landlocked); relies on satellite and fibre from Uganda/Kenya; internet extremely expensive; mobile money adoption growing from very low base; power outages limit connectivity.",
+      "e_participation_index": 0.05,
+      "ict_development_index": 0.5,
+      "mobile_money_accounts": 500000,
+      "digital_payments_pct_adults": 5,
+      "fintech_companies": 2,
+      "startup_ecosystem_value_usd": "$1 million",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0.02,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 2
+    },
+    "capital_coordinates": {
+      "lat": 4.8594,
+      "lon": 31.5713
+    },
+    "other_major_cities": [
+      "Wau",
+      "Malakal",
+      "Bor",
+      "Bentiu",
+      "Yei",
+      "Torit"
+    ],
+    "national_motto": "Justice, Liberty, Prosperity",
+    "national_anthem": "South Sudan Oyee! (South Sudan Hurrah!)",
+    "currency_code": "SSP",
+    "internet_tld": ".ss",
+    "utc_offset": "UTC+2",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 6.877,
+        "lon": 31.307
+      },
+      "bounding_box": {
+        "north": 12.23,
+        "south": 3.49,
+        "east": 35.95,
+        "west": 23.44
+      },
+      "land_area_km2": 619745,
+      "water_area_km2": 0,
+      "coastline_km": 0,
+      "borders": [
+        "Sudan",
+        "Ethiopia",
+        "Kenya",
+        "Uganda",
+        "DR Congo",
+        "Central African Republic"
+      ],
+      "border_lengths_km": {
+        "Sudan": 2158,
+        "Ethiopia": 1299,
+        "Kenya": 317,
+        "Uganda": 475,
+        "DR Congo": 714,
+        "Central African Republic": 1055
+      },
+      "highest_point": {
+        "name": "Kinyeti",
+        "elevation_m": 3187
+      },
+      "lowest_point": {
+        "name": "White Nile",
+        "elevation_m": 381
+      },
+      "terrain": "Sudd wetland (one of world's largest swamps); White Nile plains; Ironstone Plateau; Imatong Mountains (south)",
+      "land_use": {
+        "agricultural_pct": 45,
+        "arable_pct": 4.4,
+        "forest_pct": 11.3,
+        "other_pct": 43.7
+      },
+      "major_rivers": [
+        "White Nile",
+        "Bahr el-Ghazal",
+        "Sobat",
+        "Jur"
+      ],
+      "major_lakes": [
+        "No (Lake No, Sudd region)"
+      ],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": true,
+      "notes": "World's newest country (2011 independence from Sudan); Sudd wetland (largest in Africa, globally significant); oil-rich Upper Nile; landlocked; civil war (2013-18, fragile peace)."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$5 billion",
+      "gdp_ppp_usd": "$18 billion",
+      "gdp_per_capita_nominal_usd": 420,
+      "gdp_per_capita_ppp_usd": 1500,
+      "gdp_growth_rate_pct": -2.0,
+      "inflation_rate_pct": 15,
+      "unemployment_rate_pct": 12,
+      "youth_unemployment_rate_pct": 20,
+      "poverty_rate_pct": 82,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 44.1,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 5,
+        "industry_pct_gdp": 55,
+        "services_pct_gdp": 40
+      },
+      "labor_force": 5000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 80,
+        "industry_pct": 5,
+        "services_pct": 15
+      },
+      "fdi_inflow_usd": "$0",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$50 million",
+      "ease_of_doing_business_rank": 185,
+      "economic_freedom_index_score": 0,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Oil-dependent (95%+ government revenue, 60% GDP); pipelines through Sudan; massive corruption (Sentry reports); hyperinflation; 82% poverty; world's newest country."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 2.5,
+      "health_expenditure_per_capita_usd": 10,
+      "physicians_per_1k": 0.02,
+      "nurses_midwives_per_1k": 0.1,
+      "hospital_beds_per_1k": 0.5,
+      "maternal_mortality_per_100k": 1223,
+      "hiv_prevalence_pct": 2.2,
+      "malaria_incidence_per_1k": 200,
+      "tuberculosis_incidence_per_100k": 146,
+      "access_to_clean_water_pct": 35,
+      "access_to_sanitation_pct": 10,
+      "vaccination_coverage_pct": 30,
+      "stunting_under5_pct": 31,
+      "obesity_rate_pct": 6,
+      "universal_health_coverage_index": 14,
+      "leading_causes_of_death": [
+        "malaria",
+        "lower respiratory infections",
+        "neonatal disorders",
+        "diarrheal diseases",
+        "HIV/AIDS"
+      ],
+      "notes": "Among world's worst health indicators; highest maternal mortality globally; minimal health infrastructure; MSF/WHO primary providers; famine/conflict compounding."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 10,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 4.4,
+      "agricultural_land_pct": 45,
+      "irrigated_land_pct": 0,
+      "major_crops": [
+        "sorghum",
+        "maize",
+        "cassava",
+        "groundnuts",
+        "sesame",
+        "millet"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "sheep"
+      ],
+      "food_import_dependency_pct": 50,
+      "cereal_yield_kg_per_hectare": 500,
+      "agricultural_employment_pct": 80,
+      "prevalence_of_undernourishment_pct": 65,
+      "notes": "Severe food crisis (IPC Phase 4-5); Sudd floodplain rich but undeveloped; cattle central to culture (Dinka/Nuer bride-price); displaced farmers; WFP operations largest."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 95,
+        "hydroelectric_pct": 0,
+        "solar_pct": 3,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 2
+      },
+      "installed_capacity_mw": 50,
+      "electricity_production_gwh": 100,
+      "electricity_consumption_per_capita_kwh": 5,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 150000,
+      "oil_consumption_bpd": 10000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 1,
+      "energy_access_urban_pct": 8,
+      "notes": "Oil producer (150k bpd, down from 350k pre-conflict); Dar Petroleum, GNPOC (CNPC); no refinery (exports crude, imports fuel); <5% electricity access."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Juba International Airport"
+      ],
+      "major_airports_domestic": [
+        "Wau",
+        "Malakal",
+        "Bentiu",
+        "Bor"
+      ],
+      "national_airline": "None",
+      "major_seaports": [],
+      "major_inland_ports": [
+        "Juba (White Nile)"
+      ],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 2,
+      "road_fatalities_per_100k": 30,
+      "notes": "Landlocked; virtually no paved roads; White Nile transport; most roads impassable during rains; Juba-Nimule highway (only paved major road)."
+    },
+    "tourism": {
+      "annual_visitors": 5000,
+      "tourism_revenue_usd": "$1 million",
+      "tourism_pct_gdp": 0,
+      "tourism_employment_pct": 0,
+      "unesco_world_heritage_sites": 0,
+      "unesco_sites_list": [],
+      "major_attractions": [
+        "Sudd wetland",
+        "Boma National Park (wildlife migration)",
+        "Imatong Mountains",
+        "Juba market"
+      ],
+      "visa_free_access_countries": 36,
+      "henley_passport_rank": 102,
+      "notes": "Virtually no tourism infrastructure; potential (Sudd wetland, Boma migration 2nd largest after Serengeti); security prevents development."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 2,
+      "gender_inequality_index": 0,
+      "gender_inequality_rank": 0,
+      "gender_gap_index_score": 0,
+      "women_in_parliament_pct": 32,
+      "women_labor_force_participation_pct": 65,
+      "maternal_mortality_per_100k": 1223,
+      "child_marriage_pct": 52,
+      "fgm_prevalence_pct": 1,
+      "lgbtq_legal_status": "Illegal (10 years imprisonment)",
+      "death_penalty_status": "Retentionist",
+      "human_trafficking_tier": "Tier 3",
+      "child_labor_pct": 40,
+      "notes": "Severe human rights crisis; conflict-related sexual violence; child soldiers (thousands); press freedom extremely poor; ethnic targeting; Freedom House score 2/100."
+    },
+    "security_stability": {
+      "global_peace_index_score": 3.2,
+      "global_peace_index_rank": 158,
+      "terrorism_index_score": 5,
+      "terrorism_index_rank": 15,
+      "homicide_rate_per_100k": 14,
+      "active_conflicts": [
+        "Internal political/ethnic conflict (Dinka/Nuer and others)",
+        "Armed opposition groups",
+        "Communal/cattle-raiding violence"
+      ],
+      "border_disputes": [
+        "Abyei Area (disputed with Sudan)",
+        "Oil-rich border areas (with Sudan)"
+      ],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$50 million",
+      "internally_displaced_persons": 2200000,
+      "notes": "UNMISS (UN Mission, 15000+ troops); civil war (2013-18, 400k+ dead); R-ARCSS peace agreement (fragile); 2.2M IDPs, 2.3M refugees abroad; Abyei unresolved."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "African fish eagle"
+      ],
+      "national_animal": "African fish eagle",
+      "national_flower": "",
+      "national_dish": "Kisra (sorghum flatbread) with stew",
+      "national_sport": "Football / Wrestling",
+      "major_festivals": [
+        "Independence Day (9 July)",
+        "SPLM Day (16 May)"
+      ],
+      "cuisine_highlights": [
+        "kisra (sorghum flatbread)",
+        "asida (porridge)",
+        "ful medames (fava beans)",
+        "dried fish/meat",
+        "sorghum beer (merissa)"
+      ],
+      "music_art_traditions": [
+        "Dinka songs and dance",
+        "Nuer body scarification",
+        "Emmanuel Jal (musician/former child soldier)",
+        "Traditional wrestling",
+        "Cattle camp songs"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "John Garang de Mabior (SPLA leader, independence architect)",
+        "Salva Kiir (president since independence)",
+        "Riek Machar (VP/opposition)",
+        "Emma McCune (aid worker)",
+        "Emmanuel Jal (musician)"
+      ],
+      "world_heritage_sites": [],
+      "media_landscape": "SSBC state; Eye Radio (UNMISS-supported); severely restricted press; journalist killings",
+      "notes": "Youngest nation (2011); Nilotic cultures (Dinka, Nuer, Shilluk); cattle-centric society; oral traditions; civil war trauma; diaspora in US/Australia/Kenya."
+    },
+    "legal_system": {
+      "legal_tradition": "Mixed: statutory law, customary law, common law (English influence)",
+      "constitution_year": 2011,
+      "sharia_applicability": "None (secular constitution, in contrast to Sudan)",
+      "customary_law_role": "Customary courts handle majority of disputes (chiefs' courts); cattle disputes",
+      "icc_membership": "Non-state party",
+      "judicial_independence_score": 0.1,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 5,
+      "notes": "Transitional constitution (2011); R-ARCSS governance framework; Hybrid Court for South Sudan (proposed, not established); weak formal judiciary."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 22,
+        "global_rank": 80
+      },
+      "area": {
+        "continent_rank": 12,
+        "global_rank": 44
+      },
+      "gdp_nominal": {
+        "continent_rank": 36,
+        "global_rank": 145
+      },
+      "gdp_per_capita": {
+        "continent_rank": 53,
+        "global_rank": 193
+      },
+      "hdi": {
+        "continent_rank": 54,
+        "global_rank": 191
+      },
+      "life_expectancy": {
+        "continent_rank": 48,
+        "global_rank": 180
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 52,
+        "global_rank": 185
+      },
+      "internet_penetration": {
+        "continent_rank": 55,
+        "global_rank": 197
+      },
+      "press_freedom": {
+        "continent_rank": 54,
+        "global_rank": 180
+      },
+      "global_peace_index": {
+        "continent_rank": 40,
+        "global_rank": 158
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": "Near bottom on most development metrics; world's newest country."
     }
   },
   "leadership": {
@@ -286,7 +775,8 @@
       "name": "Salva Kiir Mayardit",
       "title": "President",
       "since": "2011-07-09 (leader since 2005 CPA)",
-      "notes": "SPLM; Dinka (Rek); former SPLA commander; signature black hat from George W. Bush; civil war with Machar 2013–2020"
+      "notes": "SPLM; Dinka (Rek); former SPLA commander; signature black hat from George W. Bush; civil war with Machar 2013–2020",
+      "party": ""
     },
     "vice_president": {
       "name": "Riek Machar",
@@ -298,7 +788,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

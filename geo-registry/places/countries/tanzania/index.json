@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.896457Z",
-    "notes": "Comprehensive index for Tanzania covering Olduvai Gorge, Kilwa Sultanate, Zanzibar slave trade, German East Africa (Maji Maji), British Tanganyika, Nyerere ujamaa socialism, Zanzibar revolution, union, and Serengeti/Ngorongoro heritage."
+    "notes": "Comprehensive index for Tanzania covering Olduvai Gorge, Kilwa Sultanate, Zanzibar slave trade, German East Africa (Maji Maji), British Tanganyika, Nyerere ujamaa socialism, Zanzibar revolution, union, and Serengeti/Ngorongoro heritage.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Dodoma (official/legislative) / Dar es Salaam (commercial/administrative)",
@@ -151,7 +152,22 @@
       "life_expectancy": 66.2,
       "infant_mortality_per_1k": 36.0,
       "literacy_rate_pct": 77.9,
-      "net_migration_rate": -0.5
+      "net_migration_rate": -0.5,
+      "population_growth_rate_pct": 2.9,
+      "urban_population_growth_rate_pct": 5.0,
+      "life_expectancy_male": 64,
+      "life_expectancy_female": 68,
+      "under5_mortality_per_1k": 47,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 86,
+      "population_density_per_km2": 71,
+      "age_structure": {
+        "0_14_pct": 43,
+        "15_24_pct": 20,
+        "25_54_pct": 30,
+        "55_64_pct": 4,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -182,7 +198,10 @@
         "SADC",
         "EAC"
       ],
-      "notes": "Tanzania People's Defence Force (TPDF); historically supported liberation movements (ANC, FRELIMO, ZANU); intervened in Uganda (1978–79, toppled Idi Amin); deployed in DRC (MONUSCO Force Intervention Brigade); Zanzibar has separate police force; growing defence relationship with Turkey."
+      "notes": "Tanzania People's Defence Force (TPDF); historically supported liberation movements (ANC, FRELIMO, ZANU); intervened in Uganda (1978–79, toppled Idi Amin); deployed in DRC (MONUSCO Force Intervention Brigade); Zanzibar has separate police force; growing defence relationship with Turkey.",
+      "paramilitary_personnel": 1400,
+      "conscription": true,
+      "global_firepower_rank": 95
     },
     "trade": {
       "top_exports": [
@@ -216,14 +235,53 @@
         "Japan"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 0.8
+      "remittances_pct_gdp": 0.8,
+      "total_exports_usd": "$7 billion",
+      "total_imports_usd": "$12 billion",
+      "top_export_destinations": [
+        "India",
+        "South Africa",
+        "China",
+        "UAE",
+        "Kenya"
+      ],
+      "top_import_origins": [
+        "China",
+        "India",
+        "UAE",
+        "Saudi Arabia",
+        "South Africa"
+      ],
+      "trade_as_pct_gdp": 25,
+      "current_account_balance_usd": "-$4 billion",
+      "trade_agreements": [
+        "EAC",
+        "SADC",
+        "AfCFTA"
+      ],
+      "special_economic_zones": [
+        "Export Processing Zone (Dar es Salaam)",
+        "Benjamin Mkapa SEZ"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 35.0,
       "electricity_access_pct": 42.0,
       "mobile_subscriptions_per_100": 87,
       "railway_km": 4567,
-      "paved_roads_pct": 7
+      "paved_roads_pct": 7,
+      "broadband_subscriptions_per_100": 0.5,
+      "4g_coverage_pct": 55,
+      "5g_availability": false,
+      "road_network_km": 87581,
+      "waterways_km": 1000,
+      "submarine_cables": [
+        "EASSy",
+        "SEACOM",
+        "TEAMS",
+        "2Africa"
+      ],
+      "notes": "Vodacom, Airtel, TTCL, Tigo telecoms; NICTBB fibre backbone; SGR under construction; Dar es Salaam port expansion."
     },
     "international_memberships": [
       "UN",
@@ -254,6 +312,26 @@
       "fragile_states_index": {
         "score": 78.0,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.45,
+        "rank": 86,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.5,
+        "percentile": 28,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.3,
+        "percentile": 35,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.3,
+        "percentile": 28,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -271,12 +349,41 @@
         "earthquakes (East African Rift)",
         "volcanic activity (Ol Doinyo Lengai)"
       ],
-      "protected_areas_pct": 38
+      "protected_areas_pct": 38,
+      "average_temperature_c": 24,
+      "average_rainfall_mm": 1000,
+      "co2_per_capita_t": 0.2,
+      "deforestation_rate_pct": 1.0,
+      "water_stress_level": "Medium",
+      "environmental_performance_index": {
+        "score": 30,
+        "rank": 156,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 14000,
+        "endemic_species": 1500,
+        "threatened_species": 400
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 42.0,
       "foreign_aid_received_usd": "2.5 billion",
-      "notes": "One of Africa's fastest-growing economies (6-7% GDP growth); Standard Gauge Railway (SGR) under construction (Dar–Mwanza, Chinese-funded); Julius Nyerere Hydropower Station (2,115 MW, Africa's largest new dam); LNG export terminal planned ($30B); Magufuli's anti-corruption legacy; President Samia (first female president)."
+      "notes": "One of Africa's fastest-growing economies (6-7% GDP growth); Standard Gauge Railway (SGR) under construction (Dar–Mwanza, Chinese-funded); Julius Nyerere Hydropower Station (2,115 MW, Africa's largest new dam); LNG export terminal planned ($30B); Magufuli's anti-corruption legacy; President Samia (first female president).",
+      "external_debt_usd": "$25 billion",
+      "debt_service_pct_revenue": 15,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "World Bank",
+        "USA",
+        "UK",
+        "Denmark",
+        "Japan"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 91,
@@ -289,14 +396,41 @@
         "Muhimbili University of Health and Sciences",
         "Nelson Mandela African Institution of Science and Technology"
       ],
-      "notes": "Swahili medium of instruction in primary schools (English in secondary/tertiary); fee-free basic education since 2016 (enrollment surged); secondary transition gap persists; Zanzibar has semi-autonomous education system; UDSM historical hub of African nationalism."
+      "notes": "Swahili medium of instruction in primary schools (English in secondary/tertiary); fee-free basic education since 2016 (enrollment surged); secondary transition gap persists; Zanzibar has semi-autonomous education system; UDSM historical hub of African nationalism.",
+      "education_expenditure_pct_gdp": 3.4,
+      "primary_completion_rate_pct": 82,
+      "gender_parity_index": 1.0,
+      "mean_years_of_schooling": 6.0,
+      "expected_years_of_schooling": 8.9,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 44,
+      "out_of_school_children": 1000000,
+      "academic_freedom_index": 0.35
     },
     "diaspora_migration": {
       "diaspora_population": "500,000+ (Kenya, UK, USA, Canada, UAE, South Africa)",
       "refugees_hosted": 280000,
       "refugees_produced": 5000,
       "remittances_usd": "500 million",
-      "notes": "Hosts Burundian and Congolese refugees (Nyarugusu, Nduta, Mtendeli camps); historically generous refugee policy; repatriation of Burundians recently emphasised; internal migration to Dar es Salaam (fastest-growing city in Africa)."
+      "notes": "Hosts Burundian and Congolese refugees (Nyarugusu, Nduta, Mtendeli camps); historically generous refugee policy; repatriation of Burundians recently emphasised; internal migration to Dar es Salaam (fastest-growing city in Africa).",
+      "diaspora_top_destinations": [
+        "UK",
+        "USA",
+        "Canada",
+        "Kenya",
+        "UAE"
+      ],
+      "asylum_seekers": 5000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 50000,
+      "immigration_policy": "Hosts 250k+ Burundian/Congolese refugees; Nyarugusu camp",
+      "remittances_pct_gdp": 1.0,
+      "net_migration_rate_per_1k": -0.5
     },
     "digital_economy": {
       "e_government_index": 0.42,
@@ -304,7 +438,18 @@
       "tech_hubs": [
         "Dar es Salaam (Buni Hub, Sahara Ventures, COSTECH Hub)"
       ],
-      "notes": "Mobile money interoperability achieved first in Africa (2014); M-Pesa transactions = 50%+ of GDP; Vodacom, Airtel, Tigo, TTCL, Halotel operators; EASSy and SEACOM submarine cables; electronic levy controversy (2022); growing fintech ecosystem."
+      "notes": "Mobile money interoperability achieved first in Africa (2014); M-Pesa transactions = 50%+ of GDP; Vodacom, Airtel, Tigo, TTCL, Halotel operators; EASSy and SEACOM submarine cables; electronic levy controversy (2022); growing fintech ecosystem.",
+      "e_participation_index": 0.4,
+      "ict_development_index": 2.0,
+      "mobile_money_accounts": 35000000,
+      "digital_payments_pct_adults": 40,
+      "fintech_companies": 50,
+      "startup_ecosystem_value_usd": "$200 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.4,
+      "innovation_index_score": 18,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 15
     },
     "other_languages": [
       "Sukuma",
@@ -313,14 +458,416 @@
       "Makonde",
       "Nyamwezi",
       "Arabic (in Zanzibar)"
-    ]
+    ],
+    "capital_coordinates": {
+      "lat": -6.163,
+      "lon": 35.7516
+    },
+    "other_major_cities": [
+      "Dar es Salaam",
+      "Mwanza",
+      "Arusha",
+      "Zanzibar City",
+      "Mbeya",
+      "Morogoro"
+    ],
+    "national_motto": "Uhuru na Umoja (Freedom and Unity)",
+    "national_anthem": "Mungu ibariki Afrika (God Bless Africa)",
+    "currency_code": "TZS",
+    "internet_tld": ".tz",
+    "utc_offset": "UTC+3",
+    "drives_on": "left",
+    "geography": {
+      "coordinates": {
+        "lat": -6.369,
+        "lon": 34.8888
+      },
+      "bounding_box": {
+        "north": -0.99,
+        "south": -11.74,
+        "east": 40.44,
+        "west": 29.33
+      },
+      "land_area_km2": 885800,
+      "water_area_km2": 61500,
+      "coastline_km": 1424,
+      "borders": [
+        "Kenya",
+        "Uganda",
+        "Rwanda",
+        "Burundi",
+        "DR Congo",
+        "Zambia",
+        "Malawi",
+        "Mozambique"
+      ],
+      "border_lengths_km": {
+        "Kenya": 775,
+        "Uganda": 391,
+        "Rwanda": 222,
+        "Burundi": 589,
+        "DR Congo": 479,
+        "Zambia": 353,
+        "Malawi": 512,
+        "Mozambique": 840
+      },
+      "highest_point": {
+        "name": "Mount Kilimanjaro (Uhuru Peak)",
+        "elevation_m": 5895
+      },
+      "lowest_point": {
+        "name": "Indian Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Coastal plains; central plateau; Great Rift Valley; Mount Kilimanjaro (Africa's highest); Lake Victoria (shared); Zanzibar archipelago",
+      "land_use": {
+        "agricultural_pct": 43.7,
+        "arable_pct": 14.3,
+        "forest_pct": 37.3,
+        "other_pct": 19
+      },
+      "major_rivers": [
+        "Rufiji",
+        "Pangani",
+        "Ruvuma",
+        "Kagera",
+        "Great Ruaha"
+      ],
+      "major_lakes": [
+        "Victoria (shared)",
+        "Tanganyika (shared)",
+        "Nyasa/Malawi (shared)",
+        "Natron",
+        "Manyara",
+        "Eyasi",
+        "Rukwa"
+      ],
+      "exclusive_economic_zone_km2": 241888,
+      "landlocked": false,
+      "notes": "Kilimanjaro (5895m, Africa's highest, UNESCO); Serengeti/Ngorongoro (UNESCO); Zanzibar (spice island); Olduvai/Laetoli (human origins); 8 borders (most in East Africa)."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$80 billion",
+      "gdp_ppp_usd": "$210 billion",
+      "gdp_per_capita_nominal_usd": 1200,
+      "gdp_per_capita_ppp_usd": 3200,
+      "gdp_growth_rate_pct": 5.5,
+      "inflation_rate_pct": 4.0,
+      "unemployment_rate_pct": 9,
+      "youth_unemployment_rate_pct": 15,
+      "poverty_rate_pct": 26,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 40.5,
+      "income_classification": "Lower middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 26,
+        "industry_pct_gdp": 28,
+        "services_pct_gdp": 46
+      },
+      "labor_force": 30000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 65,
+        "industry_pct": 10,
+        "services_pct": 25
+      },
+      "fdi_inflow_usd": "$1.5 billion",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$5.5 billion",
+      "ease_of_doing_business_rank": 141,
+      "economic_freedom_index_score": 58.5,
+      "credit_rating": {
+        "moodys": "B2",
+        "sp": "",
+        "fitch": "B+"
+      },
+      "notes": "Fast-growing (6%+ for decade); mining (gold #4 Africa, tanzanite unique); agriculture (cashews, coffee, tea, tobacco); tourism powerhouse; Julius Nyerere Hydropower Plant (2115 MW, under construction)."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.8,
+      "health_expenditure_per_capita_usd": 40,
+      "physicians_per_1k": 0.05,
+      "nurses_midwives_per_1k": 0.4,
+      "hospital_beds_per_1k": 0.7,
+      "maternal_mortality_per_100k": 238,
+      "hiv_prevalence_pct": 4.7,
+      "malaria_incidence_per_1k": 80,
+      "tuberculosis_incidence_per_100k": 208,
+      "access_to_clean_water_pct": 61,
+      "access_to_sanitation_pct": 31,
+      "vaccination_coverage_pct": 80,
+      "stunting_under5_pct": 32,
+      "obesity_rate_pct": 8.9,
+      "universal_health_coverage_index": 38,
+      "leading_causes_of_death": [
+        "HIV/AIDS",
+        "lower respiratory infections",
+        "neonatal disorders",
+        "malaria",
+        "diarrheal diseases"
+      ],
+      "notes": "PEPFAR recipient; community health workers programme; Muhimbili National Hospital; HIV declining but still significant; malaria endemic; iCHF (improved Community Health Fund)."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 33,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 14.3,
+      "agricultural_land_pct": 43.7,
+      "irrigated_land_pct": 2,
+      "major_crops": [
+        "maize",
+        "cassava",
+        "rice",
+        "cashew nuts",
+        "coffee",
+        "tea",
+        "tobacco",
+        "sisal",
+        "cloves (Zanzibar)",
+        "vanilla"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "sheep",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 10,
+      "cereal_yield_kg_per_hectare": 1500,
+      "agricultural_employment_pct": 65,
+      "prevalence_of_undernourishment_pct": 30,
+      "notes": "Southern Agricultural Growth Corridor (SAGCOT); Zanzibar cloves/spices; cashew nuts (top exporter); tea/coffee exports; subsistence farming dominant; fishing (Lake Victoria/Indian Ocean)."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 40,
+        "hydroelectric_pct": 35,
+        "solar_pct": 5,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 20
+      },
+      "installed_capacity_mw": 1800,
+      "electricity_production_gwh": 7500,
+      "electricity_consumption_per_capita_kwh": 110,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 40000,
+      "natural_gas_production_bcm": 2.5,
+      "energy_access_rural_pct": 22,
+      "energy_access_urban_pct": 75,
+      "notes": "Julius Nyerere Hydropower Station (2115 MW, 2024-25 completion); Mtwara natural gas; TANESCO utility; Rural Energy Agency; biomass dominant for cooking."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Julius Nyerere International Airport (Dar es Salaam)",
+        "Kilimanjaro International Airport",
+        "Abeid Amani Karume International Airport (Zanzibar)"
+      ],
+      "major_airports_domestic": [
+        "Arusha",
+        "Mwanza",
+        "Mbeya/Songwe",
+        "Dodoma"
+      ],
+      "national_airline": "Air Tanzania",
+      "major_seaports": [
+        "Dar es Salaam (major East African hub)",
+        "Zanzibar",
+        "Tanga",
+        "Mtwara"
+      ],
+      "major_inland_ports": [
+        "Mwanza (Lake Victoria)",
+        "Kigoma (Lake Tanganyika)"
+      ],
+      "merchant_marine_vessels": 70,
+      "registered_vehicles_per_1k": 8,
+      "road_fatalities_per_100k": 25,
+      "notes": "Standard Gauge Railway (SGR, Dar-Mwanza/Isaka, under construction); TRC (Tanzania Railways); Dar port gateway for DRC/Burundi/Rwanda; BRT (Bus Rapid Transit, Dar es Salaam)."
+    },
+    "tourism": {
+      "annual_visitors": 1500000,
+      "tourism_revenue_usd": "$2.5 billion",
+      "tourism_pct_gdp": 4,
+      "tourism_employment_pct": 11,
+      "unesco_world_heritage_sites": 7,
+      "unesco_sites_list": [
+        "Serengeti National Park",
+        "Ngorongoro Conservation Area",
+        "Kilimanjaro National Park",
+        "Selous Game Reserve",
+        "Ruins of Kilwa Kisiwani and Ruins of Songo Mnara",
+        "Stone Town of Zanzibar",
+        "Kondoa Rock-Art Sites"
+      ],
+      "major_attractions": [
+        "Mount Kilimanjaro",
+        "Serengeti (Great Migration)",
+        "Ngorongoro Crater",
+        "Zanzibar beaches/Stone Town",
+        "Selous/Nyerere NP",
+        "Tarangire NP",
+        "Lake Manyara",
+        "Olduvai Gorge (human origins)"
+      ],
+      "visa_free_access_countries": 62,
+      "henley_passport_rank": 67,
+      "notes": "7 UNESCO sites; safari and beach tourism powerhouse; Serengeti Migration one of natural wonders; Kilimanjaro climbers (50k+/year); Zanzibar distinct destination; Ngorongoro unique."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 34,
+      "gender_inequality_index": 0.556,
+      "gender_inequality_rank": 147,
+      "gender_gap_index_score": 0.72,
+      "women_in_parliament_pct": 37,
+      "women_labor_force_participation_pct": 80,
+      "maternal_mortality_per_100k": 238,
+      "child_marriage_pct": 30,
+      "fgm_prevalence_pct": 10,
+      "lgbtq_legal_status": "Illegal (30 years to life, Zanzibar stricter)",
+      "death_penalty_status": "Abolitionist in practice",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 21,
+      "notes": "Samia Suluhu Hassan (first female president, 2021, more open than predecessor Magufuli); opposition restrictions; Zanzibar semi-autonomous (stricter social laws); sedition laws used against media."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.9,
+      "global_peace_index_rank": 70,
+      "terrorism_index_score": 2,
+      "terrorism_index_rank": 45,
+      "homicide_rate_per_100k": 6,
+      "active_conflicts": [],
+      "border_disputes": [
+        "Lake Nyasa/Malawi border dispute with Malawi"
+      ],
+      "un_peacekeeping_contributions": 2500,
+      "arms_imports_usd": "$100 million",
+      "internally_displaced_persons": 50000,
+      "notes": "Relatively stable; Mozambique border (Cabo Delgado spillover concern); strong peacekeeping contributor (DRC, SADC mission); Zanzibar political tensions historically."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "giraffe",
+        "uhuru torch"
+      ],
+      "national_animal": "giraffe",
+      "national_flower": "",
+      "national_dish": "Ugali with nyama choma (grilled meat)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Sauti za Busara (Zanzibar music festival)",
+        "Zanzibar International Film Festival (ZIFF)",
+        "Saba Saba Day (7 July, industry)",
+        "Mwaka Kogwa (Shirazi New Year, Zanzibar)",
+        "Uhuru Day (9 December)"
+      ],
+      "cuisine_highlights": [
+        "ugali (maize porridge)",
+        "nyama choma (grilled meat)",
+        "pilau (spiced rice)",
+        "mishkaki (kebabs)",
+        "Zanzibar pizza",
+        "mandazi (donuts)",
+        "chai ya maziwa (milk tea)",
+        "chipsi mayai (chips omelette)"
+      ],
+      "music_art_traditions": [
+        "Taarab music (Zanzibar, Arabic-influenced)",
+        "Bongo Flava (Tanzanian hip-hop)",
+        "Tingatinga painting style",
+        "Makonde carvings",
+        "Diamond Platnumz (global artist)",
+        "Freddie Mercury born in Zanzibar"
+      ],
+      "film_industry": "Growing (ZIFF; Bongo movies)",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "Julius Nyerere (Mwalimu/Teacher, founding father, Ujamaa)",
+        "Samia Suluhu Hassan (first female president)",
+        "Tippu Tip (19th-century Swahili-Zanzibari trader)",
+        "Freddie Mercury (born in Zanzibar)",
+        "Ali Hassan Mwinyi (2nd president)"
+      ],
+      "world_heritage_sites": [
+        "Serengeti NP",
+        "Ngorongoro",
+        "Kilimanjaro NP",
+        "Selous/Nyerere GR",
+        "Kilwa Kisiwani/Songo Mnara",
+        "Stone Town of Zanzibar",
+        "Kondoa Rock-Art"
+      ],
+      "media_landscape": "TBC state; Clouds Media, ITV, Azam (private); Mwananchi newspaper; improving but restrictions remain",
+      "notes": "Swahili language origin (Tanzanian Swahili standard); Ujamaa socialism legacy; Safari capital of East Africa; Olduvai Gorge (early humans); Zanzibar cultural crossroads."
+    },
+    "legal_system": {
+      "legal_tradition": "English common law and customary law (Zanzibar: Islamic law for family matters)",
+      "constitution_year": 1977,
+      "sharia_applicability": "Zanzibar: Kadhi courts for Muslim family law; mainland: limited",
+      "customary_law_role": "Ward/village level tribunals; significant in rural areas (marriage, land, inheritance)",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.4,
+      "contract_enforcement_days": 515,
+      "property_rights_index": 40,
+      "notes": "Court of Appeal (apex); union system (mainland + Zanzibar semi-autonomous); constitutional review process; Land Act (1999, village land rights)."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 6,
+        "global_rank": 26
+      },
+      "area": {
+        "continent_rank": 7,
+        "global_rank": 31
+      },
+      "gdp_nominal": {
+        "continent_rank": 7,
+        "global_rank": 63
+      },
+      "gdp_per_capita": {
+        "continent_rank": 38,
+        "global_rank": 164
+      },
+      "hdi": {
+        "continent_rank": 30,
+        "global_rank": 160
+      },
+      "life_expectancy": {
+        "continent_rank": 22,
+        "global_rank": 113
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 18,
+        "global_rank": 141
+      },
+      "internet_penetration": {
+        "continent_rank": 20,
+        "global_rank": 105
+      },
+      "press_freedom": {
+        "continent_rank": 40,
+        "global_rank": 123
+      },
+      "global_peace_index": {
+        "continent_rank": 6,
+        "global_rank": 70
+      },
+      "innovation_index": {
+        "continent_rank": 15,
+        "global_rank": 0
+      },
+      "notes": "Africa's fastest-growing large economy; safari/tourism leader."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Samia Suluhu Hassan",
       "title": "President",
       "since": "2021-03-19",
-      "notes": "CCM; first female president of Tanzania; from Zanzibar; succeeded Magufuli after his death; more open governance style; COVID-19 policy reversal"
+      "notes": "CCM; first female president of Tanzania; from Zanzibar; succeeded Magufuli after his death; more open governance style; COVID-19 policy reversal",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -352,7 +899,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

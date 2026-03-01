@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.893689Z",
-    "notes": "Comprehensive index for South Africa covering Cradle of Humankind, San/Khoikhoi peoples, Bantu migration, Dutch East India Company/Cape Colony, Great Trek/Boer Republics, Zulu Kingdom (Shaka), Anglo-Zulu War, Anglo-Boer Wars, Union of South Africa, apartheid system, ANC/Mandela, Sharpeville/Soweto, democratic transition 1994, post-apartheid challenges, and load shedding crisis."
+    "notes": "Comprehensive index for South Africa covering Cradle of Humankind, San/Khoikhoi peoples, Bantu migration, Dutch East India Company/Cape Colony, Great Trek/Boer Republics, Zulu Kingdom (Shaka), Anglo-Zulu War, Anglo-Boer Wars, Union of South Africa, apartheid system, ANC/Mandela, Sharpeville/Soweto, democratic transition 1994, post-apartheid challenges, and load shedding crisis.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Pretoria (executive) / Cape Town (legislative) / Bloemfontein (judicial)",
@@ -160,7 +161,22 @@
       "life_expectancy": 65.0,
       "infant_mortality_per_1k": 25.0,
       "literacy_rate_pct": 87.0,
-      "net_migration_rate": 0.9
+      "net_migration_rate": 0.9,
+      "population_growth_rate_pct": 0.8,
+      "urban_population_growth_rate_pct": 1.8,
+      "life_expectancy_male": 62,
+      "life_expectancy_female": 68,
+      "under5_mortality_per_1k": 30,
+      "sex_ratio": 0.98,
+      "dependency_ratio": 52,
+      "population_density_per_km2": 49,
+      "age_structure": {
+        "0_14_pct": 28,
+        "15_24_pct": 17,
+        "25_54_pct": 42,
+        "55_64_pct": 7,
+        "65_plus_pct": 6
+      }
     },
     "natural_resources": {
       "primary": [
@@ -192,7 +208,10 @@
         "BRICS",
         "Commonwealth"
       ],
-      "notes": "SANDF (South African National Defence Force); integrated former apartheid military with MK (ANC) and APLA (PAC) forces; deployed in DRC (MONUSCO), Mozambique; Denel arms manufacturer; Rooivalk attack helicopter; Gripens; ageing equipment; budget constraints."
+      "notes": "SANDF (South African National Defence Force); integrated former apartheid military with MK (ANC) and APLA (PAC) forces; deployed in DRC (MONUSCO), Mozambique; Denel arms manufacturer; Rooivalk attack helicopter; Gripens; ageing equipment; budget constraints.",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 33
     },
     "trade": {
       "top_exports": [
@@ -227,14 +246,62 @@
         "Mozambique"
       ],
       "trade_balance": "surplus (commodity-driven)",
-      "remittances_pct_gdp": 0.3
+      "remittances_pct_gdp": 0.3,
+      "total_exports_usd": "$110 billion",
+      "total_imports_usd": "$120 billion",
+      "top_export_destinations": [
+        "China",
+        "USA",
+        "Germany",
+        "Japan",
+        "UK"
+      ],
+      "top_import_origins": [
+        "China",
+        "Germany",
+        "USA",
+        "Saudi Arabia",
+        "India"
+      ],
+      "trade_as_pct_gdp": 60,
+      "current_account_balance_usd": "-$5 billion",
+      "trade_agreements": [
+        "SACU",
+        "SADC",
+        "AfCFTA",
+        "AGOA (USA)",
+        "EU-SADC EPA"
+      ],
+      "special_economic_zones": [
+        "Coega IDZ",
+        "Richards Bay IDZ",
+        "East London IDZ",
+        "Dube TradePort",
+        "Saldanha Bay IDZ",
+        "OR Tambo IDZ"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 72.0,
       "electricity_access_pct": 85.0,
       "mobile_subscriptions_per_100": 167,
       "railway_km": 20986,
-      "paved_roads_pct": 17
+      "paved_roads_pct": 17,
+      "broadband_subscriptions_per_100": 3,
+      "4g_coverage_pct": 95,
+      "5g_availability": true,
+      "road_network_km": 750000,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "WACS",
+        "SAT-3",
+        "SAFE",
+        "EASSy",
+        "ACE",
+        "2Africa",
+        "Equiano"
+      ],
+      "notes": "Vodacom, MTN, Telkom, Rain, Cell C; 5G launched (2020); best ICT in Africa; fibre expansion (Openserve, Vumatel); Transnet rail/ports."
     },
     "international_memberships": [
       "UN",
@@ -266,6 +333,26 @@
       "fragile_states_index": {
         "score": 71.5,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.58,
+        "rank": 52,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": 0.1,
+        "percentile": 55,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": 0.3,
+        "percentile": 60,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.1,
+        "percentile": 35,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -284,12 +371,41 @@
         "earthquakes (minor)",
         "load-shedding (Eskom power crisis)"
       ],
-      "protected_areas_pct": 15
+      "protected_areas_pct": 15,
+      "average_temperature_c": 18,
+      "average_rainfall_mm": 500,
+      "co2_per_capita_t": 7.5,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "High",
+      "environmental_performance_index": {
+        "score": 43,
+        "rank": 116,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 95000,
+        "endemic_species": 10000,
+        "threatened_species": 600
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 73.0,
       "foreign_aid_received_usd": "1 billion",
-      "notes": "Africa's most industrialised economy; load-shedding crisis (2023-24, Eskom); highest inequality globally (Gini ~63); unemployment ~33%; GNU (Government of National Unity) from 2024 coalition; Transnet logistics crisis affecting ports/rail; sovereign downgrade to junk status."
+      "notes": "Africa's most industrialised economy; load-shedding crisis (2023-24, Eskom); highest inequality globally (Gini ~63); unemployment ~33%; GNU (Government of National Unity) from 2024 coalition; Transnet logistics crisis affecting ports/rail; sovereign downgrade to junk status.",
+      "external_debt_usd": "$180 billion",
+      "debt_service_pct_revenue": 20,
+      "foreign_aid_given_usd": "$300 million",
+      "top_donors": [
+        "Germany",
+        "USA",
+        "EU",
+        "UK",
+        "France"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": "Not applicable"
     },
     "education": {
       "primary_enrollment_pct": 97,
@@ -304,14 +420,41 @@
         "University of KwaZulu-Natal",
         "Rhodes University"
       ],
-      "notes": "UCT ranks among world's top 200; free higher education (NSFAS) for qualifying students since 2018 (#FeesMustFall movement); high enrollment but quality crisis (PIRLS/TIMSS scores among lowest globally); 11 official language instruction; historically Black universities (Fort Hare, Limpopo)."
+      "notes": "UCT ranks among world's top 200; free higher education (NSFAS) for qualifying students since 2018 (#FeesMustFall movement); high enrollment but quality crisis (PIRLS/TIMSS scores among lowest globally); 11 official language instruction; historically Black universities (Fort Hare, Limpopo).",
+      "education_expenditure_pct_gdp": 6.6,
+      "primary_completion_rate_pct": 87,
+      "gender_parity_index": 1.02,
+      "mean_years_of_schooling": 10.2,
+      "expected_years_of_schooling": 13.7,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 30,
+      "out_of_school_children": 500000,
+      "academic_freedom_index": 0.7
     },
     "diaspora_migration": {
       "diaspora_population": "3 million+ (UK, Australia, USA, Canada, New Zealand, UAE, Germany)",
       "refugees_hosted": 250000,
       "refugees_produced": 10000,
       "remittances_usd": "1 billion",
-      "notes": "Post-1994 brain drain (white emigration); xenophobic violence against African migrants (Zimbabweans, Nigerians, Mozambicans); hosts largest refugee/migrant population in Africa (~4 million); immigration from Zimbabwe, Mozambique, DRC, Nigeria, Ethiopia, Bangladesh, Pakistan."
+      "notes": "Post-1994 brain drain (white emigration); xenophobic violence against African migrants (Zimbabweans, Nigerians, Mozambicans); hosts largest refugee/migrant population in Africa (~4 million); immigration from Zimbabwe, Mozambique, DRC, Nigeria, Ethiopia, Bangladesh, Pakistan.",
+      "diaspora_top_destinations": [
+        "UK",
+        "Australia",
+        "USA",
+        "New Zealand",
+        "Canada"
+      ],
+      "asylum_seekers": 250000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Restrictive work permits; refugee status; xenophobic tensions",
+      "remittances_pct_gdp": 0.2,
+      "net_migration_rate_per_1k": 3.0
     },
     "digital_economy": {
       "e_government_index": 0.6,
@@ -321,7 +464,18 @@
         "Johannesburg (Tshimologong, Jozi Hub)",
         "Durban (SmartXchange)"
       ],
-      "notes": "Africa's largest tech ecosystem by investment value; fintech leader (TymeBank, Discovery Bank, Capitec Go); Naspers/Prosus (Tencent investor); submarine cables (WACS, SAT-3, EASSy, 2Africa); MTN, Vodacom, Cell C, Telkom operators; well-developed banking system enabling digital payments."
+      "notes": "Africa's largest tech ecosystem by investment value; fintech leader (TymeBank, Discovery Bank, Capitec Go); Naspers/Prosus (Tencent investor); submarine cables (WACS, SAT-3, EASSy, 2Africa); MTN, Vodacom, Cell C, Telkom operators; well-developed banking system enabling digital payments.",
+      "e_participation_index": 0.7,
+      "ict_development_index": 5.0,
+      "mobile_money_accounts": 5000000,
+      "digital_payments_pct_adults": 45,
+      "fintech_companies": 150,
+      "startup_ecosystem_value_usd": "$2 billion",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.68,
+      "innovation_index_score": 32,
+      "innovation_index_rank": 61,
+      "ai_readiness_index": 50
     },
     "other_languages": [
       "Afrikaans",
@@ -333,14 +487,417 @@
       "siSwati",
       "Tshivenda",
       "isiNdebele"
-    ]
+    ],
+    "capital_coordinates": {
+      "lat": -25.7479,
+      "lon": 28.2293
+    },
+    "other_major_cities": [
+      "Johannesburg",
+      "Cape Town",
+      "Durban",
+      "Pretoria",
+      "Port Elizabeth (Gqeberha)",
+      "Bloemfontein",
+      "East London"
+    ],
+    "national_motto": "ǃke e: ǀxarra ǁke (Unity in Diversity, in ǀXam)",
+    "national_anthem": "National Anthem of South Africa (Nkosi Sikelel' iAfrika + Die Stem)",
+    "currency_code": "ZAR",
+    "internet_tld": ".za",
+    "utc_offset": "UTC+2",
+    "drives_on": "left",
+    "geography": {
+      "coordinates": {
+        "lat": -30.5595,
+        "lon": 22.9375
+      },
+      "bounding_box": {
+        "north": -22.13,
+        "south": -34.84,
+        "east": 32.89,
+        "west": 16.45
+      },
+      "land_area_km2": 1219090,
+      "water_area_km2": 4620,
+      "coastline_km": 2798,
+      "borders": [
+        "Namibia",
+        "Botswana",
+        "Zimbabwe",
+        "Mozambique",
+        "Eswatini",
+        "Lesotho"
+      ],
+      "border_lengths_km": {
+        "Namibia": 1005,
+        "Botswana": 1969,
+        "Zimbabwe": 230,
+        "Mozambique": 496,
+        "Eswatini": 438,
+        "Lesotho": 1106
+      },
+      "highest_point": {
+        "name": "Mafadi",
+        "elevation_m": 3450
+      },
+      "lowest_point": {
+        "name": "Atlantic Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Interior plateau (highveld); Drakensberg escarpment; Cape Fold Mountains; Karoo semi-desert; coastal lowlands; fynbos (Cape Floristic Region)",
+      "land_use": {
+        "agricultural_pct": 79.4,
+        "arable_pct": 9.9,
+        "forest_pct": 7.6,
+        "other_pct": 13
+      },
+      "major_rivers": [
+        "Orange",
+        "Vaal",
+        "Limpopo",
+        "Tugela",
+        "Breede"
+      ],
+      "major_lakes": [
+        "Gariep Dam (Lake)",
+        "Vaal Dam"
+      ],
+      "exclusive_economic_zone_km2": 1535538,
+      "landlocked": false,
+      "notes": "3 capitals: Pretoria (executive), Cape Town (legislative), Bloemfontein (judicial); Lesotho enclave; Cape of Good Hope; Kruger NP; Table Mountain; Witwatersrand gold reef; Cape Floral Region (UNESCO)."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$380 billion",
+      "gdp_ppp_usd": "$950 billion",
+      "gdp_per_capita_nominal_usd": 6200,
+      "gdp_per_capita_ppp_usd": 15500,
+      "gdp_growth_rate_pct": 0.9,
+      "inflation_rate_pct": 5.5,
+      "unemployment_rate_pct": 33,
+      "youth_unemployment_rate_pct": 60,
+      "poverty_rate_pct": 55,
+      "poverty_line_definition": "Upper-bound national poverty line (R1335/month)",
+      "gini_coefficient": 63.0,
+      "income_classification": "Upper middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 2,
+        "industry_pct_gdp": 26,
+        "services_pct_gdp": 72
+      },
+      "labor_force": 23000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 5,
+        "industry_pct": 23,
+        "services_pct": 72
+      },
+      "fdi_inflow_usd": "$9 billion",
+      "fdi_outflow_usd": "$5 billion",
+      "foreign_exchange_reserves_usd": "$56 billion",
+      "ease_of_doing_business_rank": 84,
+      "economic_freedom_index_score": 55.7,
+      "credit_rating": {
+        "moodys": "Ba2",
+        "sp": "BB-",
+        "fitch": "BB-"
+      },
+      "notes": "Africa's most industrialized economy; world's worst inequality (Gini 63); mining (gold, platinum, diamonds, chrome); auto manufacturing; financial services hub; load shedding (Eskom crisis); GNU after 2024 election."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 8.3,
+      "health_expenditure_per_capita_usd": 500,
+      "physicians_per_1k": 0.8,
+      "nurses_midwives_per_1k": 3.5,
+      "hospital_beds_per_1k": 2.3,
+      "maternal_mortality_per_100k": 127,
+      "hiv_prevalence_pct": 18.3,
+      "malaria_incidence_per_1k": 1,
+      "tuberculosis_incidence_per_100k": 468,
+      "access_to_clean_water_pct": 92,
+      "access_to_sanitation_pct": 78,
+      "vaccination_coverage_pct": 77,
+      "stunting_under5_pct": 27,
+      "obesity_rate_pct": 28.3,
+      "universal_health_coverage_index": 55,
+      "leading_causes_of_death": [
+        "HIV/AIDS",
+        "tuberculosis",
+        "cardiovascular diseases",
+        "diabetes",
+        "interpersonal violence"
+      ],
+      "notes": "World's largest HIV epidemic (7.8M+ PLHIV); largest ARV programme globally; NHI Bill (National Health Insurance, 2024); dual healthcare system (private excellent, public strained); TB/HIV co-infection epidemic."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 58,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 9.9,
+      "agricultural_land_pct": 79.4,
+      "irrigated_land_pct": 2,
+      "major_crops": [
+        "maize",
+        "wheat",
+        "sugarcane",
+        "sunflower",
+        "grapes/wine",
+        "citrus",
+        "deciduous fruits",
+        "soybeans"
+      ],
+      "major_livestock": [
+        "cattle",
+        "sheep",
+        "goats",
+        "poultry",
+        "ostriches"
+      ],
+      "food_import_dependency_pct": 10,
+      "cereal_yield_kg_per_hectare": 4500,
+      "agricultural_employment_pct": 5,
+      "prevalence_of_undernourishment_pct": 7,
+      "notes": "Africa's largest agricultural exporter; wine industry (Western Cape); commercial farming + subsistence; land reform ongoing; water scarcity challenges; net food exporter."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 85,
+        "hydroelectric_pct": 1,
+        "solar_pct": 6,
+        "wind_pct": 5,
+        "nuclear_pct": 3,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 60000,
+      "electricity_production_gwh": 230000,
+      "electricity_consumption_per_capita_kwh": 3700,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 500000,
+      "natural_gas_production_bcm": 1,
+      "energy_access_rural_pct": 82,
+      "energy_access_urban_pct": 95,
+      "notes": "Eskom crisis (load shedding, aging coal plants, corruption); coal dominant (85%); Koeberg nuclear plant (Africa's only); REIPPPP renewable programme; Sasol (coal-to-liquids); Just Energy Transition Partnership ($8.5B commitment)."
+    },
+    "transport": {
+      "major_airports_international": [
+        "OR Tambo International (Johannesburg)",
+        "Cape Town International",
+        "King Shaka International (Durban)"
+      ],
+      "major_airports_domestic": [
+        "Lanseria",
+        "Bram Fischer (Bloemfontein)",
+        "Port Elizabeth",
+        "George",
+        "East London"
+      ],
+      "national_airline": "South African Airways (SAA, restructured)",
+      "major_seaports": [
+        "Durban (Africa's busiest)",
+        "Richards Bay",
+        "Cape Town",
+        "Port Elizabeth (Gqeberha)",
+        "Saldanha Bay"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 100,
+      "registered_vehicles_per_1k": 170,
+      "road_fatalities_per_100k": 22,
+      "notes": "Most extensive transport network in Africa; Transnet Freight Rail; Gautrain (rapid rail); N3/N1 highways; Durban busiest port in Africa; Transnet port/rail crisis (2023-24)."
+    },
+    "tourism": {
+      "annual_visitors": 8500000,
+      "tourism_revenue_usd": "$9 billion",
+      "tourism_pct_gdp": 3,
+      "tourism_employment_pct": 9,
+      "unesco_world_heritage_sites": 10,
+      "unesco_sites_list": [
+        "Fossil Hominid Sites of South Africa (Cradle of Humankind)",
+        "iSimangaliso Wetland Park",
+        "Robben Island",
+        "uKhahlamba/Drakensberg Park",
+        "Mapungubwe Cultural Landscape",
+        "Cape Floral Region",
+        "Vredefort Dome",
+        "Richtersveld",
+        "ǂKhomani Cultural Landscape",
+        "Barberton Makhonjwa Mountains"
+      ],
+      "major_attractions": [
+        "Kruger National Park",
+        "Table Mountain",
+        "Cape Winelands",
+        "Garden Route",
+        "Robben Island",
+        "Drakensberg",
+        "Blyde River Canyon",
+        "Durban beaches",
+        "Johannesburg (Apartheid Museum, Soweto)"
+      ],
+      "visa_free_access_countries": 106,
+      "henley_passport_rank": 51,
+      "notes": "10 UNESCO sites (most in Africa); tourism powerhouse; Big Five safari; Cape Town in top global cities; wine tourism; adventure tourism."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Free",
+      "freedom_house_score": 79,
+      "gender_inequality_index": 0.405,
+      "gender_inequality_rank": 97,
+      "gender_gap_index_score": 0.78,
+      "women_in_parliament_pct": 46,
+      "women_labor_force_participation_pct": 46,
+      "maternal_mortality_per_100k": 127,
+      "child_marriage_pct": 4,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Legal (same-sex marriage since 2006)",
+      "death_penalty_status": "Abolitionist (1995; Constitutional Court ruling)",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 7,
+      "notes": "Most progressive constitution in Africa (1996); first in Africa with same-sex marriage; GBV crisis ('shadow pandemic'); xenophobic violence; racial inequality legacy; Section 9 equality clause."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.3,
+      "global_peace_index_rank": 118,
+      "terrorism_index_score": 3,
+      "terrorism_index_rank": 50,
+      "homicide_rate_per_100k": 45,
+      "active_conflicts": [],
+      "border_disputes": [
+        "Minor: Prince Edward Islands sovereignty"
+      ],
+      "un_peacekeeping_contributions": 1200,
+      "arms_imports_usd": "$200 million",
+      "internally_displaced_persons": 0,
+      "notes": "Extremely high crime rates (murder, robbery, carjacking); GBV epidemic; private security industry massive; farm attacks concern; cash-in-transit heists; vigilantism."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "springbok",
+        "protea flower"
+      ],
+      "national_animal": "springbok",
+      "national_flower": "King Protea",
+      "national_dish": "Braai (barbecue, multi-ethnic)",
+      "national_sport": "Football / Rugby / Cricket",
+      "major_festivals": [
+        "Heritage Day (24 September, 'Braai Day')",
+        "National Arts Festival (Makhanda/Grahamstown)",
+        "Cape Town Jazz Festival",
+        "Durban July (horse racing)",
+        "Freedom Day (27 April)"
+      ],
+      "cuisine_highlights": [
+        "braai (BBQ)",
+        "biltong/droëwors (dried meat)",
+        "bobotie (Cape Malay)",
+        "bunny chow (Durban)",
+        "pap and vleis",
+        "koeksisters",
+        "rooibos tea",
+        "Amarula"
+      ],
+      "music_art_traditions": [
+        "Hugh Masekela (jazz)",
+        "Miriam Makeba (Mama Africa)",
+        "Ladysmith Black Mambazo (isicathamiya)",
+        "Kwaito music",
+        "Gqom/Amapiano (global)",
+        "Township art (William Kentridge)",
+        "Ndebele house painting"
+      ],
+      "film_industry": "Africa's largest (NFVF; Cape Town Film Studios; Academy Awards: Tsotsi 2005)",
+      "intangible_heritage_items": [
+        "Khoisan San rock art tradition",
+        "Ubuntu philosophy"
+      ],
+      "notable_historical_figures": [
+        "Nelson Mandela (anti-apartheid, 1st democratic president)",
+        "Desmond Tutu (Nobel Peace, TRC)",
+        "Mahatma Gandhi (early activism in SA)",
+        "Steve Biko (Black Consciousness)",
+        "Cyril Ramaphosa (current president)"
+      ],
+      "world_heritage_sites": [
+        "Fossil Hominid Sites (Cradle of Humankind)",
+        "iSimangaliso",
+        "Robben Island",
+        "Drakensberg",
+        "Mapungubwe",
+        "Cape Floral Region",
+        "Vredefort Dome",
+        "Richtersveld",
+        "ǂKhomani",
+        "Barberton Makhonjwa"
+      ],
+      "media_landscape": "SABC state; eNCA, Newzroom Afrika (24hr news); Daily Maverick, News24; robust free press; Naspers (media conglomerate)",
+      "notes": "Rainbow Nation; 11 official languages; Amapiano global music export; Cradle of Humankind; Mandela legacy; Ubuntu philosophy; most UNESCO sites in Africa."
+    },
+    "legal_system": {
+      "legal_tradition": "Hybrid: Roman-Dutch law, English common law, customary law, constitutional law",
+      "constitution_year": 1996,
+      "sharia_applicability": "None (Muslim Personal Law Recognition debate)",
+      "customary_law_role": "Recognized under Constitution (Traditional Courts); significant for succession, marriage",
+      "icc_membership": "State party (attempted withdrawal 2016, reversed)",
+      "judicial_independence_score": 0.65,
+      "contract_enforcement_days": 600,
+      "property_rights_index": 55,
+      "notes": "Constitutional Court (apex, Bill of Rights); Roman-Dutch legal tradition unique; land reform (Section 25); Competition Commission active; Chapter 9 institutions."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 5,
+        "global_rank": 24
+      },
+      "area": {
+        "continent_rank": 9,
+        "global_rank": 25
+      },
+      "gdp_nominal": {
+        "continent_rank": 2,
+        "global_rank": 33
+      },
+      "gdp_per_capita": {
+        "continent_rank": 5,
+        "global_rank": 97
+      },
+      "hdi": {
+        "continent_rank": 5,
+        "global_rank": 109
+      },
+      "life_expectancy": {
+        "continent_rank": 28,
+        "global_rank": 134
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 5,
+        "global_rank": 84
+      },
+      "internet_penetration": {
+        "continent_rank": 6,
+        "global_rank": 55
+      },
+      "press_freedom": {
+        "continent_rank": 7,
+        "global_rank": 38
+      },
+      "global_peace_index": {
+        "continent_rank": 23,
+        "global_rank": 118
+      },
+      "innovation_index": {
+        "continent_rank": 3,
+        "global_rank": 61
+      },
+      "notes": "Africa's 2nd largest economy; most industrialized; highest Gini coefficient globally."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Cyril Ramaphosa",
       "title": "President",
       "since": "2018-02-15",
-      "notes": "ANC; former trade union leader (NUM); Mandela's chosen successor; first GNU coalition government since 1994 after ANC lost majority in 2024 elections; Phala Phala farm scandal"
+      "notes": "ANC; former trade union leader (NUM); Mandela's chosen successor; first GNU coalition government since 1994 after ANC lost majority in 2024 elections; Phala Phala farm scandal",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -377,7 +934,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {
