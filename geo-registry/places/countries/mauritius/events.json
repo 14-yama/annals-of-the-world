@@ -3,8 +3,354 @@
     "country_slug": "mauritius",
     "node_kind": "events",
     "registry": "docs/nodes/node-attribute-registry.md",
-    "generated_at": "2026-01-31T13:56:07.861091Z",
-    "notes": "Country-scoped curated nodes; link via relationships during ingest."
+    "generated_at": "2026-02-28T19:21:41.660833Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
   },
-  "nodes": []
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Uninhabited_Discovery_MU_Event",
+        "name": "Uninhabited Island and Early Sightings",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Uninhabited_Discovery_MU",
+        "description": "Volcanic island in the Indian Ocean; no indigenous human population; Arab and Portuguese sailors sight the island before Dutch arrival.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Port Louis"
+        },
+        "startYear": 900,
+        "endYear": 1598
+      },
+      {
+        "slug": "Volcanic_Formation_MU_Event",
+        "name": "Volcanic Formation and Endemic Species",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Uninhabited_Discovery_MU",
+        "description": "Mauritius formed by volcanic activity ~10 million years ago; evolution of unique endemic species including the dodo, giant tortoises, and native flora.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Mauritius"
+        },
+        "startYear": -10000000,
+        "endYear": 1500
+      },
+      {
+        "slug": "Arab_Portuguese_Sightings_Event",
+        "name": "Arab and Portuguese Sightings",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Uninhabited_Discovery_MU",
+        "description": "Arab navigators possibly map the island (Dina Arobi); Portuguese chart it as Cerne (c. 1507); no permanent settlement established.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Mauritius"
+        },
+        "startYear": 900,
+        "endYear": 1598
+      }
+    ],
+    "920": [
+      {
+        "slug": "Dutch_Colonial_MU_Event",
+        "name": "Dutch Colonial Period",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Dutch_Colonial_MU",
+        "description": "Dutch East India Company names island after Prince Maurits; ebony exploitation; introduction of sugar cane; dodo driven to extinction; Dutch abandon island.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Port Louis"
+        },
+        "startYear": 1598,
+        "endYear": 1710
+      },
+      {
+        "slug": "Dutch_Settlement_MU_Event",
+        "name": "Dutch Settlement and Exploitation",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Dutch_Colonial_MU",
+        "description": "Admiral Wybrand van Warwyck claims island 1598; named Mauritius after Prince Maurits of Nassau; ebony forests logged; enslaved workers from Madagascar.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Mauritius"
+        },
+        "startYear": 1598,
+        "endYear": 1658
+      },
+      {
+        "slug": "Dodo_Extinction_Event",
+        "name": "Extinction of the Dodo",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Dutch_Colonial_MU",
+        "description": "Flightless dodo (Raphus cucullatus) driven to extinction by hunting, introduced predators, and habitat destruction; last sighting c. 1681.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Mauritius"
+        },
+        "startYear": 1598,
+        "endYear": 1681
+      }
+    ],
+    "930": [
+      {
+        "slug": "French_Colonial_MU_Event",
+        "name": "French Colonial Period (Île de France)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "French_Colonial_MU",
+        "description": "France colonises island as Île de France; sugar plantation economy; slave-based labour; corsair base; Mahé de La Bourdonnais as governor.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Port Louis"
+        },
+        "startYear": 1715,
+        "endYear": 1810
+      },
+      {
+        "slug": "Ile_De_France_Founded_Event",
+        "name": "Foundation of Île de France",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "French_Colonial_MU",
+        "description": "French East India Company claims island 1715; renamed Île de France; Mahé de La Bourdonnais as governor from 1735 transforms the colony.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Mauritius"
+        },
+        "startYear": 1715,
+        "endYear": 1735
+      },
+      {
+        "slug": "Sugar_Slavery_MU_Event",
+        "name": "Sugar Plantations and Slavery",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "French_Colonial_MU",
+        "description": "Sugar cane becomes dominant crop; enslaved people from East Africa, Madagascar, and India; code noir; Maroon communities.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Mauritius"
+        },
+        "startYear": 1735,
+        "endYear": 1810
+      }
+    ],
+    "940": [
+      {
+        "slug": "British_Colonial_MU_Event",
+        "name": "British Colonial Mauritius",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "British_Colonial_MU",
+        "description": "British capture and Treaty of Paris; abolition of slavery; Indian indentured labour transforms demographics; sugar monoculture; path to independence.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Port Louis"
+        },
+        "startYear": 1810,
+        "endYear": 1968
+      },
+      {
+        "slug": "British_Takeover_MU_Event",
+        "name": "British Takeover and Abolition",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "British_Colonial_MU",
+        "description": "Britain captures Mauritius 1810; Treaty of Paris 1814; French laws and language retained; abolition of slavery 1835; apprenticeship system.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Mauritius"
+        },
+        "startYear": 1810,
+        "endYear": 1839
+      },
+      {
+        "slug": "Indian_Indentured_Labour_Event",
+        "name": "Indian Indentured Labour System",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "British_Colonial_MU",
+        "description": "Over 450,000 Indian indentured labourers brought to sugar plantations (Aapravasi Ghat, UNESCO site); transforms ethnic composition; 'coolie trade' abuses.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Mauritius"
+        },
+        "startYear": 1834,
+        "endYear": 1920
+      }
+    ],
+    "950": [
+      {
+        "slug": "Independence_Nation_Building_MU_Event",
+        "name": "Independence and Nation-Building",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Independence_Nation_Building_MU",
+        "description": "Independence 1968 amid ethnic tensions; Chagos Archipelago detached; Ramgoolam and Jugnauth era; economic diversification begins.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Port Louis"
+        },
+        "startYear": 1968,
+        "endYear": 1992
+      },
+      {
+        "slug": "Independence_1968_MU_Event",
+        "name": "Independence of Mauritius",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Independence_Nation_Building_MU",
+        "description": "Independence 12 March 1968; Seewoosagur Ramgoolam as first PM; ethnic riots precede independence; Chagos Archipelago (incl. Diego Garcia) detached by Britain.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Mauritius"
+        },
+        "startYear": 1968,
+        "endYear": 1968
+      },
+      {
+        "slug": "Chagos_Detachment_Event",
+        "name": "Chagos Archipelago Detachment",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Independence_Nation_Building_MU",
+        "description": "Britain separates Chagos from Mauritius 1965 (BIOT); Chagossian population expelled for Diego Garcia US base; ICJ 2019 advisory opinion supports Mauritius sovereignty.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Mauritius"
+        },
+        "startYear": 1965,
+        "endYear": 2024
+      }
+    ],
+    "960": [
+      {
+        "slug": "Economic_Miracle_MU_Event",
+        "name": "Mauritian Economic Miracle",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Economic_Miracle_MU",
+        "description": "Republic since 1992; transformation into financial services, ICT, and tourism hub; highest HDI in Africa; multicultural democracy.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Port Louis"
+        },
+        "startYear": 1992,
+        "endYear": 2026
+      },
+      {
+        "slug": "Republic_1992_MU_Event",
+        "name": "Republic of Mauritius",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Economic_Miracle_MU",
+        "description": "Mauritius becomes a republic within the Commonwealth 1992; Cassam Uteem as first president; parliamentary democracy continues.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Mauritius"
+        },
+        "startYear": 1992,
+        "endYear": 1995
+      },
+      {
+        "slug": "Financial_Services_Hub_Event",
+        "name": "Financial Services and ICT Hub",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Economic_Miracle_MU",
+        "description": "Global Business Licence regime; Mauritius as India-Africa investment gateway; Cybercity Ebène; diversified services economy.",
+        "location": {
+          "country_slug": "mauritius",
+          "place_note": "Mauritius"
+        },
+        "startYear": 1992,
+        "endYear": 2026
+      }
+    ]
+  }
 }

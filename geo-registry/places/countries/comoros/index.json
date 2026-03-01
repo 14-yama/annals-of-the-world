@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.865196Z",
-    "notes": "Comprehensive index for Comoros covering Swahili-Arab sultanates, French colonisation, Mayotte separation, Bob Denard mercenary coups, and Grande Comore volcanism."
+    "notes": "Comprehensive index for Comoros covering Swahili-Arab sultanates, French colonisation, Mayotte separation, Bob Denard mercenary coups, and Grande Comore volcanism.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Moroni",
@@ -96,7 +97,22 @@
       "life_expectancy": 65.7,
       "infant_mortality_per_1k": 50.0,
       "literacy_rate_pct": 58.8,
-      "net_migration_rate": -2.2
+      "net_migration_rate": -2.2,
+      "population_growth_rate_pct": 2.2,
+      "urban_population_growth_rate_pct": 2.7,
+      "life_expectancy_male": 63,
+      "life_expectancy_female": 67,
+      "under5_mortality_per_1k": 60,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 67,
+      "population_density_per_km2": 467,
+      "age_structure": {
+        "0_14_pct": 38,
+        "15_24_pct": 20,
+        "25_54_pct": 34,
+        "55_64_pct": 5,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -120,7 +136,10 @@
         "Arab League",
         "OIC"
       ],
-      "notes": "Tiny military; 22+ coups/attempted coups since 1975 (world record for coup frequency); Bob Denard French mercenary coups (1975, 1978, 1995); AU intervention 2008 (Anjouan crisis); France maintains military cooperation (Mayotte base nearby)"
+      "notes": "Tiny military; 22+ coups/attempted coups since 1975 (world record for coup frequency); Bob Denard French mercenary coups (1975, 1978, 1995); AU intervention 2008 (Anjouan crisis); France maintains military cooperation (Mayotte base nearby)",
+      "paramilitary_personnel": 500,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -145,14 +164,48 @@
         "Tanzania"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 13.0
+      "remittances_pct_gdp": 13.0,
+      "total_exports_usd": "$50 million",
+      "total_imports_usd": "$400 million",
+      "top_export_destinations": [
+        "France",
+        "India",
+        "Singapore",
+        "Netherlands",
+        "Turkey"
+      ],
+      "top_import_origins": [
+        "UAE",
+        "France",
+        "China",
+        "India",
+        "Pakistan"
+      ],
+      "trade_as_pct_gdp": 35,
+      "current_account_balance_usd": "-$70 million",
+      "trade_agreements": [
+        "COMESA",
+        "AfCFTA",
+        "IOC (Indian Ocean Commission)"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 22.0,
       "electricity_access_pct": 84.0,
       "mobile_subscriptions_per_100": 62,
       "railway_km": 0,
-      "paved_roads_pct": 57
+      "paved_roads_pct": 57,
+      "broadband_subscriptions_per_100": 0.4,
+      "4g_coverage_pct": 60,
+      "5g_availability": false,
+      "road_network_km": 880,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "EASSy",
+        "FLY-LION3"
+      ],
+      "notes": "Small island road networks; submarine cables provide connectivity."
     },
     "international_memberships": [
       "UN",
@@ -181,6 +234,26 @@
       "fragile_states_index": {
         "score": 82.3,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.3,
+        "rank": 131,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -1.2,
+        "percentile": 6,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -1.0,
+        "percentile": 8,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.4,
+        "percentile": 25,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -195,12 +268,41 @@
         "flooding",
         "tsunamis"
       ],
-      "protected_areas_pct": 3
+      "protected_areas_pct": 3,
+      "average_temperature_c": 27,
+      "average_rainfall_mm": 1100,
+      "co2_per_capita_t": 0.3,
+      "deforestation_rate_pct": 5,
+      "water_stress_level": "Medium-high",
+      "environmental_performance_index": {
+        "score": 32,
+        "rank": 147,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 1200,
+        "endemic_species": 30,
+        "threatened_species": 80
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 34.5,
       "foreign_aid_received_usd": "90 million",
-      "notes": "Heavily remittance-dependent; France primary aid donor (Mayotte question politically linked); HIPC debt relief; economy barely diversified"
+      "notes": "Heavily remittance-dependent; France primary aid donor (Mayotte question politically linked); HIPC debt relief; economy barely diversified",
+      "external_debt_usd": "$300 million",
+      "debt_service_pct_revenue": 5,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "France",
+        "World Bank",
+        "AfDB",
+        "Saudi Arabia",
+        "UAE"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Completion point (2012)"
     },
     "education": {
       "primary_enrollment_pct": 80,
@@ -210,29 +312,396 @@
       "top_universities": [
         "University of the Comoros"
       ],
-      "notes": "Arabic/French dual education; Quranic schools significant; women's education improving; many students study in France/Madagascar; brain drain severe for tiny population"
+      "notes": "Arabic/French dual education; Quranic schools significant; women's education improving; many students study in France/Madagascar; brain drain severe for tiny population",
+      "education_expenditure_pct_gdp": 2.5,
+      "primary_completion_rate_pct": 78,
+      "gender_parity_index": 0.88,
+      "mean_years_of_schooling": 5.1,
+      "expected_years_of_schooling": 11.3,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 30,
+      "out_of_school_children": 20000,
+      "academic_freedom_index": 0.3
     },
     "diaspora_migration": {
       "diaspora_population": "300,000 (France ~150k, Mayotte ~100k, Madagascar)",
       "refugees_hosted": 0,
       "refugees_produced": 2000,
       "remittances_usd": "170 million",
-      "notes": "Diaspora larger than island population on some measures; Mayotte (French territory) draws Comorian kwassa-kwassa boat migrants (many drown); remittances ~13% GDP critical lifeline; grand mariage custom funded by diaspora"
+      "notes": "Diaspora larger than island population on some measures; Mayotte (French territory) draws Comorian kwassa-kwassa boat migrants (many drown); remittances ~13% GDP critical lifeline; grand mariage custom funded by diaspora",
+      "diaspora_top_destinations": [
+        "France",
+        "Mayotte",
+        "Madagascar",
+        "Tanzania",
+        "UAE"
+      ],
+      "asylum_seekers": 500,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Restrictive",
+      "remittances_pct_gdp": 25,
+      "net_migration_rate_per_1k": -2.5
     },
     "digital_economy": {
       "e_government_index": 0.25,
       "mobile_money_adoption": "Low (Huri Money)",
       "tech_hubs": [],
-      "notes": "Very limited digital infrastructure; single submarine cable (AVASSA); mobile money growing but from low base; no meaningful tech sector; volcanic geography complicates infrastructure"
+      "notes": "Very limited digital infrastructure; single submarine cable (AVASSA); mobile money growing but from low base; no meaningful tech sector; volcanic geography complicates infrastructure",
+      "e_participation_index": 0.1,
+      "ict_development_index": 2.0,
+      "mobile_money_accounts": 50000,
+      "digital_payments_pct_adults": 5,
+      "fintech_companies": 2,
+      "startup_ecosystem_value_usd": "$2 million",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0.08,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 0
     },
-    "notes_unique": ""
+    "notes_unique": "Archipelago between Mozambique and Madagascar; world's largest producer of ylang-ylang essential oil; has experienced over 20 coups or attempted coups since 1975.",
+    "other_languages": [
+      "French",
+      "Comorian (Shikomori)"
+    ],
+    "capital_coordinates": {
+      "lat": -11.7172,
+      "lon": 43.2551
+    },
+    "other_major_cities": [
+      "Mutsamudu",
+      "Fomboni",
+      "Domoni",
+      "Mitsoudjé"
+    ],
+    "national_motto": "Unity, Solidarity, Development",
+    "national_anthem": "Udzima wa ya Masiwa (The Union of the Great Islands)",
+    "currency_code": "KMF",
+    "internet_tld": ".km",
+    "utc_offset": "UTC+3",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": -12.1696,
+        "lon": 44.2632
+      },
+      "bounding_box": {
+        "north": -11.35,
+        "south": -12.42,
+        "east": 44.54,
+        "west": 43.21
+      },
+      "land_area_km2": 1862,
+      "water_area_km2": 0,
+      "coastline_km": 340,
+      "borders": [],
+      "border_lengths_km": {},
+      "highest_point": {
+        "name": "Mount Karthala",
+        "elevation_m": 2361
+      },
+      "lowest_point": {
+        "name": "Indian Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Volcanic islands; active volcano on Grande Comore; steep mountains and low hills",
+      "land_use": {
+        "agricultural_pct": 84.4,
+        "arable_pct": 46.7,
+        "forest_pct": 1.4,
+        "other_pct": 14.2
+      },
+      "major_rivers": [],
+      "major_lakes": [
+        "Lac Salé (crater lake, Grande Comore)"
+      ],
+      "exclusive_economic_zone_km2": 163752,
+      "landlocked": false,
+      "notes": "3 islands: Grande Comore (Ngazidja), Mohéli (Mwali), Anjouan (Nzwani); Mayotte (4th island) under French sovereignty; Mount Karthala is one of world's most active volcanoes."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$1.3 billion",
+      "gdp_ppp_usd": "$2.9 billion",
+      "gdp_per_capita_nominal_usd": 1432,
+      "gdp_per_capita_ppp_usd": 3236,
+      "gdp_growth_rate_pct": 3.0,
+      "inflation_rate_pct": 8.5,
+      "unemployment_rate_pct": 8.0,
+      "youth_unemployment_rate_pct": 20,
+      "poverty_rate_pct": 42,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 45.3,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 34,
+        "industry_pct_gdp": 12,
+        "services_pct_gdp": 54
+      },
+      "labor_force": 290000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 80,
+        "industry_pct": 5,
+        "services_pct": 15
+      },
+      "fdi_inflow_usd": "$10 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$200 million",
+      "ease_of_doing_business_rank": 160,
+      "economic_freedom_index_score": 51.2,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Remittance-dependent (25%+ GDP); vanilla, ylang-ylang, cloves main exports; known as 'Perfume Islands'; Comorian franc pegged to euro via French Treasury."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 7.5,
+      "health_expenditure_per_capita_usd": 53,
+      "physicians_per_1k": 0.27,
+      "nurses_midwives_per_1k": 0.5,
+      "hospital_beds_per_1k": 2.2,
+      "maternal_mortality_per_100k": 273,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 25,
+      "tuberculosis_incidence_per_100k": 36,
+      "access_to_clean_water_pct": 87,
+      "access_to_sanitation_pct": 36,
+      "vaccination_coverage_pct": 85,
+      "stunting_under5_pct": 22,
+      "obesity_rate_pct": 7.8,
+      "universal_health_coverage_index": 40,
+      "leading_causes_of_death": [
+        "cardiovascular disease",
+        "lower respiratory infections",
+        "neonatal disorders",
+        "malaria",
+        "diabetes"
+      ],
+      "notes": "Low HIV prevalence; malaria declining; health facilities limited on smaller islands; medical evacuations to Mayotte/Réunion/Madagascar common."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 33,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 46.7,
+      "agricultural_land_pct": 84.4,
+      "irrigated_land_pct": 0,
+      "major_crops": [
+        "vanilla",
+        "ylang-ylang",
+        "cloves",
+        "coconut",
+        "bananas",
+        "cassava",
+        "rice"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "sheep"
+      ],
+      "food_import_dependency_pct": 70,
+      "cereal_yield_kg_per_hectare": 1300,
+      "agricultural_employment_pct": 80,
+      "prevalence_of_undernourishment_pct": 15,
+      "notes": "World's 2nd largest ylang-ylang producer; vanilla and cloves key cash crops; 70% food imported; subsistence farming dominant."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 90,
+        "hydroelectric_pct": 0,
+        "solar_pct": 5,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 5
+      },
+      "installed_capacity_mw": 30,
+      "electricity_production_gwh": 80,
+      "electricity_consumption_per_capita_kwh": 80,
+      "energy_imports_pct": 100,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 1500,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 60,
+      "energy_access_urban_pct": 85,
+      "notes": "100% oil imported; frequent power outages; geothermal potential from Karthala volcano explored; solar projects expanding."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Prince Said Ibrahim International Airport (Moroni)"
+      ],
+      "major_airports_domestic": [
+        "Ouani Airport (Anjouan)",
+        "Bandar es Salam Airport (Mohéli)"
+      ],
+      "national_airline": "AB Aviation (Comoros)",
+      "major_seaports": [
+        "Moroni",
+        "Mutsamudu"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 200,
+      "registered_vehicles_per_1k": 20,
+      "road_fatalities_per_100k": 15,
+      "notes": "Inter-island ferries vital; flag of convenience registry (~200 vessels); limited road networks on each island."
+    },
+    "tourism": {
+      "annual_visitors": 45000,
+      "tourism_revenue_usd": "$55 million",
+      "tourism_pct_gdp": 4,
+      "tourism_employment_pct": 3,
+      "unesco_world_heritage_sites": 0,
+      "unesco_sites_list": [],
+      "major_attractions": [
+        "Mount Karthala (active volcano)",
+        "Mohéli Marine Park",
+        "Itsandra beach",
+        "Old Friday Mosque (Moroni)",
+        "Lac Salé crater lake"
+      ],
+      "visa_free_access_countries": 51,
+      "henley_passport_rank": 79,
+      "notes": "Niche eco-tourism; coelacanth (living fossil fish) discovered in Comorian waters; marine biodiversity."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 30,
+      "gender_inequality_index": 0.515,
+      "gender_inequality_rank": 141,
+      "gender_gap_index_score": 0.0,
+      "women_in_parliament_pct": 6,
+      "women_labor_force_participation_pct": 36,
+      "maternal_mortality_per_100k": 273,
+      "child_marriage_pct": 32,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Illegal (up to 5 years imprisonment)",
+      "death_penalty_status": "Abolished",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 22,
+      "notes": "Presidential term limit controversy; matrilineal traditions in some areas; Grand Mariage custom influences social status."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.9,
+      "global_peace_index_rank": 90,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 7.0,
+      "active_conflicts": [],
+      "border_disputes": [
+        "Mayotte (claimed by Comoros, administered by France)"
+      ],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$1 million",
+      "internally_displaced_persons": 0,
+      "notes": "History of coups (20+ attempts since independence); Mayotte dispute with France; 2008 African Union military intervention on Anjouan."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "crescent moon and stars"
+      ],
+      "national_animal": "coelacanth",
+      "national_flower": "ylang-ylang flower",
+      "national_dish": "Langouste à la vanille (vanilla lobster)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Grand Mariage (Anda)",
+        "Mawlid (Prophet's birthday)"
+      ],
+      "cuisine_highlights": [
+        "pilaou (spiced rice)",
+        "mataba (cassava leaf stew)",
+        "langouste à la vanille",
+        "mkatra foutra (coconut bread)"
+      ],
+      "music_art_traditions": [
+        "Twarab (coastal Swahili music)",
+        "Sambé (traditional drum dance)",
+        "Mgodro (ritual dance)"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "Ahmed Abdallah (first president)",
+        "Ali Soilih (revolutionary leader)",
+        "Bob Denard (mercenary involved in coups)"
+      ],
+      "world_heritage_sites": [],
+      "media_landscape": "State-run ORTC; few private media; limited press freedom",
+      "notes": "Blend of Swahili, Arab, Malagasy, French cultures; Grand Mariage social institution unique globally; matrilineal inheritance on some islands."
+    },
+    "legal_system": {
+      "legal_tradition": "Mixed: Islamic law and French civil law",
+      "constitution_year": 2018,
+      "sharia_applicability": "Personal status matters (marriage, inheritance)",
+      "customary_law_role": "Significant (Grand Mariage customs, matrilineal traditions)",
+      "icc_membership": "Non-state party",
+      "judicial_independence_score": 0.2,
+      "contract_enforcement_days": 506,
+      "property_rights_index": 30,
+      "notes": "Sharia influences family law; cadis (Islamic judges) handle personal cases; rotating island presidency abolished in 2018 constitutional referendum."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 49,
+        "global_rank": 165
+      },
+      "area": {
+        "continent_rank": 50,
+        "global_rank": 170
+      },
+      "gdp_nominal": {
+        "continent_rank": 49,
+        "global_rank": 175
+      },
+      "gdp_per_capita": {
+        "continent_rank": 28,
+        "global_rank": 152
+      },
+      "hdi": {
+        "continent_rank": 25,
+        "global_rank": 156
+      },
+      "life_expectancy": {
+        "continent_rank": 15,
+        "global_rank": 121
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 40,
+        "global_rank": 160
+      },
+      "internet_penetration": {
+        "continent_rank": 42,
+        "global_rank": 175
+      },
+      "press_freedom": {
+        "continent_rank": 38,
+        "global_rank": 115
+      },
+      "global_peace_index": {
+        "continent_rank": 15,
+        "global_rank": 90
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": ""
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Azali Assoumani",
       "title": "President",
       "since": "2016-05-26",
-      "notes": "Third term (also served 1999-2006); 2018 referendum removed island rotation system"
+      "notes": "Third term (also served 1999-2006); 2018 referendum removed island rotation system",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -274,7 +743,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

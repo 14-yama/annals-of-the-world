@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.862721Z",
-    "notes": "Comprehensive index for Cabo Verde covering uninhabited discovery, Portuguese colonisation, slave trade hub, PAIGC independence, and diaspora."
+    "notes": "Comprehensive index for Cabo Verde covering uninhabited discovery, Portuguese colonisation, slave trade hub, PAIGC independence, and diaspora.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Praia",
@@ -89,7 +90,22 @@
       "life_expectancy": 74.1,
       "infant_mortality_per_1k": 12.0,
       "literacy_rate_pct": 90.8,
-      "net_migration_rate": -3.3
+      "net_migration_rate": -3.3,
+      "population_growth_rate_pct": 1.0,
+      "urban_population_growth_rate_pct": 2.0,
+      "life_expectancy_male": 71.0,
+      "life_expectancy_female": 78.0,
+      "under5_mortality_per_1k": 15,
+      "sex_ratio": 0.94,
+      "dependency_ratio": 46,
+      "population_density_per_km2": 140,
+      "age_structure": {
+        "0_14_pct": 28,
+        "15_24_pct": 19,
+        "25_54_pct": 40,
+        "55_64_pct": 7,
+        "65_plus_pct": 6
+      }
     },
     "natural_resources": {
       "primary": [
@@ -114,7 +130,10 @@
         "AU",
         "ECOWAS"
       ],
-      "notes": "Tiny military; coast guard primary function (drug transshipment interdiction—Cape Verde on cocaine route Latin America→Europe); US/Portugal military cooperation; Drug Enforcement Agency (US) maritime cooperation"
+      "notes": "Tiny military; coast guard primary function (drug transshipment interdiction—Cape Verde on cocaine route Latin America→Europe); US/Portugal military cooperation; Drug Enforcement Agency (US) maritime cooperation",
+      "paramilitary_personnel": 0,
+      "conscription": true,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -139,14 +158,49 @@
         "Brazil"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 12.1
+      "remittances_pct_gdp": 12.1,
+      "total_exports_usd": "$90 million",
+      "total_imports_usd": "$950 million",
+      "top_export_destinations": [
+        "Spain",
+        "Portugal",
+        "Italy",
+        "India"
+      ],
+      "top_import_origins": [
+        "Portugal",
+        "Spain",
+        "Netherlands",
+        "China",
+        "Brazil"
+      ],
+      "trade_as_pct_gdp": 48,
+      "current_account_balance_usd": "-$160 million",
+      "trade_agreements": [
+        "ECOWAS",
+        "EU Special Partnership",
+        "AfCFTA"
+      ],
+      "special_economic_zones": [
+        "Lazareto (Mindelo)"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 73.0,
       "electricity_access_pct": 95.0,
       "mobile_subscriptions_per_100": 102,
       "railway_km": 0,
-      "paved_roads_pct": 69
+      "paved_roads_pct": 69,
+      "broadband_subscriptions_per_100": 4.2,
+      "4g_coverage_pct": 85,
+      "5g_availability": false,
+      "road_network_km": 1350,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "EllaLink (Europe-South America via Praia)",
+        "WACS"
+      ],
+      "notes": "EllaLink cable hub gives strategic connectivity advantage."
     },
     "international_memberships": [
       "UN",
@@ -175,6 +229,26 @@
       "fragile_states_index": {
         "score": 56.8,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.55,
+        "rank": 54,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": 0.0,
+        "percentile": 48,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.15,
+        "percentile": 42,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": 0.8,
+        "percentile": 75,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -189,12 +263,41 @@
         "volcanic eruptions (Fogo last erupted 2014)",
         "dust storms (Harmattan)"
       ],
-      "protected_areas_pct": 4
+      "protected_areas_pct": 4,
+      "average_temperature_c": 25,
+      "average_rainfall_mm": 230,
+      "co2_per_capita_t": 1.0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "Extremely high",
+      "environmental_performance_index": {
+        "score": 41.7,
+        "rank": 117,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 1000,
+        "endemic_species": 92,
+        "threatened_species": 60
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 109.3,
       "foreign_aid_received_usd": "195 million",
-      "notes": "High debt from infrastructure investment; graduated from LDC in 2007 (success story); tourism-dependent economy vulnerable to shocks; MCC (US Millennium Challenge) compacts"
+      "notes": "High debt from infrastructure investment; graduated from LDC in 2007 (success story); tourism-dependent economy vulnerable to shocks; MCC (US Millennium Challenge) compacts",
+      "external_debt_usd": "$1.9 billion",
+      "debt_service_pct_revenue": 12,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "Portugal",
+        "EU",
+        "Luxembourg",
+        "World Bank",
+        "AfDB"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": "Not applicable"
     },
     "education": {
       "primary_enrollment_pct": 95,
@@ -204,14 +307,41 @@
       "top_universities": [
         "University of Cabo Verde (Uni-CV)"
       ],
-      "notes": "Highest literacy rate in West Africa; Portuguese-language instruction; Creole (Kriolu) dominant spoken language; strong education investment; many students study abroad in Portugal/Brazil"
+      "notes": "Highest literacy rate in West Africa; Portuguese-language instruction; Creole (Kriolu) dominant spoken language; strong education investment; many students study abroad in Portugal/Brazil",
+      "education_expenditure_pct_gdp": 5.2,
+      "primary_completion_rate_pct": 96,
+      "gender_parity_index": 0.98,
+      "mean_years_of_schooling": 6.3,
+      "expected_years_of_schooling": 12.7,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 21,
+      "out_of_school_children": 3000,
+      "academic_freedom_index": 0.8
     },
     "diaspora_migration": {
       "diaspora_population": "700,000 (larger than homeland population of 600k)",
       "refugees_hosted": 100,
       "refugees_produced": 500,
       "remittances_usd": "230 million",
-      "notes": "More Cape Verdeans abroad than at home (unique globally); largest communities in USA (New England, especially Massachusetts ~265k), Portugal (~80k), France, Netherlands; remittances critical lifeline; transnational identity"
+      "notes": "More Cape Verdeans abroad than at home (unique globally); largest communities in USA (New England, especially Massachusetts ~265k), Portugal (~80k), France, Netherlands; remittances critical lifeline; transnational identity",
+      "diaspora_top_destinations": [
+        "Portugal",
+        "USA",
+        "France",
+        "Netherlands",
+        "Luxembourg"
+      ],
+      "asylum_seekers": 200,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Open (ECOWAS free movement)",
+      "remittances_pct_gdp": 12,
+      "net_migration_rate_per_1k": -1.2
     },
     "digital_economy": {
       "e_government_index": 0.54,
@@ -219,16 +349,357 @@
       "tech_hubs": [
         "Praia"
       ],
-      "notes": "Submarine cables (WACS/EllaLink) provide good connectivity; digital government advancing; tourism-tech growing; plans for tech hub/digital nomad visas; small but educated workforce"
+      "notes": "Submarine cables (WACS/EllaLink) provide good connectivity; digital government advancing; tourism-tech growing; plans for tech hub/digital nomad visas; small but educated workforce",
+      "e_participation_index": 0.38,
+      "ict_development_index": 4.3,
+      "mobile_money_accounts": 100000,
+      "digital_payments_pct_adults": 30,
+      "fintech_companies": 8,
+      "startup_ecosystem_value_usd": "$20 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.35,
+      "innovation_index_score": 26.2,
+      "innovation_index_rank": 89,
+      "ai_readiness_index": 0
     },
-    "notes_unique": ""
+    "notes_unique": "Volcanic archipelago 570 km off West Africa; developed a unique Creole culture blending African and Portuguese traditions; one of Africa's most stable democracies.",
+    "capital_coordinates": {
+      "lat": 14.9315,
+      "lon": -23.5133
+    },
+    "other_major_cities": [
+      "Mindelo",
+      "Santa Maria",
+      "Espargos",
+      "Assomada"
+    ],
+    "national_motto": "Unity, Work, Progress",
+    "national_anthem": "Cântico da Liberdade (Song of Freedom)",
+    "currency_code": "CVE",
+    "internet_tld": ".cv",
+    "utc_offset": "UTC-1",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 16.0021,
+        "lon": -24.0132
+      },
+      "bounding_box": {
+        "north": 17.2,
+        "south": 14.8,
+        "east": -22.66,
+        "west": -25.36
+      },
+      "land_area_km2": 4033,
+      "water_area_km2": 0,
+      "coastline_km": 965,
+      "borders": [],
+      "border_lengths_km": {},
+      "highest_point": {
+        "name": "Mount Fogo",
+        "elevation_m": 2829
+      },
+      "lowest_point": {
+        "name": "Atlantic Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Volcanic archipelago; rugged, rocky islands; steep cliffs; some flat sandy islands",
+      "land_use": {
+        "agricultural_pct": 18.6,
+        "arable_pct": 11.7,
+        "forest_pct": 21,
+        "other_pct": 60.4
+      },
+      "major_rivers": [],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 800000,
+      "landlocked": false,
+      "notes": "10 volcanic islands (9 inhabited) off West Africa; Fogo volcano last erupted 2014-15; Barlavento (windward) and Sotavento (leeward) island groups."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$2.2 billion",
+      "gdp_ppp_usd": "$4.5 billion",
+      "gdp_per_capita_nominal_usd": 3756,
+      "gdp_per_capita_ppp_usd": 7685,
+      "gdp_growth_rate_pct": 5.1,
+      "inflation_rate_pct": 3.2,
+      "unemployment_rate_pct": 12.2,
+      "youth_unemployment_rate_pct": 27.5,
+      "poverty_rate_pct": 35,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 42.4,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 5,
+        "industry_pct_gdp": 17,
+        "services_pct_gdp": 78
+      },
+      "labor_force": 240000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 13,
+        "industry_pct": 23,
+        "services_pct": 64
+      },
+      "fdi_inflow_usd": "$100 million",
+      "fdi_outflow_usd": "$2 million",
+      "foreign_exchange_reserves_usd": "$650 million",
+      "ease_of_doing_business_rank": 137,
+      "economic_freedom_index_score": 58.3,
+      "credit_rating": {
+        "moodys": "B3",
+        "sp": "B-",
+        "fitch": "B-"
+      },
+      "notes": "Service-based economy; tourism ~25% GDP; remittances ~12% GDP; AGOA beneficiary; EU Special Partnership."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 5.5,
+      "health_expenditure_per_capita_usd": 197,
+      "physicians_per_1k": 0.8,
+      "nurses_midwives_per_1k": 1.3,
+      "hospital_beds_per_1k": 2.1,
+      "maternal_mortality_per_100k": 58,
+      "hiv_prevalence_pct": 0.5,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 46,
+      "access_to_clean_water_pct": 92,
+      "access_to_sanitation_pct": 72,
+      "vaccination_coverage_pct": 92,
+      "stunting_under5_pct": 0,
+      "obesity_rate_pct": 11.8,
+      "universal_health_coverage_index": 62,
+      "leading_causes_of_death": [
+        "cardiovascular disease",
+        "cancer",
+        "respiratory diseases",
+        "diabetes"
+      ],
+      "notes": "Good health outcomes for sub-Saharan Africa; malaria eliminated; universal health coverage goal."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 50,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 11.7,
+      "agricultural_land_pct": 18.6,
+      "irrigated_land_pct": 6,
+      "major_crops": [
+        "maize",
+        "beans",
+        "sweet potatoes",
+        "sugarcane",
+        "bananas",
+        "coffee"
+      ],
+      "major_livestock": [
+        "goats",
+        "pigs",
+        "cattle"
+      ],
+      "food_import_dependency_pct": 80,
+      "cereal_yield_kg_per_hectare": 800,
+      "agricultural_employment_pct": 13,
+      "prevalence_of_undernourishment_pct": 12,
+      "notes": "Archipelago with limited arable land; imports 80%+ of food; drip irrigation expanding; fisheries important."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 68,
+        "hydroelectric_pct": 0,
+        "solar_pct": 5,
+        "wind_pct": 25,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 2
+      },
+      "installed_capacity_mw": 180,
+      "electricity_production_gwh": 450,
+      "electricity_consumption_per_capita_kwh": 700,
+      "energy_imports_pct": 68,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 5000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 80,
+      "energy_access_urban_pct": 98,
+      "notes": "Target 50% renewables by 2030; Cabeólica wind farms (25.5MW); excellent wind/solar resources; isolated island grids."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Amílcar Cabral International (Sal)",
+        "Nelson Mandela International (Praia)"
+      ],
+      "major_airports_domestic": [
+        "São Vicente",
+        "Boa Vista",
+        "Fogo"
+      ],
+      "national_airline": "TACV Cabo Verde Airlines (Bestfly)",
+      "major_seaports": [
+        "Porto Grande (Mindelo)",
+        "Praia"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 10,
+      "registered_vehicles_per_1k": 70,
+      "road_fatalities_per_100k": 18,
+      "notes": "Inter-island ferries critical; Sal and Boa Vista airports handle bulk of tourism."
+    },
+    "tourism": {
+      "annual_visitors": 900000,
+      "tourism_revenue_usd": "$550 million",
+      "tourism_pct_gdp": 25,
+      "tourism_employment_pct": 15,
+      "unesco_world_heritage_sites": 1,
+      "unesco_sites_list": [
+        "Cidade Velha (Ribeira Grande de Santiago)"
+      ],
+      "major_attractions": [
+        "Sal beaches",
+        "Fogo volcano",
+        "Mindelo Carnival",
+        "Cidade Velha",
+        "Santo Antão hiking",
+        "Boa Vista dunes"
+      ],
+      "visa_free_access_countries": 44,
+      "henley_passport_rank": 77,
+      "notes": "Tourism is economic lifeline; mainly European visitors (UK, Portugal, Netherlands); beach and adventure tourism."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Free",
+      "freedom_house_score": 92,
+      "gender_inequality_index": 0.37,
+      "gender_inequality_rank": 89,
+      "gender_gap_index_score": 0.73,
+      "women_in_parliament_pct": 42,
+      "women_labor_force_participation_pct": 52,
+      "maternal_mortality_per_100k": 58,
+      "child_marriage_pct": 8,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Legal (no recognition of same-sex unions)",
+      "death_penalty_status": "Abolished (1981)",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 6,
+      "notes": "One of Africa's strongest democracies; high gender representation in parliament."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.4,
+      "global_peace_index_rank": 30,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 5.6,
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$2 million",
+      "internally_displaced_persons": 0,
+      "notes": "One of the most stable and peaceful countries in Africa."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "torch of freedom"
+      ],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "Cachupa (corn and bean stew)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Carnival (Mindelo)",
+        "Festival Baía das Gatas (music)",
+        "Gamboa Festival"
+      ],
+      "cuisine_highlights": [
+        "cachupa rica",
+        "pastéis de atum (tuna pastries)",
+        "grogue (sugarcane rum)",
+        "caldo de peixe"
+      ],
+      "music_art_traditions": [
+        "Morna (Cesária Évora)",
+        "Coladeira",
+        "Funaná",
+        "Batuque"
+      ],
+      "film_industry": "Small but growing",
+      "intangible_heritage_items": [
+        "Morna (UNESCO 2019)"
+      ],
+      "notable_historical_figures": [
+        "Amílcar Cabral (independence leader)",
+        "Cesária Évora (musician)",
+        "Aristides Pereira"
+      ],
+      "world_heritage_sites": [
+        "Cidade Velha, Historic Centre of Ribeira Grande"
+      ],
+      "media_landscape": "Free and independent press; RTTV public broadcaster",
+      "notes": "Creole culture blending African and Portuguese traditions; morna music is signature cultural export."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (Portuguese heritage)",
+      "constitution_year": 1992,
+      "sharia_applicability": "None",
+      "customary_law_role": "Minimal",
+      "icc_membership": "State Party",
+      "judicial_independence_score": 0.55,
+      "contract_enforcement_days": 425,
+      "property_rights_index": 50,
+      "notes": "Independent judiciary; one of Africa's best-functioning legal systems; anti-corruption mechanisms."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 50,
+        "global_rank": 173
+      },
+      "area": {
+        "continent_rank": 51,
+        "global_rank": 165
+      },
+      "gdp_nominal": {
+        "continent_rank": 46,
+        "global_rank": 163
+      },
+      "gdp_per_capita": {
+        "continent_rank": 12,
+        "global_rank": 120
+      },
+      "hdi": {
+        "continent_rank": 5,
+        "global_rank": 130
+      },
+      "life_expectancy": {
+        "continent_rank": 3,
+        "global_rank": 95
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 22,
+        "global_rank": 137
+      },
+      "internet_penetration": {
+        "continent_rank": 5,
+        "global_rank": 77
+      },
+      "press_freedom": {
+        "continent_rank": 1,
+        "global_rank": 31
+      },
+      "global_peace_index": {
+        "continent_rank": 2,
+        "global_rank": 30
+      },
+      "innovation_index": {
+        "continent_rank": 4,
+        "global_rank": 89
+      },
+      "notes": "Consistently ranks among Africa's top performers in governance, peace, and press freedom."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "José Maria Neves",
       "title": "President",
       "since": "2021-11-09",
-      "notes": "PAICV; former Prime Minister"
+      "notes": "PAICV; former Prime Minister",
+      "party": ""
     },
     "prime_minister": {
       "name": "Ulisses Correia e Silva",
@@ -260,7 +731,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

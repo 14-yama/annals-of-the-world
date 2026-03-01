@@ -3,8 +3,354 @@
     "country_slug": "cabo-verde",
     "node_kind": "events",
     "registry": "docs/nodes/node-attribute-registry.md",
-    "generated_at": "2026-01-31T13:56:07.798128Z",
-    "notes": "Country-scoped curated nodes; link via relationships during ingest."
+    "generated_at": "2026-02-28T19:21:41.660833Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
   },
-  "nodes": []
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Geological_Cabo_Verde_Event",
+        "name": "Geological and Pre-Human History",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Geological_Cabo_Verde",
+        "description": "Volcanic archipelago formation; no indigenous human population; uninhabited until European arrival.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Praia"
+        },
+        "startYear": -20000000,
+        "endYear": 1456
+      },
+      {
+        "slug": "Volcanic_Formation_CV_Event",
+        "name": "Volcanic Formation of the Archipelago",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Geological_Cabo_Verde",
+        "description": "Hotspot volcanism creates ten islands and several islets off the West African coast.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Cabo Verde"
+        },
+        "startYear": -20000000,
+        "endYear": -100000
+      },
+      {
+        "slug": "Uninhabited_Archipelago_Event",
+        "name": "Uninhabited Archipelago",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Geological_Cabo_Verde",
+        "description": "No evidence of pre-European settlement; possible visits by Arab and African sailors.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Cabo Verde"
+        },
+        "startYear": -100000,
+        "endYear": 1456
+      }
+    ],
+    "920": [
+      {
+        "slug": "Portuguese_Discovery_CV_Event",
+        "name": "Portuguese Discovery and Early Settlement",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Portuguese_Discovery_CV",
+        "description": "Genoese-Portuguese discovery; settlement of Santiago; founding of Ribeira Grande.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Praia"
+        },
+        "startYear": 1456,
+        "endYear": 1600
+      },
+      {
+        "slug": "Discovery_1456_Event",
+        "name": "Discovery by Cadamosto and da Noli",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Portuguese_Discovery_CV",
+        "description": "António de Noli and Alvise Cadamosto discover the uninhabited islands for Portugal.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Cabo Verde"
+        },
+        "startYear": 1456,
+        "endYear": 1462
+      },
+      {
+        "slug": "Ribeira_Grande_Founded_Event",
+        "name": "Founding of Ribeira Grande",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Portuguese_Discovery_CV",
+        "description": "First European city in the tropics; Cidade Velha; receives city charter 1533.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Cabo Verde"
+        },
+        "startYear": 1462,
+        "endYear": 1533
+      }
+    ],
+    "930": [
+      {
+        "slug": "Slave_Trade_Hub_CV_Event",
+        "name": "Atlantic Slave Trade Hub",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Slave_Trade_Hub_CV",
+        "description": "Cabo Verde as crucial waystation and slave depot in the transatlantic slave trade; Creole society formation.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Praia"
+        },
+        "startYear": 1500,
+        "endYear": 1876
+      },
+      {
+        "slug": "Santiago_Slave_Depot_Event",
+        "name": "Santiago Slave Depot",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Slave_Trade_Hub_CV",
+        "description": "Enslaved Africans from Guinea coast processed through Santiago before shipment to Americas.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Cabo Verde"
+        },
+        "startYear": 1500,
+        "endYear": 1700
+      },
+      {
+        "slug": "Creole_Society_CV_Event",
+        "name": "Criolo Society Formation",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Slave_Trade_Hub_CV",
+        "description": "Mestiço Creole population; Kriolu language development; unique Afro-Portuguese culture.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Cabo Verde"
+        },
+        "startYear": 1500,
+        "endYear": 1800
+      }
+    ],
+    "940": [
+      {
+        "slug": "Late_Colonial_CV_Event",
+        "name": "Late Colonial Cabo Verde",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Late_Colonial_CV",
+        "description": "Abolition of slavery; recurring famines; Mindelo coaling station; colonial neglect.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Praia"
+        },
+        "startYear": 1800,
+        "endYear": 1974
+      },
+      {
+        "slug": "Abolition_CV_Event",
+        "name": "Abolition of Slavery in Cabo Verde",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Late_Colonial_CV",
+        "description": "Gradual emancipation; contract labour replaces slavery; plantation system declines.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Cabo Verde"
+        },
+        "startYear": 1856,
+        "endYear": 1878
+      },
+      {
+        "slug": "Famines_CV_Event",
+        "name": "Recurring Famines",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Late_Colonial_CV",
+        "description": "Devastating droughts and famines kill tens of thousands; 1941–1943 famine kills ~30,000; Portuguese neglect.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Cabo Verde"
+        },
+        "startYear": 1830,
+        "endYear": 1950
+      }
+    ],
+    "950": [
+      {
+        "slug": "Liberation_PAIGC_CV_Event",
+        "name": "PAIGC Liberation and Independence",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Liberation_PAIGC_CV",
+        "description": "Amílcar Cabral's PAIGC; Guinea-Bissau-Cabo Verde joint liberation; independence 1975; 1980 split.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Praia"
+        },
+        "startYear": 1956,
+        "endYear": 1980
+      },
+      {
+        "slug": "PAIGC_Founded_CV_Event",
+        "name": "PAIGC Founded (Cabo Verde Wing)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Liberation_PAIGC_CV",
+        "description": "Amílcar Cabral founds PAIGC for dual liberation of Guinea-Bissau and Cabo Verde.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Cabo Verde"
+        },
+        "startYear": 1956,
+        "endYear": 1974
+      },
+      {
+        "slug": "Independence_1975_CV_Event",
+        "name": "Independence of Cabo Verde",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Liberation_PAIGC_CV",
+        "description": "Independence 5 July 1975 after Portuguese Carnation Revolution; Aristides Pereira president.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Cabo Verde"
+        },
+        "startYear": 1975,
+        "endYear": 1975
+      }
+    ],
+    "960": [
+      {
+        "slug": "Democratic_Cabo_Verde_Event",
+        "name": "Democratic Cabo Verde",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Democratic_Cabo_Verde",
+        "description": "Multiparty democracy; PAICV-MpD alternation; economic liberalisation; diaspora connections.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Praia"
+        },
+        "startYear": 1990,
+        "endYear": 2026
+      },
+      {
+        "slug": "Multiparty_Transition_CV_Event",
+        "name": "Multiparty Transition",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Democratic_Cabo_Verde",
+        "description": "Constitutional reform; MpD wins 1991 elections; peaceful democratic transition.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Cabo Verde"
+        },
+        "startYear": 1990,
+        "endYear": 1991
+      },
+      {
+        "slug": "Economic_Development_CV_Event",
+        "name": "Economic Development Model",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "pt",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Democratic_Cabo_Verde",
+        "description": "Tourism-led growth; ECOWAS integration; graduation from LDC status 2007; mid-income aspirations.",
+        "location": {
+          "country_slug": "cabo-verde",
+          "place_note": "Cabo Verde"
+        },
+        "startYear": 1991,
+        "endYear": 2026
+      }
+    ]
+  }
 }

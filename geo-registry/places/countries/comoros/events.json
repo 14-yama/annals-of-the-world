@@ -3,8 +3,408 @@
     "country_slug": "comoros",
     "node_kind": "events",
     "registry": "docs/nodes/node-attribute-registry.md",
-    "generated_at": "2026-01-31T13:56:07.804942Z",
-    "notes": "Country-scoped curated nodes; link via relationships during ingest."
+    "generated_at": "2026-02-28T19:21:41.660833Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
   },
-  "nodes": []
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Volcanic_Origins_Comoros_Event",
+        "name": "Volcanic Origins and Early Settlement",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Volcanic_Origins_Comoros",
+        "description": "Volcanic archipelago formation in the Mozambique Channel; earliest Bantu and Austronesian settlers arrive.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Moroni"
+        },
+        "startYear": -500,
+        "endYear": 800
+      },
+      {
+        "slug": "Volcanic_Formation_KM_Event",
+        "name": "Volcanic Formation of the Archipelago",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Volcanic_Origins_Comoros",
+        "description": "Formation of Grande Comore, Mohéli, Anjouan, and Mayotte through volcanic activity; Mount Karthala as active volcano.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Comoros"
+        },
+        "startYear": -5000000,
+        "endYear": -500
+      },
+      {
+        "slug": "Early_Settlers_KM_Event",
+        "name": "Early Bantu and Austronesian Settlers",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Volcanic_Origins_Comoros",
+        "description": "Bantu-speaking peoples from East Africa and possible Austronesian influence; proto-Swahili settlements.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Comoros"
+        },
+        "startYear": -500,
+        "endYear": 800
+      }
+    ],
+    "920": [
+      {
+        "slug": "Swahili_Sultanates_KM_Event",
+        "name": "Swahili-Arab Sultanates",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Swahili_Sultanates_KM",
+        "description": "Islamisation of the islands; establishment of competing sultanates; Shirazi and Arab merchant influence; integration into Indian Ocean trade networks.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Moroni"
+        },
+        "startYear": 800,
+        "endYear": 1600
+      },
+      {
+        "slug": "Islamisation_Comoros_Event",
+        "name": "Islamisation of the Comoros",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Swahili_Sultanates_KM",
+        "description": "Arrival of Arab and Shirazi traders; conversion to Islam; oldest mosques built; Islamic culture becomes dominant.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Comoros"
+        },
+        "startYear": 800,
+        "endYear": 1200
+      },
+      {
+        "slug": "Sultanate_System_KM_Event",
+        "name": "Competing Sultanate System",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Swahili_Sultanates_KM",
+        "description": "Multiple sultanates on each island; Ndzuwani (Anjouan) and Ngazidja (Grande Comore) most powerful; trade in slaves, spices, and ambergris.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Comoros"
+        },
+        "startYear": 1200,
+        "endYear": 1600
+      }
+    ],
+    "930": [
+      {
+        "slug": "European_Contact_KM_Event",
+        "name": "European Contact and Sultanate Decline",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "European_Contact_KM",
+        "description": "Portuguese sighting; Malagasy raids from Madagascar; internal sultanate warfare; gradual French interest.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Moroni"
+        },
+        "startYear": 1500,
+        "endYear": 1843
+      },
+      {
+        "slug": "Portuguese_Arrival_KM_Event",
+        "name": "Portuguese Contact",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "European_Contact_KM",
+        "description": "Portuguese navigators visit the Comoros en route to India; limited lasting impact on the islands.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Comoros"
+        },
+        "startYear": 1505,
+        "endYear": 1600
+      },
+      {
+        "slug": "Malagasy_Raids_KM_Event",
+        "name": "Malagasy Raids and Internal Conflicts",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "European_Contact_KM",
+        "description": "Devastating Sakalava and Betsimisaraka raids from Madagascar; slave raiding; inter-sultanate warfare weakens islands.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Comoros"
+        },
+        "startYear": 1600,
+        "endYear": 1800
+      }
+    ],
+    "940": [
+      {
+        "slug": "French_Colonial_Comoros_Event",
+        "name": "French Colonial Comoros",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "French_Colonial_Comoros",
+        "description": "French protectorates then full colonisation; plantation economy (ylang-ylang, vanilla); administered from Madagascar.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Moroni"
+        },
+        "startYear": 1843,
+        "endYear": 1975
+      },
+      {
+        "slug": "Protectorate_Annexation_KM_Event",
+        "name": "Protectorates and Annexation",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "French_Colonial_Comoros",
+        "description": "France establishes protectorates over remaining islands; full annexation 1912; Comoros attached to Madagascar colony.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Comoros"
+        },
+        "startYear": 1886,
+        "endYear": 1912
+      },
+      {
+        "slug": "Plantation_Economy_KM_Event",
+        "name": "Plantation Economy",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "French_Colonial_Comoros",
+        "description": "French settlers establish ylang-ylang, vanilla, and clove plantations; forced labour; economic dependency on cash crops.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Comoros"
+        },
+        "startYear": 1900,
+        "endYear": 1975
+      }
+    ],
+    "950": [
+      {
+        "slug": "Independence_Mayotte_Split_Event",
+        "name": "Independence and Mayotte Separation",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Independence_Mayotte_Split",
+        "description": "Unilateral declaration of independence 1975; Mayotte votes to remain French; Ali Soilih's revolutionary regime.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Moroni"
+        },
+        "startYear": 1975,
+        "endYear": 1978
+      },
+      {
+        "slug": "Independence_1975_KM_Event",
+        "name": "Independence Declaration",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Independence_Mayotte_Split",
+        "description": "Ahmed Abdallah declares independence 6 July 1975; three islands vote yes, Mayotte votes to stay French.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Comoros"
+        },
+        "startYear": 1975,
+        "endYear": 1975
+      },
+      {
+        "slug": "Ali_Soilih_Revolution_Event",
+        "name": "Ali Soilih Revolutionary Regime",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Independence_Mayotte_Split",
+        "description": "Ali Soilih overthrows Abdallah; radical socialist youth revolution; destruction of civil records; anti-tradition campaigns.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Comoros"
+        },
+        "startYear": 1975,
+        "endYear": 1978
+      },
+      {
+        "slug": "Denard_Mercenary_Era_Event",
+        "name": "Bob Denard Mercenary Coups",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Denard_Mercenary_Era",
+        "description": "French mercenary Bob Denard dominates Comorian politics through serial coups; Abdallah restored then killed; instability.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Moroni"
+        },
+        "startYear": 1978,
+        "endYear": 1995
+      },
+      {
+        "slug": "Denard_Coup_1978_Event",
+        "name": "1978 Denard Coup and Abdallah Restoration",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Denard_Mercenary_Era",
+        "description": "Bob Denard overthrows Ali Soilih; restores Ahmed Abdallah; Denard commands presidential guard; Abdallah killed 1989.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Comoros"
+        },
+        "startYear": 1978,
+        "endYear": 1989
+      },
+      {
+        "slug": "Denard_Coup_1995_Event",
+        "name": "1995 Denard Coup Attempt",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Denard_Mercenary_Era",
+        "description": "Denard stages final coup; French military intervention restores order; Denard arrested and deported.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Comoros"
+        },
+        "startYear": 1995,
+        "endYear": 1995
+      }
+    ],
+    "960": [
+      {
+        "slug": "Separatism_Reconciliation_KM_Event",
+        "name": "Island Separatism and Reconciliation",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Separatism_Reconciliation_KM",
+        "description": "Anjouan and Mohéli secessions; African Union intervention; new union constitution; ongoing inter-island tensions.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Moroni"
+        },
+        "startYear": 1997,
+        "endYear": 2026
+      },
+      {
+        "slug": "Anjouan_Secession_Event",
+        "name": "Anjouan and Mohéli Secessions",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Separatism_Reconciliation_KM",
+        "description": "Anjouan and Mohéli declare independence from Comoros 1997; OAU/AU mediation efforts.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Comoros"
+        },
+        "startYear": 1997,
+        "endYear": 2001
+      },
+      {
+        "slug": "Union_Constitution_KM_Event",
+        "name": "Union of the Comoros Constitution",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ar",
+        "script": "Arab",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Separatism_Reconciliation_KM",
+        "description": "2001 Fomboni Accords; rotating presidency between islands; autonomous island governments; continued tensions.",
+        "location": {
+          "country_slug": "comoros",
+          "place_note": "Comoros"
+        },
+        "startYear": 2001,
+        "endYear": 2009
+      }
+    ]
+  }
 }

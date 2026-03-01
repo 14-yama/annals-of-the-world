@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.867487Z",
-    "notes": "Comprehensive index for Djibouti covering Afar and Issa peoples, French Somaliland, strategic location at Bab el-Mandeb, independence 1977, foreign military bases, and the Guelleh era."
+    "notes": "Comprehensive index for Djibouti covering Afar and Issa peoples, French Somaliland, strategic location at Bab el-Mandeb, independence 1977, foreign military bases, and the Guelleh era.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Djibouti City",
@@ -98,7 +99,22 @@
       "life_expectancy": 64.7,
       "infant_mortality_per_1k": 43.0,
       "literacy_rate_pct": 70.0,
-      "net_migration_rate": 2.5
+      "net_migration_rate": 2.5,
+      "population_growth_rate_pct": 1.5,
+      "urban_population_growth_rate_pct": 1.8,
+      "life_expectancy_male": 63,
+      "life_expectancy_female": 67,
+      "under5_mortality_per_1k": 50,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 56,
+      "population_density_per_km2": 46,
+      "age_structure": {
+        "0_14_pct": 30,
+        "15_24_pct": 21,
+        "25_54_pct": 39,
+        "55_64_pct": 6,
+        "65_plus_pct": 4
+      }
     },
     "natural_resources": {
       "primary": [
@@ -123,7 +139,10 @@
         "Arab League",
         "IGAD"
       ],
-      "notes": "Hosts world's largest concentration of foreign military bases: France (2,000 troops, largest overseas), USA (Camp Lemonnier, 4,000, only permanent Africa base), China (first overseas base, 2017), Japan, Italy, Saudi Arabia, Germany, Spain; geostrategic rent seeker"
+      "notes": "Hosts world's largest concentration of foreign military bases: France (2,000 troops, largest overseas), USA (Camp Lemonnier, 4,000, only permanent Africa base), China (first overseas base, 2017), Japan, Italy, Saudi Arabia, Germany, Spain; geostrategic rent seeker",
+      "paramilitary_personnel": 2500,
+      "conscription": false,
+      "global_firepower_rank": 133
     },
     "trade": {
       "top_exports": [
@@ -148,14 +167,52 @@
         "India"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 2.0
+      "remittances_pct_gdp": 2.0,
+      "total_exports_usd": "$600 million",
+      "total_imports_usd": "$2.5 billion",
+      "top_export_destinations": [
+        "Ethiopia",
+        "Somalia",
+        "Qatar",
+        "Brazil"
+      ],
+      "top_import_origins": [
+        "China",
+        "UAE",
+        "India",
+        "Ethiopia",
+        "France"
+      ],
+      "trade_as_pct_gdp": 84,
+      "current_account_balance_usd": "$200 million",
+      "trade_agreements": [
+        "COMESA",
+        "IGAD",
+        "AfCFTA"
+      ],
+      "special_economic_zones": [
+        "Djibouti International Free Trade Zone (DIFTZ)"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 69.0,
       "electricity_access_pct": 65.0,
       "mobile_subscriptions_per_100": 43,
       "railway_km": 100,
-      "paved_roads_pct": 45
+      "paved_roads_pct": 45,
+      "broadband_subscriptions_per_100": 2.5,
+      "4g_coverage_pct": 85,
+      "5g_availability": false,
+      "road_network_km": 3065,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "EASSy",
+        "DARE1",
+        "PEACE",
+        "AAE-1",
+        "SeaMeWe-5"
+      ],
+      "notes": "Major submarine cable landing point; excellent connectivity."
     },
     "international_memberships": [
       "UN",
@@ -185,6 +242,26 @@
       "fragile_states_index": {
         "score": 83.0,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.35,
+        "rank": 125,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.7,
+        "percentile": 17,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.5,
+        "percentile": 25,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.2,
+        "percentile": 32,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -200,12 +277,41 @@
         "dust storms",
         "cyclones (rare)"
       ],
-      "protected_areas_pct": 3
+      "protected_areas_pct": 3,
+      "average_temperature_c": 30,
+      "average_rainfall_mm": 150,
+      "co2_per_capita_t": 0.7,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "Extremely high",
+      "environmental_performance_index": {
+        "score": 26.0,
+        "rank": 171,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 900,
+        "endemic_species": 10,
+        "threatened_species": 30
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 41.0,
       "foreign_aid_received_usd": "210 million",
-      "notes": "Chinese debt concerns (Djibouti-Addis railway $4B); military base rentals major revenue; port revenues growing; small economy but strategic global importance disproportionate to size"
+      "notes": "Chinese debt concerns (Djibouti-Addis railway $4B); military base rentals major revenue; port revenues growing; small economy but strategic global importance disproportionate to size",
+      "external_debt_usd": "$4 billion",
+      "debt_service_pct_revenue": 18,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA",
+        "France",
+        "Japan",
+        "EU",
+        "World Bank"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Not applicable"
     },
     "education": {
       "primary_enrollment_pct": 68,
@@ -215,14 +321,40 @@
       "top_universities": [
         "University of Djibouti"
       ],
-      "notes": "French/Arabic bilingual instruction; nomadic Afar/Issa populations hard to reach; French military schools available; small scale means limited higher education; students study abroad in France/Ethiopia"
+      "notes": "French/Arabic bilingual instruction; nomadic Afar/Issa populations hard to reach; French military schools available; small scale means limited higher education; students study abroad in France/Ethiopia",
+      "education_expenditure_pct_gdp": 3.6,
+      "primary_completion_rate_pct": 55,
+      "gender_parity_index": 0.89,
+      "mean_years_of_schooling": 4.1,
+      "expected_years_of_schooling": 6.8,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 35,
+      "out_of_school_children": 40000,
+      "academic_freedom_index": 0.2
     },
     "diaspora_migration": {
       "diaspora_population": "100,000 (France, Ethiopia, Yemen)",
       "refugees_hosted": 35000,
       "refugees_produced": 1000,
       "remittances_usd": "50 million",
-      "notes": "Strategic refugee transit point (Yemen, Somalia, Ethiopia flows); Ethiopian refugees significant; Afar/Issa Horn migration patterns; transit point for migrants heading to Gulf states; UNHCR presence significant"
+      "notes": "Strategic refugee transit point (Yemen, Somalia, Ethiopia flows); Ethiopian refugees significant; Afar/Issa Horn migration patterns; transit point for migrants heading to Gulf states; UNHCR presence significant",
+      "diaspora_top_destinations": [
+        "France",
+        "Ethiopia",
+        "Canada",
+        "USA"
+      ],
+      "asylum_seekers": 1000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 5000,
+      "immigration_policy": "Open to Ethiopian/Somali migrants (transit hub)",
+      "remittances_pct_gdp": 1.5,
+      "net_migration_rate_per_1k": 3.0
     },
     "digital_economy": {
       "e_government_index": 0.42,
@@ -230,16 +362,355 @@
       "tech_hubs": [
         "Djibouti City"
       ],
-      "notes": "Critical submarine cable landing point (13+ cables including SEA-ME-WE); data center hub potential for East Africa; Djibouti Internet Exchange improving regional connectivity; government monopoly telecom (Djibouti Telecom) limits competition"
+      "notes": "Critical submarine cable landing point (13+ cables including SEA-ME-WE); data center hub potential for East Africa; Djibouti Internet Exchange improving regional connectivity; government monopoly telecom (Djibouti Telecom) limits competition",
+      "e_participation_index": 0.2,
+      "ict_development_index": 1.8,
+      "mobile_money_accounts": 200000,
+      "digital_payments_pct_adults": 12,
+      "fintech_companies": 3,
+      "startup_ecosystem_value_usd": "$5 million",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0.15,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 0
     },
-    "notes_unique": ""
+    "notes_unique": "Strategic location at the Bab el-Mandeb strait; hosts military bases of the US, France, China, Japan, and Italy — the densest concentration of foreign bases in the world.",
+    "capital_coordinates": {
+      "lat": 11.5721,
+      "lon": 43.1456
+    },
+    "other_major_cities": [
+      "Ali Sabieh",
+      "Tadjoura",
+      "Obock",
+      "Dikhil",
+      "Arta"
+    ],
+    "national_motto": "Unity, Equality, Peace",
+    "national_anthem": "Jabuuti (Djibouti)",
+    "currency_code": "DJF",
+    "internet_tld": ".dj",
+    "utc_offset": "UTC+3",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 11.8251,
+        "lon": 42.5903
+      },
+      "bounding_box": {
+        "north": 12.71,
+        "south": 10.94,
+        "east": 43.45,
+        "west": 41.77
+      },
+      "land_area_km2": 23200,
+      "water_area_km2": 0,
+      "coastline_km": 314,
+      "borders": [
+        "Eritrea",
+        "Ethiopia",
+        "Somalia"
+      ],
+      "border_lengths_km": {
+        "Eritrea": 125,
+        "Ethiopia": 342,
+        "Somalia": 61
+      },
+      "highest_point": {
+        "name": "Moussa Ali",
+        "elevation_m": 2028
+      },
+      "lowest_point": {
+        "name": "Lac Assal",
+        "elevation_m": -155
+      },
+      "terrain": "Volcanic desert; barren coastal plain; central mountains; Great Rift Valley ",
+      "land_use": {
+        "agricultural_pct": 73.4,
+        "arable_pct": 0.1,
+        "forest_pct": 0.2,
+        "other_pct": 26.4
+      },
+      "major_rivers": [],
+      "major_lakes": [
+        "Lac Assal (saltiest lake outside Antarctica)",
+        "Lac Abbé"
+      ],
+      "exclusive_economic_zone_km2": 7037,
+      "landlocked": false,
+      "notes": "Strategic location at Bab el-Mandeb strait; Lac Assal is Africa's lowest point (-155m) and 3rd lowest on Earth; Afar Triangle triple junction."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$3.7 billion",
+      "gdp_ppp_usd": "$6.3 billion",
+      "gdp_per_capita_nominal_usd": 3447,
+      "gdp_per_capita_ppp_usd": 5882,
+      "gdp_growth_rate_pct": 6.5,
+      "inflation_rate_pct": 2.0,
+      "unemployment_rate_pct": 26,
+      "youth_unemployment_rate_pct": 60,
+      "poverty_rate_pct": 21,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 41.6,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 2,
+        "industry_pct_gdp": 17,
+        "services_pct_gdp": 81
+      },
+      "labor_force": 250000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 0,
+        "industry_pct": 15,
+        "services_pct": 85
+      },
+      "fdi_inflow_usd": "$200 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$450 million",
+      "ease_of_doing_business_rank": 112,
+      "economic_freedom_index_score": 54.4,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Strategic port economy; landlocked Ethiopia's main trade gateway (95%); foreign military bases (France, USA, China, Japan, Italy); Djibouti International Free Trade Zone."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 2.0,
+      "health_expenditure_per_capita_usd": 60,
+      "physicians_per_1k": 0.22,
+      "nurses_midwives_per_1k": 0.9,
+      "hospital_beds_per_1k": 1.4,
+      "maternal_mortality_per_100k": 234,
+      "hiv_prevalence_pct": 0.8,
+      "malaria_incidence_per_1k": 20,
+      "tuberculosis_incidence_per_100k": 260,
+      "access_to_clean_water_pct": 77,
+      "access_to_sanitation_pct": 60,
+      "vaccination_coverage_pct": 70,
+      "stunting_under5_pct": 21,
+      "obesity_rate_pct": 13.5,
+      "universal_health_coverage_index": 40,
+      "leading_causes_of_death": [
+        "tuberculosis",
+        "lower respiratory infections",
+        "diarrheal diseases",
+        "ischaemic heart disease",
+        "HIV/AIDS"
+      ],
+      "notes": "TB is major health challenge; khat (mildly narcotic plant) chewing widespread; high urban concentration of health services."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 30,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 0.1,
+      "agricultural_land_pct": 73.4,
+      "irrigated_land_pct": 0.5,
+      "major_crops": [
+        "fruits",
+        "vegetables (limited)"
+      ],
+      "major_livestock": [
+        "goats",
+        "sheep",
+        "cattle",
+        "camels"
+      ],
+      "food_import_dependency_pct": 90,
+      "cereal_yield_kg_per_hectare": 0,
+      "agricultural_employment_pct": 0,
+      "prevalence_of_undernourishment_pct": 15,
+      "notes": "Nearly zero arable land; 90% food imported; pastoral nomadism (Afar/Issa); fisheries potential underutilized."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 60,
+        "hydroelectric_pct": 0,
+        "solar_pct": 5,
+        "wind_pct": 15,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 20
+      },
+      "installed_capacity_mw": 130,
+      "electricity_production_gwh": 450,
+      "electricity_consumption_per_capita_kwh": 350,
+      "energy_imports_pct": 30,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 13000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 15,
+      "energy_access_urban_pct": 65,
+      "notes": "Imports electricity from Ethiopia (hydro interconnect); geothermal potential at Lake Assal; Goubet wind farm; solar projects underway."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Djibouti–Ambouli International Airport"
+      ],
+      "major_airports_domestic": [],
+      "national_airline": "Air Djibouti",
+      "major_seaports": [
+        "Doraleh Container Terminal",
+        "Djibouti Port (old)",
+        "Doraleh Multi-Purpose Port"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 25,
+      "road_fatalities_per_100k": 20,
+      "notes": "Doraleh is one of most advanced ports in East Africa; Addis Ababa–Djibouti Railway (electrified, Chinese-built, 2018); key maritime chokepoint."
+    },
+    "tourism": {
+      "annual_visitors": 51000,
+      "tourism_revenue_usd": "$30 million",
+      "tourism_pct_gdp": 0.8,
+      "tourism_employment_pct": 2,
+      "unesco_world_heritage_sites": 0,
+      "unesco_sites_list": [],
+      "major_attractions": [
+        "Lac Assal",
+        "Lac Abbé (chimneys)",
+        "Moucha Island",
+        "Whale shark diving (Gulf of Tadjoura)",
+        "Day Forest National Park"
+      ],
+      "visa_free_access_countries": 43,
+      "henley_passport_rank": 86,
+      "notes": "Whale shark diving unique attraction; Lac Abbé otherworldly landscape (Planet of the Apes filming); diving in Gulf of Aden."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 24,
+      "gender_inequality_index": 0.47,
+      "gender_inequality_rank": 127,
+      "gender_gap_index_score": 0.0,
+      "women_in_parliament_pct": 26,
+      "women_labor_force_participation_pct": 37,
+      "maternal_mortality_per_100k": 234,
+      "child_marriage_pct": 5,
+      "fgm_prevalence_pct": 93,
+      "lgbtq_legal_status": "Legal (no protections)",
+      "death_penalty_status": "Abolitionist in practice",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 8,
+      "notes": "Very high FGM prevalence (93%); one-party dominant system (RPP); media severely restricted; major migrant transit point."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.0,
+      "global_peace_index_rank": 100,
+      "terrorism_index_score": 2.0,
+      "terrorism_index_rank": 65,
+      "homicide_rate_per_100k": 2.7,
+      "active_conflicts": [],
+      "border_disputes": [
+        "Ras Doumeira (with Eritrea, Qatar mediated)"
+      ],
+      "un_peacekeeping_contributions": 1000,
+      "arms_imports_usd": "$15 million",
+      "internally_displaced_persons": 5000,
+      "notes": "Strategic military location; hosts Camp Lemonnier (US, ~4500 troops), Chinese PLA Support Base, French Forces, Japanese and Italian bases; border dispute with Eritrea resolved after Qatar withdrawal."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "red star"
+      ],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "Fah-fah (goat soup)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Independence Day (27 June)",
+        "Afar traditional ceremonies"
+      ],
+      "cuisine_highlights": [
+        "fah-fah",
+        "laxooh (crepe-like bread)",
+        "skoudehkaris (spiced rice with lamb)",
+        "halva"
+      ],
+      "music_art_traditions": [
+        "Afar and Somali oral poetry",
+        "oud music",
+        "dhaanto dance"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "Hassan Gouled Aptidon (first president)",
+        "Ahmed Dini Ahmed (independence advocate)"
+      ],
+      "world_heritage_sites": [],
+      "media_landscape": "State-controlled (RTD); limited independent media; internet restricted",
+      "notes": "Afar and Issa-Somali cultures predominate; French colonial legacy; strategic crossroads of Africa and Arabia."
+    },
+    "legal_system": {
+      "legal_tradition": "Mixed: civil law (French), Islamic law, customary law",
+      "constitution_year": 1992,
+      "sharia_applicability": "Family law (personal status, inheritance)",
+      "customary_law_role": "Afar and Issa customary law applied in traditional matters",
+      "icc_membership": "State Party",
+      "judicial_independence_score": 0.15,
+      "contract_enforcement_days": 1225,
+      "property_rights_index": 30,
+      "notes": "Sharia in family matters; Xeer (Somali customary law) used; French civil code commercial law; one-party dominance limits judicial independence."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 48,
+        "global_rank": 160
+      },
+      "area": {
+        "continent_rank": 46,
+        "global_rank": 149
+      },
+      "gdp_nominal": {
+        "continent_rank": 42,
+        "global_rank": 158
+      },
+      "gdp_per_capita": {
+        "continent_rank": 15,
+        "global_rank": 127
+      },
+      "hdi": {
+        "continent_rank": 29,
+        "global_rank": 164
+      },
+      "life_expectancy": {
+        "continent_rank": 16,
+        "global_rank": 125
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 15,
+        "global_rank": 112
+      },
+      "internet_penetration": {
+        "continent_rank": 12,
+        "global_rank": 95
+      },
+      "press_freedom": {
+        "continent_rank": 50,
+        "global_rank": 164
+      },
+      "global_peace_index": {
+        "continent_rank": 18,
+        "global_rank": 100
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": "Punches above its weight economically due to strategic location and port services."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Ismaïl Omar Guelleh",
       "title": "President",
       "since": "1999-05-08",
-      "notes": "Nephew of Hassan Gouled Aptidon; term limits removed 2010; re-elected 2021 for fifth term"
+      "notes": "Nephew of Hassan Gouled Aptidon; term limits removed 2010; re-elected 2021 for fifth term",
+      "party": ""
     },
     "prime_minister": {
       "name": "Abdoulkader Kamil Mohamed",
@@ -255,7 +726,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

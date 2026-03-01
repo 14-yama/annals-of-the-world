@@ -3,8 +3,354 @@
     "country_slug": "zambia",
     "node_kind": "events",
     "registry": "docs/nodes/node-attribute-registry.md",
-    "generated_at": "2026-01-31T13:56:07.951019Z",
-    "notes": "Country-scoped curated nodes; link via relationships during ingest."
+    "generated_at": "2026-02-28T19:21:41.660833Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
   },
-  "nodes": []
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Early_Peoples_Zambia_Event",
+        "name": "Early Peoples and Bantu Migration",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Early_Peoples_Zambia",
+        "description": "Khoisan hunter-gatherers; Bantu migration introduces farming, iron-working, and new linguistic families to the Zambian plateau.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Lusaka"
+        },
+        "startYear": -300000,
+        "endYear": 1000
+      },
+      {
+        "slug": "Khoisan_Gatherers_ZM_Event",
+        "name": "Khoisan Hunter-Gatherer Communities",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Early_Peoples_Zambia",
+        "description": "San/Khoisan peoples as earliest inhabitants; Later Stone Age sites; Nachikufu cave culture.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Zambia"
+        },
+        "startYear": -300000,
+        "endYear": -500
+      },
+      {
+        "slug": "Bantu_Migration_ZM_Event",
+        "name": "Bantu Migration into Zambia",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Early_Peoples_Zambia",
+        "description": "Bantu-speaking peoples migrate into Zambia bringing iron smelting, pottery, and settled agriculture; displacement of Khoisan.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Zambia"
+        },
+        "startYear": -300,
+        "endYear": 1000
+      }
+    ],
+    "920": [
+      {
+        "slug": "Pre_Colonial_Kingdoms_ZM_Event",
+        "name": "Pre-Colonial Kingdoms and Chiefdoms",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Pre_Colonial_Kingdoms_ZM",
+        "description": "Development of major kingdoms: Lozi (Barotseland), Bemba, Lunda, Kazembe; trade networks linking central and southern Africa.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Lusaka"
+        },
+        "startYear": 1000,
+        "endYear": 1800
+      },
+      {
+        "slug": "Lozi_Kingdom_Event",
+        "name": "Lozi Kingdom (Barotseland)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Pre_Colonial_Kingdoms_ZM",
+        "description": "Lozi Kingdom of the Zambezi floodplain; Litunga (king); annual Kuomboka ceremony; sophisticated flood management.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Zambia"
+        },
+        "startYear": 1600,
+        "endYear": 1900
+      },
+      {
+        "slug": "Bemba_Kingdom_Event",
+        "name": "Bemba Kingdom",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Pre_Colonial_Kingdoms_ZM",
+        "description": "Bemba Kingdom of the Crocodile Clan; paramount chief Chitimukulu; territorial expansion; ivory and slave trade.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Zambia"
+        },
+        "startYear": 1700,
+        "endYear": 1900
+      }
+    ],
+    "930": [
+      {
+        "slug": "Exploration_Livingstone_ZM_Event",
+        "name": "European Exploration and Missionary Era",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Exploration_Livingstone_ZM",
+        "description": "David Livingstone's explorations; Victoria Falls discovery; missionary stations; Lozi-British relations; slave trade disruption.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Lusaka"
+        },
+        "startYear": 1798,
+        "endYear": 1890
+      },
+      {
+        "slug": "Livingstone_Victoria_Falls_Event",
+        "name": "Livingstone and Victoria Falls",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Exploration_Livingstone_ZM",
+        "description": "David Livingstone reaches Mosi-oa-Tunya (Victoria Falls) 1855; transcontinental journey; anti-slave trade advocacy.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Zambia"
+        },
+        "startYear": 1851,
+        "endYear": 1873
+      },
+      {
+        "slug": "Missionary_Stations_ZM_Event",
+        "name": "Missionary Stations",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Exploration_Livingstone_ZM",
+        "description": "Paris Evangelical Mission in Barotseland; London Missionary Society; White Fathers; Christianity and literacy introduced.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Zambia"
+        },
+        "startYear": 1860,
+        "endYear": 1900
+      }
+    ],
+    "940": [
+      {
+        "slug": "Northern_Rhodesia_Event",
+        "name": "Northern Rhodesia (Colonial Period)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Northern_Rhodesia",
+        "description": "BSAC charter; Northern Rhodesia colony; copper belt development; Federation of Rhodesia and Nyasaland; African resistance.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Lusaka"
+        },
+        "startYear": 1889,
+        "endYear": 1964
+      },
+      {
+        "slug": "BSAC_Northern_Rhodesia_Event",
+        "name": "BSAC and Colonial Conquest",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Northern_Rhodesia",
+        "description": "British South Africa Company secures mineral rights through treaties; amalgamation of North-Western and North-Eastern Rhodesia 1911; Crown colony 1924.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Zambia"
+        },
+        "startYear": 1889,
+        "endYear": 1924
+      },
+      {
+        "slug": "Copper_Belt_Development_Event",
+        "name": "Copper Belt Development",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Northern_Rhodesia",
+        "description": "Major copper deposits exploited from 1928; migrant labour system; copper belt towns; African mine workers' unions.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Zambia"
+        },
+        "startYear": 1928,
+        "endYear": 1964
+      }
+    ],
+    "950": [
+      {
+        "slug": "Kaunda_Era_ZM_Event",
+        "name": "Kaunda and One-Party State",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Kaunda_Era_ZM",
+        "description": "Kaunda's humanist one-party state; nationalisation; front-line state against apartheid; copper price collapse; economic crisis.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Lusaka"
+        },
+        "startYear": 1964,
+        "endYear": 1991
+      },
+      {
+        "slug": "Kaunda_Humanism_Event",
+        "name": "Kaunda's Zambian Humanism",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Kaunda_Era_ZM",
+        "description": "Kenneth Kaunda first president; Zambian Humanism philosophy; nationalisation of mines (Zambia Industrial and Mining Corporation).",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Zambia"
+        },
+        "startYear": 1964,
+        "endYear": 1972
+      },
+      {
+        "slug": "One_Party_State_ZM_Event",
+        "name": "One-Party State",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Kaunda_Era_ZM",
+        "description": "Second Republic; UNIP sole legal party; authoritarian governance; economic mismanagement; opposition suppressed.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Zambia"
+        },
+        "startYear": 1972,
+        "endYear": 1991
+      }
+    ],
+    "960": [
+      {
+        "slug": "Multiparty_Modern_ZM_Event",
+        "name": "Multiparty Zambia and Modern Era",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Multiparty_Modern_ZM",
+        "description": "Chiluba democratic transition; copper privatisation; presidential term debates; Lungu; Hichilema; economic diversification efforts.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Lusaka"
+        },
+        "startYear": 1991,
+        "endYear": 2026
+      },
+      {
+        "slug": "Chiluba_Transition_Event",
+        "name": "Chiluba and Democratic Transition",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Multiparty_Modern_ZM",
+        "description": "Frederick Chiluba's MMD defeats Kaunda in multiparty elections 1991; economic liberalisation; copper mine privatisation; corruption.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Zambia"
+        },
+        "startYear": 1991,
+        "endYear": 2001
+      },
+      {
+        "slug": "Copper_Dependency_ZM_Event",
+        "name": "Copper Dependency and Diversification",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Multiparty_Modern_ZM",
+        "description": "Copper supercycle benefits then challenges Zambia; Chinese investment; debt crisis; diversification into agriculture and tourism.",
+        "location": {
+          "country_slug": "zambia",
+          "place_note": "Zambia"
+        },
+        "startYear": 2000,
+        "endYear": 2026
+      }
+    ]
+  }
 }

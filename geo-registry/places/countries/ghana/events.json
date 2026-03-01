@@ -3,8 +3,462 @@
     "country_slug": "ghana",
     "node_kind": "events",
     "registry": "docs/nodes/node-attribute-registry.md",
-    "generated_at": "2026-01-31T13:56:07.826004Z",
-    "notes": "Country-scoped curated nodes; link via relationships during ingest."
+    "generated_at": "2026-02-28T19:21:41.660833Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
   },
-  "nodes": []
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Prehistoric_Ghana_Event",
+        "name": "Prehistoric Ghana",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Prehistoric_Ghana",
+        "description": "Stone Age cultures; early settlement of forest and coastal zones; Kintampo culture.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Accra"
+        },
+        "startYear": -40000,
+        "endYear": -500
+      },
+      {
+        "slug": "Kintampo_Culture_Event",
+        "name": "Kintampo Culture",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Prehistoric_Ghana",
+        "description": "Neolithic Kintampo complex; earliest pottery and food production in the Ghana forest zone.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": -3600,
+        "endYear": -1400
+      },
+      {
+        "slug": "Early_Iron_Age_GH_Event",
+        "name": "Early Iron Age",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Prehistoric_Ghana",
+        "description": "Transition to iron-working; expansion of agricultural communities.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": -1400,
+        "endYear": -500
+      }
+    ],
+    "920": [
+      {
+        "slug": "Akan_Goldfields_Event",
+        "name": "Akan Goldfields and Early States",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Akan_Goldfields",
+        "description": "Akan gold-mining traditions; Bono state; Begho trading town; trans-Saharan gold trade links.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Accra"
+        },
+        "startYear": 500,
+        "endYear": 1600
+      },
+      {
+        "slug": "Bono_State_Event",
+        "name": "Bono State (Bono-Manso)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Akan_Goldfields",
+        "description": "Earliest Akan state; gold trade with Djenné and trans-Saharan networks; Bono-Manso capital.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": 1100,
+        "endYear": 1723
+      },
+      {
+        "slug": "Begho_Trading_Town_Event",
+        "name": "Begho Trading Town",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Akan_Goldfields",
+        "description": "Major trade entrepôt linking forest goldfields to savanna; Juula merchants.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": 1100,
+        "endYear": 1600
+      }
+    ],
+    "930": [
+      {
+        "slug": "Ashanti_Empire_Event",
+        "name": "Ashanti Empire",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Ashanti_Empire",
+        "description": "Rise of the Ashanti Confederacy; Golden Stool; military expansion; British wars.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Accra"
+        },
+        "startYear": 1670,
+        "endYear": 1902
+      },
+      {
+        "slug": "Ashanti_Foundation_Event",
+        "name": "Foundation of the Ashanti Union",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Ashanti_Empire",
+        "description": "Osei Tutu I and Okomfo Anokye; Golden Stool legend; Kumasi capital; confederation of Akan states.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": 1670,
+        "endYear": 1720
+      },
+      {
+        "slug": "Ashanti_Expansion_Event",
+        "name": "Ashanti Imperial Expansion",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Ashanti_Empire",
+        "description": "Ashanti conquers Denkyira, Akyem, Fante; controls trade routes to coast; gold and slave trade.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": 1720,
+        "endYear": 1826
+      },
+      {
+        "slug": "Slave_Castles_Gold_Coast_Event",
+        "name": "European Forts and the Slave Trade",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Slave_Castles_Gold_Coast",
+        "description": "Portuguese Elmina Castle; Dutch, Danish, British forts; Gold Coast as major slave-exporting region.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Accra"
+        },
+        "startYear": 1471,
+        "endYear": 1874
+      },
+      {
+        "slug": "Elmina_Castle_Event",
+        "name": "Elmina Castle and Portuguese Gold Coast",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Slave_Castles_Gold_Coast",
+        "description": "São Jorge da Mina built 1482; first European structure in sub-Saharan Africa; gold then slave trade.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": 1471,
+        "endYear": 1637
+      },
+      {
+        "slug": "Cape_Coast_Castle_Event",
+        "name": "Cape Coast Castle and British Slave Trade",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Slave_Castles_Gold_Coast",
+        "description": "British headquarters; largest slave-holding dungeon; 'Door of No Return'; abolished 1807.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": 1653,
+        "endYear": 1807
+      }
+    ],
+    "940": [
+      {
+        "slug": "Gold_Coast_Colony_Event",
+        "name": "British Gold Coast Colony",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Gold_Coast_Colony",
+        "description": "Crown Colony; Ashanti annexed; cocoa economy; nationalism; Nkrumah and the CPP.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Accra"
+        },
+        "startYear": 1874,
+        "endYear": 1957
+      },
+      {
+        "slug": "Crown_Colony_GH_Event",
+        "name": "Crown Colony Established",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Gold_Coast_Colony",
+        "description": "Gold Coast Colony proclaimed 1874; Ashanti conquered and annexed 1896–1902; Yaa Asantewaa War.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": 1874,
+        "endYear": 1902
+      },
+      {
+        "slug": "Cocoa_Economy_GH_Event",
+        "name": "Cocoa Economy and Colonial Development",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Gold_Coast_Colony",
+        "description": "Cocoa becomes Gold Coast's primary export; Tetteh Quarshie; African farmers drive industry.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": 1890,
+        "endYear": 1950
+      }
+    ],
+    "950": [
+      {
+        "slug": "Nkrumah_Pan_Africanism_Event",
+        "name": "Nkrumah and Pan-Africanism",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Nkrumah_Pan_Africanism",
+        "description": "First sub-Saharan African country to gain independence; Nkrumah's pan-African vision; one-party state.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Accra"
+        },
+        "startYear": 1957,
+        "endYear": 1966
+      },
+      {
+        "slug": "Independence_Ghana_1957_Event",
+        "name": "Independence of Ghana",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Nkrumah_Pan_Africanism",
+        "description": "Independence 6 March 1957; first sub-Saharan African colony to achieve freedom; renamed Ghana.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": 1957,
+        "endYear": 1957
+      },
+      {
+        "slug": "Pan_African_Vision_Event",
+        "name": "Nkrumah's Pan-African Vision",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Nkrumah_Pan_Africanism",
+        "description": "All-African People's Conference 1958; OAU founding 1963; Akosombo Dam; Consciencism.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": 1958,
+        "endYear": 1966
+      },
+      {
+        "slug": "Era_of_Coups_GH_Event",
+        "name": "Era of Military Coups",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Era_of_Coups_GH",
+        "description": "Alternating military and civilian governments; Rawlings AFRC and PNDC; economic crisis and recovery.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Accra"
+        },
+        "startYear": 1966,
+        "endYear": 1992
+      },
+      {
+        "slug": "NLC_Busia_Period_Event",
+        "name": "NLC and Busia Period",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Era_of_Coups_GH",
+        "description": "National Liberation Council; Busia elected 1969; Progress Party; Acheampong coup 1972.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": 1966,
+        "endYear": 1972
+      },
+      {
+        "slug": "Rawlings_Era_Event",
+        "name": "Rawlings AFRC and PNDC",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Era_of_Coups_GH",
+        "description": "June 4 uprising 1979; Rawlings' PNDC coup 1981; ERP structural adjustment; transition.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": 1979,
+        "endYear": 1992
+      }
+    ],
+    "960": [
+      {
+        "slug": "Fourth_Republic_Ghana_Event",
+        "name": "Fourth Republic",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Fourth_Republic_Ghana",
+        "description": "1992 constitution; democratic consolidation; NDC-NPP alternation; oil discovery; economic challenges.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Accra"
+        },
+        "startYear": 1992,
+        "endYear": 2026
+      },
+      {
+        "slug": "Democratic_Transition_GH_Event",
+        "name": "Democratic Transition",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Fourth_Republic_Ghana",
+        "description": "1992 constitution; Rawlings elected democratically; peaceful transfer to Kufuor 2001.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": 1992,
+        "endYear": 2001
+      },
+      {
+        "slug": "Democratic_Consolidation_GH_Event",
+        "name": "Democratic Consolidation",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Fourth_Republic_Ghana",
+        "description": "Two-party alternation; oil discovery at Jubilee Field 2007; Ghana as democratic model.",
+        "location": {
+          "country_slug": "ghana",
+          "place_note": "Ghana"
+        },
+        "startYear": 2001,
+        "endYear": 2016
+      }
+    ]
+  }
 }

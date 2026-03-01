@@ -3,8 +3,462 @@
     "country_slug": "cote-divoire",
     "node_kind": "events",
     "registry": "docs/nodes/node-attribute-registry.md",
-    "generated_at": "2026-01-31T13:56:07.807119Z",
-    "notes": "Country-scoped curated nodes; link via relationships during ingest."
+    "generated_at": "2026-02-28T19:21:41.660833Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
   },
-  "nodes": []
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Prehistoric_Cote_dIvoire_Event",
+        "name": "Prehistoric Côte d'Ivoire",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Prehistoric_Cote_dIvoire",
+        "description": "Early human settlement in forest and savanna zones; Neolithic and early iron-working cultures.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Yamoussoukro (political), Abidjan (economic/de facto)"
+        },
+        "startYear": -15000,
+        "endYear": -500
+      },
+      {
+        "slug": "Neolithic_CI_Event",
+        "name": "Neolithic Forest and Savanna Settlement",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Prehistoric_Cote_dIvoire",
+        "description": "Hunter-gatherer communities; gradual transition to agriculture in the forest-savanna ecotone.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": -15000,
+        "endYear": -2000
+      },
+      {
+        "slug": "Early_Iron_Age_CI_Event",
+        "name": "Early Iron Age",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Prehistoric_Cote_dIvoire",
+        "description": "Iron-smelting evidence; early farming and forest clearance.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": -2000,
+        "endYear": -500
+      }
+    ],
+    "920": [
+      {
+        "slug": "Early_Kingdoms_CI_Event",
+        "name": "Early Kingdoms and Peoples",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Early_Kingdoms_CI",
+        "description": "Senufo, Akan, and Mande peoples; gold and kola trade; proto-state formation.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Yamoussoukro (political), Abidjan (economic/de facto)"
+        },
+        "startYear": 1000,
+        "endYear": 1600
+      },
+      {
+        "slug": "Senufo_Peoples_Event",
+        "name": "Senufo and Northern Peoples",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Early_Kingdoms_CI",
+        "description": "Senufo agricultural communities; Poro secret society; links to Mande trading networks.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": 1000,
+        "endYear": 1600
+      },
+      {
+        "slug": "Akan_Gold_Trade_CI_Event",
+        "name": "Akan Peoples and Gold Trade",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Early_Kingdoms_CI",
+        "description": "Baoulé, Agni, and other Akan groups; gold mining; kola nut trade.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": 1200,
+        "endYear": 1600
+      }
+    ],
+    "930": [
+      {
+        "slug": "Kong_Empire_Event",
+        "name": "Kong Empire",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Kong_Empire",
+        "description": "Juula Kong Empire; Islamic scholarship; trans-Saharan trade terminus; Samori destruction.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Yamoussoukro (political), Abidjan (economic/de facto)"
+        },
+        "startYear": 1710,
+        "endYear": 1898
+      },
+      {
+        "slug": "Kong_Foundation_Event",
+        "name": "Foundation of Kong",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Kong_Empire",
+        "description": "Sekou Ouattara founds Kong Empire; Juula commercial network; Islamic learning centre.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": 1710,
+        "endYear": 1800
+      },
+      {
+        "slug": "Kong_Decline_Samori_Event",
+        "name": "Kong Decline and Samori's Destruction",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Kong_Empire",
+        "description": "Internal fragmentation; Samori Ture's forces sack and burn Kong 1897.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": 1800,
+        "endYear": 1898
+      },
+      {
+        "slug": "European_Contact_CI_Event",
+        "name": "European Coastal Contact",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "European_Contact_CI",
+        "description": "Portuguese, Dutch, French contact; ivory trade coast; early French trading posts.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Yamoussoukro (political), Abidjan (economic/de facto)"
+        },
+        "startYear": 1460,
+        "endYear": 1890
+      },
+      {
+        "slug": "Ivory_Coast_Trade_Event",
+        "name": "Ivory Coast Trade Era",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "European_Contact_CI",
+        "description": "European traders name the coast for ivory; limited penetration inland.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": 1460,
+        "endYear": 1842
+      },
+      {
+        "slug": "French_Posts_CI_Event",
+        "name": "Early French Trading Posts",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "European_Contact_CI",
+        "description": "French treaties with coastal chiefs; Assinie and Grand-Bassam established.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": 1842,
+        "endYear": 1890
+      }
+    ],
+    "940": [
+      {
+        "slug": "French_Cote_dIvoire_Event",
+        "name": "French Colonial Côte d'Ivoire",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "French_Cote_dIvoire",
+        "description": "French colony established; plantation economy; forced labour; Syndicat Agricole Africain.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Yamoussoukro (political), Abidjan (economic/de facto)"
+        },
+        "startYear": 1893,
+        "endYear": 1960
+      },
+      {
+        "slug": "Colonial_Conquest_CI_Event",
+        "name": "Colonial Conquest and Pacification",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "French_Cote_dIvoire",
+        "description": "Colony proclaimed 1893; resistance from Baoulé, Abbey, Bété; forced pacification campaigns.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": 1893,
+        "endYear": 1920
+      },
+      {
+        "slug": "Plantation_Economy_CI_Event",
+        "name": "Cocoa and Coffee Plantation Economy",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "French_Cote_dIvoire",
+        "description": "Forced labour for European planters; African cocoa farmers organise under Houphouët-Boigny.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": 1900,
+        "endYear": 1960
+      }
+    ],
+    "950": [
+      {
+        "slug": "Houphouet_Boigny_Era_Event",
+        "name": "Houphouët-Boigny Era (Ivorian Miracle)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Houphouet_Boigny_Era",
+        "description": "Independence; single-party rule; cocoa-driven 'Ivorian Miracle'; Basilica of Yamoussoukro; economic crisis.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Yamoussoukro (political), Abidjan (economic/de facto)"
+        },
+        "startYear": 1960,
+        "endYear": 1993
+      },
+      {
+        "slug": "Independence_CI_Event",
+        "name": "Independence and Single-Party State",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Houphouet_Boigny_Era",
+        "description": "Independence 7 August 1960; Houphouët-Boigny president; PDCI single party.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": 1960,
+        "endYear": 1970
+      },
+      {
+        "slug": "Ivorian_Miracle_Event",
+        "name": "Ivorian Economic Miracle",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Houphouet_Boigny_Era",
+        "description": "Cocoa/coffee boom; 7% annual growth; Françafrique ties; migrant labour from Upper Volta.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": 1960,
+        "endYear": 1980
+      }
+    ],
+    "960": [
+      {
+        "slug": "Post_Houphouet_Crisis_Event",
+        "name": "Post-Houphouët Crisis and Civil Wars",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Post_Houphouet_Crisis",
+        "description": "Bédié Ivoirité; Guéï coup; Gbagbo presidency; First and Second Ivorian Civil Wars.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Yamoussoukro (political), Abidjan (economic/de facto)"
+        },
+        "startYear": 1993,
+        "endYear": 2011
+      },
+      {
+        "slug": "Bedie_Guei_Instability_Event",
+        "name": "Bédié and Guéï Instability",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Post_Houphouet_Crisis",
+        "description": "Bédié excludes Ouattara; Christmas Eve coup 1999; Guéï's brief rule.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": 1993,
+        "endYear": 2000
+      },
+      {
+        "slug": "First_Civil_War_CI_Event",
+        "name": "First Ivorian Civil War",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Post_Houphouet_Crisis",
+        "description": "Country split north-south; Forces Nouvelles rebel north; Linas-Marcoussis accords; French Licorne.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": 2002,
+        "endYear": 2007
+      },
+      {
+        "slug": "Ouattara_Reconstruction_Event",
+        "name": "Ouattara Era and Reconstruction",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Ouattara_Reconstruction",
+        "description": "Economic recovery; infrastructure boom; cocoa reforms; third-term controversy.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Yamoussoukro (political), Abidjan (economic/de facto)"
+        },
+        "startYear": 2011,
+        "endYear": 2026
+      },
+      {
+        "slug": "Economic_Recovery_CI_Event",
+        "name": "Economic Recovery and Growth",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Ouattara_Reconstruction",
+        "description": "8% growth rates; Abidjan construction boom; world's largest cocoa producer.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": 2011,
+        "endYear": 2026
+      },
+      {
+        "slug": "Reconciliation_Challenges_CI_Event",
+        "name": "Reconciliation Challenges",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Ouattara_Reconstruction",
+        "description": "Victor's justice debates; Gbagbo ICC acquittal and return; ethnic tensions persist.",
+        "location": {
+          "country_slug": "cote-divoire",
+          "place_note": "Côte d'Ivoire"
+        },
+        "startYear": 2011,
+        "endYear": 2026
+      }
+    ]
+  }
 }

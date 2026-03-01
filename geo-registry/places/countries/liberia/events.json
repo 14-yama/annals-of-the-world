@@ -3,8 +3,462 @@
     "country_slug": "liberia",
     "node_kind": "events",
     "registry": "docs/nodes/node-attribute-registry.md",
-    "generated_at": "2026-01-31T13:56:07.850482Z",
-    "notes": "Country-scoped curated nodes; link via relationships during ingest."
+    "generated_at": "2026-02-28T19:21:41.660833Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
   },
-  "nodes": []
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Indigenous_Peoples_Liberia_Event",
+        "name": "Indigenous Peoples of the Pepper Coast",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Indigenous_Peoples_Liberia",
+        "description": "Migration and settlement of Kru, Mande, Mel, and other indigenous groups across the Grain/Pepper Coast region.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Monrovia"
+        },
+        "startYear": -3000,
+        "endYear": 1400
+      },
+      {
+        "slug": "Kru_Mande_Migrations_Event",
+        "name": "Kru and Mande Migrations",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Indigenous_Peoples_Liberia",
+        "description": "Successive waves of Mande-speaking and Kru-speaking peoples settle the forested Pepper Coast.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": -3000,
+        "endYear": 500
+      },
+      {
+        "slug": "Dei_Bassa_Kpelle_Societies_Event",
+        "name": "Dei, Bassa, and Kpelle Societies",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Indigenous_Peoples_Liberia",
+        "description": "Formation of decentralised chieftaincies; Poro and Sande secret societies shape governance and culture.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 500,
+        "endYear": 1400
+      }
+    ],
+    "920": [
+      {
+        "slug": "Pepper_Coast_Trade_Event",
+        "name": "Pepper Coast Trade and European Contact",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Pepper_Coast_Trade",
+        "description": "Malagueta pepper trade attracts Portuguese and other European traders; coastal exchange networks develop.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Monrovia"
+        },
+        "startYear": 1400,
+        "endYear": 1700
+      },
+      {
+        "slug": "Portuguese_Contact_Pepper_Event",
+        "name": "Portuguese Exploration of the Grain Coast",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Pepper_Coast_Trade",
+        "description": "Portuguese sailors trade for malagueta pepper and ivory; name the region 'Grain Coast'.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 1461,
+        "endYear": 1550
+      },
+      {
+        "slug": "European_Trade_Posts_LR_Event",
+        "name": "European Trade Posts and Coastal Exchange",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Pepper_Coast_Trade",
+        "description": "Dutch, English, and French traders establish scattered factories; firearms and cloth for pepper, ivory, and captives.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 1550,
+        "endYear": 1700
+      }
+    ],
+    "930": [
+      {
+        "slug": "Slave_Trade_Grain_Coast_Event",
+        "name": "Slave Trade on the Grain Coast",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Slave_Trade_Grain_Coast",
+        "description": "Transatlantic slave trade affects coastal and interior populations; Kru sailors become notable maritime labourers.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Monrovia"
+        },
+        "startYear": 1650,
+        "endYear": 1820
+      },
+      {
+        "slug": "Captive_Trade_LR_Event",
+        "name": "Captive Trade and Coastal Raids",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Slave_Trade_Grain_Coast",
+        "description": "European slavers extract captives; internal wars fuelled by demand; coastal communities disrupted.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 1650,
+        "endYear": 1808
+      },
+      {
+        "slug": "Kru_Maritime_Labour_Event",
+        "name": "Kru Maritime Labourers",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Slave_Trade_Grain_Coast",
+        "description": "Kru seamen hire onto European ships as skilled sailors; avoid enslavement through maritime bargaining power.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 1700,
+        "endYear": 1900
+      },
+      {
+        "slug": "ACS_Settlement_Event",
+        "name": "American Colonization Society and Settlement",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "ACS_Settlement",
+        "description": "ACS founded to resettle free Black Americans; Monrovia established 1822; settler-indigenous tensions.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Monrovia"
+        },
+        "startYear": 1816,
+        "endYear": 1847
+      },
+      {
+        "slug": "ACS_Founded_Event",
+        "name": "Founding of the American Colonization Society",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "ACS_Settlement",
+        "description": "ACS created 1816 by Robert Finley and others; first settlers arrive at Cape Mesurado 1822.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 1816,
+        "endYear": 1822
+      },
+      {
+        "slug": "Monrovia_Founded_Event",
+        "name": "Founding of Monrovia",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "ACS_Settlement",
+        "description": "Jehudi Ashmun leads colony; Monrovia named after President Monroe; settler governance established.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 1822,
+        "endYear": 1838
+      }
+    ],
+    "940": [
+      {
+        "slug": "Republic_Liberia_Founded_Event",
+        "name": "Republic of Liberia and Americo-Liberian Dominance",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Republic_Liberia_Founded",
+        "description": "Independence declared 1847; Americo-Liberian elite control politics; True Whig Party hegemony; Firestone concession.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Monrovia"
+        },
+        "startYear": 1847,
+        "endYear": 1944
+      },
+      {
+        "slug": "Independence_1847_LR_Event",
+        "name": "Declaration of Independence",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Republic_Liberia_Founded",
+        "description": "Liberia declares independence 26 July 1847; Joseph Jenkins Roberts first president; Africa's first republic.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 1847,
+        "endYear": 1847
+      },
+      {
+        "slug": "True_Whig_Party_Era_Event",
+        "name": "True Whig Party Hegemony",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Republic_Liberia_Founded",
+        "description": "True Whig Party monopolises power for over a century; indigenous majority excluded from governance.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 1878,
+        "endYear": 1980
+      }
+    ],
+    "950": [
+      {
+        "slug": "Tubman_Tolbert_LR_Event",
+        "name": "Tubman and Tolbert Presidencies",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Tubman_Tolbert_LR",
+        "description": "William Tubman's Open Door Policy; William Tolbert's reforms; growing indigenous dissent leading to 1980 coup.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Monrovia"
+        },
+        "startYear": 1944,
+        "endYear": 1980
+      },
+      {
+        "slug": "Tubman_Open_Door_Event",
+        "name": "Tubman's Open Door Policy",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Tubman_Tolbert_LR",
+        "description": "President Tubman attracts foreign investment; cosmetic unification policy; authoritarian control persists.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 1944,
+        "endYear": 1971
+      },
+      {
+        "slug": "Tolbert_Reforms_Event",
+        "name": "Tolbert's Reforms and Rice Riots",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Tubman_Tolbert_LR",
+        "description": "Tolbert attempts modernisation; 1979 rice riots reveal deep inequality; indigenous opposition grows.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 1971,
+        "endYear": 1980
+      },
+      {
+        "slug": "Doe_Coup_Civil_Wars_Event",
+        "name": "Samuel Doe Coup and Civil Wars",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Doe_Coup_Civil_Wars",
+        "description": "Doe's 1980 coup ends Americo-Liberian rule; ethnic violence; Charles Taylor's NPFL insurgency; two devastating civil wars.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Monrovia"
+        },
+        "startYear": 1980,
+        "endYear": 2003
+      },
+      {
+        "slug": "Doe_Coup_1980_Event",
+        "name": "Samuel Doe's 1980 Coup",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Doe_Coup_Civil_Wars",
+        "description": "Master Sergeant Doe overthrows Tolbert; executes cabinet on beach; ethnic Krahn favouritism; authoritarian rule.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 1980,
+        "endYear": 1989
+      },
+      {
+        "slug": "First_Liberian_Civil_War_Event",
+        "name": "First Liberian Civil War",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Doe_Coup_Civil_Wars",
+        "description": "Charles Taylor's NPFL invasion from Côte d'Ivoire; Doe killed 1990; ECOMOG intervention; ~200,000 dead.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 1989,
+        "endYear": 1997
+      }
+    ],
+    "960": [
+      {
+        "slug": "Post_Conflict_Liberia_Event",
+        "name": "Post-Conflict Reconstruction and Democracy",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Post_Conflict_Liberia",
+        "description": "UN peacekeeping; Ellen Johnson Sirleaf's historic presidency; Ebola crisis; George Weah presidency; ongoing recovery.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Monrovia"
+        },
+        "startYear": 2003,
+        "endYear": 2026
+      },
+      {
+        "slug": "Johnson_Sirleaf_Presidency_Event",
+        "name": "Ellen Johnson Sirleaf Presidency",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Post_Conflict_Liberia",
+        "description": "Africa's first elected female head of state; Nobel Peace Prize 2011; post-war reconstruction and debt relief.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 2006,
+        "endYear": 2018
+      },
+      {
+        "slug": "Ebola_Crisis_LR_Event",
+        "name": "Ebola Crisis in Liberia",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Post_Conflict_Liberia",
+        "description": "West African Ebola epidemic devastates Liberia; ~5,000 dead; overwhelms health system; international response.",
+        "location": {
+          "country_slug": "liberia",
+          "place_note": "Liberia"
+        },
+        "startYear": 2014,
+        "endYear": 2016
+      }
+    ]
+  }
 }

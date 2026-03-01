@@ -3,8 +3,408 @@
     "country_slug": "eritrea",
     "node_kind": "events",
     "registry": "docs/nodes/node-attribute-registry.md",
-    "generated_at": "2026-01-31T13:56:07.817679Z",
-    "notes": "Country-scoped curated nodes; link via relationships during ingest."
+    "generated_at": "2026-02-28T19:21:41.660833Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
   },
-  "nodes": []
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Ancient_Eritrea_Event",
+        "name": "Ancient Eritrea and Aksumite Heritage",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Ancient_Eritrea",
+        "description": "Early human settlement along the Red Sea coast; Adulis as major port; integral part of the Aksumite civilisation.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Asmara"
+        },
+        "startYear": -8000,
+        "endYear": 640
+      },
+      {
+        "slug": "Prehistoric_Red_Sea_Coast_Event",
+        "name": "Prehistoric Red Sea Coast Settlements",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Ancient_Eritrea",
+        "description": "Early pastoral and fishing communities along the Eritrean coast; stone tool sites; Afroasiatic language origins.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Eritrea"
+        },
+        "startYear": -8000,
+        "endYear": -1000
+      },
+      {
+        "slug": "Punt_Dmt_ER_Event",
+        "name": "Land of Punt and D'mt Kingdom",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Ancient_Eritrea",
+        "description": "Eritrean coast as possible Land of Punt; D'mt kingdom (c. 980–400 BC) as proto-Aksumite polity; Yeha temple.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Eritrea"
+        },
+        "startYear": -2500,
+        "endYear": -400
+      }
+    ],
+    "920": [
+      {
+        "slug": "Medieval_Eritrea_Event",
+        "name": "Medieval Eritrea: Islam and Isolation",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Medieval_Eritrea",
+        "description": "Islamic expansion along the coast; Dahlak Sultanate; Ottoman control of Massawa; highland Christian communities under Abyssinian influence.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Asmara"
+        },
+        "startYear": 640,
+        "endYear": 1557
+      },
+      {
+        "slug": "Dahlak_Sultanate_Event",
+        "name": "Dahlak Sultanate",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Medieval_Eritrea",
+        "description": "Islamic sultanate on Dahlak Archipelago; pearl diving; Red Sea trade; Arabic inscriptions.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Eritrea"
+        },
+        "startYear": 700,
+        "endYear": 1100
+      },
+      {
+        "slug": "Ottoman_Massawa_Event",
+        "name": "Ottoman Control of Massawa",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Medieval_Eritrea",
+        "description": "Ottoman Empire takes Massawa and coastal strip; Habesh Eyalet; highland communities remain semi-independent.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Eritrea"
+        },
+        "startYear": 1557,
+        "endYear": 1865
+      }
+    ],
+    "930": [
+      {
+        "slug": "Egyptian_Precolonial_ER_Event",
+        "name": "Egyptian Interlude and Pre-Colonial Period",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Egyptian_Precolonial_ER",
+        "description": "Egyptian Khedivate controls coastal areas; internal Ethiopian power dynamics; European imperial interest grows.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Asmara"
+        },
+        "startYear": 1846,
+        "endYear": 1890
+      },
+      {
+        "slug": "Egyptian_Massawa_Event",
+        "name": "Egyptian Control of the Coast",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Egyptian_Precolonial_ER",
+        "description": "Egyptian Khedivate administers Massawa and coast; defeats at Ethiopian hands at Gundet (1875) and Gura (1876).",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Eritrea"
+        },
+        "startYear": 1846,
+        "endYear": 1885
+      },
+      {
+        "slug": "Italian_Arrival_ER_Event",
+        "name": "Italian Arrival at Assab",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Egyptian_Precolonial_ER",
+        "description": "Rubattino Shipping Company purchases Assab 1869; Italian government takes over; sets stage for Colony of Eritrea.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Eritrea"
+        },
+        "startYear": 1869,
+        "endYear": 1890
+      }
+    ],
+    "940": [
+      {
+        "slug": "Italian_Eritrea_Event",
+        "name": "Italian Eritrea",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Italian_Eritrea",
+        "description": "Colony of Eritrea formally proclaimed 1890; infrastructure development; racial segregation; springboard for Italian invasion of Ethiopia.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Asmara"
+        },
+        "startYear": 1890,
+        "endYear": 1941
+      },
+      {
+        "slug": "Colony_Proclaimed_ER_Event",
+        "name": "Colony of Eritrea Proclaimed",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Italian_Eritrea",
+        "description": "Italy formally creates Colony of Eritrea 1 January 1890; names it from Mare Erythraeum; defeated at Battle of Adwa 1896.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Eritrea"
+        },
+        "startYear": 1890,
+        "endYear": 1896
+      },
+      {
+        "slug": "Italian_Development_ER_Event",
+        "name": "Italian Colonial Development",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "Italian_Eritrea",
+        "description": "Asmara as 'Piccola Roma'; railway, infrastructure, and light industry; racial segregation laws; Eritrean askaris.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Eritrea"
+        },
+        "startYear": 1896,
+        "endYear": 1935
+      },
+      {
+        "slug": "British_Admin_Federation_ER_Event",
+        "name": "British Administration and Ethiopian Federation",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "British_Admin_Federation_ER",
+        "description": "British Military Administration; UN-mandated federation with Ethiopia; erosion of Eritrean autonomy.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Asmara"
+        },
+        "startYear": 1941,
+        "endYear": 1962
+      },
+      {
+        "slug": "British_Administration_ER_Event",
+        "name": "British Military Administration",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "British_Admin_Federation_ER",
+        "description": "British administer Eritrea; de-industrialisation; debate over future: independence, partition, or union with Ethiopia.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Eritrea"
+        },
+        "startYear": 1941,
+        "endYear": 1952
+      },
+      {
+        "slug": "Federation_Ethiopia_ER_Event",
+        "name": "UN-Mandated Federation with Ethiopia",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "British_Admin_Federation_ER",
+        "description": "UN Resolution 390A establishes Eritrean federation with Ethiopia 1952; Haile Selassie progressively dismantles autonomy; annexation 1962.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Eritrea"
+        },
+        "startYear": 1952,
+        "endYear": 1962
+      }
+    ],
+    "950": [
+      {
+        "slug": "Liberation_War_ER_Event",
+        "name": "Eritrean War of Independence",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Liberation_War_ER",
+        "description": "Thirty-year armed struggle; ELF then EPLF; one of Africa's longest wars; guerrilla warfare in the highlands.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Asmara"
+        },
+        "startYear": 1961,
+        "endYear": 1991
+      },
+      {
+        "slug": "ELF_Insurgency_Event",
+        "name": "ELF and Early Armed Struggle",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Liberation_War_ER",
+        "description": "Eritrean Liberation Front (ELF) launches armed struggle 1 September 1961; Hamid Idris Awate fires first shots; Muslim-lowland base.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Eritrea"
+        },
+        "startYear": 1961,
+        "endYear": 1981
+      },
+      {
+        "slug": "EPLF_Rise_Event",
+        "name": "Rise of the EPLF",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Liberation_War_ER",
+        "description": "Eritrean People's Liberation Front splits from ELF; Isaias Afwerki leads; Nacfa resistance; Derg offensives; self-reliance ideology.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Eritrea"
+        },
+        "startYear": 1970,
+        "endYear": 1991
+      }
+    ],
+    "960": [
+      {
+        "slug": "Independent_Eritrea_Event",
+        "name": "Independent Eritrea",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Independent_Eritrea",
+        "description": "Independence referendum 1993; border war with Ethiopia; Isaias Afwerki's authoritarian isolation; Tigray War re-engagement.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Asmara"
+        },
+        "startYear": 1991,
+        "endYear": 2026
+      },
+      {
+        "slug": "Independence_1993_ER_Event",
+        "name": "Independence and Nation-Building",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Independent_Eritrea",
+        "description": "Referendum 24 April 1993 (99.83% yes); Isaias Afwerki president; initial optimism; constitution drafted but never implemented.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Eritrea"
+        },
+        "startYear": 1991,
+        "endYear": 1998
+      },
+      {
+        "slug": "Eritrea_Ethiopia_War_Event",
+        "name": "Eritrea–Ethiopia Border War",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "ti",
+        "script": "Ethi",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Independent_Eritrea",
+        "description": "Border war over Badme 1998-2000; estimated 70,000-100,000 killed; Algiers Agreement; EEBC boundary ruling.",
+        "location": {
+          "country_slug": "eritrea",
+          "place_note": "Eritrea"
+        },
+        "startYear": 1998,
+        "endYear": 2000
+      }
+    ]
+  }
 }

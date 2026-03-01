@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.863248Z",
-    "notes": "Comprehensive index for Cameroon covering Bantu origins and migrations, Sao civilisation, Kanem-Bornu and Fulani influences, German Kamerun, French/British mandate split, Ahidjo and Biya presidencies, Anglophone crisis, and Boko Haram spillover."
+    "notes": "Comprehensive index for Cameroon covering Bantu origins and migrations, Sao civilisation, Kanem-Bornu and Fulani influences, German Kamerun, French/British mandate split, Ahidjo and Biya presidencies, Anglophone crisis, and Boko Haram spillover.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Yaoundé",
@@ -129,7 +130,22 @@
       "life_expectancy": 60.3,
       "infant_mortality_per_1k": 51.0,
       "literacy_rate_pct": 77.1,
-      "net_migration_rate": -0.3
+      "net_migration_rate": -0.3,
+      "population_growth_rate_pct": 2.6,
+      "urban_population_growth_rate_pct": 3.6,
+      "life_expectancy_male": 58.5,
+      "life_expectancy_female": 61.5,
+      "under5_mortality_per_1k": 72,
+      "sex_ratio": 1.01,
+      "dependency_ratio": 83,
+      "population_density_per_km2": 56,
+      "age_structure": {
+        "0_14_pct": 42,
+        "15_24_pct": 20,
+        "25_54_pct": 31,
+        "55_64_pct": 4,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -157,7 +173,10 @@
         "ECCAS",
         "Francophonie"
       ],
-      "notes": "Fighting Boko Haram in Far North; Anglophone crisis in Northwest/Southwest (separatist conflict since 2017, 'Ambazonia'); Rapid Intervention Battalion (BIR) elite force; French military base in Douala; Multinational Joint Task Force against Boko Haram"
+      "notes": "Fighting Boko Haram in Far North; Anglophone crisis in Northwest/Southwest (separatist conflict since 2017, 'Ambazonia'); Rapid Intervention Battalion (BIR) elite force; French military base in Douala; Multinational Joint Task Force against Boko Haram",
+      "paramilitary_personnel": 9000,
+      "conscription": false,
+      "global_firepower_rank": 64
     },
     "trade": {
       "top_exports": [
@@ -185,14 +204,50 @@
         "Italy"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 1.0
+      "remittances_pct_gdp": 1.0,
+      "total_exports_usd": "$5 billion",
+      "total_imports_usd": "$7.5 billion",
+      "top_export_destinations": [
+        "Netherlands",
+        "France",
+        "China",
+        "Italy",
+        "Spain"
+      ],
+      "top_import_origins": [
+        "China",
+        "France",
+        "Nigeria",
+        "Belgium",
+        "India"
+      ],
+      "trade_as_pct_gdp": 28,
+      "current_account_balance_usd": "-$1.3 billion",
+      "trade_agreements": [
+        "CEMAC",
+        "AfCFTA"
+      ],
+      "special_economic_zones": [
+        "Kribi Industrial Zone"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 36.0,
       "electricity_access_pct": 65.0,
       "mobile_subscriptions_per_100": 90,
       "railway_km": 1104,
-      "paved_roads_pct": 20
+      "paved_roads_pct": 20,
+      "broadband_subscriptions_per_100": 0.3,
+      "4g_coverage_pct": 55,
+      "5g_availability": false,
+      "road_network_km": 77590,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "SAT-3/WASC",
+        "WACS",
+        "ACE"
+      ],
+      "notes": "Kribi deep-water port also fibre optic cable landing point."
     },
     "international_memberships": [
       "UN",
@@ -223,6 +278,26 @@
       "fragile_states_index": {
         "score": 92.6,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.37,
+        "rank": 120,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.8,
+        "percentile": 14,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.7,
+        "percentile": 17,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -1.5,
+        "percentile": 4,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -239,12 +314,41 @@
         "volcanic activity (Mount Cameroon, Africa's most active volcano)",
         "Lake Nyos-type limnic eruptions (1986 disaster killed 1,746)"
       ],
-      "protected_areas_pct": 14
+      "protected_areas_pct": 14,
+      "average_temperature_c": 25,
+      "average_rainfall_mm": 1600,
+      "co2_per_capita_t": 0.4,
+      "deforestation_rate_pct": 1.1,
+      "water_stress_level": "Low-medium",
+      "environmental_performance_index": {
+        "score": 30.6,
+        "rank": 153,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 9000,
+        "endemic_species": 150,
+        "threatened_species": 490
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 45.3,
       "foreign_aid_received_usd": "1.0 billion",
-      "notes": "HIPC debt relief beneficiary; Chinese infrastructure loans significant; IMF Extended Credit Facility; dual English/French administration increases costs"
+      "notes": "HIPC debt relief beneficiary; Chinese infrastructure loans significant; IMF Extended Credit Facility; dual English/French administration increases costs",
+      "external_debt_usd": "$12 billion",
+      "debt_service_pct_revenue": 16,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "France",
+        "EU",
+        "World Bank",
+        "AfDB",
+        "Germany"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Completion point (2006)"
     },
     "education": {
       "primary_enrollment_pct": 92,
@@ -256,14 +360,42 @@
         "University of Douala",
         "University of Buea (Anglophone)"
       ],
-      "notes": "Bilingual system (French/English) mirrors colonial dual mandate; Anglophone regions feel marginalized in education policy; Boko Haram and Anglophone conflict closing schools in north/west; GCE/Baccalauréat dual system"
+      "notes": "Bilingual system (French/English) mirrors colonial dual mandate; Anglophone regions feel marginalized in education policy; Boko Haram and Anglophone conflict closing schools in north/west; GCE/Baccalauréat dual system",
+      "education_expenditure_pct_gdp": 3.1,
+      "primary_completion_rate_pct": 72,
+      "gender_parity_index": 0.89,
+      "mean_years_of_schooling": 6.3,
+      "expected_years_of_schooling": 12.7,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 44,
+      "out_of_school_children": 1500000,
+      "academic_freedom_index": 0.3
     },
     "diaspora_migration": {
       "diaspora_population": "500,000 (France, USA, UK, Germany, Nigeria)",
       "refugees_hosted": 450000,
       "refugees_produced": 100000,
       "remittances_usd": "380 million",
-      "notes": "Hosts CAR/Nigerian refugees; Anglophone crisis produced 60k+ refugees (Nigeria) and 600k+ IDPs; brain drain of Anglophone professionals significant; Cameroon passport among weakest globally"
+      "notes": "Hosts CAR/Nigerian refugees; Anglophone crisis produced 60k+ refugees (Nigeria) and 600k+ IDPs; brain drain of Anglophone professionals significant; Cameroon passport among weakest globally",
+      "diaspora_top_destinations": [
+        "France",
+        "Nigeria",
+        "Gabon",
+        "Germany",
+        "USA",
+        "Belgium"
+      ],
+      "asylum_seekers": 12000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 1000000,
+      "immigration_policy": "Moderately open (CEMAC)",
+      "remittances_pct_gdp": 0.9,
+      "net_migration_rate_per_1k": -0.2
     },
     "digital_economy": {
       "e_government_index": 0.38,
@@ -272,16 +404,403 @@
         "Douala (Silicon Mountain/ActivSpaces)",
         "Yaoundé"
       ],
-      "notes": "Silicon Mountain (Buea) was thriving Anglophone tech hub before conflict disrupted it; mobile money adoption high; internet shutdowns in Anglophone regions (2017-ongoing, world's longest); Kiro'o Games (African gaming studio)"
+      "notes": "Silicon Mountain (Buea) was thriving Anglophone tech hub before conflict disrupted it; mobile money adoption high; internet shutdowns in Anglophone regions (2017-ongoing, world's longest); Kiro'o Games (African gaming studio)",
+      "e_participation_index": 0.35,
+      "ict_development_index": 2.5,
+      "mobile_money_accounts": 8000000,
+      "digital_payments_pct_adults": 15,
+      "fintech_companies": 20,
+      "startup_ecosystem_value_usd": "$50 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.28,
+      "innovation_index_score": 18.2,
+      "innovation_index_rank": 118,
+      "ai_readiness_index": 0
     },
-    "notes_unique": ""
+    "notes_unique": "Known as 'Africa in Miniature' for its geographic and cultural diversity; one of the few African nations with both English and French as official languages.",
+    "other_languages": [
+      "Cameroon Pidgin English",
+      "Fulfulde",
+      "Ewondo",
+      "Bamileke languages"
+    ],
+    "capital_coordinates": {
+      "lat": 3.848,
+      "lon": 11.5021
+    },
+    "other_major_cities": [
+      "Douala",
+      "Bamenda",
+      "Bafoussam",
+      "Garoua",
+      "Maroua",
+      "Ngaoundéré"
+    ],
+    "national_motto": "Peace, Work, Fatherland",
+    "national_anthem": "O Cameroun, Berceau de nos Ancêtres (O Cameroon, Cradle of our Ancestors)",
+    "currency_code": "XAF",
+    "internet_tld": ".cm",
+    "utc_offset": "UTC+1",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 7.3697,
+        "lon": 12.3547
+      },
+      "bounding_box": {
+        "north": 13.08,
+        "south": 1.65,
+        "east": 16.19,
+        "west": 8.49
+      },
+      "land_area_km2": 472710,
+      "water_area_km2": 2730,
+      "coastline_km": 402,
+      "borders": [
+        "Nigeria",
+        "Chad",
+        "Central African Republic",
+        "Congo",
+        "Gabon",
+        "Equatorial Guinea"
+      ],
+      "border_lengths_km": {
+        "Nigeria": 1975,
+        "Chad": 1116,
+        "Central African Republic": 901,
+        "Congo": 494,
+        "Gabon": 349,
+        "Equatorial Guinea": 183
+      },
+      "highest_point": {
+        "name": "Mount Cameroon (Fako)",
+        "elevation_m": 4095
+      },
+      "lowest_point": {
+        "name": "Atlantic Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Diverse: coastal plain, central plateau, western mountains, northern savanna, dense equatorial forest in south",
+      "land_use": {
+        "agricultural_pct": 20.6,
+        "arable_pct": 13.1,
+        "forest_pct": 41.7,
+        "other_pct": 37.7
+      },
+      "major_rivers": [
+        "Sanaga",
+        "Wouri",
+        "Nyong",
+        "Bénoué",
+        "Logone"
+      ],
+      "major_lakes": [
+        "Lake Chad (shared)",
+        "Lake Nyos",
+        "Maga Reservoir"
+      ],
+      "exclusive_economic_zone_km2": 15260,
+      "landlocked": false,
+      "notes": "Called 'Africa in miniature' for geographic and cultural diversity; Mount Cameroon is West Africa's highest peak and active volcano; Lake Nyos (1986 limnic eruption killed 1,700+)."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$45 billion",
+      "gdp_ppp_usd": "$107 billion",
+      "gdp_per_capita_nominal_usd": 1610,
+      "gdp_per_capita_ppp_usd": 3816,
+      "gdp_growth_rate_pct": 3.8,
+      "inflation_rate_pct": 7.4,
+      "unemployment_rate_pct": 3.6,
+      "youth_unemployment_rate_pct": 6.3,
+      "poverty_rate_pct": 37.5,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 46.6,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 17,
+        "industry_pct_gdp": 26,
+        "services_pct_gdp": 57
+      },
+      "labor_force": 11000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 62,
+        "industry_pct": 12,
+        "services_pct": 26
+      },
+      "fdi_inflow_usd": "$800 million",
+      "fdi_outflow_usd": "$20 million",
+      "foreign_exchange_reserves_usd": "$3.6 billion",
+      "ease_of_doing_business_rank": 167,
+      "economic_freedom_index_score": 52.3,
+      "credit_rating": {
+        "moodys": "B2",
+        "sp": "B-",
+        "fitch": "B"
+      },
+      "notes": "CEMAC region's largest economy; oil, timber, agriculture dominate; Douala port is regional hub; Anglophone crisis impacts economy."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.5,
+      "health_expenditure_per_capita_usd": 56,
+      "physicians_per_1k": 0.1,
+      "nurses_midwives_per_1k": 0.4,
+      "hospital_beds_per_1k": 1.3,
+      "maternal_mortality_per_100k": 438,
+      "hiv_prevalence_pct": 2.7,
+      "malaria_incidence_per_1k": 265,
+      "tuberculosis_incidence_per_100k": 186,
+      "access_to_clean_water_pct": 66,
+      "access_to_sanitation_pct": 43,
+      "vaccination_coverage_pct": 66,
+      "stunting_under5_pct": 29,
+      "obesity_rate_pct": 11.4,
+      "universal_health_coverage_index": 46,
+      "leading_causes_of_death": [
+        "malaria",
+        "lower respiratory infections",
+        "HIV/AIDS",
+        "neonatal disorders",
+        "diarrheal diseases"
+      ],
+      "notes": "Health workers concentrated in Douala/Yaoundé; rural access very limited; polio vaccination campaigns; Anglophone crisis disrupted health services."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 38,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 13.1,
+      "agricultural_land_pct": 20.6,
+      "irrigated_land_pct": 0.3,
+      "major_crops": [
+        "cocoa",
+        "coffee",
+        "cotton",
+        "rubber",
+        "bananas",
+        "palm oil",
+        "cassava",
+        "maize",
+        "plantains"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "sheep",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 20,
+      "cereal_yield_kg_per_hectare": 1700,
+      "agricultural_employment_pct": 62,
+      "prevalence_of_undernourishment_pct": 7,
+      "notes": "Self-sufficient in many staples; 5th largest cocoa producer globally; palm oil and rubber plantations; pastoral Fulani herders in north."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 40,
+        "hydroelectric_pct": 55,
+        "solar_pct": 1,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 4
+      },
+      "installed_capacity_mw": 1600,
+      "electricity_production_gwh": 7500,
+      "electricity_consumption_per_capita_kwh": 270,
+      "energy_imports_pct": 5,
+      "oil_production_bpd": 63000,
+      "oil_consumption_bpd": 40000,
+      "natural_gas_production_bcm": 1.5,
+      "energy_access_rural_pct": 25,
+      "energy_access_urban_pct": 90,
+      "notes": "Nachtigal Hydropower Dam (420MW, 2024) and Lom Pangar Dam; oil production declining; Kribi LNG (FLNG); massive hydro potential untapped."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Douala International Airport",
+        "Yaoundé Nsimalen International Airport"
+      ],
+      "major_airports_domestic": [
+        "Garoua",
+        "Maroua",
+        "Bamenda",
+        "Ngaoundéré"
+      ],
+      "national_airline": "Camair-Co",
+      "major_seaports": [
+        "Douala",
+        "Kribi (deep-water port)"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 15,
+      "registered_vehicles_per_1k": 12,
+      "road_fatalities_per_100k": 30,
+      "notes": "Kribi deep-water port opened 2018; Douala-Yaoundé highway; Transcam railway."
+    },
+    "tourism": {
+      "annual_visitors": 1100000,
+      "tourism_revenue_usd": "$500 million",
+      "tourism_pct_gdp": 1.2,
+      "tourism_employment_pct": 3,
+      "unesco_world_heritage_sites": 2,
+      "unesco_sites_list": [
+        "Dja Faunal Reserve",
+        "Sangha Trinational (shared)"
+      ],
+      "major_attractions": [
+        "Mount Cameroon",
+        "Waza National Park",
+        "Dja Faunal Reserve",
+        "Limbe Botanic Garden",
+        "Bamoun Royal Palace",
+        "Ring Road (Northwest highlands)"
+      ],
+      "visa_free_access_countries": 48,
+      "henley_passport_rank": 80,
+      "notes": "Eco-tourism potential; AFCON 2021 host; Anglophone crisis impacts tourism in NW/SW regions."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 16,
+      "gender_inequality_index": 0.56,
+      "gender_inequality_rank": 150,
+      "gender_gap_index_score": 0.67,
+      "women_in_parliament_pct": 34,
+      "women_labor_force_participation_pct": 71,
+      "maternal_mortality_per_100k": 438,
+      "child_marriage_pct": 31,
+      "fgm_prevalence_pct": 1,
+      "lgbtq_legal_status": "Illegal (up to 5 years imprisonment, actively prosecuted)",
+      "death_penalty_status": "Abolitionist in practice",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 42,
+      "notes": "Anglophone crisis human rights abuses; anti-LGBTQ+ enforcement among harshest globally; Beti-Bamileke ethnic tensions."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.6,
+      "global_peace_index_rank": 145,
+      "terrorism_index_score": 6.7,
+      "terrorism_index_rank": 21,
+      "homicide_rate_per_100k": 4.6,
+      "active_conflicts": [
+        "Anglophone crisis (NW/SW regions)",
+        "Boko Haram (Far North)"
+      ],
+      "border_disputes": [
+        "Bakassi Peninsula (resolved ICJ 2002, tensions remain)"
+      ],
+      "un_peacekeeping_contributions": 1200,
+      "arms_imports_usd": "$100 million",
+      "internally_displaced_persons": 1000000,
+      "notes": "Dual insurgency: Anglophone separatists ('Amba boys') and Boko Haram/ISWAP in Far North; BIR (elite rapid intervention force)."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "lion"
+      ],
+      "national_animal": "lion",
+      "national_flower": "",
+      "national_dish": "Ndolé (bitterleaf stew)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Ngondo (Sawa festival, Douala)",
+        "Nguon (Bamoun)",
+        "Mount Cameroon Race of Hope"
+      ],
+      "cuisine_highlights": [
+        "ndolé",
+        "eru (vegetable soup)",
+        "achu and yellow soup",
+        "koki (bean pudding)",
+        "soya (grilled meat)"
+      ],
+      "music_art_traditions": [
+        "Makossa (Manu Dibango)",
+        "Bikutsi",
+        "Ambass Bey",
+        "Bamoun bronze art"
+      ],
+      "film_industry": "Small (Collywood)",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "Rudolf Douala Manga Bell (resistance hero)",
+        "Ahmadou Ahidjo (first president)",
+        "Roger Milla (footballer)",
+        "Manu Dibango (musician)",
+        "Francis Bebey"
+      ],
+      "world_heritage_sites": [
+        "Dja Faunal Reserve",
+        "Sangha Trinational"
+      ],
+      "media_landscape": "Mixed; state CRTV dominates; private media exists but faces pressure",
+      "notes": "Called 'Africa in miniature'; 250+ ethnic groups; bilingual (French 80%/English 20%); rich artistic traditions across diverse cultures."
+    },
+    "legal_system": {
+      "legal_tradition": "Mixed: Civil law (French) and Common law (English, NW/SW regions)",
+      "constitution_year": 1972,
+      "sharia_applicability": "None (though customary practice in Far North)",
+      "customary_law_role": "Significant in family and land matters",
+      "icc_membership": "Non-state party (signed but not ratified)",
+      "judicial_independence_score": 0.25,
+      "contract_enforcement_days": 800,
+      "property_rights_index": 35,
+      "notes": "Bicultural legal system at heart of Anglophone crisis; common law marginalized; special criminal court (TCS) tries terrorism cases."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 10,
+        "global_rank": 52
+      },
+      "area": {
+        "continent_rank": 17,
+        "global_rank": 53
+      },
+      "gdp_nominal": {
+        "continent_rank": 9,
+        "global_rank": 89
+      },
+      "gdp_per_capita": {
+        "continent_rank": 26,
+        "global_rank": 150
+      },
+      "hdi": {
+        "continent_rank": 24,
+        "global_rank": 153
+      },
+      "life_expectancy": {
+        "continent_rank": 29,
+        "global_rank": 155
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 46,
+        "global_rank": 167
+      },
+      "internet_penetration": {
+        "continent_rank": 24,
+        "global_rank": 140
+      },
+      "press_freedom": {
+        "continent_rank": 40,
+        "global_rank": 138
+      },
+      "global_peace_index": {
+        "continent_rank": 39,
+        "global_rank": 145
+      },
+      "innovation_index": {
+        "continent_rank": 20,
+        "global_rank": 118
+      },
+      "notes": ""
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Paul Biya",
       "title": "President",
       "since": "1982-11-06",
-      "notes": "One of Africa's longest-serving leaders; in power 40+ years; CPDM party"
+      "notes": "One of Africa's longest-serving leaders; in power 40+ years; CPDM party",
+      "party": ""
     },
     "prime_minister": {
       "name": "Joseph Dion Ngute",
@@ -297,7 +816,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.866260Z",
-    "notes": "Comprehensive index for Côte d'Ivoire covering Kong Empire, French colonisation, Houphouët-Boigny era, civil wars, and cocoa economy."
+    "notes": "Comprehensive index for Côte d'Ivoire covering Kong Empire, French colonisation, Houphouët-Boigny era, civil wars, and cocoa economy.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Yamoussoukro (political), Abidjan (economic/de facto)",
@@ -115,7 +116,22 @@
       "life_expectancy": 59.3,
       "infant_mortality_per_1k": 52.0,
       "literacy_rate_pct": 51.3,
-      "net_migration_rate": 0.4
+      "net_migration_rate": 0.4,
+      "population_growth_rate_pct": 2.5,
+      "urban_population_growth_rate_pct": 3.4,
+      "life_expectancy_male": 57,
+      "life_expectancy_female": 60,
+      "under5_mortality_per_1k": 74,
+      "sex_ratio": 1.02,
+      "dependency_ratio": 76,
+      "population_density_per_km2": 82,
+      "age_structure": {
+        "0_14_pct": 40,
+        "15_24_pct": 20,
+        "25_54_pct": 33,
+        "55_64_pct": 4,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -147,7 +163,10 @@
         "AU",
         "ECOWAS"
       ],
-      "notes": "FACI (Armed Forces of Côte d'Ivoire) rebuilt after 2002-11 crisis; French forces (Variétés base) reduced; UN ONUCI peacekeeping departed 2017; former rebels integrated into army; jailé mutinies (demobilization issues)"
+      "notes": "FACI (Armed Forces of Côte d'Ivoire) rebuilt after 2002-11 crisis; French forces (Variétés base) reduced; UN ONUCI peacekeeping departed 2017; former rebels integrated into army; jailé mutinies (demobilization issues)",
+      "paramilitary_personnel": 1500,
+      "conscription": true,
+      "global_firepower_rank": 92
     },
     "trade": {
       "top_exports": [
@@ -176,14 +195,52 @@
         "China"
       ],
       "trade_balance": "surplus",
-      "remittances_pct_gdp": 0.5
+      "remittances_pct_gdp": 0.5,
+      "total_exports_usd": "$14 billion",
+      "total_imports_usd": "$12 billion",
+      "top_export_destinations": [
+        "Netherlands",
+        "USA",
+        "France",
+        "Germany",
+        "Belgium"
+      ],
+      "top_import_origins": [
+        "China",
+        "France",
+        "Nigeria",
+        "India",
+        "USA"
+      ],
+      "trade_as_pct_gdp": 35,
+      "current_account_balance_usd": "-$2 billion",
+      "trade_agreements": [
+        "WAEMU/UEMOA",
+        "ECOWAS",
+        "AfCFTA"
+      ],
+      "special_economic_zones": [
+        "PK24 Industrial Zone"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 45.0,
       "electricity_access_pct": 70.0,
       "mobile_subscriptions_per_100": 145,
       "railway_km": 660,
-      "paved_roads_pct": 12
+      "paved_roads_pct": 12,
+      "broadband_subscriptions_per_100": 1.2,
+      "4g_coverage_pct": 70,
+      "5g_availability": false,
+      "road_network_km": 81996,
+      "waterways_km": 980,
+      "submarine_cables": [
+        "SAT-3/WASC",
+        "ACE",
+        "MainOne",
+        "WACS"
+      ],
+      "notes": "Abidjan is submarine cable hub for West Africa."
     },
     "international_memberships": [
       "UN",
@@ -213,6 +270,26 @@
       "fragile_states_index": {
         "score": 81.5,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.42,
+        "rank": 105,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.5,
+        "percentile": 22,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.3,
+        "percentile": 32,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.6,
+        "percentile": 18,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -227,12 +304,41 @@
         "droughts (north)",
         "deforestation (80% forest lost since 1960)"
       ],
-      "protected_areas_pct": 23
+      "protected_areas_pct": 23,
+      "average_temperature_c": 27,
+      "average_rainfall_mm": 1200,
+      "co2_per_capita_t": 0.4,
+      "deforestation_rate_pct": 2.6,
+      "water_stress_level": "Low-medium",
+      "environmental_performance_index": {
+        "score": 30.8,
+        "rank": 152,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 5500,
+        "endemic_species": 60,
+        "threatened_species": 220
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 56.8,
       "foreign_aid_received_usd": "1.3 billion",
-      "notes": "Fastest-growing large African economy (~7% annually); Ouattara's Plan National de Développement; Chinese infrastructure investment; CFA franc currency ties to France; Eurobond issuer"
+      "notes": "Fastest-growing large African economy (~7% annually); Ouattara's Plan National de Développement; Chinese infrastructure investment; CFA franc currency ties to France; Eurobond issuer",
+      "external_debt_usd": "$28 billion",
+      "debt_service_pct_revenue": 20,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "France",
+        "EU",
+        "World Bank",
+        "AfDB",
+        "Germany"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Completion point (2012)"
     },
     "education": {
       "primary_enrollment_pct": 94,
@@ -243,14 +349,41 @@
         "Félix Houphouët-Boigny University (Abidjan)",
         "Nangui Abrogoua University"
       ],
-      "notes": "French-language instruction; 'ivoirité' identity politics affected education access for northern/immigrant populations; school feeding programs expanding enrollment; PASEC assessment participant; gender gap persistent in rural areas"
+      "notes": "French-language instruction; 'ivoirité' identity politics affected education access for northern/immigrant populations; school feeding programs expanding enrollment; PASEC assessment participant; gender gap persistent in rural areas",
+      "education_expenditure_pct_gdp": 3.3,
+      "primary_completion_rate_pct": 63,
+      "gender_parity_index": 0.85,
+      "mean_years_of_schooling": 5.3,
+      "expected_years_of_schooling": 10.0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 40,
+      "out_of_school_children": 1500000,
+      "academic_freedom_index": 0.5
     },
     "diaspora_migration": {
       "diaspora_population": "1.2 million (France, Burkina Faso, Mali, USA)",
       "refugees_hosted": 2000,
       "refugees_produced": 28000,
       "remittances_usd": "380 million",
-      "notes": "Immigration hub—26% of population is foreign-born (Burkinabè, Malians, Guineans); ivoirité concept ('who is Ivorian?') xenophobic tensions central to 2002-11 conflict; Liberian/Sierra Leonean refugees from 1990s wars came to CdI"
+      "notes": "Immigration hub—26% of population is foreign-born (Burkinabè, Malians, Guineans); ivoirité concept ('who is Ivorian?') xenophobic tensions central to 2002-11 conflict; Liberian/Sierra Leonean refugees from 1990s wars came to CdI",
+      "diaspora_top_destinations": [
+        "France",
+        "Burkina Faso",
+        "Mali",
+        "Italy",
+        "USA"
+      ],
+      "asylum_seekers": 5000,
+      "stateless_persons": 700000,
+      "internally_displaced_persons": 303000,
+      "immigration_policy": "Open (ECOWAS free movement)",
+      "remittances_pct_gdp": 0.9,
+      "net_migration_rate_per_1k": 0.5
     },
     "digital_economy": {
       "e_government_index": 0.45,
@@ -258,16 +391,397 @@
       "tech_hubs": [
         "Abidjan (Abidjan Tech Hub, MEST Africa Hub)"
       ],
-      "notes": "Mobile money revolution (Wave disrupted market with zero-fee transfers); Abidjan emerging as West African tech capital; strong startup ecosystem; fibre backbone improving; government digitization push; cocoa traceability blockchain pilots"
+      "notes": "Mobile money revolution (Wave disrupted market with zero-fee transfers); Abidjan emerging as West African tech capital; strong startup ecosystem; fibre backbone improving; government digitization push; cocoa traceability blockchain pilots",
+      "e_participation_index": 0.45,
+      "ict_development_index": 2.7,
+      "mobile_money_accounts": 20000000,
+      "digital_payments_pct_adults": 30,
+      "fintech_companies": 50,
+      "startup_ecosystem_value_usd": "$200 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.45,
+      "innovation_index_score": 21.0,
+      "innovation_index_rank": 107,
+      "ai_readiness_index": 30
     },
-    "notes_unique": ""
+    "notes_unique": "World's largest cocoa producer (~40% of global supply); the Basilica of Our Lady of Peace in Yamoussoukro is the largest church in the world.",
+    "capital_coordinates": {
+      "lat": 6.8276,
+      "lon": -5.2893
+    },
+    "other_major_cities": [
+      "Abidjan",
+      "Bouaké",
+      "Daloa",
+      "Korhogo",
+      "San-Pédro",
+      "Man"
+    ],
+    "national_motto": "Union, Discipline, Work",
+    "national_anthem": "L'Abidjanaise (Song of Abidjan)",
+    "currency_code": "XOF",
+    "internet_tld": ".ci",
+    "utc_offset": "UTC+0",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 7.54,
+        "lon": -5.5471
+      },
+      "bounding_box": {
+        "north": 10.74,
+        "south": 4.35,
+        "east": -2.49,
+        "west": -8.6
+      },
+      "land_area_km2": 318003,
+      "water_area_km2": 4460,
+      "coastline_km": 515,
+      "borders": [
+        "Liberia",
+        "Guinea",
+        "Mali",
+        "Burkina Faso",
+        "Ghana"
+      ],
+      "border_lengths_km": {
+        "Liberia": 778,
+        "Guinea": 816,
+        "Mali": 599,
+        "Burkina Faso": 545,
+        "Ghana": 720
+      },
+      "highest_point": {
+        "name": "Mount Nimba",
+        "elevation_m": 1752
+      },
+      "lowest_point": {
+        "name": "Gulf of Guinea",
+        "elevation_m": 0
+      },
+      "terrain": "Flat to undulating plains; mountains in northwest; dense forest in south; savanna in north",
+      "land_use": {
+        "agricultural_pct": 64.8,
+        "arable_pct": 9.1,
+        "forest_pct": 32.7,
+        "other_pct": 2.5
+      },
+      "major_rivers": [
+        "Sassandra",
+        "Bandama",
+        "Comoé",
+        "Cavally"
+      ],
+      "major_lakes": [
+        "Kossou (reservoir)",
+        "Buyo (reservoir)",
+        "Taabo"
+      ],
+      "exclusive_economic_zone_km2": 200000,
+      "landlocked": false,
+      "notes": "World's largest cocoa producer (~40% global supply); Mount Nimba tri-border reserve (UNESCO); Abidjan is economic capital, Yamoussoukro political capital."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$75 billion",
+      "gdp_ppp_usd": "$175 billion",
+      "gdp_per_capita_nominal_usd": 2579,
+      "gdp_per_capita_ppp_usd": 6029,
+      "gdp_growth_rate_pct": 6.5,
+      "inflation_rate_pct": 4.4,
+      "unemployment_rate_pct": 3.4,
+      "youth_unemployment_rate_pct": 5.6,
+      "poverty_rate_pct": 39.5,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 41.5,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 21,
+        "industry_pct_gdp": 30,
+        "services_pct_gdp": 49
+      },
+      "labor_force": 9500000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 47,
+        "industry_pct": 15,
+        "services_pct": 38
+      },
+      "fdi_inflow_usd": "$1.5 billion",
+      "fdi_outflow_usd": "$30 million",
+      "foreign_exchange_reserves_usd": "$7 billion",
+      "ease_of_doing_business_rank": 110,
+      "economic_freedom_index_score": 60.1,
+      "credit_rating": {
+        "moodys": "Ba2",
+        "sp": "BB-",
+        "fitch": "BB-"
+      },
+      "notes": "Francophone West Africa's largest economy; fastest growing in WAEMU region; AFCON 2023 host; cocoa, cashew, rubber, palm oil, gold, oil diversified base."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.6,
+      "health_expenditure_per_capita_usd": 66,
+      "physicians_per_1k": 0.16,
+      "nurses_midwives_per_1k": 1.0,
+      "hospital_beds_per_1k": 0.4,
+      "maternal_mortality_per_100k": 617,
+      "hiv_prevalence_pct": 2.1,
+      "malaria_incidence_per_1k": 300,
+      "tuberculosis_incidence_per_100k": 119,
+      "access_to_clean_water_pct": 72,
+      "access_to_sanitation_pct": 33,
+      "vaccination_coverage_pct": 73,
+      "stunting_under5_pct": 22,
+      "obesity_rate_pct": 10.3,
+      "universal_health_coverage_index": 42,
+      "leading_causes_of_death": [
+        "malaria",
+        "lower respiratory infections",
+        "neonatal disorders",
+        "HIV/AIDS",
+        "tuberculosis"
+      ],
+      "notes": "CMU (universal health coverage) launched; strong economy but health indicators lag; Abidjan has best facilities."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 42,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 9.1,
+      "agricultural_land_pct": 64.8,
+      "irrigated_land_pct": 0.6,
+      "major_crops": [
+        "cocoa",
+        "cashew nuts",
+        "rubber",
+        "palm oil",
+        "cotton",
+        "coffee",
+        "rice",
+        "cassava",
+        "yams"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "sheep",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 25,
+      "cereal_yield_kg_per_hectare": 1800,
+      "agricultural_employment_pct": 47,
+      "prevalence_of_undernourishment_pct": 16,
+      "notes": "#1 cocoa producer globally; #1 cashew producer in Africa; agriculture still largest employer; cocoa child labor remains issue."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 55,
+        "hydroelectric_pct": 35,
+        "solar_pct": 2,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 8
+      },
+      "installed_capacity_mw": 2275,
+      "electricity_production_gwh": 10500,
+      "electricity_consumption_per_capita_kwh": 290,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 30000,
+      "oil_consumption_bpd": 55000,
+      "natural_gas_production_bcm": 2.4,
+      "energy_access_rural_pct": 35,
+      "energy_access_urban_pct": 90,
+      "notes": "Net electricity exporter to Ghana, Burkina Faso, Mali, Togo, Benin; Soubré Dam (275MW); gas-to-power expansion; Ciprel thermal plants."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Félix-Houphouët-Boigny International (Abidjan)"
+      ],
+      "major_airports_domestic": [
+        "Bouaké",
+        "Yamoussoukro",
+        "San-Pédro",
+        "Korhogo",
+        "Man"
+      ],
+      "national_airline": "Air Côte d'Ivoire",
+      "major_seaports": [
+        "Abidjan (Vridi canal)",
+        "San-Pédro"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 10,
+      "registered_vehicles_per_1k": 15,
+      "road_fatalities_per_100k": 24,
+      "notes": "Port of Abidjan is West Africa's largest container port; Abidjan-Ouagadougou railway (Sitarail); new expressways."
+    },
+    "tourism": {
+      "annual_visitors": 2100000,
+      "tourism_revenue_usd": "$400 million",
+      "tourism_pct_gdp": 0.5,
+      "tourism_employment_pct": 3,
+      "unesco_world_heritage_sites": 4,
+      "unesco_sites_list": [
+        "Taï National Park",
+        "Comoé National Park",
+        "Mount Nimba Strict Nature Reserve (shared)",
+        "Historic Town of Grand-Bassam"
+      ],
+      "major_attractions": [
+        "Basilica of Our Lady of Peace (Yamoussoukro)",
+        "Grand-Bassam",
+        "Taï forest (chimpanzees)",
+        "Assinie beaches",
+        "Man (Dent de Man mountains)"
+      ],
+      "visa_free_access_countries": 49,
+      "henley_passport_rank": 78,
+      "notes": "AFCON 2023 boosted tourism infrastructure; Basilica of Yamoussoukro (world's largest church); business tourism growing."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 40,
+      "gender_inequality_index": 0.63,
+      "gender_inequality_rank": 157,
+      "gender_gap_index_score": 0.65,
+      "women_in_parliament_pct": 15,
+      "women_labor_force_participation_pct": 48,
+      "maternal_mortality_per_100k": 617,
+      "child_marriage_pct": 27,
+      "fgm_prevalence_pct": 36,
+      "lgbtq_legal_status": "Legal (no protections; social stigma)",
+      "death_penalty_status": "Abolished (2000)",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 26,
+      "notes": "Post-civil war reconciliation ongoing; cocoa sector child labor internationally scrutinized; FGM prevalent in north."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.1,
+      "global_peace_index_rank": 113,
+      "terrorism_index_score": 4.3,
+      "terrorism_index_rank": 38,
+      "homicide_rate_per_100k": 2.1,
+      "active_conflicts": [
+        "Jihadist threats (northern border)"
+      ],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 1000,
+      "arms_imports_usd": "$80 million",
+      "internally_displaced_persons": 303000,
+      "notes": "Post-2011 crisis stability; Grand-Bassam attack (2016); jihadist incursions from Sahel; UNOCI departed 2017."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "elephant"
+      ],
+      "national_animal": "elephant",
+      "national_flower": "",
+      "national_dish": "Attiéké (cassava couscous)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "MASA (Market for African Performing Arts)",
+        "Fêtes des Masques (Man region)",
+        "Abissa (N'Zima people)"
+      ],
+      "cuisine_highlights": [
+        "attiéké",
+        "alloco (fried plantain)",
+        "foutou (pounded yam/plantain)",
+        "kedjenou (slow-cooked chicken)",
+        "garba (attiéké with tuna)"
+      ],
+      "music_art_traditions": [
+        "Zouglou",
+        "Coupé-Décalé",
+        "Malinké balafon music",
+        "Dan masks",
+        "Senufo art"
+      ],
+      "film_industry": "Active (FESPACO participants; Quartier Mozart tradition)",
+      "intangible_heritage_items": [
+        "Gbofe of Afounkaha (UNESCO)",
+        "Zaouli dance"
+      ],
+      "notable_historical_figures": [
+        "Félix Houphouët-Boigny (founding father)",
+        "Didier Drogba (footballer)",
+        "Alpha Blondy (musician)",
+        "Bernard Dadié (writer)"
+      ],
+      "world_heritage_sites": [
+        "Taï National Park",
+        "Comoé National Park",
+        "Mount Nimba",
+        "Grand-Bassam"
+      ],
+      "media_landscape": "Diverse; Fraternité Matin state paper; RTI public broadcaster; growing private media",
+      "notes": "60+ ethnic groups; Baoulé, Bété, Senufo, Dan among main; coupé-décalé dance culture globally influential."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (French heritage)",
+      "constitution_year": 2016,
+      "sharia_applicability": "None",
+      "customary_law_role": "Applied in traditional matters, land disputes",
+      "icc_membership": "State Party (self-referred 2003, 2011)",
+      "judicial_independence_score": 0.35,
+      "contract_enforcement_days": 525,
+      "property_rights_index": 45,
+      "notes": "ICC cases (Gbagbo acquitted, Blé Goudé); post-crisis justice with Special Investigative Commission; 2016 constitution established new Senate."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 12,
+        "global_rank": 55
+      },
+      "area": {
+        "continent_rank": 18,
+        "global_rank": 68
+      },
+      "gdp_nominal": {
+        "continent_rank": 7,
+        "global_rank": 73
+      },
+      "gdp_per_capita": {
+        "continent_rank": 21,
+        "global_rank": 140
+      },
+      "hdi": {
+        "continent_rank": 30,
+        "global_rank": 159
+      },
+      "life_expectancy": {
+        "continent_rank": 28,
+        "global_rank": 152
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 14,
+        "global_rank": 110
+      },
+      "internet_penetration": {
+        "continent_rank": 18,
+        "global_rank": 120
+      },
+      "press_freedom": {
+        "continent_rank": 26,
+        "global_rank": 80
+      },
+      "global_peace_index": {
+        "continent_rank": 21,
+        "global_rank": 113
+      },
+      "innovation_index": {
+        "continent_rank": 12,
+        "global_rank": 107
+      },
+      "notes": ""
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Alassane Ouattara",
       "title": "President",
       "since": "2011-04-11",
-      "notes": "Former IMF deputy director; won 2010 election contested by Gbagbo; re-elected 2015; controversial third term 2020"
+      "notes": "Former IMF deputy director; won 2010 election contested by Gbagbo; re-elected 2015; controversial third term 2020",
+      "party": ""
     },
     "prime_minister": {
       "name": "Robert Beugré Mambé",
@@ -298,7 +812,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

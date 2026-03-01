@@ -3,8 +3,408 @@
     "country_slug": "tanzania",
     "node_kind": "events",
     "registry": "docs/nodes/node-attribute-registry.md",
-    "generated_at": "2026-01-31T13:56:07.931564Z",
-    "notes": "Country-scoped curated nodes; link via relationships during ingest."
+    "generated_at": "2026-02-28T19:21:41.660833Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
   },
-  "nodes": []
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Cradle_Humanity_TZ_Event",
+        "name": "Cradle of Humanity and Early Peoples",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Cradle_Humanity_TZ",
+        "description": "Olduvai Gorge and Laetoli among the most important hominin fossil sites on Earth; earliest stone tools; anatomically modern humans.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Dodoma (official/legislative) / Dar es Salaam (commercial/administrative)"
+        },
+        "startYear": -3600000,
+        "endYear": -10000
+      },
+      {
+        "slug": "Olduvai_Gorge_Event",
+        "name": "Olduvai Gorge Fossil Record",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Cradle_Humanity_TZ",
+        "description": "Australopithecus, Homo habilis, Homo erectus fossils; Oldowan and Acheulean stone tool industries; Leakey discoveries.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Tanzania"
+        },
+        "startYear": -3600000,
+        "endYear": -15000
+      },
+      {
+        "slug": "Laetoli_Footprints_Event",
+        "name": "Laetoli Hominin Footprints",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Cradle_Humanity_TZ",
+        "description": "3.66-million-year-old Australopithecus afarensis footprints preserved in volcanic ash; proof of bipedal locomotion.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Tanzania"
+        },
+        "startYear": -3700000,
+        "endYear": -3600000
+      }
+    ],
+    "920": [
+      {
+        "slug": "Kilwa_Sultanate_TZ_Event",
+        "name": "Kilwa Sultanate and Swahili Coast",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Kilwa_Sultanate_TZ",
+        "description": "Rise of Kilwa Kisiwani as dominant Indian Ocean trading sultanate; Swahili civilisation along Tanzanian coast; gold trade monopoly.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Dodoma (official/legislative) / Dar es Salaam (commercial/administrative)"
+        },
+        "startYear": 800,
+        "endYear": 1500
+      },
+      {
+        "slug": "Kilwa_Kisiwani_Event",
+        "name": "Kilwa Kisiwani Sultanate",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Kilwa_Sultanate_TZ",
+        "description": "Kilwa dominates East African gold trade; Great Mosque; Husuni Kubwa palace; UNESCO World Heritage Site.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Tanzania"
+        },
+        "startYear": 957,
+        "endYear": 1513
+      },
+      {
+        "slug": "Swahili_Towns_TZ_Event",
+        "name": "Swahili Coastal Towns",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Kilwa_Sultanate_TZ",
+        "description": "Bagamoyo, Pangani, Mafia Island, and other Swahili towns; Indian Ocean commerce; Bantu-Arab cultural synthesis.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Tanzania"
+        },
+        "startYear": 800,
+        "endYear": 1500
+      }
+    ],
+    "930": [
+      {
+        "slug": "Zanzibar_Trade_Empire_Event",
+        "name": "Zanzibar and the Slave/Spice Trade",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Zanzibar_Trade_Empire",
+        "description": "Portuguese then Omani control of coast; Zanzibar as slave trade and clove trade capital; Tippu Tip's empire; European exploration.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Dodoma (official/legislative) / Dar es Salaam (commercial/administrative)"
+        },
+        "startYear": 1500,
+        "endYear": 1890
+      },
+      {
+        "slug": "Portuguese_Coast_TZ_Event",
+        "name": "Portuguese Coastal Presence",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Zanzibar_Trade_Empire",
+        "description": "Portuguese seize Kilwa and other Swahili towns; Fort Jesus at Mombasa; Omani-Swahili alliance expels Portuguese 1698.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Tanzania"
+        },
+        "startYear": 1498,
+        "endYear": 1698
+      },
+      {
+        "slug": "Omani_Zanzibar_Event",
+        "name": "Omani Sultanate of Zanzibar",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Zanzibar_Trade_Empire",
+        "description": "Said bin Sultan moves capital to Zanzibar 1840; clove plantations; island becomes East Africa's commercial hub.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Tanzania"
+        },
+        "startYear": 1698,
+        "endYear": 1890
+      }
+    ],
+    "940": [
+      {
+        "slug": "German_East_Africa_TZ_Event",
+        "name": "German East Africa",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "German_East_Africa_TZ",
+        "description": "German colonial conquest; Maji Maji Rebellion; WWI East African Campaign; transfer to British mandate.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Dodoma (official/legislative) / Dar es Salaam (commercial/administrative)"
+        },
+        "startYear": 1885,
+        "endYear": 1919
+      },
+      {
+        "slug": "German_Colonisation_TZ_Event",
+        "name": "German Colonisation",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "German_East_Africa_TZ",
+        "description": "Carl Peters' treaties; German East Africa Company; Abushiri revolt 1888; direct imperial rule from 1891.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Tanzania"
+        },
+        "startYear": 1885,
+        "endYear": 1905
+      },
+      {
+        "slug": "Maji_Maji_Rebellion_Event",
+        "name": "Maji Maji Rebellion",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "German_East_Africa_TZ",
+        "description": "Mass uprising against forced cotton cultivation and hut tax; 'maji' sacred water; German scorched-earth response kills 200,000-300,000.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Tanzania"
+        },
+        "startYear": 1905,
+        "endYear": 1907
+      },
+      {
+        "slug": "British_Tanganyika_Event",
+        "name": "British Tanganyika",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "British_Tanganyika",
+        "description": "League of Nations mandate; indirect rule; groundnut scheme; rise of TANU nationalism.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Dodoma (official/legislative) / Dar es Salaam (commercial/administrative)"
+        },
+        "startYear": 1919,
+        "endYear": 1961
+      },
+      {
+        "slug": "Mandate_Tanganyika_Event",
+        "name": "British Mandate Period",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "British_Tanganyika",
+        "description": "League of Nations mandate; indirect rule through traditional chiefs; limited economic development; racial segregation.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Tanzania"
+        },
+        "startYear": 1919,
+        "endYear": 1946
+      },
+      {
+        "slug": "TANU_Nationalism_Event",
+        "name": "TANU and Rise of Nationalism",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "British_Tanganyika",
+        "description": "Julius Nyerere founds TANU 1954; peaceful nationalist movement; Tanganyika achieves independence 9 December 1961.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Tanzania"
+        },
+        "startYear": 1954,
+        "endYear": 1961
+      }
+    ],
+    "950": [
+      {
+        "slug": "Nyerere_Ujamaa_Event",
+        "name": "Nyerere, Ujamaa, and the Union",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Nyerere_Ujamaa",
+        "description": "Independence; Zanzibar revolution; union of Tanganyika and Zanzibar; Arusha Declaration; ujamaa villagisation; economic decline.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Dodoma (official/legislative) / Dar es Salaam (commercial/administrative)"
+        },
+        "startYear": 1961,
+        "endYear": 1985
+      },
+      {
+        "slug": "Zanzibar_Revolution_Event",
+        "name": "Zanzibar Revolution 1964",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Nyerere_Ujamaa",
+        "description": "Afro-Shirazi Party overthrows Arab sultanate; thousands killed; Cold War tensions; hasty merger with Tanganyika.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Tanzania"
+        },
+        "startYear": 1964,
+        "endYear": 1964
+      },
+      {
+        "slug": "Union_Tanganyika_Zanzibar_Event",
+        "name": "Union of Tanganyika and Zanzibar",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Nyerere_Ujamaa",
+        "description": "United Republic of Tanzania formed 26 April 1964; Nyerere president; semi-autonomous Zanzibar retains own government.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Tanzania"
+        },
+        "startYear": 1964,
+        "endYear": 1964
+      }
+    ],
+    "960": [
+      {
+        "slug": "Modern_Tanzania_Event",
+        "name": "Modern Tanzania",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Modern_Tanzania",
+        "description": "Economic liberalisation under Mwinyi; multiparty democracy; CCM dominance; mining boom; Magufuli era; Samia Suluhu Hassan.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Dodoma (official/legislative) / Dar es Salaam (commercial/administrative)"
+        },
+        "startYear": 1985,
+        "endYear": 2026
+      },
+      {
+        "slug": "Economic_Liberalisation_TZ_Event",
+        "name": "Economic Liberalisation",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Modern_Tanzania",
+        "description": "Ali Hassan Mwinyi liberalises economy; IMF structural adjustment; privatisation; end of ujamaa experiment.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Tanzania"
+        },
+        "startYear": 1985,
+        "endYear": 2005
+      },
+      {
+        "slug": "Multiparty_Democracy_TZ_Event",
+        "name": "Multiparty Democracy",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "sw",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Modern_Tanzania",
+        "description": "Multiparty elections from 1995; CCM (Chama Cha Mapinduzi) dominance; Zanzibar election violence; democratic backsliding concerns.",
+        "location": {
+          "country_slug": "tanzania",
+          "place_note": "Tanzania"
+        },
+        "startYear": 1992,
+        "endYear": 2026
+      }
+    ]
+  }
 }

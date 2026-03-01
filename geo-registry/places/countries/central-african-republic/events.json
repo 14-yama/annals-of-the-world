@@ -3,8 +3,426 @@
     "country_slug": "central-african-republic",
     "node_kind": "events",
     "registry": "docs/nodes/node-attribute-registry.md",
-    "generated_at": "2026-01-31T13:56:07.801072Z",
-    "notes": "Country-scoped curated nodes; link via relationships during ingest."
+    "generated_at": "2026-02-28T19:21:41.660833Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
   },
-  "nodes": []
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Early_Peoples_CAR_Event",
+        "name": "Early Peoples and Megaliths of Central Africa",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Early_Peoples_CAR",
+        "description": "Hunter-gatherer Aka (BaAka) pygmy peoples inhabit the equatorial forests; early agricultural and iron-using communities emerge on the savanna.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Bangui"
+        },
+        "startYear": -8000,
+        "endYear": 500
+      },
+      {
+        "slug": "Aka_Forest_Peoples_CAR_Event",
+        "name": "Aka Forest Peoples",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Early_Peoples_CAR",
+        "description": "BaAka pygmy communities in the southwestern rainforest practise hunter-gathering; among the earliest inhabitants of the region.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Central African Republic"
+        },
+        "startYear": -8000,
+        "endYear": 500
+      },
+      {
+        "slug": "Bouar_Megaliths_CAR_Event",
+        "name": "Bouar Megaliths (Tazunu)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Early_Peoples_CAR",
+        "description": "Megalithic stone monuments near Bouar; evidence of organised communities and ritual culture in western CAR.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Central African Republic"
+        },
+        "startYear": -1000,
+        "endYear": 500
+      }
+    ],
+    "920": [
+      {
+        "slug": "Bantu_Sara_Migrations_CAR_Event",
+        "name": "Bantu, Sara, and Banda Migrations",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Bantu_Sara_Migrations_CAR",
+        "description": "Successive waves of Bantu-speaking, Ubangian (Gbaya, Banda), and Sara peoples settle the savannas and river valleys; decentralised chiefdoms predominate.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Bangui"
+        },
+        "startYear": 500,
+        "endYear": 1500
+      },
+      {
+        "slug": "Ubangian_Settlement_CAR_Event",
+        "name": "Gbaya and Banda Settlement",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Bantu_Sara_Migrations_CAR",
+        "description": "Ubangian-speaking Gbaya, Banda, and Ngbaka peoples migrate into the Ubangi-Shari region; slash-and-burn agriculture; small-scale iron smelting.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Central African Republic"
+        },
+        "startYear": 500,
+        "endYear": 1200
+      },
+      {
+        "slug": "Zande_Nzakara_States_CAR_Event",
+        "name": "Zande and Nzakara Kingdoms",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Bantu_Sara_Migrations_CAR",
+        "description": "Avongara-Zande expansion from the east creates hierarchical kingdoms in southeastern CAR; Nzakara sultanates develop court cultures.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Central African Republic"
+        },
+        "startYear": 1200,
+        "endYear": 1900
+      }
+    ],
+    "930": [
+      {
+        "slug": "Slave_Raiding_CAR_Event",
+        "name": "Slave Raiding and External Predation",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Slave_Raiding_CAR",
+        "description": "The Ubangi-Shari region becomes a major slave-raiding zone; Sudanese, Wadai, and later Rabih az-Zubayr devastate the population.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Bangui"
+        },
+        "startYear": 1500,
+        "endYear": 1900
+      },
+      {
+        "slug": "Sudanese_Slave_Raids_CAR_Event",
+        "name": "Sudanese and Darfur Slave Raids",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Slave_Raiding_CAR",
+        "description": "Slave caravans from Darfur and Wadai prey on the peoples of the Ubangi-Shari savanna; dramatic population decline.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Central African Republic"
+        },
+        "startYear": 1500,
+        "endYear": 1800
+      },
+      {
+        "slug": "Rabih_Zubayr_CAR_Event",
+        "name": "Rabih az-Zubayr's Raids",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Slave_Raiding_CAR",
+        "description": "Sudanese warlord Rabih az-Zubayr carves a slave-raiding empire across Ubangi-Shari and the Lake Chad region before French defeat.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Central African Republic"
+        },
+        "startYear": 1875,
+        "endYear": 1900
+      }
+    ],
+    "940": [
+      {
+        "slug": "French_Ubangi_Shari_Event",
+        "name": "French Ubangi-Shari (1889–1960)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "French_Ubangi_Shari",
+        "description": "France establishes Ubangi-Shari as part of French Equatorial Africa; concessionary companies, forced labour, and the Kongo-Wara rebellion.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Bangui"
+        },
+        "startYear": 1889,
+        "endYear": 1960
+      },
+      {
+        "slug": "French_Conquest_CAR_Event",
+        "name": "French Conquest and Concessionary Companies",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "French_Ubangi_Shari",
+        "description": "French outposts along the Ubangi River; vast concessions granted to private companies; rubber extraction through brutal forced labour.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Central African Republic"
+        },
+        "startYear": 1889,
+        "endYear": 1920
+      },
+      {
+        "slug": "Kongo_Wara_Rebellion_CAR_Event",
+        "name": "Kongo-Wara Rebellion (War of the Hoe Handle)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "French_Ubangi_Shari",
+        "description": "Gbaya prophet Karnu leads a widespread anti-colonial uprising against forced labour and head tax; brutally suppressed by French forces.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Central African Republic"
+        },
+        "startYear": 1928,
+        "endYear": 1931
+      }
+    ],
+    "950": [
+      {
+        "slug": "Independence_Dacko_CAR_Event",
+        "name": "Independence and David Dacko",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Independence_Dacko_CAR",
+        "description": "Barthélemy Boganda's death in 1959; David Dacko leads independence; one-party MESAN rule; economic difficulties lead to military takeover.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Bangui"
+        },
+        "startYear": 1958,
+        "endYear": 1966
+      },
+      {
+        "slug": "Boganda_Independence_CAR_Event",
+        "name": "Boganda, Independence, and Dacko",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Independence_Dacko_CAR",
+        "description": "Barthélemy Boganda champions independence but dies in 1959 plane crash; nephew David Dacko becomes president; single-party rule; France maintains military presence.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Central African Republic"
+        },
+        "startYear": 1958,
+        "endYear": 1966
+      },
+      {
+        "slug": "Bokassa_Empire_CAR_Event",
+        "name": "Bokassa Regime and Central African Empire",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Bokassa_Empire_CAR",
+        "description": "Jean-Bédel Bokassa seizes power; self-crowns emperor in lavish Napoleonic ceremony; brutal repression; French intervention ousts him.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Bangui"
+        },
+        "startYear": 1966,
+        "endYear": 1979
+      },
+      {
+        "slug": "Bokassa_Coup_CAR_Event",
+        "name": "Bokassa's Military Coup and Rise",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Bokassa_Empire_CAR",
+        "description": "Colonel Bokassa overthrows cousin Dacko on New Year's Eve 1965/66; escalating authoritarianism and personality cult.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Central African Republic"
+        },
+        "startYear": 1966,
+        "endYear": 1976
+      },
+      {
+        "slug": "Central_African_Empire_CAR_Event",
+        "name": "Central African Empire Coronation",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Bokassa_Empire_CAR",
+        "description": "Bokassa declares himself Emperor 1976; lavish coronation December 1977 costs a third of national budget; massacre of schoolchildren 1979.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Central African Republic"
+        },
+        "startYear": 1976,
+        "endYear": 1979
+      },
+      {
+        "slug": "Post_Bokassa_Instability_CAR_Event",
+        "name": "Post-Bokassa Coups and Instability",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Post_Bokassa_Instability_CAR",
+        "description": "Cycles of coups (Kolingba, Patassé) and mutinies; French military interventions; democratic experiments repeatedly fail.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Bangui"
+        },
+        "startYear": 1979,
+        "endYear": 2003
+      },
+      {
+        "slug": "Kolingba_Patasse_CAR_Event",
+        "name": "Kolingba and Patassé Eras",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Post_Bokassa_Instability_CAR",
+        "description": "Kolingba's military rule (1981–1993); Patassé elected but faces army mutinies and regional rebellion; Bozizé coup 2003.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Central African Republic"
+        },
+        "startYear": 1981,
+        "endYear": 2003
+      }
+    ],
+    "960": [
+      {
+        "slug": "CAR_Civil_Wars_Event",
+        "name": "Civil Wars and Séléka/Anti-Balaka Crisis",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "CAR_Civil_Wars",
+        "description": "Bozizé's rule ends with Séléka takeover 2013; Anti-Balaka reprisals; sectarian violence; French and UN interventions; Russian Wagner Group presence.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Bangui"
+        },
+        "startYear": 2003,
+        "endYear": 2026
+      },
+      {
+        "slug": "Bozize_Era_CAR_Event",
+        "name": "Bozizé Regime (2003–2013)",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "CAR_Civil_Wars",
+        "description": "General Bozizé seizes power from Patassé; peace agreements with northern rebels fail; Séléka coalition forms.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Central African Republic"
+        },
+        "startYear": 2003,
+        "endYear": 2013
+      },
+      {
+        "slug": "Seleka_Anti_Balaka_CAR_Event",
+        "name": "Séléka Takeover and Anti-Balaka Reprisals",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "fr",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "CAR_Civil_Wars",
+        "description": "Séléka (Muslim coalition) seizes Bangui March 2013; Djotodia briefly president; Anti-Balaka (Christian/animist) militias retaliate; ethnic cleansing of Muslims.",
+        "location": {
+          "country_slug": "central-african-republic",
+          "place_note": "Central African Republic"
+        },
+        "startYear": 2013,
+        "endYear": 2016
+      }
+    ]
+  }
 }

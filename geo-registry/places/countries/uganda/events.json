@@ -3,8 +3,354 @@
     "country_slug": "uganda",
     "node_kind": "events",
     "registry": "docs/nodes/node-attribute-registry.md",
-    "generated_at": "2026-01-31T13:56:07.940154Z",
-    "notes": "Country-scoped curated nodes; link via relationships during ingest."
+    "generated_at": "2026-02-28T19:21:41.660833Z",
+    "notes": "Country-scoped curated nodes; link via relationships during ingest.",
+    "timeframe_coverage": [
+      "910",
+      "920",
+      "930",
+      "940",
+      "950",
+      "960"
+    ],
+    "grouped_by": "timeframe"
   },
-  "nodes": []
+  "thematic_clusters": {
+    "910": [
+      {
+        "slug": "Early_Peoples_Uganda_Event",
+        "name": "Early Peoples and Iron Age",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Early_Peoples_Uganda",
+        "description": "Hunter-gatherer communities; Bantu and Nilotic migrations; development of iron-working and agricultural societies in the Great Lakes region.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Kampala"
+        },
+        "startYear": -50000,
+        "endYear": 1000
+      },
+      {
+        "slug": "Hunter_Gatherers_UG_Event",
+        "name": "Early Hunter-Gatherer Communities",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Early_Peoples_Uganda",
+        "description": "Batwa and other hunter-gatherer communities; Stone Age sites in western Uganda; forest-dwelling peoples.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Uganda"
+        },
+        "startYear": -50000,
+        "endYear": -1000
+      },
+      {
+        "slug": "Bantu_Nilotic_UG_Event",
+        "name": "Bantu and Nilotic Migrations",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "910",
+        "cluster": "Early_Peoples_Uganda",
+        "description": "Bantu-speaking peoples arrive from west; Nilotic (Luo, Acholi, Langi) and Nilo-Hamitic peoples from the north; iron smelting traditions.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Uganda"
+        },
+        "startYear": -1000,
+        "endYear": 1000
+      }
+    ],
+    "920": [
+      {
+        "slug": "Great_Lakes_Kingdoms_UG_Event",
+        "name": "Great Lakes Kingdoms",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Great_Lakes_Kingdoms_UG",
+        "description": "Rise of Bunyoro-Kitara empire; emergence of Buganda, Ankole, Toro, and Busoga kingdoms; cattle and banana-based civilisations.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Kampala"
+        },
+        "startYear": 1000,
+        "endYear": 1800
+      },
+      {
+        "slug": "Bunyoro_Kitara_Event",
+        "name": "Bunyoro-Kitara Empire",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Great_Lakes_Kingdoms_UG",
+        "description": "Bunyoro-Kitara as dominant Great Lakes kingdom; Bachwezi dynasty legends; control of salt, iron, and cattle.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Uganda"
+        },
+        "startYear": 1000,
+        "endYear": 1800
+      },
+      {
+        "slug": "Buganda_Kingdom_Rise_Event",
+        "name": "Rise of Buganda Kingdom",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "920",
+        "cluster": "Great_Lakes_Kingdoms_UG",
+        "description": "Buganda emerges as tributary of Bunyoro; gradually expands; kabaka (king) centralised power; maritime control of Lake Victoria.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Uganda"
+        },
+        "startYear": 1300,
+        "endYear": 1800
+      }
+    ],
+    "930": [
+      {
+        "slug": "Buganda_Expansion_Event",
+        "name": "Buganda Expansion and European Exploration",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Buganda_Expansion",
+        "description": "Buganda becomes dominant power; Arab trade contacts; Speke and Baker seek source of the Nile; religious wars.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Kampala"
+        },
+        "startYear": 1750,
+        "endYear": 1894
+      },
+      {
+        "slug": "Buganda_Dominance_Event",
+        "name": "Buganda Dominance",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Buganda_Expansion",
+        "description": "Buganda supplants Bunyoro as regional power; standing army; sophisticated administrative system; Arab trade in guns and cloth.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Uganda"
+        },
+        "startYear": 1750,
+        "endYear": 1884
+      },
+      {
+        "slug": "Speke_Baker_Nile_Event",
+        "name": "Speke and Baker: Source of the Nile",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "930",
+        "cluster": "Buganda_Expansion",
+        "description": "John Hanning Speke reaches Lake Victoria 1858; identifies source of the Nile; Samuel Baker discovers Lake Albert.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Uganda"
+        },
+        "startYear": 1858,
+        "endYear": 1864
+      }
+    ],
+    "940": [
+      {
+        "slug": "British_Protectorate_UG_Event",
+        "name": "British Protectorate",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "British_Protectorate_UG",
+        "description": "Imperial British East Africa Company; Uganda Agreement 1900; Buganda privileged position; cotton and coffee economy; path to independence.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Kampala"
+        },
+        "startYear": 1894,
+        "endYear": 1962
+      },
+      {
+        "slug": "IBEAC_Uganda_Event",
+        "name": "IBEAC and Early British Control",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "British_Protectorate_UG",
+        "description": "Imperial British East Africa Company; Lugard arrives 1890; British protectorate declared 1894.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Uganda"
+        },
+        "startYear": 1888,
+        "endYear": 1894
+      },
+      {
+        "slug": "Uganda_Agreement_1900_Event",
+        "name": "Uganda Agreement 1900",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "940",
+        "cluster": "British_Protectorate_UG",
+        "description": "Agreement between Britain and Buganda; mailo land system; Buganda chiefs become landed gentry; indirect rule.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Uganda"
+        },
+        "startYear": 1900,
+        "endYear": 1900
+      }
+    ],
+    "950": [
+      {
+        "slug": "Post_Independence_UG_Event",
+        "name": "Post-Independence Turmoil",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Post_Independence_UG",
+        "description": "Obote's centralisation; Idi Amin's reign of terror; Tanzanian invasion; second Obote regime; Bush War; Museveni victory.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Kampala"
+        },
+        "startYear": 1962,
+        "endYear": 1986
+      },
+      {
+        "slug": "Obote_First_Regime_Event",
+        "name": "Obote First Government",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Post_Independence_UG",
+        "description": "Milton Obote PM then president; abolishes kingdoms 1967; 'Move to the Left'; Buganda crisis; increasing authoritarianism.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Uganda"
+        },
+        "startYear": 1962,
+        "endYear": 1971
+      },
+      {
+        "slug": "Idi_Amin_Regime_Event",
+        "name": "Idi Amin's Reign of Terror",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "950",
+        "cluster": "Post_Independence_UG",
+        "description": "Idi Amin seizes power; expulsion of 80,000 Asians 1972; State Research Bureau; estimated 100,000-500,000 killed; Entebbe raid 1976.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Uganda"
+        },
+        "startYear": 1971,
+        "endYear": 1979
+      }
+    ],
+    "960": [
+      {
+        "slug": "Museveni_Modern_UG_Event",
+        "name": "Museveni Era and Modern Uganda",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Museveni_Modern_UG",
+        "description": "NRM governance; economic recovery; HIV/AIDS response; LRA insurgency; oil discovery; multiparty transition; democratic backsliding.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Kampala"
+        },
+        "startYear": 1986,
+        "endYear": 2026
+      },
+      {
+        "slug": "NRM_Reconstruction_Event",
+        "name": "NRM Economic Reconstruction",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Museveni_Modern_UG",
+        "description": "Museveni stabilises economy; 'no-party' Movement system; structural adjustment; praised as 'new breed' African leader.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Uganda"
+        },
+        "startYear": 1986,
+        "endYear": 2000
+      },
+      {
+        "slug": "HIV_AIDS_Response_UG_Event",
+        "name": "HIV/AIDS Response",
+        "label": "Event",
+        "status": "PROPOSED",
+        "lang": "en",
+        "script": "Latn",
+        "kind": "Historical",
+        "timeframe": "960",
+        "cluster": "Museveni_Modern_UG",
+        "description": "Uganda's early and effective HIV/AIDS response; prevalence drops from 15% to 5%; ABC campaign; global model.",
+        "location": {
+          "country_slug": "uganda",
+          "place_note": "Uganda"
+        },
+        "startYear": 1986,
+        "endYear": 2010
+      }
+    ]
+  }
 }
