@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.873468Z",
-    "notes": "Comprehensive index for Guinea covering Fouta Djallon, Samori Ture, French Guinea, Sékou Touré's 'Non', and military eras."
+    "notes": "Comprehensive index for Guinea covering Fouta Djallon, Samori Ture, French Guinea, Sékou Touré's 'Non', and military eras.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Conakry",
@@ -126,7 +127,22 @@
       "life_expectancy": 63.2,
       "infant_mortality_per_1k": 50.0,
       "literacy_rate_pct": 45.3,
-      "net_migration_rate": -1.2
+      "net_migration_rate": -1.2,
+      "population_growth_rate_pct": 2.8,
+      "urban_population_growth_rate_pct": 3.8,
+      "life_expectancy_male": 59,
+      "life_expectancy_female": 62,
+      "under5_mortality_per_1k": 99,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 82,
+      "population_density_per_km2": 56,
+      "age_structure": {
+        "0_14_pct": 42,
+        "15_24_pct": 20,
+        "25_54_pct": 31,
+        "55_64_pct": 4,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -152,7 +168,10 @@
         "AU",
         "ECOWAS (suspended)"
       ],
-      "notes": "September 2021 coup (Col. Mamady Doumbouya ousted Alpha Condé); junta in power; left ECOWAS 2024 (with Mali/Burkina); French military cooperation reduced; historically politicized military (Sékou Touré used military for repression); ethnically divided forces"
+      "notes": "September 2021 coup (Col. Mamady Doumbouya ousted Alpha Condé); junta in power; left ECOWAS 2024 (with Mali/Burkina); French military cooperation reduced; historically politicized military (Sékou Touré used military for repression); ethnically divided forces",
+      "paramilitary_personnel": 7000,
+      "conscription": true,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -179,14 +198,48 @@
         "USA"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 6.5
+      "remittances_pct_gdp": 6.5,
+      "total_exports_usd": "$5 billion",
+      "total_imports_usd": "$4.5 billion",
+      "top_export_destinations": [
+        "China",
+        "India",
+        "UAE",
+        "Spain",
+        "Russia"
+      ],
+      "top_import_origins": [
+        "China",
+        "India",
+        "Netherlands",
+        "France",
+        "Belgium"
+      ],
+      "trade_as_pct_gdp": 45,
+      "current_account_balance_usd": "-$1 billion",
+      "trade_agreements": [
+        "ECOWAS (suspended)",
+        "AfCFTA",
+        "Mano River Union"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 35.0,
       "electricity_access_pct": 44.0,
       "mobile_subscriptions_per_100": 105,
       "railway_km": 1086,
-      "paved_roads_pct": 10
+      "paved_roads_pct": 10,
+      "broadband_subscriptions_per_100": 0.01,
+      "4g_coverage_pct": 40,
+      "5g_availability": false,
+      "road_network_km": 44348,
+      "waterways_km": 1300,
+      "submarine_cables": [
+        "ACE",
+        "SAT-3"
+      ],
+      "notes": "Orange, MTN Guinea; poor road conditions especially in rainy season."
     },
     "international_memberships": [
       "UN",
@@ -215,6 +268,26 @@
       "fragile_states_index": {
         "score": 89.1,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.35,
+        "rank": 121,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -1.0,
+        "percentile": 8,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.7,
+        "percentile": 18,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.7,
+        "percentile": 15,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -230,12 +303,41 @@
         "droughts",
         "dust/harmattan"
       ],
-      "protected_areas_pct": 27
+      "protected_areas_pct": 27,
+      "average_temperature_c": 27,
+      "average_rainfall_mm": 1800,
+      "co2_per_capita_t": 0.3,
+      "deforestation_rate_pct": 1.5,
+      "water_stress_level": "Low-medium",
+      "environmental_performance_index": {
+        "score": 27,
+        "rank": 168,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 3500,
+        "endemic_species": 50,
+        "threatened_species": 100
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 37.5,
       "foreign_aid_received_usd": "650 million",
-      "notes": "Mining revenue transforming economy; Simandou iron ore project could double GDP; Chinese/Russian investment growing post-coup; HIPC debt relief beneficiary; Sékou Touré's socialism impoverished the nation, still recovering"
+      "notes": "Mining revenue transforming economy; Simandou iron ore project could double GDP; Chinese/Russian investment growing post-coup; HIPC debt relief beneficiary; Sékou Touré's socialism impoverished the nation, still recovering",
+      "external_debt_usd": "$4 billion",
+      "debt_service_pct_revenue": 12,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "World Bank",
+        "IMF",
+        "EU",
+        "France",
+        "USA"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 80,
@@ -245,14 +347,41 @@
       "top_universities": [
         "Gamal Abdel Nasser University (Conakry)"
       ],
-      "notes": "Low literacy (45%); French-language instruction; Sékou Touré era had ideology-driven education; enormous gender gap; Ebola 2014-15 closed schools for months; Quranic schools significant in Fouta Djallon"
+      "notes": "Low literacy (45%); French-language instruction; Sékou Touré era had ideology-driven education; enormous gender gap; Ebola 2014-15 closed schools for months; Quranic schools significant in Fouta Djallon",
+      "education_expenditure_pct_gdp": 2.5,
+      "primary_completion_rate_pct": 60,
+      "gender_parity_index": 0.82,
+      "mean_years_of_schooling": 2.6,
+      "expected_years_of_schooling": 9.0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 45,
+      "out_of_school_children": 800000,
+      "academic_freedom_index": 0.25
     },
     "diaspora_migration": {
       "diaspora_population": "700,000 (France ~40k, Senegal, Côte d'Ivoire, Liberia, Sierra Leone, USA)",
       "refugees_hosted": 3000,
       "refugees_produced": 18000,
       "remittances_usd": "200 million",
-      "notes": "Sékou Touré regime drove massive exile (1/3 of population fled 1958-84); Mandinka/Fulani trade networks span West Africa; Ebola stigma affected migrants; 'backway' migration to Europe through West Africa-Libya-Mediterranean route"
+      "notes": "Sékou Touré regime drove massive exile (1/3 of population fled 1958-84); Mandinka/Fulani trade networks span West Africa; Ebola stigma affected migrants; 'backway' migration to Europe through West Africa-Libya-Mediterranean route",
+      "diaspora_top_destinations": [
+        "France",
+        "Senegal",
+        "USA",
+        "Sierra Leone",
+        "Côte d'Ivoire"
+      ],
+      "asylum_seekers": 15000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 10000,
+      "immigration_policy": "ECOWAS free movement (suspended)",
+      "remittances_pct_gdp": 6.5,
+      "net_migration_rate_per_1k": -1.5
     },
     "digital_economy": {
       "e_government_index": 0.31,
@@ -260,16 +389,376 @@
       "tech_hubs": [
         "Conakry (Saboutech)"
       ],
-      "notes": "Limited digital infrastructure; Orange Guinea dominant; mobile money growing from low base; internet shutdowns during political crises; mining sector IT adoption; Saboutech incubator emerging"
+      "notes": "Limited digital infrastructure; Orange Guinea dominant; mobile money growing from low base; internet shutdowns during political crises; mining sector IT adoption; Saboutech incubator emerging",
+      "e_participation_index": 0.2,
+      "ict_development_index": 1.3,
+      "mobile_money_accounts": 3000000,
+      "digital_payments_pct_adults": 10,
+      "fintech_companies": 5,
+      "startup_ecosystem_value_usd": "$5 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.1,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 0
     },
-    "notes_unique": "First French-speaking African country to gain independence (1958) after voting 'No' in de Gaulle's referendum; holds the world's largest bauxite reserves."
+    "notes_unique": "First French-speaking African country to gain independence (1958) after voting 'No' in de Gaulle's referendum; holds the world's largest bauxite reserves.",
+    "capital_coordinates": {
+      "lat": 9.6412,
+      "lon": -13.5784
+    },
+    "other_major_cities": [
+      "Nzérékoré",
+      "Kankan",
+      "Kindia",
+      "Labé",
+      "Mamou"
+    ],
+    "national_motto": "Travail, Justice, Solidarité (Work, Justice, Solidarity)",
+    "national_anthem": "Liberté (Liberty)",
+    "currency_code": "GNF",
+    "internet_tld": ".gn",
+    "utc_offset": "UTC+0",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 9.9456,
+        "lon": -9.6966
+      },
+      "bounding_box": {
+        "north": 12.68,
+        "south": 7.19,
+        "east": -7.64,
+        "west": -15.08
+      },
+      "land_area_km2": 245857,
+      "water_area_km2": 0,
+      "coastline_km": 320,
+      "borders": [
+        "Guinea-Bissau",
+        "Senegal",
+        "Mali",
+        "Côte d'Ivoire",
+        "Liberia",
+        "Sierra Leone"
+      ],
+      "border_lengths_km": {
+        "Guinea-Bissau": 421,
+        "Senegal": 363,
+        "Mali": 858,
+        "Côte d'Ivoire": 816,
+        "Liberia": 590,
+        "Sierra Leone": 794
+      },
+      "highest_point": {
+        "name": "Mont Nimba",
+        "elevation_m": 1752
+      },
+      "lowest_point": {
+        "name": "Atlantic Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Coastal plain; mountainous Fouta Djallon interior; forested Guinea Highlands in southeast; Niger River basin in northeast",
+      "land_use": {
+        "agricultural_pct": 58.1,
+        "arable_pct": 11.8,
+        "forest_pct": 26,
+        "other_pct": 15.9
+      },
+      "major_rivers": [
+        "Niger (source)",
+        "Gambia (source)",
+        "Senegal (source)"
+      ],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 67000,
+      "landlocked": false,
+      "notes": "Source of Niger, Gambia, and Senegal rivers — 'Water Tower of West Africa'; Mont Nimba UNESCO site; world's largest bauxite reserves."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$21 billion",
+      "gdp_ppp_usd": "$45 billion",
+      "gdp_per_capita_nominal_usd": 1530,
+      "gdp_per_capita_ppp_usd": 3300,
+      "gdp_growth_rate_pct": 5.6,
+      "inflation_rate_pct": 10,
+      "unemployment_rate_pct": 6,
+      "youth_unemployment_rate_pct": 15,
+      "poverty_rate_pct": 43.7,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 33.7,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 26,
+        "industry_pct_gdp": 30,
+        "services_pct_gdp": 44
+      },
+      "labor_force": 5600000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 76,
+        "industry_pct": 7,
+        "services_pct": 17
+      },
+      "fdi_inflow_usd": "$400 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$1.5 billion",
+      "ease_of_doing_business_rank": 156,
+      "economic_freedom_index_score": 51.7,
+      "credit_rating": {
+        "moodys": "B3",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "World's largest bauxite reserves (~25% global); Simandou iron ore mega-project; mining-dependent; Sept 2021 military coup (Col. Doumbouya)."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.7,
+      "health_expenditure_per_capita_usd": 42,
+      "physicians_per_1k": 0.08,
+      "nurses_midwives_per_1k": 0.4,
+      "hospital_beds_per_1k": 0.3,
+      "maternal_mortality_per_100k": 576,
+      "hiv_prevalence_pct": 1.4,
+      "malaria_incidence_per_1k": 300,
+      "tuberculosis_incidence_per_100k": 176,
+      "access_to_clean_water_pct": 65,
+      "access_to_sanitation_pct": 17,
+      "vaccination_coverage_pct": 47,
+      "stunting_under5_pct": 30,
+      "obesity_rate_pct": 7,
+      "universal_health_coverage_index": 37,
+      "leading_causes_of_death": [
+        "malaria",
+        "lower respiratory infections",
+        "neonatal disorders",
+        "diarrheal diseases",
+        "tuberculosis"
+      ],
+      "notes": "Ebola epidemic epicenter (2013-2016, ~3800 deaths); weak health infrastructure; community health workers program."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 28,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 11.8,
+      "agricultural_land_pct": 58.1,
+      "irrigated_land_pct": 1,
+      "major_crops": [
+        "rice",
+        "cassava",
+        "millet",
+        "fonio",
+        "coffee",
+        "palm oil",
+        "pineapple",
+        "mango"
+      ],
+      "major_livestock": [
+        "cattle",
+        "sheep",
+        "goats"
+      ],
+      "food_import_dependency_pct": 25,
+      "cereal_yield_kg_per_hectare": 1800,
+      "agricultural_employment_pct": 76,
+      "prevalence_of_undernourishment_pct": 17,
+      "notes": "Rice main staple; fonio (ancient grain) specialty; Fouta Djallon cattle herding."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 75,
+        "hydroelectric_pct": 20,
+        "solar_pct": 2,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 3
+      },
+      "installed_capacity_mw": 700,
+      "electricity_production_gwh": 1500,
+      "electricity_consumption_per_capita_kwh": 80,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 19000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 5,
+      "energy_access_urban_pct": 50,
+      "notes": "Kaléta dam (240MW, 2015); Souapiti dam (450MW, 2021, China-funded); vast hydro potential; most rural areas lack electricity."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Conakry Ahmed Sékou Touré International Airport"
+      ],
+      "major_airports_domestic": [
+        "Kankan",
+        "Labé",
+        "Nzérékoré"
+      ],
+      "national_airline": "None",
+      "major_seaports": [
+        "Conakry"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 10,
+      "registered_vehicles_per_1k": 10,
+      "road_fatalities_per_100k": 27,
+      "notes": "Port of Conakry handles bauxite exports; Trans-Guinean Railway project (Simandou); poor road network."
+    },
+    "tourism": {
+      "annual_visitors": 90000,
+      "tourism_revenue_usd": "$15 million",
+      "tourism_pct_gdp": 0.1,
+      "tourism_employment_pct": 1,
+      "unesco_world_heritage_sites": 1,
+      "unesco_sites_list": [
+        "Mount Nimba Strict Nature Reserve (shared with Côte d'Ivoire)"
+      ],
+      "major_attractions": [
+        "Fouta Djallon highlands and waterfalls",
+        "Mont Nimba",
+        "Îles de Los (beaches)",
+        "Conakry Botanical Garden"
+      ],
+      "visa_free_access_countries": 47,
+      "henley_passport_rank": 83,
+      "notes": "Tourism potential largely untapped; Fouta Djallon trekking; political instability deters visitors."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 28,
+      "gender_inequality_index": 0.625,
+      "gender_inequality_rank": 157,
+      "gender_gap_index_score": 0.61,
+      "women_in_parliament_pct": 16,
+      "women_labor_force_participation_pct": 65,
+      "maternal_mortality_per_100k": 576,
+      "child_marriage_pct": 47,
+      "fgm_prevalence_pct": 95,
+      "lgbtq_legal_status": "Illegal (up to 3 years)",
+      "death_penalty_status": "Retentionist (no recent executions)",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 35,
+      "notes": "Highest FGM rate globally (~95%); Sept 2021 military coup; suspended constitution; ECOWAS sanctions."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.1,
+      "global_peace_index_rank": 100,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 6,
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 500,
+      "arms_imports_usd": "$10 million",
+      "internally_displaced_persons": 0,
+      "notes": "Military junta since Sept 2021 (Col. Mamadi Doumbouya); transition timeline uncertain; ECOWAS suspended; protest crackdowns."
+    },
+    "cultural_heritage": {
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "Riz gras (oily rice)",
+      "national_sport": "Football (Syli Nationale)",
+      "major_festivals": [
+        "Independence Day (2 October)",
+        "Tabaski (Eid al-Adha)",
+        "Mawlid"
+      ],
+      "cuisine_highlights": [
+        "riz gras",
+        "sauce feuille (leaf sauce)",
+        "tô (millet paste)",
+        "fataya (fried pastries)",
+        "poulet yassa"
+      ],
+      "music_art_traditions": [
+        "Mandinka balafon and kora",
+        "Bembeya Jazz National",
+        "Mory Kanté",
+        "djembe drumming (originated here)",
+        "Susu and Fulani traditions"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [
+        "Sosso-Bala sacred balafon (UNESCO)"
+      ],
+      "notable_historical_figures": [
+        "Ahmed Sékou Touré (1st president, said 'No' to De Gaulle)",
+        "Samori Ture (Mandinka resistance leader)",
+        "Miriam Makeba (exiled singer, lived in Guinea)",
+        "Alpha Condé (president 2010-2021)"
+      ],
+      "world_heritage_sites": [
+        "Mount Nimba"
+      ],
+      "media_landscape": "State RTG dominates; some private FM stations; media restricted under junta",
+      "notes": "Djembe drum originated here; Sékou Touré's 'No' to France (1958) iconic independence moment; rich music tradition."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (French system)",
+      "constitution_year": 2020,
+      "sharia_applicability": "None formally",
+      "customary_law_role": "Significant in rural areas",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.2,
+      "contract_enforcement_days": 311,
+      "property_rights_index": 25,
+      "notes": "2020 constitution (Alpha Condé term extension) suspended by junta; transitional charter in force; new constitution promised."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 20,
+        "global_rank": 75
+      },
+      "area": {
+        "continent_rank": 22,
+        "global_rank": 77
+      },
+      "gdp_nominal": {
+        "continent_rank": 22,
+        "global_rank": 101
+      },
+      "gdp_per_capita": {
+        "continent_rank": 33,
+        "global_rank": 155
+      },
+      "hdi": {
+        "continent_rank": 44,
+        "global_rank": 182
+      },
+      "life_expectancy": {
+        "continent_rank": 44,
+        "global_rank": 179
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 35,
+        "global_rank": 156
+      },
+      "internet_penetration": {
+        "continent_rank": 32,
+        "global_rank": 145
+      },
+      "press_freedom": {
+        "continent_rank": 42,
+        "global_rank": 120
+      },
+      "global_peace_index": {
+        "continent_rank": 15,
+        "global_rank": 100
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": ""
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Mamadi Doumbouya",
       "title": "Transitional President",
       "since": "2021-10-01",
-      "notes": "Lieutenant Colonel; led 2021 coup against Condé; promised democratic transition; former French Foreign Legion"
+      "notes": "Lieutenant Colonel; led 2021 coup against Condé; promised democratic transition; former French Foreign Legion",
+      "party": ""
     },
     "prime_minister": {
       "name": "Amadou Oury Bah",
@@ -295,7 +784,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.879422Z",
-    "notes": "Comprehensive index for Libya covering Phoenician Tripolitania and Cyrenaica, Roman Leptis Magna, Vandal-Byzantine control, Arab conquest, Karamanli dynasty, Ottoman Tripolitania, Italian colonial atrocities, Idris monarchy, Gaddafi's Jamahiriya (1969–2011), Arab Spring uprising, NATO intervention, and post-Gaddafi civil war."
+    "notes": "Comprehensive index for Libya covering Phoenician Tripolitania and Cyrenaica, Roman Leptis Magna, Vandal-Byzantine control, Arab conquest, Karamanli dynasty, Ottoman Tripolitania, Italian colonial atrocities, Idris monarchy, Gaddafi's Jamahiriya (1969–2011), Arab Spring uprising, NATO intervention, and post-Gaddafi civil war.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Tripoli",
@@ -102,7 +103,22 @@
       "life_expectancy": 73.4,
       "infant_mortality_per_1k": 10.0,
       "literacy_rate_pct": 91.0,
-      "net_migration_rate": 2.0
+      "net_migration_rate": 2.0,
+      "population_growth_rate_pct": 1.4,
+      "urban_population_growth_rate_pct": 1.6,
+      "life_expectancy_male": 71,
+      "life_expectancy_female": 76,
+      "under5_mortality_per_1k": 11,
+      "sex_ratio": 1.08,
+      "dependency_ratio": 47,
+      "population_density_per_km2": 4,
+      "age_structure": {
+        "0_14_pct": 28,
+        "15_24_pct": 16,
+        "25_54_pct": 43,
+        "55_64_pct": 8,
+        "65_plus_pct": 5
+      }
     },
     "natural_resources": {
       "primary": [
@@ -128,7 +144,10 @@
         "Arab League",
         "OIC"
       ],
-      "notes": "Fragmented between GNU (Tripoli) and LNA (Haftar, east); Turkish, Russian (Wagner), and Emirati foreign forces present; multiple militias; no unified national army since 2011."
+      "notes": "Fragmented between GNU (Tripoli) and LNA (Haftar, east); Turkish, Russian (Wagner), and Emirati foreign forces present; multiple militias; no unified national army since 2011.",
+      "paramilitary_personnel": 0,
+      "conscription": true,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -154,14 +173,46 @@
         "South Korea"
       ],
       "trade_balance": "surplus (when oil production stable)",
-      "remittances_pct_gdp": 0.3
+      "remittances_pct_gdp": 0.3,
+      "total_exports_usd": "$30 billion",
+      "total_imports_usd": "$15 billion",
+      "top_export_destinations": [
+        "Italy",
+        "Spain",
+        "Germany",
+        "France",
+        "USA"
+      ],
+      "top_import_origins": [
+        "Turkey",
+        "China",
+        "Italy",
+        "Egypt",
+        "Greece"
+      ],
+      "trade_as_pct_gdp": 100,
+      "current_account_balance_usd": "$15 billion",
+      "trade_agreements": [
+        "AMU (inactive)",
+        "AfCFTA"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 46.0,
       "electricity_access_pct": 70.0,
       "mobile_subscriptions_per_100": 63,
       "railway_km": 0,
-      "paved_roads_pct": 57
+      "paved_roads_pct": 57,
+      "broadband_subscriptions_per_100": 5,
+      "4g_coverage_pct": 50,
+      "5g_availability": false,
+      "road_network_km": 34000,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "Pan-European Crossing"
+      ],
+      "notes": "Great Man-Made River (4000km pipelines); infrastructure damaged by conflict; Libyana, Al-Madar telecom."
     },
     "international_memberships": [
       "UN",
@@ -191,6 +242,26 @@
       "fragile_states_index": {
         "score": 93.2,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": -1.8,
+        "percentile": 2,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -2.0,
+        "percentile": 1,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -2.0,
+        "percentile": 1,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -206,12 +277,39 @@
         "desertification",
         "flash floods"
       ],
-      "protected_areas_pct": 0.1
+      "protected_areas_pct": 0.1,
+      "average_temperature_c": 22,
+      "average_rainfall_mm": 30,
+      "co2_per_capita_t": 9,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "Extremely high",
+      "environmental_performance_index": {
+        "score": 32,
+        "rank": 145,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 2000,
+        "endemic_species": 10,
+        "threatened_species": 40
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 5.0,
       "foreign_aid_received_usd": "250 million",
-      "notes": "Low formal debt; Libyan Investment Authority sovereign wealth fund (~$67 billion, largely frozen); central bank split between Tripoli/Benghazi; UN-mediated reconciliation efforts."
+      "notes": "Low formal debt; Libyan Investment Authority sovereign wealth fund (~$67 billion, largely frozen); central bank split between Tripoli/Benghazi; UN-mediated reconciliation efforts.",
+      "external_debt_usd": "$4 billion",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "EU",
+        "Italy",
+        "UNSMIL"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": "Not applicable"
     },
     "education": {
       "primary_enrollment_pct": 95,
@@ -223,14 +321,42 @@
         "University of Benghazi (1955)",
         "Misrata University"
       ],
-      "notes": "Free education at all levels under Gaddafi; high literacy rates; conflict since 2011 has damaged infrastructure; many students study abroad; brain drain significant."
+      "notes": "Free education at all levels under Gaddafi; high literacy rates; conflict since 2011 has damaged infrastructure; many students study abroad; brain drain significant.",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 95,
+      "gender_parity_index": 1.0,
+      "mean_years_of_schooling": 7.3,
+      "expected_years_of_schooling": 12.9,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 15,
+      "out_of_school_children": 300000,
+      "academic_freedom_index": 0.1
     },
     "diaspora_migration": {
       "diaspora_population": "1 million+ (Egypt, Tunisia, Turkey, Europe)",
       "refugees_hosted": 50000,
       "refugees_produced": 130000,
       "remittances_usd": "100 million",
-      "notes": "Major transit country for African migrants heading to Europe via Mediterranean; detention centres criticised by UN; internally displaced ~300,000 due to conflict."
+      "notes": "Major transit country for African migrants heading to Europe via Mediterranean; detention centres criticised by UN; internally displaced ~300,000 due to conflict.",
+      "diaspora_top_destinations": [
+        "Tunisia",
+        "Egypt",
+        "Turkey",
+        "Jordan",
+        "UK",
+        "Italy"
+      ],
+      "asylum_seekers": 5000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 168000,
+      "immigration_policy": "Transit country for sub-Saharan African migration to Europe",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": -1.0
     },
     "digital_economy": {
       "e_government_index": 0.38,
@@ -239,19 +365,397 @@
         "Tripoli (nascent)",
         "Benghazi"
       ],
-      "notes": "Conflict-damaged telecom infrastructure; Libyana and Al-Madar mobile operators; internet censorship varied; submarine cable connections to Europe; highly cash-based economy."
+      "notes": "Conflict-damaged telecom infrastructure; Libyana and Al-Madar mobile operators; internet censorship varied; submarine cable connections to Europe; highly cash-based economy.",
+      "e_participation_index": 0.3,
+      "ict_development_index": 3.5,
+      "mobile_money_accounts": 0,
+      "digital_payments_pct_adults": 10,
+      "fintech_companies": 0,
+      "startup_ecosystem_value_usd": "$0",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0.1,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 0
     },
     "other_languages": [
       "Berber (Nafusi, Tamahaq)",
       "Italian (widely understood in Tripoli)"
-    ]
+    ],
+    "capital_coordinates": {
+      "lat": 32.8872,
+      "lon": 13.1913
+    },
+    "other_major_cities": [
+      "Benghazi",
+      "Misrata",
+      "Sebha",
+      "Zliten",
+      "Zawiya",
+      "Sirte"
+    ],
+    "national_motto": "Freedom, Justice, Democracy",
+    "national_anthem": "Libya, Libya, Libya",
+    "currency_code": "LYD",
+    "internet_tld": ".ly",
+    "utc_offset": "UTC+2",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 26.3351,
+        "lon": 17.2283
+      },
+      "bounding_box": {
+        "north": 33.17,
+        "south": 19.5,
+        "east": 25.15,
+        "west": 9.38
+      },
+      "land_area_km2": 1759540,
+      "water_area_km2": 0,
+      "coastline_km": 1770,
+      "borders": [
+        "Tunisia",
+        "Algeria",
+        "Niger",
+        "Chad",
+        "Sudan",
+        "Egypt"
+      ],
+      "border_lengths_km": {
+        "Tunisia": 461,
+        "Algeria": 989,
+        "Niger": 342,
+        "Chad": 1050,
+        "Sudan": 383,
+        "Egypt": 1115
+      },
+      "highest_point": {
+        "name": "Bikku Bitti",
+        "elevation_m": 2267
+      },
+      "lowest_point": {
+        "name": "Sabkhat Ghuzayyil",
+        "elevation_m": -47
+      },
+      "terrain": "Mostly arid desert (Sahara); narrow coastal strip along Mediterranean; Tibesti Mountains in south",
+      "land_use": {
+        "agricultural_pct": 8.8,
+        "arable_pct": 1,
+        "forest_pct": 0.1,
+        "other_pct": 91.1
+      },
+      "major_rivers": [],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 62000,
+      "landlocked": false,
+      "notes": "4th largest African country; 90% Saharan desert; Great Man-Made River (world's largest underground pipelines); Leptis Magna and Sabratha Roman ruins."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$44 billion",
+      "gdp_ppp_usd": "$82 billion",
+      "gdp_per_capita_nominal_usd": 6580,
+      "gdp_per_capita_ppp_usd": 12200,
+      "gdp_growth_rate_pct": 10,
+      "inflation_rate_pct": 4.5,
+      "unemployment_rate_pct": 19,
+      "youth_unemployment_rate_pct": 50,
+      "poverty_rate_pct": 33,
+      "poverty_line_definition": "Estimated (no reliable data post-2011)",
+      "gini_coefficient": 0,
+      "income_classification": "Upper-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 2,
+        "industry_pct_gdp": 52,
+        "services_pct_gdp": 46
+      },
+      "labor_force": 2500000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 17,
+        "industry_pct": 23,
+        "services_pct": 60
+      },
+      "fdi_inflow_usd": "$1 billion",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$85 billion",
+      "ease_of_doing_business_rank": 186,
+      "economic_freedom_index_score": 40,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Africa's largest proven oil reserves; oil 95% of exports, 60% GDP; civil war devastated economy; rival governments (Tripoli/Tobruk); Central Bank split."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 5.0,
+      "health_expenditure_per_capita_usd": 300,
+      "physicians_per_1k": 2.1,
+      "nurses_midwives_per_1k": 6.6,
+      "hospital_beds_per_1k": 3.2,
+      "maternal_mortality_per_100k": 72,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 40,
+      "access_to_clean_water_pct": 70,
+      "access_to_sanitation_pct": 95,
+      "vaccination_coverage_pct": 70,
+      "stunting_under5_pct": 21,
+      "obesity_rate_pct": 32.5,
+      "universal_health_coverage_index": 55,
+      "leading_causes_of_death": [
+        "cardiovascular diseases",
+        "injuries (conflict)",
+        "diabetes",
+        "cancer",
+        "respiratory diseases"
+      ],
+      "notes": "Pre-2011 best health indicators in Africa; civil war damaged infrastructure; many expat doctors left; medical tourism to Tunisia/Jordan."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 40,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 1,
+      "agricultural_land_pct": 8.8,
+      "irrigated_land_pct": 25,
+      "major_crops": [
+        "wheat",
+        "barley",
+        "olives",
+        "dates",
+        "citrus",
+        "watermelons",
+        "tomatoes"
+      ],
+      "major_livestock": [
+        "sheep",
+        "goats",
+        "cattle",
+        "camels"
+      ],
+      "food_import_dependency_pct": 75,
+      "cereal_yield_kg_per_hectare": 700,
+      "agricultural_employment_pct": 17,
+      "prevalence_of_undernourishment_pct": 0,
+      "notes": "75% food imported; Great Man-Made River supports agriculture; oasis farming tradition; olive oil from Tripolitania."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 100,
+        "hydroelectric_pct": 0,
+        "solar_pct": 0,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 10000,
+      "electricity_production_gwh": 28000,
+      "electricity_consumption_per_capita_kwh": 3800,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 1200000,
+      "oil_consumption_bpd": 220000,
+      "natural_gas_production_bcm": 12,
+      "energy_access_rural_pct": 99,
+      "energy_access_urban_pct": 100,
+      "notes": "Africa's largest proven oil reserves (48.4B barrels); OPEC member; oil production disrupted by civil conflict; NOC (National Oil Corporation); Greenstream pipeline to Italy."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Mitiga International Airport (Tripoli)",
+        "Benina International Airport (Benghazi)"
+      ],
+      "major_airports_domestic": [
+        "Sebha",
+        "Misrata",
+        "Sirte"
+      ],
+      "national_airline": "Libyan Airlines (limited operations)",
+      "major_seaports": [
+        "Tripoli",
+        "Benghazi",
+        "Misrata",
+        "Es Sider",
+        "Ras Lanuf",
+        "Brega",
+        "Zueitina"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 20,
+      "registered_vehicles_per_1k": 300,
+      "road_fatalities_per_100k": 74,
+      "notes": "Oil export terminals (Es Sider, Ras Lanuf, Brega, Zueitina); coastal highway connecting Tripoli-Benghazi; no railways."
+    },
+    "tourism": {
+      "annual_visitors": 50000,
+      "tourism_revenue_usd": "$50 million",
+      "tourism_pct_gdp": 0.1,
+      "tourism_employment_pct": 1,
+      "unesco_world_heritage_sites": 5,
+      "unesco_sites_list": [
+        "Leptis Magna",
+        "Sabratha",
+        "Cyrene",
+        "Rock-Art Sites of Tadrart Acacus",
+        "Old Town of Ghadamès"
+      ],
+      "major_attractions": [
+        "Leptis Magna",
+        "Sabratha",
+        "Cyrene",
+        "Ghadamès oasis town",
+        "Sahara desert tours",
+        "Tadrart Acacus rock art"
+      ],
+      "visa_free_access_countries": 37,
+      "henley_passport_rank": 100,
+      "notes": "5 UNESCO sites (Ghadamès, Leptis Magna, Sabratha, Cyrene, Tadrart Acacus); tourism collapsed since 2011; enormous heritage potential."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 9,
+      "gender_inequality_index": 0,
+      "gender_inequality_rank": 0,
+      "gender_gap_index_score": 0,
+      "women_in_parliament_pct": 16,
+      "women_labor_force_participation_pct": 26,
+      "maternal_mortality_per_100k": 72,
+      "child_marriage_pct": 2,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Illegal (up to 5 years)",
+      "death_penalty_status": "Retentionist",
+      "human_trafficking_tier": "Tier 3",
+      "child_labor_pct": 0,
+      "notes": "Migrant abuse/trafficking (UN documented); militia rule; no unified government; slave markets documented (2017 CNN report); arbitrary detention."
+    },
+    "security_stability": {
+      "global_peace_index_score": 3.1,
+      "global_peace_index_rank": 160,
+      "terrorism_index_score": 4.0,
+      "terrorism_index_rank": 40,
+      "homicide_rate_per_100k": 2,
+      "active_conflicts": [
+        "Civil war (divided government: GNU/Tripoli vs HoR/Tobruk)",
+        "Militia control various territories"
+      ],
+      "border_disputes": [
+        "Aouzou Strip (resolved with Chad)"
+      ],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$100 million",
+      "internally_displaced_persons": 168000,
+      "notes": "Divided since 2014; Turkish/Russian intervention; UN arms embargo widely violated; elections perpetually postponed; UNSMIL mediation."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "star and crescent"
+      ],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "Bazeen (unleavened bread)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Revolution Day (17 February)",
+        "Liberation Day",
+        "Eid al-Fitr",
+        "Eid al-Adha"
+      ],
+      "cuisine_highlights": [
+        "bazeen",
+        "couscous",
+        "sharba (soup)",
+        "mbakbaka (Libyan pasta)",
+        "asida"
+      ],
+      "music_art_traditions": [
+        "Malouf music (Andalusian)",
+        "Tuareg music and crafts",
+        "Berber traditions",
+        "calligraphy"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "Muammar Gaddafi (ruled 1969-2011)",
+        "Omar Mukhtar (anti-Italian resistance hero, 'Lion of the Desert')",
+        "King Idris (1st king)"
+      ],
+      "world_heritage_sites": [
+        "Leptis Magna",
+        "Sabratha",
+        "Cyrene",
+        "Tadrart Acacus",
+        "Ghadamès"
+      ],
+      "media_landscape": "Fragmented; multiple militia-linked channels; Libya Observer; 218TV; no free press",
+      "notes": "Roman heritage extraordinary (Leptis Magna one of best-preserved Roman cities); Saharan rock art; Omar Mukhtar national hero."
+    },
+    "legal_system": {
+      "legal_tradition": "Mixed: civil law (Italian/French influenced) and Islamic law",
+      "constitution_year": 0,
+      "sharia_applicability": "Primary source of legislation (2011 Constitutional Declaration)",
+      "customary_law_role": "Tribal customary law significant (especially in south)",
+      "icc_membership": "Non-state party (UNSC referral)",
+      "judicial_independence_score": 0.1,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 10,
+      "notes": "No permanent constitution; 2011 Constitutional Declaration interim; constitutional draft referendum pending; parallel justice systems in divided territories."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 29,
+        "global_rank": 109
+      },
+      "area": {
+        "continent_rank": 4,
+        "global_rank": 16
+      },
+      "gdp_nominal": {
+        "continent_rank": 13,
+        "global_rank": 83
+      },
+      "gdp_per_capita": {
+        "continent_rank": 7,
+        "global_rank": 82
+      },
+      "hdi": {
+        "continent_rank": 10,
+        "global_rank": 104
+      },
+      "life_expectancy": {
+        "continent_rank": 3,
+        "global_rank": 65
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 54,
+        "global_rank": 186
+      },
+      "internet_penetration": {
+        "continent_rank": 9,
+        "global_rank": 86
+      },
+      "press_freedom": {
+        "continent_rank": 54,
+        "global_rank": 179
+      },
+      "global_peace_index": {
+        "continent_rank": 51,
+        "global_rank": 160
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": "Highest life expectancy in Africa despite conflict."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Mohamed al-Menfi",
       "title": "Chairman of Presidential Council (Tripoli-based GNU)",
       "since": "2021-03-05",
-      "notes": "UN-backed Government of National Unity; rival to HoR in Tobruk"
+      "notes": "UN-backed Government of National Unity; rival to HoR in Tobruk",
+      "party": ""
     },
     "prime_minister_gnu": {
       "name": "Abdul Hamid Dbeibeh",
@@ -278,7 +782,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

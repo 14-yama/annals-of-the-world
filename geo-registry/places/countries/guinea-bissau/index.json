@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.873881Z",
-    "notes": "Comprehensive index for Guinea-Bissau covering Kaabu Empire, Portuguese Guinea, Amílcar Cabral's PAIGC liberation war, coups, and narco-state dynamics."
+    "notes": "Comprehensive index for Guinea-Bissau covering Kaabu Empire, Portuguese Guinea, Amílcar Cabral's PAIGC liberation war, coups, and narco-state dynamics.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Bissau",
@@ -133,7 +134,22 @@
       "life_expectancy": 60.8,
       "infant_mortality_per_1k": 52.0,
       "literacy_rate_pct": 52.0,
-      "net_migration_rate": -1.2
+      "net_migration_rate": -1.2,
+      "population_growth_rate_pct": 2.4,
+      "urban_population_growth_rate_pct": 3.8,
+      "life_expectancy_male": 57,
+      "life_expectancy_female": 61,
+      "under5_mortality_per_1k": 78,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 78,
+      "population_density_per_km2": 57,
+      "age_structure": {
+        "0_14_pct": 42,
+        "15_24_pct": 20,
+        "25_54_pct": 31,
+        "55_64_pct": 4,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -156,7 +172,10 @@
         "AU",
         "ECOWAS"
       ],
-      "notes": "Chronically unstable military—4 successful coups since independence (1980, 1999, 2003, 2012); military-narco nexus (cocaine transit from Latin America to Europe, 'Africa's first narco-state'); ECOWAS ECOMIB stabilization force; February 2022 coup attempt failed"
+      "notes": "Chronically unstable military—4 successful coups since independence (1980, 1999, 2003, 2012); military-narco nexus (cocaine transit from Latin America to Europe, 'Africa's first narco-state'); ECOWAS ECOMIB stabilization force; February 2022 coup attempt failed",
+      "paramilitary_personnel": 2000,
+      "conscription": true,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -180,14 +199,46 @@
         "Togo"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 10.0
+      "remittances_pct_gdp": 10.0,
+      "total_exports_usd": "$250 million",
+      "total_imports_usd": "$400 million",
+      "top_export_destinations": [
+        "India",
+        "Vietnam",
+        "Singapore",
+        "Senegal"
+      ],
+      "top_import_origins": [
+        "Portugal",
+        "Senegal",
+        "China",
+        "Pakistan",
+        "India"
+      ],
+      "trade_as_pct_gdp": 36,
+      "current_account_balance_usd": "-$50 million",
+      "trade_agreements": [
+        "ECOWAS",
+        "UEMOA",
+        "AfCFTA"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 16.0,
       "electricity_access_pct": 33.0,
       "mobile_subscriptions_per_100": 85,
       "railway_km": 0,
-      "paved_roads_pct": 28
+      "paved_roads_pct": 28,
+      "broadband_subscriptions_per_100": 0.01,
+      "4g_coverage_pct": 10,
+      "5g_availability": false,
+      "road_network_km": 3455,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "ACE"
+      ],
+      "notes": "Very poor infrastructure; MTN and Orange operate; most roads unpaved."
     },
     "international_memberships": [
       "UN",
@@ -216,6 +267,26 @@
       "fragile_states_index": {
         "score": 92.0,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": -1.2,
+        "percentile": 5,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.9,
+        "percentile": 10,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.5,
+        "percentile": 20,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -230,12 +301,41 @@
         "sea-level rise (low-lying coast)",
         "deforestation"
       ],
-      "protected_areas_pct": 26
+      "protected_areas_pct": 26,
+      "average_temperature_c": 27,
+      "average_rainfall_mm": 1600,
+      "co2_per_capita_t": 0.2,
+      "deforestation_rate_pct": 1.2,
+      "water_stress_level": "Low",
+      "environmental_performance_index": {
+        "score": 26,
+        "rank": 172,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 2000,
+        "endemic_species": 10,
+        "threatened_species": 40
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 72.5,
       "foreign_aid_received_usd": "160 million",
-      "notes": "Heavily aid-dependent; HIPC debt relief; cashew monoculture vulnerability; narco-economy (cocaine transit estimated worth more than GDP); political instability deters investment"
+      "notes": "Heavily aid-dependent; HIPC debt relief; cashew monoculture vulnerability; narco-economy (cocaine transit estimated worth more than GDP); political instability deters investment",
+      "external_debt_usd": "$600 million",
+      "debt_service_pct_revenue": 8,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "EU",
+        "World Bank",
+        "AfDB",
+        "Portugal",
+        "UN agencies"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 72,
@@ -246,29 +346,396 @@
         "Amilcar Cabral University (Lusofona)",
         "Jean Piaget University"
       ],
-      "notes": "Portuguese-language instruction; Kriol (creole) spoken widely; very low educational attainment; Amílcar Cabral's education legacy (revolutionary schools in liberated zones); Catholic mission schools significant; gender gap severe"
+      "notes": "Portuguese-language instruction; Kriol (creole) spoken widely; very low educational attainment; Amílcar Cabral's education legacy (revolutionary schools in liberated zones); Catholic mission schools significant; gender gap severe",
+      "education_expenditure_pct_gdp": 2.4,
+      "primary_completion_rate_pct": 65,
+      "gender_parity_index": 0.8,
+      "mean_years_of_schooling": 3.2,
+      "expected_years_of_schooling": 9.7,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 55,
+      "out_of_school_children": 100000,
+      "academic_freedom_index": 0.35
     },
     "diaspora_migration": {
       "diaspora_population": "200,000 (Portugal ~50k, Senegal, France, Cape Verde)",
       "refugees_hosted": 1000,
       "refugees_produced": 4000,
       "remittances_usd": "90 million",
-      "notes": "Portuguese connection primary migration route; Lusophone diaspora networks; Bijagós islanders relatively isolated; narcotics-related migration patterns; seasonal workers in Senegal/Gambia"
+      "notes": "Portuguese connection primary migration route; Lusophone diaspora networks; Bijagós islanders relatively isolated; narcotics-related migration patterns; seasonal workers in Senegal/Gambia",
+      "diaspora_top_destinations": [
+        "Portugal",
+        "Senegal",
+        "France",
+        "Spain",
+        "Gambia"
+      ],
+      "asylum_seekers": 3000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "ECOWAS free movement",
+      "remittances_pct_gdp": 9,
+      "net_migration_rate_per_1k": -1.0
     },
     "digital_economy": {
       "e_government_index": 0.22,
       "mobile_money_adoption": "Low",
       "tech_hubs": [],
-      "notes": "Minimal digital infrastructure; Orange Bissau primary telecom; among lowest internet penetration in Africa; no meaningful tech ecosystem; power supply unreliable; AfricaConnect improving backbone"
+      "notes": "Minimal digital infrastructure; Orange Bissau primary telecom; among lowest internet penetration in Africa; no meaningful tech ecosystem; power supply unreliable; AfricaConnect improving backbone",
+      "e_participation_index": 0.1,
+      "ict_development_index": 0.9,
+      "mobile_money_accounts": 200000,
+      "digital_payments_pct_adults": 3,
+      "fintech_companies": 0,
+      "startup_ecosystem_value_usd": "$0",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0.05,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 0
     },
-    "notes_unique": "Bijagos Archipelago is a UNESCO Biosphere Reserve; the country has experienced multiple coups; cashew nuts are the primary export (~90% of export earnings)."
+    "notes_unique": "Bijagos Archipelago is a UNESCO Biosphere Reserve; the country has experienced multiple coups; cashew nuts are the primary export (~90% of export earnings).",
+    "capital_coordinates": {
+      "lat": 11.8637,
+      "lon": -15.5984
+    },
+    "other_major_cities": [
+      "Bafatá",
+      "Gabú",
+      "Bissorã",
+      "Canchungo"
+    ],
+    "national_motto": "Unidade, Luta, Progresso (Unity, Struggle, Progress)",
+    "national_anthem": "Esta É a Nossa Pátria Bem Amada (This Is Our Beloved Homeland)",
+    "currency_code": "XOF",
+    "internet_tld": ".gw",
+    "utc_offset": "UTC+0",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 11.8037,
+        "lon": -15.1804
+      },
+      "bounding_box": {
+        "north": 12.68,
+        "south": 10.87,
+        "east": -13.64,
+        "west": -16.72
+      },
+      "land_area_km2": 36125,
+      "water_area_km2": 0,
+      "coastline_km": 350,
+      "borders": [
+        "Guinea",
+        "Senegal"
+      ],
+      "border_lengths_km": {
+        "Guinea": 421,
+        "Senegal": 338
+      },
+      "highest_point": {
+        "name": "Unnamed point in eastern Guinea-Bissau",
+        "elevation_m": 300
+      },
+      "lowest_point": {
+        "name": "Atlantic Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Mostly low-lying; coastal marshes and mangroves; flat interior with some forested hills",
+      "land_use": {
+        "agricultural_pct": 44.8,
+        "arable_pct": 8.2,
+        "forest_pct": 55,
+        "other_pct": 0
+      },
+      "major_rivers": [
+        "Geba",
+        "Corubal",
+        "Cacheu"
+      ],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 73000,
+      "landlocked": false,
+      "notes": "Bijagós Archipelago (88 islands, UNESCO Biosphere Reserve); one of first Lusophone African independence countries (1973); extensive mangrove systems."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$1.8 billion",
+      "gdp_ppp_usd": "$4.5 billion",
+      "gdp_per_capita_nominal_usd": 870,
+      "gdp_per_capita_ppp_usd": 2200,
+      "gdp_growth_rate_pct": 4.5,
+      "inflation_rate_pct": 7.5,
+      "unemployment_rate_pct": 3,
+      "youth_unemployment_rate_pct": 10,
+      "poverty_rate_pct": 67,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 50.7,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 50,
+        "industry_pct_gdp": 13,
+        "services_pct_gdp": 37
+      },
+      "labor_force": 750000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 82,
+        "industry_pct": 4,
+        "services_pct": 14
+      },
+      "fdi_inflow_usd": "$20 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$350 million",
+      "ease_of_doing_business_rank": 174,
+      "economic_freedom_index_score": 50.9,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Cashew nut dependent (~80% exports, top 5 global producer); narco-state label (cocaine transit from Latin America); extremely fragile state."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 6.0,
+      "health_expenditure_per_capita_usd": 44,
+      "physicians_per_1k": 0.2,
+      "nurses_midwives_per_1k": 0.6,
+      "hospital_beds_per_1k": 1.0,
+      "maternal_mortality_per_100k": 725,
+      "hiv_prevalence_pct": 3.4,
+      "malaria_incidence_per_1k": 200,
+      "tuberculosis_incidence_per_100k": 361,
+      "access_to_clean_water_pct": 56,
+      "access_to_sanitation_pct": 20,
+      "vaccination_coverage_pct": 68,
+      "stunting_under5_pct": 28,
+      "obesity_rate_pct": 10,
+      "universal_health_coverage_index": 33,
+      "leading_causes_of_death": [
+        "malaria",
+        "neonatal disorders",
+        "lower respiratory infections",
+        "diarrheal diseases",
+        "tuberculosis"
+      ],
+      "notes": "One of highest maternal mortality rates globally; Raoul Follereau Hospital (Bissau) major facility; NGOs provide significant health services."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 22,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 8.2,
+      "agricultural_land_pct": 44.8,
+      "irrigated_land_pct": 2,
+      "major_crops": [
+        "cashew nuts",
+        "rice",
+        "palm kernels",
+        "groundnuts",
+        "millet",
+        "sorghum"
+      ],
+      "major_livestock": [
+        "cattle",
+        "pigs",
+        "goats"
+      ],
+      "food_import_dependency_pct": 40,
+      "cereal_yield_kg_per_hectare": 1200,
+      "agricultural_employment_pct": 82,
+      "prevalence_of_undernourishment_pct": 28,
+      "notes": "Cashew nuts dominant export; rice staple but deficit; mangrove rice cultivation traditional."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 90,
+        "hydroelectric_pct": 0,
+        "solar_pct": 5,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 5
+      },
+      "installed_capacity_mw": 30,
+      "electricity_production_gwh": 60,
+      "electricity_consumption_per_capita_kwh": 30,
+      "energy_imports_pct": 100,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 2300,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 2,
+      "energy_access_urban_pct": 30,
+      "notes": "One of lowest electricity access rates globally; diesel generators dominate; solar projects emerging; OMVG dam project planned."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Osvaldo Vieira International Airport (Bissau)"
+      ],
+      "major_airports_domestic": [
+        "Bubaque"
+      ],
+      "national_airline": "None",
+      "major_seaports": [
+        "Bissau",
+        "Sal Rei"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 5,
+      "registered_vehicles_per_1k": 5,
+      "road_fatalities_per_100k": 25,
+      "notes": "Very limited infrastructure; most roads unpaved; boat transport to Bijagós islands."
+    },
+    "tourism": {
+      "annual_visitors": 50000,
+      "tourism_revenue_usd": "$10 million",
+      "tourism_pct_gdp": 0.6,
+      "tourism_employment_pct": 1,
+      "unesco_world_heritage_sites": 0,
+      "unesco_sites_list": [],
+      "major_attractions": [
+        "Bijagós Archipelago",
+        "Orango National Park (saltwater hippos)",
+        "Cacheu Fort",
+        "Varela beach"
+      ],
+      "visa_free_access_countries": 47,
+      "henley_passport_rank": 88,
+      "notes": "Bijagós Archipelago UNESCO Biosphere; saltwater hippos unique attraction; largely undeveloped tourism; Portuguese heritage."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 42,
+      "gender_inequality_index": 0.63,
+      "gender_inequality_rank": 158,
+      "gender_gap_index_score": 0,
+      "women_in_parliament_pct": 14,
+      "women_labor_force_participation_pct": 62,
+      "maternal_mortality_per_100k": 725,
+      "child_marriage_pct": 24,
+      "fgm_prevalence_pct": 45,
+      "lgbtq_legal_status": "Legal",
+      "death_penalty_status": "Abolitionist",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 40,
+      "notes": "Chronic political instability (4 coups since 1980); drug trafficking influence; FGM practiced despite ban; one of few African countries where homosexuality is legal."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.1,
+      "global_peace_index_rank": 105,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 7,
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$2 million",
+      "internally_displaced_persons": 0,
+      "notes": "Feb 2022 attempted coup; narco-trafficking transit hub; ECOWAS stabilization force; political instability chronic."
+    },
+    "cultural_heritage": {
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "Caldo de mancarra (peanut stew)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Carnival (biggest in West Africa)",
+        "Independence Day (24 September)",
+        "Tabanka festivals"
+      ],
+      "cuisine_highlights": [
+        "caldo de mancarra",
+        "jollof rice",
+        "chabéu (palm wine)",
+        "oysters (Bijagós)"
+      ],
+      "music_art_traditions": [
+        "Gumbe music",
+        "tina percussion",
+        "Bijagós mask traditions",
+        "Tabanka rituals",
+        "super mama djombo (legendary band)"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "Amílcar Cabral (independence hero, PAIGC)",
+        "Luís Cabral (1st president)",
+        "Nino Vieira (president, assassinated 2009)"
+      ],
+      "world_heritage_sites": [],
+      "media_landscape": "Fragile; Radio Bombolom; state RDN; private media limited",
+      "notes": "Amílcar Cabral one of Africa's greatest independence thinkers; gumbe music unique; Carnival celebrated widely; Bijagós matrilineal society."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (Portuguese/French hybrid via UEMOA)",
+      "constitution_year": 1984,
+      "sharia_applicability": "None",
+      "customary_law_role": "Significant in rural areas; tabanka councils",
+      "icc_membership": "Non-state party",
+      "judicial_independence_score": 0.15,
+      "contract_enforcement_days": 1140,
+      "property_rights_index": 20,
+      "notes": "UEMOA/OHADA business law harmonization; political instability undermines rule of law; ineffective judiciary."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 42,
+        "global_rank": 149
+      },
+      "area": {
+        "continent_rank": 36,
+        "global_rank": 134
+      },
+      "gdp_nominal": {
+        "continent_rank": 50,
+        "global_rank": 177
+      },
+      "gdp_per_capita": {
+        "continent_rank": 41,
+        "global_rank": 171
+      },
+      "hdi": {
+        "continent_rank": 45,
+        "global_rank": 177
+      },
+      "life_expectancy": {
+        "continent_rank": 45,
+        "global_rank": 180
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 50,
+        "global_rank": 174
+      },
+      "internet_penetration": {
+        "continent_rank": 50,
+        "global_rank": 192
+      },
+      "press_freedom": {
+        "continent_rank": 22,
+        "global_rank": 79
+      },
+      "global_peace_index": {
+        "continent_rank": 16,
+        "global_rank": 105
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": "One of world's most fragile states."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Umaro Sissoco Embaló",
       "title": "President",
       "since": "2020-02-27",
-      "notes": "Former general and PM; disputed 2019 election; MADEM-G15 party; survived attempted coup 2022"
+      "notes": "Former general and PM; disputed 2019 election; MADEM-G15 party; survived attempted coup 2022",
+      "party": ""
     },
     "prime_minister": {
       "name": "Rui Duarte de Barros",
@@ -299,7 +766,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

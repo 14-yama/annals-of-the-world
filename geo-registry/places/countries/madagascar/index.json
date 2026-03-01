@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.880358Z",
-    "notes": "Comprehensive index for Madagascar covering Austronesian settlement (unique in Africa), Merina kingdom, French colonisation, 1947 uprising, independence, Ratsiraka socialism, political crises, and world-renowned biodiversity including lemurs."
+    "notes": "Comprehensive index for Madagascar covering Austronesian settlement (unique in Africa), Merina kingdom, French colonisation, 1947 uprising, independence, Ratsiraka socialism, political crises, and world-renowned biodiversity including lemurs.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Antananarivo",
@@ -136,7 +137,22 @@
       "life_expectancy": 67.0,
       "infant_mortality_per_1k": 38.0,
       "literacy_rate_pct": 76.7,
-      "net_migration_rate": -0.1
+      "net_migration_rate": -0.1,
+      "population_growth_rate_pct": 2.7,
+      "urban_population_growth_rate_pct": 4.2,
+      "life_expectancy_male": 65,
+      "life_expectancy_female": 69,
+      "under5_mortality_per_1k": 51,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 77,
+      "population_density_per_km2": 48,
+      "age_structure": {
+        "0_14_pct": 40,
+        "15_24_pct": 20,
+        "25_54_pct": 33,
+        "55_64_pct": 4,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -167,7 +183,10 @@
         "SADC",
         "IOC"
       ],
-      "notes": "People's Armed Forces; historically involved in politics (2009 coup); gendarmerie handles most rural security; limited naval capacity despite enormous maritime zone."
+      "notes": "People's Armed Forces; historically involved in politics (2009 coup); gendarmerie handles most rural security; limited naval capacity despite enormous maritime zone.",
+      "paramilitary_personnel": 8100,
+      "conscription": true,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -200,14 +219,51 @@
         "UAE"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 3.5
+      "remittances_pct_gdp": 3.5,
+      "total_exports_usd": "$3 billion",
+      "total_imports_usd": "$4.5 billion",
+      "top_export_destinations": [
+        "France",
+        "USA",
+        "China",
+        "Japan",
+        "Germany"
+      ],
+      "top_import_origins": [
+        "China",
+        "France",
+        "India",
+        "UAE",
+        "South Africa"
+      ],
+      "trade_as_pct_gdp": 47,
+      "current_account_balance_usd": "-$500 million",
+      "trade_agreements": [
+        "COMESA",
+        "SADC",
+        "AfCFTA",
+        "IOC"
+      ],
+      "special_economic_zones": [
+        "Ehoala Park (Fort Dauphin)"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 22.0,
       "electricity_access_pct": 34.0,
       "mobile_subscriptions_per_100": 44,
       "railway_km": 854,
-      "paved_roads_pct": 11
+      "paved_roads_pct": 11,
+      "broadband_subscriptions_per_100": 0.2,
+      "4g_coverage_pct": 30,
+      "5g_availability": false,
+      "road_network_km": 31640,
+      "waterways_km": 600,
+      "submarine_cables": [
+        "EASSy",
+        "LION"
+      ],
+      "notes": "Telma, Orange, Airtel; poor rural infrastructure; canal des pangalanes."
     },
     "international_memberships": [
       "UN",
@@ -239,6 +295,26 @@
       "fragile_states_index": {
         "score": 82.4,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.38,
+        "rank": 115,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.9,
+        "percentile": 10,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.5,
+        "percentile": 25,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.4,
+        "percentile": 25,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -256,12 +332,41 @@
         "locust invasions",
         "deforestation"
       ],
-      "protected_areas_pct": 10
+      "protected_areas_pct": 10,
+      "average_temperature_c": 23,
+      "average_rainfall_mm": 1500,
+      "co2_per_capita_t": 0.2,
+      "deforestation_rate_pct": 1.5,
+      "water_stress_level": "Low-medium",
+      "environmental_performance_index": {
+        "score": 26.5,
+        "rank": 171,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 14000,
+        "endemic_species": 10000,
+        "threatened_species": 800
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 45.2,
       "foreign_aid_received_usd": "800 million",
-      "notes": "HIPC debt relief; heavily aid-dependent; France, World Bank, AfDB major donors; political instability deters investment; vanilla price volatility affects economy."
+      "notes": "HIPC debt relief; heavily aid-dependent; France, World Bank, AfDB major donors; political instability deters investment; vanilla price volatility affects economy.",
+      "external_debt_usd": "$5 billion",
+      "debt_service_pct_revenue": 10,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "France",
+        "World Bank",
+        "EU",
+        "AfDB",
+        "USA"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 85,
@@ -273,14 +378,40 @@
         "University of Fianarantsoa",
         "University of Toamasina"
       ],
-      "notes": "Education quality declining; many children drop out by secondary level; language of instruction debates (Malagasy vs French); teacher absenteeism; private schooling growing in cities."
+      "notes": "Education quality declining; many children drop out by secondary level; language of instruction debates (Malagasy vs French); teacher absenteeism; private schooling growing in cities.",
+      "education_expenditure_pct_gdp": 2.8,
+      "primary_completion_rate_pct": 65,
+      "gender_parity_index": 0.98,
+      "mean_years_of_schooling": 6.1,
+      "expected_years_of_schooling": 10.3,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 40,
+      "out_of_school_children": 1500000,
+      "academic_freedom_index": 0.45
     },
     "diaspora_migration": {
       "diaspora_population": "200,000+ (France, Réunion, Comoros, Canada)",
       "refugees_hosted": 200,
       "refugees_produced": 1000,
       "remittances_usd": "400 million",
-      "notes": "French diaspora largest community; relatively low outmigration given population size; internal rural-urban migration significant."
+      "notes": "French diaspora largest community; relatively low outmigration given population size; internal rural-urban migration significant.",
+      "diaspora_top_destinations": [
+        "France",
+        "Réunion",
+        "Comoros",
+        "Canada"
+      ],
+      "asylum_seekers": 500,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 10000,
+      "immigration_policy": "Generally open",
+      "remittances_pct_gdp": 3.0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0.33,
@@ -288,19 +419,387 @@
       "tech_hubs": [
         "Antananarivo (multiple incubators)"
       ],
-      "notes": "METISS submarine cable improved connectivity; mobile money expanding rapidly; BPO/call centre industry serving French market; Telma, Orange, Airtel operators."
+      "notes": "METISS submarine cable improved connectivity; mobile money expanding rapidly; BPO/call centre industry serving French market; Telma, Orange, Airtel operators.",
+      "e_participation_index": 0.25,
+      "ict_development_index": 1.5,
+      "mobile_money_accounts": 5000000,
+      "digital_payments_pct_adults": 10,
+      "fintech_companies": 10,
+      "startup_ecosystem_value_usd": "$20 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.15,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 10
     },
     "other_languages": [
       "French",
       "Malagasy dialects (Merina, Betsimisaraka, Sakalava)"
-    ]
+    ],
+    "capital_coordinates": {
+      "lat": -18.8792,
+      "lon": 47.5079
+    },
+    "other_major_cities": [
+      "Toamasina",
+      "Antsirabe",
+      "Fianarantsoa",
+      "Mahajanga",
+      "Toliara"
+    ],
+    "national_motto": "Tanindrazana, Fahafahana, Fandrosoana (Fatherland, Liberty, Progress)",
+    "national_anthem": "Ry Tanindrazanay malala ô! (Oh, Our Beloved Fatherland!)",
+    "currency_code": "MGA",
+    "internet_tld": ".mg",
+    "utc_offset": "UTC+3",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": -18.7669,
+        "lon": 46.8691
+      },
+      "bounding_box": {
+        "north": -11.95,
+        "south": -25.6,
+        "east": 50.48,
+        "west": 43.22
+      },
+      "land_area_km2": 587041,
+      "water_area_km2": 5501,
+      "coastline_km": 4828,
+      "borders": [],
+      "border_lengths_km": {},
+      "highest_point": {
+        "name": "Maromokotro",
+        "elevation_m": 2876
+      },
+      "lowest_point": {
+        "name": "Indian Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Central highland plateau; eastern rainforest escarpment; western dry deciduous forest; southern spiny desert; Mozambique Channel separates from mainland",
+      "land_use": {
+        "agricultural_pct": 71.1,
+        "arable_pct": 6,
+        "forest_pct": 21.5,
+        "other_pct": 7.4
+      },
+      "major_rivers": [
+        "Betsiboka",
+        "Tsiribihina",
+        "Mangoky",
+        "Onilahy"
+      ],
+      "major_lakes": [
+        "Lake Alaotra",
+        "Lake Itasy"
+      ],
+      "exclusive_economic_zone_km2": 1231000,
+      "landlocked": false,
+      "notes": "4th largest island globally; separated from Africa ~88 million years ago; 90%+ species endemic; biodiversity hotspot; unique lemur habitat."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$16 billion",
+      "gdp_ppp_usd": "$48 billion",
+      "gdp_per_capita_nominal_usd": 530,
+      "gdp_per_capita_ppp_usd": 1640,
+      "gdp_growth_rate_pct": 4.0,
+      "inflation_rate_pct": 9.5,
+      "unemployment_rate_pct": 2,
+      "youth_unemployment_rate_pct": 4,
+      "poverty_rate_pct": 75,
+      "poverty_line_definition": "National poverty line ($2.15/day)",
+      "gini_coefficient": 42.6,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 24,
+        "industry_pct_gdp": 19,
+        "services_pct_gdp": 57
+      },
+      "labor_force": 14000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 75,
+        "industry_pct": 7,
+        "services_pct": 18
+      },
+      "fdi_inflow_usd": "$400 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$2 billion",
+      "ease_of_doing_business_rank": 161,
+      "economic_freedom_index_score": 62.3,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Vanilla (#1 global, 80% world supply); mining (nickel, ilmenite, cobalt—Ambatovy mine); textile exports; chronic political instability stunting growth; 75% poverty rate."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.9,
+      "health_expenditure_per_capita_usd": 17,
+      "physicians_per_1k": 0.18,
+      "nurses_midwives_per_1k": 0.2,
+      "hospital_beds_per_1k": 0.2,
+      "maternal_mortality_per_100k": 392,
+      "hiv_prevalence_pct": 0.3,
+      "malaria_incidence_per_1k": 80,
+      "tuberculosis_incidence_per_100k": 233,
+      "access_to_clean_water_pct": 54,
+      "access_to_sanitation_pct": 12,
+      "vaccination_coverage_pct": 62,
+      "stunting_under5_pct": 42,
+      "obesity_rate_pct": 5.3,
+      "universal_health_coverage_index": 29,
+      "leading_causes_of_death": [
+        "lower respiratory infections",
+        "neonatal disorders",
+        "diarrheal diseases",
+        "malaria",
+        "tuberculosis"
+      ],
+      "notes": "Plague outbreaks (bubonic and pneumonic, 2017); Kere famine in south (2021); community health workers; traditional medicine widespread; COVID-19 'remedy' controversy."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 25,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 6,
+      "agricultural_land_pct": 71.1,
+      "irrigated_land_pct": 5,
+      "major_crops": [
+        "rice",
+        "vanilla",
+        "cloves",
+        "coffee",
+        "lychee",
+        "cassava",
+        "sweet potato",
+        "maize",
+        "ylang-ylang"
+      ],
+      "major_livestock": [
+        "zebu cattle",
+        "pigs",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 15,
+      "cereal_yield_kg_per_hectare": 2600,
+      "agricultural_employment_pct": 75,
+      "prevalence_of_undernourishment_pct": 42,
+      "notes": "#1 vanilla producer globally (80%); cloves, cacao, coffee, lychee exports; rice main staple (deficit); south drought/Kere famine-prone."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 60,
+        "hydroelectric_pct": 30,
+        "solar_pct": 5,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 5
+      },
+      "installed_capacity_mw": 700,
+      "electricity_production_gwh": 1700,
+      "electricity_consumption_per_capita_kwh": 50,
+      "energy_imports_pct": 100,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 18000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 5,
+      "energy_access_urban_pct": 50,
+      "notes": "JIRAMA state utility; frequent power outages; huge untapped hydro, solar, wind potential; rural access extremely low."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Ivato International Airport (Antananarivo)"
+      ],
+      "major_airports_domestic": [
+        "Fascene (Nosy Be)",
+        "Toamasina",
+        "Mahajanga",
+        "Toliara"
+      ],
+      "national_airline": "Air Madagascar / Tsaradia (restructured)",
+      "major_seaports": [
+        "Toamasina",
+        "Mahajanga",
+        "Toliara"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 25,
+      "registered_vehicles_per_1k": 5,
+      "road_fatalities_per_100k": 25,
+      "notes": "Poor road infrastructure; Route Nationale 7 most famous; canal des pangalanes; limited rail."
+    },
+    "tourism": {
+      "annual_visitors": 350000,
+      "tourism_revenue_usd": "$700 million",
+      "tourism_pct_gdp": 4.4,
+      "tourism_employment_pct": 7,
+      "unesco_world_heritage_sites": 3,
+      "unesco_sites_list": [
+        "Tsingy de Bemaraha",
+        "Rainforests of the Atsinanana",
+        "Royal Hill of Ambohimanga"
+      ],
+      "major_attractions": [
+        "Avenue of the Baobabs",
+        "Tsingy de Bemaraha",
+        "Nosy Be island",
+        "Lemurs",
+        "Isalo National Park",
+        "Ranomafana NP (lemurs)",
+        "Andasibe-Mantadia NP (Indri)"
+      ],
+      "visa_free_access_countries": 44,
+      "henley_passport_rank": 86,
+      "notes": "Unique biodiversity (90%+ endemic); lemurs iconic; baobabs; eco-tourism; beach tourism (Nosy Be); political instability deters visitors."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 52,
+      "gender_inequality_index": 0.556,
+      "gender_inequality_rank": 148,
+      "gender_gap_index_score": 0.71,
+      "women_in_parliament_pct": 18,
+      "women_labor_force_participation_pct": 83,
+      "maternal_mortality_per_100k": 392,
+      "child_marriage_pct": 41,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Legal (no protections)",
+      "death_penalty_status": "Abolitionist in practice",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 47,
+      "notes": "Child labor extremely high (mica mining); political crises (2009 coup); child marriage widespread; women's labor participation high but informal."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.9,
+      "global_peace_index_rank": 72,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 7,
+      "active_conflicts": [
+        "Dahalo (cattle rustling gangs in south)"
+      ],
+      "border_disputes": [
+        "Scattered Islands (France: Glorieuses, Juan de Nova, Bassas da India, Europa)"
+      ],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$5 million",
+      "internally_displaced_persons": 10000,
+      "notes": "Dahalo banditry in rural south; political instability cyclical; 2023 election controversial; periodic cyclone disasters."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "traveller's palm (ravinala)"
+      ],
+      "national_animal": "ring-tailed lemur",
+      "national_flower": "poinciana (flamboyant)",
+      "national_dish": "Romazava (mixed greens stew with meat)",
+      "national_sport": "Rugby union / Football",
+      "major_festivals": [
+        "Famadihana (turning of the bones)",
+        "Independence Day (26 June)",
+        "Alahamady Be (Malagasy New Year)"
+      ],
+      "cuisine_highlights": [
+        "romazava",
+        "ravitoto (cassava leaf stew with pork)",
+        "zebu steak",
+        "vary amin'anana (rice with greens)",
+        "mofo gasy (Malagasy bread)",
+        "vanilla"
+      ],
+      "music_art_traditions": [
+        "Salegy dance music",
+        "Hiragasy (highland theatrical tradition)",
+        "valiha (bamboo tube zither)",
+        "kabary (oratory art)",
+        "lamba cloth traditions"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [
+        "Famadihana (bone-turning ceremony)"
+      ],
+      "notable_historical_figures": [
+        "Queen Ranavalona I (isolationist queen)",
+        "Jean Ralaimongo (independence activist)",
+        "Philibert Tsiranana (1st president)",
+        "Andry Rajoelina (current president)"
+      ],
+      "world_heritage_sites": [
+        "Tsingy de Bemaraha",
+        "Rainforests of the Atsinanana",
+        "Royal Hill of Ambohimanga"
+      ],
+      "media_landscape": "TVM state; multiple private FM; MBS, RTA; relatively diverse media",
+      "notes": "Austronesian+African origins (unique in Africa); 18 ethnic groups; fady (taboos); ancestor veneration; valiha national instrument."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (French system) with Malagasy customary law elements",
+      "constitution_year": 2010,
+      "sharia_applicability": "None",
+      "customary_law_role": "Fokonolona (village communities) apply customary norms",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.25,
+      "contract_enforcement_days": 871,
+      "property_rights_index": 30,
+      "notes": "4th Republic; High Constitutional Court; frequent constitutional crises; Fokonolona community governance."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 12,
+        "global_rank": 50
+      },
+      "area": {
+        "continent_rank": 8,
+        "global_rank": 46
+      },
+      "gdp_nominal": {
+        "continent_rank": 25,
+        "global_rank": 106
+      },
+      "gdp_per_capita": {
+        "continent_rank": 50,
+        "global_rank": 184
+      },
+      "hdi": {
+        "continent_rank": 47,
+        "global_rank": 173
+      },
+      "life_expectancy": {
+        "continent_rank": 12,
+        "global_rank": 113
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 40,
+        "global_rank": 161
+      },
+      "internet_penetration": {
+        "continent_rank": 35,
+        "global_rank": 157
+      },
+      "press_freedom": {
+        "continent_rank": 16,
+        "global_rank": 57
+      },
+      "global_peace_index": {
+        "continent_rank": 5,
+        "global_rank": 72
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": ""
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Andry Rajoelina",
       "title": "President",
       "since": "2019-01-19 (also 2009–2014)",
-      "notes": "Former mayor of Antananarivo; ousted Ravalomanana in 2009 coup; returned via 2018 election; re-elected 2023; businessman"
+      "notes": "Former mayor of Antananarivo; ousted Ravalomanana in 2009 coup; returned via 2018 election; re-elected 2023; businessman",
+      "party": ""
     },
     "prime_minister": {
       "name": "Christian Ntsay",
@@ -331,7 +830,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.880809Z",
-    "notes": "Comprehensive index for Malawi covering the Maravi Kingdom, Livingstone and Lake Malawi, Nyasaland protectorate, Banda dictatorship, democratic transition 1994, and development challenges."
+    "notes": "Comprehensive index for Malawi covering the Maravi Kingdom, Livingstone and Lake Malawi, Nyasaland protectorate, Banda dictatorship, democratic transition 1994, and development challenges.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Lilongwe",
@@ -125,7 +126,22 @@
       "life_expectancy": 64.3,
       "infant_mortality_per_1k": 33.0,
       "literacy_rate_pct": 62.1,
-      "net_migration_rate": -0.2
+      "net_migration_rate": -0.2,
+      "population_growth_rate_pct": 2.6,
+      "urban_population_growth_rate_pct": 4.0,
+      "life_expectancy_male": 62,
+      "life_expectancy_female": 69,
+      "under5_mortality_per_1k": 42,
+      "sex_ratio": 0.98,
+      "dependency_ratio": 86,
+      "population_density_per_km2": 200,
+      "age_structure": {
+        "0_14_pct": 43,
+        "15_24_pct": 21,
+        "25_54_pct": 30,
+        "55_64_pct": 3,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -151,7 +167,10 @@
         "AU",
         "SADC"
       ],
-      "notes": "Malawi Defence Force; active in UN peacekeeping (DR Congo, Darfur); professional reputation; limited equipment; army, navy (Lake Malawi), air wing."
+      "notes": "Malawi Defence Force; active in UN peacekeeping (DR Congo, Darfur); professional reputation; limited equipment; army, navy (Lake Malawi), air wing.",
+      "paramilitary_personnel": 1500,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -183,14 +202,45 @@
         "Mozambique"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 2.5
+      "remittances_pct_gdp": 2.5,
+      "total_exports_usd": "$1.1 billion",
+      "total_imports_usd": "$3.5 billion",
+      "top_export_destinations": [
+        "Belgium",
+        "Germany",
+        "Egypt",
+        "South Africa",
+        "USA"
+      ],
+      "top_import_origins": [
+        "South Africa",
+        "China",
+        "UAE",
+        "India",
+        "Tanzania"
+      ],
+      "trade_as_pct_gdp": 33,
+      "current_account_balance_usd": "-$2 billion",
+      "trade_agreements": [
+        "COMESA",
+        "SADC",
+        "AfCFTA"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 18.0,
       "electricity_access_pct": 15.0,
       "mobile_subscriptions_per_100": 50,
       "railway_km": 797,
-      "paved_roads_pct": 21
+      "paved_roads_pct": 21,
+      "broadband_subscriptions_per_100": 0.01,
+      "4g_coverage_pct": 35,
+      "5g_availability": false,
+      "road_network_km": 15451,
+      "waterways_km": 700,
+      "submarine_cables": [],
+      "notes": "Landlocked; uses Nacala (Mozambique) and Dar es Salaam corridors; TNM, Airtel operate."
     },
     "international_memberships": [
       "UN",
@@ -220,6 +270,26 @@
       "fragile_states_index": {
         "score": 85.0,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.47,
+        "rank": 78,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.8,
+        "percentile": 12,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.5,
+        "percentile": 26,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.1,
+        "percentile": 38,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -236,12 +306,41 @@
         "Cyclone Freddy (2023)",
         "earthquakes (minor)"
       ],
-      "protected_areas_pct": 17
+      "protected_areas_pct": 17,
+      "average_temperature_c": 22,
+      "average_rainfall_mm": 1000,
+      "co2_per_capita_t": 0.1,
+      "deforestation_rate_pct": 1.5,
+      "water_stress_level": "Medium",
+      "environmental_performance_index": {
+        "score": 28,
+        "rank": 165,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 5500,
+        "endemic_species": 800,
+        "threatened_species": 120
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 64.0,
       "foreign_aid_received_usd": "1.2 billion",
-      "notes": "One of world's poorest countries; highly aid-dependent; 'Cashgate' corruption scandal (2013) affected donor confidence; IMF bailout 2023; MK depreciation."
+      "notes": "One of world's poorest countries; highly aid-dependent; 'Cashgate' corruption scandal (2013) affected donor confidence; IMF bailout 2023; MK depreciation.",
+      "external_debt_usd": "$3 billion",
+      "debt_service_pct_revenue": 12,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA",
+        "World Bank",
+        "UK",
+        "EU",
+        "Norway"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 89,
@@ -253,14 +352,41 @@
         "Mzuzu University (1997)",
         "Lilongwe University of Agriculture and Natural Resources"
       ],
-      "notes": "Free primary education since 1994; massive enrollment growth strained quality; Kamuzu Academy (elite boarding school); very low tertiary enrollment; girls face early marriage barriers."
+      "notes": "Free primary education since 1994; massive enrollment growth strained quality; Kamuzu Academy (elite boarding school); very low tertiary enrollment; girls face early marriage barriers.",
+      "education_expenditure_pct_gdp": 4.7,
+      "primary_completion_rate_pct": 80,
+      "gender_parity_index": 0.98,
+      "mean_years_of_schooling": 4.7,
+      "expected_years_of_schooling": 11.0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 60,
+      "out_of_school_children": 300000,
+      "academic_freedom_index": 0.55
     },
     "diaspora_migration": {
       "diaspora_population": "300,000+ (South Africa, UK, Mozambique, Zambia)",
       "refugees_hosted": 55000,
       "refugees_produced": 3000,
       "remittances_usd": "200 million",
-      "notes": "Hosts large Mozambican refugee population from conflict in Cabo Delgado; brain drain of medical professionals to UK/South Africa; seasonal labour migration to South Africa."
+      "notes": "Hosts large Mozambican refugee population from conflict in Cabo Delgado; brain drain of medical professionals to UK/South Africa; seasonal labour migration to South Africa.",
+      "diaspora_top_destinations": [
+        "South Africa",
+        "Mozambique",
+        "UK",
+        "USA",
+        "Zambia"
+      ],
+      "asylum_seekers": 3000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 200000,
+      "immigration_policy": "Hosts Mozambican and Congolese refugees (Dzaleka camp)",
+      "remittances_pct_gdp": 2.0,
+      "net_migration_rate_per_1k": -1.0
     },
     "digital_economy": {
       "e_government_index": 0.29,
@@ -269,7 +395,18 @@
         "mHub (Lilongwe)",
         "Blantyre Tech Hub"
       ],
-      "notes": "2Africa submarine cable connection via Mozambique; mobile money replacing banking for unbanked majority; TNM and Airtel primary operators; digital agriculture platforms emerging."
+      "notes": "2Africa submarine cable connection via Mozambique; mobile money replacing banking for unbanked majority; TNM and Airtel primary operators; digital agriculture platforms emerging.",
+      "e_participation_index": 0.3,
+      "ict_development_index": 1.6,
+      "mobile_money_accounts": 5000000,
+      "digital_payments_pct_adults": 15,
+      "fintech_companies": 10,
+      "startup_ecosystem_value_usd": "$10 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.15,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 10
     },
     "other_languages": [
       "Chichewa/Chinyanja",
@@ -277,14 +414,371 @@
       "Tumbuka",
       "Lomwe",
       "Sena"
-    ]
+    ],
+    "capital_coordinates": {
+      "lat": -13.9626,
+      "lon": 33.7741
+    },
+    "other_major_cities": [
+      "Blantyre",
+      "Mzuzu",
+      "Zomba",
+      "Mangochi"
+    ],
+    "national_motto": "Unity and Freedom",
+    "national_anthem": "Mulungu dalitsa Malaŵi (O God Bless Our Land of Malawi)",
+    "currency_code": "MWK",
+    "internet_tld": ".mw",
+    "utc_offset": "UTC+2",
+    "drives_on": "left",
+    "geography": {
+      "coordinates": {
+        "lat": -13.2543,
+        "lon": 34.3015
+      },
+      "bounding_box": {
+        "north": -9.36,
+        "south": -17.12,
+        "east": 35.92,
+        "west": 32.67
+      },
+      "land_area_km2": 118484,
+      "water_area_km2": 24404,
+      "coastline_km": 0,
+      "borders": [
+        "Tanzania",
+        "Mozambique",
+        "Zambia"
+      ],
+      "border_lengths_km": {
+        "Tanzania": 512,
+        "Mozambique": 1498,
+        "Zambia": 847
+      },
+      "highest_point": {
+        "name": "Sapitwa (Mount Mulanje)",
+        "elevation_m": 3002
+      },
+      "lowest_point": {
+        "name": "Junction of Shire River and Mozambique border",
+        "elevation_m": 37
+      },
+      "terrain": "Great Rift Valley running north to south with Lake Malawi; highlands in north and along southern border; Shire River valley",
+      "land_use": {
+        "agricultural_pct": 59.2,
+        "arable_pct": 38.2,
+        "forest_pct": 33.5,
+        "other_pct": 7.3
+      },
+      "major_rivers": [
+        "Shire",
+        "Lilongwe",
+        "Bua",
+        "South Rukuru"
+      ],
+      "major_lakes": [
+        "Lake Malawi (3rd largest in Africa)",
+        "Lake Malombe",
+        "Lake Chilwa"
+      ],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": true,
+      "notes": "'Warm Heart of Africa'; Lake Malawi (29,600 km², UNESCO, 1000+ cichlid fish species); 'Calendar Lake' (365 miles long, 52 miles wide); Great Rift Valley."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$14 billion",
+      "gdp_ppp_usd": "$31 billion",
+      "gdp_per_capita_nominal_usd": 640,
+      "gdp_per_capita_ppp_usd": 1500,
+      "gdp_growth_rate_pct": 1.7,
+      "inflation_rate_pct": 28,
+      "unemployment_rate_pct": 6,
+      "youth_unemployment_rate_pct": 8,
+      "poverty_rate_pct": 50.7,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 44.7,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 23,
+        "industry_pct_gdp": 16,
+        "services_pct_gdp": 61
+      },
+      "labor_force": 8500000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 76,
+        "industry_pct": 6,
+        "services_pct": 18
+      },
+      "fdi_inflow_usd": "$100 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$600 million",
+      "ease_of_doing_business_rank": 109,
+      "economic_freedom_index_score": 54.2,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Tobacco dependent (#1 export, controversial); tea, sugar, agriculture-based; 44% kwacha devaluation (2022); Cyclone Freddy devastation (2023); among world's poorest countries."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 7.5,
+      "health_expenditure_per_capita_usd": 37,
+      "physicians_per_1k": 0.02,
+      "nurses_midwives_per_1k": 0.3,
+      "hospital_beds_per_1k": 1.3,
+      "maternal_mortality_per_100k": 349,
+      "hiv_prevalence_pct": 7.7,
+      "malaria_incidence_per_1k": 320,
+      "tuberculosis_incidence_per_100k": 155,
+      "access_to_clean_water_pct": 69,
+      "access_to_sanitation_pct": 41,
+      "vaccination_coverage_pct": 85,
+      "stunting_under5_pct": 35,
+      "obesity_rate_pct": 6,
+      "universal_health_coverage_index": 41,
+      "leading_causes_of_death": [
+        "HIV/AIDS",
+        "malaria",
+        "lower respiratory infections",
+        "neonatal disorders",
+        "tuberculosis"
+      ],
+      "notes": "Chronic doctor shortage (worst physician ratio globally); malaria pilot vaccination programme; CHAM (Christian Health Association) provides ~30% health services."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 28,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 38.2,
+      "agricultural_land_pct": 59.2,
+      "irrigated_land_pct": 2,
+      "major_crops": [
+        "tobacco",
+        "tea",
+        "sugar",
+        "maize",
+        "cotton",
+        "groundnuts",
+        "cassava",
+        "rice"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "pigs",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 10,
+      "cereal_yield_kg_per_hectare": 1700,
+      "agricultural_employment_pct": 76,
+      "prevalence_of_undernourishment_pct": 19,
+      "notes": "Tobacco largest export (50-60% of export earnings); smallholder farming dominates; ADMARC marketing; maize main staple; Cyclone Freddy damage."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 10,
+        "hydroelectric_pct": 80,
+        "solar_pct": 5,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 5
+      },
+      "installed_capacity_mw": 530,
+      "electricity_production_gwh": 1800,
+      "electricity_consumption_per_capita_kwh": 80,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 8000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 4,
+      "energy_access_urban_pct": 52,
+      "notes": "Shire River hydropower dominant; ESCOM utility; severe power shortages; Nkula, Tedzani, Kapichira dams; solar mini-grids expanding."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Kamuzu International Airport (Lilongwe)",
+        "Chileka International Airport (Blantyre)"
+      ],
+      "major_airports_domestic": [
+        "Mzuzu",
+        "Mangochi"
+      ],
+      "national_airline": "Malawian Airlines",
+      "major_seaports": [],
+      "major_inland_ports": [
+        "Monkey Bay",
+        "Nkhata Bay",
+        "Chipoka (Lake Malawi)"
+      ],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 5,
+      "road_fatalities_per_100k": 35,
+      "notes": "MV Ilala lake steamer (Lake Malawi); Nacala rail corridor to Mozambique port; limited paved road network."
+    },
+    "tourism": {
+      "annual_visitors": 500000,
+      "tourism_revenue_usd": "$50 million",
+      "tourism_pct_gdp": 0.4,
+      "tourism_employment_pct": 3,
+      "unesco_world_heritage_sites": 2,
+      "unesco_sites_list": [
+        "Lake Malawi National Park",
+        "Chongoni Rock Art Area"
+      ],
+      "major_attractions": [
+        "Lake Malawi (snorkeling, diving, beaches)",
+        "Liwonde National Park",
+        "Mount Mulanje",
+        "Nyika Plateau",
+        "Majete Wildlife Reserve"
+      ],
+      "visa_free_access_countries": 47,
+      "henley_passport_rank": 87,
+      "notes": "'Lake of Stars' festival; freshwater diving and snorkeling; warm hospitality reputation; eco-tourism developing."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 64,
+      "gender_inequality_index": 0.565,
+      "gender_inequality_rank": 150,
+      "gender_gap_index_score": 0.71,
+      "women_in_parliament_pct": 23,
+      "women_labor_force_participation_pct": 72,
+      "maternal_mortality_per_100k": 349,
+      "child_marriage_pct": 38,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Illegal (up to 14 years)",
+      "death_penalty_status": "Abolitionist in practice",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 22,
+      "notes": "2020 court-ordered election re-run (democratic milestone); Chakwera won re-run; child marriage challenge; initiation ceremony concerns (Kusasa fumbi)."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.7,
+      "global_peace_index_rank": 47,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 1.2,
+      "active_conflicts": [],
+      "border_disputes": [
+        "Lake Malawi border with Tanzania (dispute over entire lake vs shared)"
+      ],
+      "un_peacekeeping_contributions": 1200,
+      "arms_imports_usd": "$5 million",
+      "internally_displaced_persons": 200000,
+      "notes": "One of most peaceful in Africa; Cyclone Freddy displaced 200k+ (2023); low crime; strong peacekeeping contributor relative to size."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "lion"
+      ],
+      "national_animal": "Thomson's gazelle",
+      "national_flower": "",
+      "national_dish": "Nsima with ndiwo (relish)",
+      "national_sport": "Football / Netball",
+      "major_festivals": [
+        "Lake of Stars Festival (music)",
+        "Independence Day (6 July)",
+        "Harvest festivals"
+      ],
+      "cuisine_highlights": [
+        "nsima (maize porridge)",
+        "chambo (tilapia from Lake Malawi)",
+        "ndiwo (relish)",
+        "mandasi (doughnuts)",
+        "kachumbari (salad)"
+      ],
+      "music_art_traditions": [
+        "Gule Wamkulu (Chewa masked dance, UNESCO)",
+        "Malipenga (Tumbuka military dance)",
+        "gospel music",
+        "Lucius Banda (musician-activist)"
+      ],
+      "film_industry": "Minimal (The Boy Who Harnessed the Wind filmed here)",
+      "intangible_heritage_items": [
+        "Gule Wamkulu (UNESCO)",
+        "Vimbuza healing dance (UNESCO)"
+      ],
+      "notable_historical_figures": [
+        "Hastings Kamuzu Banda (1st president, Life President)",
+        "John Chilembwe (anti-colonial martyr)",
+        "Lazarus Chakwera (current president)",
+        "William Kamkwamba (windmill boy)"
+      ],
+      "world_heritage_sites": [
+        "Lake Malawi National Park",
+        "Chongoni Rock Art Area"
+      ],
+      "media_landscape": "Nation Publications; Zodiak Broadcasting; MBC state; growing private media",
+      "notes": "'Warm Heart of Africa'; Lake Malawi is country's identity; Gule Wamkulu UNESCO Intangible Heritage; David Livingstone explored here."
+    },
+    "legal_system": {
+      "legal_tradition": "English common law and customary law",
+      "constitution_year": 1994,
+      "sharia_applicability": "None",
+      "customary_law_role": "Traditional Authority courts; significant in rural areas",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.45,
+      "contract_enforcement_days": 432,
+      "property_rights_index": 40,
+      "notes": "Constitutional Court nullified 2019 election (landmark in Africa); strong judiciary; Traditional Authority governance."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 15,
+        "global_rank": 61
+      },
+      "area": {
+        "continent_rank": 28,
+        "global_rank": 97
+      },
+      "gdp_nominal": {
+        "continent_rank": 28,
+        "global_rank": 114
+      },
+      "gdp_per_capita": {
+        "continent_rank": 47,
+        "global_rank": 180
+      },
+      "hdi": {
+        "continent_rank": 42,
+        "global_rank": 169
+      },
+      "life_expectancy": {
+        "continent_rank": 27,
+        "global_rank": 138
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 13,
+        "global_rank": 109
+      },
+      "internet_penetration": {
+        "continent_rank": 41,
+        "global_rank": 167
+      },
+      "press_freedom": {
+        "continent_rank": 12,
+        "global_rank": 53
+      },
+      "global_peace_index": {
+        "continent_rank": 2,
+        "global_rank": 47
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": "One of most peaceful and democratic countries in Africa."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Lazarus Chakwera",
       "title": "President",
       "since": "2020-06-28",
-      "notes": "Former Pentecostal preacher; MCP; won historic court-ordered rerun election 2020; first president to defeat incumbent via fresh election"
+      "notes": "Former Pentecostal preacher; MCP; won historic court-ordered rerun election 2020; first president to defeat incumbent via fresh election",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -316,7 +810,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

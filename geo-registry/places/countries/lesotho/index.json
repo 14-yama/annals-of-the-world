@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.878462Z",
-    "notes": "Comprehensive index for Lesotho covering San rock art, Moshoeshoe I (nation builder), Basotho nation formation, Gun War, Basutoland protectorate, independence 1966, mountain kingdom (entirely above 1000m), Lesotho Highlands Water Project (LHWP), and political instability."
+    "notes": "Comprehensive index for Lesotho covering San rock art, Moshoeshoe I (nation builder), Basotho nation formation, Gun War, Basutoland protectorate, independence 1966, mountain kingdom (entirely above 1000m), Lesotho Highlands Water Project (LHWP), and political instability.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Maseru",
@@ -84,7 +85,22 @@
       "life_expectancy": 54.3,
       "infant_mortality_per_1k": 45.0,
       "literacy_rate_pct": 79.4,
-      "net_migration_rate": -3.0
+      "net_migration_rate": -3.0,
+      "population_growth_rate_pct": 0.7,
+      "urban_population_growth_rate_pct": 2.0,
+      "life_expectancy_male": 50,
+      "life_expectancy_female": 57,
+      "under5_mortality_per_1k": 72,
+      "sex_ratio": 0.95,
+      "dependency_ratio": 59,
+      "population_density_per_km2": 73,
+      "age_structure": {
+        "0_14_pct": 33,
+        "15_24_pct": 20,
+        "25_54_pct": 37,
+        "55_64_pct": 5,
+        "65_plus_pct": 5
+      }
     },
     "natural_resources": {
       "primary": [
@@ -109,7 +125,10 @@
         "AU",
         "SADC"
       ],
-      "notes": "Lesotho Defence Force (LDF); historically intervened in politics; SADC deployed forces in 1998 to restore order after political crisis."
+      "notes": "Lesotho Defence Force (LDF); historically intervened in politics; SADC deployed forces in 1998 to restore order after political crisis.",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -134,14 +153,44 @@
         "EU"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 23.0
+      "remittances_pct_gdp": 23.0,
+      "total_exports_usd": "$1 billion",
+      "total_imports_usd": "$2.2 billion",
+      "top_export_destinations": [
+        "South Africa",
+        "USA",
+        "Belgium",
+        "Canada"
+      ],
+      "top_import_origins": [
+        "South Africa",
+        "China",
+        "Taiwan",
+        "India"
+      ],
+      "trade_as_pct_gdp": 120,
+      "current_account_balance_usd": "-$200 million",
+      "trade_agreements": [
+        "SACU",
+        "SADC",
+        "AfCFTA",
+        "AGOA"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 36.0,
       "electricity_access_pct": 47.0,
       "mobile_subscriptions_per_100": 60,
       "railway_km": 2,
-      "paved_roads_pct": 18
+      "paved_roads_pct": 18,
+      "broadband_subscriptions_per_100": 0.1,
+      "4g_coverage_pct": 40,
+      "5g_availability": false,
+      "road_network_km": 5940,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": "Landlocked; fiber via South Africa; Vodacom Lesotho and Econet main operators."
     },
     "international_memberships": [
       "UN",
@@ -170,6 +219,26 @@
       "fragile_states_index": {
         "score": 77.2,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.44,
+        "rank": 90,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.7,
+        "percentile": 15,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.6,
+        "percentile": 21,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.2,
+        "percentile": 32,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -184,12 +253,41 @@
         "snowstorms",
         "soil erosion"
       ],
-      "protected_areas_pct": 0.5
+      "protected_areas_pct": 0.5,
+      "average_temperature_c": 14,
+      "average_rainfall_mm": 700,
+      "co2_per_capita_t": 1.3,
+      "deforestation_rate_pct": 0.5,
+      "water_stress_level": "Medium",
+      "environmental_performance_index": {
+        "score": 32,
+        "rank": 146,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 2000,
+        "endemic_species": 30,
+        "threatened_species": 20
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 51.3,
       "foreign_aid_received_usd": "150 million",
-      "notes": "SACU revenue distribution critical (~50% of government revenue); highly dependent on South Africa economically; MCC Compact for water/sanitation."
+      "notes": "SACU revenue distribution critical (~50% of government revenue); highly dependent on South Africa economically; MCC Compact for water/sanitation.",
+      "external_debt_usd": "$1 billion",
+      "debt_service_pct_revenue": 4,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA",
+        "EU",
+        "World Bank",
+        "Global Fund",
+        "Japan"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Not applicable"
     },
     "education": {
       "primary_enrollment_pct": 82,
@@ -200,14 +298,37 @@
         "National University of Lesotho (NUL, 1945)",
         "Limkokwing University of Creative Technology (Maseru campus)"
       ],
-      "notes": "One of Africa's highest literacy rates; free primary education since 2000; severe teacher shortages in rural highlands; herder boys often miss school."
+      "notes": "One of Africa's highest literacy rates; free primary education since 2000; severe teacher shortages in rural highlands; herder boys often miss school.",
+      "education_expenditure_pct_gdp": 7.0,
+      "primary_completion_rate_pct": 75,
+      "gender_parity_index": 1.1,
+      "mean_years_of_schooling": 6.3,
+      "expected_years_of_schooling": 10.7,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 33,
+      "out_of_school_children": 50000,
+      "academic_freedom_index": 0.55
     },
     "diaspora_migration": {
       "diaspora_population": "350,000+ (primarily in South Africa)",
       "refugees_hosted": 500,
       "refugees_produced": 100,
       "remittances_usd": "500 million",
-      "notes": "Basotho migrant mineworkers in South African gold and platinum mines historically formed backbone of economy; declining mine employment; remittances ~23% of GDP."
+      "notes": "Basotho migrant mineworkers in South African gold and platinum mines historically formed backbone of economy; declining mine employment; remittances ~23% of GDP.",
+      "diaspora_top_destinations": [
+        "South Africa"
+      ],
+      "asylum_seekers": 500,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Open with South Africa (historical migrant labor)",
+      "remittances_pct_gdp": 21,
+      "net_migration_rate_per_1k": -6.0
     },
     "digital_economy": {
       "e_government_index": 0.37,
@@ -215,20 +336,365 @@
       "tech_hubs": [
         "Maseru (innovation hub nascent)"
       ],
-      "notes": "Limited broadband; Vodacom and Econet primary operators; mobile money expanding in rural areas; Lesotho Communications Authority regulating; digital divide between urban Maseru and rural highlands."
+      "notes": "Limited broadband; Vodacom and Econet primary operators; mobile money expanding in rural areas; Lesotho Communications Authority regulating; digital divide between urban Maseru and rural highlands.",
+      "e_participation_index": 0.25,
+      "ict_development_index": 2.5,
+      "mobile_money_accounts": 500000,
+      "digital_payments_pct_adults": 20,
+      "fintech_companies": 3,
+      "startup_ecosystem_value_usd": "$5 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.15,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 0
     },
     "other_languages": [
       "Zulu",
       "Xhosa",
       "Phuthi"
-    ]
+    ],
+    "capital_coordinates": {
+      "lat": -29.3167,
+      "lon": 27.4833
+    },
+    "other_major_cities": [
+      "Teyateyaneng",
+      "Mafeteng",
+      "Hlotse",
+      "Mohale's Hoek",
+      "Qacha's Nek"
+    ],
+    "national_motto": "Khotso, Pula, Nala (Peace, Rain, Prosperity)",
+    "national_anthem": "Lesotho Fatše La Bontata Rona (Lesotho, Land of Our Fathers)",
+    "currency_code": "LSL",
+    "internet_tld": ".ls",
+    "utc_offset": "UTC+2",
+    "drives_on": "left",
+    "geography": {
+      "coordinates": {
+        "lat": -29.61,
+        "lon": 28.2336
+      },
+      "bounding_box": {
+        "north": -28.57,
+        "south": -30.67,
+        "east": 29.46,
+        "west": 27.01
+      },
+      "land_area_km2": 30355,
+      "water_area_km2": 0,
+      "coastline_km": 0,
+      "borders": [
+        "South Africa"
+      ],
+      "border_lengths_km": {
+        "South Africa": 1106
+      },
+      "highest_point": {
+        "name": "Thabana Ntlenyana",
+        "elevation_m": 3482
+      },
+      "lowest_point": {
+        "name": "Junction of Makhaleng and Orange rivers",
+        "elevation_m": 1400
+      },
+      "terrain": "Highland; entirely above 1000m; western lowlands; Maluti Mountains; completely enclosed by South Africa",
+      "land_use": {
+        "agricultural_pct": 76.1,
+        "arable_pct": 10.1,
+        "forest_pct": 1.6,
+        "other_pct": 22.3
+      },
+      "major_rivers": [
+        "Orange (Senqu)",
+        "Caledon (Mohokare)"
+      ],
+      "major_lakes": [
+        "Katse Dam reservoir",
+        "Mohale Dam reservoir"
+      ],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": true,
+      "notes": "Only country entirely above 1000m (highest low point globally); completely enclosed by South Africa; 'Kingdom in the Sky'; source of Orange River."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$2.7 billion",
+      "gdp_ppp_usd": "$6 billion",
+      "gdp_per_capita_nominal_usd": 1200,
+      "gdp_per_capita_ppp_usd": 2700,
+      "gdp_growth_rate_pct": 1.8,
+      "inflation_rate_pct": 6.5,
+      "unemployment_rate_pct": 24,
+      "youth_unemployment_rate_pct": 34,
+      "poverty_rate_pct": 49.7,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 44.9,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 6,
+        "industry_pct_gdp": 32,
+        "services_pct_gdp": 62
+      },
+      "labor_force": 900000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 50,
+        "industry_pct": 20,
+        "services_pct": 30
+      },
+      "fdi_inflow_usd": "$40 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$800 million",
+      "ease_of_doing_business_rank": 122,
+      "economic_freedom_index_score": 52.6,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "SACU revenue dependent (~50% govt revenue); Lesotho Highlands Water Project (sells water to South Africa); textile/garment exports under AGOA; diamond mining (Letšeng, one of highest-value mines globally); loti pegged to rand."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 8.6,
+      "health_expenditure_per_capita_usd": 90,
+      "physicians_per_1k": 0.07,
+      "nurses_midwives_per_1k": 1.5,
+      "hospital_beds_per_1k": 1.3,
+      "maternal_mortality_per_100k": 544,
+      "hiv_prevalence_pct": 22,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 654,
+      "access_to_clean_water_pct": 72,
+      "access_to_sanitation_pct": 44,
+      "vaccination_coverage_pct": 82,
+      "stunting_under5_pct": 33,
+      "obesity_rate_pct": 16.6,
+      "universal_health_coverage_index": 43,
+      "leading_causes_of_death": [
+        "HIV/AIDS",
+        "tuberculosis",
+        "lower respiratory infections",
+        "diarrheal diseases",
+        "cardiovascular diseases"
+      ],
+      "notes": "2nd highest HIV prevalence globally (22%); TB-HIV co-infection extremely high; Lesotho Flying Doctor Service; Queen 'Mamohato Memorial Hospital."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 28,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 10.1,
+      "agricultural_land_pct": 76.1,
+      "irrigated_land_pct": 1,
+      "major_crops": [
+        "maize",
+        "wheat",
+        "sorghum",
+        "beans",
+        "peas"
+      ],
+      "major_livestock": [
+        "sheep (Merino)",
+        "cattle",
+        "goats",
+        "horses/ponies"
+      ],
+      "food_import_dependency_pct": 70,
+      "cereal_yield_kg_per_hectare": 600,
+      "agricultural_employment_pct": 50,
+      "prevalence_of_undernourishment_pct": 29,
+      "notes": "Imports 70% of food from South Africa; soil erosion severe; Basotho pony iconic; mohair and wool production."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 5,
+        "hydroelectric_pct": 90,
+        "solar_pct": 3,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 2
+      },
+      "installed_capacity_mw": 75,
+      "electricity_production_gwh": 500,
+      "electricity_consumption_per_capita_kwh": 350,
+      "energy_imports_pct": 70,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 5000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 25,
+      "energy_access_urban_pct": 80,
+      "notes": "Lesotho Highlands Water Project generates hydropower; imports ~70% electricity from South Africa/Mozambique; good solar potential."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Moshoeshoe I International Airport"
+      ],
+      "major_airports_domestic": [],
+      "national_airline": "None",
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 30,
+      "road_fatalities_per_100k": 30,
+      "notes": "Landlocked within South Africa; Basotho pony traditional mountain transport; limited paved roads in highlands."
+    },
+    "tourism": {
+      "annual_visitors": 360000,
+      "tourism_revenue_usd": "$40 million",
+      "tourism_pct_gdp": 1.5,
+      "tourism_employment_pct": 3,
+      "unesco_world_heritage_sites": 1,
+      "unesco_sites_list": [
+        "Maloti-Drakensberg Park (transboundary with South Africa)"
+      ],
+      "major_attractions": [
+        "Sani Pass",
+        "Ts'ehlanyane National Park",
+        "Katse Dam",
+        "Maletsunyane Falls (192m, one of highest single-drop in Africa)",
+        "Afriski Mountain Resort",
+        "Dinosaur footprints (Roma)"
+      ],
+      "visa_free_access_countries": 57,
+      "henley_passport_rank": 76,
+      "notes": "Ski resort (Afriski, only in Africa); pony trekking; waterfalls; mountain scenery; dinosaur footprints."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 61,
+      "gender_inequality_index": 0.558,
+      "gender_inequality_rank": 149,
+      "gender_gap_index_score": 0.71,
+      "women_in_parliament_pct": 25,
+      "women_labor_force_participation_pct": 55,
+      "maternal_mortality_per_100k": 544,
+      "child_marriage_pct": 16,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Male homosexuality illegal (common law); female legal",
+      "death_penalty_status": "Abolitionist",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 14,
+      "notes": "Constitutional monarchy; famo music gang violence concern; Gender and Development Policy; Legal Capacity of Married Persons Act 2006 improved women's rights."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.9,
+      "global_peace_index_rank": 80,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 17,
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 50,
+      "arms_imports_usd": "$2 million",
+      "internally_displaced_persons": 0,
+      "notes": "SADC interventions (1998, 2014); famo music gang violence; political instability (multiple PM changes); reform process ongoing."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "Basotho hat (mokorotlo)",
+        "Basotho blanket"
+      ],
+      "national_animal": "black rhinoceros",
+      "national_flower": "spiral aloe (Aloe polyphylla)",
+      "national_dish": "Papa (maize porridge) with moroho (greens)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "King's Birthday",
+        "Independence Day (4 October)",
+        "Moshoeshoe Day (11 March)"
+      ],
+      "cuisine_highlights": [
+        "papa (stiff maize porridge)",
+        "moroho (wild spinach)",
+        "lekhotloane (fermented maize)",
+        "nyekoe (beans and maize)"
+      ],
+      "music_art_traditions": [
+        "Famo music (accordion-based)",
+        "Basotho blanket art",
+        "mokorotlo hat symbolism",
+        "horseback culture",
+        "San rock art"
+      ],
+      "film_industry": "Minimal (This Is Not a Burial, It's a Resurrection - international recognition)",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "Moshoeshoe I (founder, 'African Napoleon')",
+        "King Letsie III (current monarch)",
+        "Ntsu Mokhehle (independence leader)"
+      ],
+      "world_heritage_sites": [
+        "Maloti-Drakensberg Park"
+      ],
+      "media_landscape": "Lesotho Times; state radio (Radio Lesotho); LTV; limited but growing private media",
+      "notes": "Basotho blankets are cultural identity markers; spiral aloe unique endemic; only African country entirely above 1000m; Moshoeshoe I heroic unifier."
+    },
+    "legal_system": {
+      "legal_tradition": "Mixed: English common law, Roman-Dutch law, Basotho customary law",
+      "constitution_year": 1993,
+      "sharia_applicability": "None",
+      "customary_law_role": "Significant; Chiefs' courts; customary marriage recognized",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.4,
+      "contract_enforcement_days": 615,
+      "property_rights_index": 35,
+      "notes": "Constitutional monarchy; PM is head of government; National Reforms Authority recommendations (ongoing); dual legal system."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 45,
+        "global_rank": 153
+      },
+      "area": {
+        "continent_rank": 41,
+        "global_rank": 137
+      },
+      "gdp_nominal": {
+        "continent_rank": 45,
+        "global_rank": 161
+      },
+      "gdp_per_capita": {
+        "continent_rank": 36,
+        "global_rank": 162
+      },
+      "hdi": {
+        "continent_rank": 32,
+        "global_rank": 168
+      },
+      "life_expectancy": {
+        "continent_rank": 49,
+        "global_rank": 184
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 19,
+        "global_rank": 122
+      },
+      "internet_penetration": {
+        "continent_rank": 21,
+        "global_rank": 112
+      },
+      "press_freedom": {
+        "continent_rank": 13,
+        "global_rank": 58
+      },
+      "global_peace_index": {
+        "continent_rank": 7,
+        "global_rank": 80
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": ""
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "King Letsie III",
       "title": "King",
       "since": "1996-02-07 (also 1990–1995)",
-      "notes": "Constitutional monarch; son of Moshoeshoe II; ceremonial role; first abdicated to restore father 1995; returned after father's death 1996"
+      "notes": "Constitutional monarch; son of Moshoeshoe II; ceremonial role; first abdicated to restore father 1995; returned after father's death 1996",
+      "party": ""
     },
     "prime_minister": {
       "name": "Sam Matekane",
@@ -260,7 +726,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.878936Z",
-    "notes": "Comprehensive index for Liberia covering indigenous Kru/Mande peoples, American Colonization Society settlement, Americo-Liberian dominance, True Whig Party era, Samuel Doe coup, Charles Taylor civil wars, Ebola crisis, and Ellen Johnson Sirleaf presidency."
+    "notes": "Comprehensive index for Liberia covering indigenous Kru/Mande peoples, American Colonization Society settlement, Americo-Liberian dominance, True Whig Party era, Samuel Doe coup, Charles Taylor civil wars, Ebola crisis, and Ellen Johnson Sirleaf presidency.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Monrovia",
@@ -148,7 +149,22 @@
       "life_expectancy": 64.7,
       "infant_mortality_per_1k": 54.0,
       "literacy_rate_pct": 48.3,
-      "net_migration_rate": -0.5
+      "net_migration_rate": -0.5,
+      "population_growth_rate_pct": 2.7,
+      "urban_population_growth_rate_pct": 3.3,
+      "life_expectancy_male": 62,
+      "life_expectancy_female": 65,
+      "under5_mortality_per_1k": 70,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 80,
+      "population_density_per_km2": 50,
+      "age_structure": {
+        "0_14_pct": 42,
+        "15_24_pct": 20,
+        "25_54_pct": 31,
+        "55_64_pct": 4,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -173,7 +189,10 @@
         "ECOWAS",
         "MRU"
       ],
-      "notes": "Armed Forces of Liberia (AFL) restructured by US after civil wars; UNMIL peacekeeping mission withdrew 2018; Coast Guard established with US support."
+      "notes": "Armed Forces of Liberia (AFL) restructured by US after civil wars; UNMIL peacekeeping mission withdrew 2018; Coast Guard established with US support.",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -201,14 +220,47 @@
         "EU"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 8.5
+      "remittances_pct_gdp": 8.5,
+      "total_exports_usd": "$600 million",
+      "total_imports_usd": "$1.5 billion",
+      "top_export_destinations": [
+        "Switzerland",
+        "Poland",
+        "UAE",
+        "Germany",
+        "USA"
+      ],
+      "top_import_origins": [
+        "China",
+        "South Korea",
+        "Japan",
+        "Singapore",
+        "USA"
+      ],
+      "trade_as_pct_gdp": 53,
+      "current_account_balance_usd": "-$500 million",
+      "trade_agreements": [
+        "ECOWAS",
+        "Mano River Union",
+        "AfCFTA"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 16.2,
       "electricity_access_pct": 26.0,
       "mobile_subscriptions_per_100": 42,
       "railway_km": 0,
-      "paved_roads_pct": 6
+      "paved_roads_pct": 6,
+      "broadband_subscriptions_per_100": 0.01,
+      "4g_coverage_pct": 25,
+      "5g_availability": false,
+      "road_network_km": 10600,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "ACE"
+      ],
+      "notes": "Very poor road conditions; Lonestar, Orange operate; most infrastructure destroyed in civil war."
     },
     "international_memberships": [
       "UN",
@@ -238,6 +290,26 @@
       "fragile_states_index": {
         "score": 88.5,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.37,
+        "rank": 114,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -1.2,
+        "percentile": 5,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -1.0,
+        "percentile": 10,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.3,
+        "percentile": 30,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -253,12 +325,41 @@
         "deforestation",
         "coastal erosion"
       ],
-      "protected_areas_pct": 3.0
+      "protected_areas_pct": 3.0,
+      "average_temperature_c": 26,
+      "average_rainfall_mm": 2500,
+      "co2_per_capita_t": 0.3,
+      "deforestation_rate_pct": 2.0,
+      "water_stress_level": "Low",
+      "environmental_performance_index": {
+        "score": 27,
+        "rank": 170,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 4000,
+        "endemic_species": 50,
+        "threatened_species": 100
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 53.6,
       "foreign_aid_received_usd": "600 million",
-      "notes": "HIPC debt relief 2010; heavily aid-dependent; US primary donor; post-war reconstruction ongoing; Ebola (2014-16) severely set back development."
+      "notes": "HIPC debt relief 2010; heavily aid-dependent; US primary donor; post-war reconstruction ongoing; Ebola (2014-16) severely set back development.",
+      "external_debt_usd": "$1.2 billion",
+      "debt_service_pct_revenue": 5,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA",
+        "EU",
+        "World Bank",
+        "AfDB",
+        "Sweden"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 65,
@@ -270,14 +371,41 @@
         "Cuttington University (1889)",
         "Stella Maris Polytechnic"
       ],
-      "notes": "Education system devastated by 14 years of civil war; University of Liberia is Africa's oldest degree-granting institution; 2017 education reform act; teacher quality challenges."
+      "notes": "Education system devastated by 14 years of civil war; University of Liberia is Africa's oldest degree-granting institution; 2017 education reform act; teacher quality challenges.",
+      "education_expenditure_pct_gdp": 2.6,
+      "primary_completion_rate_pct": 60,
+      "gender_parity_index": 0.88,
+      "mean_years_of_schooling": 4.7,
+      "expected_years_of_schooling": 10.0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 30,
+      "out_of_school_children": 150000,
+      "academic_freedom_index": 0.5
     },
     "diaspora_migration": {
       "diaspora_population": "600,000+ (USA, Ghana, Nigeria, Sierra Leone, Guinea)",
       "refugees_hosted": 8000,
       "refugees_produced": 5000,
       "remittances_usd": "320 million",
-      "notes": "Large diaspora in US (Minnesota, Philadelphia, New York); many returned post-civil war; Ivorian refugees hosted during 2011 crisis."
+      "notes": "Large diaspora in US (Minnesota, Philadelphia, New York); many returned post-civil war; Ivorian refugees hosted during 2011 crisis.",
+      "diaspora_top_destinations": [
+        "USA",
+        "Sierra Leone",
+        "Ghana",
+        "Côte d'Ivoire",
+        "Guinea"
+      ],
+      "asylum_seekers": 10000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "ECOWAS free movement; refugee returns post-war",
+      "remittances_pct_gdp": 14,
+      "net_migration_rate_per_1k": -1.0
     },
     "digital_economy": {
       "e_government_index": 0.27,
@@ -285,7 +413,358 @@
       "tech_hubs": [
         "iLab Liberia (Monrovia)"
       ],
-      "notes": "ACE submarine cable landed 2012; one of Africa's lowest internet penetration rates; mobile-first economy; digital financial inclusion growing slowly."
+      "notes": "ACE submarine cable landed 2012; one of Africa's lowest internet penetration rates; mobile-first economy; digital financial inclusion growing slowly.",
+      "e_participation_index": 0.15,
+      "ict_development_index": 1.0,
+      "mobile_money_accounts": 800000,
+      "digital_payments_pct_adults": 8,
+      "fintech_companies": 5,
+      "startup_ecosystem_value_usd": "$5 million",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0.1,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 0
+    },
+    "capital_coordinates": {
+      "lat": 6.2907,
+      "lon": -10.7605
+    },
+    "other_major_cities": [
+      "Ganta",
+      "Buchanan",
+      "Kakata",
+      "Harper",
+      "Voinjama"
+    ],
+    "national_motto": "The Love of Liberty Brought Us Here",
+    "national_anthem": "All Hail, Liberia, Hail!",
+    "currency_code": "LRD",
+    "internet_tld": ".lr",
+    "utc_offset": "UTC+0",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 6.4281,
+        "lon": -9.4295
+      },
+      "bounding_box": {
+        "north": 8.55,
+        "south": 4.35,
+        "east": -7.37,
+        "west": -11.49
+      },
+      "land_area_km2": 111369,
+      "water_area_km2": 0,
+      "coastline_km": 579,
+      "borders": [
+        "Sierra Leone",
+        "Guinea",
+        "Côte d'Ivoire"
+      ],
+      "border_lengths_km": {
+        "Sierra Leone": 299,
+        "Guinea": 590,
+        "Côte d'Ivoire": 778
+      },
+      "highest_point": {
+        "name": "Mount Wuteve",
+        "elevation_m": 1440
+      },
+      "lowest_point": {
+        "name": "Atlantic Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Flat to rolling coastal plains; rolling plateau of dissected laterite; low mountains in northeast",
+      "land_use": {
+        "agricultural_pct": 28.1,
+        "arable_pct": 5.2,
+        "forest_pct": 44.7,
+        "other_pct": 27.2
+      },
+      "major_rivers": [
+        "St. Paul",
+        "St. John",
+        "Cestos",
+        "Cavalla"
+      ],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 150000,
+      "landlocked": false,
+      "notes": "Founded by freed American slaves (1847); oldest republic in Africa; Upper Guinean rainforest; Sapo National Park."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$4 billion",
+      "gdp_ppp_usd": "$7.5 billion",
+      "gdp_per_capita_nominal_usd": 740,
+      "gdp_per_capita_ppp_usd": 1400,
+      "gdp_growth_rate_pct": 4.7,
+      "inflation_rate_pct": 10,
+      "unemployment_rate_pct": 3.5,
+      "youth_unemployment_rate_pct": 5,
+      "poverty_rate_pct": 44.4,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 35.3,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 37,
+        "industry_pct_gdp": 14,
+        "services_pct_gdp": 49
+      },
+      "labor_force": 2200000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 70,
+        "industry_pct": 8,
+        "services_pct": 22
+      },
+      "fdi_inflow_usd": "$200 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$300 million",
+      "ease_of_doing_business_rank": 175,
+      "economic_freedom_index_score": 50.3,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Post-civil war recovery (1989-2003); iron ore, rubber, gold, timber, palm oil; world's largest ship registry (flag of convenience); dual currency (LRD/USD)."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 8.3,
+      "health_expenditure_per_capita_usd": 49,
+      "physicians_per_1k": 0.04,
+      "nurses_midwives_per_1k": 0.3,
+      "hospital_beds_per_1k": 0.8,
+      "maternal_mortality_per_100k": 661,
+      "hiv_prevalence_pct": 1.0,
+      "malaria_incidence_per_1k": 300,
+      "tuberculosis_incidence_per_100k": 308,
+      "access_to_clean_water_pct": 73,
+      "access_to_sanitation_pct": 17,
+      "vaccination_coverage_pct": 62,
+      "stunting_under5_pct": 30,
+      "obesity_rate_pct": 9.9,
+      "universal_health_coverage_index": 37,
+      "leading_causes_of_death": [
+        "malaria",
+        "neonatal disorders",
+        "lower respiratory infections",
+        "HIV/AIDS",
+        "tuberculosis"
+      ],
+      "notes": "Ebola devastated health system (2014-15, ~5000 deaths); rebuilding with international support; severe health worker shortage."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 25,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 5.2,
+      "agricultural_land_pct": 28.1,
+      "irrigated_land_pct": 0.5,
+      "major_crops": [
+        "rice",
+        "cassava",
+        "rubber",
+        "oil palm",
+        "cocoa",
+        "sugar cane"
+      ],
+      "major_livestock": [
+        "goats",
+        "sheep",
+        "pigs",
+        "chickens"
+      ],
+      "food_import_dependency_pct": 60,
+      "cereal_yield_kg_per_hectare": 1100,
+      "agricultural_employment_pct": 70,
+      "prevalence_of_undernourishment_pct": 35,
+      "notes": "Rice main staple but 60% imported; Firestone rubber plantation historically dominant; palm oil traditional; post-war agricultural recovery slow."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 80,
+        "hydroelectric_pct": 15,
+        "solar_pct": 3,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 2
+      },
+      "installed_capacity_mw": 130,
+      "electricity_production_gwh": 200,
+      "electricity_consumption_per_capita_kwh": 30,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 6000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 2,
+      "energy_access_urban_pct": 25,
+      "notes": "Mt Coffee hydroelectric plant (88MW, rehabilitated 2016, USAID); one of lowest electricity access rates in world; diesel generators dominant."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Roberts International Airport (Monrovia)"
+      ],
+      "major_airports_domestic": [
+        "Spriggs Payne Airport (Monrovia)"
+      ],
+      "national_airline": "None",
+      "major_seaports": [
+        "Monrovia Free Port",
+        "Buchanan",
+        "Harper"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 3700,
+      "registered_vehicles_per_1k": 10,
+      "road_fatalities_per_100k": 35,
+      "notes": "World's 2nd largest ship registry (flag of convenience ~4000 vessels); very limited road network; no railway currently operational."
+    },
+    "tourism": {
+      "annual_visitors": 50000,
+      "tourism_revenue_usd": "$10 million",
+      "tourism_pct_gdp": 0.3,
+      "tourism_employment_pct": 1,
+      "unesco_world_heritage_sites": 0,
+      "unesco_sites_list": [],
+      "major_attractions": [
+        "Sapo National Park",
+        "Monrovia beaches",
+        "Providence Island",
+        "Liberian National Museum"
+      ],
+      "visa_free_access_countries": 47,
+      "henley_passport_rank": 86,
+      "notes": "Tourism undeveloped post-civil war; potential for beach and rainforest eco-tourism; Americo-Liberian heritage sites."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 60,
+      "gender_inequality_index": 0.65,
+      "gender_inequality_rank": 161,
+      "gender_gap_index_score": 0.68,
+      "women_in_parliament_pct": 11,
+      "women_labor_force_participation_pct": 55,
+      "maternal_mortality_per_100k": 661,
+      "child_marriage_pct": 36,
+      "fgm_prevalence_pct": 44,
+      "lgbtq_legal_status": "Illegal (up to 1 year)",
+      "death_penalty_status": "Retentionist (no recent executions)",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 21,
+      "notes": "Ellen Johnson Sirleaf (Africa's 1st elected female president, 2006-2018, Nobel Peace 2011); post-war reconciliation ongoing; Sande society (FGM cultural context)."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.0,
+      "global_peace_index_rank": 85,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 3,
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 50,
+      "arms_imports_usd": "$2 million",
+      "internally_displaced_persons": 0,
+      "notes": "UNMIL withdrew 2018; Joseph Boakai elected president 2023 (peaceful transition); post-civil war stability; SSR challenges remain."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "Lone Star flag"
+      ],
+      "national_animal": "",
+      "national_flower": "pepper plant",
+      "national_dish": "Fufu with palm butter soup",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Independence Day (26 July)",
+        "Thanksgiving (1st Thursday of November)",
+        "Decoration Day"
+      ],
+      "cuisine_highlights": [
+        "palm butter soup",
+        "jollof rice",
+        "fufu",
+        "dumboy (cassava fufu)",
+        "check rice (jollof)",
+        "palm wine"
+      ],
+      "music_art_traditions": [
+        "Hipco music (hip-hop + colloquial English)",
+        "traditional masked dances",
+        "Poro and Sande society rituals",
+        "George Weah (footballer-turned-president)"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "Joseph Jenkins Roberts (1st president)",
+        "William Tubman (longest-serving president)",
+        "Ellen Johnson Sirleaf (Nobel laureate)",
+        "George Weah (FIFA World Player/president)",
+        "Samuel Doe (coup leader)",
+        "Charles Taylor (warlord-president, convicted ICC)"
+      ],
+      "world_heritage_sites": [],
+      "media_landscape": "FrontPage Africa; Daily Observer; ELBC state; private stations growing; vibrant talk radio",
+      "notes": "Founded by freed American slaves (1847); unique Americo-Liberian/indigenous dynamic; only African country never colonized by European power."
+    },
+    "legal_system": {
+      "legal_tradition": "Anglo-American common law and customary law",
+      "constitution_year": 1986,
+      "sharia_applicability": "None",
+      "customary_law_role": "Applied in hinterland through statutory courts",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.3,
+      "contract_enforcement_days": 1280,
+      "property_rights_index": 25,
+      "notes": "Constitution modeled on US; dual legal system; Truth and Reconciliation Commission (2009) recommendations partially implemented."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 32,
+        "global_rank": 118
+      },
+      "area": {
+        "continent_rank": 29,
+        "global_rank": 102
+      },
+      "gdp_nominal": {
+        "continent_rank": 40,
+        "global_rank": 155
+      },
+      "gdp_per_capita": {
+        "continent_rank": 46,
+        "global_rank": 178
+      },
+      "hdi": {
+        "continent_rank": 50,
+        "global_rank": 186
+      },
+      "life_expectancy": {
+        "continent_rank": 30,
+        "global_rank": 143
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 51,
+        "global_rank": 175
+      },
+      "internet_penetration": {
+        "continent_rank": 38,
+        "global_rank": 163
+      },
+      "press_freedom": {
+        "continent_rank": 7,
+        "global_rank": 52
+      },
+      "global_peace_index": {
+        "continent_rank": 9,
+        "global_rank": 85
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": ""
     }
   },
   "leadership": {
@@ -293,7 +772,8 @@
       "name": "Joseph Boakai",
       "title": "President",
       "since": "2024-01-22",
-      "notes": "Unity Party; previously VP under Sirleaf 2006–2018; defeated George Weah 2023"
+      "notes": "Unity Party; previously VP under Sirleaf 2006–2018; defeated George Weah 2023",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -330,7 +810,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

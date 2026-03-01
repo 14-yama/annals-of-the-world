@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.881507Z",
-    "notes": "Comprehensive index for Mali covering Djenné-Djenno, Ghana Empire, Mali Empire (Sundiata/Mansa Musa), Songhai Empire, Timbuktu scholarship, French Sudan, Keita/Traoré eras, 2012 crisis, and jihadist insurgency."
+    "notes": "Comprehensive index for Mali covering Djenné-Djenno, Ghana Empire, Mali Empire (Sundiata/Mansa Musa), Songhai Empire, Timbuktu scholarship, French Sudan, Keita/Traoré eras, 2012 crisis, and jihadist insurgency.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Bamako",
@@ -139,7 +140,22 @@
       "life_expectancy": 59.3,
       "infant_mortality_per_1k": 62.0,
       "literacy_rate_pct": 35.5,
-      "net_migration_rate": -3.5
+      "net_migration_rate": -3.5,
+      "population_growth_rate_pct": 3.0,
+      "urban_population_growth_rate_pct": 4.5,
+      "life_expectancy_male": 58,
+      "life_expectancy_female": 61,
+      "under5_mortality_per_1k": 94,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 96,
+      "population_density_per_km2": 17,
+      "age_structure": {
+        "0_14_pct": 47,
+        "15_24_pct": 20,
+        "25_54_pct": 27,
+        "55_64_pct": 3,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -168,7 +184,10 @@
         "AU",
         "G5 Sahel"
       ],
-      "notes": "Military junta in power since 2020/2021 coups; expelled French forces (Operation Barkhane) and MINUSMA (UN) in 2023; contracted Russian Wagner/Africa Corps; fighting jihadist groups (JNIM/ISGS) and Tuareg separatists in the north (Kidal captured 2023)."
+      "notes": "Military junta in power since 2020/2021 coups; expelled French forces (Operation Barkhane) and MINUSMA (UN) in 2023; contracted Russian Wagner/Africa Corps; fighting jihadist groups (JNIM/ISGS) and Tuareg separatists in the north (Kidal captured 2023).",
+      "paramilitary_personnel": 4800,
+      "conscription": true,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -195,14 +214,45 @@
         "France"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 6.0
+      "remittances_pct_gdp": 6.0,
+      "total_exports_usd": "$3 billion",
+      "total_imports_usd": "$5 billion",
+      "top_export_destinations": [
+        "Switzerland",
+        "UAE",
+        "South Africa",
+        "Australia",
+        "Senegal"
+      ],
+      "top_import_origins": [
+        "Senegal",
+        "Côte d'Ivoire",
+        "China",
+        "France",
+        "India"
+      ],
+      "trade_as_pct_gdp": 42,
+      "current_account_balance_usd": "-$1 billion",
+      "trade_agreements": [
+        "UEMOA",
+        "AfCFTA",
+        "AES"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 27.0,
       "electricity_access_pct": 50.0,
       "mobile_subscriptions_per_100": 55,
       "railway_km": 593,
-      "paved_roads_pct": 6
+      "paved_roads_pct": 6,
+      "broadband_subscriptions_per_100": 0.1,
+      "4g_coverage_pct": 40,
+      "5g_availability": false,
+      "road_network_km": 22474,
+      "waterways_km": 1800,
+      "submarine_cables": [],
+      "notes": "Landlocked; Orange Mali, Moov Africa; Niger River navigation important; poor infrastructure in north."
     },
     "international_memberships": [
       "UN",
@@ -232,6 +282,26 @@
       "fragile_states_index": {
         "score": 97.6,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.36,
+        "rank": 117,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -1.0,
+        "percentile": 8,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.5,
+        "percentile": 26,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -2.0,
+        "percentile": 1,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -250,12 +320,41 @@
         "floods (Niger River)",
         "locust invasions"
       ],
-      "protected_areas_pct": 2.4
+      "protected_areas_pct": 2.4,
+      "average_temperature_c": 28,
+      "average_rainfall_mm": 500,
+      "co2_per_capita_t": 0.1,
+      "deforestation_rate_pct": 1.0,
+      "water_stress_level": "Medium-high",
+      "environmental_performance_index": {
+        "score": 27.5,
+        "rank": 166,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 3000,
+        "endemic_species": 20,
+        "threatened_species": 40
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 52.0,
       "foreign_aid_received_usd": "1.5 billion",
-      "notes": "ECOWAS suspended after coups; Western sanctions; shifting to Russian/Chinese partnerships; WAEMU franc zone member; BCEAO monetary policy; artisanal gold partially smuggled."
+      "notes": "ECOWAS suspended after coups; Western sanctions; shifting to Russian/Chinese partnerships; WAEMU franc zone member; BCEAO monetary policy; artisanal gold partially smuggled.",
+      "external_debt_usd": "$5 billion",
+      "debt_service_pct_revenue": 12,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "World Bank",
+        "EU (suspended many)",
+        "France (strained)",
+        "AfDB",
+        "Canada"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 72,
@@ -266,14 +365,42 @@
         "University of Bamako (1996, now split into multiple universities)",
         "University of Sciences, Techniques and Technologies of Bamako"
       ],
-      "notes": "One of the world's lowest literacy rates; koranic schools parallel secular system; conflict in north closed many schools; Timbuktu manuscripts preservation; language of instruction (Bambara vs French) debated."
+      "notes": "One of the world's lowest literacy rates; koranic schools parallel secular system; conflict in north closed many schools; Timbuktu manuscripts preservation; language of instruction (Bambara vs French) debated.",
+      "education_expenditure_pct_gdp": 3.8,
+      "primary_completion_rate_pct": 50,
+      "gender_parity_index": 0.82,
+      "mean_years_of_schooling": 2.3,
+      "expected_years_of_schooling": 7.5,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 50,
+      "out_of_school_children": 1000000,
+      "academic_freedom_index": 0.3
     },
     "diaspora_migration": {
       "diaspora_population": "4 million+ (Cote d'Ivoire, France, Senegal, Burkina Faso, Spain, Congo)",
       "refugees_hosted": 40000,
       "refugees_produced": 400000,
       "remittances_usd": "1.1 billion",
-      "notes": "Major diaspora in Cote d'Ivoire and France; seasonal migration to cocoa plantations; conflict displaced hundreds of thousands internally and externally; circular migration tradition."
+      "notes": "Major diaspora in Cote d'Ivoire and France; seasonal migration to cocoa plantations; conflict displaced hundreds of thousands internally and externally; circular migration tradition.",
+      "diaspora_top_destinations": [
+        "Côte d'Ivoire",
+        "France",
+        "Senegal",
+        "Guinea",
+        "Burkina Faso",
+        "Spain"
+      ],
+      "asylum_seekers": 20000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 400000,
+      "immigration_policy": "ECOWAS/UEMOA free movement (left ECOWAS Jan 2024)",
+      "remittances_pct_gdp": 6.0,
+      "net_migration_rate_per_1k": -3.0
     },
     "digital_economy": {
       "e_government_index": 0.32,
@@ -281,7 +408,394 @@
       "tech_hubs": [
         "Bamako (Jokkolabs, DoniLab)"
       ],
-      "notes": "Orange Mali and Moov Africa primary operators; low broadband penetration; mobile money used for remittances; internet shutdowns during political crises."
+      "notes": "Orange Mali and Moov Africa primary operators; low broadband penetration; mobile money used for remittances; internet shutdowns during political crises.",
+      "e_participation_index": 0.2,
+      "ict_development_index": 1.3,
+      "mobile_money_accounts": 8000000,
+      "digital_payments_pct_adults": 20,
+      "fintech_companies": 10,
+      "startup_ecosystem_value_usd": "$10 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.15,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 5
+    },
+    "capital_coordinates": {
+      "lat": 12.6392,
+      "lon": -8.0029
+    },
+    "other_major_cities": [
+      "Sikasso",
+      "Mopti",
+      "Ségou",
+      "Koutiala",
+      "Kayes",
+      "Gao",
+      "Timbuktu"
+    ],
+    "national_motto": "Un peuple, un but, une foi (One people, one goal, one faith)",
+    "national_anthem": "Le Mali (Mali)",
+    "currency_code": "XOF",
+    "internet_tld": ".ml",
+    "utc_offset": "UTC+0",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 17.5707,
+        "lon": -3.9962
+      },
+      "bounding_box": {
+        "north": 25.0,
+        "south": 10.16,
+        "east": 4.27,
+        "west": -12.24
+      },
+      "land_area_km2": 1240192,
+      "water_area_km2": 20000,
+      "coastline_km": 0,
+      "borders": [
+        "Algeria",
+        "Niger",
+        "Burkina Faso",
+        "Côte d'Ivoire",
+        "Guinea",
+        "Senegal",
+        "Mauritania"
+      ],
+      "border_lengths_km": {
+        "Algeria": 1359,
+        "Niger": 838,
+        "Burkina Faso": 1325,
+        "Côte d'Ivoire": 599,
+        "Guinea": 858,
+        "Senegal": 489,
+        "Mauritania": 2236
+      },
+      "highest_point": {
+        "name": "Hombori Tondo",
+        "elevation_m": 1155
+      },
+      "lowest_point": {
+        "name": "Senegal River",
+        "elevation_m": 23
+      },
+      "terrain": "Flat north (Sahara desert); rolling southern plains; Niger River inland delta; Sahel in center; Bandiagara escarpment (Dogon country)",
+      "land_use": {
+        "agricultural_pct": 34.1,
+        "arable_pct": 5.6,
+        "forest_pct": 10,
+        "other_pct": 55.9
+      },
+      "major_rivers": [
+        "Niger",
+        "Senegal",
+        "Bani"
+      ],
+      "major_lakes": [
+        "Lake Débo",
+        "Lake Faguibine"
+      ],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": true,
+      "notes": "2nd largest West African country; Niger River inland delta unique ecosystem; Timbuktu legendary center of learning; Dogon Country (Bandiagara cliff dwellers); Saharan desert in north."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$19 billion",
+      "gdp_ppp_usd": "$48 billion",
+      "gdp_per_capita_nominal_usd": 860,
+      "gdp_per_capita_ppp_usd": 2200,
+      "gdp_growth_rate_pct": 5.0,
+      "inflation_rate_pct": 3.5,
+      "unemployment_rate_pct": 8,
+      "youth_unemployment_rate_pct": 20,
+      "poverty_rate_pct": 42.1,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 33,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 42,
+        "industry_pct_gdp": 18,
+        "services_pct_gdp": 40
+      },
+      "labor_force": 7500000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 66,
+        "industry_pct": 9,
+        "services_pct": 25
+      },
+      "fdi_inflow_usd": "$600 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$1 billion",
+      "ease_of_doing_business_rank": 148,
+      "economic_freedom_index_score": 53.7,
+      "credit_rating": {
+        "moodys": "Caa2",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Gold (3rd in Africa, Loulo-Gounkoto, Fekola mines); cotton (#2 in Africa); livestock major sector; 2020/2021 double coups; left ECOWAS/G5 Sahel; Alliance of Sahel States (AES) member; Wagner/Africa Corps presence."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.8,
+      "health_expenditure_per_capita_usd": 26,
+      "physicians_per_1k": 0.13,
+      "nurses_midwives_per_1k": 0.4,
+      "hospital_beds_per_1k": 0.1,
+      "maternal_mortality_per_100k": 562,
+      "hiv_prevalence_pct": 1.2,
+      "malaria_incidence_per_1k": 300,
+      "tuberculosis_incidence_per_100k": 56,
+      "access_to_clean_water_pct": 79,
+      "access_to_sanitation_pct": 40,
+      "vaccination_coverage_pct": 60,
+      "stunting_under5_pct": 27,
+      "obesity_rate_pct": 8.6,
+      "universal_health_coverage_index": 38,
+      "leading_causes_of_death": [
+        "malaria",
+        "lower respiratory infections",
+        "neonatal disorders",
+        "diarrheal diseases",
+        "meningitis"
+      ],
+      "notes": "Community health workers (relais communautaire); meningitis belt; conflict displacing health workers in north/center."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 30,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 5.6,
+      "agricultural_land_pct": 34.1,
+      "irrigated_land_pct": 3,
+      "major_crops": [
+        "millet",
+        "sorghum",
+        "rice",
+        "cotton",
+        "maize",
+        "groundnuts",
+        "shea nuts",
+        "mangoes"
+      ],
+      "major_livestock": [
+        "cattle",
+        "sheep",
+        "goats",
+        "camels"
+      ],
+      "food_import_dependency_pct": 15,
+      "cereal_yield_kg_per_hectare": 1200,
+      "agricultural_employment_pct": 66,
+      "prevalence_of_undernourishment_pct": 10,
+      "notes": "Office du Niger (largest irrigation scheme); cotton #2 Africa; Fulani pastoralism; food crisis in conflict zones; mango production."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 60,
+        "hydroelectric_pct": 30,
+        "solar_pct": 8,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 2
+      },
+      "installed_capacity_mw": 700,
+      "electricity_production_gwh": 2500,
+      "electricity_consumption_per_capita_kwh": 80,
+      "energy_imports_pct": 15,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 15000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 10,
+      "energy_access_urban_pct": 65,
+      "notes": "Manantali dam (200MW); Sélingué dam; imports from Côte d'Ivoire; solar expansion; EDM-SA utility."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Modibo Keïta International Airport (Bamako)"
+      ],
+      "major_airports_domestic": [
+        "Mopti",
+        "Gao",
+        "Timbuktu",
+        "Kayes"
+      ],
+      "national_airline": "None (Sky Mali, limited)",
+      "major_seaports": [],
+      "major_inland_ports": [
+        "Koulikoro (Niger River)",
+        "Mopti"
+      ],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 10,
+      "road_fatalities_per_100k": 25,
+      "notes": "Niger River navigation (Koulikoro-Gao); Dakar-Bamako rail (non-functional); landlocked, uses Dakar and Abidjan ports."
+    },
+    "tourism": {
+      "annual_visitors": 150000,
+      "tourism_revenue_usd": "$50 million",
+      "tourism_pct_gdp": 0.3,
+      "tourism_employment_pct": 2,
+      "unesco_world_heritage_sites": 4,
+      "unesco_sites_list": [
+        "Timbuktu",
+        "Tomb of Askia (Gao)",
+        "Old Towns of Djenné",
+        "Cliff of Bandiagara (Dogon)"
+      ],
+      "major_attractions": [
+        "Timbuktu (legendary city of learning)",
+        "Djenné Great Mosque (largest mud-brick building)",
+        "Dogon Country",
+        "Niger River festival",
+        "Festival au Désert (during peace)",
+        "Ségou-sur-Niger"
+      ],
+      "visa_free_access_countries": 48,
+      "henley_passport_rank": 82,
+      "notes": "4 UNESCO sites; tourism collapsed due to jihadist insurgency; Timbuktu manuscripts; Djenné Mosque iconic; Festival au Désert suspended."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 20,
+      "gender_inequality_index": 0.671,
+      "gender_inequality_rank": 163,
+      "gender_gap_index_score": 0.6,
+      "women_in_parliament_pct": 28,
+      "women_labor_force_participation_pct": 54,
+      "maternal_mortality_per_100k": 562,
+      "child_marriage_pct": 54,
+      "fgm_prevalence_pct": 89,
+      "lgbtq_legal_status": "Legal (no protections)",
+      "death_penalty_status": "Abolitionist in practice",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 56,
+      "notes": "Military junta (2020+2021 coups); child marriage/FGM extremely prevalent; conflict-related abuses (Sahel); slavery remnants (Tuareg social hierarchy)."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.9,
+      "global_peace_index_rank": 155,
+      "terrorism_index_score": 7.5,
+      "terrorism_index_rank": 8,
+      "homicide_rate_per_100k": 8,
+      "active_conflicts": [
+        "Jihadist insurgency (JNIM, ISGS)",
+        "Tuareg/separatist conflict (CMA)",
+        "Intercommunal violence (Fulani-Dogon)"
+      ],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$50 million",
+      "internally_displaced_persons": 400000,
+      "notes": "MINUSMA (UN peacekeeping) withdrawal completed Dec 2023; Wagner/Africa Corps deployed; left ECOWAS, G5 Sahel; AES confederation with Burkina Faso, Niger."
+    },
+    "cultural_heritage": {
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "Tiguadege na (peanut sauce with meat)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Festival au Désert (when safe)",
+        "Festival sur le Niger (Ségou)",
+        "Dogon Dama ceremony",
+        "Crossing of the Cattle (Diafarabé)"
+      ],
+      "cuisine_highlights": [
+        "tiguadege na",
+        "to (millet paste)",
+        "maafe (peanut stew)",
+        "djolof rice",
+        "capitaine fish (Niger River)"
+      ],
+      "music_art_traditions": [
+        "Mandinka kora (Toumani Diabaté)",
+        "Wassoulou music (Oumou Sangaré)",
+        "Ali Farka Touré (desert blues)",
+        "Balafon",
+        "Bogolanfini (mudcloth)",
+        "Dogon mask traditions",
+        "Djenné mosque architecture"
+      ],
+      "film_industry": "Notable (Souleymane Cissé, Cheick Oumar Sissoko)",
+      "intangible_heritage_items": [
+        "Manding Charter (Kurukan Fuga, oral tradition)",
+        "Cultural Space of Sosso-Bala",
+        "Sanké fishing rite"
+      ],
+      "notable_historical_figures": [
+        "Sundiata Keita (founder of Mali Empire)",
+        "Mansa Musa (wealthiest person in history)",
+        "Ali Farka Touré (Grammy-winning musician)",
+        "Alpha Oumar Konaré (president, AU head)",
+        "Amadou Hampâté Bâ (writer/philosopher)"
+      ],
+      "world_heritage_sites": [
+        "Timbuktu",
+        "Tomb of Askia",
+        "Old Towns of Djenné",
+        "Cliff of Bandiagara"
+      ],
+      "media_landscape": "ORTM state; numerous private FM; press restricted under junta; RFI/France 24 banned",
+      "notes": "Mali Empire and Songhai Empire historical legacy; Mansa Musa legendary wealth; Timbuktu manuscripts; mudcloth tradition; desert blues music birthplace."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (French system) and customary law",
+      "constitution_year": 2023,
+      "sharia_applicability": "None formally (but applied de facto in north)",
+      "customary_law_role": "Significant; village chiefs settle disputes",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.2,
+      "contract_enforcement_days": 620,
+      "property_rights_index": 25,
+      "notes": "New constitution adopted June 2023 by referendum; military junta transitional government; elections postponed indefinitely."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 16,
+        "global_rank": 59
+      },
+      "area": {
+        "continent_rank": 7,
+        "global_rank": 23
+      },
+      "gdp_nominal": {
+        "continent_rank": 23,
+        "global_rank": 103
+      },
+      "gdp_per_capita": {
+        "continent_rank": 43,
+        "global_rank": 174
+      },
+      "hdi": {
+        "continent_rank": 43,
+        "global_rank": 186
+      },
+      "life_expectancy": {
+        "continent_rank": 46,
+        "global_rank": 181
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 28,
+        "global_rank": 148
+      },
+      "internet_penetration": {
+        "continent_rank": 33,
+        "global_rank": 148
+      },
+      "press_freedom": {
+        "continent_rank": 49,
+        "global_rank": 160
+      },
+      "global_peace_index": {
+        "continent_rank": 46,
+        "global_rank": 155
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": ""
     }
   },
   "leadership": {
@@ -289,7 +803,8 @@
       "name": "Assimi Goïta",
       "title": "Transitional President",
       "since": "2021-06-07",
-      "notes": "Colonel; led 2020 and 2021 coups; expelled French forces; turned to Russia/Wagner Group; promised elections"
+      "notes": "Colonel; led 2020 and 2021 coups; expelled French forces; turned to Russia/Wagner Group; promised elections",
+      "party": ""
     },
     "prime_minister": {
       "name": "Choguel Kokalla Maïga",
@@ -325,7 +840,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {
