@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.885045Z",
-    "notes": "Comprehensive index for Namibia covering San rock art (Twyfelfontein), Bantu migration, Herero/Nama peoples, German South-West Africa, Herero/Nama genocide (1904–1908, first genocide of the 20th century), South African mandate, SWAPO liberation struggle, independence 1990 (last African colony), and Skeleton Coast."
+    "notes": "Comprehensive index for Namibia covering San rock art (Twyfelfontein), Bantu migration, Herero/Nama peoples, German South-West Africa, Herero/Nama genocide (1904–1908, first genocide of the 20th century), South African mandate, SWAPO liberation struggle, independence 1990 (last African colony), and Skeleton Coast.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Windhoek",
@@ -143,7 +144,22 @@
       "life_expectancy": 63.7,
       "infant_mortality_per_1k": 29.0,
       "literacy_rate_pct": 91.5,
-      "net_migration_rate": 0.5
+      "net_migration_rate": 0.5,
+      "population_growth_rate_pct": 1.8,
+      "urban_population_growth_rate_pct": 3.5,
+      "life_expectancy_male": 61,
+      "life_expectancy_female": 66,
+      "under5_mortality_per_1k": 38,
+      "sex_ratio": 1.02,
+      "dependency_ratio": 62,
+      "population_density_per_km2": 3.1,
+      "age_structure": {
+        "0_14_pct": 36,
+        "15_24_pct": 20,
+        "25_54_pct": 35,
+        "55_64_pct": 5,
+        "65_plus_pct": 4
+      }
     },
     "natural_resources": {
       "primary": [
@@ -172,7 +188,10 @@
         "AU",
         "SADC"
       ],
-      "notes": "Namibia Defence Force (NDF); formed from PLAN (SWAPO guerrilla force) and SWATF after independence; deployed in DR Congo (SADC); professional reputation; limited naval capacity despite long Atlantic coast."
+      "notes": "Namibia Defence Force (NDF); formed from PLAN (SWAPO guerrilla force) and SWATF after independence; deployed in DR Congo (SADC); professional reputation; limited naval capacity despite long Atlantic coast.",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -202,14 +221,51 @@
         "EU"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 0.5
+      "remittances_pct_gdp": 0.5,
+      "total_exports_usd": "$6 billion",
+      "total_imports_usd": "$7.5 billion",
+      "top_export_destinations": [
+        "South Africa",
+        "Botswana",
+        "Belgium",
+        "Spain",
+        "China"
+      ],
+      "top_import_origins": [
+        "South Africa",
+        "Zambia",
+        "Bulgaria",
+        "China",
+        "Nigeria"
+      ],
+      "trade_as_pct_gdp": 80,
+      "current_account_balance_usd": "-$1 billion",
+      "trade_agreements": [
+        "SACU",
+        "SADC",
+        "AfCFTA",
+        "EPA with EU"
+      ],
+      "special_economic_zones": [
+        "Walvis Bay EPZ"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 53.0,
       "electricity_access_pct": 56.0,
       "mobile_subscriptions_per_100": 113,
       "railway_km": 2628,
-      "paved_roads_pct": 15
+      "paved_roads_pct": 15,
+      "broadband_subscriptions_per_100": 2,
+      "4g_coverage_pct": 75,
+      "5g_availability": false,
+      "road_network_km": 44138,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "WACS",
+        "ACE"
+      ],
+      "notes": "MTC, Telecom Namibia; well-maintained road network; TransNamib rail; Walvis Bay hub."
     },
     "international_memberships": [
       "UN",
@@ -239,6 +295,26 @@
       "fragile_states_index": {
         "score": 63.8,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.52,
+        "rank": 55,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": 0.0,
+        "percentile": 45,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": 0.1,
+        "percentile": 50,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": 0.6,
+        "percentile": 70,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -254,12 +330,41 @@
         "flash floods",
         "bush fires"
       ],
-      "protected_areas_pct": 38
+      "protected_areas_pct": 38,
+      "average_temperature_c": 20,
+      "average_rainfall_mm": 280,
+      "co2_per_capita_t": 1.8,
+      "deforestation_rate_pct": 0.5,
+      "water_stress_level": "High",
+      "environmental_performance_index": {
+        "score": 42,
+        "rank": 90,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 4000,
+        "endemic_species": 600,
+        "threatened_species": 50
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 68.0,
       "foreign_aid_received_usd": "250 million",
-      "notes": "Upper-middle-income economy; SACU revenues important (~30% of government revenue); high inequality (Gini ~59, one of world's highest); Green Hydrogen project ($10B+) could transform economy; Fishrot corruption scandal."
+      "notes": "Upper-middle-income economy; SACU revenues important (~30% of government revenue); high inequality (Gini ~59, one of world's highest); Green Hydrogen project ($10B+) could transform economy; Fishrot corruption scandal.",
+      "external_debt_usd": "$6 billion",
+      "debt_service_pct_revenue": 12,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "Germany",
+        "EU",
+        "USA",
+        "Japan",
+        "China"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": "Not applicable"
     },
     "education": {
       "primary_enrollment_pct": 97,
@@ -271,14 +376,41 @@
         "Namibia University of Science and Technology (NUST)",
         "International University of Management"
       ],
-      "notes": "Free primary education; high literacy rate; English is language of instruction (despite being L3 for most); SACMEQ assessments; teacher quality challenges in rural communal conservancies; strong environmental education tradition."
+      "notes": "Free primary education; high literacy rate; English is language of instruction (despite being L3 for most); SACMEQ assessments; teacher quality challenges in rural communal conservancies; strong environmental education tradition.",
+      "education_expenditure_pct_gdp": 9.6,
+      "primary_completion_rate_pct": 85,
+      "gender_parity_index": 1.05,
+      "mean_years_of_schooling": 7.0,
+      "expected_years_of_schooling": 12.6,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 30,
+      "out_of_school_children": 25000,
+      "academic_freedom_index": 0.65
     },
     "diaspora_migration": {
       "diaspora_population": "150,000 (South Africa, Germany, UK, Angola)",
       "refugees_hosted": 6000,
       "refugees_produced": 500,
       "remittances_usd": "30 million",
-      "notes": "German-speaking Namibian community maintains ties to Germany; skilled professionals emigrate to South Africa; Angolan refugees in north; SWAPO exile community largely returned post-1990."
+      "notes": "German-speaking Namibian community maintains ties to Germany; skilled professionals emigrate to South Africa; Angolan refugees in north; SWAPO exile community largely returned post-1990.",
+      "diaspora_top_destinations": [
+        "South Africa",
+        "Angola",
+        "Germany",
+        "UK",
+        "Botswana"
+      ],
+      "asylum_seekers": 1000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Hosts Angolan refugees; SADC free movement",
+      "remittances_pct_gdp": 0.5,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0.48,
@@ -286,7 +418,378 @@
       "tech_hubs": [
         "Windhoek (NBII, various incubators)"
       ],
-      "notes": "WACS submarine cable; MTC and Telecom Namibia operators; growing fintech sector; NCRST (commission for research) supports innovation; relatively high mobile penetration; rural connectivity challenge."
+      "notes": "WACS submarine cable; MTC and Telecom Namibia operators; growing fintech sector; NCRST (commission for research) supports innovation; relatively high mobile penetration; rural connectivity challenge.",
+      "e_participation_index": 0.4,
+      "ict_development_index": 3.0,
+      "mobile_money_accounts": 500000,
+      "digital_payments_pct_adults": 25,
+      "fintech_companies": 10,
+      "startup_ecosystem_value_usd": "$30 million",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0.25,
+      "innovation_index_score": 25,
+      "innovation_index_rank": 95,
+      "ai_readiness_index": 30
+    },
+    "capital_coordinates": {
+      "lat": -22.5609,
+      "lon": 17.0658
+    },
+    "other_major_cities": [
+      "Walvis Bay",
+      "Rundu",
+      "Oshakati",
+      "Swakopmund",
+      "Katima Mulilo"
+    ],
+    "national_motto": "Unity, Liberty, Justice",
+    "national_anthem": "Namibia, Land of the Brave",
+    "currency_code": "NAD",
+    "internet_tld": ".na",
+    "utc_offset": "UTC+2",
+    "drives_on": "left",
+    "geography": {
+      "coordinates": {
+        "lat": -22.9576,
+        "lon": 18.4904
+      },
+      "bounding_box": {
+        "north": -16.96,
+        "south": -28.97,
+        "east": 25.26,
+        "west": 11.72
+      },
+      "land_area_km2": 824292,
+      "water_area_km2": 1002,
+      "coastline_km": 1572,
+      "borders": [
+        "Angola",
+        "Zambia",
+        "Botswana",
+        "South Africa"
+      ],
+      "border_lengths_km": {
+        "Angola": 1427,
+        "Zambia": 244,
+        "Botswana": 1544,
+        "South Africa": 1005
+      },
+      "highest_point": {
+        "name": "Brandberg Mountain (Königstein)",
+        "elevation_m": 2573
+      },
+      "lowest_point": {
+        "name": "Atlantic Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Namib Desert (west, oldest desert); Kalahari Desert (east); Central Plateau; Caprivi Strip (northeast panhandle); Skeleton Coast; Fish River Canyon",
+      "land_use": {
+        "agricultural_pct": 47.2,
+        "arable_pct": 1,
+        "forest_pct": 8.6,
+        "other_pct": 44.2
+      },
+      "major_rivers": [
+        "Orange",
+        "Kunene",
+        "Okavango",
+        "Zambezi",
+        "Fish"
+      ],
+      "major_lakes": [
+        "Etosha Pan (seasonal)"
+      ],
+      "exclusive_economic_zone_km2": 572000,
+      "landlocked": false,
+      "notes": "2nd least densely populated country globally; Namib Desert (~55 million years old, oldest); Skeleton Coast; Fish River Canyon (2nd largest); Caprivi Strip; Etosha NP."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$13 billion",
+      "gdp_ppp_usd": "$28 billion",
+      "gdp_per_capita_nominal_usd": 5100,
+      "gdp_per_capita_ppp_usd": 10900,
+      "gdp_growth_rate_pct": 3.5,
+      "inflation_rate_pct": 5.5,
+      "unemployment_rate_pct": 33,
+      "youth_unemployment_rate_pct": 46,
+      "poverty_rate_pct": 17.4,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 59.1,
+      "income_classification": "Upper middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 6,
+        "industry_pct_gdp": 26,
+        "services_pct_gdp": 68
+      },
+      "labor_force": 960000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 27,
+        "industry_pct": 15,
+        "services_pct": 58
+      },
+      "fdi_inflow_usd": "$500 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$3 billion",
+      "ease_of_doing_business_rank": 104,
+      "economic_freedom_index_score": 58.8,
+      "credit_rating": {
+        "moodys": "Ba3",
+        "sp": "BB-",
+        "fitch": ""
+      },
+      "notes": "Mining dependent (diamonds—De Beers Namdeb, uranium—Rössing/Husab, zinc); fishing (hake); beef exports; highest inequality (Gini 59.1); hydrogen hub ambitions (green H2 pilot with Germany)."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 8.1,
+      "health_expenditure_per_capita_usd": 400,
+      "physicians_per_1k": 0.4,
+      "nurses_midwives_per_1k": 2.7,
+      "hospital_beds_per_1k": 2.7,
+      "maternal_mortality_per_100k": 215,
+      "hiv_prevalence_pct": 11.6,
+      "malaria_incidence_per_1k": 15,
+      "tuberculosis_incidence_per_100k": 468,
+      "access_to_clean_water_pct": 83,
+      "access_to_sanitation_pct": 34,
+      "vaccination_coverage_pct": 82,
+      "stunting_under5_pct": 16,
+      "obesity_rate_pct": 17.2,
+      "universal_health_coverage_index": 43,
+      "leading_causes_of_death": [
+        "HIV/AIDS",
+        "tuberculosis",
+        "lower respiratory infections",
+        "cardiovascular diseases",
+        "neonatal disorders"
+      ],
+      "notes": "High HIV prevalence but strong ART programme (90-90-90 target); TB one of highest globally; health tourism from Angola; Windhoek Central Hospital."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 40,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 1,
+      "agricultural_land_pct": 47.2,
+      "irrigated_land_pct": 1,
+      "major_crops": [
+        "millet (mahangu)",
+        "sorghum",
+        "maize",
+        "dates",
+        "grapes"
+      ],
+      "major_livestock": [
+        "cattle",
+        "sheep",
+        "goats"
+      ],
+      "food_import_dependency_pct": 50,
+      "cereal_yield_kg_per_hectare": 400,
+      "agricultural_employment_pct": 27,
+      "prevalence_of_undernourishment_pct": 13,
+      "notes": "Arid climate limits agriculture; livestock farming (beef exports to EU); fishing industry (hake, horse mackerel); grape/wine production (Orange River); water scarcity."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 30,
+        "hydroelectric_pct": 60,
+        "solar_pct": 8,
+        "wind_pct": 2,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 600,
+      "electricity_production_gwh": 1500,
+      "electricity_consumption_per_capita_kwh": 1500,
+      "energy_imports_pct": 60,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 25000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 30,
+      "energy_access_urban_pct": 75,
+      "notes": "Imports 60% electricity from South Africa and Zambia; Ruacana hydro dam; green hydrogen Hyphen project (planned $10B); massive solar potential; NamPower utility."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Hosea Kutako International Airport (Windhoek)"
+      ],
+      "major_airports_domestic": [
+        "Walvis Bay",
+        "Eros (Windhoek)",
+        "Ondangwa",
+        "Katima Mulilo",
+        "Lüderitz"
+      ],
+      "national_airline": "Air Namibia (ceased 2021)",
+      "major_seaports": [
+        "Walvis Bay (deepwater port)"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 5,
+      "registered_vehicles_per_1k": 100,
+      "road_fatalities_per_100k": 25,
+      "notes": "TransNamib railway; well-maintained tar road network; Walvis Bay container terminal; B1/B2 highways (Trans-Caprivi); no national airline since 2021."
+    },
+    "tourism": {
+      "annual_visitors": 1500000,
+      "tourism_revenue_usd": "$500 million",
+      "tourism_pct_gdp": 4,
+      "tourism_employment_pct": 15,
+      "unesco_world_heritage_sites": 2,
+      "unesco_sites_list": [
+        "Twyfelfontein (rock engravings)",
+        "Namib Sand Sea"
+      ],
+      "major_attractions": [
+        "Etosha National Park",
+        "Sossusvlei (sand dunes)",
+        "Skeleton Coast",
+        "Fish River Canyon",
+        "Deadvlei",
+        "Twyfelfontein",
+        "Swakopmund (adventure)",
+        "Caprivi Strip wildlife"
+      ],
+      "visa_free_access_countries": 78,
+      "henley_passport_rank": 62,
+      "notes": "Adventure and wildlife tourism; Sossusvlei/Deadvlei iconic landscapes; Etosha world-class safari; German colonial heritage; eco-tourism leader; community conservancies."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Free",
+      "freedom_house_score": 77,
+      "gender_inequality_index": 0.44,
+      "gender_inequality_rank": 106,
+      "gender_gap_index_score": 0.73,
+      "women_in_parliament_pct": 44,
+      "women_labor_force_participation_pct": 57,
+      "maternal_mortality_per_100k": 215,
+      "child_marriage_pct": 7,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Legal (decriminalized 2024 – Supreme Court struck down sodomy law)",
+      "death_penalty_status": "Abolitionist",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 5,
+      "notes": "One of Africa's most stable democracies; SWAPO dominance since independence; land reform ongoing (German genocide reparations); high women in parliament."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.8,
+      "global_peace_index_rank": 55,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 4.3,
+      "active_conflicts": [],
+      "border_disputes": [
+        "Kasikili/Sedudu Island (settled by ICJ 1999 in favor of Botswana)"
+      ],
+      "un_peacekeeping_contributions": 100,
+      "arms_imports_usd": "$20 million",
+      "internally_displaced_persons": 0,
+      "notes": "Peaceful and stable; independence from South Africa 1990; German genocide of Herero and Nama (1904-08) — Germany recognized 2021; low crime."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "welwitschia plant (national emblem on coat of arms)"
+      ],
+      "national_animal": "oryx (gemsbok)",
+      "national_flower": "welwitschia mirabilis",
+      "national_dish": "Potjiekos (three-legged pot stew) / Kapana (street-grilled meat)",
+      "national_sport": "Football / Rugby",
+      "major_festivals": [
+        "Independence Day (21 March)",
+        "Maherero/Herero Day",
+        "Ovambo Festival",
+        "Windhoek Oktoberfest (German heritage)",
+        "Wild Cinema Festival"
+      ],
+      "cuisine_highlights": [
+        "kapana (street meat)",
+        "potjiekos",
+        "biltong/droëwors",
+        "game meat (kudu, springbok, oryx)",
+        "oshiwambo (millet porridge)",
+        "boerewors"
+      ],
+      "music_art_traditions": [
+        "Damara punch (music)",
+        "San rock art",
+        "Nama stap dance",
+        "Herero dress (Victorian-era costumes)",
+        "Ovambo basket weaving"
+      ],
+      "film_industry": "Small (Namibian Film Commission)",
+      "intangible_heritage_items": [
+        "Nama/Damara click languages"
+      ],
+      "notable_historical_figures": [
+        "Sam Nujoma (founding president, SWAPO leader)",
+        "Hendrik Witbooi (Nama resistance leader)",
+        "Hage Geingob (3rd president, d. 2024)",
+        "Nangula Mbumba (acting president, 2024)"
+      ],
+      "world_heritage_sites": [
+        "Twyfelfontein",
+        "Namib Sand Sea"
+      ],
+      "media_landscape": "NBC state broadcaster; The Namibian (independent, critical); diverse private media; press freedom strong",
+      "notes": "German colonial heritage (architecture, language remnants, Oktoberfest); Herero genocide; San Bushmen culture; Welwitschia plant (1000+ years); community conservancy model (CBNRM)."
+    },
+    "legal_system": {
+      "legal_tradition": "Roman-Dutch law (South African heritage) and customary law",
+      "constitution_year": 1990,
+      "sharia_applicability": "None",
+      "customary_law_role": "Traditional courts (community courts) handle local disputes",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.55,
+      "contract_enforcement_days": 460,
+      "property_rights_index": 55,
+      "notes": "Strong constitution (progressive, post-apartheid model); Supreme Court independent; Roman-Dutch law basis; Ombudsman institution."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 42,
+        "global_rank": 142
+      },
+      "area": {
+        "continent_rank": 13,
+        "global_rank": 33
+      },
+      "gdp_nominal": {
+        "continent_rank": 29,
+        "global_rank": 116
+      },
+      "gdp_per_capita": {
+        "continent_rank": 13,
+        "global_rank": 109
+      },
+      "hdi": {
+        "continent_rank": 7,
+        "global_rank": 139
+      },
+      "life_expectancy": {
+        "continent_rank": 37,
+        "global_rank": 157
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 11,
+        "global_rank": 104
+      },
+      "internet_penetration": {
+        "continent_rank": 10,
+        "global_rank": 84
+      },
+      "press_freedom": {
+        "continent_rank": 4,
+        "global_rank": 22
+      },
+      "global_peace_index": {
+        "continent_rank": 3,
+        "global_rank": 55
+      },
+      "innovation_index": {
+        "continent_rank": 7,
+        "global_rank": 95
+      },
+      "notes": "Among Africa's most free, peaceful, and well-governed nations."
     }
   },
   "leadership": {
@@ -294,7 +797,8 @@
       "name": "Nangolo Mbumba",
       "title": "President",
       "since": "2024-02-04",
-      "notes": "Acting President following Geingob's death; SWAPO; former VP"
+      "notes": "Acting President following Geingob's death; SWAPO; former VP",
+      "party": ""
     },
     "president_elect": {
       "name": "Netumbo Nandi-Ndaitwah",
@@ -321,7 +825,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

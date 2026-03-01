@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.883885Z",
-    "notes": "Comprehensive index for Morocco covering Berber heritage, Phoenician/Roman Mauretania, Arab conquest, Idrisid dynasty, Almoravid/Almohad empires, Marinid/Saadian/Alaouite dynasties, French/Spanish protectorates, independence under Mohammed V, Hassan II's Years of Lead, and Western Sahara claim."
+    "notes": "Comprehensive index for Morocco covering Berber heritage, Phoenician/Roman Mauretania, Arab conquest, Idrisid dynasty, Almoravid/Almohad empires, Marinid/Saadian/Alaouite dynasties, French/Spanish protectorates, independence under Mohammed V, Hassan II's Years of Lead, and Western Sahara claim.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Rabat",
@@ -96,7 +97,22 @@
       "life_expectancy": 77.0,
       "infant_mortality_per_1k": 17.0,
       "literacy_rate_pct": 73.8,
-      "net_migration_rate": -1.6
+      "net_migration_rate": -1.6,
+      "population_growth_rate_pct": 1.0,
+      "urban_population_growth_rate_pct": 1.7,
+      "life_expectancy_male": 74,
+      "life_expectancy_female": 78,
+      "under5_mortality_per_1k": 18,
+      "sex_ratio": 0.97,
+      "dependency_ratio": 50,
+      "population_density_per_km2": 83,
+      "age_structure": {
+        "0_14_pct": 26,
+        "15_24_pct": 17,
+        "25_54_pct": 42,
+        "55_64_pct": 8,
+        "65_plus_pct": 7
+      }
     },
     "natural_resources": {
       "primary": [
@@ -125,7 +141,10 @@
         "OIC",
         "Non-NATO ally (US, since 2004)"
       ],
-      "notes": "Royal Armed Forces (FAR); sixth-largest military in Africa; extensive US military cooperation; involved in Western Sahara (UN MINURSO ceasefire observers); 2020 US recognised Moroccan sovereignty over Western Sahara; modern equipment (F-16s, M1 Abrams pending); compulsory military service reintroduced 2019."
+      "notes": "Royal Armed Forces (FAR); sixth-largest military in Africa; extensive US military cooperation; involved in Western Sahara (UN MINURSO ceasefire observers); 2020 US recognised Moroccan sovereignty over Western Sahara; modern equipment (F-16s, M1 Abrams pending); compulsory military service reintroduced 2019.",
+      "paramilitary_personnel": 50000,
+      "conscription": true,
+      "global_firepower_rank": 53
     },
     "trade": {
       "top_exports": [
@@ -158,14 +177,56 @@
         "Germany"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 7.5
+      "remittances_pct_gdp": 7.5,
+      "total_exports_usd": "$45 billion",
+      "total_imports_usd": "$65 billion",
+      "top_export_destinations": [
+        "Spain",
+        "France",
+        "India",
+        "Brazil",
+        "Italy"
+      ],
+      "top_import_origins": [
+        "Spain",
+        "France",
+        "China",
+        "USA",
+        "Turkey"
+      ],
+      "trade_as_pct_gdp": 78,
+      "current_account_balance_usd": "-$5 billion",
+      "trade_agreements": [
+        "EU Association Agreement",
+        "US FTA",
+        "AfCFTA",
+        "Agadir Agreement",
+        "ECOWAS (observer)"
+      ],
+      "special_economic_zones": [
+        "Tanger Med",
+        "Casablanca Finance City (CFC)",
+        "Kénitra Atlantic Free Zone"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 88.0,
       "electricity_access_pct": 100.0,
       "mobile_subscriptions_per_100": 136,
       "railway_km": 2110,
-      "paved_roads_pct": 70
+      "paved_roads_pct": 70,
+      "broadband_subscriptions_per_100": 5,
+      "4g_coverage_pct": 95,
+      "5g_availability": true,
+      "road_network_km": 57300,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "Atlas Offshore",
+        "Loukkos",
+        "SEA-ME-WE 3",
+        "Estepona-Tetouan"
+      ],
+      "notes": "Al Boraq HSR; 1800km motorway network; Tanger Med mega-port; IAM, Orange, Inwi telecoms."
     },
     "international_memberships": [
       "UN",
@@ -196,6 +257,26 @@
       "fragile_states_index": {
         "score": 65.1,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.5,
+        "rank": 60,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.1,
+        "percentile": 45,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": 0.0,
+        "percentile": 48,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.3,
+        "percentile": 30,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -214,12 +295,41 @@
         "desertification",
         "locusts"
       ],
-      "protected_areas_pct": 26
+      "protected_areas_pct": 26,
+      "average_temperature_c": 18,
+      "average_rainfall_mm": 350,
+      "co2_per_capita_t": 1.8,
+      "deforestation_rate_pct": 0.5,
+      "water_stress_level": "Extremely high",
+      "environmental_performance_index": {
+        "score": 38,
+        "rank": 109,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 5000,
+        "endemic_species": 600,
+        "threatened_species": 100
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 71.6,
       "foreign_aid_received_usd": "2 billion",
-      "notes": "Middle-income economy; Maroc 2030 Vision; Tanger Med port (largest in Africa/Mediterranean); high-speed rail (Al Boraq, Africa's first TGV); Mohammed VI investment fund; earthquake reconstruction ($11.7B programme)."
+      "notes": "Middle-income economy; Maroc 2030 Vision; Tanger Med port (largest in Africa/Mediterranean); high-speed rail (Al Boraq, Africa's first TGV); Mohammed VI investment fund; earthquake reconstruction ($11.7B programme).",
+      "external_debt_usd": "$65 billion",
+      "debt_service_pct_revenue": 15,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "France",
+        "World Bank",
+        "EU",
+        "AfDB",
+        "Saudi Arabia"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": "Not applicable"
     },
     "education": {
       "primary_enrollment_pct": 99,
@@ -233,14 +343,44 @@
         "Al Akhawayn University (Ifrane)",
         "Al-Qarawiyyin University (Fes, 859 CE, world's oldest)"
       ],
-      "notes": "Al-Qarawiyyin is recognised as world's oldest existing university; bilingual (Arabic/French) education with growing English; PISA performance below average; Francophone business schools; large student population; rural-urban education gap."
+      "notes": "Al-Qarawiyyin is recognised as world's oldest existing university; bilingual (Arabic/French) education with growing English; PISA performance below average; Francophone business schools; large student population; rural-urban education gap.",
+      "education_expenditure_pct_gdp": 5.3,
+      "primary_completion_rate_pct": 96,
+      "gender_parity_index": 0.92,
+      "mean_years_of_schooling": 5.6,
+      "expected_years_of_schooling": 14.0,
+      "pisa_scores": {
+        "reading": 359,
+        "math": 368,
+        "science": 376,
+        "year": 2022
+      },
+      "student_teacher_ratio_primary": 27,
+      "out_of_school_children": 200000,
+      "academic_freedom_index": 0.35
     },
     "diaspora_migration": {
       "diaspora_population": "5 million+ (France, Spain, Italy, Belgium, Netherlands, Germany, Israel, Canada)",
       "refugees_hosted": 10000,
       "refugees_produced": 5000,
       "remittances_usd": "11 billion",
-      "notes": "Remittances critical (~7.5% GDP); large diaspora in Europe; becoming transit/destination country for sub-Saharan migrants; regularisation programmes for African migrants; Moroccan Jews in Israel (~700,000 of Moroccan descent)."
+      "notes": "Remittances critical (~7.5% GDP); large diaspora in Europe; becoming transit/destination country for sub-Saharan migrants; regularisation programmes for African migrants; Moroccan Jews in Israel (~700,000 of Moroccan descent).",
+      "diaspora_top_destinations": [
+        "France",
+        "Spain",
+        "Italy",
+        "Belgium",
+        "Netherlands",
+        "Germany",
+        "USA",
+        "Canada"
+      ],
+      "asylum_seekers": 5000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Transit country for sub-Saharan migrants to Europe; regularization campaigns (2014, 2017)",
+      "remittances_pct_gdp": 7.5,
+      "net_migration_rate_per_1k": -1.5
     },
     "digital_economy": {
       "e_government_index": 0.57,
@@ -250,7 +390,18 @@
         "Rabat",
         "Tangier"
       ],
-      "notes": "Africa's largest tech park (Casablanca Technopark); auto-industry digitalisation; Maroc Telecom, Orange, inwi operators; submarine cables; nearshoring destination for European companies; Huawei cloud data centre."
+      "notes": "Africa's largest tech park (Casablanca Technopark); auto-industry digitalisation; Maroc Telecom, Orange, inwi operators; submarine cables; nearshoring destination for European companies; Huawei cloud data centre.",
+      "e_participation_index": 0.55,
+      "ict_development_index": 4.5,
+      "mobile_money_accounts": 3000000,
+      "digital_payments_pct_adults": 30,
+      "fintech_companies": 50,
+      "startup_ecosystem_value_usd": "$500 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.55,
+      "innovation_index_score": 30,
+      "innovation_index_rank": 70,
+      "ai_readiness_index": 40
     },
     "other_languages": [
       "French",
@@ -258,14 +409,415 @@
       "Tarifit",
       "Tashelhit",
       "Central Atlas Tamazight"
-    ]
+    ],
+    "capital_coordinates": {
+      "lat": 34.0209,
+      "lon": -6.8416
+    },
+    "other_major_cities": [
+      "Casablanca",
+      "Marrakesh",
+      "Fez",
+      "Tangier",
+      "Agadir",
+      "Meknes",
+      "Oujda"
+    ],
+    "national_motto": "الله، الوطن، الملك (God, Homeland, King)",
+    "national_anthem": "Hymne Chérifien (Cherifian Anthem)",
+    "currency_code": "MAD",
+    "internet_tld": ".ma",
+    "utc_offset": "UTC+1",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 31.7917,
+        "lon": -7.0926
+      },
+      "bounding_box": {
+        "north": 35.93,
+        "south": 27.67,
+        "east": -1.0,
+        "west": -13.17
+      },
+      "land_area_km2": 446550,
+      "water_area_km2": 250,
+      "coastline_km": 1835,
+      "borders": [
+        "Algeria",
+        "Western Sahara",
+        "Spain (Ceuta, Melilla)"
+      ],
+      "border_lengths_km": {
+        "Algeria": 1559,
+        "Western Sahara": 443,
+        "Spain": 16
+      },
+      "highest_point": {
+        "name": "Jbel Toubkal",
+        "elevation_m": 4167
+      },
+      "lowest_point": {
+        "name": "Sebkha Tah",
+        "elevation_m": -55
+      },
+      "terrain": "Atlas Mountains (High, Middle, Anti-Atlas); Rif Mountains in north; Atlantic/Mediterranean coasts; Sahara in southeast; fertile plains (Chaouia, Doukala, Gharb)",
+      "land_use": {
+        "agricultural_pct": 67.5,
+        "arable_pct": 17.5,
+        "forest_pct": 11.5,
+        "other_pct": 21
+      },
+      "major_rivers": [
+        "Moulouya",
+        "Oum Er-Rbia",
+        "Sebou",
+        "Draa"
+      ],
+      "major_lakes": [
+        "Bin el Ouidane (reservoir)",
+        "Lake Ifni"
+      ],
+      "exclusive_economic_zone_km2": 276000,
+      "landlocked": false,
+      "notes": "Gateway between Europe and Africa; 14 km from Spain (Strait of Gibraltar); Atlas Mountains; only African country with Atlantic and Mediterranean coasts; Saharan south."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$140 billion",
+      "gdp_ppp_usd": "$320 billion",
+      "gdp_per_capita_nominal_usd": 3800,
+      "gdp_per_capita_ppp_usd": 8600,
+      "gdp_growth_rate_pct": 3.4,
+      "inflation_rate_pct": 3.5,
+      "unemployment_rate_pct": 12,
+      "youth_unemployment_rate_pct": 29,
+      "poverty_rate_pct": 4.8,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 39.5,
+      "income_classification": "Lower middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 12,
+        "industry_pct_gdp": 26,
+        "services_pct_gdp": 62
+      },
+      "labor_force": 12000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 37,
+        "industry_pct": 22,
+        "services_pct": 41
+      },
+      "fdi_inflow_usd": "$2.2 billion",
+      "fdi_outflow_usd": "$600 million",
+      "foreign_exchange_reserves_usd": "$35 billion",
+      "ease_of_doing_business_rank": 53,
+      "economic_freedom_index_score": 63.3,
+      "credit_rating": {
+        "moodys": "Ba1",
+        "sp": "BB+",
+        "fitch": "BB+"
+      },
+      "notes": "6th largest African economy; OCP Group (#1 phosphate exporter globally); automotive (Renault, Stellantis—2nd exporter in Africa); aerospace cluster; Tanger Med port (#1 in Africa/Mediterranean); 2030 FIFA World Cup co-host."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 5.3,
+      "health_expenditure_per_capita_usd": 180,
+      "physicians_per_1k": 0.73,
+      "nurses_midwives_per_1k": 1.1,
+      "hospital_beds_per_1k": 1.0,
+      "maternal_mortality_per_100k": 72,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 87,
+      "access_to_clean_water_pct": 87,
+      "access_to_sanitation_pct": 79,
+      "vaccination_coverage_pct": 99,
+      "stunting_under5_pct": 13,
+      "obesity_rate_pct": 26,
+      "universal_health_coverage_index": 53,
+      "leading_causes_of_death": [
+        "cardiovascular diseases",
+        "cancer",
+        "diabetes",
+        "respiratory diseases",
+        "road injuries"
+      ],
+      "notes": "AMO mandatory health insurance expanding; COVID-19 vaccination success (one of Africa's highest rates); 2023 earthquake (Al Haouz) disaster response; healthcare reform underway."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 55,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 17.5,
+      "agricultural_land_pct": 67.5,
+      "irrigated_land_pct": 5,
+      "major_crops": [
+        "wheat",
+        "barley",
+        "olives",
+        "citrus",
+        "tomatoes",
+        "dates",
+        "argan",
+        "cannabis (regulated)"
+      ],
+      "major_livestock": [
+        "sheep",
+        "goats",
+        "cattle",
+        "poultry",
+        "camels"
+      ],
+      "food_import_dependency_pct": 40,
+      "cereal_yield_kg_per_hectare": 1500,
+      "agricultural_employment_pct": 37,
+      "prevalence_of_undernourishment_pct": 4,
+      "notes": "Plan Maroc Vert (Green Morocco Plan, 2008); argan oil (UNESCO Biosphere); phosphate fertilizer exporter (OCP); drought vulnerable; cannabis legalized for medical/industrial use (2021)."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 65,
+        "hydroelectric_pct": 5,
+        "solar_pct": 15,
+        "wind_pct": 13,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 2
+      },
+      "installed_capacity_mw": 11500,
+      "electricity_production_gwh": 40000,
+      "electricity_consumption_per_capita_kwh": 1000,
+      "energy_imports_pct": 90,
+      "oil_production_bpd": 100,
+      "oil_consumption_bpd": 290000,
+      "natural_gas_production_bcm": 0.1,
+      "energy_access_rural_pct": 99,
+      "energy_access_urban_pct": 100,
+      "notes": "Noor-Ouarzazate solar complex (world's largest CSP); Tarfaya wind farm; target 52% renewables by 2030; Morocco-UK power cable planned; ONEE utility."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Mohammed V (Casablanca)",
+        "Marrakech Menara",
+        "Tangier Ibn Battuta",
+        "Fez–Saïs",
+        "Agadir Al Massira",
+        "Rabat–Salé"
+      ],
+      "major_airports_domestic": [
+        "Ouarzazate",
+        "Oujda",
+        "Nador",
+        "Essaouira",
+        "Laayoune"
+      ],
+      "national_airline": "Royal Air Maroc (RAM)",
+      "major_seaports": [
+        "Tanger Med (#1 in Africa)",
+        "Casablanca",
+        "Jorf Lasfar",
+        "Agadir",
+        "Mohammedia"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 90,
+      "registered_vehicles_per_1k": 85,
+      "road_fatalities_per_100k": 18,
+      "notes": "Al Boraq high-speed rail (1st in Africa, Tangier–Casablanca, 320 km/h); extensive highway network; Tanger Med mega-port; 2030 World Cup infrastructure investments."
+    },
+    "tourism": {
+      "annual_visitors": 14500000,
+      "tourism_revenue_usd": "$11 billion",
+      "tourism_pct_gdp": 7,
+      "tourism_employment_pct": 10,
+      "unesco_world_heritage_sites": 9,
+      "unesco_sites_list": [
+        "Medina of Fez",
+        "Medina of Marrakesh",
+        "Ksar of Ait-Ben-Haddou",
+        "Historic City of Meknes",
+        "Archaeological Site of Volubilis",
+        "Medina of Tétouan",
+        "Medina of Essaouira",
+        "Portuguese City of El Jadida",
+        "Rabat (Modern Capital)"
+      ],
+      "major_attractions": [
+        "Marrakesh (Jemaa el-Fna)",
+        "Fez Medina",
+        "Sahara Desert (Merzouga)",
+        "Chefchaouen (Blue City)",
+        "Atlas Mountains (trekking)",
+        "Essaouira (windsurfing)",
+        "Ait-Ben-Haddou (Game of Thrones)"
+      ],
+      "visa_free_access_countries": 68,
+      "henley_passport_rank": 71,
+      "notes": "#1 tourist destination in Africa; 9 UNESCO sites; Marrakesh iconic; desert tourism; cultural richness; 2030 FIFA World Cup (with Spain, Portugal)."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 37,
+      "gender_inequality_index": 0.454,
+      "gender_inequality_rank": 116,
+      "gender_gap_index_score": 0.67,
+      "women_in_parliament_pct": 24,
+      "women_labor_force_participation_pct": 21,
+      "maternal_mortality_per_100k": 72,
+      "child_marriage_pct": 13,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Illegal (up to 3 years)",
+      "death_penalty_status": "Abolitionist in practice",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 8,
+      "notes": "2004 Moudawana (family code) reform (women's rights milestone); press freedom concerns; Western Sahara human rights scrutiny; low women's economic participation."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.0,
+      "global_peace_index_rank": 82,
+      "terrorism_index_score": 1.5,
+      "terrorism_index_rank": 50,
+      "homicide_rate_per_100k": 1.3,
+      "active_conflicts": [
+        "Western Sahara occupation/Polisario (ceasefire ended 2020)"
+      ],
+      "border_disputes": [
+        "Western Sahara",
+        "Ceuta and Melilla (Spain)",
+        "Perejil Island"
+      ],
+      "un_peacekeeping_contributions": 1500,
+      "arms_imports_usd": "$600 million",
+      "internally_displaced_persons": 0,
+      "notes": "Strong security apparatus (DGSN, DGST, Gendarmerie); effective counter-terrorism; September 2023 Al Haouz earthquake (3,000+ deaths); Algeria border closed since 1994."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "pentacle (Star of David on flag—actually Seal of Solomon)"
+      ],
+      "national_animal": "Barbary lion (extinct in wild)",
+      "national_flower": "rose (Valley of Roses, Kelaat M'Gouna)",
+      "national_dish": "Couscous (Friday tradition) / Tagine",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Moussem of Tan-Tan (UNESCO)",
+        "Gnaoua World Music Festival (Essaouira)",
+        "Fez Sacred Music Festival",
+        "Rose Festival (Kelaat M'Gouna)",
+        "Ramadan/Eid"
+      ],
+      "cuisine_highlights": [
+        "couscous",
+        "tagine",
+        "pastilla (b'stilla)",
+        "harira (soup)",
+        "msemen (flatbread)",
+        "rfissa",
+        "Moroccan mint tea",
+        "mechoui"
+      ],
+      "music_art_traditions": [
+        "Gnawa music (UNESCO)",
+        "Andalusian classical music (al-āla)",
+        "Chaabi",
+        "Amazigh (Berber) music/Ahwash",
+        "zellige (mosaic tilework)",
+        "Riad architecture",
+        "leather tanning (Fez tanneries)"
+      ],
+      "film_industry": "Growing (Ouarzazate 'Africa's Hollywood'; Atlas Studios; international film location)",
+      "intangible_heritage_items": [
+        "Gnawa (UNESCO 2019)",
+        "Cherry Festival of Sefrou",
+        "Moussem of Tan-Tan",
+        "Argan practices",
+        "Mediterranean diet"
+      ],
+      "notable_historical_figures": [
+        "Yusuf ibn Tashfin (Almoravid dynasty founder)",
+        "Ahmad al-Mansur (Saadian golden age)",
+        "Mohammed V (independence, anti-Nazi resistance)",
+        "Hassan II (modernizer)",
+        "Mohammed VI (current king)"
+      ],
+      "world_heritage_sites": [
+        "Medina of Fez",
+        "Medina of Marrakesh",
+        "Ksar of Ait-Ben-Haddou",
+        "Historic City of Meknes",
+        "Volubilis",
+        "Medina of Tétouan",
+        "Medina of Essaouira",
+        "Portuguese City of El Jadida",
+        "Rabat, Modern Capital"
+      ],
+      "media_landscape": "2M, Al Aoula (state); Medi1 TV; Le360, Hespress (online); Al Jazeera popular; some press restrictions",
+      "notes": "Amazigh+Arab+Andalusian+Jewish+Saharan cultural mosaic; monarchy (Alaouite dynasty since 1631); world's oldest university (al-Qarawiyyin, 859 CE); zellige tilework; literary tradition."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (French system) with Islamic law elements",
+      "constitution_year": 2011,
+      "sharia_applicability": "Personal status (Moudawana family code); Islam state religion",
+      "customary_law_role": "Amazigh customary law in some rural areas",
+      "icc_membership": "Not a state party",
+      "judicial_independence_score": 0.35,
+      "contract_enforcement_days": 510,
+      "property_rights_index": 55,
+      "notes": "Constitutional monarchy; King holds significant executive/religious authority (Amir al-Mu'minin); 2011 constitutional reform post-Arab Spring; Supreme Council of Judicial Power."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 11,
+        "global_rank": 40
+      },
+      "area": {
+        "continent_rank": 16,
+        "global_rank": 57
+      },
+      "gdp_nominal": {
+        "continent_rank": 5,
+        "global_rank": 56
+      },
+      "gdp_per_capita": {
+        "continent_rank": 14,
+        "global_rank": 125
+      },
+      "hdi": {
+        "continent_rank": 8,
+        "global_rank": 123
+      },
+      "life_expectancy": {
+        "continent_rank": 6,
+        "global_rank": 66
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 3,
+        "global_rank": 53
+      },
+      "internet_penetration": {
+        "continent_rank": 5,
+        "global_rank": 66
+      },
+      "press_freedom": {
+        "continent_rank": 45,
+        "global_rank": 144
+      },
+      "global_peace_index": {
+        "continent_rank": 9,
+        "global_rank": 82
+      },
+      "innovation_index": {
+        "continent_rank": 4,
+        "global_rank": 70
+      },
+      "notes": "Major African economic and diplomatic power."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "King Mohammed VI",
       "title": "King",
       "since": "1999-07-30",
-      "notes": "Alaouite dynasty; son of Hassan II; Commander of the Faithful; political and religious authority; modest reforms; Western Sahara claim"
+      "notes": "Alaouite dynasty; son of Hassan II; Commander of the Faithful; political and religious authority; modest reforms; Western Sahara claim",
+      "party": ""
     },
     "prime_minister": {
       "name": "Aziz Akhannouch",
@@ -287,7 +839,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

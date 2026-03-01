@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.882255Z",
-    "notes": "Comprehensive index for Mauritania covering Berber-Arab nomadic heritage, Ghana Empire overlap, trans-Saharan trade, Almoravid movement, French colonisation, slavery abolition (last country 1981/2007 criminalisation), military coups, and Sahel security."
+    "notes": "Comprehensive index for Mauritania covering Berber-Arab nomadic heritage, Ghana Empire overlap, trans-Saharan trade, Almoravid movement, French colonisation, slavery abolition (last country 1981/2007 criminalisation), military coups, and Sahel security.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Nouakchott",
@@ -110,7 +111,22 @@
       "life_expectancy": 64.9,
       "infant_mortality_per_1k": 47.0,
       "literacy_rate_pct": 53.5,
-      "net_migration_rate": -0.8
+      "net_migration_rate": -0.8,
+      "population_growth_rate_pct": 2.6,
+      "urban_population_growth_rate_pct": 3.8,
+      "life_expectancy_male": 62,
+      "life_expectancy_female": 66,
+      "under5_mortality_per_1k": 60,
+      "sex_ratio": 1.01,
+      "dependency_ratio": 78,
+      "population_density_per_km2": 4.5,
+      "age_structure": {
+        "0_14_pct": 39,
+        "15_24_pct": 19,
+        "25_54_pct": 33,
+        "55_64_pct": 5,
+        "65_plus_pct": 4
+      }
     },
     "natural_resources": {
       "primary": [
@@ -139,7 +155,10 @@
         "G5 Sahel",
         "OIC"
       ],
-      "notes": "President Ghazouani is former army chief; military historically central to politics (multiple coups); counterterrorism operations in Sahel (AQIM); successful in reducing jihadist attacks post-2011."
+      "notes": "President Ghazouani is former army chief; military historically central to politics (multiple coups); counterterrorism operations in Sahel (AQIM); successful in reducing jihadist attacks post-2011.",
+      "paramilitary_personnel": 5000,
+      "conscription": true,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -166,14 +185,48 @@
         "EU (fishing agreements)"
       ],
       "trade_balance": "variable (depends on commodity prices)",
-      "remittances_pct_gdp": 1.0
+      "remittances_pct_gdp": 1.0,
+      "total_exports_usd": "$3 billion",
+      "total_imports_usd": "$3.5 billion",
+      "top_export_destinations": [
+        "China",
+        "Switzerland",
+        "Spain",
+        "Japan",
+        "Italy"
+      ],
+      "top_import_origins": [
+        "China",
+        "France",
+        "UAE",
+        "Belgium",
+        "Spain"
+      ],
+      "trade_as_pct_gdp": 65,
+      "current_account_balance_usd": "-$500 million",
+      "trade_agreements": [
+        "Arab Maghreb Union",
+        "AfCFTA"
+      ],
+      "special_economic_zones": [
+        "Nouadhibou Free Zone"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 40.0,
       "electricity_access_pct": 47.0,
       "mobile_subscriptions_per_100": 110,
       "railway_km": 728,
-      "paved_roads_pct": 26
+      "paved_roads_pct": 26,
+      "broadband_subscriptions_per_100": 0.5,
+      "4g_coverage_pct": 40,
+      "5g_availability": false,
+      "road_network_km": 12000,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "ACE"
+      ],
+      "notes": "Limited infrastructure; iron ore railway; Mattel, Mauritel telecoms; Nouakchott sprawling."
     },
     "international_memberships": [
       "UN",
@@ -204,6 +257,26 @@
       "fragile_states_index": {
         "score": 88.0,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.35,
+        "rank": 118,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.8,
+        "percentile": 13,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.6,
+        "percentile": 22,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.5,
+        "percentile": 22,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -219,12 +292,41 @@
         "sandstorms",
         "locust invasions"
       ],
-      "protected_areas_pct": 1.5
+      "protected_areas_pct": 1.5,
+      "average_temperature_c": 30,
+      "average_rainfall_mm": 100,
+      "co2_per_capita_t": 0.7,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "High",
+      "environmental_performance_index": {
+        "score": 29,
+        "rank": 163,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 1500,
+        "endemic_species": 10,
+        "threatened_species": 30
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 47.0,
       "foreign_aid_received_usd": "300 million",
-      "notes": "Heavily indebted (HIPC); gas revenues expected to transform economy (GTA field first gas expected 2024-25); slavery legacy creates socioeconomic stratification; Gulf states provide aid."
+      "notes": "Heavily indebted (HIPC); gas revenues expected to transform economy (GTA field first gas expected 2024-25); slavery legacy creates socioeconomic stratification; Gulf states provide aid.",
+      "external_debt_usd": "$5 billion",
+      "debt_service_pct_revenue": 15,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "World Bank",
+        "EU",
+        "France",
+        "Saudi Arabia",
+        "UAE"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 75,
@@ -235,14 +337,41 @@
         "University of Nouakchott Al Aasriya (1981)",
         "Higher Institute of Scientific Research"
       ],
-      "notes": "Bilingual education system (Arabic/French) contentious politically; mahadra (traditional Koranic school) tradition; low female secondary enrollment in rural areas; slavery legacy affects education access for Haratine community."
+      "notes": "Bilingual education system (Arabic/French) contentious politically; mahadra (traditional Koranic school) tradition; low female secondary enrollment in rural areas; slavery legacy affects education access for Haratine community.",
+      "education_expenditure_pct_gdp": 1.9,
+      "primary_completion_rate_pct": 60,
+      "gender_parity_index": 1.05,
+      "mean_years_of_schooling": 4.7,
+      "expected_years_of_schooling": 8.6,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 35,
+      "out_of_school_children": 100000,
+      "academic_freedom_index": 0.25
     },
     "diaspora_migration": {
       "diaspora_population": "200,000+ (Senegal, France, Gulf states)",
       "refugees_hosted": 90000,
       "refugees_produced": 30000,
       "remittances_usd": "70 million",
-      "notes": "Hosts Malian refugees in Mbera camp; 1989 Senegal-Mauritania crisis expelled thousands of Black Mauritanians; Haratine (descendants of slaves) remain marginalised."
+      "notes": "Hosts Malian refugees in Mbera camp; 1989 Senegal-Mauritania crisis expelled thousands of Black Mauritanians; Haratine (descendants of slaves) remain marginalised.",
+      "diaspora_top_destinations": [
+        "France",
+        "Senegal",
+        "Mali",
+        "Spain",
+        "Gambia"
+      ],
+      "asylum_seekers": 3000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Hosts Malian refugees",
+      "remittances_pct_gdp": 1.5,
+      "net_migration_rate_per_1k": -1.0
     },
     "digital_economy": {
       "e_government_index": 0.34,
@@ -250,7 +379,367 @@
       "tech_hubs": [
         "Nouakchott (emerging)"
       ],
-      "notes": "ACE submarine cable; mobile penetration over 100%; Mauritel (Maroc Telecom) and Mattel primary operators; data costs relatively high; Nouakchott concentrates most tech activity."
+      "notes": "ACE submarine cable; mobile penetration over 100%; Mauritel (Maroc Telecom) and Mattel primary operators; data costs relatively high; Nouakchott concentrates most tech activity.",
+      "e_participation_index": 0.15,
+      "ict_development_index": 1.5,
+      "mobile_money_accounts": 1000000,
+      "digital_payments_pct_adults": 10,
+      "fintech_companies": 5,
+      "startup_ecosystem_value_usd": "$5 million",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0.1,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 5
+    },
+    "capital_coordinates": {
+      "lat": 18.0735,
+      "lon": -15.9582
+    },
+    "other_major_cities": [
+      "Nouadhibou",
+      "Kiffa",
+      "Kaédi",
+      "Rosso",
+      "Zouérat"
+    ],
+    "national_motto": "Honneur, Fraternité, Justice",
+    "national_anthem": "Bilāda l-ʾUbāti l-Hudāti l-Kirām (Land of the Proud, Guided Ones)",
+    "currency_code": "MRU",
+    "internet_tld": ".mr",
+    "utc_offset": "UTC+0",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 21.0079,
+        "lon": -10.9408
+      },
+      "bounding_box": {
+        "north": 27.3,
+        "south": 14.72,
+        "east": -4.83,
+        "west": -17.07
+      },
+      "land_area_km2": 1030700,
+      "water_area_km2": 300,
+      "coastline_km": 754,
+      "borders": [
+        "Algeria",
+        "Mali",
+        "Senegal",
+        "Western Sahara"
+      ],
+      "border_lengths_km": {
+        "Algeria": 460,
+        "Mali": 2236,
+        "Senegal": 742,
+        "Western Sahara": 1564
+      },
+      "highest_point": {
+        "name": "Kediet ej Jill",
+        "elevation_m": 915
+      },
+      "lowest_point": {
+        "name": "Sebkhet Te-n-Dghamcha",
+        "elevation_m": -5
+      },
+      "terrain": "Sahara desert dominates; Sahel in south; Senegal River valley; Adrar Plateau; barren plains (reg/erg)",
+      "land_use": {
+        "agricultural_pct": 38.5,
+        "arable_pct": 0.4,
+        "forest_pct": 0.2,
+        "other_pct": 61.3
+      },
+      "major_rivers": [
+        "Senegal"
+      ],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 234000,
+      "landlocked": false,
+      "notes": "Bridge between Arab Maghreb and Sub-Saharan Africa; Richat Structure ('Eye of Africa/Sahara'); Banc d'Arguin (UNESCO, migratory birds); iron ore railway (world's longest train)."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$10 billion",
+      "gdp_ppp_usd": "$27 billion",
+      "gdp_per_capita_nominal_usd": 2200,
+      "gdp_per_capita_ppp_usd": 5700,
+      "gdp_growth_rate_pct": 4.5,
+      "inflation_rate_pct": 5.0,
+      "unemployment_rate_pct": 12,
+      "youth_unemployment_rate_pct": 22,
+      "poverty_rate_pct": 28.2,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 32.6,
+      "income_classification": "Lower middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 22,
+        "industry_pct_gdp": 30,
+        "services_pct_gdp": 48
+      },
+      "labor_force": 1200000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 50,
+        "industry_pct": 10,
+        "services_pct": 40
+      },
+      "fdi_inflow_usd": "$600 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$2 billion",
+      "ease_of_doing_business_rank": 152,
+      "economic_freedom_index_score": 51.6,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Iron ore (SNIM, 2nd largest African producer); gold mining; fisheries (octopus, EU agreements); offshore gas (GTA/Grand Tortue Ahmeyim field with Senegal); livestock."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.3,
+      "health_expenditure_per_capita_usd": 56,
+      "physicians_per_1k": 0.18,
+      "nurses_midwives_per_1k": 0.7,
+      "hospital_beds_per_1k": 0.4,
+      "maternal_mortality_per_100k": 766,
+      "hiv_prevalence_pct": 0.3,
+      "malaria_incidence_per_1k": 40,
+      "tuberculosis_incidence_per_100k": 76,
+      "access_to_clean_water_pct": 70,
+      "access_to_sanitation_pct": 46,
+      "vaccination_coverage_pct": 65,
+      "stunting_under5_pct": 26,
+      "obesity_rate_pct": 12.7,
+      "universal_health_coverage_index": 37,
+      "leading_causes_of_death": [
+        "cardiovascular diseases",
+        "lower respiratory infections",
+        "neonatal disorders",
+        "diarrheal diseases",
+        "malaria"
+      ],
+      "notes": "High maternal mortality; urban-rural healthcare disparity; traditional medicine; Nouakchott hospitals serve entire country."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 35,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 0.4,
+      "agricultural_land_pct": 38.5,
+      "irrigated_land_pct": 0.5,
+      "major_crops": [
+        "dates",
+        "rice",
+        "sorghum",
+        "millet",
+        "corn",
+        "wheat"
+      ],
+      "major_livestock": [
+        "camels",
+        "cattle",
+        "sheep",
+        "goats"
+      ],
+      "food_import_dependency_pct": 70,
+      "cereal_yield_kg_per_hectare": 1000,
+      "agricultural_employment_pct": 50,
+      "prevalence_of_undernourishment_pct": 11,
+      "notes": "Predominantly pastoral economy; Senegal River valley rice/agriculture; dates in oases; high food import dependency; livestock transhumance."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 75,
+        "hydroelectric_pct": 10,
+        "solar_pct": 10,
+        "wind_pct": 5,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 550,
+      "electricity_production_gwh": 1200,
+      "electricity_consumption_per_capita_kwh": 150,
+      "energy_imports_pct": 10,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 17000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 5,
+      "energy_access_urban_pct": 60,
+      "notes": "GTA gas field (with BP/Senegal) expected 2024+; Manantali hydro shared; solar/wind expansion; SOMELEC utility."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Nouakchott–Oumtounsy International Airport"
+      ],
+      "major_airports_domestic": [
+        "Atar",
+        "Nouadhibou",
+        "Néma",
+        "Zouérat"
+      ],
+      "national_airline": "Mauritania Airlines",
+      "major_seaports": [
+        "Nouadhibou (iron ore)",
+        "Nouakchott Friendship Port"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 10,
+      "registered_vehicles_per_1k": 20,
+      "road_fatalities_per_100k": 22,
+      "notes": "World's longest freight train (SNIM iron ore, up to 2.5 km); Route de l'Espoir (Nouakchott–Néma); poor road network outside main highways."
+    },
+    "tourism": {
+      "annual_visitors": 30000,
+      "tourism_revenue_usd": "$20 million",
+      "tourism_pct_gdp": 0.2,
+      "tourism_employment_pct": 1,
+      "unesco_world_heritage_sites": 2,
+      "unesco_sites_list": [
+        "Banc d'Arguin National Park",
+        "Ancient Ksour of Ouadane, Chinguetti, Tichitt, and Oualata"
+      ],
+      "major_attractions": [
+        "Chinguetti (7th holy city of Islam, manuscripts)",
+        "Richat Structure (Eye of the Sahara)",
+        "Banc d'Arguin (birds)",
+        "Ouadane",
+        "Atar",
+        "Terjit Oasis"
+      ],
+      "visa_free_access_countries": 48,
+      "henley_passport_rank": 86,
+      "notes": "Desert tourism niche; Chinguetti manuscripts/libraries; Richat Structure geological wonder; very small tourism sector."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 27,
+      "gender_inequality_index": 0.627,
+      "gender_inequality_rank": 159,
+      "gender_gap_index_score": 0.59,
+      "women_in_parliament_pct": 20,
+      "women_labor_force_participation_pct": 30,
+      "maternal_mortality_per_100k": 766,
+      "child_marriage_pct": 37,
+      "fgm_prevalence_pct": 67,
+      "lgbtq_legal_status": "Illegal (death penalty by law)",
+      "death_penalty_status": "Retentionist (rarely carried out)",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 25,
+      "notes": "Modern slavery/descent-based slavery persists (Haratine); abolished slavery 1981 (last in world); criminalized 2007; anti-slavery activists imprisoned; FGM widespread; blasphemy laws."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.1,
+      "global_peace_index_rank": 93,
+      "terrorism_index_score": 1,
+      "terrorism_index_rank": 60,
+      "homicide_rate_per_100k": 1.5,
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 200,
+      "arms_imports_usd": "$10 million",
+      "internally_displaced_persons": 0,
+      "notes": "Successfully contained jihadist threat (G5 Sahel member); relatively stable despite Sahel neighbors' crises; 2019 peaceful transfer of power."
+    },
+    "cultural_heritage": {
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "Thieboudienne (rice and fish, shared with Senegal)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Independence Day (28 November)",
+        "Mawlid (Prophet's Birthday)",
+        "Guetna (date harvest festival)"
+      ],
+      "cuisine_highlights": [
+        "thieboudienne",
+        "mechoui (roast lamb)",
+        "couscous",
+        "zrig (buttermilk/yogurt drink)",
+        "dates and camel milk",
+        "Mauritanian tea ceremony (three glasses)"
+      ],
+      "music_art_traditions": [
+        "Moorish music (tidinit, ardin)",
+        "Griots (iggawen)",
+        "Maalouma (singer)",
+        "Dimi Mint Abba (legendary singer)",
+        "Traditional tent culture (khaima)"
+      ],
+      "film_industry": "Minimal (Timbuktu by Abderrahmane Sissako, nominated Oscar 2015)",
+      "intangible_heritage_items": [
+        "Moorish epic poetry (medh)",
+        "Mauritanian tea ceremony"
+      ],
+      "notable_historical_figures": [
+        "Mokhtar Ould Daddah (1st president)",
+        "Dimi Mint Abba (musician)",
+        "Mohamed Ould Abdel Aziz (2008 coup leader)",
+        "Biram Dah Abeid (anti-slavery activist)"
+      ],
+      "world_heritage_sites": [
+        "Banc d'Arguin National Park",
+        "Ancient Ksour of Ouadane, Chinguetti, Tichitt, and Oualata"
+      ],
+      "media_landscape": "TVM state; limited private media; government controls; Al Akhbar (online); social media growing",
+      "notes": "Arab-African bridge; Moorish culture; tea ceremony (atay) central to social life; Chinguetti manuscripts; descent-based slavery legacy."
+    },
+    "legal_system": {
+      "legal_tradition": "Islamic law (Sharia) and French civil law blend",
+      "constitution_year": 1991,
+      "sharia_applicability": "Applicable in personal status and criminal law",
+      "customary_law_role": "Tribal/customary norms influential",
+      "icc_membership": "Not a state party",
+      "judicial_independence_score": 0.2,
+      "contract_enforcement_days": 370,
+      "property_rights_index": 30,
+      "notes": "Islamic republic; Sharia primary source of law; apostasy punishable by death (not enforced in practice); Supreme Court."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 37,
+        "global_rank": 128
+      },
+      "area": {
+        "continent_rank": 11,
+        "global_rank": 28
+      },
+      "gdp_nominal": {
+        "continent_rank": 30,
+        "global_rank": 127
+      },
+      "gdp_per_capita": {
+        "continent_rank": 22,
+        "global_rank": 143
+      },
+      "hdi": {
+        "continent_rank": 39,
+        "global_rank": 158
+      },
+      "life_expectancy": {
+        "continent_rank": 31,
+        "global_rank": 145
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 33,
+        "global_rank": 152
+      },
+      "internet_penetration": {
+        "continent_rank": 36,
+        "global_rank": 158
+      },
+      "press_freedom": {
+        "continent_rank": 39,
+        "global_rank": 113
+      },
+      "global_peace_index": {
+        "continent_rank": 12,
+        "global_rank": 93
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": ""
     }
   },
   "leadership": {
@@ -258,7 +747,8 @@
       "name": "Mohamed Ould Ghazouani",
       "title": "President",
       "since": "2019-08-01",
-      "notes": "Former general; Aziz's ally and successor; UPR party; first peaceful democratic transition between elected leaders; re-elected 2024"
+      "notes": "Former general; Aziz's ally and successor; UPR party; first peaceful democratic transition between elected leaders; re-elected 2024",
+      "party": ""
     },
     "prime_minister": {
       "name": "Mohamed Ould Bilal",
@@ -289,7 +779,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

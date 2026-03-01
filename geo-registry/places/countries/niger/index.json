@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.886208Z",
-    "notes": "Comprehensive index for Niger covering Saharan rock art, Aïr Mountains civilization, trans-Saharan trade, Hausa states, Songhai influence, Kanem-Bornu, French colonisation, uranium mining, coups, and jihadist insurgency."
+    "notes": "Comprehensive index for Niger covering Saharan rock art, Aïr Mountains civilization, trans-Saharan trade, Hausa states, Songhai influence, Kanem-Bornu, French colonisation, uranium mining, coups, and jihadist insurgency.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Niamey",
@@ -125,7 +126,22 @@
       "life_expectancy": 62.4,
       "infant_mortality_per_1k": 46.0,
       "literacy_rate_pct": 37.3,
-      "net_migration_rate": -0.5
+      "net_migration_rate": -0.5,
+      "population_growth_rate_pct": 3.7,
+      "urban_population_growth_rate_pct": 4.5,
+      "life_expectancy_male": 61,
+      "life_expectancy_female": 63,
+      "under5_mortality_per_1k": 80,
+      "sex_ratio": 1.02,
+      "dependency_ratio": 110,
+      "population_density_per_km2": 20,
+      "age_structure": {
+        "0_14_pct": 50,
+        "15_24_pct": 19,
+        "25_54_pct": 25,
+        "55_64_pct": 3,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -153,7 +169,10 @@
         "AU",
         "G5 Sahel"
       ],
-      "notes": "Military junta since July 2023 coup; expelled French forces (Operation Barkhane Niamey base); joined Alliance of Sahel States (AES) with Mali and Burkina Faso; fighting ISGS and JNIM jihadists; US drone base at Agadez (status uncertain post-coup); withdrew from ECOWAS."
+      "notes": "Military junta since July 2023 coup; expelled French forces (Operation Barkhane Niamey base); joined Alliance of Sahel States (AES) with Mali and Burkina Faso; fighting ISGS and JNIM jihadists; US drone base at Agadez (status uncertain post-coup); withdrew from ECOWAS.",
+      "paramilitary_personnel": 5000,
+      "conscription": true,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -183,14 +202,45 @@
         "Turkey"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 2.5
+      "remittances_pct_gdp": 2.5,
+      "total_exports_usd": "$1.5 billion",
+      "total_imports_usd": "$3 billion",
+      "top_export_destinations": [
+        "France",
+        "Nigeria",
+        "China",
+        "Ghana",
+        "Japan"
+      ],
+      "top_import_origins": [
+        "China",
+        "France",
+        "Nigeria",
+        "India",
+        "Thailand"
+      ],
+      "trade_as_pct_gdp": 28,
+      "current_account_balance_usd": "-$1 billion",
+      "trade_agreements": [
+        "UEMOA",
+        "AfCFTA",
+        "AES"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 11.0,
       "electricity_access_pct": 19.0,
       "mobile_subscriptions_per_100": 39,
       "railway_km": 0,
-      "paved_roads_pct": 21
+      "paved_roads_pct": 21,
+      "broadband_subscriptions_per_100": 0.01,
+      "4g_coverage_pct": 15,
+      "5g_availability": false,
+      "road_network_km": 18949,
+      "waterways_km": 300,
+      "submarine_cables": [],
+      "notes": "Landlocked; Airtel, Moov, Zamani Telecom; lowest connectivity in Africa; oil pipeline to Benin for exports."
     },
     "international_memberships": [
       "UN",
@@ -220,6 +270,26 @@
       "fragile_states_index": {
         "score": 98.2,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.36,
+        "rank": 116,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.9,
+        "percentile": 9,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.5,
+        "percentile": 25,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -1.5,
+        "percentile": 5,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -236,12 +306,41 @@
         "locust invasions",
         "floods (Niger River)"
       ],
-      "protected_areas_pct": 7
+      "protected_areas_pct": 7,
+      "average_temperature_c": 30,
+      "average_rainfall_mm": 300,
+      "co2_per_capita_t": 0.1,
+      "deforestation_rate_pct": 2.0,
+      "water_stress_level": "High",
+      "environmental_performance_index": {
+        "score": 22.7,
+        "rank": 177,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 2000,
+        "endemic_species": 10,
+        "threatened_species": 30
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 51.0,
       "foreign_aid_received_usd": "1.8 billion",
-      "notes": "One of world's poorest countries (bottom of HDI rankings); heavily aid-dependent; post-coup sanctions by ECOWAS and some Western donors; CFA franc zone (BCEAO); 3N Initiative (Nigeriens Nourish Nigeriens) food security programme."
+      "notes": "One of world's poorest countries (bottom of HDI rankings); heavily aid-dependent; post-coup sanctions by ECOWAS and some Western donors; CFA franc zone (BCEAO); 3N Initiative (Nigeriens Nourish Nigeriens) food security programme.",
+      "external_debt_usd": "$4 billion",
+      "debt_service_pct_revenue": 10,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "World Bank",
+        "EU (suspended)",
+        "France (strained)",
+        "USA (suspended)",
+        "AfDB"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 67,
@@ -253,14 +352,42 @@
         "Islamic University of Say",
         "Université Dan Dicko Dankoulodo (Maradi)"
       ],
-      "notes": "Lowest literacy rate globally; massive gender gap in education; koranic schools widespread; child marriage impacts girls' education; nomadic population challenges; conflict zones in border areas close schools."
+      "notes": "Lowest literacy rate globally; massive gender gap in education; koranic schools widespread; child marriage impacts girls' education; nomadic population challenges; conflict zones in border areas close schools.",
+      "education_expenditure_pct_gdp": 3.5,
+      "primary_completion_rate_pct": 55,
+      "gender_parity_index": 0.8,
+      "mean_years_of_schooling": 2.1,
+      "expected_years_of_schooling": 6.5,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 35,
+      "out_of_school_children": 2500000,
+      "academic_freedom_index": 0.2
     },
     "diaspora_migration": {
       "diaspora_population": "1 million+ (Nigeria, Benin, Cote d'Ivoire, Libya, France)",
       "refugees_hosted": 300000,
       "refugees_produced": 25000,
       "remittances_usd": "400 million",
-      "notes": "Hosts Nigerian refugees from Boko Haram conflict and Malian refugees; Agadez historically major migration transit hub to Libya/Europe; EU-funded migration management; seasonal labour migration to Nigeria and coastal West Africa."
+      "notes": "Hosts Nigerian refugees from Boko Haram conflict and Malian refugees; Agadez historically major migration transit hub to Libya/Europe; EU-funded migration management; seasonal labour migration to Nigeria and coastal West Africa.",
+      "diaspora_top_destinations": [
+        "Nigeria",
+        "Benin",
+        "Côte d'Ivoire",
+        "Libya",
+        "Ghana",
+        "France"
+      ],
+      "asylum_seekers": 15000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 350000,
+      "immigration_policy": "Transit hub for Saharan migration to Libya/Mediterranean",
+      "remittances_pct_gdp": 2.5,
+      "net_migration_rate_per_1k": -0.5
     },
     "digital_economy": {
       "e_government_index": 0.22,
@@ -268,7 +395,379 @@
       "tech_hubs": [
         "Niamey (CIPMEN incubator)"
       ],
-      "notes": "Lowest internet penetration in Africa; ACE submarine cable via Benin; Airtel and Orange Niger operators; solar-powered mobile charging expanding; digital literacy extremely low; government pushes e-agriculture platforms."
+      "notes": "Lowest internet penetration in Africa; ACE submarine cable via Benin; Airtel and Orange Niger operators; solar-powered mobile charging expanding; digital literacy extremely low; government pushes e-agriculture platforms.",
+      "e_participation_index": 0.1,
+      "ict_development_index": 0.9,
+      "mobile_money_accounts": 3000000,
+      "digital_payments_pct_adults": 5,
+      "fintech_companies": 5,
+      "startup_ecosystem_value_usd": "$5 million",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0.05,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 3
+    },
+    "capital_coordinates": {
+      "lat": 13.5137,
+      "lon": 2.1098
+    },
+    "other_major_cities": [
+      "Zinder",
+      "Maradi",
+      "Tahoua",
+      "Agadez",
+      "Dosso"
+    ],
+    "national_motto": "Fraternité, Travail, Progrès (Fraternity, Work, Progress)",
+    "national_anthem": "La Nigérienne (The Nigerien)",
+    "currency_code": "XOF",
+    "internet_tld": ".ne",
+    "utc_offset": "UTC+1",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 17.6078,
+        "lon": 8.0817
+      },
+      "bounding_box": {
+        "north": 23.53,
+        "south": 11.69,
+        "east": 15.97,
+        "west": 0.17
+      },
+      "land_area_km2": 1267000,
+      "water_area_km2": 300,
+      "coastline_km": 0,
+      "borders": [
+        "Algeria",
+        "Libya",
+        "Chad",
+        "Nigeria",
+        "Benin",
+        "Burkina Faso",
+        "Mali"
+      ],
+      "border_lengths_km": {
+        "Algeria": 951,
+        "Libya": 342,
+        "Chad": 1196,
+        "Nigeria": 1608,
+        "Benin": 277,
+        "Burkina Faso": 622,
+        "Mali": 838
+      },
+      "highest_point": {
+        "name": "Idoukal-n-Taghès (Aïr Mountains)",
+        "elevation_m": 2022
+      },
+      "lowest_point": {
+        "name": "Niger River",
+        "elevation_m": 200
+      },
+      "terrain": "Sahara desert (northern 2/3); Sahel (central strip); grassland/savanna (south); Aïr Mountains; Ténéré Desert; Niger River valley",
+      "land_use": {
+        "agricultural_pct": 35,
+        "arable_pct": 12.3,
+        "forest_pct": 1,
+        "other_pct": 64
+      },
+      "major_rivers": [
+        "Niger"
+      ],
+      "major_lakes": [
+        "Lake Chad (border)"
+      ],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": true,
+      "notes": "World's highest fertility rate (~7 children/woman); 80% Sahara/Sahel; Aïr and Ténéré (UNESCO); uranium deposits; dinosaur fossils; Agadez historic city."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$16 billion",
+      "gdp_ppp_usd": "$38 billion",
+      "gdp_per_capita_nominal_usd": 590,
+      "gdp_per_capita_ppp_usd": 1400,
+      "gdp_growth_rate_pct": 7.0,
+      "inflation_rate_pct": 4.0,
+      "unemployment_rate_pct": 1,
+      "youth_unemployment_rate_pct": 2,
+      "poverty_rate_pct": 41.4,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 37.3,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 40,
+        "industry_pct_gdp": 18,
+        "services_pct_gdp": 42
+      },
+      "labor_force": 7500000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 80,
+        "industry_pct": 5,
+        "services_pct": 15
+      },
+      "fdi_inflow_usd": "$500 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$1.5 billion",
+      "ease_of_doing_business_rank": 132,
+      "economic_freedom_index_score": 52.3,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Uranium (#7 global, Arlit/Akouta—SOMAIR/COMINAK/Orano dispute with France); oil pipeline (China/CNPC, 1,950km to Benin, opened 2024); gold mining; cowpea (#1 producer); 2023 coup."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 5.4,
+      "health_expenditure_per_capita_usd": 26,
+      "physicians_per_1k": 0.04,
+      "nurses_midwives_per_1k": 0.2,
+      "hospital_beds_per_1k": 0.3,
+      "maternal_mortality_per_100k": 509,
+      "hiv_prevalence_pct": 0.3,
+      "malaria_incidence_per_1k": 200,
+      "tuberculosis_incidence_per_100k": 90,
+      "access_to_clean_water_pct": 50,
+      "access_to_sanitation_pct": 13,
+      "vaccination_coverage_pct": 64,
+      "stunting_under5_pct": 48,
+      "obesity_rate_pct": 5.5,
+      "universal_health_coverage_index": 31,
+      "leading_causes_of_death": [
+        "malaria",
+        "lower respiratory infections",
+        "diarrheal diseases",
+        "neonatal disorders",
+        "meningitis"
+      ],
+      "notes": "One of world's worst health indicators; highest fertility rate globally (~7); meningitis belt; acute malnutrition crises; lowest physician density globally."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 22,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 12.3,
+      "agricultural_land_pct": 35,
+      "irrigated_land_pct": 1,
+      "major_crops": [
+        "millet",
+        "sorghum",
+        "cowpeas",
+        "onions",
+        "rice",
+        "groundnuts",
+        "sesame"
+      ],
+      "major_livestock": [
+        "cattle",
+        "sheep",
+        "goats",
+        "camels",
+        "donkeys"
+      ],
+      "food_import_dependency_pct": 15,
+      "cereal_yield_kg_per_hectare": 450,
+      "agricultural_employment_pct": 80,
+      "prevalence_of_undernourishment_pct": 15,
+      "notes": "World's #1 cowpea producer; millet staple; Sahel food crises recurrent; '3N Initiative' (Nigeriens Nourish Nigeriens); transhumance pastoralism."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 80,
+        "hydroelectric_pct": 0,
+        "solar_pct": 15,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 5
+      },
+      "installed_capacity_mw": 350,
+      "electricity_production_gwh": 500,
+      "electricity_consumption_per_capita_kwh": 30,
+      "energy_imports_pct": 80,
+      "oil_production_bpd": 20000,
+      "oil_consumption_bpd": 15000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 1,
+      "energy_access_urban_pct": 60,
+      "notes": "Imports 80% electricity from Nigeria (NIGELEC); Kandadji dam (under construction); oil refinery Zinder (SORAZ, with China); solar expanding; extremely low rural access."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Diori Hamani International Airport (Niamey)"
+      ],
+      "major_airports_domestic": [
+        "Agadez",
+        "Zinder",
+        "Tahoua",
+        "Maradi"
+      ],
+      "national_airline": "Niger Airlines (minimal)",
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 5,
+      "road_fatalities_per_100k": 25,
+      "notes": "Landlocked; uses Cotonou (Benin) and Lomé (Togo) ports; Trans-Saharan highway; oil pipeline to Benin completed 2024; limited rail."
+    },
+    "tourism": {
+      "annual_visitors": 50000,
+      "tourism_revenue_usd": "$20 million",
+      "tourism_pct_gdp": 0.1,
+      "tourism_employment_pct": 1,
+      "unesco_world_heritage_sites": 3,
+      "unesco_sites_list": [
+        "Aïr and Ténéré Natural Reserves",
+        "W National Park (W-Arly-Pendjari complex)",
+        "Historic Centre of Agadez"
+      ],
+      "major_attractions": [
+        "Agadez (Islamic architecture)",
+        "Ténéré Desert",
+        "Aïr Mountains",
+        "Cure Salée festival",
+        "W National Park (elephants, last West African giraffes)",
+        "Dinosaur fossils (Gadoufaoua)"
+      ],
+      "visa_free_access_countries": 44,
+      "henley_passport_rank": 89,
+      "notes": "3 UNESCO sites; tourism collapsed due to insecurity; Cure Salée festival (Tuareg/Wodaabe); last West African giraffes near Niamey."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 20,
+      "gender_inequality_index": 0.642,
+      "gender_inequality_rank": 160,
+      "gender_gap_index_score": 0.6,
+      "women_in_parliament_pct": 26,
+      "women_labor_force_participation_pct": 40,
+      "maternal_mortality_per_100k": 509,
+      "child_marriage_pct": 76,
+      "fgm_prevalence_pct": 2,
+      "lgbtq_legal_status": "Illegal (up to 3 years)",
+      "death_penalty_status": "Abolitionist in practice",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 34,
+      "notes": "Military junta (July 2023 coup); world's highest child marriage rate (76%); wahaya/5th wife slavery practice; world's highest fertility; left ECOWAS; AES member."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.6,
+      "global_peace_index_rank": 133,
+      "terrorism_index_score": 6.5,
+      "terrorism_index_rank": 15,
+      "homicide_rate_per_100k": 4.5,
+      "active_conflicts": [
+        "Boko Haram (Lake Chad Basin)",
+        "ISGS & JNIM (Sahel)",
+        "Banditry (Nigeria border)"
+      ],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$20 million",
+      "internally_displaced_persons": 350000,
+      "notes": "July 2023 coup (Gen. Tchiani); US/France military bases closed; joined AES (Mali, Burkina Faso); sanctions from ECOWAS (lifted); multi-front insurgency."
+    },
+    "cultural_heritage": {
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "Dambou (moringa leaf couscous)",
+      "national_sport": "Wrestling (traditional) / Football",
+      "major_festivals": [
+        "Cure Salée (Salt Cure, Tuareg/Wodaabe in Ingall)",
+        "Guérewol (Wodaabe male beauty contest)",
+        "Bianou (Tuareg festival, Agadez)"
+      ],
+      "cuisine_highlights": [
+        "dambou (moringa couscous)",
+        "kilishi (dried spiced meat)",
+        "fura da nono (millet balls with milk)",
+        "tuwo (millet paste)",
+        "brochettes"
+      ],
+      "music_art_traditions": [
+        "Tuareg guitar/desert blues (Bombino, Mdou Moctar)",
+        "Wodaabe Guérewol (male beauty contest, UNESCO-listed tradition)",
+        "Hausa praise singing",
+        "Tuareg silver jewelry/leatherwork/tagelmust",
+        "Agadez mosque architecture (mud-brick tower)"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [
+        "Practices and expressions of joking relationships in Niger (UNESCO)"
+      ],
+      "notable_historical_figures": [
+        "Hamani Diori (1st president)",
+        "Seyni Kountché (military ruler)",
+        "Mamadou Tandja (president)",
+        "Mahamadou Issoufou (democratic president)",
+        "Ibrahim Baré Maïnassara (president)"
+      ],
+      "world_heritage_sites": [
+        "Aïr and Ténéré Natural Reserves",
+        "W-Arly-Pendjari Complex (shared)",
+        "Historic Centre of Agadez"
+      ],
+      "media_landscape": "ORTN state; multiple private FM radio (best outreach); Sahel TV; press restricted under junta",
+      "notes": "Tuareg, Wodaabe, Hausa cultural richness; Guérewol male beauty contest (unique globally); desert blues music birthplace (Bombino, Mdou Moctar); Agadez mud-brick mosque."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (French system) and Islamic/customary law",
+      "constitution_year": 2010,
+      "sharia_applicability": "Customary courts apply Islamic principles",
+      "customary_law_role": "Chiefs and customary courts settle local disputes",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.15,
+      "contract_enforcement_days": 545,
+      "property_rights_index": 25,
+      "notes": "Constitution suspended after 2023 coup; CNSP military junta governing by decree; elections timeline uncertain; 7th Republic constitution."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 14,
+        "global_rank": 56
+      },
+      "area": {
+        "continent_rank": 6,
+        "global_rank": 21
+      },
+      "gdp_nominal": {
+        "continent_rank": 26,
+        "global_rank": 110
+      },
+      "gdp_per_capita": {
+        "continent_rank": 51,
+        "global_rank": 186
+      },
+      "hdi": {
+        "continent_rank": 55,
+        "global_rank": 189
+      },
+      "life_expectancy": {
+        "continent_rank": 47,
+        "global_rank": 183
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 17,
+        "global_rank": 132
+      },
+      "internet_penetration": {
+        "continent_rank": 51,
+        "global_rank": 180
+      },
+      "press_freedom": {
+        "continent_rank": 51,
+        "global_rank": 161
+      },
+      "global_peace_index": {
+        "continent_rank": 36,
+        "global_rank": 133
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": "Last in HDI globally; highest fertility rate in world."
     }
   },
   "leadership": {
@@ -276,7 +775,8 @@
       "name": "Abdourahamane Tchiani",
       "title": "Chairman of the National Council for the Safeguard of the Homeland (CNSP)",
       "since": "2023-07-26",
-      "notes": "Seized power in military coup overthrowing elected President Bazoum"
+      "notes": "Seized power in military coup overthrowing elected President Bazoum",
+      "party": ""
     },
     "prime_minister": {
       "name": "Ali Mahaman Lamine Zeine",
@@ -337,7 +837,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

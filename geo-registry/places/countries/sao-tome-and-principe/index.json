@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.890368Z",
-    "notes": "Comprehensive index for São Tomé and Príncipe covering uninhabited discovery, Portuguese sugar plantations, slave trade, cocoa 'islands of chocolate', roça plantation system, forros and angolares communities, independence 1975, democratic transition, and contemporary challenges."
+    "notes": "Comprehensive index for São Tomé and Príncipe covering uninhabited discovery, Portuguese sugar plantations, slave trade, cocoa 'islands of chocolate', roça plantation system, forros and angolares communities, independence 1975, democratic transition, and contemporary challenges.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "São Tomé",
@@ -113,7 +114,22 @@
       "life_expectancy": 70.8,
       "infant_mortality_per_1k": 26.0,
       "literacy_rate_pct": 92.8,
-      "net_migration_rate": -5.0
+      "net_migration_rate": -5.0,
+      "population_growth_rate_pct": 1.7,
+      "urban_population_growth_rate_pct": 2.5,
+      "life_expectancy_male": 68,
+      "life_expectancy_female": 72,
+      "under5_mortality_per_1k": 25,
+      "sex_ratio": 1.03,
+      "dependency_ratio": 74,
+      "population_density_per_km2": 225,
+      "age_structure": {
+        "0_14_pct": 40,
+        "15_24_pct": 20,
+        "25_54_pct": 33,
+        "55_64_pct": 4,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -136,7 +152,10 @@
         "AU",
         "CPLP"
       ],
-      "notes": "Tiny armed forces; 2003 military coup attempt; Portuguese and Nigerian military cooperation; coast guard handles maritime security; no air force."
+      "notes": "Tiny armed forces; 2003 military coup attempt; Portuguese and Nigerian military cooperation; coast guard handles maritime security; no air force.",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -163,14 +182,47 @@
         "EU"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 2.0
+      "remittances_pct_gdp": 2.0,
+      "total_exports_usd": "$40 million",
+      "total_imports_usd": "$200 million",
+      "top_export_destinations": [
+        "Netherlands",
+        "Belgium",
+        "France",
+        "Nigeria",
+        "Portugal"
+      ],
+      "top_import_origins": [
+        "Portugal",
+        "Angola",
+        "China",
+        "Nigeria",
+        "France"
+      ],
+      "trade_as_pct_gdp": 40,
+      "current_account_balance_usd": "-$60 million",
+      "trade_agreements": [
+        "CEEAC/ECCAS",
+        "AfCFTA",
+        "CPLP"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 37.0,
       "electricity_access_pct": 78.0,
       "mobile_subscriptions_per_100": 80,
       "railway_km": 0,
-      "paved_roads_pct": 68
+      "paved_roads_pct": 68,
+      "broadband_subscriptions_per_100": 1,
+      "4g_coverage_pct": 60,
+      "5g_availability": false,
+      "road_network_km": 320,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "ACE"
+      ],
+      "notes": "CST Telecom; small network; ACE submarine cable; limited broadband."
     },
     "international_memberships": [
       "UN",
@@ -199,6 +251,26 @@
       "fragile_states_index": {
         "score": 66.5,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.4,
+        "rank": 100,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.7,
+        "percentile": 16,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.7,
+        "percentile": 18,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": 0.3,
+        "percentile": 60,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -211,12 +283,41 @@
       "natural_hazards": [
         "tropical storms"
       ],
-      "protected_areas_pct": 30
+      "protected_areas_pct": 30,
+      "average_temperature_c": 26,
+      "average_rainfall_mm": 2000,
+      "co2_per_capita_t": 0.6,
+      "deforestation_rate_pct": 0.5,
+      "water_stress_level": "Low",
+      "environmental_performance_index": {
+        "score": 35,
+        "rank": 128,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 900,
+        "endemic_species": 150,
+        "threatened_species": 30
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 77.0,
       "foreign_aid_received_usd": "50 million",
-      "notes": "Heavily aid-dependent; HIPC debt relief; Portugal largest bilateral donor; oil Joint Development Zone with Nigeria (potential revenue windfall); chocolate/premium cocoa niche market strategy; IMF programmes."
+      "notes": "Heavily aid-dependent; HIPC debt relief; Portugal largest bilateral donor; oil Joint Development Zone with Nigeria (potential revenue windfall); chocolate/premium cocoa niche market strategy; IMF programmes.",
+      "external_debt_usd": "$400 million",
+      "debt_service_pct_revenue": 10,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "Portugal",
+        "World Bank",
+        "EU",
+        "AfDB",
+        "Taiwan"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 95,
@@ -226,20 +327,389 @@
       "top_universities": [
         "University of São Tomé and Príncipe (USTP, 2014)"
       ],
-      "notes": "High literacy rate for sub-Saharan Africa; free compulsory education; Portuguese language of instruction; many students go to Portugal for higher education; limited tertiary options domestically."
+      "notes": "High literacy rate for sub-Saharan Africa; free compulsory education; Portuguese language of instruction; many students go to Portugal for higher education; limited tertiary options domestically.",
+      "education_expenditure_pct_gdp": 5.1,
+      "primary_completion_rate_pct": 88,
+      "gender_parity_index": 0.97,
+      "mean_years_of_schooling": 6.4,
+      "expected_years_of_schooling": 12.8,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 25,
+      "out_of_school_children": 2000,
+      "academic_freedom_index": 0.6
     },
     "diaspora_migration": {
       "diaspora_population": "50,000+ (Portugal, Angola, France)",
       "refugees_hosted": 0,
       "refugees_produced": 100,
       "remittances_usd": "10 million",
-      "notes": "Significant emigration to Portugal for education and work; small country so diaspora proportionally large; contract workers returned from Angola; brain drain concern for medical professionals."
+      "notes": "Significant emigration to Portugal for education and work; small country so diaspora proportionally large; contract workers returned from Angola; brain drain concern for medical professionals.",
+      "diaspora_top_destinations": [
+        "Portugal",
+        "Angola",
+        "France",
+        "Gabon",
+        "Cape Verde"
+      ],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Open; CPLP mobility agreement",
+      "remittances_pct_gdp": 3.0,
+      "net_migration_rate_per_1k": -5.0
     },
     "digital_economy": {
       "e_government_index": 0.3,
       "mobile_money_adoption": "Nascent",
       "tech_hubs": [],
-      "notes": "CST (Companhia Santomense de Telecomunicações) primary operator; limited broadband; ACE submarine cable connected; mobile internet primary access method; e-government services minimal."
+      "notes": "CST (Companhia Santomense de Telecomunicações) primary operator; limited broadband; ACE submarine cable connected; mobile internet primary access method; e-government services minimal.",
+      "e_participation_index": 0.2,
+      "ict_development_index": 2.0,
+      "mobile_money_accounts": 50000,
+      "digital_payments_pct_adults": 10,
+      "fintech_companies": 2,
+      "startup_ecosystem_value_usd": "$1 million",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0.05,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 5
+    },
+    "capital_coordinates": {
+      "lat": 0.1864,
+      "lon": 6.6131
+    },
+    "other_major_cities": [
+      "Trindade",
+      "Neves",
+      "Angolares",
+      "Santo Amaro"
+    ],
+    "national_motto": "Unidade, Disciplina, Trabalho (Unity, Discipline, Work)",
+    "national_anthem": "Independência total (Total Independence)",
+    "currency_code": "STN",
+    "internet_tld": ".st",
+    "utc_offset": "UTC+0",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 0.1864,
+        "lon": 6.6131
+      },
+      "bounding_box": {
+        "north": 1.72,
+        "south": -0.02,
+        "east": 7.47,
+        "west": 6.47
+      },
+      "land_area_km2": 964,
+      "water_area_km2": 0,
+      "coastline_km": 209,
+      "borders": [],
+      "border_lengths_km": {},
+      "highest_point": {
+        "name": "Pico de São Tomé",
+        "elevation_m": 2024
+      },
+      "lowest_point": {
+        "name": "Atlantic Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Volcanic islands; mountainous interior; dense tropical forest; coastal lowlands; rich volcanic soils",
+      "land_use": {
+        "agricultural_pct": 50.7,
+        "arable_pct": 9.1,
+        "forest_pct": 28.1,
+        "other_pct": 21.2
+      },
+      "major_rivers": [
+        "Io Grande",
+        "Contador"
+      ],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 165000,
+      "landlocked": false,
+      "notes": "2nd smallest African country (after Seychelles); 2 main islands; equator passes through Ilhéu das Rolas; volcanic origin; Gulf of Guinea; cocoa history ('chocolate islands')."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$0.6 billion",
+      "gdp_ppp_usd": "$1 billion",
+      "gdp_per_capita_nominal_usd": 2700,
+      "gdp_per_capita_ppp_usd": 4500,
+      "gdp_growth_rate_pct": 2.5,
+      "inflation_rate_pct": 20,
+      "unemployment_rate_pct": 14,
+      "youth_unemployment_rate_pct": 25,
+      "poverty_rate_pct": 66,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 56.3,
+      "income_classification": "Lower middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 11,
+        "industry_pct_gdp": 15,
+        "services_pct_gdp": 74
+      },
+      "labor_force": 75000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 26,
+        "industry_pct": 21,
+        "services_pct": 53
+      },
+      "fdi_inflow_usd": "$20 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$65 million",
+      "ease_of_doing_business_rank": 170,
+      "economic_freedom_index_score": 52,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Micro-island economy; cocoa (#1 export historically); offshore oil potential (Joint Development Zone with Nigeria); eco-tourism developing; aid-dependent; peg to euro (via Portuguese escudo)."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 5.5,
+      "health_expenditure_per_capita_usd": 110,
+      "physicians_per_1k": 0.5,
+      "nurses_midwives_per_1k": 1.5,
+      "hospital_beds_per_1k": 2.9,
+      "maternal_mortality_per_100k": 146,
+      "hiv_prevalence_pct": 0.7,
+      "malaria_incidence_per_1k": 30,
+      "tuberculosis_incidence_per_100k": 57,
+      "access_to_clean_water_pct": 97,
+      "access_to_sanitation_pct": 40,
+      "vaccination_coverage_pct": 90,
+      "stunting_under5_pct": 17,
+      "obesity_rate_pct": 12.4,
+      "universal_health_coverage_index": 47,
+      "leading_causes_of_death": [
+        "cardiovascular diseases",
+        "lower respiratory infections",
+        "neonatal disorders",
+        "malaria",
+        "diabetes"
+      ],
+      "notes": "Malaria near-elimination success (Taiwan/WHO partnership); small population allows targeted health interventions; Portuguese-trained doctors."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 35,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 9.1,
+      "agricultural_land_pct": 50.7,
+      "irrigated_land_pct": 5,
+      "major_crops": [
+        "cocoa",
+        "coconut",
+        "palm kernels",
+        "coffee",
+        "pepper",
+        "vanilla",
+        "breadfruit",
+        "bananas"
+      ],
+      "major_livestock": [
+        "pigs",
+        "poultry",
+        "goats"
+      ],
+      "food_import_dependency_pct": 80,
+      "cereal_yield_kg_per_hectare": 1500,
+      "agricultural_employment_pct": 26,
+      "prevalence_of_undernourishment_pct": 10,
+      "notes": "Cocoa historically dominant ('Chocolate Islands', forced labor roças); organic/fine cocoa renewal; high food import dependency; fishing important."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 70,
+        "hydroelectric_pct": 20,
+        "solar_pct": 5,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 5
+      },
+      "installed_capacity_mw": 30,
+      "electricity_production_gwh": 80,
+      "electricity_consumption_per_capita_kwh": 300,
+      "energy_imports_pct": 100,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 1000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 50,
+      "energy_access_urban_pct": 80,
+      "notes": "EMAE utility; diesel generators; small hydro potential; solar expanding; JDZ oil prospects with Nigeria."
+    },
+    "transport": {
+      "major_airports_international": [
+        "São Tomé International Airport"
+      ],
+      "major_airports_domestic": [
+        "Príncipe Airport"
+      ],
+      "national_airline": "STP Airways (limited)",
+      "major_seaports": [
+        "Ana Chaves (São Tomé)"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 20,
+      "registered_vehicles_per_1k": 50,
+      "road_fatalities_per_100k": 0,
+      "notes": "Small road network; inter-island ferry; TAP Air Portugal connection; limited international connectivity."
+    },
+    "tourism": {
+      "annual_visitors": 35000,
+      "tourism_revenue_usd": "$25 million",
+      "tourism_pct_gdp": 4,
+      "tourism_employment_pct": 8,
+      "unesco_world_heritage_sites": 0,
+      "unesco_sites_list": [],
+      "major_attractions": [
+        "Pico de São Tomé (hiking)",
+        "Roça plantations (Agostinho Neto, Sundy)",
+        "Ilhéu das Rolas (equator marker)",
+        "Príncipe UNESCO Biosphere Reserve",
+        "Obo National Park",
+        "Bom Bom Island Resort"
+      ],
+      "visa_free_access_countries": 52,
+      "henley_passport_rank": 76,
+      "notes": "Eco-tourism niche; Príncipe UNESCO Biosphere Reserve; colonial roça plantations; untouched biodiversity; niche luxury eco-resorts; HBD (Here Be Dragons) development."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Free",
+      "freedom_house_score": 84,
+      "gender_inequality_index": 0.537,
+      "gender_inequality_rank": 143,
+      "gender_gap_index_score": 0.66,
+      "women_in_parliament_pct": 15,
+      "women_labor_force_participation_pct": 43,
+      "maternal_mortality_per_100k": 146,
+      "child_marriage_pct": 35,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Legal",
+      "death_penalty_status": "Abolitionist",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 15,
+      "notes": "Among Africa's most democratic and free nations; peaceful power transfers; child labor on cocoa plantations; small civil society."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.5,
+      "global_peace_index_rank": 25,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 2,
+      "active_conflicts": [],
+      "border_disputes": [
+        "Joint Development Zone with Nigeria (oil rights)"
+      ],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$0",
+      "internally_displaced_persons": 0,
+      "notes": "One of most peaceful countries globally; no military (small coast guard/police); 2003 brief coup attempt; stable democracy."
+    },
+    "cultural_heritage": {
+      "national_symbols": [],
+      "national_animal": "grey parrot",
+      "national_flower": "",
+      "national_dish": "Calulu (fish/meat stew with vegetables)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Independence Day (12 July)",
+        "São João Festival",
+        "Auto de Floripes (colonial theatre festival, Príncipe)"
+      ],
+      "cuisine_highlights": [
+        "calulu (palm oil stew)",
+        "blablá (deep-fried dough)",
+        "banana pão (baked plantain)",
+        "chocolate (single-origin)",
+        "fried flying fish",
+        "palm wine"
+      ],
+      "music_art_traditions": [
+        "Ússua and Socopé dances",
+        "Tchiloli (theatrical tradition, 16th century Portuguese origins)",
+        "Puíta (percussion)",
+        "Dexa (social dance)"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [
+        "Tchiloli (theatre of São Tomé)",
+        "Auto de Floripes (Príncipe)"
+      ],
+      "notable_historical_figures": [
+        "Manuel Pinto da Costa (1st president)",
+        "Patrice Trovoada (current PM)",
+        "Alda do Espírito Santo (poet/independence activist)",
+        "King Amador (15th century slave revolt leader)"
+      ],
+      "world_heritage_sites": [],
+      "media_landscape": "TVS state; Radio Nacional; small independent media; relatively free press",
+      "notes": "Portuguese Creole culture; roça plantation heritage; Tchiloli (unique theatrical tradition); chocolate renaissance; equator island; Príncipe Biosphere Reserve."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (Portuguese system)",
+      "constitution_year": 1990,
+      "sharia_applicability": "None",
+      "customary_law_role": "Minimal",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.45,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 35,
+      "notes": "Multi-party democracy since 1991; Constitutional Court; small judiciary; Portuguese legal tradition."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 54,
+        "global_rank": 187
+      },
+      "area": {
+        "continent_rank": 52,
+        "global_rank": 171
+      },
+      "gdp_nominal": {
+        "continent_rank": 54,
+        "global_rank": 186
+      },
+      "gdp_per_capita": {
+        "continent_rank": 24,
+        "global_rank": 145
+      },
+      "hdi": {
+        "continent_rank": 17,
+        "global_rank": 137
+      },
+      "life_expectancy": {
+        "continent_rank": 9,
+        "global_rank": 86
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 45,
+        "global_rank": 170
+      },
+      "internet_penetration": {
+        "continent_rank": 18,
+        "global_rank": 112
+      },
+      "press_freedom": {
+        "continent_rank": 8,
+        "global_rank": 38
+      },
+      "global_peace_index": {
+        "continent_rank": 1,
+        "global_rank": 25
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": "Tiny but democratic and peaceful."
     }
   },
   "leadership": {
@@ -247,7 +717,8 @@
       "name": "Carlos Vila Nova",
       "title": "President",
       "since": "2021-10-02",
-      "notes": "ADI party; former infrastructure minister"
+      "notes": "ADI party; former infrastructure minister",
+      "party": ""
     },
     "prime_minister": {
       "name": "Patrice Trovoada",
@@ -279,7 +750,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

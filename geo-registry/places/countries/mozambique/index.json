@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.884405Z",
-    "notes": "Comprehensive index for Mozambique covering Bantu migration, Swahili coast trading, Great Zimbabwe trade links, Portuguese colonisation (longest in Africa 1498-1975), FRELIMO liberation war, civil war 1977-1992, economic growth, and Cabo Delgado insurgency."
+    "notes": "Comprehensive index for Mozambique covering Bantu migration, Swahili coast trading, Great Zimbabwe trade links, Portuguese colonisation (longest in Africa 1498-1975), FRELIMO liberation war, civil war 1977-1992, economic growth, and Cabo Delgado insurgency.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Maputo",
@@ -148,7 +149,22 @@
       "life_expectancy": 60.9,
       "infant_mortality_per_1k": 55.0,
       "literacy_rate_pct": 63.4,
-      "net_migration_rate": -0.3
+      "net_migration_rate": -0.3,
+      "population_growth_rate_pct": 2.7,
+      "urban_population_growth_rate_pct": 4.2,
+      "life_expectancy_male": 56,
+      "life_expectancy_female": 62,
+      "under5_mortality_per_1k": 67,
+      "sex_ratio": 0.97,
+      "dependency_ratio": 86,
+      "population_density_per_km2": 40,
+      "age_structure": {
+        "0_14_pct": 44,
+        "15_24_pct": 20,
+        "25_54_pct": 30,
+        "55_64_pct": 3,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -176,7 +192,10 @@
         "SADC",
         "CPLP"
       ],
-      "notes": "FADM (Armed Forces); SADC Mission in Mozambique (SAMIM) deployed 2021 to combat Cabo Delgado insurgency; Rwandan forces also deployed; limited capacity; Islamist insurgency (al-Shabaab/ASWJ) in Cabo Delgado since 2017."
+      "notes": "FADM (Armed Forces); SADC Mission in Mozambique (SAMIM) deployed 2021 to combat Cabo Delgado insurgency; Rwandan forces also deployed; limited capacity; Islamist insurgency (al-Shabaab/ASWJ) in Cabo Delgado since 2017.",
+      "paramilitary_personnel": 0,
+      "conscription": true,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -208,14 +227,50 @@
         "Italy"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 2.0
+      "remittances_pct_gdp": 2.0,
+      "total_exports_usd": "$7 billion",
+      "total_imports_usd": "$9 billion",
+      "top_export_destinations": [
+        "India",
+        "Netherlands",
+        "South Africa",
+        "Italy",
+        "China"
+      ],
+      "top_import_origins": [
+        "South Africa",
+        "China",
+        "India",
+        "UAE",
+        "Singapore"
+      ],
+      "trade_as_pct_gdp": 76,
+      "current_account_balance_usd": "-$4 billion",
+      "trade_agreements": [
+        "SADC",
+        "AfCFTA"
+      ],
+      "special_economic_zones": [
+        "Beluluane Industrial Park (Maputo)",
+        "Nacala SEZ"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 21.0,
       "electricity_access_pct": 31.0,
       "mobile_subscriptions_per_100": 47,
       "railway_km": 4787,
-      "paved_roads_pct": 21
+      "paved_roads_pct": 21,
+      "broadband_subscriptions_per_100": 0.1,
+      "4g_coverage_pct": 40,
+      "5g_availability": false,
+      "road_network_km": 31083,
+      "waterways_km": 460,
+      "submarine_cables": [
+        "EASSy",
+        "SEACOM"
+      ],
+      "notes": "3 corridor strategy (Maputo, Beira, Nacala); Vodacom, Tmcel; Maputo-Catembe bridge (Africa's longest suspension bridge)."
     },
     "international_memberships": [
       "UN",
@@ -247,6 +302,26 @@
       "fragile_states_index": {
         "score": 89.5,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.34,
+        "rank": 120,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.7,
+        "percentile": 15,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.5,
+        "percentile": 24,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -1.0,
+        "percentile": 10,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -263,12 +338,41 @@
         "droughts",
         "coastal erosion"
       ],
-      "protected_areas_pct": 16
+      "protected_areas_pct": 16,
+      "average_temperature_c": 25,
+      "average_rainfall_mm": 1000,
+      "co2_per_capita_t": 0.2,
+      "deforestation_rate_pct": 0.5,
+      "water_stress_level": "Low-medium",
+      "environmental_performance_index": {
+        "score": 27,
+        "rank": 168,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 6000,
+        "endemic_species": 200,
+        "threatened_species": 150
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 101.0,
       "foreign_aid_received_usd": "2.2 billion",
-      "notes": "Hidden debt scandal (2016, $2B secret loans) devastated donor relations and led to IMF suspension; heavily aid-dependent; LNG revenues expected mid-2020s; Nacala transport corridor critical for coal exports."
+      "notes": "Hidden debt scandal (2016, $2B secret loans) devastated donor relations and led to IMF suspension; heavily aid-dependent; LNG revenues expected mid-2020s; Nacala transport corridor critical for coal exports.",
+      "external_debt_usd": "$14 billion",
+      "debt_service_pct_revenue": 25,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA (PEPFAR)",
+        "World Bank",
+        "EU",
+        "UK",
+        "Sweden"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 90,
@@ -280,14 +384,41 @@
         "Catholic University of Mozambique (Beira)",
         "Universidade Pedagógica"
       ],
-      "notes": "Portuguese language of instruction; massive post-war education expansion; low completion rates; insurgency in Cabo Delgado has closed hundreds of schools; teacher shortages severe in rural areas."
+      "notes": "Portuguese language of instruction; massive post-war education expansion; low completion rates; insurgency in Cabo Delgado has closed hundreds of schools; teacher shortages severe in rural areas.",
+      "education_expenditure_pct_gdp": 5.5,
+      "primary_completion_rate_pct": 50,
+      "gender_parity_index": 0.9,
+      "mean_years_of_schooling": 3.5,
+      "expected_years_of_schooling": 9.7,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 55,
+      "out_of_school_children": 1500000,
+      "academic_freedom_index": 0.4
     },
     "diaspora_migration": {
       "diaspora_population": "1.5 million+ (South Africa, Portugal, Tanzania, Malawi)",
       "refugees_hosted": 30000,
       "refugees_produced": 100000,
       "remittances_usd": "400 million",
-      "notes": "Mozambican mineworkers in South Africa (historic); Cabo Delgado insurgency displaced 1 million internally; cross-border movement with Tanzania and Malawi; xenophobic violence in South Africa affects Mozambicans."
+      "notes": "Mozambican mineworkers in South Africa (historic); Cabo Delgado insurgency displaced 1 million internally; cross-border movement with Tanzania and Malawi; xenophobic violence in South Africa affects Mozambicans.",
+      "diaspora_top_destinations": [
+        "South Africa",
+        "Portugal",
+        "Tanzania",
+        "Malawi",
+        "Zimbabwe"
+      ],
+      "asylum_seekers": 2000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 1000000,
+      "immigration_policy": "Hosts refugees from DRC, Burundi; Mozambicans migrate to South Africa (mines)",
+      "remittances_pct_gdp": 2.5,
+      "net_migration_rate_per_1k": -0.5
     },
     "digital_economy": {
       "e_government_index": 0.31,
@@ -295,7 +426,388 @@
       "tech_hubs": [
         "Maputo (UX, various incubators)"
       ],
-      "notes": "EASSy and SEACOM submarine cables; Vodacom and Tmcel primary operators; mobile money expanding especially in rural areas; e-Government platform (SISTAFE for public finance); low broadband penetration."
+      "notes": "EASSy and SEACOM submarine cables; Vodacom and Tmcel primary operators; mobile money expanding especially in rural areas; e-Government platform (SISTAFE for public finance); low broadband penetration.",
+      "e_participation_index": 0.25,
+      "ict_development_index": 1.5,
+      "mobile_money_accounts": 10000000,
+      "digital_payments_pct_adults": 20,
+      "fintech_companies": 10,
+      "startup_ecosystem_value_usd": "$20 million",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0.15,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 10
+    },
+    "capital_coordinates": {
+      "lat": -25.9692,
+      "lon": 32.5732
+    },
+    "other_major_cities": [
+      "Matola",
+      "Beira",
+      "Nampula",
+      "Chimoio",
+      "Nacala",
+      "Quelimane",
+      "Tete"
+    ],
+    "national_motto": "None (unofficial: Unity, Work, Vigilance)",
+    "national_anthem": "Pátria Amada (Beloved Homeland)",
+    "currency_code": "MZN",
+    "internet_tld": ".mz",
+    "utc_offset": "UTC+2",
+    "drives_on": "left",
+    "geography": {
+      "coordinates": {
+        "lat": -18.6657,
+        "lon": 35.5296
+      },
+      "bounding_box": {
+        "north": -10.47,
+        "south": -26.87,
+        "east": 40.84,
+        "west": 30.21
+      },
+      "land_area_km2": 786380,
+      "water_area_km2": 13000,
+      "coastline_km": 2470,
+      "borders": [
+        "Tanzania",
+        "Malawi",
+        "Zambia",
+        "Zimbabwe",
+        "South Africa",
+        "Eswatini"
+      ],
+      "border_lengths_km": {
+        "Tanzania": 840,
+        "Malawi": 1498,
+        "Zambia": 439,
+        "Zimbabwe": 1402,
+        "South Africa": 496,
+        "Eswatini": 108
+      },
+      "highest_point": {
+        "name": "Monte Binga",
+        "elevation_m": 2436
+      },
+      "lowest_point": {
+        "name": "Indian Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Coastal lowlands (south and central); mountainous western border; Zambezi River valley; Mozambique Channel; coral islands (Bazaruto/Quirimbas)",
+      "land_use": {
+        "agricultural_pct": 56.3,
+        "arable_pct": 6.4,
+        "forest_pct": 43,
+        "other_pct": 0.7
+      },
+      "major_rivers": [
+        "Zambezi",
+        "Limpopo",
+        "Save",
+        "Rovuma",
+        "Licungo"
+      ],
+      "major_lakes": [
+        "Lake Malawi (northeast border)",
+        "Cahora Bassa (reservoir)"
+      ],
+      "exclusive_economic_zone_km2": 578000,
+      "landlocked": false,
+      "notes": "2,470 km coastline (longest in SE Africa); Mozambique Channel; Bazaruto/Quirimbas archipelagos; Cahora Bassa dam; Gorongosa NP restoration success."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$21 billion",
+      "gdp_ppp_usd": "$48 billion",
+      "gdp_per_capita_nominal_usd": 640,
+      "gdp_per_capita_ppp_usd": 1400,
+      "gdp_growth_rate_pct": 5.0,
+      "inflation_rate_pct": 7.0,
+      "unemployment_rate_pct": 3,
+      "youth_unemployment_rate_pct": 7,
+      "poverty_rate_pct": 46.1,
+      "poverty_line_definition": "National poverty line ($2.15/day)",
+      "gini_coefficient": 54,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 27,
+        "industry_pct_gdp": 20,
+        "services_pct_gdp": 53
+      },
+      "labor_force": 14000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 70,
+        "industry_pct": 6,
+        "services_pct": 24
+      },
+      "fdi_inflow_usd": "$5 billion",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$3.5 billion",
+      "ease_of_doing_business_rank": 138,
+      "economic_freedom_index_score": 50.5,
+      "credit_rating": {
+        "moodys": "Caa2",
+        "sp": "CCC+",
+        "fitch": "CCC+"
+      },
+      "notes": "Massive LNG reserves (Rovuma Basin, TotalEnergies Afungi—$20B project suspended due to insurgency); aluminum (Mozal smelter); coal (Tete); hidden debt scandal (2016, $2B tuna bonds); Cabo Delgado insurgency."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 7.5,
+      "health_expenditure_per_capita_usd": 38,
+      "physicians_per_1k": 0.08,
+      "nurses_midwives_per_1k": 0.4,
+      "hospital_beds_per_1k": 0.7,
+      "maternal_mortality_per_100k": 289,
+      "hiv_prevalence_pct": 12.1,
+      "malaria_incidence_per_1k": 250,
+      "tuberculosis_incidence_per_100k": 361,
+      "access_to_clean_water_pct": 63,
+      "access_to_sanitation_pct": 29,
+      "vaccination_coverage_pct": 73,
+      "stunting_under5_pct": 38,
+      "obesity_rate_pct": 7.2,
+      "universal_health_coverage_index": 35,
+      "leading_causes_of_death": [
+        "HIV/AIDS",
+        "malaria",
+        "lower respiratory infections",
+        "tuberculosis",
+        "neonatal disorders"
+      ],
+      "notes": "One of worst HIV burdens (12%); PEPFAR major impact; Cyclones Idai (2019) and Freddy (2023) devastated health infrastructure; tecnicos de medicina (mid-level health workers)."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 25,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 6.4,
+      "agricultural_land_pct": 56.3,
+      "irrigated_land_pct": 1,
+      "major_crops": [
+        "cassava",
+        "maize",
+        "rice",
+        "cashew nuts",
+        "coconut",
+        "sugar",
+        "tobacco",
+        "cotton",
+        "tea"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "pigs",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 20,
+      "cereal_yield_kg_per_hectare": 800,
+      "agricultural_employment_pct": 70,
+      "prevalence_of_undernourishment_pct": 32,
+      "notes": "Cashew nuts (major export, reviving industry); ProSAVANA (Japan-Brazil agriculture programme, controversial); chronic food insecurity; cyclone impacts."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 20,
+        "hydroelectric_pct": 70,
+        "solar_pct": 3,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 7
+      },
+      "installed_capacity_mw": 2800,
+      "electricity_production_gwh": 18000,
+      "electricity_consumption_per_capita_kwh": 450,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 20000,
+      "natural_gas_production_bcm": 5.5,
+      "energy_access_rural_pct": 5,
+      "energy_access_urban_pct": 57,
+      "notes": "Cahora Bassa dam (2075 MW, exports to South Africa); massive Rovuma LNG reserves; gas from Temane/Pande fields; EDM utility; very low rural access."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Maputo International Airport"
+      ],
+      "major_airports_domestic": [
+        "Beira",
+        "Nampula",
+        "Nacala",
+        "Vilankulo",
+        "Pemba",
+        "Tete"
+      ],
+      "national_airline": "LAM Mozambique Airlines",
+      "major_seaports": [
+        "Maputo",
+        "Beira",
+        "Nacala"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 30,
+      "registered_vehicles_per_1k": 10,
+      "road_fatalities_per_100k": 30,
+      "notes": "3 development corridors: Maputo, Beira, Nacala (connecting landlocked neighbors to ports); Nacala rail to Malawi."
+    },
+    "tourism": {
+      "annual_visitors": 1500000,
+      "tourism_revenue_usd": "$200 million",
+      "tourism_pct_gdp": 1,
+      "tourism_employment_pct": 3,
+      "unesco_world_heritage_sites": 1,
+      "unesco_sites_list": [
+        "Island of Mozambique"
+      ],
+      "major_attractions": [
+        "Bazaruto Archipelago",
+        "Quirimbas Archipelago",
+        "Island of Mozambique (UNESCO)",
+        "Gorongosa National Park",
+        "Tofo Beach (whale sharks)",
+        "Maputo (colonial architecture)"
+      ],
+      "visa_free_access_countries": 48,
+      "henley_passport_rank": 85,
+      "notes": "Beach/diving tourism growing; whale sharks and mantas at Tofo; Gorongosa restoration; Cabo Delgado insurgency deterring northern tourism."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 43,
+      "gender_inequality_index": 0.535,
+      "gender_inequality_rank": 143,
+      "gender_gap_index_score": 0.73,
+      "women_in_parliament_pct": 42,
+      "women_labor_force_participation_pct": 78,
+      "maternal_mortality_per_100k": 289,
+      "child_marriage_pct": 48,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Legal (decriminalized 2015)",
+      "death_penalty_status": "Abolitionist",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 22,
+      "notes": "FRELIMO one-party dominance since independence; RENAMO conflict legacy; child marriage extremely high; decriminalized homosexuality 2015 (progressive for Africa); Cabo Delgado conflict atrocities."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.4,
+      "global_peace_index_rank": 115,
+      "terrorism_index_score": 6.5,
+      "terrorism_index_rank": 14,
+      "homicide_rate_per_100k": 3.5,
+      "active_conflicts": [
+        "Cabo Delgado insurgency (ISMP/Ahlu Sunna, since 2017)"
+      ],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 200,
+      "arms_imports_usd": "$50 million",
+      "internally_displaced_persons": 1000000,
+      "notes": "Cabo Delgado insurgency (Islamic State affiliate, since 2017; 4000+ killed, 1M+ displaced); SADC/Rwanda military intervention; TotalEnergies LNG suspended; 2023 election disputes."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "AK-47 (on flag—only national flag with a modern weapon)"
+      ],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "Matapa (cassava leaf stew with coconut and peanut)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Independence Day (25 June)",
+        "Maputo International Music Festival (Azgo)",
+        "Marrabenta Festival"
+      ],
+      "cuisine_highlights": [
+        "matapa",
+        "piri-piri chicken/prawns",
+        "galinha à zambeziana",
+        "caril de caranguejo (crab curry)",
+        "xima (maize porridge)",
+        "prawns with coconut"
+      ],
+      "music_art_traditions": [
+        "Marrabenta (national music genre)",
+        "Timbila (Chopi xylophone, UNESCO)",
+        "Makonde sculpture/carving",
+        "Mapiko dance (Makonde)"
+      ],
+      "film_industry": "Small (Azagaia was prominent rapper/activist)",
+      "intangible_heritage_items": [
+        "Chopi Timbila (UNESCO)",
+        "Gule Wamkulu (shared with Malawi/Zambia, UNESCO)"
+      ],
+      "notable_historical_figures": [
+        "Samora Machel (independence hero, 1st president)",
+        "Eduardo Mondlane (FRELIMO founder)",
+        "Joaquim Chissano (peace architect)",
+        "Graça Machel (activist, widow of Machel and Mandela)",
+        "Mia Couto (author)"
+      ],
+      "world_heritage_sites": [
+        "Island of Mozambique"
+      ],
+      "media_landscape": "TVM state; STV (private); Canal de Moçambique; limited press freedom; community radio widespread",
+      "notes": "AK-47 on flag (revolution); Portuguese colonial heritage; Makonde art; piri-piri cuisine; Marrabenta music; Island of Mozambique (Swahili+Portuguese heritage)."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (Portuguese system) and customary law",
+      "constitution_year": 2004,
+      "sharia_applicability": "None",
+      "customary_law_role": "Community courts (tribunais comunitários) apply customary law",
+      "icc_membership": "Not a state party",
+      "judicial_independence_score": 0.25,
+      "contract_enforcement_days": 950,
+      "property_rights_index": 25,
+      "notes": "FRELIMO dominance affects judiciary; community courts; Tribunal Administrativo (audit court); constitutional council."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 10,
+        "global_rank": 46
+      },
+      "area": {
+        "continent_rank": 14,
+        "global_rank": 35
+      },
+      "gdp_nominal": {
+        "continent_rank": 21,
+        "global_rank": 99
+      },
+      "gdp_per_capita": {
+        "continent_rank": 48,
+        "global_rank": 182
+      },
+      "hdi": {
+        "continent_rank": 52,
+        "global_rank": 183
+      },
+      "life_expectancy": {
+        "continent_rank": 48,
+        "global_rank": 184
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 22,
+        "global_rank": 138
+      },
+      "internet_penetration": {
+        "continent_rank": 38,
+        "global_rank": 160
+      },
+      "press_freedom": {
+        "continent_rank": 30,
+        "global_rank": 104
+      },
+      "global_peace_index": {
+        "continent_rank": 25,
+        "global_rank": 115
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": ""
     }
   },
   "leadership": {
@@ -303,7 +815,8 @@
       "name": "Filipe Nyusi",
       "title": "President",
       "since": "2015-01-15",
-      "notes": "FRELIMO; former defense minister; presided over gas boom and Cabo Delgado insurgency; term-limited 2024"
+      "notes": "FRELIMO; former defense minister; presided over gas boom and Cabo Delgado insurgency; term-limited 2024",
+      "party": ""
     },
     "president_elect": {
       "name": "Daniel Chapo",
@@ -334,7 +847,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {
