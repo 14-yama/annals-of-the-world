@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.869754Z",
-    "notes": "Comprehensive index for Eritrea covering Aksumite heritage, Italian Eritrea, British administration, Ethiopian federation and annexation, 30-year liberation war, independence 1993, Isaias Afwerki's isolation, and Tigray War involvement."
+    "notes": "Comprehensive index for Eritrea covering Aksumite heritage, Italian Eritrea, British administration, Ethiopian federation and annexation, 30-year liberation war, independence 1993, Isaias Afwerki's isolation, and Tigray War involvement.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Asmara",
@@ -130,7 +131,22 @@
       "life_expectancy": 67.5,
       "infant_mortality_per_1k": 28.0,
       "literacy_rate_pct": 76.6,
-      "net_migration_rate": -12.0
+      "net_migration_rate": -12.0,
+      "population_growth_rate_pct": 1.1,
+      "urban_population_growth_rate_pct": 3.6,
+      "life_expectancy_male": 64,
+      "life_expectancy_female": 69,
+      "under5_mortality_per_1k": 40,
+      "sex_ratio": 0.98,
+      "dependency_ratio": 72,
+      "population_density_per_km2": 30,
+      "age_structure": {
+        "0_14_pct": 40,
+        "15_24_pct": 20,
+        "25_54_pct": 33,
+        "55_64_pct": 4,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -154,7 +170,10 @@
       "alliances": [
         "AU (suspended participation)"
       ],
-      "notes": "Indefinite national service (nominally 18 months but often extends 10-20 years; de facto forced labour; primary driver of mass emigration); one of world's most militarized societies; fought Ethiopia 1998-2000 (100k killed); rapprochement with Ethiopia 2018 (Abiy Nobel Prize) but border still disputed"
+      "notes": "Indefinite national service (nominally 18 months but often extends 10-20 years; de facto forced labour; primary driver of mass emigration); one of world's most militarized societies; fought Ethiopia 1998-2000 (100k killed); rapprochement with Ethiopia 2018 (Abiy Nobel Prize) but border still disputed",
+      "paramilitary_personnel": 0,
+      "conscription": true,
+      "global_firepower_rank": 120
     },
     "trade": {
       "top_exports": [
@@ -178,14 +197,45 @@
         "South Korea"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 34.0
+      "remittances_pct_gdp": 34.0,
+      "total_exports_usd": "$500 million",
+      "total_imports_usd": "$1 billion",
+      "top_export_destinations": [
+        "China",
+        "South Korea",
+        "India",
+        "Japan"
+      ],
+      "top_import_origins": [
+        "UAE",
+        "China",
+        "Saudi Arabia",
+        "India",
+        "Egypt"
+      ],
+      "trade_as_pct_gdp": 65,
+      "current_account_balance_usd": "-$100 million",
+      "trade_agreements": [
+        "COMESA (suspended)",
+        "AfCFTA"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 7.0,
       "electricity_access_pct": 53.0,
       "mobile_subscriptions_per_100": 20,
       "railway_km": 306,
-      "paved_roads_pct": 22
+      "paved_roads_pct": 22,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
+      "road_network_km": 16000,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "EASSy"
+      ],
+      "notes": "No 4G; only 2G mobile; EriTel state monopoly; one of world's least connected countries."
     },
     "international_memberships": [
       "UN",
@@ -213,6 +263,26 @@
       "fragile_states_index": {
         "score": 93.8,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": -1.5,
+        "percentile": 3,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -2.0,
+        "percentile": 1,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.6,
+        "percentile": 18,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -228,12 +298,40 @@
         "locust swarms",
         "volcanic/geothermal (Danakil, one of most volcanically active regions globally)"
       ],
-      "protected_areas_pct": 5
+      "protected_areas_pct": 5,
+      "average_temperature_c": 25,
+      "average_rainfall_mm": 380,
+      "co2_per_capita_t": 0.1,
+      "deforestation_rate_pct": 0.3,
+      "water_stress_level": "High",
+      "environmental_performance_index": {
+        "score": 28,
+        "rank": 164,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 1500,
+        "endemic_species": 15,
+        "threatened_species": 40
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 175.0,
       "foreign_aid_received_usd": "80 million",
-      "notes": "One of highest debt-to-GDP ratios globally; limited engagement with international financial institutions; sanctions era (2009-2018, UN arms embargo); self-reliance ideology limits aid acceptance; 2% diaspora tax controversial"
+      "notes": "One of highest debt-to-GDP ratios globally; limited engagement with international financial institutions; sanctions era (2009-2018, UN arms embargo); self-reliance ideology limits aid acceptance; 2% diaspora tax controversial",
+      "external_debt_usd": "$850 million",
+      "debt_service_pct_revenue": 5,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "EU",
+        "World Bank (limited)",
+        "Italy",
+        "Japan"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Not applicable"
     },
     "education": {
       "primary_enrollment_pct": 55,
@@ -243,35 +341,431 @@
       "top_universities": [
         "Eritrea Institute of Technology (replaced University of Asmara, closed 2006)"
       ],
-      "notes": "University of Asmara (1958, one of Africa's oldest) closed and replaced by scattered colleges; militarization of education (final year at Sawa military camp); nine ethnic languages taught in primary; brain drain catastrophic (~5,000 flee monthly)"
+      "notes": "University of Asmara (1958, one of Africa's oldest) closed and replaced by scattered colleges; militarization of education (final year at Sawa military camp); nine ethnic languages taught in primary; brain drain catastrophic (~5,000 flee monthly)",
+      "education_expenditure_pct_gdp": 2.0,
+      "primary_completion_rate_pct": 50,
+      "gender_parity_index": 0.83,
+      "mean_years_of_schooling": 3.9,
+      "expected_years_of_schooling": 5.0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 42,
+      "out_of_school_children": 200000,
+      "academic_freedom_index": 0.05
     },
     "diaspora_migration": {
       "diaspora_population": "1.0 million (Sudan, Ethiopia, Israel, Germany, Sweden, UK, USA)",
       "refugees_hosted": 0,
       "refugees_produced": 580000,
       "remittances_usd": "480 million",
-      "notes": "One of world's top refugee-producing countries per capita; indefinite conscription primary driver; ~5,000 flee monthly via Sudan/Ethiopia routes; Mediterranean crossing deaths; 2% 'recovery and rehabilitation tax' on diaspora (controversially enforced); diaspora politically split pro/anti-Isaias"
+      "notes": "One of world's top refugee-producing countries per capita; indefinite conscription primary driver; ~5,000 flee monthly via Sudan/Ethiopia routes; Mediterranean crossing deaths; 2% 'recovery and rehabilitation tax' on diaspora (controversially enforced); diaspora politically split pro/anti-Isaias",
+      "diaspora_top_destinations": [
+        "Sudan",
+        "Ethiopia",
+        "Israel",
+        "Germany",
+        "USA",
+        "Sweden",
+        "UK"
+      ],
+      "asylum_seekers": 60000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Restrictive; exit visas required (widely violated)",
+      "remittances_pct_gdp": 34,
+      "net_migration_rate_per_1k": -12
     },
     "digital_economy": {
       "e_government_index": 0.18,
       "mobile_money_adoption": "None",
       "tech_hubs": [],
-      "notes": "One of least connected countries globally; EriTel government monopoly; internet penetration ~7% (among world's lowest); no private media; no mobile money; no tech ecosystem; isolation policies prevent digital development"
+      "notes": "One of least connected countries globally; EriTel government monopoly; internet penetration ~7% (among world's lowest); no private media; no mobile money; no tech ecosystem; isolation policies prevent digital development",
+      "e_participation_index": 0.05,
+      "ict_development_index": 0.9,
+      "mobile_money_accounts": 0,
+      "digital_payments_pct_adults": 0,
+      "fintech_companies": 0,
+      "startup_ecosystem_value_usd": "$0",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 0
     },
-    "notes_unique": "Won independence from Ethiopia in 1993 after a 30-year guerrilla war; the capital Asmara's Modernist architecture is a UNESCO World Heritage Site."
+    "notes_unique": "Won independence from Ethiopia in 1993 after a 30-year guerrilla war; the capital Asmara's Modernist architecture is a UNESCO World Heritage Site.",
+    "capital_coordinates": {
+      "lat": 15.3229,
+      "lon": 38.9251
+    },
+    "other_major_cities": [
+      "Keren",
+      "Massawa",
+      "Assab",
+      "Mendefera",
+      "Barentu"
+    ],
+    "national_motto": "None",
+    "national_anthem": "Eritra, Eritra, Eritra",
+    "currency_code": "ERN",
+    "internet_tld": ".er",
+    "utc_offset": "UTC+3",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 15.1794,
+        "lon": 39.7823
+      },
+      "bounding_box": {
+        "north": 18.0,
+        "south": 12.36,
+        "east": 43.15,
+        "west": 36.44
+      },
+      "land_area_km2": 117600,
+      "water_area_km2": 0,
+      "coastline_km": 2234,
+      "borders": [
+        "Sudan",
+        "Ethiopia",
+        "Djibouti"
+      ],
+      "border_lengths_km": {
+        "Sudan": 682,
+        "Ethiopia": 1033,
+        "Djibouti": 125
+      },
+      "highest_point": {
+        "name": "Emba Soira",
+        "elevation_m": 3018
+      },
+      "lowest_point": {
+        "name": "Danakil Depression",
+        "elevation_m": -75
+      },
+      "terrain": "Central highlands; western lowlands; eastern coastal desert strip; Danakil Depression in southeast",
+      "land_use": {
+        "agricultural_pct": 75.1,
+        "arable_pct": 6.8,
+        "forest_pct": 15.1,
+        "other_pct": 9.8
+      },
+      "major_rivers": [
+        "Barka",
+        "Anseba",
+        "Gash"
+      ],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 78000,
+      "landlocked": false,
+      "notes": "Part of Horn of Africa; Dahlak Archipelago in Red Sea; Danakil Depression has hottest average temperatures on Earth; 1200km Red Sea coastline."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$2.3 billion",
+      "gdp_ppp_usd": "$7 billion",
+      "gdp_per_capita_nominal_usd": 643,
+      "gdp_per_capita_ppp_usd": 1970,
+      "gdp_growth_rate_pct": 2.9,
+      "inflation_rate_pct": 4.0,
+      "unemployment_rate_pct": 7.0,
+      "youth_unemployment_rate_pct": 12,
+      "poverty_rate_pct": 50,
+      "poverty_line_definition": "Estimated (no official data)",
+      "gini_coefficient": 0,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 13,
+        "industry_pct_gdp": 28,
+        "services_pct_gdp": 59
+      },
+      "labor_force": 1800000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 80,
+        "industry_pct": 7,
+        "services_pct": 13
+      },
+      "fdi_inflow_usd": "$60 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$200 million",
+      "ease_of_doing_business_rank": 189,
+      "economic_freedom_index_score": 38.9,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Heavily militarized economy; diaspora tax (2%); Bisha gold/copper mine (Nevsun/Zijin Mining); port access leverage over Ethiopia lost in 1998 war."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 4.1,
+      "health_expenditure_per_capita_usd": 16,
+      "physicians_per_1k": 0.06,
+      "nurses_midwives_per_1k": 0.6,
+      "hospital_beds_per_1k": 0.7,
+      "maternal_mortality_per_100k": 322,
+      "hiv_prevalence_pct": 0.6,
+      "malaria_incidence_per_1k": 50,
+      "tuberculosis_incidence_per_100k": 89,
+      "access_to_clean_water_pct": 57,
+      "access_to_sanitation_pct": 12,
+      "vaccination_coverage_pct": 86,
+      "stunting_under5_pct": 50,
+      "obesity_rate_pct": 5.0,
+      "universal_health_coverage_index": 38,
+      "leading_causes_of_death": [
+        "neonatal disorders",
+        "lower respiratory infections",
+        "diarrheal diseases",
+        "tuberculosis",
+        "malaria"
+      ],
+      "notes": "Community-based health system; good vaccination coverage despite poverty; severe doctor shortage; national service doctors."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 22,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 6.8,
+      "agricultural_land_pct": 75.1,
+      "irrigated_land_pct": 2,
+      "major_crops": [
+        "sorghum",
+        "millet",
+        "barley",
+        "wheat",
+        "teff",
+        "lentils"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "sheep",
+        "camels"
+      ],
+      "food_import_dependency_pct": 40,
+      "cereal_yield_kg_per_hectare": 600,
+      "agricultural_employment_pct": 80,
+      "prevalence_of_undernourishment_pct": 55,
+      "notes": "Severe food insecurity; rain-fed agriculture; terracing tradition; recurrent drought."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 80,
+        "hydroelectric_pct": 0,
+        "solar_pct": 5,
+        "wind_pct": 5,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 10
+      },
+      "installed_capacity_mw": 140,
+      "electricity_production_gwh": 400,
+      "electricity_consumption_per_capita_kwh": 90,
+      "energy_imports_pct": 100,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 5000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 5,
+      "energy_access_urban_pct": 50,
+      "notes": "100% oil imported; geothermal potential in Danakil; Hirgigo thermal plant; solar projects expanding."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Asmara International Airport"
+      ],
+      "major_airports_domestic": [
+        "Massawa",
+        "Assab"
+      ],
+      "national_airline": "Eritrean Airlines (suspended)",
+      "major_seaports": [
+        "Massawa",
+        "Assab"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 5,
+      "registered_vehicles_per_1k": 5,
+      "road_fatalities_per_100k": 25,
+      "notes": "Massawa port; Italian colonial-era railway (Asmara-Massawa, partially restored); limited infrastructure."
+    },
+    "tourism": {
+      "annual_visitors": 142000,
+      "tourism_revenue_usd": "$25 million",
+      "tourism_pct_gdp": 1.1,
+      "tourism_employment_pct": 2,
+      "unesco_world_heritage_sites": 1,
+      "unesco_sites_list": [
+        "Asmara: A Modernist African City (2017)"
+      ],
+      "major_attractions": [
+        "Asmara Art Deco architecture",
+        "Dahlak Archipelago diving",
+        "Massawa (Red Sea port)",
+        "Danakil Depression",
+        "Qohaito ruins"
+      ],
+      "visa_free_access_countries": 38,
+      "henley_passport_rank": 90,
+      "notes": "Asmara UNESCO site for Italian Art Deco and Modernist architecture; tourism heavily restricted; diaspora visitors significant."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 1,
+      "gender_inequality_index": 0,
+      "gender_inequality_rank": 0,
+      "gender_gap_index_score": 0,
+      "women_in_parliament_pct": 0,
+      "women_labor_force_participation_pct": 75,
+      "maternal_mortality_per_100k": 322,
+      "child_marriage_pct": 41,
+      "fgm_prevalence_pct": 83,
+      "lgbtq_legal_status": "Illegal (up to 10 years)",
+      "death_penalty_status": "Retentionist",
+      "human_trafficking_tier": "Special Case",
+      "child_labor_pct": 0,
+      "notes": "Ranked among world's worst for human rights; indefinite national service (forced labor); no free press since 2001; no elections since 1993; highest refugee outflow per capita in Africa."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.5,
+      "global_peace_index_rank": 140,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 7.0,
+      "active_conflicts": [],
+      "border_disputes": [
+        "Djibouti (Ras Doumeira, mediated)"
+      ],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$20 million",
+      "internally_displaced_persons": 0,
+      "notes": "Participated in Ethiopia's Tigray war (2020-22); UN sanctions lifted 2018; highly militarized society; mass exodus of youth fleeing national service."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "camel"
+      ],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "Injera with zigni (spicy stew)",
+      "national_sport": "Cycling (Tour of Eritrea)",
+      "major_festivals": [
+        "Independence Day (24 May)",
+        "Fenkil Day (Operation Fenkil)"
+      ],
+      "cuisine_highlights": [
+        "injera with zigni",
+        "tsebhi (stew)",
+        "shiro",
+        "fool (fava beans)",
+        "suwa (traditional beer)"
+      ],
+      "music_art_traditions": [
+        "Tigrinya and Tigre traditional music",
+        "guayla dance",
+        "Italian-influenced Asmara cafe culture"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "Isaias Afwerki (president since 1993)",
+        "Woldeab Woldemariam (independence intellectual)",
+        "Zerai Deres (anti-colonial hero)",
+        "Daniel Teklehaimanot (cyclist)"
+      ],
+      "world_heritage_sites": [
+        "Asmara: A Modernist African City"
+      ],
+      "media_landscape": "No independent media; state-run EriTV and Dimtsi Hafash only; ranked last globally for press freedom",
+      "notes": "9 ethnic groups; Tigrinya and Tigre largest; Italian colonial architecture uniquely preserved; cycling culture."
+    },
+    "legal_system": {
+      "legal_tradition": "Mixed: civil law, customary law, religious law",
+      "constitution_year": 1997,
+      "sharia_applicability": "Muslim personal status matters",
+      "customary_law_role": "Significant (community courts)",
+      "icc_membership": "Non-state party",
+      "judicial_independence_score": 0.05,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 10,
+      "notes": "1997 constitution never implemented; no elections held; president rules by decree; Special Court handles political cases."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 39,
+        "global_rank": 127
+      },
+      "area": {
+        "continent_rank": 30,
+        "global_rank": 99
+      },
+      "gdp_nominal": {
+        "continent_rank": 48,
+        "global_rank": 173
+      },
+      "gdp_per_capita": {
+        "continent_rank": 44,
+        "global_rank": 176
+      },
+      "hdi": {
+        "continent_rank": 46,
+        "global_rank": 176
+      },
+      "life_expectancy": {
+        "continent_rank": 14,
+        "global_rank": 117
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 56,
+        "global_rank": 189
+      },
+      "internet_penetration": {
+        "continent_rank": 53,
+        "global_rank": 196
+      },
+      "press_freedom": {
+        "continent_rank": 55,
+        "global_rank": 180
+      },
+      "global_peace_index": {
+        "continent_rank": 38,
+        "global_rank": 140
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": "Ranks last in Africa for press freedom and business environment."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Isaias Afwerki",
       "title": "President",
       "since": "1993-05-24",
-      "notes": "Former EPLF leader; only president since independence; no elections held; constitution never implemented; indefinite national conscription"
+      "notes": "Former EPLF leader; only president since independence; no elections held; constitution never implemented; indefinite national conscription",
+      "party": ""
     },
     "former_leaders": [],
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.872654Z",
-    "notes": "Comprehensive index for Ghana covering Akan goldfields, Ashanti Empire, slave castles, Gold Coast colony, Nkrumah pan-Africanism, coups, and Fourth Republic."
+    "notes": "Comprehensive index for Ghana covering Akan goldfields, Ashanti Empire, slave castles, Gold Coast colony, Nkrumah pan-Africanism, coups, and Fourth Republic.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Accra",
@@ -127,7 +128,22 @@
       "life_expectancy": 64.9,
       "infant_mortality_per_1k": 30.0,
       "literacy_rate_pct": 79.0,
-      "net_migration_rate": -0.7
+      "net_migration_rate": -0.7,
+      "population_growth_rate_pct": 2.1,
+      "urban_population_growth_rate_pct": 3.3,
+      "life_expectancy_male": 62,
+      "life_expectancy_female": 66,
+      "under5_mortality_per_1k": 45,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 68,
+      "population_density_per_km2": 137,
+      "age_structure": {
+        "0_14_pct": 38,
+        "15_24_pct": 19,
+        "25_54_pct": 34,
+        "55_64_pct": 5,
+        "65_plus_pct": 4
+      }
     },
     "natural_resources": {
       "primary": [
@@ -157,7 +173,10 @@
         "AU",
         "ECOWAS"
       ],
-      "notes": "Professional military with strong peacekeeping tradition; major UN contributor (Lebanon, DRC, Mali, South Sudan); Kofi Annan Military Academy; 4 coups historically (1966, 1972, 1979, 1981) but democratic since 1992; first sub-Saharan African country to gain independence (1957)"
+      "notes": "Professional military with strong peacekeeping tradition; major UN contributor (Lebanon, DRC, Mali, South Sudan); Kofi Annan Military Academy; 4 coups historically (1966, 1972, 1979, 1981) but democratic since 1992; first sub-Saharan African country to gain independence (1957)",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 74
     },
     "trade": {
       "top_exports": [
@@ -186,14 +205,54 @@
         "Netherlands"
       ],
       "trade_balance": "surplus",
-      "remittances_pct_gdp": 5.5
+      "remittances_pct_gdp": 5.5,
+      "total_exports_usd": "$17 billion",
+      "total_imports_usd": "$15 billion",
+      "top_export_destinations": [
+        "Switzerland",
+        "China",
+        "India",
+        "UAE",
+        "South Africa"
+      ],
+      "top_import_origins": [
+        "China",
+        "USA",
+        "UK",
+        "Netherlands",
+        "India"
+      ],
+      "trade_as_pct_gdp": 42,
+      "current_account_balance_usd": "-$2 billion",
+      "trade_agreements": [
+        "ECOWAS",
+        "AfCFTA (HQ in Accra)"
+      ],
+      "special_economic_zones": [
+        "Tema Free Zone",
+        "Dawa Industrial Zone"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 68.0,
       "electricity_access_pct": 85.0,
       "mobile_subscriptions_per_100": 130,
       "railway_km": 947,
-      "paved_roads_pct": 32
+      "paved_roads_pct": 32,
+      "broadband_subscriptions_per_100": 0.6,
+      "4g_coverage_pct": 80,
+      "5g_availability": false,
+      "road_network_km": 65725,
+      "waterways_km": 1293,
+      "submarine_cables": [
+        "MainOne",
+        "SAT-3/WASC",
+        "ACE",
+        "GLO-1",
+        "WACS",
+        "Google Equiano"
+      ],
+      "notes": "MTN, Vodafone, AirtelTigo compete; data center hub; Google submarine cable landed 2022."
     },
     "international_memberships": [
       "UN",
@@ -223,6 +282,26 @@
       "fragile_states_index": {
         "score": 65.8,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.56,
+        "rank": 51,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.1,
+        "percentile": 40,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": 0.0,
+        "percentile": 48,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": 0.0,
+        "percentile": 45,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -240,12 +319,41 @@
         "deforestation (galamsey mining)",
         "coastal erosion"
       ],
-      "protected_areas_pct": 15
+      "protected_areas_pct": 15,
+      "average_temperature_c": 27,
+      "average_rainfall_mm": 1200,
+      "co2_per_capita_t": 0.6,
+      "deforestation_rate_pct": 2.0,
+      "water_stress_level": "Medium",
+      "environmental_performance_index": {
+        "score": 31,
+        "rank": 149,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 5500,
+        "endemic_species": 50,
+        "threatened_species": 120
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 88.1,
       "foreign_aid_received_usd": "1.5 billion",
-      "notes": "Debt crisis 2022 (domestic debt exchange, external default); IMF $3B Extended Credit Facility 2023; Chinese infrastructure loans; overspending on infrastructure; 'HIPC graduate' now back in debt distress"
+      "notes": "Debt crisis 2022 (domestic debt exchange, external default); IMF $3B Extended Credit Facility 2023; Chinese infrastructure loans; overspending on infrastructure; 'HIPC graduate' now back in debt distress",
+      "external_debt_usd": "$28 billion",
+      "debt_service_pct_revenue": 45,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "World Bank",
+        "IMF",
+        "USA",
+        "EU",
+        "UK"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion (2004); Eurobond restructuring 2023-24"
     },
     "education": {
       "primary_enrollment_pct": 92,
@@ -258,14 +366,42 @@
         "University of Cape Coast",
         "Ashesi University (private, top-ranked in Africa)"
       ],
-      "notes": "Free SHS (Senior High School) policy since 2017 (doubled enrollment); English-language instruction; Kwame Nkrumah's education vision; Ashesi University innovative model; Year of Return 2019 engaged diaspora; significant brain drain to UK/USA/Canada"
+      "notes": "Free SHS (Senior High School) policy since 2017 (doubled enrollment); English-language instruction; Kwame Nkrumah's education vision; Ashesi University innovative model; Year of Return 2019 engaged diaspora; significant brain drain to UK/USA/Canada",
+      "education_expenditure_pct_gdp": 4.0,
+      "primary_completion_rate_pct": 100,
+      "gender_parity_index": 1.01,
+      "mean_years_of_schooling": 8.3,
+      "expected_years_of_schooling": 12.0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 30,
+      "out_of_school_children": 600000,
+      "academic_freedom_index": 0.7
     },
     "diaspora_migration": {
       "diaspora_population": "1.5 million (UK ~170k, USA ~250k, Germany, Canada, Netherlands, Nigeria)",
       "refugees_hosted": 12000,
       "refugees_produced": 14000,
       "remittances_usd": "4.5 billion",
-      "notes": "Year of Return 2019 (400th anniversary of slave trade, invited diaspora); Beyond the Return program; Ghanaian diaspora highly educated; Nkrumah's Pan-Africanist invitation attracted diaspora (W.E.B. Du Bois buried in Accra); returnee community growing; dual citizenship allowed since 2002"
+      "notes": "Year of Return 2019 (400th anniversary of slave trade, invited diaspora); Beyond the Return program; Ghanaian diaspora highly educated; Nkrumah's Pan-Africanist invitation attracted diaspora (W.E.B. Du Bois buried in Accra); returnee community growing; dual citizenship allowed since 2002",
+      "diaspora_top_destinations": [
+        "USA",
+        "UK",
+        "Germany",
+        "Italy",
+        "Netherlands",
+        "Canada"
+      ],
+      "asylum_seekers": 5000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 5000,
+      "immigration_policy": "Year of Return / Beyond the Return (diaspora engagement)",
+      "remittances_pct_gdp": 6.0,
+      "net_migration_rate_per_1k": -0.7
     },
     "digital_economy": {
       "e_government_index": 0.56,
@@ -274,16 +410,387 @@
         "Accra (iSpace, MEST, Impact Hub, Ghana Tech Lab)",
         "Kumasi"
       ],
-      "notes": "West Africa's leading tech ecosystem; mobile money revolution (MTN MoMo, AirtelTigo Money); Accra startup scene vibrant; AfCFTA Secretariat tech hub potential; Ghana Digital Centres; mPharma unicorn; Zeepay; Hubtel; government digital ID (Ghana Card) advanced; submarine cables (ACE, WACS, MainOne)"
+      "notes": "West Africa's leading tech ecosystem; mobile money revolution (MTN MoMo, AirtelTigo Money); Accra startup scene vibrant; AfCFTA Secretariat tech hub potential; Ghana Digital Centres; mPharma unicorn; Zeepay; Hubtel; government digital ID (Ghana Card) advanced; submarine cables (ACE, WACS, MainOne)",
+      "e_participation_index": 0.65,
+      "ict_development_index": 4.0,
+      "mobile_money_accounts": 20000000,
+      "digital_payments_pct_adults": 45,
+      "fintech_companies": 100,
+      "startup_ecosystem_value_usd": "$500 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.55,
+      "innovation_index_score": 27.6,
+      "innovation_index_rank": 93,
+      "ai_readiness_index": 35
     },
-    "notes_unique": "First sub-Saharan African country to gain independence (1957); named after the medieval Ghana Empire; the Ashanti Golden Stool is the symbol of national unity."
+    "notes_unique": "First sub-Saharan African country to gain independence (1957); named after the medieval Ghana Empire; the Ashanti Golden Stool is the symbol of national unity.",
+    "capital_coordinates": {
+      "lat": 5.6037,
+      "lon": -0.187
+    },
+    "other_major_cities": [
+      "Kumasi",
+      "Tamale",
+      "Takoradi",
+      "Ashaiman",
+      "Cape Coast",
+      "Tema"
+    ],
+    "national_motto": "Freedom and Justice",
+    "national_anthem": "God Bless Our Homeland Ghana",
+    "currency_code": "GHS",
+    "internet_tld": ".gh",
+    "utc_offset": "UTC+0",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 7.9465,
+        "lon": -1.0232
+      },
+      "bounding_box": {
+        "north": 11.17,
+        "south": 4.74,
+        "east": 1.2,
+        "west": -3.26
+      },
+      "land_area_km2": 238533,
+      "water_area_km2": 11000,
+      "coastline_km": 539,
+      "borders": [
+        "Côte d'Ivoire",
+        "Burkina Faso",
+        "Togo"
+      ],
+      "border_lengths_km": {
+        "Côte d'Ivoire": 720,
+        "Burkina Faso": 602,
+        "Togo": 877
+      },
+      "highest_point": {
+        "name": "Mount Afadjato",
+        "elevation_m": 885
+      },
+      "lowest_point": {
+        "name": "Atlantic Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Coastal lowlands; Ashanti uplands in center; Volta Basin; northern savanna",
+      "land_use": {
+        "agricultural_pct": 69.1,
+        "arable_pct": 20.7,
+        "forest_pct": 21.2,
+        "other_pct": 9.7
+      },
+      "major_rivers": [
+        "Volta (Black, White, Red)",
+        "Pra",
+        "Ankobra",
+        "Tano"
+      ],
+      "major_lakes": [
+        "Lake Volta (one of world's largest artificial lakes)"
+      ],
+      "exclusive_economic_zone_km2": 218000,
+      "landlocked": false,
+      "notes": "Lake Volta (8,502 km², largest artificial lake by surface area); gold/oil/cocoa economy; Gateway to West Africa."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$76 billion",
+      "gdp_ppp_usd": "$196 billion",
+      "gdp_per_capita_nominal_usd": 2330,
+      "gdp_per_capita_ppp_usd": 6000,
+      "gdp_growth_rate_pct": 2.8,
+      "inflation_rate_pct": 23,
+      "unemployment_rate_pct": 13.4,
+      "youth_unemployment_rate_pct": 20,
+      "poverty_rate_pct": 23.4,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 43.5,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 20,
+        "industry_pct_gdp": 32,
+        "services_pct_gdp": 48
+      },
+      "labor_force": 14000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 45,
+        "industry_pct": 15,
+        "services_pct": 40
+      },
+      "fdi_inflow_usd": "$2.6 billion",
+      "fdi_outflow_usd": "$100 million",
+      "foreign_exchange_reserves_usd": "$6 billion",
+      "ease_of_doing_business_rank": 118,
+      "economic_freedom_index_score": 58.7,
+      "credit_rating": {
+        "moodys": "Caa1",
+        "sp": "SD",
+        "fitch": "RD"
+      },
+      "notes": "Debt restructuring (2022-24, IMF bailout); gold #1 African producer; cocoa #2 global; oil producer (Jubilee); cedi depreciation; $3B IMF program."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.4,
+      "health_expenditure_per_capita_usd": 69,
+      "physicians_per_1k": 0.14,
+      "nurses_midwives_per_1k": 2.4,
+      "hospital_beds_per_1k": 0.9,
+      "maternal_mortality_per_100k": 263,
+      "hiv_prevalence_pct": 1.7,
+      "malaria_incidence_per_1k": 195,
+      "tuberculosis_incidence_per_100k": 139,
+      "access_to_clean_water_pct": 87,
+      "access_to_sanitation_pct": 21,
+      "vaccination_coverage_pct": 89,
+      "stunting_under5_pct": 18,
+      "obesity_rate_pct": 10.9,
+      "universal_health_coverage_index": 47,
+      "leading_causes_of_death": [
+        "malaria",
+        "lower respiratory infections",
+        "neonatal disorders",
+        "stroke",
+        "HIV/AIDS"
+      ],
+      "notes": "NHIS (National Health Insurance Scheme) since 2003; malaria top killer; significant brain drain of doctors."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 44,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 20.7,
+      "agricultural_land_pct": 69.1,
+      "irrigated_land_pct": 0.8,
+      "major_crops": [
+        "cocoa",
+        "cassava",
+        "yam",
+        "plantain",
+        "maize",
+        "oil palm",
+        "rice",
+        "shea nuts"
+      ],
+      "major_livestock": [
+        "cattle",
+        "sheep",
+        "goats",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 30,
+      "cereal_yield_kg_per_hectare": 1800,
+      "agricultural_employment_pct": 45,
+      "prevalence_of_undernourishment_pct": 6,
+      "notes": "2nd largest cocoa producer globally; yam major staple; Planting for Food and Jobs programme; cocoa smuggling concern."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 35,
+        "hydroelectric_pct": 55,
+        "solar_pct": 3,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 7
+      },
+      "installed_capacity_mw": 5400,
+      "electricity_production_gwh": 18000,
+      "electricity_consumption_per_capita_kwh": 350,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 170000,
+      "oil_consumption_bpd": 90000,
+      "natural_gas_production_bcm": 2.5,
+      "energy_access_rural_pct": 65,
+      "energy_access_urban_pct": 95,
+      "notes": "Akosombo Dam (Volta River, 1020MW); oil production since 2010 (Jubilee, TEN, SGN fields); exports electricity to Togo/Benin; periodic dumsor (power outages)."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Kotoka International Airport (Accra)"
+      ],
+      "major_airports_domestic": [
+        "Kumasi",
+        "Tamale",
+        "Takoradi"
+      ],
+      "national_airline": "None (Ghana International Airlines defunct; plans for new carrier)",
+      "major_seaports": [
+        "Tema",
+        "Takoradi"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 40,
+      "registered_vehicles_per_1k": 50,
+      "road_fatalities_per_100k": 25,
+      "notes": "Tema port expanding (MPS Terminal 3); no railway currently operational (revival project underway); road network primary."
+    },
+    "tourism": {
+      "annual_visitors": 900000,
+      "tourism_revenue_usd": "$1.5 billion",
+      "tourism_pct_gdp": 2.0,
+      "tourism_employment_pct": 5,
+      "unesco_world_heritage_sites": 2,
+      "unesco_sites_list": [
+        "Forts and Castles, Volta, Greater Accra, Central and Western Regions",
+        "Asante Traditional Buildings"
+      ],
+      "major_attractions": [
+        "Cape Coast Castle",
+        "Elmina Castle",
+        "Kakum National Park (canopy walk)",
+        "Mole National Park",
+        "Ashanti Kingdom capital Kumasi",
+        "Kwame Nkrumah Mausoleum"
+      ],
+      "visa_free_access_countries": 64,
+      "henley_passport_rank": 72,
+      "notes": "Year of Return (2019) and Beyond the Return campaigns boosted diaspora tourism; slave castle heritage; AfroChic destination branding."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Free",
+      "freedom_house_score": 80,
+      "gender_inequality_index": 0.538,
+      "gender_inequality_rank": 146,
+      "gender_gap_index_score": 0.67,
+      "women_in_parliament_pct": 15,
+      "women_labor_force_participation_pct": 62,
+      "maternal_mortality_per_100k": 263,
+      "child_marriage_pct": 19,
+      "fgm_prevalence_pct": 4,
+      "lgbtq_legal_status": "Illegal (up to 3 years; Proper Human Sexual Rights Bill pending)",
+      "death_penalty_status": "Abolitionist in practice",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 20,
+      "notes": "Beacon of democracy in West Africa; peaceful transfers of power; Anti-LGBTQ bill before parliament (2024); child labor in cocoa sector concern."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.8,
+      "global_peace_index_rank": 56,
+      "terrorism_index_score": 3.2,
+      "terrorism_index_rank": 53,
+      "homicide_rate_per_100k": 2.1,
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 2800,
+      "arms_imports_usd": "$30 million",
+      "internally_displaced_persons": 5000,
+      "notes": "One of most peaceful countries in West Africa; potential Sahel spillover concern; Kofi Annan peacekeeping legacy."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "Black Star",
+        "Golden Eagle"
+      ],
+      "national_animal": "tawny eagle",
+      "national_flower": "impala lily",
+      "national_dish": "Fufu with light soup / Jollof rice",
+      "national_sport": "Football (Black Stars)",
+      "major_festivals": [
+        "Homowo (Ga harvest festival)",
+        "Adae Kese (Ashanti)",
+        "Hogbetsotso (Anlo-Ewe exodus festival)",
+        "Panafest",
+        "Aboakyir (deer hunting festival)"
+      ],
+      "cuisine_highlights": [
+        "jollof rice",
+        "fufu with light soup",
+        "banku with tilapia",
+        "waakye",
+        "kelewele (fried plantain)",
+        "kenkey"
+      ],
+      "music_art_traditions": [
+        "Highlife music (originated here)",
+        "Azonto dance",
+        "Hiplife",
+        "Adinkra symbols",
+        "Kente cloth weaving",
+        "Fante Asafo shrines"
+      ],
+      "film_industry": "Ghallywood (Kumawood): active and growing",
+      "intangible_heritage_items": [
+        "Kente cloth weaving traditions"
+      ],
+      "notable_historical_figures": [
+        "Kwame Nkrumah (Pan-Africanism, 1st president)",
+        "Yaa Asantewaa (Ashanti queen mother warrior)",
+        "Kofi Annan (UN Secretary-General)",
+        "Jerry Rawlings (coup leader/democratic president)"
+      ],
+      "world_heritage_sites": [
+        "Forts and Castles",
+        "Asante Traditional Buildings"
+      ],
+      "media_landscape": "Vibrant and free; Joy FM, Citi FM, GBC state; dozens of private stations; Daily Graphic",
+      "notes": "First sub-Saharan country to gain independence (1957); Pan-African movement birthplace; Ashanti gold culture; Year of Return diaspora engagement."
+    },
+    "legal_system": {
+      "legal_tradition": "English common law and customary law",
+      "constitution_year": 1992,
+      "sharia_applicability": "None",
+      "customary_law_role": "Recognized in family, inheritance, and chieftaincy matters",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.55,
+      "contract_enforcement_days": 710,
+      "property_rights_index": 50,
+      "notes": "4th Republic since 1992; strong constitutional court; chieftaincy Act; National House of Chiefs."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 14,
+        "global_rank": 48
+      },
+      "area": {
+        "continent_rank": 24,
+        "global_rank": 81
+      },
+      "gdp_nominal": {
+        "continent_rank": 8,
+        "global_rank": 72
+      },
+      "gdp_per_capita": {
+        "continent_rank": 24,
+        "global_rank": 142
+      },
+      "hdi": {
+        "continent_rank": 17,
+        "global_rank": 133
+      },
+      "life_expectancy": {
+        "continent_rank": 24,
+        "global_rank": 128
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 17,
+        "global_rank": 118
+      },
+      "internet_penetration": {
+        "continent_rank": 7,
+        "global_rank": 80
+      },
+      "press_freedom": {
+        "continent_rank": 5,
+        "global_rank": 50
+      },
+      "global_peace_index": {
+        "continent_rank": 3,
+        "global_rank": 56
+      },
+      "innovation_index": {
+        "continent_rank": 9,
+        "global_rank": 93
+      },
+      "notes": "One of Africa's most democratic and peaceful nations."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "John Dramani Mahama",
       "title": "President",
       "since": "2025-01-07",
-      "notes": "NDC; returned to power after defeat in 2016; previously president 2012–2017; served as VP under Atta Mills"
+      "notes": "NDC; returned to power after defeat in 2016; previously president 2012–2017; served as VP under Atta Mills",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -315,7 +822,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

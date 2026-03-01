@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.871966Z",
-    "notes": "Comprehensive index for Gambia covering Senegambia, Kunta Kinte heritage, British colony, Jammeh dictatorship, and 2016 crisis."
+    "notes": "Comprehensive index for Gambia covering Senegambia, Kunta Kinte heritage, British colony, Jammeh dictatorship, and 2016 crisis.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Banjul",
@@ -126,7 +127,22 @@
       "life_expectancy": 63.4,
       "infant_mortality_per_1k": 38.0,
       "literacy_rate_pct": 58.1,
-      "net_migration_rate": -1.5
+      "net_migration_rate": -1.5,
+      "population_growth_rate_pct": 2.9,
+      "urban_population_growth_rate_pct": 4.0,
+      "life_expectancy_male": 61,
+      "life_expectancy_female": 65,
+      "under5_mortality_per_1k": 52,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 85,
+      "population_density_per_km2": 240,
+      "age_structure": {
+        "0_14_pct": 44,
+        "15_24_pct": 20,
+        "25_54_pct": 30,
+        "55_64_pct": 3,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -149,7 +165,10 @@
         "AU",
         "ECOWAS"
       ],
-      "notes": "ECOMIG force (ECOWAS Mission in The Gambia) deployed since 2017 to ensure democratic transition after Jammeh refused to leave; security sector reform ongoing; Gambian forces small; Jammeh's Junglers (death squad) being investigated for past atrocities"
+      "notes": "ECOMIG force (ECOWAS Mission in The Gambia) deployed since 2017 to ensure democratic transition after Jammeh refused to leave; security sector reform ongoing; Gambian forces small; Jammeh's Junglers (death squad) being investigated for past atrocities",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -174,14 +193,45 @@
         "Guinea-Bissau"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 22.0
+      "remittances_pct_gdp": 22.0,
+      "total_exports_usd": "$100 million",
+      "total_imports_usd": "$600 million",
+      "top_export_destinations": [
+        "Senegal",
+        "China",
+        "India",
+        "Guinea-Bissau"
+      ],
+      "top_import_origins": [
+        "China",
+        "Senegal",
+        "Brazil",
+        "India",
+        "Netherlands"
+      ],
+      "trade_as_pct_gdp": 32,
+      "current_account_balance_usd": "-$150 million",
+      "trade_agreements": [
+        "ECOWAS",
+        "AfCFTA"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 38.0,
       "electricity_access_pct": 65.0,
       "mobile_subscriptions_per_100": 120,
       "railway_km": 0,
-      "paved_roads_pct": 20
+      "paved_roads_pct": 20,
+      "broadband_subscriptions_per_100": 0.2,
+      "4g_coverage_pct": 40,
+      "5g_availability": false,
+      "road_network_km": 3740,
+      "waterways_km": 390,
+      "submarine_cables": [
+        "ACE"
+      ],
+      "notes": "Trans-Gambia highway critical for Senegal's Casamance link; limited infrastructure."
     },
     "international_memberships": [
       "UN",
@@ -210,6 +260,26 @@
       "fragile_states_index": {
         "score": 81.0,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.43,
+        "rank": 93,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.7,
+        "percentile": 15,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.4,
+        "percentile": 30,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.1,
+        "percentile": 35,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -224,12 +294,41 @@
         "deforestation",
         "sea-level rise (Banjul vulnerable)"
       ],
-      "protected_areas_pct": 4
+      "protected_areas_pct": 4,
+      "average_temperature_c": 27,
+      "average_rainfall_mm": 850,
+      "co2_per_capita_t": 0.2,
+      "deforestation_rate_pct": 3.0,
+      "water_stress_level": "Medium",
+      "environmental_performance_index": {
+        "score": 30,
+        "rank": 153,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 2500,
+        "endemic_species": 5,
+        "threatened_species": 30
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 83.0,
       "foreign_aid_received_usd": "300 million",
-      "notes": "Heavily aid-dependent; tourism important revenue (mainly European package holidays, 'Smiling Coast'); HIPC debt relief; transitional justice commission (TRRC) investigating Jammeh-era abuses"
+      "notes": "Heavily aid-dependent; tourism important revenue (mainly European package holidays, 'Smiling Coast'); HIPC debt relief; transitional justice commission (TRRC) investigating Jammeh-era abuses",
+      "external_debt_usd": "$850 million",
+      "debt_service_pct_revenue": 10,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "EU",
+        "World Bank",
+        "AfDB",
+        "USA",
+        "Turkey"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 82,
@@ -239,14 +338,42 @@
       "top_universities": [
         "University of The Gambia"
       ],
-      "notes": "English-language instruction; madrasas significant in education; gender parity improving; Jammeh era saw arbitrary education decrees; free primary education policy; small scale limits higher education options"
+      "notes": "English-language instruction; madrasas significant in education; gender parity improving; Jammeh era saw arbitrary education decrees; free primary education policy; small scale limits higher education options",
+      "education_expenditure_pct_gdp": 2.8,
+      "primary_completion_rate_pct": 75,
+      "gender_parity_index": 1.05,
+      "mean_years_of_schooling": 3.9,
+      "expected_years_of_schooling": 9.5,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 30,
+      "out_of_school_children": 40000,
+      "academic_freedom_index": 0.5
     },
     "diaspora_migration": {
       "diaspora_population": "200,000 (UK, USA, Spain, Senegal, Germany)",
       "refugees_hosted": 5000,
       "refugees_produced": 3000,
       "remittances_usd": "330 million",
-      "notes": "Remittances ~22% GDP (among highest in Africa); 'backway' route to Europe (Mediterranean crossing, many die); Jammeh-era exodus; youth migration pressure enormous; returnees from Jammeh exile contributing to transitional justice"
+      "notes": "Remittances ~22% GDP (among highest in Africa); 'backway' route to Europe (Mediterranean crossing, many die); Jammeh-era exodus; youth migration pressure enormous; returnees from Jammeh exile contributing to transitional justice",
+      "diaspora_top_destinations": [
+        "Spain",
+        "USA",
+        "UK",
+        "Italy",
+        "Germany",
+        "Senegal"
+      ],
+      "asylum_seekers": 5000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Open (ECOWAS free movement)",
+      "remittances_pct_gdp": 28,
+      "net_migration_rate_per_1k": -3.0
     },
     "digital_economy": {
       "e_government_index": 0.35,
@@ -254,16 +381,359 @@
       "tech_hubs": [
         "Banjul"
       ],
-      "notes": "Small digital economy; mobile money growing; tourism-tech emerging; limited bandwidth; ACE submarine cable connection; growing youth tech interest; entrepreneurship support from diaspora"
+      "notes": "Small digital economy; mobile money growing; tourism-tech emerging; limited bandwidth; ACE submarine cable connection; growing youth tech interest; entrepreneurship support from diaspora",
+      "e_participation_index": 0.2,
+      "ict_development_index": 2.0,
+      "mobile_money_accounts": 500000,
+      "digital_payments_pct_adults": 10,
+      "fintech_companies": 5,
+      "startup_ecosystem_value_usd": "$5 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.15,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 0
     },
-    "notes_unique": "Africa's smallest mainland country; the River Gambia is navigable deep into the interior; the country was the setting for Alex Haley's 'Roots'."
+    "notes_unique": "Africa's smallest mainland country; the River Gambia is navigable deep into the interior; the country was the setting for Alex Haley's 'Roots'.",
+    "capital_coordinates": {
+      "lat": 13.4549,
+      "lon": -16.579
+    },
+    "other_major_cities": [
+      "Serekunda",
+      "Brikama",
+      "Bakau",
+      "Farafenni"
+    ],
+    "national_motto": "Progress, Peace, Prosperity",
+    "national_anthem": "For The Gambia Our Homeland",
+    "currency_code": "GMD",
+    "internet_tld": ".gm",
+    "utc_offset": "UTC+0",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 13.4432,
+        "lon": -15.3101
+      },
+      "bounding_box": {
+        "north": 13.83,
+        "south": 13.06,
+        "east": -13.8,
+        "west": -16.82
+      },
+      "land_area_km2": 11300,
+      "water_area_km2": 0,
+      "coastline_km": 80,
+      "borders": [
+        "Senegal"
+      ],
+      "border_lengths_km": {
+        "Senegal": 749
+      },
+      "highest_point": {
+        "name": "Unnamed point",
+        "elevation_m": 53
+      },
+      "lowest_point": {
+        "name": "Atlantic Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Flat; surrounded on three sides by Senegal; essentially a corridor along Gambia River",
+      "land_use": {
+        "agricultural_pct": 56,
+        "arable_pct": 41,
+        "forest_pct": 48,
+        "other_pct": 0
+      },
+      "major_rivers": [
+        "Gambia River"
+      ],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 23000,
+      "landlocked": false,
+      "notes": "Smallest country in mainland Africa; strip along Gambia River (25-50km wide); almost entirely surrounded by Senegal; was a separate British colony (Senegal was French)."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$2.2 billion",
+      "gdp_ppp_usd": "$6.7 billion",
+      "gdp_per_capita_nominal_usd": 820,
+      "gdp_per_capita_ppp_usd": 2500,
+      "gdp_growth_rate_pct": 5.2,
+      "inflation_rate_pct": 12,
+      "unemployment_rate_pct": 9.5,
+      "youth_unemployment_rate_pct": 30,
+      "poverty_rate_pct": 48,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 35.9,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 20,
+        "industry_pct_gdp": 14,
+        "services_pct_gdp": 66
+      },
+      "labor_force": 900000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 75,
+        "industry_pct": 8,
+        "services_pct": 17
+      },
+      "fdi_inflow_usd": "$40 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$500 million",
+      "ease_of_doing_business_rank": 155,
+      "economic_freedom_index_score": 54.5,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Tourism (~20% GDP) and peanut/groundnut exports; re-export trade significant; remittances from diaspora crucial; 'Smiling Coast' tourism brand."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.3,
+      "health_expenditure_per_capita_usd": 22,
+      "physicians_per_1k": 0.1,
+      "nurses_midwives_per_1k": 0.8,
+      "hospital_beds_per_1k": 1.1,
+      "maternal_mortality_per_100k": 458,
+      "hiv_prevalence_pct": 1.8,
+      "malaria_incidence_per_1k": 200,
+      "tuberculosis_incidence_per_100k": 174,
+      "access_to_clean_water_pct": 79,
+      "access_to_sanitation_pct": 39,
+      "vaccination_coverage_pct": 88,
+      "stunting_under5_pct": 20,
+      "obesity_rate_pct": 10,
+      "universal_health_coverage_index": 40,
+      "leading_causes_of_death": [
+        "malaria",
+        "lower respiratory infections",
+        "neonatal disorders",
+        "diarrheal diseases",
+        "HIV/AIDS"
+      ],
+      "notes": "Significant brain drain of health workers; Royal Victoria Teaching Hospital main facility; malaria leading cause of death."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 30,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 41,
+      "agricultural_land_pct": 56,
+      "irrigated_land_pct": 2,
+      "major_crops": [
+        "groundnuts/peanuts",
+        "millet",
+        "rice",
+        "maize",
+        "sorghum",
+        "cassava"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "sheep",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 50,
+      "cereal_yield_kg_per_hectare": 1200,
+      "agricultural_employment_pct": 75,
+      "prevalence_of_undernourishment_pct": 21,
+      "notes": "Groundnuts historically the main cash crop; rice deficit (main staple); Gambia River basin agriculture."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 95,
+        "hydroelectric_pct": 0,
+        "solar_pct": 3,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 2
+      },
+      "installed_capacity_mw": 100,
+      "electricity_production_gwh": 300,
+      "electricity_consumption_per_capita_kwh": 100,
+      "energy_imports_pct": 100,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 3600,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 10,
+      "energy_access_urban_pct": 60,
+      "notes": "No domestic fossil fuels; depends on imported diesel; OMVG hydropower project planned; solar expanding."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Banjul International Airport"
+      ],
+      "major_airports_domestic": [],
+      "national_airline": "None",
+      "major_seaports": [
+        "Banjul"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 10,
+      "registered_vehicles_per_1k": 20,
+      "road_fatalities_per_100k": 20,
+      "notes": "Gambia River is navigable 200km inland; Trans-Gambia highway; ferry services across the river."
+    },
+    "tourism": {
+      "annual_visitors": 235000,
+      "tourism_revenue_usd": "$130 million",
+      "tourism_pct_gdp": 6,
+      "tourism_employment_pct": 12,
+      "unesco_world_heritage_sites": 2,
+      "unesco_sites_list": [
+        "James Island and Related Sites (Kunta Kinteh Island)",
+        "Stone Circles of Senegambia (shared with Senegal)"
+      ],
+      "major_attractions": [
+        "Kunta Kinteh Island",
+        "Atlantic coast beaches",
+        "River Gambia excursions",
+        "Abuko Nature Reserve",
+        "Makasutu Culture Forest"
+      ],
+      "visa_free_access_countries": 51,
+      "henley_passport_rank": 78,
+      "notes": "UK & Scandinavian beach tourism; roots/heritage tourism (Alex Haley's Roots); birdwatching; eco-tourism."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 45,
+      "gender_inequality_index": 0.612,
+      "gender_inequality_rank": 155,
+      "gender_gap_index_score": 0.63,
+      "women_in_parliament_pct": 9,
+      "women_labor_force_participation_pct": 55,
+      "maternal_mortality_per_100k": 458,
+      "child_marriage_pct": 26,
+      "fgm_prevalence_pct": 76,
+      "lgbtq_legal_status": "Illegal (up to 14 years)",
+      "death_penalty_status": "Abolitionist in practice",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 20,
+      "notes": "Post-Jammeh democratization (2017); Truth, Reconciliation and Reparations Commission completed; FGM ban (2015) now facing repeal debate (2024)."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.9,
+      "global_peace_index_rank": 72,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 3,
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 200,
+      "arms_imports_usd": "$5 million",
+      "internally_displaced_persons": 0,
+      "notes": "ECOWAS intervened 2017 (Jammeh refused to leave); ECOMIG forces present until 2024; SSR ongoing."
+    },
+    "cultural_heritage": {
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "Domoda (peanut stew)",
+      "national_sport": "Football / Wrestling",
+      "major_festivals": [
+        "Independence Day (18 February)",
+        "Roots Homecoming Festival",
+        "International Kanilai Festival"
+      ],
+      "cuisine_highlights": [
+        "domoda (peanut butter stew)",
+        "benachin (one pot jollof)",
+        "supakanja (okra soup)",
+        "nyambeh (palm oil rice)"
+      ],
+      "music_art_traditions": [
+        "Mandinka kora music",
+        "Jali/griot tradition",
+        "sabar drumming",
+        "Afro-Manding music"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [
+        "Kankurang (Manding initiation rite, UNESCO)"
+      ],
+      "notable_historical_figures": [
+        "Kunta Kinteh (Roots)",
+        "Dawda Jawara (1st president)",
+        "Yahya Jammeh (dictator 1994-2017)",
+        "Adama Barrow (current president)"
+      ],
+      "world_heritage_sites": [
+        "Kunta Kinteh Island",
+        "Senegambia Stone Circles"
+      ],
+      "media_landscape": "Multiple private media; GRTS state; improved press freedom post-Jammeh",
+      "notes": "Kora instrument originated here (Mandinka culture); Alex Haley's Roots traced to Juffureh village; smallest mainland African country."
+    },
+    "legal_system": {
+      "legal_tradition": "Mixed: English common law, Islamic law, customary law",
+      "constitution_year": 1997,
+      "sharia_applicability": "Sharia for Muslim personal status; Cadi courts",
+      "customary_law_role": "District tribunals apply customary law",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.35,
+      "contract_enforcement_days": 434,
+      "property_rights_index": 35,
+      "notes": "Draft 2020 constitution awaiting approval; legal changes ongoing post-Jammeh transition; Women's Amendment Act 2015."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 43,
+        "global_rank": 143
+      },
+      "area": {
+        "continent_rank": 52,
+        "global_rank": 159
+      },
+      "gdp_nominal": {
+        "continent_rank": 47,
+        "global_rank": 169
+      },
+      "gdp_per_capita": {
+        "continent_rank": 42,
+        "global_rank": 173
+      },
+      "hdi": {
+        "continent_rank": 38,
+        "global_rank": 174
+      },
+      "life_expectancy": {
+        "continent_rank": 33,
+        "global_rank": 148
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 35,
+        "global_rank": 155
+      },
+      "internet_penetration": {
+        "continent_rank": 24,
+        "global_rank": 118
+      },
+      "press_freedom": {
+        "continent_rank": 17,
+        "global_rank": 61
+      },
+      "global_peace_index": {
+        "continent_rank": 5,
+        "global_rank": 72
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": ""
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Adama Barrow",
       "title": "President",
       "since": "2017-01-19",
-      "notes": "Ended Jammeh's 22-year rule; coalition candidate in 2016; re-elected 2021 with own NPP party"
+      "notes": "Ended Jammeh's 22-year rule; coalition candidate in 2016; re-elected 2021 with own NPP party",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -280,7 +750,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.868799Z",
-    "notes": "Comprehensive index for Egypt covering Predynastic Nile Valley, Old-Middle-New Kingdoms, Ptolemaic dynasty, Roman/Byzantine/Islamic eras, Ottoman period, Muhammad Ali dynasty, British occupation, Nasser pan-Arabism, Sadat peace, Mubarak authoritarianism, and 2011 revolution."
+    "notes": "Comprehensive index for Egypt covering Predynastic Nile Valley, Old-Middle-New Kingdoms, Ptolemaic dynasty, Roman/Byzantine/Islamic eras, Ottoman period, Muhammad Ali dynasty, British occupation, Nasser pan-Arabism, Sadat peace, Mubarak authoritarianism, and 2011 revolution.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Cairo",
@@ -108,7 +109,22 @@
       "life_expectancy": 72.5,
       "infant_mortality_per_1k": 16.0,
       "literacy_rate_pct": 73.1,
-      "net_migration_rate": -0.3
+      "net_migration_rate": -0.3,
+      "population_growth_rate_pct": 1.7,
+      "urban_population_growth_rate_pct": 1.9,
+      "life_expectancy_male": 69.5,
+      "life_expectancy_female": 74.2,
+      "under5_mortality_per_1k": 19,
+      "sex_ratio": 1.05,
+      "dependency_ratio": 64,
+      "population_density_per_km2": 108,
+      "age_structure": {
+        "0_14_pct": 34,
+        "15_24_pct": 18,
+        "25_54_pct": 37,
+        "55_64_pct": 6,
+        "65_plus_pct": 5
+      }
     },
     "natural_resources": {
       "primary": [
@@ -138,7 +154,10 @@
         "Arab League",
         "NAM"
       ],
-      "notes": "Largest military in Africa/Middle East by personnel; $1.3B US military aid annually (Camp David Accords legacy); military controls ~25-40% of economy (construction, food, manufacturing); Sisi consolidated military power; Sinai counterinsurgency vs ISIS affiliate (Wilayat Sinai)"
+      "notes": "Largest military in Africa/Middle East by personnel; $1.3B US military aid annually (Camp David Accords legacy); military controls ~25-40% of economy (construction, food, manufacturing); Sisi consolidated military power; Sinai counterinsurgency vs ISIS affiliate (Wilayat Sinai)",
+      "paramilitary_personnel": 397000,
+      "conscription": true,
+      "global_firepower_rank": 15
     },
     "trade": {
       "top_exports": [
@@ -168,14 +187,59 @@
         "Germany"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 7.5
+      "remittances_pct_gdp": 7.5,
+      "total_exports_usd": "$42 billion",
+      "total_imports_usd": "$74 billion",
+      "top_export_destinations": [
+        "Turkey",
+        "Italy",
+        "USA",
+        "Saudi Arabia",
+        "India"
+      ],
+      "top_import_origins": [
+        "China",
+        "USA",
+        "Saudi Arabia",
+        "Germany",
+        "Russia"
+      ],
+      "trade_as_pct_gdp": 30,
+      "current_account_balance_usd": "-$14 billion",
+      "trade_agreements": [
+        "COMESA",
+        "AfCFTA",
+        "GAFTA",
+        "Egypt-EU Association",
+        "QIZ (with Israel/USA)"
+      ],
+      "special_economic_zones": [
+        "Suez Canal Economic Zone",
+        "Ain Sokhna",
+        "East Port Said"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 72.0,
       "electricity_access_pct": 100.0,
       "mobile_subscriptions_per_100": 93,
       "railway_km": 5085,
-      "paved_roads_pct": 92
+      "paved_roads_pct": 92,
+      "broadband_subscriptions_per_100": 9.5,
+      "4g_coverage_pct": 98,
+      "5g_availability": true,
+      "road_network_km": 65050,
+      "waterways_km": 3500,
+      "submarine_cables": [
+        "AAE-1",
+        "SMW5",
+        "TE North",
+        "IMEWE",
+        "FLAG",
+        "EIG",
+        "MENA"
+      ],
+      "notes": "Suez Canal landing point for 16+ submarine cables; critical internet transit hub."
     },
     "international_memberships": [
       "UN",
@@ -205,6 +269,26 @@
       "fragile_states_index": {
         "score": 81.2,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.35,
+        "rank": 127,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.5,
+        "percentile": 24,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.3,
+        "percentile": 33,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.7,
+        "percentile": 14,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -221,13 +305,42 @@
         "flash floods",
         "desertification"
       ],
-      "protected_areas_pct": 13
+      "protected_areas_pct": 13,
+      "average_temperature_c": 22,
+      "average_rainfall_mm": 51,
+      "co2_per_capita_t": 2.4,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "Extremely high",
+      "environmental_performance_index": {
+        "score": 35.5,
+        "rank": 137,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified (COP27 host, 2022)",
+      "biodiversity": {
+        "known_species": 2600,
+        "endemic_species": 30,
+        "threatened_species": 110
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 92.7,
       "foreign_aid_received_usd": "2.5 billion",
       "sovereign_wealth_fund": "Sovereign Fund of Egypt ($12B target)",
-      "notes": "IMF $3B Extended Fund Facility (2022); massive Gulf investment (Ras El-Hekma deal $35B from UAE, 2024); currency devaluation 50%+ since 2022; external debt ~$165B; New Administrative Capital $58B megaproject"
+      "notes": "IMF $3B Extended Fund Facility (2022); massive Gulf investment (Ras El-Hekma deal $35B from UAE, 2024); currency devaluation 50%+ since 2022; external debt ~$165B; New Administrative Capital $58B megaproject",
+      "external_debt_usd": "$165 billion",
+      "debt_service_pct_revenue": 40,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA (military aid)",
+        "Gulf states",
+        "EU",
+        "World Bank",
+        "IMF"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": false,
+      "hipc_status": "Not applicable"
     },
     "education": {
       "primary_enrollment_pct": 98,
@@ -241,14 +354,43 @@
         "Alexandria University",
         "Al-Azhar University (970 CE, world's oldest degree-granting)"
       ],
-      "notes": "Al-Azhar world's oldest functioning university; massive student population (~3M in higher education); rote learning culture criticized; Japanese-Egyptian schools experiment; STEM schools (Nile University); private university expansion"
+      "notes": "Al-Azhar world's oldest functioning university; massive student population (~3M in higher education); rote learning culture criticized; Japanese-Egyptian schools experiment; STEM schools (Nile University); private university expansion",
+      "education_expenditure_pct_gdp": 3.5,
+      "primary_completion_rate_pct": 99,
+      "gender_parity_index": 0.97,
+      "mean_years_of_schooling": 7.4,
+      "expected_years_of_schooling": 13.1,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 25,
+      "out_of_school_children": 500000,
+      "academic_freedom_index": 0.15
     },
     "diaspora_migration": {
       "diaspora_population": "12 million (Saudi Arabia, UAE, Kuwait, Jordan, USA, Italy, UK)",
       "refugees_hosted": 500000,
       "refugees_produced": 10000,
       "remittances_usd": "32 billion",
-      "notes": "Remittances critical ($32B, ~7.5% GDP); Gulf states primary destination; Sudanese refugees ~4M since 2023 war; Syrian refugees ~130k; Egyptian migration pattern: Gulf for income, Europe for settlement; brain drain in medicine/engineering"
+      "notes": "Remittances critical ($32B, ~7.5% GDP); Gulf states primary destination; Sudanese refugees ~4M since 2023 war; Syrian refugees ~130k; Egyptian migration pattern: Gulf for income, Europe for settlement; brain drain in medicine/engineering",
+      "diaspora_top_destinations": [
+        "Saudi Arabia",
+        "Jordan",
+        "UAE",
+        "Libya",
+        "USA",
+        "Kuwait",
+        "Italy"
+      ],
+      "asylum_seekers": 50000,
+      "stateless_persons": 15,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Hosts 9M+ migrants/refugees (Sudanese, Syrian, etc.)",
+      "remittances_pct_gdp": 5.5,
+      "net_migration_rate_per_1k": -0.3
     },
     "digital_economy": {
       "e_government_index": 0.56,
@@ -258,16 +400,414 @@
         "Smart Village",
         "New Administrative Capital tech zone"
       ],
-      "notes": "Largest tech ecosystem in Africa/MENA by some measures; Fawry (payments) first Egyptian tech unicorn; Swvl, Halan, MNT-Halan; government digitization push; Telecom Egypt fiber backbone improving; Knowledge City in New Capital; fintech leading sector"
+      "notes": "Largest tech ecosystem in Africa/MENA by some measures; Fawry (payments) first Egyptian tech unicorn; Swvl, Halan, MNT-Halan; government digitization push; Telecom Egypt fiber backbone improving; Knowledge City in New Capital; fintech leading sector",
+      "e_participation_index": 0.65,
+      "ict_development_index": 4.6,
+      "mobile_money_accounts": 25000000,
+      "digital_payments_pct_adults": 35,
+      "fintech_companies": 200,
+      "startup_ecosystem_value_usd": "$1 billion",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.84,
+      "innovation_index_score": 28.5,
+      "innovation_index_rank": 86,
+      "ai_readiness_index": 40
     },
-    "notes_unique": "Home to one of the world's oldest civilisations (c. 3100 BCE); the Great Pyramid of Giza was the tallest man-made structure for over 3,800 years; the Suez Canal handles ~12% of world trade."
+    "notes_unique": "Home to one of the world's oldest civilisations (c. 3100 BCE); the Great Pyramid of Giza was the tallest man-made structure for over 3,800 years; the Suez Canal handles ~12% of world trade.",
+    "capital_coordinates": {
+      "lat": 30.0444,
+      "lon": 31.2357
+    },
+    "other_major_cities": [
+      "Alexandria",
+      "Giza",
+      "Shubra El Kheima",
+      "Port Said",
+      "Suez",
+      "Luxor",
+      "Aswan"
+    ],
+    "national_motto": "None (historically: Silence and Respect)",
+    "national_anthem": "Bilady, Bilady, Bilady (My Country, My Country, My Country)",
+    "currency_code": "EGP",
+    "internet_tld": ".eg",
+    "utc_offset": "UTC+2",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 26.8206,
+        "lon": 30.8025
+      },
+      "bounding_box": {
+        "north": 31.67,
+        "south": 22.0,
+        "east": 36.9,
+        "west": 24.7
+      },
+      "land_area_km2": 995450,
+      "water_area_km2": 6000,
+      "coastline_km": 2450,
+      "borders": [
+        "Libya",
+        "Sudan",
+        "Israel",
+        "Palestine (Gaza Strip)"
+      ],
+      "border_lengths_km": {
+        "Libya": 1115,
+        "Sudan": 1276,
+        "Israel": 208,
+        "Palestine": 13
+      },
+      "highest_point": {
+        "name": "Mount Catherine",
+        "elevation_m": 2629
+      },
+      "lowest_point": {
+        "name": "Qattara Depression",
+        "elevation_m": -133
+      },
+      "terrain": "Vast desert plateau; Nile River valley and delta; Sinai Peninsula; Western and Eastern deserts",
+      "land_use": {
+        "agricultural_pct": 3.6,
+        "arable_pct": 2.8,
+        "forest_pct": 0.1,
+        "other_pct": 96.3
+      },
+      "major_rivers": [
+        "Nile (world's longest or 2nd longest river)"
+      ],
+      "major_lakes": [
+        "Lake Nasser (reservoir)",
+        "Lake Qarun",
+        "Bitter Lakes"
+      ],
+      "exclusive_economic_zone_km2": 263451,
+      "landlocked": false,
+      "notes": "96% desert; 95%+ population lives in Nile Valley/Delta (5% of land); Suez Canal connects Mediterranean-Red Sea; Pyramids of Giza; New Administrative Capital under construction."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$390 billion",
+      "gdp_ppp_usd": "$1.6 trillion",
+      "gdp_per_capita_nominal_usd": 3617,
+      "gdp_per_capita_ppp_usd": 14870,
+      "gdp_growth_rate_pct": 3.8,
+      "inflation_rate_pct": 33.0,
+      "unemployment_rate_pct": 7.1,
+      "youth_unemployment_rate_pct": 18.5,
+      "poverty_rate_pct": 29.7,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 31.5,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 12,
+        "industry_pct_gdp": 32,
+        "services_pct_gdp": 56
+      },
+      "labor_force": 32000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 25,
+        "industry_pct": 28,
+        "services_pct": 47
+      },
+      "fdi_inflow_usd": "$10 billion",
+      "fdi_outflow_usd": "$0.3 billion",
+      "foreign_exchange_reserves_usd": "$35 billion",
+      "ease_of_doing_business_rank": 114,
+      "economic_freedom_index_score": 55.4,
+      "credit_rating": {
+        "moodys": "Caa1",
+        "sp": "B-",
+        "fitch": "B-"
+      },
+      "notes": "3rd largest African economy; Suez Canal revenue (~$8B/yr); Ras el-Hekma mega-deal with UAE ($35B, 2024); severe currency devaluation; Zohr gas field; remittances ~$22B."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 4.7,
+      "health_expenditure_per_capita_usd": 130,
+      "physicians_per_1k": 0.75,
+      "nurses_midwives_per_1k": 1.9,
+      "hospital_beds_per_1k": 1.4,
+      "maternal_mortality_per_100k": 17,
+      "hiv_prevalence_pct": 0.02,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 12,
+      "access_to_clean_water_pct": 99,
+      "access_to_sanitation_pct": 95,
+      "vaccination_coverage_pct": 95,
+      "stunting_under5_pct": 13,
+      "obesity_rate_pct": 32,
+      "universal_health_coverage_index": 60,
+      "leading_causes_of_death": [
+        "ischaemic heart disease",
+        "stroke",
+        "chronic kidney disease",
+        "liver cirrhosis",
+        "diabetes"
+      ],
+      "notes": "Universal Health Insurance Law (2018) rolling out; hepatitis C elimination campaign (world's largest); high obesity rates; NCD epidemic."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 53,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 2.8,
+      "agricultural_land_pct": 3.6,
+      "irrigated_land_pct": 100,
+      "major_crops": [
+        "wheat",
+        "rice",
+        "maize",
+        "cotton",
+        "sugarcane",
+        "clover",
+        "citrus",
+        "vegetables"
+      ],
+      "major_livestock": [
+        "water buffalo",
+        "cattle",
+        "sheep",
+        "goats",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 40,
+      "cereal_yield_kg_per_hectare": 7200,
+      "agricultural_employment_pct": 25,
+      "prevalence_of_undernourishment_pct": 5,
+      "notes": "World's largest wheat importer; all agriculture irrigated (Nile); new 1.5M feddan reclamation; food subsidy system for 70M people."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 88,
+        "hydroelectric_pct": 5,
+        "solar_pct": 3,
+        "wind_pct": 3,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 1
+      },
+      "installed_capacity_mw": 60000,
+      "electricity_production_gwh": 202000,
+      "electricity_consumption_per_capita_kwh": 1700,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 630000,
+      "oil_consumption_bpd": 700000,
+      "natural_gas_production_bcm": 60,
+      "energy_access_rural_pct": 99,
+      "energy_access_urban_pct": 100,
+      "notes": "Zohr gas field (Mediterranean, largest in region); Benban Solar Park (1.8GW, world's largest); El Dabaa nuclear plant (Rosatom, under construction); surplus electricity capacity."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Cairo International Airport",
+        "Hurghada",
+        "Sharm el-Sheikh",
+        "Borg El Arab (Alexandria)",
+        "Luxor"
+      ],
+      "major_airports_domestic": [
+        "Aswan",
+        "Assiut",
+        "Marsa Alam"
+      ],
+      "national_airline": "EgyptAir (Star Alliance)",
+      "major_seaports": [
+        "Alexandria",
+        "Port Said",
+        "Suez",
+        "Damietta",
+        "Ain Sokhna"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 380,
+      "registered_vehicles_per_1k": 85,
+      "road_fatalities_per_100k": 10,
+      "notes": "Suez Canal handles 12-15% of global trade; Cairo Metro (oldest in Africa/Middle East); new high-speed rail (Siemens); New Administrative Capital Monorail."
+    },
+    "tourism": {
+      "annual_visitors": 14700000,
+      "tourism_revenue_usd": "$13.6 billion",
+      "tourism_pct_gdp": 3.5,
+      "tourism_employment_pct": 12,
+      "unesco_world_heritage_sites": 7,
+      "unesco_sites_list": [
+        "Memphis and Pyramids (Giza)",
+        "Ancient Thebes (Luxor)",
+        "Nubian Monuments (Abu Simbel-Philae)",
+        "Historic Cairo",
+        "Abu Mena",
+        "Saint Catherine",
+        "Wadi Al-Hitan"
+      ],
+      "major_attractions": [
+        "Pyramids of Giza",
+        "Valley of the Kings",
+        "Karnak Temple",
+        "Abu Simbel",
+        "Grand Egyptian Museum",
+        "Red Sea diving",
+        "Nile cruises"
+      ],
+      "visa_free_access_countries": 51,
+      "henley_passport_rank": 78,
+      "notes": "One of world's top tourist destinations; Grand Egyptian Museum (2024, world's largest archaeological museum); Red Sea resorts; Nile cruises."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 18,
+      "gender_inequality_index": 0.438,
+      "gender_inequality_rank": 108,
+      "gender_gap_index_score": 0.64,
+      "women_in_parliament_pct": 28,
+      "women_labor_force_participation_pct": 22,
+      "maternal_mortality_per_100k": 17,
+      "child_marriage_pct": 17,
+      "fgm_prevalence_pct": 87,
+      "lgbtq_legal_status": "De facto illegal (morality laws; prosecutions)",
+      "death_penalty_status": "Retentionist",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 7,
+      "notes": "FGM very high despite 2008 ban; mass political prisoners since 2013; NGO restrictions; women underrepresented in workforce."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.3,
+      "global_peace_index_rank": 135,
+      "terrorism_index_score": 5.8,
+      "terrorism_index_rank": 25,
+      "homicide_rate_per_100k": 2.5,
+      "active_conflicts": [
+        "Sinai insurgency (reduced)",
+        "Libya border security"
+      ],
+      "border_disputes": [
+        "Hala'ib Triangle (with Sudan)"
+      ],
+      "un_peacekeeping_contributions": 500,
+      "arms_imports_usd": "$5 billion",
+      "internally_displaced_persons": 0,
+      "notes": "Sinai counterinsurgency against Wilayat Sinai (IS affiliate); one of world's top arms importers; mediator in Israel-Palestine; GERD dispute with Ethiopia."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "Eagle of Saladin",
+        "golden eagle"
+      ],
+      "national_animal": "steppe eagle",
+      "national_flower": "Egyptian lotus",
+      "national_dish": "Koshari (lentils, rice, pasta, chickpeas, tomato sauce)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Sham el-Nessim (spring festival)",
+        "Moulid el-Nabi",
+        "Abu Simbel sun alignment (Feb 22, Oct 22)"
+      ],
+      "cuisine_highlights": [
+        "koshari",
+        "ful medames",
+        "falafel (ta'meya)",
+        "molokhia",
+        "mahshi (stuffed vegetables)",
+        "umm ali"
+      ],
+      "music_art_traditions": [
+        "Umm Kulthum legacy",
+        "Mohamed Abdel Wahab",
+        "Mahraganat (Egyptian trap/electro)",
+        "Nubian music",
+        "Pharaonic art heritage"
+      ],
+      "film_industry": "Hollywood of the Arab world (Egyptian cinema since 1920s; 4000+ films)",
+      "intangible_heritage_items": [
+        "Tahteeb (stick game, UNESCO)",
+        "Epic of al-Sirah al-Hilaliyyah"
+      ],
+      "notable_historical_figures": [
+        "Pharaoh Ramesses II",
+        "Cleopatra VII",
+        "Saladin",
+        "Muhammad Ali Pasha",
+        "Gamal Abdel Nasser",
+        "Naguib Mahfouz (Nobel Literature)",
+        "Mohamed Salah"
+      ],
+      "world_heritage_sites": [
+        "Memphis and Pyramids",
+        "Ancient Thebes",
+        "Nubian Monuments",
+        "Historic Cairo",
+        "Abu Mena",
+        "Saint Catherine",
+        "Wadi Al-Hitan"
+      ],
+      "media_landscape": "Largest Arabic media industry; Al-Ahram; state and private broadcasters; heavily restricted post-2013",
+      "notes": "Cradle of civilization (5000+ years); Arabic language and culture centerpiece; Al-Azhar University (world's oldest degree-granting, 970 CE)."
+    },
+    "legal_system": {
+      "legal_tradition": "Mixed: civil law (Napoleonic Code influenced), Islamic law",
+      "constitution_year": 2014,
+      "sharia_applicability": "Main source of legislation (Article 2); personal status law",
+      "customary_law_role": "Minimal (tribal mediation in Sinai/Upper Egypt)",
+      "icc_membership": "Non-state party (signed but not ratified)",
+      "judicial_independence_score": 0.3,
+      "contract_enforcement_days": 1010,
+      "property_rights_index": 40,
+      "notes": "Exceptional military courts try civilians; emergency provisions; reformed investment laws; Al-Azhar advisory role on Islamic law."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 3,
+        "global_rank": 14
+      },
+      "area": {
+        "continent_rank": 12,
+        "global_rank": 30
+      },
+      "gdp_nominal": {
+        "continent_rank": 3,
+        "global_rank": 38
+      },
+      "gdp_per_capita": {
+        "continent_rank": 14,
+        "global_rank": 128
+      },
+      "hdi": {
+        "continent_rank": 9,
+        "global_rank": 116
+      },
+      "life_expectancy": {
+        "continent_rank": 5,
+        "global_rank": 100
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 16,
+        "global_rank": 114
+      },
+      "internet_penetration": {
+        "continent_rank": 6,
+        "global_rank": 65
+      },
+      "press_freedom": {
+        "continent_rank": 51,
+        "global_rank": 170
+      },
+      "global_peace_index": {
+        "continent_rank": 36,
+        "global_rank": 135
+      },
+      "innovation_index": {
+        "continent_rank": 3,
+        "global_rank": 86
+      },
+      "notes": "Africa's most populous Arab nation and 3rd largest economy."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Abdel Fattah el-Sisi",
       "title": "President",
       "since": "2014-06-08",
-      "notes": "Former military chief; led 2013 ouster of Morsi; re-elected 2018 and 2023; extended term limits"
+      "notes": "Former military chief; led 2013 ouster of Morsi; re-elected 2018 and 2023; extended term limits",
+      "party": ""
     },
     "prime_minister": {
       "name": "Mostafa Madbouly",
@@ -303,7 +843,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

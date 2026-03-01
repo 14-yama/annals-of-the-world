@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.870703Z",
-    "notes": "Comprehensive index for Ethiopia covering Lucy/Australopithecus, Aksum and the Ark of the Covenant, Zagwe dynasty and Lalibela, Solomonic dynasty, Adwa victory, Haile Selassie, Italian occupation, Derg/Red Terror, EPRDF, Abiy Ahmed, and the Tigray War."
+    "notes": "Comprehensive index for Ethiopia covering Lucy/Australopithecus, Aksum and the Ark of the Covenant, Zagwe dynasty and Lalibela, Solomonic dynasty, Adwa victory, Haile Selassie, Italian occupation, Derg/Red Terror, EPRDF, Abiy Ahmed, and the Tigray War.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Addis Ababa",
@@ -134,7 +135,22 @@
       "life_expectancy": 67.8,
       "infant_mortality_per_1k": 34.0,
       "literacy_rate_pct": 51.8,
-      "net_migration_rate": 0.2
+      "net_migration_rate": 0.2,
+      "population_growth_rate_pct": 2.5,
+      "urban_population_growth_rate_pct": 4.5,
+      "life_expectancy_male": 65,
+      "life_expectancy_female": 69,
+      "under5_mortality_per_1k": 49,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 76,
+      "population_density_per_km2": 115,
+      "age_structure": {
+        "0_14_pct": 40,
+        "15_24_pct": 20,
+        "25_54_pct": 33,
+        "55_64_pct": 4,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -160,7 +176,10 @@
         "AU (HQ in Addis Ababa)",
         "IGAD"
       ],
-      "notes": "Ethiopian National Defense Force; Tigray War 2020-22 (estimated 600k-800k dead, one of deadliest 21st century conflicts); Eritrean forces involved; Amhara/Fano militia; Oromia OLF-Shane insurgency; AU peacekeeping contributor (AMISOM/ATMIS in Somalia)"
+      "notes": "Ethiopian National Defense Force; Tigray War 2020-22 (estimated 600k-800k dead, one of deadliest 21st century conflicts); Eritrean forces involved; Amhara/Fano militia; Oromia OLF-Shane insurgency; AU peacekeeping contributor (AMISOM/ATMIS in Somalia)",
+      "paramilitary_personnel": 0,
+      "conscription": true,
+      "global_firepower_rank": 46
     },
     "trade": {
       "top_exports": [
@@ -193,14 +212,49 @@
         "Netherlands"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 4.8
+      "remittances_pct_gdp": 4.8,
+      "total_exports_usd": "$4 billion",
+      "total_imports_usd": "$18 billion",
+      "top_export_destinations": [
+        "USA",
+        "Saudi Arabia",
+        "Germany",
+        "Switzerland",
+        "China"
+      ],
+      "top_import_origins": [
+        "China",
+        "India",
+        "USA",
+        "Turkey",
+        "Kenya"
+      ],
+      "trade_as_pct_gdp": 14,
+      "current_account_balance_usd": "-$5 billion",
+      "trade_agreements": [
+        "IGAD",
+        "COMESA",
+        "AfCFTA"
+      ],
+      "special_economic_zones": [
+        "Hawassa Industrial Park",
+        "Bole Lemi",
+        "Kilinto"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 25.0,
       "electricity_access_pct": 52.0,
       "mobile_subscriptions_per_100": 55,
       "railway_km": 681,
-      "paved_roads_pct": 15
+      "paved_roads_pct": 15,
+      "broadband_subscriptions_per_100": 0.6,
+      "4g_coverage_pct": 50,
+      "5g_availability": false,
+      "road_network_km": 110414,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": "Landlocked; Ethio Telecom monopoly ended 2022 (Safaricom Kenya entry); Addis-Djibouti rail."
     },
     "international_memberships": [
       "UN",
@@ -229,6 +283,26 @@
       "fragile_states_index": {
         "score": 97.8,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.38,
+        "rank": 118,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.6,
+        "percentile": 18,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.8,
+        "percentile": 12,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -1.8,
+        "percentile": 2,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -245,12 +319,41 @@
         "earthquakes (Rift Valley)",
         "locust invasions (2020 worst in decades)"
       ],
-      "protected_areas_pct": 18
+      "protected_areas_pct": 18,
+      "average_temperature_c": 22,
+      "average_rainfall_mm": 850,
+      "co2_per_capita_t": 0.15,
+      "deforestation_rate_pct": 1.1,
+      "water_stress_level": "Medium",
+      "environmental_performance_index": {
+        "score": 27.6,
+        "rank": 167,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 7000,
+        "endemic_species": 200,
+        "threatened_species": 240
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 38.5,
       "foreign_aid_received_usd": "4.0 billion",
-      "notes": "Largest aid recipient in Africa; Chinese Belt & Road loans (Addis-Djibouti railway); 2023 debt restructuring under G20 Common Framework agreement; Ethiopian Airlines revenue critical; forex crisis severe"
+      "notes": "Largest aid recipient in Africa; Chinese Belt & Road loans (Addis-Djibouti railway); 2023 debt restructuring under G20 Common Framework agreement; Ethiopian Airlines revenue critical; forex crisis severe",
+      "external_debt_usd": "$28 billion",
+      "debt_service_pct_revenue": 18,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA",
+        "World Bank",
+        "UK",
+        "EU",
+        "AfDB"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Not applicable (G20 Common Framework applicant)"
     },
     "education": {
       "primary_enrollment_pct": 85,
@@ -263,14 +366,43 @@
         "Hawassa University",
         "Bahir Dar University"
       ],
-      "notes": "Amharic instruction (primary) but transition to regional languages; university expansion (40+ public universities built since 2000); medical school expansion; ethnic federalism affects education language policy; UNESCO Learning Poverty ~90%"
+      "notes": "Amharic instruction (primary) but transition to regional languages; university expansion (40+ public universities built since 2000); medical school expansion; ethnic federalism affects education language policy; UNESCO Learning Poverty ~90%",
+      "education_expenditure_pct_gdp": 4.5,
+      "primary_completion_rate_pct": 65,
+      "gender_parity_index": 0.9,
+      "mean_years_of_schooling": 2.8,
+      "expected_years_of_schooling": 9.0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 50,
+      "out_of_school_children": 5000000,
+      "academic_freedom_index": 0.2
     },
     "diaspora_migration": {
       "diaspora_population": "3.0 million (USA ~300k, Saudi Arabia, Israel, South Africa, UAE, Europe)",
       "refugees_hosted": 900000,
       "refugees_produced": 100000,
       "remittances_usd": "5.5 billion",
-      "notes": "Africa's largest refugee-hosting country (South Sudanese, Somalis, Eritreans); Tigray War created 2M+ IDPs; Ethiopian Jews (Beta Israel) airlifted to Israel (Operations Moses/Solomon); diaspora remittances critical; Washington DC largest Ethiopian community outside Africa"
+      "notes": "Africa's largest refugee-hosting country (South Sudanese, Somalis, Eritreans); Tigray War created 2M+ IDPs; Ethiopian Jews (Beta Israel) airlifted to Israel (Operations Moses/Solomon); diaspora remittances critical; Washington DC largest Ethiopian community outside Africa",
+      "diaspora_top_destinations": [
+        "USA",
+        "Saudi Arabia",
+        "Sudan",
+        "Kenya",
+        "Israel",
+        "South Africa",
+        "UAE"
+      ],
+      "asylum_seekers": 80000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 4000000,
+      "immigration_policy": "Hosts 1M+ refugees (South Sudan, Somalia, Eritrea)",
+      "remittances_pct_gdp": 0.6,
+      "net_migration_rate_per_1k": -0.2
     },
     "digital_economy": {
       "e_government_index": 0.37,
@@ -279,16 +411,426 @@
         "Addis Ababa (IceAddis, BlueMoon, BelCash)",
         "Hawassa Industrial Park"
       ],
-      "notes": "Ethio Telecom monopoly broken 2022 (Safaricom Ethiopia launched); Telebirr mobile money massively adopted; internet shutdowns during conflicts; Hawassa Industrial Park for textile/tech; growing startup scene; digital ID system (Fayda) rolling out"
+      "notes": "Ethio Telecom monopoly broken 2022 (Safaricom Ethiopia launched); Telebirr mobile money massively adopted; internet shutdowns during conflicts; Hawassa Industrial Park for textile/tech; growing startup scene; digital ID system (Fayda) rolling out",
+      "e_participation_index": 0.4,
+      "ict_development_index": 1.6,
+      "mobile_money_accounts": 30000000,
+      "digital_payments_pct_adults": 5,
+      "fintech_companies": 20,
+      "startup_ecosystem_value_usd": "$100 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.28,
+      "innovation_index_score": 17.8,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 20
     },
-    "notes_unique": "One of only two African countries never colonised (alongside Liberia); uses the Ge'ez calendar (7–8 years behind Gregorian); home of the African Union headquarters in Addis Ababa."
+    "notes_unique": "One of only two African countries never colonised (alongside Liberia); uses the Ge'ez calendar (7–8 years behind Gregorian); home of the African Union headquarters in Addis Ababa.",
+    "capital_coordinates": {
+      "lat": 9.025,
+      "lon": 38.7469
+    },
+    "other_major_cities": [
+      "Dire Dawa",
+      "Adama",
+      "Gondar",
+      "Mekelle",
+      "Hawassa",
+      "Bahir Dar",
+      "Jimma"
+    ],
+    "national_motto": "None",
+    "national_anthem": "Wodefit Gesgeshi, Widd Innat Ityopya (March Forward, Dear Mother Ethiopia)",
+    "currency_code": "ETB",
+    "internet_tld": ".et",
+    "utc_offset": "UTC+3",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 9.145,
+        "lon": 40.4897
+      },
+      "bounding_box": {
+        "north": 14.89,
+        "south": 3.4,
+        "east": 48.0,
+        "west": 33.0
+      },
+      "land_area_km2": 1104300,
+      "water_area_km2": 7444,
+      "coastline_km": 0,
+      "borders": [
+        "Eritrea",
+        "Djibouti",
+        "Somalia",
+        "Kenya",
+        "South Sudan",
+        "Sudan"
+      ],
+      "border_lengths_km": {
+        "Eritrea": 1033,
+        "Djibouti": 342,
+        "Somalia": 1640,
+        "Kenya": 867,
+        "South Sudan": 1299,
+        "Sudan": 744
+      },
+      "highest_point": {
+        "name": "Ras Dashen",
+        "elevation_m": 4550
+      },
+      "lowest_point": {
+        "name": "Danakil Depression (Dallol)",
+        "elevation_m": -125
+      },
+      "terrain": "High central plateau (Ethiopian Highlands) bisected by Great Rift Valley; lowlands in east (Ogaden) and west; Simien and Bale Mountains",
+      "land_use": {
+        "agricultural_pct": 36.3,
+        "arable_pct": 15.2,
+        "forest_pct": 12.5,
+        "other_pct": 51.2
+      },
+      "major_rivers": [
+        "Blue Nile (Abay)",
+        "Awash",
+        "Omo",
+        "Wabe Shebelle"
+      ],
+      "major_lakes": [
+        "Lake Tana",
+        "Lake Abaya",
+        "Lake Chamo",
+        "Lake Ziway",
+        "Lake Langano"
+      ],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": true,
+      "notes": "2nd most populous African country; birthplace of coffee; oldest independent country in Africa; Ethiopian calendar 7-8 years behind Gregorian; GERD (Grand Ethiopian Renaissance Dam) on Blue Nile."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$155 billion",
+      "gdp_ppp_usd": "$395 billion",
+      "gdp_per_capita_nominal_usd": 1252,
+      "gdp_per_capita_ppp_usd": 3190,
+      "gdp_growth_rate_pct": 6.1,
+      "inflation_rate_pct": 28,
+      "unemployment_rate_pct": 3.5,
+      "youth_unemployment_rate_pct": 5.7,
+      "poverty_rate_pct": 24,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 35,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 37,
+        "industry_pct_gdp": 21,
+        "services_pct_gdp": 42
+      },
+      "labor_force": 56000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 66,
+        "industry_pct": 11,
+        "services_pct": 23
+      },
+      "fdi_inflow_usd": "$3 billion",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$2 billion",
+      "ease_of_doing_business_rank": 159,
+      "economic_freedom_index_score": 51.5,
+      "credit_rating": {
+        "moodys": "Caa3",
+        "sp": "CCC",
+        "fitch": "CCC-"
+      },
+      "notes": "One of Africa's fastest growing economies (pre-Tigray war); GERD ($5B dam); Ethiopian Airlines Africa's largest; Addis Ababa AU headquarters; foreign debt restructuring (G20 Common Framework, 2024); telecom liberalization (Safaricom entry)."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.3,
+      "health_expenditure_per_capita_usd": 27,
+      "physicians_per_1k": 0.1,
+      "nurses_midwives_per_1k": 0.7,
+      "hospital_beds_per_1k": 0.3,
+      "maternal_mortality_per_100k": 267,
+      "hiv_prevalence_pct": 0.9,
+      "malaria_incidence_per_1k": 50,
+      "tuberculosis_incidence_per_100k": 132,
+      "access_to_clean_water_pct": 57,
+      "access_to_sanitation_pct": 11,
+      "vaccination_coverage_pct": 58,
+      "stunting_under5_pct": 37,
+      "obesity_rate_pct": 4.5,
+      "universal_health_coverage_index": 39,
+      "leading_causes_of_death": [
+        "neonatal disorders",
+        "lower respiratory infections",
+        "diarrheal diseases",
+        "tuberculosis",
+        "HIV/AIDS"
+      ],
+      "notes": "Health Extension Programme (40,000+ community workers) revolutionary; trachoma elimination progress; khat chewing health concern."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 30,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 15.2,
+      "agricultural_land_pct": 36.3,
+      "irrigated_land_pct": 1.5,
+      "major_crops": [
+        "coffee",
+        "teff",
+        "wheat",
+        "maize",
+        "sorghum",
+        "barley",
+        "enset (false banana)",
+        "chat/khat",
+        "sesame",
+        "flowers"
+      ],
+      "major_livestock": [
+        "cattle",
+        "sheep",
+        "goats",
+        "camels",
+        "equines"
+      ],
+      "food_import_dependency_pct": 15,
+      "cereal_yield_kg_per_hectare": 2700,
+      "agricultural_employment_pct": 66,
+      "prevalence_of_undernourishment_pct": 20,
+      "notes": "Birthplace of coffee (Coffea arabica); largest livestock population in Africa; teff is unique Ethiopian grain; flower export industry; drought vulnerability."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 5,
+        "hydroelectric_pct": 85,
+        "solar_pct": 1,
+        "wind_pct": 8,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 1
+      },
+      "installed_capacity_mw": 5200,
+      "electricity_production_gwh": 15000,
+      "electricity_consumption_per_capita_kwh": 100,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 80000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 35,
+      "energy_access_urban_pct": 97,
+      "notes": "GERD (6.45GW, Africa's largest dam) filling since 2020; Adama wind farm; Corbetti geothermal; exports electricity to Djibouti, Sudan, Kenya."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Addis Ababa Bole International Airport"
+      ],
+      "major_airports_domestic": [
+        "Dire Dawa",
+        "Bahir Dar",
+        "Mekelle",
+        "Hawassa",
+        "Lalibela"
+      ],
+      "national_airline": "Ethiopian Airlines (Star Alliance, Africa's largest airline)",
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 5,
+      "road_fatalities_per_100k": 28,
+      "notes": "Ethiopian Airlines hub connects 130+ destinations; Addis Ababa Light Rail (Africa's first, 2015); Addis-Djibouti Railway (electrified, 2018); landlocked, uses Djibouti port."
+    },
+    "tourism": {
+      "annual_visitors": 870000,
+      "tourism_revenue_usd": "$2.7 billion",
+      "tourism_pct_gdp": 1.7,
+      "tourism_employment_pct": 5,
+      "unesco_world_heritage_sites": 11,
+      "unesco_sites_list": [
+        "Rock-Hewn Churches of Lalibela",
+        "Simien Mountains National Park",
+        "Fasil Ghebbi (Gondar)",
+        "Aksum",
+        "Harar Jugol",
+        "Lower Valley of the Awash (Lucy)",
+        "Lower Valley of the Omo",
+        "Tiya stelae",
+        "Konso landscape",
+        "Bale Mountains NP",
+        "Gedeo cultural landscape"
+      ],
+      "major_attractions": [
+        "Lalibela rock churches",
+        "Simien Mountains",
+        "Danakil Depression",
+        "Omo Valley tribes",
+        "Harar old city",
+        "Lake Tana monasteries"
+      ],
+      "visa_free_access_countries": 44,
+      "henley_passport_rank": 87,
+      "notes": "11 UNESCO sites (most in Africa tied with Morocco); Lucy fossil found here; origin of coffee ceremony tourism; Tigray war damaged tourism."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 22,
+      "gender_inequality_index": 0.517,
+      "gender_inequality_rank": 142,
+      "gender_gap_index_score": 0.69,
+      "women_in_parliament_pct": 42,
+      "women_labor_force_participation_pct": 74,
+      "maternal_mortality_per_100k": 267,
+      "child_marriage_pct": 40,
+      "fgm_prevalence_pct": 65,
+      "lgbtq_legal_status": "Illegal (up to 15 years imprisonment)",
+      "death_penalty_status": "Retentionist",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 40,
+      "notes": "Tigray war atrocities (2020-22); ethnic tensions (Amhara, Oromo, Tigray); state of emergency powers; internet shutdowns; 50% cabinet women (2018-2021)."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.8,
+      "global_peace_index_rank": 153,
+      "terrorism_index_score": 6.0,
+      "terrorism_index_rank": 23,
+      "homicide_rate_per_100k": 8,
+      "active_conflicts": [
+        "Amhara region (Fano militia)",
+        "OLA (Oromia)",
+        "Post-Tigray tensions"
+      ],
+      "border_disputes": [
+        "Al-Fashaga triangle (with Sudan)",
+        "GERD dispute (with Egypt, Sudan)"
+      ],
+      "un_peacekeeping_contributions": 8000,
+      "arms_imports_usd": "$100 million",
+      "internally_displaced_persons": 4000000,
+      "notes": "Pretoria Agreement (Nov 2022) ended Tigray war; Amhara Fano insurgency ongoing; one of top UN peacekeeping contributors; GERD geopolitical tensions."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "Lion of Judah",
+        "Solomonic star"
+      ],
+      "national_animal": "lion (Panthera leo)",
+      "national_flower": "calla lily",
+      "national_dish": "Injera with wot (stew)",
+      "national_sport": "Football / Athletics (distance running)",
+      "major_festivals": [
+        "Meskel (Finding of the True Cross)",
+        "Timkat (Epiphany)",
+        "Irreechaa (Oromo thanksgiving)",
+        "Enkutatash (New Year, Sept 11)"
+      ],
+      "cuisine_highlights": [
+        "injera with doro wot",
+        "kitfo (raw beef)",
+        "tibs",
+        "shiro",
+        "Ethiopian coffee ceremony",
+        "tej (honey wine)"
+      ],
+      "music_art_traditions": [
+        "Ethio-jazz (Mulatu Astatke)",
+        "Azmari (wandering minstrels)",
+        "Eskista (shoulder dance)",
+        "Ge'ez script calligraphy",
+        "Axumite obelisk art"
+      ],
+      "film_industry": "Growing (Amharic-language 'Amharawood')",
+      "intangible_heritage_items": [
+        "Meskel festival (UNESCO)",
+        "Fichee-Chambalaalla (UNESCO)",
+        "Gada system (UNESCO)"
+      ],
+      "notable_historical_figures": [
+        "Menelik II (defeated Italy at Adwa)",
+        "Haile Selassie (Rastafari figure)",
+        "Lucy/Dinkinesh (3.2M year old hominid)",
+        "Abebe Bikila (barefoot Olympic marathon)",
+        "Abiy Ahmed (Nobel Peace 2019)"
+      ],
+      "world_heritage_sites": [
+        "Lalibela",
+        "Axum",
+        "Fasil Ghebbi",
+        "Simien Mountains",
+        "Awash",
+        "Omo",
+        "Tiya",
+        "Harar Jugol",
+        "Konso",
+        "Bale Mountains",
+        "Gedeo"
+      ],
+      "media_landscape": "State and private broadcasting; EBC public; multiple private; internet shutdowns during unrest",
+      "notes": "Never colonized (except brief Italian occupation 1936-41); unique Ge'ez alphabet; Ethiopian calendar; birthplace of coffee; Rastafari spiritual homeland."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (German/French influenced codes)",
+      "constitution_year": 1995,
+      "sharia_applicability": "Sharia courts for Muslim personal status (constitutional provision)",
+      "customary_law_role": "Customary courts recognized constitutionally",
+      "icc_membership": "Non-state party (signed)",
+      "judicial_independence_score": 0.3,
+      "contract_enforcement_days": 530,
+      "property_rights_index": 30,
+      "notes": "Federal system with ethnic-based states; constitutionally recognized right to secession; transitional justice for Tigray war under discussion."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 2,
+        "global_rank": 12
+      },
+      "area": {
+        "continent_rank": 10,
+        "global_rank": 27
+      },
+      "gdp_nominal": {
+        "continent_rank": 5,
+        "global_rank": 62
+      },
+      "gdp_per_capita": {
+        "continent_rank": 37,
+        "global_rank": 165
+      },
+      "hdi": {
+        "continent_rank": 34,
+        "global_rank": 175
+      },
+      "life_expectancy": {
+        "continent_rank": 13,
+        "global_rank": 116
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 38,
+        "global_rank": 159
+      },
+      "internet_penetration": {
+        "continent_rank": 36,
+        "global_rank": 160
+      },
+      "press_freedom": {
+        "continent_rank": 44,
+        "global_rank": 130
+      },
+      "global_peace_index": {
+        "continent_rank": 44,
+        "global_rank": 153
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": ""
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Abiy Ahmed",
       "title": "Prime Minister",
       "since": "2018-04-02",
-      "notes": "Oromo leader; Nobel Peace Prize 2019 for Eritrea peace; Prosperity Party; oversaw Tigray War 2020–2022"
+      "notes": "Oromo leader; Nobel Peace Prize 2019 for Eritrea peace; Prosperity Party; oversaw Tigray War 2020–2022",
+      "party": ""
     },
     "president": {
       "name": "Taye Atske Selassie",
@@ -320,7 +862,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.870267Z",
-    "notes": "Comprehensive index for Eswatini covering Nguni migration, Dlamini dynasty, Mswati II expansion, British protectorate (Swaziland), independence 1968, Mswati III absolute monarchy (last absolute monarch in Africa), Reed Dance ceremony, and pro-democracy protests."
+    "notes": "Comprehensive index for Eswatini covering Nguni migration, Dlamini dynasty, Mswati II expansion, British protectorate (Swaziland), independence 1968, Mswati III absolute monarchy (last absolute monarch in Africa), Reed Dance ceremony, and pro-democracy protests.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Mbabane (administrative) / Lobamba (royal and legislative)",
@@ -108,7 +109,22 @@
       "life_expectancy": 60.5,
       "infant_mortality_per_1k": 38.0,
       "literacy_rate_pct": 88.4,
-      "net_migration_rate": -1.6
+      "net_migration_rate": -1.6,
+      "population_growth_rate_pct": 0.8,
+      "urban_population_growth_rate_pct": 2.1,
+      "life_expectancy_male": 54,
+      "life_expectancy_female": 63,
+      "under5_mortality_per_1k": 48,
+      "sex_ratio": 0.95,
+      "dependency_ratio": 64,
+      "population_density_per_km2": 68,
+      "age_structure": {
+        "0_14_pct": 35,
+        "15_24_pct": 20,
+        "25_54_pct": 36,
+        "55_64_pct": 5,
+        "65_plus_pct": 4
+      }
     },
     "natural_resources": {
       "primary": [
@@ -135,7 +151,10 @@
         "SADC",
         "Commonwealth"
       ],
-      "notes": "Last absolute monarchy in Africa; security forces deployed against pro-democracy protests 2021; Umbutfo Eswatini Defence Force small but equipped; no external threats; internal security primary focus; regiment system (age-set) traditional"
+      "notes": "Last absolute monarchy in Africa; security forces deployed against pro-democracy protests 2021; Umbutfo Eswatini Defence Force small but equipped; no external threats; internal security primary focus; regiment system (age-set) traditional",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [
@@ -163,14 +182,45 @@
         "USA"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 2.5
+      "remittances_pct_gdp": 2.5,
+      "total_exports_usd": "$2 billion",
+      "total_imports_usd": "$2.1 billion",
+      "top_export_destinations": [
+        "South Africa",
+        "Kenya",
+        "USA",
+        "Mozambique"
+      ],
+      "top_import_origins": [
+        "South Africa",
+        "China",
+        "Mozambique",
+        "India"
+      ],
+      "trade_as_pct_gdp": 87,
+      "current_account_balance_usd": "$100 million",
+      "trade_agreements": [
+        "SACU",
+        "SADC",
+        "COMESA",
+        "AfCFTA",
+        "AGOA (suspended 2022)"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 57.0,
       "electricity_access_pct": 80.0,
       "mobile_subscriptions_per_100": 88,
       "railway_km": 301,
-      "paved_roads_pct": 30
+      "paved_roads_pct": 30,
+      "broadband_subscriptions_per_100": 0.3,
+      "4g_coverage_pct": 65,
+      "5g_availability": false,
+      "road_network_km": 3594,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": "Landlocked; dependent on Mozambique/South Africa for trade routes."
     },
     "international_memberships": [
       "UN",
@@ -199,6 +249,26 @@
       "fragile_states_index": {
         "score": 77.8,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.43,
+        "rank": 100,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.5,
+        "percentile": 22,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.3,
+        "percentile": 33,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.3,
+        "percentile": 28,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -213,12 +283,40 @@
         "floods",
         "soil erosion"
       ],
-      "protected_areas_pct": 3
+      "protected_areas_pct": 3,
+      "average_temperature_c": 20,
+      "average_rainfall_mm": 800,
+      "co2_per_capita_t": 1.1,
+      "deforestation_rate_pct": 0.5,
+      "water_stress_level": "Medium-high",
+      "environmental_performance_index": {
+        "score": 33,
+        "rank": 144,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 2500,
+        "endemic_species": 10,
+        "threatened_species": 35
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 42.5,
       "foreign_aid_received_usd": "100 million",
-      "notes": "South African Customs Union (SACU) revenues critical (~50% government revenue); heavily dependent on South Africa economically; HIV/AIDS spending significant (highest HIV prevalence globally ~27%); monarchy's spending vs public services tension"
+      "notes": "South African Customs Union (SACU) revenues critical (~50% government revenue); heavily dependent on South Africa economically; HIV/AIDS spending significant (highest HIV prevalence globally ~27%); monarchy's spending vs public services tension",
+      "external_debt_usd": "$1 billion",
+      "debt_service_pct_revenue": 7,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA",
+        "EU",
+        "Japan",
+        "Global Fund"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": "Not applicable"
     },
     "education": {
       "primary_enrollment_pct": 85,
@@ -229,14 +327,40 @@
         "University of Eswatini",
         "Southern Africa Nazarene University"
       ],
-      "notes": "Free primary education since 2010; high literacy; English-language instruction; student protests often lead to broader pro-democracy movement; many study in South Africa; Waterford Kamhlaba United World College produces Pan-African leaders"
+      "notes": "Free primary education since 2010; high literacy; English-language instruction; student protests often lead to broader pro-democracy movement; many study in South Africa; Waterford Kamhlaba United World College produces Pan-African leaders",
+      "education_expenditure_pct_gdp": 5.5,
+      "primary_completion_rate_pct": 80,
+      "gender_parity_index": 0.94,
+      "mean_years_of_schooling": 6.7,
+      "expected_years_of_schooling": 11.3,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 30,
+      "out_of_school_children": 20000,
+      "academic_freedom_index": 0.3
     },
     "diaspora_migration": {
       "diaspora_population": "130,000 (South Africa primarily, Mozambique)",
       "refugees_hosted": 800,
       "refugees_produced": 1000,
       "remittances_usd": "60 million",
-      "notes": "Mainly South Africa migration (economic, HIV treatment access); porous border with Mozambique; small but growing exile community (pro-democracy activists); seasonal laborers in South African mines"
+      "notes": "Mainly South Africa migration (economic, HIV treatment access); porous border with Mozambique; small but growing exile community (pro-democracy activists); seasonal laborers in South African mines",
+      "diaspora_top_destinations": [
+        "South Africa",
+        "Mozambique",
+        "USA",
+        "UK"
+      ],
+      "asylum_seekers": 500,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Open with South Africa (de facto)",
+      "remittances_pct_gdp": 2.5,
+      "net_migration_rate_per_1k": -5.0
     },
     "digital_economy": {
       "e_government_index": 0.38,
@@ -244,21 +368,365 @@
       "tech_hubs": [
         "Mbabane (Royal Science & Technology Park)"
       ],
-      "notes": "Small but growing tech sector; Royal Science & Technology Park government initiative; MTN Eswatini dominant; internet costs declining; government digitization lagging; proximity to South Africa brings tech spillover"
+      "notes": "Small but growing tech sector; Royal Science & Technology Park government initiative; MTN Eswatini dominant; internet costs declining; government digitization lagging; proximity to South Africa brings tech spillover",
+      "e_participation_index": 0.25,
+      "ict_development_index": 2.5,
+      "mobile_money_accounts": 600000,
+      "digital_payments_pct_adults": 20,
+      "fintech_companies": 5,
+      "startup_ecosystem_value_usd": "$5 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.25,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 0
     },
     "notes_unique": "Africa's last absolute monarchy; renamed from Swaziland to Eswatini in 2018; the annual Umhlanga (Reed Dance) ceremony involves tens of thousands of young women.",
     "other_languages": [
       "Zulu",
       "Tsonga",
       "Afrikaans"
-    ]
+    ],
+    "capital_coordinates": {
+      "lat": -26.3054,
+      "lon": 31.1367
+    },
+    "other_major_cities": [
+      "Manzini",
+      "Mbabane",
+      "Nhlangano",
+      "Siteki"
+    ],
+    "national_motto": "We are a fortress",
+    "national_anthem": "Nkulunkulu Mnikati wetibusiso temaSwati (O God, Bestower of the Blessings of the Swazi)",
+    "currency_code": "SZL",
+    "internet_tld": ".sz",
+    "utc_offset": "UTC+2",
+    "drives_on": "left",
+    "geography": {
+      "coordinates": {
+        "lat": -26.5225,
+        "lon": 31.4659
+      },
+      "bounding_box": {
+        "north": -25.72,
+        "south": -27.32,
+        "east": 32.14,
+        "west": 30.79
+      },
+      "land_area_km2": 17364,
+      "water_area_km2": 0,
+      "coastline_km": 0,
+      "borders": [
+        "South Africa",
+        "Mozambique"
+      ],
+      "border_lengths_km": {
+        "South Africa": 438,
+        "Mozambique": 108
+      },
+      "highest_point": {
+        "name": "Emlembe",
+        "elevation_m": 1862
+      },
+      "lowest_point": {
+        "name": "Great Usuthu River",
+        "elevation_m": 21
+      },
+      "terrain": "Mountainous in west (Highveld); hilly in center (Middleveld); plains in east (Lowveld and Lubombo Plateau)",
+      "land_use": {
+        "agricultural_pct": 68.3,
+        "arable_pct": 9.8,
+        "forest_pct": 34,
+        "other_pct": 0
+      },
+      "major_rivers": [
+        "Great Usuthu (Lusutfu)",
+        "Komati",
+        "Mbuluzi"
+      ],
+      "major_lakes": [
+        "Maguga Dam reservoir",
+        "Lubovane Dam reservoir"
+      ],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": true,
+      "notes": "One of smallest countries in Africa; last absolute monarchy; dual capital (Mbabane administrative, Lobamba legislative/royal)."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$4.7 billion",
+      "gdp_ppp_usd": "$12.5 billion",
+      "gdp_per_capita_nominal_usd": 3963,
+      "gdp_per_capita_ppp_usd": 10500,
+      "gdp_growth_rate_pct": 3.5,
+      "inflation_rate_pct": 4.8,
+      "unemployment_rate_pct": 33,
+      "youth_unemployment_rate_pct": 58,
+      "poverty_rate_pct": 58.9,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 54.6,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 8,
+        "industry_pct_gdp": 33,
+        "services_pct_gdp": 59
+      },
+      "labor_force": 420000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 25,
+        "industry_pct": 28,
+        "services_pct": 47
+      },
+      "fdi_inflow_usd": "$20 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$500 million",
+      "ease_of_doing_business_rank": 121,
+      "economic_freedom_index_score": 60.3,
+      "credit_rating": {
+        "moodys": "B3",
+        "sp": "B-",
+        "fitch": ""
+      },
+      "notes": "SACU revenue (~50% government income); sugar, soft drink concentrate (Coca-Cola), and textile exports; lilangeni pegged to South African rand."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 6.5,
+      "health_expenditure_per_capita_usd": 213,
+      "physicians_per_1k": 0.08,
+      "nurses_midwives_per_1k": 1.9,
+      "hospital_beds_per_1k": 2.1,
+      "maternal_mortality_per_100k": 437,
+      "hiv_prevalence_pct": 26,
+      "malaria_incidence_per_1k": 0.1,
+      "tuberculosis_incidence_per_100k": 319,
+      "access_to_clean_water_pct": 70,
+      "access_to_sanitation_pct": 58,
+      "vaccination_coverage_pct": 83,
+      "stunting_under5_pct": 26,
+      "obesity_rate_pct": 16.5,
+      "universal_health_coverage_index": 44,
+      "leading_causes_of_death": [
+        "HIV/AIDS",
+        "tuberculosis",
+        "lower respiratory infections",
+        "diarrheal diseases",
+        "cardiovascular diseases"
+      ],
+      "notes": "World's highest HIV prevalence (26% adults); significant progress with ART coverage (>90%); TB-HIV co-infection major challenge."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 35,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 9.8,
+      "agricultural_land_pct": 68.3,
+      "irrigated_land_pct": 15,
+      "major_crops": [
+        "sugarcane",
+        "cotton",
+        "maize",
+        "citrus",
+        "pineapples"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats"
+      ],
+      "food_import_dependency_pct": 60,
+      "cereal_yield_kg_per_hectare": 1200,
+      "agricultural_employment_pct": 25,
+      "prevalence_of_undernourishment_pct": 20,
+      "notes": "Sugar dominant cash crop (4th largest in Africa); Swazi Nation Land (SNL) communal farming; commercial estates for sugar."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 20,
+        "hydroelectric_pct": 15,
+        "solar_pct": 2,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 63
+      },
+      "installed_capacity_mw": 70,
+      "electricity_production_gwh": 400,
+      "electricity_consumption_per_capita_kwh": 900,
+      "energy_imports_pct": 80,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 5000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 55,
+      "energy_access_urban_pct": 90,
+      "notes": "Imports ~80% electricity from South Africa and Mozambique; bagasse (sugarcane waste) significant; solar expansion planned."
+    },
+    "transport": {
+      "major_airports_international": [
+        "King Mswati III International Airport (Sikhuphe)"
+      ],
+      "major_airports_domestic": [
+        "Matsapha Airport (under conversion)"
+      ],
+      "national_airline": "Eswatini Air (est. 2022)",
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 80,
+      "road_fatalities_per_100k": 30,
+      "notes": "Landlocked; rail link to Mozambique (Maputo port) for exports; new international airport opened 2014."
+    },
+    "tourism": {
+      "annual_visitors": 870000,
+      "tourism_revenue_usd": "$45 million",
+      "tourism_pct_gdp": 1.0,
+      "tourism_employment_pct": 4,
+      "unesco_world_heritage_sites": 0,
+      "unesco_sites_list": [],
+      "major_attractions": [
+        "Hlane Royal National Park",
+        "Mlilwane Wildlife Sanctuary",
+        "Reed Dance (Umhlanga)",
+        "Incwala ceremony",
+        "Mantenga Cultural Village",
+        "Malolotja Nature Reserve"
+      ],
+      "visa_free_access_countries": 57,
+      "henley_passport_rank": 76,
+      "notes": "Cultural tourism (Swazi ceremonies); game reserves; often combined with South Africa/Mozambique trips."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 17,
+      "gender_inequality_index": 0.558,
+      "gender_inequality_rank": 149,
+      "gender_gap_index_score": 0.0,
+      "women_in_parliament_pct": 12,
+      "women_labor_force_participation_pct": 42,
+      "maternal_mortality_per_100k": 437,
+      "child_marriage_pct": 5,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Illegal (common law; not enforced for women)",
+      "death_penalty_status": "Abolitionist in practice",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "child_labor_pct": 7,
+      "notes": "Last absolute monarchy in Africa; 2021 pro-democracy protests violently suppressed; political parties banned in national elections; king controls all three branches."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.1,
+      "global_peace_index_rank": 112,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 12,
+      "active_conflicts": [
+        "Pro-democracy unrest (sporadic since 2021)"
+      ],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$5 million",
+      "internally_displaced_persons": 0,
+      "notes": "2021 pro-democracy uprising; internet shutdowns during protests; SADC mediation attempted."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "lion",
+        "elephant"
+      ],
+      "national_animal": "purple-crested turaco (ligwalagwala)",
+      "national_flower": "",
+      "national_dish": "Sishwala (thick maize porridge)",
+      "national_sport": "Football / Reed Dance",
+      "major_festivals": [
+        "Umhlanga (Reed Dance)",
+        "Incwala (Kingship ceremony)",
+        "Marula Festival (buganu)"
+      ],
+      "cuisine_highlights": [
+        "sishwala",
+        "emasi (fermented milk)",
+        "siphuphe (mealie meal porridge)",
+        "umncweba (dried meat)"
+      ],
+      "music_art_traditions": [
+        "Sibhaca dance",
+        "Swazi traditional music",
+        "Incwala sacred songs",
+        "basket weaving"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [
+        "Sobhuza II (longest reigning monarch, 82 years)",
+        "Mswati III (current king)",
+        "Labotsibeni Mdluli (queen regent)"
+      ],
+      "world_heritage_sites": [],
+      "media_landscape": "State-dominated; Times of Eswatini; Swazi TV; some private media but restricted",
+      "notes": "Last absolute monarchy in Africa; Swazi cultural ceremonies are major national identity markers; polygamy practiced by royals."
+    },
+    "legal_system": {
+      "legal_tradition": "Mixed: Roman-Dutch common law and Swazi customary law",
+      "constitution_year": 2005,
+      "sharia_applicability": "None",
+      "customary_law_role": "Central to governance (Tinkhundla system); Swazi National Courts",
+      "icc_membership": "Non-state party",
+      "judicial_independence_score": 0.25,
+      "contract_enforcement_days": 956,
+      "property_rights_index": 35,
+      "notes": "Dual legal system; Tinkhundla governance system (constituencies); king appoints PM and much of parliament; Swazi National Courts (customary)."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 46,
+        "global_rank": 159
+      },
+      "area": {
+        "continent_rank": 48,
+        "global_rank": 153
+      },
+      "gdp_nominal": {
+        "continent_rank": 39,
+        "global_rank": 151
+      },
+      "gdp_per_capita": {
+        "continent_rank": 16,
+        "global_rank": 124
+      },
+      "hdi": {
+        "continent_rank": 20,
+        "global_rank": 144
+      },
+      "life_expectancy": {
+        "continent_rank": 43,
+        "global_rank": 175
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 18,
+        "global_rank": 121
+      },
+      "internet_penetration": {
+        "continent_rank": 16,
+        "global_rank": 108
+      },
+      "press_freedom": {
+        "continent_rank": 48,
+        "global_rank": 155
+      },
+      "global_peace_index": {
+        "continent_rank": 20,
+        "global_rank": 112
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": ""
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "King Mswati III",
       "title": "King (Ingwenyama)",
       "since": "1986-04-25",
-      "notes": "Africa's last absolute monarch; crowned at age 18; son of Sobhuza II; 15+ wives; pro-democracy protests 2021 violently suppressed"
+      "notes": "Africa's last absolute monarch; crowned at age 18; son of Sobhuza II; 15+ wives; pro-democracy protests 2021 violently suppressed",
+      "party": ""
     },
     "queen_mother": {
       "name": "Ntfombi Tfwala",
@@ -294,7 +762,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {
