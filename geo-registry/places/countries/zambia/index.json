@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.901664Z",
-    "notes": "Comprehensive index for Zambia covering Bantu migration, Lozi/Bemba kingdoms, Livingstone/Victoria Falls, Northern Rhodesia, copper belt, Kaunda/UNIP, Chiluba multiparty transition, and copper dependency."
+    "notes": "Comprehensive index for Zambia covering Bantu migration, Lozi/Bemba kingdoms, Livingstone/Victoria Falls, Northern Rhodesia, copper belt, Kaunda/UNIP, Chiluba multiparty transition, and copper dependency.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Lusaka",
@@ -153,7 +154,22 @@
       "life_expectancy": 63.9,
       "infant_mortality_per_1k": 40.0,
       "literacy_rate_pct": 86.7,
-      "net_migration_rate": -0.5
+      "net_migration_rate": -0.5,
+      "population_growth_rate_pct": 2.8,
+      "urban_population_growth_rate_pct": 4.2,
+      "life_expectancy_male": 61,
+      "life_expectancy_female": 67,
+      "under5_mortality_per_1k": 58,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 88,
+      "population_density_per_km2": 27,
+      "age_structure": {
+        "0_14_pct": 44,
+        "15_24_pct": 20,
+        "25_54_pct": 29,
+        "55_64_pct": 4,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -184,7 +200,10 @@
         "COMESA",
         "Commonwealth"
       ],
-      "notes": "Zambia Defence Force (ZDF); historically hosted liberation movements (ANC, SWAPO); UN peacekeeping contributor; mostly peaceful history (no civil war); professional but under-resourced; Chinese military cooperation growing."
+      "notes": "Zambia Defence Force (ZDF); historically hosted liberation movements (ANC, SWAPO); UN peacekeeping contributor; mostly peaceful history (no civil war); professional but under-resourced; Chinese military cooperation growing.",
+      "paramilitary_personnel": 1400,
+      "conscription": false,
+      "global_firepower_rank": 115
     },
     "trade": {
       "top_exports": [
@@ -217,14 +236,50 @@
         "Japan"
       ],
       "trade_balance": "surplus (copper prices dependent)",
-      "remittances_pct_gdp": 1.5
+      "remittances_pct_gdp": 1.5,
+      "total_exports_usd": "$11 billion",
+      "total_imports_usd": "$8 billion",
+      "top_export_destinations": [
+        "Switzerland",
+        "China",
+        "DR Congo",
+        "Singapore",
+        "South Africa"
+      ],
+      "top_import_origins": [
+        "South Africa",
+        "China",
+        "DR Congo",
+        "Kuwait",
+        "UAE"
+      ],
+      "trade_as_pct_gdp": 65,
+      "current_account_balance_usd": "$2 billion",
+      "trade_agreements": [
+        "COMESA",
+        "SADC",
+        "AfCFTA"
+      ],
+      "special_economic_zones": [
+        "Lusaka South Multi-Facility Economic Zone",
+        "Chambishi MFEZ",
+        "Lusaka East MFEZ",
+        "Sub-Sahara Gemstone Industrial Park"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 24.0,
       "electricity_access_pct": 43.0,
       "mobile_subscriptions_per_100": 99,
       "railway_km": 3126,
-      "paved_roads_pct": 22
+      "paved_roads_pct": 22,
+      "broadband_subscriptions_per_100": 0.3,
+      "4g_coverage_pct": 55,
+      "5g_availability": false,
+      "road_network_km": 67671,
+      "waterways_km": 2250,
+      "submarine_cables": [],
+      "notes": "MTN, Airtel, Zamtel telecoms; ZICTA regulator; TAZARA railway; landlocked (depends on corridors to Dar, Beira, Durban)."
     },
     "international_memberships": [
       "UN",
@@ -255,6 +310,26 @@
       "fragile_states_index": {
         "score": 80.0,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.45,
+        "rank": 85,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.5,
+        "percentile": 28,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.3,
+        "percentile": 35,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": 0.1,
+        "percentile": 45,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -270,12 +345,41 @@
         "floods",
         "power shortages (Kariba Dam low water levels)"
       ],
-      "protected_areas_pct": 40
+      "protected_areas_pct": 40,
+      "average_temperature_c": 22,
+      "average_rainfall_mm": 1000,
+      "co2_per_capita_t": 0.3,
+      "deforestation_rate_pct": 1.5,
+      "water_stress_level": "Low-Medium",
+      "environmental_performance_index": {
+        "score": 30,
+        "rank": 157,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 6000,
+        "endemic_species": 100,
+        "threatened_species": 80
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 90.0,
       "foreign_aid_received_usd": "1.2 billion",
-      "notes": "First African country to default on sovereign bonds during COVID-19 (2020); Common Framework debt restructuring ($6.3B, China/bondholders); President Hichilema (2021) privatisation-friendly; copper production target 3M tonnes by 2031; load-shedding crisis (2024, drought reduced Kariba hydro); IMF $1.3B programme."
+      "notes": "First African country to default on sovereign bonds during COVID-19 (2020); Common Framework debt restructuring ($6.3B, China/bondholders); President Hichilema (2021) privatisation-friendly; copper production target 3M tonnes by 2031; load-shedding crisis (2024, drought reduced Kariba hydro); IMF $1.3B programme.",
+      "external_debt_usd": "$18 billion",
+      "debt_service_pct_revenue": 30,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA",
+        "UK",
+        "World Bank",
+        "EU",
+        "Japan"
+      ],
+      "imf_programme_active": true,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point (2005); 2020 default; Common Framework restructuring (2023-24)"
     },
     "education": {
       "primary_enrollment_pct": 88,
@@ -288,14 +392,41 @@
         "Mulungushi University",
         "Cavendish University Zambia"
       ],
-      "notes": "Free primary education (2002); English medium of instruction; UNZA/CBU historically important; Zambian Open University for distance learning; rural school quality challenges; SACMEQ assessment participant; strong student activism tradition."
+      "notes": "Free primary education (2002); English medium of instruction; UNZA/CBU historically important; Zambian Open University for distance learning; rural school quality challenges; SACMEQ assessment participant; strong student activism tradition.",
+      "education_expenditure_pct_gdp": 4.6,
+      "primary_completion_rate_pct": 80,
+      "gender_parity_index": 0.95,
+      "mean_years_of_schooling": 7.0,
+      "expected_years_of_schooling": 11.0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 40,
+      "out_of_school_children": 300000,
+      "academic_freedom_index": 0.5
     },
     "diaspora_migration": {
       "diaspora_population": "300,000+ (South Africa, UK, Australia, USA, Botswana, Namibia)",
       "refugees_hosted": 100000,
       "refugees_produced": 5000,
       "remittances_usd": "250 million",
-      "notes": "Hosts Congolese (DRC) refugees (Meheba, Mayukwayukwa settlements); skilled professionals emigrate to South Africa and UK; Asian community (Indian, Chinese) significant in business; 2021 peaceful power transfer (Hichilema election) praised."
+      "notes": "Hosts Congolese (DRC) refugees (Meheba, Mayukwayukwa settlements); skilled professionals emigrate to South Africa and UK; Asian community (Indian, Chinese) significant in business; 2021 peaceful power transfer (Hichilema election) praised.",
+      "diaspora_top_destinations": [
+        "South Africa",
+        "UK",
+        "USA",
+        "Australia",
+        "Botswana"
+      ],
+      "asylum_seekers": 1000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Hosts 90k+ refugees (DRC, Burundi, Rwanda); Meheba/Mantapala settlements",
+      "remittances_pct_gdp": 1,
+      "net_migration_rate_per_1k": -0.5
     },
     "digital_economy": {
       "e_government_index": 0.4,
@@ -304,7 +435,18 @@
         "Lusaka (BongoHive — first tech hub in Zambia)",
         "Copperbelt"
       ],
-      "notes": "BongoHive established 2011; three MNOs (MTN, Airtel, Zamtel); mobile money interoperability progressing; EASSy submarine cable access via Mozambique; Zambia ICT Authority; government digitisation agenda; fintech growing (Zoona pivoted to payments infrastructure)."
+      "notes": "BongoHive established 2011; three MNOs (MTN, Airtel, Zamtel); mobile money interoperability progressing; EASSy submarine cable access via Mozambique; Zambia ICT Authority; government digitisation agenda; fintech growing (Zoona pivoted to payments infrastructure).",
+      "e_participation_index": 0.3,
+      "ict_development_index": 2.5,
+      "mobile_money_accounts": 8000000,
+      "digital_payments_pct_adults": 30,
+      "fintech_companies": 20,
+      "startup_ecosystem_value_usd": "$50 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.35,
+      "innovation_index_score": 18,
+      "innovation_index_rank": 120,
+      "ai_readiness_index": 15
     },
     "other_languages": [
       "Bemba",
@@ -314,14 +456,389 @@
       "Kaonde",
       "Luvale",
       "Lunda"
-    ]
+    ],
+    "capital_coordinates": {
+      "lat": -15.3875,
+      "lon": 28.3228
+    },
+    "other_major_cities": [
+      "Kitwe",
+      "Ndola",
+      "Kabwe",
+      "Chingola",
+      "Mufulira",
+      "Livingstone"
+    ],
+    "national_motto": "One Zambia, One Nation",
+    "national_anthem": "Stand and Sing of Zambia, Proud and Free",
+    "currency_code": "ZMW",
+    "internet_tld": ".zm",
+    "utc_offset": "UTC+2",
+    "drives_on": "left",
+    "geography": {
+      "coordinates": {
+        "lat": -13.1339,
+        "lon": 27.8493
+      },
+      "bounding_box": {
+        "north": -8.22,
+        "south": -18.08,
+        "east": 33.71,
+        "west": 21.99
+      },
+      "land_area_km2": 743398,
+      "water_area_km2": 9220,
+      "coastline_km": 0,
+      "borders": [
+        "DR Congo",
+        "Tanzania",
+        "Malawi",
+        "Mozambique",
+        "Zimbabwe",
+        "Botswana",
+        "Namibia",
+        "Angola"
+      ],
+      "border_lengths_km": {
+        "DR Congo": 2332,
+        "Tanzania": 353,
+        "Malawi": 847,
+        "Mozambique": 439,
+        "Zimbabwe": 797,
+        "Botswana": 0.15,
+        "Namibia": 233,
+        "Angola": 1065
+      },
+      "highest_point": {
+        "name": "Mafinga Central",
+        "elevation_m": 2339
+      },
+      "lowest_point": {
+        "name": "Zambezi River",
+        "elevation_m": 329
+      },
+      "terrain": "High plateau (1000-1400m); Zambezi valley; Bangweulu Wetlands; Kafue Flats; Victoria Falls (shared with Zimbabwe); miombo woodland",
+      "land_use": {
+        "agricultural_pct": 31.7,
+        "arable_pct": 4.8,
+        "forest_pct": 65.4,
+        "other_pct": 2.9
+      },
+      "major_rivers": [
+        "Zambezi",
+        "Kafue",
+        "Luangwa",
+        "Chambeshi",
+        "Luapula"
+      ],
+      "major_lakes": [
+        "Bangweulu",
+        "Mweru (shared)",
+        "Kariba (shared)",
+        "Tanganyika (shared)"
+      ],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": true,
+      "notes": "Victoria Falls (Mosi-oa-Tunya, 'Smoke that Thunders', UNESCO, shared with Zimbabwe); 8 borders; Copperbelt mining; Bangweulu Wetlands; source of the Congo River (Chambeshi)."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$29 billion",
+      "gdp_ppp_usd": "$75 billion",
+      "gdp_per_capita_nominal_usd": 1430,
+      "gdp_per_capita_ppp_usd": 3700,
+      "gdp_growth_rate_pct": 4.0,
+      "inflation_rate_pct": 10,
+      "unemployment_rate_pct": 13,
+      "youth_unemployment_rate_pct": 25,
+      "poverty_rate_pct": 54.4,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 57.1,
+      "income_classification": "Lower middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 3,
+        "industry_pct_gdp": 36,
+        "services_pct_gdp": 61
+      },
+      "labor_force": 7000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 50,
+        "industry_pct": 12,
+        "services_pct": 38
+      },
+      "fdi_inflow_usd": "$1.5 billion",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$3 billion",
+      "ease_of_doing_business_rank": 85,
+      "economic_freedom_index_score": 54.2,
+      "credit_rating": {
+        "moodys": "Ca",
+        "sp": "CCC+",
+        "fitch": "RD"
+      },
+      "notes": "Africa's #2 copper producer (after DRC); cobalt/emeralds (world's largest emerald deposits); 2020 default (1st African COVID-era sovereign default); debt restructuring (2023-24, Common Framework); Hichilema economic reforms; diversification agenda."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 5,
+      "health_expenditure_per_capita_usd": 60,
+      "physicians_per_1k": 0.1,
+      "nurses_midwives_per_1k": 1.0,
+      "hospital_beds_per_1k": 2.0,
+      "maternal_mortality_per_100k": 135,
+      "hiv_prevalence_pct": 11.1,
+      "malaria_incidence_per_1k": 150,
+      "tuberculosis_incidence_per_100k": 333,
+      "access_to_clean_water_pct": 67,
+      "access_to_sanitation_pct": 35,
+      "vaccination_coverage_pct": 82,
+      "stunting_under5_pct": 35,
+      "obesity_rate_pct": 8.1,
+      "universal_health_coverage_index": 42,
+      "leading_causes_of_death": [
+        "HIV/AIDS",
+        "lower respiratory infections",
+        "malaria",
+        "diarrheal diseases",
+        "tuberculosis"
+      ],
+      "notes": "High HIV prevalence (11%); PEPFAR recipient; TB/HIV co-infection; University Teaching Hospital (UTH, largest in Southern Africa); community health assistants; malaria endemic."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 35,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 4.8,
+      "agricultural_land_pct": 31.7,
+      "irrigated_land_pct": 1,
+      "major_crops": [
+        "maize",
+        "sugarcane",
+        "cassava",
+        "sorghum",
+        "millet",
+        "groundnuts",
+        "soybeans",
+        "tobacco",
+        "cotton",
+        "wheat"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "poultry",
+        "pigs"
+      ],
+      "food_import_dependency_pct": 10,
+      "cereal_yield_kg_per_hectare": 2500,
+      "agricultural_employment_pct": 50,
+      "prevalence_of_undernourishment_pct": 32,
+      "notes": "Maize staple (nshima); Zambeef (largest food processor); sugarcane (Zambia Sugar); subsistence farming dominant; FISP (Farmer Input Support Programme); frequent drought vulnerability."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 5,
+        "hydroelectric_pct": 85,
+        "solar_pct": 5,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 5
+      },
+      "installed_capacity_mw": 3600,
+      "electricity_production_gwh": 16000,
+      "electricity_consumption_per_capita_kwh": 700,
+      "energy_imports_pct": 5,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 25000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 5,
+      "energy_access_urban_pct": 70,
+      "notes": "Kariba Dam (shared with Zimbabwe, 1080 MW Zambian side); Kafue Gorge Upper/Lower (990 MW + 750 MW); Batoka Gorge (planned); hydropower dominant but drought-vulnerable; ZESCO utility."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Kenneth Kaunda International Airport (Lusaka)",
+        "Harry Mwanga Nkumbula International Airport (Livingstone)",
+        "Simon Mwansa Kapwepwe International Airport (Ndola)"
+      ],
+      "major_airports_domestic": [
+        "Mfuwe (South Luangwa)",
+        "Solwezi",
+        "Kasama"
+      ],
+      "national_airline": "None (Zambia Airways defunct; Proflight Zambia private)",
+      "major_seaports": [],
+      "major_inland_ports": [
+        "Mpulungu (Lake Tanganyika)"
+      ],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 20,
+      "road_fatalities_per_100k": 22,
+      "notes": "TAZARA railway (Tanzania link, Chinese-built); Zambia Railways (south); Nacala Corridor (to Mozambique ports); Great East Road; landlocked transport challenges."
+    },
+    "tourism": {
+      "annual_visitors": 1200000,
+      "tourism_revenue_usd": "$500 million",
+      "tourism_pct_gdp": 2,
+      "tourism_employment_pct": 7,
+      "unesco_world_heritage_sites": 1,
+      "unesco_sites_list": [
+        "Mosi-oa-Tunya / Victoria Falls"
+      ],
+      "major_attractions": [
+        "Victoria Falls (Mosi-oa-Tunya)",
+        "South Luangwa National Park (walking safari pioneer)",
+        "Lower Zambezi National Park (canoeing)",
+        "Kafue National Park",
+        "Lake Kariba",
+        "Bangweulu Wetlands (shoebill)",
+        "Liuwa Plain National Park (wildebeest migration)"
+      ],
+      "visa_free_access_countries": 55,
+      "henley_passport_rank": 80,
+      "notes": "Victoria Falls (shared with Zimbabwe); walking safari pioneer (South Luangwa, Norman Carr); KAZA Transfrontier Conservation Area; shoebill (birding); adventure tourism."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 52,
+      "gender_inequality_index": 0.539,
+      "gender_inequality_rank": 142,
+      "gender_gap_index_score": 0.72,
+      "women_in_parliament_pct": 15,
+      "women_labor_force_participation_pct": 70,
+      "maternal_mortality_per_100k": 135,
+      "child_marriage_pct": 29,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Illegal (15 years to life)",
+      "death_penalty_status": "Abolitionist (2022, Hichilema signed into law)",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 18,
+      "notes": "2021 democratic transition (Hichilema defeated Lungu); death penalty abolished (2022); improving press freedom; structural gender inequality persists; child marriage in rural areas."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.8,
+      "global_peace_index_rank": 52,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "homicide_rate_per_100k": 5,
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 1000,
+      "arms_imports_usd": "$20 million",
+      "internally_displaced_persons": 0,
+      "notes": "Among most peaceful African countries; no civil war history; democratic transition tradition (Kaunda-Chiluba 1991, Hichilema 2021); regional mediation role."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "African fish eagle"
+      ],
+      "national_animal": "African fish eagle",
+      "national_flower": "",
+      "national_dish": "Nshima (maize porridge) with relish",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Kuomboka Ceremony (Lozi, Barotseland, floodplain to highland migration)",
+        "Nc'wala Ceremony (Ngoni harvest)",
+        "Umutomboko Ceremony (Lunda)",
+        "Likumbi Lya Mize (Luvale masquerade)"
+      ],
+      "cuisine_highlights": [
+        "nshima (thick maize porridge, staple)",
+        "ifisashi (greens in groundnut sauce)",
+        "kapenta (dried sardines)",
+        "chikanda (African polony from orchid tubers)",
+        "chibwantu (fermented maize drink)",
+        "vitumbuwa (fritters)"
+      ],
+      "music_art_traditions": [
+        "Kalindula music (Zamrock predecessor)",
+        "Zamrock (1970s rock, WITCH, Rikki Ililonga)",
+        "Tonga/Lozi traditional music",
+        "Makishi masquerade (UNESCO)",
+        "Chikokoshi (thumb piano)"
+      ],
+      "film_industry": "Minimal",
+      "intangible_heritage_items": [
+        "Makishi masquerade (UNESCO)",
+        "Mooba dance (Lenje, UNESCO)",
+        "Budima dance (Tonga, UNESCO)"
+      ],
+      "notable_historical_figures": [
+        "Kenneth Kaunda (founding father, president 1964-91)",
+        "Frederick Chiluba (2nd president, multiparty)",
+        "Hakainde Hichilema (current president, 2021)",
+        "David Livingstone (explored Victoria Falls)"
+      ],
+      "world_heritage_sites": [
+        "Mosi-oa-Tunya / Victoria Falls"
+      ],
+      "media_landscape": "ZNBC state; Muvi TV, Prime TV (private); Daily Nation, Zambia Daily Mail; more press freedom under Hichilema",
+      "notes": "One Zambia One Nation (unity motto, 73 ethnic groups); Kuomboka (unique royal ceremony); Zamrock revival (global interest); Victoria Falls; Kaunda's peaceful independence."
+    },
+    "legal_system": {
+      "legal_tradition": "English common law and customary law",
+      "constitution_year": 2016,
+      "sharia_applicability": "None (Christian nation in preamble)",
+      "customary_law_role": "Local courts (magistrates applying customary law); chiefs significant in rural areas",
+      "icc_membership": "State party",
+      "judicial_independence_score": 0.4,
+      "contract_enforcement_days": 611,
+      "property_rights_index": 40,
+      "notes": "Preamble declares Zambia a 'Christian nation'; Constitutional Court established (2016); dual legal system; land (customary vs state land); death penalty abolished (2022)."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 14,
+        "global_rank": 55
+      },
+      "area": {
+        "continent_rank": 10,
+        "global_rank": 39
+      },
+      "gdp_nominal": {
+        "continent_rank": 13,
+        "global_rank": 85
+      },
+      "gdp_per_capita": {
+        "continent_rank": 22,
+        "global_rank": 143
+      },
+      "hdi": {
+        "continent_rank": 29,
+        "global_rank": 154
+      },
+      "life_expectancy": {
+        "continent_rank": 26,
+        "global_rank": 128
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 6,
+        "global_rank": 85
+      },
+      "internet_penetration": {
+        "continent_rank": 25,
+        "global_rank": 120
+      },
+      "press_freedom": {
+        "continent_rank": 10,
+        "global_rank": 44
+      },
+      "global_peace_index": {
+        "continent_rank": 3,
+        "global_rank": 52
+      },
+      "innovation_index": {
+        "continent_rank": 14,
+        "global_rank": 120
+      },
+      "notes": "#3 most peaceful in Africa; copper giant; democratic transition tradition."
+    }
   },
   "leadership": {
     "current_leader": {
       "name": "Hakainde Hichilema",
       "title": "President",
       "since": "2021-08-24",
-      "notes": "UPND; Tonga; businessman (cattle ranching); defeated Lungu in landslide after 6th attempt; economic reform focus; debt restructuring"
+      "notes": "UPND; Tonga; businessman (cattle ranching); defeated Lungu in landslide after 6th attempt; economic reform focus; debt restructuring",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -358,7 +875,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

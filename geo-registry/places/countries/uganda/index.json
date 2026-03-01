@@ -17,7 +17,8 @@
     ],
     "created_at": "2026-02-06T00:00:00Z",
     "updated_at": "2026-02-15T13:18:41.898725Z",
-    "notes": "Comprehensive index for Uganda covering Bunyoro-Kitara, Buganda Kingdom, Speke/Baker source of the Nile, British protectorate, Obote, Idi Amin, Bush War, Museveni/NRM, LRA/Joseph Kony, and oil discovery."
+    "notes": "Comprehensive index for Uganda covering Bunyoro-Kitara, Buganda Kingdom, Speke/Baker source of the Nile, British protectorate, Obote, Idi Amin, Bush War, Museveni/NRM, LRA/Joseph Kony, and oil discovery.",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Kampala",
@@ -153,7 +154,22 @@
       "life_expectancy": 63.4,
       "infant_mortality_per_1k": 33.0,
       "literacy_rate_pct": 76.5,
-      "net_migration_rate": -2.0
+      "net_migration_rate": -2.0,
+      "population_growth_rate_pct": 3.0,
+      "urban_population_growth_rate_pct": 5.5,
+      "life_expectancy_male": 62,
+      "life_expectancy_female": 66,
+      "under5_mortality_per_1k": 43,
+      "sex_ratio": 1.0,
+      "dependency_ratio": 95,
+      "population_density_per_km2": 230,
+      "age_structure": {
+        "0_14_pct": 46,
+        "15_24_pct": 21,
+        "25_54_pct": 27,
+        "55_64_pct": 3,
+        "65_plus_pct": 3
+      }
     },
     "natural_resources": {
       "primary": [
@@ -182,7 +198,10 @@
         "EAC",
         "IGAD"
       ],
-      "notes": "Uganda People's Defence Forces (UPDF); Museveni came to power via NRA bush war (1986); UPDF deployed in Somalia (AMISOM/ATMIS — largest contributor), DRC, South Sudan; LRA (Joseph Kony) defeated domestically but remnants in CAR/DRC; ADF (Allied Democratic Forces) operations in eastern DRC."
+      "notes": "Uganda People's Defence Forces (UPDF); Museveni came to power via NRA bush war (1986); UPDF deployed in Somalia (AMISOM/ATMIS — largest contributor), DRC, South Sudan; LRA (Joseph Kony) defeated domestically but remnants in CAR/DRC; ADF (Allied Democratic Forces) operations in eastern DRC.",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 85
     },
     "trade": {
       "top_exports": [
@@ -217,14 +236,48 @@
         "Germany"
       ],
       "trade_balance": "deficit",
-      "remittances_pct_gdp": 4.5
+      "remittances_pct_gdp": 4.5,
+      "total_exports_usd": "$4 billion",
+      "total_imports_usd": "$8 billion",
+      "top_export_destinations": [
+        "Kenya",
+        "UAE",
+        "DR Congo",
+        "Rwanda",
+        "South Sudan"
+      ],
+      "top_import_origins": [
+        "China",
+        "India",
+        "Kenya",
+        "UAE",
+        "Japan"
+      ],
+      "trade_as_pct_gdp": 30,
+      "current_account_balance_usd": "-$3 billion",
+      "trade_agreements": [
+        "EAC",
+        "COMESA",
+        "AfCFTA"
+      ],
+      "special_economic_zones": [
+        "Namanve Industrial Park",
+        "Luzira Free Zone"
+      ]
     },
     "infrastructure": {
       "internet_penetration_pct": 26.0,
       "electricity_access_pct": 42.0,
       "mobile_subscriptions_per_100": 66,
       "railway_km": 1244,
-      "paved_roads_pct": 4
+      "paved_roads_pct": 4,
+      "broadband_subscriptions_per_100": 0.3,
+      "4g_coverage_pct": 50,
+      "5g_availability": false,
+      "road_network_km": 20000,
+      "waterways_km": 300,
+      "submarine_cables": [],
+      "notes": "MTN, Airtel telecoms; NITA-U fibre backbone; landlocked (relies on Kenya/Tanzania for internet cables); boda-boda transport."
     },
     "international_memberships": [
       "UN",
@@ -256,6 +309,26 @@
       "fragile_states_index": {
         "score": 92.7,
         "year": 2024
+      },
+      "rule_of_law_index": {
+        "score": 0.4,
+        "rank": 103,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.5,
+        "percentile": 25,
+        "year": 2023
+      },
+      "regulatory_quality_index": {
+        "score": -0.2,
+        "percentile": 38,
+        "year": 2023
+      },
+      "political_stability_index": {
+        "score": -0.5,
+        "percentile": 18,
+        "year": 2023
       }
     },
     "climate_environment": {
@@ -272,12 +345,41 @@
         "landslides (Mount Elgon)",
         "earthquakes (Western Rift)"
       ],
-      "protected_areas_pct": 17
+      "protected_areas_pct": 17,
+      "average_temperature_c": 22,
+      "average_rainfall_mm": 1200,
+      "co2_per_capita_t": 0.1,
+      "deforestation_rate_pct": 2.5,
+      "water_stress_level": "Low-Medium",
+      "environmental_performance_index": {
+        "score": 29,
+        "rank": 160,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 7000,
+        "endemic_species": 400,
+        "threatened_species": 200
+      }
     },
     "debt_aid": {
       "national_debt_pct_gdp": 48.0,
       "foreign_aid_received_usd": "2.2 billion",
-      "notes": "EACOP oil pipeline ($3.5B) and Tilenga/Kingfisher oil projects ($10B+) to transform economy; Karuma (600MW) and Isimba (183MW) hydropower dams; Anti-Homosexuality Act (2023) triggered US sanctions/World Bank lending pause; Museveni in power since 1986."
+      "notes": "EACOP oil pipeline ($3.5B) and Tilenga/Kingfisher oil projects ($10B+) to transform economy; Karuma (600MW) and Isimba (183MW) hydropower dams; Anti-Homosexuality Act (2023) triggered US sanctions/World Bank lending pause; Museveni in power since 1986.",
+      "external_debt_usd": "$20 billion",
+      "debt_service_pct_revenue": 18,
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA",
+        "World Bank",
+        "UK",
+        "EU",
+        "Japan"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "Post-completion point"
     },
     "education": {
       "primary_enrollment_pct": 92,
@@ -290,14 +392,41 @@
         "Mbarara University of Science and Technology",
         "Kyambogo University"
       ],
-      "notes": "Makerere University historically one of Africa's finest (educated leaders across East Africa); Universal Primary Education (UPE, 1997) boosted enrollment (from 2.5M to 8M+) but quality dropped; Universal Secondary Education (USE, 2007); private school sector large."
+      "notes": "Makerere University historically one of Africa's finest (educated leaders across East Africa); Universal Primary Education (UPE, 1997) boosted enrollment (from 2.5M to 8M+) but quality dropped; Universal Secondary Education (USE, 2007); private school sector large.",
+      "education_expenditure_pct_gdp": 2.5,
+      "primary_completion_rate_pct": 56,
+      "gender_parity_index": 1.0,
+      "mean_years_of_schooling": 7.0,
+      "expected_years_of_schooling": 10.4,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 43,
+      "out_of_school_children": 1000000,
+      "academic_freedom_index": 0.3
     },
     "diaspora_migration": {
       "diaspora_population": "1 million+ (Kenya, South Africa, UK, USA, Canada, Rwanda, South Sudan)",
       "refugees_hosted": 1500000,
       "refugees_produced": 10000,
       "remittances_usd": "1.3 billion",
-      "notes": "Hosts Africa's largest refugee population (~1.5M from DRC, South Sudan, Burundi, Somalia); progressive refugee policy (right to work, land allocation); Bidibidi and Nakivale settlements; Idi Amin-era Ugandan Asian expulsion (1972) created diaspora."
+      "notes": "Hosts Africa's largest refugee population (~1.5M from DRC, South Sudan, Burundi, Somalia); progressive refugee policy (right to work, land allocation); Bidibidi and Nakivale settlements; Idi Amin-era Ugandan Asian expulsion (1972) created diaspora.",
+      "diaspora_top_destinations": [
+        "UK",
+        "USA",
+        "Kenya",
+        "South Africa",
+        "Canada"
+      ],
+      "asylum_seekers": 10000,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 30000,
+      "immigration_policy": "Africa's most progressive refugee policy (1.5M+ refugees hosted); self-reliance model",
+      "remittances_pct_gdp": 4,
+      "net_migration_rate_per_1k": 3.0
     },
     "digital_economy": {
       "e_government_index": 0.4,
@@ -305,7 +434,394 @@
       "tech_hubs": [
         "Kampala (Innovation Village, Outbox Hub, Hive Colab — Africa's first co-working tech hub)"
       ],
-      "notes": "Mobile money ~65% of GDP in transactions; social media/OTT tax (controversial, introduced 2018 then modified); MTN, Airtel, Africell operators; Hive Colab was first tech hub in Africa (2010); growing fintech (Xente, NALA); SEACOM submarine cable access via Kenya."
+      "notes": "Mobile money ~65% of GDP in transactions; social media/OTT tax (controversial, introduced 2018 then modified); MTN, Airtel, Africell operators; Hive Colab was first tech hub in Africa (2010); growing fintech (Xente, NALA); SEACOM submarine cable access via Kenya.",
+      "e_participation_index": 0.4,
+      "ict_development_index": 2.5,
+      "mobile_money_accounts": 30000000,
+      "digital_payments_pct_adults": 50,
+      "fintech_companies": 50,
+      "startup_ecosystem_value_usd": "$150 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 0.4,
+      "innovation_index_score": 17,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 15
+    },
+    "capital_coordinates": {
+      "lat": 0.3476,
+      "lon": 32.5825
+    },
+    "other_major_cities": [
+      "Nansana",
+      "Kira",
+      "Mbarara",
+      "Mukono",
+      "Gulu",
+      "Jinja"
+    ],
+    "national_motto": "For God and My Country",
+    "national_anthem": "Oh Uganda, Land of Beauty",
+    "currency_code": "UGX",
+    "internet_tld": ".ug",
+    "utc_offset": "UTC+3",
+    "drives_on": "left",
+    "geography": {
+      "coordinates": {
+        "lat": 1.3733,
+        "lon": 32.2903
+      },
+      "bounding_box": {
+        "north": 4.22,
+        "south": -1.48,
+        "east": 35.03,
+        "west": 29.57
+      },
+      "land_area_km2": 200520,
+      "water_area_km2": 41743,
+      "coastline_km": 0,
+      "borders": [
+        "Kenya",
+        "South Sudan",
+        "DR Congo",
+        "Rwanda",
+        "Tanzania"
+      ],
+      "border_lengths_km": {
+        "Kenya": 814,
+        "South Sudan": 475,
+        "DR Congo": 877,
+        "Rwanda": 172,
+        "Tanzania": 391
+      },
+      "highest_point": {
+        "name": "Margherita Peak (Rwenzori Mountains)",
+        "elevation_m": 5109
+      },
+      "lowest_point": {
+        "name": "Albert Nile",
+        "elevation_m": 614
+      },
+      "terrain": "Central plateau; western Rift Valley (Rwenzori 'Mountains of the Moon', Virunga); Lake Victoria (shared); Albert/Edward/George lakes; source of the Nile (Jinja)",
+      "land_use": {
+        "agricultural_pct": 71.2,
+        "arable_pct": 34.3,
+        "forest_pct": 9.8,
+        "other_pct": 19
+      },
+      "major_rivers": [
+        "Victoria Nile",
+        "Albert Nile (White Nile)",
+        "Kafu",
+        "Katonga"
+      ],
+      "major_lakes": [
+        "Victoria (shared)",
+        "Albert (shared)",
+        "Edward (shared)",
+        "George",
+        "Kyoga",
+        "Bunyonyi"
+      ],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": true,
+      "notes": "Pearl of Africa (Churchill); source of the Nile at Jinja; Rwenzori 'Mountains of the Moon'; half of Lake Victoria; mountain gorilla habitat (Bwindi, UNESCO); landlocked; Lake Albert oil."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$50 billion",
+      "gdp_ppp_usd": "$130 billion",
+      "gdp_per_capita_nominal_usd": 1050,
+      "gdp_per_capita_ppp_usd": 2700,
+      "gdp_growth_rate_pct": 5.0,
+      "inflation_rate_pct": 3.0,
+      "unemployment_rate_pct": 12,
+      "youth_unemployment_rate_pct": 32,
+      "poverty_rate_pct": 30,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 42.8,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 24,
+        "industry_pct_gdp": 27,
+        "services_pct_gdp": 49
+      },
+      "labor_force": 18000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 70,
+        "industry_pct": 8,
+        "services_pct": 22
+      },
+      "fdi_inflow_usd": "$1.5 billion",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$3.5 billion",
+      "ease_of_doing_business_rank": 116,
+      "economic_freedom_index_score": 59.8,
+      "credit_rating": {
+        "moodys": "B2",
+        "sp": "B",
+        "fitch": "B+"
+      },
+      "notes": "Oil discovery (Lake Albert, 6.5B barrels; EACOP pipeline to Tanzania controversial); coffee #1 export; steady growth; Museveni (in power since 1986); young population."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.5,
+      "health_expenditure_per_capita_usd": 35,
+      "physicians_per_1k": 0.15,
+      "nurses_midwives_per_1k": 1.0,
+      "hospital_beds_per_1k": 0.5,
+      "maternal_mortality_per_100k": 284,
+      "hiv_prevalence_pct": 5.1,
+      "malaria_incidence_per_1k": 200,
+      "tuberculosis_incidence_per_100k": 196,
+      "access_to_clean_water_pct": 60,
+      "access_to_sanitation_pct": 20,
+      "vaccination_coverage_pct": 80,
+      "stunting_under5_pct": 29,
+      "obesity_rate_pct": 5.3,
+      "universal_health_coverage_index": 38,
+      "leading_causes_of_death": [
+        "malaria",
+        "HIV/AIDS",
+        "lower respiratory infections",
+        "neonatal disorders",
+        "diarrheal diseases"
+      ],
+      "notes": "HIV success story (from 18% to 5%, PEPFAR); Ebola containment (2022); malaria endemic; village health teams (VHTs) model; Mulago National Referral Hospital."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 35,
+      "food_security_index_rank": 0,
+      "arable_land_pct": 34.3,
+      "agricultural_land_pct": 71.2,
+      "irrigated_land_pct": 0.4,
+      "major_crops": [
+        "coffee",
+        "tea",
+        "maize",
+        "bananas/plantains (matoke)",
+        "cassava",
+        "sweet potatoes",
+        "beans",
+        "vanilla",
+        "cotton",
+        "tobacco"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "poultry",
+        "pigs"
+      ],
+      "food_import_dependency_pct": 10,
+      "cereal_yield_kg_per_hectare": 1800,
+      "agricultural_employment_pct": 70,
+      "prevalence_of_undernourishment_pct": 20,
+      "notes": "Robusta coffee (Africa's top exporter); banana/plantain culture (matoke staple); vanilla producer; fertile land; Operation Wealth Creation programme; Karamoja food insecurity."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 10,
+        "hydroelectric_pct": 80,
+        "solar_pct": 5,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 5
+      },
+      "installed_capacity_mw": 1300,
+      "electricity_production_gwh": 5000,
+      "electricity_consumption_per_capita_kwh": 100,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 35000,
+      "natural_gas_production_bcm": 0,
+      "energy_access_rural_pct": 20,
+      "energy_access_urban_pct": 70,
+      "notes": "Bujagali Dam (250 MW); Karuma Dam (600 MW, 2024 completion); Isimba Dam; Lake Albert oil (6.5B barrels, TotalEnergies/CNOOC); EACOP pipeline (controversial, climate/rights concerns)."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Entebbe International Airport"
+      ],
+      "major_airports_domestic": [
+        "Kajansi",
+        "Kasese",
+        "Gulu",
+        "Arua"
+      ],
+      "national_airline": "Uganda Airlines (relaunched 2019)",
+      "major_seaports": [],
+      "major_inland_ports": [
+        "Port Bell (Lake Victoria)",
+        "Jinja"
+      ],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 12,
+      "road_fatalities_per_100k": 28,
+      "notes": "Landlocked; Entebbe airport (international gateway); Uganda Railways; SGR planned (Kampala-Malaba); matatu/boda-boda (motorcycle taxis) ubiquitous."
+    },
+    "tourism": {
+      "annual_visitors": 1000000,
+      "tourism_revenue_usd": "$1.5 billion",
+      "tourism_pct_gdp": 4,
+      "tourism_employment_pct": 7,
+      "unesco_world_heritage_sites": 3,
+      "unesco_sites_list": [
+        "Bwindi Impenetrable National Park",
+        "Rwenzori Mountains National Park",
+        "Tombs of Buganda Kings at Kasubi"
+      ],
+      "major_attractions": [
+        "Mountain gorilla trekking (Bwindi)",
+        "Source of the Nile (Jinja, white water rafting)",
+        "Rwenzori Mountains",
+        "Queen Elizabeth NP (tree-climbing lions)",
+        "Murchison Falls NP",
+        "Kibale Forest (chimpanzees)",
+        "Lake Bunyonyi"
+      ],
+      "visa_free_access_countries": 58,
+      "henley_passport_rank": 75,
+      "notes": "3 UNESCO sites; gorilla trekking premium ($700/permit); 'Pearl of Africa' brand; adventure tourism (Jinja rafting); chimpanzee tracking; birding paradise (1000+ species)."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 34,
+      "gender_inequality_index": 0.535,
+      "gender_inequality_rank": 143,
+      "gender_gap_index_score": 0.72,
+      "women_in_parliament_pct": 34,
+      "women_labor_force_participation_pct": 66,
+      "maternal_mortality_per_100k": 284,
+      "child_marriage_pct": 34,
+      "fgm_prevalence_pct": 1,
+      "lgbtq_legal_status": "Illegal (Anti-Homosexuality Act 2023, death penalty for 'aggravated homosexuality')",
+      "death_penalty_status": "Retentionist (rarely enforced)",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 16,
+      "notes": "Anti-Homosexuality Act 2023 (among world's harshest, death penalty clause); Museveni 38+ years; opposition repression (Bobi Wine); media restrictions; Western sanctions/aid cuts over AHA."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.3,
+      "global_peace_index_rank": 115,
+      "terrorism_index_score": 4,
+      "terrorism_index_rank": 25,
+      "homicide_rate_per_100k": 10,
+      "active_conflicts": [
+        "ADF (Allied Democratic Forces, Congo border, ISIS-linked)",
+        "Karamoja cattle-raiding and insecurity"
+      ],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 6000,
+      "arms_imports_usd": "$100 million",
+      "internally_displaced_persons": 30000,
+      "notes": "UPDF in Somalia (ATMIS/AMISOM, major troop contributor); ADF insurgency (eastern DRC); domestically relatively stable; Karamoja disarmament; Lord's Resistance Army (defeated)."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "grey crowned crane"
+      ],
+      "national_animal": "grey crowned crane",
+      "national_flower": "",
+      "national_dish": "Matoke (steamed plantain)",
+      "national_sport": "Football / Cricket",
+      "major_festivals": [
+        "Buganda Kingdom celebrations (Kabaka's birthday)",
+        "Nyege Nyege Festival (music, Jinja)",
+        "Imbalu (Bagisu circumcision ceremony)",
+        "Independence Day (9 October)"
+      ],
+      "cuisine_highlights": [
+        "matoke (steamed green plantain)",
+        "rolex (chapati-egg wrap)",
+        "groundnut sauce",
+        "posho (maize porridge)",
+        "luwombo (steamed banana-leaf wrap)",
+        "kikomando (chapati + beans)"
+      ],
+      "music_art_traditions": [
+        "Kadongo Kamu (Ugandan folk music)",
+        "Kidandali/Afrobeat",
+        "Bobi Wine (musician/politician)",
+        "Philly Lutaaya (AIDS awareness pioneer)",
+        "Bark cloth making (Baganda, UNESCO)"
+      ],
+      "film_industry": "Growing (Ugawood; Wakaliwood action films cult following)",
+      "intangible_heritage_items": [
+        "Bark cloth making (UNESCO)",
+        "Bigwala (gourd-trumpet music, Busoga Kingdom, UNESCO)"
+      ],
+      "notable_historical_figures": [
+        "Idi Amin (dictator)",
+        "Milton Obote (1st PM/president)",
+        "Yoweri Museveni (president 1986-present)",
+        "Kabaka Mutesa II (Buganda King)",
+        "Bobi Wine (Robert Kyagulanyi, opposition)"
+      ],
+      "world_heritage_sites": [
+        "Bwindi Impenetrable NP",
+        "Rwenzori Mountains NP",
+        "Tombs of Buganda Kings at Kasubi"
+      ],
+      "media_landscape": "UBC state; NTV Uganda, NBS (private); Daily Monitor, New Vision; press restrictions increasing",
+      "notes": "Pearl of Africa; kingdoms within republic (Buganda, Bunyoro, Toro, Ankole); bark cloth UNESCO; gorilla conservation success; Wakaliwood creativity."
+    },
+    "legal_system": {
+      "legal_tradition": "English common law and customary law",
+      "constitution_year": 1995,
+      "sharia_applicability": "Kadhi courts for Muslim personal matters (limited)",
+      "customary_law_role": "Significant: LC courts (Local Council), Buganda/kingdom courts, elder mediation",
+      "icc_membership": "State party (LRA warrants)",
+      "judicial_independence_score": 0.35,
+      "contract_enforcement_days": 490,
+      "property_rights_index": 35,
+      "notes": "2005 multiparty return after 'Movement' system; 2017 age limit removal (controversial); Anti-Homosexuality Act 2023 (partially challenged in Constitutional Court); ICC warrants for LRA (Ongwen convicted)."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 7,
+        "global_rank": 30
+      },
+      "area": {
+        "continent_rank": 22,
+        "global_rank": 79
+      },
+      "gdp_nominal": {
+        "continent_rank": 11,
+        "global_rank": 78
+      },
+      "gdp_per_capita": {
+        "continent_rank": 36,
+        "global_rank": 157
+      },
+      "hdi": {
+        "continent_rank": 32,
+        "global_rank": 166
+      },
+      "life_expectancy": {
+        "continent_rank": 27,
+        "global_rank": 132
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 13,
+        "global_rank": 116
+      },
+      "internet_penetration": {
+        "continent_rank": 30,
+        "global_rank": 130
+      },
+      "press_freedom": {
+        "continent_rank": 44,
+        "global_rank": 128
+      },
+      "global_peace_index": {
+        "continent_rank": 22,
+        "global_rank": 115
+      },
+      "innovation_index": {
+        "continent_rank": 16,
+        "global_rank": 0
+      },
+      "notes": "Youngest population in world (median age ~16); major AMISOM/ATMIS contributor."
     }
   },
   "leadership": {
@@ -313,7 +829,8 @@
       "name": "Yoweri Museveni",
       "title": "President",
       "since": "1986-01-29",
-      "notes": "NRM; came to power via Bush War; initially praised reformer; constitution amended to remove term limits (2005) and age limits (2017); anti-LGBTQ+ legislation 2023; in power 39+ years"
+      "notes": "NRM; came to power via Bush War; initially praised reformer; constitution amended to remove term limits (2005) and age limits (2017); anti-LGBTQ+ legislation 2023; in power 39+ years",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -340,7 +857,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {
