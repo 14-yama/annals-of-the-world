@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Outlet, Link as RouterLink, useLocation } from 'react-router-dom'
-import { Box, Flex, Text, Stack, IconButton } from '@chakra-ui/react'
+import { Outlet, Link as RouterLink, useLocation, useNavigate } from 'react-router-dom'
+import { Box, Flex, Text, Stack, IconButton, Input } from '@chakra-ui/react'
 import type { CSSProperties } from 'react'
 import {
   BookOpen,
@@ -26,6 +26,8 @@ import {
   FileText,
   MapPin,
   Building2,
+  Search,
+  Layers,
 } from 'lucide-react'
 import { getAllEntities } from '../data/catalog'
 
@@ -40,21 +42,27 @@ const TOP_NAV = [
 
 /* ── Shelf navigation (left panel — contextual "stacks") ── */
 const SHELF_ITEMS = [
-  { path: '/',                    label: 'The Great Hall',   icon: Landmark,  section: '' },
-  { path: '/continents/africa',   label: 'Africa',           icon: Globe,     section: 'Continents' },
-  { path: '/continents/asia',     label: 'Asia',             icon: Globe,     section: 'Continents' },
-  { path: '/continents/europe',   label: 'Europe',           icon: Map,       section: 'Continents' },
-  { path: '/continents/americas', label: 'Americas',         icon: Mountain,  section: 'Continents' },
-  { path: '/continents/oceania',  label: 'Oceania',          icon: Waves,     section: 'Continents' },
-  { path: '/explore',             label: 'Era Explorer',     icon: Orbit,     section: 'Time' },
-  { path: '/graph',               label: 'Knowledge Graph',  icon: Network,   section: 'Collections' },
-  { path: '/weapons',             label: 'Arms & Warfare',   icon: Swords,    section: 'Collections' },
-  { path: '/ideas',               label: 'Ideas',            icon: Lightbulb, section: 'Collections' },
-  { path: '/human-story',         label: 'Human Story',      icon: Users,     section: 'Collections' },
-  { path: '/case-studies',        label: 'Frameworks',       icon: FileText,  section: 'Collections' },
-  { path: '/curator',             label: 'The Curator',      icon: Scroll,    section: 'Tools' },
-  { path: '/quiz',                label: 'Examination Hall', icon: Brain,     section: 'Tools' },
-  { path: '/about',               label: 'About the Annals', icon: BookOpen,  section: 'About' },
+  { path: '/',                          label: 'The Great Hall',   icon: Landmark,  section: '' },
+  { path: '/catalog?label=Person',      label: 'People',           icon: Users,     section: 'Browse' },
+  { path: '/catalog?label=Idea',        label: 'Ideas',            icon: Lightbulb, section: 'Browse' },
+  { path: '/catalog?label=Institution', label: 'Institutions',     icon: Building2, section: 'Browse' },
+  { path: '/catalog?label=Place',       label: 'Places',           icon: MapPin,    section: 'Browse' },
+  { path: '/catalog?label=EventWindow', label: 'Events',           icon: Clock,     section: 'Browse' },
+  { path: '/catalog?label=Movement',    label: 'Movements',        icon: Layers,    section: 'Browse' },
+  { path: '/catalog?label=Text',        label: 'Texts & Artifacts',icon: FileText,  section: 'Browse' },
+  { path: '/continents/africa',         label: 'Africa',           icon: Globe,     section: 'Continents' },
+  { path: '/continents/asia',           label: 'Asia',             icon: Globe,     section: 'Continents' },
+  { path: '/continents/europe',         label: 'Europe',           icon: Map,       section: 'Continents' },
+  { path: '/continents/americas',       label: 'Americas',         icon: Mountain,  section: 'Continents' },
+  { path: '/continents/oceania',        label: 'Oceania',          icon: Waves,     section: 'Continents' },
+  { path: '/explore',                   label: 'Era Explorer',     icon: Orbit,     section: 'Explore' },
+  { path: '/graph',                     label: 'Knowledge Graph',  icon: Network,   section: 'Explore' },
+  { path: '/weapons',                   label: 'Arms & Warfare',   icon: Swords,    section: 'Explore' },
+  { path: '/human-story',               label: 'Human Story',      icon: Users,     section: 'Explore' },
+  { path: '/case-studies',              label: 'Frameworks',       icon: FileText,  section: 'Explore' },
+  { path: '/curator',                   label: 'The Curator',      icon: Scroll,    section: 'Tools' },
+  { path: '/quiz',                      label: 'Examination Hall', icon: Brain,     section: 'Tools' },
+  { path: '/about',                     label: 'About the Annals', icon: BookOpen,  section: 'About' },
 ]
 
 /* Group shelf items by section */
@@ -73,7 +81,9 @@ function groupBySection(items: typeof SHELF_ITEMS) {
 
 export default function Layout() {
   const location = useLocation()
+  const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(true)
+  const [globalSearch, setGlobalSearch] = useState('')
   const groups = groupBySection(SHELF_ITEMS)
 
   return (
@@ -163,7 +173,11 @@ export default function Layout() {
                 </Text>
               )}
               {group.items.map((item) => {
-                const isActive = location.pathname === item.path
+                const hasQuery = item.path.includes('?')
+                const fullUrl = location.pathname + location.search
+                const isActive = hasQuery
+                  ? fullUrl === item.path
+                  : location.pathname === item.path
                 const Icon = item.icon
                 return (
                   <RouterLink
@@ -322,8 +336,34 @@ export default function Layout() {
             })}
           </Flex>
 
-          {/* Right: Status */}
+          {/* Right: Global Search + Status */}
           <Flex align="center" gap={3}>
+            <Box position="relative" w="240px">
+              <Box position="absolute" left="10px" top="50%" transform="translateY(-50%)" zIndex={1}>
+                <Search size={14} color="#9E9A90" />
+              </Box>
+              <Input
+                value={globalSearch}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setGlobalSearch(e.target.value)}
+                onKeyDown={(e: React.KeyboardEvent) => {
+                  if (e.key === 'Enter' && globalSearch.trim()) {
+                    navigate(`/catalog?search=${encodeURIComponent(globalSearch.trim())}`)
+                    setGlobalSearch('')
+                  }
+                }}
+                placeholder="Search the library..."
+                pl="32px"
+                h="32px"
+                fontSize="12px"
+                fontFamily='"Inter", sans-serif'
+                bg="transparent"
+                border="1px solid"
+                borderColor="#D6D3CC"
+                borderRadius="6px"
+                _focus={{ borderColor: '#D4AF37', boxShadow: '0 0 0 1px #D4AF37' }}
+                _placeholder={{ color: '#B8B2A4' }}
+              />
+            </Box>
             <Text
               fontFamily='"Cinzel", serif'
               fontSize="10px"

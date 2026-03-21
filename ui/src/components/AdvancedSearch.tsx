@@ -137,7 +137,7 @@ export default function AdvancedSearch({ allEntities, filters, onFiltersChange }
   const dropdownRef = useRef<HTMLDivElement>(null)
   const [showDropdown, setShowDropdown] = useState(false)
   const [highlightIdx, setHighlightIdx] = useState(-1)
-  const [showFilters, setShowFilters] = useState(false)
+  const [showFilters, setShowFilters] = useState(true)
 
   // Autocomplete results
   const suggestions = useMemo(() => {
