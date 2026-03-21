@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.829699Z",
-    "notes": "Comprehensive index for Georgia covering Colchis and Iberia (ancient kingdoms), Christianisation (AD 337), Golden Age under Tamar the Great, Mongol/Timurid invasions, Persian/Ottoman partition, Russian annexation (1801), Georgian Democratic Republic 1918, Soviet Georgia, Stalin (born Gori), Abkhazia and South Ossetia conflicts, Rose Revolution 2003, 2008 Russia-Georgia War, EU candidacy, and democratic development."
+    "notes": "Comprehensive index for Georgia covering Colchis and Iberia (ancient kingdoms), Christianisation (AD 337), Golden Age under Tamar the Great, Mongol/Timurid invasions, Persian/Ottoman partition, Russian annexation (1801), Georgian Democratic Republic 1918, Soviet Georgia, Stalin (born Gori), Abkhazia and South Ossetia conflicts, Rose Revolution 2003, 2008 Russia-Georgia War, EU candidacy, and democratic development.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Tbilisi",
@@ -52,7 +57,9 @@
       "Armenian_Apostolic": "2.9%",
       "Catholic": "0.5%",
       "Other": "2.5%",
-      "note": "Georgian Orthodox Church is autocephalous; one of oldest Christian churches (AD 337, second after Armenia)"
+      "note": "Georgian Orthodox Church is autocephalous; one of oldest Christian churches (AD 337, second after Armenia)",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -109,12 +116,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -123,21 +146,39 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [],
       "top_imports": [],
       "major_partners": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "remittances_pct_gdp": 0,
+      "total_exports_usd": "",
+      "total_imports_usd": "",
+      "top_export_destinations": [],
+      "top_import_origins": [],
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 0,
       "electricity_access_pct": 0,
       "mobile_subscriptions_per_100": 0,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "paved_roads_pct": 0,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
+      "road_network_km": 0,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": ""
     },
     "international_memberships": [],
     "governance_indices": {
@@ -158,6 +199,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -165,12 +226,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -178,20 +263,448 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0.7,
+      "ict_development_index": 5.8,
+      "mobile_money_accounts": 400000,
+      "digital_payments_pct_adults": 60,
+      "fintech_companies": 40,
+      "startup_ecosystem_value_usd": "$300 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 55.0,
+      "innovation_index_score": 30.0,
+      "innovation_index_rank": 64,
+      "ai_readiness_index": 40.0
+    },
+    "capital_coordinates": {
+      "lat": 41.7151,
+      "lon": 44.8271
+    },
+    "other_major_cities": [
+      "Batumi",
+      "Kutaisi",
+      "Rustavi",
+      "Zugdidi",
+      "Gori"
+    ],
+    "national_motto": "Strength is in Unity",
+    "national_anthem": "Tavisupleba (Freedom)",
+    "currency_code": "GEL",
+    "internet_tld": ".ge",
+    "utc_offset": "UTC+4",
+    "drives_on": "right",
+    "other_languages": [
+      "Mingrelian",
+      "Svan",
+      "Abkhaz",
+      "Ossetic",
+      "Azerbaijani",
+      "Armenian",
+      "Russian"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": 42.3154,
+        "lon": 43.3569
+      },
+      "bounding_box": {
+        "north": 43.59,
+        "south": 41.05,
+        "east": 46.74,
+        "west": 40.0
+      },
+      "land_area_km2": 69700,
+      "water_area_km2": 310,
+      "coastline_km": 310,
+      "borders": [
+        "Russia",
+        "Turkey",
+        "Armenia",
+        "Azerbaijan"
+      ],
+      "border_lengths_km": {
+        "Russia": 894,
+        "Turkey": 273,
+        "Armenia": 219,
+        "Azerbaijan": 428
+      },
+      "highest_point": {
+        "name": "Mount Shkhara",
+        "elevation_m": 5193
+      },
+      "lowest_point": {
+        "name": "Black Sea",
+        "elevation_m": 0
+      },
+      "terrain": "Mountainous; Greater Caucasus in north, Lesser Caucasus in south; Kolkheti lowlands west; fertile Kakheti valley east",
+      "land_use": {
+        "agricultural_pct": 35.5,
+        "arable_pct": 5.8,
+        "forest_pct": 39.4,
+        "other_pct": 25.1
+      },
+      "major_rivers": [
+        "Mtkvari (Kura)",
+        "Rioni",
+        "Inguri"
+      ],
+      "major_lakes": [
+        "Paravani",
+        "Tabatskuri"
+      ],
+      "exclusive_economic_zone_km2": 22038,
+      "landlocked": false,
+      "notes": "Crossroads of Europe and Asia; Greater Caucasus provides natural border with Russia; Abkhazia and South Ossetia occupied by Russia (20% of territory); Black Sea coastline."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$28 billion",
+      "gdp_ppp_usd": "$72 billion",
+      "gdp_per_capita_nominal_usd": 7500,
+      "gdp_per_capita_ppp_usd": 19300,
+      "gdp_growth_rate_pct": 7.5,
+      "inflation_rate_pct": 2.5,
+      "unemployment_rate_pct": 16.4,
+      "youth_unemployment_rate_pct": 30.0,
+      "poverty_rate_pct": 15.6,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 34.5,
+      "income_classification": "Upper-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 7,
+        "industry_pct_gdp": 21,
+        "services_pct_gdp": 72
+      },
+      "labor_force": 1900000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 40,
+        "industry_pct": 14,
+        "services_pct": 46
+      },
+      "fdi_inflow_usd": "$1.8 billion",
+      "fdi_outflow_usd": "$200 million",
+      "foreign_exchange_reserves_usd": "$5.0 billion",
+      "ease_of_doing_business_rank": 7,
+      "economic_freedom_index_score": 73.4,
+      "credit_rating": {
+        "moodys": "Ba2",
+        "sp": "BB",
+        "fitch": "BB"
+      },
+      "notes": "Remarkably high ease of doing business rank; post-2022 boom from Russian immigration/capital flight; wine tourism; transit corridor (BTC pipeline, BTK railway); EU candidate status 2023."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 7.6,
+      "health_expenditure_per_capita_usd": 540,
+      "physicians_per_1k": 5.1,
+      "nurses_midwives_per_1k": 4.3,
+      "hospital_beds_per_1k": 2.8,
+      "maternal_mortality_per_100k": 28,
+      "hiv_prevalence_pct": 0.4,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 50,
+      "access_to_clean_water_pct": 98,
+      "access_to_sanitation_pct": 95,
+      "vaccination_coverage_pct": 90,
+      "stunting_under5_pct": 6,
+      "obesity_rate_pct": 21.7,
+      "universal_health_coverage_index": 63,
+      "leading_causes_of_death": [
+        "Cardiovascular diseases",
+        "Cancer",
+        "Chronic respiratory diseases",
+        "Diabetes"
+      ],
+      "notes": "Universal Healthcare Programme (UHC) since 2013; high physician density but quality uneven; medical tourism growing (dental, cosmetic); Soviet-era facilities being modernized."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 55.0,
+      "food_security_index_rank": 72,
+      "arable_land_pct": 5.8,
+      "agricultural_land_pct": 35.5,
+      "irrigated_land_pct": 43,
+      "major_crops": [
+        "grapes",
+        "citrus",
+        "tea",
+        "hazelnuts",
+        "corn",
+        "wheat",
+        "vegetables"
+      ],
+      "major_livestock": [
+        "cattle",
+        "sheep",
+        "goats",
+        "pigs",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 45,
+      "cereal_yield_kg_per_hectare": 2800,
+      "agricultural_employment_pct": 40,
+      "notes": "8,000-year winemaking tradition (qvevri method, UNESCO heritage); world's oldest wine culture; hazelnut top export crop; tea production in western Georgia; organic farming growing.",
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "energy": {
+      "primary_energy_sources": [
+        "hydropower",
+        "natural gas",
+        "oil"
+      ],
+      "electricity_generation_gwh": 13500,
+      "electricity_consumption_per_capita_kwh": 2700,
+      "renewable_share_pct": 80,
+      "fossil_fuel_share_pct": 20,
+      "nuclear_share_pct": 0,
+      "oil_production_bpd": 400,
+      "oil_consumption_bpd": 20000,
+      "natural_gas_production_bcm": 0,
+      "proved_oil_reserves_bbl": "35 million",
+      "proved_gas_reserves_tcm": "0.008",
+      "energy_imports_pct": 65,
+      "electrification_rate_pct": 100,
+      "notes": "Hydropower 80% of electricity; BTC oil pipeline transit country; Shah Deniz gas (Azerbaijan to Europe) transits Georgia; energy dependency on imports; wind/solar potential underexploited; Namakhvani HPP project cancelled after protests.",
+      "energy_mix": {
+        "fossil_fuels_pct": 0,
+        "hydroelectric_pct": 0,
+        "solar_pct": 0,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 0,
+      "electricity_production_gwh": 0,
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "transport": {
+      "airports": 22,
+      "airports_paved": 18,
+      "railways_km": 1363,
+      "roadways_km": 20295,
+      "paved_roads_pct": 94,
+      "waterways_km": 0,
+      "major_ports": [
+        "Batumi",
+        "Poti",
+        "Anaklia (planned)"
+      ],
+      "national_airline": "Georgian Airways",
+      "vehicle_ownership_per_1k": 320,
+      "notes": "BTK railway (Baku-Tbilisi-Kars) links Caucasus and Turkey; Poti/Batumi Black Sea ports; Middle Corridor transit route (China-Europe); Tbilisi International Airport; mountainous terrain limits infrastructure.",
+      "major_airports_international": [],
+      "major_airports_domestic": [],
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
+    },
+    "tourism": {
+      "international_arrivals": 7100000,
+      "tourism_revenue_usd": "$3.5 billion",
+      "tourism_pct_gdp": 12.5,
+      "major_attractions": [
+        "Tbilisi Old Town",
+        "Vardzia cave monastery",
+        "Svaneti (UNESCO)",
+        "Kazbegi (Stepantsminda)",
+        "Batumi",
+        "Kakheti wine region"
+      ],
+      "unesco_world_heritage_sites": 3,
+      "notes": "Tourism boom post-2010; wine tourism major draw; ski resorts (Gudauri, Bakuriani); UNESCO 8,000-year qvevri winemaking; culinary tourism; e-visa/visa-free for many; Digital Nomad visa programme.",
+      "annual_visitors": 0,
+      "tourism_employment_pct": 0,
+      "unesco_sites_list": [],
+      "visa_free_access_countries": 0,
+      "henley_passport_rank": 0
+    },
+    "legal_system": {
+      "type": "Civil law",
+      "supreme_court": "Supreme Court of Georgia",
+      "international_court_jurisdiction": "ICJ accepted",
+      "suffrage": "18 years, universal",
+      "legal_traditions": [
+        "Continental civil law",
+        "Post-Soviet legal system"
+      ],
+      "death_penalty": false,
+      "notes": "EU candidate country (Dec 2023); constitutional reforms ongoing; judiciary independence concerns; Rose Revolution (2003) led to governance reforms; foreign agent law controversy (2024, EU accession implications).",
+      "legal_tradition": "",
+      "constitution_year": 0,
+      "sharia_applicability": "",
+      "customary_law_role": "",
+      "icc_membership": "",
+      "judicial_independence_score": 0,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_score": 58,
+      "freedom_house_status": "Partly Free",
+      "gender_inequality_index": 0.275,
+      "gender_inequality_rank": 71,
+      "women_in_parliament_pct": 19,
+      "female_labor_force_participation_pct": 51,
+      "maternal_leave_weeks": 24,
+      "child_marriage_pct": 14,
+      "lgbtq_legal_status": "Legal (constitutional ban on same-sex marriage, 2024)",
+      "press_freedom_rank": 103,
+      "notes": "Democratic backsliding concerns (foreign agent law 2024); anti-LGBTQ+ violence (2021 Tbilisi Pride attacks); patriarchal traditions in rural areas; EU conditionality on human rights reforms; media polarized.",
+      "gender_gap_index_score": 0,
+      "women_labor_force_participation_pct": 0,
+      "maternal_mortality_per_100k": 0,
+      "fgm_prevalence_pct": 0,
+      "death_penalty_status": "",
+      "human_trafficking_tier": "",
+      "child_labor_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.026,
+      "global_peace_index_rank": 68,
+      "homicide_rate_per_100k": 2.7,
+      "terrorism_index_score": 0.5,
+      "terrorism_index_rank": 100,
+      "armed_conflict": true,
+      "internally_displaced_persons": 304000,
+      "landmine_contamination": true,
+      "notes": "20% of territory occupied by Russia (Abkhazia, South Ossetia since 2008 war); 'borderization' creeping annexation; NATO aspirations blocked by Russia; 280,000+ IDPs from 1990s/2008 conflicts.",
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": ""
+    },
+    "cultural_heritage": {
+      "unesco_intangible_heritage": [
+        "Georgian polyphonic singing",
+        "Qvevri winemaking",
+        "Living culture of three writing systems of Georgian alphabet"
+      ],
+      "notable_cultural_exports": [
+        "Wine (qvevri method)",
+        "Polyphonic singing",
+        "Georgian cuisine",
+        "Georgian alphabet (unique script)"
+      ],
+      "major_museums": [
+        "Georgian National Museum",
+        "Simon Janashia Museum",
+        "Open Air Museum of Ethnography"
+      ],
+      "world_heritage_sites_list": [
+        "Historical Monuments of Mtskheta",
+        "Gelati Monastery",
+        "Upper Svaneti"
+      ],
+      "culinary_traditions": [
+        "Khachapuri",
+        "Khinkali",
+        "Churchkhela",
+        "Pkhali",
+        "Satsivi"
+      ],
+      "notes": "One of the world's oldest and most unique alphabets (14 letters, 3 scripts); 8,000-year wine tradition (world's oldest); Georgian polyphonic singing sent into space on Voyager Golden Record.",
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "",
+      "national_sport": "",
+      "major_festivals": [],
+      "cuisine_highlights": [],
+      "music_art_traditions": [],
+      "film_industry": "",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [],
+      "world_heritage_sites": [],
+      "media_landscape": ""
+    },
+    "comparative_rankings": {
+      "human_development_index_rank": 63,
+      "global_competitiveness_rank": 74,
+      "happiness_index_rank": 117,
+      "environmental_performance_rank": 79,
+      "gender_gap_rank": 78,
+      "soft_power_rank": 0,
+      "notes": "Exceptionally high ease of doing business; strong anti-corruption progress post-Rose Revolution; occupied territories drag security scores; EU candidacy milestone.",
+      "_note": "Country position relative to continent and global. 'rank' = 1 is best/largest.",
+      "population": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "area": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_nominal": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_per_capita": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "hdi": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "life_expectancy": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "internet_penetration": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "press_freedom": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
     }
   },
   "leadership": {
@@ -199,7 +712,8 @@
       "name": "Irakli Kobakhidze",
       "title": "Prime Minister",
       "since": "2024-02-08",
-      "notes": "Georgian Dream party; Bidzina Ivanishvili (oligarch) is de facto power; 2024 elections disputed; anti-EU/pro-Russia pivot; Foreign Agent Law 2024 sparked protests"
+      "notes": "Georgian Dream party; Bidzina Ivanishvili (oligarch) is de facto power; 2024 elections disputed; anti-EU/pro-Russia pivot; Foreign Agent Law 2024 sparked protests",
+      "party": ""
     },
     "president": {
       "name": "Salome Zourabichvili",
@@ -232,7 +746,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

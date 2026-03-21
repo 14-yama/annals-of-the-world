@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.834519Z",
-    "notes": "Comprehensive index for Hong Kong covering prehistoric Yuet/Baiyue settlements, Han-era inclusion in Nanyue, Song dynasty refugees, Portuguese contact 1514, Qing era, Opium War and Treaty of Nanking 1842 (Hong Kong Island ceded), Convention of Peking 1860 (Kowloon), New Territories lease 1898, Japanese occupation 1941-1945, post-war economic miracle, 1967 riots, handover to China 1997 (One Country Two Systems), 2014 Umbrella Movement, 2019 protests, and National Security Law 2020."
+    "notes": "Comprehensive index for Hong Kong covering prehistoric Yuet/Baiyue settlements, Han-era inclusion in Nanyue, Song dynasty refugees, Portuguese contact 1514, Qing era, Opium War and Treaty of Nanking 1842 (Hong Kong Island ceded), Convention of Peking 1860 (Kowloon), New Territories lease 1898, Japanese occupation 1941-1945, post-war economic miracle, 1967 riots, handover to China 1997 (One Country Two Systems), 2014 Umbrella Movement, 2019 protests, and National Security Law 2020.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "N/A (city-territory; Central is de facto centre)",
@@ -54,7 +59,10 @@
       "Islam": "4%",
       "Hindu": "1.5%",
       "Sikh": "0.3%",
-      "None_Secular": "24.2%"
+      "None_Secular": "24.2%",
+      "primary": "",
+      "breakdown": {},
+      "note": ""
     },
     "ethnic_groups": [
       {
@@ -106,12 +114,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -120,21 +144,39 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [],
       "top_imports": [],
       "major_partners": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "remittances_pct_gdp": 0,
+      "total_exports_usd": "",
+      "total_imports_usd": "",
+      "top_export_destinations": [],
+      "top_import_origins": [],
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 0,
       "electricity_access_pct": 0,
       "mobile_subscriptions_per_100": 0,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "paved_roads_pct": 0,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
+      "road_network_km": 0,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": ""
     },
     "international_memberships": [],
     "governance_indices": {
@@ -155,6 +197,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -162,12 +224,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -175,20 +261,416 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0.88,
+      "ict_development_index": 8.5,
+      "mobile_money_accounts": 5000000,
+      "digital_payments_pct_adults": 90,
+      "fintech_companies": 600,
+      "startup_ecosystem_value_usd": "$20 billion",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 82.0,
+      "innovation_index_score": 57.0,
+      "innovation_index_rank": 14,
+      "ai_readiness_index": 72.0
+    },
+    "capital_coordinates": {
+      "lat": 22.3193,
+      "lon": 114.1694
+    },
+    "other_major_cities": [
+      "Kowloon",
+      "Tsuen Wan",
+      "Sha Tin",
+      "Tuen Mun",
+      "Tai Po"
+    ],
+    "national_motto": "None (SAR of PRC)",
+    "national_anthem": "Yìyǒngjūn Jìnxíngqǔ (March of the Volunteers, PRC anthem)",
+    "currency_code": "HKD",
+    "internet_tld": ".hk",
+    "utc_offset": "UTC+8",
+    "drives_on": "left",
+    "other_languages": [
+      "English",
+      "Mandarin",
+      "Fukienese",
+      "Hakka"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": 22.3964,
+        "lon": 114.1095
+      },
+      "bounding_box": {
+        "north": 22.56,
+        "south": 22.15,
+        "east": 114.43,
+        "west": 113.84
+      },
+      "land_area_km2": 1114,
+      "water_area_km2": 35,
+      "coastline_km": 733,
+      "borders": [
+        "China (Guangdong)"
+      ],
+      "border_lengths_km": {
+        "China": 33
+      },
+      "highest_point": {
+        "name": "Tai Mo Shan",
+        "elevation_m": 958
+      },
+      "lowest_point": {
+        "name": "South China Sea",
+        "elevation_m": 0
+      },
+      "terrain": "Hilly to mountainous; lowlands in north; 263 islands; extensive reclamation",
+      "land_use": {
+        "agricultural_pct": 5.0,
+        "arable_pct": 3.2,
+        "forest_pct": 25.0,
+        "other_pct": 70.0
+      },
+      "major_rivers": [],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": false,
+      "notes": "Special Administrative Region of China; one of world's most densely populated places; Victoria Harbour iconic; 75% green/country park; land reclamation creates new territory."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$383 billion",
+      "gdp_ppp_usd": "$527 billion",
+      "gdp_per_capita_nominal_usd": 51000,
+      "gdp_per_capita_ppp_usd": 70000,
+      "gdp_growth_rate_pct": 3.2,
+      "inflation_rate_pct": 2.1,
+      "unemployment_rate_pct": 2.9,
+      "youth_unemployment_rate_pct": 8.0,
+      "poverty_rate_pct": 20.0,
+      "poverty_line_definition": "Government poverty line (50% median household income)",
+      "gini_coefficient": 53.9,
+      "income_classification": "High income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 0.1,
+        "industry_pct_gdp": 6,
+        "services_pct_gdp": 94
+      },
+      "labor_force": 3900000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 0,
+        "industry_pct": 6,
+        "services_pct": 94
+      },
+      "fdi_inflow_usd": "$117 billion",
+      "fdi_outflow_usd": "$88 billion",
+      "foreign_exchange_reserves_usd": "$425 billion",
+      "ease_of_doing_business_rank": 3,
+      "economic_freedom_index_score": 89.7,
+      "credit_rating": {
+        "moodys": "Aa3",
+        "sp": "AA+",
+        "fitch": "AA-"
+      },
+      "notes": "World's freest economy (Heritage Foundation); global financial centre (#4); world's most expensive real estate; no sales tax; HKD pegged to USD (Linked Exchange Rate); re-export hub for China; extreme inequality (highest Gini in developed world)."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 6.8,
+      "health_expenditure_per_capita_usd": 3500,
+      "physicians_per_1k": 2.1,
+      "nurses_midwives_per_1k": 8.0,
+      "hospital_beds_per_1k": 4.9,
+      "maternal_mortality_per_100k": 2,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 57,
+      "access_to_clean_water_pct": 100,
+      "access_to_sanitation_pct": 100,
+      "vaccination_coverage_pct": 95,
+      "stunting_under5_pct": 0,
+      "obesity_rate_pct": 5.3,
+      "universal_health_coverage_index": 91,
+      "leading_causes_of_death": [
+        "Cancer",
+        "Cardiovascular diseases",
+        "Pneumonia",
+        "Cerebrovascular diseases"
+      ],
+      "notes": "World's highest life expectancy (~85 years); dual public/private healthcare system; Doctor-Hong Kong shortage; world's first SARS outbreak 2003; COVID zero policy 2020-22."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 78.0,
+      "food_security_index_rank": 25,
+      "arable_land_pct": 3.2,
+      "agricultural_land_pct": 5.0,
+      "irrigated_land_pct": 0,
+      "major_crops": [
+        "vegetables"
+      ],
+      "major_livestock": [
+        "poultry",
+        "pigs"
+      ],
+      "food_import_dependency_pct": 95,
+      "cereal_yield_kg_per_hectare": 0,
+      "agricultural_employment_pct": 0,
+      "notes": "98% food imported (primarily from mainland China); agriculture <0.1% GDP; rooftop/vertical farming experiments; world-class food culture; Michelin-star density among world's highest.",
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "energy": {
+      "primary_energy_sources": [
+        "natural gas",
+        "coal",
+        "nuclear (from Daya Bay)",
+        "renewables"
+      ],
+      "electricity_generation_gwh": 35000,
+      "electricity_consumption_per_capita_kwh": 5700,
+      "renewable_share_pct": 1,
+      "fossil_fuel_share_pct": 74,
+      "nuclear_share_pct": 25,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 0,
+      "natural_gas_production_bcm": 0,
+      "proved_oil_reserves_bbl": "0",
+      "proved_gas_reserves_tcm": "0",
+      "energy_imports_pct": 100,
+      "electrification_rate_pct": 100,
+      "notes": "100% energy imported; 25% electricity from Daya Bay nuclear plant (Guangdong); phasing out coal for natural gas; offshore wind potential; CLP and HK Electric duopoly; world-class grid reliability.",
+      "energy_mix": {
+        "fossil_fuels_pct": 0,
+        "hydroelectric_pct": 0,
+        "solar_pct": 0,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 0,
+      "electricity_production_gwh": 0,
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "transport": {
+      "airports": 2,
+      "airports_paved": 2,
+      "railways_km": 77,
+      "roadways_km": 2107,
+      "paved_roads_pct": 100,
+      "waterways_km": 0,
+      "major_ports": [
+        "Victoria Harbour (Kwai Tsing container terminal)"
+      ],
+      "national_airline": "Cathay Pacific",
+      "vehicle_ownership_per_1k": 90,
+      "notes": "MTR metro system world-class (99.9% on-time); Hong Kong International Airport (HKIA) among world's top cargo airports; Octopus card universal payment; Hong Kong-Zhuhai-Macau Bridge (55 km, world's longest sea crossing bridge); Star Ferry iconic.",
+      "major_airports_international": [],
+      "major_airports_domestic": [],
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
+    },
+    "tourism": {
+      "international_arrivals": 34000000,
+      "tourism_revenue_usd": "$38 billion",
+      "tourism_pct_gdp": 10.0,
+      "major_attractions": [
+        "Victoria Peak",
+        "Victoria Harbour",
+        "Big Buddha (Tian Tan)",
+        "Temple Street Night Market",
+        "Disneyland",
+        "Ocean Park"
+      ],
+      "unesco_world_heritage_sites": 0,
+      "notes": "One of world's most visited cities; shopping/dining destination; Chinese mainland visitors dominant; post-COVID recovery; Star Ferry and Peak Tram iconic; Geopark volcanic formations.",
+      "annual_visitors": 0,
+      "tourism_employment_pct": 0,
+      "unesco_sites_list": [],
+      "visa_free_access_countries": 0,
+      "henley_passport_rank": 0
+    },
+    "legal_system": {
+      "type": "Mixed legal system",
+      "supreme_court": "Court of Final Appeal",
+      "international_court_jurisdiction": "Not applicable (SAR)",
+      "suffrage": "18 years (limited elections — LegCo partially elected)",
+      "legal_traditions": [
+        "English common law",
+        "Chinese customary law (limited)"
+      ],
+      "death_penalty": false,
+      "notes": "One Country Two Systems (until 2047); National Security Law (2020) fundamentally changed legal landscape; Basic Law mini-constitution; once-independent judiciary facing Beijing pressure; Article 23 enacted 2024.",
+      "legal_tradition": "",
+      "constitution_year": 0,
+      "sharia_applicability": "",
+      "customary_law_role": "",
+      "icc_membership": "",
+      "judicial_independence_score": 0,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_score": 43,
+      "freedom_house_status": "Partly Free",
+      "gender_inequality_index": 0.041,
+      "gender_inequality_rank": 4,
+      "women_in_parliament_pct": 20,
+      "female_labor_force_participation_pct": 55,
+      "maternal_leave_weeks": 14,
+      "child_marriage_pct": 0,
+      "lgbtq_legal_status": "Legal (no marriage/civil union; partial court victories)",
+      "press_freedom_rank": 135,
+      "notes": "Dramatic decline in freedoms post-NSL 2020; Apple Daily shut down; pro-democracy activists imprisoned; media self-censorship; foreign domestic helpers (400k+) exploitation concerns; previously strong rule of law eroding.",
+      "gender_gap_index_score": 0,
+      "women_labor_force_participation_pct": 0,
+      "maternal_mortality_per_100k": 0,
+      "fgm_prevalence_pct": 0,
+      "death_penalty_status": "",
+      "human_trafficking_tier": "",
+      "child_labor_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.64,
+      "global_peace_index_rank": 28,
+      "homicide_rate_per_100k": 0.3,
+      "terrorism_index_score": 1.0,
+      "terrorism_index_rank": 95,
+      "armed_conflict": false,
+      "internally_displaced_persons": 0,
+      "landmine_contamination": false,
+      "notes": "Extremely low crime rate; PLA garrison present but rarely visible; 2019 pro-democracy protests (2M+ marchers); post-NSL political stability through suppression; no conventional security threats.",
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": ""
+    },
+    "cultural_heritage": {
+      "unesco_intangible_heritage": [],
+      "notable_cultural_exports": [
+        "Cantonese cinema (kung fu films)",
+        "Cantopop music",
+        "Dim sum culture",
+        "Financial services"
+      ],
+      "major_museums": [
+        "Hong Kong Museum of Art",
+        "Hong Kong Heritage Museum",
+        "Hong Kong Museum of History",
+        "M+ Museum"
+      ],
+      "world_heritage_sites_list": [],
+      "culinary_traditions": [
+        "Dim sum",
+        "Wonton noodles",
+        "Char siu",
+        "Egg tarts",
+        "Milk tea",
+        "Roast goose"
+      ],
+      "notes": "Bruce Lee and kung fu cinema global impact; Cantopop golden era (1980s); East-meets-West cultural fusion; world capital of dim sum; M+ museum (Asia's largest modern art museum); comic book culture (manhua).",
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "",
+      "national_sport": "",
+      "major_festivals": [],
+      "cuisine_highlights": [],
+      "music_art_traditions": [],
+      "film_industry": "",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [],
+      "world_heritage_sites": [],
+      "media_landscape": ""
+    },
+    "comparative_rankings": {
+      "human_development_index_rank": 4,
+      "global_competitiveness_rank": 7,
+      "happiness_index_rank": 86,
+      "environmental_performance_rank": 46,
+      "gender_gap_rank": 51,
+      "soft_power_rank": 0,
+      "notes": "World's freest economy and top financial centre; HDI among highest globally; sharp decline in freedom/press rankings post-2020; extreme housing unaffordability.",
+      "_note": "Country position relative to continent and global. 'rank' = 1 is best/largest.",
+      "population": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "area": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_nominal": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_per_capita": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "hdi": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "life_expectancy": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "internet_penetration": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "press_freedom": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
     }
   },
   "leadership": {
@@ -196,7 +678,8 @@
       "name": "John Lee Ka-chiu",
       "title": "Chief Executive",
       "since": "2022-07-01",
-      "notes": "Pro-Beijing; former security secretary; sole candidate; US/UK sanctioned; National Security Law enforcer"
+      "notes": "Pro-Beijing; former security secretary; sole candidate; US/UK sanctioned; National Security Law enforcer",
+      "party": ""
     },
     "former_chief_executives": [
       {
@@ -228,8 +711,23 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
-    }
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
+    },
+    "former_leaders": []
   },
   "thematic_clusters": {
     "910": [

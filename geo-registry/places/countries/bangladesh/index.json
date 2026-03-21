@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.812558Z",
-    "notes": "Comprehensive index for Bangladesh covering ancient Vanga and Pundra kingdoms, Mauryan-Gupta integration, Pala dynasty Buddhist golden age, Sena dynasty, Delhi Sultanate and independent Bengal Sultanate, Mughal Bengal (richest province), British Raj (Bengal Presidency), Partition 1947 (East Pakistan), Language Movement 1952, Six Points, 1971 Liberation War/genocide, Mujib era, military coups, Ershad/Zia/Khaleda/Hasina political dynasties, garment industry revolution, and climate vulnerability."
+    "notes": "Comprehensive index for Bangladesh covering ancient Vanga and Pundra kingdoms, Mauryan-Gupta integration, Pala dynasty Buddhist golden age, Sena dynasty, Delhi Sultanate and independent Bengal Sultanate, Mughal Bengal (richest province), British Raj (Bengal Presidency), Partition 1947 (East Pakistan), Language Movement 1952, Six Points, 1971 Liberation War/genocide, Mujib era, military coups, Ershad/Zia/Khaleda/Hasina political dynasties, garment industry revolution, and climate vulnerability.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Dhaka",
@@ -51,7 +56,10 @@
       "Hinduism": "8.2%",
       "Buddhism": "0.6%",
       "Christianity": "0.4%",
-      "Other": "0.4%"
+      "Other": "0.4%",
+      "primary": "",
+      "breakdown": {},
+      "note": ""
     },
     "ethnic_groups": [
       {
@@ -113,12 +121,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -127,21 +151,39 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [],
       "top_imports": [],
       "major_partners": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "remittances_pct_gdp": 0,
+      "total_exports_usd": "",
+      "total_imports_usd": "",
+      "top_export_destinations": [],
+      "top_import_origins": [],
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 0,
       "electricity_access_pct": 0,
       "mobile_subscriptions_per_100": 0,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "paved_roads_pct": 0,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
+      "road_network_km": 0,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": ""
     },
     "international_memberships": [],
     "governance_indices": {
@@ -162,6 +204,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -169,12 +231,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -182,20 +268,441 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0.55,
+      "ict_development_index": 3.2,
+      "mobile_money_accounts": 45000000,
+      "digital_payments_pct_adults": 30,
+      "fintech_companies": 250,
+      "startup_ecosystem_value_usd": "$1 billion",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 35.0,
+      "innovation_index_score": 21.0,
+      "innovation_index_rank": 102,
+      "ai_readiness_index": 30.0
+    },
+    "capital_coordinates": {
+      "lat": 23.8103,
+      "lon": 90.4125
+    },
+    "other_major_cities": [
+      "Chittagong",
+      "Khulna",
+      "Rajshahi",
+      "Sylhet",
+      "Rangpur",
+      "Comilla"
+    ],
+    "national_motto": "Joy Bangla! (Victory to Bengal!)",
+    "national_anthem": "Amar Shonar Bangla (My Golden Bengal)",
+    "currency_code": "BDT",
+    "internet_tld": ".bd",
+    "utc_offset": "UTC+6",
+    "drives_on": "left",
+    "other_languages": [
+      "Chittagonian",
+      "Sylheti",
+      "Rangpuri",
+      "Chakma"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": 23.685,
+        "lon": 90.3563
+      },
+      "bounding_box": {
+        "north": 26.63,
+        "south": 20.74,
+        "east": 92.67,
+        "west": 88.01
+      },
+      "land_area_km2": 147570,
+      "water_area_km2": 18290,
+      "coastline_km": 580,
+      "borders": [
+        "India",
+        "Myanmar"
+      ],
+      "border_lengths_km": {
+        "India": 4142,
+        "Myanmar": 271
+      },
+      "highest_point": {
+        "name": "Keokradong/Mowdok Mual",
+        "elevation_m": 1052
+      },
+      "lowest_point": {
+        "name": "Indian Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "Mostly flat alluvial plain; Ganges-Brahmaputra-Meghna delta; hilly southeast (Chittagong Hill Tracts)",
+      "land_use": {
+        "agricultural_pct": 70.1,
+        "arable_pct": 59.0,
+        "forest_pct": 11.0,
+        "other_pct": 18.9
+      },
+      "major_rivers": [
+        "Padma (Ganges)",
+        "Jamuna (Brahmaputra)",
+        "Meghna",
+        "Surma"
+      ],
+      "major_lakes": [
+        "Kaptai Lake (reservoir)"
+      ],
+      "exclusive_economic_zone_km2": 86392,
+      "landlocked": false,
+      "notes": "World's largest river delta (Ganges-Brahmaputra); 8th most populous country; extremely vulnerable to climate change (sea level rise, cyclones); Sundarbans mangrove forest (UNESCO)."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$460 billion",
+      "gdp_ppp_usd": "$1.35 trillion",
+      "gdp_per_capita_nominal_usd": 2688,
+      "gdp_per_capita_ppp_usd": 7900,
+      "gdp_growth_rate_pct": 5.8,
+      "inflation_rate_pct": 9.7,
+      "unemployment_rate_pct": 5.2,
+      "youth_unemployment_rate_pct": 15.7,
+      "poverty_rate_pct": 18.7,
+      "poverty_line_definition": "National poverty line ($2.15/day)",
+      "gini_coefficient": 32.4,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 11,
+        "industry_pct_gdp": 35,
+        "services_pct_gdp": 54
+      },
+      "labor_force": 73000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 38,
+        "industry_pct": 21,
+        "services_pct": 41
+      },
+      "fdi_inflow_usd": "$3.5 billion",
+      "fdi_outflow_usd": "$420 million",
+      "foreign_exchange_reserves_usd": "$21 billion",
+      "ease_of_doing_business_rank": 168,
+      "economic_freedom_index_score": 53.2,
+      "credit_rating": {
+        "moodys": "Ba3",
+        "sp": "BB-",
+        "fitch": "BB-"
+      },
+      "notes": "World's 2nd largest garment exporter; 'Bangladesh Paradox' — strong growth despite governance challenges; Rana Plaza 2013 catalysed safety reforms; remittances from 10M+ overseas workers vital; LDC graduation expected 2026."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 2.6,
+      "health_expenditure_per_capita_usd": 46,
+      "physicians_per_1k": 0.7,
+      "nurses_midwives_per_1k": 0.4,
+      "hospital_beds_per_1k": 0.8,
+      "maternal_mortality_per_100k": 123,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 3,
+      "tuberculosis_incidence_per_100k": 221,
+      "access_to_clean_water_pct": 98,
+      "access_to_sanitation_pct": 63,
+      "vaccination_coverage_pct": 97,
+      "stunting_under5_pct": 28,
+      "obesity_rate_pct": 3.6,
+      "universal_health_coverage_index": 48,
+      "leading_causes_of_death": [
+        "Cardiovascular diseases",
+        "Chronic respiratory diseases",
+        "Cancer",
+        "Diabetes"
+      ],
+      "notes": "Arsenic contamination of groundwater (world's largest mass poisoning); outstanding vaccination programme (community health worker model replicated globally); BRAC NGO healthcare model; low spending but remarkable health outcomes relative to income."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 49.0,
+      "food_security_index_rank": 84,
+      "arable_land_pct": 59.0,
+      "agricultural_land_pct": 70.1,
+      "irrigated_land_pct": 72,
+      "major_crops": [
+        "rice",
+        "jute",
+        "tea",
+        "wheat",
+        "sugarcane",
+        "tobacco",
+        "vegetables"
+      ],
+      "major_livestock": [
+        "cattle",
+        "goats",
+        "poultry",
+        "buffalo"
+      ],
+      "food_import_dependency_pct": 15,
+      "cereal_yield_kg_per_hectare": 4700,
+      "agricultural_employment_pct": 38,
+      "notes": "3rd largest rice producer globally; jute 'golden fibre' historical export; shrimp/fish farming (world's 5th largest aquaculture producer); Green Revolution improved yields; cyclone vulnerability threatens harvests.",
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "energy": {
+      "primary_energy_sources": [
+        "natural gas",
+        "oil",
+        "coal",
+        "renewables"
+      ],
+      "electricity_generation_gwh": 90000,
+      "electricity_consumption_per_capita_kwh": 530,
+      "renewable_share_pct": 3,
+      "fossil_fuel_share_pct": 97,
+      "nuclear_share_pct": 0,
+      "oil_production_bpd": 3000,
+      "oil_consumption_bpd": 130000,
+      "natural_gas_production_bcm": 28,
+      "proved_oil_reserves_bbl": "28 million",
+      "proved_gas_reserves_tcm": "0.13",
+      "energy_imports_pct": 25,
+      "electrification_rate_pct": 97,
+      "notes": "Natural gas dominant (80% of power generation); Rooppur Nuclear Power Plant (Russian-built, first unit expected 2025); Payra/Rampal coal plants controversial (near Sundarbans); solar home systems reach 6M+ rural homes (world's largest off-grid solar programme).",
+      "energy_mix": {
+        "fossil_fuels_pct": 0,
+        "hydroelectric_pct": 0,
+        "solar_pct": 0,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 0,
+      "electricity_production_gwh": 0,
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "transport": {
+      "airports": 18,
+      "airports_paved": 16,
+      "railways_km": 2877,
+      "roadways_km": 369105,
+      "paved_roads_pct": 10,
+      "waterways_km": 8370,
+      "major_ports": [
+        "Chittagong",
+        "Mongla",
+        "Payra"
+      ],
+      "national_airline": "Biman Bangladesh Airlines",
+      "vehicle_ownership_per_1k": 8,
+      "notes": "Inland waterways critical transport network (monsoon season); Padma Bridge (2022) transformative for south-west connectivity; Dhaka Metro Rail under construction; Chittagong port handles 92% of trade; ship-breaking industry (Chittagong) world's largest.",
+      "major_airports_international": [],
+      "major_airports_domestic": [],
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
+    },
+    "tourism": {
+      "international_arrivals": 325000,
+      "tourism_revenue_usd": "$200 million",
+      "tourism_pct_gdp": 0.04,
+      "major_attractions": [
+        "Sundarbans (UNESCO)",
+        "Cox's Bazar (world's longest beach)",
+        "Paharpur (UNESCO)",
+        "Bagerhat (UNESCO)",
+        "Dhaka Old City",
+        "Srimangal tea gardens"
+      ],
+      "unesco_world_heritage_sites": 3,
+      "notes": "Underdeveloped tourism sector despite potential; Cox's Bazar 120km beach; Sundarbans Bengal tiger habitat; Rohingya refugee crisis impacted Cox's Bazar area; backpacker trail growing.",
+      "annual_visitors": 0,
+      "tourism_employment_pct": 0,
+      "unesco_sites_list": [],
+      "visa_free_access_countries": 0,
+      "henley_passport_rank": 0
+    },
+    "legal_system": {
+      "type": "Mixed legal system",
+      "supreme_court": "Supreme Court (Appellate Division and High Court Division)",
+      "international_court_jurisdiction": "ICJ not accepted (compulsory)",
+      "suffrage": "18 years, universal",
+      "legal_traditions": [
+        "English common law",
+        "Elements of Islamic personal law"
+      ],
+      "death_penalty": true,
+      "notes": "British colonial legal framework; 1972 constitution; caretaker government system abolished 2011 (reinstated informally 2024); International Crimes Tribunal for 1971 war; mobile courts introduced for quick justice.",
+      "legal_tradition": "",
+      "constitution_year": 0,
+      "sharia_applicability": "",
+      "customary_law_role": "",
+      "icc_membership": "",
+      "judicial_independence_score": 0,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_score": 39,
+      "freedom_house_status": "Partly Free",
+      "gender_inequality_index": 0.537,
+      "gender_inequality_rank": 133,
+      "women_in_parliament_pct": 21,
+      "female_labor_force_participation_pct": 38,
+      "maternal_leave_weeks": 16,
+      "child_marriage_pct": 51,
+      "lgbtq_legal_status": "Illegal (colonial-era law)",
+      "press_freedom_rank": 165,
+      "notes": "Paradox of female leadership (female PMs since 1991) with high gender violence; garment sector empowered millions of women workers; acid attacks declining; Digital Security Act used against journalists/activists; child marriage among world's highest.",
+      "gender_gap_index_score": 0,
+      "women_labor_force_participation_pct": 0,
+      "maternal_mortality_per_100k": 0,
+      "fgm_prevalence_pct": 0,
+      "death_penalty_status": "",
+      "human_trafficking_tier": "",
+      "child_labor_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.12,
+      "global_peace_index_rank": 82,
+      "homicide_rate_per_100k": 2.3,
+      "terrorism_index_score": 5.2,
+      "terrorism_index_rank": 33,
+      "armed_conflict": false,
+      "internally_displaced_persons": 427000,
+      "landmine_contamination": false,
+      "notes": "Hosting 1M+ Rohingya refugees from Myanmar; Chittagong Hill Tracts low-level insurgency; islamist extremism (2016 Holey Artisan attack); political violence during elections; cyclone/flood displacement significant.",
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": ""
+    },
+    "cultural_heritage": {
+      "unesco_intangible_heritage": [
+        "Mangal Shobhajatra (Pahela Baishakh)",
+        "Traditional art of Jamdani weaving",
+        "Rickshaw and rickshaw painting"
+      ],
+      "notable_cultural_exports": [
+        "Muslin (Dhaka muslin)",
+        "Jamdani saris",
+        "Bengali literature",
+        "Baul music"
+      ],
+      "major_museums": [
+        "Liberation War Museum",
+        "National Museum of Bangladesh",
+        "Ahsan Manzil"
+      ],
+      "world_heritage_sites_list": [
+        "Historic Mosque City of Bagerhat",
+        "Ruins of the Buddhist Vihara at Paharpur",
+        "The Sundarbans"
+      ],
+      "culinary_traditions": [
+        "Hilsa fish curry",
+        "Biryani",
+        "Pitha",
+        "Bhuna khichuri"
+      ],
+      "notes": "Bengali language movement (1952) led to UNESCO International Mother Language Day (Feb 21); rich literary tradition (Tagore, Nazrul Islam); world's largest mangrove forest.",
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "",
+      "national_sport": "",
+      "major_festivals": [],
+      "cuisine_highlights": [],
+      "music_art_traditions": [],
+      "film_industry": "",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [],
+      "world_heritage_sites": [],
+      "media_landscape": ""
+    },
+    "comparative_rankings": {
+      "human_development_index_rank": 129,
+      "global_competitiveness_rank": 105,
+      "happiness_index_rank": 118,
+      "environmental_performance_rank": 177,
+      "gender_gap_rank": 59,
+      "soft_power_rank": 0,
+      "notes": "Remarkable development progress ('Bangladesh Paradox'); gender gap ranking better than many richer countries; environmental vulnerability highest globally.",
+      "_note": "Country position relative to continent and global. 'rank' = 1 is best/largest.",
+      "population": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "area": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_nominal": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_per_capita": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "hdi": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "life_expectancy": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "internet_penetration": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "press_freedom": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
     }
   },
   "leadership": {
@@ -203,7 +710,8 @@
       "name": "Muhammad Yunus",
       "title": "Chief Adviser (interim government)",
       "since": "2024-08-08",
-      "notes": "Nobel Peace Prize laureate (2006, microfinance/Grameen Bank); heads interim government after Sheikh Hasina ousted by student-led revolution July-August 2024"
+      "notes": "Nobel Peace Prize laureate (2006, microfinance/Grameen Bank); heads interim government after Sheikh Hasina ousted by student-led revolution July-August 2024",
+      "party": ""
     },
     "former_presidents_and_pms": [
       {
@@ -235,8 +743,23 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
-    }
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
+    },
+    "former_leaders": []
   },
   "thematic_clusters": {
     "910": [

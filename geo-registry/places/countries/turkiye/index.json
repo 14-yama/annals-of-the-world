@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.876726Z",
-    "notes": "Comprehensive index for Türkiye (Turkey) covering Hittites, Phrygians, Lydians, Greco-Roman (Ephesus, Constantinople), Byzantine Empire, Seljuk Turks, Ottoman Empire (1299-1922), WWI defeat, Mustafa Kemal Atatürk's republic 1923, secularization, Kurdish conflict, military coups (1960/1971/1980/1997), EU accession talks, Erdoğan's AKP Islamist rule (2003+), 2016 coup attempt, Syrian refugee crisis, and authoritarian drift."
+    "notes": "Comprehensive index for Türkiye (Turkey) covering Hittites, Phrygians, Lydians, Greco-Roman (Ephesus, Constantinople), Byzantine Empire, Seljuk Turks, Ottoman Empire (1299-1922), WWI defeat, Mustafa Kemal Atatürk's republic 1923, secularization, Kurdish conflict, military coups (1960/1971/1980/1997), EU accession talks, Erdoğan's AKP Islamist rule (2003+), 2016 coup attempt, Syrian refugee crisis, and authoritarian drift.",
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Ankara (since 1923, replacing Constantinople/Istanbul)",
@@ -28,8 +33,9 @@
       "Kurdish",
       "Arabic",
       "Zaza",
-      "Armenian",
-      "Greek"
+      "Laz",
+      "Georgian",
+      "Circassian"
     ],
     "government_type": "Unitary presidential republic",
     "currency": "Turkish lira (TRY)",
@@ -58,7 +64,9 @@
       "Islam_Alevi": "15%",
       "Christianity": "0.2%",
       "Other": "3%",
-      "note": "Officially secular state (Atatürk legacy); Sunni Hanafi majority; Alevi (heterodox Shia-like, Anatolian, Bektashi Sufi influence); secular vs Islamist divide (AKP re-Islamized); Diyanet (state religious affairs); Armenian/Greek Orthodox (decimated by genocide/population exchanges); Jews (Sephardic, Istanbul)"
+      "note": "Officially secular state (Atatürk legacy); Sunni Hanafi majority; Alevi (heterodox Shia-like, Anatolian, Bektashi Sufi influence); secular vs Islamist divide (AKP re-Islamized); Diyanet (state religious affairs); Armenian/Greek Orthodox (decimated by genocide/population exchanges); Jews (Sephardic, Istanbul)",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -98,100 +106,727 @@
     "time_zone": "TRT (UTC+3, permanent since 2016)",
     "independence": {
       "date": "1923-10-29",
-      "from": "Successor to Ottoman Empire (dissolved after WWI); Republic declared by Atatürk"
+      "from": "Successor to Ottoman Empire (dissolved after WWI); Republic declared by Atatürk",
+      "notes": ""
     },
     "continent": "Asia",
     "notes_unique": "Only country spanning two continents (3% Europe, 97% Asia, Bosporus); successor to Ottoman Empire; Atatürk secularization (Latin script, women's rights, caliphate abolished 1924); Armenian Genocide 1915 (~1.5M, denied by state); Kurdish conflict (PKK, ~40,000 dead); NATO member (1952); EU candidate (since 1999, stalled); 2016 coup attempt (Fethullah Gülen blamed, 77,000+ arrested); Erdoğan's authoritarian turn; Hagia Sophia re-converted to mosque 2020; Syrian refugees 3.6M; inflation crisis 2021-23",
     "demographics": {
-      "median_age": 0,
-      "urbanization_pct": 0,
-      "fertility_rate": 0,
-      "life_expectancy": 0,
-      "infant_mortality_per_1k": 0,
-      "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "median_age": 33.5,
+      "population_growth_rate_pct": 0.7,
+      "urbanization_pct": 77.0,
+      "urban_population_growth_rate_pct": 1.5,
+      "fertility_rate": 1.6,
+      "life_expectancy": 78.6,
+      "life_expectancy_male": 75.5,
+      "life_expectancy_female": 81.5,
+      "infant_mortality_per_1k": 8.5,
+      "under5_mortality_per_1k": 10.0,
+      "literacy_rate_pct": 96.7,
+      "net_migration_rate": 2.0,
+      "sex_ratio": 1.01,
+      "dependency_ratio": 44.0,
+      "population_density_per_km2": 110,
+      "age_structure": {
+        "0_14_pct": 22.0,
+        "15_24_pct": 15.0,
+        "25_54_pct": 42.5,
+        "55_64_pct": 10.0,
+        "65_plus_pct": 10.5
+      }
     },
     "natural_resources": {
-      "primary": [],
-      "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "primary": [
+        "coal",
+        "iron ore",
+        "copper",
+        "chromium",
+        "antimony",
+        "mercury",
+        "gold",
+        "barite",
+        "boron",
+        "marble",
+        "hydropower"
+      ],
+      "resource_dependency_pct_gdp": 5,
+      "resource_curse_risk": "Low",
+      "notes": "World's largest boron reserves (73% global); chromium major producer; marble exporter; limited oil/gas; energy import dependent (~75% of energy imported)."
     },
     "military": {
-      "budget_usd": "",
-      "pct_of_gdp": 0,
-      "active_personnel": 0,
-      "reserve_personnel": 0,
-      "nuclear_status": "Non-nuclear",
-      "alliances": [],
-      "notes": ""
+      "budget_usd": "$17 billion",
+      "pct_of_gdp": 1.6,
+      "active_personnel": 425000,
+      "reserve_personnel": 200000,
+      "paramilitary_personnel": 156800,
+      "nuclear_status": "Non-nuclear (NATO nuclear sharing)",
+      "alliances": [
+        "NATO"
+      ],
+      "conscription": true,
+      "global_firepower_rank": 8,
+      "notes": "NATO's 2nd largest army; Bayraktar TB2 drone changed modern warfare; operations in Syria, Iraq, Libya, Nagorno-Karabakh; growing defense industry (Baykar, TAI, Aselsan); CAATSA sanctions for S-400 purchase."
     },
     "trade": {
-      "top_exports": [],
-      "top_imports": [],
-      "major_partners": [],
-      "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "total_exports_usd": "$256 billion",
+      "total_imports_usd": "$362 billion",
+      "top_exports": [
+        "vehicles",
+        "machinery",
+        "iron/steel",
+        "textiles/apparel",
+        "electronics",
+        "gold/jewelry",
+        "food products"
+      ],
+      "top_imports": [
+        "crude oil/petroleum",
+        "gold",
+        "machinery",
+        "iron/steel",
+        "chemicals",
+        "vehicles"
+      ],
+      "major_partners": [
+        "Germany",
+        "Russia",
+        "China",
+        "USA",
+        "UK",
+        "Italy",
+        "Iraq"
+      ],
+      "top_export_destinations": [
+        "Germany",
+        "USA",
+        "UK",
+        "Iraq",
+        "Italy",
+        "Spain"
+      ],
+      "top_import_origins": [
+        "Russia",
+        "China",
+        "Germany",
+        "USA",
+        "India",
+        "Italy"
+      ],
+      "trade_balance": "-$106 billion",
+      "trade_as_pct_gdp": 55,
+      "current_account_balance_usd": "-$45 billion",
+      "remittances_pct_gdp": 0.1,
+      "trade_agreements": [
+        "EU Customs Union",
+        "EFTA FTA",
+        "Bilateral FTAs with 20+ countries",
+        "D-8 member"
+      ],
+      "special_economic_zones": [
+        "Organized Industrial Zones (330+)",
+        "Technology Development Zones (92)",
+        "Free Trade Zones (18)"
+      ]
     },
     "infrastructure": {
-      "internet_penetration_pct": 0,
-      "electricity_access_pct": 0,
-      "mobile_subscriptions_per_100": 0,
-      "railway_km": 0,
-      "paved_roads_pct": 0
+      "internet_penetration_pct": 83.0,
+      "broadband_subscriptions_per_100": 22,
+      "electricity_access_pct": 100,
+      "mobile_subscriptions_per_100": 97,
+      "4g_coverage_pct": 99,
+      "5g_availability": false,
+      "railway_km": 12740,
+      "road_network_km": 68526,
+      "paved_roads_pct": 89,
+      "waterways_km": 1200,
+      "submarine_cables": [
+        "SEA-ME-WE 3",
+        "MedNautilus",
+        "KAFOS",
+        "Turk Telekom cables"
+      ],
+      "notes": "Istanbul New Airport (world's largest by capacity); Marmaray tunnel (rail under Bosphorus); high-speed rail network expanding; Istanbul Canal mega-project planned; massive post-earthquake reconstruction in southeast."
     },
     "international_memberships": [],
     "governance_indices": {
       "corruption_perception_index": {
-        "score": 0,
-        "rank": 0,
-        "year": 0
+        "score": 34,
+        "rank": 115,
+        "year": 2023
       },
       "press_freedom_index": {
-        "rank": 0,
-        "year": 0
+        "rank": 165,
+        "year": 2023
       },
       "democracy_index": {
-        "score": 0,
-        "category": "",
-        "year": 0
+        "score": 4.35,
+        "category": "Hybrid regime",
+        "year": 2023
       },
       "fragile_states_index": {
-        "score": 0,
-        "year": 0
+        "score": 68.8,
+        "year": 2023
+      },
+      "rule_of_law_index": {
+        "score": 0.42,
+        "rank": 117,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": 0.08,
+        "percentile": 50,
+        "year": 2022
+      },
+      "regulatory_quality_index": {
+        "score": 0.1,
+        "percentile": 53,
+        "year": 2022
+      },
+      "political_stability_index": {
+        "score": -1.1,
+        "percentile": 10,
+        "year": 2022
       }
     },
     "climate_environment": {
-      "climate_zones": [],
-      "co2_emissions_mt": 0,
-      "renewable_energy_pct": 0,
-      "natural_hazards": [],
-      "protected_areas_pct": 0
+      "climate_zones": [
+        "Mediterranean (south/west)",
+        "Oceanic (Black Sea)",
+        "Continental (central/east)",
+        "Semi-arid (southeast)"
+      ],
+      "average_temperature_c": 12.0,
+      "average_rainfall_mm": 640,
+      "co2_emissions_mt": 422,
+      "co2_per_capita_t": 5.0,
+      "renewable_energy_pct": 17,
+      "natural_hazards": [
+        "Earthquakes",
+        "Floods",
+        "Landslides",
+        "Droughts"
+      ],
+      "protected_areas_pct": 1.5,
+      "deforestation_rate_pct": -0.3,
+      "water_stress_level": "High",
+      "environmental_performance_index": {
+        "score": 42.6,
+        "rank": 100,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified (2021)",
+      "biodiversity": {
+        "known_species": 75000,
+        "endemic_species": 3500,
+        "threatened_species": 500
+      },
+      "notes": "Feb 2023 earthquakes (Kahramanmaras) killed 50,000+ and caused $104B damage; North Anatolian Fault threatens Istanbul; GAP hydropower projects; water scarcity increasing; late Paris ratification."
     },
     "debt_aid": {
-      "national_debt_pct_gdp": 0,
-      "foreign_aid_received_usd": "",
-      "notes": ""
+      "national_debt_pct_gdp": 30.4,
+      "external_debt_usd": "$476 billion",
+      "debt_service_pct_revenue": 12,
+      "foreign_aid_received_usd": "$3 billion",
+      "foreign_aid_given_usd": "$8 billion",
+      "top_donors": [
+        "EU (refugee facility)",
+        "World Bank",
+        "USA"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": "",
+      "notes": "Low public debt but high private sector external debt; EU €6B refugee facility; Turkey is net aid provider (TIKA); FX-denominated debt risk; rollover risk for corporates."
     },
     "education": {
-      "primary_enrollment_pct": 0,
-      "secondary_enrollment_pct": 0,
-      "tertiary_enrollment_pct": 0,
-      "pisa_participation": false,
-      "top_universities": [],
-      "notes": ""
+      "education_expenditure_pct_gdp": 3.4,
+      "primary_enrollment_pct": 100,
+      "secondary_enrollment_pct": 90,
+      "tertiary_enrollment_pct": 45,
+      "primary_completion_rate_pct": 96,
+      "gender_parity_index": 0.97,
+      "mean_years_of_schooling": 8.0,
+      "expected_years_of_schooling": 18.1,
+      "pisa_participation": true,
+      "pisa_scores": {
+        "reading": 456,
+        "math": 453,
+        "science": 476,
+        "year": 2022
+      },
+      "student_teacher_ratio_primary": 20,
+      "out_of_school_children": 500000,
+      "top_universities": [
+        "Middle East Technical University (METU)",
+        "Bogazici University",
+        "Istanbul Technical University",
+        "Koc University",
+        "Sabanci University",
+        "Bilkent University"
+      ],
+      "academic_freedom_index": 0.25,
+      "notes": "207 universities; PISA below OECD average but improving; 4+4+4 education system; academic purges post-2016; Syrian refugee education integration challenge; strong engineering/medical schools."
     },
     "diaspora_migration": {
-      "diaspora_population": "",
-      "refugees_hosted": 0,
-      "refugees_produced": 0,
-      "remittances_usd": "",
-      "notes": ""
+      "diaspora_population": "~6 million",
+      "diaspora_top_destinations": [
+        "Germany",
+        "France",
+        "Netherlands",
+        "Austria",
+        "Belgium",
+        "UK",
+        "USA",
+        "Australia"
+      ],
+      "refugees_hosted": 3600000,
+      "refugees_produced": 10000,
+      "asylum_seekers": 300000,
+      "stateless_persons": 117,
+      "internally_displaced_persons": 1100000,
+      "immigration_policy": "Temporary protection for Syrians; citizenship-by-investment program",
+      "remittances_usd": "$0.8 billion",
+      "remittances_pct_gdp": 0.1,
+      "net_migration_rate_per_1k": 2.0,
+      "notes": "World's largest refugee-hosting country (3.6M Syrians + others); 6M+ diaspora (mainly Germany ~3M); refugee fatigue growing domestically; citizenship offered to some Syrians."
     },
     "digital_economy": {
-      "e_government_index": 0,
-      "mobile_money_adoption": "",
-      "tech_hubs": [],
-      "notes": ""
+      "e_government_index": 0.79,
+      "e_participation_index": 0.82,
+      "ict_development_index": 6.0,
+      "mobile_money_adoption": "Low",
+      "mobile_money_accounts": 500000,
+      "digital_payments_pct_adults": 60,
+      "fintech_companies": 200,
+      "tech_hubs": [
+        "Istanbul",
+        "Ankara",
+        "Izmir"
+      ],
+      "startup_ecosystem_value_usd": "$5.6 billion",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 88.0,
+      "innovation_index_score": 39.0,
+      "innovation_index_rank": 39,
+      "ai_readiness_index": 55.0,
+      "notes": "BKM (Bankalararasi Kart Merkezi) payments infrastructure world-class; Trendyol (e-commerce unicorn); gaming industry growing (Peak Games acquired by Zynga); Twitter/Wikipedia bans controversial; VPN use widespread."
+    },
+    "capital_coordinates": {
+      "lat": 39.9334,
+      "lon": 32.8597
+    },
+    "other_major_cities": [
+      "Istanbul",
+      "Izmir",
+      "Bursa",
+      "Antalya",
+      "Adana",
+      "Gaziantep",
+      "Konya"
+    ],
+    "national_motto": "Yurtta sulh, cihanda sulh (Peace at Home, Peace in the World)",
+    "national_anthem": "Istiklal Marsi (Independence March)",
+    "currency_code": "TRY",
+    "internet_tld": ".tr",
+    "utc_offset": "UTC+3",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 38.9637,
+        "lon": 35.2433
+      },
+      "bounding_box": {
+        "north": 42.1,
+        "south": 35.82,
+        "east": 44.83,
+        "west": 25.66
+      },
+      "land_area_km2": 769632,
+      "water_area_km2": 13930,
+      "coastline_km": 7200,
+      "borders": [
+        "Greece",
+        "Bulgaria",
+        "Georgia",
+        "Armenia",
+        "Azerbaijan (Nakhchivan)",
+        "Iran",
+        "Iraq",
+        "Syria"
+      ],
+      "border_lengths_km": {
+        "Greece": 206,
+        "Bulgaria": 223,
+        "Georgia": 273,
+        "Armenia": 311,
+        "Azerbaijan": 17,
+        "Iran": 534,
+        "Iraq": 367,
+        "Syria": 899
+      },
+      "highest_point": {
+        "name": "Mount Ararat (Agri Dagi)",
+        "elevation_m": 5137
+      },
+      "lowest_point": {
+        "name": "Mediterranean Sea",
+        "elevation_m": 0
+      },
+      "terrain": "Central Anatolian plateau; coastal plains (Mediterranean, Aegean, Black Sea); eastern highlands; Taurus/Pontic mountain ranges",
+      "land_use": {
+        "agricultural_pct": 49.7,
+        "arable_pct": 26.7,
+        "forest_pct": 27.6,
+        "other_pct": 22.7
+      },
+      "major_rivers": [
+        "Euphrates (Firat)",
+        "Tigris (Dicle)",
+        "Kizilirmak",
+        "Sakarya",
+        "Meric (Maritsa)"
+      ],
+      "major_lakes": [
+        "Lake Van",
+        "Salt Lake (Tuz Golu)",
+        "Lake Beysehir",
+        "Lake Egirdir"
+      ],
+      "exclusive_economic_zone_km2": 261654,
+      "landlocked": false,
+      "notes": "Transcontinental (97% Asia, 3% Europe); controls Bosphorus/Dardanelles straits (Montreux Convention); 8 neighboring countries; Mount Ararat (Armenian significance); headwaters of Euphrates/Tigris."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$1.11 trillion",
+      "gdp_ppp_usd": "$3.32 trillion",
+      "gdp_per_capita_nominal_usd": 13110,
+      "gdp_per_capita_ppp_usd": 38900,
+      "gdp_growth_rate_pct": 4.5,
+      "inflation_rate_pct": 64.8,
+      "unemployment_rate_pct": 9.4,
+      "youth_unemployment_rate_pct": 19.4,
+      "poverty_rate_pct": 12.2,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 41.9,
+      "income_classification": "Upper-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 7,
+        "industry_pct_gdp": 28,
+        "services_pct_gdp": 65
+      },
+      "labor_force": 33000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 18,
+        "industry_pct": 27,
+        "services_pct": 55
+      },
+      "fdi_inflow_usd": "$10.6 billion",
+      "fdi_outflow_usd": "$4.4 billion",
+      "foreign_exchange_reserves_usd": "$130 billion",
+      "ease_of_doing_business_rank": 33,
+      "economic_freedom_index_score": 63.2,
+      "credit_rating": {
+        "moodys": "B3",
+        "sp": "B+",
+        "fitch": "B+"
+      },
+      "notes": "G20 member; 19th largest economy; chronic inflation crisis (peaked 85% in 2022); lira lost 80% of value since 2018; orthodox monetary policy restored mid-2023; large current account deficits; strong manufacturing/construction sectors."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 4.3,
+      "health_expenditure_per_capita_usd": 567,
+      "physicians_per_1k": 1.9,
+      "nurses_midwives_per_1k": 2.7,
+      "hospital_beds_per_1k": 2.9,
+      "maternal_mortality_per_100k": 17,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 16,
+      "access_to_clean_water_pct": 100,
+      "access_to_sanitation_pct": 99,
+      "vaccination_coverage_pct": 99,
+      "stunting_under5_pct": 6,
+      "obesity_rate_pct": 32.1,
+      "universal_health_coverage_index": 78,
+      "leading_causes_of_death": [
+        "Cardiovascular diseases",
+        "Cancer",
+        "Respiratory diseases",
+        "Diabetes"
+      ],
+      "notes": "Universal health insurance since 2003; medical tourism hub (~1M medical tourists/year); high obesity rates; Feb 2023 earthquake strained healthcare in southeast."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 67.0,
+      "food_security_index_rank": 43,
+      "arable_land_pct": 26.7,
+      "agricultural_land_pct": 49.7,
+      "irrigated_land_pct": 12,
+      "major_crops": [
+        "wheat",
+        "barley",
+        "sugar beets",
+        "tomatoes",
+        "hazelnuts",
+        "cotton",
+        "sunflowers",
+        "tea",
+        "figs",
+        "apricots"
+      ],
+      "major_livestock": [
+        "cattle",
+        "sheep",
+        "goats",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 15,
+      "cereal_yield_kg_per_hectare": 3200,
+      "agricultural_employment_pct": 18,
+      "prevalence_of_undernourishment_pct": 2.5,
+      "notes": "World's largest hazelnut producer (70% global); top apricot, fig, cherry producer; self-sufficient in most foods; GAP (Southeastern Anatolia Project) irrigation mega-project."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 82,
+        "hydroelectric_pct": 8,
+        "solar_pct": 5,
+        "wind_pct": 4,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 1
+      },
+      "installed_capacity_mw": 105000,
+      "electricity_production_gwh": 330000,
+      "electricity_consumption_per_capita_kwh": 3900,
+      "energy_imports_pct": 75,
+      "oil_production_bpd": 60000,
+      "oil_consumption_bpd": 900000,
+      "natural_gas_production_bcm": 0.5,
+      "energy_access_rural_pct": 100,
+      "energy_access_urban_pct": 100,
+      "notes": "Heavily energy-import dependent; first nuclear plant Akkuyu (Russian-built, 4x1200MW) nearing completion; Black Sea gas discovery (Sakarya field, 540 bcm); natural gas transit hub (TurkStream, TANAP); rapidly growing renewables."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Istanbul Airport (IST)",
+        "Sabiha Gokcen (SAW)",
+        "Ankara Esenboga",
+        "Antalya Airport",
+        "Izmir Adnan Menderes"
+      ],
+      "major_airports_domestic": [
+        "Trabzon",
+        "Gaziantep",
+        "Diyarbakir",
+        "Dalaman",
+        "Bodrum-Milas"
+      ],
+      "national_airline": "Turkish Airlines (Star Alliance)",
+      "major_seaports": [
+        "Istanbul (Ambarli)",
+        "Mersin",
+        "Izmir (Aliaga)",
+        "Iskenderun",
+        "Kocaeli"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 1251,
+      "registered_vehicles_per_1k": 270,
+      "road_fatalities_per_100k": 8.6,
+      "notes": "Turkish Airlines flies to most countries (130+); Istanbul Airport mega-hub (90M capacity); Bosphorus Bridge/Marmaray connect continents; ferry system vital for Istanbul commuters."
+    },
+    "tourism": {
+      "annual_visitors": 56700000,
+      "tourism_revenue_usd": "$54 billion",
+      "tourism_pct_gdp": 4.9,
+      "tourism_employment_pct": 8,
+      "unesco_world_heritage_sites": 21,
+      "unesco_sites_list": [
+        "Historic Areas of Istanbul",
+        "Goreme/Cappadocia",
+        "Hierapolis-Pamukkale",
+        "Hattusha",
+        "Nemrut Dag",
+        "Xanthos-Letoon",
+        "Troy",
+        "Safranbolu",
+        "Ephesus",
+        "Aphrodisias"
+      ],
+      "major_attractions": [
+        "Hagia Sophia",
+        "Cappadocia hot air balloons",
+        "Pamukkale travertines",
+        "Ephesus",
+        "Antalya Riviera",
+        "Grand Bazaar (Istanbul)",
+        "Blue Mosque"
+      ],
+      "visa_free_access_countries": 116,
+      "henley_passport_rank": 50,
+      "notes": "World's 4th most visited country (2023); 56.7M visitors; all-inclusive Antalya Riviera; Istanbul cultural tourism; Cappadocia Instagram-famous; health tourism growing rapidly."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 32,
+      "gender_inequality_index": 0.272,
+      "gender_inequality_rank": 60,
+      "gender_gap_index_score": 0.69,
+      "women_in_parliament_pct": 17,
+      "women_labor_force_participation_pct": 32,
+      "maternal_mortality_per_100k": 17,
+      "child_marriage_pct": 15,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Legal (no protections; discrimination common)",
+      "death_penalty_status": "Abolished (2006)",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 4,
+      "notes": "Post-2016 coup attempt crackdown (150K+ detained/dismissed); journalist imprisonments; Kurdish political repression (HDP); femicide concerns; Istanbul Convention withdrawal (2021)."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.648,
+      "global_peace_index_rank": 147,
+      "terrorism_index_score": 5.2,
+      "terrorism_index_rank": 20,
+      "homicide_rate_per_100k": 2.6,
+      "active_conflicts": [
+        "Kurdish insurgency (PKK)",
+        "Operations in NE Syria",
+        "Operations in N Iraq"
+      ],
+      "border_disputes": [
+        "Cyprus (Northern Cyprus)",
+        "Aegean/Eastern Mediterranean (Greece)",
+        "Kurdish regions"
+      ],
+      "un_peacekeeping_contributions": 350,
+      "arms_imports_usd": "$1.5 billion",
+      "internally_displaced_persons": 1100000,
+      "notes": "PKK conflict since 1984 (40,000+ killed); 2016 coup attempt watershed moment; cross-border military operations in Syria/Iraq; hosts largest refugee population globally (3.5M Syrians); NATO eastern flank role."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (Continental European - adopted Swiss/Italian/German codes)",
+      "constitution_year": 1982,
+      "sharia_applicability": "None (secular republic since 1924)",
+      "customary_law_role": "None",
+      "icc_membership": "Non-member",
+      "judicial_independence_score": 0.35,
+      "contract_enforcement_days": 580,
+      "property_rights_index": 50,
+      "notes": "Ataturk's secular reforms replaced Ottoman/Islamic law with European codes; 2017 constitutional referendum shifted to presidential system; state of emergency post-2016 coup eroded judicial independence."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "Crescent and star",
+        "Grey wolf (Turkic)",
+        "Tulip"
+      ],
+      "national_animal": "Grey wolf (Asena)",
+      "national_flower": "Tulip (Lale)",
+      "national_dish": "Kebab",
+      "national_sport": "Oil wrestling (Yagli gures)",
+      "major_festivals": [
+        "Republic Day (Oct 29)",
+        "Victory Day (Aug 30)",
+        "Ramadan/Eid celebrations",
+        "Nevruz/Nowruz",
+        "Istanbul Film Festival"
+      ],
+      "cuisine_highlights": [
+        "Kebab varieties",
+        "Baklava",
+        "Pide",
+        "Lahmacun",
+        "Manti",
+        "Dolma",
+        "Turkish breakfast",
+        "Turkish delight (lokum)",
+        "Turkish tea/coffee"
+      ],
+      "music_art_traditions": [
+        "Whirling Dervishes (Mevlevi Sema)",
+        "Ottoman classical music",
+        "Turkish folk music",
+        "Iznik ceramics/tiles",
+        "Ottoman calligraphy",
+        "Ebru (marbling art)"
+      ],
+      "film_industry": "Yesilcam era; modern Turkish cinema internationally acclaimed; Turkish TV dramas ($750M+ export industry) watched globally",
+      "intangible_heritage_items": [
+        "Mevlevi Sema (Whirling Dervishes, UNESCO ICH)",
+        "Turkish coffee (UNESCO ICH)",
+        "Ebru marbling (UNESCO ICH)",
+        "Karagoz shadow theater (UNESCO ICH)",
+        "Mesir paste festival (UNESCO ICH)"
+      ],
+      "notable_historical_figures": [
+        "Mustafa Kemal Ataturk",
+        "Mimar Sinan (architect)",
+        "Suleiman the Magnificent",
+        "Rumi (Mevlana)",
+        "Mehmed II (Fatih)"
+      ],
+      "world_heritage_sites": [
+        "Istanbul Historic Areas",
+        "Goreme/Cappadocia",
+        "Pamukkale",
+        "Ephesus",
+        "Troy",
+        "Hattusha",
+        "Nemrut Dag",
+        "Safranbolu",
+        "Aphrodisias"
+      ],
+      "media_landscape": "90%+ of media under pro-government ownership; social media widely used; Netflix/Disney+ produce Turkish content",
+      "notes": "Turkish TV dramas (dizi) 2nd most exported globally after US; Turkish coffee/tea culture; bridge between East/West; 21 UNESCO World Heritage Sites (3rd most in Europe)."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 2,
+        "global_rank": 17
+      },
+      "area": {
+        "continent_rank": 2,
+        "global_rank": 36
+      },
+      "gdp_nominal": {
+        "continent_rank": 1,
+        "global_rank": 17
+      },
+      "gdp_per_capita": {
+        "continent_rank": 5,
+        "global_rank": 70
+      },
+      "hdi": {
+        "continent_rank": 4,
+        "global_rank": 45
+      },
+      "life_expectancy": {
+        "continent_rank": 4,
+        "global_rank": 38
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 3,
+        "global_rank": 33
+      },
+      "internet_penetration": {
+        "continent_rank": 3,
+        "global_rank": 36
+      },
+      "press_freedom": {
+        "continent_rank": 16,
+        "global_rank": 165
+      },
+      "global_peace_index": {
+        "continent_rank": 15,
+        "global_rank": 147
+      },
+      "innovation_index": {
+        "continent_rank": 3,
+        "global_rank": 39
+      },
+      "notes": "Rankings within Western Asia (18 countries). Largest economy in region; G20 member; NATO ally."
     }
   },
   "leadership": {
@@ -199,7 +834,8 @@
       "name": "Recep Tayyip Erdoğan",
       "title": "President",
       "since": "2014-08-28",
-      "notes": "AKP (Justice and Development Party, Islamist-rooted); PM 2003-14 then President; former Istanbul mayor; economic growth then crisis; authoritarian drift (jailed journalists, judges); 2016 coup attempt (purges); 2017 referendum (executive presidency); 2023 re-elected after earthquake; Ottoman nostalgia; Neo-Ottomanism; Hagia Sophia; Syria intervention; Libya; Azerbaijan support; S-400 (Russia, US tensions)"
+      "notes": "AKP (Justice and Development Party, Islamist-rooted); PM 2003-14 then President; former Istanbul mayor; economic growth then crisis; authoritarian drift (jailed journalists, judges); 2016 coup attempt (purges); 2017 referendum (executive presidency); 2023 re-elected after earthquake; Ottoman nostalgia; Neo-Ottomanism; Hagia Sophia; Syria intervention; Libya; Azerbaijan support; S-400 (Russia, US tensions)",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -246,7 +882,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

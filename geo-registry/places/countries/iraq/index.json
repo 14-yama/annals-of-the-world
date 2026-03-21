@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.837782Z",
-    "notes": "Comprehensive index for Iraq covering Mesopotamia (cradle of civilisation), Sumer, Akkad, Babylon, Assyria, Achaemenid/Seleucid/Parthian/Sassanid rule, Islamic conquest and Abbasid Caliphate (Baghdad golden age), Mongol sack of Baghdad 1258, Ottoman Iraq, British Mandate, Hashemite monarchy, 1958 revolution, Ba'ath Party, Saddam Hussein, Iran-Iraq War, Gulf War 1991, sanctions, US invasion 2003, sectarian civil war, ISIS, and post-ISIS reconstruction."
+    "notes": "Comprehensive index for Iraq covering Mesopotamia (cradle of civilisation), Sumer, Akkad, Babylon, Assyria, Achaemenid/Seleucid/Parthian/Sassanid rule, Islamic conquest and Abbasid Caliphate (Baghdad golden age), Mongol sack of Baghdad 1258, Ottoman Iraq, British Mandate, Hashemite monarchy, 1958 revolution, Ba'ath Party, Saddam Hussein, Iran-Iraq War, Gulf War 1991, sanctions, US invasion 2003, sectarian civil war, ISIS, and post-ISIS reconstruction.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Baghdad",
@@ -54,7 +59,9 @@
       "Yezidi": "1.5%",
       "Mandaean": "0.1%",
       "Other": "0.4%",
-      "note": "Shia majority but Sunni minority historically ruled (Ottoman/Ba'ath); Yezidi genocide by ISIS 2014; Iraqi Christians (Chaldean, Assyrian, Syriac) declined from 1.5M to ~200,000"
+      "note": "Shia majority but Sunni minority historically ruled (Ottoman/Ba'ath); Yezidi genocide by ISIS 2014; Iraqi Christians (Chaldean, Assyrian, Syriac) declined from 1.5M to ~200,000",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -109,7 +116,8 @@
     "time_zone": "AST (UTC+3)",
     "independence": {
       "date": "1932-10-03",
-      "from": "United Kingdom (League of Nations mandate)"
+      "from": "United Kingdom (League of Nations mandate)",
+      "notes": ""
     },
     "continent": "Asia",
     "notes_unique": "",
@@ -120,12 +128,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -134,21 +158,39 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [],
       "top_imports": [],
       "major_partners": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "remittances_pct_gdp": 0,
+      "total_exports_usd": "",
+      "total_imports_usd": "",
+      "top_export_destinations": [],
+      "top_import_origins": [],
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 0,
       "electricity_access_pct": 0,
       "mobile_subscriptions_per_100": 0,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "paved_roads_pct": 0,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
+      "road_network_km": 0,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": ""
     },
     "international_memberships": [],
     "governance_indices": {
@@ -169,6 +211,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -176,12 +238,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -189,20 +275,447 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0.35,
+      "ict_development_index": 2.8,
+      "mobile_money_accounts": 3000000,
+      "digital_payments_pct_adults": 15,
+      "fintech_companies": 30,
+      "startup_ecosystem_value_usd": "$200 million",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 20.0,
+      "innovation_index_score": 15.0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 20.0
+    },
+    "capital_coordinates": {
+      "lat": 33.3128,
+      "lon": 44.3615
+    },
+    "other_major_cities": [
+      "Basra",
+      "Erbil",
+      "Mosul",
+      "Sulaymaniyah",
+      "Najaf",
+      "Karbala"
+    ],
+    "national_motto": "God is the Greatest (Allahu Akbar)",
+    "national_anthem": "Mawtini (My Homeland)",
+    "currency_code": "IQD",
+    "internet_tld": ".iq",
+    "utc_offset": "UTC+3",
+    "drives_on": "right",
+    "other_languages": [
+      "Kurdish (Sorani, Kurmanji)",
+      "Turkmen",
+      "Assyrian Neo-Aramaic"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": 33.2232,
+        "lon": 43.6793
+      },
+      "bounding_box": {
+        "north": 37.38,
+        "south": 29.06,
+        "east": 48.57,
+        "west": 38.79
+      },
+      "land_area_km2": 438317,
+      "water_area_km2": 950,
+      "coastline_km": 58,
+      "borders": [
+        "Turkey",
+        "Iran",
+        "Kuwait",
+        "Saudi Arabia",
+        "Jordan",
+        "Syria"
+      ],
+      "border_lengths_km": {
+        "Turkey": 367,
+        "Iran": 1599,
+        "Kuwait": 254,
+        "Saudi Arabia": 811,
+        "Jordan": 179,
+        "Syria": 599
+      },
+      "highest_point": {
+        "name": "Cheekha Dar (Haji Ibrahim)",
+        "elevation_m": 3611
+      },
+      "lowest_point": {
+        "name": "Persian Gulf",
+        "elevation_m": 0
+      },
+      "terrain": "Alluvial plains of Tigris-Euphrates (Mesopotamia); mountains in northeast (Kurdistan); desert west/south",
+      "land_use": {
+        "agricultural_pct": 18.1,
+        "arable_pct": 8.4,
+        "forest_pct": 1.9,
+        "other_pct": 80.0
+      },
+      "major_rivers": [
+        "Tigris",
+        "Euphrates",
+        "Shatt al-Arab"
+      ],
+      "major_lakes": [
+        "Lake Tharthar",
+        "Lake Habbaniyah"
+      ],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": false,
+      "notes": "Cradle of civilisation (Mesopotamia); Tigris-Euphrates river system; Marshlands of southern Iraq (UNESCO — partly restored after Saddam's draining); Kurdistan Region semi-autonomous."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$264 billion",
+      "gdp_ppp_usd": "$512 billion",
+      "gdp_per_capita_nominal_usd": 6000,
+      "gdp_per_capita_ppp_usd": 11600,
+      "gdp_growth_rate_pct": -2.9,
+      "inflation_rate_pct": 5.0,
+      "unemployment_rate_pct": 15.5,
+      "youth_unemployment_rate_pct": 36.0,
+      "poverty_rate_pct": 23.0,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 29.5,
+      "income_classification": "Upper-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 3,
+        "industry_pct_gdp": 62,
+        "services_pct_gdp": 35
+      },
+      "labor_force": 10000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 20,
+        "industry_pct": 18,
+        "services_pct": 62
+      },
+      "fdi_inflow_usd": "$8 billion",
+      "fdi_outflow_usd": "$300 million",
+      "foreign_exchange_reserves_usd": "$100 billion",
+      "ease_of_doing_business_rank": 172,
+      "economic_freedom_index_score": 42.0,
+      "credit_rating": {
+        "moodys": "Caa1",
+        "sp": "B-",
+        "fitch": "B-"
+      },
+      "notes": "Oil-dependent economy (95% government revenue, 99% exports); 5th largest oil reserves globally; post-ISIS reconstruction ongoing; Kurdistan Region separate economy; massive public sector employment; Development Road project (Grand Faw Port)."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 4.6,
+      "health_expenditure_per_capita_usd": 240,
+      "physicians_per_1k": 0.8,
+      "nurses_midwives_per_1k": 1.8,
+      "hospital_beds_per_1k": 1.3,
+      "maternal_mortality_per_100k": 76,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 31,
+      "access_to_clean_water_pct": 86,
+      "access_to_sanitation_pct": 88,
+      "vaccination_coverage_pct": 70,
+      "stunting_under5_pct": 11,
+      "obesity_rate_pct": 30.4,
+      "universal_health_coverage_index": 48,
+      "leading_causes_of_death": [
+        "Cardiovascular diseases",
+        "Cancer",
+        "Road injuries",
+        "Conflict-related"
+      ],
+      "notes": "Healthcare devastated by sanctions (1990s), 2003 invasion, and ISIS conflict; massive brain drain of doctors; sectarian-divided health system; Kurdistan Region better healthcare; depleted uranium health effects debated."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 45.0,
+      "food_security_index_rank": 90,
+      "arable_land_pct": 8.4,
+      "agricultural_land_pct": 18.1,
+      "irrigated_land_pct": 65,
+      "major_crops": [
+        "wheat",
+        "barley",
+        "rice",
+        "dates",
+        "vegetables"
+      ],
+      "major_livestock": [
+        "sheep",
+        "goats",
+        "cattle",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 60,
+      "cereal_yield_kg_per_hectare": 2200,
+      "agricultural_employment_pct": 20,
+      "notes": "Once 'breadbasket of the Middle East'; dates #1 export crop (7th global producer); salinization and desertification devastating agricultural land; Turkish/Iranian upstream dams reducing Tigris-Euphrates water flow; food import dependent.",
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "energy": {
+      "primary_energy_sources": [
+        "oil",
+        "natural gas"
+      ],
+      "electricity_generation_gwh": 90000,
+      "electricity_consumption_per_capita_kwh": 1700,
+      "renewable_share_pct": 2,
+      "fossil_fuel_share_pct": 98,
+      "nuclear_share_pct": 0,
+      "oil_production_bpd": 4400000,
+      "oil_consumption_bpd": 800000,
+      "natural_gas_production_bcm": 10,
+      "proved_oil_reserves_bbl": "145 billion",
+      "proved_gas_reserves_tcm": "3.7",
+      "energy_imports_pct": 0,
+      "electrification_rate_pct": 100,
+      "notes": "OPEC 2nd largest producer; flares enormous gas volumes (world's 2nd highest); 12-16 hours daily power cuts despite oil wealth; Iran gas imports for electricity; TotalEnergies $27B gas capture mega-project; Kurdistan Region separate oil exports.",
+      "energy_mix": {
+        "fossil_fuels_pct": 0,
+        "hydroelectric_pct": 0,
+        "solar_pct": 0,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 0,
+      "electricity_production_gwh": 0,
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "transport": {
+      "airports": 104,
+      "airports_paved": 75,
+      "railways_km": 2272,
+      "roadways_km": 59623,
+      "paved_roads_pct": 74,
+      "waterways_km": 5279,
+      "major_ports": [
+        "Umm Qasr",
+        "Basra",
+        "Grand Faw (under construction)"
+      ],
+      "national_airline": "Iraqi Airways",
+      "vehicle_ownership_per_1k": 150,
+      "notes": "Infrastructure decimated by wars; Development Road mega-project (Grand Faw Port to Turkey rail/road corridor); Basra-Baghdad highway; Baghdad International Airport; waterways important for oil export; bridge reconstruction ongoing.",
+      "major_airports_international": [],
+      "major_airports_domestic": [],
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
+    },
+    "tourism": {
+      "international_arrivals": 3200000,
+      "tourism_revenue_usd": "$5.5 billion",
+      "tourism_pct_gdp": 2.1,
+      "major_attractions": [
+        "Babylon (UNESCO)",
+        "Erbil Citadel (UNESCO)",
+        "Najaf/Karbala holy cities",
+        "Iraqi Kurdistan mountains",
+        "Marshes of Southern Iraq (UNESCO)"
+      ],
+      "unesco_world_heritage_sites": 6,
+      "notes": "Shia pilgrimage tourism dominant (Karbala ~20M visitors for Arba'een — world's largest annual gathering); Kurdistan Region adventure tourism; Babylon restored (UNESCO 2019); ancient Mesopotamian sites; security concerns limit general tourism.",
+      "annual_visitors": 0,
+      "tourism_employment_pct": 0,
+      "unesco_sites_list": [],
+      "visa_free_access_countries": 0,
+      "henley_passport_rank": 0
+    },
+    "legal_system": {
+      "type": "Mixed legal system",
+      "supreme_court": "Federal Supreme Court",
+      "international_court_jurisdiction": "ICJ not accepted",
+      "suffrage": "18 years, universal",
+      "legal_traditions": [
+        "Civil law",
+        "Islamic law (source of legislation per constitution)",
+        "tribal customary law"
+      ],
+      "death_penalty": true,
+      "notes": "2005 constitution; federal system with Kurdistan Region autonomy; Article 2 (Islam a source of legislation); sectarian power-sharing (muhasasa); judiciary political interference; honour killings under-prosecuted.",
+      "legal_tradition": "",
+      "constitution_year": 0,
+      "sharia_applicability": "",
+      "customary_law_role": "",
+      "icc_membership": "",
+      "judicial_independence_score": 0,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_score": 29,
+      "freedom_house_status": "Not Free",
+      "gender_inequality_index": 0.54,
+      "gender_inequality_rank": 134,
+      "women_in_parliament_pct": 29,
+      "female_labor_force_participation_pct": 12,
+      "maternal_leave_weeks": 9,
+      "child_marriage_pct": 28,
+      "lgbtq_legal_status": "Illegal (2024 amendment: up to 15 years imprisonment)",
+      "press_freedom_rank": 169,
+      "notes": "Post-conflict human rights challenges; 2024 anti-LGBTQ+ law (15-year sentences); honour killings; press freedom declining; Tishreen (October 2019) protest movement violently suppressed (600+ killed); Iran-backed militia influence.",
+      "gender_gap_index_score": 0,
+      "women_labor_force_participation_pct": 0,
+      "maternal_mortality_per_100k": 0,
+      "fgm_prevalence_pct": 0,
+      "death_penalty_status": "",
+      "human_trafficking_tier": "",
+      "child_labor_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.967,
+      "global_peace_index_rank": 153,
+      "homicide_rate_per_100k": 9.0,
+      "terrorism_index_score": 6.7,
+      "terrorism_index_rank": 11,
+      "armed_conflict": true,
+      "internally_displaced_persons": 1200000,
+      "landmine_contamination": true,
+      "notes": "Post-ISIS recovery (Mosul liberated 2017); Iran-backed PMF/Hashd dominance; US military presence (~2,500); Turkish operations in Kurdistan; ISIS sleeper cells; massive UXO/IED contamination; sectarian tensions persist.",
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": ""
+    },
+    "cultural_heritage": {
+      "unesco_intangible_heritage": [
+        "Iraqi Maqam",
+        "Khidr Elias ceremony"
+      ],
+      "notable_cultural_exports": [
+        "Mesopotamian heritage (Sumerian, Babylonian, Assyrian)",
+        "Oud music",
+        "Arabic calligraphy",
+        "Dates"
+      ],
+      "major_museums": [
+        "Iraq Museum (Baghdad)",
+        "Erbil Civilisation Museum",
+        "Basra Museum"
+      ],
+      "world_heritage_sites_list": [
+        "Hatra",
+        "Ashur",
+        "Samarra Archaeological City",
+        "Babylon",
+        "Erbil Citadel",
+        "The Ahwar (Marshlands)"
+      ],
+      "culinary_traditions": [
+        "Masgouf (grilled fish)",
+        "Dolma",
+        "Biryani",
+        "Kleicha (date cookies)",
+        "Kubba"
+      ],
+      "notes": "Mesopotamia: 'cradle of civilisation'; writing invented here (cuneiform, ~3400 BCE); Code of Hammurabi; Hanging Gardens of Babylon (one of Seven Wonders); Abbasid Caliphate (Baghdad golden age); ISIS destroyed Nimrud, Palmyra damaged.",
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "",
+      "national_sport": "",
+      "major_festivals": [],
+      "cuisine_highlights": [],
+      "music_art_traditions": [],
+      "film_industry": "",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [],
+      "world_heritage_sites": [],
+      "media_landscape": ""
+    },
+    "comparative_rankings": {
+      "human_development_index_rank": 121,
+      "global_competitiveness_rank": 130,
+      "happiness_index_rank": 106,
+      "environmental_performance_rank": 164,
+      "gender_gap_rank": 152,
+      "soft_power_rank": 0,
+      "notes": "Oil-rich but conflict-devastated; enormous reconstruction needs; Kurdistan Region better indicators than federal Iraq; ancient civilisational heritage underexplored.",
+      "_note": "Country position relative to continent and global. 'rank' = 1 is best/largest.",
+      "population": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "area": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_nominal": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_per_capita": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "hdi": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "life_expectancy": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "internet_penetration": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "press_freedom": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
     }
   },
   "leadership": {
@@ -210,7 +723,8 @@
       "name": "Mohammed Shia' Al Sudani",
       "title": "Prime Minister",
       "since": "2022-10-27",
-      "notes": "Coordination Framework (Shia coalition); backed by pro-Iran factions; relatively technocratic; infrastructure focus"
+      "notes": "Coordination Framework (Shia coalition); backed by pro-Iran factions; relatively technocratic; infrastructure focus",
+      "party": ""
     },
     "president": {
       "name": "Abdul Latif Rashid",
@@ -253,7 +767,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.882455Z",
-    "notes": "Comprehensive index for Uzbekistan covering Sogdian merchants, Achaemenid Transoxiana, Alexander/Hellenistic Bactria, Kushan Empire, Turkic khaganates, Samanid dynasty (Bukhara/Samarkand, Islamic Golden Age), Mongol conquest, Timurid Empire (Tamerlane 1370-1405, Samarkand capital), Shaybanid/Bukhara Khanate, Kokand Khanate, Russian conquest 1865-1876, Soviet Uzbek SSR (cotton/'White Gold', Aral Sea disaster), independence 1991, Karimov's authoritarian rule, Andijan massacre 2005, and Mirziyoyev's reforms."
+    "notes": "Comprehensive index for Uzbekistan covering Sogdian merchants, Achaemenid Transoxiana, Alexander/Hellenistic Bactria, Kushan Empire, Turkic khaganates, Samanid dynasty (Bukhara/Samarkand, Islamic Golden Age), Mongol conquest, Timurid Empire (Tamerlane 1370-1405, Samarkand capital), Shaybanid/Bukhara Khanate, Kokand Khanate, Russian conquest 1865-1876, Soviet Uzbek SSR (cotton/'White Gold', Aral Sea disaster), independence 1991, Karimov's authoritarian rule, Andijan massacre 2005, and Mirziyoyev's reforms.",
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Tashkent",
@@ -25,8 +30,10 @@
       "Uzbek"
     ],
     "other_languages": [
-      "Russian (widely spoken)",
-      "Tajik"
+      "Russian",
+      "Tajik",
+      "Kazakh",
+      "Karakalpak"
     ],
     "government_type": "Unitary presidential republic",
     "currency": "Uzbekistani so'm (UZS)",
@@ -54,7 +61,9 @@
       "Islam_Sunni_Hanafi": "88%",
       "Christianity_Russian_Orthodox": "9%",
       "Other": "3%",
-      "note": "Sunni Hanafi Muslim majority; Bukhara/Samarkand historic Islamic centers; Soviet atheism legacy; secular government (Karimov suppressed Islamists); Fergana Valley more conservative; small Christian minority (Russians, Koreans)"
+      "note": "Sunni Hanafi Muslim majority; Bukhara/Samarkand historic Islamic centers; Soviet atheism legacy; secular government (Karimov suppressed Islamists); Fergana Valley more conservative; small Christian minority (Russians, Koreans)",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -99,100 +108,683 @@
     "time_zone": "UZT (UTC+5)",
     "independence": {
       "date": "1991-09-01",
-      "from": "Soviet Union"
+      "from": "Soviet Union",
+      "notes": ""
     },
     "continent": "Asia",
     "notes_unique": "Silk Road heart (Samarkand, Bukhara UNESCO); Timurid architecture (Registan, Shah-i-Zinda); doubly landlocked (one of two globally with Liechtenstein); Aral Sea disaster (Soviet cotton irrigation, 90% dried, ecological catastrophe); cotton 'White Gold' monoculture; Andijan massacre 2005 (Karimov's troops killed hundreds); Karimov dictatorship (1991-2016, boiled dissidents); Mirziyoyev reforms (opened economy/borders); Fergana Valley (fertile, densely populated, Islamist tensions)",
     "demographics": {
-      "median_age": 0,
-      "urbanization_pct": 0,
-      "fertility_rate": 0,
-      "life_expectancy": 0,
-      "infant_mortality_per_1k": 0,
-      "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "median_age": 28.6,
+      "population_growth_rate_pct": 1.5,
+      "urbanization_pct": 50.5,
+      "urban_population_growth_rate_pct": 1.3,
+      "fertility_rate": 2.9,
+      "life_expectancy": 73.8,
+      "life_expectancy_male": 71.0,
+      "life_expectancy_female": 76.8,
+      "infant_mortality_per_1k": 13.5,
+      "under5_mortality_per_1k": 15.0,
+      "literacy_rate_pct": 100.0,
+      "net_migration_rate": -2.5,
+      "sex_ratio": 0.99,
+      "dependency_ratio": 48.0,
+      "population_density_per_km2": 82,
+      "age_structure": {
+        "0_14_pct": 28.0,
+        "15_24_pct": 18.0,
+        "25_54_pct": 40.0,
+        "55_64_pct": 7.5,
+        "65_plus_pct": 6.5
+      }
     },
     "natural_resources": {
-      "primary": [],
-      "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "primary": [
+        "gold",
+        "copper",
+        "uranium",
+        "natural gas",
+        "petroleum",
+        "coal",
+        "silver",
+        "tungsten",
+        "molybdenum",
+        "cotton"
+      ],
+      "resource_dependency_pct_gdp": 20,
+      "resource_curse_risk": "Medium",
+      "notes": "World's 9th largest gold producer (Muruntau mine, world's largest open-pit gold mine); 7th largest uranium producer; significant natural gas reserves; cotton ('white gold') historically dominant."
     },
     "military": {
-      "budget_usd": "",
-      "pct_of_gdp": 0,
-      "active_personnel": 0,
-      "reserve_personnel": 0,
+      "budget_usd": "$1.4 billion",
+      "pct_of_gdp": 1.5,
+      "active_personnel": 48000,
+      "reserve_personnel": 20000,
+      "paramilitary_personnel": 20000,
       "nuclear_status": "Non-nuclear",
-      "alliances": [],
-      "notes": ""
+      "alliances": [
+        "SCO (observer)",
+        "CSTO (withdrew 2012)"
+      ],
+      "conscription": true,
+      "global_firepower_rank": 62,
+      "notes": "Largest military in Central Asia; withdrew from CSTO 2012; balances Russia/China/Western relations; no foreign bases on territory; border security challenge (Fergana Valley); UN peacekeeping limited."
     },
     "trade": {
-      "top_exports": [],
-      "top_imports": [],
-      "major_partners": [],
-      "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "total_exports_usd": "$24 billion",
+      "total_imports_usd": "$35 billion",
+      "top_exports": [
+        "gold",
+        "natural gas",
+        "cotton/textiles",
+        "copper",
+        "uranium",
+        "foodstuffs",
+        "automobiles (Chevrolet)"
+      ],
+      "top_imports": [
+        "machinery",
+        "chemicals",
+        "foodstuffs",
+        "metals",
+        "vehicles",
+        "pharmaceuticals"
+      ],
+      "major_partners": [
+        "China",
+        "Russia",
+        "Kazakhstan",
+        "Turkey",
+        "South Korea"
+      ],
+      "top_export_destinations": [
+        "China",
+        "Russia",
+        "Turkey",
+        "Kazakhstan",
+        "Afghanistan"
+      ],
+      "top_import_origins": [
+        "China",
+        "Russia",
+        "Kazakhstan",
+        "South Korea",
+        "Turkey"
+      ],
+      "trade_balance": "-$11 billion",
+      "trade_as_pct_gdp": 66,
+      "current_account_balance_usd": "-$5 billion",
+      "remittances_pct_gdp": 12.0,
+      "trade_agreements": [
+        "CIS FTA",
+        "SCO framework",
+        "GSP+ (EU)",
+        "Bilateral with Kazakhstan, Kyrgyzstan"
+      ],
+      "special_economic_zones": [
+        "Navoi Free Industrial Zone",
+        "Angren SEZ",
+        "Jizzakh SEZ",
+        "Urgut SEZ",
+        "Kokand SEZ"
+      ]
     },
     "infrastructure": {
-      "internet_penetration_pct": 0,
-      "electricity_access_pct": 0,
-      "mobile_subscriptions_per_100": 0,
-      "railway_km": 0,
-      "paved_roads_pct": 0
+      "internet_penetration_pct": 76.0,
+      "broadband_subscriptions_per_100": 17,
+      "electricity_access_pct": 100,
+      "mobile_subscriptions_per_100": 100,
+      "4g_coverage_pct": 80,
+      "5g_availability": false,
+      "railway_km": 4642,
+      "road_network_km": 84496,
+      "paved_roads_pct": 87,
+      "waterways_km": 1100,
+      "submarine_cables": [],
+      "notes": "Soviet-era rail/road legacy being modernized; Angren-Pap railway tunnel (longest in CIS, 19km); China-Kyrgyzstan-Uzbekistan railway planned; landlocked logistics challenge; Navoi cargo hub."
     },
     "international_memberships": [],
     "governance_indices": {
       "corruption_perception_index": {
-        "score": 0,
-        "rank": 0,
-        "year": 0
+        "score": 33,
+        "rank": 121,
+        "year": 2023
       },
       "press_freedom_index": {
-        "rank": 0,
-        "year": 0
+        "rank": 137,
+        "year": 2023
       },
       "democracy_index": {
-        "score": 0,
-        "category": "",
-        "year": 0
+        "score": 2.12,
+        "category": "Authoritarian",
+        "year": 2023
       },
       "fragile_states_index": {
-        "score": 0,
-        "year": 0
+        "score": 67.5,
+        "year": 2023
+      },
+      "rule_of_law_index": {
+        "score": 0.4,
+        "rank": 88,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.35,
+        "percentile": 30,
+        "year": 2022
+      },
+      "regulatory_quality_index": {
+        "score": -0.4,
+        "percentile": 29,
+        "year": 2022
+      },
+      "political_stability_index": {
+        "score": -0.35,
+        "percentile": 25,
+        "year": 2022
       }
     },
     "climate_environment": {
-      "climate_zones": [],
-      "co2_emissions_mt": 0,
-      "renewable_energy_pct": 0,
-      "natural_hazards": [],
-      "protected_areas_pct": 0
+      "climate_zones": [
+        "Continental arid",
+        "Semi-arid steppe",
+        "Mountain (east)"
+      ],
+      "average_temperature_c": 14.0,
+      "average_rainfall_mm": 200,
+      "co2_emissions_mt": 85,
+      "co2_per_capita_t": 2.4,
+      "renewable_energy_pct": 5,
+      "natural_hazards": [
+        "Earthquakes",
+        "Droughts",
+        "Dust storms",
+        "Floods",
+        "Landslides"
+      ],
+      "protected_areas_pct": 5.0,
+      "deforestation_rate_pct": 0.1,
+      "water_stress_level": "Extremely High",
+      "environmental_performance_index": {
+        "score": 32.0,
+        "rank": 137,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 15000,
+        "endemic_species": 400,
+        "threatened_species": 100
+      },
+      "notes": "Aral Sea catastrophe (one of worst environmental disasters); water scarcity severe; cotton irrigation depleted Amu/Syr Darya; desertification advancing; Aralkum desert formed; some Aral Sea recovery (North Aral dammed by Kazakhstan)."
     },
     "debt_aid": {
-      "national_debt_pct_gdp": 0,
-      "foreign_aid_received_usd": "",
-      "notes": ""
+      "national_debt_pct_gdp": 36.0,
+      "external_debt_usd": "$38 billion",
+      "debt_service_pct_revenue": 10,
+      "foreign_aid_received_usd": "$1.5 billion",
+      "foreign_aid_given_usd": "$50 million",
+      "top_donors": [
+        "ADB",
+        "World Bank",
+        "EBRD",
+        "IsDB",
+        "Japan",
+        "EU"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "",
+      "notes": "Debt rising as reforms financed by borrowing; IDA-eligible; strong multilateral engagement; $4B in sovereign bonds issued since 2019; gold reserves provide buffer."
     },
     "education": {
-      "primary_enrollment_pct": 0,
-      "secondary_enrollment_pct": 0,
-      "tertiary_enrollment_pct": 0,
+      "education_expenditure_pct_gdp": 5.3,
+      "primary_enrollment_pct": 99,
+      "secondary_enrollment_pct": 92,
+      "tertiary_enrollment_pct": 15,
+      "primary_completion_rate_pct": 97,
+      "gender_parity_index": 0.97,
+      "mean_years_of_schooling": 11.9,
+      "expected_years_of_schooling": 12.2,
       "pisa_participation": false,
-      "top_universities": [],
-      "notes": ""
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 22,
+      "out_of_school_children": 100000,
+      "top_universities": [
+        "National University of Uzbekistan",
+        "Tashkent State Technical University",
+        "Webster University Tashkent",
+        "Turin Polytechnic Tashkent",
+        "Inha University Tashkent"
+      ],
+      "academic_freedom_index": 0.15,
+      "notes": "100% literacy; low tertiary enrollment but rapidly expanding (from 9% to 15% since 2017); 30+ new universities opened; branch campuses (Westminster, Turin Polytechnic, Inha, Webster); Soviet education legacy."
     },
     "diaspora_migration": {
-      "diaspora_population": "",
+      "diaspora_population": "~3 million",
+      "diaspora_top_destinations": [
+        "Russia",
+        "Kazakhstan",
+        "Turkey",
+        "South Korea",
+        "USA",
+        "UAE"
+      ],
       "refugees_hosted": 0,
-      "refugees_produced": 0,
-      "remittances_usd": "",
-      "notes": ""
+      "refugees_produced": 2000,
+      "asylum_seekers": 500,
+      "stateless_persons": 80000,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Labor export encouraged (Russia, Korea, Turkey); returning diaspora programs",
+      "remittances_usd": "$16.9 billion",
+      "remittances_pct_gdp": 12.0,
+      "net_migration_rate_per_1k": -2.5,
+      "notes": "Remittances from Russia critical (~$12B from Russia alone); vulnerable to Russian economic shocks/sanctions; South Korea EPS program; labor migration to Turkey growing."
     },
     "digital_economy": {
-      "e_government_index": 0,
-      "mobile_money_adoption": "",
-      "tech_hubs": [],
-      "notes": ""
+      "e_government_index": 0.63,
+      "e_participation_index": 0.55,
+      "ict_development_index": 4.5,
+      "mobile_money_adoption": "Growing",
+      "mobile_money_accounts": 5000000,
+      "digital_payments_pct_adults": 25,
+      "fintech_companies": 30,
+      "tech_hubs": [
+        "Tashkent (IT Park)"
+      ],
+      "startup_ecosystem_value_usd": "$200 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 60.0,
+      "innovation_index_score": 26.0,
+      "innovation_index_rank": 82,
+      "ai_readiness_index": 25.0,
+      "notes": "IT Park Tashkent growing (tax-free for IT); 'Digital Uzbekistan 2030' strategy; Payme/Click mobile payments popular; 2M+ freelancers/IT workers; internet was heavily censored, now somewhat open."
+    },
+    "capital_coordinates": {
+      "lat": 41.2995,
+      "lon": 69.2401
+    },
+    "other_major_cities": [
+      "Samarkand",
+      "Namangan",
+      "Andijan",
+      "Bukhara",
+      "Fergana",
+      "Nukus"
+    ],
+    "national_motto": "",
+    "national_anthem": "O'zbekiston Respublikasining Davlat Madhiyasi (National Anthem of Uzbekistan)",
+    "currency_code": "UZS",
+    "internet_tld": ".uz",
+    "utc_offset": "UTC+5",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 41.3775,
+        "lon": 64.5853
+      },
+      "bounding_box": {
+        "north": 45.59,
+        "south": 37.17,
+        "east": 73.14,
+        "west": 55.99
+      },
+      "land_area_km2": 425400,
+      "water_area_km2": 22000,
+      "coastline_km": 0,
+      "borders": [
+        "Kazakhstan",
+        "Kyrgyzstan",
+        "Tajikistan",
+        "Afghanistan",
+        "Turkmenistan"
+      ],
+      "border_lengths_km": {
+        "Kazakhstan": 2330,
+        "Kyrgyzstan": 1314,
+        "Tajikistan": 1312,
+        "Afghanistan": 144,
+        "Turkmenistan": 1793
+      },
+      "highest_point": {
+        "name": "Adelunga Toghi (Hazrat Sultan)",
+        "elevation_m": 4301
+      },
+      "lowest_point": {
+        "name": "Sariqamish Kuli",
+        "elevation_m": -12
+      },
+      "terrain": "Fertile Fergana Valley east; Kyzylkum Desert central/west; steppe north; mountains far east/southeast",
+      "land_use": {
+        "agricultural_pct": 62.6,
+        "arable_pct": 10.1,
+        "forest_pct": 7.7,
+        "other_pct": 29.7
+      },
+      "major_rivers": [
+        "Amu Darya (Oxus)",
+        "Syr Darya (Jaxartes)",
+        "Zarafshon"
+      ],
+      "major_lakes": [
+        "Aral Sea (remnant)",
+        "Aydarkul Lake",
+        "Sariqamish Lake"
+      ],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": true,
+      "notes": "Doubly landlocked (surrounded only by landlocked countries); Fergana Valley densely populated; Aral Sea environmental disaster; Silk Road crossroads; 5 neighbors."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$90 billion",
+      "gdp_ppp_usd": "$325 billion",
+      "gdp_per_capita_nominal_usd": 2530,
+      "gdp_per_capita_ppp_usd": 9100,
+      "gdp_growth_rate_pct": 5.5,
+      "inflation_rate_pct": 9.0,
+      "unemployment_rate_pct": 5.5,
+      "youth_unemployment_rate_pct": 15.0,
+      "poverty_rate_pct": 11.0,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 35.3,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 25,
+        "industry_pct_gdp": 30,
+        "services_pct_gdp": 45
+      },
+      "labor_force": 19000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 27,
+        "industry_pct": 22,
+        "services_pct": 51
+      },
+      "fdi_inflow_usd": "$2.5 billion",
+      "fdi_outflow_usd": "$50 million",
+      "foreign_exchange_reserves_usd": "$35 billion",
+      "ease_of_doing_business_rank": 69,
+      "economic_freedom_index_score": 58.3,
+      "credit_rating": {
+        "moodys": "Ba3",
+        "sp": "BB-",
+        "fitch": "BB-"
+      },
+      "notes": "Major reform program since 2016 (President Mirziyoyev); currency liberalization; opening to foreign investment; Central Asia's most populous country; cotton sector transformation (forced labor ended); gold/copper mining expansion."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 5.3,
+      "health_expenditure_per_capita_usd": 135,
+      "physicians_per_1k": 2.4,
+      "nurses_midwives_per_1k": 5.5,
+      "hospital_beds_per_1k": 4.0,
+      "maternal_mortality_per_100k": 29,
+      "hiv_prevalence_pct": 0.2,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 65,
+      "access_to_clean_water_pct": 91,
+      "access_to_sanitation_pct": 100,
+      "vaccination_coverage_pct": 99,
+      "stunting_under5_pct": 9,
+      "obesity_rate_pct": 16.6,
+      "universal_health_coverage_index": 63,
+      "leading_causes_of_death": [
+        "Cardiovascular diseases",
+        "Cancer",
+        "Respiratory diseases",
+        "Diabetes"
+      ],
+      "notes": "Soviet-era healthcare infrastructure being reformed; high physician numbers but quality uneven; healthcare privatization underway; Aral Sea region health crisis (respiratory disease, anemia)."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 48.0,
+      "food_security_index_rank": 72,
+      "arable_land_pct": 10.1,
+      "agricultural_land_pct": 62.6,
+      "irrigated_land_pct": 80,
+      "major_crops": [
+        "cotton",
+        "wheat",
+        "rice",
+        "fruits (pomegranates, melons)",
+        "vegetables",
+        "grapes",
+        "silk"
+      ],
+      "major_livestock": [
+        "cattle",
+        "sheep",
+        "goats",
+        "poultry",
+        "horses"
+      ],
+      "food_import_dependency_pct": 25,
+      "cereal_yield_kg_per_hectare": 4800,
+      "agricultural_employment_pct": 27,
+      "prevalence_of_undernourishment_pct": 2.6,
+      "notes": "Ended forced labor in cotton harvest (ILO confirmed 2021); diversifying from cotton monoculture; world's 6th largest cotton producer; Fergana Valley fertile; irrigation-dependent agriculture; water scarcity challenge."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 95,
+        "hydroelectric_pct": 4,
+        "solar_pct": 0.5,
+        "wind_pct": 0.5,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 15500,
+      "electricity_production_gwh": 68000,
+      "electricity_consumption_per_capita_kwh": 1850,
+      "energy_imports_pct": 5,
+      "oil_production_bpd": 62000,
+      "oil_consumption_bpd": 80000,
+      "natural_gas_production_bcm": 48,
+      "energy_access_rural_pct": 100,
+      "energy_access_urban_pct": 100,
+      "notes": "Major natural gas producer/exporter; gas-fired power dominant; nuclear power plant planned (with Russia); solar tenders awarded (Samarkand/Navoi); energy sector reform underway; winter energy shortages."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Islam Karimov Tashkent International Airport",
+        "Samarkand Airport",
+        "Bukhara Airport",
+        "Navoi Airport"
+      ],
+      "major_airports_domestic": [
+        "Fergana Airport",
+        "Urgench Airport",
+        "Nukus Airport",
+        "Termez Airport"
+      ],
+      "national_airline": "Uzbekistan Airways",
+      "major_seaports": [],
+      "major_inland_ports": [
+        "Termez (Amu Darya)"
+      ],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 80,
+      "road_fatalities_per_100k": 11.0,
+      "notes": "Landlocked; Navoi Airport international cargo hub (Korean Air hub); high-speed rail Tashkent-Samarkand (Afrosiyob train); expansion of direct flights to Europe/Asia."
+    },
+    "tourism": {
+      "annual_visitors": 6600000,
+      "tourism_revenue_usd": "$2.3 billion",
+      "tourism_pct_gdp": 2.6,
+      "tourism_employment_pct": 5,
+      "unesco_world_heritage_sites": 5,
+      "unesco_sites_list": [
+        "Itchan Kala (Khiva)",
+        "Historic Centre of Bukhara",
+        "Historic Centre of Shakhrisyabz",
+        "Samarkand - Crossroad of Cultures",
+        "Western Tien-Shan"
+      ],
+      "major_attractions": [
+        "Registan Square (Samarkand)",
+        "Bukhara Old City",
+        "Khiva (Itchan Kala)",
+        "Aral Sea (Moynaq ship graveyard)",
+        "Fergana Valley",
+        "Tashkent (Amir Temur Square, metro)"
+      ],
+      "visa_free_access_countries": 56,
+      "henley_passport_rank": 86,
+      "notes": "Silk Road tourism booming (6.6M visitors in 2023); visa-free for 90+ countries; Samarkand/Bukhara/Khiva iconic; Tashkent metro stations stunning; tourism growth fastest in Central Asia."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 11,
+      "gender_inequality_index": 0.272,
+      "gender_inequality_rank": 57,
+      "gender_gap_index_score": 0.69,
+      "women_in_parliament_pct": 32,
+      "women_labor_force_participation_pct": 53,
+      "maternal_mortality_per_100k": 29,
+      "child_marriage_pct": 7,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Illegal (up to 3 years imprisonment)",
+      "death_penalty_status": "Abolished (2008)",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 5,
+      "notes": "Reforms under Mirziyoyev (ended forced cotton labor, freed political prisoners); restrictions on civil society remain; no independent media; surveillance state; Andijan massacre (2005) unresolved."
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.109,
+      "global_peace_index_rank": 97,
+      "terrorism_index_score": 1.5,
+      "terrorism_index_rank": 55,
+      "homicide_rate_per_100k": 1.0,
+      "active_conflicts": [],
+      "border_disputes": [
+        "Fergana Valley border complexities (enclaves with Kyrgyzstan/Tajikistan - mostly resolved)",
+        "Amu Darya water disputes with Turkmenistan"
+      ],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$150 million",
+      "internally_displaced_persons": 0,
+      "notes": "Stable but authoritarian; Fergana Valley border resolved with Kyrgyzstan (2022-2023); water-sharing tensions with Tajikistan (Rogun Dam); counter-terrorism cooperation; Andijan 2005 shaped security state."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (Soviet-influenced)",
+      "constitution_year": 1992,
+      "sharia_applicability": "None officially",
+      "customary_law_role": "Mahalla (community) governance significant",
+      "icc_membership": "Non-member",
+      "judicial_independence_score": 0.3,
+      "contract_enforcement_days": 225,
+      "property_rights_index": 35,
+      "notes": "2023 constitutional referendum (extended presidential terms); Soviet-era legal codes being reformed; mahalla neighborhood councils both governance and social control; commercial courts modernized."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "Humo (phoenix bird)",
+        "Crescent and stars"
+      ],
+      "national_animal": "Markhor (wild goat)",
+      "national_flower": "Cotton flower (historical)",
+      "national_dish": "Plov (pilaf)",
+      "national_sport": "Kurash (wrestling)",
+      "major_festivals": [
+        "Navro'z (Spring New Year, Mar 21)",
+        "Independence Day (Sep 1)",
+        "Mustaqillik Day",
+        "Eid al-Fitr",
+        "Eid al-Adha"
+      ],
+      "cuisine_highlights": [
+        "Plov (center-cut pilaf)",
+        "Samsa (baked pastries)",
+        "Lagman (noodle soup)",
+        "Shashlik",
+        "Manti (dumplings)",
+        "Non (bread)",
+        "Green tea"
+      ],
+      "music_art_traditions": [
+        "Shashmaqam (classical music, UNESCO ICH)",
+        "Katta Ashula (great song)",
+        "Miniature painting (Bukhara/Samarkand school)",
+        "Blue ceramics (Rishtan pottery)",
+        "Suzani embroidery",
+        "Ikat (atlas fabric)"
+      ],
+      "film_industry": "O'zbekfilm studio (Soviet era); growing contemporary scene",
+      "intangible_heritage_items": [
+        "Shashmaqam music (UNESCO ICH)",
+        "Katta Ashula singing (UNESCO ICH)",
+        "Askiya (wit art, UNESCO ICH)",
+        "Atlas/Adras textile making",
+        "Navro'z traditions"
+      ],
+      "notable_historical_figures": [
+        "Amir Timur (Tamerlane)",
+        "Ulugh Beg (astronomer)",
+        "Al-Khwarizmi (mathematician - algorithm/algebra)",
+        "Ibn Sina (Avicenna)",
+        "Al-Biruni",
+        "Babur (Mughal founder)"
+      ],
+      "world_heritage_sites": [
+        "Itchan Kala (Khiva)",
+        "Bukhara",
+        "Shakhrisyabz",
+        "Samarkand",
+        "Western Tien-Shan"
+      ],
+      "media_landscape": "State-controlled; some social media openness post-2016; Telegram widely used; no independent press",
+      "notes": "Samarkand Registan among world's most iconic monuments; Silk Road heritage unparalleled; Al-Khwarizmi gave us 'algorithm'; Avicenna canon of medicine; Ulugh Beg observatory; plov culture central; Tamerlane's empire from Samarkand."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 1,
+        "global_rank": 42
+      },
+      "area": {
+        "continent_rank": 3,
+        "global_rank": 56
+      },
+      "gdp_nominal": {
+        "continent_rank": 1,
+        "global_rank": 60
+      },
+      "gdp_per_capita": {
+        "continent_rank": 4,
+        "global_rank": 130
+      },
+      "hdi": {
+        "continent_rank": 3,
+        "global_rank": 101
+      },
+      "life_expectancy": {
+        "continent_rank": 2,
+        "global_rank": 90
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 1,
+        "global_rank": 69
+      },
+      "internet_penetration": {
+        "continent_rank": 1,
+        "global_rank": 48
+      },
+      "press_freedom": {
+        "continent_rank": 4,
+        "global_rank": 137
+      },
+      "global_peace_index": {
+        "continent_rank": 3,
+        "global_rank": 97
+      },
+      "innovation_index": {
+        "continent_rank": 2,
+        "global_rank": 82
+      },
+      "notes": "Rankings within Central Asia (5 countries). Most populous & largest economy in Central Asia; reform momentum."
     }
   },
   "leadership": {
@@ -200,7 +792,8 @@
       "name": "Shavkat Mirziyoyev",
       "title": "President",
       "since": "2016-12-14",
-      "notes": "Former PM under Karimov; reformist (compared to Karimov, low bar); opened borders; economic liberalization; released some political prisoners; reduced forced labor (cotton); still authoritarian but pragmatic; 2023 constitutional changes (extended terms to 7 years, reset count)"
+      "notes": "Former PM under Karimov; reformist (compared to Karimov, low bar); opened borders; economic liberalization; released some political prisoners; reduced forced labor (cotton); still authoritarian but pragmatic; 2023 constitutional changes (extended terms to 7 years, reset count)",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -212,7 +805,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

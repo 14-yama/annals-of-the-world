@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.838814Z",
-    "notes": "Comprehensive index for Israel covering Canaanite period, Israelite kingdoms (David, Solomon), Babylonian exile, Second Temple period, Roman province (Judea), Jewish revolts, Byzantine Palestine, Arab conquest, Crusader states, Mamluk/Ottoman Palestine, Zionism, British Mandate, 1948 Declaration of Independence, Arab-Israeli wars, Six-Day War 1967, Yom Kippur War 1973, Camp David Accords, Oslo Accords, intifadas, settlements, and ongoing Israeli-Palestinian conflict."
+    "notes": "Comprehensive index for Israel covering Canaanite period, Israelite kingdoms (David, Solomon), Babylonian exile, Second Temple period, Roman province (Judea), Jewish revolts, Byzantine Palestine, Arab conquest, Crusader states, Mamluk/Ottoman Palestine, Zionism, British Mandate, 1948 Declaration of Independence, Arab-Israeli wars, Six-Day War 1967, Yom Kippur War 1973, Camp David Accords, Oslo Accords, intifadas, settlements, and ongoing Israeli-Palestinian conflict.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Jerusalem (declared; internationally disputed) / Tel Aviv (diplomatic)",
@@ -51,7 +56,10 @@
       "Islam": "18.1%",
       "Christianity": "1.9%",
       "Druze": "1.6%",
-      "Other_None": "4.9%"
+      "Other_None": "4.9%",
+      "primary": "",
+      "breakdown": {},
+      "note": ""
     },
     "ethnic_groups": [
       {
@@ -101,12 +109,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -115,21 +139,39 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [],
       "top_imports": [],
       "major_partners": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "remittances_pct_gdp": 0,
+      "total_exports_usd": "",
+      "total_imports_usd": "",
+      "top_export_destinations": [],
+      "top_import_origins": [],
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 0,
       "electricity_access_pct": 0,
       "mobile_subscriptions_per_100": 0,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "paved_roads_pct": 0,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
+      "road_network_km": 0,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": ""
     },
     "international_memberships": [],
     "governance_indices": {
@@ -150,6 +192,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -157,12 +219,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -170,20 +256,447 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0.85,
+      "ict_development_index": 7.1,
+      "mobile_money_accounts": 3000000,
+      "digital_payments_pct_adults": 80,
+      "fintech_companies": 500,
+      "startup_ecosystem_value_usd": "$100 billion",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 90.0,
+      "innovation_index_score": 57.0,
+      "innovation_index_rank": 14,
+      "ai_readiness_index": 78.0
+    },
+    "capital_coordinates": {
+      "lat": 31.7683,
+      "lon": 35.2137
+    },
+    "other_major_cities": [
+      "Tel Aviv-Yafo",
+      "Haifa",
+      "Rishon LeZion",
+      "Petah Tikva",
+      "Ashdod",
+      "Beer Sheva"
+    ],
+    "national_motto": "None officially",
+    "national_anthem": "Hatikvah (The Hope)",
+    "currency_code": "ILS",
+    "internet_tld": ".il",
+    "utc_offset": "UTC+2 (UTC+3 summer)",
+    "drives_on": "right",
+    "other_languages": [
+      "Arabic",
+      "English",
+      "Russian",
+      "Amharic",
+      "French"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": 31.0461,
+        "lon": 34.8516
+      },
+      "bounding_box": {
+        "north": 33.33,
+        "south": 29.48,
+        "east": 35.9,
+        "west": 34.27
+      },
+      "land_area_km2": 22072,
+      "water_area_km2": 440,
+      "coastline_km": 273,
+      "borders": [
+        "Lebanon",
+        "Syria",
+        "Jordan",
+        "Egypt",
+        "West Bank",
+        "Gaza Strip"
+      ],
+      "border_lengths_km": {
+        "Lebanon": 81,
+        "Syria": 83,
+        "Jordan": 307,
+        "Egypt": 208
+      },
+      "highest_point": {
+        "name": "Mount Meron",
+        "elevation_m": 1208
+      },
+      "lowest_point": {
+        "name": "Dead Sea",
+        "elevation_m": -431
+      },
+      "terrain": "Coastal plain; central highlands; Jordan Rift Valley; Negev desert (60% of land area)",
+      "land_use": {
+        "agricultural_pct": 23.8,
+        "arable_pct": 13.7,
+        "forest_pct": 7.1,
+        "other_pct": 69.1
+      },
+      "major_rivers": [
+        "Jordan"
+      ],
+      "major_lakes": [
+        "Dead Sea (world's lowest point)",
+        "Sea of Galilee (Kinneret)"
+      ],
+      "exclusive_economic_zone_km2": 26000,
+      "landlocked": false,
+      "notes": "Dead Sea (-431m) lowest point on Earth's surface; Negev desert 60% of territory; Sea of Galilee critical freshwater source; diverse climate zones in small area; occupied territories disputed."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$530 billion",
+      "gdp_ppp_usd": "$530 billion",
+      "gdp_per_capita_nominal_usd": 54700,
+      "gdp_per_capita_ppp_usd": 54700,
+      "gdp_growth_rate_pct": 2.0,
+      "inflation_rate_pct": 3.3,
+      "unemployment_rate_pct": 3.4,
+      "youth_unemployment_rate_pct": 7.0,
+      "poverty_rate_pct": 21.0,
+      "poverty_line_definition": "Relative poverty (50% median income)",
+      "gini_coefficient": 38.6,
+      "income_classification": "High income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 1,
+        "industry_pct_gdp": 19,
+        "services_pct_gdp": 80
+      },
+      "labor_force": 4300000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 1,
+        "industry_pct": 17,
+        "services_pct": 82
+      },
+      "fdi_inflow_usd": "$28 billion",
+      "fdi_outflow_usd": "$12 billion",
+      "foreign_exchange_reserves_usd": "$205 billion",
+      "ease_of_doing_business_rank": 35,
+      "economic_freedom_index_score": 68.1,
+      "credit_rating": {
+        "moodys": "A1",
+        "sp": "AA-",
+        "fitch": "A+"
+      },
+      "notes": "'Start-up Nation' — highest VC per capita globally; tech sector 18% GDP; natural gas discoveries (Leviathan, Tamar); diamond cutting/trading hub; OECD member; defense industry major exporter; economic impact of Oct 7 war significant."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 8.3,
+      "health_expenditure_per_capita_usd": 3900,
+      "physicians_per_1k": 3.7,
+      "nurses_midwives_per_1k": 5.1,
+      "hospital_beds_per_1k": 2.9,
+      "maternal_mortality_per_100k": 3,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 3,
+      "access_to_clean_water_pct": 100,
+      "access_to_sanitation_pct": 100,
+      "vaccination_coverage_pct": 95,
+      "stunting_under5_pct": 0,
+      "obesity_rate_pct": 26.1,
+      "universal_health_coverage_index": 88,
+      "leading_causes_of_death": [
+        "Cardiovascular diseases",
+        "Cancer",
+        "Diabetes",
+        "Chronic respiratory diseases"
+      ],
+      "notes": "Universal healthcare (1995 National Health Insurance Law); world leader in medical research; highest life expectancy in Middle East (83 years); world's fastest COVID vaccine rollout; Magen David Adom emergency services."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 79.0,
+      "food_security_index_rank": 22,
+      "arable_land_pct": 13.7,
+      "agricultural_land_pct": 23.8,
+      "irrigated_land_pct": 58,
+      "major_crops": [
+        "citrus",
+        "vegetables",
+        "cotton",
+        "flowers",
+        "avocados",
+        "dates"
+      ],
+      "major_livestock": [
+        "poultry",
+        "cattle",
+        "sheep"
+      ],
+      "food_import_dependency_pct": 50,
+      "cereal_yield_kg_per_hectare": 4500,
+      "agricultural_employment_pct": 1,
+      "notes": "World leader in agricultural technology (drip irrigation invented by Netafim); 'made the desert bloom'; highest crop yields per hectare in many categories; agri-tech exports global; kibbutz farming tradition.",
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "energy": {
+      "primary_energy_sources": [
+        "natural gas",
+        "oil",
+        "solar",
+        "coal"
+      ],
+      "electricity_generation_gwh": 75000,
+      "electricity_consumption_per_capita_kwh": 7200,
+      "renewable_share_pct": 10,
+      "fossil_fuel_share_pct": 90,
+      "nuclear_share_pct": 0,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 230000,
+      "natural_gas_production_bcm": 22,
+      "proved_oil_reserves_bbl": "14 million",
+      "proved_gas_reserves_tcm": "0.60",
+      "energy_imports_pct": 30,
+      "electrification_rate_pct": 100,
+      "notes": "Leviathan and Tamar gas fields transformed from energy importer to exporter; gas exports to Egypt and Jordan; 30% renewable target by 2030; Dimona nuclear facility (undeclared nuclear arsenal); Negev solar potential.",
+      "energy_mix": {
+        "fossil_fuels_pct": 0,
+        "hydroelectric_pct": 0,
+        "solar_pct": 0,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 0,
+      "electricity_production_gwh": 0,
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "transport": {
+      "airports": 42,
+      "airports_paved": 33,
+      "railways_km": 1384,
+      "roadways_km": 19555,
+      "paved_roads_pct": 100,
+      "waterways_km": 0,
+      "major_ports": [
+        "Haifa",
+        "Ashdod",
+        "Eilat"
+      ],
+      "national_airline": "El Al",
+      "vehicle_ownership_per_1k": 370,
+      "notes": "Ben Gurion Airport major hub; high-speed rail Jerusalem-Tel Aviv (A1 train); light rail systems in Jerusalem and Tel Aviv (Red Line 2023); compact country — most destinations within 1-2 hours; security-intensive aviation.",
+      "major_airports_international": [],
+      "major_airports_domestic": [],
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
+    },
+    "tourism": {
+      "international_arrivals": 3000000,
+      "tourism_revenue_usd": "$7 billion",
+      "tourism_pct_gdp": 1.3,
+      "major_attractions": [
+        "Jerusalem Old City (UNESCO)",
+        "Western Wall",
+        "Dead Sea",
+        "Masada (UNESCO)",
+        "Tel Aviv beaches",
+        "Haifa Bahá'í Gardens"
+      ],
+      "unesco_world_heritage_sites": 9,
+      "notes": "Religious tourism (Christianity, Judaism, Islam); Dead Sea lowest point on Earth; Tel Aviv 'White City' (Bauhaus, UNESCO); Oct 7 war severely impacted 2024 tourism; tech tourism/conferences; Birthright programme.",
+      "annual_visitors": 0,
+      "tourism_employment_pct": 0,
+      "unesco_sites_list": [],
+      "visa_free_access_countries": 0,
+      "henley_passport_rank": 0
+    },
+    "legal_system": {
+      "type": "Mixed legal system",
+      "supreme_court": "Supreme Court of Israel",
+      "international_court_jurisdiction": "ICJ jurisdiction disputed",
+      "suffrage": "18 years, universal",
+      "legal_traditions": [
+        "English common law",
+        "Ottoman/civil law remnants",
+        "Jewish religious law (personal status)",
+        "Military law (occupied territories)"
+      ],
+      "death_penalty": true,
+      "notes": "No formal constitution (Basic Laws serve as quasi-constitution); 2023 judicial overhaul crisis (massive protests); Coalition politics (proportional representation); military court system for occupied territories; ICJ ruling on occupation (2024).",
+      "legal_tradition": "",
+      "constitution_year": 0,
+      "sharia_applicability": "",
+      "customary_law_role": "",
+      "icc_membership": "",
+      "judicial_independence_score": 0,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_score": 74,
+      "freedom_house_status": "Free",
+      "gender_inequality_index": 0.084,
+      "gender_inequality_rank": 19,
+      "women_in_parliament_pct": 30,
+      "female_labor_force_participation_pct": 62,
+      "maternal_leave_weeks": 15,
+      "child_marriage_pct": 0,
+      "lgbtq_legal_status": "Legal (no marriage but recognition of foreign marriages; military service open)",
+      "press_freedom_rank": 101,
+      "notes": "Strong democracy for citizens within Green Line; West Bank/Gaza occupation human rights concerns (B'Tselem, HRW, ICJ); conscription includes women; LGBTQ+ most progressive in Middle East; settler violence; Oct 7 aftermath civil liberties debate.",
+      "gender_gap_index_score": 0,
+      "women_labor_force_participation_pct": 0,
+      "maternal_mortality_per_100k": 0,
+      "fgm_prevalence_pct": 0,
+      "death_penalty_status": "",
+      "human_trafficking_tier": "",
+      "child_labor_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.757,
+      "global_peace_index_rank": 143,
+      "homicide_rate_per_100k": 1.8,
+      "terrorism_index_score": 7.7,
+      "terrorism_index_rank": 8,
+      "armed_conflict": true,
+      "internally_displaced_persons": 100000,
+      "landmine_contamination": true,
+      "notes": "Oct 7, 2023 Hamas attack (1,200 killed, 250 hostages); Gaza war ongoing; nuclear weapons state (undeclared, est. 80-400 warheads); Iron Dome missile defense; Hezbollah threat (north); Iran existential threat; multi-front security posture.",
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": ""
+    },
+    "cultural_heritage": {
+      "unesco_intangible_heritage": [],
+      "notable_cultural_exports": [
+        "Technology/Start-ups",
+        "Dead Sea cosmetics",
+        "Israeli cuisine",
+        "Hebrew language revival"
+      ],
+      "major_museums": [
+        "Israel Museum (Dead Sea Scrolls)",
+        "Yad Vashem (Holocaust)",
+        "Tel Aviv Museum of Art"
+      ],
+      "world_heritage_sites_list": [
+        "Old City of Acre",
+        "White City of Tel Aviv",
+        "Masada",
+        "Biblical Tels",
+        "Caves of Maresha and Bet-Guvrin",
+        "Nahal Me'arot/Wadi el-Mughara Caves"
+      ],
+      "culinary_traditions": [
+        "Hummus",
+        "Falafel",
+        "Shakshuka",
+        "Israeli salad",
+        "Sabich",
+        "Schnitzel"
+      ],
+      "notes": "Only country to revive a dead language (Hebrew); kibbutz movement unique; Holy Land significance for Judaism, Christianity, Islam; Israeli tech culture ('chutzpah'); Dead Sea Scrolls; diverse immigrant cultures.",
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "",
+      "national_sport": "",
+      "major_festivals": [],
+      "cuisine_highlights": [],
+      "music_art_traditions": [],
+      "film_industry": "",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [],
+      "world_heritage_sites": [],
+      "media_landscape": ""
+    },
+    "comparative_rankings": {
+      "human_development_index_rank": 22,
+      "global_competitiveness_rank": 20,
+      "happiness_index_rank": 5,
+      "environmental_performance_rank": 57,
+      "gender_gap_rank": 83,
+      "soft_power_rank": 0,
+      "notes": "Start-up Nation — highest VC per capita; top happiness despite conflict; high HDI; tech innovation powerhouse; security situation drags peace rankings; Nasdaq-listed companies (most outside US).",
+      "_note": "Country position relative to continent and global. 'rank' = 1 is best/largest.",
+      "population": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "area": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_nominal": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_per_capita": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "hdi": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "life_expectancy": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "internet_penetration": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "press_freedom": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
     }
   },
   "leadership": {
@@ -191,7 +704,8 @@
       "name": "Benjamin Netanyahu",
       "title": "Prime Minister",
       "since": "2022-12-29 (also 1996-1999, 2009-2021)",
-      "notes": "Likud; longest-serving PM; corruption trial; far-right coalition; judicial overhaul crisis 2023; October 7 Hamas attack 2023; Gaza War 2023-2025; ICC arrest warrant"
+      "notes": "Likud; longest-serving PM; corruption trial; far-right coalition; judicial overhaul crisis 2023; October 7 Hamas attack 2023; Gaza War 2023-2025; ICC arrest warrant",
+      "party": ""
     },
     "president": {
       "name": "Isaac Herzog",
@@ -234,7 +748,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

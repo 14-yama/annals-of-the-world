@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.836599Z",
-    "notes": "Comprehensive index for Indonesia covering Java Man (Homo erectus), Hindu-Buddhist kingdoms (Srivijaya, Majapahit, Mataram), spread of Islam, Portuguese/Spanish contact, VOC Dutch East India Company, Dutch East Indies, Japanese occupation, Proclamation of Independence 1945, Sukarno's guided democracy, 1965 anti-communist massacres, Suharto's New Order, East Timor, 1998 Reformasi, Aceh/Papua conflicts, tsunami 2004, democratic consolidation, and Jokowi/Prabowo era."
+    "notes": "Comprehensive index for Indonesia covering Java Man (Homo erectus), Hindu-Buddhist kingdoms (Srivijaya, Majapahit, Mataram), spread of Islam, Portuguese/Spanish contact, VOC Dutch East India Company, Dutch East Indies, Japanese occupation, Proclamation of Independence 1945, Sukarno's guided democracy, 1965 anti-communist massacres, Suharto's New Order, East Timor, 1998 Reformasi, Aceh/Papua conflicts, tsunami 2004, democratic consolidation, and Jokowi/Prabowo era.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Jakarta (transitioning to Nusantara, East Kalimantan)",
@@ -54,7 +59,9 @@
       "Buddhism": "0.8%",
       "Confucianism": "0.05%",
       "Indigenous_Beliefs": "0.05%",
-      "note": "Pancasila state ideology mandates belief in one God; six recognised religions; world's largest Muslim-majority country"
+      "note": "Pancasila state ideology mandates belief in one God; six recognised religions; world's largest Muslim-majority country",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -156,12 +163,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -170,21 +193,39 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [],
       "top_imports": [],
       "major_partners": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "remittances_pct_gdp": 0,
+      "total_exports_usd": "",
+      "total_imports_usd": "",
+      "top_export_destinations": [],
+      "top_import_origins": [],
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 0,
       "electricity_access_pct": 0,
       "mobile_subscriptions_per_100": 0,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "paved_roads_pct": 0,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
+      "road_network_km": 0,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": ""
     },
     "international_memberships": [],
     "governance_indices": {
@@ -205,6 +246,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -212,12 +273,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -225,20 +310,461 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0.8,
+      "ict_development_index": 4.3,
+      "mobile_money_accounts": 50000000,
+      "digital_payments_pct_adults": 35,
+      "fintech_companies": 500,
+      "startup_ecosystem_value_usd": "$80 billion",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 48.0,
+      "innovation_index_score": 28.0,
+      "innovation_index_rank": 61,
+      "ai_readiness_index": 45.0
+    },
+    "capital_coordinates": {
+      "lat": -6.2088,
+      "lon": 106.8456
+    },
+    "other_major_cities": [
+      "Surabaya",
+      "Bandung",
+      "Medan",
+      "Semarang",
+      "Makassar",
+      "Palembang",
+      "Yogyakarta"
+    ],
+    "national_motto": "Bhinneka Tunggal Ika (Unity in Diversity)",
+    "national_anthem": "Indonesia Raya (Great Indonesia)",
+    "currency_code": "IDR",
+    "internet_tld": ".id",
+    "utc_offset": "UTC+7 to UTC+9 (3 time zones)",
+    "drives_on": "left",
+    "other_languages": [
+      "Javanese",
+      "Sundanese",
+      "Madurese",
+      "Minangkabau",
+      "Batak",
+      "Balinese",
+      "Buginese"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": -0.7893,
+        "lon": 113.9213
+      },
+      "bounding_box": {
+        "north": 5.91,
+        "south": -11.01,
+        "east": 141.02,
+        "west": 95.01
+      },
+      "land_area_km2": 1904569,
+      "water_area_km2": 93000,
+      "coastline_km": 54716,
+      "borders": [
+        "Malaysia",
+        "Papua New Guinea",
+        "Timor-Leste"
+      ],
+      "border_lengths_km": {
+        "Malaysia": 1881,
+        "Papua New Guinea": 824,
+        "Timor-Leste": 253
+      },
+      "highest_point": {
+        "name": "Puncak Jaya (Carstensz Pyramid)",
+        "elevation_m": 4884
+      },
+      "lowest_point": {
+        "name": "Indian Ocean",
+        "elevation_m": 0
+      },
+      "terrain": "World's largest archipelago (17,000+ islands); volcanic mountains, tropical lowlands, dense rainforest",
+      "land_use": {
+        "agricultural_pct": 31.2,
+        "arable_pct": 13.0,
+        "forest_pct": 49.1,
+        "other_pct": 19.7
+      },
+      "major_rivers": [
+        "Kapuas",
+        "Mahakam",
+        "Barito",
+        "Musi",
+        "Citarum"
+      ],
+      "major_lakes": [
+        "Lake Toba (world's largest volcanic lake)",
+        "Sentani"
+      ],
+      "exclusive_economic_zone_km2": 6159032,
+      "landlocked": false,
+      "notes": "World's largest archipelago (17,508 islands, 6,000 inhabited); Ring of Fire (active volcanoes 127); Krakatoa 1883 eruption; 2004 Indian Ocean tsunami; Borneo/Sumatra/Java/Papua; new capital Nusantara (IKN) under construction."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$1.42 trillion",
+      "gdp_ppp_usd": "$4.4 trillion",
+      "gdp_per_capita_nominal_usd": 5100,
+      "gdp_per_capita_ppp_usd": 15800,
+      "gdp_growth_rate_pct": 5.0,
+      "inflation_rate_pct": 3.6,
+      "unemployment_rate_pct": 5.3,
+      "youth_unemployment_rate_pct": 14.0,
+      "poverty_rate_pct": 9.4,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 37.9,
+      "income_classification": "Upper-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 13,
+        "industry_pct_gdp": 40,
+        "services_pct_gdp": 47
+      },
+      "labor_force": 140000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 28,
+        "industry_pct": 22,
+        "services_pct": 50
+      },
+      "fdi_inflow_usd": "$22 billion",
+      "fdi_outflow_usd": "$5 billion",
+      "foreign_exchange_reserves_usd": "$137 billion",
+      "ease_of_doing_business_rank": 73,
+      "economic_freedom_index_score": 60.7,
+      "credit_rating": {
+        "moodys": "Baa2",
+        "sp": "BBB",
+        "fitch": "BBB"
+      },
+      "notes": "G20 member; SE Asia's largest economy; world's largest palm oil producer; nickel dominant (EV battery supply chain); digital economy booming (GoTo, Tokopedia); new capital Nusantara (IKN); commodity-driven growth."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.4,
+      "health_expenditure_per_capita_usd": 148,
+      "physicians_per_1k": 0.6,
+      "nurses_midwives_per_1k": 2.4,
+      "hospital_beds_per_1k": 1.0,
+      "maternal_mortality_per_100k": 173,
+      "hiv_prevalence_pct": 0.4,
+      "malaria_incidence_per_1k": 2,
+      "tuberculosis_incidence_per_100k": 354,
+      "access_to_clean_water_pct": 92,
+      "access_to_sanitation_pct": 80,
+      "vaccination_coverage_pct": 80,
+      "stunting_under5_pct": 22,
+      "obesity_rate_pct": 6.9,
+      "universal_health_coverage_index": 57,
+      "leading_causes_of_death": [
+        "Cardiovascular diseases",
+        "Cancer",
+        "Tuberculosis",
+        "Chronic respiratory diseases"
+      ],
+      "notes": "JKN (Jaminan Kesehatan Nasional) — world's largest single-payer health insurance (90% coverage); TB burden world's 2nd highest; stunting reduction national priority; rural access challenges across archipelago."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 54.0,
+      "food_security_index_rank": 73,
+      "arable_land_pct": 13.0,
+      "agricultural_land_pct": 31.2,
+      "irrigated_land_pct": 15,
+      "major_crops": [
+        "palm oil",
+        "rice",
+        "rubber",
+        "cocoa",
+        "coffee",
+        "tea",
+        "sugarcane",
+        "cloves",
+        "nutmeg"
+      ],
+      "major_livestock": [
+        "cattle",
+        "poultry",
+        "goats"
+      ],
+      "food_import_dependency_pct": 10,
+      "cereal_yield_kg_per_hectare": 5200,
+      "agricultural_employment_pct": 28,
+      "notes": "World's #1 palm oil producer (60% global share); spice islands heritage (Maluku); 3rd largest rice producer; coffee (Sumatra, Java) globally renowned; deforestation for palm oil plantations major environmental concern.",
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "energy": {
+      "primary_energy_sources": [
+        "coal",
+        "oil",
+        "natural gas",
+        "geothermal",
+        "hydropower",
+        "solar"
+      ],
+      "electricity_generation_gwh": 310000,
+      "electricity_consumption_per_capita_kwh": 1100,
+      "renewable_share_pct": 14,
+      "fossil_fuel_share_pct": 86,
+      "nuclear_share_pct": 0,
+      "oil_production_bpd": 640000,
+      "oil_consumption_bpd": 1700000,
+      "natural_gas_production_bcm": 60,
+      "proved_oil_reserves_bbl": "2.4 billion",
+      "proved_gas_reserves_tcm": "1.41",
+      "energy_imports_pct": 15,
+      "electrification_rate_pct": 99,
+      "notes": "World's #1 coal exporter; left OPEC (net oil importer); world's largest geothermal capacity (2.4 GW); nickel processing boom increasing energy demand; JETP $20B green energy transition deal; biomass potential vast.",
+      "energy_mix": {
+        "fossil_fuels_pct": 0,
+        "hydroelectric_pct": 0,
+        "solar_pct": 0,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 0,
+      "electricity_production_gwh": 0,
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "transport": {
+      "airports": 673,
+      "airports_paved": 186,
+      "railways_km": 8159,
+      "roadways_km": 496607,
+      "paved_roads_pct": 56,
+      "waterways_km": 21579,
+      "major_ports": [
+        "Tanjung Priok (Jakarta)",
+        "Tanjung Perak (Surabaya)",
+        "Belawan (Medan)",
+        "Makassar"
+      ],
+      "national_airline": "Garuda Indonesia",
+      "vehicle_ownership_per_1k": 120,
+      "notes": "Archipelago transport challenges; Lion Air and Garuda Indonesia main airlines; Jakarta MRT (2019); Trans-Java toll road; inter-island ferries critical; Jakarta among world's worst traffic congestion.",
+      "major_airports_international": [],
+      "major_airports_domestic": [],
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
+    },
+    "tourism": {
+      "international_arrivals": 11700000,
+      "tourism_revenue_usd": "$10 billion",
+      "tourism_pct_gdp": 0.7,
+      "major_attractions": [
+        "Bali",
+        "Borobudur (UNESCO)",
+        "Komodo National Park (UNESCO)",
+        "Raja Ampat",
+        "Yogyakarta",
+        "Lake Toba"
+      ],
+      "unesco_world_heritage_sites": 9,
+      "notes": "Bali among world's top tourist destinations; Borobudur world's largest Buddhist temple; Komodo dragons unique; Raja Ampat marine biodiversity; super priority destinations programme; digital nomad visa.",
+      "annual_visitors": 0,
+      "tourism_employment_pct": 0,
+      "unesco_sites_list": [],
+      "visa_free_access_countries": 0,
+      "henley_passport_rank": 0
+    },
+    "legal_system": {
+      "type": "Civil law",
+      "supreme_court": "Supreme Court (Mahkamah Agung)",
+      "international_court_jurisdiction": "ICJ not accepted (compulsory)",
+      "suffrage": "17 years or married, universal",
+      "legal_traditions": [
+        "Dutch colonial civil law",
+        "Islamic law (Aceh province)",
+        "Customary law (adat)"
+      ],
+      "death_penalty": true,
+      "notes": "Pancasila state ideology; 2024 Criminal Code overhaul (controversial — criminalizes cohabitation, insults president); Aceh province implements Sharia law; Constitutional Court independent but controversy (2023 election age ruling).",
+      "legal_tradition": "",
+      "constitution_year": 0,
+      "sharia_applicability": "",
+      "customary_law_role": "",
+      "icc_membership": "",
+      "judicial_independence_score": 0,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_score": 58,
+      "freedom_house_status": "Partly Free",
+      "gender_inequality_index": 0.444,
+      "gender_inequality_rank": 110,
+      "women_in_parliament_pct": 22,
+      "female_labor_force_participation_pct": 54,
+      "maternal_leave_weeks": 13,
+      "child_marriage_pct": 11,
+      "lgbtq_legal_status": "Legal (except Aceh; social stigma high)",
+      "press_freedom_rank": 111,
+      "notes": "World's 3rd largest democracy; Aceh Sharia law (public caning for homosexuality); West Papua indigenous rights concerns; ITE law restricts online speech; domestic worker exploitation (Gulf migration); progressive women's movements.",
+      "gender_gap_index_score": 0,
+      "women_labor_force_participation_pct": 0,
+      "maternal_mortality_per_100k": 0,
+      "fgm_prevalence_pct": 0,
+      "death_penalty_status": "",
+      "human_trafficking_tier": "",
+      "child_labor_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.823,
+      "global_peace_index_rank": 49,
+      "homicide_rate_per_100k": 0.4,
+      "terrorism_index_score": 4.4,
+      "terrorism_index_rank": 42,
+      "armed_conflict": true,
+      "internally_displaced_persons": 72000,
+      "landmine_contamination": false,
+      "notes": "Low-level insurgency in Papua; Jemaah Islamiyah dismantled (Bali bombings 2002); BNPT counter-terrorism effective; maritime piracy Malacca Strait; natural disaster vulnerability (Ring of Fire, tsunamis); South China Sea tensions.",
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": ""
+    },
+    "cultural_heritage": {
+      "unesco_intangible_heritage": [
+        "Wayang (puppet theatre)",
+        "Batik",
+        "Angklung",
+        "Pencak silat",
+        "Gamelan"
+      ],
+      "notable_cultural_exports": [
+        "Batik textiles",
+        "Gamelan music",
+        "Wayang puppetry",
+        "Coffee (Java/Sumatra)",
+        "Spices"
+      ],
+      "major_museums": [
+        "National Museum of Indonesia",
+        "Museum Nasional",
+        "Ullen Sentalu (Yogyakarta)"
+      ],
+      "world_heritage_sites_list": [
+        "Borobudur Temple",
+        "Prambanan Temple",
+        "Komodo National Park",
+        "Ujung Kulon",
+        "Sangiran Early Man Site"
+      ],
+      "culinary_traditions": [
+        "Nasi goreng",
+        "Rendang",
+        "Satay",
+        "Gado-gado",
+        "Soto",
+        "Bakso"
+      ],
+      "notes": "Rendang named 'world's most delicious food' (CNN poll); most populous Muslim-majority nation; Borobudur world's largest Buddhist monument; 700+ languages; batik UNESCO heritage; spice trade shaped world history.",
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "",
+      "national_sport": "",
+      "major_festivals": [],
+      "cuisine_highlights": [],
+      "music_art_traditions": [],
+      "film_industry": "",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [],
+      "world_heritage_sites": [],
+      "media_landscape": ""
+    },
+    "comparative_rankings": {
+      "human_development_index_rank": 112,
+      "global_competitiveness_rank": 50,
+      "happiness_index_rank": 80,
+      "environmental_performance_rank": 97,
+      "gender_gap_rank": 87,
+      "soft_power_rank": 0,
+      "notes": "SE Asia's largest economy; G20; world's 4th most populous country; nickel processing making it critical in EV supply chain; 2045 'Golden Indonesia Vision'.",
+      "_note": "Country position relative to continent and global. 'rank' = 1 is best/largest.",
+      "population": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "area": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_nominal": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_per_capita": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "hdi": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "life_expectancy": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "internet_penetration": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "press_freedom": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
     }
   },
   "leadership": {
@@ -246,7 +772,8 @@
       "name": "Prabowo Subianto",
       "title": "President",
       "since": "2024-10-20",
-      "notes": "Gerindra; former special forces general; Suharto's son-in-law; linked to 1998 activist disappearances; won 2024 election with Jokowi's son as VP; 'continuity' platform"
+      "notes": "Gerindra; former special forces general; Suharto's son-in-law; linked to 1998 activist disappearances; won 2024 election with Jokowi's son as VP; 'continuity' platform",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -283,7 +810,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

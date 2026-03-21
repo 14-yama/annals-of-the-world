@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.875040Z",
-    "notes": "Comprehensive index for Timor-Leste (East Timor) covering indigenous Papuan/Austronesian peoples, sandalwood trade, Portuguese colonization 1515, Dutch West Timor division, Japanese WWII occupation, Indonesian invasion 1975 (post-Portuguese withdrawal), Santa Cruz massacre 1991, independence referendum 1999 (78.5% yes, violence by Indonesian militias), UN transitional administration (UNTAET), full independence 2002, 2006 crisis, Xanana Gusmão leadership, oil/gas revenues (Timor Sea), and youngest 21st century nation-state."
+    "notes": "Comprehensive index for Timor-Leste (East Timor) covering indigenous Papuan/Austronesian peoples, sandalwood trade, Portuguese colonization 1515, Dutch West Timor division, Japanese WWII occupation, Indonesian invasion 1975 (post-Portuguese withdrawal), Santa Cruz massacre 1991, independence referendum 1999 (78.5% yes, violence by Indonesian militias), UN transitional administration (UNTAET), full independence 2002, 2006 crisis, Xanana Gusmão leadership, oil/gas revenues (Timor Sea), and youngest 21st century nation-state.",
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Dili",
@@ -28,7 +33,11 @@
     "other_languages": [
       "Indonesian",
       "English",
-      "16+ indigenous languages"
+      "Mambae",
+      "Makasae",
+      "Tukudede",
+      "Bunak",
+      "Fataluku"
     ],
     "government_type": "Unitary parliamentary republic",
     "currency": "United States dollar (USD)",
@@ -57,7 +66,9 @@
       "Christianity_Protestant": "1.96%",
       "Islam": "0.2%",
       "Other": "0.24%",
-      "note": "Portuguese colonial legacy; Catholicism identity marker vs Indonesian Muslim majority during occupation; animism persists in highlands (lulik sacred houses); Pope John Paul II visit 1989 (during occupation); strong Catholic Church influence politically"
+      "note": "Portuguese colonial legacy; Catholicism identity marker vs Indonesian Muslim majority during occupation; animism persists in highlands (lulik sacred houses); Pope John Paul II visit 1989 (during occupation); strong Catholic Church influence politically",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -87,100 +98,623 @@
     "time_zone": "TLT (UTC+9)",
     "independence": {
       "date": "2002-05-20",
-      "from": "UN transitional administration (UNTAET); previously Indonesia (1975-1999, illegal occupation); Portuguese colony before 1975"
+      "from": "UN transitional administration (UNTAET); previously Indonesia (1975-1999, illegal occupation); Portuguese colony before 1975",
+      "notes": ""
     },
     "continent": "Asia",
     "notes_unique": "Asia's youngest country (21st century independence); Indonesian occupation 1975-99 (~200,000 dead, ~25% of population, genocide); 1999 referendum violence (pro-Indonesia militias destroyed 70% infrastructure); UN peacekeeping (UNTAET/UNMIT); 2006 crisis (military-police conflict); Timor Sea oil/gas (Bayu-Undan field, Greater Sunrise dispute with Australia); Petroleum Fund (sovereign wealth); coffee; sandalwood; Lusophone (CPLP member); Crocodile symbolism (creation myth)",
     "demographics": {
-      "median_age": 0,
-      "urbanization_pct": 0,
-      "fertility_rate": 0,
-      "life_expectancy": 0,
-      "infant_mortality_per_1k": 0,
-      "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "median_age": 20.8,
+      "population_growth_rate_pct": 1.8,
+      "urbanization_pct": 32.0,
+      "urban_population_growth_rate_pct": 3.3,
+      "fertility_rate": 4.1,
+      "life_expectancy": 70.5,
+      "life_expectancy_male": 68.0,
+      "life_expectancy_female": 73.2,
+      "infant_mortality_per_1k": 33.0,
+      "under5_mortality_per_1k": 41.0,
+      "literacy_rate_pct": 68.1,
+      "net_migration_rate": -3.5,
+      "sex_ratio": 1.04,
+      "dependency_ratio": 72.0,
+      "population_density_per_km2": 91,
+      "age_structure": {
+        "0_14_pct": 38.5,
+        "15_24_pct": 21.0,
+        "25_54_pct": 32.0,
+        "55_64_pct": 4.5,
+        "65_plus_pct": 4.0
+      }
     },
     "natural_resources": {
-      "primary": [],
-      "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "primary": [
+        "petroleum",
+        "natural gas",
+        "gold",
+        "manganese",
+        "marble",
+        "sandalwood"
+      ],
+      "resource_dependency_pct_gdp": 60,
+      "resource_curse_risk": "High",
+      "notes": "Bayu-Undan and Greater Sunrise gas fields; Petroleum Fund (sovereign wealth fund) largest per capita in Asia; reserves declining."
     },
     "military": {
-      "budget_usd": "",
-      "pct_of_gdp": 0,
-      "active_personnel": 0,
-      "reserve_personnel": 0,
+      "budget_usd": "$30 million",
+      "pct_of_gdp": 0.9,
+      "active_personnel": 3700,
+      "reserve_personnel": 1500,
+      "paramilitary_personnel": 1300,
       "nuclear_status": "Non-nuclear",
-      "alliances": [],
-      "notes": ""
+      "alliances": [
+        "CPLP (Lusophone nations)"
+      ],
+      "conscription": false,
+      "global_firepower_rank": 138,
+      "notes": "F-FDTL small for population; PNTL (national police) handles internal security; Australia primary security partner; 2006 crisis required international intervention; UNMIT departed 2012."
     },
     "trade": {
-      "top_exports": [],
-      "top_imports": [],
-      "major_partners": [],
-      "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "total_exports_usd": "$140 million",
+      "total_imports_usd": "$800 million",
+      "top_exports": [
+        "petroleum/gas",
+        "coffee",
+        "sandalwood oil",
+        "vanilla",
+        "marble"
+      ],
+      "top_imports": [
+        "petroleum products",
+        "foodstuffs",
+        "vehicles",
+        "machinery",
+        "cement"
+      ],
+      "major_partners": [
+        "Australia",
+        "Indonesia",
+        "China",
+        "Japan",
+        "Singapore"
+      ],
+      "top_export_destinations": [
+        "Japan",
+        "South Korea",
+        "Australia",
+        "Indonesia",
+        "India"
+      ],
+      "top_import_origins": [
+        "Indonesia",
+        "China",
+        "Singapore",
+        "Malaysia",
+        "Australia"
+      ],
+      "trade_balance": "-$660 million",
+      "trade_as_pct_gdp": 28,
+      "current_account_balance_usd": "-$500 million",
+      "remittances_pct_gdp": 5.0,
+      "trade_agreements": [
+        "CPLP trade framework",
+        "ASEAN (accession in progress)"
+      ],
+      "special_economic_zones": [
+        "Oecusse Special Administrative Region (ZEESM)"
+      ]
     },
     "infrastructure": {
-      "internet_penetration_pct": 0,
-      "electricity_access_pct": 0,
-      "mobile_subscriptions_per_100": 0,
+      "internet_penetration_pct": 35.0,
+      "broadband_subscriptions_per_100": 0.2,
+      "electricity_access_pct": 87,
+      "mobile_subscriptions_per_100": 103,
+      "4g_coverage_pct": 30,
+      "5g_availability": false,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "road_network_km": 6040,
+      "paved_roads_pct": 30,
+      "waterways_km": 0,
+      "submarine_cables": [
+        "North-West Cable System (Darwin-Timor Leste)"
+      ],
+      "notes": "Limited infrastructure; no railway; Dili-Suai highway under construction; Oecusse cut off from main territory by road (requires ferry or Indonesian transit)."
     },
     "international_memberships": [],
     "governance_indices": {
       "corruption_perception_index": {
-        "score": 0,
-        "rank": 0,
-        "year": 0
+        "score": 42,
+        "rank": 77,
+        "year": 2023
       },
       "press_freedom_index": {
-        "rank": 0,
-        "year": 0
+        "rank": 10,
+        "year": 2023
       },
       "democracy_index": {
-        "score": 0,
-        "category": "",
-        "year": 0
+        "score": 7.06,
+        "category": "Flawed democracy",
+        "year": 2023
       },
       "fragile_states_index": {
-        "score": 0,
-        "year": 0
+        "score": 83.2,
+        "year": 2023
+      },
+      "rule_of_law_index": {
+        "score": 0.4,
+        "rank": 86,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -0.8,
+        "percentile": 18,
+        "year": 2022
+      },
+      "regulatory_quality_index": {
+        "score": -0.55,
+        "percentile": 28,
+        "year": 2022
+      },
+      "political_stability_index": {
+        "score": 0.16,
+        "percentile": 47,
+        "year": 2022
       }
     },
     "climate_environment": {
-      "climate_zones": [],
-      "co2_emissions_mt": 0,
-      "renewable_energy_pct": 0,
-      "natural_hazards": [],
-      "protected_areas_pct": 0
+      "climate_zones": [
+        "Tropical monsoon"
+      ],
+      "average_temperature_c": 27.0,
+      "average_rainfall_mm": 1500,
+      "co2_emissions_mt": 0.5,
+      "co2_per_capita_t": 0.4,
+      "renewable_energy_pct": 15,
+      "natural_hazards": [
+        "Floods",
+        "Landslides",
+        "Earthquakes",
+        "Droughts"
+      ],
+      "protected_areas_pct": 15,
+      "deforestation_rate_pct": 1.5,
+      "water_stress_level": "Low",
+      "environmental_performance_index": {
+        "score": 28.0,
+        "rank": 155,
+        "year": 2022
+      },
+      "paris_agreement_status": "Ratified",
+      "biodiversity": {
+        "known_species": 6000,
+        "endemic_species": 200,
+        "threatened_species": 45
+      },
+      "notes": "Coral Triangle location (highest marine biodiversity globally); deforestation concern (slash-and-burn farming); 2021 floods caused severe damage; climate-vulnerable SIDS-like."
     },
     "debt_aid": {
-      "national_debt_pct_gdp": 0,
-      "foreign_aid_received_usd": "",
-      "notes": ""
+      "national_debt_pct_gdp": 15.0,
+      "external_debt_usd": "$350 million",
+      "debt_service_pct_revenue": 2,
+      "foreign_aid_received_usd": "$300 million",
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "Australia",
+        "EU",
+        "Japan",
+        "USA",
+        "Portugal"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "",
+      "notes": "Low debt due to Petroleum Fund cushion; aid-dependent for non-oil budget; Australia largest bilateral donor."
     },
     "education": {
-      "primary_enrollment_pct": 0,
-      "secondary_enrollment_pct": 0,
-      "tertiary_enrollment_pct": 0,
+      "education_expenditure_pct_gdp": 6.7,
+      "primary_enrollment_pct": 92,
+      "secondary_enrollment_pct": 70,
+      "tertiary_enrollment_pct": 15,
+      "primary_completion_rate_pct": 85,
+      "gender_parity_index": 0.95,
+      "mean_years_of_schooling": 4.4,
+      "expected_years_of_schooling": 12.6,
       "pisa_participation": false,
-      "top_universities": [],
-      "notes": ""
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 30,
+      "out_of_school_children": 50000,
+      "top_universities": [
+        "National University of Timor-Leste (UNTL)",
+        "Dili Institute of Technology",
+        "University of Peace"
+      ],
+      "academic_freedom_index": 0.7,
+      "notes": "Education system still developing; language challenges (Tetum/Portuguese instruction but many speak neither well); low mean years of schooling; Cuban/Portuguese scholarship programs."
     },
     "diaspora_migration": {
-      "diaspora_population": "",
+      "diaspora_population": "~60,000",
+      "diaspora_top_destinations": [
+        "Australia",
+        "UK",
+        "Portugal",
+        "Ireland",
+        "South Korea"
+      ],
       "refugees_hosted": 0,
       "refugees_produced": 0,
-      "remittances_usd": "",
-      "notes": ""
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "Relatively open; labor migration programs to Australia/South Korea",
+      "remittances_usd": "$170 million",
+      "remittances_pct_gdp": 5.0,
+      "net_migration_rate_per_1k": -3.5,
+      "notes": "Seasonal Worker Programme to Australia significant; South Korea EPS (Employment Permit System) workers; small diaspora but remittances growing."
     },
     "digital_economy": {
-      "e_government_index": 0,
-      "mobile_money_adoption": "",
+      "e_government_index": 0.35,
+      "e_participation_index": 0.18,
+      "ict_development_index": 2.0,
+      "mobile_money_adoption": "Nascent",
+      "mobile_money_accounts": 50000,
+      "digital_payments_pct_adults": 5,
+      "fintech_companies": 2,
       "tech_hubs": [],
-      "notes": ""
+      "startup_ecosystem_value_usd": "$0",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 8.0,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 5.0,
+      "notes": "Least digitally developed country in SE Asia; Timor Telecom and Telemor are main providers; mobile coverage expanding but broadband minimal."
+    },
+    "capital_coordinates": {
+      "lat": -8.5569,
+      "lon": 125.5603
+    },
+    "other_major_cities": [
+      "Baucau",
+      "Maliana",
+      "Suai",
+      "Ermera",
+      "Lospalos"
+    ],
+    "national_motto": "Unidade, Accao, Progresso (Unity, Action, Progress)",
+    "national_anthem": "Patria (Fatherland)",
+    "currency_code": "USD",
+    "internet_tld": ".tl",
+    "utc_offset": "UTC+9",
+    "drives_on": "left",
+    "geography": {
+      "coordinates": {
+        "lat": -8.8742,
+        "lon": 125.7275
+      },
+      "bounding_box": {
+        "north": -8.13,
+        "south": -9.5,
+        "east": 127.34,
+        "west": 124.04
+      },
+      "land_area_km2": 14874,
+      "water_area_km2": 0,
+      "coastline_km": 706,
+      "borders": [
+        "Indonesia"
+      ],
+      "border_lengths_km": {
+        "Indonesia": 253
+      },
+      "highest_point": {
+        "name": "Tatamailau (Mount Ramelau)",
+        "elevation_m": 2963
+      },
+      "lowest_point": {
+        "name": "Timor Sea",
+        "elevation_m": 0
+      },
+      "terrain": "Mountainous interior; narrow coastal plains; dry season savanna",
+      "land_use": {
+        "agricultural_pct": 25.1,
+        "arable_pct": 10.1,
+        "forest_pct": 49.1,
+        "other_pct": 25.8
+      },
+      "major_rivers": [
+        "Laclo River",
+        "Loes River",
+        "Comoro River"
+      ],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 77052,
+      "landlocked": false,
+      "notes": "Eastern half of Timor island + Oecusse exclave (surrounded by Indonesian West Timor); youngest Asian nation (2002 independence); maritime border with Australia settled 2018."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$3.4 billion",
+      "gdp_ppp_usd": "$10 billion",
+      "gdp_per_capita_nominal_usd": 2500,
+      "gdp_per_capita_ppp_usd": 7400,
+      "gdp_growth_rate_pct": 2.3,
+      "inflation_rate_pct": 4.5,
+      "unemployment_rate_pct": 4.5,
+      "youth_unemployment_rate_pct": 17.0,
+      "poverty_rate_pct": 41.8,
+      "poverty_line_definition": "National poverty line ($1.90/day)",
+      "gini_coefficient": 28.7,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 15,
+        "industry_pct_gdp": 54,
+        "services_pct_gdp": 31
+      },
+      "labor_force": 450000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 68,
+        "industry_pct": 8,
+        "services_pct": 24
+      },
+      "fdi_inflow_usd": "$60 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$800 million",
+      "ease_of_doing_business_rank": 181,
+      "economic_freedom_index_score": 56.6,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Oil/gas revenue (Petroleum Fund ~$18B) dominates economy; non-oil GDP extremely small; ASEAN accession in progress; Tasi Mane petroleum corridor project; diversification challenge."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.2,
+      "health_expenditure_per_capita_usd": 78,
+      "physicians_per_1k": 0.7,
+      "nurses_midwives_per_1k": 1.6,
+      "hospital_beds_per_1k": 5.9,
+      "maternal_mortality_per_100k": 204,
+      "hiv_prevalence_pct": 0.2,
+      "malaria_incidence_per_1k": 1.0,
+      "tuberculosis_incidence_per_100k": 498,
+      "access_to_clean_water_pct": 78,
+      "access_to_sanitation_pct": 53,
+      "vaccination_coverage_pct": 80,
+      "stunting_under5_pct": 47,
+      "obesity_rate_pct": 3.8,
+      "universal_health_coverage_index": 37,
+      "leading_causes_of_death": [
+        "Lower respiratory infections",
+        "Neonatal disorders",
+        "Tuberculosis",
+        "Cardiovascular diseases"
+      ],
+      "notes": "Acute health challenges; highest TB rate in SE Asia; severe childhood stunting (47%); limited healthcare infrastructure; Cuban-trained doctors program."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 30.0,
+      "food_security_index_rank": 105,
+      "arable_land_pct": 10.1,
+      "agricultural_land_pct": 25.1,
+      "irrigated_land_pct": 15,
+      "major_crops": [
+        "coffee",
+        "rice",
+        "maize",
+        "cassava",
+        "sweet potatoes",
+        "vegetables"
+      ],
+      "major_livestock": [
+        "buffalo",
+        "cattle",
+        "pigs",
+        "goats",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 60,
+      "cereal_yield_kg_per_hectare": 2200,
+      "agricultural_employment_pct": 68,
+      "prevalence_of_undernourishment_pct": 24.9,
+      "notes": "Coffee is main export crop (Timor Hybrid variety); subsistence farming dominant; food insecurity acute; rice self-sufficiency goal unmet."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 85,
+        "hydroelectric_pct": 5,
+        "solar_pct": 9,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 1
+      },
+      "installed_capacity_mw": 250,
+      "electricity_production_gwh": 500,
+      "electricity_consumption_per_capita_kwh": 200,
+      "energy_imports_pct": 0,
+      "oil_production_bpd": 50000,
+      "oil_consumption_bpd": 3000,
+      "natural_gas_production_bcm": 7.0,
+      "energy_access_rural_pct": 80,
+      "energy_access_urban_pct": 99,
+      "notes": "Diesel generators still primary in many areas; Hera power plant; solar micro-grids expanding; offshore gas production main revenue source."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Presidente Nicolau Lobato International Airport (Dili)"
+      ],
+      "major_airports_domestic": [
+        "Baucau Airport",
+        "Oecusse Airport",
+        "Suai Airport"
+      ],
+      "national_airline": "None (Timor Air on-off operations)",
+      "major_seaports": [
+        "Dili Port",
+        "Tibar Bay (new port under construction)"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 2,
+      "registered_vehicles_per_1k": 30,
+      "road_fatalities_per_100k": 15.0,
+      "notes": "Dili airport too short for large aircraft; Tibar Bay port (Chinese-financed) under construction; inter-district travel difficult during wet season."
+    },
+    "tourism": {
+      "annual_visitors": 70000,
+      "tourism_revenue_usd": "$50 million",
+      "tourism_pct_gdp": 1.5,
+      "tourism_employment_pct": 3,
+      "unesco_world_heritage_sites": 0,
+      "unesco_sites_list": [],
+      "major_attractions": [
+        "Cristo Rei statue (Dili)",
+        "Atauro Island (diving)",
+        "Jaco Island",
+        "Blue Hole (Manatuto)",
+        "Resistance Museum (Dili)"
+      ],
+      "visa_free_access_countries": 30,
+      "henley_passport_rank": 96,
+      "notes": "Nascent tourism industry; world-class diving/snorkeling; Coral Triangle biodiversity; eco-tourism potential; difficult access limits visitors."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Free",
+      "freedom_house_score": 71,
+      "gender_inequality_index": 0.43,
+      "gender_inequality_rank": 120,
+      "gender_gap_index_score": 0.7,
+      "women_in_parliament_pct": 38,
+      "women_labor_force_participation_pct": 25,
+      "maternal_mortality_per_100k": 204,
+      "child_marriage_pct": 19,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Legal (no protections)",
+      "death_penalty_status": "Abolished",
+      "human_trafficking_tier": "Tier 2",
+      "child_labor_pct": 10,
+      "notes": "Remarkable democratic transition post-independence; high women in parliament (constitutional quota); gender-based violence remains serious concern; Nobel Peace Prize (Ramos-Horta/Belo 1996)."
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.761,
+      "global_peace_index_rank": 48,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 137,
+      "homicide_rate_per_100k": 3.9,
+      "active_conflicts": [],
+      "border_disputes": [
+        "Maritime boundary with Australia (resolved 2018)"
+      ],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$5 million",
+      "internally_displaced_persons": 0,
+      "notes": "Stabilized since 2008 political-military crisis; 2006 crisis required Australian intervention; martial arts gang violence a social issue; strong community-based reconciliation."
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (Portuguese/Indonesian hybrid)",
+      "constitution_year": 2002,
+      "sharia_applicability": "None",
+      "customary_law_role": "Significant in rural areas (lisan/adat)",
+      "icc_membership": "Non-member",
+      "judicial_independence_score": 0.4,
+      "contract_enforcement_days": 1285,
+      "property_rights_index": 25,
+      "notes": "Constitution based on Portuguese/Mozambican models; customary law (lisan) important for land disputes; justice system capacity limited; CAVR truth commission completed."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "Maubere (people)",
+        "Crocodile"
+      ],
+      "national_animal": "Crocodile (legend of origin)",
+      "national_flower": "",
+      "national_dish": "Batar da'an (corn and beans)",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Independence Restoration Day (May 20)",
+        "Popular Consultation Day (Aug 30)",
+        "All Saints' Day",
+        "Carnival"
+      ],
+      "cuisine_highlights": [
+        "Batar da'an",
+        "Ikan pepes (grilled fish in banana leaf)",
+        "Tukir (palm wine)",
+        "Ai-farina (sago)",
+        "Coffee"
+      ],
+      "music_art_traditions": [
+        "Likurai dance (war dance)",
+        "Tebe-tebe (circle dance)",
+        "Tais weaving (traditional textile)",
+        "Tetum oral poetry"
+      ],
+      "film_industry": "Nascent (Beatriz's War 2013)",
+      "intangible_heritage_items": [
+        "Tais weaving",
+        "Likurai dance",
+        "Crocodile origin myth"
+      ],
+      "notable_historical_figures": [
+        "Jose Xanana Gusmao",
+        "Jose Ramos-Horta (Nobel)",
+        "Bishop Belo (Nobel)",
+        "Nicolau Lobato",
+        "Konis Santana"
+      ],
+      "world_heritage_sites": [],
+      "media_landscape": "Free press (one of Asia's freest); limited media outlets; community radio important",
+      "notes": "Crocodile legend (Timor island = crocodile's back); tais cloth culturally significant; youngest nation in Asia (2002); Lusophone culture; strong resistance identity."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 11,
+        "global_rank": 155
+      },
+      "area": {
+        "continent_rank": 11,
+        "global_rank": 157
+      },
+      "gdp_nominal": {
+        "continent_rank": 11,
+        "global_rank": 159
+      },
+      "gdp_per_capita": {
+        "continent_rank": 8,
+        "global_rank": 125
+      },
+      "hdi": {
+        "continent_rank": 11,
+        "global_rank": 155
+      },
+      "life_expectancy": {
+        "continent_rank": 9,
+        "global_rank": 120
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 11,
+        "global_rank": 181
+      },
+      "internet_penetration": {
+        "continent_rank": 10,
+        "global_rank": 150
+      },
+      "press_freedom": {
+        "continent_rank": 1,
+        "global_rank": 10
+      },
+      "global_peace_index": {
+        "continent_rank": 3,
+        "global_rank": 48
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": "Rankings within Southeast Asia (11 countries). SE Asia's newest nation; best press freedom in Asia."
     }
   },
   "leadership": {
@@ -188,7 +722,8 @@
       "name": "José Ramos-Horta",
       "title": "President",
       "since": "2022-05-20",
-      "notes": "Second term (also 2007-12); Nobel Peace Prize 1996 (with Bishop Belo); independence icon; UN diplomat during occupation; survived 2008 assassination attempt; elder statesman"
+      "notes": "Second term (also 2007-12); Nobel Peace Prize 1996 (with Bishop Belo); independence icon; UN diplomat during occupation; survived 2008 assassination attempt; elder statesman",
+      "party": ""
     },
     "prime_minister": {
       "name": "Xanana Gusmão",
@@ -226,7 +761,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.872938Z",
-    "notes": "Comprehensive index for Syria covering ancient Ebla/Mari, Phoenicians, Arameans (Damascus), Seleucids, Roman (Palmyra/Zenobia), Byzantine, Umayyad Caliphate (Damascus capital 661-750), Crusader states, Ayyubids (Saladin), Mamluks, Ottoman rule, Arab Revolt 1916, French Mandate, independence 1946, Ba'ath coups, Hafez Assad's 1970 coup, Alawite dominance, 1982 Hama massacre, Bashar's succession 2000, Arab Spring 2011, civil war (2011-present, ~500,000 dead, half population displaced), ISIS caliphate 2014-2019, Russian/Iranian intervention, Kurdish SDF, and ongoing fragmentation."
+    "notes": "Comprehensive index for Syria covering ancient Ebla/Mari, Phoenicians, Arameans (Damascus), Seleucids, Roman (Palmyra/Zenobia), Byzantine, Umayyad Caliphate (Damascus capital 661-750), Crusader states, Ayyubids (Saladin), Mamluks, Ottoman rule, Arab Revolt 1916, French Mandate, independence 1946, Ba'ath coups, Hafez Assad's 1970 coup, Alawite dominance, 1982 Hama massacre, Bashar's succession 2000, Arab Spring 2011, civil war (2011-present, ~500,000 dead, half population displaced), ISIS caliphate 2014-2019, Russian/Iranian intervention, Kurdish SDF, and ongoing fragmentation.",
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000",
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Damascus",
@@ -28,7 +33,8 @@
       "Kurdish",
       "Armenian",
       "Aramaic",
-      "French (legacy)"
+      "Circassian",
+      "French"
     ],
     "government_type": "Unitary Ba'athist presidential republic (de jure), authoritarian dictatorship (de facto) under military occupation/civil war",
     "currency": "Syrian pound (SYP)",
@@ -58,7 +64,9 @@
       "Christianity": "10%",
       "Druze": "3%",
       "Islam_Shia_Ismaili": "2%",
-      "note": "Alawite minority (Shia offshoot) has ruled since 1970 (Assad family); Sunni majority resents Alawite dominance; Christians (Greek Orthodox, Armenian, Syriac) protected under Assad (feared Sunni Islamists); Druze in south; sectarian civil war dimension"
+      "note": "Alawite minority (Shia offshoot) has ruled since 1970 (Assad family); Sunni majority resents Alawite dominance; Christians (Greek Orthodox, Armenian, Syriac) protected under Assad (feared Sunni Islamists); Druze in south; sectarian civil war dimension",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -88,100 +96,665 @@
     "time_zone": "EET (UTC+2) / EEST (UTC+3)",
     "independence": {
       "date": "1946-04-17",
-      "from": "France (League of Nations mandate)"
+      "from": "France (League of Nations mandate)",
+      "notes": ""
     },
     "continent": "Asia",
     "notes_unique": "Civil War 2011-present (~500,000+ dead, 13M displaced/refugees, 6.7M internal, 6.8M external including Turkey 3.6M); Arab Spring protests (Daraa 2011) sparked crackdown; Assad regime (Alawite) vs rebels/ISIS/Kurds; Russian intervention 2015 (turned tide for Assad); Iranian/Hezbollah support; US/Turkey/Gulf involvement; Golan Heights occupied by Israel (1967); Damascus oldest continuously inhabited city; Palmyra (UNESCO, destroyed by ISIS); chemical weapons (Ghouta 2013, Khan Shaykhun 2017); Caesar Act sanctions; economic collapse",
     "demographics": {
-      "median_age": 0,
-      "urbanization_pct": 0,
-      "fertility_rate": 0,
-      "life_expectancy": 0,
-      "infant_mortality_per_1k": 0,
-      "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "median_age": 24.6,
+      "population_growth_rate_pct": 1.9,
+      "urbanization_pct": 57.0,
+      "urban_population_growth_rate_pct": 4.5,
+      "fertility_rate": 2.8,
+      "life_expectancy": 73.0,
+      "life_expectancy_male": 68.5,
+      "life_expectancy_female": 77.5,
+      "infant_mortality_per_1k": 13.5,
+      "under5_mortality_per_1k": 16.0,
+      "literacy_rate_pct": 86.4,
+      "net_migration_rate": -5.0,
+      "sex_ratio": 1.01,
+      "dependency_ratio": 55.0,
+      "population_density_per_km2": 120,
+      "age_structure": {
+        "0_14_pct": 31.5,
+        "15_24_pct": 20.0,
+        "25_54_pct": 38.0,
+        "55_64_pct": 5.5,
+        "65_plus_pct": 5.0
+      }
     },
     "natural_resources": {
-      "primary": [],
-      "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "primary": [
+        "petroleum",
+        "phosphates",
+        "chrome",
+        "manganese",
+        "asphalt",
+        "iron ore",
+        "rock salt",
+        "marble",
+        "gypsum"
+      ],
+      "resource_dependency_pct_gdp": 15,
+      "resource_curse_risk": "High",
+      "notes": "Pre-war oil production ~380,000 bpd (now ~80,000 bpd); SDF/US controls NE oil fields; phosphate mines in Palmyra area; most infrastructure destroyed."
     },
     "military": {
-      "budget_usd": "",
-      "pct_of_gdp": 0,
-      "active_personnel": 0,
-      "reserve_personnel": 0,
+      "budget_usd": "$2.5 billion",
+      "pct_of_gdp": 7.0,
+      "active_personnel": 170000,
+      "reserve_personnel": 100000,
+      "paramilitary_personnel": 100000,
       "nuclear_status": "Non-nuclear",
-      "alliances": [],
-      "notes": ""
+      "alliances": [
+        "Iran (mutual defense)",
+        "Russia (Hmeimim/Tartus bases)"
+      ],
+      "conscription": true,
+      "global_firepower_rank": 64,
+      "notes": "Syrian Arab Army depleted by war/defections; relies on militias, Hezbollah, Iranian IRGC, Russian air power; multiple armed factions (SDF, HTS, Turkish-backed SNA, ISIS remnants)."
     },
     "trade": {
-      "top_exports": [],
-      "top_imports": [],
-      "major_partners": [],
-      "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "total_exports_usd": "$700 million",
+      "total_imports_usd": "$5 billion",
+      "top_exports": [
+        "olive oil",
+        "cumin seeds",
+        "live animals",
+        "phosphates",
+        "textiles"
+      ],
+      "top_imports": [
+        "foodstuffs",
+        "petroleum",
+        "machinery",
+        "vehicles",
+        "pharmaceuticals"
+      ],
+      "major_partners": [
+        "Iraq",
+        "Lebanon",
+        "Turkey",
+        "Iran",
+        "UAE"
+      ],
+      "top_export_destinations": [
+        "Iraq",
+        "Lebanon",
+        "Jordan",
+        "Turkey",
+        "Egypt"
+      ],
+      "top_import_origins": [
+        "Turkey",
+        "China",
+        "Lebanon",
+        "Iran",
+        "Iraq"
+      ],
+      "trade_balance": "-$4.3 billion",
+      "trade_as_pct_gdp": 52,
+      "current_account_balance_usd": "-$3 billion",
+      "remittances_pct_gdp": 10.0,
+      "trade_agreements": [
+        "GAFTA (limited)",
+        "Bilateral with Iran/Iraq"
+      ],
+      "special_economic_zones": []
     },
     "infrastructure": {
-      "internet_penetration_pct": 0,
-      "electricity_access_pct": 0,
-      "mobile_subscriptions_per_100": 0,
-      "railway_km": 0,
-      "paved_roads_pct": 0
+      "internet_penetration_pct": 36.0,
+      "broadband_subscriptions_per_100": 4,
+      "electricity_access_pct": 45,
+      "mobile_subscriptions_per_100": 75,
+      "4g_coverage_pct": 20,
+      "5g_availability": false,
+      "railway_km": 2052,
+      "road_network_km": 69873,
+      "paved_roads_pct": 60,
+      "waterways_km": 900,
+      "submarine_cables": [],
+      "notes": "Infrastructure devastated by war; estimated $120B rebuilding cost for infrastructure alone; railways mostly non-operational; internet via satellite in some areas."
     },
     "international_memberships": [],
     "governance_indices": {
       "corruption_perception_index": {
-        "score": 0,
-        "rank": 0,
-        "year": 0
+        "score": 13,
+        "rank": 177,
+        "year": 2023
       },
       "press_freedom_index": {
-        "rank": 0,
-        "year": 0
+        "rank": 179,
+        "year": 2023
       },
       "democracy_index": {
-        "score": 0,
-        "category": "",
-        "year": 0
+        "score": 1.43,
+        "category": "Authoritarian",
+        "year": 2023
       },
       "fragile_states_index": {
-        "score": 0,
-        "year": 0
+        "score": 108.4,
+        "year": 2023
+      },
+      "rule_of_law_index": {
+        "score": 0.26,
+        "rank": 139,
+        "year": 2023
+      },
+      "government_effectiveness_index": {
+        "score": -1.85,
+        "percentile": 2,
+        "year": 2022
+      },
+      "regulatory_quality_index": {
+        "score": -1.7,
+        "percentile": 3,
+        "year": 2022
+      },
+      "political_stability_index": {
+        "score": -2.8,
+        "percentile": 1,
+        "year": 2022
       }
     },
     "climate_environment": {
-      "climate_zones": [],
-      "co2_emissions_mt": 0,
-      "renewable_energy_pct": 0,
-      "natural_hazards": [],
-      "protected_areas_pct": 0
+      "climate_zones": [
+        "Mediterranean (coast)",
+        "Semi-arid (interior)",
+        "Arid (desert east)"
+      ],
+      "average_temperature_c": 18.0,
+      "average_rainfall_mm": 250,
+      "co2_emissions_mt": 18,
+      "co2_per_capita_t": 0.8,
+      "renewable_energy_pct": 5,
+      "natural_hazards": [
+        "Droughts",
+        "Dust storms",
+        "Earthquakes",
+        "Floods"
+      ],
+      "protected_areas_pct": 0.7,
+      "deforestation_rate_pct": 3,
+      "water_stress_level": "Extremely High",
+      "environmental_performance_index": {
+        "score": 22.0,
+        "rank": 172,
+        "year": 2022
+      },
+      "paris_agreement_status": "Not ratified",
+      "biodiversity": {
+        "known_species": 5000,
+        "endemic_species": 100,
+        "threatened_species": 50
+      },
+      "notes": "Pre-war drought (2006-2010) contributed to conflict (rural-urban migration); Feb 2023 earthquake killed 6,000+ in Syria; environmental destruction from war (oil spills, deforestation for fuel)."
     },
     "debt_aid": {
-      "national_debt_pct_gdp": 0,
-      "foreign_aid_received_usd": "",
-      "notes": ""
+      "national_debt_pct_gdp": 130.0,
+      "external_debt_usd": "$11 billion",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_received_usd": "$4.4 billion",
+      "foreign_aid_given_usd": "$0",
+      "top_donors": [
+        "USA (northeast/cross-border)",
+        "EU",
+        "Turkey",
+        "Germany",
+        "UK",
+        "UN agencies"
+      ],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": true,
+      "hipc_status": "",
+      "notes": "Sanctions prevent debt servicing; no international reconstruction aid to regime; cross-border humanitarian aid (UN Resolution 2672); $4.4B humanitarian funding (largest UN appeal globally)."
     },
     "education": {
-      "primary_enrollment_pct": 0,
-      "secondary_enrollment_pct": 0,
-      "tertiary_enrollment_pct": 0,
+      "education_expenditure_pct_gdp": 3.5,
+      "primary_enrollment_pct": 65,
+      "secondary_enrollment_pct": 50,
+      "tertiary_enrollment_pct": 20,
+      "primary_completion_rate_pct": 60,
+      "gender_parity_index": 0.92,
+      "mean_years_of_schooling": 5.3,
+      "expected_years_of_schooling": 8.0,
       "pisa_participation": false,
-      "top_universities": [],
-      "notes": ""
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 20,
+      "out_of_school_children": 2500000,
+      "top_universities": [
+        "University of Damascus",
+        "University of Aleppo",
+        "Tishreen University",
+        "Al-Baath University"
+      ],
+      "academic_freedom_index": 0.05,
+      "notes": "2.5M children out of school; 1/3 of schools damaged/destroyed/occupied; generation at risk; separate curricula in different zones; brain drain of academics."
     },
     "diaspora_migration": {
-      "diaspora_population": "",
+      "diaspora_population": "~8 million (refugees + pre-war diaspora)",
+      "diaspora_top_destinations": [
+        "Turkey",
+        "Lebanon",
+        "Jordan",
+        "Germany",
+        "Iraq",
+        "Egypt",
+        "Sweden",
+        "Canada"
+      ],
       "refugees_hosted": 0,
-      "refugees_produced": 0,
-      "remittances_usd": "",
-      "notes": ""
+      "refugees_produced": 6800000,
+      "asylum_seekers": 200000,
+      "stateless_persons": 160000,
+      "internally_displaced_persons": 6800000,
+      "immigration_policy": "Conflict zone; no meaningful immigration policy",
+      "remittances_usd": "$1.8 billion",
+      "remittances_pct_gdp": 10.0,
+      "net_migration_rate_per_1k": -5.0,
+      "notes": "Largest refugee crisis globally (6.8M external refugees); Turkey hosts 3.5M; 2015 European migrant crisis; some voluntary returns but conditions unsafe; stateless Palestinians/Kurds."
     },
     "digital_economy": {
-      "e_government_index": 0,
-      "mobile_money_adoption": "",
+      "e_government_index": 0.3,
+      "e_participation_index": 0.1,
+      "ict_development_index": 2.1,
+      "mobile_money_adoption": "Minimal",
+      "mobile_money_accounts": 0,
+      "digital_payments_pct_adults": 5,
+      "fintech_companies": 0,
       "tech_hubs": [],
-      "notes": ""
+      "startup_ecosystem_value_usd": "$0",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 10.0,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 5.0,
+      "notes": "Internet heavily censored and monitored; telecom infrastructure damaged; Syriatel (Rami Makhlouf) dominant provider; digital economy negligible due to war and sanctions."
+    },
+    "capital_coordinates": {
+      "lat": 33.5138,
+      "lon": 36.2765
+    },
+    "other_major_cities": [
+      "Aleppo",
+      "Homs",
+      "Hama",
+      "Latakia",
+      "Deir ez-Zor",
+      "Daraa"
+    ],
+    "national_motto": "Wahda, Hurriya, Ishtirakiya (Unity, Freedom, Socialism)",
+    "national_anthem": "Humat ad-Diyar (Guardians of the Homeland)",
+    "currency_code": "SYP",
+    "internet_tld": ".sy",
+    "utc_offset": "UTC+3",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 34.8021,
+        "lon": 38.9968
+      },
+      "bounding_box": {
+        "north": 37.32,
+        "south": 32.31,
+        "east": 42.38,
+        "west": 35.73
+      },
+      "land_area_km2": 183630,
+      "water_area_km2": 1550,
+      "coastline_km": 193,
+      "borders": [
+        "Turkey",
+        "Iraq",
+        "Jordan",
+        "Israel",
+        "Lebanon"
+      ],
+      "border_lengths_km": {
+        "Turkey": 899,
+        "Iraq": 599,
+        "Jordan": 379,
+        "Israel": 83,
+        "Lebanon": 403
+      },
+      "highest_point": {
+        "name": "Mount Hermon",
+        "elevation_m": 2814
+      },
+      "lowest_point": {
+        "name": "Sea of Galilee",
+        "elevation_m": -200
+      },
+      "terrain": "Coastal mountains (Al-Nusayriyah); fertile Al-Ghab plain; Syrian Desert east; Euphrates valley northeast",
+      "land_use": {
+        "agricultural_pct": 75.8,
+        "arable_pct": 25.4,
+        "forest_pct": 2.7,
+        "other_pct": 21.5
+      },
+      "major_rivers": [
+        "Euphrates",
+        "Khabur",
+        "Orontes (Asi)",
+        "Barada"
+      ],
+      "major_lakes": [
+        "Lake Assad",
+        "Muzayrib Lake"
+      ],
+      "exclusive_economic_zone_km2": 11300,
+      "landlocked": false,
+      "notes": "Crossroads of civilizations; Fertile Crescent; Euphrates River key water source; Golan Heights occupied by Israel since 1967; small Mediterranean coast (Latakia/Tartus)."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$11 billion",
+      "gdp_ppp_usd": "$50 billion",
+      "gdp_per_capita_nominal_usd": 500,
+      "gdp_per_capita_ppp_usd": 2300,
+      "gdp_growth_rate_pct": -3.0,
+      "inflation_rate_pct": 100.0,
+      "unemployment_rate_pct": 50.0,
+      "youth_unemployment_rate_pct": 70.0,
+      "poverty_rate_pct": 90.0,
+      "poverty_line_definition": "Under $1.90/day (extreme poverty)",
+      "gini_coefficient": 0,
+      "income_classification": "Low income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 26,
+        "industry_pct_gdp": 22,
+        "services_pct_gdp": 52
+      },
+      "labor_force": 4000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 17,
+        "industry_pct": 16,
+        "services_pct": 67
+      },
+      "fdi_inflow_usd": "$0",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$1 billion",
+      "ease_of_doing_business_rank": 176,
+      "economic_freedom_index_score": 0,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Economy devastated by civil war (2011-present); GDP contracted ~60% from pre-war levels; sanctions (US Caesar Act, EU); currency collapsed (SYP ~15,000/$1 parallel); 90% in poverty; reconstruction estimated at $400B+."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.0,
+      "health_expenditure_per_capita_usd": 15,
+      "physicians_per_1k": 0.5,
+      "nurses_midwives_per_1k": 1.0,
+      "hospital_beds_per_1k": 1.4,
+      "maternal_mortality_per_100k": 31,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 18,
+      "access_to_clean_water_pct": 50,
+      "access_to_sanitation_pct": 40,
+      "vaccination_coverage_pct": 50,
+      "stunting_under5_pct": 28,
+      "obesity_rate_pct": 27.8,
+      "universal_health_coverage_index": 15,
+      "leading_causes_of_death": [
+        "War injuries/violence",
+        "Cardiovascular diseases",
+        "Communicable diseases",
+        "Neonatal disorders"
+      ],
+      "notes": "Health system largely destroyed; 50% hospitals non-functional; massive brain drain of doctors; polio re-emerged; cholera outbreaks; WHO/NGOs provide most care in opposition areas."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 15.0,
+      "food_security_index_rank": 113,
+      "arable_land_pct": 25.4,
+      "agricultural_land_pct": 75.8,
+      "irrigated_land_pct": 8,
+      "major_crops": [
+        "wheat",
+        "barley",
+        "cotton",
+        "lentils",
+        "olives",
+        "sugar beets",
+        "citrus"
+      ],
+      "major_livestock": [
+        "sheep",
+        "goats",
+        "cattle",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 80,
+      "cereal_yield_kg_per_hectare": 1500,
+      "agricultural_employment_pct": 17,
+      "prevalence_of_undernourishment_pct": 55.0,
+      "notes": "12.1M food insecure (WFP); pre-war self-sufficient in wheat; irrigation infrastructure destroyed; wheat production ~1/3 of pre-war; bread subsidies critical."
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 95,
+        "hydroelectric_pct": 4,
+        "solar_pct": 1,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 3000,
+      "electricity_production_gwh": 8000,
+      "electricity_consumption_per_capita_kwh": 400,
+      "energy_imports_pct": 30,
+      "oil_production_bpd": 80000,
+      "oil_consumption_bpd": 100000,
+      "natural_gas_production_bcm": 3.0,
+      "energy_access_rural_pct": 30,
+      "energy_access_urban_pct": 60,
+      "notes": "Power grid severely damaged; 2-4 hours electricity/day in many areas; oil fields split between regime/SDF/ISIS remnants; Iran provides oil shipments; solar panels widespread as coping mechanism."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Damascus International Airport (partially operational)"
+      ],
+      "major_airports_domestic": [
+        "Aleppo International Airport (reopened 2020)",
+        "Latakia (Bassel al-Assad) Airport"
+      ],
+      "national_airline": "Syrian Air (limited operations; EU/US banned)",
+      "major_seaports": [
+        "Latakia",
+        "Tartus"
+      ],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 24,
+      "registered_vehicles_per_1k": 50,
+      "road_fatalities_per_100k": 0,
+      "notes": "Damascus airport intermittently closed (Israeli airstrikes); most civilian aviation suspended; Tartus Russian naval base; Latakia only functional commercial port."
+    },
+    "tourism": {
+      "annual_visitors": 100000,
+      "tourism_revenue_usd": "$100 million",
+      "tourism_pct_gdp": 0.9,
+      "tourism_employment_pct": 2,
+      "unesco_world_heritage_sites": 6,
+      "unesco_sites_list": [
+        "Ancient City of Damascus",
+        "Ancient City of Bosra",
+        "Site of Palmyra",
+        "Ancient City of Aleppo",
+        "Crac des Chevaliers and Qal'at Salah El-Din",
+        "Ancient Villages of Northern Syria"
+      ],
+      "major_attractions": [
+        "Damascus Old City",
+        "Krak des Chevaliers",
+        "Palmyra (damaged)",
+        "Aleppo Citadel (damaged)",
+        "Umayyad Mosque (Damascus)"
+      ],
+      "visa_free_access_countries": 8,
+      "henley_passport_rank": 109,
+      "notes": "Pre-war received 8.5M visitors (2010); all 6 UNESCO sites on Danger List; Palmyra partially destroyed by ISIS; Aleppo souks/Old City severely damaged; minimal tourism."
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Not Free",
+      "freedom_house_score": 1,
+      "gender_inequality_index": 0.547,
+      "gender_inequality_rank": 145,
+      "gender_gap_index_score": 0.568,
+      "women_in_parliament_pct": 12,
+      "women_labor_force_participation_pct": 12,
+      "maternal_mortality_per_100k": 31,
+      "child_marriage_pct": 13,
+      "fgm_prevalence_pct": 0,
+      "lgbtq_legal_status": "Illegal (up to 3 years)",
+      "death_penalty_status": "Retained",
+      "human_trafficking_tier": "Tier 3",
+      "child_labor_pct": 25,
+      "notes": "Systematic human rights violations documented (Caesar photos, chemical weapons, barrel bombs); worst humanitarian crisis of 21st century; mass detentions/disappearances; Freedom House score 1/100."
+    },
+    "security_stability": {
+      "global_peace_index_score": 3.294,
+      "global_peace_index_rank": 162,
+      "terrorism_index_score": 7.6,
+      "terrorism_index_rank": 5,
+      "homicide_rate_per_100k": 2.0,
+      "active_conflicts": [
+        "Syrian Civil War (2011-present)",
+        "ISIS remnants",
+        "Israeli strikes on Iranian assets",
+        "Turkish operations in northeast"
+      ],
+      "border_disputes": [
+        "Golan Heights (Israeli-occupied since 1967)",
+        "Hatay Province (claimed from Turkey)"
+      ],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": "$500 million",
+      "internally_displaced_persons": 6800000,
+      "notes": "Civil war has killed 500,000+; 6.8M IDPs, 6.8M refugees (largest displacement crisis); multiple foreign military presences (Russia, Iran, Turkey, USA); fragmented sovereignty."
+    },
+    "legal_system": {
+      "legal_tradition": "Mixed (civil law, Islamic law, Ottoman remnants)",
+      "constitution_year": 2012,
+      "sharia_applicability": "Personal status law for Muslims",
+      "customary_law_role": "Tribal law in eastern regions",
+      "icc_membership": "Non-member",
+      "judicial_independence_score": 0.1,
+      "contract_enforcement_days": 872,
+      "property_rights_index": 10,
+      "notes": "2012 constitution during civil war; regime areas under Assad control; NE Syria (AANES) uses own legal system; HTS areas apply different law; property rights crisis (Law No. 10 for reconstruction)."
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "Hawk of Quraish (coat of arms)"
+      ],
+      "national_animal": "",
+      "national_flower": "Jasmine (Damascus rose)",
+      "national_dish": "Kibbeh",
+      "national_sport": "Football",
+      "major_festivals": [
+        "Eid al-Fitr",
+        "Eid al-Adha",
+        "Mawlid an-Nabi",
+        "Christmas (Christians)",
+        "Nowruz (Kurds)"
+      ],
+      "cuisine_highlights": [
+        "Kibbeh",
+        "Shawarma",
+        "Fattoush",
+        "Tabbouleh",
+        "Muhammara",
+        "Baklava",
+        "Knafeh",
+        "Damascus rose water"
+      ],
+      "music_art_traditions": [
+        "Dabke (group dance)",
+        "Maqam music",
+        "Calligraphy",
+        "Mosaic art (Damascus)",
+        "Damascene metalwork (inlay)"
+      ],
+      "film_industry": "Pre-war Syrian drama/TV widely watched across Arab world",
+      "intangible_heritage_items": [
+        "Damascene rose water distilling",
+        "Shadow puppet theater (Karagoz)",
+        "Al-Ayyala dance"
+      ],
+      "notable_historical_figures": [
+        "Saladin (born in Tikrit, ruled from Damascus)",
+        "Queen Zenobia of Palmyra",
+        "Umayyad Caliphs",
+        "Hafez al-Assad"
+      ],
+      "world_heritage_sites": [
+        "Damascus",
+        "Bosra",
+        "Palmyra",
+        "Aleppo",
+        "Crac des Chevaliers",
+        "Dead Cities (Northern Syria)"
+      ],
+      "media_landscape": "State media dominant; citizen journalists in opposition areas; social media key for documentation",
+      "notes": "Damascus one of oldest continuously inhabited cities; Umayyad Mosque masterpiece; Aleppo was largest city in the Levant; all 6 heritage sites on UNESCO Danger List since 2013."
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 13,
+        "global_rank": 56
+      },
+      "area": {
+        "continent_rank": 12,
+        "global_rank": 87
+      },
+      "gdp_nominal": {
+        "continent_rank": 15,
+        "global_rank": 140
+      },
+      "gdp_per_capita": {
+        "continent_rank": 17,
+        "global_rank": 175
+      },
+      "hdi": {
+        "continent_rank": 16,
+        "global_rank": 152
+      },
+      "life_expectancy": {
+        "continent_rank": 13,
+        "global_rank": 95
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 16,
+        "global_rank": 176
+      },
+      "internet_penetration": {
+        "continent_rank": 14,
+        "global_rank": 145
+      },
+      "press_freedom": {
+        "continent_rank": 17,
+        "global_rank": 179
+      },
+      "global_peace_index": {
+        "continent_rank": 18,
+        "global_rank": 162
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "notes": "Rankings within Western Asia (18 countries). War-devastated economy; lowest governance scores globally."
     }
   },
   "leadership": {
@@ -189,7 +762,8 @@
       "name": "Bashar al-Assad",
       "title": "President",
       "since": "2000-07-17",
-      "notes": "Ba'ath Party; Alawite; inherited from father Hafez; ophthalmologist (London-trained); initially 'reformer' hopes; Arab Spring crackdown 2011 sparked civil war; war crimes (barrel bombs, chemical weapons, torture, Saydnaya prison); Russian/Iranian-backed; survived war; pariah; wife Asma (British-born)"
+      "notes": "Ba'ath Party; Alawite; inherited from father Hafez; ophthalmologist (London-trained); initially 'reformer' hopes; Arab Spring crackdown 2011 sparked civil war; war crimes (barrel bombs, chemical weapons, torture, Saydnaya prison); Russian/Iranian-backed; survived war; pariah; wife Asma (British-born)",
+      "party": ""
     },
     "note_civil_war": "Syria fragmented: Assad regime controls ~70% (coast, Damascus, Aleppo); SDF/Kurds control ~25% northeast (Rojava); Turkish-backed rebels (Idlib/north, ~5%); small ISIS remnants; Israeli strikes on Iranian targets routine; Russian/Iranian military presence; Hezbollah involvement; civil war ongoing since 2011",
     "former_leaders": [
@@ -212,7 +786,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

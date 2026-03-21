@@ -1,0 +1,318 @@
+{
+  "_meta": {
+    "description": "Registry of all nodes sourced from frontend visualization data files. These nodes complement the backend knowledge graph (data/Nodes/) and per-country geo-registry files.",
+    "sources": [
+      "ui/src/data/timeline-events.ts",
+      "ui/src/data/case-studies.ts",
+      "ui/src/data/trade-routes.ts",
+      "ui/src/data/world-languages.ts",
+      "ui/src/data/world-diet.ts",
+      "ui/src/data/weapons.ts",
+      "ui/src/data/ideas.ts"
+    ],
+    "last_updated": "2025-07-13",
+    "total_nodes": 528,
+    "by_label": {
+      "Event": 180,
+      "Person": 12,
+      "Movement": 8,
+      "Institution": 5,
+      "Place": 3,
+      "Text": 3,
+      "Idea": 82,
+      "Artifact": 7,
+      "Framework": 13,
+      "CausalNode": 79,
+      "TradeRoute": 7,
+      "LanguageFamily": 13,
+      "DietType": 6,
+      "Weapon": 127,
+      "HistoricalIdea": 67
+    },
+    "conventions": {
+      "slug_format": "kebab-case or snake_case matching source data",
+      "status": "FRONTEND — nodes documented in UI visualization data; not yet seeded into Neo4j",
+      "label_mapping": "Each node's 'category' field in timeline data maps to a schema label (Event, Person, Movement, etc.)"
+    }
+  },
+  "timeline_events": {
+    "_meta": { "source": "ui/src/data/timeline-events.ts", "count": 108 },
+    "by_era": {
+      "prehistory": [
+        { "slug": "out-of-africa-migration", "name": "Out of Africa Migration", "label": "Event", "year": -70000, "region": "East Africa" },
+        { "slug": "cave-art-lascaux", "name": "Cave Art at Lascaux", "label": "Event", "year": -17000, "region": "Western Europe" },
+        { "slug": "neolithic-revolution", "name": "Neolithic Revolution Begins", "label": "Event", "year": -10000, "region": "West Asia" },
+        { "slug": "first-domestication-dogs", "name": "First Domestication of Dogs", "label": "Event", "year": -15000, "region": "East Asia" },
+        { "slug": "blombos-cave-engravings", "name": "Blombos Cave Engravings", "label": "Event", "year": -75000, "region": "Southern Africa" },
+        { "slug": "humans-reach-australia", "name": "Humans Reach Australia", "label": "Event", "year": -65000, "region": "Oceania" },
+        { "slug": "lion-man-hohlenstein", "name": "Lion-Man of Hohlenstein-Stadel", "label": "Event", "year": -40000, "region": "Western Europe" },
+        { "slug": "beringia-land-bridge", "name": "Beringia Land Bridge Crossing", "label": "Event", "year": -16000, "region": "Americas" },
+        { "slug": "gobekli-tepe", "name": "Göbekli Tepe Constructed", "label": "Event", "year": -9500, "region": "West Asia" },
+        { "slug": "rice-cultivation-china", "name": "Rice Cultivation in China", "label": "Event", "year": -9000, "region": "East Asia" },
+        { "slug": "saharan-green-period", "name": "Saharan Green Period", "label": "Event", "year": -8000, "region": "North Africa" },
+        { "slug": "jericho-settlement", "name": "Jericho Settlement Founded", "label": "Place", "year": -8000, "region": "West Asia" },
+        { "slug": "pottery-invented-japan", "name": "Pottery Invented in Japan", "label": "Event", "year": -16000, "region": "East Asia" },
+        { "slug": "maize-domesticated", "name": "Maize Domesticated in Mesoamerica", "label": "Event", "year": -7000, "region": "Americas" },
+        { "slug": "catalhoyuk", "name": "Çatalhöyük Thrives", "label": "Place", "year": -7500, "region": "West Asia" },
+        { "slug": "aboriginal-songlines", "name": "Aboriginal Songlines Established", "label": "Idea", "year": -50000, "region": "Oceania" },
+        { "slug": "copper-smelting-begins", "name": "Copper Smelting Begins", "label": "Event", "year": -5000, "region": "Eastern Europe" },
+        { "slug": "bantu-expansion", "name": "Bantu Expansion Begins", "label": "Movement", "year": -3000, "region": "West Africa" }
+      ],
+      "ancient": [
+        { "slug": "cuneiform-writing", "name": "Cuneiform Writing Invented", "label": "Event", "year": -3400, "region": "West Asia" },
+        { "slug": "great-pyramid-giza", "name": "Great Pyramid of Giza Built", "label": "Event", "year": -2560, "region": "North Africa" },
+        { "slug": "code-of-hammurabi", "name": "Code of Hammurabi", "label": "Event", "year": -1754, "region": "West Asia" },
+        { "slug": "first-olympic-games", "name": "First Olympic Games", "label": "Event", "year": -776, "region": "Western Europe" },
+        { "slug": "athenian-democracy", "name": "Athenian Democracy", "label": "Event", "year": -508, "region": "Western Europe" },
+        { "slug": "alexander-great-conquests", "name": "Alexander the Great Conquests", "label": "Person", "year": -334, "region": "West Asia" },
+        { "slug": "great-wall-construction", "name": "Great Wall Construction Begins", "label": "Event", "year": -221, "region": "East Asia" },
+        { "slug": "birth-christianity", "name": "Birth of Christianity", "label": "Movement", "year": 30, "region": "West Asia" },
+        { "slug": "fall-western-roman-empire", "name": "Fall of Western Roman Empire", "label": "Event", "year": 476, "region": "Western Europe" },
+        { "slug": "indus-valley-civilization", "name": "Indus Valley Civilization Flourishes", "label": "Event", "year": -2600, "region": "South Asia" },
+        { "slug": "kingdom-of-kush", "name": "Kingdom of Kush Rises", "label": "Event", "year": -1070, "region": "East Africa" },
+        { "slug": "buddha-teaches-dharma", "name": "Buddha Teaches the Dharma", "label": "Person", "year": -528, "region": "South Asia" },
+        { "slug": "confucius-philosophy", "name": "Confucius Develops His Philosophy", "label": "Person", "year": -500, "region": "East Asia" },
+        { "slug": "olmec-civilization-peak", "name": "Olmec Civilization Peak", "label": "Event", "year": -900, "region": "Americas" },
+        { "slug": "ashoka-embraces-buddhism", "name": "Ashoka Embraces Buddhism", "label": "Person", "year": -260, "region": "South Asia" },
+        { "slug": "silk-road-established", "name": "Silk Road Trade Established", "label": "Event", "year": -130, "region": "Central Asia" },
+        { "slug": "library-alexandria", "name": "Library of Alexandria Founded", "label": "Institution", "year": -283, "region": "North Africa" },
+        { "slug": "nazca-lines", "name": "Nazca Lines Created", "label": "Event", "year": -200, "region": "Americas" }
+      ],
+      "medieval": [
+        { "slug": "rise-of-islam", "name": "Rise of Islam", "label": "Movement", "year": 622, "region": "West Asia" },
+        { "slug": "house-of-wisdom", "name": "House of Wisdom Founded", "label": "Institution", "year": 830, "region": "West Asia" },
+        { "slug": "genghis-khan", "name": "Genghis Khan Unites Mongols", "label": "Person", "year": 1206, "region": "Central Asia" },
+        { "slug": "magna-carta", "name": "Magna Carta Signed", "label": "Event", "year": 1215, "region": "Western Europe" },
+        { "slug": "black-death-europe", "name": "Black Death in Europe", "label": "Event", "year": 1347, "region": "Western Europe" },
+        { "slug": "fall-constantinople", "name": "Fall of Constantinople", "label": "Event", "year": 1453, "region": "Eastern Europe" },
+        { "slug": "kingdom-ghana-height", "name": "Kingdom of Ghana at Its Height", "label": "Event", "year": 900, "region": "West Africa" },
+        { "slug": "great-zimbabwe", "name": "Great Zimbabwe Constructed", "label": "Event", "year": 1100, "region": "Southern Africa" },
+        { "slug": "angkor-wat", "name": "Angkor Wat Built", "label": "Event", "year": 1150, "region": "Southeast Asia" },
+        { "slug": "mansa-musa-pilgrimage", "name": "Mansa Musa's Pilgrimage", "label": "Person", "year": 1324, "region": "West Africa" },
+        { "slug": "polynesian-new-zealand", "name": "Polynesian Voyagers Reach New Zealand", "label": "Event", "year": 1250, "region": "Oceania" },
+        { "slug": "first-crusade", "name": "First Crusade Captures Jerusalem", "label": "Event", "year": 1099, "region": "West Asia" },
+        { "slug": "ibn-battuta-travels", "name": "Ibn Battuta's Travels", "label": "Person", "year": 1325, "region": "North Africa" },
+        { "slug": "tang-dynasty-golden-age", "name": "Tang Dynasty Golden Age", "label": "Event", "year": 700, "region": "East Asia" },
+        { "slug": "viking-expansion", "name": "Viking Expansion Begins", "label": "Event", "year": 793, "region": "Western Europe" },
+        { "slug": "cahokia", "name": "Cahokia: America's First City", "label": "Place", "year": 1050, "region": "Americas" },
+        { "slug": "inca-empire-expands", "name": "Inca Empire Expands", "label": "Event", "year": 1438, "region": "Americas" },
+        { "slug": "gutenberg-bible", "name": "Gutenberg Prints the Bible", "label": "Event", "year": 1455, "region": "Western Europe" }
+      ],
+      "early-modern": [
+        { "slug": "columbus-americas", "name": "Columbus Reaches the Americas", "label": "Event", "year": 1492, "region": "Americas" },
+        { "slug": "luther-95-theses", "name": "Martin Luther's 95 Theses", "label": "Movement", "year": 1517, "region": "Western Europe" },
+        { "slug": "mughal-empire-founded", "name": "Mughal Empire Founded", "label": "Event", "year": 1526, "region": "South Asia" },
+        { "slug": "american-revolution", "name": "American Revolution", "label": "Event", "year": 1776, "region": "Americas" },
+        { "slug": "french-revolution", "name": "French Revolution", "label": "Event", "year": 1789, "region": "Western Europe" },
+        { "slug": "vasco-da-gama-india", "name": "Vasco da Gama Reaches India", "label": "Event", "year": 1498, "region": "South Asia" },
+        { "slug": "atlantic-slave-trade", "name": "Atlantic Slave Trade Intensifies", "label": "Event", "year": 1550, "region": "West Africa" },
+        { "slug": "galileo-heliocentrism", "name": "Galileo Confirms Heliocentrism", "label": "Person", "year": 1610, "region": "Western Europe" },
+        { "slug": "qing-dynasty", "name": "Qing Dynasty Established", "label": "Event", "year": 1644, "region": "East Asia" },
+        { "slug": "treaty-westphalia", "name": "Treaty of Westphalia", "label": "Event", "year": 1648, "region": "Western Europe" },
+        { "slug": "newton-principia", "name": "Newton Publishes Principia", "label": "Text", "year": 1687, "region": "Western Europe" },
+        { "slug": "haitian-revolution", "name": "Haitian Revolution", "label": "Event", "year": 1791, "region": "Americas" },
+        { "slug": "edo-period", "name": "Edo Period Culture Flourishes", "label": "Event", "year": 1700, "region": "East Asia" },
+        { "slug": "kingdom-benin-peak", "name": "Kingdom of Benin at Its Peak", "label": "Event", "year": 1550, "region": "West Africa" },
+        { "slug": "safavid-persia", "name": "Safavid Persia under Shah Abbas", "label": "Person", "year": 1598, "region": "West Asia" },
+        { "slug": "cook-maps-pacific", "name": "Captain Cook Maps the Pacific", "label": "Event", "year": 1770, "region": "Oceania" },
+        { "slug": "bolivar-liberates", "name": "Simón Bolívar Liberates South America", "label": "Person", "year": 1819, "region": "Americas" },
+        { "slug": "encyclopedie", "name": "Encyclopédie Published", "label": "Text", "year": 1751, "region": "Western Europe" }
+      ],
+      "modern": [
+        { "slug": "steam-engine", "name": "Steam Engine Revolutionizes Industry", "label": "Event", "year": 1769, "region": "Western Europe" },
+        { "slug": "scramble-for-africa", "name": "Scramble for Africa", "label": "Event", "year": 1884, "region": "Western Europe" },
+        { "slug": "meiji-restoration", "name": "Meiji Restoration in Japan", "label": "Event", "year": 1868, "region": "East Asia" },
+        { "slug": "world-war-i", "name": "World War I Begins", "label": "Event", "year": 1914, "region": "Western Europe" },
+        { "slug": "russian-revolution", "name": "Russian Revolution", "label": "Event", "year": 1917, "region": "Eastern Europe" },
+        { "slug": "world-war-ii-ends", "name": "World War II Ends", "label": "Event", "year": 1945, "region": "East Asia" },
+        { "slug": "abolition-slavery-britain", "name": "Abolition of Slavery in Britain", "label": "Event", "year": 1833, "region": "Western Europe" },
+        { "slug": "darwin-origin-species", "name": "Darwin Publishes Origin of Species", "label": "Text", "year": 1859, "region": "Western Europe" },
+        { "slug": "suez-canal-opens", "name": "Suez Canal Opens", "label": "Event", "year": 1869, "region": "North Africa" },
+        { "slug": "zulu-kingdom", "name": "Zulu Kingdom Defends Sovereignty", "label": "Event", "year": 1879, "region": "Southern Africa" },
+        { "slug": "chinese-republic", "name": "Chinese Republic Proclaimed", "label": "Event", "year": 1912, "region": "East Asia" },
+        { "slug": "mexican-revolution", "name": "Mexican Revolution", "label": "Event", "year": 1910, "region": "Americas" },
+        { "slug": "einstein-relativity", "name": "Einstein's Theory of Relativity", "label": "Idea", "year": 1905, "region": "Western Europe" },
+        { "slug": "womens-suffrage", "name": "Women's Suffrage Movement", "label": "Movement", "year": 1893, "region": "Oceania" },
+        { "slug": "ethiopian-victory-adwa", "name": "Ethiopian Victory at Adwa", "label": "Event", "year": 1896, "region": "East Africa" },
+        { "slug": "panama-canal", "name": "Panama Canal Opens", "label": "Event", "year": 1914, "region": "Americas" },
+        { "slug": "gandhi-salt-march", "name": "Gandhi's Salt March", "label": "Person", "year": 1930, "region": "South Asia" },
+        { "slug": "ottoman-empire-collapses", "name": "Ottoman Empire Collapses", "label": "Event", "year": 1922, "region": "West Asia" }
+      ],
+      "contemporary": [
+        { "slug": "united-nations-founded", "name": "United Nations Founded", "label": "Institution", "year": 1945, "region": "Americas" },
+        { "slug": "indian-independence", "name": "Indian Independence", "label": "Event", "year": 1947, "region": "South Asia" },
+        { "slug": "african-independence-wave", "name": "African Independence Wave", "label": "Event", "year": 1960, "region": "West Africa" },
+        { "slug": "moon-landing", "name": "Moon Landing", "label": "Event", "year": 1969, "region": "Americas" },
+        { "slug": "fall-berlin-wall", "name": "Fall of the Berlin Wall", "label": "Event", "year": 1989, "region": "Western Europe" },
+        { "slug": "www-public", "name": "World Wide Web Goes Public", "label": "Event", "year": 1991, "region": "Western Europe" },
+        { "slug": "human-genome-project", "name": "Human Genome Project Completed", "label": "Event", "year": 2003, "region": "Americas" },
+        { "slug": "arab-spring", "name": "Arab Spring", "label": "Movement", "year": 2011, "region": "North Africa" },
+        { "slug": "covid-19", "name": "COVID-19 Pandemic", "label": "Event", "year": 2020, "region": "East Asia" },
+        { "slug": "ai-revolution", "name": "AI Revolution Accelerates", "label": "Event", "year": 2023, "region": "Americas" },
+        { "slug": "chinese-economic-transformation", "name": "Chinese Economic Transformation", "label": "Event", "year": 1978, "region": "East Asia" },
+        { "slug": "end-of-apartheid", "name": "End of Apartheid", "label": "Event", "year": 1994, "region": "Southern Africa" },
+        { "slug": "european-union-formed", "name": "European Union Formed", "label": "Institution", "year": 1993, "region": "Western Europe" },
+        { "slug": "rwandan-genocide", "name": "Rwandan Genocide", "label": "Event", "year": 1994, "region": "East Africa" },
+        { "slug": "climate-change-priority", "name": "Climate Change Becomes Global Priority", "label": "Event", "year": 2015, "region": "Western Europe" },
+        { "slug": "smartphone-revolution", "name": "Smartphone Revolution", "label": "Event", "year": 2007, "region": "Americas" },
+        { "slug": "rise-of-brics", "name": "Rise of BRICS Nations", "label": "Institution", "year": 2009, "region": "South Asia" },
+        { "slug": "pacific-islands-climate", "name": "Pacific Islands Climate Activism", "label": "Movement", "year": 2018, "region": "Oceania" }
+      ]
+    }
+  },
+  "causal_chain_nodes": {
+    "_meta": { "source": "ui/src/data/case-studies.ts", "count": 79, "case_studies": 8 },
+    "route-to-india": [
+      { "slug": "silk-road-trade", "name": "Silk Road Trade", "label": "Event" },
+      { "slug": "mongol-pax", "name": "Mongol Pax", "label": "Event" },
+      { "slug": "mongol-collapse", "name": "Mongol Collapse", "label": "Event" },
+      { "slug": "ottoman-rise", "name": "Ottoman Rise", "label": "Event" },
+      { "slug": "constantinople-falls", "name": "Constantinople Falls", "label": "Event" },
+      { "slug": "spice-demand", "name": "Spice Demand", "label": "Idea" },
+      { "slug": "portuguese-navigation", "name": "Portuguese Navigation", "label": "Event" },
+      { "slug": "bartholomeu-dias", "name": "Bartholomeu Dias", "label": "Person" },
+      { "slug": "columbus-voyage", "name": "Columbus Voyage", "label": "Event" },
+      { "slug": "vasco-da-gama", "name": "Vasco da Gama", "label": "Person" },
+      { "slug": "columbian-exchange", "name": "Columbian Exchange", "label": "Event" }
+    ],
+    "singapore-rise": [
+      { "slug": "sg-geography", "name": "Singapore Geography", "label": "Place" },
+      { "slug": "sg-raffles", "name": "Raffles Establishes Trading Post", "label": "Event" },
+      { "slug": "sg-entrepot", "name": "Entrepôt Economy", "label": "Idea" },
+      { "slug": "sg-ww2", "name": "Fall of Singapore (WWII)", "label": "Event" },
+      { "slug": "sg-self-govt", "name": "Self-Government", "label": "Event" },
+      { "slug": "sg-independence", "name": "Singapore Independence", "label": "Event" },
+      { "slug": "sg-survival", "name": "Survival Strategy", "label": "Idea" },
+      { "slug": "sg-education", "name": "Education Investment", "label": "Institution" },
+      { "slug": "sg-finance", "name": "Financial Hub", "label": "Institution" },
+      { "slug": "sg-tech-hub", "name": "Tech Hub", "label": "Event" },
+      { "slug": "sg-today", "name": "Singapore Today", "label": "Place" }
+    ],
+    "world-wars-origins": [
+      { "slug": "ww-unification", "name": "German/Italian Unification", "label": "Event" },
+      { "slug": "ww-alliances", "name": "Alliance Systems", "label": "Idea" },
+      { "slug": "ww-arms-race", "name": "Arms Race", "label": "Event" },
+      { "slug": "ww-sarajevo", "name": "Assassination at Sarajevo", "label": "Event" },
+      { "slug": "ww-industrialized", "name": "Industrialized Warfare", "label": "Event" },
+      { "slug": "ww-versailles", "name": "Treaty of Versailles", "label": "Event" },
+      { "slug": "ww-hyperinflation", "name": "Hyperinflation", "label": "Event" },
+      { "slug": "ww-depression", "name": "Great Depression", "label": "Event" },
+      { "slug": "ww-hitler-rise", "name": "Hitler's Rise to Power", "label": "Person" },
+      { "slug": "ww-appeasement", "name": "Appeasement Policy", "label": "Idea" },
+      { "slug": "ww-wwii-begins", "name": "WWII Begins", "label": "Event" }
+    ],
+    "mesopotamian-stratification": [
+      { "slug": "ms-irrigation", "name": "Irrigation Systems", "label": "Event" },
+      { "slug": "ms-surplus", "name": "Agricultural Surplus", "label": "Idea" },
+      { "slug": "ms-temples", "name": "Temple Economies", "label": "Institution" },
+      { "slug": "ms-writing", "name": "Invention of Writing", "label": "Event" },
+      { "slug": "ms-kingship", "name": "Kingship Emerges", "label": "Event" },
+      { "slug": "ms-hammurabi", "name": "Hammurabi's Code", "label": "Text" },
+      { "slug": "ms-egypt-adopts", "name": "Egypt Adopts Stratification", "label": "Event" },
+      { "slug": "ms-indus-adopts", "name": "Indus Valley Adopts", "label": "Event" },
+      { "slug": "ms-china-adopts", "name": "China Adopts", "label": "Event" },
+      { "slug": "ms-rome-adopts", "name": "Rome Adopts", "label": "Event" },
+      { "slug": "ms-universal", "name": "Universal Social Stratification", "label": "Idea" }
+    ],
+    "oceania-migration": [
+      { "slug": "om-taiwan", "name": "Austronesian Origin (Taiwan)", "label": "Place" },
+      { "slug": "om-outrigger", "name": "Outrigger Canoe Technology", "label": "Idea" },
+      { "slug": "om-philippines", "name": "Reach Philippines", "label": "Event" },
+      { "slug": "om-indonesia", "name": "Reach Indonesia", "label": "Event" },
+      { "slug": "om-lapita", "name": "Lapita Culture", "label": "Movement" },
+      { "slug": "om-navigation", "name": "Celestial Navigation", "label": "Idea" },
+      { "slug": "om-tonga-samoa", "name": "Settle Tonga & Samoa", "label": "Event" },
+      { "slug": "om-madagascar", "name": "Reach Madagascar", "label": "Event" },
+      { "slug": "om-hawaii", "name": "Discover Hawaii", "label": "Event" },
+      { "slug": "om-easter-island", "name": "Reach Easter Island", "label": "Event" },
+      { "slug": "om-aotearoa", "name": "Settle Aotearoa (New Zealand)", "label": "Event" }
+    ],
+    "mansa-musa-effect": [
+      { "slug": "mm-ghana", "name": "Ghana Empire", "label": "Event" },
+      { "slug": "mm-almoravid", "name": "Almoravid Conquest", "label": "Event" },
+      { "slug": "mm-sundiata", "name": "Sundiata Keita Founds Mali", "label": "Person" },
+      { "slug": "mm-gold-mines", "name": "Saharan Gold Mines", "label": "Place" },
+      { "slug": "mm-musa-reign", "name": "Mansa Musa's Reign", "label": "Person" },
+      { "slug": "mm-hajj", "name": "The Hajj that Broke Gold Markets", "label": "Event" },
+      { "slug": "mm-timbuktu", "name": "Timbuktu University", "label": "Institution" },
+      { "slug": "mm-catalan-atlas", "name": "Catalan Atlas", "label": "Text" }
+    ],
+    "maya-collapse": [
+      { "slug": "mc-classic", "name": "Classic Maya Period", "label": "Event" },
+      { "slug": "mc-population", "name": "Population Explosion", "label": "Event" },
+      { "slug": "mc-deforestation", "name": "Deforestation", "label": "Event" },
+      { "slug": "mc-drought", "name": "Megadrought", "label": "Event" },
+      { "slug": "mc-warfare", "name": "Inter-City Warfare", "label": "Event" },
+      { "slug": "mc-elite-failure", "name": "Elite Legitimacy Failure", "label": "Idea" },
+      { "slug": "mc-abandonment", "name": "City Abandonment", "label": "Event" },
+      { "slug": "mc-post-classic", "name": "Post-Classic Adaptation", "label": "Event" }
+    ],
+    "silk-road-culture": [
+      { "slug": "sr-han", "name": "Han Dynasty Opens Silk Road", "label": "Event" },
+      { "slug": "sr-buddhism-spread", "name": "Buddhism Spreads East", "label": "Movement" },
+      { "slug": "sr-paper", "name": "Paper Technology Travels West", "label": "Event" },
+      { "slug": "sr-islam-spread", "name": "Islam Spreads Along Trade Routes", "label": "Movement" },
+      { "slug": "sr-mathematics", "name": "Mathematical Exchange", "label": "Idea" },
+      { "slug": "sr-mongol-pax", "name": "Mongol Pax Reopens Routes", "label": "Event" },
+      { "slug": "sr-gunpowder", "name": "Gunpowder Reaches Europe", "label": "Event" },
+      { "slug": "sr-plague", "name": "Black Death Travels the Road", "label": "Event" }
+    ]
+  },
+  "trade_routes": {
+    "_meta": { "source": "ui/src/data/trade-routes.ts", "count": 7 },
+    "routes": [
+      { "slug": "silk-road", "name": "Silk Road", "label": "TradeRoute", "period": "200 BCE – 1450 CE" },
+      { "slug": "spice-route", "name": "Maritime Spice Route", "label": "TradeRoute", "period": "100 CE – 1600 CE" },
+      { "slug": "trans-saharan", "name": "Trans-Saharan Trade", "label": "TradeRoute", "period": "300 BCE – 1600 CE" },
+      { "slug": "incense-route", "name": "Incense Route", "label": "TradeRoute", "period": "700 BCE – 200 CE" },
+      { "slug": "amber-road", "name": "Amber Road", "label": "TradeRoute", "period": "1600 BCE – 500 CE" },
+      { "slug": "austronesian-trade", "name": "Austronesian Maritime Network", "label": "TradeRoute", "period": "1500 BCE – 1400 CE" },
+      { "slug": "tin-route", "name": "Tin Route (Bronze Age)", "label": "TradeRoute", "period": "2500 BCE – 800 BCE" }
+    ]
+  },
+  "language_families": {
+    "_meta": { "source": "ui/src/data/world-languages.ts", "count": 13 },
+    "families": [
+      { "slug": "indo-european", "name": "Indo-European", "label": "Framework", "speakers": "3.2 billion", "origin": "Pontic Steppe" },
+      { "slug": "sino-tibetan", "name": "Sino-Tibetan", "label": "Framework", "speakers": "1.3 billion", "origin": "Yellow River Basin" },
+      { "slug": "afro-asiatic", "name": "Afro-Asiatic", "label": "Framework", "speakers": "500 million", "origin": "Horn of Africa / Levant" },
+      { "slug": "niger-congo", "name": "Niger-Congo", "label": "Framework", "speakers": "700 million", "origin": "West Africa" },
+      { "slug": "austronesian", "name": "Austronesian", "label": "Framework", "speakers": "400 million", "origin": "Taiwan" },
+      { "slug": "dravidian", "name": "Dravidian", "label": "Framework", "speakers": "250 million", "origin": "Indian Subcontinent" },
+      { "slug": "turkic", "name": "Turkic", "label": "Framework", "speakers": "200 million", "origin": "Central Asia" },
+      { "slug": "japonic", "name": "Japonic", "label": "Framework", "speakers": "128 million", "origin": "Japan" },
+      { "slug": "koreanic", "name": "Koreanic", "label": "Framework", "speakers": "80 million", "origin": "Korean Peninsula" },
+      { "slug": "tai-kadai", "name": "Tai-Kadai", "label": "Framework", "speakers": "95 million", "origin": "Southern China" },
+      { "slug": "austroasiatic", "name": "Austroasiatic", "label": "Framework", "speakers": "117 million", "origin": "Southeast Asia" },
+      { "slug": "uralic", "name": "Uralic", "label": "Framework", "speakers": "25 million", "origin": "Ural Mountains" },
+      { "slug": "other-isolate", "name": "Other / Isolate", "label": "Framework", "speakers": "Varies", "origin": "Various" }
+    ]
+  },
+  "diet_types": {
+    "_meta": { "source": "ui/src/data/world-diet.ts", "count": 6 },
+    "types": [
+      { "slug": "fish-seafood", "name": "Fish & Seafood", "label": "Idea" },
+      { "slug": "poultry-chicken", "name": "Poultry (Chicken)", "label": "Idea" },
+      { "slug": "beef-cattle", "name": "Beef & Cattle", "label": "Idea" },
+      { "slug": "pork", "name": "Pork", "label": "Idea" },
+      { "slug": "lamb-goat", "name": "Lamb & Goat", "label": "Idea" },
+      { "slug": "primarily-vegetarian", "name": "Primarily Vegetarian", "label": "Idea" }
+    ]
+  },
+  "weapons": {
+    "_meta": { "source": "ui/src/data/weapons.ts", "count": 127 },
+    "note": "127 weapons registered in the Weapons of the World page. Each weapon is documented with slug, name, era, category, subcategory, origin civilization, year introduced, description, and historical impact. See weapons.ts for full details."
+  },
+  "ideas_evolution": {
+    "_meta": { "source": "ui/src/data/ideas.ts", "count": 67 },
+    "note": "67 transformative ideas catalogued with full provenance: originator (person/institution/collective), year, era, domain, origin place, region, parent ideas, child ideas, and a 1-10 transformative score. Each idea includes a description and impact analysis. Ideas span from 2,500,000 BCE (Intentional Tool-Making) to 2020 CE (mRNA Vaccines), covering 14 domains: Philosophy, Physics, Mathematics, Biology, Chemistry, Medicine, Politics, Economics, Religion, Technology, Social Theory, Environment, Information Science, and Art.",
+    "by_era": {
+      "prehistoric": ["animism", "tool-making-concept", "fire-control", "symbolic-thinking", "language-concept", "agriculture-concept", "counting-concept"],
+      "ancient": ["writing-concept", "monotheism", "democracy-concept", "logic-formal", "geometry-concept", "zero-concept", "codification-of-law", "heliocentrism-ancient", "republic-concept", "buddhist-philosophy", "confucian-ethics", "atomic-theory-ancient", "polytheism"],
+      "medieval": ["algebra-concept", "islamic-philosophy", "scholasticism", "compass-navigation", "printing-press-idea", "university-concept", "natural-law-theory", "algorithm-concept"],
+      "earlyModern": ["copernican-heliocentrism", "scientific-method", "empiricism", "social-contract", "calculus", "newtonian-mechanics", "human-rights", "free-market", "separation-of-powers"],
+      "modern": ["evolution-natural-selection", "thermodynamics", "electromagnetism", "germ-theory", "marxism", "relativity-theory", "quantum-mechanics", "genetics", "vaccination-concept", "abolition-of-slavery", "boolean-logic", "ecology-concept"],
+      "contemporary": ["information-theory", "digital-computing", "internet-concept", "artificial-intelligence", "dna-double-helix", "crispr-gene-editing", "climate-science", "machine-learning", "big-bang-theory", "decolonization-idea", "feminism-concept", "falsifiability", "kuhn-paradigm-shifts", "systems-theory", "chaos-theory", "complexity-theory", "standard-model", "semiconductor-theory", "quantum-computing", "epigenetics", "mrna-vaccines", "microbiome-science", "keynesian-economics"]
+    }
+  }
+}

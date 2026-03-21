@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.820357Z",
-    "notes": "Comprehensive index for China covering Neolithic cultures (Yangshao, Longshan), Xia-Shang-Zhou dynasties, Warring States, Qin unification, Han dynasty and Silk Road, Three Kingdoms, Tang golden age, Song innovations, Yuan (Mongol), Ming (Great Wall/Forbidden City/Zheng He), Qing dynasty, Opium Wars, Taiping Rebellion, Republic (Sun Yat-sen), warlords, Japanese invasion, Chinese Civil War, PRC (Mao/Great Leap Forward/Cultural Revolution), Deng Xiaoping reforms, Tiananmen 1989, economic miracle, Xi Jinping era, and Belt and Road Initiative."
+    "notes": "Comprehensive index for China covering Neolithic cultures (Yangshao, Longshan), Xia-Shang-Zhou dynasties, Warring States, Qin unification, Han dynasty and Silk Road, Three Kingdoms, Tang golden age, Song innovations, Yuan (Mongol), Ming (Great Wall/Forbidden City/Zheng He), Qing dynasty, Opium Wars, Taiping Rebellion, Republic (Sun Yat-sen), warlords, Japanese invasion, Chinese Civil War, PRC (Mao/Great Leap Forward/Cultural Revolution), Deng Xiaoping reforms, Tiananmen 1989, economic miracle, Xi Jinping era, and Belt and Road Initiative.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Beijing",
@@ -53,7 +58,9 @@
       "Islam": "1.8%",
       "Taoism": "1.0%",
       "Other": "2.6%",
-      "note": "Officially atheist state; folk religion includes ancestor worship, Confucian values, Taoist/Buddhist syncretism; underground Catholic and Protestant churches; Muslim Hui and Uyghur minorities"
+      "note": "Officially atheist state; folk religion includes ancestor worship, Confucian values, Taoist/Buddhist syncretism; underground Catholic and Protestant churches; Muslim Hui and Uyghur minorities",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -135,12 +142,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -149,21 +172,39 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [],
       "top_imports": [],
       "major_partners": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "remittances_pct_gdp": 0,
+      "total_exports_usd": "",
+      "total_imports_usd": "",
+      "top_export_destinations": [],
+      "top_import_origins": [],
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 0,
       "electricity_access_pct": 0,
       "mobile_subscriptions_per_100": 0,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "paved_roads_pct": 0,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
+      "road_network_km": 0,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": ""
     },
     "international_memberships": [],
     "governance_indices": {
@@ -184,6 +225,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -191,12 +252,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -204,20 +289,496 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0.88,
+      "ict_development_index": 5.1,
+      "mobile_money_accounts": 900000000,
+      "digital_payments_pct_adults": 87,
+      "fintech_companies": 5000,
+      "startup_ecosystem_value_usd": "$600 billion",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 92.0,
+      "innovation_index_score": 52.0,
+      "innovation_index_rank": 12,
+      "ai_readiness_index": 80.0
+    },
+    "capital_coordinates": {
+      "lat": 39.9042,
+      "lon": 116.4074
+    },
+    "other_major_cities": [
+      "Shanghai",
+      "Guangzhou",
+      "Shenzhen",
+      "Chengdu",
+      "Wuhan",
+      "Chongqing",
+      "Hangzhou",
+      "Nanjing",
+      "Tianjin"
+    ],
+    "national_motto": "Serve the People (为人民服务)",
+    "national_anthem": "Yìyǒngjūn Jìnxíngqǔ (March of the Volunteers)",
+    "currency_code": "CNY",
+    "internet_tld": ".cn",
+    "utc_offset": "UTC+8",
+    "drives_on": "right",
+    "other_languages": [
+      "Cantonese",
+      "Wu (Shanghainese)",
+      "Min (Hokkien/Teochew)",
+      "Hakka",
+      "Tibetan",
+      "Uyghur",
+      "Mongolian",
+      "Zhuang"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": 35.8617,
+        "lon": 104.1954
+      },
+      "bounding_box": {
+        "north": 53.56,
+        "south": 18.15,
+        "east": 134.77,
+        "west": 73.5
+      },
+      "land_area_km2": 9596961,
+      "water_area_km2": 270550,
+      "coastline_km": 14500,
+      "borders": [
+        "Afghanistan",
+        "Bhutan",
+        "India",
+        "Kazakhstan",
+        "Kyrgyzstan",
+        "Laos",
+        "Mongolia",
+        "Myanmar",
+        "Nepal",
+        "North Korea",
+        "Pakistan",
+        "Russia",
+        "Tajikistan",
+        "Vietnam"
+      ],
+      "border_lengths_km": {
+        "Afghanistan": 91,
+        "Bhutan": 477,
+        "India": 3488,
+        "Kazakhstan": 1765,
+        "Kyrgyzstan": 1063,
+        "Laos": 475,
+        "Mongolia": 4630,
+        "Myanmar": 2129,
+        "Nepal": 1389,
+        "North Korea": 1352,
+        "Pakistan": 438,
+        "Russia": 4209,
+        "Tajikistan": 477,
+        "Vietnam": 1297
+      },
+      "highest_point": {
+        "name": "Mount Everest (Qomolangma)",
+        "elevation_m": 8849
+      },
+      "lowest_point": {
+        "name": "Turpan Pendi (Turpan Depression)",
+        "elevation_m": -154
+      },
+      "terrain": "Diverse — Tibetan Plateau (west), deserts (northwest), plains (east), mountains (south/west/north)",
+      "land_use": {
+        "agricultural_pct": 54.7,
+        "arable_pct": 11.3,
+        "forest_pct": 22.3,
+        "other_pct": 23.0
+      },
+      "major_rivers": [
+        "Yangtze (Chang Jiang)",
+        "Yellow River (Huang He)",
+        "Pearl River (Zhu Jiang)",
+        "Mekong (Lancang)"
+      ],
+      "major_lakes": [
+        "Qinghai Lake",
+        "Poyang Lake",
+        "Dongting Lake"
+      ],
+      "exclusive_economic_zone_km2": 879666,
+      "landlocked": false,
+      "notes": "World's 3rd/4th largest country; 14 land neighbours (most of any country); Great Wall stretches 21,000+ km; Three Gorges Dam world's largest power station; South China Sea territorial claims."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$18.5 trillion",
+      "gdp_ppp_usd": "$35 trillion",
+      "gdp_per_capita_nominal_usd": 13100,
+      "gdp_per_capita_ppp_usd": 24800,
+      "gdp_growth_rate_pct": 5.2,
+      "inflation_rate_pct": 0.2,
+      "unemployment_rate_pct": 5.2,
+      "youth_unemployment_rate_pct": 21.3,
+      "poverty_rate_pct": 0,
+      "poverty_line_definition": "Below $2.15/day (eliminated extreme poverty 2020)",
+      "gini_coefficient": 38.2,
+      "income_classification": "Upper-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 7,
+        "industry_pct_gdp": 39,
+        "services_pct_gdp": 54
+      },
+      "labor_force": 779000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 25,
+        "industry_pct": 28,
+        "services_pct": 47
+      },
+      "fdi_inflow_usd": "$163 billion",
+      "fdi_outflow_usd": "$145 billion",
+      "foreign_exchange_reserves_usd": "$3.24 trillion",
+      "ease_of_doing_business_rank": 31,
+      "economic_freedom_index_score": 48.3,
+      "credit_rating": {
+        "moodys": "A1",
+        "sp": "A+",
+        "fitch": "A+"
+      },
+      "notes": "World's 2nd largest economy; 'world's factory'; BRI (Belt and Road) initiative; real estate crisis (Evergrande/Country Garden); tech sector global leader; common prosperity drive; dual circulation strategy; aging population challenge."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 5.6,
+      "health_expenditure_per_capita_usd": 700,
+      "physicians_per_1k": 2.4,
+      "nurses_midwives_per_1k": 3.3,
+      "hospital_beds_per_1k": 4.3,
+      "maternal_mortality_per_100k": 23,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 59,
+      "access_to_clean_water_pct": 93,
+      "access_to_sanitation_pct": 85,
+      "vaccination_coverage_pct": 99,
+      "stunting_under5_pct": 4,
+      "obesity_rate_pct": 6.2,
+      "universal_health_coverage_index": 80,
+      "leading_causes_of_death": [
+        "Cardiovascular diseases",
+        "Cancer",
+        "Chronic respiratory diseases",
+        "Stroke"
+      ],
+      "notes": "95%+ health insurance coverage; Traditional Chinese Medicine (TCM) integrated; COVID origin controversy (Wuhan 2019); massive hospital/public health infrastructure; air pollution health impacts; aging society challenges."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 71.0,
+      "food_security_index_rank": 34,
+      "arable_land_pct": 11.3,
+      "agricultural_land_pct": 54.7,
+      "irrigated_land_pct": 55,
+      "major_crops": [
+        "rice",
+        "wheat",
+        "maize",
+        "soybeans",
+        "tea",
+        "cotton",
+        "tobacco",
+        "peanuts"
+      ],
+      "major_livestock": [
+        "pigs (world's largest herd)",
+        "poultry",
+        "cattle",
+        "sheep"
+      ],
+      "food_import_dependency_pct": 10,
+      "cereal_yield_kg_per_hectare": 6300,
+      "agricultural_employment_pct": 25,
+      "notes": "World's largest agricultural producer; pork consumption #1 globally; soybean import dependency (largest buyer); African swine fever 2018-19 decimated pig herd; food security strategic priority; arable land loss to urbanization.",
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "energy": {
+      "primary_energy_sources": [
+        "coal",
+        "oil",
+        "natural gas",
+        "hydropower",
+        "nuclear",
+        "wind",
+        "solar"
+      ],
+      "electricity_generation_gwh": 9200000,
+      "electricity_consumption_per_capita_kwh": 5900,
+      "renewable_share_pct": 30,
+      "fossil_fuel_share_pct": 63,
+      "nuclear_share_pct": 5,
+      "oil_production_bpd": 4100000,
+      "oil_consumption_bpd": 16000000,
+      "natural_gas_production_bcm": 230,
+      "proved_oil_reserves_bbl": "26 billion",
+      "proved_gas_reserves_tcm": "6.7",
+      "energy_imports_pct": 20,
+      "electrification_rate_pct": 100,
+      "notes": "World's largest energy consumer; #1 renewable energy capacity (solar, wind, hydro); #1 CO2 emitter; Three Gorges Dam world's largest hydropower; coal still 55%+ of energy; 2060 carbon neutrality target; EV market leader (60%+ of global EV sales).",
+      "energy_mix": {
+        "fossil_fuels_pct": 0,
+        "hydroelectric_pct": 0,
+        "solar_pct": 0,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 0,
+      "electricity_production_gwh": 0,
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "transport": {
+      "airports": 507,
+      "airports_paved": 463,
+      "railways_km": 159000,
+      "roadways_km": 5350000,
+      "paved_roads_pct": 80,
+      "waterways_km": 110000,
+      "major_ports": [
+        "Shanghai (world's busiest)",
+        "Shenzhen",
+        "Ningbo-Zhoushan",
+        "Guangzhou",
+        "Qingdao",
+        "Tianjin"
+      ],
+      "national_airline": "Air China",
+      "vehicle_ownership_per_1k": 220,
+      "notes": "World's longest high-speed rail network (42,000+ km); 7 of world's 10 busiest container ports; Belt and Road infrastructure expanding globally; highway network world's largest; maglev in Shanghai; world's longest bridge (Danyang-Kunshan).",
+      "major_airports_international": [],
+      "major_airports_domestic": [],
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
+    },
+    "tourism": {
+      "international_arrivals": 65000000,
+      "tourism_revenue_usd": "$45 billion",
+      "tourism_pct_gdp": 0.2,
+      "major_attractions": [
+        "Great Wall",
+        "Forbidden City",
+        "Terracotta Army",
+        "Li River",
+        "Zhangjiajie",
+        "Potala Palace",
+        "The Bund (Shanghai)"
+      ],
+      "unesco_world_heritage_sites": 57,
+      "notes": "57 UNESCO World Heritage Sites (2nd most globally after Italy); world's 4th most visited country; domestic tourism massive (6 billion+ trips/year); Golden Week holidays; visa policies eased 2023-24.",
+      "annual_visitors": 0,
+      "tourism_employment_pct": 0,
+      "unesco_sites_list": [],
+      "visa_free_access_countries": 0,
+      "henley_passport_rank": 0
+    },
+    "legal_system": {
+      "type": "Civil law (socialist legal system)",
+      "supreme_court": "Supreme People's Court",
+      "international_court_jurisdiction": "Not accepted",
+      "suffrage": "18 years, universal (elections at local level only; CCP controls)",
+      "legal_traditions": [
+        "Continental civil law",
+        "Socialist legal theory",
+        "Confucian influence"
+      ],
+      "death_penalty": true,
+      "notes": "One-party state (CCP); world's highest number of executions (estimated thousands/year, state secret); National Security Law; Social Credit System; rule by law rather than rule of law.",
+      "legal_tradition": "",
+      "constitution_year": 0,
+      "sharia_applicability": "",
+      "customary_law_role": "",
+      "icc_membership": "",
+      "judicial_independence_score": 0,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_score": 9,
+      "freedom_house_status": "Not Free",
+      "gender_inequality_index": 0.192,
+      "gender_inequality_rank": 48,
+      "women_in_parliament_pct": 25,
+      "female_labor_force_participation_pct": 61,
+      "maternal_leave_weeks": 14,
+      "child_marriage_pct": 5,
+      "lgbtq_legal_status": "Legal (not protected; social stigma)",
+      "press_freedom_rank": 172,
+      "notes": "Uyghur detention camps (Xinjiang); Tibet restrictions; Hong Kong crackdown (NSL); Great Firewall censorship; social credit system; Mao-era gender equality progress but persistent gaps; one-child policy legacy (1979-2015).",
+      "gender_gap_index_score": 0,
+      "women_labor_force_participation_pct": 0,
+      "maternal_mortality_per_100k": 0,
+      "fgm_prevalence_pct": 0,
+      "death_penalty_status": "",
+      "human_trafficking_tier": "",
+      "child_labor_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.101,
+      "global_peace_index_rank": 80,
+      "homicide_rate_per_100k": 0.5,
+      "terrorism_index_score": 3.4,
+      "terrorism_index_rank": 60,
+      "armed_conflict": false,
+      "internally_displaced_persons": 0,
+      "landmine_contamination": false,
+      "notes": "Military modernization (world's 3rd largest defence budget ~$290B); Taiwan Strait tensions; South China Sea disputes; India border standoff (Ladakh); nuclear weapons state (350+ warheads); surveillance state capabilities.",
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": ""
+    },
+    "cultural_heritage": {
+      "unesco_intangible_heritage": [
+        "Kunqu Opera",
+        "Guqin music",
+        "Peking Opera",
+        "Dragon Boat Festival",
+        "Chinese calligraphy",
+        "Acupuncture",
+        "Shadow puppetry"
+      ],
+      "notable_cultural_exports": [
+        "Tea",
+        "Silk",
+        "Porcelain",
+        "Martial arts (kung fu)",
+        "Traditional Chinese Medicine"
+      ],
+      "major_museums": [
+        "Palace Museum (Forbidden City)",
+        "National Museum of China",
+        "Shanghai Museum",
+        "Terracotta Army Museum"
+      ],
+      "world_heritage_sites_list": [
+        "Great Wall",
+        "Forbidden City",
+        "Terracotta Army",
+        "Summer Palace",
+        "Temple of Heaven",
+        "Jiuzhaigou",
+        "Mount Huang",
+        "Mogao Caves"
+      ],
+      "culinary_traditions": [
+        "Beijing roast duck",
+        "Dim sum",
+        "Sichuan hotpot",
+        "Xiaolongbao",
+        "Kung Pao chicken",
+        "Mapo tofu"
+      ],
+      "notes": "5,000+ year continuous civilization; Four Great Inventions (paper, printing, gunpowder, compass); Confucianism, Taoism, Buddhism shaped East Asian civilization; Mandarin most spoken language globally.",
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "",
+      "national_sport": "",
+      "major_festivals": [],
+      "cuisine_highlights": [],
+      "music_art_traditions": [],
+      "film_industry": "",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [],
+      "world_heritage_sites": [],
+      "media_landscape": ""
+    },
+    "comparative_rankings": {
+      "human_development_index_rank": 75,
+      "global_competitiveness_rank": 29,
+      "happiness_index_rank": 60,
+      "environmental_performance_rank": 160,
+      "gender_gap_rank": 107,
+      "soft_power_rank": 0,
+      "notes": "World's 2nd largest economy and leading manufacturer; tech giant (Huawei, Alibaba, Tencent, BYD); poor freedom and environmental scores; space programme; AI leader.",
+      "_note": "Country position relative to continent and global. 'rank' = 1 is best/largest.",
+      "population": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "area": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_nominal": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_per_capita": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "hdi": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "life_expectancy": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "internet_penetration": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "press_freedom": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
     }
   },
   "leadership": {
@@ -225,7 +786,8 @@
       "name": "Xi Jinping",
       "title": "General Secretary of CCP / President / CMC Chairman",
       "since": "2012-11-15 (General Secretary) / 2013-03-14 (President)",
-      "notes": "CCP; 'core leader'; removed term limits 2018; most powerful since Mao; anti-corruption; Belt and Road; common prosperity; Taiwan tensions; 'Xi Jinping Thought'"
+      "notes": "CCP; 'core leader'; removed term limits 2018; most powerful since Mao; anti-corruption; Belt and Road; common prosperity; Taiwan tensions; 'Xi Jinping Thought'",
+      "party": ""
     },
     "premier": {
       "name": "Li Qiang",
@@ -267,7 +829,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

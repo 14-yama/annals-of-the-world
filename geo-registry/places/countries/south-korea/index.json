@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.869609Z",
-    "notes": "Comprehensive index for South Korea (Republic of Korea) covering ancient Gojoseon, Three Kingdoms (Goguryeo/Baekje/Silla), Unified Silla, Goryeo, Joseon Dynasty, Japanese colonization 1910-1945, post-WWII US occupation zone, Korean War 1950-1953 (ceasefire/DMZ), authoritarian rule (Rhee, Park Chung-hee, Chun Doo-hwan), democratization 1987, IMF crisis 1997, Hallyu (Korean Wave), 'Miracle on Han River', chaebols, and K-pop global dominance."
+    "notes": "Comprehensive index for South Korea (Republic of Korea) covering ancient Gojoseon, Three Kingdoms (Goguryeo/Baekje/Silla), Unified Silla, Goryeo, Joseon Dynasty, Japanese colonization 1910-1945, post-WWII US occupation zone, Korean War 1950-1953 (ceasefire/DMZ), authoritarian rule (Rhee, Park Chung-hee, Chun Doo-hwan), democratization 1987, IMF crisis 1997, Hallyu (Korean Wave), 'Miracle on Han River', chaebols, and K-pop global dominance.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Seoul",
@@ -52,7 +57,9 @@
       "Buddhism": "15.5%",
       "Christianity_Catholic": "7.9%",
       "Other": "0.9%",
-      "note": "Rapid Christianization (was 2% in 1950); megachurches (Yoido Full Gospel, world's largest); shamanic mudang traditions persist; Confucian social values (filial piety, hierarchy); secularization increasing; Buddhist temples (Bulguksa, Haeinsa)"
+      "note": "Rapid Christianization (was 2% in 1950); megachurches (Yoido Full Gospel, world's largest); shamanic mudang traditions persist; Confucian social values (filial piety, hierarchy); secularization increasing; Buddhist temples (Bulguksa, Haeinsa)",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -77,7 +84,8 @@
     "time_zone": "KST (UTC+9)",
     "independence": {
       "date": "1948-08-15",
-      "from": "Declared independence from Japanese colonial rule (1945 liberation); separate from North Korea"
+      "from": "Declared independence from Japanese colonial rule (1945 liberation); separate from North Korea",
+      "notes": ""
     },
     "continent": "Asia",
     "notes_unique": "'Miracle on Han River' (1960s-90s economic boom); Korean War (1950-53, ~3M dead, technically ongoing - armistice only); DMZ world's most militarized border; chaebols (Samsung, Hyundai, LG); K-pop (BTS, Blackpink); K-drama (Squid Game, Parasite Oscar 2020); world's lowest birth rate (0.72 in 2023); mandatory military service (18-21 months); han-geul alphabet (Sejong, 1443); kimchi; PC bang (gaming cafes); fastest internet globally; Gwangju Uprising 1980; Sewol ferry disaster 2014",
@@ -88,12 +96,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -102,24 +126,124 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
-      "top_exports": [],
-      "top_imports": [],
+      "exports_usd": "$630 billion",
+      "imports_usd": "$600 billion",
+      "trade_balance_usd": "+$30 billion",
+      "current_account_balance_pct_gdp": 2.0,
+      "top_exports": [
+        "semiconductors",
+        "automobiles",
+        "ships",
+        "petroleum products",
+        "electronics"
+      ],
+      "top_imports": [
+        "crude oil",
+        "semiconductors",
+        "natural gas",
+        "electronics",
+        "machinery"
+      ],
+      "top_export_partners": [
+        "China",
+        "USA",
+        "Vietnam",
+        "Japan",
+        "Hong Kong"
+      ],
+      "top_import_partners": [
+        "China",
+        "USA",
+        "Japan",
+        "Australia",
+        "Saudi Arabia"
+      ],
+      "fta_partners": [
+        "USA",
+        "EU",
+        "ASEAN",
+        "RCEP",
+        "China",
+        "Australia",
+        "Canada",
+        "UK",
+        "India",
+        "Turkey",
+        "EFTA"
+      ],
+      "wto_member": true,
+      "regional_trade_blocs": [
+        "RCEP",
+        "APEC"
+      ],
+      "trade_openness_pct_gdp": 72.0,
+      "notes": "Semiconductor memory superpower (70% global DRAM); Hyundai/Kia #3 auto globally; top 5 shipbuilder; 58 FTAs covering 90%+ of GDP; chip wars frontline (China/US tensions).",
+      "total_exports_usd": "",
+      "total_imports_usd": "",
       "major_partners": [],
+      "top_export_destinations": [],
+      "top_import_origins": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "remittances_pct_gdp": 0,
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
+      "road_network_km": 112977,
+      "paved_roads_pct": 92,
+      "rail_network_km": 4105,
+      "airports": 111,
+      "international_airports": 8,
+      "major_ports": [
+        "Busan",
+        "Incheon",
+        "Ulsan",
+        "Gwangyang"
+      ],
+      "electricity_access_pct": 100,
+      "electricity_generation_gwh": 600000,
+      "renewable_electricity_pct": 8,
+      "broadband_subscriptions_per_100": 43,
+      "mobile_subscriptions_per_100": 139,
+      "internet_users_pct": 97,
+      "logistics_performance_index_score": 3.6,
+      "logistics_performance_index_rank": 23,
+      "notes": "KTX high-speed rail; Busan 6th largest port globally; Incheon Airport top-rated; Seoul Metro 9 lines; world-class broadband infrastructure; 5G deployment pioneer.",
       "internet_penetration_pct": 0,
-      "electricity_access_pct": 0,
-      "mobile_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "waterways_km": 0,
+      "submarine_cables": []
     },
     "international_memberships": [],
     "governance_indices": {
+      "corruption_perceptions_index_score": 63,
+      "corruption_perceptions_index_rank": 32,
+      "rule_of_law_index_score": 0.74,
+      "rule_of_law_index_rank": 17,
+      "government_effectiveness_score": 1.3,
+      "regulatory_quality_score": 1.1,
+      "voice_accountability_score": 0.7,
+      "political_stability_score": 0.1,
+      "fragile_states_index_score": 37.0,
+      "fragile_states_index_rank": 155,
+      "democracy_index_score": 8.03,
+      "democracy_index_category": "Full democracy",
+      "freedom_house_status": "Free",
+      "freedom_house_score": 83,
+      "press_freedom_index_rank": 47,
+      "judicial_independence_score": 0.7,
+      "gender_equality_index": 0.72,
+      "notes": "Full democracy; presidential system; candlelight revolution 2016-17 (Park impeachment); strong civil society; chaebol influence on politics; gender equality improving but lagging OECD peers.",
       "corruption_perception_index": {
         "score": 0,
         "rank": 0,
@@ -137,6 +261,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -144,12 +288,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -157,20 +325,530 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0,
+      "ict_development_index": 0,
+      "mobile_money_accounts": 0,
+      "digital_payments_pct_adults": 0,
+      "fintech_companies": 0,
+      "startup_ecosystem_value_usd": "",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 0
+    },
+    "capital_coordinates": {
+      "lat": 37.5665,
+      "lon": 126.978
+    },
+    "other_major_cities": [
+      "Busan",
+      "Incheon",
+      "Daegu",
+      "Daejeon",
+      "Gwangju"
+    ],
+    "national_motto": "Benefit Broadly in the Human World (Hongik Ingan)",
+    "national_anthem": "Aegukga (The Patriotic Song)",
+    "currency_code": "KRW",
+    "internet_tld": ".kr",
+    "utc_offset": "UTC+9",
+    "drives_on": "right",
+    "other_languages": [
+      "English",
+      "Chinese"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": 35.91,
+        "lon": 127.77
+      },
+      "bounding_box": {
+        "north": 38.61,
+        "south": 33.11,
+        "east": 131.87,
+        "west": 124.6
+      },
+      "land_area_km2": 100363,
+      "water_area_km2": 2800,
+      "coastline_km": 2413,
+      "borders": [
+        "North Korea"
+      ],
+      "border_lengths_km": {
+        "North Korea": 237
+      },
+      "highest_point": {
+        "name": "Hallasan (Jeju Island)",
+        "elevation_m": 1950
+      },
+      "lowest_point": {
+        "name": "Sea of Japan/East Sea",
+        "elevation_m": 0
+      },
+      "terrain": "Mountainous east; western/southern coastal plains; river basins (Han, Nakdong); volcanic Jeju Island",
+      "land_use": {
+        "agricultural_pct": 18.1,
+        "arable_pct": 15.3,
+        "forest_pct": 63.9,
+        "other_pct": 18.0
+      },
+      "major_rivers": [
+        "Han",
+        "Nakdong",
+        "Geum",
+        "Yeongsan"
+      ],
+      "major_lakes": [
+        "Chungju Dam",
+        "Soyang Dam"
+      ],
+      "exclusive_economic_zone_km2": 300000,
+      "landlocked": false,
+      "notes": "Korean Wave (Hallyu) cultural superpower; DMZ world's most heavily fortified border; Jeju volcanic island UNESCO; effectively an island (DMZ sealed border); four distinct seasons."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$1.7 trillion",
+      "gdp_ppp_usd": "$2.7 trillion",
+      "gdp_per_capita_nominal_usd": 33000,
+      "gdp_per_capita_ppp_usd": 52000,
+      "gdp_growth_rate_pct": 1.4,
+      "inflation_rate_pct": 3.6,
+      "unemployment_rate_pct": 2.7,
+      "youth_unemployment_rate_pct": 7.0,
+      "poverty_rate_pct": 14.4,
+      "poverty_line_definition": "50% of median income (OECD)",
+      "gini_coefficient": 31.4,
+      "income_classification": "High income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 2,
+        "industry_pct_gdp": 33,
+        "services_pct_gdp": 65
+      },
+      "labor_force": 28500000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 5,
+        "industry_pct": 25,
+        "services_pct": 70
+      },
+      "fdi_inflow_usd": "$18 billion",
+      "fdi_outflow_usd": "$45 billion",
+      "foreign_exchange_reserves_usd": "$420 billion",
+      "ease_of_doing_business_rank": 5,
+      "economic_freedom_index_score": 73.7,
+      "credit_rating": {
+        "moodys": "Aa2",
+        "sp": "AA",
+        "fitch": "AA-"
+      },
+      "notes": "World's 13th largest economy; Samsung/SK/LG/Hyundai chaebols dominant; semiconductor memory leader (Samsung, SK Hynix 70% global DRAM); K-pop/K-drama cultural exports; rapid aging demographic crisis."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 8.4,
+      "health_expenditure_per_capita_usd": 2800,
+      "physicians_per_1k": 2.5,
+      "nurses_midwives_per_1k": 7.9,
+      "hospital_beds_per_1k": 12.4,
+      "maternal_mortality_per_100k": 8,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 44,
+      "access_to_clean_water_pct": 100,
+      "access_to_sanitation_pct": 100,
+      "vaccination_coverage_pct": 97,
+      "stunting_under5_pct": 2,
+      "obesity_rate_pct": 4.7,
+      "universal_health_coverage_index": 86,
+      "leading_causes_of_death": [
+        "Cancer",
+        "Heart disease",
+        "Pneumonia",
+        "Cerebrovascular disease"
+      ],
+      "notes": "National Health Insurance (universal); highest hospital bed density globally; medical tourism destination; suicide rate highest OECD; mental health emerging priority; COVID-19 exemplary response."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 73.0,
+      "food_security_index_rank": 30,
+      "arable_land_pct": 15.3,
+      "agricultural_land_pct": 18.1,
+      "irrigated_land_pct": 50,
+      "major_crops": [
+        "rice",
+        "vegetables",
+        "barley",
+        "ginseng",
+        "strawberries",
+        "persimmons"
+      ],
+      "major_livestock": [
+        "pigs",
+        "cattle (Hanwoo)",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 70,
+      "cereal_yield_kg_per_hectare": 7000,
+      "agricultural_workers_pct": 5,
+      "notes": "Rice self-sufficient but 70% food imports overall; Hanwoo beef premium; Korean ginseng famous; kimchi cultural staple; smart farming tech investment; aging farmer population crisis.",
+      "agricultural_employment_pct": 0,
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.77,
+      "global_peace_index_rank": 39,
+      "military_expenditure_pct_gdp": 2.8,
+      "active_military_personnel": 555000,
+      "reserve_military_personnel": 3100000,
+      "paramilitary_personnel": 4500,
+      "internal_conflicts": "None",
+      "terrorism_index_score": 0.5,
+      "terrorism_index_rank": 115,
+      "homicide_rate_per_100k": 0.6,
+      "incarceration_rate_per_100k": 100,
+      "police_per_100k": 260,
+      "border_disputes": "DMZ/NLL with North Korea; Liancourt Rocks (Dokdo) with Japan",
+      "refugee_population_hosted": 2000,
+      "idp_population": 0,
+      "un_peacekeeping_contributor": true,
+      "arms_imports_usd": "$3 billion",
+      "notes": "Technically still at war with North Korea (armistice 1953); 28,500 US troops stationed; THAAD missile defense; growing arms exporter (K9 howitzer, FA-50, K2 tank); mandatory conscription (18 months).",
+      "active_conflicts": [],
+      "un_peacekeeping_contributions": 0,
+      "internally_displaced_persons": 0
+    },
+    "environment_climate": {
+      "co2_emissions_mt": 616.0,
+      "co2_per_capita_t": 11.9,
+      "renewable_energy_pct": 8,
+      "renewable_energy_target_pct": 21.5,
+      "renewable_energy_target_year": 2030,
+      "forest_cover_pct": 63.9,
+      "deforestation_rate_pct_annual": 0,
+      "protected_areas_pct": 15.0,
+      "biodiversity_index_score": 0.6,
+      "water_stress_level": "High",
+      "water_withdrawal_per_capita_m3": 500,
+      "natural_disaster_risk_index": 4.0,
+      "climate_vulnerability_index": "Low-Medium",
+      "waste_recycling_rate_pct": 60,
+      "air_quality_pm25": 24,
+      "environmental_performance_index_score": 57.0,
+      "environmental_performance_index_rank": 38,
+      "paris_agreement_status": "Ratified",
+      "ndc_target": "40% reduction by 2030; net zero by 2050",
+      "notes": "High coal dependence; 2050 carbon neutrality pledge; successful reforestation (94% forest recovery post-war); fine dust (PM2.5) trans-boundary issue with China; nuclear energy 30%."
+    },
+    "demographics_extended": {
+      "median_age": 44.6,
+      "population_growth_rate_pct": -0.3,
+      "birth_rate_per_1k": 5,
+      "death_rate_per_1k": 7,
+      "net_migration_rate_per_1k": 2.0,
+      "sex_ratio": 1.0,
+      "dependency_ratio_pct": 40,
+      "urban_population_pct_change_annual": 0.3,
+      "total_fertility_rate": 0.72,
+      "contraceptive_prevalence_pct": 82,
+      "mean_years_of_schooling": 12.2,
+      "expected_years_of_schooling": 16.5,
+      "education_expenditure_pct_gdp": 4.7,
+      "r_and_d_expenditure_pct_gdp": 4.9,
+      "stem_graduates_pct": 32,
+      "remittances_received_usd": "$7 billion",
+      "remittances_pct_gdp": 0.4,
+      "diaspora_population": 7500000,
+      "ethnic_fractionalization_index": 0.0,
+      "religious_fractionalization_index": 0.66,
+      "notes": "World's lowest fertility (0.72); population declining; 'population cliff' crisis; world's highest R&D/GDP; highest education attainment globally; hagwon (cram school) culture; rapid aging."
+    },
+    "digital_infrastructure": {
+      "internet_penetration_pct": 97,
+      "mobile_penetration_pct": 139,
+      "fixed_broadband_speed_mbps": 200,
+      "mobile_broadband_speed_mbps": 120,
+      "5g_coverage_pct": 95,
+      "fiber_optic_coverage_pct": 90,
+      "ict_development_index_score": 8.8,
+      "e_government_index_score": 0.95,
+      "digital_economy_pct_gdp": 12.0,
+      "tech_hubs_count": 100,
+      "mobile_money_accounts": 30000000,
+      "digital_payments_pct_adults": 95,
+      "fintech_companies": 400,
+      "startup_ecosystem_value_usd": "$25 billion",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 92.0,
+      "innovation_index_score": 56.0,
+      "innovation_index_rank": 10,
+      "ai_readiness_index": 82.0
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 10,
+        "global_rank": 28
+      },
+      "area": {
+        "continent_rank": 29,
+        "global_rank": 107
+      },
+      "gdp_nominal": {
+        "continent_rank": 4,
+        "global_rank": 12
+      },
+      "gdp_per_capita": {
+        "continent_rank": 9,
+        "global_rank": 30
+      },
+      "hdi": {
+        "continent_rank": 1,
+        "global_rank": 19
+      },
+      "life_expectancy": {
+        "continent_rank": 4,
+        "global_rank": 7
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 2,
+        "global_rank": 5
+      },
+      "internet_penetration": {
+        "continent_rank": 3,
+        "global_rank": 5
+      },
+      "press_freedom": {
+        "continent_rank": 8,
+        "global_rank": 47
+      },
+      "innovation_index": {
+        "continent_rank": 1,
+        "global_rank": 1
+      },
+      "notes": "K-wave (Hallyu) cultural superpower; Samsung/Hyundai/LG; world's most innovative country; tech powerhouse; aging crisis.",
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "taegeuk (yin-yang)",
+        "Mugunghwa (Rose of Sharon)"
+      ],
+      "national_animal": "Siberian tiger (symbolic); magpie (national bird)",
+      "national_flower": "Mugunghwa (Rose of Sharon)",
+      "national_dish": "kimchi; bibimbap",
+      "national_sport": "Taekwondo (originated in Korea)",
+      "major_festivals": [
+        "Chuseok (harvest festival)",
+        "Seollal (Lunar New Year)",
+        "Boryeong Mud Festival",
+        "Lotus Lantern Festival (Buddha's Birthday)",
+        "Jinhae Cherry Blossom"
+      ],
+      "cuisine_highlights": [
+        "kimchi",
+        "bibimbap",
+        "bulgogi",
+        "Korean BBQ (samgyeopsal)",
+        "tteokbokki",
+        "japchae",
+        "sundae (blood sausage)",
+        "fried chicken"
+      ],
+      "music_art_traditions": [
+        "K-pop (BTS, BLACKPINK, global phenomenon)",
+        "K-drama",
+        "Pansori (epic singing, UNESCO)",
+        "Korean pottery (celadon)",
+        "Hangul (alphabet, Sejong)"
+      ],
+      "intangible_heritage_items": [
+        "Kimjang (kimchi making, UNESCO)",
+        "Pansori (UNESCO)",
+        "Ganggangsullae (UNESCO)",
+        "Arirang folk song (UNESCO)",
+        "Jeju Haenyeo (diving women, UNESCO)"
+      ],
+      "notable_historical_figures": [
+        "King Sejong the Great (Hangul inventor)",
+        "Admiral Yi Sun-sin (turtle ships)",
+        "Ban Ki-moon (UN Secretary-General)",
+        "Park Chung-hee (economic transformation)"
+      ],
+      "world_heritage_sites": [
+        "Changdeokgung Palace Complex",
+        "Haeinsa Temple Janggyeong Panjeon",
+        "Seokguram Grotto and Bulguksa Temple",
+        "Jongmyo Shrine",
+        "Hwaseong Fortress",
+        "Gyeongju Historic Areas",
+        "Gochang/Hwasun/Ganghwa Dolmen Sites",
+        "Jeju Volcanic Island and Lava Tubes",
+        "Royal Tombs of Joseon",
+        "Historic Villages (Hahoe and Yangdong)",
+        "Namhansanseong",
+        "Baekje Historic Areas",
+        "Sansa (Buddhist Mountain Monasteries)",
+        "Seowon (Neo-Confucian Academies)",
+        "Getbol (Korean Tidal Flats)"
+      ],
+      "media_landscape": "Chosun Ilbo, JoongAng Ilbo, Dong-a Ilbo (major dailies); KBS, MBC, SBS; Korea Herald (English); vibrant digital media.",
+      "notes": "Hallyu (Korean Wave) global cultural export; K-pop, K-drama, K-beauty; 5000-year history; Joseon dynasty; DMZ; tech adoption world-leading; fastest internet globally.",
+      "film_industry": ""
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 63,
+        "hydroelectric_pct": 1,
+        "solar_pct": 5,
+        "wind_pct": 2,
+        "nuclear_pct": 27,
+        "biomass_other_pct": 2
+      },
+      "installed_capacity_mw": 134000,
+      "electricity_production_gwh": 600000,
+      "electricity_consumption_per_capita_kwh": 11000,
+      "energy_imports_pct": 93,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 2700000,
+      "natural_gas_production_bcm": 0.5,
+      "notes": "World's 5th largest nuclear power producer (25 reactors); major LNG importer; no domestic energy resources; coal phase-out planned; renewable energy target 30% by 2036.",
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Free",
+      "freedom_house_score": 83,
+      "gender_inequality_index": 0.07,
+      "gender_inequality_rank": 15,
+      "gender_gap_index_score": 0.68,
+      "women_in_parliament_pct": 19,
+      "women_labor_force_participation_pct": 54,
+      "maternal_mortality_per_100k": 8,
+      "lgbtq_legal_status": "Legal but no anti-discrimination law",
+      "death_penalty_status": "Abolitionist in practice (since 1997)",
+      "human_trafficking_tier": "Tier 1",
+      "notes": "Vibrant democracy (since 1987); candlelight revolution (2016, impeached Park Geun-hye); gender pay gap highest in OECD; conscription for males; birth rate crisis (0.72 TFR).",
+      "child_marriage_pct": 0,
+      "fgm_prevalence_pct": 0,
+      "child_labor_pct": 0
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (German/Japanese-influenced)",
+      "constitution_year": 1987,
+      "sharia_applicability": "Not applicable",
+      "icc_membership": "State party (2002)",
+      "judicial_independence_score": 0.65,
+      "contract_enforcement_days": 290,
+      "property_rights_index": 75,
+      "notes": "Constitutional Court (powerful; impeachment jurisdiction); Supreme Court; robust rule of law; National Security Law (controversial, restricts pro-North speech).",
+      "customary_law_role": ""
+    },
+    "tourism": {
+      "annual_visitors": 15000000,
+      "tourism_revenue_usd": "$20 billion",
+      "tourism_pct_gdp": 1,
+      "tourism_employment_pct": 5,
+      "unesco_world_heritage_sites": 16,
+      "unesco_sites_list": [
+        "Changdeokgung",
+        "Haeinsa Temple",
+        "Seokguram/Bulguksa",
+        "Jongmyo",
+        "Hwaseong",
+        "Gyeongju",
+        "Dolmen Sites",
+        "Jeju",
+        "Royal Tombs",
+        "Hahoe/Yangdong",
+        "Namhansanseong",
+        "Baekje",
+        "Sansa",
+        "Seowon",
+        "Getbol",
+        "Gaya Tumuli"
+      ],
+      "major_attractions": [
+        "Seoul (Gyeongbokgung Palace, Myeongdong, Gangnam)",
+        "Jeju Island",
+        "DMZ (Korean Demilitarized Zone)",
+        "Busan (Haeundae Beach)",
+        "Gyeongju (Silla heritage)",
+        "K-pop experiences"
+      ],
+      "visa_free_access_countries": 192,
+      "henley_passport_rank": 2,
+      "notes": "Hallyu tourism boom; K-pop and K-drama tourism (filming locations); medical tourism hub; temple stay programs; 2nd most powerful passport globally."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Incheon International Airport (Seoul)",
+        "Gimpo International Airport"
+      ],
+      "major_airports_domestic": [
+        "Gimhae (Busan)",
+        "Jeju International",
+        "Daegu",
+        "Gwangju"
+      ],
+      "railway_km": 4071,
+      "road_network_km": 112977,
+      "paved_roads_pct": 92,
+      "major_ports": [
+        "Busan (world's 7th busiest container port)",
+        "Incheon Port",
+        "Gwangyang Port"
+      ],
+      "public_transit_systems": [
+        "Seoul Metro (9+ lines, one of world's most extensive)",
+        "Busan Metro",
+        "Daegu Metro",
+        "KTX (high-speed rail, 305 km/h)",
+        "Incheon Metro"
+      ],
+      "notes": "KTX high-speed rail (Seoul–Busan 2h15m); Seoul Metro world-class; Incheon Airport repeatedly 'World's Best'; Busan transshipment hub; Korean Air and Asiana (merging).",
+      "national_airline": "",
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
     }
   },
   "leadership": {
@@ -178,7 +856,8 @@
       "name": "Yoon Suk Yeol",
       "title": "President",
       "since": "2022-05-10",
-      "notes": "People Power Party (conservative); former prosecutor; hard line on North Korea; pro-US/Japan; wife Kim Keon Hee controversies; unpopular; narrow election win over Lee Jae-myung"
+      "notes": "People Power Party (conservative); former prosecutor; hard line on North Korea; pro-US/Japan; wife Kim Keon Hee controversies; unpopular; narrow election win over Lee Jae-myung",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -235,7 +914,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

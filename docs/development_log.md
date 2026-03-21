@@ -4,7 +4,32 @@
 
 ---
 
-## Update — 2026-01-24T19:45:00Z (most recent)
+## Update — 2026-03-06 (most recent)
+
+### Frontend: "The Chrononauticum" — React + Chakra UI v3
+
+Launched the Annals of the World frontend application honoring James Ussher's 1650 masterwork.
+
+**Design Philosophy:** Ancient Library (Alexandria aesthetic) meets Temporal Wormhole (Star Trek-inspired portal navigation). "Papyrus & Cosmos" color palette — parchment tones, aged gold accents, serif typography (Cormorant Garamond, Cinzel) for scholarly weight, Inter for body text.
+
+**Pages created:**
+- **Library Foyer** (`/`) — Landing page with hero stats, continent cards, jaw-dropping data numbers
+- **Africa Dashboard** (`/continents/africa`) — Full 55-country analysis with comparative tables, hidden patterns, regional breakdowns
+- **Asia Dashboard** (`/continents/asia`) — 48-country analysis with 180 event windows, Five Asias breakdown, filterable event categories
+- **Era Explorer** (`/explore`) — Era/region selector with temporal portal animation (8 epochs, 14 regions)
+- **About** (`/about`) — Ussher biography, project mission, roadmap visualization, graph schema display
+
+**Technical stack:** React 18, Vite 5, Chakra UI v3, React Router v6, Lucide icons, Framer Motion, Cormorant Garamond + Inter + Cinzel fonts.
+
+**New analysis:** `analyses/Asia_Continent_Analysis.md` — 48-country deep analysis mirroring the African analysis format. Hidden patterns: Asian Return (not rise), Semiconductor Chokepoint, Youth-Age Collision, Water Wars, AI Triad.
+
+**New docs:** `docs/FRONTEND_PROPOSAL.md` — Complete design proposal with color tokens, typography, iconography, information architecture, data pipeline strategy, and phased delivery plan.
+
+**Chakra MCP:** Configured `.vscode/mcp.json` for Chakra UI MCP integration. API key stored in `ui/.env`.
+
+---
+
+## Update — 2026-01-24T19:45:00Z
 
 ### Geographic Naming Conventions
 

@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.847426Z",
-    "notes": "Comprehensive index for Malaysia covering Malay kingdoms (Langkasuka, Kedah tua), Srivijaya suzerainty, Malacca Sultanate (1400-1511, Islamic hub), Portuguese/Dutch/British colonialism, Straits Settlements, Federated/Unfederated Malay States, Japanese occupation, Malayan Emergency 1948-1960, independence 1957, formation of Malaysia 1963 (Sabah/Sarawak/Singapore), race riots 1969, New Economic Policy, Mahathir's modernisation, 1MDB scandal, and ethnic power-sharing."
+    "notes": "Comprehensive index for Malaysia covering Malay kingdoms (Langkasuka, Kedah tua), Srivijaya suzerainty, Malacca Sultanate (1400-1511, Islamic hub), Portuguese/Dutch/British colonialism, Straits Settlements, Federated/Unfederated Malay States, Japanese occupation, Malayan Emergency 1948-1960, independence 1957, formation of Malaysia 1963 (Sabah/Sarawak/Singapore), race riots 1969, New Economic Policy, Mahathir's modernisation, 1MDB scandal, and ethnic power-sharing.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Kuala Lumpur (federal), Putrajaya (administrative)",
@@ -26,8 +31,10 @@
     ],
     "other_languages": [
       "English",
-      "Chinese dialects (Cantonese, Mandarin, Hokkien, Hakka)",
-      "Tamil"
+      "Mandarin",
+      "Tamil",
+      "Iban",
+      "Kadazan-Dusun"
     ],
     "government_type": "Federal parliamentary constitutional elective monarchy",
     "currency": "Malaysian ringgit (MYR)",
@@ -57,7 +64,9 @@
       "Christianity": "9.1%",
       "Hinduism": "6.1%",
       "Other_Folk": "2.6%",
-      "note": "Islam is official religion; shariah law applies to Muslims in family/personal matters; sultans are constitutional heads of Islam in their states; Yang di-Pertuan Agong is head of Islam nationally; non-Muslim freedoms constitutionally protected but tensions over conversions/proselytisation"
+      "note": "Islam is official religion; shariah law applies to Muslims in family/personal matters; sultans are constitutional heads of Islam in their states; Yang di-Pertuan Agong is head of Islam nationally; non-Muslim freedoms constitutionally protected but tensions over conversions/proselytisation",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -97,7 +106,8 @@
     "time_zone": "MYT (UTC+8)",
     "independence": {
       "date": "1957-08-31",
-      "from": "United Kingdom (Malaya); Malaysia formed 1963-09-16 with Sabah/Sarawak/Singapore (Singapore left 1965)"
+      "from": "United Kingdom (Malaya); Malaysia formed 1963-09-16 with Sabah/Sarawak/Singapore (Singapore left 1965)",
+      "notes": ""
     },
     "continent": "Asia",
     "notes_unique": "Only federal elective monarchy globally (9 sultans rotate as Yang di-Pertuan Agong every 5 years); Petronas Twin Towers were world's tallest 1998-2004; 1MDB scandal (Najib Razak, Jho Low); New Economic Policy (NEP) affirmative action for Malays; Proton (national car); palm oil major producer",
@@ -108,12 +118,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -122,24 +148,125 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
-      "top_exports": [],
-      "top_imports": [],
+      "exports_usd": "$300 billion",
+      "imports_usd": "$260 billion",
+      "trade_balance_usd": "+$40 billion",
+      "current_account_balance_pct_gdp": 2.5,
+      "top_exports": [
+        "electronics/semiconductors",
+        "palm oil",
+        "petroleum",
+        "LNG",
+        "rubber",
+        "chemicals"
+      ],
+      "top_imports": [
+        "electronics",
+        "machinery",
+        "petroleum",
+        "chemicals",
+        "metals"
+      ],
+      "top_export_partners": [
+        "Singapore",
+        "China",
+        "USA",
+        "Hong Kong",
+        "Japan"
+      ],
+      "top_import_partners": [
+        "China",
+        "Singapore",
+        "USA",
+        "Japan",
+        "Taiwan"
+      ],
+      "fta_partners": [
+        "ASEAN",
+        "RCEP",
+        "CPTPP",
+        "Australia-NZ",
+        "India",
+        "Japan",
+        "South Korea",
+        "EU (negotiating)"
+      ],
+      "wto_member": true,
+      "regional_trade_blocs": [
+        "ASEAN",
+        "RCEP",
+        "CPTPP",
+        "APEC",
+        "D-8"
+      ],
+      "trade_openness_pct_gdp": 140.0,
+      "notes": "Highly trade-dependent; semiconductor supply chain critical globally; Penang back-end testing hub; palm oil top 2 exporter; CPTPP and RCEP member.",
+      "total_exports_usd": "",
+      "total_imports_usd": "",
       "major_partners": [],
+      "top_export_destinations": [],
+      "top_import_origins": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "remittances_pct_gdp": 0,
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
+      "road_network_km": 250023,
+      "paved_roads_pct": 82,
+      "rail_network_km": 1849,
+      "airports": 62,
+      "international_airports": 7,
+      "major_ports": [
+        "Port Klang",
+        "Tanjung Pelepas",
+        "Penang Port",
+        "Bintulu"
+      ],
+      "electricity_access_pct": 100,
+      "electricity_generation_gwh": 180000,
+      "renewable_electricity_pct": 18,
+      "broadband_subscriptions_per_100": 10,
+      "mobile_subscriptions_per_100": 140,
+      "internet_users_pct": 97,
+      "logistics_performance_index_score": 3.2,
+      "logistics_performance_index_rank": 41,
+      "notes": "World-class infrastructure; KLIA hub; Port Klang/Tanjung Pelepas among busiest globally; East Coast Rail Link (ECRL, Chinese-funded); Penang transport master plan.",
       "internet_penetration_pct": 0,
-      "electricity_access_pct": 0,
-      "mobile_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "waterways_km": 0,
+      "submarine_cables": []
     },
     "international_memberships": [],
     "governance_indices": {
+      "corruption_perceptions_index_score": 50,
+      "corruption_perceptions_index_rank": 62,
+      "rule_of_law_index_score": 0.52,
+      "rule_of_law_index_rank": 55,
+      "government_effectiveness_score": 0.8,
+      "regulatory_quality_score": 0.7,
+      "voice_accountability_score": -0.3,
+      "political_stability_score": 0.1,
+      "fragile_states_index_score": 56.0,
+      "fragile_states_index_rank": 100,
+      "democracy_index_score": 7.3,
+      "democracy_index_category": "Flawed democracy",
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 50,
+      "press_freedom_index_rank": 107,
+      "judicial_independence_score": 0.5,
+      "gender_equality_index": 0.68,
+      "notes": "Post-2018 political reform era; Anwar Ibrahim PM (2022); UMNO/BN long dominance ended; multi-coalition politics; bumiputera affirmative action policies; Sedition Act concerns.",
       "corruption_perception_index": {
         "score": 0,
         "rank": 0,
@@ -157,6 +284,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -164,12 +311,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -177,20 +348,506 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0,
+      "ict_development_index": 0,
+      "mobile_money_accounts": 0,
+      "digital_payments_pct_adults": 0,
+      "fintech_companies": 0,
+      "startup_ecosystem_value_usd": "",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 0
+    },
+    "capital_coordinates": {
+      "lat": 3.139,
+      "lon": 101.6869
+    },
+    "other_major_cities": [
+      "Johor Bahru",
+      "George Town",
+      "Ipoh",
+      "Kuching",
+      "Kota Kinabalu"
+    ],
+    "national_motto": "Unity Is Strength (Bersekutu Bertambah Mutu)",
+    "national_anthem": "Negaraku (My Country)",
+    "currency_code": "MYR",
+    "internet_tld": ".my",
+    "utc_offset": "UTC+8",
+    "drives_on": "left",
+    "geography": {
+      "coordinates": {
+        "lat": 4.21,
+        "lon": 101.98
+      },
+      "bounding_box": {
+        "north": 7.36,
+        "south": 0.85,
+        "east": 119.27,
+        "west": 99.64
+      },
+      "land_area_km2": 329847,
+      "water_area_km2": 1190,
+      "coastline_km": 4675,
+      "borders": [
+        "Thailand",
+        "Indonesia",
+        "Brunei"
+      ],
+      "border_lengths_km": {
+        "Thailand": 595,
+        "Indonesia": 1881,
+        "Brunei": 266
+      },
+      "highest_point": {
+        "name": "Mount Kinabalu",
+        "elevation_m": 4095
+      },
+      "lowest_point": {
+        "name": "Indian Ocean / South China Sea",
+        "elevation_m": 0
+      },
+      "terrain": "Coastal plains rising to hills and mountains; Peninsular (Titiwangsa Range) and East Malaysia (Borneo, Crocker Range)",
+      "land_use": {
+        "agricultural_pct": 26.2,
+        "arable_pct": 2.9,
+        "forest_pct": 67.6,
+        "other_pct": 6.2
+      },
+      "major_rivers": [
+        "Rajang",
+        "Kinabatangan",
+        "Pahang",
+        "Perak"
+      ],
+      "major_lakes": [
+        "Kenyir",
+        "Bera"
+      ],
+      "exclusive_economic_zone_km2": 334671,
+      "landlocked": false,
+      "notes": "Two distinct regions (Peninsular and Borneo) separated by South China Sea; Borneo rainforests among world's oldest; Spratly Islands disputed; Strait of Malacca strategic choke point."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$400 billion",
+      "gdp_ppp_usd": "$1.1 trillion",
+      "gdp_per_capita_nominal_usd": 12000,
+      "gdp_per_capita_ppp_usd": 33000,
+      "gdp_growth_rate_pct": 3.7,
+      "inflation_rate_pct": 2.5,
+      "unemployment_rate_pct": 3.6,
+      "youth_unemployment_rate_pct": 11.0,
+      "poverty_rate_pct": 5.6,
+      "poverty_line_definition": "National poverty line (RM2,208/month)",
+      "gini_coefficient": 41.2,
+      "income_classification": "Upper-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 8,
+        "industry_pct_gdp": 37,
+        "services_pct_gdp": 55
+      },
+      "labor_force": 16000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 10,
+        "industry_pct": 27,
+        "services_pct": 63
+      },
+      "fdi_inflow_usd": "$13 billion",
+      "fdi_outflow_usd": "$8 billion",
+      "foreign_exchange_reserves_usd": "$114 billion",
+      "ease_of_doing_business_rank": 12,
+      "economic_freedom_index_score": 68.5,
+      "credit_rating": {
+        "moodys": "A3",
+        "sp": "A-",
+        "fitch": "BBB+"
+      },
+      "notes": "Diversified economy; semiconductor manufacturing hub (Penang 'Silicon Island'); palm oil world's 2nd producer; Petronas state oil company; Vision 2030 targeting high-income status."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 4.1,
+      "health_expenditure_per_capita_usd": 490,
+      "physicians_per_1k": 1.8,
+      "nurses_midwives_per_1k": 3.5,
+      "hospital_beds_per_1k": 1.9,
+      "maternal_mortality_per_100k": 21,
+      "hiv_prevalence_pct": 0.5,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 92,
+      "access_to_clean_water_pct": 96,
+      "access_to_sanitation_pct": 96,
+      "vaccination_coverage_pct": 95,
+      "stunting_under5_pct": 21,
+      "obesity_rate_pct": 15.6,
+      "universal_health_coverage_index": 73,
+      "leading_causes_of_death": [
+        "Ischemic heart disease",
+        "Stroke",
+        "Lower respiratory infections",
+        "Diabetes"
+      ],
+      "notes": "Dual public-private system; medical tourism destination; affordable quality care; high childhood stunting surprising for income level; growing diabetes/NCD burden."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 70.0,
+      "food_security_index_rank": 35,
+      "arable_land_pct": 2.9,
+      "agricultural_land_pct": 26.2,
+      "irrigated_land_pct": 5.0,
+      "major_crops": [
+        "palm oil",
+        "rubber",
+        "rice",
+        "cocoa",
+        "pepper",
+        "pineapple",
+        "durian"
+      ],
+      "major_livestock": [
+        "poultry",
+        "cattle",
+        "goats",
+        "pigs",
+        "buffalo"
+      ],
+      "food_import_dependency_pct": 30,
+      "cereal_yield_kg_per_hectare": 3800,
+      "agricultural_workers_pct": 10,
+      "notes": "World's 2nd largest palm oil producer; rubber significant; 60%+ rice self-sufficient; durian major export crop; Sarawak pepper famous; FELDA smallholder scheme legacy.",
+      "agricultural_employment_pct": 0,
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.62,
+      "global_peace_index_rank": 25,
+      "military_expenditure_pct_gdp": 1.0,
+      "active_military_personnel": 113000,
+      "reserve_military_personnel": 296000,
+      "paramilitary_personnel": 26500,
+      "internal_conflicts": "Sulu/Sabah security threat (diminished)",
+      "terrorism_index_score": 2.0,
+      "terrorism_index_rank": 73,
+      "homicide_rate_per_100k": 2.0,
+      "incarceration_rate_per_100k": 160,
+      "police_per_100k": 340,
+      "border_disputes": "Spratly Islands; Sabah (Philippines claim)",
+      "refugee_population_hosted": 180000,
+      "idp_population": 0,
+      "un_peacekeeping_contributor": true,
+      "arms_imports_usd": "$500 million",
+      "notes": "Broadly stable; Five Power Defence Arrangements; Lahad Datu (2013) Sulu intrusion; ESSCOM eastern Sabah security zone; SCS disputes with China.",
+      "active_conflicts": [],
+      "un_peacekeeping_contributions": 0,
+      "internally_displaced_persons": 0
+    },
+    "environment_climate": {
+      "co2_emissions_mt": 250.0,
+      "co2_per_capita_t": 7.5,
+      "renewable_energy_pct": 8,
+      "renewable_energy_target_pct": 31,
+      "renewable_energy_target_year": 2025,
+      "forest_cover_pct": 67.6,
+      "deforestation_rate_pct_annual": 0.4,
+      "protected_areas_pct": 18.0,
+      "biodiversity_index_score": 0.8,
+      "water_stress_level": "Low",
+      "water_withdrawal_per_capita_m3": 400,
+      "natural_disaster_risk_index": 5.0,
+      "climate_vulnerability_index": "Medium",
+      "waste_recycling_rate_pct": 30,
+      "air_quality_pm25": 15,
+      "environmental_performance_index_score": 47.0,
+      "environmental_performance_index_rank": 73,
+      "paris_agreement_status": "Ratified",
+      "ndc_target": "45% carbon intensity reduction by 2030",
+      "notes": "Palm oil deforestation major issue; Borneo biodiversity hotspot (orangutan, pygmy elephant); haze from Indonesian fires; coral triangle marine biodiversity; peat fires."
+    },
+    "demographics_extended": {
+      "median_age": 30.3,
+      "population_growth_rate_pct": 1.1,
+      "birth_rate_per_1k": 15,
+      "death_rate_per_1k": 5,
+      "net_migration_rate_per_1k": 1.0,
+      "sex_ratio": 1.07,
+      "dependency_ratio_pct": 44,
+      "urban_population_pct_change_annual": 2.1,
+      "total_fertility_rate": 1.8,
+      "contraceptive_prevalence_pct": 52,
+      "mean_years_of_schooling": 10.6,
+      "expected_years_of_schooling": 13.1,
+      "education_expenditure_pct_gdp": 3.9,
+      "r_and_d_expenditure_pct_gdp": 1.04,
+      "stem_graduates_pct": 32,
+      "remittances_received_usd": "$2 billion",
+      "remittances_pct_gdp": 0.5,
+      "diaspora_population": 1700000,
+      "ethnic_fractionalization_index": 0.59,
+      "religious_fractionalization_index": 0.67,
+      "notes": "Multi-ethnic (Malay 69%, Chinese 23%, Indian 7%); bumiputera privileges contentious; indigenous peoples (Orang Asli, Dayak, Kadazan); multi-religious; brain drain of non-Malay professionals."
+    },
+    "digital_infrastructure": {
+      "internet_penetration_pct": 97,
+      "mobile_penetration_pct": 140,
+      "fixed_broadband_speed_mbps": 90,
+      "mobile_broadband_speed_mbps": 40,
+      "5g_coverage_pct": 50,
+      "fiber_optic_coverage_pct": 60,
+      "ict_development_index_score": 7.0,
+      "e_government_index_score": 0.78,
+      "digital_economy_pct_gdp": 22.6,
+      "tech_hubs_count": 50,
+      "mobile_money_accounts": 10000000,
+      "digital_payments_pct_adults": 75,
+      "fintech_companies": 200,
+      "startup_ecosystem_value_usd": "$5 billion",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 79.0,
+      "innovation_index_score": 36.0,
+      "innovation_index_rank": 36,
+      "ai_readiness_index": 62.0
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 13,
+        "global_rank": 46
+      },
+      "area": {
+        "continent_rank": 18,
+        "global_rank": 66
+      },
+      "gdp_nominal": {
+        "continent_rank": 8,
+        "global_rank": 36
+      },
+      "gdp_per_capita": {
+        "continent_rank": 8,
+        "global_rank": 58
+      },
+      "hdi": {
+        "continent_rank": 7,
+        "global_rank": 63
+      },
+      "life_expectancy": {
+        "continent_rank": 14,
+        "global_rank": 65
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 4,
+        "global_rank": 12
+      },
+      "internet_penetration": {
+        "continent_rank": 9,
+        "global_rank": 50
+      },
+      "press_freedom": {
+        "continent_rank": 27,
+        "global_rank": 113
+      },
+      "innovation_index": {
+        "continent_rank": 10,
+        "global_rank": 36
+      },
+      "notes": "Upper-middle-income; major palm oil and electronics exporter; multi-ethnic federation; Petronas twin towers.",
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "Malayan tiger",
+        "hibiscus"
+      ],
+      "national_animal": "Malayan tiger",
+      "national_flower": "bunga raya (hibiscus)",
+      "national_dish": "nasi lemak (coconut rice)",
+      "national_sport": "Sepak takraw; badminton",
+      "major_festivals": [
+        "Hari Raya Aidilfitri",
+        "Chinese New Year",
+        "Deepavali",
+        "Thaipusam",
+        "Hari Malaysia (Malaysia Day, 16 Sept)",
+        "Merdeka Day (31 Aug)"
+      ],
+      "cuisine_highlights": [
+        "nasi lemak",
+        "satay",
+        "rendang",
+        "roti canai",
+        "char kway teow",
+        "laksa",
+        "cendol",
+        "durian"
+      ],
+      "music_art_traditions": [
+        "Gamelan",
+        "Mak Yong (UNESCO)",
+        "Dikir barat",
+        "Wayang kulit (shadow puppets)",
+        "Batik art"
+      ],
+      "intangible_heritage_items": [
+        "Mak Yong theatre (UNESCO)",
+        "Pantun (UNESCO)"
+      ],
+      "notable_historical_figures": [
+        "Mahathir Mohamad (PM, 22 years)",
+        "Tunku Abdul Rahman (founding PM)",
+        "Parameswara (founded Malacca)",
+        "Hang Tuah (legendary warrior)"
+      ],
+      "world_heritage_sites": [
+        "Gunung Mulu National Park",
+        "Kinabalu Park",
+        "Melaka and George Town, Historic Cities of Straits of Malacca",
+        "Archaeological Heritage of Lenggong Valley"
+      ],
+      "media_landscape": "The Star, New Straits Times (English); Berita Harian (Malay); Sin Chew Daily (Chinese); RTM, TV3, Astro; social media dominant.",
+      "notes": "Multi-ethnic (Malay, Chinese, Indian, indigenous); Malacca Straits history; Petronas symbolism; food culture one of world's richest.",
+      "film_industry": ""
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 82,
+        "hydroelectric_pct": 14,
+        "solar_pct": 2,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 2
+      },
+      "installed_capacity_mw": 36000,
+      "electricity_production_gwh": 175000,
+      "electricity_consumption_per_capita_kwh": 5200,
+      "energy_imports_pct": 5,
+      "oil_production_bpd": 600000,
+      "oil_consumption_bpd": 700000,
+      "natural_gas_production_bcm": 73,
+      "notes": "Petronas (national oil company; Petronas Towers); major LNG exporter (Sarawak); Bakun Dam (Sarawak); transitioning to renewable energy target 31% by 2025.",
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 50,
+      "gender_inequality_index": 0.26,
+      "gender_inequality_rank": 61,
+      "gender_gap_index_score": 0.68,
+      "women_in_parliament_pct": 15,
+      "women_labor_force_participation_pct": 56,
+      "maternal_mortality_per_100k": 21,
+      "child_marriage_pct": 11,
+      "lgbtq_legal_status": "Illegal (Section 377A; Sharia for Muslims)",
+      "death_penalty_status": "Retentionist (reform underway)",
+      "human_trafficking_tier": "Tier 2 Watch List",
+      "notes": "Bumiputera affirmative action policies; ethnic tensions; dual legal system (civil + Sharia for Muslims); migrant worker issues; Sedition Act.",
+      "fgm_prevalence_pct": 0,
+      "child_labor_pct": 0
+    },
+    "legal_system": {
+      "legal_tradition": "English common law; Islamic Sharia for Muslims (personal status and some criminal offences)",
+      "constitution_year": 1957,
+      "sharia_applicability": "Sharia courts for Muslims in personal status (13 states + federal territories); limited criminal jurisdiction (RUU355 debate)",
+      "customary_law_role": "Adat (customary law) in Sabah, Sarawak, and some peninsular states",
+      "icc_membership": "Not a state party",
+      "judicial_independence_score": 0.5,
+      "contract_enforcement_days": 425,
+      "property_rights_index": 60,
+      "notes": "Federal Court (apex); dual system – civil and Sharia; Bumiputera constitutional provisions; National Security Council Act; reformed under Reformasi."
+    },
+    "tourism": {
+      "annual_visitors": 26000000,
+      "tourism_revenue_usd": "$18 billion",
+      "tourism_pct_gdp": 5,
+      "tourism_employment_pct": 9,
+      "unesco_world_heritage_sites": 4,
+      "unesco_sites_list": [
+        "Gunung Mulu NP",
+        "Kinabalu Park",
+        "Melaka and George Town",
+        "Lenggong Valley"
+      ],
+      "major_attractions": [
+        "Petronas Twin Towers (KL)",
+        "Langkawi Island",
+        "Borneo rainforest (Sabah/Sarawak)",
+        "Penang food capital",
+        "Cameron Highlands",
+        "Sipadan diving"
+      ],
+      "visa_free_access_countries": 182,
+      "henley_passport_rank": 12,
+      "notes": "Major tourism destination; Malaysia Truly Asia branding; food tourism; tropical islands; Borneo wildlife; medical tourism growing."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Kuala Lumpur International Airport (KLIA)",
+        "Penang International",
+        "Kota Kinabalu International"
+      ],
+      "major_airports_domestic": [
+        "Langkawi",
+        "Kuching",
+        "Johor Bahru Senai"
+      ],
+      "railway_km": 1849,
+      "road_network_km": 238000,
+      "paved_roads_pct": 81,
+      "major_ports": [
+        "Port Klang",
+        "Tanjung Pelepas",
+        "Penang Port"
+      ],
+      "public_transit_systems": [
+        "KL RapidKL (LRT, MRT, Monorail)",
+        "KTM Komuter",
+        "ETS (Kuala Lumpur–Padang Besar)"
+      ],
+      "notes": "KLIA major regional hub; AirAsia (low-cost carrier HQ); ECRL (East Coast Rail Link) under construction; Penang LRT planned.",
+      "national_airline": "",
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
     }
   },
   "leadership": {
@@ -198,7 +855,8 @@
       "name": "Anwar Ibrahim",
       "title": "Prime Minister",
       "since": "2022-11-24",
-      "notes": "Pakatan Harapan coalition; reformist; imprisoned twice (sodomy charges seen as politically motivated); deputy PM under Mahathir (1993-1998); Asian financial crisis fallout; finally PM after decades"
+      "notes": "Pakatan Harapan coalition; reformist; imprisoned twice (sodomy charges seen as politically motivated); deputy PM under Mahathir (1993-1998); Asian financial crisis fallout; finally PM after decades",
+      "party": ""
     },
     "yang_di_pertuan_agong": {
       "name": "Sultan Ibrahim Iskandar",
@@ -256,7 +914,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

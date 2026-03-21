@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.814862Z",
-    "notes": "Comprehensive index for Bhutan covering early Bon religion, Guru Rinpoche (Padmasambhava) and Buddhism, Zhabdrung Ngawang Namgyal unification (1616), Dzong fortress system, British influence, Wangchuck monarchy (1907), modernisation under third and fourth kings, Gross National Happiness, democratic transition 2008, and Lhotshampa refugee crisis."
+    "notes": "Comprehensive index for Bhutan covering early Bon religion, Guru Rinpoche (Padmasambhava) and Buddhism, Zhabdrung Ngawang Namgyal unification (1616), Dzong fortress system, British influence, Wangchuck monarchy (1907), modernisation under third and fourth kings, Gross National Happiness, democratic transition 2008, and Lhotshampa refugee crisis.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Thimphu",
@@ -50,7 +55,9 @@
       "Vajrayana_Buddhism_Drukpa_Kagyu": "75%",
       "Hinduism": "22%",
       "Other": "3%",
-      "note": "Buddhism is state religion; Drukpa Kagyu school and Nyingma school; Hinduism mainly among southern Lhotshampa (Nepali-origin)"
+      "note": "Buddhism is state religion; Drukpa Kagyu school and Nyingma school; Hinduism mainly among southern Lhotshampa (Nepali-origin)",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -92,12 +99,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -106,21 +129,39 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [],
       "top_imports": [],
       "major_partners": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "remittances_pct_gdp": 0,
+      "total_exports_usd": "",
+      "total_imports_usd": "",
+      "top_export_destinations": [],
+      "top_import_origins": [],
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 0,
       "electricity_access_pct": 0,
       "mobile_subscriptions_per_100": 0,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "paved_roads_pct": 0,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
+      "road_network_km": 0,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": ""
     },
     "international_memberships": [],
     "governance_indices": {
@@ -141,6 +182,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -148,12 +209,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -161,20 +246,424 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0.3,
+      "ict_development_index": 3.0,
+      "mobile_money_accounts": 50000,
+      "digital_payments_pct_adults": 15,
+      "fintech_companies": 3,
+      "startup_ecosystem_value_usd": "$5 million",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 20.0,
+      "innovation_index_score": 15.0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 15.0
+    },
+    "capital_coordinates": {
+      "lat": 27.4712,
+      "lon": 89.6339
+    },
+    "other_major_cities": [
+      "Phuntsholing",
+      "Gelephu",
+      "Samdrup Jongkhar",
+      "Trashigang"
+    ],
+    "national_motto": "One Nation, One People",
+    "national_anthem": "Druk tsendhen (The Thunder Dragon Kingdom)",
+    "currency_code": "BTN",
+    "internet_tld": ".bt",
+    "utc_offset": "UTC+6",
+    "drives_on": "left",
+    "other_languages": [
+      "Sharchopkha",
+      "Lhotshamkha (Nepali)",
+      "Bumthangkha"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": 27.5142,
+        "lon": 90.4336
+      },
+      "bounding_box": {
+        "north": 28.33,
+        "south": 26.7,
+        "east": 92.12,
+        "west": 88.75
+      },
+      "land_area_km2": 38394,
+      "water_area_km2": 0,
+      "coastline_km": 0,
+      "borders": [
+        "China",
+        "India"
+      ],
+      "border_lengths_km": {
+        "China": 477,
+        "India": 659
+      },
+      "highest_point": {
+        "name": "Gangkhar Puensum",
+        "elevation_m": 7570
+      },
+      "lowest_point": {
+        "name": "Drangme Chhu",
+        "elevation_m": 97
+      },
+      "terrain": "Extremely mountainous; deep valleys; alpine in north descending to subtropical plains in south",
+      "land_use": {
+        "agricultural_pct": 13.6,
+        "arable_pct": 2.6,
+        "forest_pct": 71.1,
+        "other_pct": 15.3
+      },
+      "major_rivers": [
+        "Manas",
+        "Mo Chhu",
+        "Pho Chhu",
+        "Drangme Chhu"
+      ],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": true,
+      "notes": "Landlocked in Eastern Himalayas; Gangkhar Puensum (7,570m) highest unclimbed mountain in the world; constitutionally mandated 60%+ forest cover; carbon-negative country."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$2.8 billion",
+      "gdp_ppp_usd": "$10.2 billion",
+      "gdp_per_capita_nominal_usd": 3560,
+      "gdp_per_capita_ppp_usd": 13000,
+      "gdp_growth_rate_pct": 4.7,
+      "inflation_rate_pct": 4.3,
+      "unemployment_rate_pct": 5.9,
+      "youth_unemployment_rate_pct": 29.0,
+      "poverty_rate_pct": 8.2,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 37.4,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 16,
+        "industry_pct_gdp": 42,
+        "services_pct_gdp": 42
+      },
+      "labor_force": 430000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 55,
+        "industry_pct": 10,
+        "services_pct": 35
+      },
+      "fdi_inflow_usd": "$8 million",
+      "fdi_outflow_usd": "$0",
+      "foreign_exchange_reserves_usd": "$1.0 billion",
+      "ease_of_doing_business_rank": 89,
+      "economic_freedom_index_score": 55.0,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Gross National Happiness (GNH) as development philosophy over GDP; hydropower dominant industry (exports to India); high-value low-volume tourism model ($200/day minimum spend; revised 2023 to $100/day); Gelephu Mindfulness City mega-project."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.6,
+      "health_expenditure_per_capita_usd": 107,
+      "physicians_per_1k": 0.5,
+      "nurses_midwives_per_1k": 1.3,
+      "hospital_beds_per_1k": 1.7,
+      "maternal_mortality_per_100k": 60,
+      "hiv_prevalence_pct": 0.2,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 134,
+      "access_to_clean_water_pct": 98,
+      "access_to_sanitation_pct": 76,
+      "vaccination_coverage_pct": 97,
+      "stunting_under5_pct": 22,
+      "obesity_rate_pct": 6.4,
+      "universal_health_coverage_index": 52,
+      "leading_causes_of_death": [
+        "Cardiovascular diseases",
+        "Respiratory infections",
+        "Cancer",
+        "Neonatal disorders"
+      ],
+      "notes": "Free healthcare for all citizens; traditional medicine (Sowa Rigpa) integrated with modern healthcare; limited specialist capacity (referrals to India); remarkable COVID vaccination rate (~90% fully vaccinated quickly)."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 46.0,
+      "food_security_index_rank": 88,
+      "arable_land_pct": 2.6,
+      "agricultural_land_pct": 13.6,
+      "irrigated_land_pct": 25,
+      "major_crops": [
+        "rice",
+        "maize",
+        "wheat",
+        "potatoes",
+        "oranges",
+        "apples",
+        "cardamom"
+      ],
+      "major_livestock": [
+        "cattle (yak in highlands)",
+        "poultry",
+        "pigs"
+      ],
+      "food_import_dependency_pct": 40,
+      "cereal_yield_kg_per_hectare": 3400,
+      "agricultural_employment_pct": 55,
+      "notes": "Aspiring to be world's first 100% organic country; chillies and cheese (ema datshi) central to diet; red rice staple; yak herding in highlands; subsistence farming dominant; human-wildlife conflict (elephants, bears).",
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "energy": {
+      "primary_energy_sources": [
+        "hydropower",
+        "biomass",
+        "imported petroleum"
+      ],
+      "electricity_generation_gwh": 10000,
+      "electricity_consumption_per_capita_kwh": 3500,
+      "renewable_share_pct": 100,
+      "fossil_fuel_share_pct": 0,
+      "nuclear_share_pct": 0,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 3000,
+      "natural_gas_production_bcm": 0,
+      "proved_oil_reserves_bbl": "0",
+      "proved_gas_reserves_tcm": "0",
+      "energy_imports_pct": 0,
+      "electrification_rate_pct": 100,
+      "notes": "100% renewable electricity (hydropower); exports surplus to India (largest revenue source); 30 GW hydropower potential, ~2.3 GW developed; Tala, Chhukha, Mangdechhu mega-dams; climate change threatens glacial-fed rivers.",
+      "energy_mix": {
+        "fossil_fuels_pct": 0,
+        "hydroelectric_pct": 0,
+        "solar_pct": 0,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 0,
+      "electricity_production_gwh": 0,
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "transport": {
+      "airports": 2,
+      "airports_paved": 2,
+      "railways_km": 0,
+      "roadways_km": 12205,
+      "paved_roads_pct": 62,
+      "waterways_km": 0,
+      "major_ports": [],
+      "national_airline": "Druk Air & Bhutan Airlines",
+      "vehicle_ownership_per_1k": 90,
+      "notes": "No railways; Paro Airport one of world's most challenging landings; limited road network through mountainous terrain; India finances major road construction; no traffic lights (Thimphu has none).",
+      "major_airports_international": [],
+      "major_airports_domestic": [],
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
+    },
+    "tourism": {
+      "international_arrivals": 100000,
+      "tourism_revenue_usd": "$60 million",
+      "tourism_pct_gdp": 2.1,
+      "major_attractions": [
+        "Tiger's Nest (Paro Taktsang)",
+        "Punakha Dzong",
+        "Dochula Pass",
+        "Bumthang Valley",
+        "Phobjikha Valley (black-necked cranes)"
+      ],
+      "unesco_world_heritage_sites": 0,
+      "notes": "High-value low-volume tourism policy; Sustainable Development Fee ($100/day); Tiger's Nest most iconic site; Dzong architecture unique; no UNESCO World Heritage sites yet (tentative list includes dzongs); opened to tourism in 1974.",
+      "annual_visitors": 0,
+      "tourism_employment_pct": 0,
+      "unesco_sites_list": [],
+      "visa_free_access_countries": 0,
+      "henley_passport_rank": 0
+    },
+    "legal_system": {
+      "type": "Civil law (influenced by English common law)",
+      "supreme_court": "Supreme Court of Bhutan",
+      "international_court_jurisdiction": "Not accepted",
+      "suffrage": "18 years, universal",
+      "legal_traditions": [
+        "Buddhist legal principles",
+        "English common law",
+        "Customary law"
+      ],
+      "death_penalty": false,
+      "notes": "Constitutional monarchy since 2008 (King voluntarily devolved powers); Tobacco Control Act (strictest anti-tobacco law globally — sale banned); 2004 banned all tobacco sales; first country to ban plastic bags.",
+      "legal_tradition": "",
+      "constitution_year": 0,
+      "sharia_applicability": "",
+      "customary_law_role": "",
+      "icc_membership": "",
+      "judicial_independence_score": 0,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_score": 58,
+      "freedom_house_status": "Partly Free",
+      "gender_inequality_index": 0.421,
+      "gender_inequality_rank": 115,
+      "women_in_parliament_pct": 17,
+      "female_labor_force_participation_pct": 59,
+      "maternal_leave_weeks": 8,
+      "child_marriage_pct": 26,
+      "lgbtq_legal_status": "Decriminalized (2021)",
+      "press_freedom_rank": 90,
+      "notes": "Unique GNH approach to human wellbeing; Lhotshampa (Nepali-Bhutanese) expelled in 1990s (~100k refugees, mostly resettled in USA); homosexuality decriminalized 2021; matrilineal inheritance in some communities.",
+      "gender_gap_index_score": 0,
+      "women_labor_force_participation_pct": 0,
+      "maternal_mortality_per_100k": 0,
+      "fgm_prevalence_pct": 0,
+      "death_penalty_status": "",
+      "human_trafficking_tier": "",
+      "child_labor_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.481,
+      "global_peace_index_rank": 17,
+      "homicide_rate_per_100k": 1.0,
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 0,
+      "armed_conflict": false,
+      "internally_displaced_persons": 0,
+      "landmine_contamination": false,
+      "notes": "One of the most peaceful countries in the world; no military conflicts; Indian Army ensures external security; internal stability under monarchy; Assamese militants historically used southern jungles (cleared in 2003 operation).",
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": ""
+    },
+    "cultural_heritage": {
+      "unesco_intangible_heritage": [
+        "Mask dance of the drums from Drametse"
+      ],
+      "notable_cultural_exports": [
+        "Dzong architecture",
+        "Gross National Happiness philosophy",
+        "Thangka painting",
+        "Buddhist textiles"
+      ],
+      "major_museums": [
+        "National Museum of Bhutan (Ta Dzong)",
+        "Folk Heritage Museum",
+        "Textile Museum"
+      ],
+      "world_heritage_sites_list": [],
+      "culinary_traditions": [
+        "Ema datshi (chilli cheese)",
+        "Phaksha paa (pork with red chillies)",
+        "Red rice",
+        "Suja (butter tea)"
+      ],
+      "notes": "Last Vajrayana Buddhist kingdom; archery is national sport; dzong (fortress-monasteries) define landscape; national dress (gho/kira) mandatory in public buildings; television/internet introduced only in 1999.",
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "",
+      "national_sport": "",
+      "major_festivals": [],
+      "cuisine_highlights": [],
+      "music_art_traditions": [],
+      "film_industry": "",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [],
+      "world_heritage_sites": [],
+      "media_landscape": ""
+    },
+    "comparative_rankings": {
+      "human_development_index_rank": 127,
+      "global_competitiveness_rank": 0,
+      "happiness_index_rank": 95,
+      "environmental_performance_rank": 107,
+      "gender_gap_rank": 126,
+      "soft_power_rank": 0,
+      "notes": "GNH model internationally admired; carbon-negative distinction unique globally; Peace Index among world's best; small size limits competitiveness rankings.",
+      "_note": "Country position relative to continent and global. 'rank' = 1 is best/largest.",
+      "population": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "area": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_nominal": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_per_capita": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "hdi": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "life_expectancy": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "internet_penetration": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "press_freedom": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
     }
   },
   "leadership": {
@@ -182,7 +671,8 @@
       "name": "Jigme Khesar Namgyel Wangchuck",
       "title": "King (Druk Gyalpo)",
       "since": "2006-12-14",
-      "notes": "Fifth King; 'People's King'; Oxford-educated; presided over democratic transition; popular; married Queen Jetsun Pema 2011"
+      "notes": "Fifth King; 'People's King'; Oxford-educated; presided over democratic transition; popular; married Queen Jetsun Pema 2011",
+      "party": ""
     },
     "prime_minister": {
       "name": "Tshering Tobgay",
@@ -215,8 +705,23 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
-    }
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
+    },
+    "former_leaders": []
   },
   "thematic_clusters": {
     "910": [

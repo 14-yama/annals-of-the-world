@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.812112Z",
-    "notes": "Comprehensive index for Bahrain covering Dilmun civilisation, Tylos (Hellenistic), Sassanid Bahrain, early Islam (one of first to convert), Qarmatian state, Portuguese fort (1521), Safavid and Omani periods, Al Khalifa dynasty (1783), British protectorate, oil discovery 1932 (first in Gulf), independence 1971, Shia-Sunni tensions, 2011 Arab Spring uprising, and post-oil economic diversification."
+    "notes": "Comprehensive index for Bahrain covering Dilmun civilisation, Tylos (Hellenistic), Sassanid Bahrain, early Islam (one of first to convert), Qarmatian state, Portuguese fort (1521), Safavid and Omani periods, Al Khalifa dynasty (1783), British protectorate, oil discovery 1932 (first in Gulf), independence 1971, Shia-Sunni tensions, 2011 Arab Spring uprising, and post-oil economic diversification.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Manama",
@@ -25,7 +30,10 @@
       "Arabic"
     ],
     "other_languages": [
-      "English (widely used in business)"
+      "Persian (Farsi)",
+      "Urdu",
+      "Hindi",
+      "Malayalam"
     ],
     "government_type": "Unitary parliamentary constitutional monarchy",
     "currency": "Bahraini dinar (BHD)",
@@ -55,7 +63,9 @@
       "Christianity": "9%",
       "Hindu": "3%",
       "Other": "3%",
-      "note": "Shia majority but Sunni Al Khalifa ruling family; sectarian tensions central to politics; large expatriate worker population"
+      "note": "Shia majority but Sunni Al Khalifa ruling family; sectarian tensions central to politics; large expatriate worker population",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -100,7 +110,8 @@
     "time_zone": "AST (UTC+3)",
     "independence": {
       "date": "1971-08-15",
-      "from": "United Kingdom (treaty relationship)"
+      "from": "United Kingdom (treaty relationship)",
+      "notes": ""
     },
     "continent": "Asia",
     "notes_unique": "Smallest Arab country; only island state in Middle East; first Gulf state to discover oil (1932); Formula 1 Grand Prix since 2004; King Fahd Causeway connects to Saudi Arabia",
@@ -111,12 +122,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -125,21 +152,39 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [],
       "top_imports": [],
       "major_partners": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "remittances_pct_gdp": 0,
+      "total_exports_usd": "",
+      "total_imports_usd": "",
+      "top_export_destinations": [],
+      "top_import_origins": [],
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 0,
       "electricity_access_pct": 0,
       "mobile_subscriptions_per_100": 0,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "paved_roads_pct": 0,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
+      "road_network_km": 0,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": ""
     },
     "international_memberships": [],
     "governance_indices": {
@@ -160,6 +205,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -167,12 +232,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -180,20 +269,414 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0.8,
+      "ict_development_index": 7.2,
+      "mobile_money_accounts": 800000,
+      "digital_payments_pct_adults": 75,
+      "fintech_companies": 100,
+      "startup_ecosystem_value_usd": "$1.5 billion",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 72.0,
+      "innovation_index_score": 35.0,
+      "innovation_index_rank": 62,
+      "ai_readiness_index": 55.0
+    },
+    "capital_coordinates": {
+      "lat": 26.2285,
+      "lon": 50.586
+    },
+    "other_major_cities": [
+      "Muharraq",
+      "Riffa",
+      "Hamad Town",
+      "A'ali",
+      "Isa Town"
+    ],
+    "national_motto": "None officially",
+    "national_anthem": "Bahrainona (Our Bahrain)",
+    "currency_code": "BHD",
+    "internet_tld": ".bh",
+    "utc_offset": "UTC+3",
+    "drives_on": "right",
+    "geography": {
+      "coordinates": {
+        "lat": 26.0667,
+        "lon": 50.5577
+      },
+      "bounding_box": {
+        "north": 26.33,
+        "south": 25.8,
+        "east": 50.82,
+        "west": 50.37
+      },
+      "land_area_km2": 778,
+      "water_area_km2": 0,
+      "coastline_km": 161,
+      "borders": [],
+      "border_lengths_km": {},
+      "highest_point": {
+        "name": "Jabal ad Dukhan",
+        "elevation_m": 134
+      },
+      "lowest_point": {
+        "name": "Persian Gulf",
+        "elevation_m": 0
+      },
+      "terrain": "Low desert plain rising gently to central escarpment; 33 islands",
+      "land_use": {
+        "agricultural_pct": 11.3,
+        "arable_pct": 2.1,
+        "forest_pct": 0.7,
+        "other_pct": 88.0
+      },
+      "major_rivers": [],
+      "major_lakes": [],
+      "exclusive_economic_zone_km2": 7813,
+      "landlocked": false,
+      "notes": "Archipelago of 33 islands in the Persian Gulf; King Fahd Causeway connects to Saudi Arabia (25 km); smallest Arab state; land reclamation expanding territory; Dilmun civilization site."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$44 billion",
+      "gdp_ppp_usd": "$92 billion",
+      "gdp_per_capita_nominal_usd": 28000,
+      "gdp_per_capita_ppp_usd": 58500,
+      "gdp_growth_rate_pct": 3.1,
+      "inflation_rate_pct": 1.0,
+      "unemployment_rate_pct": 4.0,
+      "youth_unemployment_rate_pct": 9.0,
+      "poverty_rate_pct": 0,
+      "poverty_line_definition": "Not applicable (welfare state)",
+      "gini_coefficient": 0,
+      "income_classification": "High income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 0.3,
+        "industry_pct_gdp": 40,
+        "services_pct_gdp": 60
+      },
+      "labor_force": 850000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 1,
+        "industry_pct": 32,
+        "services_pct": 67
+      },
+      "fdi_inflow_usd": "$1.5 billion",
+      "fdi_outflow_usd": "$900 million",
+      "foreign_exchange_reserves_usd": "$5.0 billion",
+      "ease_of_doing_business_rank": 43,
+      "economic_freedom_index_score": 69.3,
+      "credit_rating": {
+        "moodys": "B2",
+        "sp": "B+",
+        "fitch": "B+"
+      },
+      "notes": "First Gulf state to discover oil (1932); most diversified Gulf economy; Islamic banking hub; aluminium smelting (Alba, world's largest); F1 Grand Prix; financial services hub; post-oil diversification ahead of GCC peers."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 4.2,
+      "health_expenditure_per_capita_usd": 1180,
+      "physicians_per_1k": 0.9,
+      "nurses_midwives_per_1k": 2.7,
+      "hospital_beds_per_1k": 1.7,
+      "maternal_mortality_per_100k": 16,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 12,
+      "access_to_clean_water_pct": 100,
+      "access_to_sanitation_pct": 100,
+      "vaccination_coverage_pct": 98,
+      "stunting_under5_pct": 3,
+      "obesity_rate_pct": 29.8,
+      "universal_health_coverage_index": 74,
+      "leading_causes_of_death": [
+        "Cardiovascular diseases",
+        "Cancer",
+        "Diabetes",
+        "Road accidents"
+      ],
+      "notes": "Free healthcare for citizens; high obesity rates; sickle cell disease prevalence; medical tourism growing; well-equipped hospitals but reliant on expatriate medical staff."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 72.0,
+      "food_security_index_rank": 35,
+      "arable_land_pct": 2.1,
+      "agricultural_land_pct": 11.3,
+      "irrigated_land_pct": 100,
+      "major_crops": [
+        "dates",
+        "vegetables",
+        "alfalfa"
+      ],
+      "major_livestock": [
+        "poultry",
+        "sheep",
+        "goats"
+      ],
+      "food_import_dependency_pct": 92,
+      "cereal_yield_kg_per_hectare": 0,
+      "agricultural_employment_pct": 1,
+      "notes": "Almost entirely dependent on food imports; limited arable land; date palms traditional; aquaponics/hydroponics initiatives; food security a strategic concern.",
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "energy": {
+      "primary_energy_sources": [
+        "oil",
+        "natural gas"
+      ],
+      "electricity_generation_gwh": 32000,
+      "electricity_consumption_per_capita_kwh": 19000,
+      "renewable_share_pct": 0.1,
+      "fossil_fuel_share_pct": 99.9,
+      "nuclear_share_pct": 0,
+      "oil_production_bpd": 185000,
+      "oil_consumption_bpd": 60000,
+      "natural_gas_production_bcm": 18,
+      "proved_oil_reserves_bbl": "120 million",
+      "proved_gas_reserves_tcm": "0.09",
+      "energy_imports_pct": 0,
+      "electrification_rate_pct": 100,
+      "notes": "First Gulf state to discover oil (1932); Bahrain Field mature/declining; massive new offshore Basin discovery (2018, 80B bbl tight oil — extraction challenging); BAPCO state oil company; shares Abu Sa'fah field with Saudi Arabia.",
+      "energy_mix": {
+        "fossil_fuels_pct": 0,
+        "hydroelectric_pct": 0,
+        "solar_pct": 0,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 0,
+      "electricity_production_gwh": 0,
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "transport": {
+      "airports": 4,
+      "airports_paved": 3,
+      "railways_km": 0,
+      "roadways_km": 4122,
+      "paved_roads_pct": 95,
+      "waterways_km": 0,
+      "major_ports": [
+        "Khalifa bin Salman Port",
+        "Bahrain Port"
+      ],
+      "national_airline": "Gulf Air",
+      "vehicle_ownership_per_1k": 500,
+      "notes": "King Fahd Causeway to Saudi Arabia (25 km); Bahrain Metro under construction; Bahrain International Airport modernized; compact island geography; Bahrain-Qatar causeway proposed.",
+      "major_airports_international": [],
+      "major_airports_domestic": [],
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
+    },
+    "tourism": {
+      "international_arrivals": 12000000,
+      "tourism_revenue_usd": "$4.4 billion",
+      "tourism_pct_gdp": 10.0,
+      "major_attractions": [
+        "Bahrain Fort (Qal'at al-Bahrain, UNESCO)",
+        "Bahrain International Circuit (F1)",
+        "Tree of Life",
+        "National Museum",
+        "Manama Souq"
+      ],
+      "unesco_world_heritage_sites": 3,
+      "notes": "F1 Grand Prix since 2004 (first in Middle East); weekend destination for Saudi visitors via Causeway; Dilmun burial mounds (UNESCO); pearl diving heritage (UNESCO); nightlife/hospitality attracts GCC visitors.",
+      "annual_visitors": 0,
+      "tourism_employment_pct": 0,
+      "unesco_sites_list": [],
+      "visa_free_access_countries": 0,
+      "henley_passport_rank": 0
+    },
+    "legal_system": {
+      "type": "Mixed legal system",
+      "supreme_court": "Court of Cassation",
+      "international_court_jurisdiction": "Not accepted",
+      "suffrage": "20 years, universal",
+      "legal_traditions": [
+        "Islamic law (Sharia for personal status)",
+        "English common law",
+        "Egyptian civil law"
+      ],
+      "death_penalty": true,
+      "notes": "Constitutional monarchy with elected parliament; Shia-Sunni sectarian tensions in legal system; 2011 uprising and subsequent crackdowns; National Safety Courts controversy.",
+      "legal_tradition": "",
+      "constitution_year": 0,
+      "sharia_applicability": "",
+      "customary_law_role": "",
+      "icc_membership": "",
+      "judicial_independence_score": 0,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_score": 12,
+      "freedom_house_status": "Not Free",
+      "gender_inequality_index": 0.208,
+      "gender_inequality_rank": 55,
+      "women_in_parliament_pct": 20,
+      "female_labor_force_participation_pct": 44,
+      "maternal_leave_weeks": 8,
+      "child_marriage_pct": 4,
+      "lgbtq_legal_status": "Illegal",
+      "press_freedom_rank": 167,
+      "notes": "2011 Arab Spring uprising brutally suppressed; Shia majority discrimination by Sunni monarchy; political opposition dissolved; nationality stripping used against dissidents; migrant worker exploitation (kafala system reforms ongoing).",
+      "gender_gap_index_score": 0,
+      "women_labor_force_participation_pct": 0,
+      "maternal_mortality_per_100k": 0,
+      "fgm_prevalence_pct": 0,
+      "death_penalty_status": "",
+      "human_trafficking_tier": "",
+      "child_labor_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.901,
+      "global_peace_index_rank": 60,
+      "homicide_rate_per_100k": 0.5,
+      "terrorism_index_score": 3.8,
+      "terrorism_index_rank": 55,
+      "armed_conflict": false,
+      "internally_displaced_persons": 0,
+      "landmine_contamination": false,
+      "notes": "US Fifth Fleet headquarters; sectarian tensions simmer post-2011; Saudi-led Peninsula Shield Force deployed during unrest; Iran accused of interference; relatively stable security environment.",
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": ""
+    },
+    "cultural_heritage": {
+      "unesco_intangible_heritage": [
+        "Pearl diving",
+        "Fidjeri (sea music)",
+        "Arabic coffee",
+        "Majlis",
+        "Date palm knowledge"
+      ],
+      "notable_cultural_exports": [
+        "Pearl heritage",
+        "Arabic calligraphy",
+        "Khaleeji music"
+      ],
+      "major_museums": [
+        "Bahrain National Museum",
+        "Bahrain Fort Museum",
+        "Pearl Trail"
+      ],
+      "world_heritage_sites_list": [
+        "Qal'at al-Bahrain (Bahrain Fort)",
+        "Pearling Path (Muharraq)",
+        "Dilmun Burial Mounds"
+      ],
+      "culinary_traditions": [
+        "Machboos",
+        "Muhammar",
+        "Halwa",
+        "Balaleet"
+      ],
+      "notes": "Dilmun civilisation (3000 BCE) — ancient trading hub linking Mesopotamia and Indus Valley; pearl diving heritage (pre-oil economy); first Gulf state to establish public education.",
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "",
+      "national_sport": "",
+      "major_festivals": [],
+      "cuisine_highlights": [],
+      "music_art_traditions": [],
+      "film_industry": "",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [],
+      "world_heritage_sites": [],
+      "media_landscape": ""
+    },
+    "comparative_rankings": {
+      "human_development_index_rank": 35,
+      "global_competitiveness_rank": 45,
+      "happiness_index_rank": 42,
+      "environmental_performance_rank": 118,
+      "gender_gap_rank": 126,
+      "soft_power_rank": 0,
+      "notes": "High HDI but poor freedom/human rights scores; most diversified Gulf economy; financial sector hub rankings strong.",
+      "_note": "Country position relative to continent and global. 'rank' = 1 is best/largest.",
+      "population": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "area": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_nominal": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_per_capita": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "hdi": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "life_expectancy": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "internet_penetration": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "press_freedom": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
     }
   },
   "leadership": {
@@ -201,7 +684,8 @@
       "name": "Hamad bin Isa Al Khalifa",
       "title": "King",
       "since": "1999-03-06 (Emir) / 2002-02-14 (King)",
-      "notes": "Al Khalifa dynasty; declared Bahrain a kingdom 2002; National Action Charter 2001; suppressed 2011 Shia-led Arab Spring protests with Saudi/GCC military support"
+      "notes": "Al Khalifa dynasty; declared Bahrain a kingdom 2002; National Action Charter 2001; suppressed 2011 Shia-led Arab Spring protests with Saudi/GCC military support",
+      "party": ""
     },
     "prime_minister": {
       "name": "Salman bin Hamad Al Khalifa",
@@ -229,8 +713,23 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
-    }
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
+    },
+    "former_leaders": []
   },
   "thematic_clusters": {
     "910": [

@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.835998Z",
-    "notes": "Comprehensive index for India covering Indus Valley civilisation, Vedic period, Maurya Empire (Ashoka), Gupta golden age, Chola/Pallava/Rashtrakuta southern kingdoms, Delhi Sultanate, Vijayanagara Empire, Mughal Empire, Maratha Confederacy, European trading companies, British Raj, independence movement (Gandhi, Nehru), Partition 1947, republic, Green Revolution, liberalisation 1991, nuclear power, IT revolution, and Modi era."
+    "notes": "Comprehensive index for India covering Indus Valley civilisation, Vedic period, Maurya Empire (Ashoka), Gupta golden age, Chola/Pallava/Rashtrakuta southern kingdoms, Delhi Sultanate, Vijayanagara Empire, Mughal Empire, Maratha Confederacy, European trading companies, British Raj, independence movement (Gandhi, Nehru), Partition 1947, republic, Green Revolution, liberalisation 1991, nuclear power, IT revolution, and Modi era.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "New Delhi",
@@ -54,7 +59,10 @@
       "Sikhism": "1.7%",
       "Buddhism": "0.7%",
       "Jainism": "0.4%",
-      "Other_Tribal": "0.9%"
+      "Other_Tribal": "0.9%",
+      "primary": "",
+      "breakdown": {},
+      "note": ""
     },
     "ethnic_groups": [
       {
@@ -129,12 +137,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -143,21 +167,39 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [],
       "top_imports": [],
       "major_partners": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "remittances_pct_gdp": 0,
+      "total_exports_usd": "",
+      "total_imports_usd": "",
+      "top_export_destinations": [],
+      "top_import_origins": [],
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 0,
       "electricity_access_pct": 0,
       "mobile_subscriptions_per_100": 0,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "paved_roads_pct": 0,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
+      "road_network_km": 0,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": ""
     },
     "international_memberships": [],
     "governance_indices": {
@@ -178,6 +220,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -185,12 +247,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -198,20 +284,486 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0.91,
+      "ict_development_index": 3.5,
+      "mobile_money_accounts": 500000000,
+      "digital_payments_pct_adults": 40,
+      "fintech_companies": 4000,
+      "startup_ecosystem_value_usd": "$300 billion",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 63.0,
+      "innovation_index_score": 38.0,
+      "innovation_index_rank": 40,
+      "ai_readiness_index": 60.0
+    },
+    "capital_coordinates": {
+      "lat": 28.6139,
+      "lon": 77.209
+    },
+    "other_major_cities": [
+      "Mumbai",
+      "Bengaluru",
+      "Kolkata",
+      "Chennai",
+      "Hyderabad",
+      "Ahmedabad",
+      "Pune",
+      "Surat"
+    ],
+    "national_motto": "Satyameva Jayate (Truth Alone Triumphs)",
+    "national_anthem": "Jana Gana Mana",
+    "currency_code": "INR",
+    "internet_tld": ".in",
+    "utc_offset": "UTC+5:30",
+    "drives_on": "left",
+    "other_languages": [
+      "Bengali",
+      "Telugu",
+      "Marathi",
+      "Tamil",
+      "Gujarati",
+      "Urdu",
+      "Kannada",
+      "Odia",
+      "Malayalam",
+      "Punjabi"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": 20.5937,
+        "lon": 78.9629
+      },
+      "bounding_box": {
+        "north": 35.5,
+        "south": 6.75,
+        "east": 97.4,
+        "west": 68.17
+      },
+      "land_area_km2": 3287263,
+      "water_area_km2": 314070,
+      "coastline_km": 7516,
+      "borders": [
+        "Pakistan",
+        "China",
+        "Nepal",
+        "Bhutan",
+        "Bangladesh",
+        "Myanmar"
+      ],
+      "border_lengths_km": {
+        "Pakistan": 3190,
+        "China": 3488,
+        "Nepal": 1770,
+        "Bhutan": 659,
+        "Bangladesh": 4142,
+        "Myanmar": 1468
+      },
+      "highest_point": {
+        "name": "Kangchenjunga",
+        "elevation_m": 8586
+      },
+      "lowest_point": {
+        "name": "Kuttanad",
+        "elevation_m": -2
+      },
+      "terrain": "Himalayas north; Indo-Gangetic plain; Deccan Plateau south; Western/Eastern Ghats; Thar Desert west",
+      "land_use": {
+        "agricultural_pct": 60.5,
+        "arable_pct": 52.8,
+        "forest_pct": 24.0,
+        "other_pct": 15.5
+      },
+      "major_rivers": [
+        "Ganges",
+        "Brahmaputra",
+        "Indus",
+        "Godavari",
+        "Krishna",
+        "Narmada"
+      ],
+      "major_lakes": [
+        "Chilika Lake",
+        "Wular Lake",
+        "Vembanad Lake"
+      ],
+      "exclusive_economic_zone_km2": 2305143,
+      "landlocked": false,
+      "notes": "7th largest country; world's most populous (1.43B); Himalayas world's highest mountain range; monsoon climate critical for agriculture; Andaman & Nicobar Islands; Lakshadweep."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$3.9 trillion",
+      "gdp_ppp_usd": "$14.6 trillion",
+      "gdp_per_capita_nominal_usd": 2730,
+      "gdp_per_capita_ppp_usd": 10200,
+      "gdp_growth_rate_pct": 7.8,
+      "inflation_rate_pct": 5.4,
+      "unemployment_rate_pct": 7.1,
+      "youth_unemployment_rate_pct": 23.0,
+      "poverty_rate_pct": 10.0,
+      "poverty_line_definition": "Below $2.15/day (World Bank)",
+      "gini_coefficient": 35.7,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 17,
+        "industry_pct_gdp": 26,
+        "services_pct_gdp": 57
+      },
+      "labor_force": 530000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 42,
+        "industry_pct": 26,
+        "services_pct": 32
+      },
+      "fdi_inflow_usd": "$71 billion",
+      "fdi_outflow_usd": "$14 billion",
+      "foreign_exchange_reserves_usd": "$640 billion",
+      "ease_of_doing_business_rank": 63,
+      "economic_freedom_index_score": 55.7,
+      "credit_rating": {
+        "moodys": "Baa3",
+        "sp": "BBB-",
+        "fitch": "BBB-"
+      },
+      "notes": "World's 5th largest economy; fastest growing major economy; IT/BPO global leader (Bengaluru, Hyderabad); UPI digital payments revolution; Make in India manufacturing push; demographic dividend; informal sector ~80% employment."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 3.3,
+      "health_expenditure_per_capita_usd": 78,
+      "physicians_per_1k": 0.7,
+      "nurses_midwives_per_1k": 1.7,
+      "hospital_beds_per_1k": 0.5,
+      "maternal_mortality_per_100k": 97,
+      "hiv_prevalence_pct": 0.2,
+      "malaria_incidence_per_1k": 4,
+      "tuberculosis_incidence_per_100k": 199,
+      "access_to_clean_water_pct": 93,
+      "access_to_sanitation_pct": 72,
+      "vaccination_coverage_pct": 93,
+      "stunting_under5_pct": 31,
+      "obesity_rate_pct": 3.9,
+      "universal_health_coverage_index": 55,
+      "leading_causes_of_death": [
+        "Cardiovascular diseases",
+        "Chronic respiratory diseases",
+        "Diarrheal diseases",
+        "Tuberculosis"
+      ],
+      "notes": "World's largest vaccination programme; Ayushman Bharat (500M beneficiaries, world's largest health insurance); 'pharmacy of the world' (generic drugs); COVID made 2B+ vaccine doses; AIIMS premier hospitals; air pollution major health burden."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 51.0,
+      "food_security_index_rank": 81,
+      "arable_land_pct": 52.8,
+      "agricultural_land_pct": 60.5,
+      "irrigated_land_pct": 48,
+      "major_crops": [
+        "rice",
+        "wheat",
+        "sugarcane",
+        "cotton",
+        "tea",
+        "spices",
+        "pulses",
+        "oilseeds"
+      ],
+      "major_livestock": [
+        "cattle (world's largest herd)",
+        "buffalo",
+        "goats",
+        "sheep",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 5,
+      "cereal_yield_kg_per_hectare": 3200,
+      "agricultural_employment_pct": 42,
+      "notes": "World's #1 producer of milk, pulses, spices, tea, jute; #2 rice and wheat producer; Green Revolution transformed food security; MSP procurement system; world's largest food subsidy programme (800M people); water stress critical.",
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "energy": {
+      "primary_energy_sources": [
+        "coal",
+        "oil",
+        "natural gas",
+        "solar",
+        "wind",
+        "nuclear",
+        "hydropower",
+        "biomass"
+      ],
+      "electricity_generation_gwh": 1900000,
+      "electricity_consumption_per_capita_kwh": 1200,
+      "renewable_share_pct": 22,
+      "fossil_fuel_share_pct": 75,
+      "nuclear_share_pct": 3,
+      "oil_production_bpd": 600000,
+      "oil_consumption_bpd": 5500000,
+      "natural_gas_production_bcm": 34,
+      "proved_oil_reserves_bbl": "4.5 billion",
+      "proved_gas_reserves_tcm": "1.38",
+      "energy_imports_pct": 40,
+      "electrification_rate_pct": 100,
+      "notes": "World's 3rd largest energy consumer; coal 70% of electricity; massive solar expansion (target 500 GW renewable by 2030); Jamnagar world's largest refinery; energy poverty despite 100% electrification claim; LNG imports growing.",
+      "energy_mix": {
+        "fossil_fuels_pct": 0,
+        "hydroelectric_pct": 0,
+        "solar_pct": 0,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 0,
+      "electricity_production_gwh": 0,
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "transport": {
+      "airports": 346,
+      "airports_paved": 253,
+      "railways_km": 68525,
+      "roadways_km": 6371847,
+      "paved_roads_pct": 65,
+      "waterways_km": 14500,
+      "major_ports": [
+        "Mumbai (JNPT)",
+        "Chennai",
+        "Visakhapatnam",
+        "Kandla",
+        "Paradip",
+        "Kolkata"
+      ],
+      "national_airline": "Air India",
+      "vehicle_ownership_per_1k": 60,
+      "notes": "Indian Railways: world's 4th largest network, 13M passengers/day; highway expansion (Bharatmala Pariyojana); Delhi Metro largest in India; bullet train (Mumbai-Ahmedabad) under construction; IndiGo world's fastest growing airline.",
+      "major_airports_international": [],
+      "major_airports_domestic": [],
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
+    },
+    "tourism": {
+      "international_arrivals": 10900000,
+      "tourism_revenue_usd": "$35 billion",
+      "tourism_pct_gdp": 0.9,
+      "major_attractions": [
+        "Taj Mahal",
+        "Jaipur",
+        "Varanasi",
+        "Kerala backwaters",
+        "Goa",
+        "Golden Temple (Amritsar)",
+        "Ladakh"
+      ],
+      "unesco_world_heritage_sites": 42,
+      "notes": "42 UNESCO World Heritage Sites; incredible diversity of attractions; medical tourism growing ($9B); spiritual/yoga tourism; Incredible India campaign; domestic tourism massive (2B+ trips/year).",
+      "annual_visitors": 0,
+      "tourism_employment_pct": 0,
+      "unesco_sites_list": [],
+      "visa_free_access_countries": 0,
+      "henley_passport_rank": 0
+    },
+    "legal_system": {
+      "type": "Common law",
+      "supreme_court": "Supreme Court of India",
+      "international_court_jurisdiction": "ICJ accepted (with reservations)",
+      "suffrage": "18 years, universal",
+      "legal_traditions": [
+        "English common law",
+        "Hindu personal law",
+        "Muslim personal law",
+        "Customary law"
+      ],
+      "death_penalty": true,
+      "notes": "World's largest democracy; independent judiciary (activist Supreme Court); PIL (Public Interest Litigation) unique; sedition law repealed 2023; CAA and farm laws controversies; personal law system (Hindu/Muslim/Christian).",
+      "legal_tradition": "",
+      "constitution_year": 0,
+      "sharia_applicability": "",
+      "customary_law_role": "",
+      "icc_membership": "",
+      "judicial_independence_score": 0,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_score": 66,
+      "freedom_house_status": "Partly Free",
+      "gender_inequality_index": 0.437,
+      "gender_inequality_rank": 108,
+      "women_in_parliament_pct": 15,
+      "female_labor_force_participation_pct": 24,
+      "maternal_leave_weeks": 26,
+      "child_marriage_pct": 23,
+      "lgbtq_legal_status": "Legal (Section 377 struck down 2018; no marriage recognition)",
+      "press_freedom_rank": 159,
+      "notes": "World's largest democracy but declining press freedom; Section 377 decriminalized 2018; gender-based violence concern (Nirbhaya case); caste discrimination; religious polarization; Women's Reservation Bill passed 2023.",
+      "gender_gap_index_score": 0,
+      "women_labor_force_participation_pct": 0,
+      "maternal_mortality_per_100k": 0,
+      "fgm_prevalence_pct": 0,
+      "death_penalty_status": "",
+      "human_trafficking_tier": "",
+      "child_labor_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.315,
+      "global_peace_index_rank": 126,
+      "homicide_rate_per_100k": 3.0,
+      "terrorism_index_score": 7.2,
+      "terrorism_index_rank": 13,
+      "armed_conflict": true,
+      "internally_displaced_persons": 631000,
+      "landmine_contamination": true,
+      "notes": "Nuclear weapons state; Kashmir conflict and Line of Control; Naxalite-Maoist insurgency; India-China LAC tensions (Ladakh); northeast insurgencies declining; world's 4th largest military budget; border disputes with Pakistan and China.",
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": ""
+    },
+    "cultural_heritage": {
+      "unesco_intangible_heritage": [
+        "Yoga",
+        "Kumbh Mela",
+        "Ramlila",
+        "Vedic chanting",
+        "Classical dance traditions (Bharatanatyam, Kathak, etc.)"
+      ],
+      "notable_cultural_exports": [
+        "Bollywood",
+        "Yoga",
+        "Ayurveda",
+        "Spices",
+        "IT services",
+        "Cricket"
+      ],
+      "major_museums": [
+        "National Museum (Delhi)",
+        "Indian Museum (Kolkata)",
+        "Chhatrapati Shivaji Museum (Mumbai)",
+        "Salar Jung Museum"
+      ],
+      "world_heritage_sites_list": [
+        "Taj Mahal",
+        "Ajanta Caves",
+        "Ellora Caves",
+        "Hampi",
+        "Khajuraho",
+        "Red Fort",
+        "Kaziranga",
+        "Sundarbans"
+      ],
+      "culinary_traditions": [
+        "Biryani",
+        "Dosa",
+        "Butter chicken",
+        "Curry",
+        "Samosa",
+        "Masala chai",
+        "Roti"
+      ],
+      "notes": "One of world's oldest civilisations (Indus Valley, 3300 BCE); birthplace of Hinduism, Buddhism, Jainism, Sikhism; Sanskrit literature; zero and decimal system; Bollywood largest film industry by output.",
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "",
+      "national_sport": "",
+      "major_festivals": [],
+      "cuisine_highlights": [],
+      "music_art_traditions": [],
+      "film_industry": "",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [],
+      "world_heritage_sites": [],
+      "media_landscape": ""
+    },
+    "comparative_rankings": {
+      "human_development_index_rank": 134,
+      "global_competitiveness_rank": 40,
+      "happiness_index_rank": 126,
+      "environmental_performance_rank": 180,
+      "gender_gap_rank": 127,
+      "soft_power_rank": 0,
+      "notes": "5th largest economy but low per-capita rankings; demographic dividend; space programme (Chandrayaan-3 Moon landing 2023); IT and pharmaceutical powerhouse; environmental challenges acute.",
+      "_note": "Country position relative to continent and global. 'rank' = 1 is best/largest.",
+      "population": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "area": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_nominal": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_per_capita": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "hdi": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "life_expectancy": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "internet_penetration": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "press_freedom": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
     }
   },
   "leadership": {
@@ -219,7 +771,8 @@
       "name": "Narendra Modi",
       "title": "Prime Minister",
       "since": "2014-05-26",
-      "notes": "BJP; Hindu nationalist; Gujarat CM 2001-2014; 'Make in India'; demonetisation 2016; 370 abrogation (Kashmir); Ram Mandir; third term 2024 (NDA coalition)"
+      "notes": "BJP; Hindu nationalist; Gujarat CM 2001-2014; 'Make in India'; demonetisation 2016; 370 abrogation (Kashmir); Ram Mandir; third term 2024 (NDA coalition)",
+      "party": ""
     },
     "president": {
       "name": "Droupadi Murmu",
@@ -257,7 +810,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

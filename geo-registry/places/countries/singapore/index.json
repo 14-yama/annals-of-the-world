@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.867552Z",
-    "notes": "Comprehensive index for Singapore covering Temasek/Singapura (Sang Nila Utama legend), Srivijaya/Majapahit, Portuguese raid 1613, Johor Sultanate, Stamford Raffles founding 1819, British Straits Settlements, WWII Japanese occupation (Sook Ching massacre), merger with Malaysia 1963, expulsion 1965, Lee Kuan Yew's authoritarian modernization, economic miracle (entrepot to high-tech), PAP dominance, and city-state governance."
+    "notes": "Comprehensive index for Singapore covering Temasek/Singapura (Sang Nila Utama legend), Srivijaya/Majapahit, Portuguese raid 1613, Johor Sultanate, Stamford Raffles founding 1819, British Straits Settlements, WWII Japanese occupation (Sook Ching massacre), merger with Malaysia 1963, expulsion 1965, Lee Kuan Yew's authoritarian modernization, economic miracle (entrepot to high-tech), PAP dominance, and city-state governance.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Singapore (city-state)",
@@ -57,7 +62,9 @@
       "Hinduism": "5%",
       "No_religion": "20%",
       "Other": "0.6%",
-      "note": "Secular state; religious harmony legally protected (Maintenance of Religious Harmony Act); Chinese majority Buddhist/Taoist; Malays constitutionally Muslim; Tamil Hindus; tolerance but sensitive to proselytization"
+      "note": "Secular state; religious harmony legally protected (Maintenance of Religious Harmony Act); Chinese majority Buddhist/Taoist; Malays constitutionally Muslim; Tamil Hindus; tolerance but sensitive to proselytization",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -87,7 +94,8 @@
     "time_zone": "SST (UTC+8)",
     "independence": {
       "date": "1965-08-09",
-      "from": "Expelled from Malaysia (was briefly part of Malaysia 1963-1965); British colony 1819-1963"
+      "from": "Expelled from Malaysia (was briefly part of Malaysia 1963-1965); British colony 1819-1963",
+      "notes": ""
     },
     "continent": "Asia",
     "notes_unique": "Only city-state in Southeast Asia; Lee Kuan Yew ruled 1959-1990 (authoritarian, meritocracy, anti-corruption); caning for vandalism (Michael Fay 1994); chewing gum ban; death penalty for drugs; PAP one-party dominance (since 1959, never lost power); from third world to first in one generation; Marina Bay Sands; Changi Airport (world's best); water self-sufficiency (NEWater); no natural resources (imports everything); ethnic quotas in HDB housing; 'Asian values'; financial hub",
@@ -98,12 +106,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -112,24 +136,123 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
-      "top_exports": [],
-      "top_imports": [],
+      "exports_usd": "$530 billion",
+      "imports_usd": "$490 billion",
+      "trade_balance_usd": "+$40 billion",
+      "current_account_balance_pct_gdp": 19.0,
+      "top_exports": [
+        "electronics/semiconductors",
+        "refined petroleum",
+        "chemicals",
+        "machinery",
+        "pharmaceuticals"
+      ],
+      "top_imports": [
+        "crude oil",
+        "electronics",
+        "machinery",
+        "chemicals",
+        "food"
+      ],
+      "top_export_partners": [
+        "China",
+        "Hong Kong",
+        "Malaysia",
+        "USA",
+        "Indonesia"
+      ],
+      "top_import_partners": [
+        "China",
+        "Malaysia",
+        "USA",
+        "Taiwan",
+        "Japan"
+      ],
+      "fta_partners": [
+        "ASEAN",
+        "RCEP",
+        "CPTPP",
+        "EU",
+        "USA",
+        "China",
+        "India",
+        "Japan",
+        "South Korea",
+        "EFTA",
+        "Australia-NZ"
+      ],
+      "wto_member": true,
+      "regional_trade_blocs": [
+        "ASEAN",
+        "RCEP",
+        "CPTPP",
+        "APEC"
+      ],
+      "trade_openness_pct_gdp": 255.0,
+      "notes": "World's most trade-dependent economy (255% trade/GDP); largest bunkering port; semiconductor supply chain critical; 27+ FTAs; entrepôt trade hub; petroleum refining top 3 globally.",
+      "total_exports_usd": "",
+      "total_imports_usd": "",
       "major_partners": [],
+      "top_export_destinations": [],
+      "top_import_origins": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "remittances_pct_gdp": 0,
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
+      "road_network_km": 3519,
+      "paved_roads_pct": 100,
+      "rail_network_km": 200,
+      "airports": 1,
+      "international_airports": 1,
+      "major_ports": [
+        "Port of Singapore (PSA)"
+      ],
+      "electricity_access_pct": 100,
+      "electricity_generation_gwh": 52000,
+      "renewable_electricity_pct": 3,
+      "broadband_subscriptions_per_100": 26,
+      "mobile_subscriptions_per_100": 155,
+      "internet_users_pct": 96,
+      "logistics_performance_index_score": 4.0,
+      "logistics_performance_index_rank": 7,
+      "notes": "Changi Airport best globally; Port of Singapore busiest transshipment globally; MRT railway extensive; COE vehicle quota system; Tuas mega-port ($20B); Johor-Singapore RTS link.",
       "internet_penetration_pct": 0,
-      "electricity_access_pct": 0,
-      "mobile_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "waterways_km": 0,
+      "submarine_cables": []
     },
     "international_memberships": [],
     "governance_indices": {
+      "corruption_perceptions_index_score": 83,
+      "corruption_perceptions_index_rank": 5,
+      "rule_of_law_index_score": 0.84,
+      "rule_of_law_index_rank": 3,
+      "government_effectiveness_score": 2.2,
+      "regulatory_quality_score": 2.2,
+      "voice_accountability_score": -0.2,
+      "political_stability_score": 1.5,
+      "fragile_states_index_score": 27.0,
+      "fragile_states_index_rank": 166,
+      "democracy_index_score": 6.18,
+      "democracy_index_category": "Flawed democracy",
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 49,
+      "press_freedom_index_rank": 126,
+      "judicial_independence_score": 0.9,
+      "gender_equality_index": 0.8,
+      "notes": "PAP dominant party since 1959 (PM Lawrence Wong 2024); meritocratic governance; low corruption; restrictive media/speech laws; death penalty; GRC electoral system; highly efficient bureaucracy.",
       "corruption_perception_index": {
         "score": 0,
         "rank": 0,
@@ -147,6 +270,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -154,12 +297,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -167,20 +334,470 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0,
+      "ict_development_index": 0,
+      "mobile_money_accounts": 0,
+      "digital_payments_pct_adults": 0,
+      "fintech_companies": 0,
+      "startup_ecosystem_value_usd": "",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 0
+    },
+    "capital_coordinates": {
+      "lat": 1.2897,
+      "lon": 103.8501
+    },
+    "other_major_cities": [],
+    "national_motto": "Onward Singapore (Majulah Singapura)",
+    "national_anthem": "Majulah Singapura (Onward Singapore)",
+    "currency_code": "SGD",
+    "internet_tld": ".sg",
+    "utc_offset": "UTC+8",
+    "drives_on": "left",
+    "other_languages": [
+      "English",
+      "Mandarin",
+      "Tamil",
+      "Malay"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": 1.3521,
+        "lon": 103.8198
+      },
+      "bounding_box": {
+        "north": 1.47,
+        "south": 1.16,
+        "east": 104.0,
+        "west": 103.6
+      },
+      "land_area_km2": 733,
+      "water_area_km2": 10,
+      "coastline_km": 193,
+      "borders": [],
+      "border_lengths_km": {},
+      "highest_point": {
+        "name": "Bukit Timah Hill",
+        "elevation_m": 164
+      },
+      "lowest_point": {
+        "name": "Singapore Strait",
+        "elevation_m": 0
+      },
+      "terrain": "Lowland; gently undulating central plateau; 63 islands; extensive land reclamation",
+      "land_use": {
+        "agricultural_pct": 1.0,
+        "arable_pct": 0.9,
+        "forest_pct": 23.1,
+        "other_pct": 75.9
+      },
+      "major_rivers": [
+        "Singapore River",
+        "Kallang River"
+      ],
+      "major_lakes": [
+        "Marina Reservoir (man-made)",
+        "MacRitchie Reservoir"
+      ],
+      "exclusive_economic_zone_km2": 1067,
+      "landlocked": false,
+      "notes": "City-state at tip of Malay Peninsula; Strait of Malacca global shipping choke point; 63 islands; 25%+ of land area is reclaimed; tropical; garden city concept."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$400 billion",
+      "gdp_ppp_usd": "$660 billion",
+      "gdp_per_capita_nominal_usd": 65000,
+      "gdp_per_capita_ppp_usd": 110000,
+      "gdp_growth_rate_pct": 1.1,
+      "inflation_rate_pct": 4.8,
+      "unemployment_rate_pct": 2.0,
+      "youth_unemployment_rate_pct": 6.0,
+      "poverty_rate_pct": 0,
+      "poverty_line_definition": "No official poverty line",
+      "gini_coefficient": 45.9,
+      "income_classification": "High income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 0,
+        "industry_pct_gdp": 24,
+        "services_pct_gdp": 76
+      },
+      "labor_force": 3700000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 0,
+        "industry_pct": 15,
+        "services_pct": 85
+      },
+      "fdi_inflow_usd": "$140 billion",
+      "fdi_outflow_usd": "$30 billion",
+      "foreign_exchange_reserves_usd": "$290 billion",
+      "ease_of_doing_business_rank": 2,
+      "economic_freedom_index_score": 84.4,
+      "credit_rating": {
+        "moodys": "Aaa",
+        "sp": "AAA",
+        "fitch": "AAA"
+      },
+      "notes": "Global financial center; triple AAA rated; Temasek/GIC sovereign wealth ($500B+); semiconductor/biotech manufacturing; world's busiest port; wealth management hub; income inequality high for developed country."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 4.1,
+      "health_expenditure_per_capita_usd": 2700,
+      "physicians_per_1k": 2.5,
+      "nurses_midwives_per_1k": 6.5,
+      "hospital_beds_per_1k": 2.4,
+      "maternal_mortality_per_100k": 8,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 35,
+      "access_to_clean_water_pct": 100,
+      "access_to_sanitation_pct": 100,
+      "vaccination_coverage_pct": 97,
+      "stunting_under5_pct": 4,
+      "obesity_rate_pct": 6.1,
+      "universal_health_coverage_index": 86,
+      "leading_causes_of_death": [
+        "Cancer",
+        "Ischemic heart disease",
+        "Pneumonia",
+        "Stroke"
+      ],
+      "notes": "World-class healthcare (Bloomberg most efficient); Medisave/Medishield/Medifund system; medical tourism hub; excellent outcomes despite moderate spending; aging population challenge."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 80.0,
+      "food_security_index_rank": 19,
+      "arable_land_pct": 0.9,
+      "agricultural_land_pct": 1.0,
+      "irrigated_land_pct": 0,
+      "major_crops": [
+        "vegetables (hydroponics)",
+        "eggs (local)"
+      ],
+      "major_livestock": [],
+      "food_import_dependency_pct": 90,
+      "cereal_yield_kg_per_hectare": 0,
+      "agricultural_workers_pct": 0,
+      "notes": "90% food imported; '30 by 30' goal (30% nutritional needs locally by 2030); vertical farming/aquaculture investments; food security strategic priority; 170+ import sources diversification.",
+      "agricultural_employment_pct": 0,
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.33,
+      "global_peace_index_rank": 6,
+      "military_expenditure_pct_gdp": 3.0,
+      "active_military_personnel": 51000,
+      "reserve_military_personnel": 312000,
+      "paramilitary_personnel": 93800,
+      "internal_conflicts": "None",
+      "terrorism_index_score": 0.5,
+      "terrorism_index_rank": 120,
+      "homicide_rate_per_100k": 0.2,
+      "incarceration_rate_per_100k": 200,
+      "police_per_100k": 350,
+      "border_disputes": "Pedra Branca (resolved, ICJ 2008)",
+      "refugee_population_hosted": 0,
+      "idp_population": 0,
+      "un_peacekeeping_contributor": true,
+      "arms_imports_usd": "$2 billion",
+      "notes": "One of world's safest countries; mandatory national service (2 years); FPDA member; significant defense spending for size; Internal Security Act (preventive detention); zero tolerance drug policy.",
+      "active_conflicts": [],
+      "un_peacekeeping_contributions": 0,
+      "internally_displaced_persons": 0
+    },
+    "environment_climate": {
+      "co2_emissions_mt": 47.0,
+      "co2_per_capita_t": 8.0,
+      "renewable_energy_pct": 3,
+      "renewable_energy_target_pct": 8,
+      "renewable_energy_target_year": 2030,
+      "forest_cover_pct": 23.1,
+      "deforestation_rate_pct_annual": 0,
+      "protected_areas_pct": 5.0,
+      "biodiversity_index_score": 0.5,
+      "water_stress_level": "High",
+      "water_withdrawal_per_capita_m3": 75,
+      "natural_disaster_risk_index": 2.0,
+      "climate_vulnerability_index": "Medium",
+      "waste_recycling_rate_pct": 60,
+      "air_quality_pm25": 12,
+      "environmental_performance_index_score": 51.0,
+      "environmental_performance_index_rank": 50,
+      "paris_agreement_status": "Ratified",
+      "ndc_target": "Net zero by 2050; 80 MtCO2e by 2030",
+      "notes": "2030 Green Plan; carbon tax ($25/tonne, rising); limited renewable options (solar rooftop focus); NEWater (recycled water); Semakau landfill; cross-border haze from Indonesia."
+    },
+    "demographics_extended": {
+      "median_age": 42.2,
+      "population_growth_rate_pct": 0.9,
+      "birth_rate_per_1k": 8,
+      "death_rate_per_1k": 5,
+      "net_migration_rate_per_1k": 8.0,
+      "sex_ratio": 0.96,
+      "dependency_ratio_pct": 24,
+      "urban_population_pct_change_annual": 0.9,
+      "total_fertility_rate": 1.0,
+      "contraceptive_prevalence_pct": 62,
+      "mean_years_of_schooling": 11.9,
+      "expected_years_of_schooling": 16.3,
+      "education_expenditure_pct_gdp": 2.9,
+      "r_and_d_expenditure_pct_gdp": 2.2,
+      "stem_graduates_pct": 35,
+      "remittances_received_usd": "$0",
+      "remittances_pct_gdp": 0,
+      "diaspora_population": 350000,
+      "ethnic_fractionalization_index": 0.39,
+      "religious_fractionalization_index": 0.66,
+      "notes": "Chinese 74%, Malay 13%, Indian 9%; lowest fertility globally (1.0); aging crisis; immigration-dependent growth; bilingual policy (English + mother tongue); PISA top performer."
+    },
+    "digital_infrastructure": {
+      "internet_penetration_pct": 96,
+      "mobile_penetration_pct": 155,
+      "fixed_broadband_speed_mbps": 200,
+      "mobile_broadband_speed_mbps": 80,
+      "5g_coverage_pct": 95,
+      "fiber_optic_coverage_pct": 95,
+      "ict_development_index_score": 8.5,
+      "e_government_index_score": 0.94,
+      "digital_economy_pct_gdp": 17.0,
+      "tech_hubs_count": 200,
+      "mobile_money_accounts": 3000000,
+      "digital_payments_pct_adults": 90,
+      "fintech_companies": 1500,
+      "startup_ecosystem_value_usd": "$50 billion",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 95.0,
+      "innovation_index_score": 55.0,
+      "innovation_index_rank": 5,
+      "ai_readiness_index": 85.0
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 33,
+        "global_rank": 116
+      },
+      "area": {
+        "continent_rank": 49,
+        "global_rank": 192
+      },
+      "gdp_nominal": {
+        "continent_rank": 6,
+        "global_rank": 34
+      },
+      "gdp_per_capita": {
+        "continent_rank": 3,
+        "global_rank": 5
+      },
+      "hdi": {
+        "continent_rank": 2,
+        "global_rank": 9
+      },
+      "life_expectancy": {
+        "continent_rank": 2,
+        "global_rank": 4
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 1,
+        "global_rank": 2
+      },
+      "internet_penetration": {
+        "continent_rank": 1,
+        "global_rank": 3
+      },
+      "press_freedom": {
+        "continent_rank": 38,
+        "global_rank": 153
+      },
+      "innovation_index": {
+        "continent_rank": 2,
+        "global_rank": 5
+      },
+      "notes": "City-state; global financial center; world's busiest port; highest HDI in Asia; 'Garden City'.",
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "Merlion",
+        "orchid (Vanda Miss Joaquim)"
+      ],
+      "national_animal": "lion (Singapura = 'Lion City')",
+      "national_flower": "Vanda Miss Joaquim (hybrid orchid)",
+      "national_dish": "no official; contenders: chicken rice, laksa, chilli crab",
+      "national_sport": "Football (national); badminton, swimming popular",
+      "major_festivals": [
+        "Chinese New Year",
+        "Hari Raya Aidilfitri",
+        "Deepavali",
+        "National Day (9 August)",
+        "Thaipusam",
+        "Hungry Ghost Festival"
+      ],
+      "cuisine_highlights": [
+        "Hainanese chicken rice",
+        "chilli crab",
+        "laksa",
+        "char kway teow",
+        "bak kut teh",
+        "satay",
+        "roti prata",
+        "kaya toast"
+      ],
+      "music_art_traditions": [
+        "Hawker culture (UNESCO)",
+        "Peranakan (Straits Chinese) culture",
+        "Chinese opera (wayang)",
+        "Malay kompang drumming",
+        "Indian classical dance"
+      ],
+      "intangible_heritage_items": [
+        "Hawker culture (UNESCO, 2020)"
+      ],
+      "notable_historical_figures": [
+        "Lee Kuan Yew (founding PM)",
+        "Stamford Raffles (founded modern Singapore, 1819)",
+        "S Rajaratnam (foreign affairs)",
+        "Yusof Ishak (first president)"
+      ],
+      "world_heritage_sites": [
+        "Singapore Botanic Gardens"
+      ],
+      "media_landscape": "Straits Times (English); Lianhe Zaobao (Chinese); Berita Harian (Malay); CNA (Channel NewsAsia); tightly managed media environment.",
+      "notes": "Multi-ethnic harmony model (Chinese 76%, Malay 15%, Indian 8%); hawker centres; Singlish; Marina Bay Sands; world's most expensive city; efficiency and order.",
+      "film_industry": ""
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 95,
+        "hydroelectric_pct": 0,
+        "solar_pct": 4,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 1
+      },
+      "installed_capacity_mw": 13500,
+      "electricity_production_gwh": 55000,
+      "electricity_consumption_per_capita_kwh": 9100,
+      "energy_imports_pct": 98,
+      "oil_production_bpd": 0,
+      "oil_consumption_bpd": 1400000,
+      "natural_gas_production_bcm": 0,
+      "notes": "Natural gas dominant (95% of electricity); major oil refining hub; no domestic energy sources; importing electricity from Laos/Malaysia (ASEAN Power Grid); rooftop solar; hydrogen research.",
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 47,
+      "gender_inequality_index": 0.04,
+      "gender_inequality_rank": 6,
+      "gender_gap_index_score": 0.73,
+      "women_in_parliament_pct": 29,
+      "women_labor_force_participation_pct": 62,
+      "maternal_mortality_per_100k": 7,
+      "lgbtq_legal_status": "Decriminalised Section 377A (2022); no same-sex marriage",
+      "death_penalty_status": "Retentionist (mandatory for drug trafficking)",
+      "human_trafficking_tier": "Tier 1",
+      "notes": "PAP dominant-party system since 1959; strict laws (caning, death penalty for drugs); limited press freedom; POFMA (anti-fake news); efficient governance; Section 377A repealed 2022.",
+      "child_marriage_pct": 0,
+      "fgm_prevalence_pct": 0,
+      "child_labor_pct": 0
+    },
+    "legal_system": {
+      "legal_tradition": "English common law",
+      "constitution_year": 1965,
+      "sharia_applicability": "AMLA (Administration of Muslim Law Act) for Muslim personal law; Syariah Court",
+      "icc_membership": "Not a state party",
+      "judicial_independence_score": 0.7,
+      "contract_enforcement_days": 164,
+      "property_rights_index": 90,
+      "notes": "Supreme Court (Court of Appeal, High Court); renowned for rule of law and contract enforcement; SICC (Singapore International Commercial Court); low corruption; mandatory death penalty for drugs.",
+      "customary_law_role": ""
+    },
+    "tourism": {
+      "annual_visitors": 16000000,
+      "tourism_revenue_usd": "$20 billion",
+      "tourism_pct_gdp": 4,
+      "tourism_employment_pct": 7,
+      "unesco_world_heritage_sites": 1,
+      "unesco_sites_list": [
+        "Singapore Botanic Gardens"
+      ],
+      "major_attractions": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Sentosa Island",
+        "Orchard Road",
+        "Chinatown/Little India/Kampong Glam",
+        "Singapore Zoo/Night Safari"
+      ],
+      "visa_free_access_countries": 195,
+      "henley_passport_rank": 1,
+      "notes": "World's most powerful passport; Changi Airport ('World's Best' repeatedly); MICE tourism; Sentosa integrated resorts; food tourism; F1 Singapore Grand Prix night race."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Singapore Changi Airport (world's best)"
+      ],
+      "railway_km": 0,
+      "road_network_km": 3500,
+      "paved_roads_pct": 100,
+      "major_ports": [
+        "Port of Singapore (2nd busiest globally)"
+      ],
+      "public_transit_systems": [
+        "Singapore MRT (6 lines, 200+ km)",
+        "LRT (3 lines)",
+        "Extensive bus network"
+      ],
+      "notes": "Changi Airport (Terminal 5 under construction); Port of Singapore handles 37M+ TEU; MRT world-class; ERP (Electronic Road Pricing); COE system (car ownership); Johor Bahru–Singapore RTS Link planned.",
+      "major_airports_domestic": [],
+      "national_airline": "",
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
     }
   },
   "leadership": {
@@ -188,7 +805,8 @@
       "name": "Lawrence Wong",
       "title": "Prime Minister",
       "since": "2024-05-15",
-      "notes": "PAP; fourth-generation leader; economist; former Finance Minister; COVID-19 task force; succeeded Lee Hsien Loong"
+      "notes": "PAP; fourth-generation leader; economist; former Finance Minister; COVID-19 task force; succeeded Lee Hsien Loong",
+      "party": ""
     },
     "president": {
       "name": "Tharman Shanmugaratnam",
@@ -216,7 +834,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

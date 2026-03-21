@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.837245Z",
-    "notes": "Comprehensive index for Iran covering Elamite civilisation, Achaemenid Empire (Cyrus the Great, Persepolis), Seleucid and Parthian periods, Sassanid Empire, Arab/Islamic conquest, Samanid and Buyid renaissance, Seljuk Turks, Mongol/Ilkhanid destruction, Timurid era, Safavid Empire (Shia state religion), Afsharid/Zand, Qajar dynasty, Constitutional Revolution 1906, Pahlavi dynasty (Reza Shah, Mohammad Reza), 1953 CIA coup, White Revolution, 1979 Islamic Revolution, Iran-Iraq War, and Islamic Republic."
+    "notes": "Comprehensive index for Iran covering Elamite civilisation, Achaemenid Empire (Cyrus the Great, Persepolis), Seleucid and Parthian periods, Sassanid Empire, Arab/Islamic conquest, Samanid and Buyid renaissance, Seljuk Turks, Mongol/Ilkhanid destruction, Timurid era, Safavid Empire (Shia state religion), Afsharid/Zand, Qajar dynasty, Constitutional Revolution 1906, Pahlavi dynasty (Reza Shah, Mohammad Reza), 1953 CIA coup, White Revolution, 1979 Islamic Revolution, Iran-Iraq War, and Islamic Republic.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Tehran",
@@ -54,7 +59,9 @@
       "Jewish": "0.03%",
       "Bahai": "0.5%",
       "Other": "0.87%",
-      "note": "Shia Islam is state religion since Safavid era (1501); Baha'i faith persecuted though largest non-Muslim minority; growing irreligion especially among youth"
+      "note": "Shia Islam is state religion since Safavid era (1501); Baha'i faith persecuted though largest non-Muslim minority; growing irreligion especially among youth",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -126,12 +133,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -140,21 +163,39 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [],
       "top_imports": [],
       "major_partners": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "remittances_pct_gdp": 0,
+      "total_exports_usd": "",
+      "total_imports_usd": "",
+      "top_export_destinations": [],
+      "top_import_origins": [],
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 0,
       "electricity_access_pct": 0,
       "mobile_subscriptions_per_100": 0,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "paved_roads_pct": 0,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
+      "road_network_km": 0,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": ""
     },
     "international_memberships": [],
     "governance_indices": {
@@ -175,6 +216,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -182,12 +243,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -195,20 +280,465 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0.65,
+      "ict_development_index": 4.5,
+      "mobile_money_accounts": 20000000,
+      "digital_payments_pct_adults": 65,
+      "fintech_companies": 100,
+      "startup_ecosystem_value_usd": "$1 billion",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 45.0,
+      "innovation_index_score": 33.0,
+      "innovation_index_rank": 62,
+      "ai_readiness_index": 35.0
+    },
+    "capital_coordinates": {
+      "lat": 35.6892,
+      "lon": 51.389
+    },
+    "other_major_cities": [
+      "Isfahan",
+      "Mashhad",
+      "Tabriz",
+      "Shiraz",
+      "Ahvaz",
+      "Kerman",
+      "Qom"
+    ],
+    "national_motto": "Independence, Freedom, Islamic Republic",
+    "national_anthem": "Soroud-e Jomhouri-ye Eslami-ye Iran",
+    "currency_code": "IRR",
+    "internet_tld": ".ir",
+    "utc_offset": "UTC+3:30",
+    "drives_on": "right",
+    "other_languages": [
+      "Azerbaijani (Turkish)",
+      "Kurdish",
+      "Luri",
+      "Balochi",
+      "Arabic",
+      "Turkmen",
+      "Gilaki",
+      "Mazandarani"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": 32.4279,
+        "lon": 53.688
+      },
+      "bounding_box": {
+        "north": 39.78,
+        "south": 25.06,
+        "east": 63.32,
+        "west": 44.05
+      },
+      "land_area_km2": 1648195,
+      "water_area_km2": 116600,
+      "coastline_km": 2440,
+      "borders": [
+        "Afghanistan",
+        "Armenia",
+        "Azerbaijan",
+        "Iraq",
+        "Pakistan",
+        "Turkey",
+        "Turkmenistan"
+      ],
+      "border_lengths_km": {
+        "Afghanistan": 921,
+        "Armenia": 44,
+        "Azerbaijan": 689,
+        "Iraq": 1599,
+        "Pakistan": 959,
+        "Turkey": 534,
+        "Turkmenistan": 1148
+      },
+      "highest_point": {
+        "name": "Mount Damavand",
+        "elevation_m": 5671
+      },
+      "lowest_point": {
+        "name": "Caspian Sea",
+        "elevation_m": -28
+      },
+      "terrain": "Central plateau surrounded by mountains (Zagros west, Alborz north); deserts (Dasht-e Kavir, Dasht-e Lut); Caspian coast; Persian Gulf coast",
+      "land_use": {
+        "agricultural_pct": 30.1,
+        "arable_pct": 10.7,
+        "forest_pct": 6.8,
+        "other_pct": 63.1
+      },
+      "major_rivers": [
+        "Karun",
+        "Karkheh",
+        "Zayandeh Rud"
+      ],
+      "major_lakes": [
+        "Lake Urmia (shrinking)",
+        "Caspian Sea"
+      ],
+      "exclusive_economic_zone_km2": 168718,
+      "landlocked": false,
+      "notes": "18th largest country; Dasht-e Lut hottest recorded surface temperature (70.7°C); Lake Urmia ecological disaster (lost 80% volume); Strait of Hormuz controls 20% of world oil; seismically active (Bam 2003 earthquake, 30,000 killed)."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$401 billion",
+      "gdp_ppp_usd": "$1.6 trillion",
+      "gdp_per_capita_nominal_usd": 4700,
+      "gdp_per_capita_ppp_usd": 18700,
+      "gdp_growth_rate_pct": 5.4,
+      "inflation_rate_pct": 40.0,
+      "unemployment_rate_pct": 9.0,
+      "youth_unemployment_rate_pct": 27.0,
+      "poverty_rate_pct": 18.0,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 40.8,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 12,
+        "industry_pct_gdp": 35,
+        "services_pct_gdp": 53
+      },
+      "labor_force": 27000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 18,
+        "industry_pct": 35,
+        "services_pct": 47
+      },
+      "fdi_inflow_usd": "$1.5 billion",
+      "fdi_outflow_usd": "$200 million",
+      "foreign_exchange_reserves_usd": "$30 billion (estimated)",
+      "ease_of_doing_business_rank": 127,
+      "economic_freedom_index_score": 41.7,
+      "credit_rating": {
+        "moodys": "",
+        "sp": "",
+        "fitch": ""
+      },
+      "notes": "Crippled by US/EU sanctions (re-imposed 2018); world's 3rd/4th largest oil reserves; 2nd largest gas reserves; 'resistance economy' policy; massive brain drain; rial lost 90%+ value since 2015; IRGC controls 30%+ of economy."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 7.0,
+      "health_expenditure_per_capita_usd": 350,
+      "physicians_per_1k": 1.6,
+      "nurses_midwives_per_1k": 2.4,
+      "hospital_beds_per_1k": 1.6,
+      "maternal_mortality_per_100k": 22,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 14,
+      "access_to_clean_water_pct": 97,
+      "access_to_sanitation_pct": 92,
+      "vaccination_coverage_pct": 98,
+      "stunting_under5_pct": 5,
+      "obesity_rate_pct": 25.8,
+      "universal_health_coverage_index": 65,
+      "leading_causes_of_death": [
+        "Cardiovascular diseases",
+        "Cancer",
+        "Road injuries",
+        "Diabetes"
+      ],
+      "notes": "Advanced healthcare for region; sanctions impact medicine/equipment imports; COVIran Barekat locally developed COVID vaccine; road traffic deaths among world's highest; thalassemia screening programme; medical tourism (nose jobs capital of world)."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 52.0,
+      "food_security_index_rank": 77,
+      "arable_land_pct": 10.7,
+      "agricultural_land_pct": 30.1,
+      "irrigated_land_pct": 50,
+      "major_crops": [
+        "wheat",
+        "rice",
+        "barley",
+        "pistachios",
+        "saffron",
+        "dates",
+        "pomegranates",
+        "citrus"
+      ],
+      "major_livestock": [
+        "sheep",
+        "goats",
+        "cattle",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 20,
+      "cereal_yield_kg_per_hectare": 3100,
+      "agricultural_employment_pct": 18,
+      "notes": "World's #1 saffron producer (90%+ global share); #1 pistachio producer; pomegranate and date exports significant; water crisis threatening agriculture (aquifer depletion); qanat irrigation systems (UNESCO heritage).",
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "energy": {
+      "primary_energy_sources": [
+        "oil",
+        "natural gas",
+        "hydropower"
+      ],
+      "electricity_generation_gwh": 370000,
+      "electricity_consumption_per_capita_kwh": 3600,
+      "renewable_share_pct": 7,
+      "fossil_fuel_share_pct": 93,
+      "nuclear_share_pct": 2,
+      "oil_production_bpd": 3200000,
+      "oil_consumption_bpd": 1800000,
+      "natural_gas_production_bcm": 260,
+      "proved_oil_reserves_bbl": "157 billion",
+      "proved_gas_reserves_tcm": "34",
+      "energy_imports_pct": 0,
+      "electrification_rate_pct": 100,
+      "notes": "World's 4th largest oil reserves, 2nd largest gas reserves (South Pars/North Dome); Bushehr nuclear plant; JCPOA nuclear deal collapsed; sanctions limit oil exports; massive gas flaring; energy subsidies consume 12%+ GDP.",
+      "energy_mix": {
+        "fossil_fuels_pct": 0,
+        "hydroelectric_pct": 0,
+        "solar_pct": 0,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 0,
+      "electricity_production_gwh": 0,
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "transport": {
+      "airports": 319,
+      "airports_paved": 140,
+      "railways_km": 14000,
+      "roadways_km": 223485,
+      "paved_roads_pct": 73,
+      "waterways_km": 850,
+      "major_ports": [
+        "Bandar Abbas",
+        "Bushehr",
+        "Chabahar",
+        "Bandar Imam Khomeini"
+      ],
+      "national_airline": "Iran Air",
+      "vehicle_ownership_per_1k": 230,
+      "notes": "Sanctions impact aviation (aged fleet, safety concerns); rail network being expanded; Chabahar Port (India-funded, bypasses Pakistan); INSTC (International North-South Transport Corridor); world's highest road fatality rate.",
+      "major_airports_international": [],
+      "major_airports_domestic": [],
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
+    },
+    "tourism": {
+      "international_arrivals": 4800000,
+      "tourism_revenue_usd": "$5 billion",
+      "tourism_pct_gdp": 1.2,
+      "major_attractions": [
+        "Isfahan (Naqsh-e Jahan Square, UNESCO)",
+        "Persepolis (UNESCO)",
+        "Shiraz (Hafez/Saadi tombs)",
+        "Yazd (UNESCO)",
+        "Tehran Grand Bazaar"
+      ],
+      "unesco_world_heritage_sites": 27,
+      "notes": "27 UNESCO World Heritage Sites (10th most globally); enormous potential limited by sanctions, visa restrictions, mandatory hijab; Persian hospitality renowned; 7,000+ year civilisational heritage; medical/health tourism growing.",
+      "annual_visitors": 0,
+      "tourism_employment_pct": 0,
+      "unesco_sites_list": [],
+      "visa_free_access_countries": 0,
+      "henley_passport_rank": 0
+    },
+    "legal_system": {
+      "type": "Islamic (theocratic) legal system",
+      "supreme_court": "Supreme Court of Iran",
+      "international_court_jurisdiction": "ICJ accepted (limited)",
+      "suffrage": "15 years (lowered from 18), universal",
+      "legal_traditions": [
+        "Shia (Twelver) Islamic jurisprudence (Jafari school)",
+        "Continental civil law elements"
+      ],
+      "death_penalty": true,
+      "notes": "Velayat-e faqih (guardianship of the jurist) system; Guardian Council vets all candidates; Supreme Leader above all; second highest executions globally (after China); morality police; Mahsa Amini protests 2022.",
+      "legal_tradition": "",
+      "constitution_year": 0,
+      "sharia_applicability": "",
+      "customary_law_role": "",
+      "icc_membership": "",
+      "judicial_independence_score": 0,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_score": 14,
+      "freedom_house_status": "Not Free",
+      "gender_inequality_index": 0.459,
+      "gender_inequality_rank": 113,
+      "women_in_parliament_pct": 6,
+      "female_labor_force_participation_pct": 15,
+      "maternal_leave_weeks": 9,
+      "child_marriage_pct": 17,
+      "lgbtq_legal_status": "Illegal (death penalty)",
+      "press_freedom_rank": 176,
+      "notes": "Mahsa Amini protests (2022) — 'Woman, Life, Freedom' movement; mandatory hijab enforcement; LGBTQ+ executions; massive internet shutdowns; political prisoners; journalist/activist detentions; theocratic control of all aspects of life.",
+      "gender_gap_index_score": 0,
+      "women_labor_force_participation_pct": 0,
+      "maternal_mortality_per_100k": 0,
+      "fgm_prevalence_pct": 0,
+      "death_penalty_status": "",
+      "human_trafficking_tier": "",
+      "child_labor_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.797,
+      "global_peace_index_rank": 147,
+      "homicide_rate_per_100k": 2.5,
+      "terrorism_index_score": 4.8,
+      "terrorism_index_rank": 38,
+      "armed_conflict": true,
+      "internally_displaced_persons": 0,
+      "landmine_contamination": true,
+      "notes": "Regional power projection (proxy forces in Iraq, Syria, Lebanon, Yemen — 'Axis of Resistance'); IRGC-Quds Force; nuclear programme (JCPOA collapsed); US-Iran tensions; Kurdish insurgency (PJAK); Baloch insurgency; Israel-Iran shadow war.",
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": ""
+    },
+    "cultural_heritage": {
+      "unesco_intangible_heritage": [
+        "Nowruz",
+        "Radif of Iranian music",
+        "Ta'ziye",
+        "Persian carpet weaving",
+        "Qanat irrigation"
+      ],
+      "notable_cultural_exports": [
+        "Persian carpets",
+        "Saffron",
+        "Poetry (Hafez, Rumi, Ferdowsi)",
+        "Cinema (Kiarostami, Farhadi)",
+        "Miniature painting"
+      ],
+      "major_museums": [
+        "National Museum of Iran",
+        "Golestan Palace",
+        "Iran National Jewelry Treasury",
+        "Persepolis Museum"
+      ],
+      "world_heritage_sites_list": [
+        "Persepolis",
+        "Naqsh-e Jahan Square (Isfahan)",
+        "Tchogha Zanbil",
+        "Meidan Emam",
+        "Pasargadae",
+        "Golestan Palace",
+        "Historic City of Yazd"
+      ],
+      "culinary_traditions": [
+        "Chelow kebab",
+        "Ghormeh sabzi",
+        "Tahdig",
+        "Fesenjan",
+        "Ash reshteh"
+      ],
+      "notes": "Persian Empire (550 BCE) one of history's largest; Persian language literary tradition (Shahnameh, Hafez, Rumi); Zoroastrianism originated here; Persian gardens (UNESCO); cinema internationally acclaimed despite censorship.",
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "",
+      "national_sport": "",
+      "major_festivals": [],
+      "cuisine_highlights": [],
+      "music_art_traditions": [],
+      "film_industry": "",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [],
+      "world_heritage_sites": [],
+      "media_landscape": ""
+    },
+    "comparative_rankings": {
+      "human_development_index_rank": 76,
+      "global_competitiveness_rank": 99,
+      "happiness_index_rank": 100,
+      "environmental_performance_rank": 170,
+      "gender_gap_rank": 143,
+      "soft_power_rank": 0,
+      "notes": "Enormous potential undermined by sanctions, isolation, and theocratic governance; high HDI for region despite sanctions; brain drain massive (highest globally); cultural/civilisational soft power significant.",
+      "_note": "Country position relative to continent and global. 'rank' = 1 is best/largest.",
+      "population": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "area": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_nominal": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_per_capita": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "hdi": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "life_expectancy": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "internet_penetration": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "press_freedom": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
     }
   },
   "leadership": {
@@ -216,7 +746,8 @@
       "name": "Ali Khamenei",
       "title": "Supreme Leader",
       "since": "1989-06-04",
-      "notes": "Highest authority; Azeri origin; succeeded Khomeini; controls military (IRGC), judiciary, media; hardliner; nuclear programme; 'Woman, Life, Freedom' crackdown 2022"
+      "notes": "Highest authority; Azeri origin; succeeded Khomeini; controls military (IRGC), judiciary, media; hardliner; nuclear programme; 'Woman, Life, Freedom' crackdown 2022",
+      "party": ""
     },
     "president": {
       "name": "Masoud Pezeshkian",
@@ -269,7 +800,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

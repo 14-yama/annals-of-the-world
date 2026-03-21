@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.811240Z",
-    "notes": "Comprehensive index for Azerbaijan covering Caucasian Albania, Atropatene, Shirvanshah dynasty, Mongol/Timurid period, Safavid origins (Ardabil), Khanates, Russian conquest (Treaty of Turkmenchay 1828), oil boom (Nobel/Rothschild Baku), ADR 1918 (first secular Muslim republic), Soviet Azerbaijan, Nagorno-Karabakh conflict, independence 1991, Aliyev dynasty, and 2020/2023 Karabakh victories."
+    "notes": "Comprehensive index for Azerbaijan covering Caucasian Albania, Atropatene, Shirvanshah dynasty, Mongol/Timurid period, Safavid origins (Ardabil), Khanates, Russian conquest (Treaty of Turkmenchay 1828), oil boom (Nobel/Rothschild Baku), ADR 1918 (first secular Muslim republic), Soviet Azerbaijan, Nagorno-Karabakh conflict, independence 1991, Aliyev dynasty, and 2020/2023 Karabakh victories.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Baku",
@@ -52,7 +57,9 @@
       "Christianity_Russian_Orthodox": "3%",
       "Armenian_Apostolic": "2%",
       "Other": "4%",
-      "note": "Most secular Muslim-majority country; Soviet atheism legacy; religion more cultural than practised"
+      "note": "Most secular Muslim-majority country; Soviet atheism legacy; religion more cultural than practised",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -114,12 +121,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -128,21 +151,39 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [],
       "top_imports": [],
       "major_partners": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "remittances_pct_gdp": 0,
+      "total_exports_usd": "",
+      "total_imports_usd": "",
+      "top_export_destinations": [],
+      "top_import_origins": [],
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 0,
       "electricity_access_pct": 0,
       "mobile_subscriptions_per_100": 0,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "paved_roads_pct": 0,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
+      "road_network_km": 0,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": ""
     },
     "international_memberships": [],
     "governance_indices": {
@@ -163,6 +204,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -170,12 +231,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -183,20 +268,446 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0.65,
+      "ict_development_index": 5.8,
+      "mobile_money_accounts": 500000,
+      "digital_payments_pct_adults": 30,
+      "fintech_companies": 20,
+      "startup_ecosystem_value_usd": "$200 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 55.0,
+      "innovation_index_score": 28.0,
+      "innovation_index_rank": 80,
+      "ai_readiness_index": 38.0
+    },
+    "capital_coordinates": {
+      "lat": 40.4093,
+      "lon": 49.8671
+    },
+    "other_major_cities": [
+      "Ganja",
+      "Sumgait",
+      "Mingachevir",
+      "Lankaran",
+      "Shirvan"
+    ],
+    "national_motto": "Land of Fire",
+    "national_anthem": "Azərbaycan Marşı (March of Azerbaijan)",
+    "currency_code": "AZN",
+    "internet_tld": ".az",
+    "utc_offset": "UTC+4",
+    "drives_on": "right",
+    "other_languages": [
+      "Lezgian",
+      "Talysh",
+      "Avar",
+      "Turkish",
+      "Russian"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": 40.1431,
+        "lon": 47.5769
+      },
+      "bounding_box": {
+        "north": 41.91,
+        "south": 38.39,
+        "east": 50.37,
+        "west": 44.77
+      },
+      "land_area_km2": 86600,
+      "water_area_km2": 500,
+      "coastline_km": 713,
+      "borders": [
+        "Russia",
+        "Georgia",
+        "Armenia",
+        "Iran",
+        "Turkey"
+      ],
+      "border_lengths_km": {
+        "Russia": 338,
+        "Georgia": 480,
+        "Armenia": 996,
+        "Iran": 689,
+        "Turkey": 17
+      },
+      "highest_point": {
+        "name": "Bazardüzü",
+        "elevation_m": 4466
+      },
+      "lowest_point": {
+        "name": "Caspian Sea",
+        "elevation_m": -28
+      },
+      "terrain": "Large flat lowlands (Kur-Araz) central; Greater Caucasus mountains north; Lesser Caucasus west; Caspian coast east",
+      "land_use": {
+        "agricultural_pct": 57.6,
+        "arable_pct": 22.8,
+        "forest_pct": 11.3,
+        "other_pct": 31.1
+      },
+      "major_rivers": [
+        "Kura (Kür)",
+        "Araxes (Araz)"
+      ],
+      "major_lakes": [
+        "Caspian Sea (world's largest lake)",
+        "Lake Mingachevir (reservoir)"
+      ],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": false,
+      "notes": "Caspian Sea coastline but no ocean access; exclave of Nakhchivan separated by Armenia; nine of eleven climate zones present; mud volcanoes (more than half of world's total)."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$78 billion",
+      "gdp_ppp_usd": "$185 billion",
+      "gdp_per_capita_nominal_usd": 7700,
+      "gdp_per_capita_ppp_usd": 18200,
+      "gdp_growth_rate_pct": 1.1,
+      "inflation_rate_pct": 8.9,
+      "unemployment_rate_pct": 5.6,
+      "youth_unemployment_rate_pct": 13.0,
+      "poverty_rate_pct": 5.9,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 26.6,
+      "income_classification": "Upper-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 6,
+        "industry_pct_gdp": 50,
+        "services_pct_gdp": 44
+      },
+      "labor_force": 5200000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 37,
+        "industry_pct": 14,
+        "services_pct": 49
+      },
+      "fdi_inflow_usd": "$5.4 billion",
+      "fdi_outflow_usd": "$2.7 billion",
+      "foreign_exchange_reserves_usd": "$10.5 billion",
+      "ease_of_doing_business_rank": 34,
+      "economic_freedom_index_score": 64.3,
+      "credit_rating": {
+        "moodys": "Ba1",
+        "sp": "BB+",
+        "fitch": "BB+"
+      },
+      "notes": "Oil-dependent economy (90%+ of exports); BTC pipeline; SOFAZ sovereign wealth fund ($45B); diversification strategy (agriculture, tourism, IT); 2020 Karabakh victory and 2023 Artsakh takeover."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 4.5,
+      "health_expenditure_per_capita_usd": 345,
+      "physicians_per_1k": 3.4,
+      "nurses_midwives_per_1k": 5.6,
+      "hospital_beds_per_1k": 4.7,
+      "maternal_mortality_per_100k": 41,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 35,
+      "access_to_clean_water_pct": 95,
+      "access_to_sanitation_pct": 89,
+      "vaccination_coverage_pct": 96,
+      "stunting_under5_pct": 18,
+      "obesity_rate_pct": 19.9,
+      "universal_health_coverage_index": 63,
+      "leading_causes_of_death": [
+        "Cardiovascular diseases",
+        "Cancer",
+        "Chronic respiratory diseases",
+        "Diabetes"
+      ],
+      "notes": "Soviet-era healthcare system undergoing reform; oil wealth funded hospital modernization; medical tourism growing; thalassemia prevalence relatively high."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 53.0,
+      "food_security_index_rank": 75,
+      "arable_land_pct": 22.8,
+      "agricultural_land_pct": 57.6,
+      "irrigated_land_pct": 65,
+      "major_crops": [
+        "cotton",
+        "tobacco",
+        "grapes",
+        "tea",
+        "hazelnuts",
+        "pomegranates",
+        "wheat",
+        "tomatoes"
+      ],
+      "major_livestock": [
+        "cattle",
+        "sheep",
+        "goats",
+        "poultry"
+      ],
+      "food_import_dependency_pct": 40,
+      "cereal_yield_kg_per_hectare": 3100,
+      "agricultural_employment_pct": 37,
+      "notes": "Historically cotton monoculture under Soviets; pomegranate festival annually in Goychay; Azerbaijani tea tradition; wine production reviving (ancient tradition); food processing growing sector.",
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "energy": {
+      "primary_energy_sources": [
+        "oil",
+        "natural gas",
+        "hydropower"
+      ],
+      "electricity_generation_gwh": 26500,
+      "electricity_consumption_per_capita_kwh": 2500,
+      "renewable_share_pct": 8,
+      "fossil_fuel_share_pct": 92,
+      "nuclear_share_pct": 0,
+      "oil_production_bpd": 600000,
+      "oil_consumption_bpd": 98000,
+      "natural_gas_production_bcm": 35,
+      "proved_oil_reserves_bbl": "7 billion",
+      "proved_gas_reserves_tcm": "2.5",
+      "energy_imports_pct": 0,
+      "electrification_rate_pct": 100,
+      "notes": "Net energy exporter; BTC (Baku-Tbilisi-Ceyhan) oil pipeline; Shah Deniz gas field (Southern Gas Corridor to Europe); hosting COP29 in 2024; 30% renewable target by 2030.",
+      "energy_mix": {
+        "fossil_fuels_pct": 0,
+        "hydroelectric_pct": 0,
+        "solar_pct": 0,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 0,
+      "electricity_production_gwh": 0,
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "transport": {
+      "airports": 30,
+      "airports_paved": 27,
+      "railways_km": 2944,
+      "roadways_km": 24981,
+      "paved_roads_pct": 85,
+      "waterways_km": 0,
+      "major_ports": [
+        "Baku (Caspian)"
+      ],
+      "national_airline": "Azerbaijan Airlines (AZAL)",
+      "vehicle_ownership_per_1k": 130,
+      "notes": "Baku-Tbilisi-Kars railway (BTK) opened 2017; Middle Corridor transit hub (China-Europe); Alat International Sea Trade Port (Caspian hub); extensive Soviet-era rail network.",
+      "major_airports_international": [],
+      "major_airports_domestic": [],
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
+    },
+    "tourism": {
+      "international_arrivals": 2600000,
+      "tourism_revenue_usd": "$3.3 billion",
+      "tourism_pct_gdp": 4.2,
+      "major_attractions": [
+        "Baku Old City (Icheri Sheher, UNESCO)",
+        "Flame Towers",
+        "Gobustan Rock Art (UNESCO)",
+        "Sheki Khan's Palace (UNESCO)",
+        "Mud volcanoes"
+      ],
+      "unesco_world_heritage_sites": 3,
+      "notes": "Formula 1 Grand Prix in Baku; Eurovision 2012 host; growing tourism post-oil diversification; visa-free or e-visa for many countries; Shahdag ski resort.",
+      "annual_visitors": 0,
+      "tourism_employment_pct": 0,
+      "unesco_sites_list": [],
+      "visa_free_access_countries": 0,
+      "henley_passport_rank": 0
+    },
+    "legal_system": {
+      "type": "Civil law",
+      "supreme_court": "Supreme Court of Azerbaijan",
+      "international_court_jurisdiction": "Not accepted",
+      "suffrage": "18 years, universal",
+      "legal_traditions": [
+        "Continental civil law",
+        "Soviet legal heritage",
+        "Elements of Islamic law in family matters"
+      ],
+      "death_penalty": false,
+      "notes": "De facto one-party state under Aliyev family since 1993; constitutional referendum 2009 removed presidential term limits; 2016 referendum expanded presidential powers.",
+      "legal_tradition": "",
+      "constitution_year": 0,
+      "sharia_applicability": "",
+      "customary_law_role": "",
+      "icc_membership": "",
+      "judicial_independence_score": 0,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_score": 7,
+      "freedom_house_status": "Not Free",
+      "gender_inequality_index": 0.282,
+      "gender_inequality_rank": 74,
+      "women_in_parliament_pct": 18,
+      "female_labor_force_participation_pct": 62,
+      "maternal_leave_weeks": 18,
+      "child_marriage_pct": 11,
+      "lgbtq_legal_status": "Legal but heavily stigmatized",
+      "press_freedom_rank": 164,
+      "notes": "Authoritarian governance; political prisoners including journalists; media heavily controlled; LGBTQ+ persecution documented; domestic violence under-reported.",
+      "gender_gap_index_score": 0,
+      "women_labor_force_participation_pct": 0,
+      "maternal_mortality_per_100k": 0,
+      "fgm_prevalence_pct": 0,
+      "death_penalty_status": "",
+      "human_trafficking_tier": "",
+      "child_labor_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 2.393,
+      "global_peace_index_rank": 106,
+      "homicide_rate_per_100k": 2.1,
+      "terrorism_index_score": 2.0,
+      "terrorism_index_rank": 80,
+      "armed_conflict": false,
+      "internally_displaced_persons": 659000,
+      "landmine_contamination": true,
+      "notes": "Won 2020 Nagorno-Karabakh war; 2023 full takeover of Artsakh; IDPs from 1990s conflict resettling in liberated territories; extensive mine contamination in recaptured areas.",
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": ""
+    },
+    "cultural_heritage": {
+      "unesco_intangible_heritage": [
+        "Azerbaijani mugham",
+        "Art of Azerbaijani ashiq",
+        "Novruz",
+        "Flatbread (lavash/katyrma/jupka/yufka) shared"
+      ],
+      "notable_cultural_exports": [
+        "Mugham music",
+        "Carpets (UNESCO)",
+        "Tar instrument",
+        "Tea culture"
+      ],
+      "major_museums": [
+        "Azerbaijan National Museum of History",
+        "Heydar Aliyev Center",
+        "Azerbaijan Carpet Museum"
+      ],
+      "world_heritage_sites_list": [
+        "Walled City of Baku (Icheri Sheher)",
+        "Gobustan Rock Art Cultural Landscape",
+        "Historic Centre of Sheki with Khan's Palace"
+      ],
+      "culinary_traditions": [
+        "Plov",
+        "Dolma",
+        "Piti",
+        "Qutab",
+        "Shah plov"
+      ],
+      "notes": "Land of Fire (natural gas seeps historically); carpet-weaving UNESCO heritage; mugham classical music tradition; Zoroastrian heritage (Ateshgah fire temple).",
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "",
+      "national_sport": "",
+      "major_festivals": [],
+      "cuisine_highlights": [],
+      "music_art_traditions": [],
+      "film_industry": "",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [],
+      "world_heritage_sites": [],
+      "media_landscape": ""
+    },
+    "comparative_rankings": {
+      "human_development_index_rank": 91,
+      "global_competitiveness_rank": 58,
+      "happiness_index_rank": 81,
+      "environmental_performance_rank": 123,
+      "gender_gap_rank": 93,
+      "soft_power_rank": 0,
+      "notes": "High competitiveness for region; oil wealth drives rankings; poor governance/press freedom scores drag overall performance.",
+      "_note": "Country position relative to continent and global. 'rank' = 1 is best/largest.",
+      "population": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "area": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_nominal": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_per_capita": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "hdi": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "life_expectancy": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "internet_penetration": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "press_freedom": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
     }
   },
   "leadership": {
@@ -204,7 +715,8 @@
       "name": "Ilham Aliyev",
       "title": "President",
       "since": "2003-10-31",
-      "notes": "YAP (New Azerbaijan Party); succeeded father Heydar Aliyev; won Karabakh wars 2020 (44-day) and 2023 (1-day); wife Mehriban Aliyeva is First Vice President; authoritarian; oil wealth"
+      "notes": "YAP (New Azerbaijan Party); succeeded father Heydar Aliyev; won Karabakh wars 2020 (44-day) and 2023 (1-day); wife Mehriban Aliyeva is First Vice President; authoritarian; oil wealth",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -226,7 +738,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

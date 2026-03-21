@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.840363Z",
-    "notes": "Comprehensive index for Japan covering Jōmon and Yayoi periods, Yamato state, Nara and Heian courts, samurai rise, Kamakura/Muromachi/Sengoku periods, Tokugawa shogunate, Meiji Restoration, imperial expansion, Sino-Japanese and Russo-Japanese wars, WWI, militarism, WWII (Pearl Harbor, Hiroshima/Nagasaki), US occupation, economic miracle, bubble economy, Lost Decades, Fukushima 2011, and contemporary Japan."
+    "notes": "Comprehensive index for Japan covering Jōmon and Yayoi periods, Yamato state, Nara and Heian courts, samurai rise, Kamakura/Muromachi/Sengoku periods, Tokugawa shogunate, Meiji Restoration, imperial expansion, Sino-Japanese and Russo-Japanese wars, WWI, militarism, WWII (Pearl Harbor, Hiroshima/Nagasaki), US occupation, economic miracle, bubble economy, Lost Decades, Fukushima 2011, and contemporary Japan.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Tokyo",
@@ -51,7 +56,9 @@
       "Buddhism": "66.7%",
       "Christianity": "1.5%",
       "Other": "6.2%",
-      "note": "Many Japanese practise both Shinto and Buddhism simultaneously (syncretic); New Religions (Soka Gakkai, Tenrikyo); Christmas culturally celebrated; low religiosity in daily life"
+      "note": "Many Japanese practise both Shinto and Buddhism simultaneously (syncretic); New Religions (Soka Gakkai, Tenrikyo); Christmas culturally celebrated; low religiosity in daily life",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -103,12 +110,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -117,21 +140,39 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
       "top_exports": [],
       "top_imports": [],
       "major_partners": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "remittances_pct_gdp": 0,
+      "total_exports_usd": "",
+      "total_imports_usd": "",
+      "top_export_destinations": [],
+      "top_import_origins": [],
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
       "internet_penetration_pct": 0,
       "electricity_access_pct": 0,
       "mobile_subscriptions_per_100": 0,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "paved_roads_pct": 0,
+      "broadband_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
+      "road_network_km": 0,
+      "waterways_km": 0,
+      "submarine_cables": [],
+      "notes": ""
     },
     "international_memberships": [],
     "governance_indices": {
@@ -152,6 +193,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -159,12 +220,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -172,20 +257,447 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0.9,
+      "ict_development_index": 8.4,
+      "mobile_money_accounts": 50000000,
+      "digital_payments_pct_adults": 40,
+      "fintech_companies": 300,
+      "startup_ecosystem_value_usd": "$25 billion",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 82.0,
+      "innovation_index_score": 52.0,
+      "innovation_index_rank": 13,
+      "ai_readiness_index": 75.0
+    },
+    "capital_coordinates": {
+      "lat": 35.6762,
+      "lon": 139.6503
+    },
+    "other_major_cities": [
+      "Yokohama",
+      "Osaka",
+      "Nagoya",
+      "Sapporo",
+      "Fukuoka",
+      "Kobe",
+      "Kyoto"
+    ],
+    "national_motto": "None officially",
+    "national_anthem": "Kimigayo (His Imperial Majesty's Reign)",
+    "currency_code": "JPY",
+    "internet_tld": ".jp",
+    "utc_offset": "UTC+9",
+    "drives_on": "left",
+    "other_languages": [
+      "Ryukyuan languages",
+      "Ainu"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": 36.2048,
+        "lon": 138.2529
+      },
+      "bounding_box": {
+        "north": 45.52,
+        "south": 24.4,
+        "east": 153.99,
+        "west": 122.93
+      },
+      "land_area_km2": 377975,
+      "water_area_km2": 13430,
+      "coastline_km": 29751,
+      "borders": [],
+      "border_lengths_km": {},
+      "highest_point": {
+        "name": "Mount Fuji",
+        "elevation_m": 3776
+      },
+      "lowest_point": {
+        "name": "Hachirōgata (reclaimed land)",
+        "elevation_m": -4
+      },
+      "terrain": "Mountainous archipelago (6,852 islands); volcanic; 73% forested; narrow coastal plains",
+      "land_use": {
+        "agricultural_pct": 12.5,
+        "arable_pct": 11.7,
+        "forest_pct": 68.5,
+        "other_pct": 19.0
+      },
+      "major_rivers": [
+        "Shinano",
+        "Tone",
+        "Ishikari"
+      ],
+      "major_lakes": [
+        "Lake Biwa (largest freshwater)"
+      ],
+      "exclusive_economic_zone_km2": 4470000,
+      "landlocked": false,
+      "notes": "Ring of Fire (111 active volcanoes); world's most seismically active country; 2011 Tōhoku earthquake/tsunami/Fukushima; four main islands (Honshu, Hokkaido, Kyushu, Shikoku); 6th largest EEZ globally."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$4.2 trillion",
+      "gdp_ppp_usd": "$6.5 trillion",
+      "gdp_per_capita_nominal_usd": 33800,
+      "gdp_per_capita_ppp_usd": 52100,
+      "gdp_growth_rate_pct": 1.9,
+      "inflation_rate_pct": 3.2,
+      "unemployment_rate_pct": 2.6,
+      "youth_unemployment_rate_pct": 3.7,
+      "poverty_rate_pct": 15.4,
+      "poverty_line_definition": "Relative poverty (OECD definition)",
+      "gini_coefficient": 32.9,
+      "income_classification": "High income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 1,
+        "industry_pct_gdp": 29,
+        "services_pct_gdp": 70
+      },
+      "labor_force": 69000000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 3,
+        "industry_pct": 25,
+        "services_pct": 72
+      },
+      "fdi_inflow_usd": "$32 billion",
+      "fdi_outflow_usd": "$183 billion",
+      "foreign_exchange_reserves_usd": "$1.27 trillion",
+      "ease_of_doing_business_rank": 29,
+      "economic_freedom_index_score": 69.3,
+      "credit_rating": {
+        "moodys": "A1",
+        "sp": "A+",
+        "fitch": "A"
+      },
+      "notes": "World's 4th largest economy; lost decades (1991-2010) stagnation; Abenomics; yen weakness (2022-24); automotive giant (Toyota largest global automaker); robotics leader; world's largest government debt-to-GDP ratio (260%+); aging population economic challenge."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 11.0,
+      "health_expenditure_per_capita_usd": 4700,
+      "physicians_per_1k": 2.5,
+      "nurses_midwives_per_1k": 12.1,
+      "hospital_beds_per_1k": 12.6,
+      "maternal_mortality_per_100k": 4,
+      "hiv_prevalence_pct": 0.1,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 10,
+      "access_to_clean_water_pct": 100,
+      "access_to_sanitation_pct": 100,
+      "vaccination_coverage_pct": 98,
+      "stunting_under5_pct": 0,
+      "obesity_rate_pct": 4.3,
+      "universal_health_coverage_index": 93,
+      "leading_causes_of_death": [
+        "Cancer",
+        "Cardiovascular diseases",
+        "Pneumonia",
+        "Cerebrovascular diseases"
+      ],
+      "notes": "World's highest life expectancy (84+ years); universal healthcare since 1961; highest hospital beds per capita globally; aging society (29% over 65); mental health/suicide concerns; Okinawa blue zone."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 78.0,
+      "food_security_index_rank": 23,
+      "arable_land_pct": 11.7,
+      "agricultural_land_pct": 12.5,
+      "irrigated_land_pct": 54,
+      "major_crops": [
+        "rice",
+        "vegetables",
+        "fruits",
+        "tea",
+        "wheat",
+        "soybeans"
+      ],
+      "major_livestock": [
+        "poultry",
+        "pigs",
+        "cattle (Wagyu)"
+      ],
+      "food_import_dependency_pct": 63,
+      "cereal_yield_kg_per_hectare": 6600,
+      "agricultural_employment_pct": 3,
+      "notes": "Only 37% food self-sufficiency (calorie basis, lowest among major economies); rice staple (declining consumption); Wagyu beef globally premium; calorie-based food self-sufficiency declining; fisheries historically important (whaling controversy).",
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "energy": {
+      "primary_energy_sources": [
+        "natural gas",
+        "coal",
+        "oil",
+        "nuclear",
+        "solar",
+        "hydropower"
+      ],
+      "electricity_generation_gwh": 1000000,
+      "electricity_consumption_per_capita_kwh": 7500,
+      "renewable_share_pct": 22,
+      "fossil_fuel_share_pct": 70,
+      "nuclear_share_pct": 8,
+      "oil_production_bpd": 3000,
+      "oil_consumption_bpd": 3200000,
+      "natural_gas_production_bcm": 2,
+      "proved_oil_reserves_bbl": "44 million",
+      "proved_gas_reserves_tcm": "0.02",
+      "energy_imports_pct": 90,
+      "electrification_rate_pct": 100,
+      "notes": "World's #1 LNG importer; Fukushima disaster (2011) led nuclear shutdown — slow restart (33 of 54 reactors decommissioned); aggressive hydrogen strategy; 46% GHG reduction target by 2030; solar expansion rapid; ocean/tidal energy research.",
+      "energy_mix": {
+        "fossil_fuels_pct": 0,
+        "hydroelectric_pct": 0,
+        "solar_pct": 0,
+        "wind_pct": 0,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 0
+      },
+      "installed_capacity_mw": 0,
+      "electricity_production_gwh": 0,
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "transport": {
+      "airports": 175,
+      "airports_paved": 142,
+      "railways_km": 27311,
+      "roadways_km": 1218772,
+      "paved_roads_pct": 80,
+      "waterways_km": 1770,
+      "major_ports": [
+        "Tokyo",
+        "Yokohama",
+        "Kobe",
+        "Nagoya",
+        "Osaka"
+      ],
+      "national_airline": "Japan Airlines (JAL) / All Nippon Airways (ANA)",
+      "vehicle_ownership_per_1k": 600,
+      "notes": "Shinkansen (bullet train) since 1964 — zero fatalities; world's most punctual rail system; Tokyo Metro world's busiest; new maglev line (Chuo Shinkansen, 500 km/h) under construction; automotive nation (Toyota, Honda, Nissan).",
+      "major_airports_international": [],
+      "major_airports_domestic": [],
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
+    },
+    "tourism": {
+      "international_arrivals": 25000000,
+      "tourism_revenue_usd": "$33 billion",
+      "tourism_pct_gdp": 0.8,
+      "major_attractions": [
+        "Tokyo",
+        "Kyoto",
+        "Mount Fuji",
+        "Osaka",
+        "Hiroshima Peace Memorial (UNESCO)",
+        "Nara",
+        "Fushimi Inari Shrine"
+      ],
+      "unesco_world_heritage_sites": 25,
+      "notes": "Record 31.9M visitors in 2023 (pre-pandemic record broken); weak yen driving tourism boom; overtourism in Kyoto; anime/manga pilgrimage tourism; cherry blossom season; food tourism (most Michelin stars globally); onsen culture.",
+      "annual_visitors": 0,
+      "tourism_employment_pct": 0,
+      "unesco_sites_list": [],
+      "visa_free_access_countries": 0,
+      "henley_passport_rank": 0
+    },
+    "legal_system": {
+      "type": "Civil law",
+      "supreme_court": "Supreme Court of Japan",
+      "international_court_jurisdiction": "ICJ accepted (compulsory, with reservations)",
+      "suffrage": "18 years, universal",
+      "legal_traditions": [
+        "German-influenced civil law (Meiji era)",
+        "Post-WWII US-influenced constitutional law"
+      ],
+      "death_penalty": true,
+      "notes": "1947 Constitution (drafted under US occupation); Article 9 renounces war (reinterpreted for self-defense); 99.9% conviction rate (prosecutor-driven system); Emperor purely ceremonial; Liberal Democratic Party dominated since 1955.",
+      "legal_tradition": "",
+      "constitution_year": 0,
+      "sharia_applicability": "",
+      "customary_law_role": "",
+      "icc_membership": "",
+      "judicial_independence_score": 0,
+      "contract_enforcement_days": 0,
+      "property_rights_index": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_score": 96,
+      "freedom_house_status": "Free",
+      "gender_inequality_index": 0.083,
+      "gender_inequality_rank": 18,
+      "women_in_parliament_pct": 10,
+      "female_labor_force_participation_pct": 54,
+      "maternal_leave_weeks": 14,
+      "child_marriage_pct": 0,
+      "lgbtq_legal_status": "Legal (some local partnership certificates; no national marriage)",
+      "press_freedom_rank": 70,
+      "notes": "Strong democracy; persistent gender gap (lowest women in STEM among OECD; 'womenomics' policies); homogeneous society (2% foreign residents, rising); death penalty retained (hanging); press club system (kisha clubs) limits press freedom.",
+      "gender_gap_index_score": 0,
+      "women_labor_force_participation_pct": 0,
+      "maternal_mortality_per_100k": 0,
+      "fgm_prevalence_pct": 0,
+      "death_penalty_status": "",
+      "human_trafficking_tier": "",
+      "child_labor_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.336,
+      "global_peace_index_rank": 9,
+      "homicide_rate_per_100k": 0.2,
+      "terrorism_index_score": 1.0,
+      "terrorism_index_rank": 95,
+      "armed_conflict": false,
+      "internally_displaced_persons": 0,
+      "landmine_contamination": false,
+      "notes": "Among world's safest countries; Article 9 pacifist constitution but increasing militarization (2022 security strategy revision — 2% GDP defense target); US-Japan alliance cornerstone; China/North Korea threats; Senkaku/Diaoyu Islands dispute.",
+      "active_conflicts": [],
+      "border_disputes": [],
+      "un_peacekeeping_contributions": 0,
+      "arms_imports_usd": ""
+    },
+    "cultural_heritage": {
+      "unesco_intangible_heritage": [
+        "Kabuki theatre",
+        "Noh theatre",
+        "Washoku (Japanese cuisine)",
+        "Washi papermaking",
+        "Yama, Hoko, Yatai festivals"
+      ],
+      "notable_cultural_exports": [
+        "Anime/Manga",
+        "Sushi/Ramen",
+        "Toyota/Sony/Nintendo",
+        "Samurai/Bushido",
+        "Zen Buddhism",
+        "J-Pop"
+      ],
+      "major_museums": [
+        "Tokyo National Museum",
+        "Kyoto National Museum",
+        "Hiroshima Peace Memorial Museum",
+        "teamLab Borderless"
+      ],
+      "world_heritage_sites_list": [
+        "Historic Monuments of Ancient Kyoto",
+        "Hiroshima Peace Memorial",
+        "Mount Fuji",
+        "Himeji Castle",
+        "Itsukushima Shrine",
+        "Historic Villages of Shirakawa-go"
+      ],
+      "culinary_traditions": [
+        "Sushi",
+        "Ramen",
+        "Tempura",
+        "Wagyu beef",
+        "Matcha",
+        "Sake",
+        "Okonomiyaki"
+      ],
+      "notes": "Anime/manga $25B+ industry (global soft power); most Michelin-starred city (Tokyo); samurai/bushido cultural heritage; tea ceremony (sado); ikebana flower arrangement; wabi-sabi aesthetic philosophy; Nintendo/Sony/Pokémon global impact.",
+      "national_symbols": [],
+      "national_animal": "",
+      "national_flower": "",
+      "national_dish": "",
+      "national_sport": "",
+      "major_festivals": [],
+      "cuisine_highlights": [],
+      "music_art_traditions": [],
+      "film_industry": "",
+      "intangible_heritage_items": [],
+      "notable_historical_figures": [],
+      "world_heritage_sites": [],
+      "media_landscape": ""
+    },
+    "comparative_rankings": {
+      "human_development_index_rank": 22,
+      "global_competitiveness_rank": 6,
+      "happiness_index_rank": 51,
+      "environmental_performance_rank": 25,
+      "gender_gap_rank": 125,
+      "soft_power_rank": 4,
+      "notes": "World's 4th largest economy; top soft power globally (anime/cuisine/technology); peace rankings among best; gender gap worst in G7; aging/declining population major challenge.",
+      "_note": "Country position relative to continent and global. 'rank' = 1 is best/largest.",
+      "population": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "area": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_nominal": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "gdp_per_capita": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "hdi": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "life_expectancy": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "ease_of_doing_business": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "internet_penetration": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "press_freedom": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "global_peace_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
     }
   },
   "leadership": {
@@ -193,7 +705,8 @@
       "name": "Shigeru Ishiba",
       "title": "Prime Minister",
       "since": "2024-10-01",
-      "notes": "LDP; former defence minister; replaced Kishida; minority government after 2024 election"
+      "notes": "LDP; former defence minister; replaced Kishida; minority government after 2024 election",
+      "party": ""
     },
     "former_leaders": [
       {
@@ -221,7 +734,21 @@
       "name": "Naruhito",
       "title": "Emperor",
       "since": "2019-05-01",
-      "notes": "126th emperor; Reiwa era; succeeded father Akihito who abdicated (first in 200 years)"
+      "notes": "126th emperor; Reiwa era; succeeded father Akihito who abdicated (first in 200 years)",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {

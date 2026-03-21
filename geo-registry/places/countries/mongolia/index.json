@@ -17,7 +17,12 @@
     ],
     "created_at": "2026-02-07T00:00:00Z",
     "updated_at": "2026-02-15T13:31:47.851318Z",
-    "notes": "Comprehensive index for Mongolia covering Xiongnu confederation, Turks/Uyghur khaganates, Khitan Liao, Genghis Khan's Mongol Empire (1206, largest contiguous empire), Yuan Dynasty, Northern Yuan, Manchu Qing conquest, Bogd Khanate (1911 independence), Outer Mongolia autonomy, Soviet-backed Mongolian People's Republic (1924, second communist state), 1990 democratic revolution, market economy transition, mining boom, and balancing China-Russia via 'third neighbour' policy."
+    "notes": "Comprehensive index for Mongolia covering Xiongnu confederation, Turks/Uyghur khaganates, Khitan Liao, Genghis Khan's Mongol Empire (1206, largest contiguous empire), Yuan Dynasty, Northern Yuan, Manchu Qing conquest, Bogd Khanate (1911 independence), Outer Mongolia autonomy, Soviet-backed Mongolian People's Republic (1924, second communist state), 1990 democratic revolution, market economy transition, mining boom, and balancing China-Russia via 'third neighbour' policy.",
+    "data_year": 2024,
+    "sub_region": "",
+    "iso3166_alpha2": "XX",
+    "iso3166_alpha3": "XXX",
+    "iso3166_numeric": "000"
   },
   "country_profile": {
     "capital": "Ulaanbaatar",
@@ -53,7 +58,9 @@
       "Shamanism_Tengrism": "2.9%",
       "Christianity": "1.3%",
       "Other": "1.2%",
-      "note": "Tibetan Buddhism suppressed under communism; revival post-1990; Gandantegchinlen Monastery; Dalai Lama ties; Kazakhs are Muslim; shamanic/Tengriist traditions persist; communist era left large non-religious population"
+      "note": "Tibetan Buddhism suppressed under communism; revival post-1990; Gandantegchinlen Monastery; Dalai Lama ties; Kazakhs are Muslim; shamanic/Tengriist traditions persist; communist era left large non-religious population",
+      "primary": "",
+      "breakdown": {}
     },
     "ethnic_groups": [
       {
@@ -98,7 +105,8 @@
     "time_zone": "ULAT (UTC+8)",
     "independence": {
       "date": "1911-12-29 (from Qing Dynasty, later Soviet-backed 1921)",
-      "from": "Qing China (1911), then Mongolia People's Republic declared 1924; independence recognised by China only 1945"
+      "from": "Qing China (1911), then Mongolia People's Republic declared 1924; independence recognised by China only 1945",
+      "notes": ""
     },
     "continent": "Asia",
     "notes_unique": "World's most sparsely populated sovereign country (~2 people/km²); landlocked between China and Russia; Genghis Khan legacy central to national identity; Oyu Tolgoi (massive copper/gold mine); nomadic pastoralism (~30% nomadic); coldest capital city globally; Gobi Desert; wild horses (Przewalski); throat singing (khöömei); 'third neighbour' policy balances China-Russia via US/Japan/EU ties",
@@ -109,12 +117,28 @@
       "life_expectancy": 0,
       "infant_mortality_per_1k": 0,
       "literacy_rate_pct": 0,
-      "net_migration_rate": 0
+      "net_migration_rate": 0,
+      "population_growth_rate_pct": 0,
+      "urban_population_growth_rate_pct": 0,
+      "life_expectancy_male": 0,
+      "life_expectancy_female": 0,
+      "under5_mortality_per_1k": 0,
+      "sex_ratio": 0,
+      "dependency_ratio": 0,
+      "population_density_per_km2": 0,
+      "age_structure": {
+        "0_14_pct": 0,
+        "15_24_pct": 0,
+        "25_54_pct": 0,
+        "55_64_pct": 0,
+        "65_plus_pct": 0
+      }
     },
     "natural_resources": {
       "primary": [],
       "resource_dependency_pct_gdp": 0,
-      "notes": ""
+      "notes": "",
+      "resource_curse_risk": ""
     },
     "military": {
       "budget_usd": "",
@@ -123,24 +147,106 @@
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": ""
+      "notes": "",
+      "paramilitary_personnel": 0,
+      "conscription": false,
+      "global_firepower_rank": 0
     },
     "trade": {
-      "top_exports": [],
-      "top_imports": [],
+      "exports_usd": "$10 billion",
+      "imports_usd": "$8 billion",
+      "trade_balance_usd": "+$2 billion",
+      "current_account_balance_pct_gdp": -10.0,
+      "top_exports": [
+        "copper concentrate",
+        "coal",
+        "gold",
+        "iron ore",
+        "crude oil",
+        "cashmere"
+      ],
+      "top_imports": [
+        "fuel",
+        "machinery",
+        "vehicles",
+        "food products",
+        "consumer goods"
+      ],
+      "top_export_partners": [
+        "China (90%+)",
+        "Switzerland",
+        "UK",
+        "South Korea"
+      ],
+      "top_import_partners": [
+        "China",
+        "Russia",
+        "Japan",
+        "South Korea",
+        "Germany"
+      ],
+      "fta_partners": [
+        "Japan (EPA)"
+      ],
+      "wto_member": true,
+      "regional_trade_blocs": [],
+      "trade_openness_pct_gdp": 100.0,
+      "notes": "China 90%+ of exports (extreme dependency); Oyu Tolgoi copper (Rio Tinto); coal to China via Gashuunsukhait; cashmere 2nd globally; landlocked transit costs high.",
+      "total_exports_usd": "",
+      "total_imports_usd": "",
       "major_partners": [],
+      "top_export_destinations": [],
+      "top_import_origins": [],
       "trade_balance": "",
-      "remittances_pct_gdp": 0
+      "trade_as_pct_gdp": 0,
+      "current_account_balance_usd": "",
+      "remittances_pct_gdp": 0,
+      "trade_agreements": [],
+      "special_economic_zones": []
     },
     "infrastructure": {
+      "road_network_km": 49250,
+      "paved_roads_pct": 8,
+      "rail_network_km": 1815,
+      "airports": 44,
+      "international_airports": 2,
+      "major_ports": [],
+      "electricity_access_pct": 95,
+      "electricity_generation_gwh": 7300,
+      "renewable_electricity_pct": 3,
+      "broadband_subscriptions_per_100": 10,
+      "mobile_subscriptions_per_100": 135,
+      "internet_users_pct": 72,
+      "logistics_performance_index_score": 2.4,
+      "logistics_performance_index_rank": 103,
+      "notes": "Vast distances, minimal paved roads; Trans-Mongolian Railway (Ulaanbaatar-Russia/China); new Chinggis Khaan airport (2021); power imports from Russia; ger district electricity challenges.",
       "internet_penetration_pct": 0,
-      "electricity_access_pct": 0,
-      "mobile_subscriptions_per_100": 0,
+      "4g_coverage_pct": 0,
+      "5g_availability": false,
       "railway_km": 0,
-      "paved_roads_pct": 0
+      "waterways_km": 0,
+      "submarine_cables": []
     },
     "international_memberships": [],
     "governance_indices": {
+      "corruption_perceptions_index_score": 33,
+      "corruption_perceptions_index_rank": 116,
+      "rule_of_law_index_score": 0.47,
+      "rule_of_law_index_rank": 63,
+      "government_effectiveness_score": -0.3,
+      "regulatory_quality_score": -0.3,
+      "voice_accountability_score": 0.3,
+      "political_stability_score": 0.8,
+      "fragile_states_index_score": 62.0,
+      "fragile_states_index_rank": 93,
+      "democracy_index_score": 6.42,
+      "democracy_index_category": "Hybrid regime",
+      "freedom_house_status": "Partly Free",
+      "freedom_house_score": 60,
+      "press_freedom_index_rank": 60,
+      "judicial_independence_score": 0.4,
+      "gender_equality_index": 0.7,
+      "notes": "Post-1990 democratic transition largely successful; MPP dominant party; competitive elections; mining corruption scandals; civil society relatively active; press freedom declining.",
       "corruption_perception_index": {
         "score": 0,
         "rank": 0,
@@ -158,6 +264,26 @@
       "fragile_states_index": {
         "score": 0,
         "year": 0
+      },
+      "rule_of_law_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "government_effectiveness_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "regulatory_quality_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
+      },
+      "political_stability_index": {
+        "score": 0,
+        "percentile": 0,
+        "year": 0
       }
     },
     "climate_environment": {
@@ -165,12 +291,36 @@
       "co2_emissions_mt": 0,
       "renewable_energy_pct": 0,
       "natural_hazards": [],
-      "protected_areas_pct": 0
+      "protected_areas_pct": 0,
+      "average_temperature_c": 0,
+      "average_rainfall_mm": 0,
+      "co2_per_capita_t": 0,
+      "deforestation_rate_pct": 0,
+      "water_stress_level": "",
+      "environmental_performance_index": {
+        "score": 0,
+        "rank": 0,
+        "year": 0
+      },
+      "paris_agreement_status": "",
+      "biodiversity": {
+        "known_species": 0,
+        "endemic_species": 0,
+        "threatened_species": 0
+      },
+      "notes": ""
     },
     "debt_aid": {
       "national_debt_pct_gdp": 0,
       "foreign_aid_received_usd": "",
-      "notes": ""
+      "notes": "",
+      "external_debt_usd": "",
+      "debt_service_pct_revenue": 0,
+      "foreign_aid_given_usd": "",
+      "top_donors": [],
+      "imf_programme_active": false,
+      "world_bank_ida_eligible": false,
+      "hipc_status": ""
     },
     "education": {
       "primary_enrollment_pct": 0,
@@ -178,20 +328,498 @@
       "tertiary_enrollment_pct": 0,
       "pisa_participation": false,
       "top_universities": [],
-      "notes": ""
+      "notes": "",
+      "education_expenditure_pct_gdp": 0,
+      "primary_completion_rate_pct": 0,
+      "gender_parity_index": 0,
+      "mean_years_of_schooling": 0,
+      "expected_years_of_schooling": 0,
+      "pisa_scores": {
+        "reading": 0,
+        "math": 0,
+        "science": 0,
+        "year": 0
+      },
+      "student_teacher_ratio_primary": 0,
+      "out_of_school_children": 0,
+      "academic_freedom_index": 0
     },
     "diaspora_migration": {
       "diaspora_population": "",
       "refugees_hosted": 0,
       "refugees_produced": 0,
       "remittances_usd": "",
-      "notes": ""
+      "notes": "",
+      "diaspora_top_destinations": [],
+      "asylum_seekers": 0,
+      "stateless_persons": 0,
+      "internally_displaced_persons": 0,
+      "immigration_policy": "",
+      "remittances_pct_gdp": 0,
+      "net_migration_rate_per_1k": 0
     },
     "digital_economy": {
       "e_government_index": 0,
       "mobile_money_adoption": "",
       "tech_hubs": [],
-      "notes": ""
+      "notes": "",
+      "e_participation_index": 0,
+      "ict_development_index": 0,
+      "mobile_money_accounts": 0,
+      "digital_payments_pct_adults": 0,
+      "fintech_companies": 0,
+      "startup_ecosystem_value_usd": "",
+      "data_protection_law": false,
+      "cybersecurity_index_score": 0,
+      "innovation_index_score": 0,
+      "innovation_index_rank": 0,
+      "ai_readiness_index": 0
+    },
+    "capital_coordinates": {
+      "lat": 47.8864,
+      "lon": 106.9057
+    },
+    "other_major_cities": [
+      "Erdenet",
+      "Darkhan",
+      "Choibalsan",
+      "Murun"
+    ],
+    "national_motto": "",
+    "national_anthem": "Mongol Ulsyn Toriin Duulal (National Anthem of Mongolia)",
+    "currency_code": "MNT",
+    "internet_tld": ".mn",
+    "utc_offset": "UTC+8",
+    "drives_on": "right",
+    "other_languages": [
+      "Kazakh",
+      "Russian",
+      "Tuvan",
+      "Buryat"
+    ],
+    "geography": {
+      "coordinates": {
+        "lat": 46.86,
+        "lon": 103.85
+      },
+      "bounding_box": {
+        "north": 52.15,
+        "south": 41.57,
+        "east": 119.93,
+        "west": 87.75
+      },
+      "land_area_km2": 1564116,
+      "water_area_km2": 10560,
+      "coastline_km": 0,
+      "borders": [
+        "Russia",
+        "China"
+      ],
+      "border_lengths_km": {
+        "Russia": 3452,
+        "China": 4630
+      },
+      "highest_point": {
+        "name": "Khüiten Peak",
+        "elevation_m": 4374
+      },
+      "lowest_point": {
+        "name": "Hoh Nuur (lake)",
+        "elevation_m": 560
+      },
+      "terrain": "Vast semi-arid steppe; mountainous west and north (Altai, Khangai); Gobi Desert south; grasslands central",
+      "land_use": {
+        "agricultural_pct": 73.0,
+        "arable_pct": 0.4,
+        "forest_pct": 7.0,
+        "other_pct": 20.0
+      },
+      "major_rivers": [
+        "Selenge",
+        "Orkhon",
+        "Tuul",
+        "Kherlen"
+      ],
+      "major_lakes": [
+        "Khövsgöl",
+        "Uvs Nuur",
+        "Khar Us Nuur"
+      ],
+      "exclusive_economic_zone_km2": 0,
+      "landlocked": true,
+      "notes": "World's most sparsely populated sovereign nation (2/km²); landlocked between Russia and China; Genghis Khan homeland; nomadic herding heritage; Gobi rich in dinosaur fossils."
+    },
+    "economy_extended": {
+      "gdp_nominal_usd": "$18 billion",
+      "gdp_ppp_usd": "$50 billion",
+      "gdp_per_capita_nominal_usd": 5200,
+      "gdp_per_capita_ppp_usd": 14500,
+      "gdp_growth_rate_pct": 7.0,
+      "inflation_rate_pct": 7.0,
+      "unemployment_rate_pct": 6.0,
+      "youth_unemployment_rate_pct": 15.0,
+      "poverty_rate_pct": 27.8,
+      "poverty_line_definition": "National poverty line",
+      "gini_coefficient": 32.7,
+      "income_classification": "Lower-middle income",
+      "sector_breakdown": {
+        "agriculture_pct_gdp": 12,
+        "industry_pct_gdp": 35,
+        "services_pct_gdp": 53
+      },
+      "labor_force": 1400000,
+      "labor_force_by_sector": {
+        "agriculture_pct": 25,
+        "industry_pct": 22,
+        "services_pct": 53
+      },
+      "fdi_inflow_usd": "$2 billion",
+      "fdi_outflow_usd": "$50 million",
+      "foreign_exchange_reserves_usd": "$4 billion",
+      "ease_of_doing_business_rank": 81,
+      "economic_freedom_index_score": 60.0,
+      "credit_rating": {
+        "moodys": "B3",
+        "sp": "B",
+        "fitch": "B"
+      },
+      "notes": "Mining-dominated (Oyu Tolgoi copper-gold, Tavan Tolgoi coal); 'resource curse' concerns; Chinggis Bond (2012) landmark; third-neighbor policy (US, Japan, EU); Dutch disease risk."
+    },
+    "health": {
+      "health_expenditure_pct_gdp": 4.7,
+      "health_expenditure_per_capita_usd": 220,
+      "physicians_per_1k": 3.3,
+      "nurses_midwives_per_1k": 4.0,
+      "hospital_beds_per_1k": 7.0,
+      "maternal_mortality_per_100k": 45,
+      "hiv_prevalence_pct": 0.01,
+      "malaria_incidence_per_1k": 0,
+      "tuberculosis_incidence_per_100k": 180,
+      "access_to_clean_water_pct": 85,
+      "access_to_sanitation_pct": 65,
+      "vaccination_coverage_pct": 98,
+      "stunting_under5_pct": 10,
+      "obesity_rate_pct": 20.6,
+      "universal_health_coverage_index": 60,
+      "leading_causes_of_death": [
+        "Ischemic heart disease",
+        "Stroke",
+        "Liver cancer",
+        "Cirrhosis"
+      ],
+      "notes": "Highest liver cancer rate globally (hepatitis B/C); ger district ger areas lack sanitation; Ulaanbaatar air pollution health crisis (winter); nomad healthcare access challenging."
+    },
+    "food_agriculture": {
+      "food_security_index_score": 47.0,
+      "food_security_index_rank": 79,
+      "arable_land_pct": 0.4,
+      "agricultural_land_pct": 73.0,
+      "irrigated_land_pct": 1.0,
+      "major_crops": [
+        "wheat",
+        "potatoes",
+        "forage crops",
+        "vegetables"
+      ],
+      "major_livestock": [
+        "sheep",
+        "goats",
+        "cattle/yaks",
+        "horses",
+        "camels"
+      ],
+      "food_import_dependency_pct": 40,
+      "cereal_yield_kg_per_hectare": 1500,
+      "agricultural_workers_pct": 25,
+      "notes": "Pastoral nomadism with 70M+ livestock; cashmere goats 2nd globally; dzud (severe winter) kills millions of animals periodically; meat/dairy staple diet; limited arable farming.",
+      "agricultural_employment_pct": 0,
+      "prevalence_of_undernourishment_pct": 0
+    },
+    "security_stability": {
+      "global_peace_index_score": 1.65,
+      "global_peace_index_rank": 27,
+      "military_expenditure_pct_gdp": 0.7,
+      "active_military_personnel": 9000,
+      "reserve_military_personnel": 137000,
+      "paramilitary_personnel": 7200,
+      "internal_conflicts": "None",
+      "terrorism_index_score": 0,
+      "terrorism_index_rank": 135,
+      "homicide_rate_per_100k": 6.0,
+      "incarceration_rate_per_100k": 180,
+      "police_per_100k": 200,
+      "border_disputes": "None",
+      "refugee_population_hosted": 15,
+      "idp_population": 0,
+      "un_peacekeeping_contributor": true,
+      "arms_imports_usd": "$20 million",
+      "notes": "Peaceful democracy; 'third neighbor' policy balancing Russia-China; active UN peacekeeper; nuclear-weapon-free zone; no major conflicts since 1990 transition.",
+      "active_conflicts": [],
+      "un_peacekeeping_contributions": 0,
+      "internally_displaced_persons": 0
+    },
+    "environment_climate": {
+      "co2_emissions_mt": 30.0,
+      "co2_per_capita_t": 8.6,
+      "renewable_energy_pct": 3,
+      "renewable_energy_target_pct": 30,
+      "renewable_energy_target_year": 2030,
+      "forest_cover_pct": 7.0,
+      "deforestation_rate_pct_annual": 0.8,
+      "protected_areas_pct": 17.0,
+      "biodiversity_index_score": 0.5,
+      "water_stress_level": "Low-Medium",
+      "water_withdrawal_per_capita_m3": 200,
+      "natural_disaster_risk_index": 5.0,
+      "climate_vulnerability_index": "High",
+      "waste_recycling_rate_pct": 1,
+      "air_quality_pm25": 40,
+      "environmental_performance_index_score": 32.0,
+      "environmental_performance_index_rank": 147,
+      "paris_agreement_status": "Ratified",
+      "ndc_target": "22.7% by 2030",
+      "notes": "Ulaanbaatar among world's most polluted capitals (winter ger district coal burning); desertification advancing; dzud climate events; snow leopard habitat; Gobi ecosystem fragile."
+    },
+    "demographics_extended": {
+      "median_age": 28.8,
+      "population_growth_rate_pct": 1.5,
+      "birth_rate_per_1k": 22,
+      "death_rate_per_1k": 6,
+      "net_migration_rate_per_1k": -1.0,
+      "sex_ratio": 0.97,
+      "dependency_ratio_pct": 53,
+      "urban_population_pct_change_annual": 2.0,
+      "total_fertility_rate": 2.9,
+      "contraceptive_prevalence_pct": 54,
+      "mean_years_of_schooling": 10.2,
+      "expected_years_of_schooling": 14.4,
+      "education_expenditure_pct_gdp": 4.7,
+      "r_and_d_expenditure_pct_gdp": 0.6,
+      "stem_graduates_pct": 20,
+      "remittances_received_usd": "$300 million",
+      "remittances_pct_gdp": 1.7,
+      "diaspora_population": 200000,
+      "ethnic_fractionalization_index": 0.15,
+      "religious_fractionalization_index": 0.38,
+      "notes": "Ethnically homogeneous (Khalkha Mongol 85%+); Kazakh minority (3.5%) in west; rapid urbanization (45% in Ulaanbaatar); nomadic population declining; high female education rates."
+    },
+    "digital_infrastructure": {
+      "internet_penetration_pct": 72,
+      "mobile_penetration_pct": 135,
+      "fixed_broadband_speed_mbps": 15,
+      "mobile_broadband_speed_mbps": 20,
+      "5g_coverage_pct": 5,
+      "fiber_optic_coverage_pct": 20,
+      "ict_development_index_score": 5.2,
+      "e_government_index_score": 0.65,
+      "digital_economy_pct_gdp": 4.0,
+      "tech_hubs_count": 5,
+      "mobile_money_accounts": 2000000,
+      "digital_payments_pct_adults": 75,
+      "fintech_companies": 20,
+      "startup_ecosystem_value_usd": "$100 million",
+      "data_protection_law": true,
+      "cybersecurity_index_score": 45.0,
+      "innovation_index_score": 27.0,
+      "innovation_index_rank": 88,
+      "ai_readiness_index": 30.0
+    },
+    "comparative_rankings": {
+      "_note": "Country position relative to continent and global.",
+      "population": {
+        "continent_rank": 35,
+        "global_rank": 139
+      },
+      "area": {
+        "continent_rank": 5,
+        "global_rank": 18
+      },
+      "gdp_nominal": {
+        "continent_rank": 34,
+        "global_rank": 133
+      },
+      "gdp_per_capita": {
+        "continent_rank": 20,
+        "global_rank": 107
+      },
+      "hdi": {
+        "continent_rank": 17,
+        "global_rank": 96
+      },
+      "life_expectancy": {
+        "continent_rank": 31,
+        "global_rank": 110
+      },
+      "press_freedom": {
+        "continent_rank": 10,
+        "global_rank": 60
+      },
+      "global_peace_index": {
+        "continent_rank": 15,
+        "global_rank": 50
+      },
+      "notes": "Most sparsely populated country; landlocked between Russia and China; mining-dependent economy; democratic oasis in region.",
+      "ease_of_doing_business": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "internet_penetration": {
+        "continent_rank": 0,
+        "global_rank": 0
+      },
+      "innovation_index": {
+        "continent_rank": 0,
+        "global_rank": 0
+      }
+    },
+    "cultural_heritage": {
+      "national_symbols": [
+        "soyombo symbol"
+      ],
+      "national_animal": "Przewalski's horse (takhi)",
+      "national_flower": "scabiosa (lotus flower in Buddhist context)",
+      "national_dish": "buuz (steamed dumplings)",
+      "national_sport": "Three manly games: wrestling, horse racing, archery",
+      "major_festivals": [
+        "Naadam Festival (July 11–13, 'Three Manly Games')",
+        "Tsagaan Sar (Lunar New Year)",
+        "Eagle Festival (October, Bayan-Olgii)"
+      ],
+      "cuisine_highlights": [
+        "buuz (dumplings)",
+        "khuushuur (fried meat pockets)",
+        "airag (fermented mare's milk)",
+        "tsuivan (noodle stew)",
+        "boodog (goat BBQ from inside)",
+        "suutei tsai (milk tea)"
+      ],
+      "music_art_traditions": [
+        "Khoomei (throat singing, UNESCO)",
+        "Morin khuur (horse-head fiddle, UNESCO)",
+        "Ger (yurt) culture",
+        "Buddhist thangka painting",
+        "Eagle hunting (Kazakh)"
+      ],
+      "intangible_heritage_items": [
+        "Khoomei throat singing (UNESCO)",
+        "Morin khuur (UNESCO)",
+        "Naadam (UNESCO)",
+        "Mongolian calligraphy (UNESCO)",
+        "Coaxing ritual for camels (UNESCO)"
+      ],
+      "notable_historical_figures": [
+        "Genghis Khan (Chinggis Khaan)",
+        "Kublai Khan",
+        "Bogd Khan (last monarch)",
+        "Damdin Sükhbaatar (revolutionary hero)"
+      ],
+      "world_heritage_sites": [
+        "Orkhon Valley Cultural Landscape",
+        "Petroglyphic Complexes of the Mongolian Altai",
+        "Great Burkhan Khaldun Mountain",
+        "Deer Stone Monuments and Related Bronze Age Sites"
+      ],
+      "media_landscape": "UB Post, Mongol Messenger (English); MNB, Eagle TV; relatively free press by regional standards.",
+      "notes": "Genghis Khan (largest contiguous land empire); nomadic pastoral tradition; ger (yurt) living; Buddhist (Gelug) revival; throat singing world-renowned.",
+      "film_industry": ""
+    },
+    "energy": {
+      "energy_mix": {
+        "fossil_fuels_pct": 85,
+        "hydroelectric_pct": 2,
+        "solar_pct": 5,
+        "wind_pct": 7,
+        "nuclear_pct": 0,
+        "biomass_other_pct": 1
+      },
+      "installed_capacity_mw": 1500,
+      "electricity_production_gwh": 7500,
+      "electricity_consumption_per_capita_kwh": 2200,
+      "energy_imports_pct": 20,
+      "oil_production_bpd": 25000,
+      "oil_consumption_bpd": 35000,
+      "natural_gas_production_bcm": 0,
+      "notes": "Coal-dependent; Tavan Tolgoi (world's largest untapped coking coal deposit); wind/solar potential in Gobi; imports electricity from Russia; Gobi wind farms expanding.",
+      "energy_access_rural_pct": 0,
+      "energy_access_urban_pct": 0
+    },
+    "human_rights_gender": {
+      "freedom_house_status": "Free",
+      "freedom_house_score": 84,
+      "gender_inequality_index": 0.32,
+      "gender_inequality_rank": 71,
+      "gender_gap_index_score": 0.72,
+      "women_in_parliament_pct": 17,
+      "women_labor_force_participation_pct": 54,
+      "maternal_mortality_per_100k": 45,
+      "child_marriage_pct": 5,
+      "lgbtq_legal_status": "Legal since 2002; discrimination ban in Criminal Code (2024 reform)",
+      "death_penalty_status": "Abolitionist (2017)",
+      "human_trafficking_tier": "Tier 2",
+      "notes": "Rare democracy in Central/East Asia region; press freedom; mining corruption concerns; domestic violence law (2016); herder displacement.",
+      "fgm_prevalence_pct": 0,
+      "child_labor_pct": 0
+    },
+    "legal_system": {
+      "legal_tradition": "Civil law (Germanic/Soviet-influenced); Mongolian tradition",
+      "constitution_year": 1992,
+      "sharia_applicability": "Not applicable",
+      "icc_membership": "State party (2002)",
+      "judicial_independence_score": 0.45,
+      "contract_enforcement_days": 374,
+      "property_rights_index": 45,
+      "notes": "Constitutional Court; Supreme Court; democratic constitution since 1992; judicial reform ongoing; mining law critical; nomadic grazing land rights.",
+      "customary_law_role": ""
+    },
+    "tourism": {
+      "annual_visitors": 650000,
+      "tourism_revenue_usd": "$500 million",
+      "tourism_pct_gdp": 3,
+      "tourism_employment_pct": 5,
+      "unesco_world_heritage_sites": 4,
+      "unesco_sites_list": [
+        "Orkhon Valley",
+        "Mongolian Altai Petroglyphs",
+        "Great Burkhan Khaldun Mountain",
+        "Deer Stone Monuments"
+      ],
+      "major_attractions": [
+        "Gobi Desert",
+        "Naadam Festival",
+        "Terelj National Park",
+        "Orkhon Valley",
+        "Khustain Nuruu (wild horses)",
+        "Eagle Festival (Bayan-Olgii)"
+      ],
+      "visa_free_access_countries": 64,
+      "henley_passport_rank": 75,
+      "notes": "Adventure and nomadic tourism; ger camps; horseback trekking; Gobi expeditions; limited infrastructure but growing."
+    },
+    "transport": {
+      "major_airports_international": [
+        "Chinggis Khaan International Airport (Ulaanbaatar)"
+      ],
+      "major_airports_domestic": [
+        "Murun",
+        "Khovd",
+        "Dalanzadgad",
+        "Choibalsan",
+        "Olgii"
+      ],
+      "railway_km": 1815,
+      "road_network_km": 49250,
+      "paved_roads_pct": 10,
+      "major_ports": [],
+      "public_transit_systems": [
+        "Ulaanbaatar bus network"
+      ],
+      "notes": "Trans-Mongolian Railway (Moscow–Beijing); landlocked; vast unpaved road network; new Chinggis Khaan Airport (2021); MIAT Mongolian Airlines.",
+      "national_airline": "",
+      "major_seaports": [],
+      "major_inland_ports": [],
+      "merchant_marine_vessels": 0,
+      "registered_vehicles_per_1k": 0,
+      "road_fatalities_per_100k": 0
     }
   },
   "leadership": {
@@ -199,7 +827,8 @@
       "name": "Ukhnaagiin Khürelsükh",
       "title": "President",
       "since": "2021-06-25",
-      "notes": "Mongolian People's Party (MPP); former PM; presidential powers limited in semi-presidential system"
+      "notes": "Mongolian People's Party (MPP); former PM; presidential powers limited in semi-presidential system",
+      "party": ""
     },
     "prime_minister": {
       "name": "Luvsannamsrain Oyun-Erdene",
@@ -237,7 +866,21 @@
     "head_of_state": {
       "name": "",
       "title": "",
-      "since": ""
+      "since": "",
+      "party": ""
+    },
+    "head_of_government": {
+      "name": "",
+      "title": "",
+      "since": "",
+      "party": ""
+    },
+    "legislature": {
+      "type": "",
+      "chambers": [],
+      "total_seats": 0,
+      "ruling_party": "",
+      "next_election": ""
     }
   },
   "thematic_clusters": {
