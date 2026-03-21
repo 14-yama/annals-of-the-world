@@ -3,6 +3,7 @@
 import React from 'react'
 import { Box, Flex, Heading, Text, SimpleGrid } from '@chakra-ui/react'
 import { SectionHeading, StatCard, InsightCard } from '../components/DataCards'
+import Breadcrumb from '../components/Breadcrumb'
 import {
   BookOpen, Brain, Globe2, Clock, Database, Code2, Network,
   GraduationCap, Scroll, Target, Layers, Microscope,
@@ -117,6 +118,7 @@ const PROGRESS_PCT = ((TOTAL_NODES / TARGET_NODES) * 100).toFixed(2)
 export default function Curator() {
   return (
     <Box>
+      <Breadcrumb items={[{ label: 'Curator' }]} />
       {/* ─── Hero ─── */}
       <Box mb={10} textAlign="center" py={8} bg="linear-gradient(135deg, #FAFAF8 0%, #FDF8ED 50%, #E8F0FE 100%)"
         borderRadius="2xl" border="1px solid #E4E2DC">

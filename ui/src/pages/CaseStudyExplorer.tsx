@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Box, Flex, Heading, Text, SimpleGrid, Badge } from '@chakra-ui/react'
 import { BookOpen, Zap, Globe, ArrowRight, ChevronDown, ChevronUp, Swords, Pyramid, Ship, Crown, Landmark, MapPin } from 'lucide-react'
 import { SectionHeading } from '../components/DataCards'
+import Breadcrumb from '../components/Breadcrumb'
 import CausalChain from '../components/CausalChain'
 import { CASE_STUDIES } from '../data/case-studies'
 import { FRAMEWORKS, FRAMEWORK_MAP } from '../constants/frameworks'
@@ -15,6 +16,7 @@ export default function CaseStudyExplorer() {
 
   return (
     <Box>
+      <Breadcrumb items={[{ label: 'Frameworks' }]} />
       {/* Header */}
       <Box mb={8}>
         <Flex align="center" gap={3} mb={2}>

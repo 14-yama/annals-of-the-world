@@ -2,6 +2,7 @@
 /* Interactive data visualizations: world languages, global diet, ancient trade routes */
 import React, { useState, useCallback, useMemo } from 'react'
 import { Box, Flex, Heading, Text, SimpleGrid, Badge } from '@chakra-ui/react'
+import Breadcrumb from '../components/Breadcrumb'
 import {
   ComposableMap, Geographies, Geography, ZoomableGroup, Line, Marker,
 } from 'react-simple-maps'
@@ -58,6 +59,7 @@ export default function HumanStory() {
 
   return (
     <Box>
+      <Breadcrumb items={[{ label: 'The Human Story' }]} />
       {/* Header */}
       <Box mb={8}>
         <Flex align="center" gap={3} mb={2}>

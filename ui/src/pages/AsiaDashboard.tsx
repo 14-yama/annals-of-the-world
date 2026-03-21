@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Box, SimpleGrid, Text, Flex, Heading, Input } from '@chakra-ui/react'
 import { Globe, TrendingUp, Zap, Clock, Shield, Search } from 'lucide-react'
 import { StatCard, InsightCard, DataTable, SectionHeading } from '../components/DataCards'
+import Breadcrumb from '../components/Breadcrumb'
 
 /* ── Static data drawn from analyses/Asia_Continent_Analysis.md ── */
 
@@ -204,6 +205,7 @@ export default function AsiaDashboard() {
 
   return (
     <Box>
+      <Breadcrumb items={[{ label: 'Continents' }, { label: 'Asia' }]} />
       {/* Page Header */}
       <Box mb={8}>
         <Flex align="center" gap={3} mb={2}>

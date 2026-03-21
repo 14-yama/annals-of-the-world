@@ -2,10 +2,10 @@ import React, { useMemo } from 'react'
 import { useParams, Link as RouterLink, useNavigate } from 'react-router-dom'
 import { Box, SimpleGrid, Text, Flex, Heading } from '@chakra-ui/react'
 import {
-  Clock, ChevronLeft, Globe, BookOpen, Star,
-  Users, Landmark, MapPin, Layers, FileText, Shield, Zap,
+  Clock, ChevronLeft, ChevronRight, Globe, BookOpen, Star, Home,
+  Users, Landmark, MapPin, Layers, FileText, Shield, Zap, Compass,
 } from 'lucide-react'
-import { getEraById } from '../constants/eras'
+import { getEraById, ERAS as ALL_ERAS } from '../constants/eras'
 import { TIMELINE_EVENTS } from '../data/timeline-events'
 import { SectionHeading } from '../components/DataCards'
 import Timeline from '../components/Timeline'
@@ -21,6 +21,11 @@ const ERA_ID_TO_SLUG: Record<string, string> = {
   modern: 'modern',
   contemporary: 'contemporary',
 }
+
+/* Reverse mapping: catalog eraSlug → eras.ts id */
+const SLUG_TO_ERA_ID: Record<string, string> = Object.fromEntries(
+  Object.entries(ERA_ID_TO_SLUG).map(([k, v]) => [v, k])
+)
 
 const LABEL_ORDER = ['Person', 'Institution', 'EventWindow', 'Movement', 'Text', 'Idea', 'Place', 'Evidence']
 
@@ -80,6 +85,31 @@ export default function EraDetail() {
     return map
   }, [eraEntities])
 
+  // Era ordering for prev/next navigation
+  const eraIndex = ALL_ERAS.findIndex(e => e.id === eraId)
+  const prevEra = eraIndex > 0 ? ALL_ERAS[eraIndex - 1] : undefined
+  const nextEra = eraIndex < ALL_ERAS.length - 1 ? ALL_ERAS[eraIndex + 1] : undefined
+
+  // Key figures: up to 6 notable Persons for the spotlight
+  const keyFigures = useMemo(() =>
+    (entityGroups.get('Person') || []).slice(0, 6),
+  [entityGroups])
+
+  // Key Institutions
+  const keyInstitutions = useMemo(() =>
+    (entityGroups.get('Institution') || []).slice(0, 6),
+  [entityGroups])
+
+  // Key Texts
+  const keyTexts = useMemo(() =>
+    (entityGroups.get('Text') || []).slice(0, 6),
+  [entityGroups])
+
+  // Key Movements
+  const keyMovements = useMemo(() =>
+    (entityGroups.get('Movement') || []).slice(0, 4),
+  [entityGroups])
+
   if (!era) {
     return (
       <Box>
@@ -97,14 +127,41 @@ export default function EraDetail() {
 
   return (
     <Box>
-      {/* Breadcrumb */}
-      <Flex align="center" gap={2} mb={6}>
-        <RouterLink to="/explore" style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#9E9A90', textDecoration: 'none' }}>
-          <ChevronLeft size={18} />
-          <Text fontSize="sm" _hover={{ color: '#D4AF37' }}>Era Explorer</Text>
+      {/* ── Enhanced Breadcrumb ── */}
+      <Flex align="center" gap={1.5} mb={4} flexWrap="wrap">
+        <RouterLink to="/" style={{ display: 'flex', alignItems: 'center', gap: 4, color: '#9E9A90', textDecoration: 'none' }}>
+          <Home size={14} />
+          <Text fontSize="xs" _hover={{ color: '#D4AF37' }}>Home</Text>
         </RouterLink>
-        <Text fontSize="sm" color="#D6D3CC">/</Text>
-        <Text fontSize="sm" color={era.color} fontWeight={600}>{era.name}</Text>
+        <ChevronRight size={12} color="#D6D3CC" />
+        <RouterLink to="/explore" style={{ color: '#9E9A90', textDecoration: 'none' }}>
+          <Text fontSize="xs" _hover={{ color: '#D4AF37' }}>Eras</Text>
+        </RouterLink>
+        <ChevronRight size={12} color="#D6D3CC" />
+        <Text fontSize="xs" color={era.color} fontWeight={600}>{era.name}</Text>
+      </Flex>
+
+      {/* ── Era quick-nav pills ── */}
+      <Flex gap={2} mb={6} flexWrap="wrap">
+        {ALL_ERAS.map(e => {
+          const isActive = e.id === eraId
+          return (
+            <RouterLink key={e.id} to={`/explore/${e.id}`} style={{ textDecoration: 'none' }}>
+              <Box
+                px={3} py={1.5} borderRadius="full" fontSize="xs" fontWeight={600}
+                fontFamily="'Inter', sans-serif"
+                bg={isActive ? e.color : `${e.color}10`}
+                color={isActive ? 'white' : e.color}
+                border="1px solid"
+                borderColor={isActive ? e.color : `${e.color}30`}
+                _hover={{ bg: isActive ? e.color : `${e.color}20` }}
+                cursor="pointer" transition="all 0.15s"
+              >
+                {e.name}
+              </Box>
+            </RouterLink>
+          )
+        })}
       </Flex>
 
       {/* Hero Section */}
@@ -184,16 +241,121 @@ export default function EraDetail() {
         </Box>
       )}
 
-      {era.civilizations.length === 0 && (
-        <Box mb={8} bg="#F5F4F0" border="1px solid" borderColor="#E4E2DC" borderRadius="lg" p={6} textAlign="center">
-          <BookOpen size={32} color="#96770B" style={{ margin: '0 auto 12px' }} />
-          <Text fontFamily='"Cinzel", serif' fontSize="lg" color="#2D2A24" fontWeight={600}>
-            Civilization Profiles Coming Soon
-          </Text>
-          <Text fontSize="sm" color="#524E44" mt={2} maxW="400px" mx="auto">
-            Detailed civilization profiles for the {era.name} era are being researched and curated.
-            Check back as our knowledge graph expands.
-          </Text>
+      {/* ── Key Figures Spotlight ── */}
+      {keyFigures.length > 0 && (
+        <Box mb={8}>
+          <SectionHeading
+            title="Key Figures"
+            subtitle={`Notable people of the ${era.name} era`}
+          />
+          <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} gap={3}>
+            {keyFigures.map(p => (
+              <Box key={p.slug} bg="white" border="1px solid" borderColor="#E4E2DC"
+                borderRadius="8px" overflow="hidden" cursor="pointer"
+                onClick={() => navigate(`/entity/${p.slug}`)}
+                _hover={{ borderColor: '#3A7D44', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
+                transition="all 0.15s">
+                <Box h="3px" bg="#3A7D44" />
+                <Box p={3}>
+                  <Flex align="center" gap={2} mb={1}>
+                    <Users size={14} color="#3A7D44" />
+                    <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
+                      color="#2D2A24" flex={1} lineClamp={1}>{p.name}</Text>
+                  </Flex>
+                  <Text fontSize="xs" color="#787469" fontFamily="'JetBrains Mono', monospace" mb={1}>
+                    {p.period || p.born || ''}</Text>
+                  <Text fontSize="xs" color="#524E44" lineClamp={2}>{p.summary}</Text>
+                </Box>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+      )}
+
+      {/* ── Key Institutions ── */}
+      {keyInstitutions.length > 0 && (
+        <Box mb={8}>
+          <SectionHeading
+            title="Institutions"
+            subtitle={`Major institutions of the ${era.name} era`}
+          />
+          <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} gap={3}>
+            {keyInstitutions.map(inst => (
+              <Box key={inst.slug} bg="white" border="1px solid" borderColor="#E4E2DC"
+                borderRadius="8px" overflow="hidden" cursor="pointer"
+                onClick={() => navigate(`/entity/${inst.slug}`)}
+                _hover={{ borderColor: '#8B3A3A', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
+                transition="all 0.15s">
+                <Box h="3px" bg="#8B3A3A" />
+                <Box p={3}>
+                  <Flex align="center" gap={2} mb={1}>
+                    <Landmark size={14} color="#8B3A3A" />
+                    <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
+                      color="#2D2A24" flex={1} lineClamp={1}>{inst.name}</Text>
+                  </Flex>
+                  <Text fontSize="xs" color="#787469" fontFamily="'JetBrains Mono', monospace" mb={1}>
+                    {inst.founded || inst.period || ''}</Text>
+                  <Text fontSize="xs" color="#524E44" lineClamp={2}>{inst.summary}</Text>
+                </Box>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+      )}
+
+      {/* ── Key Movements ── */}
+      {keyMovements.length > 0 && (
+        <Box mb={8}>
+          <SectionHeading
+            title="Movements & Currents"
+            subtitle={`Defining movements of the ${era.name} era`}
+          />
+          <Flex gap={3} flexWrap="wrap">
+            {keyMovements.map(m => (
+              <Box key={m.slug} bg="white" border="1px solid" borderColor="#E4E2DC"
+                borderRadius="8px" overflow="hidden" cursor="pointer" flex="1" minW="220px"
+                onClick={() => navigate(`/entity/${m.slug}`)}
+                _hover={{ borderColor: '#6B3FA0', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
+                transition="all 0.15s">
+                <Box h="3px" bg="#6B3FA0" />
+                <Box p={3}>
+                  <Flex align="center" gap={2} mb={1}>
+                    <Layers size={14} color="#6B3FA0" />
+                    <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
+                      color="#2D2A24">{m.name}</Text>
+                  </Flex>
+                  <Text fontSize="xs" color="#524E44" lineClamp={2}>{m.summary}</Text>
+                </Box>
+              </Box>
+            ))}
+          </Flex>
+        </Box>
+      )}
+
+      {/* ── Key Texts ── */}
+      {keyTexts.length > 0 && (
+        <Box mb={8}>
+          <SectionHeading
+            title="Defining Texts"
+            subtitle={`Seminal writings of the ${era.name} era`}
+          />
+          <SimpleGrid columns={{ base: 1, sm: 2 }} gap={3}>
+            {keyTexts.map(t => (
+              <Flex key={t.slug} bg="white" border="1px solid" borderColor="#E4E2DC"
+                borderRadius="8px" overflow="hidden" cursor="pointer"
+                onClick={() => navigate(`/entity/${t.slug}`)}
+                _hover={{ borderColor: '#5A2222', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
+                transition="all 0.15s" align="center" gap={3} p={3}>
+                <FileText size={20} color="#5A2222" style={{ flexShrink: 0 }} />
+                <Box>
+                  <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
+                    color="#2D2A24" lineClamp={1}>{t.name}</Text>
+                  <Text fontSize="xs" color="#787469" fontFamily="'JetBrains Mono', monospace">
+                    {t.period || t.born || ''}</Text>
+                </Box>
+              </Flex>
+            ))}
+          </SimpleGrid>
         </Box>
       )}
 
@@ -294,20 +456,50 @@ export default function EraDetail() {
         </Box>
       )}
 
-      {/* Navigation Footer */}
+      {/* Navigation Footer — prev/next era + links */}
       <Flex justify="space-between" align="center" mt={8} pt={6} borderTop="1px solid" borderColor="#E4E2DC">
-        <RouterLink to="/explore" style={{ textDecoration: 'none' }}>
+        {prevEra ? (
+          <RouterLink to={`/explore/${prevEra.id}`} style={{ textDecoration: 'none' }}>
+            <Flex align="center" gap={2} color="#9E9A90" _hover={{ color: prevEra.color }}>
+              <ChevronLeft size={18} />
+              <Box>
+                <Text fontSize="xs" color="#B8B2A4">Previous Era</Text>
+                <Text fontSize="sm" fontWeight={600}>{prevEra.name}</Text>
+              </Box>
+            </Flex>
+          </RouterLink>
+        ) : (
+          <RouterLink to="/explore" style={{ textDecoration: 'none' }}>
+            <Flex align="center" gap={2} color="#9E9A90" _hover={{ color: '#D4AF37' }}>
+              <ChevronLeft size={18} />
+              <Text fontSize="sm">All Eras</Text>
+            </Flex>
+          </RouterLink>
+        )}
+        <RouterLink to={`/catalog?era=${catalogSlug}`} style={{ textDecoration: 'none' }}>
           <Flex align="center" gap={2} color="#9E9A90" _hover={{ color: '#D4AF37' }}>
-            <ChevronLeft size={18} />
-            <Text fontSize="sm">Back to Era Explorer</Text>
+            <Compass size={14} />
+            <Text fontSize="sm">Full Catalog</Text>
           </Flex>
         </RouterLink>
-        <RouterLink to="/graph" style={{ textDecoration: 'none' }}>
-          <Flex align="center" gap={2} color="#9E9A90" _hover={{ color: '#D4AF37' }}>
-            <Text fontSize="sm">Explore Knowledge Graph</Text>
-            <Star size={14} />
-          </Flex>
-        </RouterLink>
+        {nextEra ? (
+          <RouterLink to={`/explore/${nextEra.id}`} style={{ textDecoration: 'none' }}>
+            <Flex align="center" gap={2} color="#9E9A90" _hover={{ color: nextEra.color }}>
+              <Box textAlign="right">
+                <Text fontSize="xs" color="#B8B2A4">Next Era</Text>
+                <Text fontSize="sm" fontWeight={600}>{nextEra.name}</Text>
+              </Box>
+              <ChevronRight size={18} />
+            </Flex>
+          </RouterLink>
+        ) : (
+          <RouterLink to="/graph" style={{ textDecoration: 'none' }}>
+            <Flex align="center" gap={2} color="#9E9A90" _hover={{ color: '#D4AF37' }}>
+              <Text fontSize="sm">Knowledge Graph</Text>
+              <Star size={14} />
+            </Flex>
+          </RouterLink>
+        )}
       </Flex>
     </Box>
   )

@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, SimpleGrid, Text, Flex, Heading } from '@chakra-ui/react'
 import { Globe, Users, Heart, Shield, Landmark, TrendingUp } from 'lucide-react'
 import { StatCard, InsightCard, DataTable, SectionHeading } from '../components/DataCards'
+import Breadcrumb from '../components/Breadcrumb'
 
 /* ── Static data drawn from analyses/Africa_Continent_Analysis.md ── */
 
@@ -126,6 +127,7 @@ const REGIONAL_HIGHLIGHTS = [
 export default function AfricaDashboard() {
   return (
     <Box>
+      <Breadcrumb items={[{ label: 'Continents' }, { label: 'Africa' }]} />
       {/* Page Header */}
       <Box mb={8}>
         <Flex align="center" gap={3} mb={2}>

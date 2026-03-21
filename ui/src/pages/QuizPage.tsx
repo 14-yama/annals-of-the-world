@@ -4,6 +4,7 @@ import { Brain, Trophy, ChevronRight, BookOpen, RotateCcw } from 'lucide-react'
 import { QUIZ_SESSIONS } from '../data/quizzes'
 import QuizEngine from '../components/QuizEngine'
 import { SectionHeading } from '../components/DataCards'
+import Breadcrumb from '../components/Breadcrumb'
 import type { QuizSession } from '../types'
 
 const DIFFICULTY_COLORS: Record<string, string> = {
@@ -36,6 +37,7 @@ export default function QuizPage() {
 
   return (
     <Box>
+      <Breadcrumb items={[{ label: 'Examination Hall' }]} />
       {/* Page Header */}
       <Box mb={8}>
         <Flex align="center" gap={3} mb={2}>

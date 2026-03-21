@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Box, SimpleGrid, Text, Flex, Heading } from '@chakra-ui/react'
 import { Orbit, Clock, Globe, Zap, ChevronRight } from 'lucide-react'
 import { SectionHeading } from '../components/DataCards'
+import Breadcrumb from '../components/Breadcrumb'
 
 const ERAS = [
   {
@@ -80,6 +81,7 @@ export default function EraExplorer() {
 
   return (
     <Box>
+      <Breadcrumb items={[{ label: 'Eras' }]} />
       {/* Header */}
       <Box mb={8}>
         <Flex align="center" gap={3} mb={2}>

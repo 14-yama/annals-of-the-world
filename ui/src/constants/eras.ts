@@ -226,6 +226,39 @@ export const ERAS: Era[] = [
         ],
         keyFacts: ['Steam engine (James Watt, 1769)', 'Railway revolution transformed transport', 'Urbanization from 20% to 80% in a century', 'British Empire ruled 25% of world surface'],
       },
+      {
+        id: 'meiji-japan',
+        name: 'Meiji Japan',
+        region: 'East Asia',
+        period: '1868–1912 CE',
+        description: 'Japan\'s rapid transformation from feudal society to industrial power through the Meiji Restoration.',
+        images: [
+          { id: 'meiji-shrine', alt: 'Meiji Shrine in Tokyo', url: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600', credit: 'Unsplash', category: 'architecture' },
+        ],
+        keyFacts: ['Abolished feudalism and samurai class', 'Built railway and telegraph networks', 'Defeated Russia in Russo-Japanese War (1905)', 'Adopted constitutional monarchy'],
+      },
+      {
+        id: 'ottoman-decline',
+        name: 'Ottoman Empire & Decline',
+        region: 'West Asia',
+        period: '1800–1922 CE',
+        description: 'The final era of the six-century Ottoman Empire — Tanzimat reforms, nationalist uprisings, and dissolution.',
+        images: [
+          { id: 'topkapi', alt: 'Topkapi Palace Istanbul', url: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=600', credit: 'Unsplash', category: 'architecture' },
+        ],
+        keyFacts: ['Tanzimat modernization reforms (1839–1876)', '"Sick Man of Europe" by 1900', 'Controlled 3 continents at peak', 'Dissolved after World War I (1922)'],
+      },
+      {
+        id: 'colonial-africa',
+        name: 'Colonial Africa',
+        region: 'Africa',
+        period: '1884–1945 CE',
+        description: 'The Scramble for Africa — European partition and colonial exploitation of the continent.',
+        images: [
+          { id: 'african-landscape', alt: 'African savanna landscape', url: 'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600', credit: 'Unsplash', category: 'landscape' },
+        ],
+        keyFacts: ['Berlin Conference (1884–85) partitioned Africa', 'Only Ethiopia and Liberia remained independent', 'Extraction of rubber, diamonds, gold', 'Seeds of independence movements planted'],
+      },
     ],
   },
   {
@@ -239,7 +272,41 @@ export const ERAS: Era[] = [
     events: 65,
     regions: ['Global'],
     heroImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800',
-    civilizations: [],
+    civilizations: [
+      {
+        id: 'cold-war-order',
+        name: 'Cold War Order',
+        region: 'Global',
+        period: '1947–1991 CE',
+        description: 'Bipolar superpower rivalry between the US and USSR shaping global politics, proxy wars, and space race.',
+        images: [
+          { id: 'berlin-wall', alt: 'Berlin Wall fragments', url: 'https://images.unsplash.com/photo-1560969184-10fe8719e047?w=600', credit: 'Unsplash', category: 'architecture' },
+        ],
+        keyFacts: ['Nuclear arms race and MAD doctrine', 'Space Race: Sputnik (1957) to Moon landing (1969)', 'Proxy wars in Korea, Vietnam, Afghanistan', 'Fall of Berlin Wall (1989)'],
+      },
+      {
+        id: 'decolonization-wave',
+        name: 'Decolonization Wave',
+        region: 'Africa & Asia',
+        period: '1945–1975 CE',
+        description: 'The dismantling of colonial empires and emergence of independent nations across Africa, Asia, and the Caribbean.',
+        images: [
+          { id: 'independence', alt: 'Independence celebration in Africa', url: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=600', credit: 'Unsplash', category: 'landscape' },
+        ],
+        keyFacts: ['Over 80 nations gained independence', 'UN membership grew from 51 to 150+ countries', 'Non-Aligned Movement founded (1961)', 'African Year of Independence: 1960 (17 nations)'],
+      },
+      {
+        id: 'digital-revolution',
+        name: 'Digital Revolution',
+        region: 'Global',
+        period: '1990 CE – Present',
+        description: 'The transformation of society through computing, the internet, mobile technology, and artificial intelligence.',
+        images: [
+          { id: 'tech-circuit', alt: 'Circuit board closeup', url: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600', credit: 'Unsplash', category: 'artifact' },
+        ],
+        keyFacts: ['World Wide Web launched (1991)', 'Smartphone revolution (iPhone 2007)', 'Social media connects 4.9 billion users', 'AI explosion: ChatGPT and generative AI (2022–)'],
+      },
+    ],
   },
 ]
 

@@ -3,6 +3,7 @@
 import React, { useState, useMemo, useRef, useEffect } from 'react'
 import { Box, Flex, Heading, Text, SimpleGrid, Input } from '@chakra-ui/react'
 import { SectionHeading, StatCard, InsightCard } from '../components/DataCards'
+import Breadcrumb from '../components/Breadcrumb'
 import {
   Brain, Lightbulb, Search, ChevronDown, ChevronUp, Network,
   Globe, Clock, Sparkles, ArrowRight, Users, Landmark, BookOpen,
@@ -350,6 +351,7 @@ export default function IdeasPage() {
 
   return (
     <Box>
+      <Breadcrumb items={[{ label: 'Hall of Ideas' }]} />
       {/* ─── Hero ─── */}
       <Box mb={10} textAlign="center" py={10}
         bg="linear-gradient(135deg, #6B3FA015 0%, #E8F0FE 30%, #FAFAF8 70%, #FFF5EB 100%)"

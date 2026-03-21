@@ -2,6 +2,7 @@
 import React, { useState, useMemo } from 'react'
 import { Box, Flex, Heading, Text, SimpleGrid, Input } from '@chakra-ui/react'
 import { SectionHeading, StatCard } from '../components/DataCards'
+import Breadcrumb from '../components/Breadcrumb'
 import {
   Swords, Target, Shield, Ship, Crosshair, Flame,
   Plane, Zap, AlertTriangle, Search, Castle, ChevronDown, ChevronUp,
@@ -64,6 +65,7 @@ export default function WeaponsPage() {
 
   return (
     <Box>
+      <Breadcrumb items={[{ label: 'Arms & Warfare' }]} />
       {/* ─── Hero ─── */}
       <Box mb={8} textAlign="center" py={8}
         bg="linear-gradient(135deg, #2D2A24 0%, #524E44 40%, #8B3A3A 70%, #D4AF37 100%)"

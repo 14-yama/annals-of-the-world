@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, SimpleGrid, Text, Flex, Heading } from '@chakra-ui/react'
 import { Globe, Waves, Sun, TreePine, Compass, Anchor } from 'lucide-react'
 import { StatCard, InsightCard, DataTable, SectionHeading } from '../components/DataCards'
+import Breadcrumb from '../components/Breadcrumb'
 
 /* ── Static data — Oceania (skeleton, expanding with research) ── */
 
@@ -127,6 +128,7 @@ const REGIONAL_HIGHLIGHTS = [
 export default function OceaniaDashboard() {
   return (
     <Box>
+      <Breadcrumb items={[{ label: 'Continents' }, { label: 'Oceania' }]} />
       {/* Page Header */}
       <Box mb={8}>
         <Flex align="center" gap={3} mb={2}>

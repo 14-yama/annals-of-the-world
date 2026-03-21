@@ -17,13 +17,19 @@ import {
 
 /* ── Era breadcrumb data ── */
 const ERAS = [
-  { slug: 'prehistoric',   label: 'Prehistoric',   period: 'Before 3000 BCE', color: '#6B4D1B' },
-  { slug: 'classical',     label: 'Classical',     period: '3000 BCE – 500 CE', color: '#8B4513' },
-  { slug: 'medieval',      label: 'Medieval',      period: '500 – 1500 CE',   color: '#A67C2E' },
-  { slug: 'early-modern',  label: 'Early Modern',  period: '1500 – 1800 CE',  color: '#C5963A' },
-  { slug: 'modern',        label: 'Modern',        period: '1800 – 1945 CE',  color: '#4A90D9' },
-  { slug: 'contemporary',  label: 'Contemporary',  period: '1945 – Present',  color: '#6B3FA0' },
+  { slug: 'prehistoric',   eraId: 'prehistory',    label: 'Prehistoric',   period: 'Before 3000 BCE', color: '#6B4D1B' },
+  { slug: 'classical',     eraId: 'ancient',       label: 'Classical',     period: '3000 BCE – 500 CE', color: '#8B4513' },
+  { slug: 'medieval',      eraId: 'medieval',      label: 'Medieval',      period: '500 – 1500 CE',   color: '#A67C2E' },
+  { slug: 'early-modern',  eraId: 'early-modern',  label: 'Early Modern',  period: '1500 – 1800 CE',  color: '#C5963A' },
+  { slug: 'modern',        eraId: 'modern',        label: 'Modern',        period: '1800 – 1945 CE',  color: '#4A90D9' },
+  { slug: 'contemporary',  eraId: 'contemporary',  label: 'Contemporary',  period: '1945 – Present',  color: '#6B3FA0' },
 ]
+
+/* ── Catalog eraSlug → eras.ts route ID mapping ── */
+const SLUG_TO_ERA_ID: Record<string, string> = {
+  prehistoric: 'prehistory', classical: 'ancient', medieval: 'medieval',
+  'early-modern': 'early-modern', modern: 'modern', contemporary: 'contemporary',
+}
 
 const TABS = [
   { id: 'overview',  label: 'Overview',          icon: BookOpen },
@@ -112,9 +118,30 @@ function RelationshipRow({ rel, currentSlug }: { rel: EntityRelationship; curren
 
 /* ══════════════════════════════════════════════════════
    Shelf Sidebar — left rail: "On This Shelf"
+   Groups neighbors by era for temporal context
    ══════════════════════════════════════════════════════ */
+const ERA_ORDER = ['prehistoric', 'classical', 'medieval', 'early-modern', 'modern', 'contemporary']
+const ERA_LABELS: Record<string, string> = {
+  prehistoric: 'Prehistoric', classical: 'Classical', medieval: 'Medieval',
+  'early-modern': 'Early Modern', modern: 'Modern', contemporary: 'Contemporary',
+}
+const ERA_COLORS: Record<string, string> = {
+  prehistoric: '#6B4D1B', classical: '#8B4513', medieval: '#A67C2E',
+  'early-modern': '#C5963A', modern: '#4A90D9', contemporary: '#6B3FA0',
+}
+
 function ShelfSidebar({ entity, neighbors }: { entity: Entity; neighbors: Entity[] }) {
   const divHeading = getDivisionHeading(entity.callNumber)
+
+  // Group neighbors by era, maintain era order
+  const eraGroups = ERA_ORDER
+    .map(slug => ({
+      slug,
+      label: ERA_LABELS[slug] || slug,
+      color: ERA_COLORS[slug] || '#787469',
+      items: neighbors.filter(n => n.eraSlug === slug),
+    }))
+    .filter(g => g.items.length > 0)
 
   return (
     <Box
@@ -146,33 +173,46 @@ function ShelfSidebar({ entity, neighbors }: { entity: Entity; neighbors: Entity
           {divHeading}
         </Text>
       )}
-      {neighbors.map((n) => {
-        const isCurrent = n.slug === entity.slug
-        const color = getCallNumberColor(n.callNumber)
-        return (
-          <RouterLink key={n.slug} to={`/entity/${n.slug}`} style={{ textDecoration: 'none' }}>
-            <Flex
-              align="center" gap={2} py={2} px={2} mb={1} borderRadius="6px"
-              bg={isCurrent ? 'rgba(212,175,55,0.08)' : 'transparent'}
-              borderLeft={isCurrent ? '3px solid #D4AF37' : '3px solid transparent'}
-              _hover={{ bg: 'rgba(212,175,55,0.05)' }}
-              transition="all 0.15s" cursor="pointer"
-            >
-              <Box w="6px" h="6px" borderRadius="full" bg={color} flexShrink={0} />
-              <Box flex={1} overflow="hidden">
-                <Text fontFamily='"JetBrains Mono", monospace' fontSize="9px" color="#B8B2A4">
-                  {n.callNumber.split('-')[0]}
-                </Text>
-                <Text fontFamily='"Inter", sans-serif' fontSize="12px"
-                  fontWeight={isCurrent ? 700 : 400}
-                  color={isCurrent ? '#2D2A24' : '#524E44'}>
-                  {n.name}
-                </Text>
-              </Box>
-            </Flex>
-          </RouterLink>
-        )
-      })}
+      {eraGroups.map((group) => (
+        <Box key={group.slug} mb={3}>
+          {/* Era sub-header */}
+          <Flex align="center" gap={1.5} mb={1.5} mt={1}>
+            <Box w="8px" h="8px" borderRadius="full" bg={group.color} flexShrink={0} />
+            <Text fontFamily='"Inter", sans-serif' fontSize="9px" color={group.color}
+              fontWeight={700} textTransform="uppercase" letterSpacing="0.08em">
+              {group.label}
+            </Text>
+            <Box flex={1} h="1px" bg={`${group.color}25`} />
+          </Flex>
+          {group.items.map((n) => {
+            const isCurrent = n.slug === entity.slug
+            const color = getCallNumberColor(n.callNumber)
+            return (
+              <RouterLink key={n.slug} to={`/entity/${n.slug}`} style={{ textDecoration: 'none' }}>
+                <Flex
+                  align="center" gap={2} py={2} px={2} mb={1} borderRadius="6px"
+                  bg={isCurrent ? 'rgba(212,175,55,0.08)' : 'transparent'}
+                  borderLeft={isCurrent ? '3px solid #D4AF37' : '3px solid transparent'}
+                  _hover={{ bg: 'rgba(212,175,55,0.05)' }}
+                  transition="all 0.15s" cursor="pointer"
+                >
+                  <Box w="6px" h="6px" borderRadius="full" bg={color} flexShrink={0} />
+                  <Box flex={1} overflow="hidden">
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="9px" color="#B8B2A4">
+                      {n.callNumber.split('-')[0]}
+                    </Text>
+                    <Text fontFamily='"Inter", sans-serif' fontSize="12px"
+                      fontWeight={isCurrent ? 700 : 400}
+                      color={isCurrent ? '#2D2A24' : '#524E44'}>
+                      {n.name}
+                    </Text>
+                  </Box>
+                </Flex>
+              </RouterLink>
+            )
+          })}
+        </Box>
+      ))}
     </Box>
   )
 }
@@ -313,19 +353,26 @@ export default function EntityPage() {
 
   return (
     <Box>
-      {/* ─── Call Number Breadcrumbs ─── */}
+      {/* ─── Call Number Breadcrumbs (clickable → catalog) ─── */}
       <Flex bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="lg" mb={3}
         align="center" px={3} py={2} flexWrap="wrap">
-        <Compass size={14} color="#B8B2A4" style={{ marginRight: '8px', flexShrink: 0 }} />
+        <RouterLink to="/catalog" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+          <Compass size={14} color="#B8B2A4" style={{ marginRight: '8px', flexShrink: 0 }} />
+        </RouterLink>
         {crumbs.map((crumb, i) => (
           <React.Fragment key={i}>
             {i > 0 && <ChevronRight size={12} color="#D6D3CC" style={{ margin: '0 4px' }} />}
-            <Text fontFamily='"Cinzel", serif' fontSize="10px" color="#787469" letterSpacing="0.08em">
-              {crumb.label}
-            </Text>
-            <Text fontFamily='"JetBrains Mono", monospace' fontSize="9px" color="#B8B2A4" ml={1}>
-              ({crumb.prefix})
-            </Text>
+            <RouterLink to={`/catalog?class=${crumb.prefix}`} style={{ textDecoration: 'none' }}>
+              <Flex align="center" gap={1} _hover={{ color: '#D4AF37' }} cursor="pointer">
+                <Text fontFamily='"Cinzel", serif' fontSize="10px" color="#787469" letterSpacing="0.08em"
+                  _hover={{ color: '#D4AF37' }}>
+                  {crumb.label}
+                </Text>
+                <Text fontFamily='"JetBrains Mono", monospace' fontSize="9px" color="#B8B2A4">
+                  ({crumb.prefix})
+                </Text>
+              </Flex>
+            </RouterLink>
           </React.Fragment>
         ))}
         <ChevronRight size={12} color="#D6D3CC" style={{ margin: '0 4px' }} />
@@ -341,7 +388,7 @@ export default function EntityPage() {
         {ERAS.map((era) => {
           const isActive = era.slug === entity.eraSlug
           return (
-            <RouterLink key={era.slug} to={`/explore/${era.slug}`} style={{
+            <RouterLink key={era.slug} to={`/explore/${era.eraId}`} style={{
               display: 'flex', alignItems: 'center', gap: '4px',
               padding: '10px 12px', fontSize: '10px', fontFamily: '"Cinzel", serif',
               fontWeight: isActive ? 700 : 400,
@@ -424,7 +471,7 @@ export default function EntityPage() {
                   </Text>
                 </Flex>
                 {currentEra && (
-                  <RouterLink to={`/explore/${currentEra.slug}`} style={{ textDecoration: 'none' }}>
+                  <RouterLink to={`/explore/${currentEra.eraId}`} style={{ textDecoration: 'none' }}>
                     <Flex align="center" gap={1} bg={`${currentEra.color}10`}
                       border={`1px solid ${currentEra.color}30`} borderRadius="full" px={3} py={1}>
                       <Clock size={11} color={currentEra.color} />
@@ -523,7 +570,7 @@ export default function EntityPage() {
                     <Scroll size={14} color="#B8B2A4" />
                     <Box>
                       <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4" letterSpacing="0.1em" textTransform="uppercase">Era</Text>
-                      <RouterLink to={`/explore/${entity.eraSlug}`} style={{ textDecoration: 'none' }}>
+                      <RouterLink to={`/explore/${SLUG_TO_ERA_ID[entity.eraSlug] || entity.eraSlug}`} style={{ textDecoration: 'none' }}>
                         <Text fontSize="sm" color="#3B6BC2">{entity.era}</Text>
                       </RouterLink>
                     </Box>

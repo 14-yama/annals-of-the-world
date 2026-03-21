@@ -5,6 +5,7 @@ import {
   Zap, Lightbulb, Flag, SlidersHorizontal, ChevronDown, ChevronUp,
 } from 'lucide-react'
 import graphData from '../data/reformations-graph.json'
+import Breadcrumb from '../components/Breadcrumb'
 
 /* ─── Types ─── */
 interface RawNode { s: string; n: string; l: string; c: string; d: string; k: string }
@@ -460,6 +461,7 @@ export default function GraphExplorer() {
 
   return (
     <Box h="calc(100vh - 80px)">
+      <Breadcrumb items={[{ label: 'Knowledge Graph' }]} />
       {/* Header */}
       <Flex justify="space-between" align="center" mb={3}>
         <Flex align="center" gap={3}>

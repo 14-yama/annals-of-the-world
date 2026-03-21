@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, SimpleGrid, Text, Flex, Heading } from '@chakra-ui/react'
 import { BookOpen, Users, Globe, Scroll, Network, Clock } from 'lucide-react'
 import { SectionHeading } from '../components/DataCards'
+import Breadcrumb from '../components/Breadcrumb'
 
 const TIMELINE = [
   { year: '1581', event: 'Born in Dublin, Ireland', detail: 'Son of Arland Ussher, clerk of chancery' },
@@ -49,6 +50,7 @@ const ROADMAP = [
 export default function About() {
   return (
     <Box>
+      <Breadcrumb items={[{ label: 'About' }]} />
       {/* Header */}
       <Box mb={8}>
         <Flex align="center" gap={3} mb={2}>
