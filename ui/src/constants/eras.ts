@@ -70,7 +70,7 @@ export const ERAS: Era[] = [
         period: '3,500–539 BCE',
         description: 'The "land between rivers" — birthplace of writing, law codes, and urban civilization.',
         images: [
-          { id: 'cuneiform', alt: 'Cuneiform tablet', url: 'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=600', credit: 'Unsplash', category: 'artifact' },
+          { id: 'cuneiform', alt: 'Ancient Mesopotamian ziggurat ruins', url: 'https://images.unsplash.com/photo-1589561253898-768105ca91a8?w=600', credit: 'Unsplash', category: 'architecture' },
         ],
         keyFacts: ['Invented cuneiform writing (~3,400 BCE)', 'Code of Hammurabi (~1754 BCE)', 'Built ziggurats as temple complexes', 'Developed base-60 number system'],
       },

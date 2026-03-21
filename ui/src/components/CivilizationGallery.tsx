@@ -37,6 +37,7 @@ export default function CivilizationGallery({ civilizations, eraColor = '#D4AF37
                   alt={civ.images[0].alt}
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   loading="lazy"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
                 />
                 <Box
                   position="absolute" bottom={0} left={0} right={0}

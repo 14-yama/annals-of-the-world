@@ -47,8 +47,11 @@ const SHELF_ITEMS = [
   { path: '/continents/americas', label: 'Americas',         icon: Mountain,  section: 'Continents' },
   { path: '/continents/oceania',  label: 'Oceania',          icon: Waves,     section: 'Continents' },
   { path: '/explore',             label: 'Era Explorer',     icon: Orbit,     section: 'Time' },
+  { path: '/graph',               label: 'Knowledge Graph',  icon: Network,   section: 'Collections' },
   { path: '/weapons',             label: 'Arms & Warfare',   icon: Swords,    section: 'Collections' },
   { path: '/ideas',               label: 'Ideas',            icon: Lightbulb, section: 'Collections' },
+  { path: '/human-story',         label: 'Human Story',      icon: Users,     section: 'Collections' },
+  { path: '/case-studies',        label: 'Frameworks',       icon: FileText,  section: 'Collections' },
   { path: '/curator',             label: 'The Curator',      icon: Scroll,    section: 'Tools' },
   { path: '/quiz',                label: 'Examination Hall', icon: Brain,     section: 'Tools' },
   { path: '/about',               label: 'About the Annals', icon: BookOpen,  section: 'About' },
@@ -270,7 +273,7 @@ export default function Layout() {
       </Box>
 
       {/* ─── Main Content Area ─── */}
-      <Box flex={1} overflowY="auto">
+      <Box flex={1} overflowY="auto" id="main-content">
         {/* Top Navigation Bar — Domain-level navigation */}
         <Flex
           as="header"

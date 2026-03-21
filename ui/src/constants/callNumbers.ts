@@ -76,6 +76,7 @@ export const DIVISIONS: DivisionEntry[] = [
   { code: '350', heading: 'Scientific Institutions', parentClass: 3 },
   { code: '360', heading: 'Cultural Institutions', parentClass: 3 },
   { code: '370', heading: 'International Organizations', parentClass: 3 },
+  { code: '390', heading: 'Military & Defense Organizations', parentClass: 3 },
 
   // 4 – Places
   { code: '410', heading: 'Continents', parentClass: 4 },

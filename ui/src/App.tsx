@@ -1,5 +1,5 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import AfricaDashboard from './pages/AfricaDashboard'
@@ -20,9 +20,22 @@ import EntityPage from './pages/EntityPage'
 import CatalogPage from './pages/CatalogPage'
 import GraphExplorer from './pages/GraphExplorer'
 
+/** Reset scroll to top on every route change */
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    // Also scroll the main content container (Layout uses overflowY="auto")
+    document.getElementById('main-content')?.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
+
 export default function App() {
   return (
-    <Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<Home />} />
         <Route path="/continents/africa" element={<AfricaDashboard />} />
@@ -45,6 +58,7 @@ export default function App() {
         <Route path="/catalog" element={<CatalogPage />} />
         <Route path="/cat/:callNumber" element={<CatalogPage />} />
       </Route>
-    </Routes>
+      </Routes>
+    </>
   )
 }

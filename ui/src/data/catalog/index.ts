@@ -12,6 +12,7 @@ import { modernEntities } from './modern'
 import { contemporaryEntities } from './contemporary'
 import { REFORMATION_ENTITIES } from './reformation'
 import { GEO_REGISTRY_ENTITIES } from './geoRegistry'
+import { DIVISION_ENRICHMENT_ENTITIES } from './divisionEnrichment'
 import type { Entity } from '../entityTypes'
 
 /** All entities across every era, in chronological era order */
@@ -23,6 +24,7 @@ export const ALL_CATALOG_ENTITIES: Entity[] = [
   ...REFORMATION_ENTITIES,
   ...modernEntities,
   ...contemporaryEntities,
+  ...DIVISION_ENRICHMENT_ENTITIES,
   ...GEO_REGISTRY_ENTITIES,
 ]
 

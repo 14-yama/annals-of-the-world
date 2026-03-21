@@ -362,7 +362,7 @@ export default function EntityPage() {
         {crumbs.map((crumb, i) => (
           <React.Fragment key={i}>
             {i > 0 && <ChevronRight size={12} color="#D6D3CC" style={{ margin: '0 4px' }} />}
-            <RouterLink to={`/catalog?class=${crumb.prefix}`} style={{ textDecoration: 'none' }}>
+            <RouterLink to={i === 0 ? `/catalog?class=${crumb.prefix}` : `/catalog?class=${crumb.prefix.charAt(0)}&division=${crumb.prefix}`} style={{ textDecoration: 'none' }}>
               <Flex align="center" gap={1} _hover={{ color: '#D4AF37' }} cursor="pointer">
                 <Text fontFamily='"Cinzel", serif' fontSize="10px" color="#787469" letterSpacing="0.08em"
                   _hover={{ color: '#D4AF37' }}>

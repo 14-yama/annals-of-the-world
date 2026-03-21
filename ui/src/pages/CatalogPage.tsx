@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback } from 'react'
+import React, { useState, useMemo, useCallback, useEffect } from 'react'
 import { useParams, useNavigate, Navigate, useSearchParams } from 'react-router-dom'
 import { Box, Flex, Text, SimpleGrid } from '@chakra-ui/react'
 import {
@@ -112,6 +112,21 @@ export default function CatalogPage() {
   )
   const [selectedEra, setSelectedEra] = useState<string | null>(urlEra || null)
   const [selectedLabel, setSelectedLabel] = useState<string | null>(urlLabel || null)
+
+  // Sync state from URL params when navigating back to catalog with different params
+  useEffect(() => {
+    const cls = searchParams.get('class')
+    const div = searchParams.get('division')
+    const era = searchParams.get('era')
+    const lbl = searchParams.get('label')
+    setSelectedClass(cls ? Number(cls) : null)
+    setSelectedDivision(div || null)
+    setSelectedEra(era || null)
+    setSelectedLabel(lbl || null)
+    if (lbl) setViewMode('label')
+    else if (era) setViewMode('era')
+    else setViewMode('class')
+  }, [searchParams])
 
   // Advanced filters
   const [filters, setFilters] = useState<ActiveFilters>({
