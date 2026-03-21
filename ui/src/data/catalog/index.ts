@@ -10,6 +10,8 @@ import { medievalEntities } from './medieval'
 import { earlyModernEntities } from './earlyModern'
 import { modernEntities } from './modern'
 import { contemporaryEntities } from './contemporary'
+import { REFORMATION_ENTITIES } from './reformation'
+import { GEO_REGISTRY_ENTITIES } from './geoRegistry'
 import type { Entity } from '../entityTypes'
 
 /** All entities across every era, in chronological era order */
@@ -18,8 +20,10 @@ export const ALL_CATALOG_ENTITIES: Entity[] = [
   ...classicalEntities,
   ...medievalEntities,
   ...earlyModernEntities,
+  ...REFORMATION_ENTITIES,
   ...modernEntities,
   ...contemporaryEntities,
+  ...GEO_REGISTRY_ENTITIES,
 ]
 
 /** Slug → Entity lookup map (built once at import time) */

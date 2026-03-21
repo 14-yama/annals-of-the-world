@@ -1,10 +1,10 @@
 import React, { useState, useMemo, useCallback } from 'react'
-import { useParams, useNavigate, Navigate } from 'react-router-dom'
-import { Box, Flex, Text, SimpleGrid, Input } from '@chakra-ui/react'
+import { useParams, useNavigate, Navigate, useSearchParams } from 'react-router-dom'
+import { Box, Flex, Text, SimpleGrid } from '@chakra-ui/react'
 import {
-  Search, Library, ChevronRight, Filter, BookOpen,
+  Search, Library, ChevronRight, BookOpen,
   Users, Landmark, MapPin, Layers, Scroll, Shield,
-  FileText, Clock, Zap,
+  FileText, Clock, Zap, Filter,
 } from 'lucide-react'
 import {
   getAllEntities, getEntityByCallNumber,
@@ -14,6 +14,7 @@ import {
   CLASSES, DIVISIONS, CLASS_COLORS,
   parseCallNumber,
 } from '../constants/callNumbers'
+import AdvancedSearch, { type ActiveFilters } from '../components/AdvancedSearch'
 
 /* ── Constants ── */
 const MARBLE_BG = '#FAFAF8'
@@ -47,6 +48,17 @@ const LABEL_COLORS: Record<string, string> = {
   Evidence: '#787469',
 }
 
+const LABEL_DISPLAY: Record<string, string> = {
+  Person: 'People',
+  Idea: 'Ideas',
+  Institution: 'Institutions',
+  Place: 'Places',
+  EventWindow: 'Events',
+  Movement: 'Movements',
+  Text: 'Texts',
+  Evidence: 'Evidence',
+}
+
 const ERA_ORDER = ['prehistoric', 'classical', 'medieval', 'early-modern', 'modern', 'contemporary']
 const ERA_LABELS: Record<string, string> = {
   prehistoric: 'Prehistoric',
@@ -65,11 +77,15 @@ const ERA_COLORS: Record<string, string> = {
   contemporary: '#6B3FA0',
 }
 
+/* Type group ordering for era drill-down */
+const LABEL_ORDER = ['Person', 'Institution', 'EventWindow', 'Movement', 'Text', 'Idea', 'Place', 'Evidence']
+
 type ViewMode = 'class' | 'era' | 'label'
 
 export default function CatalogPage() {
   const { callNumber } = useParams<{ callNumber: string }>()
   const navigate = useNavigate()
+  const [searchParams, setSearchParams] = useSearchParams()
 
   // If we have a callNumber param, redirect to entity
   if (callNumber) {
@@ -78,24 +94,71 @@ export default function CatalogPage() {
   }
 
   const allEntities = useMemo(() => getAllEntities(), [])
-  const [search, setSearch] = useState('')
-  const [viewMode, setViewMode] = useState<ViewMode>('class')
-  const [selectedClass, setSelectedClass] = useState<number | null>(null)
-  const [selectedEra, setSelectedEra] = useState<string | null>(null)
-  const [selectedLabel, setSelectedLabel] = useState<string | null>(null)
 
+  // Read initial state from URL search params for deep-linkable filtered views
+  const urlLabel = searchParams.get('label')
+  const urlEra = searchParams.get('era')
+  const urlClass = searchParams.get('class')
+  const urlDivision = searchParams.get('division')
+
+  const [viewMode, setViewMode] = useState<ViewMode>(
+    urlLabel ? 'label' : urlEra ? 'era' : urlClass ? 'class' : 'class'
+  )
+  const [selectedClass, setSelectedClass] = useState<number | null>(
+    urlClass ? Number(urlClass) : null
+  )
+  const [selectedDivision, setSelectedDivision] = useState<string | null>(
+    urlDivision || null
+  )
+  const [selectedEra, setSelectedEra] = useState<string | null>(urlEra || null)
+  const [selectedLabel, setSelectedLabel] = useState<string | null>(urlLabel || null)
+
+  // Advanced filters
+  const [filters, setFilters] = useState<ActiveFilters>({
+    search: '',
+    eras: [],
+    labels: [],
+    continents: [],
+    frameworks: [],
+  })
+
+  // Apply all filters
   const filtered = useMemo(() => {
-    if (!search.trim()) return allEntities
-    const q = search.toLowerCase()
-    return allEntities.filter(e =>
-      e.name.toLowerCase().includes(q) ||
-      e.callNumber.toLowerCase().includes(q) ||
-      e.subjects.some(s => s.toLowerCase().includes(q)) ||
-      e.summary.toLowerCase().includes(q) ||
-      e.era.toLowerCase().includes(q) ||
-      e.label.toLowerCase().includes(q)
-    )
-  }, [allEntities, search])
+    let result = allEntities
+    // Text search
+    if (filters.search.trim()) {
+      const q = filters.search.toLowerCase()
+      result = result.filter(e =>
+        e.name.toLowerCase().includes(q) ||
+        e.callNumber.toLowerCase().includes(q) ||
+        e.subjects.some(s => s.toLowerCase().includes(q)) ||
+        e.summary.toLowerCase().includes(q) ||
+        e.era.toLowerCase().includes(q) ||
+        e.label.toLowerCase().includes(q) ||
+        e.continent.toLowerCase().includes(q) ||
+        e.region.toLowerCase().includes(q)
+      )
+    }
+    // Era filter chips
+    if (filters.eras.length > 0) {
+      result = result.filter(e => filters.eras.includes(e.eraSlug))
+    }
+    // Label filter chips
+    if (filters.labels.length > 0) {
+      result = result.filter(e => filters.labels.includes(e.label))
+    }
+    // Continent filter chips
+    if (filters.continents.length > 0) {
+      result = result.filter(e => filters.continents.includes(e.continent))
+    }
+    // Framework filter chips
+    if (filters.frameworks.length > 0) {
+      result = result.filter(e =>
+        e.frameworks?.some(f => filters.frameworks.includes(f))
+      )
+    }
+    return result
+  }, [allEntities, filters])
 
   const byClass = useMemo(() => {
     const map = new Map<number, Entity[]>()
@@ -132,6 +195,7 @@ export default function CatalogPage() {
     return map
   }, [filtered])
 
+  /* Division groups for class drill-down */
   const divisionGroups = useMemo(() => {
     if (selectedClass === null) return new Map<string, Entity[]>()
     const entities = byClass.get(selectedClass) || []
@@ -146,9 +210,74 @@ export default function CatalogPage() {
     return map
   }, [byClass, selectedClass])
 
+  /* Era type groups (for era drill-down grouped by actor type) */
+  const eraTypeGroups = useMemo(() => {
+    if (!selectedEra) return new Map<string, Entity[]>()
+    const entities = byEra.get(selectedEra) || []
+    const map = new Map<string, Entity[]>()
+    for (const e of entities) {
+      const arr = map.get(e.label) || []
+      arr.push(e)
+      map.set(e.label, arr)
+    }
+    return map
+  }, [byEra, selectedEra])
+
   const handleEntityClick = useCallback((e: Entity) => {
     navigate(`/entity/${e.slug}`)
   }, [navigate])
+
+  /* Breadcrumb-aware navigation setters */
+  const selectView = (mode: ViewMode) => {
+    setViewMode(mode)
+    setSelectedClass(null)
+    setSelectedDivision(null)
+    setSelectedEra(null)
+    setSelectedLabel(null)
+    setSearchParams({})
+  }
+
+  const selectClass = (code: number) => {
+    setSelectedClass(code)
+    setSelectedDivision(null)
+    setSearchParams({ class: String(code) })
+  }
+
+  const selectDivision = (code: string) => {
+    setSelectedDivision(code)
+    setSearchParams({ class: String(selectedClass), division: code })
+  }
+
+  const selectEra = (slug: string) => {
+    setSelectedEra(slug)
+    setSearchParams({ era: slug })
+  }
+
+  const selectLabel = (label: string) => {
+    setSelectedLabel(label)
+    setSearchParams({ label })
+  }
+
+  const goBackFromClass = () => {
+    setSelectedClass(null)
+    setSelectedDivision(null)
+    setSearchParams({})
+  }
+
+  const goBackFromDivision = () => {
+    setSelectedDivision(null)
+    if (selectedClass !== null) setSearchParams({ class: String(selectedClass) })
+  }
+
+  const goBackFromEra = () => {
+    setSelectedEra(null)
+    setSearchParams({})
+  }
+
+  const goBackFromLabel = () => {
+    setSelectedLabel(null)
+    setSearchParams({})
+  }
 
   return (
     <Box minH="100vh" bg={MARBLE_BG} p={{ base: 4, md: 6 }}>
@@ -161,31 +290,17 @@ export default function CatalogPage() {
           </Text>
           <Text fontSize="sm" color={MUTED}>
             {allEntities.length} actors across {new Set(allEntities.map(e => e.eraSlug)).size} eras
+            {filtered.length !== allEntities.length && ` \u2022 ${filtered.length} shown`}
           </Text>
         </Box>
       </Flex>
 
-      {/* Search + View Toggle */}
-      <Flex gap={3} mb={5} direction={{ base: 'column', md: 'row' }} align={{ md: 'center' }}>
-        <Box position="relative" flex={1} maxW={{ md: '480px' }}>
-          <Box position="absolute" left={3} top="50%" transform="translateY(-50%)" zIndex={1}>
-            <Search size={16} color={MUTED} />
-          </Box>
-          <Input
-            pl={10}
-            value={search}
-            onChange={(ev: React.ChangeEvent<HTMLInputElement>) => setSearch(ev.target.value)}
-            placeholder="Search by name, call number, subject, era..."
-            bg={CARD_BG}
-            border="1px solid"
-            borderColor={BORDER}
-            borderRadius="8px"
-            fontSize="sm"
-            fontFamily="'Inter', sans-serif"
-            _focus={{ borderColor: GOLD, boxShadow: `0 0 0 1px ${GOLD}` }}
-            _placeholder={{ color: LIGHT_MUTED }}
-          />
-        </Box>
+      {/* Advanced Search + Filters */}
+      <AdvancedSearch allEntities={allEntities} filters={filters} onFiltersChange={setFilters} />
+
+      {/* View Toggle + Stats Row */}
+      <Flex gap={3} mb={4} direction={{ base: 'column', md: 'row' }} align={{ md: 'center' }}
+        justify="space-between">
         <Flex gap={2}>
           {([
             ['class', 'By Class', <BookOpen size={14} key="c" />],
@@ -195,7 +310,7 @@ export default function CatalogPage() {
             <Box
               key={mode}
               as="button"
-              onClick={() => { setViewMode(mode); setSelectedClass(null); setSelectedEra(null); setSelectedLabel(null) }}
+              onClick={() => selectView(mode)}
               px={3} py={1.5} borderRadius="6px" fontSize="xs" fontWeight={600}
               fontFamily="'Inter', sans-serif"
               bg={viewMode === mode ? GOLD : CARD_BG}
@@ -210,38 +325,41 @@ export default function CatalogPage() {
             </Box>
           ))}
         </Flex>
+        <Flex gap={2} flexWrap="wrap">
+          {Object.entries(LABEL_COLORS).map(([label, color]) => {
+            const count = filtered.filter(e => e.label === label).length
+            if (count === 0) return null
+            return (
+              <Box key={label} px={2} py={1} borderRadius="5px" fontSize="10px" fontWeight={600}
+                fontFamily="'JetBrains Mono', monospace"
+                bg={`${color}10`} color={color} border="1px solid" borderColor={`${color}30`}
+                cursor="pointer"
+                onClick={() => { setViewMode('label'); selectLabel(label) }}
+                _hover={{ bg: `${color}18` }}>
+                {LABEL_DISPLAY[label] || label}: {count}
+              </Box>
+            )
+          })}
+          <Box px={2} py={1} borderRadius="5px" fontSize="10px" fontWeight={700}
+            fontFamily="'JetBrains Mono', monospace"
+            bg={`${GOLD}15`} color={GOLD} border="1px solid" borderColor={`${GOLD}40`}>
+            Total: {filtered.length}
+          </Box>
+        </Flex>
       </Flex>
 
-      {/* Stats Row */}
-      <Flex gap={3} mb={5} flexWrap="wrap">
-        {Object.entries(LABEL_COLORS).map(([label, color]) => {
-          const count = allEntities.filter(e => e.label === label).length
-          if (count === 0) return null
-          return (
-            <Box key={label} px={3} py={1.5} borderRadius="6px" fontSize="xs" fontWeight={600}
-              fontFamily="'JetBrains Mono', monospace"
-              bg={`${color}10`} color={color} border="1px solid" borderColor={`${color}30`}>
-              {label === 'EventWindow' ? 'Event' : label}s: {count}
-            </Box>
-          )
-        })}
-        <Box px={3} py={1.5} borderRadius="6px" fontSize="xs" fontWeight={700}
-          fontFamily="'JetBrains Mono', monospace"
-          bg={`${GOLD}15`} color={GOLD} border="1px solid" borderColor={`${GOLD}40`}>
-          Total: {allEntities.length}
-        </Box>
-      </Flex>
+      {/* ═══ BY CLASS VIEW ═══ */}
 
-      {/* By Class — Overview Cards */}
+      {/* Class overview cards */}
       {viewMode === 'class' && selectedClass === null && (
         <SimpleGrid columns={{ base: 1, sm: 2, lg: 3, xl: 4 }} gap={4}>
           {CLASSES.map(cls => {
             const entities = byClass.get(cls.code) || []
-            if (entities.length === 0 && !search) return null
+            if (entities.length === 0 && !filters.search) return null
             return (
               <Box key={cls.code} bg={CARD_BG} border="1px solid" borderColor={BORDER}
                 borderRadius="10px" overflow="hidden" cursor="pointer"
-                onClick={() => setSelectedClass(cls.code)}
+                onClick={() => selectClass(cls.code)}
                 _hover={{ borderColor: CLASS_COLORS[cls.code] || GOLD, transform: 'translateY(-2px)' }}
                 transition="all 0.2s">
                 <Box h="4px" bg={CLASS_COLORS[cls.code] || GOLD} />
@@ -270,14 +388,15 @@ export default function CatalogPage() {
         </SimpleGrid>
       )}
 
-      {/* Class Drill-Down */}
-      {viewMode === 'class' && selectedClass !== null && (
+      {/* Class → Divisions drill-down */}
+      {viewMode === 'class' && selectedClass !== null && selectedDivision === null && (
         <Box>
+          {/* Breadcrumb */}
           <Flex align="center" gap={2} mb={4}>
-            <Box as="button" onClick={() => setSelectedClass(null)} fontSize="sm"
+            <Box as="button" onClick={goBackFromClass} fontSize="sm"
               color={GOLD} fontFamily="'Inter', sans-serif" cursor="pointer"
               _hover={{ textDecoration: 'underline' }}>
-              {"\u2190"} All Classes</Box>
+              All Classes</Box>
             <ChevronRight size={14} color={MUTED} />
             <Text fontFamily="'JetBrains Mono', monospace" fontSize="sm" fontWeight={700}
               color={CLASS_COLORS[selectedClass] || GOLD}>{selectedClass}</Text>
@@ -286,18 +405,22 @@ export default function CatalogPage() {
             <Text fontSize="xs" color={MUTED} ml="auto" fontFamily="'JetBrains Mono', monospace">
               {(byClass.get(selectedClass) || []).length} entries</Text>
           </Flex>
+          {/* Division cards */}
           {Array.from(divisionGroups.entries())
             .sort(([a], [b]) => a.localeCompare(b))
             .map(([divCode, entities]) => {
               const divHeading = DIVISIONS.find(d => d.code === divCode)?.heading || divCode
               return (
                 <Box key={divCode} mb={5}>
-                  <Flex align="center" gap={2} mb={2} pb={1} borderBottom="1px solid" borderColor={BORDER}>
+                  <Flex align="center" gap={2} mb={2} pb={1} borderBottom="1px solid" borderColor={BORDER}
+                    cursor="pointer" onClick={() => selectDivision(divCode)}
+                    _hover={{ '& > *:first-of-type': { textDecoration: 'underline' } }}>
                     <Text fontFamily="'JetBrains Mono', monospace" fontSize="sm" fontWeight={700}
                       color={CLASS_COLORS[selectedClass] || GOLD}>{divCode}</Text>
                     <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={600}
                       color={DARK_TEXT}>{divHeading}</Text>
                     <Text fontSize="xs" color={MUTED} ml="auto">{entities.length}</Text>
+                    <ChevronRight size={14} color={MUTED} />
                   </Flex>
                   <SimpleGrid columns={{ base: 1, sm: 2, lg: 3, xl: 4 }} gap={3}>
                     {entities.map(e => (
@@ -310,17 +433,52 @@ export default function CatalogPage() {
         </Box>
       )}
 
-      {/* By Era — Overview */}
+      {/* Class → Division → Entities drill-down */}
+      {viewMode === 'class' && selectedClass !== null && selectedDivision !== null && (
+        <Box>
+          {/* 3-level breadcrumb */}
+          <Flex align="center" gap={2} mb={4} flexWrap="wrap">
+            <Box as="button" onClick={goBackFromClass} fontSize="sm"
+              color={GOLD} fontFamily="'Inter', sans-serif" cursor="pointer"
+              _hover={{ textDecoration: 'underline' }}>
+              All Classes</Box>
+            <ChevronRight size={14} color={MUTED} />
+            <Box as="button" onClick={goBackFromDivision} fontSize="sm"
+              color={GOLD} fontFamily="'Inter', sans-serif" cursor="pointer"
+              _hover={{ textDecoration: 'underline' }}>
+              {selectedClass} {CLASSES.find(c => c.code === selectedClass)?.heading}</Box>
+            <ChevronRight size={14} color={MUTED} />
+            <Text fontFamily="'JetBrains Mono', monospace" fontSize="sm" fontWeight={700}
+              color={CLASS_COLORS[selectedClass] || GOLD}>{selectedDivision}</Text>
+            <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={600} color={DARK_TEXT}>
+              {DIVISIONS.find(d => d.code === selectedDivision)?.heading || selectedDivision}</Text>
+            <Text fontSize="xs" color={MUTED} ml="auto" fontFamily="'JetBrains Mono', monospace">
+              {(divisionGroups.get(selectedDivision) || []).length} entries</Text>
+          </Flex>
+          <SimpleGrid columns={{ base: 1, sm: 2, lg: 3, xl: 4 }} gap={3}>
+            {(divisionGroups.get(selectedDivision) || []).map(e => (
+              <EntityCard key={e.slug} entity={e} onClick={handleEntityClick} />
+            ))}
+          </SimpleGrid>
+        </Box>
+      )}
+
+      {/* ═══ BY ERA VIEW ═══ */}
+
+      {/* Era overview cards */}
       {viewMode === 'era' && selectedEra === null && (
         <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} gap={4}>
           {ERA_ORDER.map(slug => {
             const entities = byEra.get(slug) || []
-            if (entities.length === 0 && !search) return null
+            if (entities.length === 0 && !filters.search) return null
             const color = ERA_COLORS[slug] || MUTED
+            // Count by type for preview
+            const typeCounts = new Map<string, number>()
+            for (const e of entities) typeCounts.set(e.label, (typeCounts.get(e.label) || 0) + 1)
             return (
               <Box key={slug} bg={CARD_BG} border="1px solid" borderColor={BORDER}
                 borderRadius="10px" overflow="hidden" cursor="pointer"
-                onClick={() => setSelectedEra(slug)}
+                onClick={() => selectEra(slug)}
                 _hover={{ borderColor: color, transform: 'translateY(-2px)' }}
                 transition="all 0.2s">
                 <Box h="4px" bg={color} />
@@ -330,6 +488,15 @@ export default function CatalogPage() {
                       {ERA_LABELS[slug] || slug}</Text>
                     <Text fontFamily="'JetBrains Mono', monospace" fontSize="xs" color={MUTED}>
                       {entities.length} entries</Text>
+                  </Flex>
+                  {/* Type breakdown */}
+                  <Flex gap={1.5} flexWrap="wrap" mb={2}>
+                    {LABEL_ORDER.filter(l => typeCounts.has(l)).map(l => (
+                      <Text key={l} fontSize="10px" fontFamily="'JetBrains Mono', monospace"
+                        color={LABEL_COLORS[l] || MUTED} fontWeight={600}>
+                        {LABEL_DISPLAY[l] || l}: {typeCounts.get(l)}
+                      </Text>
+                    ))}
                   </Flex>
                   <Flex gap={1} flexWrap="wrap">
                     {entities.slice(0, 5).map((e, i) => (
@@ -347,38 +514,73 @@ export default function CatalogPage() {
         </SimpleGrid>
       )}
 
-      {/* Era Drill-Down */}
+      {/* Era → Grouped by Actor Type */}
       {viewMode === 'era' && selectedEra !== null && (
         <Box>
+          {/* Breadcrumb */}
           <Flex align="center" gap={2} mb={4}>
-            <Box as="button" onClick={() => setSelectedEra(null)} fontSize="sm"
+            <Box as="button" onClick={goBackFromEra} fontSize="sm"
               color={GOLD} fontFamily="'Inter', sans-serif" cursor="pointer"
               _hover={{ textDecoration: 'underline' }}>
-              {"\u2190"} All Eras</Box>
+              All Eras</Box>
             <ChevronRight size={14} color={MUTED} />
             <Text fontFamily="'Cinzel', serif" fontSize="lg" fontWeight={700}
               color={ERA_COLORS[selectedEra] || MUTED}>{ERA_LABELS[selectedEra] || selectedEra}</Text>
             <Text fontSize="xs" color={MUTED} ml="auto" fontFamily="'JetBrains Mono', monospace">
               {(byEra.get(selectedEra) || []).length} entries</Text>
           </Flex>
-          <SimpleGrid columns={{ base: 1, sm: 2, lg: 3, xl: 4 }} gap={3}>
-            {(byEra.get(selectedEra) || []).map(e => (
-              <EntityCard key={e.slug} entity={e} onClick={handleEntityClick} />
-            ))}
-          </SimpleGrid>
+
+          {/* Type sections with visual separators */}
+          {LABEL_ORDER.filter(l => eraTypeGroups.has(l)).map((labelKey, groupIdx) => {
+            const entities = eraTypeGroups.get(labelKey) || []
+            const color = LABEL_COLORS[labelKey] || MUTED
+            return (
+              <Box key={labelKey} mb={6}>
+                {/* Section separator */}
+                {groupIdx > 0 && (
+                  <Box h="1px" bg={`linear-gradient(to right, transparent, ${BORDER}, transparent)`}
+                    mb={4} />
+                )}
+                {/* Section header */}
+                <Flex align="center" gap={2} mb={3} pb={2}
+                  borderBottom="2px solid" borderColor={`${color}40`}>
+                  <Box color={color}>{LABEL_ICONS[labelKey]}</Box>
+                  <Text fontFamily="'Cormorant Garamond', serif" fontSize="lg" fontWeight={700}
+                    color={color}>
+                    {LABEL_DISPLAY[labelKey] || labelKey}
+                  </Text>
+                  <Box px={2} py={0.5} borderRadius="full" fontSize="10px" fontWeight={700}
+                    fontFamily="'JetBrains Mono', monospace"
+                    bg={`${color}12`} color={color}>
+                    {entities.length}
+                  </Box>
+                </Flex>
+                <SimpleGrid columns={{ base: 1, sm: 2, lg: 3, xl: 4 }} gap={3}>
+                  {entities.map(e => (
+                    <EntityCard key={e.slug} entity={e} onClick={handleEntityClick} />
+                  ))}
+                </SimpleGrid>
+              </Box>
+            )
+          })}
         </Box>
       )}
 
-      {/* By Type — Overview */}
+      {/* ═══ BY TYPE VIEW ═══ */}
+
+      {/* Type overview cards */}
       {viewMode === 'label' && selectedLabel === null && (
         <SimpleGrid columns={{ base: 1, sm: 2, lg: 3, xl: 4 }} gap={4}>
           {Object.entries(LABEL_COLORS).map(([label, color]) => {
             const entities = byLabel.get(label) || []
-            if (entities.length === 0 && !search) return null
+            if (entities.length === 0 && !filters.search) return null
+            // Count by era for preview
+            const eraCounts = new Map<string, number>()
+            for (const e of entities) eraCounts.set(e.eraSlug, (eraCounts.get(e.eraSlug) || 0) + 1)
             return (
               <Box key={label} bg={CARD_BG} border="1px solid" borderColor={BORDER}
                 borderRadius="10px" overflow="hidden" cursor="pointer"
-                onClick={() => setSelectedLabel(label)}
+                onClick={() => selectLabel(label)}
                 _hover={{ borderColor: color, transform: 'translateY(-2px)' }}
                 transition="all 0.2s">
                 <Box h="4px" bg={color} />
@@ -386,9 +588,17 @@ export default function CatalogPage() {
                   <Flex align="center" gap={2} mb={2}>
                     {LABEL_ICONS[label]}
                     <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={600}
-                      color={DARK_TEXT}>{label === 'EventWindow' ? 'Event' : label}s</Text>
+                      color={DARK_TEXT}>{LABEL_DISPLAY[label] || label}</Text>
                     <Text fontSize="xs" color={MUTED} ml="auto" fontFamily="'JetBrains Mono', monospace">
                       {entities.length}</Text>
+                  </Flex>
+                  <Flex gap={1.5} flexWrap="wrap" mb={2}>
+                    {ERA_ORDER.filter(s => eraCounts.has(s)).map(s => (
+                      <Text key={s} fontSize="10px" fontFamily="'JetBrains Mono', monospace"
+                        color={ERA_COLORS[s] || MUTED} fontWeight={600}>
+                        {ERA_LABELS[s]}: {eraCounts.get(s)}
+                      </Text>
+                    ))}
                   </Flex>
                   <Flex gap={1} flexWrap="wrap">
                     {entities.slice(0, 4).map((e, i) => (
@@ -406,36 +616,71 @@ export default function CatalogPage() {
         </SimpleGrid>
       )}
 
-      {/* Label Drill-Down */}
+      {/* Label → Grouped by Era drill-down */}
       {viewMode === 'label' && selectedLabel !== null && (
         <Box>
           <Flex align="center" gap={2} mb={4}>
-            <Box as="button" onClick={() => setSelectedLabel(null)} fontSize="sm"
+            <Box as="button" onClick={goBackFromLabel} fontSize="sm"
               color={GOLD} fontFamily="'Inter', sans-serif" cursor="pointer"
               _hover={{ textDecoration: 'underline' }}>
-              {"\u2190"} All Types</Box>
+              All Types</Box>
             <ChevronRight size={14} color={MUTED} />
             {LABEL_ICONS[selectedLabel]}
             <Text fontFamily="'Cormorant Garamond', serif" fontSize="lg" fontWeight={600}
               color={LABEL_COLORS[selectedLabel] || MUTED}>
-              {selectedLabel === 'EventWindow' ? 'Event' : selectedLabel}s</Text>
+              {LABEL_DISPLAY[selectedLabel] || selectedLabel}</Text>
             <Text fontSize="xs" color={MUTED} ml="auto" fontFamily="'JetBrains Mono', monospace">
               {(byLabel.get(selectedLabel) || []).length} entries</Text>
           </Flex>
-          <SimpleGrid columns={{ base: 1, sm: 2, lg: 3, xl: 4 }} gap={3}>
-            {(byLabel.get(selectedLabel) || []).map(e => (
-              <EntityCard key={e.slug} entity={e} onClick={handleEntityClick} />
-            ))}
-          </SimpleGrid>
+          {/* Group by era within the label */}
+          {(() => {
+            const entities = byLabel.get(selectedLabel) || []
+            const byEraInLabel = new Map<string, Entity[]>()
+            for (const e of entities) {
+              const arr = byEraInLabel.get(e.eraSlug) || []
+              arr.push(e)
+              byEraInLabel.set(e.eraSlug, arr)
+            }
+            return ERA_ORDER.filter(slug => byEraInLabel.has(slug)).map((slug, idx) => {
+              const eraEntities = byEraInLabel.get(slug) || []
+              const color = ERA_COLORS[slug] || MUTED
+              return (
+                <Box key={slug} mb={6}>
+                  {idx > 0 && (
+                    <Box h="1px" bg={`linear-gradient(to right, transparent, ${BORDER}, transparent)`}
+                      mb={4} />
+                  )}
+                  <Flex align="center" gap={2} mb={3} pb={2}
+                    borderBottom="2px solid" borderColor={`${color}40`}>
+                    <Text fontFamily="'Cinzel', serif" fontSize="md" fontWeight={700} color={color}>
+                      {ERA_LABELS[slug]}</Text>
+                    <Box px={2} py={0.5} borderRadius="full" fontSize="10px" fontWeight={700}
+                      fontFamily="'JetBrains Mono', monospace" bg={`${color}12`} color={color}>
+                      {eraEntities.length}
+                    </Box>
+                  </Flex>
+                  <SimpleGrid columns={{ base: 1, sm: 2, lg: 3, xl: 4 }} gap={3}>
+                    {eraEntities.map(e => (
+                      <EntityCard key={e.slug} entity={e} onClick={handleEntityClick} />
+                    ))}
+                  </SimpleGrid>
+                </Box>
+              )
+            })
+          })()}
         </Box>
       )}
 
-      {/* Empty search */}
-      {search.trim() && filtered.length === 0 && (
+      {/* Empty state */}
+      {filtered.length === 0 && (
         <Flex direction="column" align="center" py={12} gap={2}>
           <Search size={32} color={LIGHT_MUTED} />
           <Text fontSize="md" color={MUTED} fontFamily="'Inter', sans-serif">
-            No results for &quot;{search}&quot;</Text>
+            No results found
+          </Text>
+          <Text fontSize="sm" color={LIGHT_MUTED} fontFamily="'Inter', sans-serif">
+            Try adjusting your search or filters.
+          </Text>
         </Flex>
       )}
     </Box>
