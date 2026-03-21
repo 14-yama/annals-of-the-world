@@ -3,7 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Annals UI</title>
+    <title>Annals of the World — A Modern Library of Alexandria</title>
+    <meta name="description" content="A scholarly knowledge graph spanning 72,000 years of human history. 199 nations, 1,000+ nodes, evidence-first." />
+    <style>
+      body {
+        margin: 0;
+        background: #FAFAF8;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      /* Subtle marble texture via CSS */
+      #root {
+        min-height: 100vh;
+        background:
+          linear-gradient(135deg, rgba(212,175,55,0.01) 0%, transparent 50%),
+          linear-gradient(225deg, rgba(212,175,55,0.01) 0%, transparent 50%),
+          #FAFAF8;
+      }
+      /* Scrollbar styling */
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #F5F4F0; }
+      ::-webkit-scrollbar-thumb { background: #D6D3CC; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #B8B2A4; }
+      /* Selection color */
+      ::selection { background: rgba(212,175,55,0.15); color: #2D2A24; }
+    </style>
   </head>
   <body>
     <div id="root"></div>

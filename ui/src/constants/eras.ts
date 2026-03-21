@@ -1,0 +1,248 @@
+/* ─── Era Constants — Annals of the World ─── */
+import type { Era } from '../types'
+
+export const ERAS: Era[] = [
+  {
+    id: 'prehistory',
+    name: 'Prehistory',
+    years: '70,000 BCE – 3,500 BCE',
+    startYear: -70000,
+    endYear: -3500,
+    description: 'The peopling of continents, neolithic transitions, domestication of plants and animals, first settlements.',
+    color: '#645E52',
+    events: 8,
+    regions: ['Africa', 'Asia', 'Europe', 'Americas', 'Oceania'],
+    heroImage: 'https://images.unsplash.com/photo-1570127993581-f1f4b2845fee?w=800',
+    civilizations: [
+      {
+        id: 'prehistoric-africa',
+        name: 'Early Human Migration',
+        region: 'East Africa',
+        period: '70,000–10,000 BCE',
+        description: 'The cradle of humankind — earliest Homo sapiens migrations out of Africa.',
+        images: [
+          { id: 'cave-art', alt: 'Prehistoric cave paintings', url: 'https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?w=600', credit: 'Unsplash', category: 'art' },
+        ],
+        keyFacts: ['First stone tools (~3.3 million years ago)', 'Out of Africa migration ~70,000 BCE', 'Cave art tradition spans 40,000 years'],
+      },
+      {
+        id: 'neolithic-fertile',
+        name: 'Neolithic Revolution',
+        region: 'Fertile Crescent',
+        period: '10,000–3,500 BCE',
+        description: 'Transition from hunter-gatherer to agricultural societies in Mesopotamia.',
+        images: [
+          { id: 'neol-pottery', alt: 'Ancient Neolithic pottery', url: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600', credit: 'Unsplash', category: 'artifact' },
+        ],
+        keyFacts: ['Domestication of wheat and barley', 'First permanent settlements (~9,000 BCE)', 'Invention of pottery and weaving'],
+      },
+    ],
+  },
+  {
+    id: 'ancient',
+    name: 'Ancient World',
+    years: '3,500 BCE – 500 CE',
+    startYear: -3500,
+    endYear: 500,
+    description: 'Bronze and iron ages, first empires, axial age philosophies, birth of major religions, classical civilizations.',
+    color: '#8B3A3A',
+    events: 18,
+    regions: ['Mesopotamia', 'Egypt', 'Indus Valley', 'China', 'Greece', 'Rome'],
+    heroImage: 'https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=800',
+    civilizations: [
+      {
+        id: 'ancient-egypt',
+        name: 'Ancient Egypt',
+        region: 'North Africa',
+        period: '3,100–30 BCE',
+        description: 'One of the longest-lasting civilizations in history, renowned for pyramids, hieroglyphics, and pharaonic governance.',
+        images: [
+          { id: 'pyramids', alt: 'Great Pyramids of Giza', url: 'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?w=600', credit: 'Unsplash', category: 'architecture' },
+          { id: 'hieroglyphs', alt: 'Egyptian hieroglyphics on temple wall', url: 'https://images.unsplash.com/photo-1608580934846-f6d7f5a5d5e8?w=600', credit: 'Unsplash', category: 'art' },
+          { id: 'sphinx', alt: 'The Great Sphinx', url: 'https://images.unsplash.com/photo-1568322445389-f64b0f4e0ef4?w=600', credit: 'Unsplash', category: 'architecture' },
+        ],
+        keyFacts: ['30 dynasties over 3,000 years', 'Built the Great Pyramid (~2560 BCE)', 'Developed papyrus writing', 'Mummification preserved bodies for afterlife'],
+      },
+      {
+        id: 'mesopotamia',
+        name: 'Mesopotamia',
+        region: 'West Asia',
+        period: '3,500–539 BCE',
+        description: 'The "land between rivers" — birthplace of writing, law codes, and urban civilization.',
+        images: [
+          { id: 'cuneiform', alt: 'Cuneiform tablet', url: 'https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=600', credit: 'Unsplash', category: 'artifact' },
+        ],
+        keyFacts: ['Invented cuneiform writing (~3,400 BCE)', 'Code of Hammurabi (~1754 BCE)', 'Built ziggurats as temple complexes', 'Developed base-60 number system'],
+      },
+      {
+        id: 'ancient-greece',
+        name: 'Classical Greece',
+        region: 'Western Europe',
+        period: '800–146 BCE',
+        description: 'Democracy, philosophy, theater, and the Olympic Games — foundations of Western civilization.',
+        images: [
+          { id: 'parthenon', alt: 'The Parthenon in Athens', url: 'https://images.unsplash.com/photo-1555993539-1732b0258235?w=600', credit: 'Unsplash', category: 'architecture' },
+        ],
+        keyFacts: ['Birth of democracy in Athens (~508 BCE)', 'Philosophers: Socrates, Plato, Aristotle', 'First Olympic Games (776 BCE)', 'Alexander the Great conquered to India'],
+      },
+      {
+        id: 'roman-empire',
+        name: 'Roman Empire',
+        region: 'Western Europe',
+        period: '27 BCE – 476 CE',
+        description: 'The largest empire in the ancient western world, with lasting impacts on law, engineering, and governance.',
+        images: [
+          { id: 'colosseum', alt: 'The Roman Colosseum', url: 'https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600', credit: 'Unsplash', category: 'architecture' },
+        ],
+        keyFacts: ['Population of ~70 million at peak', 'Built 250,000 miles of roads', 'Developed concrete, aqueducts, arches', 'Latin became lingua franca of Europe'],
+      },
+      {
+        id: 'indus-valley',
+        name: 'Indus Valley Civilization',
+        region: 'South Asia',
+        period: '3,300–1,300 BCE',
+        description: 'One of the three earliest urban civilizations, with advanced city planning and drainage systems.',
+        images: [
+          { id: 'mohenjo-daro', alt: 'Mohenjo-daro ruins', url: 'https://images.unsplash.com/photo-1623492229905-fe6f1e8ff5e4?w=600', credit: 'Unsplash', category: 'architecture' },
+        ],
+        keyFacts: ['Cities of Mohenjo-daro and Harappa', 'Advanced drainage and water systems', 'Undeciphered script', 'Population ~5 million'],
+      },
+      {
+        id: 'han-dynasty',
+        name: 'Han Dynasty China',
+        region: 'East Asia',
+        period: '206 BCE – 220 CE',
+        description: 'Golden age of Chinese civilization — Silk Road trade, paper invention, and Confucian governance.',
+        images: [
+          { id: 'great-wall', alt: 'Great Wall of China', url: 'https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=600', credit: 'Unsplash', category: 'architecture' },
+        ],
+        keyFacts: ['Opened the Silk Road', 'Invented paper (~105 CE)', 'Population of 57 million', 'Civil service examination system'],
+      },
+    ],
+  },
+  {
+    id: 'medieval',
+    name: 'Medieval Period',
+    years: '500 – 1500 CE',
+    startYear: 500,
+    endYear: 1500,
+    description: 'Silk Road integration, Islamic Golden Age, Mongol empire, maritime trade networks, gunpowder revolution.',
+    color: '#96770B',
+    events: 24,
+    regions: ['Asia', 'Europe', 'Middle East', 'Africa'],
+    heroImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=800',
+    civilizations: [
+      {
+        id: 'islamic-golden',
+        name: 'Islamic Golden Age',
+        region: 'West Asia',
+        period: '750–1258 CE',
+        description: 'A period of cultural, scientific, and economic flourishing in the Islamic world.',
+        images: [
+          { id: 'alhambra', alt: 'Alhambra Palace geometric patterns', url: 'https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600', credit: 'Unsplash', category: 'architecture' },
+        ],
+        keyFacts: ['Advances in algebra, astronomy, medicine', 'House of Wisdom in Baghdad', 'Preserved and translated Greek texts', 'Ibn Sina, Al-Khwarizmi, Ibn Rushd'],
+      },
+      {
+        id: 'mongol-empire',
+        name: 'Mongol Empire',
+        region: 'Central Asia',
+        period: '1206–1368 CE',
+        description: 'The largest contiguous land empire in history, connecting East and West.',
+        images: [
+          { id: 'mongol-steppe', alt: 'Mongolian steppe landscape', url: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=600', credit: 'Unsplash', category: 'landscape' },
+        ],
+        keyFacts: ['Genghis Khan united nomadic tribes', 'Empire spanned 24 million km²', 'Established Pax Mongolica trade routes', 'Connected China to Europe via Silk Road'],
+      },
+      {
+        id: 'byzantine',
+        name: 'Byzantine Empire',
+        region: 'Eastern Europe',
+        period: '330–1453 CE',
+        description: 'Continuation of the Roman Empire in the east, preserving classical knowledge.',
+        images: [
+          { id: 'hagia-sophia', alt: 'Hagia Sophia interior', url: 'https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?w=600', credit: 'Unsplash', category: 'architecture' },
+        ],
+        keyFacts: ['Capital Constantinople (Istanbul)', 'Justinian Code of law', 'Orthodox Christianity center', 'Fell to Ottoman Turks in 1453'],
+      },
+    ],
+  },
+  {
+    id: 'early-modern',
+    name: 'Early Modern',
+    years: '1500 – 1800 CE',
+    startYear: 1500,
+    endYear: 1800,
+    description: 'European maritime encounters, Reformation, Enlightenment, colonial empires, global silver flows.',
+    color: '#D4AF37',
+    events: 15,
+    regions: ['Europe', 'Americas', 'Asia', 'Africa'],
+    heroImage: 'https://images.unsplash.com/photo-1461360228754-6e81c478b882?w=800',
+    civilizations: [
+      {
+        id: 'renaissance',
+        name: 'Renaissance Europe',
+        region: 'Western Europe',
+        period: '1400–1600 CE',
+        description: 'Cultural rebirth in art, science, and humanities across Italy and Northern Europe.',
+        images: [
+          { id: 'florence-dome', alt: 'Florence Cathedral dome', url: 'https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?w=600', credit: 'Unsplash', category: 'architecture' },
+        ],
+        keyFacts: ['Leonardo da Vinci, Michelangelo, Raphael', 'Gutenberg printing press (1440)', 'Scientific method emerges', 'Humanism as philosophical movement'],
+      },
+      {
+        id: 'mughal-empire',
+        name: 'Mughal Empire',
+        region: 'South Asia',
+        period: '1526–1857 CE',
+        description: 'One of the greatest empires of India, known for architectural masterpieces and cultural synthesis.',
+        images: [
+          { id: 'taj-mahal', alt: 'Taj Mahal at sunrise', url: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600', credit: 'Unsplash', category: 'architecture' },
+        ],
+        keyFacts: ['Built the Taj Mahal (1632–1653)', 'Population ~150 million', '25% of world GDP at peak', 'Synthesis of Hindu-Muslim culture'],
+      },
+    ],
+  },
+  {
+    id: 'modern',
+    name: 'Modern',
+    years: '1800 – 1945 CE',
+    startYear: 1800,
+    endYear: 1945,
+    description: 'Industrial revolution, colonialism at peak, two world wars, nationalist movements, decolonization seeds, nuclear weapons.',
+    color: '#4A90D9',
+    events: 20,
+    regions: ['Europe', 'Asia', 'Africa', 'Americas', 'Global'],
+    heroImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800',
+    civilizations: [
+      {
+        id: 'industrial-britain',
+        name: 'Industrial Britain',
+        region: 'Western Europe',
+        period: '1760–1914 CE',
+        description: 'Birthplace of the Industrial Revolution — steam power, factories, and urbanization.',
+        images: [
+          { id: 'steam-engine', alt: 'Steam locomotive engine', url: 'https://images.unsplash.com/photo-1527684651662-3a4ade6ffb04?w=600', credit: 'Unsplash', category: 'artifact' },
+        ],
+        keyFacts: ['Steam engine (James Watt, 1769)', 'Railway revolution transformed transport', 'Urbanization from 20% to 80% in a century', 'British Empire ruled 25% of world surface'],
+      },
+    ],
+  },
+  {
+    id: 'contemporary',
+    name: 'Contemporary',
+    years: '1945 CE – Present',
+    startYear: 1945,
+    endYear: 2025,
+    description: 'Decolonization, Cold War, Non-Aligned Movement, proxy wars, internet revolution, AI adoption, climate crisis, fintech, semiconductor wars.',
+    color: '#6B3FA0',
+    events: 65,
+    regions: ['Global'],
+    heroImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800',
+    civilizations: [],
+  },
+]
+
+export function getEraById(id: string): Era | undefined {
+  return ERAS.find(e => e.id === id)
+}
