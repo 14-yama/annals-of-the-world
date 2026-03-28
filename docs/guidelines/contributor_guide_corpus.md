@@ -114,15 +114,153 @@ These corpora align with the Corpus discipline tiers for evidentiary rigor:
 
 ---
 
-## 6. Contributor Checklist
-...existing code...
+## 6. Advanced Metadata Fields
 
-## 5. Contributor Checklist
-- [ ] Use unique slugs and descriptive names for corpus nodes.
-- [ ] Link evidence and major texts to the corpus using `BELONGS_TO`.
-- [ ] Document entities and importance in the corpus description.
-- [ ] Follow schema and classification guidelines for consistency.
-- [ ] Anticipate and propose new corpora as the project expands.
+Corpus nodes support extended metadata for scholarly auditability and interoperability:
+
+| Field               | Type       | Description                                                   | Example                                    |
+| ------------------- | ---------- | ------------------------------------------------------------- | ------------------------------------------ |
+| `slug`              | string     | Unique identifier (UPPER_SNAKE_CASE)                          | `BIBLICAL_CORPUS`                          |
+| `name`              | string     | Human-readable canonical name                                 | `Biblical Corpus`                          |
+| `description`       | string     | Scholarly summary of the corpus                               | `Primary texts of the Abrahamic traditions`|
+| `tier`              | A–F        | Evidentiary discipline tier                                   | `A`                                        |
+| `civilizational_zone` | string   | Geographic/cultural region of origin                          | `Ancient Near East & Mediterranean`        |
+| `primary_language`  | string     | Original language(s) of the core texts                        | `Hebrew, Aramaic, Koine Greek`             |
+| `primary_script`    | string     | Script used in earliest surviving manuscripts                 | `Paleo-Hebrew, Square Hebrew, Greek uncial`|
+| `transmission_mode` | string     | How the corpus was transmitted (manuscript, oral, inscription) | `manuscript, oral recitation`             |
+| `date_range`        | string     | Approximate span of composition                               | `c. 1200 BCE – 100 CE`                    |
+| `canonical_status`  | string     | Whether the corpus has an official "canon" definition          | `Closed (Tanakh), Open (Deuterocanon)`     |
+| `tradition`         | string[]   | Religious/cultural traditions that claim the corpus            | `['Judaism', 'Christianity', 'Islam']`     |
+| `related_corpora`   | string[]   | Slugs of related/sibling corpora                              | `['JUDAIC_RABBINIC_CORPUS']`               |
+| `text_count`        | number     | Approximate number of distinct texts                          | `66` (Protestant Bible)                    |
+| `evidence_slugs`    | string[]   | Linked evidence nodes                                         | `['dead_sea_scrolls', 'codex_sinaiticus']` |
+| `unesco_domain`     | string     | UNESCO thematic domain alignment                              | `Written Heritage`                         |
+| `cidoc_class`       | string     | CIDOC CRM class alignment                                     | `E73 Information Object`                   |
+
+## 7. Implementation Tips (v4 Framework Structure)
+
+### Linking Corpus → Text
+Use `CONTAINS` for canonical membership, `INCLUDES` for broader association:
+```cypher
+MATCH (c:Corpus {slug:'BIBLICAL_CORPUS'})
+MERGE (t:Text {slug:'genesis'})
+MERGE (c)-[:CONTAINS {order:1, division:'Torah'}]->(t)
+```
+
+### Linking Corpus → Evidence
+Evidence nodes `BELONGS_TO` a corpus when they attest to its textual content:
+```cypher
+MATCH (c:Corpus {slug:'BIBLICAL_CORPUS'})
+MERGE (e:Evidence {slug:'dead_sea_scrolls'})
+MERGE (e)-[:BELONGS_TO]->(c)
+```
+
+### Linking Corpus → Framework
+Corpus nodes can be `FRAMES`-d by interpretive lenses:
+```cypher
+MATCH (c:Corpus {slug:'BIBLICAL_CORPUS'})
+MERGE (f:Framework {slug:'TEXTUAL_TRANSMISSION'})
+MERGE (c)-[:FRAMES]->(f)
+```
+
+### Corpus ↔ Corpus Hierarchies
+Use `SUBSUMES` for parent–child and `IS_PART_OF` for part–whole:
+```cypher
+MATCH (parent:Corpus {slug:'BIBLICAL_CORPUS'})
+MERGE (child:Corpus {slug:'JUDAIC_RABBINIC_CORPUS'})
+MERGE (parent)-[:SUBSUMES]->(child)
+```
+
+## 8. Extended Modeling Patterns
+
+### Pattern A: Book-Level Granularity
+For large corpora, model individual books as `:Text` nodes connected via `CONTAINS`:
+```
+(:Corpus {slug:'BIBLICAL_CORPUS'})
+  -[:CONTAINS {order:1, division:'Torah'}]->(:Text {slug:'genesis'})
+  -[:CONTAINS {order:2, division:'Torah'}]->(:Text {slug:'exodus'})
+  ...
+  -[:CONTAINS {order:66, division:'Epistles'}]->(:Text {slug:'revelation'})
+```
+
+### Pattern B: Person → Text → Corpus Chain
+Authors connect to texts which connect to corpora:
+```
+(:Person {slug:'moses'})-[:AUTHORS]->(:Text {slug:'genesis'})
+(:Text {slug:'genesis'})<-[:CONTAINS]-(:Corpus {slug:'BIBLICAL_CORPUS'})
+```
+
+### Pattern C: Institution → Corpus Governance
+Institutions canonize, standardize, or preserve corpora:
+```
+(:Institution {slug:'council_of_nicaea'})-[:CANONIZES]->(:Corpus {slug:'BIBLICAL_CORPUS'})
+```
+
+### Pattern D: Evidence Attestation
+Archaeological evidence documents corpus claims:
+```
+(:Evidence {slug:'dead_sea_scrolls'})-[:DOCUMENTS]->(:Text {slug:'isaiah'})
+(:Evidence {slug:'dead_sea_scrolls'})-[:BELONGS_TO]->(:Corpus {slug:'BIBLICAL_CORPUS'})
+```
+
+## 9. Full Canonical Corpus Registry Audit
+
+### Status Key
+- **Seeded**: Corpus node exists with basic metadata
+- **Populated**: Corpus node has linked texts, persons, and evidence
+- **Audited**: Corpus has been reviewed for completeness and accuracy
+- **Gap**: Corpus is recognized but not yet seeded
+
+### Audit Results (53 Corpora)
+
+| # | Corpus Slug | Zone | Status | Text Count | Notes |
+|---|-------------|------|--------|------------|-------|
+| 1 | MESOPOTAMIAN_CORPUS | ANE | Gap | ~50 | Needs Enūma Eliš, Gilgamesh, Code of Hammurabi |
+| 2 | EGYPTIAN_CORPUS | ANE | Gap | ~40 | Pyramid Texts, Book of the Dead |
+| 3 | BIBLICAL_CORPUS | ANE | **Populated** | 66+ | Genesis–Revelation + DSS, Septuagint |
+| 4 | JUDAIC_RABBINIC_CORPUS | ANE | Gap | ~30 | Mishnah, Talmud, Midrash |
+| 5 | GRAECO_ROMAN_CORPUS | Mediterranean | Gap | ~100 | Homer to Justinian |
+| 6 | CANON_LAW_CORPUS | Mediterranean | Gap | ~20 | Gratian's Decretum onward |
+| 7 | IRANIAN_ZOROASTRIAN_CORPUS | Iran/CA | Gap | ~15 | Avesta, Pahlavi texts |
+| 8 | ISLAMIC_QURAN_HADITH_CORPUS | Islamic | Gap | ~20 | Qur'an + six canonical hadith |
+| 9 | ISLAMIC_FIQH_KALAM_FALSAFA_CORPUS | Islamic | Gap | ~40 | Jurisprudence, philosophy |
+| 10 | PERSIANATE_CHRONICLE_CORPUS | Iran/CA | Gap | ~25 | Shāhnāmeh, court chronicles |
+| 11 | OTTOMAN_ARCHIVE_CORPUS | Ottoman | Gap | ~30 | Imperial registers |
+| 12 | INDIC_VEDIC_UPANISHAD_CORPUS | South Asia | Gap | ~20 | Vedas, Upaniṣads |
+| 13 | INDIC_EPIC_DHARMA_CORPUS | South Asia | Gap | ~15 | Mahābhārata, Rāmāyaṇa |
+| 14 | BUDDHIST_PALI_CANON | South/SE Asia | Gap | ~3 baskets | Tipiṭaka |
+| 15 | BUDDHIST_MAHAYANA_CORPORA | East/South Asia | Gap | ~50 | Multi-tradition canons |
+| 16 | SE_ASIAN_INSCRIPTIONAL_CORPUS | SE Asia | Gap | ~30 | Khmer, Javanese inscriptions |
+| 17 | SINIC_CLASSICS_CORPUS | East Asia | Gap | ~20 | Five Classics, Four Books |
+| 18 | JAPANESE_CLASSICAL_CORPUS | East Asia | Gap | ~15 | Kojiki, Nihon Shoki |
+| 19 | KOREAN_CLASSICAL_CORPUS | East Asia | Gap | ~10 | Samguk Sagi |
+| 20 | ETHIOSEMITIC_GEEZ_CORPUS | Africa | Gap | ~15 | Kebra Nagast |
+| 21 | TIMBUKTU_MANUSCRIPT_CORPUS | Africa | Gap | ~20 | Sahel scholarship |
+| 22 | AFRICAN_ORAL_EPI_CYCLE | Africa | Gap | ~10 | Sundiata cycle |
+| 23 | MESOAMERICAN_CORPORA | Americas | Gap | ~15 | Maya/Aztec codices |
+| 24 | ANDEAN_CORPUS | Americas | Gap | ~10 | Khipu records |
+| 25–49 | European post-classical | Europe | Gap | varies | 25 traditions listed above |
+| 50 | MILITARY_TECHNICAL_CORPUS_EARLY | Cross-civ | Gap | ~20 | Ordnance treatises |
+| 51 | EARLY_MODERN_SCIENCE_CORPUS | Cross-civ | Gap | ~30 | Phil. Transactions |
+| 52 | OTTOMAN_BALKAN_CORPUS | Balkans | Gap | ~15 | Imperial Balkan records |
+| 53 | PALESTINIAN_OTTOMAN_CORPUS | Levant | Gap | ~10 | Ottoman Palestine records |
+
+**Priority**: BIBLICAL_CORPUS (Tier A, populated) → GRAECO_ROMAN_CORPUS → ISLAMIC_QURAN_HADITH_CORPUS → INDIC_VEDIC_UPANISHAD_CORPUS
+
+## 10. Contributor Checklist (Expanded)
+
+- [ ] Use unique slugs (UPPER_SNAKE_CASE) and descriptive names for corpus nodes
+- [ ] Include all advanced metadata fields (language, script, transmission, tier)
+- [ ] Link evidence and major texts to the corpus using `BELONGS_TO` / `CONTAINS`
+- [ ] Document entities and importance in the corpus description
+- [ ] Follow schema and classification guidelines for consistency
+- [ ] Add `related_corpora` cross-references for sibling/parent corpora
+- [ ] Include `tradition` array for multi-tradition corpora
+- [ ] Specify `canonical_status` (Open, Closed, Disputed)
+- [ ] Map to UNESCO domain and CIDOC CRM class where applicable
+- [ ] Register corpus in the Canonical Corpus Registry (Section 9)
+- [ ] Anticipate and propose new corpora as the project expands
+- [ ] Update `callNumbers.ts` if a new classification division is needed
 
 ---
 
@@ -130,3 +268,5 @@ For more details, see:
 - [Schema Reference](./schema.md)
 - [Classification & Corpus Registry](./classification.md)
 - [Node Descriptions](./node_descriptions.md)
+- [Interaction Matrix](./interaction_matrix.md)
+- [Relations Vocabulary](./node-relationship-vocabulary.md)

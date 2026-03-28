@@ -14,11 +14,21 @@ import CaseStudyExplorer from './pages/CaseStudyExplorer'
 import HumanStory from './pages/HumanStory'
 import Curator from './pages/Curator'
 import WeaponsPage from './pages/WeaponsPage'
+import LanguagesPage from './pages/LanguagesPage'
+import ArchitecturePage from './pages/ArchitecturePage'
+import MedicinePage from './pages/MedicinePage'
+import AgriculturePage from './pages/AgriculturePage'
+import NavigationPage from './pages/NavigationPage'
 import IdeasPage from './pages/IdeasPage'
 import About from './pages/About'
 import EntityPage from './pages/EntityPage'
 import CatalogPage from './pages/CatalogPage'
 import GraphExplorer from './pages/GraphExplorer'
+import BiblicalCorpusPage from './pages/BiblicalCorpusPage'
+import CorpusPage from './pages/CorpusPage'
+import CorpusHub from './pages/CorpusHub'
+import TopicsHub from './pages/TopicsHub'
+import DocsPage from './pages/DocsPage'
 
 /** Reset scroll to top on every route change */
 function ScrollToTop() {
@@ -50,6 +60,11 @@ export default function App() {
         <Route path="/human-story" element={<HumanStory />} />
         <Route path="/curator" element={<Curator />} />
         <Route path="/weapons" element={<WeaponsPage />} />
+        <Route path="/languages" element={<LanguagesPage />} />
+        <Route path="/architecture" element={<ArchitecturePage />} />
+        <Route path="/medicine" element={<MedicinePage />} />
+        <Route path="/agriculture" element={<AgriculturePage />} />
+        <Route path="/navigation" element={<NavigationPage />} />
         <Route path="/ideas" element={<IdeasPage />} />
         <Route path="/graph" element={<GraphExplorer />} />
         <Route path="/about" element={<About />} />
@@ -57,6 +72,11 @@ export default function App() {
         <Route path="/entity/:slug" element={<EntityPage />} />
         <Route path="/catalog" element={<CatalogPage />} />
         <Route path="/cat/:callNumber" element={<CatalogPage />} />
+        <Route path="/corpus" element={<CorpusHub />} />
+        <Route path="/corpus/biblical" element={<BiblicalCorpusPage />} />
+        <Route path="/corpus/:corpusSlug" element={<CorpusPage />} />
+        <Route path="/topics" element={<TopicsHub />} />
+        <Route path="/docs" element={<DocsPage />} />
       </Route>
       </Routes>
     </>

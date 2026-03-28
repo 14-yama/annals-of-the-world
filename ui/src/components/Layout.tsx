@@ -7,10 +7,8 @@ import {
   Globe,
   Clock,
   Orbit,
-  Info,
   Menu,
   X,
-  Home,
   Network,
   Brain,
   Map,
@@ -20,71 +18,142 @@ import {
   Swords,
   Lightbulb,
   Library,
-  Columns3,
   Landmark,
   Users,
   FileText,
-  MapPin,
-  Building2,
   Search,
   Layers,
+  ChevronDown,
+  ChevronRight,
+  Heart,
+  Building2,
+  Wheat,
+  Compass,
+  MapPin,
 } from 'lucide-react'
 import { getAllEntities } from '../data/catalog'
 
 /* ── Top-level domain navigation (horizontal) ── */
 const TOP_NAV = [
-  { path: '/ideas',     label: 'Ideas',        icon: Lightbulb },
-  { path: '/graph',     label: 'Knowledge Graph', icon: Network },
-  { path: '/explore',   label: 'Eras',         icon: Clock },
-  { path: '/human-story', label: 'Human Story', icon: Users },
-  { path: '/case-studies', label: 'Frameworks', icon: Orbit },
+  { path: '/explore',      label: 'Eras',           icon: Clock },
+  { path: '/topics',       label: 'Topics',         icon: Layers },
+  { path: '/corpus',       label: 'Corpuses',       icon: Library },
+  { path: '/graph',        label: 'Graph',          icon: Network },
+  { path: '/catalog',      label: 'Catalog',        icon: BookOpen },
 ]
 
-/* ── Shelf navigation (left panel — contextual "stacks") ── */
-const SHELF_ITEMS = [
-  { path: '/',                          label: 'The Great Hall',   icon: Landmark,  section: '' },
-  { path: '/catalog?label=Person',      label: 'People',           icon: Users,     section: 'Browse' },
-  { path: '/catalog?label=Idea',        label: 'Ideas',            icon: Lightbulb, section: 'Browse' },
-  { path: '/catalog?label=Institution', label: 'Institutions',     icon: Building2, section: 'Browse' },
-  { path: '/catalog?label=Place',       label: 'Places',           icon: MapPin,    section: 'Browse' },
-  { path: '/catalog?label=EventWindow', label: 'Events',           icon: Clock,     section: 'Browse' },
-  { path: '/catalog?label=Movement',    label: 'Movements',        icon: Layers,    section: 'Browse' },
-  { path: '/catalog?label=Text',        label: 'Texts & Artifacts',icon: FileText,  section: 'Browse' },
-  { path: '/continents/africa',         label: 'Africa',           icon: Globe,     section: 'Continents' },
-  { path: '/continents/asia',           label: 'Asia',             icon: Globe,     section: 'Continents' },
-  { path: '/continents/europe',         label: 'Europe',           icon: Map,       section: 'Continents' },
-  { path: '/continents/americas',       label: 'Americas',         icon: Mountain,  section: 'Continents' },
-  { path: '/continents/oceania',        label: 'Oceania',          icon: Waves,     section: 'Continents' },
-  { path: '/explore',                   label: 'Era Explorer',     icon: Orbit,     section: 'Explore' },
-  { path: '/graph',                     label: 'Knowledge Graph',  icon: Network,   section: 'Explore' },
-  { path: '/weapons',                   label: 'Arms & Warfare',   icon: Swords,    section: 'Explore' },
-  { path: '/human-story',               label: 'Human Story',      icon: Users,     section: 'Explore' },
-  { path: '/case-studies',              label: 'Frameworks',       icon: FileText,  section: 'Explore' },
-  { path: '/curator',                   label: 'The Curator',      icon: Scroll,    section: 'Tools' },
-  { path: '/quiz',                      label: 'Examination Hall', icon: Brain,     section: 'Tools' },
-  { path: '/about',                     label: 'About the Annals', icon: BookOpen,  section: 'About' },
-]
-
-/* Group shelf items by section */
-function groupBySection(items: typeof SHELF_ITEMS) {
-  const groups: { section: string; items: typeof SHELF_ITEMS }[] = []
-  let current: string | null = null
-  for (const item of items) {
-    if (item.section !== current) {
-      current = item.section
-      groups.push({ section: current, items: [] })
-    }
-    groups[groups.length - 1].items.push(item)
-  }
-  return groups
+/* ── Sidebar item type ── */
+interface NavItem {
+  path: string
+  label: string
+  icon: React.ElementType
 }
+
+interface NavSection {
+  id: string
+  label: string
+  collapsible: boolean
+  items: NavItem[]
+}
+
+/* ── Sidebar sections ── */
+const NAV_SECTIONS: NavSection[] = [
+  {
+    id: 'home', label: '', collapsible: false,
+    items: [
+      { path: '/',        label: 'The Great Hall', icon: Landmark },
+    ],
+  },
+  {
+    id: 'browse', label: 'Browse', collapsible: true,
+    items: [
+      { path: '/catalog?label=Person',      label: 'People',            icon: Users },
+      { path: '/catalog?label=Idea',        label: 'Ideas',             icon: Lightbulb },
+      { path: '/catalog?label=Institution', label: 'Institutions',      icon: Building2 },
+      { path: '/catalog?label=Place',       label: 'Places',            icon: MapPin },
+      { path: '/catalog?label=EventWindow', label: 'Events',            icon: Clock },
+      { path: '/catalog?label=Movement',    label: 'Movements',         icon: Layers },
+      { path: '/catalog?label=Text',        label: 'Texts & Artifacts', icon: FileText },
+    ],
+  },
+  {
+    id: 'continents', label: 'Continents', collapsible: true,
+    items: [
+      { path: '/continents/africa',   label: 'Africa',   icon: Globe },
+      { path: '/continents/asia',     label: 'Asia',     icon: Globe },
+      { path: '/continents/europe',   label: 'Europe',   icon: Map },
+      { path: '/continents/americas', label: 'Americas', icon: Mountain },
+      { path: '/continents/oceania',  label: 'Oceania',  icon: Waves },
+    ],
+  },
+  {
+    id: 'explore', label: 'Explore', collapsible: false,
+    items: [
+      { path: '/explore',      label: 'Era Explorer',     icon: Orbit },
+      { path: '/graph',        label: 'Knowledge Graph',  icon: Network },
+      { path: '/human-story',  label: 'Human Story',      icon: Users },
+      { path: '/case-studies', label: 'Frameworks',       icon: FileText },
+    ],
+  },
+  {
+    id: 'topics', label: 'Topics', collapsible: true,
+    items: [
+      { path: '/topics',       label: 'All Topics',       icon: Layers },
+      { path: '/weapons',      label: 'Arms & Warfare',   icon: Swords },
+      { path: '/medicine',     label: 'Medicine',         icon: Heart },
+      { path: '/architecture', label: 'Architecture',     icon: Building2 },
+      { path: '/agriculture',  label: 'Agriculture',      icon: Wheat },
+      { path: '/navigation',   label: 'Navigation',       icon: Compass },
+      { path: '/languages',    label: 'Languages',        icon: BookOpen },
+    ],
+  },
+  {
+    id: 'corpus', label: 'Corpus', collapsible: true,
+    items: [
+      { path: '/corpus',          label: 'All Corpuses',  icon: Library },
+      { path: '/corpus/biblical', label: 'Biblical',      icon: Library },
+    ],
+  },
+  {
+    id: 'tools', label: 'Tools', collapsible: false,
+    items: [
+      { path: '/curator', label: 'The Curator',      icon: Scroll },
+      { path: '/quiz',    label: 'Examination Hall',  icon: Brain },
+    ],
+  },
+  {
+    id: 'about', label: 'About', collapsible: false,
+    items: [
+      { path: '/about', label: 'About the Annals', icon: BookOpen },
+      { path: '/docs',  label: 'Documentation',    icon: FileText },
+    ],
+  },
+]
 
 export default function Layout() {
   const location = useLocation()
   const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const [globalSearch, setGlobalSearch] = useState('')
-  const groups = groupBySection(SHELF_ITEMS)
+  const [collapsed, setCollapsed] = useState<Record<string, boolean>>({
+    browse: true,
+    continents: true,
+    topics: true,
+    corpus: true,
+  })
+
+  const toggleSection = (id: string) => {
+    setCollapsed(prev => ({ ...prev, [id]: !prev[id] }))
+  }
+
+  /** Check if any item in a section is active (to auto-expand) */
+  const isSectionActive = (section: NavSection) => {
+    return section.items.some(item => {
+      const hasQuery = item.path.includes('?')
+      const fullUrl = location.pathname + location.search
+      return hasQuery ? fullUrl === item.path : location.pathname === item.path
+    })
+  }
 
   return (
     <Flex minH="100vh" bg="#FAFAF8">
@@ -155,58 +224,75 @@ export default function Layout() {
 
         {/* Shelf Items grouped by section */}
         <Stack gap={0} p={2} mt={1}>
-          {groups.map((group) => (
-            <Box key={group.section || 'root'}>
-              {sidebarOpen && group.section && (
-                <Text
-                  fontFamily='"Cinzel", serif'
-                  fontSize="9px"
-                  fontWeight={700}
-                  color="#B8B2A4"
-                  letterSpacing="0.2em"
-                  textTransform="uppercase"
-                  px={3}
-                  pt={4}
-                  pb={1}
-                >
-                  {group.section}
-                </Text>
-              )}
-              {group.items.map((item) => {
-                const hasQuery = item.path.includes('?')
-                const fullUrl = location.pathname + location.search
-                const isActive = hasQuery
-                  ? fullUrl === item.path
-                  : location.pathname === item.path
-                const Icon = item.icon
-                return (
-                  <RouterLink
-                    to={item.path}
-                    key={item.path}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '10px',
-                      padding: '9px 12px',
-                      borderRadius: '6px',
-                      backgroundColor: isActive ? 'rgba(212,175,55,0.10)' : 'transparent',
-                      borderLeft: isActive ? '3px solid #D4AF37' : '3px solid transparent',
-                      color: isActive ? '#2D2A24' : '#787469',
-                      fontWeight: isActive ? 600 : 400,
-                      fontSize: '13px',
-                      fontFamily: '"Inter", sans-serif',
-                      textDecoration: 'none',
-                      transition: 'all 0.2s',
-                      letterSpacing: '0.02em',
-                    }}
+          {NAV_SECTIONS.map((section) => {
+            const isOpen = !section.collapsible || !collapsed[section.id] || isSectionActive(section)
+            return (
+              <Box key={section.id}>
+                {sidebarOpen && section.label && (
+                  <Flex
+                    align="center"
+                    justify="space-between"
+                    px={3}
+                    pt={4}
+                    pb={1}
+                    cursor={section.collapsible ? 'pointer' : 'default'}
+                    onClick={() => section.collapsible && toggleSection(section.id)}
+                    _hover={section.collapsible ? { color: '#787469' } : {}}
+                    role={section.collapsible ? 'button' : undefined}
                   >
-                    <Icon size={16} />
-                    {sidebarOpen && <Text>{item.label}</Text>}
-                  </RouterLink>
-                )
-              })}
-            </Box>
-          ))}
+                    <Text
+                      fontFamily='"Cinzel", serif'
+                      fontSize="9px"
+                      fontWeight={700}
+                      color="#B8B2A4"
+                      letterSpacing="0.2em"
+                      textTransform="uppercase"
+                    >
+                      {section.label}
+                    </Text>
+                    {section.collapsible && (
+                      <Box color="#B8B2A4" transition="transform 0.2s">
+                        {isOpen ? <ChevronDown size={12} /> : <ChevronRight size={12} />}
+                      </Box>
+                    )}
+                  </Flex>
+                )}
+                {isOpen && section.items.map((item) => {
+                  const hasQuery = item.path.includes('?')
+                  const fullUrl = location.pathname + location.search
+                  const isActive = hasQuery
+                    ? fullUrl === item.path
+                    : location.pathname === item.path
+                  const Icon = item.icon
+                  return (
+                    <RouterLink
+                      to={item.path}
+                      key={item.path}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '10px',
+                        padding: '9px 12px',
+                        borderRadius: '6px',
+                        backgroundColor: isActive ? 'rgba(212,175,55,0.10)' : 'transparent',
+                        borderLeft: isActive ? '3px solid #D4AF37' : '3px solid transparent',
+                        color: isActive ? '#2D2A24' : '#787469',
+                        fontWeight: isActive ? 600 : 400,
+                        fontSize: '13px',
+                        fontFamily: '"Inter", sans-serif',
+                        textDecoration: 'none',
+                        transition: 'all 0.2s',
+                        letterSpacing: '0.02em',
+                      }}
+                    >
+                      <Icon size={16} />
+                      {sidebarOpen && <Text>{item.label}</Text>}
+                    </RouterLink>
+                  )
+                })}
+              </Box>
+            )
+          })}
 
           {/* Catalog Link — browse all entities */}
           {sidebarOpen && (

@@ -23,7 +23,7 @@ const USSHER_STATS = [
 const PROJECT_STATS = [
   { value: '199', label: 'Countries Profiled', icon: Globe2, color: '#4A90D9' },
   { value: '1,000,000', label: 'Target Knowledge Nodes', icon: Network, color: '#6B3FA0' },
-  { value: '5,398', label: 'Nodes Documented So Far', icon: CheckCircle2, color: '#2F855A' },
+  { value: '5,671', label: 'Nodes Documented So Far', icon: CheckCircle2, color: '#2F855A' },
   { value: '10+', label: 'Interpretive Frameworks', icon: Layers, color: '#D4AF37' },
   { value: '6', label: 'Canonical Eras', icon: BarChart3, color: '#C53030' },
   { value: '127', label: 'Weapons Catalogued', icon: Target, color: '#8B3A3A' },
@@ -88,17 +88,17 @@ const TEN_YEAR_MILESTONES = [
 const TARGET_NODES = 1_000_000
 
 const NODE_CENSUS_BY_TYPE = [
-  { label: 'Idea',        backend: 923, geoRegistry: 128, frontend: 67,  color: '#6B3FA0' },
-  { label: 'Event',       backend: 222, geoRegistry: 126, frontend: 108, color: '#C53030' },
-  { label: 'Person',      backend: 202, geoRegistry: 126, frontend: 12,  color: '#4A90D9' },
-  { label: 'Text',        backend: 178, geoRegistry: 128, frontend: 3,   color: '#8B3A3A' },
-  { label: 'Institution', backend: 160, geoRegistry: 128, frontend: 5,   color: '#2F855A' },
-  { label: 'Place',       backend: 143, geoRegistry: 452, frontend: 3,   color: '#DD6B20' },
-  { label: 'Movement',    backend: 115, geoRegistry: 128, frontend: 8,   color: '#D4AF37' },
-  { label: 'Artifact',    backend: 0,   geoRegistry: 128, frontend: 127, color: '#38B2AC' },
-  { label: 'Evidence',    backend: 37,  geoRegistry: 128, frontend: 0,   color: '#718096' },
-  { label: 'Framework',   backend: 0,   geoRegistry: 126, frontend: 13,  color: '#805AD5' },
-  { label: 'Timeframe',   backend: 0,   geoRegistry: 126, frontend: 6,   color: '#D69E2E' },
+  { label: 'Idea',        backend: 923, geoRegistry: 128, frontend: 67,  corpus: 8,   color: '#6B3FA0' },
+  { label: 'Event',       backend: 222, geoRegistry: 126, frontend: 108, corpus: 10,  color: '#C53030' },
+  { label: 'Person',      backend: 202, geoRegistry: 126, frontend: 12,  corpus: 69,  color: '#4A90D9' },
+  { label: 'Text',        backend: 178, geoRegistry: 128, frontend: 3,   corpus: 150, color: '#8B3A3A' },
+  { label: 'Institution', backend: 160, geoRegistry: 128, frontend: 5,   corpus: 11,  color: '#2F855A' },
+  { label: 'Place',       backend: 143, geoRegistry: 452, frontend: 3,   corpus: 16,  color: '#DD6B20' },
+  { label: 'Movement',    backend: 115, geoRegistry: 128, frontend: 8,   corpus: 2,   color: '#D4AF37' },
+  { label: 'Artifact',    backend: 0,   geoRegistry: 128, frontend: 127, corpus: 0,   color: '#38B2AC' },
+  { label: 'Evidence',    backend: 37,  geoRegistry: 128, frontend: 0,   corpus: 7,   color: '#718096' },
+  { label: 'Framework',   backend: 0,   geoRegistry: 126, frontend: 13,  corpus: 0,   color: '#805AD5' },
+  { label: 'Timeframe',   backend: 0,   geoRegistry: 126, frontend: 6,   corpus: 0,   color: '#D69E2E' },
 ]
 
 const NODE_CENSUS_SOURCES = [
@@ -110,6 +110,8 @@ const NODE_CENSUS_SOURCES = [
     detail: '199 countries + 509 historically significant cities + 5 major cities (places.json + cities_major.json)' },
   { source: 'Frontend Visualizations',                  count: 528, color: '#6B3FA0',
     detail: '127 weapons, 108 timeline events, 79 case study nodes, 67 ideas catalogued, 13 language families, 7 trade routes, 6 diet types, 22 quiz questions' },
+  { source: 'Corpus Catalog (53 scholarly corpuses)',    count: 273, color: '#8B3A3A',
+    detail: '53 world corpuses — 150 texts, 69 people, 16 places, 11 institutions, 10 events, 8 ideas, 7 evidence nodes, 2 movements. Biblical (97), Mesopotamian (24), Egyptian (19), Iran & Central Asia (21), South & SE Asia (17), East Asia (15), Europe (28), Science & Tech (10), and more' },
 ]
 
 const TOTAL_NODES = NODE_CENSUS_SOURCES.reduce((s, r) => s + r.count, 0)
@@ -224,7 +226,7 @@ export default function Curator() {
             Nodes by Schema Label
           </Text>
           {NODE_CENSUS_BY_TYPE.map(t => {
-            const total = t.backend + t.geoRegistry + t.frontend
+            const total = t.backend + t.geoRegistry + t.frontend + t.corpus
             return (
               <Flex key={t.label} align="center" gap={3} mb={2}>
                 <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color={t.color}
@@ -243,6 +245,10 @@ export default function Curator() {
                   {t.frontend > 0 && (
                     <Box position="absolute" left={`${((t.backend + t.geoRegistry) / 1100) * 100}%`} top={0}
                       h="100%" bg={t.color} w={`${(t.frontend / 1100) * 100}%`} opacity={0.35} />
+                  )}
+                  {t.corpus > 0 && (
+                    <Box position="absolute" left={`${((t.backend + t.geoRegistry + t.frontend) / 1100) * 100}%`} top={0}
+                      h="100%" bg="#8B3A3A" w={`${(t.corpus / 1100) * 100}%`} opacity={0.75} />
                   )}
                 </Box>
                 <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#524E44" minW="45px" textAlign="right">
@@ -263,6 +269,10 @@ export default function Curator() {
             <Flex align="center" gap={1}>
               <Box w="10px" h="10px" bg="#4A90D9" borderRadius="sm" opacity={0.35} />
               <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace' color="#718096">Frontend</Text>
+            </Flex>
+            <Flex align="center" gap={1}>
+              <Box w="10px" h="10px" bg="#8B3A3A" borderRadius="sm" opacity={0.75} />
+              <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace' color="#718096">Corpus</Text>
             </Flex>
           </Flex>
         </Box>

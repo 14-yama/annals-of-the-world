@@ -7,7 +7,7 @@ import {
   Landmark, Layers, Library, Compass, Zap,
 } from 'lucide-react'
 import {
-  getEntity, getAllEntities, getShelfNeighbors,
+  getEntity, getAllEntities, getShelfNeighbors, parseSortYear,
   type Entity, type EntityRelationship,
 } from '../data/catalog'
 import {
@@ -133,13 +133,15 @@ const ERA_COLORS: Record<string, string> = {
 function ShelfSidebar({ entity, neighbors }: { entity: Entity; neighbors: Entity[] }) {
   const divHeading = getDivisionHeading(entity.callNumber)
 
-  // Group neighbors by era, maintain era order
+  // Group neighbors by era, maintain era order, sort chronologically within each group
   const eraGroups = ERA_ORDER
     .map(slug => ({
       slug,
       label: ERA_LABELS[slug] || slug,
       color: ERA_COLORS[slug] || '#787469',
-      items: neighbors.filter(n => n.eraSlug === slug),
+      items: neighbors
+        .filter(n => n.eraSlug === slug)
+        .sort((a, b) => parseSortYear(a) - parseSortYear(b)),
     }))
     .filter(g => g.items.length > 0)
 
@@ -624,50 +626,80 @@ export default function EntityPage() {
             {/* CAUSES & EFFECTS */}
             {activeTab === 'causes' && (
               <Box>
-                <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
-                  letterSpacing="0.15em" textTransform="uppercase" mb={4}>
-                  Causes — What led to this
-                </Text>
-                {entity.causes.map((c, i) => (
-                  <Flex key={i} align="center" gap={4} py={3}
-                    borderBottom={i < entity.causes.length - 1 ? '1px solid #EEEDEA' : 'none'}>
-                    <ArrowRight size={14} color="#D4AF37" />
-                    <Box flex={1}>
-                      {c.slug ? (
-                        <RouterLink to={`/entity/${c.slug}`} style={{ textDecoration: 'none' }}>
-                          <Text fontSize="sm" color="#3B6BC2" fontWeight={500}>{c.title}</Text>
-                        </RouterLink>
-                      ) : (
-                        <Text fontSize="sm" color="#2D2A24" fontWeight={500}>{c.title}</Text>
-                      )}
-                      <Text fontSize="xs" color="#9E9A90">{c.type} &middot; {c.year}</Text>
-                    </Box>
+                {entity.causes.length === 0 && entity.effects.length === 0 ? (
+                  <Flex direction="column" align="center" justify="center" minH="200px" gap={3}>
+                    <ArrowRight size={36} color="#D6D3CC" />
+                    <Text fontFamily='"Cinzel", serif' fontSize="sm" color="#9E9A90"
+                      letterSpacing="0.1em" textTransform="uppercase">No causal data yet</Text>
+                    <Text fontSize="xs" color="#B8B2A4" textAlign="center" maxW="400px">
+                      Causes and effects for this entity have not been documented. Scholarly sources will be added in future curator batches.
+                    </Text>
                   </Flex>
-                ))}
-
-                {entity.effects.length > 0 && (
-                  <Box mt={6} pt={4} borderTop="1px solid #EEEDEA">
+                ) : (
+                  <>
                     <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
                       letterSpacing="0.15em" textTransform="uppercase" mb={4}>
-                      Effects — Consequences and results
+                      Causes — What led to this
                     </Text>
-                    {entity.effects.map((ef, i) => (
-                      <Flex key={i} align="center" gap={4} py={3}
-                        borderBottom={i < entity.effects.length - 1 ? '1px solid #EEEDEA' : 'none'}>
-                        <ArrowLeft size={14} color="#8B3A3A" />
+                    {entity.causes.length === 0 && (
+                      <Text fontSize="xs" color="#B8B2A4" mb={4} fontStyle="italic">No documented causes.</Text>
+                    )}
+                    {entity.causes.map((c, i) => (
+                      <Flex key={i} align="flex-start" gap={4} py={3}
+                        borderBottom={i < entity.causes.length - 1 ? '1px solid #EEEDEA' : 'none'}>
+                        <Box mt="3px" flexShrink={0}><ArrowRight size={14} color="#D4AF37" /></Box>
                         <Box flex={1}>
-                          {ef.slug ? (
-                            <RouterLink to={`/entity/${ef.slug}`} style={{ textDecoration: 'none' }}>
-                              <Text fontSize="sm" color="#3B6BC2" fontWeight={500}>{ef.title}</Text>
+                          {c.slug ? (
+                            <RouterLink to={`/entity/${c.slug}`} style={{ textDecoration: 'none' }}>
+                              <Text fontSize="sm" color="#3B6BC2" fontWeight={500}>{c.title}</Text>
                             </RouterLink>
                           ) : (
-                            <Text fontSize="sm" color="#2D2A24" fontWeight={500}>{ef.title}</Text>
+                            <Text fontSize="sm" color="#2D2A24" fontWeight={500}>{c.title}</Text>
                           )}
-                          <Text fontSize="xs" color="#9E9A90">{ef.type} &middot; {ef.year}</Text>
+                          <Flex gap={2} mt={1} align="center">
+                            <Box bg="#F5F4F0" border="1px solid #EEEDEA" borderRadius="full" px={2} py={0.5}>
+                              <Text fontSize="10px" color="#787469">{c.type}</Text>
+                            </Box>
+                            {c.year && (
+                              <Text fontSize="xs" color="#9E9A90">{c.year}</Text>
+                            )}
+                          </Flex>
                         </Box>
                       </Flex>
                     ))}
-                  </Box>
+
+                    {entity.effects.length > 0 && (
+                      <Box mt={6} pt={4} borderTop="1px solid #EEEDEA">
+                        <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
+                          letterSpacing="0.15em" textTransform="uppercase" mb={4}>
+                          Effects — Consequences and results
+                        </Text>
+                        {entity.effects.map((ef, i) => (
+                          <Flex key={i} align="flex-start" gap={4} py={3}
+                            borderBottom={i < entity.effects.length - 1 ? '1px solid #EEEDEA' : 'none'}>
+                            <Box mt="3px" flexShrink={0}><ArrowLeft size={14} color="#8B3A3A" /></Box>
+                            <Box flex={1}>
+                              {ef.slug ? (
+                                <RouterLink to={`/entity/${ef.slug}`} style={{ textDecoration: 'none' }}>
+                                  <Text fontSize="sm" color="#3B6BC2" fontWeight={500}>{ef.title}</Text>
+                                </RouterLink>
+                              ) : (
+                                <Text fontSize="sm" color="#2D2A24" fontWeight={500}>{ef.title}</Text>
+                              )}
+                              <Flex gap={2} mt={1} align="center">
+                                <Box bg="#F5F4F0" border="1px solid #EEEDEA" borderRadius="full" px={2} py={0.5}>
+                                  <Text fontSize="10px" color="#787469">{ef.type}</Text>
+                                </Box>
+                                {ef.year && (
+                                  <Text fontSize="xs" color="#9E9A90">{ef.year}</Text>
+                                )}
+                              </Flex>
+                            </Box>
+                          </Flex>
+                        ))}
+                      </Box>
+                    )}
+                  </>
                 )}
               </Box>
             )}
@@ -675,64 +707,103 @@ export default function EntityPage() {
             {/* RELATIONSHIPS */}
             {activeTab === 'people' && (
               <Box>
-                <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
-                  letterSpacing="0.15em" textTransform="uppercase" mb={2}>
-                  Relationships — directed edges
-                </Text>
-                <Text fontSize="xs" color="#9E9A90" mb={4}>
-                  Each edge reads left-to-right: <strong>Source</strong> → <em>VERB</em> → <strong>Target</strong>. The current entity is shown in gray; linked actors are blue and clickable.
-                </Text>
-                {entity.relationships.map((rel, i) => (
-                  <RelationshipRow key={i} rel={rel} currentSlug={entitySlug} />
-                ))}
+                {entity.relationships.length === 0 ? (
+                  <Flex direction="column" align="center" justify="center" minH="200px" gap={3}>
+                    <Users size={36} color="#D6D3CC" />
+                    <Text fontFamily='"Cinzel", serif' fontSize="sm" color="#9E9A90"
+                      letterSpacing="0.1em" textTransform="uppercase">No relationships yet</Text>
+                    <Text fontSize="xs" color="#B8B2A4" textAlign="center" maxW="400px">
+                      No directed edges have been documented for this entity. Relationship data will be added in future enrichment batches.
+                    </Text>
+                  </Flex>
+                ) : (
+                  <>
+                    <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
+                      letterSpacing="0.15em" textTransform="uppercase" mb={2}>
+                      Relationships — directed edges
+                    </Text>
+                    <Text fontSize="xs" color="#9E9A90" mb={4}>
+                      Each edge reads left-to-right: <strong>Source</strong> → <em>VERB</em> → <strong>Target</strong>. The current entity is shown in gray; linked actors are blue and clickable.
+                    </Text>
+                    {entity.relationships.map((rel, i) => (
+                      <RelationshipRow key={i} rel={rel} currentSlug={entitySlug} />
+                    ))}
+                  </>
+                )}
               </Box>
             )}
 
             {/* PLACES */}
             {activeTab === 'places' && (
               <Box>
-                <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
-                  letterSpacing="0.15em" textTransform="uppercase" mb={4}>Geographic footprint</Text>
-                {entity.places.map((p, i) => (
-                  <Flex key={i} align="center" gap={4} py={3}
-                    borderBottom={i < entity.places.length - 1 ? '1px solid #EEEDEA' : 'none'}>
-                    <MapPin size={14} color="#96770B" />
-                    <Box flex={1}>
-                      {p.slug ? (
-                        <RouterLink to={`/entity/${p.slug}`} style={{ textDecoration: 'none' }}>
-                          <Text fontSize="sm" color="#3B6BC2" fontWeight={500}>{p.name}</Text>
-                        </RouterLink>
-                      ) : (
-                        <Text fontSize="sm" color="#2D2A24" fontWeight={500}>{p.name}</Text>
-                      )}
-                      <Text fontSize="xs" color="#9E9A90">{p.role}</Text>
-                    </Box>
+                {entity.places.length === 0 ? (
+                  <Flex direction="column" align="center" justify="center" minH="200px" gap={3}>
+                    <MapPin size={36} color="#D6D3CC" />
+                    <Text fontFamily='"Cinzel", serif' fontSize="sm" color="#9E9A90"
+                      letterSpacing="0.1em" textTransform="uppercase">No places documented</Text>
+                    <Text fontSize="xs" color="#B8B2A4" textAlign="center" maxW="400px">
+                      Geographic associations for this entity are not yet recorded. Location data will be added in future enrichment batches.
+                    </Text>
                   </Flex>
-                ))}
+                ) : (
+                  <>
+                    <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
+                      letterSpacing="0.15em" textTransform="uppercase" mb={4}>Geographic footprint</Text>
+                    {entity.places.map((p, i) => (
+                      <Flex key={i} align="center" gap={4} py={3}
+                        borderBottom={i < entity.places.length - 1 ? '1px solid #EEEDEA' : 'none'}>
+                        <MapPin size={14} color="#96770B" />
+                        <Box flex={1}>
+                          {p.slug ? (
+                            <RouterLink to={`/entity/${p.slug}`} style={{ textDecoration: 'none' }}>
+                              <Text fontSize="sm" color="#3B6BC2" fontWeight={500}>{p.name}</Text>
+                            </RouterLink>
+                          ) : (
+                            <Text fontSize="sm" color="#2D2A24" fontWeight={500}>{p.name}</Text>
+                          )}
+                          <Text fontSize="xs" color="#9E9A90">{p.role}</Text>
+                        </Box>
+                      </Flex>
+                    ))}
+                  </>
+                )}
               </Box>
             )}
 
             {/* TEXTS */}
             {activeTab === 'texts' && (
               <Box>
-                <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
-                  letterSpacing="0.15em" textTransform="uppercase" mb={4}>Documents, treaties, and artifacts</Text>
-                {entity.texts.map((t, i) => (
-                  <Flex key={i} align="center" gap={4} py={3}
-                    borderBottom={i < entity.texts.length - 1 ? '1px solid #EEEDEA' : 'none'}>
-                    <FileText size={14} color="#5A2222" />
-                    <Box flex={1}>
-                      {t.slug ? (
-                        <RouterLink to={`/entity/${t.slug}`} style={{ textDecoration: 'none' }}>
-                          <Text fontSize="sm" color="#3B6BC2" fontWeight={500}>{t.title}</Text>
-                        </RouterLink>
-                      ) : (
-                        <Text fontSize="sm" color="#2D2A24" fontWeight={500}>{t.title}</Text>
-                      )}
-                      <Text fontSize="xs" color="#9E9A90">{t.type}{t.year ? ` · ${t.year}` : ''}</Text>
-                    </Box>
+                {entity.texts.length === 0 ? (
+                  <Flex direction="column" align="center" justify="center" minH="200px" gap={3}>
+                    <FileText size={36} color="#D6D3CC" />
+                    <Text fontFamily='"Cinzel", serif' fontSize="sm" color="#9E9A90"
+                      letterSpacing="0.1em" textTransform="uppercase">No texts documented</Text>
+                    <Text fontSize="xs" color="#B8B2A4" textAlign="center" maxW="400px">
+                      Texts, treaties, and artifacts associated with this entity are not yet recorded.
+                    </Text>
                   </Flex>
-                ))}
+                ) : (
+                  <>
+                    <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
+                      letterSpacing="0.15em" textTransform="uppercase" mb={4}>Documents, treaties, and artifacts</Text>
+                    {entity.texts.map((t, i) => (
+                      <Flex key={i} align="center" gap={4} py={3}
+                        borderBottom={i < entity.texts.length - 1 ? '1px solid #EEEDEA' : 'none'}>
+                        <FileText size={14} color="#5A2222" />
+                        <Box flex={1}>
+                          {t.slug ? (
+                            <RouterLink to={`/entity/${t.slug}`} style={{ textDecoration: 'none' }}>
+                              <Text fontSize="sm" color="#3B6BC2" fontWeight={500}>{t.title}</Text>
+                            </RouterLink>
+                          ) : (
+                            <Text fontSize="sm" color="#2D2A24" fontWeight={500}>{t.title}</Text>
+                          )}
+                          <Text fontSize="xs" color="#9E9A90">{t.type}{t.year ? ` · ${t.year}` : ''}</Text>
+                        </Box>
+                      </Flex>
+                    ))}
+                  </>
+                )}
               </Box>
             )}
 
