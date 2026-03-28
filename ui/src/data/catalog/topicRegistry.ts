@@ -1,0 +1,92 @@
+/**
+ * Topic Registry — metadata + entity arrays for all civilization-shaping topics.
+ * Used by the TopicPage hub and sidebar navigation.
+ * Mirrors the pattern of corpuses/registry.ts.
+ */
+import type { Entity } from '../entityTypes'
+import {
+  WEAPONS_ENTITIES,
+  MEDICINE_ENTITIES,
+  ARCHITECTURE_ENTITIES,
+  AGRICULTURE_ENTITIES,
+  NAVIGATION_ENTITIES,
+  LANGUAGES_ENTITIES,
+} from './topicEntities'
+
+export interface TopicEntry {
+  slug: string
+  name: string
+  shortName: string
+  description: string
+  color: string
+  icon: string
+  route: string
+  entities: Entity[]
+}
+
+export const TOPIC_REGISTRY: TopicEntry[] = [
+  {
+    slug: 'weapons',
+    name: 'Arms & Warfare',
+    shortName: 'Weapons',
+    description: 'From stone axes to hypersonic missiles — every weapon that shaped the battlefield.',
+    color: '#8B3A3A',
+    icon: 'Swords',
+    route: '/weapons',
+    entities: WEAPONS_ENTITIES,
+  },
+  {
+    slug: 'medicine',
+    name: 'Medicine & Healing',
+    shortName: 'Medicine',
+    description: 'From herbal remedies to gene therapy — the medical breakthroughs that extended human life.',
+    color: '#2F855A',
+    icon: 'Heart',
+    route: '/medicine',
+    entities: MEDICINE_ENTITIES,
+  },
+  {
+    slug: 'architecture',
+    name: 'Architecture & Monuments',
+    shortName: 'Architecture',
+    description: 'From Göbekli Tepe to parametric skyscrapers — humanity\'s built environment.',
+    color: '#C5963A',
+    icon: 'Building2',
+    route: '/architecture',
+    entities: ARCHITECTURE_ENTITIES,
+  },
+  {
+    slug: 'agriculture',
+    name: 'Agriculture & Food',
+    shortName: 'Agriculture',
+    description: 'From wild grain gathering to vertical farms — how we learned to feed 8 billion.',
+    color: '#38A169',
+    icon: 'Wheat',
+    route: '/agriculture',
+    entities: AGRICULTURE_ENTITIES,
+  },
+  {
+    slug: 'navigation',
+    name: 'Navigation & Exploration',
+    shortName: 'Navigation',
+    description: 'From star-guided canoes to GPS satellites — charting the unknown.',
+    color: '#3182CE',
+    icon: 'Compass',
+    route: '/navigation',
+    entities: NAVIGATION_ENTITIES,
+  },
+  {
+    slug: 'languages',
+    name: 'Languages & Scripts',
+    shortName: 'Languages',
+    description: 'From cave paintings to Unicode — the evolution of human communication.',
+    color: '#6B3FA0',
+    icon: 'BookOpen',
+    route: '/languages',
+    entities: LANGUAGES_ENTITIES,
+  },
+]
+
+export function getTopicBySlug(slug: string): TopicEntry | undefined {
+  return TOPIC_REGISTRY.find(t => t.slug === slug)
+}
