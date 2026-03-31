@@ -119,7 +119,7 @@ ui/src/
     index.ts           # Core domain types (Entity, Era, GraphNode, etc.)
 
   constants/           # App-wide constants
-    callNumbers.ts     # Dewey-style classification (10 classes, 48+ divisions)
+    callNumbers.ts     # Dewey-style classification (10 classes, 81 divisions)
     eras.ts            # 6 era definitions with civilizations
     regions.ts         # Geographic regions
     continents.ts      # Continent profiles
@@ -357,7 +357,7 @@ The catalog uses a Dewey Decimal-inspired call number system:
 - **Format:** `Class.Division.Slug` (e.g., `220.06-julius-caesar`)
 - **10 Classes (0-9):** Ideas, Theories, People, Institutions, Places,
   Events, Movements, Texts, Evidence, Timeframes
-- **48+ Divisions:** Further categorization under each class
+- **81 Divisions:** Further categorization under each class
 - **Data files:** 6 era modules + reformation + biblical modules in `ui/src/data/catalog/`
 - **Corpus files:** 14 corpus entity files in `ui/src/data/catalog/corpuses/`
 - **Index:** Central merger with Map-based O(1) lookups by slug or call number

@@ -23,7 +23,7 @@ const USSHER_STATS = [
 const PROJECT_STATS = [
   { value: '199', label: 'Countries Profiled', icon: Globe2, color: '#4A90D9' },
   { value: '1,000,000', label: 'Target Knowledge Nodes', icon: Network, color: '#6B3FA0' },
-  { value: '10,989', label: 'Actors in Annals Catalog', icon: CheckCircle2, color: '#2F855A' },
+  { value: '10,951', label: 'Actors in Annals Catalog', icon: CheckCircle2, color: '#2F855A' },
   { value: '16', label: 'Interpretive Frameworks', icon: Layers, color: '#D4AF37' },
   { value: '6', label: 'Canonical Eras', icon: BarChart3, color: '#C53030' },
   { value: '127', label: 'Weapons Catalogued', icon: Target, color: '#8B3A3A' },
@@ -239,7 +239,7 @@ export default function Curator() {
             </Flex>
           ))}
           <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace' color="#718096" mt={3} textAlign="right">
-            Annals Catalog — 10,989 unique actors across 7 eras (source of truth)
+            Annals Catalog — 10,951 unique actors across 7 eras (source of truth)
           </Text>
         </Box>
       </Box>
