@@ -14,6 +14,7 @@ import { REFORMATION_ENTITIES } from './reformation'
 import { BIBLICAL_ENTITIES } from './biblical'
 import { GEO_REGISTRY_ENTITIES } from './geoRegistry'
 import { DIVISION_ENRICHMENT_ENTITIES } from './divisionEnrichment'
+import { DIVISION_EXPANSION_ENTITIES } from './divisionExpansion'
 
 // ── Corpus imports ──
 import { MESOPOTAMIAN_ENTITIES } from './corpuses/mesopotamian'
@@ -55,6 +56,70 @@ function dedup(entities: Entity[]): Entity[] {
 }
 
 /**
+ * Fix era assignment for entities whose numeric period contradicts their era.
+ * Auto-generated textNode entities inherit the parent entity's era, which is
+ * the era of the SUBJECT. But texts published in modern times should reflect
+ * their publication date so they appear in the correct era timeline.
+ */
+const ERA_FIX_MAP: Record<string, [string, string]> = {} // slug → [era, eraSlug] — manual overrides if needed
+
+/** Misclassified division 380 (Educational) entities → 310 (Government & State) */
+const CALL_NUMBER_FIXES: Record<string, string> = {
+  'national-assembly-bhutan':              '310.national-assembly-bhutan',
+  'western-bulgarian-empire':              '310.western-bulgarian-empire',
+  'yellow-turban-rebellion-devastates-the-empire-and-leads-to-the-three-kingdoms':
+                                           '510.yellow-turban-rebellion',
+  'kong-empire':                           '310.kong-empire',
+  'jan-hus-burned-at-stake-at-council-of-constance':
+                                           '510.jan-hus-burned-at-stake',
+  'livonian-confederation-estonia':        '310.livonian-confederation-estonia',
+  'abbasid-caliphate-indonesia':           '310.abbasid-caliphate-indonesia',
+  'union-of-lublin-creates-the-polish-lithuanian-commonwealth':
+                                           '310.union-of-lublin',
+  'philippine-commonwealth-established-with-manuel-quezon-as-president':
+                                           '310.philippine-commonwealth-established',
+  'philippine-commonwealth':               '310.philippine-commonwealth',
+  'socialist-republic-vietnam':            '310.socialist-republic-vietnam',
+}
+
+function fixEras(entities: Entity[]): Entity[] {
+  return entities.map(e => {
+    // Apply call-number fixes for misclassified entities
+    const cnFix = CALL_NUMBER_FIXES[e.slug]
+
+    const p = e.period
+    if (!p && !cnFix) return e
+    if (!p && cnFix) return { ...e, callNumber: cnFix }
+
+    // Parse numeric year (handles "1997", "534 CE", "c. 1300")
+    const cleaned = String(p).replace(/c\.\s*/i, '').replace(/\s*CE/i, '').replace(/\s*BCE/i, '').trim()
+    const num = parseInt(cleaned, 10)
+    if (isNaN(num)) return cnFix ? { ...e, callNumber: cnFix } : e
+    // BCE handling: if original has BCE, negate
+    const year = /BCE/i.test(String(p)) ? -num : num
+
+    let expectedEra: string
+    let expectedSlug: string
+    if (year < -3000)       { expectedEra = 'Prehistoric';  expectedSlug = 'prehistoric' }
+    else if (year <= 500)   { expectedEra = 'Classical';    expectedSlug = 'classical' }
+    else if (year <= 1500)  { expectedEra = 'Medieval';     expectedSlug = 'medieval' }
+    else if (year <= 1800)  { expectedEra = 'Early Modern'; expectedSlug = 'early-modern' }
+    else if (year <= 1945)  { expectedEra = 'Modern';       expectedSlug = 'modern' }
+    else                    { expectedEra = 'Contemporary'; expectedSlug = 'contemporary' }
+
+    const eraChanged = e.era !== expectedEra
+    if (eraChanged || cnFix) {
+      return {
+        ...e,
+        ...(eraChanged ? { era: expectedEra, eraSlug: expectedSlug } : {}),
+        ...(cnFix ? { callNumber: cnFix } : {}),
+      }
+    }
+    return e
+  })
+}
+
+/**
  * Apply enrichment data: add cross-entity relationships, text slugs, and frameworks.
  */
 function applyEnrichment(entities: Entity[]): Entity[] {
@@ -87,7 +152,7 @@ function applyEnrichment(entities: Entity[]): Entity[] {
  * Deduplicated by slug; hand-curated entries take priority over auto-generated.
  * Enriched with cross-entity relationships, text slug linking, and frameworks.
  */
-export const ALL_CATALOG_ENTITIES: Entity[] = applyEnrichment(dedup([
+export const ALL_CATALOG_ENTITIES: Entity[] = fixEras(applyEnrichment(dedup([
   // ── Hand-curated era entities (highest priority) ──
   ...prehistoricEntities,
   ...classicalEntities,
@@ -98,6 +163,7 @@ export const ALL_CATALOG_ENTITIES: Entity[] = applyEnrichment(dedup([
   ...modernEntities,
   ...contemporaryEntities,
   ...DIVISION_ENRICHMENT_ENTITIES,
+  ...DIVISION_EXPANSION_ENTITIES,
   // ── Corpus entities ──
   ...MESOPOTAMIAN_ENTITIES,
   ...EGYPTIAN_ENTITIES,
@@ -118,7 +184,7 @@ export const ALL_CATALOG_ENTITIES: Entity[] = applyEnrichment(dedup([
   ...TEXT_NODE_ENTITIES,
   // ── Geo-registry (auto-generated, lowest priority) ──
   ...GEO_REGISTRY_ENTITIES,
-]))
+])))
 
 /** Slug → Entity lookup map (built once at import time) */
 const SLUG_MAP = new Map<string, Entity>()
