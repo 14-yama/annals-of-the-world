@@ -14,6 +14,7 @@ import {
   parseCallNumber, getCallNumberBreadcrumbs, getCallNumberColor,
   getDivisionHeading, DIVISIONS,
 } from '../constants/callNumbers'
+import { FRAMEWORK_MAP } from '../constants/frameworks'
 
 /* ── Era breadcrumb data ── */
 const ERAS = [
@@ -32,12 +33,12 @@ const SLUG_TO_ERA_ID: Record<string, string> = {
 }
 
 const TABS = [
-  { id: 'overview',  label: 'Overview',          icon: BookOpen },
-  { id: 'causes',    label: 'Causes & Effects',  icon: ArrowRight },
-  { id: 'people',    label: 'Relationships',     icon: Users },
-  { id: 'places',    label: 'Places',            icon: MapPin },
-  { id: 'texts',     label: 'Texts',             icon: FileText },
-  { id: 'graph',     label: 'Graph',             icon: Network },
+  { id: 'overview',    label: 'Overview',        icon: BookOpen },
+  { id: 'frameworks',  label: 'Frameworks',      icon: Layers },
+  { id: 'people',      label: 'Relationships',   icon: Users },
+  { id: 'places',      label: 'Places',          icon: MapPin },
+  { id: 'texts',       label: 'Texts',           icon: FileText },
+  { id: 'graph',       label: 'Graph',           icon: Network },
 ]
 
 /* ── Label colors (Golden Markers from Alexandria schema) ── */
@@ -623,56 +624,103 @@ export default function EntityPage() {
               </Box>
             )}
 
-            {/* CAUSES & EFFECTS */}
-            {activeTab === 'causes' && (
+            {/* FRAMEWORKS */}
+            {activeTab === 'frameworks' && (
               <Box>
-                {entity.causes.length === 0 && entity.effects.length === 0 ? (
-                  <Flex direction="column" align="center" justify="center" minH="200px" gap={3}>
-                    <ArrowRight size={36} color="#D6D3CC" />
-                    <Text fontFamily='"Cinzel", serif' fontSize="sm" color="#9E9A90"
-                      letterSpacing="0.1em" textTransform="uppercase">No causal data yet</Text>
-                    <Text fontSize="xs" color="#B8B2A4" textAlign="center" maxW="400px">
-                      Causes and effects for this entity have not been documented. Scholarly sources will be added in future curator batches.
-                    </Text>
-                  </Flex>
-                ) : (
-                  <>
+                {/* ── Active Frameworks ── */}
+                {(entity.frameworks && entity.frameworks.length > 0) ? (
+                  <Box mb={6}>
                     <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
                       letterSpacing="0.15em" textTransform="uppercase" mb={4}>
-                      Causes — What led to this
+                      Interpretive Frameworks
                     </Text>
-                    {entity.causes.length === 0 && (
-                      <Text fontSize="xs" color="#B8B2A4" mb={4} fontStyle="italic">No documented causes.</Text>
-                    )}
-                    {entity.causes.map((c, i) => (
-                      <Flex key={i} align="flex-start" gap={4} py={3}
-                        borderBottom={i < entity.causes.length - 1 ? '1px solid #EEEDEA' : 'none'}>
-                        <Box mt="3px" flexShrink={0}><ArrowRight size={14} color="#D4AF37" /></Box>
-                        <Box flex={1}>
-                          {c.slug ? (
-                            <RouterLink to={`/entity/${c.slug}`} style={{ textDecoration: 'none' }}>
-                              <Text fontSize="sm" color="#3B6BC2" fontWeight={500}>{c.title}</Text>
-                            </RouterLink>
-                          ) : (
-                            <Text fontSize="sm" color="#2D2A24" fontWeight={500}>{c.title}</Text>
-                          )}
-                          <Flex gap={2} mt={1} align="center">
-                            <Box bg="#F5F4F0" border="1px solid #EEEDEA" borderRadius="full" px={2} py={0.5}>
-                              <Text fontSize="10px" color="#787469">{c.type}</Text>
+                    <Text fontSize="xs" color="#9E9A90" mb={4}>
+                      Historical lenses through which this actor is analyzed. Each framework highlights a different dimension of historical significance.
+                    </Text>
+                    <SimpleGrid columns={{ base: 1, md: 2 }} gap={3}>
+                      {entity.frameworks.map((fwId) => {
+                        const fw = FRAMEWORK_MAP[fwId]
+                        if (!fw) return (
+                          <Box key={fwId} p={4} bg="#FAFAF8" border="1px solid #EEEDEA" borderRadius="lg">
+                            <Text fontSize="sm" fontWeight={600} color="#2D2A24">{fwId.replace(/_/g, ' ')}</Text>
+                          </Box>
+                        )
+                        return (
+                          <Box key={fwId} p={4} bg="#FAFAF8" border="1px solid #EEEDEA" borderRadius="lg"
+                            borderLeft="3px solid" borderLeftColor={fw.color}>
+                            <Flex align="center" gap={2} mb={2}>
+                              <Box w="8px" h="8px" borderRadius="full" bg={fw.color} />
+                              <Text fontSize="sm" fontWeight={700} color="#2D2A24">{fw.name}</Text>
+                            </Flex>
+                            <Text fontSize="xs" color="#524E44" lineHeight={1.6} mb={2}>
+                              {fw.description}
+                            </Text>
+                            <Flex gap={1} flexWrap="wrap">
+                              {fw.verbs.map((v) => (
+                                <Box key={v} bg="rgba(212,175,55,0.10)" border="1px solid rgba(212,175,55,0.25)"
+                                  borderRadius="4px" px={2} py={0.5}>
+                                  <Text fontFamily='"JetBrains Mono", monospace' fontSize="9px"
+                                    color="#96770B" letterSpacing="0.05em">{v}</Text>
+                                </Box>
+                              ))}
+                            </Flex>
+                          </Box>
+                        )
+                      })}
+                    </SimpleGrid>
+                  </Box>
+                ) : (
+                  <Box mb={6}>
+                    <Flex direction="column" align="center" justify="center" minH="100px" gap={2}>
+                      <Layers size={24} color="#D6D3CC" />
+                      <Text fontSize="xs" color="#B8B2A4" textAlign="center" maxW="400px">
+                        No interpretive frameworks have been assigned to this actor yet.
+                      </Text>
+                    </Flex>
+                  </Box>
+                )}
+
+                {/* ── Causes & Effects Chain ── */}
+                {(entity.causes.length > 0 || entity.effects.length > 0) && (
+                  <Box mt={2} pt={4} borderTop="1px solid #EEEDEA">
+                    <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
+                      letterSpacing="0.15em" textTransform="uppercase" mb={4}>
+                      Causal Chain — Antecedents &amp; Consequences
+                    </Text>
+
+                    {entity.causes.length > 0 && (
+                      <Box mb={4}>
+                        <Text fontSize="xs" fontWeight={600} color="#96770B" mb={2}>
+                          What led to this
+                        </Text>
+                        {entity.causes.map((c, i) => (
+                          <Flex key={i} align="flex-start" gap={4} py={3}
+                            borderBottom={i < entity.causes.length - 1 ? '1px solid #EEEDEA' : 'none'}>
+                            <Box mt="3px" flexShrink={0}><ArrowRight size={14} color="#D4AF37" /></Box>
+                            <Box flex={1}>
+                              {c.slug ? (
+                                <RouterLink to={`/entity/${c.slug}`} style={{ textDecoration: 'none' }}>
+                                  <Text fontSize="sm" color="#3B6BC2" fontWeight={500}>{c.title}</Text>
+                                </RouterLink>
+                              ) : (
+                                <Text fontSize="sm" color="#2D2A24" fontWeight={500}>{c.title}</Text>
+                              )}
+                              <Flex gap={2} mt={1} align="center">
+                                <Box bg="#F5F4F0" border="1px solid #EEEDEA" borderRadius="full" px={2} py={0.5}>
+                                  <Text fontSize="10px" color="#787469">{c.type}</Text>
+                                </Box>
+                                {c.year && <Text fontSize="xs" color="#9E9A90">{c.year}</Text>}
+                              </Flex>
                             </Box>
-                            {c.year && (
-                              <Text fontSize="xs" color="#9E9A90">{c.year}</Text>
-                            )}
                           </Flex>
-                        </Box>
-                      </Flex>
-                    ))}
+                        ))}
+                      </Box>
+                    )}
 
                     {entity.effects.length > 0 && (
-                      <Box mt={6} pt={4} borderTop="1px solid #EEEDEA">
-                        <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
-                          letterSpacing="0.15em" textTransform="uppercase" mb={4}>
-                          Effects — Consequences and results
+                      <Box mt={2} pt={3} borderTop="1px solid #EEEDEA">
+                        <Text fontSize="xs" fontWeight={600} color="#8B3A3A" mb={2}>
+                          Consequences and results
                         </Text>
                         {entity.effects.map((ef, i) => (
                           <Flex key={i} align="flex-start" gap={4} py={3}
@@ -690,16 +738,14 @@ export default function EntityPage() {
                                 <Box bg="#F5F4F0" border="1px solid #EEEDEA" borderRadius="full" px={2} py={0.5}>
                                   <Text fontSize="10px" color="#787469">{ef.type}</Text>
                                 </Box>
-                                {ef.year && (
-                                  <Text fontSize="xs" color="#9E9A90">{ef.year}</Text>
-                                )}
+                                {ef.year && <Text fontSize="xs" color="#9E9A90">{ef.year}</Text>}
                               </Flex>
                             </Box>
                           </Flex>
                         ))}
                       </Box>
                     )}
-                  </>
+                  </Box>
                 )}
               </Box>
             )}
