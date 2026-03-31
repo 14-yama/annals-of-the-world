@@ -33,6 +33,9 @@ import { SCIENCE_TECH_ENTITIES } from './corpuses/scienceTech'
 // ── Topic entities (weapons, medicine, architecture, agriculture, navigation, languages) ──
 import { ALL_TOPIC_ENTITIES } from './topicEntities'
 
+// ── Text node entities (generated from actor text references) ──
+import { TEXT_NODE_ENTITIES } from './textNodes'
+
 import type { Entity } from '../entityTypes'
 
 /**
@@ -79,6 +82,8 @@ export const ALL_CATALOG_ENTITIES: Entity[] = dedup([
   ...SCIENCE_TECH_ENTITIES,
   // ── Topic entities ──
   ...ALL_TOPIC_ENTITIES,
+  // ── Text node entities (auto-generated from text references) ──
+  ...TEXT_NODE_ENTITIES,
   // ── Geo-registry (auto-generated, lowest priority) ──
   ...GEO_REGISTRY_ENTITIES,
 ])
