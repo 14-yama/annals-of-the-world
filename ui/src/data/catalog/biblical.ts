@@ -940,50 +940,6 @@ export const BIBLICAL_ENTITIES: Entity[] = [
   //  PEOPLE — New Testament
   // ═══════════════════════════════════════════════════════════════════
   {
-    slug: 'jesus_of_nazareth',
-    name: 'Jesus of Nazareth',
-    label: 'Person',
-    callNumber: '250.40-jesus-of-nazareth',
-    subjectHeadings: ['People — Religious Figures — Founders & Central Figures'],
-    subjects: ['Christianity', 'Messiah', 'Gospels', 'Crucifixion', 'Resurrection', 'Kingdom of God', 'Sermon on the Mount'],
-    summary: 'Central figure of Christianity (c. 4 BCE – c. 30 CE), believed by Christians to be the Son of God, the Messiah prophesied in the Hebrew Bible. His teachings on love, forgiveness, and the Kingdom of God, his crucifixion under Pontius Pilate, and his reported resurrection form the foundation of the world\'s largest religion (2.4 billion adherents).',
-    born: 'c. 4 BCE, Bethlehem',
-    died: 'c. 30 CE, Jerusalem (crucified)',
-    era: 'Classical',
-    eraSlug: 'classical',
-    region: 'Middle East',
-    continent: 'Asia',
-    status: 'Published',
-    frameworks: ['DOCTRINE_DEVELOPMENT', 'CULTURAL_DIFFUSION', 'CAUSE_AND_EFFECT'],
-    causes: [
-      { title: 'Messianic expectation in Second Temple Judaism', type: 'Idea', year: 'c. 200 BCE' },
-      { title: 'Roman occupation of Judea', type: 'Event', year: '63 BCE' },
-    ],
-    effects: [
-      { title: 'Christianity emerges', type: 'Movement', year: 'c. 30 CE', slug: 'early_christianity' },
-      { title: 'New Testament written', type: 'Text', year: 'c. 50–100 CE' },
-      { title: 'Christianity becomes world religion', type: 'Movement', year: '313 CE' },
-    ],
-    relationships: [
-      { sourceSlug: 'jesus_of_nazareth', sourceName: 'Jesus', verb: 'TEACHES', targetSlug: 'apostle_peter', targetName: 'Peter', context: 'Chief apostle, "rock" of the church' },
-      { sourceSlug: 'jesus_of_nazareth', sourceName: 'Jesus', verb: 'TEACHES', targetSlug: 'apostle_john', targetName: 'John', context: 'Beloved disciple' },
-      { sourceSlug: 'jesus_of_nazareth', sourceName: 'Jesus', verb: 'INFLUENCES', targetSlug: 'apostle_paul', targetName: 'Paul', context: 'Conversion experience on Damascus road' },
-      { sourceSlug: 'jesus_of_nazareth', sourceName: 'Jesus', verb: 'ESTABLISHES', targetSlug: 'early_christianity', targetName: 'Early Christianity', context: 'Founded the faith through his life, death, and resurrection' },
-    ],
-    places: [
-      { name: 'Bethlehem', role: 'Birthplace' },
-      { name: 'Nazareth', role: 'Childhood home' },
-      { name: 'Jerusalem', role: 'Ministry, crucifixion, resurrection', slug: 'jerusalem' },
-      { name: 'Capernaum', role: 'Center of Galilean ministry' },
-    ],
-    texts: [
-      { title: 'Gospel of Matthew', type: 'Gospel', slug: 'gospel_of_matthew' },
-      { title: 'Gospel of Mark', type: 'Gospel', slug: 'gospel_of_mark' },
-      { title: 'Gospel of Luke', type: 'Gospel', slug: 'gospel_of_luke' },
-      { title: 'Gospel of John', type: 'Gospel', slug: 'gospel_of_john' },
-    ],
-  },
-  {
     slug: 'mary_mother_of_jesus',
     name: 'Mary, Mother of Jesus',
     label: 'Person',
@@ -2005,7 +1961,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'c. 30–325 CE',
     frameworks: ['DOCTRINE_DEVELOPMENT', 'CULTURAL_DIFFUSION', 'CAUSE_AND_EFFECT'],
     causes: [
-      { title: 'Jesus\' life, death, and resurrection', type: 'Person', year: 'c. 30 CE', slug: 'jesus_of_nazareth' },
+      { title: 'Jesus\' life, death, and resurrection', type: 'Person', year: 'c. 30 CE', slug: 'jesus' },
       { title: 'Pentecost and apostolic preaching', type: 'Event', year: 'c. 30 CE', slug: 'pentecost' },
     ],
     effects: [

@@ -368,33 +368,6 @@ export const EGYPTIAN_ENTITIES: Entity[] = [
     ],
     texts: [],
   },
-  {
-    slug: 'cleopatra_vii',
-    name: 'Cleopatra VII',
-    label: 'Person',
-    callNumber: '250.23-cleopatra-vii',
-    subjectHeadings: ['People — Ancient Rulers — Egyptian Pharaohs'],
-    subjects: ['Ptolemaic Egypt', 'Last Pharaoh', 'Rome', 'Julius Caesar', 'Mark Antony', 'Hellenistic World'],
-    summary: 'Last active ruler of the Ptolemaic Kingdom of Egypt (r. 51–30 BCE), Cleopatra VII Philopator was a polyglot scholar, shrewd diplomat, and the only Ptolemaic ruler to learn the Egyptian language. Her political alliances with Julius Caesar and Mark Antony, and her dramatic death following the Battle of Actium (30 BCE), ended both the Ptolemaic dynasty and 3,000 years of pharaonic rule, transforming Egypt into a Roman province. Her story has been endlessly mythologized, but she was primarily a sophisticated political strategist who nearly preserved Egyptian independence against Rome\'s expansion.',
-    born: '69 BCE',
-    died: '30 BCE',
-    era: 'Classical',
-    eraSlug: 'classical',
-    region: 'North Africa',
-    continent: 'Africa',
-    status: 'Published',
-    frameworks: ['CULTURAL_DIFFUSION'],
-    causes: [],
-    effects: [
-      { title: 'Egypt becomes a Roman province', type: 'Event', year: '30 BCE' },
-      { title: 'End of pharaonic civilization after 3,000 years', type: 'Event', year: '30 BCE' },
-    ],
-    relationships: [],
-    places: [
-      { name: 'Alexandria', role: 'Capital of Ptolemaic Egypt' },
-    ],
-    texts: [],
-  },
 
   // ═══════════════════════════════════════════════════════════════════
   //  INSTITUTIONS
