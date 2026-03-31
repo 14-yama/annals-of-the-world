@@ -35,8 +35,25 @@ import { ALL_TOPIC_ENTITIES } from './topicEntities'
 
 import type { Entity } from '../entityTypes'
 
-/** All entities across every era, in chronological era order */
-export const ALL_CATALOG_ENTITIES: Entity[] = [
+/**
+ * Deduplicate: first occurrence of each slug wins.
+ * Hand-curated entities appear before auto-generated ones, so they take priority.
+ */
+function dedup(entities: Entity[]): Entity[] {
+  const seen = new Set<string>()
+  return entities.filter(e => {
+    if (seen.has(e.slug)) return false
+    seen.add(e.slug)
+    return true
+  })
+}
+
+/**
+ * All entities across every era — the Annals Catalog: source of truth.
+ * Deduplicated by slug; hand-curated entries take priority over auto-generated.
+ */
+export const ALL_CATALOG_ENTITIES: Entity[] = dedup([
+  // ── Hand-curated era entities (highest priority) ──
   ...prehistoricEntities,
   ...classicalEntities,
   ...BIBLICAL_ENTITIES,
@@ -46,7 +63,6 @@ export const ALL_CATALOG_ENTITIES: Entity[] = [
   ...modernEntities,
   ...contemporaryEntities,
   ...DIVISION_ENRICHMENT_ENTITIES,
-  ...GEO_REGISTRY_ENTITIES,
   // ── Corpus entities ──
   ...MESOPOTAMIAN_ENTITIES,
   ...EGYPTIAN_ENTITIES,
@@ -63,7 +79,9 @@ export const ALL_CATALOG_ENTITIES: Entity[] = [
   ...SCIENCE_TECH_ENTITIES,
   // ── Topic entities ──
   ...ALL_TOPIC_ENTITIES,
-]
+  // ── Geo-registry (auto-generated, lowest priority) ──
+  ...GEO_REGISTRY_ENTITIES,
+])
 
 /** Slug → Entity lookup map (built once at import time) */
 const SLUG_MAP = new Map<string, Entity>()

@@ -17,6 +17,12 @@ import { ARCHITECTURE } from '../architecture'
 import { AGRICULTURE } from '../agriculture'
 import { NAVIGATION } from '../navigation'
 import { LANGUAGES } from '../languages'
+import { TRIBES } from '../tribes'
+import { TRANSPORTATION } from '../transportation'
+import { CLOTHING } from '../clothing'
+import { MARRIAGES } from '../marriage'
+import { CUSTOMS } from '../customs'
+import { PUNISHMENTS } from '../punishment'
 
 const ERA_MAP = {
   prehistoric:  { eraSlug: 'prehistoric',    era: 'Prehistoric' },
@@ -51,6 +57,30 @@ export const LANGUAGES_ENTITIES = convertTopicItems(LANGUAGES, {
   classPrefix: '610', label: 'Idea', topicTag: 'Languages & Scripts', eraMap: ERA_MAP,
 })
 
+export const TRIBES_ENTITIES = convertTopicItems(TRIBES, {
+  classPrefix: '620', label: 'Movement', topicTag: 'Tribes & Peoples', eraMap: ERA_MAP,
+})
+
+export const TRANSPORTATION_ENTITIES = convertTopicItems(TRANSPORTATION, {
+  classPrefix: '630', label: 'EventWindow', topicTag: 'Transportation', eraMap: ERA_MAP,
+})
+
+export const CLOTHING_ENTITIES = convertTopicItems(CLOTHING, {
+  classPrefix: '640', label: 'Idea', topicTag: 'Clothing & Textiles', eraMap: ERA_MAP,
+})
+
+export const MARRIAGE_ENTITIES = convertTopicItems(MARRIAGES, {
+  classPrefix: '650', label: 'Movement', topicTag: 'Marriage & Union', eraMap: ERA_MAP,
+})
+
+export const CUSTOMS_ENTITIES = convertTopicItems(CUSTOMS, {
+  classPrefix: '660', label: 'Movement', topicTag: 'Customs & Traditions', eraMap: ERA_MAP,
+})
+
+export const PUNISHMENT_ENTITIES = convertTopicItems(PUNISHMENTS, {
+  classPrefix: '670', label: 'EventWindow', topicTag: 'Corporal Punishment & Justice', eraMap: ERA_MAP,
+})
+
 export const ALL_TOPIC_ENTITIES = [
   ...WEAPONS_ENTITIES,
   ...MEDICINE_ENTITIES,
@@ -58,4 +88,10 @@ export const ALL_TOPIC_ENTITIES = [
   ...AGRICULTURE_ENTITIES,
   ...NAVIGATION_ENTITIES,
   ...LANGUAGES_ENTITIES,
+  ...TRIBES_ENTITIES,
+  ...TRANSPORTATION_ENTITIES,
+  ...CLOTHING_ENTITIES,
+  ...MARRIAGE_ENTITIES,
+  ...CUSTOMS_ENTITIES,
+  ...PUNISHMENT_ENTITIES,
 ]
