@@ -618,6 +618,12 @@ Introduce interpretive nodes (label: Framework) analogous to pattern guide:
 - ADAPTATION
 - CAUSE_AND_EFFECT
 - TEMPORAL_LINKAGE
+- ECONOMIC_SYSTEMS
+- POLITICAL_SYSTEMS
+- COMPARATIVE_RELIGION
+- EMPIRE_AND_COLONIALISM
+- ENVIRONMENTAL_HISTORY
+- INNOVATION_AND_TECHNOLOGY
 
 Usage: Content node --VERB--> Content node optionally --FRAMED_BY--> Framework. Avoid using Framework nodes as generic targets for all edges; only attach where a lens adds explanatory value.
 

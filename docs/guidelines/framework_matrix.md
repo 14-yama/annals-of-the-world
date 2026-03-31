@@ -21,6 +21,12 @@ Matrix (Framework → Description → Recommended verbs → Often associated fra
 | CONFLICT_AND_RESOLUTION | Captures schisms, wars, negotiations, reconciliations and the social/political effects of conflict. | CAUSES, RESOLVES, RADICALIZES, RECONCILES_WITH | GEOPOLITICAL_LINKAGE, ADAPTATION |
 | ADAPTATION | Emphasizes contextual reinterpretation, transformation, and local reworking of imported practices or ideas. | ADAPTS, TRANSFORMS, REINTERPRETS | CULTURAL_DIFFUSION, CAUSE_AND_EFFECT |
 | TEMPORAL_LINKAGE | Used for ordering and periodization claims that connect events, reforms, or transitions across time. | PRECEDES, FOLLOWS, IS_ANTECEDENT_TO | CAUSE_AND_EFFECT, CONFLICT_AND_RESOLUTION |
+| ECONOMIC_SYSTEMS | Analyzes modes of production, trade networks, fiscal policy, monetary systems, and the material basis of civilizations. | TRADES_WITH, PRODUCES, FINANCES, DISTRIBUTES | CAUSE_AND_EFFECT, POLITICAL_SYSTEMS, INNOVATION_AND_TECHNOLOGY |
+| POLITICAL_SYSTEMS | Examines structures of governance, sovereignty, statecraft, constitutionalism, and the evolution of political authority. | GOVERNS, LEGISLATES, ADMINISTERS, DELEGATES | LEGAL_INTERPRETATION, CONFLICT_AND_RESOLUTION, ECONOMIC_SYSTEMS |
+| COMPARATIVE_RELIGION | Compares doctrines, practices, institutions, and histories across religious traditions to reveal shared patterns and distinct trajectories. | COMPARES, SYNCRETIZES, DIFFERENTIATES, CONVERTS | DOCTRINE_DEVELOPMENT, RITUAL_STANDARDIZATION, CULTURAL_DIFFUSION |
+| EMPIRE_AND_COLONIALISM | Focuses on imperial expansion, colonial administration, resistance movements, decolonization, and postcolonial legacies. | COLONIZES, ADMINISTERS, RESISTS, DECOLONIZES | GEOPOLITICAL_LINKAGE, CONFLICT_AND_RESOLUTION, ECONOMIC_SYSTEMS |
+| ENVIRONMENTAL_HISTORY | Examines the interaction between human societies and the natural environment: climate, ecology, resource use, and environmental change. | EXPLOITS, CONSERVES, DEPLETES, ADAPTS_TO | ADAPTATION, ECONOMIC_SYSTEMS, INNOVATION_AND_TECHNOLOGY |
+| INNOVATION_AND_TECHNOLOGY | Tracks invention, diffusion, and impact of technologies, engineering achievements, and scientific breakthroughs on societies. | INVENTS, INNOVATES, DISRUPTS, MECHANIZES | CAUSE_AND_EFFECT, ECONOMIC_SYSTEMS, CULTURAL_DIFFUSION |
 
 Usage note
 

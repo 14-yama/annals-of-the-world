@@ -145,6 +145,62 @@ SET
   f.version     = 5
 ;
 
+// ---------- v6 Expanded Analytical Frameworks ----------
+UNWIND [
+  {
+    code:'ECONOMIC_SYSTEMS',
+    name:'Economic Systems',
+    category:'Economics',
+    definition:'Analyzes modes of production, trade networks, fiscal policy, monetary systems, and the material basis of civilizations.',
+    notes:'Verbs: TRADES_WITH, PRODUCES, FINANCES, DISTRIBUTES. Related: CAUSE_AND_EFFECT, POLITICAL_SYSTEMS, INNOVATION_AND_TECHNOLOGY.'
+  },
+  {
+    code:'POLITICAL_SYSTEMS',
+    name:'Political Systems',
+    category:'Governance',
+    definition:'Examines structures of governance, sovereignty, statecraft, constitutionalism, and the evolution of political authority.',
+    notes:'Verbs: GOVERNS, LEGISLATES, ADMINISTERS, DELEGATES. Related: LEGAL_INTERPRETATION, CONFLICT_AND_RESOLUTION, ECONOMIC_SYSTEMS.'
+  },
+  {
+    code:'COMPARATIVE_RELIGION',
+    name:'Comparative Religion',
+    category:'Religion',
+    definition:'Compares doctrines, practices, institutions, and histories across religious traditions to reveal shared patterns and distinct trajectories.',
+    notes:'Verbs: COMPARES, SYNCRETIZES, DIFFERENTIATES, CONVERTS. Related: DOCTRINE_DEVELOPMENT, RITUAL_STANDARDIZATION, CULTURAL_DIFFUSION.'
+  },
+  {
+    code:'EMPIRE_AND_COLONIALISM',
+    name:'Empire & Colonialism',
+    category:'Imperial History',
+    definition:'Focuses on imperial expansion, colonial administration, resistance movements, decolonization, and postcolonial legacies.',
+    notes:'Verbs: COLONIZES, ADMINISTERS, RESISTS, DECOLONIZES. Related: GEOPOLITICAL_LINKAGE, CONFLICT_AND_RESOLUTION, ECONOMIC_SYSTEMS.'
+  },
+  {
+    code:'ENVIRONMENTAL_HISTORY',
+    name:'Environmental History',
+    category:'Environment',
+    definition:'Examines the interaction between human societies and the natural environment: climate, ecology, resource use, and environmental change.',
+    notes:'Verbs: EXPLOITS, CONSERVES, DEPLETES, ADAPTS_TO. Related: ADAPTATION, ECONOMIC_SYSTEMS, INNOVATION_AND_TECHNOLOGY.'
+  },
+  {
+    code:'INNOVATION_AND_TECHNOLOGY',
+    name:'Innovation & Technology',
+    category:'Technology',
+    definition:'Tracks invention, diffusion, and impact of technologies, engineering achievements, and scientific breakthroughs on societies.',
+    notes:'Verbs: INVENTS, INNOVATES, DISRUPTS, MECHANIZES. Related: CAUSE_AND_EFFECT, ECONOMIC_SYSTEMS, CULTURAL_DIFFUSION.'
+  }
+] AS fw
+MERGE (f:Framework {code:fw.code})
+SET
+  f.name        = fw.name,
+  f.category    = fw.category,
+  f.definition  = fw.definition,
+  f.notes       = fw.notes,
+  f.created_at  = datetime(),
+  f.created_by  = 'curator_system',
+  f.version     = 6
+;
+
 // ---------- Optional validation query ----------
 MATCH (f:Framework)
 RETURN f.code, f.name, f.category

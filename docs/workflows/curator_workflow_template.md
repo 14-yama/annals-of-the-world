@@ -71,6 +71,12 @@ Link relationships to interpretive frameworks:
 | ENDORSES, SUPPORTS, ALLIES_WITH | conflict_and_cooperation |
 | WRITES, AUTHORS, TRANSLATES | intellectual_history |
 | LEADS, ORGANIZES, ADMINISTERS | political_analysis |
+| TRADES_WITH, PRODUCES, FINANCES, DISTRIBUTES | economic_systems |
+| GOVERNS, LEGISLATES, DELEGATES | political_systems |
+| COMPARES, SYNCRETIZES, CONVERTS | comparative_religion |
+| COLONIZES, ADMINISTERS, RESISTS, DECOLONIZES | empire_and_colonialism |
+| EXPLOITS, CONSERVES, DEPLETES, ADAPTS_TO | environmental_history |
+| INVENTS, INNOVATES, DISRUPTS, MECHANIZES | innovation_and_technology |
 
 **Command:**
 ```bash

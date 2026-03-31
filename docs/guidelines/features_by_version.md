@@ -18,7 +18,7 @@ This project tracks schema and governance evolution by version.
 - Generic vs Contextual: generic timeless hubs (e.g., `Rome`) vs contextual instances (e.g., `Roman Empire 27 BCE–476 CE`).
 
 ### v3 — Framework Tags & Historian Lenses
-- Historian frameworks introduced (Cause & Effect, Continuity & Change, Cultural Diffusion, Precedent, Symbolism, Influence, Conflict, Temporal Linkage, etc.).
+- Historian frameworks introduced (Cause & Effect, Continuity & Change, Cultural Diffusion, Precedent, Symbolism, Influence, Conflict, Temporal Linkage, Economic Systems, Political Systems, Comparative Religion, Empire & Colonialism, Environmental History, Innovation & Technology — 16 total).
 - Framework tags initially attached as relationship properties (pre-v4).
 - Extended framework registry for politics and institutional analysis.
 
@@ -57,7 +57,7 @@ This document summarizes schema and governance changes across versions (v1 → v
 
 ### v3 — Framework Tags & Historian Lenses
 
-- Introduced historian frameworks (Cause & Effect, Continuity & Change, Cultural Diffusion, Influence, Conflict, Temporal Linkage, etc.).
+- Introduced historian frameworks (Cause & Effect, Continuity & Change, Cultural Diffusion, Influence, Conflict, Temporal Linkage, Economic Systems, Political Systems, Comparative Religion, Empire & Colonialism, Environmental History, Innovation & Technology — 16 total).
 - Initially implemented as relationship properties; registry expanded for analysis domains.
 
 ---
