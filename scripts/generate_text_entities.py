@@ -223,6 +223,24 @@ def main():
         'divisionEnrichment': 'divisionEnrichment.ts',
     }
 
+    # ── Collect all existing hand-curated slugs to avoid collisions ──
+    existing_slugs = set()
+    for key, fname in files.items():
+        fpath = os.path.join(BASE, fname)
+        if os.path.exists(fpath):
+            with open(fpath) as f:
+                for m in re.finditer(r"slug:\s*'([^']+)'", f.read()):
+                    existing_slugs.add(m.group(1))
+    # Also collect corpus entity slugs
+    corpus_dir = os.path.join(BASE, 'corpuses')
+    if os.path.isdir(corpus_dir):
+        for cf in os.listdir(corpus_dir):
+            if cf.endswith('.ts'):
+                with open(os.path.join(corpus_dir, cf)) as f:
+                    for m in re.finditer(r"slug:\s*'([^']+)'", f.read()):
+                        existing_slugs.add(m.group(1))
+    print(f"Existing hand-curated/corpus slugs: {len(existing_slugs)}")
+
     all_texts = []
     for key, fname in files.items():
         fpath = os.path.join(BASE, fname)
@@ -242,7 +260,40 @@ def main():
             seen_titles.add(norm)
             unique_texts.append(t)
 
-    print(f"Unique texts: {len(unique_texts)}")
+    print(f"Unique texts (by title): {len(unique_texts)}")
+
+    # Also deduplicate by slug and filter out collisions with existing entities
+    seen_slugs = set()
+    filtered_texts = []
+    skipped_collision = 0
+    skipped_dup_slug = 0
+    for t in unique_texts:
+        slug = t['slug'] if t['slug'] else slugify(t['title'])
+        if slug in existing_slugs:
+            skipped_collision += 1
+            continue
+        if slug in seen_slugs:
+            skipped_dup_slug += 1
+            continue
+        seen_slugs.add(slug)
+        filtered_texts.append(t)
+
+    print(f"Skipped (collision with hand-curated): {skipped_collision}")
+    print(f"Skipped (internal slug duplicates): {skipped_dup_slug}")
+    print(f"Final unique texts: {len(filtered_texts)}")
+
+    # Additional name-level dedup: skip texts whose name matches an existing entity
+    # These have different slugs but are conceptually the same actor
+    KNOWN_NAME_DUPES = {
+        'the_communist_manifesto', 'universal_declaration_of_human_rights',
+        'civil_rights_act_of_1964', 'muqaddimah_ibn_khaldun',
+        'sahih_albukhari', 'book_of_revelation', 'magna_carta_1215',
+    }
+    filtered_texts = [t for t in filtered_texts
+                      if (t['slug'] if t['slug'] else slugify(t['title'])) not in KNOWN_NAME_DUPES]
+    print(f"After name-dupe exclusion: {len(filtered_texts)}")
+
+    unique_texts = filtered_texts
 
     # Build entities
     division_counters: dict[str, int] = defaultdict(int)
@@ -284,13 +335,46 @@ def main():
         div_heading = div_names.get(div, 'Texts')
         subject_heading = f"Artifacts & Texts — {div_heading} — {era_name}"
 
-        # Summary
+        # Summary — build a richer description
         year_str = f" ({year})" if year else ""
-        summary = f"{title}{year_str} is a {text_type.lower()} "
-        if parent_name:
-            summary += f"associated with {parent_name}."
-        else:
-            summary += f"from the {era_name} era."
+
+        # Use more specific templates based on text type category
+        div = TYPE_TO_DIVISION.get(text_type, '740')
+        if div == '730':  # Religious
+            summary = f"{title}{year_str}, a {text_type.lower()} of the {era_name} era"
+            if parent_name:
+                summary += f", central to the study of {parent_name}"
+            summary += ". Part of the textual heritage shaping religious thought and tradition across civilizations."
+        elif div == '710':  # Legal / Treaty
+            summary = f"{title}{year_str}, a landmark {text_type.lower()}"
+            if parent_name:
+                summary += f" connected to {parent_name}"
+            summary += f". A defining document of the {era_name} era that shaped governance, law, or international relations."
+        elif div == '720':  # Legal Codes / Decrees
+            summary = f"{title}{year_str}, a {text_type.lower()}"
+            if parent_name:
+                summary += f" issued in the context of {parent_name}"
+            summary += f". A formative legal instrument of the {era_name} era with lasting impact on jurisprudence and authority."
+        elif div == '750':  # Scientific
+            summary = f"{title}{year_str}, a foundational {text_type.lower()}"
+            if parent_name:
+                summary += f" linked to {parent_name}"
+            summary += f". A key contribution to the {era_name} era\\'s scientific and intellectual development."
+        elif div == '760':  # Artworks / Literature
+            summary = f"{title}{year_str}, a celebrated {text_type.lower()}"
+            if parent_name:
+                summary += f" connected to {parent_name}"
+            summary += f". A major cultural work of the {era_name} era, reflecting the artistic currents and human experience of its time."
+        elif div == '770':  # Technological / Archaeological
+            summary = f"{title}{year_str}, a {text_type.lower()}"
+            if parent_name:
+                summary += f" documenting {parent_name}"
+            summary += f". Physical or technical evidence from the {era_name} era advancing understanding of historical material culture."
+        else:  # 740 — Philosophical / Historical / General
+            summary = f"{title}{year_str}, a {text_type.lower()}"
+            if parent_name:
+                summary += f" relating to {parent_name}"
+            summary += f". An influential work of the {era_name} era contributing to the intellectual and historical record of human civilization."
 
         # Frameworks
         frameworks = infer_frameworks(text_type)
