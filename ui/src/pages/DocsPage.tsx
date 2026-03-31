@@ -148,6 +148,12 @@ const FRAMEWORK_ENTRIES = [
   { name: 'CONFLICT_AND_RESOLUTION', description: 'Captures schisms, wars, negotiations, reconciliations and the social/political effects of conflict.', verbs: ['CAUSES', 'RESOLVES', 'RADICALIZES', 'RECONCILES_WITH'], related: ['GEOPOLITICAL_LINKAGE', 'ADAPTATION'], color: '#8B3A3A' },
   { name: 'ADAPTATION', description: 'Emphasizes contextual reinterpretation, transformation, and local reworking of imported practices or ideas.', verbs: ['ADAPTS', 'TRANSFORMS', 'REINTERPRETS'], related: ['CULTURAL_DIFFUSION', 'CAUSE_AND_EFFECT'], color: '#C5963A' },
   { name: 'TEMPORAL_LINKAGE', description: 'Used for ordering and periodization claims that connect events, reforms, or transitions across time.', verbs: ['PRECEDES', 'FOLLOWS', 'IS_ANTECEDENT_TO'], related: ['CAUSE_AND_EFFECT', 'CONFLICT_AND_RESOLUTION'], color: '#6B3FA0' },
+  { name: 'ECONOMIC_SYSTEMS', description: 'Analyzes modes of production, trade networks, fiscal policy, monetary systems, and the material basis of civilizations.', verbs: ['TRADES_WITH', 'PRODUCES', 'FINANCES', 'DISTRIBUTES'], related: ['CAUSE_AND_EFFECT', 'POLITICAL_SYSTEMS', 'INNOVATION_AND_TECHNOLOGY'], color: '#2F855A' },
+  { name: 'POLITICAL_SYSTEMS', description: 'Examines structures of governance, sovereignty, statecraft, constitutionalism, and the evolution of political authority.', verbs: ['GOVERNS', 'LEGISLATES', 'ADMINISTERS', 'DELEGATES'], related: ['LEGAL_INTERPRETATION', 'CONFLICT_AND_RESOLUTION', 'ECONOMIC_SYSTEMS'], color: '#2B6CB0' },
+  { name: 'COMPARATIVE_RELIGION', description: 'Compares doctrines, practices, institutions, and histories across religious traditions to reveal shared patterns and distinct trajectories.', verbs: ['COMPARES', 'SYNCRETIZES', 'DIFFERENTIATES', 'CONVERTS'], related: ['DOCTRINE_DEVELOPMENT', 'RITUAL_STANDARDIZATION', 'CULTURAL_DIFFUSION'], color: '#9B2C2C' },
+  { name: 'EMPIRE_AND_COLONIALISM', description: 'Focuses on imperial expansion, colonial administration, resistance movements, decolonization, and postcolonial legacies.', verbs: ['COLONIZES', 'ADMINISTERS', 'RESISTS', 'DECOLONIZES'], related: ['GEOPOLITICAL_LINKAGE', 'CONFLICT_AND_RESOLUTION', 'ECONOMIC_SYSTEMS'], color: '#744210' },
+  { name: 'ENVIRONMENTAL_HISTORY', description: 'Examines the interaction between human societies and the natural environment: climate, ecology, resource use, and environmental change.', verbs: ['EXPLOITS', 'CONSERVES', 'DEPLETES', 'ADAPTS_TO'], related: ['ADAPTATION', 'ECONOMIC_SYSTEMS', 'INNOVATION_AND_TECHNOLOGY'], color: '#276749' },
+  { name: 'INNOVATION_AND_TECHNOLOGY', description: 'Tracks invention, diffusion, and impact of technologies, engineering achievements, and scientific breakthroughs on societies.', verbs: ['INVENTS', 'INNOVATES', 'DISRUPTS', 'MECHANIZES'], related: ['CAUSE_AND_EFFECT', 'ECONOMIC_SYSTEMS', 'CULTURAL_DIFFUSION'], color: '#4A5568' },
 ]
 
 /* ═══════════════════════════════════════════════════════════════
@@ -611,7 +617,7 @@ export default function DocsPage() {
         <Box>
           <SectionHeading
             title="Interpretive Frameworks"
-            subtitle="10 analytical lenses for examining historical relationships — from docs/guidelines/framework_matrix.md"
+            subtitle="16 analytical lenses for examining historical relationships — from docs/guidelines/framework_matrix.md"
           />
           <SimpleGrid columns={{ base: 1 }} gap={4}>
             {FRAMEWORK_ENTRIES.map(fw => (

@@ -1,5 +1,5 @@
 /* ─── Case Studies — Annals of the World ─── */
-/* Interactive causal chain visualizations using the 10 interpretive frameworks */
+/* Interactive causal chain visualizations using the 16 interpretive frameworks */
 import type { CaseStudy } from '../types'
 
 export const CASE_STUDIES: CaseStudy[] = [

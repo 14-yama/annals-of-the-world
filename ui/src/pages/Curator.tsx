@@ -35,7 +35,7 @@ const ACADEMIC_EQUIVALENCE = [
   {
     discipline: 'Data Science & Ontology Design',
     level: 'PhD-equivalent',
-    detail: 'Building a million-node Neo4j knowledge graph with Pydantic models, Cypher queries, 10 interpretive frameworks, and 11 core node labels is a dissertation-level ontology engineering project.',
+    detail: 'Building a million-node Neo4j knowledge graph with Pydantic models, Cypher queries, 16 interpretive frameworks, and 11 core node labels is a dissertation-level ontology engineering project.',
     icon: Database,
     color: '#4A90D9',
   },
@@ -89,13 +89,13 @@ const TARGET_NODES = 1_000_000
 
 const NODE_CENSUS_BY_TYPE = [
   { label: 'Event',       count: 5754,  color: '#C53030' },
-  { label: 'Person',      count: 2002,  color: '#4A90D9' },
-  { label: 'Movement',    count: 1092,  color: '#D4AF37' },
+  { label: 'Person',      count: 1995,  color: '#4A90D9' },
+  { label: 'Movement',    count: 1091,  color: '#D4AF37' },
   { label: 'Institution', count: 659,   color: '#2F855A' },
-  { label: 'Text',        count: 1030,  color: '#8B3A3A' },
+  { label: 'Text',        count: 1006,  color: '#8B3A3A' },
   { label: 'Idea',        count: 318,   color: '#6B3FA0' },
-  { label: 'Place',       count: 93,    color: '#DD6B20' },
-  { label: 'Evidence',    count: 41,    color: '#718096' },
+  { label: 'Place',       count: 88,    color: '#DD6B20' },
+  { label: 'Evidence',    count: 40,    color: '#718096' },
 ]
 
 const NODE_CENSUS_SOURCES = [
@@ -103,16 +103,16 @@ const NODE_CENSUS_SOURCES = [
     detail: 'Auto-generated from country index files. Each entity enriched with causes, effects, relationships, frameworks, and places. EventWindow (5,467), Person (1,858), Movement (935), Institution (626), Text (441), Idea (53).' },
   { source: 'Topic Catalog (12 topic collections)',      count: 622, color: '#6B3FA0',
     detail: 'Weapons (127), Tribes (66), Languages (65), Transportation (50), Architecture (48), Agriculture (48), Medicine (46), Clothing (45), Navigation (42), Marriage (30), Customs (28), Punishment (27).' },
-  { source: 'Hand-Curated Era & Special Catalogs',       count: 455, color: '#4A90D9',
-    detail: 'Prehistoric (15), Classical (48), Medieval (37), Early Modern (38), Modern (43), Contemporary (35), Biblical (97), Reformation (23), Division Enrichment (119).' },
-  { source: 'Corpus Catalog (13 scholarly collections)',  count: 176, color: '#8B3A3A',
-    detail: 'Mesopotamian (24), Egyptian (19), Judaic-Rabbinic (8), Graeco-Roman (15), Canon Law (4), Iran & Central Asia (21), South & SE Asia (17), East Asia (15), Africa (8), Americas (7), Europe (28), Science & Tech (10).' },
-  { source: 'Text Node Entities (auto-generated)',       count: 477, color: '#C53030',
-    detail: 'First-class Text entities generated from actor text references. Religious (76), Philosophical (247), Scientific (38), Legal (30), Constitutional (33), Artworks (27), Technological (26).' },
+  { source: 'Hand-Curated Era & Special Catalogs',       count: 449, color: '#4A90D9',
+    detail: 'Prehistoric (15), Classical (48), Medieval (37), Early Modern (38), Modern (43), Contemporary (35), Biblical (96), Reformation (23), Division Enrichment (114).' },
+  { source: 'Corpus Catalog (13 scholarly collections)',  count: 166, color: '#8B3A3A',
+    detail: 'Mesopotamian (22), Egyptian (18), Judaic-Rabbinic (8), Graeco-Roman (9), Canon Law (4), Iran & Central Asia (20), South & SE Asia (17), East Asia (15), Africa (8), Americas (7), Europe (28), Science & Tech (10).' },
+  { source: 'Text Node Entities (auto-generated)',       count: 386, color: '#C53030',
+    detail: 'First-class Text entities generated from actor text references. Deduplicated against hand-curated catalog (83 collisions filtered). Division 740 (196), 730 (57), 750 (35), 720 (26), 710 (24), 760 (24), 770 (24).' },
 ]
 
-/* Annals Catalog total: 11,456 pre-dedup → 10,989 unique actors across 7 eras (source of truth) */
-const TOTAL_NODES = 10_989
+/* Annals Catalog total: 11,003 pre-dedup → 10,951 unique actors across 7 eras (source of truth) */
+const TOTAL_NODES = 10_951
 const PROGRESS_PCT = ((TOTAL_NODES / TARGET_NODES) * 100).toFixed(2)
 
 export default function Curator() {
@@ -288,7 +288,7 @@ export default function Curator() {
                 This project continues Ussher's vision using <strong>AI-augmented research, graph databases, and interactive
                 visualization</strong>. Where Ussher worked alone with quill and parchment, we use Neo4j, Python, TypeScript,
                 D3.js, and large language models. Where he covered Creation to 70 CE through a biblical lens, we cover
-                <strong> 72,000 years</strong> across <strong>199 countries</strong> through <strong>10 interpretive frameworks</strong>.
+                <strong> 72,000 years</strong> across <strong>199 countries</strong> through <strong>16 interpretive frameworks</strong>.
                 The ambition is not to replace Ussher — it is to honor his methodology by extending it with tools he could never have imagined.
               </Text>
             </Box>
@@ -334,8 +334,9 @@ export default function Curator() {
               Interpretive Breadth
             </Text>
             <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#524E44" lineHeight={1.6}>
-              Ussher: 1 framework (Biblical chronology). This project: 10 frameworks including Cause & Effect,
-              Cultural Diffusion, Doctrine Development, Geopolitical Linkage, and Temporal Linkage.
+              Ussher: 1 framework (Biblical chronology). This project: 16 frameworks including Cause & Effect,
+              Cultural Diffusion, Doctrine Development, Geopolitical Linkage, Temporal Linkage, Economic Systems,
+              Political Systems, Comparative Religion, Empire & Colonialism, Environmental History, and Innovation & Technology.
             </Text>
           </Box>
         </SimpleGrid>
@@ -349,7 +350,7 @@ export default function Curator() {
         />
         <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#524E44" lineHeight={1.8} mt={2} mb={6} maxW="800px">
           This is not a hobby project. Building a million-node knowledge graph that models all of documented human history
-          across 199 countries — with scholarly citations, 10 interpretive frameworks, a production frontend, and a Neo4j
+          across 199 countries — with scholarly citations, 16 interpretive frameworks, a production frontend, and a Neo4j
           backend — is a body of work that spans multiple academic disciplines. Here is what this project represents
           if submitted for formal evaluation:
         </Text>

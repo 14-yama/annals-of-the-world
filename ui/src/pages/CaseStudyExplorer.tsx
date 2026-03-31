@@ -202,7 +202,7 @@ export default function CaseStudyExplorer() {
           mb={4}
         >
           <Flex align="center" gap={2}>
-            <SectionHeading title="10 Interpretive Frameworks" subtitle="The lenses used to analyze historical causation" />
+            <SectionHeading title="16 Interpretive Frameworks" subtitle="The lenses used to analyze historical causation" />
             {showFrameworks ? <ChevronUp size={20} color="#9E9A90" /> : <ChevronDown size={20} color="#9E9A90" />}
           </Flex>
         </Box>
