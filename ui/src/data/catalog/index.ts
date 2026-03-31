@@ -36,6 +36,9 @@ import { ALL_TOPIC_ENTITIES } from './topicEntities'
 // ── Text node entities (generated from actor text references) ──
 import { TEXT_NODE_ENTITIES } from './textNodes'
 
+// ── Post-processing enrichment data ──
+import { ENRICHMENT_DATA } from './enrichmentData'
+
 import type { Entity } from '../entityTypes'
 
 /**
@@ -52,10 +55,39 @@ function dedup(entities: Entity[]): Entity[] {
 }
 
 /**
+ * Apply enrichment data: add cross-entity relationships, text slugs, and frameworks.
+ */
+function applyEnrichment(entities: Entity[]): Entity[] {
+  return entities.map(e => {
+    const en = ENRICHMENT_DATA[e.slug]
+    if (!en) return e
+
+    // Add new relationships
+    const relationships = en.newRels.length > 0
+      ? [...e.relationships, ...en.newRels]
+      : e.relationships
+
+    // Add text slugs
+    const texts = Object.keys(en.textSlugs).length > 0
+      ? e.texts.map((t, i) => en.textSlugs[i] ? { ...t, slug: en.textSlugs[i] } : t)
+      : e.texts
+
+    // Replace frameworks if enriched
+    const frameworks = en.frameworks.length > 0 ? en.frameworks : e.frameworks
+
+    // Fix call number if needed (e.g., div 600 → 680)
+    const callNumber = (en as any).callNumberFix || e.callNumber
+
+    return { ...e, relationships, texts, frameworks, callNumber }
+  })
+}
+
+/**
  * All entities across every era — the Annals Catalog: source of truth.
  * Deduplicated by slug; hand-curated entries take priority over auto-generated.
+ * Enriched with cross-entity relationships, text slug linking, and frameworks.
  */
-export const ALL_CATALOG_ENTITIES: Entity[] = dedup([
+export const ALL_CATALOG_ENTITIES: Entity[] = applyEnrichment(dedup([
   // ── Hand-curated era entities (highest priority) ──
   ...prehistoricEntities,
   ...classicalEntities,
@@ -86,7 +118,7 @@ export const ALL_CATALOG_ENTITIES: Entity[] = dedup([
   ...TEXT_NODE_ENTITIES,
   // ── Geo-registry (auto-generated, lowest priority) ──
   ...GEO_REGISTRY_ENTITIES,
-])
+]))
 
 /** Slug → Entity lookup map (built once at import time) */
 const SLUG_MAP = new Map<string, Entity>()
