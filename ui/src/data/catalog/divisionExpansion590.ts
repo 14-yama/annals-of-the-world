@@ -1,0 +1,321 @@
+import type { Entity } from '../entityTypes'
+
+/**
+ * Division 590 — Agricultural & Economic Events (hand-curated expansion)
+ * Key agricultural revolutions, famines, and economic turning points.
+ */
+export const DIV_590_ENTITIES: Entity[] = [
+
+  {
+    slug: 'neolithic_revolution',
+    name: 'Neolithic Revolution',
+    label: 'EventWindow',
+    callNumber: '590.49-neolithic-revolution',
+    subjectHeadings: ['Events — Agricultural — Fertile Crescent — Prehistoric'],
+    subjects: ['Agriculture', 'Domestication', 'Neolithic', 'Fertile Crescent', 'Settlement', 'Civilization'],
+    summary: 'The transition from hunter-gatherer to agricultural societies, beginning c. 10,000 BCE in the Fertile Crescent. The domestication of wheat, barley, sheep, goats, and cattle enabled permanent settlements, population growth, social stratification, and ultimately civilization itself. Often called the single most important transformation in human history.',
+    startDate: 'c. 10,000 BCE',
+    endDate: 'c. 4,000 BCE',
+    era: 'Prehistoric',
+    eraSlug: 'prehistoric',
+    region: 'Middle East',
+    continent: 'Asia',
+    status: 'Published',
+    frameworks: ['ENVIRONMENTAL_HISTORY', 'CAUSE_AND_EFFECT', 'INNOVATION_AND_TECHNOLOGY', 'ADAPTATION'],
+    causes: [
+      { title: 'End of last Ice Age creates warmer climate', type: 'EventWindow', year: 'c. 10,000 BCE' },
+      { title: 'Wild cereals abundant in Fertile Crescent', type: 'EventWindow', year: 'c. 10,000 BCE' },
+    ],
+    effects: [
+      { title: 'Permanent settlements emerge (Jericho, Çatalhöyük)', type: 'EventWindow', year: 'c. 9,000 BCE' },
+      { title: 'Population explosion — world grows from ~5M to ~50M', type: 'EventWindow', year: '10,000–4,000 BCE' },
+      { title: 'Social stratification and early states', type: 'Movement', year: 'c. 4,000 BCE' },
+    ],
+    relationships: [
+      { sourceSlug: 'neolithic_revolution', sourceName: 'Neolithic Revolution', verb: 'OCCURS_IN', targetSlug: 'iraq', targetName: 'Iraq (Mesopotamia)', context: 'Fertile Crescent' },
+      { sourceSlug: 'neolithic_revolution', sourceName: 'Neolithic Revolution', verb: 'OCCURS_IN', targetSlug: 'turkey', targetName: 'Turkey (Anatolia)', context: 'Early farming sites' },
+      { sourceSlug: 'neolithic_revolution', sourceName: 'Neolithic Revolution', verb: 'OCCURS_IN', targetSlug: 'syria', targetName: 'Syria', context: 'Tell Abu Hureyra — earliest agriculture' },
+    ],
+    places: [
+      { name: 'Fertile Crescent', role: 'Primary origin region' },
+      { name: 'Jericho', role: 'One of earliest permanent settlements' },
+      { name: 'Çatalhöyük', role: 'Major Neolithic settlement' },
+      { name: 'Göbekli Tepe', role: 'Pre-agricultural monumental site' },
+    ],
+    texts: [],
+  },
+
+  {
+    slug: 'columbian_exchange',
+    name: 'Columbian Exchange',
+    label: 'EventWindow',
+    callNumber: '590.50-columbian-exchange',
+    subjectHeadings: ['Events — Agricultural — Global — Early Modern'],
+    subjects: ['Agriculture', 'Biology', 'Americas', 'Europe', 'Disease', 'Globalization'],
+    summary: 'The massive transfer of plants, animals, diseases, and human populations between the Old and New Worlds following 1492. Potatoes, maize, and tomatoes transformed European and Asian diets; horses and wheat reshaped the Americas; while smallpox, measles, and influenza killed an estimated 90% of indigenous Americans. The most consequential ecological event since the end of the Ice Age.',
+    startDate: '1492',
+    endDate: 'c. 1800',
+    era: 'Early Modern',
+    eraSlug: 'early-modern',
+    region: 'Global',
+    continent: 'Americas',
+    status: 'Published',
+    frameworks: ['ENVIRONMENTAL_HISTORY', 'CULTURAL_DIFFUSION', 'CAUSE_AND_EFFECT', 'ECONOMIC_SYSTEMS', 'ADAPTATION'],
+    causes: [
+      { title: 'Columbus reaches the Americas', type: 'EventWindow', year: '1492' },
+      { title: 'European colonization of the Americas', type: 'Movement', year: '1492–1800' },
+    ],
+    effects: [
+      { title: 'Indigenous American population collapses 90%', type: 'EventWindow', year: '1492–1600' },
+      { title: 'Potato fuels European population boom', type: 'EventWindow', year: '17th–18th century' },
+      { title: 'Maize becomes global staple crop', type: 'EventWindow', year: '16th century onward' },
+      { title: 'Horse transforms Plains Indian cultures', type: 'EventWindow', year: '17th–18th century' },
+    ],
+    relationships: [
+      { sourceSlug: 'columbian_exchange', sourceName: 'Columbian Exchange', verb: 'OCCURS_IN', targetSlug: 'united-states', targetName: 'Americas', context: 'New World side of exchange' },
+      { sourceSlug: 'columbian_exchange', sourceName: 'Columbian Exchange', verb: 'OCCURS_IN', targetSlug: 'spain', targetName: 'Spain', context: 'Primary European vector' },
+    ],
+    places: [
+      { name: 'Hispaniola', role: 'First major contact zone' },
+      { name: 'Mexico', role: 'Origin of maize, tomatoes, chocolate' },
+      { name: 'Andes', role: 'Origin of potatoes, quinoa' },
+    ],
+    texts: [
+      { title: 'The Columbian Exchange: Biological and Cultural Consequences (Alfred Crosby)', type: 'Historical study' },
+    ],
+  },
+
+  {
+    slug: 'british_agricultural_revolution',
+    name: 'British Agricultural Revolution',
+    label: 'EventWindow',
+    callNumber: '590.51-british-agricultural-revolution',
+    subjectHeadings: ['Events — Agricultural — Britain — Early Modern'],
+    subjects: ['Agriculture', 'Innovation', 'Enclosure', 'Crop Rotation', 'Britain', 'Industrial Revolution'],
+    summary: 'The transformation of British farming (c. 1700–1850) through enclosure, four-field crop rotation, selective livestock breeding, and mechanization. Jethro Tull\'s seed drill, Charles "Turnip" Townshend\'s crop rotation, and Robert Bakewell\'s breeding produced dramatic yield increases that freed labor for factories — directly enabling the Industrial Revolution.',
+    startDate: 'c. 1700',
+    endDate: 'c. 1850',
+    era: 'Early Modern',
+    eraSlug: 'early-modern',
+    region: 'Northern Europe',
+    continent: 'Europe',
+    status: 'Published',
+    frameworks: ['INNOVATION_AND_TECHNOLOGY', 'ECONOMIC_SYSTEMS', 'CAUSE_AND_EFFECT', 'ENVIRONMENTAL_HISTORY'],
+    causes: [
+      { title: 'Enclosure Acts consolidate farmland', type: 'EventWindow', year: '1750–1850' },
+      { title: 'Demand for food from growing population', type: 'EventWindow', year: '18th century' },
+    ],
+    effects: [
+      { title: 'Crop yields double — feeds growing cities', type: 'EventWindow', year: '18th century' },
+      { title: 'Displaced rural workers become factory labor', type: 'EventWindow', year: '1750s onward' },
+      { title: 'Industrial Revolution enabled by food surplus', type: 'Movement', year: '1760s' },
+    ],
+    relationships: [
+      { sourceSlug: 'british_agricultural_revolution', sourceName: 'British Agricultural Revolution', verb: 'OCCURS_IN', targetSlug: 'united-kingdom', targetName: 'United Kingdom', context: 'England primarily' },
+    ],
+    places: [
+      { name: 'Norfolk', role: 'Origin of four-field rotation (Norfolk system)' },
+      { name: 'Dishley', role: 'Bakewell\'s breeding experiments' },
+    ],
+    texts: [
+      { title: 'Horse-Hoeing Husbandry (Jethro Tull, 1731)', type: 'Agricultural manual' },
+    ],
+  },
+
+  {
+    slug: 'irish_potato_famine',
+    name: 'Irish Potato Famine (An Gorta Mór)',
+    label: 'EventWindow',
+    callNumber: '590.52-irish-potato-famine',
+    subjectHeadings: ['Events — Agricultural — Ireland — Modern'],
+    subjects: ['Famine', 'Ireland', 'Potato', 'Disease', 'Emigration', 'Colonial Policy'],
+    summary: 'A catastrophic famine (1845–1852) caused by potato blight (Phytophthora infestans) devastating Ireland\'s staple crop. Approximately 1 million died and another 1 million emigrated, reducing Ireland\'s population by 25%. The famine exposed the failures of British laissez-faire policy and transformed Irish identity worldwide, fueling the independence movement for generations.',
+    startDate: '1845',
+    endDate: '1852',
+    era: 'Modern',
+    eraSlug: 'modern',
+    region: 'Northern Europe',
+    continent: 'Europe',
+    status: 'Published',
+    frameworks: ['ENVIRONMENTAL_HISTORY', 'EMPIRE_AND_COLONIALISM', 'CAUSE_AND_EFFECT', 'ECONOMIC_SYSTEMS'],
+    causes: [
+      { title: 'Over-reliance on potato monoculture', type: 'EventWindow', year: 'pre-1845' },
+      { title: 'Phytophthora infestans blight arrives from Americas', type: 'EventWindow', year: '1845' },
+      { title: 'British colonial land policies limit Irish tenant farming', type: 'EventWindow', year: '18th–19th century' },
+    ],
+    effects: [
+      { title: '1 million dead, 1 million emigrate', type: 'EventWindow', year: '1845–1852' },
+      { title: 'Mass Irish diaspora to America, Australia, Britain', type: 'Movement', year: '1845–1900' },
+      { title: 'Irish nationalism intensifies', type: 'Movement', year: '1850s onward' },
+    ],
+    relationships: [
+      { sourceSlug: 'irish_potato_famine', sourceName: 'Irish Potato Famine', verb: 'OCCURS_IN', targetSlug: 'ireland', targetName: 'Ireland', context: 'Primary location' },
+      { sourceSlug: 'irish_potato_famine', sourceName: 'Irish Potato Famine', verb: 'OCCURS_IN', targetSlug: 'united-kingdom', targetName: 'United Kingdom', context: 'Governing power during famine' },
+    ],
+    places: [
+      { name: 'Ireland', role: 'Famine epicenter' },
+      { name: 'Skibbereen', role: 'Worst-affected area, symbol of the famine' },
+    ],
+    texts: [
+      { title: 'The Great Hunger (Cecil Woodham-Smith, 1962)', type: 'Historical account' },
+    ],
+  },
+
+  {
+    slug: 'green_revolution',
+    name: 'Green Revolution',
+    label: 'EventWindow',
+    callNumber: '590.53-green-revolution',
+    subjectHeadings: ['Events — Agricultural — Global — Contemporary'],
+    subjects: ['Agriculture', 'Wheat', 'Rice', 'Technology', 'Famine Prevention', 'Development'],
+    summary: 'The introduction of high-yielding crop varieties, irrigation, fertilizers, and pesticides to developing countries (1950s–1970s), led by Norman Borlaug. Wheat yields in Mexico tripled; India went from famine to self-sufficiency in grain. The revolution saved an estimated billion lives but raised concerns about environmental sustainability and rural inequality.',
+    startDate: '1950',
+    endDate: '1970',
+    era: 'Contemporary',
+    eraSlug: 'contemporary',
+    region: 'Global',
+    continent: 'Asia',
+    status: 'Published',
+    frameworks: ['INNOVATION_AND_TECHNOLOGY', 'ENVIRONMENTAL_HISTORY', 'ECONOMIC_SYSTEMS', 'CAUSE_AND_EFFECT'],
+    causes: [
+      { title: 'Post-WWII population boom threatens food supply', type: 'EventWindow', year: '1945–1960' },
+      { title: 'Borlaug develops semi-dwarf wheat varieties in Mexico', type: 'Person', year: '1944–1960' },
+    ],
+    effects: [
+      { title: 'India achieves food self-sufficiency', type: 'EventWindow', year: '1970s' },
+      { title: 'Estimated 1 billion lives saved from famine', type: 'EventWindow', year: '1960s–1990s' },
+      { title: 'Environmental concerns: pesticide runoff, aquifer depletion', type: 'EventWindow', year: '1980s onward' },
+    ],
+    relationships: [
+      { sourceSlug: 'green_revolution', sourceName: 'Green Revolution', verb: 'OCCURS_IN', targetSlug: 'india', targetName: 'India', context: 'Major beneficiary' },
+      { sourceSlug: 'green_revolution', sourceName: 'Green Revolution', verb: 'OCCURS_IN', targetSlug: 'mexico', targetName: 'Mexico', context: 'Borlaug\'s initial research site' },
+      { sourceSlug: 'green_revolution', sourceName: 'Green Revolution', verb: 'OCCURS_IN', targetSlug: 'philippines', targetName: 'Philippines', context: 'IRRI (Int\'l Rice Research Institute) base' },
+    ],
+    places: [
+      { name: 'Ciudad Obregón, Mexico', role: 'Borlaug\'s research station' },
+      { name: 'Punjab, India', role: 'Model region for wheat adoption' },
+      { name: 'Los Baños, Philippines', role: 'IRRI headquarters' },
+    ],
+    texts: [
+      { title: 'The Green Revolution Revisited (Borlaug et al.)', type: 'Scientific review' },
+    ],
+  },
+
+  {
+    slug: 'dust_bowl',
+    name: 'Dust Bowl',
+    label: 'EventWindow',
+    callNumber: '590.54-dust-bowl',
+    subjectHeadings: ['Events — Agricultural — United States — Modern'],
+    subjects: ['Agriculture', 'Drought', 'Erosion', 'Migration', 'Conservation', 'Great Plains'],
+    summary: 'A devastating period of severe dust storms (1930–1940) that ravaged the American Great Plains after decades of aggressive farming stripped the topsoil. "Black blizzards" buried farms, killed livestock, and displaced 2.5 million people ("Okies"). The catastrophe led to the creation of the Soil Conservation Service and permanently changed American agricultural policy.',
+    startDate: '1930',
+    endDate: '1940',
+    era: 'Modern',
+    eraSlug: 'modern',
+    region: 'North America',
+    continent: 'Americas',
+    status: 'Published',
+    frameworks: ['ENVIRONMENTAL_HISTORY', 'CAUSE_AND_EFFECT', 'ECONOMIC_SYSTEMS', 'ADAPTATION'],
+    causes: [
+      { title: 'Aggressive deep plowing destroys prairie grass', type: 'EventWindow', year: '1920s' },
+      { title: 'Severe drought strikes Great Plains', type: 'EventWindow', year: '1930' },
+      { title: 'Great Depression collapses farm prices', type: 'EventWindow', year: '1929' },
+    ],
+    effects: [
+      { title: '2.5 million displaced ("Okies" migrate west)', type: 'EventWindow', year: '1930s' },
+      { title: 'Soil Conservation Service created', type: 'Institution', year: '1935' },
+      { title: 'Modern soil conservation movement begins', type: 'Movement', year: '1930s' },
+    ],
+    relationships: [
+      { sourceSlug: 'dust_bowl', sourceName: 'Dust Bowl', verb: 'OCCURS_IN', targetSlug: 'united-states', targetName: 'United States', context: 'Great Plains — OK, TX, KS, CO, NM' },
+    ],
+    places: [
+      { name: 'Oklahoma Panhandle', role: 'Worst-hit region' },
+      { name: 'Kansas', role: 'Major impact zone' },
+      { name: 'California', role: 'Destination for Dust Bowl migrants' },
+    ],
+    texts: [
+      { title: 'The Grapes of Wrath (John Steinbeck, 1939)', type: 'Novel about Dust Bowl migrants' },
+      { title: 'The Worst Hard Time (Timothy Egan, 2006)', type: 'Historical account' },
+    ],
+  },
+
+  {
+    slug: 'bengal_famine_1943',
+    name: 'Bengal Famine of 1943',
+    label: 'EventWindow',
+    callNumber: '590.55-bengal-famine-1943',
+    subjectHeadings: ['Events — Agricultural — India — Modern'],
+    subjects: ['Famine', 'India', 'Bengal', 'Colonial Policy', 'World War II', 'Rice'],
+    summary: 'A devastating famine in British-ruled Bengal (1943) that killed an estimated 2–3 million people. Caused by a convergence of cyclone damage, wartime diversion of food supplies, and British policy failures under Churchill\'s government. The famine radicalized Indian opinion against colonial rule and remains one of the most studied man-made famines in history.',
+    startDate: '1943',
+    endDate: '1944',
+    era: 'Modern',
+    eraSlug: 'modern',
+    region: 'South Asia',
+    continent: 'Asia',
+    status: 'Published',
+    frameworks: ['EMPIRE_AND_COLONIALISM', 'ENVIRONMENTAL_HISTORY', 'CAUSE_AND_EFFECT', 'ECONOMIC_SYSTEMS'],
+    causes: [
+      { title: 'Cyclone and flooding destroy Bengal rice crop', type: 'EventWindow', year: '1942' },
+      { title: 'Japanese occupation of Burma cuts rice imports', type: 'EventWindow', year: '1942' },
+      { title: 'British wartime food diversion policies', type: 'EventWindow', year: '1943' },
+    ],
+    effects: [
+      { title: '2–3 million die of starvation and disease', type: 'EventWindow', year: '1943–1944' },
+      { title: 'Famine Commission reforms food distribution policy', type: 'Institution', year: '1945' },
+      { title: 'Strengthens Indian independence movement', type: 'Movement', year: '1943 onward' },
+    ],
+    relationships: [
+      { sourceSlug: 'bengal_famine_1943', sourceName: 'Bengal Famine of 1943', verb: 'OCCURS_IN', targetSlug: 'india', targetName: 'India (Bengal)', context: 'Present-day West Bengal and Bangladesh' },
+      { sourceSlug: 'bengal_famine_1943', sourceName: 'Bengal Famine of 1943', verb: 'OCCURS_IN', targetSlug: 'bangladesh', targetName: 'Bangladesh (East Bengal)', context: 'Worst-affected region' },
+    ],
+    places: [
+      { name: 'Calcutta (Kolkata)', role: 'Epicenter of famine deaths' },
+      { name: 'Midnapore', role: 'Severely affected district' },
+    ],
+    texts: [
+      { title: 'Poverty and Famines (Amartya Sen, 1981)', type: 'Economic analysis — Bengal famine as case study' },
+    ],
+  },
+
+  {
+    slug: 'great_leap_forward_famine',
+    name: 'Great Chinese Famine (Great Leap Forward)',
+    label: 'EventWindow',
+    callNumber: '590.56-great-chinese-famine',
+    subjectHeadings: ['Events — Agricultural — China — Contemporary'],
+    subjects: ['Famine', 'China', 'Communism', 'Collectivization', 'Mao', 'Policy'],
+    summary: 'The deadliest famine in human history (1959–1961), caused by Mao Zedong\'s Great Leap Forward policies: forced collectivization, backyard steel furnaces that diverted farm labor, and the suppression of crop failure reports. An estimated 15–55 million died. The disaster led to Mao\'s partial sidelining and Liu Shaoqi/Deng Xiaoping\'s pragmatic economic reforms.',
+    startDate: '1959',
+    endDate: '1961',
+    era: 'Contemporary',
+    eraSlug: 'contemporary',
+    region: 'East Asia',
+    continent: 'Asia',
+    status: 'Published',
+    frameworks: ['CAUSE_AND_EFFECT', 'ENVIRONMENTAL_HISTORY', 'ECONOMIC_SYSTEMS', 'ADAPTATION'],
+    causes: [
+      { title: 'Great Leap Forward forces rural collectivization', type: 'EventWindow', year: '1958' },
+      { title: 'Backyard steel furnaces divert farm labor', type: 'EventWindow', year: '1958–1959' },
+      { title: 'Local officials exaggerate grain output (fear of punishment)', type: 'EventWindow', year: '1958–1960' },
+    ],
+    effects: [
+      { title: '15–55 million die (deadliest famine in history)', type: 'EventWindow', year: '1959–1961' },
+      { title: 'Mao sidelined; Liu Shaoqi and Deng Xiaoping gain influence', type: 'EventWindow', year: '1961–1962' },
+      { title: 'Deng\'s later market reforms (1978) motivated by famine lessons', type: 'Movement', year: '1978' },
+    ],
+    relationships: [
+      { sourceSlug: 'great_leap_forward_famine', sourceName: 'Great Chinese Famine', verb: 'OCCURS_IN', targetSlug: 'china', targetName: 'China', context: 'Nationwide famine' },
+    ],
+    places: [
+      { name: 'Anhui Province', role: 'One of worst-affected regions' },
+      { name: 'Sichuan Province', role: 'Severely affected' },
+      { name: 'Gansu Province', role: 'Severely affected' },
+    ],
+    texts: [
+      { title: 'Tombstone: The Great Chinese Famine (Yang Jisheng, 2008)', type: 'Investigative history' },
+    ],
+  },
+]

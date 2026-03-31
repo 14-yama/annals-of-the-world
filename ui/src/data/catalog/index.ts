@@ -15,6 +15,12 @@ import { BIBLICAL_ENTITIES } from './biblical'
 import { GEO_REGISTRY_ENTITIES } from './geoRegistry'
 import { DIVISION_ENRICHMENT_ENTITIES } from './divisionEnrichment'
 import { DIVISION_EXPANSION_ENTITIES } from './divisionExpansion'
+import { DIV_280_ENTITIES } from './divisionExpansion280'
+import { DIV_290_ENTITIES } from './divisionExpansion290'
+import { DIV_380_ENTITIES } from './divisionExpansion380'
+import { DIV_590_ENTITIES } from './divisionExpansion590'
+import { DIV_680_ENTITIES } from './divisionExpansion680'
+import { DIV_780_ENTITIES } from './divisionExpansion780'
 
 // ── Corpus imports ──
 import { MESOPOTAMIAN_ENTITIES } from './corpuses/mesopotamian'
@@ -164,6 +170,12 @@ export const ALL_CATALOG_ENTITIES: Entity[] = fixEras(applyEnrichment(dedup([
   ...contemporaryEntities,
   ...DIVISION_ENRICHMENT_ENTITIES,
   ...DIVISION_EXPANSION_ENTITIES,
+  ...DIV_280_ENTITIES,
+  ...DIV_290_ENTITIES,
+  ...DIV_380_ENTITIES,
+  ...DIV_590_ENTITIES,
+  ...DIV_680_ENTITIES,
+  ...DIV_780_ENTITIES,
   // ── Corpus entities ──
   ...MESOPOTAMIAN_ENTITIES,
   ...EGYPTIAN_ENTITIES,
