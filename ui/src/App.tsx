@@ -19,6 +19,12 @@ import ArchitecturePage from './pages/ArchitecturePage'
 import MedicinePage from './pages/MedicinePage'
 import AgriculturePage from './pages/AgriculturePage'
 import NavigationPage from './pages/NavigationPage'
+import TribesPage from './pages/TribesPage'
+import TransportationPage from './pages/TransportationPage'
+import ClothingPage from './pages/ClothingPage'
+import MarriagePage from './pages/MarriagePage'
+import CustomsPage from './pages/CustomsPage'
+import PunishmentPage from './pages/PunishmentPage'
 import IdeasPage from './pages/IdeasPage'
 import About from './pages/About'
 import EntityPage from './pages/EntityPage'
@@ -65,6 +71,12 @@ export default function App() {
         <Route path="/medicine" element={<MedicinePage />} />
         <Route path="/agriculture" element={<AgriculturePage />} />
         <Route path="/navigation" element={<NavigationPage />} />
+        <Route path="/tribes" element={<TribesPage />} />
+        <Route path="/transportation" element={<TransportationPage />} />
+        <Route path="/clothing" element={<ClothingPage />} />
+        <Route path="/marriage" element={<MarriagePage />} />
+        <Route path="/customs" element={<CustomsPage />} />
+        <Route path="/punishment" element={<PunishmentPage />} />
         <Route path="/ideas" element={<IdeasPage />} />
         <Route path="/graph" element={<GraphExplorer />} />
         <Route path="/about" element={<About />} />

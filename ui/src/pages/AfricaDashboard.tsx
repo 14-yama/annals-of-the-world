@@ -220,6 +220,31 @@ export default function AfricaDashboard() {
         ))}
       </SimpleGrid>
 
+      {/* Knowledge Graph Coverage */}
+      <SectionHeading
+        title="Knowledge Graph Coverage"
+        subtitle="1,745 nodes across 55 nations — 6 eras of African history"
+      />
+      <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} gap={4} mb={5}>
+        <StatCard value="1,416" label="Events" detail="Wars, treaties, discoveries" color="#C5963A" />
+        <StatCard value="120" label="Movements" detail="Independence, reform, Pan-Africanism" color="#6B3FA0" />
+        <StatCard value="108" label="People" detail="Leaders, scholars, reformers" color="#3A7D44" />
+        <StatCard value="71" label="Institutions" detail="Kingdoms, courts, organizations" color="#8B3A3A" />
+        <StatCard value="30" label="Texts" detail="Charters, treaties, constitutions" color="#5A2222" />
+        <StatCard value="1,745" label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
+      </SimpleGrid>
+      <DataTable
+        title="Top Countries by Knowledge Graph Nodes"
+        headers={['Country', 'Event Windows', 'People', 'Institutions', 'Movements', 'Total']}
+        rows={[
+          ['South Africa', '39', '6', '5', '6', '60'],
+          ['Egypt', '31', '5', '4', '5', '47'],
+          ['Ethiopia', '33', '5', '3', '3', '46'],
+          ['DR Congo', '31', '4', '3', '4', '44'],
+          ['Mali', '33', '3', '3', '4', '44'],
+        ]}
+      />
+
       {/* Source Attribution */}
       <Box
         bg="#F5F4F0"

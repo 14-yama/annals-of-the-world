@@ -23,7 +23,7 @@ const USSHER_STATS = [
 const PROJECT_STATS = [
   { value: '199', label: 'Countries Profiled', icon: Globe2, color: '#4A90D9' },
   { value: '1,000,000', label: 'Target Knowledge Nodes', icon: Network, color: '#6B3FA0' },
-  { value: '5,671', label: 'Nodes Documented So Far', icon: CheckCircle2, color: '#2F855A' },
+  { value: '10,580', label: 'Actors in Annals Catalog', icon: CheckCircle2, color: '#2F855A' },
   { value: '10+', label: 'Interpretive Frameworks', icon: Layers, color: '#D4AF37' },
   { value: '6', label: 'Canonical Eras', icon: BarChart3, color: '#C53030' },
   { value: '127', label: 'Weapons Catalogued', icon: Target, color: '#8B3A3A' },
@@ -88,33 +88,29 @@ const TEN_YEAR_MILESTONES = [
 const TARGET_NODES = 1_000_000
 
 const NODE_CENSUS_BY_TYPE = [
-  { label: 'Idea',        backend: 923, geoRegistry: 128, frontend: 67,  corpus: 8,   color: '#6B3FA0' },
-  { label: 'Event',       backend: 222, geoRegistry: 126, frontend: 108, corpus: 10,  color: '#C53030' },
-  { label: 'Person',      backend: 202, geoRegistry: 126, frontend: 12,  corpus: 69,  color: '#4A90D9' },
-  { label: 'Text',        backend: 178, geoRegistry: 128, frontend: 3,   corpus: 150, color: '#8B3A3A' },
-  { label: 'Institution', backend: 160, geoRegistry: 128, frontend: 5,   corpus: 11,  color: '#2F855A' },
-  { label: 'Place',       backend: 143, geoRegistry: 452, frontend: 3,   corpus: 16,  color: '#DD6B20' },
-  { label: 'Movement',    backend: 115, geoRegistry: 128, frontend: 8,   corpus: 2,   color: '#D4AF37' },
-  { label: 'Artifact',    backend: 0,   geoRegistry: 128, frontend: 127, corpus: 0,   color: '#38B2AC' },
-  { label: 'Evidence',    backend: 37,  geoRegistry: 128, frontend: 0,   corpus: 7,   color: '#718096' },
-  { label: 'Framework',   backend: 0,   geoRegistry: 126, frontend: 13,  corpus: 0,   color: '#805AD5' },
-  { label: 'Timeframe',   backend: 0,   geoRegistry: 126, frontend: 6,   corpus: 0,   color: '#D69E2E' },
+  { label: 'Event',       count: 5754,  color: '#C53030' },
+  { label: 'Person',      count: 2002,  color: '#4A90D9' },
+  { label: 'Movement',    count: 1092,  color: '#D4AF37' },
+  { label: 'Institution', count: 659,   color: '#2F855A' },
+  { label: 'Text',        count: 621,   color: '#8B3A3A' },
+  { label: 'Idea',        count: 318,   color: '#6B3FA0' },
+  { label: 'Place',       count: 93,    color: '#DD6B20' },
+  { label: 'Evidence',    count: 41,    color: '#718096' },
 ]
 
 const NODE_CENSUS_SOURCES = [
-  { source: 'Backend Knowledge Graph (data/Nodes)',    count: 1944, color: '#4A90D9',
-    detail: '18 thematic clusters — 1,861 unique slugs. Idea (923), Event (222), Person (202), Text (178), Institution (160), Place (143), Movement (115)' },
-  { source: 'Geo-Registry (199 countries × 11 types)', count: 2502, color: '#2F855A',
-    detail: 'Country-scoped nodes: index (1,414), places (452), artifacts (64), evidence (64), ideas (64), institutions (64), movements (64), texts (64), events (63), frameworks (63), people (63), timeframes (63)' },
-  { source: 'Geographic Registry (places & cities)',    count: 710, color: '#DD6B20',
-    detail: '199 countries + 509 historically significant cities + 5 major cities (places.json + cities_major.json)' },
-  { source: 'Frontend Visualizations',                  count: 528, color: '#6B3FA0',
-    detail: '127 weapons, 108 timeline events, 79 case study nodes, 67 ideas catalogued, 13 language families, 7 trade routes, 6 diet types, 22 quiz questions' },
-  { source: 'Corpus Catalog (53 scholarly corpuses)',    count: 273, color: '#8B3A3A',
-    detail: '53 world corpuses — 150 texts, 69 people, 16 places, 11 institutions, 10 events, 8 ideas, 7 evidence nodes, 2 movements. Biblical (97), Mesopotamian (24), Egyptian (19), Iran & Central Asia (21), South & SE Asia (17), East Asia (15), Europe (28), Science & Tech (10), and more' },
+  { source: 'Geo-Registry (199 countries × 6 eras)',    count: 9380, color: '#2F855A',
+    detail: 'Auto-generated from country index files. Each entity enriched with causes, effects, relationships, frameworks, and places. EventWindow (5,467), Person (1,858), Movement (935), Institution (626), Text (441), Idea (53).' },
+  { source: 'Topic Catalog (12 topic collections)',      count: 622, color: '#6B3FA0',
+    detail: 'Weapons (127), Tribes (66), Languages (65), Transportation (50), Architecture (48), Agriculture (48), Medicine (46), Clothing (45), Navigation (42), Marriage (30), Customs (28), Punishment (27).' },
+  { source: 'Hand-Curated Era & Special Catalogs',       count: 455, color: '#4A90D9',
+    detail: 'Prehistoric (15), Classical (48), Medieval (37), Early Modern (38), Modern (43), Contemporary (35), Biblical (97), Reformation (23), Division Enrichment (119).' },
+  { source: 'Corpus Catalog (13 scholarly collections)',  count: 176, color: '#8B3A3A',
+    detail: 'Mesopotamian (24), Egyptian (19), Judaic-Rabbinic (8), Graeco-Roman (15), Canon Law (4), Iran & Central Asia (21), South & SE Asia (17), East Asia (15), Africa (8), Americas (7), Europe (28), Science & Tech (10).' },
 ]
 
-const TOTAL_NODES = NODE_CENSUS_SOURCES.reduce((s, r) => s + r.count, 0)
+/* Annals Catalog total: 10,633 pre-dedup → 10,580 unique actors across 7 eras (source of truth) */
+const TOTAL_NODES = 10_580
 const PROGRESS_PCT = ((TOTAL_NODES / TARGET_NODES) * 100).toFixed(2)
 
 export default function Curator() {
@@ -225,56 +221,24 @@ export default function Curator() {
           <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#2D2A24" mb={4}>
             Nodes by Schema Label
           </Text>
-          {NODE_CENSUS_BY_TYPE.map(t => {
-            const total = t.backend + t.geoRegistry + t.frontend + t.corpus
-            return (
-              <Flex key={t.label} align="center" gap={3} mb={2}>
-                <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color={t.color}
-                  minW="90px" fontWeight={600}>
-                  {t.label}
-                </Text>
-                <Box flex={1} h="16px" bg="#E4E2DC" borderRadius="md" overflow="hidden" position="relative">
-                  {t.backend > 0 && (
-                    <Box position="absolute" left={0} top={0} h="100%" bg={t.color}
-                      w={`${(t.backend / 1100) * 100}%`} opacity={0.9} />
-                  )}
-                  {t.geoRegistry > 0 && (
-                    <Box position="absolute" left={`${(t.backend / 1100) * 100}%`} top={0} h="100%"
-                      bg={t.color} w={`${(t.geoRegistry / 1100) * 100}%`} opacity={0.6} />
-                  )}
-                  {t.frontend > 0 && (
-                    <Box position="absolute" left={`${((t.backend + t.geoRegistry) / 1100) * 100}%`} top={0}
-                      h="100%" bg={t.color} w={`${(t.frontend / 1100) * 100}%`} opacity={0.35} />
-                  )}
-                  {t.corpus > 0 && (
-                    <Box position="absolute" left={`${((t.backend + t.geoRegistry + t.frontend) / 1100) * 100}%`} top={0}
-                      h="100%" bg="#8B3A3A" w={`${(t.corpus / 1100) * 100}%`} opacity={0.75} />
-                  )}
-                </Box>
-                <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#524E44" minW="45px" textAlign="right">
-                  {total.toLocaleString()}
-                </Text>
-              </Flex>
-            )
-          })}
-          <Flex gap={4} mt={3} justify="flex-end">
-            <Flex align="center" gap={1}>
-              <Box w="10px" h="10px" bg="#4A90D9" borderRadius="sm" opacity={0.9} />
-              <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace' color="#718096">Backend</Text>
+          {NODE_CENSUS_BY_TYPE.map(t => (
+            <Flex key={t.label} align="center" gap={3} mb={2}>
+              <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color={t.color}
+                minW="90px" fontWeight={600}>
+                {t.label}
+              </Text>
+              <Box flex={1} h="16px" bg="#E4E2DC" borderRadius="md" overflow="hidden">
+                <Box h="100%" bg={t.color} w={`${(t.count / 6000) * 100}%`}
+                  borderRadius="md" transition="width 0.3s" />
+              </Box>
+              <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#524E44" minW="45px" textAlign="right">
+                {t.count.toLocaleString()}
+              </Text>
             </Flex>
-            <Flex align="center" gap={1}>
-              <Box w="10px" h="10px" bg="#4A90D9" borderRadius="sm" opacity={0.6} />
-              <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace' color="#718096">Geo-Registry</Text>
-            </Flex>
-            <Flex align="center" gap={1}>
-              <Box w="10px" h="10px" bg="#4A90D9" borderRadius="sm" opacity={0.35} />
-              <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace' color="#718096">Frontend</Text>
-            </Flex>
-            <Flex align="center" gap={1}>
-              <Box w="10px" h="10px" bg="#8B3A3A" borderRadius="sm" opacity={0.75} />
-              <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace' color="#718096">Corpus</Text>
-            </Flex>
-          </Flex>
+          ))}
+          <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace' color="#718096" mt={3} textAlign="right">
+            Annals Catalog — 10,580 unique actors across 7 eras (source of truth)
+          </Text>
         </Box>
       </Box>
 

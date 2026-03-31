@@ -399,6 +399,31 @@ export default function AsiaDashboard() {
         ))}
       </SimpleGrid>
 
+      {/* Knowledge Graph Coverage */}
+      <SectionHeading
+        title="Knowledge Graph Coverage"
+        subtitle="2,317 nodes across 50 nations — 6 eras of Asian history"
+      />
+      <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} gap={4} mb={5}>
+        <StatCard value="1,279" label="Events" detail="Wars, dynasties, discoveries" color="#C5963A" />
+        <StatCard value="336" label="People" detail="Emperors, scholars, prophets" color="#3A7D44" />
+        <StatCard value="290" label="Movements" detail="Buddhism, Silk Road, nationalism" color="#6B3FA0" />
+        <StatCard value="272" label="Institutions" detail="Empires, caliphates, academies" color="#8B3A3A" />
+        <StatCard value="110" label="Texts" detail="Sutras, treaties, constitutions" color="#5A2222" />
+        <StatCard value="2,317" label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
+      </SimpleGrid>
+      <DataTable
+        title="Top Countries by Knowledge Graph Nodes"
+        headers={['Country', 'Event Windows', 'People', 'Institutions', 'Movements', 'Total']}
+        rows={[
+          ['China', '45', '12', '10', '12', '85'],
+          ['Iran', '40', '10', '9', '10', '74'],
+          ['Israel', '34', '9', '8', '8', '64'],
+          ['India', '35', '8', '8', '8', '63'],
+          ['Thailand', '38', '7', '6', '8', '63'],
+        ]}
+      />
+
       {/* Source Attribution */}
       <Box
         bg="#F5F4F0"

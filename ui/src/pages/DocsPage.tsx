@@ -134,6 +134,182 @@ const EVIDENCE_TIERS = [
 ]
 
 /* ═══════════════════════════════════════════════════════════════
+   Framework Matrix (from docs/guidelines/framework_matrix.md)
+   ═══════════════════════════════════════════════════════════════ */
+
+const FRAMEWORK_ENTRIES = [
+  { name: 'CAUSE_AND_EFFECT', description: 'Lens that foregrounds causal chains, technological or institutional drivers, and immediate impacts; used when asserting a mechanism or causal pathway.', verbs: ['CAUSES', 'ENABLES', 'TRIGGERS', 'TRANSFORMS'], related: ['CULTURAL_DIFFUSION', 'ADAPTATION', 'CONFLICT_AND_RESOLUTION'], color: '#C53030' },
+  { name: 'CULTURAL_DIFFUSION', description: 'Focuses on transmission, borrowing, and the spread of practices or ideas across regions and groups; emphasizes routes and agents of transmission.', verbs: ['DIFFUSES', 'INTRODUCES', 'ADAPTS', 'ADOPTS'], related: ['CAUSE_AND_EFFECT', 'TEXTUAL_TRANSMISSION', 'ADAPTATION'], color: '#38A169' },
+  { name: 'DOCTRINE_DEVELOPMENT', description: 'Emphasizes processes of formalization, systematization, and canonical consolidation within religious or intellectual traditions.', verbs: ['CANONIZES', 'SYSTEMATIZES', 'STANDARDIZES', 'INTERPRETS'], related: ['TEXTUAL_TRANSMISSION', 'LEGAL_INTERPRETATION'], color: '#D4AF37' },
+  { name: 'TEXTUAL_TRANSMISSION', description: 'Tracks the copying, translation, editorial history, and preservation of texts and textual families.', verbs: ['TRANSMITS', 'TRANSLATES', 'PRESERVES', 'EDITS'], related: ['DOCTRINE_DEVELOPMENT', 'CULTURAL_DIFFUSION'], color: '#5A2222' },
+  { name: 'LEGAL_INTERPRETATION', description: 'Applies to jurisprudential, canonical, or administrative rulings and their implementation or reform.', verbs: ['INTERPRETS', 'CODIFIES', 'REFORMS', 'REJECTS'], related: ['DOCTRINE_DEVELOPMENT', 'RITUAL_STANDARDIZATION'], color: '#3B6BC2' },
+  { name: 'RITUAL_STANDARDIZATION', description: 'Focuses on the formalization and institutional adoption of ritual practice across communities.', verbs: ['STANDARDIZES', 'INSTITUTES', 'REGULATES'], related: ['LEGAL_INTERPRETATION', 'DOCTRINE_DEVELOPMENT'], color: '#805AD5' },
+  { name: 'GEOPOLITICAL_LINKAGE', description: 'Centers on imperial, diplomatic, and territorial relationships that reorganize institutions, mobility, or authority.', verbs: ['LINKS', 'CONNECTS', 'RECONFIGURES'], related: ['CAUSE_AND_EFFECT', 'CONFLICT_AND_RESOLUTION'], color: '#4A90D9' },
+  { name: 'CONFLICT_AND_RESOLUTION', description: 'Captures schisms, wars, negotiations, reconciliations and the social/political effects of conflict.', verbs: ['CAUSES', 'RESOLVES', 'RADICALIZES', 'RECONCILES_WITH'], related: ['GEOPOLITICAL_LINKAGE', 'ADAPTATION'], color: '#8B3A3A' },
+  { name: 'ADAPTATION', description: 'Emphasizes contextual reinterpretation, transformation, and local reworking of imported practices or ideas.', verbs: ['ADAPTS', 'TRANSFORMS', 'REINTERPRETS'], related: ['CULTURAL_DIFFUSION', 'CAUSE_AND_EFFECT'], color: '#C5963A' },
+  { name: 'TEMPORAL_LINKAGE', description: 'Used for ordering and periodization claims that connect events, reforms, or transitions across time.', verbs: ['PRECEDES', 'FOLLOWS', 'IS_ANTECEDENT_TO'], related: ['CAUSE_AND_EFFECT', 'CONFLICT_AND_RESOLUTION'], color: '#6B3FA0' },
+]
+
+/* ═══════════════════════════════════════════════════════════════
+   Classification System (from docs/guidelines/classification.md)
+   ═══════════════════════════════════════════════════════════════ */
+
+const CLASSIFICATION_ENTRIES = [
+  { classNum: '0', name: 'Ideas (Core)', heading: 'Political, Ethical, Legal', color: '#D4AF37', divisions: ['010 Political Systems & Governance', '020 Ethical Systems', '030 Legal Systems & Law'] },
+  { classNum: '1', name: 'Ideas (Other)', heading: 'Economic, Scientific, Technological, Religious, Cultural', color: '#C5963A', divisions: ['110 Economic Theories', '120 Scientific Paradigms', '130 Technological Innovations', '140 Religious & Philosophical Concepts', '150 Social & Cultural Theories', '160 Environmental Ideas', '170 Artistic Movements'] },
+  { classNum: '2', name: 'People', heading: 'Historical figures across all domains', color: '#3A7D44', divisions: ['210 Philosophers', '220 Political Leaders', '230 Legal Figures', '240 Scientists & Inventors', '250 Religious Figures', '260 Artists & Writers', '270 Activists & Reformers'] },
+  { classNum: '3', name: 'Institutions', heading: 'Organizations, councils, governing bodies', color: '#8B3A3A', divisions: ['310 Political Institutions', '320 Legal Institutions', '330 Economic Institutions', '340 Religious Orders', '350 Scientific Bodies', '360 Cultural Institutions', '370 International Organizations'] },
+  { classNum: '4', name: 'Places', heading: 'Geographic locations at all scales', color: '#3B6BC2', divisions: ['410 Continents', '420 Regions', '430 Countries', '440 Cities', '450 Empires', '460 Civilizations', '470 Culture-Areas'] },
+  { classNum: '5', name: 'Events', heading: 'Historical occurrences & event windows', color: '#C53030', divisions: ['510 Wars & Conflicts', '520 Revolutions', '530 Elections & Governance', '540 Scientific Discoveries', '550 Environmental Crises', '560 Trials & Legal', '570 Religious Events'] },
+  { classNum: '6', name: 'Movements', heading: 'Social, political, religious movements', color: '#6B3FA0', divisions: ['610 Political Movements', '620 Social Movements', '630 Religious Movements', '640 Cultural Movements', '650 Scientific Movements', '660 Environmental Movements'] },
+  { classNum: '7', name: 'Texts & Artifacts', heading: 'Written works, codices, constitutions', color: '#5A2222', divisions: ['710 Constitutions & Codes', '720 Scriptures', '730 Scientific Works', '740 Artworks', '750 Technologies'] },
+  { classNum: '8', name: 'Evidence', heading: 'Primary sources, archaeological finds', color: '#787469', divisions: ['810 Primary Sources', '820 Secondary Sources', '830 Archaeological Evidence', '840 Quantitative Data', '850 Oral Histories'] },
+  { classNum: '9', name: 'Timeframes', heading: 'Periods, eras, epochs', color: '#4A90D9', divisions: ['910 Prehistoric', '920 Classical/Ancient', '930 Medieval', '940 Early Modern', '950 Modern', '960 Contemporary'] },
+]
+
+/* ═══════════════════════════════════════════════════════════════
+   Event Kinds (from docs/schema/event-kinds.md)
+   ═══════════════════════════════════════════════════════════════ */
+
+const EVENT_KIND_ENTRIES = [
+  { kind: 'Battle', description: 'Armed military engagement', examples: 'Battle of White Mountain 1620, Kappel Wars' },
+  { kind: 'Council', description: 'Ecclesiastical or political assembly/synod', examples: 'Council of Trent, Council of Constance, Synod of Dordt' },
+  { kind: 'Controversy', description: 'Theological or political dispute/debate', examples: 'Arminius Controversy, Vestiarian Controversy' },
+  { kind: 'Covenant', description: 'Divine/legal covenant or treaty', examples: 'Abrahamic Covenant, Sinai Covenant' },
+  { kind: 'Debate', description: 'Formal theological disputation', examples: 'Leipzig Debate 1519, Marburg Colloquy 1529' },
+  { kind: 'Decree', description: 'Official proclamation, edict, or law', examples: 'Edict of Milan 313, Edict of Nantes 1598' },
+  { kind: 'Execution', description: 'State-sanctioned killing of an individual', examples: 'Execution of Anne Boleyn, Hus Execution 1415' },
+  { kind: 'Exile', description: 'Forced displacement of a population', examples: 'Babylonian Exile, Expulsion from Spain 1492' },
+  { kind: 'Founding', description: 'Establishment of an institution', examples: 'Founding of Society of Jesus 1540, Unitas Fratrum 1457' },
+  { kind: 'Legislative', description: 'Parliamentary passage of laws', examples: 'Act of Supremacy 1534, Golden Act 1592' },
+  { kind: 'Marriage', description: 'Union of two persons', examples: 'Henry VIII & Anne Boleyn, Mary I & Philip II' },
+  { kind: 'Martyrdom', description: 'Death for religious beliefs', examples: 'Oxford Martyrs 1555, Ignatian Martyrdom' },
+  { kind: 'Migration', description: 'Mass movement of peoples', examples: 'Hutterite Migrations, Mennonite Organizing' },
+  { kind: 'Mission', description: 'Evangelistic or diplomatic mission', examples: 'Jesuit Mission 1580s, Pauline Mission Journeys' },
+  { kind: 'Persecution', description: 'Systematic oppression of a group', examples: 'Decian Persecution 250, Diocletianic Persecution' },
+  { kind: 'Plot', description: 'Conspiracy or failed coup', examples: 'Babington Plot 1586, Ridolfi Plot 1571' },
+  { kind: 'Publication', description: 'Major text publication or translation', examples: 'Kralice Bible 1579, Wartburg Translation 1521' },
+  { kind: 'Rebellion', description: 'Armed uprising against authority', examples: 'Pilgrimage of Grace 1536, Munster Rebellion' },
+  { kind: 'Reform', description: 'Religious or institutional reform program', examples: 'Basel Reform 1529, Hezekiah Reforms, Josiah Reforms' },
+  { kind: 'Reign', description: 'Period of rule or regency', examples: 'Lady Jane Grey Reign 1553' },
+  { kind: 'Rite', description: 'Religious ceremony or ritual practice', examples: 'Temple Rituals, First Adult Baptisms Zurich 1525' },
+  { kind: 'Sacred', description: 'Miraculous/divine event in religious narrative', examples: 'Exodus, Crucifixion, Pentecost, Binding of Isaac' },
+  { kind: 'Siege', description: 'Military encirclement of a place', examples: 'Assyrian Siege of Jerusalem, Babylonian Siege 597 BCE' },
+  { kind: 'Trial', description: 'Legal proceeding against an individual', examples: 'Trial of Mary Queen of Scots, Eichmann Trial 1961' },
+  { kind: 'War', description: 'Extended military conflict', examples: 'Hussite Wars, Schmalkaldic War, Counts War' },
+]
+
+/* ═══════════════════════════════════════════════════════════════
+   Curator Workflow Stages (from docs/guidelines/curator_runbook.md)
+   ═══════════════════════════════════════════════════════════════ */
+
+const WORKFLOW_STAGES = [
+  { stage: 'Propose', description: 'Create node draft with status: "PROPOSED" and a brief editor_note explaining the addition.', checklist: 'Set status to PROPOSED, add editor_note, assign call number', color: '#4A90D9' },
+  { stage: 'Cite', description: 'Attach at least one Evidence node (A-tier preferred) or inline citation on the relationship.', checklist: 'Attach Evidence node, verify A-tier source if possible, add Chicago 17 citation', color: '#3A7D44' },
+  { stage: 'Frame', description: 'Add FRAMED_BY edge to a Framework node with citation_style, evidence_url, page_refs, source_note.', checklist: 'Link to Framework, populate all FRAMED_BY properties', color: '#D4AF37' },
+  { stage: 'Place', description: 'Assign Timeframe and anchor to Place nodes with active spatial verbs (HAPPENS_IN, OCCURS_IN).', checklist: 'Set startYear/endYear, link to Place node, verify temporal sanity', color: '#C5963A' },
+  { stage: 'Review', description: 'Run audit_queries.md checks: missing FRAMED_BY, temporal sanity, orphan nodes, passive verbs.', checklist: 'Run all QA queries, fix violations, verify no orphans', color: '#805AD5' },
+  { stage: 'Publish', description: 'Set status to "REVIEWED" and add provenance (actor, timestamp, change_reason).', checklist: 'Update status, create Provenance node, link with HAS_PROVENANCE', color: '#8B3A3A' },
+]
+
+/* ═══════════════════════════════════════════════════════════════
+   Comprehensive Project Glossary (from docs/guidelines/glossary.md
+   + docs/guidelines/schema.md + docs/guidelines/classification.md
+   + docs/nodes/ + docs/governance/)
+   ═══════════════════════════════════════════════════════════════ */
+
+interface GlossaryEntry { term: string; definition: string; category: string }
+
+const GLOSSARY_ENTRIES: GlossaryEntry[] = [
+  // Node Types
+  { term: 'Node', category: 'Node Types', definition: 'A graph entity representing a person, place, event, idea, institution, artifact, evidence, corpus, or framework.' },
+  { term: 'Person', category: 'Node Types', definition: 'Individual historical or cultural figure. Includes rulers, thinkers, prophets, artists, and activists.' },
+  { term: 'Place', category: 'Node Types', definition: 'Geographic location — city, region, sacred site, country, empire, or archaeological site. Uses stable physical identity.' },
+  { term: 'EventWindow', category: 'Node Types', definition: 'Historical occurrence or temporally bounded window. Wars, treaties, discoveries, crises. Must have startYear/endYear and a kind property.' },
+  { term: 'Idea', category: 'Node Types', definition: 'Abstract concept, doctrine, or intellectual tradition. The generative core of the classification system — ideas drive everything.' },
+  { term: 'Institution', category: 'Node Types', definition: 'Organization, school, governing body, religious order, or formal social structure.' },
+  { term: 'Movement', category: 'Node Types', definition: 'Social, political, religious, or intellectual movement spanning time and geography.' },
+  { term: 'Text', category: 'Node Types', definition: 'Written work, artifact, or textual tradition. Books, scrolls, codices, inscriptions, and constitutions.' },
+  { term: 'Evidence', category: 'Node Types', definition: 'Primary source, archaeological find, manuscript, or citation node used for scholarly auditability.' },
+  { term: 'Corpus', category: 'Node Types', definition: 'Canonical grouping of texts, traditions, or cultural artifacts (e.g., Biblical Corpus, Vedic Corpus). Top-level class 10.' },
+  { term: 'Framework', category: 'Node Types', definition: 'Interpretive lens or analytical schema (e.g., DOCTRINE_DEVELOPMENT, CULTURAL_DIFFUSION). First-class nodes since v4.' },
+  { term: 'Timeframe', category: 'Node Types', definition: 'Period, era, or epoch used for temporal anchoring. Division 9 in classification (910–960).' },
+  { term: 'Polity', category: 'Node Types', definition: 'Political entity with territorial sovereignty — kingdom, empire, republic, city-state.' },
+
+  // Relationships & Properties
+  { term: 'Relationship (Edge)', category: 'Relationships', definition: 'Connection between two nodes defined by an active-voice verb. Every edge has a verb, source, and target.' },
+  { term: 'Active-Voice Relationship', category: 'Relationships', definition: 'Edge verb with subject → object directionality (e.g., Person AUTHORS Text, not Text IS_AUTHORED_BY Person).' },
+  { term: 'FRAMED_BY', category: 'Relationships', definition: 'Interpretive edge linking any node to a Framework. Must include citation_style, evidence_url, page_refs, source_note.' },
+  { term: 'OCCURS_IN', category: 'Relationships', definition: 'Spatial anchor — links Event to Place. Single primary place per edge.' },
+  { term: 'OCCURS_DURING', category: 'Relationships', definition: 'Temporal anchor — links Event to Timeframe/Era/Epoch.' },
+  { term: 'PREVIOUSLY_KNOWN_AS', category: 'Relationships', definition: 'Links Place to time-scoped PlaceName nodes for historical, endonym, and exonym variants.' },
+
+  // Classification
+  { term: 'Call Number', category: 'Classification', definition: 'Dewey-style numeric code: Class.Division-Slug (e.g., 220.06-julius-caesar). 10 classes (0–9), 48+ divisions.' },
+  { term: 'Slug', category: 'Classification', definition: 'Lowercase-snake_case canonical identifier, unique per label. Primary lookup key in catalog and graph.' },
+  { term: 'Subject Heading', category: 'Classification', definition: 'Topical label for classification within a call number class.' },
+  { term: 'Division', category: 'Classification', definition: 'Second-level subdivision within a class (e.g., 210 = Philosophers, 510 = Wars).' },
+  { term: 'Class', category: 'Classification', definition: 'Top-level category (0–9): Ideas, Theories, People, Institutions, Places, Events, Movements, Texts, Evidence, Timeframes.' },
+
+  // Data & Schema
+  { term: 'Generic Node', category: 'Schema', definition: 'Atemporal, non-contextual hub (e.g., Rome as a Place, Democracy as an Idea). Never changes.' },
+  { term: 'Contextual Node', category: 'Schema', definition: 'Instance with time/place specificity (e.g., Roman Empire 27 BCE–476 CE as an Institution).' },
+  { term: 'Provenance', category: 'Schema', definition: 'Metadata recording source, creator, modification history. Links via HAS_PROVENANCE to Provenance nodes.' },
+  { term: 'Tier', category: 'Schema', definition: 'Evidence reliability level (A–F): Primary, Peer-Reviewed, Scholarly, Institutional, Archaeological, Oral/Quantitative.' },
+  { term: 'chron_key', category: 'Schema', definition: 'Numeric key for deterministic chronological ordering. Negative integers for BCE years.' },
+
+  // Project Structure
+  { term: 'Cluster', category: 'Project Structure', definition: 'Thematic or civilizational grouping of nodes (e.g., English Reformation, Hebrew Tradition, Early Christianity).' },
+  { term: 'Zone', category: 'Project Structure', definition: 'Civilizational area (Ancient Near East, East Asia, Americas, etc.) used for organizing clusters geographically.' },
+  { term: 'Corpus Registry', category: 'Project Structure', definition: 'Canonical list of recognized corpus nodes. 14 corpus files in ui/src/data/catalog/corpuses/.' },
+  { term: 'Cluster Registry', category: 'Project Structure', definition: 'Master list of all clusters with status (active/planned) and coverage metrics. See docs/registry/.' },
+  { term: 'Geo-Registry', category: 'Project Structure', definition: '199 country profiles in geo-registry/places/countries/ with demographic, economic, and governance data.' },
+
+  // Workflow
+  { term: 'Curator', category: 'Workflow', definition: 'Senior contributor responsible for governance, audits, normalization, and publishing nodes to REVIEWED status.' },
+  { term: 'Contributor', category: 'Workflow', definition: 'Project participant who seeds, curates, or expands nodes and relationships.' },
+  { term: 'Historian', category: 'Workflow', definition: 'Contributor focused on historical accuracy, contextual node descriptions, and evidence sourcing.' },
+  { term: 'Workflow Stage', category: 'Workflow', definition: 'One of 6 stages: Propose → Cite → Frame → Place → Review → Publish.' },
+  { term: 'PROPOSED', category: 'Workflow', definition: 'Initial node status — draft awaiting evidence and framework links.' },
+  { term: 'REVIEWED', category: 'Workflow', definition: 'Published status — node has passed all QA checks and has provenance.' },
+  { term: 'Audit Query', category: 'Workflow', definition: 'Cypher query that validates graph integrity: missing FRAMED_BY, temporal sanity, orphans, passive verbs, duplicates.' },
+
+  // Technology
+  { term: 'Cypher', category: 'Technology', definition: 'Neo4j query language for creating, reading, updating, and deleting graph data.' },
+  { term: 'APOC', category: 'Technology', definition: 'Awesome Procedures on Cypher — Neo4j plugin for triggers, periodic commits, and utility functions.' },
+  { term: 'MERGE', category: 'Technology', definition: 'Cypher command that creates a node/edge only if it does not already exist. Prevents duplicates.' },
+  { term: 'Chakra UI', category: 'Technology', definition: 'React component library (v3) used for the Papyrus & Cosmos design system.' },
+  { term: 'D3.js', category: 'Technology', definition: 'JavaScript library for force-directed graph visualization in GraphExplorer.' },
+  { term: 'Pydantic', category: 'Technology', definition: 'Python data validation library. All backend models use Pydantic BaseModel.' },
+
+  // Standards
+  { term: 'CIDOC CRM', category: 'Standards', definition: 'International standard for cultural heritage data modeling. Used as crosswalk reference for node attributes.' },
+  { term: 'Chicago 17', category: 'Standards', definition: 'Chicago Manual of Style 17th edition — the required citation style for all FRAMED_BY edges.' },
+  { term: 'ISO 3166', category: 'Standards', definition: 'International standard for country codes (alpha-2, alpha-3, numeric). Used in geo-registry.' },
+  { term: 'UNESCO', category: 'Standards', definition: 'UN agency; used for region/style normalization and cultural heritage classification.' },
+  { term: 'W3C PROV', category: 'Standards', definition: 'W3C Provenance standard. Used as crosswalk reference for provenance modeling.' },
+
+  // Design System
+  { term: 'Papyrus & Cosmos', category: 'Design System', definition: 'Project theme — papyrus tones (#FAF3E8) for backgrounds, cosmos blues (#E8F0FE) for interactive elements, gold (#D4AF37) for accents.' },
+  { term: 'Cormorant Garamond', category: 'Design System', definition: 'Serif font used for section headings throughout the application.' },
+  { term: 'Cinzel', category: 'Design System', definition: 'Display font used for hero titles, logos, and emphasis headings.' },
+  { term: 'Inter', category: 'Design System', definition: 'Body text font used for paragraph content and UI elements.' },
+  { term: 'JetBrains Mono', category: 'Design System', definition: 'Monospace font used for code, slugs, and call numbers.' },
+  { term: 'StatCard', category: 'Design System', definition: 'UI component: colored accent bar + large value + label. Used in all continent dashboards.' },
+  { term: 'InsightCard', category: 'Design System', definition: 'UI component: dot indicator + title + narrative insight + source attribution.' },
+  { term: 'DataTable', category: 'Design System', definition: 'UI component: dark header + striped rows + scrollable. For comparative data.' },
+  { term: 'SectionHeading', category: 'Design System', definition: 'UI component: serif title + muted subtitle + golden underline bar.' },
+
+  // Eras
+  { term: 'Prehistoric', category: 'Eras', definition: 'Before 3000 BCE. Division 910. Color: #6B4D1B. Earliest human activity through proto-civilization.' },
+  { term: 'Classical / Ancient', category: 'Eras', definition: '3000 BCE – 500 CE. Division 920. Color: #8B4513. Great civilizations, empires, and philosophical traditions.' },
+  { term: 'Medieval', category: 'Eras', definition: '500 – 1500 CE. Division 930. Color: #A67C2E. Byzantine, Islamic, and European feudal societies.' },
+  { term: 'Early Modern', category: 'Eras', definition: '1500 – 1800 CE. Division 940. Color: #C5963A. Reformation, colonialism, scientific revolution.' },
+  { term: 'Modern', category: 'Eras', definition: '1800 – 1945 CE. Division 950. Color: #4A90D9. Industrialization, world wars, nationalism.' },
+  { term: 'Contemporary', category: 'Eras', definition: '1945 CE – Present. Division 960. Color: #6B3FA0. Cold War, globalization, digital age.' },
+]
+
+/* ═══════════════════════════════════════════════════════════════
    TIER COLOURS for verb cards
    ═══════════════════════════════════════════════════════════════ */
 
@@ -167,6 +343,11 @@ export default function DocsPage() {
     { id: 'nodetypes', label: 'Node Types', icon: <Layers size={16} /> },
     { id: 'evidence', label: 'Evidence Tiers', icon: <Shield size={16} /> },
     { id: 'conventions', label: 'Conventions', icon: <FileText size={16} /> },
+    { id: 'frameworks', label: 'Frameworks', icon: <Layers size={16} /> },
+    { id: 'classification', label: 'Classification', icon: <BookOpen size={16} /> },
+    { id: 'eventkinds', label: 'Event Kinds', icon: <Clock size={16} /> },
+    { id: 'workflow', label: 'Curator Workflow', icon: <Users size={16} /> },
+    { id: 'projectglossary', label: 'Project Glossary', icon: <Search size={16} /> },
   ]
 
   return (
@@ -405,7 +586,197 @@ export default function DocsPage() {
               title="Era Framework"
               content="Six eras: Prehistoric (before 3000 BCE), Classical (3000 BCE – 500 CE), Medieval (500–1500), Early Modern (1500–1800), Modern (1800–1945), Contemporary (1945–present)."
             />
+            <ConventionCard
+              title="Chronology"
+              content="Use negative integers for BCE years (e.g., -753 for 753 BCE). Use chron_key for deterministic ordering. Prefer numeric comparisons and range queries."
+            />
+            <ConventionCard
+              title="Place Naming"
+              content="Stable physical location identity (Place node never changes). Time-scoped PlaceName nodes connected via PREVIOUSLY_KNOWN_AS. Endonyms (local names), exonyms (foreign names), and historical names are all modeled."
+            />
+            <ConventionCard
+              title="Generic vs Contextual Nodes"
+              content="Generic nodes are atemporal hubs (e.g., Rome as a Place). Contextual nodes have time/place specificity (e.g., Roman Empire 27 BCE–476 CE as an Institution)."
+            />
+            <ConventionCard
+              title="Citation Style"
+              content="Chicago Manual of Style 17th edition. All FRAMED_BY edges must include citation_style, evidence_url, page_refs, and source_note properties."
+            />
           </SimpleGrid>
+        </Box>
+      )}
+
+      {/* ═══════ FRAMEWORKS ═══════ */}
+      {activeSection === 'frameworks' && (
+        <Box>
+          <SectionHeading
+            title="Interpretive Frameworks"
+            subtitle="10 analytical lenses for examining historical relationships — from docs/guidelines/framework_matrix.md"
+          />
+          <SimpleGrid columns={{ base: 1 }} gap={4}>
+            {FRAMEWORK_ENTRIES.map(fw => (
+              <Box key={fw.name} bg="white" border="1px solid" borderColor={BORDER} borderRadius="lg" p={5} position="relative" overflow="hidden">
+                <Box position="absolute" top={0} left={0} w="4px" h="100%" bg={fw.color} />
+                <Flex align="center" gap={2} mb={2} pl={3}>
+                  <Text fontFamily='"JetBrains Mono", monospace' fontSize="sm" fontWeight={700} color={DARK_TEXT}>{fw.name}</Text>
+                </Flex>
+                <Text fontSize="sm" color={MED_TEXT} pl={3} mb={3}>{fw.description}</Text>
+                <Flex pl={3} gap={2} flexWrap="wrap" mb={2}>
+                  <Text fontSize="xs" color={MUTED} fontWeight={600}>Recommended verbs:</Text>
+                  {fw.verbs.map(v => (
+                    <Text key={v} fontSize="xs" fontFamily="mono" color="#3A7D44" bg="#F0FFF4" px={2} py={0.5} borderRadius="md">{v}</Text>
+                  ))}
+                </Flex>
+                <Flex pl={3} gap={2} flexWrap="wrap">
+                  <Text fontSize="xs" color={MUTED} fontWeight={600}>Related:</Text>
+                  {fw.related.map(r => (
+                    <Text key={r} fontSize="xs" color={MUTED} fontStyle="italic">{r}</Text>
+                  ))}
+                </Flex>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+      )}
+
+      {/* ═══════ CLASSIFICATION ═══════ */}
+      {activeSection === 'classification' && (
+        <Box>
+          <SectionHeading
+            title="Call Number Classification System"
+            subtitle="Dewey-inspired taxonomy — 10 classes, 48+ divisions — from docs/guidelines/classification.md"
+          />
+          <SimpleGrid columns={{ base: 1, md: 2 }} gap={4}>
+            {CLASSIFICATION_ENTRIES.map(cls => (
+              <Box key={cls.classNum} bg="white" border="1px solid" borderColor={BORDER} borderRadius="lg" p={4}>
+                <Flex align="center" gap={2} mb={2}>
+                  <Box w="32px" h="32px" borderRadius="full" bg={cls.color} color="white" display="flex" alignItems="center" justifyContent="center" fontFamily='"Cinzel", serif' fontSize="sm" fontWeight={700}>
+                    {cls.classNum}
+                  </Box>
+                  <Text fontFamily='"Cormorant Garamond", serif' fontSize="lg" fontWeight={600} color={DARK_TEXT}>{cls.name}</Text>
+                </Flex>
+                <Text fontSize="sm" color={MED_TEXT} mb={2}>{cls.heading}</Text>
+                {cls.divisions.map(d => (
+                  <Text key={d} fontSize="xs" color={MUTED} fontFamily="mono" lineHeight={1.8}>  {d}</Text>
+                ))}
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+      )}
+
+      {/* ═══════ EVENT KINDS ═══════ */}
+      {activeSection === 'eventkinds' && (
+        <Box>
+          <SectionHeading
+            title="Event Kind Vocabulary"
+            subtitle="Canonical 'kind' property values for EventWindow nodes — from docs/schema/event-kinds.md"
+          />
+          <Text fontSize="sm" color={MED_TEXT} mb={4} maxW="700px">
+            Every EventWindow node must have a <code>kind</code> property. Prefer specificity (Execution over Persecution), use one kind per event, and match to established examples.
+          </Text>
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={4}>
+            {EVENT_KIND_ENTRIES.map(ek => (
+              <Box key={ek.kind} bg="white" border="1px solid" borderColor={BORDER} borderRadius="lg" p={4}>
+                <Text fontFamily='"JetBrains Mono", monospace' fontSize="sm" fontWeight={700} color={DARK_TEXT} mb={1}>{ek.kind}</Text>
+                <Text fontSize="sm" color={MED_TEXT} mb={2}>{ek.description}</Text>
+                <Text fontSize="xs" color={MUTED} fontStyle="italic">{ek.examples}</Text>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+      )}
+
+      {/* ═══════ CURATOR WORKFLOW ═══════ */}
+      {activeSection === 'workflow' && (
+        <Box>
+          <SectionHeading
+            title="Curator Workflow"
+            subtitle="6-stage pipeline for adding data to the knowledge graph — from docs/guidelines/curator_runbook.md"
+          />
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={4} mb={8}>
+            {WORKFLOW_STAGES.map((ws, i) => (
+              <Box key={ws.stage} bg="white" border="1px solid" borderColor={BORDER} borderRadius="lg" p={5} position="relative" overflow="hidden">
+                <Box position="absolute" top={0} left={0} w="100%" h="4px" bg={ws.color} />
+                <Flex align="center" gap={2} mb={2}>
+                  <Box w="28px" h="28px" borderRadius="full" bg={ws.color} color="white" display="flex" alignItems="center" justifyContent="center" fontSize="sm" fontWeight={700}>{i + 1}</Box>
+                  <Text fontFamily='"Cormorant Garamond", serif' fontSize="lg" fontWeight={600} color={DARK_TEXT}>{ws.stage}</Text>
+                </Flex>
+                <Text fontSize="sm" color={MED_TEXT} mb={2}>{ws.description}</Text>
+                <Text fontSize="xs" color={MUTED} fontStyle="italic">{ws.checklist}</Text>
+              </Box>
+            ))}
+          </SimpleGrid>
+
+          <SectionHeading title="Escalation Rules" subtitle="When to escalate to governance board" />
+          <SimpleGrid columns={{ base: 1, md: 2 }} gap={4}>
+            <ConventionCard title="Missing Primary Evidence" content="If no primary or peer-reviewed source can be found for an interpretive claim, escalate via RFC." />
+            <ConventionCard title="Major Temporal Contradictions" content="If start/end year conflicts span multiple nodes, escalate to governance board." />
+            <ConventionCard title="Network Fragmentation" content="If a change would disconnect >10 nodes from the main graph, escalate for review." />
+            <ConventionCard title="Competing Frameworks" content="If two frameworks yield contradictory interpretations of the same event, model both with separate FRAMED_BY edges and source notes." />
+          </SimpleGrid>
+        </Box>
+      )}
+
+      {/* ═══════ PROJECT GLOSSARY ═══════ */}
+      {activeSection === 'projectglossary' && (
+        <Box>
+          <SectionHeading
+            title="Project Glossary"
+            subtitle="Comprehensive definitions for all project terms — migrated from docs/guidelines/glossary.md"
+          />
+
+          {/* Search */}
+          <Flex mb={6} maxW="480px" position="relative">
+            <Box position="absolute" left="12px" top="50%" transform="translateY(-50%)" color={MUTED} zIndex={1}>
+              <Search size={16} />
+            </Box>
+            <input
+              style={{
+                width: '100%',
+                padding: '10px 12px 10px 36px',
+                fontSize: '14px',
+                borderRadius: '8px',
+                border: `1px solid ${BORDER}`,
+                background: 'white',
+                outline: 'none',
+                fontFamily: 'Inter, sans-serif',
+              }}
+              placeholder="Search glossary terms…"
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+            />
+          </Flex>
+
+          {(() => {
+            const q = searchTerm.toLowerCase()
+            const filtered = q
+              ? GLOSSARY_ENTRIES.filter(g => g.term.toLowerCase().includes(q) || g.definition.toLowerCase().includes(q) || g.category.toLowerCase().includes(q))
+              : GLOSSARY_ENTRIES
+
+            const categories = [...new Set(filtered.map(g => g.category))]
+
+            return (
+              <>
+                {categories.map(cat => (
+                  <Box key={cat} mb={6}>
+                    <Text fontFamily='"Cinzel", serif' fontSize="md" fontWeight={700} color={GOLD} mb={3} textTransform="uppercase" letterSpacing="wider">{cat}</Text>
+                    <SimpleGrid columns={{ base: 1, md: 2 }} gap={3}>
+                      {filtered.filter(g => g.category === cat).map(g => (
+                        <Box key={g.term} bg="white" border="1px solid" borderColor={BORDER} borderRadius="lg" p={4}>
+                          <Text fontFamily='"JetBrains Mono", monospace' fontSize="sm" fontWeight={700} color={DARK_TEXT} mb={1}>{g.term}</Text>
+                          <Text fontSize="sm" color={MED_TEXT} lineHeight={1.6}>{g.definition}</Text>
+                        </Box>
+                      ))}
+                    </SimpleGrid>
+                  </Box>
+                ))}
+                {filtered.length === 0 && (
+                  <Box textAlign="center" py={8}><Text color={MUTED}>No terms match "{searchTerm}"</Text></Box>
+                )}
+              </>
+            )
+          })()}
         </Box>
       )}
     </Box>

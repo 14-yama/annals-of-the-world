@@ -57,6 +57,18 @@ const GOVERNANCE_TABLE = {
   ],
 }
 
+const HEALTH_TABLE = {
+  title: 'Health Indicators — Americas',
+  headers: ['Metric', 'North America', 'Latin America', 'Global'],
+  rows: [
+    ['Life Expectancy', '78.9 yrs', '75.2 yrs', '73.4 yrs'],
+    ['Maternal Mortality (per 100k)', '21', '88', '223'],
+    ['Infant Mortality (per 1k)', '5.4', '14.0', '27'],
+    ['Physicians per 10k', '26', '20', '15'],
+    ['Obesity Rate', '36%', '24%', '13%'],
+  ],
+}
+
 const INDIGENOUS_TABLE = {
   title: 'Pre-Columbian Civilizations',
   headers: ['Civilization', 'Region', 'Peak Period', 'Achievement'],
@@ -171,6 +183,9 @@ export default function AmericasDashboard() {
         <DataTable {...GOVERNANCE_TABLE} />
         <DataTable {...INDIGENOUS_TABLE} />
       </SimpleGrid>
+      <SimpleGrid columns={{ base: 1, lg: 2 }} gap={5} mb={8}>
+        <DataTable {...HEALTH_TABLE} />
+      </SimpleGrid>
 
       {/* Hidden Patterns */}
       <SectionHeading title="Hidden Patterns" subtitle="Non-obvious insights across the Western Hemisphere" />
@@ -189,6 +204,32 @@ export default function AmericasDashboard() {
           </Box>
         ))}
       </SimpleGrid>
+
+      {/* Source Attribution */}
+      {/* Knowledge Graph Coverage */}
+      <SectionHeading
+        title="Knowledge Graph Coverage"
+        subtitle="1,870 nodes across 35 nations — 6 eras of American history"
+      />
+      <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} gap={4} mb={5}>
+        <StatCard value="1,305" label="Events" detail="Wars, revolutions, discoveries" color="#C5963A" />
+        <StatCard value="227" label="Movements" detail="Independence, civil rights, reform" color="#6B3FA0" />
+        <StatCard value="132" label="People" detail="Presidents, liberators, activists" color="#3A7D44" />
+        <StatCard value="109" label="Texts" detail="Constitutions, treaties, declarations" color="#5A2222" />
+        <StatCard value="87" label="Institutions" detail="Empires, republics, organizations" color="#8B3A3A" />
+        <StatCard value="1,870" label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
+      </SimpleGrid>
+      <DataTable
+        title="Top Countries by Knowledge Graph Nodes"
+        headers={['Country', 'Event Windows', 'People', 'Institutions', 'Movements', 'Total']}
+        rows={[
+          ['United States', '200', '22', '25', '30', '301'],
+          ['Mexico', '55', '8', '7', '9', '83'],
+          ['Canada', '45', '7', '6', '7', '69'],
+          ['Brazil', '40', '7', '6', '8', '67'],
+          ['Peru', '44', '6', '5', '7', '66'],
+        ]}
+      />
 
       {/* Source Attribution */}
       <Box bg="#F5F4F0" borderRadius="lg" p={5} border="1px solid" borderColor="#E4E2DC">

@@ -40,6 +40,31 @@ const ECONOMIC_TABLE = {
   ],
 }
 
+const GOVERNANCE_TABLE = {
+  title: 'Freedom House Scores — Oceania',
+  headers: ['Country', 'Score', 'Status'],
+  rows: [
+    ['New Zealand', '99', 'Free'],
+    ['Australia', '95', 'Free'],
+    ['Samoa', '82', 'Free'],
+    ['Tonga', '76', 'Free'],
+    ['Fiji', '56', 'Partly Free'],
+    ['Papua New Guinea', '52', 'Partly Free'],
+  ],
+}
+
+const HEALTH_TABLE = {
+  title: 'Health Indicators — Oceania',
+  headers: ['Metric', 'Australia/NZ', 'Pacific Islands', 'Global'],
+  rows: [
+    ['Life Expectancy', '83.0 yrs', '65–72 yrs', '73.4 yrs'],
+    ['Maternal Mortality (per 100k)', '5', '150–250', '223'],
+    ['Infant Mortality (per 1k)', '3.2', '20–40', '27'],
+    ['Physicians per 10k', '38', '2–5', '15'],
+    ['Diabetes Prevalence', '5.3%', '15–25%', '10.5%'],
+  ],
+}
+
 const ENVIRONMENTAL_TABLE = {
   title: 'Climate & Environmental Vulnerability',
   headers: ['Threat', 'Impact', 'Most Affected'],
@@ -159,6 +184,10 @@ export default function OceaniaDashboard() {
         <DataTable {...ECONOMIC_TABLE} />
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, lg: 2 }} gap={5} mb={8}>
+        <DataTable {...GOVERNANCE_TABLE} />
+        <DataTable {...HEALTH_TABLE} />
+      </SimpleGrid>
+      <SimpleGrid columns={{ base: 1, lg: 2 }} gap={5} mb={8}>
         <DataTable {...ENVIRONMENTAL_TABLE} />
         <DataTable {...NAVIGATION_TABLE} />
       </SimpleGrid>
@@ -180,6 +209,31 @@ export default function OceaniaDashboard() {
           </Box>
         ))}
       </SimpleGrid>
+
+      {/* Knowledge Graph Coverage */}
+      <SectionHeading
+        title="Knowledge Graph Coverage"
+        subtitle="367 nodes across 14 nations — 6 eras of Pacific history"
+      />
+      <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} gap={4} mb={5}>
+        <StatCard value="325" label="Events" detail="Migrations, colonization, independence" color="#C5963A" />
+        <StatCard value="23" label="Movements" detail="Independence, land rights, reform" color="#6B3FA0" />
+        <StatCard value="11" label="People" detail="Leaders, navigators, reformers" color="#3A7D44" />
+        <StatCard value="6" label="Institutions" detail="Kingdoms, parliaments, organizations" color="#8B3A3A" />
+        <StatCard value="2" label="Texts" detail="Treaties, constitutions" color="#5A2222" />
+        <StatCard value="367" label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
+      </SimpleGrid>
+      <DataTable
+        title="Top Countries by Knowledge Graph Nodes"
+        headers={['Country', 'Event Windows', 'People', 'Institutions', 'Movements', 'Total']}
+        rows={[
+          ['Australia', '47', '4', '3', '4', '60'],
+          ['New Zealand', '37', '4', '3', '5', '53'],
+          ['Papua New Guinea', '25', '2', '0', '3', '31'],
+          ['Fiji', '23', '1', '0', '3', '29'],
+          ['Tonga', '20', '0', '0', '2', '23'],
+        ]}
+      />
 
       {/* Source Attribution */}
       <Box bg="#F5F4F0" borderRadius="lg" p={5} border="1px solid" borderColor="#E4E2DC">

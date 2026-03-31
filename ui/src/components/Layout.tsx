@@ -30,6 +30,10 @@ import {
   Wheat,
   Compass,
   MapPin,
+  Shirt,
+  TrainFront,
+  Gavel,
+  Crown,
 } from 'lucide-react'
 import { getAllEntities } from '../data/catalog'
 
@@ -105,6 +109,12 @@ const NAV_SECTIONS: NavSection[] = [
       { path: '/agriculture',  label: 'Agriculture',      icon: Wheat },
       { path: '/navigation',   label: 'Navigation',       icon: Compass },
       { path: '/languages',    label: 'Languages',        icon: BookOpen },
+      { path: '/tribes',         label: 'Tribes & Peoples', icon: Users },
+      { path: '/transportation', label: 'Transportation',   icon: TrainFront },
+      { path: '/clothing',       label: 'Clothing',         icon: Shirt },
+      { path: '/marriage',       label: 'Marriage',         icon: Heart },
+      { path: '/customs',        label: 'Customs',          icon: Crown },
+      { path: '/punishment',     label: 'Punishment',       icon: Gavel },
     ],
   },
   {

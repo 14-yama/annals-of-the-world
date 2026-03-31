@@ -56,6 +56,18 @@ const GOVERNANCE_TABLE = {
   ],
 }
 
+const HEALTH_TABLE = {
+  title: 'Health Indicators — Europe',
+  headers: ['Metric', 'Western Europe', 'Eastern Europe', 'Global'],
+  rows: [
+    ['Life Expectancy', '82.0 yrs', '74.5 yrs', '73.4 yrs'],
+    ['Maternal Mortality (per 100k)', '5', '18', '223'],
+    ['Infant Mortality (per 1k)', '3.0', '7.5', '27'],
+    ['Physicians per 10k', '40', '32', '15'],
+    ['Mental Health Burden', '18% of DALYs', '15% of DALYs', '13% of DALYs'],
+  ],
+}
+
 const EU_TABLE = {
   title: 'European Union at a Glance',
   headers: ['Metric', 'Value'],
@@ -172,6 +184,9 @@ export default function EuropeDashboard() {
         <DataTable {...GOVERNANCE_TABLE} />
         <DataTable {...EU_TABLE} />
       </SimpleGrid>
+      <SimpleGrid columns={{ base: 1, lg: 2 }} gap={5} mb={8}>
+        <DataTable {...HEALTH_TABLE} />
+      </SimpleGrid>
 
       {/* Hidden Patterns */}
       <SectionHeading title="Hidden Patterns" subtitle="Non-obvious insights from European analysis" />
@@ -190,6 +205,32 @@ export default function EuropeDashboard() {
           </Box>
         ))}
       </SimpleGrid>
+
+      {/* Source Attribution */}
+      {/* Knowledge Graph Coverage */}
+      <SectionHeading
+        title="Knowledge Graph Coverage"
+        subtitle="2,062 nodes across 45 nations — 6 eras of European history"
+      />
+      <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} gap={4} mb={5}>
+        <StatCard value="1,144" label="Events" detail="Wars, elections, discoveries" color="#C5963A" />
+        <StatCard value="278" label="Movements" detail="Reformation, Enlightenment, Revolutions" color="#6B3FA0" />
+        <StatCard value="220" label="Institutions" detail="Empires, parliaments, churches" color="#8B3A3A" />
+        <StatCard value="212" label="People" detail="Monarchs, philosophers, scientists" color="#3A7D44" />
+        <StatCard value="195" label="Texts" detail="Treaties, constitutions, codes" color="#5A2222" />
+        <StatCard value="2,062" label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
+      </SimpleGrid>
+      <DataTable
+        title="Top Countries by Knowledge Graph Nodes"
+        headers={['Country', 'Event Windows', 'People', 'Institutions', 'Movements', 'Total']}
+        rows={[
+          ['United Kingdom', '142', '30', '40', '40', '288'],
+          ['France', '43', '9', '10', '11', '76'],
+          ['Spain', '40', '8', '9', '9', '70'],
+          ['Germany', '35', '4', '8', '5', '67'],
+          ['Italy', '40', '6', '7', '8', '66'],
+        ]}
+      />
 
       {/* Source Attribution */}
       <Box bg="#F5F4F0" borderRadius="lg" p={5} border="1px solid" borderColor="#E4E2DC">
