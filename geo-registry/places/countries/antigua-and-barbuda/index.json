@@ -20,7 +20,7 @@
     "notes": "Comprehensive index for Antigua and Barbuda covering Siboney/Arawak/Carib indigenous peoples, Columbus 1493 sighting, English colonization 1632, Codrington sugar dynasty, Nelson's Dockyard, emancipation 1834 (uniquely skipped apprenticeship), V.C. Bird Sr. and labour movement, independence 1981, Bird family political dynasty, Hurricane Irma 2017 devastation of Barbuda, and Barbudan autonomy tensions.",
     "sub_region": "",
     "iso3166_numeric": "000",
-    "data_year": 0
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "St. John's",
@@ -101,12 +101,12 @@
     "continent": "Americas",
     "notes_unique": "Twin-island state (Antigua and Barbuda plus Redonda); Nelson's Dockyard (UNESCO, only working Georgian dockyard); Hurricane Irma 2017 destroyed 95% of Barbuda structures; Barbudan communal land ownership dispute; Bird political dynasty (V.C. Bird Sr. 1981-94, Lester Bird 1994-2004); tourism-dependent (~60% GDP); cricket culture; 365 beaches ('one for every day'); Stanford Financial Group scandal",
     "demographics": {
-      "median_age": 0,
-      "urbanization_pct": 0,
-      "fertility_rate": 0,
-      "life_expectancy": 0,
-      "infant_mortality_per_1k": 0,
-      "literacy_rate_pct": 0,
+      "median_age": 33.0,
+      "urbanization_pct": 24.4,
+      "fertility_rate": 1.96,
+      "life_expectancy": 77.5,
+      "infant_mortality_per_1k": 11.1,
+      "literacy_rate_pct": 99.0,
       "net_migration_rate": 0,
       "population_growth_rate_pct": 0,
       "urban_population_growth_rate_pct": 0,
@@ -122,18 +122,24 @@
         "25_54_pct": 0,
         "55_64_pct": 0,
         "65_plus_pct": 0
-      }
+      },
+      "population_growth_rate": 1.2,
+      "population_density": 227.0
     },
     "natural_resources": {
-      "primary": [],
+      "primary": [
+        "fisheries",
+        "cotton",
+        "salt"
+      ],
       "resource_dependency_pct_gdp": 0,
       "notes": "",
       "resource_curse_risk": ""
     },
     "military": {
-      "budget_usd": "",
+      "budget_usd": 14000000,
       "pct_of_gdp": 0,
-      "active_personnel": 0,
+      "active_personnel": 180,
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
@@ -143,9 +149,17 @@
       "global_firepower_rank": 0
     },
     "trade": {
-      "top_exports": [],
+      "top_exports": [
+        "refined petroleum",
+        "ships",
+        "rum"
+      ],
       "top_imports": [],
-      "major_partners": [],
+      "major_partners": [
+        "United States",
+        "United Kingdom",
+        "Poland"
+      ],
       "trade_balance": "",
       "remittances_pct_gdp": 0,
       "total_exports_usd": "",
@@ -184,7 +198,7 @@
       },
       "democracy_index": {
         "score": 0,
-        "category": "",
+        "category": "Not rated",
         "year": 0
       },
       "fragile_states_index": {
@@ -237,7 +251,7 @@
       "notes": ""
     },
     "debt_aid": {
-      "national_debt_pct_gdp": 0,
+      "national_debt_pct_gdp": 72.0,
       "foreign_aid_received_usd": "",
       "notes": "",
       "external_debt_usd": "",
@@ -258,7 +272,7 @@
       "education_expenditure_pct_gdp": 0,
       "primary_completion_rate_pct": 0,
       "gender_parity_index": 0,
-      "mean_years_of_schooling": 0,
+      "mean_years_of_schooling": 9.2,
       "expected_years_of_schooling": 0,
       "pisa_scores": {
         "reading": 0,
@@ -268,7 +282,8 @@
       },
       "student_teacher_ratio_primary": 0,
       "out_of_school_children": 0,
-      "academic_freedom_index": 0
+      "academic_freedom_index": 0,
+      "expenditure_pct_gdp": 3.6
     },
     "diaspora_migration": {
       "diaspora_population": "",
@@ -383,10 +398,16 @@
         "sp": "",
         "fitch": ""
       },
-      "notes": ""
+      "notes": "",
+      "gdp_growth_pct": 6.2,
+      "inflation_pct": 5.1,
+      "unemployment_pct": 11.0,
+      "sector_agriculture_pct": 1.8,
+      "sector_industry_pct": 18.0,
+      "sector_services_pct": 80.2
     },
     "health": {
-      "health_expenditure_pct_gdp": 0,
+      "health_expenditure_pct_gdp": 5.6,
       "health_expenditure_per_capita_usd": 0,
       "physicians_per_1k": 0,
       "nurses_midwives_per_1k": 0,
@@ -402,7 +423,8 @@
       "obesity_rate_pct": 0,
       "universal_health_coverage_index": 0,
       "leading_causes_of_death": [],
-      "notes": ""
+      "notes": "",
+      "physician_density_per_1k": 2.8
     },
     "food_agriculture": {
       "food_security_index_score": 0,
@@ -637,7 +659,21 @@
               -3000,
               -500
             ],
-            "description": "The earliest known inhabitants, the Siboney (also called Ciboney), who were semi-nomadic hunter-gatherers occupying the islands from approximately 3000 BCE."
+            "description": "The earliest known inhabitants, the Siboney (also called Ciboney), who were semi-nomadic hunter-gatherers occupying the islands from approximately 3000 BCE.",
+            "nodes": [
+              {
+                "slug": "siboney-and-early-settlement",
+                "name": "Siboney and Early Settlement",
+                "label": "EventWindow",
+                "call_number": "530.siboney-and-early-settlement",
+                "description": "The earliest known inhabitants, the Siboney (also called Ciboney), who were semi-nomadic hunter-gatherers occupying the islands from approximately 3000 BCE.",
+                "year_range": [
+                  -3000,
+                  -500
+                ],
+                "status": "PLANNED"
+              }
+            ]
           },
           {
             "slug": "arawak-agricultural-communities",
@@ -646,7 +682,21 @@
               -500,
               1200
             ],
-            "description": "Arawak peoples who migrated from the Orinoco River basin in South America, establishing agricultural settlements and developing pottery traditions on both Antigua and Barbuda."
+            "description": "Arawak peoples who migrated from the Orinoco River basin in South America, establishing agricultural settlements and developing pottery traditions on both Antigua and Barbuda.",
+            "nodes": [
+              {
+                "slug": "arawak-agricultural-communities",
+                "name": "Arawak Agricultural Communities",
+                "label": "EventWindow",
+                "call_number": "530.arawak-agricultural-communities",
+                "description": "Arawak peoples who migrated from the Orinoco River basin in South America, establishing agricultural settlements and developing pottery traditions on both Antigua and Barbuda.",
+                "year_range": [
+                  -500,
+                  1200
+                ],
+                "status": "PLANNED"
+              }
+            ]
           },
           {
             "slug": "carib-dominance-pre-contact",
@@ -659,6 +709,32 @@
             "key_events": [
               "Carib expansion into the Lesser Antilles c. 1200",
               "Establishment of Carib warrior culture and inter-island raiding networks"
+            ],
+            "nodes": [
+              {
+                "slug": "carib-expansion-into-the-lesser-antilles-c-1200",
+                "name": "Carib expansion into the Lesser Antilles c. 1200",
+                "label": "EventWindow",
+                "call_number": "530.carib-expansion-into-the-lesser-antilles",
+                "description": "Carib expansion into the Lesser Antilles c. 1200 — Antigua and Barbuda",
+                "year_range": [
+                  1200,
+                  1220
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "establishment-of-carib-warrior-culture-and-inter-island-raiding-networks",
+                "name": "Establishment of Carib warrior culture and inter-island raiding networks",
+                "label": "EventWindow",
+                "call_number": "530.establishment-of-carib-warrior-culture-a",
+                "description": "Establishment of Carib warrior culture and inter-island raiding networks — Antigua and Barbuda",
+                "year_range": [
+                  1200,
+                  1493
+                ],
+                "status": "PLANNED"
+              }
             ]
           }
         ]
@@ -686,6 +762,32 @@
             "key_events": [
               "Columbus sights and names Antigua on November 11, 1493",
               "Spanish Crown claims sovereignty over the island"
+            ],
+            "nodes": [
+              {
+                "slug": "columbus-sights-and-names-antigua-on-november-11-1493",
+                "name": "Columbus sights and names Antigua on November 11, 1493",
+                "label": "EventWindow",
+                "call_number": "530.columbus-sights-and-names-antigua-on-nov",
+                "description": "Columbus sights and names Antigua on November 11, 1493 — Antigua and Barbuda",
+                "year_range": [
+                  1493,
+                  1513
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "spanish-crown-claims-sovereignty-over-the-island",
+                "name": "Spanish Crown claims sovereignty over the island",
+                "label": "EventWindow",
+                "call_number": "530.spanish-crown-claims-sovereignty-over-th",
+                "description": "Spanish Crown claims sovereignty over the island — Antigua and Barbuda",
+                "year_range": [
+                  1493,
+                  1600
+                ],
+                "status": "PLANNED"
+              }
             ]
           },
           {
@@ -695,7 +797,21 @@
               1600,
               1632
             ],
-            "description": "Multiple failed attempts by Spanish, French, and English explorers to colonize Antigua, thwarted by Carib resistance and lack of reliable freshwater sources."
+            "description": "Multiple failed attempts by Spanish, French, and English explorers to colonize Antigua, thwarted by Carib resistance and lack of reliable freshwater sources.",
+            "nodes": [
+              {
+                "slug": "early-european-settlement-attempts",
+                "name": "Early European Settlement Attempts",
+                "label": "EventWindow",
+                "call_number": "530.early-european-settlement-attempts",
+                "description": "Multiple failed attempts by Spanish, French, and English explorers to colonize Antigua, thwarted by Carib resistance and lack of reliable freshwater sources.",
+                "year_range": [
+                  1600,
+                  1632
+                ],
+                "status": "PLANNED"
+              }
+            ]
           }
         ]
       }
@@ -722,6 +838,44 @@
             "key_events": [
               "Edward Warner establishes English colony on Antigua in 1632",
               "Codrington family acquires land and begins sugar cultivation"
+            ],
+            "nodes": [
+              {
+                "slug": "edward-warner-establishes-english-colony-on-antigua-in-1632",
+                "name": "Edward Warner establishes English colony on Antigua in 1632",
+                "label": "EventWindow",
+                "call_number": "530.edward-warner-establishes-english-colony",
+                "description": "Edward Warner establishes English colony on Antigua in 1632 — Antigua and Barbuda",
+                "year_range": [
+                  1632,
+                  1652
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "codrington-family-acquires-land-and-begins-sugar-cultivation",
+                "name": "Codrington family acquires land and begins sugar cultivation",
+                "label": "EventWindow",
+                "call_number": "530.codrington-family-acquires-land-and-begi",
+                "description": "Codrington family acquires land and begins sugar cultivation — Antigua and Barbuda",
+                "year_range": [
+                  1632,
+                  1674
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "thomas-warner",
+                "name": "Thomas Warner",
+                "label": "Person",
+                "call_number": "220.thomas-warner",
+                "description": "Thomas Warner — historical figure of Antigua and Barbuda",
+                "year_range": [
+                  1632,
+                  1674
+                ],
+                "status": "PLANNED"
+              }
             ]
           },
           {
@@ -735,6 +889,44 @@
             "key_events": [
               "Christopher Codrington establishes Betty's Hope plantation 1674",
               "Antigua slave conspiracy of 1736 and brutal reprisals"
+            ],
+            "nodes": [
+              {
+                "slug": "christopher-codrington-establishes-bettys-hope-plantation-1674",
+                "name": "Christopher Codrington establishes Betty's Hope plantation 1674",
+                "label": "EventWindow",
+                "call_number": "530.christopher-codrington-establishes-betty",
+                "description": "Christopher Codrington establishes Betty's Hope plantation 1674 — Antigua and Barbuda",
+                "year_range": [
+                  1674,
+                  1694
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "antigua-slave-conspiracy-of-1736-and-brutal-reprisals",
+                "name": "Antigua slave conspiracy of 1736 and brutal reprisals",
+                "label": "EventWindow",
+                "call_number": "530.antigua-slave-conspiracy-of-1736-and-bru",
+                "description": "Antigua slave conspiracy of 1736 and brutal reprisals — Antigua and Barbuda",
+                "year_range": [
+                  1736,
+                  1756
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "sugar-revolution-and-plantation-system",
+                "name": "Sugar Revolution and Plantation System",
+                "label": "Movement",
+                "call_number": "610.sugar-revolution-and-plantation-system",
+                "description": "Sugar Revolution and Plantation System in Antigua and Barbuda",
+                "year_range": [
+                  1674,
+                  1807
+                ],
+                "status": "PLANNED"
+              }
             ]
           },
           {
@@ -744,7 +936,21 @@
               1725,
               1807
             ],
-            "description": "English Harbour became one of Britain's most important Caribbean naval bases. Horatio Nelson served as captain there in the 1780s, and the dockyard played a key role in protecting British sugar trade routes."
+            "description": "English Harbour became one of Britain's most important Caribbean naval bases. Horatio Nelson served as captain there in the 1780s, and the dockyard played a key role in protecting British sugar trade routes.",
+            "nodes": [
+              {
+                "slug": "nelsons-dockyard-and-british-naval-power",
+                "name": "Nelson's Dockyard and British Naval Power",
+                "label": "EventWindow",
+                "call_number": "530.nelsons-dockyard-and-british-naval-power",
+                "description": "English Harbour became one of Britain's most important Caribbean naval bases. Horatio Nelson served as captain there in the 1780s, and the dockyard played a key role in protecting British sugar trade routes.",
+                "year_range": [
+                  1725,
+                  1807
+                ],
+                "status": "PLANNED"
+              }
+            ]
           }
         ]
       }
@@ -771,6 +977,56 @@
             "key_events": [
               "Full emancipation granted August 1, 1834 — no apprenticeship period",
               "Abolition of the slave trade 1807"
+            ],
+            "nodes": [
+              {
+                "slug": "full-emancipation-granted-august-1-1834-no-apprenticeship-period",
+                "name": "Full emancipation granted August 1, 1834 — no apprenticeship period",
+                "label": "EventWindow",
+                "call_number": "530.full-emancipation-granted-august-1-1834-",
+                "description": "Full emancipation granted August 1, 1834 — no apprenticeship period — Antigua and Barbuda",
+                "year_range": [
+                  1834,
+                  1838
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "abolition-of-the-slave-trade-1807",
+                "name": "Abolition of the slave trade 1807",
+                "label": "Movement",
+                "call_number": "620.abolition-of-the-slave-trade-1807",
+                "description": "Abolition of the slave trade 1807 — Antigua and Barbuda",
+                "year_range": [
+                  1807,
+                  1827
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "abolition-of-the-slave-trade-in-1807-and-the-emancipation-act",
+                "name": "Abolition of the slave trade in 1807 and the Emancipation Act",
+                "label": "Text",
+                "call_number": "710.abolition-of-the-slave-trade-in-1807-and",
+                "description": "The abolition of the slave trade in 1807 and the Emancipation Act — document related to Antigua and Barbuda",
+                "year_range": [
+                  1807,
+                  1838
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "abolition-and-full-emancipation",
+                "name": "Abolition and Full Emancipation",
+                "label": "Movement",
+                "call_number": "620.abolition-and-full-emancipation",
+                "description": "Abolition and Full Emancipation in Antigua and Barbuda",
+                "year_range": [
+                  1807,
+                  1838
+                ],
+                "status": "PLANNED"
+              }
             ]
           },
           {
@@ -780,7 +1036,21 @@
               1834,
               1899
             ],
-            "description": "Despite emancipation, the planter class retained ownership of virtually all arable land, forcing freed people into continued labor on sugar estates under exploitative wage conditions. Little social mobility existed for the Black majority."
+            "description": "Despite emancipation, the planter class retained ownership of virtually all arable land, forcing freed people into continued labor on sugar estates under exploitative wage conditions. Little social mobility existed for the Black majority.",
+            "nodes": [
+              {
+                "slug": "free-labor-economy-and-continued-planter-dominance",
+                "name": "Free Labor Economy and Continued Planter Dominance",
+                "label": "EventWindow",
+                "call_number": "530.free-labor-economy-and-continued-planter",
+                "description": "Despite emancipation, the planter class retained ownership of virtually all arable land, forcing freed people into continued labor on sugar estates under exploitative wage conditions. Little social mobility existed for the Black majority.",
+                "year_range": [
+                  1834,
+                  1899
+                ],
+                "status": "PLANNED"
+              }
+            ]
           }
         ]
       }
@@ -803,7 +1073,21 @@
               1900,
               1943
             ],
-            "description": "Growing discontent among the working class due to low wages, poor conditions, and near-total political exclusion led to sporadic protests and the emergence of early trade union activity."
+            "description": "Growing discontent among the working class due to low wages, poor conditions, and near-total political exclusion led to sporadic protests and the emergence of early trade union activity.",
+            "nodes": [
+              {
+                "slug": "early-labour-organizing-and-social-unrest",
+                "name": "Early Labour Organizing and Social Unrest",
+                "label": "EventWindow",
+                "call_number": "530.early-labour-organizing-and-social-unres",
+                "description": "Growing discontent among the working class due to low wages, poor conditions, and near-total political exclusion led to sporadic protests and the emergence of early trade union activity.",
+                "year_range": [
+                  1900,
+                  1943
+                ],
+                "status": "PLANNED"
+              }
+            ]
           },
           {
             "slug": "vc-bird-atlu-rise",
@@ -817,6 +1101,56 @@
               "V.C. Bird co-founds the Antigua Trades and Labour Union 1939",
               "1951 sugar workers' strike wins major concessions",
               "Bird becomes Chief Minister under self-governance 1961"
+            ],
+            "nodes": [
+              {
+                "slug": "vc-bird-co-founds-the-antigua-trades-and-labour-union-1939",
+                "name": "V.C. Bird co-founds the Antigua Trades and Labour Union 1939",
+                "label": "EventWindow",
+                "call_number": "530.vc-bird-co-founds-the-antigua-trades-and",
+                "description": "V.C. Bird co-founds the Antigua Trades and Labour Union 1939 — Antigua and Barbuda",
+                "year_range": [
+                  1939,
+                  1959
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "1951-sugar-workers-strike-wins-major-concessions",
+                "name": "1951 sugar workers' strike wins major concessions",
+                "label": "EventWindow",
+                "call_number": "530.1951-sugar-workers-strike-wins-major-con",
+                "description": "1951 sugar workers' strike wins major concessions — Antigua and Barbuda",
+                "year_range": [
+                  1951,
+                  1966
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "bird-becomes-chief-minister-under-self-governance-1961",
+                "name": "Bird becomes Chief Minister under self-governance 1961",
+                "label": "EventWindow",
+                "call_number": "530.bird-becomes-chief-minister-under-self-g",
+                "description": "Bird becomes Chief Minister under self-governance 1961 — Antigua and Barbuda",
+                "year_range": [
+                  1961,
+                  1966
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "vc-bird-the-atlu-and-political-awakening",
+                "name": "V.C. Bird, the ATLU, and Political Awakening",
+                "label": "Movement",
+                "call_number": "610.vc-bird-the-atlu-and-political-awakening",
+                "description": "V.C. Bird, the ATLU, and Political Awakening in Antigua and Barbuda",
+                "year_range": [
+                  1939,
+                  1966
+                ],
+                "status": "PLANNED"
+              }
             ]
           }
         ]
@@ -842,6 +1176,44 @@
             "key_events": [
               "Independence of Antigua and Barbuda on November 1, 1981",
               "V.C. Bird becomes first Prime Minister"
+            ],
+            "nodes": [
+              {
+                "slug": "independence-of-antigua-and-barbuda-on-november-1-1981",
+                "name": "Independence of Antigua and Barbuda on November 1, 1981",
+                "label": "Movement",
+                "call_number": "610.independence-of-antigua-and-barbuda-on-n",
+                "description": "Independence of Antigua and Barbuda on November 1, 1981 — Antigua and Barbuda",
+                "year_range": [
+                  1971,
+                  1981
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "vc-bird-becomes-first-prime-minister",
+                "name": "V.C. Bird becomes first Prime Minister",
+                "label": "EventWindow",
+                "call_number": "530.vc-bird-becomes-first-prime-minister",
+                "description": "V.C. Bird becomes first Prime Minister — Antigua and Barbuda",
+                "year_range": [
+                  1967,
+                  1981
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "associated-statehood-to-independence",
+                "name": "Associated Statehood to Independence",
+                "label": "Movement",
+                "call_number": "610.associated-statehood-to-independence",
+                "description": "Associated Statehood to Independence in Antigua and Barbuda",
+                "year_range": [
+                  1967,
+                  1981
+                ],
+                "status": "PLANNED"
+              }
             ]
           },
           {
@@ -851,7 +1223,21 @@
               1981,
               1999
             ],
-            "description": "The Bird family dominated politics for decades while the economy transitioned from sugar to tourism and financial services. Barbudan autonomy remained a recurring political issue."
+            "description": "The Bird family dominated politics for decades while the economy transitioned from sugar to tourism and financial services. Barbudan autonomy remained a recurring political issue.",
+            "nodes": [
+              {
+                "slug": "post-independence-governance-and-tourism-economy",
+                "name": "Post-Independence Governance and Tourism Economy",
+                "label": "Movement",
+                "call_number": "610.post-independence-governance-and-tourism",
+                "description": "Post-Independence Governance and Tourism Economy in Antigua and Barbuda",
+                "year_range": [
+                  1981,
+                  1999
+                ],
+                "status": "PLANNED"
+              }
+            ]
           }
         ]
       }
@@ -874,7 +1260,21 @@
               2000,
               2025
             ],
-            "description": "Ongoing tensions between the central government in Antigua and Barbudans over communal land ownership, self-governance, and post-hurricane reconstruction policies."
+            "description": "Ongoing tensions between the central government in Antigua and Barbudans over communal land ownership, self-governance, and post-hurricane reconstruction policies.",
+            "nodes": [
+              {
+                "slug": "barbudan-autonomy-and-land-rights-disputes",
+                "name": "Barbudan Autonomy and Land Rights Disputes",
+                "label": "EventWindow",
+                "call_number": "580.barbudan-autonomy-and-land-rights-disput",
+                "description": "Ongoing tensions between the central government in Antigua and Barbudans over communal land ownership, self-governance, and post-hurricane reconstruction policies.",
+                "year_range": [
+                  2000,
+                  2025
+                ],
+                "status": "PLANNED"
+              }
+            ]
           },
           {
             "slug": "hurricane-irma-2017-recovery",
@@ -888,6 +1288,44 @@
               "Hurricane Irma devastates Barbuda on September 6, 2017",
               "Full evacuation of Barbuda — island left uninhabited",
               "Controversial post-Irma land reform proposals by central government"
+            ],
+            "nodes": [
+              {
+                "slug": "hurricane-irma-devastates-barbuda-on-september-6-2017",
+                "name": "Hurricane Irma devastates Barbuda on September 6, 2017",
+                "label": "EventWindow",
+                "call_number": "580.hurricane-irma-devastates-barbuda-on-sep",
+                "description": "Hurricane Irma devastates Barbuda on September 6, 2017 — Antigua and Barbuda",
+                "year_range": [
+                  2017,
+                  2025
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "full-evacuation-of-barbuda-island-left-uninhabited",
+                "name": "Full evacuation of Barbuda — island left uninhabited",
+                "label": "EventWindow",
+                "call_number": "530.full-evacuation-of-barbuda-island-left-u",
+                "description": "Full evacuation of Barbuda — island left uninhabited — Antigua and Barbuda",
+                "year_range": [
+                  2017,
+                  2025
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "controversial-post-irma-land-reform-proposals-by-central-government",
+                "name": "Controversial post-Irma land reform proposals by central government",
+                "label": "Movement",
+                "call_number": "610.controversial-post-irma-land-reform-prop",
+                "description": "Controversial post-Irma land reform proposals by central government — Antigua and Barbuda",
+                "year_range": [
+                  2017,
+                  2025
+                ],
+                "status": "PLANNED"
+              }
             ]
           },
           {
@@ -897,7 +1335,21 @@
               2000,
               2025
             ],
-            "description": "Antigua and Barbuda's emergence as a vocal advocate for small island developing states on climate change, while pursuing economic diversification beyond tourism and financial services."
+            "description": "Antigua and Barbuda's emergence as a vocal advocate for small island developing states on climate change, while pursuing economic diversification beyond tourism and financial services.",
+            "nodes": [
+              {
+                "slug": "climate-vulnerability-and-economic-diversification",
+                "name": "Climate Vulnerability and Economic Diversification",
+                "label": "EventWindow",
+                "call_number": "580.climate-vulnerability-and-economic-diver",
+                "description": "Antigua and Barbuda's emergence as a vocal advocate for small island developing states on climate change, while pursuing economic diversification beyond tourism and financial services.",
+                "year_range": [
+                  2000,
+                  2025
+                ],
+                "status": "PLANNED"
+              }
+            ]
           }
         ]
       }
@@ -945,6 +1397,14 @@
       "940": 1,
       "950": 2,
       "960": 1
-    }
+    },
+    "total_nodes": 33,
+    "nodes_by_label": {
+      "EventWindow": 23,
+      "Person": 1,
+      "Movement": 8,
+      "Text": 1
+    },
+    "last_enriched": "2026-03-30T23:47:55Z"
   }
 }

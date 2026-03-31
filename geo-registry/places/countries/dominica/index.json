@@ -20,7 +20,7 @@
     "notes": "Comprehensive index for Dominica covering Kalinago (Carib) stronghold, Columbus 1493 (named for Sunday), French-British colonial contest, Maroon wars, sugar/coffee plantations, emancipation, only Caribbean island with surviving Kalinago territory, Hurricane Maria 2017 (total devastation), 'Nature Isle' of the Caribbean, and Eugenia Charles (first female Caribbean PM).",
     "sub_region": "",
     "iso3166_numeric": "000",
-    "data_year": 0
+    "data_year": 2024
   },
   "country_profile": {
     "capital": "Roseau",
@@ -101,12 +101,12 @@
     "continent": "Americas",
     "notes_unique": "'Nature Isle of the Caribbean' (365 rivers, one for every day; boiling lake; volcanic; rainforest); only island with surviving Kalinago (Carib) population; Hurricane Maria September 18, 2017 (Category 5, destroyed 90% structures, PM called 'devastation of unprecedented dimension'); Citizenship by Investment (passport sales, controversial); Roseau ('Rose Water'); Eugenia Charles (first female PM in Caribbean, supported US Grenada invasion 1983); Morne Trois Pitons (UNESCO); NOT the Dominican Republic",
     "demographics": {
-      "median_age": 0,
-      "urbanization_pct": 0,
-      "fertility_rate": 0,
-      "life_expectancy": 0,
-      "infant_mortality_per_1k": 0,
-      "literacy_rate_pct": 0,
+      "median_age": 35.0,
+      "urbanization_pct": 71.1,
+      "fertility_rate": 1.84,
+      "life_expectancy": 78.3,
+      "infant_mortality_per_1k": 9.7,
+      "literacy_rate_pct": 94.0,
       "net_migration_rate": 0,
       "population_growth_rate_pct": 0,
       "urban_population_growth_rate_pct": 0,
@@ -122,30 +122,45 @@
         "25_54_pct": 0,
         "55_64_pct": 0,
         "65_plus_pct": 0
-      }
+      },
+      "population_growth_rate": -0.1,
+      "population_density": 96.5
     },
     "natural_resources": {
-      "primary": [],
+      "primary": [
+        "timber",
+        "hydropower",
+        "geothermal"
+      ],
       "resource_dependency_pct_gdp": 0,
       "notes": "",
       "resource_curse_risk": ""
     },
     "military": {
-      "budget_usd": "",
+      "budget_usd": 0,
       "pct_of_gdp": 0,
       "active_personnel": 0,
       "reserve_personnel": 0,
       "nuclear_status": "Non-nuclear",
       "alliances": [],
-      "notes": "",
+      "notes": "No military; Regional Security System",
       "paramilitary_personnel": 0,
       "conscription": false,
       "global_firepower_rank": 0
     },
     "trade": {
-      "top_exports": [],
+      "top_exports": [
+        "bananas",
+        "soap",
+        "bay oil",
+        "vegetables"
+      ],
       "top_imports": [],
-      "major_partners": [],
+      "major_partners": [
+        "Saudi Arabia",
+        "Trinidad & Tobago",
+        "Jamaica"
+      ],
       "trade_balance": "",
       "remittances_pct_gdp": 0,
       "total_exports_usd": "",
@@ -184,7 +199,7 @@
       },
       "democracy_index": {
         "score": 0,
-        "category": "",
+        "category": "Not rated",
         "year": 0
       },
       "fragile_states_index": {
@@ -234,10 +249,10 @@
         "endemic_species": 0,
         "threatened_species": 0
       },
-      "notes": ""
+      "notes": "First climate-resilient nation ambition; devastated by Hurricane Maria 2017"
     },
     "debt_aid": {
-      "national_debt_pct_gdp": 0,
+      "national_debt_pct_gdp": 78.0,
       "foreign_aid_received_usd": "",
       "notes": "",
       "external_debt_usd": "",
@@ -258,7 +273,7 @@
       "education_expenditure_pct_gdp": 0,
       "primary_completion_rate_pct": 0,
       "gender_parity_index": 0,
-      "mean_years_of_schooling": 0,
+      "mean_years_of_schooling": 8.0,
       "expected_years_of_schooling": 0,
       "pisa_scores": {
         "reading": 0,
@@ -268,7 +283,8 @@
       },
       "student_teacher_ratio_primary": 0,
       "out_of_school_children": 0,
-      "academic_freedom_index": 0
+      "academic_freedom_index": 0,
+      "expenditure_pct_gdp": 5.0
     },
     "diaspora_migration": {
       "diaspora_population": "",
@@ -383,10 +399,16 @@
         "sp": "",
         "fitch": ""
       },
-      "notes": ""
+      "notes": "",
+      "gdp_growth_pct": 5.0,
+      "inflation_pct": 3.5,
+      "unemployment_pct": 23.0,
+      "sector_agriculture_pct": 22.3,
+      "sector_industry_pct": 12.2,
+      "sector_services_pct": 65.5
     },
     "health": {
-      "health_expenditure_pct_gdp": 0,
+      "health_expenditure_pct_gdp": 5.7,
       "health_expenditure_per_capita_usd": 0,
       "physicians_per_1k": 0,
       "nurses_midwives_per_1k": 0,
@@ -402,7 +424,8 @@
       "obesity_rate_pct": 0,
       "universal_health_coverage_index": 0,
       "leading_causes_of_death": [],
-      "notes": ""
+      "notes": "",
+      "physician_density_per_1k": 1.1
     },
     "food_agriculture": {
       "food_security_index_score": 0,
@@ -647,7 +670,21 @@
               -3000,
               1000
             ],
-            "description": "The earliest settlers of Dominica, Orthoiroid and later Arawak (Igneri) peoples from South America, who established agricultural communities on the island's river valleys and coastal areas."
+            "description": "The earliest settlers of Dominica, Orthoiroid and later Arawak (Igneri) peoples from South America, who established agricultural communities on the island's river valleys and coastal areas.",
+            "nodes": [
+              {
+                "slug": "early-settlement-and-arawak-peoples",
+                "name": "Early Settlement and Arawak Peoples",
+                "label": "EventWindow",
+                "call_number": "530.early-settlement-and-arawak-peoples",
+                "description": "The earliest settlers of Dominica, Orthoiroid and later Arawak (Igneri) peoples from South America, who established agricultural communities on the island's river valleys and coastal areas.",
+                "year_range": [
+                  -3000,
+                  1000
+                ],
+                "status": "PLANNED"
+              }
+            ]
           },
           {
             "slug": "kalinago-dominance-warrior-culture",
@@ -660,6 +697,32 @@
             "key_events": [
               "Kalinago establish Dominica as their primary Caribbean stronghold",
               "Development of inter-island raiding and trade networks from Dominica"
+            ],
+            "nodes": [
+              {
+                "slug": "kalinago-establish-dominica-as-their-primary-caribbean-stronghold",
+                "name": "Kalinago establish Dominica as their primary Caribbean stronghold",
+                "label": "EventWindow",
+                "call_number": "530.kalinago-establish-dominica-as-their-pri",
+                "description": "Kalinago establish Dominica as their primary Caribbean stronghold — Dominica",
+                "year_range": [
+                  1000,
+                  1493
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "development-of-inter-island-raiding-and-trade-networks-from-dominica",
+                "name": "Development of inter-island raiding and trade networks from Dominica",
+                "label": "EventWindow",
+                "call_number": "530.development-of-inter-island-raiding-and-",
+                "description": "Development of inter-island raiding and trade networks from Dominica — Dominica",
+                "year_range": [
+                  1000,
+                  1493
+                ],
+                "status": "PLANNED"
+              }
             ]
           }
         ]
@@ -687,6 +750,32 @@
             "key_events": [
               "Columbus sights and names Dominica on Sunday, November 3, 1493",
               "Repeated European attempts at colonization repelled by Kalinago warriors"
+            ],
+            "nodes": [
+              {
+                "slug": "columbus-sights-and-names-dominica-on-sunday-november-3-1493",
+                "name": "Columbus sights and names Dominica on Sunday, November 3, 1493",
+                "label": "EventWindow",
+                "call_number": "530.columbus-sights-and-names-dominica-on-su",
+                "description": "Columbus sights and names Dominica on Sunday, November 3, 1493 — Dominica",
+                "year_range": [
+                  1493,
+                  1513
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "repeated-european-attempts-at-colonization-repelled-by-kalinago-warriors",
+                "name": "Repeated European attempts at colonization repelled by Kalinago warriors",
+                "label": "EventWindow",
+                "call_number": "530.repeated-european-attempts-at-colonizati",
+                "description": "Repeated European attempts at colonization repelled by Kalinago warriors — Dominica",
+                "year_range": [
+                  1493,
+                  1635
+                ],
+                "status": "PLANNED"
+              }
             ]
           }
         ]
@@ -710,7 +799,21 @@
               1635,
               1763
             ],
-            "description": "French missionaries and settlers gradually established a presence despite the island's official neutral status. French planters developed coffee and sugar estates, importing enslaved Africans, while the Kalinago were pushed into increasingly marginal territory."
+            "description": "French missionaries and settlers gradually established a presence despite the island's official neutral status. French planters developed coffee and sugar estates, importing enslaved Africans, while the Kalinago were pushed into increasingly marginal territory.",
+            "nodes": [
+              {
+                "slug": "french-encroachment-and-missionary-activity",
+                "name": "French Encroachment and Missionary Activity",
+                "label": "EventWindow",
+                "call_number": "570.french-encroachment-and-missionary-activ",
+                "description": "French missionaries and settlers gradually established a presence despite the island's official neutral status. French planters developed coffee and sugar estates, importing enslaved Africans, while the Kalinago were pushed into increasingly marginal territory.",
+                "year_range": [
+                  1635,
+                  1763
+                ],
+                "status": "PLANNED"
+              }
+            ]
           },
           {
             "slug": "british-takeover-maroon-wars",
@@ -724,6 +827,68 @@
               "Treaty of Paris cedes Dominica to Britain 1763",
               "Maroon resistance campaigns in the mountainous interior",
               "French Battle of Dominica / attempted invasion 1805"
+            ],
+            "nodes": [
+              {
+                "slug": "treaty-of-paris-cedes-dominica-to-britain-1763",
+                "name": "Treaty of Paris cedes Dominica to Britain 1763",
+                "label": "Text",
+                "call_number": "710.treaty-of-paris-cedes-dominica-to-britai",
+                "description": "Treaty of Paris cedes Dominica to Britain 1763 — Dominica",
+                "year_range": [
+                  1763,
+                  1783
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "maroon-resistance-campaigns-in-the-mountainous-interior",
+                "name": "Maroon resistance campaigns in the mountainous interior",
+                "label": "Movement",
+                "call_number": "610.maroon-resistance-campaigns-in-the-mount",
+                "description": "Maroon resistance campaigns in the mountainous interior — Dominica",
+                "year_range": [
+                  1763,
+                  1805
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "french-battle-of-dominica-attempted-invasion-1805",
+                "name": "French Battle of Dominica / attempted invasion 1805",
+                "label": "EventWindow",
+                "call_number": "510.french-battle-of-dominica-attempted-inva",
+                "description": "French Battle of Dominica / attempted invasion 1805 — Dominica",
+                "year_range": [
+                  1795,
+                  1805
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "britain-gained-formal-control-of-dominica-through-the-treaty",
+                "name": "Britain gained formal control of Dominica through the Treaty",
+                "label": "Text",
+                "call_number": "710.britain-gained-formal-control-of-dominic",
+                "description": "Britain gained formal control of Dominica through the Treaty — document related to Dominica",
+                "year_range": [
+                  1763,
+                  1805
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "treaty-of-paris",
+                "name": "Treaty of Paris",
+                "label": "Text",
+                "call_number": "710.treaty-of-paris",
+                "description": "Treaty of Paris — document related to Dominica",
+                "year_range": [
+                  1763,
+                  1805
+                ],
+                "status": "PLANNED"
+              }
             ]
           },
           {
@@ -733,7 +898,21 @@
               1720,
               1807
             ],
-            "description": "The development of sugar, coffee, and cacao plantations in the river valleys, sustained by enslaved African labor. Dominica's rugged terrain limited large-scale plantation agriculture compared to flatter islands, contributing to a larger proportion of small-scale farming and a relatively larger free colored population."
+            "description": "The development of sugar, coffee, and cacao plantations in the river valleys, sustained by enslaved African labor. Dominica's rugged terrain limited large-scale plantation agriculture compared to flatter islands, contributing to a larger proportion of small-scale farming and a relatively larger free colored population.",
+            "nodes": [
+              {
+                "slug": "plantation-economy-and-slavery",
+                "name": "Plantation Economy and Slavery",
+                "label": "EventWindow",
+                "call_number": "530.plantation-economy-and-slavery",
+                "description": "The development of sugar, coffee, and cacao plantations in the river valleys, sustained by enslaved African labor. Dominica's rugged terrain limited large-scale plantation agriculture compared to flatter islands, contributing to a larger proportion of small-scale farming and a relatively larger free",
+                "year_range": [
+                  1720,
+                  1807
+                ],
+                "status": "PLANNED"
+              }
+            ]
           }
         ]
       }
@@ -760,6 +939,32 @@
             "key_events": [
               "Emancipation of enslaved people 1834",
               "Dominica's assembly controlled by elected Black members by 1838 — unique in British Caribbean"
+            ],
+            "nodes": [
+              {
+                "slug": "emancipation-of-enslaved-people-1834",
+                "name": "Emancipation of enslaved people 1834",
+                "label": "EventWindow",
+                "call_number": "530.emancipation-of-enslaved-people-1834",
+                "description": "Emancipation of enslaved people 1834 — Dominica",
+                "year_range": [
+                  1834,
+                  1854
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "emancipation-and-the-black-controlled-legislature",
+                "name": "Emancipation and the Black-Controlled Legislature",
+                "label": "EventWindow",
+                "call_number": "530.emancipation-and-the-black-controlled-le",
+                "description": "After emancipation in 1834, Dominica became unique in the British Caribbean: by 1838 its assembly was controlled by elected members of African descent — the only colony where this occurred. This was a remarkable achievement in the post-slavery Caribbean.",
+                "year_range": [
+                  1834,
+                  1865
+                ],
+                "status": "PLANNED"
+              }
             ]
           },
           {
@@ -769,7 +974,33 @@
               1865,
               1899
             ],
-            "description": "The British authorities, alarmed by Black political power, gradually eroded Dominican self-governance and reimposed direct Crown Colony rule by 1898, stripping away the representative institutions that had allowed Black political participation."
+            "description": "The British authorities, alarmed by Black political power, gradually eroded Dominican self-governance and reimposed direct Crown Colony rule by 1898, stripping away the representative institutions that had allowed Black political participation.",
+            "nodes": [
+              {
+                "slug": "crown-colony-rule-reimposed",
+                "name": "Crown Colony Rule Reimposed",
+                "label": "EventWindow",
+                "call_number": "530.crown-colony-rule-reimposed",
+                "description": "The British authorities, alarmed by Black political power, gradually eroded Dominican self-governance and reimposed direct Crown Colony rule by 1898, stripping away the representative institutions that had allowed Black political participation.",
+                "year_range": [
+                  1865,
+                  1899
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "crown-colony",
+                "name": "Crown Colony",
+                "label": "Person",
+                "call_number": "220.crown-colony",
+                "description": "Crown Colony — historical figure of Dominica",
+                "year_range": [
+                  1865,
+                  1899
+                ],
+                "status": "PLANNED"
+              }
+            ]
           }
         ]
       }
@@ -792,7 +1023,21 @@
               1930,
               1967
             ],
-            "description": "Bananas replaced sugar as Dominica's primary export crop. Labour unions organized agricultural workers, and political movements demanded self-governance. The Dominica Labour Party emerged as the dominant political force."
+            "description": "Bananas replaced sugar as Dominica's primary export crop. Labour unions organized agricultural workers, and political movements demanded self-governance. The Dominica Labour Party emerged as the dominant political force.",
+            "nodes": [
+              {
+                "slug": "banana-economy-and-labour-movement",
+                "name": "Banana Economy and Labour Movement",
+                "label": "Movement",
+                "call_number": "610.banana-economy-and-labour-movement",
+                "description": "Banana Economy and Labour Movement in Dominica",
+                "year_range": [
+                  1930,
+                  1967
+                ],
+                "status": "PLANNED"
+              }
+            ]
           },
           {
             "slug": "independence-1978",
@@ -805,6 +1050,44 @@
             "key_events": [
               "Independence of Dominica on November 3, 1978",
               "Dominica becomes a republic at independence — no British monarch"
+            ],
+            "nodes": [
+              {
+                "slug": "independence-of-dominica-on-november-3-1978",
+                "name": "Independence of Dominica on November 3, 1978",
+                "label": "Movement",
+                "call_number": "610.independence-of-dominica-on-november-3-1",
+                "description": "Independence of Dominica on November 3, 1978 — Dominica",
+                "year_range": [
+                  1968,
+                  1978
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "dominica-becomes-a-republic-at-independence-no-british-monarch",
+                "name": "Dominica becomes a republic at independence — no British monarch",
+                "label": "Institution",
+                "call_number": "310.dominica-becomes-a-republic-at-independe",
+                "description": "Dominica becomes a republic at independence — no British monarch — Dominica",
+                "year_range": [
+                  1967,
+                  1978
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "independence-november-3-1978",
+                "name": "Independence — November 3, 1978",
+                "label": "Movement",
+                "call_number": "610.independence-november-3-1978",
+                "description": "Independence — November 3, 1978 in Dominica",
+                "year_range": [
+                  1967,
+                  1978
+                ],
+                "status": "PLANNED"
+              }
             ]
           }
         ]
@@ -830,6 +1113,32 @@
             "key_events": [
               "Hurricane David devastates Dominica — August 29, 1979",
               "Prime Minister Patrick John removed from office amid crisis"
+            ],
+            "nodes": [
+              {
+                "slug": "hurricane-david-devastates-dominica-august-29-1979",
+                "name": "Hurricane David devastates Dominica — August 29, 1979",
+                "label": "EventWindow",
+                "call_number": "580.hurricane-david-devastates-dominica-augu",
+                "description": "Hurricane David devastates Dominica — August 29, 1979 — Dominica",
+                "year_range": [
+                  1979,
+                  1980
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "prime-minister-patrick-john-removed-from-office-amid-crisis",
+                "name": "Prime Minister Patrick John removed from office amid crisis",
+                "label": "EventWindow",
+                "call_number": "530.prime-minister-patrick-john-removed-from",
+                "description": "Prime Minister Patrick John removed from office amid crisis — Dominica",
+                "year_range": [
+                  1979,
+                  1980
+                ],
+                "status": "PLANNED"
+              }
             ]
           },
           {
@@ -843,6 +1152,32 @@
             "key_events": [
               "Eugenia Charles becomes Caribbean's first female Prime Minister 1980",
               "Charles supports US invasion of Grenada 1983"
+            ],
+            "nodes": [
+              {
+                "slug": "eugenia-charles-becomes-caribbeans-first-female-prime-minister-1980",
+                "name": "Eugenia Charles becomes Caribbean's first female Prime Minister 1980",
+                "label": "EventWindow",
+                "call_number": "530.eugenia-charles-becomes-caribbeans-first",
+                "description": "Eugenia Charles becomes Caribbean's first female Prime Minister 1980 — Dominica",
+                "year_range": [
+                  1980,
+                  1995
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "charles-supports-us-invasion-of-grenada-1983",
+                "name": "Charles supports US invasion of Grenada 1983",
+                "label": "EventWindow",
+                "call_number": "510.charles-supports-us-invasion-of-grenada-",
+                "description": "Charles supports US invasion of Grenada 1983 — Dominica",
+                "year_range": [
+                  1983,
+                  1995
+                ],
+                "status": "PLANNED"
+              }
             ]
           }
         ]
@@ -866,7 +1201,21 @@
               2000,
               2025
             ],
-            "description": "The Carib Territory (officially renamed Kalinago Territory in 2015) remains one of the last indigenous reserves in the Caribbean, home to approximately 3,000 Kalinago people. Efforts to preserve their language, traditions, and land rights continue alongside eco-tourism development."
+            "description": "The Carib Territory (officially renamed Kalinago Territory in 2015) remains one of the last indigenous reserves in the Caribbean, home to approximately 3,000 Kalinago people. Efforts to preserve their language, traditions, and land rights continue alongside eco-tourism development.",
+            "nodes": [
+              {
+                "slug": "kalinago-territory-preservation-and-cultural-revival",
+                "name": "Kalinago Territory Preservation and Cultural Revival",
+                "label": "EventWindow",
+                "call_number": "530.kalinago-territory-preservation-and-cult",
+                "description": "The Carib Territory (officially renamed Kalinago Territory in 2015) remains one of the last indigenous reserves in the Caribbean, home to approximately 3,000 Kalinago people. Efforts to preserve their language, traditions, and land rights continue alongside eco-tourism development.",
+                "year_range": [
+                  2000,
+                  2025
+                ],
+                "status": "PLANNED"
+              }
+            ]
           },
           {
             "slug": "hurricane-maria-2017-resilience",
@@ -880,6 +1229,32 @@
               "Hurricane Maria devastates Dominica — September 18, 2017",
               "PM Skerrit addresses UN: 'I come to you straight from the front line of climate change'",
               "Government launches Climate Resilience Execution Agency (CREAD)"
+            ],
+            "nodes": [
+              {
+                "slug": "hurricane-maria-devastates-dominica-september-18-2017",
+                "name": "Hurricane Maria devastates Dominica — September 18, 2017",
+                "label": "EventWindow",
+                "call_number": "580.hurricane-maria-devastates-dominica-sept",
+                "description": "Hurricane Maria devastates Dominica — September 18, 2017 — Dominica",
+                "year_range": [
+                  2017,
+                  2025
+                ],
+                "status": "PLANNED"
+              },
+              {
+                "slug": "government-launches-climate-resilience-execution-agency-cread",
+                "name": "Government launches Climate Resilience Execution Agency (CREAD)",
+                "label": "Institution",
+                "call_number": "310.government-launches-climate-resilience-e",
+                "description": "Government launches Climate Resilience Execution Agency (CREAD) — Dominica",
+                "year_range": [
+                  2017,
+                  2025
+                ],
+                "status": "PLANNED"
+              }
             ]
           },
           {
@@ -889,7 +1264,21 @@
               2010,
               2025
             ],
-            "description": "Dominica's volcanic geology, including the famous Boiling Lake (the second-largest hot spring in the world), provides significant geothermal energy potential. The government has pursued geothermal development to achieve energy independence and position Dominica as a leader in sustainable development among small island states."
+            "description": "Dominica's volcanic geology, including the famous Boiling Lake (the second-largest hot spring in the world), provides significant geothermal energy potential. The government has pursued geothermal development to achieve energy independence and position Dominica as a leader in sustainable development among small island states.",
+            "nodes": [
+              {
+                "slug": "geothermal-energy-and-sustainable-development",
+                "name": "Geothermal Energy and Sustainable Development",
+                "label": "EventWindow",
+                "call_number": "530.geothermal-energy-and-sustainable-develo",
+                "description": "Dominica's volcanic geology, including the famous Boiling Lake (the second-largest hot spring in the world), provides significant geothermal energy potential. The government has pursued geothermal development to achieve energy independence and position Dominica as a leader in sustainable development",
+                "year_range": [
+                  2010,
+                  2025
+                ],
+                "status": "PLANNED"
+              }
+            ]
           }
         ]
       }
@@ -937,6 +1326,15 @@
       "940": 1,
       "950": 2,
       "960": 1
-    }
+    },
+    "total_nodes": 28,
+    "nodes_by_label": {
+      "EventWindow": 18,
+      "Text": 3,
+      "Movement": 4,
+      "Person": 1,
+      "Institution": 2
+    },
+    "last_enriched": "2026-03-30T23:47:56Z"
   }
 }
