@@ -15,6 +15,200 @@ import {
   getDivisionHeading, DIVISIONS,
 } from '../constants/callNumbers'
 import { FRAMEWORK_MAP } from '../constants/frameworks'
+import type { Framework } from '../types'
+
+/* ── Framework contextual analysis generator ── */
+function generateFrameworkContext(entity: Entity, fw: Framework): { analysis: string; evidence: string[]; relatedRels: EntityRelationship[] } {
+  const name = entity.name
+  const label = entity.label
+  const subjects = entity.subjects.map(s => s.toLowerCase())
+  const summaryLower = (entity.summary || '').toLowerCase()
+  const fwId = fw.id as string
+
+  // Find relationships that use verbs from this framework
+  const relatedRels = entity.relationships.filter(r =>
+    fw.verbs.some(v => r.verb.toUpperCase().includes(v) || v.includes(r.verb.toUpperCase()))
+  ).slice(0, 3)
+
+  // Build evidence bullets from entity data
+  const evidence: string[] = []
+
+  // Check causes/effects for causal frameworks
+  if (fwId === 'CAUSE_AND_EFFECT') {
+    if (entity.causes.length > 0) evidence.push(`${entity.causes.length} documented antecedent${entity.causes.length > 1 ? 's' : ''} led to this ${label.toLowerCase()}`)
+    if (entity.effects.length > 0) evidence.push(`${entity.effects.length} documented consequence${entity.effects.length > 1 ? 's' : ''} resulted from it`)
+  }
+
+  // Check places for geo-related frameworks
+  if (fwId === 'GEOPOLITICAL_LINKAGE' || fwId === 'CULTURAL_DIFFUSION' || fwId === 'EMPIRE_AND_COLONIALISM') {
+    const placeCount = entity.places.length
+    if (placeCount > 1) evidence.push(`Spans ${placeCount} geographic locations, indicating cross-regional influence`)
+    const occursIn = entity.relationships.filter(r => r.verb === 'OCCURS_IN')
+    if (occursIn.length > 1) evidence.push(`Active across ${occursIn.length} distinct places`)
+  }
+
+  // Check texts for textual frameworks
+  if (fwId === 'TEXTUAL_TRANSMISSION') {
+    if (entity.texts.length > 0) evidence.push(`${entity.texts.length} associated text${entity.texts.length > 1 ? 's' : ''} documenting transmission and preservation`)
+  }
+
+  // Check relationships for institutional/political frameworks
+  if (['POLITICAL_SYSTEMS', 'LEGAL_INTERPRETATION'].includes(fwId)) {
+    const instRels = entity.relationships.filter(r => ['LEADS', 'ADMINISTERS', 'GOVERNS', 'LEGISLATES', 'AFFILIATES_WITH', 'REFORMS'].includes(r.verb))
+    if (instRels.length > 0) evidence.push(`${instRels.length} institutional relationship${instRels.length > 1 ? 's' : ''} (${instRels.map(r => r.verb.replace(/_/g, ' ').toLowerCase()).slice(0, 3).join(', ')})`)
+  }
+
+  if (fwId === 'CONFLICT_AND_RESOLUTION') {
+    const conflictRels = entity.relationships.filter(r => ['CAUSES', 'RESOLVES', 'PARTICIPATES_IN', 'OPPOSES'].includes(r.verb))
+    if (conflictRels.length > 0) evidence.push(`${conflictRels.length} conflict-related relationship${conflictRels.length > 1 ? 's' : ''}`)
+  }
+
+  if (fwId === 'COMPARATIVE_RELIGION') {
+    const relKeywords = ['religion', 'faith', 'doctrine', 'theology', 'church', 'mosque', 'temple', 'prophet', 'scripture', 'worship', 'ritual', 'divine']
+    const hits = relKeywords.filter(k => summaryLower.includes(k) || subjects.some(s => s.includes(k)))
+    if (hits.length > 0) evidence.push(`Religious dimensions: ${hits.join(', ')}`)
+  }
+
+  if (fwId === 'INNOVATION_AND_TECHNOLOGY') {
+    const techKeywords = ['invention', 'technology', 'science', 'engineering', 'discovery', 'industrial', 'mechanical', 'innovation']
+    const hits = techKeywords.filter(k => summaryLower.includes(k) || subjects.some(s => s.includes(k)))
+    if (hits.length > 0) evidence.push(`Technological dimensions: ${hits.join(', ')}`)
+  }
+
+  if (fwId === 'ECONOMIC_SYSTEMS') {
+    const econKeywords = ['trade', 'commerce', 'economy', 'market', 'currency', 'tax', 'labor', 'guild', 'merchant']
+    const hits = econKeywords.filter(k => summaryLower.includes(k) || subjects.some(s => s.includes(k)))
+    if (hits.length > 0) evidence.push(`Economic dimensions: ${hits.join(', ')}`)
+  }
+
+  if (fwId === 'ENVIRONMENTAL_HISTORY') {
+    const envKeywords = ['agriculture', 'climate', 'famine', 'plague', 'ecology', 'irrigation', 'deforestation', 'drought', 'flood', 'crop']
+    const hits = envKeywords.filter(k => summaryLower.includes(k) || subjects.some(s => s.includes(k)))
+    if (hits.length > 0) evidence.push(`Environmental dimensions: ${hits.join(', ')}`)
+  }
+
+  // Add relationship evidence
+  if (relatedRels.length > 0) {
+    evidence.push(`${relatedRels.length} relationship${relatedRels.length > 1 ? 's' : ''} using framework verbs (${relatedRels.map(r => r.verb).join(', ')})`)
+  }
+
+  // Generate the contextual analysis sentence
+  const analysis = buildAnalysis(entity, fw)
+
+  return { analysis, evidence, relatedRels }
+}
+
+function buildAnalysis(entity: Entity, fw: Framework): string {
+  const n = entity.name
+  const era = entity.era
+  const label = entity.label
+  const places = entity.places.map(p => p.name).filter(Boolean)
+  const placeStr = places.length > 0 ? places.slice(0, 2).join(' and ') : entity.region || 'its region'
+
+  const templates: Record<string, Record<string, string>> = {
+    CAUSE_AND_EFFECT: {
+      Person: `${n} is analyzed through cause-and-effect to trace how their actions in ${placeStr} during the ${era} era triggered specific historical outcomes and were themselves shaped by prior developments.`,
+      EventWindow: `This event is examined as both a consequence of prior conditions and a catalyst for subsequent developments in ${placeStr} during the ${era} era.`,
+      Movement: `${n} is studied as a chain reaction — its emergence was caused by specific historical conditions, and it in turn triggered transformative changes across ${placeStr}.`,
+      Idea: `${n} is traced through its causal lineage — what intellectual or social conditions gave rise to it, and what concrete changes it triggered in ${placeStr} and beyond.`,
+      Institution: `${n} is examined as both a product of historical forces and an agent of change, analyzing what conditions created it and what outcomes it produced.`,
+      Text: `${n} is analyzed for its causal role — what prompted its creation, and how it shaped thought and action in the ${era} era.`,
+      Place: `${placeStr} is examined through the lens of cause and effect — what historical forces shaped this place, and what developments originated here.`,
+      Evidence: `This evidence is analyzed for the causal claims it supports or challenges about developments in the ${era} era.`,
+    },
+    CULTURAL_DIFFUSION: {
+      Person: `${n} is analyzed as an agent of cultural transmission — carrying, adapting, or introducing practices and ideas across ${placeStr} during the ${era} era.`,
+      EventWindow: `This event is studied for how it accelerated or disrupted the spread of cultural practices, technologies, or ideas across regional boundaries.`,
+      Movement: `${n} is examined as a vehicle of cultural diffusion — spreading ideas, practices, and institutions from ${placeStr} to new territories and populations.`,
+      Idea: `${n} is traced through its routes of transmission — how it spread from its origin in ${placeStr} to other cultures, and how it was adapted along the way.`,
+      Institution: `${n} is studied as a channel for cultural exchange — facilitating the spread of practices, knowledge, and traditions across ${placeStr}.`,
+      Text: `${n} is examined as a medium of cultural transmission — carrying ideas across linguistic, geographic, and temporal boundaries.`,
+      Place: `${placeStr} is analyzed as a crossroads of cultural exchange — a site where diverse traditions met, merged, and were transmitted onward.`,
+      Evidence: `This evidence illuminates cultural exchange and the transmission of practices or ideas during the ${era} era.`,
+    },
+    TEXTUAL_TRANSMISSION: {
+      Person: `${n} is analyzed for their role in the copying, translation, editing, or preservation of texts during the ${era} era.`,
+      EventWindow: `This event is studied for how it affected the survival, translation, or dissemination of key texts.`,
+      Movement: `${n} is examined for how it shaped the preservation, canonization, or destruction of textual traditions.`,
+      Idea: `${n} is traced through the texts that carried it — how copying, translation, and editorial choices shaped its transmission across the ${era} era.`,
+      Institution: `${n} is studied as a center of textual production, preservation, or dissemination during the ${era} era.`,
+      Text: `${n} is analyzed through its transmission history — its copying lineage, translations, editorial revisions, and the institutions that preserved it.`,
+      Place: `${placeStr} is examined as a site of textual production or preservation — libraries, scriptoria, or printing centers that shaped the written record.`,
+      Evidence: `This evidence documents the transmission, copying, or translation of texts during the ${era} era.`,
+    },
+    GEOPOLITICAL_LINKAGE: {
+      Person: `${n} is analyzed for how their political, diplomatic, or military actions reshaped territorial boundaries and authority structures in ${placeStr} during the ${era} era.`,
+      EventWindow: `This event is examined for how it reconfigured political boundaries, diplomatic relationships, or power hierarchies in ${placeStr}.`,
+      Movement: `${n} is studied for how it challenged, reinforced, or transformed geopolitical arrangements across ${placeStr} during the ${era} era.`,
+      Idea: `${n} is analyzed for how it justified, challenged, or reshaped political authority and territorial claims in ${placeStr}.`,
+      Institution: `${n} is examined as an instrument of geopolitical organization — shaping territorial governance and diplomatic relationships in ${placeStr}.`,
+      Text: `${n} is analyzed for how it articulated, influenced, or documented geopolitical arrangements and imperial ideology in the ${era} era.`,
+      Place: `${placeStr} is examined as a node in geopolitical networks — shaped by imperial, diplomatic, and territorial forces.`,
+      Evidence: `This evidence illuminates the geopolitical dynamics and territorial reorganizations of the ${era} era.`,
+    },
+    CONFLICT_AND_RESOLUTION: {
+      Person: `${n} is analyzed through the lens of conflict — their role in wars, schisms, negotiations, or reconciliations that reshaped ${placeStr} during the ${era} era.`,
+      EventWindow: `This event is studied as a moment of rupture and resolution — a conflict that transformed social, political, or religious structures.`,
+      Movement: `${n} is examined for the conflicts it provoked, mediated, or resolved during the ${era} era.`,
+      Idea: `${n} is analyzed for the intellectual or social conflicts it generated or attempted to resolve.`,
+      Institution: `${n} is studied for its role in mediating, escalating, or resolving conflicts during the ${era} era.`,
+      Text: `${n} is analyzed for how it documented, justified, or attempted to resolve conflicts in the ${era} era.`,
+      Place: `${placeStr} is examined as a site of conflict and resolution — battles, treaties, and negotiations that shaped its history.`,
+      Evidence: `This evidence documents the dynamics of conflict and resolution during the ${era} era.`,
+    },
+    DOCTRINE_DEVELOPMENT: {
+      Person: `${n} is analyzed for their role in formalizing, systematizing, or reinterpreting doctrines during the ${era} era.`,
+      EventWindow: `This event is examined as a moment of doctrinal crystallization — when ideas were formalized into canonical positions.`,
+      Movement: `${n} is studied for how it drove doctrinal systematization, canonization, or reformation.`,
+      Idea: `${n} is traced through its doctrinal evolution — how it was formalized, debated, and canonized within intellectual or religious traditions.`,
+      Institution: `${n} is examined as a body that defined, enforced, or reformed doctrinal standards.`,
+      Text: `${n} is analyzed as a vehicle of doctrine — its role in formalizing, transmitting, or challenging canonical positions.`,
+      Place: `${placeStr} is examined as a center of doctrinal development — councils, schools, or communities where ideas were canonized.`,
+      Evidence: `This evidence documents the development or contestation of doctrines during the ${era} era.`,
+    },
+    ADAPTATION: {
+      Person: `${n} is analyzed for how they reinterpreted or adapted imported practices and ideas to local conditions in ${placeStr}.`,
+      EventWindow: `This event is studied as a moment of contextual adaptation — when practices or ideas were reworked to fit new circumstances.`,
+      Movement: `${n} is examined for how it adapted to local contexts, transforming imported ideas into distinctly regional expressions.`,
+      Idea: `${n} is traced through its local adaptations — how it was reinterpreted, transformed, and reworked in different cultural settings.`,
+      Institution: `${n} is studied for how it adapted its structures and practices to the local context of ${placeStr}.`,
+      Text: `${n} is analyzed for how it adapted its source material to new audiences, contexts, or cultural expectations.`,
+      Place: `${placeStr} is examined as a site of cultural adaptation — where imported ideas were transformed into local expressions.`,
+      Evidence: `This evidence documents the adaptation and reinterpretation of traditions in the ${era} era.`,
+    },
+    TEMPORAL_LINKAGE: {
+      _default: `${n} is analyzed through temporal connections — how it relates to events, ideas, or movements across different periods, revealing patterns of continuity and change through the ${era} era.`,
+    },
+    ECONOMIC_SYSTEMS: {
+      _default: `${n} is examined through economic analysis — trade networks, production systems, labor organization, and material flows that shaped ${placeStr} in the ${era} era.`,
+    },
+    POLITICAL_SYSTEMS: {
+      _default: `${n} is analyzed through the lens of governance — sovereignty, statecraft, constitutional development, and the evolution of political authority in ${placeStr} during the ${era} era.`,
+    },
+    COMPARATIVE_RELIGION: {
+      _default: `${n} is examined through comparative religion — analyzing shared patterns and distinctive features across religious traditions in ${placeStr} during the ${era} era.`,
+    },
+    EMPIRE_AND_COLONIALISM: {
+      _default: `${n} is analyzed through imperial and colonial dynamics — expansion, extraction, resistance, and the postcolonial legacies that reshaped ${placeStr} in the ${era} era.`,
+    },
+    ENVIRONMENTAL_HISTORY: {
+      _default: `${n} is examined through environmental history — the interaction between human societies and the natural world in ${placeStr} during the ${era} era.`,
+    },
+    INNOVATION_AND_TECHNOLOGY: {
+      _default: `${n} is analyzed through the lens of innovation — scientific breakthroughs, technological inventions, and their transformative impact on societies in ${placeStr} during the ${era} era.`,
+    },
+    LEGAL_INTERPRETATION: {
+      _default: `${n} is examined through legal analysis — jurisprudential decisions, codification efforts, and administrative rulings that shaped governance in ${placeStr} during the ${era} era.`,
+    },
+    RITUAL_STANDARDIZATION: {
+      _default: `${n} is analyzed through ritual standardization — the formalization and institutional adoption of ceremonial practices across communities in the ${era} era.`,
+    },
+  }
+
+  const fwTemplates = templates[fw.id as string]
+  if (!fwTemplates) return `${n} is analyzed through the ${fw.name} lens during the ${era} era in ${placeStr}.`
+  return fwTemplates[label] || fwTemplates._default || `${n} is analyzed through the ${fw.name} lens during the ${era} era in ${placeStr}.`
+}
 
 /* ── Era breadcrumb data ── */
 const ERAS = [
@@ -631,13 +825,20 @@ export default function EntityPage() {
                 {(entity.frameworks && entity.frameworks.length > 0) ? (
                   <Box mb={6}>
                     <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
-                      letterSpacing="0.15em" textTransform="uppercase" mb={4}>
-                      Interpretive Frameworks
+                      letterSpacing="0.15em" textTransform="uppercase" mb={2}>
+                      Historical Analysis — Interpretive Frameworks
                     </Text>
-                    <Text fontSize="xs" color="#9E9A90" mb={4}>
-                      Historical lenses through which this actor is analyzed. Each framework highlights a different dimension of historical significance.
+                    <Text fontSize="xs" color="#9E9A90" mb={1}>
+                      Each framework below is a scholarly lens used to analyze <Text as="span" fontWeight={600} color="#524E44">{entity.name}</Text>. The analysis explains how this specific actor connects to each interpretive dimension, supported by evidence from its relationships, places, and causal chains.
                     </Text>
-                    <SimpleGrid columns={{ base: 1, md: 2 }} gap={3}>
+                    <Flex align="center" gap={2} mb={4}>
+                      <Box w="8px" h="2px" bg="#D4AF37" borderRadius="full" />
+                      <Text fontSize="10px" color="#B8B2A4">
+                        {entity.frameworks.length} framework{entity.frameworks.length > 1 ? 's' : ''} assigned — {entity.label} · {entity.era} era
+                      </Text>
+                    </Flex>
+
+                    <Box display="flex" flexDirection="column" gap={4}>
                       {entity.frameworks.map((fwId) => {
                         const fw = FRAMEWORK_MAP[fwId]
                         if (!fw) return (
@@ -645,29 +846,99 @@ export default function EntityPage() {
                             <Text fontSize="sm" fontWeight={600} color="#2D2A24">{fwId.replace(/_/g, ' ')}</Text>
                           </Box>
                         )
+                        const ctx = generateFrameworkContext(entity, fw)
                         return (
-                          <Box key={fwId} p={4} bg="#FAFAF8" border="1px solid #EEEDEA" borderRadius="lg"
-                            borderLeft="3px solid" borderLeftColor={fw.color}>
-                            <Flex align="center" gap={2} mb={2}>
-                              <Box w="8px" h="8px" borderRadius="full" bg={fw.color} />
-                              <Text fontSize="sm" fontWeight={700} color="#2D2A24">{fw.name}</Text>
-                            </Flex>
-                            <Text fontSize="xs" color="#524E44" lineHeight={1.6} mb={2}>
-                              {fw.description}
-                            </Text>
-                            <Flex gap={1} flexWrap="wrap">
-                              {fw.verbs.map((v) => (
-                                <Box key={v} bg="rgba(212,175,55,0.10)" border="1px solid rgba(212,175,55,0.25)"
-                                  borderRadius="4px" px={2} py={0.5}>
-                                  <Text fontFamily='"JetBrains Mono", monospace' fontSize="9px"
-                                    color="#96770B" letterSpacing="0.05em">{v}</Text>
+                          <Box key={fwId} bg="#FAFAF8" border="1px solid #EEEDEA" borderRadius="lg"
+                            borderLeft="4px solid" borderLeftColor={fw.color} overflow="hidden">
+                            {/* Header */}
+                            <Box px={5} pt={4} pb={2}>
+                              <Flex align="center" gap={2} mb={1}>
+                                <Box w="10px" h="10px" borderRadius="full" bg={fw.color} flexShrink={0} />
+                                <Text fontSize="md" fontWeight={700} color="#2D2A24" fontFamily='"Cormorant Garamond", serif'>
+                                  {fw.name}
+                                </Text>
+                              </Flex>
+                              <Text fontSize="10px" color="#9E9A90" fontStyle="italic" mb={3}>
+                                {fw.description}
+                              </Text>
+                            </Box>
+
+                            {/* Contextual Analysis */}
+                            <Box px={5} pb={3}>
+                              <Text fontFamily='"Cinzel", serif' fontSize="9px" color={fw.color}
+                                letterSpacing="0.12em" textTransform="uppercase" mb={2}>
+                                How This Applies to {entity.name}
+                              </Text>
+                              <Text fontSize="sm" color="#2D2A24" lineHeight={1.7}>
+                                {ctx.analysis}
+                              </Text>
+                            </Box>
+
+                            {/* Evidence Bullets */}
+                            {ctx.evidence.length > 0 && (
+                              <Box px={5} pb={3}>
+                                <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
+                                  letterSpacing="0.12em" textTransform="uppercase" mb={2}>
+                                  Supporting Evidence
+                                </Text>
+                                <Box display="flex" flexDirection="column" gap={1}>
+                                  {ctx.evidence.map((ev, i) => (
+                                    <Flex key={i} align="flex-start" gap={2}>
+                                      <Box mt="6px" w="5px" h="5px" borderRadius="full" bg={fw.color} opacity={0.6} flexShrink={0} />
+                                      <Text fontSize="xs" color="#524E44" lineHeight={1.5}>{ev}</Text>
+                                    </Flex>
+                                  ))}
                                 </Box>
-                              ))}
-                            </Flex>
+                              </Box>
+                            )}
+
+                            {/* Related Relationships */}
+                            {ctx.relatedRels.length > 0 && (
+                              <Box px={5} pb={3}>
+                                <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
+                                  letterSpacing="0.12em" textTransform="uppercase" mb={2}>
+                                  Relationships Through This Lens
+                                </Text>
+                                <Box display="flex" flexDirection="column" gap={1}>
+                                  {ctx.relatedRels.map((r, i) => (
+                                    <Flex key={i} align="center" gap={2} py={1}>
+                                      <ArrowRight size={10} color={fw.color} />
+                                      <RouterLink to={`/entity/${r.targetSlug}`} style={{ textDecoration: 'none' }}>
+                                        <Text fontSize="xs" color="#3B6BC2" fontWeight={500}>{r.sourceName}</Text>
+                                      </RouterLink>
+                                      <Box bg={`${fw.color}18`} border={`1px solid ${fw.color}40`} borderRadius="3px" px={1.5} py={0.5}>
+                                        <Text fontFamily='"JetBrains Mono", monospace' fontSize="9px" color={fw.color}>{r.verb}</Text>
+                                      </Box>
+                                      <RouterLink to={`/entity/${r.targetSlug}`} style={{ textDecoration: 'none' }}>
+                                        <Text fontSize="xs" color="#3B6BC2" fontWeight={500}>{r.targetName}</Text>
+                                      </RouterLink>
+                                    </Flex>
+                                  ))}
+                                </Box>
+                              </Box>
+                            )}
+
+                            {/* Framework Verbs Footer */}
+                            <Box px={5} pb={4} pt={1} borderTop="1px solid #EEEDEA" mt={1}>
+                              <Flex align="center" gap={2} mb={2}>
+                                <Text fontSize="9px" color="#B8B2A4" letterSpacing="0.05em" textTransform="uppercase">
+                                  Analytical Verbs
+                                </Text>
+                              </Flex>
+                              <Flex gap={1} flexWrap="wrap">
+                                {fw.verbs.map((v) => (
+                                  <Box key={v} bg={`${fw.color}12`} border={`1px solid ${fw.color}30`}
+                                    borderRadius="4px" px={2} py={0.5}>
+                                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="9px"
+                                      color={fw.color} letterSpacing="0.05em">{v}</Text>
+                                  </Box>
+                                ))}
+                              </Flex>
+                            </Box>
                           </Box>
                         )
                       })}
-                    </SimpleGrid>
+                    </Box>
                   </Box>
                 ) : (
                   <Box mb={6}>
