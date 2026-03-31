@@ -19,9 +19,9 @@ export const AGRICULTURE_CATEGORIES = [
   { id: 'irrigation',   label: 'Irrigation & Water',     color: '#3182CE', icon: 'droplet' },
   { id: 'tools',        label: 'Tools & Machinery',      color: '#718096', icon: 'wrench' },
   { id: 'preservation', label: 'Food Preservation',      color: '#D69E2E', icon: 'package' },
-  { id: 'trade',        label: 'Food Trade & Markets',   color: '#C53030', icon: 'truck' },
-  { id: 'science',      label: 'Agricultural Science',   color: '#6B3FA0', icon: 'flask' },
-  { id: 'industrial',   label: 'Industrial Farming',     color: '#2C7A7B', icon: 'factory' },
+  { id: 'trade',        label: 'Food Trade, Markets & Distribution',    color: '#C53030', icon: 'truck' },
+  { id: 'science',      label: 'Agricultural Science & Research',       color: '#6B3FA0', icon: 'flask' },
+  { id: 'industrial',   label: 'Factory Farming & Mass Production',     color: '#2C7A7B', icon: 'factory' },
 ] as const
 
 export type AgricultureCategory = (typeof AGRICULTURE_CATEGORIES)[number]['id']

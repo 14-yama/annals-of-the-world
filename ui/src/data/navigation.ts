@@ -19,7 +19,7 @@ export const NAVIGATION_CATEGORIES = [
   { id: 'routes',      label: 'Routes & Trade Networks', color: '#C53030', icon: 'route' },
   { id: 'cartography', label: 'Maps & Cartography',    color: '#38A169', icon: 'map' },
   { id: 'expeditions', label: 'Expeditions & Voyages', color: '#8B4513', icon: 'flag' },
-  { id: 'aerospace',   label: 'Aviation & Space',      color: '#6B3FA0', icon: 'rocket' },
+  { id: 'aerospace',   label: 'Aviation, Rocketry & Space Exploration', color: '#6B3FA0', icon: 'rocket' },
 ] as const
 
 export type NavigationCategory = (typeof NAVIGATION_CATEGORIES)[number]['id']

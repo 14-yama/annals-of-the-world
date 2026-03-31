@@ -22,13 +22,13 @@ export interface MedicineCategory {
 
 export const MEDICINE_CATEGORIES: MedicineCategory[] = [
   { id: 'surgery',        label: 'Surgery & Procedures',       color: '#C53030', icon: 'Scissors' },
-  { id: 'pharmacology',   label: 'Drugs & Pharmacology',       color: '#2F855A', icon: 'Pill' },
-  { id: 'diagnostic',     label: 'Diagnostics & Instruments',  color: '#4A90D9', icon: 'Stethoscope' },
+  { id: 'pharmacology',   label: 'Medicines, Drugs & Remedies',         color: '#2F855A', icon: 'Pill' },
+  { id: 'diagnostic',     label: 'Medical Diagnosis & Instruments',     color: '#4A90D9', icon: 'Stethoscope' },
   { id: 'public_health',  label: 'Public Health & Sanitation',  color: '#DD6B20', icon: 'ShieldCheck' },
   { id: 'traditional',    label: 'Traditional & Holistic',      color: '#D4AF37', icon: 'Leaf' },
   { id: 'infectious',     label: 'Infectious Disease Control',  color: '#8B3A3A', icon: 'Bug' },
   { id: 'anatomy',        label: 'Anatomy & Physiology',        color: '#6B3FA0', icon: 'Heart' },
-  { id: 'mental',         label: 'Mental Health & Psychology',   color: '#718096', icon: 'Brain' },
+  { id: 'mental',         label: 'Mental Health & Psychological Care',   color: '#718096', icon: 'Brain' },
 ]
 
 export const ERA_LABELS: Record<string, { label: string; period: string; color: string }> = {

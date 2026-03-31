@@ -26,11 +26,11 @@ export const WEAPON_CATEGORIES: WeaponCategory[] = [
   { id: 'siege',       label: 'Siege & Fortification',     color: '#645E52', icon: 'Castle' },
   { id: 'gunpowder',   label: 'Gunpowder & Firearms',      color: '#524E44', icon: 'Flame' },
   { id: 'naval',       label: 'Naval Warfare',              color: '#4A90D9', icon: 'Ship' },
-  { id: 'artillery',   label: 'Artillery & Heavy Weapons',  color: '#2F855A', icon: 'Crosshair' },
-  { id: 'armor',       label: 'Armor & Defensive Systems',  color: '#D4AF37', icon: 'Shield' },
-  { id: 'aerial',      label: 'Aerial & Missile Systems',   color: '#6B3FA0', icon: 'Plane' },
-  { id: 'modern',      label: 'Modern & Asymmetric',        color: '#DD6B20', icon: 'Zap' },
-  { id: 'chemical',    label: 'Chemical, Bio & Nuclear',    color: '#718096', icon: 'AlertTriangle' },
+  { id: 'artillery',   label: 'Cannons, Artillery & Bombardment',     color: '#2F855A', icon: 'Crosshair' },
+  { id: 'armor',       label: 'Armor & Defensive Systems',            color: '#D4AF37', icon: 'Shield' },
+  { id: 'aerial',      label: 'Aircraft, Missiles & Drones',          color: '#6B3FA0', icon: 'Plane' },
+  { id: 'modern',      label: 'Modern Warfare & Guerrilla Tactics',   color: '#DD6B20', icon: 'Zap' },
+  { id: 'chemical',    label: 'Chemical & Nuclear Weapons (WMD)',     color: '#718096', icon: 'AlertTriangle' },
 ]
 
 export const ERA_LABELS: Record<string, { label: string; period: string; color: string }> = {

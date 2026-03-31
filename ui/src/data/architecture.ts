@@ -25,10 +25,10 @@ export const ARCHITECTURE_CATEGORIES: ArchitectureCategory[] = [
   { id: 'civic',           label: 'Civic & Government',        color: '#4A90D9', icon: 'Landmark' },
   { id: 'residential',     label: 'Residential & Domestic',    color: '#2F855A', icon: 'Home' },
   { id: 'military',        label: 'Military & Defensive',      color: '#8B3A3A', icon: 'Shield' },
-  { id: 'funerary',        label: 'Funerary & Memorial',       color: '#718096', icon: 'Pyramid' },
-  { id: 'infrastructure',  label: 'Infrastructure & Engineering', color: '#C53030', icon: 'Bridge' },
-  { id: 'commercial',      label: 'Commercial & Industrial',   color: '#DD6B20', icon: 'Factory' },
-  { id: 'landscape',       label: 'Landscape & Urban Planning', color: '#6B3FA0', icon: 'TreePine' },
+  { id: 'funerary',        label: 'Tombs, Memorials & Burial Sites',      color: '#718096', icon: 'Pyramid' },
+  { id: 'infrastructure',  label: 'Roads, Bridges & Infrastructure',      color: '#C53030', icon: 'Bridge' },
+  { id: 'commercial',      label: 'Commercial & Industrial Buildings',    color: '#DD6B20', icon: 'Factory' },
+  { id: 'landscape',       label: 'Parks, Gardens & Urban Design',        color: '#6B3FA0', icon: 'TreePine' },
 ]
 
 export const ERA_LABELS: Record<string, { label: string; period: string; color: string }> = {

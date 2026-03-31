@@ -24,11 +24,11 @@ export const LANGUAGE_CATEGORIES: LanguageCategory[] = [
   { id: 'spoken',      label: 'Spoken Languages',          color: '#8B3A3A', icon: 'MessageCircle' },
   { id: 'written',     label: 'Writing Systems',            color: '#C53030', icon: 'PenTool' },
   { id: 'liturgical',  label: 'Sacred & Liturgical',        color: '#D4AF37', icon: 'BookOpen' },
-  { id: 'trade',       label: 'Trade & Lingua Francas',     color: '#2F855A', icon: 'Globe' },
-  { id: 'constructed', label: 'Constructed & Formal',       color: '#6B3FA0', icon: 'Cog' },
-  { id: 'sign',        label: 'Sign & Gestural',            color: '#DD6B20', icon: 'Hand' },
-  { id: 'code',        label: 'Programming & Digital',      color: '#4A90D9', icon: 'Code' },
-  { id: 'revived',     label: 'Extinct & Revived',          color: '#718096', icon: 'RotateCcw' },
+  { id: 'trade',       label: 'Bridge Languages & Trade Tongues',    color: '#2F855A', icon: 'Globe' },
+  { id: 'constructed', label: 'Invented & Constructed Languages',    color: '#6B3FA0', icon: 'Cog' },
+  { id: 'sign',        label: 'Sign Language & Gestural Systems',    color: '#DD6B20', icon: 'Hand' },
+  { id: 'code',        label: 'Programming & Digital Languages',     color: '#4A90D9', icon: 'Code' },
+  { id: 'revived',     label: 'Language Revival & Preservation',     color: '#718096', icon: 'RotateCcw' },
 ]
 
 export const ERA_LABELS: Record<string, { label: string; period: string; color: string }> = {
