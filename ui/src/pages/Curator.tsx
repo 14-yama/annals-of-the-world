@@ -23,8 +23,8 @@ const USSHER_STATS = [
 const PROJECT_STATS = [
   { value: '199', label: 'Countries Profiled', icon: Globe2, color: '#4A90D9' },
   { value: '1,000,000', label: 'Target Knowledge Nodes', icon: Network, color: '#6B3FA0' },
-  { value: '10,580', label: 'Actors in Annals Catalog', icon: CheckCircle2, color: '#2F855A' },
-  { value: '10+', label: 'Interpretive Frameworks', icon: Layers, color: '#D4AF37' },
+  { value: '10,989', label: 'Actors in Annals Catalog', icon: CheckCircle2, color: '#2F855A' },
+  { value: '16', label: 'Interpretive Frameworks', icon: Layers, color: '#D4AF37' },
   { value: '6', label: 'Canonical Eras', icon: BarChart3, color: '#C53030' },
   { value: '127', label: 'Weapons Catalogued', icon: Target, color: '#8B3A3A' },
   { value: '67', label: 'Ideas Catalogued', icon: Brain, color: '#6B3FA0' },
@@ -92,7 +92,7 @@ const NODE_CENSUS_BY_TYPE = [
   { label: 'Person',      count: 2002,  color: '#4A90D9' },
   { label: 'Movement',    count: 1092,  color: '#D4AF37' },
   { label: 'Institution', count: 659,   color: '#2F855A' },
-  { label: 'Text',        count: 621,   color: '#8B3A3A' },
+  { label: 'Text',        count: 1030,  color: '#8B3A3A' },
   { label: 'Idea',        count: 318,   color: '#6B3FA0' },
   { label: 'Place',       count: 93,    color: '#DD6B20' },
   { label: 'Evidence',    count: 41,    color: '#718096' },
@@ -107,10 +107,12 @@ const NODE_CENSUS_SOURCES = [
     detail: 'Prehistoric (15), Classical (48), Medieval (37), Early Modern (38), Modern (43), Contemporary (35), Biblical (97), Reformation (23), Division Enrichment (119).' },
   { source: 'Corpus Catalog (13 scholarly collections)',  count: 176, color: '#8B3A3A',
     detail: 'Mesopotamian (24), Egyptian (19), Judaic-Rabbinic (8), Graeco-Roman (15), Canon Law (4), Iran & Central Asia (21), South & SE Asia (17), East Asia (15), Africa (8), Americas (7), Europe (28), Science & Tech (10).' },
+  { source: 'Text Node Entities (auto-generated)',       count: 477, color: '#C53030',
+    detail: 'First-class Text entities generated from actor text references. Religious (76), Philosophical (247), Scientific (38), Legal (30), Constitutional (33), Artworks (27), Technological (26).' },
 ]
 
-/* Annals Catalog total: 10,633 pre-dedup → 10,580 unique actors across 7 eras (source of truth) */
-const TOTAL_NODES = 10_580
+/* Annals Catalog total: 11,456 pre-dedup → 10,989 unique actors across 7 eras (source of truth) */
+const TOTAL_NODES = 10_989
 const PROGRESS_PCT = ((TOTAL_NODES / TARGET_NODES) * 100).toFixed(2)
 
 export default function Curator() {
@@ -237,7 +239,7 @@ export default function Curator() {
             </Flex>
           ))}
           <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace' color="#718096" mt={3} textAlign="right">
-            Annals Catalog — 10,580 unique actors across 7 eras (source of truth)
+            Annals Catalog — 10,989 unique actors across 7 eras (source of truth)
           </Text>
         </Box>
       </Box>
