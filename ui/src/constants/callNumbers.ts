@@ -33,10 +33,10 @@ export interface DivisionEntry {
 export const CLASSES: ClassEntry[] = [
   { code: 0, heading: 'Ideas – Core Categories', nodeTypes: ['Political', 'Ethical', 'Legal'] },
   { code: 1, heading: 'Ideas – Other Theories', nodeTypes: ['Economic', 'Scientific', 'Technological', 'Religious', 'Cultural', 'Environmental', 'Artistic'] },
-  { code: 2, heading: 'People', nodeTypes: ['Philosophers', 'Leaders', 'Scientists', 'Activists', 'Artists'] },
-  { code: 3, heading: 'Institutions', nodeTypes: ['Political', 'Legal', 'Economic', 'Religious', 'Scientific', 'Cultural', 'International'] },
+  { code: 2, heading: 'People', nodeTypes: ['Philosophers', 'Leaders', 'Scientists', 'Activists', 'Artists', 'Military', 'Explorers'] },
+  { code: 3, heading: 'Institutions', nodeTypes: ['Political', 'Legal', 'Economic', 'Religious', 'Scientific', 'Cultural', 'International', 'Educational', 'Military'] },
   { code: 4, heading: 'Places', nodeTypes: ['Continent', 'Region', 'Country', 'City', 'Empire', 'Civilization'] },
-  { code: 5, heading: 'Events', nodeTypes: ['Wars', 'Revolutions', 'Elections', 'Scientific Discoveries', 'Environmental Crises'] },
+  { code: 5, heading: 'Events', nodeTypes: ['Wars', 'Revolutions', 'Elections', 'Scientific Discoveries', 'Environmental Crises', 'Agricultural', 'Economic'] },
   { code: 6, heading: 'Movements', nodeTypes: ['Political', 'Social', 'Religious', 'Cultural', 'Scientific', 'Technological', 'Environmental'] },
   { code: 7, heading: 'Artifacts & Texts', nodeTypes: ['Constitutions', 'Codes', 'Scriptures', 'Scientific Works', 'Artworks', 'Technologies'] },
   { code: 8, heading: 'Evidence', nodeTypes: ['Primary', 'Secondary', 'Archaeological', 'Quantitative', 'Oral'] },
@@ -67,6 +67,8 @@ export const DIVISIONS: DivisionEntry[] = [
   { code: '250', heading: 'Religious Figures', parentClass: 2 },
   { code: '260', heading: 'Artists & Writers', parentClass: 2 },
   { code: '270', heading: 'Activists & Reformers', parentClass: 2 },
+  { code: '280', heading: 'Military Leaders & Commanders', parentClass: 2 },
+  { code: '290', heading: 'Explorers & Navigators', parentClass: 2 },
 
   // 3 – Institutions
   { code: '310', heading: 'Political Institutions', parentClass: 3 },
@@ -76,6 +78,7 @@ export const DIVISIONS: DivisionEntry[] = [
   { code: '350', heading: 'Scientific Institutions', parentClass: 3 },
   { code: '360', heading: 'Cultural Institutions', parentClass: 3 },
   { code: '370', heading: 'International Organizations', parentClass: 3 },
+  { code: '380', heading: 'Educational Institutions', parentClass: 3 },
   { code: '390', heading: 'Military & Defense Organizations', parentClass: 3 },
 
   // 4 – Places
@@ -96,6 +99,7 @@ export const DIVISIONS: DivisionEntry[] = [
   { code: '560', heading: 'Technological Breakthroughs', parentClass: 5 },
   { code: '570', heading: 'Religious Events', parentClass: 5 },
   { code: '580', heading: 'Environmental Events', parentClass: 5 },
+  { code: '590', heading: 'Agricultural & Economic Events', parentClass: 5 },
 
   // 6 – Movements
   { code: '610', heading: 'Political Movements', parentClass: 6 },
@@ -105,6 +109,7 @@ export const DIVISIONS: DivisionEntry[] = [
   { code: '650', heading: 'Scientific Movements', parentClass: 6 },
   { code: '660', heading: 'Technological Movements', parentClass: 6 },
   { code: '670', heading: 'Environmental Movements', parentClass: 6 },
+  { code: '680', heading: 'Trade & Navigation Movements', parentClass: 6 },
 
   // 7 – Artifacts & Texts
   { code: '710', heading: 'Constitutions & Charters', parentClass: 7 },
@@ -114,6 +119,7 @@ export const DIVISIONS: DivisionEntry[] = [
   { code: '750', heading: 'Scientific Texts', parentClass: 7 },
   { code: '760', heading: 'Artworks', parentClass: 7 },
   { code: '770', heading: 'Technological Artifacts', parentClass: 7 },
+  { code: '780', heading: 'Historical & Literary Texts', parentClass: 7 },
 
   // 8 – Evidence
   { code: '810', heading: 'Primary Sources', parentClass: 8 },
