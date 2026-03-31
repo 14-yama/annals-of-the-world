@@ -29,7 +29,7 @@ export const prehistoricEntities: Entity[] = [
       { sourceSlug: 'animism', sourceName: 'Animism', verb: 'INFLUENCES', targetSlug: 'monotheism', targetName: 'Monotheism', context: 'Evolved from animistic nature worship to singular deity worship over millennia' },
     ],
     places: [{ name: 'Africa', role: 'Origin region' }],
-    texts: [],
+    texts: [{ title: 'The Golden Bough', type: 'Anthropological study', year: '1890' }],
   },
   {
     slug: 'fire_control',
@@ -57,7 +57,7 @@ export const prehistoricEntities: Entity[] = [
       { sourceSlug: 'tool_making', sourceName: 'Tool-Making Concept', verb: 'ENABLES', targetSlug: 'fire_control', targetName: 'Control of Fire', context: 'Tool use preceded fire mastery' },
     ],
     places: [{ name: 'East Africa', role: 'Earliest evidence' }],
-    texts: [],
+    texts: [{ title: 'Traces of Early Fire Use (Wonderwerk Cave)', type: 'Archaeological report' }],
   },
   {
     slug: 'tool_making',
@@ -83,7 +83,7 @@ export const prehistoricEntities: Entity[] = [
       { sourceSlug: 'tool_making', sourceName: 'Tool-Making Concept', verb: 'ENABLES', targetSlug: 'fire_control', targetName: 'Control of Fire', context: 'Tool use preceded fire mastery' },
     ],
     places: [{ name: 'Olduvai Gorge, Tanzania', role: 'Earliest tools found' }],
-    texts: [],
+    texts: [{ title: 'Oldowan Tool Assemblage Records', type: 'Archaeological catalogue' }],
   },
   {
     slug: 'symbolic_thinking',
@@ -111,7 +111,7 @@ export const prehistoricEntities: Entity[] = [
       { sourceSlug: 'symbolic_thinking', sourceName: 'Symbolic Thinking', verb: 'ENABLES', targetSlug: 'language_origin', targetName: 'Origin of Language', context: 'Symbolic capacity is prerequisite for language' },
     ],
     places: [{ name: 'Blombos Cave, South Africa', role: 'Earliest symbolic artifacts' }],
-    texts: [],
+    texts: [{ title: 'Blombos Cave Ochre Engravings', type: 'Archaeological record' }],
   },
   {
     slug: 'language_origin',
@@ -139,7 +139,7 @@ export const prehistoricEntities: Entity[] = [
       { sourceSlug: 'symbolic_thinking', sourceName: 'Symbolic Thinking', verb: 'ENABLES', targetSlug: 'language_origin', targetName: 'Origin of Language', context: 'Symbolic capacity is prerequisite for language' },
     ],
     places: [{ name: 'Africa', role: 'Origin continent' }],
-    texts: [],
+    texts: [{ title: 'On the Origin of Language (Herder)', type: 'Philosophical treatise', year: '1772' }],
   },
   {
     slug: 'agriculture_concept',
@@ -169,7 +169,7 @@ export const prehistoricEntities: Entity[] = [
       { sourceSlug: 'agriculture_concept', sourceName: 'Agriculture', verb: 'TRANSFORMS', targetSlug: 'fertile_crescent', targetName: 'Fertile Crescent', context: 'Agriculture first took root in the Fertile Crescent' },
     ],
     places: [{ name: 'Fertile Crescent', role: 'Origin of agriculture', slug: 'fertile_crescent' }],
-    texts: [],
+    texts: [{ title: 'Guns, Germs, and Steel', type: 'Historical analysis', year: '1997' }],
   },
   {
     slug: 'domestication',
@@ -194,7 +194,7 @@ export const prehistoricEntities: Entity[] = [
       { sourceSlug: 'domestication', sourceName: 'Domestication of Animals', verb: 'ENABLES', targetSlug: 'agriculture_concept', targetName: 'Agriculture', context: 'Animal domestication complemented crop cultivation' },
     ],
     places: [{ name: 'Fertile Crescent', role: 'Key domestication region', slug: 'fertile_crescent' }],
-    texts: [],
+    texts: [{ title: 'The Variation of Animals and Plants under Domestication', type: 'Scientific treatise', year: '1868' }],
   },
   {
     slug: 'neolithic_revolution',
@@ -230,7 +230,7 @@ export const prehistoricEntities: Entity[] = [
       { name: 'Fertile Crescent', role: 'Primary region', slug: 'fertile_crescent' },
       { name: 'Çatalhöyük', role: 'Early settlement', slug: 'catalhoyuk' },
     ],
-    texts: [],
+    texts: [{ title: 'Man Makes Himself', type: 'Archaeological study', year: '1936' }],
   },
   {
     slug: 'last_ice_age_end',
@@ -257,7 +257,7 @@ export const prehistoricEntities: Entity[] = [
       { sourceSlug: 'last_ice_age_end', sourceName: 'End of the Last Ice Age', verb: 'ENABLES', targetSlug: 'agriculture_concept', targetName: 'Agriculture', context: 'Warming climate made farming viable' },
     ],
     places: [{ name: 'Global', role: 'Worldwide climate shift' }],
-    texts: [],
+    texts: [{ title: 'Ice Age Geological Survey Records', type: 'Geological report' }],
   },
   {
     slug: 'early_human_migration',
@@ -288,7 +288,7 @@ export const prehistoricEntities: Entity[] = [
       { name: 'Africa', role: 'Origin continent' },
       { name: 'Fertile Crescent', role: 'Key migration corridor', slug: 'fertile_crescent' },
     ],
-    texts: [],
+    texts: [{ title: 'Out of Africa Migration Studies', type: 'Genetic study' }],
   },
   {
     slug: 'fertile_crescent',
@@ -312,7 +312,7 @@ export const prehistoricEntities: Entity[] = [
     ],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Rise of the Fertile Crescent', type: 'Archaeological survey' }],
   },
   {
     slug: 'gobekli_tepe',
@@ -337,7 +337,7 @@ export const prehistoricEntities: Entity[] = [
       { sourceSlug: 'symbolic_thinking', sourceName: 'Symbolic Thinking', verb: 'ENABLES', targetSlug: 'gobekli_tepe', targetName: 'Göbekli Tepe', context: 'Symbolic/ritual capacity drove monumental construction' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'Göbekli Tepe Excavation Reports', type: 'Archaeological report', year: '1995' }],
   },
   {
     slug: 'catalhoyuk',
@@ -362,7 +362,7 @@ export const prehistoricEntities: Entity[] = [
       { sourceSlug: 'neolithic_revolution', sourceName: 'Neolithic Revolution', verb: 'CAUSES', targetSlug: 'catalhoyuk', targetName: 'Çatalhöyük', context: 'Agricultural settlement enabled early urbanization' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'Çatalhöyük Excavation Records', type: 'Archaeological report' }],
   },
   {
     slug: 'lascaux_paintings',
@@ -387,7 +387,7 @@ export const prehistoricEntities: Entity[] = [
       { sourceSlug: 'symbolic_thinking', sourceName: 'Symbolic Thinking', verb: 'ENABLES', targetSlug: 'lascaux_paintings', targetName: 'Lascaux Cave Paintings', context: 'Abstract thought enabled representational art' },
     ],
     places: [{ name: 'Lascaux, France', role: 'Cave location' }],
-    texts: [],
+    texts: [{ title: 'Lascaux Cave Documentation', type: 'Archaeological record', year: '1940' }],
   },
   {
     slug: 'stone_tools',
@@ -412,6 +412,6 @@ export const prehistoricEntities: Entity[] = [
       { sourceSlug: 'tool_making', sourceName: 'Tool-Making Concept', verb: 'CAUSES', targetSlug: 'stone_tools', targetName: 'Stone Tools', context: 'Conceptual understanding led to physical manufacture' },
     ],
     places: [{ name: 'Olduvai Gorge, Tanzania', role: 'Earliest finds' }],
-    texts: [],
+    texts: [{ title: 'Acheulean Handaxe Catalogues', type: 'Archaeological catalogue' }],
   },
 ]

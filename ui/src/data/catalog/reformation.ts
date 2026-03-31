@@ -246,7 +246,10 @@ export const REFORMATION_ENTITIES: Entity[] = [
       { sourceSlug: 'thomas_muenzter', sourceName: 'Thomas Müntzer', verb: 'OPPOSES', targetSlug: 'martin_luther', targetName: 'Martin Luther', context: 'Broke with Luther over social revolution' },
     ],
     places: [{ name: 'Mühlhausen', role: 'Base of revolutionary activity' }],
-    texts: [],
+    texts: [
+      { title: 'Sermon to the Princes', type: 'Sermon', year: '1524' },
+      { title: 'Prague Manifesto', type: 'Manifesto', year: '1521' },
+    ],
   },
   {
     slug: 'menno_simons',
@@ -295,7 +298,7 @@ export const REFORMATION_ENTITIES: Entity[] = [
       { sourceSlug: 'council_of_trent', sourceName: 'Council of Trent', verb: 'DEFINES', targetSlug: 'catholic_reformation_movement', targetName: 'Catholic Reformation', context: 'Codified Counter-Reformation doctrines' },
     ],
     places: [{ name: 'Trent', role: 'Council location' }],
-    texts: [],
+    texts: [{ title: 'Decrees of the Council of Trent', type: 'Church decree', year: '1563' }],
   },
   {
     slug: 'peace_of_augsburg',
@@ -318,7 +321,7 @@ export const REFORMATION_ENTITIES: Entity[] = [
     effects: [{ title: 'Temporary religious peace until Thirty Years War', type: 'Event', year: '1555' }],
     relationships: [],
     places: [{ name: 'Augsburg', role: 'Treaty location' }],
-    texts: [],
+    texts: [{ title: 'Peace of Augsburg', type: 'Treaty', year: '1555' }],
   },
   {
     slug: 'st_bartholomews_day_massacre',
@@ -341,7 +344,7 @@ export const REFORMATION_ENTITIES: Entity[] = [
     effects: [{ title: 'Huguenot cause radicalized', type: 'Movement', year: '1572' }],
     relationships: [],
     places: [{ name: 'Paris', role: 'Initial massacre' }],
-    texts: [],
+    texts: [{ title: 'Mémoires de Marguerite de Valois', type: 'Memoir' }],
   },
   {
     slug: 'dutch_revolt',
@@ -389,7 +392,7 @@ export const REFORMATION_ENTITIES: Entity[] = [
     effects: [{ title: 'Compacts of Basel grant concessions to Hussites', type: 'Event', year: '1436' }],
     relationships: [],
     places: [{ name: 'Prague', role: 'Center of Hussite movement' }],
-    texts: [],
+    texts: [{ title: 'De Ecclesia (Jan Hus)', type: 'Theological treatise', year: '1413' }],
   },
   {
     slug: 'german_peasants_war',
@@ -464,7 +467,10 @@ export const REFORMATION_ENTITIES: Entity[] = [
       { sourceSlug: 'ignatius_of_loyola', sourceName: 'Ignatius of Loyola', verb: 'FOUNDS', targetSlug: 'society_of_jesus', targetName: 'Society of Jesus', context: 'Founded in Paris, approved by Pope Paul III' },
     ],
     places: [{ name: 'Rome', role: 'Headquarters' }],
-    texts: [],
+    texts: [
+      { title: 'Spiritual Exercises (Ignatius of Loyola)', type: 'Devotional manual', year: '1548' },
+      { title: 'Formula of the Institute (1540)', type: 'Founding charter', year: '1540' },
+    ],
   },
 
   // ── Key Movements ──────────────────────────────────────────────
@@ -489,7 +495,7 @@ export const REFORMATION_ENTITIES: Entity[] = [
     effects: [{ title: 'Catholic doctrines clarified and clergy reformed', type: 'Idea', year: '1563' }],
     relationships: [],
     places: [{ name: 'Trent', role: 'Council of Trent' }, { name: 'Rome', role: 'Papal headquarters' }],
-    texts: [],
+    texts: [{ title: 'Decrees of the Council of Trent', type: 'Church decree', year: '1563' }],
   },
   {
     slug: 'scottish_reformation',
@@ -537,7 +543,7 @@ export const REFORMATION_ENTITIES: Entity[] = [
     effects: [{ title: 'Unified English-language worship established', type: 'Idea', year: '1549' }],
     relationships: [],
     places: [{ name: 'London', role: 'Published by royal authority' }],
-    texts: [],
+    texts: [{ title: 'Book of Common Prayer', type: 'Liturgical text', year: '1549' }],
   },
   {
     slug: 'augsburg_confession',
@@ -560,6 +566,6 @@ export const REFORMATION_ENTITIES: Entity[] = [
       { sourceSlug: 'philipp_melanchthon', sourceName: 'Philipp Melanchthon', verb: 'AUTHORS', targetSlug: 'augsburg_confession', targetName: 'Augsburg Confession', context: 'Primary author' },
     ],
     places: [{ name: 'Augsburg', role: 'Presented to Emperor' }],
-    texts: [],
+    texts: [{ title: 'Augsburg Confession (Confessio Augustana)', type: 'Confessional document', year: '1530' }],
   },
 ]

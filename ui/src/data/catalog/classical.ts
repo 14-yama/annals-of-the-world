@@ -32,7 +32,10 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'socrates', sourceName: 'Socrates', verb: 'PARTICIPATES_IN', targetSlug: 'athens', targetName: 'Athens', context: 'Lived and taught in Athenian agora' },
     ],
     places: [{ name: 'Athens', role: 'Lifetime residence', slug: 'athens' }],
-    texts: [],
+    texts: [
+      { title: 'Apology (Plato\'s account)', type: 'Philosophical dialogue' },
+      { title: 'Memorabilia (Xenophon)', type: 'Biographical memoir' },
+    ],
   },
   {
     slug: 'plato',
@@ -98,7 +101,11 @@ export const classicalEntities: Entity[] = [
       { name: 'Athens', role: 'Academy and Lyceum', slug: 'athens' },
       { name: 'Stagira', role: 'Birthplace' },
     ],
-    texts: [],
+    texts: [
+      { title: 'Nicomachean Ethics', type: 'Philosophical treatise' },
+      { title: 'Politics', type: 'Philosophical treatise' },
+      { title: 'Metaphysics', type: 'Philosophical treatise' },
+    ],
   },
   {
     slug: 'confucius',
@@ -160,7 +167,10 @@ export const classicalEntities: Entity[] = [
       { name: 'Pella', role: 'Capital of Macedon' },
       { name: 'Alexandria', role: 'City he founded', slug: 'alexandria' },
     ],
-    texts: [],
+    texts: [
+      { title: 'Anabasis of Alexander (Arrian)', type: 'Historical chronicle' },
+      { title: 'Life of Alexander (Plutarch)', type: 'Biography' },
+    ],
   },
   {
     slug: 'julius_caesar',
@@ -281,7 +291,7 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'cleopatra', sourceName: 'Cleopatra VII', verb: 'COLLABORATES_WITH', targetSlug: 'julius_caesar', targetName: 'Julius Caesar', context: 'Political and romantic alliance' },
     ],
     places: [{ name: 'Alexandria', role: 'Capital', slug: 'alexandria' }],
-    texts: [],
+    texts: [{ title: 'Life of Antony (Plutarch)', type: 'Biography' }],
   },
   {
     slug: 'ashoka',
@@ -336,7 +346,10 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'ramesses_ii', sourceName: 'Ramesses II', verb: 'LEADS', targetSlug: 'ancient_egypt', targetName: 'Ancient Egypt', context: 'Ruled during Egypt\'s peak power' },
     ],
     places: [{ name: 'Pi-Ramesses', role: 'Capital' }, { name: 'Abu Simbel', role: 'Temple complex' }],
-    texts: [],
+    texts: [
+      { title: 'Poem of Pentaur (Battle of Kadesh)', type: 'Ancient text' },
+      { title: 'Abu Simbel Temple Inscriptions', type: 'Inscription' },
+    ],
   },
   {
     slug: 'hammurabi_person',
@@ -531,7 +544,10 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'democracy', sourceName: 'Democracy', verb: 'INFLUENCES', targetSlug: 'social_contract', targetName: 'Social Contract Theory', context: 'Basis for Enlightenment political philosophy' },
     ],
     places: [{ name: 'Athens', role: 'Origin city', slug: 'athens' }],
-    texts: [],
+    texts: [
+      { title: 'The Athenian Constitution (Aristotle)', type: 'Political treatise' },
+      { title: 'History of the Peloponnesian War (Thucydides)', type: 'Historical chronicle' },
+    ],
   },
   {
     slug: 'republic',
@@ -560,7 +576,10 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'republic', sourceName: 'Republic', verb: 'ESTABLISHES', targetSlug: 'roman_senate', targetName: 'Roman Senate', context: 'Senate was the cornerstone republican institution' },
     ],
     places: [{ name: 'Rome', role: 'Origin', slug: 'rome' }],
-    texts: [],
+    texts: [
+      { title: 'The Republic (Plato)', type: 'Philosophical dialogue' },
+      { title: 'De Re Publica (Cicero)', type: 'Political treatise' },
+    ],
   },
   {
     slug: 'stoicism',
@@ -725,7 +744,10 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'greek_natural_philosophy', sourceName: 'Greek Natural Philosophy', verb: 'INFLUENCES', targetSlug: 'heliocentrism', targetName: 'Heliocentrism', context: 'Aristarchus proposed heliocentric model in Greek tradition' },
     ],
     places: [{ name: 'Miletus', role: 'Origin of Ionian philosophy' }],
-    texts: [],
+    texts: [
+      { title: 'On Nature (Parmenides)', type: 'Philosophical fragment' },
+      { title: 'Physics (Aristotle)', type: 'Philosophical treatise' },
+    ],
   },
   // ─── INSTITUTIONS ─────────────────────────────────────────
   {
@@ -754,7 +776,7 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'julius_caesar', sourceName: 'Julius Caesar', verb: 'TRANSFORMS', targetSlug: 'roman_senate', targetName: 'Roman Senate', context: 'Marginalized Senate through dictatorial power' },
     ],
     places: [{ name: 'Rome', role: 'Seat of government', slug: 'rome' }],
-    texts: [],
+    texts: [{ title: 'Ab Urbe Condita (Livy)', type: 'Historical chronicle' }],
   },
   {
     slug: 'athenian_assembly',
@@ -780,7 +802,7 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'pericles', sourceName: 'Pericles', verb: 'LEADS', targetSlug: 'athenian_assembly', targetName: 'Athenian Assembly', context: 'Dominant voice for 30 years' },
     ],
     places: [{ name: 'Pnyx Hill, Athens', role: 'Meeting place' }],
-    texts: [],
+    texts: [{ title: 'The Athenian Constitution (Aristotle)', type: 'Political treatise' }],
   },
   {
     slug: 'library_of_alexandria',
@@ -807,7 +829,10 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'alexander_the_great', sourceName: 'Alexander the Great', verb: 'CAUSES', targetSlug: 'library_of_alexandria', targetName: 'Library of Alexandria', context: 'His founding of Alexandria led to the Library' },
     ],
     places: [{ name: 'Alexandria', role: 'Location', slug: 'alexandria' }],
-    texts: [],
+    texts: [
+      { title: 'Elements (Euclid)', type: 'Mathematical treatise' },
+      { title: 'The Geography (Strabo)', type: 'Geographical compendium' },
+    ],
   },
   {
     slug: 'sanhedrin',
@@ -832,7 +857,7 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'torah', sourceName: 'Torah', verb: 'ESTABLISHES', targetSlug: 'sanhedrin', targetName: 'Sanhedrin', context: 'Torah law required judicial authority' },
     ],
     places: [{ name: 'Jerusalem', role: 'Assembly location', slug: 'jerusalem' }],
-    texts: [],
+    texts: [{ title: 'Mishnah Sanhedrin', type: 'Rabbinic text' }],
   },
   // ─── EVENTS ───────────────────────────────────────────────
   {
@@ -889,7 +914,7 @@ export const classicalEntities: Entity[] = [
     ],
     relationships: [],
     places: [{ name: 'Carthage', role: 'Enemy capital' }, { name: 'Rome', role: 'Victor', slug: 'rome' }],
-    texts: [],
+    texts: [{ title: 'The Histories (Polybius)', type: 'Historical chronicle' }],
   },
   {
     slug: 'battle_of_thermopylae',
@@ -915,7 +940,7 @@ export const classicalEntities: Entity[] = [
     ],
     relationships: [],
     places: [{ name: 'Thermopylae, Greece', role: 'Battle site' }],
-    texts: [],
+    texts: [{ title: 'Histories (Herodotus)', type: 'Historical chronicle' }],
   },
   {
     slug: 'battle_of_marathon',
@@ -941,7 +966,7 @@ export const classicalEntities: Entity[] = [
     ],
     relationships: [],
     places: [{ name: 'Marathon, Greece', role: 'Battle site' }],
-    texts: [],
+    texts: [{ title: 'Histories (Herodotus)', type: 'Historical chronicle' }],
   },
   {
     slug: 'fall_of_rome',
@@ -973,7 +998,7 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'fall_of_rome', sourceName: 'Fall of Rome', verb: 'PRECEDES', targetSlug: 'charlemagne', targetName: 'Charlemagne', context: 'Power vacuum led to Carolingian dynasty' },
     ],
     places: [{ name: 'Rome', role: 'Imperial capital', slug: 'rome' }],
-    texts: [],
+    texts: [{ title: 'The History of the Decline and Fall of the Roman Empire', type: 'Historical analysis', year: '1776' }],
   },
   {
     slug: 'crucifixion',
@@ -1001,7 +1026,10 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'crucifixion', sourceName: 'Crucifixion', verb: 'CAUSES', targetSlug: 'spread_of_christianity', targetName: 'Spread of Christianity', context: 'Martyrdom catalyzed the Christian movement' },
     ],
     places: [{ name: 'Jerusalem', role: 'Execution site (Golgotha)', slug: 'jerusalem' }],
-    texts: [],
+    texts: [
+      { title: 'The Gospels (Matthew, Mark, Luke, John)', type: 'Scripture' },
+      { title: 'Annals (Tacitus)', type: 'Historical chronicle' },
+    ],
   },
   // ─── MOVEMENTS ────────────────────────────────────────────
   {
@@ -1036,7 +1064,10 @@ export const classicalEntities: Entity[] = [
       { name: 'Jerusalem', role: 'Origin', slug: 'jerusalem' },
       { name: 'Rome', role: 'Center of Western Christianity', slug: 'rome' },
     ],
-    texts: [],
+    texts: [
+      { title: 'Acts of the Apostles', type: 'Scripture' },
+      { title: 'Ecclesiastical History (Eusebius)', type: 'Church history' },
+    ],
   },
   {
     slug: 'greek_enlightenment',
@@ -1063,7 +1094,10 @@ export const classicalEntities: Entity[] = [
     places: [
       { name: 'Athens', role: 'Greek center', slug: 'athens' },
     ],
-    texts: [],
+    texts: [
+      { title: 'Theogony (Hesiod)', type: 'Epic poem' },
+      { title: 'Fragments of the Pre-Socratics', type: 'Philosophical fragments' },
+    ],
   },
   // ─── TEXTS ────────────────────────────────────────────────
   {
@@ -1091,7 +1125,7 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'plato', sourceName: 'Plato', verb: 'PUBLISHES', targetSlug: 'republic_plato', targetName: 'The Republic', context: 'Authored the foundational work of political philosophy' },
     ],
     places: [{ name: 'Athens', role: 'Written at the Academy', slug: 'athens' }],
-    texts: [],
+    texts: [{ title: 'The Republic (Plato)', type: 'Philosophical dialogue' }],
   },
   {
     slug: 'art_of_war',
@@ -1114,7 +1148,7 @@ export const classicalEntities: Entity[] = [
     ],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Art of War (Sun Tzu)', type: 'Military treatise', year: '-500' }],
   },
   {
     slug: 'code_of_hammurabi',
@@ -1142,7 +1176,7 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'code_of_hammurabi', sourceName: 'Code of Hammurabi', verb: 'INFLUENCES', targetSlug: 'roman_law', targetName: 'Roman Law', context: 'Precedent for codified law' },
     ],
     places: [{ name: 'Babylon', role: 'Origin' }],
-    texts: [],
+    texts: [{ title: 'Code of Hammurabi Stele Inscription', type: 'Legal code', year: '-1754' }],
   },
   {
     slug: 'torah',
@@ -1171,7 +1205,7 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'torah', sourceName: 'Torah', verb: 'INFLUENCES', targetSlug: 'quran', targetName: 'Quran', context: 'Torah narratives referenced in Quran' },
     ],
     places: [{ name: 'Jerusalem', role: 'Center of Torah study', slug: 'jerusalem' }],
-    texts: [],
+    texts: [{ title: 'The Five Books of Moses', type: 'Scripture' }],
   },
   // ─── PLACES ───────────────────────────────────────────────
   {
@@ -1193,7 +1227,7 @@ export const classicalEntities: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Ab Urbe Condita (Livy)', type: 'Historical chronicle' }],
   },
   {
     slug: 'athens',
@@ -1214,7 +1248,7 @@ export const classicalEntities: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Athenian Constitution', type: 'Political treatise' }],
   },
   {
     slug: 'jerusalem',
@@ -1235,7 +1269,7 @@ export const classicalEntities: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Jewish War (Josephus)', type: 'Historical chronicle' }],
   },
   {
     slug: 'alexandria',
@@ -1260,7 +1294,7 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'alexander_the_great', sourceName: 'Alexander the Great', verb: 'ESTABLISHES', targetSlug: 'alexandria', targetName: 'Alexandria', context: 'Founded the city after conquering Egypt' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Geography (Strabo)', type: 'Geographical compendium' }],
   },
   {
     slug: 'roman_empire',
@@ -1289,7 +1323,10 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'spread_of_christianity', sourceName: 'Spread of Christianity', verb: 'TRANSFORMS', targetSlug: 'roman_empire', targetName: 'Roman Empire', context: 'Became state religion in 380 CE' },
     ],
     places: [],
-    texts: [],
+    texts: [
+      { title: 'Res Gestae Divi Augusti', type: 'Imperial inscription' },
+      { title: 'Annals (Tacitus)', type: 'Historical chronicle' },
+    ],
   },
   {
     slug: 'persian_empire',
@@ -1314,7 +1351,10 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'alexander_the_great', sourceName: 'Alexander the Great', verb: 'TRANSFORMS', targetSlug: 'persian_empire', targetName: 'Persian Empire', context: 'Conquered the Achaemenid Empire' },
     ],
     places: [],
-    texts: [],
+    texts: [
+      { title: 'Behistun Inscription', type: 'Royal inscription' },
+      { title: 'Cyropaedia (Xenophon)', type: 'Historical chronicle' },
+    ],
   },
   {
     slug: 'ancient_egypt',
@@ -1339,6 +1379,9 @@ export const classicalEntities: Entity[] = [
       { sourceSlug: 'ramesses_ii', sourceName: 'Ramesses II', verb: 'LEADS', targetSlug: 'ancient_egypt', targetName: 'Ancient Egypt', context: 'Peak of Egyptian power' },
     ],
     places: [],
-    texts: [],
+    texts: [
+      { title: 'Book of the Dead', type: 'Funerary text' },
+      { title: 'Palermo Stone', type: 'Royal annals' },
+    ],
   },
 ]

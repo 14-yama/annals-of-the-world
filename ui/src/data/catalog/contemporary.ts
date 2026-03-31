@@ -192,7 +192,7 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'deng_xiaoping', sourceName: 'Deng Xiaoping', verb: 'TRANSFORMS', targetSlug: 'globalization', targetName: 'Globalization', context: 'China\'s opening up accelerated economic globalization' },
     ],
     places: [{ name: 'Beijing', role: 'Capital' }, { name: 'Shenzhen', role: 'First Special Economic Zone' }],
-    texts: [],
+    texts: [{ title: 'Selected Works of Deng Xiaoping', type: 'Political writings' }],
   },
   {
     slug: 'margaret_thatcher',
@@ -223,7 +223,7 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'margaret_thatcher', sourceName: 'Margaret Thatcher', verb: 'INFLUENCES', targetSlug: 'globalization', targetName: 'Globalization', context: 'Thatcher\'s privatization model spread worldwide' },
     ],
     places: [{ name: 'London', role: '10 Downing Street' }],
-    texts: [],
+    texts: [{ title: 'The Downing Street Years (memoir)', type: 'Memoir', year: '1993' }],
   },
   {
     slug: 'alan_turing',
@@ -602,7 +602,7 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'mao_zedong', sourceName: 'Mao Zedong', verb: 'INFLUENCES', targetSlug: 'korean_war', targetName: 'Korean War', context: 'China entered war in support of North Korea' },
     ],
     places: [{ name: 'Korean Peninsula', role: 'Theater of war' }, { name: 'Inchon', role: 'Amphibious landing' }],
-    texts: [],
+    texts: [{ title: 'Korean War Armistice Agreement (1953)', type: 'Treaty', year: '1953' }],
   },
   {
     slug: 'vietnam_war',
@@ -666,7 +666,7 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'john_f_kennedy', sourceName: 'John F. Kennedy', verb: 'RESOLVES', targetSlug: 'cuban_missile_crisis', targetName: 'Cuban Missile Crisis', context: 'JFK\'s blockade and negotiation averted war' },
     ],
     places: [{ name: 'Cuba', role: 'Missile deployment site' }, { name: 'Washington, D.C.', role: 'Crisis management' }],
-    texts: [],
+    texts: [{ title: 'Thirteen Days (Robert Kennedy)', type: 'Memoir', year: '1969' }],
   },
   {
     slug: 'fall_berlin_wall',
@@ -699,7 +699,7 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'fall_berlin_wall', sourceName: 'Fall of the Berlin Wall', verb: 'RESULTS_IN', targetSlug: 'european_union', targetName: 'European Union', context: 'Enabled eastward expansion of EU' },
     ],
     places: [{ name: 'Berlin', role: 'Wall site' }, { name: 'East Germany', role: 'GDR collapsed' }],
-    texts: [],
+    texts: [{ title: 'Tear Down This Wall (Reagan speech)', type: 'Speech', year: '1987' }],
   },
   {
     slug: 'apartheid',
@@ -731,7 +731,10 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'decolonization', sourceName: 'Decolonization', verb: 'INFLUENCES', targetSlug: 'apartheid', targetName: 'Apartheid', context: 'African independence movements pressured apartheid regime' },
     ],
     places: [{ name: 'Johannesburg', role: 'Soweto uprising 1976' }, { name: 'Robben Island', role: 'Political prison' }],
-    texts: [],
+    texts: [
+      { title: 'Long Walk to Freedom (Mandela)', type: 'Autobiography', year: '1994' },
+      { title: 'Truth and Reconciliation Commission Report', type: 'Government report', year: '1998' },
+    ],
   },
   {
     slug: 'september_11',
@@ -764,7 +767,7 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'september_11', sourceName: 'September 11 Attacks', verb: 'CAUSES', targetSlug: 'iraq_war', targetName: 'Iraq War', context: 'War on Terror justification for Iraq invasion' },
     ],
     places: [{ name: 'New York City', role: 'World Trade Center' }, { name: 'Washington, D.C.', role: 'Pentagon' }, { name: 'Shanksville, PA', role: 'Flight 93 crash' }],
-    texts: [],
+    texts: [{ title: 'The 9/11 Commission Report', type: 'Government report', year: '2004' }],
   },
   {
     slug: 'war_afghanistan',
@@ -793,7 +796,7 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'september_11', sourceName: 'September 11 Attacks', verb: 'CAUSES', targetSlug: 'war_afghanistan', targetName: 'War in Afghanistan', context: 'Direct military response to 9/11' },
     ],
     places: [{ name: 'Kabul', role: 'Capital' }, { name: 'Tora Bora', role: 'Al-Qaeda stronghold' }],
-    texts: [],
+    texts: [{ title: 'The Afghanistan Papers (Washington Post)', type: 'Investigative report', year: '2019' }],
   },
   {
     slug: 'iraq_war',
@@ -824,7 +827,7 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'september_11', sourceName: 'September 11 Attacks', verb: 'CAUSES', targetSlug: 'iraq_war', targetName: 'Iraq War', context: 'War on Terror narrative justified invasion' },
     ],
     places: [{ name: 'Baghdad', role: 'Capital' }, { name: 'Fallujah', role: 'Major battle site' }],
-    texts: [],
+    texts: [{ title: 'The Iraq Study Group Report', type: 'Government report', year: '2006' }],
   },
 
   // ═══════════════════════════════════════════════════════════
@@ -858,7 +861,10 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'human_rights', sourceName: 'Human Rights', verb: 'INFLUENCES', targetSlug: 'civil_rights_movement', targetName: 'Civil Rights Movement', context: 'UDHR principles inspired domestic demands for equality' },
     ],
     places: [{ name: 'Montgomery, Alabama', role: 'Bus Boycott 1955' }, { name: 'Selma, Alabama', role: 'Voting rights marches' }],
-    texts: [],
+    texts: [
+      { title: 'Letter from Birmingham Jail (King)', type: 'Letter', year: '1963' },
+      { title: 'Why We Can\'t Wait (King)', type: 'Political treatise', year: '1964' },
+    ],
   },
   {
     slug: 'decolonization',
@@ -949,7 +955,7 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'digital_revolution', sourceName: 'Digital Revolution', verb: 'CAUSES', targetSlug: 'globalization', targetName: 'Globalization', context: 'Internet enabled instant global communication and commerce' },
     ],
     places: [{ name: 'Silicon Valley', role: 'Innovation hub' }, { name: 'CERN, Geneva', role: 'World Wide Web invented 1989' }],
-    texts: [],
+    texts: [{ title: 'Being Digital (Negroponte)', type: 'Technology treatise', year: '1995' }],
   },
   {
     slug: 'globalization',
@@ -981,7 +987,7 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'deng_xiaoping', sourceName: 'Deng Xiaoping', verb: 'TRANSFORMS', targetSlug: 'globalization', targetName: 'Globalization', context: 'China\'s opening up created world\'s largest factory' },
     ],
     places: [{ name: 'Davos', role: 'World Economic Forum' }, { name: 'Geneva', role: 'WTO headquarters' }],
-    texts: [],
+    texts: [{ title: 'The World Is Flat (Friedman)', type: 'Economic analysis', year: '2005' }],
   },
   {
     slug: 'environmental_movement',
@@ -1010,7 +1016,10 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'environmentalism_idea', sourceName: 'Environmentalism', verb: 'CAUSES', targetSlug: 'environmental_movement', targetName: 'Environmental Movement', context: 'Ideas drove organized political action' },
     ],
     places: [{ name: 'Washington, D.C.', role: 'First Earth Day 1970' }],
-    texts: [],
+    texts: [
+      { title: 'Silent Spring (Rachel Carson)', type: 'Environmental study', year: '1962' },
+      { title: 'The Limits to Growth (Club of Rome)', type: 'Report', year: '1972' },
+    ],
   },
 
   // ═══════════════════════════════════════════════════════════
@@ -1044,7 +1053,7 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'udhr', sourceName: 'UDHR', verb: 'INFLUENCES', targetSlug: 'civil_rights_movement', targetName: 'Civil Rights Movement', context: 'UDHR principles inspired domestic civil rights demands' },
     ],
     places: [{ name: 'Paris', role: 'Adopted at Palais de Chaillot' }],
-    texts: [],
+    texts: [{ title: 'Universal Declaration of Human Rights', type: 'International declaration', year: '1948' }],
   },
   {
     slug: 'civil_rights_act',
@@ -1074,7 +1083,7 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'martin_luther_king', sourceName: 'Martin Luther King Jr.', verb: 'INFLUENCES', targetSlug: 'civil_rights_act', targetName: 'Civil Rights Act', context: 'March on Washington and moral persuasion' },
     ],
     places: [{ name: 'Washington, D.C.', role: 'Signed into law' }],
-    texts: [],
+    texts: [{ title: 'Civil Rights Act of 1964', type: 'Legal statute', year: '1964' }],
   },
   {
     slug: 'paris_climate_agreement',
@@ -1102,6 +1111,6 @@ export const contemporaryEntities: Entity[] = [
       { sourceSlug: 'environmental_movement', sourceName: 'Environmental Movement', verb: 'CAUSES', targetSlug: 'paris_climate_agreement', targetName: 'Paris Climate Agreement', context: 'Decades of campaigning led to global climate deal' },
     ],
     places: [{ name: 'Paris', role: 'COP21 conference' }],
-    texts: [],
+    texts: [{ title: 'Paris Agreement', type: 'International treaty', year: '2015' }],
   },
 ]

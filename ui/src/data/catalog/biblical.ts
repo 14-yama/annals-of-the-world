@@ -60,7 +60,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
       { name: 'Jerusalem', role: 'Central sacred city', slug: 'jerusalem' },
       { name: 'Babylon', role: 'Exile & editorial context', slug: 'babylon' },
     ],
-    texts: [],
+    texts: [{ title: 'The Bible (canonical collections)', type: 'Scripture' }],
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -1215,7 +1215,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
       { sourceSlug: 'biblical_corpus', sourceName: 'Biblical Corpus', verb: 'CONTAINS', targetSlug: 'genesis', targetName: 'Genesis', context: 'Book 1 of 66' },
     ],
     places: [{ name: 'Canaan', role: 'Primary setting' }],
-    texts: [],
+    texts: [{ title: 'Book of Genesis', type: 'Scripture' }],
   },
   {
     slug: 'exodus_book',
@@ -1238,7 +1238,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
       { sourceSlug: 'moses', sourceName: 'Moses', verb: 'AUTHORS', targetSlug: 'exodus_book', targetName: 'Exodus', context: 'Traditional author' },
     ],
     places: [{ name: 'Egypt', role: 'Slavery narrative', slug: 'egypt' }, { name: 'Mount Sinai', role: 'Law given', slug: 'mount_sinai' }],
-    texts: [],
+    texts: [{ title: 'Book of Exodus', type: 'Scripture' }],
   },
   {
     slug: 'leviticus',
@@ -1259,7 +1259,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Book of Leviticus', type: 'Scripture' }],
   },
   {
     slug: 'numbers_book',
@@ -1280,7 +1280,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Book of Numbers', type: 'Scripture' }],
   },
   {
     slug: 'deuteronomy',
@@ -1301,7 +1301,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     effects: [{ title: 'Deuteronomistic History framework', type: 'Idea', year: 'c. 600 BCE' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Book of Deuteronomy', type: 'Scripture' }],
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -1318,7 +1318,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'c. 1400–400 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['CONFLICT_AND_RESOLUTION'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Book of Joshua', type: 'Scripture' }],
   },
   {
     slug: 'judges_book',
@@ -1331,7 +1331,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'Composition: c. 1200–1000 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['CONFLICT_AND_RESOLUTION', 'DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Book of Judges', type: 'Scripture' }],
   },
   {
     slug: 'first_samuel',
@@ -1344,7 +1344,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'Composition: c. 1050–900 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['GEOPOLITICAL_LINKAGE'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'First Book of Samuel', type: 'Scripture' }],
   },
   {
     slug: 'second_samuel',
@@ -1357,7 +1357,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'Composition: c. 1010–900 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['GEOPOLITICAL_LINKAGE', 'DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Second Book of Samuel', type: 'Scripture' }],
   },
   {
     slug: 'first_kings',
@@ -1370,7 +1370,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'Composition: c. 970–560 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['GEOPOLITICAL_LINKAGE'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'First Book of Kings', type: 'Scripture' }],
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -1392,7 +1392,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
       { sourceSlug: 'david_king', sourceName: 'King David', verb: 'AUTHORS', targetSlug: 'psalms', targetName: 'Psalms', context: 'Primary attributed author' },
     ],
     places: [{ name: 'Jerusalem', role: 'Temple worship context', slug: 'jerusalem' }],
-    texts: [],
+    texts: [{ title: 'Book of Psalms', type: 'Scripture' }],
   },
   {
     slug: 'proverbs',
@@ -1409,7 +1409,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     relationships: [
       { sourceSlug: 'solomon', sourceName: 'Solomon', verb: 'AUTHORS', targetSlug: 'proverbs', targetName: 'Proverbs', context: 'Traditional primary author' },
     ],
-    places: [], texts: [],
+    places: [], texts: [{ title: 'Book of Proverbs', type: 'Scripture' }],
   },
   {
     slug: 'ecclesiastes',
@@ -1422,7 +1422,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'Composition: c. 450–200 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Book of Ecclesiastes', type: 'Scripture' }],
   },
   {
     slug: 'song_of_solomon',
@@ -1435,7 +1435,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'Composition: c. 960–300 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Song of Solomon', type: 'Scripture' }],
   },
   {
     slug: 'job_book',
@@ -1448,7 +1448,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'Composition: c. 600–400 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Book of Job', type: 'Scripture' }],
   },
   {
     slug: 'lamentations',
@@ -1461,7 +1461,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'Composition: c. 586 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [{ name: 'Jerusalem', role: 'Subject of mourning', slug: 'jerusalem' }], texts: [],
+    causes: [], effects: [], relationships: [], places: [{ name: 'Jerusalem', role: 'Subject of mourning', slug: 'jerusalem' }], texts: [{ title: 'Book of Lamentations', type: 'Scripture' }],
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -1483,7 +1483,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
       { sourceSlug: 'isaiah_prophet', sourceName: 'Isaiah', verb: 'AUTHORS', targetSlug: 'isaiah_book', targetName: 'Book of Isaiah', context: 'Primary attributed author' },
     ],
     places: [{ name: 'Jerusalem', role: 'Primary setting', slug: 'jerusalem' }],
-    texts: [],
+    texts: [{ title: 'Book of Isaiah', type: 'Scripture' }],
   },
   {
     slug: 'jeremiah_book',
@@ -1496,7 +1496,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     period: 'c. 626–580 BCE',
     frameworks: ['DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Book of Jeremiah', type: 'Scripture' }],
   },
   {
     slug: 'ezekiel_book',
@@ -1509,7 +1509,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'Composition: c. 593–571 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Book of Ezekiel', type: 'Scripture' }],
   },
   {
     slug: 'daniel_book',
@@ -1522,7 +1522,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'Composition: c. 530–165 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['DOCTRINE_DEVELOPMENT', 'GEOPOLITICAL_LINKAGE'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Book of Daniel', type: 'Scripture' }],
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -1539,7 +1539,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     period: 'c. 70–85 CE',
     frameworks: ['TEXTUAL_TRANSMISSION', 'DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Gospel According to Matthew', type: 'Scripture' }],
   },
   {
     slug: 'gospel_of_mark',
@@ -1552,7 +1552,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     period: 'c. 65–70 CE',
     frameworks: ['TEXTUAL_TRANSMISSION'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Gospel According to Mark', type: 'Scripture' }],
   },
   {
     slug: 'gospel_of_luke',
@@ -1565,7 +1565,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     period: 'c. 80–85 CE',
     frameworks: ['TEXTUAL_TRANSMISSION', 'DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Gospel According to Luke', type: 'Scripture' }],
   },
   {
     slug: 'gospel_of_john',
@@ -1582,7 +1582,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     relationships: [
       { sourceSlug: 'apostle_john', sourceName: 'John', verb: 'AUTHORS', targetSlug: 'gospel_of_john', targetName: 'Gospel of John', context: 'Traditional author' },
     ],
-    places: [], texts: [],
+    places: [], texts: [{ title: 'Gospel According to John', type: 'Scripture' }],
   },
   {
     slug: 'acts_of_the_apostles',
@@ -1603,7 +1603,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
       { name: 'Jerusalem', role: 'Starting point', slug: 'jerusalem' },
       { name: 'Rome', role: 'Ending point', slug: 'rome' },
     ],
-    texts: [],
+    texts: [{ title: 'Acts of the Apostles', type: 'Scripture' }],
   },
   {
     slug: 'epistle_to_the_romans',
@@ -1621,7 +1621,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
       { sourceSlug: 'apostle_paul', sourceName: 'Paul', verb: 'AUTHORS', targetSlug: 'epistle_to_the_romans', targetName: 'Romans', context: 'Letter to the Roman church' },
     ],
     places: [{ name: 'Corinth', role: 'Place of composition' }],
-    texts: [],
+    texts: [{ title: 'Epistle to the Romans', type: 'Epistle' }],
   },
   {
     slug: 'first_corinthians',
@@ -1634,7 +1634,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     period: 'c. 55 CE',
     frameworks: ['DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'First Epistle to the Corinthians', type: 'Epistle' }],
   },
   {
     slug: 'galatians',
@@ -1647,7 +1647,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     period: 'c. 49 CE',
     frameworks: ['DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Epistle to the Galatians', type: 'Epistle' }],
   },
   {
     slug: 'revelation',
@@ -1666,7 +1666,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
       { sourceSlug: 'apostle_john', sourceName: 'John', verb: 'AUTHORS', targetSlug: 'revelation', targetName: 'Revelation', context: 'Vision from Patmos' },
     ],
     places: [{ name: 'Patmos', role: 'Place of vision' }],
-    texts: [],
+    texts: [{ title: 'Book of Revelation', type: 'Apocalyptic literature' }],
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -1687,7 +1687,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     relationships: [
       { sourceSlug: 'jacob_israel', sourceName: 'Jacob/Israel', verb: 'ESTABLISHES', targetSlug: 'twelve_tribes', targetName: 'Twelve Tribes', context: 'Founded through his twelve sons' },
     ],
-    places: [{ name: 'Canaan', role: 'Tribal territories' }], texts: [],
+    places: [{ name: 'Canaan', role: 'Tribal territories' }], texts: [{ title: 'Genesis (tribal narratives)', type: 'Scripture' }],
   },
   {
     slug: 'levitical_priesthood',
@@ -1704,7 +1704,10 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     relationships: [
       { sourceSlug: 'aaron', sourceName: 'Aaron', verb: 'ESTABLISHES', targetSlug: 'levitical_priesthood', targetName: 'Levitical Priesthood', context: 'First High Priest' },
     ],
-    places: [{ name: 'Jerusalem', role: 'Temple service', slug: 'jerusalem' }], texts: [],
+    places: [{ name: 'Jerusalem', role: 'Temple service', slug: 'jerusalem' }], texts: [
+      { title: 'Book of Leviticus', type: 'Scripture' },
+      { title: 'Book of Numbers (priestly duties)', type: 'Scripture' },
+    ],
   },
   {
     slug: 'first_temple',
@@ -1722,7 +1725,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     relationships: [
       { sourceSlug: 'solomon', sourceName: 'Solomon', verb: 'ESTABLISHES', targetSlug: 'first_temple', targetName: 'First Temple', context: 'Built on Mount Moriah' },
     ],
-    places: [{ name: 'Jerusalem', role: 'Temple Mount', slug: 'jerusalem' }], texts: [],
+    places: [{ name: 'Jerusalem', role: 'Temple Mount', slug: 'jerusalem' }], texts: [{ title: 'First Book of Kings (Temple construction)', type: 'Scripture' }],
   },
   {
     slug: 'second_temple',
@@ -1738,7 +1741,10 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     causes: [{ title: 'Return from Babylonian Exile', type: 'Event', year: '538 BCE' }],
     effects: [{ title: 'Destruction by Rome ends sacrificial worship', type: 'Event', year: '70 CE', slug: 'destruction_second_temple' }],
     relationships: [],
-    places: [{ name: 'Jerusalem', role: 'Temple Mount', slug: 'jerusalem' }], texts: [],
+    places: [{ name: 'Jerusalem', role: 'Temple Mount', slug: 'jerusalem' }], texts: [
+      { title: 'Book of Ezra', type: 'Scripture' },
+      { title: 'Book of Nehemiah', type: 'Scripture' },
+    ],
   },
   {
     slug: 'sanhedrin',
@@ -1753,7 +1759,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     frameworks: ['LEGAL_INTERPRETATION'],
     causes: [], effects: [],
     relationships: [],
-    places: [{ name: 'Jerusalem', role: 'Hall of Hewn Stones', slug: 'jerusalem' }], texts: [],
+    places: [{ name: 'Jerusalem', role: 'Hall of Hewn Stones', slug: 'jerusalem' }], texts: [{ title: 'Mishnah Sanhedrin', type: 'Rabbinic text' }],
   },
   {
     slug: 'early_church',
@@ -1773,7 +1779,10 @@ export const BIBLICAL_ENTITIES: Entity[] = [
       { sourceSlug: 'apostle_paul', sourceName: 'Paul', verb: 'ESTABLISHES', targetSlug: 'early_church', targetName: 'Early Church', context: 'Planted churches across the Roman Empire' },
     ],
     places: [{ name: 'Jerusalem', role: 'Founding', slug: 'jerusalem' }, { name: 'Antioch', role: 'First Gentile church' }, { name: 'Rome', role: 'Imperial center', slug: 'rome' }],
-    texts: [],
+    texts: [
+      { title: 'Didache', type: 'Early church manual' },
+      { title: 'First Epistle of Clement', type: 'Epistle' },
+    ],
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -1790,7 +1799,10 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'Traditional dating, c. 2348 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['CAUSE_AND_EFFECT', 'DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [
+      { title: 'Genesis 6–9 (Flood narrative)', type: 'Scripture' },
+      { title: 'Epic of Gilgamesh (Tablet XI)', type: 'Ancient epic' },
+    ],
   },
   {
     slug: 'exodus_event',
@@ -1808,7 +1820,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     relationships: [
       { sourceSlug: 'moses', sourceName: 'Moses', verb: 'LEADS', targetSlug: 'exodus_event', targetName: 'The Exodus', context: 'Led Israel out of Egypt' },
     ],
-    places: [{ name: 'Egypt', role: 'Departure point', slug: 'egypt' }], texts: [],
+    places: [{ name: 'Egypt', role: 'Departure point', slug: 'egypt' }], texts: [{ title: 'Book of Exodus', type: 'Scripture' }],
   },
   {
     slug: 'conquest_of_canaan',
@@ -1821,7 +1833,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     startDate: 'c. 1250 BCE',
     frameworks: ['CONFLICT_AND_RESOLUTION', 'GEOPOLITICAL_LINKAGE'],
-    causes: [], effects: [], relationships: [], places: [{ name: 'Canaan', role: 'Target territory' }], texts: [],
+    causes: [], effects: [], relationships: [], places: [{ name: 'Canaan', role: 'Target territory' }], texts: [{ title: 'Book of Joshua', type: 'Scripture' }],
   },
   {
     slug: 'babylonian_exile',
@@ -1842,7 +1854,10 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     ],
     relationships: [],
     places: [{ name: 'Babylon', role: 'Place of exile', slug: 'babylon' }, { name: 'Jerusalem', role: 'Destroyed', slug: 'jerusalem' }],
-    texts: [],
+    texts: [
+      { title: 'Book of Jeremiah (exile prophecies)', type: 'Scripture' },
+      { title: 'Book of Ezekiel (exile visions)', type: 'Scripture' },
+    ],
   },
   {
     slug: 'pentecost',
@@ -1858,7 +1873,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     causes: [{ title: 'Jesus\' resurrection and ascension', type: 'Event', year: 'c. 30 CE' }],
     effects: [{ title: 'Christian Church founded', type: 'Institution', year: 'c. 30 CE', slug: 'early_church' }],
     relationships: [],
-    places: [{ name: 'Jerusalem', role: 'Upper Room', slug: 'jerusalem' }], texts: [],
+    places: [{ name: 'Jerusalem', role: 'Upper Room', slug: 'jerusalem' }], texts: [{ title: 'Acts of the Apostles ch. 2', type: 'Scripture' }],
   },
   {
     slug: 'council_of_jerusalem',
@@ -1874,7 +1889,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     causes: [{ title: 'Gentile conversions in Antioch', type: 'Event', year: 'c. 45 CE' }],
     effects: [{ title: 'Christianity opens to all nations', type: 'Movement', year: '49 CE', slug: 'early_christianity' }],
     relationships: [],
-    places: [{ name: 'Jerusalem', role: 'Council location', slug: 'jerusalem' }], texts: [],
+    places: [{ name: 'Jerusalem', role: 'Council location', slug: 'jerusalem' }], texts: [{ title: 'Acts of the Apostles ch. 15', type: 'Scripture' }],
   },
   {
     slug: 'destruction_second_temple',
@@ -1893,7 +1908,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
       { title: 'Christianity fully separates from Temple Judaism', type: 'Movement', year: '70 CE' },
     ],
     relationships: [],
-    places: [{ name: 'Jerusalem', role: 'Temple Mount', slug: 'jerusalem' }], texts: [],
+    places: [{ name: 'Jerusalem', role: 'Temple Mount', slug: 'jerusalem' }], texts: [{ title: 'The Jewish War (Josephus)', type: 'Historical chronicle', year: '75' }],
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -1911,7 +1926,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['GEOPOLITICAL_LINKAGE', 'DOCTRINE_DEVELOPMENT'],
     causes: [], effects: [], relationships: [],
-    places: [], texts: [],
+    places: [], texts: [{ title: 'The Jewish War (Josephus)', type: 'Historical chronicle' }],
   },
   {
     slug: 'babylon',
@@ -1924,7 +1939,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'c. 2300 BCE – 275 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['GEOPOLITICAL_LINKAGE'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Babylonian Chronicles', type: 'Ancient chronicle' }],
   },
   {
     slug: 'egypt',
@@ -1937,7 +1952,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'c. 3100 BCE – present',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Africa', status: 'Published',
     frameworks: ['GEOPOLITICAL_LINKAGE', 'CAUSE_AND_EFFECT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Book of the Dead', type: 'Funerary text' }],
   },
   {
     slug: 'mount_sinai',
@@ -1950,7 +1965,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'c. 1313 BCE (Exodus narrative)',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Book of Exodus (Sinai theophany)', type: 'Scripture' }],
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -1973,7 +1988,10 @@ export const BIBLICAL_ENTITIES: Entity[] = [
       { title: 'Rabbinic Judaism after 70 CE', type: 'Movement', year: '70 CE' },
     ],
     relationships: [],
-    places: [{ name: 'Jerusalem', role: 'Temple center', slug: 'jerusalem' }], texts: [],
+    places: [{ name: 'Jerusalem', role: 'Temple center', slug: 'jerusalem' }], texts: [
+      { title: 'Dead Sea Scrolls', type: 'Religious manuscripts' },
+      { title: 'Mishnah', type: 'Rabbinic text' },
+    ],
   },
   {
     slug: 'early_christianity',
@@ -2002,7 +2020,10 @@ export const BIBLICAL_ENTITIES: Entity[] = [
       { name: 'Jerusalem', role: 'Birthplace', slug: 'jerusalem' },
       { name: 'Rome', role: 'Imperial center', slug: 'rome' },
     ],
-    texts: [],
+    texts: [
+      { title: 'Didache', type: 'Early church manual' },
+      { title: 'Letters of Ignatius of Antioch', type: 'Epistle' },
+    ],
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -2019,7 +2040,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'c. 2000 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Genesis 12, 15, 17 (covenant passages)', type: 'Scripture' }],
   },
   {
     slug: 'sinai_covenant',
@@ -2032,7 +2053,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'c. 1313 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['DOCTRINE_DEVELOPMENT', 'LEGAL_INTERPRETATION'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Exodus 19–24 (covenant at Sinai)', type: 'Scripture' }],
   },
   {
     slug: 'davidic_covenant',
@@ -2045,7 +2066,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'c. 1000 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: '2 Samuel 7 (Davidic promise)', type: 'Scripture' }],
   },
   {
     slug: 'new_covenant',
@@ -2058,7 +2079,10 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'c. 30 CE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['DOCTRINE_DEVELOPMENT'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [
+      { title: 'Jeremiah 31:31–34 (New Covenant prophecy)', type: 'Scripture' },
+      { title: 'Hebrews 8 (New Covenant exposition)', type: 'Epistle' },
+    ],
   },
   {
     slug: 'ten_commandments',
@@ -2071,7 +2095,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     period: 'c. 1313 BCE',
     era: 'Classical', eraSlug: 'classical', region: 'Middle East', continent: 'Asia', status: 'Published',
     frameworks: ['DOCTRINE_DEVELOPMENT', 'LEGAL_INTERPRETATION'],
-    causes: [], effects: [], relationships: [], places: [], texts: [],
+    causes: [], effects: [], relationships: [], places: [], texts: [{ title: 'Exodus 20 / Deuteronomy 5 (Decalogue)', type: 'Scripture' }],
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -2092,7 +2116,7 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     relationships: [
       { sourceSlug: 'dead_sea_scrolls', sourceName: 'Dead Sea Scrolls', verb: 'DOCUMENTS', targetSlug: 'biblical_corpus', targetName: 'Biblical Corpus', context: 'Oldest known biblical manuscripts' },
     ],
-    places: [{ name: 'Qumran', role: 'Discovery site' }], texts: [],
+    places: [{ name: 'Qumran', role: 'Discovery site' }], texts: [{ title: 'Dead Sea Scrolls (Qumran library)', type: 'Religious manuscripts', year: '-200' }],
   },
   {
     slug: 'codex_sinaiticus',
@@ -2109,6 +2133,6 @@ export const BIBLICAL_ENTITIES: Entity[] = [
     relationships: [
       { sourceSlug: 'codex_sinaiticus', sourceName: 'Codex Sinaiticus', verb: 'DOCUMENTS', targetSlug: 'biblical_corpus', targetName: 'Biblical Corpus', context: 'Complete 4th-century Greek Bible manuscript' },
     ],
-    places: [{ name: 'Mount Sinai (St. Catherine\'s)', role: 'Discovery site' }], texts: [],
+    places: [{ name: 'Mount Sinai (St. Catherine\'s)', role: 'Discovery site' }], texts: [{ title: 'Codex Sinaiticus', type: 'Biblical manuscript', year: '350' }],
   },
 ]

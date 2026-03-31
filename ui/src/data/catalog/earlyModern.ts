@@ -478,7 +478,10 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'english_reformation', sourceName: 'English Reformation', verb: 'INFLUENCES', targetSlug: 'elizabeth_i', targetName: 'Elizabeth I', context: 'Elizabethan Settlement consolidated Reformation' },
     ],
     places: [{ name: 'Greenwich Palace', role: 'Birthplace' }, { name: 'Westminster', role: 'Court' }],
-    texts: [],
+    texts: [
+      { title: 'Tilbury Speech (1588)', type: 'Speech', year: '1588' },
+      { title: 'Act of Supremacy (1559)', type: 'Legal document', year: '1559' },
+    ],
   },
   {
     slug: 'louis_xiv',
@@ -503,7 +506,10 @@ export const earlyModernEntities: Entity[] = [
     ],
     relationships: [],
     places: [{ name: 'Versailles', role: 'Built the palace' }, { name: 'Paris', role: 'Capital' }],
-    texts: [],
+    texts: [
+      { title: 'Mémoires pour l\'instruction du Dauphin', type: 'Memoir' },
+      { title: 'Edict of Fontainebleau (1685)', type: 'Royal decree', year: '1685' },
+    ],
   },
   {
     slug: 'akbar',
@@ -529,7 +535,10 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'akbar', sourceName: 'Akbar', verb: 'TRANSFORMS', targetSlug: 'mughal_empire', targetName: 'Mughal Empire', context: 'Expanded and reformed the empire' },
     ],
     places: [{ name: 'Agra', role: 'Capital' }, { name: 'Fatehpur Sikri', role: 'Built new capital' }],
-    texts: [],
+    texts: [
+      { title: 'Akbarnama (Abu\'l-Fazl)', type: 'Historical chronicle' },
+      { title: 'Ain-i-Akbari', type: 'Administrative compendium' },
+    ],
   },
   {
     slug: 'leonardo_da_vinci',
@@ -558,7 +567,10 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'leonardo_da_vinci', sourceName: 'Leonardo da Vinci', verb: 'INFLUENCES', targetSlug: 'scientific_revolution', targetName: 'Scientific Revolution', context: 'Empirical observation and anatomical studies' },
     ],
     places: [{ name: 'Florence', role: 'Early career' }, { name: 'Milan', role: 'The Last Supper' }],
-    texts: [],
+    texts: [
+      { title: 'Codex Leicester', type: 'Scientific notebook' },
+      { title: 'Treatise on Painting', type: 'Art treatise' },
+    ],
   },
   {
     slug: 'tokugawa_ieyasu',
@@ -583,7 +595,7 @@ export const earlyModernEntities: Entity[] = [
     ],
     relationships: [],
     places: [{ name: 'Edo (Tokyo)', role: 'Capital of the Shogunate' }],
-    texts: [],
+    texts: [{ title: 'Legacy of Ieyasu (Tōshōgū Goikun)', type: 'Political testament' }],
   },
   // ─── IDEAS ────────────────────────────────────────────────
   {
@@ -643,7 +655,7 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'humanism', sourceName: 'Renaissance Humanism', verb: 'INFLUENCES', targetSlug: 'protestant_reformation', targetName: 'Protestant Reformation', context: 'Humanist textual criticism challenged Church authority' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'Oration on the Dignity of Man (Pico della Mirandola)', type: 'Philosophical oration', year: '1486' }],
   },
   {
     slug: 'social_contract',
@@ -735,7 +747,10 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'newton', sourceName: 'Newton', verb: 'INFLUENCES', targetSlug: 'enlightenment_thought', targetName: 'Enlightenment Thought', context: 'Newtonian mechanics inspired rational worldview' },
     ],
     places: [],
-    texts: [],
+    texts: [
+      { title: 'An Essay Concerning Human Understanding (Locke)', type: 'Philosophical treatise', year: '1689' },
+      { title: 'Encyclopédie (Diderot & d\'Alembert)', type: 'Encyclopedia', year: '1751' },
+    ],
   },
   // ─── INSTITUTIONS ─────────────────────────────────────────
   {
@@ -764,7 +779,7 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'age_of_exploration', sourceName: 'Age of Exploration', verb: 'CAUSES', targetSlug: 'east_india_company', targetName: 'British East India Company', context: 'European expansion created demand for trade companies' },
     ],
     places: [{ name: 'London', role: 'Headquarters' }, { name: 'Calcutta', role: 'Indian base' }],
-    texts: [],
+    texts: [{ title: 'Royal Charter (1600)', type: 'Charter', year: '1600' }],
   },
   {
     slug: 'royal_society',
@@ -920,7 +935,7 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'martin_luther', sourceName: 'Martin Luther', verb: 'PARTICIPATES_IN', targetSlug: 'diet_of_worms', targetName: 'Diet of Worms', context: 'Refused to recant' },
     ],
     places: [{ name: 'Worms, Germany', role: 'Location of the Diet' }],
-    texts: [],
+    texts: [{ title: 'Edict of Worms (1521)', type: 'Imperial edict', year: '1521' }],
   },
   // ─── MOVEMENTS ────────────────────────────────────────────
   {
@@ -987,7 +1002,10 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'scientific_revolution', sourceName: 'Scientific Revolution', verb: 'CAUSES', targetSlug: 'enlightenment_thought', targetName: 'Enlightenment Thought', context: 'Scientific success inspired rational optimism' },
     ],
     places: [],
-    texts: [],
+    texts: [
+      { title: 'De Revolutionibus Orbium Coelestium (Copernicus)', type: 'Scientific treatise', year: '1543' },
+      { title: 'Principia Mathematica (Newton)', type: 'Scientific treatise', year: '1687' },
+    ],
   },
   {
     slug: 'renaissance',
@@ -1019,7 +1037,7 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'renaissance', sourceName: 'The Renaissance', verb: 'ENABLES', targetSlug: 'leonardo_da_vinci', targetName: 'Leonardo da Vinci', context: 'Renaissance patronage' },
     ],
     places: [{ name: 'Florence', role: 'Birthplace of the Renaissance' }, { name: 'Rome', role: 'Papal patronage' }],
-    texts: [],
+    texts: [{ title: 'Lives of the Artists (Vasari)', type: 'Biographical compendium', year: '1550' }],
   },
   {
     slug: 'age_of_exploration',
@@ -1048,7 +1066,10 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'fall_of_constantinople', sourceName: 'Fall of Constantinople', verb: 'CAUSES', targetSlug: 'age_of_exploration', targetName: 'Age of Exploration', context: 'Ottoman control forced search for sea routes' },
     ],
     places: [],
-    texts: [],
+    texts: [
+      { title: 'Journal of the First Voyage (Columbus)', type: 'Voyage journal', year: '1493' },
+      { title: 'Os Lusíadas (Camões)', type: 'Epic poem', year: '1572' },
+    ],
   },
   // ─── TEXTS ────────────────────────────────────────────────
   {
@@ -1078,7 +1099,7 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'ninety_five_theses', sourceName: 'Ninety-Five Theses', verb: 'TRIGGERS', targetSlug: 'protestant_reformation', targetName: 'Protestant Reformation', context: 'Ignited the Reformation' },
     ],
     places: [{ name: 'Wittenberg', role: 'Posted on castle church door' }],
-    texts: [],
+    texts: [{ title: 'Disputatio pro Declaratione Virtutis Indulgentiarum', type: 'Theological treatise', year: '1517' }],
   },
   {
     slug: 'principia_mathematica',
@@ -1106,7 +1127,7 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'newton', sourceName: 'Isaac Newton', verb: 'PUBLISHES', targetSlug: 'principia_mathematica', targetName: 'Principia Mathematica', context: 'Published in 1687' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'Philosophiæ Naturalis Principia Mathematica', type: 'Scientific treatise', year: '1687' }],
   },
   {
     slug: 'us_constitution',
@@ -1138,7 +1159,10 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'republic', sourceName: 'Republic', verb: 'INFLUENCES', targetSlug: 'us_constitution', targetName: 'US Constitution', context: 'Roman republican model of government' },
     ],
     places: [{ name: 'Philadelphia', role: 'Constitutional Convention' }],
-    texts: [],
+    texts: [
+      { title: 'Constitution of the United States', type: 'Legal document', year: '1787' },
+      { title: 'The Federalist Papers', type: 'Political essays', year: '1788' },
+    ],
   },
   {
     slug: 'declaration_of_independence',
@@ -1166,7 +1190,7 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'american_revolution', sourceName: 'American Revolution', verb: 'PRODUCES', targetSlug: 'declaration_of_independence', targetName: 'Declaration of Independence', context: 'Declared independence from Britain' },
     ],
     places: [{ name: 'Philadelphia', role: 'Signed at Independence Hall' }],
-    texts: [],
+    texts: [{ title: 'Declaration of Independence', type: 'Political declaration', year: '1776' }],
   },
   {
     slug: 'utopia_book',
@@ -1194,7 +1218,7 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'thomas_more', sourceName: 'Thomas More', verb: 'PUBLISHES', targetSlug: 'utopia_book', targetName: 'Utopia', context: 'Wrote Utopia in 1516' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'Utopia (Thomas More)', type: 'Political fiction', year: '1516' }],
   },
   // ─── PLACES ───────────────────────────────────────────────
   {
@@ -1220,7 +1244,7 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'ottoman_empire', sourceName: 'Ottoman Empire', verb: 'CAUSES', targetSlug: 'fall_of_constantinople', targetName: 'Fall of Constantinople', context: 'Mehmed II conquered the city in 1453' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'Kanunname of Suleiman', type: 'Legal code' }],
   },
   {
     slug: 'mughal_empire',
@@ -1245,6 +1269,9 @@ export const earlyModernEntities: Entity[] = [
       { sourceSlug: 'akbar', sourceName: 'Akbar', verb: 'TRANSFORMS', targetSlug: 'mughal_empire', targetName: 'Mughal Empire', context: 'Greatest Mughal ruler' },
     ],
     places: [],
-    texts: [],
+    texts: [
+      { title: 'Baburnama', type: 'Memoir' },
+      { title: 'Akbarnama', type: 'Historical chronicle' },
+    ],
   },
 ]

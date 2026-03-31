@@ -151,7 +151,7 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'woodrow_wilson', sourceName: 'Woodrow Wilson', verb: 'INFLUENCES', targetSlug: 'treaty_of_versailles', targetName: 'Treaty of Versailles', context: 'Fourteen Points shaped the negotiations' },
     ],
     places: [{ name: 'Versailles, France', role: 'Signing location' }],
-    texts: [],
+    texts: [{ title: 'Treaty of Versailles', type: 'International treaty', year: '1919' }],
   },
   {
     slug: 'league_of_nations',
@@ -315,7 +315,10 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'fascism_movement', sourceName: 'Fascism', verb: 'CAUSES', targetSlug: 'spanish_civil_war', targetName: 'Spanish Civil War', context: 'Fascist ideology fueled Nationalist rebellion' },
     ],
     places: [{ name: 'Madrid', role: 'Siege of Madrid' }, { name: 'Guernica', role: 'Bombing site' }],
-    texts: [],
+    texts: [
+      { title: 'Homage to Catalonia (Orwell)', type: 'Memoir', year: '1938' },
+      { title: 'For Whom the Bell Tolls (Hemingway)', type: 'Novel', year: '1940' },
+    ],
   },
 
   // ═══════════════════════════════════════════════════════════
@@ -406,7 +409,10 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'queen_victoria', sourceName: 'Queen Victoria', verb: 'LEADS', targetSlug: 'british_empire', targetName: 'British Empire', context: 'Empress of India and global symbol' },
     ],
     places: [{ name: 'London', role: 'Capital' }],
-    texts: [],
+    texts: [
+      { title: 'Queen Victoria\'s Journals', type: 'Personal diary' },
+      { title: 'Letters of Queen Victoria', type: 'Correspondence' },
+    ],
   },
   {
     slug: 'otto_von_bismarck',
@@ -436,7 +442,10 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'nationalism', sourceName: 'Nationalism', verb: 'INFLUENCES', targetSlug: 'otto_von_bismarck', targetName: 'Bismarck', context: 'Harnessed nationalist sentiment' },
     ],
     places: [{ name: 'Berlin', role: 'Capital of unified Germany' }],
-    texts: [],
+    texts: [
+      { title: 'Ems Dispatch (1870)', type: 'Diplomatic dispatch', year: '1870' },
+      { title: 'Gedanken und Erinnerungen (Memoirs)', type: 'Memoir', year: '1898' },
+    ],
   },
   {
     slug: 'winston_churchill',
@@ -493,7 +502,10 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'gandhi', sourceName: 'Gandhi', verb: 'INFLUENCES', targetSlug: 'martin_luther_king', targetName: 'Martin Luther King Jr.', context: 'Nonviolent resistance inspired MLK' },
     ],
     places: [{ name: 'New Delhi', role: 'Assassinated' }, { name: 'South Africa', role: 'Early activism' }],
-    texts: [],
+    texts: [
+      { title: 'The Story of My Experiments with Truth', type: 'Autobiography', year: '1927' },
+      { title: 'Hind Swaraj', type: 'Political treatise', year: '1909' },
+    ],
   },
   {
     slug: 'hitler',
@@ -526,7 +538,7 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'hitler', sourceName: 'Hitler', verb: 'LEADS', targetSlug: 'fascism_movement', targetName: 'Fascism', context: 'Nazi Germany as fascist state' },
     ],
     places: [{ name: 'Berlin', role: 'Capital' }, { name: 'Munich', role: 'Beer Hall Putsch' }],
-    texts: [],
+    texts: [{ title: 'Mein Kampf', type: 'Political manifesto', year: '1925' }],
   },
   {
     slug: 'fdr',
@@ -610,7 +622,10 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'newton', sourceName: 'Newton', verb: 'INFLUENCES', targetSlug: 'albert_einstein', targetName: 'Einstein', context: 'Einstein extended Newtonian mechanics' },
     ],
     places: [{ name: 'Bern, Switzerland', role: 'Patent office and 1905 papers' }, { name: 'Princeton, USA', role: 'Institute for Advanced Study' }],
-    texts: [],
+    texts: [
+      { title: 'On the Electrodynamics of Moving Bodies', type: 'Scientific paper', year: '1905' },
+      { title: 'General Theory of Relativity', type: 'Scientific paper', year: '1915' },
+    ],
   },
   {
     slug: 'nikola_tesla',
@@ -638,7 +653,10 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'industrial_revolution', sourceName: 'Industrial Revolution', verb: 'ENABLES', targetSlug: 'nikola_tesla', targetName: 'Tesla', context: 'Industrial demand drove electrical innovation' },
     ],
     places: [{ name: 'New York City', role: 'Laboratory' }],
-    texts: [],
+    texts: [
+      { title: 'My Inventions (autobiography)', type: 'Autobiography', year: '1919' },
+      { title: 'Experiments with Alternate Currents (lecture)', type: 'Scientific lecture', year: '1891' },
+    ],
   },
   {
     slug: 'karl_marx',
@@ -786,7 +804,7 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'industrial_revolution', sourceName: 'Industrial Revolution', verb: 'ENABLES', targetSlug: 'imperialism', targetName: 'Imperialism', context: 'Industrial power enabled global domination' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'Imperialism, the Highest Stage of Capitalism (Lenin)', type: 'Political treatise', year: '1917' }],
   },
   {
     slug: 'liberalism',
@@ -842,7 +860,10 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'albert_einstein', sourceName: 'Einstein', verb: 'ESTABLISHES', targetSlug: 'relativity', targetName: 'Theory of Relativity', context: 'Special (1905) and General (1915) relativity' },
     ],
     places: [],
-    texts: [],
+    texts: [
+      { title: 'On the Electrodynamics of Moving Bodies', type: 'Scientific paper', year: '1905' },
+      { title: 'The Foundation of the General Theory of Relativity', type: 'Scientific paper', year: '1916' },
+    ],
   },
   // ─── INSTITUTIONS ─────────────────────────────────────────
   {
@@ -870,7 +891,10 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'magna_carta', sourceName: 'Magna Carta', verb: 'INFLUENCES', targetSlug: 'british_parliament', targetName: 'British Parliament', context: 'Established principle of rule of law' },
     ],
     places: [{ name: 'Westminster', role: 'Seat of Parliament' }],
-    texts: [],
+    texts: [
+      { title: 'Bill of Rights (1689)', type: 'Legal document', year: '1689' },
+      { title: 'Parliament Acts (1911, 1949)', type: 'Legal statute' },
+    ],
   },
   {
     slug: 'federal_reserve',
@@ -923,7 +947,10 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'french_revolution', sourceName: 'French Revolution', verb: 'CAUSES', targetSlug: 'napoleonic_wars', targetName: 'Napoleonic Wars', context: 'Revolutionary France went to war' },
     ],
     places: [{ name: 'Waterloo, Belgium', role: 'Final battle' }],
-    texts: [],
+    texts: [
+      { title: 'Treaty of Tilsit (1807)', type: 'Treaty', year: '1807' },
+      { title: 'War and Peace (Tolstoy)', type: 'Novel', year: '1869' },
+    ],
   },
   {
     slug: 'american_civil_war',
@@ -954,7 +981,10 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'abolitionism', sourceName: 'Abolitionism', verb: 'CAUSES', targetSlug: 'american_civil_war', targetName: 'American Civil War', context: 'Antislavery pressure heated sectional tensions' },
     ],
     places: [{ name: 'Gettysburg', role: 'Turning-point battle' }, { name: 'Appomattox', role: 'Surrender' }],
-    texts: [],
+    texts: [
+      { title: 'Gettysburg Address (Lincoln)', type: 'Speech', year: '1863' },
+      { title: 'Emancipation Proclamation', type: 'Executive order', year: '1863' },
+    ],
   },
   {
     slug: 'russian_revolution',
@@ -985,7 +1015,10 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'communism', sourceName: 'Communism', verb: 'CAUSES', targetSlug: 'russian_revolution', targetName: 'Russian Revolution', context: 'Bolsheviks implemented Marxist ideology' },
     ],
     places: [{ name: 'Petrograd (St. Petersburg)', role: 'Epicenter' }],
-    texts: [],
+    texts: [
+      { title: 'The State and Revolution (Lenin)', type: 'Political treatise', year: '1917' },
+      { title: 'Ten Days That Shook the World (Reed)', type: 'Journalistic account', year: '1919' },
+    ],
   },
   {
     slug: 'industrial_revolution',
@@ -1018,7 +1051,7 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'industrial_revolution', sourceName: 'Industrial Revolution', verb: 'CAUSES', targetSlug: 'labor_movement', targetName: 'Labor Movement', context: 'Factory conditions drove worker organization' },
     ],
     places: [{ name: 'Manchester, England', role: 'Textile capital' }, { name: 'Birmingham', role: 'Manufacturing center' }],
-    texts: [],
+    texts: [{ title: 'The Condition of the Working Class in England (Engels)', type: 'Social study', year: '1845' }],
   },
   {
     slug: 'nuremberg_trials',
@@ -1078,7 +1111,10 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'abolitionism', sourceName: 'Abolitionism', verb: 'CAUSES', targetSlug: 'american_civil_war', targetName: 'American Civil War', context: 'Antislavery pressure heated tensions' },
     ],
     places: [],
-    texts: [],
+    texts: [
+      { title: 'Narrative of the Life of Frederick Douglass', type: 'Autobiography', year: '1845' },
+      { title: 'Uncle Tom\'s Cabin (Stowe)', type: 'Novel', year: '1852' },
+    ],
   },
   {
     slug: 'suffrage_movement',
@@ -1133,7 +1169,7 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'industrial_revolution', sourceName: 'Industrial Revolution', verb: 'CAUSES', targetSlug: 'labor_movement', targetName: 'Labor Movement', context: 'Factory conditions drove worker organization' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Communist Manifesto', type: 'Political manifesto', year: '1848' }],
   },
   {
     slug: 'fascism_movement',
@@ -1163,7 +1199,7 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'fascism_movement', sourceName: 'Fascism', verb: 'CAUSES', targetSlug: 'world_war_ii', targetName: 'World War II', context: 'Fascist aggression triggered the war' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Doctrine of Fascism (Mussolini/Gentile)', type: 'Political treatise', year: '1932' }],
   },
   // ─── PLACES ───────────────────────────────────────────────
   {
@@ -1192,7 +1228,7 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'gandhi', sourceName: 'Gandhi', verb: 'OPPOSES', targetSlug: 'british_empire', targetName: 'British Empire', context: 'Led Indian independence movement' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Expansion of England (Seeley)', type: 'Historical analysis', year: '1883' }],
   },
   // ─── TEXTS ────────────────────────────────────────────────
   {
@@ -1221,7 +1257,7 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'karl_marx', sourceName: 'Marx', verb: 'PUBLISHES', targetSlug: 'communist_manifesto', targetName: 'The Communist Manifesto', context: 'Co-authored with Engels in 1848' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'Manifest der Kommunistischen Partei', type: 'Political manifesto', year: '1848' }],
   },
   {
     slug: 'origin_of_species',
@@ -1248,7 +1284,7 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'charles_darwin', sourceName: 'Darwin', verb: 'PUBLISHES', targetSlug: 'origin_of_species', targetName: 'On the Origin of Species', context: 'Published in 1859' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'On the Origin of Species (Darwin)', type: 'Scientific treatise', year: '1859' }],
   },
   {
     slug: 'emancipation_proclamation',
@@ -1276,7 +1312,7 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'abraham_lincoln', sourceName: 'Lincoln', verb: 'PUBLISHES', targetSlug: 'emancipation_proclamation', targetName: 'Emancipation Proclamation', context: 'Issued 1 January 1863' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'Emancipation Proclamation', type: 'Executive order', year: '1863' }],
   },
   {
     slug: 'geneva_conventions',
@@ -1303,6 +1339,9 @@ export const modernEntities: Entity[] = [
       { sourceSlug: 'nuremberg_trials', sourceName: 'Nuremberg Trials', verb: 'INFLUENCES', targetSlug: 'geneva_conventions', targetName: 'Geneva Conventions', context: 'War crimes prosecution inspired updated conventions' },
     ],
     places: [{ name: 'Geneva, Switzerland', role: 'Negotiated' }],
-    texts: [],
+    texts: [
+      { title: 'Geneva Convention (1864)', type: 'International treaty', year: '1864' },
+      { title: 'Geneva Conventions (1949)', type: 'International treaty', year: '1949' },
+    ],
   },
 ]

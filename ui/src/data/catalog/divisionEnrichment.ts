@@ -30,7 +30,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Colonial Trade Empires', type: 'Event', year: '1600' }],
     relationships: [],
     places: [{ name: 'Europe', role: 'Origin' }],
-    texts: [],
+    texts: [{ title: 'England\'s Treasure by Forraign Trade (Mun)', type: 'Economic treatise', year: '1664' }],
   },
   {
     slug: 'free_market_capitalism',
@@ -114,7 +114,10 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Washington Consensus', type: 'Idea', year: '1989' }],
     relationships: [],
     places: [{ name: 'Washington D.C.', role: 'Policy center' }],
-    texts: [],
+    texts: [
+      { title: 'The Road to Serfdom (Hayek)', type: 'Political treatise', year: '1944' },
+      { title: 'Capitalism and Freedom (Friedman)', type: 'Economic treatise', year: '1962' },
+    ],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -139,7 +142,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Earth Systems Science', type: 'Idea', year: '1980' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Gaia: A New Look at Life on Earth (Lovelock)', type: 'Scientific treatise', year: '1979' }],
   },
   {
     slug: 'deep_ecology',
@@ -160,7 +163,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Norway', role: 'Origin' }],
-    texts: [],
+    texts: [{ title: 'The Shallow and the Deep (Næss)', type: 'Philosophical essay', year: '1973' }],
   },
   {
     slug: 'sustainable_development',
@@ -227,7 +230,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Impressionism', type: 'Movement', year: '1860' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Lyrical Ballads (Wordsworth & Coleridge)', type: 'Poetry collection', year: '1798' }],
   },
   {
     slug: 'impressionism',
@@ -248,7 +251,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Post-Impressionism', type: 'Movement', year: '1886' }],
     relationships: [],
     places: [{ name: 'Paris', role: 'Birthplace' }],
-    texts: [],
+    texts: [{ title: 'Impression, Sunrise (Monet)', type: 'Artwork', year: '1872' }],
   },
   {
     slug: 'modernism_art',
@@ -269,7 +272,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Postmodernism', type: 'Movement', year: '1960' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Les Demoiselles d\'Avignon (Picasso)', type: 'Artwork', year: '1907' }],
   },
   {
     slug: 'postmodernism_art',
@@ -290,7 +293,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Postmodern Condition (Lyotard)', type: 'Philosophical treatise', year: '1979' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -382,7 +385,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Gender Equality in US Law', type: 'Idea', year: '1970s' }],
     relationships: [],
     places: [{ name: 'Washington D.C.', role: 'Supreme Court' }],
-    texts: [],
+    texts: [{ title: 'My Own Words (RBG)', type: 'Collected writings', year: '2016' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -430,7 +433,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Representation of the People Act 1918', type: 'Event', year: '1918' }],
     relationships: [],
     places: [{ name: 'London', role: 'WSPU headquarters' }],
-    texts: [],
+    texts: [{ title: 'My Own Story', type: 'Autobiography', year: '1914' }],
   },
   {
     slug: 'nelson_mandela',
@@ -495,7 +498,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Truth and Reconciliation Commission', type: 'Institution', year: '1996' }],
     relationships: [],
     places: [{ name: 'Cape Town', role: 'Archdiocese' }],
-    texts: [],
+    texts: [{ title: 'No Future Without Forgiveness', type: 'Memoir', year: '1999' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -520,7 +523,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Roman Law Tradition', type: 'Idea', year: '450 BCE' }],
     relationships: [],
     places: [{ name: 'Rome', role: 'Seat' }],
-    texts: [],
+    texts: [{ title: 'Ab Urbe Condita (Livy)', type: 'Historical chronicle' }],
   },
   {
     slug: 'international_court_of_justice',
@@ -541,7 +544,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'The Hague', role: 'Headquarters' }],
-    texts: [],
+    texts: [{ title: 'Statute of the International Court of Justice (1945)', type: 'Legal statute', year: '1945' }],
   },
   {
     slug: 'supreme_court_us',
@@ -562,7 +565,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Judicial Review Doctrine', type: 'Idea', year: '1803' }],
     relationships: [],
     places: [{ name: 'Washington D.C.', role: 'Seat' }],
-    texts: [],
+    texts: [{ title: 'Marbury v. Madison opinion', type: 'Legal opinion', year: '1803' }],
   },
   {
     slug: 'international_criminal_court',
@@ -608,7 +611,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Alexander\'s Conquest', type: 'Event', year: '334 BCE' }],
     relationships: [],
     places: [{ name: 'Persepolis', role: 'Ceremonial capital' }],
-    texts: [],
+    texts: [{ title: 'Behistun Inscription (Darius I)', type: 'Royal inscription' }],
   },
   {
     slug: 'ottoman_empire',
@@ -629,7 +632,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Fall of Constantinople', type: 'Event', year: '1453' }],
     relationships: [],
     places: [{ name: 'Constantinople', role: 'Capital (from 1453)' }],
-    texts: [],
+    texts: [{ title: 'Kanunname of Suleiman', type: 'Legal code' }],
   },
   {
     slug: 'british_empire',
@@ -650,7 +653,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Decolonization Wave', type: 'Movement', year: '1945' }],
     relationships: [],
     places: [{ name: 'London', role: 'Imperial capital' }],
-    texts: [],
+    texts: [{ title: 'The Expansion of England (Seeley)', type: 'Historical analysis', year: '1883' }],
   },
   {
     slug: 'qing_dynasty',
@@ -671,7 +674,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Chinese Revolution', type: 'Event', year: '1911' }],
     relationships: [],
     places: [{ name: 'Beijing', role: 'Capital' }],
-    texts: [],
+    texts: [{ title: 'Sacred Edict of the Kangxi Emperor', type: 'Imperial decree' }],
   },
   {
     slug: 'mongol_empire_place',
@@ -692,7 +695,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Pax Mongolica', type: 'Event', year: '1250' }],
     relationships: [],
     places: [{ name: 'Karakorum', role: 'Capital' }],
-    texts: [],
+    texts: [{ title: 'The Secret History of the Mongols', type: 'Historical chronicle' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -717,7 +720,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Neolithic Revolution', type: 'Event', year: '10,000 BCE' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Rise of the Fertile Crescent', type: 'Archaeological survey' }],
   },
   {
     slug: 'silk_road_corridor',
@@ -738,7 +741,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Spread of Buddhism to China', type: 'Movement', year: '100 CE' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Travels of Marco Polo', type: 'Travel chronicle', year: '1300' }],
   },
   {
     slug: 'mediterranean_world',
@@ -759,7 +762,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Mediterranean (Braudel)', type: 'Historical analysis', year: '1949' }],
   },
   {
     slug: 'sahel_zone',
@@ -780,7 +783,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Mali Empire', type: 'Place', year: '1235' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Tarikh al-Sudan', type: 'Historical chronicle', year: '1655' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -805,7 +808,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'GitHub Founded', type: 'Event', year: '2008' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Cathedral and the Bazaar (Raymond)', type: 'Essay', year: '1999' }],
   },
   {
     slug: 'space_exploration_movement',
@@ -826,7 +829,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Moon Landing', type: 'Event', year: '1969' }],
     relationships: [],
     places: [{ name: 'Cape Canaveral', role: 'Launch site' }],
-    texts: [],
+    texts: [{ title: 'The Right Stuff (Wolfe)', type: 'Narrative non-fiction', year: '1979' }],
   },
   {
     slug: 'internet_revolution',
@@ -847,7 +850,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Social Media', type: 'Event', year: '2004' }],
     relationships: [],
     places: [{ name: 'CERN', role: 'Where WWW was invented' }],
-    texts: [],
+    texts: [{ title: 'RFC 791 (Internet Protocol)', type: 'Technical specification', year: '1981' }],
   },
   {
     slug: 'artificial_intelligence_movement',
@@ -893,7 +896,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'US National Parks System', type: 'Institution', year: '1916' }],
     relationships: [],
     places: [{ name: 'Yosemite', role: 'Iconic protected area' }],
-    texts: [],
+    texts: [{ title: 'A Sand County Almanac (Leopold)', type: 'Environmental essay', year: '1949' }],
   },
   {
     slug: 'modern_environmentalism',
@@ -935,7 +938,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'This Changes Everything (Klein)', type: 'Environmental treatise', year: '2014' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -960,7 +963,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Decipherment of Hieroglyphs', type: 'Event', year: '1822' }],
     relationships: [],
     places: [{ name: 'Rashid (Rosetta)', role: 'Discovery site' }],
-    texts: [],
+    texts: [{ title: 'Rosetta Stone Decree', type: 'Trilingual inscription', year: '-196' }],
   },
   {
     slug: 'mona_lisa',
@@ -981,7 +984,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Florence', role: 'Created' }, { name: 'Louvre, Paris', role: 'Current location' }],
-    texts: [],
+    texts: [{ title: 'Mona Lisa (La Gioconda)', type: 'Artwork', year: '1503' }],
   },
   {
     slug: 'sistine_chapel_ceiling',
@@ -1002,7 +1005,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Vatican City', role: 'Location' }],
-    texts: [],
+    texts: [{ title: 'Sistine Chapel Ceiling (Michelangelo)', type: 'Artwork', year: '1512' }],
   },
   {
     slug: 'guernica',
@@ -1023,7 +1026,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Madrid', role: 'Museo Reina Sofía' }],
-    texts: [],
+    texts: [{ title: 'Guernica (Picasso)', type: 'Artwork', year: '1937' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -1048,7 +1051,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Protestant Reformation', type: 'Movement', year: '1517' }],
     relationships: [],
     places: [{ name: 'Mainz', role: 'Where invented' }],
-    texts: [],
+    texts: [{ title: 'Gutenberg Bible', type: 'Printed book', year: '1455' }],
   },
   {
     slug: 'steam_engine_artifact',
@@ -1069,7 +1072,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Railway Revolution', type: 'Event', year: '1830' }],
     relationships: [],
     places: [{ name: 'Birmingham', role: 'Manufactured' }],
-    texts: [],
+    texts: [{ title: 'A Treatise on the Steam Engine (Tredgold)', type: 'Engineering treatise', year: '1827' }],
   },
   {
     slug: 'telegraph',
@@ -1090,7 +1093,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Transatlantic Cable', type: 'Event', year: '1866' }],
     relationships: [],
     places: [{ name: 'Washington D.C.', role: 'First message sent' }],
-    texts: [],
+    texts: [{ title: 'What Hath God Wrought (first message)', type: 'Historical communication', year: '1844' }],
   },
   {
     slug: 'world_wide_web',
@@ -1111,7 +1114,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'E-Commerce Revolution', type: 'Event', year: '1995' }],
     relationships: [],
     places: [{ name: 'CERN, Geneva', role: 'Where invented' }],
-    texts: [],
+    texts: [{ title: 'Information Management: A Proposal (Berners-Lee)', type: 'Technical proposal', year: '1989' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -1136,7 +1139,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Biblical Textual Scholarship', type: 'Idea', year: '1950' }],
     relationships: [],
     places: [{ name: 'Qumran', role: 'Discovery site' }],
-    texts: [],
+    texts: [{ title: 'Dead Sea Scrolls (Qumran library)', type: 'Religious manuscripts', year: '-200' }],
   },
   {
     slug: 'domesday_book',
@@ -1157,7 +1160,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'England', role: 'Surveyed territory' }],
-    texts: [],
+    texts: [{ title: 'Domesday Book', type: 'Census record', year: '1086' }],
   },
   {
     slug: 'federalist_papers',
@@ -1178,7 +1181,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'US Constitution Ratified', type: 'Event', year: '1788' }],
     relationships: [],
     places: [{ name: 'New York', role: 'Published' }],
-    texts: [],
+    texts: [{ title: 'The Federalist Papers', type: 'Political essays', year: '1788' }],
   },
   {
     slug: 'nuremberg_trial_records',
@@ -1199,7 +1202,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'International Criminal Court', type: 'Institution', year: '2002' }],
     relationships: [],
     places: [{ name: 'Nuremberg', role: 'Trial location' }],
-    texts: [],
+    texts: [{ title: 'Nuremberg Trial Proceedings', type: 'Legal transcript', year: '1946' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -1224,7 +1227,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Western Historiography', type: 'Idea', year: '430 BCE' }],
     relationships: [],
     places: [{ name: 'Halicarnassus', role: 'Author\'s birthplace' }],
-    texts: [],
+    texts: [{ title: 'The Histories (Herodotus)', type: 'Historical chronicle', year: '-430' }],
   },
   {
     slug: 'muqaddimah',
@@ -1245,7 +1248,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Modern Sociology', type: 'Idea', year: '1800' }],
     relationships: [],
     places: [{ name: 'Tunis', role: 'Where written' }],
-    texts: [],
+    texts: [{ title: 'Muqaddimah (Ibn Khaldun)', type: 'Historical analysis', year: '1377' }],
   },
   {
     slug: 'decline_and_fall_roman_empire',
@@ -1266,7 +1269,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'London', role: 'Published' }],
-    texts: [],
+    texts: [{ title: 'The History of the Decline and Fall of the Roman Empire (Gibbon)', type: 'Historical analysis', year: '1776' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -1291,7 +1294,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Dordogne, France', role: 'Discovery site' }],
-    texts: [],
+    texts: [{ title: 'Lascaux Cave Documentation', type: 'Archaeological record', year: '1940' }],
   },
   {
     slug: 'pompeii_excavations',
@@ -1312,7 +1315,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Pompeii, Italy', role: 'Site' }],
-    texts: [],
+    texts: [{ title: 'Letters of Pliny the Younger (eruption account)', type: 'Epistle', year: '79' }],
   },
   {
     slug: 'terracotta_army',
@@ -1333,7 +1336,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Xi\'an, China', role: 'Discovery site' }],
-    texts: [],
+    texts: [{ title: 'Records of the Grand Historian (Sima Qian)', type: 'Historical chronicle', year: '-94' }],
   },
   {
     slug: 'tutankhamun_tomb',
@@ -1354,7 +1357,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Valley of the Kings', role: 'Discovery site' }],
-    texts: [],
+    texts: [{ title: 'The Tomb of Tut-Ankh-Amen (Carter)', type: 'Excavation report', year: '1923' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -1379,7 +1382,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The World Economy: A Millennial Perspective (Maddison)', type: 'Economic dataset', year: '2001' }],
   },
   {
     slug: 'world_population_estimates',
@@ -1400,7 +1403,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'World Population Prospects (UN)', type: 'Statistical report' }],
   },
   {
     slug: 'slave_trade_database',
@@ -1421,7 +1424,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Trans-Atlantic Slave Trade Database', type: 'Historical database' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -1446,7 +1449,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Mali', role: 'Center of griot tradition' }],
-    texts: [],
+    texts: [{ title: 'Sundiata: An Epic of Old Mali (Niane)', type: 'Oral tradition transcription', year: '1960' }],
   },
   {
     slug: 'aboriginal_dreamtime',
@@ -1467,7 +1470,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Australia', role: 'Continent of origin' }],
-    texts: [],
+    texts: [{ title: 'The Dreaming (Stanner, essay)', type: 'Anthropological essay', year: '1953' }],
   },
   {
     slug: 'homeric_oral_tradition',
@@ -1488,7 +1491,10 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Written Iliad and Odyssey', type: 'Text', year: 'c. 700 BCE' }],
     relationships: [],
     places: [{ name: 'Greece', role: 'Origin' }],
-    texts: [],
+    texts: [
+      { title: 'Iliad (Homer)', type: 'Epic poem' },
+      { title: 'Odyssey (Homer)', type: 'Epic poem' },
+    ],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -1513,7 +1519,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Neolithic Revolution', type: 'Event', year: '10,000 BCE' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Paleolithic archaeological survey records', type: 'Archaeological report' }],
   },
   {
     slug: 'tf_neolithic',
@@ -1534,7 +1540,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'First Cities', type: 'Event', year: '3,500 BCE' }],
     relationships: [],
     places: [{ name: 'Fertile Crescent', role: 'Earliest agriculture' }],
-    texts: [],
+    texts: [{ title: 'Neolithic settlement excavation reports', type: 'Archaeological report' }],
   },
   {
     slug: 'tf_bronze_age',
@@ -1555,7 +1561,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Bronze Age Collapse', type: 'Event', year: '1,200 BCE' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Bronze Age metallurgical records', type: 'Archaeological report' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -1580,7 +1586,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Iron Age site documentation', type: 'Archaeological report' }],
   },
   {
     slug: 'tf_axial_age',
@@ -1601,7 +1607,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Jaspers, The Origin and Goal of History', type: 'Philosophical treatise', year: '1949' }],
   },
   {
     slug: 'tf_pax_romana',
@@ -1622,7 +1628,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Rome', role: 'Imperial capital' }],
-    texts: [],
+    texts: [{ title: 'Res Gestae Divi Augusti', type: 'Imperial inscription' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -1647,7 +1653,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Bede, Ecclesiastical History of the English People', type: 'Church history', year: '731' }],
   },
   {
     slug: 'tf_high_middle_ages',
@@ -1668,7 +1674,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Black Death', type: 'Event', year: '1347' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Summa Theologica (Aquinas)', type: 'Theological treatise' }],
   },
   {
     slug: 'tf_late_middle_ages',
@@ -1689,7 +1695,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Renaissance', type: 'Movement', year: '1400' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Decameron (Boccaccio)', type: 'Literary work', year: '1353' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -1714,7 +1720,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Columbian Exchange', type: 'Event', year: '1492' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Journal of the First Voyage (Columbus)', type: 'Voyage journal', year: '1493' }],
   },
   {
     slug: 'tf_enlightenment_period',
@@ -1735,7 +1741,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'French Revolution', type: 'Event', year: '1789' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Encyclopédie (Diderot)', type: 'Encyclopedia', year: '1751' }],
   },
   {
     slug: 'tf_reformation_era',
@@ -1756,7 +1762,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Peace of Westphalia', type: 'Event', year: '1648' }],
     relationships: [],
     places: [{ name: 'Wittenberg', role: 'Where 95 Theses posted' }],
-    texts: [],
+    texts: [{ title: '95 Theses (Luther)', type: 'Theological treatise', year: '1517' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -1781,7 +1787,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'World War I', type: 'Event', year: '1914' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Wealth of Nations (Smith)', type: 'Economic treatise', year: '1776' }],
   },
   {
     slug: 'tf_age_of_revolution',
@@ -1802,7 +1808,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Declaration of the Rights of Man (1789)', type: 'Political declaration', year: '1789' }],
   },
   {
     slug: 'tf_world_wars_era',
@@ -1823,7 +1829,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'United Nations Founded', type: 'Institution', year: '1945' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Treaty of Versailles (1919)', type: 'International treaty', year: '1919' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -1848,7 +1854,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Fall of Soviet Union', type: 'Event', year: '1991' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Long Telegram (Kennan)', type: 'Diplomatic dispatch', year: '1946' }],
   },
   {
     slug: 'tf_decolonization_era',
@@ -1869,7 +1875,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Wretched of the Earth (Fanon)', type: 'Political treatise', year: '1961' }],
   },
   {
     slug: 'tf_information_age',
@@ -1890,7 +1896,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Information (Gleick)', type: 'Science treatise', year: '2011' }],
   },
   {
     slug: 'tf_globalization_era',
@@ -1911,7 +1917,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The World Is Flat (Friedman)', type: 'Economic analysis', year: '2005' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -1982,7 +1988,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'London', role: 'Origin of common law courts' }],
-    texts: [],
+    texts: [{ title: 'Commentaries on the Laws of England (Blackstone)', type: 'Legal treatise', year: '1765' }],
   },
   {
     slug: 'international_law',
@@ -2093,7 +2099,10 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Florence', role: 'Training' }, { name: 'Milan', role: 'Major works' }],
-    texts: [],
+    texts: [
+      { title: 'Codex Leicester', type: 'Scientific notebook' },
+      { title: 'Treatise on Painting', type: 'Art treatise' },
+    ],
   },
 
   // 330 — Economic Institutions (enriching)
@@ -2116,7 +2125,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Washington D.C.', role: 'Headquarters' }],
-    texts: [],
+    texts: [{ title: 'Bretton Woods Agreement', type: 'International agreement', year: '1944' }],
   },
 
   // 360 — Cultural Institutions (enriching)
@@ -2139,7 +2148,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Washington D.C.', role: 'Headquarters' }],
-    texts: [],
+    texts: [{ title: 'Smithsonian Institution Act (1846)', type: 'Legal statute', year: '1846' }],
   },
 
   // 540 — Legal Cases (enriching)
@@ -2162,7 +2171,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Civil Rights Movement', type: 'Movement', year: '1955' }],
     relationships: [],
     places: [{ name: 'Topeka, Kansas', role: 'Origin of case' }],
-    texts: [],
+    texts: [{ title: 'Brown v. Board of Education opinion', type: 'Legal opinion', year: '1954' }],
   },
 
   // 550 — Scientific Discoveries (enriching)
@@ -2229,7 +2238,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Antiseptic Surgery', type: 'Event', year: '1867' }],
     relationships: [],
     places: [{ name: 'Paris', role: 'Pasteur Institute' }],
-    texts: [],
+    texts: [{ title: 'Germ Theory and Its Applications to Medicine (Pasteur)', type: 'Scientific paper', year: '1878' }],
   },
 
   // 610 — Political Movements (enriching)
@@ -2252,7 +2261,10 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Civil Rights Act 1964', type: 'Text', year: '1964' }],
     relationships: [],
     places: [{ name: 'Washington D.C.', role: 'March on Washington' }],
-    texts: [],
+    texts: [
+      { title: 'Letter from Birmingham Jail (King)', type: 'Letter', year: '1963' },
+      { title: 'Why We Can\'t Wait (King)', type: 'Political treatise', year: '1964' },
+    ],
   },
 
   // 620 — Social Movements (enriching)
@@ -2275,7 +2287,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Eight-Hour Workday', type: 'Event', year: '1919' }],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Communist Manifesto', type: 'Political manifesto', year: '1848' }],
   },
 
   // 650 — Scientific Movements (enriching)
@@ -2322,7 +2334,10 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Nuclear Physics', type: 'Idea', year: '1942' }],
     relationships: [],
     places: [{ name: 'Princeton', role: 'Institute for Advanced Study' }],
-    texts: [],
+    texts: [
+      { title: 'On the Electrodynamics of Moving Bodies', type: 'Scientific paper', year: '1905' },
+      { title: 'General Theory of Relativity', type: 'Scientific paper', year: '1915' },
+    ],
   },
   {
     slug: 'marie_curie',
@@ -2344,7 +2359,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [{ title: 'Radiation Therapy', type: 'Event', year: '1920' }],
     relationships: [],
     places: [{ name: 'Paris', role: 'Research at Sorbonne' }],
-    texts: [],
+    texts: [{ title: 'Recherches sur les substances radioactives (thesis)', type: 'Doctoral thesis', year: '1903' }],
   },
 
   // 560 — Technological Breakthroughs (enriching)
@@ -2367,7 +2382,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Sea of Tranquility, Moon', role: 'Landing site' }],
-    texts: [],
+    texts: [{ title: 'Apollo 11 Mission Report', type: 'Technical report', year: '1969' }],
   },
 
   // 710 — Constitutions & Charters (enriching)
@@ -2390,7 +2405,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Paris', role: 'Where adopted' }],
-    texts: [],
+    texts: [{ title: 'Universal Declaration of Human Rights', type: 'International declaration', year: '1948' }],
   },
 
   // ═══════════════════════════════════════════════════════════════
@@ -2413,7 +2428,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Things Fall Apart (Achebe)', type: 'Novel', year: '1958' }],
   },
   {
     slug: 'continent_asia',
@@ -2432,7 +2447,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Art of War (Sun Tzu)', type: 'Military treatise' }],
   },
   {
     slug: 'continent_europe',
@@ -2451,7 +2466,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Iliad (Homer)', type: 'Epic poem' }],
   },
   {
     slug: 'continent_americas',
@@ -2470,7 +2485,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Popol Vuh', type: 'Mythological text' }],
   },
 
   // 420 — Regions (enriching)
@@ -2491,7 +2506,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Epic of Gilgamesh', type: 'Ancient epic' }],
   },
   {
     slug: 'southeast_asia_region',
@@ -2510,7 +2525,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Ramayana (Valmiki)', type: 'Epic poem' }],
   },
 
   // 460 — Civilizations (enriching)
@@ -2533,7 +2548,10 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Tikal', role: 'Major city' }, { name: 'Chichén Itzá', role: 'Major city' }],
-    texts: [],
+    texts: [
+      { title: 'Popol Vuh', type: 'Mythological text' },
+      { title: 'Dresden Codex', type: 'Maya manuscript' },
+    ],
   },
   {
     slug: 'nile_valley_civilization',
@@ -2554,7 +2572,10 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Memphis', role: 'Ancient capital' }, { name: 'Thebes', role: 'Religious center' }],
-    texts: [],
+    texts: [
+      { title: 'Book of the Dead', type: 'Funerary text' },
+      { title: 'Pyramid Texts', type: 'Funerary inscriptions' },
+    ],
   },
 
   // 720 — Legal Codes (enriching)
@@ -2577,7 +2598,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Paris', role: 'Where enacted' }],
-    texts: [],
+    texts: [{ title: 'Code Napoléon (Code civil des Français)', type: 'Legal code', year: '1804' }],
   },
   {
     slug: 'geneva_conventions',
@@ -2598,7 +2619,10 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Geneva', role: 'Where negotiated' }],
-    texts: [],
+    texts: [
+      { title: 'Geneva Convention (1864)', type: 'International treaty', year: '1864' },
+      { title: 'Geneva Conventions (1949)', type: 'International treaty', year: '1949' },
+    ],
   },
 
   // 390 — Military & Defense Organizations (enriching)
@@ -2621,7 +2645,7 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Rome', role: 'Headquarters' }],
-    texts: [],
+    texts: [{ title: 'De Bello Gallico (Caesar)', type: 'Military chronicle' }],
   },
   {
     slug: 'pentagon_us_military',
@@ -2642,6 +2666,6 @@ export const DIVISION_ENRICHMENT_ENTITIES: Entity[] = [
     effects: [],
     relationships: [],
     places: [{ name: 'Pentagon, Virginia', role: 'Headquarters' }],
-    texts: [],
+    texts: [{ title: 'National Security Act of 1947', type: 'Legal statute', year: '1947' }],
   },
 ]

@@ -32,7 +32,10 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'charlemagne', sourceName: 'Charlemagne', verb: 'PROMOTES', targetSlug: 'catholic_church', targetName: 'Catholic Church', context: 'Alliance with papacy strengthened Church authority' },
     ],
     places: [{ name: 'Aachen', role: 'Capital' }],
-    texts: [],
+    texts: [
+      { title: 'Vita Karoli Magni (Einhard)', type: 'Biography', year: '830' },
+      { title: 'Capitulare de Villis', type: 'Imperial decree' },
+    ],
   },
   {
     slug: 'genghis_khan',
@@ -88,7 +91,7 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'first_crusade', sourceName: 'First Crusade', verb: 'CAUSES', targetSlug: 'saladin', targetName: 'Saladin', context: 'Crusader states provoked Muslim counter-crusade' },
     ],
     places: [{ name: 'Jerusalem', role: 'Reconquered in 1187', slug: 'jerusalem' }, { name: 'Damascus', role: 'Capital' }],
-    texts: [],
+    texts: [{ title: 'The Rare and Excellent History of Saladin', type: 'Biography' }],
   },
   {
     slug: 'william_the_conqueror',
@@ -140,7 +143,10 @@ export const medievalEntities: Entity[] = [
     ],
     relationships: [],
     places: [{ name: 'Timbuktu', role: 'Cultural capital' }, { name: 'Mecca', role: 'Pilgrimage destination' }],
-    texts: [],
+    texts: [
+      { title: 'Rihla (Ibn Battuta, accounts)', type: 'Travel chronicle' },
+      { title: 'Catalan Atlas depiction', type: 'Cartographic record', year: '1375' },
+    ],
   },
   {
     slug: 'thomas_aquinas',
@@ -316,7 +322,10 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'hundred_years_war', sourceName: "Hundred Years' War", verb: 'CAUSES', targetSlug: 'joan_of_arc', targetName: 'Joan of Arc', context: 'War\'s crisis drove her to action' },
     ],
     places: [{ name: 'Orléans', role: 'Siege lifted' }, { name: 'Rouen', role: 'Trial and execution' }],
-    texts: [],
+    texts: [
+      { title: 'Trial of Joan of Arc (1431)', type: 'Legal transcript', year: '1431' },
+      { title: 'Rehabilitation Trial (1456)', type: 'Legal transcript', year: '1456' },
+    ],
   },
   // ─── IDEAS ────────────────────────────────────────────────
   {
@@ -345,7 +354,7 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'william_the_conqueror', sourceName: 'William the Conqueror', verb: 'DIFFUSES', targetSlug: 'feudalism', targetName: 'Feudalism', context: 'Imposed Norman feudal system on England' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'Capitulary of Quierzy', type: 'Legal decree', year: '877' }],
   },
   {
     slug: 'scholasticism',
@@ -373,7 +382,10 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'thomas_aquinas', sourceName: 'Thomas Aquinas', verb: 'SYSTEMATIZES', targetSlug: 'scholasticism', targetName: 'Scholasticism', context: 'Perfected scholastic method' },
     ],
     places: [],
-    texts: [],
+    texts: [
+      { title: 'Sic et Non (Abelard)', type: 'Theological treatise' },
+      { title: 'Summa Theologica (Aquinas)', type: 'Theological treatise' },
+    ],
   },
   {
     slug: 'chivalry',
@@ -399,7 +411,10 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'crusading_movement', sourceName: 'Crusading Movement', verb: 'PROMOTES', targetSlug: 'chivalry', targetName: 'Chivalry', context: 'Crusades intensified chivalric ideals' },
     ],
     places: [],
-    texts: [],
+    texts: [
+      { title: 'The Song of Roland', type: 'Chanson de geste' },
+      { title: 'The Book of the Order of Chivalry (Llull)', type: 'Treatise' },
+    ],
   },
   {
     slug: 'islamic_golden_age_science',
@@ -427,7 +442,10 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'islamic_golden_age_science', sourceName: 'Islamic Golden Age Sciences', verb: 'INFLUENCES', targetSlug: 'scientific_revolution', targetName: 'Scientific Revolution', context: 'Islamic science transmitted to Europe via Spain and Sicily' },
     ],
     places: [{ name: 'Baghdad', role: 'House of Wisdom center', slug: 'baghdad' }],
-    texts: [],
+    texts: [
+      { title: 'The Canon of Medicine (Ibn Sina)', type: 'Medical treatise', year: '1025' },
+      { title: 'Kitab al-Optics (Ibn al-Haytham)', type: 'Scientific treatise' },
+    ],
   },
   // ─── INSTITUTIONS ─────────────────────────────────────────
   {
@@ -458,7 +476,10 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'protestant_reformation', sourceName: 'Protestant Reformation', verb: 'SCHISMS_FROM', targetSlug: 'catholic_church', targetName: 'Catholic Church', context: 'Luther\'s break from papal authority' },
     ],
     places: [{ name: 'Rome', role: 'Papal seat', slug: 'rome' }],
-    texts: [],
+    texts: [
+      { title: 'Dictatus Papae', type: 'Papal decree', year: '1075' },
+      { title: 'Unam Sanctam', type: 'Papal bull', year: '1302' },
+    ],
   },
   {
     slug: 'holy_roman_empire',
@@ -485,7 +506,7 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'charlemagne', sourceName: 'Charlemagne', verb: 'ESTABLISHES', targetSlug: 'holy_roman_empire', targetName: 'Holy Roman Empire', context: 'Carolingian foundation' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'Golden Bull of 1356', type: 'Imperial charter', year: '1356' }],
   },
   {
     slug: 'university_of_bologna',
@@ -512,7 +533,7 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'scholasticism', sourceName: 'Scholasticism', verb: 'CAUSES', targetSlug: 'university_of_bologna', targetName: 'University of Bologna', context: 'Scholastic method required institutional setting' },
     ],
     places: [{ name: 'Bologna, Italy', role: 'Location' }],
-    texts: [],
+    texts: [{ title: 'Authentica Habita (1158)', type: 'Imperial charter', year: '1158' }],
   },
   {
     slug: 'abbasid_caliphate',
@@ -540,7 +561,7 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'abbasid_caliphate', sourceName: 'Abbasid Caliphate', verb: 'ENABLES', targetSlug: 'islamic_golden_age', targetName: 'Islamic Golden Age', context: 'Patronage of scholarship and translation' },
     ],
     places: [{ name: 'Baghdad', role: 'Capital', slug: 'baghdad' }],
-    texts: [],
+    texts: [{ title: 'Kitab al-Kharaj (Abu Yusuf)', type: 'Administrative treatise' }],
   },
   // ─── EVENTS ───────────────────────────────────────────────
   {
@@ -571,7 +592,10 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'first_crusade', sourceName: 'First Crusade', verb: 'CAUSES', targetSlug: 'crusading_movement', targetName: 'Crusading Movement', context: 'Success inspired further crusades' },
     ],
     places: [{ name: 'Jerusalem', role: 'Target city', slug: 'jerusalem' }],
-    texts: [],
+    texts: [
+      { title: 'Gesta Francorum', type: 'Chronicle', year: '1101' },
+      { title: 'Council of Clermont decrees (1095)', type: 'Papal decree', year: '1095' },
+    ],
   },
   {
     slug: 'battle_of_hastings',
@@ -629,7 +653,7 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'genghis_khan', sourceName: 'Genghis Khan', verb: 'CAUSES', targetSlug: 'mongol_invasions', targetName: 'Mongol Invasions', context: 'Launched Mongol conquests' },
     ],
     places: [{ name: 'Baghdad', role: 'Sacked in 1258', slug: 'baghdad' }],
-    texts: [],
+    texts: [{ title: 'The Secret History of the Mongols', type: 'Historical chronicle' }],
   },
   {
     slug: 'hundred_years_war',
@@ -658,7 +682,10 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'hundred_years_war', sourceName: "Hundred Years' War", verb: 'CAUSES', targetSlug: 'joan_of_arc', targetName: 'Joan of Arc', context: 'War crisis drove her mission' },
     ],
     places: [{ name: 'Agincourt', role: 'Famous English victory (1415)' }],
-    texts: [],
+    texts: [
+      { title: 'Chronicles (Froissart)', type: 'Historical chronicle' },
+      { title: 'Treaty of Troyes (1420)', type: 'Treaty', year: '1420' },
+    ],
   },
   {
     slug: 'black_death',
@@ -687,7 +714,10 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'mongol_invasions', sourceName: 'Mongol Invasions', verb: 'ENABLES', targetSlug: 'black_death', targetName: 'Black Death', context: 'Trade routes transmitted the plague' },
     ],
     places: [],
-    texts: [],
+    texts: [
+      { title: 'The Decameron (Boccaccio)', type: 'Literary work', year: '1353' },
+      { title: 'Chronicle of the Black Death (de Mussis)', type: 'Chronicle' },
+    ],
   },
   {
     slug: 'fall_of_constantinople',
@@ -717,7 +747,7 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'fall_of_constantinople', sourceName: 'Fall of Constantinople', verb: 'CAUSES', targetSlug: 'age_of_exploration', targetName: 'Age of Exploration', context: 'Ottoman control of land routes forced search for sea routes' },
     ],
     places: [{ name: 'Constantinople', role: 'Besieged and captured', slug: 'constantinople' }],
-    texts: [],
+    texts: [{ title: 'Doukas Chronicle', type: 'Historical chronicle' }],
   },
   // ─── MOVEMENTS ────────────────────────────────────────────
   {
@@ -748,7 +778,10 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'monotheism', sourceName: 'Monotheism', verb: 'INFLUENCES', targetSlug: 'spread_of_islam', targetName: 'Spread of Islam', context: 'Islam affirms strict monotheism' },
     ],
     places: [{ name: 'Mecca', role: 'Holy city' }, { name: 'Medina', role: 'First Islamic state' }],
-    texts: [],
+    texts: [
+      { title: 'Quran', type: 'Scripture' },
+      { title: 'Sahih al-Bukhari', type: 'Hadith collection' },
+    ],
   },
   {
     slug: 'crusading_movement',
@@ -776,7 +809,7 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'crusading_movement', sourceName: 'Crusading Movement', verb: 'PROMOTES', targetSlug: 'chivalry', targetName: 'Chivalry', context: 'Crusades intensified chivalric ideals' },
     ],
     places: [{ name: 'Jerusalem', role: 'Primary objective', slug: 'jerusalem' }],
-    texts: [],
+    texts: [{ title: 'Gesta Dei per Francos (Guibert of Nogent)', type: 'Chronicle' }],
   },
   {
     slug: 'islamic_golden_age',
@@ -805,7 +838,10 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'islamic_golden_age', sourceName: 'Islamic Golden Age', verb: 'INFLUENCES', targetSlug: 'renaissance', targetName: 'The Renaissance', context: 'Islamic scholarship transmitted to Europe' },
     ],
     places: [{ name: 'Baghdad', role: 'Center of learning', slug: 'baghdad' }],
-    texts: [],
+    texts: [
+      { title: 'The Book of Healing (Ibn Sina)', type: 'Philosophical encyclopedia' },
+      { title: 'Al-Jabr (al-Khwarizmi)', type: 'Mathematical treatise', year: '820' },
+    ],
   },
   {
     slug: 'viking_expansion',
@@ -830,7 +866,10 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'viking_expansion', sourceName: 'Viking Expansion', verb: 'PRECEDES', targetSlug: 'battle_of_hastings', targetName: 'Battle of Hastings', context: 'Normans were descendants of Norse settlers' },
     ],
     places: [{ name: 'Scandinavia', role: 'Origin' }],
-    texts: [],
+    texts: [
+      { title: 'The Saga of the Greenlanders', type: 'Saga' },
+      { title: 'Anglo-Saxon Chronicle (Viking entries)', type: 'Chronicle' },
+    ],
   },
   // ─── TEXTS ────────────────────────────────────────────────
   {
@@ -861,7 +900,7 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'magna_carta', sourceName: 'Magna Carta', verb: 'INFLUENCES', targetSlug: 'us_constitution', targetName: 'US Constitution', context: 'Foundational influence on constitutional rights' },
     ],
     places: [{ name: 'Runnymede, England', role: 'Signing location' }],
-    texts: [],
+    texts: [{ title: 'Magna Carta (1215)', type: 'Legal charter', year: '1215' }],
   },
   {
     slug: 'divine_comedy',
@@ -888,7 +927,7 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'dante', sourceName: 'Dante', verb: 'PUBLISHES', targetSlug: 'divine_comedy', targetName: 'The Divine Comedy', context: 'Wrote the masterpiece during exile' },
     ],
     places: [{ name: 'Florence', role: 'Dante\'s hometown' }],
-    texts: [],
+    texts: [{ title: 'Divina Commedia (Dante)', type: 'Epic poem', year: '1320' }],
   },
   {
     slug: 'summa_theologica',
@@ -913,7 +952,7 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'thomas_aquinas', sourceName: 'Thomas Aquinas', verb: 'PUBLISHES', targetSlug: 'summa_theologica', targetName: 'Summa Theologica', context: 'Magnum opus synthesizing faith and reason' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'Summa Theologica (Thomas Aquinas)', type: 'Theological treatise', year: '1274' }],
   },
   {
     slug: 'quran',
@@ -941,7 +980,7 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'torah', sourceName: 'Torah', verb: 'INFLUENCES', targetSlug: 'quran', targetName: 'Quran', context: 'Torah narratives referenced in Quran' },
     ],
     places: [{ name: 'Mecca', role: 'First revelations' }],
-    texts: [],
+    texts: [{ title: 'The Quran', type: 'Scripture' }],
   },
   // ─── PLACES ───────────────────────────────────────────────
   {
@@ -965,7 +1004,7 @@ export const medievalEntities: Entity[] = [
     ],
     relationships: [],
     places: [],
-    texts: [],
+    texts: [{ title: 'Procopius, Buildings', type: 'Historical chronicle' }],
   },
   {
     slug: 'baghdad',
@@ -988,7 +1027,7 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'abbasid_caliphate', sourceName: 'Abbasid Caliphate', verb: 'ESTABLISHES', targetSlug: 'baghdad', targetName: 'Baghdad', context: 'Built as Abbasid capital' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'Travels of Ibn Battuta', type: 'Travel chronicle' }],
   },
   {
     slug: 'byzantine_empire',
@@ -1015,7 +1054,7 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'roman_empire', sourceName: 'Roman Empire', verb: 'TRANSFORMS', targetSlug: 'byzantine_empire', targetName: 'Byzantine Empire', context: 'Eastern half continued as Byzantium' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'Corpus Juris Civilis (Justinian)', type: 'Legal code', year: '534' }],
   },
   {
     slug: 'mongol_empire',
@@ -1043,6 +1082,6 @@ export const medievalEntities: Entity[] = [
       { sourceSlug: 'mongol_empire', sourceName: 'Mongol Empire', verb: 'ENABLES', targetSlug: 'marco_polo', targetName: 'Marco Polo', context: 'Pax Mongolica made travel safe' },
     ],
     places: [],
-    texts: [],
+    texts: [{ title: 'The Secret History of the Mongols', type: 'Historical chronicle' }],
   },
 ]
