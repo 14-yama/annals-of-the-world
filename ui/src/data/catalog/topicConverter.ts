@@ -38,6 +38,22 @@ const ERA_MAP: Record<string, { eraSlug: string; era: string }> = {
   contemporary: { eraSlug: 'contemporary',    era: 'Contemporary' },
 }
 
+/** Map topic tags to proper framework IDs */
+const TOPIC_TO_FRAMEWORK: Record<string, string[]> = {
+  'Weapons & Warfare':           ['CONFLICT_AND_RESOLUTION', 'INNOVATION_AND_TECHNOLOGY'],
+  'Medicine & Healing':          ['INNOVATION_AND_TECHNOLOGY', 'CULTURAL_DIFFUSION'],
+  'Architecture & Monuments':    ['INNOVATION_AND_TECHNOLOGY', 'CULTURAL_DIFFUSION'],
+  'Agriculture & Food':          ['ENVIRONMENTAL_HISTORY', 'ECONOMIC_SYSTEMS'],
+  'Navigation & Exploration':    ['EMPIRE_AND_COLONIALISM', 'INNOVATION_AND_TECHNOLOGY'],
+  'Languages & Scripts':         ['CULTURAL_DIFFUSION', 'TEXTUAL_TRANSMISSION'],
+  'Tribes & Peoples':            ['CULTURAL_DIFFUSION', 'POLITICAL_SYSTEMS'],
+  'Transportation':              ['INNOVATION_AND_TECHNOLOGY', 'ECONOMIC_SYSTEMS'],
+  'Clothing & Textiles':         ['CULTURAL_DIFFUSION', 'ECONOMIC_SYSTEMS'],
+  'Marriage & Union':            ['COMPARATIVE_RELIGION', 'CULTURAL_DIFFUSION'],
+  'Customs & Traditions':        ['CULTURAL_DIFFUSION', 'COMPARATIVE_RELIGION'],
+  'Corporal Punishment & Justice': ['POLITICAL_SYSTEMS', 'CONFLICT_AND_RESOLUTION'],
+}
+
 export function convertTopicItems(
   items: TopicItem[],
   config: TopicConfig
@@ -60,7 +76,7 @@ export function convertTopicItems(
       region: item.origin,
       continent: inferContinent(item.origin, item.civilization),
       status: 'published',
-      frameworks: [config.topicTag],
+      frameworks: TOPIC_TO_FRAMEWORK[config.topicTag] ?? ['CULTURAL_DIFFUSION'],
       causes: [],
       effects: [{
         title: item.impact,
