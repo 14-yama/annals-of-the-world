@@ -31,6 +31,9 @@ Contents
 - [framework_matrix.md](./framework_matrix.md) — Active-voice framework→verb matrix
 - [node_interaction_matrix.md](./node_interaction_matrix.md) — node type interaction rules
 
+## Data Ingestion & Wikidata
+- [wikidata_fetch_guide.md](./wikidata_fetch_guide.md) — Wikidata SPARQL fetch methodology (People, Institutions, Places)
+
 Recommended first reads
 
 1. [curator_runbook.md](./curator_runbook.md) — short checklist for everyday curation

@@ -12,7 +12,8 @@ This roadmap describes a practical path from the current scaffolded project to a
 - Docs: `docs/guidelines/*` — relations vocabulary, historian framework, audit queries, curator runbook, international conventions, cluster scaffolds (Hebrew cluster), framework matrix.
 - Scripts: `scripts/run_audits.py`, `setup_constraints.py` — basic audit & constraints tooling.
 - Seeds: `data/` and `Refactor/` contain CSV and cluster scaffolds.
-- Status: governance-heavy scaffold, seed clusters drafted, audit plan present, no production MCP/service layer yet, CI/workflow and contributor onboarding are partial.
+- Wikidata datasets: `data/wikidata_people.json` (238,466 entities), `data/wikidata_institutions.json` (36,738 entities) — bulk SPARQL fetches with historical significance scoring.
+- Status: governance-heavy scaffold, seed clusters drafted, Wikidata ingestion pipeline proven (People + Institutions), audit plan present, no production MCP/service layer yet, CI/workflow and contributor onboarding are partial.
 
 ## 3. High-level strategy to 1M nodes
 Phases are calibrated to a multi-year program. Exact durations depend on contributor bandwidth and resourcing.

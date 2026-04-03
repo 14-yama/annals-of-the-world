@@ -4,7 +4,134 @@
 
 ---
 
-## Update — 2026-03-06 (most recent)
+## Update — 2026-04-02 (most recent)
+
+### Wikidata Institutions Dataset, Expanded Verbs, Fetch Guide
+
+#### 1. Wikidata Institutions Fetch
+
+- Created `scripts/fetch_wikidata_institutions.py` (v2.0) — comprehensive SPARQL-based fetch
+  script covering all 36 Institution divisions (310–394)
+- **213 unique Wikidata type QIDs** across **76 batches** with adaptive limit fallback
+- Raw fetch: 68,503 results → 51,943 unique entities after deduplication
+- Post-cleanup (v2.1): **36,738 clean entities** after removing 15,205 non-institutions
+  (TV series, football clubs, county seats, parks, etc.) and reclassifying 1,653 entities
+- Output: `data/wikidata_institutions.json`
+- Top divisions: Universities (4,006), Churches (5,979), Museums (4,484), Media (3,339),
+  Religious Orgs (2,779), Political Parties (2,106), Mosques (2,116), Theaters (2,038)
+
+#### 2. Expanded Relationship Verbs (27 new)
+
+Added 27 new verbs to support expanded Institution (Class 3) and Place (Class 4) divisions:
+
+- **Institutional governance (19):** GOVERNS, LEGISLATES, ADMINISTERS, ADJUDICATES, FUNDS,
+  TRAINS, ACCREDITS, COMMANDS, DEPLOYS, PATROLS, CURATES, EXHIBITS, BROADCASTS, ENROLLS,
+  HEALS, WORSHIPS_AT, ALLIES_WITH, TRADES_WITH, OCCUPIES
+- **Place-centric (8):** CONTAINS, BORDERS, SITUATED_IN, CAPITAL_OF, GATEWAY_TO,
+  SACRED_TO, RULED_BY, CONTROLS
+
+Updated in: `docs/guidelines/node-relationship-vocabulary.md` (§4b),
+`docs/guidelines/node_interaction_matrix.md` (I→/L→ sections + Quick Pair Matrix),
+`ui/src/pages/DocsPage.tsx` (VERB_GLOSSARY + CLASSIFICATION_ENTRIES)
+
+#### 3. Wikidata Fetch Guide
+
+- Created `docs/guidelines/wikidata_fetch_guide.md` — developer reference for full-coverage
+  Wikidata fetches using SPARQL. Covers QID mapping, batch strategy, adaptive fallback,
+  sitelinks thresholds, post-fetch cleanup, `historicalSignificance` scoring, and
+  `inAppwrite` flag conventions.
+
+#### 4. DocsPage Classification Corrections
+
+- Updated CLASSIFICATION_ENTRIES in DocsPage.tsx to match actual `callNumbers.ts` divisions
+  for Classes 3–7 (Institution, Place, Event, Movement, Artifact/Text)
+
+---
+
+## Update — 2026-03-31
+
+### Appwrite Backend, Model Harmonization, Division Expansion, Entity Page Enhancements
+
+Major infrastructure upgrade adding a backend layer, harmonizing data models, and dramatically
+expanding the call number classification system.
+
+#### 1. Appwrite Backend Setup
+
+- Installed **Appwrite Web SDK v16.1.0** in `ui/` (v24 had broken ESM with Vite 5)
+- Created `ui/src/lib/appwrite.ts` — Client, Account, Databases, Storage singletons
+- Created `ui/src/services/entityService.ts` — Hybrid data layer (Appwrite → static catalog fallback)
+  - `USE_APPWRITE = false` flag; flip to `true` once collections are seeded
+  - Functions: `fetchEntity()`, `fetchEntities()`, `searchEntities()`, `fetchEvidence()`, `fetchMedia()`, `fetchTimeline()`
+- Defined 8 collections: `entities`, `relationships`, `causes_effects`, `places`, `texts`, `evidence`, `media`, `timeline_entries`
+- Created `scripts/migrate_to_appwrite.ts` — Migration script to seed all 11,000+ entities to Appwrite Cloud
+  - Uses `node-appwrite` server SDK (v19.1.0)
+  - Supports DRY_RUN mode, batched concurrent writes, retry logic
+  - Nested arrays (causes, effects, relationships, places, texts) stored as JSON strings
+- Appwrite Cloud project: `69cc45e3000d587ea5e6` on `fra.cloud.appwrite.io`
+- Env vars: `VITE_APPWRITE_ENDPOINT`, `VITE_APPWRITE_PROJECT_ID`, `VITE_APPWRITE_DATABASE_ID` in `ui/.env`
+
+#### 2. Data Model Harmonization
+
+**TypeScript Entity interface** (`ui/src/data/entityTypes.ts`) — 10 new v2 optional fields:
+- `wikidataQid`, `wikipediaUrl`, `imageUrl`, `thumbnailUrl`, `importanceScore`
+- `altNames`, `externalLinks`, `tags`, `quote`, `legacySummary`
+
+**Python Pydantic models** (`src/annals/models.py`) — 4 new sub-models + 12+ new fields:
+- Sub-models: `CauseEffect`, `Relationship`, `PlaceRef`, `TextRef`
+- New BaseNode fields: `summary`, `subjects`, `era`, `era_slug`, `region`, `continent`, `frameworks`, `wikipedia_url`, `image_url`, `thumbnail_url`, `tags`, `quote`, `legacy_summary`
+- Person model: added `born: Optional[str]`, `died: Optional[str]`
+
+#### 3. Call Number Division Expansion
+
+Expanded from **101 divisions → 282 sub-divisions** across all 10 classes:
+
+| Class | Heading                  | Before | After |
+|-------|--------------------------|--------|-------|
+| 0     | Ideas – Core             | 3      | 20    |
+| 1     | Ideas – Other Theories   | 7      | 39    |
+| 2     | People                   | 9      | 39    |
+| 3     | Institutions             | 9      | 43    |
+| 4     | Places                   | 7      | 31    |
+| 5     | Events                   | 9      | 43    |
+| 6     | Movements                | 8      | 40    |
+| 7     | Artifacts & Texts        | 8      | 38    |
+| 8     | Evidence                 | 5      | 20    |
+| 9     | Timeframes               | 6      | 22    |
+
+Key new sub-divisions include:
+- **Class 0:** Democracy & Republicanism (011), Natural Law Theory (024), International Law (035)
+- **Class 1:** Marxism (113), Astronomy & Cosmology (122), Computing & Digital (136), Mysticism (144)
+- **Class 3:** Parliaments (311), Central Banks (331), UN System (371), Universities (381)
+- **Class 4:** Sub-Saharan Africa (421), River Valley Civilizations (461), Battlefields (473)
+- **Class 5:** World Wars (514), Church Councils (571), Epidemics (583), Economic Crises (592)
+- **Class 6:** Nationalism (611), Abolition (621), Protestant Reformation (631), Renaissance (641)
+- **Class 7:** Hebrew Bible (731), Quran (733), Paintings (761), Weapons & Armor (772)
+- **Class 8:** Inscriptions (811), Excavation Reports (831), Census Data (841)
+- **Class 9:** Paleolithic (911), Hellenistic (922), Age of Exploration (941), Cold War Era (961)
+
+Helper functions (`getDivisionHeading`, `getCallNumberBreadcrumbs`) support parent-fallback
+for sub-divisions.
+
+#### 4. Entity Page Enhancements
+
+Extended EntityPage from **6 → 10 tabs**:
+- New tabs: **Timeline**, **Evidence**, **Media**, **Legacy**
+- Created 3 new components:
+  - `ui/src/components/EntityTimeline.tsx` — Vertical chronological lifeline
+  - `ui/src/components/EntityGallery.tsx` — Media gallery with lightbox
+  - `ui/src/components/EntityLegacy.tsx` — Legacy & Influence reverse-lookup
+- Overview tab enhanced: alt names display, quote blockquote, Wikidata/Wikipedia badges
+
+#### 5. New Service Layer Types
+
+`ui/src/services/entityService.ts` exports:
+- `EvidenceRecord` — id, entitySlug, title, author, year, tier, citation
+- `MediaRecord` — id, entitySlug, url, alt, credit, category, caption
+- `TimelineEntry` — id, entitySlug, year, endYear, title, description, significance
+
+---
+
+## Update — 2026-03-06
 
 ### Frontend: "The Chrononauticum" — React + Chakra UI v3
 

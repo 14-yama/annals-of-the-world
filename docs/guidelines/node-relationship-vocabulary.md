@@ -201,6 +201,47 @@ Example triples:
 | ASSASSINATES | P → P | Targeted killing of a public/political/religious figure | Provide victim role/title; political/religious motive usually present |
 | EXECUTES | P/I → P | Carries out a formal capital punishment | Prefer I → P when by an institution; include legal authority in properties |
 
+## 4b. Expanded Division Verbs (Class 3 Institutions & Class 4 Places)
+
+The following verbs were added in v0.3 to cover the expanded Class 3 (Institutions, 310–394)
+and Class 4 (Places, 410–473) divisions. They follow the same governance rules as Core/Supplementary
+verbs: UPPER_SNAKE_CASE, active voice, single semantic action.
+
+### Institutional Governance & Administration
+| Verb | Allowed (Subject→Object) | Use Case / Semantics | Constraint / Notes |
+|------|---------------------------|----------------------|--------------------|
+| GOVERNS | I/P → L/I | Exercises sovereign or administrative authority over a place or institution | Include tenure; prefer over generic INFLUENCES for political control |
+| LEGISLATES | I → D/T | Enacts law, statute, or regulation | Use for parliaments/legislatures (311); provide bill/act reference |
+| ADMINISTERS | I → L/I | Manages or oversees operations | For colonial administrations (314), regulatory bodies (323); distinct from GOVERNS (sovereignty) |
+| ADJUDICATES | I → E/P | Renders judicial decision | For courts/tribunals (321); include case reference |
+| FUNDS | I/P → I/E/T | Provides financial resources | For development banks (334), central banks (331); include amount/period if known |
+| TRAINS | I → P | Provides formal training/education | For educational institutions (380–384), military academies (390); distinct from TEACHES (P→P) |
+| ACCREDITS | I → I/P | Certifies or validates an institution or person | For regulatory bodies (323), educational accreditors |
+| COMMANDS | P/I → I/P | Military command authority | For military organizations (390–394); include rank/unit if known |
+| DEPLOYS | I → P/T/E | Sends personnel, equipment, or forces | For military (390–394); operational context |
+| PATROLS | I → L | Exercises surveillance/security over area | For navies (392), intelligence agencies (393) |
+| CURATES | I/P → T | Selects, organizes, and presents artifacts/texts | For museums (361), libraries (362), archives |
+| EXHIBITS | I → T | Publicly displays artifacts/artworks | For museums & galleries (361); include exhibition context |
+| BROADCASTS | I → T/E | Transmits media content | For media & publishing (364); radio, television, digital |
+| ENROLLS | I → P | Registers a person as student/member | For universities (381), schools (382); include term/year |
+| HEALS | I/P → P | Provides medical treatment | For hospitals (354); distinct from P→P spiritual healing |
+| WORSHIPS_AT | P → I/L | Regular religious practice at a site | For religious institutions (340–345); include tradition |
+| ALLIES_WITH | I ↔ I | Forms military or political alliance | For military alliances (394), regional blocs (372); reciprocal |
+| TRADES_WITH | I ↔ I/L | Engages in commercial exchange | For economic institutions (330–334); include goods/period |
+| OCCUPIES | I → L | Military or administrative occupation | Distinct from GOVERNS (legitimate); occupation implies contested control |
+
+### Place-Centric Verbs
+| Verb | Allowed (Subject→Object) | Use Case / Semantics | Constraint / Notes |
+|------|---------------------------|----------------------|--------------------|
+| CONTAINS | L → L/I | Geographic containment (parent→child) | For continents→regions→countries→cities (410–440); also C→T corpus |
+| BORDERS | L ↔ L | Geographic adjacency | Reciprocal; for countries (430), regions (420) |
+| SITUATED_IN | I/E → L | Entity located within a place | For institutions, events anchored to places; prefer OCCURS_IN for events |
+| CAPITAL_OF | L → L/I | Serves as administrative capital | For capital cities (441); include period if historical |
+| GATEWAY_TO | L → L | Trade/travel gateway to a region | For port cities (442), trade hubs (471) |
+| SACRED_TO | L → D/M | Place holds sacred significance | For holy cities (443), pilgrimage sites (472) |
+| RULED_BY | L → I/P | Place under political authority | Inverse of GOVERNS; include period/dynasty |
+| CONTROLS | I/P → L | Exercises control over territory | For empires (450), polities; include period |
+
 Aliases & Deprecations
 - FOUNDS → ESTABLISHES (use ESTABLISHES)
 - WRITES → AUTHORS (use AUTHORS)

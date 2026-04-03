@@ -32,6 +32,15 @@ QA, ingestion, and scale
 - QA checks: audit queries for missing `FRAMED_BY`, passive-voice relationship names, temporal sanity, and corpus coverage.
 - Sharding strategy: partition/serve data by `Timeframe`/era for scalability.
 
+Data sources
+
+| Dataset | Entities | Source | File |
+|---------|----------|--------|------|
+| Annals Catalog | 16,505 | Hand-curated + auto-generated | `ui/src/data/catalog/index.ts` |
+| Wikidata People | 238,466 | Wikidata SPARQL (131 occupation QIDs) | `data/wikidata_people.json` |
+| Wikidata Institutions | 36,738 | Wikidata SPARQL (213 type QIDs) | `data/wikidata_institutions.json` |
+| Geo-Registry | 199 countries | ISO + manual curation | `geo-registry/places/countries/` |
+
 Where to read more
 
 - Schema & implementation notes: [docs/guidelines/schema.md](./guidelines/schema.md)
@@ -39,6 +48,7 @@ Where to read more
 - Classification & call numbers: [docs/guidelines/classification.md](./guidelines/classification.md)
 - International call number & subject heading system: [docs/guidelines/call_number_subject_heading_system.md](./guidelines/call_number_subject_heading_system.md)
 - Feature timeline: [docs/guidelines/features_by_version.md](./guidelines/features_by_version.md)
+- Wikidata fetch methodology: [docs/guidelines/wikidata_fetch_guide.md](./guidelines/wikidata_fetch_guide.md)
 
 Next options
 
