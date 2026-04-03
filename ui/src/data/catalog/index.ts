@@ -21,6 +21,12 @@ import { DIV_380_ENTITIES } from './divisionExpansion380'
 import { DIV_590_ENTITIES } from './divisionExpansion590'
 import { DIV_680_ENTITIES } from './divisionExpansion680'
 import { DIV_780_ENTITIES } from './divisionExpansion780'
+import { seedExpansionEntities } from './seedExpansion'
+import { divisionGapFillEntities } from './divisionGapFill'
+import { placeEntities } from './placeEntities'
+
+// ── Wikidata-sourced people (5,014 notable figures from Wikidata SPARQL) ──
+import { WIKIDATA_PEOPLE_ENTITIES } from './wikidataPeople'
 
 // ── Corpus imports ──
 import { MESOPOTAMIAN_ENTITIES } from './corpuses/mesopotamian'
@@ -46,6 +52,12 @@ import { TEXT_NODE_ENTITIES } from './textNodes'
 // ── Post-processing enrichment data ──
 import { ENRICHMENT_DATA } from './enrichmentData'
 
+// ── Call number reclassification ──
+import { reclassifyDivisions } from './reclassify'
+
+// ── Summary enrichment for thin/generic entries ──
+import { enrichThinSummaries } from './enrichSummaries'
+
 import type { Entity } from '../entityTypes'
 
 /**
@@ -69,22 +81,22 @@ function dedup(entities: Entity[]): Entity[] {
  */
 const ERA_FIX_MAP: Record<string, [string, string]> = {} // slug → [era, eraSlug] — manual overrides if needed
 
-/** Misclassified division 380 (Educational) entities → 310 (Government & State) */
+/** Misclassified entities → correct division (uses expanded sub-divisions) */
 const CALL_NUMBER_FIXES: Record<string, string> = {
-  'national-assembly-bhutan':              '310.national-assembly-bhutan',
-  'western-bulgarian-empire':              '310.western-bulgarian-empire',
+  'national-assembly-bhutan':              '311.national-assembly-bhutan',
+  'western-bulgarian-empire':              '312.western-bulgarian-empire',
   'yellow-turban-rebellion-devastates-the-empire-and-leads-to-the-three-kingdoms':
-                                           '510.yellow-turban-rebellion',
-  'kong-empire':                           '310.kong-empire',
+                                           '522.yellow-turban-rebellion',
+  'kong-empire':                           '312.kong-empire',
   'jan-hus-burned-at-stake-at-council-of-constance':
-                                           '510.jan-hus-burned-at-stake',
-  'livonian-confederation-estonia':        '310.livonian-confederation-estonia',
-  'abbasid-caliphate-indonesia':           '310.abbasid-caliphate-indonesia',
+                                           '574.jan-hus-burned-at-stake',
+  'livonian-confederation-estonia':        '312.livonian-confederation-estonia',
+  'abbasid-caliphate-indonesia':           '312.abbasid-caliphate-indonesia',
   'union-of-lublin-creates-the-polish-lithuanian-commonwealth':
-                                           '310.union-of-lublin',
+                                           '311.union-of-lublin',
   'philippine-commonwealth-established-with-manuel-quezon-as-president':
-                                           '310.philippine-commonwealth-established',
-  'philippine-commonwealth':               '310.philippine-commonwealth',
+                                           '313.philippine-commonwealth-established',
+  'philippine-commonwealth':               '313.philippine-commonwealth',
   'socialist-republic-vietnam':            '310.socialist-republic-vietnam',
 }
 
@@ -158,7 +170,7 @@ function applyEnrichment(entities: Entity[]): Entity[] {
  * Deduplicated by slug; hand-curated entries take priority over auto-generated.
  * Enriched with cross-entity relationships, text slug linking, and frameworks.
  */
-export const ALL_CATALOG_ENTITIES: Entity[] = fixEras(applyEnrichment(dedup([
+export const ALL_CATALOG_ENTITIES: Entity[] = reclassifyDivisions(enrichThinSummaries(fixEras(applyEnrichment(dedup([
   // ── Hand-curated era entities (highest priority) ──
   ...prehistoricEntities,
   ...classicalEntities,
@@ -176,6 +188,12 @@ export const ALL_CATALOG_ENTITIES: Entity[] = fixEras(applyEnrichment(dedup([
   ...DIV_590_ENTITIES,
   ...DIV_680_ENTITIES,
   ...DIV_780_ENTITIES,
+  // ── Seed expansion (scholarly balance) ──
+  ...seedExpansionEntities,
+  // ── Division gap fill (covers all 122 previously empty divisions) ──
+  ...divisionGapFillEntities,
+  // ── Place entities (294 entities: continents, regions, countries, cities, empires, civilizations, culture areas) ──
+  ...placeEntities,
   // ── Corpus entities ──
   ...MESOPOTAMIAN_ENTITIES,
   ...EGYPTIAN_ENTITIES,
@@ -194,9 +212,11 @@ export const ALL_CATALOG_ENTITIES: Entity[] = fixEras(applyEnrichment(dedup([
   ...ALL_TOPIC_ENTITIES,
   // ── Text node entities (auto-generated from text references) ──
   ...TEXT_NODE_ENTITIES,
+  // ── Wikidata people (5,014 notable figures — yields to hand-curated) ──
+  ...WIKIDATA_PEOPLE_ENTITIES,
   // ── Geo-registry (auto-generated, lowest priority) ──
   ...GEO_REGISTRY_ENTITIES,
-])))
+])))))
 
 /** Slug → Entity lookup map (built once at import time) */
 const SLUG_MAP = new Map<string, Entity>()

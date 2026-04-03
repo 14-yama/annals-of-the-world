@@ -76,4 +76,16 @@ export interface Entity {
   relationships: EntityRelationship[]
   places: EntityPlace[]
   texts: EntityText[]
+
+  /* ── v2 attributes (Appwrite backend + enrichment) ── */
+  wikidataQid?: string
+  wikipediaUrl?: string
+  imageUrl?: string
+  thumbnailUrl?: string
+  importanceScore?: number
+  altNames?: string[]
+  externalLinks?: string[]
+  tags?: string[]
+  quote?: string
+  legacySummary?: string
 }

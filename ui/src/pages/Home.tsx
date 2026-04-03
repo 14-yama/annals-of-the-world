@@ -8,7 +8,7 @@ import {
 
 const HERO_STATS = [
   { value: '199', label: 'Nations Catalogued', icon: Globe },
-  { value: '1,000+', label: 'Knowledge Nodes', icon: Network },
+  { value: '16,505', label: 'Knowledge Nodes', icon: Network },
   { value: '72,000', label: 'Years Chronicled', icon: Clock },
   { value: '6', label: 'Epochs Mapped', icon: Orbit },
 ]

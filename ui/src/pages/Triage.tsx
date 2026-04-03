@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import {
   Table,
-  Thead,
-  Tbody,
-  Tr,
-  Th,
-  Td,
-  Select,
   Input,
   Button,
   Box,
   Text,
-  Stack
+  HStack,
+  NativeSelect
 } from '@chakra-ui/react'
 
 type OrphanRow = {
@@ -73,42 +68,44 @@ export default function Triage() {
 
   return (
     <Box>
-      <Stack direction="row" spacing={4} mb={4}>
-        <Button colorScheme="blue" onClick={download}>Download decisions (CSV)</Button>
-      </Stack>
-      <Table>
-        <Thead>
-          <Tr>
-            <Th>id</Th>
-            <Th>slug</Th>
-            <Th>file</Th>
-            <Th>suggested</Th>
-            <Th>action</Th>
-            <Th>notes</Th>
-          </Tr>
-        </Thead>
-        <Tbody>
+      <HStack mb={4}>
+        <Button colorPalette="blue" onClick={download}>Download decisions (CSV)</Button>
+      </HStack>
+      <Table.Root>
+        <Table.Header>
+          <Table.Row>
+            <Table.ColumnHeader>id</Table.ColumnHeader>
+            <Table.ColumnHeader>slug</Table.ColumnHeader>
+            <Table.ColumnHeader>file</Table.ColumnHeader>
+            <Table.ColumnHeader>suggested</Table.ColumnHeader>
+            <Table.ColumnHeader>action</Table.ColumnHeader>
+            <Table.ColumnHeader>notes</Table.ColumnHeader>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>
           {rows.map(r => (
-            <Tr key={r.slug}>
-              <Td>{r.id}</Td>
-              <Td><Text as="code">{r.slug}</Text></Td>
-              <Td>{r.file}</Td>
-              <Td>{r.suggested_action}</Td>
-              <Td>
-                <Select size="sm" value={(decisions[r.slug] && decisions[r.slug].decision) || ''} onChange={e => onDecision(r.slug, 'decision', e.target.value)}>
-                  <option value="">--</option>
-                  <option value="approve">Approve</option>
-                  <option value="ignore">Ignore</option>
-                  <option value="needs_review">Needs review</option>
-                </Select>
-              </Td>
-              <Td>
-                <Input size="sm" value={(decisions[r.slug] && decisions[r.slug].notes) || ''} onChange={e => onDecision(r.slug, 'notes', e.target.value)} />
-              </Td>
-            </Tr>
+            <Table.Row key={r.slug}>
+              <Table.Cell>{r.id}</Table.Cell>
+              <Table.Cell><Text as="span" fontFamily="mono">{r.slug}</Text></Table.Cell>
+              <Table.Cell>{r.file}</Table.Cell>
+              <Table.Cell>{r.suggested_action}</Table.Cell>
+              <Table.Cell>
+                <NativeSelect.Root size="sm">
+                  <NativeSelect.Field value={(decisions[r.slug] && decisions[r.slug].decision) || ''} onChange={(e: React.ChangeEvent<HTMLSelectElement>) => onDecision(r.slug, 'decision', e.target.value)}>
+                    <option value="">--</option>
+                    <option value="approve">Approve</option>
+                    <option value="ignore">Ignore</option>
+                    <option value="needs_review">Needs review</option>
+                  </NativeSelect.Field>
+                </NativeSelect.Root>
+              </Table.Cell>
+              <Table.Cell>
+                <Input size="sm" value={(decisions[r.slug] && decisions[r.slug].notes) || ''} onChange={(e: React.ChangeEvent<HTMLInputElement>) => onDecision(r.slug, 'notes', e.target.value)} />
+              </Table.Cell>
+            </Table.Row>
           ))}
-        </Tbody>
-      </Table>
+        </Table.Body>
+      </Table.Root>
     </Box>
   )
 }

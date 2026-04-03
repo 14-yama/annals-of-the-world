@@ -4,18 +4,22 @@ import { Box, Flex, Text, SimpleGrid } from '@chakra-ui/react'
 import {
   BookOpen, Users, MapPin, FileText, Network, ArrowRight,
   ArrowLeft, Clock, Scroll, Shield, ChevronRight, ChevronLeft, ExternalLink,
-  Landmark, Layers, Library, Compass, Zap,
+  Landmark, Layers, Library, Compass, Zap, Image, Sparkles,
 } from 'lucide-react'
 import {
-  getEntity, getAllEntities, getShelfNeighbors, parseSortYear,
+  getEntity, getAllEntities, parseSortYear,
   type Entity, type EntityRelationship,
 } from '../data/catalog'
+import { fetchEntity, fetchShelfNeighbors } from '../services/entityService'
 import {
   parseCallNumber, getCallNumberBreadcrumbs, getCallNumberColor,
   getDivisionHeading, DIVISIONS,
 } from '../constants/callNumbers'
 import { FRAMEWORK_MAP } from '../constants/frameworks'
 import type { Framework } from '../types'
+import EntityTimeline from '../components/EntityTimeline'
+import EntityGallery from '../components/EntityGallery'
+import EntityLegacy from '../components/EntityLegacy'
 
 /* ── Framework contextual analysis generator ── */
 function generateFrameworkContext(entity: Entity, fw: Framework): { analysis: string; evidence: string[]; relatedRels: EntityRelationship[] } {
@@ -232,6 +236,10 @@ const TABS = [
   { id: 'people',      label: 'Relationships',   icon: Users },
   { id: 'places',      label: 'Places',          icon: MapPin },
   { id: 'texts',       label: 'Texts',           icon: FileText },
+  { id: 'timeline',    label: 'Timeline',        icon: Clock },
+  { id: 'evidence',    label: 'Evidence',        icon: Shield },
+  { id: 'media',       label: 'Media',           icon: Image },
+  { id: 'legacy',      label: 'Legacy',          icon: Sparkles },
   { id: 'graph',       label: 'Graph',           icon: Network },
 ]
 
@@ -326,7 +334,12 @@ const ERA_COLORS: Record<string, string> = {
 }
 
 function ShelfSidebar({ entity, neighbors }: { entity: Entity; neighbors: Entity[] }) {
+  const parsed = parseCallNumber(entity.callNumber)
   const divHeading = getDivisionHeading(entity.callNumber)
+  // Show parent division heading if this is a sub-division (e.g. 581 → parent 580)
+  const parentCode = parsed ? parsed.division.slice(0, 2) + '0' : ''
+  const isSubDivision = parsed && parentCode !== parsed.division
+  const parentDiv = isSubDivision ? DIVISIONS.find(d => d.code === parentCode) : null
 
   // Group neighbors by era, maintain era order, sort chronologically within each group
   const eraGroups = ERA_ORDER
@@ -366,9 +379,16 @@ function ShelfSidebar({ entity, neighbors }: { entity: Entity; neighbors: Entity
         </Text>
       </Flex>
       {divHeading && (
-        <Text fontFamily='"Inter", sans-serif' fontSize="11px" color="#787469" mb={3}>
-          {divHeading}
-        </Text>
+        <Box mb={3}>
+          {parentDiv && (
+            <Text fontFamily='"JetBrains Mono", monospace' fontSize="9px" color="#B8B2A4" mb={0.5}>
+              {parentDiv.heading}
+            </Text>
+          )}
+          <Text fontFamily='"Inter", sans-serif' fontSize="11px" color="#787469">
+            {divHeading}
+          </Text>
+        </Box>
       )}
       {eraGroups.map((group) => (
         <Box key={group.slug} mb={3}>
@@ -418,6 +438,7 @@ function ShelfSidebar({ entity, neighbors }: { entity: Entity; neighbors: Entity
    Jump Rail — right rail: teleport to related shelves
    ══════════════════════════════════════════════════════ */
 function JumpRail({ entity }: { entity: Entity }) {
+  const navigate = useNavigate()
   const parsed = parseCallNumber(entity.callNumber)
   if (!parsed) return null
 
@@ -474,6 +495,7 @@ function JumpRail({ entity }: { entity: Entity }) {
           py={2} px={2} mb={1} borderRadius="6px" bg="transparent"
           _hover={{ bg: 'rgba(212,175,55,0.06)' }}
           transition="all 0.15s" cursor="pointer" textAlign="left"
+          onClick={() => navigate(`/catalog?division=${j.prefix}`)}
         >
           <Compass size={12} color="#B8B2A4" />
           <Box>
@@ -509,8 +531,22 @@ export default function EntityPage() {
   const [activeTab, setActiveTab] = useState('overview')
 
   const entitySlug = slug || 'henry_viii'
-  const entity = getEntity(entitySlug)
-  const neighbors = entity ? getShelfNeighbors(entity.callNumber, 5) : []
+  const [entity, setEntity] = useState<Entity | null>(null)
+  const [neighbors, setNeighbors] = useState<Entity[]>([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    let cancelled = false
+    setLoading(true)
+    fetchEntity(entitySlug).then(e => {
+      if (cancelled) return
+      const ent = e || null
+      setEntity(ent)
+      setNeighbors(ent ? fetchShelfNeighbors(ent.callNumber, 5) : [])
+      setLoading(false)
+    })
+    return () => { cancelled = true }
+  }, [entitySlug])
 
   // Keyboard shelf navigation: ← / → within same division
   const handleKeyNav = useCallback((e: KeyboardEvent) => {
@@ -530,6 +566,16 @@ export default function EntityPage() {
     document.addEventListener('keydown', handleKeyNav)
     return () => document.removeEventListener('keydown', handleKeyNav)
   }, [handleKeyNav])
+
+  if (loading) {
+    return (
+      <Box p={10} textAlign="center">
+        <Library size={48} color="#D6D3CC" style={{ margin: '0 auto 16px' }} />
+        <Text fontFamily='"Cinzel", serif' fontSize="xl" color="#2D2A24" mb={2}>Loading Entity…</Text>
+        <Text fontSize="sm" color="#9E9A90">Fetching record for &ldquo;{entitySlug}&rdquo;</Text>
+      </Box>
+    )
+  }
 
   if (!entity) {
     return (
@@ -717,6 +763,73 @@ export default function EntityPage() {
             {activeTab === 'overview' && (
               <Box>
                 <Text fontSize="sm" color="#524E44" lineHeight={1.8} mb={4}>{entity.summary}</Text>
+
+                {/* v2 enrichment: alt names, quote, external links */}
+                {entity.altNames && entity.altNames.length > 0 && (
+                  <Flex gap={2} flexWrap="wrap" mb={3}>
+                    <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
+                      letterSpacing="0.1em" textTransform="uppercase" alignSelf="center">Also known as</Text>
+                    {entity.altNames.map((n, i) => (
+                      <Box key={i} bg="#F5F4F0" border="1px solid #E4E2DC" borderRadius="full" px={3} py={0.5}>
+                        <Text fontSize="12px" color="#524E44" fontStyle="italic">{n}</Text>
+                      </Box>
+                    ))}
+                  </Flex>
+                )}
+
+                {entity.quote && (
+                  <Box borderLeft="3px solid #D4AF37" pl={5} mb={4} py={2}>
+                    <Text fontFamily='"Cormorant Garamond", serif' fontSize="md" color="#2D2A24"
+                      lineHeight="1.6" fontStyle="italic">
+                      &ldquo;{entity.quote}&rdquo;
+                    </Text>
+                    <Text fontSize="xs" color="#9E9A90" mt={1}>— {entity.name}</Text>
+                  </Box>
+                )}
+
+                {/* External links: Wikidata, Wikipedia */}
+                {(entity.wikidataQid || entity.wikipediaUrl || (entity.externalLinks && entity.externalLinks.length > 0)) && (
+                  <Flex gap={2} flexWrap="wrap" mb={4}>
+                    {entity.wikidataQid && (
+                      <a href={`https://www.wikidata.org/wiki/${entity.wikidataQid}`}
+                        target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                        <Flex align="center" gap={1} bg="rgba(59,107,194,0.06)" border="1px solid rgba(59,107,194,0.2)"
+                          borderRadius="full" px={3} py={1} cursor="pointer" transition="all 0.2s"
+                          _hover={{ bg: 'rgba(59,107,194,0.12)' }}>
+                          <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" fontWeight={600} color="#3B6BC2">
+                            {entity.wikidataQid}
+                          </Text>
+                          <ExternalLink size={10} color="#3B6BC2" />
+                        </Flex>
+                      </a>
+                    )}
+                    {entity.wikipediaUrl && (
+                      <a href={entity.wikipediaUrl} target="_blank" rel="noopener noreferrer"
+                        style={{ textDecoration: 'none' }}>
+                        <Flex align="center" gap={1} bg="rgba(59,107,194,0.06)" border="1px solid rgba(59,107,194,0.2)"
+                          borderRadius="full" px={3} py={1} cursor="pointer" transition="all 0.2s"
+                          _hover={{ bg: 'rgba(59,107,194,0.12)' }}>
+                          <Text fontSize="11px" fontWeight={500} color="#3B6BC2">Wikipedia</Text>
+                          <ExternalLink size={10} color="#3B6BC2" />
+                        </Flex>
+                      </a>
+                    )}
+                    {entity.externalLinks?.map((url, i) => (
+                      <a key={i} href={url} target="_blank" rel="noopener noreferrer"
+                        style={{ textDecoration: 'none' }}>
+                        <Flex align="center" gap={1} bg="#F5F4F0" border="1px solid #E4E2DC"
+                          borderRadius="full" px={3} py={1} cursor="pointer" transition="all 0.2s"
+                          _hover={{ bg: '#EEEDEA' }}>
+                          <Text fontSize="11px" fontWeight={500} color="#524E44">
+                            {new URL(url).hostname.replace('www.', '')}
+                          </Text>
+                          <ExternalLink size={10} color="#9E9A90" />
+                        </Flex>
+                      </a>
+                    ))}
+                  </Flex>
+                )}
+
                 <SimpleGrid columns={{ base: 1, md: 2 }} gap={4} mt={4}>
                   {entity.born && (
                     <Flex gap={3} align="center">
@@ -1122,6 +1235,34 @@ export default function EntityPage() {
                   </>
                 )}
               </Box>
+            )}
+
+            {/* TIMELINE */}
+            {activeTab === 'timeline' && (
+              <EntityTimeline entity={entity} />
+            )}
+
+            {/* EVIDENCE & SOURCES */}
+            {activeTab === 'evidence' && (
+              <Flex direction="column" align="center" justify="center" minH="250px" gap={4}>
+                <Shield size={48} color="#D6D3CC" />
+                <Text fontFamily='"Cinzel", serif' fontSize="sm" color="#9E9A90"
+                  letterSpacing="0.1em" textTransform="uppercase">Evidence &amp; Sources</Text>
+                <Text fontSize="xs" color="#B8B2A4" textAlign="center" maxW="400px">
+                  Scholarly citations, primary sources, and evidence tiers (A–F) for this entity.
+                  Connect to Appwrite to manage evidence records.
+                </Text>
+              </Flex>
+            )}
+
+            {/* MEDIA & GALLERY */}
+            {activeTab === 'media' && (
+              <EntityGallery entity={entity} />
+            )}
+
+            {/* LEGACY & INFLUENCE */}
+            {activeTab === 'legacy' && (
+              <EntityLegacy entity={entity} />
             )}
 
             {/* GRAPH */}

@@ -10,7 +10,7 @@ import {
   getAllEntities, getEntityByCallNumber,
   type Entity,
 } from '../data/catalog'
-import { CLASS_COLORS, parseCallNumber } from '../constants/callNumbers'
+import { CLASS_COLORS, DIVISIONS, parseCallNumber } from '../constants/callNumbers'
 import AdvancedSearch, { type ActiveFilters } from '../components/AdvancedSearch'
 
 /* ── Constants ── */
@@ -107,6 +107,8 @@ export default function CatalogPage() {
     labels: searchParams.get('label') ? [searchParams.get('label')!] : [],
     continents: searchParams.get('continent') ? [searchParams.get('continent')!] : [],
     frameworks: [],
+    classes: searchParams.get('class') ? [parseInt(searchParams.get('class')!)] : [],
+    divisions: searchParams.get('division') ? [searchParams.get('division')!] : [],
   }))
 
   // Sync from URL params when navigating to catalog with different params
@@ -117,6 +119,8 @@ export default function CatalogPage() {
       labels: searchParams.get('label') ? [searchParams.get('label')!] : [],
       continents: searchParams.get('continent') ? [searchParams.get('continent')!] : [],
       frameworks: searchParams.get('framework') ? [searchParams.get('framework')!] : [],
+      classes: searchParams.get('class') ? [parseInt(searchParams.get('class')!)] : [],
+      divisions: searchParams.get('division') ? [searchParams.get('division')!] : [],
     })
   }, [searchParams])
 
@@ -162,6 +166,18 @@ export default function CatalogPage() {
         e.frameworks?.some(f => filters.frameworks.includes(f))
       )
     }
+    if (filters.classes.length > 0) {
+      result = result.filter(e => {
+        const p = parseCallNumber(e.callNumber)
+        return p ? filters.classes.includes(p.classCode) : false
+      })
+    }
+    if (filters.divisions.length > 0) {
+      result = result.filter(e => {
+        const p = parseCallNumber(e.callNumber)
+        return p ? filters.divisions.includes(p.division) : false
+      })
+    }
     return result
   }, [allEntities, filters])
 
@@ -181,7 +197,8 @@ export default function CatalogPage() {
 
   const hasActiveFilters = !!(
     filters.search || filters.eras.length || filters.labels.length ||
-    filters.continents.length || filters.frameworks.length
+    filters.continents.length || filters.frameworks.length ||
+    filters.classes.length || filters.divisions.length
   )
 
   const handleEntityClick = useCallback((e: Entity) => {
@@ -195,7 +212,9 @@ export default function CatalogPage() {
         <Library size={28} color={GOLD} />
         <Box>
           <Text fontFamily="'Cinzel', serif" fontSize="2xl" color={DARK_TEXT} fontWeight={700}>
-            The Catalog
+            {filters.divisions.length === 1
+              ? (DIVISIONS.find(d => d.code === filters.divisions[0])?.heading || 'The Catalog')
+              : 'The Catalog'}
           </Text>
           <Text fontSize="sm" color={MUTED}>
             {allEntities.length} actors across {new Set(allEntities.map(e => e.eraSlug)).size} eras

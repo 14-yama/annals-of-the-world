@@ -295,11 +295,11 @@ record of all actors in the dataset. Every node documented in the project — wh
 the backend knowledge graph, geo-registry, corpus catalog, topic collections, or
 hand-curated era files — **must** be represented in the Annals Catalog.
 
-**Current count: 10,951 unique actors across 7 eras.**
+**Current count: 16,505 unique actors across 7 eras.**
 
 | Metric | Value |
 | ------ | ----- |
-| Total unique actors | 10,951 |
+| Total unique actors | 16,505 |
 | Eras | 7 (Prehistoric, Classical, Classical/Ancient, Medieval, Early Modern, Modern, Contemporary) |
 | Countries | 199 |
 | Entity types | 8 (EventWindow, Person, Movement, Institution, Text, Idea, Place, Evidence) |
@@ -318,9 +318,10 @@ All data sources feed **into** the Annals Catalog (not counted separately):
 | Biblical + Reformation | 119 | `catalog/biblical.ts`, `catalog/reformation.ts` |
 | Corpus Catalog (13 collections) | 166 | `catalog/corpuses/*.ts` |
 | Text Node Entities | 386 | `catalog/textNodes.ts` — auto-generated from actor text references |
+| Wikidata People | 5,014 | `catalog/wikidataPeople.ts` — notable figures from Wikidata SPARQL |
 
 After slug-based deduplication (hand-curated wins over auto-generated), the catalog
-contains **10,951 unique actors**.
+contains **16,505 unique actors**.
 
 ### Adding New Nodes
 
@@ -373,9 +374,11 @@ The catalog uses a Dewey Decimal-inspired call number system:
 
 ### Data Sources
 
-- **Annals Catalog (source of truth):** `ui/src/data/catalog/index.ts` — 10,951 unique actors
+- **Annals Catalog (source of truth):** `ui/src/data/catalog/index.ts` — 16,505 unique actors
+- **Appwrite Backend:** 2,800 Person entities seeded (from 238,466 Wikidata people dataset)
 - **Geo-registry JSON:** `geo-registry/places/countries/*/index.json` — 199 country profiles
 - **Backend graph data:** `data/Nodes/*.json` — raw nodes for Neo4j seeding
+- **Wikidata master dataset:** `data/wikidata_people.json` — 238,466 people (backend only, 289 MB)
 - **Phase 2:** Neo4j-backed dynamic queries for 1M+ node scale
 
 ---

@@ -3,10 +3,43 @@ from typing import Optional, List
 from pydantic import BaseModel, Field
 
 
+# ── Sub-models for structured nested data ──
+
+class CauseEffect(BaseModel):
+    title: str
+    type: str
+    year: str
+    slug: Optional[str] = None
+    direction: str = Field(..., description="'cause' or 'effect'")
+
+
+class Relationship(BaseModel):
+    source_slug: str
+    source_name: str
+    verb: str
+    target_slug: str
+    target_name: str
+    context: Optional[str] = None
+
+
+class PlaceRef(BaseModel):
+    name: str
+    role: str
+    slug: Optional[str] = None
+
+
+class TextRef(BaseModel):
+    title: str
+    type: str
+    year: Optional[str] = None
+    slug: Optional[str] = None
+
+
 class BaseNode(BaseModel):
     slug: str = Field(..., description="Canonical short id; unique per label")
     name: Optional[str]
     description: Optional[str]
+    summary: Optional[str] = None
     created_at: Optional[str]
     updated_at: Optional[str]
     created_by: Optional[str]
@@ -18,6 +51,7 @@ class BaseNode(BaseModel):
     division_code: Optional[str] = None
     call_number: Optional[str] = None
     subject_headings: Optional[List[str]] = None
+    subjects: Optional[List[str]] = None
     is_generic: Optional[bool] = None
     intl_status: Optional[str] = None
     status_by: Optional[str] = None
@@ -25,6 +59,13 @@ class BaseNode(BaseModel):
     corpus: Optional[List[str]] = None
     lang: Optional[str] = None
     script: Optional[str] = None
+    # Geographic / era context (shared across all node types)
+    era: Optional[str] = None
+    era_slug: Optional[str] = None
+    region: Optional[str] = None
+    continent: Optional[str] = None
+    # Frameworks
+    frameworks: Optional[List[str]] = None
     # v5-ready additions
     source_origin: Optional[str] = None
     source_id: Optional[str] = None
@@ -35,6 +76,7 @@ class BaseNode(BaseModel):
     ontology_class: Optional[str] = None
     thesaurus_ref: Optional[str] = None
     wikidata_qid: Optional[str] = None
+    wikipedia_url: Optional[str] = None
     schema_context: Optional[str] = None
     importance_score: Optional[float] = None
     citation_count: Optional[int] = None
@@ -63,6 +105,12 @@ class BaseNode(BaseModel):
     citation_density: Optional[int] = None
     has_geo: Optional[bool] = None
     has_text: Optional[bool] = None
+    # v2 enrichment fields
+    image_url: Optional[str] = None
+    thumbnail_url: Optional[str] = None
+    tags: Optional[List[str]] = None
+    quote: Optional[str] = None
+    legacy_summary: Optional[str] = None
 
 
 class Idea(BaseNode):
@@ -72,6 +120,8 @@ class Idea(BaseNode):
 class Person(BaseNode):
     birthYear: Optional[int] = None
     deathYear: Optional[int] = None
+    born: Optional[str] = None
+    died: Optional[str] = None
     titles: Optional[List[str]] = None
     aliases: Optional[List[str]] = None
 
@@ -119,6 +169,10 @@ class Framework(BaseNode):
 
 
 __all__ = [
+    "CauseEffect",
+    "Relationship",
+    "PlaceRef",
+    "TextRef",
     "BaseNode",
     "Idea",
     "Person",

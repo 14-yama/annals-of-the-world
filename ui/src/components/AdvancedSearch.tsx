@@ -16,6 +16,7 @@ import {
   Users, Landmark, MapPin, Layers, Clock, FileText, Shield, Zap,
 } from 'lucide-react'
 import type { Entity } from '../data/entityTypes'
+import { CLASSES, DIVISIONS, CLASS_COLORS, parseCallNumber } from '../constants/callNumbers'
 
 /* ── Design tokens ── */
 const CARD_BG = '#F5F4F0'
@@ -128,6 +129,8 @@ export interface ActiveFilters {
   labels: string[]
   continents: string[]
   frameworks: string[]
+  classes: number[]
+  divisions: string[]
 }
 
 interface AdvancedSearchProps {
@@ -160,6 +163,7 @@ export default function AdvancedSearch({ allEntities, filters, onFiltersChange }
   // Active filter count (not counting search)
   const activeFilterCount = filters.eras.length + filters.labels.length
     + filters.continents.length + filters.frameworks.length
+    + filters.classes.length + filters.divisions.length
 
   // Close dropdown on click-away
   useEffect(() => {
@@ -219,7 +223,7 @@ export default function AdvancedSearch({ allEntities, filters, onFiltersChange }
     inputRef.current?.focus()
   }
 
-  const toggleFilter = (key: 'eras' | 'labels' | 'continents' | 'frameworks', value: string) => {
+  const toggleFilter = (key: 'eras' | 'labels' | 'continents' | 'frameworks' | 'divisions', value: string) => {
     const current = filters[key]
     const next = current.includes(value)
       ? current.filter(v => v !== value)
@@ -227,8 +231,16 @@ export default function AdvancedSearch({ allEntities, filters, onFiltersChange }
     onFiltersChange({ ...filters, [key]: next })
   }
 
+  const toggleClassFilter = (classCode: number) => {
+    const current = filters.classes
+    const next = current.includes(classCode)
+      ? current.filter(c => c !== classCode)
+      : [...current, classCode]
+    onFiltersChange({ ...filters, classes: next })
+  }
+
   const clearAllFilters = () => {
-    onFiltersChange({ search: '', eras: [], labels: [], continents: [], frameworks: [] })
+    onFiltersChange({ search: '', eras: [], labels: [], continents: [], frameworks: [], classes: [], divisions: [] })
     setShowFilters(false)
   }
 
@@ -427,7 +439,7 @@ export default function AdvancedSearch({ allEntities, filters, onFiltersChange }
           </Box>
 
           {/* Frameworks */}
-          <Box>
+          <Box mb={4}>
             <Text fontSize="10px" fontWeight={700} color={LIGHT_MUTED} mb={2}
               fontFamily="'JetBrains Mono', monospace" textTransform="uppercase"
               letterSpacing="0.05em">Framework</Text>
@@ -441,6 +453,67 @@ export default function AdvancedSearch({ allEntities, filters, onFiltersChange }
               })}
             </Flex>
           </Box>
+
+          {/* Classes (10 top-level shelves) */}
+          <Box mb={4}>
+            <Text fontSize="10px" fontWeight={700} color={LIGHT_MUTED} mb={2}
+              fontFamily="'JetBrains Mono', monospace" textTransform="uppercase"
+              letterSpacing="0.05em">Class (Shelf)</Text>
+            <Flex gap={2} flexWrap="wrap">
+              {CLASSES.map(cls => {
+                const active = filters.classes.includes(cls.code)
+                const color = CLASS_COLORS[cls.code] || MUTED
+                return (
+                  <FilterChip key={cls.code} label={`${cls.code} – ${cls.heading}`} active={active} color={color}
+                    onClick={() => toggleClassFilter(cls.code)} />
+                )
+              })}
+            </Flex>
+          </Box>
+
+          {/* Divisions (fine-grain sub-shelves) — show for selected classes OR implied by selected labels */}
+          {(() => {
+            // Label → class mapping
+            const LABEL_CLASS_MAP: Record<string, number[]> = {
+              Idea: [0, 1], Person: [2], Institution: [3], Place: [4],
+              EventWindow: [5], Movement: [6], Text: [7], Evidence: [8],
+            }
+            const impliedClasses = new Set<number>(filters.classes)
+            for (const label of filters.labels) {
+              for (const c of (LABEL_CLASS_MAP[label] || [])) impliedClasses.add(c)
+            }
+            const showClasses = Array.from(impliedClasses).sort((a, b) => a - b)
+            if (showClasses.length === 0) return null
+            return (
+              <Box>
+                <Text fontSize="10px" fontWeight={700} color={LIGHT_MUTED} mb={2}
+                  fontFamily="'JetBrains Mono', monospace" textTransform="uppercase"
+                  letterSpacing="0.05em">Division (Sub-Shelf)</Text>
+                {showClasses.map(classCode => {
+                  const cls = CLASSES.find(c => c.code === classCode)
+                  const classDivisions = DIVISIONS.filter(d => d.parentClass === classCode)
+                  const color = CLASS_COLORS[classCode] || MUTED
+                  return (
+                    <Box key={classCode} mb={3}>
+                      <Text fontSize="10px" fontWeight={600} color={color} mb={1.5}
+                        fontFamily="'Inter', sans-serif">
+                        {cls?.heading || `Class ${classCode}`}
+                      </Text>
+                      <Flex gap={2} flexWrap="wrap">
+                        {classDivisions.map(div => {
+                          const active = filters.divisions.includes(div.code)
+                          return (
+                            <FilterChip key={div.code} label={`${div.code} ${div.heading}`} active={active} color={color}
+                              onClick={() => toggleFilter('divisions', div.code)} />
+                          )
+                        })}
+                      </Flex>
+                    </Box>
+                  )
+                })}
+              </Box>
+            )
+          })()}
         </Box>
       )}
 
@@ -465,6 +538,18 @@ export default function AdvancedSearch({ allEntities, filters, onFiltersChange }
             <ActiveTag key={f} label={f.replace(/_/g, ' ')} color={GOLD}
               onRemove={() => toggleFilter('frameworks', f)} />
           ))}
+          {filters.classes.map(c => (
+            <ActiveTag key={c} label={`Class ${c}`} color={CLASS_COLORS[c] || MUTED}
+              onRemove={() => toggleClassFilter(c)} />
+          ))}
+          {filters.divisions.map(d => {
+            const div = DIVISIONS.find(x => x.code === d)
+            const color = CLASS_COLORS[div?.parentClass ?? 0] || MUTED
+            return (
+              <ActiveTag key={d} label={`${d} ${div?.heading || ''}`} color={color}
+                onRemove={() => toggleFilter('divisions', d)} />
+            )
+          })}
         </Flex>
       )}
     </Box>

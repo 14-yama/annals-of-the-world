@@ -1,13 +1,16 @@
 /* ─── Curator Page — Annals of the World ─── */
 /* Personal chronicle: the magnitude of the project, comparison to Ussher, academic equivalency */
-import React from 'react'
-import { Box, Flex, Heading, Text, SimpleGrid } from '@chakra-ui/react'
-import { SectionHeading, StatCard, InsightCard } from '../components/DataCards'
+import React, { useState, useEffect } from 'react'
+import { Box, Flex, Heading, Text, SimpleGrid, Spinner } from '@chakra-ui/react'
+import { SectionHeading, StatCard } from '../components/DataCards'
 import Breadcrumb from '../components/Breadcrumb'
+import { Query } from 'appwrite'
+import { databases, DATABASE_ID, COLLECTIONS } from '../lib/appwrite'
 import {
   BookOpen, Brain, Globe2, Clock, Database, Code2, Network,
   GraduationCap, Scroll, Target, Layers, Microscope,
-  BarChart3, Users, Map, Cpu, TrendingUp, CheckCircle2,
+  BarChart3, Map, Cpu, TrendingUp, CheckCircle2,
+  Scale, Library, Sparkles, BookMarked,
 } from 'lucide-react'
 
 /* ─── Constants ─── */
@@ -20,10 +23,10 @@ const USSHER_STATS = [
   { value: 'Biblical', label: 'Primary Framework', icon: Layers, color: '#9E9A90' },
 ]
 
-const PROJECT_STATS = [
+const PROJECT_STATS_TEMPLATE = [
   { value: '199', label: 'Countries Profiled', icon: Globe2, color: '#4A90D9' },
   { value: '1,000,000', label: 'Target Knowledge Nodes', icon: Network, color: '#6B3FA0' },
-  { value: '10,951', label: 'Actors in Annals Catalog', icon: CheckCircle2, color: '#2F855A' },
+  { value: 'LIVE', label: 'Actors in Annals Backend', icon: CheckCircle2, color: '#2F855A' },
   { value: '16', label: 'Interpretive Frameworks', icon: Layers, color: '#D4AF37' },
   { value: '6', label: 'Canonical Eras', icon: BarChart3, color: '#C53030' },
   { value: '127', label: 'Weapons Catalogued', icon: Target, color: '#8B3A3A' },
@@ -84,38 +87,197 @@ const TEN_YEAR_MILESTONES = [
   { years: '9–10', title: 'Million-Node Graph', nodes: '1,000,000', detail: 'Complete knowledge graph with real-time querying, advanced visualizations, and community contributions' },
 ]
 
-/* ─── Live Node Census ─── */
+/* ─── Constants ─── */
 const TARGET_NODES = 1_000_000
 
-const NODE_CENSUS_BY_TYPE = [
-  { label: 'Event',       count: 5754,  color: '#C53030' },
-  { label: 'Person',      count: 1995,  color: '#4A90D9' },
-  { label: 'Movement',    count: 1091,  color: '#D4AF37' },
-  { label: 'Institution', count: 659,   color: '#2F855A' },
-  { label: 'Text',        count: 1006,  color: '#8B3A3A' },
-  { label: 'Idea',        count: 318,   color: '#6B3FA0' },
-  { label: 'Place',       count: 88,    color: '#DD6B20' },
-  { label: 'Evidence',    count: 40,    color: '#718096' },
+const LABEL_COLORS: Record<string, string> = {
+  EventWindow: '#C53030', Person: '#4A90D9', Movement: '#D4AF37',
+  Institution: '#2F855A', Text: '#8B3A3A', Idea: '#6B3FA0',
+  Place: '#DD6B20', Evidence: '#718096',
+}
+
+const LABEL_ORDER = ['EventWindow', 'Person', 'Movement', 'Text', 'Institution', 'Idea', 'Place', 'Evidence']
+
+/* ─── Encyclopedia Comparisons ─── */
+const ENCYCLOPEDIA_COMPARISONS = [
+  {
+    name: 'Wikipedia (English)',
+    nodes: '6,800,000+',
+    rawCount: 6_800_000,
+    type: 'Flat articles',
+    coverage: 'General',
+    model: 'Crowd-sourced wiki',
+    strength: 'Breadth, accessibility, 300+ language editions',
+    limitation: 'No causal chains, no interpretive frameworks, no knowledge graph structure',
+    icon: Globe2,
+    color: '#636363',
+  },
+  {
+    name: 'Encyclopædia Britannica',
+    nodes: '~120,000',
+    rawCount: 120_000,
+    type: 'Expert-authored articles',
+    coverage: 'General',
+    model: 'Editorial board + paid authors',
+    strength: 'Scholarly authority, editorial rigor, 250+ year legacy',
+    limitation: 'Proprietary, no structured data export, no causal modeling, no computational querying',
+    icon: Library,
+    color: '#003366',
+  },
+  {
+    name: 'Stanford Encyclopedia of Philosophy',
+    nodes: '~1,800',
+    rawCount: 1_800,
+    type: 'Peer-reviewed entries',
+    coverage: 'Philosophy only',
+    model: 'Academic peer review',
+    strength: 'Gold-standard scholarship, deep argumentative analysis',
+    limitation: 'Philosophy-only scope, no graph structure, no temporal modeling, cannot cross-reference events',
+    icon: GraduationCap,
+    color: '#8C1515',
+  },
+  {
+    name: 'World History Encyclopedia',
+    nodes: '~20,000',
+    rawCount: 20_000,
+    type: 'Educational articles',
+    coverage: 'World history',
+    model: 'Expert-contributed, peer-reviewed',
+    strength: 'Accessible, well-illustrated, educational focus',
+    limitation: 'No knowledge graph, no frameworks, no computational querying, limited causal analysis',
+    icon: BookMarked,
+    color: '#8B4513',
+  },
+  {
+    name: 'Wikidata',
+    nodes: '~108,000,000',
+    rawCount: 108_000_000,
+    type: 'Structured data items',
+    coverage: 'General (machine-readable)',
+    model: 'Community knowledge base',
+    strength: 'Massive structured data, SPARQL-queryable, linked open data',
+    limitation: 'No interpretive frameworks, no evidence tiers, no causal chains, breadth over depth',
+    icon: Database,
+    color: '#006699',
+  },
+  {
+    name: 'Annals of the World',
+    nodes: 'LIVE', // replaced at render time
+    rawCount: 0,  // replaced at render time
+    type: 'Knowledge graph nodes',
+    coverage: '72,000 years · 199 countries',
+    model: 'Curator-verified, AI-augmented',
+    strength: 'Causal chains, 16 frameworks, evidence tiers, call numbers, computationally queryable',
+    limitation: 'Young project (Year 1), still growing toward 1M nodes',
+    icon: Network,
+    color: '#D4AF37',
+  },
 ]
 
-const NODE_CENSUS_SOURCES = [
-  { source: 'Geo-Registry (199 countries × 6 eras)',    count: 9380, color: '#2F855A',
-    detail: 'Auto-generated from country index files. Each entity enriched with causes, effects, relationships, frameworks, and places. EventWindow (5,467), Person (1,858), Movement (935), Institution (626), Text (441), Idea (53).' },
-  { source: 'Topic Catalog (12 topic collections)',      count: 622, color: '#6B3FA0',
-    detail: 'Weapons (127), Tribes (66), Languages (65), Transportation (50), Architecture (48), Agriculture (48), Medicine (46), Clothing (45), Navigation (42), Marriage (30), Customs (28), Punishment (27).' },
-  { source: 'Hand-Curated Era & Special Catalogs',       count: 449, color: '#4A90D9',
-    detail: 'Prehistoric (15), Classical (48), Medieval (37), Early Modern (38), Modern (43), Contemporary (35), Biblical (96), Reformation (23), Division Enrichment (114).' },
-  { source: 'Corpus Catalog (13 scholarly collections)',  count: 166, color: '#8B3A3A',
-    detail: 'Mesopotamian (22), Egyptian (18), Judaic-Rabbinic (8), Graeco-Roman (9), Canon Law (4), Iran & Central Asia (20), South & SE Asia (17), East Asia (15), Africa (8), Americas (7), Europe (28), Science & Tech (10).' },
-  { source: 'Text Node Entities (auto-generated)',       count: 386, color: '#C53030',
-    detail: 'First-class Text entities generated from actor text references. Deduplicated against hand-curated catalog (83 collisions filtered). Division 740 (196), 730 (57), 750 (35), 720 (26), 710 (24), 760 (24), 770 (24).' },
+/* ─── Scholarly Impact Dimensions ─── */
+const SCHOLARLY_IMPACT = [
+  {
+    title: 'Digital Humanities Infrastructure',
+    detail: 'Provides a reusable ontology (11 node labels, 55+ relationship verbs, 6 evidence tiers) that other digital humanities projects can adopt. The Dewey-inspired call number system enables interoperability with library science standards.',
+    icon: Layers,
+    color: '#4A90D9',
+  },
+  {
+    title: 'Computational History Methodology',
+    detail: 'Demonstrates that history can be modeled as a knowledge graph with causal chains, enabling pattern detection across civilizations. Scholars can query "what caused X?" or "what did Y influence?" computationally — something no encyclopedia currently supports.',
+    icon: Cpu,
+    color: '#6B3FA0',
+  },
+  {
+    title: 'Multi-Framework Analysis',
+    detail: '16 interpretive frameworks (Cause & Effect, Cultural Diffusion, Empire & Colonialism, etc.) applied systematically across all nodes. This addresses a persistent critique in historiography: that narratives are imprisoned by a single lens.',
+    icon: Microscope,
+    color: '#D4AF37',
+  },
+  {
+    title: 'Evidence-Based Audit Trail',
+    detail: '6-tier evidence hierarchy (Primary Sources → Oral/Quantitative) with mandatory citations for interpretive edges. Every claim is auditable — a standard that sets this apart from crowd-sourced encyclopedias.',
+    icon: Scale,
+    color: '#2F855A',
+  },
+  {
+    title: 'Open Data for AI & NLP Research',
+    detail: 'CC0 public domain license means the entire knowledge graph is available as training data for large language models, historical NLP, and educational AI. Structured causal chains provide ground truth for reasoning benchmarks.',
+    icon: Sparkles,
+    color: '#C53030',
+  },
+  {
+    title: 'Cross-Civilizational Pattern Detection',
+    detail: 'By modeling 199 countries across 72,000 years with consistent schema, the graph enables macro-historical analysis: rise and fall patterns, technology diffusion rates, institutional convergence, and civilizational interaction networks.',
+    icon: TrendingUp,
+    color: '#DD6B20',
+  },
 ]
-
-/* Annals Catalog total: 11,003 pre-dedup → 10,951 unique actors across 7 eras (source of truth) */
-const TOTAL_NODES = 10_951
-const PROGRESS_PCT = ((TOTAL_NODES / TARGET_NODES) * 100).toFixed(2)
 
 export default function Curator() {
+  const [totalNodes, setTotalNodes] = useState<number | null>(null)
+  const [labelCounts, setLabelCounts] = useState<{ label: string; count: number; color: string }[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+
+  useEffect(() => {
+    let cancelled = false
+
+    async function fetchAccurateCount(label: string): Promise<number> {
+      const first = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
+        Query.equal('label', label), Query.limit(1),
+      ])
+      if (first.total < 5000) return first.total
+      // Appwrite caps total at 5000 — paginate for real count
+      let count = 0
+      let lastId: string | undefined
+      while (true) {
+        const queries: string[] = [
+          Query.equal('label', label),
+          Query.limit(5000),
+          Query.select(['$id']),
+        ]
+        if (lastId) queries.push(Query.cursorAfter(lastId))
+        const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, queries)
+        count += res.documents.length
+        if (res.documents.length < 5000) break
+        lastId = res.documents[res.documents.length - 1].$id
+      }
+      return count
+    }
+
+    async function fetchStats() {
+      try {
+        const results = await Promise.all(
+          LABEL_ORDER.map(async (lbl) => {
+            const count = await fetchAccurateCount(lbl)
+            return { label: lbl, count, color: LABEL_COLORS[lbl] || '#718096' }
+          })
+        )
+        if (cancelled) return
+        const sorted = results.sort((a, b) => b.count - a.count)
+        setLabelCounts(sorted)
+        setTotalNodes(sorted.reduce((sum, r) => sum + r.count, 0))
+      } catch (err) {
+        if (!cancelled) setError(err instanceof Error ? err.message : 'Failed to fetch stats')
+      } finally {
+        if (!cancelled) setLoading(false)
+      }
+    }
+
+    fetchStats()
+    return () => { cancelled = true }
+  }, [])
+
+  const progressPct = totalNodes ? ((totalNodes / TARGET_NODES) * 100).toFixed(2) : '0.00'
+  const maxLabelCount = labelCounts.length ? Math.max(...labelCounts.map(l => l.count)) : 6000
+
+  const PROJECT_STATS = PROJECT_STATS_TEMPLATE.map(s =>
+    s.value === 'LIVE'
+      ? { ...s, value: totalNodes ? totalNodes.toLocaleString() : '…' }
+      : s
+  )
+
   return (
     <Box>
       <Breadcrumb items={[{ label: 'Curator' }]} />
@@ -157,89 +319,86 @@ export default function Curator() {
       <Box mb={10}>
         <SectionHeading
           title="Progress Toward 1,000,000 Nodes"
-          subtitle="Live census of every documented node across all data sources"
+          subtitle="Live census from the Appwrite backend"
         />
 
         {/* Grand Total Bar */}
         <Box mt={6} p={6} bg="#082340" borderRadius="xl" mb={6}>
-          <Flex justify="space-between" align="flex-end" mb={3}>
-            <Box>
-              <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#4A90D9" textTransform="uppercase" mb={1}>
-                Total Documented Nodes
-              </Text>
-              <Heading fontFamily='"Cinzel", serif' fontSize={{ base: '3xl', md: '5xl' }} color="#D4AF37">
-                {TOTAL_NODES.toLocaleString()}
-              </Heading>
-            </Box>
-            <Box textAlign="right">
-              <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#E8F0FE">
-                of 1,000,000 target
-              </Text>
-              <Text fontFamily='"Cinzel", serif' fontSize="2xl" color="#D4AF37">
-                {PROGRESS_PCT}%
-              </Text>
-            </Box>
-          </Flex>
-          {/* Progress bar */}
-          <Box w="100%" h="12px" bg="#1A3A5C" borderRadius="full" overflow="hidden">
-            <Box h="100%" w={`${Math.max(parseFloat(PROGRESS_PCT), 0.5)}%`} bg="linear-gradient(90deg, #D4AF37, #4A90D9)"
-              borderRadius="full" transition="width 0.5s" />
-          </Box>
-          <Flex justify="space-between" mt={2}>
-            <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">0</Text>
-            <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">250K</Text>
-            <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">500K</Text>
-            <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">750K</Text>
-            <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">1M</Text>
-          </Flex>
-        </Box>
-
-        {/* By Source */}
-        <SimpleGrid columns={{ base: 1, md: 2 }} gap={4} mb={6}>
-          {NODE_CENSUS_SOURCES.map(s => (
-            <Box key={s.source} p={5} bg="#FDFAF5" border="1px solid #E4E2DC" borderRadius="xl"
-              borderLeft="4px solid" borderLeftColor={s.color}>
-              <Flex justify="space-between" align="center" mb={2}>
-                <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#2D2A24">
-                  {s.source}
-                </Text>
-                <Text fontFamily='"Cinzel", serif' fontSize="xl" fontWeight={700} color={s.color}>
-                  {s.count.toLocaleString()}
-                </Text>
-              </Flex>
-              <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#524E44" lineHeight={1.6}>
-                {s.detail}
-              </Text>
-              {/* Mini bar */}
-              <Box mt={2} w="100%" h="4px" bg="#E4E2DC" borderRadius="full" overflow="hidden">
-                <Box h="100%" w={`${(s.count / TOTAL_NODES) * 100}%`} bg={s.color} borderRadius="full" />
-              </Box>
-            </Box>
-          ))}
-        </SimpleGrid>
-
-        {/* By Node Type */}
-        <Box p={5} bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="xl">
-          <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#2D2A24" mb={4}>
-            Nodes by Schema Label
-          </Text>
-          {NODE_CENSUS_BY_TYPE.map(t => (
-            <Flex key={t.label} align="center" gap={3} mb={2}>
-              <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color={t.color}
-                minW="90px" fontWeight={600}>
-                {t.label}
-              </Text>
-              <Box flex={1} h="16px" bg="#E4E2DC" borderRadius="md" overflow="hidden">
-                <Box h="100%" bg={t.color} w={`${(t.count / 6000) * 100}%`}
-                  borderRadius="md" transition="width 0.3s" />
-              </Box>
-              <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#524E44" minW="45px" textAlign="right">
-                {t.count.toLocaleString()}
+          {loading ? (
+            <Flex justify="center" align="center" py={8}>
+              <Spinner color="#D4AF37" size="lg" />
+              <Text ml={3} fontFamily='"JetBrains Mono", monospace' fontSize="sm" color="#4A90D9">
+                Fetching live stats from Appwrite…
               </Text>
             </Flex>
-          ))}
+          ) : error ? (
+            <Box py={6} textAlign="center">
+              <Text fontFamily='"JetBrains Mono", monospace' fontSize="sm" color="#C53030">
+                ⚠ {error}
+              </Text>
+            </Box>
+          ) : (
+            <>
+              <Flex justify="space-between" align="flex-end" mb={3}>
+                <Box>
+                  <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#4A90D9" textTransform="uppercase" mb={1}>
+                    Total Documented Nodes (Live)
+                  </Text>
+                  <Heading fontFamily='"Cinzel", serif' fontSize={{ base: '3xl', md: '5xl' }} color="#D4AF37">
+                    {totalNodes?.toLocaleString()}
+                  </Heading>
+                </Box>
+                <Box textAlign="right">
+                  <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#E8F0FE">
+                    of 1,000,000 target
+                  </Text>
+                  <Text fontFamily='"Cinzel", serif' fontSize="2xl" color="#D4AF37">
+                    {progressPct}%
+                  </Text>
+                </Box>
+              </Flex>
+              {/* Progress bar */}
+              <Box w="100%" h="12px" bg="#1A3A5C" borderRadius="full" overflow="hidden">
+                <Box h="100%" w={`${Math.max(parseFloat(progressPct), 0.5)}%`} bg="linear-gradient(90deg, #D4AF37, #4A90D9)"
+                  borderRadius="full" transition="width 0.5s" />
+              </Box>
+              <Flex justify="space-between" mt={2}>
+                <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">0</Text>
+                <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">250K</Text>
+                <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">500K</Text>
+                <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">750K</Text>
+                <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">1M</Text>
+              </Flex>
+            </>
+          )}
+        </Box>
+
+        {/* By Node Type — Live from Appwrite */}
+        <Box p={5} bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="xl">
+          <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#2D2A24" mb={4}>
+            Nodes by Schema Label — Live Backend Data
+          </Text>
+          {loading ? (
+            <Flex justify="center" py={4}><Spinner color="#D4AF37" /></Flex>
+          ) : (
+            labelCounts.map(t => (
+              <Flex key={t.label} align="center" gap={3} mb={2}>
+                <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color={t.color}
+                  minW="100px" fontWeight={600}>
+                  {t.label}
+                </Text>
+                <Box flex={1} h="16px" bg="#E4E2DC" borderRadius="md" overflow="hidden">
+                  <Box h="100%" bg={t.color} w={`${(t.count / maxLabelCount) * 100}%`}
+                    borderRadius="md" transition="width 0.3s" />
+                </Box>
+                <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#524E44" minW="50px" textAlign="right">
+                  {t.count.toLocaleString()}
+                </Text>
+              </Flex>
+            ))
+          )}
           <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace' color="#718096" mt={3} textAlign="right">
-            Annals Catalog — 10,951 unique actors across 7 eras (source of truth)
+            Annals Backend — {totalNodes?.toLocaleString() ?? '…'} entities · Appwrite Cloud
           </Text>
         </Box>
       </Box>
@@ -469,6 +628,174 @@ export default function Curator() {
             </Box>
           ))}
         </SimpleGrid>
+      </Box>
+
+      {/* ─── Encyclopedia Comparison ─── */}
+      <Box mb={10}>
+        <SectionHeading
+          title="How Annals Compares to the World's Encyclopedias"
+          subtitle="Not a competitor — a new category of knowledge infrastructure"
+        />
+        <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#524E44" lineHeight={1.8} mt={2} mb={6} maxW="800px">
+          Traditional encyclopedias store <strong>flat articles</strong>. Annals of the World stores
+          <strong> structured knowledge nodes</strong> with causal chains, evidence tiers, interpretive frameworks,
+          and computational queryability. This is not "another encyclopedia" — it is a <strong>knowledge graph</strong> designed
+          for the age of AI, graph databases, and computational humanities.
+        </Text>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={5}>
+          {ENCYCLOPEDIA_COMPARISONS.map(enc => {
+            const Icon = enc.icon
+            const isAnnals = enc.name === 'Annals of the World'
+            const displayCount = isAnnals
+              ? (totalNodes ? totalNodes.toLocaleString() : '…')
+              : enc.nodes
+            return (
+              <Box key={enc.name} p={5}
+                bg={isAnnals ? '#FDF8ED' : '#FAFAF8'}
+                border={isAnnals ? '2px solid #D4AF37' : '1px solid #E4E2DC'}
+                borderRadius="xl" position="relative"
+                _hover={{ shadow: 'md' }} transition="all 0.2s">
+                {isAnnals && (
+                  <Text fontFamily='"JetBrains Mono", monospace' fontSize="9px" color="#D4AF37"
+                    position="absolute" top={2} right={3} textTransform="uppercase" fontWeight={700}>
+                    This Project
+                  </Text>
+                )}
+                <Flex align="center" gap={3} mb={3}>
+                  <Box p={2} bg={`${enc.color}15`} borderRadius="lg">
+                    <Icon size={20} color={enc.color} />
+                  </Box>
+                  <Box>
+                    <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#2D2A24">
+                      {enc.name}
+                    </Text>
+                    <Text fontFamily='"Cinzel", serif' fontSize="lg" fontWeight={700} color={enc.color}>
+                      {displayCount}
+                    </Text>
+                  </Box>
+                </Flex>
+                <Box mb={2}>
+                  <Flex gap={2} flexWrap="wrap" mb={2}>
+                    <Text as="span" fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096"
+                      bg="#F0EDE5" px={2} py={0.5} borderRadius="md">{enc.type}</Text>
+                    <Text as="span" fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096"
+                      bg="#F0EDE5" px={2} py={0.5} borderRadius="md">{enc.coverage}</Text>
+                  </Flex>
+                  <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#524E44" lineHeight={1.6} mb={1}>
+                    <strong>Model:</strong> {enc.model}
+                  </Text>
+                  <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#2F855A" lineHeight={1.5} mb={1}>
+                    ✓ {enc.strength}
+                  </Text>
+                  <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#C53030" lineHeight={1.5}>
+                    ✗ {enc.limitation}
+                  </Text>
+                </Box>
+              </Box>
+            )
+          })}
+        </SimpleGrid>
+
+        {/* Differentiator Summary */}
+        <Box mt={6} p={5} bg="#082340" borderRadius="xl">
+          <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#D4AF37" mb={3}>
+            What Makes Annals Structurally Different
+          </Text>
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={3}>
+            {[
+              { feature: 'Causal Chains', desc: 'Every node has causes and effects — queryable' },
+              { feature: '16 Frameworks', desc: 'Multi-lens analysis vs single-narrative articles' },
+              { feature: '6 Evidence Tiers', desc: 'Primary → Oral with audit trail' },
+              { feature: 'Call Numbers', desc: 'Dewey-inspired classification for all 16K+ nodes' },
+              { feature: 'Knowledge Graph', desc: 'Neo4j-backed, not flat text articles' },
+              { feature: 'CC0 License', desc: 'Public domain — free for AI, research, education' },
+              { feature: '199 Countries', desc: 'Global scope, not Western-centric' },
+              { feature: 'Computationally Queryable', desc: 'Cypher/API not keyword search' },
+            ].map(d => (
+              <Box key={d.feature} p={3} bg="#0A2E52" borderRadius="lg" border="1px solid #1A3A5C">
+                <Text fontFamily='"JetBrains Mono", monospace' fontSize="11px" fontWeight={700} color="#D4AF37">
+                  {d.feature}
+                </Text>
+                <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#B8D4FE" mt={1}>
+                  {d.desc}
+                </Text>
+              </Box>
+            ))}
+          </SimpleGrid>
+        </Box>
+      </Box>
+
+      {/* ─── Scholarly Impact Analysis ─── */}
+      <Box mb={10}>
+        <SectionHeading
+          title="Scholarly Impact Analysis"
+          subtitle="How this project advances academic research and public knowledge"
+        />
+        <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#524E44" lineHeight={1.8} mt={2} mb={6} maxW="800px">
+          Annals of the World addresses a gap no existing reference work fills: a <strong>computationally queryable,
+          multi-framework, evidence-tiered knowledge graph</strong> covering all of documented human history.
+          Here is how this project can impact the scholarly community:
+        </Text>
+        <SimpleGrid columns={{ base: 1, md: 2 }} gap={5}>
+          {SCHOLARLY_IMPACT.map(s => {
+            const Icon = s.icon
+            return (
+              <Box key={s.title} p={6} bg="#FDFAF5" border="1px solid #E4E2DC" borderRadius="xl"
+                borderLeft="4px solid" borderLeftColor={s.color}>
+                <Flex align="center" gap={3} mb={3}>
+                  <Box p={2} bg={`${s.color}15`} borderRadius="lg">
+                    <Icon size={20} color={s.color} />
+                  </Box>
+                  <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#2D2A24">
+                    {s.title}
+                  </Text>
+                </Flex>
+                <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#524E44" lineHeight={1.7}>
+                  {s.detail}
+                </Text>
+              </Box>
+            )
+          })}
+        </SimpleGrid>
+
+        {/* Gap Analysis */}
+        <Box mt={6} p={5} bg="#FDF8ED" border="1px solid #D4AF37" borderRadius="xl">
+          <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#4A310D" mb={3}>
+            The Gap This Project Fills
+          </Text>
+          <SimpleGrid columns={{ base: 1, md: 3 }} gap={4}>
+            <Box p={4} bg="white" borderRadius="lg" border="1px solid #E4E2DC">
+              <Text fontFamily='"JetBrains Mono", monospace' fontSize="11px" color="#C53030" fontWeight={700} mb={2}>
+                PROBLEM
+              </Text>
+              <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#524E44" lineHeight={1.6}>
+                No existing dataset combines structured temporal data + causal chains + multi-framework analysis
+                across all civilizations. Wikipedia has breadth but no graph structure. Wikidata has structure but no
+                interpretive depth. Academic databases are siloed by discipline.
+              </Text>
+            </Box>
+            <Box p={4} bg="white" borderRadius="lg" border="1px solid #E4E2DC">
+              <Text fontFamily='"JetBrains Mono", monospace' fontSize="11px" color="#2F855A" fontWeight={700} mb={2}>
+                SOLUTION
+              </Text>
+              <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#524E44" lineHeight={1.6}>
+                Annals provides a unified knowledge graph where every node has causes, effects, evidence,
+                frameworks, and geographic context. Scholars can traverse causal paths, compare civilizations,
+                and apply 16 interpretive lenses computationally — across 72,000 years and 199 countries.
+              </Text>
+            </Box>
+            <Box p={4} bg="white" borderRadius="lg" border="1px solid #E4E2DC">
+              <Text fontFamily='"JetBrains Mono", monospace' fontSize="11px" color="#4A90D9" fontWeight={700} mb={2}>
+                USE CASES
+              </Text>
+              <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#524E44" lineHeight={1.6}>
+                Digital humanities research · Comparative history coursework · AI reasoning benchmarks ·
+                Historical NLP training data · Policy analysis (historical precedent) · Educational visualization
+                · Cross-civilizational pattern detection · Interdisciplinary thesis research
+              </Text>
+            </Box>
+          </SimpleGrid>
+        </Box>
       </Box>
 
       {/* ─── Closing Statement ─── */}

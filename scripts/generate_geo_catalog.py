@@ -349,7 +349,14 @@ def extract_entities(country_slug):
                     seen_slugs.add(slug)
 
                     label = LABEL_MAP.get(node.get('label', 'EventWindow'), 'EventWindow')
-                    cn = node.get('call_number', f'530.{next_seq()}-{slug[:40]}')
+                    # Assign call number based on label type (not all 530)
+                    _label_div = {
+                        'EventWindow': '530', 'Institution': '310', 'Person': '220',
+                        'Movement': '610', 'Text': '710', 'Idea': '010',
+                        'Evidence': '810', 'Place': '440', 'Timeframe': '910',
+                    }
+                    default_div = _label_div.get(label, '530')
+                    cn = node.get('call_number', f'{default_div}.{slug[:60]}')
                     yr = node.get('year_range', sc_yr)
                     start_date = format_year(yr[0]) if yr and len(yr) > 0 else ''
                     end_date = format_year(yr[1]) if yr and len(yr) > 1 else ''
