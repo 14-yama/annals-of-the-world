@@ -1,0 +1,1157 @@
+#!/usr/bin/env python3
+"""
+fetch_wikidata_institutions.py
+
+Fetches notable historical and modern institutions from the Wikidata SPARQL
+endpoint and maps them into the Annals of the World entity schema
+(Institution label, Class 3 divisions).
+
+Adds a `historicalSignificance` score (1–10) based on Wikipedia sitelinks,
+founding antiquity, and active-status longevity.
+
+Output: data/wikidata_institutions.json  —  ready for catalog integration.
+
+Usage:
+    python3 scripts/fetch_wikidata_institutions.py
+    python3 scripts/fetch_wikidata_institutions.py --limit 500
+    python3 scripts/fetch_wikidata_institutions.py --dry-run
+"""
+
+import argparse
+import json
+import os
+import re
+import sys
+import time
+from pathlib import Path
+from typing import Any
+
+import requests
+
+# ── Wikidata SPARQL endpoint ──
+SPARQL_ENDPOINT = "https://query.wikidata.org/sparql"
+USER_AGENT = (
+    "AnnalsOfTheWorld/1.0 "
+    "(https://github.com/annals-of-the-world; contact@annals.dev)"
+)
+
+# ═══════════════════════════════════════════════════════════════════
+# Institution Type → Division Mapping
+# Maps Wikidata "instance of" (P31) QIDs to our call-number divisions
+# ═══════════════════════════════════════════════════════════════════
+
+INSTITUTION_TYPE_MAP: dict[str, tuple[str, str]] = {
+    # ── 310  Political Institutions ──
+    "Q7188":     ("310", "Political Institutions"),            # government
+    "Q1063239":  ("310", "Political Institutions"),            # polity
+    "Q179164":   ("310", "Political Institutions"),            # political system
+
+    # ── 311  Parliaments & Legislatures ──
+    "Q35798":    ("311", "Parliaments & Legislatures"),        # parliament
+    "Q188572":   ("311", "Parliaments & Legislatures"),        # legislature
+    "Q637846":   ("311", "Parliaments & Legislatures"),        # national assembly
+    "Q1752346":  ("311", "Parliaments & Legislatures"),        # bicameral legislature
+    "Q2481024":  ("311", "Parliaments & Legislatures"),        # upper house
+
+    # ── 312  Monarchies & Royal Courts ──
+    "Q164142":   ("312", "Monarchies & Royal Courts"),         # monarchy
+    "Q210950":   ("312", "Monarchies & Royal Courts"),         # royal court
+    "Q131401":   ("312", "Monarchies & Royal Courts"),         # dynasty
+    "Q16519632": ("312", "Monarchies & Royal Courts"),         # royal household
+
+    # ── 313  Executive & Presidential Offices ──
+    "Q189445":   ("313", "Executive & Presidential Offices"),  # executive branch
+    "Q2578272":  ("313", "Executive & Presidential Offices"),  # cabinet (government)
+    "Q640506":   ("313", "Executive & Presidential Offices"),  # ministry (government)
+
+    # ── 314  Colonial & Imperial Administrations ──
+    "Q133156":   ("314", "Colonial & Imperial Administrations"),  # colony
+    "Q146505":   ("314", "Colonial & Imperial Administrations"),  # colonial empire
+    "Q217577":   ("314", "Colonial & Imperial Administrations"),  # protectorate
+    "Q164170":   ("314", "Colonial & Imperial Administrations"),  # tributary state
+
+    # ── 315  Tribal & Indigenous Councils ──
+    "Q133311":   ("315", "Tribal & Indigenous Councils"),      # tribe
+    "Q756604":   ("315", "Tribal & Indigenous Councils"),      # chiefdom
+    "Q28640":    ("315", "Tribal & Indigenous Councils"),       # profession → tribal council
+
+    # ── 316  Political Parties & Organizations ──
+    "Q7278":     ("316", "Political Parties & Organizations"), # political party
+    "Q1307214":  ("316", "Political Parties & Organizations"), # political organization
+    "Q6138528":  ("316", "Political Parties & Organizations"), # political coalition
+    "Q4204975":  ("316", "Political Parties & Organizations"), # political movement org
+
+    # ── 320  Legal Institutions ──
+    "Q327333":   ("320", "Legal Institutions"),                # legal system
+    "Q1751547":  ("320", "Legal Institutions"),                # legal institution
+
+    # ── 321  Courts & Tribunals ──
+    "Q41487":    ("321", "Courts & Tribunals"),                # court
+    "Q7889389":  ("321", "Courts & Tribunals"),                # supreme court
+    "Q63074573": ("321", "Courts & Tribunals"),                # constitutional court
+    "Q1076185":  ("321", "Courts & Tribunals"),                # tribunal
+    "Q1752824":  ("321", "Courts & Tribunals"),                # international court
+
+    # ── 322  Law Schools & Legal Academies ──
+    "Q1143635":  ("322", "Law Schools & Legal Academies"),     # law school
+
+    # ── 323  Regulatory Bodies & Commissions ──
+    "Q1981740":  ("323", "Regulatory Bodies & Commissions"),   # regulatory agency
+    "Q192350":   ("323", "Regulatory Bodies & Commissions"),   # commission
+    "Q1668024":  ("323", "Regulatory Bodies & Commissions"),   # government commission
+
+    # ── 330  Economic Institutions ──
+    "Q43015":    ("330", "Economic Institutions"),             # financial institution
+    "Q22687":    ("330", "Economic Institutions"),             # bank
+    "Q806880":   ("330", "Economic Institutions"),             # insurance company
+
+    # ── 331  Central Banks & Treasuries ──
+    "Q66344":    ("331", "Central Banks & Treasuries"),        # central bank
+    "Q5138781":  ("331", "Central Banks & Treasuries"),        # treasury
+
+    # ── 332  Stock Exchanges & Markets ──
+    "Q476028":   ("332", "Stock Exchanges & Markets"),         # stock exchange
+    "Q38829":    ("332", "Stock Exchanges & Markets"),         # commodity exchange
+
+    # ── 333  Trade Guilds & Merchant Houses ──
+    "Q43229":    ("333", "Trade Guilds & Merchant Houses"),    # guild
+    "Q178790":   ("333", "Trade Guilds & Merchant Houses"),    # merchant guild
+    "Q158633":   ("333", "Trade Guilds & Merchant Houses"),    # trading company
+    "Q1762059":  ("333", "Trade Guilds & Merchant Houses"),    # chartered company
+
+    # ── 334  Development Banks & Aid Agencies ──
+    "Q1785733":  ("334", "Development Banks & Aid Agencies"),  # development bank
+    "Q1332577":  ("334", "Development Banks & Aid Agencies"),  # development agency
+
+    # ── 340  Religious Institutions ──
+    "Q9174":     ("340", "Religious Institutions"),            # religion
+    "Q2061186":  ("340", "Religious Institutions"),            # religious organization
+    "Q1530022":  ("340", "Religious Institutions"),            # religious institute
+    "Q1092940":  ("340", "Religious Institutions"),            # denomination
+
+    # ── 341  Churches & Cathedrals ──
+    "Q16970":    ("341", "Churches & Cathedrals"),             # church building
+    "Q2977":     ("341", "Churches & Cathedrals"),             # cathedral
+    "Q108325":   ("341", "Churches & Cathedrals"),             # basilica
+    "Q317557":   ("341", "Churches & Cathedrals"),             # parish church
+    "Q44613":    ("341", "Churches & Cathedrals"),             # monastery (Christian)
+
+    # ── 342  Mosques & Islamic Institutions ──
+    "Q32815":    ("342", "Mosques & Islamic Institutions"),    # mosque
+    "Q185451":   ("342", "Mosques & Islamic Institutions"),    # madrasa
+    "Q697295":   ("342", "Mosques & Islamic Institutions"),    # Islamic school
+
+    # ── 343  Temples & Shrines ──
+    "Q44539":    ("343", "Temples & Shrines"),                 # temple
+    "Q845945":   ("343", "Temples & Shrines"),                 # shrine
+    "Q160742":   ("343", "Temples & Shrines"),                 # abbey
+    "Q44613":    ("343", "Temples & Shrines"),                 # monastery (general)
+
+    # ── 344  Monasteries & Religious Orders ──
+    "Q44613":    ("344", "Monasteries & Religious Orders"),    # monastery
+    "Q191067":   ("344", "Monasteries & Religious Orders"),    # religious order
+    "Q1373513":  ("344", "Monasteries & Religious Orders"),    # Catholic religious order
+    "Q208628":   ("344", "Monasteries & Religious Orders"),    # mendicant order
+
+    # ── 345  Seminaries & Theological Schools ──
+    "Q1145552":  ("345", "Seminaries & Theological Schools"),  # seminary
+    "Q18127":    ("345", "Seminaries & Theological Schools"),  # theological school
+
+    # ── 350  Scientific Institutions ──
+    "Q31855":    ("350", "Scientific Institutions"),           # research institute
+    "Q1298668":  ("350", "Scientific Institutions"),           # research center
+    "Q3354859":  ("350", "Scientific Institutions"),           # scientific organization
+
+    # ── 351  Academies & Learned Societies ──
+    "Q414":      ("351", "Academies & Learned Societies"),     # academy
+    "Q955824":   ("351", "Academies & Learned Societies"),     # learned society
+    "Q1788992":  ("351", "Academies & Learned Societies"),     # academy of sciences
+    "Q459310":   ("351", "Academies & Learned Societies"),     # scientific academy
+
+    # ── 352  Research Laboratories ──
+    "Q483242":   ("352", "Research Laboratories"),             # laboratory
+    "Q7315155":  ("352", "Research Laboratories"),             # research laboratory
+    "Q5341295":  ("352", "Research Laboratories"),             # national laboratory
+
+    # ── 353  Observatories & Expeditions ──
+    "Q62832":    ("353", "Observatories & Expeditions"),       # observatory
+    "Q2235308":  ("353", "Observatories & Expeditions"),       # astronomical observatory
+    "Q2401485":  ("353", "Observatories & Expeditions"),       # scientific expedition
+
+    # ── 354  Medical Institutions & Hospitals ──
+    "Q16917":    ("354", "Medical Institutions & Hospitals"),  # hospital
+    "Q180958":   ("354", "Medical Institutions & Hospitals"),  # teaching hospital
+    "Q1774898":  ("354", "Medical Institutions & Hospitals"),  # medical school
+
+    # ── 360  Cultural Institutions ──
+    "Q2659904":  ("360", "Cultural Institutions"),             # cultural institution
+    "Q13226383": ("360", "Cultural Institutions"),             # facility
+
+    # ── 361  Museums & Galleries ──
+    "Q33506":    ("361", "Museums & Galleries"),               # museum
+    "Q1007870":  ("361", "Museums & Galleries"),               # art gallery
+    "Q207694":   ("361", "Museums & Galleries"),               # art museum
+    "Q575759":   ("361", "Museums & Galleries"),               # history museum
+    "Q1970365":  ("361", "Museums & Galleries"),               # national museum
+
+    # ── 362  Libraries & Archives ──
+    "Q7075":     ("362", "Libraries & Archives"),              # library
+    "Q856234":   ("362", "Libraries & Archives"),              # national library
+    "Q166118":   ("362", "Libraries & Archives"),              # archive
+    "Q11032":    ("362", "Libraries & Archives"),              # newspaper (press archive)
+
+    # ── 363  Theaters & Performance Venues ──
+    "Q24354":    ("363", "Theaters & Performance Venues"),     # theater (building)
+    "Q153562":   ("363", "Theaters & Performance Venues"),     # opera house
+    "Q57660343": ("363", "Theaters & Performance Venues"),     # concert hall
+
+    # ── 364  Media & Publishing Houses ──
+    "Q2085381":  ("364", "Media & Publishing Houses"),         # publisher
+    "Q192283":   ("364", "Media & Publishing Houses"),         # news agency
+    "Q2001305":  ("364", "Media & Publishing Houses"),         # television network
+    "Q17232649": ("364", "Media & Publishing Houses"),         # print media company
+    "Q1030034":  ("364", "Media & Publishing Houses"),         # radio station
+
+    # ── 370  International Organizations ──
+    "Q484652":   ("370", "International Organizations"),       # international organization
+    "Q15925165": ("370", "International Organizations"),       # intergovernmental org
+    "Q178706":   ("370", "International Organizations"),       # institution
+    "Q79913":    ("370", "International Organizations"),       # non-governmental org (intl)
+
+    # ── 371  United Nations System ──
+    "Q1335818":  ("371", "United Nations System"),             # UN specialized agency
+    "Q66239647": ("371", "United Nations System"),             # UN organ
+
+    # ── 372  Regional Alliances & Blocs ──
+    "Q3623811":  ("372", "Regional Alliances & Blocs"),        # regional organization
+    "Q4120211":  ("372", "Regional Alliances & Blocs"),        # supranational union
+    "Q170156":   ("372", "Regional Alliances & Blocs"),        # confederation
+
+    # ── 373  Humanitarian & Relief Organizations ──
+    "Q163740":   ("373", "Humanitarian & Relief Organizations"),  # non-profit organization
+    "Q708676":   ("373", "Humanitarian & Relief Organizations"),  # humanitarian org
+    "Q15911314": ("373", "Humanitarian & Relief Organizations"),  # charitable organization
+
+    # ── 374  Trade Agreements & Economic Unions ──
+    "Q131569":   ("374", "Trade Agreements & Economic Unions"),  # treaty
+    "Q11514315": ("374", "Trade Agreements & Economic Unions"),  # economic union
+    "Q180684":   ("374", "Trade Agreements & Economic Unions"),  # customs union
+
+    # ── 380  Educational Institutions ──
+    "Q2385804":  ("380", "Educational Institutions"),          # educational institution
+    "Q23002054": ("380", "Educational Institutions"),          # education organization
+
+    # ── 381  Universities & Colleges ──
+    "Q3918":     ("381", "Universities & Colleges"),           # university
+    "Q189004":   ("381", "Universities & Colleges"),           # college
+    "Q875538":   ("381", "Universities & Colleges"),           # public university
+    "Q23442":    ("381", "Universities & Colleges"),           # island (→ group of schools)
+    "Q38723":    ("381", "Universities & Colleges"),           # higher education institution
+
+    # ── 382  Schools & Academies ──
+    "Q3914":     ("382", "Schools & Academies"),               # school
+    "Q149566":   ("382", "Schools & Academies"),               # boarding school
+    "Q9826":     ("382", "Schools & Academies"),               # high school
+
+    # ── 383  Madrasas & Religious Schools ──
+    "Q185451":   ("383", "Madrasas & Religious Schools"),      # madrasa
+    "Q697295":   ("383", "Madrasas & Religious Schools"),      # Islamic school
+
+    # ── 384  Public Education Systems ──
+    "Q16023913": ("384", "Public Education Systems"),          # school district
+
+    # ── 390  Military & Defense Organizations ──
+    "Q176799":   ("390", "Military & Defense Organizations"),  # military unit
+    "Q15627509": ("390", "Military & Defense Organizations"),  # armed forces
+    "Q781132":   ("390", "Military & Defense Organizations"),  # military organization
+
+    # ── 391  Armies & Ground Forces ──
+    "Q37726":    ("391", "Armies & Ground Forces"),            # army
+    "Q1643989":  ("391", "Armies & Ground Forces"),            # ground force
+
+    # ── 392  Navies & Maritime Forces ──
+    "Q4508":     ("392", "Navies & Maritime Forces"),          # navy
+    "Q2327867":  ("392", "Navies & Maritime Forces"),          # maritime force
+
+    # ── 393  Intelligence & Security Agencies ──
+    "Q47913":    ("393", "Intelligence & Security Agencies"),  # intelligence agency
+    "Q3236990":  ("393", "Intelligence & Security Agencies"),  # security agency
+
+    # ── 394  Military Alliances (NATO, etc.) ──
+    "Q1127126":  ("394", "Military Alliances (NATO, etc.)"),   # military alliance
+    "Q170156":   ("394", "Military Alliances (NATO, etc.)"),   # alliance
+}
+
+# Build reverse lookup: first-occurrence wins
+QID_TO_DIVISION: dict[str, tuple[str, str]] = {}
+for qid, div_info in INSTITUTION_TYPE_MAP.items():
+    if qid not in QID_TO_DIVISION:
+        QID_TO_DIVISION[qid] = div_info
+
+# ═══════════════════════════════════════════════════════════════════
+# Batched SPARQL queries by division group
+# Each batch → list of Wikidata type QIDs to fetch
+# ═══════════════════════════════════════════════════════════════════
+
+INSTITUTION_QUERIES: dict[str, list[str]] = {
+    # ── Political ──
+    "310-315_political": [
+        "Q7188",       # government
+        "Q35798",      # parliament
+        "Q188572",     # legislature
+        "Q164142",     # monarchy
+        "Q131401",     # dynasty
+        "Q133156",     # colony
+    ],
+    "316_parties": [
+        "Q7278",       # political party
+        "Q1307214",    # political organization
+    ],
+    # ── Legal ──
+    "320-323_legal": [
+        "Q41487",      # court
+        "Q7889389",    # supreme court
+        "Q1076185",    # tribunal
+        "Q1981740",    # regulatory agency
+    ],
+    # ── Economic ──
+    "330-334_economic": [
+        "Q66344",      # central bank
+        "Q476028",     # stock exchange
+        "Q43229",      # guild
+        "Q158633",     # trading company
+        "Q1762059",    # chartered company
+        "Q1785733",    # development bank
+        "Q22687",      # bank
+    ],
+    # ── Religious ──
+    "340_religious_orgs": [
+        "Q2061186",    # religious organization
+        "Q1092940",    # denomination
+        "Q191067",     # religious order
+        "Q1373513",    # Catholic religious order
+    ],
+    "341_churches": [
+        "Q2977",       # cathedral
+        "Q108325",     # basilica
+    ],
+    "342_mosques": [
+        "Q32815",      # mosque
+    ],
+    "343_temples": [
+        "Q44539",      # temple
+        "Q845945",     # shrine
+    ],
+    "344_monasteries": [
+        "Q44613",      # monastery
+        "Q160742",     # abbey
+    ],
+    # ── Scientific ──
+    "350-353_scientific": [
+        "Q31855",      # research institute
+        "Q955824",     # learned society
+        "Q1788992",    # academy of sciences
+        "Q62832",      # observatory
+        "Q483242",     # laboratory
+    ],
+    "354_medical": [
+        "Q16917",      # hospital
+        "Q180958",     # teaching hospital
+        "Q1774898",    # medical school
+    ],
+    # ── Cultural ──
+    "361_museums": [
+        "Q33506",      # museum
+        "Q207694",     # art museum
+        "Q575759",     # history museum
+    ],
+    "362_libraries": [
+        "Q7075",       # library
+        "Q856234",     # national library
+        "Q166118",     # archive
+    ],
+    "363_theaters": [
+        "Q24354",      # theater building
+        "Q153562",     # opera house
+    ],
+    "364_media": [
+        "Q2085381",    # publisher
+        "Q192283",     # news agency
+    ],
+    # ── International ──
+    "370-374_intl": [
+        "Q484652",     # international organization
+        "Q15925165",   # intergovernmental org
+        "Q1335818",    # UN specialized agency
+        "Q3623811",    # regional organization
+        "Q131569",     # treaty
+    ],
+    "373_humanitarian": [
+        "Q708676",     # humanitarian org
+        "Q163740",     # non-profit (notable ones)
+    ],
+    # ── Educational ──
+    "381_universities": [
+        "Q3918",       # university
+        "Q875538",     # public university
+        "Q38723",      # higher education institution
+    ],
+    "382_schools": [
+        "Q3914",       # school
+        "Q149566",     # boarding school
+    ],
+    "383_madrasas": [
+        "Q185451",     # madrasa
+    ],
+    # ── Military ──
+    "390-394_military": [
+        "Q15627509",   # armed forces
+        "Q37726",      # army
+        "Q4508",       # navy
+        "Q47913",      # intelligence agency
+        "Q1127126",    # military alliance
+    ],
+}
+
+
+# ═══════════════════════════════════════════════════════════════════
+# Country / Region / Continent mapping (reused from people script)
+# ═══════════════════════════════════════════════════════════════════
+
+COUNTRY_INFO: dict[str, tuple[str, str, str]] = {
+    # (country_name, region, continent)
+    "Q30":    ("United States", "North America", "Americas"),
+    "Q145":   ("United Kingdom", "Northern Europe", "Europe"),
+    "Q142":   ("France", "Western Europe", "Europe"),
+    "Q183":   ("Germany", "Western Europe", "Europe"),
+    "Q38":    ("Italy", "Southern Europe", "Europe"),
+    "Q29":    ("Spain", "Southern Europe", "Europe"),
+    "Q159":   ("Russia", "Eastern Europe", "Europe"),
+    "Q148":   ("China", "East Asia", "Asia"),
+    "Q668":   ("India", "South Asia", "Asia"),
+    "Q17":    ("Japan", "East Asia", "Asia"),
+    "Q884":   ("South Korea", "East Asia", "Asia"),
+    "Q39":    ("Switzerland", "Western Europe", "Europe"),
+    "Q40":    ("Austria", "Western Europe", "Europe"),
+    "Q55":    ("Netherlands", "Western Europe", "Europe"),
+    "Q36":    ("Poland", "Eastern Europe", "Europe"),
+    "Q37":    ("Lithuania", "Northern Europe", "Europe"),
+    "Q41":    ("Greece", "Southern Europe", "Europe"),
+    "Q20":    ("Norway", "Northern Europe", "Europe"),
+    "Q34":    ("Sweden", "Northern Europe", "Europe"),
+    "Q35":    ("Denmark", "Northern Europe", "Europe"),
+    "Q31":    ("Belgium", "Western Europe", "Europe"),
+    "Q16":    ("Canada", "North America", "Americas"),
+    "Q96":    ("Mexico", "Central America", "Americas"),
+    "Q155":   ("Brazil", "South America", "Americas"),
+    "Q414":   ("Argentina", "South America", "Americas"),
+    "Q298":   ("Chile", "South America", "Americas"),
+    "Q739":   ("Colombia", "South America", "Americas"),
+    "Q45":    ("Portugal", "Southern Europe", "Europe"),
+    "Q408":   ("Australia", "Oceania", "Oceania"),
+    "Q664":   ("New Zealand", "Oceania", "Oceania"),
+    "Q79":    ("Egypt", "North Africa", "Africa"),
+    "Q262":   ("Algeria", "North Africa", "Africa"),
+    "Q1028":  ("Morocco", "North Africa", "Africa"),
+    "Q115":   ("Ethiopia", "East Africa", "Africa"),
+    "Q1033":  ("Nigeria", "West Africa", "Africa"),
+    "Q929":   ("Central African Republic", "Central Africa", "Africa"),
+    "Q258":   ("South Africa", "Southern Africa", "Africa"),
+    "Q794":   ("Iran", "West Asia", "Asia"),
+    "Q796":   ("Iraq", "West Asia", "Asia"),
+    "Q801":   ("Israel", "West Asia", "Asia"),
+    "Q843":   ("Pakistan", "South Asia", "Asia"),
+    "Q837":   ("Nepal", "South Asia", "Asia"),
+    "Q869":   ("Thailand", "Southeast Asia", "Asia"),
+    "Q865":   ("Taiwan", "East Asia", "Asia"),
+    "Q423":   ("North Korea", "East Asia", "Asia"),
+    "Q881":   ("Vietnam", "Southeast Asia", "Asia"),
+    "Q334":   ("Singapore", "Southeast Asia", "Asia"),
+    "Q833":   ("Malaysia", "Southeast Asia", "Asia"),
+    "Q252":   ("Indonesia", "Southeast Asia", "Asia"),
+    "Q928":   ("Philippines", "Southeast Asia", "Asia"),
+    "Q854":   ("Sri Lanka", "South Asia", "Asia"),
+    "Q817":   ("Kuwait", "West Asia", "Asia"),
+    "Q846":   ("Qatar", "West Asia", "Asia"),
+    "Q878":   ("United Arab Emirates", "West Asia", "Asia"),
+    "Q874":   ("Turkmenistan", "Central Asia", "Asia"),
+    "Q889":   ("Afghanistan", "South Asia", "Asia"),
+    "Q184":   ("Belarus", "Eastern Europe", "Europe"),
+    "Q212":   ("Ukraine", "Eastern Europe", "Europe"),
+    "Q213":   ("Czech Republic", "Eastern Europe", "Europe"),
+    "Q214":   ("Slovakia", "Eastern Europe", "Europe"),
+    "Q28":    ("Hungary", "Eastern Europe", "Europe"),
+    "Q218":   ("Romania", "Eastern Europe", "Europe"),
+    "Q219":   ("Bulgaria", "Eastern Europe", "Europe"),
+    "Q215":   ("Slovenia", "Southern Europe", "Europe"),
+    "Q224":   ("Croatia", "Southern Europe", "Europe"),
+    "Q225":   ("Bosnia and Herzegovina", "Southern Europe", "Europe"),
+    "Q117":   ("Ghana", "West Africa", "Africa"),
+    "Q114":   ("Kenya", "East Africa", "Africa"),
+    "Q1032":  ("Niger", "West Africa", "Africa"),
+    "Q912":   ("Mali", "West Africa", "Africa"),
+    "Q657":   ("Chad", "Central Africa", "Africa"),
+    "Q1005":  ("Gambia", "West Africa", "Africa"),
+    "Q27":    ("Ireland", "Northern Europe", "Europe"),
+    "Q33":    ("Finland", "Northern Europe", "Europe"),
+    "Q32":    ("Luxembourg", "Western Europe", "Europe"),
+    "Q189":   ("Iceland", "Northern Europe", "Europe"),
+    "Q842":   ("Oman", "West Asia", "Asia"),
+    "Q810":   ("Jordan", "West Asia", "Asia"),
+    "Q805":   ("Yemen", "West Asia", "Asia"),
+    "Q851":   ("Saudi Arabia", "West Asia", "Asia"),
+    "Q43":    ("Turkey", "West Asia", "Asia"),
+    "Q965":   ("Burkina Faso", "West Africa", "Africa"),
+    "Q1011":  ("Cape Verde", "West Africa", "Africa"),
+    "Q1029":  ("Mozambique", "East Africa", "Africa"),
+    "Q1030":  ("Namibia", "Southern Africa", "Africa"),
+    "Q1044":  ("Sierra Leone", "West Africa", "Africa"),
+    "Q945":   ("Togo", "West Africa", "Africa"),
+    "Q1006":  ("Guinea", "West Africa", "Africa"),
+    "Q1007":  ("Guinea-Bissau", "West Africa", "Africa"),
+    "Q1008":  ("Ivory Coast", "West Africa", "Africa"),
+    "Q974":   ("Democratic Republic of the Congo", "Central Africa", "Africa"),
+    "Q971":   ("Republic of the Congo", "Central Africa", "Africa"),
+    "Q916":   ("Angola", "Southern Africa", "Africa"),
+    "Q953":   ("Zambia", "East Africa", "Africa"),
+    "Q954":   ("Zimbabwe", "East Africa", "Africa"),
+    "Q924":   ("Tanzania", "East Africa", "Africa"),
+    "Q1009":  ("Cameroon", "Central Africa", "Africa"),
+    "Q1036":  ("Uganda", "East Africa", "Africa"),
+    "Q1037":  ("Rwanda", "East Africa", "Africa"),
+    "Q1020":  ("Senegal", "West Africa", "Africa"),
+    "Q233":   ("Malta", "Southern Europe", "Europe"),
+    "Q236":   ("Montenegro", "Southern Europe", "Europe"),
+    "Q229":   ("Cyprus", "Southern Europe", "Europe"),
+    "Q227":   ("Azerbaijan", "West Asia", "Asia"),
+    "Q230":   ("Georgia", "West Asia", "Asia"),
+    "Q399":   ("Armenia", "West Asia", "Asia"),
+    "Q813":   ("Kyrgyzstan", "Central Asia", "Asia"),
+    "Q863":   ("Tajikistan", "Central Asia", "Asia"),
+    "Q265":   ("Uzbekistan", "Central Asia", "Asia"),
+    "Q232":   ("Kazakhstan", "Central Asia", "Asia"),
+    "Q711":   ("Mongolia", "East Asia", "Asia"),
+    "Q836":   ("Myanmar", "Southeast Asia", "Asia"),
+    "Q819":   ("Laos", "Southeast Asia", "Asia"),
+    "Q424":   ("Cambodia", "Southeast Asia", "Asia"),
+    "Q298":   ("Chile", "South America", "Americas"),
+    "Q717":   ("Venezuela", "South America", "Americas"),
+    "Q419":   ("Peru", "South America", "Americas"),
+    "Q736":   ("Ecuador", "South America", "Americas"),
+    "Q750":   ("Bolivia", "South America", "Americas"),
+    "Q733":   ("Paraguay", "South America", "Americas"),
+    "Q77":    ("Uruguay", "South America", "Americas"),
+    "Q774":   ("Guatemala", "Central America", "Americas"),
+    "Q783":   ("Honduras", "Central America", "Americas"),
+    "Q792":   ("El Salvador", "Central America", "Americas"),
+    "Q800":   ("Costa Rica", "Central America", "Americas"),
+    "Q804":   ("Panama", "Central America", "Americas"),
+    "Q786":   ("Dominican Republic", "Caribbean", "Americas"),
+    "Q241":   ("Cuba", "Caribbean", "Americas"),
+    "Q766":   ("Jamaica", "Caribbean", "Americas"),
+    "Q778":   ("Bahamas", "Caribbean", "Americas"),
+    "Q754":   ("Trinidad and Tobago", "Caribbean", "Americas"),
+    "Q228":   ("Andorra", "Southern Europe", "Europe"),
+    "Q238":   ("San Marino", "Southern Europe", "Europe"),
+    "Q237":   ("Vatican City", "Southern Europe", "Europe"),
+    "Q347":   ("Liechtenstein", "Western Europe", "Europe"),
+    "Q235":   ("Monaco", "Western Europe", "Europe"),
+    "Q1246":  ("Kosovo", "Southern Europe", "Europe"),
+    "Q221":   ("North Macedonia", "Southern Europe", "Europe"),
+    "Q403":   ("Serbia", "Southern Europe", "Europe"),
+    "Q711":   ("Mongolia", "East Asia", "Asia"),
+    "Q986":   ("Eritrea", "East Africa", "Africa"),
+    "Q960":   ("Benin", "West Africa", "Africa"),
+    "Q1025":  ("Mauritania", "West Africa", "Africa"),
+    "Q1027":  ("Mauritius", "East Africa", "Africa"),
+    "Q1019":  ("Madagascar", "East Africa", "Africa"),
+    "Q1039":  ("São Tomé and Príncipe", "Central Africa", "Africa"),
+    "Q963":   ("Botswana", "Southern Africa", "Africa"),
+    "Q1013":  ("Lesotho", "Southern Africa", "Africa"),
+    "Q1050":  ("Eswatini", "Southern Africa", "Africa"),
+    "Q967":   ("Burundi", "East Africa", "Africa"),
+    "Q970":   ("Comoros", "East Africa", "Africa"),
+    "Q977":   ("Djibouti", "East Africa", "Africa"),
+    "Q1000":  ("Gabon", "Central Africa", "Africa"),
+    "Q1014":  ("Liberia", "West Africa", "Africa"),
+    "Q1041":  ("Seychelles", "East Africa", "Africa"),
+    "Q1045":  ("Somalia", "East Africa", "Africa"),
+    "Q1049":  ("Sudan", "North Africa", "Africa"),
+    "Q958":   ("South Sudan", "East Africa", "Africa"),
+    "Q1023":  ("Malawi", "East Africa", "Africa"),
+    "Q1032":  ("Niger", "West Africa", "Africa"),
+    "Q1035":  ("Tunisia", "North Africa", "Africa"),
+    "Q1042":  ("Libya", "North Africa", "Africa"),
+}
+
+DEFAULT_GEO = ("Global", "Global", "Global")
+
+
+def get_country_info(country_qid: str | None) -> tuple[str, str, str]:
+    """Return (country_name, region, continent) for a Wikidata Q-ID."""
+    if not country_qid:
+        return DEFAULT_GEO
+    return COUNTRY_INFO.get(country_qid, DEFAULT_GEO)
+
+
+# ═══════════════════════════════════════════════════════════════════
+# Era mapping from year
+# ═══════════════════════════════════════════════════════════════════
+
+def year_to_era(year: int | None) -> tuple[str, str]:
+    """Map a founding year to (era, eraSlug)."""
+    if year is None:
+        return ("Classical", "classical")  # safe default for historical institutions
+    if year < -3000:
+        return ("Prehistoric", "prehistoric")
+    if year <= 500:
+        return ("Classical", "classical")
+    if year <= 1500:
+        return ("Medieval", "medieval")
+    if year <= 1800:
+        return ("Early Modern", "early-modern")
+    if year <= 1945:
+        return ("Modern", "modern")
+    return ("Contemporary", "contemporary")
+
+
+# ═══════════════════════════════════════════════════════════════════
+# Historical Significance Score (1–10)
+# ═══════════════════════════════════════════════════════════════════
+
+def compute_significance(
+    sitelinks: int,
+    founding_year: int | None,
+    dissolved_year: int | None,
+) -> int:
+    """
+    Compute a 1–10 historical-significance score.
+
+    Factors
+    -------
+    1. **Wikipedia sitelinks** (primary — higher = more encyclopaedic coverage)
+    2. **Antiquity bonus** — older founding dates add +1 for pre-500 CE, +1 for pre-1000 BCE
+    3. **Longevity bonus** — institutions still active today (no dissolved date) get +1
+
+    The raw score is clamped to [1, 10].
+    """
+    # Base score from sitelinks (0-7 range)
+    if sitelinks >= 150:
+        score = 8
+    elif sitelinks >= 100:
+        score = 7
+    elif sitelinks >= 70:
+        score = 6
+    elif sitelinks >= 50:
+        score = 5
+    elif sitelinks >= 35:
+        score = 4
+    elif sitelinks >= 20:
+        score = 3
+    elif sitelinks >= 12:
+        score = 2
+    else:
+        score = 1
+
+    # Antiquity bonus
+    if founding_year is not None:
+        if founding_year < -1000:
+            score += 2        # very ancient (before 1000 BCE)
+        elif founding_year < 500:
+            score += 1        # classical / ancient
+
+    # Still active bonus
+    if dissolved_year is None and founding_year is not None:
+        score += 1
+
+    return max(1, min(10, score))
+
+
+def significance_label(score: int) -> str:
+    """Human-readable significance label."""
+    if score >= 9:
+        return "Landmark"
+    if score >= 7:
+        return "Major"
+    if score >= 5:
+        return "Notable"
+    if score >= 3:
+        return "Moderate"
+    return "Minor"
+
+
+# ═══════════════════════════════════════════════════════════════════
+# Helper functions
+# ═══════════════════════════════════════════════════════════════════
+
+def parse_year(date_str: str | None) -> int | None:
+    """Parse Wikidata date string like '+1642-12-25T00:00:00Z'."""
+    if not date_str:
+        return None
+    m = re.match(r'^([+-]?\d+)', date_str)
+    if m:
+        return int(m.group(1))
+    return None
+
+
+def format_date_display(date_str: str | None) -> str:
+    """Format Wikidata date for display."""
+    if not date_str:
+        return ""
+    m = re.match(r'^([+-]?)(\d+)-(\d{2})-(\d{2})', date_str)
+    if not m:
+        return ""
+    sign, year_s, month, day = m.groups()
+    year = int(year_s)
+    if sign == "-" or (sign == "+" and year < 0):
+        return f"{abs(year)} BCE"
+    if year > 0 and year < 100:
+        return f"{year} CE"
+    if month == "01" and day == "01":
+        return f"{year} CE" if year < 1000 else str(year)
+    return f"{year}-{month}-{day}"
+
+
+def make_slug(name: str) -> str:
+    """Convert a name to a slug."""
+    slug = name.lower().strip()
+    slug = re.sub(r'[^\w\s-]', '', slug)
+    slug = re.sub(r'[\s_]+', '-', slug)
+    slug = re.sub(r'-+', '-', slug)
+    return slug.strip('-')[:80]
+
+
+def qid_from_uri(uri: str | None) -> str | None:
+    """Extract Q-ID from a Wikidata URI."""
+    if not uri:
+        return None
+    m = re.search(r'(Q\d+)$', uri)
+    return m.group(1) if m else None
+
+
+def binding_val(row: dict, key: str) -> str | None:
+    """Safely extract value from SPARQL binding."""
+    b = row.get(key)
+    if b and "value" in b:
+        return b["value"]
+    return None
+
+
+def get_division(type_qid: str | None) -> tuple[str, str]:
+    """Map an institution-type QID to (division_code, division_heading)."""
+    if type_qid and type_qid in QID_TO_DIVISION:
+        return QID_TO_DIVISION[type_qid]
+    return ("310", "Political Institutions")  # fallback
+
+
+# ═══════════════════════════════════════════════════════════════════
+# SPARQL query builder
+# ═══════════════════════════════════════════════════════════════════
+
+def build_sparql_query(type_qids: list[str], limit: int = 500) -> str:
+    """
+    Build SPARQL query fetching institutions of given types.
+
+    Uses direct P31 (instance of) matching for speed, then fetches founding
+    date, country, headquarters, founder, image, and Wikipedia article.
+    """
+    values = " ".join(f"wd:{qid}" for qid in type_qids)
+    return f"""
+SELECT DISTINCT ?item ?itemLabel ?itemDescription
+       ?type ?typeLabel
+       ?inception ?dissolved
+       ?country
+       ?countryLabel
+       ?headquartersLabel
+       ?founderLabel
+       ?image
+       ?article
+       ?sitelinks
+WHERE {{
+  VALUES ?type {{ {values} }}
+  ?item wdt:P31 ?type .
+  ?item wikibase:sitelinks ?sitelinks .
+  FILTER(?sitelinks > 8)
+
+  OPTIONAL {{ ?item wdt:P571 ?inception . }}
+  OPTIONAL {{ ?item wdt:P576 ?dissolved . }}
+  OPTIONAL {{ ?item wdt:P17  ?country . }}
+  OPTIONAL {{ ?item wdt:P159 ?headquarters . }}
+  OPTIONAL {{ ?item wdt:P112 ?founder . }}
+  OPTIONAL {{ ?item wdt:P18  ?image . }}
+  OPTIONAL {{
+    ?article schema:about ?item ;
+             schema:isPartOf <https://en.wikipedia.org/> .
+  }}
+
+  SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en" . }}
+}}
+ORDER BY DESC(?sitelinks)
+LIMIT {limit}
+"""
+
+
+def fetch_sparql(query: str, retries: int = 3) -> list[dict[str, Any]]:
+    """Execute a SPARQL query against Wikidata with retry + rate-limit handling."""
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "application/sparql-results+json",
+    }
+    for attempt in range(retries):
+        try:
+            resp = requests.get(
+                SPARQL_ENDPOINT,
+                params={"query": query, "format": "json"},
+                headers=headers,
+                timeout=180,
+            )
+            if resp.status_code == 429:
+                wait = min(90, 15 * (attempt + 1))
+                print(f"  Rate limited, waiting {wait}s ...")
+                time.sleep(wait)
+                continue
+            if resp.status_code == 500:
+                # Wikidata sometimes 500s on heavy queries — retry
+                wait = 20 * (attempt + 1)
+                print(f"  Server error 500, retrying in {wait}s ...")
+                time.sleep(wait)
+                continue
+            resp.raise_for_status()
+            return resp.json()["results"]["bindings"]
+        except requests.exceptions.ReadTimeout:
+            wait = 30 * (attempt + 1)
+            print(f"  Timeout (attempt {attempt + 1}), retrying in {wait}s ...")
+            time.sleep(wait)
+        except requests.exceptions.RequestException as e:
+            print(f"  Request error (attempt {attempt + 1}): {e}")
+            if attempt < retries - 1:
+                time.sleep(10 * (attempt + 1))
+    return []
+
+
+# ═══════════════════════════════════════════════════════════════════
+# Entity transformer
+# ═══════════════════════════════════════════════════════════════════
+
+def transform_institution(row: dict) -> dict[str, Any] | None:
+    """Transform a SPARQL result row into an Annals Institution entity dict."""
+    item_uri = binding_val(row, "item")
+    name = binding_val(row, "itemLabel")
+    if not item_uri or not name:
+        return None
+
+    # Skip entries where label is just the QID (no English label)
+    if re.match(r'^Q\d+$', name):
+        return None
+
+    qid = qid_from_uri(item_uri)
+    description = binding_val(row, "itemDescription") or ""
+    type_qid = qid_from_uri(binding_val(row, "type"))
+    type_label = binding_val(row, "typeLabel") or ""
+    inception_raw = binding_val(row, "inception")
+    dissolved_raw = binding_val(row, "dissolved")
+    country_qid = qid_from_uri(binding_val(row, "country"))
+    country_label = binding_val(row, "countryLabel") or ""
+    headquarters = binding_val(row, "headquartersLabel") or ""
+    founder = binding_val(row, "founderLabel") or ""
+    image_url = binding_val(row, "image") or ""
+    wiki_url = binding_val(row, "article") or ""
+
+    # Sitelinks (for significance scoring)
+    sitelinks_raw = binding_val(row, "sitelinks")
+    sitelinks = int(sitelinks_raw) if sitelinks_raw else 0
+
+    # Parse dates
+    founding_year = parse_year(inception_raw)
+    dissolved_year = parse_year(dissolved_raw)
+    founded_display = format_date_display(inception_raw)
+    dissolved_display = format_date_display(dissolved_raw)
+
+    # Era from founding year
+    era, era_slug = year_to_era(founding_year)
+
+    # Division from type
+    div_code, div_heading = get_division(type_qid)
+
+    # Country / Region / Continent
+    country_name, region, continent = get_country_info(country_qid)
+    # If we got a label from Wikidata but no QID match, use the label
+    if country_name == "Global" and country_label and not re.match(r'^Q\d+$', country_label):
+        country_name = country_label
+
+    # Slug
+    slug = make_slug(name)
+
+    # Summary
+    summary = description.capitalize() if description else f"{name}, a {type_label}."
+    if headquarters:
+        summary += f" Headquartered in {headquarters}."
+    elif country_name != "Global":
+        summary += f" Located in {country_name}."
+    if founding_year:
+        if founding_year < 0:
+            summary += f" Founded c. {abs(founding_year)} BCE."
+        else:
+            summary += f" Founded {founding_year}."
+    if dissolved_year:
+        if dissolved_year < 0:
+            summary += f" Dissolved c. {abs(dissolved_year)} BCE."
+        else:
+            summary += f" Dissolved {dissolved_year}."
+
+    # Historical significance score
+    sig_score = compute_significance(sitelinks, founding_year, dissolved_year)
+    sig_label = significance_label(sig_score)
+
+    # Active status
+    is_active = dissolved_year is None
+
+    # Build entity
+    entity: dict[str, Any] = {
+        "slug": slug,
+        "name": name,
+        "label": "Institution",
+        "callNumber": f"{div_code}.{slug}",
+        "subjectHeadings": [f"Institutions — {div_heading} — {country_name} — {era}"],
+        "subjects": [
+            s for s in [country_name, type_label, continent, div_heading]
+            if s and s != "Global"
+        ],
+        "summary": summary[:9900],
+        "era": era,
+        "eraSlug": era_slug,
+        "region": region,
+        "continent": continent,
+        "status": "Published",
+        "frameworks": ["CAUSE_AND_EFFECT"],
+        "causes": [],
+        "effects": [],
+        "relationships": [
+            {
+                "sourceSlug": slug,
+                "sourceName": name,
+                "verb": "OCCURS_IN",
+                "targetSlug": (
+                    f"country-{make_slug(country_name)}"
+                    if country_name != "Global" else ""
+                ),
+                "targetName": country_name,
+                "context": f"{name} located in {country_name}",
+            }
+        ],
+        "places": [],
+        "texts": [],
+        # ── Institution-specific fields ──
+        "institutionType": type_label,
+        "divisionCode": div_code,
+        "divisionHeading": div_heading,
+        "isActive": is_active,
+        # ── Historical significance ──
+        "historicalSignificance": {
+            "score": sig_score,
+            "label": sig_label,
+            "sitelinks": sitelinks,
+        },
+        # ── Appwrite seeding flag ──
+        "inAppwrite": False,
+    }
+
+    # Optional fields
+    if founded_display:
+        entity["founded"] = founded_display
+    if founding_year:
+        entity["foundedYear"] = founding_year
+    if dissolved_display:
+        entity["dissolved"] = dissolved_display
+    if dissolved_year:
+        entity["dissolvedYear"] = dissolved_year
+    if headquarters:
+        entity["headquarters"] = headquarters
+        entity["places"].append({"name": headquarters, "role": "Headquarters"})
+    if founder and not re.match(r'^Q\d+$', founder):
+        entity["founder"] = founder
+    if country_name and country_name != "Global":
+        entity["places"].append({"name": country_name, "role": "Country"})
+
+    # Wikidata metadata
+    if qid:
+        entity["wikidataQid"] = qid
+    if wiki_url:
+        entity["wikipediaUrl"] = wiki_url
+    if image_url:
+        entity["imageUrl"] = image_url
+
+    return entity
+
+
+# ═══════════════════════════════════════════════════════════════════
+# Main
+# ═══════════════════════════════════════════════════════════════════
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Fetch notable institutions from Wikidata"
+    )
+    parser.add_argument(
+        "--limit", type=int, default=500,
+        help="Max results per type-batch SPARQL query (default: 500)",
+    )
+    parser.add_argument(
+        "--dry-run", action="store_true",
+        help="Print SPARQL queries without executing",
+    )
+    parser.add_argument(
+        "--output", type=str, default=None,
+        help="Output JSON file path",
+    )
+    args = parser.parse_args()
+
+    # Output path
+    project_root = Path(__file__).resolve().parent.parent
+    output_path = (
+        Path(args.output) if args.output
+        else project_root / "data" / "wikidata_institutions.json"
+    )
+
+    print("=" * 70)
+    print("  Wikidata Institutions Fetch — Annals of the World")
+    print("=" * 70)
+    print(f"  Limit per batch:   {args.limit}")
+    print(f"  Output:            {output_path}")
+    print(f"  Type batches:      {len(INSTITUTION_QUERIES)}")
+    print(f"  Division coverage: 310-394 (9 major groups, 36 sub-divisions)")
+    print()
+
+    all_entities: list[dict[str, Any]] = []
+    seen_slugs: set[str] = set()
+    total_raw = 0
+
+    for batch_name, type_qids in INSTITUTION_QUERIES.items():
+        print(f"[{batch_name}]  Querying {len(type_qids)} type(s) ...")
+        query = build_sparql_query(type_qids, limit=args.limit)
+
+        if args.dry_run:
+            print(f"  (dry-run) SPARQL query for {batch_name}:")
+            print(query[:300] + " ...\n")
+            continue
+
+        rows = fetch_sparql(query)
+        total_raw += len(rows)
+        print(f"  Got {len(rows)} raw results")
+
+        batch_count = 0
+        for row in rows:
+            entity = transform_institution(row)
+            if not entity:
+                continue
+            # Deduplicate by slug
+            if entity["slug"] in seen_slugs:
+                continue
+            seen_slugs.add(entity["slug"])
+            all_entities.append(entity)
+            batch_count += 1
+
+        print(f"  → {batch_count} unique entities added (total so far: {len(all_entities)})")
+        # Be polite to Wikidata — pause between batches
+        time.sleep(3)
+
+    if args.dry_run:
+        print("\nDry run complete — no data fetched.")
+        return
+
+    # ── Sort by era then name ──
+    era_order = {
+        "Prehistoric": 0, "Classical": 1, "Medieval": 2,
+        "Early Modern": 3, "Modern": 4, "Contemporary": 5,
+    }
+    all_entities.sort(key=lambda e: (era_order.get(e["era"], 9), e["name"]))
+
+    # ── Compute statistics ──
+    div_counts: dict[str, int] = {}
+    era_counts: dict[str, int] = {}
+    sig_dist: dict[str, int] = {}
+    continent_counts: dict[str, int] = {}
+    for e in all_entities:
+        div = e["callNumber"][:3]
+        div_counts[div] = div_counts.get(div, 0) + 1
+        era_counts[e["era"]] = era_counts.get(e["era"], 0) + 1
+        sl = e["historicalSignificance"]["label"]
+        sig_dist[sl] = sig_dist.get(sl, 0) + 1
+        ct = e.get("continent", "Global")
+        continent_counts[ct] = continent_counts.get(ct, 0) + 1
+
+    # ── Write JSON ──
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_data = {
+        "_meta": {
+            "source": "Wikidata SPARQL (query.wikidata.org)",
+            "generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+            "total_raw_results": total_raw,
+            "total_unique_entities": len(all_entities),
+            "label": "Institution",
+            "classCode": 3,
+            "classHeading": "Institutions",
+            "division_counts": dict(sorted(div_counts.items())),
+            "era_counts": dict(sorted(era_counts.items())),
+            "significance_distribution": dict(sorted(sig_dist.items())),
+            "continent_counts": dict(sorted(continent_counts.items())),
+            "significance_scale": {
+                "1-2": "Minor — documented but limited global impact",
+                "3-4": "Moderate — nationally significant",
+                "5-6": "Notable — regionally or thematically important",
+                "7-8": "Major — globally recognized",
+                "9-10": "Landmark — world-shaping institution",
+            },
+            "inAppwrite_note": (
+                "All entities have inAppwrite=false. Use historicalSignificance.score "
+                "to prioritize high-significance institutions for Appwrite seeding."
+            ),
+            "note": (
+                "Each entity follows the Annals of the World Entity schema "
+                "(Institution label, Class 3 divisions 310-394)"
+            ),
+        },
+        "entities": all_entities,
+    }
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(output_data, f, indent=2, ensure_ascii=False)
+
+    # ── Report ──
+    print()
+    print("=" * 70)
+    print("  Fetch Complete")
+    print("=" * 70)
+    print(f"  Raw results:       {total_raw}")
+    print(f"  Unique entities:   {len(all_entities)}")
+    print(f"  Output:            {output_path}")
+    print()
+    print("  By division:")
+    for div, count in sorted(div_counts.items()):
+        print(f"    {div}: {count}")
+    print()
+    print("  By era:")
+    for era_name, count in sorted(era_counts.items(), key=lambda x: era_order.get(x[0], 9)):
+        print(f"    {era_name}: {count}")
+    print()
+    print("  By significance:")
+    for label, count in sorted(sig_dist.items()):
+        print(f"    {label}: {count}")
+    print()
+    print("  By continent:")
+    for ct, count in sorted(continent_counts.items(), key=lambda x: -x[1]):
+        print(f"    {ct}: {count}")
+    print()
+
+    # Quick top-10 most significant
+    top10 = sorted(
+        all_entities,
+        key=lambda e: (-e["historicalSignificance"]["score"], e["name"]),
+    )[:10]
+    print("  Top 10 by historical significance:")
+    for i, e in enumerate(top10, 1):
+        sig = e["historicalSignificance"]
+        print(f"    {i:2d}. [{sig['score']:2d} {sig['label']:>8s}] {e['name']}")
+
+
+if __name__ == "__main__":
+    main()
