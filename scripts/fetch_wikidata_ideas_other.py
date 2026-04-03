@@ -2,6 +2,15 @@
 """
 fetch_wikidata_ideas_other.py  (v1.0)
 
+DEPRECATED: Output has been consolidated into data/wikidata_ideas.json
+via scripts/merge_ideas_data.py. The separate data/wikidata_ideas_other.json
+file no longer exists. This script is retained for reference only.
+
+To re-fetch Class 1 data, run this script with --output data/wikidata_ideas_other.json
+then re-run scripts/merge_ideas_data.py to consolidate.
+
+---
+
 Dedicated Wikidata fetch for Class 1 — Ideas (Other): Economic, Scientific,
 Technological, Religious, Cultural, Environmental, Artistic theories and
 paradigms. Covers ALL divisions 110-173 with 250+ Wikidata type QIDs,
@@ -14,7 +23,7 @@ Enhanced over the combined ideas script with:
   - Lower sitelink thresholds (>=2) for gap-filling
   - Additional discovery QIDs per division
 
-Output: data/wikidata_ideas_other.json
+Original output: data/wikidata_ideas_other.json (now merged)
 
 Usage:
     python3 scripts/fetch_wikidata_ideas_other.py
