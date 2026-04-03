@@ -11,6 +11,9 @@ import {
   GraduationCap, Scroll, Target, Layers, Microscope,
   BarChart3, Map, Cpu, TrendingUp, CheckCircle2,
   Scale, Library, Sparkles, BookMarked,
+  HardDrive, Users, Landmark, Building2, MapPin,
+  Lightbulb, Wrench, Swords, Flag, CalendarRange,
+  FileText, Server, Zap, ShieldCheck, Gem,
 } from 'lucide-react'
 
 /* ─── Constants ─── */
@@ -172,6 +175,116 @@ const ENCYCLOPEDIA_COMPARISONS = [
     icon: Network,
     color: '#D4AF37',
   },
+]
+
+/* ─── Wikidata Fetch Census ─── */
+interface WikidataFileStats {
+  name: string
+  classNumber: number
+  count: number
+  sizeMB: number
+  icon: React.ElementType
+  color: string
+  divisions: number
+  eraBreakdown: Record<string, number>
+  significance: Record<string, number>
+}
+
+const WIKIDATA_CENSUS: WikidataFileStats[] = [
+  { name: 'People', classNumber: 2, count: 238_466, sizeMB: 797.9, icon: Users, color: '#4A90D9', divisions: 34,
+    eraBreakdown: { Classical: 6845, Contemporary: 90419, 'Early Modern': 22467, Medieval: 8564, Modern: 110160, Prehistoric: 11 },
+    significance: { Landmark: 1597, Major: 20057, Notable: 99270, Moderate: 117119, Minor: 423 } },
+  { name: 'Institutions', classNumber: 3, count: 36_738, sizeMB: 62.6, icon: Building2, color: '#2F855A', divisions: 41,
+    eraBreakdown: { Classical: 7401, Contemporary: 14999, 'Early Modern': 2448, Medieval: 2965, Modern: 8924, Prehistoric: 1 },
+    significance: { Landmark: 19, Major: 336, Notable: 1500, Moderate: 11783, Minor: 23100 } },
+  { name: 'Places', classNumber: 4, count: 25_768, sizeMB: 38.3, icon: MapPin, color: '#DD6B20', divisions: 25,
+    eraBreakdown: { Classical: 17907, Contemporary: 2400, 'Early Modern': 1192, Medieval: 1571, Modern: 2628, Prehistoric: 70 },
+    significance: { Landmark: 477, Major: 1279, Notable: 4123, Moderate: 10864, Minor: 9025 } },
+  { name: 'Ideas', classNumber: 1, count: 21_689, sizeMB: 30.8, icon: Lightbulb, color: '#6B3FA0', divisions: 54,
+    eraBreakdown: { Classical: 15696, Contemporary: 4029, 'Early Modern': 292, Medieval: 192, Modern: 1475, Prehistoric: 5 },
+    significance: { Landmark: 5, Major: 455, Notable: 1015, Moderate: 3837, Minor: 16377 } },
+  { name: 'Artifacts', classNumber: 7, count: 17_328, sizeMB: 26.4, icon: Wrench, color: '#8B3A3A', divisions: 32,
+    eraBreakdown: { Classical: 10545, Contemporary: 2574, 'Early Modern': 1055, Medieval: 697, Modern: 2359, Prehistoric: 98 },
+    significance: { Landmark: 26, Major: 722, Notable: 1728, Moderate: 3741, Minor: 11111 } },
+  { name: 'Events', classNumber: 5, count: 12_894, sizeMB: 17.7, icon: Swords, color: '#C53030', divisions: 28,
+    eraBreakdown: { Classical: 5254, Contemporary: 2125, 'Early Modern': 1456, Medieval: 1188, Modern: 2870, Prehistoric: 1 },
+    significance: { Landmark: 1, Major: 94, Notable: 348, Moderate: 2351, Minor: 10100 } },
+  { name: 'Evidence', classNumber: 8, count: 8_282, sizeMB: 13.1, icon: ShieldCheck, color: '#718096', divisions: 18,
+    eraBreakdown: { Classical: 6447, Contemporary: 454, 'Early Modern': 183, Medieval: 317, Modern: 810, Prehistoric: 71 },
+    significance: { Landmark: 3, Major: 43, Notable: 225, Moderate: 1328, Minor: 6683 } },
+  { name: 'Movements', classNumber: 6, count: 8_084, sizeMB: 10.8, icon: Flag, color: '#D4AF37', divisions: 42,
+    eraBreakdown: { Classical: 23, Contemporary: 2515, 'Early Modern': 104, Medieval: 52, Modern: 5368 },
+    significance: { Landmark: 1, Major: 143, Notable: 501, Moderate: 2039, Minor: 5378 } },
+  { name: 'Timeframes', classNumber: 9, count: 3_529, sizeMB: 4.5, icon: CalendarRange, color: '#96770B', divisions: 13,
+    eraBreakdown: { Classical: 3093, Contemporary: 47, 'Early Modern': 60, Medieval: 93, Modern: 91, Prehistoric: 145 },
+    significance: { Landmark: 5, Major: 45, Notable: 432, Moderate: 789, Minor: 2258 } },
+]
+
+const WIKIDATA_TOTAL = WIKIDATA_CENSUS.reduce((s, f) => s + f.count, 0)
+const WIKIDATA_TOTAL_SIZE_GB = (WIKIDATA_CENSUS.reduce((s, f) => s + f.sizeMB, 0) / 1024).toFixed(2)
+
+const ERA_ORDER = ['Prehistoric', 'Classical', 'Medieval', 'Early Modern', 'Modern', 'Contemporary']
+const ERA_COLORS: Record<string, string> = {
+  Prehistoric: '#6B4D1B', Classical: '#8B4513', Medieval: '#A67C2E',
+  'Early Modern': '#C5963A', Modern: '#4A90D9', Contemporary: '#6B3FA0',
+}
+const SIG_ORDER = ['Landmark', 'Major', 'Notable', 'Moderate', 'Minor']
+const SIG_COLORS: Record<string, string> = {
+  Landmark: '#D4AF37', Major: '#4A90D9', Notable: '#2F855A', Moderate: '#718096', Minor: '#A0AEC0',
+}
+
+/* ─── Big Data Dimensions (5 V's) ─── */
+const BIG_DATA_DIMENSIONS = [
+  {
+    v: 'Volume',
+    icon: HardDrive,
+    color: '#4A90D9',
+    current: `372,778 entities · ${WIKIDATA_TOTAL_SIZE_GB} GB raw data · ~1.86M projected edges`,
+    target: '1,000,000 nodes · 5M+ edges · 10+ GB structured graph data',
+    score: 37, // % toward big data threshold
+  },
+  {
+    v: 'Variety',
+    icon: Layers,
+    color: '#6B3FA0',
+    current: '10 node classes · 287 divisions · 55+ relationship verbs · 16 frameworks · 6 evidence tiers',
+    target: 'Full ontology operational — heterogeneous, multi-modal knowledge graph',
+    score: 85,
+  },
+  {
+    v: 'Veracity',
+    icon: ShieldCheck,
+    color: '#2F855A',
+    current: '6-tier evidence hierarchy · curator-verified · Wikidata-sourced QIDs · Wikipedia cross-references',
+    target: 'All interpretive edges citation-backed with FRAMED_BY evidence chains',
+    score: 70,
+  },
+  {
+    v: 'Velocity',
+    icon: Zap,
+    color: '#D4AF37',
+    current: 'Batch ingest: 372K entities in 9 automated SPARQL pipelines. UI catalog: 16,505 entities',
+    target: 'Streaming ingest from Wikidata/SPARQL + live curator submissions',
+    score: 40,
+  },
+  {
+    v: 'Value',
+    icon: Gem,
+    color: '#C53030',
+    current: 'Causal chains, multi-framework analysis, Dewey call numbers, cross-civilization pattern detection',
+    target: 'Computationally queryable knowledge graph powering research, AI, and education',
+    score: 75,
+  },
+]
+
+/* ─── Knowledge Graph Comparisons ─── */
+const GRAPH_COMPARISONS = [
+  { name: 'DBpedia', nodes: '~6.8M', edges: '~1.3B', scope: 'Wikipedia structured data' },
+  { name: 'YAGO', nodes: '~64M', edges: '~200M', scope: 'Wikipedia + WordNet + GeoNames' },
+  { name: 'Wikidata', nodes: '~108M', edges: '~1.5B', scope: 'Community knowledge base' },
+  { name: 'Google KG', nodes: '~500B', edges: 'N/A', scope: 'Web-scale entity graph' },
+  { name: 'Annals (current)', nodes: '372,778', edges: '~1.86M est.', scope: '72,000 years · 199 countries' },
+  { name: 'Annals (target)', nodes: '1,000,000', edges: '~5M est.', scope: 'Complete human history graph' },
 ]
 
 /* ─── Scholarly Impact Dimensions ─── */
@@ -400,6 +513,316 @@ export default function Curator() {
           <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace' color="#718096" mt={3} textAlign="right">
             Annals Backend — {totalNodes?.toLocaleString() ?? '…'} entities · Appwrite Cloud
           </Text>
+        </Box>
+      </Box>
+
+      {/* ─── Wikidata Fetch Census ─── */}
+      <Box mb={10}>
+        <SectionHeading
+          title="Wikidata Fetch Census"
+          subtitle={`${WIKIDATA_TOTAL.toLocaleString()} entities harvested across 9 automated SPARQL pipelines — ${WIKIDATA_TOTAL_SIZE_GB} GB raw data`}
+        />
+
+        {/* Grand totals row */}
+        <SimpleGrid columns={{ base: 1, md: 3 }} gap={4} mt={6} mb={6}>
+          <StatCard value={WIKIDATA_TOTAL.toLocaleString()} label="Total Wikidata Entities" color="#4A90D9" />
+          <StatCard value={`${WIKIDATA_TOTAL_SIZE_GB} GB`} label="Raw JSON Data Volume" color="#6B3FA0" />
+          <StatCard value="9" label="Fetch Pipelines (10 Classes)" color="#2F855A" />
+        </SimpleGrid>
+
+        {/* Per-file breakdown bars */}
+        <Box p={5} bg="#082340" borderRadius="xl" mb={6}>
+          <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#D4AF37" mb={4}>
+            Entities by Node Class
+          </Text>
+          {WIKIDATA_CENSUS.map(f => {
+            const Icon = f.icon
+            const pct = (f.count / WIKIDATA_TOTAL * 100)
+            return (
+              <Flex key={f.name} align="center" gap={3} mb={3}>
+                <Flex align="center" gap={2} minW="130px">
+                  <Icon size={14} color={f.color} />
+                  <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color={f.color} fontWeight={600}>
+                    {f.name}
+                  </Text>
+                </Flex>
+                <Box flex={1} h="18px" bg="#1A3A5C" borderRadius="md" overflow="hidden">
+                  <Box h="100%" bg={f.color} w={`${(f.count / WIKIDATA_CENSUS[0].count) * 100}%`}
+                    borderRadius="md" transition="width 0.3s" />
+                </Box>
+                <Flex align="baseline" gap={2} minW="150px" justify="flex-end">
+                  <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#E8F0FE" fontWeight={600}>
+                    {f.count.toLocaleString()}
+                  </Text>
+                  <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">
+                    ({pct.toFixed(1)}%)
+                  </Text>
+                </Flex>
+              </Flex>
+            )
+          })}
+          <Flex justify="space-between" mt={4} pt={3} borderTop="1px solid #1A3A5C">
+            <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#D4AF37" fontWeight={700}>
+              TOTAL
+            </Text>
+            <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#D4AF37" fontWeight={700}>
+              {WIKIDATA_TOTAL.toLocaleString()} entities · {WIKIDATA_CENSUS.reduce((s, f) => s + f.divisions, 0)} divisions
+            </Text>
+          </Flex>
+        </Box>
+
+        {/* Era Distribution */}
+        <SimpleGrid columns={{ base: 1, lg: 2 }} gap={6} mb={6}>
+          <Box p={5} bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="xl">
+            <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#2D2A24" mb={4}>
+              Era Distribution — All Classes Combined
+            </Text>
+            {(() => {
+              const eraTotals: Record<string, number> = {}
+              WIKIDATA_CENSUS.forEach(f =>
+                Object.entries(f.eraBreakdown).forEach(([era, n]) => { eraTotals[era] = (eraTotals[era] || 0) + n })
+              )
+              const maxEra = Math.max(...Object.values(eraTotals))
+              return ERA_ORDER.map(era => {
+                const count = eraTotals[era] || 0
+                return (
+                  <Flex key={era} align="center" gap={3} mb={2}>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color={ERA_COLORS[era]}
+                      minW="100px" fontWeight={600}>{era}</Text>
+                    <Box flex={1} h="14px" bg="#E4E2DC" borderRadius="md" overflow="hidden">
+                      <Box h="100%" bg={ERA_COLORS[era]} w={`${(count / maxEra) * 100}%`} borderRadius="md" />
+                    </Box>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#524E44" minW="55px" textAlign="right">
+                      {count.toLocaleString()}
+                    </Text>
+                  </Flex>
+                )
+              })
+            })()}
+            <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace' color="#718096" mt={3}>
+              Prehistoric entities are rare — a sign of genuine scholarly depth
+            </Text>
+          </Box>
+
+          {/* Significance Distribution */}
+          <Box p={5} bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="xl">
+            <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#2D2A24" mb={4}>
+              Historical Significance — All Classes Combined
+            </Text>
+            {(() => {
+              const sigTotals: Record<string, number> = {}
+              WIKIDATA_CENSUS.forEach(f =>
+                Object.entries(f.significance).forEach(([sig, n]) => { sigTotals[sig] = (sigTotals[sig] || 0) + n })
+              )
+              const maxSig = Math.max(...Object.values(sigTotals))
+              return SIG_ORDER.map(sig => {
+                const count = sigTotals[sig] || 0
+                const pct = (count / WIKIDATA_TOTAL * 100)
+                return (
+                  <Flex key={sig} align="center" gap={3} mb={2}>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color={SIG_COLORS[sig]}
+                      minW="80px" fontWeight={600}>{sig}</Text>
+                    <Box flex={1} h="14px" bg="#E4E2DC" borderRadius="md" overflow="hidden">
+                      <Box h="100%" bg={SIG_COLORS[sig]} w={`${(count / maxSig) * 100}%`} borderRadius="md" />
+                    </Box>
+                    <Flex minW="100px" justify="flex-end" gap={2}>
+                      <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#524E44">
+                        {count.toLocaleString()}
+                      </Text>
+                      <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">
+                        ({pct.toFixed(1)}%)
+                      </Text>
+                    </Flex>
+                  </Flex>
+                )
+              })
+            })()}
+            <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace' color="#718096" mt={3}>
+              Pyramid distribution: few Landmarks, wide Moderate base — healthy knowledge graph
+            </Text>
+          </Box>
+        </SimpleGrid>
+
+        {/* Per-class detail grid */}
+        <Box p={5} bg="#FDF8ED" border="1px solid #D4AF37" borderRadius="xl">
+          <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#4A310D" mb={4}>
+            Per-Class Breakdown — Divisions, Size & Top Era
+          </Text>
+          <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={4}>
+            {WIKIDATA_CENSUS.map(f => {
+              const Icon = f.icon
+              const topEra = Object.entries(f.eraBreakdown).sort((a, b) => b[1] - a[1])[0]
+              const topSig = Object.entries(f.significance).sort((a, b) => b[1] - a[1])[0]
+              return (
+                <Box key={f.name} p={4} bg="white" borderRadius="lg" border="1px solid #E4E2DC"
+                  borderLeft="4px solid" borderLeftColor={f.color}>
+                  <Flex align="center" gap={2} mb={2}>
+                    <Icon size={16} color={f.color} />
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="sm" fontWeight={700} color={f.color}>
+                      Class {f.classNumber} — {f.name}
+                    </Text>
+                  </Flex>
+                  <SimpleGrid columns={2} gap={1}>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">Entities</Text>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#2D2A24" fontWeight={600}>
+                      {f.count.toLocaleString()}
+                    </Text>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">Divisions</Text>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#2D2A24" fontWeight={600}>
+                      {f.divisions}
+                    </Text>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">Data Size</Text>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#2D2A24" fontWeight={600}>
+                      {f.sizeMB} MB
+                    </Text>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">Top Era</Text>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color={ERA_COLORS[topEra[0]]} fontWeight={600}>
+                      {topEra[0]} ({topEra[1].toLocaleString()})
+                    </Text>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096">Mode Tier</Text>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color={SIG_COLORS[topSig[0]]} fontWeight={600}>
+                      {topSig[0]} ({topSig[1].toLocaleString()})
+                    </Text>
+                  </SimpleGrid>
+                </Box>
+              )
+            })}
+          </SimpleGrid>
+        </Box>
+      </Box>
+
+      {/* ─── Big Data Analysis ─── */}
+      <Box mb={10}>
+        <SectionHeading
+          title="Big Data Readiness Assessment"
+          subtitle="Evaluating the Annals knowledge graph against the 5 V's of Big Data"
+        />
+        <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#524E44" lineHeight={1.8} mt={2} mb={6} maxW="800px">
+          At <strong>{WIKIDATA_TOTAL.toLocaleString()} entities</strong> across{' '}
+          <strong>{WIKIDATA_TOTAL_SIZE_GB} GB</strong> of structured data, Annals of the World is a{' '}
+          <strong>medium-scale knowledge graph</strong> — larger than most academic datasets, though not yet at the
+          petabyte thresholds of industry "big data." However, when counting projected relationship edges (~1.86M),
+          interpretive framework assignments, and the target of 1M nodes / 5M+ edges, the project is on a clear
+          trajectory toward <strong>large-scale graph computing</strong>.
+        </Text>
+
+        {/* 5 V's Progress Bars */}
+        <Box p={5} bg="#082340" borderRadius="xl" mb={6}>
+          <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#D4AF37" mb={4}>
+            The 5 V's of Big Data — Current Status
+          </Text>
+          {BIG_DATA_DIMENSIONS.map(d => {
+            const Icon = d.icon
+            return (
+              <Box key={d.v} mb={5}>
+                <Flex align="center" gap={2} mb={1}>
+                  <Icon size={16} color={d.color} />
+                  <Text fontFamily='"Cinzel", serif' fontSize="sm" fontWeight={700} color={d.color}>
+                    {d.v}
+                  </Text>
+                  <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#718096" ml="auto">
+                    {d.score}%
+                  </Text>
+                </Flex>
+                <Box w="100%" h="10px" bg="#1A3A5C" borderRadius="full" overflow="hidden" mb={2}>
+                  <Box h="100%" w={`${d.score}%`} bg={d.color} borderRadius="full" transition="width 0.5s" />
+                </Box>
+                <SimpleGrid columns={{ base: 1, md: 2 }} gap={2}>
+                  <Box>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#4A90D9" mb={1}>CURRENT</Text>
+                    <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#B8D4FE" lineHeight={1.6}>
+                      {d.current}
+                    </Text>
+                  </Box>
+                  <Box>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#D4AF37" mb={1}>TARGET</Text>
+                    <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#B8D4FE" lineHeight={1.6}>
+                      {d.target}
+                    </Text>
+                  </Box>
+                </SimpleGrid>
+              </Box>
+            )
+          })}
+          <Flex justify="space-between" mt={4} pt={3} borderTop="1px solid #1A3A5C">
+            <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#D4AF37" fontWeight={700}>
+              COMPOSITE SCORE
+            </Text>
+            <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#D4AF37" fontWeight={700}>
+              {Math.round(BIG_DATA_DIMENSIONS.reduce((s, d) => s + d.score, 0) / BIG_DATA_DIMENSIONS.length)}% — Medium-Scale Knowledge Graph
+            </Text>
+          </Flex>
+        </Box>
+
+        {/* Knowledge Graph Comparisons */}
+        <Box p={5} bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="xl" mb={6}>
+          <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#2D2A24" mb={4}>
+            Knowledge Graph Scale Comparison
+          </Text>
+          <Box overflowX="auto">
+            <Box as="table" w="100%" fontSize="xs" fontFamily='"JetBrains Mono", monospace'>
+              <Box as="thead">
+                <Box as="tr" bg="#082340">
+                  {['Graph', 'Nodes', 'Edges', 'Scope'].map(h => (
+                    <Box as="th" key={h} p={2} textAlign="left" color="#D4AF37" fontWeight={700} fontSize="10px">
+                      {h}
+                    </Box>
+                  ))}
+                </Box>
+              </Box>
+              <Box as="tbody">
+                {GRAPH_COMPARISONS.map((g, i) => (
+                  <Box as="tr" key={g.name} bg={i % 2 === 0 ? 'white' : '#FDF8ED'}
+                    fontWeight={g.name.includes('Annals') ? 700 : 400}
+                    color={g.name.includes('Annals') ? '#D4AF37' : '#524E44'}>
+                    <Box as="td" p={2}>{g.name}</Box>
+                    <Box as="td" p={2}>{g.nodes}</Box>
+                    <Box as="td" p={2}>{g.edges}</Box>
+                    <Box as="td" p={2}>{g.scope}</Box>
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+
+        {/* Verdict */}
+        <Box p={5} bg="#FDF8ED" border="1px solid #D4AF37" borderRadius="xl">
+          <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#4A310D" mb={3}>
+            The Verdict: Not Yet "Big Data" — But Structurally Significant
+          </Text>
+          <SimpleGrid columns={{ base: 1, md: 3 }} gap={4}>
+            <Box p={4} bg="white" borderRadius="lg" border="1px solid #E4E2DC">
+              <Text fontFamily='"JetBrains Mono", monospace' fontSize="11px" color="#C53030" fontWeight={700} mb={2}>
+                BY INDUSTRY STANDARDS
+              </Text>
+              <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#524E44" lineHeight={1.6}>
+                Big data typically means petabytes (PB) of data processed across distributed systems.
+                At ~1 GB / 372K nodes, Annals is a <strong>medium-scale dataset</strong> — large for
+                academic humanities, modest by tech industry metrics.
+              </Text>
+            </Box>
+            <Box p={4} bg="white" borderRadius="lg" border="1px solid #E4E2DC">
+              <Text fontFamily='"JetBrains Mono", monospace' fontSize="11px" color="#2F855A" fontWeight={700} mb={2}>
+                BY KNOWLEDGE GRAPH STANDARDS
+              </Text>
+              <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#524E44" lineHeight={1.6}>
+                372K nodes with ~5 relationships each = ~1.86M edges. This is a <strong>serious research graph</strong>,
+                comparable in depth (not breadth) to early DBpedia. At 1M nodes / 5M edges,
+                Annals enters <strong>large-scale graph territory</strong>.
+              </Text>
+            </Box>
+            <Box p={4} bg="white" borderRadius="lg" border="1px solid #E4E2DC">
+              <Text fontFamily='"JetBrains Mono", monospace' fontSize="11px" color="#4A90D9" fontWeight={700} mb={2}>
+                BY DIGITAL HUMANITIES STANDARDS
+              </Text>
+              <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#524E44" lineHeight={1.6}>
+                This is <strong>among the largest structured historical datasets</strong> in existence.
+                Most DH projects work with thousands of entities. At 372K entities across 10 classes,
+                199 countries, and 72,000 years, Annals exceeds the scale of most funded DH initiatives.
+              </Text>
+            </Box>
+          </SimpleGrid>
         </Box>
       </Box>
 
