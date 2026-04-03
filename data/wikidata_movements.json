@@ -4,7 +4,7 @@
     "generated": "2026-04-03T05:10:50Z",
     "version": "3.0",
     "total_raw_results": 20016,
-    "total_unique_entities": 8062,
+    "total_unique_entities": 8084,
     "label": "Movement",
     "classCode": 6,
     "classHeading": "Movements",
@@ -33,6 +33,7 @@
       "623": 21,
       "624": 435,
       "625": 64,
+      "626": 6,
       "630": 568,
       "631": 293,
       "632": 7,
@@ -46,6 +47,8 @@
       "644": 2127,
       "645": 39,
       "650": 801,
+      "651": 5,
+      "652": 4,
       "653": 2,
       "660": 5,
       "661": 1,
@@ -57,6 +60,7 @@
       "673": 2,
       "680": 8,
       "681": 1,
+      "682": 7,
       "683": 1
     },
     "era_counts": {
@@ -89,7 +93,14 @@
       "9-10": "Landmark -- world-shaping movement"
     },
     "inAppwrite_note": "All entities have inAppwrite=false.",
-    "note": "Wikidata movements v3.0 — instantiable types + keyword division refinement + fast-fail retries, covering Class 6 divisions 610-683."
+    "note": "Wikidata movements v3.0 — instantiable types + keyword division refinement + fast-fail retries, covering Class 6 divisions 610-683. Gap divisions (626, 651, 652, 682) filled with hand-curated entries.",
+    "patched": "2026-04-03T05:35:26Z",
+    "gap_divisions_filled": [
+      "626",
+      "651",
+      "652",
+      "682"
+    ]
   },
   "entities": [
     {
@@ -399994,6 +400005,1085 @@
       "startYear": 1998,
       "date": "1998-06-13",
       "wikidataQid": "Q3624010"
+    },
+    {
+      "slug": "independent-living-movement",
+      "name": "Independent Living Movement",
+      "label": "Movement",
+      "callNumber": "626.independent-living-movement",
+      "subjectHeadings": [
+        "Movements -- Disability Rights & Inclusion -- United States -- Contemporary"
+      ],
+      "subjects": [
+        "United States",
+        "Americas",
+        "Disability Rights & Inclusion"
+      ],
+      "summary": "Founded in the 1960s–70s by Ed Roberts and others at UC Berkeley, the Independent Living Movement asserted that people with disabilities should have control over their own lives. It led to the creation of Centers for Independent Living worldwide and influenced the Americans with Disabilities Act.",
+      "era": "Contemporary",
+      "eraSlug": "contemporary",
+      "region": "North America",
+      "continent": "Americas",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "independent-living-movement",
+          "sourceName": "Independent Living Movement",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-movement",
+          "targetName": "United States",
+          "context": "Independent Living Movement originated in United States"
+        }
+      ],
+      "places": [
+        {
+          "name": "United States",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "626",
+      "divisionHeading": "Disability Rights & Inclusion",
+      "historicalSignificance": {
+        "score": 7,
+        "label": "Major",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1962,
+      "wikidataQid": "Q6017030"
+    },
+    {
+      "slug": "disability-rights-movement",
+      "name": "Disability Rights Movement",
+      "label": "Movement",
+      "callNumber": "626.disability-rights-movement",
+      "subjectHeadings": [
+        "Movements -- Disability Rights & Inclusion -- Global -- Contemporary"
+      ],
+      "subjects": [
+        "Disability Rights & Inclusion"
+      ],
+      "summary": "A broad social movement advocating civil rights, equal opportunity, and anti-discrimination legislation for people with disabilities. Emerged in the 1960s, it secured landmark legislation including the ADA (1990), the UK Disability Discrimination Act (1995), and the UN Convention on the Rights of Persons with Disabilities (2006).",
+      "era": "Contemporary",
+      "eraSlug": "contemporary",
+      "region": "Global",
+      "continent": "Global",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [],
+      "places": [],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "626",
+      "divisionHeading": "Disability Rights & Inclusion",
+      "historicalSignificance": {
+        "score": 8,
+        "label": "Major",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1960,
+      "wikidataQid": "Q50726037"
+    },
+    {
+      "slug": "deaf-culture-movement",
+      "name": "Deaf Culture Movement",
+      "label": "Movement",
+      "callNumber": "626.deaf-culture-movement",
+      "subjectHeadings": [
+        "Movements -- Disability Rights & Inclusion -- United States -- Contemporary"
+      ],
+      "subjects": [
+        "United States",
+        "Americas",
+        "Disability Rights & Inclusion"
+      ],
+      "summary": "A cultural and political movement asserting the identity, language rights, and cultural heritage of Deaf communities. Advocates for sign language recognition, Deaf education, and the view of deafness as a cultural difference rather than a disability.",
+      "era": "Contemporary",
+      "eraSlug": "contemporary",
+      "region": "North America",
+      "continent": "Americas",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "deaf-culture-movement",
+          "sourceName": "Deaf Culture Movement",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-movement",
+          "targetName": "United States",
+          "context": "Deaf Culture Movement originated in United States"
+        }
+      ],
+      "places": [
+        {
+          "name": "United States",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "626",
+      "divisionHeading": "Disability Rights & Inclusion",
+      "historicalSignificance": {
+        "score": 6,
+        "label": "Notable",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1960,
+      "wikidataQid": "Q3462104"
+    },
+    {
+      "slug": "neurodiversity-movement",
+      "name": "Neurodiversity Movement",
+      "label": "Movement",
+      "callNumber": "626.neurodiversity-movement",
+      "subjectHeadings": [
+        "Movements -- Disability Rights & Inclusion -- Global -- Contemporary"
+      ],
+      "subjects": [
+        "Disability Rights & Inclusion"
+      ],
+      "summary": "A social movement that frames neurological differences such as autism, ADHD, and dyslexia as natural variations of the human genome rather than disorders to be cured. Coined by Judy Singer in 1998, it advocates for inclusion and accommodation.",
+      "era": "Contemporary",
+      "eraSlug": "contemporary",
+      "region": "Global",
+      "continent": "Global",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [],
+      "places": [],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "626",
+      "divisionHeading": "Disability Rights & Inclusion",
+      "historicalSignificance": {
+        "score": 6,
+        "label": "Notable",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1998,
+      "wikidataQid": "Q1758977"
+    },
+    {
+      "slug": "adapt-disability-advocacy",
+      "name": "ADAPT (American Disabled for Attendant Programs Today)",
+      "label": "Movement",
+      "callNumber": "626.adapt-disability-advocacy",
+      "subjectHeadings": [
+        "Movements -- Disability Rights & Inclusion -- United States -- Contemporary"
+      ],
+      "subjects": [
+        "United States",
+        "Americas",
+        "Disability Rights & Inclusion"
+      ],
+      "summary": "A grassroots disability rights organization in the United States known for direct action protests. Founded in 1983 by Wade Blank, ADAPT campaigned for accessible public transit and community-based attendant services.",
+      "era": "Contemporary",
+      "eraSlug": "contemporary",
+      "region": "North America",
+      "continent": "Americas",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "adapt-disability-advocacy",
+          "sourceName": "ADAPT (American Disabled for Attendant Programs Today)",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-advocacy",
+          "targetName": "United States",
+          "context": "ADAPT (American Disabled for Attendant Programs Today) originated in United States"
+        }
+      ],
+      "places": [
+        {
+          "name": "United States",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "626",
+      "divisionHeading": "Disability Rights & Inclusion",
+      "historicalSignificance": {
+        "score": 5,
+        "label": "Notable",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1983,
+      "wikidataQid": "Q4651587"
+    },
+    {
+      "slug": "section-504-sit-in",
+      "name": "Section 504 Sit-In",
+      "label": "Movement",
+      "callNumber": "626.section-504-sit-in",
+      "subjectHeadings": [
+        "Movements -- Disability Rights & Inclusion -- United States -- Contemporary"
+      ],
+      "subjects": [
+        "United States",
+        "Americas",
+        "Disability Rights & Inclusion"
+      ],
+      "summary": "A 1977 sit-in at the San Francisco Federal Building, lasting 25 days, demanding enforcement of Section 504 of the Rehabilitation Act. Led by Judith Heumann and disability activists, it became the longest occupation of a federal building and a landmark in disability rights history.",
+      "era": "Contemporary",
+      "eraSlug": "contemporary",
+      "region": "North America",
+      "continent": "Americas",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "section-504-sit-in",
+          "sourceName": "Section 504 Sit-In",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-in",
+          "targetName": "United States",
+          "context": "Section 504 Sit-In originated in United States"
+        }
+      ],
+      "places": [
+        {
+          "name": "United States",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "626",
+      "divisionHeading": "Disability Rights & Inclusion",
+      "historicalSignificance": {
+        "score": 6,
+        "label": "Notable",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1977,
+      "endYear": 1977
+    },
+    {
+      "slug": "scientific-revolution",
+      "name": "Scientific Revolution",
+      "label": "Movement",
+      "callNumber": "651.scientific-revolution",
+      "subjectHeadings": [
+        "Movements -- Scientific Revolution -- Global -- Early Modern"
+      ],
+      "subjects": [
+        "Scientific Revolution"
+      ],
+      "summary": "A period of major scientific transformation in Europe from roughly 1543 to 1687, with discoveries by Copernicus, Galileo, Kepler, and Newton fundamentally changing understanding of the natural world. Established the modern scientific method and institutions like the Royal Society.",
+      "era": "Early Modern",
+      "eraSlug": "early-modern",
+      "region": "Global",
+      "continent": "Global",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [],
+      "places": [],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "651",
+      "divisionHeading": "Scientific Revolution",
+      "historicalSignificance": {
+        "score": 10,
+        "label": "Landmark",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1543,
+      "endYear": 1687,
+      "wikidataQid": "Q18271"
+    },
+    {
+      "slug": "copernican-revolution",
+      "name": "Copernican Revolution",
+      "label": "Movement",
+      "callNumber": "651.copernican-revolution",
+      "subjectHeadings": [
+        "Movements -- Scientific Revolution -- Poland -- Early Modern"
+      ],
+      "subjects": [
+        "Poland",
+        "Europe",
+        "Scientific Revolution"
+      ],
+      "summary": "The paradigm shift from the geocentric Ptolemaic model to the heliocentric model proposed by Nicolaus Copernicus in De revolutionibus orbium coelestium (1543). This revolution in astronomy transformed cosmology and laid the foundation for modern physics.",
+      "era": "Early Modern",
+      "eraSlug": "early-modern",
+      "region": "Eastern Europe",
+      "continent": "Europe",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "copernican-revolution",
+          "sourceName": "Copernican Revolution",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-revolution",
+          "targetName": "Poland",
+          "context": "Copernican Revolution originated in Poland"
+        }
+      ],
+      "places": [
+        {
+          "name": "Poland",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "651",
+      "divisionHeading": "Scientific Revolution",
+      "historicalSignificance": {
+        "score": 9,
+        "label": "Landmark",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1543,
+      "wikidataQid": "Q482543"
+    },
+    {
+      "slug": "baconian-method",
+      "name": "Baconian Method",
+      "label": "Movement",
+      "callNumber": "651.baconian-method",
+      "subjectHeadings": [
+        "Movements -- Scientific Revolution -- United Kingdom -- Early Modern"
+      ],
+      "subjects": [
+        "United Kingdom",
+        "Europe",
+        "Scientific Revolution"
+      ],
+      "summary": "The empirical scientific method advocated by Francis Bacon in Novum Organum (1620), emphasizing observation, experimentation, and inductive reasoning. Bacon's framework became foundational for the Royal Society and modern experimental science.",
+      "era": "Early Modern",
+      "eraSlug": "early-modern",
+      "region": "Northern Europe",
+      "continent": "Europe",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "baconian-method",
+          "sourceName": "Baconian Method",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-method",
+          "targetName": "United Kingdom",
+          "context": "Baconian Method originated in United Kingdom"
+        }
+      ],
+      "places": [
+        {
+          "name": "United Kingdom",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "651",
+      "divisionHeading": "Scientific Revolution",
+      "historicalSignificance": {
+        "score": 7,
+        "label": "Major",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1620,
+      "wikidataQid": "Q16886049"
+    },
+    {
+      "slug": "royal-society-movement",
+      "name": "Royal Society and Scientific Societies",
+      "label": "Movement",
+      "callNumber": "651.royal-society-movement",
+      "subjectHeadings": [
+        "Movements -- Scientific Revolution -- United Kingdom -- Early Modern"
+      ],
+      "subjects": [
+        "United Kingdom",
+        "Europe",
+        "Scientific Revolution"
+      ],
+      "summary": "The founding of the Royal Society of London (1660) and similar national academies across Europe represented the institutionalization of the scientific method. These societies promoted peer review, experimental replication, and the dissemination of knowledge.",
+      "era": "Early Modern",
+      "eraSlug": "early-modern",
+      "region": "Northern Europe",
+      "continent": "Europe",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "royal-society-movement",
+          "sourceName": "Royal Society and Scientific Societies",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-movement",
+          "targetName": "United Kingdom",
+          "context": "Royal Society and Scientific Societies originated in United Kingdom"
+        }
+      ],
+      "places": [
+        {
+          "name": "United Kingdom",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "651",
+      "divisionHeading": "Scientific Revolution",
+      "historicalSignificance": {
+        "score": 8,
+        "label": "Major",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1660,
+      "wikidataQid": "Q123885"
+    },
+    {
+      "slug": "mechanical-philosophy",
+      "name": "Mechanical Philosophy",
+      "label": "Movement",
+      "callNumber": "651.mechanical-philosophy",
+      "subjectHeadings": [
+        "Movements -- Scientific Revolution -- Global -- Early Modern"
+      ],
+      "subjects": [
+        "Scientific Revolution"
+      ],
+      "summary": "A dominant intellectual movement of the 17th century that sought to explain all natural phenomena through matter and motion alone, rejecting Aristotelian forms. Key proponents included Descartes, Boyle, and Gassendi.",
+      "era": "Early Modern",
+      "eraSlug": "early-modern",
+      "region": "Global",
+      "continent": "Global",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [],
+      "places": [],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "651",
+      "divisionHeading": "Scientific Revolution",
+      "historicalSignificance": {
+        "score": 7,
+        "label": "Major",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1620,
+      "endYear": 1700,
+      "wikidataQid": "Q1706411"
+    },
+    {
+      "slug": "british-empiricism",
+      "name": "British Empiricism",
+      "label": "Movement",
+      "callNumber": "652.british-empiricism",
+      "subjectHeadings": [
+        "Movements -- Empiricism & Positivism -- United Kingdom -- Early Modern"
+      ],
+      "subjects": [
+        "United Kingdom",
+        "Europe",
+        "Empiricism & Positivism"
+      ],
+      "summary": "A philosophical tradition holding that knowledge comes primarily from sensory experience. Its principal figures — John Locke, George Berkeley, and David Hume — argued against innate ideas and shaped epistemology, political philosophy, and the scientific method.",
+      "era": "Early Modern",
+      "eraSlug": "early-modern",
+      "region": "Northern Europe",
+      "continent": "Europe",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "british-empiricism",
+          "sourceName": "British Empiricism",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-empiricism",
+          "targetName": "United Kingdom",
+          "context": "British Empiricism originated in United Kingdom"
+        }
+      ],
+      "places": [
+        {
+          "name": "United Kingdom",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "652",
+      "divisionHeading": "Empiricism & Positivism",
+      "historicalSignificance": {
+        "score": 8,
+        "label": "Major",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1689,
+      "endYear": 1776,
+      "wikidataQid": "Q185404"
+    },
+    {
+      "slug": "positivism-comte",
+      "name": "Positivism (Auguste Comte)",
+      "label": "Movement",
+      "callNumber": "652.positivism-comte",
+      "subjectHeadings": [
+        "Movements -- Empiricism & Positivism -- France -- Modern"
+      ],
+      "subjects": [
+        "France",
+        "Europe",
+        "Empiricism & Positivism"
+      ],
+      "summary": "A philosophical system founded by Auguste Comte in the 1830s, asserting that valid knowledge is found only in scientific observation. Comte's law of three stages (theological, metaphysical, positive) and his founding of sociology made positivism one of the most influential intellectual movements of the 19th century.",
+      "era": "Modern",
+      "eraSlug": "modern",
+      "region": "Western Europe",
+      "continent": "Europe",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "positivism-comte",
+          "sourceName": "Positivism (Auguste Comte)",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-comte",
+          "targetName": "France",
+          "context": "Positivism (Auguste Comte) originated in France"
+        }
+      ],
+      "places": [
+        {
+          "name": "France",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "652",
+      "divisionHeading": "Empiricism & Positivism",
+      "historicalSignificance": {
+        "score": 7,
+        "label": "Major",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1830,
+      "wikidataQid": "Q205985"
+    },
+    {
+      "slug": "pragmatism",
+      "name": "Pragmatism",
+      "label": "Movement",
+      "callNumber": "652.pragmatism",
+      "subjectHeadings": [
+        "Movements -- Empiricism & Positivism -- United States -- Modern"
+      ],
+      "subjects": [
+        "United States",
+        "Americas",
+        "Empiricism & Positivism"
+      ],
+      "summary": "An American philosophical tradition founded by Charles Sanders Peirce, William James, and John Dewey in the late 19th century. Pragmatism evaluates ideas by their practical consequences and empirical outcomes, bridging empiricism and action.",
+      "era": "Modern",
+      "eraSlug": "modern",
+      "region": "North America",
+      "continent": "Americas",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "pragmatism",
+          "sourceName": "Pragmatism",
+          "verb": "OCCURS_IN",
+          "targetSlug": "",
+          "targetName": "United States",
+          "context": "Pragmatism originated in United States"
+        }
+      ],
+      "places": [
+        {
+          "name": "United States",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "652",
+      "divisionHeading": "Empiricism & Positivism",
+      "historicalSignificance": {
+        "score": 7,
+        "label": "Major",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1878,
+      "wikidataQid": "Q271875"
+    },
+    {
+      "slug": "logical-empiricism",
+      "name": "Logical Empiricism",
+      "label": "Movement",
+      "callNumber": "652.logical-empiricism",
+      "subjectHeadings": [
+        "Movements -- Empiricism & Positivism -- United States -- Modern"
+      ],
+      "subjects": [
+        "United States",
+        "Americas",
+        "Empiricism & Positivism"
+      ],
+      "summary": "A refinement of logical positivism developed by Hans Reichenbach, Carl Hempel, and Rudolf Carnap after emigrating from Europe to the United States. Relaxed the strict verification principle while maintaining commitment to empirical science and formal logic.",
+      "era": "Modern",
+      "eraSlug": "modern",
+      "region": "North America",
+      "continent": "Americas",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "logical-empiricism",
+          "sourceName": "Logical Empiricism",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-empiricism",
+          "targetName": "United States",
+          "context": "Logical Empiricism originated in United States"
+        }
+      ],
+      "places": [
+        {
+          "name": "United States",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "652",
+      "divisionHeading": "Empiricism & Positivism",
+      "historicalSignificance": {
+        "score": 6,
+        "label": "Notable",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1936,
+      "wikidataQid": "Q131680"
+    },
+    {
+      "slug": "portuguese-age-of-discovery",
+      "name": "Portuguese Age of Discovery",
+      "label": "Movement",
+      "callNumber": "682.portuguese-age-of-discovery",
+      "subjectHeadings": [
+        "Movements -- Maritime Trade & Age of Sail -- Portugal -- Early Modern"
+      ],
+      "subjects": [
+        "Portugal",
+        "Europe",
+        "Maritime Trade & Age of Sail"
+      ],
+      "summary": "Portugal's maritime exploration movement beginning with Prince Henry the Navigator in the early 15th century. Portuguese sailors charted the African coast, discovered the sea route to India (Vasco da Gama, 1498), and established a global trading empire connecting Europe, Africa, Asia, and Brazil.",
+      "era": "Early Modern",
+      "eraSlug": "early-modern",
+      "region": "Southern Europe",
+      "continent": "Europe",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "portuguese-age-of-discovery",
+          "sourceName": "Portuguese Age of Discovery",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-discovery",
+          "targetName": "Portugal",
+          "context": "Portuguese Age of Discovery originated in Portugal"
+        }
+      ],
+      "places": [
+        {
+          "name": "Portugal",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "682",
+      "divisionHeading": "Maritime Trade & Age of Sail",
+      "historicalSignificance": {
+        "score": 9,
+        "label": "Landmark",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1415,
+      "endYear": 1543,
+      "wikidataQid": "Q133602"
+    },
+    {
+      "slug": "spanish-maritime-exploration",
+      "name": "Spanish Maritime Exploration",
+      "label": "Movement",
+      "callNumber": "682.spanish-maritime-exploration",
+      "subjectHeadings": [
+        "Movements -- Maritime Trade & Age of Sail -- Spain -- Early Modern"
+      ],
+      "subjects": [
+        "Spain",
+        "Europe",
+        "Maritime Trade & Age of Sail"
+      ],
+      "summary": "Spain's maritime expansion beginning with Columbus's 1492 voyage, establishing trade routes and colonial networks across the Americas, the Philippines, and the Pacific. The Manila Galleon trade (1565–1815) connected Asia to the Americas.",
+      "era": "Early Modern",
+      "eraSlug": "early-modern",
+      "region": "Southern Europe",
+      "continent": "Europe",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "spanish-maritime-exploration",
+          "sourceName": "Spanish Maritime Exploration",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-exploration",
+          "targetName": "Spain",
+          "context": "Spanish Maritime Exploration originated in Spain"
+        }
+      ],
+      "places": [
+        {
+          "name": "Spain",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "682",
+      "divisionHeading": "Maritime Trade & Age of Sail",
+      "historicalSignificance": {
+        "score": 9,
+        "label": "Landmark",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1492,
+      "endYear": 1815
+    },
+    {
+      "slug": "dutch-golden-age-trade",
+      "name": "Dutch Golden Age Maritime Trade",
+      "label": "Movement",
+      "callNumber": "682.dutch-golden-age-trade",
+      "subjectHeadings": [
+        "Movements -- Maritime Trade & Age of Sail -- Netherlands -- Early Modern"
+      ],
+      "subjects": [
+        "Netherlands",
+        "Europe",
+        "Maritime Trade & Age of Sail"
+      ],
+      "summary": "The Netherlands became the world's foremost maritime trading power in the 17th century through the Dutch East India Company (VOC) and Dutch West India Company. Dutch traders dominated the spice trade, established colonies, and pioneered financial instruments like stock exchanges.",
+      "era": "Early Modern",
+      "eraSlug": "early-modern",
+      "region": "Western Europe",
+      "continent": "Europe",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "dutch-golden-age-trade",
+          "sourceName": "Dutch Golden Age Maritime Trade",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-trade",
+          "targetName": "Netherlands",
+          "context": "Dutch Golden Age Maritime Trade originated in Netherlands"
+        }
+      ],
+      "places": [
+        {
+          "name": "Netherlands",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "682",
+      "divisionHeading": "Maritime Trade & Age of Sail",
+      "historicalSignificance": {
+        "score": 8,
+        "label": "Major",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1602,
+      "endYear": 1700,
+      "wikidataQid": "Q12541"
+    },
+    {
+      "slug": "british-east-india-trade",
+      "name": "British East India Trade",
+      "label": "Movement",
+      "callNumber": "682.british-east-india-trade",
+      "subjectHeadings": [
+        "Movements -- Maritime Trade & Age of Sail -- United Kingdom -- Early Modern"
+      ],
+      "subjects": [
+        "United Kingdom",
+        "Europe",
+        "Maritime Trade & Age of Sail"
+      ],
+      "summary": "The British East India Company (founded 1600) and the broader British maritime trade network that connected Britain to India, China, and Southeast Asia. By the 18th century, Britain controlled the world's largest maritime trading empire, fundamentally shaping global commerce.",
+      "era": "Early Modern",
+      "eraSlug": "early-modern",
+      "region": "Northern Europe",
+      "continent": "Europe",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "british-east-india-trade",
+          "sourceName": "British East India Trade",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-trade",
+          "targetName": "United Kingdom",
+          "context": "British East India Trade originated in United Kingdom"
+        }
+      ],
+      "places": [
+        {
+          "name": "United Kingdom",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "682",
+      "divisionHeading": "Maritime Trade & Age of Sail",
+      "historicalSignificance": {
+        "score": 8,
+        "label": "Major",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1600,
+      "endYear": 1874,
+      "wikidataQid": "Q83164"
+    },
+    {
+      "slug": "hanseatic-league-trade",
+      "name": "Hanseatic League Maritime Trade",
+      "label": "Movement",
+      "callNumber": "682.hanseatic-league-trade",
+      "subjectHeadings": [
+        "Movements -- Maritime Trade & Age of Sail -- Germany -- Medieval"
+      ],
+      "subjects": [
+        "Germany",
+        "Europe",
+        "Maritime Trade & Age of Sail"
+      ],
+      "summary": "A medieval confederation of merchant guilds and market towns in Northern Europe (13th–17th century). The Hanse dominated Baltic and North Sea trade, establishing trading posts from Novgorod to London and creating early forms of commercial law and diplomatic relations.",
+      "era": "Medieval",
+      "eraSlug": "medieval",
+      "region": "Western Europe",
+      "continent": "Europe",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [
+        {
+          "sourceSlug": "hanseatic-league-trade",
+          "sourceName": "Hanseatic League Maritime Trade",
+          "verb": "OCCURS_IN",
+          "targetSlug": "country-trade",
+          "targetName": "Germany",
+          "context": "Hanseatic League Maritime Trade originated in Germany"
+        }
+      ],
+      "places": [
+        {
+          "name": "Germany",
+          "role": "Country"
+        }
+      ],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "682",
+      "divisionHeading": "Maritime Trade & Age of Sail",
+      "historicalSignificance": {
+        "score": 8,
+        "label": "Major",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1200,
+      "endYear": 1669,
+      "wikidataQid": "Q38130"
+    },
+    {
+      "slug": "indian-ocean-trade-network",
+      "name": "Indian Ocean Trade Network",
+      "label": "Movement",
+      "callNumber": "682.indian-ocean-trade-network",
+      "subjectHeadings": [
+        "Movements -- Maritime Trade & Age of Sail -- Global -- Medieval"
+      ],
+      "subjects": [
+        "Maritime Trade & Age of Sail"
+      ],
+      "summary": "A vast pre-modern maritime trade system connecting East Africa, the Arabian Peninsula, India, Southeast Asia, and China. Active since antiquity and peaking in the medieval period, it facilitated exchange of spices, textiles, precious metals, and cultural ideas across civilizations.",
+      "era": "Medieval",
+      "eraSlug": "medieval",
+      "region": "Global",
+      "continent": "Global",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [],
+      "places": [],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "682",
+      "divisionHeading": "Maritime Trade & Age of Sail",
+      "historicalSignificance": {
+        "score": 9,
+        "label": "Landmark",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": -300,
+      "endYear": 1500,
+      "wikidataQid": "Q1235914"
+    },
+    {
+      "slug": "age-of-sail",
+      "name": "Age of Sail",
+      "label": "Movement",
+      "callNumber": "682.age-of-sail",
+      "subjectHeadings": [
+        "Movements -- Maritime Trade & Age of Sail -- Global -- Early Modern"
+      ],
+      "subjects": [
+        "Maritime Trade & Age of Sail"
+      ],
+      "summary": "The period from the 16th to mid-19th century when international trade and naval warfare were dominated by sailing ships. Encompassing exploration, colonialism, piracy, and the transatlantic slave trade, it transformed global demographics, economies, and power structures.",
+      "era": "Early Modern",
+      "eraSlug": "early-modern",
+      "region": "Global",
+      "continent": "Global",
+      "status": "Published",
+      "frameworks": [
+        "CAUSE_AND_EFFECT"
+      ],
+      "causes": [],
+      "effects": [],
+      "relationships": [],
+      "places": [],
+      "texts": [],
+      "movementType": "social movement",
+      "divisionCode": "682",
+      "divisionHeading": "Maritime Trade & Age of Sail",
+      "historicalSignificance": {
+        "score": 9,
+        "label": "Landmark",
+        "sitelinks": 0
+      },
+      "inAppwrite": false,
+      "startYear": 1500,
+      "endYear": 1850,
+      "wikidataQid": "Q173181"
     }
   ]
 }
