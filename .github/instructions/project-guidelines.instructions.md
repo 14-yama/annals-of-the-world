@@ -239,7 +239,7 @@ Evidence · Corpus · Framework · Timeframe · Polity
 | Era                    | Period              | Color   | Division |
 | ---------------------- | ------------------- | ------- | -------- |
 | Prehistoric            | Before 3,000 BCE    | #6B4D1B | 910      |
-| Classical / Ancient    | 3,000 BCE – 500 CE  | #8B4513 | 920      |
+| Classical              | 3,000 BCE – 500 CE  | #8B4513 | 920      |
 | Medieval               | 500 – 1500 CE       | #A67C2E | 930      |
 | Early Modern           | 1500 – 1800 CE      | #C5963A | 940      |
 | Modern                 | 1800 – 1945 CE      | #4A90D9 | 950      |
@@ -295,12 +295,12 @@ record of all actors in the dataset. Every node documented in the project — wh
 the backend knowledge graph, geo-registry, corpus catalog, topic collections, or
 hand-curated era files — **must** be represented in the Annals Catalog.
 
-**Current count: 16,505 unique actors across 7 eras.**
+**Current count: 40,000+ entities across 6 canonical eras (backed by Appwrite).**
 
 | Metric | Value |
 | ------ | ----- |
-| Total unique actors | 16,505 |
-| Eras | 7 (Prehistoric, Classical, Classical/Ancient, Medieval, Early Modern, Modern, Contemporary) |
+| Total unique actors | 40,000+ |
+| Eras | 6 (Prehistoric, Classical, Medieval, Early Modern, Modern, Contemporary) |
 | Countries | 199 |
 | Entity types | 8 (EventWindow, Person, Movement, Institution, Text, Idea, Place, Evidence) |
 | Frameworks | 16 interpretive frameworks auto-assigned |
@@ -321,7 +321,7 @@ All data sources feed **into** the Annals Catalog (not counted separately):
 | Wikidata People | 5,014 | `catalog/wikidataPeople.ts` — notable figures from Wikidata SPARQL |
 
 After slug-based deduplication (hand-curated wins over auto-generated), the catalog
-contains **16,505 unique actors**.
+contains **40,000+ unique actors** (catalog + Wikidata enrichment).
 
 ### Adding New Nodes
 
@@ -374,7 +374,7 @@ The catalog uses a Dewey Decimal-inspired call number system:
 
 ### Data Sources
 
-- **Annals Catalog (source of truth):** `ui/src/data/catalog/index.ts` — 16,505 unique actors
+- **Annals Catalog (source of truth):** `ui/src/data/catalog/index.ts` — 16,505 catalog actors + 24,000+ Wikidata entities = 40,000+ in Appwrite
 - **Appwrite Backend:** 2,800 Person entities seeded (from 238,466 Wikidata people dataset)
 - **Geo-registry JSON:** `geo-registry/places/countries/*/index.json` — 199 country profiles
 - **Backend graph data:** `data/Nodes/*.json` — raw nodes for Neo4j seeding

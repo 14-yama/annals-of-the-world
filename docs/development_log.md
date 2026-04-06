@@ -4,7 +4,51 @@
 
 ---
 
-## Update — 2026-04-02 (most recent)
+## Update — 2025-07-18 (most recent)
+
+### Comprehensive Backend Audit & Normalization
+
+#### 1. Backend Audit Summary (40,220 entities)
+
+- **Slug uniqueness:** Verified — Appwrite's `slug_idx` unique index prevents duplicates.
+- **Entity counts by label:** Person 5,000+, Idea 5,000+, Institution 5,000+, Place 5,000+, EventWindow 5,000+, Movement 5,000+, Text 5,000+, Evidence 4,229, Timeframe 991.
+- **Field completeness:** All entities have era, eraSlug, eraDivisionCode, continent, region, summary, callNumber, detailsJson, frameworks.
+- **Era distribution:** 6 canonical eras verified (Prehistoric: 731, Classical, Medieval, Early Modern, Modern, Contemporary — all 5,000+).
+
+#### 2. Era Normalization — "Classical / Ancient" → "Classical"
+
+- **Root cause:** 4 topic data files (architecture.ts, languages.ts, medicine.ts, weapons.ts) used legacy `era: "Classical / Ancient"` label → propagated through topicConverter.ts → exported to catalog_entities.json → seeded to backend with empty eraDivisionCode.
+- **Backend fix:** 136 entities patched via Python script:
+  - 130 entities: era="Classical / Ancient" → era="Classical", eraDivisionCode="920"
+  - 6 broad-era Timeframes: assigned broad codes (910, 920, 930, 940, 950, 960)
+  - **Post-fix verification:** 0 remaining empty eraDivisionCode, 0 remaining "Classical / Ancient" era.
+- **Source code fix:** Normalized "Classical / Ancient" → "Classical" across 10 files:
+  - `ui/src/data/` — architecture.ts, languages.ts, medicine.ts, weapons.ts
+  - `ui/src/data/catalog/` — topicConverter.ts, topicEntities.ts, classical.ts, enrichmentData.ts
+  - `ui/src/data/catalog/corpuses/` — scienceTech.ts
+  - `ui/src/pages/DocsPage.tsx` — Eras glossary entry
+- **Seed script fix:** `scripts/seed_catalog_entities.py` — added CANONICAL_ERA normalization so "Classical / Ancient" maps to "Classical" in both `get_era_division()` and `entity_to_document()`.
+
+#### 3. Search Ranking Optimization
+
+- Added `nameRelevance()` scoring to `entityService.ts` — exact match (100), prefix (80), all-words-present (60), substring (50), partial (30).
+- Applied `scoreMatch` re-ranking in `AdvancedSearch.tsx` for autocomplete results.
+- Verified: julius caesar, aristotle, roman empire, university of oxford, democracy, empire all rank #1.
+
+#### 4. Entity Enrichment
+- Empire entity enriched: 8 relationships, 5 causes, 5 effects, 5 frameworks (score 10).
+- 56 entities at quality score 10, 2,039 at score 9, 5,000+ at score 8.
+
+#### 5. Documentation & Repo Hygiene
+- Updated `.gitignore` for large data files (data/people/, catalog_entities.json, wikidata parts).
+- Updated project-guidelines.instructions.md: era framework, entity counts (40,000+).
+- Updated docs/ROADMAP.md: current scope reflects Appwrite backend.
+- Updated docs/guidelines/international_conventions.md: era naming normalized.
+- Updated slug_naming_convention.md.
+
+---
+
+## Update — 2026-04-02
 
 ### Wikidata Institutions Dataset, Expanded Verbs, Fetch Guide
 

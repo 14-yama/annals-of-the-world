@@ -8,12 +8,14 @@ This roadmap describes a practical path from the current scaffolded project to a
 - Publish and interoperate with Wikimedia projects (Wikidata, Wikipedia) as an open-source contribution to the global web of knowledge.
 
 ## 2. Current scope (short review)
-- Code: `src/annals` (models, neo4j client, validators) — good starting library with Pydantic models.
-- Docs: `docs/guidelines/*` — relations vocabulary, historian framework, audit queries, curator runbook, international conventions, cluster scaffolds (Hebrew cluster), framework matrix.
-- Scripts: `scripts/run_audits.py`, `setup_constraints.py` — basic audit & constraints tooling.
-- Seeds: `data/` and `Refactor/` contain CSV and cluster scaffolds.
-- Wikidata datasets: `data/wikidata_people.json` (238,466 entities), `data/wikidata_institutions.json` (36,738 entities) — bulk SPARQL fetches with historical significance scoring.
-- Status: governance-heavy scaffold, seed clusters drafted, Wikidata ingestion pipeline proven (People + Institutions), audit plan present, no production MCP/service layer yet, CI/workflow and contributor onboarding are partial.
+- **Backend:** Appwrite PRO — `annals_world_db` database, `entities` collection (40,220+ entities), 11 indexes, Wikidata enrichment pipeline.
+- **Frontend:** React 18 + Vite 5 + TypeScript + Chakra UI — 36+ routes, D3 graph explorer, entity pages with era/division rendering, advanced search with fuzzy matching.
+- **Catalog:** 16,505 curated catalog entities + 24,000+ Wikidata entities = 40,000+ total in Appwrite.
+- **Eras:** 6 canonical eras (Prehistoric, Classical, Medieval, Early Modern, Modern, Contemporary) with 20 era division codes (910–963).
+- **Wikidata datasets:** `data/wikidata_people.json` (238,466 entities) + artifacts, events, evidence, ideas, institutions, movements, places, timeframes.
+- Code: `src/annals` (models, Neo4j client, validators), `scripts/` (seed, audit, fetch utilities).
+- Docs: `docs/guidelines/*` — 23+ guideline files covering schema, curator workflow, classification, conventions.
+- Status: Appwrite backend fully operational, frontend rendering all entity types with era/division, search ranking optimized, comprehensive audit completed.
 
 ## 3. High-level strategy to 1M nodes
 Phases are calibrated to a multi-year program. Exact durations depend on contributor bandwidth and resourcing.

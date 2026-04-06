@@ -242,6 +242,47 @@ verbs: UPPER_SNAKE_CASE, active voice, single semantic action.
 | RULED_BY | L → I/P | Place under political authority | Inverse of GOVERNS; include period/dynasty |
 | CONTROLS | I/P → L | Exercises control over territory | For empires (450), polities; include period |
 
+### Artifact & Production Verbs (v0.4 — Wikidata Enrichment)
+| Verb | Allowed (Subject→Object) | Use Case / Semantics | Constraint / Notes |
+|------|---------------------------|----------------------|--------------------|
+| CREATED_IN | T → L | Artifact was created/crafted in a place | Generic artifact creation; use more specific verbs below when type is known |
+| BUILT_IN | T → L | Structure/building was constructed in a place | For buildings, monuments, bridges, temples, stadiums, infrastructure |
+| SIGNED_IN | T → L | Treaty/agreement was signed in a place | For treaties, accords, conventions; include signatories in context |
+| PRODUCED_IN | T → L | Work was produced/manufactured in a place | For films, albums, manufactured items; distinct from CREATED_IN (artisanal) |
+| AUTHORED_IN | T → L | Text/manuscript was authored in a place | For books, manuscripts, codices; use AUTHORS (P→T) for person attribution |
+| COMPOSED_IN | T → L | Musical work was composed in a place | For symphonies, songs, hymns, anthems |
+| MINTED_IN | T → L | Coin/medal was minted in a place | For numismatic artifacts; include mint if known |
+| ADOPTED_IN | T → L | Symbol/flag was adopted in a place | For national symbols, flags, coats of arms |
+| LEGISLATED_IN | T → L | Law was enacted in a place | For statutes, decrees, constitutions; include enacting body in context |
+| PUBLISHED_IN | T → L | Work was published in a place | For newspapers, journals, magazines; distinct from PUBLISHES (P/I→T) |
+| DEVELOPED_IN | T → L | Software/technology was developed in a place | For software, digital artifacts, technical inventions |
+| FILED_IN | T → L | Patent/filing was registered in a place | For patents, legal filings |
+| ORIGINATES_IN | D/M → L | Idea/movement originated in a place | For ideas and movements traced to a geographic origin |
+
+### People Activity Verbs (v0.4 — Wikidata Enrichment)
+| Verb | Allowed (Subject→Object) | Use Case / Semantics | Constraint / Notes |
+|------|---------------------------|----------------------|--------------------|
+| COMPETES_IN | P → E | Person competes in event/competition | For athletes, competitors; include sport/discipline in context |
+| COMPOSES | P → T | Person composes a musical or literary work | Distinct from AUTHORS (prose); use for musical composition |
+| TRADES | P → E/I | Person engages in trade/commerce | For merchants, traders; include goods/routes in context |
+| PREACHES | P → D/M | Person preaches doctrine/movement | For clergy, evangelists; distinct from TEACHES (formal instruction) |
+| PAINTS | P → T | Person creates a painting | For artists; include medium/style in context |
+| TREATS | P → P | Person provides medical treatment | For physicians; include specialty/method in context |
+| DISCOVERS | P → T/D/L | Person makes a discovery | For scientists, explorers; include field/nature of discovery |
+| PROVES | P → D | Person proves a theorem/proposition | For mathematicians, logicians; include method |
+| THEORIZES | P → D | Person develops a theory | For scientists, philosophers; distinct from PROVES (empirical) |
+| RULES | P/I → L | Person/institution rules a territory | Alias for GOVERNS; prefer GOVERNS for institutional authority |
+| CREATES | P → T | Person creates an artifact/artwork | Generic creation; prefer more specific verbs when type is known |
+| SYSTEMATIZES | P → D | Person systematizes a body of knowledge | For scholars who organize/classify knowledge fields |
+| CLASSIFIES | P → D/T | Person classifies organisms/phenomena | For taxonomists, scientists; include classification system |
+| CAMPAIGNS | P → E/M | Person campaigns for cause/election | For politicians, activists; include campaign context |
+| EVANGELIZES | P → D/M | Person evangelizes a faith/doctrine | For missionaries; distinct from PREACHES (pulpit) |
+| INFILTRATES | P → I/M | Person infiltrates an organization | For spies, agents; sensitive — provide evidence |
+| MAPS | P → L | Person maps/surveys a territory | For cartographers, surveyors; include map/survey reference |
+| LAUNCHES | P/I → E/T | Person/institution launches a venture/product | For entrepreneurs, institutions; include launch context |
+| EXPLORES | P → L | Person explores a territory/region | For explorers; include expedition reference |
+| OCCURS_DURING | P/E → Timeframe | Entity is active during a time period | Temporal anchoring; connects person/event to era or timeframe |
+
 Aliases & Deprecations
 - FOUNDS → ESTABLISHES (use ESTABLISHES)
 - WRITES → AUTHORS (use AUTHORS)

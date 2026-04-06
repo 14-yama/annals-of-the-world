@@ -13,7 +13,7 @@ Here’s a crisp, “use-this-in-production” guide for applying international 
 - Use globally recognized era bins (Prehistory → Ancient → Middle Ages → Early Modern → Modern → Contemporary).
 - **Timeframe Divisions (Class 9) – International Standard Date Ranges:**
   - **910 Prehistoric**: Before 3000 BCE (pre-literate societies)
-  - **920 Classical/Ancient**: 3000 BCE – 500 CE (early civilizations through Fall of Western Roman Empire)
+  - **920 Classical**: 3000 BCE – 500 CE (early civilizations through Fall of Western Roman Empire)
   - **930 Medieval**: 500 – 1500 CE (Middle Ages)
   - **940 Early Modern**: 1500 – 1800 CE (Renaissance, Reformation, Enlightenment)
   - **950 Modern**: 1800 – 1945 CE (Industrial era through WWII)
