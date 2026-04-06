@@ -33,7 +33,7 @@ export const LANGUAGE_CATEGORIES: LanguageCategory[] = [
 
 export const ERA_LABELS: Record<string, { label: string; period: string; color: string }> = {
   prehistoric:  { label: 'Prehistoric',         period: 'Before 3000 BCE', color: '#645E52' },
-  ancient:      { label: 'Classical / Ancient', period: '3000 BCE – 500 CE', color: '#8B3A3A' },
+  ancient:      { label: 'Classical', period: '3000 BCE – 500 CE', color: '#8B3A3A' },
   medieval:     { label: 'Medieval',            period: '500 – 1500 CE', color: '#96770B' },
   earlyModern:  { label: 'Early Modern',        period: '1500 – 1800 CE', color: '#D4AF37' },
   modern:       { label: 'Modern',              period: '1800 – 1945 CE', color: '#4A90D9' },

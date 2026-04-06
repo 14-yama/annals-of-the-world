@@ -23,10 +23,12 @@ import { CLOTHING } from '../clothing'
 import { MARRIAGES } from '../marriage'
 import { CUSTOMS } from '../customs'
 import { PUNISHMENTS } from '../punishment'
+import { IDEAS } from '../ideas'
+import type { Entity } from '../entityTypes'
 
 const ERA_MAP = {
   prehistoric:  { eraSlug: 'prehistoric',    era: 'Prehistoric' },
-  ancient:      { eraSlug: 'classical',      era: 'Classical / Ancient' },
+  ancient:      { eraSlug: 'classical',      era: 'Classical' },
   medieval:     { eraSlug: 'medieval',        era: 'Medieval' },
   earlyModern:  { eraSlug: 'early-modern',   era: 'Early Modern' },
   modern:       { eraSlug: 'modern',          era: 'Modern' },
@@ -81,6 +83,42 @@ export const PUNISHMENT_ENTITIES = convertTopicItems(PUNISHMENTS, {
   classPrefix: '670', label: 'EventWindow', topicTag: 'Corporal Punishment & Justice', eraMap: ERA_MAP,
 })
 
+/* Ideas use a different shape — convert manually */
+function inferContinent(origin: string): string {
+  const o = origin.toLowerCase()
+  if (/africa|egypt|nubian|ethiop|nile|sahara/.test(o)) return 'Africa'
+  if (/china|india|persia|mesopotamia|arab|japan|korea|ottoman|anatolia|levant|phoenici/.test(o)) return 'Asia'
+  if (/europe|greek|roman|britain|france|germany|italy|vienna|england|scotland|switzerland/.test(o)) return 'Europe'
+  if (/america|brazil|mexico/.test(o)) return 'Americas'
+  if (/australia|oceania/.test(o)) return 'Oceania'
+  return 'Cross-Regional'
+}
+
+export const IDEAS_ENTITIES: Entity[] = IDEAS.map((idea, i) => {
+  const eraInfo = ERA_MAP[idea.era as keyof typeof ERA_MAP] ?? { eraSlug: idea.era, era: idea.era }
+  return {
+    slug: idea.slug,
+    name: idea.name,
+    label: 'Idea' as const,
+    callNumber: `680.${String(i + 1).padStart(2, '0')}-${idea.slug}`,
+    subjectHeadings: ['Ideas & Thought', idea.domain, idea.subdomain],
+    subjects: ['Ideas & Thought', idea.domain, idea.subdomain, idea.originator, idea.originPlace],
+    summary: idea.description,
+    period: idea.yearLabel,
+    era: eraInfo.era,
+    eraSlug: eraInfo.eraSlug,
+    region: idea.region,
+    continent: inferContinent(idea.originPlace),
+    status: 'published',
+    frameworks: ['CAUSE_AND_EFFECT', 'CULTURAL_DIFFUSION'],
+    causes: idea.parentIdeas.map(slug => ({ title: slug, type: 'Parent Idea', year: '' })),
+    effects: [{ title: idea.impact, type: 'Historical Impact', year: idea.yearLabel }],
+    relationships: [],
+    places: [{ name: idea.originPlace, role: 'Origin' }],
+    texts: [],
+  }
+})
+
 export const ALL_TOPIC_ENTITIES = [
   ...WEAPONS_ENTITIES,
   ...MEDICINE_ENTITIES,
@@ -94,4 +132,5 @@ export const ALL_TOPIC_ENTITIES = [
   ...MARRIAGE_ENTITIES,
   ...CUSTOMS_ENTITIES,
   ...PUNISHMENT_ENTITIES,
+  ...IDEAS_ENTITIES,
 ]

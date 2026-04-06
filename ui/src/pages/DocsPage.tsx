@@ -117,6 +117,39 @@ const VERB_GLOSSARY: VerbEntry[] = [
   { verb: 'CAPITAL_OF', semantics: 'Serves as administrative capital', allowedPairs: 'L → L/I', notes: 'Include period if historical', tier: 'Supplementary' },
   { verb: 'SACRED_TO', semantics: 'Place holds sacred significance', allowedPairs: 'L → D/M', notes: 'For holy cities (443), pilgrimage sites', tier: 'Supplementary' },
   { verb: 'CONTROLS', semantics: 'Exercises control over territory', allowedPairs: 'I/P → L', notes: 'For empires (450), polities; include period', tier: 'Supplementary' },
+  // v0.4 — Artifact & Production Verbs (Wikidata Enrichment)
+  { verb: 'CREATED_IN', semantics: 'Artifact was created/crafted in a place', allowedPairs: 'T → L', notes: 'Generic artifact creation; use specific verbs when type known', tier: 'Supplementary' },
+  { verb: 'BUILT_IN', semantics: 'Structure/building was constructed in a place', allowedPairs: 'T → L', notes: 'Buildings, monuments, bridges, temples, stadiums', tier: 'Supplementary' },
+  { verb: 'SIGNED_IN', semantics: 'Treaty/agreement was signed in a place', allowedPairs: 'T → L', notes: 'Treaties, accords, conventions', tier: 'Supplementary' },
+  { verb: 'PRODUCED_IN', semantics: 'Work was produced/manufactured in a place', allowedPairs: 'T → L', notes: 'Films, albums, manufactured items', tier: 'Supplementary' },
+  { verb: 'AUTHORED_IN', semantics: 'Text/manuscript was authored in a place', allowedPairs: 'T → L', notes: 'Books, manuscripts, codices', tier: 'Supplementary' },
+  { verb: 'COMPOSED_IN', semantics: 'Musical work was composed in a place', allowedPairs: 'T → L', notes: 'Symphonies, songs, anthems', tier: 'Supplementary' },
+  { verb: 'MINTED_IN', semantics: 'Coin/medal was minted in a place', allowedPairs: 'T → L', notes: 'Numismatic artifacts', tier: 'Supplementary' },
+  { verb: 'ADOPTED_IN', semantics: 'Symbol/flag was adopted in a place', allowedPairs: 'T → L', notes: 'National symbols, flags, coats of arms', tier: 'Supplementary' },
+  { verb: 'LEGISLATED_IN', semantics: 'Law was enacted in a place', allowedPairs: 'T → L', notes: 'Statutes, decrees, constitutions', tier: 'Supplementary' },
+  { verb: 'PUBLISHED_IN', semantics: 'Work was published in a place', allowedPairs: 'T → L', notes: 'Newspapers, journals; distinct from PUBLISHES (P/I→T)', tier: 'Supplementary' },
+  { verb: 'DEVELOPED_IN', semantics: 'Software/technology was developed in a place', allowedPairs: 'T → L', notes: 'Software, digital artifacts', tier: 'Supplementary' },
+  { verb: 'FILED_IN', semantics: 'Patent/filing was registered in a place', allowedPairs: 'T → L', notes: 'Patents, legal filings', tier: 'Supplementary' },
+  { verb: 'ORIGINATES_IN', semantics: 'Idea/movement originated in a place', allowedPairs: 'D/M → L', notes: 'Geographic origin of ideas and movements', tier: 'Supplementary' },
+  // v0.4 — People Activity Verbs (Wikidata Enrichment)
+  { verb: 'COMPETES_IN', semantics: 'Person competes in event/competition', allowedPairs: 'P → E', notes: 'Athletes, competitors', tier: 'Supplementary' },
+  { verb: 'COMPOSES', semantics: 'Person composes a musical/literary work', allowedPairs: 'P → T', notes: 'Distinct from AUTHORS (prose)', tier: 'Supplementary' },
+  { verb: 'TRADES', semantics: 'Person engages in trade/commerce', allowedPairs: 'P → E/I', notes: 'Merchants, traders', tier: 'Supplementary' },
+  { verb: 'PREACHES', semantics: 'Person preaches doctrine/movement', allowedPairs: 'P → D/M', notes: 'Clergy, evangelists', tier: 'Supplementary' },
+  { verb: 'PAINTS', semantics: 'Person creates a painting', allowedPairs: 'P → T', notes: 'Artists; include medium/style', tier: 'Supplementary' },
+  { verb: 'TREATS', semantics: 'Person provides medical treatment', allowedPairs: 'P → P', notes: 'Physicians; include specialty', tier: 'Supplementary' },
+  { verb: 'DISCOVERS', semantics: 'Person makes a discovery', allowedPairs: 'P → T/D/L', notes: 'Scientists, explorers', tier: 'Supplementary' },
+  { verb: 'PROVES', semantics: 'Person proves a theorem/proposition', allowedPairs: 'P → D', notes: 'Mathematicians, logicians', tier: 'Supplementary' },
+  { verb: 'THEORIZES', semantics: 'Person develops a theory', allowedPairs: 'P → D', notes: 'Scientists, philosophers', tier: 'Supplementary' },
+  { verb: 'SYSTEMATIZES', semantics: 'Person systematizes a body of knowledge', allowedPairs: 'P → D', notes: 'Scholars organizing knowledge fields', tier: 'Supplementary' },
+  { verb: 'CLASSIFIES', semantics: 'Person classifies organisms/phenomena', allowedPairs: 'P → D/T', notes: 'Taxonomists, scientists', tier: 'Supplementary' },
+  { verb: 'CAMPAIGNS', semantics: 'Person campaigns for cause/election', allowedPairs: 'P → E/M', notes: 'Politicians, activists', tier: 'Supplementary' },
+  { verb: 'EVANGELIZES', semantics: 'Person evangelizes a faith/doctrine', allowedPairs: 'P → D/M', notes: 'Missionaries; distinct from PREACHES', tier: 'Supplementary' },
+  { verb: 'INFILTRATES', semantics: 'Person infiltrates an organization', allowedPairs: 'P → I/M', notes: 'Sensitive—provide evidence', tier: 'Supplementary' },
+  { verb: 'MAPS', semantics: 'Person maps/surveys a territory', allowedPairs: 'P → L', notes: 'Cartographers, surveyors', tier: 'Supplementary' },
+  { verb: 'LAUNCHES', semantics: 'Person/institution launches a venture', allowedPairs: 'P/I → E/T', notes: 'Entrepreneurs, institutions', tier: 'Supplementary' },
+  { verb: 'EXPLORES', semantics: 'Person explores a territory/region', allowedPairs: 'P → L', notes: 'Explorers; include expedition', tier: 'Supplementary' },
+  { verb: 'OCCURS_DURING', semantics: 'Entity is active during a time period', allowedPairs: 'P/E → Timeframe', notes: 'Temporal anchoring to era/timeframe', tier: 'Core' },
 ]
 
 /* ═══════════════════════════════════════════════════════════════
@@ -332,7 +365,7 @@ const GLOSSARY_ENTRIES: GlossaryEntry[] = [
 
   // Eras
   { term: 'Prehistoric', category: 'Eras', definition: 'Before 3000 BCE. Division 910. Color: #6B4D1B. Earliest human activity through proto-civilization.' },
-  { term: 'Classical / Ancient', category: 'Eras', definition: '3000 BCE – 500 CE. Division 920. Color: #8B4513. Great civilizations, empires, and philosophical traditions.' },
+  { term: 'Classical', category: 'Eras', definition: '3000 BCE – 500 CE. Division 920. Color: #8B4513. Great civilizations, empires, and philosophical traditions.' },
   { term: 'Medieval', category: 'Eras', definition: '500 – 1500 CE. Division 930. Color: #A67C2E. Byzantine, Islamic, and European feudal societies.' },
   { term: 'Early Modern', category: 'Eras', definition: '1500 – 1800 CE. Division 940. Color: #C5963A. Reformation, colonialism, scientific revolution.' },
   { term: 'Modern', category: 'Eras', definition: '1800 – 1945 CE. Division 950. Color: #4A90D9. Industrialization, world wars, nationalism.' },

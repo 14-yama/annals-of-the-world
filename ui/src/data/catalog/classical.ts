@@ -1,6 +1,6 @@
 import type { Entity } from '../entityTypes'
 
-/** Classical / Ancient Era — 3000 BCE to 500 CE */
+/** Classical Era — 3000 BCE to 500 CE */
 export const classicalEntities: Entity[] = [
   // ─── PEOPLE ───────────────────────────────────────────────
   {

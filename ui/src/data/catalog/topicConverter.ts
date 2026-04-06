@@ -31,7 +31,7 @@ interface TopicConfig {
 
 const ERA_MAP: Record<string, { eraSlug: string; era: string }> = {
   prehistoric:  { eraSlug: 'prehistoric',    era: 'Prehistoric' },
-  ancient:      { eraSlug: 'classical',      era: 'Classical / Ancient' },
+  ancient:      { eraSlug: 'classical',      era: 'Classical' },
   medieval:     { eraSlug: 'medieval',        era: 'Medieval' },
   earlyModern:  { eraSlug: 'early-modern',   era: 'Early Modern' },
   modern:       { eraSlug: 'modern',          era: 'Modern' },
