@@ -1,16 +1,25 @@
 /**
  * CorpusHub — landing page listing all corpus collections.
- * Replaces 14 individual sidebar links with a single entry.
+ * Fetches entity counts from the Appwrite backend.
  */
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link as RouterLink } from 'react-router-dom'
-import { Box, Flex, Text, SimpleGrid, Heading } from '@chakra-ui/react'
+import { Box, Flex, Text, SimpleGrid, Heading, Spinner } from '@chakra-ui/react'
 import { Library, ChevronRight } from 'lucide-react'
 import Breadcrumb from '../components/Breadcrumb'
-import { CORPUS_REGISTRY } from '../data/catalog/corpuses/registry'
+import { CORPUS_META } from '../constants/corpusMeta'
+import { fetchTotalCount } from '../services/entityService'
 
 export default function CorpusHub() {
-  const total = CORPUS_REGISTRY.reduce((n, c) => n + c.entities.length, 0)
+  const [totalEntities, setTotalEntities] = useState(0)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetchTotalCount().then(n => {
+      setTotalEntities(n)
+      setLoading(false)
+    })
+  }, [])
 
   return (
     <Box>
@@ -30,13 +39,20 @@ export default function CorpusHub() {
           tablets to scientific treatises. Each corpus is a window into a culture's soul.
         </Text>
         <Text fontFamily='"JetBrains Mono", monospace' fontSize="sm" color="#D4AF37">
-          {CORPUS_REGISTRY.length} corpuses · {total} entities · 5,000 years of recorded knowledge
+          {CORPUS_META.length} corpuses · {loading ? '…' : totalEntities.toLocaleString()} entities in the Annals backend
         </Text>
       </Box>
 
+      {/* Loading */}
+      {loading && (
+        <Flex justify="center" py={8}>
+          <Spinner color="#D4AF37" size="lg" />
+        </Flex>
+      )}
+
       {/* Corpus Cards */}
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={5}>
-        {CORPUS_REGISTRY.map(corpus => (
+        {CORPUS_META.map(corpus => (
           <RouterLink key={corpus.slug} to={`/corpus/${corpus.slug}`} style={{ textDecoration: 'none' }}>
             <Box
               bg="white" border="1px solid #E4E2DC" borderRadius="xl"
@@ -53,7 +69,7 @@ export default function CorpusHub() {
                     {corpus.shortName}
                   </Text>
                   <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#9E9A90">
-                    {corpus.zone} · {corpus.entities.length} entities
+                    {corpus.zone}
                   </Text>
                 </Box>
                 <ChevronRight size={16} color="#9E9A90" />

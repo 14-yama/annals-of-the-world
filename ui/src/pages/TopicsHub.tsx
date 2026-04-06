@@ -2,21 +2,28 @@
  * TopicsHub — landing page listing all civilization-shaping topics.
  * Each card links to its dedicated topic explorer page.
  */
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link as RouterLink } from 'react-router-dom'
-import { Box, Flex, Text, SimpleGrid, Heading } from '@chakra-ui/react'
+import { Box, Flex, Text, SimpleGrid, Heading, Spinner } from '@chakra-ui/react'
 import {
   Swords, Heart, Building2, Wheat, Compass, BookOpen, ChevronRight,
+  Users, TrainFront, Shirt, Crown, Gavel, Lightbulb,
 } from 'lucide-react'
 import Breadcrumb from '../components/Breadcrumb'
-import { TOPIC_REGISTRY } from '../data/catalog/topicRegistry'
+import { TOPIC_META } from '../constants/topicMeta'
+import { fetchTotalCount } from '../services/entityService'
 
 const ICONS: Record<string, React.ElementType> = {
   Swords, Heart, Building2, Wheat, Compass, BookOpen,
+  Users, TrainFront, Shirt, Crown, Gavel, Lightbulb,
 }
 
 export default function TopicsHub() {
-  const total = TOPIC_REGISTRY.reduce((n, t) => n + t.entities.length, 0)
+  const [totalEntities, setTotalEntities] = useState(0)
+
+  useEffect(() => {
+    fetchTotalCount().then(setTotalEntities)
+  }, [])
 
   return (
     <Box>
@@ -36,13 +43,13 @@ export default function TopicsHub() {
           Explore them by era, by category, or dive into the catalog.
         </Text>
         <Text fontFamily='"JetBrains Mono", monospace' fontSize="sm" color="#90CDF4">
-          {TOPIC_REGISTRY.length} topics · {total} milestones · Every era of human history
+          {TOPIC_META.length} topics · {totalEntities.toLocaleString()} entities · Every era of human history
         </Text>
       </Box>
 
       {/* Topic Cards */}
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={5}>
-        {TOPIC_REGISTRY.map(topic => {
+        {TOPIC_META.map(topic => {
           const Icon = ICONS[topic.icon] || BookOpen
           return (
             <RouterLink key={topic.slug} to={topic.route} style={{ textDecoration: 'none' }}>
@@ -59,9 +66,6 @@ export default function TopicsHub() {
                   <Box flex={1}>
                     <Text fontFamily='"Cinzel", serif' fontSize="md" fontWeight={700} color="#2D2A24">
                       {topic.name}
-                    </Text>
-                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#9E9A90">
-                      {topic.entities.length} milestones · All eras
                     </Text>
                   </Box>
                   <ChevronRight size={16} color="#9E9A90" />

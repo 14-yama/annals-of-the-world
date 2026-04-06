@@ -17,6 +17,7 @@ import {
   MARRIAGE_ENTITIES,
   CUSTOMS_ENTITIES,
   PUNISHMENT_ENTITIES,
+  IDEAS_ENTITIES,
 } from './topicEntities'
 
 export interface TopicEntry {
@@ -150,6 +151,16 @@ export const TOPIC_REGISTRY: TopicEntry[] = [
     icon: 'Gavel',
     route: '/punishment',
     entities: PUNISHMENT_ENTITIES,
+  },
+  {
+    slug: 'ideas',
+    name: 'Ideas & Thought',
+    shortName: 'Ideas',
+    description: 'From animism to artificial intelligence — the transformative ideas that reshaped civilization across every era.',
+    color: '#6B3FA0',
+    icon: 'Lightbulb',
+    route: '/ideas',
+    entities: IDEAS_ENTITIES,
   },
 ]
 

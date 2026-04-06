@@ -1,26 +1,25 @@
 /* ─── Ideas That Transformed the World ─── */
-/* The crown jewel of Annals — demonstrating that IDEAS are the key actor in history. */
-import React, { useState, useMemo, useRef, useEffect } from 'react'
+/* Matches the standard topic page format (WeaponsPage structure). */
+import React, { useState, useMemo } from 'react'
 import { Box, Flex, Heading, Text, SimpleGrid, Input } from '@chakra-ui/react'
-import { SectionHeading, StatCard, InsightCard } from '../components/DataCards'
+import { StatCard } from '../components/DataCards'
 import Breadcrumb from '../components/Breadcrumb'
 import {
-  Brain, Lightbulb, Search, ChevronDown, ChevronUp, Network,
-  Globe, Clock, Sparkles, ArrowRight, Users, Landmark, BookOpen,
+  Brain, Search, ChevronDown, ChevronUp,
 } from 'lucide-react'
 import {
-  IDEAS, IDEA_DOMAINS, TOTAL_IDEAS, IDEAS_BY_ERA, IDEAS_BY_DOMAIN,
+  IDEAS, IDEA_DOMAINS,
   type HistoricalIdea,
 } from '../data/ideas'
 
-/* ─── Era color map ─── */
-const ERA_COLORS: Record<string, { bg: string; fg: string; label: string }> = {
-  prehistoric:  { bg: '#645E52', fg: '#FFF5EB', label: 'Prehistoric' },
-  ancient:      { bg: '#8B3A3A', fg: '#FFF5EB', label: 'Classical / Ancient' },
-  medieval:     { bg: '#96770B', fg: '#FFF5EB', label: 'Medieval' },
-  earlyModern:  { bg: '#D4AF37', fg: '#2D2A24', label: 'Early Modern' },
-  modern:       { bg: '#4A90D9', fg: '#FFFFFF', label: 'Modern (1800–1945)' },
-  contemporary: { bg: '#6B3FA0', fg: '#FFFFFF', label: 'Contemporary' },
+/* ─── Era labels matching topic page convention ─── */
+const ERA_LABELS: Record<string, { label: string; color: string; period: string }> = {
+  prehistoric:  { label: 'Prehistoric',             color: '#645E52', period: 'Before 3000 BCE' },
+  ancient:      { label: 'Classical / Ancient',     color: '#8B3A3A', period: '3000 BCE – 500 CE' },
+  medieval:     { label: 'Medieval',                color: '#96770B', period: '500 – 1500 CE' },
+  earlyModern:  { label: 'Early Modern',            color: '#D4AF37', period: '1500 – 1800 CE' },
+  modern:       { label: 'Modern',                  color: '#4A90D9', period: '1800 – 1945 CE' },
+  contemporary: { label: 'Contemporary',            color: '#6B3FA0', period: '1945 – Present' },
 }
 
 const ERA_ORDER = ['prehistoric', 'ancient', 'medieval', 'earlyModern', 'modern', 'contemporary']
@@ -28,627 +27,317 @@ const ERA_ORDER = ['prehistoric', 'ancient', 'medieval', 'earlyModern', 'modern'
 /* ─── Domain color map from data ─── */
 const domainColorMap = Object.fromEntries(IDEA_DOMAINS.map(d => [d.id, d.color]))
 
-/* ─── Small Idea Card ─── */
-function IdeaCard({ idea, onExpand, isExpanded }: { idea: HistoricalIdea; onExpand: () => void; isExpanded: boolean }) {
-  const eraInfo = ERA_COLORS[idea.era] || ERA_COLORS.ancient
-  const domainColor = domainColorMap[idea.domain] || '#8B3A3A'
+export default function IdeasPage() {
+  const [search, setSearch] = useState('')
+  const [selectedEra, setSelectedEra] = useState<string | null>(null)
+  const [selectedDomain, setSelectedDomain] = useState<string | null>(null)
+  const [expandedIdea, setExpandedIdea] = useState<string | null>(null)
 
-  return (
-    <Box
-      bg="white" border="1px solid" borderColor={isExpanded ? domainColor : '#E4E2DC'}
-      borderRadius="xl" overflow="hidden"
-      boxShadow={isExpanded ? `0 4px 20px ${domainColor}20` : '0 1px 3px rgba(44,24,16,0.08)'}
-      transition="all 0.3s"
-    >
-      {/* Header */}
-      <Box
-        p={4} cursor="pointer" onClick={onExpand}
-        _hover={{ bg: '#FDFAF5' }}
-      >
-        <Flex justify="space-between" align="flex-start">
-          <Box flex={1}>
-            <Flex align="center" gap={2} mb={1} flexWrap="wrap">
-              <Text
-                fontFamily='"JetBrains Mono", monospace' fontSize="10px" fontWeight={700}
-                color={eraInfo.fg} bg={eraInfo.bg} px={2} py={0.5} borderRadius="md"
-              >
-                {eraInfo.label}
-              </Text>
-              <Text
-                fontFamily='"JetBrains Mono", monospace' fontSize="10px" fontWeight={600}
-                color={domainColor} bg={`${domainColor}15`} px={2} py={0.5} borderRadius="md"
-              >
-                {idea.subdomain}
-              </Text>
-            </Flex>
-            <Text fontFamily='"Cormorant Garamond", serif' fontSize="lg" fontWeight={700} color="#2D2A24">
-              {idea.name}
-            </Text>
-            <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#9E9A90" mt={0.5}>
-              {idea.yearLabel} · {idea.originator}
-            </Text>
-          </Box>
-          <Flex direction="column" align="center" gap={1}>
-            {/* Transformative Score */}
-            <Box
-              w="36px" h="36px" borderRadius="full"
-              bg={`linear-gradient(135deg, ${domainColor}, ${domainColor}99)`}
-              display="flex" alignItems="center" justifyContent="center"
-            >
-              <Text fontFamily='"Cinzel", serif' fontSize="sm" fontWeight={700} color="white">
-                {idea.transformativeScore}
-              </Text>
-            </Box>
-            {isExpanded ? <ChevronUp size={14} color="#9E9A90" /> : <ChevronDown size={14} color="#9E9A90" />}
-          </Flex>
-        </Flex>
-      </Box>
+  const filtered = useMemo(() => {
+    let ideas = IDEAS
+    if (selectedEra) ideas = ideas.filter(i => i.era === selectedEra)
+    if (selectedDomain) ideas = ideas.filter(i => i.domain === selectedDomain)
+    if (search.trim()) {
+      const q = search.toLowerCase()
+      ideas = ideas.filter(i =>
+        i.name.toLowerCase().includes(q) ||
+        i.originator.toLowerCase().includes(q) ||
+        i.originPlace.toLowerCase().includes(q) ||
+        i.description.toLowerCase().includes(q) ||
+        i.domain.toLowerCase().includes(q)
+      )
+    }
+    return ideas
+  }, [selectedEra, selectedDomain, search])
 
-      {/* Expanded Detail */}
-      {isExpanded && (
-        <Box px={4} pb={4} borderTop="1px solid #F5F4F0">
-          <SimpleGrid columns={{ base: 1, md: 2 }} gap={4} mt={3}>
-            <Box>
-              <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" fontWeight={700}
-                color="#9E9A90" textTransform="uppercase" mb={1}>
-                The Idea
-              </Text>
-              <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#524E44" lineHeight={1.7}>
-                {idea.description}
-              </Text>
-            </Box>
-            <Box>
-              <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" fontWeight={700}
-                color="#C53030" textTransform="uppercase" mb={1}>
-                Why It Matters
-              </Text>
-              <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#524E44" lineHeight={1.7}>
-                {idea.impact}
-              </Text>
-            </Box>
-          </SimpleGrid>
-
-          {/* Provenance */}
-          <Box mt={3} p={3} bg="#FAFAF8" borderRadius="lg">
-            <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" fontWeight={700}
-              color="#2D2A24" textTransform="uppercase" mb={2}>
-              Origin & Lineage
-            </Text>
-            <SimpleGrid columns={{ base: 2, md: 4 }} gap={3}>
-              <Box>
-                <Text fontSize="10px" color="#9E9A90" fontWeight={600}>ORIGINATOR</Text>
-                <Text fontSize="sm" color="#2D2A24" fontWeight={600}>{idea.originator}</Text>
-                <Text fontSize="10px" color="#9E9A90">{idea.originatorType}</Text>
-              </Box>
-              <Box>
-                <Text fontSize="10px" color="#9E9A90" fontWeight={600}>ORIGIN PLACE</Text>
-                <Text fontSize="sm" color="#2D2A24" fontWeight={600}>{idea.originPlace}</Text>
-                <Text fontSize="10px" color="#9E9A90">{idea.region}</Text>
-              </Box>
-              <Box>
-                <Text fontSize="10px" color="#9E9A90" fontWeight={600}>PARENT IDEAS</Text>
-                {idea.parentIdeas.length > 0 ? (
-                  <Flex gap={1} flexWrap="wrap" mt={0.5}>
-                    {idea.parentIdeas.map(p => {
-                      const parent = IDEAS.find(i => i.slug === p)
-                      return (
-                        <Text key={p} fontSize="10px" color={domainColor} bg={`${domainColor}12`}
-                          px={1.5} py={0.5} borderRadius="md" fontWeight={600}>
-                          {parent?.name || p}
-                        </Text>
-                      )
-                    })}
-                  </Flex>
-                ) : (
-                  <Text fontSize="11px" color="#9E9A90" fontStyle="italic">First Principle</Text>
-                )}
-              </Box>
-              <Box>
-                <Text fontSize="10px" color="#9E9A90" fontWeight={600}>CHILD IDEAS</Text>
-                {idea.childIdeas.length > 0 ? (
-                  <Flex gap={1} flexWrap="wrap" mt={0.5}>
-                    {idea.childIdeas.slice(0, 3).map(c => {
-                      const child = IDEAS.find(i => i.slug === c)
-                      return (
-                        <Text key={c} fontSize="10px" color="#4A90D9" bg="#E8F0FE"
-                          px={1.5} py={0.5} borderRadius="md" fontWeight={600}>
-                          {child?.name || c}
-                        </Text>
-                      )
-                    })}
-                    {idea.childIdeas.length > 3 && (
-                      <Text fontSize="10px" color="#9E9A90">+{idea.childIdeas.length - 3} more</Text>
-                    )}
-                  </Flex>
-                ) : (
-                  <Text fontSize="11px" color="#9E9A90" fontStyle="italic">Frontier Idea</Text>
-                )}
-              </Box>
-            </SimpleGrid>
-          </Box>
-        </Box>
-      )}
-    </Box>
-  )
-}
-
-/* ─── Era Timeline River ─── */
-function EraRiver() {
+  /* Group by era then domain */
   const grouped = useMemo(() => {
-    return ERA_ORDER.map(era => ({
-      era,
-      info: ERA_COLORS[era],
-      ideas: IDEAS.filter(i => i.era === era).sort((a, b) => a.yearOrigin - b.yearOrigin),
-    }))
+    const map = new Map<string, Map<string, HistoricalIdea[]>>()
+    for (const idea of filtered) {
+      if (!map.has(idea.era)) map.set(idea.era, new Map())
+      const domMap = map.get(idea.era)!
+      if (!domMap.has(idea.domain)) domMap.set(idea.domain, [])
+      domMap.get(idea.domain)!.push(idea)
+    }
+    return map
+  }, [filtered])
+
+  const stats = useMemo(() => {
+    const byEra: Record<string, number> = {}
+    const byDomain: Record<string, number> = {}
+    const originators = new Set<string>()
+    for (const idea of IDEAS) {
+      byEra[idea.era] = (byEra[idea.era] || 0) + 1
+      byDomain[idea.domain] = (byDomain[idea.domain] || 0) + 1
+      originators.add(idea.originator)
+    }
+    return { total: IDEAS.length, byEra, byDomain, originators: originators.size }
   }, [])
 
   return (
     <Box>
-      {grouped.map(({ era, info, ideas }) => (
-        <Box key={era} mb={6}>
-          <Flex align="center" gap={3} mb={3}>
-            <Box w="40px" h="40px" borderRadius="full" bg={info.bg}
-              display="flex" alignItems="center" justifyContent="center">
-              <Clock size={18} color={info.fg} />
-            </Box>
-            <Box>
-              <Text fontFamily='"Cormorant Garamond", serif' fontSize="lg" fontWeight={700} color={info.bg}>
-                {info.label}
-              </Text>
-              <Text fontFamily='"JetBrains Mono", monospace' fontSize="11px" color="#9E9A90">
-                {ideas.length} transformative ideas
-              </Text>
-            </Box>
-          </Flex>
-          <Flex gap={2} flexWrap="wrap" ml="52px">
-            {ideas.map(idea => (
-              <Box key={idea.slug} px={3} py={1.5} bg={`${info.bg}15`} borderRadius="lg"
-                border="1px solid" borderColor={`${info.bg}30`}>
-                <Text fontFamily='"Inter", sans-serif' fontSize="xs" fontWeight={600} color={info.bg}>
-                  {idea.name}
-                </Text>
-                <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#9E9A90">
-                  {idea.yearLabel}
-                </Text>
-              </Box>
-            ))}
-          </Flex>
-        </Box>
-      ))}
-    </Box>
-  )
-}
+      <Breadcrumb items={[{ label: 'Ideas & Thought' }]} />
 
-/* ─── Canvas Genealogy Diagram ─── */
-function IdeaGenealogy() {
-  const canvasRef = useRef<HTMLCanvasElement>(null)
-  const containerRef = useRef<HTMLDivElement>(null)
-  const [hoveredIdea, setHoveredIdea] = useState<string | null>(null)
-
-  useEffect(() => {
-    const canvas = canvasRef.current
-    const container = containerRef.current
-    if (!canvas || !container) return
-
-    const width = container.clientWidth
-    const height = 600
-    canvas.width = width * 2
-    canvas.height = height * 2
-    canvas.style.width = `${width}px`
-    canvas.style.height = `${height}px`
-
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
-    ctx.scale(2, 2)
-    ctx.clearRect(0, 0, width, height)
-
-    // Position ideas by era (y) and domain (x)
-    const domainList = IDEA_DOMAINS.map(d => d.id)
-    const positions = new Map<string, { x: number; y: number; color: string }>()
-
-    const eraYMap: Record<string, number> = {
-      prehistoric: 50, ancient: 140, medieval: 230,
-      earlyModern: 320, modern: 410, contemporary: 500,
-    }
-
-    // Track x positions per era to avoid overlap
-    const eraXCounter: Record<string, number> = {}
-    ERA_ORDER.forEach(e => { eraXCounter[e] = 0 })
-
-    IDEAS.forEach(idea => {
-      const domIdx = domainList.indexOf(idea.domain)
-      const domainX = domIdx >= 0 ? domIdx : 0
-      const baseY = eraYMap[idea.era] || 300
-      const eraCount = eraXCounter[idea.era]
-      const itemsPerRow = Math.floor((width - 80) / 20)
-      const row = Math.floor(eraCount / itemsPerRow)
-      const col = eraCount % itemsPerRow
-      const x = 40 + col * 20
-      const y = baseY + row * 18
-      eraXCounter[idea.era]++
-      const dColor = domainColorMap[idea.domain] || '#8B3A3A'
-      positions.set(idea.slug, { x, y, color: dColor })
-    })
-
-    // Draw edges first (light)
-    ctx.lineWidth = 0.5
-    ctx.globalAlpha = 0.2
-    IDEAS.forEach(idea => {
-      const from = positions.get(idea.slug)
-      if (!from) return
-      idea.childIdeas.forEach(childSlug => {
-        const to = positions.get(childSlug)
-        if (!to) return
-        ctx.strokeStyle = from.color
-        ctx.beginPath()
-        ctx.moveTo(from.x, from.y)
-        const midY = (from.y + to.y) / 2
-        ctx.bezierCurveTo(from.x, midY, to.x, midY, to.x, to.y)
-        ctx.stroke()
-      })
-    })
-    ctx.globalAlpha = 1
-
-    // Draw nodes
-    IDEAS.forEach(idea => {
-      const pos = positions.get(idea.slug)
-      if (!pos) return
-      const isHovered = hoveredIdea === idea.slug
-      const radius = 3 + idea.transformativeScore * 0.5
-      ctx.beginPath()
-      ctx.arc(pos.x, pos.y, isHovered ? radius + 2 : radius, 0, Math.PI * 2)
-      ctx.fillStyle = pos.color
-      ctx.globalAlpha = isHovered ? 1 : 0.7
-      ctx.fill()
-      ctx.globalAlpha = 1
-    })
-
-    // Era labels on the right
-    ctx.font = '11px "JetBrains Mono", monospace'
-    ctx.textAlign = 'right'
-    ERA_ORDER.forEach(era => {
-      const y = eraYMap[era]
-      const info = ERA_COLORS[era]
-      ctx.fillStyle = info.bg
-      ctx.fillText(info.label, width - 10, y + 4)
-    })
-  }, [hoveredIdea])
-
-  return (
-    <Box ref={containerRef} w="100%" overflow="hidden" position="relative">
-      <canvas ref={canvasRef} style={{ display: 'block' }} />
-    </Box>
-  )
-}
-
-/* ─── Main Page ─── */
-export default function IdeasPage() {
-  const [search, setSearch] = useState('')
-  const [selectedDomain, setSelectedDomain] = useState<string | null>(null)
-  const [selectedEra, setSelectedEra] = useState<string | null>(null)
-  const [expandedSlug, setExpandedSlug] = useState<string | null>(null)
-
-  const filtered = useMemo(() => {
-    return IDEAS.filter(idea => {
-      if (selectedDomain && idea.domain !== selectedDomain) return false
-      if (selectedEra && idea.era !== selectedEra) return false
-      if (search) {
-        const q = search.toLowerCase()
-        return idea.name.toLowerCase().includes(q) ||
-          idea.originator.toLowerCase().includes(q) ||
-          idea.description.toLowerCase().includes(q) ||
-          idea.originPlace.toLowerCase().includes(q) ||
-          idea.domain.toLowerCase().includes(q)
-      }
-      return true
-    })
-  }, [search, selectedDomain, selectedEra])
-
-  const score10Ideas = IDEAS.filter(i => i.transformativeScore === 10)
-  const originatorTypes = IDEAS.reduce<Record<string, number>>((acc, i) => {
-    acc[i.originatorType] = (acc[i.originatorType] || 0) + 1; return acc
-  }, {})
-
-  return (
-    <Box>
-      <Breadcrumb items={[{ label: 'Hall of Ideas' }]} />
       {/* ─── Hero ─── */}
-      <Box mb={10} textAlign="center" py={10}
-        bg="linear-gradient(135deg, #6B3FA015 0%, #E8F0FE 30%, #FAFAF8 70%, #FFF5EB 100%)"
-        borderRadius="2xl" border="1px solid #E4E2DC" position="relative" overflow="hidden"
-      >
-        <Box position="absolute" top={0} left={0} right={0} h="3px"
-          bg="linear-gradient(90deg, #6B3FA0, #4A90D9, #D4AF37, #2F855A, #C53030)" />
-        <Flex justify="center" mb={4}>
-          <Box p={3} bg="linear-gradient(135deg, #6B3FA0, #4A90D9)" borderRadius="2xl">
-            <Lightbulb size={36} color="white" />
-          </Box>
-        </Flex>
+      <Box mb={8} textAlign="center" py={8}
+        bg="linear-gradient(135deg, #2D2A24 0%, #3A2A1A 40%, #6B3FA0 70%, #D4AF37 100%)"
+        borderRadius="2xl" border="1px solid #D4AF37">
         <Heading fontFamily='"Cinzel", serif' fontSize={{ base: '2xl', md: '4xl' }} fontWeight={700}
-          color="#2D2A24" mb={3}>
+          color="#FAFAF8" mb={3}>
           Ideas That Transformed the World
         </Heading>
         <Text fontFamily='"Cormorant Garamond", serif' fontSize={{ base: 'lg', md: 'xl' }}
-          color="#524E44" maxW="750px" mx="auto" lineHeight={1.8} mb={2}>
+          color="#E4E2DC" maxW="750px" mx="auto" lineHeight={1.8} mb={3}>
           People die. Institutions crumble. Events pass.<br />
           But Ideas propagate, mutate, merge, and compound across millennia.
         </Text>
-        <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#9E9A90" maxW="600px" mx="auto">
-          Every Person is a vessel for Ideas. Every Institution is a structure to propagate Ideas.
-          Every Event is a collision of Ideas. Every Movement is an Idea that found legs.
+        <Text fontFamily='"JetBrains Mono", monospace' fontSize="sm" color="#D4AF37">
+          {stats.total} ideas · {stats.originators} originators · 2,500,000 years of thought
         </Text>
       </Box>
 
-      {/* ─── Why Ideas Are THE Key Actor ─── */}
-      <Box mb={10}>
-        <SectionHeading
-          title="Why Ideas Are the Key Actor"
-          subtitle="In the Annals knowledge graph, Ideas outlast every other actor — and they compound"
-        />
-        <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={4} mt={6}>
-          <Box p={5} bg="white" border="1px solid #E4E2DC" borderRadius="xl"
-            borderLeft="4px solid #C53030">
-            <Flex align="center" gap={2} mb={2}>
-              <Users size={18} color="#C53030" />
-              <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#2D2A24">
-                People
-              </Text>
-            </Flex>
-            <Heading fontFamily='"Cinzel", serif' fontSize="3xl" color="#C53030" mb={1}>~80 yr</Heading>
-            <Text fontSize="xs" color="#524E44" lineHeight={1.6}>
-              Alexander: 32 years. Newton: 84 years. Einstein: 76 years.
-              People are <strong>mortal vessels</strong> — carriers of ideas who eventually expire.
-            </Text>
-          </Box>
-          <Box p={5} bg="white" border="1px solid #E4E2DC" borderRadius="xl"
-            borderLeft="4px solid #DD6B20">
-            <Flex align="center" gap={2} mb={2}>
-              <Landmark size={18} color="#DD6B20" />
-              <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#2D2A24">
-                Institutions
-              </Text>
-            </Flex>
-            <Heading fontFamily='"Cinzel", serif' fontSize="3xl" color="#DD6B20" mb={1}>~500 yr</Heading>
-            <Text fontSize="xs" color="#524E44" lineHeight={1.6}>
-              Rome: 1,000 years (exceptional). Most empires: 250 years.
-              Institutions are <strong>organized structures</strong> that propagate ideas — until they collapse.
-            </Text>
-          </Box>
-          <Box p={5} bg="white" border="1px solid #E4E2DC" borderRadius="xl"
-            borderLeft="4px solid #4A90D9">
-            <Flex align="center" gap={2} mb={2}>
-              <Clock size={18} color="#4A90D9" />
-              <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#2D2A24">
-                Events
-              </Text>
-            </Flex>
-            <Heading fontFamily='"Cinzel", serif' fontSize="3xl" color="#4A90D9" mb={1}>~1–50 yr</Heading>
-            <Text fontSize="xs" color="#524E44" lineHeight={1.6}>
-              Wars end. Treaties are signed. Battles last hours.
-              Events are <strong>collisions of ideas</strong> — they pass, but the ideas endure.
-            </Text>
-          </Box>
-          <Box p={5} bg="white" border="1px solid #E4E2DC" borderRadius="xl"
-            borderLeft="4px solid #6B3FA0" position="relative" overflow="hidden">
-            <Box position="absolute" top={0} left={0} right={0} h="2px"
-              bg="linear-gradient(90deg, #6B3FA0, #D4AF37)" />
-            <Flex align="center" gap={2} mb={2}>
-              <Lightbulb size={18} color="#6B3FA0" />
-              <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color="#2D2A24">
-                Ideas
-              </Text>
-            </Flex>
-            <Heading fontFamily='"Cinzel", serif' fontSize="3xl" color="#6B3FA0" mb={1}>∞</Heading>
-            <Text fontSize="xs" color="#524E44" lineHeight={1.6}>
-              Democracy: 2,500 years. Scientific Method: 400 years. Monotheism: 3,400 years.
-              Ideas <strong>never die</strong> — they evolve, merge, and compound forever.
-            </Text>
-          </Box>
-        </SimpleGrid>
+      {/* ─── Summary Stats ─── */}
+      <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} gap={3} mb={8}>
+        {ERA_ORDER.map(era => {
+          const info = ERA_LABELS[era]
+          return (
+            <StatCard key={era} value={String(stats.byEra[era] || 0)}
+              label={info.label} color={info.color} />
+          )
+        })}
+      </SimpleGrid>
 
-        {/* Thesis Statement */}
-        <Box mt={6} p={6} bg="#082340" borderRadius="xl" textAlign="center">
-          <Heading fontFamily='"Cinzel", serif' fontSize={{ base: 'lg', md: '2xl' }} color="#D4AF37" mb={3}>
-            Ideas Are the DNA of Civilization
-          </Heading>
-          <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#E8F0FE" lineHeight={1.8} maxW="700px" mx="auto">
-            In the Annals knowledge graph, <strong>Idea is the largest node label</strong> — 923 in the backend alone.
-            More than People (202), Events (222), or Institutions (160). This is not an accident.
-            Every other actor exists to <em>generate, propagate, or collide</em> ideas.
-            When you trace any historical transformation to its root, you find an Idea.
-          </Text>
-          <Flex justify="center" gap={6} mt={4} flexWrap="wrap">
-            <StatCard value={String(TOTAL_IDEAS)} label="Ideas Catalogued" detail="With full provenance" color="#6B3FA0" />
-            <StatCard value={String(score10Ideas.length)} label="Score 10/10" detail="Civilizational impact" color="#D4AF37" />
-            <StatCard value={String(IDEA_DOMAINS.length)} label="Domains" detail="Cross-disciplinary" color="#4A90D9" />
-          </Flex>
-        </Box>
-      </Box>
-
-      {/* ─── Evolution Timeline ─── */}
-      <Box mb={10}>
-        <SectionHeading
-          title="The River of Ideas Across Time"
-          subtitle="How ideas flow from era to era — each building on what came before"
-        />
-        <EraRiver />
-      </Box>
-
-      {/* ─── Genealogy Canvas ─── */}
-      <Box mb={10}>
-        <SectionHeading
-          title="Idea Genealogy — The Web of Influence"
-          subtitle="Every idea connects to its ancestors and descendants, forming a living genealogy of thought"
-        />
-        <Box bg="#FDFAF5" border="1px solid #E4E2DC" borderRadius="xl" p={4} overflow="hidden">
-          <IdeaGenealogy />
-          <Flex justify="center" gap={4} mt={3} flexWrap="wrap">
-            {IDEA_DOMAINS.slice(0, 8).map(d => (
-              <Flex key={d.id} align="center" gap={1}>
-                <Box w="10px" h="10px" borderRadius="full" bg={d.color} />
-                <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace' color="#9E9A90">
-                  {d.label}
-                </Text>
-              </Flex>
-            ))}
-          </Flex>
-        </Box>
-      </Box>
-
-      {/* ─── Domain Distribution ─── */}
-      <Box mb={10}>
-        <SectionHeading
-          title="Ideas by Domain"
-          subtitle="The distribution of transformative ideas across fields of human thought"
-        />
-        <SimpleGrid columns={{ base: 2, md: 3, lg: 5 }} gap={3}>
-          {IDEA_DOMAINS.filter(d => IDEAS_BY_DOMAIN[d.id]).map(d => (
-            <Box key={d.id} p={4} bg="white" border="1px solid #E4E2DC" borderRadius="xl"
-              borderTop="3px solid" borderTopColor={d.color}
-              cursor="pointer" onClick={() => setSelectedDomain(selectedDomain === d.id ? null : d.id)}
-              opacity={selectedDomain && selectedDomain !== d.id ? 0.5 : 1}
-              transition="all 0.2s"
-              _hover={{ transform: 'translateY(-2px)', boxShadow: '0 4px 12px rgba(0,0,0,0.08)' }}
-            >
-              <Text fontFamily='"Cinzel", serif' fontSize="2xl" fontWeight={700} color={d.color}>
-                {IDEAS_BY_DOMAIN[d.id]}
-              </Text>
-              <Text fontFamily='"Inter", sans-serif' fontSize="xs" fontWeight={600} color="#2D2A24">
-                {d.label}
-              </Text>
-            </Box>
-          ))}
-        </SimpleGrid>
-      </Box>
-
-      {/* ─── Originator Breakdown ─── */}
-      <Box mb={10}>
-        <SectionHeading
-          title="Who Creates Ideas?"
-          subtitle="Ideas emerge from individual geniuses, collective wisdom, institutional programs, and movements"
-        />
-        <SimpleGrid columns={{ base: 2, md: 5 }} gap={4}>
-          {Object.entries(originatorTypes).sort((a, b) => b[1] - a[1]).map(([type, count]) => (
-            <StatCard
-              key={type}
-              value={String(count)}
-              label={type}
-              detail={
-                type === 'Person' ? 'Named individuals' :
-                type === 'Collective' ? 'Civilizations & groups' :
-                type === 'Institution' ? 'Organizations & labs' :
-                type === 'Movement' ? 'Intellectual movements' :
-                'Ancient peoples'
-              }
-              color={
-                type === 'Person' ? '#4A90D9' :
-                type === 'Collective' ? '#6B3FA0' :
-                type === 'Institution' ? '#2F855A' :
-                type === 'Movement' ? '#D4AF37' :
-                '#8B3A3A'
-              }
-            />
-          ))}
-        </SimpleGrid>
-      </Box>
-
-      {/* ─── Filterable Ideas Catalog ─── */}
-      <Box mb={10}>
-        <SectionHeading
-          title="Complete Ideas Catalog"
-          subtitle={`${TOTAL_IDEAS} ideas with full provenance — search, filter, and explore`}
-        />
-
-        {/* Search & Filters */}
-        <Flex gap={3} mb={4} flexWrap="wrap" align="center">
+      {/* ─── Filters ─── */}
+      <Box mb={8} p={5} bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="xl">
+        <Flex gap={4} flexWrap="wrap" align="center" mb={4}>
           <Box position="relative" flex={1} minW="200px">
             <Box position="absolute" left={3} top="50%" transform="translateY(-50%)" zIndex={1}>
               <Search size={16} color="#9E9A90" />
             </Box>
             <Input
-              placeholder="Search ideas, people, places..."
+              placeholder="Search ideas, originators, places..."
               value={search}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
-              pl={10}
-              bg="white" border="1px solid #E4E2DC" borderRadius="lg"
+              pl={9} size="sm" bg="white" border="1px solid #E4E2DC" borderRadius="lg"
               fontFamily='"Inter", sans-serif' fontSize="sm"
-              _placeholder={{ color: '#D6D3CC' }}
+              _focus={{ borderColor: '#D4AF37', boxShadow: '0 0 0 1px #D4AF37' }}
             />
           </Box>
+        </Flex>
 
-          {/* Era filter toggles */}
+        {/* Era filter pills */}
+        <Flex gap={2} flexWrap="wrap" mb={3}>
+          <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#9E9A90"
+            textTransform="uppercase" mr={2} lineHeight="28px">
+            Era:
+          </Text>
           {ERA_ORDER.map(era => {
-            const info = ERA_COLORS[era]
-            const active = selectedEra === era
+            const info = ERA_LABELS[era]
+            const isActive = selectedEra === era
             return (
-              <Box
-                key={era} px={3} py={1.5} borderRadius="lg" cursor="pointer"
-                bg={active ? info.bg : 'white'}
-                color={active ? info.fg : info.bg}
-                border="1px solid" borderColor={info.bg}
-                fontSize="xs" fontWeight={600} fontFamily='"JetBrains Mono", monospace'
-                onClick={() => setSelectedEra(active ? null : era)}
-                transition="all 0.2s"
-              >
-                {info.label}
+              <Box key={era} as="button" px={3} py={1} borderRadius="full" fontSize="xs"
+                fontFamily='"Inter", sans-serif' fontWeight={600} cursor="pointer"
+                bg={isActive ? info.color : 'white'} color={isActive ? 'white' : '#524E44'}
+                border="1px solid" borderColor={isActive ? info.color : '#E4E2DC'}
+                onClick={() => setSelectedEra(isActive ? null : era)}
+                _hover={{ bg: isActive ? info.color : '#FDF8ED' }}>
+                {info.label} ({stats.byEra[era] || 0})
               </Box>
             )
           })}
         </Flex>
 
-        {/* Clear filters hint */}
-        {(search || selectedDomain || selectedEra) && (
-          <Flex mb={3} align="center" gap={2}>
-            <Text fontSize="xs" color="#9E9A90">
-              Showing {filtered.length} of {TOTAL_IDEAS} ideas
-            </Text>
-            <Text fontSize="xs" color="#4A90D9" cursor="pointer" fontWeight={600}
-              onClick={() => { setSearch(''); setSelectedDomain(null); setSelectedEra(null) }}>
-              Clear all filters
-            </Text>
-          </Flex>
-        )}
-
-        {/* Ideas list */}
-        <SimpleGrid columns={{ base: 1, lg: 2 }} gap={3}>
-          {filtered.map(idea => (
-            <IdeaCard
-              key={idea.slug}
-              idea={idea}
-              isExpanded={expandedSlug === idea.slug}
-              onExpand={() => setExpandedSlug(expandedSlug === idea.slug ? null : idea.slug)}
-            />
-          ))}
-        </SimpleGrid>
-
-        {filtered.length === 0 && (
-          <Box textAlign="center" py={10}>
-            <Text fontFamily='"Cormorant Garamond", serif' fontSize="xl" color="#9E9A90">
-              No ideas match your search
-            </Text>
-            <Text fontSize="sm" color="#D6D3CC" mt={1}>
-              Try adjusting your search terms or clearing filters
-            </Text>
-          </Box>
-        )}
+        {/* Domain filter pills */}
+        <Flex gap={2} flexWrap="wrap">
+          <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#9E9A90"
+            textTransform="uppercase" mr={2} lineHeight="28px">
+            Domain:
+          </Text>
+          {IDEA_DOMAINS.map(dom => {
+            const isActive = selectedDomain === dom.id
+            return (
+              <Box key={dom.id} as="button" px={3} py={1} borderRadius="full" fontSize="xs"
+                fontFamily='"Inter", sans-serif' fontWeight={600} cursor="pointer"
+                bg={isActive ? dom.color : 'white'} color={isActive ? 'white' : '#524E44'}
+                border="1px solid" borderColor={isActive ? dom.color : '#E4E2DC'}
+                onClick={() => setSelectedDomain(isActive ? null : dom.id)}
+                _hover={{ bg: isActive ? dom.color : '#FDF8ED' }}>
+                <Flex align="center" gap={1}>
+                  <Brain size={12} />
+                  {dom.label} ({stats.byDomain[dom.id] || 0})
+                </Flex>
+              </Box>
+            )
+          })}
+        </Flex>
       </Box>
 
-      {/* ─── The Idea Thesis ─── */}
-      <Box bg="#082340" borderRadius="2xl" p={8} textAlign="center" mb={8}>
-        <Sparkles size={28} color="#D4AF37" style={{ margin: '0 auto 16px' }} />
-        <Heading fontFamily='"Cinzel", serif' fontSize={{ base: 'xl', md: '2xl' }} color="#D4AF37" mb={4}>
-          "The most powerful force in the universe is not gravity,<br />
-          not nuclear fission, not even love — it is an Idea<br />
-          whose time has come."
-        </Heading>
-        <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#E8F0FE" mb={4} lineHeight={1.8}
-          maxW="650px" mx="auto">
-          From the first time a human carved a tally mark on bone, to the machine learning models
-          that now predict protein structures — every step is an Idea building on the last.
-          Ideas are the true protagonists of human history. Everything else is stage and scenery.
+      {/* ─── Results Count ─── */}
+      <Flex justify="space-between" align="center" mb={4}>
+        <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#9E9A90">
+          Showing {filtered.length} of {stats.total} ideas
         </Text>
-        <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#4A90D9">
-          Annals of the World · {TOTAL_IDEAS} Ideas Catalogued · From 2,500,000 BCE to Present
+        {(selectedEra || selectedDomain || search) && (
+          <Box as="button" fontSize="xs" fontFamily='"Inter", sans-serif' color="#4A90D9"
+            cursor="pointer" onClick={() => { setSelectedEra(null); setSelectedDomain(null); setSearch('') }}
+            _hover={{ textDecoration: 'underline' }}>
+            Clear filters
+          </Box>
+        )}
+      </Flex>
+
+      {/* ─── Grouped Ideas Display ─── */}
+      {ERA_ORDER.filter(era => grouped.has(era)).map(era => {
+        const eraInfo = ERA_LABELS[era]
+        const domMap = grouped.get(era)!
+
+        return (
+          <Box key={era} mb={10}>
+            {/* Era Header */}
+            <Box mb={4} pb={2} borderBottom="3px solid" borderColor={eraInfo.color}>
+              <Flex align="center" gap={3}>
+                <Box w="8px" h="8px" borderRadius="full" bg={eraInfo.color} />
+                <Heading fontFamily='"Cinzel", serif' fontSize="xl" fontWeight={700} color="#2D2A24">
+                  {eraInfo.label}
+                </Heading>
+                <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#9E9A90">
+                  {eraInfo.period}
+                </Text>
+              </Flex>
+            </Box>
+
+            {Array.from(domMap.entries()).map(([domainId, ideas]) => {
+              const domInfo = IDEA_DOMAINS.find(d => d.id === domainId)
+              const domColor = domInfo?.color || '#524E44'
+
+              return (
+                <Box key={domainId} mb={6}>
+                  <Flex align="center" gap={2} mb={3}>
+                    <Brain size={16} color={domColor} />
+                    <Text fontFamily='"Inter", sans-serif' fontSize="sm" fontWeight={700} color={domColor}>
+                      {domInfo?.label || domainId}
+                    </Text>
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#9E9A90">
+                      ({ideas.length})
+                    </Text>
+                  </Flex>
+
+                  <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={3}>
+                    {ideas.map(idea => {
+                      const isExpanded = expandedIdea === idea.slug
+                      return (
+                        <Box key={idea.slug} p={4} bg="white" border="1px solid #E4E2DC"
+                          borderRadius="xl" borderTop="3px solid" borderTopColor={eraInfo.color}
+                          cursor="pointer" transition="all 0.15s"
+                          onClick={() => setExpandedIdea(isExpanded ? null : idea.slug)}
+                          _hover={{ shadow: 'md', borderColor: '#D4AF37' }}>
+                          {/* Header */}
+                          <Flex justify="space-between" align="flex-start" mb={2}>
+                            <Box flex={1}>
+                              <Text fontFamily='"Cormorant Garamond", serif' fontSize="md"
+                                fontWeight={700} color="#2D2A24" lineHeight={1.3}>
+                                {idea.name}
+                              </Text>
+                              <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px"
+                                color="#9E9A90" mt={0.5}>
+                                {idea.subdomain}
+                              </Text>
+                            </Box>
+                            {isExpanded ? <ChevronUp size={14} color="#9E9A90" /> : <ChevronDown size={14} color="#9E9A90" />}
+                          </Flex>
+
+                          {/* Quick info */}
+                          <Flex gap={2} flexWrap="wrap" mb={2}>
+                            <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace'
+                              bg="#FDF8ED" px={1.5} py={0.5} borderRadius="md" color="#524E44">
+                              {idea.yearLabel}
+                            </Text>
+                            <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace'
+                              bg="#E8F0FE" px={1.5} py={0.5} borderRadius="md" color="#082340">
+                              {idea.originator}
+                            </Text>
+                            <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace'
+                              bg="#F0FFF4" px={1.5} py={0.5} borderRadius="md" color="#22543D">
+                              {idea.originPlace}
+                            </Text>
+                            <Text fontSize="10px" fontFamily='"JetBrains Mono", monospace'
+                              bg={`${domColor}15`} px={1.5} py={0.5} borderRadius="md" color={domColor}>
+                              ★ {idea.transformativeScore}/10
+                            </Text>
+                          </Flex>
+
+                          {/* Expanded details */}
+                          {isExpanded && (
+                            <Box mt={3} pt={3} borderTop="1px solid #E4E2DC">
+                              <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#524E44"
+                                lineHeight={1.7} mb={3}>
+                                {idea.description}
+                              </Text>
+                              <Box bg="#FDF8ED" p={3} borderRadius="lg" border="1px solid #E4E2DC">
+                                <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px"
+                                  color="#D4AF37" textTransform="uppercase" mb={1}>
+                                  Historical Impact
+                                </Text>
+                                <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#2D2A24"
+                                  lineHeight={1.6} fontWeight={500}>
+                                  {idea.impact}
+                                </Text>
+                              </Box>
+                            </Box>
+                          )}
+                        </Box>
+                      )
+                    })}
+                  </SimpleGrid>
+                </Box>
+              )
+            })}
+          </Box>
+        )
+      })}
+
+      {/* ─── Timeline of Intellectual Milestones ─── */}
+      <Box mb={8} p={6} bg="#082340" borderRadius="2xl">
+        <Heading fontFamily='"Cinzel", serif' fontSize="xl" color="#D4AF37" mb={4} textAlign="center">
+          The Arc of Human Thought
+        </Heading>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={4}>
+          {[
+            { title: 'Language & Symbol', period: '~100,000 BCE', detail: 'Symbolic thought and spoken language gave Homo sapiens the ability to share ideas across generations.', color: '#645E52' },
+            { title: 'Writing & Record', period: '~3400 BCE', detail: 'Cuneiform and hieroglyphics turned ephemeral speech into permanent knowledge — civilization could accumulate.', color: '#8B3A3A' },
+            { title: 'Greek Rationalism', period: '~500 BCE', detail: 'Philosophy, logic, and democracy: the radical notion that reason, not gods, could explain the world.', color: '#96770B' },
+            { title: 'Monotheism', period: '~1350 BCE', detail: 'One God, one moral law. Judaism, Christianity, and Islam built civilizations on this foundation.', color: '#805AD5' },
+            { title: 'The Scientific Method', period: '~1620 CE', detail: 'Bacon and Galileo: observe, hypothesize, test, repeat. The most powerful idea engine ever invented.', color: '#D4AF37' },
+            { title: 'Enlightenment & Rights', period: '~1689 CE', detail: 'Locke, Voltaire, Paine: natural rights, consent of the governed. The intellectual fuel of revolutions.', color: '#C5963A' },
+            { title: 'Evolution by Selection', period: '1859 CE', detail: 'Darwin showed that complexity needs no designer. Biology, medicine, and philosophy were never the same.', color: '#38B2AC' },
+            { title: 'Information Theory', period: '1948 CE', detail: 'Shannon quantified information. Computers, the internet, AI — all flow from bits and entropy.', color: '#3182CE' },
+            { title: 'Artificial Intelligence', period: '1956 – Present', detail: 'From Turing to LLMs: machines that learn, reason, and create. The latest chapter in the story of ideas.', color: '#6B3FA0' },
+          ].map(m => (
+            <Box key={m.title} p={4} bg="rgba(255,255,255,0.05)" borderRadius="lg" borderLeft="3px solid" borderLeftColor={m.color}>
+              <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color={m.color} mb={1}>
+                {m.period}
+              </Text>
+              <Text fontFamily='"Cormorant Garamond", serif' fontSize="md" fontWeight={700} color="#FAFAF8" mb={1}>
+                {m.title}
+              </Text>
+              <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#B8D4FE" lineHeight={1.6}>
+                {m.detail}
+              </Text>
+            </Box>
+          ))}
+        </SimpleGrid>
+      </Box>
+
+      {/* ─── Closing ─── */}
+      <Box bg="#2D2A24" borderRadius="2xl" p={8} textAlign="center" mb={8}>
+        <Heading fontFamily='"Cinzel", serif' fontSize={{ base: 'lg', md: 'xl' }} color="#D4AF37" mb={3}>
+          "An idea that is not dangerous is unworthy of being called an idea at all."
+        </Heading>
+        <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#E4E2DC" mb={2}>
+          — Oscar Wilde
+        </Text>
+        <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#9E9A90" mt={3}>
+          {stats.total} ideas documented · {stats.originators} originators · CC0 Public Domain
         </Text>
       </Box>
     </Box>

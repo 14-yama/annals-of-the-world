@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Outlet, Link as RouterLink, useLocation, useNavigate } from 'react-router-dom'
 import { Box, Flex, Text, Stack, IconButton, Input } from '@chakra-ui/react'
 import type { CSSProperties } from 'react'
@@ -35,7 +35,8 @@ import {
   Gavel,
   Crown,
 } from 'lucide-react'
-import { getAllEntities } from '../data/catalog'
+import { Query } from 'appwrite'
+import { databases, DATABASE_ID, COLLECTIONS } from '../lib/appwrite'
 
 /* ── Top-level domain navigation (horizontal) ── */
 const TOP_NAV = [
@@ -59,6 +60,70 @@ interface NavSection {
   collapsible: boolean
   items: NavItem[]
 }
+
+/* ── Era sections with sub-divisions (from callNumbers.ts class 9) ── */
+interface EraSection {
+  id: string
+  label: string
+  eraId: string
+  color: string
+  icon: React.ElementType
+  divisions: { path: string; label: string; code: string }[]
+}
+
+const ERA_SECTIONS: EraSection[] = [
+  {
+    id: 'era-prehistoric', label: 'Prehistoric', eraId: 'prehistory', color: '#6B4D1B', icon: Mountain,
+    divisions: [
+      { path: '/catalog?eraDivision=911', label: 'Paleolithic & Mesolithic', code: '911' },
+      { path: '/catalog?eraDivision=912', label: 'Neolithic & Chalcolithic', code: '912' },
+      { path: '/catalog?eraDivision=913', label: 'Bronze Age', code: '913' },
+    ],
+  },
+  {
+    id: 'era-classical', label: 'Classical', eraId: 'ancient', color: '#8B4513', icon: Landmark,
+    divisions: [
+      { path: '/catalog?eraDivision=921', label: 'Archaic Period', code: '921' },
+      { path: '/catalog?eraDivision=922', label: 'Hellenistic Period', code: '922' },
+      { path: '/catalog?eraDivision=923', label: 'Roman Period', code: '923' },
+      { path: '/catalog?eraDivision=924', label: 'Late Antiquity', code: '924' },
+    ],
+  },
+  {
+    id: 'era-medieval', label: 'Medieval', eraId: 'medieval', color: '#A67C2E', icon: Crown,
+    divisions: [
+      { path: '/catalog?eraDivision=931', label: 'Early Medieval / Dark Ages', code: '931' },
+      { path: '/catalog?eraDivision=932', label: 'High Medieval', code: '932' },
+      { path: '/catalog?eraDivision=933', label: 'Late Medieval', code: '933' },
+    ],
+  },
+  {
+    id: 'era-early-modern', label: 'Early Modern', eraId: 'early-modern', color: '#C5963A', icon: Compass,
+    divisions: [
+      { path: '/catalog?eraDivision=941', label: 'Age of Exploration', code: '941' },
+      { path: '/catalog?eraDivision=942', label: 'Renaissance Period', code: '942' },
+      { path: '/catalog?eraDivision=943', label: 'Reformation Era', code: '943' },
+      { path: '/catalog?eraDivision=944', label: 'Age of Enlightenment', code: '944' },
+    ],
+  },
+  {
+    id: 'era-modern', label: 'Modern', eraId: 'modern', color: '#4A90D9', icon: Globe,
+    divisions: [
+      { path: '/catalog?eraDivision=951', label: 'Industrial Age', code: '951' },
+      { path: '/catalog?eraDivision=952', label: 'Age of Empire', code: '952' },
+      { path: '/catalog?eraDivision=953', label: 'Interwar Period', code: '953' },
+      { path: '/catalog?eraDivision=954', label: 'World War II Era', code: '954' },
+    ],
+  },
+  {
+    id: 'era-contemporary', label: 'Contemporary', eraId: 'contemporary', color: '#6B3FA0', icon: Orbit,
+    divisions: [
+      { path: '/catalog?eraDivision=961', label: 'Cold War Era', code: '961' },
+      { path: '/catalog?eraDivision=962', label: 'Post-Cold War', code: '962' },
+      { path: '/catalog?eraDivision=963', label: 'Digital Age', code: '963' },
+    ],
+  },
+]
 
 /* ── Sidebar sections ── */
 const NAV_SECTIONS: NavSection[] = [
@@ -115,6 +180,7 @@ const NAV_SECTIONS: NavSection[] = [
       { path: '/marriage',       label: 'Marriage',         icon: Heart },
       { path: '/customs',        label: 'Customs',          icon: Crown },
       { path: '/punishment',     label: 'Punishment',       icon: Gavel },
+      { path: '/ideas',          label: 'Ideas',            icon: Lightbulb },
     ],
   },
   {
@@ -145,16 +211,31 @@ export default function Layout() {
   const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const [globalSearch, setGlobalSearch] = useState('')
+  const [catalogCount, setCatalogCount] = useState<number>(0)
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({
     browse: true,
     continents: true,
     topics: true,
     corpus: true,
+    ...Object.fromEntries(ERA_SECTIONS.map(e => [e.id, true])),
   })
 
   const toggleSection = (id: string) => {
     setCollapsed(prev => ({ ...prev, [id]: !prev[id] }))
   }
+
+  /* Fetch live entity count from Appwrite */
+  useEffect(() => {
+    let cancelled = false
+    async function fetchCount() {
+      try {
+        const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [Query.limit(1)])
+        if (!cancelled && res.total > 0) setCatalogCount(res.total)
+      } catch { /* keep static fallback */ }
+    }
+    fetchCount()
+    return () => { cancelled = true }
+  }, [])
 
   /** Check if any item in a section is active (to auto-expand) */
   const isSectionActive = (section: NavSection) => {
@@ -304,6 +385,114 @@ export default function Layout() {
             )
           })}
 
+          {/* ─── Era Sub-Divisions (Shelf Nav) ─── */}
+          {sidebarOpen && (
+            <Box>
+              <Text
+                fontFamily='"Cinzel", serif'
+                fontSize="9px"
+                fontWeight={700}
+                color="#B8B2A4"
+                letterSpacing="0.2em"
+                textTransform="uppercase"
+                px={3}
+                pt={4}
+                pb={1}
+              >
+                Eras
+              </Text>
+              {ERA_SECTIONS.map((era) => {
+                const isEraOpen = !collapsed[era.id] ||
+                  location.pathname === `/explore/${era.eraId}` ||
+                  era.divisions.some(d => location.pathname + location.search === d.path)
+                const EraIcon = era.icon
+                return (
+                  <Box key={era.id}>
+                    <Flex
+                      align="center"
+                      gap="8px"
+                      px={3}
+                      py="7px"
+                      cursor="pointer"
+                      onClick={() => toggleSection(era.id)}
+                      borderRadius="6px"
+                      _hover={{ bg: `${era.color}08` }}
+                      transition="all 0.2s"
+                    >
+                      <Box w="8px" h="8px" borderRadius="full" bg={era.color} flexShrink={0} />
+                      <EraIcon size={14} color={era.color} />
+                      <Text
+                        flex={1}
+                        fontFamily='"Inter", sans-serif'
+                        fontSize="13px"
+                        fontWeight={location.pathname === `/explore/${era.eraId}` ? 600 : 400}
+                        color={location.pathname === `/explore/${era.eraId}` ? '#2D2A24' : '#787469'}
+                        letterSpacing="0.02em"
+                      >
+                        {era.label}
+                      </Text>
+                      <Box color="#B8B2A4" transition="transform 0.2s">
+                        {isEraOpen ? <ChevronDown size={11} /> : <ChevronRight size={11} />}
+                      </Box>
+                    </Flex>
+                    {isEraOpen && (
+                      <Box pl={6}>
+                        {/* Link to era overview */}
+                        <RouterLink
+                          to={`/explore/${era.eraId}`}
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px',
+                            padding: '5px 12px',
+                            borderRadius: '4px',
+                            fontSize: '11px',
+                            fontFamily: '"Inter", sans-serif',
+                            color: location.pathname === `/explore/${era.eraId}` ? era.color : '#9E9A90',
+                            fontWeight: location.pathname === `/explore/${era.eraId}` ? 600 : 400,
+                            textDecoration: 'none',
+                            transition: 'all 0.2s',
+                          }}
+                        >
+                          Overview
+                        </RouterLink>
+                        {/* Sub-division links */}
+                        {era.divisions.map((div) => {
+                          const fullUrl = location.pathname + location.search
+                          const isDivActive = fullUrl === div.path
+                          return (
+                            <RouterLink
+                              key={div.code}
+                              to={div.path}
+                              style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '6px',
+                                padding: '5px 12px',
+                                borderRadius: '4px',
+                                fontSize: '11px',
+                                fontFamily: '"Inter", sans-serif',
+                                color: isDivActive ? era.color : '#9E9A90',
+                                fontWeight: isDivActive ? 600 : 400,
+                                borderLeft: isDivActive ? `2px solid ${era.color}` : '2px solid transparent',
+                                textDecoration: 'none',
+                                transition: 'all 0.2s',
+                                letterSpacing: '0.01em',
+                              }}
+                            >
+                              <Text fontFamily='"JetBrains Mono", monospace' fontSize="9px" color="#B8B2A4">{div.code}</Text>
+                              {div.label}
+                            </RouterLink>
+                          )
+                        })}
+                      </Box>
+                    )}
+                  </Box>
+                )
+              })}
+            </Box>
+          )}
+
           {/* Catalog Link — browse all entities */}
           {sidebarOpen && (
             <Box>
@@ -340,46 +529,13 @@ export default function Layout() {
                 }}
               >
                 <Library size={16} />
-                <span>Browse All ({getAllEntities().length})</span>
+                <span>Browse All ({catalogCount.toLocaleString()})</span>
               </RouterLink>
             </Box>
           )}
         </Stack>
 
-        {/* Footer — Dedication */}
-        {sidebarOpen && (
-          <Box
-            position="absolute"
-            bottom={0}
-            left={0}
-            right={0}
-            p={4}
-            borderTop="1px solid"
-            borderColor="#D6D3CC"
-            bg="rgba(250,250,248,0.95)"
-          >
-            <Text
-              fontFamily='"Cinzel", serif'
-              fontSize="9px"
-              color="#B8B2A4"
-              textAlign="center"
-              letterSpacing="0.15em"
-              textTransform="uppercase"
-            >
-              Honoring James Ussher
-            </Text>
-            <Text
-              fontFamily='"Cinzel", serif'
-              fontSize="9px"
-              color="#D6D3CC"
-              textAlign="center"
-              letterSpacing="0.2em"
-              mt={0.5}
-            >
-              MDLXXXI — MDCLVI
-            </Text>
-          </Box>
-        )}
+
       </Box>
 
       {/* ─── Main Content Area ─── */}

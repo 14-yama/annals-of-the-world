@@ -4,11 +4,11 @@
  * Shows downstream impact: expanded effects, reverse-lookup of entities
  * that cite this entity in their causes, and a "named after" section.
  */
-import React, { useMemo } from 'react'
-import { Box, Flex, Text, SimpleGrid } from '@chakra-ui/react'
+import React, { useState, useEffect } from 'react'
+import { Box, Flex, Text, SimpleGrid, Spinner } from '@chakra-ui/react'
 import { Link as RouterLink } from 'react-router-dom'
 import { Sparkles, ArrowRight, ExternalLink, TrendingUp } from 'lucide-react'
-import { getAllEntities } from '../data/catalog'
+import { searchEntities, fetchEntity } from '../services/entityService'
 import type { Entity } from '../data/entityTypes'
 
 interface Props {
@@ -16,21 +16,32 @@ interface Props {
 }
 
 const EntityLegacy: React.FC<Props> = ({ entity }) => {
-  // Build reverse-lookup: entities whose causes reference this entity
-  const influencedEntities = useMemo(() => {
-    const all = getAllEntities()
-    return all.filter(e =>
-      e.slug !== entity.slug &&
-      e.causes.some(c => c.slug === entity.slug || c.title.toLowerCase().includes(entity.name.toLowerCase()))
-    ).slice(0, 20)
-  }, [entity.slug, entity.name])
+  const [influencedEntities, setInfluenced] = useState<Entity[]>([])
+  const [effectEntities, setEffects] = useState<Entity[]>([])
+  const [loading, setLoading] = useState(true)
 
-  // Entities referenced in our effects
-  const effectEntities = useMemo(() => {
-    const all = getAllEntities()
-    const effectSlugs = entity.effects.filter(e => e.slug).map(e => e.slug!)
-    return all.filter(e => effectSlugs.includes(e.slug))
-  }, [entity.effects])
+  useEffect(() => {
+    setLoading(true)
+    const loadInfluenced = searchEntities(entity.name, 20)
+      .then(results => results.filter(e => e.slug !== entity.slug))
+    const loadEffects = Promise.all(
+      entity.effects
+        .filter(e => e.slug)
+        .map(e => fetchEntity(e.slug!))
+    ).then(results => results.filter((e): e is Entity => !!e))
+
+    Promise.all([loadInfluenced, loadEffects])
+      .then(([inf, eff]) => { setInfluenced(inf); setEffects(eff) })
+      .finally(() => setLoading(false))
+  }, [entity.slug, entity.name, entity.effects])
+
+  if (loading) {
+    return (
+      <Flex justify="center" py={12}>
+        <Spinner size="lg" color="#D4AF37" />
+      </Flex>
+    )
+  }
 
   const hasContent = entity.effects.length > 0 || influencedEntities.length > 0 || entity.legacySummary
 

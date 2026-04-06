@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 import { Box, Flex, Text, SimpleGrid, Heading } from '@chakra-ui/react'
 import {
   Globe, BookOpen, Clock, Orbit, Users, Scroll, Network, BarChart3,
   Lightbulb, Swords, Brain, MapPin, Library, Landmark, Columns3,
 } from 'lucide-react'
+import { fetchTotalCount, fetchLabelCounts } from '../services/entityService'
 
-const HERO_STATS = [
+const DEFAULT_HERO_STATS = [
   { value: '199', label: 'Nations Catalogued', icon: Globe },
   { value: '16,505', label: 'Knowledge Nodes', icon: Network },
   { value: '72,000', label: 'Years Chronicled', icon: Clock },
@@ -96,6 +97,27 @@ const COLLECTIONS = [
 ]
 
 export default function Home() {
+  const [heroStats, setHeroStats] = useState(DEFAULT_HERO_STATS)
+
+  useEffect(() => {
+    let cancelled = false
+    async function loadStats() {
+      try {
+        const [total, counts] = await Promise.all([fetchTotalCount(), fetchLabelCounts()])
+        if (cancelled) return
+        const peopleCount = counts['Person'] || 0
+        setHeroStats([
+          { value: '199', label: 'Nations Catalogued', icon: Globe },
+          { value: total.toLocaleString(), label: 'Knowledge Nodes', icon: Network },
+          { value: peopleCount.toLocaleString(), label: 'Historical Figures', icon: Users },
+          { value: '72,000', label: 'Years Chronicled', icon: Clock },
+        ])
+      } catch { /* keep defaults */ }
+    }
+    loadStats()
+    return () => { cancelled = true }
+  }, [])
+
   return (
     <Box>
       {/* ─── Hero: The Great Hall ─── */}
@@ -194,7 +216,7 @@ export default function Home() {
 
       {/* ─── Key Statistics — Marble Tablets ─── */}
       <SimpleGrid columns={{ base: 2, md: 4 }} gap={4} mb={10}>
-        {HERO_STATS.map((s) => {
+        {heroStats.map((s) => {
           const Icon = s.icon
           return (
             <Box

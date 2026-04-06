@@ -67,6 +67,8 @@ export interface Entity {
   endDate?: string
   era: string
   eraSlug: string
+  eraDivision?: string      // Specific sub-period (e.g. "Age of Enlightenment")
+  eraDivisionCode?: string  // Dewey code (e.g. "944")
   region: string
   continent: string
   status: string

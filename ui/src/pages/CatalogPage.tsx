@@ -1,38 +1,55 @@
 import React, { useState, useMemo, useCallback, useEffect } from 'react'
-import { useParams, useNavigate, Navigate, useSearchParams } from 'react-router-dom'
-import { Box, Flex, Text, SimpleGrid } from '@chakra-ui/react'
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom'
+import { Box, Flex, Text, SimpleGrid, Spinner } from '@chakra-ui/react'
 import {
   Search, Library, ChevronDown,
-  Users, Landmark, MapPin, Layers, Shield,
-  FileText, Clock, Zap,
 } from 'lucide-react'
-import {
-  getAllEntities, getEntityByCallNumber,
-  type Entity,
-} from '../data/catalog'
+import type { Entity } from '../data/entityTypes'
 import { CLASS_COLORS, DIVISIONS, parseCallNumber } from '../constants/callNumbers'
 import AdvancedSearch, { type ActiveFilters } from '../components/AdvancedSearch'
+import { fetchEntitiesWithTotal, fetchLabelCounts, fetchTotalCount, fetchEntity } from '../services/entityService'
+
+/* ── Era Division date ranges (from callNumbers.ts class 9) ── */
+const ERA_DIVISION_RANGES: Record<string, { start: number; end: number; broadEra: string }> = {
+  '911': { start: -70000, end: -10000, broadEra: 'prehistoric' },
+  '912': { start: -10000, end: -3300, broadEra: 'prehistoric' },
+  '913': { start: -3300, end: -1200, broadEra: 'prehistoric' },
+  '921': { start: -800, end: -480, broadEra: 'classical' },
+  '922': { start: -323, end: -31, broadEra: 'classical' },
+  '923': { start: -31, end: 476, broadEra: 'classical' },
+  '924': { start: 250, end: 600, broadEra: 'classical' },
+  '931': { start: 500, end: 1000, broadEra: 'medieval' },
+  '932': { start: 1000, end: 1300, broadEra: 'medieval' },
+  '933': { start: 1300, end: 1500, broadEra: 'medieval' },
+  '941': { start: 1400, end: 1600, broadEra: 'early-modern' },
+  '942': { start: 1300, end: 1600, broadEra: 'early-modern' },
+  '943': { start: 1517, end: 1648, broadEra: 'early-modern' },
+  '944': { start: 1685, end: 1815, broadEra: 'early-modern' },
+  '951': { start: 1760, end: 1840, broadEra: 'modern' },
+  '952': { start: 1870, end: 1914, broadEra: 'modern' },
+  '953': { start: 1918, end: 1939, broadEra: 'modern' },
+  '954': { start: 1939, end: 1945, broadEra: 'modern' },
+  '961': { start: 1947, end: 1991, broadEra: 'contemporary' },
+  '962': { start: 1991, end: 2001, broadEra: 'contemporary' },
+  '963': { start: 2001, end: 2100, broadEra: 'contemporary' },
+}
+const ERA_DIVISION_LABELS: Record<string, string> = {
+  '911': 'Paleolithic & Mesolithic', '912': 'Neolithic & Chalcolithic', '913': 'Bronze Age',
+  '921': 'Archaic Period', '922': 'Hellenistic Period', '923': 'Roman Period', '924': 'Late Antiquity',
+  '931': 'Early Medieval / Dark Ages', '932': 'High Medieval', '933': 'Late Medieval',
+  '941': 'Age of Exploration', '942': 'Renaissance Period', '943': 'Reformation Era', '944': 'Age of Enlightenment',
+  '951': 'Industrial Age', '952': 'Age of Empire', '953': 'Interwar Period', '954': 'World War II Era',
+  '961': 'Cold War Era', '962': 'Post-Cold War & Globalization', '963': 'Digital Age',
+}
 
 /* ── Constants ── */
 const MARBLE_BG = '#FAFAF8'
-const CARD_BG = '#F5F4F0'
 const BORDER = '#E4E2DC'
 const GOLD = '#D4AF37'
 const DARK_TEXT = '#2D2A24'
 const MED_TEXT = '#524E44'
 const MUTED = '#787469'
 const LIGHT_MUTED = '#9E9A90'
-
-const LABEL_ICONS: Record<string, React.ReactNode> = {
-  Idea: <Zap size={14} />,
-  Person: <Users size={14} />,
-  Institution: <Landmark size={14} />,
-  Place: <MapPin size={14} />,
-  EventWindow: <Clock size={14} />,
-  Movement: <Layers size={14} />,
-  Text: <FileText size={14} />,
-  Evidence: <Shield size={14} />,
-}
 
 const LABEL_COLORS: Record<string, string> = {
   Person: '#3A7D44',
@@ -74,31 +91,35 @@ const ERA_COLORS: Record<string, string> = {
   contemporary: '#6B3FA0',
 }
 
-/* ── Chronological sorting ── */
-const PREVIEW_COUNT = 12
-
-function getEntityYear(e: Entity): number {
-  const raw = e.born || e.founded || e.startDate || e.period || ''
-  const dateStr = raw.replace(/,/g, '')
-  const match = dateStr.match(/(\d{3,7})\s*(BCE|BC)?/i)
-  if (!match) return 9999
-  let year = parseInt(match[1])
-  if (match[2]) year = -year
-  return year
-}
+const PAGE_SIZE = 100
 
 export default function CatalogPage() {
   const { callNumber } = useParams<{ callNumber: string }>()
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
 
-  // If we have a callNumber param, redirect to entity
-  if (callNumber) {
-    const entity = getEntityByCallNumber(callNumber)
-    if (entity) return <Navigate to={`/entity/${entity.slug}`} replace />
-  }
+  // Backend data state
+  const [entities, setEntities] = useState<Entity[]>([])
+  const [totalCount, setTotalCount] = useState<number>(0)
+  const [backendTotal, setBackendTotal] = useState<number>(0)
+  const [labelCounts, setLabelCounts] = useState<Record<string, number>>({})
+  const [loading, setLoading] = useState(true)
+  const [loadingMore, setLoadingMore] = useState(false)
 
-  const allEntities = useMemo(() => getAllEntities(), [])
+  // If we have a callNumber param, look up entity from backend and redirect
+  useEffect(() => {
+    if (!callNumber) return
+    let cancelled = false
+    async function lookupByCallNumber() {
+      // Try to find entity by searching the call number
+      const res = await fetchEntitiesWithTotal({ search: callNumber, limit: 1 })
+      if (!cancelled && res.entities.length > 0) {
+        navigate(`/entity/${res.entities[0].slug}`, { replace: true })
+      }
+    }
+    lookupByCallNumber()
+    return () => { cancelled = true }
+  }, [callNumber, navigate])
 
   // Filters state — initialized from URL params
   const [filters, setFilters] = useState<ActiveFilters>(() => ({
@@ -111,7 +132,9 @@ export default function CatalogPage() {
     divisions: searchParams.get('division') ? [searchParams.get('division')!] : [],
   }))
 
-  // Sync from URL params when navigating to catalog with different params
+  const eraDivision = searchParams.get('eraDivision') || ''
+
+  // Sync from URL params
   useEffect(() => {
     setFilters({
       search: searchParams.get('search') || '',
@@ -124,86 +147,102 @@ export default function CatalogPage() {
     })
   }, [searchParams])
 
-  // Track which eras are fully expanded
-  const [expandedEras, setExpandedEras] = useState<Set<string>>(new Set())
-
-  const toggleEra = useCallback((slug: string) => {
-    setExpandedEras(prev => {
-      const next = new Set(prev)
-      if (next.has(slug)) next.delete(slug)
-      else next.add(slug)
-      return next
-    })
+  // Fetch backend total + label counts on mount
+  useEffect(() => {
+    let cancelled = false
+    async function fetchMeta() {
+      const [total, counts] = await Promise.all([fetchTotalCount(), fetchLabelCounts()])
+      if (!cancelled) {
+        setBackendTotal(total)
+        setLabelCounts(counts)
+      }
+    }
+    fetchMeta()
+    return () => { cancelled = true }
   }, [])
 
-  // Apply all filters
-  const filtered = useMemo(() => {
-    let result = allEntities
-    if (filters.search.trim()) {
-      const q = filters.search.toLowerCase()
-      result = result.filter(e =>
-        e.name.toLowerCase().includes(q) ||
-        e.callNumber.toLowerCase().includes(q) ||
-        e.subjects.some(s => s.toLowerCase().includes(q)) ||
-        e.summary.toLowerCase().includes(q) ||
-        e.era.toLowerCase().includes(q) ||
-        e.label.toLowerCase().includes(q) ||
-        e.continent.toLowerCase().includes(q) ||
-        e.region.toLowerCase().includes(q)
-      )
-    }
-    if (filters.eras.length > 0) {
-      result = result.filter(e => filters.eras.includes(e.eraSlug))
-    }
-    if (filters.labels.length > 0) {
-      result = result.filter(e => filters.labels.includes(e.label))
-    }
-    if (filters.continents.length > 0) {
-      result = result.filter(e => filters.continents.includes(e.continent))
-    }
-    if (filters.frameworks.length > 0) {
-      result = result.filter(e =>
-        e.frameworks?.some(f => filters.frameworks.includes(f))
-      )
-    }
-    if (filters.classes.length > 0) {
-      result = result.filter(e => {
-        const p = parseCallNumber(e.callNumber)
-        return p ? filters.classes.includes(p.classCode) : false
-      })
-    }
-    if (filters.divisions.length > 0) {
-      result = result.filter(e => {
-        const p = parseCallNumber(e.callNumber)
-        return p ? filters.divisions.includes(p.division) : false
-      })
-    }
-    return result
-  }, [allEntities, filters])
+  // Fetch entities from backend when filters change
+  useEffect(() => {
+    let cancelled = false
+    async function loadEntities() {
+      setLoading(true)
+      setEntities([])
 
-  // Group by era, sorted chronologically within each era
+      const opts: Parameters<typeof fetchEntitiesWithTotal>[0] = {
+        limit: PAGE_SIZE,
+        offset: 0,
+      }
+      if (filters.eras.length === 1) opts.era = filters.eras[0]
+      if (filters.labels.length === 1) opts.label = filters.labels[0]
+      if (filters.continents.length === 1) opts.continent = filters.continents[0]
+      if (eraDivision) opts.eraDivision = eraDivision
+      if (filters.search.trim()) opts.search = filters.search.trim()
+
+      const result = await fetchEntitiesWithTotal(opts)
+      if (!cancelled) {
+        let filtered = result.entities
+        if (filters.eras.length > 1) filtered = filtered.filter(e => filters.eras.includes(e.eraSlug))
+        if (filters.labels.length > 1) filtered = filtered.filter(e => filters.labels.includes(e.label))
+        if (filters.continents.length > 1) filtered = filtered.filter(e => filters.continents.includes(e.continent))
+        if (filters.frameworks.length > 0) {
+          filtered = filtered.filter(e => e.frameworks?.some(f => filters.frameworks.includes(f)))
+        }
+        if (filters.classes.length > 0) {
+          filtered = filtered.filter(e => {
+            const p = parseCallNumber(e.callNumber)
+            return p ? filters.classes.includes(p.classCode) : false
+          })
+        }
+        if (filters.divisions.length > 0) {
+          filtered = filtered.filter(e => {
+            const p = parseCallNumber(e.callNumber)
+            return p ? filters.divisions.includes(p.division) : false
+          })
+        }
+        setEntities(filtered)
+        setTotalCount(result.total)
+        setLoading(false)
+      }
+    }
+    loadEntities()
+    return () => { cancelled = true }
+  }, [filters, eraDivision])
+
+  // Load more
+  const loadMore = useCallback(async () => {
+    setLoadingMore(true)
+    const opts: Parameters<typeof fetchEntitiesWithTotal>[0] = {
+      limit: PAGE_SIZE,
+      offset: entities.length,
+    }
+    if (filters.eras.length === 1) opts.era = filters.eras[0]
+    if (filters.labels.length === 1) opts.label = filters.labels[0]
+    if (filters.continents.length === 1) opts.continent = filters.continents[0]
+    if (eraDivision) opts.eraDivision = eraDivision
+    if (filters.search.trim()) opts.search = filters.search.trim()
+
+    const result = await fetchEntitiesWithTotal(opts)
+    setEntities(prev => [...prev, ...result.entities])
+    setTotalCount(result.total)
+    setLoadingMore(false)
+  }, [entities.length, filters, eraDivision])
+
+  // Group by era
   const byEra = useMemo(() => {
     const map = new Map<string, Entity[]>()
-    for (const e of filtered) {
+    for (const e of entities) {
       const arr = map.get(e.eraSlug) || []
       arr.push(e)
       map.set(e.eraSlug, arr)
     }
-    for (const [, arr] of map) {
-      arr.sort((a, b) => getEntityYear(a) - getEntityYear(b))
-    }
     return map
-  }, [filtered])
-
-  const hasActiveFilters = !!(
-    filters.search || filters.eras.length || filters.labels.length ||
-    filters.continents.length || filters.frameworks.length ||
-    filters.classes.length || filters.divisions.length
-  )
+  }, [entities])
 
   const handleEntityClick = useCallback((e: Entity) => {
     navigate(`/entity/${e.slug}`)
   }, [navigate])
+
+  const hasMore = entities.length < totalCount
 
   return (
     <Box minH="100vh" bg={MARBLE_BG} p={{ base: 4, md: 6 }}>
@@ -212,51 +251,64 @@ export default function CatalogPage() {
         <Library size={28} color={GOLD} />
         <Box>
           <Text fontFamily="'Cinzel', serif" fontSize="2xl" color={DARK_TEXT} fontWeight={700}>
-            {filters.divisions.length === 1
+            {eraDivision && ERA_DIVISION_LABELS[eraDivision]
+              ? `${eraDivision} ${ERA_DIVISION_LABELS[eraDivision]}`
+              : filters.divisions.length === 1
               ? (DIVISIONS.find(d => d.code === filters.divisions[0])?.heading || 'The Catalog')
               : 'The Catalog'}
           </Text>
           <Text fontSize="sm" color={MUTED}>
-            {allEntities.length} actors across {new Set(allEntities.map(e => e.eraSlug)).size} eras
-            {filtered.length !== allEntities.length && ` \u2022 ${filtered.length} shown`}
+            {backendTotal.toLocaleString()} actors in the Annals backend
+            {totalCount > 0 && totalCount !== backendTotal && ` \u2022 ${totalCount.toLocaleString()} matching`}
+            {entities.length > 0 && entities.length < totalCount && ` \u2022 ${entities.length.toLocaleString()} loaded`}
           </Text>
         </Box>
       </Flex>
 
-      {/* Advanced Search + Filters (expanded by default) */}
-      <AdvancedSearch allEntities={allEntities} filters={filters} onFiltersChange={setFilters} />
+      {/* Advanced Search + Filters */}
+      <AdvancedSearch filters={filters} onFiltersChange={setFilters} />
 
-      {/* Stats Row — Type count badges */}
+      {/* Stats Row — Type count badges from backend */}
       <Flex gap={2} mb={5} flexWrap="wrap">
         {Object.entries(LABEL_COLORS).map(([label, color]) => {
-          const count = filtered.filter(e => e.label === label).length
+          const count = labelCounts[label] || 0
           if (count === 0) return null
           return (
             <Box key={label} px={2} py={1} borderRadius="5px" fontSize="10px" fontWeight={600}
               fontFamily="'JetBrains Mono', monospace"
-              bg={`${color}10`} color={color} border="1px solid" borderColor={`${color}30`}>
-              {LABEL_DISPLAY[label] || label}: {count}
+              bg={`${color}10`} color={color} border="1px solid" borderColor={`${color}30`}
+              cursor="pointer"
+              onClick={() => setFilters(f => ({ ...f, labels: [label] }))}
+              _hover={{ bg: `${color}20` }}>
+              {LABEL_DISPLAY[label] || label}: {count.toLocaleString()}
             </Box>
           )
         })}
         <Box px={2} py={1} borderRadius="5px" fontSize="10px" fontWeight={700}
           fontFamily="'JetBrains Mono', monospace"
           bg={`${GOLD}15`} color={GOLD} border="1px solid" borderColor={`${GOLD}40`}>
-          Total: {filtered.length}
+          Total: {backendTotal.toLocaleString()}
         </Box>
       </Flex>
 
-      {/* Results — Grouped by Era (chronological order) */}
-      {ERA_ORDER.map(slug => {
-        const entities = byEra.get(slug) || []
-        if (entities.length === 0) return null
+      {/* Loading State */}
+      {loading && (
+        <Flex justify="center" align="center" py={12} gap={3}>
+          <Spinner color={GOLD} size="lg" />
+          <Text fontFamily="'JetBrains Mono', monospace" fontSize="sm" color={MUTED}>
+            Fetching from Annals backend…
+          </Text>
+        </Flex>
+      )}
+
+      {/* Results — Grouped by Era */}
+      {!loading && ERA_ORDER.map(slug => {
+        const eraEntities = byEra.get(slug) || []
+        if (eraEntities.length === 0) return null
         const color = ERA_COLORS[slug] || MUTED
-        const isExpanded = expandedEras.has(slug) || hasActiveFilters || entities.length <= PREVIEW_COUNT
-        const shown = isExpanded ? entities : entities.slice(0, PREVIEW_COUNT)
 
         return (
           <Box key={slug} mb={8}>
-            {/* Era section header */}
             <Flex align="center" gap={2} mb={3} pb={2}
               borderBottom="2px solid" borderColor={`${color}40`}>
               <Text fontFamily="'Cinzel', serif" fontSize="lg" fontWeight={700} color={color}>
@@ -264,38 +316,42 @@ export default function CatalogPage() {
               </Text>
               <Box px={2} py={0.5} borderRadius="full" fontSize="10px" fontWeight={700}
                 fontFamily="'JetBrains Mono', monospace" bg={`${color}12`} color={color}>
-                {entities.length}
+                {eraEntities.length}
               </Box>
             </Flex>
 
-            {/* Entity Cards */}
             <SimpleGrid columns={{ base: 1, sm: 2, lg: 3, xl: 4 }} gap={3}>
-              {shown.map(e => (
+              {eraEntities.map(e => (
                 <EntityCard key={e.slug} entity={e} onClick={handleEntityClick} />
               ))}
             </SimpleGrid>
-
-            {/* Show more */}
-            {!isExpanded && (
-              <Flex justify="center" mt={3}>
-                <Box as="button" onClick={() => toggleEra(slug)}
-                  px={4} py={2} borderRadius="8px" fontSize="sm" fontWeight={600}
-                  fontFamily="'Inter', sans-serif" color={color}
-                  bg={`${color}08`} border="1px solid" borderColor={`${color}20`}
-                  cursor="pointer"
-                  _hover={{ bg: `${color}15` }}
-                  display="flex" alignItems="center" gap={2}>
-                  <ChevronDown size={14} />
-                  Show all {entities.length} entries
-                </Box>
-              </Flex>
-            )}
           </Box>
         )
       })}
 
+      {/* Load More */}
+      {!loading && hasMore && (
+        <Flex justify="center" mt={4} mb={8}>
+          <Box as="button" onClick={loadMore}
+            px={6} py={3} borderRadius="xl" fontSize="sm" fontWeight={700}
+            fontFamily="'Cinzel', serif" color={GOLD}
+            bg={`${GOLD}08`} border="1px solid" borderColor={`${GOLD}30`}
+            cursor={loadingMore ? 'wait' : 'pointer'}
+            _hover={{ bg: `${GOLD}15` }}
+            display="flex" alignItems="center" gap={2}
+            letterSpacing="0.08em"
+            textTransform="uppercase">
+            {loadingMore ? (
+              <><Spinner size="sm" color={GOLD} /> Loading…</>
+            ) : (
+              <><ChevronDown size={16} /> Load More ({Math.min(PAGE_SIZE, totalCount - entities.length).toLocaleString()} of {(totalCount - entities.length).toLocaleString()} remaining)</>
+            )}
+          </Box>
+        </Flex>
+      )}
+
       {/* Empty state */}
-      {filtered.length === 0 && (
+      {!loading && entities.length === 0 && (
         <Flex direction="column" align="center" py={12} gap={2}>
           <Search size={32} color={LIGHT_MUTED} />
           <Text fontSize="md" color={MUTED} fontFamily="'Inter', sans-serif">

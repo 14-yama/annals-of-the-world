@@ -1,18 +1,18 @@
 /**
  * CorpusPage — Generic corpus viewer.
- * Reads :corpusSlug from the URL and renders the matching corpus entity set.
+ * Reads :corpusSlug from the URL and fetches matching entities from Appwrite backend.
  */
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import { useParams, Link as RouterLink } from 'react-router-dom'
-import { Box, Flex, Text, SimpleGrid, Heading } from '@chakra-ui/react'
+import { Box, Flex, Text, SimpleGrid, Heading, Spinner } from '@chakra-ui/react'
 import {
   BookOpen, Users, Landmark, MapPin, Clock, Layers, FileText,
   Shield, Zap, Search, ChevronDown, ChevronUp, Library,
 } from 'lucide-react'
-import { SectionHeading } from '../components/DataCards'
 import Breadcrumb from '../components/Breadcrumb'
-import { getCorpusBySlug, CORPUS_REGISTRY } from '../data/catalog/corpuses/registry'
-import type { Entity } from '../data/catalog'
+import { getCorpusMeta, CORPUS_META } from '../constants/corpusMeta'
+import type { Entity } from '../data/entityTypes'
+import { searchEntities } from '../services/entityService'
 
 /* ── Colour tokens ── */
 const MARBLE_BG = '#FAFAF8'
@@ -119,12 +119,26 @@ function EntityCard({ entity }: { entity: Entity }) {
 export default function CorpusPage() {
   const { corpusSlug } = useParams<{ corpusSlug: string }>()
 
-  const corpus = corpusSlug ? getCorpusBySlug(corpusSlug) : undefined
+  const corpus = corpusSlug ? getCorpusMeta(corpusSlug) : undefined
 
   const [searchTerm, setSearchTerm] = useState('')
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Text', 'Person']))
+  const [allEntities, setAllEntities] = useState<Entity[]>([])
+  const [loading, setLoading] = useState(true)
 
-  const allEntities = corpus?.entities ?? []
+  // Fetch corpus entities from backend
+  useEffect(() => {
+    if (!corpus) { setLoading(false); return }
+    let cancelled = false
+    setLoading(true)
+    searchEntities(corpus.searchTerm, 100).then(results => {
+      if (!cancelled) {
+        setAllEntities(results)
+        setLoading(false)
+      }
+    })
+    return () => { cancelled = true }
+  }, [corpus?.searchTerm])
 
   const filtered = useMemo(() => {
     if (!searchTerm.trim()) return allEntities
@@ -164,7 +178,7 @@ export default function CorpusPage() {
           No corpus registered for &ldquo;{corpusSlug}&rdquo;.
         </Text>
         <Flex gap={3} mt={6} justify="center" flexWrap="wrap">
-          {CORPUS_REGISTRY.map(c => (
+          {CORPUS_META.map(c => (
             <RouterLink key={c.slug} to={`/corpus/${c.slug}`} style={{ textDecoration: 'none' }}>
               <Box bg={MARBLE_BG} border="1px solid" borderColor={BORDER} borderRadius="lg" px={4} py={2}
                 _hover={{ borderColor: GOLD }} transition="all 0.2s" cursor="pointer">
@@ -173,6 +187,15 @@ export default function CorpusPage() {
             </RouterLink>
           ))}
         </Flex>
+      </Box>
+    )
+  }
+
+  if (loading) {
+    return (
+      <Box p={10} textAlign="center">
+        <Spinner color={GOLD} size="lg" />
+        <Text fontSize="sm" color={MUTED} mt={3}>Loading {corpus.shortName} entities…</Text>
       </Box>
     )
   }

@@ -39,55 +39,55 @@ const PROJECT_STATS_TEMPLATE = [
 
 const ACADEMIC_EQUIVALENCE = [
   {
-    discipline: 'Data Science & Ontology Design',
-    level: 'PhD-equivalent',
-    detail: 'Building a million-node Neo4j knowledge graph with Pydantic models, Cypher queries, 16 interpretive frameworks, and 11 core node labels is a dissertation-level ontology engineering project.',
-    icon: Database,
+    discipline: 'World History & Interdisciplinary Studies',
+    level: 'Strong Masters-equivalent',
+    detail: 'Six years of daily immersion across 382,000+ entities spanning 72,000 years and 199 countries — reading scholarly articles, curating causal chains, and cross-referencing civilizations. The breadth exceeds most single-discipline PhD holders, though it lacks the methodological depth and peer-reviewed publication record that a PhD requires. This is polymathic knowledge: wide, interconnected, and experientially deep.',
+    icon: Globe2,
     color: '#4A90D9',
   },
   {
-    discipline: 'Digital Humanities',
-    level: 'PhD-equivalent',
-    detail: 'Digitizing 72,000 years of history across 199 countries with scholarly citations, evidence chains, and curator workflows parallels the most ambitious digital humanities initiatives at Stanford, Oxford, or the Max Planck Institute.',
-    icon: BookOpen,
+    discipline: 'Data Science & Knowledge Engineering',
+    level: 'Masters-equivalent',
+    detail: 'Designing and maintaining a 381,000+ node knowledge graph with 10 node classes, 287 divisions, 55+ relationship verbs, 16 interpretive frameworks, and Dewey-inspired call numbers. Practical mastery of ontology design, graph modeling, and data pipelines — but without the novel algorithmic contributions or peer-reviewed publications a PhD demands.',
+    icon: Database,
     color: '#6B3FA0',
   },
   {
-    discipline: 'Computational History / Chronology',
-    level: 'PhD-equivalent',
-    detail: 'Formalizing temporal relationships (OCCURS_DURING, CAUSES, TRANSFORMS) with evidence-backed edges and active-voice governance directly extends Ussher\'s chronological methodology using computational tools.',
-    icon: Clock,
+    discipline: 'Digital Humanities',
+    level: 'Masters-equivalent',
+    detail: 'Building a production-grade digital humanities platform that exceeds the scale of most funded DH initiatives. The curator workflow, evidence tiers, and multi-framework analysis demonstrate genuine scholarly infrastructure design — comparable to a strong Masters thesis in Digital Humanities.',
+    icon: BookOpen,
     color: '#D4AF37',
   },
   {
     discipline: 'Full-Stack Software Engineering',
     level: 'Senior-level portfolio',
-    detail: 'React 18 + TypeScript + Vite + Chakra UI frontend, Python + Neo4j + Pydantic backend, D3.js visualizations, GitHub CI/CD — a production-grade application demonstrating T-shaped expertise.',
+    detail: 'React 18 + TypeScript + Vite + Chakra UI frontend, Python + Appwrite + Pydantic backend, D3.js visualizations, GitHub CI/CD — a production-grade application built and maintained over 6 years. This is a genuine senior engineering portfolio.',
     icon: Code2,
     color: '#2F855A',
   },
   {
-    discipline: 'Geographic Information Systems',
-    level: 'Masters-equivalent',
-    detail: 'Choropleth maps, geo-registries with 1,500+ places, historical border tracking, and multi-layer geospatial visualization across all inhabited continents.',
+    discipline: 'Geographic & Cultural Pattern Recognition',
+    level: 'Advanced practitioner',
+    detail: '3,000+ hours of nature and culture documentaries, combined with daily entity reading across all continents. Can identify geographic regions by soil color, ocean water by coastline, tribal groups by facial features, and building traditions by material use. This is applied observational knowledge built through thousands of hours of intentional study — not academic GIS, but genuine practical expertise.',
     icon: Map,
     color: '#C53030',
   },
   {
     discipline: 'Comparative Religion & Philosophy',
-    level: 'Masters-equivalent',
-    detail: 'Mapping doctrinal development, textual transmission, and ritual standardization across Christianity, Islam, Buddhism, Hinduism, Judaism, and indigenous traditions with framework-based analysis.',
+    level: 'Advanced undergraduate',
+    detail: 'Broad survey knowledge across Christianity, Islam, Buddhism, Hinduism, Judaism, and indigenous traditions through entity curation and documentary study. Strong on connections between traditions but without primary-language scholarship (Hebrew, Greek, Arabic, Sanskrit) that graduate study requires.',
     icon: Scroll,
     color: '#8B3A3A',
   },
 ]
 
 const TEN_YEAR_MILESTONES = [
-  { years: '1–2', title: 'Foundation', nodes: '50,000', detail: 'Schema design, ontology, frameworks, core graph, curator workflow, MVP frontend' },
-  { years: '3–4', title: 'Continental Depth', nodes: '200,000', detail: 'Full coverage of Africa, Asia, Europe — all countries with event windows, evidence, and relationships' },
-  { years: '5–6', title: 'Global Completion', nodes: '500,000', detail: 'Americas, Oceania complete. Trade routes, migrations, linguistic evolution fully modeled' },
-  { years: '7–8', title: 'Academic Integration', nodes: '750,000', detail: 'Wikidata integration, scholarly API, peer review, open dataset publications' },
-  { years: '9–10', title: 'Million-Node Graph', nodes: '1,000,000', detail: 'Complete knowledge graph with real-time querying, advanced visualizations, and community contributions' },
+  { years: '1–2 (2020–2022)', title: 'Foundation', nodes: '50,000', detail: 'Schema design, ontology, 16 interpretive frameworks, core graph structure, curator workflow, MVP frontend, Neo4j backend', completed: true },
+  { years: '3–4 (2022–2024)', title: 'Continental Depth', nodes: '200,000', detail: 'Full coverage of Africa (55 nations), Asia (48 nations), Europe (44 nations) — all countries with event windows, evidence tiers, and causal relationships', completed: true },
+  { years: '5–6 (2024–2026)', title: 'Global Completion', nodes: '381,484', detail: 'Americas & Oceania complete. 382K entities seeded to Appwrite cloud backend. Wikidata SPARQL integration (372K entities harvested). 199 countries profiled. Migration to production infrastructure', completed: 'current' },
+  { years: '7–8 (2026–2028)', title: 'Academic Integration', nodes: '750,000', detail: 'Scholarly API, peer review, open dataset publications, scholarly writing practice, community contributions', completed: false },
+  { years: '9–10 (2028–2030)', title: 'Million-Node Graph', nodes: '1,000,000', detail: 'Complete knowledge graph with real-time querying, advanced visualizations, scholarly publications, and the curator\'s magnum opus', completed: false },
 ]
 
 /* ─── Constants ─── */
@@ -171,7 +171,7 @@ const ENCYCLOPEDIA_COMPARISONS = [
     coverage: '72,000 years · 199 countries',
     model: 'Curator-verified, AI-augmented',
     strength: 'Causal chains, 16 frameworks, evidence tiers, call numbers, computationally queryable',
-    limitation: 'Young project (Year 1), still growing toward 1M nodes',
+    limitation: 'Year 6 of 10 — 381K+ nodes seeded, growing toward 1M',
     icon: Network,
     color: '#D4AF37',
   },
@@ -862,7 +862,7 @@ export default function Curator() {
             <Flex align="center" gap={2} mb={4}>
               <Network size={22} color="#4A90D9" />
               <Heading fontFamily='"Cormorant Garamond", serif' fontSize="xl" fontWeight={700} color="#4A90D9">
-                Annals of the World (2024–2034)
+                Annals of the World (2020–2030)
               </Heading>
             </Flex>
             <Box bg="#E8F0FE" border="1px solid #B8D4FE" borderRadius="xl" p={5} mb={4}>
@@ -931,10 +931,12 @@ export default function Curator() {
           subtitle="What a 10-year commitment to this project represents in academic terms"
         />
         <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#524E44" lineHeight={1.8} mt={2} mb={6} maxW="800px">
-          This is not a hobby project. Building a million-node knowledge graph that models all of documented human history
-          across 199 countries — with scholarly citations, 16 interpretive frameworks, a production frontend, and a Neo4j
-          backend — is a body of work that spans multiple academic disciplines. Here is what this project represents
-          if submitted for formal evaluation:
+          This project began on <strong>April 5, 2020</strong> — now in its <strong>sixth year</strong> of continuous development.
+          Building a 381,000+ node knowledge graph that models all of documented human history across 199 countries
+          — with scholarly citations, 16 interpretive frameworks, a production frontend, and an Appwrite cloud backend
+          — is a body of work that spans multiple academic disciplines. Here is an honest assessment of what this
+          project represents if submitted for formal evaluation — separating AI-augmented tooling from the curator's
+          personal knowledge acquisition:
         </Text>
         <SimpleGrid columns={{ base: 1, md: 2 }} gap={5}>
           {ACADEMIC_EQUIVALENCE.map(a => {
@@ -968,10 +970,10 @@ export default function Curator() {
             Cumulative Equivalent
           </Heading>
           <Text fontFamily='"Inter", sans-serif' fontSize="md" color="#E8F0FE" lineHeight={1.8}>
-            3 PhD-equivalents + 2 Masters-equivalents + Senior Engineering Portfolio
+            3 Masters-equivalents + Senior Engineering Portfolio + Polymathic Breadth
           </Text>
           <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#4A90D9" mt={2}>
-            ≈ 15–20 years of formal academic work compressed into a 10-year independent research program
+            ≈ 6+ years of autodidactic immersion · 20+ years of broad self-education · A rare polymathic knowledge base that no single degree program produces
           </Text>
         </Box>
       </Box>
@@ -987,10 +989,13 @@ export default function Curator() {
             <Flex key={m.years} gap={4} mb={i < TEN_YEAR_MILESTONES.length - 1 ? 0 : undefined}>
               {/* Timeline track */}
               <Flex direction="column" align="center" minW="50px">
-                <Box w="12px" h="12px" borderRadius="full" bg={i === 0 ? '#D4AF37' : '#E4E2DC'}
-                  border="2px solid" borderColor={i === 0 ? '#D4AF37' : '#D6D3CC'} zIndex={1} />
+                <Box w="12px" h="12px" borderRadius="full"
+                  bg={m.completed === 'current' ? '#D4AF37' : m.completed ? '#2F855A' : '#E4E2DC'}
+                  border="2px solid"
+                  borderColor={m.completed === 'current' ? '#D4AF37' : m.completed ? '#2F855A' : '#D6D3CC'}
+                  zIndex={1} />
                 {i < TEN_YEAR_MILESTONES.length - 1 && (
-                  <Box w="2px" flex={1} bg="#E4E2DC" minH="60px" />
+                  <Box w="2px" flex={1} bg={m.completed ? '#2F855A' : '#E4E2DC'} minH="60px" />
                 )}
               </Flex>
               {/* Content */}
@@ -1003,6 +1008,14 @@ export default function Curator() {
                   <Heading fontFamily='"Cormorant Garamond", serif' fontSize="lg" fontWeight={700} color="#2D2A24">
                     {m.title}
                   </Heading>
+                  {m.completed === true && (
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#2F855A" fontWeight={700}
+                      bg="#F0FFF4" px={2} py={0.5} borderRadius="md">✓ COMPLETED</Text>
+                  )}
+                  {m.completed === 'current' && (
+                    <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#D4AF37" fontWeight={700}
+                      bg="#FDF8ED" px={2} py={0.5} borderRadius="md">● CURRENT</Text>
+                  )}
                 </Flex>
                 <Text fontFamily='"Inter", sans-serif' fontSize="sm" color="#524E44" lineHeight={1.7}>
                   {m.detail}
@@ -1233,7 +1246,7 @@ export default function Curator() {
           the architects of yesterday by building something worthy of tomorrow.
         </Text>
         <Text fontFamily='"JetBrains Mono", monospace' fontSize="xs" color="#4A90D9">
-          Annals of the World · A 10-Year Research Program · CC0 Public Domain
+          Annals of the World · Inception: April 5, 2020 · Year 6 of 10 · CC0 Public Domain
         </Text>
       </Box>
     </Box>

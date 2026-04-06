@@ -1,14 +1,13 @@
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import { Link as RouterLink } from 'react-router-dom'
-import { Box, Flex, Text, SimpleGrid, Heading } from '@chakra-ui/react'
+import { Box, Flex, Text, SimpleGrid, Heading, Spinner } from '@chakra-ui/react'
 import {
   BookOpen, Users, Landmark, MapPin, Clock, Layers, FileText,
   Shield, Zap, Search, ChevronDown, ChevronUp,
 } from 'lucide-react'
-import { SectionHeading } from '../components/DataCards'
 import Breadcrumb from '../components/Breadcrumb'
-import { BIBLICAL_ENTITIES } from '../data/catalog/biblical'
-import type { Entity } from '../data/catalog'
+import type { Entity } from '../data/entityTypes'
+import { searchEntities } from '../services/entityService'
 
 /* ── Colour tokens ── */
 const MARBLE_BG = '#FAFAF8'
@@ -122,20 +121,34 @@ function EntityCard({ entity }: { entity: Entity }) {
 export default function BiblicalCorpusPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Text', 'Person']))
+  const [biblicalEntities, setBiblicalEntities] = useState<Entity[]>([])
+  const [loading, setLoading] = useState(true)
+
+  // Fetch biblical entities from backend
+  useEffect(() => {
+    let cancelled = false
+    searchEntities('Biblical', 100).then(results => {
+      if (!cancelled) {
+        setBiblicalEntities(results)
+        setLoading(false)
+      }
+    })
+    return () => { cancelled = true }
+  }, [])
 
   const filtered = useMemo(() => {
-    if (!searchTerm.trim()) return BIBLICAL_ENTITIES
+    if (!searchTerm.trim()) return biblicalEntities
     const q = searchTerm.toLowerCase()
-    return BIBLICAL_ENTITIES.filter(e =>
+    return biblicalEntities.filter(e =>
       e.name.toLowerCase().includes(q)
       || e.summary.toLowerCase().includes(q)
       || e.subjects.some(s => s.toLowerCase().includes(q))
       || e.callNumber.toLowerCase().includes(q)
     )
-  }, [searchTerm])
+  }, [searchTerm, biblicalEntities])
 
   const groups = useMemo(() => groupByLabel(filtered), [filtered])
-  const totalCount = BIBLICAL_ENTITIES.length
+  const totalCount = biblicalEntities.length
 
   const toggleSection = (label: string) => {
     setExpandedSections(prev => {
@@ -148,11 +161,20 @@ export default function BiblicalCorpusPage() {
   /* Stats */
   const stats = useMemo(() => {
     const counts: Record<string, number> = {}
-    for (const e of BIBLICAL_ENTITIES) {
+    for (const e of biblicalEntities) {
       counts[e.label] = (counts[e.label] ?? 0) + 1
     }
     return counts
-  }, [])
+  }, [biblicalEntities])
+
+  if (loading) {
+    return (
+      <Box p={10} textAlign="center">
+        <Spinner color={GOLD} size="lg" />
+        <Text fontSize="sm" color={MUTED} mt={3}>Loading Biblical corpus…</Text>
+      </Box>
+    )
+  }
 
   return (
     <Box>

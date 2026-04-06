@@ -1,6 +1,6 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState, useEffect } from 'react'
 import { useParams, Link as RouterLink, useNavigate } from 'react-router-dom'
-import { Box, SimpleGrid, Text, Flex, Heading } from '@chakra-ui/react'
+import { Box, SimpleGrid, Text, Flex, Heading, Spinner } from '@chakra-ui/react'
 import {
   Clock, ChevronLeft, ChevronRight, Globe, BookOpen, Star, Home,
   Users, Landmark, MapPin, Layers, FileText, Shield, Zap, Compass,
@@ -10,7 +10,8 @@ import { TIMELINE_EVENTS } from '../data/timeline-events'
 import { SectionHeading } from '../components/DataCards'
 import Timeline from '../components/Timeline'
 import CivilizationGallery from '../components/CivilizationGallery'
-import { getEntitiesByEra, type Entity } from '../data/catalog'
+import { fetchEntities } from '../services/entityService'
+import type { Entity } from '../data/entityTypes'
 
 /* Era slug mapping: eras.ts ids → catalog eraSlug */
 const ERA_ID_TO_SLUG: Record<string, string> = {
@@ -72,9 +73,19 @@ export default function EraDetail() {
     [eraId],
   )
 
-  // Get catalog entities for this era, grouped by actor type
+  // Get catalog entities for this era from backend, grouped by actor type
   const catalogSlug = eraId ? (ERA_ID_TO_SLUG[eraId] || eraId) : ''
-  const eraEntities = useMemo(() => getEntitiesByEra(catalogSlug), [catalogSlug])
+  const [eraEntities, setEraEntities] = useState<Entity[]>([])
+  const [loadingEntities, setLoadingEntities] = useState(true)
+
+  useEffect(() => {
+    if (!catalogSlug) return
+    setLoadingEntities(true)
+    fetchEntities({ era: catalogSlug, limit: 200 })
+      .then(setEraEntities)
+      .finally(() => setLoadingEntities(false))
+  }, [catalogSlug])
+
   const entityGroups = useMemo(() => {
     const map = new Map<string, Entity[]>()
     for (const e of eraEntities) {
