@@ -9,11 +9,13 @@ import {
   X,
   ChevronDown,
   ChevronUp,
+  CheckCircle2,
+  AlertTriangle,
 } from 'lucide-react'
 import { Query, type Models } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../../lib/appwrite'
 import { SectionHeading, StatCard } from '../../components/DataCards'
-import { DIVISIONS } from '../../constants/callNumbers'
+import { DIVISIONS, CLASSES } from '../../constants/callNumbers'
 
 /* ─── Types ─── */
 
@@ -54,14 +56,32 @@ export default function DivisionDetail() {
   const [editingId, setEditingId] = useState<string | null>(null)
   const [editSlug, setEditSlug] = useState('')
   const [editSummary, setEditSummary] = useState('')
+  const [editEra, setEditEra] = useState('')
+  const [editEraDivisionCode, setEditEraDivisionCode] = useState('')
+  const [editImportance, setEditImportance] = useState(0)
+  const [editImageUrl, setEditImageUrl] = useState('')
+  const [editWikidataQid, setEditWikidataQid] = useState('')
   const [saving, setSaving] = useState(false)
+  const [toast, setToast] = useState<{ type: 'success' | 'error'; msg: string } | null>(null)
 
   const divisionInfo = useMemo(
     () => DIVISIONS.find((d) => d.code === div),
     [div],
   )
 
+  const parentClass = useMemo(
+    () => divisionInfo ? CLASSES.find((c) => c.code === divisionInfo.parentClass) : undefined,
+    [divisionInfo],
+  )
+
   const PAGE_SIZE = 50
+
+  // Auto-dismiss toast after 3 seconds
+  useEffect(() => {
+    if (!toast) return
+    const t = setTimeout(() => setToast(null), 3000)
+    return () => clearTimeout(t)
+  }, [toast])
 
   useEffect(() => {
     loadEntities()
@@ -141,21 +161,46 @@ export default function DivisionDetail() {
     setEditingId(row.$id)
     setEditSlug(row.slug)
     setEditSummary(row.summary)
+    setEditEra(row.era)
+    setEditEraDivisionCode(row.eraDivisionCode ?? '')
+    setEditImportance(row.importanceScore)
+    setEditImageUrl(row.imageUrl ?? '')
+    setEditWikidataQid(row.wikidataQid ?? '')
+    setToast(null)
   }
 
   async function saveEdit() {
     if (!editingId) return
     setSaving(true)
     try {
-      await databases.updateDocument(DATABASE_ID, COLLECTIONS.ENTITIES, editingId, {
-        summary: editSummary,
-      })
+      const payload: Record<string, unknown> = { summary: editSummary }
+      if (editEra) payload.era = editEra
+      if (editEraDivisionCode) payload.eraDivisionCode = editEraDivisionCode
+      payload.importanceScore = editImportance
+      if (editImageUrl) payload.imageUrl = editImageUrl
+      if (editWikidataQid) payload.wikidataQid = editWikidataQid
+
+      await databases.updateDocument(DATABASE_ID, COLLECTIONS.ENTITIES, editingId, payload)
       setEntities((prev) =>
-        prev.map((e) => (e.$id === editingId ? { ...e, summary: editSummary } : e)),
+        prev.map((e) =>
+          e.$id === editingId
+            ? {
+                ...e,
+                summary: editSummary,
+                era: editEra || e.era,
+                eraDivisionCode: editEraDivisionCode || e.eraDivisionCode,
+                importanceScore: editImportance,
+                imageUrl: editImageUrl || e.imageUrl,
+                wikidataQid: editWikidataQid || e.wikidataQid,
+              }
+            : e,
+        ),
       )
+      setToast({ type: 'success', msg: `Saved ${editSlug} successfully` })
       setEditingId(null)
     } catch (err) {
       console.error('Save failed:', err)
+      setToast({ type: 'error', msg: `Save failed: ${err instanceof Error ? err.message : 'Unknown error'}` })
     }
     setSaving(false)
   }
@@ -164,11 +209,27 @@ export default function DivisionDetail() {
 
   return (
     <Box maxW="1400px" mx="auto" p={6}>
+      {/* Toast notification */}
+      {toast && (
+        <Box
+          position="fixed" top={4} right={4} zIndex={1000}
+          bg={toast.type === 'success' ? '#D5F5E3' : '#FADBD8'}
+          border={`1px solid ${toast.type === 'success' ? '#27AE60' : '#C0392B'}`}
+          borderRadius="lg" px={4} py={3} shadow="lg"
+          display="flex" alignItems="center" gap={2}
+        >
+          {toast.type === 'success' ? <CheckCircle2 size={16} color="#27AE60" /> : <AlertTriangle size={16} color="#C0392B" />}
+          <Text fontSize="sm" fontWeight={600} color={toast.type === 'success' ? '#196F3D' : '#922B21'}>
+            {toast.msg}
+          </Text>
+        </Box>
+      )}
+
       {/* Header */}
       <Flex align="center" gap={3} mb={6}>
         <Box
           as="button"
-          onClick={() => navigate('/curator/people')}
+          onClick={() => navigate(parentClass ? `/curator/classes/${parentClass.code}` : '/curator/classes')}
           p={2}
           borderRadius="md"
           bg="#F5F4F0"
@@ -222,8 +283,8 @@ export default function DivisionDetail() {
             <Flex gap={2}>
               <Box as="button" onClick={saveEdit} px={3} py={1.5} borderRadius="md" bg="#27AE60" color="white"
                 fontSize="xs" fontWeight={600} display="flex" alignItems="center" gap={1} cursor="pointer"
-                opacity={saving ? 0.6 : 1}>
-                <Save size={12} /> Save
+                opacity={saving ? 0.6 : 1} _hover={{ bg: '#219A52' }}>
+                <Save size={12} /> {saving ? 'Saving…' : 'Save'}
               </Box>
               <Box as="button" onClick={() => setEditingId(null)} px={3} py={1.5} borderRadius="md"
                 bg="#F5F4F0" color="#787469" fontSize="xs" fontWeight={600} display="flex" alignItems="center"
@@ -232,17 +293,53 @@ export default function DivisionDetail() {
               </Box>
             </Flex>
           </Flex>
+
+          {/* Summary */}
           <Text fontSize="xs" color="#787469" mb={1} fontWeight={600}>Summary</Text>
           <Textarea
             value={editSummary}
             onChange={(e) => setEditSummary(e.target.value)}
-            rows={4}
+            rows={3}
             bg="white"
             borderColor="#E4E2DC"
             fontSize="sm"
             _focus={{ borderColor: '#D4AF37' }}
+            mb={3}
           />
-          <Flex mt={2} gap={2}>
+
+          {/* Fields grid */}
+          <SimpleGrid columns={{ base: 1, md: 3 }} gap={3} mb={3}>
+            <Box>
+              <Text fontSize="xs" color="#787469" mb={1} fontWeight={600}>Era</Text>
+              <Input value={editEra} onChange={(e) => setEditEra(e.target.value)} size="sm"
+                bg="white" borderColor="#E4E2DC" _focus={{ borderColor: '#D4AF37' }} />
+            </Box>
+            <Box>
+              <Text fontSize="xs" color="#787469" mb={1} fontWeight={600}>Era Division Code</Text>
+              <Input value={editEraDivisionCode} onChange={(e) => setEditEraDivisionCode(e.target.value)} size="sm"
+                bg="white" borderColor="#E4E2DC" _focus={{ borderColor: '#D4AF37' }} placeholder="e.g. 921" />
+            </Box>
+            <Box>
+              <Text fontSize="xs" color="#787469" mb={1} fontWeight={600}>Importance (0-10)</Text>
+              <Input type="number" min={0} max={10} value={editImportance}
+                onChange={(e) => setEditImportance(Number(e.target.value))} size="sm"
+                bg="white" borderColor="#E4E2DC" _focus={{ borderColor: '#D4AF37' }} />
+            </Box>
+          </SimpleGrid>
+          <SimpleGrid columns={{ base: 1, md: 2 }} gap={3} mb={3}>
+            <Box>
+              <Text fontSize="xs" color="#787469" mb={1} fontWeight={600}>Image URL</Text>
+              <Input value={editImageUrl} onChange={(e) => setEditImageUrl(e.target.value)} size="sm"
+                bg="white" borderColor="#E4E2DC" _focus={{ borderColor: '#D4AF37' }} placeholder="https://..." />
+            </Box>
+            <Box>
+              <Text fontSize="xs" color="#787469" mb={1} fontWeight={600}>Wikidata QID</Text>
+              <Input value={editWikidataQid} onChange={(e) => setEditWikidataQid(e.target.value)} size="sm"
+                bg="white" borderColor="#E4E2DC" _focus={{ borderColor: '#D4AF37' }} placeholder="Q12345" />
+            </Box>
+          </SimpleGrid>
+
+          <Flex gap={2}>
             <RouterLink to={`/entity/${editSlug}`} style={{ textDecoration: 'none' }}>
               <Box as="span" fontSize="xs" color="#4A90D9" display="flex" alignItems="center" gap={1}>
                 <ExternalLink size={10} /> View Entity Page

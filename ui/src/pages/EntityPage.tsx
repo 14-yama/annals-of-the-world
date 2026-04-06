@@ -832,7 +832,15 @@ export default function EntityPage() {
                     </RouterLink>
                     {(() => {
                       const div = getEntityEraDivision(entity)
-                      if (!div) return null
+                      if (!div) {
+                        return (
+                          <Flex align="center" gap={1} mt={1} bg="#F5F4F008"
+                            border="1px solid #E4E2DC" borderRadius="full" px={3} py={0.5}>
+                            <Text fontFamily='"Inter", sans-serif' fontSize="9px" color="#9E9A90"
+                              fontWeight={500} letterSpacing="0.02em">No division assigned</Text>
+                          </Flex>
+                        )
+                      }
                       return (
                         <RouterLink to={`/catalog?eraDivision=${div.code}`} style={{ textDecoration: 'none' }}>
                           <Flex align="center" gap={1} mt={1} bg={`${div.color}08`}
@@ -1009,6 +1017,15 @@ export default function EntityPage() {
                       <RouterLink to={`/explore/${SLUG_TO_ERA_ID[entity.eraSlug] || entity.eraSlug}`} style={{ textDecoration: 'none' }}>
                         <Text fontSize="sm" color="#3B6BC2">{entity.era}</Text>
                       </RouterLink>
+                      {(() => {
+                        const div = getEntityEraDivision(entity)
+                        if (!div) return null
+                        return (
+                          <Text fontSize="xs" color="#787469" mt={0.5}>
+                            {div.code} · {div.heading}
+                          </Text>
+                        )
+                      })()}
                     </Box>
                   </Flex>
                   )}

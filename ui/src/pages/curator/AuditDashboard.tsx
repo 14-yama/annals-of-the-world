@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useMemo } from 'react'
-import { Box, Flex, Text, SimpleGrid, Spinner, Progress } from '@chakra-ui/react'
+import React, { useEffect, useState, useMemo, useCallback } from 'react'
+import { Box, Flex, Text, SimpleGrid, Spinner, Progress, Input } from '@chakra-ui/react'
 import { Link as RouterLink } from 'react-router-dom'
 import {
   BarChart3,
@@ -14,10 +14,15 @@ import {
   Layers,
   TrendingUp,
   Search,
+  Download,
+  Star,
+  Zap,
+  Shield,
 } from 'lucide-react'
 import { Query, type Models } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../../lib/appwrite'
 import { StatCard, SectionHeading } from '../../components/DataCards'
+import { CLASSES, DIVISIONS } from '../../constants/callNumbers'
 
 /* ─── Constants ─── */
 
@@ -67,7 +72,12 @@ export default function AuditDashboard() {
   const [stats, setStats] = useState<Stats | null>(null)
   const [sampleRows, setSampleRows] = useState<CompletenessRow[]>([])
   const [loading, setLoading] = useState(true)
-  const [filter, setFilter] = useState<'all' | 'critical' | 'quickwin'>('all')
+  const [filter, setFilter] = useState<'all' | 'critical' | 'quickwin' | 'orphan' | 'topimportance'>('all')
+  const [searchQuery, setSearchQuery] = useState('')
+  const [searchResults, setSearchResults] = useState<CompletenessRow[]>([])
+  const [searching, setSearching] = useState(false)
+  const [classCounts, setClassCounts] = useState<Record<number, number>>({})
+  const [topEntities, setTopEntities] = useState<CompletenessRow[]>([])
 
   useEffect(() => {
     loadDashboard()
@@ -77,12 +87,15 @@ export default function AuditDashboard() {
     setLoading(true)
     try {
       // Parallel: counts + sample for completeness
-      const [labelCounts, eraCounts, continentCounts, totalRes, sample] = await Promise.all([
+      const [labelCounts, eraCounts, continentCounts, totalRes, sample, topImportance] = await Promise.all([
         countByField('label', LABELS),
         countByField('era', ERAS),
         countByField('continent', CONTINENTS),
         databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [Query.limit(1)]),
         databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [Query.limit(200)]),
+        databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
+          Query.orderDesc('importanceScore'), Query.limit(30),
+        ]),
       ])
       setStats({
         total: totalRes.total,
@@ -91,11 +104,40 @@ export default function AuditDashboard() {
         byContinent: continentCounts,
       })
       setSampleRows(sample.documents.map(analyzeDoc))
+      setTopEntities(topImportance.documents.map(analyzeDoc))
+
+      // Load class-level counts in background
+      const cc: Record<number, number> = {}
+      await Promise.all(
+        CLASSES.map(async (cls) => {
+          try {
+            const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
+              Query.startsWith('callNumber', `${cls.code}`), Query.limit(1),
+            ])
+            cc[cls.code] = res.total
+          } catch { cc[cls.code] = 0 }
+        }),
+      )
+      setClassCounts(cc)
     } catch (err) {
       console.error('Audit load failed:', err)
     }
     setLoading(false)
   }
+
+  // Search entities by name
+  const handleSearch = useCallback(async () => {
+    if (!searchQuery.trim()) { setSearchResults([]); return }
+    setSearching(true)
+    try {
+      const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
+        Query.search('name', searchQuery.trim()),
+        Query.limit(20),
+      ])
+      setSearchResults(res.documents.map(analyzeDoc))
+    } catch { setSearchResults([]) }
+    setSearching(false)
+  }, [searchQuery])
 
   const criticalEntities = useMemo(
     () => sampleRows.filter((r) => r.importance >= 5 && r.score < 5).sort((a, b) => b.importance - a.importance),
@@ -110,8 +152,38 @@ export default function AuditDashboard() {
   const filteredRows = useMemo(() => {
     if (filter === 'critical') return criticalEntities
     if (filter === 'quickwin') return quickWins
+    if (filter === 'orphan') return orphans
+    if (filter === 'topimportance') return topEntities
     return sampleRows.sort((a, b) => a.score - b.score)
-  }, [filter, sampleRows, criticalEntities, quickWins])
+  }, [filter, sampleRows, criticalEntities, quickWins, orphans, topEntities])
+
+  // Export CSV
+  function exportCSV() {
+    const header = 'Name,Slug,Label,Era,Importance,Score,Rels,Missing\n'
+    const rows = filteredRows.map((r) =>
+      `"${r.name}","${r.slug}","${r.label}","${r.era}",${r.importance},${r.score},${r.relCount},"${r.missing.join(', ')}"`
+    ).join('\n')
+    const blob = new Blob([header + rows], { type: 'text/csv' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `audit-${filter}-${new Date().toISOString().slice(0, 10)}.csv`
+    a.click()
+    URL.revokeObjectURL(url)
+  }
+
+  // Relationship density stats
+  const relDensity = useMemo(() => {
+    if (sampleRows.length === 0) return { avg: 0, max: 0, zero: 0, pctWithRels: 0 }
+    const rels = sampleRows.map((r) => r.relCount)
+    const total = rels.reduce((a, b) => a + b, 0)
+    return {
+      avg: Math.round(total / sampleRows.length * 10) / 10,
+      max: Math.max(...rels),
+      zero: rels.filter((r) => r === 0).length,
+      pctWithRels: Math.round((rels.filter((r) => r > 0).length / sampleRows.length) * 100),
+    }
+  }, [sampleRows])
 
   // Completeness heatmap data: label × dimension → percentage
   const heatmap = useMemo(() => {
@@ -225,6 +297,154 @@ export default function AuditDashboard() {
         ))}
       </SimpleGrid>
 
+      {/* Section 4b: Quick Entity Lookup */}
+      <SectionHeading title="Quick Entity Lookup" subtitle="Search entities by name for instant audit" />
+      <Flex gap={3} mb={4} align="center">
+        <Box position="relative" flex={1} maxW="500px">
+          <Input
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+            placeholder="Search entities by name…"
+            bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="lg"
+            fontSize="sm" _focus={{ borderColor: '#D4AF37' }}
+          />
+        </Box>
+        <Box as="button" onClick={handleSearch} px={4} py={2} borderRadius="lg"
+          bg="#2D2A24" color="#D4AF37" fontSize="sm" fontWeight={600} cursor="pointer"
+          display="flex" alignItems="center" gap={2} _hover={{ bg: '#3D3A34' }}
+          opacity={searching ? 0.6 : 1}>
+          <Search size={14} /> {searching ? 'Searching…' : 'Search'}
+        </Box>
+      </Flex>
+      {searchResults.length > 0 && (
+        <Box bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="lg" overflow="auto" mb={10}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '700px' }}>
+            <thead>
+              <tr>
+                {['Name', 'Label', 'Era', 'Importance', 'Score', 'Rels', 'Missing'].map((h) => (
+                  <th key={h} style={thStyle}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {searchResults.map((row, ri) => (
+                <tr key={row.slug} style={{ backgroundColor: ri % 2 === 0 ? '#FAFAF8' : '#F5F4F0' }}>
+                  <td style={tdStyle}>
+                    <RouterLink to={`/entity/${row.slug}`} style={{ color: '#4A90D9', textDecoration: 'none' }}>
+                      {row.name}
+                    </RouterLink>
+                  </td>
+                  <td style={tdStyle}>
+                    <Box as="span" px={2} py={0.5} borderRadius="md" fontSize="xs" fontWeight={600}
+                      bg={LABEL_COLORS[row.label] + '20'} color={LABEL_COLORS[row.label]}>{row.label}</Box>
+                  </td>
+                  <td style={tdStyle}>{row.era}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{row.importance}</td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>
+                    <ScoreBadge score={row.score} />
+                  </td>
+                  <td style={{ ...tdStyle, textAlign: 'center' }}>{row.relCount}</td>
+                  <td style={tdStyle}>
+                    <Flex gap={1} flexWrap="wrap">
+                      {row.missing.slice(0, 3).map((m) => (
+                        <Box key={m} as="span" px={1.5} py={0.5} borderRadius="sm" fontSize="10px"
+                          bg="#FADBD8" color="#922B21">{m}</Box>
+                      ))}
+                      {row.missing.length > 3 && (
+                        <Box as="span" fontSize="10px" color="#922B21">+{row.missing.length - 3}</Box>
+                      )}
+                    </Flex>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </Box>
+      )}
+      {searchResults.length === 0 && searchQuery && !searching && (
+        <Text fontSize="sm" color="#9E9A90" mb={10}>No results for "{searchQuery}"</Text>
+      )}
+
+      {/* Section 4c: Relationship Density */}
+      <SectionHeading title="Relationship Density" subtitle="How connected are entities? (from 200-entity sample)" />
+      <SimpleGrid columns={{ base: 2, md: 4 }} gap={4} mb={10}>
+        <StatCard value={relDensity.avg.toString()} label="Avg Rels/Entity" color="#4A90D9" />
+        <StatCard value={relDensity.max.toString()} label="Max Relationships" color="#27AE60" />
+        <StatCard value={relDensity.zero.toString()} label="Zero Rels (Orphans)" color="#C0392B" />
+        <StatCard value={`${relDensity.pctWithRels}%`} label="Connected" detail="≥1 relationship" color="#D4AF37" />
+      </SimpleGrid>
+
+      {/* Section 4d: Class Distribution */}
+      <SectionHeading title="Class Distribution" subtitle="Entity count per Dewey classification class" />
+      <SimpleGrid columns={{ base: 2, md: 5 }} gap={3} mb={10}>
+        {CLASSES.map((cls) => {
+          const count = classCounts[cls.code] ?? 0
+          return (
+            <RouterLink key={cls.code} to={`/curator/classes/${cls.code}`} style={{ textDecoration: 'none' }}>
+              <Box bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="lg" p={3} textAlign="center"
+                position="relative" overflow="hidden" transition="all 0.2s"
+                _hover={{ transform: 'translateY(-1px)', shadow: 'sm', borderColor: '#D4AF37' }} cursor="pointer">
+                <Text fontFamily='"JetBrains Mono", monospace' fontSize="10px" color="#9E9A90" fontWeight={600}>
+                  Class {cls.code}
+                </Text>
+                <Text fontFamily='"Cinzel", serif' fontSize="lg" fontWeight={700} color="#2D2A24">
+                  {count.toLocaleString()}
+                </Text>
+                <Text fontSize="10px" color="#787469" overflow="hidden" textOverflow="ellipsis" whiteSpace="nowrap">{cls.heading}</Text>
+              </Box>
+            </RouterLink>
+          )
+        })}
+      </SimpleGrid>
+
+      {/* Section 4e: Top Entities by Importance */}
+      <SectionHeading title="Top Entities by Importance" subtitle="Highest importance-scored entities in the backend" />
+      <Box bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="lg" overflow="auto" mb={10}>
+        <table style={{ width: '100%', borderCollapse: 'collapse', minWidth: '600px' }}>
+          <thead>
+            <tr>
+              <th style={thStyle}>#</th>
+              {['Name', 'Label', 'Era', 'Importance', 'Score', 'Missing'].map((h) => (
+                <th key={h} style={thStyle}>{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {topEntities.slice(0, 15).map((row, ri) => (
+              <tr key={row.slug} style={{ backgroundColor: ri % 2 === 0 ? '#FAFAF8' : '#F5F4F0' }}>
+                <td style={{ ...tdStyle, textAlign: 'center', fontWeight: 600 }}>{ri + 1}</td>
+                <td style={tdStyle}>
+                  <RouterLink to={`/entity/${row.slug}`} style={{ color: '#4A90D9', textDecoration: 'none' }}>
+                    {row.name}
+                  </RouterLink>
+                </td>
+                <td style={tdStyle}>
+                  <Box as="span" px={2} py={0.5} borderRadius="md" fontSize="xs" fontWeight={600}
+                    bg={LABEL_COLORS[row.label] + '20'} color={LABEL_COLORS[row.label]}>{row.label}</Box>
+                </td>
+                <td style={tdStyle}>{row.era}</td>
+                <td style={{ ...tdStyle, textAlign: 'center' }}>
+                  <Box as="span" px={2} py={0.5} borderRadius="md" fontSize="xs" fontWeight={700}
+                    bg="#FDF8ED" color="#96770B">{row.importance}</Box>
+                </td>
+                <td style={{ ...tdStyle, textAlign: 'center' }}>
+                  <ScoreBadge score={row.score} />
+                </td>
+                <td style={tdStyle}>
+                  <Flex gap={1} flexWrap="wrap">
+                    {row.missing.slice(0, 3).map((m) => (
+                      <Box key={m} as="span" px={1.5} py={0.5} borderRadius="sm" fontSize="10px"
+                        bg="#FADBD8" color="#922B21">{m}</Box>
+                    ))}
+                  </Flex>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </Box>
+
       {/* Section 5: Completeness Heatmap */}
       <SectionHeading title="Completeness Heatmap" subtitle="Percentage of entities with each quality dimension (from 200-entity sample)" />
       <Box bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="lg" overflow="auto" mb={10}>
@@ -266,27 +486,41 @@ export default function AuditDashboard() {
 
       {/* Section 6: Entity Audit Table */}
       <SectionHeading title="Entity Audit Queue" subtitle="Entities needing attention — sorted by completeness score" />
-      <Flex gap={3} mb={4} flexWrap="wrap">
-        {(['all', 'critical', 'quickwin'] as const).map((f) => (
-          <Box
-            key={f}
-            as="button"
-            onClick={() => setFilter(f)}
-            px={4}
-            py={2}
-            borderRadius="full"
-            fontSize="sm"
-            fontWeight={600}
-            bg={filter === f ? '#2D2A24' : '#F5F4F0'}
-            color={filter === f ? '#D4AF37' : '#787469'}
-            border="1px solid"
-            borderColor={filter === f ? '#2D2A24' : '#E4E2DC'}
-            cursor="pointer"
-            transition="all 0.2s"
-          >
-            {f === 'all' ? `All (${sampleRows.length})` : f === 'critical' ? `Critical (${criticalEntities.length})` : `Quick Wins (${quickWins.length})`}
-          </Box>
-        ))}
+      <Flex gap={3} mb={4} flexWrap="wrap" justify="space-between" align="center">
+        <Flex gap={2} flexWrap="wrap">
+          {([
+            { key: 'all' as const, label: `All (${sampleRows.length})` },
+            { key: 'critical' as const, label: `Critical (${criticalEntities.length})` },
+            { key: 'quickwin' as const, label: `Quick Wins (${quickWins.length})` },
+            { key: 'orphan' as const, label: `Orphans (${orphans.length})` },
+            { key: 'topimportance' as const, label: `Top Importance (${topEntities.length})` },
+          ]).map((f) => (
+            <Box
+              key={f.key}
+              as="button"
+              onClick={() => setFilter(f.key)}
+              px={4}
+              py={2}
+              borderRadius="full"
+              fontSize="sm"
+              fontWeight={600}
+              bg={filter === f.key ? '#2D2A24' : '#F5F4F0'}
+              color={filter === f.key ? '#D4AF37' : '#787469'}
+              border="1px solid"
+              borderColor={filter === f.key ? '#2D2A24' : '#E4E2DC'}
+              cursor="pointer"
+              transition="all 0.2s"
+            >
+              {f.label}
+            </Box>
+          ))}
+        </Flex>
+        <Box as="button" onClick={exportCSV} px={4} py={2} borderRadius="lg"
+          bg="#F5F4F0" color="#787469" fontSize="sm" fontWeight={600} cursor="pointer"
+          display="flex" alignItems="center" gap={2} border="1px solid #E4E2DC"
+          _hover={{ bg: '#E4E2DC' }}>
+          <Download size={14} /> Export CSV
+        </Box>
       </Flex>
 
       <Box bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="lg" overflow="auto" mb={10}>
@@ -343,17 +577,28 @@ export default function AuditDashboard() {
 
       {/* Section 7: Quick Navigation */}
       <SectionHeading title="Curator Tools" subtitle="Navigate to specialized audit views" />
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={4}>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 5 }} gap={4}>
         <NavCard to="/curator/triage" icon={AlertTriangle} label="Triage System" desc="Automated audit tasks & priorities" color="#E67E22" />
+        <NavCard to="/curator/classes" icon={Layers} label="Class Browser" desc="All 10 Dewey classes & divisions" color="#D4AF37" />
         <NavCard to="/curator/people" icon={Users} label="People Hub" desc="Browse & edit Class 2 divisions" color="#4A90D9" />
         <NavCard to="/curator/audit/guide" icon={BookOpen} label="Audit Guide" desc="Quality rubric & conventions" color="#27AE60" />
-        <NavCard to="/catalog" icon={Layers} label="Full Catalog" desc="Browse all 40K+ entities" color="#6B3FA0" />
+        <NavCard to="/catalog" icon={Globe} label="Full Catalog" desc="Browse all 40K+ entities" color="#6B3FA0" />
       </SimpleGrid>
     </Box>
   )
 }
 
 /* ─── Sub-components ─── */
+
+function ScoreBadge({ score }: { score: number }) {
+  return (
+    <Box as="span" px={2} py={0.5} borderRadius="md" fontSize="xs" fontWeight={700}
+      bg={score >= 7 ? '#D5F5E3' : score >= 4 ? '#FEF9E7' : '#FADBD8'}
+      color={score >= 7 ? '#196F3D' : score >= 4 ? '#7D6608' : '#922B21'}>
+      {score}/9
+    </Box>
+  )
+}
 
 function NavCard({ to, icon: Icon, label, desc, color }: {
   to: string; icon: React.ElementType; label: string; desc: string; color: string

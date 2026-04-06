@@ -195,10 +195,11 @@ const NAV_SECTIONS: NavSection[] = [
   {
     id: 'tools', label: 'Tools', collapsible: false,
     items: [
-      { path: '/curator',        label: 'The Curator',      icon: Scroll },
-      { path: '/curator/audit',  label: 'Audit Dashboard',  icon: BarChart3 },
-      { path: '/curator/triage', label: 'Triage System',    icon: AlertTriangle },
-      { path: '/curator/people', label: 'People Hub',       icon: Users },
+      { path: '/curator',         label: 'The Curator',      icon: Scroll },
+      { path: '/curator/audit',   label: 'Audit Dashboard',  icon: BarChart3 },
+      { path: '/curator/triage',  label: 'Triage System',    icon: AlertTriangle },
+      { path: '/curator/classes', label: 'Class Browser',    icon: Layers },
+      { path: '/curator/people',  label: 'People Hub',       icon: Users },
       { path: '/quiz',           label: 'Examination Hall', icon: Brain },
     ],
   },
