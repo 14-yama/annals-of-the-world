@@ -34,6 +34,8 @@ import {
   TrainFront,
   Gavel,
   Crown,
+  BarChart3,
+  AlertTriangle,
 } from 'lucide-react'
 import { Query } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../lib/appwrite'
@@ -193,8 +195,11 @@ const NAV_SECTIONS: NavSection[] = [
   {
     id: 'tools', label: 'Tools', collapsible: false,
     items: [
-      { path: '/curator', label: 'The Curator',      icon: Scroll },
-      { path: '/quiz',    label: 'Examination Hall',  icon: Brain },
+      { path: '/curator',        label: 'The Curator',      icon: Scroll },
+      { path: '/curator/audit',  label: 'Audit Dashboard',  icon: BarChart3 },
+      { path: '/curator/triage', label: 'Triage System',    icon: AlertTriangle },
+      { path: '/curator/people', label: 'People Hub',       icon: Users },
+      { path: '/quiz',           label: 'Examination Hall', icon: Brain },
     ],
   },
   {

@@ -35,6 +35,11 @@ import CorpusPage from './pages/CorpusPage'
 import CorpusHub from './pages/CorpusHub'
 import TopicsHub from './pages/TopicsHub'
 import DocsPage from './pages/DocsPage'
+import AuditDashboard from './pages/curator/AuditDashboard'
+import TriageSystem from './pages/curator/TriageSystem'
+import PeopleHub from './pages/curator/PeopleHub'
+import DivisionDetail from './pages/curator/DivisionDetail'
+import AuditGuide from './pages/curator/AuditGuide'
 
 /** Reset scroll to top on every route change */
 function ScrollToTop() {
@@ -65,6 +70,11 @@ export default function App() {
         <Route path="/case-studies" element={<CaseStudyExplorer />} />
         <Route path="/human-story" element={<HumanStory />} />
         <Route path="/curator" element={<Curator />} />
+        <Route path="/curator/audit" element={<AuditDashboard />} />
+        <Route path="/curator/triage" element={<TriageSystem />} />
+        <Route path="/curator/people" element={<PeopleHub />} />
+        <Route path="/curator/people/:div" element={<DivisionDetail />} />
+        <Route path="/curator/audit/guide" element={<AuditGuide />} />
         <Route path="/weapons" element={<WeaponsPage />} />
         <Route path="/languages" element={<LanguagesPage />} />
         <Route path="/architecture" element={<ArchitecturePage />} />
