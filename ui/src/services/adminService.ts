@@ -1,0 +1,294 @@
+/**
+ * Admin Service — Appwrite Write Operations
+ *
+ * Provides curator-level CRUD against the Appwrite backend.
+ * Uses the same public Databases client (Appwrite permissions handle access).
+ * For bulk/batch ops the API key is used server-side via Python scripts.
+ */
+import { Query, type Models } from 'appwrite'
+import { databases, DATABASE_ID, COLLECTIONS } from '../lib/appwrite'
+
+/* ─── Types ─── */
+
+export interface AuditStats {
+  total: number
+  byLabel: Record<string, number>
+  byEra: Record<string, number>
+  byContinent: Record<string, number>
+  missingRelationships: number
+  missingEvidence: number
+  missingImage: number
+  avgScore: number
+}
+
+export interface EntityCompleteness {
+  slug: string
+  name: string
+  label: string
+  era: string
+  score: number
+  hasRelationships: boolean
+  hasCauses: boolean
+  hasEffects: boolean
+  hasFrameworks: boolean
+  hasPlaces: boolean
+  hasTexts: boolean
+  hasImage: boolean
+  hasWikidata: boolean
+  hasSummary: boolean
+  relationshipCount: number
+  missingFields: string[]
+}
+
+export interface DivisionCount {
+  code: string
+  heading: string
+  count: number
+}
+
+/* ─── Read: Audit Queries ─── */
+
+const LABELS = ['Person', 'Idea', 'Institution', 'Place', 'EventWindow', 'Movement', 'Text', 'Evidence', 'Timeframe']
+const ERAS = ['Prehistoric', 'Classical', 'Medieval', 'Early Modern', 'Modern', 'Contemporary']
+const CONTINENTS = ['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Oceania', 'Multiple Regions']
+
+/** Fetch aggregate audit statistics */
+export async function fetchAuditStats(): Promise<AuditStats> {
+  const [labelCounts, eraCounts, continentCounts, total] = await Promise.all([
+    countByField('label', LABELS),
+    countByField('era', ERAS),
+    countByField('continent', CONTINENTS),
+    fetchTotal(),
+  ])
+
+  // Sample entities to estimate missing fields
+  const sample = await sampleEntities(200)
+  let missingRels = 0, missingEvidence = 0, missingImage = 0, totalScore = 0
+
+  for (const doc of sample) {
+    const details = doc.detailsJson ? JSON.parse(doc.detailsJson as string) : {}
+    const rels = details.relationships ?? []
+    if (rels.length === 0) missingRels++
+    if (!doc.imageUrl) missingImage++
+    if (!details.texts || details.texts.length === 0) missingEvidence++
+    totalScore += (doc.importanceScore as number) ?? 0
+  }
+
+  const ratio = total > 0 ? total / Math.max(sample.length, 1) : 1
+
+  return {
+    total,
+    byLabel: labelCounts,
+    byEra: eraCounts,
+    byContinent: continentCounts,
+    missingRelationships: Math.round(missingRels * ratio),
+    missingEvidence: Math.round(missingEvidence * ratio),
+    missingImage: Math.round(missingImage * ratio),
+    avgScore: sample.length > 0 ? +(totalScore / sample.length).toFixed(1) : 0,
+  }
+}
+
+/** Count entities grouped by a field */
+async function countByField(field: string, values: string[]): Promise<Record<string, number>> {
+  const counts: Record<string, number> = {}
+  await Promise.all(
+    values.map(async (val) => {
+      try {
+        const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
+          Query.equal(field, val), Query.limit(1),
+        ])
+        counts[val] = res.total
+      } catch { counts[val] = 0 }
+    }),
+  )
+  return counts
+}
+
+async function fetchTotal(): Promise<number> {
+  try {
+    const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [Query.limit(1)])
+    return res.total
+  } catch { return 0 }
+}
+
+async function sampleEntities(n: number): Promise<Models.Document[]> {
+  try {
+    const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [Query.limit(n)])
+    return res.documents
+  } catch { return [] }
+}
+
+/** Fetch entities by division code — for division browser */
+export async function fetchEntitiesByDivision(
+  divisionCode: string,
+  opts?: { limit?: number; offset?: number; search?: string },
+): Promise<{ entities: Models.Document[]; total: number }> {
+  try {
+    const queries: string[] = [
+      Query.startsWith('callNumber', divisionCode + '.'),
+      Query.limit(opts?.limit ?? 50),
+    ]
+    if (opts?.offset) queries.push(Query.offset(opts.offset))
+    if (opts?.search) queries.push(Query.search('name', opts.search))
+    const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, queries)
+    return { entities: res.documents, total: res.total }
+  } catch { return { entities: [], total: 0 } }
+}
+
+/** Count entities for each division code (for People Hub cards) */
+export async function fetchDivisionCounts(divisionCodes: string[]): Promise<DivisionCount[]> {
+  const results: DivisionCount[] = []
+  // Batch in groups of 10 to avoid rate limits
+  for (let i = 0; i < divisionCodes.length; i += 10) {
+    const batch = divisionCodes.slice(i, i + 10)
+    const batchResults = await Promise.all(
+      batch.map(async (code) => {
+        try {
+          const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
+            Query.startsWith('callNumber', code + '.'),
+            Query.limit(1),
+          ])
+          return { code, heading: '', count: res.total }
+        } catch { return { code, heading: '', count: 0 } }
+      }),
+    )
+    results.push(...batchResults)
+  }
+  return results
+}
+
+/** Fetch entities that need audit attention (low score, missing fields) */
+export async function fetchEntitiesNeedingAudit(opts?: {
+  label?: string
+  maxScore?: number
+  limit?: number
+  offset?: number
+}): Promise<{ entities: Models.Document[]; total: number }> {
+  try {
+    const queries: string[] = []
+    if (opts?.label) queries.push(Query.equal('label', opts.label))
+    // Sort by importanceScore descending to prioritize important entities
+    queries.push(Query.orderDesc('importanceScore'))
+    queries.push(Query.limit(opts?.limit ?? 50))
+    if (opts?.offset) queries.push(Query.offset(opts.offset))
+    const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, queries)
+    return { entities: res.documents, total: res.total }
+  } catch { return { entities: [], total: 0 } }
+}
+
+/** Analyze entity completeness from a raw Appwrite document */
+export function analyzeCompleteness(doc: Models.Document): EntityCompleteness {
+  const details = doc.detailsJson ? JSON.parse(doc.detailsJson as string) : {}
+  const rels = details.relationships ?? []
+  const causes = details.causes ?? []
+  const effects = details.effects ?? []
+  const places = details.places ?? []
+  const texts = details.texts ?? []
+  const frameworks = (doc.frameworks as string[]) ?? []
+
+  const hasRelationships = rels.length > 0
+  const hasCauses = causes.length > 0
+  const hasEffects = effects.length > 0
+  const hasFrameworks = frameworks.length > 0
+  const hasPlaces = places.length > 0
+  const hasTexts = texts.length > 0
+  const hasImage = !!(doc.imageUrl as string)
+  const hasWikidata = !!(doc.wikidataQid as string)
+  const hasSummary = ((doc.summary as string) ?? '').length > 50
+
+  const missing: string[] = []
+  if (!hasRelationships) missing.push('relationships')
+  if (!hasCauses) missing.push('causes')
+  if (!hasEffects) missing.push('effects')
+  if (!hasFrameworks) missing.push('frameworks')
+  if (!hasPlaces) missing.push('places')
+  if (!hasTexts) missing.push('texts/evidence')
+  if (!hasImage) missing.push('image')
+  if (!hasWikidata) missing.push('wikidataQid')
+  if (!hasSummary) missing.push('summary')
+
+  return {
+    slug: doc.slug as string,
+    name: doc.name as string,
+    label: doc.label as string,
+    era: doc.era as string,
+    score: (doc.importanceScore as number) ?? 0,
+    hasRelationships,
+    hasCauses,
+    hasEffects,
+    hasFrameworks,
+    hasPlaces,
+    hasTexts,
+    hasImage,
+    hasWikidata,
+    hasSummary,
+    relationshipCount: rels.length,
+    missingFields: missing,
+  }
+}
+
+/* ─── Write: Entity Updates ─── */
+
+/** Update a single entity field(s) in Appwrite */
+export async function updateEntity(
+  documentId: string,
+  fields: Record<string, unknown>,
+): Promise<boolean> {
+  try {
+    await databases.updateDocument(DATABASE_ID, COLLECTIONS.ENTITIES, documentId, fields)
+    return true
+  } catch (err) {
+    console.error('Failed to update entity:', documentId, err)
+    return false
+  }
+}
+
+/**
+ * Update the detailsJson blob — merges new fields into existing JSON.
+ * Pass only the keys you want to change.
+ */
+export async function updateEntityDetails(
+  documentId: string,
+  detailsJson: string,
+  updates: Record<string, unknown>,
+): Promise<boolean> {
+  try {
+    const existing = detailsJson ? JSON.parse(detailsJson) : {}
+    const merged = { ...existing, ...updates }
+    await databases.updateDocument(DATABASE_ID, COLLECTIONS.ENTITIES, documentId, {
+      detailsJson: JSON.stringify(merged),
+    })
+    return true
+  } catch (err) {
+    console.error('Failed to update entity details:', documentId, err)
+    return false
+  }
+}
+
+/** Batch update multiple entities — chunked at 10/batch to respect rate limits */
+export async function batchUpdateEntities(
+  updates: Array<{ documentId: string; fields: Record<string, unknown> }>,
+  onProgress?: (done: number, total: number) => void,
+): Promise<{ success: number; failed: number }> {
+  let success = 0, failed = 0
+  const BATCH_SIZE = 10
+
+  for (let i = 0; i < updates.length; i += BATCH_SIZE) {
+    const batch = updates.slice(i, i + BATCH_SIZE)
+    const results = await Promise.allSettled(
+      batch.map(({ documentId, fields }) =>
+        databases.updateDocument(DATABASE_ID, COLLECTIONS.ENTITIES, documentId, fields),
+      ),
+    )
+    for (const r of results) {
+      if (r.status === 'fulfilled') success++
+      else failed++
+    }
+    onProgress?.(Math.min(i + BATCH_SIZE, updates.length), updates.length)
+    // Small delay between batches to avoid rate limiting
+    if (i + BATCH_SIZE < updates.length) {
+      await new Promise((r) => setTimeout(r, 200))
+    }
+  }
+  return { success, failed }
+}
