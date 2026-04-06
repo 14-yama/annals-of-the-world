@@ -11,11 +11,14 @@ import {
   ChevronUp,
   CheckCircle2,
   AlertTriangle,
+  ShieldCheck,
 } from 'lucide-react'
 import { Query, type Models } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../../lib/appwrite'
+import { adminUpdateDocument } from '../../lib/adminClient'
 import { SectionHeading, StatCard } from '../../components/DataCards'
 import { DIVISIONS, CLASSES } from '../../constants/callNumbers'
+import { ERA_NAMES, ERA_DIVISIONS, getDivisionsForEra, isValidEraDivision, type EraName } from '../../constants/eraDivisions'
 
 /* ─── Types ─── */
 
@@ -63,6 +66,13 @@ export default function DivisionDetail() {
   const [editWikidataQid, setEditWikidataQid] = useState('')
   const [saving, setSaving] = useState(false)
   const [toast, setToast] = useState<{ type: 'success' | 'error'; msg: string } | null>(null)
+  const [showConfirm, setShowConfirm] = useState(false)
+
+  // Available divisions filtered by selected era
+  const availableDivisions = useMemo(
+    () => editEra ? getDivisionsForEra(editEra) : [],
+    [editEra],
+  )
 
   const divisionInfo = useMemo(
     () => DIVISIONS.find((d) => d.code === div),
@@ -167,10 +177,48 @@ export default function DivisionDetail() {
     setEditImageUrl(row.imageUrl ?? '')
     setEditWikidataQid(row.wikidataQid ?? '')
     setToast(null)
+    setShowConfirm(false)
+  }
+
+  /** Validate fields before showing confirmation */
+  function validateAndConfirm() {
+    // Era is required
+    if (!editEra) {
+      setToast({ type: 'error', msg: 'Era is required' })
+      return
+    }
+    // Era must be a valid canonical value
+    if (!ERA_NAMES.includes(editEra as EraName)) {
+      setToast({ type: 'error', msg: `Invalid era: "${editEra}". Must be one of: ${ERA_NAMES.join(', ')}` })
+      return
+    }
+    // Division code must match era if set
+    if (editEraDivisionCode && !isValidEraDivision(editEra, editEraDivisionCode)) {
+      const validCodes = getDivisionsForEra(editEra).map(d => `${d.code} (${d.heading})`).join(', ')
+      setToast({ type: 'error', msg: `Division "${editEraDivisionCode}" does not belong to ${editEra}. Valid: ${validCodes}` })
+      return
+    }
+    // Summary should be meaningful
+    if (editSummary.length < 10) {
+      setToast({ type: 'error', msg: 'Summary must be at least 10 characters' })
+      return
+    }
+    // Importance must be 0-10
+    if (editImportance < 0 || editImportance > 10) {
+      setToast({ type: 'error', msg: 'Importance must be between 0 and 10' })
+      return
+    }
+    // Wikidata QID format check
+    if (editWikidataQid && !/^Q\d+$/.test(editWikidataQid)) {
+      setToast({ type: 'error', msg: 'Wikidata QID must match format Q12345' })
+      return
+    }
+    setShowConfirm(true)
   }
 
   async function saveEdit() {
     if (!editingId) return
+    setShowConfirm(false)
     setSaving(true)
     try {
       const payload: Record<string, unknown> = { summary: editSummary }
@@ -180,7 +228,13 @@ export default function DivisionDetail() {
       if (editImageUrl) payload.imageUrl = editImageUrl
       if (editWikidataQid) payload.wikidataQid = editWikidataQid
 
-      await databases.updateDocument(DATABASE_ID, COLLECTIONS.ENTITIES, editingId, payload)
+      const result = await adminUpdateDocument(COLLECTIONS.ENTITIES, editingId, payload)
+      if (!result.success) {
+        setToast({ type: 'error', msg: `Save failed: ${result.error}` })
+        setSaving(false)
+        return
+      }
+
       setEntities((prev) =>
         prev.map((e) =>
           e.$id === editingId
@@ -281,18 +335,50 @@ export default function DivisionDetail() {
               Quick Edit — {editSlug}
             </Text>
             <Flex gap={2}>
-              <Box as="button" onClick={saveEdit} px={3} py={1.5} borderRadius="md" bg="#27AE60" color="white"
+              <Box as="button" onClick={validateAndConfirm} px={3} py={1.5} borderRadius="md" bg="#27AE60" color="white"
                 fontSize="xs" fontWeight={600} display="flex" alignItems="center" gap={1} cursor="pointer"
                 opacity={saving ? 0.6 : 1} _hover={{ bg: '#219A52' }}>
                 <Save size={12} /> {saving ? 'Saving…' : 'Save'}
               </Box>
-              <Box as="button" onClick={() => setEditingId(null)} px={3} py={1.5} borderRadius="md"
+              <Box as="button" onClick={() => { setEditingId(null); setShowConfirm(false) }} px={3} py={1.5} borderRadius="md"
                 bg="#F5F4F0" color="#787469" fontSize="xs" fontWeight={600} display="flex" alignItems="center"
                 gap={1} cursor="pointer">
                 <X size={12} /> Cancel
               </Box>
             </Flex>
           </Flex>
+
+          {/* Confirmation dialog */}
+          {showConfirm && (
+            <Box bg="#FFF8E1" border="2px solid #D4AF37" borderRadius="lg" p={4} mb={4}>
+              <Flex align="center" gap={2} mb={3}>
+                <ShieldCheck size={18} color="#D4AF37" />
+                <Text fontWeight={700} fontSize="sm" color="#2D2A24">Confirm Backend Update</Text>
+              </Flex>
+              <Box fontSize="xs" color="#2D2A24" mb={3} lineHeight={1.7}>
+                <Text mb={1}>You are about to update <strong>{editSlug}</strong>:</Text>
+                <Box as="ul" pl={4} listStyleType="disc">
+                  <li>Era: <strong>{editEra}</strong></li>
+                  {editEraDivisionCode && <li>Division: <strong>{editEraDivisionCode}</strong> — {ERA_DIVISIONS.find(d => d.code === editEraDivisionCode)?.heading}</li>}
+                  <li>Importance: <strong>{editImportance}</strong></li>
+                  <li>Summary: <strong>{editSummary.length}</strong> chars</li>
+                  {editWikidataQid && <li>Wikidata: <strong>{editWikidataQid}</strong></li>}
+                </Box>
+              </Box>
+              <Flex gap={2}>
+                <Box as="button" onClick={saveEdit}
+                  px={4} py={2} borderRadius="md" bg="#27AE60" color="white" fontSize="xs"
+                  fontWeight={700} cursor="pointer" _hover={{ bg: '#219A52' }}>
+                  Yes, Update Backend
+                </Box>
+                <Box as="button" onClick={() => setShowConfirm(false)}
+                  px={4} py={2} borderRadius="md" bg="#F5F4F0" color="#787469" fontSize="xs"
+                  fontWeight={600} cursor="pointer">
+                  Go Back
+                </Box>
+              </Flex>
+            </Box>
+          )}
 
           {/* Summary */}
           <Text fontSize="xs" color="#787469" mb={1} fontWeight={600}>Summary</Text>
@@ -311,13 +397,37 @@ export default function DivisionDetail() {
           <SimpleGrid columns={{ base: 1, md: 3 }} gap={3} mb={3}>
             <Box>
               <Text fontSize="xs" color="#787469" mb={1} fontWeight={600}>Era</Text>
-              <Input value={editEra} onChange={(e) => setEditEra(e.target.value)} size="sm"
-                bg="white" borderColor="#E4E2DC" _focus={{ borderColor: '#D4AF37' }} />
+              <select
+                value={editEra}
+                onChange={(e) => {
+                  setEditEra(e.target.value)
+                  // Reset division when era changes to prevent mismatch
+                  setEditEraDivisionCode('')
+                }}
+                style={selectStyle}
+              >
+                <option value="">— Select Era —</option>
+                {ERA_NAMES.map(era => (
+                  <option key={era} value={era}>{era}</option>
+                ))}
+              </select>
             </Box>
             <Box>
               <Text fontSize="xs" color="#787469" mb={1} fontWeight={600}>Era Division Code</Text>
-              <Input value={editEraDivisionCode} onChange={(e) => setEditEraDivisionCode(e.target.value)} size="sm"
-                bg="white" borderColor="#E4E2DC" _focus={{ borderColor: '#D4AF37' }} placeholder="e.g. 921" />
+              <select
+                value={editEraDivisionCode}
+                onChange={(e) => setEditEraDivisionCode(e.target.value)}
+                style={{ ...selectStyle, opacity: editEra ? 1 : 0.5 }}
+                disabled={!editEra}
+              >
+                <option value="">— Select Division —</option>
+                {availableDivisions.map(d => (
+                  <option key={d.code} value={d.code}>{d.code} — {d.heading}</option>
+                ))}
+              </select>
+              {editEra && availableDivisions.length === 0 && (
+                <Text fontSize="10px" color="#C0392B" mt={1}>No divisions for {editEra}</Text>
+              )}
             </Box>
             <Box>
               <Text fontSize="xs" color="#787469" mb={1} fontWeight={600}>Importance (0-10)</Text>
@@ -466,6 +576,18 @@ function ScoreBadge({ score }: { score: number }) {
 }
 
 /* ─── Styles ─── */
+
+const selectStyle: React.CSSProperties = {
+  width: '100%',
+  padding: '6px 8px',
+  fontSize: '13px',
+  fontFamily: '"Inter", sans-serif',
+  border: '1px solid #E4E2DC',
+  borderRadius: '6px',
+  background: 'white',
+  color: '#2D2A24',
+  outline: 'none',
+}
 
 const thStyle: React.CSSProperties = {
   padding: '10px 12px',

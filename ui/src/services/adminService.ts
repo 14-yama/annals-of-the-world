@@ -7,6 +7,7 @@
  */
 import { Query, type Models } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../lib/appwrite'
+import { adminUpdateDocument, adminBatchUpdate } from '../lib/adminClient'
 
 /* ─── Types ─── */
 
@@ -229,18 +230,16 @@ export function analyzeCompleteness(doc: Models.Document): EntityCompleteness {
 
 /* ─── Write: Entity Updates ─── */
 
-/** Update a single entity field(s) in Appwrite */
+/** Update a single entity field(s) in Appwrite via admin API key */
 export async function updateEntity(
   documentId: string,
   fields: Record<string, unknown>,
 ): Promise<boolean> {
-  try {
-    await databases.updateDocument(DATABASE_ID, COLLECTIONS.ENTITIES, documentId, fields)
-    return true
-  } catch (err) {
-    console.error('Failed to update entity:', documentId, err)
-    return false
+  const result = await adminUpdateDocument(COLLECTIONS.ENTITIES, documentId, fields)
+  if (!result.success) {
+    console.error('Failed to update entity:', documentId, result.error)
   }
+  return result.success
 }
 
 /**
@@ -255,10 +254,13 @@ export async function updateEntityDetails(
   try {
     const existing = detailsJson ? JSON.parse(detailsJson) : {}
     const merged = { ...existing, ...updates }
-    await databases.updateDocument(DATABASE_ID, COLLECTIONS.ENTITIES, documentId, {
+    const result = await adminUpdateDocument(COLLECTIONS.ENTITIES, documentId, {
       detailsJson: JSON.stringify(merged),
     })
-    return true
+    if (!result.success) {
+      console.error('Failed to update entity details:', documentId, result.error)
+    }
+    return result.success
   } catch (err) {
     console.error('Failed to update entity details:', documentId, err)
     return false
@@ -270,25 +272,7 @@ export async function batchUpdateEntities(
   updates: Array<{ documentId: string; fields: Record<string, unknown> }>,
   onProgress?: (done: number, total: number) => void,
 ): Promise<{ success: number; failed: number }> {
-  let success = 0, failed = 0
-  const BATCH_SIZE = 10
-
-  for (let i = 0; i < updates.length; i += BATCH_SIZE) {
-    const batch = updates.slice(i, i + BATCH_SIZE)
-    const results = await Promise.allSettled(
-      batch.map(({ documentId, fields }) =>
-        databases.updateDocument(DATABASE_ID, COLLECTIONS.ENTITIES, documentId, fields),
-      ),
-    )
-    for (const r of results) {
-      if (r.status === 'fulfilled') success++
-      else failed++
-    }
-    onProgress?.(Math.min(i + BATCH_SIZE, updates.length), updates.length)
-    // Small delay between batches to avoid rate limiting
-    if (i + BATCH_SIZE < updates.length) {
-      await new Promise((r) => setTimeout(r, 200))
-    }
-  }
-  return { success, failed }
+  const mapped = updates.map(u => ({ documentId: u.documentId, data: u.fields }))
+  const result = await adminBatchUpdate(COLLECTIONS.ENTITIES, mapped, onProgress)
+  return { success: result.success, failed: result.failed }
 }

@@ -30,12 +30,12 @@ function buildTimeline(entity: Entity): TimelineNode[] {
 
   // Causes (antecedents)
   entity.causes.forEach(c => {
-    nodes.push({ year: c.year, label: c.title, detail: `${c.type} — ${c.title}`, type: 'cause' })
+    if (c.year) nodes.push({ year: c.year, label: c.title ?? 'Cause', detail: `${c.type ?? 'cause'} — ${c.title ?? ''}`, type: 'cause' })
   })
 
   // Effects (consequences)
   entity.effects.forEach(e => {
-    nodes.push({ year: e.year, label: e.title, detail: `${e.type} — ${e.title}`, type: 'effect' })
+    if (e.year) nodes.push({ year: e.year, label: e.title ?? 'Effect', detail: `${e.type ?? 'effect'} — ${e.title ?? ''}`, type: 'effect' })
   })
 
   // Death / end
@@ -52,6 +52,7 @@ function extractYear(s: string): string {
 }
 
 function parseNumericYear(s: string): number {
+  if (!s) return 0
   const cleaned = s.replace(/[^0-9BCE-]/gi, '')
   const match = cleaned.match(/(\d+)\s*(BCE|BC)?/i)
   if (!match) return 0
