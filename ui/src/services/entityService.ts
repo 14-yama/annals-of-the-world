@@ -1,85 +1,249 @@
 /**
- * Entity Service — Hybrid Data Layer
+ * Entity Service — Appwrite Backend Data Layer
  *
- * Queries Appwrite first; falls back to the static catalog.
- * This allows the app to work fully offline with bundled data
- * while progressively migrating to Appwrite-backed dynamic queries.
+ * All data is fetched from the Appwrite backend (381,000+ entities).
+ * No static catalog fallback — the backend IS the source of truth.
  */
 import { Query } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../lib/appwrite'
-import { getEntity as getCatalogEntity, getAllEntities as getCatalogEntities, getShelfNeighbors as getCatalogShelfNeighbors } from '../data/catalog'
 import type { Entity } from '../data/entityTypes'
-
-/* ─── Flag: set to true once Appwrite collections are seeded ─── */
-const USE_APPWRITE = true
 
 /* ─── Read helpers ─── */
 
-/** Fetch a single entity by slug — Appwrite first, static fallback */
+/** Fetch a single entity by slug from Appwrite */
 export async function fetchEntity(slug: string): Promise<Entity | undefined> {
-  if (USE_APPWRITE) {
-    try {
-      const res = await databases.listDocuments(
-        DATABASE_ID,
-        COLLECTIONS.ENTITIES,
-        [Query.equal('slug', slug), Query.limit(1)],
-      )
-      if (res.documents.length > 0) return mapDocToEntity(res.documents[0])
-    } catch { /* fall through */ }
-  }
-  return getCatalogEntity(slug)
+  try {
+    const res = await databases.listDocuments(
+      DATABASE_ID,
+      COLLECTIONS.ENTITIES,
+      [Query.equal('slug', slug), Query.limit(1)],
+    )
+    if (res.documents.length > 0) return mapDocToEntity(res.documents[0])
+  } catch { /* no fallback */ }
+  return undefined
 }
 
-/** Fetch all entities — paginated from Appwrite or full static catalog */
+/** Fetch entities — paginated from Appwrite */
 export async function fetchEntities(opts?: {
   era?: string
   label?: string
   continent?: string
+  eraDivision?: string
   limit?: number
   offset?: number
 }): Promise<Entity[]> {
-  if (USE_APPWRITE) {
-    try {
-      const queries: string[] = []
-      if (opts?.era)       queries.push(Query.equal('eraSlug', opts.era))
-      if (opts?.label)     queries.push(Query.equal('label', opts.label))
-      if (opts?.continent) queries.push(Query.equal('continent', opts.continent))
-      queries.push(Query.limit(opts?.limit ?? 100))
-      if (opts?.offset)    queries.push(Query.offset(opts.offset))
+  try {
+    const queries: string[] = []
+    if (opts?.era)           queries.push(Query.equal('eraSlug', opts.era))
+    if (opts?.label)         queries.push(Query.equal('label', opts.label))
+    if (opts?.continent)     queries.push(Query.equal('continent', opts.continent))
+    if (opts?.eraDivision)   queries.push(Query.equal('eraDivisionCode', opts.eraDivision))
+    queries.push(Query.limit(opts?.limit ?? 100))
+    if (opts?.offset)        queries.push(Query.offset(opts.offset))
 
+    const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, queries)
+    return res.documents.map(mapDocToEntity)
+  } catch { return [] }
+}
+
+/**
+ * Search entities — deep multi-strategy search across 400K+ Appwrite backend.
+ *
+ * Strategies (run in parallel where possible):
+ * 1. Fulltext name search  — word-prefix matching on the `name` field
+ * 2. Fulltext summary search — finds entities whose summary mentions the query
+ * 3. Slug prefix search    — hyphenated + underscore variants
+ * 4. Exact slug lookup     — handles pasted slugs like "julius-caesar"
+ * 5. Call number prefix    — "290", "220.06", etc.
+ *
+ * Results are merged, deduplicated by slug, and sorted by importanceScore.
+ */
+export async function searchEntities(query: string, limit = 25): Promise<Entity[]> {
+  const q = query.trim()
+  if (!q) return []
+
+  const seen = new Set<string>()
+  const results: Entity[] = []
+
+  const addUnique = (entities: Entity[]) => {
+    for (const e of entities) {
+      if (!seen.has(e.slug)) {
+        seen.add(e.slug)
+        results.push(e)
+      }
+    }
+  }
+
+  /** Safe query wrapper — returns empty on any failure */
+  const safeQuery = async (queries: string[]): Promise<Entity[]> => {
+    try {
       const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, queries)
       return res.documents.map(mapDocToEntity)
-    } catch { /* fall through */ }
+    } catch {
+      return []
+    }
   }
-  let entities = getCatalogEntities()
-  if (opts?.era)       entities = entities.filter(e => e.eraSlug === opts.era)
-  if (opts?.label)     entities = entities.filter(e => e.label === opts.label)
-  if (opts?.continent) entities = entities.filter(e => e.continent === opts.continent)
-  const start = opts?.offset ?? 0
-  return entities.slice(start, start + (opts?.limit ?? entities.length))
+
+  // ── Build slug variants ──
+  const slugHyphen = q.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+  const slugUnder  = q.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, '')
+  const isCallNum  = /^\d/.test(q)
+
+  // ── Run strategies in parallel for speed ──
+  const strategies: Promise<Entity[]>[] = []
+
+  // Strategy 1: Fulltext name search
+  strategies.push(safeQuery([Query.search('name', q), Query.limit(limit)]))
+
+  // Strategy 2: Fulltext summary search (catches entities whose name doesn't match but topic does)
+  if (q.length >= 3) {
+    strategies.push(safeQuery([Query.search('summary', q), Query.limit(limit)]))
+  }
+
+  // Strategy 3: Slug prefix search — both hyphen and underscore variants
+  if (slugHyphen.length >= 2) {
+    strategies.push(safeQuery([Query.startsWith('slug', slugHyphen), Query.limit(limit)]))
+  }
+  if (slugUnder.length >= 2 && slugUnder !== slugHyphen) {
+    strategies.push(safeQuery([Query.startsWith('slug', slugUnder), Query.limit(limit)]))
+  }
+
+  // Strategy 4: Exact slug match (user may paste "julius-caesar" or "alexander_the_great")
+  if (slugHyphen.length >= 3) {
+    strategies.push(safeQuery([Query.equal('slug', slugHyphen), Query.limit(1)]))
+  }
+  if (slugUnder.length >= 3 && slugUnder !== slugHyphen) {
+    strategies.push(safeQuery([Query.equal('slug', slugUnder), Query.limit(1)]))
+  }
+
+  // Strategy 5: Call number prefix search
+  if (isCallNum) {
+    strategies.push(safeQuery([Query.startsWith('callNumber', q), Query.limit(limit)]))
+  }
+
+  // Wait for all strategies in parallel
+  const batches = await Promise.all(strategies)
+  for (const batch of batches) {
+    addUnique(batch)
+  }
+
+  // Rank by query relevance (primary) + importance (secondary)
+  const ql = q.toLowerCase()
+  results.sort((a, b) => {
+    const ra = nameRelevance(a.name, ql)
+    const rb = nameRelevance(b.name, ql)
+    if (rb !== ra) return rb - ra                      // exact > starts > contains > partial
+    const sa = a.importanceScore ?? 0
+    const sb = b.importanceScore ?? 0
+    if (sb !== sa) return sb - sa                      // higher importance first
+    return a.name.localeCompare(b.name)                // alphabetical tie-break
+  })
+
+  return results.slice(0, limit)
 }
 
-/** Search entities by name or summary text */
-export async function searchEntities(query: string, limit = 20): Promise<Entity[]> {
-  if (USE_APPWRITE) {
-    try {
-      const res = await databases.listDocuments(
-        DATABASE_ID,
-        COLLECTIONS.ENTITIES,
-        [Query.search('name', query), Query.limit(limit)],
-      )
-      return res.documents.map(mapDocToEntity)
-    } catch { /* fall through */ }
-  }
-  const q = query.toLowerCase()
-  return getCatalogEntities()
-    .filter(e => e.name.toLowerCase().includes(q) || e.summary.toLowerCase().includes(q))
-    .slice(0, limit)
+/** Score how well an entity name matches the query — higher is better */
+function nameRelevance(name: string, queryLower: string): number {
+  const nl = name.toLowerCase()
+  if (nl === queryLower) return 100                    // exact
+  if (nl.startsWith(queryLower)) return 80             // prefix
+  // Check if ALL query words appear in the name
+  const words = queryLower.split(/\s+/)
+  const allPresent = words.every(w => nl.includes(w))
+  if (allPresent) return 60                            // all words match
+  if (nl.includes(queryLower)) return 50               // substring
+  // At least one word matches
+  if (words.some(w => nl.includes(w))) return 30
+  return 0                                             // matched via slug/callNumber only
 }
 
-/** Fetch shelf neighbors (same division) — uses static catalog for fast prefix matching */
-export function fetchShelfNeighbors(callNumber: string, range = 5): Entity[] {
-  return getCatalogShelfNeighbors(callNumber, range)
+/** Fetch shelf neighbors by callNumber prefix from Appwrite */
+export async function fetchShelfNeighbors(callNumber: string, range = 5): Promise<Entity[]> {
+  try {
+    // Extract division prefix (e.g., "220.06-julius-caesar" → "220")
+    const parts = callNumber.split('.')
+    const prefix = parts[0] || ''
+    if (!prefix) return []
+    const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
+      Query.startsWith('callNumber', prefix + '.'),
+      Query.limit(range * 2 + 1),
+    ])
+    return res.documents.map(mapDocToEntity)
+  } catch { return [] }
+}
+
+/** Fetch entity counts by label — for dashboards and stats */
+export async function fetchLabelCounts(): Promise<Record<string, number>> {
+  try {
+    const labels = ['EventWindow', 'Person', 'Movement', 'Institution', 'Text', 'Idea', 'Place', 'Evidence']
+    const results = await Promise.all(
+      labels.map(async (label) => {
+        const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
+          Query.equal('label', label), Query.limit(1),
+        ])
+        return { label, count: res.total }
+      })
+    )
+    return Object.fromEntries(results.map(r => [r.label, r.count]))
+  } catch { return {} }
+}
+
+/** Fetch total entity count */
+export async function fetchTotalCount(): Promise<number> {
+  try {
+    const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [Query.limit(1)])
+    return res.total
+  } catch { return 0 }
+}
+
+/** Fetch entities with total count — server-side filtered, paginated */
+export async function fetchEntitiesWithTotal(opts?: {
+  era?: string
+  label?: string
+  continent?: string
+  eraDivision?: string
+  search?: string
+  limit?: number
+  offset?: number
+}): Promise<{ entities: Entity[]; total: number }> {
+  try {
+    const queries: string[] = []
+    if (opts?.era)           queries.push(Query.equal('eraSlug', opts.era))
+    if (opts?.label)         queries.push(Query.equal('label', opts.label))
+    if (opts?.continent)     queries.push(Query.equal('continent', opts.continent))
+    if (opts?.eraDivision)   queries.push(Query.equal('eraDivisionCode', opts.eraDivision))
+    if (opts?.search)        queries.push(Query.search('name', opts.search))
+    queries.push(Query.limit(opts?.limit ?? 100))
+    if (opts?.offset)        queries.push(Query.offset(opts.offset))
+
+    const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, queries)
+    return { entities: res.documents.map(mapDocToEntity), total: res.total }
+  } catch { return { entities: [], total: 0 } }
+}
+
+/** Fetch entities by subjects array — for corpus pages */
+export async function fetchEntitiesBySubject(subject: string, opts?: {
+  limit?: number
+  offset?: number
+}): Promise<{ entities: Entity[]; total: number }> {
+  try {
+    const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
+      Query.search('name', subject),
+      Query.limit(opts?.limit ?? 100),
+      ...(opts?.offset ? [Query.offset(opts.offset)] : []),
+    ])
+    return { entities: res.documents.map(mapDocToEntity), total: res.total }
+  } catch { return { entities: [], total: 0 } }
+}
+
+/** Check if an entity exists by slug (lightweight) */
+export async function entityExists(slug: string): Promise<boolean> {
+  try {
+    const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
+      Query.equal('slug', slug), Query.limit(1), Query.select(['slug']),
+    ])
+    return res.documents.length > 0
+  } catch { return false }
 }
 
 /* ─── Evidence & Media (Appwrite-only, no static fallback) ─── */
@@ -119,7 +283,6 @@ export interface TimelineEntry {
 
 /** Fetch evidence records for an entity */
 export async function fetchEvidence(entitySlug: string): Promise<EvidenceRecord[]> {
-  if (!USE_APPWRITE) return []
   try {
     const res = await databases.listDocuments(
       DATABASE_ID, COLLECTIONS.EVIDENCE,
@@ -141,7 +304,6 @@ export async function fetchEvidence(entitySlug: string): Promise<EvidenceRecord[
 
 /** Fetch media records for an entity */
 export async function fetchMedia(entitySlug: string): Promise<MediaRecord[]> {
-  if (!USE_APPWRITE) return []
   try {
     const res = await databases.listDocuments(
       DATABASE_ID, COLLECTIONS.MEDIA,
@@ -162,7 +324,6 @@ export async function fetchMedia(entitySlug: string): Promise<MediaRecord[]> {
 
 /** Fetch timeline entries for an entity */
 export async function fetchTimeline(entitySlug: string): Promise<TimelineEntry[]> {
-  if (!USE_APPWRITE) return []
   try {
     const res = await databases.listDocuments(
       DATABASE_ID, COLLECTIONS.TIMELINE,
@@ -202,6 +363,8 @@ function mapDocToEntity(doc: any): Entity {
     endDate:        doc.endDate,
     era:            doc.era,
     eraSlug:        doc.eraSlug,
+    eraDivision:    doc.eraDivision,
+    eraDivisionCode: doc.eraDivisionCode,
     region:         doc.region,
     continent:      doc.continent,
     status:         doc.status,

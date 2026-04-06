@@ -7,10 +7,9 @@ import {
   Landmark, Layers, Library, Compass, Zap, Image, Sparkles,
 } from 'lucide-react'
 import {
-  getEntity, getAllEntities, parseSortYear,
   type Entity, type EntityRelationship,
-} from '../data/catalog'
-import { fetchEntity, fetchShelfNeighbors } from '../services/entityService'
+} from '../data/entityTypes'
+import { fetchEntity, fetchShelfNeighbors, fetchEntities } from '../services/entityService'
 import {
   parseCallNumber, getCallNumberBreadcrumbs, getCallNumberColor,
   getDivisionHeading, DIVISIONS,
@@ -104,7 +103,7 @@ function generateFrameworkContext(entity: Entity, fw: Framework): { analysis: st
 
 function buildAnalysis(entity: Entity, fw: Framework): string {
   const n = entity.name
-  const era = entity.era
+  const era = entity.era || 'its'
   const label = entity.label
   const places = entity.places.map(p => p.name).filter(Boolean)
   const placeStr = places.length > 0 ? places.slice(0, 2).join(' and ') : entity.region || 'its region'
@@ -224,10 +223,81 @@ const ERAS = [
   { slug: 'contemporary',  eraId: 'contemporary',  label: 'Contemporary',  period: '1945 – Present',  color: '#6B3FA0' },
 ]
 
+/* ── Era sub-divisions (from callNumbers.ts class 9) ── */
+interface EraDivision {
+  code: string
+  heading: string
+  parentEraSlug: string
+  color: string
+}
+
+const ERA_DIVISION_MAP: EraDivision[] = [
+  { code: '911', heading: 'Paleolithic & Mesolithic',  parentEraSlug: 'prehistoric',  color: '#6B4D1B' },
+  { code: '912', heading: 'Neolithic & Chalcolithic',  parentEraSlug: 'prehistoric',  color: '#6B4D1B' },
+  { code: '913', heading: 'Bronze Age',                parentEraSlug: 'prehistoric',  color: '#6B4D1B' },
+  { code: '921', heading: 'Archaic Period',             parentEraSlug: 'classical',   color: '#8B4513' },
+  { code: '922', heading: 'Hellenistic Period',         parentEraSlug: 'classical',   color: '#8B4513' },
+  { code: '923', heading: 'Roman Period',               parentEraSlug: 'classical',   color: '#8B4513' },
+  { code: '924', heading: 'Late Antiquity',             parentEraSlug: 'classical',   color: '#8B4513' },
+  { code: '931', heading: 'Early Medieval / Dark Ages', parentEraSlug: 'medieval',    color: '#A67C2E' },
+  { code: '932', heading: 'High Medieval',              parentEraSlug: 'medieval',    color: '#A67C2E' },
+  { code: '933', heading: 'Late Medieval',              parentEraSlug: 'medieval',    color: '#A67C2E' },
+  { code: '941', heading: 'Age of Exploration',         parentEraSlug: 'early-modern', color: '#C5963A' },
+  { code: '942', heading: 'Renaissance Period',         parentEraSlug: 'early-modern', color: '#C5963A' },
+  { code: '943', heading: 'Reformation Era',            parentEraSlug: 'early-modern', color: '#C5963A' },
+  { code: '944', heading: 'Age of Enlightenment',       parentEraSlug: 'early-modern', color: '#C5963A' },
+  { code: '951', heading: 'Industrial Age',             parentEraSlug: 'modern',      color: '#4A90D9' },
+  { code: '952', heading: 'Age of Empire',              parentEraSlug: 'modern',      color: '#4A90D9' },
+  { code: '953', heading: 'Interwar Period',            parentEraSlug: 'modern',      color: '#4A90D9' },
+  { code: '954', heading: 'World War II Era',           parentEraSlug: 'modern',      color: '#4A90D9' },
+  { code: '961', heading: 'Cold War Era',               parentEraSlug: 'contemporary', color: '#6B3FA0' },
+  { code: '962', heading: 'Post-Cold War',              parentEraSlug: 'contemporary', color: '#6B3FA0' },
+  { code: '963', heading: 'Digital Age',                parentEraSlug: 'contemporary', color: '#6B3FA0' },
+]
+
+/** Get the specific era division — prefer first-class field, fall back to relationship scan */
+function getEntityEraDivision(entity: Entity): EraDivision | null {
+  // 1. Prefer the direct eraDivisionCode field (stored on every seeded entity)
+  if (entity.eraDivisionCode) {
+    const byCode = ERA_DIVISION_MAP.find(d => d.code === entity.eraDivisionCode)
+    if (byCode) return byCode
+  }
+  // 2. Fall back to scanning OCCURS_DURING relationships
+  for (const rel of entity.relationships) {
+    if (rel.verb === 'OCCURS_DURING' && rel.targetSlug?.startsWith('era-')) {
+      const div = ERA_DIVISION_MAP.find(d =>
+        d.heading.toLowerCase() === rel.targetName?.toLowerCase() ||
+        rel.targetSlug === `era-${d.heading.toLowerCase().replace(/[/&]/g, '-').replace(/[^a-z0-9-]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')}`
+      )
+      if (div) return div
+    }
+  }
+  return null
+}
+
 /* ── Catalog eraSlug → eras.ts route ID mapping ── */
 const SLUG_TO_ERA_ID: Record<string, string> = {
   prehistoric: 'prehistory', classical: 'ancient', medieval: 'medieval',
   'early-modern': 'early-modern', modern: 'modern', contemporary: 'contemporary',
+}
+
+/* ── parseSortYear — extract sortable year from entity date fields ── */
+function parseSortYear(entity: Entity): number {
+  const raw = entity.startDate || entity.born || entity.founded || entity.period || ''
+  if (!raw) return Infinity
+  const bce = /(\d[\d,]*)\s*BC(?:E)?/i.exec(raw)
+  if (bce) return -parseInt(bce[1].replace(/,/g, ''), 10)
+  const ce = /(\d[\d,]*)\s*(?:CE|AD)/i.exec(raw)
+  if (ce) return parseInt(ce[1].replace(/,/g, ''), 10)
+  const plain = /\b(\d{3,4})\b/.exec(raw)
+  if (plain) return parseInt(plain[1], 10)
+  const cent = /(\d+)(?:st|nd|rd|th)\s*century/i.exec(raw)
+  if (cent) {
+    const n = parseInt(cent[1], 10)
+    const isBce = /BCE|BC/i.test(raw)
+    return isBce ? -(n * 100) : (n - 1) * 100
+  }
+  return Infinity
 }
 
 const TABS = [
@@ -259,8 +329,6 @@ const LABEL_COLORS: Record<string, string> = {
 function RelationshipRow({ rel, currentSlug }: { rel: EntityRelationship; currentSlug: string }) {
   const isSource = rel.sourceSlug === currentSlug
   const otherSlug = isSource ? rel.targetSlug : rel.sourceSlug
-  const otherEntity = getEntity(otherSlug)
-  const hasPage = !!otherEntity
 
   return (
     <Box py={3} borderBottom="1px solid #EEEDEA">
@@ -269,7 +337,7 @@ function RelationshipRow({ rel, currentSlug }: { rel: EntityRelationship; curren
           <Text fontFamily='"Cinzel", serif' fontSize="12px" fontWeight={600} color="#9E9A90">
             {rel.sourceName}
           </Text>
-        ) : hasPage ? (
+        ) : (
           <RouterLink to={`/entity/${rel.sourceSlug}`} style={{ textDecoration: 'none' }}>
             <Flex align="center" gap={1}>
               <Text fontFamily='"Inter", sans-serif' fontSize="13px" fontWeight={600} color="#3B6BC2" style={{ cursor: 'pointer' }}>
@@ -278,8 +346,6 @@ function RelationshipRow({ rel, currentSlug }: { rel: EntityRelationship; curren
               <ExternalLink size={10} color="#3B6BC2" />
             </Flex>
           </RouterLink>
-        ) : (
-          <Text fontSize="13px" fontWeight={600} color="#2D2A24">{rel.sourceName}</Text>
         )}
 
         <Flex align="center" gap={1}>
@@ -299,8 +365,8 @@ function RelationshipRow({ rel, currentSlug }: { rel: EntityRelationship; curren
           <Text fontFamily='"Cinzel", serif' fontSize="12px" fontWeight={600} color="#9E9A90">
             {rel.targetName}
           </Text>
-        ) : hasPage ? (
-          <RouterLink to={`/entity/${rel.targetSlug}`} style={{ textDecoration: 'none' }}>
+        ) : (
+          <RouterLink to={`/entity/${otherSlug}`} style={{ textDecoration: 'none' }}>
             <Flex align="center" gap={1}>
               <Text fontFamily='"Inter", sans-serif' fontSize="13px" fontWeight={600} color="#3B6BC2" style={{ cursor: 'pointer' }}>
                 {rel.targetName}
@@ -308,8 +374,6 @@ function RelationshipRow({ rel, currentSlug }: { rel: EntityRelationship; curren
               <ExternalLink size={10} color="#3B6BC2" />
             </Flex>
           </RouterLink>
-        ) : (
-          <Text fontSize="13px" fontWeight={600} color="#2D2A24">{rel.targetName}</Text>
         )}
       </Flex>
       {rel.context && (
@@ -452,21 +516,9 @@ function JumpRail({ entity }: { entity: Entity }) {
     seenPrefixes.add(parsed.division)
   }
 
-  // Divisions discovered from relationships
-  for (const rel of entity.relationships) {
-    const otherSlug = rel.sourceSlug === entity.slug ? rel.targetSlug : rel.sourceSlug
-    const otherEntity = getEntity(otherSlug)
-    if (otherEntity) {
-      const otherParsed = parseCallNumber(otherEntity.callNumber)
-      if (otherParsed && !seenPrefixes.has(otherParsed.division)) {
-        const div = DIVISIONS.find(d => d.code === otherParsed.division)
-        if (div) {
-          jumpTargets.push({ label: div.heading, prefix: otherParsed.division })
-          seenPrefixes.add(otherParsed.division)
-        }
-      }
-    }
-  }
+  // Divisions discovered from relationships — use callNumber if embedded in relationship data
+  // (Relationship objects don't carry callNumbers, so we skip external lookups)
+  // The own-division link is the primary jump target
 
   return (
     <Box
@@ -533,17 +585,33 @@ export default function EntityPage() {
   const entitySlug = slug || 'henry_viii'
   const [entity, setEntity] = useState<Entity | null>(null)
   const [neighbors, setNeighbors] = useState<Entity[]>([])
+  const [eraSiblings, setEraSiblings] = useState<Entity[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     let cancelled = false
     setLoading(true)
-    fetchEntity(entitySlug).then(e => {
+    fetchEntity(entitySlug).then(async (e) => {
       if (cancelled) return
       const ent = e || null
       setEntity(ent)
-      setNeighbors(ent ? fetchShelfNeighbors(ent.callNumber, 5) : [])
-      setLoading(false)
+      if (ent) {
+        const siblingPromise = ent.eraSlug
+          ? fetchEntities({ era: ent.eraSlug, limit: 9 })
+          : Promise.resolve([])
+        const [shelf, siblings] = await Promise.all([
+          fetchShelfNeighbors(ent.callNumber, 5),
+          siblingPromise,
+        ])
+        if (!cancelled) {
+          setNeighbors(shelf)
+          setEraSiblings(siblings.filter(s => s.slug !== ent.slug).slice(0, 8))
+        }
+      } else {
+        setNeighbors([])
+        setEraSiblings([])
+      }
+      if (!cancelled) setLoading(false)
     })
     return () => { cancelled = true }
   }, [entitySlug])
@@ -624,34 +692,73 @@ export default function EntityPage() {
         </Text>
       </Flex>
 
-      {/* ─── Era Breadcrumb Bar ─── */}
-      <Flex bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="lg" overflow="hidden" mb={4}
-        align="center" px={2}>
-        <Layers size={14} color="#B8B2A4" style={{ marginRight: '8px', flexShrink: 0 }} />
-        {ERAS.map((era) => {
-          const isActive = era.slug === entity.eraSlug
-          return (
-            <RouterLink key={era.slug} to={`/explore/${era.eraId}`} style={{
-              display: 'flex', alignItems: 'center', gap: '4px',
-              padding: '10px 12px', fontSize: '10px', fontFamily: '"Cinzel", serif',
-              fontWeight: isActive ? 700 : 400,
-              color: isActive ? era.color : '#B8B2A4',
-              letterSpacing: '0.08em', textTransform: 'uppercase' as const,
-              textDecoration: 'none',
-              borderBottom: isActive ? `2px solid ${era.color}` : '2px solid transparent',
-              transition: 'all 0.2s', whiteSpace: 'nowrap' as const,
-            }}>
-              {era.label}
-            </RouterLink>
-          )
-        })}
-        <Flex align="center" gap={1} ml="auto" flexShrink={0} pr={2}>
-          <ChevronRight size={12} color="#D6D3CC" />
-          <Text fontFamily='"Cinzel", serif' fontSize="10px" color="#9E9A90" letterSpacing="0.05em">{entity.continent}</Text>
-          <ChevronRight size={12} color="#D6D3CC" />
-          <Text fontFamily='"Cinzel", serif' fontSize="10px" color="#2D2A24" fontWeight={600} letterSpacing="0.05em">{entity.name}</Text>
-        </Flex>
-      </Flex>
+      {/* ─── Era Breadcrumb Bar (with sub-divisions) ─── */}
+      {entity.eraSlug && (() => {
+        const eraDivision = getEntityEraDivision(entity)
+        const activeEra = ERAS.find(e => e.slug === entity.eraSlug)
+        const activeDivisions = ERA_DIVISION_MAP.filter(d => d.parentEraSlug === entity.eraSlug)
+        return (
+          <Box bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="lg" overflow="hidden" mb={4}>
+            {/* Top row: Broad eras */}
+            <Flex align="center" px={2} borderBottom={activeDivisions.length > 0 ? '1px solid #E4E2DC' : 'none'}>
+              <Layers size={14} color="#B8B2A4" style={{ marginRight: '8px', flexShrink: 0 }} />
+              {ERAS.map((era) => {
+                const isActive = era.slug === entity.eraSlug
+                return (
+                  <RouterLink key={era.slug} to={`/explore/${era.eraId}`} style={{
+                    display: 'flex', alignItems: 'center', gap: '4px',
+                    padding: '10px 12px', fontSize: '10px', fontFamily: '"Cinzel", serif',
+                    fontWeight: isActive ? 700 : 400,
+                    color: isActive ? era.color : '#B8B2A4',
+                    letterSpacing: '0.08em', textTransform: 'uppercase' as const,
+                    textDecoration: 'none',
+                    borderBottom: isActive ? `2px solid ${era.color}` : '2px solid transparent',
+                    transition: 'all 0.2s', whiteSpace: 'nowrap' as const,
+                  }}>
+                    {era.label}
+                  </RouterLink>
+                )
+              })}
+              <Flex align="center" gap={1} ml="auto" flexShrink={0} pr={2}>
+                <ChevronRight size={12} color="#D6D3CC" />
+                <Text fontFamily='"Cinzel", serif' fontSize="10px" color="#9E9A90" letterSpacing="0.05em">{entity.continent}</Text>
+                <ChevronRight size={12} color="#D6D3CC" />
+                <Text fontFamily='"Cinzel", serif' fontSize="10px" color="#2D2A24" fontWeight={600} letterSpacing="0.05em">{entity.name}</Text>
+              </Flex>
+            </Flex>
+            {/* Sub-row: Era sub-divisions for the active era */}
+            {activeDivisions.length > 0 && (
+              <Flex align="center" px={2} py={1} bg="rgba(250,250,248,0.5)" gap={0} overflowX="auto">
+                <Box w="14px" flexShrink={0} />
+                <Text fontFamily='"JetBrains Mono", monospace' fontSize="9px" color="#B8B2A4" mr={2} flexShrink={0}>
+                  {activeEra?.label}:
+                </Text>
+                {activeDivisions.map((div) => {
+                  const isActiveDivision = eraDivision?.code === div.code
+                  return (
+                    <RouterLink key={div.code} to={`/catalog?eraDivision=${div.code}`} style={{
+                      display: 'flex', alignItems: 'center', gap: '4px',
+                      padding: '6px 10px', fontSize: '10px', fontFamily: '"Inter", sans-serif',
+                      fontWeight: isActiveDivision ? 700 : 400,
+                      color: isActiveDivision ? div.color : '#9E9A90',
+                      textDecoration: 'none',
+                      borderBottom: isActiveDivision ? `2px solid ${div.color}` : '2px solid transparent',
+                      transition: 'all 0.2s', whiteSpace: 'nowrap' as const,
+                      letterSpacing: '0.02em',
+                    }}>
+                      <Text as="span" fontFamily='"JetBrains Mono", monospace' fontSize="9px"
+                        color={isActiveDivision ? div.color : '#B8B2A4'}>
+                        {div.code}
+                      </Text>
+                      {div.heading}
+                    </RouterLink>
+                  )
+                })}
+              </Flex>
+            )}
+          </Box>
+        )
+      })()}
 
       {/* ─── Three-Column Layout: Shelf │ Content │ Jump Rail ─── */}
       <Flex gap={4} align="flex-start">
@@ -714,14 +821,32 @@ export default function EntityPage() {
                   </Text>
                 </Flex>
                 {currentEra && (
-                  <RouterLink to={`/explore/${currentEra.eraId}`} style={{ textDecoration: 'none' }}>
-                    <Flex align="center" gap={1} bg={`${currentEra.color}10`}
-                      border={`1px solid ${currentEra.color}30`} borderRadius="full" px={3} py={1}>
-                      <Clock size={11} color={currentEra.color} />
-                      <Text fontFamily='"Cinzel", serif' fontSize="10px" color={currentEra.color}
-                        fontWeight={600} letterSpacing="0.08em">{currentEra.label}</Text>
-                    </Flex>
-                  </RouterLink>
+                  <Box>
+                    <RouterLink to={`/explore/${currentEra.eraId}`} style={{ textDecoration: 'none' }}>
+                      <Flex align="center" gap={1} bg={`${currentEra.color}10`}
+                        border={`1px solid ${currentEra.color}30`} borderRadius="full" px={3} py={1}>
+                        <Clock size={11} color={currentEra.color} />
+                        <Text fontFamily='"Cinzel", serif' fontSize="10px" color={currentEra.color}
+                          fontWeight={600} letterSpacing="0.08em">{currentEra.label}</Text>
+                      </Flex>
+                    </RouterLink>
+                    {(() => {
+                      const div = getEntityEraDivision(entity)
+                      if (!div) return null
+                      return (
+                        <RouterLink to={`/catalog?eraDivision=${div.code}`} style={{ textDecoration: 'none' }}>
+                          <Flex align="center" gap={1} mt={1} bg={`${div.color}08`}
+                            border={`1px solid ${div.color}20`} borderRadius="full" px={3} py={0.5}>
+                            <Text fontFamily='"JetBrains Mono", monospace' fontSize="9px" color={div.color}>
+                              {div.code}
+                            </Text>
+                            <Text fontFamily='"Inter", sans-serif' fontSize="9px" color={div.color}
+                              fontWeight={500} letterSpacing="0.02em">{div.heading}</Text>
+                          </Flex>
+                        </RouterLink>
+                      )
+                    })()}
+                  </Box>
                 )}
                 <Text fontFamily='"JetBrains Mono", monospace' fontSize="9px" color="#B8B2A4" mt={1}>
                   ← → shelf nav
@@ -876,6 +1001,7 @@ export default function EntityPage() {
                       </Box>
                     </Flex>
                   )}
+                  {entity.era && (
                   <Flex gap={3} align="center">
                     <Scroll size={14} color="#B8B2A4" />
                     <Box>
@@ -885,6 +1011,7 @@ export default function EntityPage() {
                       </RouterLink>
                     </Box>
                   </Flex>
+                  )}
                   <Flex gap={3} align="center">
                     <MapPin size={14} color="#B8B2A4" />
                     <Box>
@@ -908,21 +1035,16 @@ export default function EntityPage() {
                         )
                       )).map((json) => {
                         const { slug: s, name } = JSON.parse(json)
-                        const linked = getEntity(s)
-                        return linked ? (
+                        return (
                           <RouterLink key={s} to={`/entity/${s}`} style={{ textDecoration: 'none' }}>
                             <Flex align="center" gap={1} bg="#F5F4F0" border="1px solid #E4E2DC"
                               borderRadius="full" px={3} py={1}
                               _hover={{ bg: 'rgba(59,107,194,0.08)', borderColor: '#3B6BC2' }}
                               transition="all 0.2s" cursor="pointer">
-                              <Box w="5px" h="5px" borderRadius="full" bg={LABEL_COLORS[linked.label] || '#9E9A90'} />
+                              <Box w="5px" h="5px" borderRadius="full" bg="#3B6BC2" />
                               <Text fontSize="12px" color="#3B6BC2" fontWeight={500}>{name}</Text>
                             </Flex>
                           </RouterLink>
-                        ) : (
-                          <Box key={s} bg="#F5F4F0" border="1px solid #EEEDEA" borderRadius="full" px={3} py={1}>
-                            <Text fontSize="12px" color="#787469">{name}</Text>
-                          </Box>
                         )
                       })}
                     </Flex>
@@ -947,7 +1069,7 @@ export default function EntityPage() {
                     <Flex align="center" gap={2} mb={4}>
                       <Box w="8px" h="2px" bg="#D4AF37" borderRadius="full" />
                       <Text fontSize="10px" color="#B8B2A4">
-                        {entity.frameworks.length} framework{entity.frameworks.length > 1 ? 's' : ''} assigned — {entity.label} · {entity.era} era
+                        {entity.frameworks.length} framework{entity.frameworks.length > 1 ? 's' : ''} assigned — {entity.label}{entity.era ? ` · ${entity.era} era` : ''}
                       </Text>
                     </Flex>
 
@@ -1279,17 +1401,12 @@ export default function EntityPage() {
           </Box>
 
           {/* ─── Related Entities from Same Era ─── */}
-          {(() => {
-            const siblings = getAllEntities().filter(
-              (e) => e.eraSlug === entity.eraSlug && e.slug !== entity.slug
-            )
-            if (siblings.length === 0) return null
-            return (
+          {eraSiblings.length > 0 && (
               <Box mt={4}>
                 <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
                   letterSpacing="0.15em" textTransform="uppercase" mb={3}>Also in {entity.era}</Text>
                 <Flex gap={3} flexWrap="wrap">
-                  {siblings.slice(0, 8).map((s) => (
+                  {eraSiblings.map((s) => (
                     <RouterLink key={s.slug} to={`/entity/${s.slug}`} style={{ textDecoration: 'none' }}>
                       <Box bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="lg"
                         p={4} minW="200px" maxW="260px" cursor="pointer" transition="all 0.2s"
@@ -1311,8 +1428,7 @@ export default function EntityPage() {
                   ))}
                 </Flex>
               </Box>
-            )
-          })()}
+          )}
         </Box>
 
         {/* RIGHT: Jump/Teleport Rail */}

@@ -8,7 +8,7 @@
  * - Keyboard navigation (arrow keys, Enter, Escape)
  * - Click-away dismiss
  */
-import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react'
+import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Box, Flex, Text, Input } from '@chakra-ui/react'
 import {
@@ -16,7 +16,8 @@ import {
   Users, Landmark, MapPin, Layers, Clock, FileText, Shield, Zap,
 } from 'lucide-react'
 import type { Entity } from '../data/entityTypes'
-import { CLASSES, DIVISIONS, CLASS_COLORS, parseCallNumber } from '../constants/callNumbers'
+import { CLASSES, DIVISIONS, CLASS_COLORS } from '../constants/callNumbers'
+import { searchEntities } from '../services/entityService'
 
 /* ── Design tokens ── */
 const CARD_BG = '#F5F4F0'
@@ -99,7 +100,7 @@ const FRAMEWORKS = [
   'INNOVATION_AND_TECHNOLOGY',
 ]
 
-const MAX_AUTOCOMPLETE = 8
+const MAX_AUTOCOMPLETE = 25
 
 /* ── Helper: score a search hit ── */
 function scoreMatch(entity: Entity, query: string): number {
@@ -134,31 +135,48 @@ export interface ActiveFilters {
 }
 
 interface AdvancedSearchProps {
-  allEntities: Entity[]
   filters: ActiveFilters
   onFiltersChange: (f: ActiveFilters) => void
 }
 
 /* ── Component ── */
-export default function AdvancedSearch({ allEntities, filters, onFiltersChange }: AdvancedSearchProps) {
+export default function AdvancedSearch({ filters, onFiltersChange }: AdvancedSearchProps) {
   const navigate = useNavigate()
   const inputRef = useRef<HTMLInputElement>(null)
   const dropdownRef = useRef<HTMLDivElement>(null)
   const [showDropdown, setShowDropdown] = useState(false)
   const [highlightIdx, setHighlightIdx] = useState(-1)
   const [showFilters, setShowFilters] = useState(true)
+  const [suggestions, setSuggestions] = useState<Entity[]>([])
+  const [searchDone, setSearchDone] = useState(false)
+  const [searching, setSearching] = useState(false)
 
-  // Autocomplete results
-  const suggestions = useMemo(() => {
+  // Debounced async backend search for autocomplete
+  useEffect(() => {
     const q = filters.search.trim()
-    if (!q || q.length < 2) return []
-    return allEntities
-      .map(e => ({ entity: e, score: scoreMatch(e, q) }))
-      .filter(r => r.score > 0)
-      .sort((a, b) => b.score - a.score)
-      .slice(0, MAX_AUTOCOMPLETE)
-      .map(r => r.entity)
-  }, [allEntities, filters.search])
+    if (!q || q.length < 2) {
+      setSuggestions([])
+      setSearching(false)
+      setSearchDone(false)
+      return
+    }
+    setSearching(true)
+    setSearchDone(false)
+    const timer = setTimeout(async () => {
+      try {
+        const results = await searchEntities(q, MAX_AUTOCOMPLETE)
+        // Re-rank with client-side scoreMatch for the typeahead
+        results.sort((a, b) => scoreMatch(b, q) - scoreMatch(a, q))
+        setSuggestions(results)
+      } catch {
+        setSuggestions([])
+      } finally {
+        setSearching(false)
+        setSearchDone(true)
+      }
+    }, 200)
+    return () => clearTimeout(timer)
+  }, [filters.search])
 
   // Active filter count (not counting search)
   const activeFilterCount = filters.eras.length + filters.labels.length
@@ -278,7 +296,7 @@ export default function AdvancedSearch({ allEntities, filters, onFiltersChange }
           )}
 
           {/* Autocomplete Dropdown */}
-          {showDropdown && suggestions.length > 0 && (
+          {showDropdown && (searching || suggestions.length > 0 || searchDone) && (
             <Box ref={dropdownRef}
               position="absolute" top="calc(100% + 4px)" left={0} right={0}
               bg="white" border="1px solid" borderColor={GOLD}
@@ -288,7 +306,11 @@ export default function AdvancedSearch({ allEntities, filters, onFiltersChange }
                 <Text fontSize="10px" fontWeight={700} color={LIGHT_MUTED}
                   fontFamily="'JetBrains Mono', monospace" textTransform="uppercase"
                   letterSpacing="0.05em">
-                  {suggestions.length} result{suggestions.length !== 1 ? 's' : ''}
+                  {searching
+                    ? 'Searching 400K+ entities…'
+                    : suggestions.length === 0
+                      ? 'No matches found — try different keywords'
+                      : `${suggestions.length} result${suggestions.length !== 1 ? 's' : ''} · sorted by importance`}
                 </Text>
               </Box>
               {suggestions.map((entity, idx) => {
