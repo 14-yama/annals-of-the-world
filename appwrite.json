@@ -1,66 +1,66 @@
 {
-  "projectId": "69cc45e3000d587ea5e6",
-  "projectName": "Annals of the World",
-  "functions": [
-    {
-      "$id": "audit-completeness",
-      "name": "Audit Completeness",
-      "runtime": "node-18.0",
-      "execute": [],
-      "events": [],
-      "schedule": "0 2 * * *",
-      "timeout": 900,
-      "enabled": true,
-      "entrypoint": "src/main.js",
-      "path": "functions/audit-completeness"
-    },
-    {
-      "$id": "audit-orphans",
-      "name": "Audit Orphans",
-      "runtime": "node-18.0",
-      "execute": [],
-      "events": [],
-      "schedule": "0 3 * * *",
-      "timeout": 900,
-      "enabled": true,
-      "entrypoint": "src/main.js",
-      "path": "functions/audit-orphans"
-    },
-    {
-      "$id": "audit-duplicates",
-      "name": "Audit Duplicates",
-      "runtime": "node-18.0",
-      "execute": [],
-      "events": [],
-      "schedule": "0 4 * * 0",
-      "timeout": 900,
-      "enabled": true,
-      "entrypoint": "src/main.js",
-      "path": "functions/audit-duplicates"
-    },
-    {
-      "$id": "audit-consistency",
-      "name": "Audit Consistency",
-      "runtime": "node-18.0",
-      "execute": [],
-      "events": [],
-      "schedule": "0 5 * * *",
-      "timeout": 900,
-      "enabled": true,
-      "entrypoint": "src/main.js",
-      "path": "functions/audit-consistency"
-    },
-    {
-      "$id": "backup-export",
-      "name": "Backup Export",
-      "runtime": "node-18.0",
-      "execute": [],
-      "events": [],
-      "schedule": "0 0 * * 0",
-      "timeout": 900,
-      "enabled": true,
-      "entrypoint": "src/main.js",
-      "path": "functions/backup-export"
-    }
-  ]
+    "projectId": "69cc45e3000d587ea5e6",
+    "projectName": "Annals of the World",
+    "functions": [
+        {
+            "$id": "audit-completeness",
+            "name": "Audit Completeness",
+            "runtime": "node-18.0",
+            "execute": [],
+            "events": [],
+            "schedule": "0 2 * * *",
+            "timeout": 900,
+            "enabled": true,
+            "entrypoint": "src/main.js",
+            "path": "functions/audit-completeness"
+        },
+        {
+            "$id": "audit-orphans",
+            "name": "Audit Orphans",
+            "runtime": "node-18.0",
+            "execute": [],
+            "events": [],
+            "schedule": "0 3 * * *",
+            "timeout": 900,
+            "enabled": true,
+            "entrypoint": "src/main.js",
+            "path": "functions/audit-orphans"
+        },
+        {
+            "$id": "audit-duplicates",
+            "name": "Audit Duplicates",
+            "runtime": "node-18.0",
+            "execute": [],
+            "events": [],
+            "schedule": "0 4 * * 0",
+            "timeout": 900,
+            "enabled": true,
+            "entrypoint": "src/main.js",
+            "path": "functions/audit-duplicates"
+        },
+        {
+            "$id": "audit-consistency",
+            "name": "Audit Consistency",
+            "runtime": "node-18.0",
+            "execute": [],
+            "events": [],
+            "schedule": "0 5 * * *",
+            "timeout": 900,
+            "enabled": true,
+            "entrypoint": "src/main.js",
+            "path": "functions/audit-consistency"
+        },
+        {
+            "$id": "backup-export",
+            "name": "Backup Export",
+            "runtime": "node-18.0",
+            "execute": [],
+            "events": [],
+            "schedule": "0 0 * * 0",
+            "timeout": 900,
+            "enabled": true,
+            "entrypoint": "src/main.js",
+            "path": "functions/backup-export"
+        }
+    ]
 }

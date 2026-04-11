@@ -3,6 +3,7 @@ import { Box, SimpleGrid, Text, Flex, Heading } from '@chakra-ui/react'
 import { Globe, Mountain, Wheat, Ship, Users, TrendingUp } from 'lucide-react'
 import { StatCard, InsightCard, DataTable, SectionHeading } from '../components/DataCards'
 import Breadcrumb from '../components/Breadcrumb'
+import { useGlobalCounts } from '../hooks/useGlobalCounts'
 
 /* ── Static data — Americas (skeleton, expanding with research) ── */
 
@@ -148,6 +149,8 @@ const REGIONAL_HIGHLIGHTS = [
 ]
 
 export default function AmericasDashboard() {
+  const { byContinent } = useGlobalCounts()
+  const americasNodes = (byContinent['North America'] || 0) + (byContinent['South America'] || 0)
   return (
     <Box>
       <Breadcrumb items={[{ label: 'Continents' }, { label: 'Americas' }]} />
@@ -209,7 +212,7 @@ export default function AmericasDashboard() {
       {/* Knowledge Graph Coverage */}
       <SectionHeading
         title="Knowledge Graph Coverage"
-        subtitle="1,870 nodes across 35 nations — 6 eras of American history"
+        subtitle={`${americasNodes.toLocaleString()} nodes across 35 nations — 6 eras of American history`}
       />
       <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} gap={4} mb={5}>
         <StatCard value="1,305" label="Events" detail="Wars, revolutions, discoveries" color="#C5963A" />
@@ -217,7 +220,7 @@ export default function AmericasDashboard() {
         <StatCard value="132" label="People" detail="Presidents, liberators, activists" color="#3A7D44" />
         <StatCard value="109" label="Texts" detail="Constitutions, treaties, declarations" color="#5A2222" />
         <StatCard value="87" label="Institutions" detail="Empires, republics, organizations" color="#8B3A3A" />
-        <StatCard value="1,870" label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
+        <StatCard value={americasNodes.toLocaleString()} label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
       </SimpleGrid>
       <DataTable
         title="Top Countries by Knowledge Graph Nodes"

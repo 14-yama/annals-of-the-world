@@ -3,6 +3,7 @@ import { Box, SimpleGrid, Text, Flex, Heading } from '@chakra-ui/react'
 import { Globe, Waves, Sun, TreePine, Compass, Anchor } from 'lucide-react'
 import { StatCard, InsightCard, DataTable, SectionHeading } from '../components/DataCards'
 import Breadcrumb from '../components/Breadcrumb'
+import { useGlobalCounts } from '../hooks/useGlobalCounts'
 
 /* ── Static data — Oceania (skeleton, expanding with research) ── */
 
@@ -151,6 +152,8 @@ const REGIONAL_HIGHLIGHTS = [
 ]
 
 export default function OceaniaDashboard() {
+  const { byContinent } = useGlobalCounts()
+  const oceaniaNodes = byContinent['Oceania'] || 0
   return (
     <Box>
       <Breadcrumb items={[{ label: 'Continents' }, { label: 'Oceania' }]} />
@@ -213,7 +216,7 @@ export default function OceaniaDashboard() {
       {/* Knowledge Graph Coverage */}
       <SectionHeading
         title="Knowledge Graph Coverage"
-        subtitle="367 nodes across 14 nations — 6 eras of Pacific history"
+        subtitle={`${oceaniaNodes.toLocaleString()} nodes across 14 nations — 6 eras of Pacific history`}
       />
       <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} gap={4} mb={5}>
         <StatCard value="325" label="Events" detail="Migrations, colonization, independence" color="#C5963A" />
@@ -221,7 +224,7 @@ export default function OceaniaDashboard() {
         <StatCard value="11" label="People" detail="Leaders, navigators, reformers" color="#3A7D44" />
         <StatCard value="6" label="Institutions" detail="Kingdoms, parliaments, organizations" color="#8B3A3A" />
         <StatCard value="2" label="Texts" detail="Treaties, constitutions" color="#5A2222" />
-        <StatCard value="367" label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
+        <StatCard value={oceaniaNodes.toLocaleString()} label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
       </SimpleGrid>
       <DataTable
         title="Top Countries by Knowledge Graph Nodes"

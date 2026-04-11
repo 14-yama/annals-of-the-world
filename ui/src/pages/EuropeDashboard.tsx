@@ -3,6 +3,7 @@ import { Box, SimpleGrid, Text, Flex, Heading } from '@chakra-ui/react'
 import { Globe, Landmark, Scale, Lightbulb, Palette, TrendingUp } from 'lucide-react'
 import { StatCard, InsightCard, DataTable, SectionHeading } from '../components/DataCards'
 import Breadcrumb from '../components/Breadcrumb'
+import { useGlobalCounts } from '../hooks/useGlobalCounts'
 
 /* ── Static data — Europe (skeleton, expanding with research) ── */
 
@@ -148,6 +149,8 @@ const REGIONAL_HIGHLIGHTS = [
 ]
 
 export default function EuropeDashboard() {
+  const { byContinent } = useGlobalCounts()
+  const europeNodes = byContinent['Europe'] || 0
   return (
     <Box>
       <Breadcrumb items={[{ label: 'Continents' }, { label: 'Europe' }]} />
@@ -210,7 +213,7 @@ export default function EuropeDashboard() {
       {/* Knowledge Graph Coverage */}
       <SectionHeading
         title="Knowledge Graph Coverage"
-        subtitle="2,062 nodes across 45 nations — 6 eras of European history"
+        subtitle={`${europeNodes.toLocaleString()} nodes across 45 nations — 6 eras of European history`}
       />
       <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} gap={4} mb={5}>
         <StatCard value="1,144" label="Events" detail="Wars, elections, discoveries" color="#C5963A" />
@@ -218,7 +221,7 @@ export default function EuropeDashboard() {
         <StatCard value="220" label="Institutions" detail="Empires, parliaments, churches" color="#8B3A3A" />
         <StatCard value="212" label="People" detail="Monarchs, philosophers, scientists" color="#3A7D44" />
         <StatCard value="195" label="Texts" detail="Treaties, constitutions, codes" color="#5A2222" />
-        <StatCard value="2,062" label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
+        <StatCard value={europeNodes.toLocaleString()} label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
       </SimpleGrid>
       <DataTable
         title="Top Countries by Knowledge Graph Nodes"

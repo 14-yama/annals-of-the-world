@@ -3,6 +3,7 @@ import { Box, SimpleGrid, Text, Flex, Heading } from '@chakra-ui/react'
 import { Globe, Users, Heart, Shield, Landmark, TrendingUp } from 'lucide-react'
 import { StatCard, InsightCard, DataTable, SectionHeading } from '../components/DataCards'
 import Breadcrumb from '../components/Breadcrumb'
+import { useGlobalCounts } from '../hooks/useGlobalCounts'
 
 /* ── Static data drawn from analyses/Africa_Continent_Analysis.md ── */
 
@@ -125,6 +126,8 @@ const REGIONAL_HIGHLIGHTS = [
 ]
 
 export default function AfricaDashboard() {
+  const { byContinent } = useGlobalCounts()
+  const africaNodes = byContinent['Africa'] || 0
   return (
     <Box>
       <Breadcrumb items={[{ label: 'Continents' }, { label: 'Africa' }]} />
@@ -223,7 +226,7 @@ export default function AfricaDashboard() {
       {/* Knowledge Graph Coverage */}
       <SectionHeading
         title="Knowledge Graph Coverage"
-        subtitle="1,745 nodes across 55 nations — 6 eras of African history"
+        subtitle={`${africaNodes.toLocaleString()} nodes across 55 nations — 6 eras of African history`}
       />
       <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} gap={4} mb={5}>
         <StatCard value="1,416" label="Events" detail="Wars, treaties, discoveries" color="#C5963A" />
@@ -231,7 +234,7 @@ export default function AfricaDashboard() {
         <StatCard value="108" label="People" detail="Leaders, scholars, reformers" color="#3A7D44" />
         <StatCard value="71" label="Institutions" detail="Kingdoms, courts, organizations" color="#8B3A3A" />
         <StatCard value="30" label="Texts" detail="Charters, treaties, constitutions" color="#5A2222" />
-        <StatCard value="1,745" label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
+        <StatCard value={africaNodes.toLocaleString()} label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
       </SimpleGrid>
       <DataTable
         title="Top Countries by Knowledge Graph Nodes"

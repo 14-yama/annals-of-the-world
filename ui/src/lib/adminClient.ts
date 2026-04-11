@@ -18,14 +18,66 @@ const DATABASE_ID = (import.meta.env.VITE_APPWRITE_DATABASE_ID as string) || 'an
 
 const SESSION_ID = crypto.randomUUID()
 
-/** Get or prompt for curator name (stored in localStorage) */
+/** The head curator's permanent handle */
+export const HEAD_CURATOR = '館長 -kanchō'
+
+export type CuratorRole = 'head' | 'curator' | 'viewer'
+
+export interface CuratorProfile {
+  name: string
+  role: CuratorRole
+  addedBy: string
+  addedAt: string
+}
+
+/**
+ * Load authorised curators list from localStorage.
+ * Head curator is always included.
+ */
+export function getCurators(): CuratorProfile[] {
+  const stored = localStorage.getItem('curator_roster')
+  const roster: CuratorProfile[] = stored ? JSON.parse(stored) : []
+  // Ensure head curator is always present
+  if (!roster.some(c => c.name === HEAD_CURATOR)) {
+    roster.unshift({ name: HEAD_CURATOR, role: 'head', addedBy: 'system', addedAt: new Date().toISOString() })
+    localStorage.setItem('curator_roster', JSON.stringify(roster))
+  }
+  return roster
+}
+
+/** Add a new curator (only head curator can do this) */
+export function addCurator(name: string, role: CuratorRole = 'curator'): boolean {
+  const current = getCuratorId()
+  if (current !== HEAD_CURATOR) {
+    console.warn('Only the head curator can add new curators')
+    return false
+  }
+  const roster = getCurators()
+  if (roster.some(c => c.name === name)) return false // already exists
+  roster.push({ name, role, addedBy: current, addedAt: new Date().toISOString() })
+  localStorage.setItem('curator_roster', JSON.stringify(roster))
+  return true
+}
+
+/** Remove a curator (only head curator can do this) */
+export function removeCurator(name: string): boolean {
+  if (name === HEAD_CURATOR) return false // cannot remove head curator
+  const current = getCuratorId()
+  if (current !== HEAD_CURATOR) return false
+  const roster = getCurators().filter(c => c.name !== name)
+  localStorage.setItem('curator_roster', JSON.stringify(roster))
+  return true
+}
+
+/** Get or prompt for curator name (head curator is default) */
 export function getCuratorId(): string {
   let id = localStorage.getItem('curator_id')
   if (!id) {
-    id = window.prompt('Enter your curator name (for audit trail):')?.trim() ?? 'anonymous'
-    if (id) localStorage.setItem('curator_id', id)
+    // Default to head curator on first use
+    id = HEAD_CURATOR
+    localStorage.setItem('curator_id', id)
   }
-  return id || 'anonymous'
+  return id
 }
 
 /** Set curator name programmatically */

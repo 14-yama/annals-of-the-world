@@ -2,24 +2,16 @@
  * CorpusHub — landing page listing all corpus collections.
  * Fetches entity counts from the Appwrite backend.
  */
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 import { Box, Flex, Text, SimpleGrid, Heading, Spinner } from '@chakra-ui/react'
 import { Library, ChevronRight } from 'lucide-react'
 import Breadcrumb from '../components/Breadcrumb'
 import { CORPUS_META } from '../constants/corpusMeta'
-import { fetchTotalCount } from '../services/entityService'
+import { useGlobalCounts } from '../hooks/useGlobalCounts'
 
 export default function CorpusHub() {
-  const [totalEntities, setTotalEntities] = useState(0)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    fetchTotalCount().then(n => {
-      setTotalEntities(n)
-      setLoading(false)
-    })
-  }, [])
+  const { total: totalEntities, loading } = useGlobalCounts()
 
   return (
     <Box>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Outlet, Link as RouterLink, useLocation, useNavigate } from 'react-router-dom'
 import { Box, Flex, Text, Stack, IconButton, Input } from '@chakra-ui/react'
 import type { CSSProperties } from 'react'
+import { useGlobalCounts } from '../hooks/useGlobalCounts'
 import {
   BookOpen,
   Globe,
@@ -38,8 +39,6 @@ import {
   AlertTriangle,
   ClipboardList,
 } from 'lucide-react'
-import { Query } from 'appwrite'
-import { databases, DATABASE_ID, COLLECTIONS } from '../lib/appwrite'
 
 /* ── Top-level domain navigation (horizontal) ── */
 const TOP_NAV = [
@@ -219,7 +218,7 @@ export default function Layout() {
   const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(true)
   const [globalSearch, setGlobalSearch] = useState('')
-  const [catalogCount, setCatalogCount] = useState<number>(0)
+  const { total: catalogCount } = useGlobalCounts()
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({
     browse: true,
     continents: true,
@@ -231,19 +230,6 @@ export default function Layout() {
   const toggleSection = (id: string) => {
     setCollapsed(prev => ({ ...prev, [id]: !prev[id] }))
   }
-
-  /* Fetch live entity count from Appwrite */
-  useEffect(() => {
-    let cancelled = false
-    async function fetchCount() {
-      try {
-        const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [Query.limit(1)])
-        if (!cancelled && res.total > 0) setCatalogCount(res.total)
-      } catch { /* keep static fallback */ }
-    }
-    fetchCount()
-    return () => { cancelled = true }
-  }, [])
 
   /** Check if any item in a section is active (to auto-expand) */
   const isSectionActive = (section: NavSection) => {

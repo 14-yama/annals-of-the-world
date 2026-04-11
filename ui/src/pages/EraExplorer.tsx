@@ -4,6 +4,7 @@ import { Box, SimpleGrid, Text, Flex, Heading } from '@chakra-ui/react'
 import { Orbit, Clock, Globe, Zap, ChevronRight } from 'lucide-react'
 import { SectionHeading } from '../components/DataCards'
 import Breadcrumb from '../components/Breadcrumb'
+import { useGlobalCounts } from '../hooks/useGlobalCounts'
 
 const ERAS = [
   {
@@ -69,6 +70,7 @@ const REGIONS = [
 ]
 
 export default function EraExplorer() {
+  const { total } = useGlobalCounts()
   const [selectedEra, setSelectedEra] = useState<string | null>(null)
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null)
   const navigate = useNavigate()
@@ -247,7 +249,7 @@ export default function EraExplorer() {
         <Text fontSize="sm" color="#524E44" mt={2} lineHeight={1.6}>
           Select a time period and optionally a region, then enter the portal to explore
           civilizations, timeline events, stock photos, and key facts from that era — drawn
-          from our Neo4j knowledge graph of 199 countries and 1,000+ nodes.
+          from our Neo4j knowledge graph of 199 countries and {total ? total.toLocaleString() : '40,000+'} nodes.
         </Text>
       </Box>
     </Box>

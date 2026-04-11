@@ -3,6 +3,7 @@ import { Box, SimpleGrid, Text, Flex, Heading, Input } from '@chakra-ui/react'
 import { Globe, TrendingUp, Zap, Clock, Shield, Search } from 'lucide-react'
 import { StatCard, InsightCard, DataTable, SectionHeading } from '../components/DataCards'
 import Breadcrumb from '../components/Breadcrumb'
+import { useGlobalCounts } from '../hooks/useGlobalCounts'
 
 /* ── Static data drawn from analyses/Asia_Continent_Analysis.md ── */
 
@@ -195,6 +196,8 @@ const FIVE_ASIAS = [
 ]
 
 export default function AsiaDashboard() {
+  const { byContinent } = useGlobalCounts()
+  const asiaNodes = byContinent['Asia'] || 0
   const [eventFilter, setEventFilter] = useState('')
 
   const filteredCategories = EVENT_CATEGORIES.filter(
@@ -402,7 +405,7 @@ export default function AsiaDashboard() {
       {/* Knowledge Graph Coverage */}
       <SectionHeading
         title="Knowledge Graph Coverage"
-        subtitle="2,317 nodes across 50 nations — 6 eras of Asian history"
+        subtitle={`${asiaNodes.toLocaleString()} nodes across 50 nations — 6 eras of Asian history`}
       />
       <SimpleGrid columns={{ base: 2, md: 3, lg: 6 }} gap={4} mb={5}>
         <StatCard value="1,279" label="Events" detail="Wars, dynasties, discoveries" color="#C5963A" />
@@ -410,7 +413,7 @@ export default function AsiaDashboard() {
         <StatCard value="290" label="Movements" detail="Buddhism, Silk Road, nationalism" color="#6B3FA0" />
         <StatCard value="272" label="Institutions" detail="Empires, caliphates, academies" color="#8B3A3A" />
         <StatCard value="110" label="Texts" detail="Sutras, treaties, constitutions" color="#5A2222" />
-        <StatCard value="2,317" label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
+        <StatCard value={asiaNodes.toLocaleString()} label="Total Nodes" detail="Across all 6 eras" color="#D4AF37" />
       </SimpleGrid>
       <DataTable
         title="Top Countries by Knowledge Graph Nodes"

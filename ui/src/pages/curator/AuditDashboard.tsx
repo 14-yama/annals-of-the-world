@@ -23,6 +23,7 @@ import { Query, type Models } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../../lib/appwrite'
 import { StatCard, SectionHeading } from '../../components/DataCards'
 import { CLASSES, DIVISIONS } from '../../constants/callNumbers'
+import { useGlobalCounts } from '../../hooks/useGlobalCounts'
 
 /* ─── Constants ─── */
 
@@ -69,15 +70,23 @@ interface CompletenessRow {
 /* ─── Main Component ─── */
 
 export default function AuditDashboard() {
-  const [stats, setStats] = useState<Stats | null>(null)
+  const globalCounts = useGlobalCounts()
   const [sampleRows, setSampleRows] = useState<CompletenessRow[]>([])
   const [loading, setLoading] = useState(true)
   const [filter, setFilter] = useState<'all' | 'critical' | 'quickwin' | 'orphan' | 'topimportance'>('all')
   const [searchQuery, setSearchQuery] = useState('')
   const [searchResults, setSearchResults] = useState<CompletenessRow[]>([])
   const [searching, setSearching] = useState(false)
-  const [classCounts, setClassCounts] = useState<Record<number, number>>({})
   const [topEntities, setTopEntities] = useState<CompletenessRow[]>([])
+
+  // Use global counts for stats
+  const stats: Stats | null = globalCounts.total > 0 ? {
+    total: globalCounts.total,
+    byLabel: globalCounts.byLabel,
+    byEra: globalCounts.byEra,
+    byContinent: globalCounts.byContinent,
+  } : null
+  const classCounts = globalCounts.byClass
 
   useEffect(() => {
     loadDashboard()
@@ -86,39 +95,15 @@ export default function AuditDashboard() {
   async function loadDashboard() {
     setLoading(true)
     try {
-      // Parallel: counts + sample for completeness
-      const [labelCounts, eraCounts, continentCounts, totalRes, sample, topImportance] = await Promise.all([
-        countByField('label', LABELS),
-        countByField('era', ERAS),
-        countByField('continent', CONTINENTS),
-        databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [Query.limit(1)]),
+      // Fetch sample for completeness analysis + top importance entities
+      const [sample, topImportance] = await Promise.all([
         databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [Query.limit(200)]),
         databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
           Query.orderDesc('importanceScore'), Query.limit(30),
         ]),
       ])
-      setStats({
-        total: totalRes.total,
-        byLabel: labelCounts,
-        byEra: eraCounts,
-        byContinent: continentCounts,
-      })
       setSampleRows(sample.documents.map(analyzeDoc))
       setTopEntities(topImportance.documents.map(analyzeDoc))
-
-      // Load class-level counts in background
-      const cc: Record<number, number> = {}
-      await Promise.all(
-        CLASSES.map(async (cls) => {
-          try {
-            const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
-              Query.startsWith('callNumber', `${cls.code}`), Query.limit(1),
-            ])
-            cc[cls.code] = res.total
-          } catch { cc[cls.code] = 0 }
-        }),
-      )
-      setClassCounts(cc)
     } catch (err) {
       console.error('Audit load failed:', err)
     }
@@ -629,21 +614,6 @@ function NavCard({ to, icon: Icon, label, desc, color }: {
 }
 
 /* ─── Helpers ─── */
-
-async function countByField(field: string, values: string[]): Promise<Record<string, number>> {
-  const counts: Record<string, number> = {}
-  await Promise.all(
-    values.map(async (val) => {
-      try {
-        const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
-          Query.equal(field, val), Query.limit(1),
-        ])
-        counts[val] = res.total
-      } catch { counts[val] = 0 }
-    }),
-  )
-  return counts
-}
 
 function analyzeDoc(doc: Models.Document): CompletenessRow {
   const details = doc.detailsJson ? JSON.parse(doc.detailsJson as string) : {}

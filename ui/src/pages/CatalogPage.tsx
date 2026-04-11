@@ -7,7 +7,8 @@ import {
 import type { Entity } from '../data/entityTypes'
 import { CLASS_COLORS, DIVISIONS, parseCallNumber } from '../constants/callNumbers'
 import AdvancedSearch, { type ActiveFilters } from '../components/AdvancedSearch'
-import { fetchEntitiesWithTotal, fetchLabelCounts, fetchTotalCount, fetchEntity } from '../services/entityService'
+import { fetchEntitiesWithTotal, fetchEntity } from '../services/entityService'
+import { useGlobalCounts } from '../hooks/useGlobalCounts'
 
 /* ── Era Division date ranges (from callNumbers.ts class 9) ── */
 const ERA_DIVISION_RANGES: Record<string, { start: number; end: number; broadEra: string }> = {
@@ -101,8 +102,7 @@ export default function CatalogPage() {
   // Backend data state
   const [entities, setEntities] = useState<Entity[]>([])
   const [totalCount, setTotalCount] = useState<number>(0)
-  const [backendTotal, setBackendTotal] = useState<number>(0)
-  const [labelCounts, setLabelCounts] = useState<Record<string, number>>({})
+  const { total: backendTotal, byLabel: labelCounts } = useGlobalCounts()
   const [loading, setLoading] = useState(true)
   const [loadingMore, setLoadingMore] = useState(false)
 
@@ -146,20 +146,6 @@ export default function CatalogPage() {
       divisions: searchParams.get('division') ? [searchParams.get('division')!] : [],
     })
   }, [searchParams])
-
-  // Fetch backend total + label counts on mount
-  useEffect(() => {
-    let cancelled = false
-    async function fetchMeta() {
-      const [total, counts] = await Promise.all([fetchTotalCount(), fetchLabelCounts()])
-      if (!cancelled) {
-        setBackendTotal(total)
-        setLabelCounts(counts)
-      }
-    }
-    fetchMeta()
-    return () => { cancelled = true }
-  }, [])
 
   // Fetch entities from backend when filters change
   useEffect(() => {

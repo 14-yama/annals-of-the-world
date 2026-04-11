@@ -16,6 +16,7 @@ import {
 import { Query } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../../lib/appwrite'
 import { SectionHeading } from '../../components/DataCards'
+import { useGlobalCounts } from '../../hooks/useGlobalCounts'
 
 /* ─── Division Definitions ─── */
 
@@ -85,7 +86,8 @@ const GROUP_ORDER = ['Political', 'Military', 'Scientific', 'Religious', 'Creati
 
 export default function PeopleHub() {
   const [counts, setCounts] = useState<Record<string, number>>({})
-  const [totalPeople, setTotalPeople] = useState(0)
+  const { byLabel } = useGlobalCounts()
+  const totalPeople = byLabel['Person'] || 0
   const [loading, setLoading] = useState(true)
 
   useEffect(() => { loadCounts() }, [])
@@ -93,12 +95,6 @@ export default function PeopleHub() {
   async function loadCounts() {
     setLoading(true)
     try {
-      // Total people count
-      const totalRes = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
-        Query.equal('label', 'Person'), Query.limit(1),
-      ])
-      setTotalPeople(totalRes.total)
-
       // Count per division — batch 10 at a time
       const newCounts: Record<string, number> = {}
       for (let i = 0; i < PEOPLE_DIVISIONS.length; i += 10) {

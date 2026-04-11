@@ -1,11 +1,10 @@
 /* ─── Curator Page — Annals of the World ─── */
 /* Personal chronicle: the magnitude of the project, comparison to Ussher, academic equivalency */
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Box, Flex, Heading, Text, SimpleGrid, Spinner } from '@chakra-ui/react'
 import { SectionHeading, StatCard } from '../components/DataCards'
 import Breadcrumb from '../components/Breadcrumb'
-import { Query } from 'appwrite'
-import { databases, DATABASE_ID, COLLECTIONS } from '../lib/appwrite'
+import { useGlobalCounts } from '../hooks/useGlobalCounts'
 import {
   BookOpen, Brain, Globe2, Clock, Database, Code2, Network,
   GraduationCap, Scroll, Target, Layers, Microscope,
@@ -328,59 +327,13 @@ const SCHOLARLY_IMPACT = [
 ]
 
 export default function Curator() {
-  const [totalNodes, setTotalNodes] = useState<number | null>(null)
-  const [labelCounts, setLabelCounts] = useState<{ label: string; count: number; color: string }[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
+  const { total: totalNodes, byLabel, loading } = useGlobalCounts()
 
-  useEffect(() => {
-    let cancelled = false
+  const labelCounts = LABEL_ORDER
+    .map(label => ({ label, count: byLabel[label] || 0, color: LABEL_COLORS[label] || '#718096' }))
+    .sort((a, b) => b.count - a.count)
 
-    async function fetchAccurateCount(label: string): Promise<number> {
-      const first = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
-        Query.equal('label', label), Query.limit(1),
-      ])
-      if (first.total < 5000) return first.total
-      // Appwrite caps total at 5000 — paginate for real count
-      let count = 0
-      let lastId: string | undefined
-      while (true) {
-        const queries: string[] = [
-          Query.equal('label', label),
-          Query.limit(5000),
-          Query.select(['$id']),
-        ]
-        if (lastId) queries.push(Query.cursorAfter(lastId))
-        const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, queries)
-        count += res.documents.length
-        if (res.documents.length < 5000) break
-        lastId = res.documents[res.documents.length - 1].$id
-      }
-      return count
-    }
-
-    async function fetchStats() {
-      try {
-        const results = await Promise.all(
-          LABEL_ORDER.map(async (lbl) => {
-            const count = await fetchAccurateCount(lbl)
-            return { label: lbl, count, color: LABEL_COLORS[lbl] || '#718096' }
-          })
-        )
-        if (cancelled) return
-        const sorted = results.sort((a, b) => b.count - a.count)
-        setLabelCounts(sorted)
-        setTotalNodes(sorted.reduce((sum, r) => sum + r.count, 0))
-      } catch (err) {
-        if (!cancelled) setError(err instanceof Error ? err.message : 'Failed to fetch stats')
-      } finally {
-        if (!cancelled) setLoading(false)
-      }
-    }
-
-    fetchStats()
-    return () => { cancelled = true }
-  }, [])
+  const error: string | null = null
 
   const progressPct = totalNodes ? ((totalNodes / TARGET_NODES) * 100).toFixed(2) : '0.00'
   const maxLabelCount = labelCounts.length ? Math.max(...labelCounts.map(l => l.count)) : 6000
