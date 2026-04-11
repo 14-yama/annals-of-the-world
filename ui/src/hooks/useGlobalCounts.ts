@@ -12,7 +12,7 @@
  */
 import { useEffect, useState, useCallback } from 'react'
 import { databases, functions, DATABASE_ID, COLLECTIONS } from '../lib/appwrite'
-import { ExecutionMethod } from 'appwrite'
+import { ExecutionMethod, Query } from 'appwrite'
 
 /* ─── Types ─── */
 
@@ -57,16 +57,19 @@ const listeners = new Set<() => void>()
 function notify() { listeners.forEach(fn => fn()) }
 
 /**
- * Read pre-computed stats from the stats_cache collection.
- * Single document read — ~50ms.
+ * Read the most recent pre-computed stats row from stats_cache.
+ * Queries by updatedAt descending, takes the latest row.
  */
 async function fetchFromStatsCache(): Promise<boolean> {
   try {
-    const doc = await databases.getDocument(
+    const result = await databases.listDocuments(
       DATABASE_ID,
       COLLECTIONS.STATS_CACHE,
-      'global'
+      [Query.orderDesc('updatedAt'), Query.limit(1)]
     )
+
+    if (result.documents.length === 0) return false
+    const doc = result.documents[0]
 
     cache.total = doc.total || 0
     cache.byLabel = typeof doc.byLabel === 'string' ? JSON.parse(doc.byLabel) : (doc.byLabel || {})

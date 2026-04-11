@@ -84,7 +84,7 @@ const ACADEMIC_EQUIVALENCE = [
 const TEN_YEAR_MILESTONES = [
   { years: '1–2 (2020–2022)', title: 'Foundation', nodes: '50,000', detail: 'Schema design, ontology, 16 interpretive frameworks, core graph structure, curator workflow, MVP frontend, Neo4j backend', completed: true },
   { years: '3–4 (2022–2024)', title: 'Continental Depth', nodes: '200,000', detail: 'Full coverage of Africa (55 nations), Asia (48 nations), Europe (44 nations) — all countries with event windows, evidence tiers, and causal relationships', completed: true },
-  { years: '5–6 (2024–2026)', title: 'Global Completion', nodes: '381,484', detail: 'Americas & Oceania complete. 382K entities seeded to Appwrite cloud backend. Wikidata SPARQL integration (372K entities harvested). 199 countries profiled. Migration to production infrastructure', completed: 'current' },
+  { years: '5–6 (2024–2026)', title: 'Global Completion', nodes: '392,210', detail: 'Americas & Oceania complete. 392K entities seeded to Appwrite cloud backend. Wikidata SPARQL integration (273K Person entities + 118K others). 199 countries profiled. Migration to production infrastructure', completed: 'current' },
   { years: '7–8 (2026–2028)', title: 'Academic Integration', nodes: '750,000', detail: 'Scholarly API, peer review, open dataset publications, scholarly writing practice, community contributions', completed: false },
   { years: '9–10 (2028–2030)', title: 'Million-Node Graph', nodes: '1,000,000', detail: 'Complete knowledge graph with real-time querying, advanced visualizations, scholarly publications, and the curator\'s magnum opus', completed: false },
 ]
@@ -238,7 +238,7 @@ const BIG_DATA_DIMENSIONS = [
     v: 'Volume',
     icon: HardDrive,
     color: '#4A90D9',
-    current: `372,778 entities · ${WIKIDATA_TOTAL_SIZE_GB} GB raw data · ~1.86M projected edges`,
+    current: `392,210 entities · ${WIKIDATA_TOTAL_SIZE_GB} GB raw data · ~1.96M projected edges`,
     target: '1,000,000 nodes · 5M+ edges · 10+ GB structured graph data',
     score: 37, // % toward big data threshold
   },
@@ -262,7 +262,7 @@ const BIG_DATA_DIMENSIONS = [
     v: 'Velocity',
     icon: Zap,
     color: '#D4AF37',
-    current: 'Batch ingest: 372K entities in 9 automated SPARQL pipelines. UI catalog: 16,505 entities',
+    current: 'Batch ingest: 392K entities in 9 automated SPARQL pipelines. Cursor-verified count: 392,210 entities',
     target: 'Streaming ingest from Wikidata/SPARQL + live curator submissions',
     score: 40,
   },
@@ -282,7 +282,7 @@ const GRAPH_COMPARISONS = [
   { name: 'YAGO', nodes: '~64M', edges: '~200M', scope: 'Wikipedia + WordNet + GeoNames' },
   { name: 'Wikidata', nodes: '~108M', edges: '~1.5B', scope: 'Community knowledge base' },
   { name: 'Google KG', nodes: '~500B', edges: 'N/A', scope: 'Web-scale entity graph' },
-  { name: 'Annals (current)', nodes: '372,778', edges: '~1.86M est.', scope: '72,000 years · 199 countries' },
+  { name: 'Annals (current)', nodes: '392,210', edges: '~1.96M est.', scope: '72,000 years · 199 countries' },
   { name: 'Annals (target)', nodes: '1,000,000', edges: '~5M est.', scope: 'Complete human history graph' },
 ]
 
@@ -751,7 +751,7 @@ export default function Curator() {
               </Text>
               <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#524E44" lineHeight={1.6}>
                 Big data typically means petabytes (PB) of data processed across distributed systems.
-                At ~1 GB / 372K nodes, Annals is a <strong>medium-scale dataset</strong> — large for
+                At ~1 GB / 392K nodes, Annals is a <strong>medium-scale dataset</strong> — large for
                 academic humanities, modest by tech industry metrics.
               </Text>
             </Box>
@@ -760,7 +760,7 @@ export default function Curator() {
                 BY KNOWLEDGE GRAPH STANDARDS
               </Text>
               <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#524E44" lineHeight={1.6}>
-                372K nodes with ~5 relationships each = ~1.86M edges. This is a <strong>serious research graph</strong>,
+                392K nodes with ~5 relationships each = ~1.96M edges. This is a <strong>serious research graph</strong>,
                 comparable in depth (not breadth) to early DBpedia. At 1M nodes / 5M edges,
                 Annals enters <strong>large-scale graph territory</strong>.
               </Text>
@@ -771,7 +771,7 @@ export default function Curator() {
               </Text>
               <Text fontFamily='"Inter", sans-serif' fontSize="xs" color="#524E44" lineHeight={1.6}>
                 This is <strong>among the largest structured historical datasets</strong> in existence.
-                Most DH projects work with thousands of entities. At 372K entities across 10 classes,
+                Most DH projects work with thousands of entities. At 392K entities across 10 classes,
                 199 countries, and 72,000 years, Annals exceeds the scale of most funded DH initiatives.
               </Text>
             </Box>

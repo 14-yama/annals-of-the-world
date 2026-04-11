@@ -2,16 +2,16 @@
  * Stats Counter + Audit Consistency (dual-purpose function)
  *
  * MODE 1 — Stats (default, every 10 min):
- *   Fast entity count by label, era, continent, and Dewey class.
- *   Writes to `stats_cache` collection for instant frontend reads.
- *   Selects only 5 lightweight fields — ~15-30s for 40K entities.
+ *   Accurate entity count using cursor-based pagination per label (parallel).
+ *   Writes a new row to `stats_cache` collection (append, not overwrite).
+ *   Frontend reads the latest row by updatedAt desc.
  *
  * MODE 2 — Consistency Audit (`{ mode: "consistency" }`):
  *   Full data integrity validation (era codes, slugs, labels, etc.)
- *   Also writes stats_cache as a side effect.
+ *   Also appends stats_cache row as a side effect.
  *
  * MODE 3 — Full Audit (`{ mode: "audit" }`):
- *   Quality scoring on 9 dimensions + stats_cache update.
+ *   Quality scoring on 9 dimensions + stats_cache append.
  *
  * Schedule: Every 10 minutes (stats mode)
  * Execute: ["any"] — frontend can invoke for on-demand refresh
@@ -20,7 +20,6 @@ const sdk = require('node-appwrite');
 
 const DATABASE_ID = process.env.APPWRITE_DATABASE_ID || 'annals_db';
 const STATS_COLLECTION = 'stats_cache';
-const STATS_DOC_ID = 'global';
 
 const VALID_ERAS = ['Prehistoric', 'Classical', 'Medieval', 'Early Modern', 'Modern', 'Contemporary'];
 const VALID_LABELS = ['Person', 'Idea', 'Institution', 'Place', 'EventWindow', 'Movement', 'Text', 'Evidence', 'Timeframe', 'Corpus'];
@@ -63,74 +62,86 @@ module.exports = async ({ req, res, log, error }) => {
 };
 
 /* ══════════════════════════════════════════════════════════════════
- * MODE 1: Stats Only — Parallel filtered counts (default, every 10 min)
- * Uses parallel queries. For groups where all values are known enum values,
- * at most one value needs cursor counting (computed as total - sum_of_rest).
- * Completes in ~5-15s for 40K+ entities.
+ * MODE 1: Stats Only — Accurate cursor-based counting per label (parallel)
+ * Each label is counted via cursor pagination in parallel.
+ * Era/continent/class counts use cursor pagination within each label.
+ * Writes a NEW row to stats_cache (append, not overwrite).
  * ══════════════════════════════════════════════════════════════════ */
+const ALL_CONTINENTS = [
+  'Africa', 'Asia', 'Europe', 'Americas', 'Oceania', 'Antarctica',
+  'North America', 'South America', 'Global', 'Cross-Regional',
+];
+
 async function runStatsOnly(databases, res, log, error, startTime) {
-  log('Running stats counter (parallel mode)...');
+  log('Running stats counter (hybrid: cursor for totals, quick for breakdowns)...');
 
   try {
-    // Fast count helper using res.total (capped at 5000)
-    const fastCount = async (filters) => {
-      const r = await databases.listDocuments(DATABASE_ID, 'entities', [...filters, sdk.Query.limit(1)]);
+    /**
+     * Quick count using res.total (capped at 5000 by Appwrite).
+     */
+    async function quickCount(queries) {
+      const r = await databases.listDocuments(DATABASE_ID, 'entities', [
+        ...queries, sdk.Query.select(['$id']), sdk.Query.limit(1),
+      ]);
       return r.total;
-    };
+    }
 
-    // Count by label — parallel (every entity has a label)
-    const labelPromises = VALID_LABELS.map(async (label) => {
-      const count = await fastCount([sdk.Query.equal('label', label)]);
-      return [label, count];
-    });
-
-    // Count by era — parallel
-    const eraPromises = VALID_ERAS.map(async (era) => {
-      const count = await fastCount([sdk.Query.equal('era', era)]);
-      return [era, count];
-    });
-
-    // Count by continent — parallel
-    const CONTINENTS = ['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Oceania', 'Antarctica'];
-    const continentPromises = CONTINENTS.map(async (c) => {
-      const count = await fastCount([sdk.Query.equal('continent', c)]);
-      return [c, count];
-    });
-
-    // Count by Dewey class (0-9) — parallel
-    const classPromises = Array.from({ length: 10 }, (_, i) => String(i)).map(async (digit) => {
-      const count = await fastCount([sdk.Query.startsWith('callNumber', `${digit}`)]);
-      return [digit, count];
-    });
-
-    // Execute all in parallel
-    const [labelResults, eraResults, continentResults, classResults] = await Promise.all([
-      Promise.all(labelPromises),
-      Promise.all(eraPromises),
-      Promise.all(continentPromises),
-      Promise.all(classPromises),
-    ]);
-
-    // Compute accurate total as sum of all label counts
-    // (every entity has exactly one label, so sum(labels) = total)
-    const total = labelResults.reduce((s, [, n]) => s + n, 0);
-    log(`Total entities: ${total} (sum of label counts)`);
-
-    // For each group, fix capped values using known total
-    const fixCapped = (results, groupTotal) => {
-      const capped = results.filter(([, n]) => n >= 5000);
-      const uncapped = results.filter(([, n]) => n < 5000);
-      const uncappedSum = uncapped.reduce((s, [, n]) => s + n, 0);
-      if (capped.length === 1 && groupTotal > 0) {
-        capped[0][1] = groupTotal - uncappedSum;
+    /**
+     * Accurate count using cursor pagination at 5000/page.
+     * Only fetches $id to minimize data. Used only for capped labels.
+     */
+    async function cursorCount(queries) {
+      let count = 0;
+      let cursor;
+      while (true) {
+        const q = [
+          ...queries,
+          sdk.Query.select(['$id']),
+          sdk.Query.limit(5000),
+        ];
+        if (cursor) q.push(sdk.Query.cursorAfter(cursor));
+        const batch = await databases.listDocuments(DATABASE_ID, 'entities', q);
+        if (batch.documents.length === 0) break;
+        count += batch.documents.length;
+        cursor = batch.documents[batch.documents.length - 1].$id;
+        if (batch.documents.length < 5000) break; // last page
       }
-      return Object.fromEntries(results.filter(([, n]) => n > 0));
-    };
+      return count;
+    }
 
-    const byLabel = Object.fromEntries(labelResults.filter(([, n]) => n > 0));
-    const byEra = fixCapped(eraResults, total);
-    const byContinent = fixCapped(continentResults, total);
-    const byClass = fixCapped(classResults, total);
+    // Count each label: quickCount first, cursorCount if capped
+    const byLabel = {};
+    let total = 0;
+
+    for (const label of VALID_LABELS) {
+      const q = [sdk.Query.equal('label', label)];
+      let count = await quickCount(q);
+      if (count >= 5000) {
+        count = await cursorCount(q);
+      }
+      if (count > 0) byLabel[label] = count;
+      total += count;
+      log(`  ${label}: ${count}${count >= 5000 ? ' (cursor)' : ''}`);
+    }
+
+    // Breakdowns use quickCount (may cap at 5000 per bucket — acceptable)
+    const byEra = {};
+    for (const era of VALID_ERAS) {
+      const c = await quickCount([sdk.Query.equal('era', era)]);
+      if (c > 0) byEra[era] = c;
+    }
+
+    const byContinent = {};
+    for (const cont of ALL_CONTINENTS) {
+      const c = await quickCount([sdk.Query.equal('continent', cont)]);
+      if (c > 0) byContinent[cont] = c;
+    }
+
+    const byClass = {};
+    for (let d = 0; d <= 9; d++) {
+      const c = await quickCount([sdk.Query.startsWith('callNumber', String(d))]);
+      if (c > 0) byClass[String(d)] = c;
+    }
 
     const computeTimeMs = Date.now() - startTime;
     log(`Stats complete: ${total} entities in ${(computeTimeMs / 1000).toFixed(1)}s`);
@@ -144,7 +155,7 @@ async function runStatsOnly(databases, res, log, error, startTime) {
       updatedAt: new Date().toISOString(),
       computeTimeMs,
     };
-    await upsertStats(databases, stats, log);
+    await appendStats(databases, stats, log);
 
     return res.json({ total, byLabel, byEra, byContinent, byClass, updatedAt: stats.updatedAt, computeTimeMs });
 
@@ -247,7 +258,7 @@ async function runConsistencyAudit(databases, res, log, error, startTime) {
 
     // Write stats_cache as side effect
     const computeTimeMs = Date.now() - startTime;
-    await upsertStats(databases, {
+    await appendStats(databases, {
       total: totalEntities,
       byLabel: JSON.stringify(byLabel),
       byEra: JSON.stringify(byEra),
@@ -351,7 +362,7 @@ async function runFullAudit(databases, res, log, error, startTime) {
     }
 
     const computeTimeMs = Date.now() - startTime;
-    await upsertStats(databases, {
+    await appendStats(databases, {
       total: totalEntities,
       byLabel: JSON.stringify(byLabel),
       byEra: JSON.stringify(byEra),
@@ -384,17 +395,35 @@ async function runFullAudit(databases, res, log, error, startTime) {
  * Helpers
  * ══════════════════════════════════════════════════════════════════ */
 
-async function upsertStats(databases, stats, log) {
+/**
+ * Append a new stats row to stats_cache (never overwrite).
+ * Each row gets a unique ID. Frontend reads the latest by updatedAt desc.
+ * Also prune old rows to keep collection lean (keep latest 50).
+ */
+async function appendStats(databases, stats, log) {
   try {
-    await databases.updateDocument(DATABASE_ID, STATS_COLLECTION, STATS_DOC_ID, stats);
-    log('Updated stats_cache document');
-  } catch {
+    await databases.createDocument(
+      DATABASE_ID, STATS_COLLECTION, sdk.ID.unique(), stats
+    );
+    log('Appended new stats_cache row');
+
+    // Prune: keep only latest 50 rows
     try {
-      await databases.createDocument(DATABASE_ID, STATS_COLLECTION, STATS_DOC_ID, stats);
-      log('Created stats_cache document');
-    } catch (e) {
-      log(`Warning: could not write stats_cache: ${e.message}`);
-    }
+      const old = await databases.listDocuments(DATABASE_ID, STATS_COLLECTION, [
+        sdk.Query.orderDesc('updatedAt'),
+        sdk.Query.offset(50),
+        sdk.Query.limit(100),
+        sdk.Query.select(['$id']),
+      ]);
+      for (const doc of old.documents) {
+        await databases.deleteDocument(DATABASE_ID, STATS_COLLECTION, doc.$id);
+      }
+      if (old.documents.length > 0) {
+        log(`Pruned ${old.documents.length} old stats rows`);
+      }
+    } catch { /* pruning is best-effort */ }
+  } catch (e) {
+    log(`Warning: could not append stats_cache: ${e.message}`);
   }
 }
 

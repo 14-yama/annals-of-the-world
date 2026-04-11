@@ -9,7 +9,7 @@ import { useGlobalCounts } from '../hooks/useGlobalCounts'
 
 const DEFAULT_HERO_STATS = [
   { value: '199', label: 'Nations Catalogued', icon: Globe },
-  { value: '16,505', label: 'Knowledge Nodes', icon: Network },
+  { value: '392,210', label: 'Knowledge Nodes', icon: Network },
   { value: '72,000', label: 'Years Chronicled', icon: Clock },
   { value: '6', label: 'Epochs Mapped', icon: Orbit },
 ]
@@ -101,7 +101,7 @@ export default function Home() {
 
   const heroStats = [
     { value: '199', label: 'Nations Catalogued', icon: Globe },
-    { value: (total || 16_505).toLocaleString(), label: 'Knowledge Nodes', icon: Network },
+    { value: (total || 392_210).toLocaleString(), label: 'Knowledge Nodes', icon: Network },
     { value: (byLabel['Person'] || 0).toLocaleString(), label: 'Historical Figures', icon: Users },
     { value: '72,000', label: 'Years Chronicled', icon: Clock },
   ]

@@ -567,7 +567,7 @@ export default function AuditDashboard() {
         <NavCard to="/curator/classes" icon={Layers} label="Class Browser" desc="All 10 Dewey classes & divisions" color="#D4AF37" />
         <NavCard to="/curator/people" icon={Users} label="People Hub" desc="Browse & edit Class 2 divisions" color="#4A90D9" />
         <NavCard to="/curator/audit/guide" icon={BookOpen} label="Audit Guide" desc="Quality rubric & conventions" color="#27AE60" />
-        <NavCard to="/catalog" icon={Globe} label="Full Catalog" desc="Browse all 40K+ entities" color="#6B3FA0" />
+        <NavCard to="/catalog" icon={Globe} label="Full Catalog" desc="Browse all 392K+ entities" color="#6B3FA0" />
       </SimpleGrid>
     </Box>
   )

@@ -8,8 +8,8 @@
             "runtime": "node-18.0",
             "execute": ["any"],
             "events": [],
-            "schedule": "*/10 * * * *",
-            "timeout": 300,
+            "schedule": "*/30 * * * *",
+            "timeout": 900,
             "enabled": true,
             "entrypoint": "src/main.js",
             "path": "functions/audit-consistency"
