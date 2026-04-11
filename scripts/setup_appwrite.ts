@@ -180,6 +180,29 @@ const COLLECTIONS: CollectionDef[] = [
       { key: 'idx_year',   type: 'key', attrs: ['year'] },
     ],
   },
+  {
+    id: 'audit_log',
+    name: 'Audit Log',
+    attrs: [
+      { key: 'entityId',     type: 'string', size: 128, required: true },
+      { key: 'entitySlug',   type: 'string', size: 256, required: true },
+      { key: 'entityName',   type: 'string', size: 512 },
+      { key: 'action',       type: 'string', size: 32,  required: true },  // update | delete | create | batch_update
+      { key: 'field',        type: 'string', size: 128 },                  // which field changed
+      { key: 'oldValue',     type: 'string', size: 10000 },
+      { key: 'newValue',     type: 'string', size: 10000 },
+      { key: 'editorId',     type: 'string', size: 128, required: true },
+      { key: 'editorNote',   type: 'string', size: 1000 },
+      { key: 'timestamp',    type: 'string', size: 64,  required: true },  // ISO 8601
+      { key: 'sessionId',    type: 'string', size: 64 },
+    ],
+    indexes: [
+      { key: 'idx_entity',    type: 'key', attrs: ['entitySlug'] },
+      { key: 'idx_timestamp', type: 'key', attrs: ['timestamp'] },
+      { key: 'idx_editor',    type: 'key', attrs: ['editorId'] },
+      { key: 'idx_action',    type: 'key', attrs: ['action'] },
+    ],
+  },
 ]
 
 // ── Main ──

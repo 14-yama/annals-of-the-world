@@ -1,62 +1,66 @@
 /**
  * Catalog Index — merges all era entity arrays into a single flat collection.
  *
+ * DEPRECATED: Entity data files have been moved to ../deprecated-catalog/.
+ * The Appwrite backend is now the canonical source of truth.
+ * This index remains for backward compatibility with scripts and seeding tools.
+ *
  * Import from here for the complete catalog; import individual era files
  * when you only need one era's data.
  */
-import { prehistoricEntities } from './prehistoric'
-import { classicalEntities } from './classical'
-import { medievalEntities } from './medieval'
-import { earlyModernEntities } from './earlyModern'
-import { modernEntities } from './modern'
-import { contemporaryEntities } from './contemporary'
-import { REFORMATION_ENTITIES } from './reformation'
-import { BIBLICAL_ENTITIES } from './biblical'
-import { GEO_REGISTRY_ENTITIES } from './geoRegistry'
-import { DIVISION_ENRICHMENT_ENTITIES } from './divisionEnrichment'
-import { DIVISION_EXPANSION_ENTITIES } from './divisionExpansion'
-import { DIV_280_ENTITIES } from './divisionExpansion280'
-import { DIV_290_ENTITIES } from './divisionExpansion290'
-import { DIV_380_ENTITIES } from './divisionExpansion380'
-import { DIV_590_ENTITIES } from './divisionExpansion590'
-import { DIV_680_ENTITIES } from './divisionExpansion680'
-import { DIV_780_ENTITIES } from './divisionExpansion780'
-import { seedExpansionEntities } from './seedExpansion'
-import { divisionGapFillEntities } from './divisionGapFill'
-import { placeEntities } from './placeEntities'
+import { prehistoricEntities } from '../deprecated-catalog/prehistoric'
+import { classicalEntities } from '../deprecated-catalog/classical'
+import { medievalEntities } from '../deprecated-catalog/medieval'
+import { earlyModernEntities } from '../deprecated-catalog/earlyModern'
+import { modernEntities } from '../deprecated-catalog/modern'
+import { contemporaryEntities } from '../deprecated-catalog/contemporary'
+import { REFORMATION_ENTITIES } from '../deprecated-catalog/reformation'
+import { BIBLICAL_ENTITIES } from '../deprecated-catalog/biblical'
+import { GEO_REGISTRY_ENTITIES } from '../deprecated-catalog/geoRegistry'
+import { DIVISION_ENRICHMENT_ENTITIES } from '../deprecated-catalog/divisionEnrichment'
+import { DIVISION_EXPANSION_ENTITIES } from '../deprecated-catalog/divisionExpansion'
+import { DIV_280_ENTITIES } from '../deprecated-catalog/divisionExpansion280'
+import { DIV_290_ENTITIES } from '../deprecated-catalog/divisionExpansion290'
+import { DIV_380_ENTITIES } from '../deprecated-catalog/divisionExpansion380'
+import { DIV_590_ENTITIES } from '../deprecated-catalog/divisionExpansion590'
+import { DIV_680_ENTITIES } from '../deprecated-catalog/divisionExpansion680'
+import { DIV_780_ENTITIES } from '../deprecated-catalog/divisionExpansion780'
+import { seedExpansionEntities } from '../deprecated-catalog/seedExpansion'
+import { divisionGapFillEntities } from '../deprecated-catalog/divisionGapFill'
+import { placeEntities } from '../deprecated-catalog/placeEntities'
 
 // ── Wikidata-sourced people (5,014 notable figures from Wikidata SPARQL) ──
-import { WIKIDATA_PEOPLE_ENTITIES } from './wikidataPeople'
+import { WIKIDATA_PEOPLE_ENTITIES } from '../deprecated-catalog/wikidataPeople'
 
 // ── Corpus imports ──
-import { MESOPOTAMIAN_ENTITIES } from './corpuses/mesopotamian'
-import { EGYPTIAN_ENTITIES } from './corpuses/egyptian'
-import { JUDAIC_RABBINIC_ENTITIES } from './corpuses/judaicRabbinic'
-import { GRAECO_ROMAN_ENTITIES } from './corpuses/graecoRoman'
-import { CANON_LAW_ENTITIES } from './corpuses/canonLaw'
-import { IRAN_CENTRAL_ASIA_ENTITIES } from './corpuses/iranCentralAsia'
-import { SOUTH_SE_ASIA_ENTITIES } from './corpuses/southSEAsia'
-import { EAST_ASIA_ENTITIES } from './corpuses/eastAsia'
-import { AFRICA_ENTITIES } from './corpuses/africa'
-import { AMERICAS_ENTITIES } from './corpuses/americas'
-import { EUROPE_BATCH1_ENTITIES } from './corpuses/europeBatch1'
-import { EUROPE_BATCH2_ENTITIES } from './corpuses/europeBatch2'
-import { SCIENCE_TECH_ENTITIES } from './corpuses/scienceTech'
+import { MESOPOTAMIAN_ENTITIES } from '../deprecated-catalog/corpuses/mesopotamian'
+import { EGYPTIAN_ENTITIES } from '../deprecated-catalog/corpuses/egyptian'
+import { JUDAIC_RABBINIC_ENTITIES } from '../deprecated-catalog/corpuses/judaicRabbinic'
+import { GRAECO_ROMAN_ENTITIES } from '../deprecated-catalog/corpuses/graecoRoman'
+import { CANON_LAW_ENTITIES } from '../deprecated-catalog/corpuses/canonLaw'
+import { IRAN_CENTRAL_ASIA_ENTITIES } from '../deprecated-catalog/corpuses/iranCentralAsia'
+import { SOUTH_SE_ASIA_ENTITIES } from '../deprecated-catalog/corpuses/southSEAsia'
+import { EAST_ASIA_ENTITIES } from '../deprecated-catalog/corpuses/eastAsia'
+import { AFRICA_ENTITIES } from '../deprecated-catalog/corpuses/africa'
+import { AMERICAS_ENTITIES } from '../deprecated-catalog/corpuses/americas'
+import { EUROPE_BATCH1_ENTITIES } from '../deprecated-catalog/corpuses/europeBatch1'
+import { EUROPE_BATCH2_ENTITIES } from '../deprecated-catalog/corpuses/europeBatch2'
+import { SCIENCE_TECH_ENTITIES } from '../deprecated-catalog/corpuses/scienceTech'
 
 // ── Topic entities (weapons, medicine, architecture, agriculture, navigation, languages) ──
-import { ALL_TOPIC_ENTITIES } from './topicEntities'
+import { ALL_TOPIC_ENTITIES } from '../deprecated-catalog/topicEntities'
 
 // ── Text node entities (generated from actor text references) ──
-import { TEXT_NODE_ENTITIES } from './textNodes'
+import { TEXT_NODE_ENTITIES } from '../deprecated-catalog/textNodes'
 
 // ── Post-processing enrichment data ──
-import { ENRICHMENT_DATA } from './enrichmentData'
+import { ENRICHMENT_DATA } from '../deprecated-catalog/enrichmentData'
 
 // ── Call number reclassification ──
-import { reclassifyDivisions } from './reclassify'
+import { reclassifyDivisions } from '../deprecated-catalog/reclassify'
 
 // ── Summary enrichment for thin/generic entries ──
-import { enrichThinSummaries } from './enrichSummaries'
+import { enrichThinSummaries } from '../deprecated-catalog/enrichSummaries'
 
 import type { Entity } from '../entityTypes'
 

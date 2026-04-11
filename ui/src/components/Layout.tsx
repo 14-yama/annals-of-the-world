@@ -36,6 +36,7 @@ import {
   Crown,
   BarChart3,
   AlertTriangle,
+  ClipboardList,
 } from 'lucide-react'
 import { Query } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../lib/appwrite'
@@ -197,6 +198,7 @@ const NAV_SECTIONS: NavSection[] = [
     items: [
       { path: '/curator',         label: 'The Curator',      icon: Scroll },
       { path: '/curator/audit',   label: 'Audit Dashboard',  icon: BarChart3 },
+      { path: '/curator/audit/log', label: 'Audit Log',      icon: ClipboardList },
       { path: '/curator/triage',  label: 'Triage System',    icon: AlertTriangle },
       { path: '/curator/classes', label: 'Class Browser',    icon: Layers },
       { path: '/curator/people',  label: 'People Hub',       icon: Users },

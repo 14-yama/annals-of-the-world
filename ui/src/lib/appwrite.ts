@@ -31,6 +31,7 @@ export const COLLECTIONS = {
   EVIDENCE:       'evidence',
   MEDIA:          'media',
   TIMELINE:       'timeline_entries',
+  AUDIT_LOG:      'audit_log',
 } as const
 
 /* ── Storage bucket IDs ── */

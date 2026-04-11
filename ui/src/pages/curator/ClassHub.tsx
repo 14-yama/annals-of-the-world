@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react'
+import React, { useEffect, useState, useMemo, useRef } from 'react'
 import { Box, Flex, Text, SimpleGrid, Spinner } from '@chakra-ui/react'
 import { Link as RouterLink, useParams, useNavigate } from 'react-router-dom'
 import {
@@ -7,6 +7,7 @@ import {
 } from 'lucide-react'
 import { Query } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../../lib/appwrite'
+import { countAllDocuments } from '../../services/adminService'
 import { SectionHeading } from '../../components/DataCards'
 import { CLASSES, DIVISIONS } from '../../constants/callNumbers'
 
@@ -36,28 +37,36 @@ function AllClassesView() {
   const [classCounts, setClassCounts] = useState<Record<number, number>>({})
   const [totalEntities, setTotalEntities] = useState(0)
   const [loading, setLoading] = useState(true)
+  const cacheRef = useRef<Record<number, number> | null>(null)
 
   useEffect(() => { loadCounts() }, [])
 
   async function loadCounts() {
+    // Use cache if available (avoid expensive re-counts on every mount)
+    if (cacheRef.current) {
+      setClassCounts(cacheRef.current)
+      setTotalEntities(Object.values(cacheRef.current).reduce((a, b) => a + b, 0))
+      setLoading(false)
+      return
+    }
+
     setLoading(true)
     try {
-      const totalRes = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [Query.limit(1)])
-      setTotalEntities(totalRes.total)
-
       const counts: Record<number, number> = {}
-      await Promise.all(
-        CLASSES.map(async (cls) => {
-          try {
-            const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
-              Query.startsWith('callNumber', `${cls.code}`),
-              Query.limit(1),
-            ])
-            counts[cls.code] = res.total
-          } catch { counts[cls.code] = 0 }
-        }),
-      )
+      // Count each class using cursor-based pagination (accurate beyond 5000)
+      for (const cls of CLASSES) {
+        try {
+          const n = await countAllDocuments([Query.startsWith('callNumber', `${cls.code}`)])
+          counts[cls.code] = n
+          // Progressive update: show counts as they come in
+          setClassCounts((prev) => ({ ...prev, [cls.code]: n }))
+        } catch { counts[cls.code] = 0 }
+      }
+
+      const total = Object.values(counts).reduce((a, b) => a + b, 0)
+      setTotalEntities(total)
       setClassCounts(counts)
+      cacheRef.current = counts
     } catch (err) {
       console.error('ClassHub load failed:', err)
     }
@@ -160,11 +169,8 @@ function ClassDetail({ classCode }: { classCode: number }) {
   async function loadCounts() {
     setLoading(true)
     try {
-      const totalRes = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
-        Query.startsWith('callNumber', `${classCode}`),
-        Query.limit(1),
-      ])
-      setTotalClass(totalRes.total)
+      const totalN = await countAllDocuments([Query.startsWith('callNumber', `${classCode}`)])
+      setTotalClass(totalN)
 
       const newCounts: Record<string, number> = {}
       for (let i = 0; i < divisions.length; i += 10) {
@@ -172,11 +178,8 @@ function ClassDetail({ classCode }: { classCode: number }) {
         const results = await Promise.all(
           batch.map(async (div) => {
             try {
-              const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
-                Query.startsWith('callNumber', div.code + '.'),
-                Query.limit(1),
-              ])
-              return { code: div.code, count: res.total }
+              const n = await countAllDocuments([Query.startsWith('callNumber', div.code + '.')])
+              return { code: div.code, count: n }
             } catch { return { code: div.code, count: 0 } }
           }),
         )

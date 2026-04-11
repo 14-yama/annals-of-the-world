@@ -47,6 +47,40 @@ export interface DivisionCount {
   count: number
 }
 
+/* ─── Read: Accurate Counting ─── */
+
+/**
+ * Count all documents matching a set of queries by paginating with cursor.
+ * Appwrite caps `res.total` at 5000 for large collections — this works around that
+ * by iterating through all matching documents using cursor-based pagination,
+ * selecting only `$id` to minimise payload.
+ */
+export async function countAllDocuments(
+  extraQueries: string[] = [],
+): Promise<number> {
+  const PAGE = 100
+  let count = 0
+  let cursor: string | undefined
+
+  // eslint-disable-next-line no-constant-condition
+  while (true) {
+    const q: string[] = [
+      ...extraQueries,
+      Query.select(['$id']),
+      Query.limit(PAGE),
+    ]
+    if (cursor) q.push(Query.cursorAfter(cursor))
+
+    const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, q)
+    count += res.documents.length
+
+    if (res.documents.length < PAGE) break
+    cursor = res.documents[res.documents.length - 1].$id
+  }
+
+  return count
+}
+
 /* ─── Read: Audit Queries ─── */
 
 const LABELS = ['Person', 'Idea', 'Institution', 'Place', 'EventWindow', 'Movement', 'Text', 'Evidence', 'Timeframe']

@@ -40,6 +40,7 @@ import TriageSystem from './pages/curator/TriageSystem'
 import PeopleHub from './pages/curator/PeopleHub'
 import DivisionDetail from './pages/curator/DivisionDetail'
 import AuditGuide from './pages/curator/AuditGuide'
+import AuditLogViewer from './pages/curator/AuditLogViewer'
 import ClassHub from './pages/curator/ClassHub'
 
 /** Reset scroll to top on every route change */
@@ -79,6 +80,7 @@ export default function App() {
         <Route path="/curator/classes/:classCode" element={<ClassHub />} />
         <Route path="/curator/classes/:classCode/:div" element={<DivisionDetail />} />
         <Route path="/curator/audit/guide" element={<AuditGuide />} />
+        <Route path="/curator/audit/log" element={<AuditLogViewer />} />
         <Route path="/weapons" element={<WeaponsPage />} />
         <Route path="/languages" element={<LanguagesPage />} />
         <Route path="/architecture" element={<ArchitecturePage />} />

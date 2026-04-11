@@ -86,6 +86,7 @@ ui/src/
     QuizPage.tsx           # Interactive quizzes
     About.tsx              # Project about page
     Curator.tsx            # Curator workflow interface
+    AuditLogViewer.tsx     # Edit audit trail viewer (/curator/audit/log)
     Triage.tsx             # Data triage tool
     Demo.tsx               # Entity page demo
 
@@ -283,6 +284,43 @@ Evidence · Corpus · Framework · Timeframe · Polity
 - Sanitize all user inputs in search/filter components
 - CSP headers planned for production deployment
 - CC0 license — no proprietary data restrictions
+
+---
+
+## Audit & Governance System
+
+### Edit Audit Trail
+
+All curator edits are logged to the `audit_log` Appwrite collection with per-field diffs:
+- **Curator identity** tracked via `editorId` (localStorage + prompt)
+- **Session tracking** via `sessionId` (crypto.randomUUID per browser session)
+- **Per-field diffing** — each changed field gets its own audit entry with old/new values
+- **Audit log viewer** at `/curator/audit/log` — filters, sort, CSV export, stats
+
+### Appwrite Cloud Functions (5 automated audits)
+
+| Function | Schedule | Purpose |
+|----------|----------|---------|
+| `audit-completeness` | Daily 02:00 UTC | Score entities on 9 quality dimensions |
+| `audit-orphans` | Daily 03:00 UTC | Find entities with zero relationships |
+| `audit-duplicates` | Weekly Sun 04:00 | Levenshtein fuzzy duplicate detection |
+| `audit-consistency` | Daily 05:00 UTC | Validate era/division, callNumber, slugs |
+| `backup-export` | Weekly Sun 00:00 | Export all collections to Appwrite Storage |
+
+Functions are defined in `appwrite.json` and implemented in `functions/*/src/main.js`.
+
+### Backup & Sync
+
+- **Export:** `APPWRITE_API_KEY=<key> npx tsx scripts/sync_appwrite_to_repo.ts`
+- **Import:** `APPWRITE_API_KEY=<key> npx tsx scripts/sync_repo_to_appwrite.ts [--dry-run] [--force]`
+- **Export location:** `data/appwrite-export/entities/{classCode}-{className}/{divisionCode}.json`
+- **Appwrite is the live source of truth;** JSON exports are the backup copy
+
+### Deprecated Catalog
+
+Entity data files moved from `ui/src/data/catalog/*.ts` to `ui/src/data/deprecated-catalog/`.
+`catalog/index.ts` still works — imports redirect to deprecated-catalog. Existing script
+imports are unaffected.
 
 ---
 

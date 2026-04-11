@@ -1,0 +1,213 @@
+/**
+ * Americas Corpuses
+ *
+ * 1. MESOAMERICAN_CORPORA — Maya codices, Aztec/Nahua texts, Popol Vuh
+ * 2. ANDEAN_CORPUS — Quipu records, Spanish colonial chronicles of Inca tradition
+ */
+import type { Entity } from '../../entityTypes'
+
+export const AMERICAS_ENTITIES: Entity[] = [
+  // ═══════════════════════════════════════════════════════════════════
+  //  1. MESOAMERICAN CORPORA
+  // ═══════════════════════════════════════════════════════════════════
+  {
+    slug: 'mesoamerican_corpora',
+    name: 'The Mesoamerican Corpora',
+    label: 'Text',
+    callNumber: '730.23-mesoamerican-corpora',
+    subjectHeadings: ['Artifacts & Texts — Indigenous Texts — Mesoamerican Codices & Narratives'],
+    subjects: ['Maya Codices', 'Popol Vuh', 'Aztec', 'Nahuatl', 'Hieroglyphs', 'Olmec', 'Teotihuacan', 'Calendar', 'Codex'],
+    summary: 'The Mesoamerican Corpora encompasses the surviving textual and inscriptional heritage of the great civilizations of Mesoamerica — Maya, Aztec (Mexica), Zapotec, Mixtec, and their predecessors — spanning from the earliest Olmec writing (c. 900 BCE) through the post-conquest colonial period. This is one of the most dramatic cases of cultural destruction in human history: of the thousands of Maya screenfold books (codices) that existed at the time of the Spanish conquest, only four survive (the Dresden, Madrid, Paris, and Grolier codices) — the rest were systematically burned by Spanish missionaries, most infamously by Diego de Landa at Maní in 1562. What survives is nonetheless extraordinary: the Popol Vuh (the K\'iche\' Maya creation epic, transcribed c. 1554–1558 in Latin script); the Books of Chilam Balam (Yucatec Maya prophetic and historical texts); the Florentine Codex (12-volume encyclopedia of Aztec/Nahua culture compiled by Bernardino de Sahagún with Nahua elders, 1545–1590); and the vast corpus of Classic Maya hieroglyphic inscriptions (c. 250–900 CE) on stelae, lintels, ceramics, and murals — now largely deciphered thanks to the breakthroughs of Yuri Knorosov, Tatiana Proskouriakoff, and David Stuart. These sources document sophisticated civilizations with advanced mathematics (the concept of zero, independently developed), astronomy, calendrics (the Long Count calendar), and literary traditions.',
+    era: 'Classical',
+    eraSlug: 'classical',
+    region: 'Central America',
+    continent: 'Americas',
+    status: 'Published',
+    period: 'c. 900 BCE – 1600 CE',
+    frameworks: ['TEXTUAL_TRANSMISSION', 'CULTURAL_DIFFUSION'],
+    causes: [
+      { title: 'Olmec civilization develops earliest Mesoamerican writing', type: 'Idea', year: 'c. 900 BCE' },
+      { title: 'Classic Maya period produces vast hieroglyphic corpus', type: 'Institution', year: 'c. 250 CE' },
+    ],
+    effects: [
+      { title: 'Popol Vuh becomes foundational text of Maya intellectual heritage', type: 'Text', year: 'c. 1558 CE', slug: 'popol_vuh' },
+      { title: 'Dresden Codex reveals Maya astronomical precision rivaling Europe', type: 'Evidence', year: 'c. 1200 CE', slug: 'dresden_codex' },
+      { title: 'Florentine Codex becomes most comprehensive source on Aztec civilization', type: 'Text', year: '1590 CE', slug: 'florentine_codex' },
+    ],
+    relationships: [
+      { sourceSlug: 'mesoamerican_corpora', sourceName: 'The Mesoamerican Corpora', verb: 'CONTAINS', targetSlug: 'popol_vuh', targetName: 'Popol Vuh', context: 'K\'iche\' Maya creation narrative' },
+      { sourceSlug: 'mesoamerican_corpora', sourceName: 'The Mesoamerican Corpora', verb: 'CONTAINS', targetSlug: 'florentine_codex', targetName: 'Florentine Codex', context: 'Encyclopedia of Aztec/Nahua civilization' },
+      { sourceSlug: 'mesoamerican_corpora', sourceName: 'The Mesoamerican Corpora', verb: 'CONTAINS', targetSlug: 'dresden_codex', targetName: 'Dresden Codex', context: 'Most important surviving Maya codex' },
+    ],
+    places: [
+      { name: 'Tikal', role: 'Major Classic Maya city with rich hieroglyphic record' },
+      { name: 'Palenque', role: 'Finest Classic Maya inscriptions and architectural art' },
+      { name: 'Tenochtitlan', role: 'Aztec capital — center of Nahua literary culture' },
+    ],
+    texts: [],
+  },
+  {
+    slug: 'popol_vuh',
+    name: 'Popol Vuh',
+    label: 'Text',
+    callNumber: '730.107-popol-vuh',
+    subjectHeadings: ['Artifacts & Texts — Religious Texts — Maya Creation Narrative'],
+    subjects: ['K\'iche\' Maya', 'Creation', 'Hero Twins', 'Corn People', 'Xibalba', 'Guatemala', 'Indigenous Scripture'],
+    summary: 'The creation narrative and dynastic history of the K\'iche\' Maya people of highland Guatemala, often called "the Maya Bible" and considered one of the greatest works of indigenous American literature. Originally a pre-Columbian hieroglyphic text, it was transcribed into K\'iche\' Maya using the Latin alphabet between c. 1554 and 1558. The text narrates: the creation of the world through the deliberations of the divine pair Heart of Sky and Heart of Earth; three failed attempts to create humanity (from mud, then wood, before success with maize/corn dough); the adventures of the Hero Twins Hunahpu and Xbalanque in the underworld (Xibalba) where they outwit the Lords of Death through wit, trickery, and sacrifice; and the genealogy of the K\'iche\' ruling lineages. The Popol Vuh reveals a sophisticated cosmology, a deep philosophy of sacrifice and renewal, and literary artistry comparable to any of the world\'s great creation narratives.',
+    era: 'Early Modern',
+    eraSlug: 'early-modern',
+    region: 'Central America',
+    continent: 'Americas',
+    status: 'Published',
+    period: 'Pre-Columbian (original); c. 1554–1558 (transcription); 1701–1703 (Ximenez copy)',
+    frameworks: ['TEXTUAL_TRANSMISSION'],
+    causes: [],
+    effects: [
+      { title: 'Foundational text of K\'iche\' Maya identity and cosmology', type: 'Idea', year: 'c. 1558 CE' },
+      { title: 'Recognized as one of the great creation narratives of world literature', type: 'Text', year: 'c. 1900 CE' },
+    ],
+    relationships: [],
+    places: [
+      { name: 'Q\'umarkaj', role: 'K\'iche\' Maya capital in highland Guatemala' },
+    ],
+    texts: [],
+  },
+  {
+    slug: 'florentine_codex',
+    name: 'Florentine Codex (Historia General de las Cosas de Nueva España)',
+    label: 'Text',
+    callNumber: '730.108-florentine-codex',
+    subjectHeadings: ['Artifacts & Texts — Ethnographic Texts — Aztec/Nahua Encyclopedia'],
+    subjects: ['Sahagún', 'Nahuatl', 'Aztec', 'Ethnography', 'Bilingual', 'Mexico', 'Colonial'],
+    summary: 'A 12-book bilingual encyclopedia (Nahuatl and Spanish) of Aztec/Nahua civilization compiled by Franciscan friar Bernardino de Sahagún (1499–1590) in collaboration with elderly Nahua scholars and artists over a period of approximately 45 years (1545–1590). The Florentine Codex is the most comprehensive single source on pre-Columbian Mesoamerican civilization, covering: the gods and their ceremonies (Books 1–2); the origin of the gods (Book 3); divination and omens (Book 4–5); rhetoric, philosophy, and moral discourse (Book 6); astronomy and the calendar (Book 7); kings, merchants, and political organization (Book 8–9); the natural world — plants, animals, minerals (Book 11); and the Spanish conquest of Mexico from the Nahua perspective (Book 12). The 2,468 illustrations by Nahua artists are themselves an invaluable visual record. Sahagún\'s ethnographic methodology — conducting systematic interviews in the native language with multiple informants — was centuries ahead of its time and has been called "the first work of modern ethnography."',
+    era: 'Early Modern',
+    eraSlug: 'early-modern',
+    region: 'Central America',
+    continent: 'Americas',
+    status: 'Published',
+    period: '1545–1590 CE',
+    frameworks: ['TEXTUAL_TRANSMISSION'],
+    causes: [],
+    effects: [
+      { title: 'Most comprehensive single source on pre-Columbian Mesoamerican civilization', type: 'Text', year: '1590 CE' },
+      { title: 'Book 12 provides Nahua perspective on the Spanish Conquest', type: 'Evidence', year: '1577 CE' },
+    ],
+    relationships: [],
+    places: [
+      { name: 'Tenochtitlan', role: 'Aztec capital whose culture the Codex documents' },
+    ],
+    texts: [],
+  },
+  {
+    slug: 'dresden_codex',
+    name: 'Dresden Codex (Codex Dresdensis)',
+    label: 'Evidence',
+    callNumber: '810.30-dresden-codex',
+    subjectHeadings: ['Evidence — Manuscripts — Maya Astronomical Codex'],
+    subjects: ['Maya', 'Astronomy', 'Venus Tables', 'Eclipse Tables', 'Hieroglyphs', 'Calendar', 'Codex'],
+    summary: 'The most important and most elaborately decorated of the four surviving pre-Columbian Maya codices, currently held in the Saxon State and University Library in Dresden, Germany. A screenfold book of 39 painted leaves (78 pages) on amate (bark paper) coated with lime stucco, dating to the 13th–14th century CE (though its content may derive from much older sources going back to the Classic period). The Dresden Codex contains: astronomical tables of extraordinary accuracy (Venus tables tracking the planet\'s 584-day synodic period with an error of only 2 hours over 481 years; eclipse tables; Mars tables); ritual almanacs tied to the 260-day tzolk\'in calendar; flood imagery possibly representing Maya eschatology; and depictions of deities performing various rituals. The accuracy of Maya astronomical calculations — achieved without telescopes — rivals that of contemporary European astronomy and demonstrates the independent mathematical and scientific genius of Mesoamerican civilization.',
+    era: 'Medieval',
+    eraSlug: 'medieval',
+    region: 'Central America',
+    continent: 'Americas',
+    status: 'Published',
+    period: 'c. 1200–1350 CE (this copy); older sources',
+    frameworks: ['TEXTUAL_TRANSMISSION'],
+    causes: [],
+    effects: [
+      { title: 'Demonstrates Maya astronomical precision rivaling Europe', type: 'Idea', year: 'c. 1300 CE' },
+    ],
+    relationships: [],
+    places: [],
+    texts: [],
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  //  2. ANDEAN CORPUS
+  // ═══════════════════════════════════════════════════════════════════
+  {
+    slug: 'andean_corpus',
+    name: 'The Andean Corpus',
+    label: 'Text',
+    callNumber: '730.24-andean-corpus',
+    subjectHeadings: ['Artifacts & Texts — Indigenous Records — Andean Inca Tradition'],
+    subjects: ['Inca', 'Quipu', 'Khipu', 'Garcilaso de la Vega', 'Guaman Poma', 'Tawantinsuyu', 'Quechua', 'Andes'],
+    summary: 'The Andean Corpus encompasses the records and literary traditions of the great Andean civilizations — particularly the Inca Empire (Tawantinsuyu, c. 1438–1533 CE) — which uniquely among major civilizations never developed a conventional writing system. Instead, the Inca recorded administrative data, historical narratives, and possibly more complex information through the quipu (khipu) — a system of knotted strings (often colored and hierarchically structured) that functioned as a recording medium. Approximately 900 quipus survive, and while their numerical encoding is well understood (a decimal system), their narrative capacity remains a subject of active research. After the Spanish conquest, the Andean intellectual tradition was preserved and transformed through colonial-era works of extraordinary value: the "Royal Commentaries of the Incas" (1609–1617) by Inca Garcilaso de la Vega (son of an Inca princess and a Spanish conquistador), the most celebrated literary work of colonial Latin America; and Felipe Guaman Poma de Ayala\'s "El Primer Nueva Corónica y Buen Gobierno" (c. 1615) — a 1,189-page letter to the King of Spain, with 398 full-page illustrations, documenting Inca and colonial Andean society from an indigenous perspective. The corpus also includes the Huarochirí Manuscript (c. 1608), the only extensive narrative of pre-Columbian Andean mythology recorded in an indigenous language (Quechua).',
+    era: 'Early Modern',
+    eraSlug: 'early-modern',
+    region: 'South America',
+    continent: 'Americas',
+    status: 'Published',
+    period: 'c. 1400–1700 CE',
+    frameworks: ['TEXTUAL_TRANSMISSION', 'CULTURAL_DIFFUSION'],
+    causes: [
+      { title: 'Inca Empire develops quipu system for record-keeping without writing', type: 'Idea', year: 'c. 1400 CE' },
+      { title: 'Spanish conquest (1532–1533) generates colonial chronicle literature', type: 'Event', year: '1533 CE' },
+    ],
+    effects: [
+      { title: 'Garcilaso\'s Royal Commentaries becomes masterpiece of colonial Latin American literature', type: 'Text', year: '1609 CE', slug: 'royal_commentaries_incas' },
+      { title: 'Guaman Poma\'s illustrated chronicle provides unique indigenous perspective', type: 'Text', year: 'c. 1615 CE', slug: 'guaman_poma_chronicle' },
+      { title: 'Quipu system challenges Western assumptions about what constitutes "writing"', type: 'Idea', year: 'c. 2000 CE' },
+    ],
+    relationships: [
+      { sourceSlug: 'andean_corpus', sourceName: 'The Andean Corpus', verb: 'CONTAINS', targetSlug: 'royal_commentaries_incas', targetName: 'Royal Commentaries of the Incas', context: 'Inca Garcilaso\'s mestizo masterwork' },
+      { sourceSlug: 'andean_corpus', sourceName: 'The Andean Corpus', verb: 'CONTAINS', targetSlug: 'guaman_poma_chronicle', targetName: 'El Primer Nueva Corónica', context: 'Illustrated indigenous perspective' },
+    ],
+    places: [
+      { name: 'Cusco', role: 'Inca capital — center of Tawantinsuyu' },
+    ],
+    texts: [],
+  },
+  {
+    slug: 'royal_commentaries_incas',
+    name: 'Royal Commentaries of the Incas',
+    label: 'Text',
+    callNumber: '730.109-royal-commentaries-incas',
+    subjectHeadings: ['Artifacts & Texts — Historical Texts — Colonial Andean Literature'],
+    subjects: ['Inca Garcilaso de la Vega', 'Mestizo', 'Inca History', 'Cusco', 'Tawantinsuyu', 'Colonial Peru'],
+    summary: 'A two-part historical work by Inca Garcilaso de la Vega (1539–1616), son of a Spanish conquistador and an Inca noblewoman (a niece of Inca Huayna Capac). Part I (1609) narrates the history, religion, government, agriculture, and culture of the Inca Empire as Garcilaso learned it from his mother\'s relatives and his own childhood in Cusco. Part II (1617) covers the Spanish conquest and early colonial period. Written in elegant Renaissance Spanish from exile in Córdoba, Spain, the Royal Commentaries is celebrated as the first great literary work of the Americas by a mestizo author — a voice that bridges two civilizations. Garcilaso presents the Inca Empire as a rational, well-governed civilization comparable to (and in some respects superior to) the classical civilizations of Greece and Rome, challenging European assumptions of indigenous "barbarism." The work was so influential that the Spanish Crown banned it in Peru after Túpac Amaru II\'s rebellion (1780–1781), fearing its inspirational power.',
+    era: 'Early Modern',
+    eraSlug: 'early-modern',
+    region: 'South America',
+    continent: 'Americas',
+    status: 'Published',
+    period: '1609–1617 CE',
+    frameworks: ['TEXTUAL_TRANSMISSION'],
+    causes: [],
+    effects: [
+      { title: 'First great literary work of the Americas by a mestizo author', type: 'Text', year: '1609 CE' },
+      { title: 'Banned by Spanish Crown after Túpac Amaru II rebellion — testament to its power', type: 'Event', year: '1782 CE' },
+    ],
+    relationships: [],
+    places: [
+      { name: 'Cusco', role: 'Garcilaso\'s childhood home and subject of the book' },
+    ],
+    texts: [],
+  },
+  {
+    slug: 'guaman_poma_chronicle',
+    name: 'El Primer Nueva Corónica y Buen Gobierno',
+    label: 'Text',
+    callNumber: '730.110-guaman-poma-chronicle',
+    subjectHeadings: ['Artifacts & Texts — Historical Texts — Andean Indigenous Chronicle'],
+    subjects: ['Felipe Guaman Poma', 'Andean', 'Illustrations', 'Colonial', 'Indigenous Perspective', 'Quechua'],
+    summary: 'A 1,189-page illustrated manuscript (c. 1600–1615 CE) by Felipe Guaman Poma de Ayala, a Quechua nobleman, addressed as a letter to King Philip III of Spain. One of the most remarkable documents of the colonial Americas, it contains 398 full-page pen-and-ink illustrations depicting Inca history, Andean cosmology, the Spanish conquest, and the colonial exploitation of indigenous people — alongside extensive text in Spanish and Quechua. Guaman Poma documents the pre-Inca and Inca ages of Andean civilization through five world-ages, describes the calendar, agriculture, governance, and social structure of the Inca Empire, and provides a devastating indictment of Spanish colonial abuses: forced labor (mita), exploitation by priests, destruction of indigenous culture, and the demographic collapse of the Andean population. The manuscript, never delivered to the king, was discovered in the Royal Danish Library in Copenhagen in 1908 and digitized in 2001. It is now recognized as one of the most important primary sources on colonial Andean history and a masterpiece of indigenous visual and textual art.',
+    era: 'Early Modern',
+    eraSlug: 'early-modern',
+    region: 'South America',
+    continent: 'Americas',
+    status: 'Published',
+    period: 'c. 1600–1615 CE',
+    frameworks: ['TEXTUAL_TRANSMISSION'],
+    causes: [],
+    effects: [
+      { title: 'Most important illustrated indigenous account of colonial Andean society', type: 'Evidence', year: 'c. 1615 CE' },
+      { title: 'Discovered in Copenhagen 1908 — transformed colonial Andean studies', type: 'Evidence', year: '1908 CE' },
+    ],
+    relationships: [],
+    places: [
+      { name: 'Cusco', role: 'Center of the Inca world documented in the chronicle' },
+    ],
+    texts: [],
+  },
+]

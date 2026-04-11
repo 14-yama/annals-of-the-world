@@ -12,10 +12,12 @@ import {
   CheckCircle2,
   AlertTriangle,
   ShieldCheck,
+  Shuffle,
 } from 'lucide-react'
 import { Query, type Models } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../../lib/appwrite'
-import { adminUpdateDocument } from '../../lib/adminClient'
+import { adminUpdateDocument, getCuratorId } from '../../lib/adminClient'
+import { countAllDocuments } from '../../services/adminService'
 import { SectionHeading, StatCard } from '../../components/DataCards'
 import { DIVISIONS, CLASSES } from '../../constants/callNumbers'
 import { ERA_NAMES, ERA_DIVISIONS, getDivisionsForEra, isValidEraDivision, type EraName } from '../../constants/eraDivisions'
@@ -54,6 +56,7 @@ export default function DivisionDetail() {
   const [page, setPage] = useState(0)
   const [sortField, setSortField] = useState<SortField>('importanceScore')
   const [sortDir, setSortDir] = useState<SortDir>('desc')
+  const [shuffleMode, setShuffleMode] = useState(() => localStorage.getItem('curator_shuffle') === 'true')
 
   // Quick edit state
   const [editingId, setEditingId] = useState<string | null>(null)
@@ -67,6 +70,7 @@ export default function DivisionDetail() {
   const [saving, setSaving] = useState(false)
   const [toast, setToast] = useState<{ type: 'success' | 'error'; msg: string } | null>(null)
   const [showConfirm, setShowConfirm] = useState(false)
+  const [editOldData, setEditOldData] = useState<Record<string, unknown>>({})
 
   // Available divisions filtered by selected era
   const availableDivisions = useMemo(
@@ -95,19 +99,60 @@ export default function DivisionDetail() {
 
   useEffect(() => {
     loadEntities()
-  }, [div, page])
+  }, [div, page, sortField, sortDir, shuffleMode])
+
+  /** Toggle shuffle mode and persist preference */
+  function toggleShuffle() {
+    setShuffleMode((prev) => {
+      const next = !prev
+      localStorage.setItem('curator_shuffle', String(next))
+      setPage(0)
+      return next
+    })
+  }
 
   async function loadEntities() {
     if (!div) return
     setLoading(true)
     try {
-      const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
+      // Get accurate total using cursor-based count (bypasses 5000 cap)
+      const accurateTotal = await countAllDocuments([Query.startsWith('callNumber', div + '.')])
+      setTotal(accurateTotal)
+
+      const queries: string[] = [
         Query.startsWith('callNumber', div + '.'),
         Query.limit(PAGE_SIZE),
-        Query.offset(page * PAGE_SIZE),
-      ])
-      setTotal(res.total)
-      setEntities(res.documents.map(mapToRow))
+      ]
+
+      if (shuffleMode) {
+        // Random offset — pick a random starting point within the dataset
+        const maxOffset = Math.max(0, accurateTotal - PAGE_SIZE)
+        const randomOffset = maxOffset > 0 ? Math.floor(Math.random() * maxOffset) : 0
+        queries.push(Query.offset(randomOffset))
+      } else {
+        // Server-side sort + normal pagination
+        if (sortField === 'importanceScore') {
+          queries.push(sortDir === 'desc' ? Query.orderDesc('importanceScore') : Query.orderAsc('importanceScore'))
+        } else if (sortField === 'name') {
+          queries.push(sortDir === 'desc' ? Query.orderDesc('name') : Query.orderAsc('name'))
+        } else if (sortField === 'era') {
+          queries.push(sortDir === 'desc' ? Query.orderDesc('era') : Query.orderAsc('era'))
+        }
+        queries.push(Query.offset(page * PAGE_SIZE))
+      }
+
+      const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, queries)
+      const rows = res.documents.map(mapToRow)
+
+      if (shuffleMode) {
+        // Fisher-Yates shuffle for true randomisation within the page
+        for (let i = rows.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [rows[i], rows[j]] = [rows[j], rows[i]]
+        }
+      }
+
+      setEntities(rows)
     } catch (err) {
       console.error('Division load failed:', err)
     }
@@ -148,6 +193,11 @@ export default function DivisionDetail() {
   }
 
   const sorted = useMemo(() => {
+    // If shuffle mode is on, keep shuffled order. For server-sorted fields, keep server order.
+    if (shuffleMode) return entities
+    if (['importanceScore', 'name', 'era'].includes(sortField)) return entities
+
+    // Client-side sort for fields not supported server-side (score, relCount)
     return [...entities].sort((a, b) => {
       const av = a[sortField]
       const bv = b[sortField]
@@ -156,7 +206,7 @@ export default function DivisionDetail() {
       }
       return sortDir === 'asc' ? (av as number) - (bv as number) : (bv as number) - (av as number)
     })
-  }, [entities, sortField, sortDir])
+  }, [entities, sortField, sortDir, shuffleMode])
 
   function toggleSort(field: SortField) {
     if (sortField === field) {
@@ -178,6 +228,17 @@ export default function DivisionDetail() {
     setEditWikidataQid(row.wikidataQid ?? '')
     setToast(null)
     setShowConfirm(false)
+    // Capture old data for audit trail diff
+    setEditOldData({
+      summary: row.summary,
+      era: row.era,
+      eraDivisionCode: row.eraDivisionCode ?? '',
+      importanceScore: row.importanceScore,
+      imageUrl: row.imageUrl ?? '',
+      wikidataQid: row.wikidataQid ?? '',
+    })
+    // Ensure curator identity is set on first edit
+    getCuratorId()
   }
 
   /** Validate fields before showing confirmation */
@@ -228,7 +289,11 @@ export default function DivisionDetail() {
       if (editImageUrl) payload.imageUrl = editImageUrl
       if (editWikidataQid) payload.wikidataQid = editWikidataQid
 
-      const result = await adminUpdateDocument(COLLECTIONS.ENTITIES, editingId, payload)
+      const result = await adminUpdateDocument(COLLECTIONS.ENTITIES, editingId, payload, {
+        slug: editSlug,
+        name: entities.find(e => e.$id === editingId)?.name ?? editSlug,
+        oldData: editOldData,
+      })
       if (!result.success) {
         setToast({ type: 'error', msg: `Save failed: ${result.error}` })
         setSaving(false)
@@ -292,7 +357,7 @@ export default function DivisionDetail() {
         >
           <ChevronLeft size={18} color="#787469" />
         </Box>
-        <Box>
+        <Box flex={1}>
           <Text fontFamily='"JetBrains Mono", monospace' fontSize="sm" color="#D4AF37" fontWeight={600}>
             Division {div}
           </Text>
@@ -301,6 +366,23 @@ export default function DivisionDetail() {
           </Text>
           <Text fontSize="sm" color="#787469">
             {total.toLocaleString()} entities
+          </Text>
+        </Box>
+        {/* Shuffle toggle */}
+        <Box
+          as="button"
+          onClick={toggleShuffle}
+          px={3} py={2} borderRadius="md"
+          bg={shuffleMode ? '#D4AF3720' : '#F5F4F0'}
+          border={shuffleMode ? '1px solid #D4AF37' : '1px solid #E4E2DC'}
+          cursor="pointer"
+          display="flex" alignItems="center" gap={2}
+          _hover={{ bg: shuffleMode ? '#D4AF3730' : '#E4E2DC' }}
+          title={shuffleMode ? 'Shuffle ON — showing random entities' : 'Click to shuffle — see random entities each load'}
+        >
+          <Shuffle size={16} color={shuffleMode ? '#D4AF37' : '#787469'} />
+          <Text fontSize="xs" fontWeight={600} color={shuffleMode ? '#D4AF37' : '#787469'}>
+            {shuffleMode ? 'Shuffled' : 'Shuffle'}
           </Text>
         </Box>
       </Flex>

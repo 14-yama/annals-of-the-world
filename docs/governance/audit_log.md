@@ -10,6 +10,23 @@ Purpose: Track approved changes to the verb source of truth, interaction matrix,
 
 ## Entries
 
+2025-07-18 — Comprehensive Curator Audit System [audit, governance, functions, sync]
+- Added: `audit_log` Appwrite collection (11 attributes, 4 indexes) for per-field edit tracking
+- Added: Curator identity system (localStorage + prompt) with session UUID tracking
+- Added: `adminClient.ts` audit integration — all updates automatically log field-level diffs
+- Added: `AuditLogViewer.tsx` page at `/curator/audit/log` — filterable, sortable, CSV-exportable audit trail
+- Added: 5 Appwrite Cloud Functions (audit-completeness, audit-orphans, audit-duplicates, audit-consistency, backup-export) with cron schedules
+- Added: `sync_appwrite_to_repo.ts` — export Appwrite entities to class-based JSON folder structure
+- Added: `sync_repo_to_appwrite.ts` — restore from JSON with --dry-run and --force flags
+- Added: `data/appwrite-export/` — class-based entity repository (10 classes, 40 People divisions)
+- Changed: Catalog entity files moved to `ui/src/data/deprecated-catalog/` — Appwrite is now source of truth
+- Changed: `catalog/index.ts` imports updated to reference deprecated-catalog location
+- Changed: `ClassHub.tsx` and `DivisionDetail.tsx` — accurate entity counts via cursor-based pagination
+- Changed: `DivisionDetail.tsx` — shuffle mode, server-side sorting, edit governance capture
+- Added: `docs/guidelines/curator_audit_guide.md` — comprehensive audit system documentation
+- Rationale: Full edit governance, automated data quality monitoring, and bidirectional backup/sync infrastructure
+- Breaking changes: None; catalog/index.ts API unchanged, all existing imports work
+
 2025-10-10 — Establish governance policy and wire documentation navigation [governance, docs]
 - Added: docs/governance/GOVERNANCE.md — formal policy (authorities, roles, proposal→decision→audit flow).
 - Linked governance across docs for discoverability:
