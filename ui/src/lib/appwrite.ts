@@ -4,7 +4,7 @@
  * Singleton instances for Appwrite services used throughout the app.
  * Uses VITE_ prefixed env vars loaded by Vite at build time.
  */
-import { Client, Account, Databases, Storage } from 'appwrite'
+import { Client, Account, Databases, Storage, Functions } from 'appwrite'
 
 const ENDPOINT = import.meta.env.VITE_APPWRITE_ENDPOINT as string
 const PROJECT_ID = import.meta.env.VITE_APPWRITE_PROJECT_ID as string
@@ -18,6 +18,7 @@ if (ENDPOINT && PROJECT_ID) {
 export const account = new Account(client)
 export const databases = new Databases(client)
 export const storage = new Storage(client)
+export const functions = new Functions(client)
 
 export const DATABASE_ID = (import.meta.env.VITE_APPWRITE_DATABASE_ID as string) || 'annals_db'
 
@@ -32,6 +33,7 @@ export const COLLECTIONS = {
   MEDIA:          'media',
   TIMELINE:       'timeline_entries',
   AUDIT_LOG:      'audit_log',
+  STATS_CACHE:    'stats_cache',
 } as const
 
 /* ── Storage bucket IDs ── */
