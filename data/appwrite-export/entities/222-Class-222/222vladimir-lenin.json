@@ -11,7 +11,7 @@
       "name": "Vladimir Lenin",
       "label": "Person",
       "callNumber": "222.vladimir-lenin",
-      "summary": "Leader of Russia (1917–1924). Bolshevik leader; October Revolution; founded USSR; Civil War (Red Terror, 5M+ dead); War Communism then NEP; stroke 1922; died 1924; mausoleum; founder of Soviet state",
+      "summary": "Vladimir Ilyich Lenin (1870–1924) was a Russian revolutionary, politician, and political theorist who served as the first head of Soviet Russia (1917–1924). Born Vladimir Ulyanov, he was radicalized after his brother's execution for plotting to assassinate the Tsar, and became the leader of the Bolshevik faction of the Russian Social Democratic Labour Party.\n\nLenin led the October Revolution of 1917, overthrowing the Provisional Government and establishing the world's first socialist state. He implemented war communism during the Russian Civil War (1918–1921), then pivoted to the New Economic Policy (NEP) in 1921 to prevent economic collapse.\n\nHis theoretical contributions — the vanguard party, democratic centralism, imperialism as capitalism's highest stage — shaped communist movements worldwide for decades. After a series of strokes, he died in 1924; his embalmed body remains displayed in Moscow's Red Square.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,14 +25,74 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Joseph Stalin\", \"type\": \"Person\", \"year\": \"\", \"slug\": \"joseph-stalin\"}, {\"title\": \"Nikita Khrushchev\", \"type\": \"Person\", \"year\": \"\", \"slug\": \"nikita-khrushchev\"}], \"effects\": [{\"title\": \"Vladimir Putin\", \"type\": \"Person\", \"year\": \"\", \"slug\": \"vladimir-putin\"}], \"relationships\": [{\"sourceSlug\": \"vladimir-lenin\", \"sourceName\": \"Vladimir Lenin\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"russia\", \"targetName\": \"Russia\", \"context\": \"Vladimir Lenin in the history of Russia\"}, {\"sourceSlug\": \"vladimir-lenin\", \"sourceName\": \"Vladimir Lenin\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"vladimir-putin\", \"targetName\": \"Vladimir Putin\", \"context\": \"Sequential development within Russia Leadership\"}, {\"sourceSlug\": \"joseph-stalin\", \"sourceName\": \"Joseph Stalin\", \"verb\": \"CAUSES\", \"targetSlug\": \"vladimir-lenin\", \"targetName\": \"Vladimir Lenin\", \"context\": \"Causal antecedent ()\"}, {\"sourceSlug\": \"nikita-khrushchev\", \"sourceName\": \"Nikita Khrushchev\", \"verb\": \"CAUSES\", \"targetSlug\": \"vladimir-lenin\", \"targetName\": \"Vladimir Lenin\", \"context\": \"Causal antecedent ()\"}, {\"sourceSlug\": \"vladimir-lenin\", \"sourceName\": \"Vladimir Lenin\", \"verb\": \"CAUSES\", \"targetSlug\": \"vladimir-putin\", \"targetName\": \"Vladimir Putin\", \"context\": \"Consequent outcome ()\"}, {\"sourceSlug\": \"vladimir-lenin\", \"sourceName\": \"Vladimir Lenin\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"putins-consolidation-oil-boom\", \"targetName\": \"Putin's Consolidation & Oil Boom\", \"context\": \"Contemporary movement in Russia\"}, {\"sourceSlug\": \"vladimir-lenin\", \"sourceName\": \"Vladimir Lenin\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"shock-therapy-1993-crisis\", \"targetName\": \"Shock Therapy & 1993 Crisis\", \"context\": \"Active during this event\"}], \"places\": [{\"name\": \"Russia\", \"role\": \"Governance\"}], \"texts\": [], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Execution of brother Alexander Ulyanov radicalized him",
+          "Marxist theory adapted to Russian conditions",
+          "Tsarist autocracy and World War I exhaustion created revolutionary conditions"
+        ],
+        "effects": [
+          "October Revolution established first socialist state",
+          "Soviet model inspired communist revolutions worldwide",
+          "Cold War bipolar world order",
+          "Vanguard party theory adopted by revolutionary movements globally",
+          "Russian Civil War and war communism killed millions"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "vladimir-lenin",
+            "sourceName": "Vladimir Lenin",
+            "verb": "CAUSES",
+            "targetSlug": "russian-revolution",
+            "targetName": "Russian Revolution",
+            "context": "Led the October Revolution overthrowing the Provisional Government"
+          },
+          {
+            "sourceSlug": "vladimir-lenin",
+            "sourceName": "Vladimir Lenin",
+            "verb": "OCCURS_IN",
+            "targetSlug": "russia",
+            "targetName": "Russia",
+            "context": "Founded the Soviet state and governed from Moscow 1917–1924"
+          },
+          {
+            "sourceSlug": "vladimir-lenin",
+            "sourceName": "Vladimir Lenin",
+            "verb": "INFLUENCES",
+            "targetSlug": "joseph-stalin",
+            "targetName": "Joseph Stalin",
+            "context": "Stalin succeeded Lenin but betrayed his final testament warning"
+          },
+          {
+            "sourceSlug": "vladimir-lenin",
+            "sourceName": "Vladimir Lenin",
+            "verb": "INFLUENCES",
+            "targetSlug": "mao-zedong",
+            "targetName": "Mao Zedong",
+            "context": "Leninist party model adopted by Chinese Communist Party"
+          },
+          {
+            "sourceSlug": "vladimir-lenin",
+            "sourceName": "Vladimir Lenin",
+            "verb": "INFLUENCES",
+            "targetSlug": "karl-marx",
+            "targetName": "Karl Marx",
+            "context": "Adapted Marxist theory to Russian conditions with Leninism"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Political Leaders — Russia — Contemporary"
+        "People — Political Leaders — Russia — Modern"
       ],
       "subjects": [
-        "Political Leader",
         "Russia",
-        "Governance"
+        "Communism",
+        "Russian Revolution",
+        "Soviet Union",
+        "Marxism",
+        "Bolsheviks",
+        "Political Theory",
+        "Cold War Origins"
       ],
       "frameworks": [
         "POLITICAL_SYSTEMS",

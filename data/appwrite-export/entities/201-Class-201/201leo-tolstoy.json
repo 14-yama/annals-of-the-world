@@ -11,7 +11,7 @@
       "name": "Leo Tolstoy",
       "label": "Person",
       "callNumber": "201.leo-tolstoy",
-      "summary": "Count Lev Nikolayevich Tolstoy, usually referred to in English as Leo Tolstoy, was a Russian writer. He is regarded as one of the greatest and most influential authors of all time.",
+      "summary": "Count Lev Nikolayevich Tolstoy (1828–1910) was a Russian writer widely regarded as one of the greatest novelists of all time. His epic masterworks 'War and Peace' (1869) and 'Anna Karenina' (1877) are considered pinnacles of world literature, combining sweeping historical narrative with profound psychological insight.\n\n'War and Peace' follows five aristocratic families through Napoleon's invasion of Russia with over 500 characters, while 'Anna Karenina' explores love, hypocrisy, and moral redemption in Russian society. Tolstoy drew from his own military experience in the Crimean War for his vivid battle descriptions.\n\nIn later life, Tolstoy underwent a spiritual crisis that led him to reject organized religion, aristocratic privilege, and private property. His philosophy of nonviolent resistance directly influenced Mahatma Gandhi and Martin Luther King Jr. He died at a remote railway station in 1910, fleeing his estate in a final act of renunciation.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,12 +25,65 @@
       "wikidataQid": "Q7243",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Leo_Tolstoy",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Modern era: industrialization, imperial expansion, and democratic revolutions\", \"type\": \"EventWindow\", \"year\": \"1828-09-09, Yasnaya Polyana\"}, {\"title\": \"Growth of educational institutions and scholarly traditions\", \"type\": \"Idea\", \"year\": \"1828-09-09, Yasnaya Polyana\"}], \"effects\": [{\"title\": \"Shaped intellectual traditions and educated future generations\", \"type\": \"Idea\", \"year\": \"1910-11-20\"}, {\"title\": \"Contributed to mass society, world wars, and foundations of contemporary global order\", \"type\": \"Movement\", \"year\": \"1910-11-20\"}], \"relationships\": [{\"sourceSlug\": \"leo-tolstoy\", \"sourceName\": \"Leo Tolstoy\", \"verb\": \"TEACHES\", \"targetSlug\": \"field-201\", \"targetName\": \"Educators & Academics\", \"context\": \"Leo Tolstoy: Educational influence in educators & academics\"}, {\"sourceSlug\": \"leo-tolstoy\", \"sourceName\": \"Leo Tolstoy\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"modern\", \"targetName\": \"Modern Era\", \"context\": \"Leo Tolstoy was active during the Modern era\"}], \"places\": [{\"name\": \"Yasnaya Polyana\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Leo Tolstoy\", \"type\": \"Reference article\", \"slug\": \"leo-tolstoy\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q7243\", \"https://en.wikipedia.org/wiki/Leo_Tolstoy\"], \"tags\": [\"Educators & Academics\", \"cause-and-effect\", \"innovation-and-technology\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Russian aristocratic education and Crimean War experience",
+          "Russian literary tradition of Pushkin and Gogol",
+          "Spiritual crisis in 1870s led to moral philosophy"
+        ],
+        "effects": [
+          "War and Peace redefined the novel form",
+          "Tolstoyan nonviolence influenced Gandhi and MLK",
+          "Anna Karenina set standard for psychological realism",
+          "Inspired numerous literary movements worldwide"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "leo-tolstoy",
+            "sourceName": "Leo Tolstoy",
+            "verb": "OCCURS_IN",
+            "targetSlug": "russia",
+            "targetName": "Russia",
+            "context": "Lived at Yasnaya Polyana estate and wrote about Russian society"
+          },
+          {
+            "sourceSlug": "leo-tolstoy",
+            "sourceName": "Leo Tolstoy",
+            "verb": "INFLUENCES",
+            "targetSlug": "mahatma-gandhi",
+            "targetName": "Mahatma Gandhi",
+            "context": "Gandhi corresponded with Tolstoy and adopted his nonviolent philosophy"
+          },
+          {
+            "sourceSlug": "leo-tolstoy",
+            "sourceName": "Leo Tolstoy",
+            "verb": "INFLUENCES",
+            "targetSlug": "fyodor-dostoevsky",
+            "targetName": "Fyodor Dostoevsky",
+            "context": "Two giants of Russian literature who admired each other's work"
+          },
+          {
+            "sourceSlug": "leo-tolstoy",
+            "sourceName": "Leo Tolstoy",
+            "verb": "INFLUENCES",
+            "targetSlug": "martin-luther-king-jr",
+            "targetName": "Martin Luther King Jr.",
+            "context": "King cited Tolstoy's nonviolent philosophy as inspiration"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Educators & Academics — Global — Modern"
+        "People — Artists — Russia — Modern"
       ],
       "subjects": [
-        "Educators & Academics"
+        "Russian Literature",
+        "Novel",
+        "Philosophy",
+        "Nonviolence",
+        "Russia",
+        "War and Peace",
+        "Christianity",
+        "Social Reform"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT",

@@ -1,0 +1,72 @@
+{
+  "_meta": {
+    "classCode": "270",
+    "divisionCode": "270rosa-parks",
+    "count": 1
+  },
+  "entities": [
+    {
+      "slug": "rosa-parks",
+      "name": "Rosa Parks",
+      "label": "Person",
+      "callNumber": "270.rosa-parks",
+      "era": "Contemporary",
+      "summary": "Rosa Louise McCauley Parks (1913–2005) was an American civil rights activist known as 'the mother of the civil rights movement.' On December 1, 1955, in Montgomery, Alabama, she refused to surrender her bus seat to a white passenger, sparking the Montgomery Bus Boycott — a 381-day protest that became a pivotal moment in the American civil rights movement.\n\nParks was not merely a tired seamstress who spontaneously refused to move — she was a trained NAACP activist, secretary of the Montgomery chapter since 1943. She had attended the Highlander Folk School, which trained civil rights organizers. Her arrest was a strategic act of resistance within a planned movement.\n\nThe boycott propelled the 26-year-old Martin Luther King Jr. to national prominence and resulted in a Supreme Court ruling that bus segregation was unconstitutional (Browder v. Gayle, 1956). Parks received the Presidential Medal of Freedom (1996) and the Congressional Gold Medal (1999). Upon her death in 2005, she became the first woman to lie in honor in the U.S. Capitol.",
+      "continent": "North America",
+      "region": "North America",
+      "subjects": [
+        "Civil Rights",
+        "United States",
+        "Segregation",
+        "Montgomery Bus Boycott",
+        "African American History",
+        "Activism",
+        "NAACP",
+        "Alabama"
+      ],
+      "subjectHeadings": [
+        "People — Activists — United States — Contemporary"
+      ],
+      "detailsJson": {
+        "causes": [
+          "Jim Crow segregation in the American South",
+          "NAACP training and organizing experience",
+          "Highlander Folk School civil rights education"
+        ],
+        "effects": [
+          "Montgomery Bus Boycott lasted 381 days",
+          "Supreme Court ruled bus segregation unconstitutional",
+          "Propelled Martin Luther King Jr. to national leadership",
+          "Became icon of civil rights movement",
+          "First woman to lie in honor at U.S. Capitol"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "rosa-parks",
+            "sourceName": "Rosa Parks",
+            "verb": "CAUSES",
+            "targetSlug": "civil-rights-movement",
+            "targetName": "Civil Rights Movement",
+            "context": "Her refusal sparked the Montgomery Bus Boycott, a pivotal civil rights event"
+          },
+          {
+            "sourceSlug": "rosa-parks",
+            "sourceName": "Rosa Parks",
+            "verb": "OCCURS_IN",
+            "targetSlug": "united-states",
+            "targetName": "United States",
+            "context": "American civil rights activist in Montgomery, Alabama"
+          },
+          {
+            "sourceSlug": "rosa-parks",
+            "sourceName": "Rosa Parks",
+            "verb": "INFLUENCES",
+            "targetSlug": "martin-luther-king-jr",
+            "targetName": "Martin Luther King Jr.",
+            "context": "The boycott her arrest triggered launched King's leadership career"
+          }
+        ]
+      }
+    }
+  ]
+}

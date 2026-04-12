@@ -11,7 +11,7 @@
       "name": "Thomas Edison",
       "label": "Person",
       "callNumber": "202.thomas-edison",
-      "summary": "Thomas Alva Edison was an American inventor and businessman. He developed many devices in fields such as electric power generation, sound recording, and motion pictures. These inventions, which include the phonograph, the motion picture camera, and early versions of the electric light bulb, have had a widespread impact on the modern industrialized world. He was one of the first inventors to apply the principles of organized science and teamwork to the process of invention, working with many researchers and employees. He established the first industrial research laboratory.",
+      "summary": "Thomas Alva Edison (1847–1931) was an American inventor and businessman who developed many devices that greatly influenced life around the world, holding 1,093 US patents — more than any individual in American history. His most famous inventions include the practical incandescent light bulb (1879), the phonograph (1877), and the motion picture camera (1891).\n\nEdison established the first industrial research laboratory at Menlo Park, New Jersey (1876), creating the model for modern R&D labs. His 'invention factory' systematized the process of innovation, employing dozens of researchers to develop inventions on an industrial scale. He famously said: 'Genius is one percent inspiration and ninety-nine percent perspiration.'\n\nBeyond individual inventions, Edison built the first commercial electrical power distribution system (Pearl Street Station, 1882), launching the electrical age. His bitter rivalry with Nikola Tesla in the 'War of Currents' (AC vs DC) shaped the modern power grid, though Tesla's alternating current ultimately prevailed.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,14 +25,58 @@
       "wikidataQid": "Q8743",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Thomas_Edison",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Modern era: industrialization, imperial expansion, and democratic revolutions\", \"type\": \"EventWindow\", \"year\": \"1847-02-11, Milan\"}, {\"title\": \"Expansion of trade networks and commercial exchange\", \"type\": \"Idea\", \"year\": \"1847-02-11, Milan\"}], \"effects\": [{\"title\": \"Influenced economic patterns and commercial practices\", \"type\": \"Idea\", \"year\": \"1931-10-18\"}, {\"title\": \"Contributed to mass society, world wars, and foundations of contemporary global order\", \"type\": \"Movement\", \"year\": \"1931-10-18\"}], \"relationships\": [{\"sourceSlug\": \"thomas-edison\", \"sourceName\": \"Thomas Edison\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"country-united-states\", \"targetName\": \"United States\", \"context\": \"Thomas Edison associated with United States\"}, {\"sourceSlug\": \"thomas-edison\", \"sourceName\": \"Thomas Edison\", \"verb\": \"TRADES\", \"targetSlug\": \"field-202\", \"targetName\": \"Merchants & Economists\", \"context\": \"Thomas Edison: Commercial activity in merchants & economists\"}, {\"sourceSlug\": \"thomas-edison\", \"sourceName\": \"Thomas Edison\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"modern\", \"targetName\": \"Modern Era\", \"context\": \"Thomas Edison was active during the Modern era\"}], \"places\": [{\"name\": \"Milan\", \"role\": \"Birth place\"}, {\"name\": \"United States\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Thomas Edison\", \"type\": \"Reference article\", \"slug\": \"thomas-edison\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q8743\", \"https://en.wikipedia.org/wiki/Thomas_Edison\"], \"tags\": [\"United States\", \"Merchants & Economists\", \"Americas\", \"economic-systems\", \"geopolitical-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Self-education and voracious reading",
+          "Telegraphy experience provided electrical knowledge",
+          "American entrepreneurial culture after Civil War"
+        ],
+        "effects": [
+          "Practical electric lighting transformed daily life worldwide",
+          "Industrial research laboratory model adopted globally",
+          "Phonograph launched the recorded music industry",
+          "Motion picture camera created cinema",
+          "Pearl Street Station launched commercial electricity"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "thomas-edison",
+            "sourceName": "Thomas Edison",
+            "verb": "OCCURS_IN",
+            "targetSlug": "united-states",
+            "targetName": "United States",
+            "context": "American inventor who worked in Menlo Park and West Orange, New Jersey"
+          },
+          {
+            "sourceSlug": "thomas-edison",
+            "sourceName": "Thomas Edison",
+            "verb": "INFLUENCES",
+            "targetSlug": "nikola-tesla",
+            "targetName": "Nikola Tesla",
+            "context": "Edison and Tesla's War of Currents shaped the modern electrical grid"
+          },
+          {
+            "sourceSlug": "thomas-edison",
+            "sourceName": "Thomas Edison",
+            "verb": "CAUSES",
+            "targetSlug": "industrial-revolution",
+            "targetName": "Industrial Revolution",
+            "context": "Electrical lighting and power extended industrial productivity beyond daylight"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Merchants & Economists — United States — Modern"
+        "People — Scientists — United States — Modern"
       ],
       "subjects": [
+        "Invention",
+        "Electricity",
         "United States",
-        "Merchants & Economists",
-        "Americas"
+        "Light Bulb",
+        "Phonograph",
+        "Industrial Revolution",
+        "Research Laboratory",
+        "Technology"
       ],
       "frameworks": [
         "ECONOMIC_SYSTEMS",

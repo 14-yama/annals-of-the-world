@@ -11,7 +11,7 @@
       "name": "Jean-Jacques Rousseau",
       "label": "Person",
       "callNumber": "201.jean-jacques-rousseau",
-      "summary": "Jean-Jacques Rousseau was a Genevan philosopher, philosophe, writer, and composer. His political philosophy influenced the progress of the Age of Enlightenment throughout Europe, as well as aspects of the French Revolution and the development of modern political, economic, and educational thought.",
+      "summary": "Jean-Jacques Rousseau (1712–1778) was a Genevan philosopher, writer, and composer whose ideas profoundly influenced the Enlightenment, the French Revolution, and modern political and educational theory. His opening line in 'The Social Contract' (1762) — 'Man is born free, and everywhere he is in chains' — became a battle cry for revolutionaries.\n\nRousseau argued that civilization corrupts humanity's natural goodness, a radical departure from Hobbes. His 'Discourse on Inequality' (1755) traced how private property created social hierarchy and oppression. In 'Emile' (1762), he pioneered child-centered education, arguing children should learn through experience rather than rote memorization.\n\nParadoxically, Rousseau abandoned his own five children to foundling homes. His Confessions (published posthumously) created the modern autobiographical genre. His concept of the 'general will' became both the intellectual engine of democratic movements and, critics argue, a justification for totalitarianism.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -25,12 +25,66 @@
       "wikidataQid": "Q6527",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Jean-Jacques_Rousseau",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Early Modern era: age of exploration, printing revolution, and religious reformation\", \"type\": \"EventWindow\", \"year\": \"1712-06-28, Geneva\"}, {\"title\": \"Growth of educational institutions and scholarly traditions\", \"type\": \"Idea\", \"year\": \"1712-06-28, Geneva\"}], \"effects\": [{\"title\": \"Shaped intellectual traditions and educated future generations\", \"type\": \"Idea\", \"year\": \"1778-07-02\"}, {\"title\": \"Contributed to global exchange networks, modern state formation, and scientific revolution\", \"type\": \"Movement\", \"year\": \"1778-07-02\"}], \"relationships\": [{\"sourceSlug\": \"jean-jacques-rousseau\", \"sourceName\": \"Jean-Jacques Rousseau\", \"verb\": \"TEACHES\", \"targetSlug\": \"field-201\", \"targetName\": \"Educators & Academics\", \"context\": \"Jean-Jacques Rousseau: Educational influence in educators & academics\"}, {\"sourceSlug\": \"jean-jacques-rousseau\", \"sourceName\": \"Jean-Jacques Rousseau\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"early-modern\", \"targetName\": \"Early Modern Era\", \"context\": \"Jean-Jacques Rousseau was active during the Early Modern era\"}], \"places\": [{\"name\": \"Geneva\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Jean-Jacques Rousseau\", \"type\": \"Reference article\", \"slug\": \"jean-jacques-rousseau\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q6527\", \"https://en.wikipedia.org/wiki/Jean-Jacques_Rousseau\"], \"tags\": [\"Educators & Academics\", \"cause-and-effect\", \"innovation-and-technology\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Genevan republican tradition",
+          "Enlightenment intellectual ferment in Paris",
+          "Personal experience of social inequality as a wandering youth"
+        ],
+        "effects": [
+          "Inspired French Revolution's ideological foundations",
+          "Child-centered education theory transformed pedagogy globally",
+          "Romantic movement drew on his celebration of nature and emotion",
+          "'General will' concept shaped democratic theory",
+          "Autobiography as literary genre"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "jean-jacques-rousseau",
+            "sourceName": "Jean-Jacques Rousseau",
+            "verb": "INFLUENCES",
+            "targetSlug": "french-revolution",
+            "targetName": "French Revolution",
+            "context": "His social contract theory directly inspired revolutionary ideals"
+          },
+          {
+            "sourceSlug": "jean-jacques-rousseau",
+            "sourceName": "Jean-Jacques Rousseau",
+            "verb": "OCCURS_IN",
+            "targetSlug": "france",
+            "targetName": "France",
+            "context": "Lived and wrote primarily in Paris and rural France"
+          },
+          {
+            "sourceSlug": "jean-jacques-rousseau",
+            "sourceName": "Jean-Jacques Rousseau",
+            "verb": "INFLUENCES",
+            "targetSlug": "immanuel-kant",
+            "targetName": "Immanuel Kant",
+            "context": "Kant said Rousseau taught him to respect the common man"
+          },
+          {
+            "sourceSlug": "jean-jacques-rousseau",
+            "sourceName": "Jean-Jacques Rousseau",
+            "verb": "INFLUENCES",
+            "targetSlug": "karl-marx",
+            "targetName": "Karl Marx",
+            "context": "Marx built on Rousseau's critique of private property and inequality"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Educators & Academics — Global — Early Modern"
+        "People — Philosophers — France — Early Modern"
       ],
       "subjects": [
-        "Educators & Academics"
+        "Philosophy",
+        "French Revolution",
+        "Social Contract",
+        "Education",
+        "Enlightenment",
+        "Geneva",
+        "France",
+        "Romanticism"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT",

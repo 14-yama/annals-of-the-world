@@ -11,7 +11,7 @@
       "name": "Ada Lovelace",
       "label": "Person",
       "callNumber": "204.ada-lovelace",
-      "summary": "Augusta Ada King, Countess of Lovelace, also known as Ada Lovelace, was an English mathematician and writer chiefly known for work on Charles Babbage's proposed mechanical general-purpose computer, the analytical engine. She was the first to recognise the machine had applications beyond pure calculation. Lovelace is often considered the first computer programmer.",
+      "summary": "Ada Lovelace (1815–1852), born Augusta Ada Byron, was a British mathematician and writer recognized as the first computer programmer. The daughter of poet Lord Byron and mathematician Anne Isabella Milbanke, she combined her parents' literary imagination with mathematical rigor.\n\nIn 1843, Lovelace translated Luigi Menabrea's article on Charles Babbage's Analytical Engine, adding extensive notes that were three times longer than the original text. Her 'Note G' contained what is considered the first algorithm intended for machine processing — a method to compute Bernoulli numbers.\n\nLovelace foresaw that computers could go beyond mere calculation, envisioning machines that could compose music and manipulate symbols. The U.S. Department of Defense named the Ada programming language (1980) in her honor.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,12 +25,56 @@
       "wikidataQid": "Q7259",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Ada_Lovelace",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [], \"effects\": [], \"relationships\": [], \"places\": [{\"name\": \"London\", \"role\": \"Birth place\"}], \"texts\": [], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q7259\", \"https://en.wikipedia.org/wiki/Ada_Lovelace\"], \"tags\": [\"Architects & Engineers\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Mathematical education from Anne Isabella Milbanke",
+          "Collaboration with Charles Babbage on the Analytical Engine",
+          "Intellectual environment of Victorian scientific circles"
+        ],
+        "effects": [
+          "First published computer algorithm (Note G)",
+          "Visionary concept of general-purpose computing",
+          "Ada programming language named in her honor (1980)",
+          "Inspiration for women in STEM fields"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "ada-lovelace",
+            "sourceName": "Ada Lovelace",
+            "verb": "INFLUENCES",
+            "targetSlug": "computer-science",
+            "targetName": "Computer Science",
+            "context": "Wrote the first algorithm for machine computation"
+          },
+          {
+            "sourceSlug": "ada-lovelace",
+            "sourceName": "Ada Lovelace",
+            "verb": "OCCURS_IN",
+            "targetSlug": "united-kingdom",
+            "targetName": "United Kingdom",
+            "context": "Lived and worked in England throughout her life"
+          },
+          {
+            "sourceSlug": "ada-lovelace",
+            "sourceName": "Ada Lovelace",
+            "verb": "INFLUENCES",
+            "targetSlug": "alan-turing",
+            "targetName": "Alan Turing",
+            "context": "Her vision of general-purpose computation anticipated Turing's universal machine"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Architects & Engineers — Global — Modern"
+        "People — Scientists — United Kingdom — Modern"
       ],
       "subjects": [
-        "Architects & Engineers"
+        "Computer Science",
+        "Mathematics",
+        "Women in Science",
+        "Victorian Era",
+        "United Kingdom",
+        "Analytical Engine",
+        "Programming"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT"

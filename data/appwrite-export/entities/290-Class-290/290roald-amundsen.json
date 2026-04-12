@@ -11,7 +11,7 @@
       "name": "Roald Amundsen",
       "label": "Person",
       "callNumber": "290.roald-amundsen",
-      "summary": "Roald Engelbregt Gravning Amundsen was a Norwegian explorer of polar regions. He was a key figure of the period known as the Heroic Age of Antarctic Exploration.",
+      "summary": "Roald Engelbregt Gravning Amundsen (1872–1928) was a Norwegian explorer who led the first expedition to reach the South Pole on December 14, 1911, beating Robert Falcon Scott's British team by 34 days. He was also the first to traverse the Northwest Passage by ship (1903–1906) and is generally considered the most successful polar explorer in history.\n\nAmundsen's South Pole success rested on meticulous preparation, Inuit survival techniques (dog sleds, fur clothing), and a relentless focus on efficiency. While Scott's team perished on their return journey, all five members of Amundsen's party returned safely.\n\nIn 1926, Amundsen led the first verified expedition over the North Pole by airship (the Norge), making him the first person to reach both poles. He disappeared in 1928 while flying a rescue mission for the airship Italia in the Arctic, his body never recovered.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,14 +25,49 @@
       "wikidataQid": "Q926",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Roald_Amundsen",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Modern era: industrialization, imperial expansion, and democratic revolutions\", \"type\": \"EventWindow\", \"year\": \"1872-07-16, Borge Municipality\"}, {\"title\": \"Curiosity about unknown territories and navigation advances\", \"type\": \"Idea\", \"year\": \"1872-07-16, Borge Municipality\"}], \"effects\": [{\"title\": \"Expanded geographic knowledge and cultural exchange\", \"type\": \"Idea\", \"year\": \"1928-06-18\"}, {\"title\": \"Contributed to mass society, world wars, and foundations of contemporary global order\", \"type\": \"Movement\", \"year\": \"1928-06-18\"}], \"relationships\": [{\"sourceSlug\": \"roald-amundsen\", \"sourceName\": \"Roald Amundsen\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"country-norway\", \"targetName\": \"Norway\", \"context\": \"Roald Amundsen associated with Norway\"}, {\"sourceSlug\": \"roald-amundsen\", \"sourceName\": \"Roald Amundsen\", \"verb\": \"EXPLORES\", \"targetSlug\": \"field-290\", \"targetName\": \"Explorers & Navigators\", \"context\": \"Roald Amundsen: Exploration voyage in explorers & navigators\"}, {\"sourceSlug\": \"roald-amundsen\", \"sourceName\": \"Roald Amundsen\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"modern\", \"targetName\": \"Modern Era\", \"context\": \"Roald Amundsen was active during the Modern era\"}], \"places\": [{\"name\": \"Borge Municipality\", \"role\": \"Birth place\"}, {\"name\": \"Norway\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Roald Amundsen\", \"type\": \"Reference article\", \"slug\": \"roald-amundsen\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q926\", \"https://en.wikipedia.org/wiki/Roald_Amundsen\"], \"tags\": [\"Norway\", \"Explorers & Navigators\", \"Europe\", \"cultural-diffusion\", \"environmental-history\", \"geopolitical-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Norwegian polar tradition of Fridtjof Nansen",
+          "Adoption of Inuit survival techniques",
+          "Rivalry with Robert Falcon Scott"
+        ],
+        "effects": [
+          "First confirmed South Pole expedition",
+          "First Northwest Passage transit",
+          "Demonstrated value of indigenous knowledge in exploration",
+          "Polar exploration became symbol of national prestige"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "roald-amundsen",
+            "sourceName": "Roald Amundsen",
+            "verb": "OCCURS_IN",
+            "targetSlug": "norway",
+            "targetName": "Norway",
+            "context": "Norwegian explorer who became national hero"
+          },
+          {
+            "sourceSlug": "roald-amundsen",
+            "sourceName": "Roald Amundsen",
+            "verb": "INFLUENCES",
+            "targetSlug": "neil-armstrong",
+            "targetName": "Neil Armstrong",
+            "context": "Amundsen's polar achievements inspired later exploration milestones"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Explorers & Navigators — Norway — Modern"
+        "People — Explorers — Norway — Modern"
       ],
       "subjects": [
+        "Polar Exploration",
+        "South Pole",
         "Norway",
-        "Explorers & Navigators",
-        "Europe"
+        "Northwest Passage",
+        "Arctic",
+        "Antarctic",
+        "Navigation",
+        "Adventure"
       ],
       "frameworks": [
         "CULTURAL_DIFFUSION",

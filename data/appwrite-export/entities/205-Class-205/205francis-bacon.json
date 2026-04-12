@@ -11,7 +11,7 @@
       "name": "Francis Bacon",
       "label": "Person",
       "callNumber": "205.francis-bacon",
-      "summary": "Francis Bacon, 1st Viscount St Alban was an English philosopher and statesman who served as Attorney General and Lord Chancellor of England under King James I. Bacon argued for the importance of natural philosophy, guided by the scientific method, and his works remained influential throughout the scientific revolution.",
+      "summary": "Francis Bacon (1561–1626) was an English philosopher, statesman, and essayist who is widely regarded as the father of the scientific method. His 'Novum Organum' (1620) proposed systematic empirical investigation based on inductive reasoning, replacing the Aristotelian deductive approach that had dominated European thought for nearly two millennia.\n\nBacon served as Attorney General and Lord Chancellor of England under James I, but was convicted of bribery in 1621 and banned from public office. He devoted his remaining years to philosophy and science, producing works that laid the intellectual foundation for the Scientific Revolution.\n\nHis classification of knowledge influenced the Encyclopédie of Diderot and d'Alembert, and his vision of science as a collaborative, institutional enterprise anticipated modern research universities. Bacon died of pneumonia in 1626, reportedly caught while stuffing a chicken with snow to test the preservative effects of cold.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -25,12 +25,57 @@
       "wikidataQid": "Q37388",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Francis_Bacon",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Early Modern era: age of exploration, printing revolution, and religious reformation\", \"type\": \"EventWindow\", \"year\": \"1561-02-01, York House, Strand\"}, {\"title\": \"Rise of print media and public discourse\", \"type\": \"Idea\", \"year\": \"1561-02-01, York House, Strand\"}], \"effects\": [{\"title\": \"Shaped public opinion and historical record\", \"type\": \"Idea\", \"year\": \"1626-04-19\"}, {\"title\": \"Contributed to global exchange networks, modern state formation, and scientific revolution\", \"type\": \"Movement\", \"year\": \"1626-04-19\"}], \"relationships\": [{\"sourceSlug\": \"francis-bacon\", \"sourceName\": \"Francis Bacon\", \"verb\": \"REPORTS\", \"targetSlug\": \"field-205\", \"targetName\": \"Journalists & Chroniclers\", \"context\": \"Francis Bacon: Journalistic coverage in journalists & chroniclers\"}, {\"sourceSlug\": \"francis-bacon\", \"sourceName\": \"Francis Bacon\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"early-modern\", \"targetName\": \"Early Modern Era\", \"context\": \"Francis Bacon was active during the Early Modern era\"}], \"places\": [{\"name\": \"York House, Strand\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Francis Bacon\", \"type\": \"Reference article\", \"slug\": \"francis-bacon\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q37388\", \"https://en.wikipedia.org/wiki/Francis_Bacon\"], \"tags\": [\"Journalists & Chroniclers\", \"cause-and-effect\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Renaissance recovery of classical texts",
+          "Criticism of Aristotelian scholasticism",
+          "English intellectual ferment under Elizabeth I and James I"
+        ],
+        "effects": [
+          "Scientific method based on empirical observation and induction",
+          "Foundation for the Royal Society and institutional science",
+          "Influenced Encyclopédie's knowledge classification",
+          "Shaped Enlightenment emphasis on evidence-based reasoning"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "francis-bacon",
+            "sourceName": "Francis Bacon",
+            "verb": "INFLUENCES",
+            "targetSlug": "isaac-newton",
+            "targetName": "Isaac Newton",
+            "context": "Newton's experimental method embodied Bacon's empirical vision"
+          },
+          {
+            "sourceSlug": "francis-bacon",
+            "sourceName": "Francis Bacon",
+            "verb": "OCCURS_IN",
+            "targetSlug": "united-kingdom",
+            "targetName": "United Kingdom",
+            "context": "English Lord Chancellor and philosopher"
+          },
+          {
+            "sourceSlug": "francis-bacon",
+            "sourceName": "Francis Bacon",
+            "verb": "INFLUENCES",
+            "targetSlug": "voltaire",
+            "targetName": "Voltaire",
+            "context": "Voltaire championed Bacon's empiricism to French audiences in Letters on England"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Journalists & Chroniclers — Global — Early Modern"
+        "People — Philosophers — England — Early Modern"
       ],
       "subjects": [
-        "Journalists & Chroniclers"
+        "Scientific Method",
+        "Philosophy",
+        "Empiricism",
+        "England",
+        "Enlightenment",
+        "Renaissance",
+        "Inductive Reasoning",
+        "Novum Organum"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT",

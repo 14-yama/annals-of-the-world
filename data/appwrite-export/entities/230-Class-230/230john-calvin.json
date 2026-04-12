@@ -11,7 +11,7 @@
       "name": "John Calvin",
       "label": "Person",
       "callNumber": "230.john-calvin",
-      "summary": "John Calvin was a French theologian, pastor and reformer in Geneva during the Protestant Reformation. He was the principal figure in the development of the system of Christian theology later called Calvinism, including its doctrines of predestination and of God's absolute sovereignty in the salvation of the human soul from death and eternal damnation. Calvinist doctrines were influenced by and elaborated upon Augustinian and other Christian traditions.",
+      "summary": "John Calvin (1509–1564) was a French theologian, pastor, and reformer who became the most important figure in the second generation of the Protestant Reformation. His magnum opus, 'Institutes of the Christian Religion' (1536, expanded to 1559), provided Protestantism with its most comprehensive and systematic theology.\n\nFrom 1541 until his death, Calvin effectively governed Geneva as a theocratic republic, transforming the city into what John Knox called 'the most perfect school of Christ since the apostles.' He established the Geneva Academy (1559), which trained Protestant ministers who spread Reformed theology across Europe.\n\nCalvinism's doctrines — predestination, the sovereignty of God, and the 'Protestant work ethic' — profoundly shaped Western culture. Max Weber argued that Calvinist theology drove the development of capitalism. Calvin's influence extends to the Puritans, the Dutch Reformed Church, Scottish Presbyterianism, and the founding ethos of America.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -25,12 +25,58 @@
       "wikidataQid": "Q37577",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/John_Calvin",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Early Modern era: age of exploration, printing revolution, and religious reformation\", \"type\": \"EventWindow\", \"year\": \"1509-07-20, Noyon\"}, {\"title\": \"Evolution of legal systems and jurisprudence\", \"type\": \"Idea\", \"year\": \"1509-07-20, Noyon\"}], \"effects\": [{\"title\": \"Shaped legal precedents and judicial practices\", \"type\": \"Idea\", \"year\": \"1564-06-06\"}, {\"title\": \"Contributed to global exchange networks, modern state formation, and scientific revolution\", \"type\": \"Movement\", \"year\": \"1564-06-06\"}], \"relationships\": [{\"sourceSlug\": \"john-calvin\", \"sourceName\": \"John Calvin\", \"verb\": \"ADJUDICATES\", \"targetSlug\": \"field-230\", \"targetName\": \"Legal Figures\", \"context\": \"John Calvin: Legal ruling in legal figures\"}, {\"sourceSlug\": \"john-calvin\", \"sourceName\": \"John Calvin\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"early-modern\", \"targetName\": \"Early Modern Era\", \"context\": \"John Calvin was active during the Early Modern era\"}], \"places\": [{\"name\": \"Noyon\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: John Calvin\", \"type\": \"Reference article\", \"slug\": \"john-calvin\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q37577\", \"https://en.wikipedia.org/wiki/John_Calvin\"], \"tags\": [\"Legal Figures\", \"legal-interpretation\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Martin Luther's Reformation created Protestant theological space",
+          "French humanist education at University of Paris",
+          "Persecution of French Protestants drove Calvin to Geneva"
+        ],
+        "effects": [
+          "Reformed tradition became second major branch of Protestantism",
+          "Geneva model of church governance widely adopted",
+          "Protestant work ethic thesis linked Calvinism to capitalism",
+          "Puritan movements shaped England and colonial America",
+          "Predestination doctrine sparked centuries of theological debate"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "john-calvin",
+            "sourceName": "John Calvin",
+            "verb": "OCCURS_IN",
+            "targetSlug": "switzerland",
+            "targetName": "Switzerland",
+            "context": "Governed Geneva as a theocratic republic 1541–1564"
+          },
+          {
+            "sourceSlug": "john-calvin",
+            "sourceName": "John Calvin",
+            "verb": "INFLUENCES",
+            "targetSlug": "martin-luther",
+            "targetName": "Martin Luther",
+            "context": "Calvin systematized Reformed theology building on Luther's break with Rome"
+          },
+          {
+            "sourceSlug": "john-calvin",
+            "sourceName": "John Calvin",
+            "verb": "INFLUENCES",
+            "targetSlug": "american-revolution",
+            "targetName": "American Revolution",
+            "context": "Calvinist principles of resistance to tyranny influenced American founding"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Legal Figures — Global — Early Modern"
+        "People — Religious Figures — Switzerland — Early Modern"
       ],
       "subjects": [
-        "Legal Figures"
+        "Reformation",
+        "Theology",
+        "Geneva",
+        "Predestination",
+        "Protestantism",
+        "France",
+        "Switzerland",
+        "Calvinism"
       ],
       "frameworks": [
         "LEGAL_INTERPRETATION",

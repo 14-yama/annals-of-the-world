@@ -11,7 +11,7 @@
       "name": "Erasmus",
       "label": "Person",
       "callNumber": "201.erasmus",
-      "summary": "Desiderius Erasmus Roterodamus, commonly known in English as Erasmus of Rotterdam or simply Erasmus, was a Dutch humanist, Christian theologian, and pioneering philologist and educationalist. He was, through his writings and translations, one of the most influential scholars of the Northern Renaissance and a major figure of Western culture.",
+      "summary": "Desiderius Erasmus of Rotterdam (1466–1536) was a Dutch Renaissance humanist, Catholic priest, and theologian who was the most influential scholar of the Northern Renaissance. His satirical masterpiece 'In Praise of Folly' (1509) mocked the corruption of the Catholic Church, and his Greek New Testament (1516) provided the textual basis for Protestant Bible translations.\n\nErasmus corresponded with virtually every major intellectual in Europe — his network of over 3,000 surviving letters constitutes the first pan-European 'Republic of Letters.' He advocated reform within the Catholic Church through education and moral persuasion rather than schism, earning him criticism from both Catholics and Protestants.\n\nWhen Martin Luther's Reformation erupted in 1517, Erasmus initially sympathized but ultimately refused to join, famously declaring: 'I laid a hen's egg; Luther hatched a bird of quite a different kind.' His commitment to moderation in an age of extremism made him both admired and distrusted by all sides.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,12 +25,57 @@
       "wikidataQid": "Q43499",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Erasmus",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1466-11-06, Rotterdam\"}, {\"title\": \"Growth of educational institutions and scholarly traditions\", \"type\": \"Idea\", \"year\": \"1466-11-06, Rotterdam\"}], \"effects\": [{\"title\": \"Shaped intellectual traditions and educated future generations\", \"type\": \"Idea\", \"year\": \"1536-07-22\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1536-07-22\"}], \"relationships\": [{\"sourceSlug\": \"erasmus\", \"sourceName\": \"Erasmus\", \"verb\": \"TEACHES\", \"targetSlug\": \"field-201\", \"targetName\": \"Educators & Academics\", \"context\": \"Erasmus: Educational influence in educators & academics\"}, {\"sourceSlug\": \"erasmus\", \"sourceName\": \"Erasmus\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Erasmus was active during the Medieval era\"}], \"places\": [{\"name\": \"Rotterdam\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Erasmus\", \"type\": \"Reference article\", \"slug\": \"erasmus\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q43499\", \"https://en.wikipedia.org/wiki/Erasmus\"], \"tags\": [\"Educators & Academics\", \"cause-and-effect\", \"innovation-and-technology\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Northern Renaissance humanism and classical learning revival",
+          "Printing press enabled wide distribution of his works",
+          "Catholic Church corruption created demand for reform voices"
+        ],
+        "effects": [
+          "Greek New Testament enabled Protestant Bible translations",
+          "In Praise of Folly undermined Church authority through satire",
+          "Republic of Letters established model for scholarly networks",
+          "Educational reforms influenced European universities for centuries"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "erasmus",
+            "sourceName": "Erasmus",
+            "verb": "INFLUENCES",
+            "targetSlug": "martin-luther",
+            "targetName": "Martin Luther",
+            "context": "Erasmus's biblical scholarship and Church criticism paved way for Reformation"
+          },
+          {
+            "sourceSlug": "erasmus",
+            "sourceName": "Erasmus",
+            "verb": "OCCURS_IN",
+            "targetSlug": "netherlands",
+            "targetName": "Netherlands",
+            "context": "Born in Rotterdam, known as Erasmus of Rotterdam"
+          },
+          {
+            "sourceSlug": "erasmus",
+            "sourceName": "Erasmus",
+            "verb": "INFLUENCES",
+            "targetSlug": "thomas-more",
+            "targetName": "Thomas More",
+            "context": "Close friend; wrote In Praise of Folly while staying at More's house"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Educators & Academics — Global — Medieval"
+        "People — Philosophers — Netherlands — Early Modern"
       ],
       "subjects": [
-        "Educators & Academics"
+        "Renaissance Humanism",
+        "Reformation",
+        "Netherlands",
+        "Catholic Church",
+        "Biblical Scholarship",
+        "Satire",
+        "Education",
+        "Latin Literature"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT",

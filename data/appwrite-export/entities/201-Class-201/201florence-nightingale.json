@@ -11,7 +11,7 @@
       "name": "Florence Nightingale",
       "label": "Person",
       "callNumber": "201.florence-nightingale",
-      "summary": "Florence Nightingale was an English social reformer, statistician and the founder of modern nursing. Nightingale came to prominence while serving as a manager and trainer of nurses during the Crimean War, in which she organised care for wounded soldiers at Constantinople. She significantly reduced death rates by improving hygiene and living standards. Nightingale gave nursing a favourable reputation and became an icon of Victorian culture, especially in the persona of \"The Lady with the Lamp\" making rounds of wounded soldiers at night.",
+      "summary": "Florence Nightingale (1820–1910) was a British social reformer, statistician, and the founder of modern nursing. During the Crimean War (1854–1856), she organized care for wounded soldiers at Scutari, reducing the death rate from 42% to 2% through sanitation reforms — earning her the name 'The Lady with the Lamp.'\n\nNightingale was a pioneering statistician who invented the polar area diagram (a form of pie chart) to demonstrate that most British soldiers were dying from preventable diseases rather than combat wounds. Her 1859 book 'Notes on Nursing' established nursing as a respectable profession for women.\n\nShe spent 50 years as an invalid after the Crimean War but continued to influence public health policy from her bed, reforming military hospitals, Indian sanitation, and workhouse care. In 1907 she became the first woman to receive the Order of Merit. The WHO designated May 12 (her birthday) as International Nurses Day.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,12 +25,58 @@
       "wikidataQid": "Q37103",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Florence_Nightingale",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Modern era: industrialization, imperial expansion, and democratic revolutions\", \"type\": \"EventWindow\", \"year\": \"1820-05-12, Florence\"}, {\"title\": \"Growth of educational institutions and scholarly traditions\", \"type\": \"Idea\", \"year\": \"1820-05-12, Florence\"}], \"effects\": [{\"title\": \"Shaped intellectual traditions and educated future generations\", \"type\": \"Idea\", \"year\": \"1910-08-13\"}, {\"title\": \"Contributed to mass society, world wars, and foundations of contemporary global order\", \"type\": \"Movement\", \"year\": \"1910-08-13\"}], \"relationships\": [{\"sourceSlug\": \"florence-nightingale\", \"sourceName\": \"Florence Nightingale\", \"verb\": \"TEACHES\", \"targetSlug\": \"field-201\", \"targetName\": \"Educators & Academics\", \"context\": \"Florence Nightingale: Educational influence in educators & academics\"}, {\"sourceSlug\": \"florence-nightingale\", \"sourceName\": \"Florence Nightingale\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"modern\", \"targetName\": \"Modern Era\", \"context\": \"Florence Nightingale was active during the Modern era\"}], \"places\": [{\"name\": \"Florence\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Florence Nightingale\", \"type\": \"Reference article\", \"slug\": \"florence-nightingale\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q37103\", \"https://en.wikipedia.org/wiki/Florence_Nightingale\"], \"tags\": [\"Educators & Academics\", \"cause-and-effect\", \"innovation-and-technology\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Privileged education unusual for women of her era",
+          "Crimean War exposed catastrophic military hospital conditions",
+          "Personal calling to nursing despite family opposition"
+        ],
+        "effects": [
+          "Modern nursing profession established",
+          "Hospital sanitation reforms saved millions of lives",
+          "Pioneered use of statistics in public health",
+          "Military medical care permanently reformed",
+          "International Nurses Day celebrates her legacy"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "florence-nightingale",
+            "sourceName": "Florence Nightingale",
+            "verb": "OCCURS_IN",
+            "targetSlug": "united-kingdom",
+            "targetName": "United Kingdom",
+            "context": "British reformer who transformed nursing and public health"
+          },
+          {
+            "sourceSlug": "florence-nightingale",
+            "sourceName": "Florence Nightingale",
+            "verb": "INFLUENCES",
+            "targetSlug": "red-cross",
+            "targetName": "Red Cross",
+            "context": "Her Crimean War work inspired international humanitarian medical organizations"
+          },
+          {
+            "sourceSlug": "florence-nightingale",
+            "sourceName": "Florence Nightingale",
+            "verb": "INFLUENCES",
+            "targetSlug": "marie-curie",
+            "targetName": "Marie Curie",
+            "context": "Both pioneered contributions to medicine during wartime as women"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Educators & Academics — Global — Modern"
+        "People — Scientists — United Kingdom — Modern"
       ],
       "subjects": [
-        "Educators & Academics"
+        "Nursing",
+        "Public Health",
+        "Crimean War",
+        "Statistics",
+        "Women's History",
+        "United Kingdom",
+        "Sanitation",
+        "Medicine"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT",

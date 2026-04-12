@@ -11,7 +11,7 @@
       "name": "Neil Armstrong",
       "label": "Person",
       "callNumber": "201.neil-armstrong",
-      "summary": "Neil Alden Armstrong was an American astronaut and aeronautical engineer who, as the commander of the 1969 Apollo 11 mission, became the first person to walk on the Moon. He was also a naval aviator, test pilot and university professor.",
+      "summary": "Neil Alden Armstrong (1930–2012) was an American astronaut and aeronautical engineer who became the first human to walk on the Moon on July 20, 1969. As commander of Apollo 11, he spoke the immortal words: 'That's one small step for [a] man, one giant leap for mankind.'\n\nBefore NASA, Armstrong was a naval aviator who flew 78 combat missions in the Korean War, then became a test pilot at Edwards Air Force Base, flying the X-15 rocket plane to the edge of space. He narrowly survived the Gemini 8 mission (1966) when a thruster malfunction sent his capsule into a dangerous spin.\n\nAfter Apollo 11, Armstrong largely withdrew from public life, teaching aerospace engineering at the University of Cincinnati. He remained a deeply private figure who saw himself as an engineer rather than a celebrity, famously declining most autograph requests to prevent forgery.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,14 +25,58 @@
       "wikidataQid": "Q1615",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Neil_Armstrong",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Modern era: industrialization, imperial expansion, and democratic revolutions\", \"type\": \"EventWindow\", \"year\": \"1930-08-05, Wapakoneta\"}, {\"title\": \"Growth of educational institutions and scholarly traditions\", \"type\": \"Idea\", \"year\": \"1930-08-05, Wapakoneta\"}], \"effects\": [{\"title\": \"Shaped intellectual traditions and educated future generations\", \"type\": \"Idea\", \"year\": \"2012-08-25\"}, {\"title\": \"Contributed to mass society, world wars, and foundations of contemporary global order\", \"type\": \"Movement\", \"year\": \"2012-08-25\"}], \"relationships\": [{\"sourceSlug\": \"neil-armstrong\", \"sourceName\": \"Neil Armstrong\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"country-united-states\", \"targetName\": \"United States\", \"context\": \"Neil Armstrong associated with United States\"}, {\"sourceSlug\": \"neil-armstrong\", \"sourceName\": \"Neil Armstrong\", \"verb\": \"TEACHES\", \"targetSlug\": \"field-201\", \"targetName\": \"Educators & Academics\", \"context\": \"Neil Armstrong: Educational influence in educators & academics\"}, {\"sourceSlug\": \"neil-armstrong\", \"sourceName\": \"Neil Armstrong\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"modern\", \"targetName\": \"Modern Era\", \"context\": \"Neil Armstrong was active during the Modern era\"}], \"places\": [{\"name\": \"Wapakoneta\", \"role\": \"Birth place\"}, {\"name\": \"United States\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Neil Armstrong\", \"type\": \"Reference article\", \"slug\": \"neil-armstrong\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q1615\", \"https://en.wikipedia.org/wiki/Neil_Armstrong\"], \"tags\": [\"United States\", \"Educators & Academics\", \"Americas\", \"cause-and-effect\", \"innovation-and-technology\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Space Race between USA and Soviet Union",
+          "Kennedy's 1961 Moon commitment",
+          "Armstrong's exceptional piloting skills from Korean War and X-15 program"
+        ],
+        "effects": [
+          "First human Moon landing inspired global wonder",
+          "Proved human space exploration was possible",
+          "Apollo program advanced computing and materials science",
+          "Cultural symbol of American achievement",
+          "Space exploration became permanent human endeavor"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "neil-armstrong",
+            "sourceName": "Neil Armstrong",
+            "verb": "OCCURS_IN",
+            "targetSlug": "united-states",
+            "targetName": "United States",
+            "context": "American astronaut born in Wapakoneta, Ohio"
+          },
+          {
+            "sourceSlug": "neil-armstrong",
+            "sourceName": "Neil Armstrong",
+            "verb": "INFLUENCES",
+            "targetSlug": "space-exploration",
+            "targetName": "Space Exploration",
+            "context": "First moonwalk proved human interplanetary travel was achievable"
+          },
+          {
+            "sourceSlug": "neil-armstrong",
+            "sourceName": "Neil Armstrong",
+            "verb": "OCCURS_IN",
+            "targetSlug": "cold-war",
+            "targetName": "Cold War",
+            "context": "Moon landing was decisive American victory in the Space Race"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Educators & Academics — United States — Modern"
+        "People — Explorers — United States — Contemporary"
       ],
       "subjects": [
+        "Space Exploration",
+        "Apollo Program",
+        "Moon Landing",
+        "NASA",
         "United States",
-        "Educators & Academics",
-        "Americas"
+        "Cold War",
+        "Aviation",
+        "Korean War"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT",

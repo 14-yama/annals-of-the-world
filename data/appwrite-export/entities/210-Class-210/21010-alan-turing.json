@@ -11,7 +11,7 @@
       "name": "Alan Turing",
       "label": "Person",
       "callNumber": "210.10-alan-turing",
-      "summary": "Mathematician and logician who developed the theoretical foundations of computer science with the Turing machine concept (1936). His work at Bletchley Park cracking the Enigma code was critical to Allied victory in WWII, and his ideas on machine intelligence prefigured AI.",
+      "summary": "Alan Turing (1912–1954) was a British mathematician, logician, and cryptanalyst who is widely regarded as the father of theoretical computer science and artificial intelligence. His 1936 paper 'On Computable Numbers' introduced the concept of the Turing machine, a mathematical model that formalized the notion of algorithmic computation.\n\nDuring World War II, Turing worked at Bletchley Park where he led the effort to crack the German Enigma cipher. His work on the Bombe machine is estimated to have shortened the war by two years and saved millions of lives.\n\nIn 1950, Turing proposed the 'Turing Test' as a measure of machine intelligence, a concept that remains central to AI research. He was prosecuted in 1952 for homosexuality under British law, chemically castrated, and died of cyanide poisoning in 1954. He received a posthumous royal pardon in 2013.",
       "era": "Contemporary",
       "eraSlug": "contemporary",
       "eraDivision": "Contemporary",
@@ -25,15 +25,74 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"World War II intelligence needs\", \"type\": \"Event\", \"year\": \"1939–1945\", \"slug\": \"world_war_ii\"}], \"effects\": [{\"title\": \"Digital Revolution\", \"type\": \"Movement\", \"year\": \"1970s onwards\", \"slug\": \"digital_revolution\"}, {\"title\": \"Artificial Intelligence field founded\", \"type\": \"Event\", \"year\": \"1956\"}], \"relationships\": [{\"sourceSlug\": \"alan_turing\", \"sourceName\": \"Alan Turing\", \"verb\": \"ENABLES\", \"targetSlug\": \"digital_revolution\", \"targetName\": \"Digital Revolution\", \"context\": \"Turing's theoretical work laid foundations for all computing\"}, {\"sourceSlug\": \"world_war_ii\", \"sourceName\": \"World War II\", \"verb\": \"CAUSES\", \"targetSlug\": \"alan_turing\", \"targetName\": \"Alan Turing\", \"context\": \"Wartime need for codebreaking drove his practical work\"}, {\"sourceSlug\": \"alan_turing\", \"sourceName\": \"Alan Turing\", \"verb\": \"CAUSES\", \"targetSlug\": \"digital_revolution\", \"targetName\": \"Digital Revolution\", \"context\": \"Consequent outcome (1970s onwards)\"}, {\"sourceSlug\": \"alan_turing\", \"sourceName\": \"Alan Turing\", \"verb\": \"AUTHORS\", \"targetSlug\": \"on_computable_numbers_1936\", \"targetName\": \"On Computable Numbers (1936)\", \"context\": \"Text reference: Academic paper\"}, {\"sourceSlug\": \"alan_turing\", \"sourceName\": \"Alan Turing\", \"verb\": \"AUTHORS\", \"targetSlug\": \"computing_machinery_and_intelligence_1950\", \"targetName\": \"Computing Machinery and Intelligence (1950)\", \"context\": \"Text reference: Academic paper\"}], \"places\": [{\"name\": \"Bletchley Park\", \"role\": \"Enigma codebreaking\"}, {\"name\": \"Manchester\", \"role\": \"Early computing\"}], \"texts\": [{\"title\": \"On Computable Numbers (1936)\", \"type\": \"Academic paper\", \"slug\": \"on_computable_numbers_1936\"}, {\"title\": \"Computing Machinery and Intelligence (1950)\", \"type\": \"Academic paper\", \"slug\": \"computing_machinery_and_intelligence_1950\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Cambridge mathematical tradition",
+          "Hilbert's Entscheidungsproblem challenge",
+          "German Enigma encryption during WWII"
+        ],
+        "effects": [
+          "Foundation of theoretical computer science",
+          "Allied victory accelerated by Enigma decryption",
+          "Turing Test became AI benchmark",
+          "Posthumous pardon inspired LGBTQ+ rights discourse",
+          "ACM Turing Award named in his honor"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "alan-turing",
+            "sourceName": "Alan Turing",
+            "verb": "INFLUENCES",
+            "targetSlug": "computer-science",
+            "targetName": "Computer Science",
+            "context": "Founded theoretical computer science with the Turing machine concept"
+          },
+          {
+            "sourceSlug": "alan-turing",
+            "sourceName": "Alan Turing",
+            "verb": "OCCURS_IN",
+            "targetSlug": "united-kingdom",
+            "targetName": "United Kingdom",
+            "context": "Born in London, worked at Bletchley Park and Manchester"
+          },
+          {
+            "sourceSlug": "alan-turing",
+            "sourceName": "Alan Turing",
+            "verb": "INFLUENCES",
+            "targetSlug": "world-war-ii",
+            "targetName": "World War II",
+            "context": "Cracked Enigma cipher, shortening the war by an estimated two years"
+          },
+          {
+            "sourceSlug": "alan-turing",
+            "sourceName": "Alan Turing",
+            "verb": "INFLUENCES",
+            "targetSlug": "artificial-intelligence",
+            "targetName": "Artificial Intelligence",
+            "context": "Proposed the Turing Test in 1950 as measure of machine intelligence"
+          },
+          {
+            "sourceSlug": "alan-turing",
+            "sourceName": "Alan Turing",
+            "verb": "CAUSES",
+            "targetSlug": "digital-revolution",
+            "targetName": "Digital Revolution",
+            "context": "His theoretical work laid groundwork for programmable computers"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Philosophers & Thinkers — United Kingdom — Contemporary"
+        "People — Scientists — United Kingdom — Modern"
       ],
       "subjects": [
         "Computer Science",
-        "Enigma",
+        "Cryptography",
+        "World War II",
         "Artificial Intelligence",
-        "Mathematics"
+        "Mathematics",
+        "United Kingdom",
+        "Bletchley Park",
+        "Enigma"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT",

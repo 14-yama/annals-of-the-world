@@ -11,7 +11,7 @@
       "name": "Archimedes",
       "label": "Person",
       "callNumber": "240.01-archimedes",
-      "summary": "Greek mathematician, physicist, and engineer (c. 287–212 BCE) from Syracuse. Discovered the principle of buoyancy, calculated pi, and invented war machines. Considered the greatest mathematician of antiquity.",
+      "summary": "Archimedes of Syracuse (c. 287–212 BCE) was a Greek mathematician, physicist, engineer, and astronomer who is considered the greatest mathematician of antiquity and one of the greatest of all time. He anticipated modern calculus by using the method of exhaustion to calculate areas under curves and volumes of solids.\n\nHis contributions include the Archimedes' principle of buoyancy (legend has him shouting 'Eureka!' in his bath), the Archimedean screw for raising water, and formulas for the areas and volumes of spheres and cylinders. He calculated pi to remarkable precision and invented war machines that held off the Roman siege of Syracuse for two years.\n\nArchimedes was killed by a Roman soldier during the fall of Syracuse in 212 BCE, reportedly while working on a mathematical diagram. His tomb bore the figure of a sphere inscribed in a cylinder, honoring his proof that their volume ratio is 2:3.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,15 +25,66 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Greek Natural Philosophy\", \"type\": \"Idea\", \"year\": \"c. 600 BCE\", \"slug\": \"greek_natural_philosophy\"}], \"effects\": [{\"title\": \"Foundations of calculus and physics\", \"type\": \"Idea\", \"year\": \"c. 250 BCE\"}], \"relationships\": [{\"sourceSlug\": \"greek_natural_philosophy\", \"sourceName\": \"Greek Natural Philosophy\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"archimedes\", \"targetName\": \"Archimedes\", \"context\": \"Built on Greek mathematical tradition\"}, {\"sourceSlug\": \"greek_natural_philosophy\", \"sourceName\": \"Greek Natural Philosophy\", \"verb\": \"CAUSES\", \"targetSlug\": \"archimedes\", \"targetName\": \"Archimedes\", \"context\": \"Causal antecedent (c. 600 BCE)\"}, {\"sourceSlug\": \"archimedes\", \"sourceName\": \"Archimedes\", \"verb\": \"AUTHORS\", \"targetSlug\": \"on_floating_bodies\", \"targetName\": \"On Floating Bodies\", \"context\": \"Text reference: Scientific treatise\"}, {\"sourceSlug\": \"archimedes\", \"sourceName\": \"Archimedes\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"gastraphetes\", \"targetName\": \"Gastraphetes (Belly Bow)\", \"context\": \"Active during this event\"}], \"places\": [{\"name\": \"Syracuse, Sicily\", \"role\": \"Lifetime residence\"}], \"texts\": [{\"title\": \"On Floating Bodies\", \"type\": \"Scientific treatise\", \"slug\": \"on_floating_bodies\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Alexandrian mathematical tradition",
+          "Greek scientific culture in Syracuse",
+          "Patronage of King Hiero II of Syracuse"
+        ],
+        "effects": [
+          "Foundation of hydrostatics and statics",
+          "Method of exhaustion anticipated integral calculus",
+          "Archimedean screw still used worldwide",
+          "Inspired Renaissance mathematicians like Galileo",
+          "Pi calculation methods advanced mathematics"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "archimedes",
+            "sourceName": "Archimedes",
+            "verb": "OCCURS_IN",
+            "targetSlug": "syracuse",
+            "targetName": "Syracuse",
+            "context": "Lived and died in Syracuse, Sicily"
+          },
+          {
+            "sourceSlug": "archimedes",
+            "sourceName": "Archimedes",
+            "verb": "INFLUENCES",
+            "targetSlug": "galileo-galilei",
+            "targetName": "Galileo Galilei",
+            "context": "Galileo called Archimedes 'superhuman' and built on his work in mechanics"
+          },
+          {
+            "sourceSlug": "archimedes",
+            "sourceName": "Archimedes",
+            "verb": "INFLUENCES",
+            "targetSlug": "isaac-newton",
+            "targetName": "Isaac Newton",
+            "context": "Newton's calculus formalized methods Archimedes pioneered"
+          },
+          {
+            "sourceSlug": "archimedes",
+            "sourceName": "Archimedes",
+            "verb": "INFLUENCES",
+            "targetSlug": "euclid",
+            "targetName": "Euclid",
+            "context": "Built upon Euclidean geometry in his mathematical proofs"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Scientists & Inventors — Greece — Classical"
+        "People — Scientists — Greece — Classical"
       ],
       "subjects": [
         "Mathematics",
         "Physics",
         "Engineering",
-        "Syracuse"
+        "Classical Greece",
+        "Syracuse",
+        "Sicily",
+        "Buoyancy",
+        "Calculus"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT",

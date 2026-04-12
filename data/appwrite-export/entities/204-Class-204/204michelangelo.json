@@ -11,7 +11,7 @@
       "name": "Michelangelo",
       "label": "Person",
       "callNumber": "204.michelangelo",
-      "summary": "Michelangelo di Lodovico Buonarroti Simoni, known mononymously as Michelangelo, was an Italian sculptor, painter, architect, and poet of the High Renaissance. He was born in the Republic of Florence but was mostly active in Rome from his 30s onwards. His work was inspired by models from classical antiquity and had a lasting influence on Western art. Michelangelo's creative abilities and mastery in a range of artistic arenas define him as an archetypal Renaissance man, along with his rival and elder contemporary, Leonardo da Vinci.",
+      "summary": "Michelangelo di Lodovico Buonarroti Simoni (1475–1564) was an Italian sculptor, painter, architect, and poet of the High Renaissance, considered one of the greatest artists of all time. His works — the Pietà (1499), David (1504), and the Sistine Chapel ceiling (1508–1512) — represent the pinnacle of Renaissance art.\n\nMichelangelo spent four years painting the Sistine Chapel ceiling alone, creating over 300 figures depicting scenes from Genesis. He later painted 'The Last Judgment' (1536–1541) on the altar wall. As architect of St. Peter's Basilica from 1546, he designed the iconic dome that dominates Rome's skyline to this day.\n\nA perfectionist who destroyed works he deemed unworthy, Michelangelo believed sculpture was the art of 'liberating the figure imprisoned in the marble.' He lived to 88 — extraordinary for his era — working until days before his death, with his last known sculpture left deliberately unfinished.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,12 +25,66 @@
       "wikidataQid": "Q5592",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Michelangelo",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1475-03-15, Caprese Michelangelo\"}, {\"title\": \"Advancement of engineering knowledge and construction techniques\", \"type\": \"Idea\", \"year\": \"1475-03-15, Caprese Michelangelo\"}], \"effects\": [{\"title\": \"Left lasting engineering works and technical innovations\", \"type\": \"Idea\", \"year\": \"1564-02-28\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1564-02-28\"}], \"relationships\": [{\"sourceSlug\": \"michelangelo\", \"sourceName\": \"Michelangelo\", \"verb\": \"DESIGNS\", \"targetSlug\": \"field-204\", \"targetName\": \"Architects & Engineers\", \"context\": \"Michelangelo: Engineering achievement in architects & engineers\"}, {\"sourceSlug\": \"michelangelo\", \"sourceName\": \"Michelangelo\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Michelangelo was active during the Medieval era\"}], \"places\": [{\"name\": \"Caprese Michelangelo\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Michelangelo\", \"type\": \"Reference article\", \"slug\": \"michelangelo\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q5592\", \"https://en.wikipedia.org/wiki/Michelangelo\"], \"tags\": [\"Architects & Engineers\", \"innovation-and-technology\", \"cause-and-effect\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Medici patronage in Florence",
+          "Italian Renaissance cultural flowering",
+          "Classical Greek and Roman artistic models"
+        ],
+        "effects": [
+          "Sistine Chapel ceiling became most famous painting in the world",
+          "David sculpture became symbol of Florence and Renaissance humanism",
+          "St. Peter's dome defined Roman architecture",
+          "Mannerist and Baroque art directly descended from his style",
+          "Established sculptor-artist as cultural hero"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "michelangelo",
+            "sourceName": "Michelangelo",
+            "verb": "OCCURS_IN",
+            "targetSlug": "italy",
+            "targetName": "Italy",
+            "context": "Worked in Florence and Rome throughout his career"
+          },
+          {
+            "sourceSlug": "michelangelo",
+            "sourceName": "Michelangelo",
+            "verb": "INFLUENCES",
+            "targetSlug": "caravaggio",
+            "targetName": "Caravaggio",
+            "context": "Caravaggio's dramatic figural style was influenced by Michelangelo's muscular forms"
+          },
+          {
+            "sourceSlug": "michelangelo",
+            "sourceName": "Michelangelo",
+            "verb": "INFLUENCES",
+            "targetSlug": "leonardo-da-vinci",
+            "targetName": "Leonardo da Vinci",
+            "context": "Rivals who pushed each other to greater heights in Renaissance Florence"
+          },
+          {
+            "sourceSlug": "michelangelo",
+            "sourceName": "Michelangelo",
+            "verb": "INFLUENCES",
+            "targetSlug": "pablo-picasso",
+            "targetName": "Pablo Picasso",
+            "context": "Picasso studied Michelangelo's figural distortions as precedent"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Architects & Engineers — Global — Medieval"
+        "People — Artists — Italy — Early Modern"
       ],
       "subjects": [
-        "Architects & Engineers"
+        "Renaissance Art",
+        "Sculpture",
+        "Painting",
+        "Architecture",
+        "Italy",
+        "Sistine Chapel",
+        "Florence",
+        "Rome"
       ],
       "frameworks": [
         "INNOVATION_AND_TECHNOLOGY",

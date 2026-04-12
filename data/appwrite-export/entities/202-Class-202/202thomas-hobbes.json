@@ -11,7 +11,7 @@
       "name": "Thomas Hobbes",
       "label": "Person",
       "callNumber": "202.thomas-hobbes",
-      "summary": "Thomas Hobbes was an English philosopher and political theorist, best known for his 1651 book Leviathan, in which he expounds an influential formulation of social contract theory. He is considered to be one of the founders of modern political philosophy.",
+      "summary": "Thomas Hobbes (1588–1679) was an English philosopher best known for his 1651 masterwork 'Leviathan,' which laid the foundation for modern political philosophy. He argued that in the 'state of nature,' human life would be 'solitary, poor, nasty, brutish, and short,' and that people must surrender freedoms to a sovereign authority through a social contract to avoid perpetual war.\n\nHobbes witnessed the English Civil War firsthand — an experience that profoundly shaped his conviction that strong central authority was essential to prevent societal collapse. He spent years in exile in Paris, where he tutored the future Charles II.\n\nHis materialist philosophy — holding that everything, including thought and consciousness, is matter in motion — was revolutionary and controversial. Hobbes influenced Locke, Rousseau, and the entire social contract tradition that underpins modern democratic theory.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -25,12 +25,57 @@
       "wikidataQid": "Q37621",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Thomas_Hobbes",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Early Modern era: age of exploration, printing revolution, and religious reformation\", \"type\": \"EventWindow\", \"year\": \"1588-04-05, Westport\"}, {\"title\": \"Expansion of trade networks and commercial exchange\", \"type\": \"Idea\", \"year\": \"1588-04-05, Westport\"}], \"effects\": [{\"title\": \"Influenced economic patterns and commercial practices\", \"type\": \"Idea\", \"year\": \"1679-12-04\"}, {\"title\": \"Contributed to global exchange networks, modern state formation, and scientific revolution\", \"type\": \"Movement\", \"year\": \"1679-12-04\"}], \"relationships\": [{\"sourceSlug\": \"thomas-hobbes\", \"sourceName\": \"Thomas Hobbes\", \"verb\": \"TRADES\", \"targetSlug\": \"field-202\", \"targetName\": \"Merchants & Economists\", \"context\": \"Thomas Hobbes: Commercial activity in merchants & economists\"}, {\"sourceSlug\": \"thomas-hobbes\", \"sourceName\": \"Thomas Hobbes\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"early-modern\", \"targetName\": \"Early Modern Era\", \"context\": \"Thomas Hobbes was active during the Early Modern era\"}], \"places\": [{\"name\": \"Westport\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Thomas Hobbes\", \"type\": \"Reference article\", \"slug\": \"thomas-hobbes\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q37621\", \"https://en.wikipedia.org/wiki/Thomas_Hobbes\"], \"tags\": [\"Merchants & Economists\", \"economic-systems\", \"geopolitical-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "English Civil War demonstrated dangers of political chaos",
+          "Renaissance humanism and classical education",
+          "Galileo's mechanistic worldview inspired materialist philosophy"
+        ],
+        "effects": [
+          "Social contract theory became foundation of modern political philosophy",
+          "Influenced Locke and Rousseau's competing social contract theories",
+          "Materialist philosophy pioneered secular approach to politics",
+          "Sovereignty theory shaped absolutist and later democratic thought"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "thomas-hobbes",
+            "sourceName": "Thomas Hobbes",
+            "verb": "INFLUENCES",
+            "targetSlug": "john-locke",
+            "targetName": "John Locke",
+            "context": "Locke's social contract theory directly responded to Hobbes"
+          },
+          {
+            "sourceSlug": "thomas-hobbes",
+            "sourceName": "Thomas Hobbes",
+            "verb": "INFLUENCES",
+            "targetSlug": "jean-jacques-rousseau",
+            "targetName": "Jean-Jacques Rousseau",
+            "context": "Rousseau's social contract challenged Hobbes' pessimistic view of human nature"
+          },
+          {
+            "sourceSlug": "thomas-hobbes",
+            "sourceName": "Thomas Hobbes",
+            "verb": "OCCURS_IN",
+            "targetSlug": "united-kingdom",
+            "targetName": "United Kingdom",
+            "context": "English philosopher who lived through the Civil War"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Merchants & Economists — Global — Early Modern"
+        "People — Philosophers — England — Early Modern"
       ],
       "subjects": [
-        "Merchants & Economists"
+        "Political Philosophy",
+        "Social Contract",
+        "English Civil War",
+        "Leviathan",
+        "Materialism",
+        "England",
+        "Enlightenment",
+        "Sovereignty"
       ],
       "frameworks": [
         "ECONOMIC_SYSTEMS",

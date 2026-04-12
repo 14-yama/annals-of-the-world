@@ -11,7 +11,7 @@
       "name": "Ibn Battuta",
       "label": "Person",
       "callNumber": "202.ibn-battuta",
-      "summary": "Ibn Battuta was a Maghrebi Muslim traveller, explorer and scholar. Over a period of 30 years from 1325 to 1354, he visited much of Africa, Asia, and the Iberian Peninsula. Near the end of his life, Ibn Battuta dictated an account of his journeys, titled A Gift to Those Who Contemplate the Wonders of Cities and the Marvels of Travelling, commonly known as The Rihla. Ibn Battuta travelled more than any other explorer in pre-modern history, totalling around 117,000 km (73,000 mi), surpassing Zheng He with about 50,000 km (31,000 mi) and Marco Polo with 24,000 km (15,000 mi).",
+      "summary": "Abu Abdullah Muhammad Ibn Battuta (1304–1368/1369) was a Moroccan scholar and explorer who undertook the most extensive pre-modern journey ever recorded, traveling approximately 120,000 kilometers over 29 years — three times the distance covered by Marco Polo. His 'Rihla' (Journey) provides an unparalleled firsthand account of the 14th-century Islamic world.\n\nIbn Battuta departed Tangier in 1325 at age 21, ostensibly for the Hajj to Mecca, but didn't return for nearly three decades. He visited every Muslim country of his time, plus Constantinople, Sri Lanka, the Maldives, Sumatra, and China, serving variously as a judge, ambassador, and merchant along the way.\n\nHis account describes the Black Death in Syria, the court of the Delhi Sultanate, the gold of Mali's Mansa Musa, and the vast Mongol steppe. Dictated to Ibn Juzayy upon his return to Fez, the Rihla provides irreplaceable documentation of medieval Islamic civilization at its height.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,12 +25,57 @@
       "wikidataQid": "Q7331",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Ibn_Battuta",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1304-03-03, Tangier\"}, {\"title\": \"Expansion of trade networks and commercial exchange\", \"type\": \"Idea\", \"year\": \"1304-03-03, Tangier\"}], \"effects\": [{\"title\": \"Influenced economic patterns and commercial practices\", \"type\": \"Idea\", \"year\": \"1368\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1368\"}], \"relationships\": [{\"sourceSlug\": \"ibn-battuta\", \"sourceName\": \"Ibn Battuta\", \"verb\": \"TRADES\", \"targetSlug\": \"field-202\", \"targetName\": \"Merchants & Economists\", \"context\": \"Ibn Battuta: Commercial activity in merchants & economists\"}, {\"sourceSlug\": \"ibn-battuta\", \"sourceName\": \"Ibn Battuta\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Ibn Battuta was active during the Medieval era\"}], \"places\": [{\"name\": \"Tangier\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Ibn Battuta\", \"type\": \"Reference article\", \"slug\": \"ibn-battuta\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q7331\", \"https://en.wikipedia.org/wiki/Ibn_Battuta\"], \"tags\": [\"Merchants & Economists\", \"economic-systems\", \"geopolitical-linkage\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Islamic tradition of travel for learning (rihla)",
+          "Vast dar al-Islam network of hospitality for scholars",
+          "Personal ambition and curiosity from Tangier's cosmopolitan culture"
+        ],
+        "effects": [
+          "Most extensive pre-modern travelogue ever recorded",
+          "Irreplaceable documentation of 14th-century Islamic world",
+          "Descriptions of Mali, India, and China enrich historical knowledge",
+          "Inspired later European Age of Exploration"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "ibn-battuta",
+            "sourceName": "Ibn Battuta",
+            "verb": "OCCURS_IN",
+            "targetSlug": "morocco",
+            "targetName": "Morocco",
+            "context": "Born in Tangier, departed and returned to Morocco"
+          },
+          {
+            "sourceSlug": "ibn-battuta",
+            "sourceName": "Ibn Battuta",
+            "verb": "INFLUENCES",
+            "targetSlug": "marco-polo",
+            "targetName": "Marco Polo",
+            "context": "Two greatest medieval travelers — Ibn Battuta covered three times Marco Polo's distance"
+          },
+          {
+            "sourceSlug": "ibn-battuta",
+            "sourceName": "Ibn Battuta",
+            "verb": "OCCURS_IN",
+            "targetSlug": "india",
+            "targetName": "India",
+            "context": "Served as judge in the Delhi Sultanate for eight years"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Merchants & Economists — Global — Medieval"
+        "People — Explorers — Morocco — Medieval"
       ],
       "subjects": [
-        "Merchants & Economists"
+        "Exploration",
+        "Morocco",
+        "Islamic World",
+        "Medieval Travel",
+        "Rihla",
+        "Mecca",
+        "Mali",
+        "India"
       ],
       "frameworks": [
         "ECONOMIC_SYSTEMS",

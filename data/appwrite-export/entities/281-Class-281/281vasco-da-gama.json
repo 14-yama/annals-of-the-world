@@ -11,7 +11,7 @@
       "name": "Vasco da Gama",
       "label": "Person",
       "callNumber": "281.vasco-da-gama",
-      "summary": "Vasco da Gama was a Portuguese mariner, explorer and nobleman. His discovery of the first direct maritime route between Europe and India via the Cape of Good Hope and across the Indian Ocean from Malindi in Kenya to Kozhikode was to open up European exploration of, and commerce with, India, and is considered a landmark event and a turning point in world history.",
+      "summary": "Vasco da Gama (c. 1460–1524) was a Portuguese explorer who became the first European to reach India by sea, rounding the Cape of Good Hope in 1497–1498. His discovery of the sea route to Asia opened direct maritime trade between Europe and the lucrative spice markets of the East, fundamentally altering global commerce.\n\nDa Gama's first voyage (1497–1499) with four ships and 170 men was one of the most ambitious in exploration history. After rounding Africa, he reached Calicut (modern Kozhikode) on India's Malabar Coast in May 1498. The voyage lost two ships and over half its crew, but the spices brought back covered the expedition's cost sixty times over.\n\nHe made three voyages to India and was appointed Viceroy of Portuguese India in 1524, dying of malaria in Cochin shortly after arrival. His route shattered Venice's Mediterranean spice monopoly and launched the Portuguese Empire.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,12 +25,66 @@
       "wikidataQid": "Q7328",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Vasco_da_Gama",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1469, Sines\"}, {\"title\": \"Naval warfare and maritime strategy\", \"type\": \"Idea\", \"year\": \"1469, Sines\"}], \"effects\": [{\"title\": \"Influenced naval strategy and maritime power dynamics\", \"type\": \"Idea\", \"year\": \"1525-01-03\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1525-01-03\"}], \"relationships\": [{\"sourceSlug\": \"vasco-da-gama\", \"sourceName\": \"Vasco da Gama\", \"verb\": \"COMMANDS\", \"targetSlug\": \"field-281\", \"targetName\": \"Naval Commanders\", \"context\": \"Vasco da Gama: Naval command in naval commanders\"}, {\"sourceSlug\": \"vasco-da-gama\", \"sourceName\": \"Vasco da Gama\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Vasco da Gama was active during the Medieval era\"}], \"places\": [{\"name\": \"Sines\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Vasco da Gama\", \"type\": \"Reference article\", \"slug\": \"vasco-da-gama\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q7328\", \"https://en.wikipedia.org/wiki/Vasco_da_Gama\"], \"tags\": [\"Naval Commanders\", \"conflict-and-resolution\", \"geopolitical-linkage\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Portuguese maritime tradition under Prince Henry the Navigator",
+          "Ottoman control of overland spice routes created incentive",
+          "Bartolomeu Dias' rounding of Cape of Good Hope (1488) proved route feasible"
+        ],
+        "effects": [
+          "Direct Europe-India sea trade bypassed Ottoman middlemen",
+          "Portuguese Empire became first global maritime empire",
+          "Venice's spice monopoly broken",
+          "European colonization of Asia began",
+          "Global trade networks permanently reconfigured"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "vasco-da-gama",
+            "sourceName": "Vasco da Gama",
+            "verb": "OCCURS_IN",
+            "targetSlug": "portugal",
+            "targetName": "Portugal",
+            "context": "Portuguese explorer who sailed for the Crown"
+          },
+          {
+            "sourceSlug": "vasco-da-gama",
+            "sourceName": "Vasco da Gama",
+            "verb": "OCCURS_IN",
+            "targetSlug": "india",
+            "targetName": "India",
+            "context": "Reached Calicut on India's Malabar Coast in 1498"
+          },
+          {
+            "sourceSlug": "vasco-da-gama",
+            "sourceName": "Vasco da Gama",
+            "verb": "INFLUENCES",
+            "targetSlug": "christopher-columbus",
+            "targetName": "Christopher Columbus",
+            "context": "Both opened new maritime routes that reshaped global trade"
+          },
+          {
+            "sourceSlug": "vasco-da-gama",
+            "sourceName": "Vasco da Gama",
+            "verb": "INFLUENCES",
+            "targetSlug": "ferdinand-magellan",
+            "targetName": "Ferdinand Magellan",
+            "context": "Da Gama's success inspired Magellan's circumnavigation attempt"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Naval Commanders — Global — Medieval"
+        "People — Explorers — Portugal — Early Modern"
       ],
       "subjects": [
-        "Naval Commanders"
+        "Exploration",
+        "Portugal",
+        "India",
+        "Spice Trade",
+        "Age of Discovery",
+        "Maritime History",
+        "Cape of Good Hope",
+        "Colonialism"
       ],
       "frameworks": [
         "CONFLICT_AND_RESOLUTION",

@@ -11,7 +11,7 @@
       "name": "Deng Xiaoping",
       "label": "Person",
       "callNumber": "222.deng-xiaoping",
-      "summary": "Leader of China (1978–1989 (paramount leader)). 'Reform and Opening Up'; Special Economic Zones; Tiananmen Square crackdown 1989; 'Socialism with Chinese Characteristics'; 'It doesn't matter whether the cat is black or white'",
+      "summary": "Deng Xiaoping (1904–1997) was a Chinese revolutionary and statesman who served as the paramount leader of China from 1978 to 1989. Though he never held the title of head of state, Deng was the architect of China's economic reforms that transformed a impoverished agrarian nation into the world's second-largest economy.\n\nDeng introduced the 'Reform and Opening Up' policy (1978), establishing Special Economic Zones, allowing private enterprise, and welcoming foreign investment — all while maintaining the Chinese Communist Party's political monopoly. His pragmatic philosophy was captured in his famous phrase: 'It doesn't matter whether a cat is black or white, as long as it catches mice.'\n\nThe contradictions of Deng's legacy are stark: he lifted hundreds of millions out of poverty while ordering the Tiananmen Square crackdown (June 4, 1989) that killed hundreds to thousands of pro-democracy protesters. He remains China's most consequential leader after Mao.",
       "era": "Contemporary",
       "eraSlug": "contemporary",
       "eraDivision": "Contemporary",
@@ -25,14 +25,58 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Mao Zedong\", \"type\": \"Person\", \"year\": \"\", \"slug\": \"mao-zedong\"}], \"effects\": [{\"title\": \"Jiang Zemin\", \"type\": \"Person\", \"year\": \"\", \"slug\": \"jiang-zemin\"}, {\"title\": \"Hu Jintao\", \"type\": \"Person\", \"year\": \"\", \"slug\": \"hu-jintao\"}], \"relationships\": [{\"sourceSlug\": \"deng-xiaoping\", \"sourceName\": \"Deng Xiaoping\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"china\", \"targetName\": \"China\", \"context\": \"Deng Xiaoping in the history of China\"}, {\"sourceSlug\": \"deng-xiaoping\", \"sourceName\": \"Deng Xiaoping\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"jiang-zemin\", \"targetName\": \"Jiang Zemin\", \"context\": \"Sequential development within China Leadership\"}, {\"sourceSlug\": \"mao-zedong\", \"sourceName\": \"Mao Zedong\", \"verb\": \"CAUSES\", \"targetSlug\": \"deng-xiaoping\", \"targetName\": \"Deng Xiaoping\", \"context\": \"Causal antecedent ()\"}, {\"sourceSlug\": \"deng-xiaoping\", \"sourceName\": \"Deng Xiaoping\", \"verb\": \"CAUSES\", \"targetSlug\": \"jiang-zemin\", \"targetName\": \"Jiang Zemin\", \"context\": \"Consequent outcome ()\"}, {\"sourceSlug\": \"deng-xiaoping\", \"sourceName\": \"Deng Xiaoping\", \"verb\": \"CAUSES\", \"targetSlug\": \"hu-jintao\", \"targetName\": \"Hu Jintao\", \"context\": \"Consequent outcome ()\"}, {\"sourceSlug\": \"deng-xiaoping\", \"sourceName\": \"Deng Xiaoping\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"third-plenum-launches-reform-and-opening-up-transforming-chinas-economy\", \"targetName\": \"Third Plenum launches 'Reform and Opening Up' — transforming China's economy\", \"context\": \"Contemporary movement in China\"}, {\"sourceSlug\": \"deng-xiaoping\", \"sourceName\": \"Deng Xiaoping\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"china-joins-the-world-trade-organization\", \"targetName\": \"China joins the World Trade Organization\", \"context\": \"Active during this event\"}], \"places\": [{\"name\": \"China\", \"role\": \"Governance\"}], \"texts\": [], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Cultural Revolution devastation discredited Maoist economics",
+          "Deng's three political purges gave him pragmatic resilience",
+          "East Asian tiger economies demonstrated market success"
+        ],
+        "effects": [
+          "China's GDP grew from $150B to $1.2T under his reforms",
+          "Hundreds of millions lifted out of poverty",
+          "Special Economic Zones model copied worldwide",
+          "Tiananmen crackdown set precedent for authoritarian modernization",
+          "China's rise as global superpower"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "deng-xiaoping",
+            "sourceName": "Deng Xiaoping",
+            "verb": "OCCURS_IN",
+            "targetSlug": "china",
+            "targetName": "China",
+            "context": "Paramount leader who transformed China's economy 1978–1989"
+          },
+          {
+            "sourceSlug": "deng-xiaoping",
+            "sourceName": "Deng Xiaoping",
+            "verb": "INFLUENCES",
+            "targetSlug": "mao-zedong",
+            "targetName": "Mao Zedong",
+            "context": "Reversed Mao's economic policies while maintaining party control"
+          },
+          {
+            "sourceSlug": "deng-xiaoping",
+            "sourceName": "Deng Xiaoping",
+            "verb": "CAUSES",
+            "targetSlug": "tiananmen-square",
+            "targetName": "Tiananmen Square",
+            "context": "Ordered military crackdown on pro-democracy protesters June 1989"
+          }
+        ]
+      },
       "subjectHeadings": [
         "People — Political Leaders — China — Contemporary"
       ],
       "subjects": [
-        "Political Leader",
         "China",
-        "Governance"
+        "Economic Reform",
+        "Communism",
+        "Tiananmen Square",
+        "Cold War",
+        "Special Economic Zones",
+        "Modernization",
+        "Asia"
       ],
       "frameworks": [
         "POLITICAL_SYSTEMS",

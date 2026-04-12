@@ -1,0 +1,71 @@
+{
+  "_meta": {
+    "classCode": "260",
+    "divisionCode": "260fyodor-dostoevsky",
+    "count": 1
+  },
+  "entities": [
+    {
+      "slug": "fyodor-dostoevsky",
+      "name": "Fyodor Dostoevsky",
+      "label": "Person",
+      "callNumber": "260.fyodor-dostoevsky",
+      "era": "Modern",
+      "summary": "Fyodor Mikhailovich Dostoevsky (1821–1881) was a Russian novelist, journalist, and philosopher whose psychological novels — 'Crime and Punishment' (1866), 'The Idiot' (1869), 'Demons' (1872), and 'The Brothers Karamazov' (1880) — explored the depths of the human psyche with unprecedented intensity.\n\nDostoevsky was sentenced to death in 1849 for involvement with a socialist circle, experiencing a mock execution before his sentence was commuted to four years of hard labor in Siberia. This trauma, combined with his epilepsy and gambling addiction, infused his fiction with visceral psychological authenticity.\n\nHis exploration of free will, guilt, suffering, and the existence of God anticipated existentialism, psychoanalysis, and modernist literature. Nietzsche called him 'the only psychologist from whom I have anything to learn.' Einstein declared 'The Brothers Karamazov' the most significant literary work he had ever encountered.",
+      "continent": "Europe",
+      "region": "Eastern Europe",
+      "subjects": [
+        "Russian Literature",
+        "Novel",
+        "Psychology",
+        "Russia",
+        "Existentialism",
+        "Christianity",
+        "Philosophy",
+        "Crime and Punishment"
+      ],
+      "subjectHeadings": [
+        "People — Artists — Russia — Modern"
+      ],
+      "detailsJson": {
+        "causes": [
+          "Mock execution and Siberian exile shaped worldview",
+          "Russian literary tradition of Pushkin and Gogol",
+          "Epilepsy and gambling addiction provided psychological insight"
+        ],
+        "effects": [
+          "Anticipated Freudian psychoanalysis in literature",
+          "Influenced existentialist philosophy of Sartre and Camus",
+          "Crime and Punishment created the psychological thriller genre",
+          "Brothers Karamazov set standard for philosophical fiction"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "fyodor-dostoevsky",
+            "sourceName": "Fyodor Dostoevsky",
+            "verb": "OCCURS_IN",
+            "targetSlug": "russia",
+            "targetName": "Russia",
+            "context": "Russian novelist who lived in St. Petersburg and experienced Siberian exile"
+          },
+          {
+            "sourceSlug": "fyodor-dostoevsky",
+            "sourceName": "Fyodor Dostoevsky",
+            "verb": "INFLUENCES",
+            "targetSlug": "sigmund-freud",
+            "targetName": "Sigmund Freud",
+            "context": "Freud acknowledged Dostoevsky's unprecedented psychological insights"
+          },
+          {
+            "sourceSlug": "fyodor-dostoevsky",
+            "sourceName": "Fyodor Dostoevsky",
+            "verb": "INFLUENCES",
+            "targetSlug": "leo-tolstoy",
+            "targetName": "Leo Tolstoy",
+            "context": "Two giants of Russian literature exploring morality from opposite perspectives"
+          }
+        ]
+      }
+    }
+  ]
+}

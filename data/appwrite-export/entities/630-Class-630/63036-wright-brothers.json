@@ -11,7 +11,7 @@
       "name": "Wright Flyer",
       "label": "Movement",
       "callNumber": "630.36-wright-brothers",
-      "summary": "Orville and Wilbur Wright achieved the first powered, sustained, controlled flight at Kitty Hawk (December 17, 1903). The flight lasted 12 seconds and covered 37 meters.",
+      "summary": "Wilbur Wright (1867–1912) and Orville Wright (1871–1948) were American aviation pioneers who achieved the first sustained, controlled, powered heavier-than-air flight on December 17, 1903, at Kitty Hawk, North Carolina. Their first flight lasted 12 seconds and covered 120 feet; by the fourth flight that day, Wilbur flew 852 feet in 59 seconds.\n\nThe brothers' success rested on systematic engineering rather than reckless daring. They built a wind tunnel to test over 200 wing shapes, invented three-axis control (pitch, roll, yaw) that remains the basis of all fixed-wing aircraft, and designed their own lightweight engine when none available met their specifications.\n\nWithin a decade of Kitty Hawk, aircraft were being used in World War I. Within a lifetime, they enabled globalization, mass tourism, and intercontinental warfare. Orville lived to see Chuck Yeager break the sound barrier in 1947 — just 44 years after that first 12-second flight.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,18 +25,58 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [], \"effects\": [{\"title\": \"Launched the aviation age. Within 66 years, humans went from 12 seconds in the air to walking on the Moon.\", \"type\": \"Historical Impact\", \"year\": \"1903 CE\"}], \"relationships\": [{\"sourceSlug\": \"wright-brothers\", \"sourceName\": \"Wright Flyer\", \"verb\": \"CAUSES\", \"targetSlug\": \"transcontinental-railroad\", \"targetName\": \"Transcontinental Railroad\", \"context\": \"Shared subjects: Transportation, American, United States\"}, {\"sourceSlug\": \"wright-brothers\", \"sourceName\": \"Wright Flyer\", \"verb\": \"CAUSES\", \"targetSlug\": \"ford-model-t\", \"targetName\": \"Ford Model T\", \"context\": \"Shared subjects: Transportation, American, United States\"}, {\"sourceSlug\": \"wright-brothers\", \"sourceName\": \"Wright Flyer\", \"verb\": \"CAUSES\", \"targetSlug\": \"wright-brothers-flight\", \"targetName\": \"Wright Brothers' First Flight\", \"context\": \"Shared subjects: Powered Flight, American, United States\"}, {\"sourceSlug\": \"wright-brothers\", \"sourceName\": \"Wright Flyer\", \"verb\": \"CAUSES\", \"targetSlug\": \"zeppelin\", \"targetName\": \"Zeppelin Airship\", \"context\": \"Shared subjects: Transportation, air\"}, {\"sourceSlug\": \"wright-brothers\", \"sourceName\": \"Wright Flyer\", \"verb\": \"CAUSES\", \"targetSlug\": \"interstate-highways\", \"targetName\": \"US Interstate Highway System\", \"context\": \"Shared subjects: Transportation, American, United States\"}, {\"sourceSlug\": \"wright-brothers\", \"sourceName\": \"Wright Flyer\", \"verb\": \"CAUSES\", \"targetSlug\": \"containerization\", \"targetName\": \"Shipping Container\", \"context\": \"Shared subjects: Transportation, American, United States\"}, {\"sourceSlug\": \"wright-brothers\", \"sourceName\": \"Wright Flyer\", \"verb\": \"CAUSES\", \"targetSlug\": \"apollo-11\", \"targetName\": \"Apollo 11 Moon Landing\", \"context\": \"Shared subjects: Transportation, American, United States\"}, {\"sourceSlug\": \"wright-brothers\", \"sourceName\": \"Wright Flyer\", \"verb\": \"CAUSES\", \"targetSlug\": \"spacex-reusable-rockets\", \"targetName\": \"SpaceX Reusable Rockets\", \"context\": \"Shared subjects: Transportation, American, United States\"}], \"places\": [{\"name\": \"United States\", \"role\": \"Origin\"}], \"texts\": [], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Bicycle mechanics provided engineering and manufacturing skills",
+          "Otto Lilienthal's glider experiments inspired them",
+          "Systematic wind tunnel testing gave scientific foundation"
+        ],
+        "effects": [
+          "Powered flight launched the aviation age",
+          "Three-axis control became standard for all aircraft",
+          "Enabled aerial warfare in World War I within a decade",
+          "Foundation for airline industry and global connectivity",
+          "Space exploration ultimately descended from their achievement"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "wright-brothers",
+            "sourceName": "Wright Brothers",
+            "verb": "OCCURS_IN",
+            "targetSlug": "united-states",
+            "targetName": "United States",
+            "context": "American brothers from Dayton, Ohio who flew at Kitty Hawk, North Carolina"
+          },
+          {
+            "sourceSlug": "wright-brothers",
+            "sourceName": "Wright Brothers",
+            "verb": "INFLUENCES",
+            "targetSlug": "world-war-i",
+            "targetName": "World War I",
+            "context": "Aircraft became weapons within a decade of first flight"
+          },
+          {
+            "sourceSlug": "wright-brothers",
+            "sourceName": "Wright Brothers",
+            "verb": "INFLUENCES",
+            "targetSlug": "neil-armstrong",
+            "targetName": "Neil Armstrong",
+            "context": "Armstrong carried a piece of the Wright Flyer to the Moon in 1969"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "Transportation",
-        "air",
-        "Powered Flight"
+        "People — Scientists — United States — Modern"
       ],
       "subjects": [
+        "Aviation",
+        "United States",
+        "Engineering",
+        "Kitty Hawk",
+        "Flight",
+        "Industrial Revolution",
         "Transportation",
-        "air",
-        "Powered Flight",
-        "American",
-        "United States"
+        "Technology"
       ],
       "frameworks": [
         "INNOVATION_AND_TECHNOLOGY",

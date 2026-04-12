@@ -11,7 +11,7 @@
       "name": "Marie Curie",
       "label": "Person",
       "callNumber": "201.marie-curie",
-      "summary": "Maria Salomea Skłodowska Curie, better known as Marie Curie, was a Polish and naturalised-French physicist and chemist. She shared the 1903 Nobel Prize in Physics with her husband Pierre Curie \"for their joint researches on the radioactivity phenomena discovered by Professor Henri Becquerel\". She won the 1911 Nobel Prize in Chemistry \"[for] the discovery of the elements radium and polonium, by the isolation of radium and the study of the nature and compounds of this remarkable element\".",
+      "summary": "Marie Curie (1867–1934), born Maria Skłodowska in Warsaw, was a Polish-French physicist and chemist who conducted pioneering research on radioactivity. She was the first woman to win a Nobel Prize, the first person to win Nobel Prizes in two different sciences (Physics 1903, Chemistry 1911), and the first woman professor at the University of Paris.\n\nWith her husband Pierre Curie, she discovered two elements — polonium (named for her native Poland) and radium — by processing tons of pitchblende ore by hand. After Pierre's death in 1906, she continued their work alone, developing mobile X-ray units ('petites Curies') that saved countless lives during World War I.\n\nCurie died of aplastic anemia caused by prolonged radiation exposure. Her notebooks remain so radioactive they must be stored in lead-lined boxes. She shattered gender barriers in science and remains the most iconic female scientist in history.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,12 +25,66 @@
       "wikidataQid": "Q7186",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Marie_Curie",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [], \"effects\": [], \"relationships\": [], \"places\": [{\"name\": \"Warsaw\", \"role\": \"Birth place\"}], \"texts\": [], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q7186\", \"https://en.wikipedia.org/wiki/Marie_Curie\"], \"tags\": [\"Educators & Academics\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Polish intellectual tradition despite Russian partition",
+          "Paris scientific community at the Sorbonne",
+          "Discovery of X-rays by Röntgen inspired radiation research"
+        ],
+        "effects": [
+          "Discovery of radioactivity transformed physics and chemistry",
+          "Polonium and radium added to periodic table",
+          "Mobile X-ray units saved lives in World War I",
+          "Opened doors for women in science globally",
+          "Radiation research led to cancer treatment methods"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "marie-curie",
+            "sourceName": "Marie Curie",
+            "verb": "OCCURS_IN",
+            "targetSlug": "france",
+            "targetName": "France",
+            "context": "Conducted her groundbreaking research at the University of Paris"
+          },
+          {
+            "sourceSlug": "marie-curie",
+            "sourceName": "Marie Curie",
+            "verb": "INFLUENCES",
+            "targetSlug": "nuclear-physics",
+            "targetName": "Nuclear Physics",
+            "context": "Her radioactivity research opened the field of nuclear physics"
+          },
+          {
+            "sourceSlug": "marie-curie",
+            "sourceName": "Marie Curie",
+            "verb": "OCCURS_IN",
+            "targetSlug": "poland",
+            "targetName": "Poland",
+            "context": "Born Maria Skłodowska in Warsaw, named polonium for her homeland"
+          },
+          {
+            "sourceSlug": "marie-curie",
+            "sourceName": "Marie Curie",
+            "verb": "INFLUENCES",
+            "targetSlug": "world-war-i",
+            "targetName": "World War I",
+            "context": "Developed mobile X-ray units that served on the Western Front"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Educators & Academics — Global — Modern"
+        "People — Scientists — France — Modern"
       ],
       "subjects": [
-        "Educators & Academics"
+        "Physics",
+        "Chemistry",
+        "Radioactivity",
+        "Nobel Prize",
+        "Women in Science",
+        "Poland",
+        "France",
+        "Radium"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT"

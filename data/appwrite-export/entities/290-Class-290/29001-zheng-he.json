@@ -11,7 +11,7 @@
       "name": "Zheng He",
       "label": "Person",
       "callNumber": "290.01-zheng-he",
-      "summary": "Chinese mariner and diplomat (1371–1433) who commanded seven massive naval expeditions across the Indian Ocean under the Ming Dynasty. His treasure fleets — the largest wooden ships ever built — reached Southeast Asia, India, the Persian Gulf, and East Africa, establishing Chinese maritime dominance decades before European exploration.",
+      "summary": "Zheng He (1371–1433) was a Chinese mariner, explorer, and diplomat who commanded seven epic voyages (1405–1433) across the Indian Ocean with fleets of up to 300 ships and 28,000 men — the largest naval expeditions in history before World War I. His treasure ships measured up to 120 meters long, dwarfing anything in contemporary European navies.\n\nBorn Ma He into a Muslim Hui family in Yunnan, he was captured as a boy during the Ming conquest, castrated, and placed in the service of Prince Zhu Di, who became the Yongle Emperor. Zheng He's voyages reached Southeast Asia, India, the Persian Gulf, and the East African coast, establishing Chinese diplomatic and trade networks across 30 nations.\n\nAfter the Yongle Emperor's death, the Confucian bureaucracy halted the voyages and destroyed most records. China turned inward just decades before European exploration began, one of history's great 'what-ifs' — had the voyages continued, China might have colonized the world.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,17 +25,57 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Ming Dynasty consolidation\", \"type\": \"EventWindow\", \"year\": \"1368\"}, {\"title\": \"Yongle Emperor's expansionist vision\", \"type\": \"Person\", \"year\": \"1402\"}], \"effects\": [{\"title\": \"Chinese maritime trade networks expanded\", \"type\": \"Movement\", \"year\": \"1405–1433\"}, {\"title\": \"Diplomatic tributaries established across Indian Ocean\", \"type\": \"EventWindow\", \"year\": \"1405–1433\"}, {\"title\": \"Ming Haijin policy ends Chinese naval exploration\", \"type\": \"EventWindow\", \"year\": \"1433\"}], \"relationships\": [{\"sourceSlug\": \"zheng_he\", \"sourceName\": \"Zheng He\", \"verb\": \"LEADS\", \"targetSlug\": \"ming-treasure-voyages\", \"targetName\": \"Ming Treasure Voyages\", \"context\": \"Commanded 7 voyages 1405–1433\"}, {\"sourceSlug\": \"zheng_he\", \"sourceName\": \"Zheng He\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"china\", \"targetName\": \"China\", \"context\": \"Served Ming court\"}, {\"sourceSlug\": \"zheng_he\", \"sourceName\": \"Zheng He\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"indian-ocean-trade\", \"targetName\": \"Indian Ocean Trade\", \"context\": \"Established diplomatic trade routes\"}], \"places\": [{\"name\": \"Nanjing\", \"role\": \"Expedition departure port\", \"slug\": \"nanjing\"}, {\"name\": \"Calicut\", \"role\": \"Key Indian Ocean destination\"}, {\"name\": \"Malacca\", \"role\": \"Southeast Asian hub\"}, {\"name\": \"Mogadishu\", \"role\": \"East African port of call\"}], \"texts\": [{\"title\": \"Yingya Shenglan (Overall Survey of the Ocean's Shores)\", \"type\": \"Travel account\"}, {\"title\": \"Zheng He Navigation Charts\", \"type\": \"Navigational maps\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Yongle Emperor's desire to project Ming power abroad",
+          "Zheng He's personal loyalty from years of service",
+          "Muslim heritage facilitated diplomacy in Islamic ports"
+        ],
+        "effects": [
+          "Chinese diplomatic networks across 30+ nations",
+          "Largest pre-modern naval expeditions in history",
+          "China's maritime retreat after 1433 changed global history",
+          "Southeast Asian Chinese diaspora communities established"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "zheng-he",
+            "sourceName": "Zheng He",
+            "verb": "OCCURS_IN",
+            "targetSlug": "china",
+            "targetName": "China",
+            "context": "Ming Dynasty admiral who sailed from Nanjing"
+          },
+          {
+            "sourceSlug": "zheng-he",
+            "sourceName": "Zheng He",
+            "verb": "INFLUENCES",
+            "targetSlug": "vasco-da-gama",
+            "targetName": "Vasco da Gama",
+            "context": "Zheng He's Indian Ocean routes predated da Gama's by nearly a century"
+          },
+          {
+            "sourceSlug": "zheng-he",
+            "sourceName": "Zheng He",
+            "verb": "INFLUENCES",
+            "targetSlug": "christopher-columbus",
+            "targetName": "Christopher Columbus",
+            "context": "China's maritime retreat left the Indian Ocean open for European exploration"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Explorers & Navigators — China — Medieval"
+        "People — Explorers — China — Medieval"
       ],
       "subjects": [
-        "Exploration",
-        "Navigation",
-        "Ming Dynasty",
-        "Treasure Fleets",
+        "China",
+        "Maritime Exploration",
         "Indian Ocean",
-        "Diplomacy"
+        "Ming Dynasty",
+        "Naval History",
+        "Diplomacy",
+        "Africa",
+        "Southeast Asia"
       ],
       "frameworks": [
         "CULTURAL_DIFFUSION",

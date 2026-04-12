@@ -11,7 +11,7 @@
       "name": "Frederick Douglass",
       "label": "Person",
       "callNumber": "205.frederick-douglass",
-      "summary": "Frederick Douglass was an American social reformer, abolitionist, orator, writer, and statesman. He was the most important leader of the movement for African-American civil rights in the 19th century.",
+      "summary": "Frederick Douglass (1818–1895), born Frederick Augustus Washington Bailey, was an American social reformer, abolitionist, orator, writer, and statesman who escaped from slavery to become the most prominent African American voice of the 19th century. His autobiography 'Narrative of the Life of Frederick Douglass' (1845) became a bestseller that galvanized the abolitionist movement.\n\nDouglass taught himself to read as a child slave in Maryland, escaped to the North in 1838, and became a powerful orator for the Massachusetts Anti-Slavery Society. His 1852 speech 'What to the Slave Is the Fourth of July?' remains one of the greatest orations in American history.\n\nDuring the Civil War, Douglass recruited African American soldiers for the Union Army and advised President Lincoln. He later served as U.S. Marshal for the District of Columbia and Minister to Haiti — the highest government positions held by an African American in the 19th century.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,14 +25,65 @@
       "wikidataQid": "Q215562",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Frederick_Douglass",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Modern era: industrialization, imperial expansion, and democratic revolutions\", \"type\": \"EventWindow\", \"year\": \"1818-02-14, Talbot County\"}, {\"title\": \"Rise of print media and public discourse\", \"type\": \"Idea\", \"year\": \"1818-02-14, Talbot County\"}], \"effects\": [{\"title\": \"Shaped public opinion and historical record\", \"type\": \"Idea\", \"year\": \"1895-02-20\"}, {\"title\": \"Contributed to mass society, world wars, and foundations of contemporary global order\", \"type\": \"Movement\", \"year\": \"1895-02-20\"}], \"relationships\": [{\"sourceSlug\": \"frederick-douglass\", \"sourceName\": \"Frederick Douglass\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"country-united-states\", \"targetName\": \"United States\", \"context\": \"Frederick Douglass associated with United States\"}, {\"sourceSlug\": \"frederick-douglass\", \"sourceName\": \"Frederick Douglass\", \"verb\": \"REPORTS\", \"targetSlug\": \"field-205\", \"targetName\": \"Journalists & Chroniclers\", \"context\": \"Frederick Douglass: Journalistic coverage in journalists & chroniclers\"}, {\"sourceSlug\": \"frederick-douglass\", \"sourceName\": \"Frederick Douglass\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"modern\", \"targetName\": \"Modern Era\", \"context\": \"Frederick Douglass was active during the Modern era\"}], \"places\": [{\"name\": \"Talbot County\", \"role\": \"Birth place\"}, {\"name\": \"United States\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Frederick Douglass\", \"type\": \"Reference article\", \"slug\": \"frederick-douglass\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q215562\", \"https://en.wikipedia.org/wiki/Frederick_Douglass\"], \"tags\": [\"United States\", \"Journalists & Chroniclers\", \"Americas\", \"cause-and-effect\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Personal experience of slavery in Maryland",
+          "Self-education through secretly learning to read",
+          "Abolitionist networks in the North after his escape"
+        ],
+        "effects": [
+          "Narrative of Frederick Douglass galvanized abolitionist movement",
+          "Recruited African American soldiers for Union Army",
+          "Highest-ranking Black government official of 19th century",
+          "Inspired civil rights movement of 20th century"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "frederick-douglass",
+            "sourceName": "Frederick Douglass",
+            "verb": "OCCURS_IN",
+            "targetSlug": "united-states",
+            "targetName": "United States",
+            "context": "Escaped slavery to become America's leading abolitionist voice"
+          },
+          {
+            "sourceSlug": "frederick-douglass",
+            "sourceName": "Frederick Douglass",
+            "verb": "INFLUENCES",
+            "targetSlug": "abraham-lincoln",
+            "targetName": "Abraham Lincoln",
+            "context": "Advised Lincoln on emancipation and Black military service"
+          },
+          {
+            "sourceSlug": "frederick-douglass",
+            "sourceName": "Frederick Douglass",
+            "verb": "INFLUENCES",
+            "targetSlug": "martin-luther-king-jr",
+            "targetName": "Martin Luther King Jr.",
+            "context": "Douglass's oratory and activism paved the way for 20th century civil rights"
+          },
+          {
+            "sourceSlug": "frederick-douglass",
+            "sourceName": "Frederick Douglass",
+            "verb": "INFLUENCES",
+            "targetSlug": "harriet-tubman",
+            "targetName": "Harriet Tubman",
+            "context": "Both were escaped slaves who became prominent abolitionists"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Journalists & Chroniclers — United States — Modern"
+        "People — Activists — United States — Modern"
       ],
       "subjects": [
+        "Abolitionism",
+        "Slavery",
         "United States",
-        "Journalists & Chroniclers",
-        "Americas"
+        "Civil War",
+        "African American History",
+        "Oratory",
+        "Civil Rights",
+        "Autobiography"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT",

@@ -1,0 +1,72 @@
+{
+  "_meta": {
+    "classCode": "250",
+    "divisionCode": "250pope-john-paul-ii",
+    "count": 1
+  },
+  "entities": [
+    {
+      "slug": "pope-john-paul-ii",
+      "name": "Pope John Paul II",
+      "label": "Person",
+      "callNumber": "250.pope-john-paul-ii",
+      "era": "Contemporary",
+      "summary": "Pope John Paul II (1920–2005), born Karol Józef Wojtyła in Wadowice, Poland, was head of the Catholic Church from 1978 to 2005 — the second-longest pontificate in modern history. He was the first non-Italian pope in 455 years and played a pivotal role in ending communism in Eastern Europe.\n\nAs a young man in Nazi-occupied Poland, Wojtyła studied in an underground seminary and worked in a quarry. His election as pope in 1978 galvanized the Polish Solidarity movement. His 1979 visit to Poland drew millions and is credited with sparking the chain of events that led to the fall of the Berlin Wall in 1989.\n\nJohn Paul II survived an assassination attempt in 1981, visited 129 countries (more than all previous popes combined), and made unprecedented outreach to Judaism, Islam, and other faiths. He was canonized as Saint John Paul II in 2014, just nine years after his death — one of the fastest canonizations in modern Catholic history.",
+      "continent": "Europe",
+      "region": "Southern Europe",
+      "subjects": [
+        "Catholic Church",
+        "Poland",
+        "Cold War",
+        "Solidarity",
+        "Vatican",
+        "Communism",
+        "Interfaith Dialogue",
+        "Papacy"
+      ],
+      "subjectHeadings": [
+        "People — Religious Figures — Vatican — Contemporary"
+      ],
+      "detailsJson": {
+        "causes": [
+          "Experience under Nazi and Soviet oppression shaped worldview",
+          "Polish Catholic identity as resistance to communism",
+          "Second Vatican Council's modernizing spirit"
+        ],
+        "effects": [
+          "Galvanized Solidarity movement in Poland",
+          "Contributed to fall of communism in Eastern Europe",
+          "Unprecedented interfaith dialogue with Judaism and Islam",
+          "Visited 129 countries, most-traveled pope in history",
+          "Canonized in 2014 as Catholic saint"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "pope-john-paul-ii",
+            "sourceName": "Pope John Paul II",
+            "verb": "INFLUENCES",
+            "targetSlug": "solidarity-movement",
+            "targetName": "Solidarity Movement",
+            "context": "His 1979 Poland visit galvanized the Solidarity trade union"
+          },
+          {
+            "sourceSlug": "pope-john-paul-ii",
+            "sourceName": "Pope John Paul II",
+            "verb": "OCCURS_IN",
+            "targetSlug": "vatican-city",
+            "targetName": "Vatican City",
+            "context": "Led the Catholic Church from Vatican City 1978–2005"
+          },
+          {
+            "sourceSlug": "pope-john-paul-ii",
+            "sourceName": "Pope John Paul II",
+            "verb": "CAUSES",
+            "targetSlug": "fall-of-communism",
+            "targetName": "Fall of Communism",
+            "context": "His support for Polish resistance helped trigger the collapse of Soviet bloc"
+          }
+        ]
+      }
+    }
+  ]
+}

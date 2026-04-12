@@ -11,7 +11,7 @@
       "name": "Tim Berners-Lee",
       "label": "Person",
       "callNumber": "201.tim-berners-lee",
-      "summary": "Tim Berners-Lee (b. 1955-06-08, London) was a monarch or head of state of the Contemporary era, characterized by technology, globalization, and rapid social change, active in London and United Kingdom. Known in the fields of united kingdom, educators & academics, europe.",
+      "summary": "Sir Timothy John Berners-Lee (born 1955) is a British computer scientist who invented the World Wide Web in 1989, arguably the most transformative technological innovation since the printing press. Working at CERN in Geneva, he wrote the first web browser, web server, and the foundational protocols (HTTP, HTML, URLs) that make the web possible.\n\nBerners-Lee's genius lay not just in technical invention but in his decision to make the web free and open. He convinced CERN to release the technology royalty-free in 1993, ensuring universal access. Had he patented his invention, he could have become the wealthiest person in history; instead, he prioritized universal access to information.\n\nHe founded the World Wide Web Consortium (W3C) in 1994 to maintain open web standards and was appointed to the Order of Merit by Queen Elizabeth II in 2007. He continues to advocate for net neutrality and against the centralization of web power by tech giants through his Web Foundation.",
       "era": "Contemporary",
       "eraSlug": "contemporary",
       "eraDivision": "Contemporary",
@@ -25,14 +25,58 @@
       "wikidataQid": "Q80",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Tim_Berners-Lee",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Contemporary era: decolonization, technological revolution, and global interconnection\", \"type\": \"EventWindow\", \"year\": \"1955-06-08, London\"}, {\"title\": \"Growth of educational institutions and scholarly traditions\", \"type\": \"Idea\", \"year\": \"1955-06-08, London\"}], \"effects\": [{\"title\": \"Shaped intellectual traditions and educated future generations\", \"type\": \"Idea\", \"year\": \"\"}, {\"title\": \"Contributed to digital transformation, global governance challenges, and cultural globalization\", \"type\": \"Movement\", \"year\": \"Contemporary\"}], \"relationships\": [{\"sourceSlug\": \"tim-berners-lee\", \"sourceName\": \"Tim Berners-Lee\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"country-united-kingdom\", \"targetName\": \"United Kingdom\", \"context\": \"Tim Berners-Lee associated with United Kingdom\"}, {\"sourceSlug\": \"tim-berners-lee\", \"sourceName\": \"Tim Berners-Lee\", \"verb\": \"TEACHES\", \"targetSlug\": \"field-201\", \"targetName\": \"Educators & Academics\", \"context\": \"Tim Berners-Lee: Educational influence in educators & academics\"}, {\"sourceSlug\": \"tim-berners-lee\", \"sourceName\": \"Tim Berners-Lee\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"contemporary\", \"targetName\": \"Contemporary Era\", \"context\": \"Tim Berners-Lee was active during the Contemporary era\"}], \"places\": [{\"name\": \"London\", \"role\": \"Birth place\"}, {\"name\": \"United Kingdom\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Tim Berners-Lee\", \"type\": \"Reference article\", \"slug\": \"tim-berners-lee\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q80\", \"https://en.wikipedia.org/wiki/Tim_Berners-Lee\"], \"tags\": [\"United Kingdom\", \"Educators & Academics\", \"Europe\", \"cause-and-effect\", \"innovation-and-technology\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "CERN's need for document sharing between physicists",
+          "Hypertext concept pioneered by Ted Nelson and Douglas Engelbart",
+          "Internet infrastructure (TCP/IP) already existed as foundation"
+        ],
+        "effects": [
+          "World Wide Web transformed global communication",
+          "E-commerce revolution created trillion-dollar economy",
+          "Social media reshaped politics and culture",
+          "Open web standards prevented proprietary control",
+          "Digital divide became new form of inequality"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "tim-berners-lee",
+            "sourceName": "Tim Berners-Lee",
+            "verb": "CAUSES",
+            "targetSlug": "digital-revolution",
+            "targetName": "Digital Revolution",
+            "context": "The World Wide Web is the primary interface of the digital revolution"
+          },
+          {
+            "sourceSlug": "tim-berners-lee",
+            "sourceName": "Tim Berners-Lee",
+            "verb": "OCCURS_IN",
+            "targetSlug": "united-kingdom",
+            "targetName": "United Kingdom",
+            "context": "British scientist, born in London"
+          },
+          {
+            "sourceSlug": "tim-berners-lee",
+            "sourceName": "Tim Berners-Lee",
+            "verb": "INFLUENCES",
+            "targetSlug": "alan-turing",
+            "targetName": "Alan Turing",
+            "context": "Built on Turing's theoretical foundations of computation"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Educators & Academics — United Kingdom — Contemporary"
+        "People — Scientists — United Kingdom — Contemporary"
       ],
       "subjects": [
+        "World Wide Web",
+        "Computer Science",
+        "Internet",
+        "CERN",
         "United Kingdom",
-        "Educators & Academics",
-        "Europe"
+        "Open Source",
+        "Technology",
+        "Information Age"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT",

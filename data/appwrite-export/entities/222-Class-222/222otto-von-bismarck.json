@@ -11,7 +11,7 @@
       "name": "Otto von Bismarck",
       "label": "Person",
       "callNumber": "222.otto-von-bismarck",
-      "summary": "The \"Iron Chancellor\" (1815–1898) who unified Germany through \"blood and iron.\" As Minister-President of Prussia and first Chancellor of the German Empire, he engineered three wars, created a European alliance system, and forged modern Germany.",
+      "summary": "Otto von Bismarck (1815–1898) was a Prussian-German statesman who unified the German states into the German Empire in 1871 and served as its first Chancellor until 1890. Known as the 'Iron Chancellor,' he masterminded three wars — against Denmark (1864), Austria (1866), and France (1870–71) — to forge a unified Germany under Prussian leadership.\n\nBismarck pioneered Realpolitik — pragmatic diplomacy driven by power rather than ideology. He engineered the complex alliance system that maintained European peace for two decades, pioneered the world's first welfare state with health insurance (1883), accident insurance (1884), and old-age pensions (1889).\n\nDismissed by Kaiser Wilhelm II in 1890, Bismarck warned that his carefully balanced alliance system would collapse without skilled management. His prediction proved tragically accurate: 24 years later, Europe plunged into World War I.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,15 +25,66 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Nationalism\", \"type\": \"Idea\", \"year\": \"19th century\", \"slug\": \"nationalism\"}], \"effects\": [{\"title\": \"Franco-Prussian War\", \"type\": \"EventWindow\", \"year\": \"1870\", \"slug\": \"franco_prussian_war\"}, {\"title\": \"German Empire unified\", \"type\": \"Event\", \"year\": \"1871\"}], \"relationships\": [{\"sourceSlug\": \"otto_von_bismarck\", \"sourceName\": \"Bismarck\", \"verb\": \"CAUSES\", \"targetSlug\": \"franco_prussian_war\", \"targetName\": \"Franco-Prussian War\", \"context\": \"Engineered the conflict for unification\"}, {\"sourceSlug\": \"nationalism\", \"sourceName\": \"Nationalism\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"otto_von_bismarck\", \"targetName\": \"Bismarck\", \"context\": \"Harnessed nationalist sentiment\"}, {\"sourceSlug\": \"nationalism\", \"sourceName\": \"Nationalism\", \"verb\": \"CAUSES\", \"targetSlug\": \"otto_von_bismarck\", \"targetName\": \"Otto von Bismarck\", \"context\": \"Causal antecedent (19th century)\"}, {\"sourceSlug\": \"otto_von_bismarck\", \"sourceName\": \"Otto von Bismarck\", \"verb\": \"AUTHORS\", \"targetSlug\": \"ems_dispatch_1870\", \"targetName\": \"Ems Dispatch (1870)\", \"context\": \"Text reference: Diplomatic dispatch\"}, {\"sourceSlug\": \"otto_von_bismarck\", \"sourceName\": \"Otto von Bismarck\", \"verb\": \"AUTHORS\", \"targetSlug\": \"gedanken_und_erinnerungen_memoirs\", \"targetName\": \"Gedanken und Erinnerungen (Memoirs)\", \"context\": \"Text reference: Memoir\"}], \"places\": [{\"name\": \"Berlin\", \"role\": \"Capital of unified Germany\"}], \"texts\": [{\"title\": \"Ems Dispatch (1870)\", \"type\": \"Diplomatic dispatch\", \"year\": \"1870\", \"slug\": \"ems_dispatch_1870\"}, {\"title\": \"Gedanken und Erinnerungen (Memoirs)\", \"type\": \"Memoir\", \"year\": \"1898\", \"slug\": \"gedanken_und_erinnerungen_memoirs\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Prussian militarism and Junker class tradition",
+          "Failure of 1848 liberal revolutions",
+          "Growing German nationalism after Napoleonic Wars"
+        ],
+        "effects": [
+          "Unified German Empire created in 1871",
+          "Alliance system maintained European peace 1871–1890",
+          "First modern welfare state inspired social policy globally",
+          "Power vacuum after dismissal contributed to WWI",
+          "Realpolitik doctrine influenced 20th-century diplomacy"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "otto-von-bismarck",
+            "sourceName": "Otto von Bismarck",
+            "verb": "CAUSES",
+            "targetSlug": "german-unification",
+            "targetName": "German Unification",
+            "context": "Engineered unification through three wars culminating in 1871 proclamation at Versailles"
+          },
+          {
+            "sourceSlug": "otto-von-bismarck",
+            "sourceName": "Otto von Bismarck",
+            "verb": "OCCURS_IN",
+            "targetSlug": "germany",
+            "targetName": "Germany",
+            "context": "First Chancellor of the unified German Empire 1871–1890"
+          },
+          {
+            "sourceSlug": "otto-von-bismarck",
+            "sourceName": "Otto von Bismarck",
+            "verb": "INFLUENCES",
+            "targetSlug": "world-war-i",
+            "targetName": "World War I",
+            "context": "His alliance system collapsed after his dismissal, leading to war"
+          },
+          {
+            "sourceSlug": "otto-von-bismarck",
+            "sourceName": "Otto von Bismarck",
+            "verb": "INFLUENCES",
+            "targetSlug": "napoleon-italy",
+            "targetName": "Napoleon III",
+            "context": "Provoked France into the Franco-Prussian War through Ems Dispatch"
+          }
+        ]
+      },
       "subjectHeadings": [
         "People — Political Leaders — Germany — Modern"
       ],
       "subjects": [
-        "German Unification",
+        "Germany",
+        "Prussian History",
+        "Unification",
         "Realpolitik",
-        "Iron Chancellor",
-        "Alliances"
+        "Diplomacy",
+        "Welfare State",
+        "Franco-Prussian War",
+        "Modern Europe"
       ],
       "frameworks": [
         "GEOPOLITICAL_LINKAGE",

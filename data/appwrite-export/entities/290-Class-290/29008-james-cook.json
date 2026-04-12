@@ -11,7 +11,7 @@
       "name": "James Cook",
       "label": "Person",
       "callNumber": "290.08-james-cook",
-      "summary": "British navigator and cartographer (1728–1779) who led three Pacific voyages that mapped coastlines from New Zealand to Hawaii, charted the Great Barrier Reef, and crossed the Antarctic Circle. His scientific approach to exploration — combating scurvy and producing accurate charts — transformed maritime knowledge.",
+      "summary": "Captain James Cook (1728–1779) was a British explorer, navigator, and cartographer who made three voyages to the Pacific Ocean, mapping vast stretches of previously uncharted territory. He was the first European to make contact with the eastern coastline of Australia (1770) and the Hawaiian Islands (1778), and performed the first circumnavigation of New Zealand.\n\nCook's scientific approach to exploration was revolutionary. He virtually eliminated scurvy on long voyages through dietary measures, charted coastlines with unprecedented accuracy, and carried naturalists and astronomers who made groundbreaking discoveries. His 1769 observation of the Transit of Venus from Tahiti advanced astronomical understanding of the solar system.\n\nCook was killed by Hawaiian islanders at Kealakekua Bay in February 1779 during his third voyage. His charts were so accurate they remained in use into the 20th century, and his voyages opened the Pacific to European colonization for better and worse.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -25,18 +25,58 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"British naval supremacy expanding\", \"type\": \"Movement\", \"year\": \"18th century\"}, {\"title\": \"Royal Society sponsors Venus transit observation\", \"type\": \"Institution\", \"year\": \"1768\"}], \"effects\": [{\"title\": \"European claim to Australia (New South Wales)\", \"type\": \"EventWindow\", \"year\": \"1770\"}, {\"title\": \"Accurate Pacific charts produced\", \"type\": \"Text\", \"year\": \"1768–1779\"}, {\"title\": \"Hawaiian Islands mapped\", \"type\": \"EventWindow\", \"year\": \"1778\"}], \"relationships\": [{\"sourceSlug\": \"james_cook\", \"sourceName\": \"James Cook\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"united-kingdom\", \"targetName\": \"United Kingdom\", \"context\": \"British Royal Navy captain\"}, {\"sourceSlug\": \"james_cook\", \"sourceName\": \"James Cook\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"british-colonization-australia\", \"targetName\": \"British Colonization of Australia\", \"context\": \"Claimed New South Wales for Britain 1770\"}], \"places\": [{\"name\": \"Yorkshire\", \"role\": \"Birthplace\"}, {\"name\": \"New Zealand\", \"role\": \"Circumnavigated and charted, 1769–1770\"}, {\"name\": \"Australia\", \"role\": \"Claimed for Britain, 1770\"}, {\"name\": \"Hawaii\", \"role\": \"Killed at Kealakekua Bay, 1779\"}], \"texts\": [{\"title\": \"A Voyage Towards the South Pole (1777)\", \"type\": \"Voyage account\"}, {\"title\": \"Cook's Journals\", \"type\": \"Ship's logs\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "British Admiralty's need for Pacific charts",
+          "Royal Society's quest for Transit of Venus observation",
+          "Cook's exceptional navigational skills from North Sea merchant fleet"
+        ],
+        "effects": [
+          "European mapping of Pacific and Australian coastlines",
+          "British colonization of Australia and New Zealand",
+          "Scientific expedition model adopted by future explorers",
+          "Hawaiian and Pacific island cultures permanently altered",
+          "Scurvy prevention advanced naval medicine"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "james-cook",
+            "sourceName": "James Cook",
+            "verb": "OCCURS_IN",
+            "targetSlug": "united-kingdom",
+            "targetName": "United Kingdom",
+            "context": "British naval captain who sailed for the Royal Navy"
+          },
+          {
+            "sourceSlug": "james-cook",
+            "sourceName": "James Cook",
+            "verb": "OCCURS_IN",
+            "targetSlug": "australia",
+            "targetName": "Australia",
+            "context": "First European to chart Australia's east coast in 1770"
+          },
+          {
+            "sourceSlug": "james-cook",
+            "sourceName": "James Cook",
+            "verb": "INFLUENCES",
+            "targetSlug": "roald-amundsen",
+            "targetName": "Roald Amundsen",
+            "context": "Cook's polar explorations inspired later Antarctic expeditions"
+          }
+        ]
+      },
       "subjectHeadings": [
-        "People — Explorers & Navigators — Britain — Modern"
+        "People — Explorers — United Kingdom — Early Modern"
       ],
       "subjects": [
         "Exploration",
         "Pacific Ocean",
-        "Navigation",
-        "Cartography",
         "Australia",
         "New Zealand",
-        "Science"
+        "Navigation",
+        "British Empire",
+        "Cartography",
+        "Hawaii"
       ],
       "frameworks": [
         "INNOVATION_AND_TECHNOLOGY",
