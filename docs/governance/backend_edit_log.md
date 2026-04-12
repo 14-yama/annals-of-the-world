@@ -9,11 +9,11 @@
 
 | Metric | Value | Last Updated |
 |--------|-------|--------------|
-| Total entities (Appwrite) | ~357,989 | 2026-04-12 |
-| Total enriched entities | 122 | Batch 6, 2026-04-12 |
-| Total new entities created | 16 | Batch 4, 2026-04-12 |
+| Total entities (Appwrite) | ~357,999 | 2026-04-12 |
+| Total enriched entities | 132 | Batch 7, 2026-04-12 |
+| Total new entities created | 26 | Batch 7, 2026-04-12 |
 | Duplicate removals | 175 (normalized slug dedup) | 2026-04-12 |
-| Misclassification fixes | 606 (604 batch + 2 targeted) | 2026-04-12 |
+| Misclassification fixes | 607 (604 batch + 2 targeted + 1 batch 7) | 2026-04-12 |
 | Underscore slugs remaining | ~777 → 0 (fixed batch 5) | 2026-04-12 |
 | Stub summaries (<200c) | ~35,568 | 2026-04-12 (backlog) |
 
@@ -81,6 +81,43 @@
 - **Quality:** All entities now have: rich summaries (3–4 paragraphs), 3+ causes, 3+ effects, 5 relationships (full EntityRelationship format), 3 places, 8 subjects, 3 frameworks
 - **Script:** `scripts/enrich_batch6.py`
 - **Appwrite Sync:** 14 entities updated
+- **Commit:** `66b1e722f5`
+
+### Batch 7 — Stub Enrichment + New Notable Entities (2026-04-12)
+- **Scope:** 10 worst STUB enrichments + 10 missing high-importance entities created
+- **Priority:** P0 (stubs with wrong/tiny data) and P1 (missing notable figures)
+
+#### Enrichments (10 STUB → FULL)
+| Entity | Old (c) | Issue | Fix Applied |
+|--------|---------|-------|-------------|
+| richard-wagner | 110c | **Wrong person** — listed as Romanian novelist | Rewritten as German composer; moved 201→263 |
+| victor-hugo | 139c | Stub | Full enrichment |
+| henry-v | 158c | Wrong Henry V (HRE) | Rewritten as English king of Agincourt |
+| nero | 161c | Minimal stub | Full enrichment |
+| justinian-i | 179c | Minimal stub | Full enrichment |
+| jane-austen | 180c | Stub | Full enrichment |
+| montesquieu | 180c | Stub | Full enrichment |
+| robert-koch | 195c | Stub | Full enrichment |
+| virginia-woolf | 197c | Stub | Full enrichment |
+| max-planck | 199c | Stub | Full enrichment |
+
+#### New Entities Created (10)
+| Entity | Call Number | Era | Importance |
+|--------|------------|-----|------------|
+| rene-descartes | 210 | Early Modern | 9 |
+| baruch-spinoza | 210 | Early Modern | 8 |
+| miguel-de-cervantes | 260 | Early Modern | 9 |
+| johann-wolfgang-von-goethe | 260 | Early Modern | 9 |
+| frederic-chopin | 263 | Modern | 8 |
+| george-orwell | 260 | Contemporary | 9 |
+| ho-chi-minh | 222 | Contemporary | 8 |
+| stephen-hawking | 240 | Contemporary | 8 |
+| j-robert-oppenheimer | 240 | Contemporary | 8 |
+| pyotr-ilyich-tchaikovsky | 263 | Modern | 8 |
+
+- **Reclassification:** richard-wagner moved from 201 (Educators) to 263 (Musicians)
+- **Script:** `scripts/enrich_batch7.py`
+- **Appwrite Sync:** 20/20 synced (2 required slug-based ID lookup)
 - **Commit:** TBD
 
 ---
@@ -105,8 +142,9 @@
 
 ### P1 — Enrichment Debt
 4. **Top 100 historical figures still stubs** — Many entities with importanceScore ≥ 8 lack rich summaries
-   - 122 now enriched across batches 1–6 (14 in batch 6: caravaggio, van gogh, bach, dickens, garibaldi, tubman, mother teresa, beethoven, mozart, trotsky, tagore, thomas more, jan hus, gagarin)
-   - Examples still needing work: giuseppe-verdi, richard-wagner, franz-kafka, fyodor-dostoevsky, jane-austen
+   - 132 now enriched across batches 1–7 (10 stubs fixed in batch 7: richard-wagner, victor-hugo, nero, justinian-i, jane-austen, montesquieu, robert-koch, virginia-woolf, max-planck, henry-v)
+   - 26 new entities created (10 in batch 7: descartes, spinoza, cervantes, goethe, chopin, orwell, ho chi minh, hawking, oppenheimer, tchaikovsky)
+   - Examples still needing work: pericles, fidel-castro, henry-viii, margaret-thatcher, ernest-hemingway, franz-kafka
 5. **Missing Wikidata QIDs** — Majority of entities have empty `wikidataQid` field
 6. **Missing image URLs** — Most entities have no `imageUrl` or `thumbnailUrl`
 7. **Event windows lack causes/effects** — Geo-registry event windows (majority of dataset) have zero causal chains
@@ -149,6 +187,7 @@
 | `scripts/enrich_batch4.py` | 26 enrichments + 5 new entities | 2026-04-12 |
 | `scripts/fix_slugs_batch5.py` | Normalize 777 underscore slugs | 2026-04-12 |
 | `scripts/enrich_batch6.py` | 14 high-value entity enrichments | 2026-04-12 |
+| `scripts/enrich_batch7.py` | 10 stub enrichments + 10 new entities | 2026-04-12 |
 | `scripts/sync_batch4_deletions.py` | Delete 177 entities from Appwrite | 2026-04-12 |
 | `scripts/sync_batch4_upserts.py` | Upsert 33 entities to Appwrite | 2026-04-12 |
 | `scripts/sync_appwrite_to_repo.ts` | Export Appwrite → JSON | On demand |

@@ -11,7 +11,7 @@
       "name": "Henry V",
       "label": "Person",
       "callNumber": "221.henry-v",
-      "summary": "Henry V was King of Germany and Holy Roman Emperor, as the fourth and last ruler of the Salian dynasty. He was made co-ruler by his father, Henry IV, in 1098.",
+      "summary": "Henry V (1386–1422) was King of England from 1413 to 1422 and the warrior-king whose stunning victory at the Battle of Agincourt (1415) against overwhelming French odds made him a legendary figure in English history. His military campaigns during the Hundred Years' War brought England closer to conquering France than at any other time.\n\nThe eldest son of Henry IV, he proved himself in combat during the Welsh revolt of Owain Glyndŵr, where he was wounded by an arrow to the face at the Battle of Shrewsbury (1403) at age 16. As king, he reunited a divided English nobility and launched his invasion of France in August 1415.\n\nAt Agincourt on October 25, 1415, Henry's exhausted, dysentery-ravaged army of roughly 6,000—mostly longbowmen—defeated a French force of 12,000–36,000. The victory was so decisive that it forced the Treaty of Troyes (1420), which made Henry heir to the French throne and regent of France.\n\nHenry died of dysentery during the siege of Meaux on August 31, 1422, aged just 35—only two months before the French king Charles VI. His infant son Henry VI inherited two kingdoms but held neither. Shakespeare's 'Henry V' immortalised the king's speech before Agincourt: 'We few, we happy few, we band of brothers.'",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,18 +25,24 @@
       "wikidataQid": "Q151707",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Henry_V,_Holy_Roman_Emperor",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1086-08-17, Goslar\"}, {\"title\": \"Dynastic succession and sovereign authority traditions\", \"type\": \"Idea\", \"year\": \"1086-08-17, Goslar\"}], \"effects\": [{\"title\": \"Established dynastic legacies and territorial boundaries\", \"type\": \"Idea\", \"year\": \"1125-05-30\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1125-05-30\"}], \"relationships\": [{\"sourceSlug\": \"henry-v\", \"sourceName\": \"Henry V\", \"verb\": \"RULES\", \"targetSlug\": \"field-221\", \"targetName\": \"Monarchs & Rulers\", \"context\": \"Henry V: Sovereign authority in monarchs & rulers\"}, {\"sourceSlug\": \"henry-v\", \"sourceName\": \"Henry V\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Henry V was active during the Medieval era\"}], \"places\": [{\"name\": \"Goslar\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Henry V\", \"type\": \"Reference article\", \"slug\": \"henry-v\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q151707\", \"https://en.wikipedia.org/wiki/Henry_V,_Holy_Roman_Emperor\"], \"tags\": [\"Monarchs & Rulers\", \"political-systems\", \"empire-and-colonialism\", \"geopolitical-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\": [\"Lancastrian dynasty's need to legitimise rule through military glory\", \"Hundred Years' War dynastic claims to the French throne\", \"English longbow military superiority over French heavy cavalry\"], \"effects\": [\"Treaty of Troyes made English king heir to French throne\", \"Agincourt became foundational English national myth\", \"Shakespeare's dramatisation cemented Henry V as the ideal English king\"], \"relationships\": [{\"sourceSlug\": \"henry-v\", \"sourceName\": \"Henry V\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"hundred-years-war\", \"targetName\": \"Hundred Years' War\", \"context\": \"Led English campaign in France 1415-1422, won Battle of Agincourt\"}, {\"sourceSlug\": \"henry-v\", \"sourceName\": \"Henry V\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"william-shakespeare\", \"targetName\": \"William Shakespeare\", \"context\": \"Shakespeare's 'Henry V' immortalised his Agincourt speech\"}, {\"sourceSlug\": \"henry-v\", \"sourceName\": \"Henry V\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"agincourt\", \"targetName\": \"Agincourt\", \"context\": \"Decisive English victory October 25, 1415\"}, {\"sourceSlug\": \"henry-v\", \"sourceName\": \"Henry V\", \"verb\": \"CAUSES\", \"targetSlug\": \"treaty-of-troyes\", \"targetName\": \"Treaty of Troyes\", \"context\": \"Military victories forced France to accept Henry as heir to the throne\"}, {\"sourceSlug\": \"joan-of-arc\", \"sourceName\": \"Joan of Arc\", \"verb\": \"REVERSES\", \"targetSlug\": \"henry-v\", \"targetName\": \"Henry V\", \"context\": \"Joan's campaigns undid Henry's conquests after his death\"}], \"places\": [{\"name\": \"Agincourt, France\", \"role\": \"Famous 1415 battle\"}, {\"name\": \"Monmouth, Wales\", \"role\": \"Birthplace\"}, {\"name\": \"Meaux, France\", \"role\": \"Death during siege\"}], \"texts\": [{\"title\": \"Wikipedia: Henry V\", \"type\": \"Reference article\", \"slug\": \"henry-v\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q151707\", \"https://en.wikipedia.org/wiki/Henry_V,_Holy_Roman_Emperor\"], \"tags\": [\"Monarchs & Rulers\", \"political-systems\", \"empire-and-colonialism\", \"geopolitical-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
       "subjectHeadings": [
         "People — Monarchs & Rulers — Global — Medieval"
       ],
       "subjects": [
-        "Monarchs & Rulers"
+        "Hundred Years War",
+        "Medieval England",
+        "Agincourt",
+        "Military History",
+        "England",
+        "France",
+        "Shakespeare",
+        "Monarchy"
       ],
       "frameworks": [
-        "POLITICAL_SYSTEMS",
-        "EMPIRE_AND_COLONIALISM",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "CAUSE_AND_EFFECT",
+        "STRUCTURAL_ANALYSIS",
+        "COMPARATIVE_CIVILIZATIONS"
       ],
       "altNames": [],
       "importanceScore": 8,

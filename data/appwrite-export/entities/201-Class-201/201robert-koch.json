@@ -11,7 +11,7 @@
       "name": "Robert Koch",
       "label": "Person",
       "callNumber": "201.robert-koch",
-      "summary": "Heinrich Hermann Robert Koch was a German physician and microbiologist. He won the 1905 Nobel Prize in Physiology or Medicine \"for his investigations and discoveries in relation to tuberculosis\".",
+      "summary": "Robert Koch (1843–1910) was a German physician and microbiologist who founded modern bacteriology and proved the germ theory of disease through rigorous experimental methods. His discovery of the tuberculosis bacillus (1882) and cholera bacillus (1883) saved millions of lives and earned him the Nobel Prize in Physiology or Medicine in 1905.\n\nWorking initially as a rural district physician, Koch developed techniques for isolating pure bacterial cultures using solid media (gelatin, then agar plates)—methods still used in every microbiology laboratory today. His famous 'Koch's Postulates' (1884) established the logical framework for proving that a specific microorganism causes a specific disease.\n\nKoch's announcement of the tuberculosis bacillus on March 24, 1882 was called 'the most important event in the history of medicine.' TB was then killing one in seven Europeans. He later discovered the cholera vibrio during an expedition to Egypt and India, enabling targeted public health interventions.\n\nHis Berlin laboratory became the global training ground for a generation of microbiologists, including Emil von Behring, Paul Ehrlich, and Kitasato Shibasaburo. Koch's rigorous methods transformed medicine from speculation into experimental science. World Tuberculosis Day (March 24) commemorates his landmark discovery.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,16 +25,24 @@
       "wikidataQid": "Q37193",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Robert_Koch",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Modern era: industrialization, imperial expansion, and democratic revolutions\", \"type\": \"EventWindow\", \"year\": \"1843-12-11, Clausthal\"}, {\"title\": \"Growth of educational institutions and scholarly traditions\", \"type\": \"Idea\", \"year\": \"1843-12-11, Clausthal\"}], \"effects\": [{\"title\": \"Shaped intellectual traditions and educated future generations\", \"type\": \"Idea\", \"year\": \"1910-05-27\"}, {\"title\": \"Contributed to mass society, world wars, and foundations of contemporary global order\", \"type\": \"Movement\", \"year\": \"1910-05-27\"}], \"relationships\": [{\"sourceSlug\": \"robert-koch\", \"sourceName\": \"Robert Koch\", \"verb\": \"TEACHES\", \"targetSlug\": \"field-201\", \"targetName\": \"Educators & Academics\", \"context\": \"Robert Koch: Educational influence in educators & academics\"}, {\"sourceSlug\": \"robert-koch\", \"sourceName\": \"Robert Koch\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"modern\", \"targetName\": \"Modern Era\", \"context\": \"Robert Koch was active during the Modern era\"}], \"places\": [{\"name\": \"Clausthal\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Robert Koch\", \"type\": \"Reference article\", \"slug\": \"robert-koch\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q37193\", \"https://en.wikipedia.org/wiki/Robert_Koch\"], \"tags\": [\"Educators & Academics\", \"cause-and-effect\", \"innovation-and-technology\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\": [\"Pasteur's germ theory providing theoretical framework\", \"Advances in microscopy and staining techniques (aniline dyes)\", \"European tuberculosis and cholera epidemics creating urgent need\"], \"effects\": [\"Founded modern bacteriology as a scientific discipline\", \"Koch's Postulates established standard for proving disease causation\", \"Nobel Prize 1905; methods still used in every microbiology lab worldwide\"], \"relationships\": [{\"sourceSlug\": \"louis-pasteur\", \"sourceName\": \"Louis Pasteur\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"robert-koch\", \"targetName\": \"Robert Koch\", \"context\": \"Pasteur's germ theory provided the framework Koch proved experimentally\"}, {\"sourceSlug\": \"robert-koch\", \"sourceName\": \"Robert Koch\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"florence-nightingale\", \"targetName\": \"Florence Nightingale\", \"context\": \"Koch's germ theory validated Nightingale's hygiene-based nursing reforms\"}, {\"sourceSlug\": \"robert-koch\", \"sourceName\": \"Robert Koch\", \"verb\": \"CREATES\", \"targetSlug\": \"kochs-postulates\", \"targetName\": \"Koch's Postulates\", \"context\": \"Published 1884, logical framework for proving microbial disease causation\"}, {\"sourceSlug\": \"robert-koch\", \"sourceName\": \"Robert Koch\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"berlin\", \"targetName\": \"Berlin\", \"context\": \"Koch's Berlin laboratory trained a generation of world-leading microbiologists\"}, {\"sourceSlug\": \"robert-koch\", \"sourceName\": \"Robert Koch\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"nobel-prize\", \"targetName\": \"Nobel Prize\", \"context\": \"Won Nobel Prize in Physiology or Medicine 1905 for tuberculosis research\"}], \"places\": [{\"name\": \"Berlin, Germany\", \"role\": \"Laboratory and career\"}, {\"name\": \"Clausthal, Germany\", \"role\": \"Birthplace\"}, {\"name\": \"Calcutta, India\", \"role\": \"Cholera research expedition\"}], \"texts\": [{\"title\": \"Wikipedia: Robert Koch\", \"type\": \"Reference article\", \"slug\": \"robert-koch\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q37193\", \"https://en.wikipedia.org/wiki/Robert_Koch\"], \"tags\": [\"Educators & Academics\", \"cause-and-effect\", \"innovation-and-technology\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
       "subjectHeadings": [
         "People — Educators & Academics — Global — Modern"
       ],
       "subjects": [
-        "Educators & Academics"
+        "Bacteriology",
+        "Germ Theory",
+        "Tuberculosis",
+        "Cholera",
+        "Nobel Prize",
+        "Germany",
+        "Public Health",
+        "Medical Science"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT",
-        "INNOVATION_AND_TECHNOLOGY"
+        "STRUCTURAL_ANALYSIS",
+        "COMPARATIVE_CIVILIZATIONS"
       ],
       "altNames": [],
       "importanceScore": 4,
