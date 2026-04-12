@@ -11,7 +11,7 @@
       "name": "Joseph Stalin",
       "label": "Person",
       "callNumber": "222.joseph-stalin",
-      "summary": "Leader of Russia (1924–1953). Totalitarian dictator; industrialization (Five-Year Plans); collectivization (famine 6M+ dead); Great Purge 1936-38 (~750k executed, millions to Gulag); WWII victory (27M Soviet dead); Eastern Europe",
+      "summary": "Joseph Stalin (1878–1953) was the dictator of the Soviet Union from 1924 to 1953 whose rule combined rapid industrialization with unprecedented political terror. Born Ioseb Jughashvili in Georgia, he rose through Bolshevik ranks to succeed Lenin and reshape the USSR.\n\nHis Five-Year Plans transformed the Soviet Union from an agrarian society into an industrial superpower, but at catastrophic human cost. Forced collectivization caused the Holodomor famine in Ukraine (1932–33), killing millions. The Great Purge (1936–38) eliminated perceived enemies through show trials and mass executions — an estimated 750,000 executed, millions more sent to the Gulag.\n\nStalin led the Soviet Union to victory over Nazi Germany in World War II, at the cost of 27 million Soviet lives. His postwar expansion into Eastern Europe initiated the Cold War. 'One death is a tragedy; a million deaths is a statistic' — a quote attributed to him that captures the chilling calculus of his rule.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,7 +25,75 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Nikita Khrushchev\", \"type\": \"Person\", \"year\": \"\", \"slug\": \"nikita-khrushchev\"}, {\"title\": \"Leonid Brezhnev\", \"type\": \"Person\", \"year\": \"\", \"slug\": \"leonid-brezhnev\"}], \"effects\": [{\"title\": \"Vladimir Lenin\", \"type\": \"Person\", \"year\": \"\", \"slug\": \"vladimir-lenin\"}, {\"title\": \"Vladimir Putin\", \"type\": \"Person\", \"year\": \"\", \"slug\": \"vladimir-putin\"}], \"relationships\": [{\"sourceSlug\": \"joseph-stalin\", \"sourceName\": \"Joseph Stalin\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"russia\", \"targetName\": \"Russia\", \"context\": \"Joseph Stalin in the history of Russia\"}, {\"sourceSlug\": \"joseph-stalin\", \"sourceName\": \"Joseph Stalin\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"vladimir-lenin\", \"targetName\": \"Vladimir Lenin\", \"context\": \"Sequential development within Russia Leadership\"}, {\"sourceSlug\": \"nikita-khrushchev\", \"sourceName\": \"Nikita Khrushchev\", \"verb\": \"CAUSES\", \"targetSlug\": \"joseph-stalin\", \"targetName\": \"Joseph Stalin\", \"context\": \"Causal antecedent ()\"}, {\"sourceSlug\": \"leonid-brezhnev\", \"sourceName\": \"Leonid Brezhnev\", \"verb\": \"CAUSES\", \"targetSlug\": \"joseph-stalin\", \"targetName\": \"Joseph Stalin\", \"context\": \"Causal antecedent ()\"}, {\"sourceSlug\": \"joseph-stalin\", \"sourceName\": \"Joseph Stalin\", \"verb\": \"CAUSES\", \"targetSlug\": \"vladimir-lenin\", \"targetName\": \"Vladimir Lenin\", \"context\": \"Consequent outcome ()\"}, {\"sourceSlug\": \"joseph-stalin\", \"sourceName\": \"Joseph Stalin\", \"verb\": \"CAUSES\", \"targetSlug\": \"vladimir-putin\", \"targetName\": \"Vladimir Putin\", \"context\": \"Consequent outcome ()\"}, {\"sourceSlug\": \"joseph-stalin\", \"sourceName\": \"Joseph Stalin\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"putins-consolidation-oil-boom\", \"targetName\": \"Putin's Consolidation & Oil Boom\", \"context\": \"Contemporary movement in Russia\"}, {\"sourceSlug\": \"joseph-stalin\", \"sourceName\": \"Joseph Stalin\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"shock-therapy-1993-crisis\", \"targetName\": \"Shock Therapy & 1993 Crisis\", \"context\": \"Active during this event\"}], \"places\": [{\"name\": \"Russia\", \"role\": \"Governance\"}], \"texts\": [], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Bolshevik Revolution and Civil War chaos",
+          "Lenin's death and power vacuum in 1924",
+          "Russian imperial tradition of autocratic rule"
+        ],
+        "effects": [
+          "Soviet industrialization — second largest economy by 1940",
+          "Holodomor and forced collectivization famines",
+          "Great Purge — destruction of Old Bolsheviks and military leadership",
+          "Soviet victory in WWII at cost of 27 million lives",
+          "Cold War division of Europe",
+          "Gulag system imprisoning millions"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "joseph-stalin",
+            "sourceName": "Joseph Stalin",
+            "verb": "TRANSFORMS",
+            "targetSlug": "soviet-union",
+            "targetName": "Soviet Union",
+            "context": "Industrialized USSR through Five-Year Plans"
+          },
+          {
+            "sourceSlug": "joseph-stalin",
+            "sourceName": "Joseph Stalin",
+            "verb": "CAUSES",
+            "targetSlug": "cold-war",
+            "targetName": "Cold War",
+            "context": "Soviet expansion into Eastern Europe triggered Cold War"
+          },
+          {
+            "sourceSlug": "joseph-stalin",
+            "sourceName": "Joseph Stalin",
+            "verb": "OCCURS_IN",
+            "targetSlug": "moscow",
+            "targetName": "Moscow",
+            "context": "Ruled from the Kremlin for 29 years"
+          },
+          {
+            "sourceSlug": "joseph-stalin",
+            "sourceName": "Joseph Stalin",
+            "verb": "INFLUENCES",
+            "targetSlug": "mao-zedong",
+            "targetName": "Mao Zedong",
+            "context": "Stalinist model influenced Chinese communism"
+          },
+          {
+            "sourceSlug": "adolf-hitler",
+            "sourceName": "Adolf Hitler",
+            "verb": "CAUSES",
+            "targetSlug": "joseph-stalin",
+            "targetName": "Joseph Stalin",
+            "context": "Nazi invasion forced Stalin into WWII alliance with West"
+          }
+        ],
+        "places": [
+          {
+            "name": "Russia",
+            "role": "Governance"
+          }
+        ],
+        "texts": [],
+        "externalLinks": [],
+        "tags": [],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": ""
+      },
       "subjectHeadings": [
         "People — Political Leaders — Russia — Contemporary"
       ],

@@ -1,0 +1,84 @@
+{
+  "entities": [
+    {
+      "slug": "kublai-khan",
+      "name": "Kublai Khan",
+      "callNumber": "221.kublai-khan",
+      "label": "Person",
+      "era": "Medieval",
+      "summary": "Kublai Khan (1215–1294) was the fifth Great Khan of the Mongol Empire and founder of the Yuan Dynasty in China — the first non-Chinese dynasty to rule all of China. Grandson of Genghis Khan, he completed the Mongol conquest of the Song Dynasty (1279) and presided over the largest contiguous empire in history.\n\nHis capital at Khanbaliq (modern Beijing) became a cosmopolitan marvel described by Marco Polo as the greatest city in the world. Kublai patronized science, arts, and trade — introducing paper money across his realm, building a vast postal relay system, and sponsoring astronomical observatories. He attempted invasions of Japan (1274, 1281) and Java, though both failed.\n\nKublai balanced Mongol military tradition with Chinese administrative sophistication. His Yuan Dynasty connected East and West along the Silk Road, facilitating the greatest period of Eurasian exchange before the Age of Exploration. Coleridge's poem 'In Xanadu did Kubla Khan / A stately pleasure dome decree' immortalized his legendary court.",
+      "subjects": [
+        "China",
+        "Mongol Empire",
+        "Yuan Dynasty",
+        "Silk Road",
+        "Marco Polo",
+        "Beijing"
+      ],
+      "continent": "Asia",
+      "subjectHeadings": [
+        "People — Kublai Khan — Medieval"
+      ],
+      "detailsJson": {
+        "causes": [
+          "Mongol Empire's westward and southward expansion",
+          "Song Dynasty's military weakness",
+          "Genghis Khan's imperial legacy and succession system"
+        ],
+        "effects": [
+          "Yuan Dynasty — first non-Chinese to rule all of China",
+          "Khanbaliq (Beijing) as cosmopolitan world capital",
+          "Paper money system across the empire",
+          "Silk Road trade at its medieval peak",
+          "Failed invasions of Japan (kamikaze typhoons)",
+          "Marco Polo's account spreading knowledge of China to Europe"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "kublai-khan",
+            "sourceName": "Kublai Khan",
+            "verb": "TRANSFORMS",
+            "targetSlug": "china",
+            "targetName": "China",
+            "context": "Conquered Song Dynasty, founded Yuan Dynasty (1271)"
+          },
+          {
+            "sourceSlug": "genghis-khan",
+            "sourceName": "Genghis Khan",
+            "verb": "CAUSES",
+            "targetSlug": "kublai-khan",
+            "targetName": "Kublai Khan",
+            "context": "Grandfather's empire enabled Kublai's conquests"
+          },
+          {
+            "sourceSlug": "marco-polo",
+            "sourceName": "Marco Polo",
+            "verb": "OCCURS_IN",
+            "targetSlug": "kublai-khan",
+            "targetName": "Kublai Khan",
+            "context": "Polo served Kublai's court for 17 years"
+          },
+          {
+            "sourceSlug": "kublai-khan",
+            "sourceName": "Kublai Khan",
+            "verb": "OCCURS_IN",
+            "targetSlug": "beijing",
+            "targetName": "Beijing",
+            "context": "Built capital Khanbaliq on site of modern Beijing"
+          },
+          {
+            "sourceSlug": "kublai-khan",
+            "sourceName": "Kublai Khan",
+            "verb": "DEFINES",
+            "targetSlug": "yuan-dynasty",
+            "targetName": "Yuan Dynasty",
+            "context": "Established Mongol rule over all China, 1271–1368"
+          }
+        ],
+        "places": [],
+        "texts": [],
+        "frameworks": []
+      }
+    }
+  ]
+}

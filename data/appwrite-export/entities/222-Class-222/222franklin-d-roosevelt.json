@@ -1,0 +1,83 @@
+{
+  "entities": [
+    {
+      "slug": "franklin-d-roosevelt",
+      "name": "Franklin D. Roosevelt",
+      "callNumber": "222.franklin-d-roosevelt",
+      "label": "Person",
+      "era": "Modern",
+      "summary": "Franklin Delano Roosevelt (1882–1945) was the 32nd President of the United States, serving an unprecedented four terms (1933–1945). He led America through its two greatest 20th-century crises: the Great Depression and World War II. Paralyzed by polio at 39, he concealed his disability while projecting boundless confidence.\n\nHis New Deal programs (1933–39) — Social Security, the SEC, FDIC, Tennessee Valley Authority — transformed the relationship between government and citizens, creating the modern welfare state. His 'fireside chats' on radio pioneered direct presidential communication with the public.\n\nAs wartime commander-in-chief, FDR forged the Allied coalition with Churchill and Stalin, oversaw the Manhattan Project, and planned the postwar order including the United Nations. He died on April 12, 1945 — weeks before VE Day — having guided America from isolationist republic to global superpower.",
+      "subjects": [
+        "United States",
+        "New Deal",
+        "World War II",
+        "Great Depression",
+        "United Nations"
+      ],
+      "continent": "Americas",
+      "subjectHeadings": [
+        "People — Franklin D. Roosevelt — Modern"
+      ],
+      "detailsJson": {
+        "causes": [
+          "Great Depression devastating American economy (1929–33)",
+          "Failure of Hoover's laissez-faire response",
+          "Rise of fascism in Europe threatening global order"
+        ],
+        "effects": [
+          "New Deal creating modern American welfare state",
+          "Social Security system for 60+ million Americans",
+          "Allied victory in World War II",
+          "United Nations founding (posthumous vision)",
+          "American emergence as global superpower",
+          "Precedent of presidential crisis leadership"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "franklin-d-roosevelt",
+            "sourceName": "FDR",
+            "verb": "CAUSES",
+            "targetSlug": "new-deal",
+            "targetName": "New Deal",
+            "context": "Transformed role of federal government in American life"
+          },
+          {
+            "sourceSlug": "franklin-d-roosevelt",
+            "sourceName": "FDR",
+            "verb": "DEFINES",
+            "targetSlug": "world-war-ii",
+            "targetName": "World War II",
+            "context": "Led Allied coalition to victory over Axis powers"
+          },
+          {
+            "sourceSlug": "franklin-d-roosevelt",
+            "sourceName": "FDR",
+            "verb": "INFLUENCES",
+            "targetSlug": "united-nations",
+            "targetName": "United Nations",
+            "context": "Planned postwar international organization"
+          },
+          {
+            "sourceSlug": "franklin-d-roosevelt",
+            "sourceName": "FDR",
+            "verb": "OCCURS_IN",
+            "targetSlug": "washington-dc",
+            "targetName": "Washington D.C.",
+            "context": "32nd President, served 1933–1945"
+          },
+          {
+            "sourceSlug": "winston-churchill",
+            "sourceName": "Winston Churchill",
+            "verb": "CAUSES",
+            "targetSlug": "franklin-d-roosevelt",
+            "targetName": "FDR",
+            "context": "Anglo-American 'special relationship' won the war"
+          }
+        ],
+        "places": [],
+        "texts": [],
+        "frameworks": []
+      }
+    }
+  ]
+}

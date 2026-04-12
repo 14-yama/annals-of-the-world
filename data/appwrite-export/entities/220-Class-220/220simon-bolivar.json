@@ -1,0 +1,85 @@
+{
+  "entities": [
+    {
+      "slug": "simon-bolivar",
+      "name": "Simón Bolívar",
+      "callNumber": "220.simon-bolivar",
+      "label": "Person",
+      "era": "Modern",
+      "summary": "Simón Bolívar (1783–1830) was the Venezuelan military and political leader who liberated six South American nations from Spanish colonial rule — earning the title 'El Libertador.' Born to a wealthy Creole family in Caracas, he dedicated his life to the vision of a united, free Latin America.\n\nBetween 1811 and 1826, Bolívar led armies across some of the most daunting terrain on Earth — the Andes, the Orinoco basin, the Colombian highlands — liberating Venezuela, Colombia, Ecuador, Peru, and Bolivia (named after him). His dramatic crossing of the Andes in 1819 to surprise Spanish forces at Boyacá rivals Hannibal's Alpine crossing.\n\nHis dream of a unified Gran Colombia ultimately failed — fracturing into separate nations by 1831. Bolívar died disillusioned in Santa Marta, Colombia, at age 47. Yet his vision of Latin American sovereignty and unity endures: 'If my death contributes to the end of factions and the consolidation of the union, I shall be lowered in peace into my grave.'",
+      "subjects": [
+        "Venezuela",
+        "Colombia",
+        "Ecuador",
+        "Peru",
+        "Bolivia",
+        "Latin American Independence",
+        "Revolution"
+      ],
+      "continent": "Americas",
+      "subjectHeadings": [
+        "People — Simón Bolívar — Modern"
+      ],
+      "detailsJson": {
+        "causes": [
+          "Spanish colonial oppression and Bourbon reforms",
+          "Enlightenment ideas (Rousseau, Locke) inspiring independence",
+          "Haitian Revolution demonstrating colonial overthrow was possible"
+        ],
+        "effects": [
+          "Liberation of Venezuela, Colombia, Ecuador, Peru, and Bolivia",
+          "Gran Colombia federation (1819–1831)",
+          "Bolivia named in his honor",
+          "Inspiration for Latin American independence movements",
+          "Pan-American unity ideal influencing regional organizations",
+          "Model of revolutionary military leadership across multiple nations"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "simon-bolivar",
+            "sourceName": "Simón Bolívar",
+            "verb": "TRANSFORMS",
+            "targetSlug": "south-america",
+            "targetName": "South America",
+            "context": "Liberated six nations from Spanish colonial rule"
+          },
+          {
+            "sourceSlug": "simon-bolivar",
+            "sourceName": "Simón Bolívar",
+            "verb": "DEFINES",
+            "targetSlug": "boyaca",
+            "targetName": "Battle of Boyacá",
+            "context": "Decisive victory after Andean crossing, 1819"
+          },
+          {
+            "sourceSlug": "simon-bolivar",
+            "sourceName": "Simón Bolívar",
+            "verb": "CAUSES",
+            "targetSlug": "gran-colombia",
+            "targetName": "Gran Colombia",
+            "context": "Founded federation uniting Venezuela, Colombia, Ecuador"
+          },
+          {
+            "sourceSlug": "jean-jacques-rousseau",
+            "sourceName": "Rousseau",
+            "verb": "INFLUENCES",
+            "targetSlug": "simon-bolivar",
+            "targetName": "Simón Bolívar",
+            "context": "Enlightenment ideas drove Bolívar's revolutionary ideology"
+          },
+          {
+            "sourceSlug": "simon-bolivar",
+            "sourceName": "Simón Bolívar",
+            "verb": "OCCURS_IN",
+            "targetSlug": "caracas",
+            "targetName": "Caracas",
+            "context": "Born in Caracas, capital of modern Venezuela"
+          }
+        ],
+        "places": [],
+        "texts": [],
+        "frameworks": []
+      }
+    }
+  ]
+}

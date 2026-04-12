@@ -1,0 +1,84 @@
+{
+  "entities": [
+    {
+      "slug": "adolf-hitler",
+      "name": "Adolf Hitler",
+      "callNumber": "222.adolf-hitler",
+      "label": "Person",
+      "era": "Modern",
+      "summary": "Adolf Hitler (1889–1945) was the Austrian-born dictator of Nazi Germany whose ideology of racial supremacy, territorial expansion, and genocide plunged the world into its deadliest conflict. Rising from a failed art student in Vienna to Chancellor of Germany (1933), he dismantled the Weimar Republic and established totalitarian rule.\n\nHis regime unleashed World War II (1939–1945), which killed 70–85 million people. The Holocaust — his systematic murder of six million Jews alongside Roma, disabled persons, and political opponents — remains history's most documented genocide. His invasions consumed Europe from the Atlantic to the gates of Moscow.\n\nDefeated by the Allied powers, Hitler took his own life in a Berlin bunker on April 30, 1945. His legacy is a permanent warning about the consequences of unchecked authoritarianism, racial hatred, and the fragility of democratic institutions.",
+      "subjects": [
+        "Germany",
+        "World War II",
+        "Holocaust",
+        "Fascism",
+        "Nazism",
+        "European History"
+      ],
+      "continent": "Europe",
+      "subjectHeadings": [
+        "People — Adolf Hitler — Modern"
+      ],
+      "detailsJson": {
+        "causes": [
+          "Treaty of Versailles humiliation and economic crisis",
+          "Weimar Republic instability and hyperinflation",
+          "Antisemitic traditions in European history"
+        ],
+        "effects": [
+          "World War II — 70–85 million dead",
+          "The Holocaust — 6 million Jews murdered",
+          "Division of Europe and onset of Cold War",
+          "Creation of the United Nations",
+          "Establishment of Israel (1948)",
+          "Nuremberg Trials establishing crimes against humanity doctrine"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "adolf-hitler",
+            "sourceName": "Adolf Hitler",
+            "verb": "CAUSES",
+            "targetSlug": "world-war-ii",
+            "targetName": "World War II",
+            "context": "Launched global conflict killing 70–85 million"
+          },
+          {
+            "sourceSlug": "adolf-hitler",
+            "sourceName": "Adolf Hitler",
+            "verb": "CAUSES",
+            "targetSlug": "holocaust",
+            "targetName": "The Holocaust",
+            "context": "Systematic genocide of 6 million Jews"
+          },
+          {
+            "sourceSlug": "adolf-hitler",
+            "sourceName": "Adolf Hitler",
+            "verb": "OCCURS_IN",
+            "targetSlug": "berlin",
+            "targetName": "Berlin",
+            "context": "Ruled from Reich Chancellery in Berlin"
+          },
+          {
+            "sourceSlug": "joseph-stalin",
+            "sourceName": "Joseph Stalin",
+            "verb": "CAUSES",
+            "targetSlug": "adolf-hitler",
+            "targetName": "Adolf Hitler",
+            "context": "Soviet resistance critical to Hitler's defeat"
+          },
+          {
+            "sourceSlug": "adolf-hitler",
+            "sourceName": "Adolf Hitler",
+            "verb": "INFLUENCES",
+            "targetSlug": "cold-war",
+            "targetName": "Cold War",
+            "context": "WWII's aftermath created bipolar world order"
+          }
+        ],
+        "places": [],
+        "texts": [],
+        "frameworks": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "entities": [
+    {
+      "slug": "richard-the-lionheart",
+      "name": "Richard the Lionheart",
+      "callNumber": "221.richard-the-lionheart",
+      "label": "Person",
+      "era": "Medieval",
+      "summary": "Richard I (1157–1199), known as Richard the Lionheart (Cœur de Lion), was King of England from 1189 to 1199 and the most celebrated warrior-king of the Middle Ages. Despite ruling England for a decade, he spent only six months there — his heart belonged to crusade and combat.\n\nHe led the Third Crusade (1189–92) alongside Philip II of France and Frederick Barbarossa, recapturing Acre and Jaffa from Saladin. Though he failed to retake Jerusalem, the Treaty of Jaffa secured Christian access to the holy city. His legendary chivalric encounters with Saladin became the stuff of medieval romance.\n\nCaptured by Duke Leopold V of Austria on his return from the Holy Land, Richard was ransomed for 150,000 marks — nearly three times England's annual revenue. He died besieging Châlus-Chabrol castle in France from a crossbow wound. His reign epitomized the crusading ideal that dominated European politics and culture for two centuries.",
+      "subjects": [
+        "England",
+        "Crusades",
+        "Saladin",
+        "Medieval History",
+        "Chivalry"
+      ],
+      "continent": "Europe",
+      "subjectHeadings": [
+        "People — Richard the Lionheart — Medieval"
+      ],
+      "detailsJson": {
+        "causes": [
+          "Angevin Empire's vast continental holdings",
+          "Saladin's conquest of Jerusalem (1187) sparking Third Crusade",
+          "Chivalric culture of 12th-century European nobility"
+        ],
+        "effects": [
+          "Third Crusade securing Christian access to Jerusalem",
+          "Legendary status as ideal medieval warrior-king",
+          "150,000-mark ransom draining English treasury",
+          "Chivalric romance tradition inspired by his exploits",
+          "Angevin Empire maintained despite king's absence",
+          "Model of crusading kingship for later European monarchs"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "richard-the-lionheart",
+            "sourceName": "Richard I",
+            "verb": "DEFINES",
+            "targetSlug": "third-crusade",
+            "targetName": "Third Crusade",
+            "context": "Led the largest crusading army against Saladin"
+          },
+          {
+            "sourceSlug": "saladin",
+            "sourceName": "Saladin",
+            "verb": "CAUSES",
+            "targetSlug": "richard-the-lionheart",
+            "targetName": "Richard I",
+            "context": "Saladin's conquests provoked the Third Crusade"
+          },
+          {
+            "sourceSlug": "richard-the-lionheart",
+            "sourceName": "Richard I",
+            "verb": "OCCURS_IN",
+            "targetSlug": "acre",
+            "targetName": "Acre",
+            "context": "Captured Acre, key victory of the Third Crusade"
+          },
+          {
+            "sourceSlug": "richard-the-lionheart",
+            "sourceName": "Richard I",
+            "verb": "OCCURS_IN",
+            "targetSlug": "london",
+            "targetName": "London",
+            "context": "Crowned King of England at Westminster, 1189"
+          },
+          {
+            "sourceSlug": "henry-ii",
+            "sourceName": "Henry II",
+            "verb": "CAUSES",
+            "targetSlug": "richard-the-lionheart",
+            "targetName": "Richard I",
+            "context": "Angevin Empire inherited from father Henry II"
+          }
+        ],
+        "places": [],
+        "texts": [],
+        "frameworks": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "entities": [
+    {
+      "slug": "tutankhamun",
+      "name": "Tutankhamun",
+      "callNumber": "221.tutankhamun",
+      "label": "Person",
+      "era": "Classical",
+      "summary": "Tutankhamun (c. 1341–1323 BCE) was an Egyptian pharaoh of the Eighteenth Dynasty who reigned for about ten years (c. 1332–1323 BCE). Ascending the throne at approximately age nine, he reversed his father Akhenaten's religious revolution, restoring the worship of Amun and the traditional priesthood.\n\nHistorically a minor pharaoh who died young — likely from malaria compounded by a bone disorder — Tutankhamun became the most famous ruler in Egyptian history when Howard Carter discovered his nearly intact tomb in the Valley of the Kings on November 4, 1922. The tomb's 5,398 artifacts, including the iconic gold death mask (11 kg of solid gold), sparked worldwide 'Egyptomania.'\n\nThe 'Curse of the Pharaohs' legend — fueled by Lord Carnarvon's death weeks after the tomb's opening — captured public imagination globally. Tutankhamun's treasures have become the defining image of ancient Egyptian civilization, touring the world's greatest museums and attracting millions of visitors to Cairo's Egyptian Museum.",
+      "subjects": [
+        "Egypt",
+        "Valley of the Kings",
+        "Archaeology",
+        "Akhenaten",
+        "Howard Carter",
+        "Ancient Egypt"
+      ],
+      "continent": "Africa",
+      "subjectHeadings": [
+        "People — Tutankhamun — Classical"
+      ],
+      "detailsJson": {
+        "causes": [
+          "Akhenaten's religious revolution requiring restoration",
+          "Eighteenth Dynasty imperial power and wealth",
+          "Young pharaoh guided by advisors Ay and Horemheb"
+        ],
+        "effects": [
+          "Restoration of traditional Egyptian polytheism",
+          "Howard Carter's 1922 discovery sparking Egyptomania",
+          "Gold death mask as most recognized ancient artifact",
+          "Modern archaeological science applied to royal mummies",
+          "'Curse of the Pharaohs' entering popular culture",
+          "Global museum exhibitions drawing millions of visitors"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "tutankhamun",
+            "sourceName": "Tutankhamun",
+            "verb": "OCCURS_IN",
+            "targetSlug": "valley-of-the-kings",
+            "targetName": "Valley of the Kings",
+            "context": "Tomb KV62 discovered November 4, 1922"
+          },
+          {
+            "sourceSlug": "akhenaten",
+            "sourceName": "Akhenaten",
+            "verb": "CAUSES",
+            "targetSlug": "tutankhamun",
+            "targetName": "Tutankhamun",
+            "context": "Reversed father's Aten revolution, restored Amun worship"
+          },
+          {
+            "sourceSlug": "nefertiti",
+            "sourceName": "Nefertiti",
+            "verb": "INFLUENCES",
+            "targetSlug": "tutankhamun",
+            "targetName": "Tutankhamun",
+            "context": "Possible stepmother and regent"
+          },
+          {
+            "sourceSlug": "tutankhamun",
+            "sourceName": "Tutankhamun",
+            "verb": "DEFINES",
+            "targetSlug": "egyptomania",
+            "targetName": "Egyptomania",
+            "context": "1922 discovery sparked global fascination with ancient Egypt"
+          },
+          {
+            "sourceSlug": "tutankhamun",
+            "sourceName": "Tutankhamun",
+            "verb": "OCCURS_IN",
+            "targetSlug": "egypt",
+            "targetName": "Egypt",
+            "context": "Pharaoh of the Eighteenth Dynasty, New Kingdom"
+          }
+        ],
+        "places": [],
+        "texts": [],
+        "frameworks": []
+      }
+    }
+  ]
+}

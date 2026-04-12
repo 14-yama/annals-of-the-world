@@ -11,7 +11,7 @@
       "name": "Thomas Aquinas",
       "label": "Person",
       "callNumber": "201.thomas-aquinas",
-      "summary": "Thomas Aquinas was an Italian Dominican friar and priest, theologian, and philosopher. He is considered one of the most influential thinkers in the history of Catholic theology and Western philosophy.",
+      "summary": "Thomas Aquinas (1225–1274) was an Italian Dominican friar, philosopher, and theologian who synthesized Aristotelian philosophy with Christian theology — a monumental intellectual achievement that remains the foundation of Catholic thought. His 'Summa Theologica' is one of the most influential works in Western philosophy.\n\nBorn to Italian nobility near Naples, he chose the life of a mendicant friar against his family's wishes. At the University of Paris and in Rome, he produced an astonishing body of work: the 'Summa Theologica,' 'Summa contra Gentiles,' and commentaries on Aristotle that demonstrated faith and reason were complementary, not contradictory.\n\nHis 'Five Ways' — five arguments for God's existence from natural reason — became the cornerstone of natural theology. Pope Leo XIII declared Thomism the official philosophy of the Catholic Church in 1879. Aquinas remains the most important philosopher-theologian in Christian history.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,7 +25,89 @@
       "wikidataQid": "Q9438",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Thomas_Aquinas",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1225, castle of the counts of Aquino\"}, {\"title\": \"Growth of educational institutions and scholarly traditions\", \"type\": \"Idea\", \"year\": \"1225, castle of the counts of Aquino\"}], \"effects\": [{\"title\": \"Shaped intellectual traditions and educated future generations\", \"type\": \"Idea\", \"year\": \"1274-03-14\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1274-03-14\"}], \"relationships\": [{\"sourceSlug\": \"thomas-aquinas\", \"sourceName\": \"Thomas Aquinas\", \"verb\": \"TEACHES\", \"targetSlug\": \"field-201\", \"targetName\": \"Educators & Academics\", \"context\": \"Thomas Aquinas: Educational influence in educators & academics\"}, {\"sourceSlug\": \"thomas-aquinas\", \"sourceName\": \"Thomas Aquinas\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Thomas Aquinas was active during the Medieval era\"}], \"places\": [{\"name\": \"castle of the counts of Aquino\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Thomas Aquinas\", \"type\": \"Reference article\", \"slug\": \"thomas-aquinas\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q9438\", \"https://en.wikipedia.org/wiki/Thomas_Aquinas\"], \"tags\": [\"Educators & Academics\", \"cause-and-effect\", \"innovation-and-technology\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Recovery of Aristotle's works via Arabic translations",
+          "Dominican Order's emphasis on learning and preaching",
+          "Medieval university system enabling philosophical inquiry"
+        ],
+        "effects": [
+          "Synthesis of faith and reason as Catholic philosophical foundation",
+          "Five Ways as standard natural theology arguments",
+          "Thomism declared official Catholic philosophy (1879)",
+          "Influence on natural law theory and human rights",
+          "Foundation for Catholic social teaching",
+          "Model for integrating secular philosophy with religious tradition"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "thomas-aquinas",
+            "sourceName": "Thomas Aquinas",
+            "verb": "TRANSMITS",
+            "targetSlug": "aristotle",
+            "targetName": "Aristotle",
+            "context": "Integrated Aristotelian philosophy into Christian theology"
+          },
+          {
+            "sourceSlug": "avicenna",
+            "sourceName": "Avicenna",
+            "verb": "INFLUENCES",
+            "targetSlug": "thomas-aquinas",
+            "targetName": "Thomas Aquinas",
+            "context": "Islamic philosophy shaped Scholastic metaphysics"
+          },
+          {
+            "sourceSlug": "thomas-aquinas",
+            "sourceName": "Thomas Aquinas",
+            "verb": "DEFINES",
+            "targetSlug": "summa-theologica",
+            "targetName": "Summa Theologica",
+            "context": "Masterwork of systematic theology"
+          },
+          {
+            "sourceSlug": "thomas-aquinas",
+            "sourceName": "Thomas Aquinas",
+            "verb": "OCCURS_IN",
+            "targetSlug": "paris",
+            "targetName": "Paris",
+            "context": "Taught at the University of Paris"
+          },
+          {
+            "sourceSlug": "thomas-aquinas",
+            "sourceName": "Thomas Aquinas",
+            "verb": "INFLUENCES",
+            "targetSlug": "catholic-church",
+            "targetName": "Catholic Church",
+            "context": "Thomism became official church philosophy"
+          }
+        ],
+        "places": [
+          {
+            "name": "castle of the counts of Aquino",
+            "role": "Birth place"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Thomas Aquinas",
+            "type": "Reference article",
+            "slug": "thomas-aquinas"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q9438",
+          "https://en.wikipedia.org/wiki/Thomas_Aquinas"
+        ],
+        "tags": [
+          "Educators & Academics",
+          "cause-and-effect",
+          "innovation-and-technology",
+          "temporal-linkage"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": ""
+      },
       "subjectHeadings": [
         "People — Educators & Academics — Global — Medieval"
       ],

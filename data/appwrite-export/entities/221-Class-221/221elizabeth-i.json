@@ -11,7 +11,7 @@
       "name": "Elizabeth I",
       "label": "Person",
       "callNumber": "221.elizabeth-i",
-      "summary": "Queen of England (1558–1603), daughter of Henry VIII and Anne Boleyn. Elizabeth's reign — the Elizabethan era — saw the flowering of English literature, the defeat of the Spanish Armada, and the religious settlement that established Anglicanism.",
+      "summary": "Elizabeth I (1533–1603) was Queen of England and Ireland from 1558 to 1603, whose 45-year reign — the Elizabethan era — is considered one of the most glorious periods in English history. The daughter of Henry VIII and Anne Boleyn, she survived imprisonment, religious persecution, and plots to reach the throne.\n\nShe established the Church of England's moderate Protestant settlement (1559), defeating the Spanish Armada (1588) in one of history's most celebrated naval victories. Her court fostered the English Renaissance — Shakespeare, Marlowe, Spenser, and Francis Bacon all flourished under her patronage.\n\nThe 'Virgin Queen' never married, using the prospect of her hand as a diplomatic tool. Her reign saw England's emergence as a major naval power, the founding of the first English colonies in the Americas, and a cultural flowering that permanently enriched the English language and literature.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -25,7 +25,92 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"English Reformation\", \"type\": \"Movement\", \"year\": \"1534\", \"slug\": \"english_reformation\"}, {\"title\": \"Anne Boleyn\", \"type\": \"Person\", \"year\": \"1533\", \"slug\": \"anne_boleyn\"}], \"effects\": [{\"title\": \"Elizabethan Golden Age\", \"type\": \"Event\", \"year\": \"1558–1603\"}, {\"title\": \"Spanish Armada defeated\", \"type\": \"Event\", \"year\": \"1588\"}], \"relationships\": [{\"sourceSlug\": \"anne_boleyn\", \"sourceName\": \"Anne Boleyn\", \"verb\": \"CAUSES\", \"targetSlug\": \"elizabeth_i\", \"targetName\": \"Elizabeth I\", \"context\": \"Mother of Elizabeth\"}, {\"sourceSlug\": \"elizabeth_i\", \"sourceName\": \"Elizabeth I\", \"verb\": \"ENABLES\", \"targetSlug\": \"shakespeare\", \"targetName\": \"Shakespeare\", \"context\": \"Patronage of theater in the Elizabethan era\"}, {\"sourceSlug\": \"english_reformation\", \"sourceName\": \"English Reformation\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"elizabeth_i\", \"targetName\": \"Elizabeth I\", \"context\": \"Elizabethan Settlement consolidated Reformation\"}, {\"sourceSlug\": \"english_reformation\", \"sourceName\": \"English Reformation\", \"verb\": \"CAUSES\", \"targetSlug\": \"elizabeth_i\", \"targetName\": \"Elizabeth I\", \"context\": \"Causal antecedent (1534)\"}, {\"sourceSlug\": \"elizabeth_i\", \"sourceName\": \"Elizabeth I\", \"verb\": \"AUTHORS\", \"targetSlug\": \"tilbury_speech_1588\", \"targetName\": \"Tilbury Speech (1588)\", \"context\": \"Text reference: Speech\"}, {\"sourceSlug\": \"elizabeth_i\", \"sourceName\": \"Elizabeth I\", \"verb\": \"AUTHORS\", \"targetSlug\": \"act_of_supremacy_1559\", \"targetName\": \"Act of Supremacy (1559)\", \"context\": \"Text reference: Legal document\"}], \"places\": [{\"name\": \"Greenwich Palace\", \"role\": \"Birthplace\"}, {\"name\": \"Westminster\", \"role\": \"Court\"}], \"texts\": [{\"title\": \"Tilbury Speech (1588)\", \"type\": \"Speech\", \"year\": \"1588\", \"slug\": \"tilbury_speech_1588\"}, {\"title\": \"Act of Supremacy (1559)\", \"type\": \"Legal document\", \"year\": \"1559\", \"slug\": \"act_of_supremacy_1559\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Henry VIII's break with Rome creating the Church of England",
+          "Mary I's unpopular Catholic restoration",
+          "English Renaissance cultural ferment"
+        ],
+        "effects": [
+          "Elizabethan religious settlement — moderate Protestantism",
+          "Defeat of the Spanish Armada (1588)",
+          "English Renaissance in theatre and literature",
+          "Foundation of English colonial enterprise (Roanoke, Virginia)",
+          "England's rise as major naval power",
+          "Model of female sovereignty and political acumen"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "elizabeth_i",
+            "sourceName": "Elizabeth I",
+            "verb": "DEFINES",
+            "targetSlug": "spanish-armada",
+            "targetName": "Spanish Armada",
+            "context": "Defeated Philip II's invasion fleet, 1588"
+          },
+          {
+            "sourceSlug": "henry-viii-of-england",
+            "sourceName": "Henry VIII",
+            "verb": "CAUSES",
+            "targetSlug": "elizabeth_i",
+            "targetName": "Elizabeth I",
+            "context": "Father's Reformation shaped Elizabeth's religious settlement"
+          },
+          {
+            "sourceSlug": "elizabeth_i",
+            "sourceName": "Elizabeth I",
+            "verb": "INFLUENCES",
+            "targetSlug": "william-shakespeare",
+            "targetName": "William Shakespeare",
+            "context": "Elizabethan court patronized Shakespeare's theatre"
+          },
+          {
+            "sourceSlug": "elizabeth_i",
+            "sourceName": "Elizabeth I",
+            "verb": "OCCURS_IN",
+            "targetSlug": "london",
+            "targetName": "London",
+            "context": "Ruled from Whitehall and Richmond palaces"
+          },
+          {
+            "sourceSlug": "elizabeth_i",
+            "sourceName": "Elizabeth I",
+            "verb": "TRANSFORMS",
+            "targetSlug": "england",
+            "targetName": "England",
+            "context": "Established England as Protestant naval power"
+          }
+        ],
+        "places": [
+          {
+            "name": "Greenwich Palace",
+            "role": "Birthplace"
+          },
+          {
+            "name": "Westminster",
+            "role": "Court"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Tilbury Speech (1588)",
+            "type": "Speech",
+            "year": "1588",
+            "slug": "tilbury_speech_1588"
+          },
+          {
+            "title": "Act of Supremacy (1559)",
+            "type": "Legal document",
+            "year": "1559",
+            "slug": "act_of_supremacy_1559"
+          }
+        ],
+        "externalLinks": [],
+        "tags": [],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": ""
+      },
       "subjectHeadings": [
         "People — Political Leaders — England — Early Modern"
       ],

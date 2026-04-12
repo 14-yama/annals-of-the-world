@@ -11,7 +11,7 @@
       "name": "Suleiman the Magnificent",
       "label": "Person",
       "callNumber": "222.suleiman-the-magnificent",
-      "summary": "Suleiman the Magnificent, a notable figure in the history of Iraq, associated with Ottoman Iraq (1534–1638). Preceded by Treaty of Zuhab and Suleiman the Magnificent captures Baghdad from the Safavids. Their legacy influenced Mamluk Governors of Baghdad and Georgian Mamluk.",
+      "summary": "Suleiman I (1494–1566), known in the West as 'the Magnificent' and in Islam as 'the Lawgiver' (Kanuni), presided over the Ottoman Empire at the height of its power. His 46-year reign (1520–1566) was the longest and most glorious in Ottoman history.\n\nHe conquered Belgrade (1521), Rhodes (1522), and much of Hungary after the Battle of Mohács (1526). His navy under Hayreddin Barbarossa dominated the Mediterranean. At home, he reformed the legal system, patronized architecture (the Süleymaniye Mosque by Sinan remains Istanbul's masterpiece), and oversaw a golden age of Ottoman arts and literature.\n\nSuleiman's empire stretched from Algeria to Iraq, from Hungary to Yemen — governing over 25 million people. His partnership with Grand Vizier Ibrahim Pasha and his legendary love for Hürrem Sultan (Roxelana) shaped both politics and palace culture for generations.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -25,7 +25,75 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Treaty of Zuhab\", \"type\": \"Text\", \"year\": \"1534\", \"slug\": \"treaty-of-zuhab\"}, {\"title\": \"Suleiman the Magnificent captures Baghdad from the Safavids\", \"type\": \"EventWindow\", \"year\": \"1534\", \"slug\": \"suleiman-the-magnificent-captures-baghdad-from-the-safavids\"}], \"effects\": [{\"title\": \"Mamluk Governors of Baghdad\", \"type\": \"EventWindow\", \"year\": \"1704\", \"slug\": \"mamluk-governors-of-baghdad\"}, {\"title\": \"Georgian Mamluk\", \"type\": \"Person\", \"year\": \"1704\", \"slug\": \"georgian-mamluk\"}], \"relationships\": [{\"sourceSlug\": \"suleiman-the-magnificent\", \"sourceName\": \"Suleiman the Magnificent\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"iraq\", \"targetName\": \"Iraq\", \"context\": \"Suleiman the Magnificent in the history of Iraq\"}, {\"sourceSlug\": \"suleiman-the-magnificent\", \"sourceName\": \"Suleiman the Magnificent\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"mamluk-governors-of-baghdad\", \"targetName\": \"Mamluk Governors of Baghdad\", \"context\": \"Sequential development within Ottoman Iraq\"}, {\"sourceSlug\": \"treaty-of-zuhab\", \"sourceName\": \"Treaty of Zuhab\", \"verb\": \"CAUSES\", \"targetSlug\": \"suleiman-the-magnificent\", \"targetName\": \"Suleiman the Magnificent\", \"context\": \"Causal antecedent (1534)\"}, {\"sourceSlug\": \"suleiman-the-magnificent-captures-baghdad-from-the-safavids\", \"sourceName\": \"Suleiman the Magnificent captures Baghdad from the Safavids\", \"verb\": \"CAUSES\", \"targetSlug\": \"suleiman-the-magnificent\", \"targetName\": \"Suleiman the Magnificent\", \"context\": \"Causal antecedent (1534)\"}, {\"sourceSlug\": \"suleiman-the-magnificent\", \"sourceName\": \"Suleiman the Magnificent\", \"verb\": \"CAUSES\", \"targetSlug\": \"mamluk-governors-of-baghdad\", \"targetName\": \"Mamluk Governors of Baghdad\", \"context\": \"Consequent outcome (1704)\"}, {\"sourceSlug\": \"suleiman-the-magnificent\", \"sourceName\": \"Suleiman the Magnificent\", \"verb\": \"CAUSES\", \"targetSlug\": \"georgian-mamluk\", \"targetName\": \"Georgian Mamluk\", \"context\": \"Consequent outcome (1704)\"}, {\"sourceSlug\": \"suleiman-the-magnificent\", \"sourceName\": \"Suleiman the Magnificent\", \"verb\": \"LEADS\", \"targetSlug\": \"last-abbasid-caliph-al-mustasim-executed-ending-508-years-of-the-caliphate\", \"targetName\": \"Last Abbasid Caliph al-Musta'sim executed, ending 508 years of the caliphate\", \"context\": \"Contemporary institution in Iraq\"}, {\"sourceSlug\": \"suleiman-the-magnificent\", \"sourceName\": \"Suleiman the Magnificent\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"hulagu-khan-sacks-baghdad-estimated-hundreds-of-thousands-killed\", \"targetName\": \"Hulagu Khan sacks Baghdad — estimated hundreds of thousands killed\", \"context\": \"Active during this event\"}], \"places\": [{\"name\": \"Iraq\", \"role\": \"National History\"}], \"texts\": [], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Ottoman military dominance inherited from Selim I",
+          "Mature administrative system from Mehmed II's reforms",
+          "Christian Europe weakened by internal divisions"
+        ],
+        "effects": [
+          "Ottoman Empire's territorial zenith — 3 continents",
+          "Kanuni legal code governing Ottoman society for centuries",
+          "Süleymaniye Mosque as pinnacle of Islamic architecture",
+          "Ottoman Mediterranean dominance under Barbarossa",
+          "Precedent of royal consort (Hürrem Sultan) influencing politics",
+          "Long decline after his death — 'post-Suleimanic' period"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "suleiman-the-magnificent",
+            "sourceName": "Suleiman",
+            "verb": "TRANSFORMS",
+            "targetSlug": "ottoman-empire",
+            "targetName": "Ottoman Empire",
+            "context": "Brought empire to territorial and cultural zenith"
+          },
+          {
+            "sourceSlug": "suleiman-the-magnificent",
+            "sourceName": "Suleiman",
+            "verb": "DEFINES",
+            "targetSlug": "mohacs",
+            "targetName": "Battle of Mohács",
+            "context": "Destroyed Hungarian kingdom, 1526"
+          },
+          {
+            "sourceSlug": "suleiman-the-magnificent",
+            "sourceName": "Suleiman",
+            "verb": "CAUSES",
+            "targetSlug": "suleymaniye",
+            "targetName": "Süleymaniye Mosque",
+            "context": "Commissioned masterwork of architect Sinan"
+          },
+          {
+            "sourceSlug": "suleiman-the-magnificent",
+            "sourceName": "Suleiman",
+            "verb": "OCCURS_IN",
+            "targetSlug": "istanbul",
+            "targetName": "Istanbul",
+            "context": "Ruled from Topkapi Palace for 46 years"
+          },
+          {
+            "sourceSlug": "suleiman-the-magnificent",
+            "sourceName": "Suleiman",
+            "verb": "INFLUENCES",
+            "targetSlug": "ottoman-law",
+            "targetName": "Ottoman Legal System",
+            "context": "Kanuni reforms governed empire for centuries"
+          }
+        ],
+        "places": [
+          {
+            "name": "Iraq",
+            "role": "National History"
+          }
+        ],
+        "texts": [],
+        "externalLinks": [],
+        "tags": [],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": ""
+      },
       "subjectHeadings": [
         "People — Ottoman Iraq — Iraq — Medieval"
       ],

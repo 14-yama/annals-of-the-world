@@ -11,7 +11,7 @@
       "name": "Mao Zedong",
       "label": "Person",
       "callNumber": "222.mao-zedong",
-      "summary": "Leader of China (1949–1976). Founder of PRC; CCP Chairman; Long March; Great Leap Forward (famine: 15-55 million dead); Cultural Revolution; died September 1976",
+      "summary": "Mao Zedong (1893–1976) was the founding chairman of the People's Republic of China whose revolutionary vision reshaped the most populous nation on Earth. A peasant's son from Hunan province, he merged Marxism-Leninism with Chinese agrarian revolution to create 'Maoism.'\n\nHe led the Chinese Communist Party through the Long March (1934–35), the war against Japan, and civil war against Chiang Kai-shek's Nationalists, proclaiming the People's Republic on October 1, 1949. His rule brought land reform and literacy campaigns but also catastrophic failures: the Great Leap Forward (1958–62) caused a famine killing 15–55 million people.\n\nThe Cultural Revolution (1966–76) unleashed Red Guards against 'bourgeois elements,' devastating China's intellectual and cultural life. Yet Mao also normalized relations with the US (Nixon's 1972 visit) and remains a deeply complex figure — revered as China's liberator, condemned for its worst peacetime catastrophe.",
       "era": "Contemporary",
       "eraSlug": "contemporary",
       "eraDivision": "Contemporary",
@@ -25,7 +25,75 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [], \"effects\": [{\"title\": \"Deng Xiaoping\", \"type\": \"Person\", \"year\": \"\", \"slug\": \"deng-xiaoping\"}, {\"title\": \"Jiang Zemin\", \"type\": \"Person\", \"year\": \"\", \"slug\": \"jiang-zemin\"}], \"relationships\": [{\"sourceSlug\": \"mao-zedong\", \"sourceName\": \"Mao Zedong\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"china\", \"targetName\": \"China\", \"context\": \"Mao Zedong in the history of China\"}, {\"sourceSlug\": \"mao-zedong\", \"sourceName\": \"Mao Zedong\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"deng-xiaoping\", \"targetName\": \"Deng Xiaoping\", \"context\": \"Sequential development within China Leadership\"}, {\"sourceSlug\": \"mao-zedong\", \"sourceName\": \"Mao Zedong\", \"verb\": \"CAUSES\", \"targetSlug\": \"deng-xiaoping\", \"targetName\": \"Deng Xiaoping\", \"context\": \"Consequent outcome ()\"}, {\"sourceSlug\": \"mao-zedong\", \"sourceName\": \"Mao Zedong\", \"verb\": \"CAUSES\", \"targetSlug\": \"jiang-zemin\", \"targetName\": \"Jiang Zemin\", \"context\": \"Consequent outcome ()\"}, {\"sourceSlug\": \"mao-zedong\", \"sourceName\": \"Mao Zedong\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"third-plenum-launches-reform-and-opening-up-transforming-chinas-economy\", \"targetName\": \"Third Plenum launches 'Reform and Opening Up' — transforming China's economy\", \"context\": \"Contemporary movement in China\"}, {\"sourceSlug\": \"mao-zedong\", \"sourceName\": \"Mao Zedong\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"china-joins-the-world-trade-organization\", \"targetName\": \"China joins the World Trade Organization\", \"context\": \"Active during this event\"}], \"places\": [{\"name\": \"China\", \"role\": \"Governance\"}], \"texts\": [], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "May Fourth Movement and anti-imperialism",
+          "Marxist-Leninist ideology adapted to peasant revolution",
+          "Japanese invasion and Chinese Civil War"
+        ],
+        "effects": [
+          "Founding of People's Republic of China (1949)",
+          "Great Leap Forward famine — 15–55 million dead",
+          "Cultural Revolution — decade of political chaos",
+          "US-China rapprochement (1972)",
+          "Maoist ideology inspiring Third World revolutions",
+          "Foundation for Deng Xiaoping's economic reforms"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "mao-zedong",
+            "sourceName": "Mao Zedong",
+            "verb": "TRANSFORMS",
+            "targetSlug": "china",
+            "targetName": "China",
+            "context": "Established People's Republic, restructured Chinese society"
+          },
+          {
+            "sourceSlug": "mao-zedong",
+            "sourceName": "Mao Zedong",
+            "verb": "INFLUENCES",
+            "targetSlug": "ho-chi-minh",
+            "targetName": "Ho Chi Minh",
+            "context": "Maoist guerrilla strategy adopted in Vietnam"
+          },
+          {
+            "sourceSlug": "joseph-stalin",
+            "sourceName": "Joseph Stalin",
+            "verb": "INFLUENCES",
+            "targetSlug": "mao-zedong",
+            "targetName": "Mao Zedong",
+            "context": "Soviet model shaped early PRC policies"
+          },
+          {
+            "sourceSlug": "mao-zedong",
+            "sourceName": "Mao Zedong",
+            "verb": "OCCURS_IN",
+            "targetSlug": "beijing",
+            "targetName": "Beijing",
+            "context": "Ruled from Zhongnanhai for 27 years"
+          },
+          {
+            "sourceSlug": "mao-zedong",
+            "sourceName": "Mao Zedong",
+            "verb": "CAUSES",
+            "targetSlug": "cultural-revolution",
+            "targetName": "Cultural Revolution",
+            "context": "Launched decade-long political upheaval, 1966–76"
+          }
+        ],
+        "places": [
+          {
+            "name": "China",
+            "role": "Governance"
+          }
+        ],
+        "texts": [],
+        "externalLinks": [],
+        "tags": [],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": ""
+      },
       "subjectHeadings": [
         "People — Political Leaders — China — Contemporary"
       ],

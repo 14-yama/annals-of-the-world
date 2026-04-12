@@ -11,7 +11,7 @@
       "name": "Tamerlane (Timur)",
       "label": "Person",
       "callNumber": "221.tamerlane",
-      "summary": "Turco-Mongol conqueror (1336–1405) who founded the Timurid Empire spanning from Anatolia to India. His campaigns killed an estimated 5% of the world population, yet he was also a patron of arts and architecture, making Samarkand one of the most magnificent cities of the medieval world.",
+      "summary": "Timur (1336–1405), known in the West as Tamerlane (from Timur-i-lang, 'Timur the Lame'), was a Turco-Mongol conqueror who built the last great nomadic empire, stretching from Delhi to Damascus to the Russian steppe. Born near Samarkand, he claimed descent from Genghis Khan's lineage.\n\nHis military campaigns were devastating in scale: the sack of Delhi (1398) killed an estimated 100,000 captives in a single day; the sieges of Baghdad, Aleppo, and Damascus left pyramids of skulls. He defeated the Ottoman Sultan Bayezid I at Ankara (1402), temporarily saving Constantinople from Ottoman conquest.\n\nYet Timur was also a patron of art and architecture. He made Samarkand one of the most magnificent cities in the world, building the Registan, Bibi-Khanym Mosque, and the Gur-e-Amir (his own mausoleum). His dynasty, the Timurids, produced a cultural renaissance in Central Asia and Persia that rivaled Renaissance Italy.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,7 +25,92 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Fragmentation of Mongol successor states\", \"type\": \"EventWindow\", \"year\": \"14th century\"}, {\"title\": \"Chagatai Khanate power vacuum\", \"type\": \"EventWindow\", \"year\": \"14th century\"}], \"effects\": [{\"title\": \"Timurid Empire established\", \"type\": \"Institution\", \"year\": \"1370–1507\"}, {\"title\": \"Samarkand becomes architectural wonder\", \"type\": \"EventWindow\", \"year\": \"15th century\"}, {\"title\": \"Ottoman Empire nearly destroyed at Ankara\", \"type\": \"EventWindow\", \"year\": \"1402\"}], \"relationships\": [{\"sourceSlug\": \"tamerlane\", \"sourceName\": \"Tamerlane\", \"verb\": \"LEADS\", \"targetSlug\": \"timurid-empire\", \"targetName\": \"Timurid Empire\", \"context\": \"Founded 1370\"}, {\"sourceSlug\": \"tamerlane\", \"sourceName\": \"Tamerlane\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"uzbekistan\", \"targetName\": \"Uzbekistan\", \"context\": \"Based in Samarkand\"}, {\"sourceSlug\": \"tamerlane\", \"sourceName\": \"Tamerlane\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"india\", \"targetName\": \"India\", \"context\": \"Sacked Delhi 1398\"}, {\"sourceSlug\": \"tamerlane\", \"sourceName\": \"Tamerlane\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"turkey\", \"targetName\": \"Turkey\", \"context\": \"Defeated Ottomans at Ankara 1402\"}], \"places\": [{\"name\": \"Samarkand\", \"role\": \"Capital\"}, {\"name\": \"Delhi\", \"role\": \"Sacked 1398\"}, {\"name\": \"Ankara\", \"role\": \"Defeated Ottomans 1402\"}, {\"name\": \"Baghdad\", \"role\": \"Sacked 1401\"}], \"texts\": [{\"title\": \"Zafarnama (Sharaf ad-Din Ali Yazdi)\", \"type\": \"Imperial chronicle\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Mongol imperial tradition and Chagatai Khanate fragmentation",
+          "Central Asian nomadic military culture",
+          "Personal ambition modeled on Genghis Khan"
+        ],
+        "effects": [
+          "Devastation of Delhi Sultanate and Middle Eastern cities",
+          "Temporary halt of Ottoman expansion after Ankara (1402)",
+          "Timurid Renaissance in Central Asian art and architecture",
+          "Samarkand as world cultural capital",
+          "Mughal Empire founded by his descendant Babur",
+          "Shift of trade routes due to destruction of established centers"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "tamerlane",
+            "sourceName": "Tamerlane",
+            "verb": "TRANSFORMS",
+            "targetSlug": "samarkand",
+            "targetName": "Samarkand",
+            "context": "Made Samarkand a world-class cultural capital"
+          },
+          {
+            "sourceSlug": "tamerlane",
+            "sourceName": "Tamerlane",
+            "verb": "CAUSES",
+            "targetSlug": "babur",
+            "targetName": "Babur",
+            "context": "Timurid dynasty produced Babur, founder of Mughal Empire"
+          },
+          {
+            "sourceSlug": "tamerlane",
+            "sourceName": "Tamerlane",
+            "verb": "DEFINES",
+            "targetSlug": "ankara",
+            "targetName": "Battle of Ankara",
+            "context": "Defeated Ottoman Sultan Bayezid I, 1402"
+          },
+          {
+            "sourceSlug": "genghis-khan",
+            "sourceName": "Genghis Khan",
+            "verb": "INFLUENCES",
+            "targetSlug": "tamerlane",
+            "targetName": "Tamerlane",
+            "context": "Claimed Chinggisid legacy and conquest model"
+          },
+          {
+            "sourceSlug": "tamerlane",
+            "sourceName": "Tamerlane",
+            "verb": "OCCURS_IN",
+            "targetSlug": "samarkand",
+            "targetName": "Samarkand",
+            "context": "Capital of the Timurid Empire"
+          }
+        ],
+        "places": [
+          {
+            "name": "Samarkand",
+            "role": "Capital"
+          },
+          {
+            "name": "Delhi",
+            "role": "Sacked 1398"
+          },
+          {
+            "name": "Ankara",
+            "role": "Defeated Ottomans 1402"
+          },
+          {
+            "name": "Baghdad",
+            "role": "Sacked 1401"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Zafarnama (Sharaf ad-Din Ali Yazdi)",
+            "type": "Imperial chronicle"
+          }
+        ],
+        "externalLinks": [],
+        "tags": [],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": ""
+      },
       "subjectHeadings": [
         "People — Military Leaders & Commanders — Central Asia — Medieval"
       ],

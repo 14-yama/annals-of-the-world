@@ -11,7 +11,7 @@
       "name": "Ibn Khaldun",
       "label": "Person",
       "callNumber": "202.ibn-khaldun",
-      "summary": "Ibn Khaldun was an Arab scholar, historian, philosopher, and sociologist. He is widely acknowledged to be one of the greatest social scientists of the Middle Ages, and is considered by a number of scholars to be a major forerunner of historiography, sociology, economics, and demography studies.",
+      "summary": "Ibn Khaldun (1332–1406) was a North African Arab historian, sociologist, and philosopher who wrote the 'Muqaddimah' — widely considered the first work of sociology, historiography, and economics. Born in Tunis to an elite Andalusian family, he served as diplomat and judge across the Maghreb, al-Andalus, and Mamluk Egypt.\n\nThe Muqaddimah (1377) introduced the concept of 'asabiyyah' (social cohesion/group solidarity) as the driving force of civilization. He argued that dynasties follow a cyclical pattern — nomadic groups with strong asabiyyah conquer settled peoples, then lose cohesion through luxury, falling to the next wave. This framework predated modern cycle-of-civilization theories by centuries.\n\nHis empirical approach to history — rejecting myths, analyzing causes, studying economics and climate — earned him recognition as 'the father of sociology.' Arnold Toynbee called the Muqaddimah 'the greatest work of its kind that has ever been created by any mind in any time or place.'",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,7 +25,81 @@
       "wikidataQid": "Q9294",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Ibn_Khaldun",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [], \"effects\": [], \"relationships\": [], \"places\": [{\"name\": \"Tunis\", \"role\": \"Birth place\"}], \"texts\": [], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q9294\", \"https://en.wikipedia.org/wiki/Ibn_Khaldun\"], \"tags\": [\"Merchants & Economists\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Decline of the Almohad and Marinid dynasties in North Africa",
+          "Personal experience serving multiple courts and witnessing regime changes",
+          "Greek and Islamic historiographical traditions"
+        ],
+        "effects": [
+          "Foundation of sociology as a discipline",
+          "Cyclical theory of civilizations (asabiyyah)",
+          "Empirical approach to historiography",
+          "Influence on Toynbee, Gellner, and modern social science",
+          "Economic theory of labor, taxation, and market dynamics",
+          "Precursor to modern political economy"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "ibn-khaldun",
+            "sourceName": "Ibn Khaldun",
+            "verb": "DEFINES",
+            "targetSlug": "muqaddimah",
+            "targetName": "Muqaddimah",
+            "context": "Foundational work of sociology and historiography"
+          },
+          {
+            "sourceSlug": "ibn-khaldun",
+            "sourceName": "Ibn Khaldun",
+            "verb": "INFLUENCES",
+            "targetSlug": "toynbee",
+            "targetName": "Arnold Toynbee",
+            "context": "Toynbee called the Muqaddimah the greatest of its kind"
+          },
+          {
+            "sourceSlug": "ibn-khaldun",
+            "sourceName": "Ibn Khaldun",
+            "verb": "OCCURS_IN",
+            "targetSlug": "tunis",
+            "targetName": "Tunis",
+            "context": "Born and educated in Tunis"
+          },
+          {
+            "sourceSlug": "ibn-khaldun",
+            "sourceName": "Ibn Khaldun",
+            "verb": "OCCURS_IN",
+            "targetSlug": "cairo",
+            "targetName": "Cairo",
+            "context": "Served as judge in Mamluk Egypt"
+          },
+          {
+            "sourceSlug": "ibn-khaldun",
+            "sourceName": "Ibn Khaldun",
+            "verb": "INFLUENCES",
+            "targetSlug": "adam-smith",
+            "targetName": "Adam Smith",
+            "context": "Labor theory of value anticipated by Ibn Khaldun"
+          }
+        ],
+        "places": [
+          {
+            "name": "Tunis",
+            "role": "Birth place"
+          }
+        ],
+        "texts": [],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q9294",
+          "https://en.wikipedia.org/wiki/Ibn_Khaldun"
+        ],
+        "tags": [
+          "Merchants & Economists",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": ""
+      },
       "subjectHeadings": [
         "People — Merchants & Economists — Global — Medieval"
       ],

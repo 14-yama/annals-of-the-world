@@ -11,7 +11,7 @@
       "name": "Akbar the Great",
       "label": "Person",
       "callNumber": "221.akbar",
-      "summary": "Third Mughal Emperor (1556–1605), widely considered the greatest Mughal ruler. Akbar expanded the empire across most of the Indian subcontinent, implemented progressive administrative reforms, and promoted religious tolerance through interfaith dialogue.",
+      "summary": "Akbar the Great (1542–1605), born Jalal-ud-din Muhammad Akbar, was the third Mughal Emperor who transformed India's most powerful dynasty from a Central Asian conquest state into a genuinely Indian empire. His 49-year reign (1556–1605) was the longest and most consequential in Mughal history.\n\nAscending the throne at age 13, Akbar consolidated power through military brilliance and revolutionary statecraft. His policy of 'sulh-i-kul' (universal peace) promoted religious tolerance among Hindus, Muslims, Jains, Christians, and Zoroastrians. He abolished the discriminatory jizya tax on non-Muslims, married Rajput princesses, and created a syncretic 'Divine Faith' (Din-i-Ilahi).\n\nHis mansabdari system of ranked military-civil officials, revenue reforms under Todar Mal, and patronage of arts (the Mughal school of miniature painting) created a cultural golden age. Fatehpur Sikri and the Agra Fort stand as monuments to his vision of imperial grandeur tempered by pluralism.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -25,7 +25,90 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [], \"effects\": [{\"title\": \"Mughal Empire reaches peak\", \"type\": \"Place\", \"year\": \"1600\", \"slug\": \"mughal_empire\"}], \"relationships\": [{\"sourceSlug\": \"akbar\", \"sourceName\": \"Akbar\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"mughal_empire\", \"targetName\": \"Mughal Empire\", \"context\": \"Expanded and reformed the empire\"}, {\"sourceSlug\": \"akbar\", \"sourceName\": \"Akbar the Great\", \"verb\": \"CAUSES\", \"targetSlug\": \"mughal_empire\", \"targetName\": \"Mughal Empire reaches peak\", \"context\": \"Consequent outcome (1600)\"}, {\"sourceSlug\": \"akbar\", \"sourceName\": \"Akbar the Great\", \"verb\": \"AUTHORS\", \"targetSlug\": \"akbarnama_abulfazl\", \"targetName\": \"Akbarnama (Abu'l-Fazl)\", \"context\": \"Text reference: Historical chronicle\"}, {\"sourceSlug\": \"akbar\", \"sourceName\": \"Akbar the Great\", \"verb\": \"AUTHORS\", \"targetSlug\": \"ainiakbari\", \"targetName\": \"Ain-i-Akbari\", \"context\": \"Text reference: Administrative compendium\"}], \"places\": [{\"name\": \"Agra\", \"role\": \"Capital\"}, {\"name\": \"Fatehpur Sikri\", \"role\": \"Built new capital\"}], \"texts\": [{\"title\": \"Akbarnama (Abu'l-Fazl)\", \"type\": \"Historical chronicle\", \"slug\": \"akbarnama_abulfazl\"}, {\"title\": \"Ain-i-Akbari\", \"type\": \"Administrative compendium\", \"slug\": \"ainiakbari\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Mughal military tradition from Babur and Humayun",
+          "Indian subcontinent's religious diversity demanding tolerance",
+          "Revenue crisis requiring administrative reform"
+        ],
+        "effects": [
+          "Religious tolerance policy (sulh-i-kul) ahead of its time",
+          "Mughal administrative system lasting until British Raj",
+          "Golden age of Mughal art, architecture, and literature",
+          "Precedent for secular governance in religiously diverse states",
+          "Fatehpur Sikri as architectural wonder of syncretic design",
+          "Foundation for 200 years of Mughal imperial power"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "akbar",
+            "sourceName": "Akbar",
+            "verb": "TRANSFORMS",
+            "targetSlug": "mughal-empire",
+            "targetName": "Mughal Empire",
+            "context": "Transformed conquest state into Indian empire"
+          },
+          {
+            "sourceSlug": "akbar",
+            "sourceName": "Akbar",
+            "verb": "DEFINES",
+            "targetSlug": "fatehpur-sikri",
+            "targetName": "Fatehpur Sikri",
+            "context": "Built syncretic capital city near Agra"
+          },
+          {
+            "sourceSlug": "akbar",
+            "sourceName": "Akbar",
+            "verb": "INFLUENCES",
+            "targetSlug": "shah-jahan",
+            "targetName": "Shah Jahan",
+            "context": "Grandson continued Mughal architectural patronage"
+          },
+          {
+            "sourceSlug": "akbar",
+            "sourceName": "Akbar",
+            "verb": "OCCURS_IN",
+            "targetSlug": "agra",
+            "targetName": "Agra",
+            "context": "Primary capital and site of Agra Fort"
+          },
+          {
+            "sourceSlug": "babur",
+            "sourceName": "Babur",
+            "verb": "CAUSES",
+            "targetSlug": "akbar",
+            "targetName": "Akbar",
+            "context": "Mughal dynasty founded by Babur enabled Akbar's reign"
+          }
+        ],
+        "places": [
+          {
+            "name": "Agra",
+            "role": "Capital"
+          },
+          {
+            "name": "Fatehpur Sikri",
+            "role": "Built new capital"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Akbarnama (Abu'l-Fazl)",
+            "type": "Historical chronicle",
+            "slug": "akbarnama_abulfazl"
+          },
+          {
+            "title": "Ain-i-Akbari",
+            "type": "Administrative compendium",
+            "slug": "ainiakbari"
+          }
+        ],
+        "externalLinks": [],
+        "tags": [],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": ""
+      },
       "subjectHeadings": [
         "People — Political Leaders — India — Early Modern"
       ],

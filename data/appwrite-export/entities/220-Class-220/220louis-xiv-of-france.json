@@ -11,7 +11,7 @@
       "name": "Louis XIV of France",
       "label": "Person",
       "callNumber": "220.louis-xiv-of-france",
-      "summary": "Louis XIV was King of France from 14 May 1643 until his death in 1715. He is a symbol of the Age of Absolutism in Europe for styling himself as Le Roi Soleil, which portrayed him as supreme leader. He presided over a great expansion of the French colonial empire and a patronage of arts in his court at the Palace of Versailles that defined the Baroque style of French architecture. His reign of 72 years and 110 days remains the longest of any monarch in history.",
+      "summary": "Louis XIV (1638–1715), the 'Sun King,' was King of France for 72 years (1643–1715) — the longest verified reign of any sovereign in European history. His rule epitomized absolute monarchy: 'L'État, c'est moi' ('I am the state') captured his belief that royal authority was indivisible and divinely ordained.\n\nHe built the Palace of Versailles — transforming a hunting lodge into the most magnificent court in Europe, where 10,000 nobles competed for royal favor. French became the language of European diplomacy, French fashion set Continental trends, and French arts (Molière, Racine, Lully) defined the Baroque age.\n\nYet his ambitions overreached: the Revocation of the Edict of Nantes (1685) expelled 200,000 Huguenots, draining France of skilled workers. His wars of expansion — the War of Spanish Succession chief among them — exhausted the treasury. He left France culturally triumphant but financially ruined, sowing seeds for the Revolution 74 years later.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -25,7 +25,89 @@
       "wikidataQid": "Q7742",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Louis_XIV",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Early Modern era: age of exploration, printing revolution, and religious reformation\", \"type\": \"EventWindow\", \"year\": \"1638-09-05, Château de Saint-Germain-en-Laye\"}, {\"title\": \"Political crises and power transitions requiring new leadership\", \"type\": \"Idea\", \"year\": \"1638-09-05, Château de Saint-Germain-en-Laye\"}], \"effects\": [{\"title\": \"Shaped political institutions and governance practices\", \"type\": \"Idea\", \"year\": \"1715-09-01\"}, {\"title\": \"Contributed to global exchange networks, modern state formation, and scientific revolution\", \"type\": \"Movement\", \"year\": \"1715-09-01\"}], \"relationships\": [{\"sourceSlug\": \"louis-xiv-of-france\", \"sourceName\": \"Louis XIV of France\", \"verb\": \"GOVERNS\", \"targetSlug\": \"field-220\", \"targetName\": \"Political Leaders\", \"context\": \"Louis XIV of France: Political leadership in political leaders\"}, {\"sourceSlug\": \"louis-xiv-of-france\", \"sourceName\": \"Louis XIV of France\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"early-modern\", \"targetName\": \"Early Modern Era\", \"context\": \"Louis XIV of France was active during the Early Modern era\"}], \"places\": [{\"name\": \"Château de Saint-Germain-en-Laye\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Louis XIV of France\", \"type\": \"Reference article\", \"slug\": \"louis-xiv-of-france\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q7742\", \"https://en.wikipedia.org/wiki/Louis_XIV\"], \"tags\": [\"Political Leaders\", \"political-systems\", \"geopolitical-linkage\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Minority experience during the Fronde rebellions (1648–53)",
+          "Cardinal Mazarin's mentorship in statecraft",
+          "French cultural confidence after Renaissance and Wars of Religion"
+        ],
+        "effects": [
+          "Versailles as model for European absolute monarchy",
+          "French language adopted as lingua franca of diplomacy",
+          "Revocation of Edict of Nantes — Huguenot exodus",
+          "Financial exhaustion contributing to French Revolution",
+          "Baroque cultural golden age in arts and literature",
+          "Centralized French state administration"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "louis-xiv-of-france",
+            "sourceName": "Louis XIV",
+            "verb": "CAUSES",
+            "targetSlug": "versailles",
+            "targetName": "Palace of Versailles",
+            "context": "Built the most magnificent court in European history"
+          },
+          {
+            "sourceSlug": "louis-xiv-of-france",
+            "sourceName": "Louis XIV",
+            "verb": "DEFINES",
+            "targetSlug": "absolute-monarchy",
+            "targetName": "Absolute Monarchy",
+            "context": "Epitomized divine-right kingship in Europe"
+          },
+          {
+            "sourceSlug": "louis-xiv-of-france",
+            "sourceName": "Louis XIV",
+            "verb": "INFLUENCES",
+            "targetSlug": "french-revolution",
+            "targetName": "French Revolution",
+            "context": "Financial ruin from wars sowed revolutionary seeds"
+          },
+          {
+            "sourceSlug": "louis-xiv-of-france",
+            "sourceName": "Louis XIV",
+            "verb": "OCCURS_IN",
+            "targetSlug": "versailles",
+            "targetName": "Versailles",
+            "context": "Moved court from Paris to Versailles, 1682"
+          },
+          {
+            "sourceSlug": "louis-xiv-of-france",
+            "sourceName": "Louis XIV",
+            "verb": "CAUSES",
+            "targetSlug": "war-of-spanish-succession",
+            "targetName": "War of Spanish Succession",
+            "context": "European coalition war against French hegemony"
+          }
+        ],
+        "places": [
+          {
+            "name": "Château de Saint-Germain-en-Laye",
+            "role": "Birth place"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Louis XIV of France",
+            "type": "Reference article",
+            "slug": "louis-xiv-of-france"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q7742",
+          "https://en.wikipedia.org/wiki/Louis_XIV"
+        ],
+        "tags": [
+          "Political Leaders",
+          "political-systems",
+          "geopolitical-linkage",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": ""
+      },
       "subjectHeadings": [
         "People — Political Leaders — Global — Early Modern"
       ],

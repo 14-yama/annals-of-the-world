@@ -11,7 +11,7 @@
       "name": "Al-Khwarizmi",
       "label": "Person",
       "callNumber": "213.al-khwarizmi",
-      "summary": "Persian mathematician (c. 780–850 CE) from the Abbasid House of Wisdom in Baghdad, whose treatise Al-Jabr wal-Muqabala gave algebra its name and introduced systematic methods for solving linear and quadratic equations. The Latinization of his name gave us the word \"algorithm.\" His work transmitted Hindu-Arabic numerals to Europe, transforming mathematics forever.",
+      "summary": "Muhammad ibn Musa al-Khwarizmi (c. 780–850) was a Persian mathematician, astronomer, and geographer whose works fundamentally shaped mathematics and science. Working at the House of Wisdom in Baghdad during the Islamic Golden Age, he produced treatises that introduced algebra and Hindu-Arabic numerals to the world.\n\nHis book 'Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala' (c. 820) gave the world the word 'algebra' (from al-jabr, 'restoration'). His treatise on Hindu-Arabic numerals introduced the decimal positional system to the Islamic world and later to Europe — the word 'algorithm' derives from the Latinization of his name (Algoritmi).\n\nAl-Khwarizmi also produced improved astronomical tables, a world geography, and works on the Jewish calendar. His mathematical innovations — transmitted to Europe through Latin translations — made modern computation, science, and engineering possible.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,7 +25,85 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"House of Wisdom founded\", \"type\": \"Institution\", \"year\": \"c. 800 CE\", \"slug\": \"house-of-wisdom\"}, {\"title\": \"Indian mathematical tradition\", \"type\": \"Movement\", \"year\": \"c. 500 CE\"}], \"effects\": [{\"title\": \"European adoption of Hindu-Arabic numerals\", \"type\": \"Movement\", \"year\": \"12th century\"}, {\"title\": \"Modern Algebra as discipline\", \"type\": \"Idea\", \"year\": \"16th century\"}], \"relationships\": [{\"sourceSlug\": \"al-khwarizmi\", \"sourceName\": \"Al-Khwarizmi\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"house-of-wisdom\", \"targetName\": \"House of Wisdom\", \"context\": \"Key scholar at the Abbasid center of learning\"}], \"places\": [{\"name\": \"Baghdad\", \"role\": \"House of Wisdom\"}, {\"name\": \"Khwarezm\", \"role\": \"Birthplace\"}], \"texts\": [{\"title\": \"Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala\", \"type\": \"Mathematical treatise\", \"year\": \"c. 820\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Abbasid Caliphate patronage of science at House of Wisdom",
+          "Indian mathematical traditions (Hindu numerals, zero)",
+          "Greek mathematical heritage preserved in Arabic translation"
+        ],
+        "effects": [
+          "Invention of algebra as a mathematical discipline",
+          "Introduction of Hindu-Arabic numeral system to the world",
+          "Word 'algorithm' derived from his name",
+          "Foundation for all modern computation and mathematics",
+          "Astronomical tables used for centuries",
+          "European mathematical revolution via Latin translations"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "al-khwarizmi",
+            "sourceName": "Al-Khwarizmi",
+            "verb": "DEFINES",
+            "targetSlug": "algebra",
+            "targetName": "Algebra",
+            "context": "Founded algebra as a systematic discipline"
+          },
+          {
+            "sourceSlug": "al-khwarizmi",
+            "sourceName": "Al-Khwarizmi",
+            "verb": "OCCURS_IN",
+            "targetSlug": "baghdad",
+            "targetName": "Baghdad",
+            "context": "Worked at the House of Wisdom under al-Ma'mun"
+          },
+          {
+            "sourceSlug": "al-khwarizmi",
+            "sourceName": "Al-Khwarizmi",
+            "verb": "INFLUENCES",
+            "targetSlug": "fibonacci",
+            "targetName": "Fibonacci",
+            "context": "Hindu-Arabic numerals reached Europe through al-Khwarizmi"
+          },
+          {
+            "sourceSlug": "al-khwarizmi",
+            "sourceName": "Al-Khwarizmi",
+            "verb": "TRANSMITS",
+            "targetSlug": "indian-mathematics",
+            "targetName": "Indian Mathematics",
+            "context": "Transmitted Hindu numerals and zero to Islamic world"
+          },
+          {
+            "sourceSlug": "al-khwarizmi",
+            "sourceName": "Al-Khwarizmi",
+            "verb": "INFLUENCES",
+            "targetSlug": "computer-science",
+            "targetName": "Computer Science",
+            "context": "'Algorithm' named after him — foundation of computing"
+          }
+        ],
+        "places": [
+          {
+            "name": "Baghdad",
+            "role": "House of Wisdom"
+          },
+          {
+            "name": "Khwarezm",
+            "role": "Birthplace"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Al-Kitab al-Mukhtasar fi Hisab al-Jabr wal-Muqabala",
+            "type": "Mathematical treatise",
+            "year": "c. 820"
+          }
+        ],
+        "externalLinks": [],
+        "tags": [],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": ""
+      },
       "subjectHeadings": [
         "People — Scientists & Inventors — Persia — Medieval"
       ],

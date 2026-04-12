@@ -1,0 +1,83 @@
+{
+  "entities": [
+    {
+      "slug": "catherine-the-great",
+      "name": "Catherine the Great",
+      "callNumber": "221.catherine-the-great",
+      "label": "Person",
+      "era": "Early Modern",
+      "summary": "Catherine II (1729–1796), known as Catherine the Great, was Empress of Russia from 1762 to 1796 — the longest-ruling female leader in Russian history. Born Princess Sophie of Anhalt-Zerbst in Prussia, she seized the throne from her husband Peter III in a coup and became Russia's most celebrated monarch.\n\nShe expanded the Russian Empire by 200,000 square miles — annexing Crimea, partitioning Poland, and pushing to the Black Sea. Her embrace of Enlightenment ideas (correspondence with Voltaire and Diderot) earned her the title 'Semiramis of the North,' though her reform of serfdom remained incomplete.\n\nCatherine patronized arts and education, founded the Hermitage Museum collection, established the Russian Academy, and modernized Russia's legal and educational systems. Her reign marked Russia's emergence as one of Europe's great powers, building on Peter the Great's legacy while establishing her own.",
+      "subjects": [
+        "Russia",
+        "Enlightenment",
+        "Russian Empire",
+        "Crimea",
+        "European Monarchy"
+      ],
+      "continent": "Europe",
+      "subjectHeadings": [
+        "People — Catherine the Great — Early Modern"
+      ],
+      "detailsJson": {
+        "causes": [
+          "Peter the Great's modernization program",
+          "Enlightenment philosophy spreading to Russian elite",
+          "Peter III's unpopular pro-Prussian policies enabling coup"
+        ],
+        "effects": [
+          "Russian Empire expanded to Black Sea and Crimea",
+          "Partition of Poland (1772, 1793, 1795)",
+          "Hermitage Museum collection founded",
+          "Russian Academy established",
+          "Russia's emergence as European great power",
+          "Enlightened absolutism model for European monarchs"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "catherine-the-great",
+            "sourceName": "Catherine the Great",
+            "verb": "TRANSFORMS",
+            "targetSlug": "russia",
+            "targetName": "Russia",
+            "context": "Expanded empire by 200,000 square miles"
+          },
+          {
+            "sourceSlug": "peter-the-great",
+            "sourceName": "Peter the Great",
+            "verb": "INFLUENCES",
+            "targetSlug": "catherine-the-great",
+            "targetName": "Catherine the Great",
+            "context": "Continued Peter's Westernization program"
+          },
+          {
+            "sourceSlug": "voltaire",
+            "sourceName": "Voltaire",
+            "verb": "INFLUENCES",
+            "targetSlug": "catherine-the-great",
+            "targetName": "Catherine the Great",
+            "context": "Philosophical correspondence shaped reform agenda"
+          },
+          {
+            "sourceSlug": "catherine-the-great",
+            "sourceName": "Catherine the Great",
+            "verb": "OCCURS_IN",
+            "targetSlug": "saint-petersburg",
+            "targetName": "Saint Petersburg",
+            "context": "Ruled from Winter Palace for 34 years"
+          },
+          {
+            "sourceSlug": "catherine-the-great",
+            "sourceName": "Catherine the Great",
+            "verb": "CAUSES",
+            "targetSlug": "crimea",
+            "targetName": "Crimea",
+            "context": "Annexed Crimean Peninsula from Ottoman Empire, 1783"
+          }
+        ],
+        "places": [],
+        "texts": [],
+        "frameworks": []
+      }
+    }
+  ]
+}

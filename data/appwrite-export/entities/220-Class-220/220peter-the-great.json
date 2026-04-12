@@ -11,7 +11,7 @@
       "name": "Peter the Great",
       "label": "Person",
       "callNumber": "220.peter-the-great",
-      "summary": "Peter I was the Tsar of all Russia from 1682 and the first Emperor of Russia from 1721 until his death in 1725. He reigned jointly with his half-brother Ivan V until 1696. Peter, as an autocrat, organized a well-ordered police state.",
+      "summary": "Peter I (1672–1725), known as Peter the Great, was Tsar and first Emperor of Russia who single-handedly dragged his nation from medieval isolation into European modernity. His reign (1682–1725) was the most transformative in Russian history.\n\nAfter his famous 'Grand Embassy' tour of Western Europe (1697–1698) — where he worked incognito in Dutch shipyards — Peter modernized Russia's military, founded the Russian Navy, reformed the Orthodox Church, and imposed Western dress on the nobility. He built Saint Petersburg from scratch on swampland as Russia's 'Window on the West.'\n\nHis victory over Sweden at Poltava (1709) established Russia as a great European power. Peter's ruthless reforms — including taxing beards, executing the Streltsy, and even condemning his own son to death — exemplified his conviction that progress required absolute authority.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -25,7 +25,89 @@
       "wikidataQid": "Q8479",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Peter_the_Great",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Early Modern era: age of exploration, printing revolution, and religious reformation\", \"type\": \"EventWindow\", \"year\": \"1672-06-09, Moscow\"}, {\"title\": \"Political crises and power transitions requiring new leadership\", \"type\": \"Idea\", \"year\": \"1672-06-09, Moscow\"}], \"effects\": [{\"title\": \"Shaped political institutions and governance practices\", \"type\": \"Idea\", \"year\": \"1725-02-08\"}, {\"title\": \"Contributed to global exchange networks, modern state formation, and scientific revolution\", \"type\": \"Movement\", \"year\": \"1725-02-08\"}], \"relationships\": [{\"sourceSlug\": \"peter-the-great\", \"sourceName\": \"Peter the Great\", \"verb\": \"GOVERNS\", \"targetSlug\": \"field-220\", \"targetName\": \"Political Leaders\", \"context\": \"Peter the Great: Political leadership in political leaders\"}, {\"sourceSlug\": \"peter-the-great\", \"sourceName\": \"Peter the Great\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"early-modern\", \"targetName\": \"Early Modern Era\", \"context\": \"Peter the Great was active during the Early Modern era\"}], \"places\": [{\"name\": \"Moscow\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Peter the Great\", \"type\": \"Reference article\", \"slug\": \"peter-the-great\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q8479\", \"https://en.wikipedia.org/wiki/Peter_the_Great\"], \"tags\": [\"Political Leaders\", \"political-systems\", \"geopolitical-linkage\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Russian military defeats by Ottoman Empire and Sweden",
+          "Influence of Western European visitors in Moscow",
+          "Personal curiosity during Grand Embassy to Europe (1697–1698)"
+        ],
+        "effects": [
+          "Foundation of Saint Petersburg (1703)",
+          "Creation of the Russian Navy",
+          "Russia's emergence as European great power after Poltava",
+          "Westernization of Russian aristocracy and government",
+          "Abolition of the Patriarchate; state control of Church",
+          "Table of Ranks meritocratic system"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "peter-the-great",
+            "sourceName": "Peter the Great",
+            "verb": "CAUSES",
+            "targetSlug": "saint-petersburg",
+            "targetName": "Saint Petersburg",
+            "context": "Founded Russia's new capital on the Neva, 1703"
+          },
+          {
+            "sourceSlug": "peter-the-great",
+            "sourceName": "Peter the Great",
+            "verb": "TRANSFORMS",
+            "targetSlug": "russia",
+            "targetName": "Russia",
+            "context": "Westernized military, government, and culture"
+          },
+          {
+            "sourceSlug": "peter-the-great",
+            "sourceName": "Peter the Great",
+            "verb": "DEFINES",
+            "targetSlug": "poltava",
+            "targetName": "Battle of Poltava",
+            "context": "Decisively defeated Sweden, 1709"
+          },
+          {
+            "sourceSlug": "peter-the-great",
+            "sourceName": "Peter the Great",
+            "verb": "INFLUENCES",
+            "targetSlug": "catherine-the-great",
+            "targetName": "Catherine the Great",
+            "context": "Continued Peter's modernization program"
+          },
+          {
+            "sourceSlug": "peter-the-great",
+            "sourceName": "Peter the Great",
+            "verb": "OCCURS_IN",
+            "targetSlug": "moscow",
+            "targetName": "Moscow",
+            "context": "Ruled Russia from Moscow before founding Petersburg"
+          }
+        ],
+        "places": [
+          {
+            "name": "Moscow",
+            "role": "Birth place"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Peter the Great",
+            "type": "Reference article",
+            "slug": "peter-the-great"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q8479",
+          "https://en.wikipedia.org/wiki/Peter_the_Great"
+        ],
+        "tags": [
+          "Political Leaders",
+          "political-systems",
+          "geopolitical-linkage",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": ""
+      },
       "subjectHeadings": [
         "People — Political Leaders — Global — Early Modern"
       ],

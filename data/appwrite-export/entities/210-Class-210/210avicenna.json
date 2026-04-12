@@ -11,7 +11,7 @@
       "name": "Avicenna",
       "label": "Person",
       "callNumber": "210.avicenna",
-      "summary": "Ibn Sina, commonly known in the West as Avicenna, was a preeminent philosopher and physician of the Muslim world. He was a seminal figure of the Islamic Golden Age, serving in the courts of various Iranian rulers, and was influential to medieval European medical and Scholastic thought.",
+      "summary": "Ibn Sina (c. 980–1037), known in the West as Avicenna, was a Persian polymath who composed over 450 works on philosophy, medicine, astronomy, and theology. He was the most influential philosopher-scientist of the Islamic Golden Age and one of the most significant thinkers in human history.\n\nHis 'Canon of Medicine' (al-Qanun fi al-Tibb) served as the standard medical textbook in both Islamic and European universities for over 500 years — longer than any other medical text. It systematized Greek, Roman, and Islamic medical knowledge into a coherent framework covering anatomy, pharmacology, and clinical practice.\n\nHis philosophical magnum opus, 'The Book of Healing' (Kitab al-Shifa), fused Aristotelian philosophy with Islamic theology and independently anticipated several modern philosophical arguments. Avicenna's 'flying man' thought experiment — imagining consciousness without sensory input — prefigured Descartes' cogito by six centuries.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,7 +25,89 @@
       "wikidataQid": "Q8011",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Avicenna",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"980 CE, Afshona\"}, {\"title\": \"Ongoing philosophical inquiry and intellectual debate\", \"type\": \"Idea\", \"year\": \"980 CE, Afshona\"}], \"effects\": [{\"title\": \"Contributed philosophical ideas to ongoing intellectual discourse\", \"type\": \"Idea\", \"year\": \"1037-06-24\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1037-06-24\"}], \"relationships\": [{\"sourceSlug\": \"avicenna\", \"sourceName\": \"Avicenna\", \"verb\": \"THEORIZES\", \"targetSlug\": \"field-210\", \"targetName\": \"Philosophers & Thinkers\", \"context\": \"Avicenna: Philosophical contribution in philosophers & thinkers\"}, {\"sourceSlug\": \"avicenna\", \"sourceName\": \"Avicenna\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Avicenna was active during the Medieval era\"}], \"places\": [{\"name\": \"Afshona\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Avicenna\", \"type\": \"Reference article\", \"slug\": \"avicenna\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q8011\", \"https://en.wikipedia.org/wiki/Avicenna\"], \"tags\": [\"Philosophers & Thinkers\", \"doctrine-development\", \"cause-and-effect\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Islamic Golden Age fostering scholarship",
+          "Greek philosophical and medical texts preserved in Arabic translation",
+          "Samanid court patronage of learning in Central Asia"
+        ],
+        "effects": [
+          "Canon of Medicine dominating medical education for 500 years",
+          "Synthesis of Aristotelian philosophy with Islamic thought",
+          "Influence on Scholastic philosophy (Thomas Aquinas, Duns Scotus)",
+          "'Flying man' thought experiment anticipating Cartesian doubt",
+          "Standardization of pharmacological classification",
+          "Foundation for evidence-based clinical medicine"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "avicenna",
+            "sourceName": "Avicenna",
+            "verb": "INFLUENCES",
+            "targetSlug": "thomas-aquinas",
+            "targetName": "Thomas Aquinas",
+            "context": "Scholastic philosophy incorporated Avicenna's metaphysics"
+          },
+          {
+            "sourceSlug": "avicenna",
+            "sourceName": "Avicenna",
+            "verb": "DEFINES",
+            "targetSlug": "canon-of-medicine",
+            "targetName": "Canon of Medicine",
+            "context": "Standard medical text for 500 years"
+          },
+          {
+            "sourceSlug": "aristotle",
+            "sourceName": "Aristotle",
+            "verb": "INFLUENCES",
+            "targetSlug": "avicenna",
+            "targetName": "Avicenna",
+            "context": "Aristotelian philosophy formed Avicenna's framework"
+          },
+          {
+            "sourceSlug": "avicenna",
+            "sourceName": "Avicenna",
+            "verb": "INFLUENCES",
+            "targetSlug": "descartes",
+            "targetName": "René Descartes",
+            "context": "Flying man anticipated cogito ergo sum"
+          },
+          {
+            "sourceSlug": "avicenna",
+            "sourceName": "Avicenna",
+            "verb": "OCCURS_IN",
+            "targetSlug": "bukhara",
+            "targetName": "Bukhara",
+            "context": "Educated and first practiced medicine in Bukhara"
+          }
+        ],
+        "places": [
+          {
+            "name": "Afshona",
+            "role": "Birth place"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Avicenna",
+            "type": "Reference article",
+            "slug": "avicenna"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q8011",
+          "https://en.wikipedia.org/wiki/Avicenna"
+        ],
+        "tags": [
+          "Philosophers & Thinkers",
+          "doctrine-development",
+          "cause-and-effect",
+          "temporal-linkage"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": ""
+      },
       "subjectHeadings": [
         "People — Philosophers & Thinkers — Global — Medieval"
       ],

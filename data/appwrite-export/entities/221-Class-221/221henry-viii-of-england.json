@@ -11,7 +11,7 @@
       "name": "Henry VIII of England",
       "label": "Person",
       "callNumber": "221.henry-viii-of-england",
-      "summary": "Henry VIII was King of England from 22 April 1509 until his death in 1547. After the pope refused to annul his marriage to Catherine of Aragon, Henry passed legislation that severed England and Ireland from the Roman Catholic Church and established the monarch as Supreme Head of the Church of England, initiating the English Reformation. He subsequently married five more times; two marriages were annulled and two wives were executed.",
+      "summary": "Henry VIII (1491–1547) was King of England from 1509 to 1547, best known for his six marriages and his break with the Roman Catholic Church — a decision that reshaped English religion, politics, and identity for centuries. His desire for a male heir drove him to annul his marriage to Catherine of Aragon, defying Pope Clement VII.\n\nWhen the Pope refused the annulment, Henry declared himself Supreme Head of the Church of England (1534), dissolved the monasteries, and seized their vast wealth. This English Reformation was initially more political than theological — Henry remained doctrinally conservative — but it unleashed forces that would transform Britain into a Protestant nation.\n\nBeyond religion, Henry expanded the Royal Navy (laying foundations for British naval supremacy), united England and Wales through the Laws in Wales Acts, and strengthened parliamentary sovereignty. His six wives — divorced, beheaded, died, divorced, beheaded, survived — remain the most memorable marital saga in royal history.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,7 +25,89 @@
       "wikidataQid": "Q38370",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Henry_VIII",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1491-07-07, Palace of Placentia\"}, {\"title\": \"Dynastic succession and sovereign authority traditions\", \"type\": \"Idea\", \"year\": \"1491-07-07, Palace of Placentia\"}], \"effects\": [{\"title\": \"Established dynastic legacies and territorial boundaries\", \"type\": \"Idea\", \"year\": \"1547-02-07\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1547-02-07\"}], \"relationships\": [{\"sourceSlug\": \"henry-viii-of-england\", \"sourceName\": \"Henry VIII of England\", \"verb\": \"RULES\", \"targetSlug\": \"field-221\", \"targetName\": \"Monarchs & Rulers\", \"context\": \"Henry VIII of England: Sovereign authority in monarchs & rulers\"}, {\"sourceSlug\": \"henry-viii-of-england\", \"sourceName\": \"Henry VIII of England\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Henry VIII of England was active during the Medieval era\"}], \"places\": [{\"name\": \"Palace of Placentia\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Henry VIII of England\", \"type\": \"Reference article\", \"slug\": \"henry-viii-of-england\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q38370\", \"https://en.wikipedia.org/wiki/Henry_VIII\"], \"tags\": [\"Monarchs & Rulers\", \"political-systems\", \"empire-and-colonialism\", \"geopolitical-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Desire for male heir driving annulment crisis with Catherine of Aragon",
+          "Papal refusal of annulment under Habsburg pressure",
+          "Renaissance humanism questioning papal authority"
+        ],
+        "effects": [
+          "English Reformation — Church of England breaks from Rome",
+          "Dissolution of monasteries redistributing wealth to gentry",
+          "Royal supremacy doctrine — monarch as head of church",
+          "Foundation of British naval power",
+          "Parliamentary sovereignty strengthened through Reformation statutes",
+          "Wales united with England under English law"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "henry-viii-of-england",
+            "sourceName": "Henry VIII",
+            "verb": "CAUSES",
+            "targetSlug": "english-reformation",
+            "targetName": "English Reformation",
+            "context": "Broke with Rome to annul marriage, creating Church of England"
+          },
+          {
+            "sourceSlug": "henry-viii-of-england",
+            "sourceName": "Henry VIII",
+            "verb": "DEFINES",
+            "targetSlug": "act-of-supremacy",
+            "targetName": "Act of Supremacy",
+            "context": "Declared himself Supreme Head of Church of England, 1534"
+          },
+          {
+            "sourceSlug": "henry-viii-of-england",
+            "sourceName": "Henry VIII",
+            "verb": "INFLUENCES",
+            "targetSlug": "elizabeth-i",
+            "targetName": "Elizabeth I",
+            "context": "Daughter who completed the Protestant settlement"
+          },
+          {
+            "sourceSlug": "henry-viii-of-england",
+            "sourceName": "Henry VIII",
+            "verb": "OCCURS_IN",
+            "targetSlug": "london",
+            "targetName": "London",
+            "context": "Ruled from Hampton Court and Greenwich palaces"
+          },
+          {
+            "sourceSlug": "martin-luther",
+            "sourceName": "Martin Luther",
+            "verb": "INFLUENCES",
+            "targetSlug": "henry-viii-of-england",
+            "targetName": "Henry VIII",
+            "context": "Protestant Reformation context enabled Henry's break with Rome"
+          }
+        ],
+        "places": [
+          {
+            "name": "Palace of Placentia",
+            "role": "Birth place"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Henry VIII of England",
+            "type": "Reference article",
+            "slug": "henry-viii-of-england"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q38370",
+          "https://en.wikipedia.org/wiki/Henry_VIII"
+        ],
+        "tags": [
+          "Monarchs & Rulers",
+          "political-systems",
+          "empire-and-colonialism",
+          "geopolitical-linkage"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": ""
+      },
       "subjectHeadings": [
         "People — Monarchs & Rulers — Global — Medieval"
       ],

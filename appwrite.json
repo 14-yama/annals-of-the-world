@@ -77,6 +77,18 @@
             "enabled": true,
             "entrypoint": "src/main.js",
             "path": "functions/audit-orphans"
+        },
+        {
+            "$id": "audit-classification",
+            "name": "Audit Classification",
+            "runtime": "node-18.0",
+            "execute": ["any"],
+            "events": [],
+            "schedule": "0 6 * * *",
+            "timeout": 900,
+            "enabled": true,
+            "entrypoint": "src/main.js",
+            "path": "functions/audit-classification"
         }
     ]
 }

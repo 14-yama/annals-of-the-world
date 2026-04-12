@@ -11,7 +11,7 @@
       "name": "Voltaire",
       "label": "Person",
       "callNumber": "210.08-voltaire",
-      "summary": "French writer, historian, and philosopher (1694–1778), one of the central figures of the Enlightenment. A fierce advocate for civil liberties, freedom of religion, and separation of church and state, his satirical works challenged established authority and superstition.",
+      "summary": "Voltaire (1694–1778), born François-Marie Arouet, was the most influential writer of the European Enlightenment — a philosopher, historian, satirist, and tireless advocate for civil liberties, freedom of religion, and separation of church and state.\n\nHis satirical masterpiece 'Candide' (1759) lampooned philosophical optimism with savage wit. His 'Letters on the English' (1733) introduced French readers to Newton, Locke, and British parliamentary government, igniting reform movements across Europe. Twice imprisoned in the Bastille and repeatedly exiled, he wielded his pen as a weapon against tyranny and superstition.\n\n'I disapprove of what you say, but I will defend to the death your right to say it' — while likely apocryphal, this captures Voltaire's legacy as champion of free expression. His ideas directly shaped the American and French Revolutions.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -25,7 +25,85 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Scientific Revolution\", \"type\": \"Movement\", \"year\": \"c. 1550\", \"slug\": \"scientific_revolution\"}], \"effects\": [{\"title\": \"French Revolution\", \"type\": \"EventWindow\", \"year\": \"1789\", \"slug\": \"french_revolution\"}], \"relationships\": [{\"sourceSlug\": \"voltaire\", \"sourceName\": \"Voltaire\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"french_revolution\", \"targetName\": \"French Revolution\", \"context\": \"Enlightenment ideas undermined ancien régime\"}, {\"sourceSlug\": \"voltaire\", \"sourceName\": \"Voltaire\", \"verb\": \"PROMOTES\", \"targetSlug\": \"enlightenment_thought\", \"targetName\": \"Enlightenment Thought\", \"context\": \"Champion of reason and tolerance\"}, {\"sourceSlug\": \"newton\", \"sourceName\": \"Newton\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"voltaire\", \"targetName\": \"Voltaire\", \"context\": \"Popularized Newtonian ideas in France\"}, {\"sourceSlug\": \"scientific_revolution\", \"sourceName\": \"Scientific Revolution\", \"verb\": \"CAUSES\", \"targetSlug\": \"voltaire\", \"targetName\": \"Voltaire\", \"context\": \"Causal antecedent (c. 1550)\"}, {\"sourceSlug\": \"voltaire\", \"sourceName\": \"Voltaire\", \"verb\": \"CAUSES\", \"targetSlug\": \"french_revolution\", \"targetName\": \"French Revolution\", \"context\": \"Consequent outcome (1789)\"}, {\"sourceSlug\": \"voltaire\", \"sourceName\": \"Voltaire\", \"verb\": \"AUTHORS\", \"targetSlug\": \"candide_1759\", \"targetName\": \"Candide (1759)\", \"context\": \"Text reference: Satirical novella\"}, {\"sourceSlug\": \"voltaire\", \"sourceName\": \"Voltaire\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"french_revolution\", \"targetName\": \"French Revolution\", \"context\": \"Active during this event\"}], \"places\": [{\"name\": \"Paris\", \"role\": \"Birthplace\"}, {\"name\": \"Ferney, France\", \"role\": \"Estate and exile\"}], \"texts\": [{\"title\": \"Candide (1759)\", \"type\": \"Satirical novella\", \"slug\": \"candide_1759\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "French absolutism under Louis XIV and XV",
+          "Newton's scientific revolution and British empiricism",
+          "Personal experience of royal persecution and imprisonment"
+        ],
+        "effects": [
+          "Intellectual foundation for the French Revolution",
+          "Advancement of religious tolerance in Europe",
+          "Popularization of Newtonian science on the continent",
+          "Influence on American founding fathers (Jefferson, Franklin)",
+          "Modern concept of freedom of expression",
+          "Model of the public intellectual engaging in political discourse"
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "voltaire",
+            "sourceName": "Voltaire",
+            "verb": "INFLUENCES",
+            "targetSlug": "french-revolution",
+            "targetName": "French Revolution",
+            "context": "Enlightenment ideas fueled revolutionary ideology"
+          },
+          {
+            "sourceSlug": "voltaire",
+            "sourceName": "Voltaire",
+            "verb": "TRANSMITS",
+            "targetSlug": "isaac-newton",
+            "targetName": "Isaac Newton",
+            "context": "Popularized Newtonian physics in France"
+          },
+          {
+            "sourceSlug": "voltaire",
+            "sourceName": "Voltaire",
+            "verb": "INFLUENCES",
+            "targetSlug": "thomas-jefferson",
+            "targetName": "Thomas Jefferson",
+            "context": "Shaped Jefferson's views on religious freedom"
+          },
+          {
+            "sourceSlug": "voltaire",
+            "sourceName": "Voltaire",
+            "verb": "OCCURS_IN",
+            "targetSlug": "paris",
+            "targetName": "Paris",
+            "context": "Lived and wrote in Paris, imprisoned in the Bastille"
+          },
+          {
+            "sourceSlug": "john-locke",
+            "sourceName": "John Locke",
+            "verb": "INFLUENCES",
+            "targetSlug": "voltaire",
+            "targetName": "Voltaire",
+            "context": "Locke's empiricism shaped Voltaire's philosophy"
+          }
+        ],
+        "places": [
+          {
+            "name": "Paris",
+            "role": "Birthplace"
+          },
+          {
+            "name": "Ferney, France",
+            "role": "Estate and exile"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Candide (1759)",
+            "type": "Satirical novella",
+            "slug": "candide_1759"
+          }
+        ],
+        "externalLinks": [],
+        "tags": [],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": ""
+      },
       "subjectHeadings": [
         "People — Philosophers & Thinkers — France — Early Modern"
       ],
