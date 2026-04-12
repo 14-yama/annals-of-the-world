@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "classCode": "222",
+    "divisionCode": "222hitler",
+    "count": 1,
+    "exportedAt": "2026-04-11T18:04:01.048Z"
+  },
+  "entities": [
+    {
+      "slug": "hitler",
+      "name": "Adolf Hitler",
+      "label": "Person",
+      "callNumber": "222.hitler",
+      "summary": "German dictator (1889–1945) who led the Nazi Party to power, initiated World War II, and orchestrated the Holocaust — the systematic murder of six million Jews and millions of others. His regime represents the nadir of 20th-century totalitarianism.",
+      "era": "Modern",
+      "eraSlug": "modern",
+      "eraDivision": "Modern",
+      "eraDivisionCode": "950",
+      "region": "Central Europe",
+      "continent": "Europe",
+      "status": "Published",
+      "died": "30 April 1945, Berlin (suicide)",
+      "founded": "",
+      "period": "",
+      "wikidataQid": "",
+      "wikipediaUrl": "",
+      "imageUrl": "",
+      "detailsJson": "{\"causes\": [{\"title\": \"Treaty of Versailles resentment\", \"type\": \"Text\", \"year\": \"1919\", \"slug\": \"treaty_of_versailles\"}, {\"title\": \"Great Depression\", \"type\": \"Event\", \"year\": \"1929\"}], \"effects\": [{\"title\": \"World War II\", \"type\": \"EventWindow\", \"year\": \"1939\", \"slug\": \"world_war_ii\"}, {\"title\": \"The Holocaust\", \"type\": \"Event\", \"year\": \"1941–1945\"}, {\"title\": \"Nuremberg Trials\", \"type\": \"EventWindow\", \"year\": \"1945\", \"slug\": \"nuremberg_trials\"}], \"relationships\": [{\"sourceSlug\": \"hitler\", \"sourceName\": \"Adolf Hitler\", \"verb\": \"CAUSES\", \"targetSlug\": \"world_war_ii\", \"targetName\": \"World War II\", \"context\": \"German aggression and expansionism\"}, {\"sourceSlug\": \"treaty_of_versailles\", \"sourceName\": \"Treaty of Versailles\", \"verb\": \"ENABLES\", \"targetSlug\": \"hitler\", \"targetName\": \"Adolf Hitler\", \"context\": \"Humiliation and economic misery fueled Nazi rise\"}, {\"sourceSlug\": \"hitler\", \"sourceName\": \"Hitler\", \"verb\": \"LEADS\", \"targetSlug\": \"fascism_movement\", \"targetName\": \"Fascism\", \"context\": \"Nazi Germany as fascist state\"}, {\"sourceSlug\": \"treaty_of_versailles\", \"sourceName\": \"Treaty of Versailles resentment\", \"verb\": \"CAUSES\", \"targetSlug\": \"hitler\", \"targetName\": \"Adolf Hitler\", \"context\": \"Causal antecedent (1919)\"}, {\"sourceSlug\": \"hitler\", \"sourceName\": \"Adolf Hitler\", \"verb\": \"CAUSES\", \"targetSlug\": \"nuremberg_trials\", \"targetName\": \"Nuremberg Trials\", \"context\": \"Consequent outcome (1945)\"}, {\"sourceSlug\": \"hitler\", \"sourceName\": \"Adolf Hitler\", \"verb\": \"AUTHORS\", \"targetSlug\": \"mein_kampf\", \"targetName\": \"Mein Kampf\", \"context\": \"Text reference: Political manifesto\"}], \"places\": [{\"name\": \"Berlin\", \"role\": \"Capital\"}, {\"name\": \"Munich\", \"role\": \"Beer Hall Putsch\"}], \"texts\": [{\"title\": \"Mein Kampf\", \"type\": \"Political manifesto\", \"year\": \"1925\", \"slug\": \"mein_kampf\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "subjectHeadings": [
+        "People — Political Leaders — Germany — Modern"
+      ],
+      "subjects": [
+        "Nazism",
+        "Holocaust",
+        "World War II",
+        "Totalitarianism"
+      ],
+      "frameworks": [
+        "CONFLICT_AND_RESOLUTION",
+        "CAUSE_AND_EFFECT"
+      ],
+      "altNames": [],
+      "importanceScore": null,
+      "born": "20 April 1889, Braunau am Inn, Austria",
+      "startDate": "20 April 1889, Braunau am Inn, Austria",
+      "endDate": "30 April 1945, Berlin (suicide)",
+      "$id": "hitler",
+      "$sequence": "1037803",
+      "$createdAt": "2026-04-06T00:38:56.232+00:00",
+      "$updatedAt": "2026-04-06T00:38:56.232+00:00"
+    }
+  ]
+}

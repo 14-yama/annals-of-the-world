@@ -1,0 +1,96 @@
+{
+  "_meta": {
+    "classCode": "011",
+    "divisionCode": "011social-contract",
+    "count": 2,
+    "exportedAt": "2026-04-11T18:04:01.048Z"
+  },
+  "entities": [
+    {
+      "slug": "social_contract",
+      "name": "Social Contract Theory",
+      "label": "Idea",
+      "callNumber": "011.social-contract",
+      "summary": "Political theory holding that government authority derives from a voluntary agreement among citizens. Developed by Hobbes, Locke, and Rousseau, it provided intellectual justification for the American and French Revolutions and modern democratic governance.",
+      "era": "Early Modern",
+      "eraSlug": "early-modern",
+      "eraDivision": "Early Modern",
+      "eraDivisionCode": "940",
+      "region": "Western Europe",
+      "continent": "Europe",
+      "status": "Published",
+      "died": "",
+      "founded": "",
+      "period": "c. 1651–1762",
+      "wikidataQid": "",
+      "wikipediaUrl": "",
+      "imageUrl": "",
+      "detailsJson": "{\"causes\": [{\"title\": \"Enlightenment Thought\", \"type\": \"Idea\", \"year\": \"c. 1680\", \"slug\": \"enlightenment_thought\"}], \"effects\": [{\"title\": \"American Revolution\", \"type\": \"EventWindow\", \"year\": \"1776\", \"slug\": \"american_revolution\"}, {\"title\": \"French Revolution\", \"type\": \"EventWindow\", \"year\": \"1789\", \"slug\": \"french_revolution\"}, {\"title\": \"US Constitution\", \"type\": \"Text\", \"year\": \"1787\", \"slug\": \"us_constitution\"}], \"relationships\": [{\"sourceSlug\": \"social_contract\", \"sourceName\": \"Social Contract Theory\", \"verb\": \"CAUSES\", \"targetSlug\": \"american_revolution\", \"targetName\": \"American Revolution\", \"context\": \"Government by consent justified revolution\"}, {\"sourceSlug\": \"social_contract\", \"sourceName\": \"Social Contract Theory\", \"verb\": \"CAUSES\", \"targetSlug\": \"french_revolution\", \"targetName\": \"French Revolution\", \"context\": \"Rousseau's theories fueled revolutionary ideals\"}, {\"sourceSlug\": \"enlightenment_thought\", \"sourceName\": \"Enlightenment Thought\", \"verb\": \"CAUSES\", \"targetSlug\": \"social_contract\", \"targetName\": \"Social Contract Theory\", \"context\": \"Causal antecedent (c. 1680)\"}, {\"sourceSlug\": \"social_contract\", \"sourceName\": \"Social Contract Theory\", \"verb\": \"CAUSES\", \"targetSlug\": \"us_constitution\", \"targetName\": \"US Constitution\", \"context\": \"Consequent outcome (1787)\"}, {\"sourceSlug\": \"social_contract\", \"sourceName\": \"Social Contract Theory\", \"verb\": \"REFERENCES\", \"targetSlug\": \"leviathan_hobbes_1651\", \"targetName\": \"Leviathan (Hobbes, 1651)\", \"context\": \"Text reference: Political treatise\"}, {\"sourceSlug\": \"social_contract\", \"sourceName\": \"Social Contract Theory\", \"verb\": \"REFERENCES\", \"targetSlug\": \"two_treatises_of_government_locke_1689\", \"targetName\": \"Two Treatises of Government (Locke, 1689)\", \"context\": \"Text reference: Political treatise\"}], \"places\": [], \"texts\": [{\"title\": \"Leviathan (Hobbes, 1651)\", \"type\": \"Political treatise\", \"slug\": \"leviathan_hobbes_1651\"}, {\"title\": \"Two Treatises of Government (Locke, 1689)\", \"type\": \"Political treatise\", \"slug\": \"two_treatises_of_government_locke_1689\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "subjectHeadings": [
+        "Ideas — Political Systems & Governance — Europe — Early Modern"
+      ],
+      "subjects": [
+        "Locke",
+        "Rousseau",
+        "Hobbes",
+        "Consent of the Governed"
+      ],
+      "frameworks": [
+        "CAUSE_AND_EFFECT",
+        "DOCTRINE_DEVELOPMENT"
+      ],
+      "altNames": [],
+      "importanceScore": null,
+      "born": "",
+      "startDate": "",
+      "endDate": "",
+      "$id": "social_contract",
+      "$sequence": "1037749",
+      "$createdAt": "2026-04-06T00:38:55.101+00:00",
+      "$updatedAt": "2026-04-06T00:38:55.101+00:00"
+    },
+    {
+      "slug": "social-contract",
+      "name": "Social Contract Theory",
+      "label": "Idea",
+      "callNumber": "011.social-contract",
+      "summary": "The theory that legitimate political authority derives from an agreement among individuals to form a society and submit to governance in exchange for protection of natural rights. Articulated by Hobbes, Locke, and Rousseau, this idea became the philosophical engine of modern democracy and constitutionalism.",
+      "era": "Early Modern",
+      "eraSlug": "early-modern",
+      "eraDivision": "Early Modern",
+      "eraDivisionCode": "940",
+      "region": "Western Europe",
+      "continent": "Europe",
+      "status": "Published",
+      "died": "",
+      "founded": "",
+      "period": "",
+      "wikidataQid": "",
+      "wikipediaUrl": "",
+      "imageUrl": "",
+      "detailsJson": "{\"causes\": [{\"title\": \"Natural Law\", \"type\": \"Idea\", \"year\": \"c. 300 BCE\", \"slug\": \"natural-law\"}, {\"title\": \"English Civil War\", \"type\": \"EventWindow\", \"year\": \"1642–1651\"}], \"effects\": [{\"title\": \"American Revolution\", \"type\": \"EventWindow\", \"year\": \"1776\"}, {\"title\": \"French Revolution\", \"type\": \"EventWindow\", \"year\": \"1789\"}], \"relationships\": [{\"sourceSlug\": \"social-contract\", \"sourceName\": \"Social Contract Theory\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"democracy\", \"targetName\": \"Modern Democracy\", \"context\": \"Foundational justification for democratic governance\"}], \"places\": [{\"name\": \"London\", \"role\": \"Publication of Leviathan (1651)\"}, {\"name\": \"Geneva\", \"role\": \"Rousseau's Du Contrat Social (1762)\"}], \"texts\": [{\"title\": \"Leviathan (Hobbes)\", \"type\": \"Political treatise\", \"year\": \"1651\"}, {\"title\": \"Two Treatises of Government (Locke)\", \"type\": \"Political treatise\", \"year\": \"1689\"}, {\"title\": \"Du Contrat Social (Rousseau)\", \"type\": \"Political treatise\", \"year\": \"1762\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "subjectHeadings": [
+        "Ideas — Philosophical Concepts — Europe — Early Modern"
+      ],
+      "subjects": [
+        "Political Philosophy",
+        "Governance",
+        "Sovereignty",
+        "Consent"
+      ],
+      "frameworks": [
+        "CAUSE_AND_EFFECT",
+        "POLITICAL_SYSTEMS"
+      ],
+      "altNames": [],
+      "importanceScore": null,
+      "born": "",
+      "startDate": "",
+      "endDate": "",
+      "$id": "social-contract",
+      "$sequence": "1038013",
+      "$createdAt": "2026-04-06T00:39:00.594+00:00",
+      "$updatedAt": "2026-04-06T00:39:00.594+00:00"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "_meta": {
+    "classCode": "575",
+    "divisionCode": "575exodus-event",
+    "count": 1,
+    "exportedAt": "2026-04-11T18:04:01.048Z"
+  },
+  "entities": [
+    {
+      "slug": "exodus_event",
+      "name": "The Exodus",
+      "label": "EventWindow",
+      "callNumber": "575.exodus-event",
+      "summary": "The foundational salvation event of the Hebrew Bible (c. 1313 or 1250 BCE): God delivered the Israelites from Egyptian slavery through the ten plagues, the Passover, and the crossing of the Red Sea. Commemorated annually in the Passover (Pesach) festival.",
+      "era": "Classical",
+      "eraSlug": "classical",
+      "eraDivision": "Classical",
+      "eraDivisionCode": "920",
+      "region": "Middle East",
+      "continent": "Asia",
+      "status": "Published",
+      "died": "",
+      "founded": "",
+      "period": "",
+      "wikidataQid": "",
+      "wikipediaUrl": "",
+      "imageUrl": "",
+      "detailsJson": "{\"causes\": [{\"title\": \"Israelite slavery in Egypt\", \"type\": \"Event\", \"year\": \"c. 1400 BCE\"}], \"effects\": [{\"title\": \"Sinai Covenant and Law given\", \"type\": \"Idea\", \"year\": \"c. 1313 BCE\", \"slug\": \"sinai_covenant\"}], \"relationships\": [{\"sourceSlug\": \"moses\", \"sourceName\": \"Moses\", \"verb\": \"LEADS\", \"targetSlug\": \"exodus_event\", \"targetName\": \"The Exodus\", \"context\": \"Led Israel out of Egypt\"}, {\"sourceSlug\": \"exodus_event\", \"sourceName\": \"The Exodus\", \"verb\": \"CAUSES\", \"targetSlug\": \"sinai_covenant\", \"targetName\": \"Sinai Covenant and Law given\", \"context\": \"Consequent outcome (c. 1313 BCE)\"}, {\"sourceSlug\": \"exodus_event\", \"sourceName\": \"The Exodus\", \"verb\": \"REFERENCES\", \"targetSlug\": \"book_of_exodus\", \"targetName\": \"Book of Exodus\", \"context\": \"Text reference: Scripture\"}, {\"sourceSlug\": \"joseph_biblical\", \"sourceName\": \"Joseph\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"exodus_event\", \"targetName\": \"The Exodus\", \"context\": \"Historical figure active during event\"}, {\"sourceSlug\": \"al-azhar-university\", \"sourceName\": \"Al-Azhar University\", \"verb\": \"DEFINES\", \"targetSlug\": \"exodus_event\", \"targetName\": \"The Exodus\", \"context\": \"Institution involved in event\"}], \"places\": [{\"name\": \"Egypt\", \"role\": \"Departure point\", \"slug\": \"egypt\"}], \"texts\": [{\"title\": \"Book of Exodus\", \"type\": \"Scripture\", \"slug\": \"book_of_exodus\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "subjectHeadings": [
+        "Events — Religious Events — Israelite History"
+      ],
+      "subjects": [
+        "Liberation",
+        "Egypt",
+        "Plagues",
+        "Red Sea",
+        "Passover",
+        "Moses"
+      ],
+      "frameworks": [
+        "CAUSE_AND_EFFECT",
+        "DOCTRINE_DEVELOPMENT"
+      ],
+      "altNames": [],
+      "importanceScore": null,
+      "born": "",
+      "startDate": "c. 1313 BCE",
+      "endDate": "",
+      "$id": "exodus_event",
+      "$sequence": "1037686",
+      "$createdAt": "2026-04-06T00:38:53.839+00:00",
+      "$updatedAt": "2026-04-06T00:38:53.839+00:00"
+    }
+  ]
+}

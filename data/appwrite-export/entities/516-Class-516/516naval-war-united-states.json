@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "classCode": "516",
+    "divisionCode": "516naval-war-united-states",
+    "count": 1,
+    "exportedAt": "2026-04-11T18:04:01.048Z"
+  },
+  "entities": [
+    {
+      "slug": "naval-war-united-states",
+      "name": "Naval War",
+      "label": "EventWindow",
+      "callNumber": "516.naval-war-united-states",
+      "summary": "Blockade, ironclads, Monitor vs Merrimack, river warfare.",
+      "era": "Modern",
+      "eraSlug": "modern",
+      "eraDivision": "Modern",
+      "eraDivisionCode": "950",
+      "region": "Northern_America",
+      "continent": "Americas",
+      "status": "PLANNED",
+      "died": "",
+      "founded": "",
+      "period": "1861–1865",
+      "wikidataQid": "",
+      "wikipediaUrl": "",
+      "imageUrl": "",
+      "detailsJson": "{\"causes\": [{\"title\": \"Shermans March 1864\", \"type\": \"EventWindow\", \"year\": \"1861\", \"slug\": \"shermans-march-1864\"}, {\"title\": \"Siege of Vicksburg 1863\", \"type\": \"EventWindow\", \"year\": \"1861\", \"slug\": \"siege-of-vicksburg-1863\"}], \"effects\": [{\"title\": \"Emancipation Proclamation 1863\", \"type\": \"EventWindow\", \"year\": \"1862\", \"slug\": \"emancipation-proclamation-1863\"}, {\"title\": \"Emancipation Proclamation\", \"type\": \"Text\", \"year\": \"1862\", \"slug\": \"emancipation-proclamation\"}], \"relationships\": [{\"sourceSlug\": \"naval-war-united-states\", \"sourceName\": \"Naval War\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"united-states\", \"targetName\": \"United States of America\", \"context\": \"Naval War in the history of United States of America\"}, {\"sourceSlug\": \"naval-war-united-states\", \"sourceName\": \"Naval War\", \"verb\": \"CAUSES\", \"targetSlug\": \"emancipation-proclamation-1863\", \"targetName\": \"Emancipation Proclamation 1863\", \"context\": \"Sequential development within American Civil War\"}, {\"sourceSlug\": \"shermans-march-1864\", \"sourceName\": \"Shermans March 1864\", \"verb\": \"CAUSES\", \"targetSlug\": \"naval-war-united-states\", \"targetName\": \"Naval War\", \"context\": \"Causal antecedent (1861)\"}, {\"sourceSlug\": \"siege-of-vicksburg-1863\", \"sourceName\": \"Siege of Vicksburg 1863\", \"verb\": \"CAUSES\", \"targetSlug\": \"naval-war-united-states\", \"targetName\": \"Naval War\", \"context\": \"Causal antecedent (1861)\"}, {\"sourceSlug\": \"naval-war-united-states\", \"sourceName\": \"Naval War\", \"verb\": \"CAUSES\", \"targetSlug\": \"emancipation-proclamation\", \"targetName\": \"Emancipation Proclamation\", \"context\": \"Consequent outcome (1862)\"}, {\"sourceSlug\": \"second-bank\", \"sourceName\": \"Second Bank\", \"verb\": \"DEFINES\", \"targetSlug\": \"naval-war-united-states\", \"targetName\": \"Naval War\", \"context\": \"Institution involved in event\"}], \"places\": [{\"name\": \"United States of America\", \"role\": \"National History\"}], \"texts\": [], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "subjectHeadings": [
+        "Events — American Civil War — United States of America — Modern"
+      ],
+      "subjects": [
+        "United States of America",
+        "Warfare"
+      ],
+      "frameworks": [
+        "CONFLICT_AND_RESOLUTION",
+        "CAUSE_AND_EFFECT"
+      ],
+      "altNames": [],
+      "importanceScore": null,
+      "born": "",
+      "startDate": "1861",
+      "endDate": "1865",
+      "$id": "naval-war-united-states",
+      "$sequence": "1047376",
+      "$createdAt": "2026-04-06T00:42:18.576+00:00",
+      "$updatedAt": "2026-04-06T00:42:18.576+00:00"
+    }
+  ]
+}
