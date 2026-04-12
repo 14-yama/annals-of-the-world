@@ -84,28 +84,21 @@ async function fetchFromStatsCache(): Promise<boolean> {
 }
 
 /**
- * Fallback: trigger the stats function and use its response.
+ * Fallback: trigger the stats function ASYNC and use its response.
+ * Fire-and-forget — don't block the UI waiting 30s+ for a recount.
  */
 async function fetchViaFunction(): Promise<boolean> {
   try {
-    const execution = await functions.createExecution(
+    // Trigger async (fire-and-forget) — it will write stats_cache when done
+    await functions.createExecution(
       'audit-consistency',
       JSON.stringify({}),
-      false, // async = false (wait for result)
+      true, // async = true — DON'T block the UI
       undefined,
       ExecutionMethod.POST,
     )
-
-    if (execution.responseStatusCode === 200 && execution.responseBody) {
-      const data = JSON.parse(execution.responseBody)
-      cache.total = data.total || 0
-      cache.byLabel = data.byLabel || {}
-      cache.byEra = data.byEra || {}
-      cache.byContinent = data.byContinent || {}
-      cache.byClass = data.byClass || {}
-      cache.lastUpdated = Date.now()
-      return true
-    }
+    // We can't read the result immediately, but stats_cache will be updated
+    // within ~60s. Mark cache as "partially loaded" so UI shows what it has.
     return false
   } catch {
     return false
@@ -113,12 +106,16 @@ async function fetchViaFunction(): Promise<boolean> {
 }
 
 /**
- * Fetches global counts — tries stats_cache first, falls back to function.
+ * Fetches global counts — tries stats_cache first, fires async fallback if empty.
+ * Never blocks the UI for 30s+ waiting for a full recount.
  */
 async function fetchAllCounts(): Promise<void> {
   const ok = await fetchFromStatsCache()
   if (!ok) {
-    await fetchViaFunction()
+    // Fire-and-forget: trigger async stats recount, but don't block
+    fetchViaFunction()
+    // Set a short TTL so we retry reading stats_cache soon
+    cache.lastUpdated = Date.now() - CACHE_TTL + 30_000 // retry in 30s
   }
   cache.promise = null
   notify()

@@ -10,7 +10,8 @@ import { TIMELINE_EVENTS } from '../data/timeline-events'
 import { SectionHeading } from '../components/DataCards'
 import Timeline from '../components/Timeline'
 import CivilizationGallery from '../components/CivilizationGallery'
-import { fetchEntities } from '../services/entityService'
+import { fetchEntities, fetchEntitiesWithTotal } from '../services/entityService'
+import { useGlobalCounts } from '../hooks/useGlobalCounts'
 import type { Entity } from '../data/entityTypes'
 
 /* Era slug mapping: eras.ts ids → catalog eraSlug */
@@ -75,14 +76,21 @@ export default function EraDetail() {
 
   // Get catalog entities for this era from backend, grouped by actor type
   const catalogSlug = eraId ? (ERA_ID_TO_SLUG[eraId] || eraId) : ''
+  const eraKey = eraId ? ({ prehistory: 'Prehistoric', ancient: 'Classical', medieval: 'Medieval', 'early-modern': 'Early Modern', modern: 'Modern', contemporary: 'Contemporary' }[eraId] || '') : ''
+  const { byEra } = useGlobalCounts()
+  const backendEraCount = byEra[eraKey] || 0
   const [eraEntities, setEraEntities] = useState<Entity[]>([])
+  const [eraTotal, setEraTotal] = useState(0)
   const [loadingEntities, setLoadingEntities] = useState(true)
 
   useEffect(() => {
     if (!catalogSlug) return
     setLoadingEntities(true)
-    fetchEntities({ era: catalogSlug, limit: 200 })
-      .then(setEraEntities)
+    fetchEntitiesWithTotal({ era: catalogSlug, limit: 200 })
+      .then(({ entities, total }) => {
+        setEraEntities(entities)
+        setEraTotal(total)
+      })
       .finally(() => setLoadingEntities(false))
   }, [catalogSlug])
 
@@ -206,11 +214,8 @@ export default function EraDetail() {
       {/* Key Metrics */}
       <SimpleGrid columns={{ base: 2, md: 4 }} gap={4} mb={8}>
         <Box bg="#F5F4F0" border="1px solid" borderColor="#E4E2DC" borderRadius="lg" p={4}>
-          <Text fontSize="2xl" fontWeight={700} color={era.color} fontFamily='"Cinzel", serif'>{era.events}</Text>
-          <Text fontSize="sm" color="#524E44">Event Windows</Text>
-        </Box>
-        <Box bg="#F5F4F0" border="1px solid" borderColor="#E4E2DC" borderRadius="lg" p={4}>
-          <Text fontSize="2xl" fontWeight={700} color={era.color} fontFamily='"Cinzel", serif'>{era.civilizations.length}</Text>
+            <Text fontSize="2xl" fontWeight={700} color={era.color} fontFamily='"Cinzel", serif'>{(backendEraCount || eraTotal).toLocaleString()}</Text>
+            <Text fontSize="sm" color="#524E44">Total Entities</Text>
           <Text fontSize="sm" color="#524E44">Civilizations</Text>
         </Box>
         <Box bg="#F5F4F0" border="1px solid" borderColor="#E4E2DC" borderRadius="lg" p={4}>
@@ -388,7 +393,7 @@ export default function EraDetail() {
         <Box mb={8}>
           <SectionHeading
             title="Catalog Actors"
-            subtitle={`${eraEntities.length} actors in the ${era.name} era — grouped by type`}
+            subtitle={`${eraEntities.length} of ${(backendEraCount || eraTotal).toLocaleString()} actors in the ${era.name} era — grouped by type`}
           />
           {/* Type summary pills */}
           <Flex gap={2} mb={4} flexWrap="wrap">

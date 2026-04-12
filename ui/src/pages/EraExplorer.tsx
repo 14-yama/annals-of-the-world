@@ -9,56 +9,56 @@ import { useGlobalCounts } from '../hooks/useGlobalCounts'
 const ERAS = [
   {
     id: 'prehistory',
+    eraKey: 'Prehistoric',
     name: 'Prehistory',
     years: '70,000 BCE – 3,500 BCE',
     description: 'The peopling of continents, neolithic transitions, domestication of plants and animals, first settlements.',
     color: '#645E52',
-    events: 8,
     regions: ['Asia', 'Africa', 'Europe'],
   },
   {
     id: 'ancient',
+    eraKey: 'Classical',
     name: 'Ancient World',
     years: '3,500 BCE – 500 CE',
     description: 'Bronze and iron ages, first empires, axial age philosophies, birth of major religions, classical civilizations.',
     color: '#8B3A3A',
-    events: 18,
     regions: ['Mesopotamia', 'Egypt', 'Indus Valley', 'China', 'Greece', 'Rome'],
   },
   {
     id: 'medieval',
+    eraKey: 'Medieval',
     name: 'Medieval Period',
     years: '500 – 1500 CE',
     description: 'Silk Road integration, Islamic Golden Age, Mongol empire, maritime trade networks, gunpowder revolution.',
     color: '#96770B',
-    events: 24,
     regions: ['Asia', 'Europe', 'Middle East', 'Africa'],
   },
   {
     id: 'early-modern',
+    eraKey: 'Early Modern',
     name: 'Early Modern',
     years: '1500 – 1800 CE',
     description: 'European maritime encounters, Reformation, Enlightenment, colonial empires, global silver flows.',
     color: '#D4AF37',
-    events: 15,
     regions: ['Europe', 'Americas', 'Asia', 'Africa'],
   },
   {
     id: 'modern',
+    eraKey: 'Modern',
     name: 'Modern',
     years: '1800 – 1945 CE',
     description: 'Industrial revolution, colonialism at peak, two world wars, nationalist movements, decolonization seeds.',
     color: '#4A90D9',
-    events: 20,
     regions: ['Europe', 'Asia', 'Africa', 'Americas', 'Global'],
   },
   {
     id: 'contemporary',
+    eraKey: 'Contemporary',
     name: 'Contemporary',
     years: '1945 CE – Present',
     description: 'Decolonization, Cold War, internet revolution, AI adoption, climate crisis, fintech, semiconductor wars.',
     color: '#6B3FA0',
-    events: 65,
     regions: ['Global'],
   },
 ]
@@ -70,7 +70,7 @@ const REGIONS = [
 ]
 
 export default function EraExplorer() {
-  const { total } = useGlobalCounts()
+  const { total, byEra, byLabel } = useGlobalCounts()
   const [selectedEra, setSelectedEra] = useState<string | null>(null)
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null)
   const navigate = useNavigate()
@@ -140,7 +140,7 @@ export default function EraExplorer() {
                 fontWeight={700}
                 color={selectedEra === era.id ? 'rgba(255,255,255,0.8)' : era.color}
               >
-                {era.events} events
+                {(byEra[era.eraKey] || 0).toLocaleString()} entities
               </Text>
             </Flex>
             <Text
@@ -235,6 +235,24 @@ export default function EraExplorer() {
         </Box>
       )}
 
+      {/* Stats Summary */}
+      {total > 0 && (
+        <Flex gap={2} mb={6} flexWrap="wrap">
+          {Object.entries(byLabel).sort((a, b) => b[1] - a[1]).map(([label, count]) => (
+            <Box key={label} px={2} py={1} borderRadius="5px" fontSize="10px" fontWeight={600}
+              fontFamily="'JetBrains Mono', monospace"
+              bg="#F5F4F0" color="#524E44" border="1px solid" borderColor="#E4E2DC">
+              {label === 'EventWindow' ? 'Events' : label === 'Person' ? 'People' : label + 's'}: {count.toLocaleString()}
+            </Box>
+          ))}
+          <Box px={2} py={1} borderRadius="5px" fontSize="10px" fontWeight={700}
+            fontFamily="'JetBrains Mono', monospace"
+            bg="#D4AF3715" color="#D4AF37" border="1px solid" borderColor="#D4AF3740">
+            Total: {total.toLocaleString()}
+          </Box>
+        </Flex>
+      )}
+
       {/* Info Card */}
       <Box
         bg="#F5F4F0"
@@ -249,7 +267,7 @@ export default function EraExplorer() {
         <Text fontSize="sm" color="#524E44" mt={2} lineHeight={1.6}>
           Select a time period and optionally a region, then enter the portal to explore
           civilizations, timeline events, stock photos, and key facts from that era — drawn
-          from our Neo4j knowledge graph of 199 countries and {total ? total.toLocaleString() : '392,000+'} nodes.
+          from our Appwrite backend of {total ? total.toLocaleString() : '392,000+'} entities across 199 countries.
         </Text>
       </Box>
     </Box>
