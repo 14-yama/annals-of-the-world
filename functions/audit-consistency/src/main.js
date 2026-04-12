@@ -124,23 +124,32 @@ async function runStatsOnly(databases, res, log, error, startTime) {
       log(`  ${label}: ${count}${count >= 5000 ? ' (cursor)' : ''}`);
     }
 
-    // Breakdowns use quickCount (may cap at 5000 per bucket — acceptable)
+    // Breakdowns: quickCount first, cursorCount if capped (>= 5000)
+    async function hybridCount(queries) {
+      let c = await quickCount(queries);
+      if (c >= 5000) c = await cursorCount(queries);
+      return c;
+    }
+
     const byEra = {};
     for (const era of VALID_ERAS) {
-      const c = await quickCount([sdk.Query.equal('era', era)]);
+      const c = await hybridCount([sdk.Query.equal('era', era)]);
       if (c > 0) byEra[era] = c;
+      log(`  era/${era}: ${c}`);
     }
 
     const byContinent = {};
     for (const cont of ALL_CONTINENTS) {
-      const c = await quickCount([sdk.Query.equal('continent', cont)]);
+      const c = await hybridCount([sdk.Query.equal('continent', cont)]);
       if (c > 0) byContinent[cont] = c;
+      log(`  cont/${cont}: ${c}`);
     }
 
     const byClass = {};
     for (let d = 0; d <= 9; d++) {
-      const c = await quickCount([sdk.Query.startsWith('callNumber', String(d))]);
+      const c = await hybridCount([sdk.Query.startsWith('callNumber', String(d))]);
       if (c > 0) byClass[String(d)] = c;
+      log(`  class/${d}: ${c}`);
     }
 
     const computeTimeMs = Date.now() - startTime;

@@ -21,8 +21,8 @@ import * as crypto from 'crypto'
 
 // ── Config ──
 const ENDPOINT    = process.env.VITE_APPWRITE_ENDPOINT   || 'https://fra.cloud.appwrite.io/v1'
-const PROJECT_ID  = process.env.VITE_APPWRITE_PROJECT_ID || '69cc45e3000d587ea5e6'
-const DATABASE_ID = process.env.VITE_APPWRITE_DATABASE_ID || 'annals_db'
+const PROJECT_ID  = process.env.VITE_APPWRITE_PROJECT_ID || '66509ba7003618a05af6'
+const DATABASE_ID = process.env.VITE_APPWRITE_DATABASE_ID || 'annals_world_db'
 const API_KEY     = process.env.APPWRITE_API_KEY
 
 if (!API_KEY) {

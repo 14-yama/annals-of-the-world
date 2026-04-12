@@ -21,8 +21,8 @@ import * as path from 'path'
 
 // ── Config ──
 const ENDPOINT    = process.env.VITE_APPWRITE_ENDPOINT   || 'https://fra.cloud.appwrite.io/v1'
-const PROJECT_ID  = process.env.VITE_APPWRITE_PROJECT_ID || '69cc45e3000d587ea5e6'
-const DATABASE_ID = process.env.VITE_APPWRITE_DATABASE_ID || 'annals_db'
+const PROJECT_ID  = process.env.VITE_APPWRITE_PROJECT_ID || '66509ba7003618a05af6'
+const DATABASE_ID = process.env.VITE_APPWRITE_DATABASE_ID || 'annals_world_db'
 const API_KEY     = process.env.APPWRITE_API_KEY
 
 if (!API_KEY) {
@@ -86,7 +86,7 @@ async function paginateAll(
   collectionId: string,
   extraQueries: string[] = [],
 ): Promise<Record<string, unknown>[]> {
-  const PAGE = 100
+  const PAGE = 5000
   const all: Record<string, unknown>[] = []
   let cursor: string | undefined
 
@@ -105,7 +105,7 @@ async function paginateAll(
     if (res.documents.length < PAGE) break
     cursor = res.documents[res.documents.length - 1].$id as string
 
-    if (all.length % 1000 === 0) {
+    if (all.length % 5000 === 0) {
       process.stdout.write(`  ${collectionId}: ${all.length} docs...\r`)
     }
   }
