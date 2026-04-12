@@ -196,9 +196,20 @@ async function runConsistencyAudit(databases, res, log, error, startTime) {
       invalidSlugFormat: [], invalidCallNumberFormat: [],
       invalidEra: [], invalidLabel: [], eraDivisionMismatch: [],
       missingEra: [], duplicateSlug: [],
+      underscoreSlug: [], stubSummary: [],
     };
     const slugSet = new Set();
+    const normalizedSlugMap = new Map(); // normalized → first doc $id (detect _/- variants)
     const duplicateSlugs = [];
+
+    // Stub summary patterns — auto-generated or meaningless overviews
+    const STUB_PATTERNS = [
+      /^a notable figure associated with/i,
+      /^notable .{0,20} associated with/i,
+      /^leader of [A-Z]/,
+      /^[A-Z][a-z]+ (?:of|in|from) [A-Z]/,  // "Battle of X" name-only
+    ];
+    const STUB_MAX_LENGTH = 80;
 
     while (true) {
       const q = [sdk.Query.limit(PAGE)];
@@ -236,6 +247,10 @@ async function runConsistencyAudit(databases, res, log, error, startTime) {
         if (slug && !/^[a-z0-9][a-z0-9-]*[a-z0-9]$/.test(slug) && slug.length > 1) {
           issues.invalidSlugFormat.push({ ...entry, slug });
         }
+        // Detect underscore slugs (should be kebab-case per slug_naming_convention.md)
+        if (slug && slug.includes('_')) {
+          issues.underscoreSlug.push({ ...entry, slug, suggested: slug.replace(/_/g, '-') });
+        }
         if (callNumber && !/^\d{1,3}\.\d{2,3}\./.test(callNumber)) {
           issues.invalidCallNumberFormat.push({ ...entry, callNumber });
         }
@@ -253,9 +268,23 @@ async function runConsistencyAudit(databases, res, log, error, startTime) {
             issues.eraDivisionMismatch.push({ ...entry, era, eraDivisionCode, expected: validDivisions.join(', ') });
           }
         }
+        // Stub summary detection
+        const summary = doc.summary || '';
+        if (summary.length > 0 && summary.length <= STUB_MAX_LENGTH) {
+          issues.stubSummary.push({ ...entry, summaryLength: summary.length, preview: summary.slice(0, 60) });
+        } else if (summary.length > 0 && STUB_PATTERNS.some(p => p.test(summary))) {
+          issues.stubSummary.push({ ...entry, summaryLength: summary.length, preview: summary.slice(0, 60), pattern: 'auto-generated' });
+        }
         if (slug) {
           if (slugSet.has(slug)) duplicateSlugs.push({ slug, $id: doc.$id });
           else slugSet.add(slug);
+          // Track normalized slug variants (underscore→hyphen) to detect soft duplicates
+          const normalizedSlug = slug.replace(/_/g, '-');
+          if (normalizedSlugMap.has(normalizedSlug) && normalizedSlugMap.get(normalizedSlug) !== doc.$id) {
+            issues.duplicateSlug.push({ slug, $id: doc.$id, variant: normalizedSlug, existingId: normalizedSlugMap.get(normalizedSlug) });
+          } else {
+            normalizedSlugMap.set(normalizedSlug, doc.$id);
+          }
         }
       }
 

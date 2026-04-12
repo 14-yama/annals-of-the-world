@@ -40,6 +40,13 @@ function normaliseName(name) {
     .trim();
 }
 
+/**
+ * Normalise slug: underscore → hyphen, lowercase.
+ */
+function normaliseSlug(slug) {
+  return (slug || '').toLowerCase().replace(/_/g, '-');
+}
+
 module.exports = async ({ req, res, log, error }) => {
   const client = new sdk.Client();
   client
@@ -82,6 +89,29 @@ module.exports = async ({ req, res, log, error }) => {
 
     const totalEntities = Object.values(entitiesByLabel).reduce((s, arr) => s + arr.length, 0);
     log(`Loaded ${totalEntities} entities across ${Object.keys(entitiesByLabel).length} labels`);
+
+    // Step 1b: Detect slug variant duplicates (underscore vs hyphen)
+    const slugVariantPairs = [];
+    const allEntities = Object.values(entitiesByLabel).flat();
+    const slugMap = new Map(); // normalised slug → first entity
+    for (const entity of allEntities) {
+      const norm = normaliseSlug(entity.slug);
+      if (slugMap.has(norm)) {
+        const existing = slugMap.get(norm);
+        if (existing.slug !== entity.slug) {
+          slugVariantPairs.push({
+            label: 'cross-label',
+            entityA: { slug: existing.slug, name: existing.name },
+            entityB: { slug: entity.slug, name: entity.name },
+            similarity: 1.0,
+            type: 'slug-variant',
+          });
+        }
+      } else {
+        slugMap.set(norm, entity);
+      }
+    }
+    log(`Found ${slugVariantPairs.length} slug variant pairs (underscore/hyphen)`);
 
     // Step 2: Compare names within each label group
     const duplicatePairs = [];
@@ -140,17 +170,22 @@ module.exports = async ({ req, res, log, error }) => {
     // Sort by similarity descending
     duplicatePairs.sort((a, b) => b.similarity - a.similarity);
 
+    // Merge slug variant pairs into the results
+    const allPairs = [...slugVariantPairs, ...duplicatePairs];
+    allPairs.sort((a, b) => b.similarity - a.similarity);
+
     const report = {
       timestamp: new Date().toISOString(),
       totalEntities,
-      totalDuplicatePairs: duplicatePairs.length,
-      exactDuplicates: duplicatePairs.filter(p => p.type === 'exact').length,
-      fuzzyDuplicates: duplicatePairs.filter(p => p.type === 'fuzzy').length,
-      topPairs: duplicatePairs.slice(0, 200),
+      totalDuplicatePairs: allPairs.length,
+      exactDuplicates: allPairs.filter(p => p.type === 'exact').length,
+      fuzzyDuplicates: allPairs.filter(p => p.type === 'fuzzy').length,
+      slugVariants: slugVariantPairs.length,
+      topPairs: allPairs.slice(0, 200),
     };
 
-    log(`Duplicate scan complete: ${duplicatePairs.length} potential pairs found`);
-    log(`Exact: ${report.exactDuplicates}, Fuzzy: ${report.fuzzyDuplicates}`);
+    log(`Duplicate scan complete: ${allPairs.length} potential pairs found`);
+    log(`Exact: ${report.exactDuplicates}, Fuzzy: ${report.fuzzyDuplicates}, Slug variants: ${report.slugVariants}`);
 
     return res.json(report);
   } catch (err) {

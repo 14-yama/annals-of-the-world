@@ -7,7 +7,7 @@
   },
   "entities": [
     {
-      "slug": "james_cook",
+      "slug": "james-cook",
       "name": "James Cook",
       "label": "Person",
       "callNumber": "290.08-james-cook",
@@ -25,46 +25,7 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": {
-        "causes": [
-          "British Admiralty's need for Pacific charts",
-          "Royal Society's quest for Transit of Venus observation",
-          "Cook's exceptional navigational skills from North Sea merchant fleet"
-        ],
-        "effects": [
-          "European mapping of Pacific and Australian coastlines",
-          "British colonization of Australia and New Zealand",
-          "Scientific expedition model adopted by future explorers",
-          "Hawaiian and Pacific island cultures permanently altered",
-          "Scurvy prevention advanced naval medicine"
-        ],
-        "relationships": [
-          {
-            "sourceSlug": "james-cook",
-            "sourceName": "James Cook",
-            "verb": "OCCURS_IN",
-            "targetSlug": "united-kingdom",
-            "targetName": "United Kingdom",
-            "context": "British naval captain who sailed for the Royal Navy"
-          },
-          {
-            "sourceSlug": "james-cook",
-            "sourceName": "James Cook",
-            "verb": "OCCURS_IN",
-            "targetSlug": "australia",
-            "targetName": "Australia",
-            "context": "First European to chart Australia's east coast in 1770"
-          },
-          {
-            "sourceSlug": "james-cook",
-            "sourceName": "James Cook",
-            "verb": "INFLUENCES",
-            "targetSlug": "roald-amundsen",
-            "targetName": "Roald Amundsen",
-            "context": "Cook's polar explorations inspired later Antarctic expeditions"
-          }
-        ]
-      },
+      "detailsJson": "{\"causes\": [\"British Admiralty's need for Pacific charts\", \"Royal Society's quest for Transit of Venus observation\", \"Cook's exceptional navigational skills from North Sea merchant fleet\"], \"effects\": [\"European mapping of Pacific and Australian coastlines\", \"British colonization of Australia and New Zealand\", \"Scientific expedition model adopted by future explorers\", \"Hawaiian and Pacific island cultures permanently altered\", \"Scurvy prevention advanced naval medicine\"], \"relationships\": [{\"sourceSlug\": \"james-cook\", \"sourceName\": \"James Cook\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"united-kingdom\", \"targetName\": \"United Kingdom\", \"context\": \"British naval captain who sailed for the Royal Navy\"}, {\"sourceSlug\": \"james-cook\", \"sourceName\": \"James Cook\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"australia\", \"targetName\": \"Australia\", \"context\": \"First European to chart Australia's east coast in 1770\"}, {\"sourceSlug\": \"james-cook\", \"sourceName\": \"James Cook\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"roald-amundsen\", \"targetName\": \"Roald Amundsen\", \"context\": \"Cook's polar explorations inspired later Antarctic expeditions\"}]}",
       "subjectHeadings": [
         "People — Explorers — United Kingdom — Early Modern"
       ],
@@ -89,7 +50,7 @@
       "born": "1728, Marton, Yorkshire",
       "startDate": "1728, Marton, Yorkshire",
       "endDate": "1779, Kealakekua Bay, Hawaii (killed)",
-      "$id": "james_cook",
+      "$id": "james-cook",
       "$sequence": "1037954",
       "$createdAt": "2026-04-06T00:38:59.242+00:00",
       "$updatedAt": "2026-04-06T00:38:59.242+00:00"
