@@ -11,7 +11,7 @@
       "name": "Vincent van Gogh",
       "label": "Person",
       "callNumber": "264.vincent-van-gogh",
-      "summary": "Vincent Willem van Gogh was a Dutch Post-Impressionist painter who is among the most famous and influential figures in the history of Western art. In just over a decade, he created approximately 2,100 artworks, including around 860 oil paintings, most of them in the last two years of his life. His oeuvre includes landscapes, still lifes, portraits, and self-portraits, most of which are characterised by bold colours and dramatic brushwork that contributed to the rise of expressionism in modern art.",
+      "summary": "Vincent Willem van Gogh (1853–1890) was a Dutch Post-Impressionist painter who produced approximately 2,100 artworks in a decade—including 860 oil paintings—yet sold only one during his lifetime. His bold colors, expressive brushwork, and emotional intensity made him one of the most influential figures in Western art history.\n\nVan Gogh's early works depicted peasant life in dark earth tones, culminating in 'The Potato Eaters' (1885). After moving to Paris in 1886, he discovered Impressionism and Japanese woodblock prints, transforming his palette. His Arles period (1888–1889) produced 'Sunflowers,' 'The Night Café,' and 'Starry Night Over the Rhône.'\n\nHis struggles with mental illness led to the infamous ear-severing incident in December 1888 and voluntary admission to the Saint-Rémy asylum, where he painted 'The Starry Night' (1889). He shot himself on July 27, 1890, dying two days later at age 37.\n\nVan Gogh's letters to his brother Theo comprise one of the most significant primary sources in art history—903 surviving letters that document his artistic philosophy, daily struggles, and visionary ambition. His work influenced Fauvism, Expressionism, and virtually every modern art movement.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,15 +25,23 @@
       "wikidataQid": "Q5582",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Vincent_van_Gogh",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Modern era: industrialization, imperial expansion, and democratic revolutions\", \"type\": \"EventWindow\", \"year\": \"1853-03-30, Zundert\"}, {\"title\": \"Visual art traditions and aesthetic movements\", \"type\": \"Idea\", \"year\": \"1853-03-30, Zundert\"}], \"effects\": [{\"title\": \"Produced visual artworks of cultural importance\", \"type\": \"Idea\", \"year\": \"1890-07-29\"}, {\"title\": \"Contributed to mass society, world wars, and foundations of contemporary global order\", \"type\": \"Movement\", \"year\": \"1890-07-29\"}], \"relationships\": [{\"sourceSlug\": \"vincent-van-gogh\", \"sourceName\": \"Vincent van Gogh\", \"verb\": \"PAINTS\", \"targetSlug\": \"field-264\", \"targetName\": \"Painters & Sculptors\", \"context\": \"Vincent van Gogh: Visual art in painters & sculptors\"}, {\"sourceSlug\": \"vincent-van-gogh\", \"sourceName\": \"Vincent van Gogh\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"modern\", \"targetName\": \"Modern Era\", \"context\": \"Vincent van Gogh was active during the Modern era\"}], \"places\": [{\"name\": \"Zundert\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Vincent van Gogh\", \"type\": \"Reference article\", \"slug\": \"vincent-van-gogh\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q5582\", \"https://en.wikipedia.org/wiki/Vincent_van_Gogh\"], \"tags\": [\"Painters & Sculptors\", \"cultural-diffusion\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\": [\"Dutch Golden Age artistic heritage and Rembrandt's influence\", \"Impressionist and Neo-Impressionist color theory exposure in Paris\", \"Japanese ukiyo-e woodblock print aesthetics\"], \"effects\": [\"Pioneered Expressionist approach to color and emotion\", \"Influenced Fauvism, Die Brucke, and Abstract Expressionism\", \"Became archetypal figure of the misunderstood artistic genius\"], \"relationships\": [{\"sourceSlug\": \"vincent-van-gogh\", \"sourceName\": \"Vincent van Gogh\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"pablo-picasso\", \"targetName\": \"Pablo Picasso\", \"context\": \"Expressive color and emotional brushwork influenced early Picasso\"}, {\"sourceSlug\": \"vincent-van-gogh\", \"sourceName\": \"Vincent van Gogh\", \"verb\": \"STUDIES_UNDER\", \"targetSlug\": \"rembrandt\", \"targetName\": \"Rembrandt\", \"context\": \"Studied and copied Rembrandt extensively, admired his treatment of light\"}, {\"sourceSlug\": \"vincent-van-gogh\", \"sourceName\": \"Vincent van Gogh\", \"verb\": \"COLLABORATES_WITH\", \"targetSlug\": \"paul-gauguin\", \"targetName\": \"Paul Gauguin\", \"context\": \"Shared the Yellow House in Arles, autumn 1888\"}, {\"sourceSlug\": \"vincent-van-gogh\", \"sourceName\": \"Vincent van Gogh\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"arles\", \"targetName\": \"Arles\", \"context\": \"Most prolific period: February 1888 to May 1889\"}, {\"sourceSlug\": \"vincent-van-gogh\", \"sourceName\": \"Vincent van Gogh\", \"verb\": \"CREATES\", \"targetSlug\": \"starry-night\", \"targetName\": \"The Starry Night\", \"context\": \"Painted June 1889 at Saint-Remy asylum\"}], \"places\": [{\"name\": \"Arles, France\", \"role\": \"Most prolific period\"}, {\"name\": \"Paris, France\", \"role\": \"Impressionist exposure\"}, {\"name\": \"Auvers-sur-Oise, France\", \"role\": \"Final months\"}], \"texts\": [{\"title\": \"Wikipedia: Vincent van Gogh\", \"type\": \"Reference article\", \"slug\": \"vincent-van-gogh\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q5582\", \"https://en.wikipedia.org/wiki/Vincent_van_Gogh\"], \"tags\": [\"Painters & Sculptors\", \"cultural-diffusion\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
       "subjectHeadings": [
         "People — Painters & Sculptors — Global — Modern"
       ],
       "subjects": [
-        "Painters & Sculptors"
+        "Post-Impressionism",
+        "Dutch Art",
+        "Mental Health",
+        "Expressionism",
+        "France",
+        "Netherlands",
+        "Art History",
+        "Letters"
       ],
       "frameworks": [
-        "CULTURAL_DIFFUSION",
+        "CULTURAL_TRANSMISSION",
+        "PSYCHOLOGICAL_ANALYSIS",
         "CAUSE_AND_EFFECT"
       ],
       "altNames": [],

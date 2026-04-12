@@ -11,7 +11,7 @@
       "name": "Caravaggio",
       "label": "Person",
       "callNumber": "264.caravaggio",
-      "summary": "Michelangelo Merisi da Caravaggio, known mononymously as Caravaggio, was an Italian painter active in Rome for most of his artistic life. During the final four years of his life, he moved between Naples, Malta, and Sicily. His paintings have been characterized by art critics as combining a realistic observation of the human state, both physical and emotional, with a dramatic use of lighting, which had a formative influence on Baroque painting.",
+      "summary": "Michelangelo Merisi da Caravaggio (1571–1610) was an Italian painter whose revolutionary use of chiaroscuro—dramatic contrasts of light and shadow—transformed European art. Working in Rome, Naples, Malta, and Sicily, he painted directly from life onto canvas without preliminary drawings, a radical departure from Renaissance studio practice.\n\nCaravaggio's masterworks include 'The Calling of Saint Matthew' (1599–1600), 'Judith Beheading Holofernes' (c. 1598), and 'The Entombment of Christ' (1603–1604). His unflinching realism depicted saints as ordinary people with dirty feet and weathered faces, shocking patrons accustomed to idealized religious imagery.\n\nHis violent temperament led to a murder conviction in Rome in 1606, forcing him into exile. He spent his final years fleeing justice while producing some of his most powerful works. He died at age 38 under mysterious circumstances on a beach at Porto Ercole.\n\nCaravaggio's influence spawned an entire movement—Caravaggism—that spread across Europe through followers like Artemisia Gentileschi, Georges de La Tour, and Jusepe de Ribera. 'What he did was to make the painting itself the event,' as critic Robert Hughes noted.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -25,16 +25,24 @@
       "wikidataQid": "Q42207",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Caravaggio",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Early Modern era: age of exploration, printing revolution, and religious reformation\", \"type\": \"EventWindow\", \"year\": \"1571-09-29, Milan\"}, {\"title\": \"Visual art traditions and aesthetic movements\", \"type\": \"Idea\", \"year\": \"1571-09-29, Milan\"}], \"effects\": [{\"title\": \"Produced visual artworks of cultural importance\", \"type\": \"Idea\", \"year\": \"1610-07-18\"}, {\"title\": \"Contributed to global exchange networks, modern state formation, and scientific revolution\", \"type\": \"Movement\", \"year\": \"1610-07-18\"}], \"relationships\": [{\"sourceSlug\": \"caravaggio\", \"sourceName\": \"Caravaggio\", \"verb\": \"PAINTS\", \"targetSlug\": \"field-264\", \"targetName\": \"Painters & Sculptors\", \"context\": \"Caravaggio: Visual art in painters & sculptors\"}, {\"sourceSlug\": \"caravaggio\", \"sourceName\": \"Caravaggio\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"early-modern\", \"targetName\": \"Early Modern Era\", \"context\": \"Caravaggio was active during the Early Modern era\"}], \"places\": [{\"name\": \"Milan\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Caravaggio\", \"type\": \"Reference article\", \"slug\": \"caravaggio\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q42207\", \"https://en.wikipedia.org/wiki/Caravaggio\"], \"tags\": [\"Painters & Sculptors\", \"cultural-diffusion\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\": [\"Renaissance artistic tradition and Venetian colorism\", \"Counter-Reformation demand for emotionally accessible religious art\", \"Roman patronage networks of Cardinals del Monte and Borghese\"], \"effects\": [\"Founded Caravaggism movement across Europe\", \"Transformed Baroque painting with tenebrism technique\", \"Influenced Rembrandt, Velazquez, and virtually every subsequent realist painter\"], \"relationships\": [{\"sourceSlug\": \"caravaggio\", \"sourceName\": \"Caravaggio\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"rembrandt\", \"targetName\": \"Rembrandt\", \"context\": \"Chiaroscuro technique transmitted through Caravaggist intermediaries\"}, {\"sourceSlug\": \"caravaggio\", \"sourceName\": \"Caravaggio\", \"verb\": \"CREATES\", \"targetSlug\": \"counter-reformation\", \"targetName\": \"Counter-Reformation\", \"context\": \"Painted emotionally powerful altarpieces for Roman churches\"}, {\"sourceSlug\": \"caravaggio\", \"sourceName\": \"Caravaggio\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"baroque-art\", \"targetName\": \"Baroque Art\", \"context\": \"Revolutionary tenebrism technique defined Baroque visual language\"}, {\"sourceSlug\": \"michelangelo\", \"sourceName\": \"Michelangelo\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"caravaggio\", \"targetName\": \"Caravaggio\", \"context\": \"Built on Michelangelo's dramatic figural composition\"}, {\"sourceSlug\": \"caravaggio\", \"sourceName\": \"Caravaggio\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"rome\", \"targetName\": \"Rome\", \"context\": \"Primary career in Rome 1592-1606\"}], \"places\": [{\"name\": \"Rome, Italy\", \"role\": \"Primary career\"}, {\"name\": \"Naples, Italy\", \"role\": \"Exile period\"}, {\"name\": \"Malta\", \"role\": \"Knight of Malta\"}], \"texts\": [{\"title\": \"Wikipedia: Caravaggio\", \"type\": \"Reference article\", \"slug\": \"caravaggio\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q42207\", \"https://en.wikipedia.org/wiki/Caravaggio\"], \"tags\": [\"Painters & Sculptors\", \"cultural-diffusion\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
       "subjectHeadings": [
         "People — Painters & Sculptors — Global — Early Modern"
       ],
       "subjects": [
-        "Painters & Sculptors"
+        "Baroque Art",
+        "Chiaroscuro",
+        "Counter-Reformation",
+        "Italian Painting",
+        "Tenebrism",
+        "Rome",
+        "Art History",
+        "Italy"
       ],
       "frameworks": [
-        "CULTURAL_DIFFUSION",
-        "CAUSE_AND_EFFECT"
+        "CULTURAL_TRANSMISSION",
+        "CAUSE_AND_EFFECT",
+        "STRUCTURAL_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 5,

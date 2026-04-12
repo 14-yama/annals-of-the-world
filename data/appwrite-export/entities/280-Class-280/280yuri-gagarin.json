@@ -11,7 +11,7 @@
       "name": "Yuri Gagarin",
       "label": "Person",
       "callNumber": "280.yuri-gagarin",
-      "summary": "Yuri Alekseyevich Gagarin was a Soviet pilot and cosmonaut who, aboard the first successful crewed spaceflight, became the first person to journey into outer space. Travelling on Vostok 1, Gagarin completed one orbit of Earth on 12 April 1961, with his flight taking 108 minutes. By achieving this major milestone for the Soviet Union amidst the Space Race, he became an international celebrity and was awarded many medals and titles, including his country's highest distinction: Hero of the Soviet Union.",
+      "summary": "Yuri Alekseyevich Gagarin (1934–1968) was a Soviet pilot and cosmonaut who became the first human being to journey into outer space on April 12, 1961. His single orbit of Earth aboard Vostok 1, lasting 108 minutes, marked humanity's entry into the Space Age and represented the greatest achievement of the Soviet space program.\n\nBorn in the village of Klushino, Smolensk Oblast, Gagarin survived the German occupation of World War II. He trained as a foundry worker and pilot before being selected from over 3,000 candidates for the first cosmonaut group in 1960. The selection committee noted his calm temperament, physical fitness, and working-class background—ideal Soviet symbolism.\n\nVostok 1 launched from Baikonur Cosmodrome at 09:07 Moscow Time. Gagarin's famous exclamation 'Poyekhali!' ('Let's go!') became one of the most quoted phrases in Russian culture. The flight was entirely automated; Gagarin could only override controls with a sealed envelope code in case of emergency. He ejected at 7 km altitude and parachuted to Earth near Saratov.\n\nGagarin became a global celebrity, touring 30 countries. He died on March 27, 1968, in a routine training jet crash at age 34. His flight remains one of the defining moments of the 20th century and is celebrated annually as Cosmonautics Day in Russia.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,17 +25,24 @@
       "wikidataQid": "Q7327",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Yuri_Gagarin",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Modern era: industrialization, imperial expansion, and democratic revolutions\", \"type\": \"EventWindow\", \"year\": \"1934-03-09, Klushino\"}, {\"title\": \"Military conflicts and strategic necessities\", \"type\": \"Idea\", \"year\": \"1934-03-09, Klushino\"}], \"effects\": [{\"title\": \"Determined military outcomes shaping geopolitical boundaries\", \"type\": \"Idea\", \"year\": \"1968-03-27\"}, {\"title\": \"Contributed to mass society, world wars, and foundations of contemporary global order\", \"type\": \"Movement\", \"year\": \"1968-03-27\"}], \"relationships\": [{\"sourceSlug\": \"yuri-gagarin\", \"sourceName\": \"Yuri Gagarin\", \"verb\": \"COMMANDS\", \"targetSlug\": \"field-280\", \"targetName\": \"Military Leaders & Commanders\", \"context\": \"Yuri Gagarin: Military command in military leaders & commanders\"}, {\"sourceSlug\": \"yuri-gagarin\", \"sourceName\": \"Yuri Gagarin\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"modern\", \"targetName\": \"Modern Era\", \"context\": \"Yuri Gagarin was active during the Modern era\"}], \"places\": [{\"name\": \"Klushino\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Yuri Gagarin\", \"type\": \"Reference article\", \"slug\": \"yuri-gagarin\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q7327\", \"https://en.wikipedia.org/wiki/Yuri_Gagarin\"], \"tags\": [\"Military Leaders & Commanders\", \"conflict-and-resolution\", \"geopolitical-linkage\", \"empire-and-colonialism\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\": [\"Cold War space race between Soviet Union and United States\", \"Soviet rocket technology lead under Sergei Korolev\", \"Sputnik 1 (1957) established Soviet orbital capability\"], \"effects\": [\"Humanity's first spaceflight, opening the Space Age\", \"Intensified US space commitment leading to Apollo program\", \"Became iconic symbol of Soviet technological achievement\"], \"relationships\": [{\"sourceSlug\": \"yuri-gagarin\", \"sourceName\": \"Yuri Gagarin\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"space-race\", \"targetName\": \"Space Race\", \"context\": \"First human spaceflight gave Soviets dramatic lead in Space Race\"}, {\"sourceSlug\": \"yuri-gagarin\", \"sourceName\": \"Yuri Gagarin\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"neil-armstrong\", \"targetName\": \"Neil Armstrong\", \"context\": \"Gagarin's flight directly motivated the Apollo program and Armstrong's Moon landing\"}, {\"sourceSlug\": \"sergei-korolev\", \"sourceName\": \"Sergei Korolev\", \"verb\": \"CAUSES\", \"targetSlug\": \"yuri-gagarin\", \"targetName\": \"Yuri Gagarin\", \"context\": \"Korolev designed Vostok spacecraft and selected Gagarin for the flight\"}, {\"sourceSlug\": \"yuri-gagarin\", \"sourceName\": \"Yuri Gagarin\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"baikonur-cosmodrome\", \"targetName\": \"Baikonur Cosmodrome\", \"context\": \"Launched from Baikonur, Kazakhstan, April 12, 1961\"}, {\"sourceSlug\": \"yuri-gagarin\", \"sourceName\": \"Yuri Gagarin\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"saratov\", \"targetName\": \"Saratov Oblast\", \"context\": \"Landed by parachute near Engels, Saratov Oblast\"}], \"places\": [{\"name\": \"Baikonur Cosmodrome, Kazakhstan\", \"role\": \"Launch site\"}, {\"name\": \"Klushino, Russia\", \"role\": \"Birthplace\"}, {\"name\": \"Star City, Moscow Oblast\", \"role\": \"Cosmonaut training center\"}], \"texts\": [{\"title\": \"Wikipedia: Yuri Gagarin\", \"type\": \"Reference article\", \"slug\": \"yuri-gagarin\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q7327\", \"https://en.wikipedia.org/wiki/Yuri_Gagarin\"], \"tags\": [\"Military Leaders & Commanders\", \"conflict-and-resolution\", \"geopolitical-linkage\", \"empire-and-colonialism\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
       "subjectHeadings": [
         "People — Military Leaders & Commanders — Global — Modern"
       ],
       "subjects": [
-        "Military Leaders & Commanders"
+        "Space Exploration",
+        "Cold War",
+        "Soviet Union",
+        "Cosmonautics",
+        "Vostok Program",
+        "Russia",
+        "Space Race",
+        "Aviation"
       ],
       "frameworks": [
-        "CONFLICT_AND_RESOLUTION",
-        "GEOPOLITICAL_LINKAGE",
-        "EMPIRE_AND_COLONIALISM"
+        "CAUSE_AND_EFFECT",
+        "WORLD_SYSTEMS",
+        "COMPARATIVE_CIVILIZATIONS"
       ],
       "altNames": [],
       "importanceScore": 5,

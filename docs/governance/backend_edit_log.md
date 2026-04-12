@@ -9,8 +9,8 @@
 
 | Metric | Value | Last Updated |
 |--------|-------|--------------|
-| Total entities (Appwrite) | ~358,000 | 2026-04-12 |
-| Total enriched entities | 108 | Batch 4, 2026-04-12 |
+| Total entities (Appwrite) | ~357,989 | 2026-04-12 |
+| Total enriched entities | 122 | Batch 6, 2026-04-12 |
 | Total new entities created | 16 | Batch 4, 2026-04-12 |
 | Duplicate removals | 175 (normalized slug dedup) | 2026-04-12 |
 | Misclassification fixes | 606 (604 batch + 2 targeted) | 2026-04-12 |
@@ -66,11 +66,22 @@
 ### Batch 5 — Slug Normalization + Audit Enhancement (2026-04-12)
 - **Scope:** Fix 777 underscore slugs → kebab-case, enhance Appwrite audit functions
 - **Actions:**
-  - Normalize all `_` slugs to `-` in local JSON + Appwrite
+  - Normalize all `_` slugs to `-` in local JSON + Appwrite (777 files)
   - Add stub summary detection to `audit-consistency`
   - Add slug variant duplicate detection to `audit-duplicates`
   - Add slug normalization auto-fix to `audit-consistency`
-- **Status:** In progress
+- **Commit:** `2136d24cd6`
+
+### Batch 6 — High-Value Entity Enrichment (2026-04-12)
+- **Scope:** 14 PARTIAL/STUB entities enriched to full quality (800–1300c summaries)
+- **Targets:** Entities with summaries 243–595 characters, all importanceScore ≥ 6
+- **Enriched:**
+  - **STUB → FULL:** jan-hus (331c→1256c), thomas-more (304c→1295c), wolfgang-amadeus-mozart (243c→1183c)
+  - **PARTIAL → FULL:** caravaggio (447c→1189c), charles-dickens (404c→1273c), giuseppe-garibaldi (448c→1291c), harriet-tubman (471c→1282c), johann-sebastian-bach (534c→1211c), leon-trotsky (583c→1296c), ludwig-van-beethoven (505c→1258c), mother-teresa (595c→1175c), rabindranath-tagore (409c→1282c), vincent-van-gogh (502c→1279c), yuri-gagarin (505c→1228c)
+- **Quality:** All entities now have: rich summaries (3–4 paragraphs), 3+ causes, 3+ effects, 5 relationships (full EntityRelationship format), 3 places, 8 subjects, 3 frameworks
+- **Script:** `scripts/enrich_batch6.py`
+- **Appwrite Sync:** 14 entities updated
+- **Commit:** TBD
 
 ---
 
@@ -94,7 +105,8 @@
 
 ### P1 — Enrichment Debt
 4. **Top 100 historical figures still stubs** — Many entities with importanceScore ≥ 8 lack rich summaries
-   - Examples: caravaggio, vincent-van-gogh, johann-sebastian-bach, charles-dickens, nikola-tesla
+   - 122 now enriched across batches 1–6 (14 in batch 6: caravaggio, van gogh, bach, dickens, garibaldi, tubman, mother teresa, beethoven, mozart, trotsky, tagore, thomas more, jan hus, gagarin)
+   - Examples still needing work: giuseppe-verdi, richard-wagner, franz-kafka, fyodor-dostoevsky, jane-austen
 5. **Missing Wikidata QIDs** — Majority of entities have empty `wikidataQid` field
 6. **Missing image URLs** — Most entities have no `imageUrl` or `thumbnailUrl`
 7. **Event windows lack causes/effects** — Geo-registry event windows (majority of dataset) have zero causal chains
@@ -136,6 +148,7 @@
 | `scripts/deduplicate_and_fix.py` | Phase 1 specific fixes + Phase 2 normalized dedup | 2026-04-12 |
 | `scripts/enrich_batch4.py` | 26 enrichments + 5 new entities | 2026-04-12 |
 | `scripts/fix_slugs_batch5.py` | Normalize 777 underscore slugs | 2026-04-12 |
+| `scripts/enrich_batch6.py` | 14 high-value entity enrichments | 2026-04-12 |
 | `scripts/sync_batch4_deletions.py` | Delete 177 entities from Appwrite | 2026-04-12 |
 | `scripts/sync_batch4_upserts.py` | Upsert 33 entities to Appwrite | 2026-04-12 |
 | `scripts/sync_appwrite_to_repo.ts` | Export Appwrite → JSON | On demand |

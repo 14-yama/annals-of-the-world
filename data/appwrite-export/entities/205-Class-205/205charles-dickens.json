@@ -11,7 +11,7 @@
       "name": "Charles Dickens",
       "label": "Person",
       "callNumber": "205.charles-dickens",
-      "summary": "Charles John Huffam Dickens was an English writer and journalist. He created some of literature's best-known fictional characters, and is regarded by many as the greatest novelist of the Victorian era. His works enjoyed unprecedented popularity during his lifetime and, by the 20th century, critics and scholars had recognised him as a literary genius. His novels and short stories are widely read today.",
+      "summary": "Charles John Huffam Dickens (1812–1870) was an English novelist and social critic who created some of the most memorable characters in Western literature. His works, including 'Oliver Twist' (1837–39), 'A Christmas Carol' (1843), 'David Copperfield' (1849–50), and 'Great Expectations' (1860–61), exposed the harsh conditions of Victorian England's industrial underclass.\n\nDickens's childhood trauma—his father's imprisonment in the Marshalsea debtor's prison and his own forced labor at Warren's Blacking Factory at age 12—fueled a lifelong crusade against poverty and institutional cruelty. His novels were published in serial instalments, making literature accessible to working-class readers for the first time.\n\nHis public readings drew enormous crowds across Britain and America. He championed reforms in education, sanitation, and labor laws, and his portrayal of workhouses in 'Oliver Twist' helped catalyze the repeal of the Poor Laws. At his death, he was Britain's most famous living person.\n\nAs Leo Tolstoy wrote: 'All his characters are my personal friends.' Dickens invented the modern Christmas celebration, popularised the novel as social commentary, and gave the English language phrases like 'Bah, humbug!' and 'It was the best of times, it was the worst of times.'",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,16 +25,24 @@
       "wikidataQid": "Q5686",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Charles_Dickens",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Modern era: industrialization, imperial expansion, and democratic revolutions\", \"type\": \"EventWindow\", \"year\": \"1812-02-07, Landport\"}, {\"title\": \"Rise of print media and public discourse\", \"type\": \"Idea\", \"year\": \"1812-02-07, Landport\"}], \"effects\": [{\"title\": \"Shaped public opinion and historical record\", \"type\": \"Idea\", \"year\": \"1870-06-09\"}, {\"title\": \"Contributed to mass society, world wars, and foundations of contemporary global order\", \"type\": \"Movement\", \"year\": \"1870-06-09\"}], \"relationships\": [{\"sourceSlug\": \"charles-dickens\", \"sourceName\": \"Charles Dickens\", \"verb\": \"REPORTS\", \"targetSlug\": \"field-205\", \"targetName\": \"Journalists & Chroniclers\", \"context\": \"Charles Dickens: Journalistic coverage in journalists & chroniclers\"}, {\"sourceSlug\": \"charles-dickens\", \"sourceName\": \"Charles Dickens\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"modern\", \"targetName\": \"Modern Era\", \"context\": \"Charles Dickens was active during the Modern era\"}], \"places\": [{\"name\": \"Landport\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Charles Dickens\", \"type\": \"Reference article\", \"slug\": \"charles-dickens\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q5686\", \"https://en.wikipedia.org/wiki/Charles_Dickens\"], \"tags\": [\"Journalists & Chroniclers\", \"cause-and-effect\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\": [\"Childhood poverty and debtor's prison experience\", \"Industrial Revolution creating mass urban poverty in England\", \"Rise of serial fiction publishing and mass literacy\"], \"effects\": [\"Drove Victorian social reform through public awareness of poverty\", \"Democratized the novel via serial publication for working-class audiences\", \"Shaped modern Christmas celebrations through A Christmas Carol\"], \"relationships\": [{\"sourceSlug\": \"charles-dickens\", \"sourceName\": \"Charles Dickens\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"leo-tolstoy\", \"targetName\": \"Leo Tolstoy\", \"context\": \"Tolstoy admired Dickens's social realism and character depth\"}, {\"sourceSlug\": \"charles-dickens\", \"sourceName\": \"Charles Dickens\", \"verb\": \"CAUSES\", \"targetSlug\": \"industrial-revolution\", \"targetName\": \"Industrial Revolution\", \"context\": \"Exposed industrial poverty through fiction, driving reform legislation\"}, {\"sourceSlug\": \"charles-dickens\", \"sourceName\": \"Charles Dickens\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"london\", \"targetName\": \"London\", \"context\": \"London was both his home and the setting for most of his novels\"}, {\"sourceSlug\": \"charles-dickens\", \"sourceName\": \"Charles Dickens\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"mark-twain\", \"targetName\": \"Mark Twain\", \"context\": \"Twain admired Dickens's satirical wit and social commentary\"}, {\"sourceSlug\": \"charles-dickens\", \"sourceName\": \"Charles Dickens\", \"verb\": \"CREATES\", \"targetSlug\": \"oliver-twist\", \"targetName\": \"Oliver Twist\", \"context\": \"Published 1837-1839, exposed workhouse conditions\"}], \"places\": [{\"name\": \"London, England\", \"role\": \"Lifelong home and literary setting\"}, {\"name\": \"Rochester, England\", \"role\": \"Childhood home\"}, {\"name\": \"Gad's Hill Place, Kent\", \"role\": \"Final residence\"}], \"texts\": [{\"title\": \"Wikipedia: Charles Dickens\", \"type\": \"Reference article\", \"slug\": \"charles-dickens\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q5686\", \"https://en.wikipedia.org/wiki/Charles_Dickens\"], \"tags\": [\"Journalists & Chroniclers\", \"cause-and-effect\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
       "subjectHeadings": [
         "People — Journalists & Chroniclers — Global — Modern"
       ],
       "subjects": [
-        "Journalists & Chroniclers"
+        "Victorian Literature",
+        "Social Reform",
+        "Serial Fiction",
+        "Industrial Revolution",
+        "England",
+        "Poverty",
+        "Christmas",
+        "Literary Criticism"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT",
-        "CULTURAL_DIFFUSION"
+        "CULTURAL_TRANSMISSION",
+        "WORLD_SYSTEMS"
       ],
       "altNames": [],
       "importanceScore": 4,

@@ -11,7 +11,7 @@
       "name": "Mother Teresa",
       "label": "Person",
       "callNumber": "250.mother-teresa",
-      "summary": "Mary Teresa Bojaxhiu, better known as Mother Teresa or Saint Mother Teresa, was an Albanian-Indian Catholic nun, founder of the Missionaries of Charity and a Catholic saint. Born in Skopje, then part of the Ottoman Empire, she was raised in a devoutly Catholic family. At the age of 18, she moved to Ireland to join the Sisters of Loreto and later to India, where she lived most of her life and carried out her missionary work. On 4 September 2016, she was canonised by the Catholic Church as Saint Teresa of Calcutta. The anniversary of her death, 5 September, is now observed as her feast day.",
+      "summary": "Mother Teresa (1910–1997), born Anjezë Gonxhe Bojaxhiu in Skopje, Ottoman Empire (now North Macedonia), was an Albanian-Indian Catholic nun who founded the Missionaries of Charity in 1950. Her order grew to over 4,500 sisters operating 600 missions in 133 countries, serving the poorest of the poor—the sick, dying, orphaned, and destitute.\n\nShe arrived in India at age 18, taught at St. Mary's School in Calcutta, and in 1946 experienced what she called a 'call within a call' to leave convent life and serve the slums. Her first mission opened in the Motijhil slum, where she established open-air schools and a hospice for the dying at Kalighat.\n\nMother Teresa received the Nobel Peace Prize in 1979 'for work undertaken in the struggle to overcome poverty and distress, which also constitute a threat to peace.' She used the $192,000 prize money to fund her missions. Her private letters, published posthumously, revealed decades of spiritual darkness—a crisis of faith she carried silently while serving.\n\nCanoized as Saint Teresa of Calcutta in 2016, she remains one of the most recognized humanitarians of the 20th century. As she said: 'If you can't feed a hundred people, then feed just one.'",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,17 +25,24 @@
       "wikidataQid": "Q30547",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Mother_Teresa",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Modern era: industrialization, imperial expansion, and democratic revolutions\", \"type\": \"EventWindow\", \"year\": \"1910-08-26, Skopje\"}, {\"title\": \"Spiritual seeking and religious community formation\", \"type\": \"Idea\", \"year\": \"1910-08-26, Skopje\"}], \"effects\": [{\"title\": \"Shaped religious practice and spiritual communities\", \"type\": \"Idea\", \"year\": \"1997-09-05\"}, {\"title\": \"Contributed to mass society, world wars, and foundations of contemporary global order\", \"type\": \"Movement\", \"year\": \"1997-09-05\"}], \"relationships\": [{\"sourceSlug\": \"mother-teresa\", \"sourceName\": \"Mother Teresa\", \"verb\": \"PREACHES\", \"targetSlug\": \"field-250\", \"targetName\": \"Religious Figures\", \"context\": \"Mother Teresa: Religious teaching in religious figures\"}, {\"sourceSlug\": \"mother-teresa\", \"sourceName\": \"Mother Teresa\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"modern\", \"targetName\": \"Modern Era\", \"context\": \"Mother Teresa was active during the Modern era\"}], \"places\": [{\"name\": \"Skopje\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Mother Teresa\", \"type\": \"Reference article\", \"slug\": \"mother-teresa\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q30547\", \"https://en.wikipedia.org/wiki/Mother_Teresa\"], \"tags\": [\"Religious Figures\", \"comparative-religion\", \"doctrine-development\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\": [\"Albanian Catholic upbringing and missionary vocation\", \"Extreme poverty and disease in Calcutta slums\", \"Vatican II emphasis on engagement with the modern world\"], \"effects\": [\"Founded Missionaries of Charity serving 133 countries\", \"Won Nobel Peace Prize 1979 and became global symbol of charity\", \"Canonized as saint 2016, inspired millions in humanitarian service\"], \"relationships\": [{\"sourceSlug\": \"mother-teresa\", \"sourceName\": \"Mother Teresa\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"calcutta\", \"targetName\": \"Calcutta\", \"context\": \"Founded Missionaries of Charity in Calcutta 1950, served there until death\"}, {\"sourceSlug\": \"mother-teresa\", \"sourceName\": \"Mother Teresa\", \"verb\": \"CREATES\", \"targetSlug\": \"missionaries-of-charity\", \"targetName\": \"Missionaries of Charity\", \"context\": \"Founded 1950 with 13 members, grew to 4,500+ sisters in 133 countries\"}, {\"sourceSlug\": \"pope-john-paul-ii\", \"sourceName\": \"Pope John Paul II\", \"verb\": \"ENDORSES\", \"targetSlug\": \"mother-teresa\", \"targetName\": \"Mother Teresa\", \"context\": \"Beatified her in 2003, fast-tracked canonization process\"}, {\"sourceSlug\": \"mother-teresa\", \"sourceName\": \"Mother Teresa\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"mahatma-gandhi\", \"targetName\": \"Mahatma Gandhi\", \"context\": \"Shared commitment to serving India's poorest, mutual respect across Hindu-Christian divide\"}, {\"sourceSlug\": \"mother-teresa\", \"sourceName\": \"Mother Teresa\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"nobel-peace-prize\", \"targetName\": \"Nobel Peace Prize\", \"context\": \"Awarded 1979 for work overcoming poverty and distress\"}], \"places\": [{\"name\": \"Calcutta, India\", \"role\": \"Life's work\"}, {\"name\": \"Skopje, North Macedonia\", \"role\": \"Birthplace\"}, {\"name\": \"Vatican City\", \"role\": \"Canonization\"}], \"texts\": [{\"title\": \"Wikipedia: Mother Teresa\", \"type\": \"Reference article\", \"slug\": \"mother-teresa\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q30547\", \"https://en.wikipedia.org/wiki/Mother_Teresa\"], \"tags\": [\"Religious Figures\", \"comparative-religion\", \"doctrine-development\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
       "subjectHeadings": [
         "People — Religious Figures — Global — Modern"
       ],
       "subjects": [
-        "Religious Figures"
+        "Humanitarian Aid",
+        "Catholic Church",
+        "Poverty",
+        "India",
+        "Nobel Peace Prize",
+        "Missionaries",
+        "Charity",
+        "Canonization"
       ],
       "frameworks": [
-        "COMPARATIVE_RELIGION",
-        "DOCTRINE_DEVELOPMENT",
-        "CULTURAL_DIFFUSION"
+        "CAUSE_AND_EFFECT",
+        "RELIGIOUS_INTERPRETATION",
+        "WORLD_SYSTEMS"
       ],
       "altNames": [],
       "importanceScore": 5,

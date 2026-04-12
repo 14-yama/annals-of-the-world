@@ -11,7 +11,7 @@
       "name": "Giuseppe Garibaldi",
       "label": "Person",
       "callNumber": "280.giuseppe-garibaldi",
-      "summary": "Giuseppe Maria Garibaldi was an Italian general, revolutionary and republican. He contributed to the Unification of Italy (Risorgimento) and the creation of the Kingdom of Italy. He is considered to be one of Italy's \"fathers of the fatherland\", along with Camillo Benso di Cavour, King Victor Emmanuel II and Giuseppe Mazzini. Garibaldi is also known as the \"Hero of the Two Worlds\" because of his military enterprises in South America and Europe.",
+      "summary": "Giuseppe Garibaldi (1807–1882) was an Italian general, patriot, and republican who played a central role in the unification of Italy. Known as the 'Hero of Two Worlds,' he fought for liberation movements in South America before leading the legendary Expedition of the Thousand that conquered the Kingdom of the Two Sicilies in 1860.\n\nBorn in Nice (then part of the Kingdom of Sardinia), Garibaldi joined Giuseppe Mazzini's Young Italy movement and was sentenced to death in absentia in 1834. He fled to South America, where he fought for the Riograndense Republic in Brazil and defended Montevideo against Argentine forces, earning international fame as a guerrilla commander.\n\nReturning to Italy in 1848, Garibaldi fought in the First Italian War of Independence and briefly led the Roman Republic's defense against French forces. His greatest triumph came in 1860 when his volunteer force of roughly 1,000 Redshirts sailed from Genoa, conquered Sicily and Naples, and handed the entire southern half of Italy to King Victor Emmanuel II.\n\nGaribaldi's selfless surrender of conquered territory to the Sardinian monarchy—rather than claiming power for himself—made him an icon of republican virtue. Abraham Lincoln offered him a Union command in the American Civil War, and he remains Italy's most beloved national hero.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,17 +25,24 @@
       "wikidataQid": "Q539",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Giuseppe_Garibaldi",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Modern era: industrialization, imperial expansion, and democratic revolutions\", \"type\": \"EventWindow\", \"year\": \"1807-07-04, Nice\"}, {\"title\": \"Military conflicts and strategic necessities\", \"type\": \"Idea\", \"year\": \"1807-07-04, Nice\"}], \"effects\": [{\"title\": \"Determined military outcomes shaping geopolitical boundaries\", \"type\": \"Idea\", \"year\": \"1882-06-02\"}, {\"title\": \"Contributed to mass society, world wars, and foundations of contemporary global order\", \"type\": \"Movement\", \"year\": \"1882-06-02\"}], \"relationships\": [{\"sourceSlug\": \"giuseppe-garibaldi\", \"sourceName\": \"Giuseppe Garibaldi\", \"verb\": \"COMMANDS\", \"targetSlug\": \"field-280\", \"targetName\": \"Military Leaders & Commanders\", \"context\": \"Giuseppe Garibaldi: Military command in military leaders & commanders\"}, {\"sourceSlug\": \"giuseppe-garibaldi\", \"sourceName\": \"Giuseppe Garibaldi\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"modern\", \"targetName\": \"Modern Era\", \"context\": \"Giuseppe Garibaldi was active during the Modern era\"}], \"places\": [{\"name\": \"Nice\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Giuseppe Garibaldi\", \"type\": \"Reference article\", \"slug\": \"giuseppe-garibaldi\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q539\", \"https://en.wikipedia.org/wiki/Giuseppe_Garibaldi\"], \"tags\": [\"Military Leaders & Commanders\", \"conflict-and-resolution\", \"geopolitical-linkage\", \"empire-and-colonialism\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\": [\"Napoleonic legacy of Italian national consciousness\", \"Mazzini's Young Italy republican ideology\", \"South American guerrilla warfare experience\"], \"effects\": [\"United southern Italy with northern Kingdom of Sardinia\", \"Enabled proclamation of the Kingdom of Italy in 1861\", \"Became model for anticolonial liberation movements worldwide\"], \"relationships\": [{\"sourceSlug\": \"giuseppe-garibaldi\", \"sourceName\": \"Giuseppe Garibaldi\", \"verb\": \"CAUSES\", \"targetSlug\": \"italian-unification\", \"targetName\": \"Italian Unification\", \"context\": \"Expedition of the Thousand conquered southern Italy 1860\"}, {\"sourceSlug\": \"giuseppe-garibaldi\", \"sourceName\": \"Giuseppe Garibaldi\", \"verb\": \"COLLABORATES_WITH\", \"targetSlug\": \"giuseppe-mazzini\", \"targetName\": \"Giuseppe Mazzini\", \"context\": \"Joined Mazzini's Young Italy movement in 1833\"}, {\"sourceSlug\": \"napoleon-bonaparte\", \"sourceName\": \"Napoleon Bonaparte\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"giuseppe-garibaldi\", \"targetName\": \"Giuseppe Garibaldi\", \"context\": \"Napoleonic campaigns awakened Italian national identity\"}, {\"sourceSlug\": \"giuseppe-garibaldi\", \"sourceName\": \"Giuseppe Garibaldi\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"sicily\", \"targetName\": \"Sicily\", \"context\": \"Landed at Marsala with 1,000 Redshirts, May 1860\"}, {\"sourceSlug\": \"giuseppe-garibaldi\", \"sourceName\": \"Giuseppe Garibaldi\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"simon-bolivar\", \"targetName\": \"Simon Bolivar\", \"context\": \"Garibaldi's liberation campaigns inspired by Bolivar's precedent\"}], \"places\": [{\"name\": \"Nice, France\", \"role\": \"Birthplace\"}, {\"name\": \"Sicily, Italy\", \"role\": \"Military campaign\"}, {\"name\": \"Montevideo, Uruguay\", \"role\": \"South American exile\"}], \"texts\": [{\"title\": \"Wikipedia: Giuseppe Garibaldi\", \"type\": \"Reference article\", \"slug\": \"giuseppe-garibaldi\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q539\", \"https://en.wikipedia.org/wiki/Giuseppe_Garibaldi\"], \"tags\": [\"Military Leaders & Commanders\", \"conflict-and-resolution\", \"geopolitical-linkage\", \"empire-and-colonialism\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
       "subjectHeadings": [
         "People — Military Leaders & Commanders — Global — Modern"
       ],
       "subjects": [
-        "Military Leaders & Commanders"
+        "Italian Unification",
+        "Risorgimento",
+        "Guerrilla Warfare",
+        "Republican Ideals",
+        "Italy",
+        "Nationalism",
+        "Military History",
+        "South America"
       ],
       "frameworks": [
-        "CONFLICT_AND_RESOLUTION",
-        "GEOPOLITICAL_LINKAGE",
-        "EMPIRE_AND_COLONIALISM"
+        "CAUSE_AND_EFFECT",
+        "WORLD_SYSTEMS",
+        "COMPARATIVE_CIVILIZATIONS"
       ],
       "altNames": [],
       "importanceScore": 5,
