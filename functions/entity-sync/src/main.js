@@ -1,26 +1,25 @@
 /**
- * Entity Sync — Event-driven stats updater
+ * Entity Sync — Event-driven stats updater + audit logger
  *
  * Triggered on entity create/update/delete events.
- * Performs an incremental update to stats_cache so global counts
- * stay accurate in near-real-time without waiting for the 30-min
- * audit-consistency scheduled run.
+ * 1. Incrementally updates stats_cache for near-real-time counts
+ * 2. Writes to audit_log for governance/traceability
  *
  * Events:
  *   databases.annals_world_db.collections.entities.documents.*.create
  *   databases.annals_world_db.collections.entities.documents.*.update
  *   databases.annals_world_db.collections.entities.documents.*.delete
  *
- * Strategy:
- *   - On create: increment total + relevant label/era/continent/class counts
- *   - On delete: decrement total + relevant label/era/continent/class counts
- *   - On update: if label/era/continent/class changed, adjust both old and new
- *   - Falls back to triggering a full stats recount if the incremental update fails
+ * Editor identification:
+ *   - Entities created via Curator UI include editorId in the update
+ *   - Entities synced via scripts set SYNC_EDITOR_ID env var
+ *   - Fallback: 'system' for automated/unknown changes
  */
 const sdk = require('node-appwrite');
 
 const DATABASE_ID = process.env.APPWRITE_DATABASE_ID || 'annals_db';
 const STATS_COLLECTION = 'stats_cache';
+const AUDIT_COLLECTION = 'audit_log';
 
 module.exports = async ({ req, res, log, error }) => {
   const client = new sdk.Client();
@@ -59,9 +58,7 @@ module.exports = async ({ req, res, log, error }) => {
       const match = event.match(/documents\.([^.]+)\.(create|update|delete)/);
       if (match) {
         log(`No body found — extracting slug from event: ${match[1]}`);
-        // For create/update, fetch the document; for delete, we only have the ID
         if (eventType !== 'delete') {
-          const databases = new sdk.Databases(client);
           entity = await databases.getDocument(DATABASE_ID, 'entities', match[1]);
         } else {
           entity = { $id: match[1], slug: match[1] };
@@ -146,7 +143,34 @@ module.exports = async ({ req, res, log, error }) => {
     });
 
     log(`Stats cache updated: total=${total}`);
-    return res.json({ ok: true, eventType, total });
+
+    // ── Write Audit Log Entry ──
+    // Determine editor: check if entity has an _editorId hint, env var, or fallback
+    const editorId = entity._editorId
+      || process.env.SYNC_EDITOR_ID
+      || (event.includes('github-actions') ? 'github-actions' : 'system');
+
+    try {
+      await databases.createDocument(DATABASE_ID, AUDIT_COLLECTION, sdk.ID.unique(), {
+        entityId: entity.$id || '',
+        entitySlug: entity.slug || entity.$id || '',
+        entityName: entity.name || entity.slug || '',
+        action: eventType,
+        field: eventType === 'create' ? 'entity' : (eventType === 'delete' ? 'entity' : 'summary'),
+        oldValue: eventType === 'create' ? '' : '(previous value)',
+        newValue: eventType === 'delete' ? '(deleted)' : (entity.summary || '').slice(0, 500),
+        editorId,
+        editorNote: `Auto-logged by entity-sync function (${eventType})`,
+        timestamp: new Date().toISOString(),
+        sessionId: `fn-entity-sync-${Date.now()}`,
+      });
+      log(`Audit log written: ${eventType} ${entity.slug} by ${editorId}`);
+    } catch (auditErr) {
+      // Non-fatal — stats were already updated
+      error(`Audit log write failed (non-fatal): ${auditErr.message}`);
+    }
+
+    return res.json({ ok: true, eventType, total, editorId });
 
   } catch (err) {
     error(`Entity sync failed: ${err.message}`);

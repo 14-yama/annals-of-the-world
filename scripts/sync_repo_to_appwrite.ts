@@ -24,6 +24,7 @@ const ENDPOINT    = process.env.VITE_APPWRITE_ENDPOINT   || 'https://fra.cloud.a
 const PROJECT_ID  = process.env.VITE_APPWRITE_PROJECT_ID || '66509ba7003618a05af6'
 const DATABASE_ID = process.env.VITE_APPWRITE_DATABASE_ID || 'annals_world_db'
 const API_KEY     = process.env.APPWRITE_API_KEY
+const SYNC_EDITOR = process.env.SYNC_EDITOR_ID || 'repo-sync-manual'
 
 if (!API_KEY) {
   console.error('ERROR: Set APPWRITE_API_KEY env var')
@@ -111,6 +112,39 @@ function readJsonFile(filePath: string): { documents?: Record<string, unknown>[]
   return JSON.parse(raw)
 }
 
+async function writeAuditEntry(
+  action: string,
+  entity: Record<string, unknown>,
+  editorId: string,
+  note: string,
+): Promise<void> {
+  const url = `${ENDPOINT}/databases/${DATABASE_ID}/collections/audit_log/documents`
+  try {
+    await fetch(url, {
+      method: 'POST',
+      headers: headers(),
+      body: JSON.stringify({
+        documentId: crypto.randomUUID(),
+        data: {
+          entityId: (entity.$id as string) || '',
+          entitySlug: (entity.slug as string) || '',
+          entityName: (entity.name as string) || '',
+          action,
+          field: 'entity',
+          oldValue: action === 'create' ? '' : '(sync overwrite)',
+          newValue: ((entity.summary as string) || '').slice(0, 500),
+          editorId,
+          editorNote: note,
+          timestamp: new Date().toISOString(),
+          sessionId: `repo-sync-${Date.now()}`,
+        },
+      }),
+    })
+  } catch {
+    // Non-fatal — sync continues
+  }
+}
+
 // ── Main ──
 
 async function main() {
@@ -181,13 +215,19 @@ async function main() {
             if (existing) {
               if (force) {
                 const result = await updateDocument('entities', docId, payload)
-                if (result.success) { updated++ } else { failed++ }
+                if (result.success) {
+                  updated++
+                  await writeAuditEntry('batch_update', { ...payload, $id: docId }, SYNC_EDITOR, `Repo→Appwrite sync (force overwrite)`)
+                } else { failed++ }
               } else {
                 skipped++
               }
             } else {
               const result = await createDocument('entities', docId, payload)
-              if (result.success) { created++ } else { failed++ }
+              if (result.success) {
+                created++
+                await writeAuditEntry('create', { ...payload, $id: docId }, SYNC_EDITOR, `Repo→Appwrite sync (new entity)`)
+              } else { failed++ }
             }
 
             const total = created + updated + skipped + failed
