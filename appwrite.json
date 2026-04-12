@@ -37,6 +37,46 @@
             "enabled": true,
             "entrypoint": "src/main.js",
             "path": "functions/entity-random"
+        },
+        {
+            "$id": "entity-sync",
+            "name": "Entity Sync",
+            "runtime": "node-18.0",
+            "execute": [],
+            "events": [
+                "databases.annals_world_db.collections.entities.documents.*.create",
+                "databases.annals_world_db.collections.entities.documents.*.update",
+                "databases.annals_world_db.collections.entities.documents.*.delete"
+            ],
+            "schedule": "",
+            "timeout": 30,
+            "enabled": true,
+            "entrypoint": "src/main.js",
+            "path": "functions/entity-sync"
+        },
+        {
+            "$id": "audit-duplicates",
+            "name": "Audit Duplicates",
+            "runtime": "node-18.0",
+            "execute": [],
+            "events": [],
+            "schedule": "0 4 * * 0",
+            "timeout": 900,
+            "enabled": true,
+            "entrypoint": "src/main.js",
+            "path": "functions/audit-duplicates"
+        },
+        {
+            "$id": "audit-orphans",
+            "name": "Audit Orphans",
+            "runtime": "node-18.0",
+            "execute": [],
+            "events": [],
+            "schedule": "0 3 * * *",
+            "timeout": 900,
+            "enabled": true,
+            "entrypoint": "src/main.js",
+            "path": "functions/audit-orphans"
         }
     ]
 }
