@@ -895,7 +895,9 @@ export default function EntityPage() {
             {/* OVERVIEW */}
             {activeTab === 'overview' && (
               <Box>
-                <Text fontSize="sm" color="#524E44" lineHeight={1.8} mb={4}>{entity.summary}</Text>
+                {(entity.summary || '').split('\n\n').map((para, i) => (
+                  <Text key={i} fontSize="sm" color="#524E44" lineHeight={1.8} mb={4}>{para}</Text>
+                ))}
 
                 {/* v2 enrichment: alt names, quote, external links */}
                 {entity.altNames && entity.altNames.length > 0 && (

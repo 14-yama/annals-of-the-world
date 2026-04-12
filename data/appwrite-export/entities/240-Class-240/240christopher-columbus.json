@@ -11,7 +11,7 @@
       "name": "Christopher Columbus",
       "label": "Person",
       "callNumber": "240.christopher-columbus",
-      "summary": "Christopher Columbus was an Italian explorer and navigator from the Republic of Genoa who completed four Spanish-based voyages across the Atlantic Ocean sponsored by the Catholic Monarchs, opening the way for the widespread European exploration and colonization of the Americas. His expeditions were the first known European contact with the Caribbean and Central and South America.",
+      "summary": "Christopher Columbus (1451–1506) was a Genoese navigator whose four transatlantic voyages (1492–1504), funded by Spain's Ferdinand and Isabella, initiated sustained European contact with the Americas — the most consequential encounter between civilizations in human history.\n\nConvinced he could reach Asia by sailing west (underestimating Earth's circumference by 25%), he landed in the Bahamas on October 12, 1492 — a date that reshaped every aspect of global history. He explored Cuba, Hispaniola, and parts of Central and South America across four voyages.\n\nThe 'Columbian Exchange' that followed transformed biology, agriculture, and demographics worldwide: Europe received potatoes, maize, tomatoes, and tobacco; the Americas received horses, cattle, wheat — and devastating diseases (smallpox, measles) that killed an estimated 90% of indigenous populations.\n\nHis legacy is deeply contested: celebrated as a bold explorer who connected hemispheres, condemned for initiating the colonization, enslavement, and decimation of indigenous peoples. He never realized he had reached a 'New World,' dying still believing he had found a route to Asia.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,17 +25,28 @@
       "wikidataQid": "Q7322",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Christopher_Columbus",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1451, Genoa\"}, {\"title\": \"Scientific curiosity and systematic investigation of nature\", \"type\": \"Idea\", \"year\": \"1451, Genoa\"}], \"effects\": [{\"title\": \"Advanced scientific knowledge and enabled new technologies\", \"type\": \"Idea\", \"year\": \"1506-05-30\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1506-05-30\"}], \"relationships\": [{\"sourceSlug\": \"christopher-columbus\", \"sourceName\": \"Christopher Columbus\", \"verb\": \"DISCOVERS\", \"targetSlug\": \"field-240\", \"targetName\": \"Scientists & Inventors\", \"context\": \"Christopher Columbus: Scientific discovery in scientists & inventors\"}, {\"sourceSlug\": \"christopher-columbus\", \"sourceName\": \"Christopher Columbus\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Christopher Columbus was active during the Medieval era\"}], \"places\": [{\"name\": \"Genoa\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Christopher Columbus\", \"type\": \"Reference article\", \"slug\": \"christopher-columbus\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q7322\", \"https://en.wikipedia.org/wiki/Christopher_Columbus\"], \"tags\": [\"Scientists & Inventors\", \"innovation-and-technology\", \"cause-and-effect\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\": [\"The fall of Constantinople (1453) and Ottoman control of overland trade routes created economic incentive to find alternative sea routes to Asia\", \"Portuguese advances in navigation (Prince Henry, Bartolomeu Dias) and Spanish Reconquista completion (1492) created the maritime and political context\", \"Columbus's underestimation of Earth's size and overestimation of Asia's eastern extent convinced him a westward voyage was feasible\"], \"effects\": [\"Initiated sustained European contact with the Americas, permanently connecting the world's hemispheres\", \"The Columbian Exchange transformed global agriculture and biology — potatoes, maize, and tomatoes reshaped European and Asian diets\", \"European diseases (smallpox, measles) killed an estimated 90% of indigenous American populations — the largest demographic catastrophe in history\", \"Triggered the Spanish colonization of the Americas, the transatlantic slave trade, and five centuries of European global dominance\", \"His four voyages launched the Age of Exploration and the creation of the first truly global economy\", \"The 'discovery' narrative became deeply contested in the context of indigenous rights and colonial legacy\"], \"relationships\": [{\"sourceSlug\": \"christopher-columbus\", \"sourceName\": \"Christopher Columbus\", \"verb\": \"FUNDED_BY\", \"targetSlug\": \"ferdinand-and-isabella\", \"targetName\": \"Ferdinand And Isabella\", \"context\": \"Ferdinand II and Isabella I of Spain funded his 1492 voyage after years of lobbying\"}, {\"sourceSlug\": \"christopher-columbus\", \"sourceName\": \"Christopher Columbus\", \"verb\": \"INITIATES\", \"targetSlug\": \"columbian-exchange\", \"targetName\": \"Columbian Exchange\", \"context\": \"His voyages initiated the biological, agricultural, and demographic exchange between hemispheres\"}, {\"sourceSlug\": \"christopher-columbus\", \"sourceName\": \"Christopher Columbus\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"spain\", \"targetName\": \"Spain\", \"context\": \"Sailed under the Spanish flag, commissioned by the Spanish Crown\"}, {\"sourceSlug\": \"christopher-columbus\", \"sourceName\": \"Christopher Columbus\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"caribbean\", \"targetName\": \"Caribbean\", \"context\": \"First landfall: Bahamas (Oct 12, 1492); explored Cuba, Hispaniola, Central/South America\"}, {\"sourceSlug\": \"christopher-columbus\", \"sourceName\": \"Christopher Columbus\", \"verb\": \"INFLUENCED_BY\", \"targetSlug\": \"marco-polo\", \"targetName\": \"Marco Polo\", \"context\": \"Columbus owned a heavily annotated copy of Marco Polo's Travels, which inspired his westward voyage\"}], \"places\": [{\"name\": \"Genoa\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Christopher Columbus\", \"type\": \"Reference article\", \"slug\": \"christopher-columbus\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q7322\", \"https://en.wikipedia.org/wiki/Christopher_Columbus\"], \"tags\": [\"Scientists & Inventors\", \"innovation-and-technology\", \"cause-and-effect\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
       "subjectHeadings": [
-        "People — Scientists & Inventors — Global — Medieval"
+        "People — Explorers & Navigators — Italy/Spain — Early Modern"
       ],
       "subjects": [
-        "Scientists & Inventors"
+        "Age of Exploration",
+        "Columbian Exchange",
+        "Americas",
+        "Navigation",
+        "Spain",
+        "1492",
+        "Colonization",
+        "Transatlantic",
+        "Indigenous Peoples",
+        "New World"
       ],
       "frameworks": [
-        "INNOVATION_AND_TECHNOLOGY",
+        "CULTURAL_DIFFUSION",
         "CAUSE_AND_EFFECT",
-        "TEMPORAL_LINKAGE"
+        "TRADE_AND_EXCHANGE",
+        "POLITICAL_SYSTEMS",
+        "ENVIRONMENTAL_HISTORY"
       ],
       "altNames": [],
       "importanceScore": 7,

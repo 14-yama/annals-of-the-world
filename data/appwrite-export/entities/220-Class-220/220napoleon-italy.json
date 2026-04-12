@@ -8,10 +8,10 @@
   "entities": [
     {
       "slug": "napoleon-italy",
-      "name": "Napoleon",
+      "name": "Napoleon Bonaparte",
       "label": "Person",
       "callNumber": "220.napoleon-italy",
-      "summary": "Napoleon, a notable figure in the history of Italy, associated with Risorgimento and Italian Unification (1796–1848). Preceded by Napoleonic Italy and Restoration. Their legacy influenced Kingdom of Italy proclaimed with Victor Emmanuel II as king and Italian forces capture Rome; completion of unification.",
+      "summary": "Napoleon Bonaparte (1769–1821) was a Corsican-born French military commander and emperor whose conquests reshaped Europe, spread the ideals of the French Revolution, established the Napoleonic Code, and made him — alongside Caesar and Alexander — one of history's three greatest military figures.\n\nRising from minor Corsican nobility through artillery brilliance in the Revolutionary Wars, he seized power in the coup of 18 Brumaire (1799) and crowned himself Emperor in 1804. His Grande Armée won stunning victories at Austerlitz, Jena, and Wagram, dominating continental Europe from Spain to the Russian border.\n\nThe Napoleonic Code (1804) — standardizing civil law, abolishing feudal privilege, and establishing equality before the law — became the legal foundation of over 70 countries. He reorganized German states, abolished the Holy Roman Empire, and sparked the nationalist movements that reshaped 19th-century Europe.\n\nHis catastrophic invasion of Russia (1812) and final defeat at Waterloo (1815) ended the Napoleonic era. Exiled to Saint Helena, he died in 1821. His tomb at Les Invalides in Paris remains France's most visited monument.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -25,16 +25,28 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Napoleonic Italy and Restoration\", \"type\": \"EventWindow\", \"year\": \"1796\", \"slug\": \"napoleonic-italy-and-restoration\"}], \"effects\": [{\"title\": \"Kingdom of Italy proclaimed with Victor Emmanuel II as king\", \"type\": \"Institution\", \"year\": \"1861\", \"slug\": \"kingdom-of-italy-proclaimed-with-victor-emmanuel-ii-as-king\"}, {\"title\": \"Italian forces capture Rome; completion of unification\", \"type\": \"EventWindow\", \"year\": \"1870\", \"slug\": \"italian-forces-capture-rome-completion-of-unification\"}], \"relationships\": [{\"sourceSlug\": \"napoleon-italy\", \"sourceName\": \"Napoleon\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"italy\", \"targetName\": \"Italy\", \"context\": \"Napoleon in the history of Italy\"}, {\"sourceSlug\": \"napoleon-italy\", \"sourceName\": \"Napoleon\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"kingdom-of-italy-proclaimed-with-victor-emmanuel-ii-as-king\", \"targetName\": \"Kingdom of Italy proclaimed with Victor Emmanuel II as king\", \"context\": \"Sequential development within Risorgimento and Italian Unification\"}, {\"sourceSlug\": \"napoleonic-italy-and-restoration\", \"sourceName\": \"Napoleonic Italy and Restoration\", \"verb\": \"CAUSES\", \"targetSlug\": \"napoleon-italy\", \"targetName\": \"Napoleon\", \"context\": \"Causal antecedent (1796)\"}, {\"sourceSlug\": \"napoleon-italy\", \"sourceName\": \"Napoleon\", \"verb\": \"CAUSES\", \"targetSlug\": \"kingdom-of-italy-proclaimed-with-victor-emmanuel-ii-as-king\", \"targetName\": \"Kingdom of Italy proclaimed with Victor Emmanuel II as king\", \"context\": \"Consequent outcome (1861)\"}, {\"sourceSlug\": \"napoleon-italy\", \"sourceName\": \"Napoleon\", \"verb\": \"CAUSES\", \"targetSlug\": \"italian-forces-capture-rome-completion-of-unification\", \"targetName\": \"Italian forces capture Rome; completion of unification\", \"context\": \"Consequent outcome (1870)\"}, {\"sourceSlug\": \"napoleon-italy\", \"sourceName\": \"Napoleon\", \"verb\": \"LEADS\", \"targetSlug\": \"kingdom-of-italy-proclaimed-with-victor-emmanuel-ii-as-king\", \"targetName\": \"Kingdom of Italy proclaimed with Victor Emmanuel II as king\", \"context\": \"Contemporary institution in Italy\"}, {\"sourceSlug\": \"napoleon-italy\", \"sourceName\": \"Napoleon\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"enlightenment-reform\", \"targetName\": \"Beccaria's \\\"On Crimes and Punishments\\\"\", \"context\": \"Active during this event\"}], \"places\": [{\"name\": \"Italy\", \"role\": \"National History\"}], \"texts\": [], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\": [\"The French Revolution (1789) destroyed the ancien régime and created political chaos that enabled military strongmen to seize power\", \"Napoleon's artillery genius during the Italian campaigns (1796–97) and Egyptian expedition established his military reputation and political ambitions\", \"The weakness and corruption of the Directory government created the opening for the 18 Brumaire coup (1799)\"], \"effects\": [\"The Napoleonic Code (1804) standardized civil law across Europe and became the legal foundation of over 70 countries worldwide\", \"Reorganized the political map of Europe: abolished the Holy Roman Empire, created the Confederation of the Rhine, and sparked 19th-century nationalism\", \"The Napoleonic Wars (1803–1815) killed an estimated 3–6 million people and reshaped European borders at the Congress of Vienna\", \"Spread revolutionary ideals (equality, meritocracy, secularism) across Europe, permanent disrupting aristocratic order\", \"His invasion of Spain triggered independence movements across Latin America (Bolívar, San Martín)\", \"The Continental System's economic warfare inadvertently accelerated British industrial supremacy\"], \"relationships\": [{\"sourceSlug\": \"napoleon-italy\", \"sourceName\": \"Napoleon Bonaparte\", \"verb\": \"PRODUCT_OF\", \"targetSlug\": \"french-revolution\", \"targetName\": \"French Revolution\", \"context\": \"Rose to power through the political chaos created by the French Revolution\"}, {\"sourceSlug\": \"napoleon-italy\", \"sourceName\": \"Napoleon Bonaparte\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"simon-bolivar\", \"targetName\": \"Simon Bolivar\", \"context\": \"Napoleon's invasion of Spain triggered Latin American independence movements\"}, {\"sourceSlug\": \"napoleon-italy\", \"sourceName\": \"Napoleon Bonaparte\", \"verb\": \"MODELS_ON\", \"targetSlug\": \"julius-caesar\", \"targetName\": \"Julius Caesar\", \"context\": \"Consciously modeled himself on Caesar — even crowning himself emperor\"}, {\"sourceSlug\": \"napoleon-italy\", \"sourceName\": \"Napoleon Bonaparte\", \"verb\": \"MODELS_ON\", \"targetSlug\": \"charlemagne\", \"targetName\": \"Charlemagne\", \"context\": \"Called himself 'the Charlemagne of the modern era' and revived the imperial ideal\"}, {\"sourceSlug\": \"napoleon-italy\", \"sourceName\": \"Napoleon Bonaparte\", \"verb\": \"OPPOSES\", \"targetSlug\": \"united-kingdom\", \"targetName\": \"United Kingdom\", \"context\": \"The Napoleonic Wars were fundamentally a 22-year struggle against British naval and economic power\"}, {\"sourceSlug\": \"napoleon-italy\", \"sourceName\": \"Napoleon Bonaparte\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"france\", \"targetName\": \"France\", \"context\": \"Born in Corsica, ruled France as First Consul (1799) and Emperor (1804–1814/15)\"}], \"places\": [{\"name\": \"Italy\", \"role\": \"National History\"}], \"texts\": [], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
       "subjectHeadings": [
-        "People — Risorgimento and Italian Unification — Italy — Early Modern"
+        "People — Emperors & Military Leaders — France — Modern"
       ],
       "subjects": [
-        "Italy"
+        "Napoleonic Code",
+        "French Revolution",
+        "Grande Armée",
+        "Waterloo",
+        "Continental Europe",
+        "Imperial France",
+        "Military Strategy",
+        "Nationalism",
+        "Legal Reform",
+        "France"
       ],
       "frameworks": [
-        "CONFLICT_AND_RESOLUTION",
-        "CAUSE_AND_EFFECT"
+        "MILITARY_HISTORY",
+        "CAUSE_AND_EFFECT",
+        "POLITICAL_SYSTEMS",
+        "LEGAL_INTERPRETATION",
+        "CULTURAL_DIFFUSION"
       ],
       "altNames": [],
       "importanceScore": null,

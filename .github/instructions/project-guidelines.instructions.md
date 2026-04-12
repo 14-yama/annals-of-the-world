@@ -374,14 +374,41 @@ When adding new nodes to the project:
 ### Entity Quality Requirements
 
 Every entity in the catalog must have:
-- **`summary`** — A descriptive overview (not a slug or placeholder)
-- **`causes`** — At least 1 causal antecedent (what led to this)
-- **`effects`** — At least 1 consequent outcome (what resulted from this)
-- **`relationships`** — At least 1 relationship (OCCURS_IN country minimum)
+- **`summary`** — A rich, concise overview (see Overview Writing Standards below)
+- **`causes`** — At least 3 causal antecedents for major entities (1 minimum for minor)
+- **`effects`** — At least 3 consequent outcomes for major entities (1 minimum for minor)
+- **`relationships`** — At least 5 relationships for major entities using the canonical format:
+  `{sourceSlug, sourceName, verb, targetSlug, targetName, context}`
 - **`frameworks`** — At least 1 interpretive framework
 - **`places`** — At least 1 place reference
 - **`subjectHeadings`** — Hierarchical heading: `Label — Cluster — Country — Era`
-- **`subjects`** — Country + topic tags
+- **`subjects`** — Country + topic tags (8–10 for major entities)
+
+### Overview Writing Standards
+
+Entity summaries must follow these standards for readability and quality:
+
+| Aspect | Guideline |
+|--------|-----------|
+| **Structure** | 3–4 paragraphs separated by `\n\n` (rendered as separate `<Text>` blocks) |
+| **Length** | 800–1,300 characters total (rich but concise — never a wall of text) |
+| **Paragraph 1** | Identity + dates + core significance (who, when, why they matter) |
+| **Paragraph 2** | Key achievements, events, or contributions (the "what happened") |
+| **Paragraph 3** | Impact, consequences, or legacy (the "so what") |
+| **Paragraph 4** | (Optional) A vivid closing fact, quote, or lasting cultural footprint |
+| **Tone** | Scholarly but engaging — avoid dry encyclopedia prose |
+| **Specifics** | Include concrete dates, numbers, and named events (not vague generalities) |
+| **Avoid** | Single-paragraph walls of text, placeholder summaries, slug-like descriptions |
+| **Quotes** | One memorable quote per entity is encouraged (attributed, in single quotes) |
+
+**Examples of good opening lines:**
+- "Aristotle (384–322 BCE) was a Greek philosopher and polymath whose works constitute the first comprehensive system of Western philosophy."
+- "Nelson Mandela (1918–2013) was a South African anti-apartheid revolutionary who served as the country's first Black president."
+
+**Anti-patterns to avoid:**
+- "A notable figure associated with X" (geo-registry auto-stub — must be replaced)
+- Single paragraphs of 1,500+ characters with no breaks
+- Summaries under 200 characters (indicates stub quality)
 
 ### Deduplication
 

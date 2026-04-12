@@ -11,7 +11,7 @@
       "name": "King Solomon",
       "label": "Person",
       "callNumber": "221.solomon",
-      "summary": "Third king of Israel (c. 970–931 BCE), renowned for wisdom, wealth, and the construction of the First Temple in Jerusalem. Author/compiler of Proverbs, Ecclesiastes, and Song of Solomon. His reign marks Israel's golden age of prosperity and peace, but his later apostasy led to the kingdom's division.",
+      "summary": "King Solomon (c. 990–931 BCE) was the third king of Israel, son of David and Bathsheba, whose legendary wisdom, vast wealth, international diplomacy, and construction of the First Temple in Jerusalem made his reign the apex of ancient Israel's power and cultural achievement.\n\nGod offered Solomon anything he wished; he chose wisdom. His judgment between two mothers claiming the same child (1 Kings 3:16–28) became the archetypal story of wise adjudication. Tradition attributes Proverbs, Ecclesiastes, and the Song of Solomon to him — three books spanning wisdom literature, existential philosophy, and love poetry.\n\nHe built the First Temple (c. 957 BCE) — the central sanctuary of Israelite worship — and a magnificent palace complex. His trade networks extended from Ophir (gold) to Tarshish (silver), and his alliance with Hiram of Tyre and the Queen of Sheba's visit demonstrated Israel's international prestige.\n\nYet his 700 wives and 300 concubines (many from foreign alliances) led him into idolatry. After his death, the kingdom split into Israel and Judah — a division that defined Jewish history for centuries.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,24 +25,28 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Davidic Covenant inheritance\", \"type\": \"Idea\", \"year\": \"c. 970 BCE\", \"slug\": \"davidic_covenant\"}], \"effects\": [{\"title\": \"First Temple built in Jerusalem\", \"type\": \"Institution\", \"year\": \"c. 957 BCE\", \"slug\": \"first_temple\"}, {\"title\": \"Kingdom splits after his death\", \"type\": \"Event\", \"year\": \"c. 931 BCE\", \"slug\": \"divided_kingdom\"}], \"relationships\": [{\"sourceSlug\": \"david_king\", \"sourceName\": \"King David\", \"verb\": \"PARENT_OF\", \"targetSlug\": \"solomon\", \"targetName\": \"Solomon\", \"context\": \"Son and successor\"}, {\"sourceSlug\": \"solomon\", \"sourceName\": \"Solomon\", \"verb\": \"ESTABLISHES\", \"targetSlug\": \"first_temple\", \"targetName\": \"First Temple (Solomon's Temple)\", \"context\": \"Built the temple on Mount Moriah\"}, {\"sourceSlug\": \"solomon\", \"sourceName\": \"Solomon\", \"verb\": \"AUTHORS\", \"targetSlug\": \"proverbs\", \"targetName\": \"Proverbs\", \"context\": \"Traditional author of wisdom literature\"}, {\"sourceSlug\": \"davidic_covenant\", \"sourceName\": \"Davidic Covenant inheritance\", \"verb\": \"CAUSES\", \"targetSlug\": \"solomon\", \"targetName\": \"King Solomon\", \"context\": \"Causal antecedent (c. 970 BCE)\"}, {\"sourceSlug\": \"solomon\", \"sourceName\": \"King Solomon\", \"verb\": \"CAUSES\", \"targetSlug\": \"first_temple\", \"targetName\": \"First Temple built in Jerusalem\", \"context\": \"Consequent outcome (c. 957 BCE)\"}, {\"sourceSlug\": \"solomon\", \"sourceName\": \"King Solomon\", \"verb\": \"AUTHORS\", \"targetSlug\": \"ecclesiastes\", \"targetName\": \"Ecclesiastes\", \"context\": \"Text reference: Wisdom Literature\"}, {\"sourceSlug\": \"solomon\", \"sourceName\": \"King Solomon\", \"verb\": \"AUTHORS\", \"targetSlug\": \"song_of_solomon\", \"targetName\": \"Song of Solomon\", \"context\": \"Text reference: Poetry\"}, {\"sourceSlug\": \"solomon\", \"sourceName\": \"King Solomon\", \"verb\": \"LEADS\", \"targetSlug\": \"sanhedrin\", \"targetName\": \"Sanhedrin\", \"context\": \"Contemporary institution\"}, {\"sourceSlug\": \"solomon\", \"sourceName\": \"King Solomon\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"spread_of_christianity\", \"targetName\": \"Spread of Christianity\", \"context\": \"Contemporary movement\"}, {\"sourceSlug\": \"solomon\", \"sourceName\": \"King Solomon\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"crucifixion\", \"targetName\": \"Crucifixion of Jesus\", \"context\": \"Active during this event\"}], \"places\": [{\"name\": \"Jerusalem\", \"role\": \"Capital and Temple city\", \"slug\": \"jerusalem\"}], \"texts\": [{\"title\": \"Proverbs\", \"type\": \"Wisdom Literature\", \"slug\": \"proverbs\"}, {\"title\": \"Ecclesiastes\", \"type\": \"Wisdom Literature\", \"slug\": \"ecclesiastes\"}, {\"title\": \"Song of Solomon\", \"type\": \"Poetry\", \"slug\": \"song_of_solomon\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\": [\"David's military conquests and political unification created the stable, prosperous kingdom Solomon inherited\", \"The Davidic covenant's promise of an enduring dynasty provided religious legitimacy for Solomon's reign\", \"Strategic marriages with foreign princesses secured diplomatic alliances but introduced foreign religious practices\"], \"effects\": [\"Built the First Temple in Jerusalem (c. 957 BCE), the central sanctuary of Israelite worship for 370 years\", \"His legendary wisdom made 'the wisdom of Solomon' a universal proverb and inspired three biblical books\", \"Israel reached its territorial and economic peak under his reign — controlling trade routes from Egypt to Mesopotamia\", \"His foreign alliances and polygamy introduced idolatry that provoked the prophetic critique leading to the kingdom's division\", \"The division of the kingdom after his death (c. 931 BCE) into Israel and Judah shaped all subsequent Jewish history\", \"The First Temple's destruction (586 BCE) and the hope for its rebuilding became central to Jewish identity and Messianic hope\"], \"relationships\": [{\"sourceSlug\": \"solomon\", \"sourceName\": \"King Solomon\", \"verb\": \"SON_OF\", \"targetSlug\": \"david\", \"targetName\": \"King David\", \"context\": \"Succeeded his father David as king and fulfilled the promise to build the Temple\"}, {\"sourceSlug\": \"solomon\", \"sourceName\": \"King Solomon\", \"verb\": \"BUILDS\", \"targetSlug\": \"first-temple\", \"targetName\": \"First Temple\", \"context\": \"Built the First Temple in Jerusalem (c. 957 BCE), Israel's central sanctuary\"}, {\"sourceSlug\": \"solomon\", \"sourceName\": \"King Solomon\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"ancient-israel\", \"targetName\": \"Ancient Israel\", \"context\": \"Ruled united Israel at its territorial and economic peak\"}, {\"sourceSlug\": \"solomon\", \"sourceName\": \"King Solomon\", \"verb\": \"ALLIED_WITH\", \"targetSlug\": \"hiram-of-tyre\", \"targetName\": \"Hiram Of Tyre\", \"context\": \"Alliance with Hiram of Tyre provided materials and craftsmen for the Temple\"}, {\"sourceSlug\": \"solomon\", \"sourceName\": \"King Solomon\", \"verb\": \"VISITED_BY\", \"targetSlug\": \"queen-of-sheba\", \"targetName\": \"Queen Of Sheba\", \"context\": \"The Queen of Sheba's visit to test Solomon's wisdom demonstrated Israel's international prestige\"}], \"places\": [{\"name\": \"Jerusalem\", \"role\": \"Capital and Temple city\", \"slug\": \"jerusalem\"}], \"texts\": [{\"title\": \"Proverbs\", \"type\": \"Wisdom Literature\", \"slug\": \"proverbs\"}, {\"title\": \"Ecclesiastes\", \"type\": \"Wisdom Literature\", \"slug\": \"ecclesiastes\"}, {\"title\": \"Song of Solomon\", \"type\": \"Poetry\", \"slug\": \"song_of_solomon\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
       "subjectHeadings": [
-        "People — Political Leaders — Kings of Israel"
+        "People — Kings & Rulers — Israel — Classical"
       ],
       "subjects": [
-        "King",
-        "Temple",
+        "First Temple",
         "Wisdom",
+        "Jerusalem",
         "Proverbs",
-        "Song of Solomon",
         "Ecclesiastes",
-        "Trade"
+        "Song of Solomon",
+        "Ancient Israel",
+        "Trade",
+        "Queen of Sheba",
+        "Kingdom Division"
       ],
       "frameworks": [
+        "POLITICAL_SYSTEMS",
+        "CAUSE_AND_EFFECT",
         "DOCTRINE_DEVELOPMENT",
-        "GEOPOLITICAL_LINKAGE",
-        "ECONOMIC_SYSTEMS",
-        "CULTURAL_DIFFUSION"
+        "TRADE_AND_EXCHANGE",
+        "RELIGIOUS_INSTITUTIONS"
       ],
       "altNames": [],
       "importanceScore": null,
