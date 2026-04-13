@@ -11,7 +11,7 @@
       "name": "Pericles",
       "label": "Person",
       "callNumber": "222.pericles",
-      "summary": "Athenian statesman (c. 495–429 BCE) who led Athens during its Golden Age. He championed democracy, commissioned the Parthenon, and patronized the arts, but his imperial policies led to the Peloponnesian War.",
+      "summary": "Pericles (c. 495–429 BCE) was an Athenian statesman, orator, and general who presided over Athens during its Golden Age—the most brilliant period of artistic, intellectual, and democratic achievement in the ancient world. Under his leadership (c. 461–429 BCE), Athens became the cultural capital of the Greek world and the birthplace of Western civilisation's defining institutions.\n\nPericles championed radical democracy, extending political participation to all male citizens regardless of wealth. He initiated the building programme that produced the Parthenon, the Propylaea, and the Erechtheion on the Acropolis—financed controversially from the Delian League treasury meant for collective Greek defence against Persia.\n\nHis 'Funeral Oration' of 431 BCE, recorded by Thucydides, remains the most famous articulation of democratic ideals in Western literature: 'Our constitution is called a democracy because power is in the hands not of a minority but of the whole people.'\n\nPericles died of the plague that devastated Athens in 429 BCE during the Peloponnesian War he had helped provoke. His death marked the end of Athens' Golden Age. As Thucydides judged: 'In name it was a democracy, but in practice it was government by the first citizen.'",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,24 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Athenian Democracy\", \"type\": \"Idea\", \"year\": \"508 BCE\", \"slug\": \"democracy\"}], \"effects\": [{\"title\": \"Peloponnesian War\", \"type\": \"EventWindow\", \"year\": \"431 BCE\", \"slug\": \"peloponnesian_war\"}], \"relationships\": [{\"sourceSlug\": \"pericles\", \"sourceName\": \"Pericles\", \"verb\": \"LEADS\", \"targetSlug\": \"athenian_assembly\", \"targetName\": \"Athenian Assembly\", \"context\": \"Dominant voice in Athenian democracy for 30 years\"}, {\"sourceSlug\": \"pericles\", \"sourceName\": \"Pericles\", \"verb\": \"CAUSES\", \"targetSlug\": \"peloponnesian_war\", \"targetName\": \"Peloponnesian War\", \"context\": \"Imperial policies provoked Spartan alliance\"}, {\"sourceSlug\": \"democracy\", \"sourceName\": \"Athenian Democracy\", \"verb\": \"CAUSES\", \"targetSlug\": \"pericles\", \"targetName\": \"Pericles\", \"context\": \"Causal antecedent (508 BCE)\"}, {\"sourceSlug\": \"pericles\", \"sourceName\": \"Pericles\", \"verb\": \"AUTHORS\", \"targetSlug\": \"funeral_oration_via_thucydides\", \"targetName\": \"Funeral Oration (via Thucydides)\", \"context\": \"Text reference: Speech\"}, {\"sourceSlug\": \"pericles\", \"sourceName\": \"Pericles\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"greek_enlightenment\", \"targetName\": \"Greek Enlightenment / Axial Age\", \"context\": \"Contemporary movement\"}, {\"sourceSlug\": \"pericles\", \"sourceName\": \"Pericles\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"peloponnesian_war\", \"targetName\": \"Peloponnesian War\", \"context\": \"Active during this event\"}], \"places\": [{\"name\": \"Athens\", \"role\": \"Political center\", \"slug\": \"athens\"}], \"texts\": [{\"title\": \"Funeral Oration (via Thucydides)\", \"type\": \"Speech\", \"slug\": \"funeral_oration_via_thucydides\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\": [\"Athenian victory in the Persian Wars establishing imperial confidence\", \"Delian League treasury funding cultural programme\", \"Cleisthenes' democratic reforms creating institutional foundation\"], \"effects\": [\"Parthenon and Acropolis building programme defined Western architecture\", \"Funeral Oration became foundational text of democratic ideals\", \"Golden Age of Athens produced Sophocles, Euripides, Phidias, and Socrates\"], \"relationships\": [{\"sourceSlug\": \"pericles\", \"sourceName\": \"Pericles\", \"verb\": \"CREATES\", \"targetSlug\": \"parthenon\", \"targetName\": \"Parthenon\", \"context\": \"Commissioned Parthenon construction 447-432 BCE as centerpiece of Acropolis\"}, {\"sourceSlug\": \"pericles\", \"sourceName\": \"Pericles\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"socrates\", \"targetName\": \"Socrates\", \"context\": \"Pericles' Athens was the intellectual milieu that produced Socratic philosophy\"}, {\"sourceSlug\": \"pericles\", \"sourceName\": \"Pericles\", \"verb\": \"PARTICIPATES_IN\", \"targetSlug\": \"peloponnesian-war\", \"targetName\": \"Peloponnesian War\", \"context\": \"Led Athens into war with Sparta 431 BCE; died of plague during the conflict\"}, {\"sourceSlug\": \"pericles\", \"sourceName\": \"Pericles\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"athens\", \"targetName\": \"Athens\", \"context\": \"Led Athenian democracy and Golden Age c. 461-429 BCE\"}, {\"sourceSlug\": \"pericles\", \"sourceName\": \"Pericles\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"abraham-lincoln\", \"targetName\": \"Abraham Lincoln\", \"context\": \"Lincoln's Gettysburg Address echoed Pericles' Funeral Oration\"}], \"places\": [{\"name\": \"Athens, Greece\", \"role\": \"Political and cultural leadership\"}, {\"name\": \"Acropolis, Athens\", \"role\": \"Building programme\"}, {\"name\": \"Delos, Greece\", \"role\": \"Delian League headquarters\"}], \"texts\": [{\"title\": \"Funeral Oration (via Thucydides)\", \"type\": \"Speech\", \"slug\": \"funeral_oration_via_thucydides\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
       "subjectHeadings": [
         "People — Political Leaders — Greece — Classical"
       ],
       "subjects": [
         "Athenian Democracy",
         "Golden Age of Athens",
-        "Parthenon"
+        "Parthenon",
+        "Classical Greece",
+        "Greece",
+        "Oratory",
+        "Peloponnesian War",
+        "Architecture"
       ],
       "frameworks": [
         "CAUSE_AND_EFFECT",
-        "GEOPOLITICAL_LINKAGE"
+        "STRUCTURAL_ANALYSIS",
+        "COMPARATIVE_CIVILIZATIONS"
       ],
       "altNames": [],
       "importanceScore": null,

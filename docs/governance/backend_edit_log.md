@@ -10,8 +10,8 @@
 | Metric | Value | Last Updated |
 |--------|-------|--------------|
 | Total entities (Appwrite) | ~357,999 | 2026-04-12 |
-| Total enriched entities | 132 | Batch 7, 2026-04-12 |
-| Total new entities created | 26 | Batch 7, 2026-04-12 |
+| Total enriched entities | 146 | Batch 8, 2026-04-12 |
+| Total new entities created | 32 | Batch 8, 2026-04-12 |
 | Duplicate removals | 175 (normalized slug dedup) | 2026-04-12 |
 | Misclassification fixes | 607 (604 batch + 2 targeted + 1 batch 7) | 2026-04-12 |
 | Underscore slugs remaining | ~777 → 0 (fixed batch 5) | 2026-04-12 |
@@ -118,6 +118,42 @@
 - **Reclassification:** richard-wagner moved from 201 (Educators) to 263 (Musicians)
 - **Script:** `scripts/enrich_batch7.py`
 - **Appwrite Sync:** 20/20 synced (2 required slug-based ID lookup)
+- **Commit:** `afa3bf3189`
+
+### Batch 8 — Worst PARTIAL/STUB Enrichment + New Notable Entities (2026-04-12)
+- **Scope:** 14 worst PARTIAL/STUB entities (<300c) enriched + 6 missing high-importance entities created
+- **Priority:** P0 (critical stubs blaise-pascal 96c, nikita-khrushchev 151c) and P1 (worst PARTIALs + missing figures)
+
+#### Enrichments (14 entities)
+| Entity | Old (c) | Category | Fix Applied |
+|--------|---------|----------|-------------|
+| blaise-pascal | 96c | **STUB** | Complete rewrite — mathematician/philosopher/inventor |
+| nikita-khrushchev | 151c | **STUB** | Full enrichment — Soviet leader, Cuban Missile Crisis |
+| pericles | 207c | PARTIAL | Full enrichment — Athenian Golden Age |
+| fidel-castro | 228c | PARTIAL | Full enrichment — Cuban Revolution |
+| xerxes-i | 228c | PARTIAL | Full enrichment — Persian Wars |
+| margaret-thatcher | 238c | PARTIAL | Full enrichment — Iron Lady, Thatcherism |
+| igor-stravinsky | 239c | PARTIAL | Full enrichment — Rite of Spring, modernism |
+| louis-xiv | 249c | PARTIAL | Full enrichment — Sun King, Versailles |
+| mikhail-gorbachev | 249c | PARTIAL | Full enrichment — glasnost, perestroika |
+| francis-of-assisi | 252c | PARTIAL | Full enrichment — Franciscan Order |
+| ibn-sina | 256c | PARTIAL | Full enrichment — Canon of Medicine |
+| henry-viii | 268c | PARTIAL | Full enrichment — English Reformation |
+| niels-bohr | 271c | PARTIAL | Full enrichment — quantum mechanics |
+| ronald-reagan | 248c | PARTIAL | Full enrichment — Reaganomics, Cold War |
+
+#### New Entities Created (6)
+| Entity | Call Number | Era | Importance |
+|--------|------------|-----|------------|
+| oliver-cromwell | 222 | Early Modern | 8 |
+| gottfried-wilhelm-leibniz | 210 | Early Modern | 9 |
+| alfred-hitchcock | 260 | Contemporary | 8 |
+| gabriel-garcia-marquez | 261 | Contemporary | 8 |
+| werner-heisenberg | 240 | Contemporary | 8 |
+| erwin-schrodinger | 240 | Contemporary | 8 |
+
+- **Script:** `scripts/enrich_batch8.py`
+- **Appwrite Sync:** 20/20 synced
 - **Commit:** TBD
 
 ---
@@ -142,9 +178,9 @@
 
 ### P1 — Enrichment Debt
 4. **Top 100 historical figures still stubs** — Many entities with importanceScore ≥ 8 lack rich summaries
-   - 132 now enriched across batches 1–7 (10 stubs fixed in batch 7: richard-wagner, victor-hugo, nero, justinian-i, jane-austen, montesquieu, robert-koch, virginia-woolf, max-planck, henry-v)
-   - 26 new entities created (10 in batch 7: descartes, spinoza, cervantes, goethe, chopin, orwell, ho chi minh, hawking, oppenheimer, tchaikovsky)
-   - Examples still needing work: pericles, fidel-castro, henry-viii, margaret-thatcher, ernest-hemingway, franz-kafka
+   - 146 now enriched across batches 1–8 (14 worst PARTIALs/STUBs fixed in batch 8: blaise-pascal, nikita-khrushchev, pericles, fidel-castro, henry-viii, margaret-thatcher, etc.)
+   - 32 new entities created (6 in batch 8: oliver-cromwell, leibniz, hitchcock, garcia-marquez, heisenberg, schrodinger)
+   - Examples still needing work: democritus, desmond-tutu, titian, max-weber, al-biruni, ernest-hemingway, franz-kafka, charlie-chaplin
 5. **Missing Wikidata QIDs** — Majority of entities have empty `wikidataQid` field
 6. **Missing image URLs** — Most entities have no `imageUrl` or `thumbnailUrl`
 7. **Event windows lack causes/effects** — Geo-registry event windows (majority of dataset) have zero causal chains
@@ -188,6 +224,7 @@
 | `scripts/fix_slugs_batch5.py` | Normalize 777 underscore slugs | 2026-04-12 |
 | `scripts/enrich_batch6.py` | 14 high-value entity enrichments | 2026-04-12 |
 | `scripts/enrich_batch7.py` | 10 stub enrichments + 10 new entities | 2026-04-12 |
+| `scripts/enrich_batch8.py` | 14 PARTIAL/STUB enrichments + 6 new entities | 2026-04-12 |
 | `scripts/sync_batch4_deletions.py` | Delete 177 entities from Appwrite | 2026-04-12 |
 | `scripts/sync_batch4_upserts.py` | Upsert 33 entities to Appwrite | 2026-04-12 |
 | `scripts/sync_appwrite_to_repo.ts` | Export Appwrite → JSON | On demand |

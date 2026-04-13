@@ -11,7 +11,7 @@
       "name": "Ibn Sina (Avicenna)",
       "label": "Person",
       "callNumber": "210.07-ibn-sina",
-      "summary": "Persian polymath (c. 980–1037) regarded as the father of early modern medicine. His Canon of Medicine was the standard medical textbook in Europe and the Islamic world for 600 years. Also a major philosopher who preserved and extended Aristotelian thought.",
+      "summary": "Ibn Sina (c. 980–1037), known in the West as Avicenna, was a Persian polymath whose 'Canon of Medicine' was the standard medical textbook in Europe and the Islamic world for over 600 years—the longest reign of any medical text in history. He is widely regarded as the father of early modern medicine and one of the most significant philosophers of the Islamic Golden Age.\n\nBorn in Afshana (modern Uzbekistan), Ibn Sina was a child prodigy who had memorised the entire Quran by age 10 and mastered medicine by 16. He served as court physician to multiple rulers across Central Asia and Persia, producing over 450 works on medicine, philosophy, astronomy, alchemy, and theology.\n\nThe 'Canon of Medicine' (al-Qanun fi al-Tibb, 1025) systematised Greek, Roman, and Islamic medical knowledge into five comprehensive volumes covering general medicine, pharmacology, organ-specific diseases, systemic conditions, and compound drugs. It introduced the concepts of quarantine, clinical trials, and risk factor analysis.\n\nHis philosophical masterwork 'The Book of Healing' (Kitab al-Shifa) synthesised Aristotelian and Neoplatonic philosophy with Islamic theology, profoundly influencing Thomas Aquinas and medieval European scholasticism. Ibn Sina died at 57 in Hamadan, where his tomb remains a pilgrimage site. His epitaph reads: 'The width of the earth was not enough for him.'",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,7 +25,7 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Aristotle's works transmitted through Arabic\", \"type\": \"Person\", \"year\": \"c. 800 CE\", \"slug\": \"aristotle\"}, {\"title\": \"Islamic Golden Age\", \"type\": \"Movement\", \"year\": \"c. 800–1300\", \"slug\": \"islamic_golden_age\"}], \"effects\": [{\"title\": \"European medical revolution\", \"type\": \"Event\", \"year\": \"c. 1200\"}], \"relationships\": [{\"sourceSlug\": \"aristotle\", \"sourceName\": \"Aristotle\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"ibn-sina\", \"targetName\": \"Ibn Sina\", \"context\": \"Aristotelian framework transmitted via Islamic scholars\"}, {\"sourceSlug\": \"islamic_golden_age\", \"sourceName\": \"Islamic Golden Age\", \"verb\": \"ENABLES\", \"targetSlug\": \"ibn-sina\", \"targetName\": \"Ibn Sina\", \"context\": \"Scholarly culture fostered his work\"}, {\"sourceSlug\": \"aristotle\", \"sourceName\": \"Aristotle's works transmitted through Arabic\", \"verb\": \"CAUSES\", \"targetSlug\": \"ibn-sina\", \"targetName\": \"Ibn Sina (Avicenna)\", \"context\": \"Causal antecedent (c. 800 CE)\"}, {\"sourceSlug\": \"islamic_golden_age\", \"sourceName\": \"Islamic Golden Age\", \"verb\": \"CAUSES\", \"targetSlug\": \"ibn-sina\", \"targetName\": \"Ibn Sina (Avicenna)\", \"context\": \"Causal antecedent (c. 800–1300)\"}, {\"sourceSlug\": \"ibn-sina\", \"sourceName\": \"Ibn Sina (Avicenna)\", \"verb\": \"AUTHORS\", \"targetSlug\": \"canon_of_medicine\", \"targetName\": \"Canon of Medicine\", \"context\": \"Text reference: Medical treatise\"}], \"places\": [{\"name\": \"Bukhara\", \"role\": \"Early life and study\"}, {\"name\": \"Isfahan\", \"role\": \"Major works\"}], \"texts\": [{\"title\": \"Canon of Medicine\", \"type\": \"Medical treatise\", \"slug\": \"canon_of_medicine\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\": [\"Islamic Golden Age patronage of science and translation movement\", \"Central Asian political instability requiring mobile court scholarship\", \"Synthesis of Greek (Galen, Hippocrates) and Islamic medical traditions\"], \"effects\": [\"Canon of Medicine was standard European medical text for 600+ years\", \"Established systematic clinical medicine and pharmacological methodology\", \"Philosophical synthesis influenced Aquinas and European scholasticism\"], \"relationships\": [{\"sourceSlug\": \"ibn-sina\", \"sourceName\": \"Ibn Sina\", \"verb\": \"CREATES\", \"targetSlug\": \"canon-of-medicine\", \"targetName\": \"Canon of Medicine\", \"context\": \"Completed c. 1025; standard medical textbook in Europe for 600 years\"}, {\"sourceSlug\": \"ibn-sina\", \"sourceName\": \"Ibn Sina\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"thomas-aquinas\", \"targetName\": \"Thomas Aquinas\", \"context\": \"Avicenna's Aristotelian synthesis shaped Aquinas's Scholastic philosophy\"}, {\"sourceSlug\": \"aristotle\", \"sourceName\": \"Aristotle\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"ibn-sina\", \"targetName\": \"Ibn Sina\", \"context\": \"Ibn Sina built his philosophical system on Aristotelian logic and metaphysics\"}, {\"sourceSlug\": \"ibn-sina\", \"sourceName\": \"Ibn Sina\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"bukhara\", \"targetName\": \"Bukhara\", \"context\": \"Studied and practiced medicine in Bukhara under Samanid patronage\"}, {\"sourceSlug\": \"hippocrates\", \"sourceName\": \"Hippocrates\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"ibn-sina\", \"targetName\": \"Ibn Sina\", \"context\": \"Ibn Sina systematised and extended Hippocratic and Galenic medical traditions\"}], \"places\": [{\"name\": \"Bukhara, Uzbekistan\", \"role\": \"Education and early career\"}, {\"name\": \"Isfahan, Iran\", \"role\": \"Most productive period\"}, {\"name\": \"Hamadan, Iran\", \"role\": \"Death and tomb\"}], \"texts\": [{\"title\": \"Canon of Medicine\", \"type\": \"Medical treatise\", \"slug\": \"canon_of_medicine\"}], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
       "subjectHeadings": [
         "People — Philosophers & Thinkers — Persia — Medieval"
       ],
@@ -33,14 +33,16 @@
         "Islamic Golden Age",
         "Medicine",
         "Philosophy",
-        "Canon of Medicine"
+        "Canon of Medicine",
+        "Persia",
+        "Pharmacology",
+        "Scholasticism",
+        "Central Asia"
       ],
       "frameworks": [
-        "TEXTUAL_TRANSMISSION",
-        "CULTURAL_DIFFUSION",
-        "DOCTRINE_DEVELOPMENT",
-        "CONTINUITY_AND_CHANGE",
-        "CAUSE_AND_EFFECT"
+        "CAUSE_AND_EFFECT",
+        "CULTURAL_TRANSMISSION",
+        "COMPARATIVE_CIVILIZATIONS"
       ],
       "altNames": [],
       "importanceScore": null,
