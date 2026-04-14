@@ -36,6 +36,25 @@ import urllib.request
 import urllib.error
 import urllib.parse
 
+
+def load_dotenv():
+    """Load .env file if present (no dependency needed)."""
+    env_path = os.path.join(os.path.dirname(__file__), '..', '.env')
+    if os.path.exists(env_path):
+        with open(env_path) as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith('#') or '=' not in line:
+                    continue
+                key, _, value = line.partition('=')
+                key = key.strip()
+                value = value.strip()
+                if key and key not in os.environ:
+                    os.environ[key] = value
+
+
+load_dotenv()
+
 # ═══════════════════════════════════════════════════════════
 # Configuration
 # ═══════════════════════════════════════════════════════════
@@ -85,15 +104,15 @@ PROMPT_TEMPLATE = """You are enriching entities for "Annals of the World," a sch
 
 Generate a scholarly yet engaging enrichment following these EXACT standards:
 
-### Summary (800-1,300 characters)
-- 3-4 paragraphs separated by \\n\\n
+### Summary (STRICTLY 800-1,300 characters — this is a HARD LIMIT)
+- EXACTLY 3 paragraphs separated by \\n\\n (no more, no less)
 - Paragraph 1: Identity + dates + core significance (who, when, why they matter)
 - Paragraph 2: Key achievements, events, or contributions (the "what happened")
 - Paragraph 3: Impact, consequences, or legacy (the "so what")
-- Paragraph 4 (optional): A vivid closing fact, quote, or lasting cultural footprint
 - Include concrete dates, numbers, and named events — not vague generalities
 - One memorable attributed quote per entity is encouraged (in single quotes)
 - Tone: scholarly but engaging — avoid dry encyclopedia prose
+- CRITICAL: Count your characters. The summary MUST be between 800-1300 characters total. Exceeding 1300 characters will cause rejection.
 
 ### Causes (exactly 3)
 Causal antecedents — conditions, events, or influences that led to this entity's significance.
@@ -136,8 +155,35 @@ Return ONLY a valid JSON object with these exact keys — no markdown, no explan
 # LLM API Calls
 # ═══════════════════════════════════════════════════════════
 
-def call_gemini(prompt, api_key, model="gemini-1.5-flash"):
-    """Call Google Gemini API. Free tier: 15 RPM, 1M tokens/day."""
+def _parse_llm_json(text):
+    """Parse JSON from LLM output, fixing literal newlines inside strings."""
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+    # Fix: escape literal newlines that are inside JSON string values
+    fixed = []
+    in_string = False
+    i = 0
+    while i < len(text):
+        ch = text[i]
+        if ch == '\\' and in_string and i + 1 < len(text):
+            fixed.append(ch)
+            fixed.append(text[i + 1])
+            i += 2
+            continue
+        if ch == '"':
+            in_string = not in_string
+        if ch == '\n' and in_string:
+            fixed.append('\\n')
+        else:
+            fixed.append(ch)
+        i += 1
+    return json.loads(''.join(fixed))
+
+
+def call_gemini(prompt, api_key, model="gemini-2.5-flash"):
+    """Call Google Gemini API. Free tier: 500 RPD for 2.5-flash."""
     url = (
         f"https://generativelanguage.googleapis.com/v1beta/models/{model}"
         f":generateContent?key={api_key}"
@@ -146,18 +192,29 @@ def call_gemini(prompt, api_key, model="gemini-1.5-flash"):
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.7,
-            "maxOutputTokens": 4096,
+            "maxOutputTokens": 16384,
             "responseMimeType": "application/json",
+            "thinkingConfig": {"thinkingBudget": 1024},
         },
     }).encode()
     req = urllib.request.Request(
         url, data=body, headers={"Content-Type": "application/json"}
     )
-    with urllib.request.urlopen(req, timeout=90) as resp:
-        data = json.loads(resp.read())
-
-    text = data["candidates"][0]["content"]["parts"][0]["text"]
-    return json.loads(text)
+    # Retry on 429/503 with exponential backoff
+    for backoff in [0, 15, 30, 60]:
+        if backoff:
+            print(f"    Rate limited — waiting {backoff}s...")
+            time.sleep(backoff)
+        try:
+            with urllib.request.urlopen(req, timeout=120) as resp:
+                data = json.loads(resp.read())
+            text = data["candidates"][0]["content"]["parts"][0]["text"]
+            return _parse_llm_json(text)
+        except urllib.error.HTTPError as e:
+            if e.code in (429, 503):
+                continue
+            raise
+    raise RuntimeError("Rate limited after 4 retries")
 
 
 def call_openai(prompt, api_key, model="gpt-4o-mini"):
@@ -198,12 +255,25 @@ def validate_enrichment(result):
     if not isinstance(result, dict):
         return False, "response is not a JSON object"
 
-    # Summary
+    # Summary — auto-trim if between 1300-2500c (LLMs often overshoot)
     summary = result.get("summary", "")
     if not isinstance(summary, str) or len(summary) < 600:
         return False, f"summary too short ({len(summary) if isinstance(summary, str) else 0}c, need >= 600)"
-    if len(summary) > 2000:
-        return False, f"summary too long ({len(summary)}c, max 2000)"
+    if len(summary) > 1300:
+        # Smart trim: keep complete paragraphs that fit under 1300c
+        paragraphs = summary.split("\n\n")
+        trimmed = ""
+        for p in paragraphs:
+            candidate = (trimmed + "\n\n" + p).strip() if trimmed else p
+            if len(candidate) <= 1300:
+                trimmed = candidate
+            else:
+                break
+        if len(trimmed) >= 600:
+            result["summary"] = trimmed
+            summary = trimmed
+        elif len(summary) > 2500:
+            return False, f"summary too long ({len(summary)}c, max 2500)"
 
     # Causes
     causes = result.get("causes", [])
@@ -380,6 +450,45 @@ def sync_to_appwrite(slug, entity, api_key):
 
 
 # ═══════════════════════════════════════════════════════════
+# Auto Audit Log
+# ═══════════════════════════════════════════════════════════
+
+AUDIT_LOG = "docs/governance/backend_edit_log.md"
+
+
+def update_audit_log(run_data):
+    """Append enrichment run summary to the governance audit log."""
+    if not os.path.exists(AUDIT_LOG):
+        return
+
+    ts = run_data["timestamp"]
+    model = run_data["model"]
+    enriched_list = [
+        e for e in run_data.get("entities", []) if e["status"] == "enriched"
+    ]
+    if not enriched_list:
+        return
+
+    slugs = ", ".join(e["slug"] for e in enriched_list[:10])
+    if len(enriched_list) > 10:
+        slugs += f" ... +{len(enriched_list) - 10} more"
+
+    entry = (
+        f"\n### AI Enrichment — {ts}\n\n"
+        f"- **Model:** {model}\n"
+        f"- **Enriched:** {run_data['enriched']} | "
+        f"**Failed:** {run_data['failed']} | "
+        f"**Synced:** {run_data['synced']}\n"
+        f"- **Entities:** {slugs}\n"
+    )
+
+    with open(AUDIT_LOG, "a") as f:
+        f.write(entry)
+
+    print(f"Audit log updated: {AUDIT_LOG}")
+
+
+# ═══════════════════════════════════════════════════════════
 # Main Pipeline
 # ═══════════════════════════════════════════════════════════
 
@@ -396,8 +505,8 @@ def main():
         help="LLM provider (default: gemini — free tier)",
     )
     parser.add_argument(
-        "--gemini-model", default="gemini-1.5-flash",
-        help="Gemini model name (default: gemini-1.5-flash)",
+        "--gemini-model", default="gemini-2.5-flash",
+        help="Gemini model name (default: gemini-2.5-flash)",
     )
     parser.add_argument(
         "--openai-model", default="gpt-4o-mini",
@@ -590,23 +699,24 @@ def main():
 
     # Save run report
     os.makedirs(os.path.dirname(REPORT_FILE), exist_ok=True)
+    run_data = {
+        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "model": args.model,
+        "count_requested": args.count,
+        "enriched": enriched,
+        "failed": failed,
+        "synced": synced,
+        "dry_run": args.dry_run,
+        "entities": report,
+    }
     with open(REPORT_FILE, "w") as f:
-        json.dump(
-            {
-                "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ"),
-                "model": args.model,
-                "count_requested": args.count,
-                "enriched": enriched,
-                "failed": failed,
-                "synced": synced,
-                "dry_run": args.dry_run,
-                "entities": report,
-            },
-            f,
-            indent=2,
-        )
+        json.dump(run_data, f, indent=2)
         f.write("\n")
     print(f"Report: {REPORT_FILE}")
+
+    # Auto-update audit log
+    if not args.dry_run and enriched > 0:
+        update_audit_log(run_data)
 
 
 if __name__ == "__main__":

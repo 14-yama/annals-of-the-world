@@ -1,31 +1,112 @@
 {
-  "timestamp": "2026-04-13T20:52:56Z",
+  "timestamp": "2026-04-13T23:47:43Z",
   "model": "gemini",
-  "count_requested": 5,
-  "enriched": 5,
-  "failed": 0,
-  "synced": 0,
-  "dry_run": true,
+  "count_requested": 20,
+  "enriched": 1,
+  "failed": 19,
+  "synced": 1,
+  "dry_run": false,
   "entities": [
     {
       "slug": "era-modern",
-      "status": "dry_run"
+      "status": "enriched",
+      "old_len": 152,
+      "new_len": 875
     },
     {
       "slug": "era-medieval",
-      "status": "dry_run"
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
     },
     {
       "slug": "era-classical",
-      "status": "dry_run"
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
     },
     {
       "slug": "era-contemporary",
-      "status": "dry_run"
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
     },
     {
       "slug": "era-early-modern",
-      "status": "dry_run"
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-prehistoric",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-roman-period",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-industrial-age",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-late-antiquity",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-late-medieval",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-high-medieval",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-interwar-period",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-world-war-ii-era",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-bronze-age",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-archaic-period",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-digital-age",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-cold-war-era",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-hellenistic-period",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-reformation-era",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "era-age-of-exploration",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
     }
   ]
 }

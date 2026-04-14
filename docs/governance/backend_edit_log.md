@@ -229,3 +229,9 @@
 | `scripts/sync_batch4_upserts.py` | Upsert 33 entities to Appwrite | 2026-04-12 |
 | `scripts/sync_appwrite_to_repo.ts` | Export Appwrite → JSON | On demand |
 | `scripts/sync_repo_to_appwrite.ts` | Import JSON → Appwrite | On demand |
+
+### AI Enrichment — 2026-04-13T23:47:43Z
+
+- **Model:** gemini
+- **Enriched:** 1 | **Failed:** 19 | **Synced:** 1
+- **Entities:** era-modern
