@@ -36,6 +36,9 @@ credentials-backup-*.json
 tmp/
 temp/
 
+# Enrichment pipeline (queue is runtime, report is tracked)
+/data/enrichment/queue.json
+
 # Build
 dist/
 build/

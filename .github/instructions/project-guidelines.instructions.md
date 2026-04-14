@@ -322,6 +322,30 @@ Entity data files moved from `ui/src/data/catalog/*.ts` to `ui/src/data/deprecat
 `catalog/index.ts` still works — imports redirect to deprecated-catalog. Existing script
 imports are unaffected.
 
+### Autonomous AI Enrichment Pipeline
+
+Fully automated enrichment of weak/stub entities using LLM APIs:
+
+| Component | Path | Purpose |
+|-----------|------|---------|
+| Queue Scanner | `scripts/enrichment_queue.py` | Ranks entities by weakness score |
+| AI Enrichment | `scripts/ai_enrich_autonomous.py` | Calls LLM + validates + writes + syncs |
+| GitHub Action | `.github/workflows/ai-enrichment.yml` | Cron every 6h + manual dispatch |
+| Policy Doc | `docs/governance/autonomous_enrichment.md` | Full governance & thresholds |
+
+**LLM Providers:**
+- **Primary:** Google Gemini 1.5 Flash (free tier: 1M tokens/day, 15 RPM)
+- **Fallback:** OpenAI GPT-4o-mini ($0.15/1M input, $0.60/1M output)
+
+**Pipeline flow:** Queue scan → LLM enrichment → Validation gate → Local JSON write → Appwrite sync → Git commit
+
+**Quality gate rejects** enrichments with: summary <600c or >2000c, <2 causes/effects,
+<3 relationships, invalid verbs/frameworks, missing required fields.
+
+**Curator role:** Set thresholds, review weekly, adjust batch sizes, reject bad enrichments.
+
+**GitHub Secrets required:** `GEMINI_API_KEY`, `APPWRITE_API_KEY` (optional: `OPENAI_API_KEY`)
+
 ---
 
 ## Catalog & Search Architecture

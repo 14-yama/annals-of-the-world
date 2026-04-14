@@ -1,0 +1,130 @@
+name: AI Entity Enrichment
+
+# Runs every 6 hours, or manually via workflow_dispatch
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      count:
+        description: 'Number of entities to enrich per run'
+        default: '25'
+        type: string
+      model:
+        description: 'LLM provider'
+        type: choice
+        options:
+          - gemini
+          - openai
+        default: gemini
+      dry_run:
+        description: 'Preview only — no file changes'
+        type: boolean
+        default: false
+      min_importance:
+        description: 'Minimum importanceScore filter for queue'
+        default: '0'
+        type: string
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 2
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      # Step 1: Generate enrichment priority queue
+      - name: Generate enrichment queue
+        run: |
+          python3 scripts/enrichment_queue.py \
+            --min-importance ${{ github.event.inputs.min_importance || '0' }} \
+            --limit 1000
+
+      # Step 2: Run AI enrichment
+      - name: Enrich entities via LLM
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          APPWRITE_API_KEY: ${{ secrets.APPWRITE_API_KEY }}
+        run: |
+          python3 scripts/ai_enrich_autonomous.py \
+            --count ${{ github.event.inputs.count || '25' }} \
+            --model ${{ github.event.inputs.model || 'gemini' }} \
+            --retry 2
+
+      # Step 2b: Dry run mode
+      - name: Dry run preview
+        if: ${{ github.event.inputs.dry_run == 'true' }}
+        run: |
+          python3 scripts/ai_enrich_autonomous.py \
+            --count ${{ github.event.inputs.count || '25' }} \
+            --model ${{ github.event.inputs.model || 'gemini' }} \
+            --dry-run
+
+      # Step 3: Commit enriched entity files
+      - name: Commit enriched entities
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "AI Enrichment Bot"
+          git config user.email "ai-enrichment@annals-of-the-world.bot"
+
+          # Stage only entity JSON files and the run report
+          git add data/appwrite-export/entities/ data/enrichment/last_run.json
+
+          CHANGED=$(git diff --cached --name-only | wc -l)
+          if [ "$CHANGED" -gt 0 ]; then
+            MODEL="${{ github.event.inputs.model || 'gemini' }}"
+            git commit -m "feat(data): AI enrichment — ${CHANGED} entities enriched
+
+          Automated enrichment via ${MODEL} LLM.
+          Pipeline: ai-enrichment.yml | Run: ${{ github.run_id }}"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+      # Step 4: Sync to Appwrite (backup — script already syncs directly)
+      # The Python script syncs to Appwrite during enrichment.
+      # This step is a safety net in case direct sync was skipped.
+      - name: Verify Appwrite sync
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          if [ -f data/enrichment/last_run.json ]; then
+            SYNCED=$(python3 -c "import json; d=json.load(open('data/enrichment/last_run.json')); print(d.get('synced', 0))")
+            ENRICHED=$(python3 -c "import json; d=json.load(open('data/enrichment/last_run.json')); print(d.get('enriched', 0))")
+            echo "Enriched: $ENRICHED | Synced to Appwrite: $SYNCED"
+          fi
+
+      # Step 5: Summary
+      - name: Summary
+        if: always()
+        run: |
+          echo "### AI Enrichment Results" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f data/enrichment/last_run.json ]; then
+            python3 -c "
+          import json
+          d = json.load(open('data/enrichment/last_run.json'))
+          print(f\"| Metric | Value |\")
+          print(f\"|--------|-------|\")
+          print(f\"| Model | {d.get('model', 'unknown')} |\")
+          print(f\"| Requested | {d.get('count_requested', 0)} |\")
+          print(f\"| Enriched | {d.get('enriched', 0)} |\")
+          print(f\"| Failed | {d.get('failed', 0)} |\")
+          print(f\"| Synced | {d.get('synced', 0)} |\")
+          print(f\"| Dry Run | {d.get('dry_run', False)} |\")
+          " >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No enrichment report found" >> "$GITHUB_STEP_SUMMARY"
+          fi
