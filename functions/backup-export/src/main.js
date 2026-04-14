@@ -85,6 +85,17 @@ module.exports = async ({ req, res, log, error }) => {
   const databases = new sdk.Databases(client);
   const storage = new sdk.Storage(client);
 
+  // ── COST CAP: Full export reads all collections. Skip if over budget. ──
+  const isScheduled = !req.body || req.body === '{}';
+  let helpers;
+  try { helpers = require('./helpers'); } catch {}
+  if (isScheduled && helpers?.checkUsageBudget) {
+    try {
+      const budget = await helpers.checkUsageBudget(databases, log);
+      if (!budget.allowed) return res.json({ skipped: true, reason: budget.reason });
+    } catch (e) { log(`Usage check error: ${e.message}`); }
+  }
+
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
   log('Starting backup export — ' + timestamp);
 

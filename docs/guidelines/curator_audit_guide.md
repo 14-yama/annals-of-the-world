@@ -5,6 +5,7 @@
 ## Overview
 
 The audit system provides:
+
 1. **Edit Governance** — Per-field change tracking with curator identity
 2. **Automated Audits** — Scheduled Appwrite Cloud Functions for data quality
 3. **Backup/Sync** — Bidirectional sync between Appwrite and local JSON
@@ -17,25 +18,26 @@ The audit system provides:
 
 Every edit made through the curator interface is logged to the `audit_log` Appwrite collection.
 
-| Field | Description |
-|-------|-------------|
-| `entityId` | Appwrite document ID of the edited entity |
-| `entitySlug` | Entity slug for human-readable identification |
-| `entityName` | Entity display name at time of edit |
-| `action` | `update`, `create`, `delete`, or `batch` |
-| `field` | Specific field that changed (e.g. `summary`, `era`) |
-| `oldValue` | Previous value (up to 10,000 chars) |
-| `newValue` | New value after edit |
-| `editorId` | Curator who made the change |
-| `editorNote` | Optional note explaining the change |
-| `timestamp` | ISO 8601 timestamp |
-| `sessionId` | Browser session UUID (groups edits from one session) |
+| Field        | Description                                          |
+| ------------ | ---------------------------------------------------- |
+| `entityId`   | Appwrite document ID of the edited entity            |
+| `entitySlug` | Entity slug for human-readable identification        |
+| `entityName` | Entity display name at time of edit                  |
+| `action`     | `update`, `create`, `delete`, or `batch`             |
+| `field`      | Specific field that changed (e.g. `summary`, `era`)  |
+| `oldValue`   | Previous value (up to 10,000 chars)                  |
+| `newValue`   | New value after edit                                 |
+| `editorId`   | Curator who made the change                          |
+| `editorNote` | Optional note explaining the change                  |
+| `timestamp`  | ISO 8601 timestamp                                   |
+| `sessionId`  | Browser session UUID (groups edits from one session) |
 
 ### Viewing the Audit Log
 
 Navigate to **`/curator/audit/log`** in the application.
 
 Features:
+
 - **Filter by entity** — Search by slug
 - **Filter by editor** — See all edits by a specific curator
 - **Filter by action** — Show only updates, creates, etc.
@@ -56,6 +58,7 @@ Five Appwrite Cloud Functions run on scheduled cron jobs:
 ### audit-completeness (Daily, 02:00 UTC)
 
 Scans every entity and scores it on 9 quality dimensions:
+
 - Relationships, Causes, Effects, Frameworks, Places, Texts
 - Image URL, Wikidata QID, Summary (≥50 characters)
 
@@ -64,6 +67,7 @@ Scans every entity and scores it on 9 quality dimensions:
 ### audit-orphans (Daily, 03:00 UTC)
 
 Detects entities with zero relationships:
+
 - Checks the `relationships` collection for connected slugs
 - Also checks entity's own `detailsJson.relationships` array
 - Groups orphans by label type
@@ -71,6 +75,7 @@ Detects entities with zero relationships:
 ### audit-duplicates (Weekly, Sunday 04:00 UTC)
 
 Fuzzy duplicate detection using Levenshtein distance:
+
 - Normalises names (lowercase, strip punctuation)
 - Compares within same label type
 - 85% similarity threshold
@@ -79,6 +84,7 @@ Fuzzy duplicate detection using Levenshtein distance:
 ### audit-consistency (Daily, 05:00 UTC)
 
 Validates data integrity rules:
+
 - Era ↔ eraDivisionCode consistency
 - callNumber format (`Class.Division.Slug`)
 - Required fields (slug, name, label, callNumber)
@@ -89,6 +95,7 @@ Validates data integrity rules:
 ### backup-export (Weekly, Sunday 00:00 UTC)
 
 Exports all collections to JSON files in Appwrite Storage:
+
 - entities, relationships, evidence, media, timeline_entries, audit_log
 - Each file includes `_meta` with collection name, timestamp, count
 - Stored in `backups` bucket
@@ -111,11 +118,11 @@ appwrite deploy function --functionId=audit-completeness
 
 ### Environment Variables (set in Appwrite Console)
 
-| Variable | Description |
-|----------|-------------|
-| `APPWRITE_ENDPOINT` | API endpoint (defaults to `https://fra.cloud.appwrite.io/v1`) |
-| `APPWRITE_API_KEY` | Server API key with `databases.read` + `databases.write` |
-| `APPWRITE_DATABASE_ID` | Database ID (defaults to `annals_db`) |
+| Variable               | Description                                                   |
+| ---------------------- | ------------------------------------------------------------- |
+| `APPWRITE_ENDPOINT`    | API endpoint (defaults to `https://fra.cloud.appwrite.io/v1`) |
+| `APPWRITE_API_KEY`     | Server API key with `databases.read` + `databases.write`      |
+| `APPWRITE_DATABASE_ID` | Database ID (defaults to `annals_db`)                         |
 
 ---
 
@@ -128,6 +135,7 @@ APPWRITE_API_KEY=<key> npx tsx scripts/sync_appwrite_to_repo.ts
 ```
 
 Creates `data/appwrite-export/` with class-based folder structure:
+
 ```
 entities/
   0-Ideas-Core/
@@ -141,6 +149,7 @@ manifest.json
 ```
 
 Flags:
+
 - `--entities-only` — Skip non-entity collections
 - `--collection=X` — Export only one collection
 
@@ -164,6 +173,7 @@ APPWRITE_API_KEY=<key> npx tsx scripts/sync_repo_to_appwrite.ts --force
 ### Shuffle Mode
 
 Toggle random entity ordering in DivisionDetail view:
+
 - Uses server-side random offset + Fisher-Yates shuffle within page
 - Persisted to localStorage
 - Useful for reviewing entities across the full dataset
@@ -175,3 +185,25 @@ ClassHub and DivisionDetail use cursor-based pagination to get accurate totals (
 ### Server-Side Sorting
 
 Sort by importance score, name, or era with server-side `Query.orderDesc/orderAsc` for consistent results across pages.
+
+---
+
+## 5. Cost Cap — Pro Plan Budget Protection
+
+> See full policy: `docs/governance/COST_CAP_POLICY.md`
+
+### Summary
+
+All scheduled cloud functions are gated by a usage budget system. When cumulative monthly database reads exceed **70% of the Pro plan limit (1.26M of 1.8M)**, scheduled runs are automatically skipped.
+
+### Key points for curators:
+
+- **Manual function invocations always work** — the budget gate only blocks scheduled/cron runs
+- **GitHub Actions crons are disabled** — `ai-enrichment.yml` and `sync-to-appwrite.yml` require manual `workflow_dispatch`
+- **Frontend searches are capped at 2 queries** (down from 5-7) and count fetches are cached for 5 minutes
+- **If a function returns `{ skipped: true }`**, check the Appwrite Console usage tab before retrying
+- **The usage tracker resets on the 1st of each month** — early-month audits are safe
+
+### Reactivating automated schedules
+
+If the project upgrades to a higher Appwrite plan, update `PRO_PLAN_LIMITS` in `functions/_shared/helpers.js` and uncomment the cron triggers in the GitHub Actions workflow files.

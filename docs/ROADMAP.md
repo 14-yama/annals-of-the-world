@@ -3,13 +3,15 @@
 This roadmap describes a practical path from the current scaffolded project to a sustainable, community-driven historical knowledge graph with a target of 1,000,000 nodes and an eventual, well governed contribution into the Wikimedia ecosystem (Wikidata/Wikipedia integration). It maps tech, governance, data, community, and outreach work into phased milestones and immediate next steps.
 
 ## 1. Vision
+
 - Build a scholarly, auditable, multilingual historical knowledge graph (Neo4j) modelling people, ideas, places, events, texts, movements and evidence across time and space.
 - Reach 1,000,000 high-quality nodes through staged ingestion, global contributions, and curated seed clusters.
 - Publish and interoperate with Wikimedia projects (Wikidata, Wikipedia) as an open-source contribution to the global web of knowledge.
 
 ## 2. Current scope (short review)
-- **Backend:** Appwrite PRO — `annals_world_db` database, `entities` collection (40,220+ entities), 11 indexes, Wikidata enrichment pipeline.
-- **Frontend:** React 18 + Vite 5 + TypeScript + Chakra UI — 36+ routes, D3 graph explorer, entity pages with era/division rendering, advanced search with fuzzy matching.
+
+- **Backend:** Appwrite PRO ($25/mo) — `annals_world_db` database, `entities` collection (392,000+ entities), 11 indexes, Wikidata enrichment pipeline. **Cost-capped**: all scheduled functions gated at 70% of monthly read limit (see `docs/governance/COST_CAP_POLICY.md`).
+- **Frontend:** React 18 + Vite 5 + TypeScript + Chakra UI — 36+ routes, D3 graph explorer, entity pages with era/division rendering, advanced search (2-query strategy, cached counts).
 - **Catalog:** 16,505 curated catalog entities + 24,000+ Wikidata entities = 40,000+ total in Appwrite.
 - **Eras:** 6 canonical eras (Prehistoric, Classical, Medieval, Early Modern, Modern, Contemporary) with 20 era division codes (910–963).
 - **Wikidata datasets:** `data/wikidata_people.json` (238,466 entities) + artifacts, events, evidence, ideas, institutions, movements, places, timeframes.
@@ -18,53 +20,65 @@ This roadmap describes a practical path from the current scaffolded project to a
 - Status: Appwrite backend fully operational, frontend rendering all entity types with era/division, search ranking optimized, comprehensive audit completed.
 
 ## 3. High-level strategy to 1M nodes
+
 Phases are calibrated to a multi-year program. Exact durations depend on contributor bandwidth and resourcing.
 
 ### Phase 0 — Hygiene & Governance (0–2 months)
+
 - Rotate and remove any credentials in the repo (`.env.local`); enforce `.gitignore` (do this now).
 - Add LICENSE (recommend CC0 or CC-BY-SA for data; choose and document clearly) and [CONTRIBUTING.md](../CONTRIBUTING.md).
 - Publish a short lint_checklist.md for curators and an ISSUE_TEMPLATE + PR_TEMPLATE.
 - Wire basic CI to run `scripts/run_audits.py` (dry-run mode) and unit tests on PRs.
 
 Key deliverables
+
 - LICENSE, CONTRIBUTING, CODE_OF_CONDUCT, ISSUE/PR templates, minimal GH Actions for tests/audits.
 
 ### Phase 1 — Core infra & ingestion pipelines (2–8 months)
+
 - Harden `src/annals` as a tiny package: add CLI entry points, `requirements.txt`/`pyproject.toml` and tests covering node creation/validation.
 - Build ingestion pipeline patterns: per-cluster CSV → validation (Pydantic) → dry-run audit → commit transactionally to Neo4j.
 - Create `scripts/normalize_verbs.py` and `scripts/promote_evidence.py` to implement governance rules automatically.
 - Add schema / constraints bootstrapping (`setup_constraints.py`) and tests.
 
 Key deliverables
+
 - Deployable CLI ingestion tool, canonical seed CSVs for 3 clusters, automatic audit reports, seed import runbook.
 
 ### Phase 2 — Scale, API & curator tooling (6–18 months)
+
 - Scaffold a small MCP-style service (containerized) that exposes safe admin endpoints (idempotent ops): promote-evidence, import-csv, run-audit, normalize-verbs.
 - Build a lightweight web UI (or notebook-based curator dashboard) for curators to propose/verify nodes and evidence; use the MCP for backend calls.
 - Implement contributor roles and audit trails: who changed what, when, why (store provenance metadata using W3C PROV patterns in nodes/edges).
 - Add bulk ingestion optimizations (batching, parallelism) and benchmark for Neo4j instance sizing (consider Aura/Enterprise for scale).
 
 Key deliverables
+
 - MCP service + CLI client, curator dashboard prototype, provenance logging.
 
 ### Phase 3 — Community growth & federation (12–36 months)
+
 - Open contributor outreach: run workshops, create curated onboarding projects (translate one curated cluster into many languages), build a contributors program.
 - Create a governance board and editorial steering group for approval of new frameworks / verbs.
 - Establish synchronization protocols & mapping to Wikidata: property and item crosswalks, RDF/JSON-LD exports, use Wikidata properties where feasible.
 - Pilot automated export to Wikidata (or bot-guided proposals) for a small, vetted subset of nodes (e.g., canonical persons with strong evidence).
 
 Key deliverables
+
 - Contributor onboarding program, editorial governance, Wikidata crosswalk and pilot.
 
 ### Phase 4 — 1M nodes & Wikimedia contribution (24–60 months)
+
 - Scale ingestion via partnerships (digital libraries, university projects, crowdsourced contributions) and curated bulk datasets (public-domain corpora, museum open collections).
 - Mature integration with Wikidata: follow community norms, use bot accounts and community-approved import workflows, incremental contributions with high metadata and provenance.
 - Maintain high-quality exports (CSV, JSON-LD, RDF) and embed stable URIs for nodes.
 
 Key deliverables
+
 - 1M node milestone, documented Wikidata import strategy, persistent public datasets and visualizations.
 
 ## 4. Technical pillars & recommendations
+
 - Schema & validation
   - Keep `src/annals/models.py` authoritative; add robust validators and inline docs; include export mappings for Wikidata/RDF.
 - Provenance & evidence
@@ -79,6 +93,7 @@ Key deliverables
   - Provide JSON-LD and RDF exports, and a property/item crosswalk to Wikidata (map node labels & properties to WD properties where appropriate).
 
 ## 5. Community & Wikimedia strategy
+
 - Licensing
   - Use a permissive, clear data license. Wikidata accepts CC0 data; choose license compatible with Wikimedia if you plan imports.
 - Mapping & piloting
@@ -89,6 +104,7 @@ Key deliverables
   - Only export nodes with high provenance (Tier A/B) for initial Wikidata proposals; include full citations and scriptable patches.
 
 ## 6. KPIs & milestones
+
 - Security milestone: remove secrets from repo (0 weeks).
 - Phase 1 milestone: CLI ingestion + 3 clusters seeded (3–6 months).
 - Phase 2 milestone: MCP + curator dashboard + 100k nodes (6–18 months).
@@ -96,12 +112,14 @@ Key deliverables
 - Phase 4 milestone: 1,000,000 nodes and Wikimedia pilot import (24–60 months).
 
 ## 7. Risks & mitigations
+
 - Data quality risk: enforce strong QA (automated audits + editorial review); require Tier A evidence for public exports.
 - Scaling risk: benchmark early, choose managed Neo4j hosting, and implement partitioning strategies.
 - Community friction (Wikimedia): engage early, be transparent, and follow their import/quality rules.
 - Legal/IP risk: ensure dataset licensing is compatible with Wikimedia and any third-party datasets.
 
 ## 8. Immediate next actions (first sprint)
+
 1. Rotate credentials now; remove `.env.local` from repo and ensure `.gitignore` covers local env files.
 2. Add LICENSE (recommend CC0 for maximal Wikimedia compatibility) and [CONTRIBUTING.md](../CONTRIBUTING.md).
 3. Commit this roadmap as [docs/ROADMAP.md](./ROADMAP.md) and link it from [README.md](../README.md) and [docs/summary.md](./summary.md).
@@ -109,6 +127,7 @@ Key deliverables
 5. Wire a CI job to run `scripts/run_audits.py` on PRs (dry-run mode) and surface results in PR checks.
 
 ## 9. Who to involve / roles
+
 - Core maintainers: keep schema & toolchain consistent (`src/annals` owners).
 - Editorial board: approve framework additions and large import decisions.
 - Curators: domain experts adding curated clusters and evidence.
@@ -117,6 +136,7 @@ Key deliverables
 ---
 
 If you want, I will:
+
 - create `LICENSE` and `CONTRIBUTING.md` stubs and commit them,
 - add `docs/guidelines/lint_checklist.md`, or
 - scaffold `scripts/normalize_verbs.py` and a GH Action to run audits on PRs.

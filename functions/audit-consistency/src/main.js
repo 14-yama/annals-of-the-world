@@ -42,6 +42,20 @@ module.exports = async ({ req, res, log, error }) => {
 
   const databases = new sdk.Databases(client);
 
+  // ── COST CAP: Full scan costs ~392K reads. Skip if over budget. ──
+  const isScheduled = !req.body || req.body === '{}';
+  let helpers;
+  try { helpers = require('./helpers'); } catch {}
+
+  if (isScheduled && helpers?.checkUsageBudget) {
+    try {
+      const budget = await helpers.checkUsageBudget(databases, log);
+      if (!budget.allowed) {
+        return res.json({ skipped: true, reason: budget.reason });
+      }
+    } catch (e) { log(`Usage check error: ${e.message}`); }
+  }
+
   // Determine mode from request body
   let mode = 'stats';
   try {

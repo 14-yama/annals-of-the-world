@@ -1,15 +1,25 @@
 name: Sync Repo → Appwrite
 
+# COST CAP: Auto-sync on push DISABLED to stay within Appwrite Pro limits.
+# Use manual workflow_dispatch only. Each sync triggers writes ($0.60/M).
+# Re-enable after verifying monthly budget in Appwrite Console → Usage.
 on:
-  push:
-    branches: [clean/audit-system, main]
-    paths:
-      - 'data/appwrite-export/entities/**'
+  # push:
+  #   branches: [clean/audit-system, main]
+  #   paths:
+  #     - 'data/appwrite-export/entities/**'
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: "Type YES to confirm manual sync (costs writes)"
+        required: true
+        type: string
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    if: ${{ github.event.inputs.confirm == 'YES' }}
 
     steps:
       - uses: actions/checkout@v4
@@ -17,8 +27,8 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
           cache-dependency-path: ui/package-lock.json
 
       - name: Install dependencies

@@ -47,14 +47,11 @@ export async function fetchEntities(opts?: {
 }
 
 /**
- * Search entities — deep multi-strategy search across 400K+ Appwrite backend.
+ * Search entities — cost-efficient search across 400K+ Appwrite backend.
  *
- * Strategies (run in parallel where possible):
+ * Strategies (max 2 queries to stay within Pro plan budget):
  * 1. Fulltext name search  — word-prefix matching on the `name` field
  * 2. Fulltext summary search — finds entities whose summary mentions the query
- * 3. Slug prefix search    — hyphenated + underscore variants
- * 4. Exact slug lookup     — handles pasted slugs like "julius-caesar"
- * 5. Call number prefix    — "290", "220.06", etc.
  *
  * Results are merged, deduplicated by slug, and sorted by importanceScore.
  */
@@ -84,44 +81,18 @@ export async function searchEntities(query: string, limit = 25): Promise<Entity[
     }
   }
 
-  // ── Build slug variants ──
-  const slugHyphen = q.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
-  const slugUnder  = q.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, '')
-  const isCallNum  = /^\d/.test(q)
-
-  // ── Run strategies in parallel for speed ──
-  const strategies: Promise<Entity[]>[] = []
-
-  // Strategy 1: Fulltext name search
-  strategies.push(safeQuery([Query.search('name', q), Query.limit(limit)]))
+  // ── Run at most 2 strategies in parallel (cost cap) ──
+  const strategies: Promise<Entity[]>[] = [
+    // Strategy 1: Fulltext name search (covers exact, prefix, and partial name matches)
+    safeQuery([Query.search('name', q), Query.limit(limit)]),
+  ]
 
   // Strategy 2: Fulltext summary search (catches entities whose name doesn't match but topic does)
   if (q.length >= 3) {
     strategies.push(safeQuery([Query.search('summary', q), Query.limit(limit)]))
   }
 
-  // Strategy 3: Slug prefix search — both hyphen and underscore variants
-  if (slugHyphen.length >= 2) {
-    strategies.push(safeQuery([Query.startsWith('slug', slugHyphen), Query.limit(limit)]))
-  }
-  if (slugUnder.length >= 2 && slugUnder !== slugHyphen) {
-    strategies.push(safeQuery([Query.startsWith('slug', slugUnder), Query.limit(limit)]))
-  }
-
-  // Strategy 4: Exact slug match (user may paste "julius-caesar" or "alexander_the_great")
-  if (slugHyphen.length >= 3) {
-    strategies.push(safeQuery([Query.equal('slug', slugHyphen), Query.limit(1)]))
-  }
-  if (slugUnder.length >= 3 && slugUnder !== slugHyphen) {
-    strategies.push(safeQuery([Query.equal('slug', slugUnder), Query.limit(1)]))
-  }
-
-  // Strategy 5: Call number prefix search
-  if (isCallNum) {
-    strategies.push(safeQuery([Query.startsWith('callNumber', q), Query.limit(limit)]))
-  }
-
-  // Wait for all strategies in parallel
+  // Wait for strategies in parallel
   const batches = await Promise.all(strategies)
   for (const batch of batches) {
     addUnique(batch)
@@ -172,8 +143,14 @@ export async function fetchShelfNeighbors(callNumber: string, range = 5): Promis
   } catch { return [] }
 }
 
-/** Fetch entity counts by label — for dashboards and stats */
+/* ─── In-memory caches (5 min TTL) — reduce Appwrite reads ─── */
+const CACHE_TTL = 5 * 60 * 1000
+let _labelCache: { data: Record<string, number>; ts: number } | null = null
+let _totalCache: { data: number; ts: number } | null = null
+
+/** Fetch entity counts by label — cached (1 query via stats_cache or 8 fallback) */
 export async function fetchLabelCounts(): Promise<Record<string, number>> {
+  if (_labelCache && Date.now() - _labelCache.ts < CACHE_TTL) return _labelCache.data
   try {
     const labels = ['EventWindow', 'Person', 'Movement', 'Institution', 'Text', 'Idea', 'Place', 'Evidence']
     const results = await Promise.all(
@@ -184,16 +161,20 @@ export async function fetchLabelCounts(): Promise<Record<string, number>> {
         return { label, count: res.total }
       })
     )
-    return Object.fromEntries(results.map(r => [r.label, r.count]))
-  } catch { return {} }
+    const data = Object.fromEntries(results.map(r => [r.label, r.count]))
+    _labelCache = { data, ts: Date.now() }
+    return data
+  } catch { return _labelCache?.data ?? {} }
 }
 
-/** Fetch total entity count */
+/** Fetch total entity count — cached */
 export async function fetchTotalCount(): Promise<number> {
+  if (_totalCache && Date.now() - _totalCache.ts < CACHE_TTL) return _totalCache.data
   try {
     const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [Query.limit(1)])
+    _totalCache = { data: res.total, ts: Date.now() }
     return res.total
-  } catch { return 0 }
+  } catch { return _totalCache?.data ?? 0 }
 }
 
 /** Fetch entities with total count — server-side filtered, paginated */

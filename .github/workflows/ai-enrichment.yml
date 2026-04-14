@@ -1,29 +1,32 @@
 name: AI Entity Enrichment
 
-# Runs every 6 hours, or manually via workflow_dispatch
+# COST CAP: Cron schedule DISABLED to stay within Appwrite Pro limits.
+# Use manual workflow_dispatch only. Re-enable cron cautiously after
+# verifying monthly read/write budget in Appwrite Console → Usage.
+# Previous schedule: '0 */6 * * *' (every 6 hours)
 on:
-  schedule:
-    - cron: '0 */6 * * *'
+  # schedule:
+  #   - cron: '0 */6 * * *'
   workflow_dispatch:
     inputs:
       count:
-        description: 'Number of entities to enrich per run'
-        default: '25'
+        description: "Number of entities to enrich per run"
+        default: "25"
         type: string
       model:
-        description: 'LLM provider'
+        description: "LLM provider"
         type: choice
         options:
           - gemini
           - openai
         default: gemini
       dry_run:
-        description: 'Preview only — no file changes'
+        description: "Preview only — no file changes"
         type: boolean
         default: false
       min_importance:
-        description: 'Minimum importanceScore filter for queue'
-        default: '0'
+        description: "Minimum importanceScore filter for queue"
+        default: "0"
         type: string
 
 jobs:
@@ -42,7 +45,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'
+          python-version: "3.12"
 
       # Step 1: Generate enrichment priority queue
       - name: Generate enrichment queue

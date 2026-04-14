@@ -86,6 +86,18 @@ module.exports = async ({ req, res, log, error }) => {
     .setKey(process.env.APPWRITE_API_KEY);
 
   const databases = new sdk.Databases(client);
+
+  // ── COST CAP: Full scan. Skip if over budget. ──
+  const isScheduled = !req.body || req.body === '{}';
+  let helpers;
+  try { helpers = require('./helpers'); } catch {}
+  if (isScheduled && helpers?.checkUsageBudget) {
+    try {
+      const budget = await helpers.checkUsageBudget(databases, log);
+      if (!budget.allowed) return res.json({ skipped: true, reason: budget.reason });
+    } catch (e) { log(`Usage check error: ${e.message}`); }
+  }
+
   const startTime = Date.now();
 
   log('Starting classification audit...');

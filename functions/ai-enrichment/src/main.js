@@ -347,6 +347,10 @@ async function findWeakEntities(databases, count, labelFilter, minImportance, lo
 module.exports = async ({ req, res, log, error }) => {
   const startTime = Date.now();
 
+  // ── COST CAP: Check usage budget before any work ──
+  const { checkUsageBudget, trackUsage } = require('./helpers') || {};
+  const isScheduled = !req.body || req.body === '{}';
+
   // Initialize Appwrite
   const client = new sdk.Client();
   client
@@ -355,6 +359,16 @@ module.exports = async ({ req, res, log, error }) => {
     .setKey(process.env.APPWRITE_API_KEY);
 
   const databases = new sdk.Databases(client);
+
+  // Usage gate — skip if over 70% of Pro plan limits (scheduled runs only)
+  if (isScheduled && typeof checkUsageBudget === 'function') {
+    try {
+      const budget = await checkUsageBudget(databases, log);
+      if (!budget.allowed) {
+        return res.json({ skipped: true, reason: budget.reason });
+      }
+    } catch (e) { log(`Usage check error (non-fatal): ${e.message}`); }
+  }
 
   // Get Gemini API key
   const geminiKey = process.env.GEMINI_API_KEY;
@@ -459,6 +473,13 @@ module.exports = async ({ req, res, log, error }) => {
   };
 
   log(`DONE: ${enriched} enriched, ${failed} failed in ${elapsed}s`);
+
+  // ── Track usage: reads from scanning + writes from enrichments/audits ──
+  if (typeof trackUsage === 'function') {
+    const readsEstimate = candidates.length * 15 + 100; // select fields per candidate + scan
+    const writesEstimate = enriched * 2; // 1 entity update + 1 audit log per enrichment
+    try { await trackUsage(databases, readsEstimate, writesEstimate, 'ai-enrichment', log); } catch {}
+  }
 
   return res.json(summary);
 };

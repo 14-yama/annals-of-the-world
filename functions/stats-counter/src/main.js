@@ -28,6 +28,22 @@ module.exports = async ({ req, res, log, error }) => {
 
   const databases = new sdk.Databases(client);
 
+  // ── COST CAP: Full pagination at 392K entities costs ~392K reads per run.
+  // At every-10-min schedule = ~56M reads/month = $32 overage.
+  // Gate: skip if over 70% of Pro plan read limit.
+  const isScheduled = !req.body || req.body === '{}';
+  let helpers;
+  try { helpers = require('./helpers'); } catch {}
+
+  if (isScheduled && helpers?.checkUsageBudget) {
+    try {
+      const budget = await helpers.checkUsageBudget(databases, log);
+      if (!budget.allowed) {
+        return res.json({ skipped: true, reason: budget.reason });
+      }
+    } catch (e) { log(`Usage check error: ${e.message}`); }
+  }
+
   log('Starting stats counter...');
   const startTime = Date.now();
 
