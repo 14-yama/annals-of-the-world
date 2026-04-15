@@ -180,6 +180,12 @@ async function runStatsOnly(databases, res, log, error, startTime) {
     };
     await appendStats(databases, stats, log);
 
+    // ── Track usage for cost cap ──
+    try {
+      const estReads = total + Object.keys(byLabel).length + Object.keys(byEra).length + Object.keys(byContinent).length + 10 + 5;
+      if (helpers?.trackUsage) await helpers.trackUsage(databases, estReads, 1, 'audit-consistency-stats', log);
+    } catch (e) { log(`trackUsage error: ${e.message}`); }
+
     return res.json({ total, byLabel, byEra, byContinent, byClass, updatedAt: stats.updatedAt, computeTimeMs });
 
   } catch (err) {
@@ -332,6 +338,13 @@ async function runConsistencyAudit(databases, res, log, error, startTime) {
     };
 
     log(`Consistency audit complete: ${totalEntities} entities, ${totalIssues} issues, ${(computeTimeMs / 1000).toFixed(1)}s`);
+
+    // ── Track usage for cost cap ──
+    try {
+      const estReads = totalEntities + 5;
+      if (helpers?.trackUsage) await helpers.trackUsage(databases, estReads, 1, 'audit-consistency-check', log);
+    } catch (e) { log(`trackUsage error: ${e.message}`); }
+
     return res.json(report);
 
   } catch (err) {
@@ -429,6 +442,12 @@ async function runFullAudit(databases, res, log, error, startTime) {
     const avgScore = totalEntities > 0 ? (totalScore / totalEntities).toFixed(2) : '0';
 
     log(`Audit complete: ${totalEntities} entities, avg score ${avgScore}/9, ${(computeTimeMs / 1000).toFixed(1)}s`);
+
+    // ── Track usage for cost cap ──
+    try {
+      const estReads = totalEntities + 5;
+      if (helpers?.trackUsage) await helpers.trackUsage(databases, estReads, 1, 'audit-consistency-audit', log);
+    } catch (e) { log(`trackUsage error: ${e.message}`); }
 
     return res.json({
       timestamp: new Date().toISOString(),

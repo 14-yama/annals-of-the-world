@@ -201,5 +201,11 @@ module.exports = async ({ req, res, log, error }) => {
     log('Could not write to stats_cache (non-fatal)');
   }
 
+  // ── Track usage for cost cap ──
+  try {
+    const estReads = totalScanned + 10;
+    if (helpers?.trackUsage) await helpers.trackUsage(databases, estReads, 1, 'enrichment-queue', log);
+  } catch (e) { log(`trackUsage error: ${e.message}`); }
+
   return res.json(result);
 };

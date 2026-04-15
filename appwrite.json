@@ -8,11 +8,12 @@
             "runtime": "node-18.0",
             "execute": ["any"],
             "events": [],
-            "schedule": "*/30 * * * *",
+            "schedule": "",
             "timeout": 900,
             "enabled": true,
             "entrypoint": "src/main.js",
-            "path": "functions/audit-consistency"
+            "path": "functions/audit-consistency",
+            "_comment": "DISABLED schedule — on-demand only. Was */30 * * * * (130M+ reads/month). Frontend reads stats_cache."
         },
         {
             "$id": "backup-export",
@@ -20,11 +21,12 @@
             "runtime": "node-18.0",
             "execute": [],
             "events": [],
-            "schedule": "0 0 * * 0",
+            "schedule": "0 0 1,15 * *",
             "timeout": 900,
             "enabled": true,
             "entrypoint": "src/main.js",
-            "path": "functions/backup-export"
+            "path": "functions/backup-export",
+            "_comment": "Twice monthly (1st and 15th). Was weekly. ~400K reads per run."
         },
         {
             "$id": "entity-random",
@@ -58,25 +60,27 @@
             "$id": "audit-duplicates",
             "name": "Audit Duplicates",
             "runtime": "node-18.0",
-            "execute": [],
+            "execute": ["any"],
             "events": [],
-            "schedule": "0 4 * * 0",
+            "schedule": "0 4 1,15 * *",
             "timeout": 900,
             "enabled": true,
             "entrypoint": "src/main.js",
-            "path": "functions/audit-duplicates"
+            "path": "functions/audit-duplicates",
+            "_comment": "Twice monthly (1st and 15th). Was weekly. ~400K reads per run."
         },
         {
             "$id": "audit-orphans",
             "name": "Audit Orphans",
             "runtime": "node-18.0",
-            "execute": [],
+            "execute": ["any"],
             "events": [],
-            "schedule": "0 3 * * *",
+            "schedule": "0 3 * * 0",
             "timeout": 900,
             "enabled": true,
             "entrypoint": "src/main.js",
-            "path": "functions/audit-orphans"
+            "path": "functions/audit-orphans",
+            "_comment": "Weekly (Sunday 03:00). Was daily. ~800K reads per run (2 scans)."
         },
         {
             "$id": "audit-classification",
@@ -84,11 +88,12 @@
             "runtime": "node-18.0",
             "execute": ["any"],
             "events": [],
-            "schedule": "0 6 * * *",
+            "schedule": "0 6 * * 0",
             "timeout": 900,
             "enabled": true,
             "entrypoint": "src/main.js",
-            "path": "functions/audit-classification"
+            "path": "functions/audit-classification",
+            "_comment": "Weekly (Sunday 06:00). Was daily. ~400K reads per run."
         },
         {
             "$id": "ai-enrichment",
@@ -100,7 +105,8 @@
             "timeout": 900,
             "enabled": true,
             "entrypoint": "src/main.js",
-            "path": "functions/ai-enrichment"
+            "path": "functions/ai-enrichment",
+            "_comment": "Every 4h — scans up to 5K entities (~5K reads) + 20 enrichments/run. ~30K reads/day."
         },
         {
             "$id": "enrichment-queue",
@@ -108,11 +114,12 @@
             "runtime": "node-18.0",
             "execute": ["any"],
             "events": [],
-            "schedule": "0 */6 * * *",
+            "schedule": "0 0 * * 0",
             "timeout": 900,
             "enabled": true,
             "entrypoint": "src/main.js",
-            "path": "functions/enrichment-queue"
+            "path": "functions/enrichment-queue",
+            "_comment": "Weekly (Sunday midnight). Was every 6h. ~400K reads per run."
         }
     ]
 }

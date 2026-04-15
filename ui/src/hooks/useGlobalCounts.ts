@@ -39,8 +39,10 @@ interface CountCache {
   promise: Promise<void> | null
 }
 
-// Cache TTL: 10 minutes (matches function schedule)
-const CACHE_TTL = 10 * 60 * 1000
+// Cache TTL: 60 minutes (stats are now on-demand, not scheduled)
+const CACHE_TTL = 60 * 60 * 1000
+
+const LOCALSTORAGE_KEY = 'annals_global_counts'
 
 const cache: CountCache = {
   total: 0,
@@ -51,6 +53,22 @@ const cache: CountCache = {
   lastUpdated: null,
   promise: null,
 }
+
+// Hydrate from localStorage on module load
+try {
+  const stored = localStorage.getItem(LOCALSTORAGE_KEY)
+  if (stored) {
+    const parsed = JSON.parse(stored)
+    if (parsed.ts && (Date.now() - parsed.ts) < CACHE_TTL) {
+      cache.total = parsed.total || 0
+      cache.byLabel = parsed.byLabel || {}
+      cache.byEra = parsed.byEra || {}
+      cache.byContinent = parsed.byContinent || {}
+      cache.byClass = parsed.byClass || {}
+      cache.lastUpdated = parsed.ts
+    }
+  }
+} catch { /* localStorage may not be available */ }
 
 // Listeners for reactive updates
 const listeners = new Set<() => void>()
@@ -77,6 +95,15 @@ async function fetchFromStatsCache(): Promise<boolean> {
     cache.byContinent = typeof doc.byContinent === 'string' ? JSON.parse(doc.byContinent) : (doc.byContinent || {})
     cache.byClass = typeof doc.byClass === 'string' ? JSON.parse(doc.byClass) : (doc.byClass || {})
     cache.lastUpdated = Date.now()
+
+    // Persist to localStorage to survive page refreshes
+    try {
+      localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify({
+        total: cache.total, byLabel: cache.byLabel, byEra: cache.byEra,
+        byContinent: cache.byContinent, byClass: cache.byClass, ts: cache.lastUpdated,
+      }))
+    } catch { /* non-fatal */ }
+
     return true
   } catch {
     return false

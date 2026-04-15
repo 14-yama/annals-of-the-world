@@ -143,8 +143,8 @@ export async function fetchShelfNeighbors(callNumber: string, range = 5): Promis
   } catch { return [] }
 }
 
-/* ─── In-memory caches (5 min TTL) — reduce Appwrite reads ─── */
-const CACHE_TTL = 5 * 60 * 1000
+/* ─── In-memory caches (30 min TTL) — reduce Appwrite reads ─── */
+const CACHE_TTL = 30 * 60 * 1000
 let _labelCache: { data: Record<string, number>; ts: number } | null = null
 let _totalCache: { data: number; ts: number } | null = null
 

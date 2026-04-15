@@ -126,6 +126,12 @@ module.exports = async ({ req, res, log, error }) => {
 
     log(`Orphan scan complete: ${orphans.length}/${totalEntities} entities are orphans (${report.orphanRate})`);
 
+    // ── Track usage for cost cap ──
+    try {
+      const estReads = totalEntities * 2 + 10;
+      if (helpers?.trackUsage) await helpers.trackUsage(databases, estReads, 0, 'audit-orphans', log);
+    } catch (e) { log(`trackUsage error: ${e.message}`); }
+
     return res.json(report);
   } catch (err) {
     error(`Orphan scan failed: ${err.message}`);

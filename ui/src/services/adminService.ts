@@ -50,33 +50,65 @@ export interface DivisionCount {
 /* ─── Read: Accurate Counting ─── */
 
 /**
- * Count all documents matching a set of queries by paginating with cursor.
- * Appwrite caps `res.total` at 5000 for large collections — this works around that
- * by iterating through all matching documents using cursor-based pagination,
- * selecting only `$id` to minimise payload.
+ * Count documents matching queries using Appwrite's res.total (accurate up to ~5000).
+ * For counts above 5000, falls back to cursor pagination with localStorage cache.
+ *
+ * COST-OPTIMISED: Was previously doing full cursor pagination (~4000 API calls
+ * for 400K entities). Now uses single query + localStorage cache (24h TTL).
  */
+const COUNT_CACHE_TTL = 24 * 60 * 60 * 1000 // 24 hours
+
 export async function countAllDocuments(
   extraQueries: string[] = [],
 ): Promise<number> {
-  const PAGE = 100
-  let count = 0
-  let cursor: string | undefined
+  // Build a cache key from the queries
+  const cacheKey = `annals_count_${JSON.stringify(extraQueries)}`
 
-  // eslint-disable-next-line no-constant-condition
-  while (true) {
-    const q: string[] = [
-      ...extraQueries,
-      Query.select(['$id']),
-      Query.limit(PAGE),
-    ]
-    if (cursor) q.push(Query.cursorAfter(cursor))
+  // Check localStorage cache first
+  try {
+    const cached = localStorage.getItem(cacheKey)
+    if (cached) {
+      const { count, ts } = JSON.parse(cached)
+      if (Date.now() - ts < COUNT_CACHE_TTL) return count
+    }
+  } catch { /* localStorage may not be available */ }
 
-    const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, q)
-    count += res.documents.length
+  // Fast path: single query using res.total (accurate for < ~5000)
+  const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
+    ...extraQueries,
+    Query.select(['$id']),
+    Query.limit(1),
+  ])
 
-    if (res.documents.length < PAGE) break
-    cursor = res.documents[res.documents.length - 1].$id
+  let count = res.total
+
+  // If total >= 5000, Appwrite may be capping — use cursor pagination
+  if (count >= 5000) {
+    const PAGE = 500
+    count = 0
+    let cursor: string | undefined
+
+    // eslint-disable-next-line no-constant-condition
+    while (true) {
+      const q: string[] = [
+        ...extraQueries,
+        Query.select(['$id']),
+        Query.limit(PAGE),
+      ]
+      if (cursor) q.push(Query.cursorAfter(cursor))
+
+      const batch = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, q)
+      count += batch.documents.length
+
+      if (batch.documents.length < PAGE) break
+      cursor = batch.documents[batch.documents.length - 1].$id
+    }
   }
+
+  // Cache the result
+  try {
+    localStorage.setItem(cacheKey, JSON.stringify({ count, ts: Date.now() }))
+  } catch { /* non-fatal */ }
 
   return count
 }

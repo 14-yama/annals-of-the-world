@@ -198,6 +198,12 @@ module.exports = async ({ req, res, log, error }) => {
     log(`Duplicate scan complete: ${allPairs.length} potential pairs found`);
     log(`Exact: ${report.exactDuplicates}, Fuzzy: ${report.fuzzyDuplicates}, Slug variants: ${report.slugVariants}`);
 
+    // ── Track usage for cost cap ──
+    try {
+      const estReads = totalEntities + 5;
+      if (helpers?.trackUsage) await helpers.trackUsage(databases, estReads, 0, 'audit-duplicates', log);
+    } catch (e) { log(`trackUsage error: ${e.message}`); }
+
     return res.json(report);
   } catch (err) {
     error(`Duplicate scan failed: ${err.message}`);

@@ -121,7 +121,7 @@ async function callGemini(prompt, apiKey) {
     },
   });
 
-  // Retry with backoff on 429 rate limit
+  // Retry with backoff on 429 (rate limit) and 503 (overloaded)
   const delays = [0, 15000, 30000, 60000];
   for (const delay of delays) {
     if (delay > 0) await sleep(delay);
@@ -132,7 +132,7 @@ async function callGemini(prompt, apiKey) {
       body,
     });
 
-    if (resp.status === 429) continue;
+    if (resp.status === 429 || resp.status === 503) continue;
     if (!resp.ok) {
       const errText = await resp.text();
       throw new Error(`Gemini ${resp.status}: ${errText.substring(0, 200)}`);
@@ -145,7 +145,7 @@ async function callGemini(prompt, apiKey) {
     return JSON.parse(text);
   }
 
-  throw new Error('Rate limited after 4 retries');
+  throw new Error('Rate limited/overloaded after 4 retries (waited ~105s total)');
 }
 
 function sleep(ms) {
@@ -256,10 +256,13 @@ async function applyEnrichment(databases, docId, entity, result) {
 // Audit Logging
 // ═══════════════════════════════════════════════════════════
 
-async function logAuditEntry(databases, slug, oldSummaryLen, newSummaryLen, model) {
+async function logAuditEntry(databases, docId, slug, entityName, oldSummaryLen, newSummaryLen, model) {
   try {
     await databases.createDocument(DATABASE_ID, AUDIT_COLLECTION, sdk.ID.unique(), {
+      entityId: docId,
       entitySlug: slug,
+      entityName: entityName || slug,
+      action: 'update',
       field: 'summary',
       oldValue: `[${oldSummaryLen}c stub/partial]`,
       newValue: `[${newSummaryLen}c AI-enriched]`,
@@ -281,6 +284,24 @@ async function findWeakEntities(databases, count, labelFilter, minImportance, lo
   const weak = [];
   let cursor = undefined;
   let scanned = 0;
+  const MAX_SCAN = 5000; // Cap scan at 5000 entities (~50 API calls) to control read costs
+
+  // Stub/auto-generated patterns — skip these low-value entities
+  const STUB_PATTERNS = [
+    'a notable figure associated with',
+    'a significant event in the history of',
+    'an important institution in',
+    'a key development in',
+    'a major movement in',
+    'notable figure in the history of',
+    'an important event in',
+  ];
+
+  function isStub(summary) {
+    if (!summary || summary.length < 50) return true;
+    const lower = summary.toLowerCase();
+    return STUB_PATTERNS.some(p => lower.includes(p));
+  }
 
   // Paginate through entities looking for short summaries
   while (weak.length < count * 3) { // Fetch 3x to account for filtering
@@ -316,8 +337,13 @@ async function findWeakEntities(databases, count, labelFilter, minImportance, lo
 
       // Skip already enriched
       if (summaryLen >= 800) continue;
-      // Skip below minimum importance
-      if (importance < minImportance) continue;
+      // Skip below minimum importance (default: require >=2)
+      if (importance < Math.max(minImportance, 2)) continue;
+      // Skip auto-generated stubs — these need manual curation, not AI enrichment
+      if (isStub(doc.summary)) {
+        // Only enrich stubs if importance >= 5 (they're notable enough)
+        if (importance < 5) continue;
+      }
 
       // Score: shorter summary = higher priority, higher importance = higher priority
       const summaryScore = Math.max(0, (800 - summaryLen) / 800) * 50;
@@ -330,7 +356,7 @@ async function findWeakEntities(databases, count, labelFilter, minImportance, lo
     cursor = res.documents[res.documents.length - 1].$id;
 
     if (res.documents.length < PAGE) break;
-    if (scanned >= 50000) break; // Safety cap
+    if (scanned >= MAX_SCAN) break; // Read cost cap
   }
 
   log(`Scanned ${scanned} entities, found ${weak.length} weak candidates`);
@@ -441,7 +467,7 @@ module.exports = async ({ req, res, log, error }) => {
       await applyEnrichment(databases, doc.$id, doc, result);
 
       // Audit log
-      await logAuditEntry(databases, slug, summaryLen, newLen, GEMINI_MODEL);
+      await logAuditEntry(databases, doc.$id, slug, doc.name, summaryLen, newLen, GEMINI_MODEL);
 
       enriched++;
       results.push({ slug, status: 'enriched', oldLen: summaryLen, newLen });
@@ -476,7 +502,7 @@ module.exports = async ({ req, res, log, error }) => {
 
   // ── Track usage: reads from scanning + writes from enrichments/audits ──
   if (typeof trackUsage === 'function') {
-    const readsEstimate = candidates.length * 15 + 100; // select fields per candidate + scan
+    const readsEstimate = Math.min(5000, candidates.length * 100) + enriched * 5 + 50;
     const writesEstimate = enriched * 2; // 1 entity update + 1 audit log per enrichment
     try { await trackUsage(databases, readsEstimate, writesEstimate, 'ai-enrichment', log); } catch {}
   }

@@ -250,6 +250,12 @@ module.exports = async ({ req, res, log, error }) => {
     log(`  Person div mismatches: ${report.summary.personDivMismatch}`);
     log(`  Geo-stubs in wrong div: ${report.summary.geoStubInWrongDiv}`);
 
+    // ── Track usage for cost cap ──
+    try {
+      const estReads = totalEntities + 5;
+      if (helpers?.trackUsage) await helpers.trackUsage(databases, estReads, 0, 'audit-classification', log);
+    } catch (e) { log(`trackUsage error: ${e.message}`); }
+
     return res.json(report);
 
   } catch (err) {

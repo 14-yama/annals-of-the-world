@@ -120,6 +120,12 @@ async function runStatsOnly(databases, res, log, error, startTime) {
     };
     await upsertStats(databases, stats, log);
 
+    // ── Track usage for cost cap ──
+    try {
+      const estReads = total + 30;
+      if (helpers?.trackUsage) await helpers.trackUsage(databases, estReads, 1, 'audit-completeness-stats', log);
+    } catch (e) { log(`trackUsage error: ${e.message}`); }
+
     return res.json({ total, byLabel, byEra, byContinent, byClass, updatedAt: stats.updatedAt, computeTimeMs });
 
   } catch (err) {
@@ -241,6 +247,13 @@ async function runFullAudit(databases, res, log, error, startTime) {
     };
 
     log(`Audit complete: ${totalEntities} entities, avg score ${avgScore}/9, ${(computeTimeMs / 1000).toFixed(1)}s`);
+
+    // ── Track usage for cost cap ──
+    try {
+      const estReads = totalEntities + 5;
+      if (helpers?.trackUsage) await helpers.trackUsage(databases, estReads, 1, 'audit-completeness-audit', log);
+    } catch (e) { log(`trackUsage error: ${e.message}`); }
+
     return res.json(report);
 
   } catch (err) {

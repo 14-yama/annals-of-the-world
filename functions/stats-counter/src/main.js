@@ -138,6 +138,12 @@ module.exports = async ({ req, res, log, error }) => {
 
     log(`Stats counter complete: ${total} entities, ${Object.keys(byLabel).length} labels, ${Object.keys(byEra).length} eras`);
 
+    // ── Track usage for cost cap ──
+    try {
+      const estReads = total + 30;
+      if (helpers?.trackUsage) await helpers.trackUsage(databases, estReads, 1, 'stats-counter', log);
+    } catch (e) { log(`trackUsage error: ${e.message}`); }
+
     return res.json(responseBody);
 
   } catch (err) {

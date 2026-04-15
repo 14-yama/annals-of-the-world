@@ -196,5 +196,11 @@ module.exports = async ({ req, res, log, error }) => {
   log('Backup complete: ' + summary.totalEntities + ' entities across ' + summary.files.length + ' files');
   if (summary.errors.length) log('  ' + summary.errors.length + ' errors encountered');
 
+  // ── Track usage for cost cap ──
+  try {
+    const estReads = (summary.totalEntities || 0) + 5000;
+    if (helpers?.trackUsage) await helpers.trackUsage(databases, estReads, summary.files.length, 'backup-export', log);
+  } catch (e) { log(`trackUsage error: ${e.message}`); }
+
   return res.json(summary);
 };
