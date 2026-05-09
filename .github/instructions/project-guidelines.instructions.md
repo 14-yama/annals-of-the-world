@@ -324,23 +324,25 @@ imports are unaffected.
 
 ### Autonomous AI Enrichment Pipeline
 
-Fully automated, **cloud-first** enrichment — no local machine required. All bots run on
-GitHub Actions and commit directly to the GitHub repository. Appwrite is updated
-automatically by the sync gateway workflow after each enrichment commit.
+Fully automated enrichment running on **two parallel tracks** — cloud (GitHub Actions) and
+local (Ollama on dev machine). Both tracks are **fully autonomous**: no human intervention
+is required. Both use the same pipeline contract and both sync to Appwrite independently.
 
 | Component | Path | Purpose |
 |-----------|------|---------|
 | Queue Scanner | `scripts/enrichment_queue.py` | Ranks entities by weakness score |
 | AI Enrichment | `scripts/ai_enrich_autonomous.py` | Calls LLM + validates + writes JSON (git-first, no Appwrite calls) |
-| Sync Gateway | `scripts/sync_gateway.ts` | Single Appwrite writer — reads git diff, upserts entities, emits audit_log rows |
+| Significance Backfill | `scripts/backfill_significance.py` | Scores entities with `historicalSignificance`; sets `_unsyncedEdits=true` |
+| Sync Gateway | `scripts/sync_gateway.ts` | Single Appwrite writer — git-diff mode or `--local` dirty-scan mode |
+| Local Bot Server | `scripts/local_bot_server.py` | HTTP API server (port 7474) — triggers Ollama bots, autonomous watchdog |
 | Enrichment Workflow | `.github/workflows/ai-enrichment.yml` | Cron every 6h + manual dispatch; commits enriched files + pushes to GitHub |
-| Sync Workflow | `.github/workflows/sync-gateway.yml` | Auto-triggered by enrichment workflow completion + daily 07:00 UTC; commits budget/state |
+| Sync Workflow | `.github/workflows/sync-gateway.yml` | Auto-triggered by enrichment workflow completion + daily 07:00 UTC |
 | Policy Doc | `docs/governance/autonomous_enrichment.md` | Full governance & thresholds |
 
-**Workflow chain (fully cloud, no local dependency):**
+**Cloud pipeline (GitHub Actions — fully automated):**
 ```
 GitHub Actions (cron/manual)
-  → enrichment_queue.py   (scans 392k entities, ranks by weakness)
+  → enrichment_queue.py   (scans entities, ranks by weakness)
   → ai_enrich_autonomous.py  (Gemini/OpenAI → validates → writes JSON)
   → git commit + git push  (changes land in GitHub repo)
   → sync-gateway workflow triggers automatically (workflow_run event)
@@ -348,13 +350,38 @@ GitHub Actions (cron/manual)
   → git commit + git push  (budget.json + last_sync.json updated)
 ```
 
+**Local pipeline (Ollama — fully autonomous, mirrors cloud):**
+```
+local_bot_server.py (runs on dev machine, port 7474)
+  → enrichment_queue.py (queue scan — finds weak entities)
+  → ai_enrich_autonomous.py --model ollama  (llama3.2:3b → validates → writes JSON)
+  → backfill_significance.py --model ollama  (sets _unsyncedEdits=true)
+  → sync_gateway.ts --local  (scans _unsyncedEdits files → PATCH/POST Appwrite → emit audit_log)
+  → git commit + git push  (cleared _editLog committed → triggers GH Actions overflow sync)
+  ↑ watchdog repeats every 5 min if dirty files exist (fully autonomous — no human touch)
+```
+
+**Key design principles:**
+- **`_unsyncedEdits: true`** is the dirty-file marker set by local bots; `--local` mode reads it
+- **`_editLog[]`** in `detailsJson` records per-field diffs for audit trail; cleared after sync
+- **sync_gateway.ts `--local`** scans entity files directly (no git diff needed) — allows
+  sync before git commit; follow with `dispatch_git_push()` to save cleared state
+- **Cloud and local bots can run concurrently** — each targets different entity files
+- **Watchdog thread** in `local_bot_server.py` auto-syncs every 5 min if dirty files exist
+- **OllamaMonitor UI** (`/curator/ollama`) shows both local and cloud bot status side-by-side
+
+**GH Actions visibility:** Each workflow writes `data/governance/last_github_runs.json`
+after its commit step. The local bot server reads this file at `/github/status` so the
+OllamaMonitor UI can show cloud bot status without needing `GITHUB_TOKEN`.
+
 **Local development sync:** A systemd user service (`scripts/auto_pull.service`) runs
 `scripts/auto_pull.sh` every 60s to `git fetch + pull --ff-only` from GitHub, so the
 local machine stays in sync with cloud bot commits automatically.
 
 **LLM Providers:**
-- **Primary:** Google Gemini 2.5 Flash (free tier: 1M tokens/day, 15 RPM)
-- **Fallback:** OpenAI GPT-4o-mini ($0.15/1M input, $0.60/1M output)
+- **Cloud primary:** Google Gemini 2.5 Flash (free tier: 1M tokens/day, 15 RPM)
+- **Cloud fallback:** OpenAI GPT-4o-mini ($0.15/1M input, $0.60/1M output)
+- **Local primary:** Ollama `llama3.2:3b` (CPU inference, ~4s/call, free, no API key)
 
 **Summary quality standards:**
 - 3–4 paragraphs separated by `\n\n` (rendered as separate `<Text>` blocks in UI)

@@ -4,7 +4,43 @@
 
 ---
 
-## Update — 2025-07-18 (most recent)
+## Update — 2025-07-19
+
+### Local Ollama ↔ Cloud Bot Parity (Fully Autonomous Local Pipeline)
+
+**Problem:** Local Ollama enrichments were not reaching Appwrite because `sync_gateway.ts`
+used `git diff lastSyncedCommit HEAD` — but local bots wrote enrichments to disk without
+committing first. Sync found 0 new files.
+
+**Root fix — `--local` mode in `sync_gateway.ts`:**
+When called with `--local`, the sync gateway scans all entity JSON files directly for
+`_unsyncedEdits: true` or non-empty `_editLog[]` in `detailsJson`, instead of using
+git diff. This allows: enrich → sync → Appwrite → git push (commit comes last).
+
+**`local_bot_server.py` — autonomous pipeline:**
+- `dispatch_sync(local_mode=True)` — passes `--local` to sync_gateway
+- `_auto_sync_chain(bot_jids)` — waits for bots → local sync → git push
+- `dispatch_all(auto_push=True)` — full pipeline: queue → enrich + sig (parallel) → `_auto_sync_chain`
+- `dispatch_sync_and_push()` — explicit local sync + commit in sequence
+- **Autonomous watchdog** — background thread checks every 5 min for dirty files; auto-syncs if found
+
+**OllamaMonitor UI** (`/curator/ollama`):
+- Pending-files banner with "Sync to Appwrite+Push" button
+- GitHub Actions status panel (reads `data/governance/last_github_runs.json`)
+- Both cloud and local bots shown side-by-side with "PARALLEL WITH LOCAL" badge
+
+**GH Actions — `last_github_runs.json`:**
+All three workflows (`ai-enrichment.yml`, `sync-gateway.yml`, `significance-backfill.yml`)
+write their run status to `data/governance/last_github_runs.json` after each commit step.
+Local bot server serves this at `/github/status` for the UI.
+
+**Result:**
+- 148 Ollama-enriched entities committed and synced (167 upserted across two passes)
+- 217 audit_log rows emitted to Appwrite
+- Local pipeline is now fully autonomous: enrich → sync → Appwrite → git push, no human needed
+- Cloud and local bots can run concurrently (different entity targets, no conflicts)
+
+
 
 ### Comprehensive Backend Audit & Normalization
 

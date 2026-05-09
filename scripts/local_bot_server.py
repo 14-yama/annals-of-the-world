@@ -232,16 +232,23 @@ def dispatch_queue() -> str:
     return job_id
 
 
-def dispatch_sync(max_entities: int = 50) -> str:
-    """Run sync gateway (push local JSON → Appwrite)."""
+def dispatch_sync(max_entities: int = 50, local_mode: bool = False) -> str:
+    """
+    Run sync_gateway.ts → push entity JSON to Appwrite + emit audit_log rows.
+
+    local_mode=True passes --local to sync_gateway, which scans files with
+    _unsyncedEdits:true instead of using git diff. Use this when enrichments
+    are written to disk but not yet git-committed (the normal local-bot path).
+    After --local sync completes, always follow up with dispatch_git_push() so
+    the cleared _editLog state is committed back to git.
+    """
     job_id = _new_job("sync", count=max_entities, model="none")
 
     def _run_sync(jid):
         _update_job(jid, status="running")
-        log = []
+        log: list[str] = []
         try:
             env = {**os.environ}
-            # Load .env manually
             env_file = REPO_ROOT / ".env"
             if env_file.exists():
                 for line in env_file.read_text().splitlines():
@@ -251,8 +258,12 @@ def dispatch_sync(max_entities: int = 50) -> str:
                     k, _, v = line.partition("=")
                     env[k.strip()] = v.strip()
 
+            cmd = ["npx", "tsx", "scripts/sync_gateway.ts", f"--max={max_entities}"]
+            if local_mode:
+                cmd.append("--local")
+
             proc = subprocess.Popen(
-                ["npx", "tsx", "scripts/sync_gateway.ts", f"--max={max_entities}"],
+                cmd,
                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                 text=True, cwd=str(REPO_ROOT), env=env,
             )
@@ -280,23 +291,55 @@ def dispatch_sync(max_entities: int = 50) -> str:
     return job_id
 
 
-def dispatch_all(enrich_count: int = 20, sig_count: int = 50) -> list[str]:
+def _wait_for_job(jid: str, poll_interval: float = 3.0):
+    """Block until job jid reaches a terminal state."""
+    while True:
+        with _lock:
+            s = _jobs.get(jid, {}).get("status", "done")
+        if s in ("done", "error", "stopped"):
+            return s
+        time.sleep(poll_interval)
+
+
+def _auto_sync_chain(bot_jids: list[str], max_entities: int = 100):
     """
-    Assist All — deploy all local reinforcements concurrently.
-    Like a general sending troops to every front simultaneously.
+    Called in a background thread after enrich/significance jobs complete.
+    Mirrors the GitHub Actions pipeline:
+      1. Wait for all bot jobs to finish
+      2. --local sync → Appwrite (reads _unsyncedEdits files directly)
+      3. git commit + push (saves cleared _editLog + triggers GH Actions for any remaining)
+
+    This makes local bots fully autonomous — no human needed to push.
     """
-    jobs = []
-    # Queue first (no LLM, fast)
-    jobs.append(dispatch_queue())
-    # Then enrich + significance in parallel (both use Ollama)
-    jobs.append(dispatch_enrich(count=enrich_count, model="ollama"))
-    jobs.append(dispatch_significance(count=sig_count, model="ollama"))
-    # Sync last (30s delay to let enrichments write files)
-    def _delayed_sync():
-        time.sleep(30)
-        dispatch_sync(max_entities=50)
-    threading.Thread(target=_delayed_sync, daemon=True).start()
-    return jobs
+    for jid in bot_jids:
+        _wait_for_job(jid)
+
+    # Step 1: sync dirty files → Appwrite (--local mode reads _unsyncedEdits)
+    sync_jid = dispatch_sync(max_entities=max_entities, local_mode=True)
+    _wait_for_job(sync_jid)
+
+    # Step 2: git commit + push (commits cleared _editLog + any new enrichments)
+    push_jid = dispatch_git_push()
+    _wait_for_job(push_jid)
+
+
+def stop_all() -> list[str]:
+    """Kill all running local bot processes."""
+    stopped = []
+    with _lock:
+        for job_id, job in _jobs.items():
+            if job["status"] == "running" and job.get("pid"):
+                try:
+                    os.kill(job["pid"], signal.SIGTERM)
+                    job["status"] = "stopped"
+                    job["finished"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+                    stopped.append(job_id)
+                except ProcessLookupError:
+                    pass
+    _flush_status()
+    return stopped
+
+
 
 
 def stop_all() -> list[str]:
@@ -463,25 +506,23 @@ def dispatch_git_push(message: str = "") -> str:
     return job_id
 
 
+
 def dispatch_sync_and_push(max_entities: int = 100) -> str:
     """
-    Concurrent two-step: push direct to Appwrite via sync_gateway.ts, THEN
-    git commit+push so the repo stays in sync with cloud.
+    Local Appwrite sync + git push.
+    Uses --local mode (reads _unsyncedEdits files) then commits cleared state to git.
+    This is the autonomous completion step for local bots.
     """
     job_id = _new_job("sync-push", count=max_entities, model="none")
 
     def _run(jid: str):
-        # Step 1: direct Appwrite sync
-        sync_jid = dispatch_sync(max_entities=max_entities)
-        # Wait for sync to finish
-        while True:
-            with _lock:
-                sync_status = _jobs.get(sync_jid, {}).get("status", "done")
-            if sync_status in ("done", "error", "stopped"):
-                break
-            time.sleep(2)
-        # Step 2: git commit+push
-        dispatch_git_push()
+        _update_job(jid, status="running")
+        # Step 1: local-mode sync → Appwrite (reads dirty _unsyncedEdits files)
+        sync_jid = dispatch_sync(max_entities=max_entities, local_mode=True)
+        _wait_for_job(sync_jid)
+        # Step 2: git commit+push (cleared _editLog + new enrichments)
+        push_jid = dispatch_git_push()
+        _wait_for_job(push_jid)
         _update_job(jid, status="done", exitCode=0,
                     finished=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
 
@@ -492,51 +533,96 @@ def dispatch_sync_and_push(max_entities: int = 100) -> str:
 
 def dispatch_all(enrich_count: int = 20, sig_count: int = 50, auto_push: bool = True) -> list[str]:
     """
-    Assist All — deploy all local reinforcements concurrently.
-    Runs: queue scan → enrich + significance (parallel) → sync to Appwrite → git push.
-    Local (Ollama) and cloud (GitHub Actions) can run simultaneously — safe because
-    each writes to separate entity files; merge conflicts are handled by sync_gateway.
+    Assist All — mirrors GitHub Actions pipeline locally.
+    Flow: queue → enrich + significance (parallel, Ollama) → --local sync → Appwrite
+          → git commit+push → GH Actions picks up any overflow.
+
+    Safe to run concurrently with GitHub Actions cloud bots. Each targets
+    different entity files. Merge conflicts resolved by sync_gateway.
     """
-    jobs = []
-    # Queue first (no LLM, fast)
+    jobs: list[str] = []
     jobs.append(dispatch_queue())
-    # Then enrich + significance in parallel (both use Ollama)
     enrich_jid = dispatch_enrich(count=enrich_count, model="ollama")
     sig_jid = dispatch_significance(count=sig_count, model="ollama")
     jobs.extend([enrich_jid, sig_jid])
 
     if auto_push:
-        def _delayed_sync_push():
-            # Wait for both bots to finish
-            for jid in [enrich_jid, sig_jid]:
-                while True:
-                    with _lock:
-                        s = _jobs.get(jid, {}).get("status", "done")
-                    if s in ("done", "error", "stopped"):
-                        break
-                    time.sleep(5)
-            # Push direct to Appwrite first
-            sync_jid = dispatch_sync(max_entities=max(enrich_count, 50))
-            with _lock:
-                jobs.append(sync_jid)
-            # Wait for sync
-            while True:
-                with _lock:
-                    s = _jobs.get(sync_jid, {}).get("status", "done")
-                if s in ("done", "error", "stopped"):
-                    break
-                time.sleep(2)
-            # Then git push to keep repo in sync + trigger GH Actions
-            push_jid = dispatch_git_push()
-            with _lock:
-                jobs.append(push_jid)
-
-        threading.Thread(target=_delayed_sync_push, daemon=True).start()
+        chain_jids = [enrich_jid, sig_jid]
+        t = threading.Thread(
+            target=_auto_sync_chain,
+            args=(chain_jids, max(enrich_count * 3, 100)),
+            daemon=True,
+        )
+        t.start()
 
     return jobs
 
 
-# ─── HTTP Handler ─────────────────────────────────────────────────────────────
+# ─── Autonomous Watchdog ───────────────────────────────────────────────────────
+# Background thread that periodically checks for:
+#  1. Uncommitted dirty enrichments (written to disk but not git-committed)
+#     → runs --local sync → Appwrite → git commit+push
+# This ensures bots are fully autonomous even if they crash mid-run.
+
+_watchdog_running = False
+
+def _watchdog_loop(interval_seconds: int = 300):
+    """
+    Autonomous watchdog: every `interval_seconds` (default 5 min),
+    check for dirty enrichments and sync them without human intervention.
+    Same behaviour as GitHub Actions sync-gateway: always-on, zero human touch.
+    """
+    global _watchdog_running
+    _watchdog_running = True
+    print(f"[watchdog] Started — scanning every {interval_seconds}s for dirty enrichments")
+    while _watchdog_running:
+        time.sleep(interval_seconds)
+        # Skip if any sync/push job is already running
+        with _lock:
+            busy = any(j["status"] == "running" and j["bot"] in ("sync", "sync-push", "git-push")
+                       for j in _jobs.values())
+        if busy:
+            continue
+        # Check for _unsyncedEdits files
+        dirty_count = _count_dirty_files()
+        if dirty_count > 0:
+            print(f"[watchdog] Found {dirty_count} dirty files — launching autonomous sync+push")
+            sync_jid = dispatch_sync(max_entities=200, local_mode=True)
+            _wait_for_job(sync_jid)
+            dispatch_git_push(message=f"feat(enrich): watchdog auto-push — {dirty_count} local enrichments")
+
+
+def _count_dirty_files() -> int:
+    """Count entity files with _unsyncedEdits:true in detailsJson."""
+    count = 0
+    if not (REPO_ROOT / "data" / "appwrite-export" / "entities").exists():
+        return 0
+    try:
+        for p in (REPO_ROOT / "data" / "appwrite-export" / "entities").rglob("*.json"):
+            try:
+                data = json.loads(p.read_text())
+                for ent in data.get("entities", []):
+                    dj_raw = ent.get("detailsJson", "")
+                    if isinstance(dj_raw, str) and dj_raw:
+                        try:
+                            dj = json.loads(dj_raw)
+                            if dj.get("_unsyncedEdits") or (isinstance(dj.get("_editLog"), list) and dj["_editLog"]):
+                                count += 1
+                                break
+                        except Exception:
+                            pass
+            except Exception:
+                pass
+    except Exception:
+        pass
+    return count
+
+
+def start_watchdog(interval_seconds: int = 300):
+    t = threading.Thread(target=_watchdog_loop, args=(interval_seconds,), daemon=True)
+    t.start()
+
+
 
 CORS_HEADERS = {
     "Access-Control-Allow-Origin": "http://localhost:5173",
@@ -691,7 +777,12 @@ def main():
     print(f"  CORS: http://localhost:5173")
     print(f"  Endpoints: /health /bots/status /bots/enrich /bots/significance")
     print(f"             /bots/queue /bots/sync /bots/all /bots/stop")
+    print(f"  Watchdog: auto-sync every 5 min (autonomous — no human needed)")
     print()
+
+    # Start autonomous watchdog — checks for dirty enrichments every 5 minutes
+    # and syncs them to Appwrite without human intervention (mirrors GH Actions)
+    start_watchdog(interval_seconds=300)
 
     server = HTTPServer(("localhost", args.port), BotHandler)
     try:
