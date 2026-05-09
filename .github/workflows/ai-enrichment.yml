@@ -3,7 +3,13 @@ name: AI Entity Enrichment (git-first)
 # Bot writes JSON only. The sync_gateway workflow pushes to Appwrite later.
 on:
   schedule:
-    - cron: '0 */6 * * *'   # every 6 hours; safe — no Appwrite writes
+    - cron: '0 */6 * * *'   # every 6 hours (runs from default branch)
+  push:
+    branches: [clean/audit-system]
+    paths:
+      - 'scripts/ai_enrich_autonomous.py'
+      - 'scripts/enrichment_queue.py'
+      - '.github/workflows/ai-enrichment.yml'
   workflow_dispatch:
     inputs:
       count:

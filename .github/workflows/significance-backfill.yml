@@ -6,7 +6,12 @@ name: Significance Backfill Bot
 
 on:
   schedule:
-    - cron: '0 2 * * *'   # daily 02:00 UTC — after enrichment (00:00/06:00)
+    - cron: '0 2 * * *'   # daily 02:00 UTC (runs from default branch)
+  push:
+    branches: [clean/audit-system]
+    paths:
+      - 'scripts/backfill_significance.py'
+      - '.github/workflows/significance-backfill.yml'
   workflow_dispatch:
     inputs:
       count:

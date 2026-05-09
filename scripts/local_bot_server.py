@@ -427,6 +427,31 @@ def github_actions_status() -> list[dict]:
         return []
 
 
+def _trigger_cloud_enrichment(branch: str = "clean/audit-system"):
+    """
+    Trigger the cloud AI enrichment workflow via GitHub Actions workflow_dispatch.
+    Only runs if GITHUB_TOKEN is set in environment. Safe to call after every
+    local push — GitHub Actions deduplicates runs if already in progress.
+    """
+    token = os.environ.get("GITHUB_TOKEN", "")
+    if not token:
+        return  # no token = local-only mode, skip silently
+    url = f"https://api.github.com/repos/{GITHUB_REPO}/actions/workflows/ai-enrichment.yml/dispatches"
+    payload = json.dumps({"ref": branch}).encode()
+    headers_gh = {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "Content-Type": "application/json",
+    }
+    try:
+        req = urllib.request.Request(url, data=payload, headers=headers_gh, method="POST")
+        with urllib.request.urlopen(req, timeout=10):
+            print(f"[github] Triggered ai-enrichment.yml on {branch} via workflow_dispatch")
+    except Exception as e:
+        print(f"[github] Could not trigger cloud workflow: {e}")
+
+
 def dispatch_git_push(message: str = "") -> str:
     """Commit all local enrichment changes and push to git (triggers GH Actions sync)."""
     job_id = _new_job("git-push", count=0, model="none")
@@ -496,6 +521,8 @@ def dispatch_git_push(message: str = "") -> str:
             _log(f"✓ Pushed {pending['total']} files → GitHub → GH Actions sync will push to Appwrite")
             _update_job(jid, status="done", exitCode=0, count=pending["total"],
                         finished=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()))
+            # Optionally trigger cloud enrichment on GitHub Actions (needs GITHUB_TOKEN)
+            threading.Thread(target=_trigger_cloud_enrichment, daemon=True).start()
         except Exception as exc:
             _update_job(jid, status="error",
                         log=log + [f"Exception: {exc}", traceback.format_exc()],
