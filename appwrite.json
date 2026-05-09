@@ -1,33 +1,8 @@
 {
     "projectId": "66509ba7003618a05af6",
     "projectName": "CARICOM Marketplace",
+    "_comment_architecture": "Git-first refactor (2026-05-09): all bot scans/writes moved to GitHub Actions reading data/appwrite-export/. Only entity-random (live UI) and entity-sync (event-driven stats_cache) remain on Appwrite. All other functions are kept as code (manual on-demand only) with schedules cleared and enabled=false to prevent cost overruns. Single sync gateway (scripts/sync_gateway.ts via .github/workflows/sync-gateway.yml) is the only writer to Appwrite. See docs/governance/git_first_bots.md.",
     "functions": [
-        {
-            "$id": "audit-consistency",
-            "name": "Audit Consistency",
-            "runtime": "node-18.0",
-            "execute": ["any"],
-            "events": [],
-            "schedule": "",
-            "timeout": 900,
-            "enabled": true,
-            "entrypoint": "src/main.js",
-            "path": "functions/audit-consistency",
-            "_comment": "DISABLED schedule — on-demand only. Was */30 * * * * (130M+ reads/month). Frontend reads stats_cache."
-        },
-        {
-            "$id": "backup-export",
-            "name": "Backup Export",
-            "runtime": "node-18.0",
-            "execute": [],
-            "events": [],
-            "schedule": "0 0 1,15 * *",
-            "timeout": 900,
-            "enabled": true,
-            "entrypoint": "src/main.js",
-            "path": "functions/backup-export",
-            "_comment": "Twice monthly (1st and 15th). Was weekly. ~400K reads per run."
-        },
         {
             "$id": "entity-random",
             "name": "Entity Random",
@@ -57,69 +32,121 @@
             "path": "functions/entity-sync"
         },
         {
-            "$id": "audit-duplicates",
-            "name": "Audit Duplicates",
+            "$id": "audit-consistency",
+            "name": "Audit Consistency (DEPRECATED)",
             "runtime": "node-18.0",
-            "execute": ["any"],
+            "execute": [],
             "events": [],
-            "schedule": "0 4 1,15 * *",
+            "schedule": "",
             "timeout": 900,
-            "enabled": true,
+            "enabled": false,
             "entrypoint": "src/main.js",
-            "path": "functions/audit-duplicates",
-            "_comment": "Twice monthly (1st and 15th). Was weekly. ~400K reads per run."
+            "path": "functions/audit-consistency",
+            "_comment": "DEPRECATED 2026-05-09. Replaced by scripts/audits/consistency.py + .github/workflows/audit-consistency.yml."
         },
         {
             "$id": "audit-orphans",
-            "name": "Audit Orphans",
+            "name": "Audit Orphans (DEPRECATED)",
             "runtime": "node-18.0",
-            "execute": ["any"],
+            "execute": [],
             "events": [],
-            "schedule": "0 3 * * 0",
+            "schedule": "",
             "timeout": 900,
-            "enabled": true,
+            "enabled": false,
             "entrypoint": "src/main.js",
             "path": "functions/audit-orphans",
-            "_comment": "Weekly (Sunday 03:00). Was daily. ~800K reads per run (2 scans)."
+            "_comment": "DEPRECATED 2026-05-09. Replaced by scripts/audits/orphans.py."
+        },
+        {
+            "$id": "audit-duplicates",
+            "name": "Audit Duplicates (DEPRECATED)",
+            "runtime": "node-18.0",
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 900,
+            "enabled": false,
+            "entrypoint": "src/main.js",
+            "path": "functions/audit-duplicates",
+            "_comment": "DEPRECATED 2026-05-09. Replaced by scripts/audits/duplicates.py."
         },
         {
             "$id": "audit-classification",
-            "name": "Audit Classification",
+            "name": "Audit Classification (DEPRECATED)",
             "runtime": "node-18.0",
-            "execute": ["any"],
+            "execute": [],
             "events": [],
-            "schedule": "0 6 * * 0",
+            "schedule": "",
             "timeout": 900,
-            "enabled": true,
+            "enabled": false,
             "entrypoint": "src/main.js",
             "path": "functions/audit-classification",
-            "_comment": "Weekly (Sunday 06:00). Was daily. ~400K reads per run."
+            "_comment": "DEPRECATED 2026-05-09. Replaced by scripts/audits/classification.py."
+        },
+        {
+            "$id": "audit-completeness",
+            "name": "Audit Completeness (DEPRECATED)",
+            "runtime": "node-18.0",
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 900,
+            "enabled": false,
+            "entrypoint": "src/main.js",
+            "path": "functions/audit-completeness",
+            "_comment": "DEPRECATED 2026-05-09. Replaced by scripts/audits/completeness.py."
         },
         {
             "$id": "ai-enrichment",
-            "name": "AI Enrichment",
+            "name": "AI Enrichment (DEPRECATED)",
             "runtime": "node-18.0",
-            "execute": ["any"],
+            "execute": [],
             "events": [],
-            "schedule": "0 */4 * * *",
+            "schedule": "",
             "timeout": 900,
-            "enabled": true,
+            "enabled": false,
             "entrypoint": "src/main.js",
             "path": "functions/ai-enrichment",
-            "_comment": "Every 4h — scans up to 5K entities (~5K reads) + 20 enrichments/run. ~30K reads/day."
+            "_comment": "DEPRECATED 2026-05-09. Replaced by scripts/ai_enrich_autonomous.py + .github/workflows/ai-enrichment.yml. Bot writes JSON only; sync_gateway pushes to Appwrite."
         },
         {
             "$id": "enrichment-queue",
-            "name": "Enrichment Queue Scanner",
+            "name": "Enrichment Queue Scanner (DEPRECATED)",
             "runtime": "node-18.0",
-            "execute": ["any"],
+            "execute": [],
             "events": [],
-            "schedule": "0 0 * * 0",
+            "schedule": "",
             "timeout": 900,
-            "enabled": true,
+            "enabled": false,
             "entrypoint": "src/main.js",
             "path": "functions/enrichment-queue",
-            "_comment": "Weekly (Sunday midnight). Was every 6h. ~400K reads per run."
+            "_comment": "DEPRECATED 2026-05-09. Replaced by scripts/enrichment_queue.py."
+        },
+        {
+            "$id": "stats-counter",
+            "name": "Stats Counter (DEPRECATED)",
+            "runtime": "node-18.0",
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 900,
+            "enabled": false,
+            "entrypoint": "src/main.js",
+            "path": "functions/stats-counter",
+            "_comment": "DEPRECATED 2026-05-09. stats_cache now updated by sync_gateway from local JSON counts."
+        },
+        {
+            "$id": "backup-export",
+            "name": "Backup Export (DEPRECATED)",
+            "runtime": "node-18.0",
+            "execute": [],
+            "events": [],
+            "schedule": "",
+            "timeout": 900,
+            "enabled": false,
+            "entrypoint": "src/main.js",
+            "path": "functions/backup-export",
+            "_comment": "DEPRECATED 2026-05-09. The git repo IS the backup. data/appwrite-export/ is committed by audit/enrichment workflows."
         }
     ]
 }

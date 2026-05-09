@@ -70,7 +70,38 @@ jobs:
         run: |
           git config user.name  "Annals Sync Gateway"
           git config user.email "sync-gateway@annals-of-the-world.bot"
-          git add data/governance/budget.json data/governance/last_sync.json data/appwrite-export/entities/ data/appwrite-export/edges/
+          # Write last_github_runs.json so local OllamaMonitor can show cloud bot status
+          python3 - <<'PYEOF'
+import json, os, time
+from pathlib import Path
+runs_file = Path("data/governance/last_github_runs.json")
+runs_file.parent.mkdir(parents=True, exist_ok=True)
+existing = []
+if runs_file.exists():
+    try:
+        existing = json.loads(runs_file.read_text())
+        if isinstance(existing, dict):
+            existing = existing.get("runs", [])
+    except Exception:
+        existing = []
+# Add/update this run
+this_run = {
+    "name": "Sync Gateway — git → Appwrite",
+    "status": "completed",
+    "conclusion": "success",
+    "runId": int(os.environ.get("GITHUB_RUN_ID", 0)),
+    "startedAt": None,
+    "updatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+    "htmlUrl": f"https://github.com/{os.environ.get('GITHUB_REPOSITORY','')}/actions/runs/{os.environ.get('GITHUB_RUN_ID','')}",
+    "triggeredBy": os.environ.get("GITHUB_EVENT_NAME", "unknown"),
+}
+# Replace existing entry or prepend
+existing = [r for r in existing if r.get("name") != this_run["name"]]
+existing.insert(0, this_run)
+runs_file.write_text(json.dumps(existing[:15], indent=2))
+print(f"Wrote {runs_file}")
+PYEOF
+          git add data/governance/budget.json data/governance/last_sync.json data/governance/last_github_runs.json data/appwrite-export/entities/ data/appwrite-export/edges/
           if ! git diff --cached --quiet; then
             git commit -m "chore(sync): gateway run — state + cleared _editLog + edges synced"
             git push

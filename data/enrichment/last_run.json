@@ -1,70 +1,111 @@
 {
-  "timestamp": "2026-05-09T12:26:42Z",
-  "model": "gemini",
-  "count_requested": 10,
-  "enriched": 10,
-  "failed": 0,
+  "timestamp": "2026-05-09T14:49:12Z",
+  "model": "ollama",
+  "count_requested": 20,
+  "enriched": 1,
+  "failed": 19,
   "dry_run": false,
   "entities": [
     {
-      "slug": "era-late-medieval",
-      "status": "enriched",
-      "old_len": 0,
-      "new_len": 1541
+      "slug": "era-age-of-exploration",
+      "status": "failed",
+      "reason": "timed out"
     },
     {
-      "slug": "era-high-medieval",
-      "status": "enriched",
-      "old_len": 0,
-      "new_len": 1453
+      "slug": "era-renaissance-period",
+      "status": "failed",
+      "reason": "timed out"
     },
     {
-      "slug": "era-hellenistic-period",
+      "slug": "era-age-of-enlightenment",
       "status": "enriched",
-      "old_len": 0,
-      "new_len": 1605
+      "old_len": 218,
+      "new_len": 1607
     },
     {
-      "slug": "era-reformation-era",
-      "status": "enriched",
-      "old_len": 0,
-      "new_len": 1611
+      "slug": "era-early-medieval",
+      "status": "failed",
+      "reason": "Remote end closed connection without response"
     },
     {
-      "slug": "era-bronze-age",
-      "status": "enriched",
-      "old_len": 0,
-      "new_len": 1534
+      "slug": "era-age-of-empire",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
     },
     {
-      "slug": "era-interwar-period",
-      "status": "enriched",
-      "old_len": 0,
-      "new_len": 1701
+      "slug": "era-neolithic-chalcolithic",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
     },
     {
-      "slug": "era-world-war-ii-era",
-      "status": "enriched",
-      "old_len": 0,
-      "new_len": 1803
+      "slug": "era-paleolithic-mesolithic",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
     },
     {
-      "slug": "era-cold-war-era",
-      "status": "enriched",
-      "old_len": 0,
-      "new_len": 1882
+      "slug": "era-post-cold-war",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
     },
     {
-      "slug": "era-archaic-period",
-      "status": "enriched",
-      "old_len": 0,
-      "new_len": 1910
+      "slug": "jan-\u017eelivsk\u00fd",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
     },
     {
-      "slug": "era-digital-age",
-      "status": "enriched",
-      "old_len": 0,
-      "new_len": 1589
+      "slug": "jan-elivsk",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "slug": "peisandros",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "slug": "moses-of-chorene",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "slug": "baldassarre-castiglione",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "slug": "smaragdus-of-saint-mihiel",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "slug": "wazo-of-li\u00e8ge",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "slug": "wazo-of-lige",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "slug": "konstantinos-maleinos",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "slug": "john-mystacon",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "slug": "publius-aelius-paetus",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
+    },
+    {
+      "slug": "antonio-joaqun-prez-martnez",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
     }
   ]
 }
