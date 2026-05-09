@@ -251,6 +251,18 @@ async function postDoc(coll: string, docId: string, data: Record<string, unknown
   return { ok: true, status: 200 }
 }
 
+/** Query Appwrite for the real $id of a document whose slug attribute equals `slug`. */
+async function findDocIdBySlug(coll: string, slug: string): Promise<string | null> {
+  // Appwrite 1.5+ query format: JSON-serialized Query object
+  const query = JSON.stringify({ method: 'equal', attribute: 'slug', values: [slug] })
+  const url = `${ENDPOINT}/databases/${DATABASE_ID}/collections/${coll}/documents?queries[]=${encodeURIComponent(query)}&limit=1`
+  const res = await fetch(url, { method: 'GET', headers: headers() })
+  if (!res.ok) return null
+  const body = await res.json().catch(() => null)
+  const docs = body?.documents ?? []
+  return docs.length > 0 ? (docs[0].$id as string) : null
+}
+
 // ── Entity payload ──
 function entityToPayload(e: Entity): Record<string, unknown> {
   // Re-stringify detailsJson but strip _editLog (it's been emitted to audit_log)
@@ -357,7 +369,8 @@ async function main(): Promise<void> {
         //  1. PATCH by $id (fastest — most entities already exist)
         //  2. If 404 and docId ≠ slug: PATCH by slug (some docs use slug as Appwrite $id)
         //  3. If still 404: POST (new entity)
-        //  4. If POST returns 409 (slug unique-key conflict): PATCH by slug (doc exists under slug ID)
+        //  4. If POST returns 409 (slug unique-key conflict): document exists with a UUID $id
+        //     → query Appwrite by slug to get the real $id → PATCH by real $id
         let r = await patchDoc('entities', docId, payload)
         if (!r.ok && r.status === 404 && docId !== ent.slug) {
           r = await patchDoc('entities', ent.slug!, payload)
@@ -366,8 +379,15 @@ async function main(): Promise<void> {
           r = await postDoc('entities', docId, payload)
         }
         if (!r.ok && r.status === 409) {
-          // Unique-key conflict: document exists with slug as its Appwrite $id
-          r = await patchDoc('entities', ent.slug!, payload)
+          // Entity exists in Appwrite with a UUID $id, not the slug as $id.
+          // Query to find the real $id, then PATCH.
+          const realId = await findDocIdBySlug('entities', ent.slug!)
+          if (realId) {
+            r = await patchDoc('entities', realId, payload)
+          } else {
+            // Fallback: try slug directly (rare legacy case)
+            r = await patchDoc('entities', ent.slug!, payload)
+          }
         }
         if (r.ok) {
           entitiesUpserted++
