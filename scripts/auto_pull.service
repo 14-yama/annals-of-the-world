@@ -1,0 +1,16 @@
+[Unit]
+Description=Auto-pull annals-of-the-world from GitHub
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/manasa151/annals-of-the-world
+ExecStart=/bin/bash /home/manasa151/annals-of-the-world/scripts/auto_pull.sh clean/audit-system 60
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target

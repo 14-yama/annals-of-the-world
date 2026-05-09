@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """
-Autonomous AI Entity Enrichment — Enriches weak entities using LLM APIs.
+Autonomous AI Entity Enrichment — git-first.
 
 Reads from enrichment queue, calls LLM (Gemini free tier or OpenAI), validates
-output against quality thresholds, writes enriched JSON, and syncs to Appwrite.
+output against quality thresholds, and writes enriched JSON to the local git
+repo only. The sync_gateway script (scripts/sync_gateway.ts) is the single
+writer to Appwrite, run separately. This avoids per-entity Appwrite writes
+that previously caused cost overruns.
 
 Usage:
     # Generate queue first
@@ -18,20 +21,15 @@ Usage:
     # Use OpenAI GPT-4o-mini instead
     python3 scripts/ai_enrich_autonomous.py --count 25 --model openai
 
-    # Skip Appwrite sync (local files only)
-    python3 scripts/ai_enrich_autonomous.py --count 10 --no-sync
-
 Environment Variables:
-    GEMINI_API_KEY   — Google Gemini API key (free tier: 1M tokens/day)
-    OPENAI_API_KEY   — OpenAI API key (paid fallback)
-    APPWRITE_API_KEY — Appwrite API key (for backend sync)
+    GEMINI_API_KEY — Google Gemini API key (free tier: 1M tokens/day)
+    OPENAI_API_KEY — OpenAI API key (paid fallback)
 """
 import json
 import os
 import sys
 import argparse
 import time
-import hashlib
 import urllib.request
 import urllib.error
 import urllib.parse
@@ -63,10 +61,7 @@ BASE = "data/appwrite-export/entities"
 QUEUE_FILE = "data/enrichment/queue.json"
 REPORT_FILE = "data/enrichment/last_run.json"
 
-APPWRITE_ENDPOINT = "https://fra.cloud.appwrite.io/v1"
-APPWRITE_PROJECT = "66509ba7003618a05af6"
-APPWRITE_DB = "annals_world_db"
-APPWRITE_COLLECTION = "entities"
+EDITOR_ID = "ai-enrichment-bot:gemini-2.5-flash"
 
 VALID_VERBS = sorted([
     "CAUSES", "INFLUENCES", "COLLABORATES_WITH", "PARTICIPATES_IN",
@@ -87,7 +82,7 @@ VALID_FRAMEWORKS = sorted([
 # Prompt Template
 # ═══════════════════════════════════════════════════════════
 
-PROMPT_TEMPLATE = """You are enriching entities for "Annals of the World," a scholarly historical knowledge graph spanning 72,000 years of human history from Prehistory to the Digital Age.
+PROMPT_TEMPLATE = """You are enriching entities for "Annals of the World," a scholarly historical knowledge graph spanning 72,000 years of human history from Prehistory to the Digital Age, inspired by Archbishop Ussher's 1650 Annales Veteris Testamenti.
 
 ## Entity to Enrich
 - Name: {name}
@@ -102,17 +97,17 @@ PROMPT_TEMPLATE = """You are enriching entities for "Annals of the World," a sch
 
 ## Quality Standards
 
-Generate a scholarly yet engaging enrichment following these EXACT standards:
+Generate a RICH, SCHOLARLY, VIVID enrichment. You are writing for serious historians AND curious general readers. Every sentence must carry specific information — no filler, no vague generalities.
 
-### Summary (STRICTLY 800-1,300 characters — this is a HARD LIMIT)
-- EXACTLY 3 paragraphs separated by \\n\\n (no more, no less)
-- Paragraph 1: Identity + dates + core significance (who, when, why they matter)
-- Paragraph 2: Key achievements, events, or contributions (the "what happened")
-- Paragraph 3: Impact, consequences, or legacy (the "so what")
-- Include concrete dates, numbers, and named events — not vague generalities
-- One memorable attributed quote per entity is encouraged (in single quotes)
-- Tone: scholarly but engaging — avoid dry encyclopedia prose
-- CRITICAL: Count your characters. The summary MUST be between 800-1300 characters total. Exceeding 1300 characters will cause rejection.
+### Summary (800–2,000 characters — write to the upper end for major entities)
+- 3–4 paragraphs separated by \\n\\n
+- **Paragraph 1 — Identity & Significance**: Who/what is this? Concrete dates, geographic scope, and WHY it matters in the arc of world history. Name the key people, places, or forces involved. Open with a strong, specific sentence — not "X was an important..."
+- **Paragraph 2 — What Happened**: The core events, achievements, mechanisms, or contributions. Use real names, numbers, dates, place names. What actually occurred? What did it produce or destroy?
+- **Paragraph 3 — Legacy & Consequence**: What changed because of this? Who inherited it? How did it ripple forward in time? Connect it to what came next.
+- **Paragraph 4 (optional but encouraged)**: One vivid, memorable closing — a striking statistic, a direct attributed quote (in single quotes), a lasting cultural footprint, or an ironic twist of history.
+- Tone: scholarly but narratively engaging — imagine Simon Schama meets Wikipedia's best-sourced articles
+- FORBIDDEN: opening with "X was a/an important/notable/significant", single-paragraph walls of text, placeholder phrases like "a key figure associated with"
+- CRITICAL: Total characters MUST be between 800–2000. Count carefully.
 
 ### Causes (exactly 3)
 Causal antecedents — conditions, events, or influences that led to this entity's significance.
@@ -255,25 +250,25 @@ def validate_enrichment(result):
     if not isinstance(result, dict):
         return False, "response is not a JSON object"
 
-    # Summary — auto-trim if between 1300-2500c (LLMs often overshoot)
+    # Summary — accept 800-2000c; auto-trim at 2000 to keep complete paragraphs
     summary = result.get("summary", "")
     if not isinstance(summary, str) or len(summary) < 600:
         return False, f"summary too short ({len(summary) if isinstance(summary, str) else 0}c, need >= 600)"
-    if len(summary) > 1300:
-        # Smart trim: keep complete paragraphs that fit under 1300c
+    if len(summary) > 2000:
+        # Smart trim: keep complete paragraphs that fit under 2000c
         paragraphs = summary.split("\n\n")
         trimmed = ""
         for p in paragraphs:
             candidate = (trimmed + "\n\n" + p).strip() if trimmed else p
-            if len(candidate) <= 1300:
+            if len(candidate) <= 2000:
                 trimmed = candidate
             else:
                 break
         if len(trimmed) >= 600:
             result["summary"] = trimmed
             summary = trimmed
-        elif len(summary) > 2500:
-            return False, f"summary too long ({len(summary)}c, max 2500)"
+        elif len(summary) > 3000:
+            return False, f"summary too long ({len(summary)}c, max 3000)"
 
     # Causes
     causes = result.get("causes", [])
@@ -325,18 +320,29 @@ def validate_enrichment(result):
 # Apply Enrichment to Local Files
 # ═══════════════════════════════════════════════════════════
 
+def _diff_field(old, new):
+    """Return (changed, old_repr, new_repr) — JSON-comparable."""
+    old_n = old if old is not None else ""
+    new_n = new if new is not None else ""
+    return (json.dumps(old_n, sort_keys=True) != json.dumps(new_n, sort_keys=True),
+            old_n, new_n)
+
+
 def apply_enrichment(filepath, slug, result):
-    """Write enrichment data to the local entity JSON file."""
+    """Write enrichment data to the local entity JSON file and append a
+    per-field _editLog[] inside detailsJson. The sync_gateway replays
+    _editLog[] entries into Appwrite audit_log on its next run.
+    """
     with open(filepath, "r") as f:
         data = json.load(f)
+
+    timestamp = time.strftime("%Y-%m-%dT%H:%M:%SZ")
 
     for entity in data.get("entities", []):
         if entity.get("slug") != slug:
             continue
 
-        entity["summary"] = result["summary"]
-
-        # Parse and update detailsJson
+        # Parse current detailsJson
         dj = entity.get("detailsJson", "")
         if isinstance(dj, str) and dj:
             try:
@@ -348,105 +354,73 @@ def apply_enrichment(filepath, slug, result):
         else:
             details = {}
 
+        # Compute diffs BEFORE mutating
+        edit_log_entries = []
+        old_summary = entity.get("summary", "") or ""
+        if old_summary != result["summary"]:
+            edit_log_entries.append({
+                "timestamp": timestamp, "editorId": EDITOR_ID,
+                "field": "summary",
+                "oldValue": old_summary, "newValue": result["summary"],
+            })
+
+        for fname, new_val in (
+            ("causes", result.get("causes", [])),
+            ("effects", result.get("effects", [])),
+            ("relationships", result.get("relationships", [])),
+            ("places", result.get("places", [])),
+        ):
+            old_val = details.get(fname, [])
+            changed, _, _ = _diff_field(old_val, new_val)
+            if changed:
+                edit_log_entries.append({
+                    "timestamp": timestamp, "editorId": EDITOR_ID,
+                    "field": f"detailsJson.{fname}",
+                    "oldValue": old_val, "newValue": new_val,
+                })
+
+        if result.get("subjects"):
+            old_val = entity.get("subjects", []) or []
+            if json.dumps(sorted(old_val)) != json.dumps(sorted(result["subjects"])):
+                edit_log_entries.append({
+                    "timestamp": timestamp, "editorId": EDITOR_ID,
+                    "field": "subjects",
+                    "oldValue": old_val, "newValue": result["subjects"],
+                })
+        if result.get("frameworks"):
+            old_val = entity.get("frameworks", []) or []
+            if json.dumps(sorted(old_val)) != json.dumps(sorted(result["frameworks"])):
+                edit_log_entries.append({
+                    "timestamp": timestamp, "editorId": EDITOR_ID,
+                    "field": "frameworks",
+                    "oldValue": old_val, "newValue": result["frameworks"],
+                })
+
+        # Apply changes
+        entity["summary"] = result["summary"]
         details["causes"] = result.get("causes", [])
         details["effects"] = result.get("effects", [])
         details["relationships"] = result.get("relationships", [])
         details["places"] = result.get("places", [])
-        entity["detailsJson"] = json.dumps(details, ensure_ascii=False)
-
         if result.get("subjects"):
             entity["subjects"] = result["subjects"]
         if result.get("frameworks"):
             entity["frameworks"] = result["frameworks"]
 
+        # Append edit log (last 50 entries kept)
+        existing_log = details.get("_editLog") or []
+        if not isinstance(existing_log, list):
+            existing_log = []
+        existing_log.extend(edit_log_entries)
+        details["_editLog"] = existing_log[-50:]
+        details["_unsyncedEdits"] = len(edit_log_entries) > 0 or details.get("_unsyncedEdits", False)
+
+        entity["detailsJson"] = json.dumps(details, ensure_ascii=False)
         break
 
     with open(filepath, "w") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write("\n")
-
-
-# ═══════════════════════════════════════════════════════════
-# Appwrite Sync
-# ═══════════════════════════════════════════════════════════
-
-def slug_to_id(slug):
-    return hashlib.sha256(slug.encode()).hexdigest()[:20]
-
-
-def appwrite_headers(api_key):
-    return {
-        "Content-Type": "application/json",
-        "X-Appwrite-Project": APPWRITE_PROJECT,
-        "X-Appwrite-Key": api_key,
-    }
-
-
-def sync_to_appwrite(slug, entity, api_key):
-    """Update entity in Appwrite. Tries hash ID -> slug ID -> query lookup."""
-    dj = entity.get("detailsJson", "")
-    if isinstance(dj, dict):
-        dj = json.dumps(dj, ensure_ascii=False)
-
-    payload = {
-        "slug": slug,
-        "name": entity.get("name", ""),
-        "label": entity.get("label", ""),
-        "callNumber": entity.get("callNumber", ""),
-        "era": entity.get("era", ""),
-        "summary": entity.get("summary", ""),
-        "continent": entity.get("continent", ""),
-        "region": entity.get("region", ""),
-        "subjects": entity.get("subjects", []),
-        "subjectHeadings": entity.get("subjectHeadings", []),
-        "detailsJson": dj,
-    }
-
-    headers_dict = appwrite_headers(api_key)
-    body = json.dumps({"data": payload}).encode()
-    base_url = f"{APPWRITE_ENDPOINT}/databases/{APPWRITE_DB}/collections/{APPWRITE_COLLECTION}/documents"
-
-    # Strategy 1: Hash-based ID
-    doc_id = slug_to_id(slug)
-    try:
-        req = urllib.request.Request(
-            f"{base_url}/{doc_id}", data=body, headers=headers_dict, method="PATCH"
-        )
-        with urllib.request.urlopen(req):
-            return True
-    except urllib.error.HTTPError:
-        pass
-
-    # Strategy 2: Slug as ID
-    try:
-        req = urllib.request.Request(
-            f"{base_url}/{slug}", data=body, headers=headers_dict, method="PATCH"
-        )
-        with urllib.request.urlopen(req):
-            return True
-    except urllib.error.HTTPError:
-        pass
-
-    # Strategy 3: Query by slug attribute (handles legacy sanitized IDs)
-    try:
-        q = json.dumps({"method": "equal", "attribute": "slug", "values": [slug]})
-        search_url = f"{base_url}?queries[]={urllib.parse.quote(q)}"
-        req = urllib.request.Request(search_url, headers=headers_dict)
-        with urllib.request.urlopen(req) as r:
-            search_data = json.loads(r.read())
-            docs = search_data.get("documents", [])
-            if docs:
-                actual_id = docs[0]["$id"]
-                req2 = urllib.request.Request(
-                    f"{base_url}/{actual_id}", data=body,
-                    headers=headers_dict, method="PATCH"
-                )
-                with urllib.request.urlopen(req2):
-                    return True
-    except (urllib.error.HTTPError, KeyError, json.JSONDecodeError):
-        pass
-
-    return False
 
 
 # ═══════════════════════════════════════════════════════════
@@ -477,8 +451,7 @@ def update_audit_log(run_data):
         f"\n### AI Enrichment — {ts}\n\n"
         f"- **Model:** {model}\n"
         f"- **Enriched:** {run_data['enriched']} | "
-        f"**Failed:** {run_data['failed']} | "
-        f"**Synced:** {run_data['synced']}\n"
+        f"**Failed:** {run_data['failed']}\n"
         f"- **Entities:** {slugs}\n"
     )
 
@@ -521,10 +494,6 @@ def main():
         help="Queue file path (default: data/enrichment/queue.json)",
     )
     parser.add_argument(
-        "--no-sync", action="store_true",
-        help="Skip Appwrite sync (local files only)",
-    )
-    parser.add_argument(
         "--min-score", type=float, default=0,
         help="Minimum queue score to process (default: 0)",
     )
@@ -546,8 +515,6 @@ def main():
         if not api_key and not args.dry_run:
             print("ERROR: Set OPENAI_API_KEY environment variable")
             sys.exit(1)
-
-    appwrite_key = os.environ.get("APPWRITE_API_KEY", "")
 
     # ── Load queue ──
     if not os.path.exists(args.queue):
@@ -576,13 +543,12 @@ def main():
 
     enriched = 0
     failed = 0
-    synced = 0
     report = []
 
     for i, entry in enumerate(batch):
         slug = entry["slug"]
         filepath = entry["filepath"]
-        print(f"\n[{i + 1}/{len(batch)}] {slug} (score={entry['score']}, {entry['summaryLength']}c)")
+        print(f"\n[{i + 1}/{len(batch)}] {slug} (score={entry.get('score',0)}, {len(entry.get('summary',''))}c)")
 
         # Load current entity from file
         try:
@@ -665,20 +631,8 @@ def main():
         new_len = len(result.get("summary", ""))
         print(f"  ENRICHED — {current_len}c -> {new_len}c")
 
-        # Write to local JSON
+        # Write to local JSON (sync_gateway will push to Appwrite later)
         apply_enrichment(filepath, slug, result)
-
-        # Sync to Appwrite
-        if not args.no_sync and appwrite_key:
-            with open(filepath) as f:
-                updated_data = json.load(f)
-            for e in updated_data.get("entities", []):
-                if e.get("slug") == slug:
-                    if sync_to_appwrite(slug, e, appwrite_key):
-                        synced += 1
-                    else:
-                        print(f"  SYNC FAILED — Appwrite update unsuccessful")
-                    break
 
         enriched += 1
         report.append({
@@ -694,7 +648,7 @@ def main():
 
     # ── Summary ──
     print(f"\n{'=' * 60}")
-    print(f"RESULTS: {enriched} enriched, {failed} failed, {synced} synced")
+    print(f"RESULTS: {enriched} enriched, {failed} failed (sync_gateway pushes to Appwrite separately)")
     print(f"{'=' * 60}")
 
     # Save run report
@@ -705,7 +659,6 @@ def main():
         "count_requested": args.count,
         "enriched": enriched,
         "failed": failed,
-        "synced": synced,
         "dry_run": args.dry_run,
         "entities": report,
     }

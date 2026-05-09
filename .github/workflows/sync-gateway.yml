@@ -1,0 +1,67 @@
+name: Sync Gateway — git → Appwrite
+
+# Single writer to Appwrite. Reads data/appwrite-export/, computes diff vs
+# last_sync.json, honours data/governance/budget.json caps, replays
+# _editLog[] entries into audit_log, then commits cleared local files.
+
+on:
+  # Auto-trigger when AI enrichment workflow completes successfully
+  workflow_run:
+    workflows: ["AI Entity Enrichment (git-first)"]
+    types: [completed]
+    branches: [main, clean/audit-system]
+  schedule:
+    - cron: '0 7 * * *'   # daily 07:00 UTC, after audits/enrichment commit
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (no writes)'
+        type: boolean
+        default: false
+      full:
+        description: 'Full sync (ignore last_sync.json)'
+        type: boolean
+        default: false
+      max_writes:
+        description: 'Override perRunWriteCap'
+        type: string
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    # Skip if triggered by a failed enrichment run
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # need history for git diff against last_sync commit
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: Install tsx
+        run: npm install -g tsx
+      - name: Run sync gateway
+        env:
+          APPWRITE_API_KEY: ${{ secrets.APPWRITE_API_KEY }}
+          SYNC_EDITOR_ID: 'sync-gateway:github-action'
+        run: |
+          ARGS=()
+          if [ "${{ inputs.dry_run }}" = "true" ]; then ARGS+=(--dry-run); fi
+          if [ "${{ inputs.full }}" = "true" ]; then ARGS+=(--full); fi
+          if [ -n "${{ inputs.max_writes }}" ]; then ARGS+=(--max=${{ inputs.max_writes }}); fi
+          npx tsx scripts/sync_gateway.ts "${ARGS[@]}"
+      - name: Commit budget + last_sync state
+        if: ${{ inputs.dry_run != 'true' }}
+        run: |
+          git config user.name  "Annals Sync Gateway"
+          git config user.email "sync-gateway@annals-of-the-world.bot"
+          git add data/governance/budget.json data/governance/last_sync.json data/appwrite-export/entities/
+          if ! git diff --cached --quiet; then
+            git commit -m "chore(sync): gateway run — state + cleared _editLog"
+            git push
+          else
+            echo "No state changes."
+          fi

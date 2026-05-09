@@ -295,7 +295,7 @@ All curator edits are logged to the `audit_log` Appwrite collection with per-fie
 - **Curator identity** tracked via `editorId` (localStorage + prompt)
 - **Session tracking** via `sessionId` (crypto.randomUUID per browser session)
 - **Per-field diffing** — each changed field gets its own audit entry with old/new values
-- **Audit log viewer** at `/curator/audit/log` — filters, sort, CSV export, stats
+- **Audit log viewer** at `/curator/audit/log` — filters, sort, CSV export, stats; uses **Appwrite Realtime WebSocket** subscription so new rows appear instantly (no polling)
 
 ### Appwrite Cloud Functions (5 automated audits)
 
@@ -324,25 +324,43 @@ imports are unaffected.
 
 ### Autonomous AI Enrichment Pipeline
 
-Fully automated enrichment of weak/stub entities using LLM APIs:
+Fully automated, **cloud-first** enrichment — no local machine required. All bots run on
+GitHub Actions and commit directly to the GitHub repository. Appwrite is updated
+automatically by the sync gateway workflow after each enrichment commit.
 
 | Component | Path | Purpose |
 |-----------|------|---------|
 | Queue Scanner | `scripts/enrichment_queue.py` | Ranks entities by weakness score |
-| AI Enrichment | `scripts/ai_enrich_autonomous.py` | Calls LLM + validates + writes + syncs |
-| GitHub Action | `.github/workflows/ai-enrichment.yml` | Cron every 6h + manual dispatch |
+| AI Enrichment | `scripts/ai_enrich_autonomous.py` | Calls LLM + validates + writes JSON (git-first, no Appwrite calls) |
+| Sync Gateway | `scripts/sync_gateway.ts` | Single Appwrite writer — reads git diff, upserts entities, emits audit_log rows |
+| Enrichment Workflow | `.github/workflows/ai-enrichment.yml` | Cron every 6h + manual dispatch; commits enriched files + pushes to GitHub |
+| Sync Workflow | `.github/workflows/sync-gateway.yml` | Auto-triggered by enrichment workflow completion + daily 07:00 UTC; commits budget/state |
 | Policy Doc | `docs/governance/autonomous_enrichment.md` | Full governance & thresholds |
 
+**Workflow chain (fully cloud, no local dependency):**
+```
+GitHub Actions (cron/manual)
+  → enrichment_queue.py   (scans 392k entities, ranks by weakness)
+  → ai_enrich_autonomous.py  (Gemini/OpenAI → validates → writes JSON)
+  → git commit + git push  (changes land in GitHub repo)
+  → sync-gateway workflow triggers automatically (workflow_run event)
+  → sync_gateway.ts  (git diff → PATCH/POST Appwrite → emit audit_log rows)
+  → git commit + git push  (budget.json + last_sync.json updated)
+```
+
+**Local development sync:** A systemd user service (`scripts/auto_pull.service`) runs
+`scripts/auto_pull.sh` every 60s to `git fetch + pull --ff-only` from GitHub, so the
+local machine stays in sync with cloud bot commits automatically.
+
 **LLM Providers:**
-- **Primary:** Google Gemini 1.5 Flash (free tier: 1M tokens/day, 15 RPM)
+- **Primary:** Google Gemini 2.5 Flash (free tier: 1M tokens/day, 15 RPM)
 - **Fallback:** OpenAI GPT-4o-mini ($0.15/1M input, $0.60/1M output)
 
-**Pipeline flow:** Queue scan → LLM enrichment → Validation gate → Local JSON write → Appwrite sync → Git commit
-
-**Quality gate rejects** enrichments with: summary <600c or >2000c, <2 causes/effects,
-<3 relationships, invalid verbs/frameworks, missing required fields.
-
-**Curator role:** Set thresholds, review weekly, adjust batch sizes, reject bad enrichments.
+**Summary quality standards:**
+- 3–4 paragraphs separated by `\n\n` (rendered as separate `<Text>` blocks in UI)
+- 800–2,000 characters total (rich, vivid, scholarly — no placeholder stubs)
+- Para 1: Identity + dates + significance; Para 2: What happened; Para 3: Legacy; Para 4 (optional): vivid closing fact/quote
+- Validation gate rejects: summary <600c or >3000c (auto-trimmed at 2000c), <2 causes/effects, <3 relationships
 
 **GitHub Secrets required:** `GEMINI_API_KEY`, `APPWRITE_API_KEY` (optional: `OPENAI_API_KEY`)
 
