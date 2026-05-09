@@ -1,0 +1,17 @@
+{
+  "_comment": "Cost guard rails for the sync gateway. The gateway aborts at hardStopPercent of any cap. Curator can edit this file to set policy. resetDay aligns with billing cycle (23rd).",
+  "monthlyReadCap": 5000000,
+  "monthlyWriteCap": 100000,
+  "perRunWriteCap": 500,
+  "minMsBetweenWrites": 250,
+  "hardStopPercent": 80,
+  "resetDay": 23,
+  "current": {
+    "cycleStart": "2026-04-23",
+    "readsUsed": 0,
+    "writesUsed": 130,
+    "lastUpdated": "2026-05-09T16:08:20.426Z"
+  },
+  "manualPause": false,
+  "manualPauseReason": ""
+}
