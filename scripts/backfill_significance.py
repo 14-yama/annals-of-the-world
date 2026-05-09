@@ -122,6 +122,35 @@ def call_gemini(prompt: str, api_key: str) -> dict:
     raise RuntimeError("Gemini API exhausted retries")
 
 
+OLLAMA_BASE = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
+
+def call_ollama(prompt: str, model: str = "llama3.2:3b") -> dict:
+    """Call local Ollama for unlimited, quota-free inference."""
+    url = f"{OLLAMA_BASE}/api/generate"
+    body = json.dumps({
+        "model": model,
+        "prompt": prompt,
+        "format": "json",
+        "stream": False,
+        "options": {"temperature": 0.3, "num_predict": 512},
+    }).encode()
+    req = urllib.request.Request(url, data=body, headers={"Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=120) as resp:
+            data = json.loads(resp.read())
+        text = data.get("response", "")
+        return _parse_llm_json(text)
+    except Exception as e:
+        raise RuntimeError(f"Ollama error: {e}") from e
+
+
+def call_llm(prompt: str, model_backend: str, api_key: str = "", ollama_model: str = "llama3.2:3b") -> dict:
+    """Unified LLM call — dispatches to Gemini or Ollama."""
+    if model_backend == "ollama":
+        return call_ollama(prompt, ollama_model)
+    return call_gemini(prompt, api_key)
+
+
 def validate(result: dict) -> tuple[bool, str]:
     score = result.get("significanceScore")
     if not isinstance(score, (int, float)) or not (1 <= int(score) <= 10):
@@ -232,15 +261,35 @@ def main():
     parser = argparse.ArgumentParser(description="Backfill historical significance scores")
     parser.add_argument("--count", type=int, default=50, help="Max entities to process")
     parser.add_argument("--dry-run", action="store_true", help="Preview — no file changes")
+    parser.add_argument(
+        "--model", choices=["gemini", "ollama"], default="gemini",
+        help="LLM backend: 'gemini' (cloud, 15 RPM limit) or 'ollama' (local, unlimited)",
+    )
+    parser.add_argument(
+        "--ollama-model", default="llama3.2:3b",
+        help="Ollama model name (default: llama3.2:3b). Use llama3.1:8b for higher quality.",
+    )
     args = parser.parse_args()
 
-    api_key = os.environ.get("GEMINI_API_KEY", "")
-    if not api_key:
-        print("ERROR: GEMINI_API_KEY not set", file=sys.stderr)
-        sys.exit(1)
+    api_key = ""
+    if args.model == "gemini":
+        api_key = os.environ.get("GEMINI_API_KEY", "")
+        if not api_key:
+            print("ERROR: GEMINI_API_KEY not set (or use --model ollama for local AI)", file=sys.stderr)
+            sys.exit(1)
+    elif args.model == "ollama":
+        # Verify Ollama is running
+        try:
+            urllib.request.urlopen(f"{OLLAMA_BASE}/api/tags", timeout=5)
+        except Exception:
+            print(f"ERROR: Ollama not running at {OLLAMA_BASE}. Start with: ollama serve", file=sys.stderr)
+            sys.exit(1)
 
+    model_label = f"{args.model}{'/' + args.ollama_model if args.model == 'ollama' else ''}"
     print(f"{'='*60}")
-    print(f"SIGNIFICANCE BACKFILL — up to {args.count} entities via Gemini")
+    print(f"SIGNIFICANCE BACKFILL — up to {args.count} entities via {model_label}")
+    if args.model == "ollama":
+        print(f"  LOCAL MODE — no API quota, unlimited speed")
     if args.dry_run:
         print("  DRY RUN — no files will be written")
     print(f"{'='*60}")
@@ -266,7 +315,7 @@ def main():
         )
 
         try:
-            result = call_gemini(prompt, api_key)
+            result = call_llm(prompt, args.model, api_key, args.ollama_model)
             ok, reason = validate(result)
             if not ok:
                 print(f"  REJECTED — {reason}")
@@ -289,8 +338,8 @@ def main():
             failed += 1
             results_log.append({"slug": slug, "status": "error", "reason": str(e)})
 
-        # Respect rate limits (15 RPM free tier = 4s/request minimum)
-        if i < len(queue) - 1:
+        # Rate limiting: Gemini = 4s, Ollama = no wait (local, no quota)
+        if args.model == "gemini" and i < len(queue) - 1:
             time.sleep(4)
 
     print(f"\n{'='*60}")

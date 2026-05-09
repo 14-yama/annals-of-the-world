@@ -419,12 +419,47 @@ Every entity in the catalog must have:
 - **`summary`** — A rich, concise overview (see Overview Writing Standards below)
 - **`causes`** — At least 3 causal antecedents for major entities (1 minimum for minor)
 - **`effects`** — At least 3 consequent outcomes for major entities (1 minimum for minor)
-- **`relationships`** — At least 5 relationships for major entities using the canonical format:
-  `{sourceSlug, sourceName, verb, targetSlug, targetName, context}`
+- **`relationships`** — Minimum edge count determined by `historicalSignificance.significanceScore`
+  (see Significance → Edge Count Metric below)
+- **`historicalSignificance`** — Required on all enriched entities (summary ≥ 600c):
+  `{significanceScore: 1–10, significanceNarrative: string, significanceCategory: "world-changing"|"continental"|"regional"|"local"}`
 - **`frameworks`** — At least 1 interpretive framework
 - **`places`** — At least 1 place reference
 - **`subjectHeadings`** — Hierarchical heading: `Label — Cluster — Country — Era`
 - **`subjects`** — Country + topic tags (8–10 for major entities)
+
+### Significance → Edge Count Metric
+
+Every enriched entity **must** have a minimum number of graph edges proportional to its
+historical significance. An entity like Albert Einstein (score 10) with only 2 edges is
+a data quality failure — significance and connectivity must match.
+
+| `significanceScore` | Category | Min Edges Required | Example entities |
+|---|---|---|---|
+| **9–10** | world-changing | **15** | Einstein, Islam, French Revolution, printing press |
+| **7–8** | continental | **8** | Napoleon, Mongol Empire, Black Death, Roman Republic |
+| **5–6** | regional | **4** | Major battles, key inventors, important institutions |
+| **3–4** | local | **2** | Secondary rulers, regional movements, specialist texts |
+| **1–2** | minor | **1** | Local events, footnote figures |
+| unrated | — | **0** (no requirement) | Stubs awaiting enrichment |
+
+**Enforcement:**
+- `audit-consistency` bot flags under-edged entities as quality violations
+- `enrichment_queue.py` applies a **2× priority multiplier** to entities where
+  `current_edges < min_edges_required(significanceScore)`
+- `ai_edge_bot.py` targets high-significance entities first when generating new edges
+- The `EntityPage` UI shows an edge-completeness bar when `historicalSignificance` is present
+
+**Validation helper** (TypeScript, used across UI):
+```ts
+export function minEdgesForScore(score: number): number {
+  if (score >= 9) return 15;
+  if (score >= 7) return 8;
+  if (score >= 5) return 4;
+  if (score >= 3) return 2;
+  return 1;
+}
+```
 
 ### Overview Writing Standards
 

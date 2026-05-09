@@ -31,6 +31,19 @@ STUB_PATTERNS = [
 ]
 
 
+def min_edges_for_score(score: int) -> int:
+    """Return the minimum required edge count for a given significanceScore (1-10)."""
+    if score >= 9:
+        return 15
+    if score >= 7:
+        return 8
+    if score >= 5:
+        return 4
+    if score >= 3:
+        return 2
+    return 1
+
+
 def score_entity(entity):
     """Score entity weakness. Higher = needs more work. 0 = already good."""
     summary = entity.get("summary", "") or ""
@@ -84,6 +97,18 @@ def score_entity(entity):
     # Scale by importance (higher importance = higher priority to fix)
     importance = entity.get("importanceScore", 1) or 1
     weakness *= importance / 5.0
+
+    # Edge-gap multiplier: 2× penalty if high-significance entity has too few edges.
+    # This ensures Albert Einstein (score 10, needs ≥15 edges) gets top enrichment
+    # priority so the edge bot can connect him properly.
+    hs = entity.get("historicalSignificance") or details.get("historicalSignificance")
+    if isinstance(hs, dict):
+        sig_score = int(hs.get("significanceScore") or 0)
+        if sig_score >= 3:
+            min_required = min_edges_for_score(sig_score)
+            current_edges = len(rels)
+            if current_edges < min_required:
+                weakness *= 2.0  # Double priority for under-connected significant entities
 
     return round(weakness, 2)
 

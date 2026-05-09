@@ -252,6 +252,25 @@ def call_openai(prompt, api_key, model="gpt-4o-mini"):
     return json.loads(text)
 
 
+OLLAMA_BASE_ENRICH = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
+
+def call_ollama(prompt, model="llama3.2:3b"):
+    """Call local Ollama — no quota, no cost, runs on-device. Ideal for local power sessions."""
+    url = f"{OLLAMA_BASE_ENRICH}/api/generate"
+    body = json.dumps({
+        "model": model,
+        "prompt": prompt,
+        "format": "json",
+        "stream": False,
+        "options": {"temperature": 0.7, "num_predict": 16384, "num_ctx": 8192},
+    }).encode()
+    req = urllib.request.Request(url, data=body, headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=300) as resp:
+        data = json.loads(resp.read())
+    text = data.get("response", "")
+    return _parse_llm_json(text)
+
+
 # ═══════════════════════════════════════════════════════════
 # Validation
 # ═══════════════════════════════════════════════════════════
@@ -491,8 +510,8 @@ def main():
         help="Number of entities to enrich (default: 25)",
     )
     parser.add_argument(
-        "--model", choices=["gemini", "openai"], default="gemini",
-        help="LLM provider (default: gemini — free tier)",
+        "--model", choices=["gemini", "openai", "ollama"], default="gemini",
+        help="LLM provider: gemini (free, 500 RPD), openai (paid), ollama (local, unlimited)",
     )
     parser.add_argument(
         "--gemini-model", default="gemini-2.5-flash",
@@ -501,6 +520,10 @@ def main():
     parser.add_argument(
         "--openai-model", default="gpt-4o-mini",
         help="OpenAI model name (default: gpt-4o-mini)",
+    )
+    parser.add_argument(
+        "--ollama-model", default="llama3.2:3b",
+        help="Ollama model name (default: llama3.2:3b — runs locally, no quota)",
     )
     parser.add_argument(
         "--dry-run", action="store_true",
@@ -526,6 +549,14 @@ def main():
         if not api_key and not args.dry_run:
             print("ERROR: Set GEMINI_API_KEY environment variable")
             print("  Get free key: https://aistudio.google.com/apikey")
+            sys.exit(1)
+    elif args.model == "ollama":
+        api_key = ""
+        # Verify Ollama is up
+        try:
+            urllib.request.urlopen(f"{OLLAMA_BASE_ENRICH}/api/tags", timeout=5)
+        except Exception:
+            print(f"ERROR: Ollama not running at {OLLAMA_BASE_ENRICH}. Start with: ollama serve")
             sys.exit(1)
     else:
         api_key = os.environ.get("OPENAI_API_KEY", "")
@@ -618,6 +649,8 @@ def main():
             try:
                 if args.model == "gemini":
                     result = call_gemini(prompt, api_key, args.gemini_model)
+                elif args.model == "ollama":
+                    result = call_ollama(prompt, args.ollama_model)
                 else:
                     result = call_openai(prompt, api_key, args.openai_model)
 
@@ -659,9 +692,15 @@ def main():
             "new_len": new_len,
         })
 
-        # Rate limiting: Gemini 15 RPM = 4s between; OpenAI faster
-        delay = 4.5 if args.model == "gemini" else 1.5
-        time.sleep(delay)
+        # Rate limiting: Gemini = 4.5s, OpenAI = 1.5s, Ollama = 0 (local, no quota)
+        if args.model == "gemini":
+            delay = 4.5
+        elif args.model == "ollama":
+            delay = 0  # local model — run as fast as the hardware allows
+        else:
+            delay = 1.5
+        if delay > 0:
+            time.sleep(delay)
 
     # ── Summary ──
     print(f"\n{'=' * 60}")
