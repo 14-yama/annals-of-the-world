@@ -73,6 +73,8 @@ const BOT_REPORTS: Array<{ key: string; label: string; file: string; color: stri
   { key: 'consistency',    label: 'Consistency',    file: 'consistency.json',    color: '#6B3FA0' },
   { key: 'duplicates',     label: 'Duplicates',     file: 'duplicates.json',     color: '#C0392B' },
   { key: 'classification', label: 'Classification', file: 'classification.json', color: '#D4AF37' },
+  { key: 'edges',          label: 'Edge Bot',       file: 'edge_run.json',       color: '#1ABC9C' },
+  { key: 'significance',   label: 'Significance',   file: 'significance_run.json', color: '#8E44AD' },
 ]
 
 async function fetchJSON<T>(url: string): Promise<T | null> {
@@ -276,7 +278,8 @@ export default function AuditLogViewer() {
             px={2} py={1} fontSize="11px" fontWeight={600} borderRadius="md"
             bg={autoRefresh ? '#27AE6020' : '#F5F4F0'}
             color={autoRefresh ? '#27AE60' : '#787469'}
-            border="1px solid #E4E2DC" cursor="pointer">
+            border="1px solid #E4E2DC" cursor="pointer"
+            title={autoRefresh ? 'Pause live dashboard updates (bots continue running in cloud)' : 'Resume live dashboard updates'}>
             {autoRefresh ? 'PAUSE' : 'RESUME'}
           </Box>
         </Flex>
@@ -425,7 +428,7 @@ export default function AuditLogViewer() {
           label="Active Editors" color="#27AE60"
         />
         <StatCard
-          value={logs.length > 0 ? new Date(logs[0].timestamp).toLocaleDateString() : '—'}
+          value={logs.length > 0 ? new Date(logs[0].timestamp).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : '—'}
           label="Latest Edit" color="#6B3FA0"
         />
       </SimpleGrid>
@@ -500,7 +503,7 @@ export default function AuditLogViewer() {
                   <tr key={row.$id} style={{ backgroundColor: ri % 2 === 0 ? '#FAFAF8' : '#F5F4F0' }}>
                     <td style={tdStyle}>
                       <Text fontSize="xs" fontFamily='"JetBrains Mono", monospace' color="#787469">
-                        {new Date(row.timestamp).toLocaleString()}
+                        {new Date(row.timestamp).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', second: '2-digit' })}
                       </Text>
                     </td>
                     <td style={{ ...tdStyle, maxWidth: '180px', overflow: 'hidden' }}>

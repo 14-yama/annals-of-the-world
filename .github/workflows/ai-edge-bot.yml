@@ -1,0 +1,95 @@
+name: AI Edge Bot (git-first)
+
+# Generates relationship edges between entities.
+# Phase 1: Extracts existing proposed edges from detailsJson (free — no LLM).
+# Phase 2: Uses Gemini to discover NEW edges between high-significance entity pairs.
+# Commits edge files to git. sync-edges workflow pushes to Appwrite.
+
+on:
+  schedule:
+    - cron: '0 1 * * *'   # daily 01:00 UTC — after enrichment & significance runs
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Max Gemini pair comparisons"
+        default: "40"
+        type: string
+      min_significance:
+        description: "Min significance score for Gemini pairs"
+        default: "5"
+        type: string
+      extract_only:
+        description: "Extract-only mode (no Gemini calls, free)"
+        type: boolean
+        default: false
+      dry_run:
+        description: "Preview only — no file changes"
+        type: boolean
+        default: false
+
+jobs:
+  edge-bot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run AI Edge Bot
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          ARGS=(--count ${{ github.event.inputs.count || '40' }})
+          ARGS+=(--min-significance ${{ github.event.inputs.min_significance || '5' }})
+          if [ "${{ github.event.inputs.extract_only }}" = "true" ]; then
+            ARGS+=(--extract-only)
+          fi
+          python3 scripts/ai_edge_bot.py "${ARGS[@]}"
+
+      - name: Dry run preview
+        if: ${{ github.event.inputs.dry_run == 'true' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 scripts/ai_edge_bot.py --dry-run --count 10
+
+      - name: Commit edge files
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name  "Annals Edge Bot"
+          git config user.email "edge-bot@annals-of-the-world.bot"
+          git add data/appwrite-export/edges/ data/enrichment/edge_run.json
+          CHANGED=$(git diff --cached --name-only | wc -l)
+          if [ "$CHANGED" -gt 0 ]; then
+            git commit -m "feat(edges): AI edge bot — new relationship edges added
+
+          Automated edge generation via Gemini.
+          Pipeline: ai-edge-bot.yml | Run: ${{ github.run_id }}"
+            git push
+          else
+            echo "No new edges to commit"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### Edge Bot Results" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f data/enrichment/edge_run.json ]; then
+            python3 -c "
+          import json
+          d = json.load(open('data/enrichment/edge_run.json'))
+          s = d.get('summary', {})
+          print(f'| Metric | Value |')
+          print(f'|--------|-------|')
+          print(f'| New Edges | {s.get(\"new_edges\", 0)} |')
+          print(f'| From detailsJson | {s.get(\"from_detailsJson\", 0)} |')
+          print(f'| From Gemini | {s.get(\"from_gemini\", 0)} |')
+          " >> "$GITHUB_STEP_SUMMARY"
+          fi

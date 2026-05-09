@@ -1,0 +1,80 @@
+name: Significance Backfill Bot
+
+# Rates historical significance (1–10 score + category) for enriched entities
+# that are missing this field. Runs after the enrichment workflow.
+# Writes changes to git only — sync_gateway pushes to Appwrite.
+
+on:
+  schedule:
+    - cron: '0 2 * * *'   # daily 02:00 UTC — after enrichment (00:00/06:00)
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Max entities to score per run"
+        default: "50"
+        type: string
+      dry_run:
+        description: "Preview only — no file changes"
+        type: boolean
+        default: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run significance backfill
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python3 scripts/backfill_significance.py \
+            --count ${{ github.event.inputs.count || '50' }}
+
+      - name: Dry run
+        if: ${{ github.event.inputs.dry_run == 'true' }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 scripts/backfill_significance.py --count 5 --dry-run
+
+      - name: Commit scored entities
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name  "Annals Significance Bot"
+          git config user.email "significance-bot@annals-of-the-world.bot"
+          git add data/appwrite-export/entities/ data/enrichment/significance_run.json
+          CHANGED=$(git diff --cached --name-only | wc -l)
+          if [ "$CHANGED" -gt 0 ]; then
+            git commit -m "feat(data): significance backfill — ${CHANGED} entities scored
+
+          Automated historical significance scoring via Gemini.
+          Pipeline: significance-backfill.yml | Run: ${{ github.run_id }}"
+            git push
+          else
+            echo "No entities scored this run"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "### Significance Backfill Results" >> "$GITHUB_STEP_SUMMARY"
+          if [ -f data/enrichment/significance_run.json ]; then
+            python3 -c "
+          import json
+          d = json.load(open('data/enrichment/significance_run.json'))
+          print(f'| Metric | Value |')
+          print(f'|--------|-------|')
+          print(f'| Scored | {d.get(\"enriched\", 0)} |')
+          print(f'| Failed | {d.get(\"failed\", 0)} |')
+          " >> "$GITHUB_STEP_SUMMARY"
+          fi

@@ -141,9 +141,20 @@ Topic tags. MUST include: the entity's country/region and primary field/domain.
 ### Frameworks (exactly 3)
 Choose from: {valid_frameworks}
 
+### Historical Significance
+Rate and describe this entity's historical importance in three dimensions:
+- **significanceScore**: Integer 1–10. Guidelines:
+  - 10: Changed the entire trajectory of human civilization (Alexander, Islam, printing press)
+  - 8–9: Shaped a continent or major era (Napoleon, Mongol Empire, Black Death)
+  - 6–7: Significant regional or thematic impact (a major battle, an important inventor)
+  - 4–5: Notable but limited scope (a secondary ruler, a regional movement)
+  - 1–3: Local, minor, or specialist interest
+- **significanceNarrative**: 1–2 sentence plain-English explanation of WHY this entity matters historically. Must be specific — include real consequences, numbers, or successor events.
+- **significanceCategory**: Exactly one of: "world-changing" | "continental" | "regional" | "local"
+
 ## Output
 Return ONLY a valid JSON object with these exact keys — no markdown, no explanation:
-{{"summary": "...", "causes": ["..."], "effects": ["..."], "relationships": [{{"sourceSlug": "...", "sourceName": "...", "verb": "...", "targetSlug": "...", "targetName": "...", "context": "..."}}], "places": [{{"name": "...", "role": "..."}}], "subjects": ["..."], "frameworks": ["..."]}}"""
+{{"summary": "...", "causes": ["..."], "effects": ["..."], "relationships": [{{"sourceSlug": "...", "sourceName": "...", "verb": "...", "targetSlug": "...", "targetName": "...", "context": "..."}}], "places": [{{"name": "...", "role": "..."}}], "subjects": ["..."], "frameworks": ["..."], "historicalSignificance": {{"significanceScore": 7, "significanceNarrative": "...", "significanceCategory": "regional"}}}}"""
 
 
 # ═══════════════════════════════════════════════════════════
@@ -406,6 +417,12 @@ def apply_enrichment(filepath, slug, result):
             entity["subjects"] = result["subjects"]
         if result.get("frameworks"):
             entity["frameworks"] = result["frameworks"]
+        # Historical significance — store on entity root + detailsJson
+        if result.get("historicalSignificance"):
+            hs = result["historicalSignificance"]
+            if isinstance(hs, dict) and isinstance(hs.get("significanceScore"), (int, float)):
+                entity["historicalSignificance"] = hs
+                details["historicalSignificance"] = hs
 
         # Append edit log (last 50 entries kept)
         existing_log = details.get("_editLog") or []

@@ -43,7 +43,7 @@ jobs:
         with: { node-version: '20' }
       - name: Install tsx
         run: npm install -g tsx
-      - name: Run sync gateway
+      - name: Run sync gateway (entities)
         env:
           APPWRITE_API_KEY: ${{ secrets.APPWRITE_API_KEY }}
           SYNC_EDITOR_ID: 'sync-gateway:github-action'
@@ -53,14 +53,26 @@ jobs:
           if [ "${{ inputs.full }}" = "true" ]; then ARGS+=(--full); fi
           if [ -n "${{ inputs.max_writes }}" ]; then ARGS+=(--max=${{ inputs.max_writes }}); fi
           npx tsx scripts/sync_gateway.ts "${ARGS[@]}"
+      - name: Run sync edges (relationships collection)
+        env:
+          APPWRITE_API_KEY: ${{ secrets.APPWRITE_API_KEY }}
+          VITE_APPWRITE_ENDPOINT: 'https://fra.cloud.appwrite.io/v1'
+          VITE_APPWRITE_PROJECT_ID: '66509ba7003618a05af6'
+          VITE_APPWRITE_DATABASE_ID: 'annals_world_db'
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            npx tsx scripts/sync_edges.ts --dry-run
+          else
+            npx tsx scripts/sync_edges.ts --max=200
+          fi
       - name: Commit budget + last_sync state
         if: ${{ inputs.dry_run != 'true' }}
         run: |
           git config user.name  "Annals Sync Gateway"
           git config user.email "sync-gateway@annals-of-the-world.bot"
-          git add data/governance/budget.json data/governance/last_sync.json data/appwrite-export/entities/
+          git add data/governance/budget.json data/governance/last_sync.json data/appwrite-export/entities/ data/appwrite-export/edges/
           if ! git diff --cached --quiet; then
-            git commit -m "chore(sync): gateway run — state + cleared _editLog"
+            git commit -m "chore(sync): gateway run — state + cleared _editLog + edges synced"
             git push
           else
             echo "No state changes."
