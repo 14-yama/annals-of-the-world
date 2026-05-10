@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-10T18:37:43Z",
+  "timestamp": "2026-05-10T19:28:45Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 1,
@@ -9,28 +9,28 @@
     {
       "slug": "yuya",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "relationship[0] invalid verb: 'FORMED'"
     },
     {
       "slug": "era-neolithic-chalcolithic",
       "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "era-paleolithic-mesolithic",
-      "status": "enriched",
-      "old_len": 225,
-      "new_len": 1876
+      "reason": "relationship[0] invalid verb: 'LEAD_TO'"
     },
     {
       "slug": "era-post-cold-war",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "jan-\u017eelivsk\u00fd",
       "status": "failed",
       "reason": "relationship[0] invalid verb: 'INFLUENCED'"
+    },
+    {
+      "slug": "jan-elivsk",
+      "status": "enriched",
+      "old_len": 73,
+      "new_len": 1306
     }
   ]
 }
