@@ -1,39 +1,44 @@
 {
-  "generatedAt": "2026-05-10T21:31:10Z",
+  "generatedAt": "2026-05-10T22:39:16Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 5,
+  "failed": 0,
   "dry_run": false,
   "results": [
     {
       "slug": "era-age-of-empire",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 8,
+      "category": "continental"
     },
     {
       "slug": "saint-valentine",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
     },
     {
       "slug": "ivan-edwards",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "marty-makary",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "xenocrates-of-aphrodisias",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 0,
-    "failed": 5
+    "entities_scored": 5,
+    "failed": 0
   }
 }

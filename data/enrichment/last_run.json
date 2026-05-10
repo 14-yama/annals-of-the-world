@@ -1,26 +1,15 @@
 {
-  "timestamp": "2026-05-10T17:54:31Z",
+  "timestamp": "2026-05-10T18:37:43Z",
   "model": "ollama",
-  "count_requested": 20,
+  "count_requested": 5,
   "enriched": 1,
-  "failed": 17,
+  "failed": 4,
   "dry_run": false,
   "entities": [
-    {
-      "slug": "demosthenes",
-      "status": "failed",
-      "reason": "timed out"
-    },
     {
       "slug": "yuya",
       "status": "failed",
       "reason": "timed out"
-    },
-    {
-      "slug": "era-early-medieval",
-      "status": "enriched",
-      "old_len": 219,
-      "new_len": 1527
     },
     {
       "slug": "era-neolithic-chalcolithic",
@@ -29,73 +18,19 @@
     },
     {
       "slug": "era-paleolithic-mesolithic",
-      "status": "failed",
-      "reason": "insufficient effects (0, need >= 2)"
+      "status": "enriched",
+      "old_len": 225,
+      "new_len": 1876
     },
     {
       "slug": "era-post-cold-war",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "timed out"
     },
     {
       "slug": "jan-\u017eelivsk\u00fd",
       "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "jan-elivsk",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "peisandros",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "moses-of-chorene",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "baldassarre-castiglione",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "smaragdus-of-saint-mihiel",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "wazo-of-li\u00e8ge",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "wazo-of-lige",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "konstantinos-maleinos",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "john-mystacon",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "publius-aelius-paetus",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "antonio-joaqun-prez-martnez",
-      "status": "failed",
-      "reason": "timed out"
+      "reason": "relationship[0] invalid verb: 'INFLUENCED'"
     }
   ]
 }
