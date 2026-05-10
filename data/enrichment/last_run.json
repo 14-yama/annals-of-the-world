@@ -1,46 +1,37 @@
 {
-  "timestamp": "2026-05-10T02:23:14Z",
+  "timestamp": "2026-05-10T13:58:10Z",
   "model": "ollama",
-  "count_requested": 50,
-  "enriched": 3,
-  "failed": 47,
+  "count_requested": 20,
+  "enriched": 2,
+  "failed": 17,
   "dry_run": false,
   "entities": [
     {
       "slug": "demosthenes",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "relationship[0] invalid verb: 'OPPOSED'"
     },
     {
       "slug": "yuya",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "relationship[3] invalid verb: 'IS_SUCCEEDSED_BY'"
     },
     {
       "slug": "leonard-of-noblac",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 705,
+      "new_len": 1226
     },
     {
       "slug": "era-age-of-exploration",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
-    },
-    {
-      "slug": "era-renaissance-period",
-      "status": "failed",
-      "reason": "relationship[0] invalid verb: 'INFLUENCED'"
+      "status": "enriched",
+      "old_len": 216,
+      "new_len": 1407
     },
     {
       "slug": "era-early-medieval",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'characterized'"
-    },
-    {
-      "slug": "era-age-of-empire",
-      "status": "enriched",
-      "old_len": 223,
-      "new_len": 1583
+      "reason": "relationship[1] invalid verb: 'SPREADS'"
     },
     {
       "slug": "era-neolithic-chalcolithic",
@@ -55,33 +46,27 @@
     {
       "slug": "era-post-cold-war",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "invalid framework: 'ENVIRONMENTAL_history'"
     },
     {
       "slug": "jan-\u017eelivsk\u00fd",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'MEETED_WITH'"
+      "reason": "relationship[2] invalid verb: 'CONFRONTS'"
     },
     {
       "slug": "jan-elivsk",
       "status": "failed",
-      "reason": "insufficient effects (0, need >= 2)"
+      "reason": "insufficient relationships (1, need >= 3)"
     },
     {
       "slug": "peisandros",
       "status": "failed",
-      "reason": "relationship[2] invalid verb: 'CONTROLS'"
-    },
-    {
-      "slug": "magnus-of-trani",
-      "status": "enriched",
-      "old_len": 753,
-      "new_len": 1086
+      "reason": "relationship[2] invalid verb: 'OPPONENTS'"
     },
     {
       "slug": "moses-of-chorene",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "baldassarre-castiglione",
@@ -91,173 +76,32 @@
     {
       "slug": "smaragdus-of-saint-mihiel",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'INFLUENCED'"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "wazo-of-li\u00e8ge",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'chronicled'"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "wazo-of-lige",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "insufficient relationships (1, need >= 3)"
     },
     {
       "slug": "konstantinos-maleinos",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "reason": "relationship[3] invalid verb: 'QUOTES'"
     },
     {
       "slug": "john-mystacon",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "insufficient relationships (1, need >= 3)"
     },
     {
       "slug": "publius-aelius-paetus",
       "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
-    },
-    {
-      "slug": "antonio-joaqun-prez-martnez",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "gerardo-bianchi",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
-    },
-    {
-      "slug": "king-dongmyeong-of-goguryeo",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "jainism",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "chad-of-mercia",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
-    },
-    {
-      "slug": "judaism",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "prasenajit",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "boniface-iii",
-      "status": "failed",
-      "reason": "relationship[0] invalid verb: 'SUCCEEDED'"
-    },
-    {
-      "slug": "menon-of-pharsalus",
-      "status": "failed",
-      "reason": "relationship[0] invalid verb: 'recognized'"
-    },
-    {
-      "slug": "lord-xinling",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "lucio-marineo-sculo",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
-    },
-    {
-      "slug": "trojan-war",
-      "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
-    },
-    {
-      "slug": "anastasius-ii",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "hisham-ibn-urwah",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "juan-gil-de-hontan",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "new-testament",
-      "status": "enriched",
-      "old_len": 91,
-      "new_len": 1444
-    },
-    {
-      "slug": "giovanni-boccamazza",
-      "status": "failed",
-      "reason": "relationship[0] invalid verb: 'CAUSED'"
-    },
-    {
-      "slug": "gupta-empire",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "central-africa",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "prokop-the-great",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "tatzates",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "true-jesus-church",
-      "status": "failed",
-      "reason": "relationship[1] invalid verb: 'ESTABLISHES'"
-    },
-    {
-      "slug": "east-africa",
-      "status": "failed",
-      "reason": "relationship[0] invalid verb: 'LOCATED_AT'"
-    },
-    {
-      "slug": "epic-of-gilgamesh",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
-    },
-    {
-      "slug": "latin-america",
-      "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
-    },
-    {
-      "slug": "antarctica",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
-    },
-    {
-      "slug": "empire",
-      "status": "failed",
-      "reason": "relationship[2] invalid verb: 'SPREADS_THROUGHOUT'"
-    },
-    {
-      "slug": "old-kingdom-of-egypt",
-      "status": "failed",
-      "reason": "relationship[0] invalid verb: 'UNIFIED'"
+      "reason": "insufficient frameworks (1, need >= 2)"
     }
   ]
 }
