@@ -128,32 +128,134 @@ def ollama_ps() -> dict:
 
 
 def sprint_stats() -> dict:
-    """Summarise completed work in the last 24 hours from the job registry."""
-    cutoff = time.time() - 86400
-    total_entities = 0
-    by_bot: dict[str, int] = {}
+    """
+    Rich analytics over all jobs in the registry.
+    Returns daily/weekly/monthly breakdowns, action type counts, top bots,
+    and editor attribution so the UI can display comprehensive bot stats.
+    """
+    now = time.time()
+    windows = {
+        "last_24h": now - 86400,
+        "last_7d":  now - 86400 * 7,
+        "last_30d": now - 86400 * 30,
+    }
+
+    # Counters per time window
+    totals:       dict[str, int] = {w: 0 for w in windows}
+    by_bot:       dict[str, dict[str, int]] = {w: {} for w in windows}
+    by_action:    dict[str, dict[str, int]] = {w: {} for w in windows}
+    by_day:       dict[str, dict[str, int]] = {}      # "YYYY-MM-DD" → {bot: count}
+    completed_jobs: dict[str, int] = {w: 0 for w in windows}
+    failed_jobs:    dict[str, int] = {w: 0 for w in windows}
+    top_performers: dict[str, int] = {}  # bot → total entities all-time
+
+    # Infer "action" from bot name
+    def _bot_to_action(bot: str) -> str:
+        b = bot.lower()
+        if "enrich" in b:
+            return "entity_enrich"
+        if "significance" in b or "sig" in b:
+            return "historicalSignificance"
+        if "queue" in b:
+            return "queue_scan"
+        if "sync" in b:
+            return "appwrite_sync"
+        if "push" in b:
+            return "git_push"
+        return "other"
+
     with _lock:
         for job in _jobs.values():
-            if job["status"] != "done":
-                continue
             try:
-                started_ts = time.mktime(time.strptime(job["started"], "%Y-%m-%dT%H:%M:%SZ"))
+                started_ts = time.mktime(
+                    time.strptime(job["started"], "%Y-%m-%dT%H:%M:%SZ")
+                )
             except Exception:
                 continue
-            if started_ts < cutoff:
-                continue
+
             c = job.get("count", 0) or 0
-            total_entities += c
             bot = job.get("bot", "unknown")
-            by_bot[bot] = by_bot.get(bot, 0) + c
+            action = _bot_to_action(bot)
+            day_key = time.strftime("%Y-%m-%d", time.gmtime(started_ts))
+            status = job.get("status", "")
+
+            # All-time top performers
+            top_performers[bot] = top_performers.get(bot, 0) + c
+
+            # Per-day breakdown (all history)
+            if day_key not in by_day:
+                by_day[day_key] = {}
+            by_day[day_key][bot] = by_day[day_key].get(bot, 0) + c
+
+            # Per-window counters
+            for w, cutoff in windows.items():
+                if started_ts < cutoff:
+                    continue
+                totals[w] += c
+                by_bot[w][bot] = by_bot[w].get(bot, 0) + c
+                by_action[w][action] = by_action[w].get(action, 0) + c
+                if status == "done":
+                    completed_jobs[w] += 1
+                elif status == "error":
+                    failed_jobs[w] += 1
+
+    # Sort top performers descending
+    ranked = sorted(top_performers.items(), key=lambda x: x[1], reverse=True)
+
+    # Active editors derived from running/recent jobs
+    active_editors: list[dict] = []
+    cutoff_active = now - 3600  # last hour
+    with _lock:
+        for job in _jobs.values():
+            try:
+                started_ts = time.mktime(
+                    time.strptime(job["started"], "%Y-%m-%dT%H:%M:%SZ")
+                )
+            except Exception:
+                continue
+            if started_ts >= cutoff_active or job.get("status") == "running":
+                model = job.get("model", "unknown")
+                env = "local"  # all jobs here are local
+                active_editors.append({
+                    "editorId": f"ollama/{model}·local",
+                    "bot": job.get("bot"),
+                    "status": job.get("status"),
+                    "since": job.get("started"),
+                    "env": env,
+                })
+
     return {
+        "windows": {
+            "last_24h": {
+                "totalEntities": totals["last_24h"],
+                "byBot": by_bot["last_24h"],
+                "byAction": by_action["last_24h"],
+                "completedJobs": completed_jobs["last_24h"],
+                "failedJobs": failed_jobs["last_24h"],
+            },
+            "last_7d": {
+                "totalEntities": totals["last_7d"],
+                "byBot": by_bot["last_7d"],
+                "byAction": by_action["last_7d"],
+                "completedJobs": completed_jobs["last_7d"],
+                "failedJobs": failed_jobs["last_7d"],
+            },
+            "last_30d": {
+                "totalEntities": totals["last_30d"],
+                "byBot": by_bot["last_30d"],
+                "byAction": by_action["last_30d"],
+                "completedJobs": completed_jobs["last_30d"],
+                "failedJobs": failed_jobs["last_30d"],
+            },
+        },
+        "byDay": by_day,
+        "topPerformers": [{"bot": b, "total": t} for b, t in ranked[:10]],
+        "activeEditors": active_editors,
+        # Legacy fields kept for backward compat
         "window": "last_24h",
-        "totalEntitiesProcessed": total_entities,
-        "byBot": by_bot,
-        "completedJobs": sum(
-            1 for j in _jobs.values()
-            if j["status"] == "done"
-        ),
+        "totalEntitiesProcessed": totals["last_24h"],
+        "byBot": by_bot["last_24h"],
+        "completedJobs": completed_jobs["last_24h"],
     }
 
 

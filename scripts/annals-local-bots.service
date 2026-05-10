@@ -1,0 +1,23 @@
+[Unit]
+Description=Annals of the World — Local Enrichment Bot Daemon (24/7 Ollama)
+After=network-online.target annals-local-bot-server.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/manasa151/annals-of-the-world
+ExecStart=/bin/bash /home/manasa151/annals-of-the-world/scripts/local_bot_daemon.sh
+Restart=always
+RestartSec=30
+StandardOutput=journal
+StandardError=journal
+Environment=PATH=/home/manasa151/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONUNBUFFERED=1
+# Tune these to your preference:
+Environment=ENRICH_COUNT=5
+Environment=SIG_COUNT=5
+Environment=INTERVAL=30
+Environment=OLLAMA_MODEL=llama3.2:3b
+
+[Install]
+WantedBy=default.target

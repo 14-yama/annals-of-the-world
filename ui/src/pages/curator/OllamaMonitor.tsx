@@ -39,10 +39,28 @@ interface LocalJob {
 }
 
 interface SprintStats {
+  // New rich structure
+  windows?: {
+    last_24h: WindowStats
+    last_7d: WindowStats
+    last_30d: WindowStats
+  }
+  byDay?: Record<string, Record<string, number>>
+  topPerformers?: Array<{ bot: string; total: number }>
+  activeEditors?: Array<{ editorId: string; bot: string; status: string; since: string; env: string }>
+  // Legacy compat
   window: string
   totalEntitiesProcessed: number
   byBot: Record<string, number>
   completedJobs: number
+}
+
+interface WindowStats {
+  totalEntities: number
+  byBot: Record<string, number>
+  byAction: Record<string, number>
+  completedJobs: number
+  failedJobs: number
 }
 
 interface GitPending {
@@ -169,6 +187,8 @@ export default function OllamaMonitor() {
   const [openLog, setOpenLog] = useState<string | null>(null)
   const [launching, setLaunching] = useState<string | null>(null)
   const [lastPoll, setLastPoll] = useState<Date>(new Date())
+  const [historyOpen, setHistoryOpen] = useState(false)
+  const [statsWindow, setStatsWindow] = useState<'last_24h' | 'last_7d' | 'last_30d'>('last_24h')
 
   const poll = useCallback(async () => {
     const [health, ps, allJobs, stats, gitPending, ghStatus] = await Promise.all([
@@ -686,16 +706,209 @@ export default function OllamaMonitor() {
         </Flex>
       </Box>
 
-      {/* Job log stream */}
-      <Box mb={6} p={4} bg="#FAFAF8" border="1px solid #E4E2DC" borderRadius="lg">
-        <Flex align="center" gap={2} mb={3}>
-          <Clock size={15} color="#787469" />
-          <Text fontFamily='"Cinzel", serif' fontSize="sm" fontWeight={700}
-            color="#2D2A24" letterSpacing="0.08em" textTransform="uppercase">
-            Job History (click to view log)
-          </Text>
-        </Flex>
+      {/* ── Comprehensive Bot Stats Card ── */}
+      {sprint && (() => {
+        const winKey = statsWindow
+        const win = sprint.windows?.[winKey]
+        const windowLabel: Record<string, string> = {
+          last_24h: 'Today (24h)', last_7d: 'This Week (7d)', last_30d: 'This Month (30d)',
+        }
+        const actionLabel: Record<string, string> = {
+          entity_enrich: 'Entity Enrichment',
+          historicalSignificance: 'Significance Rating',
+          queue_scan: 'Queue Scan',
+          appwrite_sync: 'Appwrite Sync',
+          git_push: 'Git Push',
+          other: 'Other',
+        }
+        const actionColor: Record<string, string> = {
+          entity_enrich: '#27AE60', historicalSignificance: '#8E44AD',
+          appwrite_sync: '#2471A3', git_push: '#E67E22', queue_scan: '#4A90D9', other: '#9E9A90',
+        }
+        // Cloud bots from ghRuns
+        const cloudTotal = ghRuns.filter(r => r.conclusion === 'success').length
+        const cloudRunning = ghRuns.filter(r => r.status === 'in_progress').length
 
+        return (
+          <Box mb={6} p={5} bg="white" border="1px solid #E4E2DC" borderRadius="lg">
+            {/* Header + window switcher */}
+            <Flex align="center" justify="space-between" mb={4} flexWrap="wrap" gap={3}>
+              <Flex align="center" gap={2}>
+                <BarChart3 size={15} color="#C5963A" />
+                <Text fontFamily='"Cinzel", serif' fontSize="sm" fontWeight={700}
+                  color="#2D2A24" letterSpacing="0.08em" textTransform="uppercase">
+                  Bot Performance Analytics
+                </Text>
+              </Flex>
+              <Flex gap={1}>
+                {(['last_24h', 'last_7d', 'last_30d'] as const).map(w => (
+                  <Box key={w} as="button" onClick={() => setStatsWindow(w)}
+                    px={3} py={1} borderRadius="md" cursor="pointer" fontSize="10px" fontWeight={700}
+                    bg={statsWindow === w ? '#C5963A' : '#F5F4F0'}
+                    color={statsWindow === w ? 'white' : '#787469'}
+                    border={`1px solid ${statsWindow === w ? '#C5963A' : '#E4E2DC'}`}>
+                    {windowLabel[w]}
+                  </Box>
+                ))}
+              </Flex>
+            </Flex>
+
+            {/* Top-level KPIs */}
+            <SimpleGrid columns={{ base: 2, md: 4 }} gap={3} mb={5}>
+              <Box p={3} bg="#FAFAF8" borderRadius="md" borderLeft="3px solid #27AE60">
+                <Text fontSize="9px" fontWeight={700} color="#787469" textTransform="uppercase"
+                  letterSpacing="0.06em">Entities Enriched</Text>
+                <Text fontSize="22px" fontWeight={700} color="#27AE60"
+                  fontFamily='"Cormorant Garamond", serif'>
+                  {(win?.totalEntities ?? sprint.totalEntitiesProcessed).toLocaleString()}
+                </Text>
+                <Text fontSize="10px" color="#9E9A90">{windowLabel[winKey]}</Text>
+              </Box>
+              <Box p={3} bg="#FAFAF8" borderRadius="md" borderLeft="3px solid #4A90D9">
+                <Text fontSize="9px" fontWeight={700} color="#787469" textTransform="uppercase"
+                  letterSpacing="0.06em">Jobs Completed</Text>
+                <Text fontSize="22px" fontWeight={700} color="#4A90D9"
+                  fontFamily='"Cormorant Garamond", serif'>
+                  {(win?.completedJobs ?? sprint.completedJobs).toLocaleString()}
+                </Text>
+                <Text fontSize="10px" color="#9E9A90">{win?.failedJobs ?? 0} failed</Text>
+              </Box>
+              <Box p={3} bg="#FAFAF8" borderRadius="md" borderLeft="3px solid #8E44AD">
+                <Text fontSize="9px" fontWeight={700} color="#787469" textTransform="uppercase"
+                  letterSpacing="0.06em">Cloud Runs (GH)</Text>
+                <Text fontSize="22px" fontWeight={700} color="#8E44AD"
+                  fontFamily='"Cormorant Garamond", serif'>{cloudTotal}</Text>
+                <Text fontSize="10px" color="#9E9A90">{cloudRunning} in progress</Text>
+              </Box>
+              <Box p={3} bg="#FAFAF8" borderRadius="md" borderLeft="3px solid #E67E22">
+                <Text fontSize="9px" fontWeight={700} color="#787469" textTransform="uppercase"
+                  letterSpacing="0.06em">Local Active</Text>
+                <Text fontSize="22px" fontWeight={700} color="#E67E22"
+                  fontFamily='"Cormorant Garamond", serif'>{activeJobs.length}</Text>
+                <Text fontSize="10px" color="#9E9A90">
+                  {serverOnline ? '🟢 server online' : '🔴 server offline'}
+                </Text>
+              </Box>
+            </SimpleGrid>
+
+            <SimpleGrid columns={{ base: 1, md: 3 }} gap={4}>
+              {/* Action Breakdown */}
+              <Box>
+                <Text fontSize="10px" fontWeight={700} color="#787469" textTransform="uppercase"
+                  letterSpacing="0.06em" mb={2}>Action Breakdown</Text>
+                {win && Object.keys(win.byAction).length > 0 ? (
+                  Object.entries(win.byAction)
+                    .sort((a, b) => b[1] - a[1])
+                    .map(([action, count]) => {
+                      const total = Object.values(win.byAction).reduce((a, b) => a + b, 0) || 1
+                      const pct = Math.round((count / total) * 100)
+                      const color = actionColor[action] ?? '#9E9A90'
+                      return (
+                        <Box key={action} mb={2}>
+                          <Flex justify="space-between" mb={1}>
+                            <Text fontSize="10px" color="#524E44">{actionLabel[action] ?? action}</Text>
+                            <Text fontSize="10px" fontWeight={700} color={color}>{count} ({pct}%)</Text>
+                          </Flex>
+                          <Box h="4px" bg="#F0EDE8" borderRadius="full">
+                            <Box h="4px" bg={color} borderRadius="full" w={`${pct}%`} />
+                          </Box>
+                        </Box>
+                      )
+                    })
+                ) : (
+                  <Text fontSize="11px" color="#9E9A90">No actions yet in this window.</Text>
+                )}
+              </Box>
+
+              {/* Top Performers */}
+              <Box>
+                <Text fontSize="10px" fontWeight={700} color="#787469" textTransform="uppercase"
+                  letterSpacing="0.06em" mb={2}>Top Performers (all-time)</Text>
+                {(sprint.topPerformers ?? []).length > 0 ? (
+                  (sprint.topPerformers ?? []).slice(0, 6).map((p, i) => (
+                    <Flex key={p.bot} align="center" gap={2} mb={1.5}>
+                      <Text fontSize="10px" fontWeight={700} color="#B8B2A4" w="16px">#{i + 1}</Text>
+                      <Box flex={1}>
+                        <Text fontSize="11px" fontWeight={600} color="#2D2A24">{p.bot}</Text>
+                      </Box>
+                      <Box px={2} py={0.5} bg="#27AE6010" borderRadius="sm">
+                        <Text fontSize="10px" fontWeight={700} color="#27AE60">
+                          {p.total.toLocaleString()}
+                        </Text>
+                      </Box>
+                    </Flex>
+                  ))
+                ) : (
+                  <Text fontSize="11px" color="#9E9A90">No data yet.</Text>
+                )}
+              </Box>
+
+              {/* Active Editors */}
+              <Box>
+                <Text fontSize="10px" fontWeight={700} color="#787469" textTransform="uppercase"
+                  letterSpacing="0.06em" mb={2}>Active Editors (last hour)</Text>
+                {/* Local editors from jobs */}
+                {(sprint.activeEditors ?? []).length > 0 ? (
+                  (sprint.activeEditors ?? []).slice(0, 5).map((ed, i) => (
+                    <Flex key={i} align="center" gap={2} mb={2}>
+                      <Box w="7px" h="7px" borderRadius="full" flexShrink={0}
+                        bg={ed.status === 'running' ? '#27AE60' : '#9E9A90'} />
+                      <Box flex={1}>
+                        <Text fontSize="11px" fontWeight={600} color="#2D2A24">{ed.editorId}</Text>
+                        <Text fontSize="9px" color="#9E9A90">
+                          {ed.env === 'local' ? '⚙ Local Ollama' : '☁ Cloud GH Actions'} · {ed.status}
+                        </Text>
+                      </Box>
+                    </Flex>
+                  ))
+                ) : (
+                  <Text fontSize="11px" color="#9E9A90">No local editors active in last hour.</Text>
+                )}
+                {/* Cloud editors from ghRuns */}
+                {ghRuns.filter(r => r.status === 'in_progress').map(r => (
+                  <Flex key={r.runId} align="center" gap={2} mb={2}>
+                    <Box w="7px" h="7px" borderRadius="full" flexShrink={0} bg="#2471A3" />
+                    <Box flex={1}>
+                      <Text fontSize="11px" fontWeight={600} color="#2D2A24">{r.name}</Text>
+                      <Text fontSize="9px" color="#9E9A90">☁ Cloud · started {relTime(r.startedAt)}</Text>
+                    </Box>
+                  </Flex>
+                ))}
+                {(sprint.activeEditors ?? []).length === 0 && ghRuns.filter(r => r.status === 'in_progress').length === 0 && (
+                  <Text fontSize="11px" color="#9E9A90">No editors active right now.</Text>
+                )}
+              </Box>
+            </SimpleGrid>
+          </Box>
+        )
+      })()}
+
+      {/* Job History — collapsible */}
+      <Box mb={6} border="1px solid #E4E2DC" borderRadius="lg" overflow="hidden">
+        <Box
+          as="button" w="100%"
+          onClick={() => setHistoryOpen(!historyOpen)}
+          p={4} bg="#FAFAF8" cursor="pointer"
+          _hover={{ bg: '#F0EDE8' }}
+          display="flex" alignItems="center" justifyContent="space-between"
+        >
+          <Flex align="center" gap={2}>
+            <Clock size={15} color="#787469" />
+            <Text fontFamily='"Cinzel", serif' fontSize="sm" fontWeight={700}
+              color="#2D2A24" letterSpacing="0.08em" textTransform="uppercase">
+              Job History
+            </Text>
+            {recentJobs.length > 0 && (
+              <Box px={2} py={0.5} bg="#E4E2DC" borderRadius="full">
+                <Text fontSize="10px" fontWeight={700} color="#787469">{recentJobs.length}</Text>
+              </Box>
+            )}
+          </Flex>
+          <Text fontSize="11px" color="#9E9A90">{historyOpen ? '▲ collapse' : '▼ expand'}</Text>
+        </Box>
+
+        {historyOpen && (
+          <Box p={4}>
         {recentJobs.length === 0 ? (
           <Text fontSize="13px" color="#9E9A90" py={4} textAlign="center">
             No jobs run yet. Press a Launch button above.
@@ -783,6 +996,7 @@ export default function OllamaMonitor() {
             ))}
           </Box>
         )}
+        </Box>  {/* end historyOpen */}
       </Box>
 
       {/* What Ollama does for this project */}

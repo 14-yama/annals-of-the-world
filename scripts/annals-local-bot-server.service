@@ -1,0 +1,19 @@
+[Unit]
+Description=Annals of the World — Local Bot HTTP Server (port 7474)
+After=network-online.target annals-auto-pull.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/manasa151/annals-of-the-world
+ExecStart=/bin/bash /home/manasa151/annals-of-the-world/scripts/local_bot_server_start.sh
+Restart=always
+RestartSec=15
+# Restart fast — if VS Code is closed the server should stay up
+StandardOutput=journal
+StandardError=journal
+Environment=PATH=/home/manasa151/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target
