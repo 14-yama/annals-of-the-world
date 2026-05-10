@@ -270,5 +270,52 @@
       "\u2713 Pushed 2 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
     "exitCode": 0
+  },
+  "sync-1778372623": {
+    "job_id": "sync-1778372623",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 886645,
+    "started": "2026-05-10T00:23:43Z",
+    "finished": "2026-05-10T00:24:04Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=624/100000 (hardStop=80%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 2 dirty files",
+      "[diff] 2 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 2,",
+      "  \"entitiesUpserted\": 2,",
+      "  \"auditRowsEmitted\": 2,",
+      "  \"writesPerformed\": 4,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 5b1f7e23"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1778372644": {
+    "job_id": "git-push-1778372644",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-10T00:24:04Z",
+    "finished": null,
+    "log": [
+      "Pending files: 2 entities, 0 edges (2 total)",
+      "git add data/appwrite-export/ ..."
+    ],
+    "exitCode": null
   }
 }
