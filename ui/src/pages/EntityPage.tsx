@@ -896,7 +896,8 @@ export default function EntityPage() {
             {activeTab === 'overview' && (
               <Box>
                 {(entity.summary || '').split('\n\n').map((para, i) => (
-                  <Text key={i} fontSize="sm" color="#524E44" lineHeight={1.8} mb={4}>{para}</Text>
+                  <Text key={i} fontSize="sm" color="#524E44" lineHeight={1.8} mb={4}
+                    textAlign="justify" style={{ hyphens: 'auto' }}>{para}</Text>
                 ))}
 
                 {/* v2 enrichment: alt names, quote, external links */}
