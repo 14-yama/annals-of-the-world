@@ -996,6 +996,8 @@ export default function OllamaMonitor() {
             ))}
           </Box>
         )}
+          </Box>
+        )}
       </Box>
 
       {/* What Ollama does for this project */}
