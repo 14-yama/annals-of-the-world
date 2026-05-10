@@ -1,72 +1,61 @@
 {
-  "timestamp": "2026-05-10T13:58:10Z",
+  "timestamp": "2026-05-10T17:54:31Z",
   "model": "ollama",
   "count_requested": 20,
-  "enriched": 2,
+  "enriched": 1,
   "failed": 17,
   "dry_run": false,
   "entities": [
     {
       "slug": "demosthenes",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'OPPOSED'"
+      "reason": "timed out"
     },
     {
       "slug": "yuya",
       "status": "failed",
-      "reason": "relationship[3] invalid verb: 'IS_SUCCEEDSED_BY'"
-    },
-    {
-      "slug": "leonard-of-noblac",
-      "status": "enriched",
-      "old_len": 705,
-      "new_len": 1226
-    },
-    {
-      "slug": "era-age-of-exploration",
-      "status": "enriched",
-      "old_len": 216,
-      "new_len": 1407
+      "reason": "timed out"
     },
     {
       "slug": "era-early-medieval",
-      "status": "failed",
-      "reason": "relationship[1] invalid verb: 'SPREADS'"
+      "status": "enriched",
+      "old_len": 219,
+      "new_len": 1527
     },
     {
       "slug": "era-neolithic-chalcolithic",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'LOCATED_IN'"
+      "reason": "timed out"
     },
     {
       "slug": "era-paleolithic-mesolithic",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "reason": "insufficient effects (0, need >= 2)"
     },
     {
       "slug": "era-post-cold-war",
       "status": "failed",
-      "reason": "invalid framework: 'ENVIRONMENTAL_history'"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "jan-\u017eelivsk\u00fd",
       "status": "failed",
-      "reason": "relationship[2] invalid verb: 'CONFRONTS'"
+      "reason": "timed out"
     },
     {
       "slug": "jan-elivsk",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "reason": "timed out"
     },
     {
       "slug": "peisandros",
       "status": "failed",
-      "reason": "relationship[2] invalid verb: 'OPPONENTS'"
+      "reason": "timed out"
     },
     {
       "slug": "moses-of-chorene",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "timed out"
     },
     {
       "slug": "baldassarre-castiglione",
@@ -76,32 +65,37 @@
     {
       "slug": "smaragdus-of-saint-mihiel",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "timed out"
     },
     {
       "slug": "wazo-of-li\u00e8ge",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "timed out"
     },
     {
       "slug": "wazo-of-lige",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "reason": "timed out"
     },
     {
       "slug": "konstantinos-maleinos",
       "status": "failed",
-      "reason": "relationship[3] invalid verb: 'QUOTES'"
+      "reason": "timed out"
     },
     {
       "slug": "john-mystacon",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "reason": "timed out"
     },
     {
       "slug": "publius-aelius-paetus",
       "status": "failed",
-      "reason": "insufficient frameworks (1, need >= 2)"
+      "reason": "timed out"
+    },
+    {
+      "slug": "antonio-joaqun-prez-martnez",
+      "status": "failed",
+      "reason": "timed out"
     }
   ]
 }
