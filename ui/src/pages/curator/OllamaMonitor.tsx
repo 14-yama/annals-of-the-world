@@ -996,7 +996,6 @@ export default function OllamaMonitor() {
             ))}
           </Box>
         )}
-        </Box>  {/* end historyOpen */}
       </Box>
 
       {/* What Ollama does for this project */}

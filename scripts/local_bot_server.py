@@ -753,23 +753,34 @@ def start_watchdog(interval_seconds: int = 300):
 
 
 
-CORS_HEADERS = {
-    "Access-Control-Allow-Origin": "http://localhost:5173",
+# CORS allows any localhost port so the UI works on :5173, :5174, etc.
+_CORS_BASE = {
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
 }
+
+
+def _cors_origin(request_origin: str) -> str:
+    """Allow any http://localhost:<port> origin."""
+    if request_origin and request_origin.startswith("http://localhost:"):
+        return request_origin
+    return "http://localhost:5173"   # safe fallback
 
 
 class BotHandler(BaseHTTPRequestHandler):
     def log_message(self, fmt, *args):  # silence default access log
         pass
 
+    def _cors_headers(self) -> dict:
+        origin = self.headers.get("Origin", "http://localhost:5173")
+        return {"Access-Control-Allow-Origin": _cors_origin(origin), **_CORS_BASE}
+
     def _send(self, status: int, body: dict):
         payload = json.dumps(body).encode()
         self.send_response(status)
         self.send_header("Content-Type", "application/json")
         self.send_header("Content-Length", str(len(payload)))
-        for k, v in CORS_HEADERS.items():
+        for k, v in self._cors_headers().items():
             self.send_header(k, v)
         self.end_headers()
         self.wfile.write(payload)
@@ -785,7 +796,7 @@ class BotHandler(BaseHTTPRequestHandler):
 
     def do_OPTIONS(self):
         self.send_response(204)
-        for k, v in CORS_HEADERS.items():
+        for k, v in self._cors_headers().items():
             self.send_header(k, v)
         self.end_headers()
 
@@ -903,7 +914,7 @@ def main():
     if ollama_info.get("models"):
         print(f"  Models: {', '.join(ollama_info['models'])}")
     print(f"  Listening on http://localhost:{args.port}")
-    print(f"  CORS: http://localhost:5173")
+    print(f"  CORS: any http://localhost:* origin (works on any Vite port)")
     print(f"  Endpoints: /health /bots/status /bots/enrich /bots/significance")
     print(f"             /bots/queue /bots/sync /bots/all /bots/stop")
     print(f"  Watchdog: auto-sync every 5 min (autonomous — no human needed)")
