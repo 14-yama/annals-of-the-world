@@ -32,6 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: clean/audit-system   # always work from the active branch
           fetch-depth: 1
 
       - uses: actions/setup-python@v5

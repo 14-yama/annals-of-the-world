@@ -30,7 +30,24 @@ ENTITIES_DIR = REPO_ROOT / "data" / "appwrite-export" / "entities"
 REPORT_FILE  = REPO_ROOT / "data" / "enrichment" / "significance_run.json"
 DASH_REPORT  = REPO_ROOT / "data" / "audit-reports" / "significance_run.json"
 
-EDITOR_ID = "backfill-significance-bot:gemini"
+# EDITOR_ID built dynamically in main() after --model arg is known.
+# Format: "<model>·<env>·<host/run>" for readable audit log attribution.
+EDITOR_ID = "backfill-significance-bot:gemini"   # overwritten in main()
+
+
+def build_editor_id(model: str, ollama_model: str = "llama3.2:3b") -> str:
+    """Build a human-readable editorId that appears in the audit log."""
+    import socket
+    is_github = bool(os.environ.get("GITHUB_ACTIONS"))
+    if model == "ollama":
+        return f"ollama/{ollama_model}\u00b7local\u00b7{socket.gethostname()}"
+    elif is_github:
+        run_id = os.environ.get("GITHUB_RUN_ID", "?")
+        model_name = "gemini-2.5-flash" if model == "gemini" else "gpt-4o-mini"
+        return f"{model_name}\u00b7cloud\u00b7GH#{run_id}"
+    else:
+        model_name = "gemini-2.5-flash" if model == "gemini" else "gpt-4o-mini"
+        return f"{model_name}\u00b7local\u00b7{socket.gethostname()}"
 
 CATEGORIES = ["world-changing", "continental", "regional", "local"]
 
@@ -293,6 +310,11 @@ def main():
     if args.dry_run:
         print("  DRY RUN — no files will be written")
     print(f"{'='*60}")
+
+    # Build dynamic editor ID for audit log attribution
+    global EDITOR_ID
+    EDITOR_ID = build_editor_id(args.model, args.ollama_model)
+    print(f"Editor ID: {EDITOR_ID}")
 
     print("Building queue...")
     queue = build_queue(args.count)

@@ -301,7 +301,9 @@ async function emitAuditRow(entity: Entity, log: EditLogEntry): Promise<boolean>
     editorId: log.editorId,
     editorNote: 'replayed by sync_gateway from _editLog',
     timestamp: log.timestamp,
-    sessionId: `gateway-${Date.now()}`,
+    sessionId: process.env.GITHUB_RUN_ID
+      ? `sync-gateway·cloud·GH#${process.env.GITHUB_RUN_ID}`
+      : `sync-gateway·local·${Date.now()}`,
   })
   return r.ok
 }

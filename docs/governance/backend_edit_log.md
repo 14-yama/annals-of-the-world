@@ -235,3 +235,21 @@
 - **Model:** gemini
 - **Enriched:** 1 | **Failed:** 19 | **Synced:** 1
 - **Entities:** era-modern
+
+### AI Enrichment — 2026-05-09T11:58:49Z
+
+- **Model:** gemini
+- **Enriched:** 10 | **Failed:** 0
+- **Entities:** era-late-medieval, era-high-medieval, era-interwar-period, era-world-war-ii-era, era-bronze-age, era-archaic-period, era-digital-age, era-cold-war-era, era-hellenistic-period, era-reformation-era
+
+### AI Enrichment — 2026-05-09T12:26:42Z
+
+- **Model:** gemini
+- **Enriched:** 10 | **Failed:** 0
+- **Entities:** era-late-medieval, era-high-medieval, era-hellenistic-period, era-reformation-era, era-bronze-age, era-interwar-period, era-world-war-ii-era, era-cold-war-era, era-archaic-period, era-digital-age
+
+### AI Enrichment — 2026-05-09T14:49:12Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** era-age-of-enlightenment

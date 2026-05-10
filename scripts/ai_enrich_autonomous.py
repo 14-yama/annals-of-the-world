@@ -61,7 +61,36 @@ BASE = "data/appwrite-export/entities"
 QUEUE_FILE = "data/enrichment/queue.json"
 REPORT_FILE = "data/enrichment/last_run.json"
 
-EDITOR_ID = "ai-enrichment-bot:gemini-2.5-flash"
+# EDITOR_ID is built dynamically after args are parsed (see build_editor_id())
+# Format: "<model>·<env>·<host/run>" — readable in audit log filters
+# Examples:
+#   ollama/llama3.2:3b·local·myhost          (local Ollama bot)
+#   gemini-2.5-flash·cloud·GH#12345678       (GitHub Actions cloud bot)
+#   gpt-4o-mini·cloud·GH#12345678            (GitHub Actions, OpenAI)
+EDITOR_ID = "ai-enrichment-bot:gemini-2.5-flash"   # overwritten in main()
+
+
+def build_editor_id(model: str, model_name: str) -> str:
+    """
+    Build a human-readable editorId that survives into the audit log.
+    Shows: model name, environment (local vs cloud), and run context.
+    """
+    import socket
+    is_github = bool(os.environ.get("GITHUB_ACTIONS"))
+    if model == "ollama":
+        env = "local"
+        context = socket.gethostname()
+        return f"ollama/{model_name}\u00b7{env}\u00b7{context}"
+    elif is_github:
+        run_id = os.environ.get("GITHUB_RUN_ID", "?")
+        repo = os.environ.get("GITHUB_REPOSITORY", "annals")
+        env = "cloud"
+        return f"{model_name}\u00b7{env}\u00b7GH#{run_id}"
+    else:
+        import socket
+        env = "local"
+        context = socket.gethostname()
+        return f"{model_name}\u00b7{env}\u00b7{context}"
 
 VALID_VERBS = sorted([
     "CAUSES", "INFLUENCES", "COLLABORATES_WITH", "PARTICIPATES_IN",
@@ -563,6 +592,16 @@ def main():
         if not api_key and not args.dry_run:
             print("ERROR: Set OPENAI_API_KEY environment variable")
             sys.exit(1)
+
+    # ── Build dynamic editor ID (identifies this bot run in audit log) ──
+    global EDITOR_ID
+    model_name = {
+        "gemini": args.gemini_model,
+        "openai": args.openai_model,
+        "ollama": args.ollama_model,
+    }.get(args.model, args.model)
+    EDITOR_ID = build_editor_id(args.model, model_name)
+    print(f"Editor ID: {EDITOR_ID}")
 
     # ── Load queue ──
     if not os.path.exists(args.queue):

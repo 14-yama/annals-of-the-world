@@ -38,6 +38,7 @@ import {
   BarChart3,
   AlertTriangle,
   ClipboardList,
+  Cpu,
 } from 'lucide-react'
 
 /* ── Top-level domain navigation (horizontal) ── */
@@ -201,6 +202,7 @@ const NAV_SECTIONS: NavSection[] = [
       { path: '/curator/triage',  label: 'Triage System',    icon: AlertTriangle },
       { path: '/curator/classes', label: 'Class Browser',    icon: Layers },
       { path: '/curator/people',  label: 'People Hub',       icon: Users },
+      { path: '/curator/ollama',  label: 'Ollama Monitor',   icon: Cpu },
       { path: '/quiz',           label: 'Examination Hall', icon: Brain },
     ],
   },

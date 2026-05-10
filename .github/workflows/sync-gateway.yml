@@ -38,6 +38,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: clean/audit-system   # always sync from the working branch
           fetch-depth: 0   # need history for git diff against last_sync commit
       - uses: actions/setup-node@v4
         with: { node-version: '20' }

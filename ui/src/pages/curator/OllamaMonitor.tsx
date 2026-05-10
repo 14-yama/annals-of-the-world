@@ -320,6 +320,81 @@ export default function OllamaMonitor() {
         </Box>
       </SimpleGrid>
 
+      {/* ── Live Bots Summary Card ── */}
+      {(() => {
+        const localRunning = jobs.filter(j => j.status === 'running')
+        const cloudRunning = ghRuns.filter(r => r.status === 'in_progress')
+        const total = localRunning.length + cloudRunning.length
+        if (total === 0 && localRunning.length === 0 && cloudRunning.length === 0) {
+          // Still show the card even when idle
+        }
+        const accentColor = total > 0 ? '#27AE60' : '#9E9A90'
+        return (
+          <Box mb={6} p={4} bg="white" border="1px solid #E4E2DC" borderRadius="lg"
+            borderLeft={`4px solid ${accentColor}`}>
+            <Flex align="center" justify="space-between" mb={total > 0 ? 3 : 0}>
+              <Flex align="center" gap={2}>
+                <Activity size={14} color={accentColor} />
+                <Text fontSize="11px" fontWeight={700} color="#5D4E37" textTransform="uppercase"
+                  letterSpacing="0.07em">
+                  Live Bots
+                </Text>
+              </Flex>
+              <Box px={2} py="1px" bg={total > 0 ? 'rgba(39,174,96,0.12)' : 'rgba(158,154,144,0.1)'}
+                borderRadius="full">
+                <Text fontSize="11px" fontWeight={700} color={accentColor}>
+                  {total > 0
+                    ? `${total} active (${localRunning.length} local · ${cloudRunning.length} cloud)`
+                    : 'All idle'}
+                </Text>
+              </Box>
+            </Flex>
+            {total > 0 && (
+              <Flex gap={2} flexWrap="wrap">
+                {localRunning.map(job => {
+                  const elapsed = Math.max(0, (Date.now() - new Date(job.started).getTime()) / 1000)
+                  const elapsedStr = elapsed < 60 ? `${Math.floor(elapsed)}s`
+                    : elapsed < 3600 ? `${Math.floor(elapsed / 60)}m`
+                    : `${Math.floor(elapsed / 3600)}h`
+                  return (
+                    <Box key={job.job_id} px={3} py={2} borderRadius="md"
+                      bg="rgba(39,174,96,0.07)" border="1px solid rgba(39,174,96,0.25)">
+                      <Flex align="center" gap={2}>
+                        <Box w="7px" h="7px" borderRadius="full" bg="#27AE60"
+                          style={{ animation: 'pulse 1.5s ease-in-out infinite' }} />
+                        <Box>
+                          <Text fontSize="11px" fontWeight={700} color="#1D6A3A">{job.bot}</Text>
+                          <Text fontSize="10px" color="#5D8A6A">
+                            {job.model} · {elapsedStr} · pid {job.pid ?? '—'}
+                          </Text>
+                        </Box>
+                      </Flex>
+                    </Box>
+                  )
+                })}
+                {cloudRunning.map(run => (
+                  <Box key={run.runId ?? run.name} px={3} py={2} borderRadius="md"
+                    bg="rgba(36,113,163,0.07)" border="1px solid rgba(36,113,163,0.25)">
+                    <Flex align="center" gap={2}>
+                      <Box w="7px" h="7px" borderRadius="full" bg="#2471A3"
+                        style={{ animation: 'pulse 1.5s ease-in-out infinite' }} />
+                      <Box>
+                        <Text fontSize="11px" fontWeight={700} color="#154360">
+                          {run.name}
+                        </Text>
+                        <Text fontSize="10px" color="#5D7A8A">
+                          ☁️ cloud · {relTime(run.startedAt)}
+                        </Text>
+                      </Box>
+                    </Flex>
+                  </Box>
+                ))}
+              </Flex>
+            )}
+          </Box>
+        )
+      })()}
+
       <SimpleGrid columns={{ base: 1, lg: 2 }} gap={6} mb={6}>
 
         {/* Live Process Status (ollama ps) */}

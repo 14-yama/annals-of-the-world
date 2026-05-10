@@ -41,7 +41,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref }}
+          ref: clean/audit-system   # always enrich from the working branch
           fetch-depth: 2
 
       - uses: actions/setup-python@v5

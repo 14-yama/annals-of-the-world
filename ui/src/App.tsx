@@ -42,6 +42,7 @@ import DivisionDetail from './pages/curator/DivisionDetail'
 import AuditGuide from './pages/curator/AuditGuide'
 import AuditLogViewer from './pages/curator/AuditLogViewer'
 import ClassHub from './pages/curator/ClassHub'
+import OllamaMonitor from './pages/curator/OllamaMonitor'
 
 /** Reset scroll to top on every route change */
 function ScrollToTop() {
@@ -81,6 +82,7 @@ export default function App() {
         <Route path="/curator/classes/:classCode/:div" element={<DivisionDetail />} />
         <Route path="/curator/audit/guide" element={<AuditGuide />} />
         <Route path="/curator/audit/log" element={<AuditLogViewer />} />
+        <Route path="/curator/ollama" element={<OllamaMonitor />} />
         <Route path="/weapons" element={<WeaponsPage />} />
         <Route path="/languages" element={<LanguagesPage />} />
         <Route path="/architecture" element={<ArchitecturePage />} />
