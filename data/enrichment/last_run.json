@@ -1,35 +1,36 @@
 {
-  "timestamp": "2026-05-10T20:26:08Z",
+  "timestamp": "2026-05-10T21:25:33Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 1,
+  "failed": 4,
   "dry_run": false,
   "entities": [
     {
       "slug": "yuya",
       "status": "failed",
-      "reason": "insufficient effects (0, need >= 2)"
+      "reason": "timed out"
     },
     {
       "slug": "era-neolithic-chalcolithic",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "relationship[0] invalid verb: 'occurs_in'"
     },
     {
       "slug": "era-post-cold-war",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 227,
+      "new_len": 1934
     },
     {
       "slug": "jan-\u017eelivsk\u00fd",
       "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
+      "reason": "relationship[0] invalid verb: 'collaborates_with'"
     },
     {
       "slug": "peisandros",
       "status": "failed",
-      "reason": "relationship[2] invalid verb: 'CONTROLS'"
+      "reason": "relationship[0] invalid verb: 'occurs_in'"
     }
   ]
 }
