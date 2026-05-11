@@ -25,89 +25,7 @@
       "wikidataQid": "Q38370",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Henry_VIII",
       "imageUrl": "",
-      "detailsJson": {
-        "causes": [
-          "Desire for male heir driving annulment crisis with Catherine of Aragon",
-          "Papal refusal of annulment under Habsburg pressure",
-          "Renaissance humanism questioning papal authority"
-        ],
-        "effects": [
-          "English Reformation — Church of England breaks from Rome",
-          "Dissolution of monasteries redistributing wealth to gentry",
-          "Royal supremacy doctrine — monarch as head of church",
-          "Foundation of British naval power",
-          "Parliamentary sovereignty strengthened through Reformation statutes",
-          "Wales united with England under English law"
-        ],
-        "relationships": [
-          {
-            "sourceSlug": "henry-viii-of-england",
-            "sourceName": "Henry VIII",
-            "verb": "CAUSES",
-            "targetSlug": "english-reformation",
-            "targetName": "English Reformation",
-            "context": "Broke with Rome to annul marriage, creating Church of England"
-          },
-          {
-            "sourceSlug": "henry-viii-of-england",
-            "sourceName": "Henry VIII",
-            "verb": "DEFINES",
-            "targetSlug": "act-of-supremacy",
-            "targetName": "Act of Supremacy",
-            "context": "Declared himself Supreme Head of Church of England, 1534"
-          },
-          {
-            "sourceSlug": "henry-viii-of-england",
-            "sourceName": "Henry VIII",
-            "verb": "INFLUENCES",
-            "targetSlug": "elizabeth-i",
-            "targetName": "Elizabeth I",
-            "context": "Daughter who completed the Protestant settlement"
-          },
-          {
-            "sourceSlug": "henry-viii-of-england",
-            "sourceName": "Henry VIII",
-            "verb": "OCCURS_IN",
-            "targetSlug": "london",
-            "targetName": "London",
-            "context": "Ruled from Hampton Court and Greenwich palaces"
-          },
-          {
-            "sourceSlug": "martin-luther",
-            "sourceName": "Martin Luther",
-            "verb": "INFLUENCES",
-            "targetSlug": "henry-viii-of-england",
-            "targetName": "Henry VIII",
-            "context": "Protestant Reformation context enabled Henry's break with Rome"
-          }
-        ],
-        "places": [
-          {
-            "name": "Palace of Placentia",
-            "role": "Birth place"
-          }
-        ],
-        "texts": [
-          {
-            "title": "Wikipedia: Henry VIII of England",
-            "type": "Reference article",
-            "slug": "henry-viii-of-england"
-          }
-        ],
-        "externalLinks": [
-          "https://www.wikidata.org/wiki/Q38370",
-          "https://en.wikipedia.org/wiki/Henry_VIII"
-        ],
-        "tags": [
-          "Monarchs & Rulers",
-          "political-systems",
-          "empire-and-colonialism",
-          "geopolitical-linkage"
-        ],
-        "thumbnailUrl": "",
-        "quote": "",
-        "legacySummary": ""
-      },
+      "detailsJson": "{\"historicalSignificance\":{\"significanceScore\":8,\"significanceNarrative\":\"Henry VIII's break with Rome led to the English Reformation, dissolving monasteries and seizing their wealth, which reshaped British politics and identity for centuries. His actions paved the way for Britain to become a Protestant nation.\",\"significanceCategory\":\"world-changing\"},\"_editLog\":[],\"_unsyncedEdits\":false}",
       "subjectHeadings": [
         "People — Monarchs & Rulers — Global — Medieval"
       ],
@@ -128,7 +46,12 @@
       "$id": "henry-viii-of-england",
       "$sequence": "165112",
       "$createdAt": "2026-04-05T12:37:59.849+00:00",
-      "$updatedAt": "2026-04-05T12:37:59.849+00:00"
+      "$updatedAt": "2026-04-05T12:37:59.849+00:00",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "Henry VIII's break with Rome led to the English Reformation, dissolving monasteries and seizing their wealth, which reshaped British politics and identity for centuries. His actions paved the way for Britain to become a Protestant nation.",
+        "significanceCategory": "world-changing"
+      }
     }
   ]
 }
