@@ -860,7 +860,11 @@
       "  RETRY (1) \u2014 relationship[2] invalid verb: 'QUOTES'",
       "  FAILED \u2014 insufficient causes (1, need >= 2)",
       "",
-      "[11/20] john-mystacon (score=112.0, 0c)"
+      "[11/20] john-mystacon (score=112.0, 0c)",
+      "  RETRY (1) \u2014 relationship[0] invalid verb: 'APPOINTED'",
+      "  FAILED \u2014 insufficient relationships (1, need >= 3)",
+      "",
+      "[12/20] publius-aelius-paetus (score=111.6, 0c)"
     ],
     "exitCode": null
   },
@@ -1014,7 +1018,19 @@
       "[44/50] faildergdit (importance=8)",
       "  SCORED \u2014 5/10 (regional): Faildergd\u00f3it's reign marked a significant regional development in Ireland, as he...",
       "",
-      "[45/50] narseh (importance=8)"
+      "[45/50] narseh (importance=8)",
+      "  ERROR \u2014 Ollama error: timed out",
+      "",
+      "[46/50] iytjenu (importance=8)",
+      "  SCORED \u2014 5/10 (regional): Iytjenu's existence as a king of the First Intermediate Period has implications ...",
+      "",
+      "[47/50] diadumenian (importance=8)",
+      "  ERROR \u2014 Ollama error: timed out",
+      "",
+      "[48/50] andronikos-ii-of-trebizond (importance=8)",
+      "  ERROR \u2014 Ollama error: timed out",
+      "",
+      "[49/50] vlad-ii-dracul (importance=8)"
     ],
     "exitCode": null
   },
@@ -1313,14 +1329,66 @@
   "git-push-1778542145": {
     "job_id": "git-push-1778542145",
     "bot": "git-push",
+    "status": "done",
+    "model": "none",
+    "count": 2,
+    "pid": null,
+    "started": "2026-05-11T23:29:05Z",
+    "finished": "2026-05-11T23:29:09Z",
+    "log": [
+      "Pending files: 2 entities, 0 edges (2 total)",
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 2 local enrichments\"",
+      "[clean/audit-system 4009fb99d2] feat(enrich): watchdog auto-push \u2014 2 local enrichments\n 5 files changed, 93 insertions(+), 15 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   47109bdb7c..4009fb99d2  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 2 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
+    ],
+    "exitCode": 0
+  },
+  "sync-1778542465": {
+    "job_id": "sync-1778542465",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 3648695,
+    "started": "2026-05-11T23:34:25Z",
+    "finished": "2026-05-11T23:34:44Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=848/100000 (hardStop=80%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 1 dirty files",
+      "[diff] 1 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 1,",
+      "  \"entitiesUpserted\": 1,",
+      "  \"auditRowsEmitted\": 1,",
+      "  \"writesPerformed\": 2,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 4009fb99"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1778542486": {
+    "job_id": "git-push-1778542486",
+    "bot": "git-push",
     "status": "running",
     "model": "none",
     "count": 0,
     "pid": null,
-    "started": "2026-05-11T23:29:05Z",
+    "started": "2026-05-11T23:34:46Z",
     "finished": null,
     "log": [
-      "Pending files: 2 entities, 0 edges (2 total)",
+      "Pending files: 1 entities, 0 edges (1 total)",
       "git add data/appwrite-export/ ..."
     ],
     "exitCode": null
