@@ -253,3 +253,51 @@
 - **Model:** ollama
 - **Enriched:** 1 | **Failed:** 19
 - **Entities:** era-age-of-enlightenment
+
+### AI Enrichment — 2026-05-10T02:17:08Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** era-renaissance-period
+
+### AI Enrichment — 2026-05-10T02:23:14Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 47
+- **Entities:** era-age-of-empire, magnus-of-trani, new-testament
+
+### AI Enrichment — 2026-05-10T13:58:10Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 17
+- **Entities:** leonard-of-noblac, era-age-of-exploration
+
+### AI Enrichment — 2026-05-10T17:50:25Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 17
+- **Entities:** demosthenes
+
+### AI Enrichment — 2026-05-10T17:54:31Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 17
+- **Entities:** era-early-medieval
+
+### AI Enrichment — 2026-05-10T18:37:43Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 4
+- **Entities:** era-paleolithic-mesolithic
+
+### AI Enrichment — 2026-05-10T19:28:45Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 4
+- **Entities:** jan-elivsk
+
+### AI Enrichment — 2026-05-10T21:25:33Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 4
+- **Entities:** era-post-cold-war
