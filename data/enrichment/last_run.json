@@ -1,36 +1,35 @@
 {
-  "timestamp": "2026-05-10T21:25:33Z",
+  "timestamp": "2026-05-10T22:20:45Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 4,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "entities": [
     {
       "slug": "yuya",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "era-neolithic-chalcolithic",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'occurs_in'"
-    },
-    {
-      "slug": "era-post-cold-war",
-      "status": "enriched",
-      "old_len": 227,
-      "new_len": 1934
+      "reason": "insufficient relationships (1, need >= 3)"
     },
     {
       "slug": "jan-\u017eelivsk\u00fd",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'collaborates_with'"
+      "reason": "timed out"
     },
     {
       "slug": "peisandros",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'occurs_in'"
+      "reason": "relationship[1] invalid verb: 'IS_BORN_IN'"
+    },
+    {
+      "slug": "moses-of-chorene",
+      "status": "failed",
+      "reason": "relationship[3] invalid verb: 'REFLECTS'"
     }
   ]
 }
