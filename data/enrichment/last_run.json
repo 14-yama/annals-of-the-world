@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-10T22:20:45Z",
+  "timestamp": "2026-05-11T18:59:42Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 0,
@@ -9,7 +9,7 @@
     {
       "slug": "yuya",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "timed out"
     },
     {
       "slug": "era-neolithic-chalcolithic",
@@ -19,17 +19,17 @@
     {
       "slug": "jan-\u017eelivsk\u00fd",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "insufficient effects (0, need >= 2)"
     },
     {
       "slug": "peisandros",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'IS_BORN_IN'"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "moses-of-chorene",
       "status": "failed",
-      "reason": "relationship[3] invalid verb: 'REFLECTS'"
+      "reason": "insufficient relationships (1, need >= 3)"
     }
   ]
 }
