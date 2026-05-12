@@ -1,39 +1,44 @@
 {
-  "generatedAt": "2026-05-12T00:27:09Z",
+  "generatedAt": "2026-05-12T01:42:55Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 5,
+  "failed": 0,
   "dry_run": false,
   "results": [
     {
       "slug": "cynegils",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "sher-shah-suri",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 8,
+      "category": "continental"
     },
     {
       "slug": "abdi-milkutti",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "tiberius-julius-rhescuporis-vi",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "abu-bakr",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 0,
-    "failed": 5
+    "entities_scored": 5,
+    "failed": 0
   }
 }

@@ -25,7 +25,7 @@
       "wikidataQid": "Q1492",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Barcelona",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Aerial%20view%20of%20La%20Sagrada%20Familia%2C%20Barcelona%2C%20Spain%20%2851227006134%29.jpg",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"barcelona\", \"sourceName\": \"Barcelona\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Barcelona is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Barcelona\", \"type\": \"Reference article\", \"slug\": \"barcelona\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q1492\", \"https://en.wikipedia.org/wiki/Barcelona\"], \"tags\": [\"Spain\", \"city\", \"Europe\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Barcelona is remembered as a landmark place of the Classical era, referenced in 245 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"barcelona\", \"sourceName\": \"Barcelona\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Barcelona is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Barcelona\", \"type\": \"Reference article\", \"slug\": \"barcelona\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q1492\", \"https://en.wikipedia.org/wiki/Barcelona\"], \"tags\": [\"Spain\", \"city\", \"Europe\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Barcelona is remembered as a landmark place of the Classical era, referenced in 245 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 6, \"significanceNarrative\": \"As a major port city during the Roman Empire and later the capital of the Visigothic Kingdom, Barcelona played a significant role in the trade and cultural exchange between Europe and North Africa. Its strategic location facilitated the spread of Christianity throughout the Iberian Peninsula.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 6, \\\"significanceNarrative\\\": \\\"As a major port city during the Roman Empire and later the capital of the Visigothic Kingdom, Barcelona played a significant role in the trade and cultural exchange between Europe and North Africa. Its strategic location facilitated the spread of Christianity throughout the Iberian Peninsula.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-12T01:41:43Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Cities -- Spain -- Classical"
       ],
@@ -46,7 +46,12 @@
       "$id": "barcelona",
       "$sequence": "716400",
       "$createdAt": "2026-04-05T15:16:14.377+00:00",
-      "$updatedAt": "2026-04-05T15:16:14.377+00:00"
+      "$updatedAt": "2026-04-05T15:16:14.377+00:00",
+      "historicalSignificance": {
+        "significanceScore": 6,
+        "significanceNarrative": "As a major port city during the Roman Empire and later the capital of the Visigothic Kingdom, Barcelona played a significant role in the trade and cultural exchange between Europe and North Africa. Its strategic location facilitated the spread of Christianity throughout the Iberian Peninsula.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

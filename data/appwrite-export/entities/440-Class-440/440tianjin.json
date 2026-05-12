@@ -25,7 +25,7 @@
       "wikidataQid": "Q11736",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Tianjin",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Tianjin%2C%20China%20ESA15420167.jpeg",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"tianjin\", \"sourceName\": \"Tianjin\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Tianjin is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Tianjin\", \"type\": \"Reference article\", \"slug\": \"tianjin\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q11736\", \"https://en.wikipedia.org/wiki/Tianjin\"], \"tags\": [\"China\", \"city\", \"Asia\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Tianjin is remembered as a landmark place of the Classical era, referenced in 153 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"tianjin\", \"sourceName\": \"Tianjin\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Tianjin is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Tianjin\", \"type\": \"Reference article\", \"slug\": \"tianjin\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q11736\", \"https://en.wikipedia.org/wiki/Tianjin\"], \"tags\": [\"China\", \"city\", \"Asia\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Tianjin is remembered as a landmark place of the Classical era, referenced in 153 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"As a major international port city and direct-administered municipality, Tianjin played a significant role in China's economic growth and global trade. Its strategic location on the Bohai Sea has made it an important hub for maritime commerce.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"As a major international port city and direct-administered municipality, Tianjin played a significant role in China's economic growth and global trade. Its strategic location on the Bohai Sea has made it an important hub for maritime commerce.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-12T01:41:13Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Cities -- China -- Classical"
       ],
@@ -46,7 +46,12 @@
       "$id": "tianjin",
       "$sequence": "725712",
       "$createdAt": "2026-04-05T15:19:39.761+00:00",
-      "$updatedAt": "2026-04-05T15:19:39.761+00:00"
+      "$updatedAt": "2026-04-05T15:19:39.761+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "As a major international port city and direct-administered municipality, Tianjin played a significant role in China's economic growth and global trade. Its strategic location on the Bohai Sea has made it an important hub for maritime commerce.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
