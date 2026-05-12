@@ -1,44 +1,43 @@
 {
-  "generatedAt": "2026-05-12T02:43:41Z",
+  "generatedAt": "2026-05-12T11:53:43Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 5,
-  "failed": 0,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "results": [
     {
-      "slug": "mehmed-i",
-      "status": "ok",
-      "score": 7,
-      "category": "regional"
+      "slug": "abu-karib",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
-      "slug": "rhun-ab-arthgal",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
-    {
-      "slug": "sangiban",
+      "slug": "emperor-xizong-of-tang",
       "status": "ok",
       "score": 5,
       "category": "regional"
     },
     {
-      "slug": "edmund-i",
+      "slug": "gondophares",
       "status": "ok",
       "score": 5,
       "category": "regional"
     },
     {
-      "slug": "shalmaneser-iv",
+      "slug": "alexander-ii-of-scotland",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "\u00e6thelstan-of-kent",
       "status": "ok",
       "score": 5,
       "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 5,
-    "failed": 0
+    "entities_scored": 4,
+    "failed": 1
   }
 }
