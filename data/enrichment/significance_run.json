@@ -1,42 +1,44 @@
 {
-  "generatedAt": "2026-05-12T13:15:08Z",
+  "generatedAt": "2026-05-12T14:04:18Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 5,
+  "failed": 0,
   "dry_run": false,
   "results": [
     {
-      "slug": "abu-karib",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
-    {
       "slug": "narseh",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "andronikos-ii-of-trebizond",
       "status": "ok",
       "score": 5,
       "category": "regional"
     },
     {
       "slug": "edward-ii-of-england",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
-      "slug": "carloman-of-bavaria",
+      "slug": "aretas-ii",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "comet",
+      "status": "ok",
+      "score": 5,
+      "category": "local"
+    },
+    {
+      "slug": "ephialtes-of-trachis",
       "status": "ok",
       "score": 5,
       "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 3,
-    "failed": 2
+    "entities_scored": 5,
+    "failed": 0
   }
 }
