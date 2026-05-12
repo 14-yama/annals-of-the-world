@@ -2261,19 +2261,23 @@
       "  RETRY (1) \u2014 relationship[0] invalid verb: 'served'",
       "  FAILED \u2014 relationship[0] invalid verb: 'prepared'",
       "",
-      "[12/20] king-dongmyeong-of-goguryeo (score=110.81, 0c)"
+      "[12/20] king-dongmyeong-of-goguryeo (score=110.81, 0c)",
+      "  RETRY (1) \u2014 insufficient causes (0, need >= 2)",
+      "  FAILED \u2014 insufficient causes (1, need >= 2)",
+      "",
+      "[13/20] jainism (score=110.25, 0c)"
     ],
     "exitCode": null
   },
   "significance-1778583131": {
     "job_id": "significance-1778583131",
     "bot": "significance",
-    "status": "running",
+    "status": "done",
     "model": "ollama",
     "count": 50,
     "pid": 50875,
     "started": "2026-05-12T10:52:11Z",
-    "finished": null,
+    "finished": "2026-05-12T12:11:09Z",
     "log": [
       "============================================================",
       "SIGNIFICANCE BACKFILL \u2014 up to 50 entities via ollama/llama3.2:3b",
@@ -2421,9 +2425,24 @@
       "[46/50] ruy-l\u00f3pez-de-villalobos (importance=8)",
       "  ERROR \u2014 Ollama error: timed out",
       "",
-      "[47/50] ruy-lpez-de-villalobos (importance=8)"
+      "[47/50] ruy-lpez-de-villalobos (importance=8)",
+      "  ERROR \u2014 Ollama error: timed out",
+      "",
+      "[48/50] toussaint-charbonneau (importance=8)",
+      "  SCORED \u2014 5/10 (regional): As a trapper and trader for the North West Company, Charbonneau played a crucial...",
+      "",
+      "[49/50] \u00e9tienne-br\u00fbl\u00e9 (importance=8)",
+      "  ERROR \u2014 Ollama error: timed out",
+      "",
+      "[50/50] tienne-brl (importance=8)",
+      "  SCORED \u2014 7/10 (regional): \u00c9tienne Br\u00fbl\u00e9's explorations of Georgian Bay and Lake Huron facilitated Samuel d...",
+      "",
+      "============================================================",
+      "RESULTS: 19 scored, 31 failed",
+      "============================================================",
+      "Report: /home/manasa151/annals-of-the-world/data/enrichment/significance_run.json"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "sync-1778583592": {
     "job_id": "sync-1778583592",
@@ -2876,14 +2895,66 @@
   "git-push-1778587646": {
     "job_id": "git-push-1778587646",
     "bot": "git-push",
+    "status": "done",
+    "model": "none",
+    "count": 1,
+    "pid": null,
+    "started": "2026-05-12T12:07:26Z",
+    "finished": "2026-05-12T12:07:29Z",
+    "log": [
+      "Pending files: 1 entities, 0 edges (1 total)",
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 1 local enrichments\"",
+      "[clean/audit-system 02c15a0b0e] feat(enrich): watchdog auto-push \u2014 1 local enrichments\n 4 files changed, 83 insertions(+), 14 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   a889fd9d2a..02c15a0b0e  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 1 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
+    ],
+    "exitCode": 0
+  },
+  "sync-1778587966": {
+    "job_id": "sync-1778587966",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 272180,
+    "started": "2026-05-12T12:12:46Z",
+    "finished": "2026-05-12T12:13:06Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=978/100000 (hardStop=80%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 2 dirty files",
+      "[diff] 2 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 2,",
+      "  \"entitiesUpserted\": 3,",
+      "  \"auditRowsEmitted\": 2,",
+      "  \"writesPerformed\": 5,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 02c15a0b"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1778587987": {
+    "job_id": "git-push-1778587987",
+    "bot": "git-push",
     "status": "running",
     "model": "none",
     "count": 0,
     "pid": null,
-    "started": "2026-05-12T12:07:26Z",
+    "started": "2026-05-12T12:13:07Z",
     "finished": null,
     "log": [
-      "Pending files: 1 entities, 0 edges (1 total)",
+      "Pending files: 2 entities, 0 edges (2 total)",
       "git add data/appwrite-export/ ..."
     ],
     "exitCode": null
