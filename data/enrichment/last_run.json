@@ -1,35 +1,112 @@
 {
-  "timestamp": "2026-05-11T21:39:59Z",
+  "timestamp": "2026-05-11T22:33:07Z",
   "model": "ollama",
-  "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "count_requested": 20,
+  "enriched": 2,
+  "failed": 18,
   "dry_run": false,
   "entities": [
     {
       "slug": "yuya",
       "status": "failed",
-      "reason": "summary too short (387c, need >= 600)"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "era-neolithic-chalcolithic",
       "status": "failed",
-      "reason": "relationship[5] invalid verb: 'IS caracterized by'"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "jan-\u017eelivsk\u00fd",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'influenced'"
+      "reason": "timed out"
     },
     {
       "slug": "peisandros",
       "status": "failed",
-      "reason": "relationship[2] invalid verb: 'CONTRIBUTE_TO'"
+      "reason": "insufficient causes (0, need >= 2)"
+    },
+    {
+      "slug": "moses-of-chorene",
+      "status": "enriched",
+      "old_len": 120,
+      "new_len": 1767
     },
     {
       "slug": "baldassarre-castiglione",
       "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "smaragdus-of-saint-mihiel",
+      "status": "failed",
       "reason": "timed out"
+    },
+    {
+      "slug": "wazo-of-li\u00e8ge",
+      "status": "failed",
+      "reason": "timed out"
+    },
+    {
+      "slug": "wazo-of-lige",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "konstantinos-maleinos",
+      "status": "failed",
+      "reason": "relationship[0] invalid verb: 'commanded'"
+    },
+    {
+      "slug": "john-mystacon",
+      "status": "failed",
+      "reason": "relationship[0] invalid verb: 'commanded'"
+    },
+    {
+      "slug": "publius-aelius-paetus",
+      "status": "failed",
+      "reason": "timed out"
+    },
+    {
+      "slug": "antonio-joaqun-prez-martnez",
+      "status": "enriched",
+      "old_len": 87,
+      "new_len": 664
+    },
+    {
+      "slug": "gerardo-bianchi",
+      "status": "failed",
+      "reason": "relationship[0] invalid verb: 'APPOINTED'"
+    },
+    {
+      "slug": "king-dongmyeong-of-goguryeo",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "jainism",
+      "status": "failed",
+      "reason": "relationship[0] invalid verb: 'REFERENCES'"
+    },
+    {
+      "slug": "chad-of-mercia",
+      "status": "failed",
+      "reason": "relationship[0] invalid verb: 'INFLUENCED'"
+    },
+    {
+      "slug": "judaism",
+      "status": "failed",
+      "reason": "timed out"
+    },
+    {
+      "slug": "prasenajit",
+      "status": "failed",
+      "reason": "relationship[1] invalid verb: 'SERVES_AS'"
+    },
+    {
+      "slug": "boniface-iii",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
     }
   ]
 }
