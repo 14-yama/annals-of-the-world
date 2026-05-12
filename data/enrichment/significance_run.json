@@ -1,44 +1,39 @@
 {
-  "generatedAt": "2026-05-11T23:03:43Z",
+  "generatedAt": "2026-05-12T00:27:09Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 5,
-  "failed": 0,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "results": [
     {
-      "slug": "henry-v",
-      "status": "ok",
-      "score": 8,
-      "category": "continental"
+      "slug": "cynegils",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
-      "slug": "john-ii-of-trebizond",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "sher-shah-suri",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
-      "slug": "theuderic-ii",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "abdi-milkutti",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
-      "slug": "palladius",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "tiberius-julius-rhescuporis-vi",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
-      "slug": "jayavarman-vii",
-      "status": "ok",
-      "score": 8,
-      "category": "regional"
+      "slug": "abu-bakr",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     }
   ],
   "summary": {
-    "entities_scored": 5,
-    "failed": 0
+    "entities_scored": 0,
+    "failed": 5
   }
 }
