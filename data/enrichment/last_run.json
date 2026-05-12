@@ -1,15 +1,15 @@
 {
-  "timestamp": "2026-05-12T07:49:09Z",
+  "timestamp": "2026-05-12T09:07:02Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 0,
-  "failed": 4,
+  "failed": 5,
   "dry_run": false,
   "entities": [
     {
       "slug": "yuya",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'IS_SUCCEDED_BY'"
+      "reason": "relationship[1] invalid verb: 'IS_MARRIED_TO'"
     },
     {
       "slug": "peisandros",
@@ -24,7 +24,12 @@
     {
       "slug": "smaragdus-of-saint-mihiel",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'LOCATED_IN'"
+      "reason": "timed out"
+    },
+    {
+      "slug": "wazo-of-lige",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
     }
   ]
 }
