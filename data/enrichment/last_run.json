@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-12T23:08:02Z",
+  "timestamp": "2026-05-13T05:56:06Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 0,
@@ -9,27 +9,27 @@
     {
       "slug": "peisandros",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'OCURRED_DURING'"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "baldassarre-castiglione",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'happened during the life of'"
+      "reason": "relationship[0] invalid verb: 'admired'"
     },
     {
       "slug": "smaragdus-of-saint-mihiel",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'patronized'"
+      "reason": "relationship[0] invalid verb: 'influenced'"
     },
     {
       "slug": "wazo-of-lige",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "reason": "relationship[0] invalid verb: 'chronicled'"
     },
     {
       "slug": "konstantinos-maleinos",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "relationship[4] invalid verb: 'CONFRONTS'"
     }
   ]
 }
