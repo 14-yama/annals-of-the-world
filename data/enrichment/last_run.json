@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-13T16:46:35Z",
+  "timestamp": "2026-05-13T17:41:24Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 0,
@@ -9,22 +9,22 @@
     {
       "slug": "william-dunbar",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'INFLUENCED'"
+      "reason": "insufficient effects (0, need >= 2)"
     },
     {
       "slug": "lucius-ii",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "relationship[4] invalid verb: 'IS_PART_OF'"
     },
     {
       "slug": "guan-yu",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "cuthbert",
       "status": "failed",
-      "reason": "summary too short (502c, need >= 600)"
+      "reason": "summary too short (474c, need >= 600)"
     },
     {
       "slug": "baldassarre-castiglione",
