@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-13T13:50:16Z",
+  "timestamp": "2026-05-13T14:51:52Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 0,
@@ -9,27 +9,27 @@
     {
       "slug": "william-dunbar",
       "status": "failed",
-      "reason": "relationship[5] invalid verb: 'IS_PROBABLY_FROM'"
+      "reason": "summary too short (483c, need >= 600)"
     },
     {
       "slug": "guan-yu",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "relationship[1] invalid verb: 'LEADS_TO'"
     },
     {
       "slug": "baldassarre-castiglione",
       "status": "failed",
-      "reason": "insufficient effects (0, need >= 2)"
+      "reason": "timed out"
     },
     {
       "slug": "smaragdus-of-saint-mihiel",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'BUILT_UPON'"
+      "reason": "relationship[0] invalid verb: 'influenced'"
     },
     {
       "slug": "wazo-of-lige",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'RECOGNIZES'"
+      "reason": "relationship[0] invalid verb: 'chronicled'"
     }
   ]
 }
