@@ -1,25 +1,26 @@
 {
-  "timestamp": "2026-05-13T08:05:11Z",
+  "timestamp": "2026-05-13T09:00:24Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 2,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
       "slug": "peisandros",
-      "status": "failed",
-      "reason": "relationship[0] invalid verb: 'CONTROLLED'"
+      "status": "enriched",
+      "old_len": 224,
+      "new_len": 1016
     },
     {
       "slug": "baldassarre-castiglione",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'INFLUENCED_BY'"
+      "reason": "relationship[2] invalid verb: 'EMBODYING'"
     },
     {
       "slug": "smaragdus-of-saint-mihiel",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "wazo-of-lige",
@@ -28,8 +29,9 @@
     },
     {
       "slug": "konstantinos-maleinos",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 79,
+      "new_len": 1281
     }
   ]
 }

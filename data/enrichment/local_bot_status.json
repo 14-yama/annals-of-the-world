@@ -3621,15 +3621,89 @@
   "git-push-1778676442": {
     "job_id": "git-push-1778676442",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
+    "model": "none",
+    "count": 1,
+    "pid": null,
+    "started": "2026-05-13T12:47:22Z",
+    "finished": "2026-05-13T12:47:26Z",
+    "log": [
+      "Pending files: 1 entities, 0 edges (1 total)",
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 41 local enrichments\"",
+      "[clean/audit-system 0ac5352eb3] feat(enrich): watchdog auto-push \u2014 41 local enrichments\n 4 files changed, 305 insertions(+), 15 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   3a812b39d0..0ac5352eb3  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 1 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
+    ],
+    "exitCode": 0
+  },
+  "sync-1778676763": {
+    "job_id": "sync-1778676763",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 684528,
+    "started": "2026-05-13T12:52:43Z",
+    "finished": "2026-05-13T12:54:45Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=11413/100000 (hardStop=80%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 284 dirty files",
+      "[diff] 284 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 284,",
+      "  \"entitiesUpserted\": 200,",
+      "  \"auditRowsEmitted\": 0,",
+      "  \"writesPerformed\": 200,",
+      "  \"stoppedReason\": \"perRunWriteCap=200 reached\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 0ac5352e"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1778676886": {
+    "job_id": "git-push-1778676886",
+    "bot": "git-push",
+    "status": "done",
     "model": "none",
     "count": 0,
     "pid": null,
-    "started": "2026-05-13T12:47:22Z",
+    "started": "2026-05-13T12:54:46Z",
+    "finished": "2026-05-13T12:54:47Z",
+    "log": [
+      "Pending files: 0 entities, 0 edges (0 total)",
+      "Nothing to commit \u2014 working tree clean."
+    ],
+    "exitCode": 0
+  },
+  "sync-1778677209": {
+    "job_id": "sync-1778677209",
+    "bot": "sync",
+    "status": "running",
+    "model": "none",
+    "count": 200,
+    "pid": 703253,
+    "started": "2026-05-13T13:00:09Z",
     "finished": null,
     "log": [
-      "Pending files: 1 entities, 0 edges (1 total)",
-      "git add data/appwrite-export/ ..."
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=11613/100000 (hardStop=80%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 284 dirty files",
+      "[diff] 284 entity files to sync"
     ],
     "exitCode": null
   }
