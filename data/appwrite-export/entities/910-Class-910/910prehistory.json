@@ -25,7 +25,7 @@
       "wikidataQid": "Q11756",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Prehistory",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/PSM%20V44%20D647%20Delineations%20on%20pieces%20of%20antler.jpg",
-      "detailsJson": "{\"causes\": [\"Scholarly classification of historical chronology\"], \"effects\": [\"Framework for understanding historical change\"], \"relationships\": [{\"sourceSlug\": \"prehistory\", \"sourceName\": \"prehistory\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-prehistoric\", \"targetName\": \"Prehistoric\", \"context\": \"prehistory was active during the Prehistoric era\"}], \"places\": [], \"texts\": [], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q11756\", \"https://en.wikipedia.org/wiki/Prehistory\"], \"tags\": [\"periodization\", \"Prehistoric\", \"periodization\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"prehistory is remembered as a landmark timeframe of the Prehistoric era, referenced in 171 Wikipedia language editions. Key lasting impacts include: Framework for understanding historical change.\"}",
+      "detailsJson": "{\"causes\": [\"Scholarly classification of historical chronology\"], \"effects\": [\"Framework for understanding historical change\"], \"relationships\": [{\"sourceSlug\": \"prehistory\", \"sourceName\": \"prehistory\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-prehistoric\", \"targetName\": \"Prehistoric\", \"context\": \"prehistory was active during the Prehistoric era\"}], \"places\": [], \"texts\": [], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q11756\", \"https://en.wikipedia.org/wiki/Prehistory\"], \"tags\": [\"periodization\", \"Prehistoric\", \"periodization\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"prehistory is remembered as a landmark timeframe of the Prehistoric era, referenced in 171 Wikipedia language editions. Key lasting impacts include: Framework for understanding historical change.\", \"historicalSignificance\": {\"significanceScore\": 8, \"significanceNarrative\": \"Prehistory laid the groundwork for the development of writing systems, which enabled the recording of laws, trade agreements, and historical events. The slow adoption of writing across the globe had significant regional impacts, such as the spread of literacy in ancient civilizations like Egypt and Mesopotamia.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 8, \\\"significanceNarrative\\\": \\\"Prehistory laid the groundwork for the development of writing systems, which enabled the recording of laws, trade agreements, and historical events. The slow adoption of writing across the globe had significant regional impacts, such as the spread of literacy in ancient civilizations like Egypt and Mesopotamia.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-13T15:56:04Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Timeframe -- Prehistoric -- Global -- Prehistoric"
       ],
@@ -44,7 +44,12 @@
       "$id": "prehistory",
       "$sequence": "732839",
       "$createdAt": "2026-04-05T15:21:57.197+00:00",
-      "$updatedAt": "2026-04-05T15:21:57.197+00:00"
+      "$updatedAt": "2026-04-05T15:21:57.197+00:00",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "Prehistory laid the groundwork for the development of writing systems, which enabled the recording of laws, trade agreements, and historical events. The slow adoption of writing across the globe had significant regional impacts, such as the spread of literacy in ancient civilizations like Egypt and Mesopotamia.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
