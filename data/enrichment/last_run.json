@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-13T09:52:29Z",
+  "timestamp": "2026-05-13T10:55:28Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 0,
@@ -9,27 +9,27 @@
     {
       "slug": "baldassarre-castiglione",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'counseled'"
+      "reason": "relationship[8] invalid verb: 'IS_FOUND_IN'"
     },
     {
       "slug": "smaragdus-of-saint-mihiel",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'INFLUENCED'"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "wazo-of-lige",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'INFLUENCED'"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "john-mystacon",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "relationship[1] invalid verb: 'IS_INFLUENCED_BY'"
     },
     {
       "slug": "publius-aelius-paetus",
       "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
+      "reason": "timed out"
     }
   ]
 }
