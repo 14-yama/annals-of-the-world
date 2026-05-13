@@ -1,35 +1,36 @@
 {
-  "timestamp": "2026-05-12T11:45:42Z",
+  "timestamp": "2026-05-12T20:13:50Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 1,
+  "failed": 4,
   "dry_run": false,
   "entities": [
     {
       "slug": "yuya",
-      "status": "failed",
-      "reason": "insufficient subjects (3, need >= 5)"
+      "status": "enriched",
+      "old_len": 650,
+      "new_len": 1276
     },
     {
       "slug": "peisandros",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'POSED_A_THREAT_TO'"
+      "reason": "insufficient effects (0, need >= 2)"
     },
     {
       "slug": "baldassarre-castiglione",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "reason": "relationship[1] invalid verb: 'ACCOMPANIES'"
     },
     {
       "slug": "smaragdus-of-saint-mihiel",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: ' patronized'"
+      "reason": "relationship[2] invalid verb: 'LOCATED_IN'"
     },
     {
       "slug": "wazo-of-lige",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "insufficient relationships (1, need >= 3)"
     }
   ]
 }

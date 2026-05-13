@@ -25,7 +25,7 @@
       "wikidataQid": "Q23666",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Great_Britain",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Satellite%20image%20of%20Great%20Britain%20and%20Northern%20Ireland%20in%20April%202002.jpg",
-      "detailsJson": "{\"causes\": [\"Natural geographic formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"great-britain\", \"sourceName\": \"Great Britain\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Great Britain is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Great Britain\", \"type\": \"Reference article\", \"slug\": \"great-britain\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q23666\", \"https://en.wikipedia.org/wiki/Great_Britain\"], \"tags\": [\"United Kingdom\", \"island\", \"Europe\", \"Maritime & Island Civilizations\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Great Britain is remembered as a landmark place of the Classical era, referenced in 170 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Natural geographic formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"great-britain\", \"sourceName\": \"Great Britain\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Great Britain is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Great Britain\", \"type\": \"Reference article\", \"slug\": \"great-britain\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q23666\", \"https://en.wikipedia.org/wiki/Great_Britain\"], \"tags\": [\"United Kingdom\", \"island\", \"Europe\", \"Maritime & Island Civilizations\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Great Britain is remembered as a landmark place of the Classical era, referenced in 170 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 8, \"significanceNarrative\": \"As a major European power, Great Britain played a significant role in shaping the course of World War II, contributing significantly to the Allied victory and emerging as one of the world's superpowers after the war.\", \"significanceCategory\": \"continental\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 8, \\\"significanceNarrative\\\": \\\"As a major European power, Great Britain played a significant role in shaping the course of World War II, contributing significantly to the Allied victory and emerging as one of the world's superpowers after the war.\\\", \\\"significanceCategory\\\": \\\"continental\\\"}\", \"timestamp\": \"2026-05-13T00:15:07Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Maritime & Island Civilizations -- United Kingdom -- Classical"
       ],
@@ -46,7 +46,12 @@
       "$id": "great-britain",
       "$sequence": "719096",
       "$createdAt": "2026-04-05T15:17:24.848+00:00",
-      "$updatedAt": "2026-04-05T15:17:24.848+00:00"
+      "$updatedAt": "2026-04-05T15:17:24.848+00:00",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "As a major European power, Great Britain played a significant role in shaping the course of World War II, contributing significantly to the Allied victory and emerging as one of the world's superpowers after the war.",
+        "significanceCategory": "continental"
+      }
     }
   ]
 }
