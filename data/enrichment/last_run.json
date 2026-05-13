@@ -1,36 +1,35 @@
 {
-  "timestamp": "2026-05-12T20:13:50Z",
+  "timestamp": "2026-05-12T21:12:58Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 4,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "entities": [
     {
-      "slug": "yuya",
-      "status": "enriched",
-      "old_len": 650,
-      "new_len": 1276
-    },
-    {
       "slug": "peisandros",
       "status": "failed",
-      "reason": "insufficient effects (0, need >= 2)"
+      "reason": "timed out"
     },
     {
       "slug": "baldassarre-castiglione",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'ACCOMPANIES'"
+      "reason": "relationship[0] invalid verb: 'mentored'"
     },
     {
       "slug": "smaragdus-of-saint-mihiel",
       "status": "failed",
-      "reason": "relationship[2] invalid verb: 'LOCATED_IN'"
+      "reason": "relationship[1] invalid verb: 'LOCATED_IN'"
     },
     {
       "slug": "wazo-of-lige",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "konstantinos-maleinos",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     }
   ]
 }
