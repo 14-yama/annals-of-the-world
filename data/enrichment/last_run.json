@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-13T11:54:44Z",
+  "timestamp": "2026-05-13T12:54:53Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 1,
@@ -9,28 +9,28 @@
     {
       "slug": "guan-yu",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "reason": "relationship[0] invalid verb: 'served under'"
     },
     {
       "slug": "baldassarre-castiglione",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "insufficient causes (0, need >= 2)"
     },
     {
       "slug": "smaragdus-of-saint-mihiel",
       "status": "failed",
-      "reason": "insufficient effects (0, need >= 2)"
+      "reason": "insufficient causes (0, need >= 2)"
     },
     {
       "slug": "wazo-of-lige",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'chronicled'"
+      "reason": "insufficient frameworks (1, need >= 2)"
     },
     {
-      "slug": "john-mystacon",
+      "slug": "publius-aelius-paetus",
       "status": "enriched",
-      "old_len": 160,
-      "new_len": 1436
+      "old_len": 164,
+      "new_len": 1010
     }
   ]
 }
