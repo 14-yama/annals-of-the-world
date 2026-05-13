@@ -106,12 +106,12 @@
   "sync-1778631299": {
     "job_id": "sync-1778631299",
     "bot": "sync",
-    "status": "running",
+    "status": "done",
     "model": "none",
     "count": 200,
     "pid": 69466,
     "started": "2026-05-13T00:14:59Z",
-    "finished": null,
+    "finished": "2026-05-13T00:15:58Z",
     "log": [
       "=== sync_gateway: git \u2192 Appwrite ===",
       "Endpoint:  https://fra.cloud.appwrite.io/v1",
@@ -121,7 +121,32 @@
       "[budget] perRunWriteCap=200 writesUsed=1027/100000 (hardStop=80%)",
       "[diff] --local mode: scanning for _unsyncedEdits:true files",
       "[diff] --local found 14 dirty files",
-      "[diff] 14 entity files to sync"
+      "[diff] 14 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 14,",
+      "  \"entitiesUpserted\": 14,",
+      "  \"auditRowsEmitted\": 64,",
+      "  \"writesPerformed\": 78,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit d1bef617"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1778631359": {
+    "job_id": "git-push-1778631359",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-13T00:15:59Z",
+    "finished": null,
+    "log": [
+      "Pending files: 13 entities, 0 edges (13 total)",
+      "git add data/appwrite-export/ ..."
     ],
     "exitCode": null
   }
