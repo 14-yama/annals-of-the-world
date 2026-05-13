@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-12T21:12:58Z",
+  "timestamp": "2026-05-12T22:07:08Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 0,
@@ -9,17 +9,17 @@
     {
       "slug": "peisandros",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "baldassarre-castiglione",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'mentored'"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "smaragdus-of-saint-mihiel",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'LOCATED_IN'"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "wazo-of-lige",
@@ -29,7 +29,7 @@
     {
       "slug": "konstantinos-maleinos",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "relationship[1] invalid verb: 'DESCRIPTIONS'"
     }
   ]
 }
