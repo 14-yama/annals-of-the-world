@@ -8058,16 +8058,50 @@
   "git-push-1778715663": {
     "job_id": "git-push-1778715663",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 7,
     "pid": null,
     "started": "2026-05-13T23:41:03Z",
-    "finished": null,
+    "finished": "2026-05-13T23:41:08Z",
     "log": [
       "Pending files: 7 entities, 0 edges (7 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 105 local enrichments\"",
+      "[clean/audit-system a49a5ae83f] feat(enrich): watchdog auto-push \u2014 105 local enrichments\n 10 files changed, 104 insertions(+), 23 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   1d8a4c1885..a49a5ae83f  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 7 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
+  },
+  "sync-1778715755": {
+    "job_id": "sync-1778715755",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 50,
+    "pid": 1647378,
+    "started": "2026-05-13T23:42:35Z",
+    "finished": "2026-05-13T23:43:01Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "[budget] perRunWriteCap=50 writesUsed=29363/100000 (hardStop=80%)",
+      "[diff] 13 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 13,",
+      "  \"entitiesUpserted\": 12,",
+      "  \"auditRowsEmitted\": 38,",
+      "  \"writesPerformed\": 50,",
+      "  \"stoppedReason\": \"perRunWriteCap=50 reached during audit emission\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit c32728e6"
+    ],
+    "exitCode": 0
   }
 }
