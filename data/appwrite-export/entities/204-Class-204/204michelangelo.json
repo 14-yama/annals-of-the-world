@@ -25,54 +25,7 @@
       "wikidataQid": "Q5592",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Michelangelo",
       "imageUrl": "",
-      "detailsJson": {
-        "causes": [
-          "Medici patronage in Florence",
-          "Italian Renaissance cultural flowering",
-          "Classical Greek and Roman artistic models"
-        ],
-        "effects": [
-          "Sistine Chapel ceiling became most famous painting in the world",
-          "David sculpture became symbol of Florence and Renaissance humanism",
-          "St. Peter's dome defined Roman architecture",
-          "Mannerist and Baroque art directly descended from his style",
-          "Established sculptor-artist as cultural hero"
-        ],
-        "relationships": [
-          {
-            "sourceSlug": "michelangelo",
-            "sourceName": "Michelangelo",
-            "verb": "OCCURS_IN",
-            "targetSlug": "italy",
-            "targetName": "Italy",
-            "context": "Worked in Florence and Rome throughout his career"
-          },
-          {
-            "sourceSlug": "michelangelo",
-            "sourceName": "Michelangelo",
-            "verb": "INFLUENCES",
-            "targetSlug": "caravaggio",
-            "targetName": "Caravaggio",
-            "context": "Caravaggio's dramatic figural style was influenced by Michelangelo's muscular forms"
-          },
-          {
-            "sourceSlug": "michelangelo",
-            "sourceName": "Michelangelo",
-            "verb": "INFLUENCES",
-            "targetSlug": "leonardo-da-vinci",
-            "targetName": "Leonardo da Vinci",
-            "context": "Rivals who pushed each other to greater heights in Renaissance Florence"
-          },
-          {
-            "sourceSlug": "michelangelo",
-            "sourceName": "Michelangelo",
-            "verb": "INFLUENCES",
-            "targetSlug": "pablo-picasso",
-            "targetName": "Pablo Picasso",
-            "context": "Picasso studied Michelangelo's figural distortions as precedent"
-          }
-        ]
-      },
+      "detailsJson": "{\"historicalSignificance\": {\"significanceScore\": 9, \"significanceNarrative\": \"Michelangelo's works revolutionized Renaissance art, influencing generations of artists and shaping the iconic Sistine Chapel ceiling. His perfectionism and innovative techniques raised the bar for artistic expression.\", \"significanceCategory\": \"world-changing\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 9, \\\"significanceNarrative\\\": \\\"Michelangelo's works revolutionized Renaissance art, influencing generations of artists and shaping the iconic Sistine Chapel ceiling. His perfectionism and innovative techniques raised the bar for artistic expression.\\\", \\\"significanceCategory\\\": \\\"world-changing\\\"}\", \"timestamp\": \"2026-05-14T10:54:13Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "People — Artists — Italy — Early Modern"
       ],
@@ -99,7 +52,12 @@
       "$id": "michelangelo",
       "$sequence": "169903",
       "$createdAt": "2026-04-05T12:39:00.386+00:00",
-      "$updatedAt": "2026-04-05T12:39:00.386+00:00"
+      "$updatedAt": "2026-04-05T12:39:00.386+00:00",
+      "historicalSignificance": {
+        "significanceScore": 9,
+        "significanceNarrative": "Michelangelo's works revolutionized Renaissance art, influencing generations of artists and shaping the iconic Sistine Chapel ceiling. His perfectionism and innovative techniques raised the bar for artistic expression.",
+        "significanceCategory": "world-changing"
+      }
     }
   ]
 }
