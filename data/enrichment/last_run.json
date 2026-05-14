@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-14T08:47:36Z",
+  "timestamp": "2026-05-14T09:42:34Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 0,
@@ -9,27 +9,27 @@
     {
       "slug": "william-dunbar",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'collaborates_with'"
+      "reason": "timed out"
     },
     {
       "slug": "lucius-ii",
       "status": "failed",
-      "reason": "relationship[3] invalid verb: 'IS_REIGNED_OVER'"
+      "reason": "insufficient relationships (1, need >= 3)"
     },
     {
       "slug": "guan-yu",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'OPPOSES'"
+      "reason": "insufficient relationships (1, need >= 3)"
+    },
+    {
+      "slug": "theophilus-protospatharius",
+      "status": "failed",
+      "reason": "relationship[2] invalid verb: 'BUILDS_UPON'"
     },
     {
       "slug": "jami",
       "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "alcuin",
-      "status": "failed",
-      "reason": "relationship[0] invalid verb: 'CAUSES_INFLUENCED'"
+      "reason": "insufficient causes (1, need >= 2)"
     }
   ]
 }
