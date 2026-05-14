@@ -25,45 +25,7 @@
       "wikidataQid": "Q43499",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Erasmus",
       "imageUrl": "",
-      "detailsJson": {
-        "causes": [
-          "Northern Renaissance humanism and classical learning revival",
-          "Printing press enabled wide distribution of his works",
-          "Catholic Church corruption created demand for reform voices"
-        ],
-        "effects": [
-          "Greek New Testament enabled Protestant Bible translations",
-          "In Praise of Folly undermined Church authority through satire",
-          "Republic of Letters established model for scholarly networks",
-          "Educational reforms influenced European universities for centuries"
-        ],
-        "relationships": [
-          {
-            "sourceSlug": "erasmus",
-            "sourceName": "Erasmus",
-            "verb": "INFLUENCES",
-            "targetSlug": "martin-luther",
-            "targetName": "Martin Luther",
-            "context": "Erasmus's biblical scholarship and Church criticism paved way for Reformation"
-          },
-          {
-            "sourceSlug": "erasmus",
-            "sourceName": "Erasmus",
-            "verb": "OCCURS_IN",
-            "targetSlug": "netherlands",
-            "targetName": "Netherlands",
-            "context": "Born in Rotterdam, known as Erasmus of Rotterdam"
-          },
-          {
-            "sourceSlug": "erasmus",
-            "sourceName": "Erasmus",
-            "verb": "INFLUENCES",
-            "targetSlug": "thomas-more",
-            "targetName": "Thomas More",
-            "context": "Close friend; wrote In Praise of Folly while staying at More's house"
-          }
-        ]
-      },
+      "detailsJson": "{\"historicalSignificance\": {\"significanceScore\": 8, \"significanceNarrative\": \"Erasmus's advocacy for reform within the Catholic Church through education and moral persuasion had significant regional impact, influencing the Protestant Reformation and shaping European intellectual history.\", \"significanceCategory\": \"continental\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 8, \\\"significanceNarrative\\\": \\\"Erasmus's advocacy for reform within the Catholic Church through education and moral persuasion had significant regional impact, influencing the Protestant Reformation and shaping European intellectual history.\\\", \\\"significanceCategory\\\": \\\"continental\\\"}\", \"timestamp\": \"2026-05-14T03:27:45Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "People — Philosophers — Netherlands — Early Modern"
       ],
@@ -90,7 +52,12 @@
       "$id": "erasmus",
       "$sequence": "162493",
       "$createdAt": "2026-04-05T12:37:26.892+00:00",
-      "$updatedAt": "2026-04-05T12:37:26.892+00:00"
+      "$updatedAt": "2026-04-05T12:37:26.892+00:00",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "Erasmus's advocacy for reform within the Catholic Church through education and moral persuasion had significant regional impact, influencing the Protestant Reformation and shaping European intellectual history.",
+        "significanceCategory": "continental"
+      }
     }
   ]
 }
