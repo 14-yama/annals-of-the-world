@@ -25,89 +25,7 @@
       "wikidataQid": "Q9438",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Thomas_Aquinas",
       "imageUrl": "",
-      "detailsJson": {
-        "causes": [
-          "Recovery of Aristotle's works via Arabic translations",
-          "Dominican Order's emphasis on learning and preaching",
-          "Medieval university system enabling philosophical inquiry"
-        ],
-        "effects": [
-          "Synthesis of faith and reason as Catholic philosophical foundation",
-          "Five Ways as standard natural theology arguments",
-          "Thomism declared official Catholic philosophy (1879)",
-          "Influence on natural law theory and human rights",
-          "Foundation for Catholic social teaching",
-          "Model for integrating secular philosophy with religious tradition"
-        ],
-        "relationships": [
-          {
-            "sourceSlug": "thomas-aquinas",
-            "sourceName": "Thomas Aquinas",
-            "verb": "TRANSMITS",
-            "targetSlug": "aristotle",
-            "targetName": "Aristotle",
-            "context": "Integrated Aristotelian philosophy into Christian theology"
-          },
-          {
-            "sourceSlug": "avicenna",
-            "sourceName": "Avicenna",
-            "verb": "INFLUENCES",
-            "targetSlug": "thomas-aquinas",
-            "targetName": "Thomas Aquinas",
-            "context": "Islamic philosophy shaped Scholastic metaphysics"
-          },
-          {
-            "sourceSlug": "thomas-aquinas",
-            "sourceName": "Thomas Aquinas",
-            "verb": "DEFINES",
-            "targetSlug": "summa-theologica",
-            "targetName": "Summa Theologica",
-            "context": "Masterwork of systematic theology"
-          },
-          {
-            "sourceSlug": "thomas-aquinas",
-            "sourceName": "Thomas Aquinas",
-            "verb": "OCCURS_IN",
-            "targetSlug": "paris",
-            "targetName": "Paris",
-            "context": "Taught at the University of Paris"
-          },
-          {
-            "sourceSlug": "thomas-aquinas",
-            "sourceName": "Thomas Aquinas",
-            "verb": "INFLUENCES",
-            "targetSlug": "catholic-church",
-            "targetName": "Catholic Church",
-            "context": "Thomism became official church philosophy"
-          }
-        ],
-        "places": [
-          {
-            "name": "castle of the counts of Aquino",
-            "role": "Birth place"
-          }
-        ],
-        "texts": [
-          {
-            "title": "Wikipedia: Thomas Aquinas",
-            "type": "Reference article",
-            "slug": "thomas-aquinas"
-          }
-        ],
-        "externalLinks": [
-          "https://www.wikidata.org/wiki/Q9438",
-          "https://en.wikipedia.org/wiki/Thomas_Aquinas"
-        ],
-        "tags": [
-          "Educators & Academics",
-          "cause-and-effect",
-          "innovation-and-technology",
-          "temporal-linkage"
-        ],
-        "thumbnailUrl": "",
-        "quote": "",
-        "legacySummary": ""
-      },
+      "detailsJson": "{\"historicalSignificance\": {\"significanceScore\": 9, \"significanceNarrative\": \"Thomas Aquinas' synthesis of Aristotelian philosophy with Christian theology shaped Western thought and influenced centuries of Catholicism, while his 'Five Ways' arguments for God's existence remain foundational to natural theology.\", \"significanceCategory\": \"world-changing\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 9, \\\"significanceNarrative\\\": \\\"Thomas Aquinas' synthesis of Aristotelian philosophy with Christian theology shaped Western thought and influenced centuries of Catholicism, while his 'Five Ways' arguments for God's existence remain foundational to natural theology.\\\", \\\"significanceCategory\\\": \\\"world-changing\\\"}\", \"timestamp\": \"2026-05-14T02:34:25Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "People — Educators & Academics — Global — Medieval"
       ],
@@ -127,7 +45,12 @@
       "$id": "thomas-aquinas",
       "$sequence": "174310",
       "$createdAt": "2026-04-05T12:39:54.920+00:00",
-      "$updatedAt": "2026-04-05T12:39:54.920+00:00"
+      "$updatedAt": "2026-04-05T12:39:54.920+00:00",
+      "historicalSignificance": {
+        "significanceScore": 9,
+        "significanceNarrative": "Thomas Aquinas' synthesis of Aristotelian philosophy with Christian theology shaped Western thought and influenced centuries of Catholicism, while his 'Five Ways' arguments for God's existence remain foundational to natural theology.",
+        "significanceCategory": "world-changing"
+      }
     }
   ]
 }
