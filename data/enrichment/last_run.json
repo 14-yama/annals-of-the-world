@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-13T20:38:03Z",
+  "timestamp": "2026-05-13T21:29:52Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 0,
@@ -9,27 +9,27 @@
     {
       "slug": "william-dunbar",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "insufficient effects (0, need >= 2)"
     },
     {
       "slug": "lucius-ii",
       "status": "failed",
-      "reason": "insufficient effects (0, need >= 2)"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "guan-yu",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'collaborated_with'"
+      "reason": "insufficient causes (0, need >= 2)"
     },
     {
       "slug": "cuthbert",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'INFLUENCED'"
+      "reason": "relationship[1] invalid verb: 'LOCATED_INside'"
     },
     {
       "slug": "baldassarre-castiglione",
       "status": "failed",
-      "reason": "Expecting ',' delimiter: line 71 column 1 (char 191)"
+      "reason": "relationship[1] invalid verb: 'PARTicipates IN'"
     }
   ]
 }
