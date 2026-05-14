@@ -25,89 +25,7 @@
       "wikidataQid": "Q8011",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Avicenna",
       "imageUrl": "",
-      "detailsJson": {
-        "causes": [
-          "Islamic Golden Age fostering scholarship",
-          "Greek philosophical and medical texts preserved in Arabic translation",
-          "Samanid court patronage of learning in Central Asia"
-        ],
-        "effects": [
-          "Canon of Medicine dominating medical education for 500 years",
-          "Synthesis of Aristotelian philosophy with Islamic thought",
-          "Influence on Scholastic philosophy (Thomas Aquinas, Duns Scotus)",
-          "'Flying man' thought experiment anticipating Cartesian doubt",
-          "Standardization of pharmacological classification",
-          "Foundation for evidence-based clinical medicine"
-        ],
-        "relationships": [
-          {
-            "sourceSlug": "avicenna",
-            "sourceName": "Avicenna",
-            "verb": "INFLUENCES",
-            "targetSlug": "thomas-aquinas",
-            "targetName": "Thomas Aquinas",
-            "context": "Scholastic philosophy incorporated Avicenna's metaphysics"
-          },
-          {
-            "sourceSlug": "avicenna",
-            "sourceName": "Avicenna",
-            "verb": "DEFINES",
-            "targetSlug": "canon-of-medicine",
-            "targetName": "Canon of Medicine",
-            "context": "Standard medical text for 500 years"
-          },
-          {
-            "sourceSlug": "aristotle",
-            "sourceName": "Aristotle",
-            "verb": "INFLUENCES",
-            "targetSlug": "avicenna",
-            "targetName": "Avicenna",
-            "context": "Aristotelian philosophy formed Avicenna's framework"
-          },
-          {
-            "sourceSlug": "avicenna",
-            "sourceName": "Avicenna",
-            "verb": "INFLUENCES",
-            "targetSlug": "descartes",
-            "targetName": "René Descartes",
-            "context": "Flying man anticipated cogito ergo sum"
-          },
-          {
-            "sourceSlug": "avicenna",
-            "sourceName": "Avicenna",
-            "verb": "OCCURS_IN",
-            "targetSlug": "bukhara",
-            "targetName": "Bukhara",
-            "context": "Educated and first practiced medicine in Bukhara"
-          }
-        ],
-        "places": [
-          {
-            "name": "Afshona",
-            "role": "Birth place"
-          }
-        ],
-        "texts": [
-          {
-            "title": "Wikipedia: Avicenna",
-            "type": "Reference article",
-            "slug": "avicenna"
-          }
-        ],
-        "externalLinks": [
-          "https://www.wikidata.org/wiki/Q8011",
-          "https://en.wikipedia.org/wiki/Avicenna"
-        ],
-        "tags": [
-          "Philosophers & Thinkers",
-          "doctrine-development",
-          "cause-and-effect",
-          "temporal-linkage"
-        ],
-        "thumbnailUrl": "",
-        "quote": "",
-        "legacySummary": ""
-      },
+      "detailsJson": "{\"historicalSignificance\": {\"significanceScore\": 9, \"significanceNarrative\": \"Avicenna's 'Canon of Medicine' influenced medical education for over 500 years, shaping European and Islamic medical practices. His philosophical works anticipated modern thought, demonstrating the enduring impact of his ideas on Western intellectual history.\", \"significanceCategory\": \"world-changing\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 9, \\\"significanceNarrative\\\": \\\"Avicenna's 'Canon of Medicine' influenced medical education for over 500 years, shaping European and Islamic medical practices. His philosophical works anticipated modern thought, demonstrating the enduring impact of his ideas on Western intellectual history.\\\", \\\"significanceCategory\\\": \\\"world-changing\\\"}\", \"timestamp\": \"2026-05-14T09:08:13Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "People — Philosophers & Thinkers — Global — Medieval"
       ],
@@ -127,7 +45,12 @@
       "$id": "avicenna",
       "$sequence": "159551",
       "$createdAt": "2026-04-05T12:36:50.293+00:00",
-      "$updatedAt": "2026-04-05T12:36:50.293+00:00"
+      "$updatedAt": "2026-04-05T12:36:50.293+00:00",
+      "historicalSignificance": {
+        "significanceScore": 9,
+        "significanceNarrative": "Avicenna's 'Canon of Medicine' influenced medical education for over 500 years, shaping European and Islamic medical practices. His philosophical works anticipated modern thought, demonstrating the enduring impact of his ideas on Western intellectual history.",
+        "significanceCategory": "world-changing"
+      }
     }
   ]
 }
