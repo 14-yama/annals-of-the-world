@@ -25,89 +25,7 @@
       "wikidataQid": "Q43347",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Rumi",
       "imageUrl": "",
-      "detailsJson": {
-        "causes": [
-          "Sufi mystical tradition within Islam",
-          "Encounter with Shams-i-Tabrizi (1244)",
-          "Persian literary tradition from Ferdowsi to Attar"
-        ],
-        "effects": [
-          "Mevlevi Order (Whirling Dervishes) founded in Konya",
-          "Masnavi as foundational text of Sufi literature",
-          "Best-selling poet in 21st-century America",
-          "UNESCO recognition of Sema ceremony",
-          "Cross-cultural bridge between Islamic and Western spirituality",
-          "Influence on Sufi orders across the Islamic world"
-        ],
-        "relationships": [
-          {
-            "sourceSlug": "rumi",
-            "sourceName": "Rumi",
-            "verb": "DEFINES",
-            "targetSlug": "mevlevi",
-            "targetName": "Mevlevi Order",
-            "context": "Founded the Whirling Dervishes spiritual order"
-          },
-          {
-            "sourceSlug": "rumi",
-            "sourceName": "Rumi",
-            "verb": "OCCURS_IN",
-            "targetSlug": "konya",
-            "targetName": "Konya",
-            "context": "Lived and taught in Seljuk Konya for decades"
-          },
-          {
-            "sourceSlug": "rumi",
-            "sourceName": "Rumi",
-            "verb": "TRANSMITS",
-            "targetSlug": "shams-tabrizi",
-            "targetName": "Shams-i-Tabrizi",
-            "context": "Shams catalyzed Rumi's poetic awakening"
-          },
-          {
-            "sourceSlug": "rumi",
-            "sourceName": "Rumi",
-            "verb": "INFLUENCES",
-            "targetSlug": "sufi-tradition",
-            "targetName": "Sufi Tradition",
-            "context": "Masnavi became cornerstone of Sufi thought"
-          },
-          {
-            "sourceSlug": "attar",
-            "sourceName": "Attar of Nishapur",
-            "verb": "INFLUENCES",
-            "targetSlug": "rumi",
-            "targetName": "Rumi",
-            "context": "Attar's mystical poetry inspired Rumi's path"
-          }
-        ],
-        "places": [
-          {
-            "name": "Vakhsh",
-            "role": "Birth place"
-          }
-        ],
-        "texts": [
-          {
-            "title": "Wikipedia: Rumi",
-            "type": "Reference article",
-            "slug": "rumi"
-          }
-        ],
-        "externalLinks": [
-          "https://www.wikidata.org/wiki/Q43347",
-          "https://en.wikipedia.org/wiki/Rumi"
-        ],
-        "tags": [
-          "Philosophers & Thinkers",
-          "doctrine-development",
-          "cause-and-effect",
-          "temporal-linkage"
-        ],
-        "thumbnailUrl": "",
-        "quote": "",
-        "legacySummary": ""
-      },
+      "detailsJson": "{\"historicalSignificance\": {\"significanceScore\": 8, \"significanceNarrative\": \"Rumi's poetry and spiritual teachings had a profound impact on Islamic mysticism and Sufi philosophy, influencing countless generations of Muslims and non-Muslims alike. His work continues to inspire artists, writers, and thinkers across cultures.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 8, \\\"significanceNarrative\\\": \\\"Rumi's poetry and spiritual teachings had a profound impact on Islamic mysticism and Sufi philosophy, influencing countless generations of Muslims and non-Muslims alike. His work continues to inspire artists, writers, and thinkers across cultures.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-14T06:17:24Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "People — Philosophers & Thinkers — Global — Medieval"
       ],
@@ -127,7 +45,12 @@
       "$id": "rumi",
       "$sequence": "172875",
       "$createdAt": "2026-04-05T12:39:37.072+00:00",
-      "$updatedAt": "2026-04-05T12:39:37.072+00:00"
+      "$updatedAt": "2026-04-05T12:39:37.072+00:00",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "Rumi's poetry and spiritual teachings had a profound impact on Islamic mysticism and Sufi philosophy, influencing countless generations of Muslims and non-Muslims alike. His work continues to inspire artists, writers, and thinkers across cultures.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
