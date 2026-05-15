@@ -25,7 +25,7 @@
       "wikidataQid": "Q16520",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Busan",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Busan%20montage.png",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"busan\", \"sourceName\": \"Busan\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Busan is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Busan\", \"type\": \"Reference article\", \"slug\": \"busan\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q16520\", \"https://en.wikipedia.org/wiki/Busan\"], \"tags\": [\"South Korea\", \"city\", \"Asia\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Busan left a notable mark on Classical history, documented across 142 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"busan\", \"sourceName\": \"Busan\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Busan is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Busan\", \"type\": \"Reference article\", \"slug\": \"busan\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q16520\", \"https://en.wikipedia.org/wiki/Busan\"], \"tags\": [\"South Korea\", \"city\", \"Asia\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Busan left a notable mark on Classical history, documented across 142 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"As a major port city in southeastern South Korea, Busan played a crucial role in the country's economic growth and industrialization during the late 20th century, with its port handling over 40% of South Korea's total cargo volume in 2020.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"As a major port city in southeastern South Korea, Busan played a crucial role in the country's economic growth and industrialization during the late 20th century, with its port handling over 40% of South Korea's total cargo volume in 2020.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-15T21:12:31Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Cities -- South Korea -- Classical"
       ],
@@ -46,7 +46,12 @@
       "$id": "busan",
       "$sequence": "717051",
       "$createdAt": "2026-04-05T15:16:29.919+00:00",
-      "$updatedAt": "2026-04-05T15:16:29.919+00:00"
+      "$updatedAt": "2026-04-05T15:16:29.919+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "As a major port city in southeastern South Korea, Busan played a crucial role in the country's economic growth and industrialization during the late 20th century, with its port handling over 40% of South Korea's total cargo volume in 2020.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
