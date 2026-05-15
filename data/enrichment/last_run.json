@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-14T23:05:03Z",
+  "timestamp": "2026-05-15T00:04:21Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 0,
@@ -9,17 +9,17 @@
     {
       "slug": "william-dunbar",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "relationship[0] invalid verb: 'patronized'"
     },
     {
       "slug": "lucius-ii",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "insufficient causes (0, need >= 2)"
     },
     {
       "slug": "guan-yu",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "reason": "insufficient causes (0, need >= 2)"
     },
     {
       "slug": "jami",
@@ -29,7 +29,7 @@
     {
       "slug": "alcuin",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'TAUGHT'"
+      "reason": "relationship[0] invalid verb: 'taught'"
     }
   ]
 }
