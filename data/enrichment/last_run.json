@@ -1,20 +1,21 @@
 {
-  "timestamp": "2026-05-15T15:28:18Z",
+  "timestamp": "2026-05-15T16:17:33Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 1,
+  "failed": 4,
   "dry_run": false,
   "entities": [
     {
       "slug": "william-dunbar",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'PROBABLY_FROM'"
+      "reason": "insufficient causes (0, need >= 2)"
     },
     {
       "slug": "lucius-ii",
-      "status": "failed",
-      "reason": "timed out"
+      "status": "enriched",
+      "old_len": 612,
+      "new_len": 1055
     },
     {
       "slug": "alcuin",
@@ -24,12 +25,12 @@
     {
       "slug": "george-boleyn-viscount-rochford",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'was accused by'"
+      "reason": "relationship[0] invalid verb: 'collaborates_with'"
     },
     {
       "slug": "baldassarre-castiglione",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'patronized'"
+      "reason": "relationship[0] invalid verb: 'SERVED_AS_CONDOTTIERE_FOR'"
     }
   ]
 }
