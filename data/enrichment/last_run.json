@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-15T09:05:41Z",
+  "timestamp": "2026-05-15T10:02:42Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 0,
@@ -9,27 +9,27 @@
     {
       "slug": "william-dunbar",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'IS_BORN_IN'"
+      "reason": "insufficient subjects (4, need >= 5)"
     },
     {
       "slug": "lucius-ii",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "relationship[0] invalid verb: 'occurs_during'"
     },
     {
       "slug": "alcuin",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'TEACHES'"
+      "reason": "relationship[0] invalid verb: 'taught'"
     },
     {
       "slug": "george-boleyn-viscount-rochford",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'Influenced'"
+      "reason": "relationship[0] invalid verb: 'facilitated'"
     },
     {
       "slug": "baldassarre-castiglione",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "relationship[6] invalid verb: 'CONTAINS_BIRTHPLACE'"
     }
   ]
 }
