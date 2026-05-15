@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-15T11:46:45Z",
+  "timestamp": "2026-05-15T12:42:59Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 0,
@@ -9,27 +9,27 @@
     {
       "slug": "william-dunbar",
       "status": "failed",
-      "reason": "relationship[5] invalid verb: 'IS_INFLUENCED_BY'"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "lucius-ii",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "relationship[0] invalid verb: 'RESISTED'"
     },
     {
       "slug": "alcuin",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'invited'"
+      "reason": "insufficient effects (1, need >= 2)"
     },
     {
       "slug": "george-boleyn-viscount-rochford",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "relationship[0] invalid verb: 'accused'"
     },
     {
       "slug": "baldassarre-castiglione",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'participated_in'"
+      "reason": "relationship[0] invalid verb: 'PATRONIZED'"
     }
   ]
 }
