@@ -25,89 +25,7 @@
       "wikidataQid": "Q8479",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Peter_the_Great",
       "imageUrl": "",
-      "detailsJson": {
-        "causes": [
-          "Russian military defeats by Ottoman Empire and Sweden",
-          "Influence of Western European visitors in Moscow",
-          "Personal curiosity during Grand Embassy to Europe (1697–1698)"
-        ],
-        "effects": [
-          "Foundation of Saint Petersburg (1703)",
-          "Creation of the Russian Navy",
-          "Russia's emergence as European great power after Poltava",
-          "Westernization of Russian aristocracy and government",
-          "Abolition of the Patriarchate; state control of Church",
-          "Table of Ranks meritocratic system"
-        ],
-        "relationships": [
-          {
-            "sourceSlug": "peter-the-great",
-            "sourceName": "Peter the Great",
-            "verb": "CAUSES",
-            "targetSlug": "saint-petersburg",
-            "targetName": "Saint Petersburg",
-            "context": "Founded Russia's new capital on the Neva, 1703"
-          },
-          {
-            "sourceSlug": "peter-the-great",
-            "sourceName": "Peter the Great",
-            "verb": "TRANSFORMS",
-            "targetSlug": "russia",
-            "targetName": "Russia",
-            "context": "Westernized military, government, and culture"
-          },
-          {
-            "sourceSlug": "peter-the-great",
-            "sourceName": "Peter the Great",
-            "verb": "DEFINES",
-            "targetSlug": "poltava",
-            "targetName": "Battle of Poltava",
-            "context": "Decisively defeated Sweden, 1709"
-          },
-          {
-            "sourceSlug": "peter-the-great",
-            "sourceName": "Peter the Great",
-            "verb": "INFLUENCES",
-            "targetSlug": "catherine-the-great",
-            "targetName": "Catherine the Great",
-            "context": "Continued Peter's modernization program"
-          },
-          {
-            "sourceSlug": "peter-the-great",
-            "sourceName": "Peter the Great",
-            "verb": "OCCURS_IN",
-            "targetSlug": "moscow",
-            "targetName": "Moscow",
-            "context": "Ruled Russia from Moscow before founding Petersburg"
-          }
-        ],
-        "places": [
-          {
-            "name": "Moscow",
-            "role": "Birth place"
-          }
-        ],
-        "texts": [
-          {
-            "title": "Wikipedia: Peter the Great",
-            "type": "Reference article",
-            "slug": "peter-the-great"
-          }
-        ],
-        "externalLinks": [
-          "https://www.wikidata.org/wiki/Q8479",
-          "https://en.wikipedia.org/wiki/Peter_the_Great"
-        ],
-        "tags": [
-          "Political Leaders",
-          "political-systems",
-          "geopolitical-linkage",
-          "cause-and-effect"
-        ],
-        "thumbnailUrl": "",
-        "quote": "",
-        "legacySummary": ""
-      },
+      "detailsJson": "{\"historicalSignificance\": {\"significanceScore\": 9, \"significanceNarrative\": \"Peter's modernization of Russia had far-reaching consequences, including the establishment of a strong navy and the reformation of the Orthodox Church, which helped spread Christianity throughout Eastern Europe. His legacy also influenced European politics, as his victory over Sweden at Poltava marked the beginning of Russia's rise as a major European power.\", \"significanceCategory\": \"world-changing\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 9, \\\"significanceNarrative\\\": \\\"Peter's modernization of Russia had far-reaching consequences, including the establishment of a strong navy and the reformation of the Orthodox Church, which helped spread Christianity throughout Eastern Europe. His legacy also influenced European politics, as his victory over Sweden at Poltava marked the beginning of Russia's rise as a major European power.\\\", \\\"significanceCategory\\\": \\\"world-changing\\\"}\", \"timestamp\": \"2026-05-15T04:58:22Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "People — Political Leaders — Global — Early Modern"
       ],
@@ -128,7 +46,12 @@
       "$id": "peter-the-great",
       "$sequence": "213625",
       "$createdAt": "2026-04-05T12:47:51.458+00:00",
-      "$updatedAt": "2026-04-05T12:47:51.458+00:00"
+      "$updatedAt": "2026-04-05T12:47:51.458+00:00",
+      "historicalSignificance": {
+        "significanceScore": 9,
+        "significanceNarrative": "Peter's modernization of Russia had far-reaching consequences, including the establishment of a strong navy and the reformation of the Orthodox Church, which helped spread Christianity throughout Eastern Europe. His legacy also influenced European politics, as his victory over Sweden at Poltava marked the beginning of Russia's rise as a major European power.",
+        "significanceCategory": "world-changing"
+      }
     }
   ]
 }
