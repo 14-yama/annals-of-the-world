@@ -29055,7 +29055,8 @@
       "  RETRY (1) \u2014 insufficient causes (1, need >= 2)",
       "  FAILED \u2014 relationship[0] invalid verb: 'SERVED_AS_SECRETARY_TO'",
       "",
-      "[5/20] smaragdus-of-saint-mihiel (score=113.5, 0c)"
+      "[5/20] smaragdus-of-saint-mihiel (score=113.5, 0c)",
+      "  RETRY (1) \u2014 relationship[3] invalid verb: 'INFLUENCED_BY'"
     ],
     "exitCode": null
   },
@@ -29107,7 +29108,16 @@
       "[10/50] marcus-gavius-apicius (importance=7)",
       "  SCORED \u2014 5/10 (regional): As a prominent gourmet and figure of luxury in ancient Rome, Apicius played a si...",
       "",
-      "[11/50] vedius-pollio (importance=7)"
+      "[11/50] vedius-pollio (importance=7)",
+      "  ERROR \u2014 Ollama error: timed out",
+      "",
+      "[12/50] marco-polo (importance=7)",
+      "  SCORED \u2014 8/10 (world-changing): Marco Polo's travels introduced Europe to East Asian technology and culture, ins...",
+      "",
+      "[13/50] richard-whittington (importance=7)",
+      "  ERROR \u2014 Ollama error: timed out",
+      "",
+      "[14/50] giovanni-di-bicci-de-medici (importance=7)"
     ],
     "exitCode": null
   },
@@ -29297,14 +29307,66 @@
   "git-push-1778887945": {
     "job_id": "git-push-1778887945",
     "bot": "git-push",
+    "status": "done",
+    "model": "none",
+    "count": 2,
+    "pid": null,
+    "started": "2026-05-15T23:32:25Z",
+    "finished": "2026-05-15T23:32:29Z",
+    "log": [
+      "Pending files: 2 entities, 0 edges (2 total)",
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 600 local enrichments\"",
+      "[clean/audit-system 7f4a2f7f3e] feat(enrich): watchdog auto-push \u2014 600 local enrichments\n 5 files changed, 147 insertions(+), 12 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   04f681cdb0..7f4a2f7f3e  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 2 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
+    ],
+    "exitCode": 0
+  },
+  "sync-1778888269": {
+    "job_id": "sync-1778888269",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 2234509,
+    "started": "2026-05-15T23:37:49Z",
+    "finished": "2026-05-15T23:38:09Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=79999/100000 (hardStop=80%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 1071 dirty files",
+      "[diff] 1071 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 1071,",
+      "  \"entitiesUpserted\": 0,",
+      "  \"auditRowsEmitted\": 0,",
+      "  \"writesPerformed\": 0,",
+      "  \"stoppedReason\": \"BUDGET_EXCEEDED writes 80000/100000 (80.0%) >= 80%\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 7f4a2f7f"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1778888290": {
+    "job_id": "git-push-1778888290",
+    "bot": "git-push",
     "status": "running",
     "model": "none",
     "count": 0,
     "pid": null,
-    "started": "2026-05-15T23:32:25Z",
+    "started": "2026-05-15T23:38:10Z",
     "finished": null,
     "log": [
-      "Pending files: 2 entities, 0 edges (2 total)",
+      "Pending files: 1 entities, 0 edges (1 total)",
       "git add data/appwrite-export/ ..."
     ],
     "exitCode": null
