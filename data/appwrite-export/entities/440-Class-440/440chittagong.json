@@ -25,7 +25,7 @@
       "wikidataQid": "Q376749",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Chittagong",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Chittagong%20collage.png",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"chittagong\", \"sourceName\": \"Chittagong\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Chittagong is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Chittagong\", \"type\": \"Reference article\", \"slug\": \"chittagong\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q376749\", \"https://en.wikipedia.org/wiki/Chittagong\"], \"tags\": [\"Bangladesh\", \"city\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Chittagong left a notable mark on Classical history, documented across 138 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"chittagong\", \"sourceName\": \"Chittagong\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Chittagong is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Chittagong\", \"type\": \"Reference article\", \"slug\": \"chittagong\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q376749\", \"https://en.wikipedia.org/wiki/Chittagong\"], \"tags\": [\"Bangladesh\", \"city\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Chittagong left a notable mark on Classical history, documented across 138 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"As the busiest port in Bangladesh and a major hub for international trade, Chittagong played a significant role in the country's economic development. The city's strategic location on the Karnaphuli River has facilitated its growth into a regional commercial center.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"As the busiest port in Bangladesh and a major hub for international trade, Chittagong played a significant role in the country's economic development. The city's strategic location on the Karnaphuli River has facilitated its growth into a regional commercial center.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-15T22:09:16Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Cities -- Bangladesh -- Classical"
       ],
@@ -45,7 +45,12 @@
       "$id": "chittagong",
       "$sequence": "717452",
       "$createdAt": "2026-04-05T15:16:40.097+00:00",
-      "$updatedAt": "2026-04-05T15:16:40.097+00:00"
+      "$updatedAt": "2026-04-05T15:16:40.097+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "As the busiest port in Bangladesh and a major hub for international trade, Chittagong played a significant role in the country's economic development. The city's strategic location on the Karnaphuli River has facilitated its growth into a regional commercial center.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
