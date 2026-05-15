@@ -1,37 +1,35 @@
 {
-  "timestamp": "2026-05-15T03:37:38Z",
+  "timestamp": "2026-05-15T04:33:56Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "entities": [
     {
       "slug": "william-dunbar",
       "status": "failed",
-      "reason": "relationship[0] invalid verb: 'PATRONIZED'"
+      "reason": "relationship[1] invalid verb: 'PROBABLY_BORN_IN'"
     },
     {
       "slug": "lucius-ii",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'CHALLENGES'"
-    },
-    {
-      "slug": "guan-yu",
-      "status": "enriched",
-      "old_len": 632,
-      "new_len": 1232
-    },
-    {
-      "slug": "jami",
-      "status": "enriched",
-      "old_len": 606,
-      "new_len": 1202
+      "reason": "relationship[3] invalid verb: 'CONFLICTS_WITH'"
     },
     {
       "slug": "alcuin",
       "status": "failed",
-      "reason": "relationship[1] invalid verb: 'TAUGHT'"
+      "reason": "insufficient causes (0, need >= 2)"
+    },
+    {
+      "slug": "george-boleyn-viscount-rochford",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "baldassarre-castiglione",
+      "status": "failed",
+      "reason": "relationship[0] invalid verb: 'SERVED_AS'"
     }
   ]
 }
