@@ -20653,14 +20653,66 @@
   "git-push-1778827971": {
     "job_id": "git-push-1778827971",
     "bot": "git-push",
+    "status": "done",
+    "model": "none",
+    "count": 3,
+    "pid": null,
+    "started": "2026-05-15T06:52:51Z",
+    "finished": "2026-05-15T06:52:54Z",
+    "log": [
+      "Pending files: 3 entities, 0 edges (3 total)",
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 519 local enrichments\"",
+      "[clean/audit-system e328a5cd22] feat(enrich): watchdog auto-push \u2014 519 local enrichments\n 6 files changed, 59 insertions(+), 12 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   00669849dd..e328a5cd22  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 3 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
+    ],
+    "exitCode": 0
+  },
+  "sync-1778828287": {
+    "job_id": "sync-1778828287",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 473321,
+    "started": "2026-05-15T06:58:07Z",
+    "finished": "2026-05-15T06:58:21Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=79993/100000 (hardStop=80%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 986 dirty files",
+      "[diff] 986 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 986,",
+      "  \"entitiesUpserted\": 2,",
+      "  \"auditRowsEmitted\": 2,",
+      "  \"writesPerformed\": 4,",
+      "  \"stoppedReason\": \"BUDGET_EXCEEDED writes 80002/100000 (80.0%) >= 80%\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit e328a5cd"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1778828302": {
+    "job_id": "git-push-1778828302",
+    "bot": "git-push",
     "status": "running",
     "model": "none",
     "count": 0,
     "pid": null,
-    "started": "2026-05-15T06:52:51Z",
+    "started": "2026-05-15T06:58:22Z",
     "finished": null,
     "log": [
-      "Pending files: 3 entities, 0 edges (3 total)",
+      "Pending files: 1 entities, 0 edges (1 total)",
       "git add data/appwrite-export/ ..."
     ],
     "exitCode": null
