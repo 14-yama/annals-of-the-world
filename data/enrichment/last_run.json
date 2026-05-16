@@ -1,39 +1,38 @@
 {
-  "timestamp": "2026-05-16T10:17:19Z",
+  "timestamp": "2026-05-16T11:31:07Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 4,
-  "failed": 1,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "dorotea-bucca",
-      "status": "enriched",
-      "old_len": 668,
-      "new_len": 992
-    },
-    {
-      "slug": "prokop-the-great",
-      "status": "enriched",
-      "old_len": 222,
-      "new_len": 1134
-    },
-    {
-      "slug": "deng-xi",
+      "slug": "richard-fitzralph",
       "status": "failed",
       "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "epic-of-gilgamesh",
-      "status": "enriched",
-      "old_len": 104,
-      "new_len": 1298
+      "slug": "johann-pfeffinger",
+      "status": "failed",
+      "reason": "Unterminated string starting at: line 1 column 15093 (char 15092)"
     },
     {
-      "slug": "latin-america",
+      "slug": "andrea-dittis",
       "status": "enriched",
-      "old_len": 67,
-      "new_len": 1839
+      "old_len": 232,
+      "new_len": 1770
+    },
+    {
+      "slug": "antonio-joaqu\u00edn-p\u00e9rez-mart\u00ednez",
+      "status": "enriched",
+      "old_len": 87,
+      "new_len": 1818
+    },
+    {
+      "slug": "mansuy-of-toul",
+      "status": "enriched",
+      "old_len": 45,
+      "new_len": 763
     }
   ]
 }
