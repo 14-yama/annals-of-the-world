@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-16T11:31:07Z",
+  "timestamp": "2026-05-16T12:49:34Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 3,
@@ -8,31 +8,31 @@
   "entities": [
     {
       "slug": "richard-fitzralph",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 186,
+      "new_len": 1550
     },
     {
       "slug": "johann-pfeffinger",
       "status": "failed",
-      "reason": "Unterminated string starting at: line 1 column 15093 (char 15092)"
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "andrea-dittis",
+      "slug": "luis-antonio-belluga-y-moncada",
       "status": "enriched",
-      "old_len": 232,
-      "new_len": 1770
+      "old_len": 103,
+      "new_len": 1382
     },
     {
-      "slug": "antonio-joaqu\u00edn-p\u00e9rez-mart\u00ednez",
+      "slug": "fulk-of-reims",
       "status": "enriched",
-      "old_len": 87,
-      "new_len": 1818
+      "old_len": 227,
+      "new_len": 1581
     },
     {
-      "slug": "mansuy-of-toul",
-      "status": "enriched",
-      "old_len": 45,
-      "new_len": 763
+      "slug": "katakalon-kekaumenos",
+      "status": "failed",
+      "reason": "timed out"
     }
   ]
 }
