@@ -1,27 +1,15 @@
 {
-  "timestamp": "2026-05-16T08:25:26Z",
+  "timestamp": "2026-05-16T09:13:23Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 1,
+  "failed": 4,
   "dry_run": false,
   "entities": [
     {
       "slug": "dorotea-bucca",
       "status": "failed",
-      "reason": "Unterminated string starting at: line 1 column 16571 (char 16570)"
-    },
-    {
-      "slug": "gupta-empire",
-      "status": "enriched",
-      "old_len": 61,
-      "new_len": 1464
-    },
-    {
-      "slug": "central-africa",
-      "status": "enriched",
-      "old_len": 61,
-      "new_len": 1160
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "prokop-the-great",
@@ -29,10 +17,20 @@
       "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "true-jesus-church",
+      "slug": "deng-xi",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
+    },
+    {
+      "slug": "east-africa",
       "status": "enriched",
-      "old_len": 101,
-      "new_len": 1464
+      "old_len": 65,
+      "new_len": 1537
+    },
+    {
+      "slug": "epic-of-gilgamesh",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     }
   ]
 }
