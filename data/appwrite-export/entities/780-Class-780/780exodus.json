@@ -25,7 +25,103 @@
       "wikidataQid": "Q9190",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Book_of_Exodus",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Bibbia%20di%20Federico%20da%20Montefeltro%20-%20BAV%20Urb.Lat.1%262%20-%20Exodus%20f27r.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier literary tradition in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Historical events in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Patron commission in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Preserved knowledge through Exodus's historical significance\", \"type\": \"Text\"}, {\"title\": \"Influenced later works through Exodus's historical significance\", \"type\": \"Text\"}, {\"title\": \"Defined canon through Exodus's historical significance\", \"type\": \"Text\"}], \"relationships\": [{\"sourceSlug\": \"exodus\", \"sourceName\": \"Exodus\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Exodus is situated within the Classical (920)\"}, {\"sourceSlug\": \"exodus\", \"sourceName\": \"Exodus\", \"verb\": \"TRANSMITS\", \"targetSlug\": \"literary-canon-classical\", \"targetName\": \"Literary Canon (Classical)\", \"context\": \"Exodus contributed to the literary canon of the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Exodus\", \"type\": \"Reference article\", \"slug\": \"exodus\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q9190\", \"https://en.wikipedia.org/wiki/Book_of_Exodus\"], \"tags\": [\"literary work\", \"Historical & Literary Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Exodus is remembered as a landmark text of the Classical era, referenced in 150 Wikipedia language editions. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "The Babylonian exile (c. 597–539 BCE) — when the Israelites were deported to Babylon following the Babylonian conquest of Jerusalem — provided the editorial context for the final compilation and theological shaping of the Exodus narrative: the story of liberation from Egyptian slavery was the narrative resource that sustained the exiled community's hope for return and restoration.",
+          "The earlier oral and written traditions about Moses and the Exodus — whether reflecting historical memory of an actual Egyptian sojourn and exodus (disputed by modern Egyptology) or theological elaboration of foundational religious experience — were the literary materials that the Priestly and Deuteronomic editors shaped into the canonical Exodus narrative.",
+          "The institution of Passover (Pesach) — the annual festival commemorating the night of the final plague and the departure from Egypt — was both the occasion for the ritual retelling of the Exodus story and the institutional framework that preserved and transmitted the narrative across generations, long before its canonical scriptural form."
+        ],
+        "effects": [
+          "The Exodus narrative became the foundational political myth of the Western tradition — the paradigm of divine liberation from oppression and the founding of a covenant community — used to justify colonial settlement (the Puritans' 'city on a hill'), inspire revolutionary movements (the American and French Revolutions), and ground liberation theology (Latin American Catholic theology, African American civil rights rhetoric).",
+          "The Ten Commandments (Exodus 20) are the foundational legal text of the Abrahamic traditions — their influence on the development of Jewish halakha, Christian canon law, and Islamic sharia, and through these on Western legal systems, is the most consequential legal contribution in human history.",
+          "The Passover Seder — the ritual meal that retells the Exodus story ('We were slaves to Pharaoh in Egypt, and the LORD our God brought us out') — is the most widely practised Jewish ritual, observed by Jews worldwide for more than two thousand years and a model for subsequent liberation rituals (the Christian Eucharist as a New Exodus Passover, the civil rights movement's appropriation of Passover imagery)."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "exodus",
+            "sourceName": "Book of Exodus",
+            "verb": "PART_OF",
+            "targetSlug": "torah",
+            "targetName": "Torah/Pentateuch (Five Books of Moses)",
+            "context": "Exodus is the second book of the Torah — the foundational five books of the Hebrew Bible — and contains the central narrative of Israelite religion: the Exodus from Egypt, the Passover, and the giving of the Law at Sinai."
+          },
+          {
+            "sourceSlug": "exodus",
+            "sourceName": "Book of Exodus (liberation narrative)",
+            "verb": "INSPIRES",
+            "targetSlug": "liberation-theology",
+            "targetName": "Liberation theology and political liberation movements",
+            "context": "The Exodus narrative has been the foundational political myth of liberation movements across three millennia — from the Puritan settlers to the African American civil rights movement ('Let my people go') to Latin American liberation theology."
+          },
+          {
+            "sourceSlug": "exodus",
+            "sourceName": "Book of Exodus (Ten Commandments)",
+            "verb": "ESTABLISHES",
+            "targetSlug": "mosaic-law",
+            "targetName": "Mosaic Law and Abrahamic legal tradition",
+            "context": "The Ten Commandments and the Mosaic Law given at Sinai (Exodus 20–23) are the foundational legal text of Judaism, Christianity, and Islam, and their influence on the development of Western legal systems through these traditions is immeasurable."
+          }
+        ],
+        "places": [
+          {
+            "name": "Egypt and Sinai Peninsula (narrative setting)",
+            "role": "The narrative geography of the Exodus — Egypt as the land of slavery, the Red Sea as the boundary of liberation, Mount Sinai as the place of divine revelation — which has shaped the sacred geography of the Abrahamic traditions"
+          },
+          {
+            "name": "Babylon (c. 597–539 BCE, probable final compilation context)",
+            "role": "The Babylonian exile — when the deportation of the Israelites created the urgent need to preserve and transmit the foundational narrative of divine liberation — is the probable context for the final compilation and theological shaping of the Exodus narrative"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Exodus",
+            "type": "Reference article",
+            "slug": "exodus"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q9190",
+          "https://en.wikipedia.org/wiki/Book_of_Exodus"
+        ],
+        "tags": [
+          "literary work",
+          "Historical & Literary Texts",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "Exodus is remembered as a landmark text of the Classical era, referenced in 150 Wikipedia language editions. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.",
+        "summary": "The Book of Exodus is the second book of the Hebrew Bible (Torah/Pentateuch), traditionally attributed to Moses but understood by modern scholarship as a composite text compiled from multiple literary sources (the Documentary Hypothesis identifies the Yahwist, Elohist, Priestly, and Deuteronomic sources) and reaching its final form during the Babylonian exile period (c. 550–450 BCE). The book narrates the foundational story of Israelite religion and national identity: the enslavement of the Israelites in Egypt (under a Pharaoh 'who did not know Joseph'), the birth, upbringing, and call of Moses (the burning bush, Exodus 3: 'I AM WHO I AM'), the ten plagues by which God compels Pharaoh to release the Israelites, the Exodus from Egypt (the Passover, the crossing of the Red Sea), the giving of the Law at Mount Sinai (the Ten Commandments, Exodus 20), and the covenant between God and Israel.\n\nExodus is simultaneously the foundational narrative of Judaism, Christianity, and Islam — the story of divine liberation from slavery, the founding of the covenant relationship between God and a chosen people, and the revelation of the divine name (YHWH, 'I AM WHO I AM') — and one of the most influential narratives in Western political thought, in which the Exodus from Egypt became the paradigmatic story of liberation from oppression and the founding of a covenant community. Its influence on the political imagination is incalculable: from the Pilgrim Fathers who saw themselves as Israel crossing the Red Sea to the American promised land, to the liberation theology of Latin American Catholicism, to Martin Luther King Jr. and the African American civil rights movement ('Let my people go'), the Exodus story is the political myth of liberation that has structured political and religious movements across three millennia.\n\nThe Sinai revelation — the giving of the Ten Commandments and the Mosaic Law — is the foundational legal and ethical code of the Abrahamic traditions, and its influence on Western legal and moral thought (through Deuteronomy and the entire development of Jewish, Christian, and Islamic law) is immeasurable.",
+        "subjects": [
+          "Hebrew Bible",
+          "Classical Era",
+          "Biblical Literature",
+          "Judaism",
+          "Christianity",
+          "Islam",
+          "Ancient Israel",
+          "Law"
+        ],
+        "frameworks": [
+          "RELIGIOUS_INTERPRETATION",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 10,
+          "significanceNarrative": "The Book of Exodus is one of the most consequential texts in human history — the foundational narrative of Israelite/Jewish identity, the source of the Ten Commandments that underlie the legal traditions of Judaism, Christianity, and Islam, and the political myth of liberation from slavery that has inspired revolutionary movements across three millennia. The Exodus story is the single most widely retold narrative of liberation in the Western tradition.",
+          "significanceCategory": "world-changing"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-30-may2026",
+            "timestamp": "2026-05-16T16:45:46Z",
+            "oldValue": "",
+            "newValue": "The Book of Exodus is the second book of the Hebrew Bible (Torah/Pentateuch), traditionally attributed to Moses but understood by modern scholarship as a composite text compiled from multiple literary…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Historical & Literary Texts -- Global -- Classical"
       ],
@@ -45,7 +141,8 @@
       "$id": "exodus",
       "$sequence": "11615",
       "$createdAt": "2026-04-05T12:06:56.493+00:00",
-      "$updatedAt": "2026-04-06T00:51:04.304+00:00"
+      "$updatedAt": "2026-04-06T00:51:04.304+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
