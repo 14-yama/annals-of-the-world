@@ -1,44 +1,43 @@
 {
-  "generatedAt": "2026-05-15T23:08:44Z",
+  "generatedAt": "2026-05-16T00:23:18Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 5,
-  "failed": 0,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "results": [
     {
-      "slug": "richard-de-bury",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "near-east",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
-      "slug": "robert-burnell",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
-    {
-      "slug": "ibn-ma\u1e0d\u0101\u02be",
+      "slug": "southern-europe",
       "status": "ok",
       "score": 7,
       "category": "regional"
     },
     {
-      "slug": "ibn-ma",
+      "slug": "hans-memling",
       "status": "ok",
       "score": 7,
       "category": "regional"
     },
     {
-      "slug": "dorotheus",
+      "slug": "edwin-son-of-edward-the-elder",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "south-china-sea",
       "status": "ok",
       "score": 5,
       "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 5,
-    "failed": 0
+    "entities_scored": 4,
+    "failed": 1
   }
 }
