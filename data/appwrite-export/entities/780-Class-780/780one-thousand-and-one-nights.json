@@ -25,7 +25,103 @@
       "wikidataQid": "Q8258",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Sughrat.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier literary tradition in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Historical events in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Patron commission in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Preserved knowledge through One Thousand and One Nights's historical significance\", \"type\": \"Text\"}, {\"title\": \"Influenced later works through One Thousand and One Nights's historical significance\", \"type\": \"Text\"}, {\"title\": \"Defined canon through One Thousand and One Nights's historical significance\", \"type\": \"Text\"}], \"relationships\": [{\"sourceSlug\": \"one-thousand-and-one-nights\", \"sourceName\": \"One Thousand and One Nights\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"One Thousand and One Nights is situated within the Classical (920)\"}, {\"sourceSlug\": \"one-thousand-and-one-nights\", \"sourceName\": \"One Thousand and One Nights\", \"verb\": \"TRANSMITS\", \"targetSlug\": \"literary-canon-classical\", \"targetName\": \"Literary Canon (Classical)\", \"context\": \"One Thousand and One Nights contributed to the literary canon of the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: One Thousand and One Nights\", \"type\": \"Reference article\", \"slug\": \"one-thousand-and-one-nights\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q8258\", \"https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights\"], \"tags\": [\"literary work\", \"Historical & Literary Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"One Thousand and One Nights is remembered as a landmark text of the Classical era, referenced in 158 Wikipedia language editions. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "The synthesis of Indian (Panchatantra), Sasanian Persian (Hazar Afsana), and Arabic narrative traditions in the Islamic world (8th–14th centuries CE) — the cultural exchange of the Abbasid and Mamluk eras — created the composite body of material from which the One Thousand and One Nights was compiled: the collection is a testament to the cosmopolitan literary culture of medieval Islam.",
+          "The Scheherazade frame narrative — the figure of a storyteller who delays death through storytelling — provided the structural genius of the collection: by embedding all stories within the frame of Scheherazade's survival strategy, the collection models a theory of narrative as life-saving and therapeutic, giving storytelling itself a moral and existential significance.",
+          "Antoine Galland's French translation (1704–1717) and its enormous European reception were the crucial transmission event — without Galland's embellished and freely adapted translation (which introduced several stories not found in Arabic manuscripts), the One Thousand and One Nights would not have become the European cultural phenomenon that shaped Romanticism, Orientalism, and world popular culture."
+        ],
+        "effects": [
+          "Galland's French translation (1704–1717) inaugurated European Orientalism — the fascination with the Islamic world as a space of exotic, erotic, and marvellous difference — and directly influenced the literary and artistic Orientalism of the 18th and 19th centuries (Byron's Turkish Tales, Delacroix's paintings, Ingres's odalisques, Rimsky-Korsakov's Scheherazade symphony).",
+          "The characters and stories of the One Thousand and One Nights — Sinbad, Aladdin, Ali Baba, Scheherazade — became among the most globally recognisable fictional figures in world culture, adapted into films, cartoons, pantomimes, and theme parks on every continent, making the collection one of the most influential sources of world popular culture.",
+          "Borges's engagement with the One Thousand and One Nights — his essays on the collection (in 'Other Inquisitions') and his short stories that draw on its structure and themes — made the collection a foundational text for 20th-century metafiction and the theory of narrative: Borges saw the Nights as the definitive example of the self-referential narrative that questions the nature of storytelling itself."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "scheherazade",
+            "sourceName": "Scheherazade (Shahrazad, fictional frame narrator)",
+            "verb": "FRAMES",
+            "targetSlug": "one-thousand-and-one-nights",
+            "targetName": "One Thousand and One Nights (Alf Layla wa-Layla)",
+            "context": "Scheherazade — the vizier's daughter who delays execution by telling stories for 1,001 nights — is the framing narrator of the collection and the figure whose survival strategy structures the entire work."
+          },
+          {
+            "sourceSlug": "one-thousand-and-one-nights",
+            "sourceName": "One Thousand and One Nights (Galland translation, European Orientalism)",
+            "verb": "INFLUENCES",
+            "targetSlug": "european-orientalism",
+            "targetName": "European Orientalism (18th–19th century art, literature, culture)",
+            "context": "Galland's 1704–1717 French translation inaugurated European Orientalism — the literary and artistic fascination with the Islamic world as exotic and marvellous — directly influencing Byron, Delacroix, Ingres, and Rimsky-Korsakov."
+          },
+          {
+            "sourceSlug": "one-thousand-and-one-nights",
+            "sourceName": "One Thousand and One Nights (Indian, Persian, Arabic synthesis)",
+            "verb": "SYNTHESISES",
+            "targetSlug": "panchatantra",
+            "targetName": "Panchatantra and medieval Islamic narrative traditions",
+            "context": "The One Thousand and One Nights synthesises Indian (Panchatantra), Sasanian Persian (Hazar Afsana), and original Arabic material — demonstrating the cosmopolitan cultural exchange of the medieval Islamic world."
+          }
+        ],
+        "places": [
+          {
+            "name": "Mamluk Egypt (14th–15th century compilation; oldest surviving complete manuscript)",
+            "role": "The One Thousand and One Nights reached its approximate present form in Mamluk Egypt (14th–15th century) — the oldest surviving complete manuscript is from this period, representing the compilation's culmination"
+          },
+          {
+            "name": "France (Galland translation 1704–1717, European reception)",
+            "role": "Antoine Galland's French translation (Les Mille et Une Nuits, 1704–1717) was the crucial transmission event for the collection's global influence — immediately a literary sensation, it inaugurated European Orientalism"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: One Thousand and One Nights",
+            "type": "Reference article",
+            "slug": "one-thousand-and-one-nights"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q8258",
+          "https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights"
+        ],
+        "tags": [
+          "literary work",
+          "Historical & Literary Texts",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "One Thousand and One Nights is remembered as a landmark text of the Classical era, referenced in 158 Wikipedia language editions. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.",
+        "summary": "One Thousand and One Nights (Arabic: أَلْفُ لَيْلَةٍ وَلَيْلَةٌ, Alf Layla wa-Layla) is a medieval Arabic-language frame narrative collection of stories — assembled, compiled, and augmented over several centuries from diverse sources (Indian, Persian, Arabic, and Egyptian folklore) into a composite work that reached its approximate present form in the 14th–15th century CE (Mamluk Egypt), though the earliest Arabic manuscript fragments date from the 9th century CE and the oldest surviving complete manuscript from the 14th century. The collection is framed by the story of the Sasanian king Shahryar — who, having discovered his first wife's infidelity, resolves to marry a new virgin bride each night and execute her the following morning — and Scheherazade (Shahrazad), the vizier's daughter, who volunteers to marry the king and delays her execution by telling him a new story each night, always ending at a suspenseful moment to ensure the king keeps her alive to hear the conclusion. The frame continues for one thousand and one nights until the king, transformed by the stories, spares Scheherazade's life.\n\nThe collection contains the most famous stories of the medieval literary world — Ali Baba and the Forty Thieves, Sinbad the Sailor (seven voyages), Aladdin and the Magic Lamp, the tale of the Three Apples (often cited as the earliest detective story), and hundreds of others — stories that range from court intrigue, merchant adventures, and voyages of discovery to love stories, ghost stories, comic tales, and philosophical parables. The collection demonstrates the extraordinary diversity of the Arabic narrative tradition — drawing on Indian tale collections (the Panchatantra tradition), Sasanian Persian stories (the Hazar Afsana, 'Thousand Fictions'), and original Arabic material in a synthesis that exemplifies the cosmopolitan cultural exchange of the medieval Islamic world.\n\nThe One Thousand and One Nights was introduced to Europe by Antoine Galland's French translation (Les Mille et Une Nuits, 1704–1717) — a free and embellished translation that immediately became a literary sensation and inaugurated the European fashion for Orientalism. Several of the most famous stories (Aladdin, Ali Baba) are not found in any known Arabic manuscript and were probably added by Galland himself. The collection has subsequently shaped European literature (Byron, Goethe, Dickens, Poe, Proust, Borges, Rushdie), Hollywood cinema, and world popular culture.",
+        "subjects": [
+          "Arabic Literature",
+          "Medieval Era",
+          "World Literature",
+          "Frame Narrative",
+          "Folklore",
+          "Islamic Culture",
+          "Scheherazade",
+          "Cultural Transmission"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 10,
+          "significanceNarrative": "One Thousand and One Nights (medieval Arabic, compiled 8th–14th centuries CE) is one of the most influential narrative collections in world history. Its characters (Sinbad, Aladdin, Ali Baba, Scheherazade) are among the most globally recognisable fictional figures, its Scheherazade frame structure influenced the theory of narrative, and Galland's French translation (1704–1717) inaugurated European Orientalism. A testament to the cosmopolitan literary culture of medieval Islam and a foundational work of world popular culture.",
+          "significanceCategory": "world-changing"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-43-may2026",
+            "timestamp": "2026-05-16T17:54:57Z",
+            "oldValue": "",
+            "newValue": "One Thousand and One Nights (Arabic: أَلْفُ لَيْلَةٍ وَلَيْلَةٌ, Alf Layla wa-Layla) is a medieval Arabic-language frame narrative collection of stories — assembled, compiled, and augmented over sever…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Historical & Literary Texts -- Global -- Classical"
       ],
@@ -45,7 +141,8 @@
       "$id": "one-thousand-and-one-nights",
       "$sequence": "17582",
       "$createdAt": "2026-04-05T12:08:07.285+00:00",
-      "$updatedAt": "2026-04-06T00:51:06.093+00:00"
+      "$updatedAt": "2026-04-06T00:51:06.093+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }

@@ -25,7 +25,103 @@
       "wikidataQid": "Q40185",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Divine_Comedy",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Dante%20Domenico%20di%20Michelino.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier literary tradition in the 500 – 1500 CE\", \"type\": \"Text\", \"year\": \"500\"}, {\"title\": \"Historical events in the 500 – 1500 CE\", \"type\": \"Text\", \"year\": \"500\"}, {\"title\": \"Patron commission in the 500 – 1500 CE\", \"type\": \"Text\", \"year\": \"500\"}], \"effects\": [{\"title\": \"Preserved knowledge through The Divine Comedy's historical significance\", \"type\": \"Text\"}, {\"title\": \"Influenced later works through The Divine Comedy's historical significance\", \"type\": \"Text\"}, {\"title\": \"Defined canon through The Divine Comedy's historical significance\", \"type\": \"Text\"}], \"relationships\": [{\"sourceSlug\": \"the-divine-comedy\", \"sourceName\": \"The Divine Comedy\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-medieval\", \"targetName\": \"Medieval\", \"context\": \"The Divine Comedy is situated within the Medieval (930)\"}, {\"sourceSlug\": \"the-divine-comedy\", \"sourceName\": \"The Divine Comedy\", \"verb\": \"TRANSMITS\", \"targetSlug\": \"literary-canon-medieval\", \"targetName\": \"Literary Canon (Medieval)\", \"context\": \"The Divine Comedy contributed to the literary canon of the Medieval era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: The Divine Comedy\", \"type\": \"Reference article\", \"slug\": \"the-divine-comedy\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q40185\", \"https://en.wikipedia.org/wiki/Divine_Comedy\"], \"tags\": [\"literary work\", \"Historical & Literary Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"The Divine Comedy left a notable mark on Medieval history, documented across 129 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "Dante's political exile from Florence (1302 CE) — following the defeat of the White Guelph faction by the Black Guelphs and Pope Boniface VIII — was the biographical event that gave the Divine Comedy its urgency and its political density: the poem was written in exile, and its political judgements (including the placement of contemporary political and religious figures in Hell) reflect Dante's bitterness at his banishment.",
+          "The synthesis of Aristotelian philosophy and Christian theology achieved by Thomas Aquinas (1225–1274) — the Scholastic synthesis of classical reason and Christian faith — provided the theological and philosophical framework of the Divine Comedy: Dante's universe is organised by Aquinas's synthesis, and Aquinas himself appears in Paradiso.",
+          "The troubadour tradition of courtly love poetry (dolce stil novo) — the Florentine vernacular love poetry tradition in which Dante was a participant before the Comedy — provided the literary tradition from which the Comedy departed: Beatrice, as the idealised beloved who becomes a guide to divine love, is the transformation of the troubadour's donna (lady) into a theological symbol."
+        ],
+        "effects": [
+          "The Divine Comedy's use of the Tuscan vernacular for serious literary expression was a decisive contribution to the development of Italian as a literary language — Dante's choice of vernacular over Latin, and the extraordinary prestige of the Comedy in subsequent Italian literary culture, established Tuscan Italian as the standard literary Italian, shaping the development of the Italian language.",
+          "The Divine Comedy's influence on Western art and literature — Botticelli's Dante illustrations, Michelangelo's Last Judgement (deeply Dantean), Blake's illustrations, Rodin's Gates of Hell (based on Inferno), T. S. Eliot's The Waste Land, Primo Levi's Survival in Auschwitz (which draws extensively on Inferno) — demonstrates its role as the defining work of Italian literature and one of the three or four most influential works in the Western literary tradition.",
+          "The Comedy's mapping of the afterlife — the specific topography of Hell (funnel-shaped, nine circles), Purgatory (mountain island, seven terraces), and Heaven (nine concentric spheres) — created the most detailed and influential imaginative geography of the Christian afterlife in Western culture, shaping popular conceptions of Heaven and Hell for seven centuries."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "dante-alighieri",
+            "sourceName": "Dante Alighieri (1265–1321, Florentine poet)",
+            "verb": "AUTHORS",
+            "targetSlug": "the-divine-comedy",
+            "targetName": "The Divine Comedy (La Divina Commedia, c. 1308–1321)",
+            "context": "Dante composed the Divine Comedy c. 1308–1321 in exile from Florence — a 14,233-line vernacular epic in three canticles (Inferno, Purgatorio, Paradiso) that established Tuscan Italian as a literary language."
+          },
+          {
+            "sourceSlug": "the-divine-comedy",
+            "sourceName": "Divine Comedy (Dante's journey, Virgil guide)",
+            "verb": "FEATURES",
+            "targetSlug": "virgil",
+            "targetName": "Virgil (70–19 BCE, Roman poet, Aeneid author)",
+            "context": "Virgil — the author of the Aeneid — guides Dante through Hell and Purgatory in the Divine Comedy, representing the limits of classical reason (Virgil cannot enter Paradise) and embodying the synthesis of classical and Christian culture."
+          },
+          {
+            "sourceSlug": "the-divine-comedy",
+            "sourceName": "Divine Comedy (Tuscan vernacular, Italian language)",
+            "verb": "ESTABLISHES",
+            "targetSlug": "italian-literary-language",
+            "targetName": "Italian literary language (Tuscan vernacular as standard)",
+            "context": "Dante's choice to write the Comedy in the Tuscan vernacular, and the extraordinary prestige of the Comedy, was decisive in establishing Tuscan Italian as the standard literary Italian — a foundational contribution to the development of the Italian language."
+          }
+        ],
+        "places": [
+          {
+            "name": "Florence and the Florentine exile (Dante's political context, 1302–1321)",
+            "role": "Dante was exiled from Florence in 1302 — the Comedy was written in exile, and its political density (placing contemporary Florentines and popes in Hell) reflects Dante's bitterness at banishment"
+          },
+          {
+            "name": "Ravenna (Dante's death, 1321; tomb; completion of Paradiso)",
+            "role": "Dante died in Ravenna in 1321, having completed Paradiso — his tomb in Ravenna is a major site of Italian cultural memory, and Florence eventually erected a cenotaph for the poet it had exiled"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: The Divine Comedy",
+            "type": "Reference article",
+            "slug": "the-divine-comedy"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q40185",
+          "https://en.wikipedia.org/wiki/Divine_Comedy"
+        ],
+        "tags": [
+          "literary work",
+          "Historical & Literary Texts",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "The Divine Comedy left a notable mark on Medieval history, documented across 129 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.",
+        "summary": "The Divine Comedy (Italian: La Divina Commedia) is an epic narrative poem by the Italian poet Dante Alighieri (1265–1321), composed c. 1308–1321 in the Florentine vernacular (Tuscan Italian) and completed in the year of Dante's death. It is divided into three canticles — Inferno (Hell), Purgatorio (Purgatory), and Paradiso (Heaven) — each of 33 cantos (plus a single introductory canto for Inferno), totalling 100 cantos and approximately 14,233 lines of terza rima (a form of interlocking triple rhyme that Dante invented or standardised for this work: ABA BCB CDC...). The poem narrates Dante's imaginary journey through the three realms of the afterlife — guided by the Roman poet Virgil through Hell and Purgatory, and by Beatrice (Dante's idealised beloved, Beatrice Portinari) through Paradise — as an allegory of the soul's journey toward God, populated by over 600 historical, mythological, and fictional characters assigned to their appropriate places in the moral universe.\n\nThe Divine Comedy's significance is impossible to overstate in the history of Italian literature and Western culture. It simultaneously established the Tuscan vernacular as a literary language capable of serious poetry (a decisive contribution to the development of the Italian language as a literary medium), created the definitive medieval synthesis of Christian theology (drawing on Aquinas and Augustine), classical philosophy and literature (Virgil, Aristotle, Cicero), and contemporary political commentary (the poem is dense with Florentine political references and Dante's personal accounts of political exile), and demonstrated the capacity of vernacular literature to achieve the sublime register previously associated exclusively with Latin. The three canticles — Inferno (the most widely read), Purgatorio (the most theologically intricate), and Paradiso (the most technically demanding) — represent respectively the moral degradation of sin, the process of purgation and repentance, and the beatific vision of God.\n\nDante's influence on subsequent European literature and art is second only to Homer and the Bible — Chaucer (Troilus and Criseyde), Boccaccio (who gave the poem the epithet 'Divina'), Petrarch, Michelangelo, Blake, Goethe, T. S. Eliot (The Waste Land directly echoes Inferno), Borges, and Beckett have all named Dante as a primary influence.",
+        "subjects": [
+          "Italian Literature",
+          "Medieval Era",
+          "Dante Alighieri",
+          "Epic Poetry",
+          "Christian Theology",
+          "Medieval Literature",
+          "Italian Language",
+          "Western Canon"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 10,
+          "significanceNarrative": "The Divine Comedy (Dante Alighieri, c. 1308–1321) is the supreme work of Italian literature and one of the three or four most influential works in the Western literary tradition. Its establishment of Tuscan vernacular as a literary language shaped the development of the Italian language; its synthesis of classical philosophy and Christian theology created the definitive medieval worldview; and its influence on Western art (Botticelli, Michelangelo, Blake, Rodin) and literature (Chaucer, T. S. Eliot, Borges, Primo Levi) spans seven centuries.",
+          "significanceCategory": "world-changing"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-43-may2026",
+            "timestamp": "2026-05-16T17:54:57Z",
+            "oldValue": "",
+            "newValue": "The Divine Comedy (Italian: La Divina Commedia) is an epic narrative poem by the Italian poet Dante Alighieri (1265–1321), composed c. 1308–1321 in the Florentine vernacular (Tuscan Italian) and compl…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Historical & Literary Texts -- Global -- Medieval"
       ],
@@ -45,7 +141,8 @@
       "$id": "the-divine-comedy",
       "$sequence": "28898",
       "$createdAt": "2026-04-05T12:10:26.225+00:00",
-      "$updatedAt": "2026-04-06T00:51:35.761+00:00"
+      "$updatedAt": "2026-04-06T00:51:35.761+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
