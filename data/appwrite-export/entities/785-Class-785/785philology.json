@@ -25,7 +25,103 @@
       "wikidataQid": "Q40634",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Philology",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Aveu%20Ren%C3%A9%203.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier literary tradition in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Historical events in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Patron commission in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Preserved knowledge through philology's historical significance\", \"type\": \"Text\"}, {\"title\": \"Influenced later works through philology's historical significance\", \"type\": \"Text\"}, {\"title\": \"Defined canon through philology's historical significance\", \"type\": \"Text\"}], \"relationships\": [{\"sourceSlug\": \"philology\", \"sourceName\": \"philology\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"philology is situated within the Classical (920)\"}, {\"sourceSlug\": \"philology\", \"sourceName\": \"philology\", \"verb\": \"TRANSMITS\", \"targetSlug\": \"literary-canon-classical\", \"targetName\": \"Literary Canon (Classical)\", \"context\": \"philology contributed to the literary canon of the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: philology\", \"type\": \"Reference article\", \"slug\": \"philology\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q40634\", \"https://en.wikipedia.org/wiki/Philology\"], \"tags\": [\"methodology\", \"Political & Polemical Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"philology left a notable mark on Classical history, documented across 105 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "The Renaissance humanist programme of returning to the original languages of ancient texts — Lorenzo Valla's (1407–1457) demonstration that the Donation of Constantine was a medieval forgery through linguistic anachronism, Erasmus's Greek New Testament (1516) establishing the original Greek text over the Vulgate Latin — created the foundational methods of philological criticism: close attention to linguistic evidence as a tool for dating and authenticating texts.",
+          "The 19th-century German university tradition — the Humboldtian model of research-oriented universities, the seminar system, and the ideal of Wissenschaft (systematic, rigorous knowledge) — provided the institutional framework for the development of classical and comparative philology as autonomous academic disciplines.",
+          "The discovery of Sanskrit by European scholars and its comparison with Greek and Latin (Sir William Jones's 1786 lecture on the Indo-European language family) provided the founding problem of 19th-century comparative philology: the reconstruction of the hypothetical common ancestor (Proto-Indo-European) and the systematic comparison of its descendant languages through the sound laws of comparative linguistics."
+        ],
+        "effects": [
+          "The discovery of the Indo-European language family — the proof that Sanskrit, Greek, Latin, Gothic, Old Persian, and other languages all descended from a common ancestor — was one of the most important intellectual achievements of the 19th century, transforming the historical understanding of ancient peoples, migrations, and cultural relations across Eurasia.",
+          "Philology's textual criticism tradition — the Lachmann method of reconstructing the best text of a classical or medieval work from the evidence of surviving manuscripts — established the critical edition as the primary vehicle of classical scholarship, providing the textual foundations on which modern classical studies, medieval studies, and biblical studies rest.",
+          "Philology's role as the ancestor of modern linguistics (historical linguistics, comparative linguistics, morphology, phonology) and of modern literary studies (close reading, textual analysis, historical criticism) makes it the foundational academic discipline of the modern humanities — despite the disciplinary splits that have largely replaced 'philology' as a unified label."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "philology",
+            "sourceName": "Philology (textual criticism, historical linguistics)",
+            "verb": "PRODUCES",
+            "targetSlug": "indo-european-linguistics",
+            "targetName": "Indo-European linguistics (Rask, Grimm, Bopp)",
+            "context": "The comparative philology of Rask, Grimm, and Bopp proved the Indo-European language family and established the comparative method — one of the most important intellectual achievements of the 19th century."
+          },
+          {
+            "sourceSlug": "philology",
+            "sourceName": "Philology (Renaissance humanism, Valla, Erasmus)",
+            "verb": "DEVELOPS_FROM",
+            "targetSlug": "renaissance-humanism",
+            "targetName": "Renaissance humanism (return to original sources)",
+            "context": "Philology developed from the Renaissance humanist programme of returning to original languages — Valla's authentication methods and Erasmus's Greek New Testament established the foundational methods of philological criticism."
+          },
+          {
+            "sourceSlug": "philology",
+            "sourceName": "Philology (ancestor discipline)",
+            "verb": "PRECEDES",
+            "targetSlug": "modern-linguistics",
+            "targetName": "Modern linguistics (Saussure, Chomsky, structural linguistics)",
+            "context": "Philology is the ancestor discipline of modern linguistics — historical and comparative linguistics split off from the broader philological tradition in the late 19th and early 20th centuries, establishing linguistics as an autonomous science of language."
+          }
+        ],
+        "places": [
+          {
+            "name": "Germany (19th-century classical philology, Berlin and Göttingen universities)",
+            "role": "The German university tradition — Karl Lachmann, August Boeckh, Jacob Grimm — was the centre of 19th-century classical and comparative philology, creating the foundations of modern historical linguistics and textual criticism"
+          },
+          {
+            "name": "Oxford, Cambridge, and Paris (classical and medieval philology traditions)",
+            "role": "The British and French philological traditions — editing classical and medieval texts, developing classical scholarship — complemented the German tradition and created the Anglo-French classical studies tradition"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: philology",
+            "type": "Reference article",
+            "slug": "philology"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q40634",
+          "https://en.wikipedia.org/wiki/Philology"
+        ],
+        "tags": [
+          "methodology",
+          "Political & Polemical Texts",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "philology left a notable mark on Classical history, documented across 105 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.",
+        "summary": "Philology (from Greek φιλολογία, philologia, 'love of words/learning') is the academic discipline concerned with the study of written texts and their linguistic, historical, and literary dimensions — encompassing textual criticism (the reconstruction and authentication of texts), historical linguistics (the study of language change over time), and the interpretation of literary and documentary sources. As an academic discipline, philology developed from the Renaissance humanist tradition of returning to the original languages of ancient texts — the recovery, editing, and interpretation of Greek, Latin, Hebrew, and Arabic manuscripts — and reached its classical form in the German academic tradition of the 19th century (Karl Lachmann, 1793–1851; August Boeckh, 1785–1867; Friedrich Schlegel, 1772–1829; the comparative philology of Rasmus Rask, 1787–1832, and Jacob Grimm, 1785–1863), which created the foundations of both modern historical linguistics and the critical edition traditions.\n\nPhilology as practiced in the 19th century encompassed several overlapping activities: textual criticism (the reconstruction of the most accurate text of a classical or medieval work from multiple manuscripts), comparative linguistics (the study of the genetic relationships between languages through comparative analysis of their vocabulary and grammar), and Altertumswissenschaft ('science of antiquity', August Boeckh's programme of total interpretation of ancient culture through its linguistic and documentary sources). The founding achievement of 19th-century comparative philology was the proof (Rask, Grimm, Bopp) that Sanskrit, Greek, Latin, the Germanic languages, and other languages formed a family of related languages (Indo-European), derived from a common ancestor — a discovery that transformed both linguistics and the historical understanding of ancient peoples and migrations.\n\nPhilology's relationship to modern academic disciplines is complex: it is simultaneously the ancestor of linguistics (which split off as an autonomous discipline in the 20th century), literary studies (which adopted philological methods of textual analysis), and history (which drew on philological methods for source criticism). The term 'philology' is used differently in different national traditions: in Anglo-American usage it often refers specifically to historical and comparative linguistics; in German and continental European usage it more often refers to the combined study of language and literature of a particular cultural tradition.",
+        "subjects": [
+          "Humanities",
+          "Ancient Era",
+          "Linguistics",
+          "Textual Criticism",
+          "Academic Discipline",
+          "Historical Linguistics",
+          "Classical Studies",
+          "Methodology"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 8,
+          "significanceNarrative": "Philology is the foundational academic discipline of the modern humanities — the ancestor of historical linguistics, literary studies, classical scholarship, and textual criticism. Its 19th-century achievements (Indo-European linguistics, the critical edition tradition, the Lachmann method) are foundational for the modern study of languages and literature. The discovery of the Indo-European language family — the primary achievement of 19th-century comparative philology — transformed the historical understanding of ancient peoples and their migrations.",
+          "significanceCategory": "highly-significant"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-40-may2026",
+            "timestamp": "2026-05-16T17:39:01Z",
+            "oldValue": "",
+            "newValue": "Philology (from Greek φιλολογία, philologia, 'love of words/learning') is the academic discipline concerned with the study of written texts and their linguistic, historical, and literary dimensions — …"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Political & Polemical Texts -- Global -- Classical"
       ],
@@ -45,7 +141,8 @@
       "$id": "philology",
       "$sequence": "27066",
       "$createdAt": "2026-04-05T12:10:03.193+00:00",
-      "$updatedAt": "2026-04-06T00:51:32.785+00:00"
+      "$updatedAt": "2026-04-06T00:51:32.785+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
