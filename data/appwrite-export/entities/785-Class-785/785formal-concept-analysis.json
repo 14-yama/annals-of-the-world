@@ -25,7 +25,103 @@
       "wikidataQid": "Q1437394",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Formal_concept_analysis",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"formal-concept-analysis\", \"sourceName\": \"formal concept analysis\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"formal concept analysis is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: formal concept analysis\", \"type\": \"Reference article\", \"slug\": \"formal-concept-analysis\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q1437394\", \"https://en.wikipedia.org/wiki/Formal_concept_analysis\"], \"tags\": [\"methodology\", \"Political & Polemical Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Wille's intellectual programme of 'restructuring lattice theory' — his concern that abstract mathematical theories had lost touch with their intellectual roots and with human understanding — motivated his development of FCA as an application of lattice theory to knowledge organisation: a formal mathematical framework that was explicitly oriented toward interpretability and usability in human knowledge work.",
+          "The development of data analysis and knowledge representation as practical requirements of the information society — the growing need for methods to extract meaningful structures from large datasets, to represent knowledge in computationally tractable form, and to support information retrieval and decision-making — provided the applied context in which FCA found its most important applications from the 1990s onwards.",
+          "The mathematical tradition of Galois connections and lattice theory — the formal algebraic structures that underlie the definition of formal concepts and concept lattices — provided the rigorous mathematical foundation that gave FCA its distinctive combination of theoretical depth and computational tractability."
+        ],
+        "effects": [
+          "FCA's concept lattice became a widely used data visualisation and knowledge representation tool — particularly in information retrieval, software engineering, and bioinformatics — enabling analysts to visualise conceptual structures in datasets and to navigate knowledge spaces through hierarchical concept relationships.",
+          "FCA's connection to association rule mining (the TITANIC algorithm and related methods use FCA's formal concept structure to extract association rules from transaction datasets) made it an important tool in the field of knowledge discovery and data mining, contributing to the broader development of machine learning and data science methods.",
+          "Rudolf Wille's FCA inspired a substantial international research community — centred on the annual International Conference on Formal Concept Analysis (ICFCA) — and contributed to the development of conceptual knowledge processing as a field, integrating mathematical, computer science, and cognitive perspectives on knowledge representation and learning."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "rudolf-wille",
+            "sourceName": "Rudolf Wille (1937–2017)",
+            "verb": "DEVELOPS",
+            "targetSlug": "formal-concept-analysis",
+            "targetName": "Formal Concept Analysis (1982)",
+            "context": "Wille developed FCA at TU Darmstadt beginning in the early 1980s — first described in his 1982 paper 'Restructuring Lattice Theory' — as an application of lattice theory to knowledge organisation and conceptual data analysis."
+          },
+          {
+            "sourceSlug": "formal-concept-analysis",
+            "sourceName": "FCA (concept lattice, Galois connections)",
+            "verb": "FOUNDED_ON",
+            "targetSlug": "lattice-theory",
+            "targetName": "Lattice theory and order theory (mathematics)",
+            "context": "FCA is mathematically founded on lattice theory and Galois connections — the formal algebraic structures that define the formal concept as a maximal object-attribute pair and the concept lattice as their hierarchical organisation."
+          },
+          {
+            "sourceSlug": "formal-concept-analysis",
+            "sourceName": "FCA (knowledge discovery, data mining)",
+            "verb": "APPLIED_IN",
+            "targetSlug": "knowledge-discovery",
+            "targetName": "Knowledge discovery and data mining",
+            "context": "FCA's concept lattice is applied in information retrieval, software engineering, bioinformatics, and data mining — its combination of mathematical rigour and visual interpretability made it an important tool for extracting conceptual structures from large datasets."
+          }
+        ],
+        "places": [
+          {
+            "name": "Technical University of Darmstadt, Germany (1980s, development context)",
+            "role": "FCA was developed at TU Darmstadt by Rudolf Wille and his research group — the centre of the international FCA research community that developed the theory and its applications from the 1980s"
+          },
+          {
+            "name": "International (ICFCA conferences, global application)",
+            "role": "FCA has been applied internationally — the annual International Conference on Formal Concept Analysis (ICFCA) brings together researchers from mathematics, computer science, and applied domains worldwide"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: formal concept analysis",
+            "type": "Reference article",
+            "slug": "formal-concept-analysis"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q1437394",
+          "https://en.wikipedia.org/wiki/Formal_concept_analysis"
+        ],
+        "tags": [
+          "methodology",
+          "Political & Polemical Texts",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "",
+        "summary": "Formal Concept Analysis (FCA) is a mathematical theory and computational method for data analysis and knowledge representation, developed by Rudolf Wille (1937–2017) and his colleagues at the Technical University of Darmstadt (Germany) beginning in the early 1980s — first comprehensively described in Wille's paper 'Restructuring Lattice Theory: An Approach Based on Hierarchies of Concepts' (1982). FCA provides a mathematically rigorous framework for identifying and representing conceptual structures in datasets: given a formal context (a triple consisting of a set of objects, a set of attributes, and a binary relation between them — which objects have which attributes), FCA identifies all formal concepts (maximal sets of objects sharing a maximal set of common attributes) and organises them into a concept lattice (a hierarchical structure visualised as a Hasse diagram) that represents the conceptual hierarchy implicit in the data.\n\nThe mathematical foundation of FCA is order theory and lattice theory — specifically, the theory of Galois connections between power sets, which defines the formal concept as a pair (extent, intent) where the extent is the maximal set of objects sharing the intent (the maximal set of common attributes), and the intent is the maximal set of attributes shared by the extent. The concept lattice, in which formal concepts are ordered by inclusion of extents (or equivalently, intents), provides a complete and computationally tractable representation of the conceptual structure of the dataset. Wille developed FCA explicitly as an application of mathematics to human communication and knowledge organisation — his motivation was to make formal mathematical structures interpretable and usable for knowledge workers in natural language contexts.\n\nFCA has been applied in a wide range of domains — information retrieval (conceptual search and navigation), software engineering (detecting clones, refactoring object-oriented code), bioinformatics (gene expression analysis), linguistics (lexical semantics, construction grammar), archaeology, and machine learning (association rule mining, concept formation). Its combination of mathematical rigour, visual interpretability (the concept lattice diagram), and computational tractability made it an important tool in the field of knowledge discovery and data mining from the 1990s onwards.",
+        "subjects": [
+          "Mathematics",
+          "Modern Era",
+          "Rudolf Wille",
+          "Data Analysis",
+          "Knowledge Representation",
+          "Lattice Theory",
+          "Computer Science",
+          "Information Science"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 6,
+          "significanceNarrative": "Formal Concept Analysis (Wille, 1982) is a significant mathematical method for knowledge representation and data analysis — providing a rigorous framework for identifying conceptual structures in datasets through concept lattices. It has been applied in information retrieval, software engineering, bioinformatics, and data mining, and inspired an international research community. Its contribution to knowledge discovery and data science represents the practical application of abstract mathematical theory (lattice theory) to real-world data analysis.",
+          "significanceCategory": "significant"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-36-may2026",
+            "timestamp": "2026-05-16T17:18:22Z",
+            "oldValue": "",
+            "newValue": "Formal Concept Analysis (FCA) is a mathematical theory and computational method for data analysis and knowledge representation, developed by Rudolf Wille (1937–2017) and his colleagues at the Technica…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Political & Polemical Texts -- Global -- Classical"
       ],
@@ -44,7 +140,8 @@
       "$id": "formal-concept-analysis",
       "$sequence": "26315",
       "$createdAt": "2026-04-05T12:09:53.245+00:00",
-      "$updatedAt": "2026-04-05T12:09:53.245+00:00"
+      "$updatedAt": "2026-04-05T12:09:53.245+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
