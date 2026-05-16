@@ -12,7 +12,7 @@
       "label": "Person",
       "callNumber": "281.vasco-da-gama",
       "summary": "Vasco da Gama (c. 1460–1524) was a Portuguese explorer who became the first European to reach India by sea, rounding the Cape of Good Hope in 1497–1498. His discovery of the sea route to Asia opened direct maritime trade between Europe and the lucrative spice markets of the East, fundamentally altering global commerce.\n\nDa Gama's first voyage (1497–1499) with four ships and 170 men was one of the most ambitious in exploration history. After rounding Africa, he reached Calicut (modern Kozhikode) on India's Malabar Coast in May 1498. The voyage lost two ships and over half its crew, but the spices brought back covered the expedition's cost sixty times over.\n\nHe made three voyages to India and was appointed Viceroy of Portuguese India in 1524, dying of malaria in Cochin shortly after arrival. His route shattered Venice's Mediterranean spice monopoly and launched the Portuguese Empire.",
-      "era": "Medieval",
+      "era": "Early Modern",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
       "eraDivisionCode": "930",
@@ -27,49 +27,286 @@
       "imageUrl": "",
       "detailsJson": {
         "causes": [
-          "Portuguese maritime tradition under Prince Henry the Navigator",
-          "Ottoman control of overland spice routes created incentive",
-          "Bartolomeu Dias' rounding of Cape of Good Hope (1488) proved route feasible"
+          "Portuguese crown's decade-long exploration of the African coast (Bartolomeu Dias rounding the Cape, 1488)",
+          "Ottoman Empire's control of Levant trade routes raising spice prices in Europe",
+          "Venetian monopoly on Mediterranean trade motivating Atlantic alternatives",
+          "Prince Henry the Navigator's systematic school of maritime exploration"
         ],
         "effects": [
-          "Direct Europe-India sea trade bypassed Ottoman middlemen",
-          "Portuguese Empire became first global maritime empire",
-          "Venice's spice monopoly broken",
-          "European colonization of Asia began",
-          "Global trade networks permanently reconfigured"
+          "First direct European sea route to India (1498) — ending Ottoman/Venetian monopoly",
+          "Opening of direct spice trade making Portugal richest European nation",
+          "Estado da India — Portuguese maritime empire in the Indian Ocean",
+          "Destruction of Arab-controlled Indian Ocean trade networks",
+          "Foundation of Goa as Portuguese capital in India (still holds colonial legacy)",
+          "Triggering of European imperialism across Asia and Indian Ocean littoral",
+          "Globalization of world trade — Atlantic replaces Mediterranean as commercial center"
         ],
         "relationships": [
           {
-            "sourceSlug": "vasco-da-gama",
-            "sourceName": "Vasco da Gama",
-            "verb": "OCCURS_IN",
+            "type": "OCCURS_IN",
+            "target": "Portugal",
             "targetSlug": "portugal",
-            "targetName": "Portugal",
-            "context": "Portuguese explorer who sailed for the Crown"
+            "note": "Birthplace and royal patron"
           },
           {
-            "sourceSlug": "vasco-da-gama",
-            "sourceName": "Vasco da Gama",
-            "verb": "OCCURS_IN",
+            "type": "INFLUENCES",
+            "target": "Age of Exploration",
+            "targetSlug": "age-of-exploration",
+            "note": "Most consequential voyage of the Age of Exploration"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "India",
             "targetSlug": "india",
-            "targetName": "India",
-            "context": "Reached Calicut on India's Malabar Coast in 1498"
+            "note": "First European to reach India by sea (Calicut, 1498)"
           },
           {
-            "sourceSlug": "vasco-da-gama",
-            "sourceName": "Vasco da Gama",
-            "verb": "INFLUENCES",
+            "type": "INFLUENCES",
+            "target": "Estado da India",
+            "targetSlug": "estado-da-india",
+            "note": "Portuguese maritime empire he helped found"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Spice trade",
+            "targetSlug": "spice-trade",
+            "note": "Opened direct Portuguese spice route to Asia"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Bartolomeu Dias",
+            "targetSlug": "bartolomeu-dias",
+            "note": "Dias rounded Cape of Good Hope (1488) enabling da Gama's route"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Ottoman Empire",
+            "targetSlug": "ottoman-empire",
+            "note": "His route bypassed Ottoman trade control"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Calicut (Kozhikode)",
+            "targetSlug": "calicut",
+            "note": "Destination of his first voyage (1498)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Luís de Camões",
+            "targetSlug": "luis-de-camoes",
+            "note": "Da Gama hero of The Lusiads (1572)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Cape of Good Hope",
+            "targetSlug": "cape-of-good-hope",
+            "note": "Rounded en route to India"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Indian Ocean trade",
+            "targetSlug": "indian-ocean-trade",
+            "note": "Disrupted Arab-controlled Indian Ocean commerce"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Goa",
+            "targetSlug": "goa",
+            "note": "Died there as Viceroy of India (1524)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Manuel I of Portugal",
+            "targetSlug": "manuel-i-of-portugal",
+            "note": "Royal patron of first and second voyages"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Afonso de Albuquerque",
+            "targetSlug": "afonso-de-albuquerque",
+            "note": "Successor who consolidated Portuguese Indian Ocean empire"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Christopher Columbus",
             "targetSlug": "christopher-columbus",
-            "targetName": "Christopher Columbus",
-            "context": "Both opened new maritime routes that reshaped global trade"
+            "note": "Contemporary — Columbus west, da Gama east, both 1492–1499"
+          }
+        ],
+        "summary": "Vasco da Gama (c. 1460–1524) was a Portuguese explorer who became the first European to reach India by sea, completing the first direct maritime trade route from Europe to Asia (1497–1499) and inaugurating the Age of Exploration's most consequential discovery. His voyage around the Cape of Good Hope and across the Indian Ocean to Calicut (Kozhikode) shattered the Ottoman and Venetian monopoly on Asian trade routes and shifted the center of world commerce from the Mediterranean to the Atlantic.\n\nDeparting Lisbon on July 8, 1497 with four ships and 170 men, da Gama sailed south along the West African coast, rounded the Cape of Good Hope, crossed the Indian Ocean with the help of an Arab navigator (likely Ahmad ibn Mājid), and arrived in Calicut on May 20, 1498. His return voyage established that a profitable direct spice trade was possible — though he was contemptuous of local rulers and his initial cargo proved inadequate for Indian markets.\n\nHis second voyage (1502–1503) was larger and explicitly military — he bombarded Calicut, established Portuguese trading forts, and laid the foundation for the Estado da India (Portuguese India). The spice trade that followed made Portugal the richest nation in Europe for half a century and initiated the globalization of world trade.\n\nDa Gama's voyages ended the Silk Road era as the primary conduit of luxury trade between East and West, triggered European imperialism in Asia, and connected the Indian Ocean to the Atlantic in a permanent global economic system. He died in Goa in 1524 as Viceroy of India, and his career was immortalized in Luís de Camões's epic The Lusiads (1572).",
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Vasco da Gama's voyage to India by sea ended the Silk Road era, transferred world commercial hegemony from the Mediterranean to the Atlantic, and inaugurated five centuries of European maritime imperialism in Asia — one of the decisive turning points of global history."
+        },
+        "quote": "'We come in search of Christians and spices.' — Vasco da Gama (upon arriving in Calicut, 1498)",
+        "places": [
+          "Sines, Portugal (birthplace)",
+          "Calicut (Kozhikode), India",
+          "Goa, India (death)",
+          "Cape of Good Hope, South Africa"
+        ],
+        "subjectHeadings": "Vasco da Gama — Explorers and Navigators — Portugal — Early Modern",
+        "subjects": [
+          "Portugal",
+          "India",
+          "exploration",
+          "spice trade",
+          "Age of Exploration",
+          "imperialism",
+          "Indian Ocean",
+          "sea routes",
+          "Goa",
+          "maritime history"
+        ],
+        "frameworks": [
+          "empire-building",
+          "trade-networks",
+          "exploration"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Vasco da Gama (c. 1460–1524) was a Portuguese explorer who became the first European to reach India by sea, completing the first direct maritime trade route from Europe to Asia (1497–1499) and inaugur…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.240569+00:00"
           },
           {
-            "sourceSlug": "vasco-da-gama",
-            "sourceName": "Vasco da Gama",
-            "verb": "INFLUENCES",
-            "targetSlug": "ferdinand-magellan",
-            "targetName": "Ferdinand Magellan",
-            "context": "Da Gama's success inspired Magellan's circumnavigation attempt"
+            "field": "causes",
+            "oldValue": [
+              "Portuguese maritime tradition under Prince Henry the Navigator",
+              "Ottoman control of overland spice routes created incentive",
+              "Bartolomeu Dias' rounding of Cape of Good Hope (1488) proved route feasible"
+            ],
+            "newValue": "[\"Portuguese crown's decade-long exploration of the African coast (Bartolomeu Dias rounding the Cape, 1488)\", \"Ottoman Empire's control of Levant trade routes raising spice prices in Europe\", 'Venetia…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.240569+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": [
+              "Direct Europe-India sea trade bypassed Ottoman middlemen",
+              "Portuguese Empire became first global maritime empire",
+              "Venice's spice monopoly broken",
+              "European colonization of Asia began",
+              "Global trade networks permanently reconfigured"
+            ],
+            "newValue": "['First direct European sea route to India (1498) — ending Ottoman/Venetian monopoly', 'Opening of direct spice trade making Portugal richest European nation', 'Estado da India — Portuguese maritime e…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.240569+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": [
+              {
+                "sourceSlug": "vasco-da-gama",
+                "sourceName": "Vasco da Gama",
+                "verb": "OCCURS_IN",
+                "targetSlug": "portugal",
+                "targetName": "Portugal",
+                "context": "Portuguese explorer who sailed for the Crown"
+              },
+              {
+                "sourceSlug": "vasco-da-gama",
+                "sourceName": "Vasco da Gama",
+                "verb": "OCCURS_IN",
+                "targetSlug": "india",
+                "targetName": "India",
+                "context": "Reached Calicut on India's Malabar Coast in 1498"
+              },
+              {
+                "sourceSlug": "vasco-da-gama",
+                "sourceName": "Vasco da Gama",
+                "verb": "INFLUENCES",
+                "targetSlug": "christopher-columbus",
+                "targetName": "Christopher Columbus",
+                "context": "Both opened new maritime routes that reshaped global trade"
+              },
+              {
+                "sourceSlug": "vasco-da-gama",
+                "sourceName": "Vasco da Gama",
+                "verb": "INFLUENCES",
+                "targetSlug": "ferdinand-magellan",
+                "targetName": "Ferdinand Magellan",
+                "context": "Da Gama's success inspired Magellan's circumnavigation attempt"
+              }
+            ],
+            "newValue": "[{'type': 'OCCURS_IN', 'target': 'Portugal', 'targetSlug': 'portugal', 'note': 'Birthplace and royal patron'}, {'type': 'INFLUENCES', 'target': 'Age of Exploration', 'targetSlug': 'age-of-exploration'…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.240569+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 9, 'significanceCategory': 'world-changing', 'significanceNarrative': \"Vasco da Gama's voyage to India by sea ended the Silk Road era, transferred world commercial hegemony from …",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.240569+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": null,
+            "newValue": "'We come in search of Christians and spices.' — Vasco da Gama (upon arriving in Calicut, 1498)",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.240569+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": null,
+            "newValue": [
+              "Sines, Portugal (birthplace)",
+              "Calicut (Kozhikode), India",
+              "Goa, India (death)",
+              "Cape of Good Hope, South Africa"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.240569+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Vasco da Gama — Explorers and Navigators — Portugal — Early Modern",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.240569+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "Portugal",
+              "India",
+              "exploration",
+              "spice trade",
+              "Age of Exploration",
+              "imperialism",
+              "Indian Ocean",
+              "sea routes",
+              "Goa",
+              "maritime history"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.240569+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "empire-building",
+              "trade-networks",
+              "exploration"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.240569+00:00"
           }
         ]
       },
@@ -99,7 +336,8 @@
       "$id": "vasco-da-gama",
       "$sequence": "174873",
       "$createdAt": "2026-04-05T12:40:01.785+00:00",
-      "$updatedAt": "2026-04-05T12:40:01.785+00:00"
+      "$updatedAt": "2026-04-05T12:40:01.785+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }

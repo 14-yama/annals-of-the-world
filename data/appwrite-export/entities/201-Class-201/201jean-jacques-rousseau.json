@@ -27,49 +27,284 @@
       "imageUrl": "",
       "detailsJson": {
         "causes": [
-          "Genevan republican tradition",
-          "Enlightenment intellectual ferment in Paris",
-          "Personal experience of social inequality as a wandering youth"
+          "Geneva's Calvinist civic republican tradition shaping his political thought",
+          "Personal poverty and social exclusion from Paris Enlightenment salons",
+          "Enlightenment optimism about reason and progress (which he contested)",
+          "Lockean natural rights theory as foundation he radicalized"
         ],
         "effects": [
-          "Inspired French Revolution's ideological foundations",
-          "Child-centered education theory transformed pedagogy globally",
-          "Romantic movement drew on his celebration of nature and emotion",
-          "'General will' concept shaped democratic theory",
-          "Autobiography as literary genre"
+          "The Social Contract (1762) — foundational text of popular sovereignty",
+          "Discourse on the Origin of Inequality — critique of private property",
+          "Émile (1762) — revolutionary educational philosophy",
+          "Confessions — inauguration of modern autobiographical writing",
+          "Direct intellectual influence on French Revolution and Jacobins",
+          "General will concept — basis of modern democratic theory",
+          "Romanticism — his celebration of nature and feeling over reason"
         ],
         "relationships": [
           {
-            "sourceSlug": "jean-jacques-rousseau",
-            "sourceName": "Jean-Jacques Rousseau",
-            "verb": "INFLUENCES",
+            "type": "INFLUENCES",
+            "target": "French Revolution",
             "targetSlug": "french-revolution",
-            "targetName": "French Revolution",
-            "context": "His social contract theory directly inspired revolutionary ideals"
+            "note": "Most cited philosopher of the Revolution"
           },
           {
-            "sourceSlug": "jean-jacques-rousseau",
-            "sourceName": "Jean-Jacques Rousseau",
-            "verb": "OCCURS_IN",
-            "targetSlug": "france",
-            "targetName": "France",
-            "context": "Lived and wrote primarily in Paris and rural France"
+            "type": "INFLUENCES",
+            "target": "Social Contract (1762)",
+            "targetSlug": "social-contract-rousseau",
+            "note": "Foundational text of popular sovereignty"
           },
           {
-            "sourceSlug": "jean-jacques-rousseau",
-            "sourceName": "Jean-Jacques Rousseau",
-            "verb": "INFLUENCES",
+            "type": "INFLUENCES",
+            "target": "Robespierre",
+            "targetSlug": "robespierre",
+            "note": "Called himself 'disciple of Rousseau'"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Voltaire",
+            "targetSlug": "voltaire",
+            "note": "Famous intellectual antagonist"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Immanuel Kant",
             "targetSlug": "immanuel-kant",
-            "targetName": "Immanuel Kant",
-            "context": "Kant said Rousseau taught him to respect the common man"
+            "note": "Kant kept only Rousseau's portrait in his home"
           },
           {
-            "sourceSlug": "jean-jacques-rousseau",
-            "sourceName": "Jean-Jacques Rousseau",
-            "verb": "INFLUENCES",
+            "type": "INFLUENCES",
+            "target": "Romanticism",
+            "targetSlug": "romanticism",
+            "note": "Rousseau's nature + emotion ethos founded Romanticism"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Progressive education",
+            "targetSlug": "progressive-education",
+            "note": "Émile directly inspired Pestalozzi, Dewey, Montessori"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Nationalism",
+            "targetSlug": "nationalism",
+            "note": "General will concept fed into 19th century nationalism"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "John Locke",
+            "targetSlug": "john-locke",
+            "note": "Built on and radicalized Lockean natural rights"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "France",
+            "targetSlug": "france",
+            "note": "Primary country of intellectual activity"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Switzerland",
+            "targetSlug": "switzerland",
+            "note": "Born in Geneva; fled persecution there"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "American Declaration of Independence",
+            "targetSlug": "american-declaration-of-independence",
+            "note": "Jefferson drew on Rousseau's natural rights theory"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Karl Marx",
             "targetSlug": "karl-marx",
-            "targetName": "Karl Marx",
-            "context": "Marx built on Rousseau's critique of private property and inequality"
+            "note": "Inequality critique anticipated historical materialism"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Denis Diderot",
+            "targetSlug": "denis-diderot",
+            "note": "Early collaborator, later estranged"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Mary Wollstonecraft",
+            "targetSlug": "mary-wollstonecraft",
+            "note": "Responded to and challenged his views on women in Vindication"
+          }
+        ],
+        "summary": "Jean-Jacques Rousseau (1712–1778) was a Genevan-born philosopher, composer, and political theorist whose ideas on human nature, inequality, and social contract theory became the most explosive intellectual fuel of the French Revolution and modern democratic thought. His claim that 'Man is born free, and everywhere he is in chains' — the opening of The Social Contract (1762) — remains one of the most quoted sentences in political philosophy.\n\nRousseau argued that civilization corrupts the natural goodness of humanity, and that inequality arises not from nature but from private property and social institutions (Discourse on the Origin of Inequality, 1755). His vision of the 'general will' — the collective moral authority of a sovereign people — provided the philosophical basis for popular sovereignty and republican democracy, directly inspiring Robespierre and the radical phase of the French Revolution.\n\nHis educational treatise Émile (1762) revolutionized pedagogy by arguing that children should learn through experience and natural development rather than rote instruction — a vision that shaped progressive education from Pestalozzi to Dewey to Montessori. His autobiographical Confessions inaugurated modern psychological autobiography.\n\nRomanticism, nationalism, radical democracy, and progressive education all trace direct lineage to Rousseau. Voltaire, his Enlightenment contemporary, detested him — calling Émile a book 'so stupid and ridiculous.' Their feud encapsulates the tension between liberal reform and radical transformation that has defined Western politics ever since.",
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Rousseau's Social Contract gave the French Revolution its philosophical language of popular sovereignty and the general will; his educational ideas shaped progressive pedagogy worldwide; and his critique of inequality anticipated modern socialism — making him the most politically potent philosopher of modernity."
+        },
+        "quote": "'Man is born free, and everywhere he is in chains.' — Jean-Jacques Rousseau, The Social Contract (1762)",
+        "places": [
+          "Geneva, Switzerland",
+          "Paris, France",
+          "Montmorency, France"
+        ],
+        "subjectHeadings": "Jean-Jacques Rousseau — Philosophers — Switzerland/France — Early Modern",
+        "subjects": [
+          "Switzerland",
+          "France",
+          "political philosophy",
+          "Enlightenment",
+          "French Revolution",
+          "social contract",
+          "education",
+          "democracy",
+          "Romanticism",
+          "inequality"
+        ],
+        "frameworks": [
+          "enlightenment",
+          "political-philosophy",
+          "social-theory"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Jean-Jacques Rousseau (1712–1778) was a Genevan-born philosopher, composer, and political theorist whose ideas on human nature, inequality, and social contract theory became the most explosive intelle…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.237144+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": [
+              "Genevan republican tradition",
+              "Enlightenment intellectual ferment in Paris",
+              "Personal experience of social inequality as a wandering youth"
+            ],
+            "newValue": "[\"Geneva's Calvinist civic republican tradition shaping his political thought\", 'Personal poverty and social exclusion from Paris Enlightenment salons', 'Enlightenment optimism about reason and progre…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.237144+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": [
+              "Inspired French Revolution's ideological foundations",
+              "Child-centered education theory transformed pedagogy globally",
+              "Romantic movement drew on his celebration of nature and emotion",
+              "'General will' concept shaped democratic theory",
+              "Autobiography as literary genre"
+            ],
+            "newValue": "['The Social Contract (1762) — foundational text of popular sovereignty', 'Discourse on the Origin of Inequality — critique of private property', 'Émile (1762) — revolutionary educational philosophy',…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.237144+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": [
+              {
+                "sourceSlug": "jean-jacques-rousseau",
+                "sourceName": "Jean-Jacques Rousseau",
+                "verb": "INFLUENCES",
+                "targetSlug": "french-revolution",
+                "targetName": "French Revolution",
+                "context": "His social contract theory directly inspired revolutionary ideals"
+              },
+              {
+                "sourceSlug": "jean-jacques-rousseau",
+                "sourceName": "Jean-Jacques Rousseau",
+                "verb": "OCCURS_IN",
+                "targetSlug": "france",
+                "targetName": "France",
+                "context": "Lived and wrote primarily in Paris and rural France"
+              },
+              {
+                "sourceSlug": "jean-jacques-rousseau",
+                "sourceName": "Jean-Jacques Rousseau",
+                "verb": "INFLUENCES",
+                "targetSlug": "immanuel-kant",
+                "targetName": "Immanuel Kant",
+                "context": "Kant said Rousseau taught him to respect the common man"
+              },
+              {
+                "sourceSlug": "jean-jacques-rousseau",
+                "sourceName": "Jean-Jacques Rousseau",
+                "verb": "INFLUENCES",
+                "targetSlug": "karl-marx",
+                "targetName": "Karl Marx",
+                "context": "Marx built on Rousseau's critique of private property and inequality"
+              }
+            ],
+            "newValue": "[{'type': 'INFLUENCES', 'target': 'French Revolution', 'targetSlug': 'french-revolution', 'note': 'Most cited philosopher of the Revolution'}, {'type': 'INFLUENCES', 'target': 'Social Contract (1762)'…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.237144+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 9, 'significanceCategory': 'world-changing', 'significanceNarrative': \"Rousseau's Social Contract gave the French Revolution its philosophical language of popular sovereignty and…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.237144+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": null,
+            "newValue": "'Man is born free, and everywhere he is in chains.' — Jean-Jacques Rousseau, The Social Contract (1762)",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.237144+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": null,
+            "newValue": [
+              "Geneva, Switzerland",
+              "Paris, France",
+              "Montmorency, France"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.237144+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Jean-Jacques Rousseau — Philosophers — Switzerland/France — Early Modern",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.237144+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "Switzerland",
+              "France",
+              "political philosophy",
+              "Enlightenment",
+              "French Revolution",
+              "social contract",
+              "education",
+              "democracy",
+              "Romanticism",
+              "inequality"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.237144+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "enlightenment",
+              "political-philosophy",
+              "social-theory"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.237144+00:00"
           }
         ]
       },
@@ -98,7 +333,8 @@
       "$id": "jean-jacques-rousseau",
       "$sequence": "200453",
       "$createdAt": "2026-04-05T12:45:08.413+00:00",
-      "$updatedAt": "2026-04-05T12:45:08.413+00:00"
+      "$updatedAt": "2026-04-05T12:45:08.413+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }

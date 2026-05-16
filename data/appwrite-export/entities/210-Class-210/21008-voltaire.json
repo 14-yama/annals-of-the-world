@@ -27,69 +27,117 @@
       "imageUrl": "",
       "detailsJson": {
         "causes": [
-          "French absolutism under Louis XIV and XV",
-          "Newton's scientific revolution and British empiricism",
-          "Personal experience of royal persecution and imprisonment"
+          "French Ancien Régime's censorship and arbitrary justice motivating satirical attack",
+          "Enlightenment intellectual milieu in Paris and European courts",
+          "Leibniz's optimism ('best of all possible worlds') providing philosophical target",
+          "Lisbon earthquake (1755) challenging providential theology"
         ],
         "effects": [
-          "Intellectual foundation for the French Revolution",
-          "Advancement of religious tolerance in Europe",
-          "Popularization of Newtonian science on the continent",
-          "Influence on American founding fathers (Jefferson, Franklin)",
-          "Modern concept of freedom of expression",
-          "Model of the public intellectual engaging in political discourse"
+          "Candide (1759) — masterwork of satirical Enlightenment literature",
+          "Calas affair (1762–65) — landmark campaign for judicial reform and religious tolerance",
+          "Philosophical Dictionary challenging church authority and superstition",
+          "Intellectual influence on French Revolutionary ideology",
+          "Secular tradition of French laïcité (secularism)",
+          "Model for public intellectual advocacy of individual rights",
+          "Correspondence with European monarchs spreading Enlightenment ideas to courts"
         ],
         "relationships": [
           {
-            "sourceSlug": "voltaire",
-            "sourceName": "Voltaire",
-            "verb": "INFLUENCES",
+            "type": "INFLUENCES",
+            "target": "French Enlightenment",
+            "targetSlug": "french-enlightenment",
+            "note": "Central figure of the philosophes"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Candide",
+            "targetSlug": "candide",
+            "note": "Satirical masterwork (1759)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "French Revolution",
             "targetSlug": "french-revolution",
-            "targetName": "French Revolution",
-            "context": "Enlightenment ideas fueled revolutionary ideology"
+            "note": "Intellectual forerunner of revolutionary ideology"
           },
           {
-            "sourceSlug": "voltaire",
-            "sourceName": "Voltaire",
-            "verb": "TRANSMITS",
-            "targetSlug": "isaac-newton",
-            "targetName": "Isaac Newton",
-            "context": "Popularized Newtonian physics in France"
+            "type": "INFLUENCES",
+            "target": "Jean-Jacques Rousseau",
+            "targetSlug": "jean-jacques-rousseau",
+            "note": "Fellow philosophe, later rival"
           },
           {
-            "sourceSlug": "voltaire",
-            "sourceName": "Voltaire",
-            "verb": "INFLUENCES",
-            "targetSlug": "thomas-jefferson",
-            "targetName": "Thomas Jefferson",
-            "context": "Shaped Jefferson's views on religious freedom"
+            "type": "INFLUENCES",
+            "target": "Denis Diderot",
+            "targetSlug": "denis-diderot",
+            "note": "Collaborated on Encyclopédie project"
           },
           {
-            "sourceSlug": "voltaire",
-            "sourceName": "Voltaire",
-            "verb": "OCCURS_IN",
-            "targetSlug": "paris",
-            "targetName": "Paris",
-            "context": "Lived and wrote in Paris, imprisoned in the Bastille"
+            "type": "INFLUENCES",
+            "target": "Catherine the Great",
+            "targetSlug": "catherine-the-great",
+            "note": "Extensive philosophical correspondence"
           },
           {
-            "sourceSlug": "john-locke",
-            "sourceName": "John Locke",
-            "verb": "INFLUENCES",
-            "targetSlug": "voltaire",
-            "targetName": "Voltaire",
-            "context": "Locke's empiricism shaped Voltaire's philosophy"
+            "type": "INFLUENCES",
+            "target": "Frederick the Great",
+            "targetSlug": "frederick-the-great",
+            "note": "Lived at Prussian court 1750–1753"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Calas affair",
+            "targetSlug": "calas-affair",
+            "note": "Pioneered public intellectual human rights campaign"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Religious tolerance",
+            "targetSlug": "religious-tolerance",
+            "note": "His Treatise on Tolerance (1763) — foundational text"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Laïcité (French secularism)",
+            "targetSlug": "laicite",
+            "note": "His anti-clericalism shaped French secular tradition"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "France",
+            "targetSlug": "france",
+            "note": "Primary country of activity"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "American Founding Fathers",
+            "targetSlug": "american-founding-fathers",
+            "note": "Jefferson and Franklin read him closely"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Gottfried Leibniz",
+            "targetSlug": "gottfried-leibniz",
+            "note": "Pangloss in Candide parodies Leibnizian optimism"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Encyclopédie",
+            "targetSlug": "encyclopedie",
+            "note": "Contributed articles to Diderot's Encyclopédie"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Bastille",
+            "targetSlug": "bastille",
+            "note": "Imprisoned twice — became symbol of tyranny he opposed"
           }
         ],
         "places": [
-          {
-            "name": "Paris",
-            "role": "Birthplace"
-          },
-          {
-            "name": "Ferney, France",
-            "role": "Estate and exile"
-          }
+          "Paris, France",
+          "Geneva, Switzerland (Ferney)",
+          "Cirey, France",
+          "Berlin, Prussia"
         ],
         "texts": [
           {
@@ -101,8 +149,195 @@
         "externalLinks": [],
         "tags": [],
         "thumbnailUrl": "",
-        "quote": "",
-        "legacySummary": ""
+        "quote": "'I disapprove of what you say, but I will defend to the death your right to say it.' — attributed to Voltaire",
+        "legacySummary": "",
+        "summary": "Voltaire (1694–1778), born François-Marie Arouet, was a French Enlightenment writer, historian, and philosopher who became the most influential and widely read intellectual of 18th-century Europe. His pen name became synonymous with wit, irreverence, and the power of reason to challenge superstition, intolerance, and arbitrary power — values that helped precipitate the French Revolution a decade after his death.\n\nImprisoned in the Bastille, exiled from France twice, and perpetually harassed by church and state, Voltaire turned persecution into productivity. His Candide (1759) — a satirical novella skewering religious optimism, aristocratic privilege, and the Lisbon earthquake theodicy — remains one of the most read works of French literature. His Philosophical Dictionary, Letters Concerning the English Nation, and correspondence with Frederick the Great and Catherine the Great placed him at the centre of a European republic of letters.\n\nVoltaire championed religious tolerance above all other causes. His campaign to rehabilitate Jean Calas — a Protestant falsely executed for murdering his son — galvanized European public opinion against judicial torture and religious persecution, winning a posthumous reversal and establishing the idea of a public intellectual fighting for individual rights.\n\nOn his deathbed, asked to renounce the devil, he reportedly replied: 'This is no time to make new enemies.' He is buried in the Panthéon in Paris. His battle cry — 'Écrasez l'infâme!' ('Crush the infamous thing!', meaning fanaticism and intolerance) — defines the Enlightenment's combative spirit.",
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Voltaire was the conscience of the European Enlightenment — his wit dismantled religious superstition, his advocacy of the Calas affair invented the modern public intellectual, and his ideas on tolerance and reason flowed directly into the French Revolution and secular democracy."
+        },
+        "subjectHeadings": "Voltaire — Philosophers and Writers — France — Early Modern",
+        "subjects": [
+          "France",
+          "Enlightenment",
+          "philosophy",
+          "literature",
+          "religious tolerance",
+          "secularism",
+          "French Revolution",
+          "satire",
+          "human rights",
+          "18th century"
+        ],
+        "frameworks": [
+          "enlightenment",
+          "intellectual-history",
+          "secularism"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Voltaire (1694–1778), born François-Marie Arouet, was a French Enlightenment writer, historian, and philosopher who became the most influential and widely read intellectual of 18th-century Europe. His…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.235784+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": [
+              "French absolutism under Louis XIV and XV",
+              "Newton's scientific revolution and British empiricism",
+              "Personal experience of royal persecution and imprisonment"
+            ],
+            "newValue": "[\"French Ancien Régime's censorship and arbitrary justice motivating satirical attack\", 'Enlightenment intellectual milieu in Paris and European courts', \"Leibniz's optimism ('best of all possible wor…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.235784+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": [
+              "Intellectual foundation for the French Revolution",
+              "Advancement of religious tolerance in Europe",
+              "Popularization of Newtonian science on the continent",
+              "Influence on American founding fathers (Jefferson, Franklin)",
+              "Modern concept of freedom of expression",
+              "Model of the public intellectual engaging in political discourse"
+            ],
+            "newValue": "['Candide (1759) — masterwork of satirical Enlightenment literature', 'Calas affair (1762–65) — landmark campaign for judicial reform and religious tolerance', 'Philosophical Dictionary challenging ch…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.235784+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": [
+              {
+                "sourceSlug": "voltaire",
+                "sourceName": "Voltaire",
+                "verb": "INFLUENCES",
+                "targetSlug": "french-revolution",
+                "targetName": "French Revolution",
+                "context": "Enlightenment ideas fueled revolutionary ideology"
+              },
+              {
+                "sourceSlug": "voltaire",
+                "sourceName": "Voltaire",
+                "verb": "TRANSMITS",
+                "targetSlug": "isaac-newton",
+                "targetName": "Isaac Newton",
+                "context": "Popularized Newtonian physics in France"
+              },
+              {
+                "sourceSlug": "voltaire",
+                "sourceName": "Voltaire",
+                "verb": "INFLUENCES",
+                "targetSlug": "thomas-jefferson",
+                "targetName": "Thomas Jefferson",
+                "context": "Shaped Jefferson's views on religious freedom"
+              },
+              {
+                "sourceSlug": "voltaire",
+                "sourceName": "Voltaire",
+                "verb": "OCCURS_IN",
+                "targetSlug": "paris",
+                "targetName": "Paris",
+                "context": "Lived and wrote in Paris, imprisoned in the Bastille"
+              },
+              {
+                "sourceSlug": "john-locke",
+                "sourceName": "John Locke",
+                "verb": "INFLUENCES",
+                "targetSlug": "voltaire",
+                "targetName": "Voltaire",
+                "context": "Locke's empiricism shaped Voltaire's philosophy"
+              }
+            ],
+            "newValue": "[{'type': 'INFLUENCES', 'target': 'French Enlightenment', 'targetSlug': 'french-enlightenment', 'note': 'Central figure of the philosophes'}, {'type': 'INFLUENCES', 'target': 'Candide', 'targetSlug': …",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.235784+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 9, 'significanceCategory': 'world-changing', 'significanceNarrative': 'Voltaire was the conscience of the European Enlightenment — his wit dismantled religious superstition, his …",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.235784+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": "",
+            "newValue": "'I disapprove of what you say, but I will defend to the death your right to say it.' — attributed to Voltaire",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.235784+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": [
+              {
+                "name": "Paris",
+                "role": "Birthplace"
+              },
+              {
+                "name": "Ferney, France",
+                "role": "Estate and exile"
+              }
+            ],
+            "newValue": [
+              "Paris, France",
+              "Geneva, Switzerland (Ferney)",
+              "Cirey, France",
+              "Berlin, Prussia"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.235784+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Voltaire — Philosophers and Writers — France — Early Modern",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.235784+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "France",
+              "Enlightenment",
+              "philosophy",
+              "literature",
+              "religious tolerance",
+              "secularism",
+              "French Revolution",
+              "satire",
+              "human rights",
+              "18th century"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.235784+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "enlightenment",
+              "intellectual-history",
+              "secularism"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.235784+00:00"
+          }
+        ]
       },
       "subjectHeadings": [
         "People — Philosophers & Thinkers — France — Early Modern"
@@ -125,7 +360,8 @@
       "$id": "voltaire",
       "$sequence": "220203",
       "$createdAt": "2026-04-05T12:49:13.423+00:00",
-      "$updatedAt": "2026-04-06T00:46:33.952+00:00"
+      "$updatedAt": "2026-04-06T00:46:33.952+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }

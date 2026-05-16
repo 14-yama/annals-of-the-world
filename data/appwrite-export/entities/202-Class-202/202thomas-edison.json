@@ -27,41 +27,278 @@
       "imageUrl": "",
       "detailsJson": {
         "causes": [
-          "Self-education and voracious reading",
-          "Telegraphy experience provided electrical knowledge",
-          "American entrepreneurial culture after Civil War"
+          "American industrial expansion creating demand for labor-saving electrical technologies",
+          "Telegraphy industry as training ground providing technical foundation",
+          "Capitalist investment culture in Gilded Age America funding inventors",
+          "Competitive patent economy incentivizing prolific invention"
         ],
         "effects": [
-          "Practical electric lighting transformed daily life worldwide",
-          "Industrial research laboratory model adopted globally",
-          "Phonograph launched the recorded music industry",
-          "Motion picture camera created cinema",
-          "Pearl Street Station launched commercial electricity"
+          "Practical incandescent light bulb (1879) — electrification of civilization",
+          "Pearl Street Station (1882) — world's first commercial electrical utility",
+          "Phonograph (1877) — birth of the recorded music industry",
+          "Kinetoscope — foundation of cinema",
+          "Menlo Park laboratory — invention of the industrial R&D laboratory model",
+          "1,093 US patents — record still stands",
+          "General Electric Corporation — continuing innovation powerhouse"
         ],
         "relationships": [
           {
-            "sourceSlug": "thomas-edison",
-            "sourceName": "Thomas Edison",
-            "verb": "OCCURS_IN",
-            "targetSlug": "united-states",
-            "targetName": "United States",
-            "context": "American inventor who worked in Menlo Park and West Orange, New Jersey"
+            "type": "INFLUENCES",
+            "target": "Incandescent light bulb",
+            "targetSlug": "incandescent-light-bulb",
+            "note": "Practical commercial light (1879)"
           },
           {
-            "sourceSlug": "thomas-edison",
-            "sourceName": "Thomas Edison",
-            "verb": "INFLUENCES",
+            "type": "INFLUENCES",
+            "target": "Phonograph",
+            "targetSlug": "phonograph",
+            "note": "First sound recording device (1877)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Cinema",
+            "targetSlug": "cinema",
+            "note": "Kinetoscope and Kinetograph created film medium"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Electrical grid",
+            "targetSlug": "electrical-grid",
+            "note": "Pearl Street Station — first electrical utility (1882)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Nikola Tesla",
             "targetSlug": "nikola-tesla",
-            "targetName": "Nikola Tesla",
-            "context": "Edison and Tesla's War of Currents shaped the modern electrical grid"
+            "note": "War of Currents rival (AC vs DC)"
           },
           {
-            "sourceSlug": "thomas-edison",
-            "sourceName": "Thomas Edison",
-            "verb": "CAUSES",
-            "targetSlug": "industrial-revolution",
-            "targetName": "Industrial Revolution",
-            "context": "Electrical lighting and power extended industrial productivity beyond daylight"
+            "type": "INFLUENCES",
+            "target": "George Westinghouse",
+            "targetSlug": "george-westinghouse",
+            "note": "AC electricity competitor who ultimately won"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "General Electric",
+            "targetSlug": "general-electric",
+            "note": "His Edison General Electric became GE"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Research and development",
+            "targetSlug": "research-and-development",
+            "note": "Menlo Park — world's first industrial R&D lab"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "United States",
+            "targetSlug": "united-states",
+            "note": "American inventor and industrialist"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Recorded music industry",
+            "targetSlug": "recorded-music",
+            "note": "Phonograph launched mass music market"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "J.P. Morgan",
+            "targetSlug": "jp-morgan",
+            "note": "Key financier of Edison's electrical empire"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Alexander Graham Bell",
+            "targetSlug": "alexander-graham-bell",
+            "note": "Contemporary inventor and competitor"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Second Industrial Revolution",
+            "targetSlug": "second-industrial-revolution",
+            "note": "His electrical inventions defined the era"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Modern laboratory science",
+            "targetSlug": "laboratory-science",
+            "note": "Created industrial model for systematic invention"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "New Jersey",
+            "targetSlug": "new-jersey",
+            "note": "Menlo Park and West Orange labs"
+          }
+        ],
+        "summary": "Thomas Edison (1847–1931) was an American inventor and businessman who holds the record for most patents in US history (1,093) and whose inventions — including the practical incandescent light bulb, the phonograph, and the motion picture camera — fundamentally transformed everyday life in the modern world. More than any individual inventor, he industrialized invention itself by creating the world's first research and development laboratory at Menlo Park, New Jersey (1876).\n\nEdison's greatest single achievement was making electric light commercially viable. His incandescent bulb (1879) was not the first, but was the first practical, long-lasting system — and critically, he invented the entire supporting infrastructure: power generation (Pearl Street Station, 1882, the first electrical utility), distribution networks, meters, switches, and sockets. This systems-thinking approach to invention, rather than any individual device, was his most lasting contribution.\n\nHis phonograph (1877) — which recorded and played back sound for the first time in history — launched the recorded music industry. His Kinetoscope and collaboration with W.K.L. Dickson created the foundations of cinema. His 'War of Currents' against Nikola Tesla and George Westinghouse over DC vs. AC electricity, which he lost, ultimately shaped the AC electrical grid that powers the modern world.\n\n'Genius is one percent inspiration and ninety-nine percent perspiration,' he said — a philosophy that described his factory of invention, which employed hundreds of scientists before academic R&D labs existed.",
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Thomas Edison electrified civilization and invented the industrial research laboratory — his practical light bulb and electrical grid system transformed daily life, his phonograph created the music industry, and his R&D lab model became the template for modern technological innovation."
+        },
+        "quote": "'Genius is one percent inspiration and ninety-nine percent perspiration.' — Thomas Edison",
+        "places": [
+          "Menlo Park, New Jersey",
+          "West Orange, New Jersey",
+          "Milan, Ohio (birthplace)",
+          "New York City"
+        ],
+        "subjectHeadings": "Thomas Edison — Inventors and Industrialists — United States — Modern",
+        "subjects": [
+          "United States",
+          "invention",
+          "electricity",
+          "industrial revolution",
+          "phonograph",
+          "cinema",
+          "patents",
+          "technology",
+          "Gilded Age",
+          "R&D"
+        ],
+        "frameworks": [
+          "technological-change",
+          "scientific-revolution",
+          "capitalism"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Thomas Edison (1847–1931) was an American inventor and businessman who holds the record for most patents in US history (1,093) and whose inventions — including the practical incandescent light bulb, t…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.238442+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": [
+              "Self-education and voracious reading",
+              "Telegraphy experience provided electrical knowledge",
+              "American entrepreneurial culture after Civil War"
+            ],
+            "newValue": "['American industrial expansion creating demand for labor-saving electrical technologies', 'Telegraphy industry as training ground providing technical foundation', 'Capitalist investment culture in Gi…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.238442+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": [
+              "Practical electric lighting transformed daily life worldwide",
+              "Industrial research laboratory model adopted globally",
+              "Phonograph launched the recorded music industry",
+              "Motion picture camera created cinema",
+              "Pearl Street Station launched commercial electricity"
+            ],
+            "newValue": "['Practical incandescent light bulb (1879) — electrification of civilization', \"Pearl Street Station (1882) — world's first commercial electrical utility\", 'Phonograph (1877) — birth of the recorded m…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.238442+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": [
+              {
+                "sourceSlug": "thomas-edison",
+                "sourceName": "Thomas Edison",
+                "verb": "OCCURS_IN",
+                "targetSlug": "united-states",
+                "targetName": "United States",
+                "context": "American inventor who worked in Menlo Park and West Orange, New Jersey"
+              },
+              {
+                "sourceSlug": "thomas-edison",
+                "sourceName": "Thomas Edison",
+                "verb": "INFLUENCES",
+                "targetSlug": "nikola-tesla",
+                "targetName": "Nikola Tesla",
+                "context": "Edison and Tesla's War of Currents shaped the modern electrical grid"
+              },
+              {
+                "sourceSlug": "thomas-edison",
+                "sourceName": "Thomas Edison",
+                "verb": "CAUSES",
+                "targetSlug": "industrial-revolution",
+                "targetName": "Industrial Revolution",
+                "context": "Electrical lighting and power extended industrial productivity beyond daylight"
+              }
+            ],
+            "newValue": "[{'type': 'INFLUENCES', 'target': 'Incandescent light bulb', 'targetSlug': 'incandescent-light-bulb', 'note': 'Practical commercial light (1879)'}, {'type': 'INFLUENCES', 'target': 'Phonograph', 'targ…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.238442+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 9, 'significanceCategory': 'world-changing', 'significanceNarrative': 'Thomas Edison electrified civilization and invented the industrial research laboratory — his practical ligh…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.238442+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": null,
+            "newValue": "'Genius is one percent inspiration and ninety-nine percent perspiration.' — Thomas Edison",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.238442+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": null,
+            "newValue": [
+              "Menlo Park, New Jersey",
+              "West Orange, New Jersey",
+              "Milan, Ohio (birthplace)",
+              "New York City"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.238442+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Thomas Edison — Inventors and Industrialists — United States — Modern",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.238442+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "United States",
+              "invention",
+              "electricity",
+              "industrial revolution",
+              "phonograph",
+              "cinema",
+              "patents",
+              "technology",
+              "Gilded Age",
+              "R&D"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.238442+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "technological-change",
+              "scientific-revolution",
+              "capitalism"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.238442+00:00"
           }
         ]
       },
@@ -90,7 +327,8 @@
       "$id": "thomas-edison",
       "$sequence": "613489",
       "$createdAt": "2026-04-05T14:43:34.141+00:00",
-      "$updatedAt": "2026-04-05T14:43:34.141+00:00"
+      "$updatedAt": "2026-04-05T14:43:34.141+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }

@@ -22,64 +22,300 @@
       ],
       "detailsJson": {
         "causes": [
-          "Spanish colonial oppression and Bourbon reforms",
-          "Enlightenment ideas (Rousseau, Locke) inspiring independence",
-          "Haitian Revolution demonstrating colonial overthrow was possible"
+          "Napoleonic invasion of Spain (1808) weakening colonial authority",
+          "Enlightenment ideas of liberty and equality inspiring creole elites",
+          "American and French Revolutions as models of successful independence",
+          "Spanish colonial economic exclusion of creoles from political power"
         ],
         "effects": [
-          "Liberation of Venezuela, Colombia, Ecuador, Peru, and Bolivia",
-          "Gran Colombia federation (1819–1831)",
-          "Bolivia named in his honor",
-          "Inspiration for Latin American independence movements",
-          "Pan-American unity ideal influencing regional organizations",
-          "Model of revolutionary military leadership across multiple nations"
+          "Independence of Venezuela (1821), Colombia (1819), Ecuador (1822), Peru (1821–24), Bolivia (1825), Panama",
+          "Battle of Ayacucho (1824) — final defeat of Spanish forces in South America",
+          "Gran Colombia — union of Venezuela, Colombia, Ecuador, Panama (1819–1831)",
+          "Angostura Address (1819) — founding document of Latin American republicanism",
+          "Pan-American ideal of hemispheric solidarity",
+          "Bolivia — nation named after him",
+          "Template for Latin American revolutionary and independence movements"
         ],
         "relationships": [
           {
-            "sourceSlug": "simon-bolivar",
-            "sourceName": "Simón Bolívar",
-            "verb": "TRANSFORMS",
-            "targetSlug": "south-america",
-            "targetName": "South America",
-            "context": "Liberated six nations from Spanish colonial rule"
+            "type": "OCCURS_IN",
+            "target": "Venezuela",
+            "targetSlug": "venezuela",
+            "note": "Birthplace and first liberated nation"
           },
           {
-            "sourceSlug": "simon-bolivar",
-            "sourceName": "Simón Bolívar",
-            "verb": "DEFINES",
-            "targetSlug": "boyaca",
-            "targetName": "Battle of Boyacá",
-            "context": "Decisive victory after Andean crossing, 1819"
+            "type": "OCCURS_IN",
+            "target": "Colombia",
+            "targetSlug": "colombia",
+            "note": "Liberated at Battle of Boyacá (1819)"
           },
           {
-            "sourceSlug": "simon-bolivar",
-            "sourceName": "Simón Bolívar",
-            "verb": "CAUSES",
+            "type": "INFLUENCES",
+            "target": "Gran Colombia",
             "targetSlug": "gran-colombia",
-            "targetName": "Gran Colombia",
-            "context": "Founded federation uniting Venezuela, Colombia, Ecuador"
+            "note": "Union he founded and led (1819–1831)"
           },
           {
-            "sourceSlug": "jean-jacques-rousseau",
-            "sourceName": "Rousseau",
-            "verb": "INFLUENCES",
-            "targetSlug": "simon-bolivar",
-            "targetName": "Simón Bolívar",
-            "context": "Enlightenment ideas drove Bolívar's revolutionary ideology"
+            "type": "INFLUENCES",
+            "target": "Battle of Ayacucho",
+            "targetSlug": "battle-of-ayacucho",
+            "note": "Final defeat of Spanish South American forces (1824)"
           },
           {
-            "sourceSlug": "simon-bolivar",
-            "sourceName": "Simón Bolívar",
-            "verb": "OCCURS_IN",
-            "targetSlug": "caracas",
-            "targetName": "Caracas",
-            "context": "Born in Caracas, capital of modern Venezuela"
+            "type": "INFLUENCES",
+            "target": "Antonio José de Sucre",
+            "targetSlug": "antonio-jose-de-sucre",
+            "note": "Most trusted general; won Battle of Ayacucho"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Francisco de Miranda",
+            "targetSlug": "francisco-de-miranda",
+            "note": "Predecessor Venezuelan independence leader"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "José de San Martín",
+            "targetSlug": "jose-de-san-martin",
+            "note": "Fellow liberator; met at Guayaquil 1822"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Spanish Empire",
+            "targetSlug": "spanish-empire",
+            "note": "Ended Spanish colonial rule across South America"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Latin American independence movements",
+            "targetSlug": "latin-american-independence",
+            "note": "Inspired and led the continental liberation"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Pan-Americanism",
+            "targetSlug": "pan-americanism",
+            "note": "Convened first Pan-American congress (1826)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Bolivia",
+            "targetSlug": "bolivia",
+            "note": "Nation named in his honor"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Napoleonic Wars",
+            "targetSlug": "napoleonic-wars",
+            "note": "Napoleon's Spain invasion created independence window"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "American Revolution",
+            "targetSlug": "american-revolution",
+            "note": "Model for republican governance"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "French Revolution",
+            "targetSlug": "french-revolution",
+            "note": "Liberty ideals shaped his Enlightenment vision"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Peru",
+            "targetSlug": "peru",
+            "note": "Liberated and briefly ruled as dictator"
           }
         ],
-        "places": [],
+        "places": [
+          "Caracas, Venezuela (birthplace)",
+          "Bogotá, Colombia",
+          "Lima, Peru",
+          "Santa Marta, Colombia (death)"
+        ],
         "texts": [],
-        "frameworks": []
-      }
+        "frameworks": [
+          "revolution",
+          "empire-building",
+          "political-philosophy"
+        ],
+        "summary": "Simón Bolívar (1783–1830) was a Venezuelan military commander and political visionary who liberated six South American nations from Spanish colonial rule — Venezuela, Colombia, Ecuador, Peru, Bolivia, and Panama — earning him the title 'El Libertador' (The Liberator). No individual in the Western Hemisphere liberated more territory or more people, and he remains the most revered political figure in Latin American history.\n\nBorn into Caracas' creole aristocracy, Bolívar was inspired by Enlightenment ideals and the American and French Revolutions. After a failed first republic (1811–12), he regrouped in exile and returned to fight a legendary campaign. His decisive victories — the Battle of Boyacá (1819) liberating Colombia, the Battle of Carabobo (1821) liberating Venezuela, and the Battle of Ayacucho (1824) ending Spanish rule in South America — were achieved against daunting odds across jungles, plains, and Andean passes.\n\nBolívar's political vision went beyond independence. He dreamed of a united Gran Colombia (Venezuela, Colombia, Ecuador, Panama) and later a Pan-American confederation of republics — a vision of Latin American unity that remains aspirational. His Angostura Address (1819) and Jamaica Letter are founding documents of Latin American political thought.\n\nHe died at 47 of tuberculosis, bitterly disappointed as Gran Colombia fragmented and his former allies turned against him. 'America is ungovernable,' he reportedly said on his deathbed. His image adorns six national currencies and countless public spaces across a continent he helped birth.",
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Simón Bolívar liberated six nations and ended Spanish colonial rule across an entire continent — the most successful military liberator in the Western Hemisphere and the founding visionary of Latin American independence, whose Pan-American dream still shapes hemispheric politics."
+        },
+        "quote": "'A state too expensive in itself, or by virtue of its dependencies, ultimately falls into decay; its free government is transformed into a tyranny; it disregards the principles which it should preserve, and finally degenerates into despotism.' — Simón Bolívar",
+        "subjectHeadings": "Simón Bolívar — Revolutionary Leaders — Venezuela/South America — Modern",
+        "subjects": [
+          "Venezuela",
+          "Colombia",
+          "Peru",
+          "Bolivia",
+          "Ecuador",
+          "independence",
+          "Latin America",
+          "military history",
+          "revolution",
+          "republicanism"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Simón Bolívar (1783–1830) was a Venezuelan military commander and political visionary who liberated six South American nations from Spanish colonial rule — Venezuela, Colombia, Ecuador, Peru, Bolivia,…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239160+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": [
+              "Spanish colonial oppression and Bourbon reforms",
+              "Enlightenment ideas (Rousseau, Locke) inspiring independence",
+              "Haitian Revolution demonstrating colonial overthrow was possible"
+            ],
+            "newValue": "['Napoleonic invasion of Spain (1808) weakening colonial authority', 'Enlightenment ideas of liberty and equality inspiring creole elites', 'American and French Revolutions as models of successful ind…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239160+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": [
+              "Liberation of Venezuela, Colombia, Ecuador, Peru, and Bolivia",
+              "Gran Colombia federation (1819–1831)",
+              "Bolivia named in his honor",
+              "Inspiration for Latin American independence movements",
+              "Pan-American unity ideal influencing regional organizations",
+              "Model of revolutionary military leadership across multiple nations"
+            ],
+            "newValue": "['Independence of Venezuela (1821), Colombia (1819), Ecuador (1822), Peru (1821–24), Bolivia (1825), Panama', 'Battle of Ayacucho (1824) — final defeat of Spanish forces in South America', 'Gran Colom…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239160+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": [
+              {
+                "sourceSlug": "simon-bolivar",
+                "sourceName": "Simón Bolívar",
+                "verb": "TRANSFORMS",
+                "targetSlug": "south-america",
+                "targetName": "South America",
+                "context": "Liberated six nations from Spanish colonial rule"
+              },
+              {
+                "sourceSlug": "simon-bolivar",
+                "sourceName": "Simón Bolívar",
+                "verb": "DEFINES",
+                "targetSlug": "boyaca",
+                "targetName": "Battle of Boyacá",
+                "context": "Decisive victory after Andean crossing, 1819"
+              },
+              {
+                "sourceSlug": "simon-bolivar",
+                "sourceName": "Simón Bolívar",
+                "verb": "CAUSES",
+                "targetSlug": "gran-colombia",
+                "targetName": "Gran Colombia",
+                "context": "Founded federation uniting Venezuela, Colombia, Ecuador"
+              },
+              {
+                "sourceSlug": "jean-jacques-rousseau",
+                "sourceName": "Rousseau",
+                "verb": "INFLUENCES",
+                "targetSlug": "simon-bolivar",
+                "targetName": "Simón Bolívar",
+                "context": "Enlightenment ideas drove Bolívar's revolutionary ideology"
+              },
+              {
+                "sourceSlug": "simon-bolivar",
+                "sourceName": "Simón Bolívar",
+                "verb": "OCCURS_IN",
+                "targetSlug": "caracas",
+                "targetName": "Caracas",
+                "context": "Born in Caracas, capital of modern Venezuela"
+              }
+            ],
+            "newValue": "[{'type': 'OCCURS_IN', 'target': 'Venezuela', 'targetSlug': 'venezuela', 'note': 'Birthplace and first liberated nation'}, {'type': 'OCCURS_IN', 'target': 'Colombia', 'targetSlug': 'colombia', 'note':…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239160+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 9, 'significanceCategory': 'world-changing', 'significanceNarrative': 'Simón Bolívar liberated six nations and ended Spanish colonial rule across an entire continent — the most s…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239160+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": null,
+            "newValue": "'A state too expensive in itself, or by virtue of its dependencies, ultimately falls into decay; its free government is transformed into a tyranny; it disregards the principles which it should preserv…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239160+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": [],
+            "newValue": [
+              "Caracas, Venezuela (birthplace)",
+              "Bogotá, Colombia",
+              "Lima, Peru",
+              "Santa Marta, Colombia (death)"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239160+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Simón Bolívar — Revolutionary Leaders — Venezuela/South America — Modern",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239160+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "Venezuela",
+              "Colombia",
+              "Peru",
+              "Bolivia",
+              "Ecuador",
+              "independence",
+              "Latin America",
+              "military history",
+              "revolution",
+              "republicanism"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239160+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": [],
+            "newValue": [
+              "revolution",
+              "empire-building",
+              "political-philosophy"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239160+00:00"
+          }
+        ]
+      },
+      "_unsyncedEdits": true
     }
   ]
 }

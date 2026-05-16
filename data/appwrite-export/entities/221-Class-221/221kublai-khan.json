@@ -21,64 +21,298 @@
       ],
       "detailsJson": {
         "causes": [
-          "Mongol Empire's westward and southward expansion",
-          "Song Dynasty's military weakness",
-          "Genghis Khan's imperial legacy and succession system"
+          "Mongol conquests of Genghis Khan and successors unifying northern China and Eurasia",
+          "Death of Möngke Khan (1259) triggering succession crisis Kublai won",
+          "Southern Song dynasty's political and military fragmentation enabling conquest",
+          "Chinese administrative traditions providing governance model for conquered territories"
         ],
         "effects": [
-          "Yuan Dynasty — first non-Chinese to rule all of China",
-          "Khanbaliq (Beijing) as cosmopolitan world capital",
-          "Paper money system across the empire",
-          "Silk Road trade at its medieval peak",
-          "Failed invasions of Japan (kamikaze typhoons)",
-          "Marco Polo's account spreading knowledge of China to Europe"
+          "Yuan dynasty (1271–1368) — first complete non-Han conquest of all China",
+          "Unification of China under Mongol rule for the first time in three centuries",
+          "Pax Mongolica — Silk Road security enabling East-West trade and cultural exchange",
+          "Marco Polo's journey (1271–1295) — transmitting China's wonders to Europe",
+          "Beijing (Khanbaliq) established as imperial capital of China",
+          "Failed invasions of Japan (kamikaze divine winds) — limits of Mongol naval power",
+          "Paper money (banknotes) introduced as primary currency across the empire"
         ],
         "relationships": [
           {
-            "sourceSlug": "kublai-khan",
-            "sourceName": "Kublai Khan",
-            "verb": "TRANSFORMS",
-            "targetSlug": "china",
-            "targetName": "China",
-            "context": "Conquered Song Dynasty, founded Yuan Dynasty (1271)"
+            "type": "OCCURS_IN",
+            "target": "Mongol Empire",
+            "targetSlug": "mongol-empire",
+            "note": "Fifth and final Great Khan"
           },
           {
-            "sourceSlug": "genghis-khan",
-            "sourceName": "Genghis Khan",
-            "verb": "CAUSES",
-            "targetSlug": "kublai-khan",
-            "targetName": "Kublai Khan",
-            "context": "Grandfather's empire enabled Kublai's conquests"
-          },
-          {
-            "sourceSlug": "marco-polo",
-            "sourceName": "Marco Polo",
-            "verb": "OCCURS_IN",
-            "targetSlug": "kublai-khan",
-            "targetName": "Kublai Khan",
-            "context": "Polo served Kublai's court for 17 years"
-          },
-          {
-            "sourceSlug": "kublai-khan",
-            "sourceName": "Kublai Khan",
-            "verb": "OCCURS_IN",
-            "targetSlug": "beijing",
-            "targetName": "Beijing",
-            "context": "Built capital Khanbaliq on site of modern Beijing"
-          },
-          {
-            "sourceSlug": "kublai-khan",
-            "sourceName": "Kublai Khan",
-            "verb": "DEFINES",
+            "type": "OCCURS_IN",
+            "target": "Yuan dynasty",
             "targetSlug": "yuan-dynasty",
-            "targetName": "Yuan Dynasty",
-            "context": "Established Mongol rule over all China, 1271–1368"
+            "note": "Founder and first emperor"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "China",
+            "targetSlug": "china",
+            "note": "Conquered and unified all of China"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Genghis Khan",
+            "targetSlug": "genghis-khan",
+            "note": "Grandfather whose empire he inherited and transformed"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Marco Polo",
+            "targetSlug": "marco-polo",
+            "note": "Venetian merchant who served 17 years at his court"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Silk Road",
+            "targetSlug": "silk-road",
+            "note": "Pax Mongolica enabled its greatest era of trade"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Southern Song dynasty",
+            "targetSlug": "southern-song-dynasty",
+            "note": "Conquered and ended Chinese Song dynasty (1279)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Invasions of Japan",
+            "targetSlug": "mongol-invasions-of-japan",
+            "note": "Two failed invasions (1274, 1281) — defeated by typhoon"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Beijing",
+            "targetSlug": "beijing",
+            "note": "Built Khanbaliq as Mongol imperial capital"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Pax Mongolica",
+            "targetSlug": "pax-mongolica",
+            "note": "Era of Mongol peace enabling Eurasian exchange"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Paper money",
+            "targetSlug": "paper-money",
+            "note": "Standardized paper currency across China and empire"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Ibn Battuta",
+            "targetSlug": "ibn-battuta",
+            "note": "Later traveler whose accounts describe Yuan China"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Mongolia",
+            "targetSlug": "mongolia",
+            "note": "Ethnic origin and Mongol steppe homeland"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Samuel Taylor Coleridge",
+            "targetSlug": "samuel-taylor-coleridge",
+            "note": "'Kubla Khan' poem (1797) immortalized his Xanadu"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Confucian bureaucracy",
+            "targetSlug": "confucian-bureaucracy",
+            "note": "Retained Chinese administrative traditions under Mongol rule"
           }
         ],
-        "places": [],
+        "places": [
+          "Khanbaliq (modern Beijing), China",
+          "Karakorum, Mongolia",
+          "Xanadu (Shangdu), Inner Mongolia"
+        ],
         "texts": [],
-        "frameworks": []
-      }
+        "frameworks": [
+          "empire-building",
+          "trade-networks",
+          "state-formation"
+        ],
+        "summary": "Kublai Khan (1215–1294) was the fifth Great Khan of the Mongol Empire and the founder and first Emperor of the Yuan dynasty of China — the first non-Chinese ruler to conquer and govern all of China. A grandson of Genghis Khan, he transformed the brutal Mongol conquests into a sophisticated imperial administration, presiding over the largest contiguous empire in history at its height and creating an era of unprecedented contact between East and West.\n\nKublai's conquest of the Southern Song dynasty (completed 1279) unified China for the first time in three centuries. He ruled from Khanbaliq (modern Beijing), which he built as his capital, and governed through a meritocratic bureaucracy that retained Chinese Confucian administrative traditions alongside Mongol military power. His court attracted scientists, artists, engineers, and merchants from across Eurasia, including Marco Polo, who served at his court for seventeen years.\n\nThe Pax Mongolica — the Mongol peace that made the Silk Road safe for travel — reached its apogee under Kublai. Chinese innovations including gunpowder, printing, and paper money flowed westward; Islamic and European goods and ideas moved east. His failed invasions of Japan (1274, 1281), Vietnam, and Java demonstrated the limits of Mongol power at sea.\n\nThe Yuan dynasty he founded (1271–1368) lasted nearly a century, transmitted Chinese civilization to Central Asia, and left lasting demographic and cultural imprints across East Asia. Samuel Taylor Coleridge immortalized him in 'Kubla Khan' (1797): 'In Xanadu did Kubla Khan / A stately pleasure-dome decree.'",
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Kublai Khan completed the Mongol conquest of China, founded the Yuan dynasty, and presided over the Pax Mongolica — the greatest era of East-West trade and cultural exchange before modernity, during which Marco Polo introduced China to Europe and Chinese inventions flowed westward."
+        },
+        "quote": "'In Xanadu did Kubla Khan / A stately pleasure-dome decree.' — Samuel Taylor Coleridge, 'Kubla Khan' (1797)",
+        "subjectHeadings": "Kublai Khan — Emperors and Rulers — China/Mongolia — Medieval",
+        "subjects": [
+          "China",
+          "Mongolia",
+          "Mongol Empire",
+          "Yuan dynasty",
+          "Silk Road",
+          "medieval Asia",
+          "Marco Polo",
+          "conquest",
+          "East-West exchange",
+          "Beijing"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Kublai Khan (1215–1294) was the fifth Great Khan of the Mongol Empire and the founder and first Emperor of the Yuan dynasty of China — the first non-Chinese ruler to conquer and govern all of China. A…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239874+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": [
+              "Mongol Empire's westward and southward expansion",
+              "Song Dynasty's military weakness",
+              "Genghis Khan's imperial legacy and succession system"
+            ],
+            "newValue": "['Mongol conquests of Genghis Khan and successors unifying northern China and Eurasia', 'Death of Möngke Khan (1259) triggering succession crisis Kublai won', \"Southern Song dynasty's political and mi…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239874+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": [
+              "Yuan Dynasty — first non-Chinese to rule all of China",
+              "Khanbaliq (Beijing) as cosmopolitan world capital",
+              "Paper money system across the empire",
+              "Silk Road trade at its medieval peak",
+              "Failed invasions of Japan (kamikaze typhoons)",
+              "Marco Polo's account spreading knowledge of China to Europe"
+            ],
+            "newValue": "['Yuan dynasty (1271–1368) — first complete non-Han conquest of all China', 'Unification of China under Mongol rule for the first time in three centuries', 'Pax Mongolica — Silk Road security enabling…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239874+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": [
+              {
+                "sourceSlug": "kublai-khan",
+                "sourceName": "Kublai Khan",
+                "verb": "TRANSFORMS",
+                "targetSlug": "china",
+                "targetName": "China",
+                "context": "Conquered Song Dynasty, founded Yuan Dynasty (1271)"
+              },
+              {
+                "sourceSlug": "genghis-khan",
+                "sourceName": "Genghis Khan",
+                "verb": "CAUSES",
+                "targetSlug": "kublai-khan",
+                "targetName": "Kublai Khan",
+                "context": "Grandfather's empire enabled Kublai's conquests"
+              },
+              {
+                "sourceSlug": "marco-polo",
+                "sourceName": "Marco Polo",
+                "verb": "OCCURS_IN",
+                "targetSlug": "kublai-khan",
+                "targetName": "Kublai Khan",
+                "context": "Polo served Kublai's court for 17 years"
+              },
+              {
+                "sourceSlug": "kublai-khan",
+                "sourceName": "Kublai Khan",
+                "verb": "OCCURS_IN",
+                "targetSlug": "beijing",
+                "targetName": "Beijing",
+                "context": "Built capital Khanbaliq on site of modern Beijing"
+              },
+              {
+                "sourceSlug": "kublai-khan",
+                "sourceName": "Kublai Khan",
+                "verb": "DEFINES",
+                "targetSlug": "yuan-dynasty",
+                "targetName": "Yuan Dynasty",
+                "context": "Established Mongol rule over all China, 1271–1368"
+              }
+            ],
+            "newValue": "[{'type': 'OCCURS_IN', 'target': 'Mongol Empire', 'targetSlug': 'mongol-empire', 'note': 'Fifth and final Great Khan'}, {'type': 'OCCURS_IN', 'target': 'Yuan dynasty', 'targetSlug': 'yuan-dynasty', 'n…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239874+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 9, 'significanceCategory': 'world-changing', 'significanceNarrative': 'Kublai Khan completed the Mongol conquest of China, founded the Yuan dynasty, and presided over the Pax Mon…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239874+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": null,
+            "newValue": "'In Xanadu did Kubla Khan / A stately pleasure-dome decree.' — Samuel Taylor Coleridge, 'Kubla Khan' (1797)",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239874+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": [],
+            "newValue": [
+              "Khanbaliq (modern Beijing), China",
+              "Karakorum, Mongolia",
+              "Xanadu (Shangdu), Inner Mongolia"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239874+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Kublai Khan — Emperors and Rulers — China/Mongolia — Medieval",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239874+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "China",
+              "Mongolia",
+              "Mongol Empire",
+              "Yuan dynasty",
+              "Silk Road",
+              "medieval Asia",
+              "Marco Polo",
+              "conquest",
+              "East-West exchange",
+              "Beijing"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239874+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": [],
+            "newValue": [
+              "empire-building",
+              "trade-networks",
+              "state-formation"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-59-may2026",
+            "timestamp": "2026-05-16T22:57:35.239874+00:00"
+          }
+        ]
+      },
+      "_unsyncedEdits": true
     }
   ]
 }
