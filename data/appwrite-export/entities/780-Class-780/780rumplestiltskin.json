@@ -25,7 +25,103 @@
       "wikidataQid": "Q322188",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Rumpelstiltskin",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Kinder%20und%20Hausm%C3%A4rchen%20%28Grimm%29%201812%20I%20253.jpg",
-      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"rumplestiltskin\", \"sourceName\": \"Rumplestiltskin\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-modern\", \"targetName\": \"Modern\", \"context\": \"Rumplestiltskin is situated within the Modern (950)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Rumplestiltskin\", \"type\": \"Reference article\", \"slug\": \"rumplestiltskin\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q322188\", \"https://en.wikipedia.org/wiki/Rumpelstiltskin\"], \"tags\": [\"literary work\", \"Historical & Literary Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Rumplestiltskin contributed to the historical record of the Modern period. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "The Germanic folk tradition of supernatural helpers with secret names (ATU type 500) — the widespread European belief that knowing a supernatural being's true name gives power over it — produced the Rumpelstiltskin story as one of the paradigmatic examples of this magical tradition, recorded by the Grimm brothers from German oral informants.",
+          "The Brothers Grimm's collection project — the recording of German folk narratives — drove the inclusion of Rumpelstiltskin in the Kinder- und Hausmärchen (1812), alongside related tale types from British tradition (Tom Tit Tot) that share the same core motif.",
+          "The ancient magical belief in the power of names — found in Egyptian magic (the true name of Ra), Hebrew tradition (the prohibition on pronouncing the name of God), and Norse mythology (the runes as named powers) — provided the deep cultural substructure for the tale's central premise that knowing Rumpelstiltskin's name breaks his power."
+        ],
+        "effects": [
+          "Rumpelstiltskin has become one of the most widely known and frequently adapted Grimm fairy tales — the bizarre little man who can spin gold from straw is one of the most recognisable fairy tale figures in Western popular culture, generating theatrical, operatic, cinematic, and literary adaptations across multiple cultures.",
+          "The tale has been analysed in feminist fairy tale criticism as a narrative of female commodification — the miller's lie reduces his daughter to an instrument of economic advancement, and the queen's dependence on supernatural help to spin gold she cannot actually spin highlights the gap between the social expectations placed on women and their actual capacities.",
+          "In American legal culture, 'Rumpelstiltskin' has given its name to a doctrine in family law and constitutional cases — the right to know one's biological parent's name, even if hidden — demonstrating the remarkable diffusion of a fairy tale figure into formal legal discourse."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "brothers-grimm",
+            "sourceName": "Brothers Grimm (KHM 55, Kinder- und Hausmärchen — 1st ed. 1812; 7th ed. 1857)",
+            "verb": "RECORDS",
+            "targetSlug": "rumplestiltskin",
+            "targetName": "Rumpelstiltskin (KHM 55 — spinning gold, secret name, ATU type 500)",
+            "context": "The Brothers Grimm recorded Rumpelstiltskin in Kinder- und Hausmärchen (1812) — one of the paradigmatic ATU type 500 ('The Name of the Supernatural Helper') tales."
+          },
+          {
+            "sourceSlug": "rumplestiltskin",
+            "sourceName": "Rumpelstiltskin (secret name — Egyptian/Hebrew/Norse magical tradition; power over named beings)",
+            "verb": "CONNECTS_TO",
+            "targetSlug": "magical-naming-tradition",
+            "targetName": "Ancient magical naming tradition (Egyptian, Hebrew, Norse — true name gives power over being)",
+            "context": "Rumpelstiltskin's central premise — that knowing a supernatural being's true name breaks its power — connects to the ancient magical belief in the power of names found in Egyptian, Hebrew, and Norse tradition."
+          },
+          {
+            "sourceSlug": "rumplestiltskin",
+            "sourceName": "Rumpelstiltskin (feminist analysis — miller commodifies daughter; queen's supernatural dependence)",
+            "verb": "EXAMINED_BY",
+            "targetSlug": "feminist-fairy-tale-criticism",
+            "targetName": "Feminist fairy tale criticism (female commodification, supernatural dependence — Grimm tales)",
+            "context": "Feminist critics analyse Rumpelstiltskin as a narrative of female commodification — the miller's lie reduces his daughter to an instrument of economic advancement, highlighting the gap between social expectations placed on women and their actual capacities."
+          }
+        ],
+        "places": [
+          {
+            "name": "Germany (Grimm collection, 1812 — oral informants; Germanic ATU 500 tradition)",
+            "role": "Rumpelstiltskin was recorded by the Brothers Grimm from German oral informants in 1812 — one of the paradigmatic examples of the ATU type 500 tale type in the Germanic folk tradition"
+          },
+          {
+            "name": "Global (theatrical, operatic, cinematic adaptations; American legal doctrine — 'Rumpelstiltskin doctrine')",
+            "role": "Rumpelstiltskin has been adapted worldwide in theatrical, operatic, and cinematic forms — and has given its name to a legal doctrine in American family law about the right to know one's biological parent"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Rumplestiltskin",
+            "type": "Reference article",
+            "slug": "rumplestiltskin"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q322188",
+          "https://en.wikipedia.org/wiki/Rumpelstiltskin"
+        ],
+        "tags": [
+          "literary work",
+          "Historical & Literary Texts",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "Rumplestiltskin contributed to the historical record of the Modern period. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.",
+        "summary": "Rumpelstiltskin (German: Rumpelstilzchen) is a German fairy tale first recorded by the Brothers Grimm in Kinder- und Hausmärchen ('Children's and Household Tales') as tale KHM 55, in the first edition (1812), and revised in subsequent editions with the most widely read version appearing in the 7th edition (1857). The tale narrates the story of a miller who boasts to the king that his daughter can spin gold from straw — the daughter is locked in a room with a spinning wheel and straw and told to spin gold or die; a mysterious little man appears and spins the gold in exchange for her necklace, ring, and finally the promise of her firstborn child; when the king marries her and the firstborn arrives, the little man returns to claim the child; but the queen is granted a three-day reprieve if she can guess his name, and ultimately discovers his name (Rumpelstiltskin) through a spy who observes him dancing and singing in the forest.\n\nRumpelstiltskin is classified as ATU type 500 ('The Name of the Supernatural Helper') and exists in related versions across European and world folk traditions — the motif of the supernatural helper whose power is broken when his name is discovered is widespread in Germanic, British (Tom Tit Tot), and Scottish folk traditions. The tale's central mystery — the power of a secret name — is connected to the ancient magical belief that knowing a being's true name gives power over it, a belief found in Egyptian, Hebrew, Greek, and Norse magical traditions.\n\nRumpelstiltskin's cultural legacy in the modern era is remarkably varied — the name 'Rumpelstiltskin' has become an idiom in some legal contexts (notably in Rumpelstiltskin-related constitutional cases in the United States about the right to know one's biological father's name), the tale is a central text in feminist analysis (the miller's lie commodifies his daughter; the queen is dependent on supernatural help to spin gold she cannot actually spin), and it is one of the most frequently adapted of all Grimm fairy tales in popular fiction.",
+        "subjects": [
+          "German Literature",
+          "19th Century",
+          "Fairy Tale",
+          "Brothers Grimm",
+          "Folk Literature",
+          "Magical Thinking",
+          "Feminist Criticism",
+          "Children's Literature"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 7,
+          "significanceNarrative": "Rumpelstiltskin (Grimm, KHM 55, 1812) is one of the most widely known and frequently adapted Grimm fairy tales — the ATU type 500 tale of the supernatural helper whose power is broken by the discovery of his name. Its connection to ancient magical naming traditions, its feminist analysis as a narrative of female commodification, and its entry into American legal doctrine demonstrate its remarkable cultural longevity.",
+          "significanceCategory": "significant"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-53-may2026",
+            "timestamp": "2026-05-16T18:47:59Z",
+            "oldValue": "",
+            "newValue": "Rumpelstiltskin (German: Rumpelstilzchen) is a German fairy tale first recorded by the Brothers Grimm in Kinder- und Hausmärchen ('Children's and Household Tales') as tale KHM 55, in the first edition…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Historical & Literary Texts -- Global -- Modern"
       ],
@@ -44,7 +140,8 @@
       "$id": "rumplestiltskin",
       "$sequence": "34812",
       "$createdAt": "2026-04-05T12:11:39.120+00:00",
-      "$updatedAt": "2026-04-05T12:11:39.120+00:00"
+      "$updatedAt": "2026-04-05T12:11:39.120+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
