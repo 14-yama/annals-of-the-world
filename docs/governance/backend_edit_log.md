@@ -301,3 +301,123 @@
 - **Model:** ollama
 - **Enriched:** 1 | **Failed:** 4
 - **Entities:** era-post-cold-war
+
+### AI Enrichment — 2026-05-11T22:33:07Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 18
+- **Entities:** moses-of-chorene, antonio-joaqun-prez-martnez
+
+### AI Enrichment — 2026-05-11T22:42:06Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 4
+- **Entities:** jan-želivský
+
+### AI Enrichment — 2026-05-12T09:14:53Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 18
+- **Entities:** era-neolithic-chalcolithic, wazo-of-liège
+
+### AI Enrichment — 2026-05-12T20:13:50Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 4
+- **Entities:** yuya
+
+### AI Enrichment — 2026-05-13T09:00:24Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 3
+- **Entities:** peisandros, konstantinos-maleinos
+
+### AI Enrichment — 2026-05-13T11:54:44Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 4
+- **Entities:** john-mystacon
+
+### AI Enrichment — 2026-05-13T12:54:53Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 4
+- **Entities:** publius-aelius-paetus
+
+### AI Enrichment — 2026-05-13T23:26:54Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 4
+- **Entities:** cuthbert
+
+### AI Enrichment — 2026-05-14T10:42:07Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 4
+- **Entities:** theophilus-protospatharius
+
+### AI Enrichment — 2026-05-15T03:37:38Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 3
+- **Entities:** guan-yu, jami
+
+### AI Enrichment — 2026-05-15T16:17:33Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 4
+- **Entities:** lucius-ii
+
+### AI Enrichment — 2026-05-15T21:09:02Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 18
+- **Entities:** wazo-of-lige, boniface-iii
+
+### AI Enrichment — 2026-05-16T02:02:25Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 3
+- **Entities:** jainism, lucio-marineo-sculo
+
+### AI Enrichment — 2026-05-16T03:22:45Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** menon-of-pharsalus, adémar-de-chabannes, admar-de-chabannes
+
+### AI Enrichment — 2026-05-16T04:39:08Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 3
+- **Entities:** chad-of-mercia, anastasius-ii
+
+### AI Enrichment — 2026-05-16T05:59:02Z
+
+- **Model:** ollama
+- **Enriched:** 4 | **Failed:** 1
+- **Entities:** trojan-war, hisham-ibn-urwah, juan-gil-de-hontan, giovanni-boccamazza
+
+### AI Enrichment — 2026-05-16T07:25:49Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 4
+- **Entities:** tatzates
+
+### AI Enrichment — 2026-05-16T07:51:06Z
+
+- **Model:** ollama
+- **Enriched:** 89 | **Failed:** 10
+- **Entities:** time, sabinus-of-canosa, saint-marcian-of-syracuse, nerikare, shaqilath, mattan-i, ruben-ii-prince-of-armenia, gnaeus-pinarius-cornelius-severus, ermon-de-jerusalém, ermon-de-jerusalm ... +79 more
+
+### AI Enrichment — 2026-05-16T08:25:26Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** gupta-empire, central-africa, true-jesus-church
+
+### AI Enrichment — 2026-05-16T09:13:23Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 4
+- **Entities:** east-africa

@@ -97,6 +97,31 @@ def _flush_status():
         pass
 
 
+def _load_status():
+    """Restore job registry from disk on startup so historical stats survive restarts."""
+    if not STATUS_FILE.exists():
+        return
+    try:
+        data = json.loads(STATUS_FILE.read_text())
+        if not isinstance(data, dict):
+            return
+        # Prune jobs older than 31 days to cap file growth
+        cutoff = time.time() - 86400 * 31
+        pruned = {}
+        for k, v in data.items():
+            try:
+                ts = time.mktime(time.strptime(v.get("started", ""), "%Y-%m-%dT%H:%M:%SZ"))
+                if ts >= cutoff:
+                    pruned[k] = v
+            except Exception:
+                pruned[k] = v  # keep entries with unparseable timestamps
+        with _lock:
+            _jobs.update(pruned)
+        print(f"[status] Restored {len(pruned)} jobs from disk ({len(data) - len(pruned)} pruned >31d)")
+    except Exception as e:
+        print(f"[status] Could not restore status from disk: {e}")
+
+
 def get_all_status() -> dict:
     with _lock:
         return {k: {**v} for k, v in _jobs.items()}
@@ -305,11 +330,16 @@ def _run_subprocess(job_id: str, cmd: list[str], env: dict | None = None):
         )
 
 
-def dispatch_enrich(count: int = 20, model: str = "ollama") -> str:
+def dispatch_enrich(count: int = 20, model: str = "ollama",
+                    queue: Optional[str] = None, lenient: bool = True) -> str:
     """Dispatch AI enrichment bot locally."""
     job_id = _new_job("enrich", count=count, model=model)
     cmd = [sys.executable, str(SCRIPTS / "ai_enrich_autonomous.py"),
            "--count", str(count), "--model", model]
+    if queue:
+        cmd += ["--queue", queue]
+    if lenient:
+        cmd.append("--lenient")
     t = threading.Thread(target=_run_subprocess, args=(job_id, cmd), daemon=True)
     t.start()
     return job_id
@@ -423,25 +453,6 @@ def _auto_sync_chain(bot_jids: list[str], max_entities: int = 100):
     # Step 2: git commit + push (commits cleared _editLog + any new enrichments)
     push_jid = dispatch_git_push()
     _wait_for_job(push_jid)
-
-
-def stop_all() -> list[str]:
-    """Kill all running local bot processes."""
-    stopped = []
-    with _lock:
-        for job_id, job in _jobs.items():
-            if job["status"] == "running" and job.get("pid"):
-                try:
-                    os.kill(job["pid"], signal.SIGTERM)
-                    job["status"] = "stopped"
-                    job["finished"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-                    stopped.append(job_id)
-                except ProcessLookupError:
-                    pass
-    _flush_status()
-    return stopped
-
-
 
 
 def stop_all() -> list[str]:
@@ -671,7 +682,7 @@ def dispatch_all(enrich_count: int = 20, sig_count: int = 50, auto_push: bool = 
     """
     jobs: list[str] = []
     jobs.append(dispatch_queue())
-    enrich_jid = dispatch_enrich(count=enrich_count, model="ollama")
+    enrich_jid = dispatch_enrich(count=enrich_count, model="ollama", lenient=True)
     sig_jid = dispatch_significance(count=sig_count, model="ollama")
     jobs.extend([enrich_jid, sig_jid])
 
@@ -844,8 +855,10 @@ class BotHandler(BaseHTTPRequestHandler):
             count = min(int(body.get("count", 20)), 100)   # cap at 100 — local only
             # SAFETY: always "ollama" from the local server — never calls cloud APIs
             model = "ollama"
-            job_id = dispatch_enrich(count=count, model=model)
-            self._send(202, {"jobId": job_id, "bot": "enrich", "count": count, "model": model})
+            queue = body.get("queue") or None   # e.g. "data/enrichment/queue_ollama_a.json"
+            lenient = bool(body.get("lenient", True))
+            job_id = dispatch_enrich(count=count, model=model, queue=queue, lenient=lenient)
+            self._send(202, {"jobId": job_id, "bot": "enrich", "count": count, "model": model, "queue": queue, "lenient": lenient})
 
         elif path == "/bots/significance":
             count = min(int(body.get("count", 50)), 200)   # cap at 200 — local only
@@ -893,6 +906,9 @@ def main():
     parser = argparse.ArgumentParser(description="Local Bot Server — port 7474")
     parser.add_argument("--port", type=int, default=7474)
     args = parser.parse_args()
+
+    # Restore historical job data from disk so 24h/7d/30d stats survive restarts
+    _load_status()
 
     # Load .env
     env_file = REPO_ROOT / ".env"
