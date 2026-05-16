@@ -25,7 +25,7 @@
       "wikidataQid": "Q48214",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Near_East",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Middle%20East.%20LOC%202010585095.jpg",
-      "detailsJson": "{\"causes\": [\"Geographic and historical development\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"near-east\", \"sourceName\": \"Near East\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Near East is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Near East\", \"type\": \"Reference article\", \"slug\": \"near-east\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q48214\", \"https://en.wikipedia.org/wiki/Near_East\"], \"tags\": [\"Macedonian Empire\", \"cultural region\", \"Regions\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Near East left a notable mark on Classical history, documented across 114 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Geographic and historical development\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"near-east\", \"sourceName\": \"Near East\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Near East is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Near East\", \"type\": \"Reference article\", \"slug\": \"near-east\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q48214\", \"https://en.wikipedia.org/wiki/Near_East\"], \"tags\": [\"Macedonian Empire\", \"cultural region\", \"Regions\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Near East left a notable mark on Classical history, documented across 114 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 8, \"significanceNarrative\": \"The Near East played a pivotal role in the spread of Islam, with the region witnessing significant cultural and demographic shifts following the Prophet Muhammad's migration to Medina in the 7th century. The subsequent establishment of caliphates and sultanates had far-reaching consequences for global politics, trade, and intellectual exchange.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 8, \\\"significanceNarrative\\\": \\\"The Near East played a pivotal role in the spread of Islam, with the region witnessing significant cultural and demographic shifts following the Prophet Muhammad's migration to Medina in the 7th century. The subsequent establishment of caliphates and sultanates had far-reaching consequences for global politics, trade, and intellectual exchange.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-16T04:42:10Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Regions -- Macedonian Empire -- Classical"
       ],
@@ -45,7 +45,12 @@
       "$id": "near-east",
       "$sequence": "722802",
       "$createdAt": "2026-04-05T15:18:44.701+00:00",
-      "$updatedAt": "2026-04-05T15:18:44.701+00:00"
+      "$updatedAt": "2026-04-05T15:18:44.701+00:00",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "The Near East played a pivotal role in the spread of Islam, with the region witnessing significant cultural and demographic shifts following the Prophet Muhammad's migration to Medina in the 7th century. The subsequent establishment of caliphates and sultanates had far-reaching consequences for global politics, trade, and intellectual exchange.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
