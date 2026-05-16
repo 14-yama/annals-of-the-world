@@ -2,7 +2,7 @@ import React, { useState, useMemo, useCallback, useEffect } from 'react'
 import { useParams, useNavigate, useSearchParams } from 'react-router-dom'
 import { Box, Flex, Text, SimpleGrid, Spinner } from '@chakra-ui/react'
 import {
-  Search, Library, ChevronDown,
+  Search, Library, ChevronDown, Star, ArrowUpDown, Flame,
 } from 'lucide-react'
 import type { Entity } from '../data/entityTypes'
 import { CLASS_COLORS, DIVISIONS, parseCallNumber } from '../constants/callNumbers'
@@ -94,6 +94,22 @@ const ERA_COLORS: Record<string, string> = {
 
 const PAGE_SIZE = 100
 
+/* ── Historical Significance helpers ── */
+function sigColor(score: number): string {
+  if (score >= 9) return '#D4AF37'  // gold — world-changing
+  if (score >= 7) return '#4A90D9'  // blue — continental
+  if (score >= 5) return '#3A7D44'  // green — regional
+  if (score >= 3) return '#787469'  // gray — local
+  return '#B8B2A4'                   // light gray — minor
+}
+
+function sigCategoryShort(cat?: string): string {
+  if (!cat) return ''
+  if (cat === 'world-changing') return 'world-changing'
+  if (cat === 'highly-significant') return 'continental'
+  return cat
+}
+
 export default function CatalogPage() {
   const { callNumber } = useParams<{ callNumber: string }>()
   const navigate = useNavigate()
@@ -131,6 +147,8 @@ export default function CatalogPage() {
     classes: searchParams.get('class') ? [parseInt(searchParams.get('class')!)] : [],
     divisions: searchParams.get('division') ? [searchParams.get('division')!] : [],
   }))
+
+  const [sortBy, setSortBy] = useState<'default' | 'significance'>('default')
 
   const eraDivision = searchParams.get('eraDivision') || ''
 
@@ -221,8 +239,17 @@ export default function CatalogPage() {
       arr.push(e)
       map.set(e.eraSlug, arr)
     }
+    if (sortBy === 'significance') {
+      for (const [slug, arr] of map) {
+        map.set(slug, [...arr].sort((a, b) => {
+          const sa = a.historicalSignificance?.significanceScore ?? 0
+          const sb = b.historicalSignificance?.significanceScore ?? 0
+          return sb - sa
+        }))
+      }
+    }
     return map
-  }, [entities])
+  }, [entities, sortBy])
 
   const handleEntityClick = useCallback((e: Entity) => {
     navigate(`/entity/${e.slug}`)
@@ -233,9 +260,9 @@ export default function CatalogPage() {
   return (
     <Box minH="100vh" bg={MARBLE_BG} p={{ base: 4, md: 6 }}>
       {/* Header */}
-      <Flex align="center" gap={3} mb={4}>
+      <Flex align="center" gap={3} mb={4} flexWrap="wrap">
         <Library size={28} color={GOLD} />
-        <Box>
+        <Box flex={1}>
           <Text fontFamily="'Cinzel', serif" fontSize="2xl" color={DARK_TEXT} fontWeight={700}>
             {eraDivision && ERA_DIVISION_LABELS[eraDivision]
               ? `${eraDivision} ${ERA_DIVISION_LABELS[eraDivision]}`
@@ -248,6 +275,21 @@ export default function CatalogPage() {
             {totalCount > 0 && totalCount !== backendTotal && ` \u2022 ${totalCount.toLocaleString()} matching`}
             {entities.length > 0 && entities.length < totalCount && ` \u2022 ${entities.length.toLocaleString()} loaded`}
           </Text>
+        </Box>
+        {/* Sort toggle */}
+        <Box as="button"
+          onClick={() => setSortBy(s => s === 'significance' ? 'default' : 'significance')}
+          px={3} py={1.5} borderRadius="8px" fontSize="xs" fontWeight={700}
+          fontFamily="'JetBrains Mono', monospace"
+          bg={sortBy === 'significance' ? `${GOLD}18` : 'white'}
+          color={sortBy === 'significance' ? GOLD : MUTED}
+          border="1px solid"
+          borderColor={sortBy === 'significance' ? GOLD : BORDER}
+          cursor="pointer" _hover={{ borderColor: GOLD, color: GOLD }}
+          display="flex" alignItems="center" gap={1.5}
+          transition="all 0.15s">
+          <ArrowUpDown size={12} />
+          {sortBy === 'significance' ? 'By Significance' : 'Sort by Significance'}
         </Box>
       </Flex>
 
@@ -292,6 +334,7 @@ export default function CatalogPage() {
         const eraEntities = byEra.get(slug) || []
         if (eraEntities.length === 0) return null
         const color = ERA_COLORS[slug] || MUTED
+        const worldChangers = eraEntities.filter(e => (e.historicalSignificance?.significanceScore ?? 0) >= 9).length
 
         return (
           <Box key={slug} mb={8}>
@@ -304,6 +347,15 @@ export default function CatalogPage() {
                 fontFamily="'JetBrains Mono', monospace" bg={`${color}12`} color={color}>
                 {eraEntities.length}
               </Box>
+              {worldChangers > 0 && (
+                <Box px={2} py={0.5} borderRadius="full" fontSize="10px" fontWeight={700}
+                  fontFamily="'JetBrains Mono', monospace" bg={`${GOLD}15`} color={GOLD}
+                  border="1px solid" borderColor={`${GOLD}40`}
+                  display="flex" alignItems="center" gap={1}>
+                  <Flame size={9} />
+                  {worldChangers} world-changing
+                </Box>
+              )}
             </Flex>
 
             <SimpleGrid columns={{ base: 1, sm: 2, lg: 3, xl: 4 }} gap={3}>
@@ -357,13 +409,20 @@ function EntityCard({ entity, onClick }: { entity: Entity; onClick: (e: Entity) 
   const color = LABEL_COLORS[entity.label] || MUTED
   const parsed = parseCallNumber(entity.callNumber)
   const classColor = parsed ? CLASS_COLORS[parsed.classCode] || MUTED : MUTED
+  const hs = entity.historicalSignificance
+  const score = hs?.significanceScore ?? 0
+  const isWorldChanging = score >= 9
+  const showBadge = score >= 5  // regional and above
 
   return (
-    <Box bg="#fff" border="1px solid" borderColor={BORDER} borderRadius="8px"
-      overflow="hidden" cursor="pointer" onClick={() => onClick(entity)}
-      _hover={{ borderColor: classColor, boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
-      transition="all 0.15s">
-      <Box h="3px" bg={classColor} />
+    <Box bg="#fff" border="1px solid"
+      borderColor={isWorldChanging ? `${GOLD}60` : BORDER}
+      borderRadius="8px" overflow="hidden" cursor="pointer" onClick={() => onClick(entity)}
+      _hover={{ borderColor: isWorldChanging ? GOLD : classColor, boxShadow: isWorldChanging ? `0 2px 12px ${GOLD}30` : '0 2px 8px rgba(0,0,0,0.06)' }}
+      transition="all 0.15s"
+      position="relative">
+      {/* Top accent bar — thicker for world-changing */}
+      <Box h={isWorldChanging ? '4px' : '3px'} bg={isWorldChanging ? `linear-gradient(to right, ${GOLD}, ${classColor})` : classColor} />
       <Box p={3}>
         <Flex align="center" gap={2} mb={1.5}>
           <Text fontFamily="'JetBrains Mono', monospace" fontSize="xs" fontWeight={700}
@@ -376,6 +435,17 @@ function EntityCard({ entity, onClick }: { entity: Entity; onClick: (e: Entity) 
             bg={`${ERA_COLORS[entity.eraSlug] || MUTED}12`}
             color={ERA_COLORS[entity.eraSlug] || MUTED}>
             {entity.era}</Box>
+          {/* Significance Badge */}
+          {showBadge && (
+            <Box px={1.5} py={0.5} borderRadius="4px" fontSize="10px" fontWeight={800}
+              fontFamily="'JetBrains Mono', monospace"
+              bg={`${sigColor(score)}18`} color={sigColor(score)}
+              border="1px solid" borderColor={`${sigColor(score)}35`}
+              display="flex" alignItems="center" gap={0.5}>
+              <Star size={8} style={{ fill: sigColor(score), flexShrink: 0 }} />
+              {score}
+            </Box>
+          )}
         </Flex>
         <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
           color={DARK_TEXT} lineClamp={1} mb={1}>{entity.name}</Text>
@@ -384,6 +454,13 @@ function EntityCard({ entity, onClick }: { entity: Entity; onClick: (e: Entity) 
           {entity.died ? ` \u2014 ${entity.died}` : entity.endDate ? ` \u2014 ${entity.endDate}` : ''}</Text>
         <Text fontSize="xs" color={MED_TEXT} lineClamp={2} fontFamily="'Inter', sans-serif"
           lineHeight="1.5">{entity.summary}</Text>
+        {/* Significance narrative — shown for world-changing only */}
+        {isWorldChanging && hs?.significanceNarrative && (
+          <Text fontSize="10px" color={GOLD} fontFamily="'Inter', sans-serif"
+            lineClamp={1} mt={1.5} fontStyle="italic" lineHeight="1.4">
+            {hs.significanceNarrative}
+          </Text>
+        )}
         <Flex gap={1} mt={2} flexWrap="wrap">
           {entity.subjects.slice(0, 3).map(s => (
             <Text key={s} fontSize="10px" px={1.5} py={0.5} bg={`${GOLD}08`} color={MUTED}

@@ -3,7 +3,7 @@ import { useParams, Link as RouterLink, useNavigate } from 'react-router-dom'
 import { Box, SimpleGrid, Text, Flex, Heading, Spinner } from '@chakra-ui/react'
 import {
   Clock, ChevronLeft, ChevronRight, Globe, BookOpen, Star, Home,
-  Users, Landmark, MapPin, Layers, FileText, Shield, Zap, Compass,
+  Users, Landmark, MapPin, Layers, FileText, Shield, Zap, Compass, Flame,
 } from 'lucide-react'
 import { getEraById, ERAS as ALL_ERAS } from '../constants/eras'
 import { TIMELINE_EVENTS } from '../data/timeline-events'
@@ -64,6 +64,21 @@ const LABEL_ICONS: Record<string, React.ReactNode> = {
   Evidence: <Shield size={16} />,
 }
 
+/* ── Historical significance helpers ── */
+function sigColor(score: number): string {
+  if (score >= 9) return '#D4AF37'
+  if (score >= 7) return '#4A90D9'
+  if (score >= 5) return '#3A7D44'
+  if (score >= 3) return '#787469'
+  return '#B8B2A4'
+}
+
+function sortBySig(arr: Entity[]): Entity[] {
+  return [...arr].sort((a, b) =>
+    (b.historicalSignificance?.significanceScore ?? 0) - (a.historicalSignificance?.significanceScore ?? 0)
+  )
+}
+
 export default function EraDetail() {
   const { eraId } = useParams<{ eraId: string }>()
   const navigate = useNavigate()
@@ -109,25 +124,31 @@ export default function EraDetail() {
   const prevEra = eraIndex > 0 ? ALL_ERAS[eraIndex - 1] : undefined
   const nextEra = eraIndex < ALL_ERAS.length - 1 ? ALL_ERAS[eraIndex + 1] : undefined
 
-  // Key figures: up to 6 notable Persons for the spotlight
+  // Key figures: top 6 Persons sorted by historical significance (highest first)
   const keyFigures = useMemo(() =>
-    (entityGroups.get('Person') || []).slice(0, 6),
+    sortBySig(entityGroups.get('Person') || []).slice(0, 6),
   [entityGroups])
 
-  // Key Institutions
+  // Key Institutions — sorted by significance
   const keyInstitutions = useMemo(() =>
-    (entityGroups.get('Institution') || []).slice(0, 6),
+    sortBySig(entityGroups.get('Institution') || []).slice(0, 6),
   [entityGroups])
 
-  // Key Texts
+  // Key Texts — sorted by significance
   const keyTexts = useMemo(() =>
-    (entityGroups.get('Text') || []).slice(0, 6),
+    sortBySig(entityGroups.get('Text') || []).slice(0, 6),
   [entityGroups])
 
-  // Key Movements
+  // Key Movements — sorted by significance
   const keyMovements = useMemo(() =>
-    (entityGroups.get('Movement') || []).slice(0, 4),
+    sortBySig(entityGroups.get('Movement') || []).slice(0, 4),
   [entityGroups])
+
+  // World Changers: entities with significanceScore >= 9 across ALL types
+  const worldChangers = useMemo(() => {
+    const all = eraEntities.filter(e => (e.historicalSignificance?.significanceScore ?? 0) >= 9)
+    return sortBySig(all)
+  }, [eraEntities])
 
   if (!era) {
     return (
@@ -257,6 +278,63 @@ export default function EraDetail() {
         </Box>
       )}
 
+      {/* ── World Changers Hall of Fame ── */}
+      {worldChangers.length > 0 && (
+        <Box mb={8} p={5} bg="linear-gradient(135deg, #FDF8ED 0%, #FFF9F0 100%)"
+          border="1px solid" borderColor="#D4AF3740" borderRadius="12px">
+          <Flex align="center" gap={2} mb={4}>
+            <Flame size={20} color="#D4AF37" />
+            <Box>
+              <Text fontFamily="'Cinzel', serif" fontSize="lg" fontWeight={700} color="#4A310D">
+                World Changers
+              </Text>
+              <Text fontSize="xs" color="#787469">
+                {worldChangers.length} entities with a historical significance score of 9–10
+              </Text>
+            </Box>
+          </Flex>
+          <Flex gap={3} flexWrap="wrap">
+            {worldChangers.map(e => {
+              const score = e.historicalSignificance?.significanceScore ?? 0
+              return (
+                <Box key={e.slug} bg="white" border="1px solid" borderColor="#D4AF3760"
+                  borderRadius="8px" overflow="hidden" cursor="pointer" minW="200px" flex="1" maxW="280px"
+                  onClick={() => navigate(`/entity/${e.slug}`)}
+                  _hover={{ borderColor: '#D4AF37', boxShadow: '0 3px 12px #D4AF3725' }}
+                  transition="all 0.15s">
+                  <Box h="4px" bg={`linear-gradient(to right, #D4AF37, ${era.color})`} />
+                  <Box p={3}>
+                    <Flex align="center" gap={1.5} mb={1.5}>
+                      <Box px={1.5} py={0.5} bg="#D4AF3718" borderRadius="4px"
+                        fontSize="9px" fontWeight={800} color="#D4AF37"
+                        fontFamily="'JetBrains Mono', monospace"
+                        border="1px solid" borderColor="#D4AF3730"
+                        display="flex" alignItems="center" gap={0.5}>
+                        <Star size={8} style={{ fill: '#D4AF37' }} />
+                        {score}
+                      </Box>
+                      <Box px={1.5} py={0.5} bg={`${era.color}12`} borderRadius="4px"
+                        fontSize="9px" fontWeight={600} color={era.color}
+                        fontFamily="'JetBrains Mono', monospace">
+                        {e.label === 'EventWindow' ? 'EVENT' : e.label.toUpperCase()}
+                      </Box>
+                    </Flex>
+                    <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
+                      color="#2D2A24" lineClamp={1} mb={0.5}>{e.name}</Text>
+                    <Text fontSize="xs" color="#787469" fontFamily="'JetBrains Mono', monospace" mb={1}>
+                      {e.period || e.born || e.founded || e.startDate || ''}</Text>
+                    {e.historicalSignificance?.significanceNarrative && (
+                      <Text fontSize="10px" color="#9E9A90" lineClamp={2} fontStyle="italic"
+                        lineHeight="1.4">{e.historicalSignificance.significanceNarrative}</Text>
+                    )}
+                  </Box>
+                </Box>
+              )
+            })}
+          </Flex>
+        </Box>
+      )}
+
       {/* ── Key Figures Spotlight ── */}
       {keyFigures.length > 0 && (
         <Box mb={8}>
@@ -265,25 +343,40 @@ export default function EraDetail() {
             subtitle={`Notable people of the ${era.name} era`}
           />
           <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} gap={3}>
-            {keyFigures.map(p => (
-              <Box key={p.slug} bg="white" border="1px solid" borderColor="#E4E2DC"
-                borderRadius="8px" overflow="hidden" cursor="pointer"
-                onClick={() => navigate(`/entity/${p.slug}`)}
-                _hover={{ borderColor: '#3A7D44', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
-                transition="all 0.15s">
-                <Box h="3px" bg="#3A7D44" />
-                <Box p={3}>
-                  <Flex align="center" gap={2} mb={1}>
-                    <Users size={14} color="#3A7D44" />
-                    <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
-                      color="#2D2A24" flex={1} lineClamp={1}>{p.name}</Text>
-                  </Flex>
-                  <Text fontSize="xs" color="#787469" fontFamily="'JetBrains Mono', monospace" mb={1}>
-                    {p.period || p.born || ''}</Text>
-                  <Text fontSize="xs" color="#524E44" lineClamp={2}>{p.summary}</Text>
+            {keyFigures.map(p => {
+              const score = p.historicalSignificance?.significanceScore ?? 0
+              const showBadge = score >= 5
+              return (
+                <Box key={p.slug} bg="white" border="1px solid"
+                  borderColor={score >= 9 ? '#D4AF3760' : '#E4E2DC'}
+                  borderRadius="8px" overflow="hidden" cursor="pointer"
+                  onClick={() => navigate(`/entity/${p.slug}`)}
+                  _hover={{ borderColor: score >= 9 ? '#D4AF37' : '#3A7D44', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
+                  transition="all 0.15s">
+                  <Box h={score >= 9 ? '4px' : '3px'} bg={score >= 9 ? `linear-gradient(to right, #D4AF37, #3A7D44)` : '#3A7D44'} />
+                  <Box p={3}>
+                    <Flex align="center" gap={2} mb={1}>
+                      <Users size={14} color="#3A7D44" />
+                      <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
+                        color="#2D2A24" flex={1} lineClamp={1}>{p.name}</Text>
+                      {showBadge && (
+                        <Box px={1.5} py={0.5} bg={`${sigColor(score)}18`} borderRadius="4px"
+                          fontSize="9px" fontWeight={800} color={sigColor(score)}
+                          fontFamily="'JetBrains Mono', monospace"
+                          border="1px solid" borderColor={`${sigColor(score)}30`}
+                          display="flex" alignItems="center" gap={0.5} flexShrink={0}>
+                          <Star size={7} style={{ fill: sigColor(score) }} />
+                          {score}
+                        </Box>
+                      )}
+                    </Flex>
+                    <Text fontSize="xs" color="#787469" fontFamily="'JetBrains Mono', monospace" mb={1}>
+                      {p.period || p.born || ''}</Text>
+                    <Text fontSize="xs" color="#524E44" lineClamp={2}>{p.summary}</Text>
+                  </Box>
                 </Box>
-              </Box>
-            ))}
+              )
+            })}
           </SimpleGrid>
         </Box>
       )}
@@ -296,25 +389,40 @@ export default function EraDetail() {
             subtitle={`Major institutions of the ${era.name} era`}
           />
           <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} gap={3}>
-            {keyInstitutions.map(inst => (
-              <Box key={inst.slug} bg="white" border="1px solid" borderColor="#E4E2DC"
-                borderRadius="8px" overflow="hidden" cursor="pointer"
-                onClick={() => navigate(`/entity/${inst.slug}`)}
-                _hover={{ borderColor: '#8B3A3A', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
-                transition="all 0.15s">
-                <Box h="3px" bg="#8B3A3A" />
-                <Box p={3}>
-                  <Flex align="center" gap={2} mb={1}>
-                    <Landmark size={14} color="#8B3A3A" />
-                    <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
-                      color="#2D2A24" flex={1} lineClamp={1}>{inst.name}</Text>
-                  </Flex>
-                  <Text fontSize="xs" color="#787469" fontFamily="'JetBrains Mono', monospace" mb={1}>
-                    {inst.founded || inst.period || ''}</Text>
-                  <Text fontSize="xs" color="#524E44" lineClamp={2}>{inst.summary}</Text>
+            {keyInstitutions.map(inst => {
+              const score = inst.historicalSignificance?.significanceScore ?? 0
+              const showBadge = score >= 5
+              return (
+                <Box key={inst.slug} bg="white" border="1px solid"
+                  borderColor={score >= 9 ? '#D4AF3760' : '#E4E2DC'}
+                  borderRadius="8px" overflow="hidden" cursor="pointer"
+                  onClick={() => navigate(`/entity/${inst.slug}`)}
+                  _hover={{ borderColor: score >= 9 ? '#D4AF37' : '#8B3A3A', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
+                  transition="all 0.15s">
+                  <Box h={score >= 9 ? '4px' : '3px'} bg={score >= 9 ? `linear-gradient(to right, #D4AF37, #8B3A3A)` : '#8B3A3A'} />
+                  <Box p={3}>
+                    <Flex align="center" gap={2} mb={1}>
+                      <Landmark size={14} color="#8B3A3A" />
+                      <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
+                        color="#2D2A24" flex={1} lineClamp={1}>{inst.name}</Text>
+                      {showBadge && (
+                        <Box px={1.5} py={0.5} bg={`${sigColor(score)}18`} borderRadius="4px"
+                          fontSize="9px" fontWeight={800} color={sigColor(score)}
+                          fontFamily="'JetBrains Mono', monospace"
+                          border="1px solid" borderColor={`${sigColor(score)}30`}
+                          display="flex" alignItems="center" gap={0.5} flexShrink={0}>
+                          <Star size={7} style={{ fill: sigColor(score) }} />
+                          {score}
+                        </Box>
+                      )}
+                    </Flex>
+                    <Text fontSize="xs" color="#787469" fontFamily="'JetBrains Mono', monospace" mb={1}>
+                      {inst.founded || inst.period || ''}</Text>
+                    <Text fontSize="xs" color="#524E44" lineClamp={2}>{inst.summary}</Text>
+                  </Box>
                 </Box>
-              </Box>
-            ))}
+              )
+            })}
           </SimpleGrid>
         </Box>
       )}
@@ -327,23 +435,38 @@ export default function EraDetail() {
             subtitle={`Defining movements of the ${era.name} era`}
           />
           <Flex gap={3} flexWrap="wrap">
-            {keyMovements.map(m => (
-              <Box key={m.slug} bg="white" border="1px solid" borderColor="#E4E2DC"
-                borderRadius="8px" overflow="hidden" cursor="pointer" flex="1" minW="220px"
-                onClick={() => navigate(`/entity/${m.slug}`)}
-                _hover={{ borderColor: '#6B3FA0', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
-                transition="all 0.15s">
-                <Box h="3px" bg="#6B3FA0" />
-                <Box p={3}>
-                  <Flex align="center" gap={2} mb={1}>
-                    <Layers size={14} color="#6B3FA0" />
-                    <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
-                      color="#2D2A24">{m.name}</Text>
-                  </Flex>
-                  <Text fontSize="xs" color="#524E44" lineClamp={2}>{m.summary}</Text>
+            {keyMovements.map(m => {
+              const score = m.historicalSignificance?.significanceScore ?? 0
+              const showBadge = score >= 5
+              return (
+                <Box key={m.slug} bg="white" border="1px solid"
+                  borderColor={score >= 9 ? '#D4AF3760' : '#E4E2DC'}
+                  borderRadius="8px" overflow="hidden" cursor="pointer" flex="1" minW="220px"
+                  onClick={() => navigate(`/entity/${m.slug}`)}
+                  _hover={{ borderColor: score >= 9 ? '#D4AF37' : '#6B3FA0', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
+                  transition="all 0.15s">
+                  <Box h={score >= 9 ? '4px' : '3px'} bg={score >= 9 ? `linear-gradient(to right, #D4AF37, #6B3FA0)` : '#6B3FA0'} />
+                  <Box p={3}>
+                    <Flex align="center" gap={2} mb={1}>
+                      <Layers size={14} color="#6B3FA0" />
+                      <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
+                        color="#2D2A24" flex={1}>{m.name}</Text>
+                      {showBadge && (
+                        <Box px={1.5} py={0.5} bg={`${sigColor(score)}18`} borderRadius="4px"
+                          fontSize="9px" fontWeight={800} color={sigColor(score)}
+                          fontFamily="'JetBrains Mono', monospace"
+                          border="1px solid" borderColor={`${sigColor(score)}30`}
+                          display="flex" alignItems="center" gap={0.5} flexShrink={0}>
+                          <Star size={7} style={{ fill: sigColor(score) }} />
+                          {score}
+                        </Box>
+                      )}
+                    </Flex>
+                    <Text fontSize="xs" color="#524E44" lineClamp={2}>{m.summary}</Text>
+                  </Box>
                 </Box>
-              </Box>
-            ))}
+              )
+            })}
           </Flex>
         </Box>
       )}
@@ -356,21 +479,40 @@ export default function EraDetail() {
             subtitle={`Seminal writings of the ${era.name} era`}
           />
           <SimpleGrid columns={{ base: 1, sm: 2 }} gap={3}>
-            {keyTexts.map(t => (
-              <Flex key={t.slug} bg="white" border="1px solid" borderColor="#E4E2DC"
-                borderRadius="8px" overflow="hidden" cursor="pointer"
-                onClick={() => navigate(`/entity/${t.slug}`)}
-                _hover={{ borderColor: '#5A2222', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
-                transition="all 0.15s" align="center" gap={3} p={3}>
-                <FileText size={20} color="#5A2222" style={{ flexShrink: 0 }} />
-                <Box>
-                  <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
-                    color="#2D2A24" lineClamp={1}>{t.name}</Text>
-                  <Text fontSize="xs" color="#787469" fontFamily="'JetBrains Mono', monospace">
-                    {t.period || t.born || ''}</Text>
-                </Box>
-              </Flex>
-            ))}
+            {keyTexts.map(t => {
+              const score = t.historicalSignificance?.significanceScore ?? 0
+              const showBadge = score >= 5
+              return (
+                <Flex key={t.slug} bg="white" border="1px solid"
+                  borderColor={score >= 9 ? '#D4AF3760' : '#E4E2DC'}
+                  borderRadius="8px" overflow="hidden" cursor="pointer"
+                  onClick={() => navigate(`/entity/${t.slug}`)}
+                  _hover={{ borderColor: score >= 9 ? '#D4AF37' : '#5A2222', boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
+                  transition="all 0.15s" align="center" gap={3} p={3}>
+                  {score >= 9 ? (
+                    <Flame size={20} color="#D4AF37" style={{ flexShrink: 0 }} />
+                  ) : (
+                    <FileText size={20} color="#5A2222" style={{ flexShrink: 0 }} />
+                  )}
+                  <Box flex={1}>
+                    <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
+                      color="#2D2A24" lineClamp={1}>{t.name}</Text>
+                    <Text fontSize="xs" color="#787469" fontFamily="'JetBrains Mono', monospace">
+                      {t.period || t.born || ''}</Text>
+                  </Box>
+                  {showBadge && (
+                    <Box px={1.5} py={0.5} bg={`${sigColor(score)}18`} borderRadius="4px"
+                      fontSize="9px" fontWeight={800} color={sigColor(score)}
+                      fontFamily="'JetBrains Mono', monospace"
+                      border="1px solid" borderColor={`${sigColor(score)}30`}
+                      display="flex" alignItems="center" gap={0.5} flexShrink={0}>
+                      <Star size={7} style={{ fill: sigColor(score) }} />
+                      {score}
+                    </Box>
+                  )}
+                </Flex>
+              )
+            })}
           </SimpleGrid>
         </Box>
       )}
@@ -415,7 +557,7 @@ export default function EraDetail() {
 
           {/* Grouped actor sections */}
           {LABEL_ORDER.filter(l => entityGroups.has(l)).map((labelKey, idx) => {
-            const entities = entityGroups.get(labelKey) || []
+            const groupEntities = sortBySig(entityGroups.get(labelKey) || [])
             const color = LABEL_COLORS[labelKey] || '#787469'
             return (
               <Box key={labelKey} mb={6}>
@@ -430,31 +572,46 @@ export default function EraDetail() {
                   <Box px={2} py={0.5} borderRadius="full" fontSize="10px" fontWeight={700}
                     fontFamily="'JetBrains Mono', monospace"
                     bg={`${color}12`} color={color}>
-                    {entities.length}
+                    {groupEntities.length}
                   </Box>
                 </Flex>
                 <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} gap={3}>
-                  {entities.map(e => (
-                    <Box key={e.slug} bg="white" border="1px solid" borderColor="#E4E2DC"
-                      borderRadius="8px" overflow="hidden" cursor="pointer"
-                      onClick={() => navigate(`/entity/${e.slug}`)}
-                      _hover={{ borderColor: color, boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
-                      transition="all 0.15s">
-                      <Box h="3px" bg={color} />
-                      <Box p={3}>
-                        <Flex align="center" gap={2} mb={1}>
-                          <Text fontFamily="'JetBrains Mono', monospace" fontSize="xs" fontWeight={700}
-                            color={color}>{e.callNumber.split('-')[0]}</Text>
-                          <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
-                            color="#2D2A24" flex={1} lineClamp={1}>{e.name}</Text>
-                        </Flex>
-                        <Text fontSize="xs" color="#787469" fontFamily="'JetBrains Mono', monospace" mb={1}>
-                          {e.period || e.born || e.founded || e.startDate || ''}</Text>
-                        <Text fontSize="xs" color="#524E44" lineClamp={2} fontFamily="'Inter', sans-serif"
-                          lineHeight="1.5">{e.summary}</Text>
+                  {groupEntities.map(e => {
+                    const eScore = e.historicalSignificance?.significanceScore ?? 0
+                    const showBadge = eScore >= 5
+                    return (
+                      <Box key={e.slug} bg="white" border="1px solid"
+                        borderColor={eScore >= 9 ? '#D4AF3760' : '#E4E2DC'}
+                        borderRadius="8px" overflow="hidden" cursor="pointer"
+                        onClick={() => navigate(`/entity/${e.slug}`)}
+                        _hover={{ borderColor: eScore >= 9 ? '#D4AF37' : color, boxShadow: '0 2px 8px rgba(0,0,0,0.06)' }}
+                        transition="all 0.15s">
+                        <Box h={eScore >= 9 ? '4px' : '3px'} bg={eScore >= 9 ? `linear-gradient(to right, #D4AF37, ${color})` : color} />
+                        <Box p={3}>
+                          <Flex align="center" gap={2} mb={1}>
+                            <Text fontFamily="'JetBrains Mono', monospace" fontSize="xs" fontWeight={700}
+                              color={color}>{e.callNumber.split('-')[0]}</Text>
+                            <Text fontFamily="'Cormorant Garamond', serif" fontSize="md" fontWeight={700}
+                              color="#2D2A24" flex={1} lineClamp={1}>{e.name}</Text>
+                            {showBadge && (
+                              <Box px={1.5} py={0.5} bg={`${sigColor(eScore)}18`} borderRadius="4px"
+                                fontSize="9px" fontWeight={800} color={sigColor(eScore)}
+                                fontFamily="'JetBrains Mono', monospace"
+                                border="1px solid" borderColor={`${sigColor(eScore)}30`}
+                                display="flex" alignItems="center" gap={0.5} flexShrink={0}>
+                                <Star size={7} style={{ fill: sigColor(eScore) }} />
+                                {eScore}
+                              </Box>
+                            )}
+                          </Flex>
+                          <Text fontSize="xs" color="#787469" fontFamily="'JetBrains Mono', monospace" mb={1}>
+                            {e.period || e.born || e.founded || e.startDate || ''}</Text>
+                          <Text fontSize="xs" color="#524E44" lineClamp={2} fontFamily="'Inter', sans-serif"
+                            lineHeight="1.5">{e.summary}</Text>
+                        </Box>
                       </Box>
-                    </Box>
-                  ))}
+                    )
+                  })}
                 </SimpleGrid>
               </Box>
             )
