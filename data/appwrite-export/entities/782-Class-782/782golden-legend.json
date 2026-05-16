@@ -25,7 +25,103 @@
       "wikidataQid": "Q129493",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Golden_Legend",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Umbria%2C%20jacopo%20da%20varazze%2C%20leggenda%20aurea%2C%201290%20ca.%2001.jpg",
-      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"golden-legend\", \"sourceName\": \"Golden Legend\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Golden Legend is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Golden Legend\", \"type\": \"Reference article\", \"slug\": \"golden-legend\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q129493\", \"https://en.wikipedia.org/wiki/Golden_Legend\"], \"tags\": [\"literary work\", \"Epic Poetry & Mythology\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Golden Legend contributed to the historical record of the Classical period. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "The Dominican Order's pastoral and preaching mission — the need to provide friars with accessible, comprehensive, and narratively engaging accounts of the saints for use in sermons and pastoral instruction — was the primary institutional motivation for the Golden Legend: Jacobus de Voragine compiled it as a practical preaching resource for Dominican friars.",
+          "The medieval Western Church's liturgical calendar — which organised the Christian year around the feasts of the saints — created the structural framework of the Golden Legend: the saints' lives are arranged according to the liturgical year, making the collection a comprehensive guide to Christian liturgical observance as well as a repository of hagiographic narrative.",
+          "The enormous medieval demand for saints' lives — hagiography was the most widely read genre of medieval Latin literature after the Bible and liturgical texts — reflected the deep popular investment in the saints as intercessors, models of virtue, and objects of devotion that drove the Golden Legend's extraordinary manuscript production and readership."
+        ],
+        "effects": [
+          "The Golden Legend's role as the primary source of iconographic knowledge about Christian saints made it the de facto visual programme guide for medieval and Renaissance art — the stories it transmitted determined which saints were depicted, what attributes they carried, and what scenes were shown, from the mosaics of Venice to the altarpieces of Florence and the windows of Chartres.",
+          "William Caxton's printing of the Golden Legend (1483) — one of the first and most substantial English-language printed books — disseminated the saints' lives to English readers and established hagiographic narrative as one of the primary early printed genres, demonstrating the importance of medieval religious content in the early history of print.",
+          "The humanist and Protestant critique of the Golden Legend — particularly Erasmus's mockery of its uncritical acceptance of legendary material — contributed to the broader Reformation critique of the cult of saints and the popular Catholic devotional culture that the Golden Legend had sustained, making it one of the contested texts at the centre of the Reformation's debate over authority, tradition, and popular religion."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "jacobus-de-voragine",
+            "sourceName": "Jacobus de Voragine (c. 1230–1298)",
+            "verb": "COMPILES",
+            "targetSlug": "golden-legend",
+            "targetName": "Golden Legend (Legenda aurea, c. 1260)",
+            "context": "Jacobus de Voragine compiled the Golden Legend c. 1260 as a Dominican preaching resource — the most widely read collection of saints' lives in the medieval West, surviving in over 900 Latin manuscripts."
+          },
+          {
+            "sourceSlug": "golden-legend",
+            "sourceName": "Golden Legend (saints' lives, iconographic source)",
+            "verb": "INFLUENCES",
+            "targetSlug": "medieval-renaissance-art",
+            "targetName": "Medieval and Renaissance religious art",
+            "context": "The Golden Legend was the primary iconographic source for medieval and Renaissance art — the stories it transmitted determined the saints depicted, their attributes, and the scenes shown in cathedrals, altarpieces, and manuscript illuminations."
+          },
+          {
+            "sourceSlug": "golden-legend",
+            "sourceName": "Golden Legend (Caxton edition, 1483)",
+            "verb": "PRINTED_BY",
+            "targetSlug": "william-caxton",
+            "targetName": "William Caxton (English printing press, 1476)",
+            "context": "William Caxton printed the Golden Legend (1483) on his English press — one of the first and most substantial English-language printed books, disseminating the saints' lives to English readers and establishing hagiography as a primary early printed genre."
+          }
+        ],
+        "places": [
+          {
+            "name": "Genoa, Italy (Jacobus de Voragine, Dominican friar, compilation c. 1260)",
+            "role": "The Golden Legend was compiled by Jacobus de Voragine, a Genoese Dominican — later Archbishop of Genoa — as a practical preaching resource for the Dominican Order, reflecting the Italian Dominican institutional context"
+          },
+          {
+            "name": "Medieval Europe (over 900 Latin manuscripts, widespread vernacular translations)",
+            "role": "The Golden Legend was one of the most widely distributed texts in medieval Europe — over 900 Latin manuscripts survive, alongside vernacular translations in Italian, French, English, German, Dutch, and other languages"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Golden Legend",
+            "type": "Reference article",
+            "slug": "golden-legend"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q129493",
+          "https://en.wikipedia.org/wiki/Golden_Legend"
+        ],
+        "tags": [
+          "literary work",
+          "Epic Poetry & Mythology",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "Golden Legend contributed to the historical record of the Classical period. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.",
+        "summary": "The Golden Legend (Latin: Legenda aurea, also Legenda Sanctorum) is a collection of hagiographies (saints' lives) compiled c. 1260 by Jacobus de Voragine (c. 1230–1298), a Genoese Dominican friar who later became Archbishop of Genoa (1292) — one of the most widely read books of the entire medieval period, surviving in over 900 manuscripts in Latin alone (alongside numerous vernacular translations), and second only to the Bible in the number of manuscripts produced in medieval Europe. The Golden Legend collects the lives of approximately 180 saints and apostles, arranged according to the liturgical calendar, with accounts of the major feasts of the Christian year — Christmas, Easter, Pentecost, the feasts of the apostles, the stories of the major martyrs and confessors — drawing on earlier hagiographic sources (the Acta Sanctorum tradition), legendary narratives, and theological commentary to create a comprehensive guide to Christian sanctity and the liturgical year.\n\nThe Golden Legend was the primary source of popular knowledge about Christian saints in the medieval West — it transmitted the canonical stories of St. George and the dragon, St. Christopher, the Virgin Mary's life (including the Assumption and Immaculate Conception narratives), the Three Kings (Magi), the Holy Cross legend, St. Nicholas, St. Barbara, and dozens of other saints whose iconography dominated medieval and Renaissance art. The accounts in the Golden Legend — often dramatic, miraculous, and didactically structured — were the source texts for the iconographic programmes of the major Gothic and Renaissance cathedral decorations, altarpieces, and manuscript illuminations: the artists of medieval and Renaissance Europe depicted saints whose stories they knew from the Golden Legend.\n\nThe Golden Legend's influence on Western art, literature, and culture is incalculable — it was the primary source for the iconographic tradition of Christian saints in Western visual art from the 13th to the 16th centuries, and was one of the first texts printed by William Caxton on his English printing press (The Golden Legend, 1483). The humanist critics of the 16th century (including Erasmus and Polydore Vergil) attacked it as historically unreliable and credulous, but this criticism was part of the broader Protestant-humanist critique of popular Catholic devotion.",
+        "subjects": [
+          "Medieval Literature",
+          "Medieval Era",
+          "Hagiography",
+          "Dominican Order",
+          "Medieval Art",
+          "Catholic Church",
+          "Saints' Lives",
+          "Jacobus de Voragine"
+        ],
+        "frameworks": [
+          "RELIGIOUS_INTERPRETATION",
+          "STRUCTURAL_ANALYSIS"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 8,
+          "significanceNarrative": "The Golden Legend (Jacobus de Voragine, c. 1260) is one of the most widely read books of the medieval period — second only to the Bible in manuscript production. As the primary source of popular knowledge about Christian saints, it determined the iconographic programmes of medieval and Renaissance art across Europe. William Caxton's printing (1483) made it one of the first major English printed books, and humanist/Protestant criticism of its legendary content placed it at the centre of Reformation debates over popular Catholic devotion.",
+          "significanceCategory": "highly-significant"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-39-may2026",
+            "timestamp": "2026-05-16T17:34:04Z",
+            "oldValue": "",
+            "newValue": "The Golden Legend (Latin: Legenda aurea, also Legenda Sanctorum) is a collection of hagiographies (saints' lives) compiled c. 1260 by Jacobus de Voragine (c. 1230–1298), a Genoese Dominican friar who …"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Epic Poetry & Mythology -- Global -- Classical"
       ],
@@ -44,7 +140,8 @@
       "$id": "golden-legend",
       "$sequence": "12426",
       "$createdAt": "2026-04-05T12:07:05.961+00:00",
-      "$updatedAt": "2026-04-05T12:07:05.961+00:00"
+      "$updatedAt": "2026-04-05T12:07:05.961+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
