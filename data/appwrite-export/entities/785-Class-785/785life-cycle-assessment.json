@@ -25,7 +25,103 @@
       "wikidataQid": "Q581950",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Life-cycle_assessment",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/PhasesOfLifeCycleAnalysis.png",
-      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"life-cycle-assessment\", \"sourceName\": \"life cycle assessment\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"life cycle assessment is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: life cycle assessment\", \"type\": \"Reference article\", \"slug\": \"life-cycle-assessment\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q581950\", \"https://en.wikipedia.org/wiki/Life-cycle_assessment\"], \"tags\": [\"methodology\", \"Political & Polemical Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "The 1973 oil crisis — which focused attention on the energy requirements of product systems and motivated the development of energy analysis methodologies — was a primary driver of early life cycle thinking: the need to understand the full energy chain from resource extraction to end use drove the development of inventory analysis methods that formed the basis of LCA.",
+          "The pollution prevention movement of the 1970s–1980s — the shift from end-of-pipe pollution control to prevention-oriented environmental management — created the demand for quantitative environmental accounting methods that could identify pollution prevention opportunities throughout the product system, not just at the point of emission.",
+          "SETAC's standardisation work (1991–1993) and the ISO 14040 series (1997) — which provided internationally agreed definitions, procedures, and reporting requirements for LCA — transformed it from a set of disparate methods into a rigorous, replicable, internationally standardised methodology that could be used for eco-labelling, environmental declarations, and regulatory purposes."
+        ],
+        "effects": [
+          "Life Cycle Assessment became the standard quantitative tool for comparative environmental performance analysis — used in eco-labelling schemes (the EU Ecolabel), environmental product declarations (EPDs), corporate sustainability reporting, green procurement standards, and environmental impact assessments, enabling quantitative comparison of products and processes on a common basis.",
+          "LCA's contribution to the renewable energy debate — systematic life cycle analyses of solar, wind, and other renewable energy technologies demonstrating their substantially lower life cycle greenhouse gas emissions compared to fossil fuels — provided crucial quantitative evidence for energy policy decisions and has been central to arguments for accelerating the energy transition.",
+          "The methodological framework of LCA — particularly its inventory analysis of material and energy flows across complex product systems — influenced the development of related environmental accounting methods (material flow analysis, environmental input-output analysis, carbon footprinting, water footprinting) that together constitute the toolkit of industrial ecology."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "setac",
+            "sourceName": "Society of Environmental Toxicology and Chemistry (SETAC)",
+            "verb": "STANDARDISES",
+            "targetSlug": "life-cycle-assessment",
+            "targetName": "Life Cycle Assessment (methodology, 1991–2006 ISO 14040)",
+            "context": "SETAC workshops (1991–1993) and the subsequent ISO 14040 series standardised LCA as an international methodology — transforming diverse approaches into a rigorous, replicable tool for environmental impact analysis."
+          },
+          {
+            "sourceSlug": "life-cycle-assessment",
+            "sourceName": "Life Cycle Assessment (LCA)",
+            "verb": "INFORMS",
+            "targetSlug": "renewable-energy-policy",
+            "targetName": "Renewable energy environmental performance analysis",
+            "context": "LCA's systematic analysis of life cycle greenhouse gas emissions from solar, wind, and other renewable technologies — demonstrating their substantially lower impacts compared to fossil fuels — has been central to arguments for the energy transition in climate policy."
+          },
+          {
+            "sourceSlug": "life-cycle-assessment",
+            "sourceName": "Life Cycle Assessment (industrial ecology)",
+            "verb": "PART_OF",
+            "targetSlug": "industrial-ecology",
+            "targetName": "Industrial ecology (material flow analysis, carbon footprinting)",
+            "context": "LCA's inventory analysis framework influenced the development of related methods — material flow analysis, carbon footprinting, water footprinting — that together constitute the toolkit of industrial ecology, the science of environmental sustainability in industrial systems."
+          }
+        ],
+        "places": [
+          {
+            "name": "Global (ISO 14040 standardisation, international application)",
+            "role": "LCA is applied globally — standardised through ISO 14040 and used in eco-labelling, corporate sustainability reporting, green procurement, and environmental policy worldwide"
+          },
+          {
+            "name": "United States (Coca-Cola study, 1969; SETAC, Pensacola, Florida)",
+            "role": "Coca-Cola's 1969 internal study of beverage container alternatives is now considered the first LCA; SETAC — headquartered in Pensacola, Florida — organised the workshops that standardised the methodology in 1991–1993"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: life cycle assessment",
+            "type": "Reference article",
+            "slug": "life-cycle-assessment"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q581950",
+          "https://en.wikipedia.org/wiki/Life-cycle_assessment"
+        ],
+        "tags": [
+          "methodology",
+          "Political & Polemical Texts",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.",
+        "summary": "Life Cycle Assessment (LCA) is the systematic methodology for evaluating the environmental impacts of a product, process, or service throughout its entire life cycle — from raw material extraction ('cradle') through manufacturing, distribution, use, and final disposal ('grave') — developed as a rigorous analytical framework primarily through the work of the Society of Environmental Toxicology and Chemistry (SETAC) from the late 1980s and subsequently standardised in the ISO 14040 series (1997, revised 2006). The methodology has four stages: goal and scope definition, inventory analysis (quantification of material and energy flows), impact assessment (translation of inventory data into environmental impact categories such as climate change, ozone depletion, acidification, eutrophication, and human toxicity), and interpretation. LCA provides a comprehensive, quantitative basis for comparing the environmental performance of competing products, identifying improvement priorities, and avoiding burden-shifting (reducing impact in one life cycle stage while inadvertently increasing it in another).\n\nLife Cycle Assessment grew from parallel research streams in the 1960s–1970s: the energy analysis work associated with the 1973 oil crisis (which motivated systematic analysis of the energy requirements of product systems), the pollution prevention movement's need for quantitative environmental accounting, and early 'resource and environmental profile analysis' studies (including Coca-Cola's 1969 internal study of beverage container alternatives — now considered the first LCA). The methodology was standardised through SETAC workshops (1991–1993, the Code of Practice), UNEP guidance, and ultimately the ISO 14040 series, achieving the international standardisation that made LCA a legitimate tool for eco-labelling, product environmental declarations, and regulatory compliance.\n\nLCA is now a standard tool in environmental engineering, sustainable product design, corporate sustainability reporting, green procurement, and environmental policy — used by manufacturers to optimise product designs, by retailers to compare supplier products, by governments to evaluate policy options, and by researchers to compare the environmental performance of energy systems (the LCA of fossil fuels vs. renewables is central to energy policy analysis). The methodology has been particularly influential in the debate about the environmental performance of biofuels, electric vehicles, and renewable energy technologies.",
+        "subjects": [
+          "Environmental Science",
+          "Modern Era",
+          "Sustainability",
+          "Industrial Ecology",
+          "Environmental Policy",
+          "Green Technology",
+          "ISO Standards",
+          "Product Design"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 7,
+          "significanceNarrative": "Life Cycle Assessment (LCA, standardised 1991–2006) is the standard international methodology for quantitative environmental performance analysis — used in eco-labelling, corporate sustainability reporting, green procurement, and energy policy analysis worldwide. Its systematic comparison of the life cycle environmental impacts of renewable and fossil energy technologies has been central to the energy transition debate, and its framework influenced the development of industrial ecology as a discipline.",
+          "significanceCategory": "significant"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-34-may2026",
+            "timestamp": "2026-05-16T17:07:03Z",
+            "oldValue": "",
+            "newValue": "Life Cycle Assessment (LCA) is the systematic methodology for evaluating the environmental impacts of a product, process, or service throughout its entire life cycle — from raw material extraction ('c…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Political & Polemical Texts -- Global -- Classical"
       ],
@@ -44,7 +140,8 @@
       "$id": "life-cycle-assessment",
       "$sequence": "26533",
       "$createdAt": "2026-04-05T12:09:56.382+00:00",
-      "$updatedAt": "2026-04-05T12:09:56.382+00:00"
+      "$updatedAt": "2026-04-05T12:09:56.382+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
