@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-16T07:31:05Z",
+  "generatedAt": "2026-05-16T08:47:11Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 2,
+  "failed": 3,
   "dry_run": false,
   "results": [
     {
@@ -12,31 +12,30 @@
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "ibn-battuta",
-      "status": "ok",
-      "score": 8,
-      "category": "continental"
-    },
-    {
-      "slug": "anthony-henday",
-      "status": "ok",
-      "score": 7,
-      "category": "regional"
-    },
-    {
       "slug": "ant\u00f4nio-raposo-tavares",
       "status": "error",
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "antnio-raposo-tavares",
+      "slug": "will-steger",
       "status": "ok",
       "score": 8,
-      "category": "continental"
+      "category": "regional"
+    },
+    {
+      "slug": "ernest-joyce",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "roald-amundsen",
+      "status": "ok",
+      "score": 9,
+      "category": "world-changing"
     }
   ],
   "summary": {
-    "entities_scored": 3,
-    "failed": 2
+    "entities_scored": 2,
+    "failed": 3
   }
 }

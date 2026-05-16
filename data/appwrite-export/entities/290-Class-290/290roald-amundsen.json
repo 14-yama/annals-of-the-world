@@ -25,37 +25,7 @@
       "wikidataQid": "Q926",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Roald_Amundsen",
       "imageUrl": "",
-      "detailsJson": {
-        "causes": [
-          "Norwegian polar tradition of Fridtjof Nansen",
-          "Adoption of Inuit survival techniques",
-          "Rivalry with Robert Falcon Scott"
-        ],
-        "effects": [
-          "First confirmed South Pole expedition",
-          "First Northwest Passage transit",
-          "Demonstrated value of indigenous knowledge in exploration",
-          "Polar exploration became symbol of national prestige"
-        ],
-        "relationships": [
-          {
-            "sourceSlug": "roald-amundsen",
-            "sourceName": "Roald Amundsen",
-            "verb": "OCCURS_IN",
-            "targetSlug": "norway",
-            "targetName": "Norway",
-            "context": "Norwegian explorer who became national hero"
-          },
-          {
-            "sourceSlug": "roald-amundsen",
-            "sourceName": "Roald Amundsen",
-            "verb": "INFLUENCES",
-            "targetSlug": "neil-armstrong",
-            "targetName": "Neil Armstrong",
-            "context": "Amundsen's polar achievements inspired later exploration milestones"
-          }
-        ]
-      },
+      "detailsJson": "{\"historicalSignificance\": {\"significanceScore\": 9, \"significanceNarrative\": \"Amundsen's achievement marked a significant milestone in polar exploration, demonstrating the feasibility of traversing the globe by airship and solidifying Norway's position as a major maritime power. His success paved the way for future expeditions and inspired generations of explorers.\", \"significanceCategory\": \"world-changing\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 9, \\\"significanceNarrative\\\": \\\"Amundsen's achievement marked a significant milestone in polar exploration, demonstrating the feasibility of traversing the globe by airship and solidifying Norway's position as a major maritime power. His success paved the way for future expeditions and inspired generations of explorers.\\\", \\\"significanceCategory\\\": \\\"world-changing\\\"}\", \"timestamp\": \"2026-05-16T08:47:11Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "People — Explorers — Norway — Modern"
       ],
@@ -83,7 +53,12 @@
       "$id": "roald-amundsen",
       "$sequence": "603929",
       "$createdAt": "2026-04-05T14:40:31.709+00:00",
-      "$updatedAt": "2026-04-05T14:40:31.709+00:00"
+      "$updatedAt": "2026-04-05T14:40:31.709+00:00",
+      "historicalSignificance": {
+        "significanceScore": 9,
+        "significanceNarrative": "Amundsen's achievement marked a significant milestone in polar exploration, demonstrating the feasibility of traversing the globe by airship and solidifying Norway's position as a major maritime power. His success paved the way for future expeditions and inspired generations of explorers.",
+        "significanceCategory": "world-changing"
+      }
     }
   ]
 }

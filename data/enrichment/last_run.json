@@ -1,38 +1,37 @@
 {
-  "timestamp": "2026-05-16T03:22:45Z",
+  "timestamp": "2026-05-16T04:39:08Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 2,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
       "slug": "chad-of-mercia",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
-    },
-    {
-      "slug": "menon-of-pharsalus",
       "status": "enriched",
-      "old_len": 198,
-      "new_len": 921
-    },
-    {
-      "slug": "ad\u00e9mar-de-chabannes",
-      "status": "enriched",
-      "old_len": 666,
-      "new_len": 725
-    },
-    {
-      "slug": "admar-de-chabannes",
-      "status": "enriched",
-      "old_len": 666,
-      "new_len": 1008
+      "old_len": 188,
+      "new_len": 1780
     },
     {
       "slug": "trojan-war",
       "status": "failed",
-      "reason": "Expecting ',' delimiter: line 39 column 1 (char 673)"
+      "reason": "insufficient places (1, need >= 2)"
+    },
+    {
+      "slug": "anastasius-ii",
+      "status": "enriched",
+      "old_len": 325,
+      "new_len": 1029
+    },
+    {
+      "slug": "hisham-ibn-urwah",
+      "status": "failed",
+      "reason": "Unterminated string starting at: line 2 column 12 (char 13)"
+    },
+    {
+      "slug": "juan-gil-de-hontan",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     }
   ]
 }
