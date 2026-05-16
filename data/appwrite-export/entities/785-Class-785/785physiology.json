@@ -25,7 +25,103 @@
       "wikidataQid": "Q521",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Physiology",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Claude%20Bernard%20and%20his%20pupils.%20Oil%20painting%20after%20L%C3%A9on-Augus%20Wellcome%20V0017769.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier literary tradition in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Historical events in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Patron commission in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Preserved knowledge through physiology's historical significance\", \"type\": \"Text\"}, {\"title\": \"Influenced later works through physiology's historical significance\", \"type\": \"Text\"}, {\"title\": \"Defined canon through physiology's historical significance\", \"type\": \"Text\"}], \"relationships\": [{\"sourceSlug\": \"physiology\", \"sourceName\": \"physiology\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"physiology is situated within the Classical (920)\"}, {\"sourceSlug\": \"physiology\", \"sourceName\": \"physiology\", \"verb\": \"TRANSMITS\", \"targetSlug\": \"literary-canon-classical\", \"targetName\": \"Literary Canon (Classical)\", \"context\": \"physiology contributed to the literary canon of the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: physiology\", \"type\": \"Reference article\", \"slug\": \"physiology\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q521\", \"https://en.wikipedia.org/wiki/Physiology\"], \"tags\": [\"methodology\", \"Political & Polemical Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"physiology left a notable mark on Classical history, documented across 133 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "The ancient Greek and Roman medical traditions — the Hippocratic humoral theory (health as the balance of blood, phlegm, yellow bile, and black bile) and Galen's comprehensive physiological system (which dominated Western medicine for over 1,400 years) — established physiology as a systematic inquiry into the body's functions, even if the theoretical framework was later superseded.",
+          "The Scientific Revolution's transformation of natural philosophy — Descartes's mechanical model of the body, Harvey's empirical demonstration of blood circulation through quantitative measurement, and the introduction of experimental methods to biological inquiry — established the foundations of modern experimental physiology.",
+          "Claude Bernard's concept of the milieu intérieur ('internal environment', 1850s–1860s) — his insight that living organisms maintain a stable internal environment (constant temperature, pH, glucose levels) through regulatory mechanisms — provided the theoretical concept of homeostasis that became the organizing principle of modern physiology."
+        ],
+        "effects": [
+          "Physiology's direct contribution to clinical medicine — from Harvey's blood circulation (cardiovascular medicine), through Starling's heart-lung preparation (cardiac physiology), Sherrington's spinal reflexes (neurology), Banting and Best's insulin discovery (diabetes), to the development of electrophysiology (ECG, EEG, nerve conduction studies) — represents the most direct connection between basic science and medical practice in any biological discipline.",
+          "The Nobel Prize in Physiology or Medicine has been awarded for discoveries that include the physiological mechanisms of nerve impulse transmission (Hodgkin and Huxley, 1963), the cellular mechanisms of signal transduction (Martin Rodbell and Alfred Gilman, 1994), the discovery of ion channels (Neher and Sakmann, 1991), and other foundational physiological discoveries that have reshaped medicine and biology.",
+          "Physiology's development of the homeostasis concept — extended by Walter Cannon (who coined the term 'homeostasis', 1932) and elaborated throughout the 20th century — provided medicine with its fundamental framework for understanding physiological regulation, disease as the failure of homeostatic mechanisms, and clinical intervention as the restoration of physiological equilibrium."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "physiology",
+            "sourceName": "Physiology (Harvey, blood circulation, 1628)",
+            "verb": "FOUNDED_BY",
+            "targetSlug": "william-harvey",
+            "targetName": "William Harvey (1578–1657, discovery of blood circulation)",
+            "context": "William Harvey's experimental demonstration of blood circulation (De Motu Cordis, 1628) is the founding achievement of modern physiology — replacing Galenic theory with quantitative experimental evidence."
+          },
+          {
+            "sourceSlug": "physiology",
+            "sourceName": "Physiology (Bernard, milieu intérieur, homeostasis)",
+            "verb": "SHAPED_BY",
+            "targetSlug": "claude-bernard",
+            "targetName": "Claude Bernard (1813–1878, internal environment concept)",
+            "context": "Claude Bernard's concept of the milieu intérieur — the stable internal environment maintained by regulatory mechanisms — provided the theoretical concept of homeostasis that became the organising principle of modern physiology."
+          },
+          {
+            "sourceSlug": "physiology",
+            "sourceName": "Physiology (foundation of clinical medicine)",
+            "verb": "UNDERPINS",
+            "targetSlug": "modern-medicine",
+            "targetName": "Modern clinical medicine (cardiovascular, neurological, metabolic)",
+            "context": "Physiology's discoveries — from circulation to electrophysiology to homeostasis — directly generated the most significant advances in clinical medicine, establishing physiology as the foundational science of medicine."
+          }
+        ],
+        "places": [
+          {
+            "name": "Europe (Harvey, Harvey's England; Bernard, Bernard's Paris; von Haller, Switzerland)",
+            "role": "Modern experimental physiology developed primarily in Europe — William Harvey in England (1628), Albrecht von Haller in Switzerland (1750s), Claude Bernard in Paris (1850s–1860s) — establishing the experimental tradition that became the global standard"
+          },
+          {
+            "name": "Global (Nobel Prize in Physiology or Medicine, worldwide biomedical research)",
+            "role": "Physiology is a global research discipline — the Nobel Prize in Physiology or Medicine (awarded annually since 1901) has recognised physiological discoveries from laboratories worldwide, reflecting the international development of the discipline"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: physiology",
+            "type": "Reference article",
+            "slug": "physiology"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q521",
+          "https://en.wikipedia.org/wiki/Physiology"
+        ],
+        "tags": [
+          "methodology",
+          "Political & Polemical Texts",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "physiology left a notable mark on Classical history, documented across 133 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.",
+        "summary": "Physiology (from Greek φύσις, physis, 'nature', and λόγος, logos, 'study') is the branch of biology concerned with the normal functions and mechanisms of living organisms — the study of how cells, tissues, organs, and organ systems work together to maintain life, respond to the environment, and support vital processes including metabolism, respiration, circulation, digestion, neural signalling, reproduction, and homeostasis. Physiology is both an ancient and a modern discipline — its roots extend to Hippocratic and Galenic medicine (the humoral theory of physiological function that dominated Western medicine from antiquity to the 17th century) and its modern scientific form was established in the 17th–19th centuries through the work of William Harvey (discovery of blood circulation, 1628), René Descartes (mechanical model of the body), Albrecht von Haller (irritability and sensibility of tissues, 1750s), Claude Bernard (internal environment and homeostasis, 1850s–1860s), and the development of experimental physiology as an autonomous discipline.\n\nModern physiology is subdivided into numerous specialisms: cellular and molecular physiology (the function of individual cells and their molecular mechanisms), systems physiology (the function of organ systems — cardiovascular, respiratory, renal, gastrointestinal, neurological, endocrine, reproductive), comparative physiology (comparing physiological mechanisms across different organisms), exercise physiology (the physiological responses to physical activity), and pathophysiology (the physiological mechanisms of disease). The boundaries between physiology and related disciplines — biochemistry, molecular biology, pharmacology, neuroscience, and medicine — are fluid and overlapping, reflecting physiology's position as the integrative discipline that links molecular mechanisms to whole-organism function.\n\nThe history of physiology is inseparable from the history of medicine — the understanding of how the body works in health is the foundation for understanding how it fails in disease, and physiological research has directly generated most of the major advances in clinical medicine: Harvey's circulation underpinning cardiovascular medicine, Bernard's homeostasis concept underpinning metabolic medicine and intensive care, and the discoveries of electrophysiology underpinning cardiology and neurology. The Nobel Prize in Physiology or Medicine has been awarded annually since 1901 and has recognised the most significant physiological discoveries of the 20th and 21st centuries.",
+        "subjects": [
+          "Biology",
+          "Ancient Era",
+          "Medicine",
+          "Science",
+          "Homeostasis",
+          "Experimental Science",
+          "History of Medicine",
+          "Academic Discipline"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 8,
+          "significanceNarrative": "Physiology — the scientific study of how living organisms function — is the foundational biological discipline of clinical medicine. From Harvey's blood circulation (1628) through Claude Bernard's homeostasis concept (1850s) to the Nobel Prize-winning discoveries of electrophysiology and molecular signalling, physiology has directly generated the most significant advances in medicine. The homeostasis concept — the body's maintenance of a stable internal environment — is physiology's central theoretical contribution and the framework for understanding both health and disease.",
+          "significanceCategory": "world-changing"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-41-may2026",
+            "timestamp": "2026-05-16T17:43:59Z",
+            "oldValue": "",
+            "newValue": "Physiology (from Greek φύσις, physis, 'nature', and λόγος, logos, 'study') is the branch of biology concerned with the normal functions and mechanisms of living organisms — the study of how cells, tis…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Political & Polemical Texts -- Global -- Classical"
       ],
@@ -45,7 +141,8 @@
       "$id": "physiology",
       "$sequence": "27076",
       "$createdAt": "2026-04-05T12:10:03.265+00:00",
-      "$updatedAt": "2026-04-06T00:51:32.787+00:00"
+      "$updatedAt": "2026-04-06T00:51:32.787+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
