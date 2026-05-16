@@ -25,7 +25,111 @@
       "wikidataQid": "Q281528",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Luis_Antonio_Belluga_y_Moncada",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Early Modern era: age of exploration, printing revolution, and religious reformation\", \"type\": \"EventWindow\", \"year\": \"1662-11-30, Motril\"}, {\"title\": \"Political crises and power transitions requiring new leadership\", \"type\": \"Idea\", \"year\": \"1662-11-30, Motril\"}], \"effects\": [{\"title\": \"Shaped political institutions and governance practices\", \"type\": \"Idea\", \"year\": \"1743-02-22\"}, {\"title\": \"Contributed to global exchange networks, modern state formation, and scientific revolution\", \"type\": \"Movement\", \"year\": \"1743-02-22\"}], \"relationships\": [{\"sourceSlug\": \"luis-antonio-belluga-y-moncada\", \"sourceName\": \"Luis Antonio Belluga y Moncada\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"country-spain\", \"targetName\": \"Spain\", \"context\": \"Luis Antonio Belluga y Moncada associated with Spain\"}, {\"sourceSlug\": \"luis-antonio-belluga-y-moncada\", \"sourceName\": \"Luis Antonio Belluga y Moncada\", \"verb\": \"GOVERNS\", \"targetSlug\": \"field-220\", \"targetName\": \"Political Leaders\", \"context\": \"Luis Antonio Belluga y Moncada: Political leadership in political leaders\"}, {\"sourceSlug\": \"luis-antonio-belluga-y-moncada\", \"sourceName\": \"Luis Antonio Belluga y Moncada\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"early-modern\", \"targetName\": \"Early Modern Era\", \"context\": \"Luis Antonio Belluga y Moncada was active during the Early Modern era\"}], \"places\": [{\"name\": \"Motril\", \"role\": \"Birth place\"}, {\"name\": \"Spain\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Luis Antonio Belluga y Moncada\", \"type\": \"Reference article\", \"slug\": \"luis-antonio-belluga-y-moncada\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q281528\", \"https://en.wikipedia.org/wiki/Luis_Antonio_Belluga_y_Moncada\"], \"tags\": [\"Spain\", \"Political Leaders\", \"Europe\", \"political-systems\", \"geopolitical-linkage\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "The War of the Spanish Succession (1701–1714) — triggered by the disputed succession to the Spanish throne between Philip V (Bourbon) and Archduke Charles (Habsburg) — created the military and political crisis that forced Spanish bishops to choose sides and that gave militarily effective ecclesiastical leaders like Belluga extraordinary political prominence.",
+          "Philip V's need to consolidate Bourbon authority in the Spanish Church after the war — replacing Habsburg-aligned prelates with Bourbon loyalists — made Belluga's demonstrated loyalty and military effectiveness the perfect credential for rapid elevation to the cardinalate.",
+          "The social and economic dislocation of the War of Succession in southeastern Spain — including depopulation, ruined agriculture, and displaced communities — created the humanitarian context for Belluga's post-war wetland reclamation project, which combined practical irrigation engineering with the settlement of poor families."
+        ],
+        "effects": [
+          "Belluga's Murcia wetland reclamation project (1715–1724) created three new towns in the Alicante plain (San Felipe Neri, San Fulgencio, Dolores), provided agricultural land for several thousand families, and remains one of the most visible examples of 18th-century Spanish agrarian reform and social engineering.",
+          "His cardinalship (1719) and subsequent presence in Rome (1724–1743) made him one of Spain's most effective diplomatic representatives in the papal curia during the critical period of early Bourbon Spain's negotiations with the Holy See over ecclesiastical jurisdictions and patronage — the 'regalist' disputes that defined Church-state relations in 18th-century Spain.",
+          "Belluga's wartime career as a bishop who led troops in defence of the Bourbon cause established a model of active clerical engagement in dynastic politics that characterised the Spanish Church's deep integration with Bourbon statecraft throughout the 18th century."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "luis-antonio-belluga-y-moncada",
+            "sourceName": "Cardinal Belluga",
+            "verb": "SUPPORTS",
+            "targetSlug": "philip-v-of-spain",
+            "targetName": "Philip V of Spain",
+            "context": "Belluga was the Spanish Church's most active military supporter of Philip V during the War of Succession — raising and commanding troops against the Archduke's forces in Murcia and Cartagena, earning cardinalship as reward."
+          },
+          {
+            "sourceSlug": "luis-antonio-belluga-y-moncada",
+            "sourceName": "Cardinal Belluga",
+            "verb": "TRANSFORMS",
+            "targetSlug": "murcia-wetlands",
+            "targetName": "Murcia/Alicante Wetlands",
+            "context": "Belluga's post-war wetland reclamation project (1715–1724) created three new towns and settled thousands of poor families on newly irrigated agricultural land — one of the most significant 18th-century Spanish agrarian reform projects."
+          },
+          {
+            "sourceSlug": "war-of-the-spanish-succession",
+            "sourceName": "War of the Spanish Succession (1701–1714)",
+            "verb": "SHAPES",
+            "targetSlug": "luis-antonio-belluga-y-moncada",
+            "targetName": "Cardinal Belluga",
+            "context": "The War of Succession created the military crisis that made Belluga's bishop-general role both necessary and historically significant — defining his career and securing his extraordinary royal favour."
+          }
+        ],
+        "places": [
+          {
+            "name": "Cartagena-Murcia, Spain",
+            "role": "Belluga's diocese — the ecclesiastical territory he defended militarily during the War of Succession and where he undertook his major wetland reclamation project"
+          },
+          {
+            "name": "Alicante, Spain (Paluds de Elx)",
+            "role": "Site of Belluga's colonisation project — the reclaimed wetlands where San Felipe Neri, San Fulgencio, and Dolores were established"
+          },
+          {
+            "name": "Rome, Italy",
+            "role": "Where Belluga spent his final two decades as a cardinal and as Spain's most effective representative in the papal curia"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Luis Antonio Belluga y Moncada",
+            "type": "Reference article",
+            "slug": "luis-antonio-belluga-y-moncada"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q281528",
+          "https://en.wikipedia.org/wiki/Luis_Antonio_Belluga_y_Moncada"
+        ],
+        "tags": [
+          "Spain",
+          "Political Leaders",
+          "Europe",
+          "political-systems",
+          "geopolitical-linkage",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "",
+        "summary": "Luis Antonio Belluga y Moncada (1662–1743) was a Spanish cardinal, Bishop of Cartagena (1705–1724), and one of the most significant ecclesiastical and political figures of 18th-century Spain — the Church's most energetic defender of Bourbon legitimacy during the War of the Spanish Succession (1701–1714), and later a major figure in the Spanish Church's reform attempts and the early Bourbon administration. Born in Motril (Granada), he studied at Granada and Salamanca, was appointed Bishop of Cartagena-Murcia in 1705 by Philip V, and immediately threw himself into the military and political crisis of the War of Succession.\n\nBelluga's most dramatic role was military: when the Archduke Charles's troops advanced through Valencia and toward Murcia in 1706, Belluga organised and personally led the resistance of his diocese — raising troops, fortifying cities, and engaging in active military operations against the Austrian-backed forces in the region of Cartagena and Murcia. His troops inflicted significant defeats on the Archduke's forces and he personally supervised the defence of Cartagena. This extraordinary bishop-general combination — ecclesiastical authority mobilised for Bourbon military purposes — made him the most visible symbol of the Church's total commitment to the Bourbon cause and earned him tremendous favour with Philip V. He was rewarded with the cardinalship in 1719.\n\nAfter the war, Belluga undertook a major project of social reform: the reclamation of wetlands and salt flats south of Alicante (the Paluds de Elx) to create irrigated agricultural land for the settlement of poor families — the 'Belluga colonisation', which created the towns of San Felipe Neri, San Fulgencio, and Dolores in the Alicante region and represents one of the most significant agrarian reform projects in 18th-century Spain. He moved to Rome in 1724 as a cardinal and spent his last decades as Spain's most influential representative in the papal curia.",
+        "subjects": [
+          "Spanish History",
+          "Early Modern History",
+          "Church History",
+          "Early Modern Era",
+          "Spain",
+          "Bourbon Dynasty",
+          "Military History",
+          "Social Reform"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT",
+          "RELIGIOUS_INTERPRETATION"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 7,
+          "significanceNarrative": "Cardinal Belluga was the most militarily active Spanish bishop of the War of Succession — leading troops against the Archduke's forces in Murcia and earning cardinalship from Philip V. His subsequent wetland reclamation project created three new towns in Alicante and remains one of 18th-century Spain's most significant agrarian reforms. He represents the deep integration of the Spanish Church with Bourbon statecraft that defined 18th-century Spain.",
+          "significanceCategory": "significant"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-08-may2026",
+            "timestamp": "2026-05-16T14:39:34Z",
+            "oldValue": "",
+            "newValue": "Luis Antonio Belluga y Moncada (1662–1743) was a Spanish cardinal, Bishop of Cartagena (1705–1724), and one of the most significant ecclesiastical and political figures of 18th-century Spain — the Chu…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "People — Political Leaders — Spain — Early Modern"
       ],
@@ -48,7 +152,8 @@
       "$id": "luis-antonio-belluga-y-moncada",
       "$sequence": "209040",
       "$createdAt": "2026-04-05T12:46:52.800+00:00",
-      "$updatedAt": "2026-04-05T12:46:52.800+00:00"
+      "$updatedAt": "2026-04-05T12:46:52.800+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
