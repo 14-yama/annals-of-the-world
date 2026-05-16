@@ -1,39 +1,36 @@
 {
-  "timestamp": "2026-05-16T05:59:02Z",
+  "timestamp": "2026-05-16T07:25:49Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 4,
-  "failed": 1,
+  "enriched": 1,
+  "failed": 4,
   "dry_run": false,
   "entities": [
-    {
-      "slug": "trojan-war",
-      "status": "enriched",
-      "old_len": 85,
-      "new_len": 1694
-    },
-    {
-      "slug": "hisham-ibn-urwah",
-      "status": "enriched",
-      "old_len": 53,
-      "new_len": 1016
-    },
-    {
-      "slug": "juan-gil-de-hontan",
-      "status": "enriched",
-      "old_len": 664,
-      "new_len": 923
-    },
     {
       "slug": "dorotea-bucca",
       "status": "failed",
       "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "giovanni-boccamazza",
+      "slug": "gupta-empire",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
+    },
+    {
+      "slug": "central-africa",
+      "status": "failed",
+      "reason": "insufficient causes (0, need >= 2)"
+    },
+    {
+      "slug": "prokop-the-great",
+      "status": "failed",
+      "reason": "insufficient causes (0, need >= 2)"
+    },
+    {
+      "slug": "tatzates",
       "status": "enriched",
-      "old_len": 214,
-      "new_len": 1851
+      "old_len": 152,
+      "new_len": 1035
     }
   ]
 }

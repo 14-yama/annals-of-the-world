@@ -1,42 +1,41 @@
 {
-  "generatedAt": "2026-05-16T10:07:22Z",
+  "generatedAt": "2026-05-16T11:34:09Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 2,
+  "failed": 3,
   "dry_run": false,
   "results": [
-    {
-      "slug": "vardan-aigektsi",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
-    {
-      "slug": "joan-denghien",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
     {
       "slug": "ermon-de-jerusal\u00e9m",
       "status": "error",
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "ant\u00f4nio-raposo-tavares",
+      "slug": "ernest-joyce",
       "status": "ok",
-      "score": 8,
-      "category": "continental"
+      "score": 5,
+      "category": "regional"
     },
     {
-      "slug": "ernest-joyce",
+      "slug": "pieter-de-marees",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "susan-d-shaw",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "jan-janszoon-struys",
       "status": "error",
       "reason": "Ollama error: timed out"
     }
   ],
   "summary": {
-    "entities_scored": 3,
-    "failed": 2
+    "entities_scored": 2,
+    "failed": 3
   }
 }
