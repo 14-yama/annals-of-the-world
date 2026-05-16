@@ -1,42 +1,43 @@
 {
-  "generatedAt": "2026-05-16T19:43:28Z",
+  "generatedAt": "2026-05-16T20:57:39Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "results": [
-    {
-      "slug": "simmias-of-macedon",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
     {
       "slug": "gilbert-du-motier-marquis-de-lafayette",
       "status": "error",
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "louis-pierre-de-chastenet-de-puys\u00e9gur",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
-    {
-      "slug": "louis-pierre-de-chastenet-de-puysgur",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
-    {
       "slug": "william-washington",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "henry-knox",
+      "status": "ok",
+      "score": 8,
+      "category": "continental"
+    },
+    {
+      "slug": "jean-charles-pichegru",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "gylippus",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 3,
-    "failed": 2
+    "entities_scored": 4,
+    "failed": 1
   }
 }
