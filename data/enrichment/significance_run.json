@@ -1,11 +1,23 @@
 {
-  "generatedAt": "2026-05-16T00:23:18Z",
+  "generatedAt": "2026-05-16T00:39:35Z",
   "model": "gemini-2.5-flash",
-  "count_requested": 5,
-  "enriched": 4,
-  "failed": 1,
+  "count_requested": 50,
+  "enriched": 16,
+  "failed": 34,
   "dry_run": false,
   "results": [
+    {
+      "slug": "clement-iv",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "firuzabadi",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
     {
       "slug": "near-east",
       "status": "error",
@@ -13,31 +25,256 @@
     },
     {
       "slug": "southern-europe",
-      "status": "ok",
-      "score": 7,
-      "category": "regional"
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
       "slug": "hans-memling",
-      "status": "ok",
-      "score": 7,
-      "category": "regional"
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
       "slug": "edwin-son-of-edward-the-elder",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "south-china-sea",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "shen-kuo",
+      "status": "ok",
+      "score": 8,
+      "category": "continental"
+    },
+    {
+      "slug": "ibn-battuta",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "marcus-gavius-apicius",
       "status": "ok",
       "score": 5,
       "category": "regional"
     },
     {
-      "slug": "south-china-sea",
+      "slug": "vedius-pollio",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "marco-polo",
+      "status": "ok",
+      "score": 8,
+      "category": "world-changing"
+    },
+    {
+      "slug": "richard-whittington",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "giovanni-di-bicci-de-medici",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "xu-xiake",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "anthony-henday",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "carl-anton-larsen",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "ant\u00f4nio-raposo-tavares",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "antnio-raposo-tavares",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "will-steger",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "ernest-joyce",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "roald-amundsen",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "pieter-de-marees",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "susan-d-shaw",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "jan-janszoon-struys",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "william-hartnell",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "clemens-denhardt",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "thomas-cavendish",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "jean-ribault",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "manchuria",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "yuan-zhen",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "james-i-of-scotland",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "empress-zhao-feiyan",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "emperor-gaozong-of-song",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "fan-zhongyan",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "abu-firas-al-hamdani",
       "status": "ok",
       "score": 5,
       "category": "regional"
+    },
+    {
+      "slug": "malik-al-ashtar",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "thomas-hoccleve",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "hanshan",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "gaucelm-faidit",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "zoroaster",
+      "status": "ok",
+      "score": 9,
+      "category": "world-changing"
+    },
+    {
+      "slug": "baba-tahir",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "fan-chengda",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "zhangsun-wuji",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "wang-sengbian",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "jacques-duke-of-nemours",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "dong-yi",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "pham-ngu-lao",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "erzhu-tianguang",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "fran\u00e7ois-claude-amour-marquis-de-bouill\u00e9",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     }
   ],
   "summary": {
-    "entities_scored": 4,
-    "failed": 1
+    "entities_scored": 16,
+    "failed": 34
   }
 }
