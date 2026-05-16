@@ -27,72 +27,307 @@
       "imageUrl": "",
       "detailsJson": {
         "causes": [
-          "Bolshevik Revolution and Civil War chaos",
-          "Lenin's death and power vacuum in 1924",
-          "Russian imperial tradition of autocratic rule"
+          "Lenin's death (1924) and vacuum of Soviet leadership enabling Stalin's consolidation",
+          "Marxist-Leninist ideology providing framework for one-party totalitarian state",
+          "Russia's industrial backwardness making rapid forced industrialization seem necessary",
+          "Cult of Bolshevik revolutionary violence normalizing terror as a political tool"
         ],
         "effects": [
-          "Soviet industrialization — second largest economy by 1940",
-          "Holodomor and forced collectivization famines",
-          "Great Purge — destruction of Old Bolsheviks and military leadership",
-          "Soviet victory in WWII at cost of 27 million lives",
-          "Cold War division of Europe",
-          "Gulag system imprisoning millions"
+          "Soviet industrialization — USSR became industrial superpower in 15 years",
+          "Holodomor famine (1932–33) — collectivization killing 3–7 million Ukrainians",
+          "Great Purge/Terror (1936–38) — elimination of rivals and 1+ million executed",
+          "Gulag system — estimated 18 million passed through labor camps",
+          "Soviet victory in World War II (Stalingrad, Berlin) — decisive defeat of Nazi Germany",
+          "Cold War order — Soviet empire in Eastern Europe, nuclear arms race",
+          "Sino-Soviet alliance supporting Mao Zedong's China"
         ],
         "relationships": [
           {
-            "sourceSlug": "joseph-stalin",
-            "sourceName": "Joseph Stalin",
-            "verb": "TRANSFORMS",
+            "type": "OCCURS_IN",
+            "target": "Soviet Union (USSR)",
             "targetSlug": "soviet-union",
-            "targetName": "Soviet Union",
-            "context": "Industrialized USSR through Five-Year Plans"
+            "note": "Leader of the USSR 1924–1953"
           },
           {
-            "sourceSlug": "joseph-stalin",
-            "sourceName": "Joseph Stalin",
-            "verb": "CAUSES",
+            "type": "INFLUENCES",
+            "target": "Vladimir Lenin",
+            "targetSlug": "vladimir-lenin",
+            "note": "Predecessor; Stalin built on and distorted Lenin's legacy"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Leon Trotsky",
+            "targetSlug": "leon-trotsky",
+            "note": "Chief rival; had him assassinated in Mexico (1940)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Great Terror (1936–38)",
+            "targetSlug": "great-terror-ussr",
+            "note": "Mass purge executing 750,000+ and imprisoning millions"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Holodomor",
+            "targetSlug": "holodomor",
+            "note": "Ukrainian famine caused by forced collectivization (1932–33)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Gulag system",
+            "targetSlug": "gulag",
+            "note": "Network of labor camps imprisoning 18 million people"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Battle of Stalingrad",
+            "targetSlug": "battle-of-stalingrad",
+            "note": "Decisive WWII turning point under his command"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Cold War",
             "targetSlug": "cold-war",
-            "targetName": "Cold War",
-            "context": "Soviet expansion into Eastern Europe triggered Cold War"
+            "note": "Soviet empire and nuclear program he established"
           },
           {
-            "sourceSlug": "joseph-stalin",
-            "sourceName": "Joseph Stalin",
-            "verb": "OCCURS_IN",
-            "targetSlug": "moscow",
-            "targetName": "Moscow",
-            "context": "Ruled from the Kremlin for 29 years"
+            "type": "INFLUENCES",
+            "target": "Adolf Hitler",
+            "targetSlug": "adolf-hitler",
+            "note": "Allied (Molotov-Ribbentrop pact) then fought to the death"
           },
           {
-            "sourceSlug": "joseph-stalin",
-            "sourceName": "Joseph Stalin",
-            "verb": "INFLUENCES",
+            "type": "INFLUENCES",
+            "target": "Yalta Conference",
+            "targetSlug": "yalta-conference",
+            "note": "Secured Soviet sphere in Eastern Europe (1945)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Mao Zedong",
             "targetSlug": "mao-zedong",
-            "targetName": "Mao Zedong",
-            "context": "Stalinist model influenced Chinese communism"
+            "note": "Supported Mao's revolution; Sino-Soviet alliance"
           },
           {
-            "sourceSlug": "adolf-hitler",
-            "sourceName": "Adolf Hitler",
-            "verb": "CAUSES",
-            "targetSlug": "joseph-stalin",
-            "targetName": "Joseph Stalin",
-            "context": "Nazi invasion forced Stalin into WWII alliance with West"
+            "type": "OCCURS_IN",
+            "target": "Russia",
+            "targetSlug": "russia",
+            "note": "Georgian-born leader of Russia"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Five-Year Plans",
+            "targetSlug": "soviet-five-year-plans",
+            "note": "Forced industrialization transforming USSR economy"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Nuclear weapons program",
+            "targetSlug": "soviet-nuclear-program",
+            "note": "Directed Soviet atomic bomb project (tested 1949)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "North Korea",
+            "targetSlug": "north-korea",
+            "note": "Established Kim Il-sung's regime as Soviet satellite"
           }
         ],
         "places": [
-          {
-            "name": "Russia",
-            "role": "Governance"
-          }
+          "Moscow, Russia (power base)",
+          "Gori, Georgia (birthplace)",
+          "Yalta, Crimea",
+          "Stalingrad (Volgograd), Russia"
         ],
         "texts": [],
         "externalLinks": [],
         "tags": [],
         "thumbnailUrl": "",
-        "quote": "",
-        "legacySummary": ""
+        "quote": "'One death is a tragedy; a million deaths is a statistic.' — attributed to Joseph Stalin",
+        "legacySummary": "",
+        "summary": "Joseph Stalin (1878–1953) was the General Secretary of the Communist Party of the Soviet Union from 1922 and its de facto leader from the late 1920s until his death in 1953 — one of the most powerful and lethal political figures in history. Under his rule, the USSR was transformed from an agrarian economy into a nuclear superpower, won World War II, and established a Soviet empire stretching from East Germany to North Korea — while simultaneously killing an estimated 6–20 million Soviet citizens through famine, purges, and the Gulag.\n\nStalin's Soviet industrialization (Five-Year Plans, 1928–1941) transformed Russia into an industrial state in a decade through forced collectivization of agriculture, which caused the Ukrainian Holodomor famine (1932–33, 3–7 million dead) and millions of additional deaths. The Great Terror (1936–38) executed or imprisoned roughly half the Soviet officer corps, 1.2 million Party members, and destroyed virtually every potential rival.\n\nHis leadership during World War II — particularly the defense of Stalingrad (1942–43), the greatest military victory of the 20th century — turned the tide against Nazi Germany and established Soviet power across Eastern Europe. At Yalta (1945) he secured Soviet spheres of influence in Eastern Europe, establishing the Cold War order that defined world politics for 45 years.\n\n'One death is a tragedy; a million deaths is a statistic,' Stalin reportedly said. Whether apocryphal or not, this phrase captures the terrifying administrative calculus of his rule — the most consequential and destructive of the 20th century after Hitler.",
+        "historicalSignificance": {
+          "significanceScore": 10,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Joseph Stalin transformed the Soviet Union into a nuclear superpower, led the decisive defeat of Nazi Germany, and established the Cold War order — while simultaneously presiding over the deaths of an estimated 6–20 million Soviet citizens in one of history's most consequential and destructive dictatorships."
+        },
+        "subjectHeadings": "Joseph Stalin — Dictators and Leaders — Soviet Union — Modern",
+        "subjects": [
+          "Soviet Union",
+          "Russia",
+          "communism",
+          "World War II",
+          "Cold War",
+          "totalitarianism",
+          "industrialization",
+          "Gulag",
+          "Holodomor",
+          "20th century"
+        ],
+        "frameworks": [
+          "totalitarianism",
+          "revolution",
+          "empire-building"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Joseph Stalin (1878–1953) was the General Secretary of the Communist Party of the Soviet Union from 1922 and its de facto leader from the late 1920s until his death in 1953 — one of the most powerful …",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-60-may2026",
+            "timestamp": "2026-05-16T23:03:29.981427+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": [
+              "Bolshevik Revolution and Civil War chaos",
+              "Lenin's death and power vacuum in 1924",
+              "Russian imperial tradition of autocratic rule"
+            ],
+            "newValue": "[\"Lenin's death (1924) and vacuum of Soviet leadership enabling Stalin's consolidation\", 'Marxist-Leninist ideology providing framework for one-party totalitarian state', \"Russia's industrial backward…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-60-may2026",
+            "timestamp": "2026-05-16T23:03:29.981427+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": [
+              "Soviet industrialization — second largest economy by 1940",
+              "Holodomor and forced collectivization famines",
+              "Great Purge — destruction of Old Bolsheviks and military leadership",
+              "Soviet victory in WWII at cost of 27 million lives",
+              "Cold War division of Europe",
+              "Gulag system imprisoning millions"
+            ],
+            "newValue": "['Soviet industrialization — USSR became industrial superpower in 15 years', 'Holodomor famine (1932–33) — collectivization killing 3–7 million Ukrainians', 'Great Purge/Terror (1936–38) — elimination…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-60-may2026",
+            "timestamp": "2026-05-16T23:03:29.981427+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": [
+              {
+                "sourceSlug": "joseph-stalin",
+                "sourceName": "Joseph Stalin",
+                "verb": "TRANSFORMS",
+                "targetSlug": "soviet-union",
+                "targetName": "Soviet Union",
+                "context": "Industrialized USSR through Five-Year Plans"
+              },
+              {
+                "sourceSlug": "joseph-stalin",
+                "sourceName": "Joseph Stalin",
+                "verb": "CAUSES",
+                "targetSlug": "cold-war",
+                "targetName": "Cold War",
+                "context": "Soviet expansion into Eastern Europe triggered Cold War"
+              },
+              {
+                "sourceSlug": "joseph-stalin",
+                "sourceName": "Joseph Stalin",
+                "verb": "OCCURS_IN",
+                "targetSlug": "moscow",
+                "targetName": "Moscow",
+                "context": "Ruled from the Kremlin for 29 years"
+              },
+              {
+                "sourceSlug": "joseph-stalin",
+                "sourceName": "Joseph Stalin",
+                "verb": "INFLUENCES",
+                "targetSlug": "mao-zedong",
+                "targetName": "Mao Zedong",
+                "context": "Stalinist model influenced Chinese communism"
+              },
+              {
+                "sourceSlug": "adolf-hitler",
+                "sourceName": "Adolf Hitler",
+                "verb": "CAUSES",
+                "targetSlug": "joseph-stalin",
+                "targetName": "Joseph Stalin",
+                "context": "Nazi invasion forced Stalin into WWII alliance with West"
+              }
+            ],
+            "newValue": "[{'type': 'OCCURS_IN', 'target': 'Soviet Union (USSR)', 'targetSlug': 'soviet-union', 'note': 'Leader of the USSR 1924–1953'}, {'type': 'INFLUENCES', 'target': 'Vladimir Lenin', 'targetSlug': 'vladimi…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-60-may2026",
+            "timestamp": "2026-05-16T23:03:29.981427+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 10, 'significanceCategory': 'world-changing', 'significanceNarrative': \"Joseph Stalin transformed the Soviet Union into a nuclear superpower, led the decisive defeat of Nazi Germ…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-60-may2026",
+            "timestamp": "2026-05-16T23:03:29.981427+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": "",
+            "newValue": "'One death is a tragedy; a million deaths is a statistic.' — attributed to Joseph Stalin",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-60-may2026",
+            "timestamp": "2026-05-16T23:03:29.981427+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": [
+              {
+                "name": "Russia",
+                "role": "Governance"
+              }
+            ],
+            "newValue": [
+              "Moscow, Russia (power base)",
+              "Gori, Georgia (birthplace)",
+              "Yalta, Crimea",
+              "Stalingrad (Volgograd), Russia"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-60-may2026",
+            "timestamp": "2026-05-16T23:03:29.981427+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Joseph Stalin — Dictators and Leaders — Soviet Union — Modern",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-60-may2026",
+            "timestamp": "2026-05-16T23:03:29.981427+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "Soviet Union",
+              "Russia",
+              "communism",
+              "World War II",
+              "Cold War",
+              "totalitarianism",
+              "industrialization",
+              "Gulag",
+              "Holodomor",
+              "20th century"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-60-may2026",
+            "timestamp": "2026-05-16T23:03:29.981427+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "totalitarianism",
+              "revolution",
+              "empire-building"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-60-may2026",
+            "timestamp": "2026-05-16T23:03:29.981427+00:00"
+          }
+        ]
       },
       "subjectHeadings": [
         "People — Political Leaders — Russia — Contemporary"
@@ -114,7 +349,8 @@
       "$id": "joseph-stalin",
       "$sequence": "346489",
       "$createdAt": "2026-04-05T13:14:19.432+00:00",
-      "$updatedAt": "2026-04-06T00:46:55.642+00:00"
+      "$updatedAt": "2026-04-06T00:46:55.642+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
