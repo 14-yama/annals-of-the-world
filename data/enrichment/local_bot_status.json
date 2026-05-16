@@ -29086,7 +29086,11 @@
       "  RETRY (1) \u2014 insufficient causes (0, need >= 2)",
       "  FAILED \u2014 insufficient effects (0, need >= 2)",
       "",
-      "[13/20] boniface-iii (score=108.3, 0c)"
+      "[13/20] boniface-iii (score=108.3, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 3)",
+      "  ENRICHED \u2014 197c -> 1421c",
+      "",
+      "[14/20] menon-of-pharsalus (score=108.2, 0c)"
     ],
     "exitCode": null
   },
@@ -29237,7 +29241,19 @@
       "[43/50] fan-chengda (importance=7)",
       "  SCORED \u2014 8/10 (regional): As one of the 'four masters' of Southern Song dynasty poetry, Fan Chengda's writ...",
       "",
-      "[44/50] zhangsun-wuji (importance=7)"
+      "[44/50] zhangsun-wuji (importance=7)",
+      "  ERROR \u2014 Ollama error: timed out",
+      "",
+      "[45/50] wang-sengbian (importance=7)",
+      "  SCORED \u2014 5/10 (regional): Wang Sengbian's regency led to a four-month power struggle that ultimately resul...",
+      "",
+      "[46/50] jacques-duke-of-nemours (importance=7)",
+      "  ERROR \u2014 Ollama error: timed out",
+      "",
+      "[47/50] dong-yi (importance=7)",
+      "  SCORED \u2014 5/10 (regional): Dong Yi's defeat at the Battle of Julu led to the overthrow of the Qin dynasty a...",
+      "",
+      "[48/50] pham-ngu-lao (importance=7)"
     ],
     "exitCode": null
   },
@@ -29917,14 +29933,66 @@
   "git-push-1778891383": {
     "job_id": "git-push-1778891383",
     "bot": "git-push",
+    "status": "done",
+    "model": "none",
+    "count": 2,
+    "pid": null,
+    "started": "2026-05-16T00:29:43Z",
+    "finished": "2026-05-16T00:29:47Z",
+    "log": [
+      "Pending files: 2 entities, 0 edges (2 total)",
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 678 local enrichments\"",
+      "[clean/audit-system fd13ac4e37] feat(enrich): watchdog auto-push \u2014 678 local enrichments\n 5 files changed, 88 insertions(+), 13 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   ecb34a5c21..fd13ac4e37  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 2 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
+    ],
+    "exitCode": 0
+  },
+  "sync-1778891707": {
+    "job_id": "sync-1778891707",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 2382511,
+    "started": "2026-05-16T00:35:07Z",
+    "finished": "2026-05-16T00:35:25Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=79999/100000 (hardStop=80%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 1151 dirty files",
+      "[diff] 1151 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 1151,",
+      "  \"entitiesUpserted\": 0,",
+      "  \"auditRowsEmitted\": 0,",
+      "  \"writesPerformed\": 0,",
+      "  \"stoppedReason\": \"BUDGET_EXCEEDED writes 80000/100000 (80.0%) >= 80%\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit fd13ac4e"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1778891728": {
+    "job_id": "git-push-1778891728",
+    "bot": "git-push",
     "status": "running",
     "model": "none",
     "count": 0,
     "pid": null,
-    "started": "2026-05-16T00:29:43Z",
+    "started": "2026-05-16T00:35:28Z",
     "finished": null,
     "log": [
-      "Pending files: 2 entities, 0 edges (2 total)",
+      "Pending files: 3 entities, 0 edges (3 total)",
       "git add data/appwrite-export/ ..."
     ],
     "exitCode": null
