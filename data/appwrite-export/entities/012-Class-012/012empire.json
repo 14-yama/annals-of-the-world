@@ -25,7 +25,126 @@
       "wikidataQid": "Q48349",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Empire",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Roman%20Empire%20Trajan%20117AD.png",
-      "detailsJson": "{\"causes\": [{\"title\": \"Military conquest and territorial expansion by powerful rulers and states\", \"type\": \"EventWindow\", \"year\": \"3000 BCE\"}, {\"title\": \"Need for centralized governance over diverse ethnic groups and regions\", \"type\": \"Idea\"}, {\"title\": \"Economic incentives — control of trade routes, tribute systems, and resource extraction\", \"type\": \"Idea\"}, {\"title\": \"Technological advantages in warfare, logistics, and communication\", \"type\": \"Idea\"}, {\"title\": \"Religious or ideological justifications for universal rule (divine mandate, civilizing mission)\", \"type\": \"Idea\"}], \"effects\": [{\"title\": \"Spread of languages, religions, and cultures across vast territories (Hellenization, Romanization, Islamization)\", \"type\": \"Movement\"}, {\"title\": \"Construction of monumental infrastructure — roads, aqueducts, administrative centers\", \"type\": \"EventWindow\"}, {\"title\": \"Suppression of local autonomy and resistance movements (rebellions, independence wars)\", \"type\": \"EventWindow\"}, {\"title\": \"Development of international law, diplomacy, and standardized governance systems\", \"type\": \"Institution\"}, {\"title\": \"Colonialism, territorial partition, and post-imperial nationalism in the Modern era\", \"type\": \"Movement\"}], \"relationships\": [{\"sourceSlug\": \"empire\", \"sourceName\": \"Empire\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Empire as a political concept first emerged in the Classical period with the Akkadian, Persian, and Roman empires\"}, {\"sourceSlug\": \"empire\", \"sourceName\": \"Empire\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"roman-empire\", \"targetName\": \"Roman Empire\", \"context\": \"The Roman Empire became the archetype of imperial governance, shaping the concept for millennia\"}, {\"sourceSlug\": \"empire\", \"sourceName\": \"Empire\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"achaemenid-empire\", \"targetName\": \"Achaemenid Empire\", \"context\": \"The Achaemenid Empire pioneered multi-ethnic imperial administration across vast territories\"}, {\"sourceSlug\": \"empire\", \"sourceName\": \"Empire\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"monarchy\", \"targetName\": \"Monarchy\", \"context\": \"Empire extended monarchical rule across multiple states and peoples, transforming local kingship into universal sovereignty\"}, {\"sourceSlug\": \"empire\", \"sourceName\": \"Empire\", \"verb\": \"CAUSES\", \"targetSlug\": \"colonialism\", \"targetName\": \"Colonialism\", \"context\": \"The imperial model directly gave rise to colonial expansion in the Early Modern and Modern eras\"}, {\"sourceSlug\": \"empire\", \"sourceName\": \"Empire\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"alexander-the-great\", \"targetName\": \"Alexander the Great\", \"context\": \"Alexander's conquests exemplified empire-building through military expansion and cultural fusion\"}, {\"sourceSlug\": \"empire\", \"sourceName\": \"Empire\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"silk-road\", \"targetName\": \"Silk Road\", \"context\": \"Imperial control of trade routes, especially the Silk Road, was central to sustaining empires through commerce\"}, {\"sourceSlug\": \"empire\", \"sourceName\": \"Empire\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"julius-caesar\", \"targetName\": \"Julius Caesar\", \"context\": \"Julius Caesar's dictatorship laid the groundwork for the transformation of the Roman Republic into an empire\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: empire\", \"type\": \"Reference article\", \"slug\": \"empire\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q48349\", \"https://en.wikipedia.org/wiki/Empire\"], \"tags\": [\"monarchy\", \"Monarchy & Autocracy\", \"political-theory\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"empire left a notable mark on Classical history, documented across 121 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\", \"frameworks\": [\"CAUSE_AND_EFFECT\", \"GEOPOLITICAL_LINKAGE\", \"EMPIRE_AND_COLONIALISM\", \"POLITICAL_SYSTEMS\", \"CONFLICT_AND_RESOLUTION\"]}",
+      "detailsJson": {
+        "causes": [
+          "Agricultural surplus economies created the material conditions for large-scale state formation: the ability to feed professional armies, scribal bureaucracies, and administrative hierarchies without the entire population being engaged in subsistence production.",
+          "Military technology asymmetries — chariots in the Bronze Age, iron weapons in the Classical era, gunpowder artillery in the Early Modern period — repeatedly enabled technologically superior groups to subordinate larger populations.",
+          "Trade route control provided the economic logic for imperial expansion: empires from Persia to Rome to the British East India Company were built on the extraction of surplus from the territories they connected and administered."
+        ],
+        "effects": [
+          "Empires created the infrastructure of civilisation — roads, legal systems, currencies, scripts, and religious frameworks — that outlasted their political forms: Roman law underlies every Western legal system; Persian administrative models were adopted by Alexander, the Seleucids, the Parthians, and the Sassanids in succession.",
+          "Imperial connectivity produced the most significant episodes of cultural and biological exchange in history — the Silk Road under the Pax Mongolica, the Columbian Exchange under Spanish and Portuguese empire, the global circulation of crops, diseases, languages, and religions under European colonial empires.",
+          "Decolonisation movements (1945–1980) dissolved formal empire but left structural legacies — arbitrary borders, export-commodity economies, language hierarchies, ethnic conflict — that postcolonial states continue to negotiate in the 21st century."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "empire",
+            "sourceName": "Empire",
+            "verb": "DEFINES",
+            "targetSlug": "roman-empire",
+            "targetName": "Roman Empire",
+            "context": "The Roman Empire is the paradigmatic case from which the Latin 'imperium' gave the concept its name and provided the template for subsequent Western ideas of universal sovereign authority."
+          },
+          {
+            "sourceSlug": "empire",
+            "sourceName": "Empire",
+            "verb": "DEFINES",
+            "targetSlug": "british-empire",
+            "targetName": "British Empire",
+            "context": "The British Empire was the largest empire in history by territorial extent, ruling 24% of the world's land at its 1920s peak and shaping the modern world's political geography through its decolonisation."
+          },
+          {
+            "sourceSlug": "empire",
+            "sourceName": "Empire",
+            "verb": "DEFINES",
+            "targetSlug": "mongol-empire",
+            "targetName": "Mongol Empire",
+            "context": "The Mongol Empire (1206–1368) was the largest contiguous land empire in history, connecting Eurasia and enabling the Pax Mongolica that facilitated unprecedented trade and cultural exchange."
+          },
+          {
+            "sourceSlug": "empire",
+            "sourceName": "Empire",
+            "verb": "INFLUENCES",
+            "targetSlug": "postcolonial-analysis",
+            "targetName": "Postcolonial Theory",
+            "context": "Postcolonial scholarship — Fanon, Said, Spivak — theorises how imperial structures created enduring asymmetries of power, knowledge, and economic development that persist after formal decolonisation."
+          },
+          {
+            "sourceSlug": "sargon-of-akkad",
+            "sourceName": "Sargon of Akkad",
+            "verb": "CREATES",
+            "targetSlug": "empire",
+            "targetName": "Empire",
+            "context": "Sargon of Akkad (c. 2334 BCE) created the first documented empire by conquering the Sumerian city-states and unifying Mesopotamia under a single sovereign — the founding instance of the imperial form."
+          }
+        ],
+        "places": [
+          {
+            "name": "Rome, Italy",
+            "role": "The city whose 'imperium' gave empire its name and whose political model defined Western conceptions of universal sovereign authority"
+          },
+          {
+            "name": "Persepolis, Iran",
+            "role": "Ceremonial capital of the Achaemenid Empire, which at its peak in 480 BCE administered 44% of the world's population across 5.5 million km²"
+          },
+          {
+            "name": "London, England",
+            "role": "Capital of the British Empire — the largest empire in history — whose decolonisation after 1945 reshaped the modern world's political map"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: empire",
+            "type": "Reference article",
+            "slug": "empire"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q48349",
+          "https://en.wikipedia.org/wiki/Empire"
+        ],
+        "tags": [
+          "monarchy",
+          "Monarchy & Autocracy",
+          "political-theory"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "empire left a notable mark on Classical history, documented across 121 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.",
+        "frameworks": [
+          "WORLD_SYSTEMS",
+          "POSTCOLONIAL_ANALYSIS",
+          "STRUCTURAL_ANALYSIS",
+          "LONGUE_DUREE"
+        ],
+        "summary": "Empire — as a political form — is the organisation of diverse peoples, territories, and polities under a single sovereign power that typically exercises authority beyond the borders of the dominant ethnic or political core. The word derives from the Latin 'imperium' (command, authority), formalised in Rome's transformation from republic to principate under Augustus in 27 BCE, but the imperial form far predates this Latin coinage: the Akkadian Empire under Sargon of Akkad (c. 2334 BCE) is the first documented example in which a single ruler claimed sovereignty over multiple city-states and ethnic groups across a contiguous territory.\n\nHistorically, empires have been the dominant organisational form of large-scale human society. The Achaemenid Persian Empire (550–330 BCE) administered 50 million people across 5.5 million square kilometres using a sophisticated system of satrapies, royal roads, and a lingua franca (Aramaic) — representing perhaps 44% of the world's population at its peak. The Roman Empire (27 BCE–476 CE in the West; 1453 in the East) unified the Mediterranean world under a single legal system, currency, and network of roads that persisted as the skeleton of European civilisation long after the empire's fall. The Mongol Empire (1206–1368) became the largest contiguous land empire in history at 24 million km², connecting Eurasia from Korea to Hungary under the Pax Mongolica. The British Empire (1583–1997) at its peak controlled 24% of the world's land and 23% of the global population — the largest empire in history by territorial extent.\n\nThe concept of empire encodes a fundamental tension: between the order, infrastructure, and legal frameworks that large-scale administration provides (roads, currency, law, trade routes) and the violence, displacement, and cultural destruction through which empires are built and maintained. Postcolonial scholars since Frantz Fanon and Edward Said have documented how empire's material legacies — from the borders drawn by European colonial administrators to the economic dependencies created by colonial extraction — continue to shape global inequality in the 21st century. The 20th century saw both the climax (British, French, Dutch, Belgian empires at their height) and the collapse of formal empires as decolonisation movements dismantled colonial structures after World War II.",
+        "subjects": [
+          "Political Theory",
+          "World History",
+          "Imperialism",
+          "Colonialism",
+          "State Formation",
+          "Global History",
+          "Classical Era",
+          "Ideas",
+          "Power and Authority"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 10,
+          "significanceNarrative": "Empire is the dominant political form of recorded history — from the Akkadian Empire of 2334 BCE to the British Empire's collapse in the 20th century. Empires created the roads, laws, currencies, religions, and linguistic frameworks that constitute the shared infrastructure of civilisation. The question of how empires are built, maintained, and what they leave behind defines much of world history and remains central to understanding contemporary global inequality.",
+          "significanceCategory": "world-changing"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-04-may2026",
+            "timestamp": "2026-05-16T14:19:00Z",
+            "oldValue": "",
+            "newValue": "Empire — as a political form — is the organisation of diverse peoples, territories, and polities under a single sovereign power that typically exercises authority beyond the borders of the dominant et…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Idea -- Monarchy & Autocracy -- Global -- Classical"
       ],
@@ -48,7 +167,8 @@
       "$id": "empire",
       "$sequence": "21967",
       "$createdAt": "2026-04-05T12:08:59.125+00:00",
-      "$updatedAt": "2026-04-06T01:47:59.061+00:00"
+      "$updatedAt": "2026-04-06T01:47:59.061+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }

@@ -25,7 +25,124 @@
       "wikidataQid": "Q41137",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Assyria",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Iraq%3B%20Nimrud%20-%20Assyria%2C%20Lamassu%27s%20Guarding%20Palace%20Entrance.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Geographic advantage in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}, {\"title\": \"Strategic location in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}, {\"title\": \"Natural resources in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Became center of through Assyrian Empire's historical significance\", \"type\": \"Place\"}, {\"title\": \"Influenced surrounding through Assyrian Empire's historical significance\", \"type\": \"Place\"}, {\"title\": \"Expanded into through Assyrian Empire's historical significance\", \"type\": \"Place\"}], \"relationships\": [{\"sourceSlug\": \"assyrian-empire\", \"sourceName\": \"Assyrian Empire\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Assyrian Empire is situated within the Classical (920)\"}, {\"sourceSlug\": \"assyrian-empire\", \"sourceName\": \"Assyrian Empire\", \"verb\": \"LOCATED_IN\", \"targetSlug\": \"global\", \"targetName\": \"Global\", \"context\": \"Assyrian Empire is located in Global\"}, {\"sourceSlug\": \"assyrian-empire\", \"sourceName\": \"Assyrian Empire\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"regional-development-classical\", \"targetName\": \"Regional Development (Classical)\", \"context\": \"Assyrian Empire shaped regional development during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Assyrian Empire\", \"type\": \"Reference article\", \"slug\": \"assyrian-empire\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q41137\", \"https://en.wikipedia.org/wiki/Assyria\"], \"tags\": [\"historical country\", \"Countries / Polities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Assyrian Empire is remembered as a landmark place of the Classical era, referenced in 116 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "Iron Age metallurgy gave Assyria decisive military advantage over Bronze Age polities: iron weapons were cheaper, harder, and more widely available than bronze, enabling the creation of a large professional army that no neighbouring state could match.",
+          "Assyria's geographic position at the Tigris-Euphrates junction — the crossroads of Near Eastern trade routes — gave it both the economic surplus to sustain a professional military state and the strategic motivation to control surrounding territories.",
+          "The collapse of the Late Bronze Age international system around 1200 BCE eliminated the major competing powers (Hittites, Mycenaean Greece, Egypt's New Kingdom) and created the political vacuum into which Assyrian expansionism moved during the 10th–9th centuries BCE."
+        ],
+        "effects": [
+          "Assyrian administrative innovations — the provincial governor system, Aramaic lingua franca, royal road network, and systematic deportation as population management — were directly inherited by the Achaemenid Persian Empire, which applied them across an even larger territory.",
+          "Ashurbanipal's library at Nineveh preserved the majority of surviving Mesopotamian literature and scientific knowledge; without it, the Epic of Gilgamesh, the astronomical canon, and most Babylonian omen texts would be entirely unknown.",
+          "Assyrian mass deportations — including the Northern Kingdom of Israel (722 BCE, the 'Ten Lost Tribes') — permanently reshaped the ethnic and religious geography of the Near East and generated the Biblical literature that became foundational to Jewish, Christian, and Islamic tradition."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "assyrian-empire",
+            "sourceName": "Assyrian Empire",
+            "verb": "PRODUCES",
+            "targetSlug": "ashurbanipals-library",
+            "targetName": "Ashurbanipal's Library",
+            "context": "Ashurbanipal's library at Nineveh (c. 650 BCE) contained 30,000+ clay tablets — the ancient world's most comprehensive archive and the primary source for Mesopotamian literature and science."
+          },
+          {
+            "sourceSlug": "assyrian-empire",
+            "sourceName": "Assyrian Empire",
+            "verb": "INFLUENCES",
+            "targetSlug": "achaemenid-empire",
+            "targetName": "Achaemenid Persian Empire",
+            "context": "The Persians inherited Assyrian administrative structures — provincial governors (satraps), the royal road network, Aramaic as administrative language — when Cyrus the Great absorbed former Assyrian territories."
+          },
+          {
+            "sourceSlug": "assyrian-empire",
+            "sourceName": "Assyrian Empire",
+            "verb": "CAUSES",
+            "targetSlug": "babylonian-captivity",
+            "targetName": "Babylonian Captivity",
+            "context": "The Assyrian deportation of the Northern Kingdom of Israel in 722 BCE (the 'Ten Lost Tribes') and subsequent Babylonian deportation of Judah (586 BCE) created the diaspora conditions that shaped the Hebrew Bible."
+          },
+          {
+            "sourceSlug": "medes",
+            "sourceName": "Medes",
+            "verb": "DESTROYS",
+            "targetSlug": "assyrian-empire",
+            "targetName": "Assyrian Empire",
+            "context": "A Median-Babylonian alliance sacked Nineveh in 612 BCE, destroying the Assyrian heartland and ending the empire within three years — the fastest collapse of a major ancient empire."
+          },
+          {
+            "sourceSlug": "ashurbanipal",
+            "sourceName": "Ashurbanipal",
+            "verb": "DEFINES",
+            "targetSlug": "assyrian-empire",
+            "targetName": "Assyrian Empire",
+            "context": "Ashurbanipal (r. 668–627 BCE) represented the apogee of Assyrian power — ruling from Egypt to Iran — while simultaneously commissioning the library that preserved Mesopotamian civilisation's intellectual legacy."
+          }
+        ],
+        "places": [
+          {
+            "name": "Nineveh, Iraq",
+            "role": "Capital of the Neo-Assyrian Empire; site of Ashurbanipal's library; sacked by the Medes and Babylonians in 612 BCE"
+          },
+          {
+            "name": "Nimrud, Iraq",
+            "role": "Earlier Assyrian capital under Ashurnasirpal II; site of extraordinary palace reliefs and ivory carvings"
+          },
+          {
+            "name": "Israel/Palestine",
+            "role": "Subject territory conquered by Sargon II in 722 BCE; deportation of the Northern Kingdom generated the 'Ten Lost Tribes' tradition"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Assyrian Empire",
+            "type": "Reference article",
+            "slug": "assyrian-empire"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q41137",
+          "https://en.wikipedia.org/wiki/Assyria"
+        ],
+        "tags": [
+          "historical country",
+          "Countries / Polities",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "Assyrian Empire is remembered as a landmark place of the Classical era, referenced in 116 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.",
+        "summary": "The Assyrian Empire — more precisely the Neo-Assyrian Empire (911–609 BCE) — was the first true world empire in the ancient Near East: a military superpower that at its height under Esarhaddon and Ashurbanipal (680–627 BCE) dominated territory from Egypt and the Levant through Mesopotamia to western Iran, imposing centralised administration, systematic tribute extraction, and unprecedented mass deportation on subject peoples. The Assyrians built the ancient world's first professional standing army, equipped with iron weapons, siege engines, and cavalry, and employed terror — mass execution, impalement, city destruction — as a deliberate instrument of imperial policy, recorded in graphic detail on their palace wall reliefs.\n\nThe Neo-Assyrian state was also a centre of extraordinary intellectual achievement. Ashurbanipal's library at Nineveh — discovered in 1853 and now in the British Museum — contained over 30,000 clay tablets representing the most systematic collection of Mesopotamian knowledge in antiquity: astronomical observations, medical texts, omen literature, the Gilgamesh Epic, and royal annals. This library is the primary source for our knowledge of Babylonian and Sumerian literature and science. Assyrian administrative innovation — the use of Aramaic as a lingua franca across a multilingual empire, the postal relay system, the royal road network, the provincial governor system — directly influenced the subsequent Persian Achaemenid Empire and, through it, Alexander the Great's administrative methods.\n\nThe empire's fall was as dramatic as its rise. An alliance of the Babylonians under Nabopolassar and the Medes under Cyaxares sacked Nineveh in 612 BCE, fulfilling the prophecy in the Hebrew Bible (Nahum 3:7: 'Nineveh is laid waste: who will bemoan her?'). Within three years the entire Assyrian state had ceased to exist — the fastest and most complete collapse of a major ancient empire on record. The ruins of Nineveh, Nimrud, and Khorsabad in modern Iraq have been systematically damaged by ISIL since 2015, making Ashurbanipal's library tablets in the British Museum the primary surviving record of a civilisation.",
+        "subjects": [
+          "Ancient History",
+          "Military History",
+          "Mesopotamia",
+          "Archaeology",
+          "State Formation",
+          "Near East",
+          "Classical Era",
+          "Imperialism"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT",
+          "WORLD_SYSTEMS"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceNarrative": "The Neo-Assyrian Empire was the ancient world's first genuine superpower — the template for all subsequent Near Eastern empires. Its administrative innovations (provincial governors, Aramaic lingua franca, royal roads) were inherited by Persia, Alexander, and Rome. Ashurbanipal's library preserved Mesopotamian civilisation's intellectual heritage; without it, the Epic of Gilgamesh and most Babylonian literature would be lost. Its deportation of Israel's Northern Kingdom in 722 BCE generated biblical traditions that shaped three world religions.",
+          "significanceCategory": "world-changing"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-04-may2026",
+            "timestamp": "2026-05-16T14:19:00Z",
+            "oldValue": "",
+            "newValue": "The Assyrian Empire — more precisely the Neo-Assyrian Empire (911–609 BCE) — was the first true world empire in the ancient Near East: a military superpower that at its height under Esarhaddon and Ash…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Places -- Countries / Polities -- Global -- Classical"
       ],
@@ -45,7 +162,8 @@
       "$id": "assyrian-empire",
       "$sequence": "716086",
       "$createdAt": "2026-04-05T15:16:06.451+00:00",
-      "$updatedAt": "2026-04-06T00:50:47.081+00:00"
+      "$updatedAt": "2026-04-06T00:50:47.081+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
