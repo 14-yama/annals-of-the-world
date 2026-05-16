@@ -25,7 +25,103 @@
       "wikidataQid": "Q60220",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Aeneid",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Vergilius%20Vaticanus%20f45v%20-%20Sibylle%20conduit%20%C3%89n%C3%A9e%20et%20Achates%20au%20temple%20d%27Apollon.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier literary tradition in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Historical events in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Patron commission in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Preserved knowledge through Aeneid's historical significance\", \"type\": \"Text\"}, {\"title\": \"Influenced later works through Aeneid's historical significance\", \"type\": \"Text\"}, {\"title\": \"Defined canon through Aeneid's historical significance\", \"type\": \"Text\"}], \"relationships\": [{\"sourceSlug\": \"aeneid\", \"sourceName\": \"Aeneid\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Aeneid is situated within the Classical (920)\"}, {\"sourceSlug\": \"aeneid\", \"sourceName\": \"Aeneid\", \"verb\": \"TRANSMITS\", \"targetSlug\": \"literary-canon-classical\", \"targetName\": \"Literary Canon (Classical)\", \"context\": \"Aeneid contributed to the literary canon of the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Aeneid\", \"type\": \"Reference article\", \"slug\": \"aeneid\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q60220\", \"https://en.wikipedia.org/wiki/Aeneid\"], \"tags\": [\"literary work\", \"Epic Poetry & Mythology\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Aeneid is remembered as a landmark text of the Classical era, referenced in 112 Wikipedia language editions. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "Augustus Caesar's need for a national epic that would legitimise his regime, connect the Julian dynasty to divine origins (through Aeneas, son of Venus, ancestor of Julius Caesar), and celebrate Rome's destined greatness — and his patronage of Virgil through Maecenas — provided both the political motivation and the material support for the Aeneid's composition.",
+          "Virgil's long meditation on Roman identity — his earlier Eclogues and Georgics had already engaged with the relationship between Rome and its landscape, its past, and its political destiny — prepared him for the Aeneid's comprehensive mythological treatment of Roman origins and the costs of empire.",
+          "The Homeric tradition — the Iliad and Odyssey's established framework of heroic epic — provided the form and many of the specific models (Aeneas as a second Odysseus in Books 1–6, a second Achilles in Books 7–12) that Virgil consciously drew on and transformed, creating a work that engaged in sustained dialogue with the Greek epic tradition."
+        ],
+        "effects": [
+          "The Aeneid became the central text of Roman education — memorised by every schoolboy, quoted by every educated Roman, used as a vehicle for teaching Latin grammar and rhetoric — for the entire duration of the Roman Empire, making it the cultural foundation of Roman literary identity.",
+          "Dante Alighieri's choice of Virgil as his guide through Hell and Purgatory in the Divine Comedy (c. 1308–1320) elevated the Aeneid to the status of the greatest pre-Christian poem in the Christian humanist tradition, ensuring its centrality to medieval and Renaissance culture and making it the bridge between classical antiquity and Christian Europe.",
+          "The Aeneid's portrait of Dido — abandoned by Aeneas for reasons of fate and duty, dying by her own hand — became one of the most resonant figures in Western literature, inspiring Purcell's opera Dido and Aeneas (1689), Christopher Marlowe's Dido, Queen of Carthage, and countless other artistic treatments of the tragedy of love sacrificed to political necessity."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "virgil",
+            "sourceName": "Virgil (70–19 BCE)",
+            "verb": "AUTHORS",
+            "targetSlug": "aeneid",
+            "targetName": "Aeneid (29–19 BCE)",
+            "context": "Virgil was the author of the Aeneid — commissioned in the context of Augustus's cultural program and worked on for the last decade of his life, left unfinished at his death."
+          },
+          {
+            "sourceSlug": "augustus-caesar",
+            "sourceName": "Augustus Caesar (63 BCE–14 CE)",
+            "verb": "PATRONISES",
+            "targetSlug": "aeneid",
+            "targetName": "Aeneid (Augustan epic)",
+            "context": "Augustus's patronage — through Maecenas and his direct interest in the project — was essential to the Aeneid, which served as the cultural and mythological legitimation of the Augustan regime."
+          },
+          {
+            "sourceSlug": "aeneid",
+            "sourceName": "Aeneid",
+            "verb": "INSPIRES",
+            "targetSlug": "dantes-divine-comedy",
+            "targetName": "Dante's Divine Comedy (c. 1308–1320)",
+            "context": "Dante chose Virgil as his guide through Hell and Purgatory in the Divine Comedy — the most important acknowledgement of the Aeneid's status as the supreme pre-Christian poem and the bridge between antiquity and medieval Christian culture."
+          }
+        ],
+        "places": [
+          {
+            "name": "Rome (Augustan Italy, 29–19 BCE)",
+            "role": "The context of composition — the Augustan Rome of cultural renovation and political consolidation, within which Virgil worked on the national epic"
+          },
+          {
+            "name": "Global (Western literary tradition)",
+            "role": "The sphere of influence — the Aeneid has been continuously read and adapted for over 2,000 years, remaining central to Western literary culture from Roman schoolrooms to contemporary translations"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Aeneid",
+            "type": "Reference article",
+            "slug": "aeneid"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q60220",
+          "https://en.wikipedia.org/wiki/Aeneid"
+        ],
+        "tags": [
+          "literary work",
+          "Epic Poetry & Mythology",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "Aeneid is remembered as a landmark text of the Classical era, referenced in 112 Wikipedia language editions. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.",
+        "summary": "The Aeneid (Latin: Aeneis) is the Latin epic poem composed by Virgil (Publius Vergilius Maro, 70–19 BCE) between approximately 29 BCE and his death in 19 BCE, left in an unfinished state at his death (Virgil reportedly asked for it to be destroyed; Augustus ordered it preserved). Twelve books long in hexameter verse — modelled on Homer's Iliad and Odyssey — it recounts the legendary journey of the Trojan hero Aeneas from the fall of Troy to his eventual settlement in Latium (central Italy), the region that would become Rome, thus providing a mythological founding narrative for the Roman people and the Julian dynasty to which Augustus Caesar claimed descent. It is widely regarded as the greatest work of Latin literature and one of the supreme achievements of world poetry.\n\nThe Aeneid's first six books follow Aeneas's wanderings (consciously parallel to Odysseus's journey in the Odyssey) — from Troy through Carthage (where Aeneas abandons Queen Dido, who kills herself in despair) to Sicily and finally to the Underworld, where the shade of his father Anchises shows him the future glory of Rome and the souls of the great Romans yet to be born. The second six books (parallel to the Iliad) recount the wars Aeneas must fight in Latium to establish his destined city — wars characterised by tragic heroism on both sides, ending with the morally ambiguous killing of the Italian hero Turnus. The poem's central tension — between fate (fatum) and human will, between pietas (duty to gods, family, and state) and personal desire — gives it a gravity and pathos that transcends its political function as Augustan propaganda.\n\nThe Aeneid's cultural influence is incalculable: it was the central text of Roman education (every educated Roman knew it by heart), the model for medieval Latin epic, the inspiration for Dante's Divine Comedy (where Virgil serves as Dante's guide through Hell and Purgatory), and a foundational text of Western literary culture that has been continuously read, translated, and adapted for over 2,000 years.",
+        "subjects": [
+          "Latin Literature",
+          "Ancient Rome",
+          "Classical Era",
+          "Epic Poetry",
+          "Augustan Age",
+          "Roman History",
+          "World Literature",
+          "Virgil"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "RELIGIOUS_INTERPRETATION"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 10,
+          "significanceNarrative": "The Aeneid (Virgil, 29–19 BCE) is widely regarded as the greatest work of Latin literature — Rome's national epic, connecting the Trojan Aeneas through the Julian dynasty to Augustus Caesar, and providing the foundational mythological narrative of Roman origins. The central text of Roman education for centuries, the model for Dante's choice of Virgil as guide in the Divine Comedy, and a continuous presence in Western literary culture for over 2,000 years, the Aeneid is one of the supreme achievements of world poetry.",
+          "significanceCategory": "world-changing"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-21-may2026",
+            "timestamp": "2026-05-16T15:57:31Z",
+            "oldValue": "",
+            "newValue": "The Aeneid (Latin: Aeneis) is the Latin epic poem composed by Virgil (Publius Vergilius Maro, 70–19 BCE) between approximately 29 BCE and his death in 19 BCE, left in an unfinished state at his death …"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Epic Poetry & Mythology -- Global -- Classical"
       ],
@@ -45,7 +141,8 @@
       "$id": "aeneid",
       "$sequence": "6159",
       "$createdAt": "2026-04-05T12:05:51.679+00:00",
-      "$updatedAt": "2026-04-06T00:51:03.225+00:00"
+      "$updatedAt": "2026-04-06T00:51:03.225+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
