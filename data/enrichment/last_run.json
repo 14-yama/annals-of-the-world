@@ -1,37 +1,38 @@
 {
-  "timestamp": "2026-05-16T14:21:35Z",
+  "timestamp": "2026-05-16T15:35:09Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "johann-pfeffinger",
-      "status": "enriched",
-      "old_len": 71,
-      "new_len": 1258
-    },
-    {
-      "slug": "katakalon-kekaumenos",
-      "status": "enriched",
-      "old_len": 79,
-      "new_len": 1072
-    },
-    {
       "slug": "lazarus-spengler",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 146,
+      "new_len": 866
     },
     {
       "slug": "antiochus-chuzon",
-      "status": "failed",
-      "reason": "summary too short (28c, need >= 600)"
+      "status": "enriched",
+      "old_len": 231,
+      "new_len": 1073
     },
     {
       "slug": "cristoforo-landino",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "insufficient causes (0, need >= 2)"
+    },
+    {
+      "slug": "guala-bicchieri",
+      "status": "enriched",
+      "old_len": 237,
+      "new_len": 1886
+    },
+    {
+      "slug": "peter-shafirov",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     }
   ]
 }
