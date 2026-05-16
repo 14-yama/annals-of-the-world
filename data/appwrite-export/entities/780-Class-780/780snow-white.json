@@ -25,7 +25,103 @@
       "wikidataQid": "Q11831",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Snow_White",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/1862%20M%C3%BCller%20Schneewittchen%20anagoria.JPG",
-      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"snow-white\", \"sourceName\": \"Snow White\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Snow White is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Snow White\", \"type\": \"Reference article\", \"slug\": \"snow-white\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q11831\", \"https://en.wikipedia.org/wiki/Snow_White\"], \"tags\": [\"literary work\", \"Historical & Literary Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Snow White left a notable mark on Classical history, documented across 97 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "The Brothers Grimm's project of German folkloric collection — the desire to record and preserve the German oral narrative tradition as a contribution to national cultural identity — drove the collection of Snow White from oral informants (primarily the Hassenpflug family and other Hessian informants, who were themselves influenced by earlier French literary fairy tales) and its inclusion in the Kinder- und Hausmärchen (1812).",
+          "The pan-European fairy tale tradition — the ATU type 709 story of a beautiful young woman threatened by a jealous older woman and rescued by a prince exists across European cultures, with literary versions in Basile's Neapolitan Pentamerone (1634) and the Grimm collection (1812) — provided a shared narrative substrate from which the Snow White tale emerged.",
+          "Walt Disney's decision to adapt Snow White as the first feature-length animated film (1937) — a five-year production at enormous cost ($1.5 million, thought 'Disney's folly') that became the highest-grossing sound film of its era — transformed the Grimm tale into a globally known narrative and established the visual iconography of Snow White that has dominated subsequent adaptations."
+        ],
+        "effects": [
+          "Walt Disney's Snow White and the Seven Dwarfs (1937) was the first feature-length animated film and a landmark in cinema history — its commercial success ($8 million in its initial run) validated the animated feature film as a viable art form and commercial genre, establishing the Disney studio's dominance of feature animation that continues to the present.",
+          "The Snow White narrative — the Evil Queen, the magic mirror, the poisoned apple, the glass coffin, the seven dwarfs — has become one of the most widely recognised narrative structures in world culture, generating hundreds of literary, theatrical, cinematic, and operatic adaptations across two centuries and multiple cultural traditions.",
+          "Snow White's feminist interpretation — the tale's central anxiety ('who is the fairest of them all?') as a narrative of female competition for male approval and female agency suppressed — has made it a central text in feminist analysis of fairy tales (Bruno Bettelheim, Sandra Gilbert, Angela Carter), generating a rich critical tradition and numerous revisionary retellings."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "brothers-grimm",
+            "sourceName": "Brothers Grimm (Jacob 1785–1863 and Wilhelm 1786–1859, Kinder- und Hausmärchen 1812)",
+            "verb": "RECORDS",
+            "targetSlug": "snow-white",
+            "targetName": "Snow White (KHM 53, Kinder- und Hausmärchen, 1st ed. 1812; 7th ed. 1857)",
+            "context": "The Brothers Grimm recorded Snow White in their Kinder- und Hausmärchen (1812) — the tale was revised in subsequent editions with the 7th edition (1857) becoming the standard text."
+          },
+          {
+            "sourceSlug": "snow-white",
+            "sourceName": "Snow White (Disney 1937 — first feature animated film, highest-grossing sound film of its era)",
+            "verb": "ADAPTED_AS",
+            "targetSlug": "snow-white-disney-1937",
+            "targetName": "Snow White and the Seven Dwarfs (Walt Disney, 1937 — first feature-length animated film)",
+            "context": "Walt Disney's Snow White (1937) was the first feature-length animated film — its commercial success validated animated feature films as a commercial art form and established the Disney studio's dominance of animation."
+          },
+          {
+            "sourceSlug": "snow-white",
+            "sourceName": "Snow White (Evil Queen, magic mirror — feminist analysis, female competition)",
+            "verb": "EXAMINED_BY",
+            "targetSlug": "feminist-fairy-tale-criticism",
+            "targetName": "Feminist fairy tale criticism (Bettelheim, Gilbert, Carter — 20th century)",
+            "context": "Snow White is a central text in feminist fairy tale analysis — its 'fairest of them all' anxiety is examined as a narrative of female competition for male approval and female agency suppressed in patriarchal culture."
+          }
+        ],
+        "places": [
+          {
+            "name": "Germany (Hessian oral tradition — Grimm collection 1812; 7th edition 1857 definitive text)",
+            "role": "Snow White was recorded by the Grimm brothers from Hessian oral informants (primarily the Hassenpflug family) in Germany — the Kinder- und Hausmärchen (1812, 7th edition 1857) is the definitive text"
+          },
+          {
+            "name": "United States (Walt Disney Studios, Hollywood — Snow White and the Seven Dwarfs 1937)",
+            "role": "Walt Disney's 1937 Snow White — produced in Hollywood — gave the tale its globally known visual iconography and introduced it to worldwide cinema audiences"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Snow White",
+            "type": "Reference article",
+            "slug": "snow-white"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q11831",
+          "https://en.wikipedia.org/wiki/Snow_White"
+        ],
+        "tags": [
+          "literary work",
+          "Historical & Literary Texts",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "Snow White left a notable mark on Classical history, documented across 97 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.",
+        "summary": "Snow White (German: Schneewittchen) is a German fairy tale first recorded by Jacob and Wilhelm Grimm in their Kinder- und Hausmärchen ('Children's and Household Tales', 1st edition, 1812) as tale KHM 53, and subsequently revised in later editions (the 7th edition, 1857, being the most widely read). The tale narrates the story of a young princess (Snow White) whose beauty provokes the murderous jealousy of her stepmother, the Evil Queen, who repeatedly attempts to kill Snow White (first ordering a hunter to cut out her heart, then attempting to murder her with a poisoned comb, a laced bodice, and finally a poisoned apple). Snow White takes refuge with seven dwarfs in the forest, is placed in a glass coffin by the grieving dwarfs after the poisoned apple falls, and is eventually revived by a prince's kiss (or, in the 1812 version, when a servant jostles the coffin and the piece of apple falls from her throat).\n\nSnow White is one of the most widely known and analysed fairy tales in world literature — its ATU type classification (ATU 709) groups it with related tales across Europe, and the Snow White story exists in versions in German, Italian (Giambattista Basile's 'La bella addormentata nel bosco', 1634), and related tales from Albania, Russia, Armenia, and the African oral tradition. The tale has been analysed as a patriarchal narrative of female competition for male approval (the Evil Queen's anxiety about the mirror's verdict: 'who is the fairest of them all?'), as a coming-of-age initiation story, as a narrative of female sexual awakening and dormancy, and as a document of early modern German folk culture.\n\nSnow White's global cultural reach is largely the product of Walt Disney's Snow White and the Seven Dwarfs (1937) — the first feature-length animated film produced in Hollywood, a commercial and artistic triumph that permanently shaped the visual iconography of Snow White (the glass coffin, the seven dwarfs' names, the red apple) and introduced the Grimm fairy tale tradition to global cinema audiences. The Disney film's success made Snow White one of the three or four best-known fairy tale figures worldwide, alongside Cinderella, Sleeping Beauty, and Red Riding Hood.",
+        "subjects": [
+          "German Literature",
+          "19th Century",
+          "Fairy Tale",
+          "Brothers Grimm",
+          "Folk Literature",
+          "Disney Animation",
+          "Folklore",
+          "Children's Literature"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 8,
+          "significanceNarrative": "Snow White (Grimm, KHM 53, 1812) is one of the most widely known fairy tales in world literature — its Disney adaptation (1937), the first feature-length animated film, gave it global cultural reach and established the visual iconography recognised worldwide. As a subject of feminist criticism and a document of pan-European folk narrative tradition (ATU 709), it is among the most analysed fairy tales in world literature.",
+          "significanceCategory": "highly-significant"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-51-may2026",
+            "timestamp": "2026-05-16T18:38:09Z",
+            "oldValue": "",
+            "newValue": "Snow White (German: Schneewittchen) is a German fairy tale first recorded by Jacob and Wilhelm Grimm in their Kinder- und Hausmärchen ('Children's and Household Tales', 1st edition, 1812) as tale KHM …"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Historical & Literary Texts -- Global -- Classical"
       ],
@@ -44,7 +140,8 @@
       "$id": "snow-white",
       "$sequence": "21326",
       "$createdAt": "2026-04-05T12:08:51.641+00:00",
-      "$updatedAt": "2026-04-05T12:08:51.641+00:00"
+      "$updatedAt": "2026-04-05T12:08:51.641+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
