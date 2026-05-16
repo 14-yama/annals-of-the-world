@@ -1,11 +1,23 @@
 {
-  "generatedAt": "2026-05-16T08:47:11Z",
+  "generatedAt": "2026-05-16T10:07:22Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "results": [
+    {
+      "slug": "vardan-aigektsi",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "joan-denghien",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
     {
       "slug": "ermon-de-jerusal\u00e9m",
       "status": "error",
@@ -13,29 +25,18 @@
     },
     {
       "slug": "ant\u00f4nio-raposo-tavares",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "will-steger",
       "status": "ok",
       "score": 8,
-      "category": "regional"
+      "category": "continental"
     },
     {
       "slug": "ernest-joyce",
       "status": "error",
       "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "roald-amundsen",
-      "status": "ok",
-      "score": 9,
-      "category": "world-changing"
     }
   ],
   "summary": {
-    "entities_scored": 2,
-    "failed": 3
+    "entities_scored": 3,
+    "failed": 2
   }
 }

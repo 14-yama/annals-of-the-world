@@ -1,37 +1,39 @@
 {
-  "timestamp": "2026-05-16T04:39:08Z",
+  "timestamp": "2026-05-16T05:59:02Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "chad-of-mercia",
-      "status": "enriched",
-      "old_len": 188,
-      "new_len": 1780
-    },
-    {
       "slug": "trojan-war",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
-    },
-    {
-      "slug": "anastasius-ii",
       "status": "enriched",
-      "old_len": 325,
-      "new_len": 1029
+      "old_len": 85,
+      "new_len": 1694
     },
     {
       "slug": "hisham-ibn-urwah",
-      "status": "failed",
-      "reason": "Unterminated string starting at: line 2 column 12 (char 13)"
+      "status": "enriched",
+      "old_len": 53,
+      "new_len": 1016
     },
     {
       "slug": "juan-gil-de-hontan",
+      "status": "enriched",
+      "old_len": 664,
+      "new_len": 923
+    },
+    {
+      "slug": "dorotea-bucca",
       "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "giovanni-boccamazza",
+      "status": "enriched",
+      "old_len": 214,
+      "new_len": 1851
     }
   ]
 }
