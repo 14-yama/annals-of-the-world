@@ -25,7 +25,104 @@
       "wikidataQid": "Q132100",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Pope_Anterus",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"Classical\"}, {\"title\": \"Spiritual seeking and religious community formation\", \"type\": \"Idea\", \"year\": \"\"}], \"effects\": [{\"title\": \"Shaped religious practice and spiritual communities\", \"type\": \"Idea\", \"year\": \"236-01-03\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks that shaped subsequent civili\", \"type\": \"Movement\", \"year\": \"236-01-03\"}], \"relationships\": [{\"sourceSlug\": \"anterus\", \"sourceName\": \"Anterus\", \"verb\": \"PREACHES\", \"targetSlug\": \"field-250\", \"targetName\": \"Religious Figures\", \"context\": \"Anterus: Religious teaching in religious figures\"}, {\"sourceSlug\": \"anterus\", \"sourceName\": \"Anterus\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Anterus was active during the Classical era\"}], \"places\": [{\"name\": \"Petilia Policastro\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Anterus\", \"type\": \"Reference article\", \"slug\": \"anterus\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q132100\", \"https://en.wikipedia.org/wiki/Pope_Anterus\"], \"tags\": [\"Religious Figures\", \"comparative-religion\", \"doctrine-development\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "The Emperor Maximinus Thrax's persecution of the Christian church — which had condemned Pope Pontian to the Sardinian mines and killed or exiled church leaders — created the crisis of succession and disruption that produced Anterus's emergency election to the papacy.",
+          "The third-century crisis of the Roman Empire — the succession of soldier-emperors, military coups, and provincial instability that defined the period 235–284 CE — created the hostile imperial environment in which Anterus's brief pontificate occurred.",
+          "The early Roman Church's growing institutional self-consciousness — the development of hierarchical organisation, episcopal authority, and record-keeping practices in the mid-3rd century — provided the context for the tradition that Anterus initiated the archiving of martyrs' acts."
+        ],
+        "effects": [
+          "Anterus's pontificate — though only 43 days — maintained the continuity of the Roman episcopal succession during the Maximinus Thrax persecution, ensuring the institutional survival of the Roman church through one of its earliest phases of imperial hostility.",
+          "The tradition that Anterus ordered the archiving of martyrs' acts — if it reflects any historical reality — contributed to the preservation of the hagiographic record that became the foundation of the Roman Martyrology and the cult of saints in the Western church.",
+          "Anterus's martyrdom (or death during persecution) added his name to the early list of Roman bishop-martyrs that reinforced the authority and prestige of the Roman see — the tradition of papal martyrdom was a significant element of the Roman church's claim to apostolic primacy."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "anterus",
+            "sourceName": "Pope Anterus",
+            "verb": "SUCCEEDS",
+            "targetSlug": "pontian",
+            "targetName": "Pope Pontian",
+            "context": "Anterus succeeded Pontian as Bishop of Rome after Pontian resigned the papacy following his condemnation to the Sardinian mines by Maximinus Thrax."
+          },
+          {
+            "sourceSlug": "maximinus-thrax",
+            "sourceName": "Maximinus Thrax (Emperor)",
+            "verb": "PERSECUTES",
+            "targetSlug": "anterus",
+            "targetName": "Pope Anterus (and Early Church)",
+            "context": "The Maximinus Thrax persecution — which had exiled Pontian — provided the hostile context within which Anterus's brief pontificate occurred and possibly caused his death."
+          },
+          {
+            "sourceSlug": "early-roman-church",
+            "sourceName": "Early Roman Church (3rd Century)",
+            "verb": "MAINTAINS",
+            "targetSlug": "anterus",
+            "targetName": "Pope Anterus",
+            "context": "Anterus maintained the Roman episcopal succession during the Maximinus persecution — a crucial function that preserved the institutional continuity of the Roman church through a dangerous period."
+          }
+        ],
+        "places": [
+          {
+            "name": "Rome, Roman Empire",
+            "role": "The site of Anterus's pontificate — the Roman church whose episcopal succession he maintained during the Maximinus Thrax persecution"
+          },
+          {
+            "name": "Sardinia (mines)",
+            "role": "The site of Pope Pontian's exile and death under Maximinus Thrax — the penal context that produced the vacancy Anterus was elected to fill"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Anterus",
+            "type": "Reference article",
+            "slug": "anterus"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q132100",
+          "https://en.wikipedia.org/wiki/Pope_Anterus"
+        ],
+        "tags": [
+          "Religious Figures",
+          "comparative-religion",
+          "doctrine-development",
+          "cultural-diffusion"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "",
+        "summary": "Pope Anterus (died 3 January 236 CE) was the eighteenth Bishop of Rome and thus, by Catholic reckoning, the eighteenth pope — who served for only 43 days (21 November 235–3 January 236 CE), making his one of the shortest pontificates in papal history. Anterus was elected to succeed Pope Pontian, who had resigned the papacy after being condemned to labour in the mines of Sardinia by the Emperor Maximinus Thrax — one of the soldiers' emperors of the Crisis of the Third Century, whose hostility to Christianity initiated the first general imperial persecution of the Church.\n\nAnterus's brief pontificate — possibly ended by his own death in the mines as a confessor, or by natural causes — falls in the initial phase of the Decian-era persecutions and the broader crisis of the third century Roman Empire. His name suggests Greek origin (Anterus meaning 'the counter-Love' or from the flower antherion), consistent with the predominantly Greek character of the early Roman Christian community. He is venerated as a martyr in the Roman Catholic Church, though the evidence for his martyrdom is uncertain — the Liber Pontificalis (the official medieval register of popes) records that he died a martyr, but the historical documentation is very thin.\n\nAccording to the Liber Pontificalis, Anterus's brief pontificate was notable for one administrative action: he allegedly ordered the collection and archiving of the acts of the martyrs — the records of trials and executions of Christians — into a formal archive. If accurate, this would represent an early institutional step in the preservation of the hagiographic tradition that would eventually produce the Lives of the Saints. The historical reality of this action is uncertain, but the tradition reflects the growing institutional consciousness of the Roman church in the mid-3rd century, even under persecution.",
+        "subjects": [
+          "Early Christianity",
+          "Papacy",
+          "Classical Era",
+          "Roman Empire",
+          "Church History",
+          "3rd Century CE",
+          "Early Church Fathers",
+          "Martyrs"
+        ],
+        "frameworks": [
+          "RELIGIOUS_INTERPRETATION",
+          "STRUCTURAL_ANALYSIS"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 3,
+          "significanceNarrative": "Pope Anterus (235–236 CE) was the 18th Bishop of Rome with one of the shortest pontificates in papal history (43 days) — elected to maintain the Roman episcopal succession during the Maximinus Thrax persecution. His significance lies in the institutional continuity he preserved during a dangerous period, and in the tradition that he initiated the archiving of martyrs' acts.",
+          "significanceCategory": "local"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-16-may2026",
+            "timestamp": "2026-05-16T15:22:49Z",
+            "oldValue": "",
+            "newValue": "Pope Anterus (died 3 January 236 CE) was the eighteenth Bishop of Rome and thus, by Catholic reckoning, the eighteenth pope — who served for only 43 days (21 November 235–3 January 236 CE), making his…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "People — Religious Figures — Global — Classical"
       ],
@@ -46,7 +143,8 @@
       "$id": "anterus",
       "$sequence": "142958",
       "$createdAt": "2026-04-05T12:33:17.682+00:00",
-      "$updatedAt": "2026-04-05T12:33:17.682+00:00"
+      "$updatedAt": "2026-04-05T12:33:17.682+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
