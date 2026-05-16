@@ -1,36 +1,38 @@
 {
-  "timestamp": "2026-05-16T07:25:49Z",
+  "timestamp": "2026-05-16T08:25:26Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 4,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
       "slug": "dorotea-bucca",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "Unterminated string starting at: line 1 column 16571 (char 16570)"
     },
     {
       "slug": "gupta-empire",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "status": "enriched",
+      "old_len": 61,
+      "new_len": 1464
     },
     {
       "slug": "central-africa",
-      "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
+      "status": "enriched",
+      "old_len": 61,
+      "new_len": 1160
     },
     {
       "slug": "prokop-the-great",
       "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "tatzates",
+      "slug": "true-jesus-church",
       "status": "enriched",
-      "old_len": 152,
-      "new_len": 1035
+      "old_len": 101,
+      "new_len": 1464
     }
   ]
 }

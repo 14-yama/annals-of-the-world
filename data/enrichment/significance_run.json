@@ -1,41 +1,44 @@
 {
-  "generatedAt": "2026-05-16T11:34:09Z",
+  "generatedAt": "2026-05-16T12:26:55Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 5,
+  "failed": 0,
   "dry_run": false,
   "results": [
     {
       "slug": "ermon-de-jerusal\u00e9m",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
     },
     {
-      "slug": "ernest-joyce",
+      "slug": "pieter-de-marees",
       "status": "ok",
       "score": 5,
       "category": "regional"
     },
     {
-      "slug": "pieter-de-marees",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "susan-d-shaw",
+      "slug": "jan-janszoon-struys",
       "status": "ok",
-      "score": 8,
+      "score": 7,
       "category": "regional"
     },
     {
-      "slug": "jan-janszoon-struys",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "slug": "william-hartnell",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "clemens-denhardt",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 2,
-    "failed": 3
+    "entities_scored": 5,
+    "failed": 0
   }
 }
