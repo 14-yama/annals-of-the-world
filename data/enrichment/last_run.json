@@ -1,36 +1,35 @@
 {
-  "timestamp": "2026-05-16T12:49:34Z",
+  "timestamp": "2026-05-16T14:21:35Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 2,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "richard-fitzralph",
-      "status": "enriched",
-      "old_len": 186,
-      "new_len": 1550
-    },
-    {
       "slug": "johann-pfeffinger",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
-    },
-    {
-      "slug": "luis-antonio-belluga-y-moncada",
       "status": "enriched",
-      "old_len": 103,
-      "new_len": 1382
-    },
-    {
-      "slug": "fulk-of-reims",
-      "status": "enriched",
-      "old_len": 227,
-      "new_len": 1581
+      "old_len": 71,
+      "new_len": 1258
     },
     {
       "slug": "katakalon-kekaumenos",
+      "status": "enriched",
+      "old_len": 79,
+      "new_len": 1072
+    },
+    {
+      "slug": "lazarus-spengler",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "antiochus-chuzon",
+      "status": "failed",
+      "reason": "summary too short (28c, need >= 600)"
+    },
+    {
+      "slug": "cristoforo-landino",
       "status": "failed",
       "reason": "timed out"
     }
