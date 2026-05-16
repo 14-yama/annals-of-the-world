@@ -1,37 +1,39 @@
 {
-  "timestamp": "2026-05-16T17:43:25Z",
+  "timestamp": "2026-05-16T18:29:43Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "cristoforo-landino",
-      "status": "enriched",
-      "old_len": 97,
-      "new_len": 1005
-    },
-    {
       "slug": "peter-shafirov",
-      "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
+      "status": "enriched",
+      "old_len": 100,
+      "new_len": 953
     },
     {
       "slug": "empire",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 119,
+      "new_len": 1860
     },
     {
       "slug": "john-of-rokycan",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "Unterminated string starting at: line 3 column 1 (char 14)"
     },
     {
-      "slug": "saint-marcouf",
+      "slug": "zai-yu",
       "status": "enriched",
-      "old_len": 360,
-      "new_len": 633
+      "old_len": 256,
+      "new_len": 1441
+    },
+    {
+      "slug": "juan-margarit-i-pau",
+      "status": "enriched",
+      "old_len": 123,
+      "new_len": 1072
     }
   ]
 }
