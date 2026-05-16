@@ -25,7 +25,90 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [], \"effects\": [], \"relationships\": [{\"sourceSlug\": \"babylonian-chronicles\", \"sourceName\": \"Babylonian Chronicles\", \"verb\": \"DEFINES\", \"targetSlug\": \"babylon\", \"targetName\": \"Babylon\", \"context\": \"Text associated with Babylon\"}, {\"sourceSlug\": \"babylon\", \"sourceName\": \"Babylon\", \"verb\": \"REFERENCES\", \"targetSlug\": \"babylonian-chronicles\", \"targetName\": \"Babylonian Chronicles\", \"context\": \"Referenced in place entity\"}], \"places\": [], \"texts\": [], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "The Babylonian scribal tradition — the cuneiform writing system and the institution of temple scribes at the Esagila in Babylon — provided the technical means and the institutional continuity for maintaining systematic annual records from the 8th century BCE through the Hellenistic and Parthian periods.",
+          "The political interest of successive rulers in Babylonia — Babylonian, Assyrian, Chaldean, Persian, Macedonian, Seleucid, and Parthian — in maintaining the legitimacy conferred by Babylonian religious tradition (particularly the New Year ceremony and the touching of Bel-Marduk's hands) created the institutional continuity that sustained chronicle-writing through multiple regime changes.",
+          "The Babylonian astronomical tradition — the systematic observation of celestial phenomena (eclipses, planetary positions, lunar cycles) conducted by temple astronomers — produced the astronomical diaries that are closely related to the Chronicles, providing both the astronomical data and the annalistic framework that shaped the Chronicles' structure."
+        ],
+        "effects": [
+          "The Babylonian Chronicles provide the primary chronological framework for ancient Near Eastern history — the astronomical observations they record allow modern historians to calculate the precise dates of Babylonian, Assyrian, and Persian reigns, creating the absolute chronological anchors from which the dates of events throughout the ancient Near East are derived.",
+          "The Chronicles' records of the fall of Nineveh (612 BCE), the fall of Jerusalem (597 BCE), and the fall of Babylon to Cyrus (539 BCE) provide the closest thing to contemporary external evidence for events that are also documented in the Hebrew Bible — allowing historians to correlate and calibrate the Biblical account with independent Babylonian evidence.",
+          "The survival of the Babylonian Chronicles in the British Museum (excavated in the 19th century) and other collections — and their progressive decipherment and publication by Assyriologists in the 20th century — transformed the precision of ancient Near Eastern chronology and contributed to the broader project of correlating the histories of the ancient civilisations of the Mediterranean and Middle East."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "babylonian-chronicles",
+            "sourceName": "Babylonian Chronicles",
+            "verb": "DOCUMENTS",
+            "targetSlug": "fall-of-nineveh",
+            "targetName": "Fall of Nineveh (612 BCE)",
+            "context": "The Babylonian Chronicles contain the only contemporary written account of the fall of Nineveh to the combined forces of Babylon and Media — the event that ended Assyrian hegemony in the ancient Near East."
+          },
+          {
+            "sourceSlug": "babylonian-chronicles",
+            "sourceName": "Babylonian Chronicles",
+            "verb": "RECORDS",
+            "targetSlug": "babylonian-captivity",
+            "targetName": "Fall of Jerusalem and Babylonian Captivity (597 BCE)",
+            "context": "The Chronicles record Nebuchadnezzar II's capture of Jerusalem and deportation of the Judean population — providing the closest external evidence for the Biblical Babylonian Captivity."
+          },
+          {
+            "sourceSlug": "babylonian-chronicles",
+            "sourceName": "Babylonian Chronicles",
+            "verb": "DOCUMENTS",
+            "targetSlug": "cyrus-the-great",
+            "targetName": "Cyrus the Great's conquest of Babylon (539 BCE)",
+            "context": "The 'Cyrus Chronicle' records the fall of Babylon to Cyrus the Great — a key event in ancient Near Eastern history corroborated by the Cyrus Cylinder and the Hebrew Bible."
+          }
+        ],
+        "places": [
+          {
+            "name": "Babylon, Mesopotamia (8th century BCE – 1st century CE, compilation)",
+            "role": "The location of the Esagila — the temple of Marduk where Babylonian scribes maintained the Chronicles — and the city whose history they primarily record"
+          },
+          {
+            "name": "British Museum and other institutions (modern preservation)",
+            "role": "The main repository of surviving Chronicle tablets — excavated from Babylon and Nippur in the 19th century and held primarily in the British Museum"
+          }
+        ],
+        "texts": [],
+        "externalLinks": [],
+        "tags": [],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "",
+        "summary": "The Babylonian Chronicles are a series of cuneiform tablets recording the history of Babylonia and the ancient Near East from the 8th century BCE to the 1st century CE — the most important primary source for the political history of Mesopotamia during this period, recording year by year the major events of the reigns of Babylonian, Assyrian, Chaldean, and later Persian, Macedonian, Seleucid, and Parthian rulers: military campaigns, accession of kings, omens, eclipses, floods, and economic conditions. Excavated primarily from Babylon and Nippur and held in the British Museum and other institutions, they were written by scribes of the Esagila (the temple of Marduk in Babylon) and represent the official Babylonian record of historical events.\n\nThe Babylonian Chronicles' historical significance is immense — they contain the only contemporary written account of the fall of Nineveh (612 BCE), the decisive event that ended Assyrian power in the ancient Near East; they provide the closest contemporary evidence for the Fall of Jerusalem to Nebuchadnezzar II (597 BCE) and the deportation of the Judean population to Babylon (the Babylonian Captivity); they record the fall of Babylon to Cyrus the Great (539 BCE) in the 'Cyrus Chronicle'; and they are the only Babylonian source for the campaigns and deaths of several Seleucid and Parthian kings. The 'Chronicle of the Market Prices' and the astronomical diaries that overlap with the Chronicles provide unique economic and astronomical data for ancient Mesopotamia.\n\nThe Chronicles also provide the absolute chronological anchors for the chronology of the ancient Near East — astronomical observations (eclipses, planetary positions) recorded in the Chronicles and associated texts can be precisely dated by modern astronomical calculation, providing the fixed points from which the dates of ancient Near Eastern dynasties and events are calculated. Without the Babylonian Chronicles, our chronology of the ancient world would be considerably less precise.",
+        "subjects": [
+          "Ancient Mesopotamia",
+          "Classical Era",
+          "Babylonia",
+          "Cuneiform",
+          "Historiography",
+          "Ancient Near East",
+          "Chronology",
+          "Epigraphy"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceNarrative": "The Babylonian Chronicles (8th century BCE – 1st century CE) are the primary written source for the political history of Mesopotamia — recording the fall of Nineveh, the fall of Jerusalem, and the conquest by Cyrus, and providing the astronomical observations that create the absolute chronological anchors for the entire ancient Near Eastern chronological framework. Without them, our chronology of the ancient world would be considerably less precise.",
+          "significanceCategory": "world-changing"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-26-may2026",
+            "timestamp": "2026-05-16T16:24:19Z",
+            "oldValue": "",
+            "newValue": "The Babylonian Chronicles are a series of cuneiform tablets recording the history of Babylonia and the ancient Near East from the 8th century BCE to the 1st century CE — the most important primary sou…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts — Philosophical Works — Classical"
       ],
@@ -49,7 +132,8 @@
       "$id": "babylonian-chronicles",
       "$sequence": "1039468",
       "$createdAt": "2026-04-06T00:39:30.789+00:00",
-      "$updatedAt": "2026-04-06T00:39:30.789+00:00"
+      "$updatedAt": "2026-04-06T00:39:30.789+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
