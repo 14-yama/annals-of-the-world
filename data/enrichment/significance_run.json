@@ -1,44 +1,42 @@
 {
-  "generatedAt": "2026-05-16T13:14:48Z",
+  "generatedAt": "2026-05-16T14:24:28Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 5,
-  "failed": 0,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "results": [
     {
-      "slug": "thomas-cavendish",
+      "slug": "empress-zhao-feiyan",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "emperor-gaozong-of-song",
       "status": "ok",
-      "score": 8,
+      "score": 7,
       "category": "regional"
     },
     {
-      "slug": "jean-ribault",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "fan-zhongyan",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
-      "slug": "manchuria",
+      "slug": "baba-tahir",
       "status": "ok",
       "score": 5,
-      "category": "regional"
+      "category": "local"
     },
     {
-      "slug": "yuan-zhen",
+      "slug": "zhangsun-wuji",
       "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
-    {
-      "slug": "james-i-of-scotland",
-      "status": "ok",
-      "score": 5,
+      "score": 6,
       "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 5,
-    "failed": 0
+    "entities_scored": 3,
+    "failed": 2
   }
 }

@@ -1,36 +1,39 @@
 {
-  "timestamp": "2026-05-16T09:13:23Z",
+  "timestamp": "2026-05-16T10:17:19Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 4,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
       "slug": "dorotea-bucca",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 668,
+      "new_len": 992
     },
     {
       "slug": "prokop-the-great",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 222,
+      "new_len": 1134
     },
     {
       "slug": "deng-xi",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
-    },
-    {
-      "slug": "east-africa",
-      "status": "enriched",
-      "old_len": 65,
-      "new_len": 1537
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
       "slug": "epic-of-gilgamesh",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 104,
+      "new_len": 1298
+    },
+    {
+      "slug": "latin-america",
+      "status": "enriched",
+      "old_len": 67,
+      "new_len": 1839
     }
   ]
 }
