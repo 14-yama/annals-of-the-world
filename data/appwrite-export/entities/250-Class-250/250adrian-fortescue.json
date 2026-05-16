@@ -11,7 +11,7 @@
       "name": "Adrian Fortescue",
       "label": "Person",
       "callNumber": "250.adrian-fortescue",
-      "summary": "Adrian Henry Timothy Knottesford Fortescue was an English Catholic priest and polymath. An influential liturgist, artist, calligrapher, composer, polyglot, amateur photographer, Byzantine scholar, and adventurer, he was also the founder of the Church of St Hugh of Lincoln in Letchworth.",
+      "summary": "Blessed Adrian Fortescue (c. 1476–1539) was an English knight, member of the Order of St John of Jerusalem (Knights Hospitaller), and martyr under Henry VIII. Born into the Fortescue family — a distinguished English gentry family with a long tradition of royal service — he was twice married and served as a justice of the peace and knight before being arrested and executed during the Henrician Reformation's assault on those who refused to accept royal supremacy over the Church.\n\nFortescue's martyrdom is unusual in that the historical record provides little clarity about the specific charge that condemned him. He was attainted by Act of Parliament in 1534 and executed in 1539, but the exact nature of his offence — whether specific resistance to the Act of Supremacy or a more general allegiance to traditional religion and the papal connection — remains uncertain. This ambiguity did not prevent his beatification: Pope Leo XIII beatified him in 1895 as a martyr of the English Reformation.\n\nAs a member of the Knights of St John, Fortescue represented the ancient tradition of chivalric Catholic piety that the Tudor Reformation was dismantling. His layman's martyrdom — dying not as a priest or bishop but as an English gentleman who refused to abjure his allegiance to the Roman Church — gave his witness a particular character: the faith of the Catholic English gentry as it faced the Reformation's demands for conformity.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,7 +25,7 @@
       "wikidataQid": "Q4685025",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Adrian_Fortescue",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Modern era: industrialization, imperial expansion, and democratic revolutions\", \"type\": \"EventWindow\", \"year\": \"1874-01-14, Warwickshire\"}, {\"title\": \"Spiritual seeking and religious community formation\", \"type\": \"Idea\", \"year\": \"1874-01-14, Warwickshire\"}], \"effects\": [{\"title\": \"Shaped religious practice and spiritual communities\", \"type\": \"Idea\", \"year\": \"1923-02-11\"}, {\"title\": \"Contributed to mass society, world wars, and foundations of contemporary global order\", \"type\": \"Movement\", \"year\": \"1923-02-11\"}], \"relationships\": [{\"sourceSlug\": \"adrian-fortescue\", \"sourceName\": \"Adrian Fortescue\", \"verb\": \"PREACHES\", \"targetSlug\": \"field-250\", \"targetName\": \"Religious Figures\", \"context\": \"Adrian Fortescue: Religious teaching in religious figures\"}, {\"sourceSlug\": \"adrian-fortescue\", \"sourceName\": \"Adrian Fortescue\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"modern\", \"targetName\": \"Modern Era\", \"context\": \"Adrian Fortescue was active during the Modern era\"}], \"places\": [{\"name\": \"Warwickshire\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Adrian Fortescue\", \"type\": \"Reference article\", \"slug\": \"adrian-fortescue\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q4685025\", \"https://en.wikipedia.org/wiki/Adrian_Fortescue\"], \"tags\": [\"Religious Figures\", \"comparative-religion\", \"doctrine-development\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\": [\"Henry VIII's Act of Supremacy (1534) demanded conformity that Catholic gentry like Fortescue refused to provide\", \"Henrician Reformation's suppression of traditional Catholic allegiances targeted laymen as well as clergy\", \"Fortescue's membership in the Knights Hospitaller connected him to a Catholic institution Henry VIII was dismantling\"], \"effects\": [\"His martyrdom contributed to the tradition of English Catholic resistance to the Henrician Reformation\", \"His beatification by Leo XIII in 1895 established his place in the English Catholic hagiographic tradition\", \"His lay martyrdom provided an example for English Catholic gentry who maintained their faith under persecution\", \"His execution illustrated the Henrician Reformation's willingness to attaint and execute prominent gentry for religious non-compliance\"], \"relationships\": [{\"target\": \"knights-hospitaller\", \"verb\": \"OCCURS_IN\", \"note\": \"Was a member of the Order of St John (Knights Hospitaller)\"}, {\"target\": \"henry-viii\", \"verb\": \"OCCURS_IN\", \"note\": \"Was attainted and executed under Henry VIII during the Henrician Reformation\"}, {\"target\": \"english-reformation\", \"verb\": \"OCCURS_IN\", \"note\": \"Was a martyr of the Henrician Reformation, beatified for dying rather than accepting royal supremacy\"}, {\"target\": \"pope-leo-xiii\", \"verb\": \"OCCURS_IN\", \"note\": \"Was beatified by Pope Leo XIII in 1895\"}], \"places\": [{\"name\": \"Warwickshire\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Adrian Fortescue\", \"type\": \"Reference article\", \"slug\": \"adrian-fortescue\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q4685025\", \"https://en.wikipedia.org/wiki/Adrian_Fortescue\"], \"tags\": [\"Religious Figures\", \"comparative-religion\", \"doctrine-development\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\", \"_unsyncedEdits\": true, \"_editLog\": [{\"timestamp\": \"2026-05-16T02:42:07.597376+00:00\", \"editorId\": \"vscode-copilot\", \"field\": \"summary\", \"oldValue\": \"Adrian Henry Timothy Knottesford Fortescue was an English Catholic priest and po\", \"newValue\": \"Blessed Adrian Fortescue (c. 1476–1539) was an English knight, member of the Ord\"}]}",
       "subjectHeadings": [
         "People — Religious Figures — Global — Modern"
       ],
@@ -38,14 +38,20 @@
         "CULTURAL_DIFFUSION"
       ],
       "altNames": [],
-      "importanceScore": 5,
+      "importanceScore": 6,
       "born": null,
       "startDate": null,
       "endDate": null,
       "$id": "adrian-fortescue",
       "$sequence": "225162",
       "$createdAt": "2026-04-05T12:50:16.765+00:00",
-      "$updatedAt": "2026-04-05T12:50:16.765+00:00"
+      "$updatedAt": "2026-04-05T12:50:16.765+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "English knight and Hospitaller beatified as a martyr of the Henrician Reformation, whose death without clear specific charges exemplifies the arbitrary brutality of Henry VIII's assault on traditional Catholic allegiances.",
+        "significanceCategory": "regional"
+      },
+      "_unsyncedEdits": true
     }
   ]
 }
