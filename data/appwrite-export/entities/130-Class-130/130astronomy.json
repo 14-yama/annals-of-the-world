@@ -25,7 +25,104 @@
       "wikidataQid": "Q333",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Astronomy",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Laser%20Towards%20Milky%20Ways%20Centre.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier philosophical traditions in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}, {\"title\": \"Empirical observations in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}, {\"title\": \"Cultural context in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Influenced later thought through astronomy's historical significance\", \"type\": \"Idea\"}, {\"title\": \"Shaped institutions through astronomy's historical significance\", \"type\": \"Idea\"}, {\"title\": \"Transformed practice through astronomy's historical significance\", \"type\": \"Idea\"}], \"relationships\": [{\"sourceSlug\": \"astronomy\", \"sourceName\": \"astronomy\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"astronomy is situated within the Classical (920)\"}, {\"sourceSlug\": \"astronomy\", \"sourceName\": \"astronomy\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"intellectual-tradition-classical\", \"targetName\": \"Intellectual Tradition (Classical)\", \"context\": \"astronomy shaped intellectual tradition during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: astronomy\", \"type\": \"Reference article\", \"slug\": \"astronomy\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q333\", \"https://en.wikipedia.org/wiki/Astronomy\"], \"tags\": [\"academic discipline\", \"Technological Innovations\", \"scientific-paradigm\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"astronomy is remembered as a landmark idea of the Classical era, referenced in 312 Wikipedia language editions. Key lasting impacts include: Influenced intellectual traditions and cultural development.\"}",
+      "detailsJson": {
+        "causes": [
+          "The universal human observation of the regular cycles of the sky — day and night, the lunar month, the solar year, the predictable rising of constellations — and their intimate connection to agriculture, navigation, and ritual created the practical and spiritual motivation for systematic astronomical record-keeping in virtually every ancient culture.",
+          "The development of mathematics — particularly geometry (Greece) and arithmetic (Babylonia, India, China) — provided the computational tools necessary to model and predict celestial motions, transforming observation into quantitative astronomy and enabling the prediction of eclipses, planetary positions, and other celestial events.",
+          "The invention of the telescope (Lippershey, 1608; Galileo's astronomical use, 1609) and the development of spectroscopy (Fraunhofer, 1814; Kirchhoff and Bunsen, 1859) gave astronomers the technological means to observe celestial phenomena beyond naked-eye capability and to determine the chemical composition of stars and galaxies — expanding astronomy from positional to astrophysical science."
+        ],
+        "effects": [
+          "The Copernican Revolution — astronomy's replacement of the Earth-centred cosmos with the Sun-centred solar system, and ultimately with the infinite, directionless universe of modern cosmology — was one of the most consequential intellectual transformations in human history, dethroning humanity from its assumed central position in the cosmos and establishing the authority of mathematical-empirical science over theological tradition.",
+          "Practical astronomy — navigation, calendrical calculation, timekeeping — was essential to the European Age of Discovery: the celestial navigation methods that enabled Portuguese, Spanish, and later Dutch and English ships to sail across oceans and find their way back were the direct practical application of the astronomical knowledge accumulated since ancient times.",
+          "Modern cosmological astronomy — the Big Bang model, dark matter and dark energy, the cosmic microwave background, gravitational waves — has established the scientific picture of a universe 13.8 billion years old, containing two trillion galaxies, expanding from a hot dense state, and composed primarily of forms of matter and energy invisible to normal observation, profoundly challenging any naive human-centred cosmology."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "astronomy",
+            "sourceName": "Astronomy",
+            "verb": "REVOLUTIONISED_BY",
+            "targetSlug": "nicolaus-copernicus",
+            "targetName": "Nicolaus Copernicus (De Revolutionibus, 1543)",
+            "context": "Copernicus's heliocentric model — placing the Sun rather than the Earth at the centre of the solar system — initiated the Copernican Revolution that transformed astronomy, philosophy, and humanity's self-understanding."
+          },
+          {
+            "sourceSlug": "galileo-galilei",
+            "sourceName": "Galileo Galilei (1564–1642)",
+            "verb": "TRANSFORMS",
+            "targetSlug": "astronomy",
+            "targetName": "Astronomy (telescopic revolution)",
+            "context": "Galileo's use of the telescope to observe the moons of Jupiter, the phases of Venus, and the mountains of the Moon provided the first observational confirmation of the Copernican system and inaugurated telescopic astronomy."
+          },
+          {
+            "sourceSlug": "astronomy",
+            "sourceName": "Astronomy",
+            "verb": "ENABLES",
+            "targetSlug": "age-of-discovery",
+            "targetName": "European Age of Discovery (15th–17th centuries)",
+            "context": "Celestial navigation — the practical application of astronomical knowledge to determine position at sea — was essential to the European maritime exploration that transformed the world in the 15th–17th centuries."
+          }
+        ],
+        "places": [
+          {
+            "name": "Global (universal — Mesopotamia, Egypt, Greece, India, China, Americas)",
+            "role": "The universal scope of astronomical observation — present in every ancient civilisation as a practical and intellectual necessity, with multiple independent traditions of systematic sky-watching"
+          },
+          {
+            "name": "Europe (16th–17th century revolution) and Global (modern telescopes)",
+            "role": "The geographic centre of the Copernican Revolution and modern astronomy — European observatories and subsequently global telescope networks and space observatories"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: astronomy",
+            "type": "Reference article",
+            "slug": "astronomy"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q333",
+          "https://en.wikipedia.org/wiki/Astronomy"
+        ],
+        "tags": [
+          "academic discipline",
+          "Technological Innovations",
+          "scientific-paradigm"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "astronomy is remembered as a landmark idea of the Classical era, referenced in 312 Wikipedia language editions. Key lasting impacts include: Influenced intellectual traditions and cultural development.",
+        "summary": "Astronomy is the natural science of celestial objects — stars, planets, moons, comets, asteroids, galaxies, and the universe as a whole — studying their positions, motions, physical properties, chemical composition, and origins through observation and theoretical analysis. It is the oldest of the natural sciences, with its roots in the naked-eye sky observations of ancient Mesopotamia, Egypt, Greece, India, China, and the pre-Columbian Americas, all of which developed systematic astronomical records and calendrical calculations thousands of years before the telescope existed. The regularity and grandeur of celestial phenomena — the seasonal cycle, the lunar calendar, the rising and setting of planets, the predictability of eclipses — made astronomy both practically essential (for agriculture, navigation, and timekeeping) and the paradigmatic domain of human attempts to understand the mathematical order of the cosmos.\n\nThe astronomical revolution of the 16th–17th centuries was one of the most consequential transformations in intellectual history: Copernicus's heliocentric model (De Revolutionibus, 1543) displaced the Earth from the centre of the cosmos; Brahe's precise naked-eye observations provided the data; Kepler's laws of planetary motion (1609–1619) described the elliptical orbits; Galileo's telescopic observations (1609) confirmed the Copernican system; and Newton's Principia Mathematica (1687) provided the gravitational mechanics that explained why planets move as they do. This sequence — the Copernican Revolution — is the archetypal scientific revolution, the model for how paradigms shift, and the event that established the authority of mathematical-empirical natural science over traditional theological cosmology.\n\nModern astronomy encompasses a vast range of sub-disciplines — planetary astronomy, stellar astronomy, galactic astronomy, cosmology, astrobiology — and observes the universe across the entire electromagnetic spectrum (radio, infrared, visible, ultraviolet, X-ray, gamma-ray) as well as through gravitational wave detection (LIGO, 2015) and neutrino astronomy. The James Webb Space Telescope (launched 2021), with its infrared sensitivity, has revealed galaxies forming within 300 million years of the Big Bang, pushing the observational frontier to the universe's earliest epochs.",
+        "subjects": [
+          "Astronomy",
+          "Natural Sciences",
+          "Classical Era",
+          "Cosmology",
+          "History of Science",
+          "Scientific Revolution",
+          "Astrophysics",
+          "Mathematics"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT",
+          "WORLD_SYSTEMS"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 10,
+          "significanceNarrative": "Astronomy is the oldest natural science — present in every ancient civilisation — whose transformation in the Copernican Revolution (Copernicus 1543, Galileo, Kepler, Newton) was one of the most consequential intellectual events in human history: dethroning Earth from the centre of the cosmos, establishing the authority of mathematical-empirical science, and enabling the celestial navigation of the Age of Discovery. Modern astronomy has revealed a universe 13.8 billion years old, containing two trillion galaxies — a cosmological picture that continues to transform human self-understanding.",
+          "significanceCategory": "world-changing"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-20-may2026",
+            "timestamp": "2026-05-16T15:43:18Z",
+            "oldValue": "",
+            "newValue": "Astronomy is the natural science of celestial objects — stars, planets, moons, comets, asteroids, galaxies, and the universe as a whole — studying their positions, motions, physical properties, chemic…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Idea -- Technological Innovations -- Global -- Classical"
       ],
@@ -46,7 +143,8 @@
       "$id": "astronomy",
       "$sequence": "29403",
       "$createdAt": "2026-04-05T12:10:32.016+00:00",
-      "$updatedAt": "2026-04-06T00:51:13.182+00:00"
+      "$updatedAt": "2026-04-06T00:51:13.182+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
