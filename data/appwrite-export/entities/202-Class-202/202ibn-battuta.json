@@ -25,45 +25,7 @@
       "wikidataQid": "Q7331",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Ibn_Battuta",
       "imageUrl": "",
-      "detailsJson": {
-        "causes": [
-          "Islamic tradition of travel for learning (rihla)",
-          "Vast dar al-Islam network of hospitality for scholars",
-          "Personal ambition and curiosity from Tangier's cosmopolitan culture"
-        ],
-        "effects": [
-          "Most extensive pre-modern travelogue ever recorded",
-          "Irreplaceable documentation of 14th-century Islamic world",
-          "Descriptions of Mali, India, and China enrich historical knowledge",
-          "Inspired later European Age of Exploration"
-        ],
-        "relationships": [
-          {
-            "sourceSlug": "ibn-battuta",
-            "sourceName": "Ibn Battuta",
-            "verb": "OCCURS_IN",
-            "targetSlug": "morocco",
-            "targetName": "Morocco",
-            "context": "Born in Tangier, departed and returned to Morocco"
-          },
-          {
-            "sourceSlug": "ibn-battuta",
-            "sourceName": "Ibn Battuta",
-            "verb": "INFLUENCES",
-            "targetSlug": "marco-polo",
-            "targetName": "Marco Polo",
-            "context": "Two greatest medieval travelers — Ibn Battuta covered three times Marco Polo's distance"
-          },
-          {
-            "sourceSlug": "ibn-battuta",
-            "sourceName": "Ibn Battuta",
-            "verb": "OCCURS_IN",
-            "targetSlug": "india",
-            "targetName": "India",
-            "context": "Served as judge in the Delhi Sultanate for eight years"
-          }
-        ]
-      },
+      "detailsJson": "{\"historicalSignificance\": {\"significanceScore\": 8, \"significanceNarrative\": \"Ibn Battuta's journey provides an unparalleled firsthand account of the 14th-century Islamic world, offering insights into the Black Death in Syria and the court of the Delhi Sultanate. His travels also highlight the vast cultural exchange and economic networks of the time.\", \"significanceCategory\": \"continental\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 8, \\\"significanceNarrative\\\": \\\"Ibn Battuta's journey provides an unparalleled firsthand account of the 14th-century Islamic world, offering insights into the Black Death in Syria and the court of the Delhi Sultanate. His travels also highlight the vast cultural exchange and economic networks of the time.\\\", \\\"significanceCategory\\\": \\\"continental\\\"}\", \"timestamp\": \"2026-05-16T07:26:58Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "People — Explorers — Morocco — Medieval"
       ],
@@ -90,7 +52,12 @@
       "$id": "ibn-battuta",
       "$sequence": "165632",
       "$createdAt": "2026-04-05T12:38:05.913+00:00",
-      "$updatedAt": "2026-04-05T12:38:05.913+00:00"
+      "$updatedAt": "2026-04-05T12:38:05.913+00:00",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "Ibn Battuta's journey provides an unparalleled firsthand account of the 14th-century Islamic world, offering insights into the Black Death in Syria and the court of the Delhi Sultanate. His travels also highlight the vast cultural exchange and economic networks of the time.",
+        "significanceCategory": "continental"
+      }
     }
   ]
 }

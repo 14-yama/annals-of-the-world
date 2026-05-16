@@ -1,37 +1,38 @@
 {
-  "timestamp": "2026-05-16T02:02:25Z",
+  "timestamp": "2026-05-16T03:22:45Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "jainism",
-      "status": "enriched",
-      "old_len": 60,
-      "new_len": 1362
-    },
-    {
       "slug": "chad-of-mercia",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "insufficient relationships (1, need >= 3)"
     },
     {
       "slug": "menon-of-pharsalus",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "lucio-marineo-sculo",
       "status": "enriched",
-      "old_len": 121,
-      "new_len": 1871
+      "old_len": 198,
+      "new_len": 921
     },
     {
       "slug": "ad\u00e9mar-de-chabannes",
+      "status": "enriched",
+      "old_len": 666,
+      "new_len": 725
+    },
+    {
+      "slug": "admar-de-chabannes",
+      "status": "enriched",
+      "old_len": 666,
+      "new_len": 1008
+    },
+    {
+      "slug": "trojan-war",
       "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
+      "reason": "Expecting ',' delimiter: line 39 column 1 (char 673)"
     }
   ]
 }
