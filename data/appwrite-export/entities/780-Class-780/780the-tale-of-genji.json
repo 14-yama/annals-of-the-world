@@ -25,7 +25,105 @@
       "wikidataQid": "Q8269",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Tale_of_Genji",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Genji%20emaki%2001003%20002.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier literary tradition in the 500 – 1500 CE\", \"type\": \"Text\", \"year\": \"500\"}, {\"title\": \"Historical events in the 500 – 1500 CE\", \"type\": \"Text\", \"year\": \"500\"}, {\"title\": \"Patron commission in the 500 – 1500 CE\", \"type\": \"Text\", \"year\": \"500\"}], \"effects\": [{\"title\": \"Preserved knowledge through The Tale of Genji's historical significance\", \"type\": \"Text\"}, {\"title\": \"Influenced later works through The Tale of Genji's historical significance\", \"type\": \"Text\"}, {\"title\": \"Defined canon through The Tale of Genji's historical significance\", \"type\": \"Text\"}], \"relationships\": [{\"sourceSlug\": \"the-tale-of-genji\", \"sourceName\": \"The Tale of Genji\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-medieval\", \"targetName\": \"Medieval\", \"context\": \"The Tale of Genji is situated within the Medieval (930)\"}, {\"sourceSlug\": \"the-tale-of-genji\", \"sourceName\": \"The Tale of Genji\", \"verb\": \"TRANSMITS\", \"targetSlug\": \"literary-canon-medieval\", \"targetName\": \"Literary Canon (Medieval)\", \"context\": \"The Tale of Genji contributed to the literary canon of the Medieval era\"}], \"places\": [{\"name\": \"Japan\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: The Tale of Genji\", \"type\": \"Reference article\", \"slug\": \"the-tale-of-genji\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q8269\", \"https://en.wikipedia.org/wiki/The_Tale_of_Genji\"], \"tags\": [\"Japan\", \"literary work\", \"Asia\", \"Historical & Literary Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"The Tale of Genji left a notable mark on Medieval history, documented across 113 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "The extraordinary cultural and literary environment of the Heian court (794–1185 CE) — the concentrated, refined court culture at Heiankyō (Kyoto) with its emphasis on aesthetic sensitivity, literary production, and the cultivation of emotional refinement (aware) — provided both the audience and the cultural vocabulary for the Tale of Genji.",
+          "The kana syllabary — the phonetic Japanese writing system (hiragana and katakana) developed in the 9th century CE, distinct from the Chinese characters (kanji) used for official and male writing — made possible the development of a vernacular Japanese literary tradition in which women writers were central: Murasaki Shikibu and other Heian women writers composed in kana.",
+          "Murasaki Shikibu's specific biographical position — as a lady-in-waiting to Empress Shōshi and a woman of considerable literary education (she apparently had access to Chinese classics and could compose Chinese verse, unusual for women of her era) — gave her both the access to the imperial court world she depicted and the literary resources to render it with psychological depth."
+        ],
+        "effects": [
+          "The Tale of Genji established the psychological novel — prose fiction's capacity to render the interior lives of characters with complexity and depth — as a literary achievement, and was recognised by later critics (most recently, in the context of world literary history) as demonstrating that the novel form can emerge in any literary tradition given the right cultural conditions, not only in 18th-century Europe.",
+          "The Tale of Genji generated the largest commentary tradition of any Japanese literary work — from the 12th century to the present, an unbroken series of interpretive and artistic responses (illustrated manuscripts, retellings, noh plays, kabuki adaptations, manga, anime) — making it the central text of Japanese literary culture, comparable in cultural centrality to Shakespeare in English.",
+          "Murasaki Shikibu's achievement demonstrated the capacity of women writers to produce works of the highest literary ambition — her example was central to the Japanese tradition of women's literature, and the Tale of Genji's global reception (particularly the Waley translation's impact on Virginia Woolf and the Bloomsbury group) contributed to its recognition as world literature."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "murasaki-shikibu",
+            "sourceName": "Murasaki Shikibu (c. 978 – c. 1014, Japanese court lady)",
+            "verb": "AUTHORS",
+            "targetSlug": "the-tale-of-genji",
+            "targetName": "The Tale of Genji (Genji Monogatari, c. 1000–1010 CE, 54 chapters)",
+            "context": "Murasaki Shikibu composed the Tale of Genji c. 1000–1010 CE at the Heian court — widely regarded as the world's first novel and the central text of Japanese literary culture."
+          },
+          {
+            "sourceSlug": "the-tale-of-genji",
+            "sourceName": "Tale of Genji (mono no aware, Buddhist aesthetics, psychological depth)",
+            "verb": "EXEMPLIFIES",
+            "targetSlug": "heian-court-culture",
+            "targetName": "Heian court culture (794–1185 CE, Japan)",
+            "context": "The Tale of Genji is the supreme expression of Heian court culture — its refined Buddhist aesthetics of mono no aware, its elaborate depiction of court ritual and social hierarchy, and its kana prose style define the Heian literary achievement."
+          },
+          {
+            "sourceSlug": "the-tale-of-genji",
+            "sourceName": "Tale of Genji (Waley translation 1925–1933 — Bloomsbury)",
+            "verb": "TRANSMITTED_TO",
+            "targetSlug": "western-modernist-literature",
+            "targetName": "Western Modernist literature (Arthur Waley, Bloomsbury, Virginia Woolf)",
+            "context": "Arthur Waley's English translation (1925–1933) introduced the Tale of Genji to Western readers — Virginia Woolf reviewed it admiringly, and the Bloomsbury group's reception helped establish it as a canonical work of world literature."
+          }
+        ],
+        "places": [
+          {
+            "name": "Heiankyō (Kyoto), Japan — Heian imperial court, 11th century CE",
+            "role": "The Tale of Genji was written at and about the Heian imperial court in Heiankyō (modern Kyoto) — the concentrated court culture of the capital is both the setting and the cultural world of the novel"
+          },
+          {
+            "name": "Japan (millennium-long reception: illustrated manuscripts, noh, kabuki, manga, anime)",
+            "role": "The Tale of Genji has been continuously read, illustrated, adapted, and commented upon in Japan for over a millennium — generating the largest body of artistic response of any Japanese literary work"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: The Tale of Genji",
+            "type": "Reference article",
+            "slug": "the-tale-of-genji"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q8269",
+          "https://en.wikipedia.org/wiki/The_Tale_of_Genji"
+        ],
+        "tags": [
+          "Japan",
+          "literary work",
+          "Asia",
+          "Historical & Literary Texts",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "The Tale of Genji left a notable mark on Medieval history, documented across 113 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.",
+        "summary": "The Tale of Genji (Japanese: 源氏物語, Genji Monogatari) is a novel (or extended prose narrative) by the Japanese court lady and diarist Murasaki Shikibu (c. 978 – c. 1014 or 1025 CE), composed in Early Middle Japanese at the Heian court in the early 11th century CE (c. 1000–1010 CE, though composition may have begun as early as 995). Consisting of 54 chapters and approximately 1,000 pages in most modern translations, it is widely regarded as the world's first novel — or, more carefully, the first prose narrative of sufficient length, psychological depth, and structural complexity to be called novelistic in a meaningful sense. It was written for and read aloud to the ladies of the imperial court by Murasaki Shikibu, a lady-in-waiting to Empress Shōshi.\n\nThe Tale of Genji follows the life, loves, and psychological development of Hikaru Genji, the son of the Japanese emperor and a low-ranking consort (the 'Shining Prince'), through his political marginalisation, numerous love affairs, political exile, and eventual return to favour — and, after Genji's death (not narrated directly), the lives of the next generation. The novel's first part (Chapters 1–33) follows Genji from birth through his political maturity; a transitional chapter ('Wakana' — 'New Herbs') depicts Genji's decline; and the final chapters ('The Uji Chapters', 44–54) follow Kaoru and Niou, younger men connected to Genji, in a more melancholy and unresolved manner. The work is distinguished by its extraordinary psychological complexity — the interior lives of its characters, particularly its women characters, are rendered with a sensitivity and depth unprecedented in world literature — and by the Buddhist aesthetics of mono no aware ('the pathos of things', the bittersweet melancholy of impermanence) that pervades the narrative.\n\nThe Tale of Genji has been continuously read, copied, illustrated, adapted, and commented upon in Japan for over a millennium, generating the largest body of commentary and artistic response of any Japanese literary work. It was translated into modern Japanese by Akiko Yosano (1912) and Junichiro Tanizaki (1941), and into English by Arthur Waley (1925–1933), Edward Seidensticker (1976), and Royall Tyler (2001).",
+        "subjects": [
+          "Japanese Literature",
+          "Medieval Era",
+          "Murasaki Shikibu",
+          "Heian Period",
+          "Novel",
+          "Women Writers",
+          "Japanese Culture",
+          "Asian Literature"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 10,
+          "significanceNarrative": "The Tale of Genji (Murasaki Shikibu, c. 1000–1010 CE) is widely regarded as the world's first novel — a 54-chapter prose narrative of extraordinary psychological depth that established the novelistic exploration of interior life as a literary achievement. It is the central text of Japanese literary culture, generating over a millennium of commentary and artistic response. Its recognition as world literature (through Waley's 1925–1933 translation) contributed to the decentring of the European novel's claim to primacy.",
+          "significanceCategory": "world-changing"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-47-may2026",
+            "timestamp": "2026-05-16T18:14:49Z",
+            "oldValue": "",
+            "newValue": "The Tale of Genji (Japanese: 源氏物語, Genji Monogatari) is a novel (or extended prose narrative) by the Japanese court lady and diarist Murasaki Shikibu (c. 978 – c. 1014 or 1025 CE), composed in Early M…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Historical & Literary Texts -- Japan -- Medieval"
       ],
@@ -47,7 +145,8 @@
       "$id": "the-tale-of-genji",
       "$sequence": "28917",
       "$createdAt": "2026-04-05T12:10:26.402+00:00",
-      "$updatedAt": "2026-04-06T00:51:35.774+00:00"
+      "$updatedAt": "2026-04-06T00:51:35.774+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
