@@ -25,7 +25,90 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [], \"effects\": [], \"relationships\": [{\"sourceSlug\": \"computing-machinery-and-intelligence-1950\", \"sourceName\": \"Computing Machinery and Intelligence (1950)\", \"verb\": \"DEFINES\", \"targetSlug\": \"alan_turing\", \"targetName\": \"Alan Turing\", \"context\": \"Text associated with Alan Turing\"}, {\"sourceSlug\": \"alan_turing\", \"sourceName\": \"Alan Turing\", \"verb\": \"AUTHORS\", \"targetSlug\": \"computing-machinery-and-intelligence-1950\", \"targetName\": \"Computing Machinery and Intelligence (1950)\", \"context\": \"Referenced in person entity\"}], \"places\": [], \"texts\": [], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "Turing's theoretical work on computation — the 1936 paper 'On Computable Numbers', which introduced the Turing machine as a model of universal computation and demonstrated the limits of mechanical computation through the undecidability of the halting problem — gave Turing the foundational theoretical framework from which to address the question of machine intelligence: if a Turing machine can compute any computable function, can it simulate human thought?",
+          "The development of stored-programme electronic computers in the late 1940s — which Turing was directly involved in (the Manchester Mark 1, 1948, and the ACE project at the National Physical Laboratory) — provided the empirical context for the 1950 paper: Turing was writing about what real machines could do, not hypothetical devices, and the Imitation Game was proposed as a practical test that might be conducted with existing technology.",
+          "The philosophical tradition of the mind-body problem — the debate about the relationship between mental states and physical processes, which had become urgent in the context of computing machines that seemed to simulate mental operations — gave Turing's paper its philosophical context: the Imitation Game was proposed as an operational way of cutting through the philosophical difficulties of the traditional question 'Can machines think?'"
+        ],
+        "effects": [
+          "The Turing Test (Imitation Game) became the foundational benchmark for artificial intelligence — used in the Loebner Prize competition (annual Turing Test contest, founded 1990), cited in virtually every introduction to AI and philosophy of mind, and the touchstone for debates about machine consciousness and intelligence from 1950 to the present.",
+          "Turing's proposal of machine learning as the preferred approach to building intelligent machines — 'learning machines' that improve through experience rather than being explicitly programmed — anticipated the neural network and machine learning paradigm that became dominant in the 2010s through deep learning, making his 1950 paper the foundational document of modern AI's most successful approach.",
+          "The 1950 paper's philosophical influence on the philosophy of mind has been immense — its operationalist approach to the question of machine intelligence (replacing 'can machines think?' with a behavioural test) influenced functionalism in philosophy of mind, the debates between Searle's Chinese Room argument and Turing's behaviourist approach, and the entire subsequent philosophy of cognitive science."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "alan-turing",
+            "sourceName": "Alan Turing (1912–1954)",
+            "verb": "AUTHORS",
+            "targetSlug": "computing-machinery-and-intelligence-1950",
+            "targetName": "'Computing Machinery and Intelligence' (1950)",
+            "context": "Turing published the paper in Mind in October 1950, drawing on his theoretical work on computation and his practical experience with early computers to introduce the Imitation Game as a test of machine intelligence."
+          },
+          {
+            "sourceSlug": "computing-machinery-and-intelligence-1950",
+            "sourceName": "'Computing Machinery and Intelligence' (Turing Test)",
+            "verb": "FOUNDS",
+            "targetSlug": "artificial-intelligence",
+            "targetName": "Artificial intelligence as a research programme",
+            "context": "Turing's 1950 paper is the founding document of AI research — its operational definition of intelligence through the Imitation Game, its anticipation and rebuttal of objections to machine intelligence, and its proposal of machine learning all structured the subsequent development of the field."
+          },
+          {
+            "sourceSlug": "computing-machinery-and-intelligence-1950",
+            "sourceName": "Turing Test (1950)",
+            "verb": "CHALLENGED_BY",
+            "targetSlug": "chinese-room-argument",
+            "targetName": "Searle's Chinese Room argument (1980)",
+            "context": "John Searle's Chinese Room thought experiment (1980) was the most influential philosophical challenge to the Turing Test — arguing that passing the Imitation Game requires only syntactic manipulation and does not demonstrate semantic understanding or consciousness."
+          }
+        ],
+        "places": [
+          {
+            "name": "Manchester, England (1950, Turing's working context at Manchester University)",
+            "role": "Turing wrote 'Computing Machinery and Intelligence' while working at the Victoria University of Manchester, where he was involved in the development of the Manchester Mark 1 stored-programme computer"
+          },
+          {
+            "name": "Mind journal (October 1950, publication)",
+            "role": "The paper was published in Mind — the flagship journal of British analytic philosophy — reflecting Turing's intention to address the philosophical community rather than only the computing community"
+          }
+        ],
+        "texts": [],
+        "externalLinks": [],
+        "tags": [],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "",
+        "summary": "'Computing Machinery and Intelligence' is the paper by Alan Turing (1912–1954), published in the philosophical journal Mind in October 1950 — one of the most influential papers in the history of science and philosophy, which inaugurated the field of artificial intelligence research and introduced the foundational thought experiment of machine intelligence: the Turing Test (which Turing called the 'Imitation Game'). The paper begins with the question 'Can machines think?' and immediately reframes it: rather than trying to answer this question (which Turing considers meaningless because of the difficulty of defining 'thinking'), Turing proposes the Imitation Game — a test in which a human interrogator communicates via text with two respondents (one human, one machine) and attempts to determine which is which. If the machine can reliably deceive the interrogator into thinking it is human, Turing proposes, we have a meaningful operational substitute for the question of machine thought.\n\nThe paper covers remarkable philosophical and scientific ground in 14 pages: Turing anticipates and addresses nine objections to machine intelligence (the theological objection, the 'heads in the sand' objection, the mathematical objection based on Gödel's incompleteness theorems, the argument from consciousness, arguments from disabilities, Lady Lovelace's objection about originality, the argument from the continuity of the nervous system, the argument from informality of behaviour, and the argument from extra-sensory perception), and proposes that the most promising approach to building an intelligent machine is through machine learning — 'learning machines' that begin with simple rules and improve through experience, rather than programming all knowledge in advance.\n\nTuring's 1950 paper is the founding document of artificial intelligence as a research programme — his operational definition of intelligence through the Imitation Game, his argument that there is no principled reason why machines cannot exhibit intelligent behaviour, and his proposal of machine learning as the preferred approach have structured the entire subsequent development of AI research, from the symbolic AI of the 1950s–1980s through the neural network revolution of the 1980s–1990s to the deep learning revolution of the 2010s.",
+        "subjects": [
+          "Computer Science",
+          "Modern Era",
+          "Alan Turing",
+          "Artificial Intelligence",
+          "Philosophy of Mind",
+          "Technology",
+          "20th Century",
+          "Machine Learning"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 10,
+          "significanceNarrative": "Turing's 'Computing Machinery and Intelligence' (1950) is the founding document of artificial intelligence — introducing the Turing Test, anticipating machine learning, and structuring the entire subsequent development of AI research from symbolic AI to deep learning. Its influence on philosophy of mind, cognitive science, and the development of computing is incalculable. The Turing Test remains the foundational benchmark for machine intelligence 75 years after its proposal.",
+          "significanceCategory": "world-changing"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-32-may2026",
+            "timestamp": "2026-05-16T16:56:23Z",
+            "oldValue": "",
+            "newValue": "'Computing Machinery and Intelligence' is the paper by Alan Turing (1912–1954), published in the philosophical journal Mind in October 1950 — one of the most influential papers in the history of scien…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts — Philosophical Works — Contemporary"
       ],
@@ -48,7 +131,8 @@
       "$id": "computing_machinery_and_6a928a719961",
       "$sequence": "1039408",
       "$createdAt": "2026-04-06T00:39:29.614+00:00",
-      "$updatedAt": "2026-04-06T00:39:29.614+00:00"
+      "$updatedAt": "2026-04-06T00:39:29.614+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
