@@ -20,64 +20,298 @@
       ],
       "detailsJson": {
         "causes": [
-          "Angevin Empire's vast continental holdings",
-          "Saladin's conquest of Jerusalem (1187) sparking Third Crusade",
-          "Chivalric culture of 12th-century European nobility"
+          "Saladin's conquest of Jerusalem (1187) triggering Pope Gregory VIII's Third Crusade call",
+          "Henry II's death (1189) making Richard king and giving him resources for crusading",
+          "Crusading ideology tying Christian knighthood to reconquest of Holy Land",
+          "Angevin Empire's wealth and power enabling the largest crusading force of the era"
         ],
         "effects": [
-          "Third Crusade securing Christian access to Jerusalem",
-          "Legendary status as ideal medieval warrior-king",
-          "150,000-mark ransom draining English treasury",
-          "Chivalric romance tradition inspired by his exploits",
-          "Angevin Empire maintained despite king's absence",
-          "Model of crusading kingship for later European monarchs"
+          "Third Crusade (1189–1192) — capture of Cyprus, Jaffa, Arsuf victory",
+          "Treaty of Jaffa (1192) securing Christian pilgrimage access to Jerusalem",
+          "Ransom crisis (1192–94) depleting English royal treasury",
+          "Chivalric legend — defining archetype of the warrior-king in Western culture",
+          "Ivanhoe, Crusades fiction, Robin Hood legend — built around Richard's myth",
+          "Diplomatic precedent of Saladin-Richard mutual respect across religious war",
+          "Saladin admired Richard's valor even in opposition — cross-cultural military reputation"
         ],
         "relationships": [
           {
-            "sourceSlug": "richard-the-lionheart",
-            "sourceName": "Richard I",
-            "verb": "DEFINES",
+            "type": "INFLUENCES",
+            "target": "Saladin",
+            "targetSlug": "saladin",
+            "note": "Greatest opponent; mutual military respect across religious war"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Third Crusade",
             "targetSlug": "third-crusade",
-            "targetName": "Third Crusade",
-            "context": "Led the largest crusading army against Saladin"
+            "note": "Led the defining crusade of the medieval period"
           },
           {
-            "sourceSlug": "saladin",
-            "sourceName": "Saladin",
-            "verb": "CAUSES",
-            "targetSlug": "richard-the-lionheart",
-            "targetName": "Richard I",
-            "context": "Saladin's conquests provoked the Third Crusade"
+            "type": "INFLUENCES",
+            "target": "Henry II of England",
+            "targetSlug": "henry-ii-of-england",
+            "note": "Father; rebelled against and succeeded him"
           },
           {
-            "sourceSlug": "richard-the-lionheart",
-            "sourceName": "Richard I",
-            "verb": "OCCURS_IN",
-            "targetSlug": "acre",
-            "targetName": "Acre",
-            "context": "Captured Acre, key victory of the Third Crusade"
+            "type": "INFLUENCES",
+            "target": "Philip II of France",
+            "targetSlug": "philip-ii-of-france",
+            "note": "Crusade partner who deserted and attacked Normandy"
           },
           {
-            "sourceSlug": "richard-the-lionheart",
-            "sourceName": "Richard I",
-            "verb": "OCCURS_IN",
-            "targetSlug": "london",
-            "targetName": "London",
-            "context": "Crowned King of England at Westminster, 1189"
+            "type": "INFLUENCES",
+            "target": "Eleanor of Aquitaine",
+            "targetSlug": "eleanor-of-aquitaine",
+            "note": "Mother who secured his ransom and regency"
           },
           {
-            "sourceSlug": "henry-ii",
-            "sourceName": "Henry II",
-            "verb": "CAUSES",
-            "targetSlug": "richard-the-lionheart",
-            "targetName": "Richard I",
-            "context": "Angevin Empire inherited from father Henry II"
+            "type": "INFLUENCES",
+            "target": "Holy Roman Emperor Henry VI",
+            "targetSlug": "henry-vi-holy-roman-emperor",
+            "note": "Ransomed Richard from Duke Leopold through imperial extortion"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Crusades",
+            "targetSlug": "crusades",
+            "note": "Greatest crusader king — personified crusading ideal"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Jerusalem",
+            "targetSlug": "jerusalem",
+            "note": "Failed to retake the city he campaigned three years to reach"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Battle of Arsuf",
+            "targetSlug": "battle-of-arsuf",
+            "note": "Decisive tactical victory over Saladin's forces (1191)"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "England",
+            "targetSlug": "england",
+            "note": "King of England — spent < 6 months in country during reign"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Holy Land (Israel/Palestine)",
+            "targetSlug": "holy-land",
+            "note": "Theater of his military campaigns"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Cyprus",
+            "targetSlug": "cyprus",
+            "note": "Conquered in 1191; sold to Knights Templar"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Chivalry (concept)",
+            "targetSlug": "chivalry",
+            "note": "Embodied the chivalric ideal in both Christian and Muslim accounts"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Walter Scott",
+            "targetSlug": "walter-scott",
+            "note": "Ivanhoe (1819) made Richard the literary archetype of knighthood"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Angevin Empire",
+            "targetSlug": "angevin-empire",
+            "note": "Ruled England, Normandy, Anjou, Aquitaine"
           }
         ],
-        "places": [],
+        "places": [
+          "Oxford, England (birthplace)",
+          "Acre, Israel (Third Crusade base)",
+          "Chalus-Chabrol, France (death)"
+        ],
         "texts": [],
-        "frameworks": []
-      }
+        "frameworks": [
+          "religious-conflict",
+          "military-history",
+          "state-formation"
+        ],
+        "summary": "Richard I 'the Lionheart' (1157–1199) was King of England, Duke of Normandy, and the most celebrated military commander of the Third Crusade — a warrior king who spent less than six months of his ten-year reign on English soil, yet whose chivalric legend became the central archetype of medieval kingship in Western imagination. Contemporary chroniclers, including Muslim writers like Baha ad-Din and Imad ad-Din, praised his courage and military genius even as they fought against him.\n\nRichard led the Third Crusade (1189–1192) after the catastrophic fall of Jerusalem to Saladin (1187). He captured Cyprus (1191), won the decisive Battle of Arsuf, and retook Jaffa — demonstrating tactical genius that forced Saladin's respect. In a famous moment recorded by both sides, Saladin sent a horse to Richard when his was killed in battle. Though Richard never retook Jerusalem, he negotiated the Treaty of Jaffa (1192) securing Christian access to Jerusalem's holy sites.\n\nOn his return, he was captured by Duke Leopold of Austria and held for ransom — costing England 150,000 marks (roughly three years of national revenue) for his release. He died at 41 from a crossbow wound at the minor castle of Chalus-Chabrol, reportedly forgiving the young bowman who shot him.\n\nHis legacy is paradoxical: as an English king he was an absentee Norman ruler who spoke almost no English; as a military hero he remains the exemplar of crusading chivalry in literature from Ivanhoe to modern fantasy fiction.",
+        "historicalSignificance": {
+          "significanceScore": 8,
+          "significanceCategory": "continental",
+          "significanceNarrative": "Richard the Lionheart led the Third Crusade with military genius that earned the respect of Saladin himself, negotiated Christian access to Jerusalem's holy sites, and became the defining archetype of the warrior-king in Western chivalric tradition — his legend enduring in literature from Ivanhoe to modern fantasy."
+        },
+        "quote": "'I would sell London itself if I could find a buyer.' — Richard I (attributed, on financing the Crusade)",
+        "subjectHeadings": "Richard the Lionheart — Kings and Crusaders — England — Medieval",
+        "subjects": [
+          "England",
+          "Crusades",
+          "medieval Europe",
+          "Holy Land",
+          "chivalry",
+          "Angevin Empire",
+          "Third Crusade",
+          "Saladin",
+          "medieval warfare",
+          "12th century"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Richard I 'the Lionheart' (1157–1199) was King of England, Duke of Normandy, and the most celebrated military commander of the Third Crusade — a warrior king who spent less than six months of his ten-…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.062469+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": [
+              "Angevin Empire's vast continental holdings",
+              "Saladin's conquest of Jerusalem (1187) sparking Third Crusade",
+              "Chivalric culture of 12th-century European nobility"
+            ],
+            "newValue": "[\"Saladin's conquest of Jerusalem (1187) triggering Pope Gregory VIII's Third Crusade call\", \"Henry II's death (1189) making Richard king and giving him resources for crusading\", 'Crusading ideology t…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.062469+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": [
+              "Third Crusade securing Christian access to Jerusalem",
+              "Legendary status as ideal medieval warrior-king",
+              "150,000-mark ransom draining English treasury",
+              "Chivalric romance tradition inspired by his exploits",
+              "Angevin Empire maintained despite king's absence",
+              "Model of crusading kingship for later European monarchs"
+            ],
+            "newValue": "['Third Crusade (1189–1192) — capture of Cyprus, Jaffa, Arsuf victory', 'Treaty of Jaffa (1192) securing Christian pilgrimage access to Jerusalem', 'Ransom crisis (1192–94) depleting English royal tre…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.062469+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": [
+              {
+                "sourceSlug": "richard-the-lionheart",
+                "sourceName": "Richard I",
+                "verb": "DEFINES",
+                "targetSlug": "third-crusade",
+                "targetName": "Third Crusade",
+                "context": "Led the largest crusading army against Saladin"
+              },
+              {
+                "sourceSlug": "saladin",
+                "sourceName": "Saladin",
+                "verb": "CAUSES",
+                "targetSlug": "richard-the-lionheart",
+                "targetName": "Richard I",
+                "context": "Saladin's conquests provoked the Third Crusade"
+              },
+              {
+                "sourceSlug": "richard-the-lionheart",
+                "sourceName": "Richard I",
+                "verb": "OCCURS_IN",
+                "targetSlug": "acre",
+                "targetName": "Acre",
+                "context": "Captured Acre, key victory of the Third Crusade"
+              },
+              {
+                "sourceSlug": "richard-the-lionheart",
+                "sourceName": "Richard I",
+                "verb": "OCCURS_IN",
+                "targetSlug": "london",
+                "targetName": "London",
+                "context": "Crowned King of England at Westminster, 1189"
+              },
+              {
+                "sourceSlug": "henry-ii",
+                "sourceName": "Henry II",
+                "verb": "CAUSES",
+                "targetSlug": "richard-the-lionheart",
+                "targetName": "Richard I",
+                "context": "Angevin Empire inherited from father Henry II"
+              }
+            ],
+            "newValue": "[{'type': 'INFLUENCES', 'target': 'Saladin', 'targetSlug': 'saladin', 'note': 'Greatest opponent; mutual military respect across religious war'}, {'type': 'INFLUENCES', 'target': 'Third Crusade', 'tar…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.062469+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 8, 'significanceCategory': 'continental', 'significanceNarrative': \"Richard the Lionheart led the Third Crusade with military genius that earned the respect of Saladin himself, n…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.062469+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": null,
+            "newValue": "'I would sell London itself if I could find a buyer.' — Richard I (attributed, on financing the Crusade)",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.062469+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": [],
+            "newValue": [
+              "Oxford, England (birthplace)",
+              "Acre, Israel (Third Crusade base)",
+              "Chalus-Chabrol, France (death)"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.062469+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Richard the Lionheart — Kings and Crusaders — England — Medieval",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.062469+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "England",
+              "Crusades",
+              "medieval Europe",
+              "Holy Land",
+              "chivalry",
+              "Angevin Empire",
+              "Third Crusade",
+              "Saladin",
+              "medieval warfare",
+              "12th century"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.062469+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": [],
+            "newValue": [
+              "religious-conflict",
+              "military-history",
+              "state-formation"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.062469+00:00"
+          }
+        ]
+      },
+      "_unsyncedEdits": true
     }
   ]
 }

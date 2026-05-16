@@ -27,77 +27,117 @@
       "imageUrl": "",
       "detailsJson": {
         "causes": [
-          "Mongol imperial tradition and Chagatai Khanate fragmentation",
-          "Central Asian nomadic military culture",
-          "Personal ambition modeled on Genghis Khan"
+          "Mongol imperial legacy of Genghis Khan providing model and legitimacy",
+          "Fragmentation of Mongol khanates creating power vacuum Timur exploited",
+          "Transoxiana's strategic position at the heart of Silk Road trade",
+          "Personal military genius and ruthless elimination of rivals"
         ],
         "effects": [
-          "Devastation of Delhi Sultanate and Middle Eastern cities",
-          "Temporary halt of Ottoman expansion after Ankara (1402)",
-          "Timurid Renaissance in Central Asian art and architecture",
-          "Samarkand as world cultural capital",
-          "Mughal Empire founded by his descendant Babur",
-          "Shift of trade routes due to destruction of established centers"
+          "17 million deaths (est. 5% of world population) — among history's highest death tolls",
+          "Destruction of Delhi sultanate opening India to future Mughal conquest",
+          "Battle of Ankara (1402) — Ottoman Sultan Bayezid I captured; empire temporarily fragmented",
+          "Samarkand as architectural marvel — Registan, Gur-e-Amir, Bibi-Khanym",
+          "Timurid dynasty founding Mughal Empire (Babur) — builders of Taj Mahal",
+          "Disruption of Silk Road trade through Central Asian devastation",
+          "Prolonged Ottoman recovery delaying fall of Constantinople by 50 years"
         ],
         "relationships": [
           {
-            "sourceSlug": "tamerlane",
-            "sourceName": "Tamerlane",
-            "verb": "TRANSFORMS",
-            "targetSlug": "samarkand",
-            "targetName": "Samarkand",
-            "context": "Made Samarkand a world-class cultural capital"
+            "type": "INFLUENCES",
+            "target": "Genghis Khan",
+            "targetSlug": "genghis-khan",
+            "note": "Model and claimed ancestor; Timur revived Mongol imperial tradition"
           },
           {
-            "sourceSlug": "tamerlane",
-            "sourceName": "Tamerlane",
-            "verb": "CAUSES",
+            "type": "INFLUENCES",
+            "target": "Bayezid I (Ottoman)",
+            "targetSlug": "bayezid-i",
+            "note": "Ottoman Sultan captured at Battle of Ankara (1402)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Delhi Sultanate",
+            "targetSlug": "delhi-sultanate",
+            "note": "Sacked Delhi (1398), killing 100,000; permanent damage to sultanate"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Mughal Empire",
+            "targetSlug": "mughal-empire",
+            "note": "His great-great-grandson Babur founded the Mughal Empire"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Babur",
             "targetSlug": "babur",
-            "targetName": "Babur",
-            "context": "Timurid dynasty produced Babur, founder of Mughal Empire"
+            "note": "Timurid prince who founded the Mughal dynasty"
           },
           {
-            "sourceSlug": "tamerlane",
-            "sourceName": "Tamerlane",
-            "verb": "DEFINES",
-            "targetSlug": "ankara",
-            "targetName": "Battle of Ankara",
-            "context": "Defeated Ottoman Sultan Bayezid I, 1402"
+            "type": "INFLUENCES",
+            "target": "Battle of Ankara (1402)",
+            "targetSlug": "battle-of-ankara-1402",
+            "note": "Destroyed Ottoman army; captured Bayezid I"
           },
           {
-            "sourceSlug": "genghis-khan",
-            "sourceName": "Genghis Khan",
-            "verb": "INFLUENCES",
-            "targetSlug": "tamerlane",
-            "targetName": "Tamerlane",
-            "context": "Claimed Chinggisid legacy and conquest model"
-          },
-          {
-            "sourceSlug": "tamerlane",
-            "sourceName": "Tamerlane",
-            "verb": "OCCURS_IN",
+            "type": "INFLUENCES",
+            "target": "Samarkand",
             "targetSlug": "samarkand",
-            "targetName": "Samarkand",
-            "context": "Capital of the Timurid Empire"
+            "note": "Capital adorned with Islamic world's greatest architecture"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Gur-e-Amir mausoleum",
+            "targetSlug": "gur-e-amir",
+            "note": "His magnificent tomb in Samarkand"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Golden Horde",
+            "targetSlug": "golden-horde",
+            "note": "Defeated and destroyed Golden Horde at Terek River (1395)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Baghdad",
+            "targetSlug": "baghdad",
+            "note": "Sacked in 1401; built towers of severed skulls"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Uzbekistan",
+            "targetSlug": "uzbekistan",
+            "note": "Born in Kesh (Shahrisabz), modern Uzbekistan"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Mamluk Sultanate",
+            "targetSlug": "mamluk-sultanate",
+            "note": "Sacked Damascus (1401), displacing thousands of craftsmen to Samarkand"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Silk Road",
+            "targetSlug": "silk-road",
+            "note": "His campaigns disrupted Central Asian trade routes"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Ottoman Empire",
+            "targetSlug": "ottoman-empire",
+            "note": "Battle of Ankara fragmented Ottoman power for 50 years"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Persian literature",
+            "targetSlug": "persian-literature",
+            "note": "His court patronized Persian poetry and scholarship at Samarkand"
           }
         ],
         "places": [
-          {
-            "name": "Samarkand",
-            "role": "Capital"
-          },
-          {
-            "name": "Delhi",
-            "role": "Sacked 1398"
-          },
-          {
-            "name": "Ankara",
-            "role": "Defeated Ottomans 1402"
-          },
-          {
-            "name": "Baghdad",
-            "role": "Sacked 1401"
-          }
+          "Samarkand, Uzbekistan (capital)",
+          "Kesh (Shahrisabz), Uzbekistan (birthplace)",
+          "Delhi, India",
+          "Ankara, Turkey"
         ],
         "texts": [
           {
@@ -108,8 +148,203 @@
         "externalLinks": [],
         "tags": [],
         "thumbnailUrl": "",
-        "quote": "",
-        "legacySummary": ""
+        "quote": "'I am not a man of blood; and God is my witness that in all my wars I have never been the aggressor, and that my enemies have always been the authors of their own calamity.' — Tamerlane (from his purported autobiography, Tuzukat-i-Timuri)",
+        "legacySummary": "",
+        "summary": "Timur (Tamerlane) (1336–1405) was a Turco-Mongol conqueror from Transoxiana who built the last great Mongol empire, conquering from Delhi to Anatolia in a career of systematic devastation that killed an estimated 17 million people — perhaps 5% of the world's population. He claimed descent from Genghis Khan and saw himself as both a Muslim ruler and a world conqueror in the Mongol tradition, combining piety and mass atrocity in equal measure.\n\nTamerlane's campaigns were campaigns of deliberate terror: at Delhi (1398) he massacred 100,000 prisoners before battle; at Baghdad (1401) he built towers of skulls; at Isfahan (1387) he ordered the execution of 70,000 civilians whose severed heads were stacked into pyramids. His speed and logistical mastery were legendary: he defeated the Golden Horde (1395), sacked Delhi (1398), destroyed Damascus (1401), captured the Ottoman Sultan Bayezid I at Ankara (1402), and turned toward China before his death in 1405.\n\nThe paradox of Tamerlane is cultural: while devastating cities across Asia, he adorned his capital Samarkand with the greatest architecture of the Islamic world, employing captured craftsmen to build the Gur-e-Amir mausoleum (his tomb), the Registan, and Bibi-Khanym Mosque. His court was a center of Persian literature and scholarship; he was reportedly a brilliant chess player.\n\nHis empire did not long survive him, but the Timurid dynasty he founded produced Babur — who conquered India and founded the Mughal Empire — making Tamerlane the ancestor of the rulers who built the Taj Mahal.",
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Tamerlane killed approximately 17 million people — 5% of the world's population — in campaigns from Delhi to Ankara, shattered the Ottoman and Delhi sultanates, adorned Samarkand with Islam's greatest architecture, and founded the Timurid dynasty whose descendant Babur established the Mughal Empire."
+        },
+        "subjectHeadings": "Tamerlane — Conquerors and Rulers — Central Asia — Medieval",
+        "subjects": [
+          "Uzbekistan",
+          "Central Asia",
+          "Mongol Empire",
+          "Ottoman Empire",
+          "India",
+          "Medieval Islam",
+          "Silk Road",
+          "Samarkand",
+          "14th century",
+          "military conquest"
+        ],
+        "frameworks": [
+          "empire-building",
+          "military-history",
+          "cultural-exchange"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Timur (Tamerlane) (1336–1405) was a Turco-Mongol conqueror from Transoxiana who built the last great Mongol empire, conquering from Delhi to Anatolia in a career of systematic devastation that killed …",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.063106+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": [
+              "Mongol imperial tradition and Chagatai Khanate fragmentation",
+              "Central Asian nomadic military culture",
+              "Personal ambition modeled on Genghis Khan"
+            ],
+            "newValue": "['Mongol imperial legacy of Genghis Khan providing model and legitimacy', 'Fragmentation of Mongol khanates creating power vacuum Timur exploited', \"Transoxiana's strategic position at the heart of Si…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.063106+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": [
+              "Devastation of Delhi Sultanate and Middle Eastern cities",
+              "Temporary halt of Ottoman expansion after Ankara (1402)",
+              "Timurid Renaissance in Central Asian art and architecture",
+              "Samarkand as world cultural capital",
+              "Mughal Empire founded by his descendant Babur",
+              "Shift of trade routes due to destruction of established centers"
+            ],
+            "newValue": "[\"17 million deaths (est. 5% of world population) — among history's highest death tolls\", 'Destruction of Delhi sultanate opening India to future Mughal conquest', 'Battle of Ankara (1402) — Ottoman S…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.063106+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": [
+              {
+                "sourceSlug": "tamerlane",
+                "sourceName": "Tamerlane",
+                "verb": "TRANSFORMS",
+                "targetSlug": "samarkand",
+                "targetName": "Samarkand",
+                "context": "Made Samarkand a world-class cultural capital"
+              },
+              {
+                "sourceSlug": "tamerlane",
+                "sourceName": "Tamerlane",
+                "verb": "CAUSES",
+                "targetSlug": "babur",
+                "targetName": "Babur",
+                "context": "Timurid dynasty produced Babur, founder of Mughal Empire"
+              },
+              {
+                "sourceSlug": "tamerlane",
+                "sourceName": "Tamerlane",
+                "verb": "DEFINES",
+                "targetSlug": "ankara",
+                "targetName": "Battle of Ankara",
+                "context": "Defeated Ottoman Sultan Bayezid I, 1402"
+              },
+              {
+                "sourceSlug": "genghis-khan",
+                "sourceName": "Genghis Khan",
+                "verb": "INFLUENCES",
+                "targetSlug": "tamerlane",
+                "targetName": "Tamerlane",
+                "context": "Claimed Chinggisid legacy and conquest model"
+              },
+              {
+                "sourceSlug": "tamerlane",
+                "sourceName": "Tamerlane",
+                "verb": "OCCURS_IN",
+                "targetSlug": "samarkand",
+                "targetName": "Samarkand",
+                "context": "Capital of the Timurid Empire"
+              }
+            ],
+            "newValue": "[{'type': 'INFLUENCES', 'target': 'Genghis Khan', 'targetSlug': 'genghis-khan', 'note': 'Model and claimed ancestor; Timur revived Mongol imperial tradition'}, {'type': 'INFLUENCES', 'target': 'Bayezi…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.063106+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 9, 'significanceCategory': 'world-changing', 'significanceNarrative': \"Tamerlane killed approximately 17 million people — 5% of the world's population — in campaigns from Delhi t…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.063106+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": "",
+            "newValue": "'I am not a man of blood; and God is my witness that in all my wars I have never been the aggressor, and that my enemies have always been the authors of their own calamity.' — Tamerlane (from his purp…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.063106+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": [
+              {
+                "name": "Samarkand",
+                "role": "Capital"
+              },
+              {
+                "name": "Delhi",
+                "role": "Sacked 1398"
+              },
+              {
+                "name": "Ankara",
+                "role": "Defeated Ottomans 1402"
+              },
+              {
+                "name": "Baghdad",
+                "role": "Sacked 1401"
+              }
+            ],
+            "newValue": [
+              "Samarkand, Uzbekistan (capital)",
+              "Kesh (Shahrisabz), Uzbekistan (birthplace)",
+              "Delhi, India",
+              "Ankara, Turkey"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.063106+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Tamerlane — Conquerors and Rulers — Central Asia — Medieval",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.063106+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "Uzbekistan",
+              "Central Asia",
+              "Mongol Empire",
+              "Ottoman Empire",
+              "India",
+              "Medieval Islam",
+              "Silk Road",
+              "Samarkand",
+              "14th century",
+              "military conquest"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.063106+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "empire-building",
+              "military-history",
+              "cultural-exchange"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.063106+00:00"
+          }
+        ]
       },
       "subjectHeadings": [
         "People — Military Leaders & Commanders — Central Asia — Medieval"
@@ -135,7 +370,8 @@
       "$id": "tamerlane",
       "$sequence": "1037965",
       "$createdAt": "2026-04-06T00:38:59.486+00:00",
-      "$updatedAt": "2026-04-06T00:38:59.486+00:00"
+      "$updatedAt": "2026-04-06T00:38:59.486+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }

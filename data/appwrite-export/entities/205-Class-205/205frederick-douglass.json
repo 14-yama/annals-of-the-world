@@ -27,48 +27,285 @@
       "imageUrl": "",
       "detailsJson": {
         "causes": [
-          "Personal experience of slavery in Maryland",
-          "Self-education through secretly learning to read",
-          "Abolitionist networks in the North after his escape"
+          "American chattel slavery — the system he escaped and dedicated his life to destroying",
+          "Self-education through the Columbian Orator and Bible — literacy became his liberation",
+          "Escape from slavery in Baltimore (1838) providing freedom to speak",
+          "William Lloyd Garrison's abolitionist movement providing platform and network"
         ],
         "effects": [
-          "Narrative of Frederick Douglass galvanized abolitionist movement",
-          "Recruited African American soldiers for Union Army",
-          "Highest-ranking Black government official of 19th century",
-          "Inspired civil rights movement of 20th century"
+          "Narrative of the Life of Frederick Douglass (1845) — definitive abolitionist autobiography",
+          "'What to the Slave is the Fourth of July?' (1852) — greatest anti-slavery oration",
+          "The North Star newspaper (1847) — leading abolitionist publication",
+          "Counsel to Lincoln on emancipation and Black soldiers",
+          "Advocacy for 13th, 14th, 15th Amendments codifying Black civil rights",
+          "Model of African American intellectual achievement refuting scientific racism",
+          "Enduring symbol of resistance, education, and self-liberation"
         ],
         "relationships": [
           {
-            "sourceSlug": "frederick-douglass",
-            "sourceName": "Frederick Douglass",
-            "verb": "OCCURS_IN",
-            "targetSlug": "united-states",
-            "targetName": "United States",
-            "context": "Escaped slavery to become America's leading abolitionist voice"
-          },
-          {
-            "sourceSlug": "frederick-douglass",
-            "sourceName": "Frederick Douglass",
-            "verb": "INFLUENCES",
+            "type": "INFLUENCES",
+            "target": "Abraham Lincoln",
             "targetSlug": "abraham-lincoln",
-            "targetName": "Abraham Lincoln",
-            "context": "Advised Lincoln on emancipation and Black military service"
+            "note": "Met three times; Lincoln called him 'the most meritorious man'"
           },
           {
-            "sourceSlug": "frederick-douglass",
-            "sourceName": "Frederick Douglass",
-            "verb": "INFLUENCES",
-            "targetSlug": "martin-luther-king-jr",
-            "targetName": "Martin Luther King Jr.",
-            "context": "Douglass's oratory and activism paved the way for 20th century civil rights"
+            "type": "INFLUENCES",
+            "target": "William Lloyd Garrison",
+            "targetSlug": "william-lloyd-garrison",
+            "note": "Early abolitionist mentor; later broke with Garrison over tactics"
           },
           {
-            "sourceSlug": "frederick-douglass",
-            "sourceName": "Frederick Douglass",
-            "verb": "INFLUENCES",
+            "type": "INFLUENCES",
+            "target": "Narrative of the Life (1845)",
+            "targetSlug": "narrative-of-the-life-of-frederick-douglass",
+            "note": "His autobiography refuting proslavery arguments"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "American Civil War",
+            "targetSlug": "american-civil-war",
+            "note": "Advised Lincoln on Black troops; pressed for emancipation"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Abolitionist movement",
+            "targetSlug": "abolitionism-us",
+            "note": "America's foremost abolitionist speaker and writer"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Seneca Falls Convention (1848)",
+            "targetSlug": "seneca-falls-convention",
+            "note": "Only man present; championed women's suffrage"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "13th Amendment",
+            "targetSlug": "thirteenth-amendment",
+            "note": "Abolishing slavery — outcome he campaigned for"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "The North Star (newspaper)",
+            "targetSlug": "the-north-star-newspaper",
+            "note": "Abolitionist newspaper founded 1847"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "United States",
+            "targetSlug": "united-states",
+            "note": "Enslaved in Maryland; free in Massachusetts, New York"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Harriet Tubman",
             "targetSlug": "harriet-tubman",
-            "targetName": "Harriet Tubman",
-            "context": "Both were escaped slaves who became prominent abolitionists"
+            "note": "Fellow freedom fighter; both former enslaved Marylanders"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Harriet Beecher Stowe",
+            "targetSlug": "harriet-beecher-stowe",
+            "note": "Met and influenced Uncle Tom's Cabin author"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Civil rights movement",
+            "targetSlug": "civil-rights-movement-usa",
+            "note": "Direct intellectual predecessor to 20th-century civil rights"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Ulysses S. Grant",
+            "targetSlug": "ulysses-s-grant",
+            "note": "Advised Grant on Reconstruction and civil rights enforcement"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Susan B. Anthony",
+            "targetSlug": "susan-b-anthony",
+            "note": "Alliance between abolitionism and women's suffrage"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "American slavery",
+            "targetSlug": "american-slavery",
+            "note": "Born into and escaped the institution he spent his life destroying"
+          }
+        ],
+        "summary": "Frederick Douglass (c. 1818–1895) was an American abolitionist, orator, writer, and statesman who escaped slavery at age 20 and became the foremost African American intellectual and activist of the 19th century. His Narrative of the Life of Frederick Douglass (1845), written when he was 27, is one of the most powerful autobiographical works in American literature — a first-person refutation of the proslavery argument, demonstrating with searing clarity that enslaved people were fully human persons.\n\nDouglass's oratory was legendary. As a Black man who had been enslaved, his physical presence and devastating eloquence destroyed the claim that African Americans were intellectually inferior. His July 4, 1852 speech, 'What to the Slave is the Fourth of July?' — delivered in Rochester, New York — is considered among the greatest speeches in American history: 'This Fourth July is yours, not mine. You may rejoice, I must mourn.'\n\nHe advised Presidents Lincoln and Grant, campaigned for the 13th, 14th, and 15th Amendments, founded the abolitionist newspaper The North Star, and late in life championed women's suffrage (he was the only man to attend the Seneca Falls Convention, 1848). Lincoln called him 'the most meritorious man in the United States.'\n\nDouglass demonstrated through his own life that the human capacity for self-education, oratory, and moral leadership could not be bound by chains — his life was the argument against slavery.",
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Frederick Douglass escaped slavery to become America's foremost abolitionist, whose autobiography and oratory demolished the intellectual case for slavery, advised Lincoln during the Civil War, and established the template of African American intellectual leadership that extended directly to W.E.B. Du Bois and the civil rights movement."
+        },
+        "quote": "'If there is no struggle, there is no progress.' — Frederick Douglass",
+        "places": [
+          "Talbot County, Maryland (birthplace, enslaved)",
+          "Baltimore, Maryland (enslaved)",
+          "Rochester, New York (home base)",
+          "Washington D.C. (later career)"
+        ],
+        "subjectHeadings": "Frederick Douglass — Abolitionists and Civil Rights Leaders — United States — Modern",
+        "subjects": [
+          "United States",
+          "abolitionism",
+          "slavery",
+          "civil rights",
+          "American Civil War",
+          "oratory",
+          "autobiography",
+          "19th century",
+          "African American history",
+          "journalism"
+        ],
+        "frameworks": [
+          "liberation-theology",
+          "social-revolution",
+          "human-rights"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Frederick Douglass (c. 1818–1895) was an American abolitionist, orator, writer, and statesman who escaped slavery at age 20 and became the foremost African American intellectual and activist of the 19…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.060120+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": [
+              "Personal experience of slavery in Maryland",
+              "Self-education through secretly learning to read",
+              "Abolitionist networks in the North after his escape"
+            ],
+            "newValue": "['American chattel slavery — the system he escaped and dedicated his life to destroying', 'Self-education through the Columbian Orator and Bible — literacy became his liberation', 'Escape from slavery…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.060120+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": [
+              "Narrative of Frederick Douglass galvanized abolitionist movement",
+              "Recruited African American soldiers for Union Army",
+              "Highest-ranking Black government official of 19th century",
+              "Inspired civil rights movement of 20th century"
+            ],
+            "newValue": "['Narrative of the Life of Frederick Douglass (1845) — definitive abolitionist autobiography', \"'What to the Slave is the Fourth of July?' (1852) — greatest anti-slavery oration\", 'The North Star news…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.060120+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": [
+              {
+                "sourceSlug": "frederick-douglass",
+                "sourceName": "Frederick Douglass",
+                "verb": "OCCURS_IN",
+                "targetSlug": "united-states",
+                "targetName": "United States",
+                "context": "Escaped slavery to become America's leading abolitionist voice"
+              },
+              {
+                "sourceSlug": "frederick-douglass",
+                "sourceName": "Frederick Douglass",
+                "verb": "INFLUENCES",
+                "targetSlug": "abraham-lincoln",
+                "targetName": "Abraham Lincoln",
+                "context": "Advised Lincoln on emancipation and Black military service"
+              },
+              {
+                "sourceSlug": "frederick-douglass",
+                "sourceName": "Frederick Douglass",
+                "verb": "INFLUENCES",
+                "targetSlug": "martin-luther-king-jr",
+                "targetName": "Martin Luther King Jr.",
+                "context": "Douglass's oratory and activism paved the way for 20th century civil rights"
+              },
+              {
+                "sourceSlug": "frederick-douglass",
+                "sourceName": "Frederick Douglass",
+                "verb": "INFLUENCES",
+                "targetSlug": "harriet-tubman",
+                "targetName": "Harriet Tubman",
+                "context": "Both were escaped slaves who became prominent abolitionists"
+              }
+            ],
+            "newValue": "[{'type': 'INFLUENCES', 'target': 'Abraham Lincoln', 'targetSlug': 'abraham-lincoln', 'note': \"Met three times; Lincoln called him 'the most meritorious man'\"}, {'type': 'INFLUENCES', 'target': 'Willi…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.060120+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 9, 'significanceCategory': 'world-changing', 'significanceNarrative': \"Frederick Douglass escaped slavery to become America's foremost abolitionist, whose autobiography and orato…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.060120+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": null,
+            "newValue": "'If there is no struggle, there is no progress.' — Frederick Douglass",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.060120+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": null,
+            "newValue": [
+              "Talbot County, Maryland (birthplace, enslaved)",
+              "Baltimore, Maryland (enslaved)",
+              "Rochester, New York (home base)",
+              "Washington D.C. (later career)"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.060120+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Frederick Douglass — Abolitionists and Civil Rights Leaders — United States — Modern",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.060120+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "United States",
+              "abolitionism",
+              "slavery",
+              "civil rights",
+              "American Civil War",
+              "oratory",
+              "autobiography",
+              "19th century",
+              "African American history",
+              "journalism"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.060120+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "liberation-theology",
+              "social-revolution",
+              "human-rights"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.060120+00:00"
           }
         ]
       },
@@ -97,7 +334,8 @@
       "$id": "frederick-douglass",
       "$sequence": "293119",
       "$createdAt": "2026-04-05T13:03:43.298+00:00",
-      "$updatedAt": "2026-04-05T13:03:43.298+00:00"
+      "$updatedAt": "2026-04-05T13:03:43.298+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }

@@ -27,41 +27,276 @@
       "imageUrl": "",
       "detailsJson": {
         "causes": [
-          "CERN's need for document sharing between physicists",
-          "Hypertext concept pioneered by Ted Nelson and Douglas Engelbart",
-          "Internet infrastructure (TCP/IP) already existed as foundation"
+          "CERN's need to manage distributed scientific knowledge among thousands of researchers",
+          "Ted Nelson's hypertext concept (1965) providing theoretical foundation",
+          "Internet's TCP/IP infrastructure (1983) providing the transport layer",
+          "NeXT Computer platform enabling rapid prototype development"
         ],
         "effects": [
-          "World Wide Web transformed global communication",
-          "E-commerce revolution created trillion-dollar economy",
-          "Social media reshaped politics and culture",
-          "Open web standards prevented proprietary control",
-          "Digital divide became new form of inequality"
+          "World Wide Web (1991) — open information system transforming human communication",
+          "HTTP, HTML, and URL — foundational protocols of all web activity",
+          "First website at CERN (info.cern.ch) operational 1991",
+          "W3C (1994) — standards body governing web interoperability",
+          "e-commerce, search engines, social media — enabled by Web's open architecture",
+          "Wikipedia, Google, Amazon — all rest on Berners-Lee's free protocols",
+          "World Wide Web Foundation promoting universal access as human right"
         ],
         "relationships": [
           {
-            "sourceSlug": "tim-berners-lee",
-            "sourceName": "Tim Berners-Lee",
-            "verb": "CAUSES",
+            "type": "INFLUENCES",
+            "target": "World Wide Web",
+            "targetSlug": "world-wide-web",
+            "note": "Inventor of HTTP, HTML, URL — the Web's protocols"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "CERN",
+            "targetSlug": "cern",
+            "note": "Proposed and built the Web at CERN (1989–1991)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Internet",
+            "targetSlug": "internet",
+            "note": "Built the Web on top of existing Internet infrastructure"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "W3C",
+            "targetSlug": "w3c",
+            "note": "Founded World Wide Web Consortium (1994) for open standards"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Google",
+            "targetSlug": "google",
+            "note": "Google's search engine built on Web's open protocols"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Wikipedia",
+            "targetSlug": "wikipedia",
+            "note": "Open knowledge project enabled by Web's open architecture"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Ted Nelson",
+            "targetSlug": "ted-nelson",
+            "note": "Invented hypertext concept Berners-Lee built upon"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Vint Cerf",
+            "targetSlug": "vint-cerf",
+            "note": "TCP/IP inventor whose Internet the Web runs on"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Digital Revolution",
             "targetSlug": "digital-revolution",
-            "targetName": "Digital Revolution",
-            "context": "The World Wide Web is the primary interface of the digital revolution"
+            "note": "Web is the defining technology of the Digital Revolution"
           },
           {
-            "sourceSlug": "tim-berners-lee",
-            "sourceName": "Tim Berners-Lee",
-            "verb": "OCCURS_IN",
+            "type": "OCCURS_IN",
+            "target": "United Kingdom",
             "targetSlug": "united-kingdom",
-            "targetName": "United Kingdom",
-            "context": "British scientist, born in London"
+            "note": "British scientist educated and born in London"
           },
           {
-            "sourceSlug": "tim-berners-lee",
-            "sourceName": "Tim Berners-Lee",
-            "verb": "INFLUENCES",
-            "targetSlug": "alan-turing",
-            "targetName": "Alan Turing",
-            "context": "Built on Turing's theoretical foundations of computation"
+            "type": "OCCURS_IN",
+            "target": "Switzerland",
+            "targetSlug": "switzerland",
+            "note": "Invented the Web at CERN, Geneva"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "e-commerce",
+            "targetSlug": "e-commerce",
+            "note": "Web's open architecture enabled Amazon, eBay, global trade"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Social media",
+            "targetSlug": "social-media",
+            "note": "Facebook, Twitter — all built on Web's protocol stack"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Solid (project)",
+            "targetSlug": "solid-project",
+            "note": "His current project to decentralize web data"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Open source movement",
+            "targetSlug": "open-source",
+            "note": "His royalty-free decision established open Web principle"
+          }
+        ],
+        "summary": "Sir Tim Berners-Lee (born 1955) is a British computer scientist who invented the World Wide Web in 1989 while working at CERN in Geneva — creating the foundational protocols (HTTP, HTML, URL) that connected the world's computers into an open, globally accessible information system. His invention is arguably the single most transformative technology of the 20th century, reshaping commerce, democracy, science, culture, and human communication more radically than any invention since the printing press.\n\nBerners-Lee's insight was to combine hypertext (clickable links between documents) with the Internet's existing TCP/IP infrastructure, and to make the resulting system royalty-free and openly available to all. His proposal at CERN (1989), his NeXT computer running the first web server (December 25, 1990), and his decision not to patent the Web — instead dedicating it to humanity — were choices of extraordinary consequence. The Web's open architecture was the precondition for everything from Wikipedia and Google to e-commerce and social media.\n\nHe founded the World Wide Web Consortium (W3C) at MIT in 1994 to govern web standards, ensuring the Web remained vendor-neutral and interoperable. In 2009 he founded the World Wide Web Foundation to promote universal web access as a human right. In recent years he has led initiatives to decentralize the web and restore user data sovereignty through his Solid project.\n\n'The Web as I envisaged it, we have not seen it yet,' he has said — advocating for a more open, decentralized Web that fulfills its democratic potential.",
+        "historicalSignificance": {
+          "significanceScore": 10,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Tim Berners-Lee invented the World Wide Web in 1989 and gave it to humanity for free — his open protocols (HTTP, HTML, URL) created the information infrastructure that transformed commerce, democracy, science, and human communication more radically than any technology since Gutenberg's press."
+        },
+        "quote": "'The Web as I envisaged it, we have not seen it yet. The future is still so much bigger than the past.' — Tim Berners-Lee",
+        "places": [
+          "CERN, Geneva, Switzerland (Web invented)",
+          "London, England (birthplace)",
+          "MIT, Cambridge, USA (W3C)"
+        ],
+        "subjectHeadings": "Tim Berners-Lee — Computer Scientists and Inventors — United Kingdom — Contemporary",
+        "subjects": [
+          "United Kingdom",
+          "internet",
+          "World Wide Web",
+          "computing",
+          "information technology",
+          "open source",
+          "CERN",
+          "digital revolution",
+          "20th century",
+          "technology"
+        ],
+        "frameworks": [
+          "technological-change",
+          "information-age",
+          "globalization"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Sir Tim Berners-Lee (born 1955) is a British computer scientist who invented the World Wide Web in 1989 while working at CERN in Geneva — creating the foundational protocols (HTTP, HTML, URL) that con…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.059545+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": [
+              "CERN's need for document sharing between physicists",
+              "Hypertext concept pioneered by Ted Nelson and Douglas Engelbart",
+              "Internet infrastructure (TCP/IP) already existed as foundation"
+            ],
+            "newValue": "[\"CERN's need to manage distributed scientific knowledge among thousands of researchers\", \"Ted Nelson's hypertext concept (1965) providing theoretical foundation\", \"Internet's TCP/IP infrastructure (1…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.059545+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": [
+              "World Wide Web transformed global communication",
+              "E-commerce revolution created trillion-dollar economy",
+              "Social media reshaped politics and culture",
+              "Open web standards prevented proprietary control",
+              "Digital divide became new form of inequality"
+            ],
+            "newValue": "['World Wide Web (1991) — open information system transforming human communication', 'HTTP, HTML, and URL — foundational protocols of all web activity', 'First website at CERN (info.cern.ch) operation…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.059545+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": [
+              {
+                "sourceSlug": "tim-berners-lee",
+                "sourceName": "Tim Berners-Lee",
+                "verb": "CAUSES",
+                "targetSlug": "digital-revolution",
+                "targetName": "Digital Revolution",
+                "context": "The World Wide Web is the primary interface of the digital revolution"
+              },
+              {
+                "sourceSlug": "tim-berners-lee",
+                "sourceName": "Tim Berners-Lee",
+                "verb": "OCCURS_IN",
+                "targetSlug": "united-kingdom",
+                "targetName": "United Kingdom",
+                "context": "British scientist, born in London"
+              },
+              {
+                "sourceSlug": "tim-berners-lee",
+                "sourceName": "Tim Berners-Lee",
+                "verb": "INFLUENCES",
+                "targetSlug": "alan-turing",
+                "targetName": "Alan Turing",
+                "context": "Built on Turing's theoretical foundations of computation"
+              }
+            ],
+            "newValue": "[{'type': 'INFLUENCES', 'target': 'World Wide Web', 'targetSlug': 'world-wide-web', 'note': \"Inventor of HTTP, HTML, URL — the Web's protocols\"}, {'type': 'INFLUENCES', 'target': 'CERN', 'targetSlug':…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.059545+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 10, 'significanceCategory': 'world-changing', 'significanceNarrative': \"Tim Berners-Lee invented the World Wide Web in 1989 and gave it to humanity for free — his open protocols …",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.059545+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": null,
+            "newValue": "'The Web as I envisaged it, we have not seen it yet. The future is still so much bigger than the past.' — Tim Berners-Lee",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.059545+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": null,
+            "newValue": [
+              "CERN, Geneva, Switzerland (Web invented)",
+              "London, England (birthplace)",
+              "MIT, Cambridge, USA (W3C)"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.059545+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Tim Berners-Lee — Computer Scientists and Inventors — United Kingdom — Contemporary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.059545+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "United Kingdom",
+              "internet",
+              "World Wide Web",
+              "computing",
+              "information technology",
+              "open source",
+              "CERN",
+              "digital revolution",
+              "20th century",
+              "technology"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.059545+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "technological-change",
+              "information-age",
+              "globalization"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-61-may2026",
+            "timestamp": "2026-05-16T23:07:57.059545+00:00"
           }
         ]
       },
@@ -90,7 +325,8 @@
       "$id": "tim-berners-lee",
       "$sequence": "706518",
       "$createdAt": "2026-04-05T15:13:04.040+00:00",
-      "$updatedAt": "2026-04-05T15:13:04.040+00:00"
+      "$updatedAt": "2026-04-05T15:13:04.040+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
