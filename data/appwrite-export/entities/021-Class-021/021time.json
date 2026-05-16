@@ -11,7 +11,7 @@
       "name": "time",
       "label": "Idea",
       "callNumber": "021.time",
-      "summary": "Dimension in which events can be ordered from the past through the present into the future",
+      "summary": "\n\n**Identity & Significance**: The concept of time is a fundamental aspect of human understanding, governing our perception of the past, present, and future. It is a dimension that allows us to order events chronologically, enabling us to make sense of the world around us.\n\n**What Happened**: The measurement of time has been a crucial factor in the development of various cultures and civilizations, with different societies adopting unique calendars and methods to track the passage of time. For example, ancient Mesopotamians used a sexagesimal system based on 60, which is still reflected in our modern clock faces. Similarly, the Mayans developed a sophisticated calendar system that incorporated interlocking cycles to measure time.\n\n**Legacy & Consequence**: The concept of time has had a profound impact on human society, influencing everything from scientific inquiry and philosophical debates to artistic expression and cultural practices. The development of modern chronochemistry has allowed us to study the age of materials in detail, while the notion of time zones has facilitated global communication and commerce.\n\n**The Power of Time**: 'Time is what we want most, yet what we use worst,' said William Penn. This poignant observation highlights the dual nature of time – a resource we strive for yet squander through our daily routines.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,19 @@
       "wikidataQid": "Q11471",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Time",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/MontreGousset001.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier philosophical traditions in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}, {\"title\": \"Empirical observations in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}, {\"title\": \"Cultural context in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Influenced later thought through time's historical significance\", \"type\": \"Idea\"}, {\"title\": \"Shaped institutions through time's historical significance\", \"type\": \"Idea\"}, {\"title\": \"Transformed practice through time's historical significance\", \"type\": \"Idea\"}], \"relationships\": [{\"sourceSlug\": \"time\", \"sourceName\": \"time\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"time is situated within the Classical (920)\"}, {\"sourceSlug\": \"time\", \"sourceName\": \"time\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"intellectual-tradition-classical\", \"targetName\": \"Intellectual Tradition (Classical)\", \"context\": \"time shaped intellectual tradition during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: time\", \"type\": \"Reference article\", \"slug\": \"time\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q11471\", \"https://en.wikipedia.org/wiki/Time\"], \"tags\": [\"scalar quantity\", \"Virtue Ethics\", \"ethical-framework\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"time is remembered as a landmark idea of the Classical era, referenced in 253 Wikipedia language editions. Key lasting impacts include: Influenced intellectual traditions and cultural development.\"}",
+      "detailsJson": "{\"causes\":[\"The development of astronomical observations allowed ancient civilizations to track celestial events and develop calendars.\"],\"effects\":[\"The invention of clocks and watches enabled humans to accurately measure time, transforming industries and societies worldwide.\"],\"relationships\":[{\"sourceSlug\":\"astronomical-observations\",\"sourceName\":\"Astronomical Observations\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"time\",\"targetName\":\"Time\",\"context\":\"The measurement of celestial bodies led to the creation of calendars and timekeeping systems.\"},{\"sourceSlug\":\"mayan-calendars\",\"sourceName\":\"Mayan Calendars\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"time\",\"targetName\":\"Time\",\"context\":\"The Mayans' sophisticated calendar system incorporated interlocking cycles to measure time.\"},{\"sourceSlug\":\"modern-chronochemistry\",\"sourceName\":\"Modern Chronochemistry\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"time\",\"targetName\":\"Time\",\"context\":\"Chronochemistry has allowed us to study the age of materials with precision.\"},{\"sourceSlug\":\"global-communication\",\"sourceName\":\"Global Communication\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"time\",\"targetName\":\"Time\",\"context\":\"The creation of time zones has enabled global communication and commerce.\"},{\"sourceSlug\":\"artistic-expression\",\"sourceName\":\"Artistic Expression\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"time\",\"targetName\":\"Time\",\"context\":\"The concept of time has inspired various artistic movements and expressions.\"},{\"sourceSlug\":\"philosophical-debates\",\"sourceName\":\"Philosophical Debates\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"time\",\"targetName\":\"Time\",\"context\":\"The notion of time has been central to philosophical discussions throughout history.\"},{\"sourceSlug\":\"scientific-inquiry\",\"sourceName\":\"Scientific Inquiry\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"time\",\"targetName\":\"Time\",\"context\":\"The development of modern science has been deeply tied to our understanding of time.\"}],\"places\":[{\"name\":\"Mesopotamia, Middle East\",\"role\":\"Birthplace\"},{\"name\":\"Mayan Territory, Central America\",\"role\":\"Hub for Calendar Development\"}],\"texts\":[{\"title\":\"Wikipedia: time\",\"type\":\"Reference article\",\"slug\":\"time\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q11471\",\"https://en.wikipedia.org/wiki/Time\"],\"tags\":[\"scalar quantity\",\"Virtue Ethics\",\"ethical-framework\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"time is remembered as a landmark idea of the Classical era, referenced in 253 Wikipedia language editions. Key lasting impacts include: Influenced intellectual traditions and cultural development.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"The concept of time has had a profound impact on human society, influencing everything from scientific inquiry and philosophical debates to artistic expression and cultural practices.\",\"significanceCategory\":\"regional\"},\"_editLog\":[],\"_unsyncedEdits\":false}",
       "subjectHeadings": [
         "Idea -- Virtue Ethics -- Global -- Classical"
       ],
       "subjects": [
-        "scalar quantity",
-        "Virtue Ethics"
+        "Time",
+        "Chronology",
+        "Calendar Systems",
+        "Astronomical Observations",
+        "Scientific Inquiry"
       ],
       "frameworks": [
-        "ETHICAL_FRAMEWORK",
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "CULTURAL_TRANSMISSION"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -46,7 +47,12 @@
       "$id": "time",
       "$sequence": "24302",
       "$createdAt": "2026-04-05T12:09:28.340+00:00",
-      "$updatedAt": "2026-04-06T00:51:09.199+00:00"
+      "$updatedAt": "2026-04-06T00:51:09.199+00:00",
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "The concept of time has had a profound impact on human society, influencing everything from scientific inquiry and philosophical debates to artistic expression and cultural practices.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

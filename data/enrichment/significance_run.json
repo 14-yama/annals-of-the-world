@@ -1,41 +1,42 @@
 {
-  "generatedAt": "2026-05-16T04:50:06Z",
+  "generatedAt": "2026-05-16T06:09:28Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "results": [
-    {
-      "slug": "near-east",
-      "status": "ok",
-      "score": 8,
-      "category": "regional"
-    },
     {
       "slug": "ibn-battuta",
       "status": "error",
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "vedius-pollio",
+      "slug": "richard-whittington",
       "status": "ok",
       "score": 5,
       "category": "regional"
     },
     {
-      "slug": "richard-whittington",
+      "slug": "xu-xiake",
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
+    },
+    {
+      "slug": "anthony-henday",
       "status": "error",
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "xu-xiake",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "slug": "carl-anton-larsen",
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 2,
-    "failed": 3
+    "entities_scored": 3,
+    "failed": 2
   }
 }
