@@ -27,41 +27,276 @@
       "imageUrl": "",
       "detailsJson": {
         "causes": [
-          "Privileged education unusual for women of her era",
-          "Crimean War exposed catastrophic military hospital conditions",
-          "Personal calling to nursing despite family opposition"
+          "Crimean War (1853–1856) exposing catastrophic military hospital conditions",
+          "Victorian England's negligence of nursing as a profession or science",
+          "Statistical revolution in public health pioneered by William Farr",
+          "Personal religious calling and financial independence enabling defiance of social norms"
         ],
         "effects": [
-          "Modern nursing profession established",
-          "Hospital sanitation reforms saved millions of lives",
-          "Pioneered use of statistics in public health",
-          "Military medical care permanently reformed",
-          "International Nurses Day celebrates her legacy"
+          "Foundation of modern professional nursing and nursing education",
+          "Nightingale School of Nursing at St Thomas' Hospital (1860) — first in the world",
+          "Evidence-based hospital design reform reducing infection mortality",
+          "Pioneer of data visualization in public health (polar area charts)",
+          "Reduction of Crimean hospital death rate from 42% to 2%",
+          "Transformation of Indian colonial public health policy",
+          "Standardization of hospital statistics and medical record-keeping"
         ],
         "relationships": [
           {
-            "sourceSlug": "florence-nightingale",
-            "sourceName": "Florence Nightingale",
-            "verb": "OCCURS_IN",
-            "targetSlug": "united-kingdom",
-            "targetName": "United Kingdom",
-            "context": "British reformer who transformed nursing and public health"
+            "type": "OCCURS_IN",
+            "target": "Crimean War",
+            "targetSlug": "crimean-war",
+            "note": "Theatre of her nursing reform"
           },
           {
-            "sourceSlug": "florence-nightingale",
-            "sourceName": "Florence Nightingale",
-            "verb": "INFLUENCES",
-            "targetSlug": "red-cross",
-            "targetName": "Red Cross",
-            "context": "Her Crimean War work inspired international humanitarian medical organizations"
+            "type": "INFLUENCES",
+            "target": "Nursing profession",
+            "targetSlug": "nursing-profession",
+            "note": "Founded modern nursing"
           },
           {
-            "sourceSlug": "florence-nightingale",
-            "sourceName": "Florence Nightingale",
-            "verb": "INFLUENCES",
-            "targetSlug": "marie-curie",
-            "targetName": "Marie Curie",
-            "context": "Both pioneered contributions to medicine during wartime as women"
+            "type": "INFLUENCES",
+            "target": "Evidence-based medicine",
+            "targetSlug": "evidence-based-medicine",
+            "note": "Pioneered statistical approach to healthcare"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Public health reform",
+            "targetSlug": "public-health-reform",
+            "note": "Transformed hospital sanitation standards"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "William Farr",
+            "targetSlug": "william-farr",
+            "note": "Collaborated on medical statistics"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Victorian Britain",
+            "targetSlug": "victorian-britain",
+            "note": "Social context of her reforms"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Data visualization",
+            "targetSlug": "data-visualization",
+            "note": "Invented polar area diagram for mortality data"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Ottoman Empire",
+            "targetSlug": "ottoman-empire",
+            "note": "Scutari hospital located in Ottoman territory"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "British Army Medical Corps",
+            "targetSlug": "british-army-medical-corps",
+            "note": "Forced sanitation reform"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "International Red Cross",
+            "targetSlug": "international-red-cross",
+            "note": "Inspired parallel humanitarian medical movement"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Mary Seacole",
+            "targetSlug": "mary-seacole",
+            "note": "Contemporary Crimean War nurse"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "India colonial health policy",
+            "targetSlug": "india-colonial-health",
+            "note": "Lobbied for sanitary improvements in India"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Women in medicine",
+            "targetSlug": "women-in-medicine",
+            "note": "Opened doors for professional women in healthcare"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Modern hospital design",
+            "targetSlug": "modern-hospital-design",
+            "note": "Notes on Nursing and hospital design standards"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "World Health Organization (WHO)",
+            "targetSlug": "world-health-organization",
+            "note": "Intellectual ancestor of global public health"
+          }
+        ],
+        "summary": "Florence Nightingale (1820–1910) was a British nurse, statistician, and social reformer who transformed medicine and established nursing as a respected profession. Born into a wealthy English family, she defied Victorian conventions to pursue a calling in healthcare, becoming the most celebrated nurse of the 19th century. Her work during the Crimean War (1853–1856) remains one of history's greatest demonstrations of evidence-based public health reform.\n\nDeployed to military hospitals in Scutari, Nightingale found catastrophic conditions—overcrowded wards, contaminated water, and rampant infection. Using meticulous data collection and her pioneering polar area diagrams (an early form of infographic), she proved that most soldier deaths resulted from preventable diseases rather than battle wounds. By implementing sanitation protocols, she reduced the hospital death rate from 42% to 2%—a triumph that made her the forerunner of evidence-based medicine.\n\nAfter the war, Nightingale founded the first professional nursing school at St Thomas' Hospital in London (1860) and spent decades lobbying for hospital design reform, military health improvements, and colonial public health in India. She was the first woman inducted into the Order of Merit (1907) and became the symbolic founder of modern healthcare systems worldwide.\n\n'The Lady with the Lamp' — as troops called her during nighttime ward rounds — left a legacy that extends from global nursing education to the modern discipline of medical statistics and hospital epidemiology.",
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Florence Nightingale transformed nursing from menial service into a scientific profession and laid the foundations of modern hospital epidemiology, evidence-based medicine, and public health statistics — changes that have saved hundreds of millions of lives."
+        },
+        "quote": "'The very first requirement in a hospital is that it should do the sick no harm.' — Florence Nightingale",
+        "places": [
+          "London, England",
+          "Scutari, Ottoman Empire (modern Istanbul)",
+          "Florence, Italy (birthplace)"
+        ],
+        "subjectHeadings": "Florence Nightingale — Public Health Reformers — United Kingdom — Modern",
+        "subjects": [
+          "United Kingdom",
+          "nursing",
+          "public health",
+          "Crimean War",
+          "statistics",
+          "medicine",
+          "women pioneers",
+          "Victorian era",
+          "hospital reform",
+          "data visualization"
+        ],
+        "frameworks": [
+          "social-welfare",
+          "feminist-history",
+          "scientific-revolution"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Florence Nightingale (1820–1910) was a British nurse, statistician, and social reformer who transformed medicine and established nursing as a respected profession. Born into a wealthy English family, …",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.944445+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": [
+              "Privileged education unusual for women of her era",
+              "Crimean War exposed catastrophic military hospital conditions",
+              "Personal calling to nursing despite family opposition"
+            ],
+            "newValue": "['Crimean War (1853–1856) exposing catastrophic military hospital conditions', \"Victorian England's negligence of nursing as a profession or science\", 'Statistical revolution in public health pioneere…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.944445+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": [
+              "Modern nursing profession established",
+              "Hospital sanitation reforms saved millions of lives",
+              "Pioneered use of statistics in public health",
+              "Military medical care permanently reformed",
+              "International Nurses Day celebrates her legacy"
+            ],
+            "newValue": "['Foundation of modern professional nursing and nursing education', \"Nightingale School of Nursing at St Thomas' Hospital (1860) — first in the world\", 'Evidence-based hospital design reform reducing …",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.944445+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": [
+              {
+                "sourceSlug": "florence-nightingale",
+                "sourceName": "Florence Nightingale",
+                "verb": "OCCURS_IN",
+                "targetSlug": "united-kingdom",
+                "targetName": "United Kingdom",
+                "context": "British reformer who transformed nursing and public health"
+              },
+              {
+                "sourceSlug": "florence-nightingale",
+                "sourceName": "Florence Nightingale",
+                "verb": "INFLUENCES",
+                "targetSlug": "red-cross",
+                "targetName": "Red Cross",
+                "context": "Her Crimean War work inspired international humanitarian medical organizations"
+              },
+              {
+                "sourceSlug": "florence-nightingale",
+                "sourceName": "Florence Nightingale",
+                "verb": "INFLUENCES",
+                "targetSlug": "marie-curie",
+                "targetName": "Marie Curie",
+                "context": "Both pioneered contributions to medicine during wartime as women"
+              }
+            ],
+            "newValue": "[{'type': 'OCCURS_IN', 'target': 'Crimean War', 'targetSlug': 'crimean-war', 'note': 'Theatre of her nursing reform'}, {'type': 'INFLUENCES', 'target': 'Nursing profession', 'targetSlug': 'nursing-pro…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.944445+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 9, 'significanceCategory': 'world-changing', 'significanceNarrative': 'Florence Nightingale transformed nursing from menial service into a scientific profession and laid the foun…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.944445+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": null,
+            "newValue": "'The very first requirement in a hospital is that it should do the sick no harm.' — Florence Nightingale",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.944445+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": null,
+            "newValue": [
+              "London, England",
+              "Scutari, Ottoman Empire (modern Istanbul)",
+              "Florence, Italy (birthplace)"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.944445+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Florence Nightingale — Public Health Reformers — United Kingdom — Modern",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.944445+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "United Kingdom",
+              "nursing",
+              "public health",
+              "Crimean War",
+              "statistics",
+              "medicine",
+              "women pioneers",
+              "Victorian era",
+              "hospital reform",
+              "data visualization"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.944445+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "social-welfare",
+              "feminist-history",
+              "scientific-revolution"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.944445+00:00"
           }
         ]
       },
@@ -90,7 +325,8 @@
       "$id": "florence-nightingale",
       "$sequence": "287994",
       "$createdAt": "2026-04-05T13:02:42.593+00:00",
-      "$updatedAt": "2026-04-05T13:02:42.593+00:00"
+      "$updatedAt": "2026-04-05T13:02:42.593+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }

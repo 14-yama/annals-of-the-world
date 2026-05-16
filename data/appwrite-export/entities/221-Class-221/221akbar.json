@@ -27,69 +27,117 @@
       "imageUrl": "",
       "detailsJson": {
         "causes": [
-          "Mughal military tradition from Babur and Humayun",
-          "Indian subcontinent's religious diversity demanding tolerance",
-          "Revenue crisis requiring administrative reform"
+          "Humayun's reconquest of India restoring Mughal claim after Sur Empire interregnum",
+          "Second Battle of Panipat (1556) — Bairam Khan's regency securing Akbar's throne",
+          "Mughal military tradition of Timurid and Mongol cavalry warfare",
+          "India's fragmented post-Sultanate political landscape enabling Mughal expansion"
         ],
         "effects": [
-          "Religious tolerance policy (sulh-i-kul) ahead of its time",
-          "Mughal administrative system lasting until British Raj",
-          "Golden age of Mughal art, architecture, and literature",
-          "Precedent for secular governance in religiously diverse states",
-          "Fatehpur Sikri as architectural wonder of syncretic design",
-          "Foundation for 200 years of Mughal imperial power"
+          "Consolidation of Mughal Empire across most of the Indian subcontinent",
+          "Mansabdari administrative system — meritocratic imperial bureaucracy",
+          "Abolition of jizya tax (1564) promoting religious tolerance",
+          "Rajput alliances creating composite Hindu-Muslim governing class",
+          "Din-i-Ilahi syncretic religious philosophy",
+          "Fatehpur Sikri — architectural marvel and cultural capital",
+          "Akbarnama and Ain-i-Akbari documenting Mughal governance and society"
         ],
         "relationships": [
           {
-            "sourceSlug": "akbar",
-            "sourceName": "Akbar",
-            "verb": "TRANSFORMS",
+            "type": "OCCURS_IN",
+            "target": "Mughal Empire",
             "targetSlug": "mughal-empire",
-            "targetName": "Mughal Empire",
-            "context": "Transformed conquest state into Indian empire"
+            "note": "Greatest Mughal Emperor"
           },
           {
-            "sourceSlug": "akbar",
-            "sourceName": "Akbar",
-            "verb": "DEFINES",
+            "type": "INFLUENCES",
+            "target": "Mansabdari system",
+            "targetSlug": "mansabdari-system",
+            "note": "Administrative rank system he invented"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Rajput kingdoms",
+            "targetSlug": "rajput-kingdoms",
+            "note": "Integrated Rajputs as Mughal allies through marriage"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Din-i-Ilahi",
+            "targetSlug": "din-i-ilahi",
+            "note": "Syncretic religious philosophy he founded"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Fatehpur Sikri",
             "targetSlug": "fatehpur-sikri",
-            "targetName": "Fatehpur Sikri",
-            "context": "Built syncretic capital city near Agra"
+            "note": "New capital city he built (1571)"
           },
           {
-            "sourceSlug": "akbar",
-            "sourceName": "Akbar",
-            "verb": "INFLUENCES",
-            "targetSlug": "shah-jahan",
-            "targetName": "Shah Jahan",
-            "context": "Grandson continued Mughal architectural patronage"
+            "type": "INFLUENCES",
+            "target": "Akbarnama",
+            "targetSlug": "akbarnama",
+            "note": "Official chronicle by Abul Fazl"
           },
           {
-            "sourceSlug": "akbar",
-            "sourceName": "Akbar",
-            "verb": "OCCURS_IN",
-            "targetSlug": "agra",
-            "targetName": "Agra",
-            "context": "Primary capital and site of Agra Fort"
+            "type": "INFLUENCES",
+            "target": "Abul Fazl",
+            "targetSlug": "abul-fazl",
+            "note": "Court historian and close advisor"
           },
           {
-            "sourceSlug": "babur",
-            "sourceName": "Babur",
-            "verb": "CAUSES",
-            "targetSlug": "akbar",
-            "targetName": "Akbar",
-            "context": "Mughal dynasty founded by Babur enabled Akbar's reign"
+            "type": "INFLUENCES",
+            "target": "Mughal miniature painting",
+            "targetSlug": "mughal-painting",
+            "note": "Patronized fusion of Persian and Hindu artistic styles"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "India",
+            "targetSlug": "india",
+            "note": "Ruled most of the Indian subcontinent"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Humayun",
+            "targetSlug": "humayun",
+            "note": "Father and predecessor who retook India"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Aurangzeb",
+            "targetSlug": "aurangzeb",
+            "note": "Great-grandson who reversed his religious tolerance"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Birbal",
+            "targetSlug": "birbal",
+            "note": "Famous wit and advisor in the Navaratna council"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Tansen",
+            "targetSlug": "tansen",
+            "note": "Greatest musician in the Navaratna — Mughal court music"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Second Battle of Panipat",
+            "targetSlug": "second-battle-of-panipat",
+            "note": "Decisive victory securing Mughal power (1556)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Sikhism",
+            "targetSlug": "sikhism",
+            "note": "Granted land for Amritsar to the Sikh Guru"
           }
         ],
         "places": [
-          {
-            "name": "Agra",
-            "role": "Capital"
-          },
-          {
-            "name": "Fatehpur Sikri",
-            "role": "Built new capital"
-          }
+          "Agra, India",
+          "Fatehpur Sikri, India",
+          "Delhi, India",
+          "Lahore, Pakistan"
         ],
         "texts": [
           {
@@ -106,8 +154,195 @@
         "externalLinks": [],
         "tags": [],
         "thumbnailUrl": "",
-        "quote": "",
-        "legacySummary": ""
+        "quote": "'A monarch should be ever intent on conquest, otherwise his neighbours rise in arms against him.' — Akbar the Great",
+        "legacySummary": "",
+        "summary": "Akbar the Great (1542–1605) was the third and greatest Mughal Emperor of India, reigning from 1556 to 1605, who transformed a fragile dynasty into a vast and sophisticated empire encompassing most of the Indian subcontinent. Ascending the throne at thirteen after his father Humayun's sudden death, Akbar proved himself one of history's most gifted military commanders, administrators, and patrons of culture.\n\nAkbar's reign was defined by a series of brilliant innovations. He abolished the jizya tax on non-Muslims, promoted Hindus to the highest imperial offices, and forged marriage alliances with Rajput rulers — creating a composite Mughal-Rajput governing class unprecedented in Indian history. His administrative system, the Mansabdari, rationalized military ranks and revenue collection into a meritocratic imperial bureaucracy that governed 100 million people.\n\nHe founded a new syncretic spiritual philosophy, the Din-i-Ilahi (Divine Faith), blending elements of Islam, Hinduism, Zoroastrianism, and Christianity in an attempt to create a universal religion. His court at Fatehpur Sikri became the greatest cultural center in the world, sponsoring miniature painting, poetry, music, and scholarship in Persian, Hindi, and Sanskrit.\n\nAkbar could not read or write but had a near-perfect memory and absorbed vast knowledge through listening. His religious tolerance, institutional creativity, and administrative genius made the Mughal Empire the wealthiest and most powerful state on earth during his lifetime.",
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Akbar the Great built the wealthiest empire on earth and pioneered a model of multi-religious governance — religious tolerance, meritocratic bureaucracy, and cultural synthesis — that shaped South Asia's civilizational identity for centuries and still resonates in modern India."
+        },
+        "subjectHeadings": "Akbar the Great — Emperors and Rulers — India — Early Modern",
+        "subjects": [
+          "India",
+          "Mughal Empire",
+          "religious tolerance",
+          "South Asia",
+          "Islamic rule",
+          "administration",
+          "architecture",
+          "Pakistan",
+          "Persian culture",
+          "Early Modern Asia"
+        ],
+        "frameworks": [
+          "empire-building",
+          "religious-syncretism",
+          "state-formation"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Akbar the Great (1542–1605) was the third and greatest Mughal Emperor of India, reigning from 1556 to 1605, who transformed a fragile dynasty into a vast and sophisticated empire encompassing most of …",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.946454+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": [
+              "Mughal military tradition from Babur and Humayun",
+              "Indian subcontinent's religious diversity demanding tolerance",
+              "Revenue crisis requiring administrative reform"
+            ],
+            "newValue": "[\"Humayun's reconquest of India restoring Mughal claim after Sur Empire interregnum\", \"Second Battle of Panipat (1556) — Bairam Khan's regency securing Akbar's throne\", 'Mughal military tradition of T…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.946454+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": [
+              "Religious tolerance policy (sulh-i-kul) ahead of its time",
+              "Mughal administrative system lasting until British Raj",
+              "Golden age of Mughal art, architecture, and literature",
+              "Precedent for secular governance in religiously diverse states",
+              "Fatehpur Sikri as architectural wonder of syncretic design",
+              "Foundation for 200 years of Mughal imperial power"
+            ],
+            "newValue": "['Consolidation of Mughal Empire across most of the Indian subcontinent', 'Mansabdari administrative system — meritocratic imperial bureaucracy', 'Abolition of jizya tax (1564) promoting religious tol…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.946454+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": [
+              {
+                "sourceSlug": "akbar",
+                "sourceName": "Akbar",
+                "verb": "TRANSFORMS",
+                "targetSlug": "mughal-empire",
+                "targetName": "Mughal Empire",
+                "context": "Transformed conquest state into Indian empire"
+              },
+              {
+                "sourceSlug": "akbar",
+                "sourceName": "Akbar",
+                "verb": "DEFINES",
+                "targetSlug": "fatehpur-sikri",
+                "targetName": "Fatehpur Sikri",
+                "context": "Built syncretic capital city near Agra"
+              },
+              {
+                "sourceSlug": "akbar",
+                "sourceName": "Akbar",
+                "verb": "INFLUENCES",
+                "targetSlug": "shah-jahan",
+                "targetName": "Shah Jahan",
+                "context": "Grandson continued Mughal architectural patronage"
+              },
+              {
+                "sourceSlug": "akbar",
+                "sourceName": "Akbar",
+                "verb": "OCCURS_IN",
+                "targetSlug": "agra",
+                "targetName": "Agra",
+                "context": "Primary capital and site of Agra Fort"
+              },
+              {
+                "sourceSlug": "babur",
+                "sourceName": "Babur",
+                "verb": "CAUSES",
+                "targetSlug": "akbar",
+                "targetName": "Akbar",
+                "context": "Mughal dynasty founded by Babur enabled Akbar's reign"
+              }
+            ],
+            "newValue": "[{'type': 'OCCURS_IN', 'target': 'Mughal Empire', 'targetSlug': 'mughal-empire', 'note': 'Greatest Mughal Emperor'}, {'type': 'INFLUENCES', 'target': 'Mansabdari system', 'targetSlug': 'mansabdari-sys…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.946454+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 9, 'significanceCategory': 'world-changing', 'significanceNarrative': \"Akbar the Great built the wealthiest empire on earth and pioneered a model of multi-religious governance — …",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.946454+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": "",
+            "newValue": "'A monarch should be ever intent on conquest, otherwise his neighbours rise in arms against him.' — Akbar the Great",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.946454+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": [
+              {
+                "name": "Agra",
+                "role": "Capital"
+              },
+              {
+                "name": "Fatehpur Sikri",
+                "role": "Built new capital"
+              }
+            ],
+            "newValue": [
+              "Agra, India",
+              "Fatehpur Sikri, India",
+              "Delhi, India",
+              "Lahore, Pakistan"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.946454+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Akbar the Great — Emperors and Rulers — India — Early Modern",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.946454+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "India",
+              "Mughal Empire",
+              "religious tolerance",
+              "South Asia",
+              "Islamic rule",
+              "administration",
+              "architecture",
+              "Pakistan",
+              "Persian culture",
+              "Early Modern Asia"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.946454+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "empire-building",
+              "religious-syncretism",
+              "state-formation"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.946454+00:00"
+          }
+        ]
       },
       "subjectHeadings": [
         "People — Political Leaders — India — Early Modern"
@@ -131,7 +366,8 @@
       "$id": "akbar",
       "$sequence": "177058",
       "$createdAt": "2026-04-05T12:40:28.650+00:00",
-      "$updatedAt": "2026-04-06T00:46:33.985+00:00"
+      "$updatedAt": "2026-04-06T00:46:33.985+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }

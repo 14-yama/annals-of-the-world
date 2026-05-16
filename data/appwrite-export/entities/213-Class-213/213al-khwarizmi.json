@@ -27,69 +27,115 @@
       "imageUrl": "",
       "detailsJson": {
         "causes": [
-          "Abbasid Caliphate patronage of science at House of Wisdom",
-          "Indian mathematical traditions (Hindu numerals, zero)",
-          "Greek mathematical heritage preserved in Arabic translation"
+          "Abbasid Caliphate's patronage of the House of Wisdom under Caliph al-Ma'mun",
+          "Indian mathematical traditions (Brahmagupta's zero and decimal positional system)",
+          "Greek geometric algebra traditions (Euclid, Diophantus) providing foundation",
+          "Islamic commercial economy requiring practical arithmetic solutions"
         ],
         "effects": [
-          "Invention of algebra as a mathematical discipline",
-          "Introduction of Hindu-Arabic numeral system to the world",
-          "Word 'algorithm' derived from his name",
-          "Foundation for all modern computation and mathematics",
-          "Astronomical tables used for centuries",
-          "European mathematical revolution via Latin translations"
+          "Founding of algebra as a systematic mathematical discipline",
+          "Popularization of Hindu-Arabic numerals and decimal system in Islamic and later European science",
+          "Introduction of zero as operational placeholder to Western mathematics",
+          "Origin of the word 'algorithm' from his name",
+          "Origin of the word 'algebra' from his treatise title (al-jabr)",
+          "12th-century Latin translations enabling European mathematical revolution",
+          "Foundations for calculus, computer science, and modern engineering"
         ],
         "relationships": [
           {
-            "sourceSlug": "al-khwarizmi",
-            "sourceName": "Al-Khwarizmi",
-            "verb": "DEFINES",
+            "type": "OCCURS_IN",
+            "target": "House of Wisdom",
+            "targetSlug": "house-of-wisdom",
+            "note": "Primary institution of scholarship"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Abbasid Caliphate",
+            "targetSlug": "abbasid-caliphate",
+            "note": "Political and intellectual context"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Algebra",
             "targetSlug": "algebra",
-            "targetName": "Algebra",
-            "context": "Founded algebra as a systematic discipline"
+            "note": "Foundational text — al-jabr"
           },
           {
-            "sourceSlug": "al-khwarizmi",
-            "sourceName": "Al-Khwarizmi",
-            "verb": "OCCURS_IN",
-            "targetSlug": "baghdad",
-            "targetName": "Baghdad",
-            "context": "Worked at the House of Wisdom under al-Ma'mun"
+            "type": "INFLUENCES",
+            "target": "Algorithm (concept)",
+            "targetSlug": "algorithm",
+            "note": "Name became eponym for algorithms"
           },
           {
-            "sourceSlug": "al-khwarizmi",
-            "sourceName": "Al-Khwarizmi",
-            "verb": "INFLUENCES",
+            "type": "INFLUENCES",
+            "target": "Decimal number system",
+            "targetSlug": "decimal-number-system",
+            "note": "Transmitted Hindu-Arabic numerals to Islamic world"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "European medieval mathematics",
+            "targetSlug": "european-mathematics-medieval",
+            "note": "Latin translations shaped scholastic mathematics"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Fibonacci",
             "targetSlug": "fibonacci",
-            "targetName": "Fibonacci",
-            "context": "Hindu-Arabic numerals reached Europe through al-Khwarizmi"
+            "note": "Fibonacci's Liber Abaci transmitted his numeral system to Europe"
           },
           {
-            "sourceSlug": "al-khwarizmi",
-            "sourceName": "Al-Khwarizmi",
-            "verb": "TRANSMITS",
-            "targetSlug": "indian-mathematics",
-            "targetName": "Indian Mathematics",
-            "context": "Transmitted Hindu numerals and zero to Islamic world"
+            "type": "INFLUENCES",
+            "target": "Brahmagupta",
+            "targetSlug": "brahmagupta",
+            "note": "Indian mathematician whose work Al-Khwarizmi synthesized"
           },
           {
-            "sourceSlug": "al-khwarizmi",
-            "sourceName": "Al-Khwarizmi",
-            "verb": "INFLUENCES",
+            "type": "INFLUENCES",
+            "target": "Computer science",
             "targetSlug": "computer-science",
-            "targetName": "Computer Science",
-            "context": "'Algorithm' named after him — foundation of computing"
+            "note": "Algorithm concept is foundational to computing"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Islamic Golden Age",
+            "targetSlug": "islamic-golden-age",
+            "note": "Central figure in the age of Islamic learning"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Baghdad",
+            "targetSlug": "baghdad",
+            "note": "City of scholarship and the House of Wisdom"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Trigonometry",
+            "targetSlug": "trigonometry",
+            "note": "Contributed astronomical tables with trigonometric functions"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Cartography",
+            "targetSlug": "cartography",
+            "note": "Revised Ptolemy's Geography with improved coordinates"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Adelard of Bath",
+            "targetSlug": "adelard-of-bath",
+            "note": "12th-century translator of his astronomical tables"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Scientific Revolution",
+            "targetSlug": "scientific-revolution",
+            "note": "Algebraic method enabled Copernicus, Kepler, Newton"
           }
         ],
         "places": [
-          {
-            "name": "Baghdad",
-            "role": "House of Wisdom"
-          },
-          {
-            "name": "Khwarezm",
-            "role": "Birthplace"
-          }
+          "Baghdad, Iraq",
+          "Khwarazm, Central Asia (modern Uzbekistan)"
         ],
         "texts": [
           {
@@ -101,8 +147,193 @@
         "externalLinks": [],
         "tags": [],
         "thumbnailUrl": "",
-        "quote": "",
-        "legacySummary": ""
+        "quote": "'When I consider what people generally want in calculating, I found that it always is a number.' — Al-Khwarizmi, Kitāb al-mukhtaṣar",
+        "legacySummary": "",
+        "summary": "Al-Khwarizmi (c. 780–850 CE) was a Persian mathematician, astronomer, and scholar at the House of Wisdom in Baghdad whose works gave the world algebra, popularized the Hindu-Arabic numeral system, and introduced the concept of algorithms — making him arguably the most consequential mathematician in history. His latinized name, Algoritmi, is the direct etymological source of the word 'algorithm.'\n\nHis landmark treatise, Al-Kitāb al-mukhtaṣar fī ḥisāb al-jabr wal-muqābala (c. 820 CE), established algebra as a systematic discipline. The word 'algebra' itself derives from al-jabr in the title. By expressing mathematical problems in general procedural terms rather than as geometric constructions, he gave mathematics a universal language applicable to trade, surveying, inheritance law, and astronomy.\n\nHis astronomical tables (Zīj al-Sindhind) and treatise on Hindu numerals introduced Europe to the positional decimal system and zero as a placeholder — a conceptual revolution that made computation at scale possible. Translated into Latin by Adelard of Bath in the 12th century, his works entered European universities and transformed mathematics for five centuries.\n\nWithout Al-Khwarizmi's transmission of decimal arithmetic and algebraic method, the Scientific Revolution, financial capitalism, computer science, and modern engineering would have been impossible. He is rightly called the 'Father of Algebra.'",
+        "historicalSignificance": {
+          "significanceScore": 10,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Al-Khwarizmi gave the world algebra and algorithms — two concepts so fundamental to modern civilization that his name lives in the word 'algorithm' itself. Without his transmission of decimal arithmetic, computer science, the Scientific Revolution, and modern engineering would have been impossible."
+        },
+        "subjectHeadings": "Al-Khwarizmi — Mathematicians and Scientists — Islamic Golden Age — Medieval",
+        "subjects": [
+          "Iraq",
+          "Uzbekistan",
+          "mathematics",
+          "algebra",
+          "algorithms",
+          "Islamic Golden Age",
+          "House of Wisdom",
+          "astronomy",
+          "Abbasid Caliphate",
+          "decimal system"
+        ],
+        "frameworks": [
+          "scientific-revolution",
+          "intellectual-history",
+          "transmission-of-knowledge"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Al-Khwarizmi (c. 780–850 CE) was a Persian mathematician, astronomer, and scholar at the House of Wisdom in Baghdad whose works gave the world algebra, popularized the Hindu-Arabic numeral system, and…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.945501+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": [
+              "Abbasid Caliphate patronage of science at House of Wisdom",
+              "Indian mathematical traditions (Hindu numerals, zero)",
+              "Greek mathematical heritage preserved in Arabic translation"
+            ],
+            "newValue": "[\"Abbasid Caliphate's patronage of the House of Wisdom under Caliph al-Ma'mun\", \"Indian mathematical traditions (Brahmagupta's zero and decimal positional system)\", 'Greek geometric algebra traditions…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.945501+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": [
+              "Invention of algebra as a mathematical discipline",
+              "Introduction of Hindu-Arabic numeral system to the world",
+              "Word 'algorithm' derived from his name",
+              "Foundation for all modern computation and mathematics",
+              "Astronomical tables used for centuries",
+              "European mathematical revolution via Latin translations"
+            ],
+            "newValue": "['Founding of algebra as a systematic mathematical discipline', 'Popularization of Hindu-Arabic numerals and decimal system in Islamic and later European science', 'Introduction of zero as operational…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.945501+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": [
+              {
+                "sourceSlug": "al-khwarizmi",
+                "sourceName": "Al-Khwarizmi",
+                "verb": "DEFINES",
+                "targetSlug": "algebra",
+                "targetName": "Algebra",
+                "context": "Founded algebra as a systematic discipline"
+              },
+              {
+                "sourceSlug": "al-khwarizmi",
+                "sourceName": "Al-Khwarizmi",
+                "verb": "OCCURS_IN",
+                "targetSlug": "baghdad",
+                "targetName": "Baghdad",
+                "context": "Worked at the House of Wisdom under al-Ma'mun"
+              },
+              {
+                "sourceSlug": "al-khwarizmi",
+                "sourceName": "Al-Khwarizmi",
+                "verb": "INFLUENCES",
+                "targetSlug": "fibonacci",
+                "targetName": "Fibonacci",
+                "context": "Hindu-Arabic numerals reached Europe through al-Khwarizmi"
+              },
+              {
+                "sourceSlug": "al-khwarizmi",
+                "sourceName": "Al-Khwarizmi",
+                "verb": "TRANSMITS",
+                "targetSlug": "indian-mathematics",
+                "targetName": "Indian Mathematics",
+                "context": "Transmitted Hindu numerals and zero to Islamic world"
+              },
+              {
+                "sourceSlug": "al-khwarizmi",
+                "sourceName": "Al-Khwarizmi",
+                "verb": "INFLUENCES",
+                "targetSlug": "computer-science",
+                "targetName": "Computer Science",
+                "context": "'Algorithm' named after him — foundation of computing"
+              }
+            ],
+            "newValue": "[{'type': 'OCCURS_IN', 'target': 'House of Wisdom', 'targetSlug': 'house-of-wisdom', 'note': 'Primary institution of scholarship'}, {'type': 'OCCURS_IN', 'target': 'Abbasid Caliphate', 'targetSlug': '…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.945501+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 10, 'significanceCategory': 'world-changing', 'significanceNarrative': \"Al-Khwarizmi gave the world algebra and algorithms — two concepts so fundamental to modern civilization th…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.945501+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": "",
+            "newValue": "'When I consider what people generally want in calculating, I found that it always is a number.' — Al-Khwarizmi, Kitāb al-mukhtaṣar",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.945501+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": [
+              {
+                "name": "Baghdad",
+                "role": "House of Wisdom"
+              },
+              {
+                "name": "Khwarezm",
+                "role": "Birthplace"
+              }
+            ],
+            "newValue": [
+              "Baghdad, Iraq",
+              "Khwarazm, Central Asia (modern Uzbekistan)"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.945501+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Al-Khwarizmi — Mathematicians and Scientists — Islamic Golden Age — Medieval",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.945501+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "Iraq",
+              "Uzbekistan",
+              "mathematics",
+              "algebra",
+              "algorithms",
+              "Islamic Golden Age",
+              "House of Wisdom",
+              "astronomy",
+              "Abbasid Caliphate",
+              "decimal system"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.945501+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "scientific-revolution",
+              "intellectual-history",
+              "transmission-of-knowledge"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-58-may2026",
+            "timestamp": "2026-05-16T22:52:08.945501+00:00"
+          }
+        ]
       },
       "subjectHeadings": [
         "People — Scientists & Inventors — Persia — Medieval"
@@ -125,7 +356,8 @@
       "$id": "al-khwarizmi",
       "$sequence": "1038027",
       "$createdAt": "2026-04-06T00:39:00.961+00:00",
-      "$updatedAt": "2026-04-06T00:39:00.961+00:00"
+      "$updatedAt": "2026-04-06T00:39:00.961+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
