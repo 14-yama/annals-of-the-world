@@ -25,7 +25,90 @@
       "wikidataQid": "",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [], \"effects\": [], \"relationships\": [{\"sourceSlug\": \"federal-reserve-act-1913\", \"sourceName\": \"Federal Reserve Act (1913)\", \"verb\": \"DEFINES\", \"targetSlug\": \"federal_reserve\", \"targetName\": \"Federal Reserve System\", \"context\": \"Text associated with Federal Reserve System\"}, {\"sourceSlug\": \"federal_reserve\", \"sourceName\": \"Federal Reserve System\", \"verb\": \"CANONIZES\", \"targetSlug\": \"federal-reserve-act-1913\", \"targetName\": \"Federal Reserve Act (1913)\", \"context\": \"Referenced in institution entity\"}], \"places\": [], \"texts\": [], \"externalLinks\": [], \"tags\": [], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "The Panic of 1907 — a severe financial panic that threatened to collapse the American banking system and was only resolved by J.P. Morgan's personal intervention as a private lender of last resort — demonstrated the urgent need for an institutional mechanism to prevent banking panics and provide emergency liquidity to the financial system.",
+          "The Aldrich-Vreeland Act (1908) and the National Monetary Commission (1908–1912) — established in response to the Panic of 1907 — provided the institutional study and legislative preparation for the Federal Reserve Act, with Senator Nelson Aldrich's plan providing the basis (modified to address Democratic concerns about centralisation and Wall Street control) for the final legislation.",
+          "The progressive political environment of the Wilson administration (1913) — with its skepticism of big business concentration and Wall Street power, combined with the need for banking system reform — drove the specific compromise structure of the Federal Reserve Act, balancing the need for central bank functions with the political imperative to prevent Wall Street domination."
+        ],
+        "effects": [
+          "The Federal Reserve System became the central actor in American and global monetary policy — its Federal Funds Rate decisions affect borrowing costs, inflation, and financial conditions worldwide, given the dollar's status as the primary global reserve currency, making the Fed the most powerful central bank in the world.",
+          "The Fed's responses to financial crises — Herbert Hoover's Fed's contractionary policy in the Great Depression (widely held to have deepened the Depression), the Bernanke Fed's extraordinary expansion in 2008–2009, and the Powell Fed's massive stimulus in response to COVID-19 — demonstrate the institution's pivotal role in shaping the trajectory of economic crises.",
+          "The Federal Reserve Act established the model of the independent central bank — an institution with authority over monetary policy that operates at arm's length from elected government, though subject to congressional oversight — that was adopted by central banks worldwide and has been continuously contested between advocates of monetary independence and political accountability."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "woodrow-wilson",
+            "sourceName": "Woodrow Wilson (signed Federal Reserve Act 23 December 1913 — progressive reform; banking system)",
+            "verb": "SIGNS",
+            "targetSlug": "federal-reserve-act-1913",
+            "targetName": "Federal Reserve Act (1913 — twelve regional banks; lender of last resort; US central bank)",
+            "context": "Wilson signed the Federal Reserve Act on 23 December 1913 — establishing the Federal Reserve System as the US central bank, the most consequential institutional outcome of Progressive Era financial reform."
+          },
+          {
+            "sourceSlug": "federal-reserve-act-1913",
+            "sourceName": "Federal Reserve Act (Panic of 1907 — J.P. Morgan; banking panic; lender of last resort need)",
+            "verb": "RESPONDS_TO",
+            "targetSlug": "panic-of-1907",
+            "targetName": "Panic of 1907 (J.P. Morgan — private banking bailout; institutional lender of last resort need)",
+            "context": "The Panic of 1907 — when J.P. Morgan personally orchestrated a private banking bailout — demonstrated the need for an institutional lender of last resort, directly driving the creation of the Federal Reserve System."
+          },
+          {
+            "sourceSlug": "federal-reserve-act-1913",
+            "sourceName": "Federal Reserve (2008 financial crisis — Bernanke; quantitative easing; lender of last resort)",
+            "verb": "ENABLES",
+            "targetSlug": "financial-crisis-2008",
+            "targetName": "2008 Financial Crisis response (Bernanke Fed — quantitative easing; TARP; global financial stabilisation)",
+            "context": "The Federal Reserve's extraordinary response to the 2008 financial crisis — Ben Bernanke's Fed acting as lender of last resort on a massive scale, deploying quantitative easing — demonstrated the Act's institutional legacy in enabling unprecedented monetary intervention."
+          }
+        ],
+        "places": [
+          {
+            "name": "Washington DC (1913 — Wilson signature; Federal Reserve Board; twelve regional banks)",
+            "role": "The Federal Reserve Act was signed in Washington DC on 23 December 1913 — establishing the Federal Reserve Board in Washington and twelve regional Federal Reserve Banks across the United States"
+          },
+          {
+            "name": "United States / Global (Federal Funds Rate — dollar reserve currency; global monetary policy influence)",
+            "role": "The Federal Reserve System's global influence derives from the dollar's status as the primary world reserve currency — the Fed's interest rate decisions affect borrowing costs and financial conditions worldwide"
+          }
+        ],
+        "texts": [],
+        "externalLinks": [],
+        "tags": [],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "",
+        "summary": "The Federal Reserve Act is a United States federal statute signed into law by President Woodrow Wilson on 23 December 1913, establishing the Federal Reserve System as the central bank of the United States. The Act was the product of years of debate about American monetary and banking policy following the Panic of 1907, when J.P. Morgan had personally orchestrated a private banking bailout to prevent financial collapse — demonstrating both the need for a lender of last resort and the unacceptability of allowing that role to be filled by a private individual. The Act created a system of twelve regional Federal Reserve Banks, overseen by a Federal Reserve Board in Washington, with authority to issue Federal Reserve Notes (replacing the national bank notes that had previously served as paper currency), set interest rates, regulate member banks, and act as lender of last resort to the banking system.\n\nThe Federal Reserve Act represented a compromise between competing visions of American banking — those who wanted a single centralised bank (on the European model), those who wanted a system controlled entirely by private bankers, and those (particularly Populist Democrats) who feared both Wall Street dominance and centralised financial power. The resulting system of twelve regional banks, with a mix of government and private oversight, reflected these competing pressures and has remained the basic structure of the Federal Reserve System to the present day.\n\nThe Federal Reserve System has become one of the most powerful financial institutions in the world — its decisions on interest rates (the Federal Funds Rate) affect borrowing costs, inflation, employment, and financial conditions not only in the United States but globally, given the dollar's role as the world's primary reserve currency. The Fed's responses to financial crises (the Great Depression, the 2008 financial crisis, the COVID-19 pandemic) have made it the central actor in American and global economic stabilisation, and its independence from direct political control — established by the Act's structure — has been continuously contested in American political debate.",
+        "subjects": [
+          "American History",
+          "20th Century",
+          "Monetary Policy",
+          "Banking History",
+          "Woodrow Wilson",
+          "Progressive Era",
+          "Central Banking",
+          "Financial History"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceNarrative": "The Federal Reserve Act (1913) established the Federal Reserve System — the most powerful central bank in the world. Born from the Panic of 1907, it created the model of the independent central bank that stabilises the financial system as lender of last resort. The Fed's decisions on interest rates affect borrowing costs and financial conditions worldwide, given the dollar's status as the primary global reserve currency.",
+          "significanceCategory": "world-changing"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-56-may2026",
+            "timestamp": "2026-05-16T21:51:15Z",
+            "oldValue": "",
+            "newValue": "The Federal Reserve Act is a United States federal statute signed into law by President Woodrow Wilson on 23 December 1913, establishing the Federal Reserve System as the central bank of the United St…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts — Philosophical Works — Modern"
       ],
@@ -47,7 +130,8 @@
       "$id": "federal-reserve-act-1913",
       "$sequence": "1039396",
       "$createdAt": "2026-04-06T00:39:29.330+00:00",
-      "$updatedAt": "2026-04-06T00:39:29.330+00:00"
+      "$updatedAt": "2026-04-06T00:39:29.330+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
