@@ -25,7 +25,103 @@
       "wikidataQid": "Q41675",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Guinness_World_Records",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/6764%20Guinness.JPG",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier literary tradition in the 1945 CE – present\", \"type\": \"Text\", \"year\": \"1945 CE\"}, {\"title\": \"Historical events in the 1945 CE – present\", \"type\": \"Text\", \"year\": \"1945 CE\"}, {\"title\": \"Patron commission in the 1945 CE – present\", \"type\": \"Text\", \"year\": \"1945 CE\"}], \"effects\": [{\"title\": \"Preserved knowledge through Guinness World Records's historical significance\", \"type\": \"Text\"}, {\"title\": \"Influenced later works through Guinness World Records's historical significance\", \"type\": \"Text\"}, {\"title\": \"Defined canon through Guinness World Records's historical significance\", \"type\": \"Text\"}], \"relationships\": [{\"sourceSlug\": \"guinness-world-records\", \"sourceName\": \"Guinness World Records\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-contemporary\", \"targetName\": \"Contemporary\", \"context\": \"Guinness World Records is situated within the Contemporary (960)\"}, {\"sourceSlug\": \"guinness-world-records\", \"sourceName\": \"Guinness World Records\", \"verb\": \"TRANSMITS\", \"targetSlug\": \"literary-canon-contemporary\", \"targetName\": \"Literary Canon (Contemporary)\", \"context\": \"Guinness World Records contributed to the literary canon of the Contemporary era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Guinness World Records\", \"type\": \"Reference article\", \"slug\": \"guinness-world-records\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q41675\", \"https://en.wikipedia.org/wiki/Guinness_World_Records\"], \"tags\": [\"literary work\", \"Historical & Literary Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Guinness World Records left a notable mark on Contemporary history, documented across 104 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "Sir Hugh Beaver's pub argument (August 1951) about whether the golden plover or the grouse was Europe's fastest game bird — and his realisation that similar arguments about superlatives were unresolvable without a reliable reference work — provided the founding concept for the Guinness Book of Records as a verified compendium of superlatives.",
+          "Norris and Ross McWhirter's exceptional research abilities — both were professional fact-finders and journalists who had established a research agency — provided the practical capacity to compile and verify the enormous range of facts required for the first edition in a remarkably short time.",
+          "The Guinness Brewery's commercial strategy — distributing the book free to pub landlords as a promotional tool — provided the initial distribution network that gave the book its first audience, demonstrating how a corporate promotional item could become an independent cultural institution."
+        ],
+        "effects": [
+          "The Guinness Book of Records became one of the bestselling copyright books of all time — appearing on the New York Times bestseller list more than any other book, selling over 143 million copies — and its annual Christmas gift-giving presence made it one of the most widely owned reference books in the English-speaking world.",
+          "The Guinness record concept transformed 'record-breaking' from a competitive achievement into a global participatory phenomenon — the pursuit of Guinness records in categories from the athletic to the bizarre created a worldwide culture of superlative-seeking that generated thousands of record attempts annually, from school children to professional performers.",
+          "The assassination of Ross McWhirter in November 1975 — he was shot at his doorstep by IRA gunmen after offering a £50,000 reward for information leading to the arrest of IRA bombers — transformed the Guinness Book's history into a tragic chapter of the Troubles, demonstrating that the book's founders were directly implicated in the political violence of the era."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "norris-mcwhirter",
+            "sourceName": "Norris McWhirter (1925–2004) and Ross McWhirter (1925–1975) — research journalists; Guinness compilers",
+            "verb": "COMPILES",
+            "targetSlug": "guinness-world-records",
+            "targetName": "Guinness World Records (1955 — bestselling copyright book; 143+ million copies; record-breaking culture)",
+            "context": "Norris and Ross McWhirter compiled the first Guinness Book of Records (1955) at the commission of the Guinness Brewery — their fact-finding expertise created one of the bestselling copyright books of all time."
+          },
+          {
+            "sourceSlug": "guinness-world-records",
+            "sourceName": "Guinness World Records (record-breaking culture — participatory phenomenon; global events)",
+            "verb": "CREATES",
+            "targetSlug": "record-breaking-culture",
+            "targetName": "Record-breaking culture (participatory — thousands of annual attempts; global phenomenon; Guinness certification)",
+            "context": "Guinness World Records transformed 'record-breaking' into a global participatory phenomenon — the pursuit of Guinness records in categories from the athletic to the bizarre generated thousands of annual attempts worldwide."
+          },
+          {
+            "sourceSlug": "guinness-world-records",
+            "sourceName": "Guinness World Records (Ross McWhirter assassination 1975 — IRA; Troubles; £50,000 reward)",
+            "verb": "IMPLICATES",
+            "targetSlug": "the-troubles-northern-ireland",
+            "targetName": "The Troubles (Northern Ireland — IRA; Ross McWhirter assassination November 1975)",
+            "context": "Ross McWhirter's assassination by IRA gunmen in November 1975 — after he offered a £50,000 reward for information on IRA bombers — directly connected the Guinness Book's history to the political violence of the Troubles."
+          }
+        ],
+        "places": [
+          {
+            "name": "Ireland / London (Guinness Brewery — pub argument August 1951; first published 27 August 1955)",
+            "role": "The Guinness Book of Records was conceived from a pub argument in August 1951 and first published on 27 August 1955 by the Guinness Brewery — a corporate promotional item that became an independent cultural institution"
+          },
+          {
+            "name": "Global (143+ million copies; 100+ countries; 37+ languages; annual Christmas gift-giving tradition)",
+            "role": "Guinness World Records achieved global reach — 143+ million copies in over 100 countries and 37 languages, with the annual Christmas gift-giving tradition making it one of the most widely owned reference books in history"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Guinness World Records",
+            "type": "Reference article",
+            "slug": "guinness-world-records"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q41675",
+          "https://en.wikipedia.org/wiki/Guinness_World_Records"
+        ],
+        "tags": [
+          "literary work",
+          "Historical & Literary Texts",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "Guinness World Records left a notable mark on Contemporary history, documented across 104 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.",
+        "summary": "The Guinness World Records (originally published as The Guinness Book of Records) is an annual reference book published by Guinness World Records Ltd., first published on 27 August 1955 by the Guinness Brewery as a commercial gift for pub landlords. The first edition was compiled by twin brothers Norris (1925–2004) and Ross McWhirter (1925–1975) after managing director Sir Hugh Beaver was unable to settle a pub argument about whether the golden plover or the grouse was Europe's fastest game bird — the concept was that a book of verified facts about superlatives (the fastest, the tallest, the oldest, the heaviest, the most numerous) could settle similar disputes and serve as a promotional tool for the brewery.\n\nThe Guinness Book of Records became one of the bestselling copyright books of all time — it has appeared on The New York Times bestseller list more than any other book, has sold over 143 million copies in more than 100 countries, and has been published in at least 37 languages. Its annual publication (first as a UK edition, expanded globally from the 1960s) made it a fixture of Christmas gift-giving in the English-speaking world — 'looking up records in the Guinness Book' became a cultural ritual that persisted for decades, and the book's role as a family reference and object of wonder established it as one of the most widely owned reference books in history.\n\nGuinness World Records transformed the concept of the 'record' from a competitive sporting achievement into a cultural category — the pursuit of Guinness records became a global participatory phenomenon, generating thousands of record-breaking attempts annually in categories from athletics to eating, from the bizarre to the inspiring. The brand's evolution from printed annual to a global media and events organisation — including record certification, live events, and television specials — demonstrates how a promotional concept became a self-sustaining cultural institution.",
+        "subjects": [
+          "Reference Books",
+          "20th Century",
+          "Norris McWhirter",
+          "Popular Culture",
+          "Record-Breaking",
+          "British Culture",
+          "Commercial Publishing",
+          "Cultural Institutions"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 7,
+          "significanceNarrative": "Guinness World Records (first published 1955) is one of the bestselling copyright books of all time — appearing on the New York Times bestseller list more than any other book, selling 143+ million copies. It transformed 'record-breaking' into a global participatory culture, and its founding story (a Guinness pub argument about game birds) became one of the most charming origin stories in publishing history.",
+          "significanceCategory": "significant"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-54-may2026",
+            "timestamp": "2026-05-16T18:52:51Z",
+            "oldValue": "",
+            "newValue": "The Guinness World Records (originally published as The Guinness Book of Records) is an annual reference book published by Guinness World Records Ltd., first published on 27 August 1955 by the Guinnes…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Historical & Literary Texts -- Global -- Contemporary"
       ],
@@ -45,7 +141,8 @@
       "$id": "guinness-world-records",
       "$sequence": "37807",
       "$createdAt": "2026-04-05T12:12:13.784+00:00",
-      "$updatedAt": "2026-04-06T00:51:44.108+00:00"
+      "$updatedAt": "2026-04-06T00:51:44.108+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }

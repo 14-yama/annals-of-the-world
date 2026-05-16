@@ -25,7 +25,103 @@
       "wikidataQid": "Q860831",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/The_Memoirs_of_Sherlock_Holmes",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Memoirs%20of%20sherlock%20holmes.jpg",
-      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"the-memoirs-of-sherlock-holmes\", \"sourceName\": \"The Memoirs of Sherlock Holmes\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"The Memoirs of Sherlock Holmes is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: The Memoirs of Sherlock Holmes\", \"type\": \"Reference article\", \"slug\": \"the-memoirs-of-sherlock-holmes\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q860831\", \"https://en.wikipedia.org/wiki/The_Memoirs_of_Sherlock_Holmes\"], \"tags\": [\"literary work\", \"Historical & Literary Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"The Memoirs of Sherlock Holmes contributed to the historical record of the Classical period. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "Conan Doyle's desire to end the Sherlock Holmes stories — his frustration with Holmes overshadowing his other literary work and his conviction that Holmes was preventing him from writing more serious literature — drove the decision to kill off the detective in The Final Problem, which ends the Memoirs.",
+          "The extraordinary commercial success of the first Holmes collection (The Adventures of Sherlock Holmes, 1892) and the sustained demand from The Strand Magazine's readership for further Holmes stories drove the production of The Memoirs — Conan Doyle continued writing despite his ambivalence, producing some of the finest stories in the canon.",
+          "The Swiss Alps setting of the Reichenbach Falls — visited by Conan Doyle during a holiday in 1893 — provided the dramatic landscape for The Final Problem's climactic confrontation, and the geography of the falls made the double fall a plausible and spectacular denouement."
+        ],
+        "effects": [
+          "The public reaction to Holmes's death in The Final Problem (1893) was the most dramatic literary mourning event of the Victorian era — thousands of reader cancelled Strand subscriptions, hundreds wore black in London streets, and the public outcry became a landmark in the history of celebrity and reader response, demonstrating that Holmes had become genuinely culturally real to his audience.",
+          "The ten-year 'hiatus' between Holmes's apparent death (1893) and his resurrection in The Adventure of the Empty House (1903) became one of the most famous gaps in literary history — generating stories, pastiches, and fan fiction about what Holmes was doing during those years, and demonstrating the extraordinary cultural afterlife of the character.",
+          "The introduction of Professor Moriarty in The Final Problem established the 'Napoleon of Crime' as the archetypal criminal mastermind in detective fiction — Moriarty's structural role (the intellectual equal and dark mirror of the detective) became a foundational convention of the genre, imitated in countless detective stories and thrillers."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "arthur-conan-doyle",
+            "sourceName": "Arthur Conan Doyle (1859–1930 — Sherlock Holmes creator; The Strand Magazine)",
+            "verb": "AUTHORS",
+            "targetSlug": "the-memoirs-of-sherlock-holmes",
+            "targetName": "The Memoirs of Sherlock Holmes (1893 — The Final Problem; Reichenbach Falls; Moriarty)",
+            "context": "Conan Doyle published The Memoirs of Sherlock Holmes in 1893 — the collection ends with The Final Problem, in which Holmes and Moriarty fall to their apparent deaths at the Reichenbach Falls."
+          },
+          {
+            "sourceSlug": "the-memoirs-of-sherlock-holmes",
+            "sourceName": "Memoirs of Sherlock Holmes (The Final Problem 1893 — public mourning; Strand Magazine cancellations)",
+            "verb": "GENERATES",
+            "targetSlug": "holmes-public-mourning-1893",
+            "targetName": "Holmes public mourning (1893 — Victorian reader response; black dress in London; Strand cancellations)",
+            "context": "The public reaction to Holmes's apparent death in The Final Problem (1893) was extraordinary — thousands cancelled Strand subscriptions, hundreds wore mourning dress in London streets — a landmark in the history of celebrity and reader response."
+          },
+          {
+            "sourceSlug": "the-memoirs-of-sherlock-holmes",
+            "sourceName": "Memoirs of Sherlock Holmes (Moriarty — Napoleon of Crime; criminal mastermind archetype)",
+            "verb": "INTRODUCES",
+            "targetSlug": "professor-moriarty",
+            "targetName": "Professor Moriarty (Napoleon of Crime — criminal mastermind archetype; detective fiction convention)",
+            "context": "The Memoirs introduces Professor Moriarty as Holmes's supreme antagonist — the 'Napoleon of Crime' established the criminal mastermind as the archetypal villain in detective fiction, imitated across the genre."
+          }
+        ],
+        "places": [
+          {
+            "name": "London (The Strand Magazine — Victorian readership; public mourning 1893; Diogenes Club)",
+            "role": "The Memoirs of Sherlock Holmes was serialised in The Strand Magazine in London — the public mourning for Holmes's death in the Victorian city demonstrated the character's extraordinary cultural reality to his audience"
+          },
+          {
+            "name": "Reichenbach Falls, Switzerland (The Final Problem — dramatic death scene; Conan Doyle's 1893 holiday)",
+            "role": "The Reichenbach Falls near Meiringen, Switzerland — visited by Conan Doyle in 1893 — became the iconic setting for Holmes's apparent death in The Final Problem"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: The Memoirs of Sherlock Holmes",
+            "type": "Reference article",
+            "slug": "the-memoirs-of-sherlock-holmes"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q860831",
+          "https://en.wikipedia.org/wiki/The_Memoirs_of_Sherlock_Holmes"
+        ],
+        "tags": [
+          "literary work",
+          "Historical & Literary Texts",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "The Memoirs of Sherlock Holmes contributed to the historical record of the Classical period. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.",
+        "summary": "The Memoirs of Sherlock Holmes is the second collection of Sherlock Holmes short stories by Arthur Conan Doyle (1859–1930), published in book form in December 1893 by George Newnes, Ltd., following serial publication in The Strand Magazine (December 1892 – December 1893). The collection contains twelve stories — including some of the most celebrated in the Holmes canon: The Adventure of Silver Blaze (the racehorse mystery, source of the 'dog in the night-time' clue), The Adventure of the Musgrave Ritual (Holmes's first case as narrated in retrospect), The Adventure of the Greek Interpreter (the first appearance of Mycroft Holmes), and The Final Problem — the story in which Holmes and Professor Moriarty fall to their apparent deaths at the Reichenbach Falls in Switzerland.\n\nThe Memoirs is especially significant in the Sherlock Holmes canon because it contains The Final Problem (1893) — the story in which Conan Doyle attempted to kill off Holmes by sending him over the Reichenbach Falls with the 'Napoleon of Crime', Professor Moriarty. The public reaction to Holmes's apparent death was extraordinary: thousands of readers cancelled their subscriptions to The Strand Magazine, hundreds wore black mourning dress in London's streets, and the public outcry was so intense that Conan Doyle was compelled to resurrect Holmes in The Adventure of the Empty House (1903) — a ten-year gap in Holmes's career that Doyle filled retrospectively.\n\nThe Memoirs also introduces Mycroft Holmes — the older, more brilliant but less active brother — and the Diogenes Club, and establishes the villainous Professor Moriarty as Holmes's supreme intellectual antagonist. The collection is a milestone in the development of detective fiction: The Final Problem's moral and psychological complexity, the tragedy of the 'good detective' apparently sacrificed in the defeat of the 'Napoleon of Crime', elevated the detective genre beyond puzzle fiction toward genuine literary tragedy.",
+        "subjects": [
+          "English Literature",
+          "Victorian Era",
+          "Detective Fiction",
+          "Arthur Conan Doyle",
+          "Sherlock Holmes",
+          "Short Stories",
+          "Crime Fiction",
+          "Victorian Culture"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 8,
+          "significanceNarrative": "The Memoirs of Sherlock Holmes (Conan Doyle, 1893) contains The Final Problem — the story of Holmes's apparent death at the Reichenbach Falls, which provoked the most dramatic literary mourning in Victorian England (black dress in London streets, mass Strand cancellations). It introduced Professor Moriarty as the archetypal criminal mastermind and elevated detective fiction toward literary tragedy.",
+          "significanceCategory": "highly-significant"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-54-may2026",
+            "timestamp": "2026-05-16T18:52:51Z",
+            "oldValue": "",
+            "newValue": "The Memoirs of Sherlock Holmes is the second collection of Sherlock Holmes short stories by Arthur Conan Doyle (1859–1930), published in book form in December 1893 by George Newnes, Ltd., following se…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Historical & Literary Texts -- Global -- Classical"
       ],
@@ -44,7 +140,8 @@
       "$id": "the-memoirs-of-sherlock-holmes",
       "$sequence": "22797",
       "$createdAt": "2026-04-05T12:09:09.945+00:00",
-      "$updatedAt": "2026-04-05T12:09:09.945+00:00"
+      "$updatedAt": "2026-04-05T12:09:09.945+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
