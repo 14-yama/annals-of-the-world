@@ -25,7 +25,126 @@
       "wikidataQid": "Q8272",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/GilgameshTablet.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier literary tradition in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Historical events in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Patron commission in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Preserved knowledge through Epic of Gilgamesh's historical significance\", \"type\": \"Text\"}, {\"title\": \"Influenced later works through Epic of Gilgamesh's historical significance\", \"type\": \"Text\"}, {\"title\": \"Defined canon through Epic of Gilgamesh's historical significance\", \"type\": \"Text\"}], \"relationships\": [{\"sourceSlug\": \"epic-of-gilgamesh\", \"sourceName\": \"Epic of Gilgamesh\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Epic of Gilgamesh is situated within the Classical (920)\"}, {\"sourceSlug\": \"epic-of-gilgamesh\", \"sourceName\": \"Epic of Gilgamesh\", \"verb\": \"TRANSMITS\", \"targetSlug\": \"literary-canon-classical\", \"targetName\": \"Literary Canon (Classical)\", \"context\": \"Epic of Gilgamesh contributed to the literary canon of the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Epic of Gilgamesh\", \"type\": \"Reference article\", \"slug\": \"epic-of-gilgamesh\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q8272\", \"https://en.wikipedia.org/wiki/Epic_of_Gilgamesh\"], \"tags\": [\"literary work\", \"Epic Poetry & Mythology\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Epic of Gilgamesh is remembered as a landmark text of the Classical era, referenced in 131 Wikipedia language editions. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": {
+        "causes": [
+          "The emergence of Sumerian city-states along the Euphrates after 3500 BCE created the world's first complex literate culture with surplus resources to support scribal schools, royal court traditions, and the composition of long narrative poetry.",
+          "The historical reign of Gilgamesh as king of Uruk (c. 2700 BCE) provided the nucleus for later mythologisation, as his city-building, military campaigns, and two-thirds divine ancestry were elaborated into a narrative exploring the human condition.",
+          "The invention of cuneiform writing after 3400 BCE gave Mesopotamian scholars a durable medium for recording oral traditions, enabling heroic poetry to be codified, standardised, and transmitted across centuries and political dynasties."
+        ],
+        "effects": [
+          "The Flood Narrative in Tablet XI directly parallels the Biblical story of Noah (Genesis 6–9), demonstrating that Hebrew scriptural traditions drew on older Near Eastern sources and profoundly influencing 19th-century biblical scholarship and comparative religious studies.",
+          "The epic established foundational literary templates — the hero's journey, the loyal companion, the quest for immortality — that recur across Homer's Odyssey, Virgil's Aeneid, Dante's Inferno, and modern narrative traditions.",
+          "George Smith's 1872 decipherment of the Flood Tablet from Ashurbanipal's Library at Nineveh triggered a revolution in Assyriology and archaeology, making the Epic of Gilgamesh the catalyst for systematic excavation of Mesopotamian sites."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "epic-of-gilgamesh",
+            "sourceName": "Epic of Gilgamesh",
+            "verb": "INFLUENCES",
+            "targetSlug": "bible",
+            "targetName": "Hebrew Bible",
+            "context": "The Flood Narrative in Tablet XI (c. 1200 BCE) shares extraordinary parallels with the Noah story in Genesis, suggesting direct transmission of flood mythology from Mesopotamian to Hebrew literary tradition."
+          },
+          {
+            "sourceSlug": "epic-of-gilgamesh",
+            "sourceName": "Epic of Gilgamesh",
+            "verb": "INFLUENCES",
+            "targetSlug": "odyssey",
+            "targetName": "Odyssey",
+            "context": "Scholars have identified structural and thematic parallels between Gilgamesh's journey to Utnapishtim and Odysseus's wanderings, suggesting the epic influenced early Greek literary traditions."
+          },
+          {
+            "sourceSlug": "uruk",
+            "sourceName": "Uruk",
+            "verb": "PRODUCES",
+            "targetSlug": "epic-of-gilgamesh",
+            "targetName": "Epic of Gilgamesh",
+            "context": "Uruk, the world's first true city, was both the home city of the historical Gilgamesh and the setting of the epic's opening tablets describing its magnificent walls."
+          },
+          {
+            "sourceSlug": "cuneiform",
+            "sourceName": "Cuneiform Writing",
+            "verb": "ENABLES",
+            "targetSlug": "epic-of-gilgamesh",
+            "targetName": "Epic of Gilgamesh",
+            "context": "Cuneiform script, invented in Mesopotamia around 3400 BCE, was the medium on which the epic was recorded across twelve clay tablets, enabling its preservation and eventual decipherment."
+          },
+          {
+            "sourceSlug": "ashurbanipal",
+            "sourceName": "Ashurbanipal",
+            "verb": "PRESERVES",
+            "targetSlug": "epic-of-gilgamesh",
+            "targetName": "Epic of Gilgamesh",
+            "context": "The Standard Babylonian Version of the epic was found in Ashurbanipal's great library at Nineveh (c. 650 BCE), the most complete ancient archive ever discovered."
+          }
+        ],
+        "places": [
+          {
+            "name": "Uruk, Iraq",
+            "role": "City of Gilgamesh; setting of the epic's opening; site of the world's first urban civilisation"
+          },
+          {
+            "name": "Nineveh, Iraq",
+            "role": "Site of Ashurbanipal's library where the most complete version of the epic was found in 1853"
+          },
+          {
+            "name": "Cedar Forest (Lebanon/Syria)",
+            "role": "Mythological destination of Gilgamesh and Enkidu's first great adventure, slaying the monster Humbaba"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Epic of Gilgamesh",
+            "type": "Reference article",
+            "slug": "epic-of-gilgamesh"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q8272",
+          "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh"
+        ],
+        "tags": [
+          "literary work",
+          "Epic Poetry & Mythology",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "Epic of Gilgamesh is remembered as a landmark text of the Classical era, referenced in 131 Wikipedia language editions. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.",
+        "summary": "The Epic of Gilgamesh is the oldest surviving work of epic literature in the world, composed in Sumerian and Akkadian cuneiform on clay tablets in ancient Mesopotamia between approximately 2100 and 1200 BCE. The poem centres on Gilgamesh, the historical king of Uruk (c. 2700 BCE) who was two-thirds divine and one-third human, and his companion Enkidu — a wild man formed from clay who becomes his closest friend. Together they slay the monster Humbaba in the Cedar Forest and kill the Bull of Heaven, but Enkidu's subsequent death sends Gilgamesh on a desperate search for immortality that ends at the ends of the earth, where the flood survivor Utnapishtim reveals that death cannot be conquered.\n\nThe epic's most celebrated section — the Flood Narrative in Tablet XI — describes a divine deluge sent to destroy humanity, survived by Utnapishtim who built a boat and preserved all living creatures, a story strikingly parallel to the later Biblical account of Noah. This discovery by George Smith in 1872 at the British Museum caused a sensation, demonstrating for the first time that Hebrew scripture shared sources with older Near Eastern literature. The Standard Babylonian Version, compiled by the scholar-scribe Sîn-lēqi-unninni around 1200 BCE, is the most complete recension, preserved across twelve tablets found at Ashurbanipal's library in Nineveh (destroyed 612 BCE).\n\nThe epic's themes — friendship, hubris, the fear of death, the limits of heroism, and the search for meaning — remain startlingly contemporary. It influenced the Odyssey, the Book of Job, and countless subsequent works. Its rediscovery in the 19th century transformed the study of ancient history and comparative religion, proving that civilisation's deepest preoccupations — mortality, companionship, and legacy — precede the Hebrew Bible by over a millennium.",
+        "subjects": [
+          "Literature",
+          "Mythology",
+          "Ancient History",
+          "Mesopotamia",
+          "Religion",
+          "Philosophy",
+          "Archaeology",
+          "Classical Era",
+          "Writing",
+          "Death and Immortality"
+        ],
+        "frameworks": [
+          "CULTURAL_TRANSMISSION",
+          "COMPARATIVE_CIVILIZATIONS",
+          "LONGUE_DUREE"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceNarrative": "The Epic of Gilgamesh is the oldest surviving work of epic literature, predating the Iliad by 1,500 years. Its rediscovery in 1872 transformed biblical scholarship by proving that Hebrew flood mythology derived from older Mesopotamian sources. Its themes of mortality, friendship, and the search for meaning established the foundational grammar of world literature.",
+          "significanceCategory": "world-changing"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-03-may2026",
+            "timestamp": "2026-05-16T13:51:01Z",
+            "oldValue": "",
+            "newValue": "The Epic of Gilgamesh is the oldest surviving work of epic literature in the world, composed in Sumerian and Akkadian cuneiform on clay tablets in ancient Mesopotamia between approximately 2100 and 12…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Epic Poetry & Mythology -- Global -- Classical"
       ],
@@ -45,7 +164,8 @@
       "$id": "epic-of-gilgamesh",
       "$sequence": "11410",
       "$createdAt": "2026-04-05T12:06:54.002+00:00",
-      "$updatedAt": "2026-04-06T00:50:45.685+00:00"
+      "$updatedAt": "2026-04-06T00:50:45.685+00:00",
+      "_unsyncedEdits": true
     },
     {
       "slug": "epic_of_gilgamesh",
