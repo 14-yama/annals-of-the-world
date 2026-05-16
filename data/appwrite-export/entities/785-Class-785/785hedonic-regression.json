@@ -25,7 +25,103 @@
       "wikidataQid": "Q388056",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Hedonic_regression",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"hedonic-regression\", \"sourceName\": \"hedonic regression\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"hedonic regression is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: hedonic regression\", \"type\": \"Reference article\", \"slug\": \"hedonic-regression\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q388056\", \"https://en.wikipedia.org/wiki/Hedonic_regression\"], \"tags\": [\"methodology\", \"Political & Polemical Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "The challenge of measuring price changes for differentiated goods — particularly automobiles (Andrew Court, 1939) and computers (where a personal computer in 1983 and 2003 are both called 'computers' but have radically different capabilities) — motivated the development of hedonic methods for constructing quality-adjusted price indices that could separate genuine price changes from quality improvements.",
+          "Sherwin Rosen's theoretical synthesis (1974) — which provided the microeconomic foundation for interpreting hedonic price regression as equilibrium outcomes of markets for characteristics — transformed hedonic regression from an empirical technique into a theoretically grounded economic tool with welfare analysis applications.",
+          "The adoption of hedonic price indices by the US Bureau of Labor Statistics and the Bureau of Economic Analysis for computers and software in the 1980s–1990s — following the Boskin Commission's (1996) recommendation that traditional price indices significantly overstated inflation — institutionalised hedonic methods in national accounts and made them central to the measurement of economic growth and productivity."
+        ],
+        "effects": [
+          "Hedonic price indices for computers — showing extremely rapid price declines (adjusted for quality improvement, computer prices fell approximately 20–25% per year in the 1980s–1990s) — contributed substantially to the measured productivity acceleration of the US economy in the 1990s (the 'IT productivity miracle') by increasing measured real investment in information technology.",
+          "The hedonic method's application to housing markets — decomposing house prices into the implicit values of location, size, and neighbourhood characteristics — has been one of the most productive applications in applied econometrics, with applications to environmental valuation (the value of clean air, proximity to parks), school quality capitalisation, and urban economics.",
+          "The widespread use of hedonic price indices in official statistics has generated methodological controversy — critics argue that hedonic adjustment systematically overstates real economic growth by assuming that measured quality improvements are fully valued by consumers, and that the subjective element in attribute valuation makes hedonic indices non-comparable across time and across countries."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "hedonic-regression",
+            "sourceName": "Hedonic regression (Rosen 1974, Griliches 1961)",
+            "verb": "THEORISED_BY",
+            "targetSlug": "sherwin-rosen",
+            "targetName": "Sherwin Rosen (1974, hedonic price theory)",
+            "context": "Rosen's 1974 Journal of Political Economy paper provided the microeconomic theory of hedonic prices as equilibrium outcomes of markets for characteristics — establishing the theoretical foundation for hedonic regression as a tool for welfare analysis and quality-adjusted price measurement."
+          },
+          {
+            "sourceSlug": "hedonic-regression",
+            "sourceName": "Hedonic regression (quality-adjusted price indices)",
+            "verb": "APPLIED_BY",
+            "targetSlug": "us-bureau-of-labor-statistics",
+            "targetName": "US Bureau of Labor Statistics (CPI, quality adjustment)",
+            "context": "The US BLS and Bureau of Economic Analysis use hedonic price indices for computers, software, and other technology goods — making hedonic methods central to the official measurement of US economic growth and the Consumer Price Index."
+          },
+          {
+            "sourceSlug": "hedonic-regression",
+            "sourceName": "Hedonic regression (housing market analysis)",
+            "verb": "APPLIED_TO",
+            "targetSlug": "housing-economics",
+            "targetName": "Housing market analysis and environmental valuation",
+            "context": "Hedonic regression is one of the most widely used tools in housing economics — decomposing house prices into the implicit values of location, size, neighbourhood, and amenities, with applications to environmental valuation and school quality measurement."
+          }
+        ],
+        "places": [
+          {
+            "name": "United States (BLS, BEA, Boskin Commission, national accounts application)",
+            "role": "The US was the primary context for the development and institutionalisation of hedonic price indices — the US Bureau of Labor Statistics and Bureau of Economic Analysis adopted hedonic methods for computers and software following the Boskin Commission recommendations"
+          },
+          {
+            "name": "Global (Eurostat, OECD, international statistical agencies)",
+            "role": "Hedonic methods have been adopted by statistical agencies worldwide — Eurostat, the OECD, and national statistical offices use hedonic price indices for information technology goods as recommended by international guidelines"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: hedonic regression",
+            "type": "Reference article",
+            "slug": "hedonic-regression"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q388056",
+          "https://en.wikipedia.org/wiki/Hedonic_regression"
+        ],
+        "tags": [
+          "methodology",
+          "Political & Polemical Texts",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "",
+        "summary": "Hedonic regression (also hedonic price method or hedonic pricing model) is an econometric method for measuring the value of specific attributes or characteristics of goods by analysing the prices of differentiated products — based on the hedonic hypothesis (attributed to the economist Andrew Court, 1939, and systematically developed by Zvi Griliches, 1961, and Sherwin Rosen, 1974) that the price of a good is a function of its constituent characteristics, and that the implicit prices of these characteristics can be estimated by regressing the observed market prices on the characteristics. The method was originally developed to create quality-adjusted price indices for automobiles and other differentiated goods, and has been most influentially applied in the measurement of housing prices (decomposing house prices into the values of location, size, construction quality, neighbourhood characteristics, school district quality, and proximity to amenities and disamenities) and technology goods (particularly computers, where rapid quality improvement makes traditional price indices misleading).\n\nThe theoretical foundation of hedonic regression was provided by Sherwin Rosen's 1974 paper 'Hedonic Prices and Implicit Markets: Product Differentiation in Pure Competition' (Journal of Political Economy) — which established the microeconomic theory of hedonic prices as equilibrium outcomes of a two-sided market for differentiated goods, deriving the implicit price functions (hedonic price functions) as equilibrium loci rather than supply or demand curves. Rosen's model showed that the hedonic price regression gives the envelope of consumers' bid functions and producers' offer functions in the market for characteristics, providing the theoretical foundation for welfare analysis of quality change.\n\nHedonic regression is used by statistical agencies worldwide (the US Bureau of Labor Statistics, the UK Office for National Statistics, Eurostat) to construct quality-adjusted price indices for computers, telecommunications equipment, housing, and other goods where rapid quality change would distort traditional fixed-basket price indices. The US national accounts (GDP) use hedonic price indices for computers and software — creating significant adjustments to measured economic growth that have been controversial (critics argue that hedonic adjustment overstates real economic growth by assuming quality improvements are fully valued by consumers) but are now standard practice in national accounting.",
+        "subjects": [
+          "Econometrics",
+          "Modern Era",
+          "Price Indices",
+          "Housing Economics",
+          "National Accounts",
+          "Applied Economics",
+          "Statistical Methods",
+          "Technology Economics"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 7,
+          "significanceNarrative": "Hedonic regression (Griliches 1961, Rosen 1974) is a foundational econometric method for quality-adjusted price measurement — central to the construction of official price indices for technology goods and housing. Its adoption by the US BLS and BEA contributed to the measured IT productivity miracle of the 1990s and has transformed national accounting. Its application to housing markets has made it one of the most productive tools in applied environmental and urban economics.",
+          "significanceCategory": "significant"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-37-may2026",
+            "timestamp": "2026-05-16T17:23:25Z",
+            "oldValue": "",
+            "newValue": "Hedonic regression (also hedonic price method or hedonic pricing model) is an econometric method for measuring the value of specific attributes or characteristics of goods by analysing the prices of d…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Political & Polemical Texts -- Global -- Classical"
       ],
@@ -44,7 +140,8 @@
       "$id": "hedonic-regression",
       "$sequence": "26396",
       "$createdAt": "2026-04-05T12:09:54.303+00:00",
-      "$updatedAt": "2026-04-05T12:09:54.303+00:00"
+      "$updatedAt": "2026-04-05T12:09:54.303+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }

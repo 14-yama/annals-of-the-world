@@ -25,7 +25,103 @@
       "wikidataQid": "Q502671",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Metabolic_control_analysis",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"metabolic-control-analysis\", \"sourceName\": \"Metabolic control analysis\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Metabolic control analysis is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Metabolic control analysis\", \"type\": \"Reference article\", \"slug\": \"metabolic-control-analysis\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q502671\", \"https://en.wikipedia.org/wiki/Metabolic_control_analysis\"], \"tags\": [\"methodology\", \"Political & Polemical Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": {
+        "causes": [
+          "The inadequacy of the rate-limiting step concept in biochemistry — the intuition that metabolism was controlled by a single enzyme (the 'bottleneck' or 'rate-limiting step') that set the pace for the entire pathway — motivated Kacser/Burns and Heinrich/Rapoport to develop MCA as a quantitative framework that could replace this intuition with rigorous analysis showing that control is typically distributed among multiple enzymes.",
+          "The availability of enzyme kinetics data and the development of computational methods for analysing systems of nonlinear differential equations (the biochemical kinetics of metabolic pathways) provided the technical foundation for MCA — the framework's mathematical tools (sensitivity analysis, summation theorems, connectivity theorems) required both theoretical biochemistry and computational analysis.",
+          "The growing importance of metabolic engineering — the rational manipulation of microbial metabolism for biotechnological purposes — created applied demand for quantitative methods like MCA that could identify the optimal targets for enzyme overexpression or deletion to increase the production of desired metabolites."
+        ],
+        "effects": [
+          "MCA's summation theorem — showing that flux control is distributed among all enzymes rather than concentrated in a single rate-limiting step — fundamentally changed biochemistry's understanding of metabolic regulation, replacing the misleading rate-limiting step concept with a quantitative framework for analysing distributed control.",
+          "MCA became a foundational framework of metabolic engineering — the rational design of microbial cells for biotechnological production — providing quantitative tools for identifying the primary control points of metabolic pathways and optimising the distribution of enzyme activities for maximal production of desired metabolites.",
+          "MCA's concepts and formalism were integrated into the broader programme of systems biology in the late 1990s — contributing to the quantitative, system-level approach to biological complexity that characterises modern computational biology and the analysis of metabolic networks in the context of genomics and proteomics."
+        ],
+        "relationships": [
+          {
+            "sourceSlug": "metabolic-control-analysis",
+            "sourceName": "MCA (Kacser/Burns 1973, Heinrich/Rapoport 1974)",
+            "verb": "DEVELOPED_BY",
+            "targetSlug": "henrik-kacser",
+            "targetName": "Henrik Kacser and James Burns (University of Edinburgh, 1973)",
+            "context": "Kacser and Burns developed MCA at the University of Edinburgh in 1973 — their paper 'The Control of Flux' established the flux control coefficient and summation theorem, showing that metabolic control is distributed rather than concentrated in a rate-limiting step."
+          },
+          {
+            "sourceSlug": "metabolic-control-analysis",
+            "sourceName": "MCA (flux control coefficients, summation theorem)",
+            "verb": "APPLIED_IN",
+            "targetSlug": "metabolic-engineering",
+            "targetName": "Metabolic engineering (biotechnology, bioproduction)",
+            "context": "MCA provides quantitative tools for identifying the primary control points of metabolic pathways — central to metabolic engineering strategies for increasing the production of desired metabolites in engineered microorganisms."
+          },
+          {
+            "sourceSlug": "metabolic-control-analysis",
+            "sourceName": "MCA (quantitative systems analysis)",
+            "verb": "CONTRIBUTES_TO",
+            "targetSlug": "systems-biology",
+            "targetName": "Systems biology (quantitative, systems-level biology)",
+            "context": "MCA's quantitative framework for analysing metabolic systems was integrated into systems biology in the late 1990s — contributing to the computational analysis of metabolic networks and the quantitative, systems-level approach to biological complexity."
+          }
+        ],
+        "places": [
+          {
+            "name": "University of Edinburgh (Kacser/Burns, 1973, UK)",
+            "role": "MCA was developed simultaneously at the University of Edinburgh by Henrik Kacser and James Burns — their 1973 paper 'The Control of Flux' is one of the two foundational publications of the field"
+          },
+          {
+            "name": "Humboldt University Berlin (Heinrich/Rapoport, 1974, Germany)",
+            "role": "MCA was independently developed at Humboldt University Berlin by Reinhart Heinrich and Tom Rapoport — their 1974 paper established the same mathematical framework from a different perspective, providing the dual founding of the field"
+          }
+        ],
+        "texts": [
+          {
+            "title": "Wikipedia: Metabolic control analysis",
+            "type": "Reference article",
+            "slug": "metabolic-control-analysis"
+          }
+        ],
+        "externalLinks": [
+          "https://www.wikidata.org/wiki/Q502671",
+          "https://en.wikipedia.org/wiki/Metabolic_control_analysis"
+        ],
+        "tags": [
+          "methodology",
+          "Political & Polemical Texts",
+          "cause-and-effect"
+        ],
+        "thumbnailUrl": "",
+        "quote": "",
+        "legacySummary": "",
+        "summary": "Metabolic Control Analysis (MCA) is a mathematical framework for quantifying how the control of metabolic fluxes (the rates of biochemical reactions) and concentrations of metabolic intermediates is distributed among the enzymes and transporters in a metabolic pathway. MCA was developed independently and almost simultaneously by Henrik Kacser and James A. Burns (University of Edinburgh, 1973) and by Reinhart Heinrich and Tom Rapoport (Humboldt University Berlin, 1974), with Kacser and Burns's paper 'The Control of Flux' (Symposia of the Society for Experimental Biology, 1973) and Heinrich and Rapoport's paper 'A Linear Steady-State Treatment of Enzymatic Chains' (European Journal of Biochemistry, 1974) as the foundational publications. MCA provides a precise quantitative framework for analysing metabolic systems that superseded the earlier intuition that metabolism was controlled by a single 'rate-limiting step'.\n\nThe central concepts of MCA are the control coefficients: the flux control coefficient (the relative change in flux through a pathway in response to a relative change in the activity of a specific enzyme) and the concentration control coefficient (the relative change in the concentration of a metabolite in response to a relative change in enzyme activity). The summation theorem — a fundamental result of MCA stating that the flux control coefficients of all enzymes in a pathway sum to exactly 1 — shows that control of a metabolic flux is not concentrated in a single rate-limiting enzyme but is distributed among all enzymes in proportion to their individual flux control coefficients. In most real metabolic systems, control is distributed, with no single enzyme having exclusive control.\n\nMCA has been widely applied in biochemistry, systems biology, and metabolic engineering — the rational design of cells and organisms for biotechnological applications (production of pharmaceutical compounds, biofuels, or food ingredients by engineered microorganisms). The framework's quantitative tools for identifying which enzymes are the primary control points of a metabolic pathway are central to metabolic engineering strategies for increasing the production of desired metabolites. MCA is also a foundational framework of systems biology — the quantitative, system-level approach to biological complexity that emerged in the late 1990s.",
+        "subjects": [
+          "Biochemistry",
+          "Modern Era",
+          "Systems Biology",
+          "Metabolic Engineering",
+          "Mathematical Biology",
+          "Enzymology",
+          "Biotechnology",
+          "Quantitative Biology"
+        ],
+        "frameworks": [
+          "STRUCTURAL_ANALYSIS",
+          "CAUSE_AND_EFFECT"
+        ],
+        "historicalSignificance": {
+          "significanceScore": 7,
+          "significanceNarrative": "Metabolic Control Analysis (Kacser/Burns 1973, Heinrich/Rapoport 1974) is a foundational framework of quantitative biochemistry — replacing the rate-limiting step concept with rigorous analysis showing that metabolic control is distributed among multiple enzymes. Its summation theorem is one of the key theoretical results of biochemistry, and its application in metabolic engineering and systems biology has made it central to modern biotechnology and computational biology.",
+          "significanceCategory": "significant"
+        },
+        "_editLog": [
+          {
+            "field": "summary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-37-may2026",
+            "timestamp": "2026-05-16T17:23:25Z",
+            "oldValue": "",
+            "newValue": "Metabolic Control Analysis (MCA) is a mathematical framework for quantifying how the control of metabolic fluxes (the rates of biochemical reactions) and concentrations of metabolic intermediates is d…"
+          }
+        ]
+      },
       "subjectHeadings": [
         "Artifacts & Texts -- Political & Polemical Texts -- Global -- Classical"
       ],
@@ -44,7 +140,8 @@
       "$id": "metabolic-control-analysis",
       "$sequence": "16371",
       "$createdAt": "2026-04-05T12:07:52.987+00:00",
-      "$updatedAt": "2026-04-05T12:07:52.987+00:00"
+      "$updatedAt": "2026-04-05T12:07:52.987+00:00",
+      "_unsyncedEdits": true
     }
   ]
 }
