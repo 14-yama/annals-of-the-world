@@ -1,43 +1,44 @@
 {
-  "generatedAt": "2026-05-16T20:57:39Z",
+  "generatedAt": "2026-05-16T21:44:48Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 4,
-  "failed": 1,
+  "enriched": 5,
+  "failed": 0,
   "dry_run": false,
   "results": [
     {
       "slug": "gilbert-du-motier-marquis-de-lafayette",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 8,
+      "category": "world-changing"
     },
     {
-      "slug": "william-washington",
+      "slug": "turahan-bey",
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
+    },
+    {
+      "slug": "tabalus",
       "status": "ok",
       "score": 5,
       "category": "regional"
     },
     {
-      "slug": "henry-knox",
+      "slug": "israel-putnam",
       "status": "ok",
       "score": 8,
       "category": "continental"
     },
     {
-      "slug": "jean-charles-pichegru",
+      "slug": "ambrogio-spinola-1st-marquis-of-the-balbases",
       "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
-    {
-      "slug": "gylippus",
-      "status": "ok",
-      "score": 5,
+      "score": 8,
       "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 4,
-    "failed": 1
+    "entities_scored": 5,
+    "failed": 0
   }
 }
