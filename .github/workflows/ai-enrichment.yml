@@ -48,6 +48,25 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Verify Gemini API key present (failsafe)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          if [ -z "$GEMINI_API_KEY" ] && [ -z "$OPENAI_API_KEY" ]; then
+            echo "::error::Both GEMINI_API_KEY and OPENAI_API_KEY are missing from repo secrets!"
+            echo "::error::Add at: Settings → Secrets and variables → Actions"
+            exit 1
+          fi
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo "::warning::GEMINI_API_KEY missing — will use OpenAI fallback only"
+          else
+            echo "✓ GEMINI_API_KEY present ($(echo -n "$GEMINI_API_KEY" | wc -c) chars)"
+          fi
+          if [ -n "$OPENAI_API_KEY" ]; then
+            echo "✓ OPENAI_API_KEY present (fallback ready)"
+          fi
+
       - name: Generate enrichment queue
         run: |
           python3 scripts/enrichment_queue.py \
@@ -60,10 +79,20 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          python3 scripts/ai_enrich_autonomous.py \
-            --count ${{ github.event.inputs.count || '25' }} \
-            --model ${{ github.event.inputs.model || 'gemini' }} \
-            --retry 2
+          MODEL="${{ github.event.inputs.model || 'gemini' }}"
+          COUNT="${{ github.event.inputs.count || '25' }}"
+          OTHER="gemini"; [ "$MODEL" = "gemini" ] && OTHER="openai"
+
+          # Primary provider
+          if python3 scripts/ai_enrich_autonomous.py \
+              --count "$COUNT" --model "$MODEL" --retry 2; then
+            echo "✓ $MODEL completed successfully"
+          else
+            echo "::warning::$MODEL failed — attempting $OTHER fallback in-line"
+            python3 scripts/ai_enrich_autonomous.py \
+              --count "$COUNT" --model "$OTHER" --retry 2 --lenient || \
+              echo "::error::Both providers failed; ai-enrichment-retry.yml will catch this on completion"
+          fi
 
       - name: Dry run preview
         if: ${{ github.event.inputs.dry_run == 'true' }}

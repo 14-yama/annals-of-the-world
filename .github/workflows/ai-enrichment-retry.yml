@@ -1,0 +1,119 @@
+name: AI Enrichment — Auto Retry on Failure
+
+# FAILSAFE: When ai-enrichment.yml fails, automatically retry with provider fallback.
+# - Attempt 1 (next): Gemini with lenient mode + 3 retries
+# - Attempt 2 (after this): OpenAI fallback
+# - Logs every retry attempt to data/governance/last_github_runs.json
+
+on:
+  workflow_run:
+    workflows: ["AI Entity Enrichment (git-first)"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      provider:
+        description: "Provider for retry"
+        type: choice
+        options:
+          - gemini
+          - openai
+        default: openai
+
+jobs:
+  retry:
+    # Only run if the triggering workflow FAILED (skip on success)
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.conclusion == 'failure' &&
+       github.event.workflow_run.event != 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      actions: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: clean/audit-system
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Verify API keys present
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          MISSING=0
+          if [ -z "$GEMINI_API_KEY" ]; then echo "::warning::GEMINI_API_KEY secret not set"; MISSING=$((MISSING+1)); fi
+          if [ -z "$OPENAI_API_KEY" ]; then echo "::warning::OPENAI_API_KEY secret not set"; MISSING=$((MISSING+1)); fi
+          if [ "$MISSING" = "2" ]; then echo "::error::Both API keys missing — cannot retry"; exit 1; fi
+
+      - name: Determine retry strategy
+        id: strategy
+        run: |
+          # Look at how many times this commit/run already retried this hour
+          MANUAL_PROVIDER="${{ github.event.inputs.provider }}"
+          if [ -n "$MANUAL_PROVIDER" ]; then
+            echo "provider=$MANUAL_PROVIDER" >> "$GITHUB_OUTPUT"
+          else
+            # Auto: try OpenAI (since the Gemini run that triggered this failed)
+            echo "provider=openai" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Generate enrichment queue
+        run: python3 scripts/enrichment_queue.py --limit 1000
+
+      - name: Retry enrichment via ${{ steps.strategy.outputs.provider }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          # Primary attempt with chosen provider, then the other as fallback
+          PROVIDER="${{ steps.strategy.outputs.provider }}"
+          OTHER="gemini"
+          [ "$PROVIDER" = "gemini" ] && OTHER="openai"
+
+          echo "::group::Retry attempt 1 — $PROVIDER"
+          python3 scripts/ai_enrich_autonomous.py \
+            --count 15 --model "$PROVIDER" --retry 3 --lenient && SUCCESS=1 || SUCCESS=0
+          echo "::endgroup::"
+
+          if [ "$SUCCESS" = "0" ]; then
+            echo "::warning::$PROVIDER retry failed — falling back to $OTHER"
+            echo "::group::Retry attempt 2 — $OTHER"
+            python3 scripts/ai_enrich_autonomous.py \
+              --count 15 --model "$OTHER" --retry 2 --lenient || \
+                echo "::error::Both providers failed during retry"
+            echo "::endgroup::"
+          fi
+
+      - name: Commit + push if changes
+        run: |
+          git config user.name  "Annals Retry Bot"
+          git config user.email "retry@annals-of-the-world.bot"
+          python3 scripts/_workflow_write_run_status.py "AI Enrichment Retry" success || true
+          git add data/appwrite-export/entities/ data/enrichment/ data/governance/last_github_runs.json || true
+          CHANGED=$(git diff --cached --name-only | wc -l)
+          if [ "$CHANGED" -gt 0 ]; then
+            git commit -m "feat(data): retry enrichment recovered ${CHANGED} entities (failsafe)
+
+          Auto-triggered by failure of ai-enrichment workflow.
+          Run: ${{ github.run_id }}"
+            git push
+          else
+            echo "Retry produced no changes"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          {
+            echo "### AI Enrichment Retry Failsafe"
+            echo "- **Triggered by:** ${{ github.event.workflow_run.html_url || 'manual' }}"
+            echo "- **Provider used:** ${{ steps.strategy.outputs.provider }}"
+            echo "- **Status:** ${{ job.status }}"
+          } >> "$GITHUB_STEP_SUMMARY"

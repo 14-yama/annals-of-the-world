@@ -1,0 +1,49 @@
+name: Workflow YAML Validation
+
+# FAILSAFE: validates all .github/workflows/*.yml on every push.
+# Catches YAML errors before they break the cloud bot fleet.
+
+on:
+  push:
+    paths:
+      - '.github/workflows/*.yml'
+      - '.github/workflows/*.yaml'
+  pull_request:
+    paths:
+      - '.github/workflows/*.yml'
+      - '.github/workflows/*.yaml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install yamllint + actionlint
+        run: |
+          python3 -m pip install --quiet pyyaml yamllint
+          # Install actionlint (Go binary, fast)
+          bash <(curl -fsSL https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash) \
+            > /dev/null
+          sudo mv actionlint /usr/local/bin/
+
+      - name: Validate YAML syntax
+        run: |
+          FAILED=0
+          for f in .github/workflows/*.yml .github/workflows/*.yaml; do
+            [ -f "$f" ] || continue
+            if python3 -c "import yaml; yaml.safe_load(open('$f').read())" 2>err.log; then
+              echo "✓ $f"
+            else
+              echo "✗ $f"
+              cat err.log
+              FAILED=1
+            fi
+          done
+          if [ "$FAILED" = "1" ]; then exit 1; fi
+
+      - name: Run actionlint
+        run: actionlint -color
