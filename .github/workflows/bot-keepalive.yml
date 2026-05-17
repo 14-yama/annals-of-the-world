@@ -110,7 +110,8 @@ jobs:
 
       - name: Keepalive skipped summary
         if: steps.check_idle.outputs.should_run == 'false'
-        run: echo "### Keepalive: Not needed — enrichment ran recently" >> "$GITHUB_STEP_SUMMARY"
+        run: |
+          echo "### Keepalive: Not needed — enrichment ran recently" >> "$GITHUB_STEP_SUMMARY"
 
   # Retry job: if the primary ai-enrichment workflow fails, this re-runs it
   retry-on-failure:

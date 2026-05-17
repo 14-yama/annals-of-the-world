@@ -79,31 +79,7 @@ jobs:
           git config user.name  "AI Enrichment Bot"
           git config user.email "ai-enrichment@annals-of-the-world.bot"
           # Write cloud bot status for OllamaMonitor UI
-          python3 - <<'PYEOF'
-import json, os, time
-from pathlib import Path
-runs_file = Path("data/governance/last_github_runs.json")
-runs_file.parent.mkdir(parents=True, exist_ok=True)
-existing = []
-if runs_file.exists():
-    try:
-        existing = json.loads(runs_file.read_text())
-        if isinstance(existing, dict): existing = existing.get("runs", [])
-    except Exception: existing = []
-this_run = {
-    "name": "AI Entity Enrichment (git-first)",
-    "status": "completed",
-    "conclusion": "success",
-    "runId": int(os.environ.get("GITHUB_RUN_ID", 0)),
-    "startedAt": None,
-    "updatedAt": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-    "htmlUrl": f"https://github.com/{os.environ.get('GITHUB_REPOSITORY','')}/actions/runs/{os.environ.get('GITHUB_RUN_ID','')}",
-    "triggeredBy": os.environ.get("GITHUB_EVENT_NAME", "schedule"),
-}
-existing = [r for r in existing if r.get("name") != this_run["name"]]
-existing.insert(0, this_run)
-runs_file.write_text(json.dumps(existing[:15], indent=2))
-PYEOF
+          python3 scripts/_workflow_write_run_status.py "AI Entity Enrichment (git-first)" success
           git add data/appwrite-export/entities/ data/enrichment/last_run.json data/governance/last_github_runs.json
           CHANGED=$(git diff --cached --name-only | wc -l)
           if [ "$CHANGED" -gt 0 ]; then

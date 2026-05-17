@@ -17,7 +17,43 @@ PYTHON="$REPO/.venv/bin/python3"
 LOG="/tmp/local_bot_server.log"
 PID_FILE="/tmp/local_bot_server.pid"
 PORT=7474
+OLLAMA_BIN="$HOME/.local/bin/ollama"
+ANOMALY_STATE="/tmp/bot_healthcheck.anomaly_state"
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+
+# ── Ollama keepalive ──────────────────────────────────────────────────────────
+if ! curl -sf --max-time 3 http://localhost:11434/api/tags > /dev/null 2>&1; then
+    echo "[$TIMESTAMP] [warn] Ollama not responding — starting daemon"
+    nohup "$OLLAMA_BIN" serve > /tmp/ollama.log 2>&1 &
+    sleep 2
+fi
+
+# ── Silent-sync anomaly detection ─────────────────────────────────────────────
+# If filesChanged > 0 but writesPerformed == 0 for two consecutive runs, force a sync.
+LAST_SYNC="$REPO/data/governance/last_sync.json"
+if [[ -f "$LAST_SYNC" ]]; then
+    ANOMALY=$(python3 - <<'PY' 2>/dev/null || echo "0"
+import json, pathlib
+try:
+    d = json.loads(pathlib.Path("/home/manasa151/annals-of-the-world/data/governance/last_sync.json").read_text())
+    s = d.get("lastRunStats", {}) or {}
+    fc = int(s.get("filesChanged", 0) or 0)
+    wp = int(s.get("writesPerformed", 0) or 0)
+    eu = int(s.get("entitiesUpserted", 0) or 0)
+    print("1" if (fc > 0 and wp == 0 and eu == 0) else "0")
+except Exception:
+    print("0")
+PY
+)
+    PREV=$(cat "$ANOMALY_STATE" 2>/dev/null || echo "0")
+    if [[ "$ANOMALY" == "1" && "$PREV" == "1" ]]; then
+        echo "[$TIMESTAMP] [ANOMALY] 2x silent-sync runs detected — forcing --local sync"
+        cd "$REPO"
+        set -a; [[ -f .env ]] && . .env; set +a
+        timeout 600 npx tsx scripts/sync_gateway.ts --local --max=1000 2>&1 | tail -10
+    fi
+    echo "$ANOMALY" > "$ANOMALY_STATE"
+fi
 
 # ── Health check ──────────────────────────────────────────────────────────────
 if curl -sf --max-time 5 "http://localhost:${PORT}/health" > /dev/null 2>&1; then
