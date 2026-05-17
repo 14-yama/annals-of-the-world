@@ -270,7 +270,9 @@ function entityToPayload(e: Entity): Record<string, unknown> {
   if (typeof e.detailsJson === 'string' && e.detailsJson) {
     try { dj = JSON.parse(e.detailsJson) } catch { dj = {} }
   } else if (e.detailsJson && typeof e.detailsJson === 'object') {
-    dj = e.detailsJson as Record<string, unknown>
+    // Shallow-copy to avoid mutating ent.detailsJson — mutation would destroy
+    // _editLog before audit emission can read it.
+    dj = { ...(e.detailsJson as Record<string, unknown>) }
   }
   delete dj._editLog
   delete dj._unsyncedEdits
@@ -296,8 +298,8 @@ async function emitAuditRow(entity: Entity, log: EditLogEntry): Promise<boolean>
     entityName: entity.name || entity.slug || '',
     action: 'update',
     field: log.field,
-    oldValue: typeof log.oldValue === 'string' ? log.oldValue : JSON.stringify(log.oldValue).slice(0, 1000),
-    newValue: typeof log.newValue === 'string' ? log.newValue : JSON.stringify(log.newValue).slice(0, 1000),
+    oldValue: typeof log.oldValue === 'string' ? log.oldValue : (JSON.stringify(log.oldValue) ?? '').slice(0, 1000),
+    newValue: typeof log.newValue === 'string' ? log.newValue : (JSON.stringify(log.newValue) ?? '').slice(0, 1000),
     editorId: log.editorId,
     editorNote: 'replayed by sync_gateway from _editLog',
     timestamp: log.timestamp,
@@ -351,6 +353,8 @@ async function main(): Promise<void> {
     const entities = data.entities || []
     for (const ent of entities) {
       if (!ent.slug) continue
+      // In --local mode only process entities that are actually dirty
+      if (LOCAL && !ent._unsyncedEdits) continue
       // Per-run cap
       if (writesPerformed >= perRunCap) {
         stoppedReason = `perRunWriteCap=${perRunCap} reached`
@@ -429,11 +433,14 @@ async function main(): Promise<void> {
         }
       }
 
-      // Clear _editLog from local file (real run only)
-      if (!DRY_RUN && log.length > 0) {
+      // Clear _editLog and dirty flags from local file (real run only)
+      if (!DRY_RUN) {
         dj._editLog = []
-        dj._unsyncedEdits = false
+        delete dj._unsyncedEdits
         ent.detailsJson = JSON.stringify(dj)
+        // Also clear the top-level entity flag — without this the --local scanner
+        // re-detects the file as dirty on every subsequent run.
+        delete (ent as Record<string, unknown>)._unsyncedEdits
       }
     }
 
