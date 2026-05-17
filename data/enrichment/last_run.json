@@ -1,31 +1,26 @@
 {
-  "timestamp": "2026-05-17T07:28:45Z",
+  "timestamp": "2026-05-17T08:23:50Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 1,
-  "failed": 3,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "snow-white",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
-    },
-    {
-      "slug": "a-song-of-ice-and-fire",
+      "slug": "classic-of-poetry",
       "status": "enriched",
-      "old_len": 81,
-      "new_len": 1872
+      "old_len": 137,
+      "new_len": 1669
     },
     {
-      "slug": "a-christmas-carol",
+      "slug": "panchatantra",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "gospel-of-judas",
       "status": "failed",
       "reason": "insufficient relationships (1, need >= 3)"
-    },
-    {
-      "slug": "the-decameron",
-      "status": "failed",
-      "reason": "insufficient subjects (3, need >= 5)"
     }
   ]
 }
