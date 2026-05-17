@@ -25,7 +25,7 @@
       "wikidataQid": "Q278204",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Noida",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Noida%20city%20from%20the%20Hilton%20Noida.jpg",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"noida\", \"sourceName\": \"Noida\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-cold-war-era\", \"targetName\": \"Cold War Era\", \"context\": \"Noida is situated within the Cold War Era (961)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Noida\", \"type\": \"Reference article\", \"slug\": \"noida\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q278204\", \"https://en.wikipedia.org/wiki/Noida\"], \"tags\": [\"India\", \"city\", \"Asia\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Noida left a notable mark on Contemporary history, documented across 62 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"noida\", \"sourceName\": \"Noida\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-cold-war-era\", \"targetName\": \"Cold War Era\", \"context\": \"Noida is situated within the Cold War Era (961)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Noida\", \"type\": \"Reference article\", \"slug\": \"noida\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q278204\", \"https://en.wikipedia.org/wiki/Noida\"], \"tags\": [\"India\", \"city\", \"Asia\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Noida left a notable mark on Contemporary history, documented across 62 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"Noida's systematic planning and decentralization of growth from Delhi have had a significant impact on Uttar Pradesh's economy, contributing over 10% to the state's GDP. This has helped to reduce regional disparities and promote sustainable development.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"Noida's systematic planning and decentralization of growth from Delhi have had a significant impact on Uttar Pradesh's economy, contributing over 10% to the state's GDP. This has helped to reduce regional disparities and promote sustainable development.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-17T19:06:18Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Cities -- India -- Contemporary"
       ],
@@ -46,7 +46,12 @@
       "$id": "noida",
       "$sequence": "731472",
       "$createdAt": "2026-04-05T15:21:30.491+00:00",
-      "$updatedAt": "2026-04-05T15:21:30.491+00:00"
+      "$updatedAt": "2026-04-05T15:21:30.491+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "Noida's systematic planning and decentralization of growth from Delhi have had a significant impact on Uttar Pradesh's economy, contributing over 10% to the state's GDP. This has helped to reduce regional disparities and promote sustainable development.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

@@ -25,7 +25,7 @@
       "wikidataQid": "Q170457",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Ayd%C4%B1n",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Ayd%C4%B1n%2C%20Turkey%2003.jpg",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"aydn\", \"sourceName\": \"Aydın\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Aydın is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Aydın\", \"type\": \"Reference article\", \"slug\": \"aydın\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q170457\", \"https://en.wikipedia.org/wiki/Ayd%C4%B1n\"], \"tags\": [\"Turkey\", \"city\", \"Asia\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Aydın left a notable mark on Classical history, documented across 82 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"aydn\", \"sourceName\": \"Aydın\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Aydın is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Aydın\", \"type\": \"Reference article\", \"slug\": \"aydın\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q170457\", \"https://en.wikipedia.org/wiki/Ayd%C4%B1n\"], \"tags\": [\"Turkey\", \"city\", \"Asia\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Aydın left a notable mark on Classical history, documented across 82 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"Aydın's fertile region has supported agriculture since ancient times, with figs being the province's best-known crop. This local agricultural significance has contributed to the city's growth and economic development.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"Ayd\\\\u0131n's fertile region has supported agriculture since ancient times, with figs being the province's best-known crop. This local agricultural significance has contributed to the city's growth and economic development.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-17T19:07:52Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Cities -- Turkey -- Classical"
       ],
@@ -46,7 +46,12 @@
       "$id": "aydn",
       "$sequence": "716195",
       "$createdAt": "2026-04-05T15:16:08.461+00:00",
-      "$updatedAt": "2026-04-05T15:16:08.461+00:00"
+      "$updatedAt": "2026-04-05T15:16:08.461+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "Aydın's fertile region has supported agriculture since ancient times, with figs being the province's best-known crop. This local agricultural significance has contributed to the city's growth and economic development.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
