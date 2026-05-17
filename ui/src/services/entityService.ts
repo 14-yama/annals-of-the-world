@@ -47,11 +47,12 @@ export async function fetchEntities(opts?: {
 }
 
 /**
- * Search entities — cost-efficient search across 400K+ Appwrite backend.
+ * Search entities — multi-strategy search across Appwrite backend.
  *
- * Strategies (max 2 queries to stay within Pro plan budget):
+ * Strategies (run in parallel, results merged + deduped):
  * 1. Fulltext name search  — word-prefix matching on the `name` field
- * 2. Fulltext summary search — finds entities whose summary mentions the query
+ * 2. Slug exact match     — converts query to slug format for direct lookup
+ * 3. Fulltext summary search — finds entities whose summary mentions the query
  *
  * Results are merged, deduplicated by slug, and sorted by importanceScore.
  */
@@ -81,13 +82,24 @@ export async function searchEntities(query: string, limit = 25): Promise<Entity[
     }
   }
 
-  // ── Run at most 2 strategies in parallel (cost cap) ──
+  /** Convert a human-readable query to Appwrite slug format */
+  const toSlug = (s: string) =>
+    s.trim().toLowerCase()
+      .replace(/['']/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '')
+
+  const slugQuery = toSlug(q)
+
+  // ── Run strategies in parallel ──
   const strategies: Promise<Entity[]>[] = [
-    // Strategy 1: Fulltext name search (covers exact, prefix, and partial name matches)
+    // Strategy 1: Fulltext name search (word-prefix matching)
     safeQuery([Query.search('name', q), Query.limit(limit)]),
+    // Strategy 2: Exact slug lookup — catches "wright brothers" → "wright-brothers"
+    safeQuery([Query.equal('slug', slugQuery), Query.limit(1)]),
   ]
 
-  // Strategy 2: Fulltext summary search (catches entities whose name doesn't match but topic does)
+  // Strategy 3: Fulltext summary search (catches topic matches)
   if (q.length >= 3) {
     strategies.push(safeQuery([Query.search('summary', q), Query.limit(limit)]))
   }
@@ -360,6 +372,7 @@ function mapDocToEntity(doc: any): Entity {
     imageUrl:       doc.imageUrl,
     thumbnailUrl:   details.thumbnailUrl,
     importanceScore: doc.importanceScore,
+    historicalSignificance: doc.historicalSignificance ?? details.historicalSignificance,
     altNames:       doc.altNames ?? [],
     externalLinks:  details.externalLinks ?? [],
     tags:           details.tags ?? [],
