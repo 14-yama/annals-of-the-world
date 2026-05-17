@@ -1,40 +1,38 @@
 {
-  "timestamp": "2026-05-16T19:23:53Z",
+  "timestamp": "2026-05-16T20:14:56Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 5,
-  "failed": 0,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "john-of-rokycan",
-      "status": "enriched",
-      "old_len": 115,
-      "new_len": 1495
+      "slug": "vitello",
+      "status": "failed",
+      "reason": "Expecting ',' delimiter: line 76 column 1 (char 1755)"
     },
     {
-      "slug": "pantaenus",
-      "status": "enriched",
-      "old_len": 258,
-      "new_len": 1413
+      "slug": "snorri-thorfinnsson",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "marcus-popillius-laenas",
+      "slug": "felician-of-foligno",
       "status": "enriched",
-      "old_len": 46,
-      "new_len": 921
+      "old_len": 53,
+      "new_len": 1231
     },
     {
-      "slug": "johannes-despauterius",
+      "slug": "peter-the-iberian",
       "status": "enriched",
-      "old_len": 130,
-      "new_len": 1822
+      "old_len": 270,
+      "new_len": 1248
     },
     {
-      "slug": "justus-of-urgell",
+      "slug": "lupus-of-sens",
       "status": "enriched",
-      "old_len": 48,
-      "new_len": 1015
+      "old_len": 54,
+      "new_len": 1216
     }
   ]
 }
