@@ -25,7 +25,7 @@
       "wikidataQid": "Q200464",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Portuguese_Empire",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Rua%20Direita%20na%20Cidade%20de%20Goa.jpg",
-      "detailsJson": "{\"causes\": [\"Natural geographic formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"portuguese-empire\", \"sourceName\": \"Portuguese Empire\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-late-medieval\", \"targetName\": \"Late Medieval\", \"context\": \"Portuguese Empire is situated within the Late Medieval (933)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Portuguese Empire\", \"type\": \"Reference article\", \"slug\": \"portuguese-empire\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q200464\", \"https://en.wikipedia.org/wiki/Portuguese_Empire\"], \"tags\": [\"Portugal\", \"historical country\", \"Europe\", \"Countries / Polities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Portuguese Empire left a notable mark on Medieval history, documented across 87 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Natural geographic formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"portuguese-empire\", \"sourceName\": \"Portuguese Empire\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-late-medieval\", \"targetName\": \"Late Medieval\", \"context\": \"Portuguese Empire is situated within the Late Medieval (933)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Portuguese Empire\", \"type\": \"Reference article\", \"slug\": \"portuguese-empire\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q200464\", \"https://en.wikipedia.org/wiki/Portuguese_Empire\"], \"tags\": [\"Portugal\", \"historical country\", \"Europe\", \"Countries / Polities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Portuguese Empire left a notable mark on Medieval history, documented across 87 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 8, \"significanceNarrative\": \"The Portuguese Empire's Age of Discovery led to European colonization of vast portions of Africa and Asia, shaping global trade and politics. Its reach at its greatest extent in 1820 covered 5.5 million square km.\", \"significanceCategory\": \"continental\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 8, \\\"significanceNarrative\\\": \\\"The Portuguese Empire's Age of Discovery led to European colonization of vast portions of Africa and Asia, shaping global trade and politics. Its reach at its greatest extent in 1820 covered 5.5 million square km.\\\", \\\"significanceCategory\\\": \\\"continental\\\"}\", \"timestamp\": \"2026-05-17T15:44:55Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Countries / Polities -- Portugal -- Medieval"
       ],
@@ -46,7 +46,12 @@
       "$id": "portuguese-empire",
       "$sequence": "728016",
       "$createdAt": "2026-04-05T15:20:24.170+00:00",
-      "$updatedAt": "2026-04-05T15:20:24.170+00:00"
+      "$updatedAt": "2026-04-05T15:20:24.170+00:00",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "The Portuguese Empire's Age of Discovery led to European colonization of vast portions of Africa and Asia, shaping global trade and politics. Its reach at its greatest extent in 1820 covered 5.5 million square km.",
+        "significanceCategory": "continental"
+      }
     }
   ]
 }

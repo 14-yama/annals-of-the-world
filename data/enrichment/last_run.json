@@ -1,70 +1,38 @@
 {
-  "timestamp": "2026-05-17T10:54:38Z",
+  "timestamp": "2026-05-17T11:38:51Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 10,
-  "failed": 0,
+  "count_requested": 5,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "eclogues",
+      "slug": "the-gulag-archipelago",
       "status": "enriched",
-      "old_len": 65,
-      "new_len": 1530
+      "old_len": 88,
+      "new_len": 1486
     },
     {
-      "slug": "pham-ngu-lao",
-      "status": "enriched",
-      "old_len": 643,
-      "new_len": 1325
+      "slug": "les-fleurs-du-mal",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "book-of-the-later-han",
+      "slug": "su-shi",
       "status": "enriched",
-      "old_len": 70,
-      "new_len": 1813
+      "old_len": 664,
+      "new_len": 1503
     },
     {
-      "slug": "de-rerum-natura",
+      "slug": "the-merchant-of-venice",
       "status": "enriched",
-      "old_len": 70,
-      "new_len": 1036
+      "old_len": 98,
+      "new_len": 1980
     },
     {
-      "slug": "turahan-bey",
-      "status": "enriched",
-      "old_len": 645,
-      "new_len": 966
-    },
-    {
-      "slug": "the-emperors-new-clothes",
-      "status": "enriched",
-      "old_len": 72,
-      "new_len": 1251
-    },
-    {
-      "slug": "a-farewell-to-arms",
-      "status": "enriched",
-      "old_len": 76,
-      "new_len": 1081
-    },
-    {
-      "slug": "the-adventures-of-sherlock-holmes",
-      "status": "enriched",
-      "old_len": 80,
-      "new_len": 1264
-    },
-    {
-      "slug": "life-is-a-dream",
-      "status": "enriched",
-      "old_len": 80,
-      "new_len": 1192
-    },
-    {
-      "slug": "the-ugly-duckling",
-      "status": "enriched",
-      "old_len": 82,
-      "new_len": 1388
+      "slug": "bibliotheca",
+      "status": "failed",
+      "reason": "insufficient causes (0, need >= 2)"
     }
   ]
 }

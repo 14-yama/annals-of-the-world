@@ -42309,17 +42309,22 @@
   "git-push-1779030154": {
     "job_id": "git-push-1779030154",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 28,
     "pid": null,
     "started": "2026-05-17T15:02:34Z",
-    "finished": null,
+    "finished": "2026-05-17T15:02:39Z",
     "log": [
       "Pending files: 28 entities, 0 edges (28 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 267 local enrichments\"",
+      "[clean/audit-system 2f01223f96] feat(enrich): watchdog auto-push \u2014 267 local enrichments\n 33 files changed, 705 insertions(+), 114 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   16b2c9fde9..2f01223f96  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 28 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "enrich-1779030154": {
     "job_id": "enrich-1779030154",
@@ -42360,7 +42365,39 @@
       "[8/20] the-ugly-duckling (score=109.75, 0c)",
       "  SKIP \u2014 already enriched (1388c)",
       "",
-      "[9/20] the-little-match-girl (score=109.75, 0c)"
+      "[9/20] the-little-match-girl (score=109.75, 0c)",
+      "  ENRICHED \u2014 82c -> 1366c",
+      "",
+      "[10/20] watchmen (score=109.62, 0c)",
+      "  ENRICHED \u2014 83c -> 1423c",
+      "",
+      "[11/20] a-study-in-scarlet (score=109.5, 0c)",
+      "  ENRICHED \u2014 84c -> 1339c",
+      "",
+      "[12/20] the-gulag-archipelago (score=109.0, 0c)",
+      "  RETRY (1) \u2014 insufficient causes (0, need >= 1)",
+      "  ENRICHED \u2014 88c -> 1409c",
+      "",
+      "[13/20] les-fleurs-du-mal (score=108.38, 0c)",
+      "  ENRICHED \u2014 93c -> 1155c",
+      "",
+      "[14/20] su-shi (score=107.8, 0c)",
+      "  ENRICHED \u2014 664c -> 1393c",
+      "",
+      "[15/20] the-merchant-of-venice (score=107.75, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  ENRICHED \u2014 98c -> 1334c",
+      "",
+      "[16/20] bibliotheca (score=107.5, 0c)",
+      "  ENRICHED \u2014 100c -> 1887c",
+      "",
+      "[17/20] prose-edda (score=107.25, 0c)",
+      "  ENRICHED \u2014 102c -> 1902c",
+      "",
+      "[18/20] gospel-of-thomas (score=107.25, 0c)",
+      "  ENRICHED \u2014 102c -> 808c",
+      "",
+      "[19/20] the-snow-queen (score=106.62, 0c)"
     ],
     "exitCode": null
   }
