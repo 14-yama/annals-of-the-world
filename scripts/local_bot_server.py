@@ -765,47 +765,74 @@ def _recent_enrich_failures(window_seconds: int = 900) -> int:
 
 
 def _restart_ollama() -> bool:
-    """Try to restart Ollama. Returns True on success."""
+    """Kill any stale Ollama process and start a fresh one — NO sudo, NO systemd.
+    Ollama runs as the current user via ~/.local/bin/ollama serve.
+    Returns True if Ollama responds within 15 s of startup."""
     global _LAST_OLLAMA_RESTART_AT
     if time.time() - _LAST_OLLAMA_RESTART_AT < _OLLAMA_RESTART_COOLDOWN:
         return False
     _LAST_OLLAMA_RESTART_AT = time.time()
-    print("[watchdog] Attempting to restart Ollama service...")
-    # Try systemd (system or user), then direct 'ollama serve'
-    for cmd in (
-        ["systemctl", "restart", "ollama"],
-        ["systemctl", "--user", "restart", "ollama"],
-        ["sudo", "-n", "systemctl", "restart", "ollama"],
+    print("[watchdog] Restarting Ollama (no sudo — direct user process)...")
+
+    # 1. Kill any existing ollama serve process (same user, no sudo needed)
+    for kill_cmd in (
+        ["pkill", "-u", os.environ.get("USER", ""), "-f", "ollama serve"],
+        ["pkill", "-f", "ollama serve"],
     ):
         try:
-            r = subprocess.run(cmd, capture_output=True, text=True, timeout=15)
+            subprocess.run(kill_cmd, capture_output=True, timeout=5)
+        except Exception:
+            pass
+    time.sleep(2)
+
+    # 2. Locate the ollama binary — check known paths before falling back to PATH
+    ollama_bin = None
+    for candidate in (
+        os.path.expanduser("~/.local/bin/ollama"),
+        "/usr/local/bin/ollama",
+        "/usr/bin/ollama",
+    ):
+        if os.path.isfile(candidate) and os.access(candidate, os.X_OK):
+            ollama_bin = candidate
+            break
+    if not ollama_bin:
+        # Last resort: ask the shell
+        r = subprocess.run(["which", "ollama"], capture_output=True, text=True, timeout=5)
+        if r.returncode == 0 and r.stdout.strip():
+            ollama_bin = r.stdout.strip()
+
+    if not ollama_bin:
+        print("[watchdog] ollama binary not found — cannot restart")
+        return False
+
+    # 3. Start Ollama as a background user process (no sudo, no systemd)
+    try:
+        log_fh = open("/tmp/ollama.log", "a")
+        subprocess.Popen(
+            [ollama_bin, "serve"],
+            stdout=log_fh, stderr=log_fh,
+            close_fds=True,
+            start_new_session=True,   # detach from our process group
+        )
+    except Exception as e:
+        print(f"[watchdog] Failed to start ollama serve: {e}")
+        return False
+
+    # 4. Wait up to 15 s for Ollama to respond
+    for _ in range(15):
+        time.sleep(1)
+        try:
+            r = subprocess.run(
+                ["curl", "-sf", "--max-time", "2", "http://localhost:11434/api/tags"],
+                capture_output=True, timeout=5,
+            )
             if r.returncode == 0:
-                print(f"[watchdog] Ollama restart via systemd succeeded")
-                time.sleep(5)
+                print(f"[watchdog] Ollama restarted via '{ollama_bin} serve'")
                 return True
         except Exception:
             pass
 
-    # Fallback: kill any stale and start fresh
-    try:
-        subprocess.run(["pkill", "-f", "ollama serve"], capture_output=True, timeout=5)
-        time.sleep(2)
-    except Exception:
-        pass
-    try:
-        ollama_bin = subprocess.run(["which", "ollama"], capture_output=True, text=True, timeout=5).stdout.strip()
-        if ollama_bin:
-            subprocess.Popen([ollama_bin, "serve"],
-                             stdout=open("/tmp/ollama.log", "a"), stderr=subprocess.STDOUT)
-            time.sleep(5)
-            # Verify it came up
-            r = subprocess.run(["curl", "-sf", "--max-time", "3", "http://localhost:11434/api/tags"],
-                                capture_output=True, timeout=10)
-            if r.returncode == 0:
-                print("[watchdog] Ollama restarted via direct 'ollama serve'")
-                return True
-    except Exception as e:
-        print(f"[watchdog] ollama serve restart failed: {e}")
+    print("[watchdog] Ollama started but did not respond within 15 s")
     return False
 
 

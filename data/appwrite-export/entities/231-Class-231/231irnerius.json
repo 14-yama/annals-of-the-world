@@ -11,41 +11,288 @@
       "name": "Irnerius",
       "label": "Person",
       "callNumber": "231.irnerius",
-      "summary": "Irnerius, sometimes referred to as lucerna juris, was an Italian jurist, and founder of the School of Glossators and thus of the tradition of medieval Roman Law.",
+      "summary": "Irnerius (c. 1050–c. 1125) was an Italian jurist and teacher at Bologna who is widely recognized as the founder of the medieval study of Roman law and the first of the great Glossators. By recovering and systematically teaching Justinian's Corpus Juris Civilis, he launched a legal revolution that would shape European law for the next millennium.\n\nWorking at Bologna — then the pre-eminent centre of Italian learning — Irnerius began lecturing on the full Digest of Justinian at a time when only fragments of Roman law circulated in the West. He developed the gloss, a method of annotating the text word-by-word and resolving contradictions through rational argument, transforming law from a craft into an academic discipline. His students spread his method across Europe, and Bologna under his influence became the first university in the Western world dedicated to law.\n\nHis legacy is immeasurable: the Glossator school he founded produced Accursius, whose Glossa Ordinaria became the standard commentary on Roman law for three centuries. Every civil law system in continental Europe — French, Spanish, Italian, German — traces its intellectual ancestry to the classroom Irnerius created in Bologna around 1088.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
       "eraDivisionCode": "930",
       "region": "Global",
       "continent": "Global",
-      "status": "Published",
-      "died": "1140",
+      "status": "enriched",
+      "died": "c. 1125",
       "founded": "",
       "period": "",
       "wikidataQid": "Q711580",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Irnerius",
       "imageUrl": "",
       "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1050, Bologna\"}, {\"title\": \"Development of legal scholarship and case law\", \"type\": \"Idea\", \"year\": \"1050, Bologna\"}], \"effects\": [{\"title\": \"Advanced jurisprudential scholarship and legal theory\", \"type\": \"Idea\", \"year\": \"1140\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1140\"}], \"relationships\": [{\"sourceSlug\": \"irnerius\", \"sourceName\": \"Irnerius\", \"verb\": \"INTERPRETS\", \"targetSlug\": \"field-231\", \"targetName\": \"Jurists & Legal Scholars\", \"context\": \"Irnerius: Legal scholarship in jurists & legal scholars\"}, {\"sourceSlug\": \"irnerius\", \"sourceName\": \"Irnerius\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Irnerius was active during the Medieval era\"}], \"places\": [{\"name\": \"Bologna\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Irnerius\", \"type\": \"Reference article\", \"slug\": \"irnerius\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q711580\", \"https://en.wikipedia.org/wiki/Irnerius\"], \"tags\": [\"Jurists & Legal Scholars\", \"legal-interpretation\", \"doctrine-development\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
-      "subjectHeadings": [
-        "People — Jurists & Legal Scholars — Global — Medieval"
-      ],
+      "subjectHeadings": "Jurisprudence — Legal Scholarship — Italy — Medieval",
       "subjects": [
-        "Jurists & Legal Scholars"
+        "Law",
+        "Roman Law",
+        "Bologna",
+        "Medieval Europe",
+        "Jurisprudence",
+        "Glossators",
+        "Legal Education",
+        "Corpus Juris Civilis"
       ],
       "frameworks": [
-        "LEGAL_INTERPRETATION",
-        "DOCTRINE_DEVELOPMENT",
-        "TEMPORAL_LINKAGE"
+        "intellectual-history",
+        "institutional-history"
       ],
       "altNames": [],
       "importanceScore": 7,
-      "born": null,
+      "born": "c. 1050",
       "startDate": null,
       "endDate": null,
       "$id": "irnerius",
       "$sequence": "166030",
       "$createdAt": "2026-04-05T12:38:10.381+00:00",
-      "$updatedAt": "2026-04-05T12:38:10.381+00:00"
+      "$updatedAt": "2026-04-05T12:38:10.381+00:00",
+      "causes": [
+        {
+          "title": "Recovery of Justinian's Digest in complete form prompted systematic scholarly study of Roman law in the West",
+          "type": "Idea",
+          "year": "c. 1070–1090, Italy"
+        },
+        {
+          "title": "Patronage of Countess Matilda of Tuscany and Holy Roman Emperor Henry IV gave Irnerius political backing for his school",
+          "type": "Institution",
+          "year": "c. 1088–1115, Bologna"
+        },
+        {
+          "title": "Growth of long-distance trade and urban communes created demand for a sophisticated legal system to regulate contracts and property",
+          "type": "EventWindow",
+          "year": "c. 1050–1100, Northern Italy"
+        }
+      ],
+      "effects": [
+        {
+          "title": "Irnerius's Gloss method became the standard academic approach to legal texts, copied by every Glossator after him",
+          "type": "Idea",
+          "year": "c. 1090–1250, Europe"
+        },
+        {
+          "title": "University of Bologna established as the first European law school, model for Oxford, Paris, and all later universities",
+          "type": "Institution",
+          "year": "c. 1088–1150, Bologna"
+        },
+        {
+          "title": "Civil law tradition spread across continental Europe as his students carried the gloss method to France, Spain, and the Holy Roman Empire",
+          "type": "Movement",
+          "year": "c. 1100–1300, Europe"
+        },
+        {
+          "title": "Corpus Juris Civilis became the foundation of every continental legal system, entrenching Roman law as the ius commune",
+          "type": "Text",
+          "year": "c. 1100–1500, Europe"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "accursius",
+          "verb": "INFLUENCES",
+          "note": "Irnerius founded the Glossator tradition that culminated in Accursius's Glossa Ordinaria"
+        },
+        {
+          "targetSlug": "university-of-bologna",
+          "verb": "INFLUENCES",
+          "note": "Irnerius's teaching c.1088 is the founding moment of the University of Bologna"
+        },
+        {
+          "targetSlug": "corpus-juris-civilis",
+          "verb": "TRANSMITS",
+          "note": "Irnerius recovered and disseminated the full Corpus Juris Civilis to the medieval West"
+        },
+        {
+          "targetSlug": "henry-de-bracton",
+          "verb": "INFLUENCES",
+          "note": "The Bolognese tradition Irnerius founded reached England and shaped Bracton's systematic approach"
+        },
+        {
+          "targetSlug": "bartolus-de-saxoferrato",
+          "verb": "INFLUENCES",
+          "note": "The Glossator school Irnerius founded was the precursor to the Commentators, of whom Bartolus was the peak"
+        }
+      ],
+      "places": [
+        "Bologna, Italy"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 9,
+        "significanceNarrative": "Irnerius is the founding figure of Western legal science — his recovery and systematic teaching of Roman law at Bologna created the civil law tradition that governs the majority of the world's legal systems today.",
+        "significanceCategory": "world-changing"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "Irnerius, sometimes referred to as lucerna juris, was an Italian jurist, and founder of the School of Glossators and thus of the tradition of medieval Roman Law.",
+          "new": "Irnerius (c. 1050–c. 1125) was an Italian jurist and teacher at Bologna who is widely recognized as the founder of the medieval study of Roman law and the first of the great Glossators. By recovering and systematically teaching Justinian's Corpus Juris Civilis, he launched a legal revolution that would shape European law for the next millennium.\n\nWorking at Bologna — then the pre-eminent centre of Italian learning — Irnerius began lecturing on the full Digest of Justinian at a time when only fragments of Roman law circulated in the West. He developed the gloss, a method of annotating the text word-by-word and resolving contradictions through rational argument, transforming law from a craft into an academic discipline. His students spread his method across Europe, and Bologna under his influence became the first university in the Western world dedicated to law.\n\nHis legacy is immeasurable: the Glossator school he founded produced Accursius, whose Glossa Ordinaria became the standard commentary on Roman law for three centuries. Every civil law system in continental Europe — French, Spanish, Italian, German — traces its intellectual ancestry to the classroom Irnerius created in Bologna around 1088.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "Recovery of Justinian's Digest in complete form prompted systematic scholarly study of Roman law in the West",
+              "type": "Idea",
+              "year": "c. 1070–1090, Italy"
+            },
+            {
+              "title": "Patronage of Countess Matilda of Tuscany and Holy Roman Emperor Henry IV gave Irnerius political backing for his school",
+              "type": "Institution",
+              "year": "c. 1088–1115, Bologna"
+            },
+            {
+              "title": "Growth of long-distance trade and urban communes created demand for a sophisticated legal system to regulate contracts and property",
+              "type": "EventWindow",
+              "year": "c. 1050–1100, Northern Italy"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "Irnerius's Gloss method became the standard academic approach to legal texts, copied by every Glossator after him",
+              "type": "Idea",
+              "year": "c. 1090–1250, Europe"
+            },
+            {
+              "title": "University of Bologna established as the first European law school, model for Oxford, Paris, and all later universities",
+              "type": "Institution",
+              "year": "c. 1088–1150, Bologna"
+            },
+            {
+              "title": "Civil law tradition spread across continental Europe as his students carried the gloss method to France, Spain, and the Holy Roman Empire",
+              "type": "Movement",
+              "year": "c. 1100–1300, Europe"
+            },
+            {
+              "title": "Corpus Juris Civilis became the foundation of every continental legal system, entrenching Roman law as the ius commune",
+              "type": "Text",
+              "year": "c. 1100–1500, Europe"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "accursius",
+              "verb": "INFLUENCES",
+              "note": "Irnerius founded the Glossator tradition that culminated in Accursius's Glossa Ordinaria"
+            },
+            {
+              "targetSlug": "university-of-bologna",
+              "verb": "INFLUENCES",
+              "note": "Irnerius's teaching c.1088 is the founding moment of the University of Bologna"
+            },
+            {
+              "targetSlug": "corpus-juris-civilis",
+              "verb": "TRANSMITS",
+              "note": "Irnerius recovered and disseminated the full Corpus Juris Civilis to the medieval West"
+            },
+            {
+              "targetSlug": "henry-de-bracton",
+              "verb": "INFLUENCES",
+              "note": "The Bolognese tradition Irnerius founded reached England and shaped Bracton's systematic approach"
+            },
+            {
+              "targetSlug": "bartolus-de-saxoferrato",
+              "verb": "INFLUENCES",
+              "note": "The Glossator school Irnerius founded was the precursor to the Commentators, of whom Bartolus was the peak"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Bologna, Italy"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "Jurists & Legal Scholars"
+          ],
+          "new": [
+            "Law",
+            "Roman Law",
+            "Bologna",
+            "Medieval Europe",
+            "Jurisprudence",
+            "Glossators",
+            "Legal Education",
+            "Corpus Juris Civilis"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "People — Jurists & Legal Scholars — Global — Medieval"
+          ],
+          "new": "Jurisprudence — Legal Scholarship — Italy — Medieval",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "LEGAL_INTERPRETATION",
+            "DOCTRINE_DEVELOPMENT",
+            "TEMPORAL_LINKAGE"
+          ],
+          "new": [
+            "intellectual-history",
+            "institutional-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "born",
+          "old": null,
+          "new": "c. 1050",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "died",
+          "old": "1140",
+          "new": "c. 1125",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 9,
+            "significanceNarrative": "Irnerius is the founding figure of Western legal science — his recovery and systematic teaching of Roman law at Bologna created the civil law tradition that governs the majority of the world's legal systems today.",
+            "significanceCategory": "world-changing"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        }
+      ]
     }
   ]
 }

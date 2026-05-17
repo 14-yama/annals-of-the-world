@@ -11,40 +11,289 @@
       "name": "John Selden",
       "label": "Person",
       "callNumber": "231.john-selden",
-      "summary": "John Selden was an English jurist, a scholar of England's ancient laws and constitution and scholar of Jewish law. He was known as a polymath; John Milton hailed Selden in 1644 as \"the chief of learned men reputed in this land\".",
+      "summary": "John Selden (1584–1654) was an English jurist, legal antiquary, and polymath — one of the most erudite scholars of his age — whose writings on the history of English law, parliamentary privilege, and the law of the sea made him a towering figure in both legal scholarship and political thought.\n\nBorn in Sussex and educated at Hart Hall, Oxford, and the Inner Temple, Selden combined meticulous historical research with sharp legal argument. His Historia Tithe Controversy (1618) challenged clerical tithes, earning him brief imprisonment. His Mare Clausum (1635), written at royal command to rebut Grotius's Mare Liberum, argued that the English Crown held dominion over adjacent seas — laying the groundwork for modern concepts of territorial waters. As a Member of Parliament, he was a leading defender of the common law against royal prerogative and helped draft the Petition of Right (1628).\n\nHis Table Talk, published posthumously in 1689, is among the most quoted collections of English aphorisms. A man equally at home in Hebrew, Arabic, Syriac, and Greek, Selden was called by Milton 'the chief of learned men reputed in this land.'",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
       "eraDivisionCode": "940",
       "region": "Global",
       "continent": "Global",
-      "status": "Published",
-      "died": "1654-11-30",
+      "status": "enriched",
+      "died": "30 November 1654",
       "founded": "",
       "period": "",
       "wikidataQid": "Q735697",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/John_Selden",
       "imageUrl": "",
       "detailsJson": "{\"causes\": [{\"title\": \"Early Modern era: age of exploration, printing revolution, and religious reformation\", \"type\": \"EventWindow\", \"year\": \"1584-12-16, Salvington\"}, {\"title\": \"Development of legal scholarship and case law\", \"type\": \"Idea\", \"year\": \"1584-12-16, Salvington\"}], \"effects\": [{\"title\": \"Advanced jurisprudential scholarship and legal theory\", \"type\": \"Idea\", \"year\": \"1654-11-30\"}, {\"title\": \"Contributed to global exchange networks, modern state formation, and scientific revolution\", \"type\": \"Movement\", \"year\": \"1654-11-30\"}], \"relationships\": [{\"sourceSlug\": \"john-selden\", \"sourceName\": \"John Selden\", \"verb\": \"INTERPRETS\", \"targetSlug\": \"field-231\", \"targetName\": \"Jurists & Legal Scholars\", \"context\": \"John Selden: Legal scholarship in jurists & legal scholars\"}, {\"sourceSlug\": \"john-selden\", \"sourceName\": \"John Selden\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"early-modern\", \"targetName\": \"Early Modern Era\", \"context\": \"John Selden was active during the Early Modern era\"}], \"places\": [{\"name\": \"Salvington\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: John Selden\", \"type\": \"Reference article\", \"slug\": \"john-selden\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q735697\", \"https://en.wikipedia.org/wiki/John_Selden\"], \"tags\": [\"Jurists & Legal Scholars\", \"legal-interpretation\", \"doctrine-development\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
-      "subjectHeadings": [
-        "People — Jurists & Legal Scholars — Global — Early Modern"
-      ],
+      "subjectHeadings": "Jurisprudence — Common Law — England — Early Modern",
       "subjects": [
-        "Jurists & Legal Scholars"
+        "Law",
+        "English Common Law",
+        "Maritime Law",
+        "Parliamentary History",
+        "England",
+        "17th Century",
+        "Legal Scholarship",
+        "Constitutional History"
       ],
       "frameworks": [
-        "LEGAL_INTERPRETATION",
-        "DOCTRINE_DEVELOPMENT"
+        "constitutional-history",
+        "intellectual-history"
       ],
       "altNames": [],
       "importanceScore": 5,
-      "born": null,
+      "born": "16 December 1584",
       "startDate": null,
       "endDate": null,
       "$id": "john-selden",
       "$sequence": "203886",
       "$createdAt": "2026-04-05T12:45:50.306+00:00",
-      "$updatedAt": "2026-04-05T12:45:50.306+00:00"
+      "$updatedAt": "2026-04-05T12:45:50.306+00:00",
+      "causes": [
+        {
+          "title": "English common law tradition provided Selden with a historical method for defending parliamentary rights against Stuart royal prerogative",
+          "type": "Idea",
+          "year": "c. 1600–1628, England"
+        },
+        {
+          "title": "Anglo-Dutch maritime rivalry prompted royal commission to Selden to write a legal counter-argument to Grotius's Mare Liberum",
+          "type": "EventWindow",
+          "year": "1618–1635, England"
+        },
+        {
+          "title": "Humanist legal scholarship in the tradition of Budé and Hotman gave Selden tools to use history as a legal argument",
+          "type": "Movement",
+          "year": "c. 1580–1620, Europe"
+        }
+      ],
+      "effects": [
+        {
+          "title": "Mare Clausum established the legal concept of territorial waters and national sovereignty over adjacent seas",
+          "type": "Text",
+          "year": "1635, England"
+        },
+        {
+          "title": "Petition of Right (1628) — co-drafted by Selden — codified limits on taxation without consent and imprisonment without cause",
+          "type": "Text",
+          "year": "1628, England"
+        },
+        {
+          "title": "Table Talk preserved as aphorisms on church, state, and law that influenced Enlightenment political thought",
+          "type": "Text",
+          "year": "1689, England"
+        },
+        {
+          "title": "Selden's historical method for defending common law rights shaped the Whig constitutional tradition through Coke and Blackstone",
+          "type": "Idea",
+          "year": "c. 1650–1750, England"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "edward-coke",
+          "verb": "INFLUENCES",
+          "note": "Selden and Coke were allies in Parliament defending common law against royal prerogative"
+        },
+        {
+          "targetSlug": "hugo-grotius",
+          "verb": "INFLUENCES",
+          "note": "Selden's Mare Clausum directly rebutted Grotius's Mare Liberum on the freedom of the seas"
+        },
+        {
+          "targetSlug": "petition-of-right",
+          "verb": "INFLUENCES",
+          "note": "Selden helped draft the Petition of Right 1628 as an MP and legal scholar"
+        },
+        {
+          "targetSlug": "english-civil-war",
+          "verb": "INFLUENCES",
+          "note": "Selden's parliamentary career and legal scholarship shaped the constitutional arguments that led to the Civil War"
+        },
+        {
+          "targetSlug": "william-blackstone",
+          "verb": "INFLUENCES",
+          "note": "Selden's historical approach to common law influenced Blackstone's Commentaries a century later"
+        }
+      ],
+      "places": [
+        "London, England",
+        "Oxford, England"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "John Selden was the foremost legal historian of 17th-century England, whose defence of parliamentary rights and invention of the territorial sea doctrine shaped both English constitutional law and international maritime law.",
+        "significanceCategory": "continental"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "John Selden was an English jurist, a scholar of England's ancient laws and constitution and scholar of Jewish law. He was known as a polymath; John Milton hailed Selden in 1644 as \"the chief of learned men reputed in this land\".",
+          "new": "John Selden (1584–1654) was an English jurist, legal antiquary, and polymath — one of the most erudite scholars of his age — whose writings on the history of English law, parliamentary privilege, and the law of the sea made him a towering figure in both legal scholarship and political thought.\n\nBorn in Sussex and educated at Hart Hall, Oxford, and the Inner Temple, Selden combined meticulous historical research with sharp legal argument. His Historia Tithe Controversy (1618) challenged clerical tithes, earning him brief imprisonment. His Mare Clausum (1635), written at royal command to rebut Grotius's Mare Liberum, argued that the English Crown held dominion over adjacent seas — laying the groundwork for modern concepts of territorial waters. As a Member of Parliament, he was a leading defender of the common law against royal prerogative and helped draft the Petition of Right (1628).\n\nHis Table Talk, published posthumously in 1689, is among the most quoted collections of English aphorisms. A man equally at home in Hebrew, Arabic, Syriac, and Greek, Selden was called by Milton 'the chief of learned men reputed in this land.'",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "English common law tradition provided Selden with a historical method for defending parliamentary rights against Stuart royal prerogative",
+              "type": "Idea",
+              "year": "c. 1600–1628, England"
+            },
+            {
+              "title": "Anglo-Dutch maritime rivalry prompted royal commission to Selden to write a legal counter-argument to Grotius's Mare Liberum",
+              "type": "EventWindow",
+              "year": "1618–1635, England"
+            },
+            {
+              "title": "Humanist legal scholarship in the tradition of Budé and Hotman gave Selden tools to use history as a legal argument",
+              "type": "Movement",
+              "year": "c. 1580–1620, Europe"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "Mare Clausum established the legal concept of territorial waters and national sovereignty over adjacent seas",
+              "type": "Text",
+              "year": "1635, England"
+            },
+            {
+              "title": "Petition of Right (1628) — co-drafted by Selden — codified limits on taxation without consent and imprisonment without cause",
+              "type": "Text",
+              "year": "1628, England"
+            },
+            {
+              "title": "Table Talk preserved as aphorisms on church, state, and law that influenced Enlightenment political thought",
+              "type": "Text",
+              "year": "1689, England"
+            },
+            {
+              "title": "Selden's historical method for defending common law rights shaped the Whig constitutional tradition through Coke and Blackstone",
+              "type": "Idea",
+              "year": "c. 1650–1750, England"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "edward-coke",
+              "verb": "INFLUENCES",
+              "note": "Selden and Coke were allies in Parliament defending common law against royal prerogative"
+            },
+            {
+              "targetSlug": "hugo-grotius",
+              "verb": "INFLUENCES",
+              "note": "Selden's Mare Clausum directly rebutted Grotius's Mare Liberum on the freedom of the seas"
+            },
+            {
+              "targetSlug": "petition-of-right",
+              "verb": "INFLUENCES",
+              "note": "Selden helped draft the Petition of Right 1628 as an MP and legal scholar"
+            },
+            {
+              "targetSlug": "english-civil-war",
+              "verb": "INFLUENCES",
+              "note": "Selden's parliamentary career and legal scholarship shaped the constitutional arguments that led to the Civil War"
+            },
+            {
+              "targetSlug": "william-blackstone",
+              "verb": "INFLUENCES",
+              "note": "Selden's historical approach to common law influenced Blackstone's Commentaries a century later"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "London, England",
+            "Oxford, England"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "Jurists & Legal Scholars"
+          ],
+          "new": [
+            "Law",
+            "English Common Law",
+            "Maritime Law",
+            "Parliamentary History",
+            "England",
+            "17th Century",
+            "Legal Scholarship",
+            "Constitutional History"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "People — Jurists & Legal Scholars — Global — Early Modern"
+          ],
+          "new": "Jurisprudence — Common Law — England — Early Modern",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "LEGAL_INTERPRETATION",
+            "DOCTRINE_DEVELOPMENT"
+          ],
+          "new": [
+            "constitutional-history",
+            "intellectual-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "born",
+          "old": null,
+          "new": "16 December 1584",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "died",
+          "old": "1654-11-30",
+          "new": "30 November 1654",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 8,
+            "significanceNarrative": "John Selden was the foremost legal historian of 17th-century England, whose defence of parliamentary rights and invention of the territorial sea doctrine shaped both English constitutional law and international maritime law.",
+            "significanceCategory": "continental"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:39:55.208493+00:00"
+        }
+      ]
     }
   ]
 }
