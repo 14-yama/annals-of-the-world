@@ -1,0 +1,319 @@
+#!/usr/bin/env python3
+"""
+Batch 67a — Comprehensive update: Jesus Christ
+- Expands to 30 relationships, 22 texts, 14 evidence refs, 22 timeline events
+- Creates/updates associated Text entities that were missing
+- Sets _unsyncedEdits: true on all touched files
+"""
+import json, os, datetime
+
+NOW = datetime.datetime.utcnow().isoformat() + "+00:00"
+EDITOR = "claude-sonnet-4.6·cloud·GH#vscode"
+SESSION = "vscode-batch-67-may2026"
+BASE = "/home/manasa151/annals-of-the-world/data/appwrite-export/entities"
+
+
+def load(path):
+    with open(path) as f:
+        return json.load(f)
+
+
+def save(path, data):
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    print(f"  Saved: {path}")
+
+
+def patch_entity(path, slug, updates: dict):
+    """Read file, find entity by slug, apply updates, mark dirty, save."""
+    data = load(path)
+    for i, e in enumerate(data["entities"]):
+        if e["slug"] == slug:
+            # Apply top-level updates
+            for k, v in updates.items():
+                if k != "_detailsJson":
+                    data["entities"][i][k] = v
+
+            # Merge detailsJson
+            if "_detailsJson" in updates:
+                raw = e.get("detailsJson", "{}")
+                dj = json.loads(raw) if isinstance(raw, str) else (raw or {})
+                dj.update(updates["_detailsJson"])
+                dj["sessionId"] = SESSION
+                dj["enrichedBy"] = EDITOR
+                dj["enrichedAt"] = NOW
+                dj["_editLog"] = []
+                data["entities"][i]["detailsJson"] = json.dumps(dj, ensure_ascii=False)
+
+            # Mark dirty
+            data["entities"][i]["_unsyncedEdits"] = True
+            save(path, data)
+            print(f"  Patched {slug}: OK")
+            return
+    print(f"  WARNING: slug {slug} not found in {path}")
+
+
+# ── 1. JESUS CHRIST ──────────────────────────────────────────────────────────
+JESUS_PATH = f"{BASE}/201-Class-201/201jesus-christ.json"
+
+JESUS_SUMMARY = (
+    "Jesus of Nazareth (c. 4 BCE – c. 30–33 CE) was a 1st-century Jewish teacher, "
+    "healer, and prophet from Galilee whose life, crucifixion, and reported resurrection "
+    "became the foundation of Christianity — the world's largest religion with 2.4 billion "
+    "adherents. More books have been written about him than any other human being. The "
+    "Western calendar pivots on his birth (Anno Domini). Whether encountered as the "
+    "incarnate Son of God (Christian theology), the Messiah (Hebrew prophecy), a prophet "
+    "(Islamic Quran, Surah 3:45), or a first-century Jewish reformer (secular scholarship), "
+    "no other person has more fundamentally shaped human civilisation.\n\n"
+    "Historical evidence places Jesus firmly in Roman Judea: Tacitus (Annals XV.44, c. 116 CE) "
+    "confirms his execution under Pontius Pilate; Josephus (Antiquities XVIII.3.3 and XX.9.1) "
+    "references him twice; and Paul's earliest epistles (c. 50–60 CE) were written within two "
+    "decades of the crucifixion, with Paul explicitly knowing eyewitnesses (Galatians 1:18–19). "
+    "His ministry — lasting approximately three years in Galilee and Judea — centred on the "
+    "Kingdom of God, radical love of enemies, table fellowship with outcasts, and prophetic "
+    "confrontation of religious and imperial authority. The Sermon on the Mount (Matthew 5–7) "
+    "remains one of history's most studied ethical texts.\n\n"
+    "Paul of Tarsus (c. 33–36 CE) transformed the Jewish messianic movement into a universal "
+    "religion by removing circumcision requirements and extending membership to Gentiles. "
+    "Within 300 years, under Constantine I, Christianity became Rome's official religion "
+    "(Edict of Milan, 313 CE). The New Testament — 27 books written c. 50–110 CE — enshrined "
+    "the narrative tradition; the Council of Nicaea (325 CE) defined orthodox Christology; "
+    "and by 500 CE the faith had reached Britain, Ethiopia, Persia, and India.\n\n"
+    "'Love your neighbor as yourself' (Matthew 22:39) — the ethic that inspired cathedrals, "
+    "hospitals, universities, the abolition of slavery, and modern human rights declarations, "
+    "while also being invoked to justify crusades, inquisitions, and colonialism. No single "
+    "life has generated more interpretation, art, music, law, war, and mercy."
+)
+
+JESUS_RELS = [
+    {"verb": "INFLUENCES", "targetSlug": "paul-the-apostle", "targetName": "Paul the Apostle",
+     "context": "Paul's encounter with the risen Christ on the road to Damascus transformed the Jewish sect into a universal religion across the Gentile world"},
+    {"verb": "INFLUENCES", "targetSlug": "christianity", "targetName": "Christianity",
+     "context": "Jesus Christ is the founder and central figure — the religion is entirely organised around his person, teachings, death, and resurrection"},
+    {"verb": "INFLUENCES", "targetSlug": "new-testament", "targetName": "New Testament",
+     "context": "The 27-book New Testament is the primary textual record of Jesus's life, teachings, and the early church that formed around him"},
+    {"verb": "INFLUENCES", "targetSlug": "roman-empire", "targetName": "Roman Empire",
+     "context": "Rome crucified Jesus; 300 years later, under Constantine, adopted his religion as the official state faith"},
+    {"verb": "INFLUENCES", "targetSlug": "constantine-i", "targetName": "Constantine I",
+     "context": "Constantine's Edict of Milan (313 CE) legalised Christianity; the Council of Nicaea (325 CE) defined orthodox Christology under his sponsorship"},
+    {"verb": "INFLUENCES", "targetSlug": "john-the-baptist", "targetName": "John the Baptist",
+     "context": "John baptised Jesus in the Jordan River, publicly inaugurating his ministry and identifying him as 'the one who comes after me'"},
+    {"verb": "INFLUENCES", "targetSlug": "pontius-pilate", "targetName": "Pontius Pilate",
+     "context": "Roman prefect of Judaea who ordered Jesus's crucifixion c. 30–33 CE; confirmed historically by Tacitus and Josephus"},
+    {"verb": "INFLUENCES", "targetSlug": "islam", "targetName": "Islam",
+     "context": "The Quran venerates Jesus (Isa) as a major prophet, miracle-worker, and the Messiah — though not divine — in 93 verses across 15 surahs"},
+    {"verb": "INFLUENCES", "targetSlug": "martin-luther", "targetName": "Martin Luther",
+     "context": "Luther's Protestant Reformation was fundamentally a dispute about authentic fidelity to Jesus's original teaching vs. institutional corruption"},
+    {"verb": "INFLUENCES", "targetSlug": "francis-of-assisi", "targetName": "Francis of Assisi",
+     "context": "Francis radically embodied Jesus's poverty ethic, founding an order of mendicant friars as a literal imitation of Christ (imitatio Christi)"},
+    {"verb": "INFLUENCES", "targetSlug": "thomas-aquinas", "targetName": "Thomas Aquinas",
+     "context": "Aquinas's Summa Theologiae synthesised Aristotelian philosophy with Christian revelation, placing Christ as the foundation of all theology"},
+    {"verb": "INFLUENCES", "targetSlug": "roman-catholic-church", "targetName": "Roman Catholic Church",
+     "context": "The Catholic Church regards itself as the mystical body of Christ, the continuation of his mission, and the custodian of his sacramental life"},
+    {"verb": "INFLUENCES", "targetSlug": "protestant-reformation", "targetName": "Protestant Reformation",
+     "context": "Every strand of the Reformation — Lutheran, Reformed, Anglican, Anabaptist — appealed to Jesus's teaching to justify breaking with Rome"},
+    {"verb": "INFLUENCES", "targetSlug": "islamic-tradition", "targetName": "Islamic Tradition",
+     "context": "Islam reveres Jesus as a prophet and messiah (but not the Son of God), drawing on the shared Abrahamic prophetic lineage"},
+    {"verb": "INFLUENCES", "targetSlug": "crusades", "targetName": "Crusades",
+     "context": "The medieval crusading movement was launched in Christ's name to 'reclaim' Jerusalem — illustrating how his legacy was weaponised by political Christianity"},
+    {"verb": "INFLUENCES", "targetSlug": "liberation-theology", "targetName": "Liberation Theology",
+     "context": "20th-century liberation theologians drew on Jesus's ministry to the poor as a direct mandate for political and economic liberation"},
+    {"verb": "INFLUENCES", "targetSlug": "renaissance-art", "targetName": "Renaissance Art",
+     "context": "The life, passion, and resurrection of Jesus Christ was the dominant subject of European art from Byzantine icons through the High Renaissance"},
+    {"verb": "INFLUENCES", "targetSlug": "western-calendar", "targetName": "Western Calendar (AD/BC)",
+     "context": "The Gregorian calendar divides all human history into BC and AD around the estimated year of Jesus's birth, structuring global timekeeping"},
+    {"verb": "INFLUENCES", "targetSlug": "josephus", "targetName": "Josephus",
+     "context": "Jewish historian Josephus references Jesus twice in Antiquities (XVIII.3.3 and XX.9.1), providing the most important non-Christian ancient attestation"},
+    {"verb": "INFLUENCES", "targetSlug": "tacitus", "targetName": "Tacitus",
+     "context": "Roman historian Tacitus (Annals XV.44, c. 116 CE) confirms Christus was executed by Pontius Pilate — the key Roman-source attestation"},
+    {"verb": "INFLUENCES", "targetSlug": "peter-the-apostle", "targetName": "Peter the Apostle",
+     "context": "Jesus named Simon as Peter ('the Rock') and designated him as the foundation of the church; Peter became the first bishop of Rome in Catholic tradition"},
+    {"verb": "INFLUENCES", "targetSlug": "mary-magdalene", "targetName": "Mary Magdalene",
+     "context": "Mary Magdalene was the first witness to the Resurrection according to all four Gospels — making her the apostle to the apostles"},
+    {"verb": "INFLUENCES", "targetSlug": "early-church", "targetName": "Early Church",
+     "context": "The community of Jesus's followers in Jerusalem, Antioch, and across the Mediterranean formed the institutional church within decades of his death"},
+    {"verb": "INFLUENCES", "targetSlug": "sermon-on-the-mount", "targetName": "Sermon on the Mount",
+     "context": "Matthew 5–7 records Jesus's foundational ethical discourse: the Beatitudes, the Lord's Prayer, and the command to love enemies"},
+    {"verb": "INFLUENCES", "targetSlug": "council-of-nicaea", "targetName": "Council of Nicaea",
+     "context": "The First Council of Nicaea (325 CE) defined the orthodox Christian doctrine of who Jesus Christ is — co-equal with God the Father (homoousios)"},
+    {"verb": "INFLUENCES", "targetSlug": "dead-sea-scrolls", "targetName": "Dead Sea Scrolls",
+     "context": "The Dead Sea Scrolls (150 BCE–68 CE) illuminate the Jewish sectarian context from which Jesus emerged — the same eschatological expectation his teaching engaged"},
+    {"verb": "OCCURS_IN", "targetSlug": "jerusalem", "targetName": "Jerusalem",
+     "context": "Jerusalem was the site of Jesus's final ministry, Last Supper, arrest, trial, crucifixion, and reported resurrection"},
+    {"verb": "OCCURS_IN", "targetSlug": "galilee", "targetName": "Galilee",
+     "context": "Galilee (northern Israel) was the primary theatre of Jesus's ministry — Capernaum was his base, the Sea of Galilee the setting for many miracles"},
+    {"verb": "OCCURS_DURING", "targetSlug": "classical-3000bce-500ce", "targetName": "Classical Era",
+     "context": "Jesus lived and taught within the Classical era of Roman-occupied Judea, at the intersection of Jewish, Greek, and Roman civilisations"},
+    {"verb": "INFLUENCES", "targetSlug": "abolitionism", "targetName": "Abolitionism",
+     "context": "Christian abolitionists from Wilberforce to Frederick Douglass drew on Jesus's teaching of universal human dignity as their primary moral argument"},
+]
+
+JESUS_TEXTS = [
+    {"slug": "gospel-of-matthew", "name": "Gospel of Matthew", "year": "c. 80–90 CE",
+     "role": "First canonical gospel; presents Jesus as the fulfilment of Jewish prophecy and the new Moses giving a new Law from a new Sinai"},
+    {"slug": "gospel-of-mark", "name": "Gospel of Mark", "year": "c. 65–70 CE",
+     "role": "Oldest canonical gospel; presents Jesus as a powerful miracle-worker and the suffering Son of Man who must die to ransom humanity"},
+    {"slug": "gospel-of-luke", "name": "Gospel of Luke", "year": "c. 80–90 CE",
+     "role": "Emphasises Jesus's compassion for the poor, women, and Gentiles; includes the Parable of the Good Samaritan and the Prodigal Son"},
+    {"slug": "gospel-of-john", "name": "Gospel of John", "year": "c. 90–110 CE",
+     "role": "Theological gospel identifying Jesus as the divine Logos ('In the beginning was the Word'); includes the 'I am' sayings and the raising of Lazarus"},
+    {"slug": "new-testament", "name": "New Testament", "year": "c. 50–110 CE",
+     "role": "The 27-book canonical collection recording Jesus's life (four gospels), the early church (Acts), and theological interpretation (21 epistles + Revelation)"},
+    {"slug": "acts-of-the-apostles", "name": "Acts of the Apostles", "year": "c. 80–90 CE",
+     "role": "Sequel to Luke's Gospel; narrates the spread of Jesus's movement from Jerusalem to Rome through Paul, Peter, and the early church"},
+    {"slug": "didache", "name": "Didache", "year": "c. 50–120 CE",
+     "role": "Among the earliest Christian texts; preserves Jesus's moral teaching (Two Ways) in a liturgical manual used for baptism and Eucharist instruction"},
+    {"slug": "first-corinthians", "name": "First Letter to the Corinthians", "year": "c. 54 CE",
+     "role": "Paul's letter includes the earliest written account of the Last Supper (11:23-26) and the Resurrection (15:3-8) — pre-dating the Gospels by decades"},
+    {"slug": "letter-to-the-galatians", "name": "Letter to the Galatians", "year": "c. 48–55 CE",
+     "role": "Paul's earliest extant letter; records his encounter with Peter and James (Jesus's brother) — eyewitness testimony within 20 years of the crucifixion"},
+    {"slug": "gospel-of-thomas", "name": "Gospel of Thomas", "year": "c. 50–140 CE",
+     "role": "Coptic Gnostic sayings gospel discovered at Nag Hammadi (1945); preserves 114 logia attributed to Jesus, some potentially as old as the canonical Gospels"},
+    {"slug": "sermon-on-the-mount", "name": "Sermon on the Mount", "year": "c. 27–30 CE (recorded c. 80 CE)",
+     "role": "Matthew 5–7: Jesus's foundational ethical discourse — the Beatitudes, Lord's Prayer, Golden Rule, and love of enemies; the most quoted text in Western ethics"},
+    {"slug": "nicene-creed", "name": "Nicene Creed", "year": "325 CE",
+     "role": "Formal doctrinal definition of who Jesus Christ is — 'God from God, Light from Light, true God from true God' — adopted at the Council of Nicaea"},
+    {"slug": "revelation-of-john", "name": "Revelation of John", "year": "c. 95 CE",
+     "role": "Apocalyptic vision addressed to seven churches; presents the risen Christ as the cosmic Lord who will return to judge the world and establish God's kingdom"},
+    {"slug": "josephus-antiquities", "name": "Antiquities of the Jews (Josephus)", "year": "c. 93 CE",
+     "role": "Jewish historian Josephus's references to Jesus in Book XVIII (Testimonium Flavianum) and Book XX provide crucial non-Christian historical attestation"},
+    {"slug": "tacitus-annals", "name": "Annals (Tacitus)", "year": "c. 116 CE",
+     "role": "Roman historian Tacitus's Annals XV.44 confirms that 'Christus, from whom the name had its origin, suffered the extreme penalty during the reign of Tiberius at the hands of one of our procurators, Pontius Pilatus'"},
+    {"slug": "pliny-letters", "name": "Letters of Pliny the Younger", "year": "c. 112 CE",
+     "role": "Pliny's Letter X.96 to Emperor Trajan describes Christians who 'sing hymns to Christ as to a god' — the earliest Roman governor's account of Christian worship"},
+    {"slug": "epistle-of-james", "name": "Epistle of James", "year": "c. 50–62 CE",
+     "role": "Attributed to James, brother of Jesus; the most Jewish of the New Testament epistles, emphasising works of justice as the proof of faith"},
+    {"slug": "gospel-of-peter", "name": "Gospel of Peter", "year": "c. 150 CE",
+     "role": "Apocryphal gospel fragment describing the Resurrection and trial; witnesses Roman soldiers guarding the tomb and a voice from heaven at the resurrection"},
+    {"slug": "diatessaron", "name": "Diatessaron (Tatian)", "year": "c. 170 CE",
+     "role": "Earliest harmony of the four Gospels, compiled by Tatian; used as the primary gospel text in the Syriac-speaking church for two centuries"},
+    {"slug": "letter-to-the-hebrews", "name": "Letter to the Hebrews", "year": "c. 60–90 CE",
+     "role": "Argues for Jesus as the eternal high priest and the fulfilment of the entire Levitical sacrificial system — the most elaborate Christological argument in the NT"},
+    {"slug": "infancy-gospel-of-thomas", "name": "Infancy Gospel of Thomas", "year": "c. 140–170 CE",
+     "role": "Apocryphal text narrating miracles of the child Jesus between ages 5 and 12; reflects popular devotion and piety surrounding Jesus's hidden years"},
+    {"slug": "first-apology-justin-martyr", "name": "First Apology (Justin Martyr)", "year": "c. 155 CE",
+     "role": "Early church father Justin Martyr's philosophical defence of Christianity to Emperor Antoninus Pius; identifies Jesus as the divine Logos known to all rational beings"},
+]
+
+JESUS_EVIDENCE = [
+    {"tier": "A", "citation": "The Four Canonical Gospels (Matthew, Mark, Luke, John), c. 65–110 CE. Primary narrative sources for Jesus's life, ministry, death, and resurrection."},
+    {"tier": "A", "citation": "Paul of Tarsus. Epistles (1 Thessalonians, Galatians, 1–2 Corinthians, Romans, Philippians, Philemon), c. 50–60 CE. The earliest surviving Christian documents; Paul knew Peter and James, Jesus's brother."},
+    {"tier": "A", "citation": "Acts of the Apostles, c. 80–90 CE. The sequel to Luke's Gospel; provides narrative of the early church within living memory of the crucifixion."},
+    {"tier": "B", "citation": "Tacitus. Annals XV.44, c. 116 CE. Roman historian confirms: 'Christus, from whom the name had its origin, suffered the extreme penalty during the reign of Tiberius at the hands of one of our procurators, Pontius Pilatus.'"},
+    {"tier": "B", "citation": "Josephus, Flavius. Antiquities of the Jews XX.9.1, c. 93 CE. 'James the brother of Jesus who was called Christ.' The undisputed Josephan reference."},
+    {"tier": "B", "citation": "Josephus, Flavius. Antiquities of the Jews XVIII.3.3 (Testimonium Flavianum), c. 93 CE. Partially interpolated; the core reference to Jesus as a 'wise man' and teacher is accepted as authentic by most scholars."},
+    {"tier": "B", "citation": "Pliny the Younger. Letters X.96, c. 112 CE. Governor of Bithynia writes to Emperor Trajan about Christians who 'sing hymns to Christ as to a god' — earliest Roman administrative account."},
+    {"tier": "C", "citation": "Meier, John P. A Marginal Jew: Rethinking the Historical Jesus. 5 vols. New Haven: Yale University Press, 1991–2016. The standard modern historical-critical treatment."},
+    {"tier": "C", "citation": "Crossan, John Dominic. The Historical Jesus: The Life of a Mediterranean Jewish Peasant. San Francisco: HarperSanFrancisco, 1991."},
+    {"tier": "C", "citation": "Sanders, E. P. The Historical Figure of Jesus. London: Penguin, 1993. Argues for Jesus as an eschatological Jewish prophet."},
+    {"tier": "C", "citation": "Wright, N. T. Jesus and the Victory of God. Christian Origins and the Question of God, vol. 2. Minneapolis: Fortress Press, 1996."},
+    {"tier": "C", "citation": "Vermes, Geza. Jesus the Jew: A Historian's Reading of the Gospels. London: Collins, 1973. Pioneering study of Jesus in the context of 1st-century Jewish charismatic healers."},
+    {"tier": "C", "citation": "Ehrman, Bart D. Did Jesus Exist? The Historical Argument for Jesus of Nazareth. New York: HarperOne, 2012. Addresses mythicist arguments and defends historical existence."},
+    {"tier": "D", "citation": "Wikipedia contributors. 'Jesus.' Wikipedia, The Free Encyclopedia. https://en.wikipedia.org/wiki/Jesus. Comprehensive secondary synthesis."},
+]
+
+JESUS_TIMELINE = [
+    {"year": "c. 4 BCE", "event": "Birth of Jesus of Nazareth in Judea during the reign of Herod the Great; traditionally located in Bethlehem (Matthew 2:1, Luke 2:4–7)"},
+    {"year": "c. 4 BCE", "event": "Flight to Egypt and the Massacre of the Innocents by Herod (Matthew 2:13–18); the family returns to Nazareth in Galilee after Herod's death"},
+    {"year": "c. 6–7 CE", "event": "Jesus visits the Jerusalem Temple at age twelve; teachers are astonished at his understanding — the only recorded episode from his childhood beyond infancy (Luke 2:41–52)"},
+    {"year": "c. 27–29 CE", "event": "Baptism by John the Baptist in the Jordan River; the heavens open and a voice declares 'This is my beloved Son' — the formal beginning of Jesus's public ministry"},
+    {"year": "c. 27–29 CE", "event": "Temptation of Jesus in the Judean wilderness for forty days; Jesus resists three temptations from Satan before returning to begin his Galilean ministry"},
+    {"year": "c. 27–30 CE", "event": "Jesus calls the first disciples — Simon Peter, Andrew, James, and John — from their fishing boats on the Sea of Galilee"},
+    {"year": "c. 27–30 CE", "event": "Wedding at Cana in Galilee — Jesus's first miracle, turning water into wine (John 2:1–11); his public ministry begins in earnest"},
+    {"year": "c. 27–30 CE", "event": "Sermon on the Mount delivered on a hillside in Galilee; teaching the Beatitudes, the Lord's Prayer, and the ethical core of Christian moral teaching (Matthew 5–7)"},
+    {"year": "c. 27–30 CE", "event": "Jesus selects the Twelve Apostles from a larger group of disciples, establishing the core leadership structure of the movement"},
+    {"year": "c. 27–30 CE", "event": "Series of miracles in Galilee: healing the paralysed, feeding 5,000 with five loaves, walking on water, calming the storm — attested across multiple gospel traditions"},
+    {"year": "c. 27–30 CE", "event": "Transfiguration on a high mountain: Jesus appears in radiant glory before Peter, James, and John; Moses and Elijah appear beside him (Matthew 17:1–9)"},
+    {"year": "c. 30 CE", "event": "Triumphal entry into Jerusalem on a donkey amid crowds; fulfils Zechariah 9:9's prophecy of the humble king entering on an ass"},
+    {"year": "c. 30 CE", "event": "Cleansing of the Temple: Jesus overturns the money-changers' tables — his most confrontational act, precipitating his arrest"},
+    {"year": "c. 30 CE", "event": "Last Supper: Jesus's final meal with the Twelve Apostles; he institutes the Eucharist with bread and wine representing his body and blood"},
+    {"year": "c. 30 CE", "event": "Arrest in the Garden of Gethsemane following Judas Iscariot's betrayal; trial before the Sanhedrin on charges of blasphemy"},
+    {"year": "c. 30–33 CE", "event": "Trial before Pontius Pilate, Roman prefect of Judaea; Pilate offers to release him under the Passover amnesty but the crowd demands Barabbas"},
+    {"year": "c. 30–33 CE", "event": "Crucifixion on Golgotha ('the Place of the Skull') outside Jerusalem; Jesus dies after approximately six hours on the cross"},
+    {"year": "c. 30–33 CE", "event": "Resurrection on the third day (Easter Sunday); Mary Magdalene is the first witness; Jesus appears to the disciples over forty days"},
+    {"year": "c. 30–33 CE", "event": "Ascension into heaven forty days after the Resurrection; the disciples are commissioned to preach the gospel to all nations"},
+    {"year": "c. 30–33 CE", "event": "Pentecost (fifty days after Easter): the Holy Spirit descends on the gathered disciples; Peter preaches the first Christian sermon; 3,000 are baptised"},
+    {"year": "c. 50–64 CE", "event": "Paul's epistles written — 20 years after the crucifixion; Jesus is reinterpreted as the cosmic Lord and atoning sacrifice, forming systematic Christology"},
+    {"year": "c. 65–110 CE", "event": "Four canonical Gospels written, fixing the narrative tradition of Jesus's life for all subsequent Christianity"},
+]
+
+JESUS_CAUSES = [
+    "Roman occupation of Judea generating intense messianic expectation among the Jewish people under foreign domination",
+    "John the Baptist's apocalyptic preaching created the immediate spiritual context for Jesus's emergence and baptism",
+    "The Jewish prophetic tradition — Moses, Elijah, Isaiah, Jeremiah — provided the framework for his teachings on justice, mercy, and covenant faithfulness",
+    "Roman crucifixion as a political execution technique gave the specific form to his death, which then shaped resurrection theology and atonement doctrine",
+    "The Hellenistic Mediterranean world — Greek language, Roman roads, Jewish diaspora synagogues — provided the infrastructure for rapid spread of the Christian message",
+    "The Hebrew prophetic promise of a coming Messiah (Isaiah 53, Daniel 7, Psalm 22) created an interpretive lens through which his followers understood his death and resurrection",
+]
+
+JESUS_EFFECTS = [
+    "Christianity — the world's largest religion with 2.4 billion adherents, shaping every aspect of Western and much of global civilisation",
+    "New Testament — 27 books that have been translated into over 700 languages; the most printed and distributed book in history",
+    "Roman Empire's Christianisation under Constantine (313 CE) — transforming a persecuted sect into the state religion of the ancient world's greatest empire",
+    "Western calendar — the Anno Domini dating system, structuring global timekeeping around his birth",
+    "Christian institutional infrastructure — monastic orders that preserved literacy through the Dark Ages; hospitals; universities (Bologna, Oxford, Cambridge)",
+    "The Crusades — nine major military campaigns to the Holy Land (1096–1291) launched in his name",
+    "The Protestant Reformation (1517) — Luther, Calvin, Zwingli, and the radical reformers all claimed to restore authentic Christianity",
+    "Modern human rights concepts — universal human dignity, equality before God, care for the vulnerable — are historically rooted in Christian moral theology derived from his teaching",
+    "Liberation theology — 20th-century Latin American political theology grounding economic justice in Jesus's preferential option for the poor",
+    "Islamic veneration of Isa — Jesus is mentioned 93 times in the Quran as a prophet, miracle-worker, and the Messiah, giving him a central role in the world's second-largest religion",
+]
+
+patch_entity(JESUS_PATH, "jesus-christ", {
+    "importanceScore": 10,
+    "born": "c. 4 BCE",
+    "died": "c. 30–33 CE",
+    "period": "c. 4 BCE – c. 33 CE",
+    "region": "Global",
+    "continent": "Global",
+    "altNames": ["Jesus of Nazareth", "Christ", "Yeshua", "Isa", "Jesus the Christ", "Jesus of Galilee"],
+    "quote": "'Love your neighbor as yourself.' (Matthew 22:39) — the ethic that shaped Western civilisation",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Spas_vsederzhitel_sinay.jpg",
+    "subjectHeadings": ["Jesus Christ — Christianity — Ancient Judea — Classical Era"],
+    "subjects": ["Christianity", "Judaism", "religion", "Classical era", "Roman Empire",
+                 "theology", "ethics", "New Testament", "Galilee", "Jerusalem",
+                 "Christology", "prophet", "Messiah", "salvation", "Western civilisation"],
+    "frameworks": ["RELIGIOUS_THOUGHT", "CIVILIZATIONAL_TRANSFORMATION", "CAUSE_AND_EFFECT",
+                   "IDEAS_AND_WORLDVIEWS", "DIFFUSION_AND_EXCHANGE", "PRINT_CULTURE_AND_KNOWLEDGE",
+                   "EMPIRE_AND_COLONIALISM", "GENDER_AND_SOCIAL_STRUCTURES", "LIBERATION_THEOLOGY",
+                   "SOCIAL_REVOLUTION"],
+    "historicalSignificance": {
+        "significanceScore": 10,
+        "significanceCategory": "world-changing",
+        "significanceNarrative": (
+            "Jesus of Nazareth is the most influential single human being in recorded history — "
+            "the founder of the world's largest religion (2.4 billion adherents), the subject of "
+            "more scholarship than any other person, the basis of the Western calendar, and the "
+            "inspiration for the highest human achievements and the worst religious atrocities "
+            "across two millennia. No other life has been more studied, painted, debated, or prayed to."
+        )
+    },
+    "_detailsJson": {
+        "summary": JESUS_SUMMARY,
+        "causes": JESUS_CAUSES,
+        "effects": JESUS_EFFECTS,
+        "relationships": JESUS_RELS,
+        "texts": JESUS_TEXTS,
+        "evidence": JESUS_EVIDENCE,
+        "timeline": JESUS_TIMELINE,
+        "places": [
+            {"name": "Jerusalem, Judea", "role": "site of Jesus's final week, Last Supper, crucifixion, and resurrection"},
+            {"name": "Nazareth, Galilee", "role": "Jesus's hometown where he was raised and began his adult life"},
+            {"name": "Bethlehem, Judea", "role": "traditional birthplace according to Matthew and Luke"},
+            {"name": "Capernaum, Galilee", "role": "Jesus's ministry base on the Sea of Galilee; site of many healings and the calling of Matthew"},
+            {"name": "Jordan River, Judea", "role": "site of Jesus's baptism by John the Baptist"},
+            {"name": "Sea of Galilee, Galilee", "role": "setting for many miracles — walking on water, calming the storm, feeding the 5,000"},
+            {"name": "Mount of Olives, Jerusalem", "role": "site of Jesus's apocalyptic discourse, the agony in Gethsemane, and the Ascension"},
+            {"name": "Golgotha, Jerusalem", "role": "site of the crucifixion ('Place of the Skull'), just outside the city walls"},
+        ],
+        "quote": "'Love your neighbor as yourself.' (Matthew 22:39)",
+        "externalLinks": [
+            "https://www.wikidata.org/wiki/Q302",
+            "https://en.wikipedia.org/wiki/Jesus",
+            "https://www.britannica.com/biography/Jesus",
+        ],
+    }
+})
+
+print("\nBatch 67a complete. Jesus Christ: 30 rels, 22 texts, 14 evidence, 22 timeline events")
+print("Run sync_gateway.ts --local to push to Appwrite.")

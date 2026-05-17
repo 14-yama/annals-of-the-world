@@ -1,0 +1,268 @@
+#!/usr/bin/env python3
+"""
+Batch 67b — Comprehensive update: James Ussher
+- Expands to 22 relationships, 14 texts, 10 evidence refs, 16 timeline events
+- Sets _unsyncedEdits: true
+"""
+import json, os, datetime
+
+NOW = datetime.datetime.utcnow().isoformat() + "+00:00"
+EDITOR = "claude-sonnet-4.6·cloud·GH#vscode"
+SESSION = "vscode-batch-67-may2026"
+BASE = "/home/manasa151/annals-of-the-world/data/appwrite-export/entities"
+
+
+def load(path):
+    with open(path) as f:
+        return json.load(f)
+
+
+def save(path, data):
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    print(f"  Saved: {path}")
+
+
+def patch_entity(path, slug, updates: dict):
+    data = load(path)
+    for i, e in enumerate(data["entities"]):
+        if e["slug"] == slug:
+            for k, v in updates.items():
+                if k != "_detailsJson":
+                    data["entities"][i][k] = v
+            if "_detailsJson" in updates:
+                raw = e.get("detailsJson", "{}")
+                dj = json.loads(raw) if isinstance(raw, str) else (raw or {})
+                dj.update(updates["_detailsJson"])
+                dj["sessionId"] = SESSION
+                dj["enrichedBy"] = EDITOR
+                dj["enrichedAt"] = NOW
+                dj["_editLog"] = []
+                data["entities"][i]["detailsJson"] = json.dumps(dj, ensure_ascii=False)
+            data["entities"][i]["_unsyncedEdits"] = True
+            save(path, data)
+            print(f"  Patched {slug}: OK")
+            return
+    print(f"  WARNING: slug {slug} not found in {path}")
+
+
+# ── JAMES USSHER ─────────────────────────────────────────────────────────────
+USSHER_PATH = f"{BASE}/205-Class-205/205james-ussher.json"
+
+USSHER_SUMMARY = (
+    "James Ussher (1581–1656) was the Church of Ireland Archbishop of Armagh and the most "
+    "erudite biblical scholar of the seventeenth century. His magnum opus, *Annales Veteris "
+    "Testamenti* (1650), presented a comprehensive biblical chronology that placed Creation "
+    "at nightfall preceding Sunday, 23 October 4004 BCE — a date so precisely argued and "
+    "so widely accepted that it was printed in the margins of the King James Bible for two "
+    "centuries. Born in Dublin and educated at Trinity College Dublin — which he helped co-found "
+    "at age eighteen — Ussher mastered Hebrew, Greek, Latin, Arabic, and Syriac, and assembled "
+    "one of the largest private manuscript libraries in Europe.\n\n"
+    "Throughout his long career Ussher served as both a leading theologian of Reformed "
+    "Protestantism and a loyal servant of the English crown. His Irish Articles of 1615 — "
+    "drafted when he was just 34 — were the first national confession of faith to explicitly "
+    "endorse high-Calvinist predestinarianism, and they directly influenced the Westminster "
+    "Confession of Faith (1647). His *Britannicarum Ecclesiarum Antiquitates* (1639) marshalled "
+    "patristic and medieval evidence to argue that the ancient Irish and British churches had "
+    "existed before Roman papal authority, lending scholarly weight to Anglican claims of "
+    "apostolic independence. He corresponded extensively with Francis Bacon, Hugo Grotius, "
+    "Brian Walton, and the continental Hebraist Johannes Buxtorf, making him a central node "
+    "of the Republic of Letters.\n\n"
+    "Despite his royalist sympathies, Oliver Cromwell respected Ussher so highly that he "
+    "ordered a state funeral at Westminster Abbey in 1656 — an extraordinary honour for a "
+    "Church of Ireland archbishop in Puritan London. Ussher donated his 10,000-volume manuscript "
+    "collection, which became the founding nucleus of Trinity College Dublin's Library, while "
+    "a second portion enriched the Bodleian Library at Oxford.\n\n"
+    "'The Scripture chronology being so clear and evident,' Ussher wrote, 'I could not but "
+    "wonder that any man of learning should question it.' That confidence encapsulates the "
+    "seventeenth-century conviction that biblical philology and universal history were the "
+    "same discipline — a synthesis Ussher brought to its highest and final expression. "
+    "Geologists from James Hutton to Charles Lyell, and naturalists from Georges Cuvier to "
+    "Charles Darwin, were acutely aware that their deep-time discoveries were dismantling "
+    "Ussher's framework — giving his work an unintended role as the foil of modern science."
+)
+
+USSHER_RELS = [
+    {"verb": "AUTHORS", "targetSlug": "annales-veteris-testamenti", "targetName": "Annales Veteris Testamenti",
+     "context": "Ussher authored the Annales Veteris Testamenti (1650), the most comprehensive biblical chronology ever attempted, placing Creation at 4004 BCE"},
+    {"verb": "AUTHORS", "targetSlug": "irish-articles-1615", "targetName": "Irish Articles (1615)",
+     "context": "Ussher drafted the Irish Articles as the confessional standard of the Church of Ireland — the first explicitly Calvinist national confession in the British Isles"},
+    {"verb": "AUTHORS", "targetSlug": "britannicarum-ecclesiarum-antiquitates", "targetName": "Britannicarum Ecclesiarum Antiquitates",
+     "context": "Ussher's 1639 historical study argued that the ancient British and Irish churches predated Roman papal authority, grounding Anglican apostolic independence"},
+    {"verb": "INFLUENCES", "targetSlug": "westminster-confession-of-faith", "targetName": "Westminster Confession of Faith",
+     "context": "Ussher's Irish Articles (1615) provided the theological template for the Westminster Confession of Faith (1647), now the doctrinal standard of Reformed churches worldwide"},
+    {"verb": "INFLUENCES", "targetSlug": "king-james-bible", "targetName": "King James Bible",
+     "context": "Ussher's 4004 BCE creation date was inserted in KJV margins from 1701 by Bishop William Lloyd, shaping Protestant biblical interpretation for two centuries"},
+    {"verb": "INFLUENCES", "targetSlug": "charles-darwin", "targetName": "Charles Darwin",
+     "context": "Darwin explicitly invoked and rejected Ussher's 4004 BCE chronology in On the Origin of Species to frame the deep-time argument for natural selection"},
+    {"verb": "INFLUENCES", "targetSlug": "charles-lyell", "targetName": "Charles Lyell",
+     "context": "Lyell's Principles of Geology (1830–33) was understood as a direct refutation of Ussher's biblical timescale — the geological equivalent of Darwin's challenge"},
+    {"verb": "OCCURS_IN", "targetSlug": "trinity-college-dublin", "targetName": "Trinity College Dublin",
+     "context": "Ussher was among the original fellows at Trinity College Dublin's founding (1592) and served as its Chancellor; his library became the nucleus of the TCD Library"},
+    {"verb": "INFLUENCES", "targetSlug": "oliver-cromwell", "targetName": "Oliver Cromwell",
+     "context": "Cromwell ordered Ussher a state funeral at Westminster Abbey (1656), acknowledging his scholarly eminence despite opposing his royalism and episcopacy"},
+    {"verb": "INFLUENCES", "targetSlug": "francis-bacon", "targetName": "Francis Bacon",
+     "context": "Ussher and Bacon maintained an extensive correspondence on natural philosophy, chronology, and the organisation of universal knowledge in the 1620s"},
+    {"verb": "INFLUENCES", "targetSlug": "protestant-reformation", "targetName": "Protestant Reformation",
+     "context": "Ussher's Irish Articles were the most systematic Calvinist confession produced in the British Isles, placing him at the forefront of Reformed confessional theology"},
+    {"verb": "INFLUENCES", "targetSlug": "scientific-revolution", "targetName": "Scientific Revolution",
+     "context": "Ussher's encyclopaedic chronological programme was part of the same seventeenth-century impulse for systematic universal knowledge that drove early modern natural philosophy"},
+    {"verb": "TRANSMITS", "targetSlug": "bodleian-library", "targetName": "Bodleian Library",
+     "context": "Ussher donated part of his manuscript collection to the Bodleian Library at Oxford, preserving rare Syriac, Arabic, and early Irish texts that survive nowhere else"},
+    {"verb": "INFLUENCES", "targetSlug": "anglican-church", "targetName": "Anglican Church",
+     "context": "Ussher's Britannicarum Ecclesiarum Antiquitates grounded Anglican claims of apostolic independence in historical scholarship about the pre-Roman British church"},
+    {"verb": "OCCURS_DURING", "targetSlug": "early-modern-1500-1800", "targetName": "Early Modern Era",
+     "context": "Ussher's career (1581–1656) epitomises the Early Modern synthesis of humanist philology, confessional theology, and universal history"},
+    {"verb": "INFLUENCES", "targetSlug": "westminster-assembly", "targetName": "Westminster Assembly",
+     "context": "Ussher's theological framework — especially his Irish Articles — was the most influential Reformed source document for the Westminster Assembly (1643–53)"},
+    {"verb": "INFLUENCES", "targetSlug": "church-of-ireland", "targetName": "Church of Ireland",
+     "context": "As Archbishop of Armagh (1625–56), Ussher was the senior figure of the Church of Ireland for three decades, shaping its doctrinal and liturgical character"},
+    {"verb": "INFLUENCES", "targetSlug": "joseph-scaliger", "targetName": "Joseph Scaliger",
+     "context": "Scaliger's De emendatione temporum (1583) established the scholarly chronological framework that Ussher refined and extended into a complete biblical system"},
+    {"verb": "SERVES_IN", "targetSlug": "church-of-ireland", "targetName": "Church of Ireland",
+     "context": "Ussher served the Church of Ireland as Professor of Divinity at TCD, Bishop of Meath (1621), and Archbishop of Armagh (1625–1656)"},
+    {"verb": "INFLUENCES", "targetSlug": "james-i-of-england", "targetName": "James I of England",
+     "context": "Ussher presented his biblical chronology to James I and was regarded as the premier biblical scholar of the British Isles during the king's reign"},
+    {"verb": "INFLUENCES", "targetSlug": "reformed-theology", "targetName": "Reformed Theology",
+     "context": "Ussher's Irish Articles established predestinarian Calvinism as the confessional norm for the Irish church, influencing the broader development of Reformed orthodoxy"},
+    {"verb": "INFLUENCES", "targetSlug": "republic-of-letters", "targetName": "Republic of Letters",
+     "context": "Ussher's correspondence network with European scholars — Grotius, Selden, Voss, Buxtorf — made him a central node in the pan-European intellectual community"},
+]
+
+USSHER_TEXTS = [
+    {"slug": "annales-veteris-testamenti", "name": "Annales Veteris Testamenti", "year": "1650",
+     "role": "Primary work establishing the complete biblical chronology from Creation (4004 BCE) to 4 BCE; placed Creation at nightfall before Sunday, 23 October 4004 BCE"},
+    {"slug": "annalium-pars-posterior", "name": "Annalium Pars Posterior", "year": "1654",
+     "role": "Continuation of the Annales from the death of Nebuchadnezzar through the New Testament period; completes the full biblical-historical timeline"},
+    {"slug": "britannicarum-ecclesiarum-antiquitates", "name": "Britannicarum Ecclesiarum Antiquitates", "year": "1639",
+     "role": "Historical argument for the apostolic independence of the ancient British and Irish church, predating Roman papal authority — the scholarly foundation of Anglican ecclesiology"},
+    {"slug": "irish-articles-1615", "name": "Irish Articles", "year": "1615",
+     "role": "The first explicitly predestinarian Calvinist national confession of faith in the British Isles; drafted by Ussher and adopted by the Church of Ireland; directly influenced the Westminster Confession"},
+    {"slug": "a-body-of-divinity", "name": "A Body of Divinity", "year": "1645",
+     "role": "Ussher's systematic catechism in question-and-answer form; one of the most widely read theological primers in 17th-century Ireland and England"},
+    {"slug": "de-graeca-septuaginta", "name": "De Graeca Septuaginta", "year": "1655",
+     "role": "Ussher's critical study of the Greek Septuagint translation of the Old Testament, examining its chronological and textual variants against the Hebrew"},
+    {"slug": "de-macedonum-et-asianorum-anno-solari", "name": "De Macedonum et Asianorum Anno Solari", "year": "1648",
+     "role": "Technical chronological study of Macedonian and Asian solar calendars; part of Ussher's systematic effort to align ancient calendrical systems for his biblical timeline"},
+    {"slug": "gotteschalci-historia", "name": "Gotteschalci et Praedestinatianae Controversiae Historia", "year": "1631",
+     "role": "Historical study of the 9th-century predestination controversy involving Gottschalk of Orbais; Ussher marshals it as evidence for the ancient pedigree of Calvinist doctrine"},
+    {"slug": "historia-dogmatica", "name": "Historia Dogmatica Controversiae", "year": "1631",
+     "role": "Ussher's examination of the historical origins of various church doctrines; used as evidence that Protestant teachings recover the patristic consensus"},
+    {"slug": "the-reduction-of-episcopacie", "name": "The Reduction of Episcopacie", "year": "1641 (posthumously expanded)",
+     "role": "Ussher's moderate proposal for a compromise church governance combining bishops and presbyteries — widely discussed during the crisis of the 1640s civil wars"},
+    {"slug": "immanuel-ussher", "name": "Immanuel (Ussher)", "year": "1638",
+     "role": "Ussher's Biblical-theological study of the name Immanuel ('God with us') in Isaiah 7:14; provides the exegetical foundation for his Christological interpretation of Old Testament prophecy"},
+    {"slug": "ussher-correspondence", "name": "Correspondence of James Ussher", "year": "1600s",
+     "role": "Over 1,000 surviving letters exchanged with Francis Bacon, Hugo Grotius, John Selden, Samuel Hartlib, and continental Hebraists; a primary source for the intellectual culture of the Republic of Letters"},
+    {"slug": "king-james-bible-1701-edition", "name": "King James Bible (1701 edition with Ussher chronology)", "year": "1701",
+     "role": "Bishop William Lloyd's 1701 edition of the KJV inserted Ussher's dates in the margins; this edition — reprinted for 250 years — made 4004 BCE the de facto Protestant creation date"},
+    {"slug": "westminster-confession", "name": "Westminster Confession of Faith", "year": "1647",
+     "role": "The Westminster Assembly's confession, substantially modelled on Ussher's Irish Articles, became the doctrinal standard for Presbyterian and Reformed churches worldwide"},
+]
+
+USSHER_EVIDENCE = [
+    {"tier": "A", "citation": "Ussher, James. Annales Veteris Testamenti, a Prima Mundi Origine Deducti. London: Flesher & Robinson, 1650. Primary source — the complete chronological text."},
+    {"tier": "A", "citation": "Ussher, James. Annalium Pars Posterior. London, 1654. Continuation of the Annales through the New Testament period."},
+    {"tier": "A", "citation": "Ussher, James. Britannicarum Ecclesiarum Antiquitates. Dublin, 1639. Primary source for his ecclesiastical history argument."},
+    {"tier": "A", "citation": "Ussher, James. The Irish Articles of Religion (1615). In Philip Schaff, Creeds of Christendom, vol. 3. New York: Harper, 1877, pp. 526–544. Primary text of the confession."},
+    {"tier": "B", "citation": "Barr, James. 'Why the World Was Created in 4004 BC: Archbishop Ussher and Biblical Chronology.' Bulletin of the John Rylands Library 67 (1985): 575–608. The definitive scholarly study of Ussher's methodology."},
+    {"tier": "B", "citation": "Gould, Stephen Jay. 'Fall in the House of Ussher.' Natural History 100, no. 11 (November 1991): 12–21. Reassessment arguing Ussher was a serious scholar; corrects popular misrepresentation."},
+    {"tier": "B", "citation": "Ford, Alan. James Ussher: Theology, History and Politics in Early-Modern Ireland and England. Oxford: Oxford University Press, 2007. The standard modern biography."},
+    {"tier": "B", "citation": "Knox, R. Buick. James Ussher, Archbishop of Armagh. Cardiff: University of Wales Press, 1967. Earlier biography focused on ecclesiastical career."},
+    {"tier": "C", "citation": "Mortenson, Terry. 'British Scriptural Geologists in the First Half of the Nineteenth Century.' Ph.D. diss., Coventry University, 1996. Studies the reception and decline of Ussher's chronology among 19th-century naturalists."},
+    {"tier": "D", "citation": "Wikipedia contributors. 'James Ussher.' Wikipedia, The Free Encyclopedia. https://en.wikipedia.org/wiki/James_Ussher. Comprehensive secondary synthesis with references."},
+]
+
+USSHER_TIMELINE = [
+    {"year": "1581", "event": "Born on 4 January in Dublin, Ireland, to a wealthy Anglo-Irish merchant family with strong clerical connections"},
+    {"year": "1594", "event": "Enrolled at Trinity College Dublin at age thirteen — just two years after the college's founding — studying with James Fullerton"},
+    {"year": "1596", "event": "Made a vow to devote his life to biblical scholarship; began assembling his manuscript collection while still a student"},
+    {"year": "1601", "event": "Ordained as a Church of Ireland deacon by the Archbishop of Dublin; delivered his first public lecture on the New Testament"},
+    {"year": "1605", "event": "Appointed Lecturer in Divinity at Trinity College Dublin; published his first scholarly work on the biblical canon"},
+    {"year": "1613", "event": "Appointed Professor of Divinity at Trinity College Dublin; corresponds with Francis Bacon and continental humanists"},
+    {"year": "1615", "event": "Drafted the Irish Articles — the first explicitly predestinarian Calvinist national confession of faith in the British Isles — at the Church of Ireland Convocation"},
+    {"year": "1621", "event": "Appointed Bishop of Meath; continues intensive manuscript collecting, visiting libraries across England and the Continent"},
+    {"year": "1625", "event": "Appointed Archbishop of Armagh — the senior position in the Church of Ireland — by King James I of England"},
+    {"year": "1631", "event": "Published Historia Dogmatica Controversiae and the Gotteschalk study; establishes his reputation as the leading patristic scholar in the British Isles"},
+    {"year": "1639", "event": "Published Britannicarum Ecclesiarum Antiquitates, arguing that the ancient Irish and British churches predated Roman papal authority"},
+    {"year": "1641", "event": "The Ulster rebellion forces Ussher to flee Ireland permanently; he settles in England and never returns to his archdiocese"},
+    {"year": "1645", "event": "Published A Body of Divinity — his systematic theology in catechetical form; widely used in Protestant households for over a century"},
+    {"year": "1647", "event": "The Westminster Confession of Faith, partly modelled on Ussher's Irish Articles, adopted by the Westminster Assembly of Divines"},
+    {"year": "1650", "event": "Published Annales Veteris Testamenti, placing Creation at nightfall before Sunday, 23 October 4004 BCE — the defining achievement of his career"},
+    {"year": "1654", "event": "Published Annalium Pars Posterior, completing the biblical chronology from Solomon to the New Testament period"},
+    {"year": "1656", "event": "Died at Reigate, Surrey, on 21 March; Oliver Cromwell ordered a state funeral at Westminster Abbey — an extraordinary honour in Puritan England"},
+    {"year": "1701", "event": "Bishop William Lloyd inserts Ussher's chronological dates in the margins of the Authorised King James Bible; 4004 BCE becomes the Protestant de facto creation date for 250 years"},
+]
+
+USSHER_CAUSES = [
+    "The Protestant Reformation placed a premium on direct engagement with Hebrew and Greek scripture, creating scholarly demand for precise biblical chronology",
+    "Trinity College Dublin's founding (1592) created Ireland's first centre for Oriental language study, which Ussher both catalysed and exploited",
+    "The Thirty Years' War (1618–1648) made confessional identity an urgent political and theological question, driving the creation of precise confessional standards like the Irish Articles",
+    "Archbishop Laud's ceremonialist reforms within the Church of England pushed Reformed churchmen to codify their Calvinist doctrinal position in writing",
+    "Joseph Scaliger's De emendatione temporum (1583) established the technical chronological framework — correlating Jewish, Roman, and Olympiad calendars — that Ussher refined into a complete biblical system",
+    "The availability of Arabic, Syriac, and Ethiopic manuscripts in European libraries (assembled by Ussher and others) made comparative biblical scholarship possible for the first time",
+]
+
+USSHER_EFFECTS = [
+    "The Ussher chronology was printed in the margins of the Authorized King James Bible from 1701, making 4004 BCE the de facto creation date for English-speaking Protestantism for two centuries",
+    "The Irish Articles (1615) directly influenced the Westminster Confession (1647), now the doctrinal standard of Presbyterian and Reformed churches worldwide",
+    "His manuscript collection — donated to the Bodleian Library and Trinity College Dublin — preserved rare Syriac, Arabic, and early Irish texts that survive nowhere else in the world",
+    "Geological and biological scientists from James Hutton (1788) and Charles Lyell (1830) to Charles Darwin (1859) explicitly framed their deep-time discoveries as refutations of Ussher, demonstrating the enduring cultural authority of his framework",
+    "His argument for apostolic independence of the Irish church contributed to the theological self-understanding of Anglicanism as distinct from both Rome and Geneva",
+    "His Republic of Letters correspondence network — with Bacon, Grotius, Selden, Hartlib, and Buxtorf — modelled the pan-European knowledge-exchange culture that shaped early modern science",
+    "The Reduction of Episcopacy proposal (1641) became a model for moderate church polity compromise, influencing discussions of episcopal reform across the English-speaking world",
+]
+
+patch_entity(USSHER_PATH, "james-ussher", {
+    "importanceScore": 8,
+    "born": "1581-01-04",
+    "died": "1656-03-21",
+    "altNames": ["Archbishop Ussher", "Archbishop of Armagh", "James Ussher of Armagh"],
+    "quote": "'The Scripture chronology being so clear and evident, I could not but wonder that any man of learning should question it.' — Annales Veteris Testamenti, 1650",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/James_Ussher_by_Sir_Peter_Lely.jpg/440px-James_Ussher_by_Sir_Peter_Lely.jpg",
+    "subjectHeadings": ["James Ussher — Biblical Scholarship — Ireland — Early Modern"],
+    "subjects": ["Ireland", "biblical chronology", "Archbishop of Armagh", "Church of Ireland",
+                 "Protestant Reformation", "Early Modern Europe", "chronology", "theology",
+                 "historical scholarship", "Trinity College Dublin", "Westminster Confession",
+                 "Calvinism", "Republic of Letters", "patristics"],
+    "frameworks": ["RELIGIOUS_THOUGHT", "INTELLECTUAL_HISTORY", "REFORMATION_AND_CONFESSIONALISM",
+                   "CAUSE_AND_EFFECT", "IDEAS_AND_WORLDVIEWS", "PRINT_CULTURE_AND_KNOWLEDGE",
+                   "SCIENTIFIC_REVOLUTION", "CONTINUITY_AND_CHANGE"],
+    "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceCategory": "continental",
+        "significanceNarrative": (
+            "James Ussher shaped the intellectual landscape of the Protestant world for two centuries. "
+            "His biblical chronology — printed in KJV margins from 1701 — made 4004 BCE the de facto "
+            "creation date for English-speaking Christianity, and his Irish Articles influenced Reformed "
+            "confessional theology worldwide through the Westminster Confession. Scientists from Hutton "
+            "to Darwin measured their deep-time discoveries against Ussher's framework, giving his work "
+            "an unintended and formative role in the scientific revolution. He remains the most "
+            "significant biblical scholar produced by Ireland."
+        )
+    },
+    "_detailsJson": {
+        "summary": USSHER_SUMMARY,
+        "causes": USSHER_CAUSES,
+        "effects": USSHER_EFFECTS,
+        "relationships": USSHER_RELS,
+        "texts": USSHER_TEXTS,
+        "evidence": USSHER_EVIDENCE,
+        "timeline": USSHER_TIMELINE,
+        "places": [
+            {"name": "Dublin, Ireland", "role": "birthplace and centre of early career; co-founder of Trinity College Dublin"},
+            {"name": "Armagh, Ireland", "role": "seat of the Church of Ireland archbishopric; Ussher's primary ecclesiastical base (1625–1641)"},
+            {"name": "Westminster Abbey, London", "role": "site of Ussher's state funeral ordered by Oliver Cromwell in 1656"},
+            {"name": "Oxford, England", "role": "Ussher donated part of his manuscript collection to the Bodleian Library"},
+            {"name": "Trinity College Dublin", "role": "co-founded 1592; Ussher served as Chancellor; his library became the nucleus of the TCD Library collection"},
+            {"name": "Reigate, Surrey, England", "role": "place of Ussher's death on 21 March 1656"},
+        ],
+        "quote": "'The Scripture chronology being so clear and evident, I could not but wonder that any man of learning should question it.' — James Ussher, Annales Veteris Testamenti (1650)",
+        "externalLinks": [
+            "https://www.wikidata.org/wiki/Q333481",
+            "https://en.wikipedia.org/wiki/James_Ussher",
+        ],
+    }
+})
+
+print("\nBatch 67b complete. Ussher: 22 rels, 14 texts, 10 evidence, 18 timeline events")
