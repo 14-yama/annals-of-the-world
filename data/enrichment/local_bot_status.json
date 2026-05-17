@@ -33356,7 +33356,10 @@
       "[13/25] asia (score=175.0, 0c)",
       "  ENRICHED \u2014 85c -> 1981c",
       "",
-      "[14/25] south-america (score=173.8, 0c)"
+      "[14/25] south-america (score=173.8, 0c)",
+      "  ENRICHED \u2014 91c -> 1615c",
+      "",
+      "[15/25] oceania (score=172.0, 0c)"
     ],
     "exitCode": null
   },
@@ -35053,11 +35056,63 @@
   "git-push-1779000969": {
     "job_id": "git-push-1779000969",
     "bot": "git-push",
+    "status": "done",
+    "model": "none",
+    "count": 1,
+    "pid": null,
+    "started": "2026-05-17T06:56:09Z",
+    "finished": "2026-05-17T06:56:13Z",
+    "log": [
+      "Pending files: 1 entities, 0 edges (1 total)",
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 65 local enrichments\"",
+      "[clean/audit-system e39d60f713] feat(enrich): watchdog auto-push \u2014 65 local enrichments\n 4 files changed, 135 insertions(+), 12 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   5d2bfa1bdc..e39d60f713  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 1 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
+    ],
+    "exitCode": 0
+  },
+  "sync-1779001050": {
+    "job_id": "sync-1779001050",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 604188,
+    "started": "2026-05-17T06:57:30Z",
+    "finished": "2026-05-17T06:57:47Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=32651/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 66 dirty files",
+      "[diff] 66 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 66,",
+      "  \"entitiesUpserted\": 0,",
+      "  \"auditRowsEmitted\": 0,",
+      "  \"writesPerformed\": 0,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit e39d60f7"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779001068": {
+    "job_id": "git-push-1779001068",
+    "bot": "git-push",
     "status": "running",
     "model": "none",
     "count": 0,
     "pid": null,
-    "started": "2026-05-17T06:56:09Z",
+    "started": "2026-05-17T06:57:48Z",
     "finished": null,
     "log": [
       "Pending files: 1 entities, 0 edges (1 total)",
