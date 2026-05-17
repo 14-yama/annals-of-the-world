@@ -1,40 +1,38 @@
 {
-  "timestamp": "2026-05-16T22:36:34Z",
+  "timestamp": "2026-05-16T23:27:38Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 5,
-  "failed": 0,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "melaine",
-      "status": "enriched",
-      "old_len": 61,
-      "new_len": 1134
+      "slug": "gil-eanes",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "victor-of-capua",
-      "status": "enriched",
-      "old_len": 61,
-      "new_len": 901
-    },
-    {
-      "slug": "venezuela",
-      "status": "enriched",
-      "old_len": 62,
-      "new_len": 1197
-    },
-    {
-      "slug": "sweden",
+      "slug": "pacian",
       "status": "enriched",
       "old_len": 63,
-      "new_len": 1054
+      "new_len": 1188
     },
     {
-      "slug": "arame-of-urartu",
+      "slug": "aeschines",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "pomponio-cecci",
       "status": "enriched",
-      "old_len": 63,
-      "new_len": 1632
+      "old_len": 65,
+      "new_len": 1450
+    },
+    {
+      "slug": "peter-of-toledo",
+      "status": "enriched",
+      "old_len": 155,
+      "new_len": 1135
     }
   ]
 }
