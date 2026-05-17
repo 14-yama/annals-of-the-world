@@ -1,111 +1,33 @@
 {
-  "timestamp": "2026-05-17T08:40:47Z",
+  "timestamp": "2026-05-17T09:30:18Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 16,
+  "count_requested": 5,
+  "enriched": 3,
   "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "snow-white",
+      "slug": "adriaen-isenbrandt",
       "status": "enriched",
-      "old_len": 77,
-      "new_len": 1690
+      "old_len": 609,
+      "new_len": 829
     },
     {
-      "slug": "the-decameron",
+      "slug": "umara-ibn-abi-al-hasan-al-yamani",
       "status": "enriched",
-      "old_len": 104,
-      "new_len": 1970
+      "old_len": 638,
+      "new_len": 1861
     },
     {
-      "slug": "beowulf",
-      "status": "enriched",
-      "old_len": 115,
-      "new_len": 1274
-    },
-    {
-      "slug": "analects",
-      "status": "enriched",
-      "old_len": 119,
-      "new_len": 1577
-    },
-    {
-      "slug": "kalevala",
-      "status": "enriched",
-      "old_len": 129,
-      "new_len": 1166
-    },
-    {
-      "slug": "diary-of-anne-frank",
-      "status": "enriched",
-      "old_len": 133,
-      "new_len": 1773
-    },
-    {
-      "slug": "classic-of-poetry",
+      "slug": "eclogues",
       "status": "failed",
-      "reason": "insufficient effects (0, need >= 1)"
+      "reason": "Expecting ',' delimiter: line 13 column 153 (char 2759)"
     },
     {
-      "slug": "book-of-job",
+      "slug": "all-quiet-on-the-western-front",
       "status": "enriched",
-      "old_len": 182,
-      "new_len": 1198
-    },
-    {
-      "slug": "sabinus-of-piacenza",
-      "status": "enriched",
-      "old_len": 660,
-      "new_len": 1892
-    },
-    {
-      "slug": "panchatantra",
-      "status": "enriched",
-      "old_len": 158,
-      "new_len": 818
-    },
-    {
-      "slug": "gospel-of-judas",
-      "status": "enriched",
-      "old_len": 162,
-      "new_len": 1793
-    },
-    {
-      "slug": "book-of-ruth",
-      "status": "enriched",
-      "old_len": 209,
-      "new_len": 1612
-    },
-    {
-      "slug": "george-of-antioch",
-      "status": "enriched",
-      "old_len": 613,
-      "new_len": 1269
-    },
-    {
-      "slug": "muhammad-ibn-maslamah",
-      "status": "enriched",
-      "old_len": 622,
-      "new_len": 1332
-    },
-    {
-      "slug": "a-game-of-thrones",
-      "status": "enriched",
-      "old_len": 62,
-      "new_len": 1364
-    },
-    {
-      "slug": "a-brief-history-of-time",
-      "status": "enriched",
-      "old_len": 63,
-      "new_len": 878
-    },
-    {
-      "slug": "a-journey-to-the-centre-of-the-earth",
-      "status": "enriched",
-      "old_len": 65,
-      "new_len": 1948
+      "old_len": 67,
+      "new_len": 1432
     }
   ]
 }

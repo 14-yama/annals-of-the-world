@@ -41784,17 +41784,22 @@
   "git-push-1779022160": {
     "job_id": "git-push-1779022160",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 30,
     "pid": null,
     "started": "2026-05-17T12:49:20Z",
-    "finished": null,
+    "finished": "2026-05-17T12:49:25Z",
     "log": [
       "Pending files: 30 entities, 0 edges (30 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 192 local enrichments\"",
+      "[clean/audit-system 2fde10ab04] feat(enrich): watchdog auto-push \u2014 192 local enrichments\n 35 files changed, 776 insertions(+), 112 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   21d4fcd9ae..2fde10ab04  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 30 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "enrich-1779022160": {
     "job_id": "enrich-1779022160",
@@ -41841,7 +41846,35 @@
       "[10/20] a-journey-to-the-centre-of-the-earth (score=111.88, 0c)",
       "  SKIP \u2014 already enriched (1948c)",
       "",
-      "[11/20] georgics (score=111.88, 0c)"
+      "[11/20] georgics (score=111.88, 0c)",
+      "  ENRICHED \u2014 65c -> 1187c",
+      "",
+      "[12/20] eclogues (score=111.88, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  RETRY (2) \u2014 insufficient relationships (1, need >= 2)",
+      "  RETRY (3) \u2014 insufficient effects (0, need >= 1)",
+      "  FAILED \u2014 insufficient relationships (1, need >= 2)",
+      "",
+      "[13/20] sermon-on-the-mount (score=111.83, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  ENRICHED \u2014 303c -> 1128c",
+      "",
+      "[14/20] abd-allah-ibn-amir (score=111.82, 0c)",
+      "  RETRY (1) \u2014 Unterminated string starting at: line 2 column 12 (char 13)",
+      "  ENRICHED \u2014 641c -> 1489c",
+      "",
+      "[15/20] all-quiet-on-the-western-front (score=111.62, 0c)",
+      "  RETRY (1) \u2014 insufficient causes (0, need >= 1)",
+      "  RETRY (2) \u2014 Unterminated string starting at: line 2 column 12 (char 13)",
+      "  ENRICHED \u2014 67c -> 1490c",
+      "",
+      "[16/20] zohar (score=111.62, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  RETRY (2) \u2014 insufficient relationships (1, need >= 2)",
+      "  RETRY (3) \u2014 summary too short (370c, need >= 400)",
+      "  ENRICHED \u2014 67c -> 1648c",
+      "",
+      "[17/20] meditations (score=111.5, 0c)"
     ],
     "exitCode": null
   }
