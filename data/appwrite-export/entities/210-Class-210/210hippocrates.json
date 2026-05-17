@@ -25,7 +25,246 @@
       "wikidataQid": "Q5264",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Hippocrates",
       "imageUrl": "",
-      "detailsJson": "{\"causes\":[{\"title\":\"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\",\"type\":\"EventWindow\",\"year\":\"459 BCE, Kos\"},{\"title\":\"Ongoing philosophical inquiry and intellectual debate\",\"type\":\"Idea\",\"year\":\"459 BCE, Kos\"}],\"effects\":[{\"title\":\"Contributed philosophical ideas to ongoing intellectual discourse\",\"type\":\"Idea\",\"year\":\"369 BCE\"},{\"title\":\"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\",\"type\":\"Movement\",\"year\":\"369 BCE\"}],\"relationships\":[{\"sourceSlug\":\"hippocrates\",\"sourceName\":\"Hippocrates\",\"verb\":\"THEORIZES\",\"targetSlug\":\"field-210\",\"targetName\":\"Philosophers & Thinkers\",\"context\":\"Hippocrates: Philosophical contribution in philosophers & thinkers\"},{\"sourceSlug\":\"hippocrates\",\"sourceName\":\"Hippocrates\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"classical\",\"targetName\":\"Classical Era\",\"context\":\"Hippocrates was active during the Classical era\"}],\"places\":[{\"name\":\"Kos\",\"role\":\"Birth place\"}],\"texts\":[{\"title\":\"Wikipedia: Hippocrates\",\"type\":\"Reference article\",\"slug\":\"hippocrates\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q5264\",\"https://en.wikipedia.org/wiki/Hippocrates\"],\"tags\":[\"Philosophers & Thinkers\",\"doctrine-development\",\"cause-and-effect\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":9,\"significanceNarrative\":\"Hippocrates' contributions to the field of medicine laid the foundation for modern clinical practice, influencing medical education and treatment for centuries. His work on prognosis, categorization of diseases, and humoral theory remain foundational principles in many medical specialties.\",\"significanceCategory\":\"world-changing\"},\"_editLog\":[],\"_unsyncedEdits\":false}",
+      "detailsJson": {
+        "summary": "Hippocrates of Cos (c. 460–370 BCE) was a Greek physician from the island of Cos who is called the 'Father of Medicine' for establishing medicine as a rational, empirical discipline — systematically separating it from supernatural explanations and religious practice. His fundamental insight — that diseases have natural causes observable in the body and environment, not the wrath of gods — was so radical that it took nearly 2,000 years to fully take hold. The Hippocratic Oath, taken by physicians for 2,500 years, remains the foundational ethical statement of medical practice.\n\nHippocrates taught at the school of Cos and trained physicians in careful clinical observation: noting symptoms, recording case histories, observing the course of disease over time, and making prognoses based on pattern recognition. His Corpus Hippocraticum (c. 60 texts, though most written by disciples) includes descriptions of diseases, clinical reports, surgical techniques, and ethical guidelines. His theory of the four humors (blood, phlegm, yellow bile, black bile) was medically incorrect but scientifically important as a naturalistic framework that endured through Galen to the Renaissance.\n\nHis principle 'First, do no harm' (Primum non nocere, though this phrase may be later) established a foundational medical ethic. His clinical descriptions of epilepsy (arguing it was a brain disease, not sacred possession), clubfoot, mumps, and certain cancers were accurate observations that anticipated later medical understanding.\n\nHippocrates's legacy is not any specific medical knowledge (much was wrong) but a method: observe, record, reason from evidence, make probabilistic prognoses, and treat the patient with care for their dignity. This empirical-ethical method is the foundation all modern medicine builds on.",
+        "causes": [
+          "Greek natural philosophy (pre-Socratic) seeking natural explanations for all phenomena",
+          "Temple healing traditions in competition with rational medicine creating reform space",
+          "Cos island's medical school providing institutional support for systematic observation",
+          "Sufficiency of clinical observation to demonstrate natural disease causation"
+        ],
+        "effects": [
+          "Hippocratic Oath — medical ethics observed for 2,500 years",
+          "Medicine as rational, empirical practice separated from religion",
+          "Corpus Hippocraticum — 60+ texts founding Western medical literature",
+          "Four humors theory — dominant medical paradigm for 2,000 years",
+          "Clinical observation method — foundation of all modern diagnosis",
+          "Galen built on Hippocratic foundations to synthesize Greek medicine",
+          "'First, do no harm' — most influential principle in medical ethics"
+        ],
+        "relationships": [
+          {
+            "type": "INFLUENCES",
+            "target": "Galen",
+            "targetSlug": "galen",
+            "note": "Galen systematized Hippocratic medicine and extended it for 1,500 years"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Avicenna",
+            "targetSlug": "avicenna",
+            "note": "Islamic synthesis of Hippocratic and Galenic medicine in Canon of Medicine"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Corpus Hippocraticum",
+            "targetSlug": "corpus-hippocraticum",
+            "note": "60+ medical texts attributed to him and his school"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Hippocratic Oath",
+            "targetSlug": "hippocratic-oath",
+            "note": "Medical ethics oath observed continuously for 2,500 years"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Aristotle",
+            "targetSlug": "aristotle",
+            "note": "Aristotle's empirical biology built on Hippocratic observation methodology"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Andreas Vesalius",
+            "targetSlug": "andreas-vesalius",
+            "note": "16th-century anatomist who corrected Galenic errors — working within Hippocratic tradition"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Florence Nightingale",
+            "targetSlug": "florence-nightingale",
+            "note": "Her statistical nursing reforms operated within the empirical tradition Hippocrates began"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "William Harvey",
+            "targetSlug": "william-harvey",
+            "note": "Discovery of blood circulation continued Hippocratic empirical tradition"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Greece",
+            "targetSlug": "greece",
+            "note": "Born on Cos; traveled throughout Greek world"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Four humors",
+            "targetSlug": "humoral-theory",
+            "note": "Naturalistic framework that structured medicine for 2,000 years"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Asclepius",
+            "targetSlug": "asclepius",
+            "note": "Divine healer whose temple medicine Hippocrates's school competed with"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Ancient Greek philosophy",
+            "targetSlug": "ancient-greek-philosophy",
+            "note": "Greek natural philosophy provided framework for empirical medicine"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Louis Pasteur",
+            "targetSlug": "louis-pasteur",
+            "note": "Germ theory eventually confirmed Hippocratic hunch about environmental disease causation"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Medical ethics",
+            "targetSlug": "medical-ethics",
+            "note": "Hippocratic tradition is the foundation of all bioethical discourse"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Plato",
+            "targetSlug": "plato",
+            "note": "Plato cited Hippocrates as the model of medical science in Phaedrus"
+          }
+        ],
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Hippocrates separated medicine from religion, established clinical observation as the basis of diagnosis and treatment, formulated the ethical framework of the Hippocratic Oath still used 2,500 years later, and made the foundational claim that diseases have natural, not supernatural, causes — making him the architect of scientific medicine."
+        },
+        "quote": "'Life is short, art long, opportunity fleeting, experience treacherous, judgment difficult.' — Hippocrates, Aphorisms (first aphorism)",
+        "places": [
+          "Cos, Greece (birthplace and school)",
+          "Larissa, Thessaly, Greece (death)",
+          "Athens, Greece (visited)"
+        ],
+        "subjectHeadings": "Hippocrates — Physicians and Scientists — Greece — Classical",
+        "subjects": [
+          "Greece",
+          "medicine",
+          "Classical era",
+          "medical ethics",
+          "science",
+          "ancient world",
+          "philosophy",
+          "Hippocratic Oath",
+          "empiricism",
+          "healing"
+        ],
+        "frameworks": [
+          "scientific-revolution",
+          "intellectual-history",
+          "cultural-exchange"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Hippocrates of Cos (c. 460–370 BCE) was a Greek physician from the island of Cos who is called the 'Father of Medicine' for establishing medicine as a rational, empirical discipline — systematically s…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.318729+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": null,
+            "newValue": "['Greek natural philosophy (pre-Socratic) seeking natural explanations for all phenomena', 'Temple healing traditions in competition with rational medicine creating reform space', \"Cos island's medica…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.318729+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": null,
+            "newValue": "['Hippocratic Oath — medical ethics observed for 2,500 years', 'Medicine as rational, empirical practice separated from religion', 'Corpus Hippocraticum — 60+ texts founding Western medical literature…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.318729+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": null,
+            "newValue": "[{'type': 'INFLUENCES', 'target': 'Galen', 'targetSlug': 'galen', 'note': 'Galen systematized Hippocratic medicine and extended it for 1,500 years'}, {'type': 'INFLUENCES', 'target': 'Avicenna', 'targ…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.318729+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 9, 'significanceCategory': 'world-changing', 'significanceNarrative': 'Hippocrates separated medicine from religion, established clinical observation as the basis of diagnosis an…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.318729+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": null,
+            "newValue": "'Life is short, art long, opportunity fleeting, experience treacherous, judgment difficult.' — Hippocrates, Aphorisms (first aphorism)",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.318729+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": null,
+            "newValue": [
+              "Cos, Greece (birthplace and school)",
+              "Larissa, Thessaly, Greece (death)",
+              "Athens, Greece (visited)"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.318729+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Hippocrates — Physicians and Scientists — Greece — Classical",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.318729+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "Greece",
+              "medicine",
+              "Classical era",
+              "medical ethics",
+              "science",
+              "ancient world",
+              "philosophy",
+              "Hippocratic Oath",
+              "empiricism",
+              "healing"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.318729+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "scientific-revolution",
+              "intellectual-history",
+              "cultural-exchange"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.318729+00:00"
+          }
+        ]
+      },
       "subjectHeadings": [
         "People — Philosophers & Thinkers — Global — Classical"
       ],
@@ -50,7 +289,8 @@
         "significanceScore": 9,
         "significanceNarrative": "Hippocrates' contributions to the field of medicine laid the foundation for modern clinical practice, influencing medical education and treatment for centuries. His work on prognosis, categorization of diseases, and humoral theory remain foundational principles in many medical specialties.",
         "significanceCategory": "world-changing"
-      }
+      },
+      "_unsyncedEdits": true
     }
   ]
 }

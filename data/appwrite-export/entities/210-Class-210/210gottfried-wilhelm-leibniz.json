@@ -20,7 +20,246 @@
       "wikidataQid": "Q9047",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz",
       "imageUrl": "",
-      "detailsJson": "{\"causes\":[\"17th-century European scientific revolution and mathematical advances\",\"German university tradition in philosophy and logic\",\"Diplomatic career providing access to Europe's intellectual networks\"],\"effects\":[\"Calculus notation became universal mathematical standard\",\"Binary number system became foundation of all digital computing\",\"Monadology influenced German Idealism and modern logic\"],\"relationships\":[{\"sourceSlug\":\"gottfried-wilhelm-leibniz\",\"sourceName\":\"Gottfried Wilhelm Leibniz\",\"verb\":\"CREATES\",\"targetSlug\":\"calculus\",\"targetName\":\"Calculus\",\"context\":\"Independently invented calculus c. 1675; his notation became standard\"},{\"sourceSlug\":\"isaac-newton\",\"sourceName\":\"Isaac Newton\",\"verb\":\"COLLABORATES_WITH\",\"targetSlug\":\"gottfried-wilhelm-leibniz\",\"targetName\":\"Gottfried Wilhelm Leibniz\",\"context\":\"Calculus priority dispute became most famous scientific controversy\"},{\"sourceSlug\":\"gottfried-wilhelm-leibniz\",\"sourceName\":\"Gottfried Wilhelm Leibniz\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"immanuel-kant\",\"targetName\":\"Immanuel Kant\",\"context\":\"Leibnizian rationalism shaped the tradition Kant synthesised\"},{\"sourceSlug\":\"blaise-pascal\",\"sourceName\":\"Blaise Pascal\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"gottfried-wilhelm-leibniz\",\"targetName\":\"Gottfried Wilhelm Leibniz\",\"context\":\"Pascal's calculator inspired Leibniz's mechanical computing machine\"},{\"sourceSlug\":\"gottfried-wilhelm-leibniz\",\"sourceName\":\"Gottfried Wilhelm Leibniz\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"hanover\",\"targetName\":\"Hanover\",\"context\":\"Served as court advisor in Hanover 1676-1716\"}],\"places\":[{\"name\":\"Hanover, Germany\",\"role\":\"Court advisor and death\"},{\"name\":\"Leipzig, Germany\",\"role\":\"Birthplace\"},{\"name\":\"Paris, France\",\"role\":\"Mathematical breakthrough period\"}],\"historicalSignificance\":{\"significanceScore\":9,\"significanceNarrative\":\"Leibniz's calculus notation is used by mathematicians today and his philosophical system of monads influenced modern philosophy. His work on the binary number system underpins all modern computing.\",\"significanceCategory\":\"world-changing\"},\"_editLog\":[],\"_unsyncedEdits\":false}",
+      "detailsJson": {
+        "summary": "Gottfried Wilhelm Leibniz (1646–1716) was a German polymath who independently invented calculus simultaneously with Isaac Newton, developed the binary number system that underlies all digital computing, and created a comprehensive philosophical system (monadology) exploring the nature of reality, space, time, and God. Known as the 'last universal genius' alongside Leonardo da Vinci, Leibniz made foundational contributions to mathematics, philosophy, physics, logic, history, diplomacy, and linguistics — never once holding a university position.\n\nHis calculus (independently published 1684, several years before Newton's 1687 Principia, though Newton had privately worked it out years earlier) used the notation d/dx and the integral sign ∫ that every calculus student still uses today. The bitter priority dispute with Newton poisoned relations between British and Continental mathematicians for a century. Leibniz's notation won: the entire world uses it.\n\nHis binary arithmetic (0s and 1s) — which he connected to Chinese hexagrams and I Ching symbolism — became the mathematical foundation of all digital computation 200 years later. His Monadology (1714) proposed that reality consists of simple, irreducible 'monads' — a metaphysical theory whose influence stretched from Kant to Whitehead. His famous theodicy — that we live in 'the best of all possible worlds' — was memorably satirized by Voltaire in Candide.\n\nLeibniz spent decades in Hanover as a court librarian and diplomat; his work on a universal characteristic (a logical calculus for all reasoning) directly anticipates Boole's algebra and Frege's predicate logic — the foundations of modern computer science.",
+        "causes": [
+          "17th-century need for mathematical tools to solve problems of motion and area",
+          "Cartesian rationalism providing framework for his philosophical ambitions",
+          "Leibniz's extraordinary breadth of curiosity spanning all intellectual disciplines",
+          "Hanover court employment giving financial security but limiting scientific community"
+        ],
+        "effects": [
+          "Calculus notation (d/dx, ∫) — used universally in mathematics",
+          "Binary number system — foundation of all digital computing",
+          "Monadology — metaphysical system influencing Kant and process philosophy",
+          "Theodicy — concept of 'best of all possible worlds' (and Voltaire's satire)",
+          "Universal characteristic — anticipating Boolean logic and computer science",
+          "Newton-Leibniz calculus priority dispute — lasting damage to British-Continental relations",
+          "Diplomatic career — early advocate of European unity"
+        ],
+        "relationships": [
+          {
+            "type": "INFLUENCES",
+            "target": "Isaac Newton",
+            "targetSlug": "isaac-newton",
+            "note": "Simultaneous independent calculus — bitter priority dispute followed"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "René Descartes",
+            "targetSlug": "rene-descartes",
+            "note": "Extended Cartesian rationalism into his own metaphysics"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Immanuel Kant",
+            "targetSlug": "immanuel-kant",
+            "note": "Kant's critical philosophy responded directly to Leibniz and Newton"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "George Boole",
+            "targetSlug": "george-boole",
+            "note": "Leibniz's binary and logical calculus ideas anticipated Boolean algebra"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Gottlob Frege",
+            "targetSlug": "gottlob-frege",
+            "note": "Frege's predicate logic realized Leibniz's universal characteristic"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Voltaire",
+            "targetSlug": "voltaire",
+            "note": "Voltaire's Candide satirized Leibniz's optimism ('best of all possible worlds')"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Binary number system",
+            "targetSlug": "binary-number-system",
+            "note": "Leibniz's invention — foundation of all digital computing"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Monadology",
+            "targetSlug": "monadology-leibniz",
+            "note": "His 1714 metaphysical treatise proposing reality consists of monads"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Royal Society",
+            "targetSlug": "royal-society",
+            "note": "Fellow of the Royal Society; center of Newton priority dispute"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Germany",
+            "targetSlug": "germany",
+            "note": "Spent most of career in Hanover as court librarian"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Baruch Spinoza",
+            "targetSlug": "baruch-spinoza",
+            "note": "Met Spinoza; their metaphysics diverged sharply"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Digital computing",
+            "targetSlug": "digital-computing",
+            "note": "Binary system directly underlies all modern computing"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Alfred North Whitehead",
+            "targetSlug": "alfred-north-whitehead",
+            "note": "Process philosophy extends monadological ideas"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "I Ching",
+            "targetSlug": "i-ching",
+            "note": "Connected binary arithmetic to Chinese hexagram symbolism"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Bertrand Russell",
+            "targetSlug": "bertrand-russell",
+            "note": "Russell's early work on Leibniz (1900) revived his philosophical reputation"
+          }
+        ],
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Gottfried Leibniz independently invented calculus (with notation still used globally), created the binary number system foundational to all digital computing, and built a philosophical system whose influence stretched from Kant to modern logic — making him perhaps the most broadly consequential thinker who never received credit commensurate with his contributions."
+        },
+        "quote": "'Music is the pleasure the human mind experiences from counting without being aware that it is counting.' — Gottfried Wilhelm Leibniz",
+        "places": [
+          "Hanover, Germany (court employment)",
+          "Leipzig, Germany (birthplace)",
+          "Berlin, Germany (founded Prussian Academy of Sciences)"
+        ],
+        "subjectHeadings": "Gottfried Wilhelm Leibniz — Mathematicians and Philosophers — Germany — Early Modern",
+        "subjects": [
+          "Germany",
+          "mathematics",
+          "philosophy",
+          "calculus",
+          "binary",
+          "computing",
+          "Early Modern era",
+          "Enlightenment",
+          "rationalism",
+          "logic"
+        ],
+        "frameworks": [
+          "scientific-revolution",
+          "intellectual-history",
+          "technological-change"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Gottfried Wilhelm Leibniz (1646–1716) was a German polymath who independently invented calculus simultaneously with Isaac Newton, developed the binary number system that underlies all digital computin…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.319180+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": null,
+            "newValue": "['17th-century need for mathematical tools to solve problems of motion and area', 'Cartesian rationalism providing framework for his philosophical ambitions', \"Leibniz's extraordinary breadth of curio…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.319180+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": null,
+            "newValue": "['Calculus notation (d/dx, ∫) — used universally in mathematics', 'Binary number system — foundation of all digital computing', 'Monadology — metaphysical system influencing Kant and process philosoph…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.319180+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": null,
+            "newValue": "[{'type': 'INFLUENCES', 'target': 'Isaac Newton', 'targetSlug': 'isaac-newton', 'note': 'Simultaneous independent calculus — bitter priority dispute followed'}, {'type': 'INFLUENCES', 'target': 'René …",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.319180+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 9, 'significanceCategory': 'world-changing', 'significanceNarrative': 'Gottfried Leibniz independently invented calculus (with notation still used globally), created the binary n…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.319180+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": null,
+            "newValue": "'Music is the pleasure the human mind experiences from counting without being aware that it is counting.' — Gottfried Wilhelm Leibniz",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.319180+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": null,
+            "newValue": [
+              "Hanover, Germany (court employment)",
+              "Leipzig, Germany (birthplace)",
+              "Berlin, Germany (founded Prussian Academy of Sciences)"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.319180+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Gottfried Wilhelm Leibniz — Mathematicians and Philosophers — Germany — Early Modern",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.319180+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "Germany",
+              "mathematics",
+              "philosophy",
+              "calculus",
+              "binary",
+              "computing",
+              "Early Modern era",
+              "Enlightenment",
+              "rationalism",
+              "logic"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.319180+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "scientific-revolution",
+              "intellectual-history",
+              "technological-change"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.319180+00:00"
+          }
+        ]
+      },
       "subjectHeadings": [
         "People — Philosophers — Europe — Early Modern"
       ],
@@ -48,7 +287,8 @@
         "significanceScore": 9,
         "significanceNarrative": "Leibniz's calculus notation is used by mathematicians today and his philosophical system of monads influenced modern philosophy. His work on the binary number system underpins all modern computing.",
         "significanceCategory": "world-changing"
-      }
+      },
+      "_unsyncedEdits": true
     }
   ]
 }

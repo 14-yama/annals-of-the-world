@@ -25,7 +25,248 @@
       "wikidataQid": "Q302",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Jesus",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Spas_vsederzhitel_sinay.jpg",
-      "detailsJson": "{\"causes\":[\"The Abrahamic covenant and Messianic prophecies of the Hebrew Bible (Isaiah 53, Micah 5:2, Daniel 9) created centuries of expectation for a divine deliverer\",\"Roman occupation of Judea and the resulting political-spiritual crisis among 1st-century Jews seeking liberation\",\"The theological preparation of Second Temple Judaism: synagogue worship, Pharisaic ethics, and apocalyptic literature\"],\"effects\":[\"Founded Christianity, which became the world’s largest religion (2.4 billion adherents) and the dominant cultural force in Western civilization for two millennia\",\"The resurrection proclamation launched the apostolic mission that spread from Jerusalem to Rome within 30 years, creating the early Church\",\"Constantine’s Edict of Milan (313 CE) and Theodosius’s decree (380 CE) made Christianity the state religion of the Roman Empire\",\"Jesus’s teachings on human dignity, forgiveness, and charity gave rise to hospitals, universities, and the Western concept of human rights\",\"The Anno Domini calendar system, based on his birth, became the global standard for dating history\",\"His sacrifice theology (atonement) became the central doctrine distinguishing Christianity from Judaism and Islam\"],\"relationships\":[{\"sourceSlug\":\"jesus-christ\",\"sourceName\":\"Jesus Christ\",\"verb\":\"FULFILLS\",\"targetSlug\":\"abraham\",\"targetName\":\"Abraham\",\"context\":\"Jesus as the 'seed of Abraham' through whom all nations would be blessed (Galatians 3:16)\"},{\"sourceSlug\":\"jesus-christ\",\"sourceName\":\"Jesus Christ\",\"verb\":\"FULFILLS\",\"targetSlug\":\"moses\",\"targetName\":\"Moses\",\"context\":\"Jesus as the 'prophet like Moses' (Deuteronomy 18:15) — new covenant fulfilling the old\"},{\"sourceSlug\":\"jesus-christ\",\"sourceName\":\"Jesus Christ\",\"verb\":\"FULFILLS\",\"targetSlug\":\"david\",\"targetName\":\"King David\",\"context\":\"Jesus as the 'Son of David,' heir to the Davidic covenant of eternal kingship (2 Samuel 7)\"},{\"sourceSlug\":\"jesus-christ\",\"sourceName\":\"Jesus Christ\",\"verb\":\"COMMISSIONS\",\"targetSlug\":\"paul-the-apostle\",\"targetName\":\"Paul the Apostle\",\"context\":\"The risen Christ commissioned Paul on the Damascus road (Acts 9), launching Gentile Christianity\"},{\"sourceSlug\":\"jesus-christ\",\"sourceName\":\"Jesus Christ\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"constantine-i\",\"targetName\":\"Constantine I\",\"context\":\"Constantine’s conversion (312 CE) made Christianity the dominant force in Roman politics\"},{\"sourceSlug\":\"jesus-christ\",\"sourceName\":\"Jesus Christ\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"ancient-israel\",\"targetName\":\"Ancient Israel\",\"context\":\"Born in Bethlehem, raised in Nazareth, crucified in Jerusalem — all within Roman Judea\"},{\"sourceSlug\":\"jesus-christ\",\"sourceName\":\"Jesus Christ\",\"verb\":\"PREFIGURES\",\"targetSlug\":\"muhammad\",\"targetName\":\"Muhammad\",\"context\":\"Islam honors Jesus (Isa) as a virgin-born prophet and Messiah; the Quran mentions him 25 times\"}],\"places\":[{\"name\":\"Bethlehem\",\"role\":\"Birth place\"}],\"texts\":[{\"title\":\"Wikipedia: Jesus Christ\",\"type\":\"Reference article\",\"slug\":\"jesus-christ\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q302\",\"https://en.wikipedia.org/wiki/Jesus\"],\"tags\":[\"Educators & Academics\",\"cause-and-effect\",\"innovation-and-technology\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":10,\"significanceNarrative\":\"Jesus Christ's teachings and legacy have profoundly influenced Western civilization, shaping moral philosophy, Christian theology, and global politics. His message of love and redemption has inspired countless movements, including the Protestant Reformation and modern human rights activism.\",\"significanceCategory\":\"world-changing\"},\"_editLog\":[],\"_unsyncedEdits\":false}",
+      "detailsJson": {
+        "summary": "Jesus of Nazareth (c. 4 BCE – c. 30–33 CE) was a 1st-century Jewish preacher, healer, and teacher from Galilee whose life, death, and reported resurrection became the foundation of Christianity — the world's largest religion, with 2.4 billion adherents. More books have been written about him than any other human being, and the Western calendar counts years from his birth (Anno Domini). Whether viewed as the Son of God incarnate (Christian theology), a prophet (Islamic tradition), a failed messianic claimant (Talmudic view), or a historical reformer (secular scholarship), no other individual has more fundamentally shaped human civilization.\n\nHistorical evidence places Jesus in 1st-century Roman-occupied Judea: John the Baptist baptized him (corroborated by Josephus); Roman prefect Pontius Pilate crucified him (confirmed by Tacitus and Josephus); and within decades his followers had established communities across the Mediterranean. His ministry (lasting 1–3 years) centered on the Kingdom of God, radical love of enemies and neighbors, care for the poor and outcast, and a prophetic challenge to religious and political authority. The Sermon on the Mount ('Blessed are the peacemakers') remains one of history's most influential ethical texts.\n\nPaul of Tarsus, who encountered the risen Christ on the road to Damascus (c. 33–36 CE), transformed the Jewish sect into a universal movement — removing circumcision requirements and extending membership to Gentiles. Within 300 years, Christianity had become the Roman Empire's official religion under Constantine (313 CE). The New Testament, compiled over the first century, provides the primary textual record.\n\n'Love your neighbor as yourself' (Matthew 22:39) — eight simple words that have inspired cathedrals, hospitals, universities, the abolition of slavery, and the modern concept of human rights, while also being invoked to justify crusades, inquisitions, and colonialism.",
+        "causes": [
+          "Roman occupation of Judea generating messianic expectation among Jewish people",
+          "John the Baptist's apocalyptic preaching creating the spiritual context for Jesus's ministry",
+          "Jewish prophetic tradition providing the framework for his teachings on justice and mercy",
+          "Roman crucifixion as political execution — the specific manner of death shaping resurrection theology"
+        ],
+        "effects": [
+          "Christianity — world's largest religion, 2.4 billion adherents",
+          "New Testament — core Christian scripture shaping Western literature and ethics",
+          "Roman Empire's Christianization under Constantine (313 CE)",
+          "Western calendar — Anno Domini dating system from his birth",
+          "Christian monastic tradition — hospitals, universities, libraries",
+          "Crusades, Inquisition, Protestant Reformation — all responding to his teachings",
+          "Modern concepts of human rights, dignity, and universal brotherhood"
+        ],
+        "relationships": [
+          {
+            "type": "INFLUENCES",
+            "target": "Paul the Apostle",
+            "targetSlug": "paul-the-apostle",
+            "note": "Paul's encounter with risen Christ transformed Jesus's movement to universal religion"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Christianity",
+            "targetSlug": "christianity",
+            "note": "He is the founder — the religion is entirely centered on his person"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "New Testament",
+            "targetSlug": "new-testament",
+            "note": "Primary textual record of his life and teachings"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Roman Empire",
+            "targetSlug": "roman-empire",
+            "note": "Empire that executed him and then adopted his religion"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Constantine I",
+            "targetSlug": "constantine-i",
+            "note": "Made Christianity Rome's official religion (313 CE)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "John the Baptist",
+            "targetSlug": "john-the-baptist",
+            "note": "Precursor who baptized Jesus and announced his coming"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Pontius Pilate",
+            "targetSlug": "pontius-pilate",
+            "note": "Roman prefect who ordered his crucifixion"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Islam",
+            "targetSlug": "islam",
+            "note": "Quran recognizes Jesus as a prophet (Isa)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "The Sermon on the Mount",
+            "targetSlug": "sermon-on-the-mount",
+            "note": "Core ethical teaching: Beatitudes, Lord's Prayer, love of enemies"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Israel/Palestine",
+            "targetSlug": "israel-palestine",
+            "note": "Born in Bethlehem, ministry in Galilee, crucified in Jerusalem"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Martin Luther",
+            "targetSlug": "martin-luther",
+            "note": "Luther's Protestant Reformation was a dispute about authentic Christianity"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Francis of Assisi",
+            "targetSlug": "francis-of-assisi",
+            "note": "Francis took his poverty and love teachings to radical conclusion"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Thomas Aquinas",
+            "targetSlug": "thomas-aquinas",
+            "note": "Scholastic theology synthesizing Aristotle with Christ's teachings"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Western calendar",
+            "targetSlug": "gregorian-calendar",
+            "note": "Years counted from his birth (BC/AD or BCE/CE)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Crusades",
+            "targetSlug": "crusades",
+            "note": "Medieval military campaigns launched in his name"
+          }
+        ],
+        "historicalSignificance": {
+          "significanceScore": 10,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Jesus of Nazareth is the most influential single human being in recorded history — the founder of the world's largest religion (2.4 billion adherents), the subject of more scholarship than any other person, the basis of the Western calendar, and the inspiration for both the highest human achievements and the worst religious atrocities across two millennia."
+        },
+        "quote": "'Love your neighbor as yourself.' (Matthew 22:39)",
+        "places": [
+          "Jerusalem, Israel (ministry and death)",
+          "Nazareth, Galilee (upbringing)",
+          "Bethlehem, Judea (birth)",
+          "Capernaum (ministry base)"
+        ],
+        "subjectHeadings": "Jesus Christ — Religious Founders — Israel/Palestine — Classical",
+        "subjects": [
+          "Israel",
+          "Christianity",
+          "religion",
+          "Classical era",
+          "Roman Empire",
+          "theology",
+          "ethics",
+          "Judaism",
+          "spirituality",
+          "Western civilization"
+        ],
+        "frameworks": [
+          "religious-thought",
+          "liberation-theology",
+          "social-revolution"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Jesus of Nazareth (c. 4 BCE – c. 30–33 CE) was a 1st-century Jewish preacher, healer, and teacher from Galilee whose life, death, and reported resurrection became the foundation of Christianity — the …",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316197+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": null,
+            "newValue": "['Roman occupation of Judea generating messianic expectation among Jewish people', \"John the Baptist's apocalyptic preaching creating the spiritual context for Jesus's ministry\", 'Jewish prophetic tra…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316197+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": null,
+            "newValue": "[\"Christianity — world's largest religion, 2.4 billion adherents\", 'New Testament — core Christian scripture shaping Western literature and ethics', \"Roman Empire's Christianization under Constantine …",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316197+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": null,
+            "newValue": "[{'type': 'INFLUENCES', 'target': 'Paul the Apostle', 'targetSlug': 'paul-the-apostle', 'note': \"Paul's encounter with risen Christ transformed Jesus's movement to universal religion\"}, {'type': 'INFL…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316197+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 10, 'significanceCategory': 'world-changing', 'significanceNarrative': \"Jesus of Nazareth is the most influential single human being in recorded history — the founder of the worl…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316197+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": null,
+            "newValue": "'Love your neighbor as yourself.' (Matthew 22:39)",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316197+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": null,
+            "newValue": [
+              "Jerusalem, Israel (ministry and death)",
+              "Nazareth, Galilee (upbringing)",
+              "Bethlehem, Judea (birth)",
+              "Capernaum (ministry base)"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316197+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Jesus Christ — Religious Founders — Israel/Palestine — Classical",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316197+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "Israel",
+              "Christianity",
+              "religion",
+              "Classical era",
+              "Roman Empire",
+              "theology",
+              "ethics",
+              "Judaism",
+              "spirituality",
+              "Western civilization"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316197+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "religious-thought",
+              "liberation-theology",
+              "social-revolution"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316197+00:00"
+          }
+        ]
+      },
       "subjectHeadings": [
         "People — Religious Founders — Palestine — Classical"
       ],
@@ -61,7 +302,8 @@
         "significanceScore": 10,
         "significanceNarrative": "Jesus Christ's teachings and legacy have profoundly influenced Western civilization, shaping moral philosophy, Christian theology, and global politics. His message of love and redemption has inspired countless movements, including the Protestant Reformation and modern human rights activism.",
         "significanceCategory": "world-changing"
-      }
+      },
+      "_unsyncedEdits": true
     }
   ]
 }

@@ -25,7 +25,246 @@
       "wikidataQid": "Q9554",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Martin_Luther",
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Lucas_Cranach_d.%C3%84._-_Martin_Luther%2C_1528_%28Veste_Coburg%29.jpg",
-      "detailsJson": "{\"causes\":[\"The sale of indulgences by Johann Tetzel (‘As soon as the coin in the coffer rings, the soul from purgatory springs’) provoked Luther’s theological protest\",\"The corruption and worldliness of the Renaissance papacy (Alexander VI, Julius II, Leo X) undermined the Church’s moral authority\",\"Gutenberg’s printing press (1440) enabled rapid dissemination of Luther’s writings across Europe within weeks\"],\"effects\":[\"Launched the Protestant Reformation, permanently splitting Western Christianity into Catholic and Protestant branches\",\"His German Bible translation standardized the German language and made Scripture directly accessible to laypeople\",\"The principle of sola scriptura elevated individual Bible reading and literacy, driving educational reform across Protestant Europe\",\"Contributed to the Wars of Religion (1524–1648) and the Peace of Westphalia, which established the modern system of sovereign nation-states\",\"The doctrine of the priesthood of all believers challenged hierarchical authority and contributed to democratic political thought\",\"Lutheran hymnody (‘A Mighty Fortress Is Our God’) established congregational singing and influenced Bach, Protestant worship, and Western music\"],\"relationships\":[{\"sourceSlug\":\"martin-luther\",\"sourceName\":\"Martin Luther\",\"verb\":\"OPPOSES\",\"targetSlug\":\"catholic-church\",\"targetName\":\"Catholic Church\",\"context\":\"His Ninety-Five Theses (1517) challenged papal authority and indulgence theology\"},{\"sourceSlug\":\"martin-luther\",\"sourceName\":\"Martin Luther\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"john-calvin\",\"targetName\":\"John Calvin\",\"context\":\"Luther’s theology of grace directly influenced Calvin’s Reformed theology\"},{\"sourceSlug\":\"martin-luther\",\"sourceName\":\"Martin Luther\",\"verb\":\"ENABLED_BY\",\"targetSlug\":\"johannes-gutenberg\",\"targetName\":\"Johannes Gutenberg\",\"context\":\"The printing press made Luther’s writings the first mass-media phenomenon\"},{\"sourceSlug\":\"martin-luther\",\"sourceName\":\"Martin Luther\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"holy-roman-empire\",\"targetName\":\"Holy Roman Empire\",\"context\":\"Lived, taught, and defied papal authority within the Holy Roman Empire\"},{\"sourceSlug\":\"martin-luther\",\"sourceName\":\"Martin Luther\",\"verb\":\"ESTABLISHES\",\"targetSlug\":\"reformation\",\"targetName\":\"Protestant Reformation\",\"context\":\"His protest launched the Protestant Reformation that reshaped Western civilization\"},{\"sourceSlug\":\"martin-luther\",\"sourceName\":\"Martin Luther\",\"verb\":\"AUTHORS\",\"targetSlug\":\"ninety-five-theses\",\"targetName\":\"Ninety Five Theses\",\"context\":\"Posted the Ninety-Five Theses on October 31, 1517 — the symbolic start of the Reformation\"}],\"places\":[{\"name\":\"Eisleben\",\"role\":\"Birth place\"}],\"texts\":[{\"title\":\"Wikipedia: Martin Luther\",\"type\":\"Reference article\",\"slug\":\"martin-luther\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q9554\",\"https://en.wikipedia.org/wiki/Martin_Luther\"],\"tags\":[\"Educators & Academics\",\"cause-and-effect\",\"innovation-and-technology\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":9,\"significanceNarrative\":\"Martin Luther's Ninety-Five Theses and subsequent actions catalyzed the Protestant Reformation, leading to a schism that split Western Christianity into two major branches. The movement had an estimated 50-100 million adherents by the mid-16th century.\",\"significanceCategory\":\"world-changing\"},\"_editLog\":[],\"_unsyncedEdits\":false}",
+      "detailsJson": {
+        "summary": "Martin Luther (1483–1546) was the German Augustinian friar and theologian whose Ninety-Five Theses (October 31, 1517) — a scholarly challenge to the sale of indulgences — ignited the Protestant Reformation, permanently fracturing Western Christianity and reshaping the political, cultural, and intellectual landscape of Europe. No single act of scholarship has had more geopolitical consequences: Luther's challenge led to a century of religious wars, created the foundations of the modern nation-state, and enabled both the Scientific Revolution and the Enlightenment by breaking the Catholic Church's monopoly on legitimate knowledge.\n\nLuther's core theological insight — justification by faith alone (sola fide), not works or sacraments — challenged 1,000 years of Catholic doctrine. When ordered to recant at the Diet of Worms (1521), he refused: 'Here I stand. I can do no other.' Excommunicated by Pope Leo X and declared an outlaw by Holy Roman Emperor Charles V, he translated the New Testament into German while hiding at Wartburg Castle — creating the standard for the modern German language as Shakespeare did for English.\n\nThe printing press (Gutenberg's invention, 60 years earlier) was essential: Luther's pamphlets spread across Europe in weeks, with 300,000 copies sold in three years. The Peasants' Revolt (1524–25) revealed the social radicalism Luther had unleashed — which he violently disowned, urging princes to crush the peasants. His antisemitic writings (especially 'On the Jews and Their Lies', 1543) would later be invoked by Nazis.\n\nLuther established the first Protestant church (Lutheran), the concept of pastoral marriage and family life for clergy, vernacular Scripture for ordinary believers, and the model of conscience as the ultimate religious authority — principles that remain central to Protestant identity today.",
+        "causes": [
+          "Catholic Church's sale of indulgences to fund St. Peter's Basilica sparking his protest",
+          "Printing press enabling rapid spread of his ideas beyond Church censorship",
+          "Renaissance humanism (Erasmus, ad fontes) preparing scholars for direct biblical engagement",
+          "German nationalist sentiment against papal extraction of funds from German territories"
+        ],
+        "effects": [
+          "Protestant Reformation — Christianity permanently divided into Catholic and Protestant branches",
+          "Ninety-Five Theses (1517) — most consequential academic document in Western history",
+          "German Bible translation (1534) — standard for modern German language",
+          "Wars of Religion (1524–1648) — century of conflict culminating in Peace of Westphalia",
+          "Sola fide, sola scriptura — Protestant theological principles still active today",
+          "Secularization and rise of nation-state from religious wars",
+          "Lutheran Church — 80 million members globally"
+        ],
+        "relationships": [
+          {
+            "type": "INFLUENCES",
+            "target": "Protestant Reformation",
+            "targetSlug": "protestant-reformation",
+            "note": "He IS the Reformation — his 1517 protest started it"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Johannes Gutenberg",
+            "targetSlug": "johannes-gutenberg",
+            "note": "Printing press made Luther's ideas unstoppable"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "John Calvin",
+            "targetSlug": "john-calvin",
+            "note": "Calvin built a more systematic Protestant theology on Luther's foundation"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Jesus Christ",
+            "targetSlug": "jesus-christ",
+            "note": "Luther's theology was about authentic Christianity — faith alone"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Pope Leo X",
+            "targetSlug": "pope-leo-x",
+            "note": "Excommunicated Luther with Exsurge Domine (1520)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Charles V, Holy Roman Emperor",
+            "targetSlug": "charles-v-holy-roman-emperor",
+            "note": "Declared Luther an outlaw at Diet of Worms (1521)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Philip Melanchthon",
+            "targetSlug": "philip-melanchthon",
+            "note": "Closest theological collaborator; wrote Augsburg Confession (1530)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Peasants' Revolt (1524–25)",
+            "targetSlug": "peasants-revolt-1524",
+            "note": "Radical social uprising Luther unleashed — then denounced"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Ninety-Five Theses",
+            "targetSlug": "ninety-five-theses",
+            "note": "His 1517 challenge to indulgences — Reformation's founding document"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Germany",
+            "targetSlug": "germany",
+            "note": "German-born; Wittenberg University professor"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Peace of Westphalia",
+            "targetSlug": "peace-of-westphalia",
+            "note": "1648 settlement of religious wars he started — modern state system"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Henry VIII of England",
+            "targetSlug": "henry-viii-of-england",
+            "note": "Luther's challenge inspired Henry's break with Rome"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Erasmus",
+            "targetSlug": "erasmus",
+            "note": "Renaissance humanist ally turned critic — their debate on free will"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Council of Trent",
+            "targetSlug": "council-of-trent",
+            "note": "Catholic Counter-Reformation response to Lutheran challenge"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Thirty Years War",
+            "targetSlug": "thirty-years-war",
+            "note": "1618–48 catastrophic war rooted in Lutheran-Catholic conflict"
+          }
+        ],
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Martin Luther's Ninety-Five Theses broke the Catholic Church's monopoly on spiritual authority, permanently divided Western Christianity, triggered a century of wars, produced the modern German language, and established the principle of individual conscience over institutional authority — making him the father of both Protestantism and modern Western individualism."
+        },
+        "quote": "'Here I stand. I can do no other. So help me God.' — Martin Luther, Diet of Worms (April 18, 1521)",
+        "places": [
+          "Wittenberg, Germany (university and Reformation center)",
+          "Eisleben, Germany (birthplace and death)",
+          "Wartburg Castle, Germany (hiding, German Bible translation)"
+        ],
+        "subjectHeadings": "Martin Luther — Religious Reformers — Germany — Early Modern",
+        "subjects": [
+          "Germany",
+          "Protestant Reformation",
+          "Christianity",
+          "theology",
+          "Early Modern era",
+          "printing press",
+          "church history",
+          "Europe",
+          "religious freedom",
+          "Bible translation"
+        ],
+        "frameworks": [
+          "religious-thought",
+          "social-revolution",
+          "state-formation"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Martin Luther (1483–1546) was the German Augustinian friar and theologian whose Ninety-Five Theses (October 31, 1517) — a scholarly challenge to the sale of indulgences — ignited the Protestant Reform…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316935+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": null,
+            "newValue": "[\"Catholic Church's sale of indulgences to fund St. Peter's Basilica sparking his protest\", 'Printing press enabling rapid spread of his ideas beyond Church censorship', 'Renaissance humanism (Erasmus…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316935+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": null,
+            "newValue": "['Protestant Reformation — Christianity permanently divided into Catholic and Protestant branches', 'Ninety-Five Theses (1517) — most consequential academic document in Western history', 'German Bible…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316935+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": null,
+            "newValue": "[{'type': 'INFLUENCES', 'target': 'Protestant Reformation', 'targetSlug': 'protestant-reformation', 'note': 'He IS the Reformation — his 1517 protest started it'}, {'type': 'INFLUENCES', 'target': 'Jo…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316935+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 9, 'significanceCategory': 'world-changing', 'significanceNarrative': \"Martin Luther's Ninety-Five Theses broke the Catholic Church's monopoly on spiritual authority, permanently…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316935+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": null,
+            "newValue": "'Here I stand. I can do no other. So help me God.' — Martin Luther, Diet of Worms (April 18, 1521)",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316935+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": null,
+            "newValue": [
+              "Wittenberg, Germany (university and Reformation center)",
+              "Eisleben, Germany (birthplace and death)",
+              "Wartburg Castle, Germany (hiding, German Bible translation)"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316935+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Martin Luther — Religious Reformers — Germany — Early Modern",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316935+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "Germany",
+              "Protestant Reformation",
+              "Christianity",
+              "theology",
+              "Early Modern era",
+              "printing press",
+              "church history",
+              "Europe",
+              "religious freedom",
+              "Bible translation"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316935+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "religious-thought",
+              "social-revolution",
+              "state-formation"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-64-may2026",
+            "timestamp": "2026-05-17T01:32:50.316935+00:00"
+          }
+        ]
+      },
       "subjectHeadings": [
         "People — Religious Reformers — Germany — Early Modern"
       ],
@@ -61,7 +300,8 @@
         "significanceScore": 9,
         "significanceNarrative": "Martin Luther's Ninety-Five Theses and subsequent actions catalyzed the Protestant Reformation, leading to a schism that split Western Christianity into two major branches. The movement had an estimated 50-100 million adherents by the mid-16th century.",
         "significanceCategory": "world-changing"
-      }
+      },
+      "_unsyncedEdits": true
     }
   ]
 }
