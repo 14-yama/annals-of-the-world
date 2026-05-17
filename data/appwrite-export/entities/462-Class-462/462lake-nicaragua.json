@@ -25,7 +25,7 @@
       "wikidataQid": "Q173862",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Lake_Nicaragua",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/ISS066-E-103300%20-%20View%20of%20Nicaragua.jpg",
-      "detailsJson": "{\"causes\": [\"Natural geographic formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"lake-nicaragua\", \"sourceName\": \"Lake Nicaragua\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Lake Nicaragua is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Lake Nicaragua\", \"type\": \"Reference article\", \"slug\": \"lake-nicaragua\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q173862\", \"https://en.wikipedia.org/wiki/Lake_Nicaragua\"], \"tags\": [\"Nicaragua\", \"lake\", \"Maritime & Island Civilizations\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Lake Nicaragua left a notable mark on Classical history, documented across 78 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Natural geographic formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"lake-nicaragua\", \"sourceName\": \"Lake Nicaragua\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Lake Nicaragua is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Lake Nicaragua\", \"type\": \"Reference article\", \"slug\": \"lake-nicaragua\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q173862\", \"https://en.wikipedia.org/wiki/Lake_Nicaragua\"], \"tags\": [\"Nicaragua\", \"lake\", \"Maritime & Island Civilizations\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Lake Nicaragua left a notable mark on Classical history, documented across 78 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"Lake Nicaragua played a crucial role in the construction of the Granada Canal, which connected Lake Nicaragua to the Pacific Ocean and significantly impacted trade and commerce in Central America during the 16th century.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"Lake Nicaragua played a crucial role in the construction of the Granada Canal, which connected Lake Nicaragua to the Pacific Ocean and significantly impacted trade and commerce in Central America during the 16th century.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-17T20:40:18Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Maritime & Island Civilizations -- Nicaragua -- Classical"
       ],
@@ -45,7 +45,12 @@
       "$id": "lake-nicaragua",
       "$sequence": "721357",
       "$createdAt": "2026-04-05T15:18:16.217+00:00",
-      "$updatedAt": "2026-04-05T15:18:16.217+00:00"
+      "$updatedAt": "2026-04-05T15:18:16.217+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "Lake Nicaragua played a crucial role in the construction of the Granada Canal, which connected Lake Nicaragua to the Pacific Ocean and significantly impacted trade and commerce in Central America during the 16th century.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

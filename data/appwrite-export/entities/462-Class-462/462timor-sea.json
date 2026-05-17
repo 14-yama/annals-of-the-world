@@ -25,7 +25,7 @@
       "wikidataQid": "Q131418",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Timor_Sea",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Timor%20island2.jpg",
-      "detailsJson": "{\"causes\": [\"Natural geographic formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"timor-sea\", \"sourceName\": \"Timor Sea\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Timor Sea is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Timor Sea\", \"type\": \"Reference article\", \"slug\": \"timor-sea\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q131418\", \"https://en.wikipedia.org/wiki/Timor_Sea\"], \"tags\": [\"Timor-Leste\", \"sea\", \"Maritime & Island Civilizations\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Timor Sea left a notable mark on Classical history, documented across 90 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Natural geographic formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"timor-sea\", \"sourceName\": \"Timor Sea\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Timor Sea is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Timor Sea\", \"type\": \"Reference article\", \"slug\": \"timor-sea\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q131418\", \"https://en.wikipedia.org/wiki/Timor_Sea\"], \"tags\": [\"Timor-Leste\", \"sea\", \"Maritime & Island Civilizations\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Timor Sea left a notable mark on Classical history, documented across 90 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"The Timor Sea's location on the Ring of Fire makes it prone to earthquakes and tsunamis, posing a risk to coastal communities in Indonesia and Australia. Its shallow waters also support commercial fishing and oil exploration activities.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"The Timor Sea's location on the Ring of Fire makes it prone to earthquakes and tsunamis, posing a risk to coastal communities in Indonesia and Australia. Its shallow waters also support commercial fishing and oil exploration activities.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-17T20:40:44Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Maritime & Island Civilizations -- Timor-Leste -- Classical"
       ],
@@ -45,7 +45,12 @@
       "$id": "timor-sea",
       "$sequence": "725745",
       "$createdAt": "2026-04-05T15:19:40.459+00:00",
-      "$updatedAt": "2026-04-05T15:19:40.459+00:00"
+      "$updatedAt": "2026-04-05T15:19:40.459+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "The Timor Sea's location on the Ring of Fire makes it prone to earthquakes and tsunamis, posing a risk to coastal communities in Indonesia and Australia. Its shallow waters also support commercial fishing and oil exploration activities.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
