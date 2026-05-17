@@ -38372,7 +38372,10 @@
       "  RETRY (1) \u2014 insufficient causes (0, need >= 1)",
       "  ENRICHED \u2014 66c -> 1650c",
       "",
-      "[18/20] upanishads (score=143.15, 0c)"
+      "[18/20] upanishads (score=143.15, 0c)",
+      "  ENRICHED \u2014 62c -> 827c",
+      "",
+      "[19/20] anna-karenina (score=142.45, 0c)"
     ],
     "exitCode": null
   },
@@ -40846,11 +40849,63 @@
   "git-push-1779012490": {
     "job_id": "git-push-1779012490",
     "bot": "git-push",
+    "status": "done",
+    "model": "none",
+    "count": 1,
+    "pid": null,
+    "started": "2026-05-17T10:08:10Z",
+    "finished": "2026-05-17T10:08:14Z",
+    "log": [
+      "Pending files: 1 entities, 0 edges (1 total)",
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 102 local enrichments\"",
+      "[clean/audit-system 006d62efe6] feat(enrich): watchdog auto-push \u2014 102 local enrichments\n 4 files changed, 69 insertions(+), 18 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   8bc470601b..006d62efe6  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 1 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
+    ],
+    "exitCode": 0
+  },
+  "sync-1779012573": {
+    "job_id": "sync-1779012573",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 1130476,
+    "started": "2026-05-17T10:09:33Z",
+    "finished": "2026-05-17T10:09:51Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=32713/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 103 dirty files",
+      "[diff] 103 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 103,",
+      "  \"entitiesUpserted\": 0,",
+      "  \"auditRowsEmitted\": 0,",
+      "  \"writesPerformed\": 0,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 006d62ef"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779012594": {
+    "job_id": "git-push-1779012594",
+    "bot": "git-push",
     "status": "running",
     "model": "none",
     "count": 0,
     "pid": null,
-    "started": "2026-05-17T10:08:10Z",
+    "started": "2026-05-17T10:09:54Z",
     "finished": null,
     "log": [
       "Pending files: 1 entities, 0 edges (1 total)",
