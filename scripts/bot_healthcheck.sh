@@ -46,7 +46,7 @@ sleep 1
 cd "$REPO"
 source .env 2>/dev/null || true  # load env vars if .env exists
 
-nohup "$PYTHON" "$SCRIPT" >> "$LOG" 2>&1 &
+nohup env PYTHONUNBUFFERED=1 "$PYTHON" "$SCRIPT" >> "$LOG" 2>&1 &
 NEW_PID=$!
 echo "$NEW_PID" > "$PID_FILE"
 

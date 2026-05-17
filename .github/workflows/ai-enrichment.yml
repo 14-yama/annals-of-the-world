@@ -3,7 +3,7 @@ name: AI Entity Enrichment (git-first)
 # Bot writes JSON only. The sync_gateway workflow pushes to Appwrite later.
 on:
   schedule:
-    - cron: '0 */6 * * *'   # every 6 hours (runs from default branch)
+    - cron: '0 */2 * * *'   # every 2 hours — keep cloud bot busy (Gemini free tier handles this)
   push:
     branches: [clean/audit-system]
     paths:

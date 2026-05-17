@@ -7,10 +7,15 @@ Wants=network-online.target
 [Service]
 Type=simple
 WorkingDirectory=/home/manasa151/annals-of-the-world
+Environment=PYTHONUNBUFFERED=1
 ExecStart=/home/manasa151/annals-of-the-world/.venv/bin/python3 /home/manasa151/annals-of-the-world/scripts/local_bot_server.py
 EnvironmentFile=-/home/manasa151/annals-of-the-world/.env
-Restart=on-failure
-RestartSec=30
+# Aggressive restart: always restart, regardless of exit reason, after 5s
+Restart=always
+RestartSec=5
+# Burst protection: allow up to 10 restarts in 60s before backing off
+StartLimitBurst=10
+StartLimitIntervalSec=60
 # Give it 60s to start up (Ollama model loading can be slow)
 TimeoutStartSec=60
 StandardOutput=journal

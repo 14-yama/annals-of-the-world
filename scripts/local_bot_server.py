@@ -706,73 +706,163 @@ def dispatch_all(enrich_count: int = 20, sig_count: int = 50, auto_push: bool = 
 # This ensures bots are ALWAYS enriching — zero manual intervention required.
 
 _watchdog_running = False
-# Heartbeat: dispatch a fresh enrichment run if no enrichment completed in this window (seconds)
-_ENRICHMENT_HEARTBEAT_SECONDS = 1800  # 30 min — launch new run if idle for 30 min
-# How many entities per watchdog-initiated enrichment
-_WATCHDOG_ENRICH_COUNT = 15
+# AGGRESSIVE MODE: tight loop, zero idle tolerance.
+# The watchdog runs every 60s. Any time NO enrichment job is running, it
+# immediately dispatches a new one. There is no "idle window" — bots are
+# kept continuously busy because we have ~40,000 entities to enrich and there
+# is always work to do.
+_WATCHDOG_INTERVAL_SECONDS = 60          # check every 60s (was 300)
+_WATCHDOG_ENRICH_COUNT = 10              # entities per autonomous batch
+_WATCHDOG_SIG_COUNT = 15                 # significance batch size
+# After this many consecutive failures from the same bot, attempt Ollama restart
+_FAILURE_RESTART_THRESHOLD = 3
+# Track last seen-failure timestamps so we don't restart in a tight loop
+_LAST_OLLAMA_RESTART_AT = 0.0
+_OLLAMA_RESTART_COOLDOWN = 600  # 10 min between restart attempts
 
 
-def _last_enrich_completed_at() -> float:
-    """Return Unix timestamp of most recent completed enrichment job (0 if never)."""
+def _recent_enrich_failures(window_seconds: int = 900) -> int:
+    """Count enrich/significance jobs that failed in the last `window_seconds`."""
+    cutoff = time.time() - window_seconds
     with _lock:
-        latest = 0.0
+        n = 0
         for j in _jobs.values():
-            if j.get("bot") == "enrich" and j.get("status") == "done" and j.get("finished"):
-                try:
-                    ts = time.mktime(time.strptime(j["finished"], "%Y-%m-%dT%H:%M:%SZ"))
-                    if ts > latest:
-                        latest = ts
-                except Exception:
-                    pass
-    return latest
+            if j.get("bot") not in ("enrich", "significance"):
+                continue
+            if j.get("status") not in ("failed", "error"):
+                continue
+            fin = j.get("finished", "")
+            if not fin:
+                continue
+            try:
+                ts = time.mktime(time.strptime(fin, "%Y-%m-%dT%H:%M:%SZ"))
+                if ts >= cutoff:
+                    n += 1
+            except Exception:
+                pass
+        return n
 
 
-def _watchdog_loop(interval_seconds: int = 300):
+def _restart_ollama() -> bool:
+    """Try to restart Ollama via systemd (system or user). Returns True on success."""
+    global _LAST_OLLAMA_RESTART_AT
+    if time.time() - _LAST_OLLAMA_RESTART_AT < _OLLAMA_RESTART_COOLDOWN:
+        return False
+    _LAST_OLLAMA_RESTART_AT = time.time()
+    print("[watchdog] Attempting to restart Ollama service...")
+    for cmd in (
+        ["systemctl", "--user", "restart", "ollama"],
+        ["sudo", "-n", "systemctl", "restart", "ollama"],
+        ["pkill", "-f", "ollama serve"],
+    ):
+        try:
+            r = subprocess.run(cmd, capture_output=True, text=True, timeout=15)
+            if r.returncode == 0:
+                print(f"[watchdog] Ollama restart command succeeded: {' '.join(cmd)}")
+                time.sleep(5)
+                return True
+        except Exception as e:
+            print(f"[watchdog] restart cmd failed ({' '.join(cmd)}): {e}")
+    return False
+
+
+def _watchdog_loop(interval_seconds: int = _WATCHDOG_INTERVAL_SECONDS):
     """
-    Autonomous watchdog: every `interval_seconds` (default 5 min),
-    check for dirty enrichments and sync them; also proactively launch
-    new enrichment runs if the bot has been idle for > _ENRICHMENT_HEARTBEAT_SECONDS.
+    AGGRESSIVE autonomous watchdog. Loops every `interval_seconds` (default 60s):
+      1. If any dirty files exist → sync + push immediately
+      2. If no enrichment job is currently running → dispatch a new batch
+      3. If too many recent failures → attempt Ollama restart (self-healing)
+    Result: bots are NEVER idle while Ollama is up and entities need enrichment.
     """
     global _watchdog_running
     _watchdog_running = True
-    print(f"[watchdog] Started — scanning every {interval_seconds}s | "
-          f"enrichment heartbeat every {_ENRICHMENT_HEARTBEAT_SECONDS}s")
+
+    # ── Startup cleanup: mark stale "running" jobs from prior process as orphaned ──
+    # When the bot restarts, jobs from the old process still show status=running
+    # but their PIDs are dead. Without this, the watchdog thinks bots are busy
+    # and never dispatches new work.
+    orphaned = 0
+    with _lock:
+        for j in _jobs.values():
+            if j.get("status") != "running":
+                continue
+            pid = j.get("pid")
+            alive = False
+            if pid:
+                try:
+                    os.kill(int(pid), 0)
+                    alive = True
+                except (OSError, ValueError):
+                    alive = False
+            if not alive:
+                j["status"] = "error"
+                j["finished"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+                j["log"] = (j.get("log") or []) + ["[orphaned] process died with previous bot restart"]
+                orphaned += 1
+    if orphaned:
+        print(f"[watchdog] Cleaned {orphaned} orphaned jobs from previous bot process")
+
+    print(f"[watchdog] AGGRESSIVE MODE — interval={interval_seconds}s | "
+          f"batch={_WATCHDOG_ENRICH_COUNT} | zero idle tolerance")
+    consecutive_no_ollama = 0
+
     while _watchdog_running:
         time.sleep(interval_seconds)
 
-        # ── 1. Sync any dirty files ──────────────────────────────────────────
-        with _lock:
-            sync_busy = any(j["status"] == "running" and j["bot"] in ("sync", "sync-push", "git-push")
-                            for j in _jobs.values())
-        if not sync_busy:
-            dirty_count = _count_dirty_files()
-            if dirty_count > 0:
-                print(f"[watchdog] Found {dirty_count} dirty files — launching autonomous sync+push")
-                sync_jid = dispatch_sync(max_entities=200, local_mode=True)
-                _wait_for_job(sync_jid)
-                dispatch_git_push(message=f"feat(enrich): watchdog auto-push — {dirty_count} local enrichments")
+        try:
+            # ── 1. Sync any dirty files immediately ──────────────────────────
+            with _lock:
+                sync_busy = any(j["status"] == "running" and j["bot"] in ("sync", "sync-push", "git-push")
+                                for j in _jobs.values())
+            if not sync_busy:
+                dirty_count = _count_dirty_files()
+                if dirty_count > 0:
+                    print(f"[watchdog] {dirty_count} dirty files — syncing now")
+                    sync_jid = dispatch_sync(max_entities=200, local_mode=True)
+                    _wait_for_job(sync_jid)
+                    dispatch_git_push(message=f"feat(enrich): watchdog auto-push — {dirty_count} local enrichments")
 
-        # ── 2. Enrichment heartbeat: dispatch new run if idle too long ───────
-        with _lock:
-            enrich_busy = any(j["status"] == "running" and j["bot"] in ("enrich", "significance")
-                              for j in _jobs.values())
-        if enrich_busy:
-            continue  # already enriching, skip heartbeat check
+            # ── 2. Self-healing: detect failure storms, restart Ollama ───────
+            fails = _recent_enrich_failures(window_seconds=900)
+            if fails >= _FAILURE_RESTART_THRESHOLD:
+                print(f"[watchdog] {fails} recent enrichment failures — attempting Ollama restart")
+                if _restart_ollama():
+                    # Mark recent failed jobs as ack'd by bumping finished time so we don't loop
+                    with _lock:
+                        for j in _jobs.values():
+                            if j.get("status") in ("failed", "error") and j.get("bot") in ("enrich", "significance"):
+                                j["acknowledged"] = True
+                continue  # next iteration will dispatch fresh work
 
-        idle_seconds = time.time() - _last_enrich_completed_at()
-        if idle_seconds >= _ENRICHMENT_HEARTBEAT_SECONDS:
-            # Check Ollama is available before dispatching
+            # ── 3. Continuous enrichment: dispatch immediately if idle ───────
+            with _lock:
+                enrich_busy = any(j["status"] == "running" and j["bot"] in ("enrich", "significance")
+                                  for j in _jobs.values())
+            if enrich_busy:
+                continue  # already working — nothing to do
+
             ollama_ok = ollama_health().get("running", False)
-            if ollama_ok:
-                print(f"[watchdog] Enrichment idle for {idle_seconds:.0f}s — launching heartbeat run "
-                      f"({_WATCHDOG_ENRICH_COUNT} entities, ollama)")
-                enrich_jid = dispatch_enrich(count=_WATCHDOG_ENRICH_COUNT, model="ollama")
-                _wait_for_job(enrich_jid)
-                # After enrichment, trigger significance backfill on newly enriched entities
-                sig_jid = dispatch_significance(count=20, model="ollama")
-                _wait_for_job(sig_jid)
-            else:
-                print(f"[watchdog] Enrichment idle {idle_seconds:.0f}s but Ollama offline — skipping heartbeat")
+            if not ollama_ok:
+                consecutive_no_ollama += 1
+                if consecutive_no_ollama >= 2:
+                    print(f"[watchdog] Ollama down {consecutive_no_ollama} cycles — attempting restart")
+                    _restart_ollama()
+                    consecutive_no_ollama = 0
+                continue
+            consecutive_no_ollama = 0
+
+            # Dispatch a new enrichment batch — keep bots busy!
+            print(f"[watchdog] No enrichment running — dispatching batch of {_WATCHDOG_ENRICH_COUNT}")
+            enrich_jid = dispatch_enrich(count=_WATCHDOG_ENRICH_COUNT, model="ollama")
+            _wait_for_job(enrich_jid)
+            # Chain a significance backfill on what was just enriched
+            sig_jid = dispatch_significance(count=_WATCHDOG_SIG_COUNT, model="ollama")
+            _wait_for_job(sig_jid)
+
+        except Exception as e:
+            # Never let the watchdog die — log and continue
+            print(f"[watchdog] Loop exception (continuing): {type(e).__name__}: {e}")
+            traceback.print_exc()
 
 
 def _count_dirty_files() -> int:
@@ -801,7 +891,7 @@ def _count_dirty_files() -> int:
     return count
 
 
-def start_watchdog(interval_seconds: int = 300):
+def start_watchdog(interval_seconds: int = _WATCHDOG_INTERVAL_SECONDS):
     t = threading.Thread(target=_watchdog_loop, args=(interval_seconds,), daemon=True)
     t.start()
 
@@ -976,12 +1066,12 @@ def main():
     print(f"  CORS: any http://localhost:* origin (works on any Vite port)")
     print(f"  Endpoints: /health /bots/status /bots/enrich /bots/significance")
     print(f"             /bots/queue /bots/sync /bots/all /bots/stop")
-    print(f"  Watchdog: auto-sync every 5 min (autonomous — no human needed)")
+    print(f"  Watchdog: AGGRESSIVE — 60s loop, zero idle, self-healing Ollama restart")
     print()
 
     # Start autonomous watchdog — checks for dirty enrichments every 5 minutes
     # and syncs them to Appwrite without human intervention (mirrors GH Actions)
-    start_watchdog(interval_seconds=300)
+    start_watchdog(interval_seconds=_WATCHDOG_INTERVAL_SECONDS)
 
     server = HTTPServer(("localhost", args.port), BotHandler)
     try:

@@ -6,7 +6,7 @@ name: Bot Keepalive & Failsafe
 
 on:
   schedule:
-    - cron: '30 8 * * *'   # 08:30 UTC daily (after sync-gateway's 07:00 run)
+    - cron: '15 */3 * * *'   # every 3h — catches any 2h-cron miss within 1h
   workflow_dispatch:
     inputs:
       force_run:
@@ -57,7 +57,7 @@ jobs:
                       ts = time.mktime(time.strptime(ts_str[:19], "%Y-%m-%dT%H:%M:%S"))
                       idle_hours = (time.time() - ts) / 3600
                       print(f"Last enrichment: {ts_str} ({idle_hours:.1f}h ago)")
-                      if idle_hours < 20:
+                      if idle_hours < 4:
                           print(f"Enrichment ran {idle_hours:.1f}h ago — keepalive not needed")
                           should_run = False
                       else:
