@@ -1,32 +1,70 @@
 {
-  "timestamp": "2026-05-17T10:33:01Z",
+  "timestamp": "2026-05-17T10:54:38Z",
   "model": "ollama",
-  "count_requested": 5,
-  "enriched": 2,
-  "failed": 2,
+  "count_requested": 20,
+  "enriched": 10,
+  "failed": 0,
   "dry_run": false,
   "entities": [
     {
+      "slug": "eclogues",
+      "status": "enriched",
+      "old_len": 65,
+      "new_len": 1530
+    },
+    {
+      "slug": "pham-ngu-lao",
+      "status": "enriched",
+      "old_len": 643,
+      "new_len": 1325
+    },
+    {
+      "slug": "book-of-the-later-han",
+      "status": "enriched",
+      "old_len": 70,
+      "new_len": 1813
+    },
+    {
       "slug": "de-rerum-natura",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "status": "enriched",
+      "old_len": 70,
+      "new_len": 1036
+    },
+    {
+      "slug": "turahan-bey",
+      "status": "enriched",
+      "old_len": 645,
+      "new_len": 966
     },
     {
       "slug": "the-emperors-new-clothes",
-      "status": "failed",
-      "reason": "Expecting ',' delimiter: line 2 column 108 (char 610)"
-    },
-    {
-      "slug": "candide",
       "status": "enriched",
-      "old_len": 73,
-      "new_len": 1101
+      "old_len": 72,
+      "new_len": 1251
     },
     {
       "slug": "a-farewell-to-arms",
       "status": "enriched",
       "old_len": 76,
-      "new_len": 1201
+      "new_len": 1081
+    },
+    {
+      "slug": "the-adventures-of-sherlock-holmes",
+      "status": "enriched",
+      "old_len": 80,
+      "new_len": 1264
+    },
+    {
+      "slug": "life-is-a-dream",
+      "status": "enriched",
+      "old_len": 80,
+      "new_len": 1192
+    },
+    {
+      "slug": "the-ugly-duckling",
+      "status": "enriched",
+      "old_len": 82,
+      "new_len": 1388
     }
   ]
 }
