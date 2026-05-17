@@ -1,40 +1,31 @@
 {
-  "timestamp": "2026-05-17T06:26:24Z",
+  "timestamp": "2026-05-17T07:28:45Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 5,
-  "failed": 0,
+  "enriched": 1,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "nicene-creed",
-      "status": "enriched",
-      "old_len": 66,
-      "new_len": 1423
+      "slug": "snow-white",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "upanishads",
+      "slug": "a-song-of-ice-and-fire",
       "status": "enriched",
-      "old_len": 62,
-      "new_len": 1751
+      "old_len": 81,
+      "new_len": 1872
     },
     {
-      "slug": "anna-karenina",
-      "status": "enriched",
-      "old_len": 66,
-      "new_len": 1555
+      "slug": "a-christmas-carol",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
     },
     {
-      "slug": "epistle-to-the-galatians",
-      "status": "enriched",
-      "old_len": 69,
-      "new_len": 1039
-    },
-    {
-      "slug": "animal-farm",
-      "status": "enriched",
-      "old_len": 72,
-      "new_len": 1204
+      "slug": "the-decameron",
+      "status": "failed",
+      "reason": "insufficient subjects (3, need >= 5)"
     }
   ]
 }
