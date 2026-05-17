@@ -1,25 +1,37 @@
 {
-  "timestamp": "2026-05-17T03:37:28Z",
+  "timestamp": "2026-05-17T04:25:52Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 0,
+  "enriched": 2,
   "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "sarduri-iii",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
-    },
-    {
-      "slug": "java",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
-    },
-    {
       "slug": "confucianism",
       "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
+      "reason": "insufficient effects (0, need >= 2)"
+    },
+    {
+      "slug": "ecology",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
+    },
+    {
+      "slug": "medicine",
+      "status": "failed",
+      "reason": "insufficient subjects (4, need >= 5)"
+    },
+    {
+      "slug": "william-of-paris",
+      "status": "enriched",
+      "old_len": 62,
+      "new_len": 1478
+    },
+    {
+      "slug": "poetry",
+      "status": "enriched",
+      "old_len": 64,
+      "new_len": 1309
     }
   ]
 }
