@@ -338,8 +338,35 @@ def call_openai(prompt, api_key, model="gpt-4o-mini"):
 
 OLLAMA_BASE_ENRICH = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
 
+def _wait_for_ollama_free(url_base: str, max_wait: int = 600, poll: int = 15) -> bool:
+    """Block until Ollama is not running a generation (or max_wait seconds pass).
+    Uses /api/ps — if any model is loaded and running, wait.
+    Returns True when free, False on timeout."""
+    import urllib.error
+    ps_url = f"{url_base}/api/ps"
+    waited = 0
+    while waited < max_wait:
+        try:
+            with urllib.request.urlopen(ps_url, timeout=5) as resp:
+                ps = json.loads(resp.read())
+            # models list in /api/ps — empty means nothing is generating
+            models = ps.get("models", [])
+            if not models:
+                return True
+            # If something IS loaded/running, wait a bit
+            time.sleep(poll)
+            waited += poll
+        except Exception:
+            # Can't connect at all — Ollama is down; wait for it
+            time.sleep(poll)
+            waited += poll
+    return False  # timed out
+
+
 def call_ollama(prompt, model="llama3.2:3b"):
-    """Call local Ollama — no quota, no cost, runs on-device. Ideal for local power sessions."""
+    """Call local Ollama — no quota, no cost, runs on-device. Ideal for local power sessions.
+    Waits for Ollama to be free before sending (prevents connection refused when
+    two enrichment threads compete for the same single-threaded Ollama instance)."""
     url = f"{OLLAMA_BASE_ENRICH}/api/generate"
     # num_predict: 3000 tokens ≈ ~1750 words; enough for complete JSON enrichment on 3b models.
     # At ~8 tok/s on a Ryzen 5 CPU that's ~375s — within the 500s timeout.
@@ -354,10 +381,26 @@ def call_ollama(prompt, model="llama3.2:3b"):
         "options": {"temperature": 0.7, "num_predict": num_predict, "num_ctx": 4096},
     }).encode()
     req = urllib.request.Request(url, data=body, headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=500) as resp:
-        data = json.loads(resp.read())
-    text = data.get("response", "")
-    return _parse_llm_json(text)
+
+    # Retry loop: if Ollama is busy/crashed, wait and retry (up to 3 attempts)
+    last_err = None
+    for attempt in range(3):
+        if attempt > 0:
+            wait = 20 * attempt  # 20s, then 40s
+            time.sleep(wait)
+        try:
+            with urllib.request.urlopen(req, timeout=500) as resp:
+                data = json.loads(resp.read())
+            text = data.get("response", "")
+            return _parse_llm_json(text)
+        except Exception as e:
+            last_err = e
+            err_str = str(e)
+            # Connection refused or remote closed = Ollama busy/restarting — wait and retry
+            if "111" in err_str or "Connection refused" in err_str or "Remote end closed" in err_str:
+                continue
+            raise  # unexpected error — propagate immediately
+    raise last_err
 
 
 # ═══════════════════════════════════════════════════════════

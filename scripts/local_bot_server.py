@@ -331,11 +331,13 @@ def _run_subprocess(job_id: str, cmd: list[str], env: dict | None = None):
 
 
 def dispatch_enrich(count: int = 20, model: str = "ollama",
-                    queue: Optional[str] = None, lenient: bool = True) -> str:
+                    queue: Optional[str] = None, lenient: bool = True,
+                    retry: int = 3) -> str:
     """Dispatch AI enrichment bot locally."""
     job_id = _new_job("enrich", count=count, model=model)
     cmd = [sys.executable, str(SCRIPTS / "ai_enrich_autonomous.py"),
-           "--count", str(count), "--model", model]
+           "--count", str(count), "--model", model,
+           "--retry", str(retry)]
     if queue:
         cmd += ["--queue", queue]
     if lenient:
@@ -346,11 +348,30 @@ def dispatch_enrich(count: int = 20, model: str = "ollama",
 
 
 def dispatch_significance(count: int = 50, model: str = "ollama") -> str:
-    """Dispatch significance backfill bot locally."""
+    """Dispatch significance backfill bot locally.
+    Waits for any running enrichment jobs first — Ollama can only handle
+    one LLM stream at a time; concurrent calls cause timeouts."""
     job_id = _new_job("significance", count=count, model=model)
-    cmd = [sys.executable, str(SCRIPTS / "backfill_significance.py"),
-           "--count", str(count), "--model", model]
-    t = threading.Thread(target=_run_subprocess, args=(job_id, cmd), daemon=True)
+
+    def _run_after_enrich():
+        # Wait up to 1h for active enrichment to finish
+        max_wait = 3600
+        waited = 0
+        while waited < max_wait:
+            with _lock:
+                enrich_running = any(
+                    j["status"] == "running" and j["bot"] == "enrich"
+                    for j in _jobs.values()
+                )
+            if not enrich_running:
+                break
+            time.sleep(15)
+            waited += 15
+        cmd = [sys.executable, str(SCRIPTS / "backfill_significance.py"),
+               "--count", str(count), "--model", model]
+        _run_subprocess(job_id, cmd)
+
+    t = threading.Thread(target=_run_after_enrich, daemon=True)
     t.start()
     return job_id
 
@@ -712,8 +733,8 @@ _watchdog_running = False
 # kept continuously busy because we have ~40,000 entities to enrich and there
 # is always work to do.
 _WATCHDOG_INTERVAL_SECONDS = 60          # check every 60s (was 300)
-_WATCHDOG_ENRICH_COUNT = 10              # entities per autonomous batch
-_WATCHDOG_SIG_COUNT = 15                 # significance batch size
+_WATCHDOG_ENRICH_COUNT = 20              # entities per autonomous batch (was 10)
+_WATCHDOG_SIG_COUNT = 30                 # significance batch size (was 15)
 # After this many consecutive failures from the same bot, attempt Ollama restart
 _FAILURE_RESTART_THRESHOLD = 3
 # Track last seen-failure timestamps so we don't restart in a tight loop
@@ -744,25 +765,47 @@ def _recent_enrich_failures(window_seconds: int = 900) -> int:
 
 
 def _restart_ollama() -> bool:
-    """Try to restart Ollama via systemd (system or user). Returns True on success."""
+    """Try to restart Ollama. Returns True on success."""
     global _LAST_OLLAMA_RESTART_AT
     if time.time() - _LAST_OLLAMA_RESTART_AT < _OLLAMA_RESTART_COOLDOWN:
         return False
     _LAST_OLLAMA_RESTART_AT = time.time()
     print("[watchdog] Attempting to restart Ollama service...")
+    # Try systemd (system or user), then direct 'ollama serve'
     for cmd in (
+        ["systemctl", "restart", "ollama"],
         ["systemctl", "--user", "restart", "ollama"],
         ["sudo", "-n", "systemctl", "restart", "ollama"],
-        ["pkill", "-f", "ollama serve"],
     ):
         try:
             r = subprocess.run(cmd, capture_output=True, text=True, timeout=15)
             if r.returncode == 0:
-                print(f"[watchdog] Ollama restart command succeeded: {' '.join(cmd)}")
+                print(f"[watchdog] Ollama restart via systemd succeeded")
                 time.sleep(5)
                 return True
-        except Exception as e:
-            print(f"[watchdog] restart cmd failed ({' '.join(cmd)}): {e}")
+        except Exception:
+            pass
+
+    # Fallback: kill any stale and start fresh
+    try:
+        subprocess.run(["pkill", "-f", "ollama serve"], capture_output=True, timeout=5)
+        time.sleep(2)
+    except Exception:
+        pass
+    try:
+        ollama_bin = subprocess.run(["which", "ollama"], capture_output=True, text=True, timeout=5).stdout.strip()
+        if ollama_bin:
+            subprocess.Popen([ollama_bin, "serve"],
+                             stdout=open("/tmp/ollama.log", "a"), stderr=subprocess.STDOUT)
+            time.sleep(5)
+            # Verify it came up
+            r = subprocess.run(["curl", "-sf", "--max-time", "3", "http://localhost:11434/api/tags"],
+                                capture_output=True, timeout=10)
+            if r.returncode == 0:
+                print("[watchdog] Ollama restarted via direct 'ollama serve'")
+                return True
+    except Exception as e:
+        print(f"[watchdog] ollama serve restart failed: {e}")
     return False
 
 
@@ -990,6 +1033,15 @@ class BotHandler(BaseHTTPRequestHandler):
             model = "ollama"
             queue = body.get("queue") or None   # e.g. "data/enrichment/queue_ollama_a.json"
             lenient = bool(body.get("lenient", True))
+            # Guard: do NOT start a second enrichment if one is already running.
+            # Two concurrent Ollama calls = connection refused errors.
+            with _lock:
+                enrich_running = any(j["status"] == "running" and j["bot"] == "enrich"
+                                     for j in _jobs.values())
+            if enrich_running:
+                self._send(409, {"error": "enrichment already running — only one Ollama call at a time",
+                                 "tip": "wait for current job to finish or call /bots/stop first"})
+                return
             job_id = dispatch_enrich(count=count, model=model, queue=queue, lenient=lenient)
             self._send(202, {"jobId": job_id, "bot": "enrich", "count": count, "model": model, "queue": queue, "lenient": lenient})
 
