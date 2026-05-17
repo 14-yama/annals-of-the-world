@@ -25,7 +25,7 @@
       "wikidataQid": "Q487656",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Andijan",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Devonaboy%20Jome%20Mosque%20in%20Andijan.jpg",
-      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"andijan\", \"sourceName\": \"Andijan\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Andijan is situated within the Classical (920)\"}], \"places\": [{\"name\": \"Uzbekistan\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Andijan\", \"type\": \"Reference article\", \"slug\": \"andijan\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q487656\", \"https://en.wikipedia.org/wiki/Andijan\"], \"tags\": [\"Uzbekistan\", \"big city\", \"Asia\", \"Architecture & Built Works\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Andijan left a notable mark on Classical history, documented across 76 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"andijan\", \"sourceName\": \"Andijan\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Andijan is situated within the Classical (920)\"}], \"places\": [{\"name\": \"Uzbekistan\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Andijan\", \"type\": \"Reference article\", \"slug\": \"andijan\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q487656\", \"https://en.wikipedia.org/wiki/Andijan\"], \"tags\": [\"Uzbekistan\", \"big city\", \"Asia\", \"Architecture & Built Works\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Andijan left a notable mark on Classical history, documented across 76 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"As a major urban center in Central Asia, Andijan played a significant role in regional trade and cultural exchange during the Islamic Golden Age. Its strategic location facilitated the spread of ideas and technologies between East and West.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"As a major urban center in Central Asia, Andijan played a significant role in regional trade and cultural exchange during the Islamic Golden Age. Its strategic location facilitated the spread of ideas and technologies between East and West.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-17T13:52:11Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Artifacts & Texts -- Architecture & Built Works -- Uzbekistan -- Classical"
       ],
@@ -46,7 +46,12 @@
       "$id": "andijan",
       "$sequence": "6748",
       "$createdAt": "2026-04-05T12:05:58.555+00:00",
-      "$updatedAt": "2026-04-05T12:05:58.555+00:00"
+      "$updatedAt": "2026-04-05T12:05:58.555+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "As a major urban center in Central Asia, Andijan played a significant role in regional trade and cultural exchange during the Islamic Golden Age. Its strategic location facilitated the spread of ideas and technologies between East and West.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

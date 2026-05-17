@@ -25,7 +25,7 @@
       "wikidataQid": "Q3750",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Gera",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Blick%20vom%20Rathausturm%20%C3%BCber%20Gera.jpg",
-      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"gera\", \"sourceName\": \"Gera\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Gera is situated within the Classical (920)\"}], \"places\": [{\"name\": \"Germany\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Gera\", \"type\": \"Reference article\", \"slug\": \"gera\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q3750\", \"https://en.wikipedia.org/wiki/Gera\"], \"tags\": [\"Germany\", \"big city\", \"Europe\", \"Architecture & Built Works\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Gera left a notable mark on Classical history, documented across 95 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"gera\", \"sourceName\": \"Gera\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Gera is situated within the Classical (920)\"}], \"places\": [{\"name\": \"Germany\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Gera\", \"type\": \"Reference article\", \"slug\": \"gera\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q3750\", \"https://en.wikipedia.org/wiki/Gera\"], \"tags\": [\"Germany\", \"big city\", \"Europe\", \"Architecture & Built Works\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Gera left a notable mark on Classical history, documented across 95 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"As a historical capital of Vogtland and eastern Thuringia, Gera played a significant role in regional trade and politics during the Middle Ages. Its strategic location facilitated the exchange of goods along the White Elster River.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"As a historical capital of Vogtland and eastern Thuringia, Gera played a significant role in regional trade and politics during the Middle Ages. Its strategic location facilitated the exchange of goods along the White Elster River.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-17T13:51:58Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Artifacts & Texts -- Architecture & Built Works -- Germany -- Classical"
       ],
@@ -46,7 +46,12 @@
       "$id": "gera",
       "$sequence": "12244",
       "$createdAt": "2026-04-05T12:07:03.961+00:00",
-      "$updatedAt": "2026-04-05T12:07:03.961+00:00"
+      "$updatedAt": "2026-04-05T12:07:03.961+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "As a historical capital of Vogtland and eastern Thuringia, Gera played a significant role in regional trade and politics during the Middle Ages. Its strategic location facilitated the exchange of goods along the White Elster River.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

@@ -25,7 +25,7 @@
       "wikidataQid": "Q182984",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Kano_(city)",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/KanofromDalaHill.jpg",
-      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"kano\", \"sourceName\": \"Kano\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Kano is situated within the Classical (920)\"}], \"places\": [{\"name\": \"Nigeria\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Kano\", \"type\": \"Reference article\", \"slug\": \"kano\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q182984\", \"https://en.wikipedia.org/wiki/Kano_(city)\"], \"tags\": [\"Nigeria\", \"big city\", \"Africa\", \"Architecture & Built Works\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Kano left a notable mark on Classical history, documented across 84 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"kano\", \"sourceName\": \"Kano\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Kano is situated within the Classical (920)\"}], \"places\": [{\"name\": \"Nigeria\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Kano\", \"type\": \"Reference article\", \"slug\": \"kano\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q182984\", \"https://en.wikipedia.org/wiki/Kano_(city)\"], \"tags\": [\"Nigeria\", \"big city\", \"Africa\", \"Architecture & Built Works\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Kano left a notable mark on Classical history, documented across 84 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"Kano's strategic location facilitated trans-Saharan trade for millennia, connecting West Africa to North Africa and Europe. The city-state has maintained a traditional institution since the 19th century.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"Kano's strategic location facilitated trans-Saharan trade for millennia, connecting West Africa to North Africa and Europe. The city-state has maintained a traditional institution since the 19th century.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-17T13:51:30Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Artifacts & Texts -- Architecture & Built Works -- Nigeria -- Classical"
       ],
@@ -46,7 +46,12 @@
       "$id": "kano",
       "$sequence": "14328",
       "$createdAt": "2026-04-05T12:07:29.181+00:00",
-      "$updatedAt": "2026-04-05T12:07:29.181+00:00"
+      "$updatedAt": "2026-04-05T12:07:29.181+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "Kano's strategic location facilitated trans-Saharan trade for millennia, connecting West Africa to North Africa and Europe. The city-state has maintained a traditional institution since the 19th century.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
