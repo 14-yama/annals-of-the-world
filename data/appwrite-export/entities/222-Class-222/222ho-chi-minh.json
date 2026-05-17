@@ -20,7 +20,248 @@
       "wikidataQid": "Q36014",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Ho_Chi_Minh",
       "imageUrl": "",
-      "detailsJson": "{\"causes\":[\"French colonial exploitation of Vietnam (1887-1954)\",\"Versailles Conference's refusal of Vietnamese self-determination\",\"Marxist-Leninist theory of anti-colonial national liberation\"],\"effects\":[\"Defeated French colonialism at Dien Bien Phu (1954)\",\"Inspired global anti-colonial and anti-imperialist movements\",\"Vietnam War became defining Cold War conflict, reshaping US foreign policy\"],\"relationships\":[{\"sourceSlug\":\"ho-chi-minh\",\"sourceName\":\"Ho Chi Minh\",\"verb\":\"CAUSES\",\"targetSlug\":\"vietnam-war\",\"targetName\":\"Vietnam War\",\"context\":\"His independence movement led to the Vietnam War after the French defeat\"},{\"sourceSlug\":\"ho-chi-minh\",\"sourceName\":\"Ho Chi Minh\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"battle-of-dien-bien-phu\",\"targetName\":\"Battle of Dien Bien Phu\",\"context\":\"Viet Minh victory ended French colonial rule in Vietnam, 1954\"},{\"sourceSlug\":\"karl-marx\",\"sourceName\":\"Karl Marx\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"ho-chi-minh\",\"targetName\":\"Ho Chi Minh\",\"context\":\"Marxist-Leninist theory provided ideological framework for Vietnamese revolution\"},{\"sourceSlug\":\"ho-chi-minh\",\"sourceName\":\"Ho Chi Minh\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"hanoi\",\"targetName\":\"Hanoi\",\"context\":\"Led North Vietnam from Hanoi 1945-1969\"},{\"sourceSlug\":\"ho-chi-minh\",\"sourceName\":\"Ho Chi Minh\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"fidel-castro\",\"targetName\":\"Fidel Castro\",\"context\":\"Ho's anti-colonial guerrilla model influenced revolutionary movements worldwide\"}],\"places\":[{\"name\":\"Hanoi, Vietnam\",\"role\":\"Capital and presidential seat\"},{\"name\":\"Nghe An Province, Vietnam\",\"role\":\"Birthplace\"},{\"name\":\"Paris, France\",\"role\":\"Political awakening and party founding\"}],\"historicalSignificance\":{\"significanceScore\":9,\"significanceNarrative\":\"Ho Chi Minh's leadership of the Viet Minh led to the defeat of French colonialism and the establishment of the Democratic Republic of Vietnam, shaping the course of the Cold War and influencing regional politics for decades.\",\"significanceCategory\":\"world-changing\"},\"_editLog\":[],\"_unsyncedEdits\":false}",
+      "detailsJson": {
+        "summary": "Ho Chi Minh (1890–1969) was a Vietnamese Communist revolutionary and statesman who founded the Democratic Republic of Vietnam (1945) and led the Viet Minh independence movement against French colonial rule and, later, American military intervention. His 30-year struggle — combining Marxist-Leninist ideology with Vietnamese nationalist sentiment, guerrilla warfare doctrine, and extraordinary personal charisma — made him the most consequential figure in Southeast Asian history and a defining figure of 20th-century anti-colonial struggle.\n\nBorn Nguyen Sinh Cung in central Vietnam (French Indochina), he worked as a cook's assistant on French ships, then spent years in France, England, the Soviet Union, and China — absorbing Marxism, Vietnamese nationalist thought, and Maoist guerrilla strategy. He co-founded the French Communist Party in 1920, attended the Comintern in Moscow, and modeled himself on Lenin, Mao, and Vietnamese resistance heroes. His legendary ability to connect with peasants — eating simple food, wearing sandals made from rubber tires — made him genuinely beloved.\n\nHis Declaration of Vietnamese Independence (September 2, 1945) — beginning with the words of America's own Declaration — was addressed partly to the Americans he hoped would support Vietnamese independence. Instead, with French colonialism returning and the Cold War beginning, the US backed France and eventually sent 500,000 troops. Ho Chi Minh died in 1969, six years before Saigon fell to North Vietnamese forces (1975).\n\nThe Vietnam War cost 58,000 American lives and 2–3 million Vietnamese lives. It ended with the US's most humiliating military defeat and transformed American domestic politics, military strategy ('Vietnam syndrome'), and public trust in government. Ho Chi Minh City (formerly Saigon) bears his name.",
+        "causes": [
+          "French colonial rule imposing exploitation on Vietnamese society",
+          "World War I and Wilson's Fourteen Points inspiring anti-colonial nationalism",
+          "Lenin's anti-imperialist theory providing ideological framework for resistance",
+          "Mao's Long March and guerrilla warfare strategy offering a military template"
+        ],
+        "effects": [
+          "Democratic Republic of Vietnam (1945) — first Vietnamese state in a century",
+          "First Indochina War (1946–54) — defeat of French colonial power at Dien Bien Phu",
+          "Geneva Accords (1954) — division of Vietnam at 17th parallel",
+          "Vietnam War (1955–75) — defining conflict of Cold War and American 20th century",
+          "Fall of Saigon (1975) — US's greatest military defeat",
+          "Unified Socialist Republic of Vietnam",
+          "Domino theory, Vietnam syndrome — shaped US foreign policy for decades"
+        ],
+        "relationships": [
+          {
+            "type": "INFLUENCES",
+            "target": "Viet Minh",
+            "targetSlug": "viet-minh",
+            "note": "Founded and led the Viet Minh independence movement (1941)"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Vo Nguyen Giap",
+            "targetSlug": "vo-nguyen-giap",
+            "note": "His brilliant general who won Dien Bien Phu and commanded vs. US"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Mao Zedong",
+            "targetSlug": "mao-zedong",
+            "note": "Key ally and model — Chinese weapons and guerrilla doctrine crucial"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Lenin",
+            "targetSlug": "vladimir-lenin",
+            "note": "Lenin's anti-imperialism was the primary ideological inspiration"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Vietnam War",
+            "targetSlug": "vietnam-war",
+            "note": "His war — he died 1969, 6 years before North Vietnamese victory"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Sun Tzu",
+            "targetSlug": "sun-tzu",
+            "note": "Art of War embedded in Vietnamese guerrilla strategy via Chinese tradition"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Dwight D. Eisenhower",
+            "targetSlug": "dwight-eisenhower",
+            "note": "US president who first committed advisors to South Vietnam"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "John F. Kennedy",
+            "targetSlug": "john-f-kennedy",
+            "note": "Escalated US military presence in Vietnam"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Lyndon B. Johnson",
+            "targetSlug": "lyndon-b-johnson",
+            "note": "Escalated to 500,000 US troops — the full Vietnam War"
+          },
+          {
+            "type": "OCCURS_IN",
+            "target": "Vietnam",
+            "targetSlug": "vietnam",
+            "note": "Born Kim Lien; founded DRV; died in Hanoi 1969"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "French Communist Party",
+            "targetSlug": "french-communist-party",
+            "note": "Co-founded in 1920 at Tours Congress"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Anti-colonial movements",
+            "targetSlug": "anti-colonial-movements",
+            "note": "Inspired independence movements across Southeast Asia and Africa"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Cuba",
+            "targetSlug": "cuba",
+            "note": "Castro and Guevara saw Vietnam War as model of guerrilla anti-imperialism"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Che Guevara",
+            "targetSlug": "che-guevara",
+            "note": "Vietnamese success inspired Guevara's global guerrilla strategy"
+          },
+          {
+            "type": "INFLUENCES",
+            "target": "Dien Bien Phu (1954)",
+            "targetSlug": "battle-of-dien-bien-phu",
+            "note": "Decisive French defeat that ended colonialism in Indochina"
+          }
+        ],
+        "historicalSignificance": {
+          "significanceScore": 9,
+          "significanceCategory": "world-changing",
+          "significanceNarrative": "Ho Chi Minh defeated both French colonialism and American military power — the only leader of a Third World country to defeat the United States in war — making his victory the defining event of the anti-colonial 20th century and transforming US domestic politics, military strategy, and public trust in government for generations."
+        },
+        "quote": "'Nothing is more precious than independence and freedom.' — Ho Chi Minh",
+        "places": [
+          "Hanoi, Vietnam (capital)",
+          "Kim Lien, Vietnam (birthplace)",
+          "Paris, France (political formation)",
+          "Moscow, USSR (Comintern training)"
+        ],
+        "subjectHeadings": "Ho Chi Minh — Revolutionary Leaders — Vietnam — Contemporary",
+        "subjects": [
+          "Vietnam",
+          "communism",
+          "anti-colonialism",
+          "Contemporary era",
+          "Cold War",
+          "guerrilla warfare",
+          "Vietnam War",
+          "Southeast Asia",
+          "nationalism",
+          "revolution"
+        ],
+        "frameworks": [
+          "state-formation",
+          "social-revolution",
+          "liberation-theology"
+        ],
+        "_editLog": [
+          {
+            "field": "summary",
+            "oldValue": null,
+            "newValue": "Ho Chi Minh (1890–1969) was a Vietnamese Communist revolutionary and statesman who founded the Democratic Republic of Vietnam (1945) and led the Viet Minh independence movement against French colonial…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-65-may2026",
+            "timestamp": "2026-05-17T01:41:40.855220+00:00"
+          },
+          {
+            "field": "causes",
+            "oldValue": null,
+            "newValue": "['French colonial rule imposing exploitation on Vietnamese society', \"World War I and Wilson's Fourteen Points inspiring anti-colonial nationalism\", \"Lenin's anti-imperialist theory providing ideologi…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-65-may2026",
+            "timestamp": "2026-05-17T01:41:40.855220+00:00"
+          },
+          {
+            "field": "effects",
+            "oldValue": null,
+            "newValue": "['Democratic Republic of Vietnam (1945) — first Vietnamese state in a century', 'First Indochina War (1946–54) — defeat of French colonial power at Dien Bien Phu', 'Geneva Accords (1954) — division of…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-65-may2026",
+            "timestamp": "2026-05-17T01:41:40.855220+00:00"
+          },
+          {
+            "field": "relationships",
+            "oldValue": null,
+            "newValue": "[{'type': 'INFLUENCES', 'target': 'Viet Minh', 'targetSlug': 'viet-minh', 'note': 'Founded and led the Viet Minh independence movement (1941)'}, {'type': 'INFLUENCES', 'target': 'Vo Nguyen Giap', 'tar…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-65-may2026",
+            "timestamp": "2026-05-17T01:41:40.855220+00:00"
+          },
+          {
+            "field": "historicalSignificance",
+            "oldValue": null,
+            "newValue": "{'significanceScore': 9, 'significanceCategory': 'world-changing', 'significanceNarrative': 'Ho Chi Minh defeated both French colonialism and American military power — the only leader of a Third World…",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-65-may2026",
+            "timestamp": "2026-05-17T01:41:40.855220+00:00"
+          },
+          {
+            "field": "quote",
+            "oldValue": null,
+            "newValue": "'Nothing is more precious than independence and freedom.' — Ho Chi Minh",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-65-may2026",
+            "timestamp": "2026-05-17T01:41:40.855220+00:00"
+          },
+          {
+            "field": "places",
+            "oldValue": null,
+            "newValue": [
+              "Hanoi, Vietnam (capital)",
+              "Kim Lien, Vietnam (birthplace)",
+              "Paris, France (political formation)",
+              "Moscow, USSR (Comintern training)"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-65-may2026",
+            "timestamp": "2026-05-17T01:41:40.855220+00:00"
+          },
+          {
+            "field": "subjectHeadings",
+            "oldValue": null,
+            "newValue": "Ho Chi Minh — Revolutionary Leaders — Vietnam — Contemporary",
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-65-may2026",
+            "timestamp": "2026-05-17T01:41:40.855220+00:00"
+          },
+          {
+            "field": "subjects",
+            "oldValue": null,
+            "newValue": [
+              "Vietnam",
+              "communism",
+              "anti-colonialism",
+              "Contemporary era",
+              "Cold War",
+              "guerrilla warfare",
+              "Vietnam War",
+              "Southeast Asia",
+              "nationalism",
+              "revolution"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-65-may2026",
+            "timestamp": "2026-05-17T01:41:40.855220+00:00"
+          },
+          {
+            "field": "frameworks",
+            "oldValue": null,
+            "newValue": [
+              "state-formation",
+              "social-revolution",
+              "liberation-theology"
+            ],
+            "editorId": "claude-sonnet-4.6·cloud·GH#vscode",
+            "sessionId": "vscode-batch-65-may2026",
+            "timestamp": "2026-05-17T01:41:40.855220+00:00"
+          }
+        ]
+      },
       "subjectHeadings": [
         "People — Heads of State — Asia — Contemporary"
       ],
@@ -48,7 +289,8 @@
         "significanceScore": 9,
         "significanceNarrative": "Ho Chi Minh's leadership of the Viet Minh led to the defeat of French colonialism and the establishment of the Democratic Republic of Vietnam, shaping the course of the Cold War and influencing regional politics for decades.",
         "significanceCategory": "world-changing"
-      }
+      },
+      "_unsyncedEdits": true
     }
   ]
 }
