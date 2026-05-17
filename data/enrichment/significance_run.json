@@ -1,44 +1,39 @@
 {
-  "generatedAt": "2026-05-17T05:14:56Z",
+  "generatedAt": "2026-05-17T06:49:30Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 5,
-  "failed": 0,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "results": [
     {
-      "slug": "pierre-franois-joseph-durutte",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "thibron",
+      "status": "error",
+      "reason": "Ollama error: Remote end closed connection without response"
     },
     {
-      "slug": "jacques-goyon-de-matignon",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "gaspar-de-guzm\u00e1n-count-duke-of-olivares",
+      "status": "error",
+      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
     },
     {
-      "slug": "james-barron",
-      "status": "ok",
-      "score": 8,
-      "category": "regional"
+      "slug": "gaspar-de-guzmn-count-duke-of-olivares",
+      "status": "error",
+      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
     },
     {
-      "slug": "fran\u00e7ois-louis-rousselet-de-ch\u00e2teaurenault",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "jeanne-hachette",
+      "status": "error",
+      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
     },
     {
-      "slug": "franois-louis-rousselet-de-chteaurenault",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "suleyman-shah",
+      "status": "error",
+      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
     }
   ],
   "summary": {
-    "entities_scored": 5,
-    "failed": 0
+    "entities_scored": 0,
+    "failed": 5
   }
 }

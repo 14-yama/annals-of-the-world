@@ -1,35 +1,25 @@
 {
-  "timestamp": "2026-05-17T01:47:23Z",
+  "timestamp": "2026-05-17T02:48:46Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 0,
-  "failed": 5,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "thorfinn-of-hamar",
+      "slug": "eusebius",
       "status": "failed",
-      "reason": "Remote end closed connection without response"
+      "reason": "insufficient causes (0, need >= 2)"
     },
     {
-      "slug": "antarctica",
+      "slug": "harald-klak",
       "status": "failed",
-      "reason": "<urlopen error [Errno 111] Connection refused>"
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "procopius",
+      "slug": "publius-acilius-attianus",
       "status": "failed",
-      "reason": "<urlopen error [Errno 111] Connection refused>"
-    },
-    {
-      "slug": "gaius-sallustius-crispus-passienus",
-      "status": "failed",
-      "reason": "<urlopen error [Errno 111] Connection refused>"
-    },
-    {
-      "slug": "bachelors-degree",
-      "status": "failed",
-      "reason": "<urlopen error [Errno 111] Connection refused>"
+      "reason": "insufficient places (1, need >= 2)"
     }
   ]
 }
