@@ -699,37 +699,80 @@ def dispatch_all(enrich_count: int = 20, sig_count: int = 50, auto_push: bool = 
 
 
 # ─── Autonomous Watchdog ───────────────────────────────────────────────────────
-# Background thread that periodically checks for:
-#  1. Uncommitted dirty enrichments (written to disk but not git-committed)
+# Background thread that periodically:
+#  1. Syncs uncommitted dirty enrichments (written to disk but not git-committed)
 #     → runs --local sync → Appwrite → git commit+push
-# This ensures bots are fully autonomous even if they crash mid-run.
+#  2. Proactively dispatches new enrichment runs when idle too long
+# This ensures bots are ALWAYS enriching — zero manual intervention required.
 
 _watchdog_running = False
+# Heartbeat: dispatch a fresh enrichment run if no enrichment completed in this window (seconds)
+_ENRICHMENT_HEARTBEAT_SECONDS = 1800  # 30 min — launch new run if idle for 30 min
+# How many entities per watchdog-initiated enrichment
+_WATCHDOG_ENRICH_COUNT = 15
+
+
+def _last_enrich_completed_at() -> float:
+    """Return Unix timestamp of most recent completed enrichment job (0 if never)."""
+    with _lock:
+        latest = 0.0
+        for j in _jobs.values():
+            if j.get("bot") == "enrich" and j.get("status") == "done" and j.get("finished"):
+                try:
+                    ts = time.mktime(time.strptime(j["finished"], "%Y-%m-%dT%H:%M:%SZ"))
+                    if ts > latest:
+                        latest = ts
+                except Exception:
+                    pass
+    return latest
+
 
 def _watchdog_loop(interval_seconds: int = 300):
     """
     Autonomous watchdog: every `interval_seconds` (default 5 min),
-    check for dirty enrichments and sync them without human intervention.
-    Same behaviour as GitHub Actions sync-gateway: always-on, zero human touch.
+    check for dirty enrichments and sync them; also proactively launch
+    new enrichment runs if the bot has been idle for > _ENRICHMENT_HEARTBEAT_SECONDS.
     """
     global _watchdog_running
     _watchdog_running = True
-    print(f"[watchdog] Started — scanning every {interval_seconds}s for dirty enrichments")
+    print(f"[watchdog] Started — scanning every {interval_seconds}s | "
+          f"enrichment heartbeat every {_ENRICHMENT_HEARTBEAT_SECONDS}s")
     while _watchdog_running:
         time.sleep(interval_seconds)
-        # Skip if any sync/push job is already running
+
+        # ── 1. Sync any dirty files ──────────────────────────────────────────
         with _lock:
-            busy = any(j["status"] == "running" and j["bot"] in ("sync", "sync-push", "git-push")
-                       for j in _jobs.values())
-        if busy:
-            continue
-        # Check for _unsyncedEdits files
-        dirty_count = _count_dirty_files()
-        if dirty_count > 0:
-            print(f"[watchdog] Found {dirty_count} dirty files — launching autonomous sync+push")
-            sync_jid = dispatch_sync(max_entities=200, local_mode=True)
-            _wait_for_job(sync_jid)
-            dispatch_git_push(message=f"feat(enrich): watchdog auto-push — {dirty_count} local enrichments")
+            sync_busy = any(j["status"] == "running" and j["bot"] in ("sync", "sync-push", "git-push")
+                            for j in _jobs.values())
+        if not sync_busy:
+            dirty_count = _count_dirty_files()
+            if dirty_count > 0:
+                print(f"[watchdog] Found {dirty_count} dirty files — launching autonomous sync+push")
+                sync_jid = dispatch_sync(max_entities=200, local_mode=True)
+                _wait_for_job(sync_jid)
+                dispatch_git_push(message=f"feat(enrich): watchdog auto-push — {dirty_count} local enrichments")
+
+        # ── 2. Enrichment heartbeat: dispatch new run if idle too long ───────
+        with _lock:
+            enrich_busy = any(j["status"] == "running" and j["bot"] in ("enrich", "significance")
+                              for j in _jobs.values())
+        if enrich_busy:
+            continue  # already enriching, skip heartbeat check
+
+        idle_seconds = time.time() - _last_enrich_completed_at()
+        if idle_seconds >= _ENRICHMENT_HEARTBEAT_SECONDS:
+            # Check Ollama is available before dispatching
+            ollama_ok = ollama_health().get("running", False)
+            if ollama_ok:
+                print(f"[watchdog] Enrichment idle for {idle_seconds:.0f}s — launching heartbeat run "
+                      f"({_WATCHDOG_ENRICH_COUNT} entities, ollama)")
+                enrich_jid = dispatch_enrich(count=_WATCHDOG_ENRICH_COUNT, model="ollama")
+                _wait_for_job(enrich_jid)
+                # After enrichment, trigger significance backfill on newly enriched entities
+                sig_jid = dispatch_significance(count=20, model="ollama")
+                _wait_for_job(sig_jid)
+            else:
+                print(f"[watchdog] Enrichment idle {idle_seconds:.0f}s but Ollama offline — skipping heartbeat")
 
 
 def _count_dirty_files() -> int:

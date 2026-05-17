@@ -1,0 +1,149 @@
+name: Bot Keepalive & Failsafe
+
+# Ensures the Gemini enrichment pipeline never stays idle for more than 24 hours.
+# Triggers a new enrichment run if none completed in the last 24h.
+# Also retries on failure — acts as a circuit-breaker / heartbeat for cloud bots.
+
+on:
+  schedule:
+    - cron: '30 8 * * *'   # 08:30 UTC daily (after sync-gateway's 07:00 run)
+  workflow_dispatch:
+    inputs:
+      force_run:
+        description: "Force enrichment even if recently ran"
+        type: boolean
+        default: false
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: clean/audit-system
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Check last enrichment timestamp
+        id: check_idle
+        run: |
+          python3 << 'PYEOF'
+          import json, time, os, sys
+          from pathlib import Path
+          
+          force = os.environ.get("FORCE_RUN", "false").lower() == "true"
+          if force:
+              print("Force run requested — skipping idle check")
+              with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+                  f.write("should_run=true\n")
+              sys.exit(0)
+          
+          # Check last_run.json for most recent enrichment
+          last_run_file = Path("data/enrichment/last_run.json")
+          should_run = True
+          
+          if last_run_file.exists():
+              try:
+                  d = json.loads(last_run_file.read_text())
+                  ts_str = d.get("completedAt") or d.get("startedAt") or ""
+                  if ts_str:
+                      ts = time.mktime(time.strptime(ts_str[:19], "%Y-%m-%dT%H:%M:%S"))
+                      idle_hours = (time.time() - ts) / 3600
+                      print(f"Last enrichment: {ts_str} ({idle_hours:.1f}h ago)")
+                      if idle_hours < 20:
+                          print(f"Enrichment ran {idle_hours:.1f}h ago — keepalive not needed")
+                          should_run = False
+                      else:
+                          print(f"Enrichment idle for {idle_hours:.1f}h — keepalive will trigger new run")
+              except Exception as e:
+                  print(f"Could not parse last_run.json: {e} — will run enrichment")
+          else:
+              print("No last_run.json found — will run enrichment")
+          
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"should_run={'true' if should_run else 'false'}\n")
+          PYEOF
+        env:
+          FORCE_RUN: ${{ github.event.inputs.force_run || 'false' }}
+
+      - name: Generate enrichment queue
+        if: steps.check_idle.outputs.should_run == 'true'
+        run: python3 scripts/enrichment_queue.py --limit 1000
+
+      - name: Run enrichment (Gemini primary, OpenAI fallback)
+        if: steps.check_idle.outputs.should_run == 'true'
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          # Try Gemini first; if it fails, fall back to OpenAI
+          python3 scripts/ai_enrich_autonomous.py \
+            --count 20 --model gemini --retry 3 --lenient || \
+          python3 scripts/ai_enrich_autonomous.py \
+            --count 20 --model openai --retry 2 --lenient || \
+          echo "Both providers failed — enrichment skipped this run"
+
+      - name: Commit + push if changes
+        if: steps.check_idle.outputs.should_run == 'true'
+        run: |
+          git config user.name  "Annals Keepalive Bot"
+          git config user.email "keepalive@annals-of-the-world.bot"
+          git add data/appwrite-export/entities/ data/enrichment/ || true
+          CHANGED=$(git diff --cached --name-only | wc -l)
+          if [ "$CHANGED" -gt 0 ]; then
+            git commit -m "feat(data): keepalive enrichment — ${CHANGED} entities (Gemini/OpenAI)
+
+          Triggered by bot-keepalive workflow (idle > 20h).
+          Run: ${{ github.run_id }}"
+            git push
+            echo "Pushed ${CHANGED} enriched entities"
+          else
+            echo "No entities enriched this run (all queue items may be fresh)"
+          fi
+
+      - name: Keepalive skipped summary
+        if: steps.check_idle.outputs.should_run == 'false'
+        run: echo "### Keepalive: Not needed — enrichment ran recently" >> "$GITHUB_STEP_SUMMARY"
+
+  # Retry job: if the primary ai-enrichment workflow fails, this re-runs it
+  retry-on-failure:
+    runs-on: ubuntu-latest
+    needs: keepalive
+    if: failure()
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: clean/audit-system
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Retry enrichment (fallback to OpenAI)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          echo "Primary keepalive failed — retrying with OpenAI..."
+          python3 scripts/enrichment_queue.py --limit 500
+          python3 scripts/ai_enrich_autonomous.py \
+            --count 10 --model openai --retry 2 --lenient || \
+          echo "OpenAI fallback also failed — will retry tomorrow"
+
+      - name: Commit retry results
+        run: |
+          git config user.name  "Annals Keepalive Bot"
+          git config user.email "keepalive@annals-of-the-world.bot"
+          git add data/appwrite-export/entities/ data/enrichment/ || true
+          git diff --cached --quiet || git commit -m "feat(data): keepalive retry — OpenAI fallback" && git push || true

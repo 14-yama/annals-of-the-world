@@ -1,0 +1,21 @@
+[Unit]
+Description=Annals of the World — Local Bot Server (Ollama enrichment)
+Documentation=https://github.com/14-yama/annals-of-the-world
+After=network-online.target ollama.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/manasa151/annals-of-the-world
+ExecStart=/home/manasa151/annals-of-the-world/.venv/bin/python3 /home/manasa151/annals-of-the-world/scripts/local_bot_server.py
+EnvironmentFile=-/home/manasa151/annals-of-the-world/.env
+Restart=on-failure
+RestartSec=30
+# Give it 60s to start up (Ollama model loading can be slow)
+TimeoutStartSec=60
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=annals-local-bot
+
+[Install]
+WantedBy=default.target
