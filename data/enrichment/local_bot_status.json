@@ -41261,17 +41261,22 @@
   "git-push-1779013296": {
     "job_id": "git-push-1779013296",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 1,
     "pid": null,
     "started": "2026-05-17T10:21:36Z",
-    "finished": null,
+    "finished": "2026-05-17T10:21:41Z",
     "log": [
       "Pending files: 1 entities, 0 edges (1 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 105 local enrichments\"",
+      "[clean/audit-system 303868fa24] feat(enrich): watchdog auto-push \u2014 105 local enrichments\n 5 files changed, 203 insertions(+), 30 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   450681fbea..303868fa24  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 1 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "enrich-1779013296": {
     "job_id": "enrich-1779013296",
@@ -41300,7 +41305,16 @@
       "[4/20] epistle-to-the-galatians (score=141.92, 0c)",
       "  SKIP \u2014 already enriched (1016c)",
       "",
-      "[5/20] animal-farm (score=141.4, 0c)"
+      "[5/20] animal-farm (score=141.4, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  RETRY (2) \u2014 insufficient causes (0, need >= 1)",
+      "  ENRICHED \u2014 72c -> 1133c",
+      "",
+      "[6/20] alices-adventures-in-wonderland (score=139.82, 0c)",
+      "  ENRICHED \u2014 81c -> 1727c",
+      "",
+      "[7/20] westminster-confession-of-faith (score=136.4, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)"
     ],
     "exitCode": null
   }

@@ -1,39 +1,43 @@
 {
-  "generatedAt": "2026-05-17T09:34:39Z",
+  "generatedAt": "2026-05-17T10:34:51Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "results": [
     {
       "slug": "pierre-marie-barth\u00e9lemy-ferino",
-      "status": "error",
-      "reason": "Ollama error: Remote end closed connection without response"
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
     },
     {
       "slug": "pierre-marie-barthlemy-ferino",
-      "status": "error",
-      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "christoph-martin-von-degenfeld",
       "status": "error",
-      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
+      "reason": "Ollama error: timed out"
     },
     {
       "slug": "antoine-le-picard-de-ph\u00e9lippeaux",
-      "status": "error",
-      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "antoine-le-picard-de-phlippeaux",
-      "status": "error",
-      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 0,
-    "failed": 5
+    "entities_scored": 4,
+    "failed": 1
   }
 }
