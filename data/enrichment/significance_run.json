@@ -1,39 +1,44 @@
 {
-  "generatedAt": "2026-05-17T06:49:30Z",
+  "generatedAt": "2026-05-17T07:38:49Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 5,
+  "failed": 0,
   "dry_run": false,
   "results": [
     {
       "slug": "thibron",
-      "status": "error",
-      "reason": "Ollama error: Remote end closed connection without response"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "gaspar-de-guzm\u00e1n-count-duke-of-olivares",
-      "status": "error",
-      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
     },
     {
       "slug": "gaspar-de-guzmn-count-duke-of-olivares",
-      "status": "error",
-      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
     },
     {
       "slug": "jeanne-hachette",
-      "status": "error",
-      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "suleyman-shah",
-      "status": "error",
-      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 0,
-    "failed": 5
+    "entities_scored": 5,
+    "failed": 0
   }
 }
