@@ -1,70 +1,31 @@
 {
-  "timestamp": "2026-05-17T18:58:57Z",
+  "timestamp": "2026-05-17T19:50:29Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 10,
-  "failed": 0,
+  "count_requested": 5,
+  "enriched": 1,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "king-xian-of-zhou",
+      "slug": "mantra",
       "status": "enriched",
-      "old_len": 81,
-      "new_len": 678
+      "old_len": 83,
+      "new_len": 1233
     },
     {
-      "slug": "trdat-of-iberia",
-      "status": "enriched",
-      "old_len": 81,
-      "new_len": 1198
+      "slug": "dromichaetes",
+      "status": "failed",
+      "reason": "insufficient effects (0, need >= 2)"
     },
     {
-      "slug": "john-the-baptist",
-      "status": "enriched",
-      "old_len": 252,
-      "new_len": 1083
+      "slug": "lucius-calpurnius-piso",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "donatian-of-reims",
-      "status": "enriched",
-      "old_len": 81,
-      "new_len": 1777
-    },
-    {
-      "slug": "vassili-poyarkov",
-      "status": "enriched",
-      "old_len": 108,
-      "new_len": 894
-    },
-    {
-      "slug": "first-epistle-to-the-thessalonians",
-      "status": "enriched",
-      "old_len": 82,
-      "new_len": 749
-    },
-    {
-      "slug": "bible",
-      "status": "enriched",
-      "old_len": 82,
-      "new_len": 930
-    },
-    {
-      "slug": "grabus",
-      "status": "enriched",
-      "old_len": 82,
-      "new_len": 1681
-    },
-    {
-      "slug": "ardaric",
-      "status": "enriched",
-      "old_len": 82,
-      "new_len": 1499
-    },
-    {
-      "slug": "wikimedia-commons",
-      "status": "enriched",
-      "old_len": 82,
-      "new_len": 1177
+      "slug": "robert-of-thourotte",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     }
   ]
 }
