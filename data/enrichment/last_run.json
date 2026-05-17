@@ -1,38 +1,82 @@
 {
-  "timestamp": "2026-05-17T11:38:51Z",
+  "timestamp": "2026-05-17T11:49:50Z",
   "model": "ollama",
-  "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "count_requested": 20,
+  "enriched": 12,
+  "failed": 0,
   "dry_run": false,
   "entities": [
+    {
+      "slug": "the-little-match-girl",
+      "status": "enriched",
+      "old_len": 82,
+      "new_len": 1366
+    },
+    {
+      "slug": "watchmen",
+      "status": "enriched",
+      "old_len": 83,
+      "new_len": 1423
+    },
+    {
+      "slug": "a-study-in-scarlet",
+      "status": "enriched",
+      "old_len": 84,
+      "new_len": 1339
+    },
     {
       "slug": "the-gulag-archipelago",
       "status": "enriched",
       "old_len": 88,
-      "new_len": 1486
+      "new_len": 1409
     },
     {
       "slug": "les-fleurs-du-mal",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 93,
+      "new_len": 1155
     },
     {
       "slug": "su-shi",
       "status": "enriched",
       "old_len": 664,
-      "new_len": 1503
+      "new_len": 1393
     },
     {
       "slug": "the-merchant-of-venice",
       "status": "enriched",
       "old_len": 98,
-      "new_len": 1980
+      "new_len": 1334
     },
     {
       "slug": "bibliotheca",
-      "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
+      "status": "enriched",
+      "old_len": 100,
+      "new_len": 1887
+    },
+    {
+      "slug": "prose-edda",
+      "status": "enriched",
+      "old_len": 102,
+      "new_len": 1902
+    },
+    {
+      "slug": "gospel-of-thomas",
+      "status": "enriched",
+      "old_len": 102,
+      "new_len": 808
+    },
+    {
+      "slug": "the-snow-queen",
+      "status": "enriched",
+      "old_len": 107,
+      "new_len": 1994
+    },
+    {
+      "slug": "tato",
+      "status": "enriched",
+      "old_len": 670,
+      "new_len": 1011
     }
   ]
 }
