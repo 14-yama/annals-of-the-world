@@ -1,38 +1,39 @@
 {
-  "timestamp": "2026-05-17T00:15:59Z",
+  "timestamp": "2026-05-17T01:13:37Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "gil-eanes",
-      "status": "enriched",
-      "old_len": 63,
-      "new_len": 925
-    },
-    {
       "slug": "aeschines",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
-    },
-    {
-      "slug": "benin",
       "status": "enriched",
-      "old_len": 68,
-      "new_len": 1613
+      "old_len": 65,
+      "new_len": 892
     },
     {
       "slug": "vima-takto",
-      "status": "failed",
-      "reason": "insufficient subjects (4, need >= 5)"
+      "status": "enriched",
+      "old_len": 70,
+      "new_len": 1099
     },
     {
-      "slug": "alfonso-i-deste",
+      "slug": "pha-mueang",
       "status": "enriched",
-      "old_len": 290,
-      "new_len": 997
+      "old_len": 162,
+      "new_len": 836
+    },
+    {
+      "slug": "saadia-gaon",
+      "status": "enriched",
+      "old_len": 163,
+      "new_len": 1343
+    },
+    {
+      "slug": "wikimedia-foundation",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     }
   ]
 }
