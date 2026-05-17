@@ -1,38 +1,106 @@
 {
-  "timestamp": "2026-05-17T05:34:20Z",
+  "timestamp": "2026-05-17T06:20:39Z",
   "model": "ollama",
-  "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "count_requested": 20,
+  "enriched": 16,
+  "failed": 0,
   "dry_run": false,
   "entities": [
+    {
+      "slug": "confucianism",
+      "status": "enriched",
+      "old_len": 62,
+      "new_len": 1483
+    },
+    {
+      "slug": "ecology",
+      "status": "enriched",
+      "old_len": 62,
+      "new_len": 1522
+    },
+    {
+      "slug": "medicine",
+      "status": "enriched",
+      "old_len": 62,
+      "new_len": 1849
+    },
     {
       "slug": "vikings",
       "status": "enriched",
       "old_len": 64,
-      "new_len": 1806
+      "new_len": 1934
     },
     {
       "slug": "theatre-art",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "status": "enriched",
+      "old_len": 67,
+      "new_len": 1013
     },
     {
       "slug": "galaxy",
-      "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
-    },
-    {
-      "slug": "map",
       "status": "enriched",
-      "old_len": 68,
-      "new_len": 1799
+      "old_len": 67,
+      "new_len": 1725
     },
     {
-      "slug": "gospel-of-mark",
+      "slug": "atheism",
       "status": "enriched",
       "old_len": 69,
-      "new_len": 1907
+      "new_len": 1777
+    },
+    {
+      "slug": "president",
+      "status": "enriched",
+      "old_len": 69,
+      "new_len": 1112
+    },
+    {
+      "slug": "astronomy",
+      "status": "enriched",
+      "old_len": 70,
+      "new_len": 1946
+    },
+    {
+      "slug": "middle-ages",
+      "status": "enriched",
+      "old_len": 80,
+      "new_len": 1207
+    },
+    {
+      "slug": "exodus",
+      "status": "enriched",
+      "old_len": 111,
+      "new_len": 1327
+    },
+    {
+      "slug": "one-thousand-and-one-nights",
+      "status": "enriched",
+      "old_len": 128,
+      "new_len": 694
+    },
+    {
+      "slug": "nicene-creed",
+      "status": "enriched",
+      "old_len": 66,
+      "new_len": 1650
+    },
+    {
+      "slug": "upanishads",
+      "status": "enriched",
+      "old_len": 62,
+      "new_len": 827
+    },
+    {
+      "slug": "anna-karenina",
+      "status": "enriched",
+      "old_len": 66,
+      "new_len": 936
+    },
+    {
+      "slug": "epistle-to-the-galatians",
+      "status": "enriched",
+      "old_len": 69,
+      "new_len": 1016
     }
   ]
 }
