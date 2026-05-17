@@ -33312,7 +33312,10 @@
       "[1/25] thorfinn-of-hamar (score=179.1, 0c)",
       "  ENRICHED \u2014 84c -> 1114c",
       "",
-      "[2/25] antarctica (score=178.6, 0c)"
+      "[2/25] antarctica (score=178.6, 0c)",
+      "  ENRICHED \u2014 67c -> 1199c",
+      "",
+      "[3/25] procopius (score=178.6, 0c)"
     ],
     "exitCode": null
   },
@@ -33398,11 +33401,63 @@
   "git-push-1778997606": {
     "job_id": "git-push-1778997606",
     "bot": "git-push",
+    "status": "done",
+    "model": "none",
+    "count": 1,
+    "pid": null,
+    "started": "2026-05-17T06:00:06Z",
+    "finished": "2026-05-17T06:00:10Z",
+    "log": [
+      "Pending files: 1 entities, 0 edges (1 total)",
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 53 local enrichments\"",
+      "[clean/audit-system f51384a523] feat(enrich): watchdog auto-push \u2014 53 local enrichments\n 5 files changed, 700 insertions(+), 56 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   98eff53154..f51384a523  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 1 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
+    ],
+    "exitCode": 0
+  },
+  "sync-1778997688": {
+    "job_id": "sync-1778997688",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 420817,
+    "started": "2026-05-17T06:01:28Z",
+    "finished": "2026-05-17T06:01:45Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=32651/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 54 dirty files",
+      "[diff] 54 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 54,",
+      "  \"entitiesUpserted\": 0,",
+      "  \"auditRowsEmitted\": 0,",
+      "  \"writesPerformed\": 0,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit f51384a5"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1778997706": {
+    "job_id": "git-push-1778997706",
+    "bot": "git-push",
     "status": "running",
     "model": "none",
     "count": 0,
     "pid": null,
-    "started": "2026-05-17T06:00:06Z",
+    "started": "2026-05-17T06:01:46Z",
     "finished": null,
     "log": [
       "Pending files: 1 entities, 0 edges (1 total)",
