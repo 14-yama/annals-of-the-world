@@ -1,70 +1,37 @@
 {
-  "timestamp": "2026-05-17T15:03:34Z",
+  "timestamp": "2026-05-17T16:20:54Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 10,
-  "failed": 0,
+  "count_requested": 5,
+  "enriched": 2,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "donnchad-mac-gilla-p\u00e1draig",
-      "status": "enriched",
-      "old_len": 69,
-      "new_len": 765
+      "slug": "tyrannion",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "donnchad-mac-gilla-pdraig",
+      "slug": "galactorius-of-lescar",
       "status": "enriched",
-      "old_len": 69,
-      "new_len": 1231
+      "old_len": 102,
+      "new_len": 1201
     },
     {
-      "slug": "gayatri-mantra",
-      "status": "enriched",
-      "old_len": 184,
-      "new_len": 1247
+      "slug": "neferkare-iv",
+      "status": "failed",
+      "reason": "insufficient valid frameworks (0 after filtering, need >= 1)"
     },
     {
-      "slug": "translation",
-      "status": "enriched",
-      "old_len": 71,
-      "new_len": 1029
+      "slug": "uranius",
+      "status": "failed",
+      "reason": "Unterminated string starting at: line 3 column 5 (char 18)"
     },
     {
-      "slug": "suibne-menn",
+      "slug": "henti",
       "status": "enriched",
-      "old_len": 71,
-      "new_len": 1091
-    },
-    {
-      "slug": "owain-ap-hywel",
-      "status": "enriched",
-      "old_len": 71,
-      "new_len": 961
-    },
-    {
-      "slug": "tiberius-julius-cotys-iii",
-      "status": "enriched",
-      "old_len": 71,
-      "new_len": 628
-    },
-    {
-      "slug": "ziaelas-of-bithynia",
-      "status": "enriched",
-      "old_len": 71,
-      "new_len": 1617
-    },
-    {
-      "slug": "mithridates-chrestus",
-      "status": "enriched",
-      "old_len": 72,
-      "new_len": 1118
-    },
-    {
-      "slug": "dai-jin",
-      "status": "enriched",
-      "old_len": 174,
-      "new_len": 967
+      "old_len": 75,
+      "new_len": 1870
     }
   ]
 }
