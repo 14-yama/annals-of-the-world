@@ -1,37 +1,38 @@
 {
-  "timestamp": "2026-05-17T04:25:52Z",
+  "timestamp": "2026-05-17T05:34:20Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "confucianism",
-      "status": "failed",
-      "reason": "insufficient effects (0, need >= 2)"
-    },
-    {
-      "slug": "ecology",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
-    },
-    {
-      "slug": "medicine",
-      "status": "failed",
-      "reason": "insufficient subjects (4, need >= 5)"
-    },
-    {
-      "slug": "william-of-paris",
-      "status": "enriched",
-      "old_len": 62,
-      "new_len": 1478
-    },
-    {
-      "slug": "poetry",
+      "slug": "vikings",
       "status": "enriched",
       "old_len": 64,
-      "new_len": 1309
+      "new_len": 1806
+    },
+    {
+      "slug": "theatre-art",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
+    },
+    {
+      "slug": "galaxy",
+      "status": "failed",
+      "reason": "insufficient causes (0, need >= 2)"
+    },
+    {
+      "slug": "map",
+      "status": "enriched",
+      "old_len": 68,
+      "new_len": 1799
+    },
+    {
+      "slug": "gospel-of-mark",
+      "status": "enriched",
+      "old_len": 69,
+      "new_len": 1907
     }
   ]
 }

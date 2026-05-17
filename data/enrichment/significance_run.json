@@ -1,44 +1,39 @@
 {
-  "generatedAt": "2026-05-17T08:27:08Z",
+  "generatedAt": "2026-05-17T09:34:39Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 5,
-  "failed": 0,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "results": [
     {
-      "slug": "pierre-fran\u00e7ois-xavier-boyer",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "pierre-marie-barth\u00e9lemy-ferino",
+      "status": "error",
+      "reason": "Ollama error: Remote end closed connection without response"
     },
     {
-      "slug": "pierre-franois-xavier-boyer",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "pierre-marie-barthlemy-ferino",
+      "status": "error",
+      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
     },
     {
-      "slug": "philoxenus",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "christoph-martin-von-degenfeld",
+      "status": "error",
+      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
     },
     {
-      "slug": "christopher-gadsden",
-      "status": "ok",
-      "score": 7,
-      "category": "regional"
+      "slug": "antoine-le-picard-de-ph\u00e9lippeaux",
+      "status": "error",
+      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
     },
     {
-      "slug": "albert-gyulay",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "antoine-le-picard-de-phlippeaux",
+      "status": "error",
+      "reason": "Ollama error: <urlopen error [Errno 111] Connection refused>"
     }
   ],
   "summary": {
-    "entities_scored": 5,
-    "failed": 0
+    "entities_scored": 0,
+    "failed": 5
   }
 }
