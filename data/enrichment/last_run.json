@@ -1,38 +1,39 @@
 {
-  "timestamp": "2026-05-16T20:14:56Z",
+  "timestamp": "2026-05-16T21:02:27Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
       "slug": "vitello",
       "status": "failed",
-      "reason": "Expecting ',' delimiter: line 76 column 1 (char 1755)"
+      "reason": "insufficient subjects (4, need >= 5)"
     },
     {
       "slug": "snorri-thorfinnsson",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 268,
+      "new_len": 1281
     },
     {
-      "slug": "felician-of-foligno",
+      "slug": "pietro-pileo-di-prata",
       "status": "enriched",
-      "old_len": 53,
-      "new_len": 1231
+      "old_len": 271,
+      "new_len": 1058
     },
     {
-      "slug": "peter-the-iberian",
+      "slug": "ammonius-grammaticus",
       "status": "enriched",
-      "old_len": 270,
-      "new_len": 1248
+      "old_len": 55,
+      "new_len": 1217
     },
     {
-      "slug": "lupus-of-sens",
+      "slug": "ildibad",
       "status": "enriched",
-      "old_len": 54,
-      "new_len": 1216
+      "old_len": 57,
+      "new_len": 1038
     }
   ]
 }
