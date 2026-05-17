@@ -1,94 +1,35 @@
 {
-  "timestamp": "2026-05-17T16:36:21Z",
+  "timestamp": "2026-05-17T17:44:41Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 14,
-  "failed": 0,
+  "count_requested": 5,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "entities": [
     {
-      "slug": "juozas-urbys",
-      "status": "enriched",
-      "old_len": 624,
-      "new_len": 1857
+      "slug": "ibn-khuzaymah",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
     },
     {
-      "slug": "ancient-greek",
-      "status": "enriched",
-      "old_len": 73,
-      "new_len": 1217
+      "slug": "gartnait-iii",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "eulpaso",
-      "status": "enriched",
-      "old_len": 73,
-      "new_len": 1347
+      "slug": "drest-i",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "drest-iv",
-      "status": "enriched",
-      "old_len": 73,
-      "new_len": 1041
+      "slug": "trebeta",
+      "status": "failed",
+      "reason": "insufficient subjects (2, need >= 5)"
     },
     {
-      "slug": "ibn-al-jib",
-      "status": "enriched",
-      "old_len": 175,
-      "new_len": 1151
-    },
-    {
-      "slug": "tyrannion",
-      "status": "enriched",
-      "old_len": 74,
-      "new_len": 1513
-    },
-    {
-      "slug": "galactorius-of-lescar",
-      "status": "enriched",
-      "old_len": 102,
-      "new_len": 736
-    },
-    {
-      "slug": "neferkare-iv",
-      "status": "enriched",
-      "old_len": 75,
-      "new_len": 1095
-    },
-    {
-      "slug": "uranius",
-      "status": "enriched",
-      "old_len": 75,
-      "new_len": 775
-    },
-    {
-      "slug": "henti",
-      "status": "enriched",
-      "old_len": 75,
-      "new_len": 1415
-    },
-    {
-      "slug": "murad-khan",
-      "status": "enriched",
-      "old_len": 75,
-      "new_len": 888
-    },
-    {
-      "slug": "arctic-ocean",
-      "status": "enriched",
-      "old_len": 75,
-      "new_len": 1226
-    },
-    {
-      "slug": "lucius-lucretius-flavus-tricipitinus",
-      "status": "enriched",
-      "old_len": 235,
-      "new_len": 1444
-    },
-    {
-      "slug": "sarduri-iv",
-      "status": "enriched",
-      "old_len": 76,
-      "new_len": 1301
+      "slug": "bacurius-i-of-iberia",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     }
   ]
 }
