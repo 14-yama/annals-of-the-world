@@ -11,7 +11,7 @@
       "name": "Bible",
       "label": "Text",
       "callNumber": "732.bible",
-      "summary": "Collection of sacred books in judaism and christianity Created by various authors.",
+      "summary": "The Bible is a collection of sacred texts created by various authors over several centuries. Written in multiple languages and genres, the Hebrew Bible (Old Testament) and Christian New Testament are the core components of the biblical canon. Composed between 1200 BCE and 150 CE, these texts have shaped Jewish and Christian beliefs, influencing art, literature, law, and politics throughout history. From the patriarchs to the apostles, the figures mentioned in the Bible have left lasting impacts on Western civilization. The Bible's stories of creation, flood, and Exodus continue to inspire art, music, and film. Its teachings on love, forgiveness, and justice remain a cornerstone of Christian ethics, while its prophetic messages serve as warnings about the consequences of sin and greed. Despite centuries of translation and interpretation, the Bible's core message remains: 'Love your neighbor as yourself,' (Mark 12:31).",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,17 +25,26 @@
       "wikidataQid": "Q1845",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Bible",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Gutenberg%20Bible%2C%20Lenox%20Copy%2C%20New%20York%20Public%20Library%2C%202009.%20Pic%2001.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier literary tradition in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Historical events in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Patron commission in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Preserved knowledge through Bible's historical significance\", \"type\": \"Text\"}, {\"title\": \"Influenced later works through Bible's historical significance\", \"type\": \"Text\"}, {\"title\": \"Defined canon through Bible's historical significance\", \"type\": \"Text\"}], \"relationships\": [{\"sourceSlug\": \"bible\", \"sourceName\": \"Bible\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Bible is situated within the Classical (920)\"}, {\"sourceSlug\": \"bible\", \"sourceName\": \"Bible\", \"verb\": \"TRANSMITS\", \"targetSlug\": \"literary-canon-classical\", \"targetName\": \"Literary Canon (Classical)\", \"context\": \"Bible contributed to the literary canon of the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Bible\", \"type\": \"Reference article\", \"slug\": \"bible\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q1845\", \"https://en.wikipedia.org/wiki/Bible\"], \"tags\": [\"religious text\", \"New Testament & Christian Texts\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Bible is remembered as a landmark text of the Classical era, referenced in 372 Wikipedia language editions. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\":[\"The ancient Israelites' migration from Egypt led to the composition of the Hebrew Bible.\",\"The Persian Empire's tolerance for Jewish worship contributed to the growth of Christianity.\",\"The early Christian Church's struggles with heresy and persecution influenced the development of doctrine and liturgy.\"],\"effects\":[\"Christianity spread throughout Europe, North Africa, and the Middle East.\",\"The Bible's moral teachings shaped Western ethics and law.\",\"The biblical narratives inspired countless works of art, literature, and music.\"],\"relationships\":[{\"sourceSlug\":\"Ancient Israelites\",\"sourceName\":\"Ancient Israelites\",\"verb\":\"CAUSES\",\"targetSlug\":\"Hebrew Bible\",\"targetName\":\"Hebrew Bible\",\"context\":\"The composition of the Hebrew Bible was influenced by the ancient Israelites' migration from Egypt.\"},{\"sourceSlug\":\"Persian Empire\",\"sourceName\":\"Persian Empire\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Christianity\",\"targetName\":\"Christianity\",\"context\":\"The Persian Empire's tolerance for Jewish worship contributed to the growth of Christianity.\"},{\"sourceSlug\":\"Early Christian Church\",\"sourceName\":\"Early Christian Church\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Bible\",\"targetName\":\"Bible\",\"context\":\"The early Christian Church's struggles with heresy and persecution influenced the development of doctrine and liturgy.\"}],\"places\":[{\"name\":\"Palestine\",\"role\":\"Birthplace\"}],\"texts\":[{\"title\":\"Wikipedia: Bible\",\"type\":\"Reference article\",\"slug\":\"bible\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q1845\",\"https://en.wikipedia.org/wiki/Bible\"],\"tags\":[\"religious text\",\"New Testament & Christian Texts\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Bible is remembered as a landmark text of the Classical era, referenced in 372 Wikipedia language editions. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"The Bible has shaped Western civilization through its teachings on love, forgiveness, and justice, influencing art, literature, law, and politics for centuries.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Artifacts & Texts -- New Testament & Christian Texts -- Global -- Classical"
       ],
       "subjects": [
-        "religious text",
-        "New Testament & Christian Texts"
+        "Judaism",
+        "Christianity",
+        "Western civilization",
+        "Ethics",
+        "Law",
+        "Art",
+        "Literature",
+        "Music",
+        "Theology"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "CULTURAL_TRANSMISSION",
+        "DIPLOMATIC_HISTORY",
+        "ECONOMIC_ANALYSIS",
+        "RELIGIOUS_INTERPRETATION"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -45,7 +54,12 @@
       "$id": "bible",
       "$sequence": "7972",
       "$createdAt": "2026-04-05T12:06:13.994+00:00",
-      "$updatedAt": "2026-04-06T00:51:03.437+00:00"
+      "$updatedAt": "2026-04-06T00:51:03.437+00:00",
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "The Bible has shaped Western civilization through its teachings on love, forgiveness, and justice, influencing art, literature, law, and politics for centuries.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

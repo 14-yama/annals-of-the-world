@@ -353,8 +353,25 @@ async function main(): Promise<void> {
     const entities = data.entities || []
     for (const ent of entities) {
       if (!ent.slug) continue
-      // In --local mode only process entities that are actually dirty
-      if (LOCAL && !ent._unsyncedEdits) continue
+      // In --local mode only process entities that are actually dirty.
+      // The dirty flag can live at the top level OR inside detailsJson — ai_enrich
+      // writes it nested, so we MUST check both. (Previously this only checked
+      // ent._unsyncedEdits, causing 499 enriched entities to silently skip.)
+      if (LOCAL) {
+        let dirty = ent._unsyncedEdits === true
+        if (!dirty && typeof ent.detailsJson === 'string') {
+          try {
+            const dj = JSON.parse(ent.detailsJson) as Record<string, unknown>
+            dirty = dj._unsyncedEdits === true
+              || (Array.isArray(dj._editLog) && (dj._editLog as unknown[]).length > 0)
+          } catch { /* ignore */ }
+        } else if (!dirty && ent.detailsJson && typeof ent.detailsJson === 'object') {
+          const dj = ent.detailsJson as Record<string, unknown>
+          dirty = dj._unsyncedEdits === true
+            || (Array.isArray(dj._editLog) && (dj._editLog as unknown[]).length > 0)
+        }
+        if (!dirty) continue
+      }
       // Per-run cap
       if (writesPerformed >= perRunCap) {
         stoppedReason = `perRunWriteCap=${perRunCap} reached`
