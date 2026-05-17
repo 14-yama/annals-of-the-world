@@ -1,46 +1,35 @@
 {
-  "timestamp": "2026-05-17T01:36:17Z",
+  "timestamp": "2026-05-17T01:47:23Z",
   "model": "ollama",
-  "count_requested": 10,
-  "enriched": 6,
-  "failed": 0,
+  "count_requested": 5,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "entities": [
     {
-      "slug": "wikimedia-foundation",
-      "status": "enriched",
-      "old_len": 78,
-      "new_len": 1663
+      "slug": "thorfinn-of-hamar",
+      "status": "failed",
+      "reason": "Remote end closed connection without response"
     },
     {
-      "slug": "gon\u00e7alo-coelho",
-      "status": "enriched",
-      "old_len": 170,
-      "new_len": 1004
+      "slug": "antarctica",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
     },
     {
-      "slug": "aeacides-of-epirus",
-      "status": "enriched",
-      "old_len": 83,
-      "new_len": 1319
+      "slug": "procopius",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
     },
     {
-      "slug": "magnus-felix-ennodius",
-      "status": "enriched",
-      "old_len": 83,
-      "new_len": 766
+      "slug": "gaius-sallustius-crispus-passienus",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
     },
     {
-      "slug": "paphnutius-of-thebes",
-      "status": "enriched",
-      "old_len": 403,
-      "new_len": 1227
-    },
-    {
-      "slug": "international-monetary-fund",
-      "status": "enriched",
-      "old_len": 84,
-      "new_len": 1058
+      "slug": "bachelors-degree",
+      "status": "failed",
+      "reason": "<urlopen error [Errno 111] Connection refused>"
     }
   ]
 }
