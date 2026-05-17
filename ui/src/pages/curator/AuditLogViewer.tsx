@@ -9,6 +9,7 @@ import {
 import { Query, type Models } from 'appwrite'
 import client, { databases, DATABASE_ID, COLLECTIONS } from '../../lib/appwrite'
 import { StatCard } from '../../components/DataCards'
+import GeminiBotMonitor from '../../components/GeminiBotMonitor'
 
 /* ─── Types ─── */
 
@@ -423,6 +424,14 @@ export default function AuditLogViewer() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [autoRefresh])
 
+  // Backup poll — reload logs every 30s when autoRefresh is on (catches drops in Realtime connection)
+  useEffect(() => {
+    if (!autoRefresh) return
+    const id = setInterval(loadLogs, 30_000)
+    return () => clearInterval(id)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoRefresh])
+
   async function loadLogs() {
     setLoading(true)
     try {
@@ -726,6 +735,11 @@ export default function AuditLogViewer() {
             )
           })}
         </SimpleGrid>
+      </Box>
+
+      {/* ── GEMINI CLOUD BOT MONITOR ─────────────────────────────────────── */}
+      <Box mb={6}>
+        <GeminiBotMonitor cloudEditsToday={logs.filter(l => /gemini|gpt|cloud|AI Entity/i.test(l.editorId ?? '')).length} />
       </Box>
 
       {/* ── LOCAL REINFORCEMENT COMMAND POST ─────────────────────────────── */}
