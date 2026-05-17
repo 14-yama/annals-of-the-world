@@ -11,14 +11,14 @@
       "name": "Nakhchivan",
       "label": "Place",
       "callNumber": "440.nakhchivan",
-      "summary": "Nakhchivan is a city in Azerbaijan. Population: 95,100. Classified under Cities. Nakhchivan is a city in West Asia, established around 1499 BCE. Recognized as a landmark figure with global significance (referenced in 84 Wikipedia editions). Relevant to cause-and-effect analysis.",
+      "summary": "Nakhchivan is an exclave of Azerbaijan separated from the main territory by Armenian-controlled land, with a history stretching to the Bronze Age. Its name is traditionally connected to the biblical Noah, and legend claims it as the site of Noah's tomb; more concretely, it was the capital of the Araxena satrapy under the Median and Achaemenid Empires and an important Silk Road stopping point.\n\nNakhchivan city was a significant medieval Islamic centre with a distinctive 12th-century architectural tradition exemplified by the Momine Khatun Mausoleum (1186), designed by the architect Ajami and considered a masterpiece of medieval Islamic architecture, influencing later mausoleum design across the region. The exclave changed hands between Persia, Russia, and newly-formed Soviet republics through the 20th century. It was assigned to Soviet Azerbaijan in 1921, with Armenian-majority Nagorno-Karabakh separately assigned to Azerbaijan — creating the territorial knot that exploded in the 1988–1994 and 2020–2023 Karabakh Wars.\n\nNakhchivan's physical separation from Azerbaijan creates a geopolitical dependency on Turkey and Iran for supply, and recent Azerbaijani demands for an extraterritorial Zangezur corridor connecting Nakhchivan to Azerbaijan through Armenia is a live flashpoint in South Caucasus geopolitics.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
       "eraDivisionCode": "920",
       "region": "West Asia",
       "continent": "Asia",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "1499 BCE",
       "period": "",
@@ -27,17 +27,20 @@
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/NakchivanMontage2021.jpg",
       "detailsJson": "{\"causes\": [{\"title\": \"Geographic advantage in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}, {\"title\": \"Strategic location in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}, {\"title\": \"Natural resources in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Became center of through Nakhchivan's historical significance\", \"type\": \"Place\"}, {\"title\": \"Influenced surrounding through Nakhchivan's historical significance\", \"type\": \"Place\"}, {\"title\": \"Expanded into through Nakhchivan's historical significance\", \"type\": \"Place\"}], \"relationships\": [{\"sourceSlug\": \"nakhchivan\", \"sourceName\": \"Nakhchivan\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Nakhchivan is situated within the Classical (920)\"}, {\"sourceSlug\": \"nakhchivan\", \"sourceName\": \"Nakhchivan\", \"verb\": \"LOCATED_IN\", \"targetSlug\": \"asia\", \"targetName\": \"Asia\", \"context\": \"Nakhchivan is located in Asia\"}, {\"sourceSlug\": \"nakhchivan\", \"sourceName\": \"Nakhchivan\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"regional-development-classical\", \"targetName\": \"Regional Development (Classical)\", \"context\": \"Nakhchivan shaped regional development during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Nakhchivan\", \"type\": \"Reference article\", \"slug\": \"nakhchivan\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q230104\", \"https://en.wikipedia.org/wiki/Nakhchivan_(city)\"], \"tags\": [\"Azerbaijan\", \"city\", \"Asia\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Nakhchivan is remembered as a landmark place of the Classical era, referenced in 84 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Places -- Cities -- Azerbaijan -- Classical"
+        "Place — City — Azerbaijan — Classical"
       ],
       "subjects": [
+        "Nakhchivan",
         "Azerbaijan",
-        "city",
-        "Asia",
-        "Cities"
+        "South Caucasus",
+        "Exclave",
+        "Islamic Architecture",
+        "Silk Road",
+        "Armenia"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "political-history",
+        "cultural-history"
       ],
       "altNames": [],
       "importanceScore": 9,
@@ -47,7 +50,211 @@
       "$id": "nakhchivan",
       "$sequence": "722717",
       "$createdAt": "2026-04-05T15:18:43.152+00:00",
-      "$updatedAt": "2026-04-06T00:50:47.432+00:00"
+      "$updatedAt": "2026-04-06T00:50:47.432+00:00",
+      "causes": [
+        {
+          "title": "Location on the Araxes River made Nakhchivan a natural crossing point between Iran and the South Caucasus, attracting successive imperial powers",
+          "type": "Place",
+          "year": "c. 2000 BCE–present, South Caucasus"
+        },
+        {
+          "title": "Soviet nationalities policy in 1921 assigned Nakhchivan to Azerbaijan as an exclave and Nagorno-Karabakh separately, creating the territorial disputes of the 20th century",
+          "type": "EventWindow",
+          "year": "1921, South Caucasus"
+        }
+      ],
+      "effects": [
+        {
+          "title": "Momine Khatun Mausoleum (1186) became one of medieval Islamic architecture's masterpieces, influencing mausoleum design across the region",
+          "type": "Institution",
+          "year": "1186, Nakhchivan"
+        },
+        {
+          "title": "Nakhchivan's exclave status created structural dependency on Turkey (through Iran) for all goods and energy, making the Zangezur Corridor question a live territorial dispute",
+          "type": "Place",
+          "year": "1991–present, South Caucasus"
+        },
+        {
+          "title": "The Azerbaijan-Armenia territorial dispute over Karabakh was inextricably linked to Nakhchivan's exclave geography, driving two wars and a regional geopolitical realignment",
+          "type": "EventWindow",
+          "year": "1988–2023, South Caucasus"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "azerbaijan",
+          "verb": "OCCURS_IN",
+          "note": "Nakhchivan is an exclave of Azerbaijan, separated from it by Armenian territory"
+        },
+        {
+          "targetSlug": "armenia",
+          "verb": "INFLUENCES",
+          "note": "Armenia surrounds Nakhchivan's connection to Azerbaijan, making relations the central geopolitical issue"
+        },
+        {
+          "targetSlug": "persian-empire",
+          "verb": "INFLUENCES",
+          "note": "Nakhchivan was capital of the Achaemenid satrapy of Araxena and later part of successive Persian empires"
+        },
+        {
+          "targetSlug": "silk-road",
+          "verb": "INFLUENCES",
+          "note": "Nakhchivan was an important Silk Road stopping point connecting the South Caucasus to Iran and beyond"
+        }
+      ],
+      "places": [
+        "Nakhchivan, Azerbaijan",
+        "Araxes River, South Caucasus"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "Nakhchivan's exclave geography, Silk Road heritage, and medieval Islamic architecture make it a compressed lens on South Caucasus history; its disconnection from Azerbaijan remains a live geopolitical flashpoint.",
+        "significanceCategory": "regional"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "Nakhchivan is a city in Azerbaijan. Population: 95,100. Classified under Cities. Nakhchivan is a city in West Asia, established around 1499 BCE. Recognized as a landmark figure with global significance (referenced in 84 Wikipedia editions). Relevant to cause-and-effect analysis.",
+          "new": "Nakhchivan is an exclave of Azerbaijan separated from the main territory by Armenian-controlled land, with a history stretching to the Bronze Age. Its name is traditionally connected to the biblical Noah, and legend claims it as the site of Noah's tomb; more concretely, it was the capital of the Araxena satrapy under the Median and Achaemenid Empires and an important Silk Road stopping point.\n\nNakhchivan city was a significant medieval Islamic centre with a distinctive 12th-century architectural tradition exemplified by the Momine Khatun Mausoleum (1186), designed by the architect Ajami and considered a masterpiece of medieval Islamic architecture, influencing later mausoleum design across the region. The exclave changed hands between Persia, Russia, and newly-formed Soviet republics through the 20th century. It was assigned to Soviet Azerbaijan in 1921, with Armenian-majority Nagorno-Karabakh separately assigned to Azerbaijan — creating the territorial knot that exploded in the 1988–1994 and 2020–2023 Karabakh Wars.\n\nNakhchivan's physical separation from Azerbaijan creates a geopolitical dependency on Turkey and Iran for supply, and recent Azerbaijani demands for an extraterritorial Zangezur corridor connecting Nakhchivan to Azerbaijan through Armenia is a live flashpoint in South Caucasus geopolitics.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "Location on the Araxes River made Nakhchivan a natural crossing point between Iran and the South Caucasus, attracting successive imperial powers",
+              "type": "Place",
+              "year": "c. 2000 BCE–present, South Caucasus"
+            },
+            {
+              "title": "Soviet nationalities policy in 1921 assigned Nakhchivan to Azerbaijan as an exclave and Nagorno-Karabakh separately, creating the territorial disputes of the 20th century",
+              "type": "EventWindow",
+              "year": "1921, South Caucasus"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "Momine Khatun Mausoleum (1186) became one of medieval Islamic architecture's masterpieces, influencing mausoleum design across the region",
+              "type": "Institution",
+              "year": "1186, Nakhchivan"
+            },
+            {
+              "title": "Nakhchivan's exclave status created structural dependency on Turkey (through Iran) for all goods and energy, making the Zangezur Corridor question a live territorial dispute",
+              "type": "Place",
+              "year": "1991–present, South Caucasus"
+            },
+            {
+              "title": "The Azerbaijan-Armenia territorial dispute over Karabakh was inextricably linked to Nakhchivan's exclave geography, driving two wars and a regional geopolitical realignment",
+              "type": "EventWindow",
+              "year": "1988–2023, South Caucasus"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "azerbaijan",
+              "verb": "OCCURS_IN",
+              "note": "Nakhchivan is an exclave of Azerbaijan, separated from it by Armenian territory"
+            },
+            {
+              "targetSlug": "armenia",
+              "verb": "INFLUENCES",
+              "note": "Armenia surrounds Nakhchivan's connection to Azerbaijan, making relations the central geopolitical issue"
+            },
+            {
+              "targetSlug": "persian-empire",
+              "verb": "INFLUENCES",
+              "note": "Nakhchivan was capital of the Achaemenid satrapy of Araxena and later part of successive Persian empires"
+            },
+            {
+              "targetSlug": "silk-road",
+              "verb": "INFLUENCES",
+              "note": "Nakhchivan was an important Silk Road stopping point connecting the South Caucasus to Iran and beyond"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Nakhchivan, Azerbaijan",
+            "Araxes River, South Caucasus"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "Azerbaijan",
+            "city",
+            "Asia",
+            "Cities"
+          ],
+          "new": [
+            "Nakhchivan",
+            "Azerbaijan",
+            "South Caucasus",
+            "Exclave",
+            "Islamic Architecture",
+            "Silk Road",
+            "Armenia"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Places -- Cities -- Azerbaijan -- Classical"
+          ],
+          "new": [
+            "Place — City — Azerbaijan — Classical"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "GEOPOLITICAL_LINKAGE",
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "political-history",
+            "cultural-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 8,
+            "significanceNarrative": "Nakhchivan's exclave geography, Silk Road heritage, and medieval Islamic architecture make it a compressed lens on South Caucasus history; its disconnection from Azerbaijan remains a live geopolitical flashpoint.",
+            "significanceCategory": "regional"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        }
+      ]
     }
   ]
 }

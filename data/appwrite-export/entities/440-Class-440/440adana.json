@@ -11,14 +11,14 @@
       "name": "Adana",
       "label": "Place",
       "callNumber": "440.adana",
-      "summary": "Adana is a large city in southern Turkey. The city is situated on the Seyhan River, 35 km (22 mi) inland from the northeastern shores of the Mediterranean Sea. It is the administrative seat of the Adana province, and has a metro population of 1,816,750.",
+      "summary": "Adana is Turkey's fifth-largest city, situated on the fertile Çukurova plain of southern Anatolia, and one of the oldest continuously inhabited cities in the world — settled from at least the 13th century BCE and mentioned in Hittite texts. It sits astride the Seyhan River at the entrance to the Cilician Gates, the mountain pass through the Taurus range that was the principal land route between Anatolia and the Levant for thousands of years.\n\nAdana was successively controlled by the Hittites, Assyrians, Persians, Alexander the Great, Rome, Byzantium, Arab caliphates, Armenian Cilicia, the Crusaders, Mamluks, Ramadanids, and Ottomans — each layer visible in its archaeological and architectural record. The Ottoman-era Stone Bridge (Taşköprü) spanning the Seyhan was originally built by Emperor Hadrian and has been continuously used for nearly 2,000 years. The Adana Massacres of 1909 — in which some 15,000–30,000 Armenians were killed — were a precursor to the Armenian Genocide of 1915.\n\nToday Adana is an industrial and agricultural hub famous for its distinctive kebab cuisine and as a centre of Turkish cotton production. It hosts İncirlik Air Base, a key NATO installation used in operations across the Middle East.",
       "era": "Prehistoric",
       "eraSlug": "prehistoric",
       "eraDivision": "Neolithic & Chalcolithic",
       "eraDivisionCode": "912",
       "region": "West Asia",
       "continent": "Asia",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "6000 BCE",
       "period": "",
@@ -27,17 +27,20 @@
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Adana1.jpg",
       "detailsJson": "{\"causes\": [{\"title\": \"Geographic advantage in the before 3000 BCE\", \"type\": \"Place\", \"year\": \"\"}, {\"title\": \"Strategic location in the before 3000 BCE\", \"type\": \"Place\", \"year\": \"\"}, {\"title\": \"Natural resources in the before 3000 BCE\", \"type\": \"Place\", \"year\": \"\"}], \"effects\": [{\"title\": \"Became center of through Adana's historical significance\", \"type\": \"Place\"}, {\"title\": \"Influenced surrounding through Adana's historical significance\", \"type\": \"Place\"}, {\"title\": \"Expanded into through Adana's historical significance\", \"type\": \"Place\"}], \"relationships\": [{\"sourceSlug\": \"adana\", \"sourceName\": \"Adana\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-neolithic-chalcolithic\", \"targetName\": \"Neolithic & Chalcolithic\", \"context\": \"Adana is situated within the Neolithic & Chalcolithic (912)\"}, {\"sourceSlug\": \"adana\", \"sourceName\": \"Adana\", \"verb\": \"LOCATED_IN\", \"targetSlug\": \"asia\", \"targetName\": \"Asia\", \"context\": \"Adana is located in Asia\"}, {\"sourceSlug\": \"adana\", \"sourceName\": \"Adana\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"regional-development-prehistoric\", \"targetName\": \"Regional Development (Prehistoric)\", \"context\": \"Adana shaped regional development during the Prehistoric era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Adana\", \"type\": \"Reference article\", \"slug\": \"adana\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q38545\", \"https://en.wikipedia.org/wiki/Adana\"], \"tags\": [\"Turkey\", \"city\", \"Asia\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Adana is remembered as a landmark place of the Prehistoric era, referenced in 127 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Places -- Cities -- Turkey -- Prehistoric"
+        "Place — City — Turkey — Prehistoric"
       ],
       "subjects": [
+        "Adana",
         "Turkey",
-        "city",
-        "Asia",
-        "Cities"
+        "Anatolia",
+        "Cilicia",
+        "Armenian Massacre",
+        "NATO",
+        "Hittites"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "political-history",
+        "cultural-history"
       ],
       "altNames": [],
       "importanceScore": 10,
@@ -47,7 +50,213 @@
       "$id": "adana",
       "$sequence": "715073",
       "$createdAt": "2026-04-05T15:15:47.064+00:00",
-      "$updatedAt": "2026-04-06T00:50:45.394+00:00"
+      "$updatedAt": "2026-04-06T00:50:45.394+00:00",
+      "causes": [
+        {
+          "title": "Position on the Seyhan River at the Cilician Gates made Adana the unavoidable gateway between Anatolia and the Levant for 3,000 years",
+          "type": "Place",
+          "year": "c. 1300 BCE–present, Turkey"
+        },
+        {
+          "title": "Çukurova plain's agricultural fertility made Adana a natural centre of settlement and tax collection for successive imperial powers",
+          "type": "Place",
+          "year": "c. 1300 BCE–present, Turkey"
+        }
+      ],
+      "effects": [
+        {
+          "title": "Adana Massacres (1909) killed 15,000–30,000 Armenians and served as a rehearsal for the systematic Armenian Genocide of 1915",
+          "type": "EventWindow",
+          "year": "1909, Adana"
+        },
+        {
+          "title": "İncirlik Air Base has been a critical NATO installation used in operations against Iraq, Syria, and elsewhere since 1954",
+          "type": "Institution",
+          "year": "1954–present, Adana"
+        },
+        {
+          "title": "Adana's role as the gateway to the Cilician Gates shaped the routes of Alexander the Great's campaign, the Crusades, and medieval trade",
+          "type": "Place",
+          "year": "c. 333 BCE–1291 CE, Levant"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "hittite-empire",
+          "verb": "INFLUENCES",
+          "note": "Adana was an important Hittite city mentioned in texts from the 13th century BCE"
+        },
+        {
+          "targetSlug": "alexander-the-great",
+          "verb": "INFLUENCES",
+          "note": "Alexander passed through Adana via the Cilician Gates during his Persian campaign"
+        },
+        {
+          "targetSlug": "armenian-genocide",
+          "verb": "INFLUENCES",
+          "note": "The 1909 Adana Massacres prefigured the 1915 Armenian Genocide"
+        },
+        {
+          "targetSlug": "ottoman-empire",
+          "verb": "INFLUENCES",
+          "note": "Adana was a major Ottoman city from 1515 until the empire's dissolution"
+        }
+      ],
+      "places": [
+        "Adana, Turkey",
+        "Cilicia, Turkey",
+        "Taurus Mountains, Turkey"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "Adana has been the strategic gateway between Anatolia and the Levant for 3,000 years — traversed by Hittites, Alexander, Crusaders, and today NATO forces — and was the site of the 1909 Armenian massacres that foreshadowed genocide.",
+        "significanceCategory": "regional"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "Adana is a large city in southern Turkey. The city is situated on the Seyhan River, 35 km (22 mi) inland from the northeastern shores of the Mediterranean Sea. It is the administrative seat of the Adana province, and has a metro population of 1,816,750.",
+          "new": "Adana is Turkey's fifth-largest city, situated on the fertile Çukurova plain of southern Anatolia, and one of the oldest continuously inhabited cities in the world — settled from at least the 13th century BCE and mentioned in Hittite texts. It sits astride the Seyhan River at the entrance to the Cilician Gates, the mountain pass through the Taurus range that was the principal land route between Anatolia and the Levant for thousands of years.\n\nAdana was successively controlled by the Hittites, Assyrians, Persians, Alexander the Great, Rome, Byzantium, Arab caliphates, Armenian Cilicia, the Crusaders, Mamluks, Ramadanids, and Ottomans — each layer visible in its archaeological and architectural record. The Ottoman-era Stone Bridge (Taşköprü) spanning the Seyhan was originally built by Emperor Hadrian and has been continuously used for nearly 2,000 years. The Adana Massacres of 1909 — in which some 15,000–30,000 Armenians were killed — were a precursor to the Armenian Genocide of 1915.\n\nToday Adana is an industrial and agricultural hub famous for its distinctive kebab cuisine and as a centre of Turkish cotton production. It hosts İncirlik Air Base, a key NATO installation used in operations across the Middle East.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "Position on the Seyhan River at the Cilician Gates made Adana the unavoidable gateway between Anatolia and the Levant for 3,000 years",
+              "type": "Place",
+              "year": "c. 1300 BCE–present, Turkey"
+            },
+            {
+              "title": "Çukurova plain's agricultural fertility made Adana a natural centre of settlement and tax collection for successive imperial powers",
+              "type": "Place",
+              "year": "c. 1300 BCE–present, Turkey"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "Adana Massacres (1909) killed 15,000–30,000 Armenians and served as a rehearsal for the systematic Armenian Genocide of 1915",
+              "type": "EventWindow",
+              "year": "1909, Adana"
+            },
+            {
+              "title": "İncirlik Air Base has been a critical NATO installation used in operations against Iraq, Syria, and elsewhere since 1954",
+              "type": "Institution",
+              "year": "1954–present, Adana"
+            },
+            {
+              "title": "Adana's role as the gateway to the Cilician Gates shaped the routes of Alexander the Great's campaign, the Crusades, and medieval trade",
+              "type": "Place",
+              "year": "c. 333 BCE–1291 CE, Levant"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "hittite-empire",
+              "verb": "INFLUENCES",
+              "note": "Adana was an important Hittite city mentioned in texts from the 13th century BCE"
+            },
+            {
+              "targetSlug": "alexander-the-great",
+              "verb": "INFLUENCES",
+              "note": "Alexander passed through Adana via the Cilician Gates during his Persian campaign"
+            },
+            {
+              "targetSlug": "armenian-genocide",
+              "verb": "INFLUENCES",
+              "note": "The 1909 Adana Massacres prefigured the 1915 Armenian Genocide"
+            },
+            {
+              "targetSlug": "ottoman-empire",
+              "verb": "INFLUENCES",
+              "note": "Adana was a major Ottoman city from 1515 until the empire's dissolution"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Adana, Turkey",
+            "Cilicia, Turkey",
+            "Taurus Mountains, Turkey"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "Turkey",
+            "city",
+            "Asia",
+            "Cities"
+          ],
+          "new": [
+            "Adana",
+            "Turkey",
+            "Anatolia",
+            "Cilicia",
+            "Armenian Massacre",
+            "NATO",
+            "Hittites"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Places -- Cities -- Turkey -- Prehistoric"
+          ],
+          "new": [
+            "Place — City — Turkey — Prehistoric"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "GEOPOLITICAL_LINKAGE",
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "political-history",
+            "cultural-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 8,
+            "significanceNarrative": "Adana has been the strategic gateway between Anatolia and the Levant for 3,000 years — traversed by Hittites, Alexander, Crusaders, and today NATO forces — and was the site of the 1909 Armenian massacres that foreshadowed genocide.",
+            "significanceCategory": "regional"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        }
+      ]
     }
   ]
 }

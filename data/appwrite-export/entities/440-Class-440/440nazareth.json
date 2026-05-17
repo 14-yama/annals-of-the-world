@@ -11,14 +11,14 @@
       "name": "Nazareth",
       "label": "Place",
       "callNumber": "440.nazareth",
-      "summary": "City in israel; predominantly inhabited by muslim-arab citizens of israel; a center of christian pilgrimage as the childhood home of jesus Located in Israel. Founded c. 2199 BCE. Population: 83,400.",
+      "summary": "Nazareth is a city in the lower Galilee region of northern Israel, known primarily as the hometown of Jesus of Nazareth, whose life and teachings here before his public ministry gave rise to Christianity — the world's largest religion with 2.4 billion adherents.\n\nA small town in 1st-century Roman-controlled Galilee, Nazareth is mentioned repeatedly in the New Testament as the place where Jesus grew up, where the Annunciation occurred, and where he was rejected after returning to preach ('A prophet is not accepted in his hometown'). Archaeological evidence confirms continuous occupation from the Middle Bronze Age. The city became a major Christian pilgrimage centre in the Byzantine period; the Basilica of the Annunciation (completed 1969) marks the traditional site of the Archangel Gabriel's appearance to Mary.\n\nToday Nazareth is Israel's largest Arab city with about 80,000 residents, predominantly Arab Christian and Muslim. It sits at the intersection of Israeli-Arab tensions and serves as both a living city and a major site for Christian pilgrimage, drawing over a million visitors annually from around the world.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
       "eraDivisionCode": "920",
       "region": "West Asia",
       "continent": "Asia",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "2199 BCE",
       "period": "",
@@ -27,17 +27,20 @@
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Habsora%20from%20selezian.jpg",
       "detailsJson": "{\"causes\": [{\"title\": \"Geographic advantage in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}, {\"title\": \"Strategic location in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}, {\"title\": \"Natural resources in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Became center of through Nazareth's historical significance\", \"type\": \"Place\"}, {\"title\": \"Influenced surrounding through Nazareth's historical significance\", \"type\": \"Place\"}, {\"title\": \"Expanded into through Nazareth's historical significance\", \"type\": \"Place\"}], \"relationships\": [{\"sourceSlug\": \"nazareth\", \"sourceName\": \"Nazareth\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Nazareth is situated within the Classical (920)\"}, {\"sourceSlug\": \"nazareth\", \"sourceName\": \"Nazareth\", \"verb\": \"LOCATED_IN\", \"targetSlug\": \"asia\", \"targetName\": \"Asia\", \"context\": \"Nazareth is located in Asia\"}, {\"sourceSlug\": \"nazareth\", \"sourceName\": \"Nazareth\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"regional-development-classical\", \"targetName\": \"Regional Development (Classical)\", \"context\": \"Nazareth shaped regional development during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Nazareth\", \"type\": \"Reference article\", \"slug\": \"nazareth\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q430776\", \"https://en.wikipedia.org/wiki/Nazareth\"], \"tags\": [\"Israel\", \"city\", \"Asia\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Nazareth is remembered as a landmark place of the Classical era, referenced in 132 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Places -- Cities -- Israel -- Classical"
+        "Place — City — Israel — Classical"
       ],
       "subjects": [
+        "Nazareth",
         "Israel",
-        "city",
-        "Asia",
-        "Cities"
+        "Jesus",
+        "Christianity",
+        "Holy Land",
+        "Pilgrimage",
+        "Galilee"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "religious-history",
+        "cultural-history"
       ],
       "altNames": [],
       "importanceScore": 10,
@@ -47,7 +50,211 @@
       "$id": "nazareth",
       "$sequence": "722792",
       "$createdAt": "2026-04-05T15:18:44.562+00:00",
-      "$updatedAt": "2026-04-06T00:50:45.501+00:00"
+      "$updatedAt": "2026-04-06T00:50:45.501+00:00",
+      "causes": [
+        {
+          "title": "Jesus of Nazareth's upbringing in the town gave it its defining historical significance — without this, Nazareth would be an unremarkable Galilean village",
+          "type": "Person",
+          "year": "c. 6 BCE–26 CE, Nazareth"
+        },
+        {
+          "title": "Byzantine imperial promotion of Christian holy sites (4th century CE) brought pilgrims to Nazareth and funded church construction",
+          "type": "EventWindow",
+          "year": "c. 326–640 CE, Nazareth"
+        }
+      ],
+      "effects": [
+        {
+          "title": "As Jesus' hometown, Nazareth became one of Christianity's holiest sites, drawing pilgrims across 2,000 years and shaping the city's social and economic life",
+          "type": "Place",
+          "year": "c. 30 CE–present, Nazareth"
+        },
+        {
+          "title": "The Basilica of the Annunciation (1969), built over the Grotto of the Annunciation, is the largest church in the Middle East and a major pilgrimage focus",
+          "type": "Institution",
+          "year": "1969, Nazareth"
+        },
+        {
+          "title": "Nazareth's Arab-Christian majority makes it an unusual lens for examining the coexistence of religious heritage, Arab identity, and Israeli statehood",
+          "type": "Place",
+          "year": "1948–present, Israel"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "jesus-of-nazareth",
+          "verb": "INFLUENCES",
+          "note": "Nazareth is Jesus' hometown — the source of his common epithet and a central site in Christian history"
+        },
+        {
+          "targetSlug": "christianity",
+          "verb": "INFLUENCES",
+          "note": "Nazareth's status as Jesus' home made it one of Christianity's foundational holy places"
+        },
+        {
+          "targetSlug": "roman-empire",
+          "verb": "INFLUENCES",
+          "note": "Nazareth was in Roman-controlled Galilee during Jesus' lifetime"
+        },
+        {
+          "targetSlug": "basilica-of-the-annunciation",
+          "verb": "OCCURS_IN",
+          "note": "The Basilica of the Annunciation in Nazareth marks the traditional site of Gabriel's visit to Mary"
+        }
+      ],
+      "places": [
+        "Nazareth, Israel",
+        "Galilee, Israel"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 10,
+        "significanceNarrative": "Nazareth's significance rests entirely — and enormously — on its role as the hometown of Jesus, making it one of the most spiritually charged places on Earth and a pilgrimage destination for 2,000 years.",
+        "significanceCategory": "world-changing"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "City in israel; predominantly inhabited by muslim-arab citizens of israel; a center of christian pilgrimage as the childhood home of jesus Located in Israel. Founded c. 2199 BCE. Population: 83,400.",
+          "new": "Nazareth is a city in the lower Galilee region of northern Israel, known primarily as the hometown of Jesus of Nazareth, whose life and teachings here before his public ministry gave rise to Christianity — the world's largest religion with 2.4 billion adherents.\n\nA small town in 1st-century Roman-controlled Galilee, Nazareth is mentioned repeatedly in the New Testament as the place where Jesus grew up, where the Annunciation occurred, and where he was rejected after returning to preach ('A prophet is not accepted in his hometown'). Archaeological evidence confirms continuous occupation from the Middle Bronze Age. The city became a major Christian pilgrimage centre in the Byzantine period; the Basilica of the Annunciation (completed 1969) marks the traditional site of the Archangel Gabriel's appearance to Mary.\n\nToday Nazareth is Israel's largest Arab city with about 80,000 residents, predominantly Arab Christian and Muslim. It sits at the intersection of Israeli-Arab tensions and serves as both a living city and a major site for Christian pilgrimage, drawing over a million visitors annually from around the world.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "Jesus of Nazareth's upbringing in the town gave it its defining historical significance — without this, Nazareth would be an unremarkable Galilean village",
+              "type": "Person",
+              "year": "c. 6 BCE–26 CE, Nazareth"
+            },
+            {
+              "title": "Byzantine imperial promotion of Christian holy sites (4th century CE) brought pilgrims to Nazareth and funded church construction",
+              "type": "EventWindow",
+              "year": "c. 326–640 CE, Nazareth"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "As Jesus' hometown, Nazareth became one of Christianity's holiest sites, drawing pilgrims across 2,000 years and shaping the city's social and economic life",
+              "type": "Place",
+              "year": "c. 30 CE–present, Nazareth"
+            },
+            {
+              "title": "The Basilica of the Annunciation (1969), built over the Grotto of the Annunciation, is the largest church in the Middle East and a major pilgrimage focus",
+              "type": "Institution",
+              "year": "1969, Nazareth"
+            },
+            {
+              "title": "Nazareth's Arab-Christian majority makes it an unusual lens for examining the coexistence of religious heritage, Arab identity, and Israeli statehood",
+              "type": "Place",
+              "year": "1948–present, Israel"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "jesus-of-nazareth",
+              "verb": "INFLUENCES",
+              "note": "Nazareth is Jesus' hometown — the source of his common epithet and a central site in Christian history"
+            },
+            {
+              "targetSlug": "christianity",
+              "verb": "INFLUENCES",
+              "note": "Nazareth's status as Jesus' home made it one of Christianity's foundational holy places"
+            },
+            {
+              "targetSlug": "roman-empire",
+              "verb": "INFLUENCES",
+              "note": "Nazareth was in Roman-controlled Galilee during Jesus' lifetime"
+            },
+            {
+              "targetSlug": "basilica-of-the-annunciation",
+              "verb": "OCCURS_IN",
+              "note": "The Basilica of the Annunciation in Nazareth marks the traditional site of Gabriel's visit to Mary"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Nazareth, Israel",
+            "Galilee, Israel"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "Israel",
+            "city",
+            "Asia",
+            "Cities"
+          ],
+          "new": [
+            "Nazareth",
+            "Israel",
+            "Jesus",
+            "Christianity",
+            "Holy Land",
+            "Pilgrimage",
+            "Galilee"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Places -- Cities -- Israel -- Classical"
+          ],
+          "new": [
+            "Place — City — Israel — Classical"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "GEOPOLITICAL_LINKAGE",
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "religious-history",
+            "cultural-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 10,
+            "significanceNarrative": "Nazareth's significance rests entirely — and enormously — on its role as the hometown of Jesus, making it one of the most spiritually charged places on Earth and a pilgrimage destination for 2,000 years.",
+            "significanceCategory": "world-changing"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        }
+      ]
     }
   ]
 }

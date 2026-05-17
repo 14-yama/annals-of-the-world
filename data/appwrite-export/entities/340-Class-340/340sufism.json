@@ -11,14 +11,14 @@
       "name": "Sufism",
       "label": "Institution",
       "callNumber": "340.sufism",
-      "summary": "Sufism is a mystic body of religious practice found within Islam that is characterized by a focus on Islamic purification, spirituality, ritualism, and asceticism.",
-      "era": "Classical",
+      "summary": "Sufism (Arabic: Tasawwuf) is the mystical dimension of Islam — an inward spiritual path emphasising direct personal experience of the divine, purification of the soul, and love of God — that emerged in the 8th century CE as a reaction against the perceived worldliness of the early Umayyad caliphate and became the primary vehicle by which Islam spread into Sub-Saharan Africa, South Asia, Central Asia, and Southeast Asia.\n\nSufi orders (tariqas), founded around revered masters (shaykhs), developed distinctive devotional practices: dhikr (rhythmic remembrance of God), sama (sacred music and poetry), and in some orders the whirling meditation of the Mevlevi dervishes founded by Jalal al-Din Rumi (1207–1273). Rumi's Masnavi and the poetry of Hafez and Ibn Arabi represent the peak of Islamic mystical literature — beloved not just by Muslims but by readers worldwide. Major orders include the Qadiri, Naqshbandi, Chishti, and Mevlevi tariqas, each with millions of followers today.\n\nSufism played a pivotal role in the peaceful spread of Islam through merchants and wandering dervishes rather than conquest — particularly in West Africa, Bengal, and the Indonesian archipelago. It generated fierce opposition from Salafi and Wahhabi reform movements from the 18th century onwards and remains a major fault line within contemporary Islam.",
+      "era": "Medieval",
       "eraSlug": "classical",
       "eraDivision": "Classical",
       "eraDivisionCode": "920",
       "region": "Global",
       "continent": "Global",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "",
       "period": "",
@@ -27,15 +27,20 @@
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Tomb%20of%20Abdul%20Qadir%20Jilani%2C%20Baghdad.jpg",
       "detailsJson": "{\"causes\": [{\"title\": \"Need for governance in the 3000 BCE – 500 CE\", \"type\": \"Institution\", \"year\": \"3000 BCE\"}, {\"title\": \"Popular demand in the 3000 BCE – 500 CE\", \"type\": \"Institution\", \"year\": \"3000 BCE\"}, {\"title\": \"Political authority in the 3000 BCE – 500 CE\", \"type\": \"Institution\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Standardized practices through Sufism's historical significance\", \"type\": \"Institution\"}, {\"title\": \"Expanded influence through Sufism's historical significance\", \"type\": \"Institution\"}, {\"title\": \"Created framework through Sufism's historical significance\", \"type\": \"Institution\"}], \"relationships\": [{\"sourceSlug\": \"sufism\", \"sourceName\": \"Sufism\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Sufism is situated within the Classical (920)\"}, {\"sourceSlug\": \"sufism\", \"sourceName\": \"Sufism\", \"verb\": \"GOVERNS\", \"targetSlug\": \"governance-classical\", \"targetName\": \"Governance (Classical)\", \"context\": \"Sufism exercised governance during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Sufism\", \"type\": \"Reference article\", \"slug\": \"sufism\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q9603\", \"https://en.wikipedia.org/wiki/Sufism\"], \"tags\": [\"religious denomination\", \"Religious Institutions\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Sufism left a notable mark on Classical history, documented across 143 Wikipedia editions worldwide. Key lasting impacts include: Shaped institutional landscape and community development. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Institutions -- Religious Institutions -- Global -- Classical"
+        "Idea — Mysticism — Global — Medieval"
       ],
       "subjects": [
-        "religious denomination",
-        "Religious Institutions"
+        "Sufism",
+        "Islam",
+        "Mysticism",
+        "Rumi",
+        "Spirituality",
+        "Islamic Culture",
+        "Tariqas"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "religious-history",
+        "cultural-history"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -45,7 +50,228 @@
       "$id": "sufism",
       "$sequence": "73193",
       "$createdAt": "2026-04-05T12:19:21.089+00:00",
-      "$updatedAt": "2026-04-06T00:51:49.901+00:00"
+      "$updatedAt": "2026-04-06T00:51:49.901+00:00",
+      "causes": [
+        {
+          "title": "Early Islamic expansion and the luxury of Umayyad court life prompted a counter-movement of ascetic piety among devout Muslims in the 8th century",
+          "type": "EventWindow",
+          "year": "c. 750 CE, Middle East"
+        },
+        {
+          "title": "Influence of Christian monasticism, Neoplatonist philosophy, and Persian Zoroastrian mysticism provided intellectual frameworks for Islamic inward spirituality",
+          "type": "Idea",
+          "year": "c. 700–900 CE, Middle East"
+        }
+      ],
+      "effects": [
+        {
+          "title": "Sufi missionaries spread Islam peacefully to Sub-Saharan Africa, Bengal, Central Asia, and Southeast Asia, making Sufism the main vehicle of Islamic globalisation",
+          "type": "Movement",
+          "year": "c. 1000–1700, Global"
+        },
+        {
+          "title": "Rumi's Masnavi and the poetry of Hafez became world literature, translated into hundreds of languages and among the most widely read poetry in the world today",
+          "type": "Text",
+          "year": "c. 1250–present, Global"
+        },
+        {
+          "title": "Sufi orders built dense networks of lodges (khanqahs) that served as hostels, schools, and community centres across the Muslim world — the social infrastructure of Islamic society",
+          "type": "Institution",
+          "year": "c. 900–present, Global"
+        },
+        {
+          "title": "Wahhabi and Salafi reform movements from 18th century onwards defined themselves partly in opposition to Sufi 'innovations', creating an intra-Islamic theological fault line that persists",
+          "type": "Movement",
+          "year": "c. 1744–present, Global"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "rumi",
+          "verb": "INFLUENCES",
+          "note": "Rumi founded the Mevlevi Sufi order and wrote the Masnavi — Sufism's most celebrated mystical text"
+        },
+        {
+          "targetSlug": "islam",
+          "verb": "INFLUENCES",
+          "note": "Sufism is the mystical tradition within Islam, shaping its spiritual and cultural life for 1,200 years"
+        },
+        {
+          "targetSlug": "ibn-arabi",
+          "verb": "INFLUENCES",
+          "note": "Ibn Arabi's philosophical Sufism (wahdat al-wujud) shaped Sufi intellectual tradition across the Islamic world"
+        },
+        {
+          "targetSlug": "wahhabism",
+          "verb": "INFLUENCES",
+          "note": "Wahhabism arose partly as a reaction against Sufi 'innovations' and saint veneration"
+        }
+      ],
+      "places": [
+        "Baghdad, Iraq",
+        "Konya, Turkey",
+        "Global"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 9,
+        "significanceNarrative": "Sufism is the mystical heart of Islam and its most effective missionary force — spreading the faith peacefully across three continents and producing the world's most widely read mystical poetry in Rumi and Hafez.",
+        "significanceCategory": "world-changing"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "Sufism is a mystic body of religious practice found within Islam that is characterized by a focus on Islamic purification, spirituality, ritualism, and asceticism.",
+          "new": "Sufism (Arabic: Tasawwuf) is the mystical dimension of Islam — an inward spiritual path emphasising direct personal experience of the divine, purification of the soul, and love of God — that emerged in the 8th century CE as a reaction against the perceived worldliness of the early Umayyad caliphate and became the primary vehicle by which Islam spread into Sub-Saharan Africa, South Asia, Central Asia, and Southeast Asia.\n\nSufi orders (tariqas), founded around revered masters (shaykhs), developed distinctive devotional practices: dhikr (rhythmic remembrance of God), sama (sacred music and poetry), and in some orders the whirling meditation of the Mevlevi dervishes founded by Jalal al-Din Rumi (1207–1273). Rumi's Masnavi and the poetry of Hafez and Ibn Arabi represent the peak of Islamic mystical literature — beloved not just by Muslims but by readers worldwide. Major orders include the Qadiri, Naqshbandi, Chishti, and Mevlevi tariqas, each with millions of followers today.\n\nSufism played a pivotal role in the peaceful spread of Islam through merchants and wandering dervishes rather than conquest — particularly in West Africa, Bengal, and the Indonesian archipelago. It generated fierce opposition from Salafi and Wahhabi reform movements from the 18th century onwards and remains a major fault line within contemporary Islam.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "Early Islamic expansion and the luxury of Umayyad court life prompted a counter-movement of ascetic piety among devout Muslims in the 8th century",
+              "type": "EventWindow",
+              "year": "c. 750 CE, Middle East"
+            },
+            {
+              "title": "Influence of Christian monasticism, Neoplatonist philosophy, and Persian Zoroastrian mysticism provided intellectual frameworks for Islamic inward spirituality",
+              "type": "Idea",
+              "year": "c. 700–900 CE, Middle East"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "Sufi missionaries spread Islam peacefully to Sub-Saharan Africa, Bengal, Central Asia, and Southeast Asia, making Sufism the main vehicle of Islamic globalisation",
+              "type": "Movement",
+              "year": "c. 1000–1700, Global"
+            },
+            {
+              "title": "Rumi's Masnavi and the poetry of Hafez became world literature, translated into hundreds of languages and among the most widely read poetry in the world today",
+              "type": "Text",
+              "year": "c. 1250–present, Global"
+            },
+            {
+              "title": "Sufi orders built dense networks of lodges (khanqahs) that served as hostels, schools, and community centres across the Muslim world — the social infrastructure of Islamic society",
+              "type": "Institution",
+              "year": "c. 900–present, Global"
+            },
+            {
+              "title": "Wahhabi and Salafi reform movements from 18th century onwards defined themselves partly in opposition to Sufi 'innovations', creating an intra-Islamic theological fault line that persists",
+              "type": "Movement",
+              "year": "c. 1744–present, Global"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "rumi",
+              "verb": "INFLUENCES",
+              "note": "Rumi founded the Mevlevi Sufi order and wrote the Masnavi — Sufism's most celebrated mystical text"
+            },
+            {
+              "targetSlug": "islam",
+              "verb": "INFLUENCES",
+              "note": "Sufism is the mystical tradition within Islam, shaping its spiritual and cultural life for 1,200 years"
+            },
+            {
+              "targetSlug": "ibn-arabi",
+              "verb": "INFLUENCES",
+              "note": "Ibn Arabi's philosophical Sufism (wahdat al-wujud) shaped Sufi intellectual tradition across the Islamic world"
+            },
+            {
+              "targetSlug": "wahhabism",
+              "verb": "INFLUENCES",
+              "note": "Wahhabism arose partly as a reaction against Sufi 'innovations' and saint veneration"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Baghdad, Iraq",
+            "Konya, Turkey",
+            "Global"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "religious denomination",
+            "Religious Institutions"
+          ],
+          "new": [
+            "Sufism",
+            "Islam",
+            "Mysticism",
+            "Rumi",
+            "Spirituality",
+            "Islamic Culture",
+            "Tariqas"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Institutions -- Religious Institutions -- Global -- Classical"
+          ],
+          "new": [
+            "Idea — Mysticism — Global — Medieval"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "GEOPOLITICAL_LINKAGE",
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "religious-history",
+            "cultural-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "era",
+          "old": "Classical",
+          "new": "Medieval",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 9,
+            "significanceNarrative": "Sufism is the mystical heart of Islam and its most effective missionary force — spreading the faith peacefully across three continents and producing the world's most widely read mystical poetry in Rumi and Hafez.",
+            "significanceCategory": "world-changing"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        }
+      ]
     }
   ]
 }

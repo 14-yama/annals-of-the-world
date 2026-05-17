@@ -11,14 +11,14 @@
       "name": "Microsoft",
       "label": "Institution",
       "callNumber": "330.microsoft",
-      "summary": "American multinational technology corporation Headquartered in Redmond. Founded 1975.",
+      "summary": "Microsoft Corporation is an American multinational technology company founded in 1975 by Bill Gates and Paul Allen in Albuquerque, New Mexico, that became the world's largest software company and, in 2024, the world's most valuable publicly traded company. Its operating system MS-DOS (1981) and its successor Windows (1985–present) placed a personal computer on virtually every office desk and home in the developed world — the most impactful consumer software platform in history.\n\nMicrosoft's key strategic move was the non-exclusive licensing of MS-DOS to IBM in 1981, allowing Microsoft to sell the same operating system to all PC manufacturers — a decision that made it the de facto standard while IBM's hardware was commoditised. Windows 95 (released to midnight queues worldwide) launched the GUI era for mass consumers. Microsoft Office — Word, Excel, PowerPoint — became the universal business productivity suite, generating billions in annual licensing revenue. Internet Explorer's bundling with Windows in 1995 triggered the antitrust case US v. Microsoft (1998–2001).\n\nUnder CEO Satya Nadella (2014–present), Microsoft shifted to cloud computing (Azure, now the world's second-largest cloud platform), open-source contributions, and acquired LinkedIn (2016), GitHub (2018), and Activision Blizzard (2023). Its 2023 investment in OpenAI placed it at the centre of the AI revolution.",
       "era": "Contemporary",
       "eraSlug": "contemporary",
       "eraDivision": "Cold War Era",
       "eraDivisionCode": "961",
       "region": "North America",
       "continent": "Americas",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "1975-04-04",
       "period": "",
@@ -27,17 +27,20 @@
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Aerial%20Microsoft%20West%20Campus%20August%202009.jpg",
       "detailsJson": "{\"causes\": [{\"title\": \"Need for governance in the 1945 CE – present\", \"type\": \"Institution\", \"year\": \"1945 CE\"}, {\"title\": \"Popular demand in the 1945 CE – present\", \"type\": \"Institution\", \"year\": \"1945 CE\"}, {\"title\": \"Political authority in the 1945 CE – present\", \"type\": \"Institution\", \"year\": \"1945 CE\"}], \"effects\": [{\"title\": \"Standardized practices through Microsoft's historical significance\", \"type\": \"Institution\"}, {\"title\": \"Expanded influence through Microsoft's historical significance\", \"type\": \"Institution\"}, {\"title\": \"Created framework through Microsoft's historical significance\", \"type\": \"Institution\"}], \"relationships\": [{\"sourceSlug\": \"microsoft\", \"sourceName\": \"Microsoft\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-cold-war-era\", \"targetName\": \"Cold War Era\", \"context\": \"Microsoft is situated within the Cold War Era (961)\"}, {\"sourceSlug\": \"microsoft\", \"sourceName\": \"Microsoft\", \"verb\": \"GOVERNS\", \"targetSlug\": \"governance-contemporary\", \"targetName\": \"Governance (Contemporary)\", \"context\": \"Microsoft exercised governance during the Contemporary era\"}], \"places\": [{\"name\": \"Redmond\", \"role\": \"Headquarters\"}, {\"name\": \"United States\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Microsoft\", \"type\": \"Reference article\", \"slug\": \"microsoft\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q2283\", \"https://en.wikipedia.org/wiki/Microsoft\"], \"tags\": [\"United States\", \"public company\", \"Americas\", \"Trade Guilds & Merchant Houses\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Microsoft is remembered as a landmark institution of the Contemporary era, referenced in 174 Wikipedia language editions. Key lasting impacts include: Shaped institutional landscape and community development. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Institutions -- Economic Institutions -- Americas -- Contemporary"
+        "Institution — Technology Company — USA — Contemporary"
       ],
       "subjects": [
-        "United States",
-        "public company",
-        "Americas",
-        "Trade Guilds & Merchant Houses"
+        "Microsoft",
+        "Technology",
+        "Software",
+        "Bill Gates",
+        "Windows",
+        "Cloud Computing",
+        "AI"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "economic-history",
+        "technological-history"
       ],
       "altNames": [],
       "importanceScore": 9,
@@ -47,7 +50,221 @@
       "$id": "microsoft",
       "$sequence": "117047",
       "$createdAt": "2026-04-05T12:28:06.432+00:00",
-      "$updatedAt": "2026-04-06T00:50:46.711+00:00"
+      "$updatedAt": "2026-04-06T00:50:46.711+00:00",
+      "causes": [
+        {
+          "title": "IBM's 1980 decision to outsource the operating system for its Personal Computer gave Microsoft the contract that made it the de facto global OS standard",
+          "type": "Institution",
+          "year": "1980, USA"
+        },
+        {
+          "title": "Bill Gates and Paul Allen's insight that software, not hardware, would be the profitable layer of personal computing drove Microsoft's strategy from its founding",
+          "type": "Person",
+          "year": "1975, USA"
+        }
+      ],
+      "effects": [
+        {
+          "title": "MS-DOS and Windows placed a Microsoft operating system on over 90% of the world's personal computers, making it the dominant computing infrastructure of the late 20th century",
+          "type": "Idea",
+          "year": "1981–2000, Global"
+        },
+        {
+          "title": "Microsoft Office became the world's universal business productivity suite, making Word, Excel, and PowerPoint the standard tools of knowledge work globally",
+          "type": "Institution",
+          "year": "1989–present, Global"
+        },
+        {
+          "title": "US v. Microsoft antitrust case (1998–2001) was a landmark in regulating technology monopolies, shaping how competition law applies to digital platform dominance",
+          "type": "EventWindow",
+          "year": "1998–2001, USA"
+        },
+        {
+          "title": "Microsoft's $13 billion investment in OpenAI (2019–2023) positioned it as the leading enterprise AI platform, integrating generative AI into Office, Windows, and Azure",
+          "type": "EventWindow",
+          "year": "2019–present, Global"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "bill-gates",
+          "verb": "INFLUENCES",
+          "note": "Bill Gates co-founded Microsoft and led it to become the world's most valuable software company"
+        },
+        {
+          "targetSlug": "ibm",
+          "verb": "INFLUENCES",
+          "note": "IBM's 1981 PC contract gave Microsoft the OS monopoly that defined its first 30 years"
+        },
+        {
+          "targetSlug": "openai",
+          "verb": "INFLUENCES",
+          "note": "Microsoft's $13 billion investment in OpenAI placed it at the centre of the 2023 AI revolution"
+        },
+        {
+          "targetSlug": "personal-computer",
+          "verb": "INFLUENCES",
+          "note": "Microsoft's operating systems and productivity software defined the personal computing era"
+        }
+      ],
+      "places": [
+        "Redmond, Washington, USA",
+        "Global"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 9,
+        "significanceNarrative": "Microsoft placed computing on every desk on Earth, made software the world's most valuable asset class, and is now central to the AI revolution — the most impactful software company in history by reach and economic value.",
+        "significanceCategory": "world-changing"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "American multinational technology corporation Headquartered in Redmond. Founded 1975.",
+          "new": "Microsoft Corporation is an American multinational technology company founded in 1975 by Bill Gates and Paul Allen in Albuquerque, New Mexico, that became the world's largest software company and, in 2024, the world's most valuable publicly traded company. Its operating system MS-DOS (1981) and its successor Windows (1985–present) placed a personal computer on virtually every office desk and home in the developed world — the most impactful consumer software platform in history.\n\nMicrosoft's key strategic move was the non-exclusive licensing of MS-DOS to IBM in 1981, allowing Microsoft to sell the same operating system to all PC manufacturers — a decision that made it the de facto standard while IBM's hardware was commoditised. Windows 95 (released to midnight queues worldwide) launched the GUI era for mass consumers. Microsoft Office — Word, Excel, PowerPoint — became the universal business productivity suite, generating billions in annual licensing revenue. Internet Explorer's bundling with Windows in 1995 triggered the antitrust case US v. Microsoft (1998–2001).\n\nUnder CEO Satya Nadella (2014–present), Microsoft shifted to cloud computing (Azure, now the world's second-largest cloud platform), open-source contributions, and acquired LinkedIn (2016), GitHub (2018), and Activision Blizzard (2023). Its 2023 investment in OpenAI placed it at the centre of the AI revolution.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "IBM's 1980 decision to outsource the operating system for its Personal Computer gave Microsoft the contract that made it the de facto global OS standard",
+              "type": "Institution",
+              "year": "1980, USA"
+            },
+            {
+              "title": "Bill Gates and Paul Allen's insight that software, not hardware, would be the profitable layer of personal computing drove Microsoft's strategy from its founding",
+              "type": "Person",
+              "year": "1975, USA"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "MS-DOS and Windows placed a Microsoft operating system on over 90% of the world's personal computers, making it the dominant computing infrastructure of the late 20th century",
+              "type": "Idea",
+              "year": "1981–2000, Global"
+            },
+            {
+              "title": "Microsoft Office became the world's universal business productivity suite, making Word, Excel, and PowerPoint the standard tools of knowledge work globally",
+              "type": "Institution",
+              "year": "1989–present, Global"
+            },
+            {
+              "title": "US v. Microsoft antitrust case (1998–2001) was a landmark in regulating technology monopolies, shaping how competition law applies to digital platform dominance",
+              "type": "EventWindow",
+              "year": "1998–2001, USA"
+            },
+            {
+              "title": "Microsoft's $13 billion investment in OpenAI (2019–2023) positioned it as the leading enterprise AI platform, integrating generative AI into Office, Windows, and Azure",
+              "type": "EventWindow",
+              "year": "2019–present, Global"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "bill-gates",
+              "verb": "INFLUENCES",
+              "note": "Bill Gates co-founded Microsoft and led it to become the world's most valuable software company"
+            },
+            {
+              "targetSlug": "ibm",
+              "verb": "INFLUENCES",
+              "note": "IBM's 1981 PC contract gave Microsoft the OS monopoly that defined its first 30 years"
+            },
+            {
+              "targetSlug": "openai",
+              "verb": "INFLUENCES",
+              "note": "Microsoft's $13 billion investment in OpenAI placed it at the centre of the 2023 AI revolution"
+            },
+            {
+              "targetSlug": "personal-computer",
+              "verb": "INFLUENCES",
+              "note": "Microsoft's operating systems and productivity software defined the personal computing era"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Redmond, Washington, USA",
+            "Global"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "United States",
+            "public company",
+            "Americas",
+            "Trade Guilds & Merchant Houses"
+          ],
+          "new": [
+            "Microsoft",
+            "Technology",
+            "Software",
+            "Bill Gates",
+            "Windows",
+            "Cloud Computing",
+            "AI"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Institutions -- Economic Institutions -- Americas -- Contemporary"
+          ],
+          "new": [
+            "Institution — Technology Company — USA — Contemporary"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "GEOPOLITICAL_LINKAGE",
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "economic-history",
+            "technological-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 9,
+            "significanceNarrative": "Microsoft placed computing on every desk on Earth, made software the world's most valuable asset class, and is now central to the AI revolution — the most impactful software company in history by reach and economic value.",
+            "significanceCategory": "world-changing"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        }
+      ]
     }
   ]
 }

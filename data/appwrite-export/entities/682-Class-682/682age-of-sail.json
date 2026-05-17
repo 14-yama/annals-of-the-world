@@ -11,14 +11,14 @@
       "name": "Age of Sail",
       "label": "Movement",
       "callNumber": "682.age-of-sail",
-      "summary": "The period from the 16th to mid-19th century when international trade and naval warfare were dominated by sailing ships. Encompassing exploration, colonialism, piracy, and the transatlantic slave trade, it transformed global demographics, economies, and power structures.",
+      "summary": "The Age of Sail was the period — roughly 1571 to 1862 — during which wind-powered sailing ships reached their technological peak and dominated world naval power, global commerce, and European imperial expansion. It was bounded at one end by the Battle of Lepanto (1571), the last great Mediterranean galley battle, and at the other by the transition to steam propulsion after the American Civil War.\n\nDuring this period, European powers built ocean-going warships capable of circling the globe, carrying hundreds of cannons, and projecting force to every inhabited coastline on Earth. The defining vessel was the 'ship of the line' — a three-masted warship carrying 60–120 guns on two or three decks. Nelson's victory at Trafalgar (1805) with 27 ships against 33 Franco-Spanish vessels established British naval supremacy that lasted until World War I. The East India companies of England, the Netherlands, and France used Age of Sail shipping to build the world's first global corporations and the trading empires that dominated the Indian Ocean and the Atlantic.\n\nThe Age of Sail enabled the Atlantic slave trade (12 million Africans transported 1500–1900), the Columbian Exchange of crops and diseases, and the European colonisation of the Americas, Africa, and Asia that created the modern world's economic and political geography.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Age of Exploration",
       "eraDivisionCode": "941",
       "region": "Global",
       "continent": "Global",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "",
       "period": "",
@@ -27,14 +27,20 @@
       "imageUrl": "",
       "detailsJson": "{\"causes\": [{\"title\": \"Social conditions in the 1500 – 1800 CE\", \"type\": \"Movement\", \"year\": \"1500\"}, {\"title\": \"Intellectual precursors in the 1500 – 1800 CE\", \"type\": \"Movement\", \"year\": \"1500\"}, {\"title\": \"Economic pressures in the 1500 – 1800 CE\", \"type\": \"Movement\", \"year\": \"1500\"}], \"effects\": [{\"title\": \"Policy changes through Age of Sail's historical significance\", \"type\": \"Movement\"}, {\"title\": \"Cultural shift through Age of Sail's historical significance\", \"type\": \"Movement\"}, {\"title\": \"Institutional reform through Age of Sail's historical significance\", \"type\": \"Movement\"}], \"relationships\": [{\"sourceSlug\": \"age-of-sail\", \"sourceName\": \"Age of Sail\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-age-of-exploration\", \"targetName\": \"Age of Exploration\", \"context\": \"Age of Sail is situated within the Age of Exploration (941)\"}, {\"sourceSlug\": \"age-of-sail\", \"sourceName\": \"Age of Sail\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"exploration\", \"targetName\": \"Exploration\", \"context\": \"Age of Sail drove transformation in Exploration\"}, {\"sourceSlug\": \"age-of-sail\", \"sourceName\": \"Age of Sail\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"reformation\", \"targetName\": \"Reformation\", \"context\": \"Age of Sail drove transformation in Reformation\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Age of Sail\", \"type\": \"Reference article\", \"slug\": \"age-of-sail\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q173181\"], \"tags\": [\"Maritime Trade & Age of Sail\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Age of Sail is remembered as a landmark movement of the Early Modern era, referenced in 0 Wikipedia language editions. Key lasting impacts include: Influenced social, political, or cultural transformation. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Movements -- Maritime Trade & Age of Sail -- Global -- Early Modern"
+        "Movement — Maritime Era — Global — Early Modern"
       ],
       "subjects": [
-        "Maritime Trade & Age of Sail"
+        "Age of Sail",
+        "Naval History",
+        "Maritime",
+        "British Empire",
+        "Colonialism",
+        "Slave Trade",
+        "Trade"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "world-systems",
+        "military-history"
       ],
       "altNames": [],
       "importanceScore": 9,
@@ -44,7 +50,222 @@
       "$id": "age-of-sail",
       "$sequence": "141966",
       "$createdAt": "2026-04-05T12:33:05.208+00:00",
-      "$updatedAt": "2026-04-06T00:50:46.981+00:00"
+      "$updatedAt": "2026-04-06T00:50:46.981+00:00",
+      "causes": [
+        {
+          "title": "Portuguese and Spanish development of the caravel and carrack in the 15th century created ocean-going vessels capable of sailing against the wind and carrying heavy armament",
+          "type": "Idea",
+          "year": "c. 1420–1500, Europe"
+        },
+        {
+          "title": "Lateen sail, magnetic compass, and astrolabe navigation combined to make open-ocean navigation predictable enough for commercial round-trip voyages",
+          "type": "Idea",
+          "year": "c. 1300–1500, Europe"
+        }
+      ],
+      "effects": [
+        {
+          "title": "European colonial empires — Spanish, Portuguese, Dutch, British, French — were built entirely on Age of Sail logistics, making it the enabling technology of global colonialism",
+          "type": "EventWindow",
+          "year": "c. 1492–1800, Global"
+        },
+        {
+          "title": "Battle of Trafalgar (1805) established British naval supremacy that translated into 'Pax Britannica' — a century of British-regulated global maritime commerce",
+          "type": "EventWindow",
+          "year": "1805, Atlantic Ocean"
+        },
+        {
+          "title": "Atlantic slave trade transported 12 million Africans to the Americas using Age of Sail vessels, creating the African diaspora and the plantation economies of the New World",
+          "type": "EventWindow",
+          "year": "c. 1500–1867, Atlantic Ocean"
+        },
+        {
+          "title": "Steam propulsion (paddle steamers from 1819, screw propeller from 1836) made the Age of Sail obsolete by the 1860s, ending 300 years of wind-power naval supremacy",
+          "type": "Idea",
+          "year": "c. 1819–1862, Global"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "battle-of-trafalgar",
+          "verb": "INFLUENCES",
+          "note": "Trafalgar (1805) was the Age of Sail's defining naval battle, establishing British supremacy for a century"
+        },
+        {
+          "targetSlug": "atlantic-slave-trade",
+          "verb": "INFLUENCES",
+          "note": "Age of Sail ships were the instrument of the Atlantic slave trade, transporting 12 million Africans"
+        },
+        {
+          "targetSlug": "british-empire",
+          "verb": "INFLUENCES",
+          "note": "The British Empire's global reach depended entirely on Age of Sail naval and commercial supremacy"
+        },
+        {
+          "targetSlug": "east-india-company",
+          "verb": "INFLUENCES",
+          "note": "The English and Dutch East India Companies used Age of Sail ships to build the first global corporations"
+        }
+      ],
+      "places": [
+        "Atlantic Ocean",
+        "Pacific Ocean",
+        "Indian Ocean",
+        "Europe"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 10,
+        "significanceNarrative": "The Age of Sail was the enabling technology of European global domination — its warships and merchant vessels created the colonial empires, the Atlantic slave trade, and the globalised world economy that define the modern era.",
+        "significanceCategory": "world-changing"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "The period from the 16th to mid-19th century when international trade and naval warfare were dominated by sailing ships. Encompassing exploration, colonialism, piracy, and the transatlantic slave trade, it transformed global demographics, economies, and power structures.",
+          "new": "The Age of Sail was the period — roughly 1571 to 1862 — during which wind-powered sailing ships reached their technological peak and dominated world naval power, global commerce, and European imperial expansion. It was bounded at one end by the Battle of Lepanto (1571), the last great Mediterranean galley battle, and at the other by the transition to steam propulsion after the American Civil War.\n\nDuring this period, European powers built ocean-going warships capable of circling the globe, carrying hundreds of cannons, and projecting force to every inhabited coastline on Earth. The defining vessel was the 'ship of the line' — a three-masted warship carrying 60–120 guns on two or three decks. Nelson's victory at Trafalgar (1805) with 27 ships against 33 Franco-Spanish vessels established British naval supremacy that lasted until World War I. The East India companies of England, the Netherlands, and France used Age of Sail shipping to build the world's first global corporations and the trading empires that dominated the Indian Ocean and the Atlantic.\n\nThe Age of Sail enabled the Atlantic slave trade (12 million Africans transported 1500–1900), the Columbian Exchange of crops and diseases, and the European colonisation of the Americas, Africa, and Asia that created the modern world's economic and political geography.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "Portuguese and Spanish development of the caravel and carrack in the 15th century created ocean-going vessels capable of sailing against the wind and carrying heavy armament",
+              "type": "Idea",
+              "year": "c. 1420–1500, Europe"
+            },
+            {
+              "title": "Lateen sail, magnetic compass, and astrolabe navigation combined to make open-ocean navigation predictable enough for commercial round-trip voyages",
+              "type": "Idea",
+              "year": "c. 1300–1500, Europe"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "European colonial empires — Spanish, Portuguese, Dutch, British, French — were built entirely on Age of Sail logistics, making it the enabling technology of global colonialism",
+              "type": "EventWindow",
+              "year": "c. 1492–1800, Global"
+            },
+            {
+              "title": "Battle of Trafalgar (1805) established British naval supremacy that translated into 'Pax Britannica' — a century of British-regulated global maritime commerce",
+              "type": "EventWindow",
+              "year": "1805, Atlantic Ocean"
+            },
+            {
+              "title": "Atlantic slave trade transported 12 million Africans to the Americas using Age of Sail vessels, creating the African diaspora and the plantation economies of the New World",
+              "type": "EventWindow",
+              "year": "c. 1500–1867, Atlantic Ocean"
+            },
+            {
+              "title": "Steam propulsion (paddle steamers from 1819, screw propeller from 1836) made the Age of Sail obsolete by the 1860s, ending 300 years of wind-power naval supremacy",
+              "type": "Idea",
+              "year": "c. 1819–1862, Global"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "battle-of-trafalgar",
+              "verb": "INFLUENCES",
+              "note": "Trafalgar (1805) was the Age of Sail's defining naval battle, establishing British supremacy for a century"
+            },
+            {
+              "targetSlug": "atlantic-slave-trade",
+              "verb": "INFLUENCES",
+              "note": "Age of Sail ships were the instrument of the Atlantic slave trade, transporting 12 million Africans"
+            },
+            {
+              "targetSlug": "british-empire",
+              "verb": "INFLUENCES",
+              "note": "The British Empire's global reach depended entirely on Age of Sail naval and commercial supremacy"
+            },
+            {
+              "targetSlug": "east-india-company",
+              "verb": "INFLUENCES",
+              "note": "The English and Dutch East India Companies used Age of Sail ships to build the first global corporations"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Atlantic Ocean",
+            "Pacific Ocean",
+            "Indian Ocean",
+            "Europe"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "Maritime Trade & Age of Sail"
+          ],
+          "new": [
+            "Age of Sail",
+            "Naval History",
+            "Maritime",
+            "British Empire",
+            "Colonialism",
+            "Slave Trade",
+            "Trade"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Movements -- Maritime Trade & Age of Sail -- Global -- Early Modern"
+          ],
+          "new": [
+            "Movement — Maritime Era — Global — Early Modern"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "GEOPOLITICAL_LINKAGE",
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "world-systems",
+            "military-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 10,
+            "significanceNarrative": "The Age of Sail was the enabling technology of European global domination — its warships and merchant vessels created the colonial empires, the Atlantic slave trade, and the globalised world economy that define the modern era.",
+            "significanceCategory": "world-changing"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        }
+      ]
     }
   ]
 }

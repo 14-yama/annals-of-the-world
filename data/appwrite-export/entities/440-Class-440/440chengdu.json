@@ -11,14 +11,14 @@
       "name": "Chengdu",
       "label": "Place",
       "callNumber": "440.chengdu",
-      "summary": "Chengdu is the capital city of the Chinese province of Sichuan. With a population of 20,937,757 at the 2020 census, it is the fourth most populous city in China, and it is the only city with a population of over 20 million apart from provincial-level municipalities. It is traditionally the hub of Western China.",
+      "summary": "Chengdu is the capital of China's Sichuan province and one of the country's oldest continuously inhabited cities, the political and economic centre of the Sichuan basin for over 2,300 years since the Qin state absorbed the Shu kingdom in 316 BCE. It is China's most stable major city — never the capital of a unified China, yet always wealthy enough to sustain art, culture, and philosophy independent of dynastic upheavals in the north and east.\n\nThe poet Du Fu (712–770 CE), among China's most celebrated, spent four years in Chengdu during the An Lushan Rebellion; his 'thatched cottage' there is now China's most visited literary heritage site. The Jinsha site (c. 1200–650 BCE) and Sanxingdui (c. 1600 BCE) — uncovered near Chengdu — revealed a sophisticated Bronze Age civilisation entirely separate from Yellow River culture, rewriting Chinese prehistory. The city pioneered the world's first paper money (jiaozi) in the Northern Song dynasty (c. 960 CE) and the world's first known irrigation system still in operation — the Dujiangyan, built 256 BCE, still waters 5,300 km² of farmland.\n\nToday Chengdu (21 million people) is China's tech hub in the west, home to Intel, Dell, and hundreds of multinationals, and internationally known as the home of China's giant panda breeding programme.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Hellenistic Period",
       "eraDivisionCode": "922",
       "region": "East Asia",
       "continent": "Asia",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "310 BCE",
       "period": "",
@@ -27,17 +27,20 @@
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/%E9%9B%AA%E5%B1%B1%E4%B8%8B%E7%9A%84%E6%88%90%E9%83%BD%E5%B8%82%E5%A4%A9%E9%99%85%E7%BA%BF%20Chengdu%20skyline%20with%20snow%20capped%20mountains.jpg",
       "detailsJson": "{\"causes\": [{\"title\": \"Geographic advantage in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}, {\"title\": \"Strategic location in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}, {\"title\": \"Natural resources in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Became center of through Chengdu's historical significance\", \"type\": \"Place\"}, {\"title\": \"Influenced surrounding through Chengdu's historical significance\", \"type\": \"Place\"}, {\"title\": \"Expanded into through Chengdu's historical significance\", \"type\": \"Place\"}], \"relationships\": [{\"sourceSlug\": \"chengdu\", \"sourceName\": \"Chengdu\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-hellenistic-period\", \"targetName\": \"Hellenistic Period\", \"context\": \"Chengdu is situated within the Hellenistic Period (922)\"}, {\"sourceSlug\": \"chengdu\", \"sourceName\": \"Chengdu\", \"verb\": \"LOCATED_IN\", \"targetSlug\": \"asia\", \"targetName\": \"Asia\", \"context\": \"Chengdu is located in Asia\"}, {\"sourceSlug\": \"chengdu\", \"sourceName\": \"Chengdu\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"regional-development-classical\", \"targetName\": \"Regional Development (Classical)\", \"context\": \"Chengdu shaped regional development during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Chengdu\", \"type\": \"Reference article\", \"slug\": \"chengdu\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q30002\", \"https://en.wikipedia.org/wiki/Chengdu\"], \"tags\": [\"China\", \"city\", \"Asia\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Chengdu is remembered as a landmark place of the Classical era, referenced in 129 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Places -- Cities -- China -- Classical"
+        "Place — City — China — Classical"
       ],
       "subjects": [
+        "Chengdu",
         "China",
-        "city",
-        "Asia",
-        "Cities"
+        "Sichuan",
+        "Du Fu",
+        "Dujiangyan",
+        "Sanxingdui",
+        "Paper Money"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "cultural-history",
+        "economic-history"
       ],
       "altNames": [],
       "importanceScore": 9,
@@ -47,7 +50,211 @@
       "$id": "chengdu",
       "$sequence": "717378",
       "$createdAt": "2026-04-05T15:16:38.501+00:00",
-      "$updatedAt": "2026-04-06T00:50:47.199+00:00"
+      "$updatedAt": "2026-04-06T00:50:47.199+00:00",
+      "causes": [
+        {
+          "title": "Sichuan basin's extraordinary agricultural fertility — irrigated by the Dujiangyan system from 256 BCE — supported urban wealth independent of northern Chinese political cycles",
+          "type": "Place",
+          "year": "256 BCE–present, Chengdu"
+        },
+        {
+          "title": "Qin conquest of the Shu kingdom (316 BCE) integrated Chengdu into Chinese imperial governance while preserving its distinct Sichuan culture",
+          "type": "EventWindow",
+          "year": "316 BCE, Sichuan"
+        }
+      ],
+      "effects": [
+        {
+          "title": "Dujiangyan irrigation system (256 BCE) has continuously watered 5,300 km² of farmland for 2,280 years, making it the world's oldest large-scale hydraulic engineering project still in operation",
+          "type": "Institution",
+          "year": "256 BCE–present, Sichuan"
+        },
+        {
+          "title": "Sanxingdui and Jinsha discoveries revealed a sophisticated independent Bronze Age civilisation in Sichuan, fundamentally revising the model of Chinese civilisational origins",
+          "type": "EventWindow",
+          "year": "1986–2021, Sichuan"
+        },
+        {
+          "title": "World's first paper money (jiaozi) issued in Chengdu c. 960 CE revolutionised commerce by replacing heavy coins with portable currency",
+          "type": "Idea",
+          "year": "c. 960 CE, Chengdu"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "qin-dynasty",
+          "verb": "INFLUENCES",
+          "note": "The Qin absorbed Chengdu in 316 BCE, integrating Sichuan into imperial China"
+        },
+        {
+          "targetSlug": "du-fu",
+          "verb": "INFLUENCES",
+          "note": "Du Fu wrote many of his most celebrated poems during his Chengdu years 759–763 CE"
+        },
+        {
+          "targetSlug": "sanxingdui",
+          "verb": "OCCURS_IN",
+          "note": "The Sanxingdui Bronze Age site near Chengdu revealed an independent ancient civilisation"
+        },
+        {
+          "targetSlug": "silk-road",
+          "verb": "INFLUENCES",
+          "note": "Chengdu was a key node on the southern Silk Road connecting China to Southeast Asia and India"
+        }
+      ],
+      "places": [
+        "Chengdu, China",
+        "Sichuan, China"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 9,
+        "significanceNarrative": "Chengdu pioneered paper money, built the world's oldest functioning irrigation system, hid a Bronze Age civilisation that rewrote Chinese prehistory, and sheltered China's greatest poet — a city whose innovations quietly shaped global history.",
+        "significanceCategory": "continental"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "Chengdu is the capital city of the Chinese province of Sichuan. With a population of 20,937,757 at the 2020 census, it is the fourth most populous city in China, and it is the only city with a population of over 20 million apart from provincial-level municipalities. It is traditionally the hub of Western China.",
+          "new": "Chengdu is the capital of China's Sichuan province and one of the country's oldest continuously inhabited cities, the political and economic centre of the Sichuan basin for over 2,300 years since the Qin state absorbed the Shu kingdom in 316 BCE. It is China's most stable major city — never the capital of a unified China, yet always wealthy enough to sustain art, culture, and philosophy independent of dynastic upheavals in the north and east.\n\nThe poet Du Fu (712–770 CE), among China's most celebrated, spent four years in Chengdu during the An Lushan Rebellion; his 'thatched cottage' there is now China's most visited literary heritage site. The Jinsha site (c. 1200–650 BCE) and Sanxingdui (c. 1600 BCE) — uncovered near Chengdu — revealed a sophisticated Bronze Age civilisation entirely separate from Yellow River culture, rewriting Chinese prehistory. The city pioneered the world's first paper money (jiaozi) in the Northern Song dynasty (c. 960 CE) and the world's first known irrigation system still in operation — the Dujiangyan, built 256 BCE, still waters 5,300 km² of farmland.\n\nToday Chengdu (21 million people) is China's tech hub in the west, home to Intel, Dell, and hundreds of multinationals, and internationally known as the home of China's giant panda breeding programme.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "Sichuan basin's extraordinary agricultural fertility — irrigated by the Dujiangyan system from 256 BCE — supported urban wealth independent of northern Chinese political cycles",
+              "type": "Place",
+              "year": "256 BCE–present, Chengdu"
+            },
+            {
+              "title": "Qin conquest of the Shu kingdom (316 BCE) integrated Chengdu into Chinese imperial governance while preserving its distinct Sichuan culture",
+              "type": "EventWindow",
+              "year": "316 BCE, Sichuan"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "Dujiangyan irrigation system (256 BCE) has continuously watered 5,300 km² of farmland for 2,280 years, making it the world's oldest large-scale hydraulic engineering project still in operation",
+              "type": "Institution",
+              "year": "256 BCE–present, Sichuan"
+            },
+            {
+              "title": "Sanxingdui and Jinsha discoveries revealed a sophisticated independent Bronze Age civilisation in Sichuan, fundamentally revising the model of Chinese civilisational origins",
+              "type": "EventWindow",
+              "year": "1986–2021, Sichuan"
+            },
+            {
+              "title": "World's first paper money (jiaozi) issued in Chengdu c. 960 CE revolutionised commerce by replacing heavy coins with portable currency",
+              "type": "Idea",
+              "year": "c. 960 CE, Chengdu"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "qin-dynasty",
+              "verb": "INFLUENCES",
+              "note": "The Qin absorbed Chengdu in 316 BCE, integrating Sichuan into imperial China"
+            },
+            {
+              "targetSlug": "du-fu",
+              "verb": "INFLUENCES",
+              "note": "Du Fu wrote many of his most celebrated poems during his Chengdu years 759–763 CE"
+            },
+            {
+              "targetSlug": "sanxingdui",
+              "verb": "OCCURS_IN",
+              "note": "The Sanxingdui Bronze Age site near Chengdu revealed an independent ancient civilisation"
+            },
+            {
+              "targetSlug": "silk-road",
+              "verb": "INFLUENCES",
+              "note": "Chengdu was a key node on the southern Silk Road connecting China to Southeast Asia and India"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Chengdu, China",
+            "Sichuan, China"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "China",
+            "city",
+            "Asia",
+            "Cities"
+          ],
+          "new": [
+            "Chengdu",
+            "China",
+            "Sichuan",
+            "Du Fu",
+            "Dujiangyan",
+            "Sanxingdui",
+            "Paper Money"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Places -- Cities -- China -- Classical"
+          ],
+          "new": [
+            "Place — City — China — Classical"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "GEOPOLITICAL_LINKAGE",
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "cultural-history",
+            "economic-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 9,
+            "significanceNarrative": "Chengdu pioneered paper money, built the world's oldest functioning irrigation system, hid a Bronze Age civilisation that rewrote Chinese prehistory, and sheltered China's greatest poet — a city whose innovations quietly shaped global history.",
+            "significanceCategory": "continental"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        }
+      ]
     }
   ]
 }

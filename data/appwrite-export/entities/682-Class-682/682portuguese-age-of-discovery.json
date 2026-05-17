@@ -11,14 +11,14 @@
       "name": "Portuguese Age of Discovery",
       "label": "Movement",
       "callNumber": "682.portuguese-age-of-discovery",
-      "summary": "Portugal's maritime exploration movement beginning with Prince Henry the Navigator in the early 15th century. Portuguese sailors charted the African coast, discovered the sea route to India (Vasco da Gama, 1498), and established a global trading empire connecting Europe, Africa, Asia, and Brazil.",
+      "summary": "The Portuguese Age of Discovery (c. 1415–1543) was the century-long programme of systematic maritime exploration initiated by Prince Henry the Navigator and pursued by successive Portuguese monarchs that opened the Atlantic coast of Africa, rounded the Cape of Good Hope, reached India (Vasco da Gama, 1497), Brazil (Cabral, 1500), and the Spice Islands (Magellan's crew, 1522) — the most concentrated burst of geographical knowledge acquisition in recorded history.\n\nBeginning with the capture of Ceuta (1415), Portugal systematically pushed south along the African coast, establishing a series of trading posts and fortresses. Bartolomeu Dias rounded the Cape of Good Hope in 1488; Vasco da Gama reached Calicut in 1498 using captured Arab navigational charts, destroying the Arab-Indian spice trade monopoly. The Treaty of Tordesillas (1494), dividing the non-Christian world between Portugal and Spain, made Portugal master of Africa, Asia, and Brazil.\n\nPortugal built the first global maritime empire — Estado da India — connecting Lisbon, Goa, Malacca, and Macau with a network of fortresses and trading posts that extracted Asian spices, African slaves, and Brazilian timber. By the late 16th century, the Dutch and English had copied and supplanted Portugal's methods, but its cartographic, navigational, and linguistic legacy (Portuguese remains an official language across four continents) endures.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Late Medieval",
       "eraDivisionCode": "933",
       "region": "Southern Europe",
       "continent": "Europe",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "",
       "period": "",
@@ -27,16 +27,19 @@
       "imageUrl": "",
       "detailsJson": "{\"causes\": [{\"title\": \"Social conditions in the 500 – 1500 CE\", \"type\": \"Movement\", \"year\": \"500\"}, {\"title\": \"Intellectual precursors in the 500 – 1500 CE\", \"type\": \"Movement\", \"year\": \"500\"}, {\"title\": \"Economic pressures in the 500 – 1500 CE\", \"type\": \"Movement\", \"year\": \"500\"}], \"effects\": [{\"title\": \"Policy changes through Portuguese Age of Discovery's historical significance\", \"type\": \"Movement\"}, {\"title\": \"Cultural shift through Portuguese Age of Discovery's historical significance\", \"type\": \"Movement\"}, {\"title\": \"Institutional reform through Portuguese Age of Discovery's historical significance\", \"type\": \"Movement\"}], \"relationships\": [{\"sourceSlug\": \"portuguese-age-of-discovery\", \"sourceName\": \"Portuguese Age of Discovery\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-late-medieval\", \"targetName\": \"Late Medieval\", \"context\": \"Portuguese Age of Discovery is situated within the Late Medieval (933)\"}, {\"sourceSlug\": \"portuguese-age-of-discovery\", \"sourceName\": \"Portuguese Age of Discovery\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"feudalism\", \"targetName\": \"Feudalism\", \"context\": \"Portuguese Age of Discovery drove transformation in Feudalism\"}, {\"sourceSlug\": \"portuguese-age-of-discovery\", \"sourceName\": \"Portuguese Age of Discovery\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"religious-authority\", \"targetName\": \"Religious authority\", \"context\": \"Portuguese Age of Discovery drove transformation in Religious authority\"}], \"places\": [{\"name\": \"Portugal\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Portuguese Age of Discovery\", \"type\": \"Reference article\", \"slug\": \"portuguese-age-of-discovery\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q133602\"], \"tags\": [\"Portugal\", \"Europe\", \"Maritime Trade & Age of Sail\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Portuguese Age of Discovery is remembered as a landmark movement of the Early Modern era, referenced in 0 Wikipedia language editions. Key lasting impacts include: Influenced social, political, or cultural transformation. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Movements -- Maritime Trade & Age of Sail -- Portugal -- Early Modern"
+        "Movement — Maritime Exploration — Portugal — Medieval"
       ],
       "subjects": [
         "Portugal",
-        "Europe",
-        "Maritime Trade & Age of Sail"
+        "Age of Discovery",
+        "Maritime Exploration",
+        "Vasco da Gama",
+        "Spice Trade",
+        "Colonialism"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "world-systems",
+        "political-history"
       ],
       "altNames": [],
       "importanceScore": 9,
@@ -46,7 +49,223 @@
       "$id": "portuguese-age-of-discovery",
       "$sequence": "141950",
       "$createdAt": "2026-04-05T12:33:05.041+00:00",
-      "$updatedAt": "2026-04-06T00:50:46.797+00:00"
+      "$updatedAt": "2026-04-06T00:50:46.797+00:00",
+      "causes": [
+        {
+          "title": "Prince Henry the Navigator's systematic programme of maritime exploration, funding cartographers, navigators, and shipbuilders at Sagres, created the institutional infrastructure of discovery",
+          "type": "Person",
+          "year": "1415–1460, Portugal"
+        },
+        {
+          "title": "Portuguese demand for a direct sea route to Asian spices — bypassing Arab and Venetian intermediaries — was the primary commercial motive for Atlantic exploration",
+          "type": "EventWindow",
+          "year": "c. 1400–1500, Portugal"
+        }
+      ],
+      "effects": [
+        {
+          "title": "Vasco da Gama's 1497–99 voyage to India destroyed the Arab-Indian spice trade monopoly and permanently shifted global commercial geography from land to sea routes",
+          "type": "EventWindow",
+          "year": "1497–1499, Indian Ocean"
+        },
+        {
+          "title": "Treaty of Tordesillas (1494) divided the non-Christian world between Portugal and Spain, establishing the first global imperial partition and making Portugal master of Africa and Asia",
+          "type": "Text",
+          "year": "1494, Tordesillas"
+        },
+        {
+          "title": "Estado da India — Portugal's Asian trading empire — connected four continents through a network of fortresses and trading posts, creating the world's first global commercial network",
+          "type": "Institution",
+          "year": "c. 1500–1650, Global"
+        },
+        {
+          "title": "Portuguese language and Catholic mission spread to four continents; today Portuguese is spoken by 260 million people as a direct legacy of the Age of Discovery",
+          "type": "Movement",
+          "year": "c. 1500–present, Global"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "vasco-da-gama",
+          "verb": "INFLUENCES",
+          "note": "Vasco da Gama's 1498 voyage to India was the crowning achievement of the Portuguese Age of Discovery"
+        },
+        {
+          "targetSlug": "henry-the-navigator",
+          "verb": "INFLUENCES",
+          "note": "Prince Henry the Navigator initiated and systematised the Portuguese programme of exploration"
+        },
+        {
+          "targetSlug": "treaty-of-tordesillas",
+          "verb": "CAUSES",
+          "note": "Portuguese discoveries led directly to the 1494 Tordesillas division of the world between Portugal and Spain"
+        },
+        {
+          "targetSlug": "spice-trade",
+          "verb": "INFLUENCES",
+          "note": "Portuguese discovery of the Cape route destroyed the Arab-Venetian spice trade monopoly"
+        }
+      ],
+      "places": [
+        "Lisbon, Portugal",
+        "Cape of Good Hope, South Africa",
+        "Indian Ocean",
+        "Atlantic Ocean"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 10,
+        "significanceNarrative": "The Portuguese Age of Discovery opened the world's first global sea trading network — a 130-year programme of systematic exploration that permanently shifted world trade from land to sea and laid the foundation for European global empire.",
+        "significanceCategory": "world-changing"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "Portugal's maritime exploration movement beginning with Prince Henry the Navigator in the early 15th century. Portuguese sailors charted the African coast, discovered the sea route to India (Vasco da Gama, 1498), and established a global trading empire connecting Europe, Africa, Asia, and Brazil.",
+          "new": "The Portuguese Age of Discovery (c. 1415–1543) was the century-long programme of systematic maritime exploration initiated by Prince Henry the Navigator and pursued by successive Portuguese monarchs that opened the Atlantic coast of Africa, rounded the Cape of Good Hope, reached India (Vasco da Gama, 1497), Brazil (Cabral, 1500), and the Spice Islands (Magellan's crew, 1522) — the most concentrated burst of geographical knowledge acquisition in recorded history.\n\nBeginning with the capture of Ceuta (1415), Portugal systematically pushed south along the African coast, establishing a series of trading posts and fortresses. Bartolomeu Dias rounded the Cape of Good Hope in 1488; Vasco da Gama reached Calicut in 1498 using captured Arab navigational charts, destroying the Arab-Indian spice trade monopoly. The Treaty of Tordesillas (1494), dividing the non-Christian world between Portugal and Spain, made Portugal master of Africa, Asia, and Brazil.\n\nPortugal built the first global maritime empire — Estado da India — connecting Lisbon, Goa, Malacca, and Macau with a network of fortresses and trading posts that extracted Asian spices, African slaves, and Brazilian timber. By the late 16th century, the Dutch and English had copied and supplanted Portugal's methods, but its cartographic, navigational, and linguistic legacy (Portuguese remains an official language across four continents) endures.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "Prince Henry the Navigator's systematic programme of maritime exploration, funding cartographers, navigators, and shipbuilders at Sagres, created the institutional infrastructure of discovery",
+              "type": "Person",
+              "year": "1415–1460, Portugal"
+            },
+            {
+              "title": "Portuguese demand for a direct sea route to Asian spices — bypassing Arab and Venetian intermediaries — was the primary commercial motive for Atlantic exploration",
+              "type": "EventWindow",
+              "year": "c. 1400–1500, Portugal"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "Vasco da Gama's 1497–99 voyage to India destroyed the Arab-Indian spice trade monopoly and permanently shifted global commercial geography from land to sea routes",
+              "type": "EventWindow",
+              "year": "1497–1499, Indian Ocean"
+            },
+            {
+              "title": "Treaty of Tordesillas (1494) divided the non-Christian world between Portugal and Spain, establishing the first global imperial partition and making Portugal master of Africa and Asia",
+              "type": "Text",
+              "year": "1494, Tordesillas"
+            },
+            {
+              "title": "Estado da India — Portugal's Asian trading empire — connected four continents through a network of fortresses and trading posts, creating the world's first global commercial network",
+              "type": "Institution",
+              "year": "c. 1500–1650, Global"
+            },
+            {
+              "title": "Portuguese language and Catholic mission spread to four continents; today Portuguese is spoken by 260 million people as a direct legacy of the Age of Discovery",
+              "type": "Movement",
+              "year": "c. 1500–present, Global"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "vasco-da-gama",
+              "verb": "INFLUENCES",
+              "note": "Vasco da Gama's 1498 voyage to India was the crowning achievement of the Portuguese Age of Discovery"
+            },
+            {
+              "targetSlug": "henry-the-navigator",
+              "verb": "INFLUENCES",
+              "note": "Prince Henry the Navigator initiated and systematised the Portuguese programme of exploration"
+            },
+            {
+              "targetSlug": "treaty-of-tordesillas",
+              "verb": "CAUSES",
+              "note": "Portuguese discoveries led directly to the 1494 Tordesillas division of the world between Portugal and Spain"
+            },
+            {
+              "targetSlug": "spice-trade",
+              "verb": "INFLUENCES",
+              "note": "Portuguese discovery of the Cape route destroyed the Arab-Venetian spice trade monopoly"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Lisbon, Portugal",
+            "Cape of Good Hope, South Africa",
+            "Indian Ocean",
+            "Atlantic Ocean"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "Portugal",
+            "Europe",
+            "Maritime Trade & Age of Sail"
+          ],
+          "new": [
+            "Portugal",
+            "Age of Discovery",
+            "Maritime Exploration",
+            "Vasco da Gama",
+            "Spice Trade",
+            "Colonialism"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Movements -- Maritime Trade & Age of Sail -- Portugal -- Early Modern"
+          ],
+          "new": [
+            "Movement — Maritime Exploration — Portugal — Medieval"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "GEOPOLITICAL_LINKAGE",
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "world-systems",
+            "political-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 10,
+            "significanceNarrative": "The Portuguese Age of Discovery opened the world's first global sea trading network — a 130-year programme of systematic exploration that permanently shifted world trade from land to sea and laid the foundation for European global empire.",
+            "significanceCategory": "world-changing"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.566192+00:00"
+        }
+      ]
     }
   ]
 }

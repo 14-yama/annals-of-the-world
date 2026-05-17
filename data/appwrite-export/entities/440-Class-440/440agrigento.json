@@ -11,14 +11,14 @@
       "name": "Agrigento",
       "label": "Place",
       "callNumber": "440.agrigento",
-      "summary": "Agrigento is a city on the southern coast of the autonomous island region of Sicily in Italy, capital of the province of Agrigento. As of 2025, with a population of 55,227, it is also the largest city in the province, 10th-largest in Sicily and 115th-largest in Italy.",
+      "summary": "Agrigento (ancient Akragas) is a city on the southern coast of Sicily that was one of the leading cities of the ancient Greek world — at its 5th-century BCE peak the third-largest Greek polis after Athens and Syracuse — and possesses the finest collection of Doric Greek temples outside of Athens, concentrated in the Valley of the Temples (UNESCO World Heritage Site).\n\nFounded as a Rhodian-Cretan colony c. 582 BCE, Akragas flourished under the tyrant Theron (488–472 BCE), who allied with Syracuse to defeat the Carthaginian army at the Battle of Himera (480 BCE) — fought the same day as Salamis. At its height the city had 200,000 inhabitants and began seven temples, including the Temple of Olympian Zeus — intended to be the largest Doric temple ever built — using Carthaginian prisoners of war as labour. The philosopher Empedocles (c. 490–430 BCE) was a native son; his four-element theory of matter (earth, water, fire, air) dominated Western natural philosophy for 2,000 years.\n\nDevastated by Carthage in 406 BCE, contested between Rome and Carthage, and several times looted of its art by Roman governors (Cicero prosecuted Verres for theft), Agrigento's ruins survive in extraordinary condition. Modern Agrigento is a mid-sized Sicilian city still overshadowed by its ancient past.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Archaic Period",
       "eraDivisionCode": "921",
       "region": "Southern Europe",
       "continent": "Europe",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "579 BCE",
       "period": "",
@@ -27,17 +27,20 @@
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Agrigento%204m1.jpg",
       "detailsJson": "{\"causes\": [{\"title\": \"Geographic advantage in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}, {\"title\": \"Strategic location in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}, {\"title\": \"Natural resources in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Became center of through Agrigento's historical significance\", \"type\": \"Place\"}, {\"title\": \"Influenced surrounding through Agrigento's historical significance\", \"type\": \"Place\"}, {\"title\": \"Expanded into through Agrigento's historical significance\", \"type\": \"Place\"}], \"relationships\": [{\"sourceSlug\": \"agrigento\", \"sourceName\": \"Agrigento\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-archaic-period\", \"targetName\": \"Archaic Period\", \"context\": \"Agrigento is situated within the Archaic Period (921)\"}, {\"sourceSlug\": \"agrigento\", \"sourceName\": \"Agrigento\", \"verb\": \"LOCATED_IN\", \"targetSlug\": \"europe\", \"targetName\": \"Europe\", \"context\": \"Agrigento is located in Europe\"}, {\"sourceSlug\": \"agrigento\", \"sourceName\": \"Agrigento\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"regional-development-classical\", \"targetName\": \"Regional Development (Classical)\", \"context\": \"Agrigento shaped regional development during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Agrigento\", \"type\": \"Reference article\", \"slug\": \"agrigento\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q13678\", \"https://en.wikipedia.org/wiki/Agrigento\"], \"tags\": [\"Italy\", \"city\", \"Europe\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Agrigento is remembered as a landmark place of the Classical era, referenced in 113 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Places -- Cities -- Italy -- Classical"
+        "Place — City — Italy — Classical"
       ],
       "subjects": [
-        "Italy",
-        "city",
-        "Europe",
-        "Cities"
+        "Agrigento",
+        "Sicily",
+        "Ancient Greece",
+        "Doric Architecture",
+        "Empedocles",
+        "Carthage",
+        "Magna Graecia"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "cultural-history",
+        "intellectual-history"
       ],
       "altNames": [],
       "importanceScore": 9,
@@ -47,7 +50,211 @@
       "$id": "agrigento",
       "$sequence": "715465",
       "$createdAt": "2026-04-05T15:15:54.646+00:00",
-      "$updatedAt": "2026-04-06T00:50:47.040+00:00"
+      "$updatedAt": "2026-04-06T00:50:47.040+00:00",
+      "causes": [
+        {
+          "title": "Greek colonial expansion in the 7th–6th centuries BCE spread city-states across the Mediterranean and led to the founding of Akragas as a Rhodian-Cretan colony c. 582 BCE",
+          "type": "EventWindow",
+          "year": "c. 582 BCE, Sicily"
+        },
+        {
+          "title": "Battle of Himera (480 BCE) — simultaneous with Salamis — shattered Carthaginian power in Sicily and opened a generation of peace that allowed Akragas to flourish",
+          "type": "EventWindow",
+          "year": "480 BCE, Sicily"
+        }
+      ],
+      "effects": [
+        {
+          "title": "Valley of the Temples contains seven Doric temples in the finest state of preservation outside Greece, making Agrigento Sicily's most important archaeological site",
+          "type": "Place",
+          "year": "c. 510–430 BCE, Agrigento"
+        },
+        {
+          "title": "Empedocles' four-element theory (earth, water, fire, air) became the foundational model of Western natural philosophy for 2,000 years until the Scientific Revolution",
+          "type": "Idea",
+          "year": "c. 460 BCE, Agrigento"
+        },
+        {
+          "title": "Cicero's prosecution of Verres for the theft of Akragas' artworks became a landmark in Roman legal history and the concept of art as heritage",
+          "type": "EventWindow",
+          "year": "70 BCE, Rome"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "empedocles",
+          "verb": "INFLUENCES",
+          "note": "Empedocles, originator of the four-element theory, was born and worked in Akragas"
+        },
+        {
+          "targetSlug": "carthage",
+          "verb": "INFLUENCES",
+          "note": "Carthage sacked Akragas in 406 BCE, ending its golden age"
+        },
+        {
+          "targetSlug": "roman-republic",
+          "verb": "INFLUENCES",
+          "note": "Rome conquered Akragas in 210 BCE; Cicero prosecuted the Roman governor Verres for looting its art"
+        },
+        {
+          "targetSlug": "greek-colonization",
+          "verb": "INFLUENCES",
+          "note": "Agrigento was founded as a Greek colony c. 582 BCE during the great age of Greek colonial expansion"
+        }
+      ],
+      "places": [
+        "Agrigento, Sicily, Italy",
+        "Mediterranean Sea"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "Agrigento was the third-greatest city in the ancient Greek world, birthplace of the four-element theory that shaped Western science for 2,000 years, and possesses the best-preserved Doric temples outside Athens.",
+        "significanceCategory": "continental"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "Agrigento is a city on the southern coast of the autonomous island region of Sicily in Italy, capital of the province of Agrigento. As of 2025, with a population of 55,227, it is also the largest city in the province, 10th-largest in Sicily and 115th-largest in Italy.",
+          "new": "Agrigento (ancient Akragas) is a city on the southern coast of Sicily that was one of the leading cities of the ancient Greek world — at its 5th-century BCE peak the third-largest Greek polis after Athens and Syracuse — and possesses the finest collection of Doric Greek temples outside of Athens, concentrated in the Valley of the Temples (UNESCO World Heritage Site).\n\nFounded as a Rhodian-Cretan colony c. 582 BCE, Akragas flourished under the tyrant Theron (488–472 BCE), who allied with Syracuse to defeat the Carthaginian army at the Battle of Himera (480 BCE) — fought the same day as Salamis. At its height the city had 200,000 inhabitants and began seven temples, including the Temple of Olympian Zeus — intended to be the largest Doric temple ever built — using Carthaginian prisoners of war as labour. The philosopher Empedocles (c. 490–430 BCE) was a native son; his four-element theory of matter (earth, water, fire, air) dominated Western natural philosophy for 2,000 years.\n\nDevastated by Carthage in 406 BCE, contested between Rome and Carthage, and several times looted of its art by Roman governors (Cicero prosecuted Verres for theft), Agrigento's ruins survive in extraordinary condition. Modern Agrigento is a mid-sized Sicilian city still overshadowed by its ancient past.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "Greek colonial expansion in the 7th–6th centuries BCE spread city-states across the Mediterranean and led to the founding of Akragas as a Rhodian-Cretan colony c. 582 BCE",
+              "type": "EventWindow",
+              "year": "c. 582 BCE, Sicily"
+            },
+            {
+              "title": "Battle of Himera (480 BCE) — simultaneous with Salamis — shattered Carthaginian power in Sicily and opened a generation of peace that allowed Akragas to flourish",
+              "type": "EventWindow",
+              "year": "480 BCE, Sicily"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "Valley of the Temples contains seven Doric temples in the finest state of preservation outside Greece, making Agrigento Sicily's most important archaeological site",
+              "type": "Place",
+              "year": "c. 510–430 BCE, Agrigento"
+            },
+            {
+              "title": "Empedocles' four-element theory (earth, water, fire, air) became the foundational model of Western natural philosophy for 2,000 years until the Scientific Revolution",
+              "type": "Idea",
+              "year": "c. 460 BCE, Agrigento"
+            },
+            {
+              "title": "Cicero's prosecution of Verres for the theft of Akragas' artworks became a landmark in Roman legal history and the concept of art as heritage",
+              "type": "EventWindow",
+              "year": "70 BCE, Rome"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "empedocles",
+              "verb": "INFLUENCES",
+              "note": "Empedocles, originator of the four-element theory, was born and worked in Akragas"
+            },
+            {
+              "targetSlug": "carthage",
+              "verb": "INFLUENCES",
+              "note": "Carthage sacked Akragas in 406 BCE, ending its golden age"
+            },
+            {
+              "targetSlug": "roman-republic",
+              "verb": "INFLUENCES",
+              "note": "Rome conquered Akragas in 210 BCE; Cicero prosecuted the Roman governor Verres for looting its art"
+            },
+            {
+              "targetSlug": "greek-colonization",
+              "verb": "INFLUENCES",
+              "note": "Agrigento was founded as a Greek colony c. 582 BCE during the great age of Greek colonial expansion"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Agrigento, Sicily, Italy",
+            "Mediterranean Sea"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "Italy",
+            "city",
+            "Europe",
+            "Cities"
+          ],
+          "new": [
+            "Agrigento",
+            "Sicily",
+            "Ancient Greece",
+            "Doric Architecture",
+            "Empedocles",
+            "Carthage",
+            "Magna Graecia"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Places -- Cities -- Italy -- Classical"
+          ],
+          "new": [
+            "Place — City — Italy — Classical"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "GEOPOLITICAL_LINKAGE",
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "cultural-history",
+            "intellectual-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 8,
+            "significanceNarrative": "Agrigento was the third-greatest city in the ancient Greek world, birthplace of the four-element theory that shaped Western science for 2,000 years, and possesses the best-preserved Doric temples outside Athens.",
+            "significanceCategory": "continental"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        }
+      ]
     }
   ]
 }

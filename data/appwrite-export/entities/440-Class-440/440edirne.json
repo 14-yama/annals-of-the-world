@@ -11,14 +11,14 @@
       "name": "Edirne",
       "label": "Place",
       "callNumber": "440.edirne",
-      "summary": "Edirne, historically known as Orestias, Orestiada, Adrianople, or Adriana is a city in Turkey, in the northwestern part of the province of Edirne in Eastern Thrace. Situated 7 km (4.3 mi) from the Greek and 20 km (12 mi) from the Bulgarian borders, Edirne was the second capital city of the Ottoman Empire from the 1360s to 1453, before Constantinople became its capital.",
+      "summary": "Edirne (ancient Adrianople, Turkish Edirne) is a city in north-western Turkey at the junction of the Tunca and Maritsa rivers and was the Ottoman Empire's second capital (1363–1453) before Mehmed II conquered Constantinople — giving it a concentration of imperial mosques and monuments that rivals Istanbul for architectural splendour.\n\nFounded as Hadrianopolis by Emperor Hadrian (c. 125 CE), the city witnessed the Battle of Adrianople (378 CE), one of antiquity's most consequential defeats: the Visigoth cavalry annihilated a Roman army and killed Emperor Valens, shattering the myth of Roman military invincibility and opening the Balkans to Germanic settlement. Under the Ottomans, Edirne became the staging ground for European campaigns; the Selimiye Mosque (1575), designed by Sinan and considered his masterpiece, stands here and is a UNESCO World Heritage Site.\n\nEdirne was the scene of intense fighting during the Balkan Wars (1912–13) and World War I, exchanged between Turkey and Greece during the Greco-Turkish War (1919–1922), and is today Turkey's gateway to Europe. Its Kırkpınar oil-wrestling festival, held annually since at least 1346, is a candidate for the world's oldest continuously held sporting event.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Roman Period",
       "eraDivisionCode": "923",
       "region": "West Asia",
       "continent": "Asia",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "125 CE",
       "period": "",
@@ -27,17 +27,20 @@
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Edirne%20at%20sunrise%2021%2052%2030%20274000.jpeg",
       "detailsJson": "{\"causes\": [{\"title\": \"Geographic advantage in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}, {\"title\": \"Strategic location in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}, {\"title\": \"Natural resources in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Became center of through Edirne's historical significance\", \"type\": \"Place\"}, {\"title\": \"Influenced surrounding through Edirne's historical significance\", \"type\": \"Place\"}, {\"title\": \"Expanded into through Edirne's historical significance\", \"type\": \"Place\"}], \"relationships\": [{\"sourceSlug\": \"edirne\", \"sourceName\": \"Edirne\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-roman-period\", \"targetName\": \"Roman Period\", \"context\": \"Edirne is situated within the Roman Period (923)\"}, {\"sourceSlug\": \"edirne\", \"sourceName\": \"Edirne\", \"verb\": \"LOCATED_IN\", \"targetSlug\": \"asia\", \"targetName\": \"Asia\", \"context\": \"Edirne is located in Asia\"}, {\"sourceSlug\": \"edirne\", \"sourceName\": \"Edirne\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"regional-development-classical\", \"targetName\": \"Regional Development (Classical)\", \"context\": \"Edirne shaped regional development during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Edirne\", \"type\": \"Reference article\", \"slug\": \"edirne\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q43387\", \"https://en.wikipedia.org/wiki/Edirne\"], \"tags\": [\"Turkey\", \"city\", \"Asia\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Edirne is remembered as a landmark place of the Classical era, referenced in 283 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Places -- Cities -- Turkey -- Classical"
+        "Place — City — Turkey — Classical"
       ],
       "subjects": [
+        "Edirne",
         "Turkey",
-        "city",
-        "Asia",
-        "Cities"
+        "Balkans",
+        "Ottoman Empire",
+        "Battle of Adrianople",
+        "Sinan",
+        "Architecture"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "political-history",
+        "cultural-history"
       ],
       "altNames": [],
       "importanceScore": 10,
@@ -47,7 +50,221 @@
       "$id": "edirne",
       "$sequence": "718247",
       "$createdAt": "2026-04-05T15:17:01.613+00:00",
-      "$updatedAt": "2026-04-06T00:50:45.286+00:00"
+      "$updatedAt": "2026-04-06T00:50:45.286+00:00",
+      "causes": [
+        {
+          "title": "Battle of Adrianople (378 CE) — Visigoths defeated Roman Emperor Valens — was fought at the city and shattered Roman military dominance of the Balkans",
+          "type": "EventWindow",
+          "year": "378 CE, Adrianople"
+        },
+        {
+          "title": "Ottoman capture of Adrianople (1363) made it the empire's European capital for 90 years before the fall of Constantinople",
+          "type": "EventWindow",
+          "year": "1363, Adrianople"
+        },
+        {
+          "title": "Mimar Sinan chose Edirne as the site for his acknowledged masterpiece, the Selimiye Mosque, reflecting its imperial status",
+          "type": "Person",
+          "year": "1568–1575, Edirne"
+        }
+      ],
+      "effects": [
+        {
+          "title": "Battle of Adrianople (378 CE) caused the Roman Empire's demographic opening to Gothic settlement — an early trigger of the Western Roman Empire's eventual dissolution",
+          "type": "EventWindow",
+          "year": "378 CE, Balkans"
+        },
+        {
+          "title": "Selimiye Mosque (1575) became Sinan's declared masterpiece and is considered the pinnacle of Ottoman classical architecture",
+          "type": "Institution",
+          "year": "1575, Edirne"
+        },
+        {
+          "title": "Edirne's role as Ottoman launch pad for Balkan campaigns made it the gateway between Asia and Europe for six centuries of imperial history",
+          "type": "Place",
+          "year": "1363–1913, Balkans"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "battle-of-adrianople",
+          "verb": "OCCURS_IN",
+          "note": "The 378 CE Battle of Adrianople was fought on the city's outskirts and ended Roman Balkan dominance"
+        },
+        {
+          "targetSlug": "ottoman-empire",
+          "verb": "INFLUENCES",
+          "note": "Edirne served as the Ottoman capital 1363–1453 before the fall of Constantinople"
+        },
+        {
+          "targetSlug": "sinan",
+          "verb": "INFLUENCES",
+          "note": "Mimar Sinan built the Selimiye Mosque in Edirne — his declared masterpiece"
+        },
+        {
+          "targetSlug": "constantine-i",
+          "verb": "INFLUENCES",
+          "note": "Edirne (Adrianople) was one of the key Balkan cities contested during Constantine's rise to power"
+        }
+      ],
+      "places": [
+        "Edirne, Turkey",
+        "Balkans, Europe"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 9,
+        "significanceNarrative": "Edirne was capital of the Ottoman Empire before Constantinople, site of Rome's most consequential military defeat in 378 CE, and home to Sinan's architectural masterpiece — a city that three times reshaped the history of Europe.",
+        "significanceCategory": "continental"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "Edirne, historically known as Orestias, Orestiada, Adrianople, or Adriana is a city in Turkey, in the northwestern part of the province of Edirne in Eastern Thrace. Situated 7 km (4.3 mi) from the Greek and 20 km (12 mi) from the Bulgarian borders, Edirne was the second capital city of the Ottoman Empire from the 1360s to 1453, before Constantinople became its capital.",
+          "new": "Edirne (ancient Adrianople, Turkish Edirne) is a city in north-western Turkey at the junction of the Tunca and Maritsa rivers and was the Ottoman Empire's second capital (1363–1453) before Mehmed II conquered Constantinople — giving it a concentration of imperial mosques and monuments that rivals Istanbul for architectural splendour.\n\nFounded as Hadrianopolis by Emperor Hadrian (c. 125 CE), the city witnessed the Battle of Adrianople (378 CE), one of antiquity's most consequential defeats: the Visigoth cavalry annihilated a Roman army and killed Emperor Valens, shattering the myth of Roman military invincibility and opening the Balkans to Germanic settlement. Under the Ottomans, Edirne became the staging ground for European campaigns; the Selimiye Mosque (1575), designed by Sinan and considered his masterpiece, stands here and is a UNESCO World Heritage Site.\n\nEdirne was the scene of intense fighting during the Balkan Wars (1912–13) and World War I, exchanged between Turkey and Greece during the Greco-Turkish War (1919–1922), and is today Turkey's gateway to Europe. Its Kırkpınar oil-wrestling festival, held annually since at least 1346, is a candidate for the world's oldest continuously held sporting event.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "Battle of Adrianople (378 CE) — Visigoths defeated Roman Emperor Valens — was fought at the city and shattered Roman military dominance of the Balkans",
+              "type": "EventWindow",
+              "year": "378 CE, Adrianople"
+            },
+            {
+              "title": "Ottoman capture of Adrianople (1363) made it the empire's European capital for 90 years before the fall of Constantinople",
+              "type": "EventWindow",
+              "year": "1363, Adrianople"
+            },
+            {
+              "title": "Mimar Sinan chose Edirne as the site for his acknowledged masterpiece, the Selimiye Mosque, reflecting its imperial status",
+              "type": "Person",
+              "year": "1568–1575, Edirne"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "Battle of Adrianople (378 CE) caused the Roman Empire's demographic opening to Gothic settlement — an early trigger of the Western Roman Empire's eventual dissolution",
+              "type": "EventWindow",
+              "year": "378 CE, Balkans"
+            },
+            {
+              "title": "Selimiye Mosque (1575) became Sinan's declared masterpiece and is considered the pinnacle of Ottoman classical architecture",
+              "type": "Institution",
+              "year": "1575, Edirne"
+            },
+            {
+              "title": "Edirne's role as Ottoman launch pad for Balkan campaigns made it the gateway between Asia and Europe for six centuries of imperial history",
+              "type": "Place",
+              "year": "1363–1913, Balkans"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "battle-of-adrianople",
+              "verb": "OCCURS_IN",
+              "note": "The 378 CE Battle of Adrianople was fought on the city's outskirts and ended Roman Balkan dominance"
+            },
+            {
+              "targetSlug": "ottoman-empire",
+              "verb": "INFLUENCES",
+              "note": "Edirne served as the Ottoman capital 1363–1453 before the fall of Constantinople"
+            },
+            {
+              "targetSlug": "sinan",
+              "verb": "INFLUENCES",
+              "note": "Mimar Sinan built the Selimiye Mosque in Edirne — his declared masterpiece"
+            },
+            {
+              "targetSlug": "constantine-i",
+              "verb": "INFLUENCES",
+              "note": "Edirne (Adrianople) was one of the key Balkan cities contested during Constantine's rise to power"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Edirne, Turkey",
+            "Balkans, Europe"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "Turkey",
+            "city",
+            "Asia",
+            "Cities"
+          ],
+          "new": [
+            "Edirne",
+            "Turkey",
+            "Balkans",
+            "Ottoman Empire",
+            "Battle of Adrianople",
+            "Sinan",
+            "Architecture"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Places -- Cities -- Turkey -- Classical"
+          ],
+          "new": [
+            "Place — City — Turkey — Classical"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "GEOPOLITICAL_LINKAGE",
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "political-history",
+            "cultural-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 9,
+            "significanceNarrative": "Edirne was capital of the Ottoman Empire before Constantinople, site of Rome's most consequential military defeat in 378 CE, and home to Sinan's architectural masterpiece — a city that three times reshaped the history of Europe.",
+            "significanceCategory": "continental"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        }
+      ]
     }
   ]
 }

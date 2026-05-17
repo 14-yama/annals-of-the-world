@@ -11,14 +11,14 @@
       "name": "Gibraltar",
       "label": "Place",
       "callNumber": "440.gibraltar",
-      "summary": "Gibraltar is a city in United Kingdom. Founded 1704. Population: 34,003. Active during the Early Modern period of exploration and nation-building. Classified under Cities.",
+      "summary": "Gibraltar is a British Overseas Territory at the southern tip of the Iberian Peninsula controlling the narrow strait — just 14 km wide — between the Atlantic Ocean and the Mediterranean Sea, one of the most strategically vital maritime chokepoints in the world. The Rock of Gibraltar was one of antiquity's 'Pillars of Hercules' — the mythological boundary of the known world.\n\nCaptured by a combined Anglo-Dutch force in 1704 during the War of the Spanish Succession, Gibraltar was formally ceded to Britain in the Treaty of Utrecht (1713) and has been British ever since despite Spain's persistent territorial claim. The Rock's fortifications — augmented through the Napoleonic Wars and World War II (when a network of 34 miles of tunnels was excavated) — made it nearly impregnable; it survived four major sieges, including the Great Siege (1779–1783), the longest in British history.\n\nGibraltar's Barbary macaques, the only wild primates in Europe, are legendary: British folklore holds that if the macaques leave, Gibraltar will revert to Spain. Churchill ordered their population topped up in 1944 when numbers fell dangerously low. Gibraltar's status remains unresolved after Brexit complicated its Schengen-border relationship with Spain — a persistent thorn in UK-Spain relations.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Age of Enlightenment",
       "eraDivisionCode": "944",
       "region": "Northern Europe",
       "continent": "Europe",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "1704",
       "period": "",
@@ -27,17 +27,20 @@
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Gibraltar%20aerial%20view%20looking%20northwest.jpg",
       "detailsJson": "{\"causes\": [{\"title\": \"Geographic advantage in the 1500 – 1800 CE\", \"type\": \"Place\", \"year\": \"1500\"}, {\"title\": \"Strategic location in the 1500 – 1800 CE\", \"type\": \"Place\", \"year\": \"1500\"}, {\"title\": \"Natural resources in the 1500 – 1800 CE\", \"type\": \"Place\", \"year\": \"1500\"}], \"effects\": [{\"title\": \"Became center of through Gibraltar's historical significance\", \"type\": \"Place\"}, {\"title\": \"Influenced surrounding through Gibraltar's historical significance\", \"type\": \"Place\"}, {\"title\": \"Expanded into through Gibraltar's historical significance\", \"type\": \"Place\"}], \"relationships\": [{\"sourceSlug\": \"gibraltar\", \"sourceName\": \"Gibraltar\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-age-of-enlightenment\", \"targetName\": \"Age of Enlightenment\", \"context\": \"Gibraltar is situated within the Age of Enlightenment (944)\"}, {\"sourceSlug\": \"gibraltar\", \"sourceName\": \"Gibraltar\", \"verb\": \"LOCATED_IN\", \"targetSlug\": \"europe\", \"targetName\": \"Europe\", \"context\": \"Gibraltar is located in Europe\"}, {\"sourceSlug\": \"gibraltar\", \"sourceName\": \"Gibraltar\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"regional-development-early-modern\", \"targetName\": \"Regional Development (Early Modern)\", \"context\": \"Gibraltar shaped regional development during the Early Modern era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Gibraltar\", \"type\": \"Reference article\", \"slug\": \"gibraltar\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q1410\", \"https://en.wikipedia.org/wiki/Gibraltar\"], \"tags\": [\"United Kingdom\", \"city\", \"Europe\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Gibraltar is remembered as a landmark place of the Early Modern era, referenced in 221 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Places -- Cities -- United Kingdom -- Early Modern"
+        "Place — City — Gibraltar — Early Modern"
       ],
       "subjects": [
-        "United Kingdom",
-        "city",
-        "Europe",
-        "Cities"
+        "Gibraltar",
+        "Britain",
+        "Spain",
+        "Strait of Gibraltar",
+        "Naval Power",
+        "Sovereignty Dispute",
+        "Mediterranean"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "political-history",
+        "military-history"
       ],
       "altNames": [],
       "importanceScore": 9,
@@ -47,7 +50,213 @@
       "$id": "gibraltar",
       "$sequence": "728608",
       "$createdAt": "2026-04-05T15:20:35.504+00:00",
-      "$updatedAt": "2026-04-06T00:50:48.349+00:00"
+      "$updatedAt": "2026-04-06T00:50:48.349+00:00",
+      "causes": [
+        {
+          "title": "Gibraltar's position at the Atlantic-Mediterranean chokepoint gave it military and commercial value far exceeding its tiny 6.7 km² area",
+          "type": "Place",
+          "year": "c. 700 BCE–present, Gibraltar"
+        },
+        {
+          "title": "War of the Spanish Succession (1701–1714) provided the opportunity for Anglo-Dutch capture of Gibraltar in 1704 and its cession to Britain at Utrecht",
+          "type": "EventWindow",
+          "year": "1704, Gibraltar"
+        }
+      ],
+      "effects": [
+        {
+          "title": "British control of Gibraltar (1713–present) gave the Royal Navy a strategic Atlantic-Mediterranean gateway that was central to British imperial sea power for 250 years",
+          "type": "Institution",
+          "year": "1713–present, Gibraltar"
+        },
+        {
+          "title": "Great Siege (1779–1783) — the longest siege in British military history — saw the garrison hold out for 3 years and 7 months against Spain and France",
+          "type": "EventWindow",
+          "year": "1779–1783, Gibraltar"
+        },
+        {
+          "title": "Brexit (2016–2020) threatened Gibraltar's open-border relationship with Spain, reopening the sovereignty question and generating diplomatic complications that remain unresolved",
+          "type": "EventWindow",
+          "year": "2016–present, Gibraltar"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "british-empire",
+          "verb": "INFLUENCES",
+          "note": "Gibraltar has been a British possession since 1704, central to Royal Navy Mediterranean strategy"
+        },
+        {
+          "targetSlug": "spain",
+          "verb": "INFLUENCES",
+          "note": "Spain has claimed Gibraltar since the Treaty of Utrecht and periodically closed the border"
+        },
+        {
+          "targetSlug": "treaty-of-utrecht",
+          "verb": "INFLUENCES",
+          "note": "The 1713 Treaty of Utrecht formally ceded Gibraltar to Britain in perpetuity"
+        },
+        {
+          "targetSlug": "nato",
+          "verb": "INFLUENCES",
+          "note": "Gibraltar hosts a major NATO naval base and monitoring station at the Atlantic-Mediterranean junction"
+        }
+      ],
+      "places": [
+        "Gibraltar",
+        "Strait of Gibraltar, Europe",
+        "Iberian Peninsula, Europe"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 9,
+        "significanceNarrative": "Gibraltar commands the world's most strategically vital sea lane and has been the object of one of the longest-running sovereignty disputes in history — its 6.7 km² have mattered more to British imperial strategy than most entire nations.",
+        "significanceCategory": "continental"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "Gibraltar is a city in United Kingdom. Founded 1704. Population: 34,003. Active during the Early Modern period of exploration and nation-building. Classified under Cities.",
+          "new": "Gibraltar is a British Overseas Territory at the southern tip of the Iberian Peninsula controlling the narrow strait — just 14 km wide — between the Atlantic Ocean and the Mediterranean Sea, one of the most strategically vital maritime chokepoints in the world. The Rock of Gibraltar was one of antiquity's 'Pillars of Hercules' — the mythological boundary of the known world.\n\nCaptured by a combined Anglo-Dutch force in 1704 during the War of the Spanish Succession, Gibraltar was formally ceded to Britain in the Treaty of Utrecht (1713) and has been British ever since despite Spain's persistent territorial claim. The Rock's fortifications — augmented through the Napoleonic Wars and World War II (when a network of 34 miles of tunnels was excavated) — made it nearly impregnable; it survived four major sieges, including the Great Siege (1779–1783), the longest in British history.\n\nGibraltar's Barbary macaques, the only wild primates in Europe, are legendary: British folklore holds that if the macaques leave, Gibraltar will revert to Spain. Churchill ordered their population topped up in 1944 when numbers fell dangerously low. Gibraltar's status remains unresolved after Brexit complicated its Schengen-border relationship with Spain — a persistent thorn in UK-Spain relations.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "Gibraltar's position at the Atlantic-Mediterranean chokepoint gave it military and commercial value far exceeding its tiny 6.7 km² area",
+              "type": "Place",
+              "year": "c. 700 BCE–present, Gibraltar"
+            },
+            {
+              "title": "War of the Spanish Succession (1701–1714) provided the opportunity for Anglo-Dutch capture of Gibraltar in 1704 and its cession to Britain at Utrecht",
+              "type": "EventWindow",
+              "year": "1704, Gibraltar"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "British control of Gibraltar (1713–present) gave the Royal Navy a strategic Atlantic-Mediterranean gateway that was central to British imperial sea power for 250 years",
+              "type": "Institution",
+              "year": "1713–present, Gibraltar"
+            },
+            {
+              "title": "Great Siege (1779–1783) — the longest siege in British military history — saw the garrison hold out for 3 years and 7 months against Spain and France",
+              "type": "EventWindow",
+              "year": "1779–1783, Gibraltar"
+            },
+            {
+              "title": "Brexit (2016–2020) threatened Gibraltar's open-border relationship with Spain, reopening the sovereignty question and generating diplomatic complications that remain unresolved",
+              "type": "EventWindow",
+              "year": "2016–present, Gibraltar"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "british-empire",
+              "verb": "INFLUENCES",
+              "note": "Gibraltar has been a British possession since 1704, central to Royal Navy Mediterranean strategy"
+            },
+            {
+              "targetSlug": "spain",
+              "verb": "INFLUENCES",
+              "note": "Spain has claimed Gibraltar since the Treaty of Utrecht and periodically closed the border"
+            },
+            {
+              "targetSlug": "treaty-of-utrecht",
+              "verb": "INFLUENCES",
+              "note": "The 1713 Treaty of Utrecht formally ceded Gibraltar to Britain in perpetuity"
+            },
+            {
+              "targetSlug": "nato",
+              "verb": "INFLUENCES",
+              "note": "Gibraltar hosts a major NATO naval base and monitoring station at the Atlantic-Mediterranean junction"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Gibraltar",
+            "Strait of Gibraltar, Europe",
+            "Iberian Peninsula, Europe"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "United Kingdom",
+            "city",
+            "Europe",
+            "Cities"
+          ],
+          "new": [
+            "Gibraltar",
+            "Britain",
+            "Spain",
+            "Strait of Gibraltar",
+            "Naval Power",
+            "Sovereignty Dispute",
+            "Mediterranean"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Places -- Cities -- United Kingdom -- Early Modern"
+          ],
+          "new": [
+            "Place — City — Gibraltar — Early Modern"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "GEOPOLITICAL_LINKAGE",
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "political-history",
+            "military-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 9,
+            "significanceNarrative": "Gibraltar commands the world's most strategically vital sea lane and has been the object of one of the longest-running sovereignty disputes in history — its 6.7 km² have mattered more to British imperial strategy than most entire nations.",
+            "significanceCategory": "continental"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        }
+      ]
     }
   ]
 }

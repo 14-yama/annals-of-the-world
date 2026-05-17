@@ -11,14 +11,14 @@
       "name": "Mali",
       "label": "Place",
       "callNumber": "430.mali",
-      "summary": "Mali, officially the Republic of Mali, is a landlocked country in West Africa. It is the eighth-largest country in Africa and the 23rd largest country in the world, with an area of over 1,240,192 square kilometres (478,841 sq mi).",
+      "summary": "Mali (officially the Republic of Mali) is a landlocked West African nation and the heir to three of the medieval world's greatest empires — the Ghana Empire (c. 700–1200), the Mali Empire (1235–1600), and the Songhai Empire (1375–1591) — which together controlled trans-Saharan gold-salt trade routes and produced the legendary wealth of Mansa Musa, the richest individual in recorded history.\n\nThe Mali Empire at its 14th-century peak stretched across 1.2 million km² from the Atlantic coast to the Niger bend, encompassing the great intellectual centres of Timbuktu and Djenné. Mansa Musa's 1324 hajj to Mecca — during which his entourage distributed so much gold in Cairo that it depressed Egyptian gold prices for a decade — introduced sub-Saharan Africa's wealth to the Mediterranean world. The Sankore mosque and university at Timbuktu housed over 25,000 students and a library of some 700,000 manuscripts.\n\nModern Mali gained independence from France in 1960. Despite abundant mineral wealth, it has struggled with repeated coups, Tuareg insurgencies, and since 2012 a jihadist insurgency that has displaced millions and made the Sahel one of the world's most active conflict zones. The preservation of Timbuktu's manuscripts — many secretly evacuated during the 2012 Islamist occupation — remains one of the world's great ongoing heritage rescue efforts.",
       "era": "Contemporary",
       "eraSlug": "contemporary",
       "eraDivision": "Cold War Era",
       "eraDivisionCode": "961",
       "region": "West Africa",
       "continent": "Africa",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "1960-09-22",
       "period": "",
@@ -27,17 +27,21 @@
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Mali%20-%20Location%20Map%20%282013%29%20-%20MLI%20-%20UNOCHA.svg",
       "detailsJson": "{\"causes\": [{\"title\": \"Geographic advantage in the 1945 CE – present\", \"type\": \"Place\", \"year\": \"1945 CE\"}, {\"title\": \"Strategic location in the 1945 CE – present\", \"type\": \"Place\", \"year\": \"1945 CE\"}, {\"title\": \"Natural resources in the 1945 CE – present\", \"type\": \"Place\", \"year\": \"1945 CE\"}], \"effects\": [{\"title\": \"Became center of through Mali's historical significance\", \"type\": \"Place\"}, {\"title\": \"Influenced surrounding through Mali's historical significance\", \"type\": \"Place\"}, {\"title\": \"Expanded into through Mali's historical significance\", \"type\": \"Place\"}], \"relationships\": [{\"sourceSlug\": \"mali\", \"sourceName\": \"Mali\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-cold-war-era\", \"targetName\": \"Cold War Era\", \"context\": \"Mali is situated within the Cold War Era (961)\"}, {\"sourceSlug\": \"mali\", \"sourceName\": \"Mali\", \"verb\": \"LOCATED_IN\", \"targetSlug\": \"africa\", \"targetName\": \"Africa\", \"context\": \"Mali is located in Africa\"}, {\"sourceSlug\": \"mali\", \"sourceName\": \"Mali\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"regional-development-contemporary\", \"targetName\": \"Regional Development (Contemporary)\", \"context\": \"Mali shaped regional development during the Contemporary era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Mali\", \"type\": \"Reference article\", \"slug\": \"mali\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q912\", \"https://en.wikipedia.org/wiki/Mali\"], \"tags\": [\"Mali\", \"country\", \"Africa\", \"Countries / Polities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Mali is remembered as a landmark place of the Contemporary era, referenced in 309 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Places -- Countries / Polities -- Mali -- Contemporary"
+        "Polity — State — Mali — Contemporary"
       ],
       "subjects": [
         "Mali",
-        "country",
-        "Africa",
-        "Countries / Polities"
+        "West Africa",
+        "Mali Empire",
+        "Mansa Musa",
+        "Timbuktu",
+        "Trans-Saharan Trade",
+        "Sahel",
+        "Independence"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "world-systems",
+        "postcolonial-history"
       ],
       "altNames": [],
       "importanceScore": 9,
@@ -47,7 +51,244 @@
       "$id": "mali",
       "$sequence": "731357",
       "$createdAt": "2026-04-05T15:21:28.300+00:00",
-      "$updatedAt": "2026-04-06T00:50:52.688+00:00"
+      "$updatedAt": "2026-04-06T00:50:52.688+00:00",
+      "causes": [
+        {
+          "title": "Trans-Saharan gold-salt trade routes through the western Sudan created the economic foundation for the succession of great empires centered on modern Mali",
+          "type": "EventWindow",
+          "year": "c. 700–1600, West Africa"
+        },
+        {
+          "title": "Niger River system provided agricultural surplus and communications infrastructure for large-scale state formation",
+          "type": "Place",
+          "year": "c. 1200 BCE–present, West Africa"
+        },
+        {
+          "title": "French colonial penetration of West Africa from the 1880s dismantled the last indigenous polities and imposed boundaries cutting across ethnic and trading networks",
+          "type": "EventWindow",
+          "year": "1880–1960, West Africa"
+        }
+      ],
+      "effects": [
+        {
+          "title": "Mali Empire under Mansa Musa became the wealthiest polity in the medieval world, introducing West African gold wealth to the wider Islamic world and Europe",
+          "type": "Institution",
+          "year": "c. 1312–1337, West Africa"
+        },
+        {
+          "title": "Timbuktu became one of the world's greatest medieval centres of Islamic scholarship, housing up to 700,000 manuscripts",
+          "type": "Institution",
+          "year": "c. 1300–1600, West Africa"
+        },
+        {
+          "title": "Independence from France in 1960 launched the modern era; repeated military coups since 1968 have made Mali a case study in postcolonial institutional fragility",
+          "type": "EventWindow",
+          "year": "1960–present, Mali"
+        },
+        {
+          "title": "Sahel jihadist insurgency (2012–present) has spread from northern Mali across six countries, becoming one of the world's most severe humanitarian crises",
+          "type": "EventWindow",
+          "year": "2012–present, West Africa"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "mansa-musa",
+          "verb": "INFLUENCES",
+          "note": "Mansa Musa was the Mali Empire's greatest ruler, whose hajj broadcast West African wealth to the world"
+        },
+        {
+          "targetSlug": "timbuktu",
+          "verb": "OCCURS_IN",
+          "note": "Timbuktu — the great intellectual centre of the Mali and Songhai empires — lies in modern Mali"
+        },
+        {
+          "targetSlug": "trans-saharan-trade",
+          "verb": "INFLUENCES",
+          "note": "Trans-Saharan gold-salt trade was the economic foundation of all three great Malian empires"
+        },
+        {
+          "targetSlug": "songhai-empire",
+          "verb": "INFLUENCES",
+          "note": "The Songhai Empire succeeded the Mali Empire and controlled the same Niger bend territory"
+        },
+        {
+          "targetSlug": "french-west-africa",
+          "verb": "INFLUENCES",
+          "note": "French colonial rule 1880–1960 reshaped Mali's borders and economy, generating legacies that persist today"
+        }
+      ],
+      "places": [
+        "Bamako, Mali",
+        "Timbuktu, Mali",
+        "Niger River, West Africa"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 9,
+        "significanceNarrative": "Mali is the heir to the medieval world's wealthiest empire and one of the greatest centres of Islamic scholarship; its ongoing fragility is a central case study in postcolonial state failure and Sahel instability.",
+        "significanceCategory": "continental"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "Mali, officially the Republic of Mali, is a landlocked country in West Africa. It is the eighth-largest country in Africa and the 23rd largest country in the world, with an area of over 1,240,192 square kilometres (478,841 sq mi).",
+          "new": "Mali (officially the Republic of Mali) is a landlocked West African nation and the heir to three of the medieval world's greatest empires — the Ghana Empire (c. 700–1200), the Mali Empire (1235–1600), and the Songhai Empire (1375–1591) — which together controlled trans-Saharan gold-salt trade routes and produced the legendary wealth of Mansa Musa, the richest individual in recorded history.\n\nThe Mali Empire at its 14th-century peak stretched across 1.2 million km² from the Atlantic coast to the Niger bend, encompassing the great intellectual centres of Timbuktu and Djenné. Mansa Musa's 1324 hajj to Mecca — during which his entourage distributed so much gold in Cairo that it depressed Egyptian gold prices for a decade — introduced sub-Saharan Africa's wealth to the Mediterranean world. The Sankore mosque and university at Timbuktu housed over 25,000 students and a library of some 700,000 manuscripts.\n\nModern Mali gained independence from France in 1960. Despite abundant mineral wealth, it has struggled with repeated coups, Tuareg insurgencies, and since 2012 a jihadist insurgency that has displaced millions and made the Sahel one of the world's most active conflict zones. The preservation of Timbuktu's manuscripts — many secretly evacuated during the 2012 Islamist occupation — remains one of the world's great ongoing heritage rescue efforts.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "Trans-Saharan gold-salt trade routes through the western Sudan created the economic foundation for the succession of great empires centered on modern Mali",
+              "type": "EventWindow",
+              "year": "c. 700–1600, West Africa"
+            },
+            {
+              "title": "Niger River system provided agricultural surplus and communications infrastructure for large-scale state formation",
+              "type": "Place",
+              "year": "c. 1200 BCE–present, West Africa"
+            },
+            {
+              "title": "French colonial penetration of West Africa from the 1880s dismantled the last indigenous polities and imposed boundaries cutting across ethnic and trading networks",
+              "type": "EventWindow",
+              "year": "1880–1960, West Africa"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "Mali Empire under Mansa Musa became the wealthiest polity in the medieval world, introducing West African gold wealth to the wider Islamic world and Europe",
+              "type": "Institution",
+              "year": "c. 1312–1337, West Africa"
+            },
+            {
+              "title": "Timbuktu became one of the world's greatest medieval centres of Islamic scholarship, housing up to 700,000 manuscripts",
+              "type": "Institution",
+              "year": "c. 1300–1600, West Africa"
+            },
+            {
+              "title": "Independence from France in 1960 launched the modern era; repeated military coups since 1968 have made Mali a case study in postcolonial institutional fragility",
+              "type": "EventWindow",
+              "year": "1960–present, Mali"
+            },
+            {
+              "title": "Sahel jihadist insurgency (2012–present) has spread from northern Mali across six countries, becoming one of the world's most severe humanitarian crises",
+              "type": "EventWindow",
+              "year": "2012–present, West Africa"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "mansa-musa",
+              "verb": "INFLUENCES",
+              "note": "Mansa Musa was the Mali Empire's greatest ruler, whose hajj broadcast West African wealth to the world"
+            },
+            {
+              "targetSlug": "timbuktu",
+              "verb": "OCCURS_IN",
+              "note": "Timbuktu — the great intellectual centre of the Mali and Songhai empires — lies in modern Mali"
+            },
+            {
+              "targetSlug": "trans-saharan-trade",
+              "verb": "INFLUENCES",
+              "note": "Trans-Saharan gold-salt trade was the economic foundation of all three great Malian empires"
+            },
+            {
+              "targetSlug": "songhai-empire",
+              "verb": "INFLUENCES",
+              "note": "The Songhai Empire succeeded the Mali Empire and controlled the same Niger bend territory"
+            },
+            {
+              "targetSlug": "french-west-africa",
+              "verb": "INFLUENCES",
+              "note": "French colonial rule 1880–1960 reshaped Mali's borders and economy, generating legacies that persist today"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Bamako, Mali",
+            "Timbuktu, Mali",
+            "Niger River, West Africa"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "Mali",
+            "country",
+            "Africa",
+            "Countries / Polities"
+          ],
+          "new": [
+            "Mali",
+            "West Africa",
+            "Mali Empire",
+            "Mansa Musa",
+            "Timbuktu",
+            "Trans-Saharan Trade",
+            "Sahel",
+            "Independence"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Places -- Countries / Polities -- Mali -- Contemporary"
+          ],
+          "new": [
+            "Polity — State — Mali — Contemporary"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "GEOPOLITICAL_LINKAGE",
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "world-systems",
+            "postcolonial-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 9,
+            "significanceNarrative": "Mali is the heir to the medieval world's wealthiest empire and one of the greatest centres of Islamic scholarship; its ongoing fragility is a central case study in postcolonial state failure and Sahel instability.",
+            "significanceCategory": "continental"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        }
+      ]
     }
   ]
 }

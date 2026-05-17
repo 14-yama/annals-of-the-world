@@ -11,14 +11,14 @@
       "name": "San Marino",
       "label": "Place",
       "callNumber": "430.san-marino",
-      "summary": "San Marino is a country in San Marino. Founded 301-09-04. Population: 33,600. Active during the Classical era of empires and foundational civilizations. Classified under Countries / Polities.",
+      "summary": "San Marino is a landlocked microstate enclaved within central Italy, widely regarded as the world's oldest surviving republic, with a founding tradition tracing to 301 CE when the Christian stonemason Marinus of Rab fled Roman persecution and established a monastic community on Monte Titano. It covers just 61 km² and has a population of around 34,000, yet has maintained unbroken self-governance through the medieval period, the age of Italian city-states, Napoleonic invasion, and two world wars.\n\nThe republic's constitution — or at least its institutional core — dates to the Statutes of 1600, making it among the oldest surviving written constitutions. The government is headed by two Captains Regent elected every six months from the Grand and General Council, a dual-executive arrangement designed to prevent tyranny that has operated without interruption for over 700 years. San Marino famously declined to accept Napoleon's offer of territorial expansion in 1797, and it sheltered thousands of refugees — including Jews — during World War II.\n\nRecognised by the Congress of Vienna (1815) and later admitted to the United Nations in 1992, San Marino stands as proof that a tiny community can maintain sovereignty through diplomacy, neutrality, and institutional resilience across seventeen centuries of turbulent Italian history.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Late Antiquity",
       "eraDivisionCode": "924",
       "region": "Southern Europe",
       "continent": "Europe",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "301-09-04",
       "period": "",
@@ -27,17 +27,20 @@
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/View%20of%20Mount%20Titano%20-%20San%20Marino.jpg",
       "detailsJson": "{\"causes\": [{\"title\": \"Geographic advantage in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}, {\"title\": \"Strategic location in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}, {\"title\": \"Natural resources in the 3000 BCE – 500 CE\", \"type\": \"Place\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Became center of through San Marino's historical significance\", \"type\": \"Place\"}, {\"title\": \"Influenced surrounding through San Marino's historical significance\", \"type\": \"Place\"}, {\"title\": \"Expanded into through San Marino's historical significance\", \"type\": \"Place\"}], \"relationships\": [{\"sourceSlug\": \"san-marino\", \"sourceName\": \"San Marino\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-late-antiquity\", \"targetName\": \"Late Antiquity\", \"context\": \"San Marino is situated within the Late Antiquity (924)\"}, {\"sourceSlug\": \"san-marino\", \"sourceName\": \"San Marino\", \"verb\": \"LOCATED_IN\", \"targetSlug\": \"europe\", \"targetName\": \"Europe\", \"context\": \"San Marino is located in Europe\"}, {\"sourceSlug\": \"san-marino\", \"sourceName\": \"San Marino\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"regional-development-classical\", \"targetName\": \"Regional Development (Classical)\", \"context\": \"San Marino shaped regional development during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: San Marino\", \"type\": \"Reference article\", \"slug\": \"san-marino\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q238\", \"https://en.wikipedia.org/wiki/San_Marino\"], \"tags\": [\"San Marino\", \"country\", \"Europe\", \"Countries / Polities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"San Marino is remembered as a landmark place of the Classical era, referenced in 309 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Places -- Countries / Polities -- San Marino -- Classical"
+        "Polity — Republic — San Marino — Classical"
       ],
       "subjects": [
         "San Marino",
-        "country",
-        "Europe",
-        "Countries / Polities"
+        "Republic",
+        "Microstate",
+        "Italy",
+        "Medieval Europe",
+        "Constitutional History",
+        "Oldest Republic"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "constitutional-history",
+        "political-history"
       ],
       "altNames": [],
       "importanceScore": 10,
@@ -47,7 +50,229 @@
       "$id": "san-marino",
       "$sequence": "724488",
       "$createdAt": "2026-04-05T15:19:16.527+00:00",
-      "$updatedAt": "2026-04-06T00:50:45.265+00:00"
+      "$updatedAt": "2026-04-06T00:50:45.265+00:00",
+      "causes": [
+        {
+          "title": "Roman persecution of Christians in the 3rd century drove Marinus and his community to seek refuge on the defensible heights of Monte Titano",
+          "type": "EventWindow",
+          "year": "c. 257–305 CE, Italy"
+        },
+        {
+          "title": "Monte Titano's steep terrain provided natural fortification, allowing the community to resist assimilation by surrounding powers",
+          "type": "Place",
+          "year": "301 CE onwards, San Marino"
+        },
+        {
+          "title": "Diplomatic skill — particularly San Marino's offer of asylum — repeatedly earned goodwill from larger powers that might otherwise have absorbed it",
+          "type": "Idea",
+          "year": "c. 1200–1800, Europe"
+        }
+      ],
+      "effects": [
+        {
+          "title": "Statutes of 1600 became one of the world's oldest surviving written constitutional documents, influencing ideas of republican governance",
+          "type": "Text",
+          "year": "1600, San Marino"
+        },
+        {
+          "title": "Dual Captain-Regent system — two co-equal executives with 6-month terms — became a model studied by early modern republican theorists",
+          "type": "Institution",
+          "year": "c. 1243–present, San Marino"
+        },
+        {
+          "title": "San Marino's survival inspired Italian republicans, including Garibaldi who sheltered there after the fall of the Roman Republic in 1849",
+          "type": "EventWindow",
+          "year": "1849, San Marino"
+        },
+        {
+          "title": "UN membership in 1992 confirmed that sovereign statehood is not size-dependent, reinforcing the international legal principle of self-determination",
+          "type": "Idea",
+          "year": "1992, New York"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "roman-empire",
+          "verb": "INFLUENCES",
+          "note": "San Marino emerged as a refuge from Roman imperial religious persecution"
+        },
+        {
+          "targetSlug": "italian-unification",
+          "verb": "INFLUENCES",
+          "note": "San Marino remained independent throughout the Risorgimento and served as a refuge for Garibaldi"
+        },
+        {
+          "targetSlug": "napoleon-i",
+          "verb": "INFLUENCES",
+          "note": "Napoleon offered to expand San Marino's territory in 1797; San Marino declined, preserving its independence"
+        },
+        {
+          "targetSlug": "pope-innocent-iv",
+          "verb": "INFLUENCES",
+          "note": "Papal confirmation of San Marino's independence in 1291 was crucial to its long-term survival"
+        }
+      ],
+      "places": [
+        "Monte Titano, San Marino"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 9,
+        "significanceNarrative": "San Marino is the world's oldest surviving republic, a living demonstration that a tiny community can maintain sovereignty across 17 centuries through institutional resilience, diplomatic neutrality, and fortuitous geography.",
+        "significanceCategory": "world-changing"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "San Marino is a country in San Marino. Founded 301-09-04. Population: 33,600. Active during the Classical era of empires and foundational civilizations. Classified under Countries / Polities.",
+          "new": "San Marino is a landlocked microstate enclaved within central Italy, widely regarded as the world's oldest surviving republic, with a founding tradition tracing to 301 CE when the Christian stonemason Marinus of Rab fled Roman persecution and established a monastic community on Monte Titano. It covers just 61 km² and has a population of around 34,000, yet has maintained unbroken self-governance through the medieval period, the age of Italian city-states, Napoleonic invasion, and two world wars.\n\nThe republic's constitution — or at least its institutional core — dates to the Statutes of 1600, making it among the oldest surviving written constitutions. The government is headed by two Captains Regent elected every six months from the Grand and General Council, a dual-executive arrangement designed to prevent tyranny that has operated without interruption for over 700 years. San Marino famously declined to accept Napoleon's offer of territorial expansion in 1797, and it sheltered thousands of refugees — including Jews — during World War II.\n\nRecognised by the Congress of Vienna (1815) and later admitted to the United Nations in 1992, San Marino stands as proof that a tiny community can maintain sovereignty through diplomacy, neutrality, and institutional resilience across seventeen centuries of turbulent Italian history.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "Roman persecution of Christians in the 3rd century drove Marinus and his community to seek refuge on the defensible heights of Monte Titano",
+              "type": "EventWindow",
+              "year": "c. 257–305 CE, Italy"
+            },
+            {
+              "title": "Monte Titano's steep terrain provided natural fortification, allowing the community to resist assimilation by surrounding powers",
+              "type": "Place",
+              "year": "301 CE onwards, San Marino"
+            },
+            {
+              "title": "Diplomatic skill — particularly San Marino's offer of asylum — repeatedly earned goodwill from larger powers that might otherwise have absorbed it",
+              "type": "Idea",
+              "year": "c. 1200–1800, Europe"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "Statutes of 1600 became one of the world's oldest surviving written constitutional documents, influencing ideas of republican governance",
+              "type": "Text",
+              "year": "1600, San Marino"
+            },
+            {
+              "title": "Dual Captain-Regent system — two co-equal executives with 6-month terms — became a model studied by early modern republican theorists",
+              "type": "Institution",
+              "year": "c. 1243–present, San Marino"
+            },
+            {
+              "title": "San Marino's survival inspired Italian republicans, including Garibaldi who sheltered there after the fall of the Roman Republic in 1849",
+              "type": "EventWindow",
+              "year": "1849, San Marino"
+            },
+            {
+              "title": "UN membership in 1992 confirmed that sovereign statehood is not size-dependent, reinforcing the international legal principle of self-determination",
+              "type": "Idea",
+              "year": "1992, New York"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "roman-empire",
+              "verb": "INFLUENCES",
+              "note": "San Marino emerged as a refuge from Roman imperial religious persecution"
+            },
+            {
+              "targetSlug": "italian-unification",
+              "verb": "INFLUENCES",
+              "note": "San Marino remained independent throughout the Risorgimento and served as a refuge for Garibaldi"
+            },
+            {
+              "targetSlug": "napoleon-i",
+              "verb": "INFLUENCES",
+              "note": "Napoleon offered to expand San Marino's territory in 1797; San Marino declined, preserving its independence"
+            },
+            {
+              "targetSlug": "pope-innocent-iv",
+              "verb": "INFLUENCES",
+              "note": "Papal confirmation of San Marino's independence in 1291 was crucial to its long-term survival"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Monte Titano, San Marino"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "San Marino",
+            "country",
+            "Europe",
+            "Countries / Polities"
+          ],
+          "new": [
+            "San Marino",
+            "Republic",
+            "Microstate",
+            "Italy",
+            "Medieval Europe",
+            "Constitutional History",
+            "Oldest Republic"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Places -- Countries / Polities -- San Marino -- Classical"
+          ],
+          "new": [
+            "Polity — Republic — San Marino — Classical"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "GEOPOLITICAL_LINKAGE",
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "constitutional-history",
+            "political-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 9,
+            "significanceNarrative": "San Marino is the world's oldest surviving republic, a living demonstration that a tiny community can maintain sovereignty across 17 centuries through institutional resilience, diplomatic neutrality, and fortuitous geography.",
+            "significanceCategory": "world-changing"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        }
+      ]
     }
   ]
 }

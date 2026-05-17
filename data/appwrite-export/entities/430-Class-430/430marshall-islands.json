@@ -11,14 +11,14 @@
       "name": "Marshall Islands",
       "label": "Place",
       "callNumber": "430.marshall-islands",
-      "summary": "The Marshall Islands, officially the Republic of the Marshall Islands, is an island country in Oceania. The sovereign state lies west of the International Date Line and north of the equator in the Micronesia region of the Northwestern Pacific Ocean.",
+      "summary": "The Marshall Islands is a Pacific microstate of 29 atolls and 5 isolated islands that carries a history disproportionate to its size — as the site of 67 US nuclear weapons tests between 1946 and 1958, including the largest US thermonuclear detonation ever (Castle Bravo, 15 megatons, 1954), it is among the most heavily irradiated places on Earth.\n\nUnder Japanese mandate after World War I and the scene of intense US-Japanese combat during World War II (the Battle of Kwajalein, 1944), the Marshall Islands became a US Trust Territory in 1947. The Bikini and Enewetak atolls were designated as the Pacific Proving Ground and their inhabitants forcibly relocated. Castle Bravo (1 March 1954) unexpectedly spread radioactive fallout over 7,000 square miles, contaminating 23 Japanese fishermen aboard the Lucky Dragon and triggering international outrage that directly accelerated the Partial Nuclear Test Ban Treaty (1963).\n\nThe Marshall Islands achieved Compact of Free Association with the United States in 1986 and full UN membership in 1991. It remains on the front line of climate change: at an average elevation of two metres above sea level, it faces existential threat from rising seas, making it one of the world's most vocal advocates for aggressive emissions reduction.",
       "era": "Contemporary",
       "eraSlug": "contemporary",
       "eraDivision": "Cold War Era",
       "eraDivisionCode": "961",
       "region": "Global",
       "continent": "Global",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "1986-10-21",
       "period": "",
@@ -27,16 +27,20 @@
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Marshall%20Islands%20-%20Location%20Map%20%282013%29%20-%20MHL%20-%20UNOCHA.svg",
       "detailsJson": "{\"causes\": [{\"title\": \"Geographic advantage in the 1945 CE – present\", \"type\": \"Place\", \"year\": \"1945 CE\"}, {\"title\": \"Strategic location in the 1945 CE – present\", \"type\": \"Place\", \"year\": \"1945 CE\"}, {\"title\": \"Natural resources in the 1945 CE – present\", \"type\": \"Place\", \"year\": \"1945 CE\"}], \"effects\": [{\"title\": \"Became center of through Marshall Islands's historical significance\", \"type\": \"Place\"}, {\"title\": \"Influenced surrounding through Marshall Islands's historical significance\", \"type\": \"Place\"}, {\"title\": \"Expanded into through Marshall Islands's historical significance\", \"type\": \"Place\"}], \"relationships\": [{\"sourceSlug\": \"marshall-islands\", \"sourceName\": \"Marshall Islands\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-cold-war-era\", \"targetName\": \"Cold War Era\", \"context\": \"Marshall Islands is situated within the Cold War Era (961)\"}, {\"sourceSlug\": \"marshall-islands\", \"sourceName\": \"Marshall Islands\", \"verb\": \"LOCATED_IN\", \"targetSlug\": \"global\", \"targetName\": \"Global\", \"context\": \"Marshall Islands is located in Global\"}, {\"sourceSlug\": \"marshall-islands\", \"sourceName\": \"Marshall Islands\", \"verb\": \"TRANSFORMS\", \"targetSlug\": \"regional-development-contemporary\", \"targetName\": \"Regional Development (Contemporary)\", \"context\": \"Marshall Islands shaped regional development during the Contemporary era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Marshall Islands\", \"type\": \"Reference article\", \"slug\": \"marshall-islands\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q709\", \"https://en.wikipedia.org/wiki/Marshall_Islands\"], \"tags\": [\"Marshall Islands\", \"country\", \"Countries / Polities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Marshall Islands is remembered as a landmark place of the Contemporary era, referenced in 235 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Places -- Countries / Polities -- Marshall Islands -- Contemporary"
+        "Polity — State — Marshall Islands — Contemporary"
       ],
       "subjects": [
         "Marshall Islands",
-        "country",
-        "Countries / Polities"
+        "Nuclear Testing",
+        "Bikini Atoll",
+        "Pacific",
+        "Cold War",
+        "Castle Bravo",
+        "Climate Change"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "cold-war-history",
+        "environmental-history"
       ],
       "altNames": [],
       "importanceScore": 9,
@@ -46,7 +50,222 @@
       "$id": "marshall-islands",
       "$sequence": "731372",
       "$createdAt": "2026-04-05T15:21:28.570+00:00",
-      "$updatedAt": "2026-04-06T00:50:52.737+00:00"
+      "$updatedAt": "2026-04-06T00:50:52.737+00:00",
+      "causes": [
+        {
+          "title": "US strategic monopoly on the Pacific after World War II made the Marshall Islands the logical site for nuclear testing far from populated areas",
+          "type": "EventWindow",
+          "year": "1945–1946, Pacific"
+        },
+        {
+          "title": "Cold War nuclear competition with the Soviet Union drove the US to test progressively larger thermonuclear devices at Bikini and Enewetak",
+          "type": "EventWindow",
+          "year": "1946–1958, Pacific"
+        }
+      ],
+      "effects": [
+        {
+          "title": "Castle Bravo (1954) contaminated 7,000 sq miles and the Lucky Dragon crew, generating global anti-nuclear protests and accelerating the 1963 Test Ban Treaty",
+          "type": "EventWindow",
+          "year": "1954, Pacific"
+        },
+        {
+          "title": "Bikini Atoll declared uninhabitable; its residents never permanently returned — becoming the first nuclear refugees in history",
+          "type": "Place",
+          "year": "1946–present, Bikini Atoll"
+        },
+        {
+          "title": "Marshall Islands' climate advocacy has given it outsized influence in UNFCCC negotiations relative to its tiny size and population",
+          "type": "EventWindow",
+          "year": "1990–present, Global"
+        },
+        {
+          "title": "Partial Nuclear Test Ban Treaty (1963) was partly driven by the Castle Bravo fallout controversy to which Marshall Islands was central",
+          "type": "Text",
+          "year": "1963, Moscow"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "bikini-atoll",
+          "verb": "OCCURS_IN",
+          "note": "Bikini Atoll in the Marshall Islands was the main site of US nuclear tests 1946–1958"
+        },
+        {
+          "targetSlug": "nuclear-weapons",
+          "verb": "INFLUENCES",
+          "note": "67 US nuclear tests transformed the Marshall Islands' history and ecology"
+        },
+        {
+          "targetSlug": "partial-nuclear-test-ban-treaty",
+          "verb": "CAUSES",
+          "note": "Castle Bravo fallout was a catalyst for the 1963 Test Ban Treaty"
+        },
+        {
+          "targetSlug": "climate-change",
+          "verb": "INFLUENCES",
+          "note": "Sea-level rise threatens to submerge the Marshall Islands, making it a frontline climate advocacy nation"
+        }
+      ],
+      "places": [
+        "Majuro, Marshall Islands",
+        "Bikini Atoll, Pacific",
+        "Pacific Ocean"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "The Marshall Islands bore the full force of 67 US nuclear tests — including the world's largest — and now faces existential erasure from rising seas: a nation defined by two civilisational catastrophes it did not cause.",
+        "significanceCategory": "continental"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "The Marshall Islands, officially the Republic of the Marshall Islands, is an island country in Oceania. The sovereign state lies west of the International Date Line and north of the equator in the Micronesia region of the Northwestern Pacific Ocean.",
+          "new": "The Marshall Islands is a Pacific microstate of 29 atolls and 5 isolated islands that carries a history disproportionate to its size — as the site of 67 US nuclear weapons tests between 1946 and 1958, including the largest US thermonuclear detonation ever (Castle Bravo, 15 megatons, 1954), it is among the most heavily irradiated places on Earth.\n\nUnder Japanese mandate after World War I and the scene of intense US-Japanese combat during World War II (the Battle of Kwajalein, 1944), the Marshall Islands became a US Trust Territory in 1947. The Bikini and Enewetak atolls were designated as the Pacific Proving Ground and their inhabitants forcibly relocated. Castle Bravo (1 March 1954) unexpectedly spread radioactive fallout over 7,000 square miles, contaminating 23 Japanese fishermen aboard the Lucky Dragon and triggering international outrage that directly accelerated the Partial Nuclear Test Ban Treaty (1963).\n\nThe Marshall Islands achieved Compact of Free Association with the United States in 1986 and full UN membership in 1991. It remains on the front line of climate change: at an average elevation of two metres above sea level, it faces existential threat from rising seas, making it one of the world's most vocal advocates for aggressive emissions reduction.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "US strategic monopoly on the Pacific after World War II made the Marshall Islands the logical site for nuclear testing far from populated areas",
+              "type": "EventWindow",
+              "year": "1945–1946, Pacific"
+            },
+            {
+              "title": "Cold War nuclear competition with the Soviet Union drove the US to test progressively larger thermonuclear devices at Bikini and Enewetak",
+              "type": "EventWindow",
+              "year": "1946–1958, Pacific"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "Castle Bravo (1954) contaminated 7,000 sq miles and the Lucky Dragon crew, generating global anti-nuclear protests and accelerating the 1963 Test Ban Treaty",
+              "type": "EventWindow",
+              "year": "1954, Pacific"
+            },
+            {
+              "title": "Bikini Atoll declared uninhabitable; its residents never permanently returned — becoming the first nuclear refugees in history",
+              "type": "Place",
+              "year": "1946–present, Bikini Atoll"
+            },
+            {
+              "title": "Marshall Islands' climate advocacy has given it outsized influence in UNFCCC negotiations relative to its tiny size and population",
+              "type": "EventWindow",
+              "year": "1990–present, Global"
+            },
+            {
+              "title": "Partial Nuclear Test Ban Treaty (1963) was partly driven by the Castle Bravo fallout controversy to which Marshall Islands was central",
+              "type": "Text",
+              "year": "1963, Moscow"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "bikini-atoll",
+              "verb": "OCCURS_IN",
+              "note": "Bikini Atoll in the Marshall Islands was the main site of US nuclear tests 1946–1958"
+            },
+            {
+              "targetSlug": "nuclear-weapons",
+              "verb": "INFLUENCES",
+              "note": "67 US nuclear tests transformed the Marshall Islands' history and ecology"
+            },
+            {
+              "targetSlug": "partial-nuclear-test-ban-treaty",
+              "verb": "CAUSES",
+              "note": "Castle Bravo fallout was a catalyst for the 1963 Test Ban Treaty"
+            },
+            {
+              "targetSlug": "climate-change",
+              "verb": "INFLUENCES",
+              "note": "Sea-level rise threatens to submerge the Marshall Islands, making it a frontline climate advocacy nation"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Majuro, Marshall Islands",
+            "Bikini Atoll, Pacific",
+            "Pacific Ocean"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "Marshall Islands",
+            "country",
+            "Countries / Polities"
+          ],
+          "new": [
+            "Marshall Islands",
+            "Nuclear Testing",
+            "Bikini Atoll",
+            "Pacific",
+            "Cold War",
+            "Castle Bravo",
+            "Climate Change"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Places -- Countries / Polities -- Marshall Islands -- Contemporary"
+          ],
+          "new": [
+            "Polity — State — Marshall Islands — Contemporary"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "GEOPOLITICAL_LINKAGE",
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "cold-war-history",
+            "environmental-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 8,
+            "significanceNarrative": "The Marshall Islands bore the full force of 67 US nuclear tests — including the world's largest — and now faces existential erasure from rising seas: a nation defined by two civilisational catastrophes it did not cause.",
+            "significanceCategory": "continental"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.459488+00:00"
+        }
+      ]
     }
   ]
 }

@@ -11,14 +11,14 @@
       "name": "Timbuktu",
       "label": "Place",
       "callNumber": "440.timbuktu",
-      "summary": "Timbuktu is an ancient city in Mali, situated 20 kilometres north of the Niger River. It is the capital of the Tombouctou Region, one of the eight administrative regions of Mali, having a population of 32,460 in the 2018 census.",
-      "era": "Classical",
+      "summary": "Timbuktu (Tombouctou) is a city in northern Mali on the southern edge of the Sahara Desert that served as the intellectual and spiritual capital of West Africa's greatest medieval empires — the Mali and Songhai — and at its 15th-century peak was home to 25,000 students and a collection of some 700,000 manuscripts, making it one of the most important centres of Islamic scholarship in the world.\n\nFounded c. 1100 CE as a seasonal Tuareg camp on the Niger bend, Timbuktu grew into a major trans-Saharan trade entrepôt under the Mali Empire and reached its zenith under the Songhai (1464–1591). The Sankore mosque and madrasa, the Djinguereber mosque (1327, built by Mansa Musa's Andalusian architect), and dozens of smaller madrasas educated scholars across the Islamic world in Quranic studies, law, astronomy, mathematics, and history. After Moroccan conquest in 1591 scattered its scholars and sacked its libraries, Timbuktu entered a long decline. By the 19th century, European explorers treated it as a mythical city of gold.\n\nDuring the 2012 jihadist occupation, thousands of manuscripts were secretly evacuated to Bamako, becoming one of the world's most celebrated heritage rescue operations. UNESCO designated Timbuktu a World Heritage Site in 1988; its earthen mosques were damaged by jihadists in 2012–13 and are being restored.",
+      "era": "Medieval",
       "eraSlug": "classical",
       "eraDivision": "Classical",
       "eraDivisionCode": "920",
       "region": "West Africa",
       "continent": "Africa",
-      "status": "Published",
+      "status": "enriched",
       "died": "",
       "founded": "",
       "period": "",
@@ -27,16 +27,20 @@
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Timbuktu%20Mosque%20Sankore.jpg",
       "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"timbuktu\", \"sourceName\": \"Timbuktu\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Timbuktu is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Timbuktu\", \"type\": \"Reference article\", \"slug\": \"timbuktu\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q9427\", \"https://en.wikipedia.org/wiki/Timbuktu\"], \"tags\": [\"Mali\", \"city\", \"Africa\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Timbuktu left a notable mark on Classical history, documented across 128 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
       "subjectHeadings": [
-        "Places -- Cities -- Mali -- Classical"
+        "Place — City — Mali — Medieval"
       ],
       "subjects": [
+        "Timbuktu",
         "Mali",
-        "city",
-        "Africa",
-        "Cities"
+        "West Africa",
+        "Islamic Scholarship",
+        "Mansa Musa",
+        "Sahara",
+        "Manuscripts"
       ],
       "frameworks": [
-        "CAUSE_AND_EFFECT"
+        "intellectual-history",
+        "cultural-history"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -46,7 +50,229 @@
       "$id": "timbuktu",
       "$sequence": "725740",
       "$createdAt": "2026-04-05T15:19:40.419+00:00",
-      "$updatedAt": "2026-04-05T15:19:40.419+00:00"
+      "$updatedAt": "2026-04-05T15:19:40.419+00:00",
+      "causes": [
+        {
+          "title": "Position at the Niger bend — the intersection of Saharan caravan routes and Niger river navigation — made Timbuktu the unavoidable entrepôt between the Sahara and West Africa",
+          "type": "Place",
+          "year": "c. 1100–1600, Mali"
+        },
+        {
+          "title": "Mali Empire's gold wealth, and particularly Mansa Musa's patronage after his 1324 hajj, funded mosque construction and attracted scholars from across the Islamic world",
+          "type": "Person",
+          "year": "1312–1337, Mali"
+        }
+      ],
+      "effects": [
+        {
+          "title": "Sankore University became one of the medieval world's great academic institutions, training scholars who disseminated West African Islamic learning across the Sahara",
+          "type": "Institution",
+          "year": "c. 1400–1591, Timbuktu"
+        },
+        {
+          "title": "Timbuktu's 700,000 manuscripts represent the largest surviving corpus of sub-Saharan African scholarly writing — the foundation of African intellectual history",
+          "type": "Text",
+          "year": "c. 1200–present, Timbuktu"
+        },
+        {
+          "title": "Moroccan conquest (1591) ended Timbuktu's golden age and dispersed its scholar community, marking the effective end of the medieval West African intellectual tradition",
+          "type": "EventWindow",
+          "year": "1591, Timbuktu"
+        },
+        {
+          "title": "2012 manuscript evacuation rescued over 300,000 documents from jihadist destruction, demonstrating the fragility of the world's most remote documentary heritage",
+          "type": "EventWindow",
+          "year": "2012, Timbuktu"
+        }
+      ],
+      "relationships": [
+        {
+          "targetSlug": "mansa-musa",
+          "verb": "INFLUENCES",
+          "note": "Mansa Musa funded the Djinguereber mosque and patronised Timbuktu's scholars after his 1324 hajj"
+        },
+        {
+          "targetSlug": "mali-empire",
+          "verb": "INFLUENCES",
+          "note": "Timbuktu flourished as the intellectual centre of the Mali Empire 13th–15th centuries"
+        },
+        {
+          "targetSlug": "songhai-empire",
+          "verb": "INFLUENCES",
+          "note": "Timbuktu reached its peak under the Songhai Empire before the 1591 Moroccan conquest"
+        },
+        {
+          "targetSlug": "trans-saharan-trade",
+          "verb": "INFLUENCES",
+          "note": "Trans-Saharan gold-salt trade made Timbuktu the pivot of West African commerce"
+        }
+      ],
+      "places": [
+        "Timbuktu, Mali",
+        "Niger River, West Africa",
+        "Sahara Desert, Africa"
+      ],
+      "historicalSignificance": {
+        "significanceScore": 9,
+        "significanceNarrative": "Timbuktu was the Oxford of medieval West Africa — a city of 25,000 students and 700,000 manuscripts whose destruction and rescue encapsulates the vulnerability of the world's most remote intellectual heritage.",
+        "significanceCategory": "continental"
+      },
+      "_unsyncedEdits": true,
+      "_editLog": [
+        {
+          "field": "summary",
+          "old": "Timbuktu is an ancient city in Mali, situated 20 kilometres north of the Niger River. It is the capital of the Tombouctou Region, one of the eight administrative regions of Mali, having a population of 32,460 in the 2018 census.",
+          "new": "Timbuktu (Tombouctou) is a city in northern Mali on the southern edge of the Sahara Desert that served as the intellectual and spiritual capital of West Africa's greatest medieval empires — the Mali and Songhai — and at its 15th-century peak was home to 25,000 students and a collection of some 700,000 manuscripts, making it one of the most important centres of Islamic scholarship in the world.\n\nFounded c. 1100 CE as a seasonal Tuareg camp on the Niger bend, Timbuktu grew into a major trans-Saharan trade entrepôt under the Mali Empire and reached its zenith under the Songhai (1464–1591). The Sankore mosque and madrasa, the Djinguereber mosque (1327, built by Mansa Musa's Andalusian architect), and dozens of smaller madrasas educated scholars across the Islamic world in Quranic studies, law, astronomy, mathematics, and history. After Moroccan conquest in 1591 scattered its scholars and sacked its libraries, Timbuktu entered a long decline. By the 19th century, European explorers treated it as a mythical city of gold.\n\nDuring the 2012 jihadist occupation, thousands of manuscripts were secretly evacuated to Bamako, becoming one of the world's most celebrated heritage rescue operations. UNESCO designated Timbuktu a World Heritage Site in 1988; its earthen mosques were damaged by jihadists in 2012–13 and are being restored.",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "causes",
+          "old": null,
+          "new": [
+            {
+              "title": "Position at the Niger bend — the intersection of Saharan caravan routes and Niger river navigation — made Timbuktu the unavoidable entrepôt between the Sahara and West Africa",
+              "type": "Place",
+              "year": "c. 1100–1600, Mali"
+            },
+            {
+              "title": "Mali Empire's gold wealth, and particularly Mansa Musa's patronage after his 1324 hajj, funded mosque construction and attracted scholars from across the Islamic world",
+              "type": "Person",
+              "year": "1312–1337, Mali"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "effects",
+          "old": null,
+          "new": [
+            {
+              "title": "Sankore University became one of the medieval world's great academic institutions, training scholars who disseminated West African Islamic learning across the Sahara",
+              "type": "Institution",
+              "year": "c. 1400–1591, Timbuktu"
+            },
+            {
+              "title": "Timbuktu's 700,000 manuscripts represent the largest surviving corpus of sub-Saharan African scholarly writing — the foundation of African intellectual history",
+              "type": "Text",
+              "year": "c. 1200–present, Timbuktu"
+            },
+            {
+              "title": "Moroccan conquest (1591) ended Timbuktu's golden age and dispersed its scholar community, marking the effective end of the medieval West African intellectual tradition",
+              "type": "EventWindow",
+              "year": "1591, Timbuktu"
+            },
+            {
+              "title": "2012 manuscript evacuation rescued over 300,000 documents from jihadist destruction, demonstrating the fragility of the world's most remote documentary heritage",
+              "type": "EventWindow",
+              "year": "2012, Timbuktu"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "relationships",
+          "old": null,
+          "new": [
+            {
+              "targetSlug": "mansa-musa",
+              "verb": "INFLUENCES",
+              "note": "Mansa Musa funded the Djinguereber mosque and patronised Timbuktu's scholars after his 1324 hajj"
+            },
+            {
+              "targetSlug": "mali-empire",
+              "verb": "INFLUENCES",
+              "note": "Timbuktu flourished as the intellectual centre of the Mali Empire 13th–15th centuries"
+            },
+            {
+              "targetSlug": "songhai-empire",
+              "verb": "INFLUENCES",
+              "note": "Timbuktu reached its peak under the Songhai Empire before the 1591 Moroccan conquest"
+            },
+            {
+              "targetSlug": "trans-saharan-trade",
+              "verb": "INFLUENCES",
+              "note": "Trans-Saharan gold-salt trade made Timbuktu the pivot of West African commerce"
+            }
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "places",
+          "old": null,
+          "new": [
+            "Timbuktu, Mali",
+            "Niger River, West Africa",
+            "Sahara Desert, Africa"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjects",
+          "old": [
+            "Mali",
+            "city",
+            "Africa",
+            "Cities"
+          ],
+          "new": [
+            "Timbuktu",
+            "Mali",
+            "West Africa",
+            "Islamic Scholarship",
+            "Mansa Musa",
+            "Sahara",
+            "Manuscripts"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "subjectHeadings",
+          "old": [
+            "Places -- Cities -- Mali -- Classical"
+          ],
+          "new": [
+            "Place — City — Mali — Medieval"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "frameworks",
+          "old": [
+            "CAUSE_AND_EFFECT"
+          ],
+          "new": [
+            "intellectual-history",
+            "cultural-history"
+          ],
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "era",
+          "old": "Classical",
+          "new": "Medieval",
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        },
+        {
+          "field": "historicalSignificance",
+          "old": null,
+          "new": {
+            "significanceScore": 9,
+            "significanceNarrative": "Timbuktu was the Oxford of medieval West Africa — a city of 25,000 students and 700,000 manuscripts whose destruction and rescue encapsulates the vulnerability of the world's most remote intellectual heritage.",
+            "significanceCategory": "continental"
+          },
+          "editor": "vscode-copilot",
+          "ts": "2026-05-17T08:59:03.508048+00:00"
+        }
+      ]
     }
   ]
 }
