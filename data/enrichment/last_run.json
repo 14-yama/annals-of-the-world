@@ -1,88 +1,39 @@
 {
-  "timestamp": "2026-05-17T18:01:45Z",
+  "timestamp": "2026-05-17T18:46:54Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 13,
-  "failed": 0,
+  "count_requested": 5,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "galactorius-of-lescar",
-      "status": "enriched",
-      "old_len": 736,
-      "new_len": 1004
-    },
-    {
-      "slug": "uranius",
-      "status": "enriched",
-      "old_len": 775,
-      "new_len": 845
-    },
-    {
-      "slug": "spargapeithes",
-      "status": "enriched",
-      "old_len": 76,
-      "new_len": 1084
-    },
-    {
-      "slug": "ibn-khuzaymah",
-      "status": "enriched",
-      "old_len": 179,
-      "new_len": 1266
-    },
-    {
-      "slug": "gartnait-iii",
-      "status": "enriched",
-      "old_len": 77,
-      "new_len": 1345
-    },
-    {
-      "slug": "drest-i",
-      "status": "enriched",
-      "old_len": 77,
-      "new_len": 890
-    },
-    {
-      "slug": "trebeta",
-      "status": "enriched",
-      "old_len": 77,
-      "new_len": 1440
-    },
-    {
-      "slug": "bacurius-i-of-iberia",
-      "status": "enriched",
-      "old_len": 77,
-      "new_len": 878
-    },
-    {
-      "slug": "de-administrando-imperio",
-      "status": "enriched",
-      "old_len": 320,
-      "new_len": 1151
-    },
-    {
-      "slug": "\u00e1lvaro-of-braganza",
-      "status": "enriched",
-      "old_len": 107,
-      "new_len": 1087
-    },
-    {
-      "slug": "prusias-ii-of-bithynia",
-      "status": "enriched",
-      "old_len": 107,
-      "new_len": 1972
-    },
-    {
-      "slug": "publius-petronius",
-      "status": "enriched",
-      "old_len": 107,
-      "new_len": 1305
-    },
-    {
-      "slug": "drest-iii",
+      "slug": "donatian-of-reims",
       "status": "enriched",
       "old_len": 81,
-      "new_len": 825
+      "new_len": 728
+    },
+    {
+      "slug": "vassili-poyarkov",
+      "status": "enriched",
+      "old_len": 108,
+      "new_len": 1079
+    },
+    {
+      "slug": "first-epistle-to-the-thessalonians",
+      "status": "enriched",
+      "old_len": 82,
+      "new_len": 1802
+    },
+    {
+      "slug": "bible",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
+    },
+    {
+      "slug": "grabus",
+      "status": "enriched",
+      "old_len": 82,
+      "new_len": 962
     }
   ]
 }

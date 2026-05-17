@@ -43854,17 +43854,22 @@
   "git-push-1779055792": {
     "job_id": "git-push-1779055792",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 30,
     "pid": null,
     "started": "2026-05-17T22:09:52Z",
-    "finished": null,
+    "finished": "2026-05-17T22:09:57Z",
     "log": [
       "Pending files: 30 entities, 0 edges (30 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 499 local enrichments\"",
+      "[clean/audit-system edd8e15f4c] feat(enrich): watchdog auto-push \u2014 499 local enrichments\n 35 files changed, 716 insertions(+), 119 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   8ebacd520f..edd8e15f4c  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 30 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "enrich-1779055792": {
     "job_id": "enrich-1779055792",
@@ -43911,7 +43916,36 @@
       "[10/20] drest-iii (score=95.9, 0c)",
       "  SKIP \u2014 already enriched (825c)",
       "",
-      "[11/20] king-xian-of-zhou (score=95.9, 0c)"
+      "[11/20] king-xian-of-zhou (score=95.9, 0c)",
+      "  ENRICHED \u2014 81c -> 678c",
+      "",
+      "[12/20] trdat-of-iberia (score=95.9, 0c)",
+      "  ENRICHED \u2014 81c -> 1198c",
+      "",
+      "[13/20] john-the-baptist (score=95.9, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  RETRY (2) \u2014 insufficient relationships (1, need >= 2)",
+      "  ENRICHED \u2014 252c -> 1083c",
+      "",
+      "[14/20] donatian-of-reims (score=95.9, 0c)",
+      "  ENRICHED \u2014 81c -> 1777c",
+      "",
+      "[15/20] vassili-poyarkov (score=95.85, 0c)",
+      "  ENRICHED \u2014 108c -> 894c",
+      "",
+      "[16/20] first-epistle-to-the-thessalonians (score=95.8, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  ENRICHED \u2014 82c -> 749c",
+      "",
+      "[17/20] bible (score=95.8, 0c)",
+      "  ENRICHED \u2014 82c -> 930c",
+      "",
+      "[18/20] grabus (score=95.8, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  ENRICHED \u2014 82c -> 1681c",
+      "",
+      "[19/20] ardaric (score=95.8, 0c)",
+      "  RETRY (1) \u2014 relationship[8] is not a dict"
     ],
     "exitCode": null
   }
