@@ -1,69 +1,32 @@
 {
-  "timestamp": "2026-05-17T09:46:41Z",
+  "timestamp": "2026-05-17T10:33:01Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 9,
-  "failed": 1,
+  "count_requested": 5,
+  "enriched": 2,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "georgics",
-      "status": "enriched",
-      "old_len": 65,
-      "new_len": 1187
-    },
-    {
-      "slug": "eclogues",
+      "slug": "de-rerum-natura",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 2)"
+      "reason": "insufficient relationships (1, need >= 3)"
     },
     {
-      "slug": "sermon-on-the-mount",
-      "status": "enriched",
-      "old_len": 303,
-      "new_len": 1128
+      "slug": "the-emperors-new-clothes",
+      "status": "failed",
+      "reason": "Expecting ',' delimiter: line 2 column 108 (char 610)"
     },
     {
-      "slug": "abd-allah-ibn-amir",
+      "slug": "candide",
       "status": "enriched",
-      "old_len": 641,
-      "new_len": 1489
+      "old_len": 73,
+      "new_len": 1101
     },
     {
-      "slug": "all-quiet-on-the-western-front",
+      "slug": "a-farewell-to-arms",
       "status": "enriched",
-      "old_len": 67,
-      "new_len": 1490
-    },
-    {
-      "slug": "zohar",
-      "status": "enriched",
-      "old_len": 67,
-      "new_len": 1648
-    },
-    {
-      "slug": "meditations",
-      "status": "enriched",
-      "old_len": 68,
-      "new_len": 1106
-    },
-    {
-      "slug": "rapunzel",
-      "status": "enriched",
-      "old_len": 68,
-      "new_len": 966
-    },
-    {
-      "slug": "town-musicians-of-bremen",
-      "status": "enriched",
-      "old_len": 68,
-      "new_len": 877
-    },
-    {
-      "slug": "crito",
-      "status": "enriched",
-      "old_len": 68,
-      "new_len": 1060
+      "old_len": 76,
+      "new_len": 1201
     }
   ]
 }
