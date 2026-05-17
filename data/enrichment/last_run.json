@@ -1,76 +1,33 @@
 {
-  "timestamp": "2026-05-17T12:57:34Z",
+  "timestamp": "2026-05-17T14:00:38Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 11,
-  "failed": 0,
+  "count_requested": 5,
+  "enriched": 3,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "the-three-little-pigs",
-      "status": "enriched",
-      "old_len": 114,
-      "new_len": 1814
+      "slug": "ne\u015fri",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "trinity-college-dublin",
+      "slug": "alatheus",
       "status": "enriched",
-      "old_len": 97,
-      "new_len": 1271
+      "old_len": 761,
+      "new_len": 1142
     },
     {
-      "slug": "gonalo-coelho",
+      "slug": "d\u00fanchad-bec",
       "status": "enriched",
-      "old_len": 170,
-      "new_len": 1029
+      "old_len": 57,
+      "new_len": 1258
     },
     {
-      "slug": "jtaka",
+      "slug": "dnchad-bec",
       "status": "enriched",
-      "old_len": 128,
-      "new_len": 1768
-    },
-    {
-      "slug": "gaspar-de-guzmn-count-duke-of-olivares",
-      "status": "enriched",
-      "old_len": 607,
-      "new_len": 945
-    },
-    {
-      "slug": "periplus-of-the-erythraean-sea",
-      "status": "enriched",
-      "old_len": 135,
-      "new_len": 1422
-    },
-    {
-      "slug": "charlotte-guillard",
-      "status": "enriched",
-      "old_len": 607,
-      "new_len": 1378
-    },
-    {
-      "slug": "muammad-ibn-ysuf-al-kindi",
-      "status": "enriched",
-      "old_len": 178,
-      "new_len": 1061
-    },
-    {
-      "slug": "anglo-saxon-chronicle",
-      "status": "enriched",
-      "old_len": 145,
-      "new_len": 1742
-    },
-    {
-      "slug": "metamorphoses",
-      "status": "enriched",
-      "old_len": 299,
-      "new_len": 1896
-    },
-    {
-      "slug": "georg-heinrich-von-grtz",
-      "status": "enriched",
-      "old_len": 189,
-      "new_len": 1128
+      "old_len": 57,
+      "new_len": 1192
     }
   ]
 }
