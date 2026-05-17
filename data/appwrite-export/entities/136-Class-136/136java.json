@@ -25,94 +25,7 @@
       "wikidataQid": "Q251",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Java_(programming_language)",
       "imageUrl": "",
-      "detailsJson": {
-        "causes": [
-          "Sun Microsystems' 'Green Project' (1991), initiated to develop software for consumer electronics and cable TV set-top boxes, created the technical and design requirements — portability, reliability, security — that shaped Java's architecture; the project was redirected toward internet applications as the World Wide Web's commercial potential became clear.",
-          "The explosion of the World Wide Web in 1994–1995 — and the internet's need for platform-independent, network-capable, safe code that could be distributed across diverse hardware — created the perfect market for Java's 'Write Once, Run Anywhere' design philosophy.",
-          "Sun Microsystems' deliberate strategy of making Java free to use and developing it as an open standard (though with Sun retaining control of the specification) — combined with aggressive marketing of Java as the solution to the fragmented computing landscape — drove the rapid adoption that made Java dominant in enterprise computing by the late 1990s."
-        ],
-        "effects": [
-          "Java's WORA principle and its popularisation of object-oriented programming fundamentally shaped software engineering practice for two decades — its design patterns book (1994 Gang of Four) and its enterprise frameworks (Spring, Hibernate, EJB) defined how large-scale software systems were designed, tested, and deployed from the late 1990s through the 2010s.",
-          "Java's adoption as the primary Android development language (2008) gave it a second major wave of adoption that extended its relevance into the mobile era — making Java-based Android development the dominant mobile programming environment until Kotlin's rise in the 2017–2020 period.",
-          "The Oracle v. Google lawsuit — centred on Java API copyright — became one of the most consequential intellectual property cases in software history, with the US Supreme Court's 2021 ruling in Google's favour establishing important precedents for software interoperability and the limits of API copyright protection."
-        ],
-        "relationships": [
-          {
-            "sourceSlug": "java",
-            "sourceName": "Java (programming language)",
-            "verb": "ENABLES",
-            "targetSlug": "android-platform",
-            "targetName": "Android Mobile Platform",
-            "context": "Java was the primary programming language for Android app development (2008–2017) — Google's choice of Java for Android gave it a massive second wave of adoption in the mobile era."
-          },
-          {
-            "sourceSlug": "java",
-            "sourceName": "Java (programming language)",
-            "verb": "INSPIRES",
-            "targetSlug": "jvm-languages",
-            "targetName": "JVM Languages (Kotlin, Scala, Clojure)",
-            "context": "Java's JVM became the platform for numerous other programming languages — Kotlin (Android preferred language since 2017), Scala, Clojure, and Groovy all run on the JVM and were shaped by Java's design."
-          },
-          {
-            "sourceSlug": "oracle-corporation",
-            "sourceName": "Oracle Corporation",
-            "verb": "ACQUIRES",
-            "targetSlug": "java",
-            "targetName": "Java (via Sun Microsystems acquisition 2010)",
-            "context": "Oracle's acquisition of Sun Microsystems in 2010 transferred Java's stewardship to Oracle, leading to the Oracle v. Google lawsuit that became a landmark software copyright case."
-          }
-        ],
-        "places": [
-          {
-            "name": "Silicon Valley, California, USA",
-            "role": "The birthplace of Java — Sun Microsystems was headquartered in Santa Clara, California, and the Java language was developed there"
-          },
-          {
-            "name": "Global Internet / Enterprise Computing",
-            "role": "The operational environment of Java — the worldwide web and enterprise computing infrastructure on which Java became the dominant server-side and application language"
-          }
-        ],
-        "texts": [
-          {
-            "title": "Wikipedia: Java",
-            "type": "Reference article",
-            "slug": "java"
-          }
-        ],
-        "externalLinks": [
-          "https://www.wikidata.org/wiki/Q251",
-          "https://en.wikipedia.org/wiki/Java_(programming_language)"
-        ],
-        "tags": [
-          "software",
-          "Computing & Digital Technology",
-          "scientific-paradigm"
-        ],
-        "thumbnailUrl": "",
-        "quote": "",
-        "legacySummary": "Java is remembered as a landmark idea of the Contemporary era, referenced in 157 Wikipedia language editions. Key lasting impacts include: Influenced intellectual traditions and cultural development.",
-        "summary": "Java is a high-level, general-purpose, object-oriented programming language developed by Sun Microsystems — primarily by James Gosling — with its first public release in 1995. Java was designed around the principle of 'Write Once, Run Anywhere' (WORA): Java source code is compiled to bytecode that runs on the Java Virtual Machine (JVM), an abstract computing machine that can be implemented on any hardware or operating system, making Java programmes inherently portable across platforms. This design philosophy — and Java's combination of object-oriented structure, memory safety (automatic garbage collection), strong typing, and large standard library — made Java one of the most widely adopted programming languages in the world, and it dominated enterprise software development and server-side programming for over two decades.\n\nJava's trajectory after its 1995 release was shaped by several key moments: its adoption for web browser applets (which briefly made Java the primary client-side web technology before being superseded by JavaScript), its use as the primary language for Android mobile application development (announced 2008, which gave Java a second era of massive adoption), its central role in enterprise server-side development through Java EE (now Jakarta EE) and frameworks like Spring and Hibernate, and its acquisition by Oracle through the purchase of Sun Microsystems in 2010. The Oracle acquisition led to the Java vs. Google lawsuit (Oracle v. Google) — a decade-long legal dispute over whether Google's use of Java APIs in Android constituted copyright infringement, ultimately resolved in Google's favour by the US Supreme Court in 2021.\n\nJava's influence on the broader programming ecosystem has been immense: it popularised object-oriented programming and design patterns for a generation of developers, its JVM became the platform for numerous other languages (Kotlin, Scala, Clojure, Groovy), and its ecosystem of tools, frameworks, and libraries set the standard for enterprise software development. By the 2020s, Java had been joined by Kotlin (the preferred Android language since Google's 2017 designation) and Python as dominant general-purpose languages, but remained one of the most widely used languages worldwide.",
-        "subjects": [
-          "Programming Languages",
-          "Computer Science",
-          "Contemporary Era",
-          "Software Engineering",
-          "Technology",
-          "Internet History",
-          "Object-Oriented Programming",
-          "Enterprise Software"
-        ],
-        "frameworks": [
-          "STRUCTURAL_ANALYSIS",
-          "CAUSE_AND_EFFECT",
-          "WORLD_SYSTEMS"
-        ],
-        "historicalSignificance": {
-          "significanceScore": 8,
-          "significanceNarrative": "Java is one of the most influential programming languages in the history of computing — its 'Write Once, Run Anywhere' design philosophy, popularisation of object-oriented programming, dominance in enterprise server-side development, and role as the primary Android language have shaped software engineering for 30 years. Its JVM became the platform for multiple languages and its ecosystem defined how large-scale software is built.",
-          "significanceCategory": "world-changing"
-        }
-      },
+      "detailsJson": "{\"causes\":[\"Sun Microsystems' 'Green Project' (1991), initiated to develop software for consumer electronics and cable TV set-top boxes, created the technical and design requirements — portability, reliability, security — that shaped Java's architecture; the project was redirected toward internet applications as the World Wide Web's commercial potential became clear.\",\"The explosion of the World Wide Web in 1994–1995 — and the internet's need for platform-independent, network-capable, safe code that could be distributed across diverse hardware — created the perfect market for Java's 'Write Once, Run Anywhere' design philosophy.\",\"Sun Microsystems' deliberate strategy of making Java free to use and developing it as an open standard (though with Sun retaining control of the specification) — combined with aggressive marketing of Java as the solution to the fragmented computing landscape — drove the rapid adoption that made Java dominant in enterprise computing by the late 1990s.\"],\"effects\":[\"Java's WORA principle and its popularisation of object-oriented programming fundamentally shaped software engineering practice for two decades — its design patterns book (1994 Gang of Four) and its enterprise frameworks (Spring, Hibernate, EJB) defined how large-scale software systems were designed, tested, and deployed from the late 1990s through the 2010s.\",\"Java's adoption as the primary Android development language (2008) gave it a second major wave of adoption that extended its relevance into the mobile era — making Java-based Android development the dominant mobile programming environment until Kotlin's rise in the 2017–2020 period.\",\"The Oracle v. Google lawsuit — centred on Java API copyright — became one of the most consequential intellectual property cases in software history, with the US Supreme Court's 2021 ruling in Google's favour establishing important precedents for software interoperability and the limits of API copyright protection.\"],\"relationships\":[{\"sourceSlug\":\"java\",\"sourceName\":\"Java (programming language)\",\"verb\":\"ENABLES\",\"targetSlug\":\"android-platform\",\"targetName\":\"Android Mobile Platform\",\"context\":\"Java was the primary programming language for Android app development (2008–2017) — Google's choice of Java for Android gave it a massive second wave of adoption in the mobile era.\"},{\"sourceSlug\":\"java\",\"sourceName\":\"Java (programming language)\",\"verb\":\"INSPIRES\",\"targetSlug\":\"jvm-languages\",\"targetName\":\"JVM Languages (Kotlin, Scala, Clojure)\",\"context\":\"Java's JVM became the platform for numerous other programming languages — Kotlin (Android preferred language since 2017), Scala, Clojure, and Groovy all run on the JVM and were shaped by Java's design.\"},{\"sourceSlug\":\"oracle-corporation\",\"sourceName\":\"Oracle Corporation\",\"verb\":\"ACQUIRES\",\"targetSlug\":\"java\",\"targetName\":\"Java (via Sun Microsystems acquisition 2010)\",\"context\":\"Oracle's acquisition of Sun Microsystems in 2010 transferred Java's stewardship to Oracle, leading to the Oracle v. Google lawsuit that became a landmark software copyright case.\"}],\"places\":[{\"name\":\"Silicon Valley, California, USA\",\"role\":\"The birthplace of Java — Sun Microsystems was headquartered in Santa Clara, California, and the Java language was developed there\"},{\"name\":\"Global Internet / Enterprise Computing\",\"role\":\"The operational environment of Java — the worldwide web and enterprise computing infrastructure on which Java became the dominant server-side and application language\"}],\"texts\":[{\"title\":\"Wikipedia: Java\",\"type\":\"Reference article\",\"slug\":\"java\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q251\",\"https://en.wikipedia.org/wiki/Java_(programming_language)\"],\"tags\":[\"software\",\"Computing & Digital Technology\",\"scientific-paradigm\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Java is remembered as a landmark idea of the Contemporary era, referenced in 157 Wikipedia language editions. Key lasting impacts include: Influenced intellectual traditions and cultural development.\",\"summary\":\"Java is a high-level, general-purpose, object-oriented programming language developed by Sun Microsystems — primarily by James Gosling — with its first public release in 1995. Java was designed around the principle of 'Write Once, Run Anywhere' (WORA): Java source code is compiled to bytecode that runs on the Java Virtual Machine (JVM), an abstract computing machine that can be implemented on any hardware or operating system, making Java programmes inherently portable across platforms. This design philosophy — and Java's combination of object-oriented structure, memory safety (automatic garbage collection), strong typing, and large standard library — made Java one of the most widely adopted programming languages in the world, and it dominated enterprise software development and server-side programming for over two decades.\\n\\nJava's trajectory after its 1995 release was shaped by several key moments: its adoption for web browser applets (which briefly made Java the primary client-side web technology before being superseded by JavaScript), its use as the primary language for Android mobile application development (announced 2008, which gave Java a second era of massive adoption), its central role in enterprise server-side development through Java EE (now Jakarta EE) and frameworks like Spring and Hibernate, and its acquisition by Oracle through the purchase of Sun Microsystems in 2010. The Oracle acquisition led to the Java vs. Google lawsuit (Oracle v. Google) — a decade-long legal dispute over whether Google's use of Java APIs in Android constituted copyright infringement, ultimately resolved in Google's favour by the US Supreme Court in 2021.\\n\\nJava's influence on the broader programming ecosystem has been immense: it popularised object-oriented programming and design patterns for a generation of developers, its JVM became the platform for numerous other languages (Kotlin, Scala, Clojure, Groovy), and its ecosystem of tools, frameworks, and libraries set the standard for enterprise software development. By the 2020s, Java had been joined by Kotlin (the preferred Android language since Google's 2017 designation) and Python as dominant general-purpose languages, but remained one of the most widely used languages worldwide.\",\"subjects\":[\"Programming Languages\",\"Computer Science\",\"Contemporary Era\",\"Software Engineering\",\"Technology\",\"Internet History\",\"Object-Oriented Programming\",\"Enterprise Software\"],\"frameworks\":[\"STRUCTURAL_ANALYSIS\",\"CAUSE_AND_EFFECT\",\"WORLD_SYSTEMS\"],\"historicalSignificance\":{\"significanceScore\":8,\"significanceNarrative\":\"Java is one of the most influential programming languages in the history of computing — its 'Write Once, Run Anywhere' design philosophy, popularisation of object-oriented programming, dominance in enterprise server-side development, and role as the primary Android language have shaped software engineering for 30 years. Its JVM became the platform for multiple languages and its ecosystem defined how large-scale software is built.\",\"significanceCategory\":\"world-changing\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Idea -- Computing & Digital Technology -- Global -- Contemporary"
       ],
@@ -133,8 +46,7 @@
       "$id": "java",
       "$sequence": "34880",
       "$createdAt": "2026-04-05T12:11:39.869+00:00",
-      "$updatedAt": "2026-04-06T00:51:17.424+00:00",
-      "_unsyncedEdits": true
+      "$updatedAt": "2026-04-06T00:51:17.424+00:00"
     }
   ]
 }

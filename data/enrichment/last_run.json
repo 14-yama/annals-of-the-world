@@ -1,39 +1,40 @@
 {
-  "timestamp": "2026-05-16T21:02:27Z",
+  "timestamp": "2026-05-16T21:47:59Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 4,
-  "failed": 1,
+  "enriched": 5,
+  "failed": 0,
   "dry_run": false,
   "entities": [
     {
       "slug": "vitello",
-      "status": "failed",
-      "reason": "insufficient subjects (4, need >= 5)"
+      "status": "enriched",
+      "old_len": 134,
+      "new_len": 1309
     },
     {
-      "slug": "snorri-thorfinnsson",
+      "slug": "henry-cromwell",
       "status": "enriched",
-      "old_len": 268,
-      "new_len": 1281
+      "old_len": 143,
+      "new_len": 868
     },
     {
-      "slug": "pietro-pileo-di-prata",
+      "slug": "orientius",
       "status": "enriched",
-      "old_len": 271,
-      "new_len": 1058
+      "old_len": 58,
+      "new_len": 782
     },
     {
-      "slug": "ammonius-grammaticus",
+      "slug": "assyrian-empire",
       "status": "enriched",
-      "old_len": 55,
-      "new_len": 1217
+      "old_len": 60,
+      "new_len": 1362
     },
     {
-      "slug": "ildibad",
+      "slug": "hieronymus-van-beverningh",
       "status": "enriched",
-      "old_len": 57,
-      "new_len": 1038
+      "old_len": 146,
+      "new_len": 998
     }
   ]
 }
