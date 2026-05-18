@@ -1,27 +1,38 @@
 {
-  "timestamp": "2026-05-18T16:28:12Z",
+  "timestamp": "2026-05-18T17:37:00Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 1,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "tommaso-badia",
+      "slug": "adalbero-of-wrzburg",
+      "status": "enriched",
+      "old_len": 70,
+      "new_len": 955
+    },
+    {
+      "slug": "electronics",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "insufficient subjects (4, need >= 5)"
     },
     {
-      "slug": "wenennefer",
+      "slug": "kindattu",
       "status": "enriched",
-      "old_len": 128,
-      "new_len": 1118
+      "old_len": 129,
+      "new_len": 982
     },
     {
-      "slug": "abu-hashim-al-jubbai",
+      "slug": "planet",
       "status": "enriched",
-      "old_len": 238,
-      "new_len": 1118
+      "old_len": 129,
+      "new_len": 1657
+    },
+    {
+      "slug": "pietro-gallocia",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     }
   ]
 }
