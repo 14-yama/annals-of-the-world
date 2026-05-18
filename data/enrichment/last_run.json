@@ -1,31 +1,100 @@
 {
-  "timestamp": "2026-05-17T19:50:29Z",
+  "timestamp": "2026-05-17T20:06:46Z",
   "model": "ollama",
-  "count_requested": 5,
-  "enriched": 1,
-  "failed": 3,
+  "count_requested": 20,
+  "enriched": 15,
+  "failed": 0,
   "dry_run": false,
   "entities": [
+    {
+      "slug": "donatian-of-reims",
+      "status": "enriched",
+      "old_len": 728,
+      "new_len": 1750
+    },
+    {
+      "slug": "first-epistle-to-the-thessalonians",
+      "status": "enriched",
+      "old_len": 749,
+      "new_len": 936
+    },
+    {
+      "slug": "\u00e6lfsige",
+      "status": "enriched",
+      "old_len": 82,
+      "new_len": 1320
+    },
+    {
+      "slug": "theophilus-ben-ananus",
+      "status": "enriched",
+      "old_len": 82,
+      "new_len": 1937
+    },
+    {
+      "slug": "theuderic-i",
+      "status": "enriched",
+      "old_len": 109,
+      "new_len": 1945
+    },
     {
       "slug": "mantra",
       "status": "enriched",
       "old_len": 83,
-      "new_len": 1233
+      "new_len": 1249
     },
     {
       "slug": "dromichaetes",
-      "status": "failed",
-      "reason": "insufficient effects (0, need >= 2)"
+      "status": "enriched",
+      "old_len": 83,
+      "new_len": 926
+    },
+    {
+      "slug": "mihrdat-ii-of-iberia",
+      "status": "enriched",
+      "old_len": 83,
+      "new_len": 890
     },
     {
       "slug": "lucius-calpurnius-piso",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 323,
+      "new_len": 1053
     },
     {
       "slug": "robert-of-thourotte",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 83,
+      "new_len": 1655
+    },
+    {
+      "slug": "deogratias-de-carthage",
+      "status": "enriched",
+      "old_len": 110,
+      "new_len": 1159
+    },
+    {
+      "slug": "physics",
+      "status": "enriched",
+      "old_len": 84,
+      "new_len": 1496
+    },
+    {
+      "slug": "nimlot-of-hermopolis",
+      "status": "enriched",
+      "old_len": 84,
+      "new_len": 1146
+    },
+    {
+      "slug": "parsman-iv-of-iberia",
+      "status": "enriched",
+      "old_len": 84,
+      "new_len": 1117
+    },
+    {
+      "slug": "mass-media",
+      "status": "enriched",
+      "old_len": 84,
+      "new_len": 1720
     }
   ]
 }
