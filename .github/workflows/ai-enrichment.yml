@@ -14,7 +14,7 @@ on:
     inputs:
       count:
         description: "Number of entities to enrich per run"
-        default: "25"
+        default: "10"
         type: string
       model:
         description: "LLM provider"
@@ -35,9 +35,12 @@ on:
 jobs:
   enrich:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 55   # 30 was too tight for 25 entities at Gemini free-tier RPM
     permissions:
       contents: write
+    concurrency:
+      group: ai-enrichment   # cancel-in-progress disabled so retries don't kill a healthy run
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
         with:
@@ -80,18 +83,27 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           MODEL="${{ github.event.inputs.model || 'gemini' }}"
-          COUNT="${{ github.event.inputs.count || '25' }}"
+          COUNT="${{ github.event.inputs.count || '10' }}"
           OTHER="gemini"; [ "$MODEL" = "gemini" ] && OTHER="openai"
 
-          # Primary provider
-          if python3 scripts/ai_enrich_autonomous.py \
+          # Primary provider with bounded wall-clock (45 min, leaving buffer for commit step)
+          if timeout 2700 python3 scripts/ai_enrich_autonomous.py \
               --count "$COUNT" --model "$MODEL" --retry 2; then
             echo "✓ $MODEL completed successfully"
           else
-            echo "::warning::$MODEL failed — attempting $OTHER fallback in-line"
-            python3 scripts/ai_enrich_autonomous.py \
-              --count "$COUNT" --model "$OTHER" --retry 2 --lenient || \
-              echo "::error::Both providers failed; ai-enrichment-retry.yml will catch this on completion"
+            RC=$?
+            echo "::warning::$MODEL exited rc=$RC"
+            # Only attempt fallback if the OTHER key actually exists
+            OTHER_KEY_VAR="$(echo "$OTHER" | tr a-z A-Z)_API_KEY"
+            OTHER_KEY_VAL="$(printenv "$OTHER_KEY_VAR" || true)"
+            if [ -n "$OTHER_KEY_VAL" ]; then
+              echo "::warning::Attempting $OTHER fallback in-line"
+              timeout 1800 python3 scripts/ai_enrich_autonomous.py \
+                --count "$COUNT" --model "$OTHER" --retry 2 --lenient || \
+                echo "::error::Both providers failed; ai-enrichment-retry.yml will catch this on completion"
+            else
+              echo "::warning::$OTHER_KEY_VAR not set — skipping fallback (set it as a repo secret for full failsafe)"
+            fi
           fi
 
       - name: Dry run preview
