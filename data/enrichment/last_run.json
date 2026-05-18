@@ -1,32 +1,33 @@
 {
-  "timestamp": "2026-05-18T12:40:33Z",
+  "timestamp": "2026-05-18T13:55:00Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 2,
+  "enriched": 3,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "michael-bourtzes",
+      "slug": "john-elton",
       "status": "enriched",
-      "old_len": 670,
-      "new_len": 817
+      "old_len": 147,
+      "new_len": 1591
     },
     {
-      "slug": "eusebius-of-vercelli",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
-    },
-    {
-      "slug": "saiful-hoque",
-      "status": "failed",
-      "reason": "insufficient effects (0, need >= 2)"
-    },
-    {
-      "slug": "malichus-i",
+      "slug": "osorkon-i",
       "status": "enriched",
-      "old_len": 125,
-      "new_len": 1072
+      "old_len": 126,
+      "new_len": 1066
+    },
+    {
+      "slug": "zhao-mo",
+      "status": "enriched",
+      "old_len": 126,
+      "new_len": 1135
+    },
+    {
+      "slug": "tritantaechmes",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     }
   ]
 }

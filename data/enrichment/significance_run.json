@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-18T16:49:20Z",
+  "generatedAt": "2026-05-18T18:05:17Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "results": [
     {
@@ -12,10 +12,9 @@
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "daniel-e-barbey",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "tritantaechmes",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
       "slug": "marcel-maurice-bigeard",
@@ -23,19 +22,18 @@
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "john-ernest-dahlquist",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "karl-ludwig-von-lecoq",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
-      "slug": "karl-ludwig-von-lecoq",
+      "slug": "kodendera-subayya-thimayya",
       "status": "error",
       "reason": "Ollama error: timed out"
     }
   ],
   "summary": {
-    "entities_scored": 2,
-    "failed": 3
+    "entities_scored": 0,
+    "failed": 5
   }
 }
