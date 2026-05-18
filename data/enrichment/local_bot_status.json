@@ -45855,17 +45855,22 @@
   "git-push-1779113259": {
     "job_id": "git-push-1779113259",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-05-18T14:07:39Z",
-    "finished": null,
+    "finished": "2026-05-18T14:07:43Z",
     "log": [
       "Pending files: 31 entities, 0 edges (31 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 118 local enrichments\"",
+      "[clean/audit-system 43af85c41a] feat(enrich): watchdog auto-push \u2014 118 local enrichments\n 36 files changed, 633 insertions(+), 155 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.",
+      "git push failed \u2014 check SSH/HTTPS credentials: To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
     ],
-    "exitCode": null
+    "exitCode": 1
   },
   "enrich-1779113259": {
     "job_id": "enrich-1779113259",
@@ -45888,7 +45893,19 @@
       "[2/20] arnaud-amalric (score=91.8, 0c)",
       "  SKIP \u2014 already enriched (1548c)",
       "",
-      "[3/20] andr-despinay (score=91.8, 0c)"
+      "[3/20] andr-despinay (score=91.8, 0c)",
+      "  ENRICHED \u2014 64c -> 1091c",
+      "",
+      "[4/20] neferronpet (score=91.8, 0c)",
+      "  SKIP \u2014 already enriched (1093c)",
+      "",
+      "[5/20] benedetto-ii-caetani (score=91.8, 0c)",
+      "  ENRICHED \u2014 42c -> 1581c",
+      "",
+      "[6/20] optatus (score=91.8, 0c)",
+      "  ENRICHED \u2014 144c -> 1263c",
+      "",
+      "[7/20] vachagan-iii (score=91.7, 0c)"
     ],
     "exitCode": null
   }
