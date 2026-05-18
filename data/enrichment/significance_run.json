@@ -1,40 +1,44 @@
 {
-  "generatedAt": "2026-05-18T10:15:14Z",
+  "generatedAt": "2026-05-18T10:52:45Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 4,
+  "enriched": 5,
+  "failed": 0,
   "dry_run": false,
   "results": [
     {
       "slug": "eutychian",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
     },
     {
       "slug": "jarbas-passarinho",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "phil-ferguson",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "henri-de-krillis",
       "status": "ok",
       "score": 5,
       "category": "regional"
     },
     {
       "slug": "henry-jackson-hunt",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "theoktistos",
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 1,
-    "failed": 4
+    "entities_scored": 5,
+    "failed": 0
   }
 }
