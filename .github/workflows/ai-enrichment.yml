@@ -137,7 +137,7 @@ jobs:
                 break
               fi
               echo "⚠ Push attempt $attempt rejected; pulling --rebase and retrying"
-              git pull --rebase --autostash origin clean/audit-system || git rebase --abort || true
+              git pull --rebase -X ours --autostash origin clean/audit-system || git rebase --abort || true
               sleep $((attempt * 3))
               if [ "$attempt" = "5" ]; then
                 echo "✗ Push failed after 5 attempts"
