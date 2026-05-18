@@ -45597,17 +45597,22 @@
   "git-push-1779103792": {
     "job_id": "git-push-1779103792",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 35,
     "pid": null,
     "started": "2026-05-18T11:29:52Z",
-    "finished": null,
+    "finished": "2026-05-18T11:29:58Z",
     "log": [
       "Pending files: 35 entities, 0 edges (35 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 102 local enrichments\"",
+      "[clean/audit-system 9ac9c9875a] feat(enrich): watchdog auto-push \u2014 102 local enrichments\n 40 files changed, 603 insertions(+), 182 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   3803dbc815..9ac9c9875a  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 35 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "enrich-1779103792": {
     "job_id": "enrich-1779103792",
@@ -45624,7 +45629,24 @@
       "AI ENRICHMENT \u2014 20 entities via ollama",
       "============================================================",
       "",
-      "[1/20] konstantinos-doukas (score=101.55, 0c)"
+      "[1/20] konstantinos-doukas (score=101.55, 0c)",
+      "  ENRICHED \u2014 683c -> 1675c",
+      "",
+      "[2/20] phraates-iii-of-parthia (score=92.1, 0c)",
+      "  SKIP \u2014 already enriched (1593c)",
+      "",
+      "[3/20] mutnedjmet (score=92.1, 0c)",
+      "  SKIP \u2014 already enriched (1013c)",
+      "",
+      "[4/20] eucratides-ii (score=92.1, 0c)",
+      "  SKIP \u2014 already enriched (1866c)",
+      "",
+      "[5/20] middle-east (score=92.1, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  ENRICHED \u2014 119c -> 1323c",
+      "",
+      "[6/20] eumelus-of-bosphorus (score=92.03, 0c)",
+      "  RETRY (1) \u2014 Expecting ',' delimiter: line 69 column 1 (char 2047)"
     ],
     "exitCode": null
   }
