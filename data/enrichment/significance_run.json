@@ -1,27 +1,15 @@
 {
-  "generatedAt": "2026-05-18T19:21:57Z",
+  "generatedAt": "2026-05-18T20:38:32Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "results": [
-    {
-      "slug": "marcel-maurice-bigeard",
-      "status": "ok",
-      "score": 8,
-      "category": "regional"
-    },
     {
       "slug": "kodendera-subayya-thimayya",
       "status": "error",
       "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "chaloner-ogle",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
     },
     {
       "slug": "robert-calder",
@@ -29,14 +17,23 @@
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "john-fryer",
-      "status": "ok",
-      "score": 8,
-      "category": "regional"
+      "slug": "micha\u0142-kozal",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "micha-kozal",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "sven-lidman",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     }
   ],
   "summary": {
-    "entities_scored": 3,
-    "failed": 2
+    "entities_scored": 0,
+    "failed": 5
   }
 }
