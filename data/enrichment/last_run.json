@@ -1,33 +1,38 @@
 {
-  "timestamp": "2026-05-17T22:12:08Z",
+  "timestamp": "2026-05-17T23:37:34Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 3,
-  "failed": 1,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "ame-no-oshihomimi",
+      "slug": "saint-bassian",
+      "status": "enriched",
+      "old_len": 113,
+      "new_len": 902
+    },
+    {
+      "slug": "thermodynamics",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "sharwin-i",
+      "slug": "first-epistle-to-the-corinthians",
       "status": "enriched",
-      "old_len": 112,
-      "new_len": 1128
+      "old_len": 88,
+      "new_len": 1028
     },
     {
-      "slug": "emperor-huai-of-jin",
+      "slug": "sigobert-the-lame",
       "status": "enriched",
-      "old_len": 112,
-      "new_len": 1479
+      "old_len": 88,
+      "new_len": 1895
     },
     {
-      "slug": "mihrdat-iv-of-iberia",
-      "status": "enriched",
-      "old_len": 86,
-      "new_len": 1330
+      "slug": "kutluk-yabgu-khagan",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     }
   ]
 }

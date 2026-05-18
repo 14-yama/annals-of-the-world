@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-18T02:21:52Z",
+  "generatedAt": "2026-05-18T03:47:52Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 4,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "results": [
     {
@@ -22,19 +22,18 @@
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "jzef-barya",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "m\u00e1ximo-g\u00f3mez-b\u00e1ez",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
-      "slug": "m\u00e1ximo-g\u00f3mez-b\u00e1ez",
+      "slug": "mximo-gmez-bez",
       "status": "error",
       "reason": "Ollama error: timed out"
     }
   ],
   "summary": {
-    "entities_scored": 1,
-    "failed": 4
+    "entities_scored": 0,
+    "failed": 5
   }
 }
