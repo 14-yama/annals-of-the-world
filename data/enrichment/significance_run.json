@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-18T06:26:43Z",
+  "generatedAt": "2026-05-18T07:34:25Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 4,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "results": [
     {
@@ -13,28 +13,31 @@
     },
     {
       "slug": "ahmed-urabi",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
     },
     {
-      "slug": "michael-walker-baron-walker-of-aldringham",
+      "slug": "jos-flix-uriburu",
       "status": "ok",
       "score": 5,
       "category": "regional"
     },
     {
-      "slug": "jos-flix-uriburu",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "slug": "thomas-playford",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
     },
     {
-      "slug": "thomas-playford",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "slug": "colin-campbell-1st-baron-clyde",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 1,
-    "failed": 4
+    "entities_scored": 4,
+    "failed": 1
   }
 }
