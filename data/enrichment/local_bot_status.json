@@ -46338,12 +46338,12 @@
   "sync-1779132030": {
     "job_id": "sync-1779132030",
     "bot": "sync",
-    "status": "running",
+    "status": "done",
     "model": "none",
     "count": 200,
     "pid": 3104624,
     "started": "2026-05-18T19:20:30Z",
-    "finished": null,
+    "finished": "2026-05-18T19:22:03Z",
     "log": [
       "=== sync_gateway: git \u2192 Appwrite ===",
       "Endpoint:  https://fra.cloud.appwrite.io/v1",
@@ -46353,7 +46353,51 @@
       "[budget] perRunWriteCap=200 writesUsed=36883/300000 (hardStop=95%)",
       "[diff] --local mode: scanning for _unsyncedEdits:true files",
       "[diff] --local found 160 dirty files",
-      "[diff] 160 entity files to sync"
+      "[diff] 160 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 160,",
+      "  \"entitiesUpserted\": 18,",
+      "  \"auditRowsEmitted\": 182,",
+      "  \"writesPerformed\": 200,",
+      "  \"stoppedReason\": \"perRunWriteCap=200 reached during audit emission\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 970bd139"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779132126": {
+    "job_id": "git-push-1779132126",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-18T19:22:06Z",
+    "finished": null,
+    "log": [
+      "Pending files: 1 entities, 0 edges (1 total)",
+      "git add data/appwrite-export/ ..."
+    ],
+    "exitCode": null
+  },
+  "enrich-1779132126": {
+    "job_id": "enrich-1779132126",
+    "bot": "enrich",
+    "status": "running",
+    "model": "ollama",
+    "count": 20,
+    "pid": 3109118,
+    "started": "2026-05-18T19:22:06Z",
+    "finished": null,
+    "log": [
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "============================================================",
+      "AI ENRICHMENT \u2014 20 entities via ollama",
+      "============================================================",
+      "",
+      "[1/20] spurius-mummius (score=91.3, 0c)"
     ],
     "exitCode": null
   }
