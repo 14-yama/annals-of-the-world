@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-18T11:47:54Z",
+  "generatedAt": "2026-05-18T13:06:01Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 4,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "results": [
     {
@@ -17,12 +17,6 @@
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "george-bent",
-      "status": "ok",
-      "score": 7,
-      "category": "regional"
-    },
-    {
       "slug": "maurice-suckling",
       "status": "error",
       "reason": "Ollama error: timed out"
@@ -31,10 +25,15 @@
       "slug": "benjamin-grierson",
       "status": "error",
       "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "li-fuguo",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     }
   ],
   "summary": {
-    "entities_scored": 1,
-    "failed": 4
+    "entities_scored": 0,
+    "failed": 5
   }
 }

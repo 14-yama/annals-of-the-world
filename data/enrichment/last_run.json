@@ -1,22 +1,39 @@
 {
-  "timestamp": "2026-05-18T07:37:41Z",
+  "timestamp": "2026-05-18T08:55:43Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 0,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "konstantinos-doukas",
+      "slug": "gauscelin-de-jean",
       "status": "enriched",
-      "old_len": 683,
-      "new_len": 955
+      "old_len": 40,
+      "new_len": 1657
     },
     {
-      "slug": "middle-east",
+      "slug": "enrico-minutoli",
       "status": "enriched",
-      "old_len": 119,
-      "new_len": 1343
+      "old_len": 40,
+      "new_len": 1889
+    },
+    {
+      "slug": "innocent-iv",
+      "status": "enriched",
+      "old_len": 143,
+      "new_len": 1477
+    },
+    {
+      "slug": "sangara",
+      "status": "enriched",
+      "old_len": 121,
+      "new_len": 1011
+    },
+    {
+      "slug": "arshak-ii-of-iberia",
+      "status": "failed",
+      "reason": "insufficient places (0, need >= 2)"
     }
   ]
 }
