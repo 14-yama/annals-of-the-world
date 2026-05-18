@@ -42,8 +42,8 @@ for i in $(seq 1 $TOTAL_BATCHES); do
   python3 scripts/enrichment_queue.py --limit 300 >/dev/null 2>&1 || \
     echo "  ⚠ queue regen failed (continuing with stale queue)" | tee -a "$LOG"
 
-  # Enrich
-  if timeout 600 python3 scripts/ai_enrich_autonomous.py \
+  # Enrich (each Ollama call ~2-3 min on CPU; 8 entities ~16-24 min)
+  if PYTHONUNBUFFERED=1 timeout 2400 python3 -u scripts/ai_enrich_autonomous.py \
        --count "$BATCH_SIZE" --model ollama --retry 2 --lenient \
        >> "$LOG" 2>&1; then
     ENRICHED=$(python3 -c "import json; d=json.load(open('data/enrichment/last_run.json')); print(d.get('enriched',0))" 2>/dev/null || echo 0)
