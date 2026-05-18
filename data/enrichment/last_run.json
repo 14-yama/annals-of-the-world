@@ -1,38 +1,33 @@
 {
-  "timestamp": "2026-05-18T17:37:00Z",
+  "timestamp": "2026-05-18T18:59:14Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 3,
-  "failed": 2,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "adalbero-of-wrzburg",
+      "slug": "leukon-ii-of-bosporus",
       "status": "enriched",
-      "old_len": 70,
-      "new_len": 955
+      "old_len": 151,
+      "new_len": 824
     },
     {
-      "slug": "electronics",
+      "slug": "aper-of-toul",
       "status": "failed",
-      "reason": "insufficient subjects (4, need >= 5)"
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "kindattu",
+      "slug": "kojiki",
       "status": "enriched",
-      "old_len": 129,
-      "new_len": 982
+      "old_len": 72,
+      "new_len": 1255
     },
     {
-      "slug": "planet",
+      "slug": "bryson-of-achaea",
       "status": "enriched",
-      "old_len": 129,
-      "new_len": 1657
-    },
-    {
-      "slug": "pietro-gallocia",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "old_len": 50,
+      "new_len": 1086
     }
   ]
 }
