@@ -44607,17 +44607,22 @@
   "git-push-1779067918": {
     "job_id": "git-push-1779067918",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 30,
     "pid": null,
     "started": "2026-05-18T01:31:58Z",
-    "finished": null,
+    "finished": "2026-05-18T01:32:03Z",
     "log": [
       "Pending files: 30 entities, 0 edges (30 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 30 local enrichments\"",
+      "[clean/audit-system 3ef6efe0d0] feat(enrich): watchdog auto-push \u2014 30 local enrichments\n 34 files changed, 538 insertions(+), 119 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   290684b080..3ef6efe0d0  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 30 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "enrich-1779067918": {
     "job_id": "enrich-1779067918",
@@ -44637,7 +44642,27 @@
       "[1/20] ame-no-oshihomimi (score=95.4, 0c)",
       "  SKIP \u2014 already enriched (1418c)",
       "",
-      "[2/20] edwin-ap-hywel (score=95.4, 0c)"
+      "[2/20] edwin-ap-hywel (score=95.4, 0c)",
+      "  ENRICHED \u2014 86c -> 993c",
+      "",
+      "[3/20] sharwin-i (score=95.4, 0c)",
+      "  ENRICHED \u2014 112c -> 1188c",
+      "",
+      "[4/20] emperor-huai-of-jin (score=95.4, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  ENRICHED \u2014 112c -> 1100c",
+      "",
+      "[5/20] mihrdat-iv-of-iberia (score=95.4, 0c)",
+      "  ENRICHED \u2014 86c -> 1244c",
+      "",
+      "[6/20] hermas-of-dalmatia (score=95.4, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  ENRICHED \u2014 86c -> 988c",
+      "",
+      "[7/20] diplomacy (score=95.3, 0c)",
+      "  ENRICHED \u2014 87c -> 1858c",
+      "",
+      "[8/20] muthis (score=95.3, 0c)"
     ],
     "exitCode": null
   }
