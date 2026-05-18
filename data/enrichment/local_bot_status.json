@@ -44864,17 +44864,22 @@
   "git-push-1779078868": {
     "job_id": "git-push-1779078868",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 30,
     "pid": null,
     "started": "2026-05-18T04:34:28Z",
-    "finished": null,
+    "finished": "2026-05-18T04:34:32Z",
     "log": [
       "Pending files: 30 entities, 0 edges (30 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 37 local enrichments\"",
+      "[clean/audit-system 1d66e60c2e] feat(enrich): watchdog auto-push \u2014 37 local enrichments\n 35 files changed, 689 insertions(+), 146 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   246fac7a8a..1d66e60c2e  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 30 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "enrich-1779078868": {
     "job_id": "enrich-1779078868",
@@ -44891,7 +44896,22 @@
       "AI ENRICHMENT \u2014 20 entities via ollama",
       "============================================================",
       "",
-      "[1/20] edeko (score=95.1, 0c)"
+      "[1/20] edeko (score=95.1, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  ENRICHED \u2014 409c -> 1171c",
+      "",
+      "[2/20] tiberius-julius-rhoemetalces (score=95.1, 0c)",
+      "  SKIP \u2014 already enriched (1462c)",
+      "",
+      "[3/20] king-zhao-of-wei (score=95.1, 0c)",
+      "  ENRICHED \u2014 89c -> 680c",
+      "",
+      "[4/20] khushnavaz (score=95.1, 0c)",
+      "  RETRY (1) \u2014 timed out",
+      "  ENRICHED \u2014 89c -> 915c",
+      "",
+      "[5/20] aimo-of-toul (score=95.06, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)"
     ],
     "exitCode": null
   }

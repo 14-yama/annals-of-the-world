@@ -1,118 +1,31 @@
 {
-  "timestamp": "2026-05-17T23:48:28Z",
+  "timestamp": "2026-05-18T00:58:42Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 18,
-  "failed": 0,
+  "count_requested": 5,
+  "enriched": 1,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "edwin-ap-hywel",
-      "status": "enriched",
-      "old_len": 86,
-      "new_len": 993
+      "slug": "ameny-qemau",
+      "status": "failed",
+      "reason": "Unterminated string starting at: line 3 column 1 (char 14)"
     },
     {
-      "slug": "sharwin-i",
-      "status": "enriched",
-      "old_len": 112,
-      "new_len": 1188
+      "slug": "edeko",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
     },
     {
-      "slug": "emperor-huai-of-jin",
+      "slug": "tiberius-julius-rhoemetalces",
       "status": "enriched",
-      "old_len": 112,
-      "new_len": 1100
+      "old_len": 89,
+      "new_len": 1462
     },
     {
-      "slug": "mihrdat-iv-of-iberia",
-      "status": "enriched",
-      "old_len": 86,
-      "new_len": 1244
-    },
-    {
-      "slug": "hermas-of-dalmatia",
-      "status": "enriched",
-      "old_len": 86,
-      "new_len": 988
-    },
-    {
-      "slug": "diplomacy",
-      "status": "enriched",
-      "old_len": 87,
-      "new_len": 1858
-    },
-    {
-      "slug": "muthis",
-      "status": "enriched",
-      "old_len": 87,
-      "new_len": 1175
-    },
-    {
-      "slug": "mihrdat-iii-of-iberia",
-      "status": "enriched",
-      "old_len": 87,
-      "new_len": 1034
-    },
-    {
-      "slug": "anushirvan-sharaf-al-maali",
-      "status": "enriched",
-      "old_len": 87,
-      "new_len": 1092
-    },
-    {
-      "slug": "fei-shi",
-      "status": "enriched",
-      "old_len": 113,
-      "new_len": 1364
-    },
-    {
-      "slug": "saint-bassian",
-      "status": "enriched",
-      "old_len": 113,
-      "new_len": 1061
-    },
-    {
-      "slug": "thermodynamics",
-      "status": "enriched",
-      "old_len": 88,
-      "new_len": 1259
-    },
-    {
-      "slug": "first-epistle-to-the-corinthians",
-      "status": "enriched",
-      "old_len": 88,
-      "new_len": 1190
-    },
-    {
-      "slug": "sigobert-the-lame",
-      "status": "enriched",
-      "old_len": 88,
-      "new_len": 1258
-    },
-    {
-      "slug": "kutluk-yabgu-khagan",
-      "status": "enriched",
-      "old_len": 88,
-      "new_len": 1936
-    },
-    {
-      "slug": "muirchertach-mac-n\u00e9ill",
-      "status": "enriched",
-      "old_len": 88,
-      "new_len": 696
-    },
-    {
-      "slug": "muirchertach-mac-nill",
-      "status": "enriched",
-      "old_len": 88,
-      "new_len": 1232
-    },
-    {
-      "slug": "fergus-m\u00f3r",
-      "status": "enriched",
-      "old_len": 88,
-      "new_len": 950
+      "slug": "king-zhao-of-wei",
+      "status": "failed",
+      "reason": "timed out"
     }
   ]
 }
