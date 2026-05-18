@@ -1,26 +1,57 @@
 {
-  "timestamp": "2026-05-18T11:29:16Z",
+  "timestamp": "2026-05-18T12:24:37Z",
   "model": "ollama",
-  "count_requested": 5,
-  "enriched": 1,
-  "failed": 2,
+  "count_requested": 8,
+  "enriched": 7,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "johann-iv-von-draice",
-      "status": "failed",
-      "reason": "insufficient effects (0, need >= 2)"
-    },
-    {
-      "slug": "twosret",
+      "slug": "patriarch-john-i-of-alexandria",
       "status": "enriched",
       "old_len": 124,
-      "new_len": 1178
+      "new_len": 1073
     },
     {
-      "slug": "aahotepre",
+      "slug": "felicia-malipiero",
+      "status": "enriched",
+      "old_len": 124,
+      "new_len": 1326
+    },
+    {
+      "slug": "lucius-cassius-hemina",
+      "status": "enriched",
+      "old_len": 44,
+      "new_len": 609
+    },
+    {
+      "slug": "john-randolph-3rd-earl-of-moray",
+      "status": "enriched",
+      "old_len": 139,
+      "new_len": 1499
+    },
+    {
+      "slug": "istvn-vrday",
+      "status": "enriched",
+      "old_len": 66,
+      "new_len": 1027
+    },
+    {
+      "slug": "eusebius-of-vercelli",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "Unterminated string starting at: line 3 column 5 (char 20)"
+    },
+    {
+      "slug": "biochemistry",
+      "status": "enriched",
+      "old_len": 125,
+      "new_len": 1515
+    },
+    {
+      "slug": "saiful-hoque",
+      "status": "enriched",
+      "old_len": 125,
+      "new_len": 1290
     }
   ]
 }
