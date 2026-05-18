@@ -1,31 +1,38 @@
 {
-  "timestamp": "2026-05-18T00:58:42Z",
+  "timestamp": "2026-05-18T02:16:51Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 3,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "ameny-qemau",
-      "status": "failed",
-      "reason": "Unterminated string starting at: line 3 column 1 (char 14)"
-    },
-    {
-      "slug": "edeko",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
-    },
-    {
-      "slug": "tiberius-julius-rhoemetalces",
-      "status": "enriched",
-      "old_len": 89,
-      "new_len": 1462
-    },
-    {
-      "slug": "king-zhao-of-wei",
+      "slug": "gospel-of-philip",
       "status": "failed",
       "reason": "timed out"
+    },
+    {
+      "slug": "buddhism",
+      "status": "enriched",
+      "old_len": 99,
+      "new_len": 1732
+    },
+    {
+      "slug": "southern-ocean",
+      "status": "failed",
+      "reason": "insufficient causes (0, need >= 2)"
+    },
+    {
+      "slug": "rainbow",
+      "status": "enriched",
+      "old_len": 100,
+      "new_len": 1594
+    },
+    {
+      "slug": "muhyi-al-dn-al-maghrib",
+      "status": "enriched",
+      "old_len": 743,
+      "new_len": 1024
     }
   ]
 }
