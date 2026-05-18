@@ -129,7 +129,21 @@ jobs:
 
           Automated enrichment via ${MODEL} LLM.
           Pipeline: ai-enrichment.yml | Run: ${{ github.run_id }}"
-            git push
+            # Robust push: rebase-on-conflict + retry up to 5 times.
+            # Concurrent bots (sync_gateway, other enrichment runs, local commits) can advance HEAD between commit and push.
+            for attempt in 1 2 3 4 5; do
+              if git push; then
+                echo "✓ Push succeeded on attempt $attempt"
+                break
+              fi
+              echo "⚠ Push attempt $attempt rejected; pulling --rebase and retrying"
+              git pull --rebase --autostash origin clean/audit-system || git rebase --abort || true
+              sleep $((attempt * 3))
+              if [ "$attempt" = "5" ]; then
+                echo "✗ Push failed after 5 attempts"
+                exit 1
+              fi
+            done
           else
             echo "No changes to commit"
           fi
