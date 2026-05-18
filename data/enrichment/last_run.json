@@ -1,33 +1,37 @@
 {
-  "timestamp": "2026-05-18T13:55:00Z",
+  "timestamp": "2026-05-18T15:13:58Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 1,
+  "enriched": 2,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "john-elton",
+      "slug": "artemidoros",
       "status": "enriched",
-      "old_len": 147,
-      "new_len": 1591
+      "old_len": 127,
+      "new_len": 1843
     },
     {
-      "slug": "osorkon-i",
+      "slug": "childebert-the-adopted",
       "status": "enriched",
-      "old_len": 126,
-      "new_len": 1066
+      "old_len": 47,
+      "new_len": 1595
     },
     {
-      "slug": "zhao-mo",
-      "status": "enriched",
-      "old_len": 126,
-      "new_len": 1135
-    },
-    {
-      "slug": "tritantaechmes",
+      "slug": "spurius-mummius",
       "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "reason": "timed out"
+    },
+    {
+      "slug": "federico-frezzi",
+      "status": "failed",
+      "reason": "timed out"
+    },
+    {
+      "slug": "saint-monitor",
+      "status": "failed",
+      "reason": "insufficient subjects (4, need >= 5)"
     }
   ]
 }

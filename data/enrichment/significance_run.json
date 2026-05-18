@@ -1,39 +1,42 @@
 {
-  "generatedAt": "2026-05-18T18:05:17Z",
+  "generatedAt": "2026-05-18T19:21:57Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "results": [
     {
-      "slug": "biochemistry",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "tritantaechmes",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
       "slug": "marcel-maurice-bigeard",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "karl-ludwig-von-lecoq",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
     },
     {
       "slug": "kodendera-subayya-thimayya",
       "status": "error",
       "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "chaloner-ogle",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "robert-calder",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "john-fryer",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 0,
-    "failed": 5
+    "entities_scored": 3,
+    "failed": 2
   }
 }
