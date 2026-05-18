@@ -1,57 +1,32 @@
 {
-  "timestamp": "2026-05-18T12:24:37Z",
+  "timestamp": "2026-05-18T12:40:33Z",
   "model": "ollama",
-  "count_requested": 8,
-  "enriched": 7,
-  "failed": 1,
+  "count_requested": 5,
+  "enriched": 2,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "patriarch-john-i-of-alexandria",
+      "slug": "michael-bourtzes",
       "status": "enriched",
-      "old_len": 124,
-      "new_len": 1073
-    },
-    {
-      "slug": "felicia-malipiero",
-      "status": "enriched",
-      "old_len": 124,
-      "new_len": 1326
-    },
-    {
-      "slug": "lucius-cassius-hemina",
-      "status": "enriched",
-      "old_len": 44,
-      "new_len": 609
-    },
-    {
-      "slug": "john-randolph-3rd-earl-of-moray",
-      "status": "enriched",
-      "old_len": 139,
-      "new_len": 1499
-    },
-    {
-      "slug": "istvn-vrday",
-      "status": "enriched",
-      "old_len": 66,
-      "new_len": 1027
+      "old_len": 670,
+      "new_len": 817
     },
     {
       "slug": "eusebius-of-vercelli",
       "status": "failed",
-      "reason": "Unterminated string starting at: line 3 column 5 (char 20)"
-    },
-    {
-      "slug": "biochemistry",
-      "status": "enriched",
-      "old_len": 125,
-      "new_len": 1515
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
       "slug": "saiful-hoque",
+      "status": "failed",
+      "reason": "insufficient effects (0, need >= 2)"
+    },
+    {
+      "slug": "malichus-i",
       "status": "enriched",
       "old_len": 125,
-      "new_len": 1290
+      "new_len": 1072
     }
   ]
 }
