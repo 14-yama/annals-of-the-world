@@ -45352,12 +45352,12 @@
   "sync-1779099266": {
     "job_id": "sync-1779099266",
     "bot": "sync",
-    "status": "running",
+    "status": "done",
     "model": "none",
     "count": 200,
     "pid": 1481642,
     "started": "2026-05-18T10:14:26Z",
-    "finished": null,
+    "finished": "2026-05-18T10:16:04Z",
     "log": [
       "=== sync_gateway: git \u2192 Appwrite ===",
       "Endpoint:  https://fra.cloud.appwrite.io/v1",
@@ -45367,7 +45367,54 @@
       "[budget] perRunWriteCap=200 writesUsed=36083/300000 (hardStop=95%)",
       "[diff] --local mode: scanning for _unsyncedEdits:true files",
       "[diff] --local found 80 dirty files",
-      "[diff] 80 entity files to sync"
+      "[diff] 80 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 80,",
+      "  \"entitiesUpserted\": 17,",
+      "  \"auditRowsEmitted\": 183,",
+      "  \"writesPerformed\": 200,",
+      "  \"stoppedReason\": \"perRunWriteCap=200 reached during audit emission\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 5252bc76"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779099366": {
+    "job_id": "git-push-1779099366",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-18T10:16:06Z",
+    "finished": null,
+    "log": [
+      "Pending files: 10 entities, 0 edges (10 total)",
+      "git add data/appwrite-export/ ..."
+    ],
+    "exitCode": null
+  },
+  "enrich-1779099366": {
+    "job_id": "enrich-1779099366",
+    "bot": "enrich",
+    "status": "running",
+    "model": "ollama",
+    "count": 20,
+    "pid": 1486980,
+    "started": "2026-05-18T10:16:06Z",
+    "finished": null,
+    "log": [
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "============================================================",
+      "AI ENRICHMENT \u2014 20 entities via ollama",
+      "============================================================",
+      "",
+      "[1/20] janbirdi-al-ghazali (score=92.14, 0c)",
+      "  SKIP \u2014 already enriched (1696c)",
+      "",
+      "[2/20] emperor-zhang-of-han (score=92.14, 0c)"
     ],
     "exitCode": null
   }
