@@ -49186,17 +49186,22 @@
   "git-push-1779232044": {
     "job_id": "git-push-1779232044",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 54,
     "pid": null,
     "started": "2026-05-19T23:07:24Z",
-    "finished": null,
+    "finished": "2026-05-19T23:07:30Z",
     "log": [
       "Pending files: 54 entities, 0 edges (54 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 344 local enrichments\"",
+      "[clean/audit-system 819f792682] feat(enrich): watchdog auto-push \u2014 344 local enrichments\n 61 files changed, 7053 insertions(+), 212 deletions(-)\n create mode 100644 data/enrichment/queue_class3.json\n create mode 100644 data/enrichment/queue_class7.json",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   ee8ca0547c..819f792682  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 54 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "enrich-1779232044": {
     "job_id": "enrich-1779232044",
@@ -49219,7 +49224,24 @@
       "[2/20] huzziya-ii (score=89.4, 0c)",
       "  SKIP \u2014 already enriched (1024c)",
       "",
-      "[3/20] quintus-minucius-rufus (score=89.4, 0c)"
+      "[3/20] quintus-minucius-rufus (score=89.4, 0c)",
+      "  RETRY (1) \u2014 insufficient causes (0, need >= 1)",
+      "  RETRY (2) \u2014 timed out",
+      "  ENRICHED \u2014 66c -> 786c",
+      "",
+      "[4/20] numerius-fabius-pictor (score=89.4, 0c)",
+      "  SKIP \u2014 already enriched (1564c)",
+      "",
+      "[5/20] philibert-hugonet (score=89.4, 0c)",
+      "  RETRY (1) \u2014 timed out",
+      "  RETRY (2) \u2014 insufficient relationships (1, need >= 2)",
+      "  RETRY (3) \u2014 insufficient relationships (1, need >= 2)",
+      "  FAILED \u2014 insufficient relationships (1, need >= 2)",
+      "",
+      "[6/20] giorgio-fieschi (score=89.4, 0c)",
+      "  SKIP \u2014 already enriched (960c)",
+      "",
+      "[7/20] bartolomeo-di-breganze (score=89.4, 0c)"
     ],
     "exitCode": null
   }
