@@ -1,39 +1,25 @@
 {
-  "timestamp": "2026-05-19T13:48:49Z",
+  "timestamp": "2026-05-19T15:00:22Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 4,
-  "failed": 1,
+  "enriched": 0,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "gaspar-de-guzm\u00e1n-count-duke-of-olivares",
-      "status": "enriched",
-      "old_len": 607,
-      "new_len": 1240
-    },
-    {
-      "slug": "the-steadfast-tin-soldier",
+      "slug": "cosma-orsini",
       "status": "failed",
-      "reason": "insufficient subjects (1, need >= 5)"
+      "reason": "insufficient causes (0, need >= 2)"
     },
     {
-      "slug": "adam-easton",
-      "status": "enriched",
-      "old_len": 63,
-      "new_len": 1198
+      "slug": "federigo-fregoso",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "nedjemibre",
-      "status": "enriched",
-      "old_len": 143,
-      "new_len": 682
-    },
-    {
-      "slug": "john-of-procida",
-      "status": "enriched",
-      "old_len": 63,
-      "new_len": 1807
+      "slug": "herman-van-horne",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     }
   ]
 }
