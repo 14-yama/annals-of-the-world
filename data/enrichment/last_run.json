@@ -1,38 +1,33 @@
 {
-  "timestamp": "2026-05-19T10:15:52Z",
+  "timestamp": "2026-05-19T11:15:34Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 3,
-  "failed": 2,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "juan-lpez",
+      "slug": "double-falcon",
       "status": "enriched",
-      "old_len": 60,
-      "new_len": 1514
+      "old_len": 141,
+      "new_len": 618
     },
     {
-      "slug": "bartolom-de-la-cueva-y-toledo",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
-    },
-    {
-      "slug": "mirocles",
+      "slug": "didia",
       "status": "enriched",
-      "old_len": 140,
-      "new_len": 643
+      "old_len": 141,
+      "new_len": 1203
     },
     {
-      "slug": "peter-ii-nov\u00e1k",
+      "slug": "zeno-of-rhodes",
+      "status": "enriched",
+      "old_len": 61,
+      "new_len": 1546
+    },
+    {
+      "slug": "perfectus",
       "status": "failed",
       "reason": "insufficient relationships (1, need >= 3)"
-    },
-    {
-      "slug": "peter-ii-novk",
-      "status": "enriched",
-      "old_len": 60,
-      "new_len": 1263
     }
   ]
 }
