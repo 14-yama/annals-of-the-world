@@ -1,38 +1,34 @@
 {
-  "timestamp": "2026-05-19T01:56:12Z",
+  "timestamp": "2026-05-19T03:03:37Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 4,
+  "failed": 0,
   "dry_run": false,
   "entities": [
     {
-      "slug": "brics",
+      "slug": "demetrius-ii-aetolicus",
       "status": "enriched",
       "old_len": 135,
-      "new_len": 1584
+      "new_len": 1430
     },
     {
-      "slug": "geology",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
-    },
-    {
-      "slug": "anarchism",
-      "status": "enriched",
-      "old_len": 135,
-      "new_len": 1233
-    },
-    {
-      "slug": "raban-gamaliel-vi",
+      "slug": "quintus-marcius-philippus",
       "status": "enriched",
       "old_len": 55,
-      "new_len": 1032
+      "new_len": 1052
     },
     {
-      "slug": "shang-dynasty",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "slug": "servius-sulpicius-galba",
+      "status": "enriched",
+      "old_len": 55,
+      "new_len": 1343
+    },
+    {
+      "slug": "genesius-of-lyon",
+      "status": "enriched",
+      "old_len": 55,
+      "new_len": 1373
     }
   ]
 }
