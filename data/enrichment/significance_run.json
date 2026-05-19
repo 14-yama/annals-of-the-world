@@ -1,42 +1,39 @@
 {
-  "generatedAt": "2026-05-19T01:15:24Z",
+  "generatedAt": "2026-05-19T02:39:56Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "results": [
-    {
-      "slug": "antiochus-v",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
-    {
-      "slug": "vincenzo-sangermano",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
     {
       "slug": "b\u00e9la-varga",
       "status": "error",
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "bla-varga",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "luis-fernando-castillo-mendez",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
-      "slug": "luis-fernando-castillo-mendez",
+      "slug": "caterina-assandra",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "p\u00e1l-reizer",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "pl-reizer",
       "status": "error",
       "reason": "Ollama error: timed out"
     }
   ],
   "summary": {
-    "entities_scored": 3,
-    "failed": 2
+    "entities_scored": 0,
+    "failed": 5
   }
 }

@@ -1,33 +1,31 @@
 {
-  "timestamp": "2026-05-18T21:06:05Z",
+  "timestamp": "2026-05-18T22:29:36Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 1,
+  "enriched": 1,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "hestiaeus-of-perinthus",
-      "status": "enriched",
-      "old_len": 51,
-      "new_len": 1845
-    },
-    {
-      "slug": "curt-von-stedingk",
-      "status": "enriched",
-      "old_len": 211,
-      "new_len": 1384
-    },
-    {
-      "slug": "giovanni-de-primis",
-      "status": "enriched",
-      "old_len": 735,
-      "new_len": 1039
-    },
-    {
-      "slug": "virgilius-of-arles",
+      "slug": "archil-of-iberia",
       "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
+      "reason": "insufficient places (1, need >= 2)"
+    },
+    {
+      "slug": "jakub-plichta",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "ingenuinus",
+      "status": "failed",
+      "reason": "timed out"
+    },
+    {
+      "slug": "agoracritus",
+      "status": "enriched",
+      "old_len": 52,
+      "new_len": 1390
     }
   ]
 }
