@@ -106,6 +106,10 @@ interface BotEntry {
   defaultModel?: string
   /** Editor-id needle to count Appwrite audit_log rows */
   editorMatch?: RegExp
+  /** Free-tier hard limit per calendar day (0 = unlimited) */
+  dailyCap?: number
+  /** Expected seconds between cron runs — used to detect STALE state */
+  cronIntervalS?: number
 }
 
 const BOT_ROSTER: BotEntry[] = [
@@ -113,38 +117,44 @@ const BOT_ROSTER: BotEntry[] = [
   {
     key: 'gemini', label: 'Gemini 2.5 Flash', channel: 'online', family: 'enrichment',
     color: '#4285F4',
-    description: 'Free cloud bot · 1,500 RPD · 60 entities/run × 24 runs = 1,440/day. All classes.',
+    description: 'Free · 1,500 RPD · 60/run × 24 runs/day. All entity classes.',
     editorMatch: /gemini/i,
+    dailyCap: 1500, cronIntervalS: 3600,
   },
   {
     key: 'github-models', label: 'GH Models · gpt-4o-mini', channel: 'online', family: 'enrichment',
     color: '#6B3FA0',
-    description: 'GH Models free tier · 150 RPD · 120/day. Targets Class 3 (Institutions) + Class 7 (Texts).',
+    description: 'Free · 150 RPD (separate bucket) · Class 3 (Institutions) + Class 7 (Texts).',
     editorMatch: /gpt-4o-mini/i,
+    dailyCap: 150, cronIntervalS: 14400,
   },
   {
     key: 'gh-phi4', label: 'GH Models · Phi-4-mini', channel: 'online', family: 'enrichment',
     color: '#0078D4',
-    description: 'Microsoft Phi-4-mini · separate 150 RPD quota · 120/day. Targets Class 2 (People).',
+    description: 'Free · 150 RPD (separate bucket) · Class 2 (People) stubs.',
     editorMatch: /phi.?4/i,
+    dailyCap: 150, cronIntervalS: 14400,
   },
   {
     key: 'gh-llama', label: 'GH Models · Llama-3.1-8B', channel: 'online', family: 'enrichment',
     color: '#4267B2',
-    description: 'Meta Llama 3.1 8B · separate 150 RPD quota · 120/day. Targets Class 5 (Places).',
+    description: 'Free · 150 RPD (separate bucket) · Class 5 (Places) stubs.',
     editorMatch: /llama/i,
+    dailyCap: 150, cronIntervalS: 14400,
   },
   {
     key: 'gh-mistral', label: 'GH Models · Mistral-Nemo', channel: 'online', family: 'enrichment',
     color: '#F97316',
-    description: 'Mistral-Nemo 12B · separate 150 RPD quota · 120/day. Targets Class 6 (Events). Best quality of GH Models set.',
+    description: 'Free · 150 RPD (separate bucket) · Class 6 (Events). 12B — best GH Models quality.',
     editorMatch: /mistral/i,
+    dailyCap: 150, cronIntervalS: 14400,
   },
   {
     key: 'openai', label: 'OpenAI GPT-4o-mini', channel: 'online', family: 'enrichment',
     color: '#10A37F',
-    description: 'Paid fallback ($0.15/1M tokens) when Gemini exhausts quota.',
+    description: 'Paid fallback ($0.15/1M tokens) · activates when Gemini exhausts quota.',
     editorMatch: /openai/i,
+    dailyCap: 0,
   },
   // ── Local enrichment bots ──────────────────────────────────────────────────
   {
@@ -235,6 +245,45 @@ function relTime(iso?: string): string {
   if (s < 3600) return `${Math.floor(s / 60)}m ago`
   if (s < 86400) return `${Math.floor(s / 3600)}h ago`
   return `${Math.floor(s / 86400)}d ago`
+}
+
+/* ─── Bot state ─────────────────────────────────────────────────────────── */
+
+type BotState = 'running' | 'idle' | 'stale' | 'error' | 'pending'
+
+const BOT_STATE_CFG: Record<BotState, { label: string; color: string; bg: string; border: string }> = {
+  running: { label: 'RUNNING', color: '#E67E22', bg: '#FFF5EB', border: '#E67E2260' },
+  idle:    { label: 'IDLE',    color: '#27AE60', bg: '#F0FFF4', border: '#27AE6060' },
+  stale:   { label: 'STALE',  color: '#C5963A', bg: '#FFFBEB', border: '#C5963A60' },
+  error:   { label: 'ERROR',  color: '#C0392B', bg: '#FFF5F5', border: '#C0392B60' },
+  pending: { label: 'PENDING', color: '#9E9A90', bg: '#F5F4F0', border: '#D4D0C8'  },
+}
+
+function deriveBotState(
+  lastStatus?: string,
+  completedAt?: string,
+  cronIntervalS?: number,
+  activeJob?: LocalJob,
+): BotState {
+  if (activeJob?.status === 'running') return 'running'
+  if (!lastStatus && !completedAt) return 'pending'
+  if (lastStatus === 'failure') return 'error'
+  if (lastStatus === 'success' || completedAt) {
+    if (cronIntervalS && completedAt) {
+      const elapsed = (Date.now() - new Date(completedAt).getTime()) / 1000
+      // Overdue if 2.5× cron interval has passed without a new run
+      if (elapsed > cronIntervalS * 2.5) return 'stale'
+    }
+    return 'idle'
+  }
+  return 'pending'
+}
+
+function quotaPctColor(pct: number): string {
+  if (pct >= 90) return '#C0392B'
+  if (pct >= 75) return '#E67E22'
+  if (pct >= 50) return '#D4AF37'
+  return '#27AE60'
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
@@ -752,14 +801,74 @@ export default function BotKpiDashboard() {
       <SectionHeader icon={<Cloud size={16} color="#2471A3" />}
         title="Online Bots — Cloud" subtitle="5 enrichment bots · Gemini 1,440/day + 4× GH Models 120/day = ~1,920/day free tier · Appwrite audit Functions" />
 
+      {/* Free-tier quota health strip */}
+      <Box mb={4} p={3} bg="white" border="1px solid #E4E2DC" borderRadius="md">
+        <Text fontSize="10px" fontWeight={700} color="#787469" mb={3}
+          letterSpacing="0.08em" textTransform="uppercase">
+          Free Tier Quota — Today's Usage
+        </Text>
+        <Flex gap={3} flexWrap="wrap">
+          {BOT_ROSTER.filter(b => (b.dailyCap ?? 0) > 0).map(b => {
+            const used = editorCounts[b.key] ?? 0
+            const cap  = b.dailyCap!
+            const pct  = Math.min(100, Math.round(used / cap * 100))
+            const col  = quotaPctColor(pct)
+            const runInfo = b.key === 'gemini'
+              ? { status: enrichRun ? 'success' : undefined, completedAt: enrichRun?.timestamp ?? enrichRun?.generatedAt }
+              : b.key === 'github-models' ? (ghRuns ?? {})
+              : (modelRuns[b.key] ?? {})
+            const st = deriveBotState(runInfo.status, runInfo.completedAt, b.cronIntervalS)
+            const sc = BOT_STATE_CFG[st]
+            return (
+              <Box key={b.key} flex="1" minW="120px">
+                <Flex align="center" justify="space-between" mb={1}>
+                  <Text fontSize="9px" fontWeight={700} color="#2D2A24" noOfLines={1}>
+                    {b.label.replace('GH Models · ', '')}
+                  </Text>
+                  <Box px={1.5} py={0} fontSize="8px" fontWeight={700}
+                    bg={sc.bg} color={sc.color} borderRadius="sm"
+                    border={`1px solid ${sc.border}`}>
+                    {sc.label}
+                  </Box>
+                </Flex>
+                <Box h="6px" bg="#F5F4F0" borderRadius="full" overflow="hidden">
+                  <Box h="100%" w={`${pct}%`} bg={col}
+                    transition="width 0.5s ease" borderRadius="full" />
+                </Box>
+                <Flex justify="space-between" mt={0.5}>
+                  <Text fontSize="9px" color="#9E9A90">{used} / {cap.toLocaleString()} RPD</Text>
+                  <Text fontSize="9px" fontWeight={700} color={col}>{pct}%</Text>
+                </Flex>
+              </Box>
+            )
+          })}
+        </Flex>
+        <Flex gap={3} mt={2} pt={2} borderTop="1px solid #F5F4F0">
+          {([['#27AE60','< 50% — Safe'],['#D4AF37','50–74% — Moderate'],['#E67E22','75–89% — High'],['#C0392B','≥ 90% — Critical']] as const).map(([c,l]) => (
+            <Flex key={l} align="center" gap={1}>
+              <Box w={2} h={2} borderRadius="full" bg={c} />
+              <Text fontSize="9px" color="#787469">{l}</Text>
+            </Flex>
+          ))}
+        </Flex>
+      </Box>
+
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={3} mb={6}>
-        {BOT_ROSTER.filter(b => b.channel === 'online').map(b => (
-          <BotCard key={b.key}
-            bot={b}
-            editsLast24h={editorCounts[b.key] ?? 0}
-            report={reports[b.key] ?? null}
-          />
-        ))}
+        {BOT_ROSTER.filter(b => b.channel === 'online').map(b => {
+          const runInfo = b.key === 'gemini'
+            ? { status: enrichRun ? 'success' : undefined, completedAt: enrichRun?.timestamp ?? enrichRun?.generatedAt }
+            : b.key === 'github-models' ? (ghRuns ?? {})
+            : (modelRuns[b.key] ?? {})
+          return (
+            <BotCard key={b.key}
+              bot={b}
+              editsLast24h={editorCounts[b.key] ?? 0}
+              report={reports[b.key] ?? null}
+              lastRunStatus={runInfo.status}
+              lastRunTime={runInfo.completedAt}
+            />
+          )
+        })}
       </SimpleGrid>
 
       {/* ════════════════════════════════════════════════════════════════════
@@ -833,6 +942,14 @@ export default function BotKpiDashboard() {
           const activeJob = Object.values(localJobs).find(
             j => j.bot === b.localEndpoint?.replace('/bots/', '') && j.status === 'running'
           )
+          // Derive last run state from most recent completed local job
+          const lastJob = Object.values(localJobs)
+            .filter(j => j.bot === b.localEndpoint?.replace('/bots/', '') && j.status !== 'running')
+            .sort((a, c) => (c.finished ?? '').localeCompare(a.finished ?? ''))
+            .at(0)
+          const lastRunStatus = lastJob
+            ? (lastJob.status === 'done' ? 'success' : 'failure')
+            : undefined
           return (
             <BotCard key={b.key}
               bot={b}
@@ -842,6 +959,8 @@ export default function BotKpiDashboard() {
               activeJob={activeJob}
               onAssist={() => assistBot(b)}
               ollamaOnline={!!localHealth?.ollama.running}
+              lastRunStatus={lastRunStatus}
+              lastRunTime={lastJob?.finished ?? undefined}
             />
           )
         })}
@@ -963,7 +1082,9 @@ function SectionHeader({ icon, title, subtitle }: {
   )
 }
 
-function BotCard({ bot, editsLast24h, report, isAssisting, activeJob, onAssist, ollamaOnline }: {
+function BotCard({ bot, editsLast24h, report, isAssisting, activeJob, onAssist, ollamaOnline,
+  lastRunStatus, lastRunTime,
+}: {
   bot: BotEntry
   editsLast24h: number
   report: AuditReport | null
@@ -971,35 +1092,100 @@ function BotCard({ bot, editsLast24h, report, isAssisting, activeJob, onAssist, 
   activeJob?: LocalJob
   onAssist?: () => void
   ollamaOnline?: boolean
+  lastRunStatus?: string
+  lastRunTime?: string
 }) {
   const headline = report?.summary ? Object.entries(report.summary)[0] : null
+
+  // State derivation
+  const botState = deriveBotState(lastRunStatus, lastRunTime, bot.cronIntervalS, activeJob)
+  const sc = BOT_STATE_CFG[botState]
+
+  // Quota
+  const cap = bot.dailyCap ?? 0
+  const quotaUsed = editsLast24h
+  const quotaPct  = cap > 0 ? Math.min(100, Math.round(quotaUsed / cap * 100)) : 0
+  const qColor    = quotaPctColor(quotaPct)
+
+  // Warn if near limit
+  const nearLimit = cap > 0 && quotaPct >= 75
+
   return (
-    <Box p={3} bg="white" border="1px solid #E4E2DC"
-      borderLeft={`3px solid ${bot.color}`} borderRadius="md">
+    <Box p={3} bg="white"
+      border={nearLimit ? `1px solid ${qColor}60` : '1px solid #E4E2DC'}
+      borderLeft={`3px solid ${bot.color}`}
+      borderRadius="md"
+      position="relative">
+
+      {/* Row 1: label + channel + state */}
       <Flex align="center" gap={2} mb={2}>
-        <Text fontSize="11px" fontWeight={700} color="#2D2A24" flex={1}>
+        <Text fontSize="11px" fontWeight={700} color="#2D2A24" flex={1} lineHeight="1.3">
           {bot.label}
         </Text>
         <Box px={1.5} py={0.5} fontSize="8px" fontWeight={700}
           bg={bot.channel === 'online' ? '#2471A320' : '#27AE6020'}
           color={bot.channel === 'online' ? '#2471A3' : '#27AE60'}
           borderRadius="sm">
-          {bot.channel === 'online' ? '☁ CLOUD' : '💻 LOCAL'}
+          {bot.channel === 'online' ? '☁' : '💻'}
         </Box>
+        {/* State pill */}
+        <Flex align="center" gap={1} px={1.5} py={0.5} borderRadius="sm"
+          bg={sc.bg} border={`1px solid ${sc.border}`}>
+          {botState === 'running' && <Spinner size="xs" color={sc.color} />}
+          {botState === 'idle'    && <CheckCircle2 size={8} color={sc.color} />}
+          {botState === 'stale'   && <AlertTriangle size={8} color={sc.color} />}
+          {botState === 'error'   && <AlertTriangle size={8} color={sc.color} />}
+          {botState === 'pending' && <Clock size={8} color={sc.color} />}
+          <Text fontSize="8px" fontWeight={700} color={sc.color} lineHeight="1">
+            {sc.label}
+          </Text>
+        </Flex>
       </Flex>
 
-      {/* Primary metric: edits in last 24h */}
+      {/* Row 2: edits count */}
       <Flex align="baseline" gap={2}>
         <Text fontSize="22px" fontWeight={700} color={bot.color}
           fontFamily='"Cormorant Garamond", serif' lineHeight="1">
           {editsLast24h}
         </Text>
         <Text fontSize="10px" color="#9E9A90">edits / 24h</Text>
+        {lastRunTime && (
+          <Text fontSize="9px" color="#9E9A90" ml="auto">
+            last: {relTime(lastRunTime)}
+          </Text>
+        )}
       </Flex>
 
-      {/* Secondary metric from audit report */}
+      {/* Quota bar (enrichment bots only) */}
+      {cap > 0 && (
+        <Box mt={2}>
+          <Flex justify="space-between" align="center" mb={0.5}>
+            <Text fontSize="9px" fontWeight={700} color="#787469"
+              letterSpacing="0.05em" textTransform="uppercase">
+              Free Tier Quota
+            </Text>
+            <Flex align="center" gap={1}>
+              {nearLimit && <AlertTriangle size={8} color={qColor} />}
+              <Text fontSize="9px" fontWeight={700} color={qColor}>
+                {quotaPct}% · {quotaUsed}/{cap.toLocaleString()}
+              </Text>
+            </Flex>
+          </Flex>
+          <Box h="5px" bg="#F5F4F0" borderRadius="full" overflow="hidden">
+            <Box h="100%" w={`${quotaPct}%`} bg={qColor}
+              transition="width 0.5s ease" borderRadius="full" />
+          </Box>
+          {nearLimit && (
+            <Text fontSize="9px" color={qColor} mt={0.5} fontWeight={600}>
+              {quotaPct >= 90 ? '⚠ Approaching daily limit' : '↑ Usage elevated'}
+            </Text>
+          )}
+        </Box>
+      )}
+
+      {/* Audit report headline */}
       {report && headline && (
-        <Flex align="center" gap={1} mt={1}>
+        <Flex align="center" gap={1} mt={2}>
           <Text fontSize="10px" color="#787469">
             {headline[0].replace(/_/g, ' ')}: <strong>{String(headline[1])}</strong>
           </Text>
@@ -1013,7 +1199,7 @@ function BotCard({ bot, editsLast24h, report, isAssisting, activeJob, onAssist, 
         {bot.description}
       </Text>
 
-      {/* Assist button for local bots only */}
+      {/* Assist button (local bots) */}
       {bot.channel === 'local' && onAssist && (
         <Box as="button"
           onClick={() => !isAssisting && ollamaOnline && onAssist()}
