@@ -1,30 +1,34 @@
 {
-  "generatedAt": "2026-05-18T23:09:33Z",
+  "generatedAt": "2026-05-19T00:09:43Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "results": [
     {
       "slug": "micha\u0142-kozal",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 6,
+      "category": "regional"
     },
     {
       "slug": "soror-maria-do-ceu",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "antoni-baraniak",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "alessandro-peretti-di-montalto",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "vincenzo-sangermano",
@@ -33,7 +37,7 @@
     }
   ],
   "summary": {
-    "entities_scored": 0,
-    "failed": 5
+    "entities_scored": 4,
+    "failed": 1
   }
 }
