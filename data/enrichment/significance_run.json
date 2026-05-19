@@ -1,43 +1,39 @@
 {
-  "generatedAt": "2026-05-19T15:21:17Z",
+  "generatedAt": "2026-05-19T16:53:35Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 4,
-  "failed": 1,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "results": [
-    {
-      "slug": "perfectus",
-      "status": "ok",
-      "score": 6,
-      "category": "regional"
-    },
-    {
-      "slug": "kate-millett",
-      "status": "ok",
-      "score": 8,
-      "category": "continental"
-    },
-    {
-      "slug": "margaret-archer",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
     {
       "slug": "w-edwards-deming",
       "status": "error",
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "earl-w-bascom",
-      "status": "ok",
-      "score": 8,
-      "category": "regional"
+      "slug": "juan-negr\u00edn",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "c-r-hagen",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "joan-triad\u00fa",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "joan-triad",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     }
   ],
   "summary": {
-    "entities_scored": 4,
-    "failed": 1
+    "entities_scored": 0,
+    "failed": 5
   }
 }

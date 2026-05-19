@@ -1,31 +1,30 @@
 {
-  "timestamp": "2026-05-19T11:15:34Z",
+  "timestamp": "2026-05-19T12:43:15Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 1,
+  "enriched": 2,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "double-falcon",
-      "status": "enriched",
-      "old_len": 141,
-      "new_len": 618
+      "slug": "euthyphro",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
     },
     {
-      "slug": "didia",
+      "slug": "suda",
       "status": "enriched",
-      "old_len": 141,
-      "new_len": 1203
+      "old_len": 62,
+      "new_len": 950
     },
     {
-      "slug": "zeno-of-rhodes",
+      "slug": "pietro-del-monte",
       "status": "enriched",
-      "old_len": 61,
-      "new_len": 1546
+      "old_len": 62,
+      "new_len": 1235
     },
     {
-      "slug": "perfectus",
+      "slug": "senkamanisken",
       "status": "failed",
       "reason": "insufficient relationships (1, need >= 3)"
     }
