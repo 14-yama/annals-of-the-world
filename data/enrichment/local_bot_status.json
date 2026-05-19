@@ -47400,17 +47400,22 @@
   "git-push-1779169999": {
     "job_id": "git-push-1779169999",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 33,
     "pid": null,
     "started": "2026-05-19T05:53:19Z",
-    "finished": null,
+    "finished": "2026-05-19T05:53:26Z",
     "log": [
       "Pending files: 33 entities, 0 edges (33 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 229 local enrichments\"",
+      "[clean/audit-system d72d98b20e] feat(enrich): watchdog auto-push \u2014 229 local enrichments\n 38 files changed, 744 insertions(+), 162 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   246f2add79..d72d98b20e  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 33 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "enrich-1779169999": {
     "job_id": "enrich-1779169999",
@@ -47442,7 +47447,11 @@
       "[5/20] shang-dynasty (score=90.5, 0c)",
       "  SKIP \u2014 already enriched (1501c)",
       "",
-      "[6/20] tellus-of-athens (score=90.5, 0c)"
+      "[6/20] tellus-of-athens (score=90.5, 0c)",
+      "  ENRICHED \u2014 135c -> 963c",
+      "",
+      "[7/20] ini (score=90.5, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)"
     ],
     "exitCode": null
   }
