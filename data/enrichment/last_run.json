@@ -1,39 +1,32 @@
 {
-  "timestamp": "2026-05-19T04:04:55Z",
+  "timestamp": "2026-05-19T05:16:31Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 4,
-  "failed": 1,
+  "enriched": 2,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "juan-de-cervantes",
-      "status": "enriched",
-      "old_len": 56,
-      "new_len": 1488
+      "slug": "ciriaco-de-pizzicolli",
+      "status": "failed",
+      "reason": "timed out"
     },
     {
-      "slug": "sosipater",
+      "slug": "leonardo-patrasso",
+      "status": "enriched",
+      "old_len": 57,
+      "new_len": 1506
+    },
+    {
+      "slug": "maternus",
       "status": "failed",
       "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "jaime-de-casanova",
+      "slug": "senewosret-ankh",
       "status": "enriched",
-      "old_len": 56,
-      "new_len": 1989
-    },
-    {
-      "slug": "postumus-cominius-auruncus",
-      "status": "enriched",
-      "old_len": 77,
-      "new_len": 1074
-    },
-    {
-      "slug": "perictione",
-      "status": "enriched",
-      "old_len": 57,
-      "new_len": 991
+      "old_len": 137,
+      "new_len": 1755
     }
   ]
 }
