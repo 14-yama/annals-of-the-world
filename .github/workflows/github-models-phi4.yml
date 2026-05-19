@@ -1,0 +1,140 @@
+name: GitHub Models — Phi-4-mini (Class 2 · People)
+
+# Free Microsoft Phi-4-mini model — separate quota from gpt-4o-mini.
+# Targets Class 2 (People) stubs: 210–299 divisions.
+# Rate limits (free tier): 15 RPM, 150 RPD per model per token.
+# At 20 entities/run × 6 runs/day = 120 entities/day (under 150 cap).
+
+on:
+  schedule:
+    - cron: '15 */4 * * *'   # every 4h at :15 — staggered from other GH Models bots
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Entities to enrich"
+        type: string
+        default: "20"
+
+concurrency:
+  group: gh-models-phi4
+  cancel-in-progress: false
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    permissions:
+      contents: write
+      models: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: clean/audit-system
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build Class-2 (People) queue
+        run: |
+          python3 << 'PYEOF'
+          import json, sys, time
+          from pathlib import Path
+          sys.path.insert(0, 'scripts')
+          from enrichment_queue import score_entity
+
+          BASE = Path('data/appwrite-export/entities')
+          items = []
+          for d in sorted(BASE.iterdir()):
+              dn = d.name
+              if not (dn.startswith('2') and (len(dn) > 1 and (dn[1].isdigit() or dn[1] == '-'))):
+                  continue
+              for f in d.glob('*.json'):
+                  try:
+                      raw = json.loads(f.read_text())
+                      for ent in raw.get('entities', []):
+                          score = score_entity(ent)
+                          if score <= 0: continue
+                          items.append({
+                              'slug': ent.get('slug', ''),
+                              'name': ent.get('name', ''),
+                              'label': ent.get('label', ''),
+                              'era': ent.get('era', ''),
+                              'region': ent.get('region', ''),
+                              'continent': ent.get('continent', ''),
+                              'importanceScore': ent.get('importanceScore', 1) or 1,
+                              'summaryLength': len(ent.get('summary', '') or ''),
+                              'score': score,
+                              'filepath': str(f),
+                          })
+                  except Exception:
+                      pass
+
+          items.sort(key=lambda x: x['score'], reverse=True)
+          out = {
+              'generated': time.strftime('%Y-%m-%dT%H:%M:%SZ'),
+              'class': '2-People',
+              'model': 'Phi-4-mini',
+              'count': min(300, len(items)),
+              'queue': items[:300],
+          }
+          Path('data/enrichment').mkdir(parents=True, exist_ok=True)
+          Path('data/enrichment/queue_class2.json').write_text(json.dumps(out, indent=2))
+          print(f'Class 2 queue: {len(items)} stubs, top 300 written')
+          PYEOF
+
+      - name: Run Phi-4-mini enrichment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          COUNT="${{ github.event.inputs.count || '20' }}"
+          echo "Phi-4-mini enrichment: ${COUNT} Class-2 (People) stubs"
+
+          timeout 2400 python3 -u scripts/ai_enrich_autonomous.py \
+            --model github \
+            --github-model Phi-4-mini \
+            --queue data/enrichment/queue_class2.json \
+            --count "${COUNT}" \
+            --min-score 0 \
+            --retry 1 \
+            --lenient || echo "Enrichment exited non-zero — continuing to commit partial results"
+
+      - name: Commit + push
+        run: |
+          git config user.name  "Phi-4-mini Bot"
+          git config user.email "phi4@annals-of-the-world.bot"
+          git add data/appwrite-export/entities/ data/enrichment/ || true
+          CHANGED=$(git diff --cached --name-only | wc -l)
+          if [ "$CHANGED" -gt 0 ]; then
+            git commit -m "feat(data): Phi-4-mini enrichment — ${CHANGED} files (Class 2 · People)
+
+          Workflow: gh-models-phi4 · Run: ${{ github.run_id }}"
+            for attempt in 1 2 3 4 5; do
+              if git push; then echo "✓ Push attempt $attempt succeeded"; break; fi
+              git pull --rebase -X ours --autostash origin clean/audit-system || git rebase --abort || true
+              sleep $((attempt * 3))
+              [ "$attempt" = "5" ] && exit 1 || true
+            done
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Write status file
+        if: always()
+        run: |
+          mkdir -p data/governance
+          cat > data/governance/last_phi4_run.json << EOF
+          {
+            "workflow": "gh-models-phi4",
+            "model": "Phi-4-mini",
+            "class": "2-People",
+            "run_id": "${{ github.run_id }}",
+            "status": "${{ job.status }}",
+            "completedAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          }
+          EOF
+          git add data/governance/last_phi4_run.json || true
+          git diff --cached --quiet || git commit -m "chore: phi4 run status" || true
+          git push || true

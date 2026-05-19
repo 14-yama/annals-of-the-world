@@ -3,7 +3,7 @@ name: AI Entity Enrichment (git-first)
 # Bot writes JSON only. The sync_gateway workflow pushes to Appwrite later.
 on:
   schedule:
-    - cron: '0 * * * *'   # every hour — Gemini free tier 500 RPD; 15 entities/run × 24 runs = 360 calls/day (under limit)
+    - cron: '0 * * * *'   # every hour — Gemini free tier 1,500 RPD; 60 entities/run × 24 runs = 1,440 calls/day (under limit)
   push:
     branches: [clean/audit-system]
     paths:
@@ -83,7 +83,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           MODEL="${{ github.event.inputs.model || 'gemini' }}"
-          COUNT="${{ github.event.inputs.count || '10' }}"
+          COUNT="${{ github.event.inputs.count || '60' }}"
           OTHER="gemini"; [ "$MODEL" = "gemini" ] && OTHER="openai"
 
           # Primary provider with bounded wall-clock (45 min, leaving buffer for commit step)

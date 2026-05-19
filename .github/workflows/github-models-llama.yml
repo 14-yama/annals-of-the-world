@@ -1,0 +1,140 @@
+name: GitHub Models — Llama-3.1-8B (Class 5 · Places)
+
+# Free Meta Llama 3.1 8B model — separate quota from all other GH Models bots.
+# Targets Class 5 (Places) stubs: 510–594 divisions.
+# Rate limits (free tier): 15 RPM, 150 RPD per model per token.
+# At 20 entities/run × 6 runs/day = 120 entities/day (under 150 cap).
+
+on:
+  schedule:
+    - cron: '45 */4 * * *'   # every 4h at :45 — staggered from other GH Models bots
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Entities to enrich"
+        type: string
+        default: "20"
+
+concurrency:
+  group: gh-models-llama
+  cancel-in-progress: false
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    permissions:
+      contents: write
+      models: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: clean/audit-system
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build Class-5 (Places) queue
+        run: |
+          python3 << 'PYEOF'
+          import json, sys, time
+          from pathlib import Path
+          sys.path.insert(0, 'scripts')
+          from enrichment_queue import score_entity
+
+          BASE = Path('data/appwrite-export/entities')
+          items = []
+          for d in sorted(BASE.iterdir()):
+              dn = d.name
+              if not (dn.startswith('5') and (len(dn) > 1 and (dn[1].isdigit() or dn[1] == '-'))):
+                  continue
+              for f in d.glob('*.json'):
+                  try:
+                      raw = json.loads(f.read_text())
+                      for ent in raw.get('entities', []):
+                          score = score_entity(ent)
+                          if score <= 0: continue
+                          items.append({
+                              'slug': ent.get('slug', ''),
+                              'name': ent.get('name', ''),
+                              'label': ent.get('label', ''),
+                              'era': ent.get('era', ''),
+                              'region': ent.get('region', ''),
+                              'continent': ent.get('continent', ''),
+                              'importanceScore': ent.get('importanceScore', 1) or 1,
+                              'summaryLength': len(ent.get('summary', '') or ''),
+                              'score': score,
+                              'filepath': str(f),
+                          })
+                  except Exception:
+                      pass
+
+          items.sort(key=lambda x: x['score'], reverse=True)
+          out = {
+              'generated': time.strftime('%Y-%m-%dT%H:%M:%SZ'),
+              'class': '5-Places',
+              'model': 'Meta-Llama-3.1-8B-Instruct',
+              'count': min(300, len(items)),
+              'queue': items[:300],
+          }
+          Path('data/enrichment').mkdir(parents=True, exist_ok=True)
+          Path('data/enrichment/queue_class5.json').write_text(json.dumps(out, indent=2))
+          print(f'Class 5 queue: {len(items)} stubs, top 300 written')
+          PYEOF
+
+      - name: Run Llama-3.1-8B enrichment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          COUNT="${{ github.event.inputs.count || '20' }}"
+          echo "Llama-3.1-8B enrichment: ${COUNT} Class-5 (Places) stubs"
+
+          timeout 2400 python3 -u scripts/ai_enrich_autonomous.py \
+            --model github \
+            --github-model Meta-Llama-3.1-8B-Instruct \
+            --queue data/enrichment/queue_class5.json \
+            --count "${COUNT}" \
+            --min-score 0 \
+            --retry 1 \
+            --lenient || echo "Enrichment exited non-zero — continuing to commit partial results"
+
+      - name: Commit + push
+        run: |
+          git config user.name  "Llama-3.1-8B Bot"
+          git config user.email "llama@annals-of-the-world.bot"
+          git add data/appwrite-export/entities/ data/enrichment/ || true
+          CHANGED=$(git diff --cached --name-only | wc -l)
+          if [ "$CHANGED" -gt 0 ]; then
+            git commit -m "feat(data): Llama-3.1-8B enrichment — ${CHANGED} files (Class 5 · Places)
+
+          Workflow: gh-models-llama · Run: ${{ github.run_id }}"
+            for attempt in 1 2 3 4 5; do
+              if git push; then echo "✓ Push attempt $attempt succeeded"; break; fi
+              git pull --rebase -X ours --autostash origin clean/audit-system || git rebase --abort || true
+              sleep $((attempt * 3))
+              [ "$attempt" = "5" ] && exit 1 || true
+            done
+          else
+            echo "No changes to commit"
+          fi
+
+      - name: Write status file
+        if: always()
+        run: |
+          mkdir -p data/governance
+          cat > data/governance/last_llama_run.json << EOF
+          {
+            "workflow": "gh-models-llama",
+            "model": "Meta-Llama-3.1-8B-Instruct",
+            "class": "5-Places",
+            "run_id": "${{ github.run_id }}",
+            "status": "${{ job.status }}",
+            "completedAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          }
+          EOF
+          git add data/governance/last_llama_run.json || true
+          git diff --cached --quiet || git commit -m "chore: llama run status" || true
+          git push || true

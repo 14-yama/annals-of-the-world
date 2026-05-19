@@ -78,6 +78,15 @@ interface GhRunsStatus {
   queue?: string
 }
 
+interface ModelRunStatus {
+  workflow?: string
+  model?: string
+  class?: string
+  run_id?: string
+  status?: string
+  completedAt?: string
+}
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Bot Roster (online + local)
    ────────────────────────────────────────────────────────────────────────── */
@@ -104,20 +113,38 @@ const BOT_ROSTER: BotEntry[] = [
   {
     key: 'gemini', label: 'Gemini 2.5 Flash', channel: 'online', family: 'enrichment',
     color: '#4285F4',
-    description: 'Free cloud bot (500 RPD). Primary bulk enrichment.',
+    description: 'Free cloud bot · 1,500 RPD · 60 entities/run × 24 runs = 1,440/day. All classes.',
     editorMatch: /gemini/i,
   },
   {
-    key: 'github-models', label: 'GitHub Models (gpt-4o-mini)', channel: 'online', family: 'enrichment',
+    key: 'github-models', label: 'GH Models · gpt-4o-mini', channel: 'online', family: 'enrichment',
     color: '#6B3FA0',
-    description: 'GH Models API via Copilot. Targets Class 3 + 7 stubs.',
-    editorMatch: /gpt-4o-mini|github-models/i,
+    description: 'GH Models free tier · 150 RPD · 120/day. Targets Class 3 (Institutions) + Class 7 (Texts).',
+    editorMatch: /gpt-4o-mini/i,
+  },
+  {
+    key: 'gh-phi4', label: 'GH Models · Phi-4-mini', channel: 'online', family: 'enrichment',
+    color: '#0078D4',
+    description: 'Microsoft Phi-4-mini · separate 150 RPD quota · 120/day. Targets Class 2 (People).',
+    editorMatch: /phi.?4/i,
+  },
+  {
+    key: 'gh-llama', label: 'GH Models · Llama-3.1-8B', channel: 'online', family: 'enrichment',
+    color: '#4267B2',
+    description: 'Meta Llama 3.1 8B · separate 150 RPD quota · 120/day. Targets Class 5 (Places).',
+    editorMatch: /llama/i,
+  },
+  {
+    key: 'gh-mistral', label: 'GH Models · Mistral-Nemo', channel: 'online', family: 'enrichment',
+    color: '#F97316',
+    description: 'Mistral-Nemo 12B · separate 150 RPD quota · 120/day. Targets Class 6 (Events). Best quality of GH Models set.',
+    editorMatch: /mistral/i,
   },
   {
     key: 'openai', label: 'OpenAI GPT-4o-mini', channel: 'online', family: 'enrichment',
     color: '#10A37F',
-    description: 'Paid fallback when Gemini exhausts quota.',
-    editorMatch: /openai|gpt-4/i,
+    description: 'Paid fallback ($0.15/1M tokens) when Gemini exhausts quota.',
+    editorMatch: /openai/i,
   },
   // ── Local enrichment bots ──────────────────────────────────────────────────
   {
@@ -222,6 +249,7 @@ export default function BotKpiDashboard() {
   const [lastSync, setLastSync] = useState<LastSync | null>(null)
   const [enrichRun, setEnrichRun] = useState<EnrichmentLastRun | null>(null)
   const [ghRuns, setGhRuns] = useState<GhRunsStatus | null>(null)
+  const [modelRuns, setModelRuns] = useState<Record<string, ModelRunStatus | null>>({})
   const [reports, setReports] = useState<Record<string, AuditReport | null>>({})
   const [localHealth, setLocalHealth] = useState<LocalHealth | null>(null)
   const [localJobs, setLocalJobs] = useState<Record<string, LocalJob>>({})
@@ -297,17 +325,21 @@ export default function BotKpiDashboard() {
 
   const loadTelemetry = useCallback(async () => {
     const reportFiles = BOT_ROSTER.filter(b => b.reportFile).map(b => b.reportFile!)
-    const [b, ls, er, gh, ...rs] = await Promise.all([
+    const [b, ls, er, gh, phi4, llama, mistral, ...rs] = await Promise.all([
       fetchJSON<BudgetState>('/governance/budget.json'),
       fetchJSON<LastSync>('/governance/last_sync.json'),
       fetchJSON<EnrichmentLastRun>('/enrichment/last_run.json'),
       fetchJSON<GhRunsStatus>('/governance/last_github_runs.json'),
+      fetchJSON<ModelRunStatus>('/governance/last_phi4_run.json'),
+      fetchJSON<ModelRunStatus>('/governance/last_llama_run.json'),
+      fetchJSON<ModelRunStatus>('/governance/last_mistral_run.json'),
       ...reportFiles.map(f => fetchJSON<AuditReport>(`/audit-reports/${f}`)),
     ])
     setBudget(b)
     setLastSync(ls)
     setEnrichRun(er)
     setGhRuns(gh)
+    setModelRuns({ 'gh-phi4': phi4, 'gh-llama': llama, 'gh-mistral': mistral })
     const next: Record<string, AuditReport | null> = {}
     let i = 0
     for (const bot of BOT_ROSTER) {
@@ -619,7 +651,7 @@ export default function BotKpiDashboard() {
             <Cloud size={14} color="#6B3FA0" />
             <Text fontSize="11px" fontWeight={700} color="#787469"
               letterSpacing="0.06em" textTransform="uppercase">
-              GH Actions
+              GH Models — gpt-4o-mini
             </Text>
             <Box ml="auto" px={2} py={0.5} fontSize="9px" fontWeight={700}
               bg={ghRuns?.status === 'success' ? '#27AE6020' :
@@ -637,13 +669,88 @@ export default function BotKpiDashboard() {
             run #{ghRuns?.run_id ?? '—'} · {relTime(ghRuns?.completedAt)}
           </Text>
         </Box>
+
+        {/* Phi-4-mini latest */}
+        <Box p={3} bg="white" border="1px solid #E4E2DC" borderRadius="md">
+          <Flex align="center" gap={2} mb={2}>
+            <Cloud size={14} color="#0078D4" />
+            <Text fontSize="11px" fontWeight={700} color="#787469"
+              letterSpacing="0.06em" textTransform="uppercase">
+              GH Models — Phi-4-mini
+            </Text>
+            <Box ml="auto" px={2} py={0.5} fontSize="9px" fontWeight={700}
+              bg={modelRuns['gh-phi4']?.status === 'success' ? '#27AE6020' :
+                modelRuns['gh-phi4']?.status === 'failure' ? '#C0392B20' : '#F5F4F0'}
+              color={modelRuns['gh-phi4']?.status === 'success' ? '#27AE60' :
+                modelRuns['gh-phi4']?.status === 'failure' ? '#C0392B' : '#9E9A90'}
+              borderRadius="md">
+              {(modelRuns['gh-phi4']?.status ?? 'pending').toUpperCase()}
+            </Box>
+          </Flex>
+          <Text fontSize="13px" fontWeight={600} color="#2D2A24">
+            {modelRuns['gh-phi4']?.class ?? 'Class 2 · People'}
+          </Text>
+          <Text mt={1} fontSize="10px" color="#9E9A90">
+            {relTime(modelRuns['gh-phi4']?.completedAt)}
+          </Text>
+        </Box>
+
+        {/* Llama-3.1-8B latest */}
+        <Box p={3} bg="white" border="1px solid #E4E2DC" borderRadius="md">
+          <Flex align="center" gap={2} mb={2}>
+            <Cloud size={14} color="#4267B2" />
+            <Text fontSize="11px" fontWeight={700} color="#787469"
+              letterSpacing="0.06em" textTransform="uppercase">
+              GH Models — Llama-3.1-8B
+            </Text>
+            <Box ml="auto" px={2} py={0.5} fontSize="9px" fontWeight={700}
+              bg={modelRuns['gh-llama']?.status === 'success' ? '#27AE6020' :
+                modelRuns['gh-llama']?.status === 'failure' ? '#C0392B20' : '#F5F4F0'}
+              color={modelRuns['gh-llama']?.status === 'success' ? '#27AE60' :
+                modelRuns['gh-llama']?.status === 'failure' ? '#C0392B' : '#9E9A90'}
+              borderRadius="md">
+              {(modelRuns['gh-llama']?.status ?? 'pending').toUpperCase()}
+            </Box>
+          </Flex>
+          <Text fontSize="13px" fontWeight={600} color="#2D2A24">
+            {modelRuns['gh-llama']?.class ?? 'Class 5 · Places'}
+          </Text>
+          <Text mt={1} fontSize="10px" color="#9E9A90">
+            {relTime(modelRuns['gh-llama']?.completedAt)}
+          </Text>
+        </Box>
+
+        {/* Mistral-Nemo latest */}
+        <Box p={3} bg="white" border="1px solid #E4E2DC" borderRadius="md">
+          <Flex align="center" gap={2} mb={2}>
+            <Cloud size={14} color="#F97316" />
+            <Text fontSize="11px" fontWeight={700} color="#787469"
+              letterSpacing="0.06em" textTransform="uppercase">
+              GH Models — Mistral-Nemo
+            </Text>
+            <Box ml="auto" px={2} py={0.5} fontSize="9px" fontWeight={700}
+              bg={modelRuns['gh-mistral']?.status === 'success' ? '#27AE6020' :
+                modelRuns['gh-mistral']?.status === 'failure' ? '#C0392B20' : '#F5F4F0'}
+              color={modelRuns['gh-mistral']?.status === 'success' ? '#27AE60' :
+                modelRuns['gh-mistral']?.status === 'failure' ? '#C0392B' : '#9E9A90'}
+              borderRadius="md">
+              {(modelRuns['gh-mistral']?.status ?? 'pending').toUpperCase()}
+            </Box>
+          </Flex>
+          <Text fontSize="13px" fontWeight={600} color="#2D2A24">
+            {modelRuns['gh-mistral']?.class ?? 'Class 6 · Events'}
+          </Text>
+          <Text mt={1} fontSize="10px" color="#9E9A90">
+            {relTime(modelRuns['gh-mistral']?.completedAt)}
+          </Text>
+        </Box>
       </SimpleGrid>
 
       {/* ════════════════════════════════════════════════════════════════════
           ONLINE BOTS — cloud enrichment
           ════════════════════════════════════════════════════════════════ */}
       <SectionHeader icon={<Cloud size={16} color="#2471A3" />}
-        title="Online Bots — Cloud" subtitle="GitHub Actions, Gemini, GitHub Models, Appwrite Functions" />
+        title="Online Bots — Cloud" subtitle="5 enrichment bots · Gemini 1,440/day + 4× GH Models 120/day = ~1,920/day free tier · Appwrite audit Functions" />
 
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={3} mb={6}>
         {BOT_ROSTER.filter(b => b.channel === 'online').map(b => (
