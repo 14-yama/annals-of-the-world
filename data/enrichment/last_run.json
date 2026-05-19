@@ -1,34 +1,39 @@
 {
-  "timestamp": "2026-05-19T03:03:37Z",
+  "timestamp": "2026-05-19T04:04:55Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 4,
-  "failed": 0,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "demetrius-ii-aetolicus",
+      "slug": "juan-de-cervantes",
       "status": "enriched",
-      "old_len": 135,
-      "new_len": 1430
+      "old_len": 56,
+      "new_len": 1488
     },
     {
-      "slug": "quintus-marcius-philippus",
-      "status": "enriched",
-      "old_len": 55,
-      "new_len": 1052
+      "slug": "sosipater",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "servius-sulpicius-galba",
+      "slug": "jaime-de-casanova",
       "status": "enriched",
-      "old_len": 55,
-      "new_len": 1343
+      "old_len": 56,
+      "new_len": 1989
     },
     {
-      "slug": "genesius-of-lyon",
+      "slug": "postumus-cominius-auruncus",
       "status": "enriched",
-      "old_len": 55,
-      "new_len": 1373
+      "old_len": 77,
+      "new_len": 1074
+    },
+    {
+      "slug": "perictione",
+      "status": "enriched",
+      "old_len": 57,
+      "new_len": 991
     }
   ]
 }
