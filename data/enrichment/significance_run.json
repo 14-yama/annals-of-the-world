@@ -1,25 +1,15 @@
 {
-  "generatedAt": "2026-05-19T19:09:58Z",
+  "generatedAt": "2026-05-19T20:18:26Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "results": [
     {
       "slug": "jean-fran\u00e7ois-portaels",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "enriqueta-sculi-i-bastida",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "maria-mitchell",
       "status": "ok",
-      "score": 8,
+      "score": 5,
       "category": "regional"
     },
     {
@@ -28,14 +18,25 @@
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "anton-martin-slom\u0161ek",
+      "slug": "am\u00e9rico-castro",
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
+    },
+    {
+      "slug": "conchita-bad\u00eda",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "lyonel-feininger",
       "status": "ok",
       "score": 5,
       "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 2,
-    "failed": 3
+    "entities_scored": 3,
+    "failed": 2
   }
 }
