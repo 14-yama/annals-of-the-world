@@ -1,32 +1,39 @@
 {
-  "timestamp": "2026-05-19T12:43:15Z",
+  "timestamp": "2026-05-19T13:48:49Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 2,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "euthyphro",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
-    },
-    {
-      "slug": "suda",
+      "slug": "gaspar-de-guzm\u00e1n-count-duke-of-olivares",
       "status": "enriched",
-      "old_len": 62,
-      "new_len": 950
+      "old_len": 607,
+      "new_len": 1240
     },
     {
-      "slug": "pietro-del-monte",
-      "status": "enriched",
-      "old_len": 62,
-      "new_len": 1235
-    },
-    {
-      "slug": "senkamanisken",
+      "slug": "the-steadfast-tin-soldier",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "reason": "insufficient subjects (1, need >= 5)"
+    },
+    {
+      "slug": "adam-easton",
+      "status": "enriched",
+      "old_len": 63,
+      "new_len": 1198
+    },
+    {
+      "slug": "nedjemibre",
+      "status": "enriched",
+      "old_len": 143,
+      "new_len": 682
+    },
+    {
+      "slug": "john-of-procida",
+      "status": "enriched",
+      "old_len": 63,
+      "new_len": 1807
     }
   ]
 }

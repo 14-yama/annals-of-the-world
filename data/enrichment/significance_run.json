@@ -1,39 +1,42 @@
 {
-  "generatedAt": "2026-05-19T16:53:35Z",
+  "generatedAt": "2026-05-19T17:57:08Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "results": [
     {
-      "slug": "w-edwards-deming",
+      "slug": "john-of-procida",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "jean-fran\u00e7ois-portaels",
       "status": "error",
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "juan-negr\u00edn",
+      "slug": "enriqueta-s\u00e8culi-i-bastida",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "enriqueta-sculi-i-bastida",
       "status": "error",
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "c-r-hagen",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "joan-triad\u00fa",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "joan-triad",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "slug": "alasdair-macintyre",
+      "status": "ok",
+      "score": 8,
+      "category": "continental"
     }
   ],
   "summary": {
-    "entities_scored": 0,
-    "failed": 5
+    "entities_scored": 3,
+    "failed": 2
   }
 }
