@@ -102,7 +102,13 @@ jobs:
 
           Triggered by bot-keepalive workflow (idle > 20h).
           Run: ${{ github.run_id }}"
-            git push
+            for attempt in 1 2 3 4 5; do
+              if git push; then echo "✓ Push attempt $attempt succeeded"; break; fi
+              echo "⚠ Push attempt $attempt rejected; rebasing and retrying"
+              git pull --rebase -X ours --autostash origin clean/audit-system || git rebase --abort || true
+              sleep $((attempt * 3))
+              if [ "$attempt" = "5" ]; then echo "✗ Push failed after 5 attempts"; exit 1; fi
+            done
             echo "Pushed ${CHANGED} enriched entities"
           else
             echo "No entities enriched this run (all queue items may be fresh)"

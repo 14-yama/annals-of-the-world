@@ -76,7 +76,13 @@ jobs:
           git add data/governance/budget.json data/governance/last_sync.json data/governance/last_github_runs.json data/appwrite-export/entities/ data/appwrite-export/edges/
           if ! git diff --cached --quiet; then
             git commit -m "chore(sync): gateway run — state + cleared _editLog + edges synced"
-            git push
+            for attempt in 1 2 3 4 5; do
+              if git push; then echo "✓ Push attempt $attempt succeeded"; break; fi
+              echo "⚠ Push attempt $attempt rejected; rebasing and retrying"
+              git pull --rebase -X ours --autostash origin clean/audit-system || git rebase --abort || true
+              sleep $((attempt * 3))
+              if [ "$attempt" = "5" ]; then echo "✗ Push failed after 5 attempts"; exit 1; fi
+            done
           else
             echo "No state changes."
           fi
