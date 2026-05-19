@@ -1,63 +1,33 @@
 {
-  "timestamp": "2026-05-19T00:48:00Z",
-  "model": "gemini",
-  "count_requested": 10,
+  "timestamp": "2026-05-18T21:06:05Z",
+  "model": "ollama",
+  "count_requested": 5,
   "enriched": 3,
-  "failed": 7,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "mocius",
+      "slug": "hestiaeus-of-perinthus",
       "status": "enriched",
-      "old_len": 130,
-      "new_len": 1783
+      "old_len": 51,
+      "new_len": 1845
     },
     {
-      "slug": "valentin-von-r\u00e4tien",
+      "slug": "curt-von-stedingk",
       "status": "enriched",
-      "old_len": 130,
-      "new_len": 1545
+      "old_len": 211,
+      "new_len": 1384
     },
     {
-      "slug": "valentin-von-rtien",
+      "slug": "giovanni-de-primis",
       "status": "enriched",
-      "old_len": 130,
-      "new_len": 1726
+      "old_len": 735,
+      "new_len": 1039
     },
     {
-      "slug": "ruggieri-degli-ubaldini",
+      "slug": "virgilius-of-arles",
       "status": "failed",
-      "reason": "Rate limited after 4 retries"
-    },
-    {
-      "slug": "art-mac-cuinn",
-      "status": "failed",
-      "reason": "Rate limited after 4 retries"
-    },
-    {
-      "slug": "ubaid-period",
-      "status": "failed",
-      "reason": "Rate limited after 4 retries"
-    },
-    {
-      "slug": "esteban-jos\u00e9-mart\u00ednez-fern\u00e1ndez-y-mart\u00ednez-de-la-sierra",
-      "status": "failed",
-      "reason": "Rate limited after 4 retries"
-    },
-    {
-      "slug": "eudoxus-of-cyzicus",
-      "status": "failed",
-      "reason": "Rate limited after 4 retries"
-    },
-    {
-      "slug": "vin\u010da-culture",
-      "status": "failed",
-      "reason": "Rate limited after 4 retries"
-    },
-    {
-      "slug": "alferius",
-      "status": "failed",
-      "reason": "Rate limited after 4 retries"
+      "reason": "insufficient causes (0, need >= 2)"
     }
   ]
 }

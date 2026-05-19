@@ -46887,17 +46887,22 @@
   "git-push-1779152145": {
     "job_id": "git-push-1779152145",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 32,
     "pid": null,
     "started": "2026-05-19T00:55:45Z",
-    "finished": null,
+    "finished": "2026-05-19T00:55:49Z",
     "log": [
       "Pending files: 32 entities, 0 edges (32 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 197 local enrichments\"",
+      "[clean/audit-system 1494df5037] feat(enrich): watchdog auto-push \u2014 197 local enrichments\n 36 files changed, 577 insertions(+), 125 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   62816a3fb9..1494df5037  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 32 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "enrich-1779152145": {
     "job_id": "enrich-1779152145",
@@ -46926,7 +46931,13 @@
       "[4/20] giovanni-de-primis (score=90.9, 0c)",
       "  SKIP \u2014 already enriched (1039c)",
       "",
-      "[5/20] virgilius-of-arles (score=90.9, 0c)"
+      "[5/20] virgilius-of-arles (score=90.9, 0c)",
+      "  RETRY (1) \u2014 timed out",
+      "  ENRICHED \u2014 51c -> 1105c",
+      "",
+      "[6/20] alferius (score=90.9, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  RETRY (2) \u2014 insufficient relationships (1, need >= 2)"
     ],
     "exitCode": null
   }
