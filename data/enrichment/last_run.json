@@ -1,33 +1,63 @@
 {
-  "timestamp": "2026-05-18T18:59:14Z",
-  "model": "ollama",
-  "count_requested": 5,
+  "timestamp": "2026-05-19T00:48:00Z",
+  "model": "gemini",
+  "count_requested": 10,
   "enriched": 3,
-  "failed": 1,
+  "failed": 7,
   "dry_run": false,
   "entities": [
     {
-      "slug": "leukon-ii-of-bosporus",
+      "slug": "mocius",
       "status": "enriched",
-      "old_len": 151,
-      "new_len": 824
+      "old_len": 130,
+      "new_len": 1783
     },
     {
-      "slug": "aper-of-toul",
+      "slug": "valentin-von-r\u00e4tien",
+      "status": "enriched",
+      "old_len": 130,
+      "new_len": 1545
+    },
+    {
+      "slug": "valentin-von-rtien",
+      "status": "enriched",
+      "old_len": 130,
+      "new_len": 1726
+    },
+    {
+      "slug": "ruggieri-degli-ubaldini",
       "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "reason": "Rate limited after 4 retries"
     },
     {
-      "slug": "kojiki",
-      "status": "enriched",
-      "old_len": 72,
-      "new_len": 1255
+      "slug": "art-mac-cuinn",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
     },
     {
-      "slug": "bryson-of-achaea",
-      "status": "enriched",
-      "old_len": 50,
-      "new_len": 1086
+      "slug": "ubaid-period",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "esteban-jos\u00e9-mart\u00ednez-fern\u00e1ndez-y-mart\u00ednez-de-la-sierra",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "eudoxus-of-cyzicus",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "vin\u010da-culture",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
+    },
+    {
+      "slug": "alferius",
+      "status": "failed",
+      "reason": "Rate limited after 4 retries"
     }
   ]
 }
