@@ -48795,12 +48795,12 @@
   "significance-1779218770": {
     "job_id": "significance-1779218770",
     "bot": "significance",
-    "status": "running",
+    "status": "done",
     "model": "ollama",
     "count": 30,
     "pid": 3151024,
     "started": "2026-05-19T19:26:10Z",
-    "finished": null,
+    "finished": "2026-05-19T20:18:41Z",
     "log": [
       "============================================================",
       "SIGNIFICANCE BACKFILL \u2014 up to 30 entities via ollama/llama3.2:3b",
@@ -48897,7 +48897,79 @@
       "[29/30] mar\u00eda-irene-forn\u00e9s (importance=5)",
       "  ERROR \u2014 Ollama error: timed out",
       "",
-      "[30/30] mara-irene-forns (importance=5)"
+      "[30/30] mara-irene-forns (importance=5)",
+      "  SCORED \u2014 8/10 (regional): Mar\u00eda Irene Forn\u00e9s was a pioneering Latino playwright who won nine Obie Awards a...",
+      "",
+      "============================================================",
+      "RESULTS: 9 scored, 21 failed",
+      "============================================================",
+      "Report: /home/manasa151/annals-of-the-world/data/enrichment/significance_run.json"
+    ],
+    "exitCode": 0
+  },
+  "sync-1779222006": {
+    "job_id": "sync-1779222006",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 3304863,
+    "started": "2026-05-19T20:20:06Z",
+    "finished": "2026-05-19T20:21:43Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=38883/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 313 dirty files",
+      "[diff] 313 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 313,",
+      "  \"entitiesUpserted\": 31,",
+      "  \"auditRowsEmitted\": 169,",
+      "  \"writesPerformed\": 200,",
+      "  \"stoppedReason\": \"perRunWriteCap=200 reached during audit emission\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 906505c5"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779222105": {
+    "job_id": "git-push-1779222105",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-19T20:21:45Z",
+    "finished": null,
+    "log": [
+      "Pending files: 26 entities, 0 edges (26 total)",
+      "git add data/appwrite-export/ ..."
+    ],
+    "exitCode": null
+  },
+  "enrich-1779222105": {
+    "job_id": "enrich-1779222105",
+    "bot": "enrich",
+    "status": "running",
+    "model": "ollama",
+    "count": 20,
+    "pid": 3308391,
+    "started": "2026-05-19T20:21:45Z",
+    "finished": null,
+    "log": [
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "============================================================",
+      "AI ENRICHMENT \u2014 20 entities via ollama",
+      "============================================================",
+      "",
+      "[1/20] publius-villius-tappulus (score=89.6, 0c)"
     ],
     "exitCode": null
   }
