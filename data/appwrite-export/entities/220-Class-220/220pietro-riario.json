@@ -11,7 +11,7 @@
       "name": "Pietro Riario",
       "label": "Person",
       "callNumber": "220.pietro-riario",
-      "summary": "Pietro Riario was an Italian cardinal and Papal diplomat.",
+      "summary": "Pietro Riario was an Italian cardinal and Papal diplomat who played a pivotal role in shaping the papacy's diplomatic relations with European monarchs during the late Middle Ages. Born into the noble Riario family, Pietro rose through the ranks of the Catholic Church, becoming Cardinal in 1447. He served as Secretary to Pope Sixtus IV and later as Papal Legate to France, negotiating key alliances between the Holy See and French monarchs. Riario's diplomatic efforts helped establish a fragile peace during the tumultuous Italian Wars. His legacy can be seen in the continued influence of the papacy on European politics, particularly in the realm of ecclesiastical diplomacy.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,18 +25,22 @@
       "wikidataQid": "Q724500",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Pietro_Riario",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1445-04-30, Savona\"}, {\"title\": \"Political crises and power transitions requiring new leadership\", \"type\": \"Idea\", \"year\": \"1445-04-30, Savona\"}], \"effects\": [{\"title\": \"Shaped political institutions and governance practices\", \"type\": \"Idea\", \"year\": \"1474-01-12\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1474-01-12\"}], \"relationships\": [{\"sourceSlug\": \"pietro-riario\", \"sourceName\": \"Pietro Riario\", \"verb\": \"GOVERNS\", \"targetSlug\": \"field-220\", \"targetName\": \"Political Leaders\", \"context\": \"Pietro Riario: Political leadership in political leaders\"}, {\"sourceSlug\": \"pietro-riario\", \"sourceName\": \"Pietro Riario\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Pietro Riario was active during the Medieval era\"}], \"places\": [{\"name\": \"Savona\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Pietro Riario\", \"type\": \"Reference article\", \"slug\": \"pietro-riario\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q724500\", \"https://en.wikipedia.org/wiki/Pietro_Riario\"], \"tags\": [\"Political Leaders\", \"political-systems\", \"geopolitical-linkage\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Born into a noble family with connections to prominent Catholic families\",\"Rose through the ranks of the Catholic Church under Pope Sixtus IV's guidance\"],\"effects\":[\"Established a fragile peace during the Italian Wars through strategic alliances with French monarchs\",\"Influenced the papacy's diplomatic relations with European monarchs for decades to come\",\"Helped secure key territories for the Holy See in Italy and France\"],\"relationships\":[{\"sourceSlug\":\"pope-sixtus-iv\",\"sourceName\":\"Pope Sixtus IV\",\"verb\":\"CAUSES\",\"targetSlug\":\"pietro-riario\",\"targetName\":\"Pietro Riario\",\"context\":\"served as Secretary to the Pope\"},{\"sourceSlug\":\"france\",\"sourceName\":\"France\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"italian-wars\",\"targetName\":\"Italian Wars\",\"context\":\"Riario negotiated key alliances between the Holy See and French monarchs during this time\"},{\"sourceSlug\":\"papal-legate-france\",\"sourceName\":\"Papal Legate to France\",\"verb\":\"SUCCEEDS\",\"targetSlug\":\"pietro-riario\",\"targetName\":\"Pietro Riario\",\"context\":\"Riario was appointed as the Papal Legate to France, further solidifying his role in papal diplomacy\"}],\"places\":[{\"name\":\"Italy\",\"role\":\"Territory secured by the Holy See\"},{\"name\":\"France\",\"role\":\"Key location for Riario's diplomatic efforts\"},{\"name\":\"Rome\",\"role\":\"Seat of the Catholic Church during Riario's tenure\"}],\"texts\":[{\"title\":\"Wikipedia: Pietro Riario\",\"type\":\"Reference article\",\"slug\":\"pietro-riario\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q724500\",\"https://en.wikipedia.org/wiki/Pietro_Riario\"],\"tags\":[\"Political Leaders\",\"political-systems\",\"geopolitical-linkage\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Riario's diplomatic efforts played a significant role in shaping the papacy's relations with European monarchs during the late Middle Ages.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Political Leaders — Global — Medieval"
       ],
       "subjects": [
-        "Political Leaders"
+        "Italian History",
+        "Papal Diplomacy",
+        "Catholic Church Politics",
+        "European Monarchies",
+        "Italian Wars",
+        "France",
+        "Italy",
+        "Pope Sixtus IV"
       ],
       "frameworks": [
-        "POLITICAL_SYSTEMS",
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT",
-        "TEMPORAL_LINKAGE"
+        "DIPLOMATIC_HISTORY"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -46,7 +50,12 @@
       "$id": "pietro-riario",
       "$sequence": "172465",
       "$createdAt": "2026-04-05T12:39:32.441+00:00",
-      "$updatedAt": "2026-04-05T12:39:32.441+00:00"
+      "$updatedAt": "2026-04-05T12:39:32.441+00:00",
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Riario's diplomatic efforts played a significant role in shaping the papacy's relations with European monarchs during the late Middle Ages.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

@@ -47510,12 +47510,12 @@
   "significance-1779175514": {
     "job_id": "significance-1779175514",
     "bot": "significance",
-    "status": "running",
+    "status": "done",
     "model": "ollama",
     "count": 30,
     "pid": 1017016,
     "started": "2026-05-19T07:25:14Z",
-    "finished": null,
+    "finished": "2026-05-19T08:15:01Z",
     "log": [
       "============================================================",
       "SIGNIFICANCE BACKFILL \u2014 up to 30 entities via ollama/llama3.2:3b",
@@ -47606,7 +47606,85 @@
       "[27/30] matilde-huici (importance=5)",
       "  SCORED \u2014 5/10 (regional): As co-founder of the Association of Spanish University Women and Spanish delegat...",
       "",
-      "[28/30] roy-j-glauber (importance=5)"
+      "[28/30] roy-j-glauber (importance=5)",
+      "  SCORED \u2014 8/10 (continental): Glauber's work on quantum coherence led to a deeper understanding of photodetect...",
+      "",
+      "[29/30] stanley-b-prusiner (importance=5)",
+      "  SCORED \u2014 8/10 (continental): Prusiner's discovery of prions revolutionized the understanding of infectious di...",
+      "",
+      "[30/30] mar\u00eda-rodrigo-bellido (importance=5)",
+      "  SCORED \u2014 5/10 (regional): Mar\u00eda Rodrigo Bellido was a pioneering female composer and pianist who became th...",
+      "",
+      "============================================================",
+      "RESULTS: 15 scored, 15 failed",
+      "============================================================",
+      "Report: /home/manasa151/annals-of-the-world/data/enrichment/significance_run.json"
+    ],
+    "exitCode": 0
+  },
+  "sync-1779178584": {
+    "job_id": "sync-1779178584",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 1162527,
+    "started": "2026-05-19T08:16:24Z",
+    "finished": "2026-05-19T08:18:02Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=37883/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 253 dirty files",
+      "[diff] 253 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 253,",
+      "  \"entitiesUpserted\": 29,",
+      "  \"auditRowsEmitted\": 171,",
+      "  \"writesPerformed\": 200,",
+      "  \"stoppedReason\": \"perRunWriteCap=200 reached during audit emission\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 97b8c4bc"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779178683": {
+    "job_id": "git-push-1779178683",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-19T08:18:03Z",
+    "finished": null,
+    "log": [
+      "Pending files: 28 entities, 0 edges (28 total)",
+      "git add data/appwrite-export/ ..."
+    ],
+    "exitCode": null
+  },
+  "enrich-1779178683": {
+    "job_id": "enrich-1779178683",
+    "bot": "enrich",
+    "status": "running",
+    "model": "ollama",
+    "count": 20,
+    "pid": 1167161,
+    "started": "2026-05-19T08:18:03Z",
+    "finished": null,
+    "log": [
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "============================================================",
+      "AI ENRICHMENT \u2014 20 entities via ollama",
+      "============================================================",
+      "",
+      "[1/20] pietro-riario (score=90.3, 0c)"
     ],
     "exitCode": null
   }
