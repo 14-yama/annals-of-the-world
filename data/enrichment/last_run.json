@@ -1,39 +1,38 @@
 {
-  "timestamp": "2026-05-19T08:46:47Z",
+  "timestamp": "2026-05-19T10:15:52Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 4,
-  "failed": 1,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "george-spalatin",
+      "slug": "juan-lpez",
       "status": "enriched",
-      "old_len": 219,
-      "new_len": 1122
+      "old_len": 60,
+      "new_len": 1514
     },
     {
-      "slug": "naburimannu",
-      "status": "enriched",
-      "old_len": 59,
-      "new_len": 1441
-    },
-    {
-      "slug": "george-maniakes",
+      "slug": "bartolom-de-la-cueva-y-toledo",
       "status": "failed",
       "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "the-interpretation-of-dreams",
+      "slug": "mirocles",
       "status": "enriched",
-      "old_len": 60,
-      "new_len": 1080
+      "old_len": 140,
+      "new_len": 643
     },
     {
-      "slug": "agostino-trivulzio",
+      "slug": "peter-ii-nov\u00e1k",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
+    },
+    {
+      "slug": "peter-ii-novk",
       "status": "enriched",
       "old_len": 60,
-      "new_len": 1033
+      "new_len": 1263
     }
   ]
 }
