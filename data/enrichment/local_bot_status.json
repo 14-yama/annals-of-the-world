@@ -48167,17 +48167,22 @@
   "git-push-1779193283": {
     "job_id": "git-push-1779193283",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 36,
     "pid": null,
     "started": "2026-05-19T12:21:23Z",
-    "finished": null,
+    "finished": "2026-05-19T12:21:30Z",
     "log": [
       "Pending files: 36 entities, 0 edges (36 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 277 local enrichments\"",
+      "[clean/audit-system 7368770547] feat(enrich): watchdog auto-push \u2014 277 local enrichments\n 40 files changed, 565 insertions(+), 132 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   e677334a22..7368770547  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 36 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "enrich-1779193283": {
     "job_id": "enrich-1779193283",
@@ -48200,7 +48205,20 @@
       "[2/20] naburimannu (score=90.1, 0c)",
       "  SKIP \u2014 already enriched (1441c)",
       "",
-      "[3/20] george-maniakes (score=90.04, 0c)"
+      "[3/20] george-maniakes (score=90.04, 0c)",
+      "  ENRICHED \u2014 251c -> 1559c",
+      "",
+      "[4/20] the-interpretation-of-dreams (score=90.0, 0c)",
+      "  ENRICHED \u2014 60c -> 1261c",
+      "",
+      "[5/20] agostino-trivulzio (score=90.0, 0c)",
+      "  ENRICHED \u2014 60c -> 1893c",
+      "",
+      "[6/20] sima-zhao (score=90.0, 0c)",
+      "  ENRICHED \u2014 160c -> 1141c",
+      "",
+      "[7/20] mirza-yusuf (score=90.0, 0c)",
+      "  RETRY (1) \u2014 insufficient causes (0, need >= 1)"
     ],
     "exitCode": null
   }
