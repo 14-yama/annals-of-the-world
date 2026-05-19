@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-19T09:26:50Z",
+  "generatedAt": "2026-05-19T10:37:01Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 2,
+  "failed": 3,
   "dry_run": false,
   "results": [
     {
@@ -13,8 +13,9 @@
     },
     {
       "slug": "georgios-syncellus",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "vakhtang-vi-of-kartli",
@@ -23,8 +24,9 @@
     },
     {
       "slug": "kitabatake-chikafusa",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
     },
     {
       "slug": "francisco-lpez-de-gmara",
@@ -33,7 +35,7 @@
     }
   ],
   "summary": {
-    "entities_scored": 0,
-    "failed": 5
+    "entities_scored": 2,
+    "failed": 3
   }
 }
