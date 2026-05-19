@@ -39,6 +39,8 @@ import {
   AlertTriangle,
   ClipboardList,
   Cpu,
+  TrendingUp,
+  Bot,
 } from 'lucide-react'
 
 /* ── Top-level domain navigation (horizontal) ── */
@@ -198,11 +200,13 @@ const NAV_SECTIONS: NavSection[] = [
     items: [
       { path: '/curator',         label: 'The Curator',      icon: Scroll },
       { path: '/curator/audit',   label: 'Audit Dashboard',  icon: BarChart3 },
+      { path: '/curator/bots',    label: 'Bot KPIs',         icon: Bot },
       { path: '/curator/audit/log', label: 'Audit Log',      icon: ClipboardList },
       { path: '/curator/triage',  label: 'Triage System',    icon: AlertTriangle },
       { path: '/curator/classes', label: 'Class Browser',    icon: Layers },
       { path: '/curator/people',  label: 'People Hub',       icon: Users },
       { path: '/curator/ollama',  label: 'Ollama Monitor',   icon: Cpu },
+      { path: '/curator/enrichment-progress', label: 'Enrichment Progress', icon: TrendingUp },
       { path: '/quiz',           label: 'Examination Hall', icon: Brain },
     ],
   },

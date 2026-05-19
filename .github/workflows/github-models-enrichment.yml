@@ -1,0 +1,186 @@
+name: AI Enrichment — GitHub Models (Cloud)
+
+# Runs GitHub Models (gpt-4o-mini) enrichment fully in GitHub Actions cloud.
+# No dependency on a local machine — fires on schedule even when devs are offline.
+#
+# Auth: uses GITHUB_TOKEN (auto-provided) for the Models API.
+# Rate limits (free tier): ~150 req/day per token — so we run small batches every 4h.
+#
+# Targets Class-3 (Institutions) and Class-7 (Artifacts & Texts) stubs first.
+
+on:
+  schedule:
+    - cron: '30 */4 * * *'   # every 4h, offset 30 min from other bots
+  workflow_dispatch:
+    inputs:
+      count:
+        description: "Entities to enrich"
+        type: string
+        default: "20"
+      class_target:
+        description: "Class filter (3, 7, or all)"
+        type: choice
+        options: ["all", "3", "7"]
+        default: "all"
+
+concurrency:
+  group: github-models-enrichment
+  cancel-in-progress: false
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    permissions:
+      contents: write
+      models: read     # GitHub Models access
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: clean/audit-system
+          fetch-depth: 2
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Generate fresh queue (if stale)
+        run: |
+          if [ ! -f data/enrichment/queue.json ] || \
+             [ "$(find data/enrichment/queue.json -mmin +120 2>/dev/null | wc -l)" = "1" ]; then
+            python3 scripts/enrichment_queue.py --limit 2000
+          else
+            echo "Queue is fresh (<2h old) — skipping regeneration"
+          fi
+
+      - name: Pick targeted queue (Class 3/7 priority)
+        id: pick_queue
+        run: |
+          CLASS_TARGET="${{ github.event.inputs.class_target || 'all' }}"
+
+          # Regenerate class-specific queues from current entity files
+          python3 << 'PYEOF'
+          import json, sys
+          from pathlib import Path
+          sys.path.insert(0, 'scripts')
+          from enrichment_queue import score_entity
+          import time
+
+          BASE = Path('data/appwrite-export/entities')
+          c3, c7 = [], []
+          for d in sorted(BASE.iterdir()):
+              dn = d.name
+              if not (dn.startswith('3') or dn.startswith('7')):
+                  continue
+              is_c3 = dn.startswith('3') and (len(dn) > 1 and (dn[1].isdigit() or dn[1] == '-'))
+              is_c7 = dn.startswith('7') and (len(dn) > 1 and (dn[1].isdigit() or dn[1] == '-'))
+              if not (is_c3 or is_c7):
+                  continue
+              for f in d.glob('*.json'):
+                  try:
+                      raw = json.loads(f.read_text())
+                      for ent in raw.get('entities', []):
+                          score = score_entity(ent)
+                          if score <= 0: continue
+                          item = {
+                              'slug': ent.get('slug',''),
+                              'name': ent.get('name',''),
+                              'label': ent.get('label',''),
+                              'era': ent.get('era',''),
+                              'region': ent.get('region',''),
+                              'continent': ent.get('continent',''),
+                              'importanceScore': ent.get('importanceScore',1) or 1,
+                              'summaryLength': len(ent.get('summary','') or ''),
+                              'score': score,
+                              'filepath': str(f),
+                          }
+                          (c3 if is_c3 else c7).append(item)
+                  except Exception:
+                      pass
+
+          c3.sort(key=lambda x: x['score'], reverse=True)
+          c7.sort(key=lambda x: x['score'], reverse=True)
+          now = time.strftime('%Y-%m-%dT%H:%M:%SZ')
+
+          Path('data/enrichment').mkdir(parents=True, exist_ok=True)
+          Path('data/enrichment/queue_class3.json').write_text(json.dumps(
+              {'generated': now, 'total_scanned': len(c3), 'count': min(400, len(c3)), 'queue': c3[:400]}, indent=2))
+          Path('data/enrichment/queue_class7.json').write_text(json.dumps(
+              {'generated': now, 'total_scanned': len(c7), 'count': min(200, len(c7)), 'queue': c7[:200]}, indent=2))
+          print(f'Class 3: {len(c3)} stubs available')
+          print(f'Class 7: {len(c7)} stubs available')
+          PYEOF
+
+          case "$CLASS_TARGET" in
+            "3")  echo "queue=data/enrichment/queue_class3.json" >> "$GITHUB_OUTPUT" ;;
+            "7")  echo "queue=data/enrichment/queue_class7.json" >> "$GITHUB_OUTPUT" ;;
+            *)
+              # Rotate: even hours → class 3, odd hours → class 7
+              if [ $(( $(date +%H) % 2 )) -eq 0 ]; then
+                echo "queue=data/enrichment/queue_class3.json" >> "$GITHUB_OUTPUT"
+              else
+                echo "queue=data/enrichment/queue_class7.json" >> "$GITHUB_OUTPUT"
+              fi
+              ;;
+          esac
+
+      - name: Run GitHub Models enrichment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          COUNT="${{ github.event.inputs.count || '20' }}"
+          QUEUE="${{ steps.pick_queue.outputs.queue }}"
+
+          echo "Running GitHub Models enrichment: ${COUNT} entities from ${QUEUE}"
+
+          timeout 2400 python3 -u scripts/ai_enrich_autonomous.py \
+            --model github \
+            --github-model gpt-4o-mini \
+            --queue "${QUEUE}" \
+            --count "${COUNT}" \
+            --min-score 0 \
+            --retry 1 || \
+          echo "Enrichment exited non-zero — continuing to commit any partial results"
+
+      - name: Commit + push enriched entities
+        run: |
+          git config user.name  "GitHub Models Bot"
+          git config user.email "github-models@annals-of-the-world.bot"
+          git add data/appwrite-export/entities/ data/enrichment/ || true
+          CHANGED=$(git diff --cached --name-only | wc -l)
+          if [ "$CHANGED" -gt 0 ]; then
+            git commit -m "feat(data): GitHub Models enrichment — ${CHANGED} files (gpt-4o-mini cloud)
+
+          Triggered by github-models-enrichment workflow.
+          Queue: ${{ steps.pick_queue.outputs.queue }}
+          Run: ${{ github.run_id }}"
+
+            for attempt in 1 2 3 4 5; do
+              if git push; then echo "✓ Push attempt $attempt succeeded"; break; fi
+              echo "⚠ Push attempt $attempt rejected; rebasing"
+              git pull --rebase -X ours --autostash origin clean/audit-system || git rebase --abort || true
+              sleep $((attempt * 3))
+              if [ "$attempt" = "5" ]; then echo "✗ Push failed after 5 attempts"; exit 1; fi
+            done
+            echo "Pushed ${CHANGED} files"
+          else
+            echo "No changes to commit (queue may have been empty or all entities already enriched)"
+          fi
+
+      - name: Write GH runs status file
+        if: always()
+        run: |
+          mkdir -p data/governance
+          cat > data/governance/last_github_runs.json << EOF
+          {
+            "workflow": "github-models-enrichment",
+            "run_id": "${{ github.run_id }}",
+            "status": "${{ job.status }}",
+            "completedAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "queue": "${{ steps.pick_queue.outputs.queue }}"
+          }
+          EOF
+          git add data/governance/last_github_runs.json || true
+          git diff --cached --quiet || git commit -m "chore: update github-models last run status" || true
+          git push || true
