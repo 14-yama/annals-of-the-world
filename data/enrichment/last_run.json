@@ -1,33 +1,26 @@
 {
-  "timestamp": "2026-05-20T07:14:21Z",
+  "timestamp": "2026-05-20T08:28:40Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 1,
+  "enriched": 1,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "gaius-mamilius-turrinus",
+      "slug": "pepin-i-of-aquitaine",
       "status": "enriched",
-      "old_len": 71,
-      "new_len": 1335
+      "old_len": 72,
+      "new_len": 997
     },
     {
-      "slug": "marcus-ceionius-silvanus",
+      "slug": "maghan-ii",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "insufficient subjects (4, need >= 5)"
     },
     {
-      "slug": "protasius",
-      "status": "enriched",
-      "old_len": 151,
-      "new_len": 981
-    },
-    {
-      "slug": "william-petow",
-      "status": "enriched",
-      "old_len": 71,
-      "new_len": 1909
+      "slug": "antipater-of-thessalonica",
+      "status": "failed",
+      "reason": "Unterminated string starting at: line 1 column 13 (char 12)"
     }
   ]
 }

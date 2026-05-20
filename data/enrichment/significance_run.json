@@ -1,43 +1,41 @@
 {
-  "generatedAt": "2026-05-20T11:23:20Z",
+  "generatedAt": "2026-05-20T12:36:49Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 4,
-  "failed": 1,
+  "enriched": 2,
+  "failed": 3,
   "dry_run": false,
   "results": [
-    {
-      "slug": "lucius-octavius",
-      "status": "ok",
-      "score": 8,
-      "category": "continental"
-    },
     {
       "slug": "mark-twain",
       "status": "error",
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "gilbert-n-lewis",
+      "slug": "paul-feyerabend",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "herbert-a-hauptman",
       "status": "ok",
       "score": 8,
       "category": "continental"
     },
     {
-      "slug": "grace-zabriskie",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "luis-federico-leloir",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
-      "slug": "martina-bergman-\u00f6sterberg",
+      "slug": "raymond-cattell",
       "status": "ok",
       "score": 8,
       "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 4,
-    "failed": 1
+    "entities_scored": 2,
+    "failed": 3
   }
 }
