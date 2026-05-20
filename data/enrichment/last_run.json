@@ -1,27 +1,25 @@
 {
-  "timestamp": "2026-05-20T11:48:27Z",
+  "timestamp": "2026-05-20T13:05:59Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 1,
+  "enriched": 0,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "publius-sestius",
-      "status": "enriched",
-      "old_len": 74,
-      "new_len": 953
-    },
-    {
-      "slug": "desiderius-of-vienne",
-      "status": "enriched",
-      "old_len": 74,
-      "new_len": 1990
-    },
-    {
-      "slug": "nicetas-of-remesiana",
+      "slug": "demetrius-iii",
       "status": "failed",
       "reason": "timed out"
+    },
+    {
+      "slug": "brenger-fredoli",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
+    },
+    {
+      "slug": "technology",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     }
   ]
 }
