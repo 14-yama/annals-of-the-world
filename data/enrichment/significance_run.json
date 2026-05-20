@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-20T19:55:45Z",
+  "generatedAt": "2026-05-20T21:26:23Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 4,
+  "enriched": 2,
+  "failed": 3,
   "dry_run": false,
   "results": [
     {
@@ -13,8 +13,9 @@
     },
     {
       "slug": "william-c-campbell",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
     },
     {
       "slug": "christian-gottfried-ehrenberg",
@@ -22,19 +23,19 @@
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "georg-forster",
+      "slug": "dan-shechtman",
       "status": "ok",
-      "score": 7,
+      "score": 8,
       "category": "regional"
     },
     {
-      "slug": "dan-shechtman",
+      "slug": "manuel-polo-y-peyroln",
       "status": "error",
       "reason": "Ollama error: timed out"
     }
   ],
   "summary": {
-    "entities_scored": 1,
-    "failed": 4
+    "entities_scored": 2,
+    "failed": 3
   }
 }

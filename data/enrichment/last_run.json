@@ -1,26 +1,39 @@
 {
-  "timestamp": "2026-05-20T15:45:26Z",
+  "timestamp": "2026-05-20T17:17:28Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 2,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "gay-science",
-      "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
-    },
-    {
-      "slug": "antiochus-nikator",
+      "slug": "marcus-sempronius-tuditanus",
       "status": "enriched",
-      "old_len": 156,
-      "new_len": 812
+      "old_len": 76,
+      "new_len": 1118
     },
     {
-      "slug": "fiacha-cennfinn\u00e1n",
+      "slug": "gaius-marcius-censorinus",
+      "status": "enriched",
+      "old_len": 76,
+      "new_len": 841
+    },
+    {
+      "slug": "lucius-caninius-gallus",
+      "status": "enriched",
+      "old_len": 76,
+      "new_len": 1256
+    },
+    {
+      "slug": "lucius-licinius-lucullus",
       "status": "failed",
-      "reason": "timed out"
+      "reason": "insufficient relationships (1, need >= 3)"
+    },
+    {
+      "slug": "zambia",
+      "status": "enriched",
+      "old_len": 76,
+      "new_len": 1710
     }
   ]
 }
