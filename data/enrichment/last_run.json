@@ -1,87 +1,27 @@
 {
-  "timestamp": "2026-05-20T10:50:46Z",
+  "timestamp": "2026-05-20T11:48:27Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 12,
+  "count_requested": 5,
+  "enriched": 2,
   "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "sextus-atilius-serranus",
+      "slug": "publius-sestius",
       "status": "enriched",
-      "old_len": 72,
-      "new_len": 1106
+      "old_len": 74,
+      "new_len": 953
     },
     {
-      "slug": "john-the-good",
+      "slug": "desiderius-of-vienne",
       "status": "enriched",
-      "old_len": 171,
-      "new_len": 1215
+      "old_len": 74,
+      "new_len": 1990
     },
     {
-      "slug": "a-scandal-in-bohemia",
+      "slug": "nicetas-of-remesiana",
       "status": "failed",
-      "reason": "insufficient subjects (1, need >= 3)"
-    },
-    {
-      "slug": "gnaeus-baebius-tamphilus",
-      "status": "enriched",
-      "old_len": 73,
-      "new_len": 1079
-    },
-    {
-      "slug": "titus-quinctius-crispinus",
-      "status": "enriched",
-      "old_len": 73,
-      "new_len": 1817
-    },
-    {
-      "slug": "timoleon",
-      "status": "enriched",
-      "old_len": 73,
-      "new_len": 901
-    },
-    {
-      "slug": "seychelles",
-      "status": "enriched",
-      "old_len": 73,
-      "new_len": 1489
-    },
-    {
-      "slug": "georgia",
-      "status": "enriched",
-      "old_len": 73,
-      "new_len": 1143
-    },
-    {
-      "slug": "fazio-giovanni-santori",
-      "status": "enriched",
-      "old_len": 73,
-      "new_len": 847
-    },
-    {
-      "slug": "stephen-ii-of-antioch",
-      "status": "enriched",
-      "old_len": 153,
-      "new_len": 1590
-    },
-    {
-      "slug": "proculus-of-verona",
-      "status": "enriched",
-      "old_len": 153,
-      "new_len": 1380
-    },
-    {
-      "slug": "saint-aurelius",
-      "status": "enriched",
-      "old_len": 153,
-      "new_len": 1220
-    },
-    {
-      "slug": "antonio-cerd\u00e0-i-lloscos",
-      "status": "enriched",
-      "old_len": 73,
-      "new_len": 1095
+      "reason": "timed out"
     }
   ]
 }

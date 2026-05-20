@@ -50739,17 +50739,22 @@
   "git-push-1779291677": {
     "job_id": "git-push-1779291677",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-05-20T15:41:17Z",
-    "finished": null,
+    "finished": "2026-05-20T15:41:20Z",
     "log": [
       "Pending files: 37 entities, 0 edges (37 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 427 local enrichments\"",
+      "[clean/audit-system 72db980c18] feat(enrich): watchdog auto-push \u2014 427 local enrichments\n 42 files changed, 730 insertions(+), 168 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.",
+      "git push failed \u2014 check SSH/HTTPS credentials: To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
     ],
-    "exitCode": null
+    "exitCode": 1
   },
   "enrich-1779291677": {
     "job_id": "enrich-1779291677",
@@ -50766,7 +50771,11 @@
       "AI ENRICHMENT \u2014 20 entities via ollama",
       "============================================================",
       "",
-      "[1/20] nicetas-of-remesiana (score=88.6, 0c)"
+      "[1/20] nicetas-of-remesiana (score=88.6, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  ENRICHED \u2014 154c -> 1570c",
+      "",
+      "[2/20] peter-of-benevento (score=88.6, 0c)"
     ],
     "exitCode": null
   }
