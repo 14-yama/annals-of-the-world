@@ -1,26 +1,27 @@
 {
-  "timestamp": "2026-05-20T08:28:40Z",
+  "timestamp": "2026-05-20T09:30:37Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 2,
+  "enriched": 2,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "pepin-i-of-aquitaine",
+      "slug": "sextus-atilius-serranus",
       "status": "enriched",
       "old_len": 72,
-      "new_len": 997
+      "new_len": 1584
     },
     {
-      "slug": "maghan-ii",
-      "status": "failed",
-      "reason": "insufficient subjects (4, need >= 5)"
+      "slug": "john-the-good",
+      "status": "enriched",
+      "old_len": 171,
+      "new_len": 1084
     },
     {
-      "slug": "antipater-of-thessalonica",
+      "slug": "a-scandal-in-bohemia",
       "status": "failed",
-      "reason": "Unterminated string starting at: line 1 column 13 (char 12)"
+      "reason": "insufficient causes (1, need >= 2)"
     }
   ]
 }
