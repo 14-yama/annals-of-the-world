@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-20T12:36:49Z",
+  "generatedAt": "2026-05-20T13:07:27Z",
   "model": "gemini-2.5-flash",
-  "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "count_requested": 30,
+  "enriched": 19,
+  "failed": 11,
   "dry_run": false,
   "results": [
     {
@@ -13,14 +13,14 @@
     },
     {
       "slug": "paul-feyerabend",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "herbert-a-hauptman",
       "status": "ok",
       "score": 8,
       "category": "continental"
+    },
+    {
+      "slug": "herbert-a-hauptman",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
       "slug": "luis-federico-leloir",
@@ -30,12 +30,154 @@
     {
       "slug": "raymond-cattell",
       "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "piotr-potworowski",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "benjamin-rush",
+      "status": "ok",
       "score": 8,
+      "category": "continental"
+    },
+    {
+      "slug": "max-delbr\u00fcck",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "max-delbrck",
+      "status": "ok",
+      "score": 8,
+      "category": "continental"
+    },
+    {
+      "slug": "rudolph-rummel",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "morton-feldman",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "galileo-galilei",
+      "status": "ok",
+      "score": 9,
+      "category": "world-changing"
+    },
+    {
+      "slug": "ibn-hajar-al-haytami",
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
+    },
+    {
+      "slug": "samuel-king-allison",
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
+    },
+    {
+      "slug": "carter-godwin-woodson",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "florence-r-sabin",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "lothar-g\u00fcnther-buchheim",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "lothar-gnther-buchheim",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "algirdas-greimas",
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
+    },
+    {
+      "slug": "martin-evans",
+      "status": "ok",
+      "score": 8,
+      "category": "world-changing"
+    },
+    {
+      "slug": "gerald-edelman",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "francisco-garc\u00eda-calder\u00f3n",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "francisco-garca-caldern",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "napoleon-chagnon",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "sidney-hook",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "joseph-beuys",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "jerry-fodor",
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
+    },
+    {
+      "slug": "kenneth-clark",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "karl-friedrich-schinkel",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "susan-strange",
+      "status": "ok",
+      "score": 7,
       "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 2,
-    "failed": 3
+    "entities_scored": 19,
+    "failed": 11
   }
 }
