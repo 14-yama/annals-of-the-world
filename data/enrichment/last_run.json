@@ -1,26 +1,33 @@
 {
-  "timestamp": "2026-05-19T23:40:57Z",
+  "timestamp": "2026-05-20T01:09:00Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 2,
+  "enriched": 3,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "jacques-goyon-de-matignon",
+      "slug": "husam-al-din-chalabi",
       "status": "enriched",
-      "old_len": 610,
-      "new_len": 802
+      "old_len": 261,
+      "new_len": 1353
     },
     {
-      "slug": "juan-de-ziga-y-pimentel",
+      "slug": "abu-musa-al-ashari",
       "status": "failed",
       "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "yax-ehb-xok",
-      "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
+      "slug": "hans-ulrich-von-eggenberg",
+      "status": "enriched",
+      "old_len": 261,
+      "new_len": 1641
+    },
+    {
+      "slug": "emile-or-on-education",
+      "status": "enriched",
+      "old_len": 69,
+      "new_len": 971
     }
   ]
 }

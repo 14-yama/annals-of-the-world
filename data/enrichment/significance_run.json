@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-20T03:51:14Z",
+  "generatedAt": "2026-05-20T05:16:43Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "results": [
     {
@@ -13,8 +13,9 @@
     },
     {
       "slug": "michael-d-coe",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
     },
     {
       "slug": "james-baldwin",
@@ -23,17 +24,19 @@
     },
     {
       "slug": "gottlob-frege",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 9,
+      "category": "world-changing"
     },
     {
       "slug": "jacques-derrida",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 0,
-    "failed": 5
+    "entities_scored": 3,
+    "failed": 2
   }
 }
