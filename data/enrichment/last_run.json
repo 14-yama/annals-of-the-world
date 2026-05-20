@@ -1,27 +1,26 @@
 {
-  "timestamp": "2026-05-19T22:29:24Z",
+  "timestamp": "2026-05-19T23:40:57Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 1,
+  "enriched": 1,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "giovanni-michiel",
+      "slug": "jacques-goyon-de-matignon",
+      "status": "enriched",
+      "old_len": 610,
+      "new_len": 802
+    },
+    {
+      "slug": "juan-de-ziga-y-pimentel",
       "status": "failed",
-      "reason": "insufficient effects (0, need >= 2)"
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "ascanio-parisani",
-      "status": "enriched",
-      "old_len": 67,
-      "new_len": 983
-    },
-    {
-      "slug": "giovanni-vitelleschi",
-      "status": "enriched",
-      "old_len": 67,
-      "new_len": 1027
+      "slug": "yax-ehb-xok",
+      "status": "failed",
+      "reason": "insufficient causes (0, need >= 2)"
     }
   ]
 }

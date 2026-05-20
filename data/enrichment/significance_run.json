@@ -1,27 +1,15 @@
 {
-  "generatedAt": "2026-05-20T02:36:56Z",
+  "generatedAt": "2026-05-20T03:51:14Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "results": [
-    {
-      "slug": "bandinello-sauli",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
     {
       "slug": "james-j-gibson",
       "status": "error",
       "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "mar\u00eda-irene-forn\u00e9s",
-      "status": "ok",
-      "score": 8,
-      "category": "regional"
     },
     {
       "slug": "michael-d-coe",
@@ -29,14 +17,23 @@
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "wayne-thiebaud",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
+      "slug": "james-baldwin",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "gottlob-frege",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "jacques-derrida",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     }
   ],
   "summary": {
-    "entities_scored": 3,
-    "failed": 2
+    "entities_scored": 0,
+    "failed": 5
   }
 }
