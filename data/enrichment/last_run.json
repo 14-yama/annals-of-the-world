@@ -1,39 +1,31 @@
 {
-  "timestamp": "2026-05-20T17:17:28Z",
+  "timestamp": "2026-05-20T18:45:40Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 4,
-  "failed": 1,
+  "enriched": 1,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "marcus-sempronius-tuditanus",
-      "status": "enriched",
-      "old_len": 76,
-      "new_len": 1118
-    },
-    {
-      "slug": "gaius-marcius-censorinus",
-      "status": "enriched",
-      "old_len": 76,
-      "new_len": 841
-    },
-    {
-      "slug": "lucius-caninius-gallus",
-      "status": "enriched",
-      "old_len": 76,
-      "new_len": 1256
-    },
-    {
-      "slug": "lucius-licinius-lucullus",
+      "slug": "lucius-quinctius",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "zambia",
+      "slug": "attilio-piccioni",
       "status": "enriched",
-      "old_len": 76,
-      "new_len": 1710
+      "old_len": 102,
+      "new_len": 1078
+    },
+    {
+      "slug": "herillus",
+      "status": "failed",
+      "reason": "insufficient causes (0, need >= 2)"
+    },
+    {
+      "slug": "yazdegerd-i",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     }
   ]
 }

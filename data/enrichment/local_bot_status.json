@@ -51259,17 +51259,22 @@
   "git-push-1779314390": {
     "job_id": "git-push-1779314390",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-05-20T21:59:50Z",
-    "finished": null,
+    "finished": "2026-05-20T21:59:54Z",
     "log": [
       "Pending files: 33 entities, 0 edges (33 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 451 local enrichments\"",
+      "[clean/audit-system 2afde21ae2] feat(enrich): watchdog auto-push \u2014 451 local enrichments\n 37 files changed, 507 insertions(+), 107 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.",
+      "git push failed \u2014 check SSH/HTTPS credentials: To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
     ],
-    "exitCode": null
+    "exitCode": 1
   },
   "enrich-1779314390": {
     "job_id": "enrich-1779314390",
@@ -51289,7 +51294,24 @@
       "[1/20] lucius-quinctius (score=88.38, 0c)",
       "  SKIP \u2014 already enriched (1848c)",
       "",
-      "[2/20] attilio-piccioni (score=88.35, 0c)"
+      "[2/20] attilio-piccioni (score=88.35, 0c)",
+      "  RETRY (1) \u2014 timed out",
+      "  ENRICHED \u2014 102c -> 963c",
+      "",
+      "[3/20] herillus (score=88.3, 0c)",
+      "  RETRY (1) \u2014 insufficient causes (0, need >= 1)",
+      "  ENRICHED \u2014 77c -> 953c",
+      "",
+      "[4/20] gregory-of-elvira (score=88.3, 0c)",
+      "  ENRICHED \u2014 77c -> 1139c",
+      "",
+      "[5/20] yazdegerd-i (score=88.3, 0c)",
+      "  RETRY (1) \u2014 timed out",
+      "  RETRY (2) \u2014 insufficient causes (0, need >= 1)",
+      "  ENRICHED \u2014 157c -> 1146c",
+      "",
+      "[6/20] geumwa-of-buyeo (score=88.3, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)"
     ],
     "exitCode": null
   }
