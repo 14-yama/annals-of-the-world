@@ -1,25 +1,39 @@
 {
-  "timestamp": "2026-05-20T13:05:59Z",
+  "timestamp": "2026-05-20T14:27:08Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 3,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "demetrius-iii",
-      "status": "failed",
-      "reason": "timed out"
+      "slug": "jinheung-of-silla",
+      "status": "enriched",
+      "old_len": 75,
+      "new_len": 1275
     },
     {
-      "slug": "brenger-fredoli",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
-    },
-    {
-      "slug": "technology",
+      "slug": "eochaid-mac-\u00f3engusa",
       "status": "failed",
       "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "eochaid-mac-engusa",
+      "status": "enriched",
+      "old_len": 155,
+      "new_len": 1310
+    },
+    {
+      "slug": "marcus-furius-fusus",
+      "status": "enriched",
+      "old_len": 75,
+      "new_len": 1170
+    },
+    {
+      "slug": "quintus-petillius-spurinus",
+      "status": "enriched",
+      "old_len": 75,
+      "new_len": 684
     }
   ]
 }

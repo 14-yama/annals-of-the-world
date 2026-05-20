@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-20T17:16:14Z",
+  "generatedAt": "2026-05-20T18:35:14Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 4,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "results": [
     {
@@ -13,28 +13,30 @@
     },
     {
       "slug": "luis-federico-leloir",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "lothar-g\u00fcnther-buchheim",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "sidney-hook",
       "status": "ok",
-      "score": 5,
+      "score": 7,
       "category": "regional"
     },
     {
       "slug": "william-c-campbell",
       "status": "error",
       "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "howard-s-becker",
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
+    },
+    {
+      "slug": "paulo-freire",
+      "status": "ok",
+      "score": 9,
+      "category": "world-changing"
     }
   ],
   "summary": {
-    "entities_scored": 1,
-    "failed": 4
+    "entities_scored": 3,
+    "failed": 2
   }
 }
