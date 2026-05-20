@@ -51000,17 +51000,22 @@
   "git-push-1779303695": {
     "job_id": "git-push-1779303695",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-05-20T19:01:35Z",
-    "finished": null,
+    "finished": "2026-05-20T19:01:38Z",
     "log": [
       "Pending files: 32 entities, 0 edges (32 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 438 local enrichments\"",
+      "[clean/audit-system 24ae05679c] feat(enrich): watchdog auto-push \u2014 438 local enrichments\n 36 files changed, 461 insertions(+), 104 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.",
+      "git push failed \u2014 check SSH/HTTPS credentials: To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
     ],
-    "exitCode": null
+    "exitCode": 1
   },
   "enrich-1779303695": {
     "job_id": "enrich-1779303695",
@@ -51039,7 +51044,33 @@
       "[4/20] colmn-of-lindisfarne (score=88.42, 0c)",
       "  SKIP \u2014 already enriched (1170c)",
       "",
-      "[5/20] zisi (score=88.4, 0c)"
+      "[5/20] zisi (score=88.4, 0c)",
+      "  ENRICHED \u2014 76c -> 1044c",
+      "",
+      "[6/20] gay-science (score=88.4, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  ENRICHED \u2014 76c -> 1041c",
+      "",
+      "[7/20] maues (score=88.4, 0c)",
+      "  SKIP \u2014 already enriched (1857c)",
+      "",
+      "[8/20] antiochus-nikator (score=88.4, 0c)",
+      "  RETRY (1) \u2014 insufficient causes (0, need >= 1)",
+      "  ENRICHED \u2014 156c -> 1193c",
+      "",
+      "[9/20] fiacha-cennfinn\u00e1n (score=88.4, 0c)",
+      "  ENRICHED \u2014 156c -> 1387c",
+      "",
+      "[10/20] fiacha-cennfinnn (score=88.4, 0c)",
+      "  ENRICHED \u2014 156c -> 1413c",
+      "",
+      "[11/20] drest-mac-caustant\u00edn (score=88.4, 0c)",
+      "  ENRICHED \u2014 156c -> 1847c",
+      "",
+      "[12/20] drest-mac-caustantn (score=88.4, 0c)",
+      "  ENRICHED \u2014 156c -> 835c",
+      "",
+      "[13/20] meenakshi (score=88.4, 0c)"
     ],
     "exitCode": null
   }
