@@ -1,17 +1,11 @@
 {
-  "generatedAt": "2026-05-20T13:40:49Z",
+  "generatedAt": "2026-05-20T14:50:16Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 1,
+  "failed": 4,
   "dry_run": false,
   "results": [
-    {
-      "slug": "mark-twain",
-      "status": "ok",
-      "score": 8,
-      "category": "continental"
-    },
     {
       "slug": "luis-federico-leloir",
       "status": "error",
@@ -23,19 +17,24 @@
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "rudolph-rummel",
+      "slug": "carter-godwin-woodson",
       "status": "ok",
       "score": 8,
       "category": "regional"
     },
     {
-      "slug": "carter-godwin-woodson",
+      "slug": "lothar-g\u00fcnther-buchheim",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "gerald-edelman",
       "status": "error",
       "reason": "Ollama error: timed out"
     }
   ],
   "summary": {
-    "entities_scored": 2,
-    "failed": 3
+    "entities_scored": 1,
+    "failed": 4
   }
 }

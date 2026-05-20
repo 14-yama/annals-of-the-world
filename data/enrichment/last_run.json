@@ -1,27 +1,32 @@
 {
-  "timestamp": "2026-05-20T09:30:37Z",
+  "timestamp": "2026-05-20T10:40:05Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 2,
-  "failed": 1,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "sextus-atilius-serranus",
+      "slug": "stephen-ii-of-antioch",
       "status": "enriched",
-      "old_len": 72,
-      "new_len": 1584
+      "old_len": 153,
+      "new_len": 1452
     },
     {
-      "slug": "john-the-good",
-      "status": "enriched",
-      "old_len": 171,
-      "new_len": 1084
-    },
-    {
-      "slug": "a-scandal-in-bohemia",
+      "slug": "proculus-of-verona",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "insufficient causes (0, need >= 2)"
+    },
+    {
+      "slug": "saint-aurelius",
+      "status": "failed",
+      "reason": "insufficient subjects (3, need >= 5)"
+    },
+    {
+      "slug": "antonio-cerd\u00e0-i-lloscos",
+      "status": "enriched",
+      "old_len": 73,
+      "new_len": 983
     }
   ]
 }
