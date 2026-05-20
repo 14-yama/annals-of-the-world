@@ -1,39 +1,43 @@
 {
-  "generatedAt": "2026-05-20T10:10:13Z",
+  "generatedAt": "2026-05-20T11:23:20Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "results": [
     {
-      "slug": "christian-gottfried-daniel-nees-von-esenbeck",
+      "slug": "lucius-octavius",
+      "status": "ok",
+      "score": 8,
+      "category": "continental"
+    },
+    {
+      "slug": "mark-twain",
       "status": "error",
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "belva-ann-lockwood",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "slug": "gilbert-n-lewis",
+      "status": "ok",
+      "score": 8,
+      "category": "continental"
     },
     {
-      "slug": "carlo-lodoli",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "slug": "grace-zabriskie",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
-      "slug": "henryk-g\u00f3recki",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "henryk-grecki",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "slug": "martina-bergman-\u00f6sterberg",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 0,
-    "failed": 5
+    "entities_scored": 4,
+    "failed": 1
   }
 }

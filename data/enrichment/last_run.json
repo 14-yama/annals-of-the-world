@@ -1,39 +1,33 @@
 {
-  "timestamp": "2026-05-20T05:59:53Z",
+  "timestamp": "2026-05-20T07:14:21Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 4,
+  "enriched": 3,
   "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "beyond-good-and-evil",
+      "slug": "gaius-mamilius-turrinus",
       "status": "enriched",
       "old_len": 71,
-      "new_len": 1127
+      "new_len": 1335
     },
     {
-      "slug": "confessions",
+      "slug": "marcus-ceionius-silvanus",
       "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "nectanebo-ii",
+      "slug": "protasius",
       "status": "enriched",
       "old_len": 151,
-      "new_len": 1249
+      "new_len": 981
     },
     {
-      "slug": "francisco-\u00e1lvares",
+      "slug": "william-petow",
       "status": "enriched",
       "old_len": 71,
-      "new_len": 1946
-    },
-    {
-      "slug": "francisco-lvares",
-      "status": "enriched",
-      "old_len": 71,
-      "new_len": 1049
+      "new_len": 1909
     }
   ]
 }
