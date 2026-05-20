@@ -1,33 +1,37 @@
 {
-  "timestamp": "2026-05-19T19:37:17Z",
+  "timestamp": "2026-05-19T21:22:56Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 1,
+  "enriched": 2,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "morgan-ab-athrwys",
+      "slug": "iwo-odrow\u0105\u017c",
+      "status": "enriched",
+      "old_len": 66,
+      "new_len": 1375
+    },
+    {
+      "slug": "iwo-odrow",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "timed out"
     },
     {
-      "slug": "quintus-minucius-rufus",
-      "status": "enriched",
-      "old_len": 66,
-      "new_len": 911
+      "slug": "stefano-nardini",
+      "status": "failed",
+      "reason": "timed out"
     },
     {
-      "slug": "numerius-fabius-pictor",
-      "status": "enriched",
-      "old_len": 66,
-      "new_len": 1564
+      "slug": "john-colet",
+      "status": "failed",
+      "reason": "insufficient subjects (3, need >= 5)"
     },
     {
-      "slug": "philibert-hugonet",
+      "slug": "maturinus",
       "status": "enriched",
-      "old_len": 66,
-      "new_len": 1815
+      "old_len": 86,
+      "new_len": 774
     }
   ]
 }
