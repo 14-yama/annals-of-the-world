@@ -50191,5 +50191,77 @@
       "Report: /home/manasa151/annals-of-the-world/data/enrichment/significance_run.json"
     ],
     "exitCode": 0
+  },
+  "sync-1779276270": {
+    "job_id": "sync-1779276270",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 1776338,
+    "started": "2026-05-20T11:24:30Z",
+    "finished": "2026-05-20T11:26:06Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=39883/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 397 dirty files",
+      "[diff] 397 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 397,",
+      "  \"entitiesUpserted\": 30,",
+      "  \"auditRowsEmitted\": 170,",
+      "  \"writesPerformed\": 200,",
+      "  \"stoppedReason\": \"perRunWriteCap=200 reached during audit emission\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 4086f8a8"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779276369": {
+    "job_id": "git-push-1779276369",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-20T11:26:09Z",
+    "finished": null,
+    "log": [
+      "Pending files: 28 entities, 0 edges (28 total)",
+      "git add data/appwrite-export/ ..."
+    ],
+    "exitCode": null
+  },
+  "enrich-1779276369": {
+    "job_id": "enrich-1779276369",
+    "bot": "enrich",
+    "status": "running",
+    "model": "ollama",
+    "count": 20,
+    "pid": 1780979,
+    "started": "2026-05-20T11:26:09Z",
+    "finished": null,
+    "log": [
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "============================================================",
+      "AI ENRICHMENT \u2014 20 entities via ollama",
+      "============================================================",
+      "",
+      "[1/20] gaius-mamilius-turrinus (score=88.9, 0c)",
+      "  SKIP \u2014 already enriched (1335c)",
+      "",
+      "[2/20] gaius-genucius-clepsina (score=88.9, 0c)",
+      "  SKIP \u2014 already enriched (917c)",
+      "",
+      "[3/20] marcus-ceionius-silvanus (score=88.9, 0c)"
+    ],
+    "exitCode": null
   }
 }
