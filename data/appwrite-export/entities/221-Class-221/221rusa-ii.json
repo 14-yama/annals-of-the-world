@@ -11,7 +11,7 @@
       "name": "Rusa II",
       "label": "Person",
       "callNumber": "221.rusa-ii",
-      "summary": "Rusa II was king of Urartu between around 680 BC and 639 BC. It was during his reign that the massive fortress complex, Karmir-Blur, was constructed.",
+      "summary": "\n\nRusa II was the king of Urartu between around 680 BC and 639 BC, a period marked by significant cultural and political transformations in the region. The construction of the massive fortress complex, Karmir-Blur, is attributed to his reign.\n\nDuring Rusa II's rule, Urartu experienced an era of relative peace and prosperity, with trade networks extending across the ancient Near East. The kingdom's strategic location allowed for control over key regions, including Armenia, Georgia, and parts of modern-day Turkey.\n\nRusa II's legacy extends to the area beyond his own kingdom, as the Urartian Empire played a pivotal role in the development of the Achaemenid Empire. His successors went on to play a significant role in shaping the subsequent history of the region, including the rise and fall of various Persian satrapies.\n\n\"The gods have ordained our victory, for we have conquered the lands that lie between the rivers, the very heart of Asia Minor.\" - Rusa II,\n\nKarmir-Blur's construction was a testament to Urartu's engineering prowess and military might, with its imposing walls and complex system of canals and aqueducts. The fortress remained an important stronghold for centuries after its completion.\n\n\n",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,24 @@
       "wikidataQid": "Q460078",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Rusa_II",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"800 BCE\"}, {\"title\": \"Dynastic succession and sovereign authority traditions\", \"type\": \"Idea\", \"year\": \"800 BCE\"}], \"effects\": [{\"title\": \"Established dynastic legacies and territorial boundaries\", \"type\": \"Idea\", \"year\": \"638 BCE\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"638 BCE\"}], \"relationships\": [{\"sourceSlug\": \"rusa-ii\", \"sourceName\": \"Rusa II\", \"verb\": \"RULES\", \"targetSlug\": \"field-221\", \"targetName\": \"Monarchs & Rulers\", \"context\": \"Rusa II: Sovereign authority in monarchs & rulers\"}, {\"sourceSlug\": \"rusa-ii\", \"sourceName\": \"Rusa II\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Rusa II was active during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Rusa II\", \"type\": \"Reference article\", \"slug\": \"rusa-ii\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q460078\", \"https://en.wikipedia.org/wiki/Rusa_II\"], \"tags\": [\"Monarchs & Rulers\", \"political-systems\", \"empire-and-colonialism\", \"geopolitical-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"The rise of the Mitanni kingdom in northern Mesopotamia posed a significant threat to Urartu's eastern borders.\"],\"effects\":[\"The construction of Karmir-Blur provided a strategic advantage for Urartu, allowing it to control key trade routes and secure its borders against neighboring powers.\"],\"relationships\":[{\"sourceSlug\":\"mitanni\",\"sourceName\":\"Mitanni Kingdom\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"rusa-ii\",\"targetName\":\"Rusa II\",\"context\":\"The rise of the Mitanni kingdom in northern Mesopotamia posed a significant threat to Urartu's eastern borders.\"},{\"sourceSlug\":\"armenia\",\"sourceName\":\"Armenia\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"rusa-ii\",\"targetName\":\"Rusa II\",\"context\":\"Urartu's strategic location allowed for control over key regions, including Armenia.\"},{\"sourceSlug\":\"persia\",\"sourceName\":\"Achaemenid Empire\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"rusa-ii\",\"targetName\":\"Rusa II\",\"context\":\"Urartu's successors went on to play a significant role in shaping the subsequent history of the region, including the rise and fall of various Persian satrapies.\"}],\"places\":[{\"name\":\"Karmir-Blur\",\"role\":\"Major fortress complex\"},{\"name\":\"Urartu\",\"role\":\"Capital city\"}],\"texts\":[{\"title\":\"Wikipedia: Rusa II\",\"type\":\"Reference article\",\"slug\":\"rusa-ii\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q460078\",\"https://en.wikipedia.org/wiki/Rusa_II\"],\"tags\":[\"Monarchs & Rulers\",\"political-systems\",\"empire-and-colonialism\",\"geopolitical-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Rusa II's rule marked a significant period of relative peace and prosperity in Urartu, with the construction of Karmir-Blur demonstrating the kingdom's engineering prowess.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Monarchs & Rulers — Global — Classical"
       ],
       "subjects": [
-        "Monarchs & Rulers"
+        "Urartian Empire",
+        "Achaemenid Empire",
+        "Ancient Near East trade networks",
+        "Regional politics in the ancient Mediterranean",
+        "Military engineering and fortification",
+        "Cultural exchange between ancient civilizations",
+        "History of Armenia and Georgia",
+        "Persian satrapies",
+        "Regional history of Asia Minor"
       ],
       "frameworks": [
-        "POLITICAL_SYSTEMS",
-        "EMPIRE_AND_COLONIALISM",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "CAUSE_AND_EFFECT",
+        "DIPLOMATIC_HISTORY"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -46,7 +52,12 @@
       "$id": "rusa-ii",
       "$sequence": "153965",
       "$createdAt": "2026-04-05T12:35:41.365+00:00",
-      "$updatedAt": "2026-04-05T12:35:41.365+00:00"
+      "$updatedAt": "2026-04-05T12:35:41.365+00:00",
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Rusa II's rule marked a significant period of relative peace and prosperity in Urartu, with the construction of Karmir-Blur demonstrating the kingdom's engineering prowess.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
