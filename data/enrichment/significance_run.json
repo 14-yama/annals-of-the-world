@@ -1,15 +1,16 @@
 {
-  "generatedAt": "2026-05-20T01:31:38Z",
+  "generatedAt": "2026-05-20T02:36:56Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 4,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "results": [
     {
-      "slug": "richard-wilbur",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "slug": "bandinello-sauli",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "james-j-gibson",
@@ -17,24 +18,25 @@
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "jos\u00e9-calvo-sotelo",
-      "status": "error",
-      "reason": "Ollama error: timed out"
-    },
-    {
-      "slug": "murray-bookchin",
+      "slug": "mar\u00eda-irene-forn\u00e9s",
       "status": "ok",
       "score": 8,
-      "category": "continental"
+      "category": "regional"
     },
     {
-      "slug": "mar\u00eda-irene-forn\u00e9s",
+      "slug": "michael-d-coe",
       "status": "error",
       "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "wayne-thiebaud",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 1,
-    "failed": 4
+    "entities_scored": 3,
+    "failed": 2
   }
 }

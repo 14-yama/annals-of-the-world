@@ -1,37 +1,27 @@
 {
-  "timestamp": "2026-05-19T21:22:56Z",
+  "timestamp": "2026-05-19T22:29:24Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 2,
-  "failed": 3,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "iwo-odrow\u0105\u017c",
+      "slug": "giovanni-michiel",
+      "status": "failed",
+      "reason": "insufficient effects (0, need >= 2)"
+    },
+    {
+      "slug": "ascanio-parisani",
       "status": "enriched",
-      "old_len": 66,
-      "new_len": 1375
+      "old_len": 67,
+      "new_len": 983
     },
     {
-      "slug": "iwo-odrow",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "stefano-nardini",
-      "status": "failed",
-      "reason": "timed out"
-    },
-    {
-      "slug": "john-colet",
-      "status": "failed",
-      "reason": "insufficient subjects (3, need >= 5)"
-    },
-    {
-      "slug": "maturinus",
+      "slug": "giovanni-vitelleschi",
       "status": "enriched",
-      "old_len": 86,
-      "new_len": 774
+      "old_len": 67,
+      "new_len": 1027
     }
   ]
 }
