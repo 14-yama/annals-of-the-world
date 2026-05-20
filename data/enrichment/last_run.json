@@ -1,33 +1,32 @@
 {
-  "timestamp": "2026-05-20T01:09:00Z",
+  "timestamp": "2026-05-20T02:21:33Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 1,
+  "enriched": 2,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "husam-al-din-chalabi",
+      "slug": "gaius-claudius-canina",
       "status": "enriched",
-      "old_len": 261,
-      "new_len": 1353
+      "old_len": 69,
+      "new_len": 806
     },
     {
-      "slug": "abu-musa-al-ashari",
+      "slug": "gaius-claudius-marcellus-major",
+      "status": "enriched",
+      "old_len": 69,
+      "new_len": 725
+    },
+    {
+      "slug": "paolo-emilio-cesi",
       "status": "failed",
       "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "hans-ulrich-von-eggenberg",
-      "status": "enriched",
-      "old_len": 261,
-      "new_len": 1641
-    },
-    {
-      "slug": "emile-or-on-education",
-      "status": "enriched",
-      "old_len": 69,
-      "new_len": 971
+      "slug": "domenico-della-rovere",
+      "status": "failed",
+      "reason": "timed out"
     }
   ]
 }
