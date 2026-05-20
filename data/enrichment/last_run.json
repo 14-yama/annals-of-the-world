@@ -1,30 +1,28 @@
 {
-  "timestamp": "2026-05-20T02:21:33Z",
+  "timestamp": "2026-05-20T03:47:33Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 2,
+  "enriched": 0,
+  "failed": 4,
   "dry_run": false,
   "entities": [
     {
-      "slug": "gaius-claudius-canina",
-      "status": "enriched",
-      "old_len": 69,
-      "new_len": 806
-    },
-    {
-      "slug": "gaius-claudius-marcellus-major",
-      "status": "enriched",
-      "old_len": 69,
-      "new_len": 725
-    },
-    {
-      "slug": "paolo-emilio-cesi",
+      "slug": "ludovico-simonetta",
       "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "reason": "insufficient relationships (1, need >= 3)"
     },
     {
-      "slug": "domenico-della-rovere",
+      "slug": "ambrosios-of-alexandria",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "\u00fagaine-m\u00f3r",
+      "status": "failed",
+      "reason": "Expecting property name enclosed in double quotes: line 62 column 1 (char 2480)"
+    },
+    {
+      "slug": "gaine-mr",
       "status": "failed",
       "reason": "timed out"
     }
