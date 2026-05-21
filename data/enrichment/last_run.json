@@ -1,32 +1,105 @@
 {
-  "timestamp": "2026-05-21T17:24:53Z",
+  "timestamp": "2026-05-21T17:48:35Z",
   "model": "ollama",
-  "count_requested": 5,
-  "enriched": 2,
-  "failed": 2,
+  "count_requested": 20,
+  "enriched": 15,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
+      "slug": "publius-sulpicius-saverrio",
+      "status": "enriched",
+      "old_len": 87,
+      "new_len": 990
+    },
+    {
+      "slug": "marcus-acilius-glabrio",
+      "status": "enriched",
+      "old_len": 87,
+      "new_len": 1195
+    },
+    {
+      "slug": "theodwin",
+      "status": "enriched",
+      "old_len": 87,
+      "new_len": 1394
+    },
+    {
+      "slug": "guido-of-acqui",
+      "status": "enriched",
+      "old_len": 87,
+      "new_len": 1304
+    },
+    {
+      "slug": "anna-koltovskaya",
+      "status": "enriched",
+      "old_len": 167,
+      "new_len": 1491
+    },
+    {
+      "slug": "grard-du-puy",
+      "status": "enriched",
+      "old_len": 104,
+      "new_len": 1318
+    },
+    {
       "slug": "giovanni-stefano-ferrero",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "status": "enriched",
+      "old_len": 87,
+      "new_len": 1082
     },
     {
       "slug": "juan-castellar-y-de-borja",
       "status": "enriched",
       "old_len": 87,
-      "new_len": 1047
+      "new_len": 1491
     },
     {
       "slug": "girolamo-verallo",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "status": "enriched",
+      "old_len": 87,
+      "new_len": 1218
+    },
+    {
+      "slug": "nurul-huq-bhuiyan",
+      "status": "enriched",
+      "old_len": 43,
+      "new_len": 1268
     },
     {
       "slug": "maifreda-da-pirovano",
       "status": "enriched",
       "old_len": 43,
-      "new_len": 1123
+      "new_len": 1959
+    },
+    {
+      "slug": "gojoseon",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 2)"
+    },
+    {
+      "slug": "alexiad",
+      "status": "enriched",
+      "old_len": 88,
+      "new_len": 1315
+    },
+    {
+      "slug": "mnesarchus-of-athens",
+      "status": "enriched",
+      "old_len": 88,
+      "new_len": 1321
+    },
+    {
+      "slug": "al-kutub-al-sittah",
+      "status": "enriched",
+      "old_len": 88,
+      "new_len": 1276
+    },
+    {
+      "slug": "hastein",
+      "status": "enriched",
+      "old_len": 88,
+      "new_len": 970
     }
   ]
 }
