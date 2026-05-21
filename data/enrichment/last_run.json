@@ -1,38 +1,39 @@
 {
-  "timestamp": "2026-05-20T21:07:49Z",
+  "timestamp": "2026-05-20T22:32:07Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "snaaib",
-      "status": "enriched",
-      "old_len": 158,
-      "new_len": 887
-    },
-    {
-      "slug": "nikolaus-von-schnberg",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
-    },
-    {
-      "slug": "dumnagual-iii-of-alt-clut",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
-    },
-    {
-      "slug": "caribbean-sea",
-      "status": "enriched",
-      "old_len": 158,
-      "new_len": 1152
-    },
-    {
-      "slug": "antipater-of-sidon",
+      "slug": "tiberius-minucius-augurinus",
       "status": "enriched",
       "old_len": 78,
-      "new_len": 1136
+      "new_len": 1376
+    },
+    {
+      "slug": "gnaeus-domitius-calvinus-maximus",
+      "status": "enriched",
+      "old_len": 78,
+      "new_len": 956
+    },
+    {
+      "slug": "publius-popillius-laenas",
+      "status": "enriched",
+      "old_len": 78,
+      "new_len": 759
+    },
+    {
+      "slug": "ludwig-andreas-von-khevenh\u00fcller",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
+    },
+    {
+      "slug": "ludwig-andreas-von-khevenhller",
+      "status": "enriched",
+      "old_len": 104,
+      "new_len": 1051
     }
   ]
 }
