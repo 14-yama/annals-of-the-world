@@ -1,35 +1,32 @@
 {
-  "timestamp": "2026-05-21T07:08:18Z",
+  "timestamp": "2026-05-21T08:19:03Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 2,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "a-streetcar-named-desire",
+      "slug": "eustorgius-i",
       "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "reason": "insufficient causes (0, need >= 2)"
     },
     {
-      "slug": "f-jin",
-      "status": "failed",
-      "reason": "insufficient subjects (1, need >= 5)"
+      "slug": "mershepsesre-ini-ii",
+      "status": "enriched",
+      "old_len": 163,
+      "new_len": 1460
     },
     {
-      "slug": "gnaeus-cornelius-scipio-hispallus",
+      "slug": "al-mundhir-ii",
       "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "quintus-sulpicius-camerinus-cornutus",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
-    },
-    {
-      "slug": "lucius-cornelius-lentulus-caudinus",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "slug": "nicolaes-molenaer",
+      "status": "enriched",
+      "old_len": 83,
+      "new_len": 749
     }
   ]
 }
