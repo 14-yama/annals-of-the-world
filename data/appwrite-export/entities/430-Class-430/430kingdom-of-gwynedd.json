@@ -25,7 +25,7 @@
       "wikidataQid": "Q816814",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Kingdom_of_Gwynedd",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [\"Geographic and historical development\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"kingdom-of-gwynedd\", \"sourceName\": \"Kingdom of Gwynedd\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-late-antiquity\", \"targetName\": \"Late Antiquity\", \"context\": \"Kingdom of Gwynedd is situated within the Late Antiquity (924)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Kingdom of Gwynedd\", \"type\": \"Reference article\", \"slug\": \"kingdom-of-gwynedd\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q816814\", \"https://en.wikipedia.org/wiki/Kingdom_of_Gwynedd\"], \"tags\": [\"historical country\", \"Countries / Polities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Kingdom of Gwynedd contributed to the historical record of the Classical period. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Geographic and historical development\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"kingdom-of-gwynedd\", \"sourceName\": \"Kingdom of Gwynedd\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-late-antiquity\", \"targetName\": \"Late Antiquity\", \"context\": \"Kingdom of Gwynedd is situated within the Late Antiquity (924)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Kingdom of Gwynedd\", \"type\": \"Reference article\", \"slug\": \"kingdom-of-gwynedd\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q816814\", \"https://en.wikipedia.org/wiki/Kingdom_of_Gwynedd\"], \"tags\": [\"historical country\", \"Countries / Polities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Kingdom of Gwynedd contributed to the historical record of the Classical period. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"The Kingdom of Gwynedd played a crucial role in shaping Welsh identity and the formation of the Principality of Wales, with Llywelyn the Great's proclamation in 1216 marking a significant turning point in Welsh history.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"The Kingdom of Gwynedd played a crucial role in shaping Welsh identity and the formation of the Principality of Wales, with Llywelyn the Great's proclamation in 1216 marking a significant turning point in Welsh history.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-21T18:31:59Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Countries / Polities -- Global -- Classical"
       ],
@@ -44,7 +44,12 @@
       "$id": "kingdom-of-gwynedd",
       "$sequence": "720747",
       "$createdAt": "2026-04-05T15:18:01.643+00:00",
-      "$updatedAt": "2026-04-05T15:18:01.643+00:00"
+      "$updatedAt": "2026-04-05T15:18:01.643+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "The Kingdom of Gwynedd played a crucial role in shaping Welsh identity and the formation of the Principality of Wales, with Llywelyn the Great's proclamation in 1216 marking a significant turning point in Welsh history.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

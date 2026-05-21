@@ -1,35 +1,100 @@
 {
-  "timestamp": "2026-05-21T14:18:41Z",
+  "timestamp": "2026-05-21T14:30:36Z",
   "model": "ollama",
-  "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "count_requested": 20,
+  "enriched": 15,
+  "failed": 0,
   "dry_run": false,
   "entities": [
     {
+      "slug": "marco-vigerio-della-rovere",
+      "status": "enriched",
+      "old_len": 600,
+      "new_len": 986
+    },
+    {
+      "slug": "laodice-v",
+      "status": "enriched",
+      "old_len": 728,
+      "new_len": 1829
+    },
+    {
+      "slug": "guy-par",
+      "status": "enriched",
+      "old_len": 103,
+      "new_len": 1720
+    },
+    {
+      "slug": "geoffrey-of-vendme",
+      "status": "enriched",
+      "old_len": 103,
+      "new_len": 1044
+    },
+    {
+      "slug": "pere-oller",
+      "status": "enriched",
+      "old_len": 41,
+      "new_len": 796
+    },
+    {
+      "slug": "acron",
+      "status": "enriched",
+      "old_len": 86,
+      "new_len": 753
+    },
+    {
       "slug": "nyuserre-ini",
-      "status": "failed",
-      "reason": "insufficient effects (0, need >= 2)"
+      "status": "enriched",
+      "old_len": 603,
+      "new_len": 1287
     },
     {
       "slug": "king-xiaowen-of-qin",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 166,
+      "new_len": 1108
     },
     {
       "slug": "amanitenmemide",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 166,
+      "new_len": 1237
     },
     {
       "slug": "peter-ii-of-aragon",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 86,
+      "new_len": 1340
     },
     {
       "slug": "lucius-autronius-paetus",
-      "status": "failed",
-      "reason": "timed out"
+      "status": "enriched",
+      "old_len": 86,
+      "new_len": 1223
+    },
+    {
+      "slug": "manius-sergius-fidenas",
+      "status": "enriched",
+      "old_len": 86,
+      "new_len": 1670
+    },
+    {
+      "slug": "spurius-tarpeius-montanus-capitolinus",
+      "status": "enriched",
+      "old_len": 86,
+      "new_len": 1230
+    },
+    {
+      "slug": "quintus-antonius-merenda",
+      "status": "enriched",
+      "old_len": 86,
+      "new_len": 1825
+    },
+    {
+      "slug": "maria-ormani",
+      "status": "enriched",
+      "old_len": 86,
+      "new_len": 890
     }
   ]
 }
