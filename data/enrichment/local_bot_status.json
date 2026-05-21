@@ -55349,7 +55349,13 @@
       "[35/50] ahmad-uyahya (importance=5)",
       "  ERROR \u2014 Ollama error: timed out",
       "",
-      "[36/50] jioji-george-konrote (importance=5)"
+      "[36/50] jioji-george-konrote (importance=5)",
+      "  ERROR \u2014 Ollama error: timed out",
+      "",
+      "[37/50] \u00f6zt\u00fcrk-y\u0131lmaz (importance=5)",
+      "  ERROR \u2014 Ollama error: timed out",
+      "",
+      "[38/50] ztrk-ylmaz (importance=5)"
     ],
     "exitCode": null
   },
@@ -55476,7 +55482,10 @@
       "[35/50] ahmad-uyahya (importance=5)",
       "  ERROR \u2014 Ollama error: timed out",
       "",
-      "[36/50] jioji-george-konrote (importance=5)"
+      "[36/50] jioji-george-konrote (importance=5)",
+      "  ERROR \u2014 Ollama error: timed out",
+      "",
+      "[37/50] \u00f6zt\u00fcrk-y\u0131lmaz (importance=5)"
     ],
     "exitCode": null
   },
@@ -55734,14 +55743,66 @@
   "git-push-1779402378": {
     "job_id": "git-push-1779402378",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-05-21T22:26:18Z",
-    "finished": null,
+    "finished": "2026-05-21T22:26:22Z",
     "log": [
       "Pending files: 15 entities, 0 edges (15 total)",
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 482 local enrichments\"",
+      "[clean/audit-system 451a414b56] feat(enrich): watchdog auto-push \u2014 482 local enrichments\n 18 files changed, 98 insertions(+), 29 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.",
+      "git push failed \u2014 check SSH/HTTPS credentials: To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
+    ],
+    "exitCode": 1
+  },
+  "sync-1779402468": {
+    "job_id": "sync-1779402468",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 3627612,
+    "started": "2026-05-21T22:27:48Z",
+    "finished": "2026-05-21T22:29:25Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=44483/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 467 dirty files",
+      "[diff] 467 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 467,",
+      "  \"entitiesUpserted\": 21,",
+      "  \"auditRowsEmitted\": 179,",
+      "  \"writesPerformed\": 200,",
+      "  \"stoppedReason\": \"perRunWriteCap=200 reached during audit emission\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 451a414b"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779402567": {
+    "job_id": "git-push-1779402567",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-21T22:29:27Z",
+    "finished": null,
+    "log": [
+      "Pending files: 18 entities, 0 edges (18 total)",
       "git add data/appwrite-export/ ..."
     ],
     "exitCode": null
