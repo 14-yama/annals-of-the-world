@@ -1,28 +1,38 @@
 {
-  "timestamp": "2026-05-20T20:01:06Z",
+  "timestamp": "2026-05-20T21:07:49Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 3,
-  "failed": 0,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "fortunatianus-of-aquileia",
+      "slug": "snaaib",
       "status": "enriched",
-      "old_len": 157,
-      "new_len": 818
+      "old_len": 158,
+      "new_len": 887
     },
     {
-      "slug": "girolamo-seripando",
-      "status": "enriched",
-      "old_len": 77,
-      "new_len": 1580
+      "slug": "nikolaus-von-schnberg",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "philippe-de-la-chambre",
+      "slug": "dumnagual-iii-of-alt-clut",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
+    },
+    {
+      "slug": "caribbean-sea",
       "status": "enriched",
-      "old_len": 77,
-      "new_len": 1571
+      "old_len": 158,
+      "new_len": 1152
+    },
+    {
+      "slug": "antipater-of-sidon",
+      "status": "enriched",
+      "old_len": 78,
+      "new_len": 1136
     }
   ]
 }
