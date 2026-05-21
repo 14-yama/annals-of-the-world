@@ -1,106 +1,32 @@
 {
-  "timestamp": "2026-05-21T03:15:43Z",
+  "timestamp": "2026-05-21T03:41:40Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 16,
-  "failed": 0,
+  "count_requested": 5,
+  "enriched": 2,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "jan-hasi\u0161tejnsk\u00fd-of-lobkowicz",
-      "status": "enriched",
-      "old_len": 715,
-      "new_len": 1256
+      "slug": "southern-italy",
+      "status": "failed",
+      "reason": "summary too short (89c, need >= 600)"
     },
     {
-      "slug": "nicol\u00f2-albertini",
+      "slug": "sophroniscus",
       "status": "enriched",
       "old_len": 80,
-      "new_len": 1984
+      "new_len": 1053
     },
     {
-      "slug": "nicol-albertini",
+      "slug": "l-hin-tng",
       "status": "enriched",
-      "old_len": 80,
-      "new_len": 1911
+      "old_len": 98,
+      "new_len": 1483
     },
     {
-      "slug": "iytjenu",
-      "status": "enriched",
-      "old_len": 600,
-      "new_len": 935
-    },
-    {
-      "slug": "micronesia",
-      "status": "enriched",
-      "old_len": 240,
-      "new_len": 1011
-    },
-    {
-      "slug": "theagenes-of-thasos",
-      "status": "enriched",
-      "old_len": 80,
-      "new_len": 1466
-    },
-    {
-      "slug": "publius-cornelius-cossus",
-      "status": "enriched",
-      "old_len": 80,
-      "new_len": 1236
-    },
-    {
-      "slug": "titus-flavius-petro",
-      "status": "enriched",
-      "old_len": 80,
-      "new_len": 960
-    },
-    {
-      "slug": "marcus-quinctilius-varus",
-      "status": "enriched",
-      "old_len": 80,
-      "new_len": 1346
-    },
-    {
-      "slug": "proculus-verginius-tricostus-rutilus",
-      "status": "enriched",
-      "old_len": 80,
-      "new_len": 1224
-    },
-    {
-      "slug": "guillermo-raimundo-de-vich-y-de-vallterra",
-      "status": "enriched",
-      "old_len": 80,
-      "new_len": 1297
-    },
-    {
-      "slug": "domenico-capranica",
-      "status": "enriched",
-      "old_len": 80,
-      "new_len": 1241
-    },
-    {
-      "slug": "bonifacio-ferrero",
-      "status": "enriched",
-      "old_len": 80,
-      "new_len": 1127
-    },
-    {
-      "slug": "artaldus",
-      "status": "enriched",
-      "old_len": 80,
-      "new_len": 1336
-    },
-    {
-      "slug": "filiberto-ferrero",
-      "status": "enriched",
-      "old_len": 80,
-      "new_len": 1115
-    },
-    {
-      "slug": "filippo-carafa-della-serra",
-      "status": "enriched",
-      "old_len": 80,
-      "new_len": 1132
+      "slug": "quintian-of-rodez",
+      "status": "failed",
+      "reason": "Expecting ',' delimiter: line 55 column 8 (char 171)"
     }
   ]
 }
