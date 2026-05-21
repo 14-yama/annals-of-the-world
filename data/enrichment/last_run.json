@@ -1,32 +1,38 @@
 {
-  "timestamp": "2026-05-21T03:41:40Z",
+  "timestamp": "2026-05-21T04:47:13Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
+  "enriched": 3,
   "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "southern-italy",
-      "status": "failed",
-      "reason": "summary too short (89c, need >= 600)"
-    },
-    {
-      "slug": "sophroniscus",
+      "slug": "bernardo-clesio",
       "status": "enriched",
-      "old_len": 80,
-      "new_len": 1053
+      "old_len": 81,
+      "new_len": 1731
     },
     {
-      "slug": "l-hin-tng",
+      "slug": "modest",
       "status": "enriched",
-      "old_len": 98,
-      "new_len": 1483
+      "old_len": 161,
+      "new_len": 1247
     },
     {
-      "slug": "quintian-of-rodez",
+      "slug": "oda-of-haldensleben",
       "status": "failed",
-      "reason": "Expecting ',' delimiter: line 55 column 8 (char 171)"
+      "reason": "insufficient causes (0, need >= 2)"
+    },
+    {
+      "slug": "aphrodisius",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
+    },
+    {
+      "slug": "euthalius",
+      "status": "enriched",
+      "old_len": 179,
+      "new_len": 1027
     }
   ]
 }
