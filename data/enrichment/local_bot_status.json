@@ -55385,7 +55385,13 @@
       "[47/50] basilica-of-saint-lawrence-outside-the-walls (importance=5)",
       "  SCORED \u2014 5/10 (regional): As a major pilgrimage site and burial complex for several saints and popes, the ...",
       "",
-      "[48/50] helen-reddy (importance=5)"
+      "[48/50] helen-reddy (importance=5)",
+      "  SCORED \u2014 5/10 (regional): Helen Reddy's music career spanned over two decades and influenced the developme...",
+      "",
+      "[49/50] vincent-wallace (importance=5)",
+      "  SCORED \u2014 5/10 (regional): Vincent Wallace's compositions were popular in his day, with notable works like ...",
+      "",
+      "[50/50] j-d-souther (importance=5)"
     ],
     "exitCode": null
   },
@@ -55548,7 +55554,13 @@
       "[47/50] basilica-of-saint-lawrence-outside-the-walls (importance=5)",
       "  SCORED \u2014 5/10 (regional): As one of the five papal basilicas and a major pilgrimage site, the Basilica of ...",
       "",
-      "[48/50] helen-reddy (importance=5)"
+      "[48/50] helen-reddy (importance=5)",
+      "  SCORED \u2014 5/10 (regional): Helen Reddy's music career spanned over two decades and influenced a generation ...",
+      "",
+      "[49/50] vincent-wallace (importance=5)",
+      "  SCORED \u2014 5/10 (regional): Vincent Wallace's compositions were popular in his day, with notable works like ...",
+      "",
+      "[50/50] j-d-souther (importance=5)"
     ],
     "exitCode": null
   },
@@ -56118,15 +56130,40 @@
   "git-push-1779403526": {
     "job_id": "git-push-1779403526",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-05-21T22:45:26Z",
-    "finished": null,
+    "finished": "2026-05-21T22:45:30Z",
     "log": [
       "Pending files: 41 entities, 0 edges (41 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 373 local enrichments\"",
+      "[clean/audit-system c7cb3edcae] feat(enrich): watchdog auto-push \u2014 373 local enrichments\n 44 files changed, 174 insertions(+), 66 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.",
+      "git push failed \u2014 check SSH/HTTPS credentials: To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
+    ],
+    "exitCode": 1
+  },
+  "sync-1779403618": {
+    "job_id": "sync-1779403618",
+    "bot": "sync",
+    "status": "running",
+    "model": "none",
+    "count": 200,
+    "pid": 3667792,
+    "started": "2026-05-21T22:46:58Z",
+    "finished": null,
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=45683/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files"
     ],
     "exitCode": null
   }
