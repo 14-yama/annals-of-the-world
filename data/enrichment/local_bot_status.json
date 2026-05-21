@@ -55376,7 +55376,16 @@
       "[44/50] aaron-david-miller (importance=5)",
       "  ERROR \u2014 Ollama error: timed out",
       "",
-      "[45/50] san-crisogono (importance=5)"
+      "[45/50] san-crisogono (importance=5)",
+      "  SCORED \u2014 5/10 (regional): As one of Rome's oldest parish churches, San Crisogono has played a significant ...",
+      "",
+      "[46/50] santa-cecilia-in-trastevere (importance=5)",
+      "  SCORED \u2014 6/10 (regional): As a major pilgrimage site and repository of musical heritage, Santa Cecilia in ...",
+      "",
+      "[47/50] basilica-of-saint-lawrence-outside-the-walls (importance=5)",
+      "  SCORED \u2014 5/10 (regional): As a major pilgrimage site and burial complex for several saints and popes, the ...",
+      "",
+      "[48/50] helen-reddy (importance=5)"
     ],
     "exitCode": null
   },
@@ -55527,7 +55536,19 @@
       "[43/50] aldona-wos (importance=5)",
       "  ERROR \u2014 Ollama error: timed out",
       "",
-      "[44/50] aaron-david-miller (importance=5)"
+      "[44/50] aaron-david-miller (importance=5)",
+      "  SCORED \u2014 5/10 (regional): As a senior fellow at the Carnegie Endowment for International Peace and advisor...",
+      "",
+      "[45/50] san-crisogono (importance=5)",
+      "  SCORED \u2014 5/10 (regional): As a cardinal titular church since early Christianity, San Crisogono has played ...",
+      "",
+      "[46/50] santa-cecilia-in-trastevere (importance=5)",
+      "  SCORED \u2014 7/10 (regional): As a major institution since the 5th century, Santa Cecilia in Trastevere has pl...",
+      "",
+      "[47/50] basilica-of-saint-lawrence-outside-the-walls (importance=5)",
+      "  SCORED \u2014 5/10 (regional): As one of the five papal basilicas and a major pilgrimage site, the Basilica of ...",
+      "",
+      "[48/50] helen-reddy (importance=5)"
     ],
     "exitCode": null
   },
@@ -56045,14 +56066,66 @@
   "git-push-1779403332": {
     "job_id": "git-push-1779403332",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-05-21T22:42:12Z",
-    "finished": null,
+    "finished": "2026-05-21T22:42:16Z",
     "log": [
       "Pending files: 20 entities, 0 edges (20 total)",
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 389 local enrichments\"",
+      "[clean/audit-system 99ee51a5e2] feat(enrich): watchdog auto-push \u2014 389 local enrichments\n 24 files changed, 135 insertions(+), 125 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.",
+      "git push failed \u2014 check SSH/HTTPS credentials: To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
+    ],
+    "exitCode": 1
+  },
+  "sync-1779403424": {
+    "job_id": "sync-1779403424",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 3661515,
+    "started": "2026-05-21T22:43:44Z",
+    "finished": "2026-05-21T22:45:23Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=45483/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 375 dirty files",
+      "[diff] 375 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 375,",
+      "  \"entitiesUpserted\": 44,",
+      "  \"auditRowsEmitted\": 156,",
+      "  \"writesPerformed\": 200,",
+      "  \"stoppedReason\": \"perRunWriteCap=200 reached during audit emission\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 99ee51a5"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779403526": {
+    "job_id": "git-push-1779403526",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-21T22:45:26Z",
+    "finished": null,
+    "log": [
+      "Pending files: 41 entities, 0 edges (41 total)",
       "git add data/appwrite-export/ ..."
     ],
     "exitCode": null
