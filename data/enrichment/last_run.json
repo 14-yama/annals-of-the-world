@@ -1,31 +1,28 @@
 {
-  "timestamp": "2026-05-20T18:45:40Z",
+  "timestamp": "2026-05-20T20:01:06Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 3,
+  "enriched": 3,
+  "failed": 0,
   "dry_run": false,
   "entities": [
     {
-      "slug": "lucius-quinctius",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
-    },
-    {
-      "slug": "attilio-piccioni",
+      "slug": "fortunatianus-of-aquileia",
       "status": "enriched",
-      "old_len": 102,
-      "new_len": 1078
+      "old_len": 157,
+      "new_len": 818
     },
     {
-      "slug": "herillus",
-      "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
+      "slug": "girolamo-seripando",
+      "status": "enriched",
+      "old_len": 77,
+      "new_len": 1580
     },
     {
-      "slug": "yazdegerd-i",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "slug": "philippe-de-la-chambre",
+      "status": "enriched",
+      "old_len": 77,
+      "new_len": 1571
     }
   ]
 }

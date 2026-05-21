@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-20T22:56:03Z",
+  "generatedAt": "2026-05-21T00:11:12Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 5,
+  "enriched": 1,
+  "failed": 4,
   "dry_run": false,
   "results": [
     {
@@ -18,8 +18,9 @@
     },
     {
       "slug": "m\u00e1rio-guimar\u00e3es-ferri",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
     },
     {
       "slug": "arthur-kornberg",
@@ -33,7 +34,7 @@
     }
   ],
   "summary": {
-    "entities_scored": 0,
-    "failed": 5
+    "entities_scored": 1,
+    "failed": 4
   }
 }
