@@ -1,38 +1,32 @@
 {
-  "timestamp": "2026-05-21T04:47:13Z",
+  "timestamp": "2026-05-21T05:54:31Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
+  "enriched": 2,
   "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "bernardo-clesio",
+      "slug": "vande-mataram",
       "status": "enriched",
-      "old_len": 81,
-      "new_len": 1731
+      "old_len": 82,
+      "new_len": 1411
     },
     {
-      "slug": "modest",
-      "status": "enriched",
-      "old_len": 161,
-      "new_len": 1247
-    },
-    {
-      "slug": "oda-of-haldensleben",
+      "slug": "a-streetcar-named-desire",
       "status": "failed",
       "reason": "insufficient causes (0, need >= 2)"
     },
     {
-      "slug": "aphrodisius",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "slug": "genetics",
+      "status": "enriched",
+      "old_len": 82,
+      "new_len": 1437
     },
     {
-      "slug": "euthalius",
-      "status": "enriched",
-      "old_len": 179,
-      "new_len": 1027
+      "slug": "anat-her",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     }
   ]
 }
