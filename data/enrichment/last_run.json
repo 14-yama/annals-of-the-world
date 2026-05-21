@@ -1,103 +1,35 @@
 {
-  "timestamp": "2026-05-21T06:26:35Z",
+  "timestamp": "2026-05-21T07:08:18Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 13,
-  "failed": 3,
+  "count_requested": 5,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "entities": [
     {
-      "slug": "aphrodisius",
-      "status": "enriched",
-      "old_len": 161,
-      "new_len": 1857
-    },
-    {
-      "slug": "vande-mataram",
-      "status": "failed",
-      "reason": "insufficient causes (0, need >= 1)"
-    },
-    {
       "slug": "a-streetcar-named-desire",
       "status": "failed",
-      "reason": "insufficient causes (0, need >= 1)"
-    },
-    {
-      "slug": "the-birth-of-tragedy",
-      "status": "enriched",
-      "old_len": 82,
-      "new_len": 1412
-    },
-    {
-      "slug": "ecce-homo",
-      "status": "enriched",
-      "old_len": 82,
-      "new_len": 1132
-    },
-    {
-      "slug": "genetics",
-      "status": "enriched",
-      "old_len": 82,
-      "new_len": 592
-    },
-    {
-      "slug": "anat-her",
-      "status": "enriched",
-      "old_len": 601,
-      "new_len": 556
-    },
-    {
-      "slug": "f\u00fa-ji\u0101n",
-      "status": "enriched",
-      "old_len": 601,
-      "new_len": 1309
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
       "slug": "f-jin",
       "status": "failed",
-      "reason": "insufficient subjects (2, need >= 3)"
+      "reason": "insufficient subjects (1, need >= 5)"
     },
     {
-      "slug": "vasudeva-ii",
-      "status": "enriched",
-      "old_len": 162,
-      "new_len": 911
+      "slug": "gnaeus-cornelius-scipio-hispallus",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "tiridates-iii-of-parthia",
-      "status": "enriched",
-      "old_len": 162,
-      "new_len": 1575
+      "slug": "quintus-sulpicius-camerinus-cornutus",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "mihrdat-v-of-iberia",
-      "status": "enriched",
-      "old_len": 162,
-      "new_len": 1249
-    },
-    {
-      "slug": "drest-v",
-      "status": "enriched",
-      "old_len": 162,
-      "new_len": 905
-    },
-    {
-      "slug": "straton-of-sardis",
-      "status": "enriched",
-      "old_len": 82,
-      "new_len": 1327
-    },
-    {
-      "slug": "lucius-pinarius-mamercinus",
-      "status": "enriched",
-      "old_len": 82,
-      "new_len": 1192
-    },
-    {
-      "slug": "leonnatus",
-      "status": "enriched",
-      "old_len": 82,
-      "new_len": 1366
+      "slug": "lucius-cornelius-lentulus-caudinus",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
     }
   ]
 }
