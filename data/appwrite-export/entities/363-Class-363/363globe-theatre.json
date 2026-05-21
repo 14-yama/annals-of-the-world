@@ -25,7 +25,7 @@
       "wikidataQid": "Q272434",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Globe_Theatre",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/London%2C%20UK%20%28August%202014%29%20-%20156.JPG",
-      "detailsJson": "{\"causes\": [\"Organizational need and institutional development\"], \"effects\": [\"Shaped institutional landscape and community development\"], \"relationships\": [{\"sourceSlug\": \"globe-theatre\", \"sourceName\": \"Globe Theatre\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-age-of-exploration\", \"targetName\": \"Age of Exploration\", \"context\": \"Globe Theatre is situated within the Age of Exploration (941)\"}], \"places\": [{\"name\": \"United Kingdom\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Globe Theatre\", \"type\": \"Reference article\", \"slug\": \"globe-theatre\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q272434\", \"https://en.wikipedia.org/wiki/Globe_Theatre\"], \"tags\": [\"United Kingdom\", \"theatre building\", \"Europe\", \"Theaters & Performance Venues\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Globe Theatre contributed to the historical record of the Early Modern period. Key lasting impacts include: Shaped institutional landscape and community development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Organizational need and institutional development\"], \"effects\": [\"Shaped institutional landscape and community development\"], \"relationships\": [{\"sourceSlug\": \"globe-theatre\", \"sourceName\": \"Globe Theatre\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-age-of-exploration\", \"targetName\": \"Age of Exploration\", \"context\": \"Globe Theatre is situated within the Age of Exploration (941)\"}], \"places\": [{\"name\": \"United Kingdom\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Globe Theatre\", \"type\": \"Reference article\", \"slug\": \"globe-theatre\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q272434\", \"https://en.wikipedia.org/wiki/Globe_Theatre\"], \"tags\": [\"United Kingdom\", \"theatre building\", \"Europe\", \"Theaters & Performance Venues\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Globe Theatre contributed to the historical record of the Early Modern period. Key lasting impacts include: Shaped institutional landscape and community development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 7, \"significanceNarrative\": \"The Globe Theatre played a significant role in the development of English theatre and the works of William Shakespeare. Its destruction led to a temporary shift in theatrical performances.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 7, \\\"significanceNarrative\\\": \\\"The Globe Theatre played a significant role in the development of English theatre and the works of William Shakespeare. Its destruction led to a temporary shift in theatrical performances.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-21T03:44:01Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Institutions -- Theaters & Performance Venues -- United Kingdom -- Early Modern"
       ],
@@ -46,7 +46,12 @@
       "$id": "globe-theatre",
       "$sequence": "82750",
       "$createdAt": "2026-04-05T12:21:16.145+00:00",
-      "$updatedAt": "2026-04-05T12:21:16.145+00:00"
+      "$updatedAt": "2026-04-05T12:21:16.145+00:00",
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "The Globe Theatre played a significant role in the development of English theatre and the works of William Shakespeare. Its destruction led to a temporary shift in theatrical performances.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

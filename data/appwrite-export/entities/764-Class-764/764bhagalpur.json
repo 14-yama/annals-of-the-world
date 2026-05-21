@@ -25,7 +25,7 @@
       "wikidataQid": "Q760714",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Bhagalpur",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Prabhatkhabar%20Bhagalpur.jpg",
-      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"bhagalpur\", \"sourceName\": \"Bhagalpur\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Bhagalpur is situated within the Classical (920)\"}], \"places\": [{\"name\": \"India\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Bhagalpur\", \"type\": \"Reference article\", \"slug\": \"bhagalpur\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q760714\", \"https://en.wikipedia.org/wiki/Bhagalpur\"], \"tags\": [\"India\", \"big city\", \"Asia\", \"Architecture & Built Works\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Bhagalpur contributed to the historical record of the Classical period. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"bhagalpur\", \"sourceName\": \"Bhagalpur\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Bhagalpur is situated within the Classical (920)\"}], \"places\": [{\"name\": \"India\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Bhagalpur\", \"type\": \"Reference article\", \"slug\": \"bhagalpur\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q760714\", \"https://en.wikipedia.org/wiki/Bhagalpur\"], \"tags\": [\"India\", \"big city\", \"Asia\", \"Architecture & Built Works\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Bhagalpur contributed to the historical record of the Classical period. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"Bhagalpur's historical significance lies in its role as a major educational hub in Bihar, with three prominent institutions located within its district. This contributes to the region's intellectual and economic growth.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"Bhagalpur's historical significance lies in its role as a major educational hub in Bihar, with three prominent institutions located within its district. This contributes to the region's intellectual and economic growth.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-21T03:39:57Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Artifacts & Texts -- Architecture & Built Works -- India -- Classical"
       ],
@@ -46,7 +46,12 @@
       "$id": "bhagalpur",
       "$sequence": "7953",
       "$createdAt": "2026-04-05T12:06:13.713+00:00",
-      "$updatedAt": "2026-04-05T12:06:13.713+00:00"
+      "$updatedAt": "2026-04-05T12:06:13.713+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "Bhagalpur's historical significance lies in its role as a major educational hub in Bihar, with three prominent institutions located within its district. This contributes to the region's intellectual and economic growth.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
