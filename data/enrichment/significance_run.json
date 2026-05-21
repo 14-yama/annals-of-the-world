@@ -1,22 +1,44 @@
 {
-  "generatedAt": "2026-05-21T08:49:33Z",
+  "generatedAt": "2026-05-21T08:53:21Z",
   "model": "gemini-2.5-flash",
-  "count_requested": 5,
-  "enriched": 5,
-  "failed": 0,
+  "count_requested": 30,
+  "enriched": 28,
+  "failed": 2,
   "dry_run": false,
   "results": [
     {
+      "slug": "eugene-kleiner",
+      "status": "ok",
+      "score": 9,
+      "category": "world-changing"
+    },
+    {
+      "slug": "gerald-hawkins",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
       "slug": "julio-cano-lasso",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "dieter-grau",
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
+    },
+    {
+      "slug": "eleanor-raymond",
       "status": "ok",
       "score": 5,
       "category": "regional"
     },
     {
       "slug": "gordon-bunshaft",
-      "status": "ok",
-      "score": 8,
-      "category": "continental"
+      "status": "error",
+      "reason": "Ollama error: timed out"
     },
     {
       "slug": "pietro-nobile",
@@ -27,18 +49,144 @@
     {
       "slug": "john-alexander-low-waddell",
       "status": "ok",
-      "score": 7,
-      "category": "regional"
+      "score": 8,
+      "category": "continental"
     },
     {
       "slug": "sherwood-washburn",
       "status": "ok",
       "score": 8,
-      "category": "continental"
+      "category": "regional"
+    },
+    {
+      "slug": "peter-broeker",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "henric-sanielevici",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "hans-hofmann",
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
+    },
+    {
+      "slug": "giorgio-grassi",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "daniel-carleton-gajdusek",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "giacomo-della-porta",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "cornelis-floris-ii",
+      "status": "ok",
+      "score": 6,
+      "category": "regional"
+    },
+    {
+      "slug": "matti-suuronen",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "john-ogbu",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "fernando-ortiz-fern\u00e1ndez",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "fernando-ortiz-fernndez",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "jos\u00e9-\u00e2ngelo-cottinelli-telmo",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "jos-ngelo-cottinelli-telmo",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "gunnar-asplund",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "ant\u00e9nor-firmin",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "antnor-firmin",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "herman-f-mark",
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
+    },
+    {
+      "slug": "colin-mackenzie",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "rudolf-wolters",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    },
+    {
+      "slug": "muhammad-\u02bfabdallah-hasan",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "muhammad-abdallah-hasan",
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
     }
   ],
   "summary": {
-    "entities_scored": 5,
-    "failed": 0
+    "entities_scored": 28,
+    "failed": 2
   }
 }
