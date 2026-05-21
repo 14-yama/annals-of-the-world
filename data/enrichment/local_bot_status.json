@@ -55229,12 +55229,12 @@
   "significance-1779399906": {
     "job_id": "significance-1779399906",
     "bot": "significance",
-    "status": "running",
+    "status": "done",
     "model": "ollama",
     "count": 50,
     "pid": 3536045,
     "started": "2026-05-21T21:45:06Z",
-    "finished": null,
+    "finished": "2026-05-21T22:47:26Z",
     "log": [
       "============================================================",
       "SIGNIFICANCE BACKFILL \u2014 up to 50 entities via ollama/llama3.2:3b",
@@ -55391,19 +55391,25 @@
       "[49/50] vincent-wallace (importance=5)",
       "  SCORED \u2014 5/10 (regional): Vincent Wallace's compositions were popular in his day, with notable works like ...",
       "",
-      "[50/50] j-d-souther (importance=5)"
+      "[50/50] j-d-souther (importance=5)",
+      "  SCORED \u2014 7/10 (regional): As a songwriter and musician, J.D. Souther significantly influenced the Southern...",
+      "",
+      "============================================================",
+      "RESULTS: 33 scored, 17 failed",
+      "============================================================",
+      "Report: /home/manasa151/annals-of-the-world/data/enrichment/significance_run.json"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "significance-1779399914": {
     "job_id": "significance-1779399914",
     "bot": "significance",
-    "status": "running",
+    "status": "done",
     "model": "ollama",
     "count": 50,
     "pid": 3536096,
     "started": "2026-05-21T21:45:14Z",
-    "finished": null,
+    "finished": "2026-05-21T22:47:36Z",
     "log": [
       "============================================================",
       "SIGNIFICANCE BACKFILL \u2014 up to 50 entities via ollama/llama3.2:3b",
@@ -55560,9 +55566,15 @@
       "[49/50] vincent-wallace (importance=5)",
       "  SCORED \u2014 5/10 (regional): Vincent Wallace's compositions were popular in his day, with notable works like ...",
       "",
-      "[50/50] j-d-souther (importance=5)"
+      "[50/50] j-d-souther (importance=5)",
+      "  SCORED \u2014 7/10 (regional): As a songwriter and musician, J.D. Souther's contributions to the Southern Calif...",
+      "",
+      "============================================================",
+      "RESULTS: 33 scored, 17 failed",
+      "============================================================",
+      "Report: /home/manasa151/annals-of-the-world/data/enrichment/significance_run.json"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "significance-1779400118": {
     "job_id": "significance-1779400118",
@@ -56150,12 +56162,12 @@
   "sync-1779403618": {
     "job_id": "sync-1779403618",
     "bot": "sync",
-    "status": "running",
+    "status": "done",
     "model": "none",
     "count": 200,
     "pid": 3667792,
     "started": "2026-05-21T22:46:58Z",
-    "finished": null,
+    "finished": "2026-05-21T22:48:38Z",
     "log": [
       "=== sync_gateway: git \u2192 Appwrite ===",
       "Endpoint:  https://fra.cloud.appwrite.io/v1",
@@ -56163,7 +56175,53 @@
       "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
       "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
       "[budget] perRunWriteCap=200 writesUsed=45683/300000 (hardStop=95%)",
-      "[diff] --local mode: scanning for _unsyncedEdits:true files"
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 346 dirty files",
+      "[diff] 346 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 346,",
+      "  \"entitiesUpserted\": 39,",
+      "  \"auditRowsEmitted\": 161,",
+      "  \"writesPerformed\": 200,",
+      "  \"stoppedReason\": \"perRunWriteCap=200 reached during audit emission\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 91694f76"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779403720": {
+    "job_id": "git-push-1779403720",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-21T22:48:40Z",
+    "finished": null,
+    "log": [
+      "Pending files: 37 entities, 0 edges (37 total)",
+      "git add data/appwrite-export/ ..."
+    ],
+    "exitCode": null
+  },
+  "enrich-1779403720": {
+    "job_id": "enrich-1779403720",
+    "bot": "enrich",
+    "status": "running",
+    "model": "ollama",
+    "count": 20,
+    "pid": 3669903,
+    "started": "2026-05-21T22:48:40Z",
+    "finished": null,
+    "log": [
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "============================================================",
+      "AI ENRICHMENT \u2014 20 entities via ollama",
+      "============================================================",
+      "",
+      "[1/20] gojoseon (score=87.24, 0c)"
     ],
     "exitCode": null
   }
