@@ -1,33 +1,38 @@
 {
-  "timestamp": "2026-05-21T15:18:34Z",
+  "timestamp": "2026-05-21T16:23:19Z",
   "model": "ollama",
   "count_requested": 5,
   "enriched": 3,
-  "failed": 1,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "teodoro-paleologo-di-montferrato",
-      "status": "enriched",
-      "old_len": 86,
-      "new_len": 1258
-    },
-    {
-      "slug": "conrad-of-ascoli",
-      "status": "enriched",
-      "old_len": 86,
-      "new_len": 1254
-    },
-    {
-      "slug": "franca-visalta",
+      "slug": "orodes-iv-of-elymais",
       "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "reason": "insufficient effects (0, need >= 2)"
     },
     {
-      "slug": "the-tale-of-genji",
+      "slug": "east-asia",
       "status": "enriched",
-      "old_len": 301,
-      "new_len": 995
+      "old_len": 167,
+      "new_len": 1268
+    },
+    {
+      "slug": "fran\u00e7ois-marie-de-broglie-1st-count-of-broglie",
+      "status": "enriched",
+      "old_len": 116,
+      "new_len": 975
+    },
+    {
+      "slug": "franois-marie-de-broglie-1st-count-of-broglie",
+      "status": "enriched",
+      "old_len": 116,
+      "new_len": 1557
+    },
+    {
+      "slug": "publius-sulpicius-saverrio",
+      "status": "failed",
+      "reason": "insufficient relationships (0, need >= 3)"
     }
   ]
 }
