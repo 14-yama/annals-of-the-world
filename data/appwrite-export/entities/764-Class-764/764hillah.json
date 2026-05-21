@@ -25,7 +25,7 @@
       "wikidataQid": "Q243846",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Hillah",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Hillah%20River.jpg",
-      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"hillah\", \"sourceName\": \"Hillah\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-medieval\", \"targetName\": \"Medieval\", \"context\": \"Hillah is situated within the Medieval (930)\"}], \"places\": [{\"name\": \"Iraq\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Hillah\", \"type\": \"Reference article\", \"slug\": \"hillah\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q243846\", \"https://en.wikipedia.org/wiki/Hillah\"], \"tags\": [\"Iraq\", \"big city\", \"Asia\", \"Architecture & Built Works\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Hillah contributed to the historical record of the Medieval period. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"hillah\", \"sourceName\": \"Hillah\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-medieval\", \"targetName\": \"Medieval\", \"context\": \"Hillah is situated within the Medieval (930)\"}], \"places\": [{\"name\": \"Iraq\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Hillah\", \"type\": \"Reference article\", \"slug\": \"hillah\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q243846\", \"https://en.wikipedia.org/wiki/Hillah\"], \"tags\": [\"Iraq\", \"big city\", \"Asia\", \"Architecture & Built Works\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Hillah contributed to the historical record of the Medieval period. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"As a major agricultural center in medieval West Asia, Hillah played a crucial role in supporting the population of Baghdad and surrounding regions through its extensive irrigation system. The city's strategic location along the Euphrates River made it an important hub for trade and commerce.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"As a major agricultural center in medieval West Asia, Hillah played a crucial role in supporting the population of Baghdad and surrounding regions through its extensive irrigation system. The city's strategic location along the Euphrates River made it an important hub for trade and commerce.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-21T03:37:10Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Artifacts & Texts -- Architecture & Built Works -- Iraq -- Medieval"
       ],
@@ -46,7 +46,12 @@
       "$id": "hillah",
       "$sequence": "28218",
       "$createdAt": "2026-04-05T12:10:18.032+00:00",
-      "$updatedAt": "2026-04-05T12:10:18.032+00:00"
+      "$updatedAt": "2026-04-05T12:10:18.032+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "As a major agricultural center in medieval West Asia, Hillah played a crucial role in supporting the population of Baghdad and surrounding regions through its extensive irrigation system. The city's strategic location along the Euphrates River made it an important hub for trade and commerce.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
