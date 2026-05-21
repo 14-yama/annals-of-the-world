@@ -1,94 +1,35 @@
 {
-  "timestamp": "2026-05-21T13:02:23Z",
+  "timestamp": "2026-05-21T14:18:41Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 14,
-  "failed": 0,
+  "count_requested": 5,
+  "enriched": 0,
+  "failed": 5,
   "dry_run": false,
   "entities": [
     {
-      "slug": "ka",
-      "status": "enriched",
-      "old_len": 165,
-      "new_len": 1447
+      "slug": "nyuserre-ini",
+      "status": "failed",
+      "reason": "insufficient effects (0, need >= 2)"
     },
     {
-      "slug": "manapa-tarhunta",
-      "status": "enriched",
-      "old_len": 165,
-      "new_len": 1204
+      "slug": "king-xiaowen-of-qin",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "rhodogune-of-parthia",
-      "status": "enriched",
-      "old_len": 165,
-      "new_len": 1042
+      "slug": "amanitenmemide",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "oxford",
-      "status": "enriched",
-      "old_len": 165,
-      "new_len": 1111
+      "slug": "peter-ii-of-aragon",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "martim-afonso-de-sousa",
-      "status": "enriched",
-      "old_len": 85,
-      "new_len": 1368
-    },
-    {
-      "slug": "marcus-calpurnius-flamma",
-      "status": "enriched",
-      "old_len": 85,
-      "new_len": 987
-    },
-    {
-      "slug": "publius-cornelius-rufinus",
-      "status": "enriched",
-      "old_len": 85,
-      "new_len": 991
-    },
-    {
-      "slug": "marcus-valerius-messalla-rufus",
-      "status": "enriched",
-      "old_len": 85,
-      "new_len": 1832
-    },
-    {
-      "slug": "andrea-matteo-palmieri",
-      "status": "enriched",
-      "old_len": 85,
-      "new_len": 1961
-    },
-    {
-      "slug": "gabriele-de-gabrielli",
-      "status": "enriched",
-      "old_len": 85,
-      "new_len": 1591
-    },
-    {
-      "slug": "marco-vigerio-della-rovere",
-      "status": "enriched",
-      "old_len": 85,
-      "new_len": 600
-    },
-    {
-      "slug": "leochares",
-      "status": "enriched",
-      "old_len": 85,
-      "new_len": 1172
-    },
-    {
-      "slug": "hecataeus-of-miletus",
-      "status": "enriched",
-      "old_len": 85,
-      "new_len": 1053
-    },
-    {
-      "slug": "laodice-v",
-      "status": "enriched",
-      "old_len": 183,
-      "new_len": 728
+      "slug": "lucius-autronius-paetus",
+      "status": "failed",
+      "reason": "timed out"
     }
   ]
 }
