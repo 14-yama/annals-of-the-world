@@ -1,32 +1,30 @@
 {
-  "timestamp": "2026-05-21T08:19:03Z",
+  "timestamp": "2026-05-21T09:31:48Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 2,
+  "enriched": 0,
+  "failed": 4,
   "dry_run": false,
   "entities": [
     {
-      "slug": "eustorgius-i",
+      "slug": "galeotto-franciotti-della-rovere",
       "status": "failed",
-      "reason": "insufficient causes (0, need >= 2)"
+      "reason": "Unterminated string starting at: line 22 column 1 (char 2179)"
     },
     {
-      "slug": "mershepsesre-ini-ii",
-      "status": "enriched",
-      "old_len": 163,
-      "new_len": 1460
+      "slug": "bartolomeo-roverella",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
     },
     {
-      "slug": "al-mundhir-ii",
+      "slug": "muneko-naishinn",
       "status": "failed",
       "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "nicolaes-molenaer",
-      "status": "enriched",
-      "old_len": 83,
-      "new_len": 749
+      "slug": "vima-kadphises",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
     }
   ]
 }
