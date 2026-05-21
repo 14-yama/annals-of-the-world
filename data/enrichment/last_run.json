@@ -1,30 +1,106 @@
 {
-  "timestamp": "2026-05-21T09:31:48Z",
+  "timestamp": "2026-05-21T09:57:34Z",
   "model": "ollama",
-  "count_requested": 5,
-  "enriched": 0,
-  "failed": 4,
+  "count_requested": 20,
+  "enriched": 16,
+  "failed": 0,
   "dry_run": false,
   "entities": [
     {
+      "slug": "nicolaes-molenaer",
+      "status": "enriched",
+      "old_len": 749,
+      "new_len": 961
+    },
+    {
+      "slug": "publius-manlius-capitolinus",
+      "status": "enriched",
+      "old_len": 83,
+      "new_len": 1209
+    },
+    {
+      "slug": "publius-cornelius-lentulus-caudinus",
+      "status": "enriched",
+      "old_len": 83,
+      "new_len": 924
+    },
+    {
+      "slug": "gnaeus-servilius-caepio",
+      "status": "enriched",
+      "old_len": 83,
+      "new_len": 976
+    },
+    {
+      "slug": "benedict-i",
+      "status": "enriched",
+      "old_len": 83,
+      "new_len": 1571
+    },
+    {
+      "slug": "giovanni-castiglione",
+      "status": "enriched",
+      "old_len": 83,
+      "new_len": 1113
+    },
+    {
       "slug": "galeotto-franciotti-della-rovere",
-      "status": "failed",
-      "reason": "Unterminated string starting at: line 22 column 1 (char 2179)"
+      "status": "enriched",
+      "old_len": 83,
+      "new_len": 1275
     },
     {
       "slug": "bartolomeo-roverella",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 83,
+      "new_len": 1143
+    },
+    {
+      "slug": "hlias-de-saint-yrieix",
+      "status": "enriched",
+      "old_len": 101,
+      "new_len": 1336
     },
     {
       "slug": "muneko-naishinn",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "status": "enriched",
+      "old_len": 101,
+      "new_len": 1257
     },
     {
       "slug": "vima-kadphises",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
+      "status": "enriched",
+      "old_len": 164,
+      "new_len": 1045
+    },
+    {
+      "slug": "st-georges",
+      "status": "enriched",
+      "old_len": 164,
+      "new_len": 1443
+    },
+    {
+      "slug": "gaius-norbanus-flaccus",
+      "status": "enriched",
+      "old_len": 84,
+      "new_len": 1031
+    },
+    {
+      "slug": "eurymedon",
+      "status": "enriched",
+      "old_len": 84,
+      "new_len": 973
+    },
+    {
+      "slug": "amun-her-khepeshef",
+      "status": "enriched",
+      "old_len": 84,
+      "new_len": 1820
+    },
+    {
+      "slug": "gaius-crastinus",
+      "status": "enriched",
+      "old_len": 84,
+      "new_len": 1580
     }
   ]
 }
