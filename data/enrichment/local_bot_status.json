@@ -56714,17 +56714,22 @@
   "git-push-1779418452": {
     "job_id": "git-push-1779418452",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-05-22T02:54:12Z",
-    "finished": null,
+    "finished": "2026-05-22T02:54:16Z",
     "log": [
       "Pending files: 47 entities, 0 edges (47 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 361 local enrichments\"",
+      "[clean/audit-system 6c887eec07] feat(enrich): watchdog auto-push \u2014 361 local enrichments\n 52 files changed, 821 insertions(+), 154 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.",
+      "git push failed \u2014 check SSH/HTTPS credentials: To https://github.com/14-yama/annals-of-the-world.git\n ! [rejected]              clean/audit-system -> clean/audit-system (non-fast-forward)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\nhint: Updates were rejected because the tip of your current branch is behind\nhint: its remote counterpart. If you want to integrate the remote changes,\nhint: use 'git pull' before pushing again.\nhint: See the 'Note about fast-forwards' in 'git push --help' for details.\n"
     ],
-    "exitCode": null
+    "exitCode": 1
   },
   "enrich-1779418452": {
     "job_id": "enrich-1779418452",
@@ -56741,7 +56746,30 @@
       "AI ENRICHMENT \u2014 20 entities via ollama",
       "============================================================",
       "",
-      "[1/20] eucherius-of-orl\u00e9ans (score=87.1, 0c)"
+      "[1/20] eucherius-of-orl\u00e9ans (score=87.1, 0c)",
+      "  ENRICHED \u2014 89c -> 1155c",
+      "",
+      "[2/20] eucherius-of-orlans (score=87.1, 0c)",
+      "  ENRICHED \u2014 89c -> 746c",
+      "",
+      "[3/20] christian-of-oliva (score=87.1, 0c)",
+      "  ENRICHED \u2014 89c -> 1286c",
+      "",
+      "[4/20] euphranor (score=87.1, 0c)",
+      "  ENRICHED \u2014 89c -> 943c",
+      "",
+      "[5/20] theopompus (score=87.1, 0c)",
+      "  ENRICHED \u2014 89c -> 1088c",
+      "",
+      "[6/20] ephorus (score=87.1, 0c)",
+      "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
+      "  ENRICHED \u2014 89c -> 1317c",
+      "",
+      "[7/20] eustace-chapuys (score=87.08, 0c)",
+      "  ENRICHED \u2014 186c -> 1785c",
+      "",
+      "[8/20] henry-white (score=87.06, 0c)",
+      "  RETRY (1) \u2014 Unterminated string starting at: line 1 column 3732 (char 3731)"
     ],
     "exitCode": null
   }

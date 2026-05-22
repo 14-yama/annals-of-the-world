@@ -1,118 +1,32 @@
 {
-  "timestamp": "2026-05-21T22:42:53Z",
+  "timestamp": "2026-05-21T23:23:13Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 18,
-  "failed": 0,
+  "count_requested": 5,
+  "enriched": 2,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "the-rime-of-the-ancient-mariner",
+      "slug": "eucherius-of-orl\u00e9ans",
       "status": "enriched",
       "old_len": 89,
-      "new_len": 1383
+      "new_len": 1263
     },
     {
-      "slug": "ethics",
+      "slug": "eucherius-of-orlans",
       "status": "enriched",
       "old_len": 89,
-      "new_len": 1518
+      "new_len": 1471
     },
     {
-      "slug": "archigenes",
-      "status": "enriched",
-      "old_len": 89,
-      "new_len": 1229
+      "slug": "christian-of-oliva",
+      "status": "failed",
+      "reason": "Expecting ',' delimiter: line 116 column 1 (char 201)"
     },
     {
-      "slug": "nulji-of-silla",
-      "status": "enriched",
-      "old_len": 169,
-      "new_len": 1078
-    },
-    {
-      "slug": "xiang-of-xia",
-      "status": "enriched",
-      "old_len": 169,
-      "new_len": 1737
-    },
-    {
-      "slug": "laodice-i",
-      "status": "enriched",
-      "old_len": 169,
-      "new_len": 1207
-    },
-    {
-      "slug": "artabasdos",
-      "status": "enriched",
-      "old_len": 169,
-      "new_len": 1623
-    },
-    {
-      "slug": "pythagoras-of-samos",
-      "status": "enriched",
-      "old_len": 89,
-      "new_len": 1340
-    },
-    {
-      "slug": "gaius-fundanius-fundulus",
-      "status": "enriched",
-      "old_len": 89,
-      "new_len": 1920
-    },
-    {
-      "slug": "lucius-titinius-pansa-saccus",
-      "status": "enriched",
-      "old_len": 89,
-      "new_len": 815
-    },
-    {
-      "slug": "titus-quinctius-crispinus-sulpicianus",
-      "status": "enriched",
-      "old_len": 89,
-      "new_len": 765
-    },
-    {
-      "slug": "phrynon-of-athens",
-      "status": "enriched",
-      "old_len": 89,
-      "new_len": 1733
-    },
-    {
-      "slug": "john-of-trogir",
-      "status": "enriched",
-      "old_len": 89,
-      "new_len": 1025
-    },
-    {
-      "slug": "george-of-amastris",
-      "status": "enriched",
-      "old_len": 89,
-      "new_len": 878
-    },
-    {
-      "slug": "florentius-of-orange",
-      "status": "enriched",
-      "old_len": 169,
-      "new_len": 1058
-    },
-    {
-      "slug": "amalberga-of-maubeuge",
-      "status": "enriched",
-      "old_len": 89,
-      "new_len": 1393
-    },
-    {
-      "slug": "jean-allarmet-de-brogny",
-      "status": "enriched",
-      "old_len": 89,
-      "new_len": 1324
-    },
-    {
-      "slug": "arbeo-of-freising",
-      "status": "enriched",
-      "old_len": 89,
-      "new_len": 998
+      "slug": "theopompus",
+      "status": "failed",
+      "reason": "insufficient causes (0, need >= 2)"
     }
   ]
 }
