@@ -1,15 +1,16 @@
 {
-  "generatedAt": "2026-05-22T03:31:32Z",
+  "generatedAt": "2026-05-22T04:11:22Z",
   "model": "gemini-2.5-flash",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 1,
+  "failed": 4,
   "dry_run": false,
   "results": [
     {
       "slug": "ana-irene-delgado",
-      "status": "error",
-      "reason": "Ollama error: timed out"
+      "status": "ok",
+      "score": 7,
+      "category": "regional"
     },
     {
       "slug": "henrietta-h-fore",
@@ -17,25 +18,23 @@
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "karl-eikenberry",
-      "status": "ok",
-      "score": 5,
-      "category": "regional"
-    },
-    {
       "slug": "aldona-wos",
       "status": "error",
       "reason": "Ollama error: timed out"
     },
     {
-      "slug": "tony-visconti",
-      "status": "ok",
-      "score": 8,
-      "category": "regional"
+      "slug": "walter-levin",
+      "status": "error",
+      "reason": "Ollama error: timed out"
+    },
+    {
+      "slug": "sneaky-pete-kleinow",
+      "status": "error",
+      "reason": "Ollama error: timed out"
     }
   ],
   "summary": {
-    "entities_scored": 2,
-    "failed": 3
+    "entities_scored": 1,
+    "failed": 4
   }
 }
