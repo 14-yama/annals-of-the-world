@@ -25,7 +25,7 @@
       "wikidataQid": "Q671431",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Prince_Albert,_Saskatchewan",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Prince%20Albert%20Saskatchewan%20in%20fall%2001.JPG",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"prince-albert\", \"sourceName\": \"Prince Albert\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-modern\", \"targetName\": \"Modern\", \"context\": \"Prince Albert is situated within the Modern (950)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Prince Albert\", \"type\": \"Reference article\", \"slug\": \"prince-albert\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q671431\", \"https://en.wikipedia.org/wiki/Prince_Albert,_Saskatchewan\"], \"tags\": [\"Canada\", \"city\", \"Americas\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Prince Albert contributed to the historical record of the Modern period. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"prince-albert\", \"sourceName\": \"Prince Albert\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-modern\", \"targetName\": \"Modern\", \"context\": \"Prince Albert is situated within the Modern (950)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Prince Albert\", \"type\": \"Reference article\", \"slug\": \"prince-albert\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q671431\", \"https://en.wikipedia.org/wiki/Prince_Albert,_Saskatchewan\"], \"tags\": [\"Canada\", \"city\", \"Americas\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Prince Albert contributed to the historical record of the Modern period. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"Prince Albert's location at the geographic centre of Saskatchewan makes it a crucial hub for transportation and trade between northern communities and southern cities. The city's role as a gateway to the north has significant regional economic and social implications.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"Prince Albert's location at the geographic centre of Saskatchewan makes it a crucial hub for transportation and trade between northern communities and southern cities. The city's role as a gateway to the north has significant regional economic and social implications.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-22T06:17:24Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Cities -- Canada -- Modern"
       ],
@@ -46,7 +46,12 @@
       "$id": "prince-albert",
       "$sequence": "730130",
       "$createdAt": "2026-04-05T15:21:04.722+00:00",
-      "$updatedAt": "2026-04-05T15:21:04.722+00:00"
+      "$updatedAt": "2026-04-05T15:21:04.722+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "Prince Albert's location at the geographic centre of Saskatchewan makes it a crucial hub for transportation and trade between northern communities and southern cities. The city's role as a gateway to the north has significant regional economic and social implications.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
