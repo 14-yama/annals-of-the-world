@@ -25,7 +25,7 @@
       "wikidataQid": "Q210811",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Pico_Island",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Picocanal.jpg",
-      "detailsJson": "{\"causes\": [\"Natural geographic formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"pico-island\", \"sourceName\": \"Pico Island\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Pico Island is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Pico Island\", \"type\": \"Reference article\", \"slug\": \"pico-island\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q210811\", \"https://en.wikipedia.org/wiki/Pico_Island\"], \"tags\": [\"Portugal\", \"island\", \"Europe\", \"Maritime & Island Civilizations\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Pico Island contributed to the historical record of the Classical period. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Natural geographic formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"pico-island\", \"sourceName\": \"Pico Island\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Pico Island is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Pico Island\", \"type\": \"Reference article\", \"slug\": \"pico-island\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q210811\", \"https://en.wikipedia.org/wiki/Pico_Island\"], \"tags\": [\"Portugal\", \"island\", \"Europe\", \"Maritime & Island Civilizations\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Pico Island contributed to the historical record of the Classical period. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"Pico Island's unique geology and fertile black volcanic soils have supported a thriving wine industry since the 19th century, with the island's vineyards producing notable wines that have been exported globally.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"Pico Island's unique geology and fertile black volcanic soils have supported a thriving wine industry since the 19th century, with the island's vineyards producing notable wines that have been exported globally.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-22T08:09:00Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Maritime & Island Civilizations -- Portugal -- Classical"
       ],
@@ -46,7 +46,12 @@
       "$id": "pico-island",
       "$sequence": "723629",
       "$createdAt": "2026-04-05T15:19:00.222+00:00",
-      "$updatedAt": "2026-04-05T15:19:00.222+00:00"
+      "$updatedAt": "2026-04-05T15:19:00.222+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "Pico Island's unique geology and fertile black volcanic soils have supported a thriving wine industry since the 19th century, with the island's vineyards producing notable wines that have been exported globally.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
