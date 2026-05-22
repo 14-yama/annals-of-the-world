@@ -25,7 +25,7 @@
       "wikidataQid": "Q740138",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Tel_Hazor",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Tel%20hatzor.JPG",
-      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"tel-hazor\", \"sourceName\": \"Tel Hazor\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Tel Hazor is situated within the Classical (920)\"}], \"places\": [{\"name\": \"Israel\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Tel Hazor\", \"type\": \"Reference article\", \"slug\": \"tel-hazor\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q740138\", \"https://en.wikipedia.org/wiki/Tel_Hazor\"], \"tags\": [\"Israel\", \"archaeological site\", \"Asia\", \"Architecture & Built Works\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Tel Hazor contributed to the historical record of the Classical period. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Cultural, artistic, or intellectual creation\"], \"effects\": [\"Contributed to cultural heritage and knowledge transmission\"], \"relationships\": [{\"sourceSlug\": \"tel-hazor\", \"sourceName\": \"Tel Hazor\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Tel Hazor is situated within the Classical (920)\"}], \"places\": [{\"name\": \"Israel\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Tel Hazor\", \"type\": \"Reference article\", \"slug\": \"tel-hazor\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q740138\", \"https://en.wikipedia.org/wiki/Tel_Hazor\"], \"tags\": [\"Israel\", \"archaeological site\", \"Asia\", \"Architecture & Built Works\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Tel Hazor contributed to the historical record of the Classical period. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 8, \"significanceNarrative\": \"As one of the largest fortified cities in the region during the Iron Age, Hazor played a significant role in commercial trade with Babylon and Syria, and its bronze industry imports had real-world consequences for regional economies. Its importance is further underscored by its mention as 'the head of all those kingdoms' in the Book of Joshua.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 8, \\\"significanceNarrative\\\": \\\"As one of the largest fortified cities in the region during the Iron Age, Hazor played a significant role in commercial trade with Babylon and Syria, and its bronze industry imports had real-world consequences for regional economies. Its importance is further underscored by its mention as 'the head of all those kingdoms' in the Book of Joshua.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-22T13:53:46Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Artifacts & Texts -- Architecture & Built Works -- Israel -- Classical"
       ],
@@ -46,7 +46,12 @@
       "$id": "tel-hazor",
       "$sequence": "22227",
       "$createdAt": "2026-04-05T12:09:02.522+00:00",
-      "$updatedAt": "2026-04-05T12:09:02.522+00:00"
+      "$updatedAt": "2026-04-05T12:09:02.522+00:00",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "As one of the largest fortified cities in the region during the Iron Age, Hazor played a significant role in commercial trade with Babylon and Syria, and its bronze industry imports had real-world consequences for regional economies. Its importance is further underscored by its mention as 'the head of all those kingdoms' in the Book of Joshua.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
