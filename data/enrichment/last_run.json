@@ -1,37 +1,21 @@
 {
-  "timestamp": "2026-05-21T21:17:41Z",
+  "timestamp": "2026-05-21T22:14:53Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 1,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "the-rime-of-the-ancient-mariner",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
-    },
-    {
-      "slug": "ethics",
-      "status": "failed",
-      "reason": "Expecting ',' delimiter: line 66 column 1 (char 1605)"
-    },
-    {
-      "slug": "archigenes",
+      "slug": "gaius-fundanius-fundulus",
       "status": "failed",
       "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "shoshenq-i",
+      "slug": "titus-quinctius-crispinus-sulpicianus",
       "status": "enriched",
-      "old_len": 169,
-      "new_len": 1861
-    },
-    {
-      "slug": "seqenenre-tao",
-      "status": "enriched",
-      "old_len": 169,
-      "new_len": 973
+      "old_len": 89,
+      "new_len": 1403
     }
   ]
 }
