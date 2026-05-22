@@ -25,7 +25,7 @@
       "wikidataQid": "Q706029",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Whyalla",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Whyalla%20town%20view.jpg",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"whyalla\", \"sourceName\": \"Whyalla\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-age-of-empire\", \"targetName\": \"Age of Empire / New Imperialism\", \"context\": \"Whyalla is situated within the Age of Empire / New Imperialism (952)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Whyalla\", \"type\": \"Reference article\", \"slug\": \"whyalla\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q706029\", \"https://en.wikipedia.org/wiki/Whyalla\"], \"tags\": [\"Australia\", \"city\", \"Oceania\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Whyalla contributed to the historical record of the Modern period. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"whyalla\", \"sourceName\": \"Whyalla\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-age-of-empire\", \"targetName\": \"Age of Empire / New Imperialism\", \"context\": \"Whyalla is situated within the Age of Empire / New Imperialism (952)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Whyalla\", \"type\": \"Reference article\", \"slug\": \"whyalla\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q706029\", \"https://en.wikipedia.org/wiki/Whyalla\"], \"tags\": [\"Australia\", \"city\", \"Oceania\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Whyalla contributed to the historical record of the Modern period. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\", \"historicalSignificance\": {\"significanceScore\": 5, \"significanceNarrative\": \"Whyalla's integrated steelworks and shipbuilding heritage played a significant role in South Australia's industrial development during World War II, with the city producing over 1 million tons of steel for the war effort.\", \"significanceCategory\": \"regional\"}, \"_editLog\": [{\"editorId\": \"ollama/llama3.2:3b·local·manasa151-MS-7C56\", \"field\": \"historicalSignificance\", \"oldValue\": \"\", \"newValue\": \"{\\\"significanceScore\\\": 5, \\\"significanceNarrative\\\": \\\"Whyalla's integrated steelworks and shipbuilding heritage played a significant role in South Australia's industrial development during World War II, with the city producing over 1 million tons of steel for the war effort.\\\", \\\"significanceCategory\\\": \\\"regional\\\"}\", \"timestamp\": \"2026-05-22T06:13:16Z\"}], \"_unsyncedEdits\": true}",
       "subjectHeadings": [
         "Places -- Cities -- Australia -- Modern"
       ],
@@ -46,7 +46,12 @@
       "$id": "whyalla",
       "$sequence": "730561",
       "$createdAt": "2026-04-05T15:21:12.922+00:00",
-      "$updatedAt": "2026-04-05T15:21:12.922+00:00"
+      "$updatedAt": "2026-04-05T15:21:12.922+00:00",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "Whyalla's integrated steelworks and shipbuilding heritage played a significant role in South Australia's industrial development during World War II, with the city producing over 1 million tons of steel for the war effort.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }
