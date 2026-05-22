@@ -307,6 +307,38 @@ def call_gemini(prompt, api_key, model="gemini-2.5-flash"):
     raise RuntimeError("Rate limited after 4 retries")
 
 
+def call_github_models(prompt, token, model="gpt-4o-mini"):
+    """Call GitHub Models API (free for Copilot users). OpenAI-compatible.
+    Endpoint: https://models.inference.ai.azure.com
+    Auth: GitHub personal access token or `gh auth token`.
+    Rate limits: ~15 req/min (free), ~150 req/min (Copilot Pro)."""
+    url = "https://models.inference.ai.azure.com/chat/completions"
+    body = json.dumps({
+        "model": model,
+        "messages": [
+            {
+                "role": "system",
+                "content": (
+                    "You are a historical knowledge base enrichment assistant. "
+                    "Return ONLY valid JSON matching the requested schema."
+                ),
+            },
+            {"role": "user", "content": prompt},
+        ],
+        "temperature": 0.7,
+        "response_format": {"type": "json_object"},
+        "max_tokens": 3000,
+    }).encode()
+    req = urllib.request.Request(url, data=body, headers={
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {token}",
+    })
+    with urllib.request.urlopen(req, timeout=90) as resp:
+        data = json.loads(resp.read())
+    text = data["choices"][0]["message"]["content"]
+    return json.loads(text)
+
+
 def call_openai(prompt, api_key, model="gpt-4o-mini"):
     """Call OpenAI API. Paid: ~$0.15/1M input, $0.60/1M output."""
     url = "https://api.openai.com/v1/chat/completions"
@@ -659,8 +691,8 @@ def main():
         help="Number of entities to enrich (default: 25)",
     )
     parser.add_argument(
-        "--model", choices=["gemini", "openai", "ollama"], default="gemini",
-        help="LLM provider: gemini (free, 500 RPD), openai (paid), ollama (local, unlimited)",
+        "--model", choices=["gemini", "openai", "ollama", "github"], default="gemini",
+        help="LLM provider: gemini (free, 500 RPD), openai (paid), ollama (local, unlimited), github (free via Copilot/GH token)",
     )
     parser.add_argument(
         "--gemini-model", default="gemini-2.5-flash",
@@ -673,6 +705,10 @@ def main():
     parser.add_argument(
         "--ollama-model", default="llama3.2:3b",
         help="Ollama model name (default: llama3.2:3b — runs locally, no quota)",
+    )
+    parser.add_argument(
+        "--github-model", default="gpt-4o-mini",
+        help="GitHub Models model name (default: gpt-4o-mini — free with Copilot)",
     )
     parser.add_argument(
         "--dry-run", action="store_true",
@@ -712,6 +748,14 @@ def main():
         except Exception:
             print(f"ERROR: Ollama not running at {OLLAMA_BASE_ENRICH}. Start with: ollama serve")
             sys.exit(1)
+    elif args.model == "github":
+        import subprocess as _sp
+        api_key = (os.environ.get("GITHUB_TOKEN") or
+                   os.environ.get("GH_TOKEN") or
+                   _sp.check_output(["gh", "auth", "token"], text=True).strip())
+        if not api_key and not args.dry_run:
+            print("ERROR: No GitHub token found. Run: gh auth login")
+            sys.exit(1)
     else:
         api_key = os.environ.get("OPENAI_API_KEY", "")
         if not api_key and not args.dry_run:
@@ -724,6 +768,7 @@ def main():
         "gemini": args.gemini_model,
         "openai": args.openai_model,
         "ollama": args.ollama_model,
+        "github": args.github_model,
     }.get(args.model, args.model)
     EDITOR_ID = build_editor_id(args.model, model_name)
     print(f"Editor ID: {EDITOR_ID}")
@@ -815,6 +860,8 @@ def main():
                     result = call_gemini(prompt, api_key, args.gemini_model)
                 elif args.model == "ollama":
                     result = call_ollama(prompt, args.ollama_model)
+                elif args.model == "github":
+                    result = call_github_models(prompt, api_key, args.github_model)
                 else:
                     result = call_openai(prompt, api_key, args.openai_model)
 
@@ -856,11 +903,13 @@ def main():
             "new_len": new_len,
         })
 
-        # Rate limiting: Gemini = 4.5s, OpenAI = 1.5s, Ollama = 0 (local, no quota)
+        # Rate limiting: Gemini = 4.5s, OpenAI = 1.5s, GitHub Models = 5s, Ollama = 0
         if args.model == "gemini":
             delay = 4.5
         elif args.model == "ollama":
             delay = 0  # local model — run as fast as the hardware allows
+        elif args.model == "github":
+            delay = 5.0  # ~12 req/min — safe within free tier 15 req/min limit
         else:
             delay = 1.5
         if delay > 0:

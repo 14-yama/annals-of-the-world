@@ -7,7 +7,7 @@ import {
   Landmark, Layers, Library, Compass, Zap, Image, Sparkles,
 } from 'lucide-react'
 import {
-  type Entity, type EntityRelationship,
+  type Entity, type EntityRelationship, minEdgesForScore,
 } from '../data/entityTypes'
 import { fetchEntity, fetchShelfNeighbors, fetchEntities } from '../services/entityService'
 import {
@@ -1040,6 +1040,65 @@ export default function EntityPage() {
                     </Box>
                   </Flex>
                 </SimpleGrid>
+
+                {/* Historical Significance */}
+                {entity.historicalSignificance && (() => {
+                  const hs = entity.historicalSignificance!
+                  const sigColor = (score: number) =>
+                    score >= 9 ? '#E74C3C' : score >= 7 ? '#E67E22' : score >= 5 ? '#C5963A' : score >= 3 ? '#27AE60' : '#9E9A90'
+                  const catColor = (cat: string) => ({
+                    'world-changing': '#E74C3C', continental: '#E67E22',
+                    regional: '#C5963A', local: '#27AE60',
+                  }[cat] ?? '#9E9A90')
+                  const minEdges = minEdgesForScore(hs.significanceScore)
+                  const currentEdges = entity.relationships.length
+                  const edgePct = minEdges > 0 ? Math.min(100, (currentEdges / minEdges) * 100) : 100
+                  const edgeComplete = currentEdges >= minEdges
+                  return (
+                    <Box mt={5} pt={4} borderTop="1px solid #EEEDEA">
+                      <Flex align="center" gap={2} mb={3}>
+                        <Zap size={14} color="#96770B" />
+                        <Text fontFamily='"Cinzel", serif' fontSize="9px" color="#B8B2A4"
+                          letterSpacing="0.15em" textTransform="uppercase">Historical Significance</Text>
+                      </Flex>
+                      <Flex align="center" gap={3} mb={3}>
+                        <Box w="48px" h="48px" borderRadius="full" flexShrink={0}
+                          border={`3px solid ${sigColor(hs.significanceScore)}`}
+                          display="flex" alignItems="center" justifyContent="center"
+                          bg={`${sigColor(hs.significanceScore)}10`}>
+                          <Text fontSize="18px" fontWeight={800} color={sigColor(hs.significanceScore)}>
+                            {hs.significanceScore}
+                          </Text>
+                        </Box>
+                        <Box>
+                          <Box display="inline-flex" alignItems="center" px={2} py="2px"
+                            borderRadius="full" mb={1}
+                            bg={`${catColor(hs.significanceCategory)}15`}
+                            border={`1px solid ${catColor(hs.significanceCategory)}40`}>
+                            <Text fontSize="10px" fontWeight={700}
+                              color={catColor(hs.significanceCategory)}
+                              textTransform="capitalize" letterSpacing="0.05em">
+                              {hs.significanceCategory}
+                            </Text>
+                          </Box>
+                          <Text fontSize="sm" color="#524E44" lineHeight={1.6}>{hs.significanceNarrative}</Text>
+                        </Box>
+                      </Flex>
+                      <Box>
+                        <Flex justify="space-between" mb={1}>
+                          <Text fontSize="10px" color="#9E9A90">Edge completeness ({currentEdges}/{minEdges} required)</Text>
+                          <Text fontSize="10px" color={edgeComplete ? '#27AE60' : '#E67E22'} fontWeight={600}>
+                            {edgeComplete ? 'Complete' : `${minEdges - currentEdges} more needed`}
+                          </Text>
+                        </Flex>
+                        <Box bg="#F0EFE8" borderRadius="full" h="6px" overflow="hidden">
+                          <Box h="100%" bg={edgeComplete ? '#27AE60' : '#E67E22'}
+                            w={`${edgePct}%`} borderRadius="full" transition="width 0.4s ease" />
+                        </Box>
+                      </Box>
+                    </Box>
+                  )
+                })()}
 
                 {/* Connected Entities */}
                 {entity.relationships.length > 0 && (
