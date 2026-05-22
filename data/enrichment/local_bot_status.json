@@ -66043,17 +66043,22 @@
   "git-push-1779448197": {
     "job_id": "git-push-1779448197",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 34,
     "pid": null,
     "started": "2026-05-22T11:09:57Z",
-    "finished": null,
+    "finished": "2026-05-22T11:10:01Z",
     "log": [
       "Pending files: 34 entities, 0 edges (34 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 65 local enrichments\"",
+      "[clean/audit-system 3b1b056f4a] feat(enrich): watchdog auto-push \u2014 65 local enrichments\n 39 files changed, 533 insertions(+), 128 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   e8bbf91255..3b1b056f4a  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 34 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "enrich-1779448197": {
     "job_id": "enrich-1779448197",
@@ -66136,5 +66141,60 @@
       "Report: data/enrichment/last_run.json"
     ],
     "exitCode": 0
+  },
+  "significance-1779448200": {
+    "job_id": "significance-1779448200",
+    "bot": "significance",
+    "status": "running",
+    "model": "ollama",
+    "count": 30,
+    "pid": 1000855,
+    "started": "2026-05-22T11:10:00Z",
+    "finished": null,
+    "log": [
+      "============================================================",
+      "SIGNIFICANCE BACKFILL \u2014 up to 30 entities via ollama/llama3.2:3b",
+      "  LOCAL MODE \u2014 no API quota, unlimited speed",
+      "============================================================",
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "Building queue...",
+      "Found 30 enriched entities needing significance rating",
+      "",
+      "[1/30] catacombs-of-paris (importance=5)",
+      "  SCORED \u2014 7/10 (regional): The Catacombs of Paris played a crucial role in addressing the city's overcrowde...",
+      "",
+      "[2/30] tsitsernakaberd (importance=5)",
+      "  SCORED \u2014 8/10 (regional): The Armenian Genocide Memorial complex in Yerevan has significant regional impor...",
+      "",
+      "[3/30] bessie-pease-gutmann (importance=5)",
+      "  SCORED \u2014 5/10 (regional): Bessie Pease Gutmann's artwork influenced children's literature and magazine ill...",
+      "",
+      "[4/30] rogi-andr\u00e9 (importance=5)",
+      "  SCORED \u2014 5/10 (regional): Rogi Andr\u00e9's portraits of prominent artists and intellectuals in early 20th-cent...",
+      "",
+      "[5/30] rogi-andr (importance=5)",
+      "  SCORED \u2014 5/10 (regional): Rogi Andr\u00e9's portraits of prominent artists and intellectuals in early 20th-cent...",
+      "",
+      "[6/30] helen-frankenthaler (importance=5)",
+      "  SCORED \u2014 8/10 (continental): Helen Frankenthaler's contributions to postwar American painting influenced a ge...",
+      "",
+      "[7/30] enrique-metinides (importance=5)",
+      "  SCORED \u2014 5/10 (regional): Metinides' work as a crime photographer had significant regional impact in Mexic...",
+      "",
+      "[8/30] alex-toth (importance=5)",
+      "  SCORED \u2014 5/10 (regional): Toth's work on Hanna-Barbera cartoons had a significant impact on the animation ...",
+      "",
+      "[9/30] james-barnor (importance=5)",
+      "  SCORED \u2014 5/10 (regional): James Barnor's photography provides a unique visual record of Ghana's transition...",
+      "",
+      "[10/30] c\u00e9sar-manrique (importance=5)",
+      "  SCORED \u2014 5/10 (regional): C\u00e9sar Manrique's architectural projects in Lanzarote helped preserve the island'...",
+      "",
+      "[11/30] csar-manrique (importance=5)",
+      "  SCORED \u2014 8/10 (regional): C\u00e9sar Manrique's architectural projects in Lanzarote helped preserve the island'...",
+      "",
+      "[12/30] gutzon-borglum (importance=5)"
+    ],
+    "exitCode": null
   }
 }
