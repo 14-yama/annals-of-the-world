@@ -1,37 +1,39 @@
 {
-  "timestamp": "2026-05-21T18:42:06Z",
+  "timestamp": "2026-05-21T20:01:23Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 2,
-  "failed": 3,
+  "enriched": 4,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "gojoseon",
+      "slug": "lucius-roscius-fabatus",
       "status": "enriched",
-      "old_len": 123,
-      "new_len": 657
+      "old_len": 88,
+      "new_len": 889
     },
     {
-      "slug": "gwangjong-of-goryeo",
+      "slug": "flavius-dionysius",
       "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
+      "reason": "insufficient relationships (1, need >= 3)"
     },
     {
-      "slug": "tranquillina",
-      "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
-    },
-    {
-      "slug": "perdiccas-ii-of-macedon",
-      "status": "failed",
-      "reason": "insufficient places (1, need >= 2)"
-    },
-    {
-      "slug": "meles-of-lydia",
+      "slug": "marcus-porcius-cato",
       "status": "enriched",
-      "old_len": 168,
-      "new_len": 1095
+      "old_len": 88,
+      "new_len": 1542
+    },
+    {
+      "slug": "roger-of-cannae",
+      "status": "enriched",
+      "old_len": 88,
+      "new_len": 1019
+    },
+    {
+      "slug": "christiern-pedersen",
+      "status": "enriched",
+      "old_len": 88,
+      "new_len": 1921
     }
   ]
 }
