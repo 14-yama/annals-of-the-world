@@ -65278,17 +65278,22 @@
   "git-push-1779446441": {
     "job_id": "git-push-1779446441",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 43,
     "pid": null,
     "started": "2026-05-22T10:40:41Z",
-    "finished": null,
+    "finished": "2026-05-22T10:40:47Z",
     "log": [
       "Pending files: 43 entities, 0 edges (43 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 115 local enrichments\"",
+      "[clean/audit-system 1d4856a5af] feat(enrich): watchdog auto-push \u2014 115 local enrichments\n 48 files changed, 556 insertions(+), 136 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   aefeb64ffa..1d4856a5af  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 43 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "enrich-1779446442": {
     "job_id": "enrich-1779446442",
@@ -65371,5 +65376,24 @@
       "Report: data/enrichment/last_run.json"
     ],
     "exitCode": 0
+  },
+  "significance-1779446445": {
+    "job_id": "significance-1779446445",
+    "bot": "significance",
+    "status": "running",
+    "model": "ollama",
+    "count": 30,
+    "pid": 950211,
+    "started": "2026-05-22T10:40:45Z",
+    "finished": null,
+    "log": [
+      "============================================================",
+      "SIGNIFICANCE BACKFILL \u2014 up to 30 entities via ollama/llama3.2:3b",
+      "  LOCAL MODE \u2014 no API quota, unlimited speed",
+      "============================================================",
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "Building queue..."
+    ],
+    "exitCode": null
   }
 }
