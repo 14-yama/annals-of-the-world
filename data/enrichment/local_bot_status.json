@@ -67828,17 +67828,22 @@
   "git-push-1779452125": {
     "job_id": "git-push-1779452125",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 25,
     "pid": null,
     "started": "2026-05-22T12:15:25Z",
-    "finished": null,
+    "finished": "2026-05-22T12:15:29Z",
     "log": [
       "Pending files: 25 entities, 0 edges (25 total)",
-      "git add data/appwrite-export/ ..."
+      "git add data/appwrite-export/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 26 local enrichments\"",
+      "[clean/audit-system 501c1eb7aa] feat(enrich): watchdog auto-push \u2014 26 local enrichments\n 30 files changed, 530 insertions(+), 125 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   f4d92f50cc..501c1eb7aa  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 25 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "enrich-1779452125": {
     "job_id": "enrich-1779452125",
@@ -67921,5 +67926,57 @@
       "Report: data/enrichment/last_run.json"
     ],
     "exitCode": 0
+  },
+  "significance-1779452128": {
+    "job_id": "significance-1779452128",
+    "bot": "significance",
+    "status": "running",
+    "model": "ollama",
+    "count": 30,
+    "pid": 1118483,
+    "started": "2026-05-22T12:15:28Z",
+    "finished": null,
+    "log": [
+      "============================================================",
+      "SIGNIFICANCE BACKFILL \u2014 up to 30 entities via ollama/llama3.2:3b",
+      "  LOCAL MODE \u2014 no API quota, unlimited speed",
+      "============================================================",
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "Building queue...",
+      "Found 30 enriched entities needing significance rating",
+      "",
+      "[1/30] ion-vinea (importance=5)",
+      "  SCORED \u2014 5/10 (regional): Ion Vinea's literary work influenced Romanian modernism and his involvement in v...",
+      "",
+      "[2/30] george-ellery-hale (importance=5)",
+      "  SCORED \u2014 8/10 (continental): Hale's discovery of magnetic fields in sunspots and his role in designing severa...",
+      "",
+      "[3/30] ben-hall (importance=5)",
+      "  SCORED \u2014 5/10 (regional): Ben Hall's gang carried out numerous raids across New South Wales, resulting in ...",
+      "",
+      "[4/30] abraham-ortelius (importance=5)",
+      "  SCORED \u2014 8/10 (regional): Ortelius's atlas, published in 1570, marked the beginning of the Golden Age of N...",
+      "",
+      "[5/30] israel-beer (importance=5)",
+      "  SCORED \u2014 5/10 (regional): Israel Beer's espionage conviction had significant regional impact on Israel's i...",
+      "",
+      "[6/30] joseph-l-galloway (importance=5)",
+      "  SCORED \u2014 7/10 (regional): As a journalist and correspondent during the Vietnam War, Joseph L. Galloway pla...",
+      "",
+      "[7/30] weldon-kees (importance=5)",
+      "  SCORED \u2014 8/10 (regional): Weldon Kees's poetry had a significant regional impact on mid-twentieth-century ...",
+      "",
+      "[8/30] marguerite-higgins (importance=5)",
+      "  SCORED \u2014 7/10 (regional): As a pioneering female war correspondent, Marguerite Higgins broke down barriers...",
+      "",
+      "[9/30] laurens-pieter-van-de-spiegel (importance=5)",
+      "  SCORED \u2014 5/10 (regional): As the last Grand Pensionary of the Republic of the Seven United Netherlands, va...",
+      "",
+      "[10/30] robert-duncan (importance=5)",
+      "  SCORED \u2014 5/10 (regional): As a key figure in the San Francisco Renaissance and associated with the New Ame...",
+      "",
+      "[11/30] heinrich-schurtz (importance=5)"
+    ],
+    "exitCode": null
   }
 }
