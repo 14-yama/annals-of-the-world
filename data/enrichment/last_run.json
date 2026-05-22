@@ -1,39 +1,37 @@
 {
-  "timestamp": "2026-05-21T20:01:23Z",
+  "timestamp": "2026-05-21T21:17:41Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 4,
-  "failed": 1,
+  "enriched": 2,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "lucius-roscius-fabatus",
-      "status": "enriched",
-      "old_len": 88,
-      "new_len": 889
-    },
-    {
-      "slug": "flavius-dionysius",
+      "slug": "the-rime-of-the-ancient-mariner",
       "status": "failed",
       "reason": "insufficient relationships (1, need >= 3)"
     },
     {
-      "slug": "marcus-porcius-cato",
-      "status": "enriched",
-      "old_len": 88,
-      "new_len": 1542
+      "slug": "ethics",
+      "status": "failed",
+      "reason": "Expecting ',' delimiter: line 66 column 1 (char 1605)"
     },
     {
-      "slug": "roger-of-cannae",
-      "status": "enriched",
-      "old_len": 88,
-      "new_len": 1019
+      "slug": "archigenes",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
     },
     {
-      "slug": "christiern-pedersen",
+      "slug": "shoshenq-i",
       "status": "enriched",
-      "old_len": 88,
-      "new_len": 1921
+      "old_len": 169,
+      "new_len": 1861
+    },
+    {
+      "slug": "seqenenre-tao",
+      "status": "enriched",
+      "old_len": 169,
+      "new_len": 973
     }
   ]
 }
