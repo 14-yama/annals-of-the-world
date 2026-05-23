@@ -68,6 +68,7 @@ async function ensureCollection(): Promise<void> {
   await apiFetch('POST', `${ENDPOINT}/databases/${DATABASE_ID}/collections`, {
     collectionId: COLLECTION_ID,
     name: 'Enrichment Audit',
+    permissions: ['read("any")'],
     documentSecurity: false,
     enabled: true,
   })
