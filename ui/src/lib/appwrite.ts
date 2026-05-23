@@ -32,8 +32,9 @@ export const COLLECTIONS = {
   EVIDENCE:       'evidence',
   MEDIA:          'media',
   TIMELINE:       'timeline_entries',
-  AUDIT_LOG:      'audit_log',
-  STATS_CACHE:    'stats_cache',
+  AUDIT_LOG:        'audit_log',
+  STATS_CACHE:      'stats_cache',
+  ENRICHMENT_AUDIT: 'enrichment_audit',
 } as const
 
 /* ── Storage bucket IDs ── */
