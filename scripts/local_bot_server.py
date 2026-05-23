@@ -385,15 +385,18 @@ def dispatch_queue() -> str:
     return job_id
 
 
-def dispatch_sync(max_entities: int = 50, local_mode: bool = False) -> str:
+def dispatch_sync(max_entities: int = 50, local_mode: bool = False,
+                  auto_commit: bool = True) -> str:
     """
     Run sync_gateway.ts → push entity JSON to Appwrite + emit audit_log rows.
 
     local_mode=True passes --local to sync_gateway, which scans files with
     _unsyncedEdits:true instead of using git diff. Use this when enrichments
     are written to disk but not yet git-committed (the normal local-bot path).
-    After --local sync completes, always follow up with dispatch_git_push() so
-    the cleared _editLog state is committed back to git.
+
+    auto_commit=True (default): when local_mode is True, automatically chains
+    dispatch_git_push() after sync completes so the cleared _editLog state is
+    always committed back to git — no manual follow-up needed.
     """
     job_id = _new_job("sync", count=max_entities, model="none")
 
@@ -428,12 +431,20 @@ def dispatch_sync(max_entities: int = 50, local_mode: bool = False) -> str:
                     log = log[-200:]
                 _update_job(jid, log=log)
             proc.wait()
+            succeeded = proc.returncode == 0
             _update_job(jid,
-                status="done" if proc.returncode == 0 else "error",
+                status="done" if succeeded else "error",
                 exitCode=proc.returncode,
                 finished=time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
                 log=log,
             )
+            # Auto-commit: when running in local mode, always commit the cleared
+            # _editLog state back to git so files don't accumulate uncommitted.
+            if local_mode and auto_commit:
+                push_jid = dispatch_git_push(
+                    message=f"chore(sync): auto-commit after --local sync ({max_entities} max entities)"
+                )
+                _wait_for_job(push_jid)
         except Exception as exc:
             _update_job(jid, status="error",
                 log=log + [str(exc)],
@@ -612,11 +623,16 @@ def dispatch_git_push(message: str = "") -> str:
                 f"{pending['entities']} entities, {pending['edges']} edges"
             )
 
-            # git add
-            _log("git add data/appwrite-export/ ...")
+            # git add — cover all data dirs and scripts that bots modify
+            _log("git add data/ scripts/ ...")
             r = subprocess.run(
-                ["git", "add", "data/appwrite-export/", "data/enrichment/", "data/governance/"],
-                cwd=str(REPO_ROOT), capture_output=True, text=True, timeout=30,
+                ["git", "add",
+                 "data/appwrite-export/",
+                 "data/enrichment/",
+                 "data/governance/",
+                 "data/audit-reports/",
+                 "scripts/"],
+                cwd=str(REPO_ROOT), capture_output=True, text=True, timeout=60,
             )
             if r.returncode != 0:
                 _log(f"git add failed: {r.stderr}")
