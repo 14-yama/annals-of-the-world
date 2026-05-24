@@ -15,7 +15,7 @@ Usage:
 """
 import json, os, sys, time
 from pathlib import Path
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 ROOT = Path(__file__).parent.parent
 ENTITIES_DIR = ROOT / "data" / "appwrite-export" / "entities"
@@ -152,6 +152,18 @@ def main():
     total_files = 0
     total_entities = 0
 
+    # Velocity tracking: count entities enriched in each period via enrichedAt field
+    now = datetime.now(timezone.utc)
+    cutoffs: dict[str, datetime] = {
+        "24h":   now - timedelta(hours=24),
+        "week":  now - timedelta(days=7),
+        "month": now - timedelta(days=30),
+    }
+    velocity: dict[str, dict] = {
+        p: {"entities_enriched": 0, "became_enriched": 0}
+        for p in cutoffs
+    }
+
     # Walk all entity JSON files
     for class_dir in sorted(ENTITIES_DIR.iterdir()):
         if not class_dir.is_dir():
@@ -200,6 +212,21 @@ def main():
                     key = str(sc)
                     sig_dist[key] = sig_dist.get(key, 0) + 1
 
+                # Velocity tracking — enrichedAt (set by ai_enrich_autonomous.py)
+                enriched_at_str = entity.get("enrichedAt", "") or ""
+                if enriched_at_str:
+                    try:
+                        enriched_dt = datetime.fromisoformat(
+                            enriched_at_str.replace("Z", "+00:00")
+                        )
+                        for period, cutoff in cutoffs.items():
+                            if enriched_dt >= cutoff:
+                                velocity[period]["entities_enriched"] += 1
+                                if cls["is_enriched"]:
+                                    velocity[period]["became_enriched"] += 1
+                    except Exception:
+                        pass
+
         # Progress report every 50 directories
         if total_files % 2000 == 0 and VERBOSE:
             print(f"  … {total_files} files / {total_entities} entities scanned")
@@ -230,6 +257,7 @@ def main():
         "byClass":        by_class,
         "byDivision":     by_division,
         "significanceDist": sig_dist,
+        "velocity": velocity,
     }
 
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
@@ -245,6 +273,9 @@ def main():
     print(f"  Low edges       : {overall['lowEdges']:,}")
     print(f"  Time: {elapsed_ms}ms")
     print(f"  Output: {OUTPUT_FILE}")
+    print(f"\n  Velocity (by enrichedAt field):")
+    for period, v in velocity.items():
+        print(f"    {period}: {v['entities_enriched']:,} entities touched, {v['became_enriched']:,} now enriched")
 
     # Print by-label breakdown
     print(f"\n  By Label:")

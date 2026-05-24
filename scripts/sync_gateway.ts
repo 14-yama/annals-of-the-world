@@ -284,7 +284,15 @@ function entityToPayload(e: Entity): Record<string, unknown> {
     'founded', 'period', 'wikidataQid', 'wikipediaUrl', 'imageUrl',
     'subjectHeadings', 'subjects', 'frameworks', 'summary', 'importanceScore',
   ]
-  for (const k of allowed) if (e[k] !== undefined) out[k] = e[k]
+  for (const k of allowed) {
+    if (e[k] === undefined) continue
+    // Flatten array summaries to string (some entities store summary as paragraph array)
+    if (k === 'summary' && Array.isArray(e[k])) {
+      out[k] = (e[k] as unknown[]).join('\n\n')
+    } else {
+      out[k] = e[k]
+    }
+  }
   out.detailsJson = JSON.stringify(dj)
   return out
 }

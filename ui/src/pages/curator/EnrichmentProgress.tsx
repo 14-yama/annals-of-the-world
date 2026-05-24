@@ -58,11 +58,18 @@ interface RecentEntity {
   importanceScore: number; $updatedAt: string
 }
 
+interface FileScanVelocity {
+  '24h': { entities_enriched: number; became_enriched: number }
+  'week': { entities_enriched: number; became_enriched: number }
+  'month': { entities_enriched: number; became_enriched: number }
+}
+
 interface VelocityStats {
   h24: { total: number; unique: number }
   week: { total: number; atCap: boolean }
   month: { total: number; atCap: boolean }
   oldestEntry: string | null
+  fileScan: FileScanVelocity | null
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
@@ -377,7 +384,8 @@ export default function EnrichmentProgress() {
       const cut7d  = new Date(now.getTime() - 7 * 24 * 3600 * 1000).toISOString()
       const cut30d = new Date(now.getTime() - 30 * 24 * 3600 * 1000).toISOString()
 
-      const [res24h, res7d, res30d] = await Promise.all([
+      // Fetch audit_log counts AND enrichment_audit velocity in parallel
+      const [res24h, res7d, res30d, auditRes] = await Promise.all([
         databases.listDocuments(DATABASE_ID, COLLECTIONS.AUDIT_LOG, [
           Query.greaterThanEqual('timestamp', cut24h),
           Query.limit(500),
@@ -390,17 +398,30 @@ export default function EnrichmentProgress() {
           Query.greaterThanEqual('timestamp', cut30d),
           Query.limit(1),
         ]),
+        databases.listDocuments(DATABASE_ID, COLLECTIONS.ENRICHMENT_AUDIT, [
+          Query.limit(1),
+        ]),
       ])
 
       const unique24h = new Set(
         res24h.documents.map(d => (d as Record<string, unknown>).entitySlug as string)
       ).size
 
+      // Parse file-scan velocity from enrichment_audit.velocity (no 5K cap)
+      let fileScan: FileScanVelocity | null = null
+      if (auditRes.documents.length > 0) {
+        const raw = auditRes.documents[0] as Record<string, unknown>
+        if (raw.velocity && typeof raw.velocity === 'string') {
+          try { fileScan = JSON.parse(raw.velocity) as FileScanVelocity } catch { /* ignore */ }
+        }
+      }
+
       setVelocity({
         h24: { total: res24h.total, unique: unique24h },
         week: { total: res7d.total, atCap: res7d.total >= 5000 },
         month: { total: res30d.total, atCap: res30d.total >= 5000 },
         oldestEntry: '2026-04-12T03:24:33.729Z',  // earliest known audit log entry
+        fileScan,
       })
     } catch { /* non-critical — velocity stats are best-effort */ }
     setVelocityLoading(false)
@@ -521,7 +542,7 @@ export default function EnrichmentProgress() {
               <Flex align="center" gap={2} mb={4}>
                 <Flame size={16} color="#06B6D4" />
                 <Text fontSize="14px" fontWeight={700} color={TEXT}>Enrichment Velocity</Text>
-                <Text fontSize="11px" color={MUTED}>(from audit log · {velocity?.oldestEntry ? `since ${new Date(velocity.oldestEntry).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}` : 'loading...'})</Text>
+                <Text fontSize="11px" color={MUTED}>(file-scan · no 5K cap · updated on each audit run)</Text>
               </Flex>
               {velocityLoading ? (
                 <Flex justify="center" py={4}><Spinner color={ACCENT} size="sm" /></Flex>
@@ -539,16 +560,15 @@ export default function EnrichmentProgress() {
                         <Calendar size={12} color="#06B6D4" />
                       </Flex>
                       <Text fontSize="30px" fontWeight={800} color="#06B6D4" lineHeight={1}>
-                        {velocity.h24.total.toLocaleString()}
+                        {(velocity.fileScan?.['24h']?.entities_enriched ?? 0).toLocaleString()}
                       </Text>
-                      <Text fontSize="11px" color={MUTED} mt={1}>field edits</Text>
+                      <Text fontSize="11px" color={MUTED} mt={1}>entities enriched</Text>
                       <Box mt={3} p={2} bg="rgba(6,182,212,0.08)" borderRadius="6px">
                         <Text fontSize="12px" color={TEXT} fontWeight={600}>
-                          ~{velocity.h24.unique.toLocaleString()}{velocity.h24.total > 500 ? '+' : ''} unique entities
+                          {velocity.h24.total.toLocaleString()} field edits
+                          {' '}(~{velocity.h24.unique.toLocaleString()}{velocity.h24.total > 500 ? '+' : ''} entities)
                         </Text>
-                        <Text fontSize="10px" color={MUTED}>
-                          {velocity.h24.total > 500 ? `(sampled from 500 of ${velocity.h24.total.toLocaleString()})` : 'exact count'}
-                        </Text>
+                        <Text fontSize="10px" color={MUTED}>from audit log</Text>
                       </Box>
                     </Box>
                     {/* 7D */}
@@ -562,15 +582,17 @@ export default function EnrichmentProgress() {
                         <Calendar size={12} color={ACCENT} />
                       </Flex>
                       <Text fontSize="30px" fontWeight={800} color={ACCENT} lineHeight={1}>
-                        {velocity.week.total.toLocaleString()}
+                        {(velocity.fileScan?.['week']?.entities_enriched ?? 0).toLocaleString()}
                       </Text>
-                      <Text fontSize="11px" color={MUTED} mt={1}>field edits</Text>
-                      {velocity.week.atCap && (
-                        <Flex align="center" gap={1} mt={2}>
-                          <Box w="6px" h="6px" borderRadius="full" bg={ORANGE} />
-                          <Text fontSize="10px" color={ORANGE}>At log capacity (5K) — actual higher</Text>
-                        </Flex>
-                      )}
+                      <Text fontSize="11px" color={MUTED} mt={1}>entities enriched</Text>
+                      <Box mt={3} p={2} bg="rgba(99,102,241,0.08)" borderRadius="6px">
+                        <Text fontSize="12px" color={TEXT} fontWeight={600}>
+                          {velocity.week.total.toLocaleString()}{velocity.week.atCap ? '+' : ''} field edits
+                        </Text>
+                        <Text fontSize="10px" color={MUTED}>
+                          {velocity.week.atCap ? 'audit log at cap (5K) — actual higher' : 'from audit log'}
+                        </Text>
+                      </Box>
                     </Box>
                     {/* 30D */}
                     <Box p={4} bg="rgba(245,158,11,0.06)" borderRadius="10px"
@@ -583,28 +605,30 @@ export default function EnrichmentProgress() {
                         <Calendar size={12} color={ORANGE} />
                       </Flex>
                       <Text fontSize="30px" fontWeight={800} color={ORANGE} lineHeight={1}>
-                        {velocity.month.total.toLocaleString()}
+                        {(velocity.fileScan?.['month']?.entities_enriched ?? 0).toLocaleString()}
                       </Text>
-                      <Text fontSize="11px" color={MUTED} mt={1}>field edits in audit log</Text>
-                      {velocity.month.atCap && (
-                        <Flex align="center" gap={1} mt={2}>
-                          <Box w="6px" h="6px" borderRadius="full" bg={ORANGE} />
-                          <Text fontSize="10px" color={ORANGE}>At log capacity — actual total higher</Text>
-                        </Flex>
-                      )}
+                      <Text fontSize="11px" color={MUTED} mt={1}>entities enriched</Text>
+                      <Box mt={3} p={2} bg="rgba(245,158,11,0.08)" borderRadius="6px">
+                        <Text fontSize="12px" color={TEXT} fontWeight={600}>
+                          {velocity.month.total.toLocaleString()}{velocity.month.atCap ? '+' : ''} field edits
+                        </Text>
+                        <Text fontSize="10px" color={MUTED}>
+                          {velocity.month.atCap ? 'audit log at cap (5K) — actual higher' : 'from audit log'}
+                        </Text>
+                      </Box>
                     </Box>
                   </SimpleGrid>
                   {/* Explainer */}
                   <Box p={3} bg="rgba(255,255,255,0.02)" borderRadius="8px"
                     border="1px solid rgba(255,255,255,0.06)">
                     <Text fontSize="11px" color={TEXT_DIM} lineHeight={1.6}>
-                      <Text as="span" fontWeight={700} color={ORANGE}>Why only 2.9% enriched?</Text>
+                      <Text as="span" fontWeight={700} color={ORANGE}>Why only 3% enriched?</Text>
                       {' '}The 392K dataset includes ~273K thin Wikidata Person stubs (no summary text).
-                      {' '}"Enriched" = summary ≥600c = {audit ? audit.enriched.toLocaleString() : '11,562'} entities.
-                      {' '}"Pipeline clean" = all validation gates passed = 2,676 entities.
-                      {' '}Bots have written {velocity.month.total.toLocaleString()}{velocity.month.atCap ? '+' : ''} field edits
-                      {' '}including significance scores, relationships, and partial summaries.
-                      {' '}The audit log holds the latest 5,000 entries — first recorded {velocity.oldestEntry ? new Date(velocity.oldestEntry).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : 'Apr 12, 2026'}.
+                      {' '}"Enriched" = summary ≥600c = {audit ? audit.enriched.toLocaleString() : '11,664'} entities.
+                      {' '}"Pipeline clean" = all validation gates passed = 2,724 entities.
+                      {' '}Entity counts come from a full file-scan (no cap) run at each audit.
+                      {' '}Field edit counts come from the audit log (latest 5,000 entries, since {velocity.oldestEntry ? new Date(velocity.oldestEntry).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : 'Apr 12, 2026'}).
+                      {' '}File-scan velocity uses the{' '}<Text as="code" fontSize="10px" bg="rgba(255,255,255,0.06)" px={1} borderRadius="3px">enrichedAt</Text>{' '}timestamp (set when bots enrich an entity).
                     </Text>
                   </Box>
                 </>

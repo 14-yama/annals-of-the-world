@@ -88,6 +88,7 @@ async function ensureCollection(): Promise<void> {
     { key: 'byClass',           type: 'string',  size: 8192 },
     { key: 'byDivision',        type: 'string',  size: 131072 },
     { key: 'significanceDist',  type: 'string',  size: 2048 },
+    { key: 'velocity',          type: 'string',  size: 2048 },
   ]
 
   const base = `${ENDPOINT}/databases/${DATABASE_ID}/collections/${COLLECTION_ID}/attributes`
@@ -125,6 +126,7 @@ async function upsertDoc(data: Record<string, unknown>): Promise<void> {
     byClass:           JSON.stringify(data.byClass),
     byDivision:        JSON.stringify(data.byDivision),
     significanceDist:  JSON.stringify(data.significanceDist),
+    velocity:          JSON.stringify(data.velocity ?? {}),
   }
 
   // Try PATCH first, then POST if 404

@@ -632,6 +632,10 @@ def apply_enrichment(filepath, slug, result):
         details["_editLog"] = existing_log[-50:]
         details["_unsyncedEdits"] = len(edit_log_entries) > 0 or details.get("_unsyncedEdits", False)
 
+        # Track when this entity was last enriched by a bot (used for velocity stats)
+        if edit_log_entries:
+            entity["enrichedAt"] = timestamp
+
         entity["detailsJson"] = json.dumps(details, ensure_ascii=False)
         break
 
