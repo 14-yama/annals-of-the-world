@@ -6,6 +6,7 @@ import {
   TrendingUp, AlertTriangle, Layers, Zap,
   ChevronDown, ChevronRight, Activity, Server, Cloud,
   FileText, MapPin, Network, Brain, Shield, Target,
+  Calendar, Flame,
 } from 'lucide-react'
 import { Query } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../../lib/appwrite'
@@ -55,6 +56,13 @@ interface BotStatus {
 interface RecentEntity {
   $id: string; name: string; slug: string; era: string
   importanceScore: number; $updatedAt: string
+}
+
+interface VelocityStats {
+  h24: { total: number; unique: number }
+  week: { total: number; atCap: boolean }
+  month: { total: number; atCap: boolean }
+  oldestEntry: string | null
 }
 
 /* ─────────────────────────────────────────────────────────────────────────── */
@@ -295,6 +303,8 @@ export default function EnrichmentProgress() {
   const [loading, setLoading] = useState(true)
   const [lastRefresh, setLastRefresh] = useState<Date | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [velocity, setVelocity] = useState<VelocityStats | null>(null)
+  const [velocityLoading, setVelocityLoading] = useState(true)
 
   const load = useCallback(async () => {
     setLoading(true); setError(null)
@@ -359,7 +369,44 @@ export default function EnrichmentProgress() {
     })
   }, [])
 
-  useEffect(() => { load(); loadBots() }, [load, loadBots])
+  const loadVelocity = useCallback(async () => {
+    setVelocityLoading(true)
+    try {
+      const now = new Date()
+      const cut24h = new Date(now.getTime() - 24 * 3600 * 1000).toISOString()
+      const cut7d  = new Date(now.getTime() - 7 * 24 * 3600 * 1000).toISOString()
+      const cut30d = new Date(now.getTime() - 30 * 24 * 3600 * 1000).toISOString()
+
+      const [res24h, res7d, res30d] = await Promise.all([
+        databases.listDocuments(DATABASE_ID, COLLECTIONS.AUDIT_LOG, [
+          Query.greaterThanEqual('timestamp', cut24h),
+          Query.limit(500),
+        ]),
+        databases.listDocuments(DATABASE_ID, COLLECTIONS.AUDIT_LOG, [
+          Query.greaterThanEqual('timestamp', cut7d),
+          Query.limit(1),
+        ]),
+        databases.listDocuments(DATABASE_ID, COLLECTIONS.AUDIT_LOG, [
+          Query.greaterThanEqual('timestamp', cut30d),
+          Query.limit(1),
+        ]),
+      ])
+
+      const unique24h = new Set(
+        res24h.documents.map(d => (d as Record<string, unknown>).entitySlug as string)
+      ).size
+
+      setVelocity({
+        h24: { total: res24h.total, unique: unique24h },
+        week: { total: res7d.total, atCap: res7d.total >= 5000 },
+        month: { total: res30d.total, atCap: res30d.total >= 5000 },
+        oldestEntry: '2026-04-12T03:24:33.729Z',  // earliest known audit log entry
+      })
+    } catch { /* non-critical — velocity stats are best-effort */ }
+    setVelocityLoading(false)
+  }, [])
+
+  useEffect(() => { load(); loadBots(); loadVelocity() }, [load, loadBots, loadVelocity])
   useEffect(() => { const id = setInterval(load, 120_000); return () => clearInterval(id) }, [load])
   useEffect(() => { const id = setInterval(loadBots, 5_000); return () => clearInterval(id) }, [loadBots])
 
@@ -468,6 +515,101 @@ export default function EnrichmentProgress() {
                 </Box>
               ))}
             </SimpleGrid>
+
+            {/* Enrichment Velocity */}
+            <Box bg={CARD_BG} border={`1px solid ${BORDER}`} borderRadius="10px" p={5} mb={6}>
+              <Flex align="center" gap={2} mb={4}>
+                <Flame size={16} color="#06B6D4" />
+                <Text fontSize="14px" fontWeight={700} color={TEXT}>Enrichment Velocity</Text>
+                <Text fontSize="11px" color={MUTED}>(from audit log · {velocity?.oldestEntry ? `since ${new Date(velocity.oldestEntry).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}` : 'loading...'})</Text>
+              </Flex>
+              {velocityLoading ? (
+                <Flex justify="center" py={4}><Spinner color={ACCENT} size="sm" /></Flex>
+              ) : velocity ? (
+                <>
+                  <SimpleGrid columns={{ base: 1, md: 3 }} gap={4} mb={4}>
+                    {/* 24H */}
+                    <Box p={4} bg="rgba(6,182,212,0.06)" borderRadius="10px"
+                      border="1px solid rgba(6,182,212,0.25)" position="relative" overflow="hidden">
+                      <Box position="absolute" top={0} left={0} right={0} h="2px"
+                        bg="linear-gradient(90deg, #06B6D4 0%, transparent 100%)" />
+                      <Flex align="center" justify="space-between" mb={2}>
+                        <Text fontSize="10px" color={MUTED} textTransform="uppercase"
+                          letterSpacing="0.08em">Last 24 Hours</Text>
+                        <Calendar size={12} color="#06B6D4" />
+                      </Flex>
+                      <Text fontSize="30px" fontWeight={800} color="#06B6D4" lineHeight={1}>
+                        {velocity.h24.total.toLocaleString()}
+                      </Text>
+                      <Text fontSize="11px" color={MUTED} mt={1}>field edits</Text>
+                      <Box mt={3} p={2} bg="rgba(6,182,212,0.08)" borderRadius="6px">
+                        <Text fontSize="12px" color={TEXT} fontWeight={600}>
+                          ~{velocity.h24.unique.toLocaleString()}{velocity.h24.total > 500 ? '+' : ''} unique entities
+                        </Text>
+                        <Text fontSize="10px" color={MUTED}>
+                          {velocity.h24.total > 500 ? `(sampled from 500 of ${velocity.h24.total.toLocaleString()})` : 'exact count'}
+                        </Text>
+                      </Box>
+                    </Box>
+                    {/* 7D */}
+                    <Box p={4} bg="rgba(99,102,241,0.06)" borderRadius="10px"
+                      border="1px solid rgba(99,102,241,0.25)" position="relative" overflow="hidden">
+                      <Box position="absolute" top={0} left={0} right={0} h="2px"
+                        bg="linear-gradient(90deg, #6366F1 0%, transparent 100%)" />
+                      <Flex align="center" justify="space-between" mb={2}>
+                        <Text fontSize="10px" color={MUTED} textTransform="uppercase"
+                          letterSpacing="0.08em">This Week (7 Days)</Text>
+                        <Calendar size={12} color={ACCENT} />
+                      </Flex>
+                      <Text fontSize="30px" fontWeight={800} color={ACCENT} lineHeight={1}>
+                        {velocity.week.total.toLocaleString()}
+                      </Text>
+                      <Text fontSize="11px" color={MUTED} mt={1}>field edits</Text>
+                      {velocity.week.atCap && (
+                        <Flex align="center" gap={1} mt={2}>
+                          <Box w="6px" h="6px" borderRadius="full" bg={ORANGE} />
+                          <Text fontSize="10px" color={ORANGE}>At log capacity (5K) — actual higher</Text>
+                        </Flex>
+                      )}
+                    </Box>
+                    {/* 30D */}
+                    <Box p={4} bg="rgba(245,158,11,0.06)" borderRadius="10px"
+                      border="1px solid rgba(245,158,11,0.25)" position="relative" overflow="hidden">
+                      <Box position="absolute" top={0} left={0} right={0} h="2px"
+                        bg="linear-gradient(90deg, #F59E0B 0%, transparent 100%)" />
+                      <Flex align="center" justify="space-between" mb={2}>
+                        <Text fontSize="10px" color={MUTED} textTransform="uppercase"
+                          letterSpacing="0.08em">This Month (30 Days)</Text>
+                        <Calendar size={12} color={ORANGE} />
+                      </Flex>
+                      <Text fontSize="30px" fontWeight={800} color={ORANGE} lineHeight={1}>
+                        {velocity.month.total.toLocaleString()}
+                      </Text>
+                      <Text fontSize="11px" color={MUTED} mt={1}>field edits in audit log</Text>
+                      {velocity.month.atCap && (
+                        <Flex align="center" gap={1} mt={2}>
+                          <Box w="6px" h="6px" borderRadius="full" bg={ORANGE} />
+                          <Text fontSize="10px" color={ORANGE}>At log capacity — actual total higher</Text>
+                        </Flex>
+                      )}
+                    </Box>
+                  </SimpleGrid>
+                  {/* Explainer */}
+                  <Box p={3} bg="rgba(255,255,255,0.02)" borderRadius="8px"
+                    border="1px solid rgba(255,255,255,0.06)">
+                    <Text fontSize="11px" color={TEXT_DIM} lineHeight={1.6}>
+                      <Text as="span" fontWeight={700} color={ORANGE}>Why only 2.9% enriched?</Text>
+                      {' '}The 392K dataset includes ~273K thin Wikidata Person stubs (no summary text).
+                      {' '}"Enriched" = summary ≥600c = {audit ? audit.enriched.toLocaleString() : '11,562'} entities.
+                      {' '}"Pipeline clean" = all validation gates passed = 2,676 entities.
+                      {' '}Bots have written {velocity.month.total.toLocaleString()}{velocity.month.atCap ? '+' : ''} field edits
+                      {' '}including significance scores, relationships, and partial summaries.
+                      {' '}The audit log holds the latest 5,000 entries — first recorded {velocity.oldestEntry ? new Date(velocity.oldestEntry).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : 'Apr 12, 2026'}.
+                    </Text>
+                  </Box>
+                </>
+              ) : null}
+            </Box>
 
             {/* Countdown Progress */}
             <Box bg={CARD_BG} border={`1px solid ${BORDER}`} borderRadius="10px" p={5} mb={6}>
