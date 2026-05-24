@@ -212657,17 +212657,68 @@
   "git-push-1779666785": {
     "job_id": "git-push-1779666785",
     "bot": "git-push",
-    "status": "error",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 8,
     "pid": null,
     "started": "2026-05-24T23:53:05Z",
-    "finished": "2026-05-24T23:53:07Z",
+    "finished": "2026-05-24T23:53:11Z",
     "log": [
       "Pending files: 8 entities, 0 edges (8 total)",
       "git add data/ scripts/ ...",
-      "git add failed: fatal: Unable to create '/home/manasa151/annals-of-the-world/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n"
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 8 local enrichments\"",
+      "[clean/audit-system 5cd773448dc] feat(enrich): watchdog auto-push \u2014 8 local enrichments\n 11 files changed, 102 insertions(+), 41 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   c39b7a3b2c6..5cd773448dc  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 8 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": 128
+    "exitCode": 0
+  },
+  "sync-1779666914": {
+    "job_id": "sync-1779666914",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 2877556,
+    "started": "2026-05-24T23:55:14Z",
+    "finished": "2026-05-24T23:56:30Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=61980/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 1 dirty files",
+      "[diff] 1 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 1,",
+      "  \"entitiesUpserted\": 1,",
+      "  \"auditRowsEmitted\": 4,",
+      "  \"writesPerformed\": 5,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 5cd77344"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779666990": {
+    "job_id": "git-push-1779666990",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-24T23:56:30Z",
+    "finished": null,
+    "log": [
+      "Pending files: 16 entities, 0 edges (16 total)",
+      "git add data/ scripts/ ..."
+    ],
+    "exitCode": null
   }
 }
