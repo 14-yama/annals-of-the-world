@@ -231,16 +231,11 @@ const SKIP_SYNC_FIELDS = new Set(['texts'])
 function serializeField(val: unknown, key?: string): unknown {
   if (val === null || val === undefined) return null
   if (key && SKIP_SYNC_FIELDS.has(key)) return null
-  if (typeof val === 'string') {
-    const max = key ? FIELD_MAX[key] : undefined
-    return max && val.length > max ? val.slice(0, max) : val
-  }
   if (typeof val === 'number' || typeof val === 'boolean') return val
-  // For arrays/objects: serialize to JSON, truncate if field has explicit max
-  const json = JSON.stringify(val)
+  const s = typeof val === 'string' ? val : JSON.stringify(val)
   const max = key ? FIELD_MAX[key] : undefined
-  if (max && json.length > max) return json.slice(0, max - 3) + '...'
-  return json
+  if (max && s.length > max) return s.slice(0, max)
+  return s
 }
 
 async function ensureStringAttrSize(collId: string, key: string, newSize: number): Promise<void> {
