@@ -3,14 +3,23 @@ gate_triage.py — First gate: filter out entities not worth LLM enrichment.
 
 Rules (all reasons logged to _pipelineState.lastReason):
   REJECT:
-    - duplicate-slug-lesser : another entity with same slug has more content
-    - wikidata-stub-no-edges: importanceScore<3 AND no relationships AND summary<50c AND has wikidataQid
-    - empty-stub           : no summary, no relationships, no causes/effects
-    - slug-invalid         : missing or malformed slug
+    - duplicate-slug-lesser  : another entity with same slug has more content
+    - duplicate-qid-lesser   : another entity shares the same wikidataQid with more content
+    - wikidata-thin-stub     : has QID but minimal narrative (importanceScore<5, no rels/causes/effects)
+    - orphan-empty           : no QID and basically empty narrative
+    - slug-has-underscore    : slug contains '_' — violates kebab-case convention
+    - slug-non-kebab         : slug contains uppercase letters — must be lowercase
+    - slug-invalid           : missing, empty, or otherwise malformed slug
 
   PASS → state=triaged
     - Anything not rejected. Pre-existing high-quality entities go straight here
       and will be fast-tracked through validate (skipping enrich) by run_pipeline.
+
+Slug convention enforced:
+  Ref: docs/guidelines/slug_naming_convention.md
+  - kebab-case ONLY: lowercase letters (including Unicode diacritics), digits, hyphens
+  - NO underscores, NO uppercase, NO consecutive hyphens, NO leading/trailing hyphens
+  - Max 80 characters (soft limit per docs; enforced at 200 to avoid breaking long event slugs)
 
 Output:
     - Updates _pipelineState in each entity file
@@ -36,9 +45,16 @@ from scripts.pipeline.pipeline_state import (  # noqa: E402
     _atomic_write,
 )
 
-# Allow lowercase ASCII + Unicode letters/marks/numbers + hyphens.
-# Many catalog slugs include diacritics (e.g. "claude-lévi-strauss").
-SLUG_RE = re.compile(r"^[\w][\w\-]{1,200}$", re.UNICODE)
+# Strict kebab-case enforcement is done via explicit checks in _classify():
+#   - '_' in slug  → slug-has-underscore
+#   - slug != slug.lower() → slug-non-kebab
+#   - '--' in slug / leading/trailing '-' → slug-invalid
+#
+# This regex is the final sanity gate — it accepts any slug that has no
+# whitespace or control characters and is 1–200 chars long.  We intentionally
+# allow Unicode diacritics (lévi-strauss, nguyễn, alī) and 2-char ISO codes.
+# Ref: docs/guidelines/slug_naming_convention.md §1 Core Rules
+SLUG_RE = re.compile(r"^\S{1,200}$", re.UNICODE)
 REPORT_FILE = REPO_ROOT / "data" / "pipeline" / "triage_report.json"
 
 
@@ -52,8 +68,28 @@ def _content_score(rec: EntityRecord) -> int:
 
 
 def _classify(rec: EntityRecord) -> tuple[str, str]:
-    """Return (state, reason). state ∈ {'triaged', 'rejected'}."""
-    if not rec.slug or not SLUG_RE.match(rec.slug):
+    """Return (state, reason). state ∈ {'triaged', 'rejected'}.
+
+    Slug checks are evaluated in order of specificity so the curator gets
+    a useful rejection reason rather than a generic 'slug-invalid'.
+    Ref: docs/guidelines/slug_naming_convention.md
+    """
+    if not rec.slug:
+        return "rejected", "slug-invalid"
+
+    # Underscore check — most common violation (44 known in dataset)
+    if "_" in rec.slug:
+        return "rejected", "slug-has-underscore"
+
+    # Uppercase check — violates lowercase-only convention
+    if rec.slug != rec.slug.lower():
+        return "rejected", "slug-non-kebab"
+
+    # General kebab-case format: no spaces, no control chars, no consecutive/leading/trailing hyphens
+    if "--" in rec.slug or rec.slug.startswith("-") or rec.slug.endswith("-"):
+        return "rejected", "slug-invalid"
+
+    if not SLUG_RE.match(rec.slug):
         return "rejected", "slug-invalid"
 
     summary_len = len(rec.summary or "")
@@ -93,19 +129,35 @@ def run(limit: int | None = None, dry_run: bool = False) -> dict:
     print(f"[triage] starting — REPO_ROOT={REPO_ROOT}", flush=True)
     started = time.time()
 
-    # First pass: scan & group by slug to detect duplicates
-    print("[triage] pass 1/2 — scanning for duplicate slugs…", flush=True)
+    # First pass: scan & group by slug AND wikidataQid to detect duplicates
+    print("[triage] pass 1/2 — scanning for duplicate slugs & QID collisions…", flush=True)
     slug_owners: dict[str, tuple[Path, int, int]] = {}  # slug → (path, idx, score)
+    qid_owners: dict[str, tuple[Path, int, int]] = {}   # wikidataQid → (path, idx, score)
     scanned = 0
     for rec in iter_entities(limit=limit):
         scanned += 1
         if scanned % 50_000 == 0:
             print(f"  …scanned {scanned:,}", flush=True)
         score = _content_score(rec)
+
+        # Slug-based deduplication
         prev = slug_owners.get(rec.slug)
         if prev is None or score > prev[2]:
             slug_owners[rec.slug] = (rec.file_path, rec.index_in_file, score)
-    print(f"[triage] scanned {scanned:,} entities, {len(slug_owners):,} unique slugs", flush=True)
+
+        # QID-based deduplication — same Wikidata entity encoded differently
+        # (e.g. frédéric-chopin / frdric-chopin / frederic-chopin all have Q1268)
+        if rec.wikidata_qid:
+            prev_qid = qid_owners.get(rec.wikidata_qid)
+            if prev_qid is None or score > prev_qid[2]:
+                qid_owners[rec.wikidata_qid] = (rec.file_path, rec.index_in_file, score)
+
+    print(
+        f"[triage] scanned {scanned:,} entities, "
+        f"{len(slug_owners):,} unique slugs, "
+        f"{len(qid_owners):,} unique QIDs",
+        flush=True,
+    )
 
     # Second pass: classify + write state
     print("[triage] pass 2/2 — classifying & writing state…", flush=True)
@@ -131,6 +183,13 @@ def run(limit: int | None = None, dry_run: bool = False) -> dict:
         owner = slug_owners.get(rec.slug)
         if owner and (owner[0] != rec.file_path or owner[1] != rec.index_in_file):
             new_state, reason = "rejected", "duplicate-slug-lesser"
+        # Duplicate QID: same Wikidata entity encoded under different slugs — keep richest
+        elif rec.wikidata_qid:
+            qid_owner = qid_owners.get(rec.wikidata_qid)
+            if qid_owner and (qid_owner[0] != rec.file_path or qid_owner[1] != rec.index_in_file):
+                new_state, reason = "rejected", "duplicate-qid-lesser"
+            else:
+                new_state, reason = _classify(rec)
         else:
             new_state, reason = _classify(rec)
 
@@ -146,6 +205,7 @@ def run(limit: int | None = None, dry_run: bool = False) -> dict:
         "elapsedSec": round(elapsed, 1),
         "scanned": scanned,
         "uniqueSlugs": len(slug_owners),
+        "uniqueQIDs": len(qid_owners),
         "counts": dict(counts),
         "byReason": dict(by_reason),
         "dryRun": dry_run,

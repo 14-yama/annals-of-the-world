@@ -75,6 +75,16 @@ def _validate(rec: EntityRecord) -> tuple[str, str, dict]:
     if attempts >= MAX_ENRICH_ATTEMPTS and rec.pipeline_state.get("lastGate") == "enrich":
         return "rejected", "max-attempts-exceeded", {"attempts": attempts}
 
+    # Defense-in-depth slug check — triage should have caught these, but if an
+    # entity was validated before slug rules tightened, block it here.
+    # Ref: docs/guidelines/slug_naming_convention.md
+    if not rec.slug:
+        return "rejected", "slug-invalid", {}
+    if "_" in rec.slug:
+        return "rejected", "slug-has-underscore", {}
+    if rec.slug != rec.slug.lower():
+        return "rejected", "slug-non-kebab", {}
+
     # Required fields
     if not rec.label:
         return "triaged", "missing-label", {}

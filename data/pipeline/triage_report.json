@@ -1,17 +1,22 @@
 {
-  "generatedAt": "2026-05-24T00:29:07.052257+00:00",
-  "elapsedSec": 216.6,
+  "generatedAt": "2026-05-24T04:23:56.209024+00:00",
+  "elapsedSec": 359.7,
   "scanned": 392078,
   "uniqueSlugs": 392065,
+  "uniqueQIDs": 346664,
   "counts": {
-    "triaged": 392005,
-    "rejected": 73
+    "triaged": 355337,
+    "rejected": 34049,
+    "validated": 2667,
+    "in-flight": 25
   },
   "byReason": {
-    "pass": 392005,
-    "wikidata-thin-stub": 36,
+    "pass": 355337,
+    "duplicate-qid-lesser": 33962,
+    "wikidata-thin-stub": 28,
     "duplicate-slug-lesser": 13,
-    "slug-invalid": 23,
+    "slug-has-underscore": 44,
+    "slug-non-kebab": 1,
     "orphan-empty": 1
   },
   "dryRun": false
