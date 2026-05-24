@@ -4,6 +4,55 @@
 
 ---
 
+## Update — 2026-05-24
+
+### Pipeline Stadium Gates — QID Dedup + Slug Enforcement + Appwrite Sync
+
+**Summary:** Fully operational 5-gate pipeline (triage → enrich → validate → clean/rejected)
+with strict slug convention enforcement and QID collision deduplication.
+
+**Triage gate (`scripts/pipeline/gate_triage.py`):**
+- **QID collision dedup** — pass 1 builds `qid_owners` map over all 392K entities;
+  pass 2 rejects lesser-scored duplicates as `duplicate-qid-lesser`.
+  Result: 33,962 QID dupes rejected (34,026 QIDs had collisions across 392K entities).
+- **Slug convention** (`docs/guidelines/slug_naming_convention.md`):
+  - `slug-has-underscore` — 44 slugs with `_` rejected
+  - `slug-non-kebab` — 1 slug with uppercase rejected
+  - `slug-invalid` — malformed slugs (consecutive `--`, leading/trailing `-`)
+- **Full triage results:** 355,337 triaged, 34,049 rejected total
+
+**Rejection breakdown:**
+
+| Reason | Count |
+|--------|-------|
+| `duplicate-qid-lesser` | 33,962 |
+| `wikidata-thin-stub` | 28 |
+| `duplicate-slug-lesser` | 13 |
+| `slug-has-underscore` | 44 |
+| `slug-non-kebab` | 1 |
+| `orphan-empty` | 1 |
+
+**Validate gate (`scripts/pipeline/gate_validate.py`):**
+- Edge floor recalibrated: score≥7 → min 5 edges (was 8; enricher produces exactly 5)
+- Added slug format defense-in-depth (rejects any slug-invalid that slipped past triage)
+- 2,676 total validated clean entities
+
+**Appwrite sync (`scripts/push_pipeline_collections.ts`):**
+- `entities_clean`: 2,676 upserted, 0 errors
+- `entities_rejected`: 0 files (pipeline stores rejection state in source files)
+- `pipeline_status/global` doc upserted
+- New Appwrite collections: `entities_clean`, `entities_rejected`, `pipeline_status`
+
+**Pipeline Dashboard (`ui/src/pages/curator/PipelineDashboard.tsx`):**
+- Route: `/curator/pipeline`
+- Stadium-exit flow diagram + KPI grid showing triage/enrich/validate/clean counts
+- Reads live data from `entities_clean` and `pipeline_status` Appwrite collections
+
+**Slug convention reference:** `docs/guidelines/slug_naming_convention.md`
+**Pipeline state storage:** `_pipelineState` embedded in each entity's source JSON
+
+---
+
 ## Update — 2025-07-19
 
 ### Local Ollama ↔ Cloud Bot Parity (Fully Autonomous Local Pipeline)
