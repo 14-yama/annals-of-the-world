@@ -48,7 +48,14 @@
       "$id": "fran_oise-damboise",
       "$sequence": "163227",
       "$createdAt": "2026-04-05T12:37:35.335+00:00",
-      "$updatedAt": "2026-04-05T12:37:35.335+00:00"
+      "$updatedAt": "2026-04-05T12:37:35.335+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:05:20.468594+00:00"
+      }
     },
     {
       "slug": "franoise-damboise",
@@ -99,6 +106,22 @@
         "significanceScore": 7,
         "significanceNarrative": "Françoise d'Amboise was a pioneering female writer and scholar who promoted female empowerment through education, helping shape the literary landscape of late medieval France.",
         "significanceCategory": "regional"
+      },
+      "_pipelineState": {
+        "state": "validated",
+        "attempts": 0,
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T00:38:01.441623+00:00",
+        "gateResults": {
+          "summaryLen": 1228,
+          "paragraphs": 4,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 9,
+          "edgeFloor": 8,
+          "significanceScore": 7
+        }
       }
     }
   ]

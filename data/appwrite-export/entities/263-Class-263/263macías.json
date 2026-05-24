@@ -47,7 +47,14 @@
       "$id": "mac_as",
       "$sequence": "169083",
       "$createdAt": "2026-04-05T12:38:50.616+00:00",
-      "$updatedAt": "2026-04-05T12:38:50.616+00:00"
+      "$updatedAt": "2026-04-05T12:38:50.616+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:03:45.061677+00:00"
+      }
     },
     {
       "slug": "macas",
@@ -90,7 +97,15 @@
       "$id": "macas",
       "$sequence": "737297",
       "$createdAt": "2026-04-05T15:23:23.246+00:00",
-      "$updatedAt": "2026-04-05T15:23:23.246+00:00"
+      "$updatedAt": "2026-04-05T15:23:23.246+00:00",
+      "_pipelineState": {
+        "state": "in-flight",
+        "attempts": 1,
+        "lastGate": "enrich",
+        "lastReason": "claimed-for-llm",
+        "updatedAt": "2026-05-24T02:06:41.877338+00:00",
+        "queuedAt": "2026-05-24T02:06:41.877200+00:00"
+      }
     }
   ]
 }

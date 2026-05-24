@@ -48,7 +48,14 @@
       "$id": "rni-_orl_ksson",
       "$sequence": "175995",
       "$createdAt": "2026-04-05T12:40:15.342+00:00",
-      "$updatedAt": "2026-04-05T12:40:15.342+00:00"
+      "$updatedAt": "2026-04-05T12:40:15.342+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:05:17.503793+00:00"
+      }
     },
     {
       "slug": "rni-orlksson",
@@ -92,7 +99,15 @@
       "$id": "rni-orlksson",
       "$sequence": "761993",
       "$createdAt": "2026-04-05T15:31:13.423+00:00",
-      "$updatedAt": "2026-04-06T00:51:02.138+00:00"
+      "$updatedAt": "2026-04-06T00:51:02.138+00:00",
+      "_pipelineState": {
+        "state": "in-flight",
+        "attempts": 1,
+        "lastGate": "enrich",
+        "lastReason": "claimed-for-llm",
+        "updatedAt": "2026-05-24T02:06:41.880990+00:00",
+        "queuedAt": "2026-05-24T02:06:41.880865+00:00"
+      }
     }
   ]
 }

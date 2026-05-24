@@ -46,7 +46,15 @@
       "$id": "m_el-d_in-mac-conaill",
       "$sequence": "170283",
       "$createdAt": "2026-04-05T12:39:04.602+00:00",
-      "$updatedAt": "2026-04-05T12:39:04.602+00:00"
+      "$updatedAt": "2026-04-05T12:39:04.602+00:00",
+      "_pipelineState": {
+        "state": "in-flight",
+        "attempts": 1,
+        "lastGate": "enrich",
+        "lastReason": "claimed-for-llm",
+        "updatedAt": "2026-05-24T02:06:41.879392+00:00",
+        "queuedAt": "2026-05-24T02:06:41.879266+00:00"
+      }
     },
     {
       "slug": "mel-din-mac-conaill",
@@ -88,7 +96,14 @@
       "$id": "mel-din-mac-conaill",
       "$sequence": "759603",
       "$createdAt": "2026-04-05T15:30:27.523+00:00",
-      "$updatedAt": "2026-04-05T15:30:27.523+00:00"
+      "$updatedAt": "2026-04-05T15:30:27.523+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:03:47.884319+00:00"
+      }
     }
   ]
 }

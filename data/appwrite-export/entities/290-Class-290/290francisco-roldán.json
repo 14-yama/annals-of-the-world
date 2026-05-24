@@ -48,7 +48,14 @@
       "$id": "francisco-rold_n",
       "$sequence": "163146",
       "$createdAt": "2026-04-05T12:37:34.459+00:00",
-      "$updatedAt": "2026-04-05T12:37:34.459+00:00"
+      "$updatedAt": "2026-04-05T12:37:34.459+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:04:55.230814+00:00"
+      }
     },
     {
       "slug": "francisco-roldn",
@@ -101,6 +108,22 @@
         "significanceScore": 7,
         "significanceNarrative": "Francisco Roldán's contributions to the establishment of stable and prosperous colonial administrations in Southern Europe helped lay the groundwork for the long-term success of the Spanish Empire. His efforts to establish a strong presence in the region facilitated trade, commerce, and military operations, leaving a lasting legacy that continues to be studied by historians today.",
         "significanceCategory": "regional"
+      },
+      "_pipelineState": {
+        "state": "validated",
+        "attempts": 0,
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T00:37:36.712282+00:00",
+        "gateResults": {
+          "summaryLen": 1151,
+          "paragraphs": 4,
+          "causes": 1,
+          "effects": 1,
+          "relationships": 9,
+          "edgeFloor": 8,
+          "significanceScore": 7
+        }
       }
     }
   ]

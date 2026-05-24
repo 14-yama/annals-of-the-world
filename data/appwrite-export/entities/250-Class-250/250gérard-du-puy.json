@@ -48,7 +48,14 @@
       "$id": "g_rard-du-puy",
       "$sequence": "147506",
       "$createdAt": "2026-04-05T12:34:21.128+00:00",
-      "$updatedAt": "2026-04-05T12:34:21.128+00:00"
+      "$updatedAt": "2026-04-05T12:34:21.128+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:05:19.574895+00:00"
+      }
     },
     {
       "slug": "grard-du-puy",
@@ -100,6 +107,22 @@
         "significanceScore": 7,
         "significanceNarrative": "Gérard du Puy played a significant role in shaping the Catholic Church's influence on Western European politics and culture during the late medieval period, but his legacy is also marked by controversy over his involvement in the papal conclave that elected Pope Gregory XII.",
         "significanceCategory": "regional"
+      },
+      "_pipelineState": {
+        "state": "validated",
+        "attempts": 0,
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T00:38:00.477633+00:00",
+        "gateResults": {
+          "summaryLen": 1318,
+          "paragraphs": 6,
+          "causes": 2,
+          "effects": 2,
+          "relationships": 10,
+          "edgeFloor": 8,
+          "significanceScore": 7
+        }
       }
     }
   ]

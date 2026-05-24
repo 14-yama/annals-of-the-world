@@ -48,7 +48,14 @@
       "$id": "juan-de-z__iga-y-pimentel",
       "$sequence": "167835",
       "$createdAt": "2026-04-05T12:38:33.065+00:00",
-      "$updatedAt": "2026-04-05T12:38:33.065+00:00"
+      "$updatedAt": "2026-04-05T12:38:33.065+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:05:19.294711+00:00"
+      }
     },
     {
       "slug": "juan-de-ziga-y-pimentel",
@@ -97,6 +104,22 @@
         "significanceScore": 7,
         "significanceNarrative": "Juan de Zúñiga y Pimentel's contributions to the Counter-Reformation helped to promote Catholic orthodoxy and counter the spread of Protestantism, leaving a lasting impact on European society.",
         "significanceCategory": "regional"
+      },
+      "_pipelineState": {
+        "state": "validated",
+        "attempts": 0,
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T00:38:00.166967+00:00",
+        "gateResults": {
+          "summaryLen": 1398,
+          "paragraphs": 4,
+          "causes": 1,
+          "effects": 1,
+          "relationships": 8,
+          "edgeFloor": 8,
+          "significanceScore": 7
+        }
       }
     }
   ]

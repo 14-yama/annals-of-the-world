@@ -48,7 +48,14 @@
       "$id": "guy-par_",
       "$sequence": "164591",
       "$createdAt": "2026-04-05T12:37:53.707+00:00",
-      "$updatedAt": "2026-04-05T12:37:53.707+00:00"
+      "$updatedAt": "2026-04-05T12:37:53.707+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:05:17.637115+00:00"
+      }
     },
     {
       "slug": "guy-par",
@@ -103,6 +110,22 @@
         "significanceScore": 7,
         "significanceNarrative": "Paré played a key role in shaping European politics during this period, working closely with other high-ranking clergy to address the growing threat of heresy and secular power. His influence extended far beyond his own lifetime, however, as he helped establish a new era of monastic renewal that transformed the face of Christianity.",
         "significanceCategory": "regional"
+      },
+      "_pipelineState": {
+        "state": "validated",
+        "attempts": 0,
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T01:49:43.523682+00:00",
+        "gateResults": {
+          "summaryLen": 1720,
+          "paragraphs": 5,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 5,
+          "edgeFloor": 5,
+          "significanceScore": 7
+        }
       }
     }
   ]

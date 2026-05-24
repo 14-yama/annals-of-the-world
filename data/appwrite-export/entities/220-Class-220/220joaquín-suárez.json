@@ -48,14 +48,21 @@
       "$id": "joaqu_n-su_rez",
       "$sequence": "201015",
       "$createdAt": "2026-04-05T12:45:15.803+00:00",
-      "$updatedAt": "2026-04-05T12:45:15.803+00:00"
+      "$updatedAt": "2026-04-05T12:45:15.803+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:03:37.013577+00:00"
+      }
     },
     {
       "slug": "joaqun-surez",
       "name": "Joaquín Suárez",
       "label": "Person",
       "callNumber": "220.joaquín-suárez",
-      "summary": "Joaquín Luis Miguel Suárez de Rondelo was a Uruguayan politician.",
+      "summary": "Joaquín Luis Miguel Suárez de Rondelo (1781–1868) emerged as a foundational figure in the tumultuous birth of the Oriental Republic of Uruguay, serving as its first constitutional President (1843–1852) during the protracted Great War. Born in Canelones, within the Banda Oriental, Suárez transitioned from a merchant and landowner to a fervent advocate for independence from both Spanish and Portuguese-Brazilian dominion, navigating the complex geopolitical currents that shaped the Río de la Plata region in the early 19th century. His political career, spanning over five decades, saw him at the helm of a nascent nation struggling for sovereignty against powerful neighbors and internal factionalism, cementing his legacy as a symbol of Uruguayan resilience and self-determination.\n\nSuárez's political ascent began with his participation in the 1811 Grito de Asencio, signaling the start of the independence movement in the Banda Oriental. He served as a deputy to the Congress of Tres Cruces in 1813, aligning with José Artigas's federalist vision, and later played a crucial role in the Cisplatine War (1825–1828) against Brazil, which ultimately secured Uruguayan independence. As a prominent member of the Colorado Party, he served multiple terms in the General Assembly and held various ministerial posts. His most significant period of leadership occurred during the Siege of Montevideo (1843–1851), when, as President of the Government of Defense, he steered the besieged capital through nearly nine years of conflict against Manuel Oribe's Blanco forces, supported by Argentina's Juan Manuel de Rosas.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Age of Enlightenment",
@@ -69,20 +76,26 @@
       "wikidataQid": "Q280985",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Su%C3%A1rez",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Early Modern era: age of exploration, printing revolution, and religious reformation\", \"type\": \"EventWindow\", \"year\": \"1781-08-18, Canelones\"}, {\"title\": \"Political crises and power transitions requiring new leadership\", \"type\": \"Idea\", \"year\": \"1781-08-18, Canelones\"}], \"effects\": [{\"title\": \"Shaped political institutions and governance practices\", \"type\": \"Idea\", \"year\": \"1868-12-26\"}, {\"title\": \"Contributed to global exchange networks, modern state formation, and scientific revolution\", \"type\": \"Movement\", \"year\": \"1868-12-26\"}], \"relationships\": [{\"sourceSlug\": \"joaqun-surez\", \"sourceName\": \"Joaquín Suárez\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-age-of-enlightenment\", \"targetName\": \"Age of Enlightenment\", \"context\": \"Joaquín Suárez is situated within the Age of Enlightenment (944)\"}, {\"sourceSlug\": \"joaqun-surez\", \"sourceName\": \"Joaquín Suárez\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"canelones\", \"targetName\": \"Canelones\", \"context\": \"Joaquín Suárez is located in Canelones\"}], \"places\": [{\"name\": \"Canelones\", \"role\": \"Birth place\"}, {\"name\": \"Uruguay\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Joaquín Suárez\", \"type\": \"Reference article\", \"slug\": \"joaquín-suárez\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q280985\", \"https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Su%C3%A1rez\"], \"tags\": [\"Uruguay\", \"Political Leaders\", \"Americas\", \"political-systems\", \"geopolitical-linkage\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Joaquín Suárez is remembered as a landmark person of the Early Modern era, referenced in 0 Wikipedia language editions. Key lasting impacts include: Shaped political institutions and governance practices; Contributed to global exchange networks, modern state formation, and scientific revolution. Their legacy is studied through the lens of political thought.\"}",
+      "detailsJson": "{\"causes\":[\"The collapse of Spanish colonial authority in the Río de la Plata region after 1810 created a power vacuum and spurred independence movements.\",\"The struggle between centralist Buenos Aires and federalist aspirations in the Banda Oriental fueled local resistance and the rise of leaders like José Artigas.\",\"Portuguese and Brazilian expansionist ambitions into the Banda Oriental necessitated a strong local defense and political leadership to preserve regional autonomy.\"],\"effects\":[\"Joaquín Suárez's leadership during the Great War ensured the survival of the constitutional government in Montevideo, preventing the absorption of Uruguay by foreign powers.\",\"His sustained presidency (1843–1852) helped consolidate the institutional framework of the nascent Uruguayan state amidst intense civil strife.\",\"Suárez's steadfast resistance against Manuel Oribe and Juan Manuel de Rosas contributed to the eventual defeat of the Blanco-Argentine alliance and the definitive establishment of Uruguayan sovereignty.\"],\"relationships\":[{\"sourceSlug\":\"joaqun-surez\",\"sourceName\":\"Joaquín Suárez\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"cisplatine-war\",\"targetName\":\"Cisplatine War\",\"context\":\"Joaquín Suárez played a key political role in the Cisplatine War (1825–1828), which secured Uruguay's independence from Brazil.\"},{\"sourceSlug\":\"jos-artigas\",\"sourceName\":\"José Artigas\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"joaqun-surez\",\"targetName\":\"Joaquín Suárez\",\"context\":\"José Artigas's federalist ideals and leadership during the early independence struggles significantly influenced Joaquín Suárez's political formation and commitment to regional autonomy.\"},{\"sourceSlug\":\"joaqun-surez\",\"sourceName\":\"Joaquín Suárez\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"montevideo-uruguay\",\"targetName\":\"Montevideo, Uruguay\",\"context\":\"Joaquín Suárez served as President of the Government of Defense in Montevideo during the protracted Siege of Montevideo (1843–1851).\"},{\"sourceSlug\":\"joaqun-surez\",\"sourceName\":\"Joaquín Suárez\",\"verb\":\"COLLABORATES_WITH\",\"targetSlug\":\"fructuoso-rivera\",\"targetName\":\"Fructuoso Rivera\",\"context\":\"Joaquín Suárez politically aligned with Fructuoso Rivera and the Colorado Party, especially during the Great War against the Blancos.\"},{\"sourceSlug\":\"joaqun-surez\",\"sourceName\":\"Joaquín Suárez\",\"verb\":\"CAUSES\",\"targetSlug\":\"consolidation-of-uruguayan-state\",\"targetName\":\"Consolidation of Uruguayan State\",\"context\":\"Joaquín Suárez's resilient leadership during the Great War significantly contributed to the eventual consolidation and recognition of the Uruguayan state.\"}],\"places\":[{\"name\":\"Canelones, Uruguay\",\"role\":\"Birthplace\"},{\"name\":\"Montevideo, Uruguay\",\"role\":\"Center of political activity\"},{\"name\":\"Buenos Aires, Argentina\",\"role\":\"Regional power center\"}],\"texts\":[{\"title\":\"Wikipedia: Joaquín Suárez\",\"type\":\"Reference article\",\"slug\":\"joaquín-suárez\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q280985\",\"https://en.wikipedia.org/wiki/Joaqu%C3%ADn_Su%C3%A1rez\"],\"tags\":[\"Uruguay\",\"Political Leaders\",\"Americas\",\"political-systems\",\"geopolitical-linkage\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Joaquín Suárez is remembered as a landmark person of the Early Modern era, referenced in 0 Wikipedia language editions. Key lasting impacts include: Shaped political institutions and governance practices; Contributed to global exchange networks, modern state formation, and scientific revolution. Their legacy is studied through the lens of political thought.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Joaquín Suárez's unwavering leadership as President of the Government of Defense during the Great War (1843–1852) was instrumental in preserving Uruguay's constitutional government and national sovereignty against significant external and internal threats. His actions directly contributed to the definitive establishment of Uruguay as an independent nation.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Political Leaders — Uruguay — Early Modern"
       ],
       "subjects": [
-        "Uruguay",
-        "Political Leaders",
-        "Americas"
+        "Uruguayan history",
+        "South American independence",
+        "Statesmanship",
+        "Political leadership",
+        "Civil war",
+        "Nineteenth-century politics",
+        "National identity",
+        "Federalism",
+        "Caudillismo",
+        "Colorado Party (Uruguay)"
       ],
       "frameworks": [
-        "POLITICAL_SYSTEMS",
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT",
-        "EMPIRE_AND_COLONIALISM"
+        "DIPLOMATIC_HISTORY",
+        "STRUCTURAL_ANALYSIS",
+        "POSTCOLONIAL_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -92,7 +105,29 @@
       "$id": "joaqun-surez",
       "$sequence": "759934",
       "$createdAt": "2026-04-05T15:30:33.826+00:00",
-      "$updatedAt": "2026-04-05T15:30:33.826+00:00"
+      "$updatedAt": "2026-04-05T15:30:33.826+00:00",
+      "_pipelineState": {
+        "state": "validated",
+        "attempts": 1,
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T01:48:06.208540+00:00",
+        "queuedAt": "2026-05-24T01:13:15.258501+00:00",
+        "gateResults": {
+          "summaryLen": 1613,
+          "paragraphs": 2,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 5,
+          "edgeFloor": 5,
+          "significanceScore": 7
+        }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Joaquín Suárez's unwavering leadership as President of the Government of Defense during the Great War (1843–1852) was instrumental in preserving Uruguay's constitutional government and national sovereignty against significant external and internal threats. His actions directly contributed to the definitive establishment of Uruguay as an independent nation.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

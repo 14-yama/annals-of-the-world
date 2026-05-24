@@ -51,6 +51,22 @@
         "significanceScore": 7,
         "significanceNarrative": "World War II was a pivotal moment in modern history, marking the end of the European colonial era and the beginning of the Cold War. Its legacy continues to shape international relations and global politics today.",
         "significanceCategory": "regional"
+      },
+      "_pipelineState": {
+        "state": "validated",
+        "attempts": 0,
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T00:38:10.222086+00:00",
+        "gateResults": {
+          "summaryLen": 1776,
+          "paragraphs": 5,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 8,
+          "edgeFloor": 8,
+          "significanceScore": 7
+        }
       }
     },
     {
@@ -96,7 +112,14 @@
       "$id": "world_war_ii",
       "$sequence": "1037793",
       "$createdAt": "2026-04-06T00:38:56.063+00:00",
-      "$updatedAt": "2026-04-06T00:38:56.063+00:00"
+      "$updatedAt": "2026-04-06T00:38:56.063+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:05:28.993964+00:00"
+      }
     }
   ]
 }

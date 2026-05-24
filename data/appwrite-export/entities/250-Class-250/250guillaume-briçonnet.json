@@ -48,7 +48,14 @@
       "$id": "guillaume-bri_onnet",
       "$sequence": "164490",
       "$createdAt": "2026-04-05T12:37:52.298+00:00",
-      "$updatedAt": "2026-04-05T12:37:52.298+00:00"
+      "$updatedAt": "2026-04-05T12:37:52.298+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:05:17.248593+00:00"
+      }
     },
     {
       "slug": "guillaume-brionnet",
@@ -97,6 +104,22 @@
         "significanceScore": 7,
         "significanceNarrative": "As a leading figure in the Council of Trent and a key advisor to Pope Julius II, Briçonnet played a crucial role in shaping the Counter-Reformation and promoting Catholic orthodoxy. His contributions have endured for centuries, making him an important regional figure in the history of the Catholic Church.",
         "significanceCategory": "regional"
+      },
+      "_pipelineState": {
+        "state": "validated",
+        "attempts": 0,
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T01:49:43.173298+00:00",
+        "gateResults": {
+          "summaryLen": 1124,
+          "paragraphs": 3,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 6,
+          "edgeFloor": 5,
+          "significanceScore": 7
+        }
       }
     }
   ]

@@ -48,7 +48,14 @@
       "$id": "h_lias-de-saint-yrieix",
       "$sequence": "148058",
       "$createdAt": "2026-04-05T12:34:28.277+00:00",
-      "$updatedAt": "2026-04-05T12:34:28.277+00:00"
+      "$updatedAt": "2026-04-05T12:34:28.277+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:05:17.019127+00:00"
+      }
     },
     {
       "slug": "hlias-de-saint-yrieix",
@@ -101,6 +108,22 @@
         "significanceScore": 7,
         "significanceNarrative": "Hélias de Saint-Yrieix played a pivotal role in shaping Western Europe's ecclesiastical politics during the 14th century through his papal judiciary reforms and diplomatic efforts.",
         "significanceCategory": "regional"
+      },
+      "_pipelineState": {
+        "state": "validated",
+        "attempts": 0,
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T00:37:57.615043+00:00",
+        "gateResults": {
+          "summaryLen": 1336,
+          "paragraphs": 5,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 9,
+          "edgeFloor": 8,
+          "significanceScore": 7
+        }
       }
     }
   ]

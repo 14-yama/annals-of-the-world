@@ -1,9 +1,31 @@
 {
-  "timestamp": "2026-05-23T19:12:19Z",
+  "timestamp": "2026-05-23T22:52:26Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 0,
-  "failed": 0,
+  "count_requested": 5,
+  "enriched": 1,
+  "failed": 3,
   "dry_run": false,
-  "entities": []
+  "entities": [
+    {
+      "slug": "francesco-sassetti",
+      "status": "enriched",
+      "old_len": 41,
+      "new_len": 837
+    },
+    {
+      "slug": "jules-louis-bol-marquis-de-chamlay",
+      "status": "failed",
+      "reason": "insufficient places (1, need >= 2)"
+    },
+    {
+      "slug": "lorenzo-iv-surez-de-figueroa-y-crdoba",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "baldassare-estense",
+      "status": "failed",
+      "reason": "insufficient causes (0, need >= 2)"
+    }
+  ]
 }

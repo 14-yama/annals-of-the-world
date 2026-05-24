@@ -48,7 +48,14 @@
       "$id": "j_nos-forg_ch",
       "$sequence": "351331",
       "$createdAt": "2026-04-05T13:15:17.934+00:00",
-      "$updatedAt": "2026-04-05T13:15:17.934+00:00"
+      "$updatedAt": "2026-04-05T13:15:17.934+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:03:36.594535+00:00"
+      }
     },
     {
       "slug": "jnos-forgch",
@@ -100,6 +107,22 @@
         "significanceScore": 7,
         "significanceNarrative": "Count János Forgách de Ghymes et Gács played a pivotal role in maintaining relations between Austria-Hungary and Italy, Germany, and the United Kingdom during World War I, contributing to preventing conflict and promoting peace.",
         "significanceCategory": "regional"
+      },
+      "_pipelineState": {
+        "state": "validated",
+        "attempts": 0,
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T01:48:05.788607+00:00",
+        "gateResults": {
+          "summaryLen": 1197,
+          "paragraphs": 5,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 7,
+          "edgeFloor": 5,
+          "significanceScore": 7
+        }
       }
     }
   ]

@@ -48,7 +48,14 @@
       "$id": "l_-hi_n-t_ng",
       "$sequence": "169024",
       "$createdAt": "2026-04-05T12:38:49.982+00:00",
-      "$updatedAt": "2026-04-05T12:38:49.982+00:00"
+      "$updatedAt": "2026-04-05T12:38:49.982+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:03:48.107239+00:00"
+      }
     },
     {
       "slug": "l-hin-tng",
@@ -104,6 +111,22 @@
         "significanceScore": 7,
         "significanceNarrative": "Le Hiến Tông's legacy can be seen in the continued development of Vietnamese culture and society during the post-dynastic period. His reforms laid the groundwork for future generations of Vietnamese leaders.",
         "significanceCategory": "regional"
+      },
+      "_pipelineState": {
+        "state": "validated",
+        "attempts": 0,
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T00:36:30.326397+00:00",
+        "gateResults": {
+          "summaryLen": 1483,
+          "paragraphs": 6,
+          "causes": 4,
+          "effects": 4,
+          "relationships": 9,
+          "edgeFloor": 8,
+          "significanceScore": 7
+        }
       }
     }
   ]

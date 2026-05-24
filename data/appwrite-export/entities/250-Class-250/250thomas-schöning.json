@@ -48,7 +48,14 @@
       "$id": "thomas-sch_ning",
       "$sequence": "174413",
       "$createdAt": "2026-04-05T12:39:56.292+00:00",
-      "$updatedAt": "2026-04-05T12:39:56.292+00:00"
+      "$updatedAt": "2026-04-05T12:39:56.292+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:05:20.210409+00:00"
+      }
     },
     {
       "slug": "thomas-schning",
@@ -102,6 +109,22 @@
         "significanceScore": 6,
         "significanceNarrative": "Thomas Schöning's tenure as the last Catholic Archbishop of Riga marks a critical juncture in the region's religious history, effectively concluding Catholic dominance and providing invaluable numismatic evidence for the era. His coins offer precise dating for a tumultuous period, aiding the study of early modern Baltic economic and political transitions.",
         "significanceCategory": "regional"
+      },
+      "_pipelineState": {
+        "state": "validated",
+        "attempts": 0,
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T00:38:01.150126+00:00",
+        "gateResults": {
+          "summaryLen": 1403,
+          "paragraphs": 2,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 5,
+          "edgeFloor": 4,
+          "significanceScore": 6
+        }
       }
     }
   ]

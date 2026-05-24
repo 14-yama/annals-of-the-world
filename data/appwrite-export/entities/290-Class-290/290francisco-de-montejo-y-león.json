@@ -48,7 +48,14 @@
       "$id": "francisco-de-montejo-y-le_n",
       "$sequence": "163164",
       "$createdAt": "2026-04-05T12:37:34.642+00:00",
-      "$updatedAt": "2026-04-05T12:37:34.642+00:00"
+      "$updatedAt": "2026-04-05T12:37:34.642+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:04:55.444322+00:00"
+      }
     },
     {
       "slug": "francisco-de-montejo-y-len",
@@ -115,6 +122,22 @@
         "significanceScore": 7,
         "significanceNarrative": "Montejo's conquest of the Aztec Empire marked a significant turning point in Mexican history and had far-reaching consequences for the indigenous populations.",
         "significanceCategory": "regional"
+      },
+      "_pipelineState": {
+        "state": "validated",
+        "attempts": 0,
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T00:37:36.922937+00:00",
+        "gateResults": {
+          "summaryLen": 1209,
+          "paragraphs": 4,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 8,
+          "edgeFloor": 8,
+          "significanceScore": 7
+        }
       }
     }
   ]

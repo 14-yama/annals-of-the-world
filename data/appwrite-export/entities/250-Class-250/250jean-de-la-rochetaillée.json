@@ -48,7 +48,14 @@
       "$id": "jean-de-la-rochetaill_e",
       "$sequence": "166700",
       "$createdAt": "2026-04-05T12:38:18.567+00:00",
-      "$updatedAt": "2026-04-05T12:38:18.567+00:00"
+      "$updatedAt": "2026-04-05T12:38:18.567+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:05:20.992444+00:00"
+      }
     },
     {
       "slug": "jean-de-la-rochetaille",
@@ -92,7 +99,15 @@
       "$id": "jean-de-la-rochetaille",
       "$sequence": "761858",
       "$createdAt": "2026-04-05T15:31:10.771+00:00",
-      "$updatedAt": "2026-04-06T00:51:00.677+00:00"
+      "$updatedAt": "2026-04-06T00:51:00.677+00:00",
+      "_pipelineState": {
+        "state": "in-flight",
+        "attempts": 1,
+        "lastGate": "enrich",
+        "lastReason": "claimed-for-llm",
+        "updatedAt": "2026-05-24T02:06:41.878208+00:00",
+        "queuedAt": "2026-05-24T02:06:41.878071+00:00"
+      }
     }
   ]
 }

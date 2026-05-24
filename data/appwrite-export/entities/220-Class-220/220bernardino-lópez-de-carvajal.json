@@ -48,7 +48,14 @@
       "$id": "bernardino-l_pez-de-carvajal",
       "$sequence": "160159",
       "$createdAt": "2026-04-05T12:36:57.470+00:00",
-      "$updatedAt": "2026-04-05T12:36:57.470+00:00"
+      "$updatedAt": "2026-04-05T12:36:57.470+00:00",
+      "_pipelineState": {
+        "state": "triaged",
+        "attempts": 0,
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T02:03:34.934090+00:00"
+      }
     },
     {
       "slug": "bernardino-lpez-de-carvajal",
@@ -98,6 +105,22 @@
         "significanceScore": 7,
         "significanceNarrative": "López de Carvajal played a significant role in shaping the Catholic Church's response to the Protestant Reformation and contributed to the development of Catholic doctrine.",
         "significanceCategory": "regional"
+      },
+      "_pipelineState": {
+        "state": "validated",
+        "attempts": 0,
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T01:48:04.138484+00:00",
+        "gateResults": {
+          "summaryLen": 1631,
+          "paragraphs": 5,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 5,
+          "edgeFloor": 5,
+          "significanceScore": 7
+        }
       }
     }
   ]
