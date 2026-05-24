@@ -41,6 +41,7 @@ import {
   Cpu,
   TrendingUp,
   Bot,
+  GitBranch,
 } from 'lucide-react'
 
 /* ── Top-level domain navigation (horizontal) ── */
@@ -207,6 +208,7 @@ const NAV_SECTIONS: NavSection[] = [
       { path: '/curator/people',  label: 'People Hub',       icon: Users },
       { path: '/curator/ollama',  label: 'Ollama Monitor',   icon: Cpu },
       { path: '/curator/enrichment-progress', label: 'Enrichment Progress', icon: TrendingUp },
+      { path: '/curator/pipeline', label: 'Pipeline Dashboard', icon: GitBranch },
       { path: '/quiz',           label: 'Examination Hall', icon: Brain },
     ],
   },

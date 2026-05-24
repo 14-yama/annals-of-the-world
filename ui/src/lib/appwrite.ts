@@ -35,6 +35,9 @@ export const COLLECTIONS = {
   AUDIT_LOG:        'audit_log',
   STATS_CACHE:      'stats_cache',
   ENRICHMENT_AUDIT: 'enrichment_audit',
+  PIPELINE_STATUS:   'pipeline_status',
+  ENTITIES_CLEAN:    'entities_clean',
+  ENTITIES_REJECTED: 'entities_rejected',
 } as const
 
 /* ── Storage bucket IDs ── */

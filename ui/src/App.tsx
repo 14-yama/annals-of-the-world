@@ -45,6 +45,7 @@ import ClassHub from './pages/curator/ClassHub'
 import OllamaMonitor from './pages/curator/OllamaMonitor'
 import EnrichmentProgress from './pages/curator/EnrichmentProgress'
 import BotKpiDashboard from './pages/curator/BotKpiDashboard'
+import PipelineDashboard from './pages/curator/PipelineDashboard'
 
 /** Reset scroll to top on every route change */
 function ScrollToTop() {
@@ -87,6 +88,7 @@ export default function App() {
         <Route path="/curator/bots" element={<BotKpiDashboard />} />
         <Route path="/curator/ollama" element={<OllamaMonitor />} />
         <Route path="/curator/enrichment-progress" element={<EnrichmentProgress />} />
+        <Route path="/curator/pipeline" element={<PipelineDashboard />} />
         <Route path="/weapons" element={<WeaponsPage />} />
         <Route path="/languages" element={<LanguagesPage />} />
         <Route path="/architecture" element={<ArchitecturePage />} />
