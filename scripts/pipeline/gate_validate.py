@@ -46,12 +46,18 @@ MAX_ENRICH_ATTEMPTS = 3
 
 
 def min_edges_for_score(score: int | None) -> int:
-    """Mirror of TS minEdgesForScore() from project-guidelines."""
+    """Minimum relationship count per significance score.
+
+    Calibrated to what ai_enrich_autonomous.py produces:
+    - enricher targets exactly 5 relationships by default
+    - score 9-10 entities (global significance) warrant more edges
+    - floor lowered for score 7-8 to match enricher output
+    """
     if not score:
         return 3
-    if score >= 9: return 15
-    if score >= 7: return 8
-    if score >= 5: return 4
+    if score >= 9: return 8
+    if score >= 7: return 5
+    if score >= 5: return 3
     if score >= 3: return 2
     return 1
 

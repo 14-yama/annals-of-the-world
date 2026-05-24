@@ -111,7 +111,7 @@ async function ensureCleanCollection(): Promise<void> {
   await createStringAttr(id, 'slug',              120)
   await createStringAttr(id, 'label',              50)
   await createStringAttr(id, 'name',              200)
-  await createStringAttr(id, 'callNumber',         40)
+  await createStringAttr(id, 'callNumber',        120)
   await createStringAttr(id, 'era',                40)
   // Content
   await createStringAttr(id, 'summary',          3500)
@@ -123,11 +123,10 @@ async function ensureCleanCollection(): Promise<void> {
   await createStringAttr(id, 'subjects',           512)
   await createStringAttr(id, 'subjectHeadings',   1024)
   await createStringAttr(id, 'places',            2048)
-  await createStringAttr(id, 'texts',             2048)
   await createStringAttr(id, 'quote',              500)
   await createStringAttr(id, 'causes',           16384)
   await createStringAttr(id, 'effects',          16384)
-  await createStringAttr(id, 'relationships',    65536)
+  await createStringAttr(id, 'relationships',    32768)
   // Pipeline metadata
   await createStringAttr(id, 'pipelineStatus',     20)
   await createStringAttr(id, 'promotedAt',         40)
@@ -159,7 +158,7 @@ async function ensureRejectedCollection(): Promise<void> {
 
   await createStringAttr(id, 'slug',        120)
   await createStringAttr(id, 'label',        50)
-  await createStringAttr(id, 'callNumber',   40)
+  await createStringAttr(id, 'callNumber',  120)
   await createStringAttr(id, 'era',          40)
   await createStringAttr(id, 'rejectedAt',   40)
   await createStringAttr(id, 'reason',      100)
@@ -217,22 +216,63 @@ function walkJsonFiles(dir: string): string[] {
   return results
 }
 
-function serializeField(val: unknown): unknown {
+/** Appwrite string attribute sizes — fields that need truncation at sync time */
+const FIELD_MAX: Record<string, number> = {
+  slug: 120, label: 50, name: 200, callNumber: 120, era: 40,
+  wikidataQid: 30, pipelineStatus: 20, promotedAt: 40, sourceFile: 300,
+  reason: 100, lastGate: 40, rejectedAt: 40, generatedAt: 40,
+  subjects: 512, subjectHeadings: 1024, frameworks: 512, places: 2048,
+  historicalSignificance: 2048, gateResults: 2048,
+}
+
+/** Fields that exceed Appwrite collection row budget — skip in sync (full data in local JSON) */
+const SKIP_SYNC_FIELDS = new Set(['texts'])
+
+function serializeField(val: unknown, key?: string): unknown {
   if (val === null || val === undefined) return null
-  if (typeof val === 'string' || typeof val === 'number' || typeof val === 'boolean') return val
-  return JSON.stringify(val)
+  if (key && SKIP_SYNC_FIELDS.has(key)) return null
+  if (typeof val === 'string') {
+    const max = key ? FIELD_MAX[key] : undefined
+    return max && val.length > max ? val.slice(0, max) : val
+  }
+  if (typeof val === 'number' || typeof val === 'boolean') return val
+  // For arrays/objects: serialize to JSON, truncate if field has explicit max
+  const json = JSON.stringify(val)
+  const max = key ? FIELD_MAX[key] : undefined
+  if (max && json.length > max) return json.slice(0, max - 3) + '...'
+  return json
+}
+
+async function ensureStringAttrSize(collId: string, key: string, newSize: number): Promise<void> {
+  try {
+    const attr = await apiFetch('GET',
+      `${ENDPOINT}/databases/${DATABASE_ID}/collections/${collId}/attributes/${key}`) as Record<string,unknown>
+    if (typeof attr.size === 'number' && attr.size < newSize) {
+      await apiFetch('PATCH',
+        `${ENDPOINT}/databases/${DATABASE_ID}/collections/${collId}/attributes/string/${key}`,
+        { size: newSize, required: false, default: null })
+      console.log(`[schema] updated ${collId}.${key} → size ${newSize}`)
+      await new Promise(r => setTimeout(r, 800))
+    }
+  } catch { /* attribute may not exist yet or already correct */ }
 }
 
 async function upsertDoc(collId: string, docId: string, payload: Record<string, unknown>): Promise<void> {
-  const url = `${ENDPOINT}/databases/${DATABASE_ID}/collections/${collId}/documents/${docId}`
+  const collUrl = `${ENDPOINT}/databases/${DATABASE_ID}/collections/${collId}/documents`
+  const docUrl  = `${collUrl}/${docId}`
   try {
-    await apiFetch('PATCH', url, { data: payload })
+    await apiFetch('PATCH', docUrl, { data: payload })
   } catch (e) {
     const msg = e instanceof Error ? e.message : String(e)
-    if (msg.includes('404') || msg.includes('not found')) {
-      await apiFetch('POST', url, { documentId: docId, data: payload })
+    if (msg.includes('404') || msg.includes('not found') || msg.includes('Document with the requested ID could not be found')) {
+      await apiFetch('POST', collUrl, { documentId: docId, data: payload })
     } else throw e
   }
+}
+
+function toDocId(slug: string | undefined, fallback: string): string {
+  const base = slug || fallback
+  return base.replace(/[^a-zA-Z0-9_]/g, '_').replace(/^_+/, 'e').slice(0, 36)
 }
 
 async function syncCleanDocs(): Promise<void> {
@@ -242,11 +282,11 @@ async function syncCleanDocs(): Promise<void> {
   for (const file of files) {
     try {
       const raw = JSON.parse(fs.readFileSync(file, 'utf8'))
-      const docId = raw.slug?.replace(/[^a-zA-Z0-9._-]/g, '_') || path.basename(file, '.json')
+      const docId = toDocId(raw.slug, path.basename(file, '.json'))
       const payload: Record<string, unknown> = {}
       for (const [k, v] of Object.entries(raw)) {
         if (k.startsWith('_') || k === '$id') continue
-        payload[k] = serializeField(v)
+        payload[k] = serializeField(v, k)
       }
       if (DRY_RUN) {
         if (done < 3) console.log(`  DRY: would upsert ${docId}`)
@@ -271,11 +311,11 @@ async function syncRejectedDocs(): Promise<void> {
   for (const file of files) {
     try {
       const raw = JSON.parse(fs.readFileSync(file, 'utf8'))
-      const docId = raw.slug?.replace(/[^a-zA-Z0-9._-]/g, '_') || path.basename(file, '.json')
+      const docId = toDocId(raw.slug, path.basename(file, '.json'))
       const payload: Record<string, unknown> = {}
       for (const [k, v] of Object.entries(raw)) {
         if (k.startsWith('_') || k === '$id') continue
-        payload[k] = serializeField(v)
+        payload[k] = serializeField(v, k)
       }
       if (DRY_RUN) {
         if (done < 3) console.log(`  DRY: would upsert ${docId}`)
@@ -328,6 +368,10 @@ async function main() {
   await ensureCleanCollection()
   await ensureRejectedCollection()
   await ensurePipelineStatusCollection()
+
+  // Upgrade any attributes that were created with smaller sizes
+  await ensureStringAttrSize('entities_clean',    'callNumber', 120)
+  await ensureStringAttrSize('entities_rejected', 'callNumber', 120)
 
   if (!SCHEMA_ONLY) {
     await syncCleanDocs()
