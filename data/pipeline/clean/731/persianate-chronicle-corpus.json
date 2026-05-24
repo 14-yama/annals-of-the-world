@@ -1,0 +1,118 @@
+{
+  "slug": "persianate-chronicle-corpus",
+  "label": "Text",
+  "name": "The Persianate Chronicle Corpus",
+  "callNumber": "731.persianate-chronicle-corpus",
+  "era": "Medieval",
+  "summary": "The Persianate Chronicle Corpus encompasses the vast body of historical, literary, and court literature composed in Persian across a civilizational zone stretching from Anatolia to Bengal (c. 900–1800 CE). Its crown jewel is Ferdowsi's Shahnameh (Book of Kings, c. 1010 CE) — the longest poem ever written by a single author (over 50,000 couplets), narrating Iran's mythological and historical past from creation to the Arab conquest.\n\nThe corpus includes dynastic histories, court chronicles (Tarikh-i Bayhaqi, Jami' al-tawarikh of Rashid al-Din), autobiographical narratives (Baburnama of the Mughal founder Babur), and administrative manuals (Siyasatnama of Nizam al-Mulk). Persian was the lingua franca of court, diplomacy, and high culture across the Islamic East for nearly a millennium, and this literary tradition profoundly shaped the cultural identities of Iran, Afghanistan, Tajikistan, Pakistan, India, Turkey, and Central Asia.",
+  "importanceScore": 0,
+  "wikidataQid": "",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "The Persianate Chronicle Corpus played a pivotal role in shaping regional identity and cultural heritage across the Islamic East, influencing literary and intellectual traditions that span centuries. Its works, including Ferdowsi's Shahnameh, have had lasting impacts on Persian literature and history.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "TEXTUAL_TRANSMISSION",
+    "CULTURAL_DIFFUSION"
+  ],
+  "subjects": [
+    "Shahnameh",
+    "Ferdowsi",
+    "Persian Literature",
+    "Court Chronicles",
+    "Baburnama",
+    "Mughal",
+    "Timurid"
+  ],
+  "subjectHeadings": [
+    "Artifacts & Texts — Historical Texts — Persian Court Literature"
+  ],
+  "places": [
+    {
+      "name": "Isfahan",
+      "role": "Safavid capital and literary center"
+    },
+    {
+      "name": "Herat",
+      "role": "Timurid literary capital"
+    }
+  ],
+  "texts": [],
+  "quote": "",
+  "causes": [
+    {
+      "title": "Samanid dynasty patronizes New Persian literary revival",
+      "type": "Institution",
+      "year": "c. 875 CE"
+    }
+  ],
+  "effects": [
+    {
+      "title": "Shahnameh becomes foundational epic of Iranian national identity",
+      "type": "Text",
+      "year": "c. 1010 CE",
+      "slug": "shahnameh"
+    },
+    {
+      "title": "Persian becomes cultural lingua franca across Islamic East",
+      "type": "Idea",
+      "year": "c. 1000 CE"
+    }
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "persianate-chronicle-corpus",
+      "sourceName": "The Persianate Chronicle Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "shahnameh",
+      "targetName": "Shahnameh",
+      "context": "Longest poem by a single author"
+    },
+    {
+      "sourceSlug": "persianate-chronicle-corpus",
+      "sourceName": "The Persianate Chronicle Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "baburnama",
+      "targetName": "Baburnama",
+      "context": "Mughal founder's autobiography"
+    },
+    {
+      "sourceSlug": "ferdowsi",
+      "sourceName": "Ferdowsi",
+      "verb": "AUTHORS",
+      "targetSlug": "shahnameh",
+      "targetName": "Shāhnāmeh",
+      "context": "Persian national epic composed c. 977–1010 CE"
+    },
+    {
+      "sourceSlug": "persianate-chronicle-corpus",
+      "sourceName": "The Persianate Chronicle Corpus",
+      "verb": "CAUSES",
+      "targetSlug": "shahnameh",
+      "targetName": "Shahnameh becomes foundational epic of Iranian national identity",
+      "context": "Consequent outcome (c. 1010 CE)"
+    },
+    {
+      "sourceSlug": "ferdowsi",
+      "sourceName": "Ferdowsi",
+      "verb": "AUTHORS",
+      "targetSlug": "persianate-chronicle-corpus",
+      "targetName": "The Persianate Chronicle Corpus",
+      "context": "Scholarly tradition of the era"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:48:25.347823+00:00",
+  "gateResults": {
+    "summaryLen": 940,
+    "paragraphs": 2,
+    "causes": 1,
+    "effects": 2,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/731-Class-731/731persianate-chronicle-corpus.json"
+}

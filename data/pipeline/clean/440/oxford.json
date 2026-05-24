@@ -1,0 +1,104 @@
+{
+  "slug": "oxford",
+  "label": "Place",
+  "name": "Oxford",
+  "callNumber": "440.oxford",
+  "era": "Medieval",
+  "summary": "\n\n**Identity & Significance**: Oxford, a city in United Kingdom, was founded in 1000 and became a major center of learning during the Medieval period. Its strategic location facilitated cultural exchange between Northern Europe and other parts of Christendom.\n\n**What Happened**: The city's growth was fueled by its status as a key trade hub and intellectual center. The University of Oxford, established in the 12th century, attracted scholars from across Europe. The city's libraries, such as the Bodleian Library, accumulated vast collections of manuscripts and books.\n\n**Legacy & Consequence**: Oxford's influence extended beyond its walls, shaping medieval thought and culture. The university's emphasis on textual scholarship contributed to the development of humanism during the Renaissance. Its legacy can be seen in the modern city's iconic architecture, such as the Ashmolean Museum, which was founded in 1683.\n\nOxford's role in the transmission of knowledge has been aptly summarized by its own Chancellor, Hugh Lancaster, who said, 'We have not learned to think, but we know that we are thinking.'\n\n",
+  "importanceScore": 8,
+  "wikidataQid": "Q34217",
+  "historicalSignificance": {
+    "significanceScore": 7,
+    "significanceNarrative": "Oxford's role in the transmission of knowledge during the Medieval period had a lasting impact on Western intellectual history.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "CULTURAL_TRANSMISSION"
+  ],
+  "subjects": [
+    "Medieval Oxford",
+    "University of Oxford",
+    "Bodleian Library",
+    "Humanism",
+    "Renaissance",
+    "Ashmolean Museum"
+  ],
+  "subjectHeadings": [
+    "Places -- Cities -- United Kingdom -- Medieval"
+  ],
+  "places": [
+    {
+      "name": "Oxford, United Kingdom",
+      "role": "City"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Oxford",
+      "type": "Reference article",
+      "slug": "oxford"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "The establishment of the University of Oxford in 1167 attracted scholars from across Europe, creating a hub for intellectual inquiry and cultural exchange."
+  ],
+  "effects": [
+    "The city's growth led to the development of numerous libraries, including the Bodleian Library, which accumulated vast collections of manuscripts and books during the Medieval period."
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "university-of-oxford",
+      "sourceName": "University of Oxford",
+      "verb": "CONTAINS",
+      "targetSlug": "bodleian-library",
+      "targetName": "Bodleian Library",
+      "context": "A major repository for medieval manuscripts and books."
+    },
+    {
+      "sourceSlug": "university-of-oxford",
+      "sourceName": "University of Oxford",
+      "verb": "INFLUENCES",
+      "targetSlug": "southern-england",
+      "targetName": "Southern England",
+      "context": "A key location in the medieval trade network."
+    },
+    {
+      "sourceSlug": "medieval-christendom",
+      "sourceName": "Medieval Christendom",
+      "verb": "INFLUENCES",
+      "targetSlug": "oxford",
+      "targetName": "Oxford",
+      "context": "A major center of learning and intellectual inquiry during the Medieval period."
+    },
+    {
+      "sourceSlug": "humanism",
+      "sourceName": "Humanism",
+      "verb": "CREATES",
+      "targetSlug": "renaissance",
+      "targetName": "Renaissance",
+      "context": "Oxford's emphasis on textual scholarship contributed to the development of humanist ideas during the 15th and 16th centuries."
+    },
+    {
+      "sourceSlug": "university-of-oxford",
+      "sourceName": "University of Oxford",
+      "verb": "SUCCEEDS",
+      "targetSlug": "ashmolean-museum",
+      "targetName": "Ashmolean Museum",
+      "context": "A major repository for art and cultural artifacts."
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:48:29.299414+00:00",
+  "gateResults": {
+    "summaryLen": 1111,
+    "paragraphs": 4,
+    "causes": 1,
+    "effects": 1,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 7
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/440-Class-440/440oxford.json"
+}

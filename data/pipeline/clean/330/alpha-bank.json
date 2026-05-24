@@ -1,0 +1,87 @@
+{
+  "slug": "alpha-bank",
+  "label": "Institution",
+  "name": "Alpha Bank",
+  "callNumber": "330.alpha-bank",
+  "era": "Modern",
+  "summary": "Alpha Bank, founded 1879 in Kalamata, Greece by Ioannis F. Costopoulos, is one of Greece's four systemic banks — a major lender that survived the Greek financial crisis (2010-2018) through recapitalization, asset sales, and loan restructuring, and is now (with €80 billion in assets) one of the most important financial institutions in southeastern Europe. Alpha Bank's history traces Greek economic development from the 19th-century Kingdom of Greece through the 20th-century industrialization and the 21st-century sovereign debt crisis.\n\nThe Costopoulos family maintained bank ownership across generations from 1879 through the 20th century, making Alpha Bank Greece's most important family-controlled bank. Alpha Bank's growth through the 20th century tracked Greece's economic expansion: from a Peloponnesian regional bank to a national lender. The 1993-2000 Balkan expansion — establishing operations in Albania, Bulgaria, Serbia, Romania, and Cyprus — positioned Alpha Bank as a southeastern European financial institution.\n\nThe 2010-2018 Greek crisis: Greece's sovereign debt crisis triggered a banking crisis — Greek banks held massive amounts of Greek government bonds that were restructured at 50%+ losses (PSI 2012). Alpha Bank required two recapitalizations (2012 and 2015) from the Hellenic Financial Stability Fund, receiving €4+ billion in state support. The bank's non-performing loan (NPL) ratio reached 50%+ at peak crisis; it declined to 8% by 2023 through securitization programs (Project Galaxy, COSMOS). The 2023 partial privatization saw the Greek state's HFSF stake reduced to below 10%.",
+  "importanceScore": 4,
+  "wikidataQid": "Q747394",
+  "historicalSignificance": {
+    "significanceScore": 6,
+    "significanceNarrative": "Alpha Bank's survival through the Greek financial crisis — the most severe banking stress test experienced by a eurozone member state — demonstrates both the fragility of small-economy banks exposed to sovereign debt and the effectiveness of eurozone bailout mechanisms in preserving systemic financial institutions.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Greece",
+    "bank",
+    "Europe",
+    "Economic Institutions"
+  ],
+  "subjectHeadings": [
+    "Institutions -- Economic Institutions -- Greece -- Modern"
+  ],
+  "places": [
+    {
+      "name": "Athens",
+      "role": "Headquarters"
+    },
+    {
+      "name": "Greece",
+      "role": "Country"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Alpha Bank",
+      "type": "Reference article",
+      "slug": "alpha-bank"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "1879 Kalamata founding by Costopoulos family as regional Greek bank",
+    "1993-2000 Balkan expansion establishing southeastern European banking presence",
+    "2010-2012 Greek sovereign debt crisis and PSI causing massive Greek bank losses",
+    "2012 and 2015 state recapitalizations preserving Alpha as systemic Greek bank"
+  ],
+  "effects": [
+    "Systemic Greek bank survival through worst European banking crisis in decades",
+    "50%+ NPL ratio at peak crisis declining to 8% through securitization programs",
+    "Southeastern European banking presence across Balkans inherited from 1990s expansion",
+    "2023 partial privatization reducing state HFSF stake below 10%"
+  ],
+  "relationships": [
+    {
+      "entity": "Ioannis Costopoulos",
+      "relationship": "FOUNDED_BY",
+      "note": "Costopoulos family founded Alpha Bank 1879 and maintained ownership through 20th century"
+    },
+    {
+      "entity": "Greek Financial Crisis",
+      "relationship": "SEVERELY_AFFECTED_BY",
+      "note": "2010-2018 crisis required two state recapitalizations totaling €4+ billion for Alpha Bank survival"
+    },
+    {
+      "entity": "Hellenic Financial Stability Fund",
+      "relationship": "RECAPITALIZED_BY",
+      "note": "HFSF provided €4+ billion in 2012 and 2015 recapitalizations keeping Alpha Bank viable"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:47:38.347215+00:00",
+  "gateResults": {
+    "summaryLen": 1611,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 3,
+    "edgeFloor": 3,
+    "significanceScore": 6
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/330-Class-330/330alpha-bank.json"
+}

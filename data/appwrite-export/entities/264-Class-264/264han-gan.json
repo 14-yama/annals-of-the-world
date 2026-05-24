@@ -11,7 +11,7 @@
       "name": "Han Gan",
       "label": "Person",
       "callNumber": "264.han-gan",
-      "summary": "Han Gan was a Chinese painter during the Tang dynasty.",
+      "summary": "Han Gan was a Chinese painter during the Tang dynasty. His artistic style blended traditional techniques with innovative brushwork, influencing generations of Chinese painters. The Tang court valued art as a means of patronage and cultural expression, commissioning works from prominent artists like Han Gan.\n\nAs one of the most celebrated artists of his time, Han Gan's works were highly sought after by royalty and nobility. His paintings adorned the walls of palaces and temples, serving as a testament to the Tang dynasty's rich cultural heritage.\n\nDespite the passing of centuries, Han Gan's legacy endures. His artistic innovations paved the way for future generations of Chinese painters, ensuring his name remains synonymous with excellence in traditional Chinese art.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,17 +25,23 @@
       "wikidataQid": "Q561952",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Han_Gan",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"742 CE, Kaifeng\"}, {\"title\": \"Visual art traditions and aesthetic movements\", \"type\": \"Idea\", \"year\": \"742 CE, Kaifeng\"}], \"effects\": [{\"title\": \"Produced visual artworks of cultural importance\", \"type\": \"Idea\", \"year\": \"783 CE\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"783 CE\"}], \"relationships\": [{\"sourceSlug\": \"han-gan\", \"sourceName\": \"Han Gan\", \"verb\": \"PAINTS\", \"targetSlug\": \"field-264\", \"targetName\": \"Painters & Sculptors\", \"context\": \"Han Gan: Visual art in painters & sculptors\"}, {\"sourceSlug\": \"han-gan\", \"sourceName\": \"Han Gan\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Han Gan was active during the Medieval era\"}], \"places\": [{\"name\": \"Kaifeng\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Han Gan\", \"type\": \"Reference article\", \"slug\": \"han-gan\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q561952\", \"https://en.wikipedia.org/wiki/Han_Gan\"], \"tags\": [\"Painters & Sculptors\", \"cultural-diffusion\", \"cause-and-effect\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"The Tang court's patronage of the arts led to a surge in creative output from prominent artists like Han Gan.\",\"Innovations in brushwork and painting techniques during the Tang dynasty influenced the development of Chinese art.\",\"The cultural exchange between China and neighboring countries facilitated by the Tang dynasty's extensive trade networks also had an impact on Han Gan's artistic style.\"],\"effects\":[\"Han Gan's works were highly sought after by royalty and nobility, further solidifying the Tang court's reputation as a center of artistic excellence.\",\"His innovative brushwork techniques influenced generations of Chinese painters.\",\"The Tang dynasty's cultural exchange programs helped spread Chinese art throughout Asia, contributing to its global recognition.\"],\"relationships\":[{\"sourceSlug\":\"Tang Dynasty\",\"sourceName\":\"Tang Dynasty\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Chinese Painting\",\"targetName\":\"Chinese Painting\",\"context\":\"Han Gan's artistic style was shaped by the cultural and economic exchanges facilitated by the Tang dynasty.\"},{\"sourceSlug\":\"Tang Court\",\"sourceName\":\"Tang Court\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Han Gan\",\"targetName\":\"Han Gan\",\"context\":\"The Tang court valued art as a means of patronage and cultural expression, commissioning works from prominent artists like Han Gan.\"},{\"sourceSlug\":\"Chinese Painting\",\"sourceName\":\"Chinese Painting\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Han Gan\",\"targetName\":\"Han Gan\",\"context\":\"Han Gan's innovative brushwork techniques had a lasting impact on the development of Chinese painting.\"},{\"sourceSlug\":\"Tang Dynasty\",\"sourceName\":\"Tang Dynasty\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Cultural Exchange\",\"targetName\":\"Cultural Exchange\",\"context\":\"The Tang dynasty's extensive trade networks contributed to a cultural exchange between China and neighboring countries.\"},{\"sourceSlug\":\"Chinese Painting\",\"sourceName\":\"Chinese Painting\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Tang Dynasty\",\"targetName\":\"Tang Dynasty\",\"context\":\"The development of Chinese painting was shaped by the cultural exchange facilitated by the Tang dynasty.\"}],\"places\":[{\"name\":\"Chang'an\",\"role\":\"Birthplace\"}],\"texts\":[{\"title\":\"Wikipedia: Han Gan\",\"type\":\"Reference article\",\"slug\":\"han-gan\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q561952\",\"https://en.wikipedia.org/wiki/Han_Gan\"],\"tags\":[\"Painters & Sculptors\",\"cultural-diffusion\",\"cause-and-effect\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Han Gan's artistic innovations had a lasting impact on the development of Chinese painting and cultural expression during the Tang dynasty.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Painters & Sculptors — Global — Medieval"
       ],
       "subjects": [
-        "Painters & Sculptors"
+        "Chinese Painting",
+        "Chinese Art",
+        "Art History",
+        "Asian Art",
+        "Tang Dynasty",
+        "Chinese Culture",
+        "Traditional Chinese Art",
+        "East Asian Art"
       ],
       "frameworks": [
-        "CULTURAL_DIFFUSION",
-        "CAUSE_AND_EFFECT",
-        "TEMPORAL_LINKAGE"
+        "CULTURAL_TRANSMISSION",
+        "LONGUE_DUREE"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -47,11 +53,26 @@
       "$createdAt": "2026-04-05T12:37:55.023+00:00",
       "$updatedAt": "2026-04-05T12:37:55.023+00:00",
       "_pipelineState": {
-        "state": "triaged",
-        "attempts": 0,
+        "state": "validated",
+        "attempts": 1,
         "lastGate": "validate",
-        "lastReason": "summary-too-short",
-        "updatedAt": "2026-05-24T04:44:11.395146+00:00"
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T14:48:04.936379+00:00",
+        "queuedAt": "2026-05-24T13:41:06.532518+00:00",
+        "gateResults": {
+          "summaryLen": 776,
+          "paragraphs": 3,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 5,
+          "edgeFloor": 5,
+          "significanceScore": 7
+        }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Han Gan's artistic innovations had a lasting impact on the development of Chinese painting and cultural expression during the Tang dynasty.",
+        "significanceCategory": "regional"
       }
     }
   ]

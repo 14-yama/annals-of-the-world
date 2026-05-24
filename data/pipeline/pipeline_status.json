@@ -1,42 +1,45 @@
 {
-  "generatedAt": "2026-05-24T00:47:59.577258+00:00",
-  "clean": 1384,
+  "generatedAt": "2026-05-24T22:49:28.203326+00:00",
+  "clean": 2741,
   "rejected": 0,
   "triage": {
-    "lastRun": "2026-05-24T00:29:07.052257+00:00",
+    "lastRun": "2026-05-24T21:33:34.702851+00:00",
     "counts": {
-      "triaged": 392005,
-      "rejected": 73
+      "triaged": 355282,
+      "rejected": 34059,
+      "validated": 2737
     },
     "byReason": {
-      "pass": 392005,
-      "wikidata-thin-stub": 36,
+      "pass": 355282,
+      "duplicate-qid-lesser": 33972,
+      "wikidata-thin-stub": 28,
       "duplicate-slug-lesser": 13,
-      "slug-invalid": 23,
+      "slug-has-underscore": 44,
+      "slug-non-kebab": 1,
       "orphan-empty": 1
     }
   },
   "validate": {
-    "lastRun": "2026-05-24T00:38:28.304996+00:00",
+    "lastRun": "2026-05-24T22:49:28.202577+00:00",
     "counts": {
-      "triaged": 390621,
-      "validated": 1384,
+      "triaged": 355278,
+      "validated": 4,
       "rejected": 0
     },
     "byReason": {
-      "summary-too-short": 380445,
-      "summary-no-paragraphs": 7458,
-      "edges-below-floor": 2616,
+      "summary-too-short": 346877,
+      "summary-no-paragraphs": 6932,
+      "edges-below-floor": 1367,
       "missing-significance": 48,
-      "pass": 1384,
       "missing-causes": 51,
+      "pass": 4,
       "summary-too-long": 3
     }
   },
   "enrich": {
-    "lastRun": null,
-    "selected": null,
-    "model": null,
-    "exitCode": null
+    "lastRun": "2026-05-24T22:46:46.698973+00:00",
+    "selected": 20,
+    "model": "gemini",
+    "exitCode": 0
   }
 }

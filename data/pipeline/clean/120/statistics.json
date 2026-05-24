@@ -1,0 +1,114 @@
+{
+  "slug": "statistics",
+  "label": "Idea",
+  "name": "statistics",
+  "callNumber": "120.statistics",
+  "era": "Classical",
+  "summary": "Statistics — the science of collecting, analysing, interpreting, and presenting numerical data — emerged as a formal discipline in the 17th and 18th centuries, though its roots extend to ancient censuses and astronomical data collection. The term itself derives from the German Statistik, coined by Gottfried Achenwall in 1749 to describe the systematic study of state affairs. The discipline's mathematical foundations were laid by Jacob Bernoulli (probability theory, 1713), Abraham de Moivre (normal distribution, 1733), Thomas Bayes (conditional probability, 1763), and Carl Friedrich Gauss (least squares method, 1809).\n\nThe 19th century saw statistics transform from a tool of political economy into a universal scientific method. Adolphe Quetelet applied normal distribution to social data in the 1830s, coining the concept of 'l'homme moyen' (the average man) and founding social statistics. Florence Nightingale's polar area diagrams (1858) used statistical visualisation to demonstrate that battlefield deaths were caused primarily by preventable disease, not combat — directly transforming medical practice and hospital design. By the early 20th century, Karl Pearson's correlation coefficient and Ronald Fisher's development of experimental design and analysis of variance had completed the transition to modern inferential statistics.\n\nThe late 20th century digital revolution produced a third transformation: the emergence of computational statistics, machine learning, and data science. Fisher's frequentist methods — long dominant — face growing competition from Bayesian approaches enabled by cheap computation. Statistical thinking now underpins virtually every empirical science, public health policy, economic forecasting, clinical medicine, and artificial intelligence. The ability to reason under uncertainty with quantified confidence has become arguably the most universally applicable cognitive tool of modernity.",
+  "importanceScore": 8,
+  "wikidataQid": "Q12483",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "Statistics transformed from a tool of statecraft into the universal scientific method for reasoning under uncertainty, directly enabling modern medicine, epidemiology, economics, and artificial intelligence — making it one of the most practically consequential intellectual developments of the modern era.",
+    "significanceCategory": "world-changing"
+  },
+  "frameworks": [
+    "GEOPOLITICAL_LINKAGE",
+    "SCIENTIFIC_PARADIGM",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "academic major",
+    "Scientific Paradigms"
+  ],
+  "subjectHeadings": [
+    "Idea -- Scientific Paradigms -- Global -- Classical"
+  ],
+  "places": [
+    {
+      "name": "London, England",
+      "role": "Galton, Pearson, Fisher — statistical revolution"
+    },
+    {
+      "name": "Göttingen, Germany",
+      "role": "Gauss and mathematical statistics"
+    },
+    {
+      "name": "Paris, France",
+      "role": "Laplace, Quetelet — social statistics"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: statistics",
+      "type": "Reference article",
+      "slug": "statistics"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Early modern state-building created demand for systematic collection of population, taxation, and trade data that required mathematical methods for summarisation and comparison.",
+    "The development of probability theory in the 17th century by Pascal, Fermat, and Bernoulli provided the mathematical language necessary for formal statistical reasoning.",
+    "The scientific revolution's commitment to quantified observation and experimental measurement created demand for methods to separate systematic signal from random error in data."
+  ],
+  "effects": [
+    "Statistical methods became the foundation of modern scientific methodology across disciplines from physics to sociology, defining standards of evidence and reproducibility in research.",
+    "Public health statistics — pioneered by William Farr and Florence Nightingale in the 19th century — enabled systematic analysis of disease causation and transformed modern epidemiology and preventive medicine.",
+    "The 20th-century fusion of statistics and computing produced machine learning and data science, technologies that underpin modern AI, financial systems, pharmaceutical development, and digital surveillance."
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "statistics",
+      "sourceName": "statistics",
+      "verb": "INFLUENCES",
+      "targetSlug": "machine-learning",
+      "targetName": "Machine Learning",
+      "context": "Statistical inference and probability theory provide the mathematical foundations of machine learning algorithms, which apply statistical methods at computational scale to pattern recognition and prediction."
+    },
+    {
+      "sourceSlug": "statistics",
+      "sourceName": "statistics",
+      "verb": "INFLUENCES",
+      "targetSlug": "epidemiology",
+      "targetName": "Epidemiology",
+      "context": "Statistical methods — particularly chi-square tests, regression analysis, and clinical trial design — are the primary tools of modern epidemiology and evidence-based medicine."
+    },
+    {
+      "sourceSlug": "statistics",
+      "sourceName": "statistics",
+      "verb": "OCCURS_IN",
+      "targetSlug": "country-united-kingdom",
+      "targetName": "United Kingdom",
+      "context": "Britain was the dominant centre of statistical development from Francis Galton through Karl Pearson to Ronald Fisher, whose interwar work established the foundations of modern inferential statistics."
+    },
+    {
+      "sourceSlug": "carl-friedrich-gauss",
+      "sourceName": "Carl Friedrich Gauss",
+      "verb": "INFLUENCES",
+      "targetSlug": "statistics",
+      "targetName": "statistics",
+      "context": "Gauss's 1809 least squares method for fitting curves to astronomical data became foundational for linear regression and error analysis across all quantitative sciences."
+    },
+    {
+      "sourceSlug": "statistics",
+      "sourceName": "statistics",
+      "verb": "LEADS_TO",
+      "targetSlug": "data-science",
+      "targetName": "Data Science",
+      "context": "The fusion of classical statistics with computer science after 1990 produced data science, which applies statistical reasoning to datasets of unprecedented scale."
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:47:49.329615+00:00",
+  "gateResults": {
+    "summaryLen": 1938,
+    "paragraphs": 3,
+    "causes": 3,
+    "effects": 3,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/120-Class-120/120statistics.json"
+}

@@ -1,0 +1,124 @@
+{
+  "slug": "sinic-classics-corpus",
+  "label": "Text",
+  "name": "The Sinic Classics Corpus",
+  "callNumber": "730.17-sinic-classics-corpus",
+  "era": "Classical",
+  "summary": "The Sinic Classics Corpus encompasses the foundational textual traditions of Chinese civilization, including the Confucian canon, the Daoist canon, and the Chinese historiographic tradition — collectively one of the richest and most continuous literary heritages in human history, spanning over 3,000 years. The Confucian Five Classics (Wujing) — the Classic of Changes (Yijing), Classic of Poetry (Shijing), Classic of History (Shujing), Classic of Rites (Liji), and Spring and Autumn Annals (Chunqiu) — formed the foundation of Chinese education and statecraft for over two millennia.\n\nThe Four Books (Sishu) — the Analects (Lunyu), Mencius (Mengzi), Great Learning (Daxue), and Doctrine of the Mean (Zhongyong) — became the core of the Neo-Confucian curriculum and the basis of the imperial examination system (605–1905 CE) that selected Chinese government officials for 1,300 years. The Daoist canon (Daozang) — over 1,400 texts — preserves the mystical and naturalistic counter-tradition founded on the Dao De Jing and Zhuangzi.\n\nThe Twenty-Four Histories (Ershisi shi) represent the world's longest continuous state-sponsored historiographic tradition. Together, these texts shaped the civilization of 1.4+ billion Chinese and profoundly influenced Korea, Japan, Vietnam, and the broader East Asian world.",
+  "importanceScore": 0,
+  "wikidataQid": "",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "The Sinic Classics Corpus has shaped Chinese civilization for over 3,000 years, influencing education, statecraft, and philosophy. Its Confucian canon and Neo-Confucian curriculum have had a profound impact on East Asian thought and culture.",
+    "significanceCategory": "continental"
+  },
+  "frameworks": [
+    "TEXTUAL_TRANSMISSION",
+    "DOCTRINE_DEVELOPMENT",
+    "CULTURAL_DIFFUSION"
+  ],
+  "subjects": [
+    "Confucianism",
+    "Daoism",
+    "Five Classics",
+    "Four Books",
+    "Chinese Historiography",
+    "Imperial Examinations",
+    "Analects",
+    "Dao De Jing"
+  ],
+  "subjectHeadings": [
+    "Artifacts & Texts — Classical Texts — Chinese Canon"
+  ],
+  "places": [],
+  "texts": [],
+  "quote": "",
+  "causes": [
+    {
+      "title": "Zhou dynasty ritual and literary culture generates foundational texts",
+      "type": "Institution",
+      "year": "c. 1000 BCE"
+    },
+    {
+      "title": "Confucius compiles and transmits classical tradition",
+      "type": "Person",
+      "year": "c. 500 BCE",
+      "slug": "confucius"
+    }
+  ],
+  "effects": [
+    {
+      "title": "Imperial examinations based on classics select officials for 1,300 years",
+      "type": "Institution",
+      "year": "605 CE"
+    },
+    {
+      "title": "Shapes civilizational values of China, Korea, Japan, and Vietnam",
+      "type": "Idea",
+      "year": "c. 100 BCE"
+    }
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "sinic-classics-corpus",
+      "sourceName": "The Sinic Classics Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "analects_confucius",
+      "targetName": "The Analects",
+      "context": "Core Confucian text — most influential Chinese book"
+    },
+    {
+      "sourceSlug": "sinic-classics-corpus",
+      "sourceName": "The Sinic Classics Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "dao_de_jing",
+      "targetName": "Dao De Jing",
+      "context": "Foundational Daoist text"
+    },
+    {
+      "sourceSlug": "sinic-classics-corpus",
+      "sourceName": "The Sinic Classics Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "yijing",
+      "targetName": "Classic of Changes (Yijing)",
+      "context": "Oldest of the Five Classics"
+    },
+    {
+      "sourceSlug": "sinic-classics-corpus",
+      "sourceName": "The Sinic Classics Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "shiji",
+      "targetName": "Records of the Grand Historian",
+      "context": "Model for all Chinese historical writing"
+    },
+    {
+      "sourceSlug": "confucius",
+      "sourceName": "Confucius compiles and transmits classical tradition",
+      "verb": "CAUSES",
+      "targetSlug": "sinic-classics-corpus",
+      "targetName": "The Sinic Classics Corpus",
+      "context": "Causal antecedent (c. 500 BCE)"
+    },
+    {
+      "sourceSlug": "confucius",
+      "sourceName": "Confucius",
+      "verb": "AUTHORS",
+      "targetSlug": "sinic-classics-corpus",
+      "targetName": "The Sinic Classics Corpus",
+      "context": "Scholarly tradition of the era"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:48:40.893830+00:00",
+  "gateResults": {
+    "summaryLen": 1311,
+    "paragraphs": 3,
+    "causes": 2,
+    "effects": 2,
+    "relationships": 6,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/730-Class-730/73017-sinic-classics-corpus.json"
+}

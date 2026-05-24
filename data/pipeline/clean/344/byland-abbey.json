@@ -1,0 +1,83 @@
+{
+  "slug": "byland-abbey",
+  "label": "Institution",
+  "name": "Byland Abbey",
+  "callNumber": "344.byland-abbey",
+  "era": "Medieval",
+  "summary": "Byland Abbey in North Yorkshire, England, founded in 1177 CE after a remarkable 60-year search for a permanent home by Savignac (later Cistercian) monks who moved from Ireland to Wales to Scotland to six different Yorkshire locations before settling at Byland, is architecturally notable as the first English church to use a large rose window — an innovation that influenced the Gothic cathedrals of York, Lincoln, and eventually French Gothic design. The abbey's west front, with its fragmentary rose window (14 meters diameter), was the largest rose window in England.\n\nThe founding community began in 1134 as a Savignac abbey at Furness (Lancashire), then moved repeatedly: to Hood (1138), Byland (initial, 1143), Stocking (1147), and finally permanent Byland (1177) after resolving a complex dispute with Rievaulx Abbey (3 miles away) over the tolling of their bells — two Cistercian monasteries too close to each other created scheduling conflicts. The 60-year wandering before permanent settlement is unique in English monastic history.\n\nByland's architectural innovation — the west rose window of c. 1200 CE, using geometric tracery in a scale unprecedented in England — was observed and influenced York Minster's 13th-century construction (York's Dean's Eye, 1220 CE). The dissolution (1538) left extensive ruins including the distinctive half-standing west facade with its fragmentary rose wheel. Archaeological excavation revealed the original medieval tile floor — one of the most elaborate in England — now displayed in the site museum.",
+  "importanceScore": 1,
+  "wikidataQid": "Q1018528",
+  "historicalSignificance": {
+    "significanceScore": 6,
+    "significanceNarrative": "Byland Abbey's first large rose window (c. 1200 CE) — influencing York Minster and English Gothic cathedral development — demonstrates how a monastic building can create an architectural innovation that outlasts the institution itself by centuries.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "United Kingdom",
+    "abbey",
+    "Europe",
+    "Monasteries & Religious Orders"
+  ],
+  "subjectHeadings": [
+    "Institutions -- Monasteries & Religious Orders -- United Kingdom -- Medieval"
+  ],
+  "places": [
+    {
+      "name": "United Kingdom",
+      "role": "Country"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Byland Abbey",
+      "type": "Reference article",
+      "slug": "byland-abbey"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "1134 Savignac founding with 60 years of wandering before 1177 permanent settlement at Byland",
+    "Bell-tolling dispute with Rievaulx Abbey (3 miles away) forcing final location compromise",
+    "c. 1200 CE rose window construction as first large rose window in England",
+    "1538 dissolution creating extensive ruins including distinctive rose window facade"
+  ],
+  "effects": [
+    "First large English rose window (14 meters) influencing York Minster and English Gothic cathedral design",
+    "60-year monastic wandering as unique record of founding community persistence and adaptation",
+    "Medieval tile floor remains as one of England's most elaborate monastic floor programs",
+    "Rose window facade ruins as defining image of North Yorkshire monastic landscape"
+  ],
+  "relationships": [
+    {
+      "entity": "Rievaulx Abbey",
+      "relationship": "BELL-TOLLING_DISPUTE_WITH",
+      "note": "Bell conflict with Rievaulx (3 miles away) forced Byland's final location compromise"
+    },
+    {
+      "entity": "York Minster",
+      "relationship": "ARCHITECTURAL_INFLUENCE_ON",
+      "note": "Byland's c. 1200 rose window preceded and influenced York's 1220 Dean's Eye rose window"
+    },
+    {
+      "entity": "Henry VIII",
+      "relationship": "DISSOLVED_BY",
+      "note": "1538 dissolution left extensive ruins including distinctive fragmentary rose window facade"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:47:44.476793+00:00",
+  "gateResults": {
+    "summaryLen": 1548,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 3,
+    "edgeFloor": 3,
+    "significanceScore": 6
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/344-Class-344/344byland-abbey.json"
+}

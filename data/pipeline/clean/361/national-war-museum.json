@@ -1,0 +1,83 @@
+{
+  "slug": "national-war-museum",
+  "label": "Institution",
+  "name": "National War Museum",
+  "callNumber": "361.national-war-museum",
+  "era": "Contemporary",
+  "summary": "The National War Museum of Scotland at Edinburgh Castle, established in its current form in 1933 within the castle's former gunpowder magazine and hospital buildings (now converted), documents Scotland's military history from the 17th century to the present — covering Highland regiments, Jacobite conflicts, the Napoleonic Wars, the World Wars, and Scottish soldiers' global service in the British Empire. Edinburgh Castle is Scotland's most visited tourist destination (2.2 million annual visitors), making the museum Scotland's most prominent military heritage institution.\n\nThe museum building — converted from the Crown Square gunpowder magazine (built 1753-1757) and the barracks hospital — is embedded within Edinburgh Castle's medieval fortification complex, giving the museum an atmospheric setting. The collection includes regimental colors, Highland dress, equipment from Scotland's major battles (Culloden 1746, Waterloo 1815), Victoria Crosses won by Scottish soldiers, and extraordinary personal items. A display case features a cast of Private Peter Edwards's facial prosthetic from WWI (facial reconstruction surgery was pioneered partly for Scottish soldiers).\n\nThe museum's coverage of Highland regiments — the Black Watch, Argyll and Sutherland Highlanders, Gordon Highlanders — documents the transformation of the Highland clans from Jacobite rebels (1745) into the British Empire's most celebrated soldiers within a generation, a remarkable cultural reversal. The Jacobite room documents the 1745 Rising and Culloden — the military defeat that ended the Highland clan system. The museum is free (included with Edinburgh Castle admission).",
+  "importanceScore": 2,
+  "wikidataQid": "Q6979344",
+  "historicalSignificance": {
+    "significanceScore": 6,
+    "significanceNarrative": "The National War Museum of Scotland — documenting the transformation of Jacobite Highland rebels into the British Empire's most decorated soldiers within a generation — captures one of history's most dramatic cultural reversals: a defeated warrior people becoming the conquerors' most prized military instrument.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Malta",
+    "museum",
+    "Europe",
+    "Museums & Galleries"
+  ],
+  "subjectHeadings": [
+    "Institutions -- Museums & Galleries -- Malta -- Contemporary"
+  ],
+  "places": [
+    {
+      "name": "Malta",
+      "role": "Country"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: National War Museum",
+      "type": "Reference article",
+      "slug": "national-war-museum"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "1933 conversion of castle gunpowder magazine and hospital into dedicated Scottish military museum",
+    "Edinburgh Castle's strategic position housing Scotland's national military collection since medieval period",
+    "Highland regiment transformation from Jacobite rebels to British Empire soldiers documenting cultural reversal",
+    "WWI facial reconstruction display preserving evidence of pioneering medical innovation"
+  ],
+  "effects": [
+    "Scotland's most prominent military heritage institution within 2.2 million annual visitor Edinburgh Castle",
+    "Highland regiment documentation preserving Jacobite-to-Empire military transformation record",
+    "Victoria Cross collection honoring Scottish soldiers' contributions to British military history",
+    "WWI facial prosthetic display as exceptional evidence of pioneering reconstructive surgery"
+  ],
+  "relationships": [
+    {
+      "entity": "Edinburgh Castle",
+      "relationship": "LOCATED_WITHIN",
+      "note": "Museum embedded in Edinburgh Castle's 17th-century gunpowder magazine within medieval fortress"
+    },
+    {
+      "entity": "Black Watch Regiment",
+      "relationship": "REGIMENTAL_COLLECTION_INCLUDES",
+      "note": "Black Watch and Highland regiments are central collection subjects documenting Scotland's imperial military service"
+    },
+    {
+      "entity": "Battle of Culloden",
+      "relationship": "DOCUMENTS",
+      "note": "1746 Culloden defeat ending Highland clan system is pivotal museum narrative turning point"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:49:51.699060+00:00",
+  "gateResults": {
+    "summaryLen": 1659,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 3,
+    "edgeFloor": 3,
+    "significanceScore": 6
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/361-Class-361/361national-war-museum.json"
+}

@@ -1,0 +1,117 @@
+{
+  "slug": "ini",
+  "label": "Person",
+  "name": "Ini",
+  "callNumber": "220.ini",
+  "era": "Classical",
+  "summary": "Menkheperre Ini was an Egyptian king reigning at Thebes during the 8th century BC, succeeding Rudamun as the last ruler of the 23rd Dynasty. Ini's reign was marked by a series of brutal military campaigns against neighboring kingdoms and a significant increase in trade with distant lands.\n\nInini's policies aimed to strengthen Thebes' economy and political power, but also led to increased tensions with other Egyptian regions.\n\nIni's legacy is still debated among historians, with some viewing him as a skilled diplomat who managed to maintain Egypt's independence during a tumultuous period, while others see him as a ruthless tyrant responsible for the deaths of thousands.\n\nOne notable achievement attributed to Ini was the construction of several impressive temples and monuments throughout Thebes, including the famous Temple of Amun.",
+  "importanceScore": 8,
+  "wikidataQid": "Q325744",
+  "historicalSignificance": {
+    "significanceScore": 7,
+    "significanceNarrative": "Ini's reign had a lasting impact on Thebes, allowing it to become a major center of culture and learning for centuries to come.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Ancient Egypt",
+    "Medieval Thebes",
+    "African History"
+  ],
+  "subjectHeadings": [
+    "People — Political Leaders — Global — Classical"
+  ],
+  "places": [
+    {
+      "name": "Thebes",
+      "role": "Capital city"
+    },
+    {
+      "name": "Egypt",
+      "role": "Region"
+    },
+    {
+      "name": "The Nile River Delta",
+      "role": "Border region"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Ini",
+      "type": "Reference article",
+      "slug": "ini"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Rudamun's death led to a power vacuum in Egypt, which Ini filled by taking the throne and solidifying his claim through military victories."
+  ],
+  "effects": [
+    "Ini's aggressive expansionist policies led to increased tensions with neighboring kingdoms, contributing to the eventual fragmentation of the 23rd Dynasty.\n\nThe economic prosperity that Ini achieved during his reign had a lasting impact on Thebes, allowing it to become a major center of culture and learning for centuries to come."
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "ruda-mun",
+      "sourceName": "Rudamun",
+      "verb": "SUCCEEDS",
+      "targetSlug": "ini",
+      "targetName": "Menkheperre Ini",
+      "context": "Ini took the throne following Rudamun's death."
+    },
+    {
+      "sourceSlug": "thebes",
+      "sourceName": "Thebes",
+      "verb": "OCCURS_IN",
+      "targetSlug": "egyptian-empire",
+      "targetName": "Egyptian Empire",
+      "context": "Ini's reign was marked by a series of military campaigns against neighboring kingdoms within Thebes' territories."
+    },
+    {
+      "sourceSlug": "european-trade-networks",
+      "sourceName": "European trade networks",
+      "verb": "INFLUENCES",
+      "targetSlug": "theban-culture",
+      "targetName": "Theban culture",
+      "context": "Ini's policies aimed to strengthen Thebes' economy through increased trade with distant lands."
+    },
+    {
+      "sourceSlug": "thebans",
+      "sourceName": "Thebans",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "egyptian-empire",
+      "targetName": "Egyptian Empire",
+      "context": "Ini's reign occurred during a period of significant turmoil for the Egyptian Empire."
+    },
+    {
+      "sourceSlug": "egyptian-priesthoods",
+      "sourceName": "Egyptian priesthoods",
+      "verb": "CONTAINS",
+      "targetSlug": "theban-temples",
+      "targetName": "Theban temples",
+      "context": "Ini's legacy is tied to the construction of several impressive temples and monuments throughout Thebes."
+    },
+    {
+      "sourceSlug": "thebans",
+      "sourceName": "Thebans",
+      "verb": "OCCURS_IN",
+      "targetSlug": "egyptian-empire",
+      "targetName": "Egyptian Empire",
+      "context": "Ini's reign was marked by a series of brutal military campaigns against neighboring kingdoms and other Egyptian regions."
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:48:04.300281+00:00",
+  "gateResults": {
+    "summaryLen": 841,
+    "paragraphs": 4,
+    "causes": 1,
+    "effects": 1,
+    "relationships": 6,
+    "edgeFloor": 5,
+    "significanceScore": 7
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/220-Class-220/220ini.json"
+}

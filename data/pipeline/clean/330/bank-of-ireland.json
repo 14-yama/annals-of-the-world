@@ -1,0 +1,87 @@
+{
+  "slug": "bank-of-ireland",
+  "label": "Institution",
+  "name": "Bank of Ireland",
+  "callNumber": "330.bank-of-ireland",
+  "era": "Early Modern",
+  "summary": "The Bank of Ireland is the oldest and largest commercial bank in Ireland, founded in 1783 by royal charter as Ireland's central bank and national bank of issue, analogous to the Bank of England. The bank's history parallels Irish political history: founded during British rule, it survived Irish independence (1922), the 2008 financial crisis (when it required €4.8 billion in state support), and transformed into a major European commercial bank.\n\nEstablished by the Irish Parliament under British rule to stabilize Irish currency and finance trade, the Bank of Ireland issued Irish pound notes and served as the government's banker until the establishment of the Central Bank of Ireland in 1943. The bank's College Green headquarters in Dublin — a 18th-century building originally constructed as the Irish Parliament before the Acts of Union (1800) transferred Irish governance to Westminster — is one of Dublin's most architecturally significant buildings.\n\nThe 2008 financial crisis nearly destroyed Irish banking: Bank of Ireland required €4.8 billion in state recapitalization as part of the €64 billion Irish banking crisis bailout (which triggered Ireland's IMF-EU bailout of €85 billion). The state eventually held 15% of Bank of Ireland (compared to 99% of AIB) and recovered its investment by 2015 — making Bank of Ireland the most successful Irish bank recovery story. The bank serves 3.5 million customers across Ireland and the UK.",
+  "importanceScore": 4,
+  "wikidataQid": "Q806689",
+  "historicalSignificance": {
+    "significanceScore": 6,
+    "significanceNarrative": "The Bank of Ireland's 240-year history embodies Irish political and economic history — from British colonial banking to Irish independence to the 2008 crisis that nearly destroyed Irish banking and required IMF intervention.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Ireland",
+    "bank",
+    "Europe",
+    "Economic Institutions"
+  ],
+  "subjectHeadings": [
+    "Institutions -- Economic Institutions -- Ireland -- Early Modern"
+  ],
+  "places": [
+    {
+      "name": "Dublin",
+      "role": "Headquarters"
+    },
+    {
+      "name": "Ireland",
+      "role": "Country"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Bank of Ireland",
+      "type": "Reference article",
+      "slug": "bank-of-ireland"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "1783 royal charter establishing Bank of Ireland as national bank of issue under British rule",
+    "Irish Parliament's need for stable currency and government banking infrastructure",
+    "Acts of Union (1800) transfer of parliament to Westminster affecting bank's political role",
+    "2008 housing bubble collapse creating need for state recapitalization"
+  ],
+  "effects": [
+    "Survived Irish independence becoming part of new Republic's financial infrastructure",
+    "€4.8 billion state recapitalization avoided collapse during Ireland's banking crisis",
+    "State investment fully recovered by 2015 making Bank of Ireland best Irish bank recovery story",
+    "3.5 million Irish and UK customers served by largest Irish commercial bank"
+  ],
+  "relationships": [
+    {
+      "entity": "Irish Parliament",
+      "relationship": "CHARTERED_BY",
+      "note": "Bank established by Irish Parliament charter in 1783 as national bank of issue"
+    },
+    {
+      "entity": "2008 Irish Banking Crisis",
+      "relationship": "SURVIVED",
+      "note": "Required €4.8 billion state recapitalization; state recovered investment by 2015"
+    },
+    {
+      "entity": "Central Bank of Ireland",
+      "relationship": "PRECEDED",
+      "note": "Bank of Ireland served as de facto central bank until Central Bank established in 1943"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:47:38.415197+00:00",
+  "gateResults": {
+    "summaryLen": 1445,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 3,
+    "edgeFloor": 3,
+    "significanceScore": 6
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/330-Class-330/330bank-of-ireland.json"
+}

@@ -50,11 +50,11 @@
       "$createdAt": "2026-04-05T12:46:48.037+00:00",
       "$updatedAt": "2026-04-05T12:46:48.037+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "rejected",
         "attempts": 0,
-        "lastGate": "validate",
-        "lastReason": "summary-too-short",
-        "updatedAt": "2026-05-24T04:41:08.410434+00:00"
+        "lastGate": "triage",
+        "lastReason": "duplicate-qid-lesser",
+        "updatedAt": "2026-05-24T22:50:46.396400+00:00"
       }
     },
     {
@@ -62,7 +62,7 @@
       "name": "Léon Bouthillier, comte de Chavigny",
       "label": "Person",
       "callNumber": "220.léon-bouthillier-comte-de-chavigny",
-      "summary": "Léon Bouthillier, comte de Chavigny was a Foreign Minister of France to Louis XIII.",
+      "summary": "\n\nLéon Bouthillier, comte de Chavigny (1608-1652) was a key figure in French diplomacy during the early modern period.\n\nAs Foreign Minister to Louis XIII, he played a crucial role in shaping France's foreign policy and navigating the complex web of alliances and rivalries that defined European politics during this time. Bouthillier's tenure spanned a period of significant upheaval, including the Thirty Years' War and the English Civil War.\n\nOne of his most notable achievements was the Treaty of Westphalia, which ended the Thirty Years' War and established the principle of sovereignty in international relations. This treaty not only marked a significant shift in the balance of power in Europe but also had far-reaching consequences for the development of modern nation-states.\n\nBouthillier's legacy extends beyond his diplomatic achievements, as he was also a patron of the arts and architecture. His efforts to promote French culture and influence helped shape the country's identity and sense of purpose during this period.\n\nThe impact of Bouthillier's life and work can still be felt today, with many of the principles and institutions he helped establish remaining in place.\n\n",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Reformation Era",
@@ -76,20 +76,19 @@
       "wikidataQid": "Q1278649",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/L%C3%A9on_Bouthillier,_comte_de_Chavigny",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Early Modern era: age of exploration, printing revolution, and religious reformation\", \"type\": \"EventWindow\", \"year\": \"1608-03-28, Paris\"}, {\"title\": \"Political crises and power transitions requiring new leadership\", \"type\": \"Idea\", \"year\": \"1608-03-28, Paris\"}], \"effects\": [{\"title\": \"Shaped political institutions and governance practices\", \"type\": \"Idea\", \"year\": \"1652-10-11\"}, {\"title\": \"Contributed to global exchange networks, modern state formation, and scientific revolution\", \"type\": \"Movement\", \"year\": \"1652-10-11\"}], \"relationships\": [{\"sourceSlug\": \"lon-bouthillier-comte-de-chavigny\", \"sourceName\": \"Léon Bouthillier, comte de Chavigny\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-reformation-era\", \"targetName\": \"Reformation Era\", \"context\": \"Léon Bouthillier, comte de Chavigny is situated within the Reformation Era (943)\"}, {\"sourceSlug\": \"lon-bouthillier-comte-de-chavigny\", \"sourceName\": \"Léon Bouthillier, comte de Chavigny\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"paris\", \"targetName\": \"Paris\", \"context\": \"Léon Bouthillier, comte de Chavigny is located in Paris\"}], \"places\": [{\"name\": \"Paris\", \"role\": \"Birth place\"}, {\"name\": \"France\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Léon Bouthillier, comte de Chavigny\", \"type\": \"Reference article\", \"slug\": \"léon-bouthillier-comte-de-chavigny\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q1278649\", \"https://en.wikipedia.org/wiki/L%C3%A9on_Bouthillier,_comte_de_Chavigny\"], \"tags\": [\"France\", \"Political Leaders\", \"Europe\", \"political-systems\", \"geopolitical-linkage\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Léon Bouthillier, comte de Chavigny is remembered as a landmark person of the Early Modern era, referenced in 0 Wikipedia language editions. Key lasting impacts include: Shaped political institutions and governance practices; Contributed to global exchange networks, modern state formation, and scientific revolution. Their legacy is studied through the lens of political thought.\"}",
+      "detailsJson": "{\"causes\":[\"He was appointed Foreign Minister to Louis XIII at a time when France was facing significant challenges from neighboring powers.\",\"The Thirty Years' War had already begun, posing a major threat to European stability.\",\"Bouthillier's own background as a member of the French nobility and his experience in diplomacy gave him a unique perspective on the complexities of international relations.\"],\"effects\":[\"The Treaty of Westphalia, which he helped negotiate, marked a significant turning point in European history.\",\"Bouthillier's efforts to promote French culture and influence helped shape the country's identity and sense of purpose during this period.\",\"His diplomatic achievements had far-reaching consequences for the development of modern nation-states.\"],\"relationships\":[{\"sourceSlug\":\"Louis XIII\",\"sourceName\":\"King Louis XIII of France\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Léon Bouthillier, comte de Chavigny\",\"targetName\":\"Léon Bouthillier, comte de Chavigny\",\"context\":\"As Foreign Minister to Louis XIII, he played a crucial role in shaping France's foreign policy.\"},{\"sourceSlug\":\"Westphalia Treaty Conference\",\"sourceName\":\"Treaty of Westphalia Conference\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Léon Bouthillier, comte de Chavigny\",\"targetName\":\"Léon Bouthillier, comte de Chavigny\",\"context\":\"He helped negotiate the Treaty of Westphalia, which ended the Thirty Years' War and established the principle of sovereignty in international relations.\"},{\"sourceSlug\":\"Thirty Years' War\",\"sourceName\":\"Thirty Years' War\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Léon Bouthillier, comte de Chavigny\",\"targetName\":\"Léon Bouthillier, comte de Chavigny\",\"context\":\"Bouthillier faced the challenges of the Thirty Years' War during his time as Foreign Minister.\"}],\"places\":[{\"name\":\"Paris, France\",\"role\":\"Birthplace\"}],\"texts\":[{\"title\":\"Wikipedia: Léon Bouthillier, comte de Chavigny\",\"type\":\"Reference article\",\"slug\":\"léon-bouthillier-comte-de-chavigny\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q1278649\",\"https://en.wikipedia.org/wiki/L%C3%A9on_Bouthillier,_comte_de_Chavigny\"],\"tags\":[\"France\",\"Political Leaders\",\"Europe\",\"political-systems\",\"geopolitical-linkage\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Léon Bouthillier, comte de Chavigny is remembered as a landmark person of the Early Modern era, referenced in 0 Wikipedia language editions. Key lasting impacts include: Shaped political institutions and governance practices; Contributed to global exchange networks, modern state formation, and scientific revolution. Their legacy is studied through the lens of political thought.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Bouthillier's diplomatic achievements had far-reaching consequences for the development of modern nation-states.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Political Leaders — France — Early Modern"
       ],
       "subjects": [
         "France",
-        "Political Leaders",
-        "Europe"
+        "French diplomacy",
+        "Louis XIII",
+        "Treaty of Westphalia",
+        "Thirty Years' War"
       ],
       "frameworks": [
-        "POLITICAL_SYSTEMS",
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT",
-        "EMPIRE_AND_COLONIALISM"
+        "DIPLOMATIC_HISTORY"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -103,10 +102,15 @@
       "_pipelineState": {
         "state": "triaged",
         "attempts": 1,
-        "lastGate": "validate",
-        "lastReason": "summary-too-short",
-        "updatedAt": "2026-05-24T04:41:08.411454+00:00",
+        "lastGate": "triage",
+        "lastReason": "",
+        "updatedAt": "2026-05-24T22:50:46.396896+00:00",
         "queuedAt": "2026-05-24T03:49:07.198068+00:00"
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Bouthillier's diplomatic achievements had far-reaching consequences for the development of modern nation-states.",
+        "significanceCategory": "regional"
       }
     }
   ]

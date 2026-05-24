@@ -1,0 +1,119 @@
+{
+  "slug": "marco-polo",
+  "label": "Person",
+  "name": "Marco Polo",
+  "callNumber": "202.marco-polo",
+  "era": "Medieval",
+  "summary": "Marco Polo (1254–1324) was a Venetian merchant and explorer whose 24-year journey along the Silk Road to the court of Kublai Khan in China produced The Travels of Marco Polo — the work that introduced Europe to the wonders of East Asia and inspired the Age of Exploration.\n\nDeparting Venice at age 17 with his father Niccolò and uncle Maffeo, he traveled overland through Persia, Central Asia, and the Gobi Desert to reach Kublai Khan's summer palace at Shangdu (Xanadu). He spent 17 years in the service of the Mongol emperor, traveling widely through China, Burma, and Southeast Asia.\n\nHis account — dictated to Rustichello da Pisa while imprisoned in Genoa — described paper money, coal burning, the imperial postal system, and Chinese civilization's advanced technology. Medieval Europeans called it Il Milione ('The Million') and dismissed it as fantasy.\n\nYet Columbus carried an annotated copy on his 1492 voyage. The book remains the most influential travel narrative ever written, opening European imaginations to the wealth of Asia and directly inspiring the voyages that connected the world.",
+  "importanceScore": 7,
+  "wikidataQid": "Q6101",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "Marco Polo's travels introduced Europe to East Asian technology and culture, inspiring the Age of Exploration and shaping global trade routes. His account of paper money and coal burning influenced economic development in Europe.",
+    "significanceCategory": "world-changing"
+  },
+  "frameworks": [
+    "TRADE_AND_EXCHANGE",
+    "CAUSE_AND_EFFECT",
+    "CULTURAL_DIFFUSION",
+    "INNOVATION_AND_TECHNOLOGY",
+    "SOCIAL_STRUCTURES"
+  ],
+  "subjects": [
+    "Silk Road",
+    "Kublai Khan",
+    "China",
+    "Venice",
+    "Exploration",
+    "Travel Narrative",
+    "Trade",
+    "Mongolia",
+    "Age of Exploration",
+    "Pax Mongolica"
+  ],
+  "subjectHeadings": [
+    "People — Explorers & Merchants — Venice — Medieval"
+  ],
+  "places": [
+    {
+      "name": "Venice",
+      "role": "Birth place"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Marco Polo",
+      "type": "Reference article",
+      "slug": "marco-polo"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "The Pax Mongolica under Kublai Khan made safe overland travel from Europe to China possible for the first time in history",
+    "The Polo family's trading connections and Kublai Khan's curiosity about Europeans brought Marco to the Mongol court",
+    "Venice's position as the Mediterranean's premier trading republic created a merchant culture of long-distance travel"
+  ],
+  "effects": [
+    "The Travels introduced Europe to Chinese technology, paper money, coal, and the vast wealth of East Asia",
+    "Columbus carried an annotated copy of Marco Polo's Travels on his 1492 voyage — directly inspiring the Age of Exploration",
+    "Stimulated European desire for Asian luxury goods (silk, spices, porcelain) that drove the search for sea routes to the East",
+    "His descriptions of Kublai Khan's court and Chinese administration amazed Europeans and challenged their assumptions of superiority",
+    "The book became the most influential travel narrative in history, translated into every major European language",
+    "'Marco Polo' became synonymous with exploration and adventure in Western culture"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "marco-polo",
+      "sourceName": "Marco Polo",
+      "verb": "SERVES",
+      "targetSlug": "kublai-khan",
+      "targetName": "Kublai Khan",
+      "context": "Spent 17 years in the service of Kublai Khan's Mongol court in China"
+    },
+    {
+      "sourceSlug": "marco-polo",
+      "sourceName": "Marco Polo",
+      "verb": "TRAVELS",
+      "targetSlug": "silk-road",
+      "targetName": "Silk Road",
+      "context": "Traveled the Silk Road from Venice to China and back (1271–1295)"
+    },
+    {
+      "sourceSlug": "marco-polo",
+      "sourceName": "Marco Polo",
+      "verb": "INFLUENCES",
+      "targetSlug": "christopher-columbus",
+      "targetName": "Christopher Columbus",
+      "context": "Columbus carried an annotated copy of Polo's Travels on his 1492 voyage"
+    },
+    {
+      "sourceSlug": "marco-polo",
+      "sourceName": "Marco Polo",
+      "verb": "ENABLED_BY",
+      "targetSlug": "genghis-khan",
+      "targetName": "Genghis Khan",
+      "context": "The Mongol Empire's Pax Mongolica made safe transcontinental travel possible"
+    },
+    {
+      "sourceSlug": "marco-polo",
+      "sourceName": "Marco Polo",
+      "verb": "OCCURS_IN",
+      "targetSlug": "venice",
+      "targetName": "Venice",
+      "context": "Born and raised in Venice, the Mediterranean's premier trading republic"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:48:55.081365+00:00",
+  "gateResults": {
+    "summaryLen": 1101,
+    "paragraphs": 4,
+    "causes": 3,
+    "effects": 6,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/202-Class-202/202marco-polo.json"
+}

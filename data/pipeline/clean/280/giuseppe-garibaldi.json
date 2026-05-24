@@ -1,0 +1,120 @@
+{
+  "slug": "giuseppe-garibaldi",
+  "label": "Person",
+  "name": "Giuseppe Garibaldi",
+  "callNumber": "280.giuseppe-garibaldi",
+  "era": "Modern",
+  "summary": "Giuseppe Garibaldi (1807–1882) was an Italian general, patriot, and republican who played a central role in the unification of Italy. Known as the 'Hero of Two Worlds,' he fought for liberation movements in South America before leading the legendary Expedition of the Thousand that conquered the Kingdom of the Two Sicilies in 1860.\n\nBorn in Nice (then part of the Kingdom of Sardinia), Garibaldi joined Giuseppe Mazzini's Young Italy movement and was sentenced to death in absentia in 1834. He fled to South America, where he fought for the Riograndense Republic in Brazil and defended Montevideo against Argentine forces, earning international fame as a guerrilla commander.\n\nReturning to Italy in 1848, Garibaldi fought in the First Italian War of Independence and briefly led the Roman Republic's defense against French forces. His greatest triumph came in 1860 when his volunteer force of roughly 1,000 Redshirts sailed from Genoa, conquered Sicily and Naples, and handed the entire southern half of Italy to King Victor Emmanuel II.\n\nGaribaldi's selfless surrender of conquered territory to the Sardinian monarchy—rather than claiming power for himself—made him an icon of republican virtue. Abraham Lincoln offered him a Union command in the American Civil War, and he remains Italy's most beloved national hero.",
+  "importanceScore": 5,
+  "wikidataQid": "Q539",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "Garibaldi's Expedition of the Thousand led to the unification of Italy in 1860, uniting a fragmented peninsula under one government for the first time since the fall of the Roman Empire. This event had significant regional and continental implications, contributing to the redrawing of European borders.",
+    "significanceCategory": "continental"
+  },
+  "frameworks": [
+    "CAUSE_AND_EFFECT",
+    "WORLD_SYSTEMS",
+    "COMPARATIVE_CIVILIZATIONS"
+  ],
+  "subjects": [
+    "Italian Unification",
+    "Risorgimento",
+    "Guerrilla Warfare",
+    "Republican Ideals",
+    "Italy",
+    "Nationalism",
+    "Military History",
+    "South America"
+  ],
+  "subjectHeadings": [
+    "People — Military Leaders & Commanders — Global — Modern"
+  ],
+  "places": [
+    {
+      "name": "Nice, France",
+      "role": "Birthplace"
+    },
+    {
+      "name": "Sicily, Italy",
+      "role": "Military campaign"
+    },
+    {
+      "name": "Montevideo, Uruguay",
+      "role": "South American exile"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Giuseppe Garibaldi",
+      "type": "Reference article",
+      "slug": "giuseppe-garibaldi"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Napoleonic legacy of Italian national consciousness",
+    "Mazzini's Young Italy republican ideology",
+    "South American guerrilla warfare experience"
+  ],
+  "effects": [
+    "United southern Italy with northern Kingdom of Sardinia",
+    "Enabled proclamation of the Kingdom of Italy in 1861",
+    "Became model for anticolonial liberation movements worldwide"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "giuseppe-garibaldi",
+      "sourceName": "Giuseppe Garibaldi",
+      "verb": "CAUSES",
+      "targetSlug": "italian-unification",
+      "targetName": "Italian Unification",
+      "context": "Expedition of the Thousand conquered southern Italy 1860"
+    },
+    {
+      "sourceSlug": "giuseppe-garibaldi",
+      "sourceName": "Giuseppe Garibaldi",
+      "verb": "COLLABORATES_WITH",
+      "targetSlug": "giuseppe-mazzini",
+      "targetName": "Giuseppe Mazzini",
+      "context": "Joined Mazzini's Young Italy movement in 1833"
+    },
+    {
+      "sourceSlug": "napoleon-bonaparte",
+      "sourceName": "Napoleon Bonaparte",
+      "verb": "INFLUENCES",
+      "targetSlug": "giuseppe-garibaldi",
+      "targetName": "Giuseppe Garibaldi",
+      "context": "Napoleonic campaigns awakened Italian national identity"
+    },
+    {
+      "sourceSlug": "giuseppe-garibaldi",
+      "sourceName": "Giuseppe Garibaldi",
+      "verb": "OCCURS_IN",
+      "targetSlug": "sicily",
+      "targetName": "Sicily",
+      "context": "Landed at Marsala with 1,000 Redshirts, May 1860"
+    },
+    {
+      "sourceSlug": "giuseppe-garibaldi",
+      "sourceName": "Giuseppe Garibaldi",
+      "verb": "INFLUENCES",
+      "targetSlug": "simon-bolivar",
+      "targetName": "Simon Bolivar",
+      "context": "Garibaldi's liberation campaigns inspired by Bolivar's precedent"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:49:36.506333+00:00",
+  "gateResults": {
+    "summaryLen": 1319,
+    "paragraphs": 4,
+    "causes": 3,
+    "effects": 3,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/280-Class-280/280giuseppe-garibaldi.json"
+}

@@ -54,12 +54,21 @@
       "$createdAt": "2026-04-05T12:47:22.529+00:00",
       "$updatedAt": "2026-04-05T12:47:22.529+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "validated",
         "attempts": 1,
         "lastGate": "validate",
-        "lastReason": "summary-too-short",
-        "updatedAt": "2026-05-24T04:41:12.422669+00:00",
-        "queuedAt": "2026-05-24T03:49:07.167999+00:00"
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T13:28:24.252367+00:00",
+        "queuedAt": "2026-05-24T03:49:07.167999+00:00",
+        "gateResults": {
+          "summaryLen": 1553,
+          "paragraphs": 5,
+          "causes": 5,
+          "effects": 5,
+          "relationships": 5,
+          "edgeFloor": 5,
+          "significanceScore": 7
+        }
       },
       "historicalSignificance": {
         "significanceScore": 7,
@@ -109,11 +118,11 @@
       "$createdAt": "2026-04-05T15:30:36.195+00:00",
       "$updatedAt": "2026-04-05T15:30:36.195+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "rejected",
         "attempts": 0,
-        "lastGate": "validate",
-        "lastReason": "summary-too-short",
-        "updatedAt": "2026-05-24T04:41:12.423122+00:00"
+        "lastGate": "triage",
+        "lastReason": "duplicate-qid-lesser",
+        "updatedAt": "2026-05-24T22:50:49.090468+00:00"
       }
     }
   ]

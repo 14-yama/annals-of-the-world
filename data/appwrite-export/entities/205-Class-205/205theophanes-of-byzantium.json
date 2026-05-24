@@ -54,12 +54,21 @@
       "$createdAt": "2026-04-05T12:36:01.531+00:00",
       "$updatedAt": "2026-04-05T12:36:01.531+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "validated",
         "attempts": 1,
         "lastGate": "validate",
-        "lastReason": "summary-too-short",
-        "updatedAt": "2026-05-24T04:44:15.039345+00:00",
-        "queuedAt": "2026-05-24T03:49:07.190881+00:00"
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T13:31:57.245059+00:00",
+        "queuedAt": "2026-05-24T03:49:07.190881+00:00",
+        "gateResults": {
+          "summaryLen": 1895,
+          "paragraphs": 5,
+          "causes": 1,
+          "effects": 1,
+          "relationships": 9,
+          "edgeFloor": 5,
+          "significanceScore": 7
+        }
       },
       "historicalSignificance": {
         "significanceScore": 7,

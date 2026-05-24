@@ -1,0 +1,120 @@
+{
+  "slug": "blaise-pascal",
+  "label": "Person",
+  "name": "Blaise Pascal",
+  "callNumber": "210.blaise-pascal",
+  "era": "Early Modern",
+  "summary": "Blaise Pascal (1623–1662) was a French mathematician, physicist, inventor, and theologian who made foundational contributions across multiple fields before his death at age 39. His work on probability theory (with Fermat), hydraulic physics, and the first mechanical calculator places him among the most versatile minds of the 17th century.\n\nA child prodigy, Pascal wrote a treatise on conic sections at 16 and built the Pascaline—the first working mechanical calculator—at 19 to help his father with tax computations. His experiments with atmospheric pressure proved the existence of the vacuum (contra Aristotelian physics) and established what became Pascal's law in hydraulics.\n\nIn 1654, Pascal experienced a profound religious conversion during a 'night of fire' and largely abandoned mathematics for theology. His 'Pensées' (published posthumously, 1670) remains one of the most celebrated works of French prose and Christian apologetics, containing the famous 'Pascal's Wager' argument for belief in God.\n\nPascal's legacy spans mathematics (Pascal's triangle, probability theory), physics (Pascal's law, the SI pressure unit), computing (the Pascaline, the Pascal programming language), and philosophy. As he wrote: 'The heart has its reasons which reason knows nothing of.'",
+  "importanceScore": 5,
+  "wikidataQid": "Q1290",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "Pascal's work on probability theory and hydraulic physics laid foundational principles for modern statistics and engineering. His invention of the Pascaline, a mechanical calculator, significantly advanced mathematical computation.",
+    "significanceCategory": "continental"
+  },
+  "frameworks": [
+    "CAUSE_AND_EFFECT",
+    "STRUCTURAL_ANALYSIS",
+    "RELIGIOUS_INTERPRETATION"
+  ],
+  "subjects": [
+    "Mathematics",
+    "Probability Theory",
+    "Hydraulics",
+    "Christian Apologetics",
+    "France",
+    "Mechanical Calculator",
+    "Philosophy",
+    "Physics"
+  ],
+  "subjectHeadings": [
+    "People — Philosophers & Thinkers — Global — Early Modern"
+  ],
+  "places": [
+    {
+      "name": "Paris, France",
+      "role": "Scientific career"
+    },
+    {
+      "name": "Clermont-Ferrand, France",
+      "role": "Birthplace"
+    },
+    {
+      "name": "Port-Royal, France",
+      "role": "Jansenist religious community"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Blaise Pascal",
+      "type": "Reference article",
+      "slug": "blaise-pascal"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "French scientific renaissance under Mersenne's intellectual network",
+    "Father's mathematical education and connections to Parisian scholars",
+    "Personal religious crisis leading to philosophical transformation"
+  ],
+  "effects": [
+    "Co-founded probability theory with Fermat, enabling modern statistics",
+    "Pascal's law became fundamental to hydraulic engineering",
+    "Pensées established new literary form merging philosophy and personal testimony"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "blaise-pascal",
+      "sourceName": "Blaise Pascal",
+      "verb": "COLLABORATES_WITH",
+      "targetSlug": "pierre-de-fermat",
+      "targetName": "Pierre de Fermat",
+      "context": "1654 correspondence founded mathematical probability theory"
+    },
+    {
+      "sourceSlug": "blaise-pascal",
+      "sourceName": "Blaise Pascal",
+      "verb": "INFLUENCES",
+      "targetSlug": "gottfried-wilhelm-leibniz",
+      "targetName": "Gottfried Wilhelm Leibniz",
+      "context": "Leibniz's calculator designs built directly on Pascal's Pascaline"
+    },
+    {
+      "sourceSlug": "rene-descartes",
+      "sourceName": "René Descartes",
+      "verb": "INFLUENCES",
+      "targetSlug": "blaise-pascal",
+      "targetName": "Blaise Pascal",
+      "context": "Descartes challenged Pascal's vacuum experiments; rival philosophical visions"
+    },
+    {
+      "sourceSlug": "blaise-pascal",
+      "sourceName": "Blaise Pascal",
+      "verb": "CREATES",
+      "targetSlug": "pensees",
+      "targetName": "Pensées",
+      "context": "Posthumous fragments (1670) containing Pascal's Wager and Christian apologetics"
+    },
+    {
+      "sourceSlug": "blaise-pascal",
+      "sourceName": "Blaise Pascal",
+      "verb": "OCCURS_IN",
+      "targetSlug": "paris",
+      "targetName": "Paris",
+      "context": "Lived and worked in Paris; central to Mersenne's scientific circle"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:47:27.456118+00:00",
+  "gateResults": {
+    "summaryLen": 1281,
+    "paragraphs": 4,
+    "causes": 3,
+    "effects": 3,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/210-Class-210/210blaise-pascal.json"
+}

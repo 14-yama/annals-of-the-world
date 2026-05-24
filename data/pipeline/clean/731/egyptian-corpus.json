@@ -1,0 +1,154 @@
+{
+  "slug": "egyptian-corpus",
+  "label": "Text",
+  "name": "The Egyptian Corpus",
+  "callNumber": "731.egyptian-corpus",
+  "era": "Prehistoric",
+  "summary": "The Egyptian Corpus encompasses over three millennia of literary, religious, medical, legal, and administrative texts produced by ancient Egyptian civilization (c. 3100–30 BCE). Written in hieroglyphic, hieratic, and demotic scripts on papyrus, stone, pottery, and tomb walls, this corpus includes humanity's oldest religious texts (Pyramid Texts, c.\n\n2400 BCE), the oldest known wisdom literature (Instruction of Ptahhotep), the most elaborate funerary literature (Book of the Dead), sophisticated medical and mathematical treatises, royal propaganda, love poetry, and mythological narratives. The corpus was largely inaccessible until Jean-François Champollion's decipherment of hieroglyphics in 1822 using the Rosetta Stone.",
+  "importanceScore": 0,
+  "wikidataQid": "",
+  "historicalSignificance": {
+    "significanceScore": 9,
+    "significanceNarrative": "The Egyptian Corpus contains humanity's oldest religious texts and wisdom literature, influencing subsequent civilizations' understanding of spirituality, morality, and knowledge transmission. Its decipherment enabled a deeper comprehension of ancient cultures, reshaping the study of history and archaeology.",
+    "significanceCategory": "world-changing"
+  },
+  "frameworks": [
+    "TEXTUAL_TRANSMISSION",
+    "DOCTRINE_DEVELOPMENT",
+    "CULTURAL_DIFFUSION"
+  ],
+  "subjects": [
+    "Egypt",
+    "Pharaonic",
+    "Hieroglyphic",
+    "Papyrus",
+    "Pyramid Texts",
+    "Book of the Dead",
+    "Ancient Egypt"
+  ],
+  "subjectHeadings": [
+    "Artifacts & Texts — Ancient Egyptian Texts — Pharaonic Canon"
+  ],
+  "places": [
+    {
+      "name": "Thebes (Luxor)",
+      "role": "Major temple and tomb complexes",
+      "slug": "thebes_egypt"
+    },
+    {
+      "name": "Memphis",
+      "role": "Old Kingdom capital and administrative center",
+      "slug": "memphis_egypt"
+    }
+  ],
+  "texts": [],
+  "quote": "",
+  "causes": [
+    {
+      "title": "Invention of hieroglyphic writing in predynastic Egypt",
+      "type": "Idea",
+      "year": "c. 3200 BCE"
+    },
+    {
+      "title": "Pharaonic state requires administrative and religious record-keeping",
+      "type": "Institution",
+      "year": "c. 3100 BCE"
+    }
+  ],
+  "effects": [
+    {
+      "title": "Afterlife theology influences Greek (Orphism) and Christian eschatology",
+      "type": "Idea",
+      "year": "c. 500 BCE"
+    },
+    {
+      "title": "Medical and mathematical knowledge transmitted to Greek world",
+      "type": "Text",
+      "year": "c. 300 BCE"
+    },
+    {
+      "title": "Wisdom literature parallels in biblical Proverbs and Ecclesiastes",
+      "type": "Text",
+      "year": "c. 700 BCE"
+    }
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "egyptian-corpus",
+      "sourceName": "The Egyptian Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "pyramid_texts",
+      "targetName": "Pyramid Texts",
+      "context": "Oldest religious texts in the world"
+    },
+    {
+      "sourceSlug": "egyptian-corpus",
+      "sourceName": "The Egyptian Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "book_of_the_dead",
+      "targetName": "Book of the Dead",
+      "context": "Premier funerary text collection"
+    },
+    {
+      "sourceSlug": "egyptian-corpus",
+      "sourceName": "The Egyptian Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "coffin_texts",
+      "targetName": "Coffin Texts",
+      "context": "Middle Kingdom funerary literature"
+    },
+    {
+      "sourceSlug": "egyptian-corpus",
+      "sourceName": "The Egyptian Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "instruction_of_ptahhotep",
+      "targetName": "Instruction of Ptahhotep",
+      "context": "Oldest wisdom literature"
+    },
+    {
+      "sourceSlug": "egyptian-corpus",
+      "sourceName": "The Egyptian Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "edwin_smith_papyrus",
+      "targetName": "Edwin Smith Papyrus",
+      "context": "Oldest surgical treatise"
+    },
+    {
+      "sourceSlug": "egyptian-corpus",
+      "sourceName": "The Egyptian Corpus",
+      "verb": "INFLUENCES",
+      "targetSlug": "biblical_corpus",
+      "targetName": "The Biblical Corpus",
+      "context": "Wisdom literature parallels (Proverbs, Amenemope)"
+    },
+    {
+      "sourceSlug": "egyptian-corpus",
+      "sourceName": "The Egyptian Corpus",
+      "verb": "INFLUENCES",
+      "targetSlug": "graeco_roman_corpus",
+      "targetName": "The Graeco-Roman Corpus",
+      "context": "Hermetic tradition, medical knowledge"
+    },
+    {
+      "sourceSlug": "joseph_biblical",
+      "sourceName": "Joseph",
+      "verb": "AUTHORS",
+      "targetSlug": "egyptian-corpus",
+      "targetName": "The Egyptian Corpus",
+      "context": "Scholarly tradition of the era"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:48:25.344618+00:00",
+  "gateResults": {
+    "summaryLen": 727,
+    "paragraphs": 2,
+    "causes": 2,
+    "effects": 3,
+    "relationships": 8,
+    "edgeFloor": 8,
+    "significanceScore": 9
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/731-Class-731/731egyptian-corpus.json"
+}

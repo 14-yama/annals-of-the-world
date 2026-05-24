@@ -1,0 +1,126 @@
+{
+  "slug": "iranian-zoroastrian-corpus",
+  "label": "Text",
+  "name": "The Iranian Zoroastrian Corpus",
+  "callNumber": "736.iranian-zoroastrian-corpus",
+  "era": "Classical",
+  "summary": "The Iranian Zoroastrian Corpus encompasses the sacred and theological literature of Zoroastrianism, one of the world's oldest monotheistic/dualistic religions, founded by the prophet Zarathushtra (Zoroaster, c. 1500–1000 BCE). Its core is the Avesta — liturgical texts in the Old Avestan and Younger Avestan languages, including the Gathas (hymns attributed to Zoroaster himself), the Yasna (liturgical texts), the Vendidad (laws of purity), and the Yashts (hymns to divinities).\n\nSupplementing the Avesta is a rich body of Middle Persian (Pahlavi) theological, cosmological, and eschatological literature including the Bundahishn (cosmogony), Denkard (encyclopedia of Zoroastrian knowledge), and Arda Viraf Namag (a visionary journey to heaven and hell that prefigures Dante). Zoroastrian concepts of cosmic dualism, angels, demons, final judgment, heaven, hell, bodily resurrection, and a future savior profoundly influenced Judaism, Christianity, and Islam.",
+  "importanceScore": 0,
+  "wikidataQid": "",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "The Iranian Zoroastrian Corpus shaped the theological and cosmological understanding of ancient Persia and its successors, influencing later monotheistic traditions such as Manichaeism and Christianity. Its core texts, including the Avesta, have been a source of inspiration for many philosophical and spiritual movements.",
+    "significanceCategory": "continental"
+  },
+  "frameworks": [
+    "TEXTUAL_TRANSMISSION",
+    "DOCTRINE_DEVELOPMENT",
+    "CULTURAL_DIFFUSION"
+  ],
+  "subjects": [
+    "Avesta",
+    "Zoroaster",
+    "Zarathustra",
+    "Ahura Mazda",
+    "Pahlavi",
+    "Dualism",
+    "Iran",
+    "Fire Temple"
+  ],
+  "subjectHeadings": [
+    "Artifacts & Texts — Religious Texts — Zoroastrian Canon"
+  ],
+  "places": [
+    {
+      "name": "Persepolis",
+      "role": "Achaemenid ceremonial capital"
+    }
+  ],
+  "texts": [],
+  "quote": "",
+  "causes": [
+    {
+      "title": "Zoroaster's prophetic revelation in ancient Iran",
+      "type": "Person",
+      "year": "c. 1500–1000 BCE",
+      "slug": "zoroaster"
+    },
+    {
+      "title": "Achaemenid Empire establishes Zoroastrianism as state religion",
+      "type": "Institution",
+      "year": "c. 550 BCE"
+    }
+  ],
+  "effects": [
+    {
+      "title": "Dualism, angels, judgment, resurrection concepts influence Judaism",
+      "type": "Idea",
+      "year": "c. 500 BCE"
+    },
+    {
+      "title": "Magi tradition referenced in Gospel of Matthew",
+      "type": "Text",
+      "year": "c. 80 CE"
+    },
+    {
+      "title": "Eschatological framework paralleled in Islamic theology",
+      "type": "Idea",
+      "year": "c. 700 CE"
+    }
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "iranian-zoroastrian-corpus",
+      "sourceName": "The Iranian Zoroastrian Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "gathas",
+      "targetName": "The Gathas",
+      "context": "Oldest hymns attributed to Zoroaster"
+    },
+    {
+      "sourceSlug": "iranian-zoroastrian-corpus",
+      "sourceName": "The Iranian Zoroastrian Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "vendidad",
+      "targetName": "Vendidad",
+      "context": "Laws of purity"
+    },
+    {
+      "sourceSlug": "iranian-zoroastrian-corpus",
+      "sourceName": "The Iranian Zoroastrian Corpus",
+      "verb": "INFLUENCES",
+      "targetSlug": "biblical_corpus",
+      "targetName": "The Biblical Corpus",
+      "context": "Dualism, angels, resurrection in post-exilic Judaism"
+    },
+    {
+      "sourceSlug": "zoroaster",
+      "sourceName": "Zoroaster's prophetic revelation in ancient Iran",
+      "verb": "CAUSES",
+      "targetSlug": "iranian-zoroastrian-corpus",
+      "targetName": "The Iranian Zoroastrian Corpus",
+      "context": "Causal antecedent (c. 1500–1000 BCE)"
+    },
+    {
+      "sourceSlug": "zoroaster",
+      "sourceName": "Zoroaster (Zarathushtra)",
+      "verb": "AUTHORS",
+      "targetSlug": "iranian-zoroastrian-corpus",
+      "targetName": "The Iranian Zoroastrian Corpus",
+      "context": "Scholarly tradition of the era"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:49:37.348002+00:00",
+  "gateResults": {
+    "summaryLen": 960,
+    "paragraphs": 2,
+    "causes": 2,
+    "effects": 3,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/736-Class-736/736iranian-zoroastrian-corpus.json"
+}

@@ -1,0 +1,111 @@
+{
+  "slug": "benedict-i",
+  "label": "Person",
+  "name": "Benedict I",
+  "callNumber": "250.benedict-i",
+  "era": "Medieval",
+  "summary": "Pope Benedict I was the bishop of Rome from 2 June 575 to his death on 30 July 579. He played a key role in mediating between the Eastern and Western branches of Christianity during a time of great turmoil, particularly with regards to the dispute over papal authority. His leadership helped to maintain stability in the Church and avoid further division. The exact dates of his birth are unknown, but he is believed to have been born around 540 AD.\n\nBenedict I was the 56th Pope of the Catholic Church and served from June 575 to July 579. During his papacy, he oversaw several significant events, including the Byzantine-Isaurian War and the Battle of Constantinople in 578. He also played a crucial role in the Council of Chalcedon in 553, which aimed to resolve disputes over the nature of Christ.\n\nDespite the challenges he faced, Benedict I is remembered for his commitment to maintaining unity within the Church and promoting peace among its members. His legacy as a leader who navigated complex theological debates and conflicts has endured for centuries.\n\nThe Pope's efforts to maintain stability in the Church were not without controversy, however. Some historians have criticized him for being too lenient towards the Eastern Emperor Justin II, which allowed for further divisions within the Church to emerge.\n\nIn conclusion, Pope Benedict I played a significant role in shaping the course of Christian history during his papacy. His leadership and commitment to unity helped to maintain stability in the Church, even in the face of great turmoil and conflict.",
+  "importanceScore": 8,
+  "wikidataQid": "Q151902",
+  "historicalSignificance": {
+    "significanceScore": 7,
+    "significanceNarrative": "Pope Benedict I's leadership helped to maintain unity within the Church during a time of great turmoil and conflict. His commitment to promoting peace among its members had significant implications for future theological debates.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "CULTURAL_TRANSMISSION",
+    "RELIGIOUS_INTERPRETATION"
+  ],
+  "subjects": [
+    "Roman Catholic Church",
+    "Christianity",
+    "Byzantine Empire",
+    "Eastern Roman Empire",
+    "Isaurian dynasty",
+    "Council of Chalcedon",
+    "Byzantine-Isaurian War"
+  ],
+  "subjectHeadings": [
+    "People — Religious Figures — Global — Medieval"
+  ],
+  "places": [
+    {
+      "name": "Rome",
+      "role": "Papacy"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Benedict I",
+      "type": "Reference article",
+      "slug": "benedict-i"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "The Eastern Roman Empire was in a state of turmoil during the 6th century, with various factions vying for power.\n",
+    "The Byzantine-Isaurian War had broken out between the Eastern Roman Empire and the Isaurian dynasty.\n",
+    "Papal authority was a major point of contention between the Eastern and Western branches of Christianity.",
+    "The Council of Chalcedon in 553 aimed to resolve disputes over the nature of Christ.\n"
+  ],
+  "effects": [
+    "The Byzantine-Isaurian War had a lasting impact on the balance of power in the Mediterranean region.\n",
+    "Papal authority was significantly strengthened during Benedict I's papacy, leading to increased recognition and respect for the office.\n",
+    "The Council of Chalcedon helped to establish a clear understanding of Christ's nature, which would have significant implications for future theological debates.\n"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "rome",
+      "sourceName": "Rome",
+      "verb": "CONTAINS",
+      "targetSlug": "papacy_of_benedict_i",
+      "targetName": "Papacy of Benedict I",
+      "context": "Benedict I served as the bishop of Rome during this time."
+    },
+    {
+      "sourceSlug": "byzantine-emperor_justin_ii",
+      "sourceName": "Justin II, Byzantine Emperor",
+      "verb": "INFLUENCES",
+      "targetSlug": "papacy_of_benedict_i",
+      "targetName": "Papacy of Benedict I",
+      "context": "Benedict I's lenient approach to Justin II's rule allowed for further divisions within the Church."
+    },
+    {
+      "sourceSlug": "council_of_chalcedon_553",
+      "sourceName": "Council of Chalcedon (553)",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "papacy_of_benedict_i",
+      "targetName": "Papacy of Benedict I",
+      "context": "The Council of Chalcedon took place during Benedict I's papacy."
+    },
+    {
+      "sourceSlug": "eastern-roman-emperor_justin_ii",
+      "sourceName": "Justin II, Eastern Roman Emperor",
+      "verb": "CONTAINS",
+      "targetSlug": "byzantine-isaurian_war",
+      "targetName": "Byzantine-Isaurian War",
+      "context": "The war occurred during the reign of Justin II."
+    },
+    {
+      "sourceSlug": "papacy_of_benedict_i",
+      "sourceName": "Papacy of Benedict I",
+      "verb": "CONTAINS",
+      "targetSlug": "council_of_chalcedon_553",
+      "targetName": "Council of Chalcedon (553)",
+      "context": "Benedict I oversaw the Council of Chalcedon."
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:49:44.270438+00:00",
+  "gateResults": {
+    "summaryLen": 1571,
+    "paragraphs": 5,
+    "causes": 4,
+    "effects": 3,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 7
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/250-Class-250/250benedict-i.json"
+}

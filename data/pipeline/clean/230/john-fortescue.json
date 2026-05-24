@@ -1,0 +1,129 @@
+{
+  "slug": "john-fortescue",
+  "label": "Person",
+  "name": "John Fortescue",
+  "callNumber": "230.john-fortescue",
+  "era": "Medieval",
+  "summary": "Sir John Fortescue (c. 1394–c. 1479) was an English jurist, Chief Justice of the King's Bench (1442–1461), and political philosopher whose writings articulated the first systematic defence of English constitutional monarchy over absolute royal power. His distinction between dominium regale (absolute kingship) and dominium politicum et regale (kingship limited by law and parliament) profoundly influenced English and subsequently American constitutional thought.\n\nFortescue served Henry VI as Chief Justice throughout the turbulent middle of the 15th century, before his Lancastrian loyalties forced him into exile after the Yorkist victory at Towton in 1461. He spent over a decade in exile in France and Scotland, accompanying Henry VI's court-in-exile. During this period he wrote his most influential works: De Laudibus Legum Angliae (In Praise of the Laws of England, c. 1468–1471, published 1543), written as a dialogue with Henry VI's young son Edward, and The Governance of England (c. 1471–1476), an analysis of English constitutional arrangements. Both works argued that England's constitution, with its Parliament and common law, protected subjects' property and liberty far better than the absolute monarchies of France.\n\nFortescue returned to England after the Lancastrian cause collapsed, submitting to Edward IV and recanting his political writings. Yet his ideas survived intact and were rediscovered in the 16th and 17th centuries as foundational arguments for parliamentary government. John Adams cited Fortescue when arguing the American colonial position before the Revolution, and his concept of dominium politicum et regale became a touchstone of Anglo-American constitutionalism.",
+  "importanceScore": 7,
+  "wikidataQid": "Q568395",
+  "historicalSignificance": {
+    "significanceScore": 7,
+    "significanceNarrative": "John Fortescue's articulation of English constitutional monarchy as dominium politicum et regale — government by law and parliament, not royal will alone — provided the foundational framework for the parliamentary constitutionalism that would define English and American governance.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "LEGAL_INTERPRETATION",
+    "CAUSE_AND_EFFECT",
+    "TEMPORAL_LINKAGE"
+  ],
+  "subjects": [
+    "Legal Figures"
+  ],
+  "subjectHeadings": [
+    "People — Legal Figures — Global — Medieval"
+  ],
+  "places": [
+    {
+      "name": "Devon",
+      "role": "Birth place"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: John Fortescue",
+      "type": "Reference article",
+      "slug": "john-fortescue"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    {
+      "title": "The Wars of the Roses forced Fortescue into Lancastrian exile, giving him occasion to write systematic political philosophy comparing English and French governance",
+      "type": "EventWindow",
+      "year": "1461–1471, France and Scotland"
+    },
+    {
+      "title": "The practical question of educating Henry VI's heir in the principles of English law motivated the dialogue form of De Laudibus",
+      "type": "Person",
+      "year": "c. 1468, France"
+    },
+    {
+      "title": "Fortescue's three decades as Chief Justice gave him unparalleled practical knowledge of how English law and Parliament functioned",
+      "type": "Institution",
+      "year": "1442–1461, England"
+    }
+  ],
+  "effects": [
+    {
+      "title": "De Laudibus Legum Angliae (published 1543) provided the foundational constitutional argument for English parliamentary government over royal absolutism",
+      "type": "Text",
+      "year": "c. 1468–1543, England"
+    },
+    {
+      "title": "Fortescue's concept of dominium politicum et regale was cited by 17th-century parliamentarians against Stuart absolutism",
+      "type": "Idea",
+      "year": "1620s–1640s, England"
+    },
+    {
+      "title": "John Adams cited Fortescue in colonial constitutional debates, carrying his ideas into the American founding",
+      "type": "Person",
+      "year": "1770s, America"
+    }
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "john-fortescue",
+      "sourceName": "John Fortescue",
+      "verb": "SERVED_UNDER",
+      "targetSlug": "henry-vi-of-england",
+      "targetName": "Henry VI of England",
+      "context": "Fortescue served as Chief Justice of the King's Bench under Henry VI from 1442 and followed him into exile after 1461"
+    },
+    {
+      "sourceSlug": "john-fortescue",
+      "sourceName": "John Fortescue",
+      "verb": "AUTHORED",
+      "targetSlug": "de-laudibus-legum-angliae",
+      "targetName": "De Laudibus Legum Angliae",
+      "context": "Fortescue wrote De Laudibus as a constitutional dialogue in exile c. 1468–1471, published posthumously in 1543"
+    },
+    {
+      "sourceSlug": "john-fortescue",
+      "sourceName": "John Fortescue",
+      "verb": "DEFINED",
+      "targetSlug": "dominium-politicum-et-regale",
+      "targetName": "Dominium Politicum et Regale",
+      "context": "Fortescue's distinction between absolute (regale) and constitutional (politicum et regale) kingship became the foundational framework for English constitutional theory"
+    },
+    {
+      "sourceSlug": "john-fortescue",
+      "sourceName": "John Fortescue",
+      "verb": "INFLUENCED",
+      "targetSlug": "edward-coke",
+      "targetName": "Edward Coke",
+      "context": "Coke and other common lawyers built on Fortescue's constitutional framework in their arguments against Stuart prerogative"
+    },
+    {
+      "sourceSlug": "john-fortescue",
+      "sourceName": "John Fortescue",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "wars-of-the-roses",
+      "targetName": "Wars of the Roses",
+      "context": "Fortescue's political philosophy was largely developed during his Lancastrian exile following the Yorkist victory at Towton (1461)"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:48:31.063632+00:00",
+  "gateResults": {
+    "summaryLen": 1704,
+    "paragraphs": 3,
+    "causes": 3,
+    "effects": 3,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 7
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/230-Class-230/230john-fortescue.json"
+}

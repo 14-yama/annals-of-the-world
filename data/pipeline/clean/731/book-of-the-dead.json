@@ -1,0 +1,111 @@
+{
+  "slug": "book-of-the-dead",
+  "label": "Text",
+  "name": "Book of the Dead",
+  "callNumber": "731.book-of-the-dead",
+  "era": "Classical",
+  "summary": "The ancient Egyptian funerary text known as \"The Book of Coming Forth by Day\" (rw nw prt m hrw), a collection of roughly 200 spells, hymns, and instructions composed on papyrus scrolls and placed with the dead during interment. Developed from the Coffin Texts during the New Kingdom (c. 1550–50 BCE), the Book of the Dead guided the deceased through the dangers of the Duat (underworld) to final judgment before Osiris.\n\nIts most famous scene — Spell 125, the \"Weighing of the Heart\" against the feather of Ma'at by the jackal-headed god Anubis — represents one of the earliest conceptions of moral judgment after death, profoundly influencing later Graeco-Roman, Jewish, and Christian eschatological imagery.",
+  "importanceScore": 0,
+  "wikidataQid": "",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "The Book of the Dead's 'Weighing of the Heart' scene influenced later moral judgment after death in Graeco-Roman, Jewish, and Christian eschatology, shaping regional eschatological imagery.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "TEXTUAL_TRANSMISSION",
+    "DOCTRINE_DEVELOPMENT",
+    "CULTURAL_DIFFUSION"
+  ],
+  "subjects": [
+    "New Kingdom",
+    "Funerary Texts",
+    "Afterlife",
+    "Judgment",
+    "Weighing of the Heart",
+    "Osiris",
+    "Papyrus"
+  ],
+  "subjectHeadings": [
+    "Artifacts & Texts — Religious Texts — Egyptian Funerary Literature"
+  ],
+  "places": [
+    {
+      "name": "Thebes (Luxor)",
+      "role": "Major production center for papyrus scrolls",
+      "slug": "thebes_egypt"
+    }
+  ],
+  "texts": [],
+  "quote": "",
+  "causes": [
+    {
+      "title": "Evolution from Coffin Texts during Second Intermediate Period",
+      "type": "Text",
+      "year": "c. 1650 BCE",
+      "slug": "coffin_texts"
+    }
+  ],
+  "effects": [
+    {
+      "title": "Moral judgment theme influences Greek and Christian afterlife concepts",
+      "type": "Idea",
+      "year": "c. 500 BCE"
+    }
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "coffin_texts",
+      "sourceName": "Evolution from Coffin Texts during Second Intermediate Period",
+      "verb": "CAUSES",
+      "targetSlug": "book-of-the-dead",
+      "targetName": "Book of the Dead",
+      "context": "Causal antecedent (c. 1650 BCE)"
+    },
+    {
+      "sourceSlug": "ancient_egypt",
+      "sourceName": "Ancient Egypt",
+      "verb": "REFERENCES",
+      "targetSlug": "book-of-the-dead",
+      "targetName": "Book of the Dead",
+      "context": "Referenced in place entity"
+    },
+    {
+      "sourceSlug": "egypt",
+      "sourceName": "Egypt",
+      "verb": "REFERENCES",
+      "targetSlug": "book-of-the-dead",
+      "targetName": "Book of the Dead",
+      "context": "Referenced in place entity"
+    },
+    {
+      "sourceSlug": "nile_valley_civilization",
+      "sourceName": "Nile Valley Civilization",
+      "verb": "REFERENCES",
+      "targetSlug": "book-of-the-dead",
+      "targetName": "Book of the Dead",
+      "context": "Referenced in place entity"
+    },
+    {
+      "sourceSlug": "thutmose_iii",
+      "sourceName": "Thutmose III",
+      "verb": "AUTHORS",
+      "targetSlug": "book-of-the-dead",
+      "targetName": "Book of the Dead",
+      "context": "Scholarly tradition of the era"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:48:25.349311+00:00",
+  "gateResults": {
+    "summaryLen": 709,
+    "paragraphs": 2,
+    "causes": 1,
+    "effects": 1,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/731-Class-731/731book-of-the-dead.json"
+}

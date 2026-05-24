@@ -1,0 +1,120 @@
+{
+  "slug": "nero",
+  "label": "Person",
+  "name": "Nero",
+  "callNumber": "262.nero",
+  "era": "Classical",
+  "summary": "Nero Claudius Caesar Augustus Germanicus (37–68 CE) was the fifth Roman emperor, ruling from 54 to 68 CE as the last of the Julio-Claudian dynasty. His reign began promisingly under the guidance of Seneca and Burrus but descended into tyranny, persecution, and the Great Fire of Rome that devastated the city in 64 CE.\n\nAdopted by Emperor Claudius and tutored by the Stoic philosopher Seneca, Nero initially pursued moderate governance. His early reign (the quinquennium Neronis) was later praised by Trajan as the finest period of imperial government. But after murdering his mother Agrippina in 59 CE and disposing of his advisors, Nero's rule grew increasingly erratic.\n\nThe Great Fire of July 64 CE destroyed ten of Rome's fourteen districts. Nero blamed Christians for the fire, launching the first imperial persecution—tradition holds that both Peter and Paul were martyred during this campaign. He used the cleared land to build his extravagant Domus Aurea (Golden House).\n\nFacing a military revolt in 68 CE, the Senate declared Nero a public enemy. He fled Rome and committed suicide, reportedly saying: 'Qualis artifex pereo'—'What an artist dies in me!' His death ended the Julio-Claudian dynasty and plunged Rome into the Year of the Four Emperors.",
+  "importanceScore": 8,
+  "wikidataQid": "Q1413",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "Nero's tyranny and persecution of Christians led to a significant shift in Roman imperial governance, with his reign serving as a cautionary tale for future emperors. The Great Fire of Rome also spurred the development of firefighting techniques and emergency response systems.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "CAUSE_AND_EFFECT",
+    "STRUCTURAL_ANALYSIS",
+    "PSYCHOLOGICAL_ANALYSIS"
+  ],
+  "subjects": [
+    "Roman Empire",
+    "Julio-Claudian Dynasty",
+    "Christian Persecution",
+    "Great Fire of Rome",
+    "Tyranny",
+    "Italy",
+    "Ancient Rome",
+    "Imperial Succession"
+  ],
+  "subjectHeadings": [
+    "People — Poets & Playwrights — Global — Classical"
+  ],
+  "places": [
+    {
+      "name": "Rome, Italy",
+      "role": "Imperial capital"
+    },
+    {
+      "name": "Antium, Italy",
+      "role": "Birthplace"
+    },
+    {
+      "name": "Domus Aurea, Rome",
+      "role": "Palace built after the fire"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Nero",
+      "type": "Reference article",
+      "slug": "nero"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Julio-Claudian dynastic succession and Agrippina's political maneuvering",
+    "Seneca's Stoic influence on early moderate governance",
+    "Growing imperial autocracy and elimination of senatorial checks"
+  ],
+  "effects": [
+    "First Roman persecution of Christians after Great Fire of 64 CE",
+    "End of the Julio-Claudian dynasty, triggering Year of the Four Emperors",
+    "Became archetypal tyrant in Western historical imagination"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "nero",
+      "sourceName": "Nero",
+      "verb": "SUCCEEDS",
+      "targetSlug": "augustus-caesar",
+      "targetName": "Augustus Caesar",
+      "context": "Last emperor of the Julio-Claudian dynasty founded by Augustus"
+    },
+    {
+      "sourceSlug": "nero",
+      "sourceName": "Nero",
+      "verb": "CAUSES",
+      "targetSlug": "christian-persecution",
+      "targetName": "Christian Persecution",
+      "context": "Launched first imperial persecution of Christians after 64 CE fire"
+    },
+    {
+      "sourceSlug": "nero",
+      "sourceName": "Nero",
+      "verb": "OCCURS_IN",
+      "targetSlug": "rome",
+      "targetName": "Rome",
+      "context": "Emperor in Rome 54-68 CE; Great Fire destroyed much of the city"
+    },
+    {
+      "sourceSlug": "seneca",
+      "sourceName": "Seneca",
+      "verb": "INFLUENCES",
+      "targetSlug": "nero",
+      "targetName": "Nero",
+      "context": "Seneca tutored young Nero and guided his early moderate policies"
+    },
+    {
+      "sourceSlug": "nero",
+      "sourceName": "Nero",
+      "verb": "PARTICIPATES_IN",
+      "targetSlug": "great-fire-of-rome",
+      "targetName": "Great Fire of Rome",
+      "context": "Used the fire's aftermath to build the Domus Aurea and persecute Christians"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:49:24.957888+00:00",
+  "gateResults": {
+    "summaryLen": 1259,
+    "paragraphs": 4,
+    "causes": 3,
+    "effects": 3,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/262-Class-262/262nero.json"
+}

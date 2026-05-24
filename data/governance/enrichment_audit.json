@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-05-23T01:19:12.029534+00:00",
-  "computeTimeMs": 33474,
+  "generatedAt": "2026-05-24T16:42:23.783795+00:00",
+  "computeTimeMs": 22209,
   "filesScanned": 358016,
   "total": 392078,
-  "enriched": 11562,
-  "highQuality": 7040,
-  "stubs": 63133,
-  "weak": 317383,
-  "lowEdges": 7914,
+  "enriched": 11664,
+  "highQuality": 7242,
+  "stubs": 63039,
+  "weak": 317375,
+  "lowEdges": 10116,
   "fieldCoverage": {
-    "hasSummary": 11562,
+    "hasSummary": 11664,
     "hasCauses": 389519,
     "hasEffects": 390162,
     "hasEdges": 392003,
-    "hasPlaces": 349264,
+    "hasPlaces": 349286,
     "hasFrameworks": 392054,
-    "hasSignificance": 9335
+    "hasSignificance": 11620
   },
   "byLabel": {
     "Idea": {
@@ -24,44 +24,44 @@
       "highQuality": 59,
       "stubs": 6402,
       "weak": 13502,
-      "lowEdges": 112,
+      "lowEdges": 467,
       "hasSummary": 501,
       "hasCauses": 20319,
       "hasEffects": 20382,
       "hasEdges": 20405,
       "hasPlaces": 11979,
       "hasFrameworks": 20405,
-      "hasSignificance": 132
+      "hasSignificance": 500
     },
     "Text": {
       "total": 18219,
-      "enriched": 576,
-      "highQuality": 136,
-      "stubs": 5373,
+      "enriched": 577,
+      "highQuality": 186,
+      "stubs": 5372,
       "weak": 12270,
-      "lowEdges": 129,
-      "hasSummary": 576,
+      "lowEdges": 505,
+      "hasSummary": 577,
       "hasCauses": 17785,
       "hasEffects": 17826,
       "hasEdges": 18219,
       "hasPlaces": 13005,
       "hasFrameworks": 18219,
-      "hasSignificance": 188
+      "hasSignificance": 572
     },
     "Place": {
       "total": 17283,
       "enriched": 689,
-      "highQuality": 82,
+      "highQuality": 83,
       "stubs": 994,
       "weak": 15600,
-      "lowEdges": 249,
+      "lowEdges": 663,
       "hasSummary": 689,
       "hasCauses": 17212,
       "hasEffects": 17263,
       "hasEdges": 17282,
       "hasPlaces": 404,
       "hasFrameworks": 17283,
-      "hasSignificance": 267
+      "hasSignificance": 689
     },
     "Movement": {
       "total": 5369,
@@ -80,33 +80,33 @@
     },
     "Person": {
       "total": 273812,
-      "enriched": 7869,
-      "highQuality": 5730,
-      "stubs": 33204,
-      "weak": 232739,
-      "lowEdges": 6365,
-      "hasSummary": 7869,
+      "enriched": 7970,
+      "highQuality": 5878,
+      "stubs": 33111,
+      "weak": 232731,
+      "lowEdges": 6636,
+      "hasSummary": 7970,
       "hasCauses": 273374,
       "hasEffects": 273338,
       "hasEdges": 273789,
-      "hasPlaces": 266958,
+      "hasPlaces": 266980,
       "hasFrameworks": 273792,
-      "hasSignificance": 7619
+      "hasSignificance": 7932
     },
     "Institution": {
       "total": 34297,
       "enriched": 1604,
-      "highQuality": 973,
+      "highQuality": 975,
       "stubs": 6556,
       "weak": 26137,
-      "lowEdges": 1004,
+      "lowEdges": 1548,
       "hasSummary": 1604,
       "hasCauses": 34218,
       "hasEffects": 34219,
       "hasEdges": 34297,
       "hasPlaces": 33043,
       "hasFrameworks": 34296,
-      "hasSignificance": 1057
+      "hasSignificance": 1605
     },
     "EventWindow": {
       "total": 17478,
@@ -114,29 +114,29 @@
       "highQuality": 11,
       "stubs": 8045,
       "weak": 9275,
-      "lowEdges": 10,
+      "lowEdges": 145,
       "hasSummary": 158,
       "hasCauses": 16413,
       "hasEffects": 16674,
       "hasEdges": 17478,
       "hasPlaces": 16284,
       "hasFrameworks": 17476,
-      "hasSignificance": 18
+      "hasSignificance": 158
     },
     "Evidence": {
       "total": 4197,
       "enriched": 94,
-      "highQuality": 3,
+      "highQuality": 4,
       "stubs": 666,
       "weak": 3437,
-      "lowEdges": 6,
+      "lowEdges": 92,
       "hasSummary": 94,
       "hasCauses": 4184,
       "hasEffects": 4189,
       "hasEdges": 4197,
       "hasPlaces": 2850,
       "hasFrameworks": 4197,
-      "hasSignificance": 6
+      "hasSignificance": 94
     },
     "Timeframe": {
       "total": 1018,
@@ -144,14 +144,14 @@
       "highQuality": 34,
       "stubs": 282,
       "weak": 678,
-      "lowEdges": 29,
+      "lowEdges": 50,
       "hasSummary": 58,
       "hasCauses": 1014,
       "hasEffects": 1010,
       "hasEdges": 1018,
       "hasPlaces": 619,
       "hasFrameworks": 1018,
-      "hasSignificance": 36
+      "hasSignificance": 58
     }
   },
   "byClass": {
@@ -161,14 +161,14 @@
       "highQuality": 8,
       "stubs": 566,
       "weak": 1654,
-      "lowEdges": 15,
+      "lowEdges": 79,
       "hasSummary": 83,
       "hasCauses": 2299,
       "hasEffects": 2292,
       "hasEdges": 2303,
       "hasPlaces": 1058,
       "hasFrameworks": 2303,
-      "hasSignificance": 19
+      "hasSignificance": 83
     },
     "1": {
       "total": 18112,
@@ -176,59 +176,59 @@
       "highQuality": 52,
       "stubs": 5836,
       "weak": 11857,
-      "lowEdges": 97,
+      "lowEdges": 388,
       "hasSummary": 419,
       "hasCauses": 18031,
       "hasEffects": 18100,
       "hasEdges": 18112,
       "hasPlaces": 10931,
       "hasFrameworks": 18112,
-      "hasSignificance": 114
+      "hasSignificance": 418
     },
     "2": {
       "total": 273812,
-      "enriched": 7869,
-      "highQuality": 5730,
-      "stubs": 33204,
-      "weak": 232739,
-      "lowEdges": 6365,
-      "hasSummary": 7869,
+      "enriched": 7970,
+      "highQuality": 5878,
+      "stubs": 33111,
+      "weak": 232731,
+      "lowEdges": 6636,
+      "hasSummary": 7970,
       "hasCauses": 273374,
       "hasEffects": 273338,
       "hasEdges": 273789,
-      "hasPlaces": 266958,
+      "hasPlaces": 266980,
       "hasFrameworks": 273792,
-      "hasSignificance": 7619
+      "hasSignificance": 7932
     },
     "3": {
       "total": 34295,
       "enriched": 1604,
-      "highQuality": 973,
+      "highQuality": 975,
       "stubs": 6554,
       "weak": 26137,
-      "lowEdges": 1004,
+      "lowEdges": 1548,
       "hasSummary": 1604,
       "hasCauses": 34216,
       "hasEffects": 34218,
       "hasEdges": 34295,
       "hasPlaces": 33041,
       "hasFrameworks": 34294,
-      "hasSignificance": 1057
+      "hasSignificance": 1605
     },
     "4": {
       "total": 17236,
       "enriched": 688,
-      "highQuality": 81,
+      "highQuality": 82,
       "stubs": 994,
       "weak": 15554,
-      "lowEdges": 249,
+      "lowEdges": 663,
       "hasSummary": 688,
       "hasCauses": 17208,
       "hasEffects": 17216,
       "hasEdges": 17235,
       "hasPlaces": 359,
       "hasFrameworks": 17236,
-      "hasSignificance": 266
+      "hasSignificance": 688
     },
     "5": {
       "total": 17525,
@@ -236,14 +236,14 @@
       "highQuality": 11,
       "stubs": 8047,
       "weak": 9320,
-      "lowEdges": 10,
+      "lowEdges": 145,
       "hasSummary": 158,
       "hasCauses": 16415,
       "hasEffects": 16720,
       "hasEdges": 17525,
       "hasPlaces": 16329,
       "hasFrameworks": 17523,
-      "hasSignificance": 18
+      "hasSignificance": 158
     },
     "6": {
       "total": 5360,
@@ -262,33 +262,33 @@
     },
     "7": {
       "total": 18220,
-      "enriched": 576,
-      "highQuality": 136,
-      "stubs": 5373,
+      "enriched": 577,
+      "highQuality": 186,
+      "stubs": 5372,
       "weak": 12271,
-      "lowEdges": 129,
-      "hasSummary": 576,
+      "lowEdges": 505,
+      "hasSummary": 577,
       "hasCauses": 17786,
       "hasEffects": 17827,
       "hasEdges": 18220,
       "hasPlaces": 13006,
       "hasFrameworks": 18220,
-      "hasSignificance": 188
+      "hasSignificance": 572
     },
     "8": {
       "total": 4197,
       "enriched": 94,
-      "highQuality": 3,
+      "highQuality": 4,
       "stubs": 666,
       "weak": 3437,
-      "lowEdges": 6,
+      "lowEdges": 92,
       "hasSummary": 94,
       "hasCauses": 4184,
       "hasEffects": 4189,
       "hasEdges": 4197,
       "hasPlaces": 2850,
       "hasFrameworks": 4197,
-      "hasSignificance": 6
+      "hasSignificance": 94
     },
     "9": {
       "total": 1018,
@@ -296,14 +296,14 @@
       "highQuality": 34,
       "stubs": 282,
       "weak": 678,
-      "lowEdges": 29,
+      "lowEdges": 50,
       "hasSummary": 58,
       "hasCauses": 1014,
       "hasEffects": 1010,
       "hasEdges": 1018,
       "hasPlaces": 619,
       "hasFrameworks": 1018,
-      "hasSignificance": 36
+      "hasSignificance": 58
     }
   },
   "byDivision": {
@@ -313,14 +313,14 @@
       "highQuality": 4,
       "stubs": 239,
       "weak": 630,
-      "lowEdges": 9,
+      "lowEdges": 46,
       "hasSummary": 49,
       "hasCauses": 918,
       "hasEffects": 916,
       "hasEdges": 918,
       "hasPlaces": 426,
       "hasFrameworks": 918,
-      "hasSignificance": 12
+      "hasSignificance": 49
     },
     "011": {
       "total": 66,
@@ -328,14 +328,14 @@
       "highQuality": 0,
       "stubs": 25,
       "weak": 40,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 65,
       "hasEffects": 62,
       "hasEdges": 66,
       "hasPlaces": 42,
       "hasFrameworks": 66,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "012": {
       "total": 490,
@@ -343,14 +343,14 @@
       "highQuality": 3,
       "stubs": 23,
       "weak": 449,
-      "lowEdges": 2,
+      "lowEdges": 17,
       "hasSummary": 18,
       "hasCauses": 490,
       "hasEffects": 490,
       "hasEdges": 490,
       "hasPlaces": 70,
       "hasFrameworks": 490,
-      "hasSignificance": 3
+      "hasSignificance": 18
     },
     "013": {
       "total": 160,
@@ -388,14 +388,14 @@
       "highQuality": 0,
       "stubs": 21,
       "weak": 51,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 72,
       "hasEffects": 72,
       "hasEdges": 73,
       "hasPlaces": 30,
       "hasFrameworks": 73,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "016": {
       "total": 367,
@@ -403,14 +403,14 @@
       "highQuality": 0,
       "stubs": 119,
       "weak": 242,
-      "lowEdges": 0,
+      "lowEdges": 6,
       "hasSummary": 6,
       "hasCauses": 367,
       "hasEffects": 367,
       "hasEdges": 367,
       "hasPlaces": 361,
       "hasFrameworks": 367,
-      "hasSignificance": 0
+      "hasSignificance": 6
     },
     "020": {
       "total": 54,
@@ -508,14 +508,14 @@
       "highQuality": 0,
       "stubs": 23,
       "weak": 35,
-      "lowEdges": 1,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 60,
       "hasEffects": 60,
       "hasEdges": 60,
       "hasPlaces": 6,
       "hasFrameworks": 60,
-      "hasSignificance": 1
+      "hasSignificance": 2
     },
     "031": {
       "total": 3,
@@ -598,14 +598,14 @@
       "highQuality": 0,
       "stubs": 20,
       "weak": 60,
-      "lowEdges": 2,
+      "lowEdges": 5,
       "hasSummary": 5,
       "hasCauses": 85,
       "hasEffects": 85,
       "hasEdges": 85,
       "hasPlaces": 3,
       "hasFrameworks": 85,
-      "hasSignificance": 2
+      "hasSignificance": 5
     },
     "110": {
       "total": 78,
@@ -628,14 +628,14 @@
       "highQuality": 0,
       "stubs": 1,
       "weak": 241,
-      "lowEdges": 0,
+      "lowEdges": 10,
       "hasSummary": 10,
       "hasCauses": 252,
       "hasEffects": 252,
       "hasEdges": 252,
       "hasPlaces": 6,
       "hasFrameworks": 252,
-      "hasSignificance": 0
+      "hasSignificance": 10
     },
     "112": {
       "total": 902,
@@ -643,14 +643,14 @@
       "highQuality": 0,
       "stubs": 134,
       "weak": 722,
-      "lowEdges": 1,
+      "lowEdges": 35,
       "hasSummary": 46,
       "hasCauses": 902,
       "hasEffects": 902,
       "hasEdges": 902,
       "hasPlaces": 20,
       "hasFrameworks": 902,
-      "hasSignificance": 2
+      "hasSignificance": 46
     },
     "113": {
       "total": 9,
@@ -658,14 +658,14 @@
       "highQuality": 0,
       "stubs": 3,
       "weak": 4,
-      "lowEdges": 0,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 9,
       "hasEffects": 9,
       "hasEdges": 9,
       "hasPlaces": 3,
       "hasFrameworks": 9,
-      "hasSignificance": 0
+      "hasSignificance": 2
     },
     "114": {
       "total": 327,
@@ -673,14 +673,14 @@
       "highQuality": 0,
       "stubs": 125,
       "weak": 194,
-      "lowEdges": 0,
+      "lowEdges": 8,
       "hasSummary": 8,
       "hasCauses": 327,
       "hasEffects": 327,
       "hasEdges": 327,
       "hasPlaces": 71,
       "hasFrameworks": 327,
-      "hasSignificance": 0
+      "hasSignificance": 8
     },
     "115": {
       "total": 10,
@@ -703,14 +703,14 @@
       "highQuality": 7,
       "stubs": 95,
       "weak": 206,
-      "lowEdges": 14,
+      "lowEdges": 23,
       "hasSummary": 24,
       "hasCauses": 325,
       "hasEffects": 325,
       "hasEdges": 325,
       "hasPlaces": 10,
       "hasFrameworks": 325,
-      "hasSignificance": 15
+      "hasSignificance": 24
     },
     "121": {
       "total": 33,
@@ -733,14 +733,14 @@
       "highQuality": 0,
       "stubs": 1,
       "weak": 12,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 14,
       "hasEffects": 14,
       "hasEdges": 14,
       "hasPlaces": 1,
       "hasFrameworks": 14,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "123": {
       "total": 122,
@@ -748,14 +748,14 @@
       "highQuality": 1,
       "stubs": 40,
       "weak": 78,
-      "lowEdges": 2,
+      "lowEdges": 4,
       "hasSummary": 4,
       "hasCauses": 122,
       "hasEffects": 122,
       "hasEdges": 122,
       "hasPlaces": 94,
       "hasFrameworks": 122,
-      "hasSignificance": 2
+      "hasSignificance": 4
     },
     "124": {
       "total": 22,
@@ -763,14 +763,14 @@
       "highQuality": 1,
       "stubs": 5,
       "weak": 15,
-      "lowEdges": 1,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 22,
       "hasEffects": 22,
       "hasEdges": 22,
       "hasPlaces": 2,
       "hasFrameworks": 22,
-      "hasSignificance": 1
+      "hasSignificance": 2
     },
     "125": {
       "total": 53,
@@ -778,14 +778,14 @@
       "highQuality": 2,
       "stubs": 17,
       "weak": 33,
-      "lowEdges": 2,
+      "lowEdges": 3,
       "hasSummary": 3,
       "hasCauses": 53,
       "hasEffects": 53,
       "hasEdges": 53,
       "hasPlaces": 4,
       "hasFrameworks": 53,
-      "hasSignificance": 2
+      "hasSignificance": 3
     },
     "126": {
       "total": 30,
@@ -808,14 +808,14 @@
       "highQuality": 14,
       "stubs": 190,
       "weak": 442,
-      "lowEdges": 21,
+      "lowEdges": 40,
       "hasSummary": 45,
       "hasCauses": 675,
       "hasEffects": 677,
       "hasEdges": 677,
       "hasPlaces": 31,
       "hasFrameworks": 677,
-      "hasSignificance": 26
+      "hasSignificance": 45
     },
     "131": {
       "total": 454,
@@ -823,14 +823,14 @@
       "highQuality": 0,
       "stubs": 274,
       "weak": 179,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 454,
       "hasEffects": 454,
       "hasEdges": 454,
       "hasPlaces": 439,
       "hasFrameworks": 454,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "132": {
       "total": 103,
@@ -838,14 +838,14 @@
       "highQuality": 1,
       "stubs": 31,
       "weak": 69,
-      "lowEdges": 2,
+      "lowEdges": 3,
       "hasSummary": 3,
       "hasCauses": 103,
       "hasEffects": 103,
       "hasEdges": 103,
       "hasPlaces": 78,
       "hasFrameworks": 103,
-      "hasSignificance": 2
+      "hasSignificance": 3
     },
     "133": {
       "total": 657,
@@ -853,14 +853,14 @@
       "highQuality": 1,
       "stubs": 128,
       "weak": 524,
-      "lowEdges": 0,
+      "lowEdges": 4,
       "hasSummary": 5,
       "hasCauses": 657,
       "hasEffects": 657,
       "hasEdges": 657,
       "hasPlaces": 256,
       "hasFrameworks": 657,
-      "hasSignificance": 1
+      "hasSignificance": 5
     },
     "134": {
       "total": 141,
@@ -868,14 +868,14 @@
       "highQuality": 2,
       "stubs": 42,
       "weak": 95,
-      "lowEdges": 2,
+      "lowEdges": 3,
       "hasSummary": 4,
       "hasCauses": 141,
       "hasEffects": 141,
       "hasEdges": 141,
       "hasPlaces": 10,
       "hasFrameworks": 141,
-      "hasSignificance": 3
+      "hasSignificance": 4
     },
     "135": {
       "total": 29,
@@ -883,14 +883,14 @@
       "highQuality": 0,
       "stubs": 10,
       "weak": 17,
-      "lowEdges": 0,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 29,
       "hasEffects": 29,
       "hasEdges": 29,
       "hasPlaces": 1,
       "hasFrameworks": 29,
-      "hasSignificance": 0
+      "hasSignificance": 2
     },
     "136": {
       "total": 1740,
@@ -898,14 +898,14 @@
       "highQuality": 2,
       "stubs": 500,
       "weak": 1195,
-      "lowEdges": 3,
+      "lowEdges": 43,
       "hasSummary": 45,
       "hasCauses": 1740,
       "hasEffects": 1740,
       "hasEdges": 1740,
       "hasPlaces": 147,
       "hasFrameworks": 1740,
-      "hasSignificance": 4
+      "hasSignificance": 45
     },
     "140": {
       "total": 1140,
@@ -913,14 +913,14 @@
       "highQuality": 5,
       "stubs": 406,
       "weak": 696,
-      "lowEdges": 12,
+      "lowEdges": 36,
       "hasSummary": 38,
       "hasCauses": 1135,
       "hasEffects": 1132,
       "hasEdges": 1140,
       "hasPlaces": 232,
       "hasFrameworks": 1140,
-      "hasSignificance": 14
+      "hasSignificance": 38
     },
     "141": {
       "total": 48,
@@ -928,14 +928,14 @@
       "highQuality": 1,
       "stubs": 12,
       "weak": 34,
-      "lowEdges": 1,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 46,
       "hasEffects": 47,
       "hasEdges": 48,
       "hasPlaces": 8,
       "hasFrameworks": 48,
-      "hasSignificance": 1
+      "hasSignificance": 2
     },
     "142": {
       "total": 417,
@@ -943,14 +943,14 @@
       "highQuality": 0,
       "stubs": 127,
       "weak": 282,
-      "lowEdges": 4,
+      "lowEdges": 8,
       "hasSummary": 8,
       "hasCauses": 417,
       "hasEffects": 417,
       "hasEdges": 417,
       "hasPlaces": 320,
       "hasFrameworks": 417,
-      "hasSignificance": 4
+      "hasSignificance": 8
     },
     "143": {
       "total": 78,
@@ -958,14 +958,14 @@
       "highQuality": 2,
       "stubs": 26,
       "weak": 49,
-      "lowEdges": 1,
+      "lowEdges": 2,
       "hasSummary": 3,
       "hasCauses": 77,
       "hasEffects": 77,
       "hasEdges": 78,
       "hasPlaces": 18,
       "hasFrameworks": 78,
-      "hasSignificance": 2
+      "hasSignificance": 3
     },
     "144": {
       "total": 5,
@@ -988,14 +988,14 @@
       "highQuality": 0,
       "stubs": 19,
       "weak": 59,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 2,
       "hasCauses": 80,
       "hasEffects": 80,
       "hasEdges": 80,
       "hasPlaces": 14,
       "hasFrameworks": 80,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "150": {
       "total": 27,
@@ -1033,14 +1033,14 @@
       "highQuality": 0,
       "stubs": 171,
       "weak": 578,
-      "lowEdges": 1,
+      "lowEdges": 14,
       "hasSummary": 14,
       "hasCauses": 763,
       "hasEffects": 763,
       "hasEdges": 763,
       "hasPlaces": 577,
       "hasFrameworks": 763,
-      "hasSignificance": 1
+      "hasSignificance": 14
     },
     "153": {
       "total": 3718,
@@ -1048,14 +1048,14 @@
       "highQuality": 1,
       "stubs": 613,
       "weak": 3056,
-      "lowEdges": 11,
+      "lowEdges": 46,
       "hasSummary": 49,
       "hasCauses": 3651,
       "hasEffects": 3718,
       "hasEdges": 3718,
       "hasPlaces": 3554,
       "hasFrameworks": 3718,
-      "hasSignificance": 12
+      "hasSignificance": 49
     },
     "154": {
       "total": 6,
@@ -1093,14 +1093,14 @@
       "highQuality": 1,
       "stubs": 11,
       "weak": 23,
-      "lowEdges": 2,
+      "lowEdges": 3,
       "hasSummary": 3,
       "hasCauses": 37,
       "hasEffects": 36,
       "hasEdges": 37,
       "hasPlaces": 6,
       "hasFrameworks": 37,
-      "hasSignificance": 2
+      "hasSignificance": 3
     },
     "161": {
       "total": 2560,
@@ -1108,14 +1108,14 @@
       "highQuality": 0,
       "stubs": 1490,
       "weak": 1058,
-      "lowEdges": 0,
+      "lowEdges": 12,
       "hasSummary": 12,
       "hasCauses": 2560,
       "hasEffects": 2560,
       "hasEdges": 2560,
       "hasPlaces": 2539,
       "hasFrameworks": 2560,
-      "hasSignificance": 0
+      "hasSignificance": 12
     },
     "162": {
       "total": 9,
@@ -1138,14 +1138,14 @@
       "highQuality": 0,
       "stubs": 290,
       "weak": 261,
-      "lowEdges": 0,
+      "lowEdges": 8,
       "hasSummary": 8,
       "hasCauses": 559,
       "hasEffects": 559,
       "hasEdges": 559,
       "hasPlaces": 552,
       "hasFrameworks": 559,
-      "hasSignificance": 0
+      "hasSignificance": 8
     },
     "170": {
       "total": 2126,
@@ -1153,14 +1153,14 @@
       "highQuality": 0,
       "stubs": 877,
       "weak": 1201,
-      "lowEdges": 4,
+      "lowEdges": 48,
       "hasSummary": 48,
       "hasCauses": 2126,
       "hasEffects": 2126,
       "hasEdges": 2126,
       "hasPlaces": 1631,
       "hasFrameworks": 2126,
-      "hasSignificance": 4
+      "hasSignificance": 48
     },
     "171": {
       "total": 85,
@@ -1168,14 +1168,14 @@
       "highQuality": 0,
       "stubs": 27,
       "weak": 53,
-      "lowEdges": 0,
+      "lowEdges": 5,
       "hasSummary": 5,
       "hasCauses": 85,
       "hasEffects": 85,
       "hasEdges": 85,
       "hasPlaces": 53,
       "hasFrameworks": 85,
-      "hasSignificance": 0
+      "hasSignificance": 5
     },
     "172": {
       "total": 211,
@@ -1183,14 +1183,14 @@
       "highQuality": 0,
       "stubs": 57,
       "weak": 148,
-      "lowEdges": 2,
+      "lowEdges": 6,
       "hasSummary": 6,
       "hasCauses": 211,
       "hasEffects": 210,
       "hasEdges": 211,
       "hasPlaces": 104,
       "hasFrameworks": 211,
-      "hasSignificance": 2
+      "hasSignificance": 6
     },
     "173": {
       "total": 243,
@@ -1198,44 +1198,44 @@
       "highQuality": 3,
       "stubs": 69,
       "weak": 168,
-      "lowEdges": 4,
+      "lowEdges": 6,
       "hasSummary": 6,
       "hasCauses": 243,
       "hasEffects": 243,
       "hasEdges": 243,
       "hasPlaces": 79,
       "hasFrameworks": 243,
-      "hasSignificance": 4
+      "hasSignificance": 6
     },
     "201": {
       "total": 17603,
-      "enriched": 508,
-      "highQuality": 302,
-      "stubs": 2352,
+      "enriched": 509,
+      "highQuality": 303,
+      "stubs": 2351,
       "weak": 14743,
-      "lowEdges": 478,
-      "hasSummary": 508,
+      "lowEdges": 495,
+      "hasSummary": 509,
       "hasCauses": 17579,
       "hasEffects": 17579,
       "hasEdges": 17600,
       "hasPlaces": 17536,
       "hasFrameworks": 17603,
-      "hasSignificance": 484
+      "hasSignificance": 502
     },
     "202": {
       "total": 17843,
-      "enriched": 412,
-      "highQuality": 300,
-      "stubs": 1419,
+      "enriched": 414,
+      "highQuality": 302,
+      "stubs": 1417,
       "weak": 16012,
-      "lowEdges": 385,
-      "hasSummary": 412,
+      "lowEdges": 406,
+      "hasSummary": 414,
       "hasCauses": 17820,
       "hasEffects": 17820,
       "hasEdges": 17842,
       "hasPlaces": 17680,
       "hasFrameworks": 17843,
-      "hasSignificance": 389
+      "hasSignificance": 411
     },
     "203": {
       "total": 49676,
@@ -1243,74 +1243,74 @@
       "highQuality": 544,
       "stubs": 3577,
       "weak": 45488,
-      "lowEdges": 571,
+      "lowEdges": 602,
       "hasSummary": 611,
       "hasCauses": 49675,
       "hasEffects": 49675,
       "hasEdges": 49676,
       "hasPlaces": 49480,
       "hasFrameworks": 49676,
-      "hasSignificance": 580
+      "hasSignificance": 611
     },
     "204": {
       "total": 14353,
-      "enriched": 332,
-      "highQuality": 209,
-      "stubs": 1995,
+      "enriched": 338,
+      "highQuality": 215,
+      "stubs": 1989,
       "weak": 12026,
-      "lowEdges": 320,
-      "hasSummary": 332,
+      "lowEdges": 331,
+      "hasSummary": 338,
       "hasCauses": 14344,
       "hasEffects": 14344,
       "hasEdges": 14353,
-      "hasPlaces": 14167,
+      "hasPlaces": 14168,
       "hasFrameworks": 14353,
-      "hasSignificance": 326
+      "hasSignificance": 337
     },
     "205": {
       "total": 16006,
-      "enriched": 350,
-      "highQuality": 208,
-      "stubs": 2784,
+      "enriched": 357,
+      "highQuality": 215,
+      "stubs": 2777,
       "weak": 12872,
-      "lowEdges": 326,
-      "hasSummary": 350,
+      "lowEdges": 337,
+      "hasSummary": 357,
       "hasCauses": 15998,
       "hasEffects": 15998,
       "hasEdges": 16006,
-      "hasPlaces": 15690,
+      "hasPlaces": 15693,
       "hasFrameworks": 16004,
-      "hasSignificance": 339
+      "hasSignificance": 354
     },
     "210": {
       "total": 5278,
-      "enriched": 214,
-      "highQuality": 114,
-      "stubs": 748,
+      "enriched": 218,
+      "highQuality": 125,
+      "stubs": 744,
       "weak": 4316,
-      "lowEdges": 173,
-      "hasSummary": 214,
+      "lowEdges": 187,
+      "hasSummary": 218,
       "hasCauses": 5268,
       "hasEffects": 5269,
       "hasEdges": 5273,
-      "hasPlaces": 4952,
+      "hasPlaces": 4953,
       "hasFrameworks": 5278,
-      "hasSignificance": 201
+      "hasSignificance": 217
     },
     "211": {
       "total": 7060,
       "enriched": 136,
-      "highQuality": 64,
+      "highQuality": 66,
       "stubs": 1421,
       "weak": 5503,
-      "lowEdges": 118,
+      "lowEdges": 129,
       "hasSummary": 136,
       "hasCauses": 7060,
       "hasEffects": 7060,
       "hasEdges": 7060,
       "hasPlaces": 6932,
       "hasFrameworks": 7060,
-      "hasSignificance": 125
+      "hasSignificance": 136
     },
     "212": {
       "total": 53,
@@ -1344,18 +1344,18 @@
     },
     "220": {
       "total": 11288,
-      "enriched": 375,
-      "highQuality": 258,
-      "stubs": 1151,
-      "weak": 9762,
-      "lowEdges": 279,
-      "hasSummary": 375,
+      "enriched": 405,
+      "highQuality": 291,
+      "stubs": 1122,
+      "weak": 9761,
+      "lowEdges": 303,
+      "hasSummary": 405,
       "hasCauses": 11244,
       "hasEffects": 11190,
       "hasEdges": 11284,
-      "hasPlaces": 10711,
+      "hasPlaces": 10713,
       "hasFrameworks": 11287,
-      "hasSignificance": 371
+      "hasSignificance": 405
     },
     "270": {
       "total": 1776,
@@ -1363,44 +1363,44 @@
       "highQuality": 41,
       "stubs": 123,
       "weak": 1602,
-      "lowEdges": 47,
+      "lowEdges": 49,
       "hasSummary": 51,
       "hasCauses": 1772,
       "hasEffects": 1774,
       "hasEdges": 1776,
       "hasPlaces": 1740,
       "hasFrameworks": 1774,
-      "hasSignificance": 47
+      "hasSignificance": 49
     },
     "221": {
       "total": 3504,
-      "enriched": 543,
-      "highQuality": 366,
-      "stubs": 131,
-      "weak": 2830,
-      "lowEdges": 353,
-      "hasSummary": 543,
+      "enriched": 551,
+      "highQuality": 386,
+      "stubs": 125,
+      "weak": 2828,
+      "lowEdges": 373,
+      "hasSummary": 551,
       "hasCauses": 3461,
       "hasEffects": 3459,
       "hasEdges": 3498,
-      "hasPlaces": 2147,
+      "hasPlaces": 2153,
       "hasFrameworks": 3498,
-      "hasSignificance": 515
+      "hasSignificance": 544
     },
     "222": {
       "total": 3093,
-      "enriched": 55,
-      "highQuality": 25,
-      "stubs": 705,
+      "enriched": 56,
+      "highQuality": 37,
+      "stubs": 704,
       "weak": 2333,
-      "lowEdges": 35,
-      "hasSummary": 55,
+      "lowEdges": 46,
+      "hasSummary": 56,
       "hasCauses": 2913,
       "hasEffects": 2916,
       "hasEdges": 3093,
       "hasPlaces": 3068,
       "hasFrameworks": 3091,
-      "hasSignificance": 37
+      "hasSignificance": 49
     },
     "223": {
       "total": 1,
@@ -1419,33 +1419,33 @@
     },
     "230": {
       "total": 14176,
-      "enriched": 1105,
-      "highQuality": 1029,
-      "stubs": 1098,
+      "enriched": 1106,
+      "highQuality": 1031,
+      "stubs": 1097,
       "weak": 11973,
-      "lowEdges": 674,
-      "hasSummary": 1105,
+      "lowEdges": 682,
+      "hasSummary": 1106,
       "hasCauses": 14151,
       "hasEffects": 14151,
       "hasEdges": 14175,
       "hasPlaces": 14010,
       "hasFrameworks": 14176,
-      "hasSignificance": 1097
+      "hasSignificance": 1105
     },
     "231": {
       "total": 1850,
-      "enriched": 42,
-      "highQuality": 18,
-      "stubs": 257,
+      "enriched": 44,
+      "highQuality": 20,
+      "stubs": 255,
       "weak": 1551,
-      "lowEdges": 41,
-      "hasSummary": 42,
+      "lowEdges": 43,
+      "hasSummary": 44,
       "hasCauses": 1847,
       "hasEffects": 1847,
       "hasEdges": 1850,
       "hasPlaces": 1824,
       "hasFrameworks": 1850,
-      "hasSignificance": 42
+      "hasSignificance": 44
     },
     "240": {
       "total": 7704,
@@ -1453,29 +1453,29 @@
       "highQuality": 119,
       "stubs": 957,
       "weak": 6576,
-      "lowEdges": 166,
+      "lowEdges": 170,
       "hasSummary": 171,
       "hasCauses": 7702,
       "hasEffects": 7702,
       "hasEdges": 7704,
       "hasPlaces": 7604,
       "hasFrameworks": 7704,
-      "hasSignificance": 166
+      "hasSignificance": 170
     },
     "241": {
       "total": 9643,
-      "enriched": 229,
-      "highQuality": 144,
-      "stubs": 1523,
+      "enriched": 230,
+      "highQuality": 145,
+      "stubs": 1522,
       "weak": 7891,
-      "lowEdges": 220,
-      "hasSummary": 229,
+      "lowEdges": 224,
+      "hasSummary": 230,
       "hasCauses": 9642,
       "hasEffects": 9642,
       "hasEdges": 9643,
       "hasPlaces": 9437,
       "hasFrameworks": 9643,
-      "hasSignificance": 226
+      "hasSignificance": 230
     },
     "242": {
       "total": 1685,
@@ -1483,14 +1483,14 @@
       "highQuality": 20,
       "stubs": 354,
       "weak": 1301,
-      "lowEdges": 28,
+      "lowEdges": 30,
       "hasSummary": 30,
       "hasCauses": 1685,
       "hasEffects": 1685,
       "hasEdges": 1685,
       "hasPlaces": 1628,
       "hasFrameworks": 1685,
-      "hasSignificance": 28
+      "hasSignificance": 30
     },
     "243": {
       "total": 2309,
@@ -1498,59 +1498,59 @@
       "highQuality": 36,
       "stubs": 395,
       "weak": 1865,
-      "lowEdges": 48,
+      "lowEdges": 49,
       "hasSummary": 49,
       "hasCauses": 2309,
       "hasEffects": 2309,
       "hasEdges": 2309,
       "hasPlaces": 2272,
       "hasFrameworks": 2309,
-      "hasSignificance": 48
+      "hasSignificance": 49
     },
     "250": {
       "total": 15986,
-      "enriched": 746,
-      "highQuality": 649,
-      "stubs": 2381,
-      "weak": 12859,
-      "lowEdges": 373,
-      "hasSummary": 746,
+      "enriched": 756,
+      "highQuality": 659,
+      "stubs": 2375,
+      "weak": 12855,
+      "lowEdges": 382,
+      "hasSummary": 756,
       "hasCauses": 15981,
       "hasEffects": 15984,
       "hasEdges": 15986,
-      "hasPlaces": 15191,
+      "hasPlaces": 15197,
       "hasFrameworks": 15985,
-      "hasSignificance": 744
+      "hasSignificance": 757
     },
     "251": {
       "total": 28,
       "enriched": 10,
-      "highQuality": 1,
+      "highQuality": 6,
       "stubs": 0,
       "weak": 18,
-      "lowEdges": 0,
+      "lowEdges": 8,
       "hasSummary": 10,
       "hasCauses": 12,
       "hasEffects": 21,
       "hasEdges": 27,
       "hasPlaces": 22,
       "hasFrameworks": 27,
-      "hasSignificance": 1
+      "hasSignificance": 10
     },
     "252": {
       "total": 2612,
-      "enriched": 61,
-      "highQuality": 35,
-      "stubs": 510,
+      "enriched": 63,
+      "highQuality": 37,
+      "stubs": 508,
       "weak": 2041,
-      "lowEdges": 49,
-      "hasSummary": 61,
+      "lowEdges": 52,
+      "hasSummary": 63,
       "hasCauses": 2612,
       "hasEffects": 2612,
       "hasEdges": 2612,
       "hasPlaces": 2528,
       "hasFrameworks": 2609,
-      "hasSignificance": 59
+      "hasSignificance": 63
     },
     "253": {
       "total": 546,
@@ -1570,17 +1570,17 @@
     "260": {
       "total": 9,
       "enriched": 7,
-      "highQuality": 4,
+      "highQuality": 5,
       "stubs": 0,
       "weak": 2,
-      "lowEdges": 4,
+      "lowEdges": 5,
       "hasSummary": 7,
       "hasCauses": 8,
       "hasEffects": 9,
       "hasEdges": 9,
       "hasPlaces": 9,
       "hasFrameworks": 7,
-      "hasSignificance": 4
+      "hasSignificance": 5
     },
     "261": {
       "total": 12004,
@@ -1588,74 +1588,74 @@
       "highQuality": 217,
       "stubs": 1760,
       "weak": 9952,
-      "lowEdges": 285,
+      "lowEdges": 292,
       "hasSummary": 292,
       "hasCauses": 12001,
       "hasEffects": 12001,
       "hasEdges": 12004,
       "hasPlaces": 11888,
       "hasFrameworks": 12004,
-      "hasSignificance": 285
+      "hasSignificance": 292
     },
     "262": {
       "total": 6878,
-      "enriched": 157,
-      "highQuality": 98,
-      "stubs": 1273,
+      "enriched": 162,
+      "highQuality": 103,
+      "stubs": 1268,
       "weak": 5448,
-      "lowEdges": 147,
-      "hasSummary": 157,
+      "lowEdges": 156,
+      "hasSummary": 162,
       "hasCauses": 6876,
       "hasEffects": 6876,
       "hasEdges": 6877,
       "hasPlaces": 6763,
       "hasFrameworks": 6878,
-      "hasSignificance": 152
+      "hasSignificance": 162
     },
     "263": {
       "total": 15971,
-      "enriched": 392,
-      "highQuality": 325,
-      "stubs": 1866,
+      "enriched": 395,
+      "highQuality": 328,
+      "stubs": 1863,
       "weak": 13713,
-      "lowEdges": 380,
-      "hasSummary": 392,
+      "lowEdges": 390,
+      "hasSummary": 395,
       "hasCauses": 15971,
       "hasEffects": 15971,
       "hasEdges": 15971,
       "hasPlaces": 15905,
       "hasFrameworks": 15971,
-      "hasSignificance": 384
+      "hasSignificance": 395
     },
     "264": {
       "total": 10462,
-      "enriched": 238,
-      "highQuality": 150,
-      "stubs": 1991,
+      "enriched": 243,
+      "highQuality": 155,
+      "stubs": 1986,
       "weak": 8233,
-      "lowEdges": 224,
-      "hasSummary": 238,
+      "lowEdges": 233,
+      "hasSummary": 243,
       "hasCauses": 10462,
       "hasEffects": 10462,
       "hasEdges": 10462,
       "hasPlaces": 10389,
       "hasFrameworks": 10462,
-      "hasSignificance": 231
+      "hasSignificance": 242
     },
     "265": {
       "total": 1884,
-      "enriched": 23,
-      "highQuality": 17,
-      "stubs": 312,
+      "enriched": 24,
+      "highQuality": 18,
+      "stubs": 311,
       "weak": 1549,
-      "lowEdges": 22,
-      "hasSummary": 23,
+      "lowEdges": 24,
+      "hasSummary": 24,
       "hasCauses": 1884,
       "hasEffects": 1884,
       "hasEdges": 1884,
       "hasPlaces": 1874,
       "hasFrameworks": 1884,
-      "hasSignificance": 22
+      "hasSignificance": 24
     },
     "271": {
       "total": 1,
@@ -1704,18 +1704,18 @@
     },
     "280": {
       "total": 18715,
-      "enriched": 566,
-      "highQuality": 351,
-      "stubs": 1606,
+      "enriched": 571,
+      "highQuality": 358,
+      "stubs": 1601,
       "weak": 16543,
-      "lowEdges": 479,
-      "hasSummary": 566,
+      "lowEdges": 489,
+      "hasSummary": 571,
       "hasCauses": 18685,
       "hasEffects": 18686,
       "hasEdges": 18715,
-      "hasPlaces": 17247,
+      "hasPlaces": 17250,
       "hasFrameworks": 18715,
-      "hasSignificance": 558
+      "hasSignificance": 570
     },
     "281": {
       "total": 459,
@@ -1764,18 +1764,18 @@
     },
     "290": {
       "total": 1284,
-      "enriched": 66,
-      "highQuality": 40,
-      "stubs": 149,
-      "weak": 1069,
-      "lowEdges": 50,
-      "hasSummary": 66,
+      "enriched": 73,
+      "highQuality": 49,
+      "stubs": 143,
+      "weak": 1068,
+      "lowEdges": 57,
+      "hasSummary": 73,
       "hasCauses": 1282,
       "hasEffects": 1282,
       "hasEdges": 1283,
       "hasPlaces": 1213,
       "hasFrameworks": 1284,
-      "hasSignificance": 64
+      "hasSignificance": 73
     },
     "291": {
       "total": 195,
@@ -1783,29 +1783,29 @@
       "highQuality": 1,
       "stubs": 26,
       "weak": 167,
-      "lowEdges": 1,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 195,
       "hasEffects": 195,
       "hasEdges": 195,
       "hasPlaces": 195,
       "hasFrameworks": 195,
-      "hasSignificance": 1
+      "hasSignificance": 2
     },
     "292": {
       "total": 1,
       "enriched": 1,
-      "highQuality": 0,
+      "highQuality": 1,
       "stubs": 0,
       "weak": 0,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 1,
       "hasEffects": 1,
       "hasEdges": 1,
       "hasPlaces": 1,
       "hasFrameworks": 1,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "293": {
       "total": 212,
@@ -1825,17 +1825,17 @@
     "310": {
       "total": 341,
       "enriched": 11,
-      "highQuality": 0,
+      "highQuality": 1,
       "stubs": 84,
       "weak": 246,
-      "lowEdges": 1,
+      "lowEdges": 10,
       "hasSummary": 11,
       "hasCauses": 338,
       "hasEffects": 334,
       "hasEdges": 341,
       "hasPlaces": 295,
       "hasFrameworks": 341,
-      "hasSignificance": 1
+      "hasSignificance": 11
     },
     "311": {
       "total": 217,
@@ -1843,14 +1843,14 @@
       "highQuality": 44,
       "stubs": 63,
       "weak": 108,
-      "lowEdges": 44,
+      "lowEdges": 46,
       "hasSummary": 46,
       "hasCauses": 208,
       "hasEffects": 213,
       "hasEdges": 217,
       "hasPlaces": 197,
       "hasFrameworks": 217,
-      "hasSignificance": 44
+      "hasSignificance": 46
     },
     "312": {
       "total": 798,
@@ -1858,14 +1858,14 @@
       "highQuality": 111,
       "stubs": 147,
       "weak": 519,
-      "lowEdges": 106,
+      "lowEdges": 123,
       "hasSummary": 132,
       "hasCauses": 763,
       "hasEffects": 769,
       "hasEdges": 798,
       "hasPlaces": 722,
       "hasFrameworks": 798,
-      "hasSignificance": 115
+      "hasSignificance": 132
     },
     "313": {
       "total": 203,
@@ -1873,14 +1873,14 @@
       "highQuality": 1,
       "stubs": 41,
       "weak": 157,
-      "lowEdges": 1,
+      "lowEdges": 5,
       "hasSummary": 5,
       "hasCauses": 194,
       "hasEffects": 193,
       "hasEdges": 203,
       "hasPlaces": 193,
       "hasFrameworks": 203,
-      "hasSignificance": 1
+      "hasSignificance": 5
     },
     "314": {
       "total": 18,
@@ -1888,14 +1888,14 @@
       "highQuality": 0,
       "stubs": 9,
       "weak": 8,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 18,
       "hasEffects": 17,
       "hasEdges": 18,
       "hasPlaces": 13,
       "hasFrameworks": 18,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "315": {
       "total": 1,
@@ -1918,14 +1918,14 @@
       "highQuality": 73,
       "stubs": 656,
       "weak": 1329,
-      "lowEdges": 72,
+      "lowEdges": 95,
       "hasSummary": 100,
       "hasCauses": 2081,
       "hasEffects": 2084,
       "hasEdges": 2085,
       "hasPlaces": 1949,
       "hasFrameworks": 2085,
-      "hasSignificance": 77
+      "hasSignificance": 100
     },
     "320": {
       "total": 1,
@@ -1948,14 +1948,14 @@
       "highQuality": 8,
       "stubs": 24,
       "weak": 49,
-      "lowEdges": 9,
+      "lowEdges": 11,
       "hasSummary": 11,
       "hasCauses": 82,
       "hasEffects": 81,
       "hasEdges": 84,
       "hasPlaces": 74,
       "hasFrameworks": 84,
-      "hasSignificance": 9
+      "hasSignificance": 11
     },
     "322": {
       "total": 120,
@@ -1963,14 +1963,14 @@
       "highQuality": 8,
       "stubs": 15,
       "weak": 95,
-      "lowEdges": 8,
+      "lowEdges": 9,
       "hasSummary": 10,
       "hasCauses": 120,
       "hasEffects": 120,
       "hasEdges": 120,
       "hasPlaces": 120,
       "hasFrameworks": 120,
-      "hasSignificance": 9
+      "hasSignificance": 10
     },
     "323": {
       "total": 76,
@@ -1978,14 +1978,14 @@
       "highQuality": 0,
       "stubs": 25,
       "weak": 49,
-      "lowEdges": 0,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 76,
       "hasEffects": 76,
       "hasEdges": 76,
       "hasPlaces": 72,
       "hasFrameworks": 76,
-      "hasSignificance": 0
+      "hasSignificance": 2
     },
     "330": {
       "total": 257,
@@ -2023,14 +2023,14 @@
       "highQuality": 7,
       "stubs": 19,
       "weak": 94,
-      "lowEdges": 7,
+      "lowEdges": 8,
       "hasSummary": 8,
       "hasCauses": 121,
       "hasEffects": 121,
       "hasEdges": 121,
       "hasPlaces": 115,
       "hasFrameworks": 121,
-      "hasSignificance": 7
+      "hasSignificance": 8
     },
     "333": {
       "total": 37,
@@ -2065,17 +2065,17 @@
     "340": {
       "total": 2772,
       "enriched": 70,
-      "highQuality": 53,
+      "highQuality": 54,
       "stubs": 1107,
       "weak": 1595,
-      "lowEdges": 51,
+      "lowEdges": 66,
       "hasSummary": 70,
       "hasCauses": 2771,
       "hasEffects": 2771,
       "hasEdges": 2772,
       "hasPlaces": 2569,
       "hasFrameworks": 2772,
-      "hasSignificance": 54
+      "hasSignificance": 70
     },
     "341": {
       "total": 5877,
@@ -2083,14 +2083,14 @@
       "highQuality": 79,
       "stubs": 418,
       "weak": 5287,
-      "lowEdges": 87,
+      "lowEdges": 168,
       "hasSummary": 172,
       "hasCauses": 5874,
       "hasEffects": 5876,
       "hasEdges": 5877,
       "hasPlaces": 5874,
       "hasFrameworks": 5877,
-      "hasSignificance": 90
+      "hasSignificance": 172
     },
     "342": {
       "total": 2098,
@@ -2098,14 +2098,14 @@
       "highQuality": 59,
       "stubs": 433,
       "weak": 1590,
-      "lowEdges": 47,
+      "lowEdges": 62,
       "hasSummary": 75,
       "hasCauses": 2098,
       "hasEffects": 2097,
       "hasEdges": 2098,
       "hasPlaces": 2070,
       "hasFrameworks": 2098,
-      "hasSignificance": 61
+      "hasSignificance": 76
     },
     "343": {
       "total": 952,
@@ -2113,14 +2113,14 @@
       "highQuality": 49,
       "stubs": 140,
       "weak": 735,
-      "lowEdges": 50,
+      "lowEdges": 75,
       "hasSummary": 77,
       "hasCauses": 949,
       "hasEffects": 950,
       "hasEdges": 952,
       "hasPlaces": 952,
       "hasFrameworks": 952,
-      "hasSignificance": 52
+      "hasSignificance": 77
     },
     "344": {
       "total": 1167,
@@ -2128,14 +2128,14 @@
       "highQuality": 28,
       "stubs": 140,
       "weak": 975,
-      "lowEdges": 29,
+      "lowEdges": 52,
       "hasSummary": 52,
       "hasCauses": 1166,
       "hasEffects": 1167,
       "hasEdges": 1167,
       "hasPlaces": 1164,
       "hasFrameworks": 1167,
-      "hasSignificance": 29
+      "hasSignificance": 52
     },
     "345": {
       "total": 119,
@@ -2143,14 +2143,14 @@
       "highQuality": 8,
       "stubs": 18,
       "weak": 91,
-      "lowEdges": 8,
+      "lowEdges": 10,
       "hasSummary": 10,
       "hasCauses": 119,
       "hasEffects": 119,
       "hasEdges": 119,
       "hasPlaces": 116,
       "hasFrameworks": 119,
-      "hasSignificance": 8
+      "hasSignificance": 10
     },
     "350": {
       "total": 707,
@@ -2158,14 +2158,14 @@
       "highQuality": 9,
       "stubs": 105,
       "weak": 578,
-      "lowEdges": 11,
+      "lowEdges": 24,
       "hasSummary": 24,
       "hasCauses": 706,
       "hasEffects": 707,
       "hasEdges": 707,
       "hasPlaces": 671,
       "hasFrameworks": 706,
-      "hasSignificance": 11
+      "hasSignificance": 24
     },
     "351": {
       "total": 283,
@@ -2173,14 +2173,14 @@
       "highQuality": 8,
       "stubs": 83,
       "weak": 189,
-      "lowEdges": 9,
+      "lowEdges": 11,
       "hasSummary": 11,
       "hasCauses": 283,
       "hasEffects": 283,
       "hasEdges": 283,
       "hasPlaces": 274,
       "hasFrameworks": 283,
-      "hasSignificance": 9
+      "hasSignificance": 11
     },
     "352": {
       "total": 68,
@@ -2188,14 +2188,14 @@
       "highQuality": 8,
       "stubs": 6,
       "weak": 53,
-      "lowEdges": 8,
+      "lowEdges": 9,
       "hasSummary": 9,
       "hasCauses": 68,
       "hasEffects": 68,
       "hasEdges": 68,
       "hasPlaces": 68,
       "hasFrameworks": 68,
-      "hasSignificance": 8
+      "hasSignificance": 9
     },
     "353": {
       "total": 371,
@@ -2203,14 +2203,14 @@
       "highQuality": 0,
       "stubs": 28,
       "weak": 330,
-      "lowEdges": 2,
+      "lowEdges": 13,
       "hasSummary": 13,
       "hasCauses": 371,
       "hasEffects": 371,
       "hasEdges": 371,
       "hasPlaces": 367,
       "hasFrameworks": 371,
-      "hasSignificance": 2
+      "hasSignificance": 13
     },
     "354": {
       "total": 523,
@@ -2218,14 +2218,14 @@
       "highQuality": 9,
       "stubs": 60,
       "weak": 426,
-      "lowEdges": 11,
+      "lowEdges": 35,
       "hasSummary": 37,
       "hasCauses": 523,
       "hasEffects": 523,
       "hasEdges": 523,
       "hasPlaces": 478,
       "hasFrameworks": 523,
-      "hasSignificance": 13
+      "hasSignificance": 37
     },
     "360": {
       "total": 13,
@@ -2248,14 +2248,14 @@
       "highQuality": 54,
       "stubs": 302,
       "weak": 2371,
-      "lowEdges": 66,
+      "lowEdges": 136,
       "hasSummary": 137,
       "hasCauses": 2810,
       "hasEffects": 2810,
       "hasEdges": 2810,
       "hasPlaces": 2809,
       "hasFrameworks": 2810,
-      "hasSignificance": 67
+      "hasSignificance": 137
     },
     "362": {
       "total": 238,
@@ -2263,14 +2263,14 @@
       "highQuality": 8,
       "stubs": 31,
       "weak": 189,
-      "lowEdges": 11,
+      "lowEdges": 18,
       "hasSummary": 18,
       "hasCauses": 238,
       "hasEffects": 238,
       "hasEdges": 238,
       "hasPlaces": 236,
       "hasFrameworks": 238,
-      "hasSignificance": 11
+      "hasSignificance": 18
     },
     "363": {
       "total": 2009,
@@ -2278,14 +2278,14 @@
       "highQuality": 54,
       "stubs": 375,
       "weak": 1552,
-      "lowEdges": 52,
+      "lowEdges": 79,
       "hasSummary": 82,
       "hasCauses": 2009,
       "hasEffects": 2009,
       "hasEdges": 2009,
       "hasPlaces": 1981,
       "hasFrameworks": 2009,
-      "hasSignificance": 54
+      "hasSignificance": 82
     },
     "364": {
       "total": 3278,
@@ -2293,14 +2293,14 @@
       "highQuality": 51,
       "stubs": 1015,
       "weak": 2178,
-      "lowEdges": 49,
+      "lowEdges": 80,
       "hasSummary": 85,
       "hasCauses": 3278,
       "hasEffects": 3278,
       "hasEdges": 3278,
       "hasPlaces": 2945,
       "hasFrameworks": 3278,
-      "hasSignificance": 54
+      "hasSignificance": 85
     },
     "370": {
       "total": 368,
@@ -2308,14 +2308,14 @@
       "highQuality": 8,
       "stubs": 106,
       "weak": 247,
-      "lowEdges": 9,
+      "lowEdges": 15,
       "hasSummary": 15,
       "hasCauses": 368,
       "hasEffects": 368,
       "hasEdges": 368,
       "hasPlaces": 279,
       "hasFrameworks": 368,
-      "hasSignificance": 9
+      "hasSignificance": 15
     },
     "371": {
       "total": 10,
@@ -2353,14 +2353,14 @@
       "highQuality": 10,
       "stubs": 277,
       "weak": 675,
-      "lowEdges": 14,
+      "lowEdges": 28,
       "hasSummary": 29,
       "hasCauses": 981,
       "hasEffects": 981,
       "hasEdges": 981,
       "hasPlaces": 958,
       "hasFrameworks": 981,
-      "hasSignificance": 15
+      "hasSignificance": 29
     },
     "374": {
       "total": 10,
@@ -2383,14 +2383,14 @@
       "highQuality": 7,
       "stubs": 16,
       "weak": 125,
-      "lowEdges": 9,
+      "lowEdges": 11,
       "hasSummary": 12,
       "hasCauses": 153,
       "hasEffects": 153,
       "hasEdges": 153,
       "hasPlaces": 151,
       "hasFrameworks": 153,
-      "hasSignificance": 10
+      "hasSignificance": 12
     },
     "381": {
       "total": 3891,
@@ -2398,14 +2398,14 @@
       "highQuality": 67,
       "stubs": 461,
       "weak": 3270,
-      "lowEdges": 75,
+      "lowEdges": 156,
       "hasSummary": 160,
       "hasCauses": 3891,
       "hasEffects": 3891,
       "hasEdges": 3891,
       "hasPlaces": 3886,
       "hasFrameworks": 3891,
-      "hasSignificance": 79
+      "hasSignificance": 160
     },
     "382": {
       "total": 117,
@@ -2413,14 +2413,14 @@
       "highQuality": 0,
       "stubs": 10,
       "weak": 105,
-      "lowEdges": 0,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 117,
       "hasEffects": 117,
       "hasEdges": 117,
       "hasPlaces": 116,
       "hasFrameworks": 117,
-      "hasSignificance": 0
+      "hasSignificance": 2
     },
     "383": {
       "total": 1,
@@ -2458,14 +2458,14 @@
       "highQuality": 0,
       "stubs": 58,
       "weak": 260,
-      "lowEdges": 1,
+      "lowEdges": 10,
       "hasSummary": 10,
       "hasCauses": 328,
       "hasEffects": 328,
       "hasEdges": 328,
       "hasPlaces": 259,
       "hasFrameworks": 328,
-      "hasSignificance": 1
+      "hasSignificance": 10
     },
     "391": {
       "total": 189,
@@ -2473,14 +2473,14 @@
       "highQuality": 8,
       "stubs": 34,
       "weak": 131,
-      "lowEdges": 9,
+      "lowEdges": 24,
       "hasSummary": 24,
       "hasCauses": 188,
       "hasEffects": 187,
       "hasEdges": 189,
       "hasPlaces": 187,
       "hasFrameworks": 189,
-      "hasSignificance": 9
+      "hasSignificance": 24
     },
     "392": {
       "total": 142,
@@ -2488,14 +2488,14 @@
       "highQuality": 8,
       "stubs": 34,
       "weak": 96,
-      "lowEdges": 9,
+      "lowEdges": 12,
       "hasSummary": 12,
       "hasCauses": 142,
       "hasEffects": 142,
       "hasEdges": 142,
       "hasPlaces": 141,
       "hasFrameworks": 142,
-      "hasSignificance": 9
+      "hasSignificance": 12
     },
     "393": {
       "total": 191,
@@ -2503,14 +2503,14 @@
       "highQuality": 8,
       "stubs": 56,
       "weak": 125,
-      "lowEdges": 8,
+      "lowEdges": 10,
       "hasSummary": 10,
       "hasCauses": 191,
       "hasEffects": 191,
       "hasEdges": 191,
       "hasPlaces": 187,
       "hasFrameworks": 191,
-      "hasSignificance": 8
+      "hasSignificance": 10
     },
     "394": {
       "total": 45,
@@ -2518,14 +2518,14 @@
       "highQuality": 8,
       "stubs": 9,
       "weak": 26,
-      "lowEdges": 9,
+      "lowEdges": 10,
       "hasSummary": 10,
       "hasCauses": 45,
       "hasEffects": 45,
       "hasEdges": 45,
       "hasPlaces": 17,
       "hasFrameworks": 45,
-      "hasSignificance": 9
+      "hasSignificance": 10
     },
     "410": {
       "total": 20,
@@ -2548,14 +2548,14 @@
       "highQuality": 11,
       "stubs": 25,
       "weak": 214,
-      "lowEdges": 9,
+      "lowEdges": 12,
       "hasSummary": 18,
       "hasCauses": 257,
       "hasEffects": 257,
       "hasEdges": 257,
       "hasPlaces": 12,
       "hasFrameworks": 257,
-      "hasSignificance": 15
+      "hasSignificance": 18
     },
     "421": {
       "total": 26,
@@ -2578,14 +2578,14 @@
       "highQuality": 1,
       "stubs": 1,
       "weak": 72,
-      "lowEdges": 2,
+      "lowEdges": 5,
       "hasSummary": 5,
       "hasCauses": 76,
       "hasEffects": 77,
       "hasEdges": 78,
       "hasPlaces": 1,
       "hasFrameworks": 78,
-      "hasSignificance": 2
+      "hasSignificance": 5
     },
     "423": {
       "total": 74,
@@ -2593,14 +2593,14 @@
       "highQuality": 1,
       "stubs": 3,
       "weak": 65,
-      "lowEdges": 3,
+      "lowEdges": 6,
       "hasSummary": 6,
       "hasCauses": 73,
       "hasEffects": 73,
       "hasEdges": 74,
       "hasPlaces": 1,
       "hasFrameworks": 74,
-      "hasSignificance": 3
+      "hasSignificance": 6
     },
     "424": {
       "total": 41,
@@ -2623,14 +2623,14 @@
       "highQuality": 1,
       "stubs": 15,
       "weak": 271,
-      "lowEdges": 6,
+      "lowEdges": 11,
       "hasSummary": 11,
       "hasCauses": 297,
       "hasEffects": 297,
       "hasEdges": 297,
       "hasPlaces": 3,
       "hasFrameworks": 297,
-      "hasSignificance": 6
+      "hasSignificance": 11
     },
     "426": {
       "total": 122,
@@ -2638,14 +2638,14 @@
       "highQuality": 0,
       "stubs": 2,
       "weak": 112,
-      "lowEdges": 0,
+      "lowEdges": 8,
       "hasSummary": 8,
       "hasCauses": 122,
       "hasEffects": 122,
       "hasEdges": 122,
       "hasPlaces": 2,
       "hasFrameworks": 122,
-      "hasSignificance": 0
+      "hasSignificance": 8
     },
     "427": {
       "total": 15,
@@ -2653,14 +2653,14 @@
       "highQuality": 0,
       "stubs": 1,
       "weak": 10,
-      "lowEdges": 1,
+      "lowEdges": 4,
       "hasSummary": 4,
       "hasCauses": 15,
       "hasEffects": 15,
       "hasEdges": 15,
       "hasPlaces": 2,
       "hasFrameworks": 15,
-      "hasSignificance": 1
+      "hasSignificance": 4
     },
     "428": {
       "total": 12,
@@ -2683,14 +2683,14 @@
       "highQuality": 42,
       "stubs": 269,
       "weak": 1763,
-      "lowEdges": 67,
+      "lowEdges": 267,
       "hasSummary": 274,
       "hasCauses": 2303,
       "hasEffects": 2306,
       "hasEdges": 2306,
       "hasPlaces": 215,
       "hasFrameworks": 2306,
-      "hasSignificance": 73
+      "hasSignificance": 274
     },
     "440": {
       "total": 7153,
@@ -2698,14 +2698,14 @@
       "highQuality": 15,
       "stubs": 353,
       "weak": 6656,
-      "lowEdges": 100,
+      "lowEdges": 140,
       "hasSummary": 144,
       "hasCauses": 7147,
       "hasEffects": 7148,
       "hasEdges": 7153,
       "hasPlaces": 7,
       "hasFrameworks": 7153,
-      "hasSignificance": 102
+      "hasSignificance": 144
     },
     "441": {
       "total": 21,
@@ -2713,14 +2713,14 @@
       "highQuality": 0,
       "stubs": 0,
       "weak": 19,
-      "lowEdges": 0,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 13,
       "hasEffects": 14,
       "hasEdges": 21,
       "hasPlaces": 12,
       "hasFrameworks": 21,
-      "hasSignificance": 0
+      "hasSignificance": 2
     },
     "442": {
       "total": 400,
@@ -2728,14 +2728,14 @@
       "highQuality": 0,
       "stubs": 31,
       "weak": 365,
-      "lowEdges": 1,
+      "lowEdges": 4,
       "hasSummary": 4,
       "hasCauses": 400,
       "hasEffects": 400,
       "hasEdges": 400,
       "hasPlaces": 9,
       "hasFrameworks": 400,
-      "hasSignificance": 1
+      "hasSignificance": 4
     },
     "443": {
       "total": 14,
@@ -2743,14 +2743,14 @@
       "highQuality": 0,
       "stubs": 0,
       "weak": 13,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 12,
       "hasEffects": 12,
       "hasEdges": 14,
       "hasPlaces": 5,
       "hasFrameworks": 14,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "444": {
       "total": 391,
@@ -2758,14 +2758,14 @@
       "highQuality": 0,
       "stubs": 14,
       "weak": 357,
-      "lowEdges": 3,
+      "lowEdges": 20,
       "hasSummary": 20,
       "hasCauses": 391,
       "hasEffects": 391,
       "hasEdges": 391,
       "hasPlaces": 9,
       "hasFrameworks": 391,
-      "hasSignificance": 3
+      "hasSignificance": 20
     },
     "450": {
       "total": 1,
@@ -2890,17 +2890,17 @@
     "462": {
       "total": 3105,
       "enriched": 75,
-      "highQuality": 3,
+      "highQuality": 4,
       "stubs": 159,
       "weak": 2871,
-      "lowEdges": 30,
+      "lowEdges": 68,
       "hasSummary": 75,
       "hasCauses": 3105,
       "hasEffects": 3105,
       "hasEdges": 3105,
       "hasPlaces": 6,
       "hasFrameworks": 3105,
-      "hasSignificance": 32
+      "hasSignificance": 75
     },
     "463": {
       "total": 4,
@@ -2938,14 +2938,14 @@
       "highQuality": 0,
       "stubs": 16,
       "weak": 420,
-      "lowEdges": 0,
+      "lowEdges": 23,
       "hasSummary": 23,
       "hasCauses": 457,
       "hasEffects": 459,
       "hasEdges": 459,
       "hasPlaces": 6,
       "hasFrameworks": 459,
-      "hasSignificance": 0
+      "hasSignificance": 23
     },
     "472": {
       "total": 1173,
@@ -2953,14 +2953,14 @@
       "highQuality": 1,
       "stubs": 63,
       "weak": 1071,
-      "lowEdges": 17,
+      "lowEdges": 39,
       "hasSummary": 39,
       "hasCauses": 1173,
       "hasEffects": 1173,
       "hasEdges": 1173,
       "hasPlaces": 6,
       "hasFrameworks": 1173,
-      "hasSignificance": 17
+      "hasSignificance": 39
     },
     "473": {
       "total": 1133,
@@ -2968,14 +2968,14 @@
       "highQuality": 0,
       "stubs": 34,
       "weak": 1054,
-      "lowEdges": 2,
+      "lowEdges": 45,
       "hasSummary": 45,
       "hasCauses": 1133,
       "hasEffects": 1133,
       "hasEdges": 1133,
       "hasPlaces": 5,
       "hasFrameworks": 1133,
-      "hasSignificance": 2
+      "hasSignificance": 45
     },
     "510": {
       "total": 173,
@@ -2998,14 +2998,14 @@
       "highQuality": 1,
       "stubs": 181,
       "weak": 252,
-      "lowEdges": 1,
+      "lowEdges": 8,
       "hasSummary": 8,
       "hasCauses": 397,
       "hasEffects": 428,
       "hasEdges": 441,
       "hasPlaces": 348,
       "hasFrameworks": 441,
-      "hasSignificance": 1
+      "hasSignificance": 8
     },
     "512": {
       "total": 505,
@@ -3028,14 +3028,14 @@
       "highQuality": 0,
       "stubs": 378,
       "weak": 321,
-      "lowEdges": 0,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 676,
       "hasEffects": 673,
       "hasEdges": 701,
       "hasPlaces": 685,
       "hasFrameworks": 701,
-      "hasSignificance": 0
+      "hasSignificance": 2
     },
     "514": {
       "total": 1041,
@@ -3043,14 +3043,14 @@
       "highQuality": 1,
       "stubs": 485,
       "weak": 553,
-      "lowEdges": 0,
+      "lowEdges": 2,
       "hasSummary": 3,
       "hasCauses": 1008,
       "hasEffects": 987,
       "hasEdges": 1041,
       "hasPlaces": 983,
       "hasFrameworks": 1041,
-      "hasSignificance": 1
+      "hasSignificance": 3
     },
     "515": {
       "total": 929,
@@ -3058,14 +3058,14 @@
       "highQuality": 0,
       "stubs": 470,
       "weak": 456,
-      "lowEdges": 0,
+      "lowEdges": 3,
       "hasSummary": 3,
       "hasCauses": 888,
       "hasEffects": 884,
       "hasEdges": 929,
       "hasPlaces": 860,
       "hasFrameworks": 929,
-      "hasSignificance": 0
+      "hasSignificance": 3
     },
     "516": {
       "total": 798,
@@ -3073,14 +3073,14 @@
       "highQuality": 0,
       "stubs": 387,
       "weak": 404,
-      "lowEdges": 0,
+      "lowEdges": 7,
       "hasSummary": 7,
       "hasCauses": 774,
       "hasEffects": 771,
       "hasEdges": 798,
       "hasPlaces": 716,
       "hasFrameworks": 798,
-      "hasSignificance": 0
+      "hasSignificance": 7
     },
     "517": {
       "total": 4534,
@@ -3088,14 +3088,14 @@
       "highQuality": 0,
       "stubs": 2519,
       "weak": 1976,
-      "lowEdges": 1,
+      "lowEdges": 39,
       "hasSummary": 39,
       "hasCauses": 4494,
       "hasEffects": 4492,
       "hasEdges": 4534,
       "hasPlaces": 4255,
       "hasFrameworks": 4534,
-      "hasSignificance": 1
+      "hasSignificance": 39
     },
     "520": {
       "total": 251,
@@ -3103,14 +3103,14 @@
       "highQuality": 5,
       "stubs": 91,
       "weak": 148,
-      "lowEdges": 4,
+      "lowEdges": 9,
       "hasSummary": 12,
       "hasCauses": 248,
       "hasEffects": 243,
       "hasEdges": 251,
       "hasPlaces": 235,
       "hasFrameworks": 251,
-      "hasSignificance": 7
+      "hasSignificance": 12
     },
     "521": {
       "total": 52,
@@ -3178,14 +3178,14 @@
       "highQuality": 0,
       "stubs": 517,
       "weak": 2048,
-      "lowEdges": 0,
+      "lowEdges": 42,
       "hasSummary": 47,
       "hasCauses": 2570,
       "hasEffects": 2534,
       "hasEdges": 2612,
       "hasPlaces": 2611,
       "hasFrameworks": 2612,
-      "hasSignificance": 0
+      "hasSignificance": 47
     },
     "531": {
       "total": 256,
@@ -3208,14 +3208,14 @@
       "highQuality": 0,
       "stubs": 701,
       "weak": 630,
-      "lowEdges": 0,
+      "lowEdges": 3,
       "hasSummary": 3,
       "hasCauses": 1142,
       "hasEffects": 1171,
       "hasEdges": 1334,
       "hasPlaces": 1292,
       "hasFrameworks": 1334,
-      "hasSignificance": 0
+      "hasSignificance": 3
     },
     "540": {
       "total": 86,
@@ -3253,14 +3253,14 @@
       "highQuality": 0,
       "stubs": 9,
       "weak": 9,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 19,
       "hasEffects": 19,
       "hasEdges": 19,
       "hasPlaces": 9,
       "hasFrameworks": 19,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "550": {
       "total": 79,
@@ -3298,14 +3298,14 @@
       "highQuality": 0,
       "stubs": 1,
       "weak": 33,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 3,
       "hasEffects": 34,
       "hasEdges": 35,
       "hasPlaces": 31,
       "hasFrameworks": 35,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "553": {
       "total": 18,
@@ -3388,14 +3388,14 @@
       "highQuality": 0,
       "stubs": 32,
       "weak": 63,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 94,
       "hasEffects": 95,
       "hasEdges": 96,
       "hasPlaces": 44,
       "hasFrameworks": 96,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "564": {
       "total": 307,
@@ -3403,14 +3403,14 @@
       "highQuality": 1,
       "stubs": 104,
       "weak": 194,
-      "lowEdges": 0,
+      "lowEdges": 8,
       "hasSummary": 9,
       "hasCauses": 193,
       "hasEffects": 307,
       "hasEdges": 307,
       "hasPlaces": 122,
       "hasFrameworks": 307,
-      "hasSignificance": 1
+      "hasSignificance": 9
     },
     "565": {
       "total": 1,
@@ -3433,14 +3433,14 @@
       "highQuality": 0,
       "stubs": 79,
       "weak": 142,
-      "lowEdges": 1,
+      "lowEdges": 4,
       "hasSummary": 4,
       "hasCauses": 200,
       "hasEffects": 209,
       "hasEdges": 225,
       "hasPlaces": 205,
       "hasFrameworks": 225,
-      "hasSignificance": 1
+      "hasSignificance": 4
     },
     "571": {
       "total": 71,
@@ -3448,14 +3448,14 @@
       "highQuality": 0,
       "stubs": 27,
       "weak": 42,
-      "lowEdges": 0,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 66,
       "hasEffects": 71,
       "hasEdges": 71,
       "hasPlaces": 50,
       "hasFrameworks": 71,
-      "hasSignificance": 0
+      "hasSignificance": 2
     },
     "572": {
       "total": 15,
@@ -3493,14 +3493,14 @@
       "highQuality": 1,
       "stubs": 163,
       "weak": 240,
-      "lowEdges": 3,
+      "lowEdges": 8,
       "hasSummary": 9,
       "hasCauses": 410,
       "hasEffects": 410,
       "hasEdges": 412,
       "hasPlaces": 351,
       "hasFrameworks": 412,
-      "hasSignificance": 4
+      "hasSignificance": 9
     },
     "575": {
       "total": 9,
@@ -3523,14 +3523,14 @@
       "highQuality": 1,
       "stubs": 48,
       "weak": 121,
-      "lowEdges": 0,
+      "lowEdges": 2,
       "hasSummary": 3,
       "hasCauses": 158,
       "hasEffects": 163,
       "hasEdges": 172,
       "hasPlaces": 100,
       "hasFrameworks": 172,
-      "hasSignificance": 1
+      "hasSignificance": 3
     },
     "580": {
       "total": 394,
@@ -3538,14 +3538,14 @@
       "highQuality": 0,
       "stubs": 209,
       "weak": 183,
-      "lowEdges": 0,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 347,
       "hasEffects": 385,
       "hasEdges": 394,
       "hasPlaces": 358,
       "hasFrameworks": 394,
-      "hasSignificance": 0
+      "hasSignificance": 2
     },
     "581": {
       "total": 175,
@@ -3568,14 +3568,14 @@
       "highQuality": 0,
       "stubs": 42,
       "weak": 38,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 74,
       "hasEffects": 72,
       "hasEdges": 81,
       "hasPlaces": 73,
       "hasFrameworks": 81,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "583": {
       "total": 393,
@@ -4318,14 +4318,14 @@
       "highQuality": 0,
       "stubs": 107,
       "weak": 140,
-      "lowEdges": 0,
+      "lowEdges": 6,
       "hasSummary": 6,
       "hasCauses": 253,
       "hasEffects": 253,
       "hasEdges": 253,
       "hasPlaces": 229,
       "hasFrameworks": 253,
-      "hasSignificance": 0
+      "hasSignificance": 6
     },
     "712": {
       "total": 13,
@@ -4393,14 +4393,14 @@
       "highQuality": 0,
       "stubs": 52,
       "weak": 139,
-      "lowEdges": 1,
+      "lowEdges": 12,
       "hasSummary": 12,
       "hasCauses": 200,
       "hasEffects": 200,
       "hasEdges": 203,
       "hasPlaces": 75,
       "hasFrameworks": 203,
-      "hasSignificance": 1
+      "hasSignificance": 12
     },
     "722": {
       "total": 3,
@@ -4438,74 +4438,74 @@
       "highQuality": 0,
       "stubs": 462,
       "weak": 874,
-      "lowEdges": 2,
+      "lowEdges": 37,
       "hasSummary": 37,
       "hasCauses": 1353,
       "hasEffects": 1355,
       "hasEdges": 1373,
       "hasPlaces": 545,
       "hasFrameworks": 1373,
-      "hasSignificance": 2
+      "hasSignificance": 37
     },
     "730": {
       "total": 62,
       "enriched": 38,
-      "highQuality": 0,
+      "highQuality": 12,
       "stubs": 3,
       "weak": 21,
-      "lowEdges": 0,
+      "lowEdges": 36,
       "hasSummary": 38,
       "hasCauses": 28,
       "hasEffects": 45,
       "hasEdges": 62,
       "hasPlaces": 38,
       "hasFrameworks": 62,
-      "hasSignificance": 0
+      "hasSignificance": 38
     },
     "731": {
       "total": 141,
       "enriched": 34,
-      "highQuality": 0,
+      "highQuality": 21,
       "stubs": 17,
       "weak": 90,
-      "lowEdges": 0,
+      "lowEdges": 32,
       "hasSummary": 34,
       "hasCauses": 91,
       "hasEffects": 101,
       "hasEdges": 141,
       "hasPlaces": 44,
       "hasFrameworks": 141,
-      "hasSignificance": 0
+      "hasSignificance": 34
     },
     "732": {
       "total": 66,
       "enriched": 24,
-      "highQuality": 6,
+      "highQuality": 17,
       "stubs": 7,
       "weak": 35,
-      "lowEdges": 5,
+      "lowEdges": 21,
       "hasSummary": 24,
       "hasCauses": 45,
       "hasEffects": 50,
       "hasEdges": 66,
       "hasPlaces": 25,
       "hasFrameworks": 66,
-      "hasSignificance": 6
+      "hasSignificance": 24
     },
     "733": {
       "total": 13,
       "enriched": 3,
-      "highQuality": 0,
+      "highQuality": 1,
       "stubs": 4,
       "weak": 6,
-      "lowEdges": 0,
+      "lowEdges": 3,
       "hasSummary": 3,
       "hasCauses": 11,
       "hasEffects": 12,
       "hasEdges": 13,
       "hasPlaces": 3,
       "hasFrameworks": 13,
-      "hasSignificance": 0
+      "hasSignificance": 3
     },
     "734": {
       "total": 13,
@@ -4513,44 +4513,44 @@
       "highQuality": 0,
       "stubs": 4,
       "weak": 6,
-      "lowEdges": 0,
+      "lowEdges": 3,
       "hasSummary": 3,
       "hasCauses": 10,
       "hasEffects": 13,
       "hasEdges": 13,
       "hasPlaces": 2,
       "hasFrameworks": 13,
-      "hasSignificance": 0
+      "hasSignificance": 3
     },
     "735": {
       "total": 13,
       "enriched": 4,
-      "highQuality": 0,
+      "highQuality": 2,
       "stubs": 4,
       "weak": 5,
-      "lowEdges": 0,
+      "lowEdges": 4,
       "hasSummary": 4,
       "hasCauses": 11,
       "hasEffects": 13,
       "hasEdges": 13,
       "hasPlaces": 1,
       "hasFrameworks": 13,
-      "hasSignificance": 0
+      "hasSignificance": 4
     },
     "736": {
       "total": 112,
       "enriched": 2,
-      "highQuality": 0,
+      "highQuality": 1,
       "stubs": 44,
       "weak": 66,
-      "lowEdges": 0,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 112,
       "hasEffects": 112,
       "hasEdges": 112,
       "hasPlaces": 3,
       "hasFrameworks": 112,
-      "hasSignificance": 0
+      "hasSignificance": 2
     },
     "740": {
       "total": 4,
@@ -4735,17 +4735,17 @@
     "762": {
       "total": 1244,
       "enriched": 5,
-      "highQuality": 0,
+      "highQuality": 1,
       "stubs": 293,
       "weak": 946,
-      "lowEdges": 1,
+      "lowEdges": 5,
       "hasSummary": 5,
       "hasCauses": 1244,
       "hasEffects": 1244,
       "hasEdges": 1244,
       "hasPlaces": 1007,
       "hasFrameworks": 1244,
-      "hasSignificance": 1
+      "hasSignificance": 5
     },
     "763": {
       "total": 1671,
@@ -4753,29 +4753,29 @@
       "highQuality": 2,
       "stubs": 545,
       "weak": 1031,
-      "lowEdges": 19,
+      "lowEdges": 94,
       "hasSummary": 95,
       "hasCauses": 1671,
       "hasEffects": 1671,
       "hasEdges": 1671,
       "hasPlaces": 106,
       "hasFrameworks": 1671,
-      "hasSignificance": 20
+      "hasSignificance": 95
     },
     "764": {
       "total": 10227,
-      "enriched": 117,
-      "highQuality": 0,
-      "stubs": 2907,
+      "enriched": 118,
+      "highQuality": 1,
+      "stubs": 2906,
       "weak": 7203,
-      "lowEdges": 23,
-      "hasSummary": 117,
+      "lowEdges": 116,
+      "hasSummary": 118,
       "hasCauses": 10227,
       "hasEffects": 10227,
       "hasEdges": 10227,
       "hasPlaces": 10155,
       "hasFrameworks": 10227,
-      "hasSignificance": 24
+      "hasSignificance": 118
     },
     "770": {
       "total": 23,
@@ -4798,14 +4798,14 @@
       "highQuality": 0,
       "stubs": 26,
       "weak": 34,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 59,
       "hasEffects": 58,
       "hasEdges": 61,
       "hasPlaces": 2,
       "hasFrameworks": 61,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "772": {
       "total": 11,
@@ -4813,14 +4813,14 @@
       "highQuality": 0,
       "stubs": 0,
       "weak": 10,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 11,
       "hasEffects": 11,
       "hasEdges": 11,
       "hasPlaces": 1,
       "hasFrameworks": 11,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "773": {
       "total": 1008,
@@ -4828,14 +4828,14 @@
       "highQuality": 0,
       "stubs": 317,
       "weak": 644,
-      "lowEdges": 0,
+      "lowEdges": 46,
       "hasSummary": 47,
       "hasCauses": 1008,
       "hasEffects": 1008,
       "hasEdges": 1008,
       "hasPlaces": 65,
       "hasFrameworks": 1008,
-      "hasSignificance": 0
+      "hasSignificance": 47
     },
     "774": {
       "total": 9,
@@ -4888,14 +4888,14 @@
       "highQuality": 7,
       "stubs": 15,
       "weak": 40,
-      "lowEdges": 2,
+      "lowEdges": 3,
       "hasSummary": 8,
       "hasCauses": 63,
       "hasEffects": 63,
       "hasEdges": 63,
       "hasPlaces": 37,
       "hasFrameworks": 63,
-      "hasSignificance": 7
+      "hasSignificance": 8
     },
     "783": {
       "total": 426,
@@ -4903,14 +4903,14 @@
       "highQuality": 17,
       "stubs": 242,
       "weak": 159,
-      "lowEdges": 14,
+      "lowEdges": 17,
       "hasSummary": 25,
       "hasCauses": 426,
       "hasEffects": 426,
       "hasEdges": 426,
       "hasPlaces": 34,
       "hasFrameworks": 426,
-      "hasSignificance": 21
+      "hasSignificance": 24
     },
     "784": {
       "total": 136,
@@ -4918,14 +4918,14 @@
       "highQuality": 0,
       "stubs": 55,
       "weak": 76,
-      "lowEdges": 1,
+      "lowEdges": 5,
       "hasSummary": 5,
       "hasCauses": 136,
       "hasEffects": 136,
       "hasEdges": 136,
       "hasPlaces": 26,
       "hasFrameworks": 136,
-      "hasSignificance": 1
+      "hasSignificance": 5
     },
     "785": {
       "total": 39,
@@ -4945,17 +4945,17 @@
     "810": {
       "total": 355,
       "enriched": 14,
-      "highQuality": 0,
+      "highQuality": 1,
       "stubs": 80,
       "weak": 261,
-      "lowEdges": 0,
+      "lowEdges": 14,
       "hasSummary": 14,
       "hasCauses": 354,
       "hasEffects": 355,
       "hasEdges": 355,
       "hasPlaces": 48,
       "hasFrameworks": 355,
-      "hasSignificance": 0
+      "hasSignificance": 14
     },
     "811": {
       "total": 21,
@@ -4963,14 +4963,14 @@
       "highQuality": 0,
       "stubs": 5,
       "weak": 13,
-      "lowEdges": 0,
+      "lowEdges": 3,
       "hasSummary": 3,
       "hasCauses": 20,
       "hasEffects": 21,
       "hasEdges": 21,
       "hasPlaces": 5,
       "hasFrameworks": 21,
-      "hasSignificance": 0
+      "hasSignificance": 3
     },
     "812": {
       "total": 78,
@@ -4978,14 +4978,14 @@
       "highQuality": 0,
       "stubs": 25,
       "weak": 51,
-      "lowEdges": 0,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 77,
       "hasEffects": 78,
       "hasEdges": 78,
       "hasPlaces": 15,
       "hasFrameworks": 78,
-      "hasSignificance": 0
+      "hasSignificance": 2
     },
     "813": {
       "total": 631,
@@ -4993,14 +4993,14 @@
       "highQuality": 3,
       "stubs": 64,
       "weak": 556,
-      "lowEdges": 5,
+      "lowEdges": 11,
       "hasSummary": 11,
       "hasCauses": 631,
       "hasEffects": 631,
       "hasEdges": 631,
       "hasPlaces": 611,
       "hasFrameworks": 631,
-      "hasSignificance": 5
+      "hasSignificance": 11
     },
     "814": {
       "total": 51,
@@ -5008,14 +5008,14 @@
       "highQuality": 0,
       "stubs": 25,
       "weak": 24,
-      "lowEdges": 0,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 51,
       "hasEffects": 51,
       "hasEdges": 51,
       "hasPlaces": 5,
       "hasFrameworks": 51,
-      "hasSignificance": 0
+      "hasSignificance": 2
     },
     "815": {
       "total": 7,
@@ -5053,14 +5053,14 @@
       "highQuality": 0,
       "stubs": 23,
       "weak": 39,
-      "lowEdges": 0,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 64,
       "hasEffects": 64,
       "hasEdges": 64,
       "hasPlaces": 8,
       "hasFrameworks": 64,
-      "hasSignificance": 0
+      "hasSignificance": 2
     },
     "822": {
       "total": 96,
@@ -5083,14 +5083,14 @@
       "highQuality": 0,
       "stubs": 52,
       "weak": 203,
-      "lowEdges": 0,
+      "lowEdges": 9,
       "hasSummary": 9,
       "hasCauses": 264,
       "hasEffects": 264,
       "hasEdges": 264,
       "hasPlaces": 114,
       "hasFrameworks": 264,
-      "hasSignificance": 0
+      "hasSignificance": 9
     },
     "830": {
       "total": 50,
@@ -5098,14 +5098,14 @@
       "highQuality": 0,
       "stubs": 6,
       "weak": 43,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 49,
       "hasEffects": 49,
       "hasEdges": 50,
       "hasPlaces": 50,
       "hasFrameworks": 50,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "831": {
       "total": 1,
@@ -5128,14 +5128,14 @@
       "highQuality": 0,
       "stubs": 24,
       "weak": 201,
-      "lowEdges": 0,
+      "lowEdges": 5,
       "hasSummary": 5,
       "hasCauses": 230,
       "hasEffects": 230,
       "hasEdges": 230,
       "hasPlaces": 227,
       "hasFrameworks": 230,
-      "hasSignificance": 0
+      "hasSignificance": 5
     },
     "833": {
       "total": 1,
@@ -5173,14 +5173,14 @@
       "highQuality": 0,
       "stubs": 9,
       "weak": 34,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 42,
       "hasEffects": 42,
       "hasEdges": 44,
       "hasPlaces": 37,
       "hasFrameworks": 44,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "842": {
       "total": 30,
@@ -5188,14 +5188,14 @@
       "highQuality": 0,
       "stubs": 8,
       "weak": 21,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 29,
       "hasEffects": 29,
       "hasEdges": 30,
       "hasPlaces": 10,
       "hasFrameworks": 30,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "843": {
       "total": 1644,
@@ -5203,14 +5203,14 @@
       "highQuality": 0,
       "stubs": 201,
       "weak": 1414,
-      "lowEdges": 0,
+      "lowEdges": 27,
       "hasSummary": 29,
       "hasCauses": 1644,
       "hasEffects": 1644,
       "hasEdges": 1644,
       "hasPlaces": 1635,
       "hasFrameworks": 1644,
-      "hasSignificance": 0
+      "hasSignificance": 29
     },
     "850": {
       "total": 1,
@@ -5233,14 +5233,14 @@
       "highQuality": 0,
       "stubs": 2,
       "weak": 3,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 1,
       "hasCauses": 5,
       "hasEffects": 5,
       "hasEdges": 6,
       "hasPlaces": 2,
       "hasFrameworks": 6,
-      "hasSignificance": 0
+      "hasSignificance": 1
     },
     "852": {
       "total": 618,
@@ -5248,14 +5248,14 @@
       "highQuality": 0,
       "stubs": 113,
       "weak": 492,
-      "lowEdges": 1,
+      "lowEdges": 13,
       "hasSummary": 13,
       "hasCauses": 616,
       "hasEffects": 617,
       "hasEdges": 618,
       "hasPlaces": 21,
       "hasFrameworks": 618,
-      "hasSignificance": 1
+      "hasSignificance": 13
     },
     "853": {
       "total": 1,
@@ -5278,14 +5278,14 @@
       "highQuality": 3,
       "stubs": 16,
       "weak": 47,
-      "lowEdges": 3,
+      "lowEdges": 4,
       "hasSummary": 4,
       "hasCauses": 67,
       "hasEffects": 67,
       "hasEdges": 67,
       "hasPlaces": 45,
       "hasFrameworks": 67,
-      "hasSignificance": 3
+      "hasSignificance": 4
     },
     "911": {
       "total": 69,
@@ -5308,14 +5308,14 @@
       "highQuality": 4,
       "stubs": 33,
       "weak": 82,
-      "lowEdges": 2,
+      "lowEdges": 3,
       "hasSummary": 6,
       "hasCauses": 121,
       "hasEffects": 121,
       "hasEdges": 121,
       "hasPlaces": 54,
       "hasFrameworks": 121,
-      "hasSignificance": 5
+      "hasSignificance": 6
     },
     "913": {
       "total": 37,
@@ -5323,14 +5323,14 @@
       "highQuality": 1,
       "stubs": 6,
       "weak": 29,
-      "lowEdges": 1,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 37,
       "hasEffects": 37,
       "hasEdges": 37,
       "hasPlaces": 23,
       "hasFrameworks": 37,
-      "hasSignificance": 1
+      "hasSignificance": 2
     },
     "920": {
       "total": 372,
@@ -5338,14 +5338,14 @@
       "highQuality": 2,
       "stubs": 140,
       "weak": 218,
-      "lowEdges": 3,
+      "lowEdges": 14,
       "hasSummary": 14,
       "hasCauses": 371,
       "hasEffects": 370,
       "hasEdges": 372,
       "hasPlaces": 189,
       "hasFrameworks": 372,
-      "hasSignificance": 3
+      "hasSignificance": 14
     },
     "921": {
       "total": 3,
@@ -5368,14 +5368,14 @@
       "highQuality": 1,
       "stubs": 1,
       "weak": 1,
-      "lowEdges": 1,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 4,
       "hasEffects": 4,
       "hasEdges": 4,
       "hasPlaces": 3,
       "hasFrameworks": 4,
-      "hasSignificance": 1
+      "hasSignificance": 2
     },
     "923": {
       "total": 27,
@@ -5383,14 +5383,14 @@
       "highQuality": 1,
       "stubs": 5,
       "weak": 20,
-      "lowEdges": 1,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 27,
       "hasEffects": 26,
       "hasEdges": 27,
       "hasPlaces": 27,
       "hasFrameworks": 27,
-      "hasSignificance": 1
+      "hasSignificance": 2
     },
     "924": {
       "total": 2,
@@ -5420,7 +5420,7 @@
       "hasEdges": 71,
       "hasPlaces": 48,
       "hasFrameworks": 71,
-      "hasSignificance": 1
+      "hasSignificance": 2
     },
     "931": {
       "total": 5,
@@ -5548,14 +5548,14 @@
       "highQuality": 1,
       "stubs": 11,
       "weak": 73,
-      "lowEdges": 1,
+      "lowEdges": 4,
       "hasSummary": 4,
       "hasCauses": 88,
       "hasEffects": 87,
       "hasEdges": 88,
       "hasPlaces": 72,
       "hasFrameworks": 88,
-      "hasSignificance": 1
+      "hasSignificance": 4
     },
     "951": {
       "total": 4,
@@ -5578,14 +5578,14 @@
       "highQuality": 1,
       "stubs": 1,
       "weak": 9,
-      "lowEdges": 0,
+      "lowEdges": 1,
       "hasSummary": 2,
       "hasCauses": 12,
       "hasEffects": 12,
       "hasEdges": 12,
       "hasPlaces": 10,
       "hasFrameworks": 12,
-      "hasSignificance": 1
+      "hasSignificance": 2
     },
     "953": {
       "total": 2,
@@ -5623,14 +5623,14 @@
       "highQuality": 1,
       "stubs": 14,
       "weak": 42,
-      "lowEdges": 1,
+      "lowEdges": 2,
       "hasSummary": 2,
       "hasCauses": 58,
       "hasEffects": 57,
       "hasEdges": 58,
       "hasPlaces": 45,
       "hasFrameworks": 58,
-      "hasSignificance": 1
+      "hasSignificance": 2
     },
     "961": {
       "total": 4,
@@ -5679,15 +5679,29 @@
     }
   },
   "significanceDist": {
-    "7": 2622,
-    "5": 3898,
-    "8": 1590,
-    "2": 15,
-    "9": 363,
-    "6": 485,
-    "10": 168,
-    "3": 77,
-    "1": 2,
-    "4": 115
+    "7": 2941,
+    "5": 5384,
+    "8": 1903,
+    "4": 122,
+    "2": 43,
+    "1": 6,
+    "6": 523,
+    "9": 445,
+    "3": 81,
+    "10": 172
+  },
+  "velocity": {
+    "24h": {
+      "entities_enriched": 0,
+      "became_enriched": 0
+    },
+    "week": {
+      "entities_enriched": 0,
+      "became_enriched": 0
+    },
+    "month": {
+      "entities_enriched": 0,
+      "became_enriched": 0
+    }
   }
 }

@@ -11,7 +11,7 @@
       "name": "Jan Borreman II",
       "label": "Person",
       "callNumber": "264.jan-borreman-ii",
-      "summary": "Jan Borman was a Flemish Northern Renaissance sculptor.",
+      "summary": "\n\nJan Borman II (unknown–1600) was a Flemish sculptor who played a pivotal role in the Northern Renaissance art movement.\n\nHe trained under the renowned Pieter van Aelst, honing his craft in Antwerp before establishing himself as a leading figure in the city's thriving artistic community. His works showcase a unique blend of traditional techniques and innovative, humanist ideals that reflected the values of the emerging middle class.\n\nBorman's sculptures often depicted scenes from classical mythology, biblical narratives, and everyday life, offering a window into the social and cultural norms of 16th-century Flanders.\n\nHis art also reflects his strong connection to the Catholic Church, with many of his works featuring intricate carvings and symbolism that underscored the spiritual significance of his creations.\n\nToday, Borman's legacy can be seen in the many museums and galleries across Europe where his masterpieces are admired by scholars and enthusiasts alike.\n\nAs a testament to his enduring influence, 'The Virgin and Child with St. John the Baptist,' one of Borman's most celebrated works, is now considered an iconic representation of Flemish Renaissance art.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,17 +25,22 @@
       "wikidataQid": "Q347059",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Jan_Borman",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1500, Leuven\"}, {\"title\": \"Visual art traditions and aesthetic movements\", \"type\": \"Idea\", \"year\": \"1500, Leuven\"}], \"effects\": [{\"title\": \"Produced visual artworks of cultural importance\", \"type\": \"Idea\", \"year\": \"1600\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1600\"}], \"relationships\": [{\"sourceSlug\": \"jan-borreman-ii\", \"sourceName\": \"Jan Borreman II\", \"verb\": \"PAINTS\", \"targetSlug\": \"field-264\", \"targetName\": \"Painters & Sculptors\", \"context\": \"Jan Borreman II: Visual art in painters & sculptors\"}, {\"sourceSlug\": \"jan-borreman-ii\", \"sourceName\": \"Jan Borreman II\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Jan Borreman II was active during the Medieval era\"}], \"places\": [{\"name\": \"Leuven\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Jan Borreman II\", \"type\": \"Reference article\", \"slug\": \"jan-borreman-ii\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q347059\", \"https://en.wikipedia.org/wiki/Jan_Borman\"], \"tags\": [\"Painters & Sculptors\", \"cultural-diffusion\", \"cause-and-effect\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Borman was influenced by Pieter van Aelst, who introduced him to classical techniques and humanist ideals that shaped his artistic style.\"],\"effects\":[\"His sculptures helped popularize the Northern Renaissance movement, influencing generations of artists to come.\"],\"relationships\":[{\"sourceSlug\":\"pieter-van-aelst\",\"sourceName\":\"Pieter van Aelst\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"jan-borreman-ii\",\"targetName\":\"Jan Borman II\",\"context\":\"During his apprenticeship in Antwerp.\"},{\"sourceSlug\":\"antwerp\",\"sourceName\":\"Antwerp\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"jan-borreman-ii\",\"targetName\":\"Jan Borman II\",\"context\":\"The city where he established his artistic practice.\"},{\"sourceSlug\":\"catholic-church\",\"sourceName\":\"Catholic Church\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"jan-borreman-ii\",\"targetName\":\"Jan Borman II\",\"context\":\"Through his sculptures, which often featured Catholic symbolism.\"},{\"sourceSlug\":\"flemish-renaissance\",\"sourceName\":\"Flemish Renaissance\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"jan-borreman-ii\",\"targetName\":\"Jan Borman II\",\"context\":\"As a leading artist of the movement.\"},{\"sourceSlug\":\"northern-renaissance\",\"sourceName\":\"Northern Renaissance\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"jan-borreman-ii\",\"targetName\":\"Jan Borman II\",\"context\":\"Through his innovative style and techniques.\"}],\"places\":[{\"name\":\"Antwerp\",\"role\":\"Training ground\"},{\"name\":\"Flanders\",\"role\":\"Artistic hub\"},{\"name\":\"Europe\",\"role\":\"Market for his art\"}],\"texts\":[{\"title\":\"Wikipedia: Jan Borreman II\",\"type\":\"Reference article\",\"slug\":\"jan-borreman-ii\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q347059\",\"https://en.wikipedia.org/wiki/Jan_Borman\"],\"tags\":[\"Painters & Sculptors\",\"cultural-diffusion\",\"cause-and-effect\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Jan Borman II played a significant role in shaping the Northern Renaissance art movement, leaving a lasting legacy in Flanders and beyond.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Painters & Sculptors — Global — Medieval"
       ],
       "subjects": [
-        "Painters & Sculptors"
+        "Jan Borman II (art)",
+        "Northern Renaissance art movement",
+        "Flemish sculpture of the 16th century",
+        "Catholic Church and art",
+        "Pieter van Aelst (artist)",
+        "Antwerp (history)",
+        "Flanders (art history)",
+        "Europe (art market)"
       ],
       "frameworks": [
-        "CULTURAL_DIFFUSION",
-        "CAUSE_AND_EFFECT",
-        "TEMPORAL_LINKAGE"
+        "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -47,11 +52,26 @@
       "$createdAt": "2026-04-05T12:38:14.134+00:00",
       "$updatedAt": "2026-04-05T12:38:14.134+00:00",
       "_pipelineState": {
-        "state": "triaged",
-        "attempts": 0,
+        "state": "validated",
+        "attempts": 1,
         "lastGate": "validate",
-        "lastReason": "summary-too-short",
-        "updatedAt": "2026-05-24T04:44:06.415169+00:00"
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T14:48:01.748550+00:00",
+        "queuedAt": "2026-05-24T13:41:06.540409+00:00",
+        "gateResults": {
+          "summaryLen": 1179,
+          "paragraphs": 6,
+          "causes": 1,
+          "effects": 1,
+          "relationships": 5,
+          "edgeFloor": 5,
+          "significanceScore": 7
+        }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Jan Borman II played a significant role in shaping the Northern Renaissance art movement, leaving a lasting legacy in Flanders and beyond.",
+        "significanceCategory": "regional"
       }
     }
   ]

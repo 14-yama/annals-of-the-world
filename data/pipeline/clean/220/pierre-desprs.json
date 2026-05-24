@@ -1,0 +1,116 @@
+{
+  "slug": "pierre-desprs",
+  "label": "Person",
+  "name": "Pierre Desprès",
+  "callNumber": "220.pierre-desprès",
+  "era": "Medieval",
+  "summary": "Pierre Desprès (1288–1361) was a French Cardinal during the period of the Avignon Papacy. As a key figure in the Catholic Church during the 14th century, he played a significant role in shaping the religious landscape of Western Europe. Born in France around 1280, Pierre Desprès rose through the ranks of the clergy and became a prominent advisor to Pope Urban V, who succeeded John XXII as the head of the Catholic Church in 1362.\n\nDesprès's contributions to the Church were not limited to his political influence; he also made significant strides in the realm of canon law. His work on the Decretum Gratiani, a foundational text of medieval canon law, helped establish the principles that would guide the development of Catholic doctrine for centuries to come.\n\nDespite his many accomplishments, Desprès's legacy is not without controversy. Some historians have criticized him for his alleged involvement in the sale of indulgences, which contributed to the widespread corruption and abuse of power within the Church during the 14th century.\n\nToday, Pierre Desprès is remembered as a complex figure who played a pivotal role in shaping the course of Western European history. His contributions to the Catholic Church continue to influence the development of Christian doctrine and practice to this day.",
+  "importanceScore": 9,
+  "wikidataQid": "Q3130537",
+  "historicalSignificance": {
+    "significanceScore": 7,
+    "significanceNarrative": "Pierre Desprès played a significant role in shaping the religious landscape of Western Europe during the 14th century.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "DIPLOMATIC_HISTORY",
+    "RELIGIOUS_INTERPRETATION"
+  ],
+  "subjects": [
+    "Western Europe",
+    "Catholic Church",
+    "canon law",
+    "indulgences",
+    "Avignon Papacy"
+  ],
+  "subjectHeadings": [
+    "People — Political Leaders — France — Medieval"
+  ],
+  "places": [
+    {
+      "name": "France",
+      "role": "birthplace"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Pierre Desprès",
+      "type": "Reference article",
+      "slug": "pierre-desprès"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Pierre Desprès was born in France around 1280.",
+    "He rose through the ranks of the clergy during the 14th century.",
+    "The Avignon Papacy, which began in 1309, created a power vacuum that allowed Desprès to gain influence over the Church."
+  ],
+  "effects": [
+    "Desprès's work on canon law helped establish principles that guided Catholic doctrine for centuries.",
+    "His involvement in the sale of indulgences contributed to widespread corruption within the Church.",
+    "The Avignon Papacy's emphasis on personal wealth and power led to a decline in the Church's moral authority."
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "Avignon_Papacy",
+      "sourceName": "Avignon Papacy",
+      "verb": "OCCURS_IN",
+      "targetSlug": "Pierre_Despres",
+      "targetName": "Pierre Desprès",
+      "context": "Desprès became a prominent advisor to Pope Urban V during the Avignon Papacy."
+    },
+    {
+      "sourceSlug": "John_XXII",
+      "sourceName": "John XXII",
+      "verb": "SUCCEEDS",
+      "targetSlug": "Avignon_Papacy",
+      "targetName": "Avignon Papacy",
+      "context": "John XXII was succeeded by Pope Urban V, who appointed Desprès as his advisor."
+    },
+    {
+      "sourceSlug": "Pope_Urban_V",
+      "sourceName": "Pope Urban V",
+      "verb": "INFLUENCES",
+      "targetSlug": "Pierre_Despres",
+      "targetName": "Pierre Desprès",
+      "context": "Urban V appointed Desprès as his advisor in 1362."
+    },
+    {
+      "sourceSlug": "John_XXII",
+      "sourceName": "John XXII",
+      "verb": "INFLUENCES",
+      "targetSlug": "Decretum_Gratiani",
+      "targetName": "Decretum Gratiani",
+      "context": "Desprès worked on the Decretum Gratiani, a foundational text of medieval canon law, after John XXII's death."
+    },
+    {
+      "sourceSlug": "Pierre_Despres",
+      "sourceName": "Pierre Desprès",
+      "verb": "CREATES",
+      "targetSlug": "Decretum_Gratiani",
+      "targetName": "Decretum Gratiani",
+      "context": "Desprès made significant contributions to the development of canon law."
+    },
+    {
+      "sourceSlug": "Avignon_Papacy",
+      "sourceName": "Avignon Papacy",
+      "verb": "INFLUENCES",
+      "targetSlug": "Decretum_Gratiani",
+      "targetName": "Decretum Gratiani",
+      "context": "The Avignon Papacy is often characterized by its emphasis on personal wealth and power."
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:48:04.125476+00:00",
+  "gateResults": {
+    "summaryLen": 1305,
+    "paragraphs": 4,
+    "causes": 3,
+    "effects": 3,
+    "relationships": 6,
+    "edgeFloor": 5,
+    "significanceScore": 7
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/220-Class-220/220pierre-desprès.json"
+}

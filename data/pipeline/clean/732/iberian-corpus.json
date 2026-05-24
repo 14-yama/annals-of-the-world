@@ -1,0 +1,125 @@
+{
+  "slug": "iberian-corpus",
+  "label": "Text",
+  "name": "The Iberian Corpus",
+  "callNumber": "732.iberian-corpus",
+  "era": "Medieval",
+  "summary": "The Iberian Corpus encompasses the remarkably multicultural literary and legal heritage of medieval Iberia (c. 711–1492 CE) — a peninsula where Christian, Muslim, and Jewish civilizations coexisted, clashed, and cross-fertilized. Key works include: the Cantigas de Santa Maria (c. 1270–1284) — over 400 songs composed (or commissioned) by Alfonso X of Castile (\"the Wise\") in Galician-Portuguese, with exquisite miniature illustrations, constituting the largest collection of vernacular monophonic song from the Middle Ages; Alfonso X's legal and scholarly works (Siete Partidas law code, Primera Crónica General, translations of Arabic scientific texts into Castilian at the Toledo School of Translators); the fueros (municipal charters granting legal autonomy, crucial for understanding medieval self-governance); the Poema de Mio Cid (c.\n\n1207, the earliest surviving Castilian epic); the Mozarabic (Christian Arabic) liturgical tradition; and the Hebrew poetry of al-Andalus (Shlomo ibn Gabirol, Yehuda Halevi). This corpus uniquely documents the \"convivencia\" — the dynamic coexistence of three Abrahamic civilizations — and includes the transmission of Greek philosophy from Arabic to Latin through the Toledo School that catalyzed the European Scholastic revolution.",
+  "importanceScore": 0,
+  "wikidataQid": "",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "The Iberian Corpus played a significant role in shaping medieval European culture through its preservation and transmission of Arabic scientific texts, Galician-Portuguese literature, and the Toledo School of Translators' translations. This corpus facilitated intellectual exchange between Christian, Muslim, and Jewish scholars, contributing to the development of Western civilization.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "TEXTUAL_TRANSMISSION",
+    "CULTURAL_DIFFUSION",
+    "IDEAS_AND_WORLDVIEWS",
+    "CONTINUITY_AND_CHANGE",
+    "INSTITUTIONAL_ANALYSIS",
+    "POLITICAL_SYSTEMS",
+    "CONFLICT_AND_RESOLUTION",
+    "CAUSE_AND_EFFECT",
+    "DIFFUSION_AND_EXCHANGE"
+  ],
+  "subjects": [
+    "Reconquista",
+    "Cantigas",
+    "Alfonso X",
+    "Fueros",
+    "Mozarabic",
+    "Convivencia",
+    "Castilian",
+    "Portuguese"
+  ],
+  "subjectHeadings": [
+    "Artifacts & Texts — Literary & Legal Texts — Medieval Iberia"
+  ],
+  "places": [
+    {
+      "name": "Toledo",
+      "role": "Center of the great Arabic-Latin translation movement"
+    },
+    {
+      "name": "Córdoba",
+      "role": "Capital of al-Andalus — center of Andalusian culture"
+    }
+  ],
+  "texts": [],
+  "quote": "",
+  "causes": [
+    {
+      "title": "Muslim conquest of Iberia creates multicultural society",
+      "type": "Event",
+      "year": "711 CE"
+    }
+  ],
+  "effects": [
+    {
+      "title": "Toledo School translates Greek philosophy from Arabic to Latin",
+      "type": "Text",
+      "year": "c. 1150 CE"
+    },
+    {
+      "title": "Cantigas de Santa Maria — largest medieval monophonic song collection",
+      "type": "Text",
+      "year": "c. 1280 CE"
+    }
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "iberian-corpus",
+      "sourceName": "The Iberian Corpus",
+      "verb": "DOCUMENTS",
+      "targetSlug": "caravel",
+      "targetName": "Portuguese Caravel",
+      "context": "Shared subjects: Portuguese"
+    },
+    {
+      "sourceSlug": "iberian-corpus",
+      "sourceName": "The Iberian Corpus",
+      "verb": "AUTHORED_BY",
+      "targetSlug": "charlemagne",
+      "targetName": "Charlemagne",
+      "context": "Medieval era connection"
+    },
+    {
+      "sourceSlug": "iberian-corpus",
+      "sourceName": "The Iberian Corpus",
+      "verb": "AUTHORED_BY",
+      "targetSlug": "genghis_khan",
+      "targetName": "Genghis Khan",
+      "context": "Medieval era connection"
+    },
+    {
+      "sourceSlug": "iberian-corpus",
+      "sourceName": "The Iberian Corpus",
+      "verb": "DOCUMENTS",
+      "targetSlug": "first_crusade",
+      "targetName": "First Crusade",
+      "context": "Medieval era connection"
+    },
+    {
+      "sourceSlug": "iberian-corpus",
+      "sourceName": "The Iberian Corpus",
+      "verb": "DOCUMENTS",
+      "targetSlug": "battle_of_hastings",
+      "targetName": "Battle of Hastings",
+      "context": "Medieval era connection"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:47:59.989334+00:00",
+  "gateResults": {
+    "summaryLen": 1273,
+    "paragraphs": 2,
+    "causes": 1,
+    "effects": 2,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/732-Class-732/732iberian-corpus.json"
+}

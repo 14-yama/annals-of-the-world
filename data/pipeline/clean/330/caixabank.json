@@ -1,0 +1,87 @@
+{
+  "slug": "caixabank",
+  "label": "Institution",
+  "name": "CaixaBank",
+  "callNumber": "330.caixabank",
+  "era": "Contemporary",
+  "summary": "CaixaBank, S.A., the retail banking arm of the La Caixa foundation (founded 1904 in Barcelona by Francesc Moragas Barret), is Spain's largest domestic bank by retail market share — with €680 billion in assets, 21 million customers in Spain and Portugal, and the most extensive ATM network in Spain. CaixaBank is unique among major European banks in having a charitable foundation as its majority shareholder: the 'la Caixa' Foundation (holding 31.5% after the 2012 IPO) is Europe's largest private charitable foundation, distributing €500 million annually in social programs.\n\nLa Caixa was founded as a savings bank (caixa d'estalvis) serving Barcelona's working class — a 'popular bank' where workers could deposit small savings and access credit. The savings bank model (caixes d'estalvis in Catalan, cajas de ahorros in Castilian) was a Mediterranean banking tradition oriented toward social purpose rather than shareholder profit. La Caixa grew to Spain's second-largest bank (after Banco Santander) through the 20th century.\n\nThe 2010-2012 Spanish banking crisis — triggered by the collapse of Spain's real estate bubble — caused most Spanish savings banks (cajas) to be nationalized or merged. La Caixa restructured by separating its banking operations into CaixaBank (publicly traded, 2012) while the Foundation retained majority ownership. CaixaBank's 2021 merger with Bankia (the nationalized bank) created Spain's largest domestic bank. The La Caixa Foundation's €500 million annual social distribution — in education, social inclusion, research, and art — makes it the largest private philanthropic operation in Spain.",
+  "importanceScore": 4,
+  "wikidataQid": "Q847225",
+  "historicalSignificance": {
+    "significanceScore": 6,
+    "significanceNarrative": "CaixaBank's foundation-controlled ownership structure — a charitable foundation as majority shareholder of a publicly traded major bank — is Europe's most unusual banking governance model, demonstrating that 'social purpose' banking can compete with shareholder-maximizing banks at scale.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Spain",
+    "bank",
+    "Europe",
+    "Economic Institutions"
+  ],
+  "subjectHeadings": [
+    "Institutions -- Economic Institutions -- Spain -- Contemporary"
+  ],
+  "places": [
+    {
+      "name": "Valencia",
+      "role": "Headquarters"
+    },
+    {
+      "name": "Spain",
+      "role": "Country"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: CaixaBank",
+      "type": "Reference article",
+      "slug": "caixabank"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "1904 Barcelona founding as workers' savings bank serving Catalan working class",
+    "20th-century growth making La Caixa Spain's second-largest bank",
+    "2010-2012 Spanish banking crisis requiring restructuring into foundation-owned listed bank",
+    "2021 Bankia merger creating Spain's largest domestic bank"
+  ],
+  "effects": [
+    "Spain's largest domestic bank by retail market share with 21 million customers",
+    "La Caixa Foundation as Europe's largest private charitable foundation distributing €500M annually",
+    "Foundation-controlled listed bank model as unique European banking ownership structure",
+    "2021 Bankia merger making CaixaBank dominant in Spain's post-crisis consolidated banking sector"
+  ],
+  "relationships": [
+    {
+      "entity": "La Caixa Foundation",
+      "relationship": "MAJORITY_OWNED_BY",
+      "note": "La Caixa Foundation (31.5% stake) is Europe's largest private charitable foundation — unique ownership"
+    },
+    {
+      "entity": "Bankia",
+      "relationship": "MERGED_WITH",
+      "note": "2021 CaixaBank-Bankia merger created Spain's largest domestic bank"
+    },
+    {
+      "entity": "Francesc Moragas Barret",
+      "relationship": "FOUNDED_BY",
+      "note": "Moragas founded La Caixa as Barcelona workers' savings bank in 1904"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:47:38.441255+00:00",
+  "gateResults": {
+    "summaryLen": 1629,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 3,
+    "edgeFloor": 3,
+    "significanceScore": 6
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/330-Class-330/330caixabank.json"
+}

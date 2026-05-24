@@ -50,11 +50,11 @@
       "$createdAt": "2026-04-05T13:02:04.408+00:00",
       "$updatedAt": "2026-04-05T13:02:04.408+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "rejected",
         "attempts": 0,
-        "lastGate": "validate",
-        "lastReason": "summary-too-short",
-        "updatedAt": "2026-05-24T04:41:10.297631+00:00"
+        "lastGate": "triage",
+        "lastReason": "duplicate-qid-lesser",
+        "updatedAt": "2026-05-24T22:50:47.667878+00:00"
       }
     },
     {
@@ -103,12 +103,21 @@
       "$createdAt": "2026-04-05T15:30:43.642+00:00",
       "$updatedAt": "2026-04-05T15:30:43.642+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "validated",
         "attempts": 1,
         "lastGate": "validate",
-        "lastReason": "summary-too-short",
-        "updatedAt": "2026-05-24T04:41:10.298712+00:00",
-        "queuedAt": "2026-05-24T03:49:07.179283+00:00"
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T13:28:21.752253+00:00",
+        "queuedAt": "2026-05-24T03:49:07.179283+00:00",
+        "gateResults": {
+          "summaryLen": 1496,
+          "paragraphs": 7,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 8,
+          "edgeFloor": 5,
+          "significanceScore": 7
+        }
       },
       "historicalSignificance": {
         "significanceScore": 7,

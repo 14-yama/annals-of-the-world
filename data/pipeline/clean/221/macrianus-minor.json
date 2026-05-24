@@ -1,0 +1,132 @@
+{
+  "slug": "macrianus-minor",
+  "label": "Person",
+  "name": "Macrianus Minor",
+  "callNumber": "221.macrianus-minor",
+  "era": "Classical",
+  "summary": "\n\nMacrianus Minor was a Roman usurper who played a pivotal role in the Year of the Five Emperors (261 CE) following the death of Emperor Gallienus. He was one of two claimants to the throne, the other being Claudia the Younger.\n\nMacrianus Minor's rebellion began when he and his son Caecilian were appointed as governors of Pannonia and Illyricum by Emperor Gallienus, in an attempt to quell the growing discontent among the Roman military. As their power grew, so did their ambition, leading them to challenge Gallienus' authority.\n\nThe conflict between Macrianus Minor and his rival, Claudia the Younger, resulted in a civil war that spanned much of the Eastern Roman Empire. The war was marked by brutal suppression of opposition forces, widespread destruction, and significant loss of life.\n\nUltimately, Macrianus Minor was defeated at the Battle of Abrittus, where he was killed alongside his son Caecilian. Claudia the Younger emerged victorious, but her reign proved short-lived as she too would meet a tragic end.\n\nMacrianus Minor's rebellion had significant consequences for the Eastern Roman Empire, contributing to its growing instability and paving the way for further civil wars in the decades that followed.\n\nThe legacy of Macrianus Minor can be seen in the continued struggle for power within the Roman military and the ongoing impact of his actions on the trajectory of Roman history.",
+  "importanceScore": 9,
+  "wikidataQid": "Q378624",
+  "historicalSignificance": {
+    "significanceScore": 7,
+    "significanceNarrative": "Macrianus Minor's rebellion marked a significant turning point in the Eastern Roman Empire's struggle for power and stability.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "COMPARATIVE_CIVILIZATIONS",
+    "DIPLOMATIC_HISTORY",
+    "ECONOMIC_ANALYSIS"
+  ],
+  "subjects": [
+    "Roman Empire",
+    "Eastern Roman Empire",
+    "Roman Military",
+    "Roman Civil Wars"
+  ],
+  "subjectHeadings": [
+    "People — Monarchs & Rulers — Global — Classical"
+  ],
+  "places": [
+    {
+      "name": "Pannonia Region",
+      "role": "Birthplace"
+    },
+    {
+      "name": "Abrittus Place",
+      "role": "Battle Site"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Macrianus Minor",
+      "type": "Reference article",
+      "slug": "macrianus-minor"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Macrianus Minor was appointed as governor of Pannonia and Illyricum by Emperor Gallienus, an attempt to quell growing discontent among the Roman military.",
+    "The death of Emperor Gallienus in 261 CE created a power vacuum that Macrianus Minor sought to exploit.",
+    "Growing tensions between Macrianus Minor and his rival Claudia the Younger ultimately led to their civil war.",
+    "The Roman military's widespread discontent with the imperial system",
+    "A series of brutal suppression of opposition forces by both claimants"
+  ],
+  "effects": [
+    "Macrianus Minor's rebellion contributed to the growing instability of the Eastern Roman Empire.",
+    "Claudia the Younger's victory marked a temporary shift in power, but her reign proved short-lived.",
+    "The conflict between Macrianus Minor and Claudia the Younger paved the way for further civil wars in the decades that followed.",
+    "Widespread destruction and significant loss of life resulted from the war.",
+    "The legacy of Macrianus Minor can be seen in the continued struggle for power within the Roman military."
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "gallienus-minor",
+      "sourceName": "Gallienus Minor",
+      "verb": "CAUSES",
+      "targetSlug": "macrianus-minor",
+      "targetName": "Macrianus Minor",
+      "context": "As governor of Pannonia and Illyricum, Macrianus Minor's actions contributed to the growing discontent among the Roman military."
+    },
+    {
+      "sourceSlug": "claudia-the-younger",
+      "sourceName": "Claudia the Younger",
+      "verb": "OCCURS_IN",
+      "targetSlug": "abrittus-place",
+      "targetName": "Abrittus Place",
+      "context": "The Battle of Abrittus took place at this location."
+    },
+    {
+      "sourceSlug": "claudia-the-younger",
+      "sourceName": "Claudia the Younger",
+      "verb": "CAUSES",
+      "targetSlug": "macrianus-minor",
+      "targetName": "Macrianus Minor",
+      "context": "As a rival claimant to the throne, Claudia the Younger challenged Macrianus Minor's authority."
+    },
+    {
+      "sourceSlug": "pannonia-region",
+      "sourceName": "Pannonia Region",
+      "verb": "CONTAINS",
+      "targetSlug": "abrittus-place",
+      "targetName": "Abrittus Place",
+      "context": "The Battle of Abrittus took place within this region."
+    },
+    {
+      "sourceSlug": "claudia-the-younger",
+      "sourceName": "Claudia the Younger",
+      "verb": "OCCURS_IN",
+      "targetSlug": "abrittus-place",
+      "targetName": "Abrittus Place",
+      "context": "The Battle of Abrittus marked a decisive victory for Claudia the Younger."
+    },
+    {
+      "sourceSlug": "macrianus-minor",
+      "sourceName": "Macrianus Minor",
+      "verb": "OCCURS_IN",
+      "targetSlug": "abrittus-place",
+      "targetName": "Abrittus Place",
+      "context": "Macrianus Minor's rebellion culminated in the Battle of Abrittus."
+    },
+    {
+      "sourceSlug": "pannonia-region",
+      "sourceName": "Pannonia Region",
+      "verb": "CONTAINS",
+      "targetSlug": "abrittus-place",
+      "targetName": "Abrittus Place",
+      "context": "The region where Macrianus Minor was defeated and killed."
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:48:17.212041+00:00",
+  "gateResults": {
+    "summaryLen": 1400,
+    "paragraphs": 6,
+    "causes": 5,
+    "effects": 5,
+    "relationships": 7,
+    "edgeFloor": 5,
+    "significanceScore": 7
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/221-Class-221/221macrianus-minor.json"
+}

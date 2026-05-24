@@ -1,0 +1,140 @@
+{
+  "slug": "islamic-quran-hadith-corpus",
+  "label": "Text",
+  "name": "The Islamic Qur'an & Hadith Corpus",
+  "callNumber": "732.islamic-quran-hadith-corpus",
+  "era": "Medieval",
+  "summary": "The Islamic Qur'an & Hadith Corpus comprises the two primary textual foundations of Islam: the Qur'an (the Word of God as revealed to the Prophet Muhammad through the angel Jibril between 610 and 632 CE) and the canonical hadith collections (reports of the Prophet's words, actions, and tacit approvals compiled in the 9th century CE). The Qur'an — 114 suras (chapters) arranged roughly by decreasing length — is considered by Muslims to be the literal, uncreated speech of God in Arabic, and is the most memorized book in human history (millions of huffaz worldwide).\n\nThe Six Canonical Hadith Collections (Kutub al-Sittah) — particularly Sahih al-Bukhari and Sahih Muslim — form the basis of Islamic law (Shari'a), theology, and daily practice for 1.8+ billion Muslims worldwide. Together, these texts constitute the most widely studied and practiced textual tradition on Earth by population.",
+  "importanceScore": 0,
+  "wikidataQid": "",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "The Islamic Qur'an & Hadith Corpus has shaped Islamic law, theology, and daily practice for over 1.8 billion Muslims worldwide, influencing global politics, culture, and society.",
+    "significanceCategory": "continental"
+  },
+  "frameworks": [
+    "TEXTUAL_TRANSMISSION",
+    "DOCTRINE_DEVELOPMENT",
+    "CULTURAL_DIFFUSION"
+  ],
+  "subjects": [
+    "Qur'an",
+    "Hadith",
+    "Muhammad",
+    "Islam",
+    "Arabic",
+    "Revelation",
+    "Sunnah",
+    "Six Books"
+  ],
+  "subjectHeadings": [
+    "Artifacts & Texts — Religious Texts — Islamic Canon"
+  ],
+  "places": [
+    {
+      "name": "Mecca",
+      "role": "City of revelation and pilgrimage",
+      "slug": "mecca_city"
+    },
+    {
+      "name": "Medina",
+      "role": "City of the Prophet's community and governance",
+      "slug": "medina_city"
+    }
+  ],
+  "texts": [],
+  "quote": "",
+  "causes": [
+    {
+      "title": "Muhammad receives first revelation in cave of Hira",
+      "type": "Event",
+      "year": "610 CE",
+      "slug": "first_revelation_610"
+    },
+    {
+      "title": "Pre-Islamic Arabic oral and poetic tradition",
+      "type": "Text",
+      "year": "c. 500 CE"
+    }
+  ],
+  "effects": [
+    {
+      "title": "Shari'a law governs Muslim societies across three continents",
+      "type": "Idea",
+      "year": "c. 900 CE"
+    },
+    {
+      "title": "Arabic becomes the lingua franca of science, philosophy, and trade",
+      "type": "Idea",
+      "year": "c. 800 CE"
+    },
+    {
+      "title": "Qur'anic calligraphy becomes supreme Islamic art form",
+      "type": "Idea",
+      "year": "c. 700 CE"
+    }
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "islamic-quran-hadith-corpus",
+      "sourceName": "The Islamic Qur'an & Hadith Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "quran",
+      "targetName": "The Qur'an",
+      "context": "Direct revelation from God"
+    },
+    {
+      "sourceSlug": "islamic-quran-hadith-corpus",
+      "sourceName": "The Islamic Qur'an & Hadith Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "sahih_al_bukhari",
+      "targetName": "Sahih al-Bukhari",
+      "context": "Most authoritative hadith collection"
+    },
+    {
+      "sourceSlug": "islamic-quran-hadith-corpus",
+      "sourceName": "The Islamic Qur'an & Hadith Corpus",
+      "verb": "CONTAINS",
+      "targetSlug": "sahih_muslim",
+      "targetName": "Sahih Muslim",
+      "context": "Second most authoritative hadith collection"
+    },
+    {
+      "sourceSlug": "first_revelation_610",
+      "sourceName": "First Revelation (610 CE)",
+      "verb": "CAUSES",
+      "targetSlug": "quran",
+      "targetName": "Qur'an",
+      "context": "Angel Jibril reveals first sura to Muhammad in Cave Hira"
+    },
+    {
+      "sourceSlug": "first_revelation_610",
+      "sourceName": "Muhammad receives first revelation in cave of Hira",
+      "verb": "CAUSES",
+      "targetSlug": "islamic-quran-hadith-corpus",
+      "targetName": "The Islamic Qur'an & Hadith Corpus",
+      "context": "Causal antecedent (610 CE)"
+    },
+    {
+      "sourceSlug": "muhammad",
+      "sourceName": "Prophet Muhammad",
+      "verb": "AUTHORS",
+      "targetSlug": "islamic-quran-hadith-corpus",
+      "targetName": "The Islamic Qur'an & Hadith Corpus",
+      "context": "Scholarly tradition of the era"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:48:00.013548+00:00",
+  "gateResults": {
+    "summaryLen": 894,
+    "paragraphs": 2,
+    "causes": 2,
+    "effects": 3,
+    "relationships": 6,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/732-Class-732/732islamic-quran-hadith-corpus.json"
+}

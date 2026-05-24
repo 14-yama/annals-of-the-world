@@ -1,0 +1,116 @@
+{
+  "slug": "era-reformation-era",
+  "label": "Timeframe",
+  "name": "Reformation Era",
+  "callNumber": "943.era-reformation-era",
+  "era": "Early Modern",
+  "summary": "The Reformation Era, spanning roughly 1517 to 1648, designates a transformative period in European history marked by a schism within Western Christianity and profound societal restructuring that reshaped religious, political, and cultural landscapes. Initiated primarily by figures like Martin Luther in Wittenberg and John Calvin in Geneva, it challenged the theological doctrines and ecclesiastical authority of the Roman Catholic Church, leading to the establishment of Protestantism and igniting a series of religious wars and political realignments across the Holy Roman Empire, France, the Netherlands, and England. This era's significance lies in its dismantling of medieval religious unity, fostering new national identities, and laying intellectual groundwork for the Enlightenment.\n\nThe era commenced decisively on October 31, 1517, when Martin Luther posted his Ninety-five Theses on the door of the All Saints' Church in Wittenberg, critiquing the sale of indulgences. Subsequent theological developments by Huldrych Zwingli, John Calvin, and others introduced doctrines such as sola scriptura and predestination, which gained traction through the widespread dissemination of printed texts, particularly Bibles in vernacular languages. Key events include the Diet of Worms (1521), the Peasants' War (1524–1525), the English Reformation initiated by Henry VIII's Act of Supremacy (1534), and the Council of Trent (1545–1563), which spearheaded the Catholic Counter-Reformation. This period also witnessed fierce conflicts like the French Wars of Religion (1562–1598) and the Dutch Revolt (1568–1648).",
+  "importanceScore": 10,
+  "wikidataQid": "",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "The Reformation Era led to the establishment of Protestantism and sparked a series of religious wars that reshaped European politics and society, resulting in the deaths of an estimated 30 million people.",
+    "significanceCategory": "continental"
+  },
+  "frameworks": [
+    "RELIGIOUS_INTERPRETATION",
+    "CAUSE_AND_EFFECT",
+    "STRUCTURAL_ANALYSIS"
+  ],
+  "subjects": [
+    "Religious History",
+    "European History",
+    "Protestantism",
+    "Catholicism",
+    "Political History",
+    "Social History",
+    "Early Modern Period",
+    "Theology",
+    "Printing",
+    "Warfare"
+  ],
+  "subjectHeadings": [
+    "Timeframe — Reformation Era"
+  ],
+  "places": [
+    {
+      "name": "Wittenberg, Holy Roman Empire",
+      "role": "Origin point"
+    },
+    {
+      "name": "Geneva, Swiss Confederacy",
+      "role": "Calvinist center"
+    },
+    {
+      "name": "Trent, Holy Roman Empire",
+      "role": "Counter-Reformation council"
+    }
+  ],
+  "texts": [],
+  "quote": "",
+  "causes": [
+    "The widespread perception of corruption and abuses within the late medieval Roman Catholic Church, including the sale of indulgences, fueled popular discontent.",
+    "The invention of the printing press by Johannes Gutenberg around 1440 enabled rapid and widespread dissemination of reformist ideas and vernacular Bibles.",
+    "Growing nationalism and the desire of secular rulers to assert authority over ecclesiastical powers provided political impetus for challenging papal supremacy."
+  ],
+  "effects": [
+    "The fragmentation of Western Christianity into numerous Protestant denominations and the strengthening of the Roman Catholic Church through the Counter-Reformation.",
+    "A series of devastating religious wars across Europe, including the Thirty Years' War, which resulted in significant demographic and political changes.",
+    "The rise of modern nation-states and the principle of state sovereignty, as rulers gained greater control over religious affairs within their territories."
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "martin-luther",
+      "sourceName": "Martin Luther",
+      "verb": "PARTICIPATES_IN",
+      "targetSlug": "era-reformation-era",
+      "targetName": "Reformation Era",
+      "context": "Martin Luther's posting of the Ninety-five Theses in 1517 is widely considered the catalyst for the Reformation Era."
+    },
+    {
+      "sourceSlug": "printing-press",
+      "sourceName": "Printing Press",
+      "verb": "INFLUENCES",
+      "targetSlug": "era-reformation-era",
+      "targetName": "Reformation Era",
+      "context": "The printing press dramatically accelerated the spread of Reformation ideas, Bibles, and pamphlets across Europe from the late 15th century onwards."
+    },
+    {
+      "sourceSlug": "wittenberg-holy-roman-empire",
+      "sourceName": "Wittenberg, Holy Roman Empire",
+      "verb": "OCCURS_IN",
+      "targetSlug": "era-reformation-era",
+      "targetName": "Reformation Era",
+      "context": "The Reformation Era symbolically began in Wittenberg with Martin Luther's actions in 1517."
+    },
+    {
+      "sourceSlug": "thirty-years-war",
+      "sourceName": "Thirty Years' War",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "era-reformation-era",
+      "targetName": "Reformation Era",
+      "context": "The Thirty Years' War (1618–1648), a major European conflict, was the final and most devastating religious war of the Reformation Era."
+    },
+    {
+      "sourceSlug": "counter-reformation",
+      "sourceName": "Counter-Reformation",
+      "verb": "CONTAINS",
+      "targetSlug": "council-of-trent",
+      "targetName": "Council of Trent",
+      "context": "The Council of Trent (1545–1563) was a pivotal event within the Counter-Reformation, defining Catholic doctrine in response to Protestant challenges."
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:48:40.869622+00:00",
+  "gateResults": {
+    "summaryLen": 1611,
+    "paragraphs": 2,
+    "causes": 3,
+    "effects": 3,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/943-Class-943/943era-reformation-era.json"
+}

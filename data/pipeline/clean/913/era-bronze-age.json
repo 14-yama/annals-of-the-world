@@ -1,0 +1,116 @@
+{
+  "slug": "era-bronze-age",
+  "label": "Timeframe",
+  "name": "Bronze Age",
+  "callNumber": "913.era-bronze-age",
+  "era": "Prehistoric",
+  "summary": "The Bronze Age, broadly spanning from 3300 BCE to 1200 BCE, represents a pivotal epoch in human technological and societal development, characterized by the widespread adoption of bronze metallurgy and the emergence of the first complex urban civilizations across Eurasia and North Africa. This era, succeeding the Neolithic and preceding the Iron Age, witnessed unprecedented advancements in tool-making, warfare, and agriculture, fundamentally reshaping human interaction with the environment and each other. Key regions like Mesopotamia, the Indus Valley, Ancient Egypt, and Mycenaean Greece became vibrant centers of innovation, demonstrating complex social hierarchies, monumental architecture, and sophisticated administrative systems.\n\nThe fusion of copper and tin to create bronze, a harder and more durable alloy, revolutionized tool and weapon production, enabling more efficient farming, construction, and military capabilities. This technological leap spurred significant population growth and the development of specialized labor, leading to the rise of powerful city-states and vast territorial empires. Notable achievements include the construction of the Giza Pyramids (c. 2580–2560 BCE), the invention of cuneiform writing in Sumer (c. 3200 BCE), and the intricate urban planning of Mohenjo-Daro (c. 2500–1900 BCE). Extensive trade networks, exemplified by the 'tin roads' connecting distant mining regions to metallurgical centers, facilitated cultural exchange and economic interdependence across the ancient world.",
+  "importanceScore": 10,
+  "wikidataQid": "",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "The Bronze Age marked a pivotal shift in human technological and societal development, enabling the emergence of complex urban civilizations across Eurasia and North Africa. Its impact can be seen in the widespread adoption of bronze metallurgy and the development of sophisticated administrative systems.",
+    "significanceCategory": "continental"
+  },
+  "frameworks": [
+    "TECHNOLOGICAL_DETERMINISM",
+    "WORLD_SYSTEMS",
+    "LONGUE_DUREE"
+  ],
+  "subjects": [
+    "Global",
+    "Archaeology",
+    "Metallurgy",
+    "Ancient Civilizations",
+    "Urbanization",
+    "Trade Networks",
+    "Warfare",
+    "Social Stratification",
+    "Technological Innovation",
+    "Bronze Age Collapse"
+  ],
+  "subjectHeadings": [
+    "Timeframe — Bronze Age"
+  ],
+  "places": [
+    {
+      "name": "Mesopotamia",
+      "role": "Cradle of Civilization"
+    },
+    {
+      "name": "Indus Valley, Pakistan/India",
+      "role": "Major Urban Center"
+    },
+    {
+      "name": "Crete, Greece",
+      "role": "Minoan Maritime Hub"
+    }
+  ],
+  "texts": [],
+  "quote": "",
+  "causes": [
+    "The discovery and mastery of smelting copper from ore around 5000 BCE provided the foundational knowledge for metallurgy.",
+    "The subsequent accidental or intentional alloying of copper with tin created bronze, a superior and more durable metal.",
+    "The increasing demand for more efficient tools and weapons drove the widespread adoption and refinement of bronze technology."
+  ],
+  "effects": [
+    "The Bronze Age led to the rise of complex urban societies and the formation of early state-level political structures.",
+    "Extensive long-distance trade networks emerged to secure vital resources like tin and copper, fostering cultural exchange.",
+    "The development of sophisticated weaponry and defensive structures transformed warfare and facilitated the expansion of empires."
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "era-neolithic",
+      "sourceName": "Neolithic",
+      "verb": "SUCCEEDS",
+      "targetSlug": "era-bronze-age",
+      "targetName": "Bronze Age",
+      "context": "The Bronze Age directly succeeded the Neolithic period, building upon its agricultural and sedentary foundations."
+    },
+    {
+      "sourceSlug": "city-ur",
+      "sourceName": "Ur",
+      "verb": "OCCURS_IN",
+      "targetSlug": "region-mesopotamia",
+      "targetName": "Mesopotamia",
+      "context": "The significant city-state of Ur flourished within Mesopotamia during the Early and Middle Bronze Age, particularly under the Third Dynasty of Ur around 2112–2004 BCE."
+    },
+    {
+      "sourceSlug": "event-late-bronze-age-collapse",
+      "sourceName": "Late Bronze Age Collapse",
+      "verb": "CAUSES",
+      "targetSlug": "era-iron-age",
+      "targetName": "Iron Age",
+      "context": "The Late Bronze Age Collapse around 1200 BCE disrupted established civilizations and facilitated the transition into the subsequent Iron Age."
+    },
+    {
+      "sourceSlug": "era-bronze-age",
+      "sourceName": "Bronze Age",
+      "verb": "CREATES",
+      "targetSlug": "technology-cuneiform-writing",
+      "targetName": "Cuneiform Writing",
+      "context": "The administrative needs of early Bronze Age city-states in Sumer, particularly Uruk around 3200 BCE, led to the invention of cuneiform writing."
+    },
+    {
+      "sourceSlug": "era-bronze-age",
+      "sourceName": "Bronze Age",
+      "verb": "CONTAINS",
+      "targetSlug": "civilization-minoan",
+      "targetName": "Minoan Civilization",
+      "context": "The Minoan Civilization, centered on the island of Crete, flourished as a major maritime power throughout the Middle and Late Bronze Age (c. 2700–1450 BCE)."
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:48:46.606022+00:00",
+  "gateResults": {
+    "summaryLen": 1534,
+    "paragraphs": 2,
+    "causes": 3,
+    "effects": 3,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/913-Class-913/913era-bronze-age.json"
+}

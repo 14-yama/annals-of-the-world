@@ -1,0 +1,92 @@
+{
+  "slug": "guardian-council",
+  "label": "Institution",
+  "name": "Guardian Council",
+  "callNumber": "311.guardian-council",
+  "era": "Classical",
+  "summary": "The Guardian Council (Shora-ye Negahban) is a twelve-member constitutional body of the Islamic Republic of Iran that serves as a combined constitutional court, clerical supervisory authority, and electoral vetting body. Established by the Constitution of 1979, it consists of six Islamic jurists appointed by the Supreme Leader and six civil lawyers approved by the Parliament (Majlis). Its powers are uniquely broad: it reviews all legislation for conformity with Islamic law and the Constitution, and holds the authority to disqualify candidates for the Parliament, Presidency, and Assembly of Experts.\n\nThe Council's candidate vetting power — used to disqualify thousands of reform-minded candidates in elections since 1992 — has been the primary mechanism through which Iran's Supreme Leader has maintained the dominance of hardline conservative factions despite popular demand for reform. In the 2004 parliamentary elections, the Council disqualified over 2,000 candidates including 80 sitting MPs; in the 2021 presidential election it disqualified all reformist candidates, producing a hardliner field.\n\nThe Guardian Council represents the 'velayat-e faqih' (guardianship of the Islamic jurist) principle — the constitutional doctrine that Khomeini used to create a clerical supervisory layer over all democratic institutions. Its existence makes Iran's political system a hybrid of republican elections and clerical veto — a novel constitutional form with no direct precedent in Islamic jurisprudence or comparative constitutional law.",
+  "importanceScore": 8,
+  "wikidataQid": "Q828689",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "Constitutional guardian and electoral vetter of Iran; reviews all legislation for Islamic conformity; disqualifies thousands of candidates per election cycle; the primary mechanism for clerical control over Iran's nominally democratic institutions; embodies Khomeini's velayat-e faqih principle.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Iran",
+    "upper house",
+    "Asia",
+    "Parliaments & Legislatures"
+  ],
+  "subjectHeadings": [
+    "Institutions -- Parliaments & Legislatures -- Iran -- Classical"
+  ],
+  "places": [
+    {
+      "name": "Iran",
+      "role": "Country"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Guardian Council",
+      "type": "Reference article",
+      "slug": "guardian-council"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Ayatollah Khomeini's doctrine of velayat-e faqih (guardianship of the Islamic jurist) — the theological justification for clerical authority over the state — required an institutional mechanism to enforce Islamic compliance on all legislation and officials",
+    "The Iranian Revolution (1979) created a hybrid constitutional system combining republican elections with clerical supervision — requiring a body like the Guardian Council to manage the inherent tension between democratic and theocratic legitimacy",
+    "The drafting of the 1979 Constitution by Khomeini's allies gave the Council its broad powers precisely to prevent the liberal and leftist factions who had also participated in the revolution from using democratic majorities to redirect the state away from Islamic governance"
+  ],
+  "effects": [
+    "The Guardian Council's candidate vetting has fundamentally altered the political character of every Iranian election since 1992, systematically excluding reformists and producing a political field dominated by regime-loyal conservatives",
+    "The 1997 and 2001 elections of Mohammed Khatami — whose reformist candidates passed vetting — and the subsequent disqualification of reformists in 2004 and 2012 demonstrated the Council's role as the principal valve regulating Iran's political temperature",
+    "The Council's disqualification of all significant presidential candidates in 2021 — producing Ebrahim Raisi's low-turnout election (48.8%, a record low) — signalled a regime decision to abandon electoral legitimacy in favour of hardline consolidation",
+    "The Guardian Council model — a clerical supervisory body with veto power over legislation and candidate qualification — has influenced constitutional design debates in other Muslim-majority states seeking to embed Islamic compliance mechanisms in democratic frameworks"
+  ],
+  "relationships": [
+    {
+      "entity": "Supreme Leader of Iran",
+      "relationship": "SIX_JURISTS_APPOINTED_BY",
+      "note": "The Supreme Leader appoints six of the Council's twelve jurists — giving him structural control over the body"
+    },
+    {
+      "entity": "Velayat-e faqih",
+      "relationship": "EMBODIES_PRINCIPLE_OF",
+      "note": "The Guardian Council is the institutional embodiment of Khomeini's velayat-e faqih doctrine — clerical guardianship over the Islamic state"
+    },
+    {
+      "entity": "Iranian Constitution (1979)",
+      "relationship": "ESTABLISHED_BY",
+      "note": "The 1979 Constitution created the Guardian Council as a twelve-member body reviewing legislation and vetting candidates"
+    },
+    {
+      "entity": "Iranian Parliament (Majlis)",
+      "relationship": "REVIEWS_LEGISLATION_OF",
+      "note": "All Majlis legislation must be reviewed by the Guardian Council for Islamic and constitutional compliance before becoming law"
+    },
+    {
+      "entity": "2009 Iranian presidential election",
+      "relationship": "VALIDATED_DISPUTED_RESULT_OF",
+      "note": "The Guardian Council's validation of Ahmadinejad's disputed 2009 reelection triggered the Green Movement protests — the largest political demonstrations in Iran since 1979"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T01:47:59.599858+00:00",
+  "gateResults": {
+    "summaryLen": 1542,
+    "paragraphs": 3,
+    "causes": 3,
+    "effects": 4,
+    "relationships": 5,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/311-Class-311/311guardian-council.json"
+}
