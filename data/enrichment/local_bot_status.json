@@ -212605,16 +212605,69 @@
   "git-push-1779666612": {
     "job_id": "git-push-1779666612",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
+    "model": "none",
+    "count": 8,
+    "pid": null,
+    "started": "2026-05-24T23:50:12Z",
+    "finished": "2026-05-24T23:50:17Z",
+    "log": [
+      "Pending files: 8 entities, 0 edges (8 total)",
+      "git add data/ scripts/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 8 local enrichments\"",
+      "[clean/audit-system c39b7a3b2c6] feat(enrich): watchdog auto-push \u2014 8 local enrichments\n 11 files changed, 130 insertions(+), 37 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   d8d2104b7f1..c39b7a3b2c6  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 8 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
+    ],
+    "exitCode": 0
+  },
+  "sync-1779666728": {
+    "job_id": "sync-1779666728",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 2869200,
+    "started": "2026-05-24T23:52:08Z",
+    "finished": "2026-05-24T23:53:05Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=61940/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 8 dirty files",
+      "[diff] 8 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 8,",
+      "  \"entitiesUpserted\": 8,",
+      "  \"auditRowsEmitted\": 32,",
+      "  \"writesPerformed\": 40,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit c39b7a3b"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779666785": {
+    "job_id": "git-push-1779666785",
+    "bot": "git-push",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
-    "started": "2026-05-24T23:50:12Z",
-    "finished": null,
+    "started": "2026-05-24T23:53:05Z",
+    "finished": "2026-05-24T23:53:07Z",
     "log": [
       "Pending files: 8 entities, 0 edges (8 total)",
-      "git add data/ scripts/ ..."
+      "git add data/ scripts/ ...",
+      "git add failed: fatal: Unable to create '/home/manasa151/annals-of-the-world/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n"
     ],
-    "exitCode": null
+    "exitCode": 128
   }
 }
