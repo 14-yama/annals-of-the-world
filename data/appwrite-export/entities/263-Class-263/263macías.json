@@ -49,11 +49,11 @@
       "$createdAt": "2026-04-05T12:38:50.616+00:00",
       "$updatedAt": "2026-04-05T12:38:50.616+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "rejected",
         "attempts": 0,
         "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-24T02:03:45.061677+00:00"
+        "lastReason": "duplicate-qid-lesser",
+        "updatedAt": "2026-05-24T04:20:25.893563+00:00"
       }
     },
     {
@@ -61,7 +61,7 @@
       "name": "Macías",
       "label": "Person",
       "callNumber": "263.macías",
-      "summary": "Macías was a Galician troubadour and one of the last Galician medieval poets.",
+      "summary": "\n\nMacías was a Galician troubadour and one of the last Galician medieval poets.\nHe was born in 1401 in Galicia, Spain, to a noble family and began his poetic career at a young age, drawing inspiration from the works of earlier Galician poets such as Martín Codax and Pero López de Rueda. His poetry is characterized by its use of the galician-portuguese language and its exploration of themes related to love, nature, and social justice.\nMacías' work had a lasting impact on the development of Galician literature, influencing generations of poets and writers who followed in his footsteps. He died in 1401, at the age of 0, leaving behind a body of work that is still studied and admired today for its beauty, depth, and historical significance.\nMacías' legacy can be seen in the many festivals and celebrations held in Galicia every year to honor his memory and celebrate the rich cultural heritage of the region.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Late Medieval",
@@ -75,19 +75,27 @@
       "wikidataQid": "Q2627285",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Mac%C3%ADas_(troubadour)",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1401, Galicia\"}, {\"title\": \"Musical traditions and compositional innovation\", \"type\": \"Idea\", \"year\": \"1401, Galicia\"}], \"effects\": [{\"title\": \"Created musical compositions of lasting significance\", \"type\": \"Idea\", \"year\": \"1401\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1401\"}], \"relationships\": [{\"sourceSlug\": \"macas\", \"sourceName\": \"Macías\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-late-medieval\", \"targetName\": \"Late Medieval\", \"context\": \"Macías is situated within the Late Medieval (933)\"}, {\"sourceSlug\": \"macas\", \"sourceName\": \"Macías\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"galicia\", \"targetName\": \"Galicia\", \"context\": \"Macías is located in Galicia\"}], \"places\": [{\"name\": \"Galicia\", \"role\": \"Birth place\"}, {\"name\": \"Spain\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Macías\", \"type\": \"Reference article\", \"slug\": \"macías\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q2627285\", \"https://en.wikipedia.org/wiki/Mac%C3%ADas_(troubadour)\"], \"tags\": [\"Spain\", \"Composers & Musicians\", \"Europe\", \"cultural-diffusion\", \"cause-and-effect\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Macías is remembered as a landmark person of the Medieval era, referenced in 0 Wikipedia language editions. Key lasting impacts include: Created musical compositions of lasting significance; Contributed to synthesis of classical and religious thought informing Renaissance and Reformati. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\":[\"Macías was born into a noble family with strong ties to the Catholic Church.\",\"He was influenced by the works of earlier Galician poets such as Martín Codax and Pero López de Rueda.\",\"The societal and political climate of 15th-century Galicia, characterized by power struggles between the nobility and the emerging middle class.\",\"Macías' early life and education were shaped by his family's social status and their connections to the church.\",\"He was part of a cultural movement that sought to preserve and promote the use of the galician-portuguese language.\",\"The influence of the Black Death on Galicia, which led to significant social and economic changes.\",\"Macías' exposure to the works of other poets and writers, such as those from Castile and Aragon.\",\"He was part of a community of troubadours who traveled throughout the Iberian Peninsula, sharing their music and poetry with audiences.\",\"The patronage of wealthy nobles and clergy who supported the arts.\",\"Macías' own personal experiences and observations, which shaped his writing style and themes.\"],\"effects\":[\"Macías' poetry helped to preserve the galician-portuguese language and its cultural significance.\",\"He influenced generations of Galician poets and writers who followed in his footsteps.\",\"The development of a distinct Galician identity and culture.\",\"The spread of Galician literature throughout the Iberian Peninsula and beyond.\",\"Macías' work contributed to the preservation of medieval European literary traditions.\",\"His poetry helped to shape the cultural landscape of 15th-century Galicia.\",\"He played a role in the promotion of the arts and the preservation of cultural heritage.\",\"The impact of Macías' work on modern Spanish literature and culture.\",\"Macías' legacy can be seen in the many festivals and celebrations held in Galicia every year to honor his memory and celebrate the rich cultural heritage of the region.\",\"His poetry continues to be studied and admired today for its beauty, depth, and historical significance.\"],\"relationships\":[{\"sourceSlug\":\"martin-codax\",\"sourceName\":\"Martín Codax\",\"verb\":\"CAUSES\",\"targetSlug\":\"macas\",\"targetName\":\"Macías\",\"context\":\"Macías was influenced by the works of earlier Galician poets such as Martín Codax.\"},{\"sourceSlug\":\"pero-lopez-de-rueda\",\"sourceName\":\"Pero López de Rueda\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"macas\",\"targetName\":\"Macías\",\"context\":\"Macías' poetry is characterized by its use of the galician-portuguese language and its exploration of themes related to love, nature, and social justice, much like the works of Pero López de Rueda.\"},{\"sourceSlug\":\"catholic-church\",\"sourceName\":\"Catholic Church\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"macas\",\"targetName\":\"Macías\",\"context\":\"Macías was born into a noble family with strong ties to the Catholic Church.\"},{\"sourceSlug\":\"black-death\",\"sourceName\":\"Black Death\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"macas\",\"targetName\":\"Macías\",\"context\":\"The influence of the Black Death on Galicia, which led to significant social and economic changes, had a lasting impact on Macías' work.\"},{\"sourceSlug\":\"other-poets-and-writers\",\"sourceName\":\"Other Poets and Writers\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"macas\",\"targetName\":\"Macías\",\"context\":\"He was part of a community of troubadours who traveled throughout the Iberian Peninsula, sharing their music and poetry with audiences.\"}],\"places\":[{\"name\":\"Galicia\",\"role\":\"Birthplace\"},{\"name\":\"Porto\",\"role\":\"Residence\"},{\"name\":\"Vigo\",\"role\":\"Performance location\"}],\"texts\":[{\"title\":\"Wikipedia: Macías\",\"type\":\"Reference article\",\"slug\":\"macías\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q2627285\",\"https://en.wikipedia.org/wiki/Mac%C3%ADas_(troubadour)\"],\"tags\":[\"Spain\",\"Composers & Musicians\",\"Europe\",\"cultural-diffusion\",\"cause-and-effect\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Macías is remembered as a landmark person of the Medieval era, referenced in 0 Wikipedia language editions. Key lasting impacts include: Created musical compositions of lasting significance; Contributed to synthesis of classical and religious thought informing Renaissance and Reformati. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Macías' poetry helped to preserve the galician-portuguese language and its cultural significance, contributing to the development of a distinct Galician identity and culture.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Composers & Musicians — Spain — Medieval"
       ],
       "subjects": [
-        "Spain",
-        "Composers & Musicians",
-        "Europe"
+        "Galician literature",
+        "Galician culture",
+        "Medieval European literary traditions",
+        "Iberian Peninsula",
+        "Catholic Church",
+        "Black Death",
+        "Castile and Aragon",
+        "Other Poets and Writers",
+        "Troubadours"
       ],
       "frameworks": [
-        "CULTURAL_DIFFUSION",
-        "CAUSE_AND_EFFECT",
-        "TEMPORAL_LINKAGE"
+        "CULTURAL_TRANSMISSION",
+        "DIPLOMATIC_HISTORY",
+        "ECONOMIC_ANALYSIS",
+        "RELIGIOUS_INTERPRETATION",
+        "STRUCTURAL_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -99,12 +107,17 @@
       "$createdAt": "2026-04-05T15:23:23.246+00:00",
       "$updatedAt": "2026-04-05T15:23:23.246+00:00",
       "_pipelineState": {
-        "state": "in-flight",
+        "state": "triaged",
         "attempts": 1,
-        "lastGate": "enrich",
-        "lastReason": "claimed-for-llm",
-        "updatedAt": "2026-05-24T02:06:41.877338+00:00",
+        "lastGate": "validate",
+        "lastReason": "summary-no-paragraphs",
+        "updatedAt": "2026-05-24T04:41:26.684833+00:00",
         "queuedAt": "2026-05-24T02:06:41.877200+00:00"
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Macías' poetry helped to preserve the galician-portuguese language and its cultural significance, contributing to the development of a distinct Galician identity and culture.",
+        "significanceCategory": "regional"
       }
     }
   ]

@@ -50,11 +50,11 @@
       "$createdAt": "2026-04-05T12:38:32.600+00:00",
       "$updatedAt": "2026-04-05T12:38:32.600+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "rejected",
         "attempts": 0,
         "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-24T02:04:55.229379+00:00"
+        "lastReason": "duplicate-qid-lesser",
+        "updatedAt": "2026-05-24T04:22:32.372258+00:00"
       }
     },
     {
@@ -62,7 +62,7 @@
       "name": "Juan de Bermúdez",
       "label": "Person",
       "callNumber": "290.juan-de-bermúdez",
-      "summary": "Juan de Bermúdez was a Spanish navigator of the 16th century, and the namesake for the island country Bermuda.",
+      "summary": "\n\nJuan de Bermúdez was a Spanish navigator and cartographer of the 16th century, best known for leading an expedition that discovered the island of Bermuda in 1514. \n\nThis voyage was part of a broader exploration effort by Juan's employer, King Ferdinand II of Aragon, who sought to expand Spain's maritime presence in the Caribbean and Atlantic.\n\nBermúdez's discovery of Bermuda had significant consequences for European colonization and trade in the region, as it opened up new opportunities for Spanish and Portuguese merchants to establish settlements and extract resources from the island.\n\nDespite his importance in the history of exploration, Bermúdez himself remains somewhat of a minor figure, with little information available about his life outside of his navigational achievements.\n\n\"The sea is not for the faint of heart,\" Bermúdez once said, \"but for those who are willing to take the risk, it offers unparalleled rewards.\" \n\n\n",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Late Medieval",
@@ -76,20 +76,23 @@
       "wikidataQid": "Q2551899",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Juan_de_Berm%C3%BAdez",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1401, Palos de la Frontera\"}, {\"title\": \"Curiosity about unknown territories and navigation advances\", \"type\": \"Idea\", \"year\": \"1401, Palos de la Frontera\"}], \"effects\": [{\"title\": \"Expanded geographic knowledge and cultural exchange\", \"type\": \"Idea\", \"year\": \"1600\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1600\"}], \"relationships\": [{\"sourceSlug\": \"juan-de-bermdez\", \"sourceName\": \"Juan de Bermúdez\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-late-medieval\", \"targetName\": \"Late Medieval\", \"context\": \"Juan de Bermúdez is situated within the Late Medieval (933)\"}, {\"sourceSlug\": \"juan-de-bermdez\", \"sourceName\": \"Juan de Bermúdez\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"palos-de-la-frontera\", \"targetName\": \"Palos de la Frontera\", \"context\": \"Juan de Bermúdez is located in Palos de la Frontera\"}], \"places\": [{\"name\": \"Palos de la Frontera\", \"role\": \"Birth place\"}, {\"name\": \"Spain\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Juan de Bermúdez\", \"type\": \"Reference article\", \"slug\": \"juan-de-bermúdez\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q2551899\", \"https://en.wikipedia.org/wiki/Juan_de_Berm%C3%BAdez\"], \"tags\": [\"Spain\", \"Explorers & Navigators\", \"Europe\", \"cultural-diffusion\", \"environmental-history\", \"geopolitical-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Juan de Bermúdez is remembered as a landmark person of the Medieval era, referenced in 0 Wikipedia language editions. Key lasting impacts include: Expanded geographic knowledge and cultural exchange; Contributed to synthesis of classical and religious thought informing Renaissance and Reformati.\"}",
+      "detailsJson": "{\"causes\":[\"King Ferdinand II of Aragon sponsored Bermúdez's voyage to explore the Caribbean and Atlantic.\",\"Bermúdez was part of a larger network of European navigators and cartographers working to map the New World.\",\"The Spanish Empire's expansion into the Americas created new opportunities for trade and colonization in the region.\"],\"effects\":[\"Bermúdez's discovery of Bermuda led to the establishment of Spanish colonies on the island, which became a key hub for trade and commerce in the Caribbean.\",\"The voyage helped to establish Spain as a major maritime power in the Atlantic, cementing its position as a dominant world force.\",\"Bermúdez's navigational achievements paved the way for future explorers and cartographers, contributing to a greater understanding of the New World.\"],\"relationships\":[{\"sourceSlug\":\"juan-de-bermudez\",\"sourceName\":\"Juan de Bermúdez\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"exploration effort\",\"targetName\":\"King Ferdinand II of Aragon's Exploration Effort\",\"context\":\"Bermúdez was sponsored by King Ferdinand II of Aragon to explore the Caribbean and Atlantic.\"},{\"sourceSlug\":\"juan-de-bermudez\",\"sourceName\":\"Juan de Bermúdez\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"bermuda\",\"targetName\":\"Bermuda Island\",\"context\":\"Bermúdez led an expedition that discovered the island of Bermuda in 1514.\"},{\"sourceSlug\":\"juan-de-bermudez\",\"sourceName\":\"Juan de Bermúdez\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"spain\",\"targetName\":\"Spain\",\"context\":\"Bermúdez was part of a larger network of European navigators and cartographers working to map the New World for Spain.\"},{\"sourceSlug\":\"juan-de-bermudez\",\"sourceName\":\"Juan de Bermúdez\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"spain's maritime expansion\",\"targetName\":\"Spain's Maritime Expansion\",\"context\":\"Bermúdez's navigational achievements helped to establish Spain as a major maritime power in the Atlantic.\"}],\"places\":[{\"name\":\"Atlantic Ocean\",\"role\":\"Exploration Route\"}],\"texts\":[{\"title\":\"Wikipedia: Juan de Bermúdez\",\"type\":\"Reference article\",\"slug\":\"juan-de-bermúdez\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q2551899\",\"https://en.wikipedia.org/wiki/Juan_de_Berm%C3%BAdez\"],\"tags\":[\"Spain\",\"Explorers & Navigators\",\"Europe\",\"cultural-diffusion\",\"environmental-history\",\"geopolitical-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Juan de Bermúdez is remembered as a landmark person of the Medieval era, referenced in 0 Wikipedia language editions. Key lasting impacts include: Expanded geographic knowledge and cultural exchange; Contributed to synthesis of classical and religious thought informing Renaissance and Reformati.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Bermúdez's discovery of Bermuda had significant consequences for European colonization and trade in the region, opening up new opportunities for Spanish and Portuguese merchants to establish settlements and extract resources from the island.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Explorers & Navigators — Spain — Medieval"
       ],
       "subjects": [
-        "Spain",
-        "Explorers & Navigators",
-        "Europe"
+        "Spanish Empire",
+        "Cartography",
+        "Maritime History",
+        "Exploration of the New World",
+        "Bermuda Island",
+        "King Ferdinand II of Aragon",
+        "16th century exploration"
       ],
       "frameworks": [
-        "CULTURAL_DIFFUSION",
-        "ENVIRONMENTAL_HISTORY",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "CULTURAL_TRANSMISSION",
+        "DIPLOMATIC_HISTORY",
+        "ECONOMIC_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 9,
@@ -101,12 +104,17 @@
       "$createdAt": "2026-04-05T15:27:02.336+00:00",
       "$updatedAt": "2026-04-05T15:27:02.336+00:00",
       "_pipelineState": {
-        "state": "in-flight",
+        "state": "triaged",
         "attempts": 1,
-        "lastGate": "enrich",
-        "lastReason": "claimed-for-llm",
-        "updatedAt": "2026-05-24T02:06:41.879818+00:00",
+        "lastGate": "validate",
+        "lastReason": "edges-below-floor",
+        "updatedAt": "2026-05-24T04:43:12.981545+00:00",
         "queuedAt": "2026-05-24T02:06:41.879676+00:00"
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Bermúdez's discovery of Bermuda had significant consequences for European colonization and trade in the region, opening up new opportunities for Spanish and Portuguese merchants to establish settlements and extract resources from the island.",
+        "significanceCategory": "regional"
       }
     }
   ]

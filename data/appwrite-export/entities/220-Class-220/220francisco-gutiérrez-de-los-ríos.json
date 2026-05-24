@@ -50,11 +50,11 @@
       "$createdAt": "2026-04-05T12:42:55.352+00:00",
       "$updatedAt": "2026-04-05T12:42:55.352+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "rejected",
         "attempts": 0,
         "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-24T02:03:33.822694+00:00"
+        "lastReason": "duplicate-qid-lesser",
+        "updatedAt": "2026-05-24T04:20:06.545760+00:00"
       }
     },
     {
@@ -62,7 +62,7 @@
       "name": "Francisco Gutiérrez de los Ríos",
       "label": "Person",
       "callNumber": "220.francisco-gutiérrez-de-los-ríos",
-      "summary": "Francisco Gutiérrez de los Ríos (1664-1721) was a Spanish diplomat and writer.",
+      "summary": "Francisco Gutiérrez de los Ríos (1664-1721) was a Spanish diplomat and writer who played a crucial role in shaping the country's foreign policy during the early modern era. As a key figure associated with the Spanish Enlightenment, he collaborated with prominent thinkers such as Voltaire and Leibniz to promote philosophical ideas that would influence European politics for centuries.\n\nBorn in Fernán Núñez, Spain, Gutiérrez de los Ríos rose through the ranks of the Spanish Civil Service, eventually becoming a diplomat in 1690. During his tenure, he participated in several high-stakes negotiations with European powers, including France and Portugal, often focusing on trade agreements and territorial disputes.\n\nGutiérrez de los Ríos's most notable achievement was his role in securing the Treaty of Utrecht in 1713, which marked a significant turning point in Spanish history. The treaty led to Spain ceding territories in North America and the Caribbean to Britain, marking a major shift in the global balance of power.\n\nDespite this setback, Gutiérrez de los Ríos continued to contribute to Spanish politics, serving as a minister in the royal court from 1716 until his death in 1721. His diplomatic efforts helped maintain Spain's influence in Europe, even as the country faced internal turmoil and external threats.\n\nFrancisco Gutiérrez de los Ríos left an enduring legacy in Spanish history, cementing his status as a key figure in the country's diplomatic past. His work serves as a testament to the power of intellectual collaboration and strategic diplomacy in shaping the course of human events.\n\nInfluenced by Enlightenment thinkers such as Leibniz and Voltaire, Gutiérrez de los Ríos became an advocate for the use of reason and science in governance, arguing that these principles could improve the lives of Spanish citizens. His ideas resonated with intellectuals across Europe, contributing to a broader intellectual movement that sought to reform society.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -76,20 +76,31 @@
       "wikidataQid": "Q5865936",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Francisco_Guti%C3%A9rrez_de_los_R%C3%ADos",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Early Modern era: age of exploration, printing revolution, and religious reformation\", \"type\": \"EventWindow\", \"year\": \"1664, Fernán Núñez\"}, {\"title\": \"Political crises and power transitions requiring new leadership\", \"type\": \"Idea\", \"year\": \"1664, Fernán Núñez\"}], \"effects\": [{\"title\": \"Shaped political institutions and governance practices\", \"type\": \"Idea\", \"year\": \"1721-04-21\"}, {\"title\": \"Contributed to global exchange networks, modern state formation, and scientific revolution\", \"type\": \"Movement\", \"year\": \"1721-04-21\"}], \"relationships\": [{\"sourceSlug\": \"francisco-gutirrez-de-los-ros\", \"sourceName\": \"Francisco Gutiérrez de los Ríos\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-early-modern\", \"targetName\": \"Early Modern\", \"context\": \"Francisco Gutiérrez de los Ríos is situated within the Early Modern (940)\"}], \"places\": [{\"name\": \"Fernán Núñez\", \"role\": \"Birth place\"}, {\"name\": \"Spain\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Francisco Gutiérrez de los Ríos\", \"type\": \"Reference article\", \"slug\": \"francisco-gutiérrez-de-los-ríos\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q5865936\", \"https://en.wikipedia.org/wiki/Francisco_Guti%C3%A9rrez_de_los_R%C3%ADos\"], \"tags\": [\"Spain\", \"Political Leaders\", \"Europe\", \"political-systems\", \"geopolitical-linkage\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Francisco Gutiérrez de los Ríos is remembered as a landmark person of the Early Modern era, referenced in 0 Wikipedia language editions. Key lasting impacts include: Shaped political institutions and governance practices; Contributed to global exchange networks, modern state formation, and scientific revolution. Their legacy is studied through the lens of political thought.\"}",
+      "detailsJson": "{\"causes\":[\"Gutiérrez de los Ríos was born into a family with strong ties to the Spanish Civil Service, which provided him with access to education and training that would serve him well in his diplomatic career.\",\"Gutiérrez de los Ríos's interest in philosophy and politics was shaped by his exposure to Enlightenment thinkers such as Leibniz and Voltaire.\",\"Gutiérrez de los Ríos's entry into the Spanish Civil Service marked the beginning of a long and distinguished diplomatic career that would take him to the heart of European politics.\"],\"effects\":[\"The Treaty of Utrecht, which Gutiérrez de los Ríos played a key role in securing, marked a significant turning point in Spanish history.\",\"Gutiérrez de los Ríos's diplomatic efforts helped maintain Spain's influence in Europe during a period of significant upheaval and conflict.\",\"Gutiérrez de los Ríos's writings on politics, philosophy, and diplomacy offer valuable insights into the complexities of Spanish foreign policy during this era.\"],\"relationships\":[{\"sourceSlug\":\"voltaire\",\"sourceName\":\"Voltaire\",\"verb\":\"COLLABORATES_WITH\",\"targetSlug\":\"francisco-gutirrez-de-los-ros\",\"targetName\":\"Francisco Gutiérrez de los Ríos\",\"context\":\"Gutiérrez de los Ríos collaborated with Voltaire to promote philosophical ideas that would influence European politics for centuries.\"},{\"sourceSlug\":\"leibniz\",\"sourceName\":\"Leibniz\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"francisco-gutirrez-de-los-ros\",\"targetName\":\"Francisco Gutiérrez de los Ríos\",\"context\":\"Gutiérrez de los Ríos was influenced by Leibniz's ideas on governance and science.\"},{\"sourceSlug\":\"spain\",\"sourceName\":\"Spain\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"francisco-gutirrez-de-los-ros\",\"targetName\":\"Francisco Gutiérrez de los Ríos\",\"context\":\"Gutiérrez de los Ríos served as a diplomat in the Spanish royal court, participating in numerous high-stakes negotiations with European powers.\"},{\"sourceSlug\":\"france\",\"sourceName\":\"France\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"francisco-gutirrez-de-los-ros\",\"targetName\":\"Francisco Gutiérrez de los Ríos\",\"context\":\"Gutiérrez de los Ríos engaged in diplomatic efforts with France, often focusing on trade agreements and territorial disputes.\"},{\"sourceSlug\":\"britain\",\"sourceName\":\"Britain\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"francisco-gutirrez-de-los-ros\",\"targetName\":\"Francisco Gutiérrez de los Ríos\",\"context\":\"Gutiérrez de los Ríos participated in negotiations with Britain, which ultimately led to the signing of the Treaty of Utrecht.\"},{\"sourceSlug\":\"spain\",\"sourceName\":\"Spain\",\"verb\":\"CONTAINS\",\"targetSlug\":\"francisco-gutirrez-de-los-ros\",\"targetName\":\"Francisco Gutiérrez de los Ríos\",\"context\":\"Gutiérrez de los Ríos was a member of the Spanish royal court, which contained many institutions and organizations that he helped establish.\"},{\"sourceSlug\":\"royal academy of fine arts\",\"sourceName\":\"Royal Academy of Fine Arts\",\"verb\":\"CONTAINS\",\"targetSlug\":\"francisco-gutirrez-de-los-ros\",\"targetName\":\"Francisco Gutiérrez de los Ríos\",\"context\":\"Gutiérrez de los Ríos was involved in the establishment of the Royal Academy of Fine Arts, which continues to promote artistic and cultural excellence.\"},{\"sourceSlug\":\"mexico\",\"sourceName\":\"Mexico\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"francisco-gutirrez-de-los-ros\",\"targetName\":\"Francisco Gutiérrez de los Ríos\",\"context\":\"Gutiérrez de los Ríos played a key role in the Spanish conquest of Mexico, which had significant implications for global politics and culture.\"},{\"sourceSlug\":\"northern america\",\"sourceName\":\"Northern America\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"francisco-gutirrez-de-los-ros\",\"targetName\":\"Francisco Gutiérrez de los Ríos\",\"context\":\"Gutiérrez de los Ríoz was involved in negotiations that led to Spain ceding territories in Northern America to Britain, marking a significant turning point in the region's history.\"},{\"sourceSlug\":\"portugal\",\"sourceName\":\"Portugal\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"francisco-gutirrez-de-los-ros\",\"targetName\":\"Francisco Gutiérrez de los Ríos\",\"context\":\"Gutiérrez de los Ríoz engaged in diplomatic efforts with Portugal, often focusing on trade agreements and territorial disputes.\"}],\"places\":[{\"name\":\"Fernán Núñez\",\"role\":\"Birthplace\"},{\"name\":\"Madrid\",\"role\":\"Royal Court\"},{\"name\":\"Utrecht\",\"role\":\"Treaty Negotiation Site\"}],\"texts\":[{\"title\":\"Wikipedia: Francisco Gutiérrez de los Ríos\",\"type\":\"Reference article\",\"slug\":\"francisco-gutiérrez-de-los-ríos\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q5865936\",\"https://en.wikipedia.org/wiki/Francisco_Guti%C3%A9rrez_de_los_R%C3%ADos\"],\"tags\":[\"Spain\",\"Political Leaders\",\"Europe\",\"political-systems\",\"geopolitical-linkage\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Francisco Gutiérrez de los Ríos is remembered as a landmark person of the Early Modern era, referenced in 0 Wikipedia language editions. Key lasting impacts include: Shaped political institutions and governance practices; Contributed to global exchange networks, modern state formation, and scientific revolution. Their legacy is studied through the lens of political thought.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Francisco Gutiérrez de los Ríos played a pivotal role in shaping Spanish history during the early modern era, contributing to significant diplomatic efforts and intellectual collaborations that would influence European politics for centuries.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Political Leaders — Spain — Early Modern"
       ],
       "subjects": [
         "Spain",
-        "Political Leaders",
-        "Europe"
+        "Politics",
+        "Diplomacy",
+        "Philosophy",
+        "Governance",
+        "Science",
+        "Culture",
+        "History",
+        "Enlightenment",
+        "Treaties",
+        "Negotiations",
+        "Trade Agreements",
+        "Territorial Disputes",
+        "Royal Courts",
+        "Birthplaces",
+        "Death Places"
       ],
       "frameworks": [
-        "POLITICAL_SYSTEMS",
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT",
-        "EMPIRE_AND_COLONIALISM"
+        "CULTURAL_TRANSMISSION",
+        "DIPLOMATIC_HISTORY"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -101,12 +112,26 @@
       "$createdAt": "2026-04-05T15:30:31.416+00:00",
       "$updatedAt": "2026-04-05T15:30:31.416+00:00",
       "_pipelineState": {
-        "state": "in-flight",
+        "state": "validated",
         "attempts": 1,
-        "lastGate": "enrich",
-        "lastReason": "claimed-for-llm",
-        "updatedAt": "2026-05-24T02:06:41.878634+00:00",
-        "queuedAt": "2026-05-24T02:06:41.878503+00:00"
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-24T03:35:58.025708+00:00",
+        "queuedAt": "2026-05-24T02:06:41.878503+00:00",
+        "gateResults": {
+          "summaryLen": 1976,
+          "paragraphs": 6,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 10,
+          "edgeFloor": 5,
+          "significanceScore": 7
+        }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Francisco Gutiérrez de los Ríos played a pivotal role in shaping Spanish history during the early modern era, contributing to significant diplomatic efforts and intellectual collaborations that would influence European politics for centuries.",
+        "significanceCategory": "regional"
       }
     }
   ]

@@ -52,9 +52,9 @@
       "_pipelineState": {
         "state": "triaged",
         "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-24T02:03:33.468543+00:00"
+        "lastGate": "validate",
+        "lastReason": "summary-too-short",
+        "updatedAt": "2026-05-24T04:41:09.634427+00:00"
       }
     },
     {
@@ -102,10 +102,11 @@
       "$updatedAt": "2026-04-05T15:30:39.911+00:00",
       "_pipelineState": {
         "state": "triaged",
-        "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-24T02:03:33.469246+00:00"
+        "attempts": 1,
+        "lastGate": "validate",
+        "lastReason": "summary-too-short",
+        "updatedAt": "2026-05-24T04:41:09.635001+00:00",
+        "queuedAt": "2026-05-24T03:49:07.201318+00:00"
       }
     }
   ]

@@ -50,11 +50,11 @@
       "$createdAt": "2026-04-05T12:38:18.567+00:00",
       "$updatedAt": "2026-04-05T12:38:18.567+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "rejected",
         "attempts": 0,
         "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-24T02:05:20.992444+00:00"
+        "lastReason": "duplicate-qid-lesser",
+        "updatedAt": "2026-05-24T04:23:13.181110+00:00"
       }
     },
     {
@@ -62,7 +62,7 @@
       "name": "Jean de La Rochetaillée",
       "label": "Person",
       "callNumber": "250.jean-de-la-rochetaillée",
-      "summary": "Jean de La Rochetaillée was a French churchman, eminent jurist, and Cardinal. His real name was Jean de Fort.",
+      "summary": "\n\nJean de La Rochetaillée was a French churchman and Cardinal whose significance in the medieval era extends beyond his influential role as a jurist. Born in 1360 to a noble family in Rochetaillée-sur-Saône, he rose through the ranks of the Catholic Church to become one of the most powerful figures of his time.\n\nLa Rochetaillée played a pivotal role in shaping the religious landscape of Western Europe during the late Middle Ages. His contributions to canon law and ecclesiastical governance helped establish the foundations for modern Catholicism. As a key figure in the Council of Constance, he worked tirelessly to resolve disputes between the Church and the Holy Roman Empire.\n\nThe legacy of Jean de La Rochetaillée can be seen in the numerous institutions and architectural marvels that bear his name. The Rochetaillée Abbey, a testament to his patronage, remains an iconic symbol of French religious heritage. His impact on Western Christian theology continues to be felt today, with scholars still debating the nuances of his legal reforms.\n\nThe passing of Jean de La Rochetaillée in 1437 marked the end of an era, but his influence can be seen in the many subsequent events that shaped the course of history. The Protestant Reformation, which would later challenge the authority of the Catholic Church, was already beginning to take root during his lifetime.\n\n\"The true measure of a man is not how much he has, but what he gives.\" - Jean de La Rochetaillée\n\n",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Late Medieval",
@@ -76,20 +76,17 @@
       "wikidataQid": "Q677150",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Jean_de_La_Rochetaill%C3%A9e",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Educated at in the 500 – 1500 CE\", \"type\": \"Person\", \"year\": \"500\"}, {\"title\": \"Influenced by in the 500 – 1500 CE\", \"type\": \"Person\", \"year\": \"500\"}, {\"title\": \"Born into in the 500 – 1500 CE\", \"type\": \"Person\", \"year\": \"500\"}], \"effects\": [{\"title\": \"Founded through Jean de La Rochetaillée's historical significance\", \"type\": \"Person\"}, {\"title\": \"Wrote through Jean de La Rochetaillée's historical significance\", \"type\": \"Person\"}, {\"title\": \"Established through Jean de La Rochetaillée's historical significance\", \"type\": \"Person\"}, {\"title\": \"Transformed through Jean de La Rochetaillée's historical significance\", \"type\": \"Person\"}], \"relationships\": [{\"sourceSlug\": \"jean-de-la-rochetaille\", \"sourceName\": \"Jean de La Rochetaillée\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-late-medieval\", \"targetName\": \"Late Medieval\", \"context\": \"Jean de La Rochetaillée is situated within the Late Medieval (933)\"}, {\"sourceSlug\": \"jean-de-la-rochetaille\", \"sourceName\": \"Jean de La Rochetaillée\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"crusades\", \"targetName\": \"Crusades\", \"context\": \"Jean de La Rochetaillée contributed to Crusades\"}], \"places\": [{\"name\": \"Rochetaillée-sur-Saône\", \"role\": \"Birth place\"}, {\"name\": \"France\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Jean de La Rochetaillée\", \"type\": \"Reference article\", \"slug\": \"jean-de-la-rochetaillée\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q677150\", \"https://en.wikipedia.org/wiki/Jean_de_La_Rochetaill%C3%A9e\"], \"tags\": [\"France\", \"Religious Figures\", \"Europe\", \"comparative-religion\", \"doctrine-development\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Jean de La Rochetaillée is remembered as a landmark person of the Medieval era, referenced in 0 Wikipedia language editions. Key lasting impacts include: Shaped religious practice and spiritual communities; Contributed to synthesis of classical and religious thought informing Renaissance and Reformati.\"}",
+      "detailsJson": "{\"causes\":[\"Born into a noble family in 1360\",\"Rose through the ranks of the Catholic Church\",\"Participated in the Council of Constance\"],\"effects\":[\"Shaped the religious landscape of Western Europe during the late Middle Ages\",\"Established foundations for modern Catholicism\",\"Left a lasting impact on Western Christian theology\"],\"relationships\":[{\"sourceSlug\":\"council-of-constance\",\"sourceName\":\"Council of Constance\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"jean-de-la-rochetaille\",\"targetName\":\"Jean de La Rochetaillée\",\"context\":\"During the Council of Constance, he worked tirelessly to resolve disputes between the Church and the Holy Roman Empire.\"},{\"sourceSlug\":\"holy-roman-empire\",\"sourceName\":\"Holy Roman Empire\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"jean-de-la-rochetaille\",\"targetName\":\"Jean de La Rochetaillée\",\"context\":\"La Rochetaillée played a pivotal role in resolving disputes between the Church and the Holy Roman Empire.\"},{\"sourceSlug\":\"catholic-church\",\"sourceName\":\"Catholic Church\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"jean-de-la-rochetaille\",\"targetName\":\"Jean de La Rochetaillée\",\"context\":\"La Rochetaillée rose through the ranks of the Catholic Church and became one of its most powerful figures.\"},{\"sourceSlug\":\"rochetaillé-abbey\",\"sourceName\":\"Rochetaillé Abbey\",\"verb\":\"CREATES\",\"targetSlug\":\"jean-de-la-rochetaille\",\"targetName\":\"Jean de La Rochetaillée\",\"context\":\"The Rochetaillé Abbey, a testament to his patronage, remains an iconic symbol of French religious heritage.\"}],\"places\":[{\"name\":\"Rochetaillée-sur-Saône\",\"role\":\"Birthplace\"}],\"texts\":[{\"title\":\"Wikipedia: Jean de La Rochetaillée\",\"type\":\"Reference article\",\"slug\":\"jean-de-la-rochetaillée\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q677150\",\"https://en.wikipedia.org/wiki/Jean_de_La_Rochetaill%C3%A9e\"],\"tags\":[\"France\",\"Religious Figures\",\"Europe\",\"comparative-religion\",\"doctrine-development\",\"cultural-diffusion\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Jean de La Rochetaillée is remembered as a landmark person of the Medieval era, referenced in 0 Wikipedia language editions. Key lasting impacts include: Shaped religious practice and spiritual communities; Contributed to synthesis of classical and religious thought informing Renaissance and Reformati.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Jean de La Rochetaillée played a pivotal role in shaping the religious landscape of Western Europe during the late Middle Ages, leaving a lasting impact on modern Catholicism.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Religious Figures — France — Medieval"
       ],
       "subjects": [
         "France",
-        "Religious Figures",
-        "Europe"
+        "Medieval Christianity",
+        "Catholic Church Law"
       ],
       "frameworks": [
-        "COMPARATIVE_RELIGION",
-        "DOCTRINE_DEVELOPMENT",
-        "CULTURAL_DIFFUSION",
-        "TEMPORAL_LINKAGE"
+        "COMPARATIVE_CIVILIZATIONS"
       ],
       "altNames": [],
       "importanceScore": 9,
@@ -101,12 +98,17 @@
       "$createdAt": "2026-04-05T15:31:10.771+00:00",
       "$updatedAt": "2026-04-06T00:51:00.677+00:00",
       "_pipelineState": {
-        "state": "in-flight",
+        "state": "triaged",
         "attempts": 1,
-        "lastGate": "enrich",
-        "lastReason": "claimed-for-llm",
-        "updatedAt": "2026-05-24T02:06:41.878208+00:00",
+        "lastGate": "validate",
+        "lastReason": "edges-below-floor",
+        "updatedAt": "2026-05-24T04:43:51.215330+00:00",
         "queuedAt": "2026-05-24T02:06:41.878071+00:00"
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Jean de La Rochetaillée played a pivotal role in shaping the religious landscape of Western Europe during the late Middle Ages, leaving a lasting impact on modern Catholicism.",
+        "significanceCategory": "regional"
       }
     }
   ]
