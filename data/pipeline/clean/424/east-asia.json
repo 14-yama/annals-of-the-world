@@ -1,0 +1,143 @@
+{
+  "slug": "east-asia",
+  "label": "Place",
+  "name": "East Asia",
+  "callNumber": "424.east-asia",
+  "era": "Classical",
+  "summary": "\n\nEast Asia is a vast and storied region spanning the modern-day countries of China, Japan, Korea, Mongolia, and Taiwan. With a population of over 1.6 billion people, it is one of the most populous regions on Earth. The earliest known civilizations in East Asia emerged during the Yangshao Culture (c. 5000-2000 BCE), which laid the groundwork for subsequent cultures such as the Shang Dynasty (16th-11th centuries BCE) and the Zhou Dynasty (1046–256 BCE).\n\nThe Silk Road, a network of ancient trade routes, connected East Asia to the rest of the world, facilitating the exchange of goods, ideas, and technologies. The region was also home to some of the most influential philosophical traditions in human history, including Buddhism and Taoism.\n\nIn recent centuries, East Asia has played a crucial role in shaping modern world history. The Opium Wars (1839–1842, 1856–1860) forced China to open its markets to European trade, while Japan's Meiji Restoration (1868–1877) transformed it into a modern industrialized nation.\n\nToday, East Asia continues to be an important player in global affairs. The region is home to some of the world's most populous countries, including China and India, and is increasingly influential in international trade, politics, and culture.",
+  "importanceScore": 8,
+  "wikidataQid": "Q27231",
+  "historicalSignificance": {
+    "significanceScore": 7,
+    "significanceNarrative": "East Asia has played a crucial role in shaping modern world history, from the ancient Silk Road to its current status as a global economic and political powerhouse.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "CULTURAL_TRANSMISSION",
+    "LONGUE_DUREE"
+  ],
+  "subjects": [
+    "East Asia (region)",
+    "China (country)",
+    "Japan (country)",
+    "Korea (country)",
+    "Mongolia (country)",
+    "Taiwan (country)",
+    "Buddhism",
+    "Taoism"
+  ],
+  "subjectHeadings": [
+    "Places -- East Asia -- East Asia -- Classical"
+  ],
+  "places": [
+    {
+      "name": "Beijing, China",
+      "role": "Capital city"
+    },
+    {
+      "name": "Kyoto, Japan",
+      "role": "Former imperial capital"
+    },
+    {
+      "name": "Seoul, Korea",
+      "role": "Modern-day capital"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: East Asia",
+      "type": "Reference article",
+      "slug": "east-asia"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "The Yangshao Culture (c. 5000-2000 BCE) laid the groundwork for subsequent East Asian civilizations.",
+    "The Mongol Empire under Genghis Khan (1206–1227 CE) united much of Eastern Asia under a single rule.",
+    "The Taiping Rebellion (1850–1864 CE), a civil war in China, had significant consequences for the region's politics and economy."
+  ],
+  "effects": [
+    "The Opium Wars led to China's forced opening to European trade and colonization.",
+    "Japan's Meiji Restoration transformed it into a modern industrialized nation, ending centuries of feudal rule.",
+    "The Korean Peninsula's division in 1945 CE led to two separate states: North Korea and South Korea."
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "china",
+      "sourceName": "China",
+      "verb": "CONTAINS",
+      "targetSlug": "east-asia",
+      "targetName": "East Asia",
+      "context": "As the largest country in East Asia, China played a dominant role in shaping the region's history and culture."
+    },
+    {
+      "sourceSlug": "japan",
+      "sourceName": "Japan",
+      "verb": "COLLABORATES_WITH",
+      "targetSlug": "east-asia",
+      "targetName": "East Asia",
+      "context": "During World War II, Japan collaborated with other Axis powers to attack Pearl Harbor and engage in other military actions that impacted East Asia."
+    },
+    {
+      "sourceSlug": "korea",
+      "sourceName": "Korea",
+      "verb": "CONTAINS",
+      "targetSlug": "east-asia",
+      "targetName": "East Asia",
+      "context": "The Korean Peninsula was a critical location for trade and cultural exchange between China, Japan, and other East Asian countries."
+    },
+    {
+      "sourceSlug": "mongolia",
+      "sourceName": "Mongolia",
+      "verb": "CONTAINS",
+      "targetSlug": "east-asia",
+      "targetName": "East Asia",
+      "context": "The Mongol Empire under Genghis Khan united much of Eastern Asia, creating a vast network of trade and cultural exchange."
+    },
+    {
+      "sourceSlug": "taiwan",
+      "sourceName": "Taiwan",
+      "verb": "CONTAINS",
+      "targetSlug": "east-asia",
+      "targetName": "East Asia",
+      "context": "Historically, Taiwan was inhabited by indigenous peoples before being colonized by China and later Japan."
+    },
+    {
+      "sourceSlug": "silk-road",
+      "sourceName": "Silk Road",
+      "verb": "INFLUENCES",
+      "targetSlug": "east-asia",
+      "targetName": "East Asia",
+      "context": "The Silk Road, a network of ancient trade routes, connected East Asia to the rest of the world, facilitating the exchange of goods and ideas."
+    },
+    {
+      "sourceSlug": "buddhism",
+      "sourceName": "Buddhism",
+      "verb": "INFLUENCES",
+      "targetSlug": "east-asia",
+      "targetName": "East Asia",
+      "context": "Buddhist teachings and practices have had a profound impact on the region's culture, philosophy, and spirituality."
+    },
+    {
+      "sourceSlug": "taoism",
+      "sourceName": "Taoism",
+      "verb": "INFLUENCES",
+      "targetSlug": "east-asia",
+      "targetName": "East Asia",
+      "context": "Taoist philosophical traditions have shaped the region's understanding of nature, balance, and the human condition."
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T00:37:37.856040+00:00",
+  "gateResults": {
+    "summaryLen": 1268,
+    "paragraphs": 4,
+    "causes": 3,
+    "effects": 3,
+    "relationships": 8,
+    "edgeFloor": 8,
+    "significanceScore": 7
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/424-Class-424/424east-asia.json"
+}

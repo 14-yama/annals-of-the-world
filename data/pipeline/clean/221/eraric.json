@@ -1,0 +1,122 @@
+{
+  "slug": "eraric",
+  "label": "Person",
+  "name": "Eraric",
+  "callNumber": "221.eraric",
+  "era": "Classical",
+  "summary": "Eraric, also known as Heraric or Ariaric, a Rugian chieftain, briefly seized the throne of the Ostrogothic Kingdom in 541 CE, a pivotal moment during the tumultuous Gothic War. His ascendance marked a desperate attempt by the Goths to find stable leadership following the assassination of King Theodahad, who had proven ineffective against the Byzantine forces of Emperor Justinian I. Eraric, despite his non-Gothic Rugian background, was elected by the Ostrogothic army, reflecting the profound internal divisions and the urgent need for a military leader capable of confronting the Byzantine general Belisarius.\n\nEraric's reign was exceptionally short, lasting only a few months. He immediately sought to negotiate with Justinian I, proposing a peace settlement that would have involved the Ostrogoths evacuating Italy in exchange for land and compensation. This diplomatic overture, however, was met with suspicion by a significant faction of the Gothic nobility, who viewed it as a betrayal or a sign of weakness. While Eraric engaged in these parleys, the Gothic army remained in disarray, and the Byzantine pressure on their remaining strongholds continued unabated. His brief period of rule was characterized more by political maneuvering and internal dissent than by military action.\n\nThe consequence of Eraric's short-lived kingship was further instability within the Ostrogothic state. His perceived willingness to surrender Italy to the Byzantines alienated many of his supporters and provided an opportunity for more radical elements within the Gothic aristocracy to act. He was assassinated in late 541 CE, a victim of his own army's distrust and the relentless pressures of the Gothic War. His death cleared the path for the election of Totila, a nephew of King Theudis, who would prove to be a far more formidable and enduring leader, revitalizing the Gothic resistance against Byzantium for over a decade.",
+  "importanceScore": 9,
+  "wikidataQid": "Q334806",
+  "historicalSignificance": {
+    "significanceScore": 5,
+    "significanceNarrative": "Eraric's brief, unstable reign as Ostrogothic king in 541 CE, marked by his attempts at peace with Byzantium and his subsequent assassination, served as a crucial interlude that directly paved the way for the more impactful leadership of Totila, thereby significantly influencing the course and duration of the Gothic War.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "DIPLOMATIC_HISTORY",
+    "STRUCTURAL_ANALYSIS",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Ostrogothic Kingdom",
+    "Gothic War",
+    "Byzantine Empire",
+    "Rugians",
+    "Kingship",
+    "6th Century",
+    "Italy",
+    "Early Middle Ages",
+    "Political Instability",
+    "Regicide"
+  ],
+  "subjectHeadings": [
+    "People — Monarchs & Rulers — Global — Classical"
+  ],
+  "places": [
+    {
+      "name": "Ravenna, Italy",
+      "role": "Seat of power"
+    },
+    {
+      "name": "Constantinople, Byzantine Empire",
+      "role": "Diplomatic center"
+    },
+    {
+      "name": "Italy",
+      "role": "Contested territory"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Eraric",
+      "type": "Reference article",
+      "slug": "eraric"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "The assassination of the previous Ostrogothic King Theodahad created a power vacuum within the embattled kingdom.",
+    "The ongoing Gothic War and repeated Byzantine victories necessitated a new military leader for the Ostrogothic forces.",
+    "The Ostrogothic army sought a strong commander to rally their morale and resist the relentless pressure from Emperor Justinian I."
+  ],
+  "effects": [
+    "Eraric's assassination led directly to the election of Totila, who would significantly prolong the Gothic War.",
+    "His brief, indecisive reign further destabilized the Ostrogothic Kingdom, highlighting its internal divisions.",
+    "The failure of his diplomatic overtures solidified the Byzantine resolve to conquer Italy entirely."
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "theodahad",
+      "sourceName": "Theodahad",
+      "verb": "CAUSES",
+      "targetSlug": "eraric",
+      "targetName": "Eraric",
+      "context": "The assassination of King Theodahad in 541 CE directly led to Eraric's election as his successor by the Ostrogothic army."
+    },
+    {
+      "sourceSlug": "eraric",
+      "sourceName": "Eraric",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "gothic-war",
+      "targetName": "Gothic War",
+      "context": "Eraric's brief reign as King of the Ostrogoths occurred during a critical phase of the Gothic War (535-554 CE)."
+    },
+    {
+      "sourceSlug": "eraric",
+      "sourceName": "Eraric",
+      "verb": "COLLABORATES_WITH",
+      "targetSlug": "justinian-i",
+      "targetName": "Justinian I",
+      "context": "Eraric attempted to negotiate a peace settlement with the Byzantine Emperor Justinian I shortly after his ascension to the throne in 541 CE."
+    },
+    {
+      "sourceSlug": "eraric",
+      "sourceName": "Eraric",
+      "verb": "OCCURS_IN",
+      "targetSlug": "ravenna-italy",
+      "targetName": "Ravenna, Italy",
+      "context": "Eraric's brief period of rule and his assassination in 541 CE were centered around the Ostrogothic capital of Ravenna."
+    },
+    {
+      "sourceSlug": "totila",
+      "sourceName": "Totila",
+      "verb": "SUCCEEDS",
+      "targetSlug": "eraric",
+      "targetName": "Eraric",
+      "context": "Totila was elected King of the Ostrogoths by the army in late 541 CE, immediately succeeding the assassinated Eraric."
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T00:36:29.959172+00:00",
+  "gateResults": {
+    "summaryLen": 1921,
+    "paragraphs": 3,
+    "causes": 3,
+    "effects": 3,
+    "relationships": 5,
+    "edgeFloor": 4,
+    "significanceScore": 5
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/221-Class-221/221eraric.json"
+}

@@ -1,0 +1,149 @@
+{
+  "slug": "abbasid-egypt",
+  "label": "Person",
+  "name": "Abbasid",
+  "callNumber": "221.abbasid-egypt",
+  "era": "Medieval",
+  "summary": "The Abbasid period in Egypt (641–969) represents a transformative era in North African history, bridging the transition from Byzantine and Roman rule to Islamic governance. This pivotal epoch witnessed the region's integration into the broader Islamic world following the Arab Conquest and Islamic Egypt in 641.\n\nThe Abbasid era built upon the rich cultural, religious, and administrative foundations established during the Roman and Coptic Egypt period, which had shaped the region since 30 BCE. During this medieval period, Egypt became a critical center of Islamic civilization, serving as a crossroads between Mediterranean, Near Eastern, and African worlds. The administrative structures, legal systems, and architectural traditions inherited from previous periods were adapted and transformed to reflect Islamic principles and practices.\n\nThe significance of the Abbasid period extends far beyond its chronological boundaries, establishing legacies that would define Egypt's medieval and early modern development. Most notably, this era directly influenced the establishment of Al-Azhar University in 969, one of the world's oldest and most prestigious Islamic educational institutions. Furthermore, the Abbasid period catalyzed the rise of the Fatimid Dynasty and the founding of Cairo in 969, which would become the cultural, political, and religious heart of Egypt for centuries to come.\n\nThe period exemplifies the frameworks of Cause and Effect, demonstrating how earlier Byzantine and Roman institutions were transformed through Islamic rule, and how this transformation subsequently caused major institutional and dynastic developments. It also illustrates Comparative Religion, as it marks the region's transition from Christian-Byzantine to Islamic governance while maintaining continuity with earlier civilizations. The Abbasid epoch in Egypt remains essential to understanding the complex interconnections between Mediterranean antiquity, Islamic medieval civilization, and North African history.",
+  "importanceScore": 0,
+  "wikidataQid": "",
+  "historicalSignificance": {
+    "significanceScore": 7,
+    "significanceNarrative": "The Abbasid period in Egypt played a crucial role in integrating North Africa into the Islamic world following the Arab Conquest of 641, shaping the region's cultural, religious, and administrative landscape. This era served as a critical crossroads between Mediterranean, Near Eastern, and African worlds.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "CONFLICT_AND_RESOLUTION",
+    "COMPARATIVE_RELIGION",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Egypt"
+  ],
+  "subjectHeadings": [
+    "People — Roman, Byzantine, and Islamic Egypt — Egypt — Classical"
+  ],
+  "places": [
+    {
+      "name": "Egypt",
+      "role": "National History"
+    }
+  ],
+  "texts": [],
+  "quote": "",
+  "causes": [
+    {
+      "title": "Arab Conquest and Islamic Egypt",
+      "type": "EventWindow",
+      "year": "641",
+      "slug": "arab-conquest-and-islamic-egypt"
+    },
+    {
+      "title": "Roman and Coptic Egypt",
+      "type": "EventWindow",
+      "year": "30 BCE",
+      "slug": "roman-and-coptic-egypt"
+    }
+  ],
+  "effects": [
+    {
+      "title": "Al-Azhar University",
+      "type": "Institution",
+      "year": "969",
+      "slug": "al-azhar-university"
+    },
+    {
+      "title": "Fatimid Dynasty and Cairo",
+      "type": "EventWindow",
+      "year": "969",
+      "slug": "fatimid-dynasty-and-cairo"
+    }
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "abbasid-egypt",
+      "sourceName": "Abbasid",
+      "verb": "OCCURS_IN",
+      "targetSlug": "egypt",
+      "targetName": "Egypt",
+      "context": "Abbasid in the history of Egypt"
+    },
+    {
+      "sourceSlug": "abbasid-egypt",
+      "sourceName": "Abbasid",
+      "verb": "INFLUENCES",
+      "targetSlug": "al-azhar-university",
+      "targetName": "Al-Azhar University",
+      "context": "Sequential development within Roman, Byzantine, and Islamic Egypt"
+    },
+    {
+      "sourceSlug": "arab-conquest-and-islamic-egypt",
+      "sourceName": "Arab Conquest and Islamic Egypt",
+      "verb": "CAUSES",
+      "targetSlug": "abbasid-egypt",
+      "targetName": "Abbasid",
+      "context": "Causal antecedent (641)"
+    },
+    {
+      "sourceSlug": "roman-and-coptic-egypt",
+      "sourceName": "Roman and Coptic Egypt",
+      "verb": "CAUSES",
+      "targetSlug": "abbasid-egypt",
+      "targetName": "Abbasid",
+      "context": "Causal antecedent (30 BCE)"
+    },
+    {
+      "sourceSlug": "abbasid-egypt",
+      "sourceName": "Abbasid",
+      "verb": "CAUSES",
+      "targetSlug": "al-azhar-university",
+      "targetName": "Al-Azhar University",
+      "context": "Consequent outcome (969)"
+    },
+    {
+      "sourceSlug": "abbasid-egypt",
+      "sourceName": "Abbasid",
+      "verb": "CAUSES",
+      "targetSlug": "fatimid-dynasty-and-cairo",
+      "targetName": "Fatimid Dynasty and Cairo",
+      "context": "Consequent outcome (969)"
+    },
+    {
+      "sourceSlug": "abbasid-egypt",
+      "sourceName": "Abbasid",
+      "verb": "LEADS",
+      "targetSlug": "al-azhar-university",
+      "targetName": "Al-Azhar University",
+      "context": "Contemporary institution in Egypt"
+    },
+    {
+      "sourceSlug": "abbasid-egypt",
+      "sourceName": "Abbasid",
+      "verb": "INFLUENCES",
+      "targetSlug": "egyptian-marriage",
+      "targetName": "Egyptian Marriage Equality",
+      "context": "Contemporary movement in Egypt"
+    },
+    {
+      "sourceSlug": "abbasid-egypt",
+      "sourceName": "Abbasid",
+      "verb": "PARTICIPATES_IN",
+      "targetSlug": "exodus_event",
+      "targetName": "The Exodus",
+      "context": "Active during this event"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T00:36:30.696145+00:00",
+  "gateResults": {
+    "summaryLen": 2013,
+    "paragraphs": 4,
+    "causes": 2,
+    "effects": 2,
+    "relationships": 9,
+    "edgeFloor": 8,
+    "significanceScore": 7
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/221-Class-221/221abbasid-egypt.json"
+}

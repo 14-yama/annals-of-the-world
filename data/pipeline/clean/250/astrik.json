@@ -1,0 +1,141 @@
+{
+  "slug": "astrik",
+  "label": "Person",
+  "name": "Astrik",
+  "callNumber": "250.astrik",
+  "era": "Medieval",
+  "summary": "Saint Astrik of Pannonhalma was a medieval saint born in unknown circumstances. He became the abbot of the monastery of Pannonhalma in the early 11th century, leading to its significant growth and influence during this period.\n\nAstrik's leadership helped establish the monastery as a major center of learning and spirituality, attracting scholars and pilgrims from across Europe. His commitment to the Benedictine order and his role in promoting Christian education had far-reaching consequences, shaping the spiritual landscape of Central Europe for centuries to come.\n\nDespite the limited information available about his life, Astrik's legacy endures as a testament to the power of faith and perseverance in the face of adversity. His example continues to inspire devotion and curiosity among historians and scholars today.\n\nThe discovery of Astrik's relics in 1057 led to widespread veneration and pilgrimage, solidifying his status as a revered figure in medieval Christianity. This event marked a pivotal moment in the history of Pannonhalma, cementing its position as a premier center of spiritual authority in Central Europe.",
+  "importanceScore": 8,
+  "wikidataQid": "Q544145",
+  "historicalSignificance": {
+    "significanceScore": 7,
+    "significanceNarrative": "Astrik's leadership helped establish Pannonhalma as a major center of learning and spirituality in Central Europe, promoting Christian education and intellectual pursuits that shaped the spiritual landscape of the region.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "CULTURAL_TRANSMISSION"
+  ],
+  "subjects": [
+    "Central European Christianity",
+    "Medieval spirituality",
+    "Byzantine influence on Western Europe",
+    "Benedictine order",
+    "Monastic life in medieval Europe",
+    "Christian education and intellectual pursuits",
+    "Pannonhalma monastery"
+  ],
+  "subjectHeadings": [
+    "People — Religious Figures — Global — Medieval"
+  ],
+  "places": [
+    {
+      "name": "Pannonhalma, Hungary",
+      "role": "Birthplace"
+    },
+    {
+      "name": "Pannonhalma Monastery",
+      "role": "Seat of the Benedictine Order"
+    },
+    {
+      "name": "Budapest, Kingdom of Hungary",
+      "role": "Location of Astrik's relics discovery"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Astrik",
+      "type": "Reference article",
+      "slug": "astrik"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Astrik became abbot of Pannonhalma after the death of his predecessor in 1010.",
+    "The monastery's strategic location along the Danube River facilitated trade and cultural exchange with neighboring regions.",
+    "The Byzantine Empire's influence on Christian theology during this period contributed to Astrik's emphasis on spiritual education and intellectual pursuits."
+  ],
+  "effects": [
+    "Astrik's leadership helped establish Pannonhalma as a major center of learning and spirituality in Central Europe.",
+    "The monastery became a hub for the transmission of Christian knowledge and artistic innovations from the Byzantine Empire.",
+    "Astrik's commitment to Benedictine order principles promoted monastic life and spiritual practices throughout medieval Europe."
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "pannonhalma-monastery",
+      "sourceName": "Pannonhalma Monastery",
+      "verb": "CONTAINS",
+      "targetSlug": "astrik-saint",
+      "targetName": "Saint Astrik of Pannonhalma",
+      "context": "Astrik became abbot of the monastery."
+    },
+    {
+      "sourceSlug": "byzantine-empire",
+      "sourceName": "Byzantine Empire",
+      "verb": "INFLUENCES",
+      "targetSlug": "astrik-saint",
+      "targetName": "Saint Astrik of Pannonhalma",
+      "context": "The Byzantine Empire's theological influence shaped Astrik's emphasis on spiritual education."
+    },
+    {
+      "sourceSlug": "benedictine-order",
+      "sourceName": "Benedictine Order",
+      "verb": "DEFINES",
+      "targetSlug": "astrik-saint",
+      "targetName": "Saint Astrik of Pannonhalma",
+      "context": "Astrik's commitment to the Benedictine order principles promoted monastic life and spiritual practices."
+    },
+    {
+      "sourceSlug": "danube-river",
+      "sourceName": "Danube River",
+      "verb": "INFLUENCES",
+      "targetSlug": "pannonhalma-monastery",
+      "targetName": "Pannonhalma Monastery",
+      "context": "The monastery's strategic location along the Danube River enabled trade and cultural exchange with neighboring regions."
+    },
+    {
+      "sourceSlug": "byzantine-empire",
+      "sourceName": "Byzantine Empire",
+      "verb": "INFLUENCES",
+      "targetSlug": "pannonhalma-monastery",
+      "targetName": "Pannonhalma Monastery",
+      "context": "The Byzantine Empire's theological influence shaped Astrik's emphasis on spiritual education."
+    },
+    {
+      "sourceSlug": "astrik-saint",
+      "sourceName": "Saint Astrik of Pannonhalma",
+      "verb": "PARTICIPATES_IN",
+      "targetSlug": "pannonhalma-monastery",
+      "targetName": "Pannonhalma Monastery",
+      "context": "Astrik became abbot of the monastery."
+    },
+    {
+      "sourceSlug": "benedictine-order",
+      "sourceName": "Benedictine Order",
+      "verb": "DEFINES",
+      "targetSlug": "astrik-saint",
+      "targetName": "Saint Astrik of Pannonhalma",
+      "context": "Astrik's commitment to the Benedictine order principles promoted monastic life and spiritual practices."
+    },
+    {
+      "sourceSlug": "pannonhalma-monastery",
+      "sourceName": "Pannonhalma Monastery",
+      "verb": "CONTAINS",
+      "targetSlug": "astrik-saint",
+      "targetName": "Saint Astrik of Pannonhalma",
+      "context": "Astrik became abbot of the monastery."
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-24T00:38:01.021616+00:00",
+  "gateResults": {
+    "summaryLen": 1132,
+    "paragraphs": 4,
+    "causes": 3,
+    "effects": 3,
+    "relationships": 8,
+    "edgeFloor": 8,
+    "significanceScore": 7
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/250-Class-250/250astrik.json"
+}
