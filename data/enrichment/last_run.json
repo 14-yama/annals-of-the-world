@@ -1,38 +1,37 @@
 {
-  "timestamp": "2026-05-24T22:28:17Z",
+  "timestamp": "2026-05-24T23:25:45Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 3,
-  "failed": 2,
+  "enriched": 2,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "charles-the-child",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
-    },
-    {
-      "slug": "bit",
-      "status": "enriched",
-      "old_len": 65,
-      "new_len": 733
-    },
-    {
-      "slug": "ivan-yevreinov",
-      "status": "enriched",
-      "old_len": 65,
-      "new_len": 995
-    },
-    {
-      "slug": "lucius-afranius",
-      "status": "enriched",
-      "old_len": 97,
-      "new_len": 1053
-    },
-    {
-      "slug": "yiran-qaghan",
+      "slug": "pamprepius",
       "status": "failed",
       "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "sphaerus",
+      "status": "enriched",
+      "old_len": 66,
+      "new_len": 1214
+    },
+    {
+      "slug": "mnesikles",
+      "status": "failed",
+      "reason": "Unterminated string starting at: line 38 column 1 (char 15475)"
+    },
+    {
+      "slug": "hamas",
+      "status": "failed",
+      "reason": "insufficient causes (1, need >= 2)"
+    },
+    {
+      "slug": "philippe-de-m\u00e9zi\u00e8res",
+      "status": "enriched",
+      "old_len": 98,
+      "new_len": 1025
     }
   ]
 }
