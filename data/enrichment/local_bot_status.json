@@ -214168,12 +214168,77 @@
     "count": 0,
     "pid": null,
     "started": "2026-05-25T04:54:03Z",
-    "finished": "2026-05-25T04:54:17Z",
+    "finished": "2026-05-25T04:55:19Z",
     "log": [
       "Pending files: 355518 entities, 0 edges (355518 total)",
+      "git add data/ scripts/ ...",
+      "git commit -m \"chore(sync): auto-commit after --local sync (200 max entities)\"",
+      "Exception: Command '['git', 'commit', '-m', 'chore(sync): auto-commit after --local sync (200 max entities)']' timed out after 30 seconds",
+      "Traceback (most recent call last):\n  File \"/home/manasa151/annals-of-the-world/scripts/local_bot_server.py\", line 647, in _run\n    r = subprocess.run(\n        [\"git\", \"commit\", \"-m\", commit_msg],\n        cwd=str(REPO_ROOT), capture_output=True, text=True, timeout=30, env=env,\n    )\n  File \"/usr/lib/python3.13/subprocess.py\", line 556, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/subprocess.py\", line 1222, in communicate\n    stdout, stderr = self._communicate(input, endtime, timeout)\n                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/subprocess.py\", line 2129, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/subprocess.py\", line 1269, in _check_timeout\n    raise TimeoutExpired(\n    ...<2 lines>...\n            stderr=b''.join(stderr_seq) if stderr_seq else None)\nsubprocess.TimeoutExpired: Command '['git', 'commit', '-m', 'chore(sync): auto-commit after --local sync (200 max entities)']' timed out after 30 seconds\n"
+    ],
+    "exitCode": 128
+  },
+  "sync-1779685176": {
+    "job_id": "sync-1779685176",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 3353280,
+    "started": "2026-05-25T04:59:36Z",
+    "finished": "2026-05-25T05:00:44Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=62335/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 1 dirty files",
+      "[diff] 1 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 1,",
+      "  \"entitiesUpserted\": 1,",
+      "  \"auditRowsEmitted\": 7,",
+      "  \"writesPerformed\": 8,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 8771b7bb"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779685244": {
+    "job_id": "git-push-1779685244",
+    "bot": "git-push",
+    "status": "error",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-25T05:00:44Z",
+    "finished": "2026-05-25T05:00:46Z",
+    "log": [
+      "Pending files: 1 entities, 0 edges (1 total)",
       "git add data/ scripts/ ...",
       "git add failed: fatal: Unable to create '/home/manasa151/annals-of-the-world/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n"
     ],
     "exitCode": 128
+  },
+  "git-push-1779685245": {
+    "job_id": "git-push-1779685245",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-25T05:00:45Z",
+    "finished": null,
+    "log": [
+      "Pending files: 1 entities, 0 edges (1 total)",
+      "git add data/ scripts/ ..."
+    ],
+    "exitCode": null
   }
 }
