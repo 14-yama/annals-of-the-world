@@ -214281,28 +214281,37 @@
   "git-push-1779685472": {
     "job_id": "git-push-1779685472",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 1,
     "pid": null,
     "started": "2026-05-25T05:04:32Z",
-    "finished": null,
+    "finished": "2026-05-25T05:04:37Z",
     "log": [
       "Pending files: 1 entities, 0 edges (1 total)",
-      "git add data/ scripts/ ..."
+      "git add data/ scripts/ ...",
+      "git commit -m \"chore(sync): auto-commit after --local sync (200 max entities)\"",
+      "[clean/audit-system aaacd98b6f6] chore(sync): auto-commit after --local sync (200 max entities)\n 4 files changed, 88 insertions(+), 13 deletions(-)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   e5702416735..aaacd98b6f6  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 1 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "git-push-1779685474": {
     "job_id": "git-push-1779685474",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-05-25T05:04:34Z",
-    "finished": null,
-    "log": [],
-    "exitCode": null
+    "finished": "2026-05-25T05:04:35Z",
+    "log": [
+      "Pending files: 1 entities, 0 edges (1 total)",
+      "git add data/ scripts/ ...",
+      "git add failed: fatal: Unable to create '/home/manasa151/annals-of-the-world/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n"
+    ],
+    "exitCode": 128
   }
 }

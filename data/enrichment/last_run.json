@@ -1,26 +1,33 @@
 {
-  "timestamp": "2026-05-25T00:15:24Z",
+  "timestamp": "2026-05-25T01:11:03Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 1,
-  "failed": 2,
+  "enriched": 3,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "pamprepius",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 3)"
-    },
-    {
-      "slug": "mnesikles",
+      "slug": "alexander-barclay",
       "status": "enriched",
       "old_len": 98,
-      "new_len": 1652
+      "new_len": 1327
     },
     {
-      "slug": "hamas",
+      "slug": "gaspar-de-valos-de-la-cueva",
+      "status": "enriched",
+      "old_len": 130,
+      "new_len": 1241
+    },
+    {
+      "slug": "johannes-manardus",
+      "status": "enriched",
+      "old_len": 66,
+      "new_len": 1500
+    },
+    {
+      "slug": "food-and-agriculture-organization",
       "status": "failed",
-      "reason": "insufficient causes (1, need >= 2)"
+      "reason": "insufficient effects (0, need >= 2)"
     }
   ]
 }
