@@ -214229,16 +214229,80 @@
   "git-push-1779685245": {
     "job_id": "git-push-1779685245",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-05-25T05:00:45Z",
+    "finished": "2026-05-25T05:01:48Z",
+    "log": [
+      "Pending files: 1 entities, 0 edges (1 total)",
+      "git add data/ scripts/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 1 local enrichments\"",
+      "[clean/audit-system e5702416735] feat(enrich): watchdog auto-push \u2014 1 local enrichments\n 4 files changed, 87 insertions(+), 15 deletions(-)",
+      "git push ...",
+      "Exception: Command '['git', 'push']' timed out after 60 seconds",
+      "Traceback (most recent call last):\n  File \"/home/manasa151/annals-of-the-world/scripts/local_bot_server.py\", line 660, in _run\n    r = subprocess.run(\n        [\"git\", \"push\"],\n        cwd=str(REPO_ROOT), capture_output=True, text=True, timeout=60, env=env,\n    )\n  File \"/usr/lib/python3.13/subprocess.py\", line 556, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n                     ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/subprocess.py\", line 1222, in communicate\n    stdout, stderr = self._communicate(input, endtime, timeout)\n                     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/subprocess.py\", line 2129, in _communicate\n    self._check_timeout(endtime, orig_timeout, stdout, stderr)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.13/subprocess.py\", line 1269, in _check_timeout\n    raise TimeoutExpired(\n    ...<2 lines>...\n            stderr=b''.join(stderr_seq) if stderr_seq else None)\nsubprocess.TimeoutExpired: Command '['git', 'push']' timed out after 60 seconds\n"
+    ],
+    "exitCode": null
+  },
+  "sync-1779685422": {
+    "job_id": "sync-1779685422",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 3367026,
+    "started": "2026-05-25T05:03:42Z",
+    "finished": "2026-05-25T05:04:32Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=62343/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 1 dirty files",
+      "[diff] 1 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 1,",
+      "  \"entitiesUpserted\": 1,",
+      "  \"auditRowsEmitted\": 7,",
+      "  \"writesPerformed\": 8,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit e5702416"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779685472": {
+    "job_id": "git-push-1779685472",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-25T05:04:32Z",
     "finished": null,
     "log": [
       "Pending files: 1 entities, 0 edges (1 total)",
       "git add data/ scripts/ ..."
     ],
+    "exitCode": null
+  },
+  "git-push-1779685474": {
+    "job_id": "git-push-1779685474",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-25T05:04:34Z",
+    "finished": null,
+    "log": [],
     "exitCode": null
   }
 }
