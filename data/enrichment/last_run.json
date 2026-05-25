@@ -1,13 +1,36 @@
 {
-  "timestamp": "2026-05-24T21:35:00Z",
+  "timestamp": "2026-05-24T22:28:17Z",
   "model": "ollama",
   "count_requested": 5,
-  "enriched": 0,
-  "failed": 1,
+  "enriched": 3,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "gomoarius",
+      "slug": "charles-the-child",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 3)"
+    },
+    {
+      "slug": "bit",
+      "status": "enriched",
+      "old_len": 65,
+      "new_len": 733
+    },
+    {
+      "slug": "ivan-yevreinov",
+      "status": "enriched",
+      "old_len": 65,
+      "new_len": 995
+    },
+    {
+      "slug": "lucius-afranius",
+      "status": "enriched",
+      "old_len": 97,
+      "new_len": 1053
+    },
+    {
+      "slug": "yiran-qaghan",
       "status": "failed",
       "reason": "insufficient causes (1, need >= 2)"
     }
