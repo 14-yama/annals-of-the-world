@@ -54,7 +54,7 @@
         "attempts": 0,
         "lastGate": "triage",
         "lastReason": "duplicate-qid-lesser",
-        "updatedAt": "2026-05-25T02:57:10.675665+00:00"
+        "updatedAt": "2026-05-25T04:18:17.936022+00:00"
       }
     },
     {
@@ -101,11 +101,12 @@
       "$createdAt": "2026-04-05T15:31:11.384+00:00",
       "$updatedAt": "2026-04-06T00:51:01.270+00:00",
       "_pipelineState": {
-        "state": "triaged",
-        "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-25T02:57:10.676117+00:00"
+        "state": "in-flight",
+        "attempts": 1,
+        "lastGate": "enrich",
+        "lastReason": "claimed-for-llm",
+        "updatedAt": "2026-05-25T04:19:51.199397+00:00",
+        "queuedAt": "2026-05-25T04:19:51.199142+00:00"
       }
     }
   ]
