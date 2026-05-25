@@ -53,11 +53,20 @@
         "significanceCategory": "regional"
       },
       "_pipelineState": {
-        "state": "triaged",
+        "state": "validated",
         "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-24T22:52:28.292350+00:00"
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-25T00:10:18.960210+00:00",
+        "gateResults": {
+          "summaryLen": 1394,
+          "paragraphs": 3,
+          "causes": 3,
+          "effects": 4,
+          "relationships": 13,
+          "edgeFloor": 5,
+          "significanceScore": 7
+        }
       },
       "enrichedAt": "2026-05-24T19:45:23Z"
     }
