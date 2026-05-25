@@ -213419,5 +213419,52 @@
       "git add failed: fatal: Unable to create '/home/manasa151/annals-of-the-world/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n"
     ],
     "exitCode": 128
+  },
+  "sync-1779675561": {
+    "job_id": "sync-1779675561",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 3074667,
+    "started": "2026-05-25T02:19:21Z",
+    "finished": "2026-05-25T02:20:03Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=62233/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 2 dirty files",
+      "[diff] 2 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 2,",
+      "  \"entitiesUpserted\": 2,",
+      "  \"auditRowsEmitted\": 14,",
+      "  \"writesPerformed\": 16,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 3e824b3a"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779675603": {
+    "job_id": "git-push-1779675603",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-25T02:20:03Z",
+    "finished": null,
+    "log": [
+      "Pending files: 15 entities, 0 edges (15 total)",
+      "git add data/ scripts/ ..."
+    ],
+    "exitCode": null
   }
 }

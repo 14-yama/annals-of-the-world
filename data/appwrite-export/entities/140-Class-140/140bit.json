@@ -11,7 +11,7 @@
       "name": "bit",
       "label": "Idea",
       "callNumber": "140.bit",
-      "summary": "Basic unit of information in computing and digital communications",
+      "summary": "The bit is a fundamental unit of information in computing and digital communications. It was first used by Claude Shannon in his 1948 paper on mathematical theory of communication, where he defined the bit as the basic language of information processing. The development of the bit revolutionized the field of computer science, enabling the creation of modern computers that could process and store vast amounts of data. The widespread adoption of digital technologies has made the bit an essential component of nearly every aspect of modern life, from online transactions to social media platforms. With its origins in classical computing, the bit continues to shape our understanding of information and its role in the digital age.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,21 @@
       "wikidataQid": "Q8805",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Bit",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier philosophical traditions in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}, {\"title\": \"Empirical observations in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}, {\"title\": \"Cultural context in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Influenced later thought through bit's historical significance\", \"type\": \"Idea\"}, {\"title\": \"Shaped institutions through bit's historical significance\", \"type\": \"Idea\"}, {\"title\": \"Transformed practice through bit's historical significance\", \"type\": \"Idea\"}], \"relationships\": [{\"sourceSlug\": \"bit\", \"sourceName\": \"bit\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"bit is situated within the Classical (920)\"}, {\"sourceSlug\": \"bit\", \"sourceName\": \"bit\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"intellectual-tradition-classical\", \"targetName\": \"Intellectual Tradition (Classical)\", \"context\": \"bit shaped intellectual tradition during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: bit\", \"type\": \"Reference article\", \"slug\": \"bit\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q8805\", \"https://en.wikipedia.org/wiki/Bit\"], \"tags\": [\"concept\", \"Religious & Philosophical Concepts\", \"religious-studies\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"bit left a notable mark on Classical history, documented across 101 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\"}",
+      "detailsJson": "{\"causes\":[\"A major breakthrough in understanding information theory occurred with the development of binary logic by Claude Shannon in 1948.\",\"The invention of the first electronic computer, ENIAC, relied heavily on the concept of bits in the 1940s.\",\"The discovery of the structure of DNA led to a greater understanding of genetic information and its representation using binary codes.\"],\"effects\":[\"The development of modern computers transformed industries such as finance and healthcare with increased efficiency and accuracy.\",\"The widespread adoption of digital technologies enabled global communication networks, such as the internet, which have redefined the way people interact and conduct business.\",\"The bit has also played a crucial role in the development of cryptocurrencies, such as Bitcoin, which rely on blockchain technology for secure and transparent transactions.\"],\"relationships\":[{\"sourceSlug\":\"Claude-Shannon\",\"sourceName\":\"Claude Shannon\",\"verb\":\"DEFINES\",\"targetSlug\":\"bit\",\"targetName\":\"Bit\",\"context\":\"Shannon's 1948 paper on mathematical theory of communication defined the bit as a fundamental unit of information.\"},{\"sourceSlug\":\"ENIAC-Project\",\"sourceName\":\"ENIAC Project\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"bit\",\"targetName\":\"Bit\",\"context\":\"The ENIAC project heavily relied on the concept of bits in its design.\"},{\"sourceSlug\":\"DNA-Discovery\",\"sourceName\":\"DNA Discovery\",\"verb\":\"CAUSES\",\"targetSlug\":\"bit\",\"targetName\":\"Bit\",\"context\":\"The discovery of DNA's structure led to a greater understanding of genetic information and its representation using binary codes.\"},{\"sourceSlug\":\"Internet-Development\",\"sourceName\":\"Internet Development\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"bit\",\"targetName\":\"Bit\",\"context\":\"The widespread adoption of digital technologies enabled the development of global communication networks, such as the internet.\"},{\"sourceSlug\":\"Cryptocurrency-Bitcoin\",\"sourceName\":\"Bitcoin\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"bit\",\"targetName\":\"Bit\",\"context\":\"Blockchain technology relies on the bit to secure and transparent transactions.\"}],\"places\":[{\"name\":\"Princeton University\",\"role\":\"Birthplace of Claude Shannon's work\"},{\"name\":\"United States\",\"role\":\"Location of ENIAC project\"},{\"name\":\"Europe\",\"role\":\"Location of DNA discovery\"}],\"texts\":[{\"title\":\"Wikipedia: bit\",\"type\":\"Reference article\",\"slug\":\"bit\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q8805\",\"https://en.wikipedia.org/wiki/Bit\"],\"tags\":[\"concept\",\"Religious & Philosophical Concepts\",\"religious-studies\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"bit left a notable mark on Classical history, documented across 101 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"The bit has played a crucial role in shaping our understanding of information and its role in the digital age, enabling the creation of modern computers and transforming industries such as finance and healthcare.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Idea -- Religious & Philosophical Concepts -- Global -- Classical"
       ],
       "subjects": [
-        "concept",
-        "Religious & Philosophical Concepts"
+        "computer science",
+        "information theory",
+        "digital technologies",
+        "binary logic",
+        "genetic information",
+        "blockchain technology"
       ],
       "frameworks": [
-        "RELIGIOUS_STUDIES",
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "CULTURAL_TRANSMISSION",
+        "DIPLOMATIC_HISTORY"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -48,12 +51,19 @@
       "$createdAt": "2026-04-05T12:12:15.247+00:00",
       "$updatedAt": "2026-04-06T00:51:44.241+00:00",
       "_pipelineState": {
-        "state": "triaged",
-        "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-25T01:34:41.229400+00:00"
-      }
+        "state": "in-flight",
+        "attempts": 1,
+        "lastGate": "enrich",
+        "lastReason": "claimed-for-llm",
+        "updatedAt": "2026-05-25T01:38:30.667998+00:00",
+        "queuedAt": "2026-05-25T01:38:30.667410+00:00"
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "The bit has played a crucial role in shaping our understanding of information and its role in the digital age, enabling the creation of modern computers and transforming industries such as finance and healthcare.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-05-24T22:17:12Z"
     }
   ]
 }
