@@ -212867,5 +212867,68 @@
       "\u2713 Pushed 10 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
     "exitCode": 0
+  },
+  "sync-1779667563": {
+    "job_id": "sync-1779667563",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 2901624,
+    "started": "2026-05-25T00:06:03Z",
+    "finished": "2026-05-25T00:07:34Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=62103/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 15 dirty files",
+      "[diff] 15 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 15,",
+      "  \"entitiesUpserted\": 15,",
+      "  \"auditRowsEmitted\": 51,",
+      "  \"writesPerformed\": 66,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit bda605dd"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779667654": {
+    "job_id": "git-push-1779667654",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-25T00:07:34Z",
+    "finished": null,
+    "log": [
+      "Pending files: 66016 entities, 0 edges (66016 total)",
+      "git add data/ scripts/ ..."
+    ],
+    "exitCode": null
+  },
+  "git-push-1779667656": {
+    "job_id": "git-push-1779667656",
+    "bot": "git-push",
+    "status": "error",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-25T00:07:36Z",
+    "finished": "2026-05-25T00:07:38Z",
+    "log": [
+      "Pending files: 69333 entities, 0 edges (69333 total)",
+      "git add data/ scripts/ ...",
+      "git add failed: fatal: Unable to create '/home/manasa151/annals-of-the-world/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n"
+    ],
+    "exitCode": 128
   }
 }
