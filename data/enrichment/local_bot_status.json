@@ -213455,34 +213455,100 @@
   "git-push-1779675603": {
     "job_id": "git-push-1779675603",
     "bot": "git-push",
-    "status": "running",
+    "status": "done",
     "model": "none",
-    "count": 0,
+    "count": 15,
     "pid": null,
     "started": "2026-05-25T02:20:03Z",
-    "finished": null,
+    "finished": "2026-05-25T02:20:10Z",
     "log": [
       "Pending files: 15 entities, 0 edges (15 total)",
       "git add data/ scripts/ ...",
       "git commit -m \"chore(sync): auto-commit after --local sync (200 max entities)\"",
       "[clean/audit-system 63426e3d142] chore(sync): auto-commit after --local sync (200 max entities)\n 19 files changed, 176 insertions(+), 95 deletions(-)",
-      "git push ..."
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n   3e824b3a522..63426e3d142  clean/audit-system -> clean/audit-system",
+      "\u2713 Pushed 15 files \u2192 GitHub \u2192 GH Actions sync will push to Appwrite"
     ],
-    "exitCode": null
+    "exitCode": 0
   },
   "git-push-1779675606": {
     "job_id": "git-push-1779675606",
+    "bot": "git-push",
+    "status": "error",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-25T02:20:06Z",
+    "finished": "2026-05-25T02:20:12Z",
+    "log": [
+      "Pending files: 15 entities, 0 edges (15 total)",
+      "git add data/ scripts/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 1 local enrichments\"",
+      "[clean/audit-system 38e55352491] feat(enrich): watchdog auto-push \u2014 1 local enrichments\n 1 file changed, 18 insertions(+)",
+      "git push ...",
+      "To https://github.com/14-yama/annals-of-the-world.git\n ! [remote rejected]         clean/audit-system -> clean/audit-system (cannot lock ref 'refs/heads/clean/audit-system': is at 63426e3d1429ae33345096b442e9dc74554b2bc9 but expected 3e824b3a522275a845d78846ffbf69d61a025846)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'",
+      "git push failed \u2014 check SSH/HTTPS credentials: To https://github.com/14-yama/annals-of-the-world.git\n ! [remote rejected]         clean/audit-system -> clean/audit-system (cannot lock ref 'refs/heads/clean/audit-system': is at 63426e3d1429ae33345096b442e9dc74554b2bc9 but expected 3e824b3a522275a845d78846ffbf69d61a025846)\nerror: failed to push some refs to 'https://github.com/14-yama/annals-of-the-world.git'\n"
+    ],
+    "exitCode": 1
+  },
+  "sync-1779675806": {
+    "job_id": "sync-1779675806",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 3087518,
+    "started": "2026-05-25T02:23:26Z",
+    "finished": "2026-05-25T02:24:27Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=62249/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 1 dirty files",
+      "[diff] 1 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 1,",
+      "  \"entitiesUpserted\": 1,",
+      "  \"auditRowsEmitted\": 7,",
+      "  \"writesPerformed\": 8,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 38e55352"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779675867": {
+    "job_id": "git-push-1779675867",
     "bot": "git-push",
     "status": "running",
     "model": "none",
     "count": 0,
     "pid": null,
-    "started": "2026-05-25T02:20:06Z",
+    "started": "2026-05-25T02:24:27Z",
     "finished": null,
     "log": [
-      "Pending files: 15 entities, 0 edges (15 total)",
+      "Pending files: 1 entities, 0 edges (1 total)",
       "git add data/ scripts/ ..."
     ],
+    "exitCode": null
+  },
+  "git-push-1779675869": {
+    "job_id": "git-push-1779675869",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-25T02:24:29Z",
+    "finished": null,
+    "log": [],
     "exitCode": null
   }
 }
