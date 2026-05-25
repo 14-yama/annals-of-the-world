@@ -213559,5 +213559,64 @@
       "git add failed: fatal: Unable to create '/home/manasa151/annals-of-the-world/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, e.g.\nan editor opened by 'git commit'. Please make sure all processes\nare terminated then try again. If it still fails, a git process\nmay have crashed in this repository earlier:\nremove the file manually to continue.\n"
     ],
     "exitCode": 128
+  },
+  "sync-1779676253": {
+    "job_id": "sync-1779676253",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 3108979,
+    "started": "2026-05-25T02:30:53Z",
+    "finished": "2026-05-25T02:31:16Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  https://fra.cloud.appwrite.io/v1",
+      "Database:  annals_world_db",
+      "Source:    /home/manasa151/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=62257/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 5 dirty files",
+      "[diff] 5 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 5,",
+      "  \"entitiesUpserted\": 5,",
+      "  \"auditRowsEmitted\": 5,",
+      "  \"writesPerformed\": 10,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit f4b59004"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1779676276": {
+    "job_id": "git-push-1779676276",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-25T02:31:16Z",
+    "finished": null,
+    "log": [
+      "Pending files: 5 entities, 0 edges (5 total)",
+      "git add data/ scripts/ ..."
+    ],
+    "exitCode": null
+  },
+  "git-push-1779676277": {
+    "job_id": "git-push-1779676277",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-05-25T02:31:17Z",
+    "finished": null,
+    "log": [],
+    "exitCode": null
   }
 }
