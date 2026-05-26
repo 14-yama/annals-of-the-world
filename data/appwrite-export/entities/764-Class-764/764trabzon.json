@@ -25,7 +25,7 @@
       "wikidataQid": "Q45301",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Trabzon",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Trabzon%2Charbour.jpg",
-      "detailsJson": "{\"causes\":[\"Greek colonial expansion from Sinope (756 BCE) establishing Trapezous as a Black Sea trading post\",\"Fourth Crusade's sack of Constantinople (1204) enabling Alexios I Komnenos to establish the Empire of Trebizond as a Byzantine successor state\",\"Silk Road terminus location making Trebizond the Black Sea's premier trading hub for Persian, Central Asian, and European goods\"],\"effects\":[\"Empire of Trebizond (1204–1461) — last surviving Byzantine-tradition state, maintaining Greek culture and Orthodox Christianity for 257 years after Constantinople's fall\",\"Hagia Sophia of Trabzon — a 13th-century Byzantine church with outstanding frescoes; UNESCO heritage monument\",\"Ottoman capture (1461) by Mehmed II completing the elimination of all Byzantine successor states\",\"Armenian and Greek populations massacred during WWI Ottoman genocides (1914–1923)\"],\"relationships\":[{\"sourceSlug\":\"trabzon\",\"sourceName\":\"Trabzon\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-classical\",\"targetName\":\"Classical\",\"context\":\"Trabzon is situated within the Classical (920)\"},{\"sourceSlug\":\"trabzon\",\"sourceName\":\"Trabzon\",\"verb\":\"TRANSMITS\",\"targetSlug\":\"literary-canon-classical\",\"targetName\":\"Literary Canon (Classical)\",\"context\":\"Trabzon contributed to the literary canon of the Classical era\"},{\"type\":\"INFLUENCES\",\"target\":\"Empire of Trebizond\",\"targetSlug\":\"empire-of-trebizond\",\"note\":\"Byzantine successor state (1204–1461) based in Trebizond\"},{\"type\":\"INFLUENCES\",\"target\":\"Mehmed II\",\"targetSlug\":\"mehmed-ii\",\"note\":\"Ottoman sultan who conquered Trebizond in 1461\"},{\"type\":\"INFLUENCES\",\"target\":\"Byzantine Empire\",\"targetSlug\":\"byzantine-empire\",\"note\":\"Trebizond was a Byzantine-tradition successor state after 1204\"},{\"type\":\"OCCURS_IN\",\"target\":\"Turkey\",\"targetSlug\":\"turkey\",\"note\":\"Located in northeastern Turkey on the Black Sea coast\"}],\"places\":[{\"name\":\"Turkey\",\"role\":\"Country\"}],\"texts\":[{\"title\":\"Wikipedia: Trabzon\",\"type\":\"Reference article\",\"slug\":\"trabzon\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q45301\",\"https://en.wikipedia.org/wiki/Trabzon\"],\"tags\":[\"Turkey\",\"big city\",\"Asia\",\"Architecture & Built Works\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Trabzon left a notable mark on Classical history, documented across 121 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\",\"_editLog\":[]}",
+      "detailsJson": "{\"causes\":[\"Greek colonial expansion from Sinope (756 BCE) establishing Trapezous as a Black Sea trading post\",\"Fourth Crusade's sack of Constantinople (1204) enabling Alexios I Komnenos to establish the Empire of Trebizond as a Byzantine successor state\",\"Silk Road terminus location making Trebizond the Black Sea's premier trading hub for Persian, Central Asian, and European goods\"],\"effects\":[\"Empire of Trebizond (1204–1461) — last surviving Byzantine-tradition state, maintaining Greek culture and Orthodox Christianity for 257 years after Constantinople's fall\",\"Hagia Sophia of Trabzon — a 13th-century Byzantine church with outstanding frescoes; UNESCO heritage monument\",\"Ottoman capture (1461) by Mehmed II completing the elimination of all Byzantine successor states\",\"Armenian and Greek populations massacred during WWI Ottoman genocides (1914–1923)\"],\"relationships\":[{\"sourceSlug\":\"trabzon\",\"sourceName\":\"Trabzon\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-classical\",\"targetName\":\"Classical\",\"context\":\"Trabzon is situated within the Classical (920)\"},{\"sourceSlug\":\"trabzon\",\"sourceName\":\"Trabzon\",\"verb\":\"TRANSMITS\",\"targetSlug\":\"literary-canon-classical\",\"targetName\":\"Literary Canon (Classical)\",\"context\":\"Trabzon contributed to the literary canon of the Classical era\"},{\"type\":\"INFLUENCES\",\"target\":\"Empire of Trebizond\",\"targetSlug\":\"empire-of-trebizond\",\"note\":\"Byzantine successor state (1204–1461) based in Trebizond\"},{\"type\":\"INFLUENCES\",\"target\":\"Mehmed II\",\"targetSlug\":\"mehmed-ii\",\"note\":\"Ottoman sultan who conquered Trebizond in 1461\"},{\"type\":\"INFLUENCES\",\"target\":\"Byzantine Empire\",\"targetSlug\":\"byzantine-empire\",\"note\":\"Trebizond was a Byzantine-tradition successor state after 1204\"},{\"type\":\"OCCURS_IN\",\"target\":\"Turkey\",\"targetSlug\":\"turkey\",\"note\":\"Located in northeastern Turkey on the Black Sea coast\"}],\"places\":[{\"name\":\"Turkey\",\"role\":\"Country\"}],\"texts\":[{\"title\":\"Wikipedia: Trabzon\",\"type\":\"Reference article\",\"slug\":\"trabzon\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q45301\",\"https://en.wikipedia.org/wiki/Trabzon\"],\"tags\":[\"Turkey\",\"big city\",\"Asia\",\"Architecture & Built Works\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Trabzon left a notable mark on Classical history, documented across 121 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\",\"_editLog\":[],\"historicalSignificance\":{\"significanceScore\":8,\"significanceNarrative\":\"As the last Byzantine-tradition state in the region, Trebizond maintained independence for 257 years, facilitating trade wealth from the Silk Road terminus and shaping the beauty of its court culture.\",\"significanceCategory\":\"regional\"}}",
       "subjectHeadings": [
         "Artifacts & Texts -- Architecture & Built Works -- Turkey -- Classical"
       ],
@@ -49,13 +49,27 @@
       "$createdAt": "2026-04-05T12:09:16.956+00:00",
       "$updatedAt": "2026-04-06T00:51:31.834+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "validated",
         "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-25T04:14:40.044414+00:00"
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-25T09:58:06.387774+00:00",
+        "gateResults": {
+          "summaryLen": 1441,
+          "paragraphs": 3,
+          "causes": 3,
+          "effects": 4,
+          "relationships": 6,
+          "edgeFloor": 5,
+          "significanceScore": 8
+        }
       },
-      "enrichedAt": "2026-05-24T19:58:56Z"
+      "enrichedAt": "2026-05-24T19:58:56Z",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "As the last Byzantine-tradition state in the region, Trebizond maintained independence for 257 years, facilitating trade wealth from the Silk Road terminus and shaping the beauty of its court culture.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

@@ -1,0 +1,112 @@
+{
+  "slug": "democratic-republic-of-the-congo",
+  "label": "Place",
+  "name": "Democratic Republic of the Congo",
+  "callNumber": "430.democratic-republic-of-the-congo",
+  "era": "Contemporary",
+  "summary": "The Democratic Republic of the Congo (DRC), also known as Congo-Kinshasa, is the second-largest country in Africa by land area (2,344,858 km²) and the most populous Francophone country in the world (110 million people). Located in the heart of equatorial Africa, the DRC contains the world's second-largest tropical rainforest, the Congo Basin, which is one of the planet's most important carbon sinks and biodiversity reserves.\n\nThe Kongo Kingdom (14th–19th centuries) was one of the most sophisticated pre-colonial states in Central Africa. Belgian King Leopold II seized the Congo Free State as personal property in 1885 — a private colony of extraordinary brutality where rubber-collection quotas were enforced by mutilating workers who failed to meet them, killing an estimated 10 million people. Belgian formal colonization (1908–1960) continued exploitative extraction. Independence in June 1960 was followed within weeks by army mutiny, Katanga secession, and the assassination of Prime Minister Patrice Lumumba (1961) — orchestrated with CIA and Belgian involvement — marking the beginning of Cold War proxy conflict in Africa.\n\nMobutu Sese Seko's kleptocratic dictatorship (1965–1997) looted an estimated $5 billion from the country's mineral wealth. The First and Second Congo Wars (1996–2003) killed 5.4 million people — the deadliest conflict since World War II. The DRC's eastern provinces remain a theater of ongoing conflict over coltan, gold, and other minerals essential to global technology supply chains, making the DRC's instability a direct contributor to the electronics on which the digital world depends.",
+  "importanceScore": 9,
+  "wikidataQid": "Q974",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "The Belgian seizure of the Congo Free State led to an estimated 10 million deaths and brutal treatment of workers, making it a pivotal moment in African history and a warning against colonial exploitation. This event had significant regional impact on the development of Central Africa.",
+    "significanceCategory": "continental"
+  },
+  "frameworks": [
+    "GEOPOLITICAL_LINKAGE",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Democratic Republic of the Congo",
+    "country",
+    "Africa",
+    "Countries / Polities"
+  ],
+  "subjectHeadings": [
+    "Places -- Countries / Polities -- Democratic Republic of the Congo -- Contemporary"
+  ],
+  "places": [],
+  "texts": [
+    {
+      "title": "Wikipedia: Democratic Republic of the Congo",
+      "type": "Reference article",
+      "slug": "democratic-republic-of-the-congo"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Congo Free State under Leopold II (1885–1908) — private extraction colony killing an estimated 10 million through forced labor",
+    "Cold War intervention in the 1960 independence crisis — CIA-Belgian assassination of Lumumba triggering decades of instability",
+    "Mobutu's kleptocracy (1965–1997) destroying institutional capacity and looting $5 billion from the country",
+    "Rwandan genocide spillover (1994) and refugee crisis triggering the First Congo War (1996) that toppled Mobutu"
+  ],
+  "effects": [
+    "Second Congo War (1998–2003) killing 5.4 million — the deadliest conflict since World War II, still ongoing in eastern DRC",
+    "Congo Basin rainforest as the world's second-largest tropical forest — critical to global climate stability",
+    "Coltan and cobalt mining in eastern DRC supplying 70% of global coltan (essential for smartphones and laptops) amidst perpetual conflict",
+    "Patrice Lumumba's assassination (1961) becoming a symbol of Western Cold War interference in African decolonization"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "democratic-republic-of-the-congo",
+      "sourceName": "Democratic Republic of the Congo",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "era-cold-war-era",
+      "targetName": "Cold War Era",
+      "context": "Democratic Republic of the Congo is situated within the Cold War Era (961)"
+    },
+    {
+      "sourceSlug": "democratic-republic-of-the-congo",
+      "sourceName": "Democratic Republic of the Congo",
+      "verb": "LOCATED_IN",
+      "targetSlug": "africa",
+      "targetName": "Africa",
+      "context": "Democratic Republic of the Congo is located in Africa"
+    },
+    {
+      "sourceSlug": "democratic-republic-of-the-congo",
+      "sourceName": "Democratic Republic of the Congo",
+      "verb": "TRANSFORMS",
+      "targetSlug": "regional-development-contemporary",
+      "targetName": "Regional Development (Contemporary)",
+      "context": "Democratic Republic of the Congo shaped regional development during the Contemporary era"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Leopold II of Belgium",
+      "targetSlug": "leopold-ii-of-belgium",
+      "note": "Personal owner of the Congo Free State (1885–1908); responsible for 10 million deaths"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Patrice Lumumba",
+      "targetSlug": "patrice-lumumba",
+      "note": "First Prime Minister; assassinated in 1961 with CIA and Belgian complicity"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Mobutu Sese Seko",
+      "targetSlug": "mobutu-sese-seko",
+      "note": "Kleptocratic dictator (1965–1997) who looted $5 billion"
+    },
+    {
+      "type": "OCCURS_IN",
+      "target": "Central Africa",
+      "targetSlug": "central-africa",
+      "note": "Heart of equatorial Africa; second-largest country on the continent"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-25T02:52:03.748297+00:00",
+  "gateResults": {
+    "summaryLen": 1629,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 7,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/430-Class-430/430democratic-republic-of-the-congo.json"
+}

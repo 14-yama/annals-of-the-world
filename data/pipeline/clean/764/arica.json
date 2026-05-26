@@ -1,0 +1,107 @@
+{
+  "slug": "arica",
+  "label": "Text",
+  "name": "Arica",
+  "callNumber": "764.arica",
+  "era": "Early Modern",
+  "summary": "Arica is a city and commune in the Arica y Parinacota Region of northern Chile, located near the borders with Peru and Bolivia at the southern end of the Atacama Desert. With approximately 250,000 people, Arica is Chile's northernmost city — a strategic port that has been the subject of significant territorial dispute between Chile, Peru, and Bolivia.\n\nArica was part of the Viceroyalty of Peru and later the Republic of Peru until the War of the Pacific (1879–1884), in which Chile defeated Bolivia and Peru and annexed the Tarapacá and Arica regions. The Battle of the Morro de Arica (June 7, 1880) — in which Chilean forces stormed the Peruvian garrison on the dramatic coastal cliff — was one of the war's decisive engagements and is commemorated as a major Chilean military date. The subsequent Treaty of Ancón (1884) transferred Arica to Chilean sovereignty.\n\nBolivia's loss of its Pacific coastal territory in the War of the Pacific created Bolivia's landlocked status — a geopolitical grievance that has defined Bolivian foreign policy for 140 years. Bolivia's continued aspiration for sovereign access to the sea, largely focused on a corridor through the Arica area, remains a live diplomatic dispute with Chile and has been the subject of multiple International Court of Justice proceedings. Arica's Morro fortress and the nearby Valle de Azapa (with its Chinchorro mummies — among the oldest mummified remains in the world, c. 7000 BCE) make it a place of layered historical significance.",
+  "importanceScore": 7,
+  "wikidataQid": "Q2203",
+  "historicalSignificance": {
+    "significanceScore": 7,
+    "significanceNarrative": "Arica's capture by Chile in the War of the Pacific led to a significant shift in regional power dynamics, with Chile gaining control over the Tarapacá and Arica regions. This event had lasting consequences for the region's politics and economy.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "GEOPOLITICAL_LINKAGE",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Chile",
+    "big city",
+    "Americas",
+    "Architecture & Built Works"
+  ],
+  "subjectHeadings": [
+    "Artifacts & Texts -- Architecture & Built Works -- Chile -- Early Modern"
+  ],
+  "places": [
+    {
+      "name": "Chile",
+      "role": "Country"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Arica",
+      "type": "Reference article",
+      "slug": "arica"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "War of the Pacific (1879–1884) and Chile's military victory over Peru and Bolivia transferring Arica to Chilean sovereignty",
+    "Battle of the Morro de Arica (June 7, 1880) — decisive Chilean military victory over Peruvian forces",
+    "Treaty of Ancón (1884) formalizing Chile's annexation of the Tarapacá and Arica regions"
+  ],
+  "effects": [
+    "Bolivia's landlocked status since 1884 — Bolivia lost its Pacific coast in the War of the Pacific; access to the sea through Arica remains a live dispute",
+    "Chinchorro mummies in the Arica region — among the oldest mummified human remains in the world (c. 7000 BCE)",
+    "Ongoing Bolivia-Chile ICJ dispute (most recent ruling 2018) over Bolivian sovereign access to the sea"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "arica",
+      "sourceName": "Arica",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "era-early-modern",
+      "targetName": "Early Modern",
+      "context": "Arica is situated within the Early Modern (940)"
+    },
+    {
+      "sourceSlug": "arica",
+      "sourceName": "Arica",
+      "verb": "TRANSMITS",
+      "targetSlug": "literary-canon-early-modern",
+      "targetName": "Literary Canon (Early Modern)",
+      "context": "Arica contributed to the literary canon of the Early Modern era"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Chile",
+      "targetSlug": "chile",
+      "note": "Chile's northernmost city; annexed from Peru in the War of the Pacific (1884)"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Bolivia",
+      "targetSlug": "bolivia",
+      "note": "Bolivia lost its Pacific coast in the War of the Pacific; aspires to sovereign access through Arica corridor"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Peru",
+      "targetSlug": "peru",
+      "note": "Arica was Peruvian territory until Chile's victory in the War of the Pacific (1884)"
+    },
+    {
+      "type": "OCCURS_IN",
+      "target": "Atacama Desert",
+      "targetSlug": "atacama-desert",
+      "note": "Located at the southern end of the Atacama Desert on the Pacific coast"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-25T08:36:50.487763+00:00",
+  "gateResults": {
+    "summaryLen": 1502,
+    "paragraphs": 3,
+    "causes": 3,
+    "effects": 3,
+    "relationships": 6,
+    "edgeFloor": 5,
+    "significanceScore": 7
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/764-Class-764/764arica.json"
+}

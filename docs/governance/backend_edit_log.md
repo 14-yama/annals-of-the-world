@@ -1495,3 +1495,525 @@
 - **Model:** ollama
 - **Enriched:** 2 | **Failed:** 2
 - **Entities:** eucherius-of-orléans, eucherius-of-orlans
+
+### AI Enrichment — 2026-05-23T21:00:16Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 0
+- **Entities:** csar-destres, bartolom-ordez, joseph-emmanuel-de-la-trmoille
+
+### AI Enrichment — 2026-05-23T21:17:06Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 0
+- **Entities:** bartolom-ordez
+
+### AI Enrichment — 2026-05-23T21:35:32Z
+
+- **Model:** gemini
+- **Enriched:** 21 | **Failed:** 4
+- **Entities:** alfonso-daz-de-montalvo, jos-nicols-de-azara, gaspard-thodore-mollien, dietrich-von-blow, ignacio-de-arteaga-y-bazn, rome-de-villeneuve, ng-s-lin, rimini, johannes-hltz, joaqun-surez ... +11 more
+
+### AI Enrichment — 2026-05-23T22:52:26Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 3
+- **Entities:** francesco-sassetti
+
+### AI Enrichment — 2026-05-23T23:34:33Z
+
+- **Model:** gemini
+- **Enriched:** 2 | **Failed:** 23
+- **Entities:** domenico-rosselli, kreimir-i-of-croatia
+
+### AI Enrichment — 2026-05-23T23:36:30Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 0
+- **Entities:** baldassare-estense
+
+### AI Enrichment — 2026-05-24T00:01:55Z
+
+- **Model:** ollama
+- **Enriched:** 18 | **Failed:** 0
+- **Entities:** francesco-sassetti, jules-louis-bol-marquis-de-chamlay, lorenzo-iv-surez-de-figueroa-y-crdoba, baldassare-estense, odo-of-cluny, anton-reinhard-falck, friedrich-von-müller, philibert-babou-de-la-bourdaisire, macas, l-tc-tng ... +8 more
+
+### AI Enrichment — 2026-05-24T00:42:13Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 2
+- **Entities:** stephen-of-besanon, trajan-the-patrician
+
+### AI Enrichment — 2026-05-24T01:17:34Z
+
+- **Model:** gemini
+- **Enriched:** 2 | **Failed:** 23
+- **Entities:** cornelis-van-aarsens, juan-ramn-balcarce
+
+### AI Enrichment — 2026-05-24T01:38:23Z
+
+- **Model:** ollama
+- **Enriched:** 18 | **Failed:** 0
+- **Entities:** joris-van-spilbergen, stephen-of-besanon, trajan-the-patrician, david-mallet, marie-melchior-joseph-thodose-de-lagren, gervase-of-canterbury, ibn-khalaf-al-muradi, robert-barnes, juan-fernndez-de-velasco-5th-duke-of-fras, naili-abdullah-paşa ... +8 more
+
+### AI Enrichment — 2026-05-24T01:43:30Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 0
+- **Entities:** ibn-khalaf-al-muradi
+
+### AI Enrichment — 2026-05-24T09:26:46Z
+
+- **Model:** gemini
+- **Enriched:** 20 | **Failed:** 0
+- **Entities:** egbert-ii-of-kent, franco-sacchetti, anna-svensdotter, luca-fancelli, alvarus-pelagius, willem-boreel, toktu-of-bulgaria, eiludd-powys, matteo-villani, petar-hektorović ... +10 more
+
+### AI Enrichment — 2026-05-24T09:51:08Z
+
+- **Model:** ollama
+- **Enriched:** 4 | **Failed:** 1
+- **Entities:** gilles-li-muisis, yavuz-blent-bkiler, lon-bouthillier-comte-de-chavigny, george-hamilton-seymour
+
+### AI Enrichment — 2026-05-24T10:45:19Z
+
+- **Model:** gemini
+- **Enriched:** 4 | **Failed:** 16
+- **Entities:** maria-da-conceio-nobre-cabral, charles-de-marillac, iago-ab-idwal, vasili-pronchishchev
+
+### AI Enrichment — 2026-05-24T11:38:13Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** rhys-ab-owain, titus-julius-priscus, waldo-of-reichenau
+
+### AI Enrichment — 2026-05-24T12:03:21Z
+
+- **Model:** gemini
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** taddeo-gaddi
+
+### AI Enrichment — 2026-05-24T13:16:53Z
+
+- **Model:** ollama
+- **Enriched:** 4 | **Failed:** 1
+- **Entities:** league-of-arab-states, nicholas-of-clamanges, thrasymachus, muayyad-al-din-al-urdi
+
+### AI Enrichment — 2026-05-24T13:25:27Z
+
+- **Model:** gemini
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** agnes-ii
+
+### AI Enrichment — 2026-05-24T14:15:49Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** franz-von-pillersdorf, domingo-martínez-de-irala, murat-beg-tardić
+
+### AI Enrichment — 2026-05-24T14:51:48Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 0
+- **Entities:** august-heinrich-hermann-von-dönhoff, satire
+
+### AI Enrichment — 2026-05-24T15:34:10Z
+
+- **Model:** ollama
+- **Enriched:** 5 | **Failed:** 0
+- **Entities:** adam-of-balsham, history-of-europe, paleontology, united-airlines, zionism
+
+### AI Enrichment — 2026-05-24T16:05:39Z
+
+- **Model:** gemini
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** girolamo-lucchesini
+
+### AI Enrichment — 2026-05-24T16:08:30Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 0
+- **Entities:** zionism
+
+### AI Enrichment — 2026-05-24T17:02:30Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** stefano-de-normandis-dei-conti, antonio-maria-ciocchi-del-monte, girolamo-basso-della-rovere
+
+### AI Enrichment — 2026-05-24T17:43:48Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 1
+- **Entities:** lotharius-van-hochstaden
+
+### AI Enrichment — 2026-05-24T18:31:42Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 2
+- **Entities:** monimus, anselm-of-besate
+
+### AI Enrichment — 2026-05-24T18:46:46Z
+
+- **Model:** gemini
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** beirut
+
+### AI Enrichment — 2026-05-24T19:20:00Z
+
+- **Model:** ollama
+- **Enriched:** 4 | **Failed:** 1
+- **Entities:** osanna-of-mantua, ardicino-della-porta-iuniore, eskil-of-lund, john-of-epiphania
+
+### AI Enrichment — 2026-05-24T20:55:45Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 1
+- **Entities:** edmund-lockyer, patrocles, ernest-i-of-schauenburg
+
+### AI Enrichment — 2026-05-24T21:28:27Z
+
+- **Model:** gemini
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** henry-percy-3rd-earl-of-northumberland
+
+### AI Enrichment — 2026-05-24T22:28:17Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** bit, ivan-yevreinov, lucius-afranius
+
+### AI Enrichment — 2026-05-24T23:25:45Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 3
+- **Entities:** sphaerus, philippe-de-mézières
+
+### AI Enrichment — 2026-05-25T00:08:14Z
+
+- **Model:** gemini
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** pietro-senex
+
+### AI Enrichment — 2026-05-25T00:15:24Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 2
+- **Entities:** mnesikles
+
+### AI Enrichment — 2026-05-25T01:11:03Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 1
+- **Entities:** alexander-barclay, gaspar-de-valos-de-la-cueva, johannes-manardus
+
+### AI Enrichment — 2026-05-25T01:31:21Z
+
+- **Model:** gemini
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** anthelm-of-belley
+
+### AI Enrichment — 2026-05-25T02:07:50Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** konrad-witz, allergy, leo-rhabdouchos
+
+### AI Enrichment — 2026-05-25T02:49:15Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 1
+- **Entities:** girolamo-aleandro
+
+### AI Enrichment — 2026-05-25T03:18:02Z
+
+- **Model:** gemini
+- **Enriched:** 18 | **Failed:** 2
+- **Entities:** lucius-aemilius-regillus, marcus-fulvius-flaccus, mjej-ii-gnuni, tiberius-claudius-nero, gilbert-de-clare-1st-earl-of-pembroke, numerius-fabius-buteo, pietro-diana, gabriele-rangone, judoc-ii-of-romberk, agericus ... +8 more
+
+### AI Enrichment — 2026-05-25T04:13:05Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 3
+- **Entities:** domnall-donn
+
+### AI Enrichment — 2026-05-25T04:36:40Z
+
+- **Model:** gemini
+- **Enriched:** 2 | **Failed:** 18
+- **Entities:** konstantin-von-benckendorff, lourenço-de-almeida
+
+### AI Enrichment — 2026-05-25T05:04:30Z
+
+- **Model:** ollama
+- **Enriched:** 4 | **Failed:** 1
+- **Entities:** leodamas-of-thasos, erastus-of-scepsis, daniel-of-morley, jacopo-passavanti
+
+### AI Enrichment — 2026-05-25T06:27:57Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** didius-julianus, dorothea-of-brandenburg-duchess-of-mecklenburg, jacopo-piccolomini-ammannati
+
+### AI Enrichment — 2026-05-25T07:09:27Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 1
+- **Entities:** appius-claudius-russus
+
+### AI Enrichment — 2026-05-25T07:58:56Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** august-kestner, michał-jerzy-mniszech, jan-jacobszoon-may-van-schellinkhout
+
+### AI Enrichment — 2026-05-25T09:40:05Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** denis-i-of-portugal, juan-maria-schuver, filippo-pigafetta
+
+### AI Enrichment — 2026-05-25T10:01:29Z
+
+- **Model:** gemini
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** hernando-de-aragn-y-gurrea
+
+### AI Enrichment — 2026-05-25T10:31:36Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 3
+- **Entities:** zhan-ruoshui, aetius
+
+### AI Enrichment — 2026-05-25T11:12:04Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 1
+- **Entities:** wilhelm-gnapheus, gaudenzio-ferrari
+
+### AI Enrichment — 2026-05-25T12:04:55Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** æthelstan-of-sussex, cailtram, ruben-iii-prince-of-armenia
+
+### AI Enrichment — 2026-05-25T12:43:25Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 0
+- **Entities:** hywel-ap-ieuaf, samuel-hearne
+
+### AI Enrichment — 2026-05-25T13:34:34Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** anacharsis, mazda, democedes
+
+### AI Enrichment — 2026-05-25T15:01:29Z
+
+- **Model:** ollama
+- **Enriched:** 5 | **Failed:** 0
+- **Entities:** quintus-sulpicius-camerinus-praetextatus, leonardo-foscolo, firmus, neoptolemus, quintus-fabius-maximus-eburnus
+
+### AI Enrichment — 2026-05-25T16:40:43Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 3
+- **Entities:** die-linke, william-elphinstone
+
+### AI Enrichment — 2026-05-25T17:29:29Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** stefano-pignatelli, theophanes-the-greek, yu-huan
+
+### AI Enrichment — 2026-05-25T18:08:01Z
+
+- **Model:** gemini
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** kuiper-belt
+
+### AI Enrichment — 2026-05-25T18:08:27Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 0
+- **Entities:** hugh-of-saint-cher, phlegon-of-tralles
+
+### AI Enrichment — 2026-05-25T18:56:16Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 3
+- **Entities:** gaius-marcius-rutilus, lucius-minucius-esquilinus-augurinus
+
+### AI Enrichment — 2026-05-25T19:37:52Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 2
+- **Entities:** publius-manlius-vulso
+
+### AI Enrichment — 2026-05-25T20:25:52Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 4
+- **Entities:** antonius-andreas
+
+### AI Enrichment — 2026-05-25T21:11:20Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 1
+- **Entities:** george-of-trebizond, girolamo-mazzola-bedoli, giovanni-francesco-mormando
+
+### AI Enrichment — 2026-05-25T22:05:16Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 3
+- **Entities:** giandomenico-spinola, rolling-stone
+
+### AI Enrichment — 2026-05-25T22:55:15Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** quintus-poetelius-libo-visolus, eutychianus, gaius-livius-salinator
+
+### AI Enrichment — 2026-05-25T23:31:46Z
+
+- **Model:** gemini
+- **Enriched:** 2 | **Failed:** 18
+- **Entities:** polymedes-of-argos, gian-giacomo-dolcebuono
+
+### AI Enrichment — 2026-05-26T00:28:42Z
+
+- **Model:** ollama
+- **Enriched:** 5 | **Failed:** 0
+- **Entities:** visconte-maggiolo, johann-heß, dinus-de-rossonis, domenico-silvio-passionei, muhammad-ali-al-halabi
+
+### AI Enrichment — 2026-05-26T00:50:31Z
+
+- **Model:** gemini
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** biagio-assereto
+
+### AI Enrichment — 2026-05-26T01:16:03Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 3
+- **Entities:** seventh-day-adventist-church, citron
+
+### AI Enrichment — 2026-05-26T01:55:42Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 0
+- **Entities:** sancha-of-portugal, fernando-de-valds-y-salas, lorenzo-raggi
+
+### AI Enrichment — 2026-05-26T02:40:56Z
+
+- **Model:** ollama
+- **Enriched:** 4 | **Failed:** 1
+- **Entities:** george-ix-of-kartli, heaberht-of-kent, wu-guang, cristóvão-de-mendonça
+
+### AI Enrichment — 2026-05-26T03:04:23Z
+
+- **Model:** gemini
+- **Enriched:** 8 | **Failed:** 12
+- **Entities:** cornelis-evertsen-the-elder, diego-hurtado-de-mendoza-y-quiñones, mario-theodoli, eanbald-ii, baccio-bandinelli, andrea-della-robbia, rashid-al-din-hamadani, demetrius-the-cynic
+
+### AI Enrichment — 2026-05-26T03:13:34Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 0
+- **Entities:** mario-lago
+
+### AI Enrichment — 2026-05-26T03:56:22Z
+
+- **Model:** gemini
+- **Enriched:** 8 | **Failed:** 12
+- **Entities:** matteo-di-andrea-de-pasti, jacopo-di-cione, diomedes-of-tarsus, romanian, mario-lago, nikolay-firyubin, william-richard-hamilton, yakov-malik
+
+### AI Enrichment — 2026-05-26T04:35:40Z
+
+- **Model:** ollama
+- **Enriched:** 4 | **Failed:** 1
+- **Entities:** giovanni-andrea-archetti, federico-sforza, carlo-gualterio, annibale-albani
+
+### AI Enrichment — 2026-05-26T05:57:02Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** niall-caille, hendrick-hamel, garcía-lópez-de-cárdenas
+
+### AI Enrichment — 2026-05-26T06:33:04Z
+
+- **Model:** gemini
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** girolamo-verospi
+
+### AI Enrichment — 2026-05-26T06:35:52Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 0
+- **Entities:** marcin-kazanowski, sigered-of-kent
+
+### AI Enrichment — 2026-05-26T07:29:08Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 3
+- **Entities:** nicholas-of-autrecourt
+
+### AI Enrichment — 2026-05-26T07:52:56Z
+
+- **Model:** gemini
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** lelio-falconieri
+
+### AI Enrichment — 2026-05-26T08:20:34Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 3
+- **Entities:** quintus-caecilius-metellus-balearicus, gerard-callenburgh
+
+### AI Enrichment — 2026-05-26T08:59:34Z
+
+- **Model:** ollama
+- **Enriched:** 2 | **Failed:** 1
+- **Entities:** gnaeus-domitius-calvinus, franz-sznayde
+
+### AI Enrichment — 2026-05-26T09:10:21Z
+
+- **Model:** gemini
+- **Enriched:** 1 | **Failed:** 19
+- **Entities:** józef-potocki
+
+### AI Enrichment — 2026-05-26T09:53:14Z
+
+- **Model:** ollama
+- **Enriched:** 4 | **Failed:** 1
+- **Entities:** lodovico-piavi, frederick-howard-5th-earl-of-carlisle, jan-lutek, jaan-teemant
+
+### AI Enrichment — 2026-05-26T10:39:19Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 2
+- **Entities:** orazio-giustiniani, etienne-de-poissy, cesare-facchinetti
+
+### AI Enrichment — 2026-05-26T11:30:15Z
+
+- **Model:** ollama
+- **Enriched:** 5 | **Failed:** 0
+- **Entities:** hierocles-of-alexandria, julius-pomponius-laetus, berenguer-de-montagut, hezbollah, muḥammad-b-ibrāhīm-b-saʿīd-shams-al-dīn-abū-ʿabda-al-anṣārī
+
+### AI Enrichment — 2026-05-26T13:00:59Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 1
+- **Entities:** marcus-fabius-ambustus
+
+### AI Enrichment — 2026-05-26T13:50:20Z
+
+- **Model:** ollama
+- **Enriched:** 17 | **Failed:** 0
+- **Entities:** marcus-fabius-ambustus, gaius-coelius-caldus, ulderico-carpegna, simone-paltanieri, theodora-of-arta, veríssimo-de-lencastre, hans-leonhard-schäufelein, bicci-di-lorenzo, liu-yuxi, seongjong ... +7 more
+
+### AI Enrichment — 2026-05-26T13:55:35Z
+
+- **Model:** ollama
+- **Enriched:** 1 | **Failed:** 0
+- **Entities:** gaius-coelius-caldus

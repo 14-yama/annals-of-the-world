@@ -54,7 +54,7 @@
         "attempts": 0,
         "lastGate": "triage",
         "lastReason": "duplicate-qid-lesser",
-        "updatedAt": "2026-05-25T04:18:17.110676+00:00"
+        "updatedAt": "2026-05-26T16:26:06.995277+00:00"
       }
     },
     {
@@ -102,12 +102,21 @@
       "$createdAt": "2026-04-05T15:31:09.973+00:00",
       "$updatedAt": "2026-04-06T00:50:59.993+00:00",
       "_pipelineState": {
-        "state": "in-flight",
+        "state": "validated",
         "attempts": 1,
-        "lastGate": "enrich",
-        "lastReason": "claimed-for-llm",
-        "updatedAt": "2026-05-25T04:19:51.188317+00:00",
-        "queuedAt": "2026-05-25T04:19:51.187996+00:00"
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-25T05:33:38.075857+00:00",
+        "queuedAt": "2026-05-25T04:19:51.187996+00:00",
+        "gateResults": {
+          "summaryLen": 1241,
+          "paragraphs": 5,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 9,
+          "edgeFloor": 5,
+          "significanceScore": 7
+        }
       },
       "historicalSignificance": {
         "significanceScore": 7,

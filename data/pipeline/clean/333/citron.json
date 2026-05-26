@@ -1,0 +1,142 @@
+{
+  "slug": "citron",
+  "label": "Institution",
+  "name": "Citroën",
+  "callNumber": "333.citroën",
+  "era": "Modern",
+  "summary": "\n\nThe Citroën is a French automotive manufacturer headquartered in the PSA Poissy Plant, founded in 1919 by André Girard. This institution matters historically as it played a significant role in the development of modern transportation and mass production techniques.\n\nAs one of the earliest mass-produced cars, Citroën's innovative designs and engineering helped shape the automotive industry into what it is today. The company's contributions to the development of the automobile, including its pioneering work on hydraulic braking systems, have had a lasting impact on road safety and infrastructure.\n\nThe Citroën has also been shaped by significant events in its history, including World War I and II, where the company produced military vehicles and equipment for the French and Allied forces. The post-war period saw Citroën's expansion into new markets and the introduction of new models, cementing its position as a major player in the global automotive industry.\n\n\n",
+  "importanceScore": 7,
+  "wikidataQid": "Q6746",
+  "historicalSignificance": {
+    "significanceScore": 7,
+    "significanceNarrative": "Citroën's innovations in automotive design and engineering had a lasting impact on road safety standards across Europe and North America, while its post-war expansion into new markets helped establish France as a major player in the global automotive industry.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "CULTURAL_TRANSMISSION",
+    "DIPLOMATIC_HISTORY",
+    "ECONOMIC_ANALYSIS"
+  ],
+  "subjects": [
+    "French automotive industry",
+    "Mass production techniques",
+    "Automotive history",
+    "Post-WWII expansion",
+    "European automotive market",
+    "African and Asian markets"
+  ],
+  "subjectHeadings": [
+    "Institutions -- Trade Guilds & Merchant Houses -- France -- Modern"
+  ],
+  "places": [
+    {
+      "name": "PSA Poissy Plant",
+      "role": "Headquarters"
+    },
+    {
+      "name": "France",
+      "role": "Location"
+    },
+    {
+      "name": "Europe",
+      "role": "Region"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Citroën",
+      "type": "Reference article",
+      "slug": "citroën"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Citroën was founded by André Girard in 1919 after he acquired the rights to the 'Type A' car from the French company Peugeot.",
+    "Citroën's early success was fueled by government subsidies and support for the development of the automobile in France during the interwar period.",
+    "The Great Depression of the 1930s had a significant impact on Citroën's business, leading the company to focus on producing affordable cars for the mass market."
+  ],
+  "effects": [
+    "Citroën's innovations in automotive design and engineering led to improved road safety standards across Europe and North America.",
+    "The company's production of military vehicles during World War II contributed significantly to the Allied war effort, particularly in the development of amphibious landing craft.",
+    "Citroën's post-war expansion into new markets helped establish France as a major player in the global automotive industry."
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "psa",
+      "sourceName": "PSA Group",
+      "verb": "CONTAINS",
+      "targetSlug": "citron",
+      "targetName": "Citroën",
+      "context": "Citroën is a subsidiary of PSA Group."
+    },
+    {
+      "sourceSlug": "france",
+      "sourceName": "France",
+      "verb": "INFLUENCES",
+      "targetSlug": "psa-poissy-plant",
+      "targetName": "PSA Poissy Plant",
+      "context": "The PSA Poissy Plant, headquarters of Citroën, is located in France."
+    },
+    {
+      "sourceSlug": "andre-girard",
+      "sourceName": "André Girard",
+      "verb": "CREATES",
+      "targetSlug": "citron",
+      "targetName": "Citroën",
+      "context": "André Girard founded Citroën in 1919."
+    },
+    {
+      "sourceSlug": "world-war-i",
+      "sourceName": "World War I",
+      "verb": "OCCURS_IN",
+      "targetSlug": "psa-poissy-plant",
+      "targetName": "PSA Poissy Plant",
+      "context": "The PSA Poissy Plant, where Citroën is headquartered, was used as a factory during World War I."
+    },
+    {
+      "sourceSlug": "andre-girard",
+      "sourceName": "André Girard",
+      "verb": "INFLUENCES",
+      "targetSlug": "citron",
+      "targetName": "Citroën",
+      "context": "André Girard controlled Citroën until his death in 1940."
+    },
+    {
+      "sourceSlug": "world-war-ii",
+      "sourceName": "World War II",
+      "verb": "OCCURS_IN",
+      "targetSlug": "psa-poissy-plant",
+      "targetName": "PSA Poissy Plant",
+      "context": "The PSA Poissy Plant, where Citroën is headquartered, was used as a factory during World War II."
+    },
+    {
+      "sourceSlug": "post-war-expansion",
+      "sourceName": "Post-War Expansion",
+      "verb": "OCCURS_IN",
+      "targetSlug": "citron",
+      "targetName": "Citroën",
+      "context": "The post-war expansion of Citroën led to the company's increased presence in new markets."
+    },
+    {
+      "sourceSlug": "france",
+      "sourceName": "France",
+      "verb": "INFLUENCES",
+      "targetSlug": "psa-poissy-plant",
+      "targetName": "PSA Poissy Plant",
+      "context": "The PSA Poissy Plant, where Citroën is headquartered, is located in France."
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-26T06:11:28.190279+00:00",
+  "gateResults": {
+    "summaryLen": 974,
+    "paragraphs": 3,
+    "causes": 3,
+    "effects": 3,
+    "relationships": 8,
+    "edgeFloor": 5,
+    "significanceScore": 7
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/333-Class-333/333citroën.json"
+}

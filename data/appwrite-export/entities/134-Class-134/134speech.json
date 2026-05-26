@@ -25,7 +25,7 @@
       "wikidataQid": "Q52946",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Speech",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Ambassadors%20training%2013.JPG",
-      "detailsJson": "{\"causes\":[\"Evolution of the descended human larynx and vocal tract anatomy (c. 300,000–100,000 years ago) enabling the range of sounds required for speech\",\"Development of Broca's and Wernicke's areas in the left brain hemisphere providing the neural infrastructure for speech production and comprehension\",\"Social complexity of early human groups creating selective pressure for communication beyond gesture and basic vocalizations\"],\"effects\":[\"All human languages — approximately 7,000 living languages — as elaborations of the universal capacity for speech\",\"Writing systems developed as representations of speech, enabling the storage and transmission of knowledge across time\",\"Philosophical and scientific investigation of language from Aristotle through Saussure and Chomsky transforming understanding of cognition\"],\"relationships\":[{\"sourceSlug\":\"speech\",\"sourceName\":\"speech\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-classical\",\"targetName\":\"Classical\",\"context\":\"speech is situated within the Classical (920)\"},{\"sourceSlug\":\"speech\",\"sourceName\":\"speech\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"intellectual-tradition-classical\",\"targetName\":\"Intellectual Tradition (Classical)\",\"context\":\"speech shaped intellectual tradition during the Classical era\"},{\"type\":\"INFLUENCES\",\"target\":\"Language\",\"targetSlug\":\"language\",\"note\":\"Speech is the primary medium of human language — writing represents it\"},{\"type\":\"INFLUENCES\",\"target\":\"Aristotle\",\"targetSlug\":\"aristotle\",\"note\":\"Aristotle identified logos (reasoned speech) as defining the political animal\"},{\"type\":\"INFLUENCES\",\"target\":\"Noam Chomsky\",\"targetSlug\":\"noam-chomsky\",\"note\":\"Generative grammar transformed the scientific study of speech as a cognitive system\"}],\"places\":[],\"texts\":[{\"title\":\"Wikipedia: speech\",\"type\":\"Reference article\",\"slug\":\"speech\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q52946\",\"https://en.wikipedia.org/wiki/Speech\"],\"tags\":[\"academic discipline\",\"Communication & Information\",\"scientific-paradigm\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"speech left a notable mark on Classical history, documented across 114 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\",\"_editLog\":[]}",
+      "detailsJson": "{\"causes\":[\"Evolution of the descended human larynx and vocal tract anatomy (c. 300,000–100,000 years ago) enabling the range of sounds required for speech\",\"Development of Broca's and Wernicke's areas in the left brain hemisphere providing the neural infrastructure for speech production and comprehension\",\"Social complexity of early human groups creating selective pressure for communication beyond gesture and basic vocalizations\"],\"effects\":[\"All human languages — approximately 7,000 living languages — as elaborations of the universal capacity for speech\",\"Writing systems developed as representations of speech, enabling the storage and transmission of knowledge across time\",\"Philosophical and scientific investigation of language from Aristotle through Saussure and Chomsky transforming understanding of cognition\"],\"relationships\":[{\"sourceSlug\":\"speech\",\"sourceName\":\"speech\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-classical\",\"targetName\":\"Classical\",\"context\":\"speech is situated within the Classical (920)\"},{\"sourceSlug\":\"speech\",\"sourceName\":\"speech\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"intellectual-tradition-classical\",\"targetName\":\"Intellectual Tradition (Classical)\",\"context\":\"speech shaped intellectual tradition during the Classical era\"},{\"type\":\"INFLUENCES\",\"target\":\"Language\",\"targetSlug\":\"language\",\"note\":\"Speech is the primary medium of human language — writing represents it\"},{\"type\":\"INFLUENCES\",\"target\":\"Aristotle\",\"targetSlug\":\"aristotle\",\"note\":\"Aristotle identified logos (reasoned speech) as defining the political animal\"},{\"type\":\"INFLUENCES\",\"target\":\"Noam Chomsky\",\"targetSlug\":\"noam-chomsky\",\"note\":\"Generative grammar transformed the scientific study of speech as a cognitive system\"}],\"places\":[],\"texts\":[{\"title\":\"Wikipedia: speech\",\"type\":\"Reference article\",\"slug\":\"speech\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q52946\",\"https://en.wikipedia.org/wiki/Speech\"],\"tags\":[\"academic discipline\",\"Communication & Information\",\"scientific-paradigm\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"speech left a notable mark on Classical history, documented across 114 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\",\"_editLog\":[],\"historicalSignificance\":{\"significanceScore\":8,\"significanceNarrative\":\"The emergence of speech is estimated at 300,000–100,000 years ago, coinciding with the evolution of human cognition and social complexity. This fundamental cognitive achievement enabled early humans to communicate, cooperate, and ultimately shape their environment in ways that had far-reaching consequences for human history.\",\"significanceCategory\":\"world-changing\"}}",
       "subjectHeadings": [
         "Idea -- Communication & Information -- Global -- Classical"
       ],
@@ -48,13 +48,27 @@
       "$createdAt": "2026-04-05T12:11:22.534+00:00",
       "$updatedAt": "2026-04-06T00:51:42.249+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "validated",
         "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-25T04:16:09.108096+00:00"
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-25T09:59:02.103334+00:00",
+        "gateResults": {
+          "summaryLen": 1645,
+          "paragraphs": 3,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 5,
+          "edgeFloor": 5,
+          "significanceScore": 8
+        }
       },
-      "enrichedAt": "2026-05-24T19:56:20Z"
+      "enrichedAt": "2026-05-24T19:56:20Z",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "The emergence of speech is estimated at 300,000–100,000 years ago, coinciding with the evolution of human cognition and social complexity. This fundamental cognitive achievement enabled early humans to communicate, cooperate, and ultimately shape their environment in ways that had far-reaching consequences for human history.",
+        "significanceCategory": "world-changing"
+      }
     }
   ]
 }

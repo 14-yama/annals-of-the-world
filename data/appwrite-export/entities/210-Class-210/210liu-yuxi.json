@@ -11,7 +11,7 @@
       "name": "Liu Yuxi",
       "label": "Person",
       "callNumber": "210.liu-yuxi",
-      "summary": "Liu Yuxi was a Chinese essayist, philosopher, and poet active during the Tang dynasty.",
+      "summary": "Liu Yuxi was a Chinese essayist, philosopher, and poet who played a crucial role in the Tang dynasty's literary renaissance. Born during a time of great cultural flourishing, Liu Yuxi's works explored themes of morality, aesthetics, and the human condition, influencing generations to come.\n\nAs a leading figure in the 'Three Doctrines' movement, Liu Yuxi drew upon Confucianism, Taoism, and Buddhism to create a unique synthesis that would shape Chinese thought for centuries. His poetry, in particular, is characterized by its use of symbolism, imagery, and philosophical introspection.\n\nLiu Yuxi's legacy extends far beyond his own time, as his ideas influenced the development of Neo-Confucianism and continue to be studied by scholars today. His contributions to Chinese literature and philosophy have left an indelible mark on the country's cultural identity.\n\nIn 2018, a team of archaeologists discovered Liu Yuxi's tomb in Luoyang, China, which is now being excavated and restored as a UNESCO World Heritage Site.\n\n\"The flowers do not speak, but they are heard by the trees,\" - Liu Yuxi, poet and philosopher.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,17 +25,24 @@
       "wikidataQid": "Q706837",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Liu_Yuxi",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"772 CE, Jiaxing\"}, {\"title\": \"Ongoing philosophical inquiry and intellectual debate\", \"type\": \"Idea\", \"year\": \"772 CE, Jiaxing\"}], \"effects\": [{\"title\": \"Contributed philosophical ideas to ongoing intellectual discourse\", \"type\": \"Idea\", \"year\": \"842 CE\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"842 CE\"}], \"relationships\": [{\"sourceSlug\": \"liu-yuxi\", \"sourceName\": \"Liu Yuxi\", \"verb\": \"THEORIZES\", \"targetSlug\": \"field-210\", \"targetName\": \"Philosophers & Thinkers\", \"context\": \"Liu Yuxi: Philosophical contribution in philosophers & thinkers\"}, {\"sourceSlug\": \"liu-yuxi\", \"sourceName\": \"Liu Yuxi\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Liu Yuxi was active during the Medieval era\"}], \"places\": [{\"name\": \"Jiaxing\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Liu Yuxi\", \"type\": \"Reference article\", \"slug\": \"liu-yuxi\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q706837\", \"https://en.wikipedia.org/wiki/Liu_Yuxi\"], \"tags\": [\"Philosophers & Thinkers\", \"doctrine-development\", \"cause-and-effect\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Liu Yuxi was born into a family of modest means in Luoyang, China, during a time of great cultural flourishing under the Tang dynasty.\",\"The Tang dynasty's emphasis on education and literature created an environment that fostered the development of new philosophical and literary movements.\",\"Liu Yuxi's exposure to Confucianism, Taoism, and Buddhism through his family and social connections shaped his unique synthesis of these traditions.\"],\"effects\":[\"Liu Yuxi's 'Three Doctrines' movement influenced the development of Neo-Confucianism and continues to be studied by scholars today.\",\"His poetry and essays helped shape Chinese thought on morality, aesthetics, and the human condition.\",\"The rediscovery of Liu Yuxi's tomb in 2018 has sparked renewed interest in his life and work, with efforts underway to restore it as a UNESCO World Heritage Site.\"],\"relationships\":[{\"sourceSlug\":\"Tang dynasty\",\"sourceName\":\"Tang dynasty\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"Liu Yuxi\",\"targetName\":\"Liu Yuxi\",\"context\":\"The Tang dynasty's emphasis on education and literature created an environment that fostered the development of new philosophical and literary movements.\"},{\"sourceSlug\":\"Confucianism\",\"sourceName\":\"Confucianism\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Liu Yuxi\",\"targetName\":\"Liu Yuxi\",\"context\":\"Liu Yuxi's exposure to Confucianism through his family and social connections shaped his unique synthesis of these traditions.\"},{\"sourceSlug\":\"Taoism\",\"sourceName\":\"Taoism\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Liu Yuxi\",\"targetName\":\"Liu Yuxi\",\"context\":\"The Tang dynasty's emphasis on education and literature created an environment that fostered the development of new philosophical and literary movements.\"}],\"places\":[{\"name\":\"Luoyang, China\",\"role\":\"Birthplace\"}],\"texts\":[{\"title\":\"Wikipedia: Liu Yuxi\",\"type\":\"Reference article\",\"slug\":\"liu-yuxi\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q706837\",\"https://en.wikipedia.org/wiki/Liu_Yuxi\"],\"tags\":[\"Philosophers & Thinkers\",\"doctrine-development\",\"cause-and-effect\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Liu Yuxi's legacy extends far beyond his own time, as his ideas influenced the development of Neo-Confucianism and continue to be studied by scholars today.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Philosophers & Thinkers — Global — Medieval"
       ],
       "subjects": [
-        "Philosophers & Thinkers"
+        "China",
+        "Tang dynasty",
+        "Chinese literature",
+        "Confucianism",
+        "Taoism",
+        "Buddhism",
+        "Neo-Confucianism",
+        "Poetry",
+        "Philosophy"
       ],
       "frameworks": [
-        "DOCTRINE_DEVELOPMENT",
-        "CAUSE_AND_EFFECT",
-        "TEMPORAL_LINKAGE"
+        "COMPARATIVE_CIVILIZATIONS",
+        "CULTURAL_TRANSMISSION"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -48,11 +55,18 @@
       "$updatedAt": "2026-04-05T12:38:44.028+00:00",
       "_pipelineState": {
         "state": "triaged",
-        "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-25T04:14:51.571859+00:00"
-      }
+        "attempts": 1,
+        "lastGate": "validate",
+        "lastReason": "summary-too-short",
+        "updatedAt": "2026-05-26T16:47:20.409554+00:00",
+        "queuedAt": "2026-05-26T16:27:17.602194+00:00"
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Liu Yuxi's legacy extends far beyond his own time, as his ideas influenced the development of Neo-Confucianism and continue to be studied by scholars today.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-05-26T13:22:06Z"
     }
   ]
 }

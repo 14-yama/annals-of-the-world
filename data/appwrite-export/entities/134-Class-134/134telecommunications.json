@@ -25,7 +25,7 @@
       "wikidataQid": "Q418",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Telecommunications",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Amfm3.gif",
-      "detailsJson": "{\"causes\":[\"Samuel Morse's electrical telegraph (1837–1844) providing the first practical instantaneous long-distance communication technology\",\"Transatlantic cable (1866) proving the feasibility of global telecommunications infrastructure and transforming finance and diplomacy\",\"Marconi's radio (1895) freeing communication from physical wire infrastructure and enabling broadcast and wireless communication\",\"Cold War space race creating satellite communication (Telstar 1962) and ultimately the ARPANET (1969) precursor to the internet\"],\"effects\":[\"Global financial markets transformed by telecommunications — real-time price information and instantaneous transfers from 1866 onward\",\"World Wide Web (1991) and internet expansion connecting 5 billion users and transforming commerce, media, politics, and social life\",\"5G competition as a major geopolitical contest — Huawei's dominance of 5G infrastructure creating the US-China tech cold war\",\"Undersea cable infrastructure — 99% of international internet traffic travels through undersea fiber cables — a critical geopolitical chokepoint\"],\"relationships\":[{\"sourceSlug\":\"telecommunications\",\"sourceName\":\"telecommunications\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-classical\",\"targetName\":\"Classical\",\"context\":\"telecommunications is situated within the Classical (920)\"},{\"sourceSlug\":\"telecommunications\",\"sourceName\":\"telecommunications\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"intellectual-tradition-classical\",\"targetName\":\"Intellectual Tradition (Classical)\",\"context\":\"telecommunications shaped intellectual tradition during the Classical era\"},{\"type\":\"INFLUENCES\",\"target\":\"Samuel Morse\",\"targetSlug\":\"samuel-morse\",\"note\":\"Inventor of the electric telegraph (1837) — the first telecommunications technology\"},{\"type\":\"INFLUENCES\",\"target\":\"Alexander Graham Bell\",\"targetSlug\":\"alexander-graham-bell\",\"note\":\"Inventor of the telephone (1876)\"},{\"type\":\"INFLUENCES\",\"target\":\"Internet\",\"targetSlug\":\"internet\",\"note\":\"Internet as the culminating telecommunications infrastructure of the 20th century\"},{\"type\":\"INFLUENCES\",\"target\":\"Guglielmo Marconi\",\"targetSlug\":\"guglielmo-marconi\",\"note\":\"Invented wireless radio communication (1895)\"}],\"places\":[],\"texts\":[{\"title\":\"Wikipedia: telecommunications\",\"type\":\"Reference article\",\"slug\":\"telecommunications\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q418\",\"https://en.wikipedia.org/wiki/Telecommunications\"],\"tags\":[\"academic discipline\",\"Communication & Information\",\"scientific-paradigm\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"telecommunications left a notable mark on Classical history, documented across 132 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\",\"_editLog\":[]}",
+      "detailsJson": "{\"causes\":[\"Samuel Morse's electrical telegraph (1837–1844) providing the first practical instantaneous long-distance communication technology\",\"Transatlantic cable (1866) proving the feasibility of global telecommunications infrastructure and transforming finance and diplomacy\",\"Marconi's radio (1895) freeing communication from physical wire infrastructure and enabling broadcast and wireless communication\",\"Cold War space race creating satellite communication (Telstar 1962) and ultimately the ARPANET (1969) precursor to the internet\"],\"effects\":[\"Global financial markets transformed by telecommunications — real-time price information and instantaneous transfers from 1866 onward\",\"World Wide Web (1991) and internet expansion connecting 5 billion users and transforming commerce, media, politics, and social life\",\"5G competition as a major geopolitical contest — Huawei's dominance of 5G infrastructure creating the US-China tech cold war\",\"Undersea cable infrastructure — 99% of international internet traffic travels through undersea fiber cables — a critical geopolitical chokepoint\"],\"relationships\":[{\"sourceSlug\":\"telecommunications\",\"sourceName\":\"telecommunications\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-classical\",\"targetName\":\"Classical\",\"context\":\"telecommunications is situated within the Classical (920)\"},{\"sourceSlug\":\"telecommunications\",\"sourceName\":\"telecommunications\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"intellectual-tradition-classical\",\"targetName\":\"Intellectual Tradition (Classical)\",\"context\":\"telecommunications shaped intellectual tradition during the Classical era\"},{\"type\":\"INFLUENCES\",\"target\":\"Samuel Morse\",\"targetSlug\":\"samuel-morse\",\"note\":\"Inventor of the electric telegraph (1837) — the first telecommunications technology\"},{\"type\":\"INFLUENCES\",\"target\":\"Alexander Graham Bell\",\"targetSlug\":\"alexander-graham-bell\",\"note\":\"Inventor of the telephone (1876)\"},{\"type\":\"INFLUENCES\",\"target\":\"Internet\",\"targetSlug\":\"internet\",\"note\":\"Internet as the culminating telecommunications infrastructure of the 20th century\"},{\"type\":\"INFLUENCES\",\"target\":\"Guglielmo Marconi\",\"targetSlug\":\"guglielmo-marconi\",\"note\":\"Invented wireless radio communication (1895)\"}],\"places\":[],\"texts\":[{\"title\":\"Wikipedia: telecommunications\",\"type\":\"Reference article\",\"slug\":\"telecommunications\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q418\",\"https://en.wikipedia.org/wiki/Telecommunications\"],\"tags\":[\"academic discipline\",\"Communication & Information\",\"scientific-paradigm\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"telecommunications left a notable mark on Classical history, documented across 132 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\",\"_editLog\":[],\"historicalSignificance\":{\"significanceScore\":8,\"significanceNarrative\":\"The invention of the telephone by Alexander Graham Bell in 1876 democratized communication, enabling people to connect with each other over long distances. This technology had a profound impact on global commerce and social interactions.\",\"significanceCategory\":\"world-changing\"}}",
       "subjectHeadings": [
         "Idea -- Communication & Information -- Global -- Classical"
       ],
@@ -48,13 +48,27 @@
       "$createdAt": "2026-04-05T12:11:22.647+00:00",
       "$updatedAt": "2026-04-06T00:51:42.268+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "validated",
         "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-25T04:16:09.065579+00:00"
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-25T09:59:02.090514+00:00",
+        "gateResults": {
+          "summaryLen": 1674,
+          "paragraphs": 3,
+          "causes": 4,
+          "effects": 4,
+          "relationships": 6,
+          "edgeFloor": 5,
+          "significanceScore": 8
+        }
       },
-      "enrichedAt": "2026-05-24T20:01:42Z"
+      "enrichedAt": "2026-05-24T20:01:42Z",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "The invention of the telephone by Alexander Graham Bell in 1876 democratized communication, enabling people to connect with each other over long distances. This technology had a profound impact on global commerce and social interactions.",
+        "significanceCategory": "world-changing"
+      }
     }
   ]
 }

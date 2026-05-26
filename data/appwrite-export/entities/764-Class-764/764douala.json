@@ -25,7 +25,7 @@
       "wikidataQid": "Q132830",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Douala",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Douala.JPG",
-      "detailsJson": "{\"causes\":[\"Douala kingdom trading traditions making the Wouri estuary a natural commercial center before European contact\",\"German colonial acquisition (1884) making Douala the administrative and commercial capital of Kamerun\",\"Geographic position — deep-water port access and river connections — establishing Douala as the natural commercial capital of Central Africa\"],\"effects\":[\"70% of Cameroon's international trade handled through Douala's port — critical to Central African regional logistics\",\"Gateway for landlocked Central African states (Chad, CAR) dependent on Douala for import-export access\",\"Major commercial hub attracting Lebanese, French, Chinese, and American investment in Central Africa\"],\"relationships\":[{\"sourceSlug\":\"douala\",\"sourceName\":\"Douala\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-classical\",\"targetName\":\"Classical\",\"context\":\"Douala is situated within the Classical (920)\"},{\"sourceSlug\":\"douala\",\"sourceName\":\"Douala\",\"verb\":\"TRANSMITS\",\"targetSlug\":\"literary-canon-classical\",\"targetName\":\"Literary Canon (Classical)\",\"context\":\"Douala contributed to the literary canon of the Classical era\"},{\"type\":\"INFLUENCES\",\"target\":\"Cameroon\",\"targetSlug\":\"cameroon\",\"note\":\"Economic capital; handles 70% of Cameroon's international trade\"},{\"type\":\"INFLUENCES\",\"target\":\"Germany\",\"targetSlug\":\"germany\",\"note\":\"German Kamerun (1884–1916) made Douala the colonial capital\"},{\"type\":\"OCCURS_IN\",\"target\":\"Central Africa\",\"targetSlug\":\"central-africa\",\"note\":\"Central African economic hub on the Gulf of Guinea\"}],\"places\":[{\"name\":\"Cameroon\",\"role\":\"Country\"}],\"texts\":[{\"title\":\"Wikipedia: Douala\",\"type\":\"Reference article\",\"slug\":\"douala\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q132830\",\"https://en.wikipedia.org/wiki/Douala\"],\"tags\":[\"Cameroon\",\"big city\",\"Africa\",\"Architecture & Built Works\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Douala left a notable mark on Classical history, documented across 101 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\",\"_editLog\":[]}",
+      "detailsJson": "{\"causes\":[\"Douala kingdom trading traditions making the Wouri estuary a natural commercial center before European contact\",\"German colonial acquisition (1884) making Douala the administrative and commercial capital of Kamerun\",\"Geographic position — deep-water port access and river connections — establishing Douala as the natural commercial capital of Central Africa\"],\"effects\":[\"70% of Cameroon's international trade handled through Douala's port — critical to Central African regional logistics\",\"Gateway for landlocked Central African states (Chad, CAR) dependent on Douala for import-export access\",\"Major commercial hub attracting Lebanese, French, Chinese, and American investment in Central Africa\"],\"relationships\":[{\"sourceSlug\":\"douala\",\"sourceName\":\"Douala\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-classical\",\"targetName\":\"Classical\",\"context\":\"Douala is situated within the Classical (920)\"},{\"sourceSlug\":\"douala\",\"sourceName\":\"Douala\",\"verb\":\"TRANSMITS\",\"targetSlug\":\"literary-canon-classical\",\"targetName\":\"Literary Canon (Classical)\",\"context\":\"Douala contributed to the literary canon of the Classical era\"},{\"type\":\"INFLUENCES\",\"target\":\"Cameroon\",\"targetSlug\":\"cameroon\",\"note\":\"Economic capital; handles 70% of Cameroon's international trade\"},{\"type\":\"INFLUENCES\",\"target\":\"Germany\",\"targetSlug\":\"germany\",\"note\":\"German Kamerun (1884–1916) made Douala the colonial capital\"},{\"type\":\"OCCURS_IN\",\"target\":\"Central Africa\",\"targetSlug\":\"central-africa\",\"note\":\"Central African economic hub on the Gulf of Guinea\"}],\"places\":[{\"name\":\"Cameroon\",\"role\":\"Country\"}],\"texts\":[{\"title\":\"Wikipedia: Douala\",\"type\":\"Reference article\",\"slug\":\"douala\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q132830\",\"https://en.wikipedia.org/wiki/Douala\"],\"tags\":[\"Cameroon\",\"big city\",\"Africa\",\"Architecture & Built Works\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Douala left a notable mark on Classical history, documented across 101 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\",\"_editLog\":[],\"historicalSignificance\":{\"significanceScore\":5,\"significanceNarrative\":\"As a major port and commercial center in German Kamerun during World War I, Douala played a significant role in the division of the colony between British and French forces. Its strategic location facilitated trade and commerce in Central Africa.\",\"significanceCategory\":\"regional\"}}",
       "subjectHeadings": [
         "Artifacts & Texts -- Architecture & Built Works -- Cameroon -- Classical"
       ],
@@ -49,13 +49,27 @@
       "$createdAt": "2026-04-05T12:05:15.127+00:00",
       "$updatedAt": "2026-04-06T00:51:22.938+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "validated",
         "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-25T04:14:35.724954+00:00"
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-25T08:36:49.372586+00:00",
+        "gateResults": {
+          "summaryLen": 1554,
+          "paragraphs": 3,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 5,
+          "edgeFloor": 3,
+          "significanceScore": 5
+        }
       },
-      "enrichedAt": "2026-05-24T20:29:54Z"
+      "enrichedAt": "2026-05-24T20:29:54Z",
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "As a major port and commercial center in German Kamerun during World War I, Douala played a significant role in the division of the colony between British and French forces. Its strategic location facilitated trade and commerce in Central Africa.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

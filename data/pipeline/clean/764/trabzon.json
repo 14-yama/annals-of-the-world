@@ -1,0 +1,108 @@
+{
+  "slug": "trabzon",
+  "label": "Text",
+  "name": "Trabzon",
+  "callNumber": "764.trabzon",
+  "era": "Classical",
+  "summary": "Trabzon (historically Trebizond) is a city on the Black Sea coast of northeastern Turkey and the capital of Trabzon Province. Founded as Trapezous in 756 BCE by Greek colonists from Sinope, it is one of the oldest continuously inhabited cities in the Black Sea region. The ancient city name refers to the table-shaped plateau (trapeza) on which the Greek colony was established.\n\nTrabzon's greatest historical period was the Empire of Trebizond (1204–1461 CE), a Byzantine successor state founded by Alexios I Komnenos after Constantinople fell to the Fourth Crusade. For 257 years, Trebizond maintained independence as the last Byzantine-tradition state in the region, known for its trade wealth from the Silk Road terminus and for the beauty of its court culture. The Hagia Sophia of Trebizond — a 13th-century Byzantine church with remarkable frescoes — is among the finest surviving examples of Byzantine architecture outside Istanbul.\n\nOttoman Sultan Mehmed II captured Trebizond in 1461 — the final act in eliminating all Byzantine successor states. The city was a major commercial center in the Ottoman Empire, at the head of trade routes connecting the Black Sea to Persia and Central Asia. During World War I, Trabzon was the site of the mass killing of Armenian and Greek Orthodox populations during the Ottoman genocides. It remains a significant city in modern Turkey with a distinctive Laz and Black Sea Greek cultural heritage.",
+  "importanceScore": 7,
+  "wikidataQid": "Q45301",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "As the last Byzantine-tradition state in the region, Trebizond maintained independence for 257 years, facilitating trade wealth from the Silk Road terminus and shaping the beauty of its court culture.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "GEOPOLITICAL_LINKAGE",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Turkey",
+    "big city",
+    "Asia",
+    "Architecture & Built Works"
+  ],
+  "subjectHeadings": [
+    "Artifacts & Texts -- Architecture & Built Works -- Turkey -- Classical"
+  ],
+  "places": [
+    {
+      "name": "Turkey",
+      "role": "Country"
+    }
+  ],
+  "texts": [
+    {
+      "title": "Wikipedia: Trabzon",
+      "type": "Reference article",
+      "slug": "trabzon"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Greek colonial expansion from Sinope (756 BCE) establishing Trapezous as a Black Sea trading post",
+    "Fourth Crusade's sack of Constantinople (1204) enabling Alexios I Komnenos to establish the Empire of Trebizond as a Byzantine successor state",
+    "Silk Road terminus location making Trebizond the Black Sea's premier trading hub for Persian, Central Asian, and European goods"
+  ],
+  "effects": [
+    "Empire of Trebizond (1204–1461) — last surviving Byzantine-tradition state, maintaining Greek culture and Orthodox Christianity for 257 years after Constantinople's fall",
+    "Hagia Sophia of Trabzon — a 13th-century Byzantine church with outstanding frescoes; UNESCO heritage monument",
+    "Ottoman capture (1461) by Mehmed II completing the elimination of all Byzantine successor states",
+    "Armenian and Greek populations massacred during WWI Ottoman genocides (1914–1923)"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "trabzon",
+      "sourceName": "Trabzon",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "era-classical",
+      "targetName": "Classical",
+      "context": "Trabzon is situated within the Classical (920)"
+    },
+    {
+      "sourceSlug": "trabzon",
+      "sourceName": "Trabzon",
+      "verb": "TRANSMITS",
+      "targetSlug": "literary-canon-classical",
+      "targetName": "Literary Canon (Classical)",
+      "context": "Trabzon contributed to the literary canon of the Classical era"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Empire of Trebizond",
+      "targetSlug": "empire-of-trebizond",
+      "note": "Byzantine successor state (1204–1461) based in Trebizond"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Mehmed II",
+      "targetSlug": "mehmed-ii",
+      "note": "Ottoman sultan who conquered Trebizond in 1461"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Byzantine Empire",
+      "targetSlug": "byzantine-empire",
+      "note": "Trebizond was a Byzantine-tradition successor state after 1204"
+    },
+    {
+      "type": "OCCURS_IN",
+      "target": "Turkey",
+      "targetSlug": "turkey",
+      "note": "Located in northeastern Turkey on the Black Sea coast"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-25T09:58:06.387095+00:00",
+  "gateResults": {
+    "summaryLen": 1441,
+    "paragraphs": 3,
+    "causes": 3,
+    "effects": 4,
+    "relationships": 6,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/764-Class-764/764trabzon.json"
+}

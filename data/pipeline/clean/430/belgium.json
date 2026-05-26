@@ -1,0 +1,112 @@
+{
+  "slug": "belgium",
+  "label": "Place",
+  "name": "Belgium",
+  "callNumber": "430.belgium",
+  "era": "Modern",
+  "summary": "Belgium, officially the Kingdom of Belgium, is a country in Northwestern Europe, bordered by the Netherlands, Germany, Luxembourg, and France. With 11 million people in 30,688 km², Belgium is one of Europe's most densely populated and highly urbanized countries. Despite its small size, Belgium has been one of the most historically significant territories in European history — a crossroads of cultures, languages, and conflicts.\n\nBelgium's territory, historically known as the Spanish Netherlands and then the Austrian Netherlands, was the site of many of Europe's most decisive battles: Waterloo (1815), the Marne (nearby, 1914, 1918), Ypres (1914–1918), and the Bulge (1944). Its current borders were established by independence from the Netherlands in 1830 — an independence revolution notable as one of the first successful national self-determination movements in the 19th century. Belgium industrialized earlier than any continental European nation after Britain — the Liège-Charleroi industrial basin was Europe's first industrial region — making it briefly the world's second-largest industrial economy in the 1840s.\n\nBelgium's linguistic divide between Dutch-speaking Flanders and French-speaking Wallonia has structured its politics for 150 years and produced the world's most complex federal system. Leopold II's Congo Free State (1885–1908) was one of the most brutal colonial enterprises in history. Today Brussels hosts the headquarters of the European Union and NATO, making Belgium the administrative capital of Western multilateral institutions.",
+  "importanceScore": 9,
+  "wikidataQid": "Q31",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "Belgium's location at the crossroads of European conflicts has led to numerous decisive battles, including Waterloo and Ypres, which shaped the course of World War I. The country's independence in 1830 also had significant regional implications.",
+    "significanceCategory": "continental"
+  },
+  "frameworks": [
+    "GEOPOLITICAL_LINKAGE",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Belgium",
+    "country",
+    "Europe",
+    "Countries / Polities"
+  ],
+  "subjectHeadings": [
+    "Places -- Countries / Polities -- Belgium -- Modern"
+  ],
+  "places": [],
+  "texts": [
+    {
+      "title": "Wikipedia: Belgium",
+      "type": "Reference article",
+      "slug": "belgium"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Belgian Revolution (1830) separating from the Netherlands and establishing an independent constitutional monarchy",
+    "Early industrialization of the Liège-Charleroi basin making Belgium the first continental European industrial power after Britain",
+    "Linguistic and cultural division between Flemish and Walloon populations creating the federal structure",
+    "Strategic location as Europe's crossroads making Belgium the site of major battles from Waterloo to the Bulge"
+  ],
+  "effects": [
+    "Belgian Congo (1908–1960) — following Leopold II's private atrocities; one of Africa's most significant colonial territories",
+    "Brussels as headquarters of the EU and NATO — Belgium as the administrative center of Western multilateral institutions",
+    "Most complex federal system in the world — six governments (federal, 3 regional, 3 community) managing a 11 million-person state",
+    "Industrial revolution model — Belgian engineers and capitalists exported industrial technology across Europe in the 1840s–1860s"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "belgium",
+      "sourceName": "Belgium",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "era-industrial-age",
+      "targetName": "Industrial Age",
+      "context": "Belgium is situated within the Industrial Age (951)"
+    },
+    {
+      "sourceSlug": "belgium",
+      "sourceName": "Belgium",
+      "verb": "LOCATED_IN",
+      "targetSlug": "europe",
+      "targetName": "Europe",
+      "context": "Belgium is located in Europe"
+    },
+    {
+      "sourceSlug": "belgium",
+      "sourceName": "Belgium",
+      "verb": "TRANSFORMS",
+      "targetSlug": "regional-development-modern",
+      "targetName": "Regional Development (Modern)",
+      "context": "Belgium shaped regional development during the Modern era"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "European Union",
+      "targetSlug": "european-union",
+      "note": "Brussels hosts EU headquarters; Belgium was a founding member (1957)"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Leopold II of Belgium",
+      "targetSlug": "leopold-ii-of-belgium",
+      "note": "Belgian king who owned the Congo Free State as personal property (1885–1908)"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "NATO",
+      "targetSlug": "nato",
+      "note": "Brussels hosts NATO headquarters"
+    },
+    {
+      "type": "OCCURS_IN",
+      "target": "Western Europe",
+      "targetSlug": "western-europe",
+      "note": "Northwestern European country at the crossroads of French, Dutch, and German cultures"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-25T00:07:41.147264+00:00",
+  "gateResults": {
+    "summaryLen": 1564,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 7,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/430-Class-430/430belgium.json"
+}

@@ -1,0 +1,112 @@
+{
+  "slug": "pakistan",
+  "label": "Place",
+  "name": "Pakistan",
+  "callNumber": "430.pakistan",
+  "era": "Contemporary",
+  "summary": "Pakistan, officially the Islamic Republic of Pakistan, is a country in South Asia with a population of over 241 million — the fifth-most populous country in the world and the second-largest Muslim-majority nation. Created at independence from British India in 1947, Pakistan was the world's first country founded explicitly as a homeland for Muslims of the Indian subcontinent — an experiment in faith-based nationalism that has shaped its politics ever since.\n\nThe territory of modern Pakistan hosts some of the world's oldest civilizations. The Indus Valley Civilization (3300–1300 BCE) — centered at Mohenjo-daro and Harappa in modern Sindh and Punjab — was among humanity's earliest urban societies, with advanced sanitation, standardized weights, and a still-undeciphered script. The region was conquered by Alexander the Great (327 BCE), the Maurya and Kushan empires, the Ghaznavid and Mughal sultanates, and finally the British East India Company (1849).\n\nSince independence, Pakistan has experienced four military coups (1958, 1969, 1977, 1999), three major wars with India (1947, 1965, 1971), and the trauma of East Pakistan's secession as Bangladesh (1971). The development of nuclear weapons (tested 1998) made Pakistan the world's first Muslim-majority nuclear state and created the most dangerous bilateral nuclear standoff of the 21st century alongside India. Pakistan's hosting of Afghan mujahideen during the Soviet-Afghan War (1979–1989) and subsequent entanglement with the Taliban have made it a central actor in the global War on Terror.",
+  "importanceScore": 9,
+  "wikidataQid": "Q843",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "The Indus Valley Civilization's advanced urban planning and writing system have influenced modern architecture and script development. The region's strategic location facilitated trade and cultural exchange between ancient civilizations.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "GEOPOLITICAL_LINKAGE",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Pakistan",
+    "country",
+    "Asia",
+    "Countries / Polities"
+  ],
+  "subjectHeadings": [
+    "Places -- Countries / Polities -- Pakistan -- Contemporary"
+  ],
+  "places": [],
+  "texts": [
+    {
+      "title": "Wikipedia: Pakistan",
+      "type": "Reference article",
+      "slug": "pakistan"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "British colonial partition of India (1947) creating Pakistan as a separate Muslim-majority state under Muhammad Ali Jinnah's All-India Muslim League",
+    "Two-Nation Theory — the argument that Hindus and Muslims constituted separate nations requiring separate states — providing the ideological foundation for partition",
+    "Indus Valley Civilization providing one of the world's oldest continuous cultural traditions in the territory of modern Pakistan",
+    "Cold War geopolitics making Pakistan a US ally from 1954, receiving military aid that empowered the army's political dominance"
+  ],
+  "effects": [
+    "Partition of British India (1947) — mass migration of 10–20 million people and killing of 200,000–2 million in communal violence",
+    "1971 Bangladesh Liberation War — East Pakistan's secession (with Indian military support) redefining Pakistani national identity",
+    "Nuclear weapons program (tested 1998) — first Muslim-majority nuclear state; most dangerous regional nuclear standoff with India",
+    "Taliban support as strategic 'strategic depth' in Afghanistan — policy that led to Pakistan's central role in post-9/11 conflicts"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "pakistan",
+      "sourceName": "Pakistan",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "era-cold-war-era",
+      "targetName": "Cold War Era",
+      "context": "Pakistan is situated within the Cold War Era (961)"
+    },
+    {
+      "sourceSlug": "pakistan",
+      "sourceName": "Pakistan",
+      "verb": "LOCATED_IN",
+      "targetSlug": "asia",
+      "targetName": "Asia",
+      "context": "Pakistan is located in Asia"
+    },
+    {
+      "sourceSlug": "pakistan",
+      "sourceName": "Pakistan",
+      "verb": "TRANSFORMS",
+      "targetSlug": "regional-development-contemporary",
+      "targetName": "Regional Development (Contemporary)",
+      "context": "Pakistan shaped regional development during the Contemporary era"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "India",
+      "targetSlug": "india",
+      "note": "Partition from India (1947) defines the founding trauma; three subsequent wars"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Muhammad Ali Jinnah",
+      "targetSlug": "muhammad-ali-jinnah",
+      "note": "Founder of Pakistan; first Governor-General"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Indus Valley Civilization",
+      "targetSlug": "indus-valley-civilization",
+      "note": "One of the world's earliest urban civilizations located in modern Pakistan"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Bangladesh",
+      "targetSlug": "bangladesh",
+      "note": "East Pakistan seceded as Bangladesh (1971) after brutal civil war"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-25T02:52:03.511776+00:00",
+  "gateResults": {
+    "summaryLen": 1558,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 7,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/430-Class-430/430pakistan.json"
+}

@@ -1,0 +1,112 @@
+{
+  "slug": "hungary",
+  "label": "Place",
+  "name": "Hungary",
+  "callNumber": "430.hungary",
+  "era": "Medieval",
+  "summary": "Hungary is a landlocked country in Central Europe, spanning much of the Carpathian Basin. It is bordered by Slovakia, Ukraine, Romania, Serbia, Croatia, Slovenia, and Austria. With 10 million people and Budapest as its capital, Hungary occupies the historical heartland of the medieval Kingdom of Hungary — one of Central Europe's most powerful states from the year 1000 to the Ottoman conquest in 1526.\n\nThe Magyar tribes arrived in the Carpathian Basin around 895 CE under Árpád, establishing a nomadic confederation that King Stephen I (r. 1000–1038) transformed into a Christian kingdom organized on the Carolingian model. Medieval Hungary encompassed modern Slovakia, Croatia, Transylvania, and parts of Romania — a multi-ethnic kingdom that was one of the largest states in Europe. The Ottoman Battle of Mohács (1526) killed King Louis II and ended Hungarian independence for 400 years. Partition between Ottoman and Habsburg rule defined the next 150 years before Habsburg reunification (1699).\n\nHungary's 20th century was defined by trauma and transformation: World War I's Treaty of Trianon (1920) stripped two-thirds of its territory and half its population; the Communist period (1949–1989) included the Hungarian Revolution of 1956 — the most significant anti-Soviet uprising in the Eastern Bloc; and EU and NATO accession (2004) integrated Hungary into Western institutions. The Fidesz government under Viktor Orbán (2010–present) has generated sustained controversy over democratic backsliding.",
+  "importanceScore": 9,
+  "wikidataQid": "Q28",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "Medieval Hungary was a multi-ethnic kingdom that encompassed modern Slovakia, Croatia, Transylvania, and parts of Romania, making it one of the largest states in Europe. Its transformation under King Stephen I had significant regional impact.",
+    "significanceCategory": "continental"
+  },
+  "frameworks": [
+    "GEOPOLITICAL_LINKAGE",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Hungary",
+    "country",
+    "Europe",
+    "Countries / Polities"
+  ],
+  "subjectHeadings": [
+    "Places -- Countries / Polities -- Hungary -- Medieval"
+  ],
+  "places": [],
+  "texts": [
+    {
+      "title": "Wikipedia: Hungary",
+      "type": "Reference article",
+      "slug": "hungary"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Magyar tribal confederation arriving in the Carpathian Basin (895 CE) under Árpád and establishing the foundation of the Hungarian state",
+    "Stephen I's Christianization and state-building (1000–1038) transforming nomadic Hungary into a feudal Christian kingdom",
+    "Ottoman victory at Mohács (1526) ending the medieval Kingdom of Hungary and splitting the Carpathian Basin between Ottoman and Habsburg power",
+    "Treaty of Trianon (1920) reducing Hungary to one-third its former size — the defining national trauma of modern Hungarian identity"
+  ],
+  "effects": [
+    "Medieval Kingdom of Hungary (1000–1526) as one of Central Europe's most powerful and enduring states",
+    "Hungarian Revolution (1956) — the most significant anti-Soviet uprising in the Eastern Bloc, crushed by Soviet intervention but inspiring anti-communist movements",
+    "Democratic transition (1989) as Hungary became the first Eastern Bloc state to open its border, triggering the fall of the Berlin Wall",
+    "EU and NATO membership (2004) completing Hungary's post-communist Western integration"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "hungary",
+      "sourceName": "Hungary",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "era-early-medieval",
+      "targetName": "Early Medieval / Dark Ages",
+      "context": "Hungary is situated within the Early Medieval / Dark Ages (931)"
+    },
+    {
+      "sourceSlug": "hungary",
+      "sourceName": "Hungary",
+      "verb": "LOCATED_IN",
+      "targetSlug": "europe",
+      "targetName": "Europe",
+      "context": "Hungary is located in Europe"
+    },
+    {
+      "sourceSlug": "hungary",
+      "sourceName": "Hungary",
+      "verb": "TRANSFORMS",
+      "targetSlug": "regional-development-medieval",
+      "targetName": "Regional Development (Medieval)",
+      "context": "Hungary shaped regional development during the Medieval era"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Stephen I of Hungary",
+      "targetSlug": "stephen-i-of-hungary",
+      "note": "Founded the Christian Kingdom of Hungary (1000 CE)"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Ottoman Empire",
+      "targetSlug": "ottoman-empire",
+      "note": "Battle of Mohács (1526) ended Hungarian independence for 150 years"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Habsburg Empire",
+      "targetSlug": "habsburg-empire",
+      "note": "Habsburg rule (1699–1918) shaped modern Hungarian identity"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Hungarian Revolution of 1956",
+      "targetSlug": "hungarian-revolution-1956",
+      "note": "Most significant anti-Soviet uprising in the Eastern Bloc"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-25T01:29:01.583826+00:00",
+  "gateResults": {
+    "summaryLen": 1508,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 7,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/430-Class-430/430hungary.json"
+}

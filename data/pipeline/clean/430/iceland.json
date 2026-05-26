@@ -1,0 +1,112 @@
+{
+  "slug": "iceland",
+  "label": "Place",
+  "name": "Iceland",
+  "callNumber": "430.iceland",
+  "era": "Modern",
+  "summary": "Iceland is a Nordic island nation in the North Atlantic, straddling the Mid-Atlantic Ridge between the Eurasian and North American tectonic plates. With 370,000 people on 103,000 km², Iceland is the world's most sparsely populated country in Europe and one of the most geologically active territories on Earth — shaped by volcanic eruptions, geothermal vents, and glaciers. It ranks among the most developed countries in the world by every human development metric.\n\nNorse settlement of Iceland began c. 874 CE, according to the Landnámabók (Book of Settlements), led by Ingólfr Arnarson. The Althing, established in 930 CE, is the world's oldest parliament still in operation — a democratic assembly of chieftains that governed Iceland for over three centuries. The Icelandic sagas — literary masterworks composed in the 13th–14th centuries — are among the most significant literary productions of medieval Europe, providing unique insights into Viking-age Scandinavia, exploration (including the discovery of North America by Leif Erikson c. 1000 CE), and early medieval society.\n\nIceland came under Norwegian (1262) and then Danish (1381) sovereignty, becoming independent in 1944 during World War II. Its strategic position led to US basing during the Cold War. Modern Iceland has transformed geothermal energy into near-100% renewable electricity and heating — a model for sustainable energy. The 2008 financial crisis hit Iceland catastrophically (its banks' liabilities were 10× GDP), but the country's decision to let banks fail and prosecute bankers rather than impose austerity resulted in faster recovery than most European peers.",
+  "importanceScore": 9,
+  "wikidataQid": "Q189",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "The establishment of the Althing in 930 CE marked a significant milestone in Icelandic history and governance, influencing the development of parliamentary systems in Europe. Its longevity and adaptability have made it a model for democratic assemblies worldwide.",
+    "significanceCategory": "continental"
+  },
+  "frameworks": [
+    "GEOPOLITICAL_LINKAGE",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Iceland",
+    "country",
+    "Europe",
+    "Countries / Polities"
+  ],
+  "subjectHeadings": [
+    "Places -- Countries / Polities -- Iceland -- Modern"
+  ],
+  "places": [],
+  "texts": [
+    {
+      "title": "Wikipedia: Iceland",
+      "type": "Reference article",
+      "slug": "iceland"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Norse settlement c. 874 CE (Ingólfr Arnarson) establishing the first permanent European settlement in Iceland",
+    "Althing (930 CE) creating the world's oldest parliamentary assembly — shaping Iceland's democratic traditions",
+    "Volcanic geology on the Mid-Atlantic Ridge creating the unique geothermal energy resources that power modern Iceland",
+    "Danish colonial rule (1381–1944) and the Nazi occupation of Denmark providing the trigger for Icelandic independence in 1944"
+  ],
+  "effects": [
+    "Althing (930 CE) — world's oldest surviving parliament, continuously operating for over 1000 years",
+    "Icelandic sagas — 13th–14th century literary masterworks documenting Viking-age exploration including Leif Erikson's Vinland voyage",
+    "Geothermal energy model — Iceland generating 85%+ of primary energy from renewables (geothermal + hydropower)",
+    "2008 financial crisis — Iceland's bank collapse and decision to prosecute bankers becoming an influential model of post-crisis recovery"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "iceland",
+      "sourceName": "Iceland",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "era-world-war-ii-era",
+      "targetName": "World War II Era",
+      "context": "Iceland is situated within the World War II Era (954)"
+    },
+    {
+      "sourceSlug": "iceland",
+      "sourceName": "Iceland",
+      "verb": "LOCATED_IN",
+      "targetSlug": "europe",
+      "targetName": "Europe",
+      "context": "Iceland is located in Europe"
+    },
+    {
+      "sourceSlug": "iceland",
+      "sourceName": "Iceland",
+      "verb": "TRANSFORMS",
+      "targetSlug": "regional-development-modern",
+      "targetName": "Regional Development (Modern)",
+      "context": "Iceland shaped regional development during the Modern era"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Leif Erikson",
+      "targetSlug": "leif-erikson",
+      "note": "Leif Erikson sailed from Iceland to discover Vinland (North America) c. 1000 CE"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Althing",
+      "targetSlug": "althing",
+      "note": "World's oldest parliament, established in Iceland in 930 CE"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Ingólfr Arnarson",
+      "targetSlug": "ingolfr-arnarson",
+      "note": "Traditional first Norse settler of Iceland (c. 874 CE)"
+    },
+    {
+      "type": "OCCURS_IN",
+      "target": "North Atlantic",
+      "targetSlug": "north-atlantic",
+      "note": "Island nation in the North Atlantic on the Mid-Atlantic Ridge"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-25T02:52:03.609317+00:00",
+  "gateResults": {
+    "summaryLen": 1641,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 7,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/430-Class-430/430iceland.json"
+}

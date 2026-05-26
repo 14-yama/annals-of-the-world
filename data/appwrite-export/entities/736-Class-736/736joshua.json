@@ -25,7 +25,7 @@
       "wikidataQid": "Q47680",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Book_of_Joshua",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Aleppo%20Codex%20Joshua%201%201.jpg",
-      "detailsJson": "{\"causes\":[\"Death of Moses at the end of Deuteronomy requiring a narrative continuation for Israel's entry into the Promised Land\",\"Deuteronomistic redaction project (7th–6th centuries BCE) imposing a theological framework of covenant faithfulness = military success onto Israel's history\",\"Conquest theology requiring a narrative of divine land-grant to legitimate Israelite territorial claims in Canaan\"],\"effects\":[\"Deuteronomistic History created with Joshua as its opening book — establishing the interpretive framework for Judges, Samuel, and Kings\",\"Typological interpretation linking Joshua/Jesus (same name) — foundational for Christian scriptural interpretation\",\"Herem (total destruction) theology becoming a controversial text in discussions of biblical genocide and divine command ethics\",\"Fall of Jericho narrative becoming one of the most recognized stories in Western religious tradition\"],\"relationships\":[{\"sourceSlug\":\"joshua\",\"sourceName\":\"Joshua\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-classical\",\"targetName\":\"Classical\",\"context\":\"Joshua is situated within the Classical (920)\"},{\"sourceSlug\":\"joshua\",\"sourceName\":\"Joshua\",\"verb\":\"TRANSMITS\",\"targetSlug\":\"literary-canon-classical\",\"targetName\":\"Literary Canon (Classical)\",\"context\":\"Joshua contributed to the literary canon of the Classical era\"},{\"type\":\"INFLUENCES\",\"target\":\"Moses\",\"targetSlug\":\"moses\",\"note\":\"Joshua succeeds Moses at the beginning of the book\"},{\"type\":\"INFLUENCES\",\"target\":\"Deuteronomy\",\"targetSlug\":\"deuteronomy\",\"note\":\"Joshua opens where Deuteronomy ends; shares the Deuteronomistic theological framework\"},{\"type\":\"INFLUENCES\",\"target\":\"Hebrew Bible\",\"targetSlug\":\"hebrew-bible\",\"note\":\"Sixth book of the Hebrew Bible; first of the Former Prophets\"},{\"type\":\"INFLUENCES\",\"target\":\"Judges\",\"targetSlug\":\"judges\",\"note\":\"Judges follows Joshua as the second book of the Deuteronomistic History\"}],\"places\":[],\"texts\":[{\"title\":\"Wikipedia: Joshua\",\"type\":\"Reference article\",\"slug\":\"joshua\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q47680\",\"https://en.wikipedia.org/wiki/Book_of_Joshua\"],\"tags\":[\"religious text\",\"Other Sacred & Wisdom Texts\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Joshua left a notable mark on Classical history, documented across 115 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\",\"_editLog\":[]}",
+      "detailsJson": "{\"causes\":[\"Death of Moses at the end of Deuteronomy requiring a narrative continuation for Israel's entry into the Promised Land\",\"Deuteronomistic redaction project (7th–6th centuries BCE) imposing a theological framework of covenant faithfulness = military success onto Israel's history\",\"Conquest theology requiring a narrative of divine land-grant to legitimate Israelite territorial claims in Canaan\"],\"effects\":[\"Deuteronomistic History created with Joshua as its opening book — establishing the interpretive framework for Judges, Samuel, and Kings\",\"Typological interpretation linking Joshua/Jesus (same name) — foundational for Christian scriptural interpretation\",\"Herem (total destruction) theology becoming a controversial text in discussions of biblical genocide and divine command ethics\",\"Fall of Jericho narrative becoming one of the most recognized stories in Western religious tradition\"],\"relationships\":[{\"sourceSlug\":\"joshua\",\"sourceName\":\"Joshua\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-classical\",\"targetName\":\"Classical\",\"context\":\"Joshua is situated within the Classical (920)\"},{\"sourceSlug\":\"joshua\",\"sourceName\":\"Joshua\",\"verb\":\"TRANSMITS\",\"targetSlug\":\"literary-canon-classical\",\"targetName\":\"Literary Canon (Classical)\",\"context\":\"Joshua contributed to the literary canon of the Classical era\"},{\"type\":\"INFLUENCES\",\"target\":\"Moses\",\"targetSlug\":\"moses\",\"note\":\"Joshua succeeds Moses at the beginning of the book\"},{\"type\":\"INFLUENCES\",\"target\":\"Deuteronomy\",\"targetSlug\":\"deuteronomy\",\"note\":\"Joshua opens where Deuteronomy ends; shares the Deuteronomistic theological framework\"},{\"type\":\"INFLUENCES\",\"target\":\"Hebrew Bible\",\"targetSlug\":\"hebrew-bible\",\"note\":\"Sixth book of the Hebrew Bible; first of the Former Prophets\"},{\"type\":\"INFLUENCES\",\"target\":\"Judges\",\"targetSlug\":\"judges\",\"note\":\"Judges follows Joshua as the second book of the Deuteronomistic History\"}],\"places\":[],\"texts\":[{\"title\":\"Wikipedia: Joshua\",\"type\":\"Reference article\",\"slug\":\"joshua\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q47680\",\"https://en.wikipedia.org/wiki/Book_of_Joshua\"],\"tags\":[\"religious text\",\"Other Sacred & Wisdom Texts\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Joshua left a notable mark on Classical history, documented across 115 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\",\"_editLog\":[],\"historicalSignificance\":{\"significanceScore\":8,\"significanceNarrative\":\"The Book of Joshua is significant for its role in shaping the Israelite identity and informing the Jewish understanding of their covenant with YHWH. Its narrative has had a lasting impact on Western religious thought, influencing Christian interpretations of the Old Testament.\",\"significanceCategory\":\"regional\"}}",
       "subjectHeadings": [
         "Artifacts & Texts -- Other Sacred & Wisdom Texts -- Global -- Classical"
       ],
@@ -47,13 +47,27 @@
       "$createdAt": "2026-04-05T12:07:26.519+00:00",
       "$updatedAt": "2026-04-06T00:51:26.676+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "validated",
         "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-25T04:18:07.563695+00:00"
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-25T10:00:02.890457+00:00",
+        "gateResults": {
+          "summaryLen": 1585,
+          "paragraphs": 3,
+          "causes": 3,
+          "effects": 4,
+          "relationships": 6,
+          "edgeFloor": 5,
+          "significanceScore": 8
+        }
       },
-      "enrichedAt": "2026-05-24T20:04:20Z"
+      "enrichedAt": "2026-05-24T20:04:20Z",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "The Book of Joshua is significant for its role in shaping the Israelite identity and informing the Jewish understanding of their covenant with YHWH. Its narrative has had a lasting impact on Western religious thought, influencing Christian interpretations of the Old Testament.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

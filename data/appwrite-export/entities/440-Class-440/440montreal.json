@@ -25,7 +25,7 @@
       "wikidataQid": "Q340",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Montreal",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Montreal-canada-parc-urban.jpg",
-      "detailsJson": "{\"causes\":[\"Paul Chomedey de Maisonneuve's 1642 founding of Ville-Marie as a Christian utopian mission on the Island of Montreal\",\"Fur trade economy making Montreal the commercial gateway between interior North America and European markets\",\"British conquest (1760) and French cultural survival creating the dual French-English character of the city\",\"St. Lawrence River location providing the geographic anchor for Montreal's role as the gateway to interior Canada\"],\"effects\":[\"Center of the French-Canadian cultural identity — Montreal as the home of Quebec French literature, cinema, and intellectual life\",\"Quebec separatism movement and the 1970s–1995 referendums reshaping the constitutional politics of Canada\",\"Expo 67 and 1976 Olympics transforming Montreal's international profile and urban infrastructure\",\"Modern hub for aerospace (Bombardier), AI research (Montreal AI Institute), and video games (Ubisoft Montreal)\"],\"relationships\":[{\"sourceSlug\":\"montreal\",\"sourceName\":\"Montreal\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-reformation-era\",\"targetName\":\"Reformation Era\",\"context\":\"Montreal is situated within the Reformation Era (943)\"},{\"sourceSlug\":\"montreal\",\"sourceName\":\"Montreal\",\"verb\":\"LOCATED_IN\",\"targetSlug\":\"americas\",\"targetName\":\"Americas\",\"context\":\"Montreal is located in Americas\"},{\"sourceSlug\":\"montreal\",\"sourceName\":\"Montreal\",\"verb\":\"TRANSFORMS\",\"targetSlug\":\"regional-development-early-modern\",\"targetName\":\"Regional Development (Early Modern)\",\"context\":\"Montreal shaped regional development during the Early Modern era\"},{\"type\":\"INFLUENCES\",\"target\":\"Quebec\",\"targetSlug\":\"quebec\",\"note\":\"Montreal is the largest city and cultural capital of Quebec province\"},{\"type\":\"INFLUENCES\",\"target\":\"Canada\",\"targetSlug\":\"canada\",\"note\":\"Second-largest Canadian city; former Canadian commercial capital until 1970s\"},{\"type\":\"INFLUENCES\",\"target\":\"Jacques Cartier\",\"targetSlug\":\"jacques-cartier\",\"note\":\"Cartier visited the Hochelaga village on the island of Montreal in 1535\"},{\"type\":\"OCCURS_IN\",\"target\":\"North America\",\"targetSlug\":\"north-america\",\"note\":\"Major North American city on the island of Montreal in the St. Lawrence River\"}],\"places\":[],\"texts\":[{\"title\":\"Wikipedia: Montreal\",\"type\":\"Reference article\",\"slug\":\"montreal\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q340\",\"https://en.wikipedia.org/wiki/Montreal\"],\"tags\":[\"Canada\",\"metropolis\",\"Americas\",\"Cities\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Montreal is remembered as a landmark place of the Early Modern era, referenced in 192 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\",\"_editLog\":[]}",
+      "detailsJson": "{\"causes\":[\"Paul Chomedey de Maisonneuve's 1642 founding of Ville-Marie as a Christian utopian mission on the Island of Montreal\",\"Fur trade economy making Montreal the commercial gateway between interior North America and European markets\",\"British conquest (1760) and French cultural survival creating the dual French-English character of the city\",\"St. Lawrence River location providing the geographic anchor for Montreal's role as the gateway to interior Canada\"],\"effects\":[\"Center of the French-Canadian cultural identity — Montreal as the home of Quebec French literature, cinema, and intellectual life\",\"Quebec separatism movement and the 1970s–1995 referendums reshaping the constitutional politics of Canada\",\"Expo 67 and 1976 Olympics transforming Montreal's international profile and urban infrastructure\",\"Modern hub for aerospace (Bombardier), AI research (Montreal AI Institute), and video games (Ubisoft Montreal)\"],\"relationships\":[{\"sourceSlug\":\"montreal\",\"sourceName\":\"Montreal\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-reformation-era\",\"targetName\":\"Reformation Era\",\"context\":\"Montreal is situated within the Reformation Era (943)\"},{\"sourceSlug\":\"montreal\",\"sourceName\":\"Montreal\",\"verb\":\"LOCATED_IN\",\"targetSlug\":\"americas\",\"targetName\":\"Americas\",\"context\":\"Montreal is located in Americas\"},{\"sourceSlug\":\"montreal\",\"sourceName\":\"Montreal\",\"verb\":\"TRANSFORMS\",\"targetSlug\":\"regional-development-early-modern\",\"targetName\":\"Regional Development (Early Modern)\",\"context\":\"Montreal shaped regional development during the Early Modern era\"},{\"type\":\"INFLUENCES\",\"target\":\"Quebec\",\"targetSlug\":\"quebec\",\"note\":\"Montreal is the largest city and cultural capital of Quebec province\"},{\"type\":\"INFLUENCES\",\"target\":\"Canada\",\"targetSlug\":\"canada\",\"note\":\"Second-largest Canadian city; former Canadian commercial capital until 1970s\"},{\"type\":\"INFLUENCES\",\"target\":\"Jacques Cartier\",\"targetSlug\":\"jacques-cartier\",\"note\":\"Cartier visited the Hochelaga village on the island of Montreal in 1535\"},{\"type\":\"OCCURS_IN\",\"target\":\"North America\",\"targetSlug\":\"north-america\",\"note\":\"Major North American city on the island of Montreal in the St. Lawrence River\"}],\"places\":[],\"texts\":[{\"title\":\"Wikipedia: Montreal\",\"type\":\"Reference article\",\"slug\":\"montreal\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q340\",\"https://en.wikipedia.org/wiki/Montreal\"],\"tags\":[\"Canada\",\"metropolis\",\"Americas\",\"Cities\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Montreal is remembered as a landmark place of the Early Modern era, referenced in 192 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\",\"_editLog\":[],\"historicalSignificance\":{\"significanceScore\":8,\"significanceNarrative\":\"As the economic engine of New France and gateway to North American furs, Montreal played a pivotal role in shaping the continent's early fur trade industry, with its strategic location facilitating the exchange of goods between European markets and Native American communities.\",\"significanceCategory\":\"continental\"}}",
       "subjectHeadings": [
         "Places -- Cities -- Canada -- Early Modern"
       ],
@@ -49,13 +49,27 @@
       "$createdAt": "2026-04-05T15:20:39.537+00:00",
       "$updatedAt": "2026-04-06T00:50:48.293+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "validated",
         "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-25T04:16:17.148619+00:00"
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-25T06:53:11.129275+00:00",
+        "gateResults": {
+          "summaryLen": 1548,
+          "paragraphs": 3,
+          "causes": 4,
+          "effects": 4,
+          "relationships": 7,
+          "edgeFloor": 5,
+          "significanceScore": 8
+        }
       },
-      "enrichedAt": "2026-05-24T20:04:20Z"
+      "enrichedAt": "2026-05-24T20:04:20Z",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "As the economic engine of New France and gateway to North American furs, Montreal played a pivotal role in shaping the continent's early fur trade industry, with its strategic location facilitating the exchange of goods between European markets and Native American communities.",
+        "significanceCategory": "continental"
+      }
     }
   ]
 }

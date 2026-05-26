@@ -1,0 +1,112 @@
+{
+  "slug": "angola",
+  "label": "Place",
+  "name": "Angola",
+  "callNumber": "430.angola",
+  "era": "Contemporary",
+  "summary": "Angola, officially the Republic of Angola, is a country on the western coast of Southern Africa. The seventh-largest country in Africa by area, with 36 million people, Angola is the second-largest Portuguese-speaking country after Brazil. Its vast reserves of oil (the second-largest in sub-Saharan Africa) and diamonds have generated enormous wealth that is extremely unequally distributed.\n\nThe Kongo Kingdom — centered at Mbanza Kongo (northern Angola) — was one of the most sophisticated pre-colonial states in Central Africa, with a centralized court, a system of taxation, and diplomatic relations with Portugal from 1483. Portuguese contact and the subsequent Atlantic slave trade devastated the region: Angola became the single largest source of enslaved Africans in the entire Atlantic slave trade — approximately 5.7 million people were forcibly shipped from Angolan ports between 1500 and 1850, primarily to Brazil.\n\nPortuguese colonial rule was formalized in the late 19th century under the Berlin Conference (1884–85) and included brutal forced labor systems well into the 20th century. Angola's independence war (1961–1975) was followed immediately by a catastrophic civil war between MPLA (backed by Cuba and the Soviet Union) and UNITA (backed by the US and South Africa) that lasted 27 years (1975–2002) and killed over half a million people. Since 2002, oil-fueled economic growth has been dramatic but concentrated in an elite. Angola under the MPLA has never held a genuinely competitive election.",
+  "importanceScore": 9,
+  "wikidataQid": "Q916",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "The Kongo Kingdom's diplomatic relations with Portugal from 1483 and its subsequent devastation by the Atlantic slave trade had a profound impact on Angola's history, leading to the country becoming the single largest source of enslaved Africans in the entire Atlantic slave trade.",
+    "significanceCategory": "continental"
+  },
+  "frameworks": [
+    "GEOPOLITICAL_LINKAGE",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Angola",
+    "country",
+    "Africa",
+    "Countries / Polities"
+  ],
+  "subjectHeadings": [
+    "Places -- Countries / Polities -- Angola -- Contemporary"
+  ],
+  "places": [],
+  "texts": [
+    {
+      "title": "Wikipedia: Angola",
+      "type": "Reference article",
+      "slug": "angola"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Kongo Kingdom providing the pre-colonial state structure that Portuguese contact and the slave trade systematically destroyed",
+    "Portuguese pioneering of Atlantic slave trade from Angolan ports — 5.7 million people shipped, primarily to Brazil",
+    "Cold War proxy dynamics (Cuba/Soviet Union vs. US/South Africa) fueling the 27-year civil war after independence (1975–2002)",
+    "Oil discovery (1955) and offshore oil boom creating the rentier economy that sustains the MPLA single-party state"
+  ],
+  "effects": [
+    "Largest source of enslaved Africans in the Atlantic slave trade — 5.7 million people from Angolan ports over 350 years",
+    "Civil war (1975–2002) — 27 years of conflict killing over 500,000 and displacing 4 million in one of Africa's longest wars",
+    "Post-2002 oil boom making Angola one of Africa's fastest-growing economies but with extreme inequality",
+    "MPLA single-party state (1975–present) — one of Africa's most entrenched ruling parties despite democratic elections"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "angola",
+      "sourceName": "Angola",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "era-post-cold-war",
+      "targetName": "Post-Cold War & Globalization",
+      "context": "Angola is situated within the Post-Cold War & Globalization (962)"
+    },
+    {
+      "sourceSlug": "angola",
+      "sourceName": "Angola",
+      "verb": "LOCATED_IN",
+      "targetSlug": "africa",
+      "targetName": "Africa",
+      "context": "Angola is located in Africa"
+    },
+    {
+      "sourceSlug": "angola",
+      "sourceName": "Angola",
+      "verb": "TRANSFORMS",
+      "targetSlug": "regional-development-contemporary",
+      "targetName": "Regional Development (Contemporary)",
+      "context": "Angola shaped regional development during the Contemporary era"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Portugal",
+      "targetSlug": "portugal",
+      "note": "Portuguese colonial rule (1483–1975); Angola remains Lusophone"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Kongo Kingdom",
+      "targetSlug": "kongo-kingdom",
+      "note": "Pre-colonial Kongo Kingdom centered in northern Angola"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Atlantic Slave Trade",
+      "targetSlug": "atlantic-slave-trade",
+      "note": "Angola was the single largest source — 5.7 million enslaved people"
+    },
+    {
+      "type": "OCCURS_IN",
+      "target": "Southern Africa",
+      "targetSlug": "southern-africa",
+      "note": "Located on the western coast of Southern Africa"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-25T02:52:03.806392+00:00",
+  "gateResults": {
+    "summaryLen": 1517,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 7,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/430-Class-430/430angola.json"
+}

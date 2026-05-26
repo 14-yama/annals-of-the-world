@@ -1,0 +1,112 @@
+{
+  "slug": "canada",
+  "label": "Place",
+  "name": "Canada",
+  "callNumber": "430.canada",
+  "era": "Modern",
+  "summary": "Canada is a country in North America, spanning ten provinces and three territories from the Atlantic Ocean to the Pacific Ocean and northward into the Arctic Ocean. The second-largest country by total area (9,984,670 km²), it shares the world's longest international border with the United States. With a population of 38 million, Canada is one of the world's most sparsely populated large nations, with 90% of its people concentrated within 200 km of the US border.\n\nIndigenous peoples inhabited the Canadian territory for at least 14,000 years before European contact. French (1534) and British (1497) exploration and colonization established the colonial rivalry that shaped Canadian identity. The British Conquest of New France (1763) created the tension between Francophone Quebec and Anglophone Canada that remains central to Canadian politics. Confederation in 1867 established the Dominion of Canada as a self-governing British domain; full sovereignty came with the Statute of Westminster (1931) and the Constitution Act (1982).\n\nCanada developed as a resource economy — furs, fish, wheat, timber, and eventually oil sands — while building one of the world's most comprehensive welfare states in the 20th century. Universal healthcare (Medicare, 1966), multiculturalism as official policy (1971), and the Charter of Rights and Freedoms (1982) define Canadian civic identity. Canada-US relations — dominated by the largest bilateral trade relationship in history — and reconciliation with First Nations peoples are the defining political challenges of the 21st century.",
+  "importanceScore": 9,
+  "wikidataQid": "Q16",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "Canada's colonial history and British Conquest of New France (1763) shaped its identity and had a lasting impact on North American politics, with Quebec's Francophone culture remaining a distinct regional entity to this day.",
+    "significanceCategory": "continental"
+  },
+  "frameworks": [
+    "GEOPOLITICAL_LINKAGE",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Canada",
+    "country",
+    "Americas",
+    "Countries / Polities"
+  ],
+  "subjectHeadings": [
+    "Places -- Countries / Polities -- Canada -- Modern"
+  ],
+  "places": [],
+  "texts": [
+    {
+      "title": "Wikipedia: Canada",
+      "type": "Reference article",
+      "slug": "canada"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "British and French colonial rivalry in North America (1534–1763) establishing the dual linguistic heritage",
+    "British Conquest of New France (1763) creating the English-French tension central to Canadian identity",
+    "Confederation (1867) uniting British North American colonies as a response to US expansionist pressure after the Civil War",
+    "Immigration policy attracting millions of settlers (1880s–1920s) to populate the prairies and build the wheat economy"
+  ],
+  "effects": [
+    "Dominion of Canada (1867) establishing a federal model later influential in post-colonial constitutional design worldwide",
+    "Universal Medicare (1966) — Canada's public health insurance system became a model for social democratic governance",
+    "Multiculturalism Act (1971) enshrining cultural pluralism as official state policy — first such policy in the world",
+    "NAFTA/CUSMA trade integration making the Canada-US border the world's largest bilateral trading relationship"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "canada",
+      "sourceName": "Canada",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "era-modern",
+      "targetName": "Modern",
+      "context": "Canada is situated within the Modern (950)"
+    },
+    {
+      "sourceSlug": "canada",
+      "sourceName": "Canada",
+      "verb": "LOCATED_IN",
+      "targetSlug": "americas",
+      "targetName": "Americas",
+      "context": "Canada is located in Americas"
+    },
+    {
+      "sourceSlug": "canada",
+      "sourceName": "Canada",
+      "verb": "TRANSFORMS",
+      "targetSlug": "regional-development-modern",
+      "targetName": "Regional Development (Modern)",
+      "context": "Canada shaped regional development during the Modern era"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "United States",
+      "targetSlug": "united-states",
+      "note": "Shares the world's longest border; dominant trade partner and security ally"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "United Kingdom",
+      "targetSlug": "united-kingdom",
+      "note": "British colonial heritage; Canada remained in Commonwealth after independence"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "First Nations",
+      "targetSlug": "indigenous-peoples-canada",
+      "note": "Indigenous nations whose territories were colonized and whose rights are subject to ongoing reconciliation"
+    },
+    {
+      "type": "OCCURS_IN",
+      "target": "North America",
+      "targetSlug": "north-america",
+      "note": "Second-largest country in the Americas"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-25T02:52:03.830285+00:00",
+  "gateResults": {
+    "summaryLen": 1577,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 7,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/430-Class-430/430canada.json"
+}

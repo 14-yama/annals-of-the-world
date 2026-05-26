@@ -56,12 +56,21 @@
       "$createdAt": "2026-04-05T12:36:44.177+00:00",
       "$updatedAt": "2026-04-05T12:36:44.177+00:00",
       "_pipelineState": {
-        "state": "in-flight",
+        "state": "validated",
         "attempts": 1,
-        "lastGate": "enrich",
-        "lastReason": "claimed-for-llm",
-        "updatedAt": "2026-05-25T04:19:51.187572+00:00",
-        "queuedAt": "2026-05-25T04:19:51.187309+00:00"
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-25T05:33:37.416014+00:00",
+        "queuedAt": "2026-05-25T04:19:51.187309+00:00",
+        "gateResults": {
+          "summaryLen": 1341,
+          "paragraphs": 2,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 5,
+          "edgeFloor": 5,
+          "significanceScore": 7
+        }
       },
       "historicalSignificance": {
         "significanceScore": 7,

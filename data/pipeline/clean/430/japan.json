@@ -1,0 +1,112 @@
+{
+  "slug": "japan",
+  "label": "Place",
+  "name": "Japan",
+  "callNumber": "430.japan",
+  "era": "Contemporary",
+  "summary": "Japan is an island country in East Asia, an archipelago of 6,852 islands in the Pacific Ocean off the northeast coast of the Asian mainland, of which four main islands (Honshu, Hokkaido, Kyushu, Shikoku) constitute 97% of the land area. With 125 million people, Japan is the world's eleventh-most populous country and maintains the world's third-largest economy by GDP.\n\nJapanese civilization has a continuous history of over 2,000 years. The Yayoi period (300 BCE – 300 CE) saw the introduction of wet-rice agriculture and bronze and iron technology. The Nara (710–784) and Heian (794–1185) periods produced Japan's classical literary and artistic culture, including The Tale of Genji (c. 1000 CE) — arguably the world's first novel. The feudal period (1185–1868) saw the rise of the samurai class, the Shogunate system, and centuries of internal warfare before Tokugawa unification (1600). The Meiji Restoration (1868) initiated Japan's rapid modernization — within 50 years it had defeated China (1895) and Russia (1905) and emerged as Asia's first modern imperial power.\n\nJapan's military expansionism culminated in World War II's Pacific theater (1941–1945), ending with the atomic bombings of Hiroshima and Nagasaki (August 1945) and unconditional surrender. Post-war reconstruction produced the Japanese Economic Miracle (1950s–1990s) — the fastest sustained economic growth in history. Japan became the world's second-largest economy (1968–2010), a technological innovator in electronics, automobiles, and robotics. Its 1990 asset bubble collapse and subsequent 'Lost Decades' of stagnation became the paradigmatic case study of post-bubble economic deflation.",
+  "importanceScore": 9,
+  "wikidataQid": "Q17",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "Japan's feudal period saw the rise of the samurai class, which had a significant impact on East Asian politics and culture. The country's classical literary and artistic culture, including The Tale of Genji, also influenced regional and global trends.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "GEOPOLITICAL_LINKAGE",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "Japan",
+    "country",
+    "Asia",
+    "Countries / Polities"
+  ],
+  "subjectHeadings": [
+    "Places -- Countries / Polities -- Japan -- Contemporary"
+  ],
+  "places": [],
+  "texts": [
+    {
+      "title": "Wikipedia: Japan",
+      "type": "Reference article",
+      "slug": "japan"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Island geography creating natural isolation that allowed a distinctive Japanese civilization to develop independently of mainland Asia",
+    "Chinese cultural transmission (Buddhism, writing, Confucianism) arriving through Korea shaping Japanese classical civilization (5th–8th centuries CE)",
+    "Meiji Restoration (1868) launching Japan's rapid industrialization and Western-modeled modernization",
+    "US Occupation (1945–1952) imposing a pacifist constitution and export-oriented industrialization that shaped Japan's post-war order"
+  ],
+  "effects": [
+    "Meiji Japan defeating China (1895) and Russia (1905) — the first time a non-Western nation defeated a European great power in modern warfare",
+    "Japanese Economic Miracle (1950s–1990s) — fastest sustained growth in history, making Japan the world's second-largest economy",
+    "Hiroshima and Nagasaki (1945) — first use of nuclear weapons in warfare, permanently shaping global security discourse and nuclear non-proliferation",
+    "Japanese technological innovation — Toyota Production System, consumer electronics, robotics — reshaping global manufacturing"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "japan",
+      "sourceName": "Japan",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "era-cold-war-era",
+      "targetName": "Cold War Era",
+      "context": "Japan is situated within the Cold War Era (961)"
+    },
+    {
+      "sourceSlug": "japan",
+      "sourceName": "Japan",
+      "verb": "LOCATED_IN",
+      "targetSlug": "asia",
+      "targetName": "Asia",
+      "context": "Japan is located in Asia"
+    },
+    {
+      "sourceSlug": "japan",
+      "sourceName": "Japan",
+      "verb": "TRANSFORMS",
+      "targetSlug": "regional-development-contemporary",
+      "targetName": "Regional Development (Contemporary)",
+      "context": "Japan shaped regional development during the Contemporary era"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "China",
+      "targetSlug": "china",
+      "note": "China as the primary cultural source of Japanese classical civilization (Buddhism, writing)"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "United States",
+      "targetSlug": "united-states",
+      "note": "US occupation (1945–52) and the US-Japan security alliance defining post-war Japan"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Meiji Emperor",
+      "targetSlug": "meiji-emperor",
+      "note": "Meiji Restoration (1868) launched Japan's rapid modernization"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "World War II",
+      "targetSlug": "world-war-ii",
+      "note": "Pacific War (1941–45) ended with atomic bombings and unconditional surrender"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-25T00:07:40.612401+00:00",
+  "gateResults": {
+    "summaryLen": 1668,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 7,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/430-Class-430/430japan.json"
+}

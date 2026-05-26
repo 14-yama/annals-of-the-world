@@ -25,7 +25,7 @@
       "wikidataQid": "Q30340",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Zhengzhou",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/20220812%20Central%20Business%20District%20of%20Zhengdong%20New%20Area.jpg",
-      "detailsJson": "{\"causes\":[\"Shang dynasty establishment of Ao (c. 1600 BCE) as a major Bronze Age capital on the Yellow River Central Plains\",\"Railway junction development in the early 20th century making Zhengzhou the crossroads of China's national rail network\",\"Foxconn's Zhengzhou iPhone assembly complex making it a global electronics manufacturing hub\"],\"effects\":[\"Shang City archaeological site — one of China's most important Bronze Age excavations documenting early Chinese urban civilization\",\"Foxconn Zhengzhou — world's largest iPhone assembly facility employing 300,000 workers at peak\",\"2021 Zhengzhou floods — subway tunnel flooding disaster highlighting risks of rapid Chinese urbanization\"],\"relationships\":[{\"sourceSlug\":\"zhengzhou\",\"sourceName\":\"Zhengzhou\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-classical\",\"targetName\":\"Classical\",\"context\":\"Zhengzhou is situated within the Classical (920)\"},{\"sourceSlug\":\"zhengzhou\",\"sourceName\":\"Zhengzhou\",\"verb\":\"TRANSMITS\",\"targetSlug\":\"literary-canon-classical\",\"targetName\":\"Literary Canon (Classical)\",\"context\":\"Zhengzhou contributed to the literary canon of the Classical era\"},{\"type\":\"INFLUENCES\",\"target\":\"Shang Dynasty\",\"targetSlug\":\"shang-dynasty\",\"note\":\"Shang dynasty capital Ao (c. 1600 BCE) was located at modern Zhengzhou\"},{\"type\":\"INFLUENCES\",\"target\":\"China\",\"targetSlug\":\"china\",\"note\":\"Capital of Henan province; major logistics hub in central China\"},{\"type\":\"INFLUENCES\",\"target\":\"Foxconn\",\"targetSlug\":\"foxconn\",\"note\":\"Foxconn's iPhone assembly complex employing 300,000 workers is located in Zhengzhou\"}],\"places\":[{\"name\":\"China\",\"role\":\"Country\"}],\"texts\":[{\"title\":\"Wikipedia: Zhengzhou\",\"type\":\"Reference article\",\"slug\":\"zhengzhou\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q30340\",\"https://en.wikipedia.org/wiki/Zhengzhou\"],\"tags\":[\"China\",\"big city\",\"Asia\",\"Architecture & Built Works\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Zhengzhou left a notable mark on Classical history, documented across 138 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\",\"_editLog\":[]}",
+      "detailsJson": "{\"causes\":[\"Shang dynasty establishment of Ao (c. 1600 BCE) as a major Bronze Age capital on the Yellow River Central Plains\",\"Railway junction development in the early 20th century making Zhengzhou the crossroads of China's national rail network\",\"Foxconn's Zhengzhou iPhone assembly complex making it a global electronics manufacturing hub\"],\"effects\":[\"Shang City archaeological site — one of China's most important Bronze Age excavations documenting early Chinese urban civilization\",\"Foxconn Zhengzhou — world's largest iPhone assembly facility employing 300,000 workers at peak\",\"2021 Zhengzhou floods — subway tunnel flooding disaster highlighting risks of rapid Chinese urbanization\"],\"relationships\":[{\"sourceSlug\":\"zhengzhou\",\"sourceName\":\"Zhengzhou\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-classical\",\"targetName\":\"Classical\",\"context\":\"Zhengzhou is situated within the Classical (920)\"},{\"sourceSlug\":\"zhengzhou\",\"sourceName\":\"Zhengzhou\",\"verb\":\"TRANSMITS\",\"targetSlug\":\"literary-canon-classical\",\"targetName\":\"Literary Canon (Classical)\",\"context\":\"Zhengzhou contributed to the literary canon of the Classical era\"},{\"type\":\"INFLUENCES\",\"target\":\"Shang Dynasty\",\"targetSlug\":\"shang-dynasty\",\"note\":\"Shang dynasty capital Ao (c. 1600 BCE) was located at modern Zhengzhou\"},{\"type\":\"INFLUENCES\",\"target\":\"China\",\"targetSlug\":\"china\",\"note\":\"Capital of Henan province; major logistics hub in central China\"},{\"type\":\"INFLUENCES\",\"target\":\"Foxconn\",\"targetSlug\":\"foxconn\",\"note\":\"Foxconn's iPhone assembly complex employing 300,000 workers is located in Zhengzhou\"}],\"places\":[{\"name\":\"China\",\"role\":\"Country\"}],\"texts\":[{\"title\":\"Wikipedia: Zhengzhou\",\"type\":\"Reference article\",\"slug\":\"zhengzhou\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q30340\",\"https://en.wikipedia.org/wiki/Zhengzhou\"],\"tags\":[\"China\",\"big city\",\"Asia\",\"Architecture & Built Works\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Zhengzhou left a notable mark on Classical history, documented across 138 Wikipedia editions worldwide. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\",\"_editLog\":[],\"historicalSignificance\":{\"significanceScore\":8,\"significanceNarrative\":\"As the site of the ancient Shang dynasty capital Ao, Zhengzhou played a central role in Chinese civilization during the early Bronze Age. Its archaeological discoveries have provided valuable insights into China's earliest urban centers.\",\"significanceCategory\":\"regional\"}}",
       "subjectHeadings": [
         "Artifacts & Texts -- Architecture & Built Works -- China -- Classical"
       ],
@@ -49,13 +49,27 @@
       "$createdAt": "2026-04-05T12:09:45.586+00:00",
       "$updatedAt": "2026-04-06T00:51:32.635+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "validated",
         "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-25T04:14:40.016542+00:00"
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-25T09:58:06.374428+00:00",
+        "gateResults": {
+          "summaryLen": 1490,
+          "paragraphs": 3,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 5,
+          "edgeFloor": 5,
+          "significanceScore": 8
+        }
       },
-      "enrichedAt": "2026-05-24T20:06:56Z"
+      "enrichedAt": "2026-05-24T20:06:56Z",
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "As the site of the ancient Shang dynasty capital Ao, Zhengzhou played a central role in Chinese civilization during the early Bronze Age. Its archaeological discoveries have provided valuable insights into China's earliest urban centers.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

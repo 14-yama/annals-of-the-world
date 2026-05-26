@@ -1,0 +1,112 @@
+{
+  "slug": "puerto-rico",
+  "label": "Place",
+  "name": "Puerto Rico",
+  "callNumber": "426.puerto-rico",
+  "era": "Modern",
+  "summary": "Puerto Rico, officially the Commonwealth of Puerto Rico, is a self-governing unincorporated territory of the United States in the Caribbean, comprising an archipelago between the Dominican Republic and the US Virgin Islands. With 3.2 million residents (and another 5 million Puerto Ricans on the US mainland), Puerto Rico occupies a constitutionally anomalous position: its residents are US citizens but cannot vote in federal elections and lack full congressional representation.\n\nIndigenous Taíno people inhabited the island for over a millennium before Columbus landed in 1493. Spanish colonization (from 1508) established San Juan as a major Caribbean fortification. Puerto Rico remained Spanish until the Spanish-American War of 1898, when the Treaty of Paris transferred sovereignty to the United States — beginning a colonial relationship that has never been resolved. The Jones Act of 1917 granted US citizenship to Puerto Ricans, enabling mass migration; Operation Bootstrap (1948–1970s) industrialized the economy with American capital but ultimately failed to eliminate poverty.\n\nHurricane Maria (September 2017) was the island's defining modern catastrophe — a Category 4 hurricane that caused an estimated 2,975 deaths and $90 billion in damage, with the inadequate federal response exposing the inequalities of territorial status. Puerto Rico's current $70 billion debt crisis (since 2016), ongoing debates about statehood or independence, and the brain drain from outmigration define the central questions of its political future.",
+  "importanceScore": 9,
+  "wikidataQid": "Q1183",
+  "historicalSignificance": {
+    "significanceScore": 8,
+    "significanceNarrative": "Puerto Rico's transfer of sovereignty in 1898 led to the US acquisition of a strategic Caribbean territory, altering regional politics and economic dynamics. The island's status as a US territory has had lasting implications for its residents' citizenship rights and representation.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "GEOPOLITICAL_LINKAGE",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "United States",
+    "cultural region",
+    "Americas",
+    "Regions"
+  ],
+  "subjectHeadings": [
+    "Places -- The Americas -- Puerto Rico -- Modern"
+  ],
+  "places": [],
+  "texts": [
+    {
+      "title": "Wikipedia: Puerto Rico",
+      "type": "Reference article",
+      "slug": "puerto-rico"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Spanish colonization (1508) establishing Puerto Rico as a strategic Caribbean military base for protecting the silver fleets",
+    "Spanish-American War (1898) transferring Puerto Rico from Spain to the United States as an unincorporated territory",
+    "Jones Act (1917) granting US citizenship to Puerto Ricans, enabling mass migration to the mainland while denying full political rights",
+    "Operation Bootstrap (1948) seeking US investment-led industrialization but creating dependency and structural poverty"
+  ],
+  "effects": [
+    "Largest Puerto Rican diaspora in the continental US (5 million) — larger than the island's own population",
+    "$70 billion debt crisis (2016) — the largest US municipal/territory debt collapse, subject to federal oversight board",
+    "Hurricane Maria (2017) — catastrophic storm killing 2,975 with inadequate federal response exposing inequalities of territorial status",
+    "Ongoing status debates — statehood, independence, or enhanced commonwealth — unresolved after 125 years of US control"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "puerto-rico",
+      "sourceName": "Puerto Rico",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "era-age-of-empire",
+      "targetName": "Age of Empire / New Imperialism",
+      "context": "Puerto Rico is situated within the Age of Empire / New Imperialism (952)"
+    },
+    {
+      "sourceSlug": "puerto-rico",
+      "sourceName": "Puerto Rico",
+      "verb": "LOCATED_IN",
+      "targetSlug": "americas",
+      "targetName": "Americas",
+      "context": "Puerto Rico is located in Americas"
+    },
+    {
+      "sourceSlug": "puerto-rico",
+      "sourceName": "Puerto Rico",
+      "verb": "TRANSFORMS",
+      "targetSlug": "regional-development-modern",
+      "targetName": "Regional Development (Modern)",
+      "context": "Puerto Rico shaped regional development during the Modern era"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "United States",
+      "targetSlug": "united-states",
+      "note": "US unincorporated territory since 1898; Puerto Ricans are US citizens"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Spain",
+      "targetSlug": "spain",
+      "note": "Spanish colony 1508–1898; retains Spanish language and culture"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Taíno",
+      "targetSlug": "taino",
+      "note": "Indigenous Taíno civilization present before Columbus's 1493 arrival"
+    },
+    {
+      "type": "OCCURS_IN",
+      "target": "Caribbean",
+      "targetSlug": "caribbean",
+      "note": "Caribbean archipelago between Dominican Republic and US Virgin Islands"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-25T04:09:15.029011+00:00",
+  "gateResults": {
+    "summaryLen": 1545,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 7,
+    "edgeFloor": 5,
+    "significanceScore": 8
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/426-Class-426/426puerto-rico.json"
+}

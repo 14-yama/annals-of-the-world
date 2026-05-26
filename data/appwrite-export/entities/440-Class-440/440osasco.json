@@ -25,7 +25,7 @@
       "wikidataQid": "Q4035",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Osasco",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Caio%20Badner%20-%20Osasco.JPG",
-      "detailsJson": "{\"causes\":[\"Industrialization of Greater São Paulo (1950s–1970s) driving rapid population growth and factory development in Osasco\",\"Cobrasma metalworker strike (1968) — one of the first major labor actions against the Brazilian military dictatorship\",\"Municipal independence movement (1962) led by Chico Jurema separating Osasco from São Paulo\"],\"effects\":[\"Center of Brazilian labor movement activism — 1968 strikes inspiring later union organizing that produced the PT and Lula\",\"Banco Bradesco headquarters in Osasco — transformation from industrial to financial center\",\"Lula and the Workers' Party (PT) emergence from the Greater São Paulo industrial labor tradition\"],\"relationships\":[{\"sourceSlug\":\"osasco\",\"sourceName\":\"Osasco\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-cold-war-era\",\"targetName\":\"Cold War Era\",\"context\":\"Osasco is situated within the Cold War Era (961)\"},{\"sourceSlug\":\"osasco\",\"sourceName\":\"Osasco\",\"verb\":\"LOCATED_IN\",\"targetSlug\":\"americas\",\"targetName\":\"Americas\",\"context\":\"Osasco is located in Americas\"},{\"sourceSlug\":\"osasco\",\"sourceName\":\"Osasco\",\"verb\":\"TRANSFORMS\",\"targetSlug\":\"regional-development-contemporary\",\"targetName\":\"Regional Development (Contemporary)\",\"context\":\"Osasco shaped regional development during the Contemporary era\"},{\"type\":\"INFLUENCES\",\"target\":\"São Paulo\",\"targetSlug\":\"sao-paulo\",\"note\":\"Satellite city of São Paulo; formerly a São Paulo district\"},{\"type\":\"INFLUENCES\",\"target\":\"Luiz Inácio Lula da Silva\",\"targetSlug\":\"lula\",\"note\":\"Lula's metalworker union activism was shaped by the ABC Paulista labor movement in which Osasco participated\"},{\"type\":\"OCCURS_IN\",\"target\":\"Brazil\",\"targetSlug\":\"brazil\",\"note\":\"Municipality in São Paulo state, Brazil\"}],\"places\":[],\"texts\":[{\"title\":\"Wikipedia: Osasco\",\"type\":\"Reference article\",\"slug\":\"osasco\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q4035\",\"https://en.wikipedia.org/wiki/Osasco\"],\"tags\":[\"Brazil\",\"big city\",\"Americas\",\"Cities\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Osasco is remembered as a landmark place of the Contemporary era, referenced in 216 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\",\"_editLog\":[]}",
+      "detailsJson": "{\"causes\":[\"Industrialization of Greater São Paulo (1950s–1970s) driving rapid population growth and factory development in Osasco\",\"Cobrasma metalworker strike (1968) — one of the first major labor actions against the Brazilian military dictatorship\",\"Municipal independence movement (1962) led by Chico Jurema separating Osasco from São Paulo\"],\"effects\":[\"Center of Brazilian labor movement activism — 1968 strikes inspiring later union organizing that produced the PT and Lula\",\"Banco Bradesco headquarters in Osasco — transformation from industrial to financial center\",\"Lula and the Workers' Party (PT) emergence from the Greater São Paulo industrial labor tradition\"],\"relationships\":[{\"sourceSlug\":\"osasco\",\"sourceName\":\"Osasco\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-cold-war-era\",\"targetName\":\"Cold War Era\",\"context\":\"Osasco is situated within the Cold War Era (961)\"},{\"sourceSlug\":\"osasco\",\"sourceName\":\"Osasco\",\"verb\":\"LOCATED_IN\",\"targetSlug\":\"americas\",\"targetName\":\"Americas\",\"context\":\"Osasco is located in Americas\"},{\"sourceSlug\":\"osasco\",\"sourceName\":\"Osasco\",\"verb\":\"TRANSFORMS\",\"targetSlug\":\"regional-development-contemporary\",\"targetName\":\"Regional Development (Contemporary)\",\"context\":\"Osasco shaped regional development during the Contemporary era\"},{\"type\":\"INFLUENCES\",\"target\":\"São Paulo\",\"targetSlug\":\"sao-paulo\",\"note\":\"Satellite city of São Paulo; formerly a São Paulo district\"},{\"type\":\"INFLUENCES\",\"target\":\"Luiz Inácio Lula da Silva\",\"targetSlug\":\"lula\",\"note\":\"Lula's metalworker union activism was shaped by the ABC Paulista labor movement in which Osasco participated\"},{\"type\":\"OCCURS_IN\",\"target\":\"Brazil\",\"targetSlug\":\"brazil\",\"note\":\"Municipality in São Paulo state, Brazil\"}],\"places\":[],\"texts\":[{\"title\":\"Wikipedia: Osasco\",\"type\":\"Reference article\",\"slug\":\"osasco\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q4035\",\"https://en.wikipedia.org/wiki/Osasco\"],\"tags\":[\"Brazil\",\"big city\",\"Americas\",\"Cities\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Osasco is remembered as a landmark place of the Contemporary era, referenced in 216 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\",\"_editLog\":[],\"historicalSignificance\":{\"significanceScore\":6,\"significanceNarrative\":\"Osasco's transformation from an industrial heartland to a center of services and financial industries had significant regional impact on São Paulo state's economic development. The city's rapid growth led to the ABC Paulista labor movement, influencing workers' strikes in 1968.\",\"significanceCategory\":\"regional\"}}",
       "subjectHeadings": [
         "Places -- Cities -- Brazil -- Contemporary"
       ],
@@ -49,13 +49,27 @@
       "$createdAt": "2026-04-05T15:21:31.197+00:00",
       "$updatedAt": "2026-04-06T00:50:53.307+00:00",
       "_pipelineState": {
-        "state": "triaged",
+        "state": "validated",
         "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-25T04:16:16.741888+00:00"
+        "lastGate": "validate",
+        "lastReason": "pass",
+        "updatedAt": "2026-05-25T06:53:10.894883+00:00",
+        "gateResults": {
+          "summaryLen": 1570,
+          "paragraphs": 3,
+          "causes": 3,
+          "effects": 3,
+          "relationships": 6,
+          "edgeFloor": 3,
+          "significanceScore": 6
+        }
       },
-      "enrichedAt": "2026-05-24T20:04:20Z"
+      "enrichedAt": "2026-05-24T20:04:20Z",
+      "historicalSignificance": {
+        "significanceScore": 6,
+        "significanceNarrative": "Osasco's transformation from an industrial heartland to a center of services and financial industries had significant regional impact on São Paulo state's economic development. The city's rapid growth led to the ABC Paulista labor movement, influencing workers' strikes in 1968.",
+        "significanceCategory": "regional"
+      }
     }
   ]
 }

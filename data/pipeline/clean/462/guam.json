@@ -1,0 +1,112 @@
+{
+  "slug": "guam",
+  "label": "Place",
+  "name": "Guam",
+  "callNumber": "462.guam",
+  "era": "Modern",
+  "summary": "Guam is an island and organized, unincorporated territory of the United States in the Micronesia subregion of the western Pacific Ocean. With 160,000 people on 549 km², Guam is the southernmost and largest island in the Mariana Islands. Its residents are US citizens, but like Puerto Rico's residents, they cannot vote in presidential elections. Guam hosts major US military installations — Andersen Air Force Base and Naval Station Guam — making it one of the most strategically important US military positions in the western Pacific.\n\nChamorro people inhabited Guam for at least 3,500 years before Magellan's arrival in 1521 made it the first Pacific island visited by Europeans. Spanish colonization (from 1668) and missionary activity devastated the Chamorro population — estimated at 50,000–100,000 in 1668 and reduced to approximately 5,000 by 1700 through disease, warfare, and forced relocation. Spain transferred Guam to the United States after the Spanish-American War (1898).\n\nJapanese occupation (1941–1944) during World War II was marked by brutality against Chamorro civilians; US liberation in August 1944 was achieved through intense fighting at the Battle of Guam. The Cold War transformed Guam into a major forward base for US power projection in Asia. In the 21st century, US military buildup — transferring Marines from Okinawa — has made Guam central to US military strategy vis-à-vis China and North Korea. The ongoing question of Guam's political status (territory vs. statehood vs. independence) remains unresolved.",
+  "importanceScore": 9,
+  "wikidataQid": "Q16635",
+  "historicalSignificance": {
+    "significanceScore": 5,
+    "significanceNarrative": "Guam's strategic importance as a US military outpost has had significant regional implications for Pacific security and diplomacy, particularly in the context of Cold War-era alliances.",
+    "significanceCategory": "regional"
+  },
+  "frameworks": [
+    "GEOPOLITICAL_LINKAGE",
+    "CAUSE_AND_EFFECT"
+  ],
+  "subjects": [
+    "United States",
+    "island",
+    "Americas",
+    "Maritime & Island Civilizations"
+  ],
+  "subjectHeadings": [
+    "Places -- Maritime & Island Civilizations -- United States -- Modern"
+  ],
+  "places": [],
+  "texts": [
+    {
+      "title": "Wikipedia: Guam",
+      "type": "Reference article",
+      "slug": "guam"
+    }
+  ],
+  "quote": "",
+  "causes": [
+    "Magellan's 1521 arrival making Guam the first Pacific island in European contact — and Spanish colonization decimating the Chamorro population",
+    "Spanish-American War (1898) transferring Guam to the United States as a strategic Pacific base",
+    "Japanese attack and occupation (1941–1944) — brutal occupation marking Guam's most traumatic historical experience",
+    "Cold War US military buildup making Guam a major forward base for Pacific power projection"
+  ],
+  "effects": [
+    "Chamorro population devastation under Spanish colonization (estimated 90%+ decline 1668–1700)",
+    "US territory since 1898 — Chamorro residents are US citizens but cannot vote in federal elections",
+    "Battle of Guam (1944) — fought as part of the Pacific Island hopping campaign that recaptured the island from Japan",
+    "Major US military hub in the 21st century — central to US Indo-Pacific strategy against China and North Korea"
+  ],
+  "relationships": [
+    {
+      "sourceSlug": "guam",
+      "sourceName": "Guam",
+      "verb": "OCCURS_DURING",
+      "targetSlug": "era-age-of-empire",
+      "targetName": "Age of Empire / New Imperialism",
+      "context": "Guam is situated within the Age of Empire / New Imperialism (952)"
+    },
+    {
+      "sourceSlug": "guam",
+      "sourceName": "Guam",
+      "verb": "LOCATED_IN",
+      "targetSlug": "americas",
+      "targetName": "Americas",
+      "context": "Guam is located in Americas"
+    },
+    {
+      "sourceSlug": "guam",
+      "sourceName": "Guam",
+      "verb": "TRANSFORMS",
+      "targetSlug": "regional-development-modern",
+      "targetName": "Regional Development (Modern)",
+      "context": "Guam shaped regional development during the Modern era"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "United States",
+      "targetSlug": "united-states",
+      "note": "US territory since 1898; major US military installations"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Spain",
+      "targetSlug": "spain",
+      "note": "Spanish colony 1668–1898; colonization devastated Chamorro population"
+    },
+    {
+      "type": "INFLUENCES",
+      "target": "Japan",
+      "targetSlug": "japan",
+      "note": "Japanese occupied Guam 1941–1944 during World War II with brutality toward Chamorro civilians"
+    },
+    {
+      "type": "OCCURS_IN",
+      "target": "Pacific Ocean",
+      "targetSlug": "pacific-ocean",
+      "note": "Western Pacific Ocean; southernmost of the Mariana Islands"
+    }
+  ],
+  "pipelineStatus": "promoted",
+  "promotedAt": "2026-05-25T06:53:26.313008+00:00",
+  "gateResults": {
+    "summaryLen": 1539,
+    "paragraphs": 3,
+    "causes": 4,
+    "effects": 4,
+    "relationships": 7,
+    "edgeFloor": 3,
+    "significanceScore": 5
+  },
+  "enrichmentVersion": 1,
+  "sourceFile": "data/appwrite-export/entities/462-Class-462/462guam.json"
+}

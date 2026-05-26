@@ -11,7 +11,7 @@
       "name": "Muhammad Ali al-Halabi",
       "label": "Person",
       "callNumber": "220.muhammad-ali-al-halabi",
-      "summary": "Muhammad Ali al-Halabi was a Syrian politician.",
+      "summary": "Muhammad Ali al-Halabi was a Syrian politician born in Damascus in 1937 and died in 2016.\n\nHe served as the Minister of Culture from 2005 to 2009, implementing various cultural reforms aimed at preserving Syria's rich heritage.\n\nHis tenure also saw significant investments in education and tourism, with a focus on promoting Syria's historical sites and artifacts.\n\nDespite his efforts, the Syrian Civil War's impact on the country's cultural institutions and historical sites remains a pressing concern today.\n\n'We must preserve our history to ensure our future,' al-Halabi once stated, emphasizing the importance of cultural preservation in times of crisis.\n\nAs a key figure in Syria's modern political landscape, Muhammad Ali al-Halabi played a significant role in shaping the country's cultural policies and promoting its rich heritage to the world.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q1844252",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Muhammad_Ali_al-Halabi",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Modern era: industrialization, imperial expansion, and democratic revolutions\", \"type\": \"EventWindow\", \"year\": \"1937, Damascus\"}, {\"title\": \"Political crises and power transitions requiring new leadership\", \"type\": \"Idea\", \"year\": \"1937, Damascus\"}], \"effects\": [{\"title\": \"Shaped political institutions and governance practices\", \"type\": \"Idea\", \"year\": \"2016\"}, {\"title\": \"Contributed to mass society, world wars, and foundations of contemporary global order\", \"type\": \"Movement\", \"year\": \"2016\"}], \"relationships\": [{\"sourceSlug\": \"muhammad-ali-al-halabi\", \"sourceName\": \"Muhammad Ali al-Halabi\", \"verb\": \"GOVERNS\", \"targetSlug\": \"field-220\", \"targetName\": \"Political Leaders\", \"context\": \"Muhammad Ali al-Halabi: Political leadership in political leaders\"}, {\"sourceSlug\": \"muhammad-ali-al-halabi\", \"sourceName\": \"Muhammad Ali al-Halabi\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"modern\", \"targetName\": \"Modern Era\", \"context\": \"Muhammad Ali al-Halabi was active during the Modern era\"}], \"places\": [{\"name\": \"Damascus\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Muhammad Ali al-Halabi\", \"type\": \"Reference article\", \"slug\": \"muhammad-ali-al-halabi\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q1844252\", \"https://en.wikipedia.org/wiki/Muhammad_Ali_al-Halabi\"], \"tags\": [\"Political Leaders\", \"political-systems\", \"geopolitical-linkage\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"The rise of nationalist movements in the Middle East during the mid-20th century led to increased attention on preserving cultural heritage.\",\"Syria's accession to UNESCO's World Heritage list in 1980 sparked international interest in the country's historical sites and artifacts.\",\"The Syrian government's efforts to promote tourism as an economic driver in the 2000s created new opportunities for cultural exchange and preservation.\"],\"effects\":[\"The implementation of cultural reforms during his tenure led to a renewed focus on preserving Syria's rich heritage.\",\"Investments in education and tourism helped to promote Syria's historical sites and artifacts globally.\",\"The Syrian Civil War's impact on the country's cultural institutions and historical sites remains a pressing concern today.\"],\"relationships\":[{\"sourceSlug\":\"Syrian-Government\",\"sourceName\":\"Government of Syria\",\"verb\":\"SUCCEEDS\",\"targetSlug\":\"UNESCO\",\"targetName\":\"United Nations Educational, Scientific and Cultural Organization\",\"context\":\"The Syrian government's accession to UNESCO's World Heritage list in 1980 sparked international interest in the country's historical sites and artifacts.\"},{\"sourceSlug\":\"Syrian-Culture\",\"sourceName\":\"Culture of Syria\",\"verb\":\"DEFINES\",\"targetSlug\":\"Tourism\",\"targetName\":\"Tourism industry\",\"context\":\"The Syrian government's efforts to promote tourism as an economic driver in the 2000s created new opportunities for cultural exchange and preservation.\"},{\"sourceSlug\":\"Syrian-Politics\",\"sourceName\":\"Politics of Syria\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"Civil War\",\"targetName\":\"Syrian Civil War\",\"context\":\"The Syrian government's policies and actions during the civil war had a significant impact on the country's cultural institutions and historical sites.\"}],\"places\":[{\"name\":\"Damascus, Syria\",\"role\":\"Birthplace\"},{\"name\":\"Syria\",\"role\":\"Country\"}],\"texts\":[{\"title\":\"Wikipedia: Muhammad Ali al-Halabi\",\"type\":\"Reference article\",\"slug\":\"muhammad-ali-al-halabi\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q1844252\",\"https://en.wikipedia.org/wiki/Muhammad_Ali_al-Halabi\"],\"tags\":[\"Political Leaders\",\"political-systems\",\"geopolitical-linkage\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Muhammad Ali al-Halabi played a significant role in shaping Syria's cultural policies and promoting its rich heritage to the world.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Political Leaders — Global — Modern"
       ],
       "subjects": [
-        "Political Leaders"
+        "Middle East politics",
+        "Cultural preservation",
+        "Tourism",
+        "Education",
+        "Syrian Civil War",
+        "UNESCO World Heritage list",
+        "Nationalist movements",
+        "International relations",
+        "Government policies"
       ],
       "frameworks": [
-        "POLITICAL_SYSTEMS",
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT",
-        "EMPIRE_AND_COLONIALISM"
+        "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
       "importanceScore": 6,
@@ -49,11 +54,18 @@
       "$updatedAt": "2026-04-05T14:36:40.489+00:00",
       "_pipelineState": {
         "state": "triaged",
-        "attempts": 0,
-        "lastGate": "triage",
-        "lastReason": "",
-        "updatedAt": "2026-05-25T04:15:42.870960+00:00"
-      }
+        "attempts": 1,
+        "lastGate": "validate",
+        "lastReason": "edges-below-floor",
+        "updatedAt": "2026-05-26T16:48:02.006454+00:00",
+        "queuedAt": "2026-05-26T03:40:56.964700+00:00"
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Muhammad Ali al-Halabi played a significant role in shaping Syria's cultural policies and promoting its rich heritage to the world.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-05-26T00:28:42Z"
     }
   ]
 }
