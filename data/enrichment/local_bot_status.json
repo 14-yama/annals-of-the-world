@@ -247065,5 +247065,34 @@
       "Nothing to commit \u2014 working tree clean."
     ],
     "exitCode": 0
+  },
+  "sync-1780781031": {
+    "job_id": "sync-1780781031",
+    "bot": "sync",
+    "status": "error",
+    "model": "none",
+    "count": 200,
+    "pid": 65017,
+    "started": "2026-06-06T21:23:51Z",
+    "finished": "2026-06-06T21:23:52Z",
+    "log": [
+      "ERROR: Set APPWRITE_API_KEY env var (or pass --dry-run)"
+    ],
+    "exitCode": 1
+  },
+  "git-push-1780781032": {
+    "job_id": "git-push-1780781032",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-06-06T21:23:52Z",
+    "finished": null,
+    "log": [
+      "Pending files: 4 entities, 0 edges (4 total)",
+      "git add data/ scripts/ ..."
+    ],
+    "exitCode": null
   }
 }
