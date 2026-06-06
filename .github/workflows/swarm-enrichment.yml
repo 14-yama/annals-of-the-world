@@ -210,16 +210,11 @@ jobs:
           git add data/appwrite-export/ data/enrichment/ data/governance/bot_kpi/ || true
           git diff --cached --quiet && echo "nothing to commit" && exit 0
 
-          COMMIT_MSG="$(cat <<EOF
-swarm: slot-${{ matrix.slot }} gen-${{ needs.setup.outputs.generation }} run-${{ github.run_id }}
-
-Automated enrichment by swarm bot.
-Task: $(cat /tmp/swarm_task_${{ matrix.slot }}.txt 2>/dev/null || echo unknown)
-Items processed: $(cat /tmp/swarm_count_${{ matrix.slot }}.txt 2>/dev/null || echo 0)
-[skip ci]
-EOF
-)"
-          git commit -m "$COMMIT_MSG"
+          TASK_NAME="$(cat /tmp/swarm_task_${{ matrix.slot }}.txt 2>/dev/null || echo unknown)"
+          ITEM_COUNT="$(cat /tmp/swarm_count_${{ matrix.slot }}.txt 2>/dev/null || echo 0)"
+          git commit \
+            -m "swarm: slot-${{ matrix.slot }} gen-${{ needs.setup.outputs.generation }} run-${{ github.run_id }} [skip ci]" \
+            -m "Automated enrichment by swarm bot. Task: ${TASK_NAME}. Items processed: ${ITEM_COUNT}."
 
           # Retry push up to 3 times (handle concurrent slot pushes gracefully)
           for attempt in 1 2 3; do
