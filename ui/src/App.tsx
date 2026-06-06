@@ -59,6 +59,11 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  // Localhost startup (manual):
+  // 1) cd ui
+  // 2) npm install
+  // 3) npm run dev
+  // 4) open http://localhost:5173/curator/bots (Bot KPI dashboard)
   return (
     <>
       <ScrollToTop />

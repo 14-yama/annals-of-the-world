@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import {
   ChevronLeft, Activity, GitBranch, AlertTriangle, CheckCircle2, Clock, Pause,
   Cpu, Swords, Zap, StopCircle, RefreshCw, Server, CloudOff, Cloud,
-  TrendingUp, Bot, Gauge, Layers,
+  TrendingUp, Bot, Gauge, Layers, BarChart2, Calendar, Repeat,
+  ExternalLink, Users,
 } from 'lucide-react'
 import { Query } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../../lib/appwrite'
@@ -35,6 +36,83 @@ interface AuditReport {
   generatedAt?: string
   summary?: Record<string, number | string>
   [k: string]: unknown
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Swarm helpers — hoisted before the component so useCallback can reference them
+   ────────────────────────────────────────────────────────────────────────── */
+function slotToTask(slot: number): string {
+  if (slot <= 7)  return 'enrichment'
+  if (slot <= 11) return 'edges'
+  if (slot <= 15) return 'significance'
+  if (slot === 16) return 'audit'
+  if (slot === 17) return 'consistency'
+  if (slot === 18) return 'sync'
+  return 'queue_refresh'
+}
+
+const TASK_COLOR: Record<string, string> = {
+  enrichment:    '#4285F4',
+  edges:         '#1ABC9C',
+  significance:  '#8E44AD',
+  audit:         '#27AE60',
+  consistency:   '#D4AF37',
+  sync:          '#9E9A90',
+  queue_refresh: '#E67E22',
+}
+
+/* Swarm types */
+interface SwarmSlotKpi {
+  slot: number
+  task: string
+  taskColor?: string
+  runId?: string
+  runUrl?: string
+  generation?: number
+  startedAt?: string
+  finishedAt?: string
+  itemsProcessed?: number
+  itemsSucceeded?: number
+  itemsFailed?: number
+  respawnTriggered?: boolean
+  respawnAt?: string
+  wallTimeS?: number
+  model?: string
+  status?: 'running' | 'done' | 'respawning' | 'error' | 'pending'
+}
+
+interface SwarmDailyRow {
+  date: string
+  totalProcessed?: number
+  totalSucceeded?: number
+  totalFailed?: number
+  enrichment?: number
+  edges?: number
+  significance?: number
+  audit?: number
+  sync?: number
+  respawns?: number
+}
+
+interface CombinedDayRow {
+  date: string
+  localJobs?: number
+  localDone?: number
+  swarmProcessed?: number
+  swarmSucceeded?: number
+  swarmEnrichment?: number
+  swarmEdges?: number
+  swarmSignificance?: number
+  grandTotal?: number
+}
+
+interface LocalKpi {
+  updatedAt?: string
+  totalJobsAllTime?: number
+  last24h?: { totalJobs: number; doneJobs: number; errorJobs: number; successRate: number; byTask: Record<string, number> }
+  last7d?:  { totalJobs: number; doneJobs: number; errorJobs: number; successRate: number; byTask: Record<string, number> }
+  last30d?: { totalJobs: number; doneJobs: number; errorJobs: number; successRate: number; byTask: Record<string, number> }
+  days?: Array<{ date: string; totalJobs: number; doneJobs: number; errorJobs: number }>
 }
 
 interface EnrichmentLastRun {
@@ -309,12 +387,19 @@ export default function BotKpiDashboard() {
   const [last24hRows, setLast24hRows] = useState<number>(0)
   const [last1hRows, setLast1hRows] = useState<number>(0)
 
+  // Swarm state
+  const [swarmSlots, setSwarmSlots] = useState<SwarmSlotKpi[]>([])
+  const [swarmDaily, setSwarmDaily] = useState<SwarmDailyRow[]>([])
+  const [localKpi, setLocalKpi] = useState<LocalKpi | null>(null)
+  const [combinedDays, setCombinedDays] = useState<CombinedDayRow[]>([])
+
   // UI state
   const [autoRefresh, setAutoRefresh] = useState(true)
   const [lastRefresh, setLastRefresh] = useState<Date>(new Date())
   const [assistingBot, setAssistingBot] = useState<Record<string, boolean>>({})
   const [assistAllActive, setAssistAllActive] = useState(false)
   const [showLocalLog, setShowLocalLog] = useState<string | null>(null)
+  const [histPeriod, setHistPeriod] = useState<'day' | 'week' | 'month'>('week')
 
   /* ── Local Bot API ─────────────────────────────────────────────────────── */
 
@@ -371,6 +456,26 @@ export default function BotKpiDashboard() {
   }
 
   /* ── Telemetry loader ──────────────────────────────────────────────────── */
+
+  /* ── Swarm KPI loader ─────────────────────────────────────────────────── */
+  const loadSwarmKpis = useCallback(async () => {
+    // Load all 20 slot files in parallel
+    const slots = await Promise.all(
+      Array.from({ length: 20 }, (_, i) =>
+        fetchJSON<SwarmSlotKpi>(`/governance/bot_kpi/slot-${i}.json`)
+      )
+    )
+    setSwarmSlots(slots.map((s, i) => s ?? { slot: i, task: slotToTask(i), status: 'pending' }))
+
+    const [daily, lkpi, combined] = await Promise.all([
+      fetchJSON<{ days: SwarmDailyRow[] }>('/governance/bot_kpi/swarm_daily.json'),
+      fetchJSON<LocalKpi>('/governance/bot_kpi/local_kpi.json'),
+      fetchJSON<{ days: CombinedDayRow[] }>('/governance/bot_kpi/combined_kpi.json'),
+    ])
+    if (daily?.days) setSwarmDaily(daily.days)
+    if (lkpi) setLocalKpi(lkpi)
+    if (combined?.days) setCombinedDays(combined.days)
+  }, [])
 
   const loadTelemetry = useCallback(async () => {
     const reportFiles = BOT_ROSTER.filter(b => b.reportFile).map(b => b.reportFile!)
@@ -446,12 +551,14 @@ export default function BotKpiDashboard() {
     loadTelemetry()
     loadAuditActivity()
     pollLocalStatus()
+    loadSwarmKpis()
     if (!autoRefresh) return
     const t1 = setInterval(loadTelemetry, 5000)
     const t2 = setInterval(pollLocalStatus, 3000)
     const t3 = setInterval(loadAuditActivity, 15000)
-    return () => { clearInterval(t1); clearInterval(t2); clearInterval(t3) }
-  }, [autoRefresh, loadTelemetry, loadAuditActivity, pollLocalStatus])
+    const t4 = setInterval(loadSwarmKpis, 10000)
+    return () => { clearInterval(t1); clearInterval(t2); clearInterval(t3); clearInterval(t4) }
+  }, [autoRefresh, loadTelemetry, loadAuditActivity, pollLocalStatus, loadSwarmKpis])
 
   /* ── Derived KPIs ──────────────────────────────────────────────────────── */
 
@@ -1023,6 +1130,80 @@ export default function BotKpiDashboard() {
         </Box>
       )}
 
+      {/* ════════════════════════════════════════════════════════════════════
+          GH SWARM — 20 PARALLEL BOTS
+          ════════════════════════════════════════════════════════════════ */}
+      <SectionHeader
+        icon={<Users size={16} color="#E67E22" />}
+        title="GH Swarm — 20 Parallel Bots"
+        subtitle="Self-replicating conveyor belt · each bot respawns at 90% time limit · all 20 run concurrently on GitHub's free tier"
+      />
+
+      {/* Swarm summary bar */}
+      <Box mb={4} p={4} borderRadius="lg"
+        bg="linear-gradient(135deg, #2D2A24 0%, #1A1713 100%)"
+        border="1px solid #C5963A40">
+        <SimpleGrid columns={{ base: 2, md: 4, lg: 7 }} gap={3}>
+          <SwarmKpiCell label="Active Bots" value={String(swarmSlots.filter(s => s.status === 'running' || s.status === 'respawning').length)} sub="currently running" color="#E67E22" />
+          <SwarmKpiCell label="Enrichment" value={String(swarmSlots.filter(s => s.task === 'enrichment').length)} sub="slots 0-7" color="#4285F4" />
+          <SwarmKpiCell label="Edges" value={String(swarmSlots.filter(s => s.task === 'edges').length)} sub="slots 8-11" color="#1ABC9C" />
+          <SwarmKpiCell label="Significance" value={String(swarmSlots.filter(s => s.task === 'significance').length)} sub="slots 12-15" color="#8E44AD" />
+          <SwarmKpiCell label="Audit" value={String(swarmSlots.filter(s => ['audit','consistency'].includes(s.task)).length)} sub="slots 16-17" color="#27AE60" />
+          <SwarmKpiCell label="Support" value={String(swarmSlots.filter(s => ['sync','queue_refresh'].includes(s.task)).length)} sub="slots 18-19" color="#9E9A90" />
+          <SwarmKpiCell
+            label="Today Processed"
+            value={(swarmDaily.at(-1)?.totalSucceeded ?? 0).toLocaleString()}
+            sub={swarmDaily.at(-1)?.date ?? 'no data'}
+            color="#D4AF37"
+          />
+        </SimpleGrid>
+      </Box>
+
+      {/* 20-slot grid */}
+      <SimpleGrid columns={{ base: 4, md: 5, lg: 10 }} gap={2} mb={6}>
+        {swarmSlots.map(slot => (
+          <SwarmSlotCard key={slot.slot} slot={slot} />
+        ))}
+      </SimpleGrid>
+
+      {/* ════════════════════════════════════════════════════════════════════
+          HISTORICAL PERFORMANCE — Day / Week / Month
+          ════════════════════════════════════════════════════════════════ */}
+      <SectionHeader
+        icon={<BarChart2 size={16} color="#4A90D9" />}
+        title="Historical Performance"
+        subtitle="Combined local + cloud swarm — items processed over time"
+      />
+
+      {/* Period selector */}
+      <Flex gap={2} mb={4}>
+        {(['day', 'week', 'month'] as const).map(p => (
+          <Box key={p} as="button" onClick={() => setHistPeriod(p)}
+            px={3} py={1.5} borderRadius="md" fontSize="11px" fontWeight={700}
+            cursor="pointer"
+            bg={histPeriod === p ? '#4A90D9' : '#F5F4F0'}
+            color={histPeriod === p ? 'white' : '#787469'}
+            border={`1px solid ${histPeriod === p ? '#4A90D9' : '#E4E2DC'}`}>
+            {p.charAt(0).toUpperCase() + p.slice(1)}
+          </Box>
+        ))}
+        <Box flex={1} />
+        {localKpi && (
+          <Text fontSize="10px" color="#9E9A90" alignSelf="center">
+            Local KPI updated {relTime(localKpi.updatedAt)}
+          </Text>
+        )}
+      </Flex>
+
+      <HistoricalChart days={combinedDays} period={histPeriod} />
+
+      {/* Window summary cards */}
+      <SimpleGrid columns={{ base: 1, md: 3 }} gap={3} mb={6} mt={3}>
+        <WindowCard period="24h" localKpi={localKpi?.last24h} swarmDays={swarmDaily} windowDays={1} />
+        <WindowCard period="7 days" localKpi={localKpi?.last7d} swarmDays={swarmDaily} windowDays={7} />
+        <WindowCard period="30 days" localKpi={localKpi?.last30d} swarmDays={swarmDaily} windowDays={30} />
+      </SimpleGrid>
+
       {/* Gemini detailed monitor */}
       <SectionHeader icon={<Layers size={16} color="#4285F4" />}
         title="Gemini Detailed Monitor" subtitle="Cloud bot deep-dive · quota · request log" />
@@ -1036,6 +1217,230 @@ export default function BotKpiDashboard() {
 /* ─────────────────────────────────────────────────────────────────────────────
    Sub-components
    ────────────────────────────────────────────────────────────────────────── */
+
+/* ─── SwarmKpiCell ─────────────────────────────────────────────────────── */
+function SwarmKpiCell({ label, value, sub, color }: {
+  label: string; value: string; sub: string; color: string
+}) {
+  return (
+    <Box textAlign="center">
+      <Text fontSize="20px" fontWeight={700} color={color}
+        fontFamily='"Cormorant Garamond", serif' lineHeight="1.1">
+        {value}
+      </Text>
+      <Text fontSize="9px" fontWeight={700} color="#9E9A90"
+        letterSpacing="0.06em" textTransform="uppercase">{label}</Text>
+      <Text fontSize="9px" color="#787469">{sub}</Text>
+    </Box>
+  )
+}
+
+/* ─── SwarmSlotCard ────────────────────────────────────────────────────── */
+function SwarmSlotCard({ slot }: { slot: SwarmSlotKpi }) {
+  const task  = slot.task || slotToTask(slot.slot)
+  const color = slot.taskColor || TASK_COLOR[task] || '#9E9A90'
+  const st    = slot.status ?? 'pending'
+  const stColor =
+    st === 'running'    ? '#E67E22' :
+    st === 'respawning' ? '#4285F4' :
+    st === 'done'       ? '#27AE60' :
+    st === 'error'      ? '#C0392B' : '#9E9A90'
+
+  return (
+    <Box p={2} borderRadius="md"
+      bg={st === 'running' ? '#FFF9F0' : st === 'respawning' ? '#EEF3FF' : st === 'done' ? '#F0FFF4' : '#F5F4F0'}
+      border={`1px solid ${stColor}40`}
+      borderTop={`3px solid ${color}`}
+      title={`Slot ${slot.slot}: ${task} · gen ${slot.generation ?? 1} · ${st}`}>
+      <Text fontSize="9px" fontWeight={700} color="#787469" textTransform="uppercase"
+        letterSpacing="0.05em" mb={0.5}>
+        #{slot.slot}
+      </Text>
+      <Text fontSize="8px" fontWeight={700} color={color} noOfLines={1}>
+        {task.replace('_', ' ')}
+      </Text>
+      <Flex align="center" gap={1} mt={1}>
+        {st === 'running'    && <Spinner size="xs" color={stColor} />}
+        {st === 'done'       && <CheckCircle2 size={8} color={stColor} />}
+        {st === 'respawning' && <Repeat size={8} color={stColor} />}
+        {st === 'error'      && <AlertTriangle size={8} color={stColor} />}
+        {st === 'pending'    && <Clock size={8} color={stColor} />}
+        <Text fontSize="8px" fontWeight={700} color={stColor} textTransform="uppercase">
+          {st === 'respawning' ? `↻g${slot.generation ?? 1}` : st}
+        </Text>
+      </Flex>
+      {(slot.itemsSucceeded ?? 0) > 0 && (
+        <Text fontSize="9px" color="#787469" mt={0.5}>
+          {slot.itemsSucceeded} ok
+        </Text>
+      )}
+      {slot.runUrl && (
+        <Box as="a" href={slot.runUrl} target="_blank" rel="noopener noreferrer"
+          display="flex" alignItems="center" gap={0.5} mt={0.5}>
+          <ExternalLink size={7} color="#9E9A90" />
+          <Text fontSize="7px" color="#9E9A90">run</Text>
+        </Box>
+      )}
+    </Box>
+  )
+}
+
+/* ─── HistoricalChart ──────────────────────────────────────────────────── */
+function HistoricalChart({ days, period }: {
+  days: CombinedDayRow[]; period: 'day' | 'week' | 'month'
+}) {
+  // Determine how many days back to show
+  const lookback = period === 'day' ? 1 : period === 'week' ? 7 : 30
+  const cutoff = new Date(Date.now() - lookback * 86400_000)
+    .toISOString().slice(0, 10)
+  const visible = days.filter(d => d.date >= cutoff)
+
+  if (visible.length === 0) {
+    return (
+      <Box p={4} bg="#F5F4F0" borderRadius="md" textAlign="center" mb={2}>
+        <Text fontSize="12px" color="#9E9A90">
+          No historical data yet — data populates after the first swarm run.
+        </Text>
+        <Text fontSize="10px" color="#9E9A90" mt={1}>
+          Launch the swarm via GitHub Actions → swarm-enrichment workflow → "Run workflow"
+        </Text>
+      </Box>
+    )
+  }
+
+  const maxTotal = Math.max(...visible.map(d => d.grandTotal ?? 0), 1)
+
+  return (
+    <Box p={3} bg="white" border="1px solid #E4E2DC" borderRadius="md" mb={2}>
+      <Flex align="flex-end" gap={1} h="80px" px={1}>
+        {visible.map(d => {
+          const total   = d.grandTotal ?? 0
+          const swarm   = d.swarmSucceeded ?? 0
+          const local   = d.localDone ?? 0
+          const barH    = maxTotal > 0 ? Math.max(2, (total / maxTotal) * 72) : 2
+          const swarmH  = total > 0 ? (swarm / Math.max(1, total)) * barH : 0
+          const localH  = total > 0 ? (local / Math.max(1, total)) * barH : 0
+          return (
+            <Box key={d.date} flex={1} display="flex" flexDir="column"
+              alignItems="center" gap={0} title={`${d.date}: ${total} total`}>
+              <Box w="100%" display="flex" flexDir="column" alignItems="center"
+                justifyContent="flex-end" h="72px" gap="1px">
+                {swarmH > 0 && (
+                  <Box w="100%" h={`${swarmH}px`} bg="#2471A3" borderRadius="1px"
+                    title={`Cloud: ${swarm}`} />
+                )}
+                {localH > 0 && (
+                  <Box w="100%" h={`${localH}px`} bg="#27AE60" borderRadius="1px"
+                    title={`Local: ${local}`} />
+                )}
+              </Box>
+              {visible.length <= 14 && (
+                <Text fontSize="7px" color="#9E9A90" mt={0.5}
+                  transform="rotate(-40deg)" transformOrigin="top center"
+                  whiteSpace="nowrap">
+                  {d.date.slice(5)}
+                </Text>
+              )}
+            </Box>
+          )
+        })}
+      </Flex>
+      <Flex gap={4} mt={2} pt={1} borderTop="1px solid #F5F4F0" justify="flex-end">
+        <Flex align="center" gap={1}>
+          <Box w={2} h={2} bg="#2471A3" borderRadius="sm" />
+          <Text fontSize="9px" color="#787469">Cloud swarm</Text>
+        </Flex>
+        <Flex align="center" gap={1}>
+          <Box w={2} h={2} bg="#27AE60" borderRadius="sm" />
+          <Text fontSize="9px" color="#787469">Local Ollama</Text>
+        </Flex>
+        <Text fontSize="9px" color="#9E9A90" ml={2}>
+          peak: {maxTotal.toLocaleString()} items/day
+        </Text>
+      </Flex>
+    </Box>
+  )
+}
+
+/* ─── WindowCard ───────────────────────────────────────────────────────── */
+function WindowCard({ period, localKpi, swarmDays, windowDays }: {
+  period: string
+  localKpi?: { totalJobs: number; doneJobs: number; errorJobs: number; successRate: number; byTask: Record<string, number> } | null
+  swarmDays: SwarmDailyRow[]
+  windowDays: number
+}) {
+  const cutoff = new Date(Date.now() - windowDays * 86400_000)
+    .toISOString().slice(0, 10)
+  const relevant = swarmDays.filter(d => d.date >= cutoff)
+  const swarmTotal   = relevant.reduce((s, d) => s + (d.totalSucceeded ?? 0), 0)
+  const swarmFailed  = relevant.reduce((s, d) => s + (d.totalFailed ?? 0), 0)
+  const enrichTotal  = relevant.reduce((s, d) => s + (d.enrichment ?? 0), 0)
+  const edgesTotal   = relevant.reduce((s, d) => s + (d.edges ?? 0), 0)
+  const sigTotal     = relevant.reduce((s, d) => s + (d.significance ?? 0), 0)
+  const localTotal   = localKpi?.totalJobs ?? 0
+  const localDone    = localKpi?.doneJobs ?? 0
+  const grandTotal   = swarmTotal + localDone
+
+  return (
+    <Box p={3} bg="white" border="1px solid #E4E2DC" borderRadius="md">
+      <Flex align="center" gap={2} mb={3}>
+        <Calendar size={13} color="#4A90D9" />
+        <Text fontSize="11px" fontWeight={700} color="#787469"
+          letterSpacing="0.06em" textTransform="uppercase">
+          Last {period}
+        </Text>
+        <Box ml="auto">
+          <Text fontSize="18px" fontWeight={700}
+            fontFamily='"Cormorant Garamond", serif' color="#2D2A24">
+            {grandTotal.toLocaleString()}
+          </Text>
+          <Text fontSize="9px" color="#9E9A90" textAlign="right">total items</Text>
+        </Box>
+      </Flex>
+      <Flex gap={2} mb={2}>
+        <Box flex={1} p={2} bg="#EEF3FF" borderRadius="sm">
+          <Text fontSize="13px" fontWeight={700} color="#2471A3">{swarmTotal.toLocaleString()}</Text>
+          <Text fontSize="9px" color="#787469">☁ Cloud swarm</Text>
+          {swarmFailed > 0 && (
+            <Text fontSize="8px" color="#C0392B">{swarmFailed} failed</Text>
+          )}
+        </Box>
+        <Box flex={1} p={2} bg="#F0FFF4" borderRadius="sm">
+          <Text fontSize="13px" fontWeight={700} color="#27AE60">{localDone.toLocaleString()}</Text>
+          <Text fontSize="9px" color="#787469">💻 Local bot</Text>
+          {localTotal > 0 && (
+            <Text fontSize="8px" color="#9E9A90">{localKpi?.successRate ?? 0}% ok</Text>
+          )}
+        </Box>
+      </Flex>
+      {(enrichTotal + edgesTotal + sigTotal) > 0 && (
+        <Box>
+          <Text fontSize="9px" fontWeight={700} color="#787469" mb={1}
+            letterSpacing="0.05em" textTransform="uppercase">
+            Breakdown
+          </Text>
+          <Flex gap={1} flexWrap="wrap">
+            {enrichTotal > 0 && (
+              <Box px={1.5} py={0.5} bg="#4285F420" borderRadius="sm">
+                <Text fontSize="8px" color="#4285F4" fontWeight={700}>{enrichTotal} enriched</Text>
+              </Box>
+            )}
+            {edgesTotal > 0 && (
+              <Box px={1.5} py={0.5} bg="#1ABC9C20" borderRadius="sm">
+                <Text fontSize="8px" color="#1ABC9C" fontWeight={700}>{edgesTotal} edges</Text>
+              </Box>
+            )}
+            {sigTotal > 0 && (
+              <Box px={1.5} py={0.5} bg="#8E44AD20" borderRadius="sm">
+                <Text fontSize="8px" color="#8E44AD" fontWeight={700}>{sigTotal} scored</Text>
+              </Box>
+            )}
+          </Flex>
+        </Box>
+      )}
+    </Box>
+  )
+}
 
 function KpiCell({ icon, label, value, sub, color }: {
   icon: React.ReactNode; label: string; value: string; sub: string; color: string

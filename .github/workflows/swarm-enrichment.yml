@@ -1,0 +1,228 @@
+name: "🐝 Swarm Enrichment — 20 Parallel Bots"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Self-replicating conveyor belt of 20 simultaneous runner bots.
+# Each bot installs Ollama (llama3.2:3b), shards the enrichment queue by slot,
+# and processes its portion until the 90% time limit (5h 24m).
+# At 90%, each bot fires a workflow_dispatch to respawn itself as a fresh clone.
+#
+# Task assignment by slot:
+#   0-7   → enrichment      (summary writing — highest priority)
+#   8-11  → edges           (relationship generation)
+#   12-15 → significance    (historicalSignificance backfill)
+#   16    → audit           (completeness + orphan reports)
+#   17    → consistency     (era/slug/callNumber validation)
+#   18    → sync            (push enriched files to Appwrite)
+#   19    → queue_refresh   (rebuild enrichment queue + stats)
+#
+# Prerequisites (GitHub Secrets):
+#   GEMINI_API_KEY  — fallback if Ollama stalls; used by significance/edge bots
+#   APPWRITE_API_KEY — for sync bot (slot 18) only
+#   BOT_PAT         — PAT with 'workflow' scope for self-respawn
+#                     (go to Settings → Secrets → Actions to add)
+#                     If absent, swarm runs once without respawning.
+# ─────────────────────────────────────────────────────────────────────────────
+
+on:
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "Single slot to run (leave blank = launch all 20)"
+        default: ""
+        type: string
+      generation:
+        description: "Respawn generation (auto-incremented on respawn)"
+        default: "1"
+        type: string
+      batch_size:
+        description: "Items per processing cycle"
+        default: "10"
+        type: string
+      time_limit:
+        description: "Max runtime in seconds (default 19440 = 5h24m)"
+        default: "19440"
+        type: string
+
+  # Allow other workflows to trigger a single-slot respawn
+  repository_dispatch:
+    types: [swarm-bot-respawn]
+
+concurrency:
+  group: "swarm-enrichment-${{ github.event.inputs.slot || github.event.client_payload.slot || 'all' }}"
+  cancel-in-progress: false
+
+jobs:
+  # ── Step 1: generate the matrix (all 20 or just the respawned slot) ────────
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      slots: ${{ steps.gen.outputs.slots }}
+      generation: ${{ steps.gen.outputs.generation }}
+      batch_size: ${{ steps.gen.outputs.batch_size }}
+      time_limit: ${{ steps.gen.outputs.time_limit }}
+    steps:
+      - id: gen
+        run: |
+          # Determine slot list
+          SLOT="${{ github.event.inputs.slot || github.event.client_payload.slot }}"
+          if [ -n "$SLOT" ] && [ "$SLOT" != "" ]; then
+            echo "slots=[$SLOT]" >> "$GITHUB_OUTPUT"
+            echo "🔁 Respawning single slot $SLOT"
+          else
+            echo 'slots=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]' >> "$GITHUB_OUTPUT"
+            echo "🚀 Launching full 20-bot swarm"
+          fi
+
+          # Generation counter (how many times this slot has respawned)
+          GEN="${{ github.event.inputs.generation || github.event.client_payload.generation || '1' }}"
+          echo "generation=$GEN" >> "$GITHUB_OUTPUT"
+
+          # Processing params
+          BATCH="${{ github.event.inputs.batch_size || github.event.client_payload.batch_size || '10' }}"
+          echo "batch_size=$BATCH" >> "$GITHUB_OUTPUT"
+
+          TLIMIT="${{ github.event.inputs.time_limit || github.event.client_payload.time_limit || '19440' }}"
+          echo "time_limit=$TLIMIT" >> "$GITHUB_OUTPUT"
+
+  # ── Step 2: the actual bot workers (matrix) ───────────────────────────────
+  bot:
+    needs: setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 350   # 5h 50m hard cap — GH Actions max is 6h for public repos
+    permissions:
+      contents: write
+      actions: write
+    strategy:
+      matrix:
+        slot: ${{ fromJson(needs.setup.outputs.slots) }}
+      fail-fast: false    # never cancel sibling bots on failure
+
+    steps:
+      # ── Checkout ─────────────────────────────────────────────────────────
+      - uses: actions/checkout@v4
+        with:
+          ref: clean/audit-system
+          fetch-depth: 1
+          token: ${{ secrets.BOT_PAT || secrets.GITHUB_TOKEN }}
+
+      # ── Python ────────────────────────────────────────────────────────────
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Python deps
+        run: pip install -r requirements.txt --quiet
+
+      # ── Node (for sync bot, slot 18) ───────────────────────────────────
+      - name: Install Node.js (for sync bot)
+        if: matrix.slot == 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Node deps (for sync bot)
+        if: matrix.slot == 18
+        run: cd ui && npm ci --quiet || npm install --quiet
+        working-directory: ${{ github.workspace }}
+
+      # ── Install Ollama (CPU inference — free, no GPU required) ───────────
+      - name: Install Ollama
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          # Start daemon in background
+          ollama serve &
+          echo "Waiting for Ollama to start…"
+          for i in $(seq 1 30); do
+            sleep 2
+            if curl -sf http://localhost:11434/api/tags > /dev/null 2>&1; then
+              echo "✓ Ollama is up (attempt $i)"
+              break
+            fi
+          done
+
+      - name: Pull llama3.2:3b model
+        run: |
+          echo "Pulling llama3.2:3b (CPU quantized ~2GB)…"
+          ollama pull llama3.2:3b
+          echo "✓ Model ready"
+
+      # ── Generate enrichment queue (idempotent) ────────────────────────────
+      - name: Generate enrichment queue
+        if: matrix.slot < 16
+        run: python3 scripts/enrichment_queue.py --limit 5000
+
+      # ── Run the swarm worker ──────────────────────────────────────────────
+      - name: "Run bot slot ${{ matrix.slot }} (gen ${{ needs.setup.outputs.generation }})"
+        id: worker
+        env:
+          SWARM_SLOT:        ${{ matrix.slot }}
+          SWARM_GENERATION:  ${{ needs.setup.outputs.generation }}
+          SWARM_BATCH_SIZE:  ${{ needs.setup.outputs.batch_size }}
+          SWARM_TIME_LIMIT:  ${{ needs.setup.outputs.time_limit }}
+          GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY:    ${{ secrets.OPENAI_API_KEY }}
+          APPWRITE_API_KEY:  ${{ secrets.APPWRITE_API_KEY }}
+          APPWRITE_ENDPOINT: ${{ secrets.APPWRITE_ENDPOINT || 'https://cloud.appwrite.io/v1' }}
+          APPWRITE_DATABASE_ID: ${{ secrets.APPWRITE_DATABASE_ID }}
+          GITHUB_ACTIONS:    "true"
+          OLLAMA_HOST:       "http://localhost:11434"
+        run: |
+          python3 scripts/swarm_worker.py \
+            --slot     "$SWARM_SLOT" \
+            --gen      "$SWARM_GENERATION" \
+            --batch    "$SWARM_BATCH_SIZE" \
+            --limit    "$SWARM_TIME_LIMIT"
+
+      # ── Trigger respawn if bot set the flag ───────────────────────────────
+      - name: "Respawn slot ${{ matrix.slot }} (gen ${{ needs.setup.outputs.generation }}+1)"
+        if: steps.worker.outputs.respawn == 'true'
+        env:
+          BOT_PAT: ${{ secrets.BOT_PAT || github.token }}
+          NEXT_GEN: ${{ steps.worker.outputs.next_generation }}
+        run: |
+          if [ -z "$BOT_PAT" ]; then
+            echo "::warning::No token available — respawn skipped (swarm runs once per trigger)"
+            exit 0
+          fi
+
+          SLOT="${{ matrix.slot }}"
+          echo "🔁 Triggering respawn: slot=$SLOT gen=$NEXT_GEN"
+
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $BOT_PAT" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${{ github.repository }}/actions/workflows/swarm-enrichment.yml/dispatches" \
+            -d "{\"ref\":\"clean/audit-system\",\"inputs\":{\"slot\":\"$SLOT\",\"generation\":\"$NEXT_GEN\",\"batch_size\":\"${{ needs.setup.outputs.batch_size }}\",\"time_limit\":\"${{ needs.setup.outputs.time_limit }}\"}}"
+
+          echo "✓ Respawn dispatched — slot $SLOT gen $NEXT_GEN is booting"
+
+      # ── Commit enriched files + KPI ───────────────────────────────────────
+      - name: Commit output (slot ${{ matrix.slot }})
+        run: |
+          git config user.email "swarm-bot-${{ matrix.slot }}@annals-of-the-world"
+          git config user.name  "Swarm Bot Slot-${{ matrix.slot }}"
+
+          # Pull latest before committing (reduce merge conflicts)
+          git pull --rebase --autostash origin clean/audit-system || true
+
+          git add data/appwrite-export/ data/enrichment/ data/governance/bot_kpi/ || true
+          git diff --cached --quiet && echo "nothing to commit" && exit 0
+
+          git commit -m \
+            "swarm: slot-${{ matrix.slot }} gen-${{ needs.setup.outputs.generation }} run-${{ github.run_id }}
+
+Automated enrichment by swarm bot. Task: $(cat /tmp/swarm_task_${{ matrix.slot }}.txt 2>/dev/null || echo unknown)
+Items processed: $(cat /tmp/swarm_count_${{ matrix.slot }}.txt 2>/dev/null || echo 0)
+[skip ci]"
+
+          # Retry push up to 3 times (handle concurrent slot pushes gracefully)
+          for attempt in 1 2 3; do
+            if git push origin clean/audit-system; then
+              echo "✓ Pushed (attempt $attempt)"
+              break
+            fi
+            echo "Push attempt $attempt failed — rebasing and retrying…"
+            git pull --rebase origin clean/audit-system || true
+          done

@@ -93,8 +93,12 @@ while true; do
       >> "$LOG_DIR/annals-bot-significance.log" 2>&1 || true
   fi
 
-  # ── 4. Git commit + push (sync gateway runs in cloud after push) ──
-  log "Step 4/4: Committing enriched files..."
+  # ── 4. Aggregate local KPI (keeps the dashboard fresh) ──
+  log "Step 4/5: Updating local KPI…"
+  python3 scripts/local_kpi_aggregator.py >> "$LOG_DIR/annals-bot-kpi.log" 2>&1 || true
+
+  # ── 5. Git commit + push (sync gateway runs in cloud after push) ──
+  log "Step 5/5: Committing enriched files..."
   CHANGED=$(git diff --name-only data/appwrite-export/entities/ | wc -l)
   if [ "$CHANGED" -gt 0 ]; then
     git add data/appwrite-export/entities/ data/enrichment/ 2>/dev/null || true
