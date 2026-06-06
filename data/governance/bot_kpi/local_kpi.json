@@ -1,34 +1,40 @@
 {
-  "updatedAt": "2026-06-06T20:37:34Z",
-  "totalJobsAllTime": 6335,
+  "updatedAt": "2026-06-06T21:11:33Z",
+  "totalJobsAllTime": 6342,
   "last24h": {
     "windowDays": 1,
-    "totalJobs": 0,
-    "doneJobs": 0,
-    "errorJobs": 0,
-    "successRate": 0.0,
-    "byTask": {}
+    "totalJobs": 7,
+    "doneJobs": 3,
+    "errorJobs": 4,
+    "successRate": 42.9,
+    "byTask": {
+      "enrich": 4,
+      "significance": 3
+    }
   },
   "last7d": {
     "windowDays": 7,
-    "totalJobs": 0,
-    "doneJobs": 0,
-    "errorJobs": 0,
-    "successRate": 0.0,
-    "byTask": {}
+    "totalJobs": 7,
+    "doneJobs": 3,
+    "errorJobs": 4,
+    "successRate": 42.9,
+    "byTask": {
+      "enrich": 4,
+      "significance": 3
+    }
   },
   "last30d": {
     "windowDays": 30,
-    "totalJobs": 6335,
-    "doneJobs": 5123,
-    "errorJobs": 1212,
-    "successRate": 80.9,
+    "totalJobs": 6342,
+    "doneJobs": 5126,
+    "errorJobs": 1216,
+    "successRate": 80.8,
     "byTask": {
       "sync": 1979,
       "git-push": 2137,
       "queue": 5,
-      "enrich": 1111,
-      "significance": 1102,
+      "enrich": 1115,
+      "significance": 1105,
       "sync-push": 1
     }
   },
@@ -207,6 +213,16 @@
         "enrich": 226,
         "significance": 226,
         "queue": 1
+      }
+    },
+    {
+      "date": "2026-06-06",
+      "totalJobs": 7,
+      "doneJobs": 3,
+      "errorJobs": 4,
+      "byTask": {
+        "enrich": 4,
+        "significance": 3
       }
     }
   ]

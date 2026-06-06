@@ -47,6 +47,10 @@ def min_edges_for_score(score: int) -> int:
 def score_entity(entity):
     """Score entity weakness. Higher = needs more work. 0 = already good."""
     summary = entity.get("summary", "") or ""
+    if isinstance(summary, list):
+        summary = " ".join(str(part) for part in summary)
+    elif not isinstance(summary, str):
+        summary = str(summary)
     summary_len = len(summary)
 
     # Already well-enriched — skip

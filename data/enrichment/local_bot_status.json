@@ -44455,7 +44455,8 @@
       "[17/20] sabu-also-called-ibebi (score=95.5, 0c)",
       "  RETRY (1) \u2014 insufficient relationships (0, need >= 2)"
     ],
-    "exitCode": -9
+    "exitCode": -9,
+    "acknowledged": true
   },
   "significance-1779065473": {
     "job_id": "significance-1779065473",
@@ -45445,7 +45446,8 @@
       "",
       "[9/20] socialism (score=92.1, 0c)"
     ],
-    "exitCode": -9
+    "exitCode": -9,
+    "acknowledged": true
   },
   "significance-1779101427": {
     "job_id": "significance-1779101427",
@@ -46730,7 +46732,8 @@
       "",
       "[20/20] vin\u010da-culture (score=90.9, 0c)"
     ],
-    "exitCode": -15
+    "exitCode": -15,
+    "acknowledged": true
   },
   "significance-1779149140": {
     "job_id": "significance-1779149140",
@@ -49034,7 +49037,8 @@
       "",
       "[19/20] niccol\u00f2-gaddi (score=89.5, 0c)"
     ],
-    "exitCode": -15
+    "exitCode": -15,
+    "acknowledged": true
   },
   "significance-1779229122": {
     "job_id": "significance-1779229122",
@@ -205852,7 +205856,8 @@
       "  RETRY (1) \u2014 insufficient relationships (1, need >= 2)",
       "[orphaned] process died with previous bot restart"
     ],
-    "exitCode": null
+    "exitCode": null,
+    "acknowledged": true
   },
   "sync-1779632926": {
     "job_id": "sync-1779632926",
@@ -246502,5 +246507,224 @@
       "Report: /home/manasa151/annals-of-the-world/data/enrichment/significance_run.json"
     ],
     "exitCode": 0
+  },
+  "enrich-1780779652": {
+    "job_id": "enrich-1780779652",
+    "bot": "enrich",
+    "status": "error",
+    "model": "ollama",
+    "count": 20,
+    "pid": 29846,
+    "started": "2026-06-06T21:00:52Z",
+    "finished": "2026-06-06T21:00:52Z",
+    "log": [
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "Queue file not found: data/enrichment/queue.json",
+      "Generate it first: python3 scripts/enrichment_queue.py"
+    ],
+    "exitCode": 1,
+    "acknowledged": true
+  },
+  "significance-1780779655": {
+    "job_id": "significance-1780779655",
+    "bot": "significance",
+    "status": "done",
+    "model": "ollama",
+    "count": 30,
+    "pid": 29950,
+    "started": "2026-06-06T21:00:55Z",
+    "finished": "2026-06-06T21:01:12Z",
+    "log": [
+      "============================================================",
+      "SIGNIFICANCE BACKFILL \u2014 up to 30 entities via ollama/llama3.2:3b",
+      "  LOCAL MODE \u2014 no API quota, unlimited speed",
+      "============================================================",
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "Building queue...",
+      "Found 0 enriched entities needing significance rating",
+      "",
+      "============================================================",
+      "RESULTS: 0 scored, 0 failed",
+      "============================================================",
+      "Report: /home/manasa151/Music/annals-of-the-world/data/enrichment/significance_run.json"
+    ],
+    "exitCode": 0
+  },
+  "enrich-1780779751": {
+    "job_id": "enrich-1780779751",
+    "bot": "enrich",
+    "status": "error",
+    "model": "ollama",
+    "count": 20,
+    "pid": 31713,
+    "started": "2026-06-06T21:02:31Z",
+    "finished": "2026-06-06T21:02:31Z",
+    "log": [
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "Queue file not found: data/enrichment/queue.json",
+      "Generate it first: python3 scripts/enrichment_queue.py"
+    ],
+    "exitCode": 1,
+    "acknowledged": true
+  },
+  "significance-1780779754": {
+    "job_id": "significance-1780779754",
+    "bot": "significance",
+    "status": "done",
+    "model": "ollama",
+    "count": 30,
+    "pid": 31821,
+    "started": "2026-06-06T21:02:34Z",
+    "finished": "2026-06-06T21:02:50Z",
+    "log": [
+      "============================================================",
+      "SIGNIFICANCE BACKFILL \u2014 up to 30 entities via ollama/llama3.2:3b",
+      "  LOCAL MODE \u2014 no API quota, unlimited speed",
+      "============================================================",
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "Building queue...",
+      "Found 0 enriched entities needing significance rating",
+      "",
+      "============================================================",
+      "RESULTS: 0 scored, 0 failed",
+      "============================================================",
+      "Report: /home/manasa151/Music/annals-of-the-world/data/enrichment/significance_run.json"
+    ],
+    "exitCode": 0
+  },
+  "enrich-1780779852": {
+    "job_id": "enrich-1780779852",
+    "bot": "enrich",
+    "status": "error",
+    "model": "ollama",
+    "count": 20,
+    "pid": 33758,
+    "started": "2026-06-06T21:04:12Z",
+    "finished": "2026-06-06T21:04:12Z",
+    "log": [
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "Queue file not found: data/enrichment/queue.json",
+      "Generate it first: python3 scripts/enrichment_queue.py"
+    ],
+    "exitCode": 1,
+    "acknowledged": true
+  },
+  "significance-1780779855": {
+    "job_id": "significance-1780779855",
+    "bot": "significance",
+    "status": "done",
+    "model": "ollama",
+    "count": 30,
+    "pid": 33872,
+    "started": "2026-06-06T21:04:15Z",
+    "finished": "2026-06-06T21:04:32Z",
+    "log": [
+      "============================================================",
+      "SIGNIFICANCE BACKFILL \u2014 up to 30 entities via ollama/llama3.2:3b",
+      "  LOCAL MODE \u2014 no API quota, unlimited speed",
+      "============================================================",
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "Building queue...",
+      "Found 0 enriched entities needing significance rating",
+      "",
+      "============================================================",
+      "RESULTS: 0 scored, 0 failed",
+      "============================================================",
+      "Report: /home/manasa151/Music/annals-of-the-world/data/enrichment/significance_run.json"
+    ],
+    "exitCode": 0
+  },
+  "enrich-1780779882": {
+    "job_id": "enrich-1780779882",
+    "bot": "enrich",
+    "status": "error",
+    "model": "ollama",
+    "count": 1,
+    "pid": 34232,
+    "started": "2026-06-06T21:04:42Z",
+    "finished": "2026-06-06T21:04:42Z",
+    "log": [
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "Queue file not found: data/enrichment/queue.json",
+      "Generate it first: python3 scripts/enrichment_queue.py"
+    ],
+    "exitCode": 1,
+    "acknowledged": true
+  },
+  "enrich-1780779944": {
+    "job_id": "enrich-1780779944",
+    "bot": "enrich",
+    "status": "done",
+    "model": "ollama",
+    "count": 1,
+    "pid": 35046,
+    "started": "2026-06-06T21:05:44Z",
+    "finished": "2026-06-06T21:11:53Z",
+    "log": [
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "============================================================",
+      "AI ENRICHMENT \u2014 1 entities via ollama",
+      "============================================================",
+      "",
+      "[1/1] bidar (score=93.88, 0c)",
+      "  RETRY (1) \u2014 insufficient subjects (1, need >= 3)",
+      "  ENRICHED \u2014 609c -> 1686c",
+      "",
+      "============================================================",
+      "RESULTS: 1 enriched, 0 failed (sync_gateway pushes to Appwrite separately)",
+      "============================================================",
+      "Report: data/enrichment/last_run.json",
+      "Audit log updated: docs/governance/backend_edit_log.md"
+    ],
+    "exitCode": 0
+  },
+  "significance-1780780232": {
+    "job_id": "significance-1780780232",
+    "bot": "significance",
+    "status": "running",
+    "model": "ollama",
+    "count": 50,
+    "pid": 52136,
+    "started": "2026-06-06T21:10:32Z",
+    "finished": null,
+    "log": [
+      "============================================================",
+      "SIGNIFICANCE BACKFILL \u2014 up to 50 entities via ollama/llama3.2:3b",
+      "  LOCAL MODE \u2014 no API quota, unlimited speed",
+      "============================================================",
+      "Editor ID: ollama/llama3.2:3b\u00b7local\u00b7manasa151-MS-7C56",
+      "Building queue..."
+    ],
+    "exitCode": null
+  },
+  "sync-1780780329": {
+    "job_id": "sync-1780780329",
+    "bot": "sync",
+    "status": "error",
+    "model": "none",
+    "count": 200,
+    "pid": 52202,
+    "started": "2026-06-06T21:12:09Z",
+    "finished": "2026-06-06T21:12:10Z",
+    "log": [
+      "npm warn exec The following package was not found and will be installed: tsx@4.22.4",
+      "ERROR: Set APPWRITE_API_KEY env var (or pass --dry-run)"
+    ],
+    "exitCode": 1
+  },
+  "git-push-1780780330": {
+    "job_id": "git-push-1780780330",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-06-06T21:12:10Z",
+    "finished": null,
+    "log": [
+      "Pending files: 1 entities, 0 edges (1 total)",
+      "git add data/ scripts/ ..."
+    ],
+    "exitCode": null
   }
 }
