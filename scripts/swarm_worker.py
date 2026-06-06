@@ -125,10 +125,24 @@ def load_sharded_queue(slot: int, stride: int = 20) -> list[dict]:
         log(f"WARNING: queue file not found at {QUEUE_FILE}")
         return []
     try:
-        items = json.loads(QUEUE_FILE.read_text())
+        raw = json.loads(QUEUE_FILE.read_text())
     except Exception as exc:
         log(f"ERROR reading queue: {exc}")
         return []
+
+    # queue.json may be either a raw list or an object with a "queue" key.
+    if isinstance(raw, dict):
+        items = raw.get("queue", [])
+    elif isinstance(raw, list):
+        items = raw
+    else:
+        log(f"WARNING: queue format not recognized ({type(raw).__name__})")
+        return []
+
+    if not isinstance(items, list):
+        log("WARNING: queue payload is not a list")
+        return []
+
     sharded = items[slot::stride]
     log(f"Queue: {len(items)} total → {len(sharded)} for slot {slot} (stride={stride})")
     return sharded
