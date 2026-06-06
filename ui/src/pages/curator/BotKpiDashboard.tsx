@@ -90,8 +90,30 @@ interface SwarmDailyRow {
   edges?: number
   significance?: number
   audit?: number
+  consistency?: number
   sync?: number
+  queue_refresh?: number
   respawns?: number
+}
+
+interface GithubWorkflowRunsResponse {
+  workflow_runs?: Array<{
+    id: number
+    status?: string
+    conclusion?: string | null
+    html_url?: string
+  }>
+}
+
+interface GithubRunJobsResponse {
+  jobs?: Array<{
+    name?: string
+    status?: string
+    conclusion?: string | null
+    started_at?: string
+    completed_at?: string
+    html_url?: string
+  }>
 }
 
 interface CombinedDayRow {
@@ -314,6 +336,31 @@ async function fetchJSON<T>(url: string): Promise<T | null> {
   } catch { return null }
 }
 
+function normalizeSwarmDailyRows(input: unknown): SwarmDailyRow[] {
+  if (!Array.isArray(input)) return []
+
+  const toNum = (v: unknown): number =>
+    typeof v === 'number' && Number.isFinite(v) ? v : 0
+
+  return input
+    .filter((row): row is Record<string, unknown> => !!row && typeof row === 'object')
+    .map((row) => ({
+      date: typeof row.date === 'string' ? row.date : '',
+      totalProcessed: toNum(row.totalProcessed),
+      totalSucceeded: toNum(row.totalSucceeded),
+      totalFailed: toNum(row.totalFailed),
+      enrichment: toNum(row.enrichment),
+      edges: toNum(row.edges),
+      significance: toNum(row.significance),
+      audit: toNum(row.audit),
+      consistency: toNum(row.consistency),
+      sync: toNum(row.sync),
+      queue_refresh: toNum(row.queue_refresh),
+      respawns: toNum(row.respawns),
+    }))
+    .filter((row) => /^\d{4}-\d{2}-\d{2}$/.test(row.date))
+}
+
 function relTime(iso?: string): string {
   if (!iso) return 'never'
   const d = new Date(iso).getTime()
@@ -389,6 +436,8 @@ export default function BotKpiDashboard() {
 
   // Swarm state
   const [swarmSlots, setSwarmSlots] = useState<SwarmSlotKpi[]>([])
+  const [liveSwarmSlots, setLiveSwarmSlots] = useState<SwarmSlotKpi[]>([])
+  const [liveSwarmRunId, setLiveSwarmRunId] = useState<number | null>(null)
   const [swarmDaily, setSwarmDaily] = useState<SwarmDailyRow[]>([])
   const [localKpi, setLocalKpi] = useState<LocalKpi | null>(null)
   const [combinedDays, setCombinedDays] = useState<CombinedDayRow[]>([])
@@ -472,9 +521,76 @@ export default function BotKpiDashboard() {
       fetchJSON<LocalKpi>('/governance/bot_kpi/local_kpi.json'),
       fetchJSON<{ days: CombinedDayRow[] }>('/governance/bot_kpi/combined_kpi.json'),
     ])
-    if (daily?.days) setSwarmDaily(daily.days)
+    setSwarmDaily(normalizeSwarmDailyRows(daily?.days ?? []))
     if (lkpi) setLocalKpi(lkpi)
     if (combined?.days) setCombinedDays(combined.days)
+  }, [])
+
+  const loadLiveSwarmKpis = useCallback(async () => {
+    try {
+      const runs = await fetchJSON<GithubWorkflowRunsResponse>(
+        'https://api.github.com/repos/14-yama/annals-of-the-world/actions/workflows/swarm-enrichment.yml/runs?per_page=1'
+      )
+      const run = runs?.workflow_runs?.[0]
+      if (!run?.id) {
+        setLiveSwarmRunId(null)
+        setLiveSwarmSlots([])
+        return
+      }
+
+      setLiveSwarmRunId(run.id)
+      const jobs = await fetchJSON<GithubRunJobsResponse>(
+        `https://api.github.com/repos/14-yama/annals-of-the-world/actions/runs/${run.id}/jobs?per_page=100`
+      )
+
+      const next = Array.from({ length: 20 }, (_, slot) => {
+        const task = slotToTask(slot)
+        return {
+          slot,
+          task,
+          taskColor: TASK_COLOR[task],
+          runId: String(run.id),
+          runUrl: run.html_url,
+          status: 'pending' as const,
+        }
+      })
+
+      for (const job of jobs?.jobs ?? []) {
+        const name = job.name ?? ''
+        const m = /^bot \((\d+)\)$/.exec(name)
+        if (!m) continue
+
+        const slot = Number(m[1])
+        if (!Number.isInteger(slot) || slot < 0 || slot > 19) continue
+
+        const task = slotToTask(slot)
+        const status: SwarmSlotKpi['status'] =
+          job.status === 'in_progress'
+            ? 'running'
+            : job.status === 'queued'
+              ? 'pending'
+              : job.status === 'completed' && job.conclusion === 'success'
+                ? 'done'
+                : job.status === 'completed' && job.conclusion
+                  ? 'error'
+                  : 'pending'
+
+        next[slot] = {
+          ...next[slot],
+          task,
+          taskColor: TASK_COLOR[task],
+          startedAt: job.started_at,
+          finishedAt: job.completed_at,
+          status,
+          runUrl: job.html_url ?? run.html_url,
+        }
+      }
+
+      setLiveSwarmSlots(next)
+    } catch {
+      setLiveSwarmRunId(null)
+      setLiveSwarmSlots([])
+    }
   }, [])
 
   const loadTelemetry = useCallback(async () => {
@@ -552,13 +668,15 @@ export default function BotKpiDashboard() {
     loadAuditActivity()
     pollLocalStatus()
     loadSwarmKpis()
+    loadLiveSwarmKpis()
     if (!autoRefresh) return
     const t1 = setInterval(loadTelemetry, 5000)
     const t2 = setInterval(pollLocalStatus, 3000)
     const t3 = setInterval(loadAuditActivity, 15000)
     const t4 = setInterval(loadSwarmKpis, 10000)
-    return () => { clearInterval(t1); clearInterval(t2); clearInterval(t3); clearInterval(t4) }
-  }, [autoRefresh, loadTelemetry, loadAuditActivity, pollLocalStatus, loadSwarmKpis])
+    const t5 = setInterval(loadLiveSwarmKpis, 10000)
+    return () => { clearInterval(t1); clearInterval(t2); clearInterval(t3); clearInterval(t4); clearInterval(t5) }
+  }, [autoRefresh, loadTelemetry, loadAuditActivity, pollLocalStatus, loadSwarmKpis, loadLiveSwarmKpis])
 
   /* ── Derived KPIs ──────────────────────────────────────────────────────── */
 
@@ -582,6 +700,23 @@ export default function BotKpiDashboard() {
     () => Object.values(localJobs).filter(j => j.status === 'running').length,
     [localJobs],
   )
+
+  const effectiveSwarmSlots = useMemo(() => {
+    if (liveSwarmSlots.length === 20) return liveSwarmSlots
+    return swarmSlots
+  }, [liveSwarmSlots, swarmSlots])
+
+  const activeSwarmSlots = useMemo(
+    () => effectiveSwarmSlots.filter(s => s.status === 'running' || s.status === 'respawning').length,
+    [effectiveSwarmSlots],
+  )
+
+  const completedSwarmSlots = useMemo(
+    () => effectiveSwarmSlots.filter(s => s.status === 'done').length,
+    [effectiveSwarmSlots],
+  )
+
+  const totalActiveBots = activeLocalJobs + activeSwarmSlots
 
   /* ── Render ────────────────────────────────────────────────────────────── */
 
@@ -673,10 +808,10 @@ export default function BotKpiDashboard() {
           />
           <KpiCell
             icon={<Bot size={14} color="#6B3FA0" />}
-            label="Active local jobs"
-            value={String(activeLocalJobs)}
-            sub={localHealth?.ollama.running ? 'Ollama online' : 'Ollama offline'}
-            color={localHealth?.ollama.running ? '#27AE60' : '#9E9A90'}
+            label="Active bots (local+cloud)"
+            value={String(totalActiveBots)}
+            sub={`${activeLocalJobs} local · ${activeSwarmSlots} cloud slots${liveSwarmRunId ? ` · run ${liveSwarmRunId}` : ''}`}
+            color={totalActiveBots > 0 ? '#E67E22' : '#9E9A90'}
           />
         </SimpleGrid>
 
@@ -1144,14 +1279,15 @@ export default function BotKpiDashboard() {
         bg="linear-gradient(135deg, #2D2A24 0%, #1A1713 100%)"
         border="1px solid #C5963A40">
         <SimpleGrid columns={{ base: 2, md: 4, lg: 7 }} gap={3}>
-          <SwarmKpiCell label="Active Bots" value={String(swarmSlots.filter(s => s.status === 'running' || s.status === 'respawning').length)} sub="currently running" color="#E67E22" />
-          <SwarmKpiCell label="Enrichment" value={String(swarmSlots.filter(s => s.task === 'enrichment').length)} sub="slots 0-7" color="#4285F4" />
-          <SwarmKpiCell label="Edges" value={String(swarmSlots.filter(s => s.task === 'edges').length)} sub="slots 8-11" color="#1ABC9C" />
-          <SwarmKpiCell label="Significance" value={String(swarmSlots.filter(s => s.task === 'significance').length)} sub="slots 12-15" color="#8E44AD" />
-          <SwarmKpiCell label="Audit" value={String(swarmSlots.filter(s => ['audit','consistency'].includes(s.task)).length)} sub="slots 16-17" color="#27AE60" />
-          <SwarmKpiCell label="Support" value={String(swarmSlots.filter(s => ['sync','queue_refresh'].includes(s.task)).length)} sub="slots 18-19" color="#9E9A90" />
+          <SwarmKpiCell label="Active Swarm Slots" value={String(activeSwarmSlots)} sub="live GitHub run" color="#E67E22" />
+          <SwarmKpiCell label="Current Run Done" value={String(completedSwarmSlots)} sub="slots finished" color="#27AE60" />
+          <SwarmKpiCell label="Enrichment" value={String(effectiveSwarmSlots.filter(s => s.task === 'enrichment').length)} sub="slots 0-7" color="#4285F4" />
+          <SwarmKpiCell label="Edges" value={String(effectiveSwarmSlots.filter(s => s.task === 'edges').length)} sub="slots 8-11" color="#1ABC9C" />
+          <SwarmKpiCell label="Significance" value={String(effectiveSwarmSlots.filter(s => s.task === 'significance').length)} sub="slots 12-15" color="#8E44AD" />
+          <SwarmKpiCell label="Audit" value={String(effectiveSwarmSlots.filter(s => ['audit','consistency'].includes(s.task)).length)} sub="slots 16-17" color="#27AE60" />
+          <SwarmKpiCell label="Support" value={String(effectiveSwarmSlots.filter(s => ['sync','queue_refresh'].includes(s.task)).length)} sub="slots 18-19" color="#9E9A90" />
           <SwarmKpiCell
-            label="Today Processed"
+            label="Daily Processed"
             value={(swarmDaily.at(-1)?.totalSucceeded ?? 0).toLocaleString()}
             sub={swarmDaily.at(-1)?.date ?? 'no data'}
             color="#D4AF37"
@@ -1161,7 +1297,7 @@ export default function BotKpiDashboard() {
 
       {/* 20-slot grid */}
       <SimpleGrid columns={{ base: 4, md: 5, lg: 10 }} gap={2} mb={6}>
-        {swarmSlots.map(slot => (
+        {effectiveSwarmSlots.map(slot => (
           <SwarmSlotCard key={slot.slot} slot={slot} />
         ))}
       </SimpleGrid>

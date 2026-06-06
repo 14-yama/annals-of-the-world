@@ -138,18 +138,25 @@ export default function AuditLogViewer() {
   async function loadLogs() {
     setLoading(true)
     try {
-      const queries: string[] = [
+      const offset = page * PAGE_SIZE
+      const queries = [
         Query.orderDesc('timestamp'),
+        Query.orderDesc('$createdAt'),
         Query.limit(PAGE_SIZE),
-        Query.offset(page * PAGE_SIZE),
+        Query.offset(offset),
       ]
-      if (filterEntity) queries.push(Query.search('entitySlug', filterEntity))
-      if (filterEditor) queries.push(Query.equal('editorId', filterEditor))
-      if (filterAction) queries.push(Query.equal('action', filterAction))
+      if (filterEntity.trim()) queries.push(Query.search('entitySlug', filterEntity.trim()))
+      if (filterEditor.trim()) queries.push(Query.search('editorId', filterEditor.trim()))
+      if (filterAction.trim()) queries.push(Query.equal('action', [filterAction.trim()]))
 
-      const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.AUDIT_LOG, queries)
-      setTotal(res.total)
-      setLogs(res.documents.map(mapToRow))
+      const body = await databases.listDocuments(DATABASE_ID, COLLECTIONS.AUDIT_LOG, queries)
+
+      const rows = (Array.isArray(body.documents) ? body.documents : [])
+        .map(mapToRow)
+        .sort((a, b) => (b.timestamp || '').localeCompare(a.timestamp || ''))
+
+      setTotal(Number(body.total || 0))
+      setLogs(rows)
     } catch (err) {
       console.error('Audit log load failed:', err)
       setLogs([])
