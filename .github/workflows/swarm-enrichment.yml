@@ -103,7 +103,7 @@ jobs:
         with:
           ref: clean/audit-system
           fetch-depth: 1
-          token: ${{ secrets.BOT_PAT || github.token }}
+          token: ${{ secrets.BOT_PAT }}
 
       # ── Python ────────────────────────────────────────────────────────────
       - uses: actions/setup-python@v5
