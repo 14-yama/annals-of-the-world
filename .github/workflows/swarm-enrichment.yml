@@ -103,7 +103,6 @@ jobs:
         with:
           ref: clean/audit-system
           fetch-depth: 1
-          token: ${{ secrets.BOT_PAT }}
 
       # ── Python ────────────────────────────────────────────────────────────
       - uses: actions/setup-python@v5
@@ -200,9 +199,18 @@ jobs:
 
       # ── Commit enriched files + KPI ───────────────────────────────────────
       - name: Commit output (slot ${{ matrix.slot }})
+        env:
+          BOT_PAT: ${{ secrets.BOT_PAT }}
         run: |
           git config user.email "swarm-bot-${{ matrix.slot }}@annals-of-the-world"
           git config user.name  "Swarm Bot Slot-${{ matrix.slot }}"
+
+          if [ -n "$BOT_PAT" ]; then
+            git remote set-url origin "https://x-access-token:${BOT_PAT}@github.com/${{ github.repository }}.git"
+          else
+            echo "::warning::BOT_PAT missing — commit/push step will be skipped"
+            exit 0
+          fi
 
           # Pull latest before committing (reduce merge conflicts)
           git pull --rebase --autostash origin clean/audit-system || true
