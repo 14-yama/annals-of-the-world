@@ -1,118 +1,114 @@
 {
-  "timestamp": "2026-06-08T17:40:16Z",
+  "timestamp": "2026-06-08T17:49:04Z",
   "model": "github",
   "count_requested": 20,
-  "enriched": 10,
-  "failed": 10,
+  "enriched": 6,
+  "failed": 14,
   "dry_run": false,
   "entities": [
     {
-      "slug": "brave-new-world",
+      "slug": "battle-of-manzikert",
       "status": "enriched",
-      "old_len": 70,
-      "new_len": 1825
+      "old_len": 100,
+      "new_len": 1871
     },
     {
-      "slug": "the-adventures-of-pinocchio",
+      "slug": "president-of-botswana",
       "status": "enriched",
-      "old_len": 70,
-      "new_len": 1662
+      "old_len": 105,
+      "new_len": 1555
     },
     {
-      "slug": "the-master-and-margarita",
+      "slug": "prime-minister-of-turkey",
       "status": "enriched",
-      "old_len": 71,
-      "new_len": 1444
+      "old_len": 106,
+      "new_len": 1680
     },
     {
-      "slug": "twenty-thousand-leagues-under-the-sea",
+      "slug": "battle-of-mycale",
       "status": "enriched",
-      "old_len": 71,
-      "new_len": 1853
+      "old_len": 101,
+      "new_len": 872
     },
     {
-      "slug": "triple-entente",
-      "status": "enriched",
-      "old_len": 73,
-      "new_len": 1689
+      "slug": "president-of-argentina",
+      "status": "failed",
+      "reason": "relationship[2] missing keys: {'sourceName'}"
     },
     {
-      "slug": "the-starry-night",
+      "slug": "doctorate",
       "status": "enriched",
-      "old_len": 74,
-      "new_len": 1966
+      "old_len": 182,
+      "new_len": 1887
     },
     {
-      "slug": "tallinn",
+      "slug": "prime-minister-of-belgium",
       "status": "enriched",
-      "old_len": 96,
-      "new_len": 1894
+      "old_len": 108,
+      "new_len": 642
     },
     {
-      "slug": "the-adventures-of-tom-sawyer",
-      "status": "enriched",
-      "old_len": 75,
-      "new_len": 1895
-    },
-    {
-      "slug": "epistle-to-the-colossians",
-      "status": "enriched",
-      "old_len": 145,
-      "new_len": 1842
-    },
-    {
-      "slug": "treaty-of-brest-litovsk",
-      "status": "enriched",
-      "old_len": 76,
-      "new_len": 1730
-    },
-    {
-      "slug": "the-scream",
+      "slug": "first-jewish-roman-war",
       "status": "failed",
       "reason": "HTTP Error 429: Too Many Requests"
     },
     {
-      "slug": "lolita",
+      "slug": "siege-of-yorktown",
       "status": "failed",
       "reason": "HTTP Error 429: Too Many Requests"
     },
     {
-      "slug": "book-of-malachi",
+      "slug": "livonian-war",
       "status": "failed",
       "reason": "HTTP Error 429: Too Many Requests"
     },
     {
-      "slug": "guernica",
+      "slug": "battle-of-the-trench",
       "status": "failed",
       "reason": "HTTP Error 429: Too Many Requests"
     },
     {
-      "slug": "madame-bovary",
+      "slug": "romanseleucid-war",
       "status": "failed",
       "reason": "HTTP Error 429: Too Many Requests"
     },
     {
-      "slug": "book-of-habakkuk",
+      "slug": "war-of-the-sixth-coalition",
       "status": "failed",
       "reason": "HTTP Error 429: Too Many Requests"
     },
     {
-      "slug": "oliver-twist",
+      "slug": "second-italo-ethiopian-war",
       "status": "failed",
       "reason": "HTTP Error 429: Too Many Requests"
     },
     {
-      "slug": "rapping",
+      "slug": "marcomannic-wars",
       "status": "failed",
       "reason": "HTTP Error 429: Too Many Requests"
     },
     {
-      "slug": "the-wolf-and-the-seven-young-goats",
+      "slug": "french-and-indian-war",
       "status": "failed",
       "reason": "HTTP Error 429: Too Many Requests"
     },
     {
-      "slug": "the-brothers-karamazov",
+      "slug": "caucasian-war",
+      "status": "failed",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "slug": "second-opium-war",
+      "status": "failed",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "slug": "seventh-russo-turkish-war",
+      "status": "failed",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "slug": "first-boer-war",
       "status": "failed",
       "reason": "HTTP Error 429: Too Many Requests"
     }
