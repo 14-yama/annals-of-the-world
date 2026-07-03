@@ -1,128 +1,110 @@
 {
-  "timestamp": "2026-07-03T01:15:16Z",
+  "timestamp": "2026-07-03T01:19:28Z",
   "model": "github",
   "count_requested": 20,
-  "enriched": 18,
-  "failed": 2,
+  "enriched": 0,
+  "failed": 20,
   "dry_run": false,
   "entities": [
     {
-      "slug": "zorba-the-greek",
-      "status": "enriched",
-      "old_len": 73,
-      "new_len": 1995
-    },
-    {
-      "slug": "magellanic-clouds",
-      "status": "enriched",
-      "old_len": 283,
-      "new_len": 1756
-    },
-    {
-      "slug": "the-red-vineyard",
+      "slug": "operation-magic-carpet",
       "status": "failed",
-      "reason": "insufficient relationships (0, need >= 3)"
+      "reason": "HTTP Error 500: Internal Server Error"
     },
     {
-      "slug": "la-maja-desnuda",
-      "status": "enriched",
-      "old_len": 74,
-      "new_len": 1316
-    },
-    {
-      "slug": "fanfare",
-      "status": "enriched",
-      "old_len": 74,
-      "new_len": 1768
-    },
-    {
-      "slug": "march",
-      "status": "enriched",
-      "old_len": 74,
-      "new_len": 1884
-    },
-    {
-      "slug": "divertimento",
-      "status": "enriched",
-      "old_len": 74,
-      "new_len": 1648
-    },
-    {
-      "slug": "perfume",
-      "status": "enriched",
-      "old_len": 74,
-      "new_len": 1973
-    },
-    {
-      "slug": "the-pickwick-papers",
-      "status": "enriched",
-      "old_len": 74,
-      "new_len": 1872
-    },
-    {
-      "slug": "norwegian-wood",
-      "status": "enriched",
-      "old_len": 74,
-      "new_len": 1998
-    },
-    {
-      "slug": "foucaults-pendulum",
-      "status": "enriched",
-      "old_len": 74,
-      "new_len": 1929
-    },
-    {
-      "slug": "the-mysterious-affair-at-styles",
-      "status": "enriched",
-      "old_len": 74,
-      "new_len": 1762
-    },
-    {
-      "slug": "kafka-on-the-shore",
-      "status": "enriched",
-      "old_len": 74,
-      "new_len": 1727
-    },
-    {
-      "slug": "ann-arbor",
-      "status": "enriched",
-      "old_len": 263,
-      "new_len": 1675
-    },
-    {
-      "slug": "durham",
-      "status": "enriched",
-      "old_len": 263,
-      "new_len": 1702
-    },
-    {
-      "slug": "hargeisa",
-      "status": "enriched",
-      "old_len": 263,
-      "new_len": 1980
-    },
-    {
-      "slug": "vishnu-purana",
-      "status": "enriched",
-      "old_len": 75,
-      "new_len": 1356
-    },
-    {
-      "slug": "virgin-of-the-rocks",
+      "slug": "battle-of-mukden",
       "status": "failed",
-      "reason": "insufficient relationships (0, need >= 3)"
+      "reason": "HTTP Error 500: Internal Server Error"
     },
     {
-      "slug": "nursery-rhyme",
-      "status": "enriched",
-      "old_len": 75,
-      "new_len": 1609
+      "slug": "battle-of-shizugatake",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error"
     },
     {
-      "slug": "the-tell-tale-heart",
-      "status": "enriched",
-      "old_len": 75,
-      "new_len": 1999
+      "slug": "battle-of-selinus",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "slug": "battle-of-callinicus",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "slug": "courland-pocket",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "slug": "battle-of-bicocca",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "slug": "battle-of-lodi",
+      "status": "failed",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "slug": "apostolic-king-of-hungary",
+      "status": "failed",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "slug": "2011-virginia-earthquake",
+      "status": "failed",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "slug": "464-bc-sparta-earthquake",
+      "status": "failed",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "slug": "covid-19-pandemic-in-indonesia",
+      "status": "failed",
+      "reason": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "slug": "covid-19-pandemic-in-san-marino",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "slug": "2020-covid-19-pandemic-in-azerbaijan",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "slug": "covid-19-pandemic-in-kazakhstan",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "slug": "2020-covid-19-pandemic-in-seychelles",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "slug": "russian-occupation-of-zaporizhzhia-oblast",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "slug": "king-david-hotel-bombing",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "slug": "krakw-uprising",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "slug": "operation-sonnenblume",
+      "status": "failed",
+      "reason": "HTTP Error 429: Too Many Requests"
     }
   ]
 }
