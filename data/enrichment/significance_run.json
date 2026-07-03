@@ -1,13 +1,19 @@
 {
-  "generatedAt": "2026-07-02T03:18:42Z",
+  "generatedAt": "2026-07-03T03:17:21Z",
   "model": "gemini-2.5-flash",
   "count_requested": 50,
   "enriched": 0,
-  "failed": 0,
+  "failed": 1,
   "dry_run": false,
-  "results": [],
+  "results": [
+    {
+      "slug": "durham",
+      "status": "error",
+      "reason": "Gemini API exhausted retries"
+    }
+  ],
   "summary": {
     "entities_scored": 0,
-    "failed": 0
+    "failed": 1
   }
 }
