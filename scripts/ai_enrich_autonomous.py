@@ -60,6 +60,9 @@ load_dotenv()
 BASE = "data/appwrite-export/entities"
 QUEUE_FILE = "data/enrichment/queue.json"
 REPORT_FILE = "data/enrichment/last_run.json"
+POISON_FILE = "data/enrichment/poison_slugs.json"
+POISON_THRESHOLD = 3
+ALREADY_ENRICHED_CHARS = 800
 
 # EDITOR_ID is built dynamically after args are parsed (see build_editor_id())
 # Format: "<model>·<env>·<host/run>" — readable in audit log filters
@@ -639,9 +642,118 @@ def apply_enrichment(filepath, slug, result):
         entity["detailsJson"] = json.dumps(details, ensure_ascii=False)
         break
 
-    with open(filepath, "w") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-        f.write("\n")
+    # Atomic write — never leave a half-written entity JSON on disk.
+    tmp_path = f"{filepath}.tmp.{os.getpid()}"
+    try:
+        with open(tmp_path, "w") as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+            f.write("\n")
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp_path, filepath)
+    finally:
+        if os.path.exists(tmp_path):
+            try:
+                os.unlink(tmp_path)
+            except OSError:
+                pass
+
+
+def load_poison() -> dict:
+    """slug → consecutive failure count. Skip after POISON_THRESHOLD."""
+    if not os.path.exists(POISON_FILE):
+        return {}
+    try:
+        with open(POISON_FILE) as f:
+            data = json.load(f)
+        return data if isinstance(data, dict) else {}
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+def save_poison(poison: dict) -> None:
+    os.makedirs(os.path.dirname(POISON_FILE), exist_ok=True)
+    tmp_path = f"{POISON_FILE}.tmp.{os.getpid()}"
+    try:
+        with open(tmp_path, "w") as f:
+            json.dump(poison, f, indent=2, sort_keys=True)
+            f.write("\n")
+            f.flush()
+            os.fsync(f.fileno())
+        os.replace(tmp_path, POISON_FILE)
+    finally:
+        if os.path.exists(tmp_path):
+            try:
+                os.unlink(tmp_path)
+            except OSError:
+                pass
+
+
+def mark_poison(poison: dict, slug: str) -> int:
+    count = int(poison.get(slug, 0) or 0) + 1
+    poison[slug] = count
+    save_poison(poison)
+    return count
+
+
+def clear_poison(poison: dict, slug: str) -> None:
+    if slug in poison:
+        poison.pop(slug, None)
+        save_poison(poison)
+
+
+def select_work_batch(queue, count: int, poison: dict):
+    """Walk queue past already-enriched / poison / missing slugs until we have work."""
+    batch = []
+    skipped_enriched = 0
+    skipped_poison = 0
+    skipped_missing = 0
+    scanned = 0
+    # Cap scan so a fully-stale head cannot burn the whole run scanning forever.
+    scan_cap = max(count * 40, 200)
+
+    for entry in queue:
+        if len(batch) >= count or scanned >= scan_cap:
+            break
+        scanned += 1
+        slug = entry.get("slug") or ""
+        filepath = entry.get("filepath") or ""
+        if not slug or not filepath:
+            skipped_missing += 1
+            continue
+        if int(poison.get(slug, 0) or 0) >= POISON_THRESHOLD:
+            skipped_poison += 1
+            continue
+        try:
+            with open(filepath) as f:
+                file_data = json.load(f)
+        except Exception:
+            skipped_missing += 1
+            continue
+        entity = next(
+            (e for e in file_data.get("entities", []) if e.get("slug") == slug),
+            None,
+        )
+        if not entity:
+            skipped_missing += 1
+            continue
+        current_len = len(entity.get("summary", "") or "")
+        if current_len >= ALREADY_ENRICHED_CHARS:
+            skipped_enriched += 1
+            continue
+        batch.append({
+            "entry": entry,
+            "entity": entity,
+            "filepath": filepath,
+            "current_len": current_len,
+        })
+
+    return batch, {
+        "scanned": scanned,
+        "skipped_enriched": skipped_enriched,
+        "skipped_poison": skipped_poison,
+        "skipped_missing": skipped_missing,
+    }
 
 
 # ═══════════════════════════════════════════════════════════
@@ -790,14 +902,26 @@ def main():
     if args.min_score > 0:
         queue = [e for e in queue if e["score"] >= args.min_score]
 
-    batch = queue[:args.count]
-    if not batch:
-        print("No entities to enrich (queue empty or all filtered)")
+    poison = load_poison()
+    work, scan_stats = select_work_batch(queue, args.count, poison)
+    if not work:
+        print("No entities to enrich (queue empty, all enriched, or all poisoned)")
+        print(
+            f"  scanned={scan_stats['scanned']} "
+            f"skipped_enriched={scan_stats['skipped_enriched']} "
+            f"skipped_poison={scan_stats['skipped_poison']} "
+            f"skipped_missing={scan_stats['skipped_missing']}"
+        )
         sys.exit(0)
 
     # ── Run enrichment ──
     print(f"{'=' * 60}")
-    print(f"AI ENRICHMENT — {len(batch)} entities via {args.model}")
+    print(f"AI ENRICHMENT — {len(work)} entities via {args.model}")
+    print(
+        f"  (scanned {scan_stats['scanned']}, "
+        f"skipped enriched={scan_stats['skipped_enriched']}, "
+        f"poison={scan_stats['skipped_poison']})"
+    )
     print(f"{'=' * 60}")
     if args.dry_run:
         print("** DRY RUN — no files will be modified **\n")
@@ -806,32 +930,16 @@ def main():
     failed = 0
     report = []
 
-    for i, entry in enumerate(batch):
+    for i, item in enumerate(work):
+        entry = item["entry"]
+        entity = item["entity"]
+        filepath = item["filepath"]
+        current_len = item["current_len"]
         slug = entry["slug"]
-        filepath = entry["filepath"]
-        print(f"\n[{i + 1}/{len(batch)}] {slug} (score={entry.get('score',0)}, {len(entry.get('summary',''))}c)")
-
-        # Load current entity from file
-        try:
-            with open(filepath) as f:
-                file_data = json.load(f)
-            entity = None
-            for e in file_data.get("entities", []):
-                if e.get("slug") == slug:
-                    entity = e
-                    break
-            if not entity:
-                print(f"  SKIP — slug '{slug}' not found in {filepath}")
-                continue
-        except Exception as ex:
-            print(f"  SKIP — error loading file: {ex}")
-            continue
-
-        # Skip if already enriched (queue may be stale)
-        current_len = len(entity.get("summary", "") or "")
-        if current_len >= 800:
-            print(f"  SKIP — already enriched ({current_len}c)")
-            continue
+        print(
+            f"\n[{i + 1}/{len(work)}] {slug} "
+            f"(score={entry.get('score', 0)}, {current_len}c)"
+        )
 
         # Build prompt
         prompt = PROMPT_TEMPLATE.format(
@@ -889,7 +997,15 @@ def main():
         if result is None:
             print(f"  FAILED — {last_error}")
             failed += 1
-            report.append({"slug": slug, "status": "failed", "reason": last_error})
+            nfail = mark_poison(poison, slug)
+            if nfail >= POISON_THRESHOLD:
+                print(f"  POISON — {slug} failed {nfail}x; skipping in future runs")
+            report.append({
+                "slug": slug,
+                "status": "failed",
+                "reason": last_error,
+                "poison_count": nfail,
+            })
             time.sleep(2)
             continue
 
@@ -898,6 +1014,7 @@ def main():
 
         # Write to local JSON (sync_gateway will push to Appwrite later)
         apply_enrichment(filepath, slug, result)
+        clear_poison(poison, slug)
 
         enriched += 1
         report.append({

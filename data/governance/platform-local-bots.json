@@ -1,24 +1,25 @@
 {
   "meta": {
-    "version": "1.2.0",
+    "version": "1.3.0",
     "owner": "annals-local-infra",
-    "description": "Canonical roster of Annals local bots for the Mac Mini pool. Many definitions; concurrency is gated so they share 24 GB RAM and mostly do not run at once. Mirrors Superstack's platform-local-bots.json pattern (*/2 StartInterval continuous workers).",
+    "description": "Canonical roster of Annals local bots for the Mac Mini pool. Many definitions; concurrency is gated so they share 24 GB RAM and mostly do not run at once. Aggressive KeepAlive workers with immediate failure retry; still max 1 Ollama LLM. Mirrors Superstack platform-local-bots pattern.",
     "host": "24 GB unified memory Mac mini",
     "timezone": "America/Port_of_Spain",
     "label_prefix": "com.annals.",
     "docs_ref": "docs/governance/local_bots_mac_mini.md",
     "superstack_sot_ref": "/Users/jeltonmentore/Digital Economy/caricom-connects-superstack/packages/truth-registry/platform-local-bots.json",
     "throughput_targets": {
-      "note": "Single Ollama lane on :11434 (serialized enrich vs significance). Superstack media scrapers do not use 11434; calendar blackouts are narrow RAM/CPU buffers + live process yield.",
+      "note": "Single Ollama lane on :11434 (serialized enrich vs significance). KeepAlive workers + enrich-b waiter minimize idle. Scrapers ≠ 11434.",
       "entities_per_hour_target": "80–150 combined enrich+sig when Mini is quiet",
       "entities_per_hour_floor": "40 (conservative with Cursor + scrapers)",
       "enrich_batch": 8,
       "sig_batch": 8,
-      "ollama_cadence_minutes": 2,
-      "idle_gap_max_seconds": 120,
+      "ollama_cadence": "KeepAlive worker (ThrottleInterval ~8–12s)",
+      "idle_gap_max_seconds": 15,
       "sync_entities_per_run": 120,
-      "kpi_refresh_minutes": 10,
-      "stats_cache_refresh_minutes": 10
+      "kpi_refresh_minutes": 5,
+      "stats_cache_refresh_minutes": 5,
+      "queue_refresh_minutes": 5
     },
     "appwrite_cutover": {
       "employ_bots": true,
@@ -179,14 +180,15 @@
       "role": "Rescan weak entities into data/enrichment/queue.json. No LLM.",
       "uses_ollama": false,
       "script": "scripts/enrichment_queue.py",
-      "args": ["--limit", "1200"],
+      "args": ["--limit", "2500"],
       "schedule": {
         "cron": "*/30 * * * *",
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "Every 30 min StartInterval so enrich never starves for candidates."
+        "note": "Every 30 min StartInterval so enrich never starves for candidates. Temporary: yield_on_scraper_process=false while Superstack media-daily runs long so queue can refresh past already-enriched heads."
       },
       "respect_blackout": true,
+      "yield_on_scraper_process": false,
       "locks": ["heavy_scan"]
     },
     {
@@ -194,7 +196,7 @@
       "name": "Local KPI Aggregator",
       "status": "active",
       "lane": "light",
-      "role": "Roll up local_bot_status.json into data/governance/bot_kpi + mirror ui/public/governance for Curator pages.",
+      "role": "Roll up local_bot_status + audit/enrichment artifacts into Superstack-style 1h/week/month/YTD processed-volume KPI + mirror ui/public/governance for Curator pages.",
       "uses_ollama": false,
       "script": "scripts/local_kpi_aggregator.py",
       "schedule": {

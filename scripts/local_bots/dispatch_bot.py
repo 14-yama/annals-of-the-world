@@ -154,6 +154,9 @@ def main() -> int:
         code, msg = gate("acquire", args.bot_id)
         if code != 0:
             print(f"[dispatch] skip {args.bot_id}: {msg} (exit {code})")
+            # Soft skip: brief pause so KeepAlive workers don't hot-spin the gate.
+            if (bot.get("schedule") or {}).get("kind") in ("keepalive", "worker"):
+                time.sleep(float((bot.get("retry") or {}).get("soft_skip_sleep_seconds", 5)))
             return 0  # soft skip — not a launchd failure storm
 
     cmd = build_command(bot)
@@ -163,12 +166,36 @@ def main() -> int:
             gate("release", args.bot_id)
         return 0
 
-    started = time.time()
+    retry_cfg = bot.get("retry") if isinstance(bot.get("retry"), dict) else {}
+    max_retries = int(retry_cfg.get("on_failure", 2))
+    backoff_base = float(retry_cfg.get("backoff_base_seconds", 2))
+    backoff_cap = float(retry_cfg.get("backoff_cap_seconds", 60))
+
+    attempt = 0
     try:
-        proc = subprocess.run(cmd, cwd=str(REPO))
-        elapsed = int(time.time() - started)
-        print(f"[dispatch] done {args.bot_id} status={proc.returncode} elapsed={elapsed}s")
-        return proc.returncode
+        while True:
+            started = time.time()
+            proc = subprocess.run(cmd, cwd=str(REPO))
+            elapsed = int(time.time() - started)
+            print(
+                f"[dispatch] done {args.bot_id} status={proc.returncode} "
+                f"elapsed={elapsed}s attempt={attempt + 1}"
+            )
+            if proc.returncode == 0:
+                return 0
+            if attempt >= max_retries:
+                print(
+                    f"[dispatch] giving up {args.bot_id} after {attempt + 1} attempts "
+                    f"(exit {proc.returncode})"
+                )
+                return proc.returncode
+            delay = min(backoff_cap, backoff_base * (2 ** attempt))
+            print(
+                f"[dispatch] RETRY {args.bot_id} in {delay:.0f}s "
+                f"(failure exit={proc.returncode}, attempt {attempt + 1}/{max_retries + 1})"
+            )
+            time.sleep(delay)
+            attempt += 1
     finally:
         if not args.force:
             gate("release", args.bot_id)

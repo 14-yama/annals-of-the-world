@@ -130,6 +130,21 @@ def plist_for_bot(bot: dict) -> dict:
     }
 
     schedule = bot.get("schedule") or {}
+    launchd = bot.get("launchd") or {}
+
+    # Aggressive KeepAlive / worker bots: relaunch immediately after each run.
+    # ThrottleInterval caps crash/retry meltdown; soft-skips sleep inside dispatch.
+    if schedule.get("kind") in ("keepalive", "worker") or launchd.get("KeepAlive"):
+        plist["RunAtLoad"] = True
+        plist["KeepAlive"] = True
+        throttle = int(
+            schedule.get("throttle_seconds")
+            or launchd.get("ThrottleInterval")
+            or 10
+        )
+        plist["ThrottleInterval"] = max(5, throttle)
+        return plist
+
     cron = schedule.get("cron")
     if not cron:
         raise ValueError(f"bot {bot_id} missing schedule.cron")
@@ -137,8 +152,13 @@ def plist_for_bot(bot: dict) -> dict:
     # Prefer StartInterval for simple every-N-minute jobs (Superstack pattern:
     # */2 → StartInterval 120s). Avoids calendar slot explosion and keeps
     # ollama/light/network lanes tight for 24/7 continuous work.
+    # Allow sub-minute via schedule.interval_seconds when set.
     parts = cron.split()
     interval_lanes = {"always_on", "light", "ollama", "network_write"}
+    if schedule.get("interval_seconds"):
+        plist["StartInterval"] = max(15, int(schedule["interval_seconds"]))
+        plist["RunAtLoad"] = True
+        return plist
     if (
         len(parts) == 5
         and parts[0].startswith("*/")
@@ -149,7 +169,10 @@ def plist_for_bot(bot: dict) -> dict:
         and bot.get("lane") in interval_lanes
     ):
         step = int(parts[0][2:])
-        plist["StartInterval"] = max(60, step * 60)
+        # Allow 30s workers via */1 with interval_seconds override; default floor 60.
+        plist["StartInterval"] = max(30, step * 60) if step == 1 else max(60, step * 60)
+        if step == 1:
+            plist["StartInterval"] = 60
         plist["RunAtLoad"] = True
         return plist
 
