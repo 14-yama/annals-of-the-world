@@ -48,6 +48,25 @@ function slugToId(slug: string): string {
   return crypto.createHash('sha256').update(slug).digest('hex').slice(0, 20)
 }
 
+/** Attributes allowed by scripts/setup_appwrite.ts entities collection */
+const ENTITY_ATTRS = new Set([
+  'slug', 'name', 'label', 'callNumber', 'summary', 'era', 'eraSlug', 'region',
+  'continent', 'status', 'born', 'died', 'founded', 'period', 'startDate', 'endDate',
+  'subjectHeadings', 'subjects', 'frameworks', 'altNames', 'wikidataQid', 'wikipediaUrl',
+  'imageUrl', 'importanceScore', 'detailsJson',
+])
+
+function sanitizeEntityPayload(entity: Record<string, unknown>): Record<string, unknown> {
+  const payload: Record<string, unknown> = {}
+  for (const [k, v] of Object.entries(entity)) {
+    if (k.startsWith('$') || k.startsWith('_')) continue
+    if (!ENTITY_ATTRS.has(k)) continue
+    if (v === undefined) continue
+    payload[k] = v
+  }
+  return payload
+}
+
 async function createDocument(
   collectionId: string,
   documentId: string,
@@ -58,7 +77,12 @@ async function createDocument(
     const res = await fetch(url, {
       method: 'POST',
       headers: headers(),
-      body: JSON.stringify({ documentId, data }),
+      body: JSON.stringify({
+        documentId,
+        data,
+        // Guest-readable so Vite UI can fetch without a user session
+        permissions: ['read("any")', 'update("users")', 'delete("users")'],
+      }),
     })
     if (!res.ok) {
       const body = await res.json().catch(() => ({ message: res.statusText }))
@@ -153,6 +177,8 @@ async function main() {
   const force = args.includes('--force')
   const collectionFlag = args.find(a => a.startsWith('--collection='))
   const singleCollection = collectionFlag?.split('=')[1]
+  const maxFlag = args.find(a => a.startsWith('--max='))
+  const maxDocs = maxFlag ? Math.max(1, parseInt(maxFlag.split('=')[1] || '0', 10)) : 0
 
   console.log('=== Repo → Appwrite Sync ===')
   console.log(`Endpoint:  ${ENDPOINT}`)
@@ -160,6 +186,7 @@ async function main() {
   console.log(`Source:    ${EXPORT_DIR}`)
   if (dryRun) console.log('MODE:      DRY RUN (no writes)')
   if (force) console.log('MODE:      FORCE (overwrite existing)')
+  if (maxDocs) console.log(`MODE:      STAGED (max=${maxDocs} entity upserts)`)
   console.log()
 
   if (!fs.existsSync(EXPORT_DIR)) {
@@ -169,6 +196,8 @@ async function main() {
   }
 
   let created = 0, updated = 0, skipped = 0, failed = 0
+  let processedEntities = 0
+  let hitMax = false
 
   // ─── Import Entities ───
   if (!singleCollection || singleCollection === 'entities') {
@@ -181,27 +210,28 @@ async function main() {
       )
 
       for (const classDir of classDirs) {
+        if (hitMax) break
         const divFiles = fs.readdirSync(path.join(entitiesDir, classDir))
           .filter(f => f.endsWith('.json'))
 
         for (const divFile of divFiles) {
+          if (hitMax) break
           const data = readJsonFile(path.join(entitiesDir, classDir, divFile))
           const entities = data.entities || data.documents || []
 
           for (const entity of entities) {
+            if (maxDocs && processedEntities >= maxDocs) {
+              hitMax = true
+              break
+            }
             const slug = entity.slug as string
             if (!slug) { failed++; continue }
 
             const docId = (entity.$id as string) || slugToId(slug)
 
-            // Strip Appwrite metadata from the data payload
-            const payload = { ...entity }
-            delete payload.$id
-            delete payload.$createdAt
-            delete payload.$updatedAt
-            delete payload.$databaseId
-            delete payload.$collectionId
-            delete payload.$permissions
+            const payload = sanitizeEntityPayload(entity)
+
+            processedEntities++
 
             if (dryRun) {
               console.log(`  [DRY] Would upsert: ${slug} (${docId})`)
@@ -223,6 +253,7 @@ async function main() {
                 skipped++
               }
             } else {
+              // Guest-readable docs for Vite UI without login
               const result = await createDocument('entities', docId, payload)
               if (result.success) {
                 created++
@@ -244,6 +275,7 @@ async function main() {
 
         console.log(`  ${classDir}: done`)
       }
+      if (hitMax) console.log(`  Stopped early at --max=${maxDocs}`)
     }
   }
 

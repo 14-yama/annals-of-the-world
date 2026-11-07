@@ -1,0 +1,467 @@
+{
+  "meta": {
+    "version": "1.2.0",
+    "owner": "annals-local-infra",
+    "description": "Canonical roster of Annals local bots for the Mac Mini pool. Many definitions; concurrency is gated so they share 24 GB RAM and mostly do not run at once. Mirrors Superstack's platform-local-bots.json pattern (*/2 StartInterval continuous workers).",
+    "host": "24 GB unified memory Mac mini",
+    "timezone": "America/Port_of_Spain",
+    "label_prefix": "com.annals.",
+    "docs_ref": "docs/governance/local_bots_mac_mini.md",
+    "superstack_sot_ref": "/Users/jeltonmentore/Digital Economy/caricom-connects-superstack/packages/truth-registry/platform-local-bots.json",
+    "throughput_targets": {
+      "note": "Single Ollama lane on :11434 (serialized enrich vs significance). Superstack media scrapers do not use 11434; calendar blackouts are narrow RAM/CPU buffers + live process yield.",
+      "entities_per_hour_target": "80–150 combined enrich+sig when Mini is quiet",
+      "entities_per_hour_floor": "40 (conservative with Cursor + scrapers)",
+      "enrich_batch": 8,
+      "sig_batch": 8,
+      "ollama_cadence_minutes": 2,
+      "idle_gap_max_seconds": 120,
+      "sync_entities_per_run": 120,
+      "kpi_refresh_minutes": 10,
+      "stats_cache_refresh_minutes": 10
+    },
+    "appwrite_cutover": {
+      "employ_bots": true,
+      "target": "local-docker",
+      "endpoint": "http://localhost:8080/v1",
+      "project_id": "annals-local",
+      "database_id": "annals_world_db",
+      "note": "Local Docker Appwrite is the UI + sync target. Cloud merges create-if-missing via merge-cloud bot. New local docs never overwrite/push to cloud.",
+      "paused_until_employ": []
+    }
+  },
+  "concurrency": {
+    "principle": "Many bot definitions are fine; concurrent RAM/CPU/Ollama use must stay gated. Leave headroom for Cursor/OS and Superstack's two daily media-house scrapers.",
+    "max_concurrent_llm": 1,
+    "brief_burst_of_2_llm": false,
+    "serialize_enrich_vs_significance": true,
+    "max_concurrent_heavy_scan": 1,
+    "lanes": {
+      "always_on": "bot-server + healthcheck only; never blocked by scrap blackout",
+      "ollama": "enrich + significance share one exclusive lock; never overlap",
+      "light": "queue, kpi, push — may run beside light OS work; yield when scrapers are actively running",
+      "heavy_scan": "audits + orphan triage + edges-extract — one at a time; skip during scrap blackout and when scrapers are live",
+      "network_write": "sync — Appwrite writes; skip during scrap blackout"
+    },
+    "lock_dir": "/tmp/annals-bot-locks",
+    "ollama": {
+      "host": "http://localhost:11434",
+      "model_default": "llama3.2:3b",
+      "note": "Annals uses default Ollama on 11434. Superstack news Ollama (11435) is separate when enabled; keep Annals on 11434."
+    }
+  },
+  "superstack_blackout": {
+    "description": "Do not interrupt Superstack's ~2 daily media-house scrap bots. Annals heavy/LLM/network bots skip these windows and also yield when those LaunchAgents are actively running.",
+    "timezone": "America/Port_of_Spain",
+    "protected_scrapers": [
+      {
+        "id": "media-daily-new-articles",
+        "name": "Daily new-article bot",
+        "launchd_label": "com.caricom.media-daily-new-articles",
+        "cron": "10 18 * * *",
+        "timezone": "America/Port_of_Spain",
+        "ports": [],
+        "ollama": false,
+        "note": "6:10pm Port of Spain fresh media-house harvest. Process-heavy scrape; do not compete for RAM/CPU."
+      },
+      {
+        "id": "media-archive-backfill-listing",
+        "name": "Archive backfill, shallow houses first",
+        "launchd_label": "com.caricom.media-archive-backfill-listing",
+        "cron": "35 20 * * *",
+        "timezone": "America/Port_of_Spain",
+        "ports": [],
+        "ollama": false,
+        "note": "8:35pm Port of Spain one-house listing backfill."
+      }
+    ],
+    "windows": [
+      {
+        "id": "daily-harvest",
+        "protects": "media-daily-new-articles",
+        "start": "18:05",
+        "end": "18:50",
+        "note": "Narrow RAM/CPU buffer around 18:10 harvest. Scrapers do not use Ollama :11434; live process yield still pauses Annals if the LaunchAgent is running longer."
+      },
+      {
+        "id": "listing-backfill",
+        "protects": "media-archive-backfill-listing",
+        "start": "20:30",
+        "end": "21:05",
+        "note": "Narrow buffer around 20:35 listing backfill. Process yield covers overrun."
+      }
+    ],
+    "also_yield_when_process_matches": [
+      "media-daily-new-articles",
+      "media-archive-backfill-listing",
+      "scrape-media-houses"
+    ],
+    "never_touch_labels": ["com.caricom."]
+  },
+  "bots": [
+    {
+      "id": "bot-server",
+      "name": "Local Bot HTTP Server",
+      "status": "active",
+      "lane": "always_on",
+      "role": "Curator command post on port 7474 — status, manual enrich/sig/queue/sync/push triggers, Ollama health.",
+      "uses_ollama": false,
+      "script": "scripts/local_bot_server_start.sh",
+      "schedule": {
+        "kind": "keepalive",
+        "enabled": true,
+        "note": "KeepAlive + RunAtLoad. Not a cron job."
+      },
+      "launchd": {
+        "label": "com.annals.bot-server",
+        "KeepAlive": true,
+        "RunAtLoad": true
+      }
+    },
+    {
+      "id": "healthcheck",
+      "name": "Bot stack healthcheck",
+      "status": "active",
+      "lane": "always_on",
+      "role": "Every 5 minutes: ensure Ollama responds, bot-server listens on 7474, restart server if needed. Does not start the legacy monolithic daemon when discrete launchd bots are installed.",
+      "uses_ollama": false,
+      "script": "scripts/local_bots/healthcheck.sh",
+      "schedule": {
+        "cron": "*/5 * * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true
+      },
+      "respect_blackout": false
+    },
+    {
+      "id": "enrich",
+      "name": "AI Enrichment (Ollama)",
+      "status": "active",
+      "lane": "ollama",
+      "role": "Bulk entity enrichment via local Ollama. Writes git-first entity JSON; sync/push bots ship later.",
+      "uses_ollama": true,
+      "script": "scripts/ai_enrich_autonomous.py",
+      "args": ["--count", "${ENRICH_COUNT:-8}", "--model", "ollama", "--ollama-model", "${OLLAMA_MODEL:-llama3.2:3b}", "--lenient", "--retry", "2"],
+      "schedule": {
+        "cron": "*/2 * * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true,
+        "note": "Superstack-style */2 StartInterval. Soft-skips when significance holds ollama lock. Target ≤2 min idle. Ollama lane skips live-scraper yield (scrapers ≠ :11434) but still honors narrow calendar blackout."
+      },
+      "respect_blackout": true,
+      "yield_on_scraper_process": false,
+      "locks": ["ollama", "enrich_sig"]
+    },
+    {
+      "id": "significance",
+      "name": "Significance Backfill (Ollama)",
+      "status": "active",
+      "lane": "ollama",
+      "role": "historicalSignificance backfill via Ollama. Serialized against enrich (never concurrent LLM).",
+      "uses_ollama": true,
+      "script": "scripts/backfill_significance.py",
+      "args": ["--count", "${SIG_COUNT:-8}", "--model", "ollama", "--ollama-model", "${OLLAMA_MODEL:-llama3.2:3b}"],
+      "schedule": {
+        "cron": "*/2 * * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true,
+        "note": "Same */2 cadence as enrich; file locks alternate the single LLM lane with minimal downtime."
+      },
+      "respect_blackout": true,
+      "yield_on_scraper_process": false,
+      "locks": ["ollama", "enrich_sig"]
+    },
+    {
+      "id": "queue",
+      "name": "Enrichment Queue Regenerator",
+      "status": "active",
+      "lane": "light",
+      "role": "Rescan weak entities into data/enrichment/queue.json. No LLM.",
+      "uses_ollama": false,
+      "script": "scripts/enrichment_queue.py",
+      "args": ["--limit", "1200"],
+      "schedule": {
+        "cron": "*/30 * * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true,
+        "note": "Every 30 min StartInterval so enrich never starves for candidates."
+      },
+      "respect_blackout": true,
+      "locks": ["heavy_scan"]
+    },
+    {
+      "id": "kpi",
+      "name": "Local KPI Aggregator",
+      "status": "active",
+      "lane": "light",
+      "role": "Roll up local_bot_status.json into data/governance/bot_kpi + mirror ui/public/governance for Curator pages.",
+      "uses_ollama": false,
+      "script": "scripts/local_kpi_aggregator.py",
+      "schedule": {
+        "cron": "*/10 * * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true
+      },
+      "respect_blackout": false,
+      "locks": []
+    },
+    {
+      "id": "stats-cache",
+      "name": "Local Stats Cache Refresh",
+      "status": "active",
+      "lane": "light",
+      "role": "Recount local Appwrite entities into stats_cache (+ ui/public/governance/stats_cache.json) so /catalog, ClassHub, AuditDashboard show live counts.",
+      "uses_ollama": false,
+      "script": "scripts/refresh_local_stats_cache.ts",
+      "runner": "npx_tsx",
+      "schedule": {
+        "cron": "*/10 * * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true,
+        "note": "Every 10 min. Ensures stats_cache exists on local Docker Appwrite."
+      },
+      "respect_blackout": false,
+      "locks": []
+    },
+    {
+      "id": "push",
+      "name": "Git Push Pending Enrichments",
+      "status": "active",
+      "lane": "light",
+      "role": "Commit + push dirty entity/enrichment/audit files so cloud GH Actions remain optional. Local Appwrite sync is the sync bot. No LLM.",
+      "uses_ollama": false,
+      "script": "scripts/local_bots/git_push_pending.sh",
+      "schedule": {
+        "cron": "55 * * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true,
+        "note": "Hourly at :55, after enrich/sig slots."
+      },
+      "respect_blackout": true,
+      "locks": ["git"]
+    },
+    {
+      "id": "sync",
+      "name": "Local Sync Gateway",
+      "status": "active",
+      "lane": "network_write",
+      "role": "Push _unsyncedEdits entity JSON to local Docker Appwrite via sync_gateway.ts --local. Budget-gated. Skip during scrap blackout.",
+      "uses_ollama": false,
+      "script": "scripts/sync_gateway.ts",
+      "runner": "npx_tsx",
+      "args": ["--local", "--max=120"],
+      "schedule": {
+        "cron": "*/15 * * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true,
+        "note": "Every 15 min StartInterval so enriched entities reach local Appwrite + audit_log quickly. Localhost writes — no live-scraper yield."
+      },
+      "respect_blackout": true,
+      "yield_on_scraper_process": false,
+      "locks": ["network_write"]
+    },
+    {
+      "id": "edges-extract",
+      "name": "Edges Extract (no LLM)",
+      "status": "active",
+      "lane": "heavy_scan",
+      "role": "Promote detailsJson.relationships into standalone edge records (--extract-only). No LLM.",
+      "uses_ollama": false,
+      "script": "scripts/ai_edge_bot.py",
+      "args": ["--extract-only", "--count", "40"],
+      "schedule": {
+        "cron": "0 11 * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true,
+        "note": "Late morning, clear of scrap windows."
+      },
+      "respect_blackout": true,
+      "locks": ["heavy_scan"]
+    },
+    {
+      "id": "seed-local",
+      "name": "Staged Git → Local Appwrite Seed",
+      "status": "active",
+      "lane": "network_write",
+      "role": "Create-if-missing seed from data/appwrite-export into local Docker Appwrite (batched).",
+      "uses_ollama": false,
+      "script": "scripts/sync_repo_to_appwrite.ts",
+      "runner": "npx_tsx",
+      "args": ["--max=400"],
+      "schedule": {
+        "cron": "*/20 * * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true,
+        "note": "Every 20 min StartInterval while seeding local Docker Appwrite. Localhost writes — no live-scraper yield."
+      },
+      "respect_blackout": true,
+      "yield_on_scraper_process": false,
+      "locks": ["network_write"]
+    },
+    {
+      "id": "merge-cloud",
+      "name": "Cloud → Local Create-If-Missing Merge",
+      "status": "active",
+      "lane": "network_write",
+      "role": "One-way merge old cloud entity docs into local Appwrite. Never overwrites existing/local-only docs. Cursor in data/governance/cloud_merge_cursor.json.",
+      "uses_ollama": false,
+      "script": "scripts/merge_cloud_to_local_appwrite.ts",
+      "runner": "npx_tsx",
+      "args": ["--max=250", "--collection=entities"],
+      "schedule": {
+        "cron": "*/25 * * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true,
+        "note": "Every 25 min while catching up cloud history. Outside narrow scrap blackouts via gate. Localhost writes — no live-scraper yield."
+      },
+      "respect_blackout": true,
+      "yield_on_scraper_process": false,
+      "locks": ["network_write"]
+    },
+    {
+      "id": "merge-cloud-audit",
+      "name": "Cloud → Local Audit Log Merge",
+      "status": "active",
+      "lane": "network_write",
+      "role": "Create-if-missing merge of cloud audit_log into local so /curator/audit/log shows new local + old cloud entries (CLOUD badge via editorId / editorNote).",
+      "uses_ollama": false,
+      "script": "scripts/merge_cloud_to_local_appwrite.ts",
+      "runner": "npx_tsx",
+      "args": ["--max=300", "--collection=audit_log"],
+      "schedule": {
+        "cron": "*/20 * * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true,
+        "note": "Keeps audit log populated with historical cloud edits alongside local Ollama/sync rows."
+      },
+      "respect_blackout": true,
+      "yield_on_scraper_process": false,
+      "locks": ["network_write"]
+    },
+    {
+      "id": "audit-stats",
+      "name": "Audit Stats",
+      "status": "active",
+      "lane": "heavy_scan",
+      "role": "Entity corpus stats report (git-first).",
+      "uses_ollama": false,
+      "script": "scripts/audits/stats.py",
+      "module": "scripts.audits.stats",
+      "schedule": {
+        "cron": "0 1 * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true
+      },
+      "respect_blackout": true,
+      "locks": ["heavy_scan"]
+    },
+    {
+      "id": "audit-completeness",
+      "name": "Audit Completeness",
+      "status": "active",
+      "lane": "heavy_scan",
+      "role": "Completeness audit over local entity mirror.",
+      "uses_ollama": false,
+      "script": "scripts/audits/completeness.py",
+      "module": "scripts.audits.completeness",
+      "schedule": {
+        "cron": "0 2 * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true
+      },
+      "respect_blackout": true,
+      "locks": ["heavy_scan"]
+    },
+    {
+      "id": "audit-orphans",
+      "name": "Audit Orphans",
+      "status": "active",
+      "lane": "heavy_scan",
+      "role": "Find entities with zero relationships.",
+      "uses_ollama": false,
+      "script": "scripts/audits/orphans.py",
+      "module": "scripts.audits.orphans",
+      "schedule": {
+        "cron": "0 3 * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true
+      },
+      "respect_blackout": true,
+      "locks": ["heavy_scan"]
+    },
+    {
+      "id": "orphan-triage",
+      "name": "Orphan Triage Helper",
+      "status": "active",
+      "lane": "heavy_scan",
+      "role": "Export orphan CSV (legacy Nodes path when present) and regenerate orphan_triage.html for curator review.",
+      "uses_ollama": false,
+      "script": "scripts/local_bots/orphan_triage.sh",
+      "schedule": {
+        "cron": "30 3 * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true,
+        "note": "After audit-orphans."
+      },
+      "respect_blackout": true,
+      "locks": ["heavy_scan"]
+    },
+    {
+      "id": "audit-consistency",
+      "name": "Audit Consistency",
+      "status": "active",
+      "lane": "heavy_scan",
+      "role": "Schema/consistency audit over local entity mirror.",
+      "uses_ollama": false,
+      "script": "scripts/audits/consistency.py",
+      "module": "scripts.audits.consistency",
+      "schedule": {
+        "cron": "0 4 * * *",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true
+      },
+      "respect_blackout": true,
+      "locks": ["heavy_scan"]
+    },
+    {
+      "id": "audit-duplicates",
+      "name": "Audit Duplicates",
+      "status": "active",
+      "lane": "heavy_scan",
+      "role": "Weekly fuzzy duplicate scan.",
+      "uses_ollama": false,
+      "script": "scripts/audits/duplicates.py",
+      "module": "scripts.audits.duplicates",
+      "schedule": {
+        "cron": "0 5 * * 0",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true
+      },
+      "respect_blackout": true,
+      "locks": ["heavy_scan"]
+    },
+    {
+      "id": "audit-classification",
+      "name": "Audit Classification",
+      "status": "active",
+      "lane": "heavy_scan",
+      "role": "Weekly Dewey/classification validation.",
+      "uses_ollama": false,
+      "script": "scripts/audits/classification.py",
+      "module": "scripts.audits.classification",
+      "schedule": {
+        "cron": "0 6 * * 0",
+        "timezone": "America/Port_of_Spain",
+        "enabled": true
+      },
+      "respect_blackout": true,
+      "locks": ["heavy_scan"]
+    }
+  ],
+  "retired_on_mac": [
+    {
+      "id": "local-bot-daemon-loop",
+      "note": "scripts/local_bot_daemon.sh monolithic enrich+sig loop is superseded by discrete enrich/significance LaunchAgents. Do not enable both."
+    }
+  ]
+}

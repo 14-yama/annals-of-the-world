@@ -24,8 +24,10 @@ import * as crypto from 'crypto'
 import { execSync } from 'child_process'
 
 // ── Config ──
-const ENDPOINT    = process.env.VITE_APPWRITE_ENDPOINT   || 'https://fra.cloud.appwrite.io/v1'
-const PROJECT_ID  = process.env.VITE_APPWRITE_PROJECT_ID || '66509ba7003618a05af6'
+// Defaults target local Docker Appwrite on the Mac Mini. Cloud remains
+// available only via .env.cloud-merge + merge_cloud_to_local_appwrite.ts.
+const ENDPOINT    = process.env.VITE_APPWRITE_ENDPOINT   || 'http://localhost:8080/v1'
+const PROJECT_ID  = process.env.VITE_APPWRITE_PROJECT_ID || 'annals-local'
 const DATABASE_ID = process.env.VITE_APPWRITE_DATABASE_ID || 'annals_world_db'
 const API_KEY     = process.env.APPWRITE_API_KEY
 const SYNC_EDITOR = process.env.SYNC_EDITOR_ID || 'sync-gateway'

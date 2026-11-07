@@ -2,11 +2,16 @@
 # install_local_services.sh — One-time setup for local 24/7 bot stack.
 #
 # What this does:
-#   1. Installs systemd user units (local_bot_server + daemon loop)
-#   2. Enables and starts the units so they survive reboots
-#   3. Installs a cron watchdog as belt-and-suspenders backup
-#   4. Creates the required directories
-#   5. Writes ~/.config/annals/env as a shared env file
+#   macOS (Darwin / Mac Mini):
+#     1. Writes ~/.config/annals/env
+#     2. Installs com.annals.* LaunchAgents from platform-local-bots.json
+#     3. Never touches Superstack com.caricom.* agents
+#   Linux:
+#     1. Installs systemd user units (local_bot_server + daemon loop)
+#     2. Enables and starts the units so they survive reboots
+#     3. Installs a cron watchdog as belt-and-suspenders backup
+#     4. Creates the required directories
+#     5. Writes ~/.config/annals/env as a shared env file
 #
 # Usage:
 #   bash scripts/install_local_services.sh
@@ -17,6 +22,7 @@ set -euo pipefail
 REPO_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 SYSTEMD_USER_DIR="$HOME/.config/systemd/user"
 CRON_TAG="annals-watchdog"
+OS_NAME="$(uname -s)"
 
 BLUE='\033[0;34m'; GREEN='\033[0;32m'; YELLOW='\033[1;33m'
 RED='\033[0;31m'; NC='\033[0m'
@@ -32,6 +38,11 @@ for arg in "$@"; do [[ "$arg" == "--uninstall" ]] && UNINSTALL=1; done
 # ─── Uninstall path ───────────────────────────────────────────────────────────
 if [[ $UNINSTALL -eq 1 ]]; then
     info "Removing Annals local bot services…"
+    if [[ "$OS_NAME" == "Darwin" ]]; then
+        python3 "$REPO_DIR/scripts/local_bots/install_mac_launch_agents.py" --uninstall
+        success "Uninstalled com.annals.* LaunchAgents. Superstack agents untouched."
+        exit 0
+    fi
     systemctl --user stop  annals-local-bot-server.service annals-local-bots.service 2>/dev/null || true
     systemctl --user disable annals-local-bot-server.service annals-local-bots.service 2>/dev/null || true
     rm -f "$SYSTEMD_USER_DIR/annals-local-bot-server.service"
@@ -39,6 +50,56 @@ if [[ $UNINSTALL -eq 1 ]]; then
     # Remove cron entry
     crontab -l 2>/dev/null | grep -v "$CRON_TAG" | crontab - || true
     success "Uninstalled. Run 'systemctl --user daemon-reload' to confirm."
+    exit 0
+fi
+
+# ─── macOS / Mac Mini path (launchd) ──────────────────────────────────────────
+if [[ "$OS_NAME" == "Darwin" ]]; then
+    info "Detected macOS — installing Annals LaunchAgents (com.annals.* only)"
+    mkdir -p "$HOME/.config/annals"
+    mkdir -p "$HOME/Library/Logs/annals-bots"
+    mkdir -p /tmp/annals-bots
+    mkdir -p /tmp/annals-bot-locks
+    mkdir -p "$REPO_DIR/data/governance/bot_kpi"
+
+    ENV_FILE="$HOME/.config/annals/env"
+    if [[ ! -f "$ENV_FILE" ]]; then
+        info "Writing $ENV_FILE"
+        cat > "$ENV_FILE" << 'EOF'
+# Annals local bot configuration (Mac Mini)
+ENRICH_COUNT=8
+SIG_COUNT=8
+OLLAMA_MODEL=llama3.2:3b
+OLLAMA_HOST=http://localhost:11434
+LOG_DIR=~/Library/Logs/annals-bots
+EOF
+        success "Created $ENV_FILE"
+    else
+        info "$ENV_FILE already exists — skipping"
+    fi
+
+    chmod +x \
+        "$REPO_DIR/scripts/local_bots/"*.sh \
+        "$REPO_DIR/scripts/local_bots/run_job.zsh" \
+        "$REPO_DIR/scripts/local_bot_server_start.sh" \
+        "$REPO_DIR/scripts/local_bots/ctl.sh" 2>/dev/null || true
+
+    python3 "$REPO_DIR/scripts/local_bots/install_mac_launch_agents.py"
+
+    echo ""
+    echo -e "${GREEN}═══════════════════════════════════════════════════════${NC}"
+    echo -e "${GREEN}  Annals Mac Mini local-bot roster installed${NC}"
+    echo -e "${GREEN}═══════════════════════════════════════════════════════${NC}"
+    echo ""
+    echo "  SoT:     data/governance/platform-local-bots.json"
+    echo "  Docs:    docs/governance/local_bots_mac_mini.md"
+    echo "  Status:  bash scripts/local_bots/ctl.sh status"
+    echo "  Gate:    bash scripts/local_bots/ctl.sh gate"
+    echo "  Logs:    ~/Library/Logs/annals-bots/"
+    echo ""
+    echo "  Superstack com.caricom.* agents were not modified."
+    echo "  Blackout: 17:45–19:30 and 20:20–21:30 AST around the two daily scrapers."
+    echo ""
     exit 0
 fi
 

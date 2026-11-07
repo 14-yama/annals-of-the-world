@@ -1,234 +1,410 @@
 {
-  "updatedAt": "2026-06-06T21:23:17Z",
-  "totalJobsAllTime": 6368,
+  "updatedAt": "2026-11-07T19:49:39Z",
+  "source": "local-mac-mini",
+  "labelPrefix": "com.annals.",
+  "llmProvider": "ollama",
+  "totalJobsAllTime": 35,
+  "rosterCount": 20,
+  "roster": [
+    {
+      "id": "bot-server",
+      "name": "Local Bot HTTP Server",
+      "status": "active",
+      "lane": "always_on",
+      "usesOllama": false,
+      "cron": "keepalive",
+      "scheduleEnabled": true,
+      "scheduleNote": "KeepAlive + RunAtLoad. Not a cron job.",
+      "launchdLabel": "com.annals.bot-server",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": "2026-11-07T19:46:38Z"
+    },
+    {
+      "id": "healthcheck",
+      "name": "Bot stack healthcheck",
+      "status": "active",
+      "lane": "always_on",
+      "usesOllama": false,
+      "cron": "*/5 * * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": null,
+      "launchdLabel": "com.annals.healthcheck",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": "2026-11-07T19:47:54Z"
+    },
+    {
+      "id": "enrich",
+      "name": "AI Enrichment (Ollama)",
+      "status": "active",
+      "lane": "ollama",
+      "usesOllama": true,
+      "cron": "*/2 * * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": "Superstack-style */2 StartInterval. Soft-skips when significance holds ollama lock. Target \u22642 min idle. Ollama lane skips live-scraper yield (scrapers \u2260 :11434) but still honors narrow calendar blackout.",
+      "launchdLabel": "com.annals.enrich",
+      "lastJobStatus": "error",
+      "lastJobStarted": "2026-11-07T19:09:17Z",
+      "lastJobFinished": "2026-11-07T19:09:17Z",
+      "lastLogAt": "2026-11-07T19:47:52Z"
+    },
+    {
+      "id": "significance",
+      "name": "Significance Backfill (Ollama)",
+      "status": "active",
+      "lane": "ollama",
+      "usesOllama": true,
+      "cron": "*/2 * * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": "Same */2 cadence as enrich; file locks alternate the single LLM lane with minimal downtime.",
+      "launchdLabel": "com.annals.significance",
+      "lastJobStatus": "done",
+      "lastJobStarted": "2026-11-07T19:09:20Z",
+      "lastJobFinished": "2026-11-07T19:11:40Z",
+      "lastLogAt": "2026-11-07T19:47:51Z"
+    },
+    {
+      "id": "queue",
+      "name": "Enrichment Queue Regenerator",
+      "status": "active",
+      "lane": "light",
+      "usesOllama": false,
+      "cron": "*/30 * * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": "Every 30 min StartInterval so enrich never starves for candidates.",
+      "launchdLabel": "com.annals.queue",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": "2026-11-07T19:46:39Z"
+    },
+    {
+      "id": "kpi",
+      "name": "Local KPI Aggregator",
+      "status": "active",
+      "lane": "light",
+      "usesOllama": false,
+      "cron": "*/10 * * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": null,
+      "launchdLabel": "com.annals.kpi",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": "2026-11-07T19:47:54Z"
+    },
+    {
+      "id": "stats-cache",
+      "name": "Local Stats Cache Refresh",
+      "status": "active",
+      "lane": "light",
+      "usesOllama": false,
+      "cron": "*/10 * * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": "Every 10 min. Ensures stats_cache exists on local Docker Appwrite.",
+      "launchdLabel": "com.annals.stats-cache",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": "2026-11-07T19:46:43Z"
+    },
+    {
+      "id": "push",
+      "name": "Git Push Pending Enrichments",
+      "status": "active",
+      "lane": "light",
+      "usesOllama": false,
+      "cron": "55 * * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": "Hourly at :55, after enrich/sig slots.",
+      "launchdLabel": "com.annals.push",
+      "lastJobStatus": "done",
+      "lastJobStarted": "2026-11-07T19:43:45Z",
+      "lastJobFinished": "2026-11-07T19:43:49Z",
+      "lastLogAt": "2026-11-07T18:55:05Z"
+    },
+    {
+      "id": "sync",
+      "name": "Local Sync Gateway",
+      "status": "active",
+      "lane": "network_write",
+      "usesOllama": false,
+      "cron": "*/15 * * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": "Every 15 min StartInterval so enriched entities reach local Appwrite + audit_log quickly. Localhost writes \u2014 no live-scraper yield.",
+      "launchdLabel": "com.annals.sync",
+      "lastJobStatus": "done",
+      "lastJobStarted": "2026-11-07T19:42:28Z",
+      "lastJobFinished": "2026-11-07T19:43:42Z",
+      "lastLogAt": "2026-11-07T19:47:52Z"
+    },
+    {
+      "id": "edges-extract",
+      "name": "Edges Extract (no LLM)",
+      "status": "active",
+      "lane": "heavy_scan",
+      "usesOllama": false,
+      "cron": "0 11 * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": "Late morning, clear of scrap windows.",
+      "launchdLabel": "com.annals.edges-extract",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": null
+    },
+    {
+      "id": "seed-local",
+      "name": "Staged Git \u2192 Local Appwrite Seed",
+      "status": "active",
+      "lane": "network_write",
+      "usesOllama": false,
+      "cron": "*/20 * * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": "Every 20 min StartInterval while seeding local Docker Appwrite. Localhost writes \u2014 no live-scraper yield.",
+      "launchdLabel": "com.annals.seed-local",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": "2026-11-07T19:48:49Z"
+    },
+    {
+      "id": "merge-cloud",
+      "name": "Cloud \u2192 Local Create-If-Missing Merge",
+      "status": "active",
+      "lane": "network_write",
+      "usesOllama": false,
+      "cron": "*/25 * * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": "Every 25 min while catching up cloud history. Outside narrow scrap blackouts via gate. Localhost writes \u2014 no live-scraper yield.",
+      "launchdLabel": "com.annals.merge-cloud",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": "2026-11-07T19:46:39Z"
+    },
+    {
+      "id": "merge-cloud-audit",
+      "name": "Cloud \u2192 Local Audit Log Merge",
+      "status": "active",
+      "lane": "network_write",
+      "usesOllama": false,
+      "cron": "*/20 * * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": "Keeps audit log populated with historical cloud edits alongside local Ollama/sync rows.",
+      "launchdLabel": "com.annals.merge-cloud-audit",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": "2026-11-07T19:47:52Z"
+    },
+    {
+      "id": "audit-stats",
+      "name": "Audit Stats",
+      "status": "active",
+      "lane": "heavy_scan",
+      "usesOllama": false,
+      "cron": "0 1 * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": null,
+      "launchdLabel": "com.annals.audit-stats",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": null
+    },
+    {
+      "id": "audit-completeness",
+      "name": "Audit Completeness",
+      "status": "active",
+      "lane": "heavy_scan",
+      "usesOllama": false,
+      "cron": "0 2 * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": null,
+      "launchdLabel": "com.annals.audit-completeness",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": null
+    },
+    {
+      "id": "audit-orphans",
+      "name": "Audit Orphans",
+      "status": "active",
+      "lane": "heavy_scan",
+      "usesOllama": false,
+      "cron": "0 3 * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": null,
+      "launchdLabel": "com.annals.audit-orphans",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": null
+    },
+    {
+      "id": "orphan-triage",
+      "name": "Orphan Triage Helper",
+      "status": "active",
+      "lane": "heavy_scan",
+      "usesOllama": false,
+      "cron": "30 3 * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": "After audit-orphans.",
+      "launchdLabel": "com.annals.orphan-triage",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": null
+    },
+    {
+      "id": "audit-consistency",
+      "name": "Audit Consistency",
+      "status": "active",
+      "lane": "heavy_scan",
+      "usesOllama": false,
+      "cron": "0 4 * * *",
+      "scheduleEnabled": true,
+      "scheduleNote": null,
+      "launchdLabel": "com.annals.audit-consistency",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": null
+    },
+    {
+      "id": "audit-duplicates",
+      "name": "Audit Duplicates",
+      "status": "active",
+      "lane": "heavy_scan",
+      "usesOllama": false,
+      "cron": "0 5 * * 0",
+      "scheduleEnabled": true,
+      "scheduleNote": null,
+      "launchdLabel": "com.annals.audit-duplicates",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": null
+    },
+    {
+      "id": "audit-classification",
+      "name": "Audit Classification",
+      "status": "active",
+      "lane": "heavy_scan",
+      "usesOllama": false,
+      "cron": "0 6 * * 0",
+      "scheduleEnabled": true,
+      "scheduleNote": null,
+      "launchdLabel": "com.annals.audit-classification",
+      "lastJobStatus": null,
+      "lastJobStarted": null,
+      "lastJobFinished": null,
+      "lastLogAt": null
+    }
+  ],
   "last24h": {
     "windowDays": 1,
-    "totalJobs": 33,
-    "doneJobs": 20,
-    "errorJobs": 13,
-    "successRate": 60.6,
+    "totalJobs": 35,
+    "doneJobs": 29,
+    "errorJobs": 6,
+    "successRate": 82.9,
     "byTask": {
-      "enrich": 5,
-      "significance": 4,
-      "sync": 8,
-      "git-push": 16
+      "bot-server": 0,
+      "healthcheck": 0,
+      "enrich": 3,
+      "significance": 3,
+      "queue": 0,
+      "kpi": 0,
+      "stats-cache": 0,
+      "push": 19,
+      "sync": 10,
+      "edges-extract": 0,
+      "seed-local": 0,
+      "merge-cloud": 0,
+      "merge-cloud-audit": 0,
+      "audit-stats": 0,
+      "audit-completeness": 0,
+      "audit-orphans": 0,
+      "orphan-triage": 0,
+      "audit-consistency": 0,
+      "audit-duplicates": 0,
+      "audit-classification": 0
     }
   },
   "last7d": {
     "windowDays": 7,
-    "totalJobs": 33,
-    "doneJobs": 20,
-    "errorJobs": 13,
-    "successRate": 60.6,
+    "totalJobs": 35,
+    "doneJobs": 29,
+    "errorJobs": 6,
+    "successRate": 82.9,
     "byTask": {
-      "enrich": 5,
-      "significance": 4,
-      "sync": 8,
-      "git-push": 16
+      "bot-server": 0,
+      "healthcheck": 0,
+      "enrich": 3,
+      "significance": 3,
+      "queue": 0,
+      "kpi": 0,
+      "stats-cache": 0,
+      "push": 19,
+      "sync": 10,
+      "edges-extract": 0,
+      "seed-local": 0,
+      "merge-cloud": 0,
+      "merge-cloud-audit": 0,
+      "audit-stats": 0,
+      "audit-completeness": 0,
+      "audit-orphans": 0,
+      "orphan-triage": 0,
+      "audit-consistency": 0,
+      "audit-duplicates": 0,
+      "audit-classification": 0
     }
   },
   "last30d": {
     "windowDays": 30,
-    "totalJobs": 6368,
-    "doneJobs": 5143,
-    "errorJobs": 1225,
-    "successRate": 80.8,
+    "totalJobs": 35,
+    "doneJobs": 29,
+    "errorJobs": 6,
+    "successRate": 82.9,
     "byTask": {
-      "sync": 1987,
-      "git-push": 2153,
-      "queue": 5,
-      "enrich": 1116,
-      "significance": 1106,
-      "sync-push": 1
+      "bot-server": 0,
+      "healthcheck": 0,
+      "enrich": 3,
+      "significance": 3,
+      "queue": 0,
+      "kpi": 0,
+      "stats-cache": 0,
+      "push": 19,
+      "sync": 10,
+      "edges-extract": 0,
+      "seed-local": 0,
+      "merge-cloud": 0,
+      "merge-cloud-audit": 0,
+      "audit-stats": 0,
+      "audit-completeness": 0,
+      "audit-orphans": 0,
+      "orphan-triage": 0,
+      "audit-consistency": 0,
+      "audit-duplicates": 0,
+      "audit-classification": 0
     }
   },
   "days": [
     {
-      "date": "2026-05-12",
-      "totalJobs": 4,
-      "doneJobs": 4,
-      "errorJobs": 0,
+      "date": "2026-11-07",
+      "totalJobs": 35,
+      "doneJobs": 29,
+      "errorJobs": 6,
       "byTask": {
-        "sync": 2,
-        "git-push": 2
-      }
-    },
-    {
-      "date": "2026-05-13",
-      "totalJobs": 332,
-      "doneJobs": 331,
-      "errorJobs": 1,
-      "byTask": {
-        "sync": 187,
-        "git-push": 145
-      }
-    },
-    {
-      "date": "2026-05-14",
-      "totalJobs": 396,
-      "doneJobs": 395,
-      "errorJobs": 1,
-      "byTask": {
-        "sync": 201,
-        "git-push": 195
-      }
-    },
-    {
-      "date": "2026-05-15",
-      "totalJobs": 487,
-      "doneJobs": 486,
-      "errorJobs": 1,
-      "byTask": {
-        "git-push": 242,
-        "sync": 242,
-        "queue": 1,
-        "enrich": 1,
-        "significance": 1
-      }
-    },
-    {
-      "date": "2026-05-16",
-      "totalJobs": 52,
-      "doneJobs": 49,
-      "errorJobs": 3,
-      "byTask": {
-        "sync": 19,
-        "git-push": 17,
-        "queue": 3,
-        "enrich": 9,
-        "significance": 3,
-        "sync-push": 1
-      }
-    },
-    {
-      "date": "2026-05-17",
-      "totalJobs": 394,
-      "doneJobs": 389,
-      "errorJobs": 5,
-      "byTask": {
-        "sync": 182,
-        "git-push": 181,
-        "enrich": 18,
-        "significance": 13
-      }
-    },
-    {
-      "date": "2026-05-18",
-      "totalJobs": 40,
-      "doneJobs": 33,
-      "errorJobs": 7,
-      "byTask": {
-        "significance": 10,
         "sync": 10,
-        "git-push": 10,
-        "enrich": 10
-      }
-    },
-    {
-      "date": "2026-05-19",
-      "totalJobs": 40,
-      "doneJobs": 39,
-      "errorJobs": 1,
-      "byTask": {
-        "significance": 10,
-        "sync": 10,
-        "git-push": 10,
-        "enrich": 10
-      }
-    },
-    {
-      "date": "2026-05-20",
-      "totalJobs": 32,
-      "doneJobs": 24,
-      "errorJobs": 8,
-      "byTask": {
-        "significance": 8,
-        "sync": 8,
-        "git-push": 8,
-        "enrich": 8
-      }
-    },
-    {
-      "date": "2026-05-21",
-      "totalJobs": 84,
-      "doneJobs": 59,
-      "errorJobs": 25,
-      "byTask": {
-        "significance": 18,
-        "sync": 25,
-        "git-push": 25,
-        "enrich": 16
-      }
-    },
-    {
-      "date": "2026-05-22",
-      "totalJobs": 473,
-      "doneJobs": 413,
-      "errorJobs": 60,
-      "byTask": {
-        "significance": 119,
-        "sync": 118,
-        "git-push": 118,
-        "enrich": 118
-      }
-    },
-    {
-      "date": "2026-05-23",
-      "totalJobs": 1612,
-      "doneJobs": 1218,
-      "errorJobs": 394,
-      "byTask": {
-        "sync": 403,
-        "git-push": 403,
-        "enrich": 403,
-        "significance": 403
-      }
-    },
-    {
-      "date": "2026-05-24",
-      "totalJobs": 1498,
-      "doneJobs": 987,
-      "errorJobs": 511,
-      "byTask": {
-        "sync": 416,
-        "git-push": 499,
-        "enrich": 292,
-        "significance": 291
-      }
-    },
-    {
-      "date": "2026-05-25",
-      "totalJobs": 240,
-      "doneJobs": 145,
-      "errorJobs": 95,
-      "byTask": {
-        "git-push": 154,
-        "sync": 86
-      }
-    },
-    {
-      "date": "2026-05-26",
-      "totalJobs": 651,
-      "doneJobs": 551,
-      "errorJobs": 100,
-      "byTask": {
-        "sync": 70,
-        "git-push": 128,
-        "enrich": 226,
-        "significance": 226,
-        "queue": 1
-      }
-    },
-    {
-      "date": "2026-06-06",
-      "totalJobs": 33,
-      "doneJobs": 20,
-      "errorJobs": 13,
-      "byTask": {
-        "enrich": 5,
-        "significance": 4,
-        "sync": 8,
-        "git-push": 16
+        "push": 19,
+        "enrich": 3,
+        "significance": 3
       }
     }
   ]
