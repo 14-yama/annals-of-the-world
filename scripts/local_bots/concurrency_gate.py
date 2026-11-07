@@ -143,8 +143,45 @@ def _pid_alive(pid: int) -> bool:
         return False
 
 
+def llm_peer_live(bot: dict[str, Any]) -> tuple[bool, str]:
+    """Detect another Annals Ollama bot already running (belt + suspenders vs file locks)."""
+    if bot.get("lane") != "ollama":
+        return False, ""
+    my_id = bot.get("id") or ""
+    needles = {
+        "enrich": "ai_enrich_autonomous.py",
+        "significance": "backfill_significance.py",
+    }
+    try:
+        out = subprocess.check_output(["ps", "-ax", "-o", "pid=,command="], text=True, stderr=subprocess.DEVNULL)
+    except Exception as exc:
+        return False, f"ps-unavailable:{exc}"
+    for line in out.splitlines():
+        if "concurrency_gate.py" in line:
+            continue
+        for peer_id, needle in needles.items():
+            if peer_id == my_id:
+                continue
+            if needle in line:
+                return True, f"llm-peer-live:{peer_id}"
+        # Same bot already running (overlapping StartInterval)
+        mine = needles.get(my_id)
+        if mine and mine in line and f"--bot-id {my_id}" not in line:
+            # Child script of another dispatch for same bot
+            pid = line.strip().split(None, 1)[0]
+            try:
+                if int(pid) != os.getpid():
+                    return True, f"llm-self-live:{my_id}:pid={pid}"
+            except ValueError:
+                pass
+    return False, ""
+
+
 def acquire_locks(sot: dict[str, Any], bot: dict[str, Any], wait_seconds: int = 0) -> tuple[bool, str]:
     locks = list(bot.get("locks") or [])
+    peer_busy, peer_reason = llm_peer_live(bot)
+    if peer_busy:
+        return False, peer_reason
     if not locks:
         return True, "no-locks"
     deadline = time.time() + max(0, wait_seconds)
@@ -227,6 +264,9 @@ def check_bot(sot: dict[str, Any], bot: dict[str, Any]) -> tuple[int, str]:
         live, live_reason = scraper_processes_live(sot)
         if live:
             return 11, live_reason
+    peer_busy, peer_reason = llm_peer_live(bot)
+    if peer_busy:
+        return 12, peer_reason
     # Soft check locks without acquiring
     for name in bot.get("locks") or []:
         existing = read_lock(lock_path(sot, name))

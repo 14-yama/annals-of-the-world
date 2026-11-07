@@ -1,16 +1,56 @@
 {
-  "timestamp": "2026-06-06T17:11:53Z",
+  "timestamp": "2026-11-07T15:57:26Z",
   "model": "ollama",
-  "count_requested": 1,
-  "enriched": 1,
-  "failed": 0,
+  "count_requested": 8,
+  "enriched": 6,
+  "failed": 2,
   "dry_run": false,
   "entities": [
     {
-      "slug": "bidar",
+      "slug": "bodh-gaya",
       "status": "enriched",
-      "old_len": 609,
-      "new_len": 1686
+      "old_len": 646,
+      "new_len": 1312
+    },
+    {
+      "slug": "quintus-servilius-structus-priscus",
+      "status": "enriched",
+      "old_len": 90,
+      "new_len": 1645
+    },
+    {
+      "slug": "antigonus-i-monophthalmus",
+      "status": "enriched",
+      "old_len": 410,
+      "new_len": 724
+    },
+    {
+      "slug": "gaius-plautius-proculus",
+      "status": "failed",
+      "reason": "Unterminated string starting at: line 1 column 14218 (char 14217)"
+    },
+    {
+      "slug": "publius-servilius-priscus-structus",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error"
+    },
+    {
+      "slug": "yadail-dharih-i",
+      "status": "enriched",
+      "old_len": 170,
+      "new_len": 1941
+    },
+    {
+      "slug": "rufinus-of-byzantium",
+      "status": "enriched",
+      "old_len": 170,
+      "new_len": 1707
+    },
+    {
+      "slug": "bertha-of-artois",
+      "status": "enriched",
+      "old_len": 90,
+      "new_len": 1812
     }
   ]
 }

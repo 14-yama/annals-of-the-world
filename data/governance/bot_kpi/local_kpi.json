@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-11-07T19:49:39Z",
+  "updatedAt": "2026-11-07T19:57:54Z",
   "source": "local-mac-mini",
   "labelPrefix": "com.annals.",
   "llmProvider": "ollama",
-  "totalJobsAllTime": 35,
+  "totalJobsAllTime": 38,
   "rosterCount": 20,
   "roster": [
     {
@@ -34,7 +34,7 @@
       "lastJobStatus": null,
       "lastJobStarted": null,
       "lastJobFinished": null,
-      "lastLogAt": "2026-11-07T19:47:54Z"
+      "lastLogAt": "2026-11-07T19:52:55Z"
     },
     {
       "id": "enrich",
@@ -49,7 +49,7 @@
       "lastJobStatus": "error",
       "lastJobStarted": "2026-11-07T19:09:17Z",
       "lastJobFinished": "2026-11-07T19:09:17Z",
-      "lastLogAt": "2026-11-07T19:47:52Z"
+      "lastLogAt": "2026-11-07T19:57:26Z"
     },
     {
       "id": "significance",
@@ -64,7 +64,7 @@
       "lastJobStatus": "done",
       "lastJobStarted": "2026-11-07T19:09:20Z",
       "lastJobFinished": "2026-11-07T19:11:40Z",
-      "lastLogAt": "2026-11-07T19:47:51Z"
+      "lastLogAt": "2026-11-07T19:57:47Z"
     },
     {
       "id": "queue",
@@ -79,7 +79,7 @@
       "lastJobStatus": null,
       "lastJobStarted": null,
       "lastJobFinished": null,
-      "lastLogAt": "2026-11-07T19:46:39Z"
+      "lastLogAt": "2026-11-07T19:51:00Z"
     },
     {
       "id": "kpi",
@@ -94,7 +94,7 @@
       "lastJobStatus": null,
       "lastJobStarted": null,
       "lastJobFinished": null,
-      "lastLogAt": "2026-11-07T19:47:54Z"
+      "lastLogAt": "2026-11-07T19:57:54Z"
     },
     {
       "id": "stats-cache",
@@ -109,7 +109,7 @@
       "lastJobStatus": null,
       "lastJobStarted": null,
       "lastJobFinished": null,
-      "lastLogAt": "2026-11-07T19:46:43Z"
+      "lastLogAt": "2026-11-07T19:56:49Z"
     },
     {
       "id": "push",
@@ -121,10 +121,10 @@
       "scheduleEnabled": true,
       "scheduleNote": "Hourly at :55, after enrich/sig slots.",
       "launchdLabel": "com.annals.push",
-      "lastJobStatus": "done",
-      "lastJobStarted": "2026-11-07T19:43:45Z",
-      "lastJobFinished": "2026-11-07T19:43:49Z",
-      "lastLogAt": "2026-11-07T18:55:05Z"
+      "lastJobStatus": "error",
+      "lastJobStarted": "2026-11-07T19:52:27Z",
+      "lastJobFinished": "2026-11-07T19:52:48Z",
+      "lastLogAt": "2026-11-07T19:55:05Z"
     },
     {
       "id": "sync",
@@ -136,9 +136,9 @@
       "scheduleEnabled": true,
       "scheduleNote": "Every 15 min StartInterval so enriched entities reach local Appwrite + audit_log quickly. Localhost writes \u2014 no live-scraper yield.",
       "launchdLabel": "com.annals.sync",
-      "lastJobStatus": "done",
-      "lastJobStarted": "2026-11-07T19:42:28Z",
-      "lastJobFinished": "2026-11-07T19:43:42Z",
+      "lastJobStatus": "running",
+      "lastJobStarted": "2026-11-07T19:57:24Z",
+      "lastJobFinished": null,
       "lastLogAt": "2026-11-07T19:47:52Z"
     },
     {
@@ -309,10 +309,10 @@
   ],
   "last24h": {
     "windowDays": 1,
-    "totalJobs": 35,
-    "doneJobs": 29,
-    "errorJobs": 6,
-    "successRate": 82.9,
+    "totalJobs": 38,
+    "doneJobs": 30,
+    "errorJobs": 8,
+    "successRate": 78.9,
     "byTask": {
       "bot-server": 0,
       "healthcheck": 0,
@@ -321,8 +321,8 @@
       "queue": 0,
       "kpi": 0,
       "stats-cache": 0,
-      "push": 19,
-      "sync": 10,
+      "push": 21,
+      "sync": 11,
       "edges-extract": 0,
       "seed-local": 0,
       "merge-cloud": 0,
@@ -338,10 +338,10 @@
   },
   "last7d": {
     "windowDays": 7,
-    "totalJobs": 35,
-    "doneJobs": 29,
-    "errorJobs": 6,
-    "successRate": 82.9,
+    "totalJobs": 38,
+    "doneJobs": 30,
+    "errorJobs": 8,
+    "successRate": 78.9,
     "byTask": {
       "bot-server": 0,
       "healthcheck": 0,
@@ -350,8 +350,8 @@
       "queue": 0,
       "kpi": 0,
       "stats-cache": 0,
-      "push": 19,
-      "sync": 10,
+      "push": 21,
+      "sync": 11,
       "edges-extract": 0,
       "seed-local": 0,
       "merge-cloud": 0,
@@ -367,10 +367,10 @@
   },
   "last30d": {
     "windowDays": 30,
-    "totalJobs": 35,
-    "doneJobs": 29,
-    "errorJobs": 6,
-    "successRate": 82.9,
+    "totalJobs": 38,
+    "doneJobs": 30,
+    "errorJobs": 8,
+    "successRate": 78.9,
     "byTask": {
       "bot-server": 0,
       "healthcheck": 0,
@@ -379,8 +379,8 @@
       "queue": 0,
       "kpi": 0,
       "stats-cache": 0,
-      "push": 19,
-      "sync": 10,
+      "push": 21,
+      "sync": 11,
       "edges-extract": 0,
       "seed-local": 0,
       "merge-cloud": 0,
@@ -397,12 +397,12 @@
   "days": [
     {
       "date": "2026-11-07",
-      "totalJobs": 35,
-      "doneJobs": 29,
-      "errorJobs": 6,
+      "totalJobs": 38,
+      "doneJobs": 30,
+      "errorJobs": 8,
       "byTask": {
-        "sync": 10,
-        "push": 19,
+        "sync": 11,
+        "push": 21,
         "enrich": 3,
         "significance": 3
       }
