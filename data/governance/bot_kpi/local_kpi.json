@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-11-08T12:30:54Z",
+  "updatedAt": "2026-11-08T12:36:00Z",
   "source": "local-mac-mini",
   "labelPrefix": "com.annals.",
   "llmProvider": "ollama+grok",
-  "totalJobsAllTime": 173,
+  "totalJobsAllTime": 175,
   "rosterCount": 29,
   "roster": [
     {
@@ -36,7 +36,7 @@
       "lastJobStatus": null,
       "lastJobStarted": null,
       "lastJobFinished": null,
-      "lastLogAt": "2026-11-08T12:30:20Z"
+      "lastLogAt": "2026-11-08T12:35:21Z"
     },
     {
       "id": "enrich",
@@ -52,7 +52,7 @@
       "lastJobStatus": "error",
       "lastJobStarted": "2026-11-08T08:36:01Z",
       "lastJobFinished": "2026-11-08T08:37:09Z",
-      "lastLogAt": "2026-11-08T12:30:25Z"
+      "lastLogAt": "2026-11-08T12:35:41Z"
     },
     {
       "id": "enrich-b",
@@ -68,7 +68,7 @@
       "lastJobStatus": null,
       "lastJobStarted": null,
       "lastJobFinished": null,
-      "lastLogAt": "2026-11-08T12:30:48Z"
+      "lastLogAt": "2026-11-08T12:35:55Z"
     },
     {
       "id": "enrich-c",
@@ -84,7 +84,7 @@
       "lastJobStatus": null,
       "lastJobStarted": null,
       "lastJobFinished": null,
-      "lastLogAt": "2026-11-08T12:30:54Z"
+      "lastLogAt": "2026-11-08T12:35:57Z"
     },
     {
       "id": "enrich-d",
@@ -100,7 +100,7 @@
       "lastJobStatus": null,
       "lastJobStarted": null,
       "lastJobFinished": null,
-      "lastLogAt": "2026-11-08T12:30:52Z"
+      "lastLogAt": "2026-11-08T12:35:57Z"
     },
     {
       "id": "enrich-e",
@@ -116,7 +116,7 @@
       "lastJobStatus": null,
       "lastJobStarted": null,
       "lastJobFinished": null,
-      "lastLogAt": "2026-11-08T12:30:50Z"
+      "lastLogAt": "2026-11-08T12:35:57Z"
     },
     {
       "id": "significance",
@@ -132,7 +132,7 @@
       "lastJobStatus": "error",
       "lastJobStarted": "2026-11-08T08:37:10Z",
       "lastJobFinished": "2026-11-08T08:40:59Z",
-      "lastLogAt": "2026-11-08T12:30:43Z"
+      "lastLogAt": "2026-11-08T12:35:29Z"
     },
     {
       "id": "enrich-grok",
@@ -212,7 +212,7 @@
       "lastJobStatus": null,
       "lastJobStarted": null,
       "lastJobFinished": null,
-      "lastLogAt": "2026-11-08T12:30:00Z"
+      "lastLogAt": "2026-11-08T12:33:00Z"
     },
     {
       "id": "kpi",
@@ -228,7 +228,7 @@
       "lastJobStatus": null,
       "lastJobStarted": null,
       "lastJobFinished": null,
-      "lastLogAt": "2026-11-08T12:30:54Z"
+      "lastLogAt": "2026-11-08T12:35:57Z"
     },
     {
       "id": "stats-cache",
@@ -258,8 +258,8 @@
       "scheduleNote": "Hourly at :55, after enrich/sig slots.",
       "launchdLabel": "com.annals.push",
       "lastJobStatus": "error",
-      "lastJobStarted": "2026-11-08T12:24:43Z",
-      "lastJobFinished": "2026-11-08T12:24:47Z",
+      "lastJobStarted": "2026-11-08T12:31:59Z",
+      "lastJobFinished": "2026-11-08T12:32:17Z",
       "lastLogAt": "2026-11-08T11:55:05Z"
     },
     {
@@ -273,10 +273,10 @@
       "scheduleEnabled": true,
       "scheduleNote": "Every 5 min (was */3); --max=400. Slightly slower to leave MariaDB headroom for UI reads while enrich runs.",
       "launchdLabel": "com.annals.sync",
-      "lastJobStatus": "running",
+      "lastJobStatus": "done",
       "lastJobStarted": "2026-11-08T12:29:14Z",
-      "lastJobFinished": null,
-      "lastLogAt": "2026-11-08T12:26:18Z"
+      "lastJobFinished": "2026-11-08T12:31:59Z",
+      "lastLogAt": "2026-11-08T12:34:18Z"
     },
     {
       "id": "edges-extract",
@@ -292,7 +292,7 @@
       "lastJobStatus": null,
       "lastJobStarted": null,
       "lastJobFinished": null,
-      "lastLogAt": "2026-11-08T12:30:21Z"
+      "lastLogAt": "2026-11-08T12:34:51Z"
     },
     {
       "id": "edges-extract-b",
@@ -308,7 +308,7 @@
       "lastJobStatus": null,
       "lastJobStarted": null,
       "lastJobFinished": null,
-      "lastLogAt": "2026-11-08T12:30:51Z"
+      "lastLogAt": "2026-11-08T12:35:50Z"
     },
     {
       "id": "seed-local",
@@ -478,8 +478,8 @@
     "historyNote": "Headline counts are enrich + significance successes only. Sync / merge / queue are shown as opsProcessed so they cannot inflate entity throughput. Calendar month/YTD use America/Port_of_Spain midnights. History on disk is short \u2014 week/month/YTD only count from the first enrichment entry date.",
     "metric": "enrichment",
     "totalProcessedAllTime": 711,
-    "totalOpsProcessedAllTime": 1155,
-    "totalEvents": 323,
+    "totalOpsProcessedAllTime": 1169,
+    "totalEvents": 326,
     "windows": [
       {
         "id": "1h",
@@ -490,10 +490,10 @@
         "jobs": 2,
         "enrichmentProcessed": 54,
         "enrichmentJobs": 2,
-        "opsProcessed": 61,
-        "opsJobs": 26,
+        "opsProcessed": 72,
+        "opsJobs": 27,
         "doneJobs": 18,
-        "errorJobs": 10,
+        "errorJobs": 11,
         "successRate": 100.0,
         "byTask": {
           "bot-server": 0,
@@ -512,7 +512,7 @@
           "kpi": 0,
           "stats-cache": 0,
           "push": 0,
-          "sync": 43,
+          "sync": 54,
           "edges-extract": 18,
           "edges-extract-b": 0,
           "seed-local": 0,
@@ -542,7 +542,7 @@
           "queue": 0,
           "kpi": 0,
           "stats-cache": 0,
-          "push": 10,
+          "push": 11,
           "sync": 5,
           "edges-extract": 11,
           "edges-extract-b": 0,
@@ -559,13 +559,13 @@
         },
         "byCategory": {
           "enrichment": 54,
-          "ops": 61,
+          "ops": 72,
           "other": 0
         },
         "metric": "enrichment",
         "metricNote": "enrich + significance entity successes",
-        "windowStart": "2026-11-08T11:30:54Z",
-        "windowEnd": "2026-11-08T12:30:54Z",
+        "windowStart": "2026-11-08T11:36:00Z",
+        "windowEnd": "2026-11-08T12:36:00Z",
         "timezone": "America/Port_of_Spain"
       },
       {
@@ -577,10 +577,10 @@
         "jobs": 93,
         "enrichmentProcessed": 711,
         "enrichmentJobs": 93,
-        "opsProcessed": 1154,
-        "opsJobs": 222,
-        "doneJobs": 243,
-        "errorJobs": 72,
+        "opsProcessed": 1168,
+        "opsJobs": 225,
+        "doneJobs": 245,
+        "errorJobs": 73,
         "successRate": 100.0,
         "byTask": {
           "bot-server": 0,
@@ -599,7 +599,7 @@
           "kpi": 0,
           "stats-cache": 0,
           "push": 35,
-          "sync": 257,
+          "sync": 271,
           "edges-extract": 861,
           "edges-extract-b": 0,
           "seed-local": 0,
@@ -629,9 +629,9 @@
           "queue": 1,
           "kpi": 0,
           "stats-cache": 0,
-          "push": 97,
-          "sync": 53,
-          "edges-extract": 70,
+          "push": 98,
+          "sync": 54,
+          "edges-extract": 71,
           "edges-extract-b": 0,
           "seed-local": 0,
           "merge-cloud": 1,
@@ -646,13 +646,13 @@
         },
         "byCategory": {
           "enrichment": 711,
-          "ops": 1154,
+          "ops": 1168,
           "other": 0
         },
         "metric": "enrichment",
         "metricNote": "enrich + significance entity successes",
         "windowStart": "2026-11-07T18:58:01Z",
-        "windowEnd": "2026-11-08T12:30:54Z",
+        "windowEnd": "2026-11-08T12:36:00Z",
         "timezone": "America/Port_of_Spain"
       },
       {
@@ -664,10 +664,10 @@
         "jobs": 93,
         "enrichmentProcessed": 711,
         "enrichmentJobs": 93,
-        "opsProcessed": 1154,
-        "opsJobs": 222,
-        "doneJobs": 243,
-        "errorJobs": 72,
+        "opsProcessed": 1168,
+        "opsJobs": 225,
+        "doneJobs": 245,
+        "errorJobs": 73,
         "successRate": 100.0,
         "byTask": {
           "bot-server": 0,
@@ -686,7 +686,7 @@
           "kpi": 0,
           "stats-cache": 0,
           "push": 35,
-          "sync": 257,
+          "sync": 271,
           "edges-extract": 861,
           "edges-extract-b": 0,
           "seed-local": 0,
@@ -716,9 +716,9 @@
           "queue": 1,
           "kpi": 0,
           "stats-cache": 0,
-          "push": 97,
-          "sync": 53,
-          "edges-extract": 70,
+          "push": 98,
+          "sync": 54,
+          "edges-extract": 71,
           "edges-extract-b": 0,
           "seed-local": 0,
           "merge-cloud": 1,
@@ -733,13 +733,13 @@
         },
         "byCategory": {
           "enrichment": 711,
-          "ops": 1154,
+          "ops": 1168,
           "other": 0
         },
         "metric": "enrichment",
         "metricNote": "enrich + significance entity successes",
         "windowStart": "2026-11-07T18:58:01Z",
-        "windowEnd": "2026-11-08T12:30:54Z",
+        "windowEnd": "2026-11-08T12:36:00Z",
         "timezone": "America/Port_of_Spain"
       },
       {
@@ -751,10 +751,10 @@
         "jobs": 93,
         "enrichmentProcessed": 711,
         "enrichmentJobs": 93,
-        "opsProcessed": 1154,
-        "opsJobs": 222,
-        "doneJobs": 243,
-        "errorJobs": 72,
+        "opsProcessed": 1168,
+        "opsJobs": 225,
+        "doneJobs": 245,
+        "errorJobs": 73,
         "successRate": 100.0,
         "byTask": {
           "bot-server": 0,
@@ -773,7 +773,7 @@
           "kpi": 0,
           "stats-cache": 0,
           "push": 35,
-          "sync": 257,
+          "sync": 271,
           "edges-extract": 861,
           "edges-extract-b": 0,
           "seed-local": 0,
@@ -803,9 +803,9 @@
           "queue": 1,
           "kpi": 0,
           "stats-cache": 0,
-          "push": 97,
-          "sync": 53,
-          "edges-extract": 70,
+          "push": 98,
+          "sync": 54,
+          "edges-extract": 71,
           "edges-extract-b": 0,
           "seed-local": 0,
           "merge-cloud": 1,
@@ -820,13 +820,13 @@
         },
         "byCategory": {
           "enrichment": 711,
-          "ops": 1154,
+          "ops": 1168,
           "other": 0
         },
         "metric": "enrichment",
         "metricNote": "enrich + significance entity successes",
         "windowStart": "2026-11-07T18:58:01Z",
-        "windowEnd": "2026-11-08T12:30:54Z",
+        "windowEnd": "2026-11-08T12:36:00Z",
         "timezone": "America/Port_of_Spain"
       }
     ],
@@ -840,10 +840,10 @@
         "jobs": 2,
         "enrichmentProcessed": 54,
         "enrichmentJobs": 2,
-        "opsProcessed": 61,
-        "opsJobs": 26,
+        "opsProcessed": 72,
+        "opsJobs": 27,
         "doneJobs": 18,
-        "errorJobs": 10,
+        "errorJobs": 11,
         "successRate": 100.0,
         "byTask": {
           "bot-server": 0,
@@ -862,7 +862,7 @@
           "kpi": 0,
           "stats-cache": 0,
           "push": 0,
-          "sync": 43,
+          "sync": 54,
           "edges-extract": 18,
           "edges-extract-b": 0,
           "seed-local": 0,
@@ -892,7 +892,7 @@
           "queue": 0,
           "kpi": 0,
           "stats-cache": 0,
-          "push": 10,
+          "push": 11,
           "sync": 5,
           "edges-extract": 11,
           "edges-extract-b": 0,
@@ -909,13 +909,13 @@
         },
         "byCategory": {
           "enrichment": 54,
-          "ops": 61,
+          "ops": 72,
           "other": 0
         },
         "metric": "enrichment",
         "metricNote": "enrich + significance entity successes",
-        "windowStart": "2026-11-08T11:30:54Z",
-        "windowEnd": "2026-11-08T12:30:54Z",
+        "windowStart": "2026-11-08T11:36:00Z",
+        "windowEnd": "2026-11-08T12:36:00Z",
         "timezone": "America/Port_of_Spain"
       },
       "week": {
@@ -927,10 +927,10 @@
         "jobs": 93,
         "enrichmentProcessed": 711,
         "enrichmentJobs": 93,
-        "opsProcessed": 1154,
-        "opsJobs": 222,
-        "doneJobs": 243,
-        "errorJobs": 72,
+        "opsProcessed": 1168,
+        "opsJobs": 225,
+        "doneJobs": 245,
+        "errorJobs": 73,
         "successRate": 100.0,
         "byTask": {
           "bot-server": 0,
@@ -949,7 +949,7 @@
           "kpi": 0,
           "stats-cache": 0,
           "push": 35,
-          "sync": 257,
+          "sync": 271,
           "edges-extract": 861,
           "edges-extract-b": 0,
           "seed-local": 0,
@@ -979,9 +979,9 @@
           "queue": 1,
           "kpi": 0,
           "stats-cache": 0,
-          "push": 97,
-          "sync": 53,
-          "edges-extract": 70,
+          "push": 98,
+          "sync": 54,
+          "edges-extract": 71,
           "edges-extract-b": 0,
           "seed-local": 0,
           "merge-cloud": 1,
@@ -996,13 +996,13 @@
         },
         "byCategory": {
           "enrichment": 711,
-          "ops": 1154,
+          "ops": 1168,
           "other": 0
         },
         "metric": "enrichment",
         "metricNote": "enrich + significance entity successes",
         "windowStart": "2026-11-07T18:58:01Z",
-        "windowEnd": "2026-11-08T12:30:54Z",
+        "windowEnd": "2026-11-08T12:36:00Z",
         "timezone": "America/Port_of_Spain"
       },
       "month": {
@@ -1014,10 +1014,10 @@
         "jobs": 93,
         "enrichmentProcessed": 711,
         "enrichmentJobs": 93,
-        "opsProcessed": 1154,
-        "opsJobs": 222,
-        "doneJobs": 243,
-        "errorJobs": 72,
+        "opsProcessed": 1168,
+        "opsJobs": 225,
+        "doneJobs": 245,
+        "errorJobs": 73,
         "successRate": 100.0,
         "byTask": {
           "bot-server": 0,
@@ -1036,7 +1036,7 @@
           "kpi": 0,
           "stats-cache": 0,
           "push": 35,
-          "sync": 257,
+          "sync": 271,
           "edges-extract": 861,
           "edges-extract-b": 0,
           "seed-local": 0,
@@ -1066,9 +1066,9 @@
           "queue": 1,
           "kpi": 0,
           "stats-cache": 0,
-          "push": 97,
-          "sync": 53,
-          "edges-extract": 70,
+          "push": 98,
+          "sync": 54,
+          "edges-extract": 71,
           "edges-extract-b": 0,
           "seed-local": 0,
           "merge-cloud": 1,
@@ -1083,13 +1083,13 @@
         },
         "byCategory": {
           "enrichment": 711,
-          "ops": 1154,
+          "ops": 1168,
           "other": 0
         },
         "metric": "enrichment",
         "metricNote": "enrich + significance entity successes",
         "windowStart": "2026-11-07T18:58:01Z",
-        "windowEnd": "2026-11-08T12:30:54Z",
+        "windowEnd": "2026-11-08T12:36:00Z",
         "timezone": "America/Port_of_Spain"
       },
       "ytd": {
@@ -1101,10 +1101,10 @@
         "jobs": 93,
         "enrichmentProcessed": 711,
         "enrichmentJobs": 93,
-        "opsProcessed": 1154,
-        "opsJobs": 222,
-        "doneJobs": 243,
-        "errorJobs": 72,
+        "opsProcessed": 1168,
+        "opsJobs": 225,
+        "doneJobs": 245,
+        "errorJobs": 73,
         "successRate": 100.0,
         "byTask": {
           "bot-server": 0,
@@ -1123,7 +1123,7 @@
           "kpi": 0,
           "stats-cache": 0,
           "push": 35,
-          "sync": 257,
+          "sync": 271,
           "edges-extract": 861,
           "edges-extract-b": 0,
           "seed-local": 0,
@@ -1153,9 +1153,9 @@
           "queue": 1,
           "kpi": 0,
           "stats-cache": 0,
-          "push": 97,
-          "sync": 53,
-          "edges-extract": 70,
+          "push": 98,
+          "sync": 54,
+          "edges-extract": 71,
           "edges-extract-b": 0,
           "seed-local": 0,
           "merge-cloud": 1,
@@ -1170,24 +1170,24 @@
         },
         "byCategory": {
           "enrichment": 711,
-          "ops": 1154,
+          "ops": 1168,
           "other": 0
         },
         "metric": "enrichment",
         "metricNote": "enrich + significance entity successes",
         "windowStart": "2026-11-07T18:58:01Z",
-        "windowEnd": "2026-11-08T12:30:54Z",
+        "windowEnd": "2026-11-08T12:36:00Z",
         "timezone": "America/Port_of_Spain"
       }
     }
   },
   "last24h": {
     "windowDays": 1,
-    "totalJobs": 173,
-    "doneJobs": 100,
-    "errorJobs": 73,
-    "processed": 387,
-    "successRate": 57.8,
+    "totalJobs": 175,
+    "doneJobs": 101,
+    "errorJobs": 74,
+    "processed": 401,
+    "successRate": 57.7,
     "byTask": {
       "bot-server": 0,
       "healthcheck": 0,
@@ -1204,8 +1204,8 @@
       "queue": 0,
       "kpi": 0,
       "stats-cache": 0,
-      "push": 98,
-      "sync": 54,
+      "push": 99,
+      "sync": 55,
       "edges-extract": 0,
       "edges-extract-b": 0,
       "seed-local": 0,
@@ -1236,7 +1236,7 @@
       "kpi": 0,
       "stats-cache": 0,
       "push": 36,
-      "sync": 257,
+      "sync": 271,
       "edges-extract": 0,
       "edges-extract-b": 0,
       "seed-local": 0,
@@ -1253,11 +1253,11 @@
   },
   "last7d": {
     "windowDays": 7,
-    "totalJobs": 173,
-    "doneJobs": 100,
-    "errorJobs": 73,
-    "processed": 387,
-    "successRate": 57.8,
+    "totalJobs": 175,
+    "doneJobs": 101,
+    "errorJobs": 74,
+    "processed": 401,
+    "successRate": 57.7,
     "byTask": {
       "bot-server": 0,
       "healthcheck": 0,
@@ -1274,8 +1274,8 @@
       "queue": 0,
       "kpi": 0,
       "stats-cache": 0,
-      "push": 98,
-      "sync": 54,
+      "push": 99,
+      "sync": 55,
       "edges-extract": 0,
       "edges-extract-b": 0,
       "seed-local": 0,
@@ -1306,7 +1306,7 @@
       "kpi": 0,
       "stats-cache": 0,
       "push": 36,
-      "sync": 257,
+      "sync": 271,
       "edges-extract": 0,
       "edges-extract-b": 0,
       "seed-local": 0,
@@ -1323,11 +1323,11 @@
   },
   "last30d": {
     "windowDays": 30,
-    "totalJobs": 173,
-    "doneJobs": 100,
-    "errorJobs": 73,
-    "processed": 387,
-    "successRate": 57.8,
+    "totalJobs": 175,
+    "doneJobs": 101,
+    "errorJobs": 74,
+    "processed": 401,
+    "successRate": 57.7,
     "byTask": {
       "bot-server": 0,
       "healthcheck": 0,
@@ -1344,8 +1344,8 @@
       "queue": 0,
       "kpi": 0,
       "stats-cache": 0,
-      "push": 98,
-      "sync": 54,
+      "push": 99,
+      "sync": 55,
       "edges-extract": 0,
       "edges-extract-b": 0,
       "seed-local": 0,
@@ -1376,7 +1376,7 @@
       "kpi": 0,
       "stats-cache": 0,
       "push": 36,
-      "sync": 257,
+      "sync": 271,
       "edges-extract": 0,
       "edges-extract-b": 0,
       "seed-local": 0,
@@ -1413,18 +1413,18 @@
     },
     {
       "date": "2026-11-08",
-      "totalJobs": 100,
-      "doneJobs": 40,
-      "errorJobs": 60,
-      "processed": 351,
+      "totalJobs": 102,
+      "doneJobs": 41,
+      "errorJobs": 61,
+      "processed": 365,
       "byTask": {
-        "sync": 30,
-        "push": 55,
+        "sync": 31,
+        "push": 56,
         "enrich": 9,
         "significance": 6
       },
       "processedByTask": {
-        "sync": 257,
+        "sync": 271,
         "push": 0,
         "enrich": 92,
         "significance": 2
