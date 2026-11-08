@@ -6167,16 +6167,84 @@
   "git-push-1794148418": {
     "job_id": "git-push-1794148418",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-11-08T14:33:38Z",
-    "finished": null,
+    "finished": "2026-11-08T14:34:08Z",
     "log": [
       "Pending files: 13 entities, 0 edges (13 total)",
+      "git add data/ scripts/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 5 local enrichments\"",
+      "[scaffold/docs 17632928d32] feat(enrich): watchdog auto-push \u2014 5 local enrichments\n 22 files changed, 639 insertions(+), 344 deletions(-)",
+      "git push ...",
+      "fatal: could not read Username for 'https://github.com': Device not configured",
+      "git push failed \u2014 check SSH/HTTPS credentials: fatal: could not read Username for 'https://github.com': Device not configured\n"
+    ],
+    "exitCode": 128
+  },
+  "sync-1794148662": {
+    "job_id": "sync-1794148662",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 33616,
+    "started": "2026-11-08T14:37:42Z",
+    "finished": "2026-11-08T14:40:18Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  http://localhost:8080/v1",
+      "Database:  annals_world_db",
+      "Source:    /Users/jeltonmentore/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=4260/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "/bin/sh: rg: command not found",
+      "[diff] rg unavailable (Command failed: rg -l --glob '*.json' '_unsyncedEdits|_editLog' \"/Users/jeltonmentore/annals-of-the-world/data/appwrite-export/entities\"",
+      "/bin/sh: rg: command not found",
+      "); falling back to full walk",
+      "[diff] --local found 12 dirty files",
+      "[diff] 12 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 12,",
+      "  \"entitiesUpserted\": 1,",
+      "  \"auditRowsEmitted\": 7,",
+      "  \"writesPerformed\": 8,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 17632928"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1794148818": {
+    "job_id": "git-push-1794148818",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-11-08T14:40:18Z",
+    "finished": null,
+    "log": [
+      "Pending files: 14 entities, 0 edges (14 total)",
       "git add data/ scripts/ ..."
     ],
+    "exitCode": null
+  },
+  "git-push-1794148820": {
+    "job_id": "git-push-1794148820",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-11-08T14:40:20Z",
+    "finished": null,
+    "log": [],
     "exitCode": null
   }
 }
