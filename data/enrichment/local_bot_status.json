@@ -6223,28 +6223,172 @@
   "git-push-1794148818": {
     "job_id": "git-push-1794148818",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-11-08T14:40:18Z",
-    "finished": null,
+    "finished": "2026-11-08T14:40:28Z",
     "log": [
       "Pending files: 14 entities, 0 edges (14 total)",
-      "git add data/ scripts/ ..."
+      "git add data/ scripts/ ...",
+      "git commit -m \"chore(sync): auto-commit after --local sync (200 max entities)\"",
+      "[scaffold/docs f2fc541bca6] chore(sync): auto-commit after --local sync (200 max entities)\n 23 files changed, 454 insertions(+), 241 deletions(-)",
+      "git push ...",
+      "fatal: could not read Username for 'https://github.com': Device not configured",
+      "git push failed \u2014 check SSH/HTTPS credentials: fatal: could not read Username for 'https://github.com': Device not configured\n"
     ],
-    "exitCode": null
+    "exitCode": 128
   },
   "git-push-1794148820": {
     "job_id": "git-push-1794148820",
+    "bot": "git-push",
+    "status": "error",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-11-08T14:40:20Z",
+    "finished": "2026-11-08T14:40:25Z",
+    "log": [
+      "Pending files: 15 entities, 0 edges (15 total)",
+      "git add data/ scripts/ ...",
+      "git add failed: fatal: Unable to create '/Users/jeltonmentore/annals-of-the-world/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, or the lock file may be stale\n"
+    ],
+    "exitCode": 128
+  },
+  "sync-1794149055": {
+    "job_id": "sync-1794149055",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 36783,
+    "started": "2026-11-08T14:44:15Z",
+    "finished": "2026-11-08T14:49:58Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  http://localhost:8080/v1",
+      "Database:  annals_world_db",
+      "Source:    /Users/jeltonmentore/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=4268/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "/bin/sh: rg: command not found",
+      "[diff] rg unavailable (Command failed: rg -l --glob '*.json' '_unsyncedEdits|_editLog' \"/Users/jeltonmentore/annals-of-the-world/data/appwrite-export/entities\"",
+      "/bin/sh: rg: command not found",
+      "); falling back to full walk",
+      "[diff] --local found 16 dirty files",
+      "[diff] 16 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 16,",
+      "  \"entitiesUpserted\": 16,",
+      "  \"auditRowsEmitted\": 112,",
+      "  \"writesPerformed\": 128,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit f2fc541b"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1794149398": {
+    "job_id": "git-push-1794149398",
+    "bot": "git-push",
+    "status": "error",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-11-08T14:49:58Z",
+    "finished": "2026-11-08T14:50:03Z",
+    "log": [
+      "Pending files: 21 entities, 0 edges (21 total)",
+      "git add data/ scripts/ ...",
+      "git add failed: fatal: Unable to create '/Users/jeltonmentore/annals-of-the-world/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, or the lock file may be stale\n"
+    ],
+    "exitCode": 128
+  },
+  "git-push-1794149399": {
+    "job_id": "git-push-1794149399",
+    "bot": "git-push",
+    "status": "error",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-11-08T14:49:59Z",
+    "finished": "2026-11-08T14:50:11Z",
+    "log": [
+      "Pending files: 21 entities, 0 edges (21 total)",
+      "git add data/ scripts/ ...",
+      "git add failed: fatal: unable to stat 'data/governance/stats_cache_progress.json': No such file or directory\n"
+    ],
+    "exitCode": 128
+  },
+  "sync-1794149756": {
+    "job_id": "sync-1794149756",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 42785,
+    "started": "2026-11-08T14:55:56Z",
+    "finished": "2026-11-08T15:01:46Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  http://localhost:8080/v1",
+      "Database:  annals_world_db",
+      "Source:    /Users/jeltonmentore/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=4268/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "/bin/sh: rg: command not found",
+      "[diff] rg unavailable (Command failed: rg -l --glob '*.json' '_unsyncedEdits|_editLog' \"/Users/jeltonmentore/annals-of-the-world/data/appwrite-export/entities\"",
+      "/bin/sh: rg: command not found",
+      "); falling back to full walk",
+      "[diff] --local found 21 dirty files",
+      "[diff] 21 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 21,",
+      "  \"entitiesUpserted\": 4,",
+      "  \"auditRowsEmitted\": 28,",
+      "  \"writesPerformed\": 32,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit f2fc541b"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1794150106": {
+    "job_id": "git-push-1794150106",
     "bot": "git-push",
     "status": "running",
     "model": "none",
     "count": 0,
     "pid": null,
-    "started": "2026-11-08T14:40:20Z",
+    "started": "2026-11-08T15:01:46Z",
     "finished": null,
-    "log": [],
+    "log": [
+      "Pending files: 41 entities, 0 edges (41 total)",
+      "git add data/ scripts/ ..."
+    ],
     "exitCode": null
+  },
+  "git-push-1794150107": {
+    "job_id": "git-push-1794150107",
+    "bot": "git-push",
+    "status": "error",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-11-08T15:01:47Z",
+    "finished": "2026-11-08T15:01:53Z",
+    "log": [
+      "Pending files: 41 entities, 0 edges (41 total)",
+      "git add data/ scripts/ ...",
+      "git add failed: fatal: Unable to create '/Users/jeltonmentore/annals-of-the-world/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, or the lock file may be stale\n"
+    ],
+    "exitCode": 128
   }
 }
