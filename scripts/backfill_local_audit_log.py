@@ -150,12 +150,17 @@ def write_cursor(cur: dict) -> None:
     CURSOR.write_text(json.dumps(cur, indent=2) + "\n")
 
 
+def log(msg: str) -> None:
+    print(msg, flush=True)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--max", type=int, default=15000)
+    ap.add_argument("--max", type=int, default=4000)
     ap.add_argument("--source", type=str, default=None)
     ap.add_argument("--reset-cursor", action="store_true")
     ap.add_argument("--sleep-ms", type=int, default=5)
+    ap.add_argument("--checkpoint", type=int, default=50, help="Cursor write every N attempts")
     args = ap.parse_args()
 
     if not KEY:
@@ -163,13 +168,13 @@ def main() -> int:
         return 1
 
     source = find_source(args.source)
-    print(f"[audit-backfill] {ENDPOINT} / {PROJECT} / {DATABASE}")
-    print(f"[audit-backfill] source={source}")
+    log(f"[audit-backfill] {ENDPOINT} / {PROJECT} / {DATABASE}")
+    log(f"[audit-backfill] source={source}")
 
     t0 = time.time()
     data = json.loads(source.read_text())
     docs = data.get("documents") or []
-    print(f"[audit-backfill] loaded {len(docs)} in {time.time()-t0:.1f}s")
+    log(f"[audit-backfill] loaded {len(docs)} in {time.time()-t0:.1f}s")
 
     cur = {"offset": 0, "created": 0, "skipped": 0, "failed": 0} if args.reset_cursor else read_cursor()
     if cur.get("source") and cur["source"] != str(source):
@@ -182,6 +187,15 @@ def main() -> int:
     failed = int(cur.get("failed") or 0)
     attempted = 0
     started = time.time()
+    checkpoint = max(10, int(args.checkpoint))
+
+    # Heartbeat immediately so a post-load kill still leaves a fresh lastRunAt.
+    write_cursor({
+        "offset": offset, "created": created, "skipped": skipped,
+        "failed": failed, "source": str(source), "done": False,
+        "phase": "running",
+    })
+    log(f"[audit-backfill] resume offset={offset}/{len(docs)} max={args.max}")
 
     while offset < len(docs) and attempted < args.max:
         doc = docs[offset]
@@ -201,15 +215,16 @@ def main() -> int:
         else:
             failed += 1
             if failed <= 8 or failed % 100 == 0:
-                print(f"[audit-backfill] fail {doc_id}: {detail}")
+                log(f"[audit-backfill] fail {doc_id}: {detail}")
 
-        if attempted % 250 == 0:
+        if attempted % checkpoint == 0:
             write_cursor({
                 "offset": offset, "created": created, "skipped": skipped,
                 "failed": failed, "source": str(source), "done": False,
+                "phase": "running",
             })
             rate = attempted / max(time.time() - started, 0.1)
-            print(
+            log(
                 f"[audit-backfill] offset={offset}/{len(docs)} "
                 f"created={created} skipped={skipped} failed={failed} "
                 f"({rate:.0f}/s, {time.time()-started:.0f}s)"
@@ -219,8 +234,9 @@ def main() -> int:
     write_cursor({
         "offset": offset, "created": created, "skipped": skipped,
         "failed": failed, "source": str(source), "done": done,
+        "phase": "complete" if done else "paused",
     })
-    print(
+    log(
         f"[audit-backfill] {'COMPLETE' if done else 'paused'} "
         f"offset={offset}/{len(docs)} created={created} skipped={skipped} "
         f"failed={failed} elapsed={time.time()-started:.0f}s"
