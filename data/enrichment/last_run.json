@@ -1,130 +1,130 @@
 {
-  "timestamp": "2026-11-08T02:25:51Z",
+  "timestamp": "2026-11-08T03:14:14Z",
   "model": "ollama",
   "count_requested": 20,
-  "enriched": 16,
-  "failed": 4,
+  "enriched": 19,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "stabat-mater",
+      "slug": "comet",
+      "status": "enriched",
+      "old_len": 613,
+      "new_len": 1110
+    },
+    {
+      "slug": "yiran-qaghan",
+      "status": "enriched",
+      "old_len": 65,
+      "new_len": 945
+    },
+    {
+      "slug": "don-quixote",
       "status": "failed",
       "reason": "Unterminated string starting at: line 2 column 12 (char 13)",
-      "poison_count": 1
+      "poison_count": 2
     },
     {
-      "slug": "lucius-apronius",
-      "status": "failed",
-      "reason": "HTTP Error 500: Internal Server Error",
-      "poison_count": 1
-    },
-    {
-      "slug": "mul-of-kent",
+      "slug": "playboy",
       "status": "enriched",
-      "old_len": 63,
-      "new_len": 1923
+      "old_len": 65,
+      "new_len": 1271
     },
     {
-      "slug": "thoros-i-prince-of-armenia",
+      "slug": "ichasagua",
       "status": "enriched",
-      "old_len": 63,
-      "new_len": 1247
+      "old_len": 641,
+      "new_len": 1135
     },
     {
-      "slug": "constitutional-monarchy",
+      "slug": "hippalus",
       "status": "enriched",
-      "old_len": 63,
-      "new_len": 2153
+      "old_len": 187,
+      "new_len": 1279
     },
     {
-      "slug": "book-of-mormon",
+      "slug": "sigismondo-gonzaga",
       "status": "enriched",
-      "old_len": 63,
-      "new_len": 1482
+      "old_len": 107,
+      "new_len": 1167
     },
     {
-      "slug": "comet",
-      "status": "failed",
-      "reason": "insufficient causes (0, need >= 1)",
-      "poison_count": 1
-    },
-    {
-      "slug": "gomoarius",
+      "slug": "joseph-of-freising",
       "status": "enriched",
-      "old_len": 64,
-      "new_len": 1938
+      "old_len": 107,
+      "new_len": 1164
     },
     {
-      "slug": "mahinda-iv-of-anuradhapura",
+      "slug": "guillaume-fillastre",
       "status": "enriched",
-      "old_len": 186,
-      "new_len": 732
+      "old_len": 107,
+      "new_len": 872
     },
     {
-      "slug": "eystein-halfdansson",
+      "slug": "nostrianus",
       "status": "enriched",
-      "old_len": 106,
-      "new_len": 1019
+      "old_len": 187,
+      "new_len": 1386
     },
     {
-      "slug": "nguanamthom",
+      "slug": "pero-fernandes-sardinha",
       "status": "enriched",
-      "old_len": 106,
-      "new_len": 1541
+      "old_len": 107,
+      "new_len": 1501
     },
     {
-      "slug": "al-fadl-ibn-abbas",
+      "slug": "margherita-colonna",
       "status": "enriched",
-      "old_len": 304,
-      "new_len": 1838
+      "old_len": 107,
+      "new_len": 990
     },
     {
-      "slug": "elements",
-      "status": "failed",
-      "reason": "insufficient causes (0, need >= 1)",
-      "poison_count": 1
-    },
-    {
-      "slug": "wilhelm-von-brandenburg",
+      "slug": "andrea-grego-da-peschiera",
       "status": "enriched",
-      "old_len": 106,
-      "new_len": 1221
+      "old_len": 107,
+      "new_len": 1658
     },
     {
-      "slug": "ercole-rangoni",
+      "slug": "baysonqor",
       "status": "enriched",
-      "old_len": 106,
-      "new_len": 1578
+      "old_len": 427,
+      "new_len": 1524
     },
     {
-      "slug": "teodorico-ranieri",
+      "slug": "gan-ying",
       "status": "enriched",
-      "old_len": 106,
-      "new_len": 1770
+      "old_len": 187,
+      "new_len": 1356
     },
     {
-      "slug": "pami",
+      "slug": "beneharo",
       "status": "enriched",
-      "old_len": 186,
-      "new_len": 1562
+      "old_len": 202,
+      "new_len": 812
     },
     {
-      "slug": "semeon-olshanski",
+      "slug": "tudhaliya",
       "status": "enriched",
-      "old_len": 106,
-      "new_len": 1604
+      "old_len": 202,
+      "new_len": 759
     },
     {
-      "slug": "hermippus",
+      "slug": "danila-antsiferov",
       "status": "enriched",
-      "old_len": 106,
-      "new_len": 1481
+      "old_len": 202,
+      "new_len": 690
     },
     {
-      "slug": "judges",
+      "slug": "felix-iv",
       "status": "enriched",
-      "old_len": 64,
-      "new_len": 1372
+      "old_len": 202,
+      "new_len": 995
+    },
+    {
+      "slug": "benedict-x",
+      "status": "enriched",
+      "old_len": 202,
+      "new_len": 901
     }
   ]
 }
