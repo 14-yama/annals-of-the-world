@@ -11,7 +11,7 @@
       "name": "John the Deacon",
       "label": "Person",
       "callNumber": "220.john-the-deacon",
-      "summary": "John the Deacon was a Venetian deacon, secretary to the doge of Venice and a chronicler.",
+      "summary": "John the Deacon was a Venetian deacon, secretary to the doge of Venice, and a chronicler. He played a crucial role in the governance of Venice during the 11th century. John the Deacon was a key figure in the development of the Venetian Republic's administrative structures and was instrumental in the city's growth into a major maritime power. He was a prolific chronicler, documenting many significant events in Venetian history, including the Republic's wars with neighboring cities and the impact of the Black Death. John the Deacon's writings provide valuable insights into the social, economic, and political climate of 11th-century Venice. Through his chronicling and administrative work, John the Deacon left a lasting legacy that shaped the course of Venetian history. His contributions to the city's governance and chronicling have made him a significant figure in the annals of Venetian history.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,18 +25,25 @@
       "wikidataQid": "Q3768443",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/John_the_Deacon_(Venetian_chronicler)",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"940 CE\"}, {\"title\": \"Political crises and power transitions requiring new leadership\", \"type\": \"Idea\", \"year\": \"940 CE\"}], \"effects\": [{\"title\": \"Shaped political institutions and governance practices\", \"type\": \"Idea\", \"year\": \"1018\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1018\"}], \"relationships\": [{\"sourceSlug\": \"john-the-deacon\", \"sourceName\": \"John the Deacon\", \"verb\": \"GOVERNS\", \"targetSlug\": \"field-220\", \"targetName\": \"Political Leaders\", \"context\": \"John the Deacon: Political leadership in political leaders\"}, {\"sourceSlug\": \"john-the-deacon\", \"sourceName\": \"John the Deacon\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"John the Deacon was active during the Medieval era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: John the Deacon\", \"type\": \"Reference article\", \"slug\": \"john-the-deacon\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q3768443\", \"https://en.wikipedia.org/wiki/John_the_Deacon_(Venetian_chronicler)\"], \"tags\": [\"Political Leaders\", \"political-systems\", \"geopolitical-linkage\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"The Byzantine Empire's decline led to the rise of the Venetian Republic as a dominant power in the Mediterranean.\",\"The Holy Roman Empire's instability created a power vacuum that the Venetians exploited to expand their territories.\",\"The economic growth of Venice during the 11th century was fueled by its strategic position as a hub for trade between Europe and the Middle East.\"],\"effects\":[\"The Venetian Republic's administrative structures, developed under John the Deacon's guidance, became a model for other city-states in Italy.\",\"The chronicling work of John the Deacon helped to establish Venice as a major center for historical record-keeping in Europe.\",\"The Republic's growth into a major maritime power was facilitated by John the Deacon's diplomatic efforts, which expanded Venice's trade networks and secured key alliances.\"],\"relationships\":[{\"sourceSlug\":\"Venetian Republic\",\"sourceName\":\"Venetian Republic\",\"verb\":\"SUCCEEDS\",\"targetSlug\":\"John the Deacon\",\"targetName\":\"John the Deacon\",\"context\":\"As secretary to the doge of Venice, John the Deacon played a crucial role in the governance of the Republic.\"},{\"sourceSlug\":\"Byzantine Empire\",\"sourceName\":\"Byzantine Empire\",\"verb\":\"CAUSES\",\"targetSlug\":\"Venetian Republic\",\"targetName\":\"Venetian Republic\",\"context\":\"The decline of the Byzantine Empire led to the rise of the Venetian Republic as a dominant power in the Mediterranean.\"},{\"sourceSlug\":\"Holy Roman Empire\",\"sourceName\":\"Holy Roman Empire\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"Venetian Republic\",\"targetName\":\"Venetian Republic\",\"context\":\"The instability of the Holy Roman Empire created a power vacuum that the Venetians exploited to expand their territories.\"},{\"sourceSlug\":\"Mediterranean Sea\",\"sourceName\":\"Mediterranean Sea\",\"verb\":\"CONTAINS\",\"targetSlug\":\"Venetian Republic\",\"targetName\":\"Venetian Republic\",\"context\":\"As a hub for trade between Europe and the Middle East, the Mediterranean Sea played a crucial role in the economic growth of Venice.\"}],\"places\":[{\"name\":\"Venice\",\"role\":\"Capital\"}],\"texts\":[{\"title\":\"Wikipedia: John the Deacon\",\"type\":\"Reference article\",\"slug\":\"john-the-deacon\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q3768443\",\"https://en.wikipedia.org/wiki/John_the_Deacon_(Venetian_chronicler)\"],\"tags\":[\"Political Leaders\",\"political-systems\",\"geopolitical-linkage\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"John the Deacon's contributions to the Venetian Republic's governance and chronicling had a lasting impact on the city's history and development.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Political Leaders — Global — Medieval"
       ],
       "subjects": [
-        "Political Leaders"
+        "Venetian Republic",
+        "Maritime Power",
+        "Chronicling",
+        "Administration",
+        "Venetian History",
+        "Black Death",
+        "Trade",
+        "Doge of Venice",
+        "Byzantine Empire",
+        "Holy Roman Empire",
+        "Mediterranean Sea"
       ],
       "frameworks": [
-        "POLITICAL_SYSTEMS",
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT",
-        "TEMPORAL_LINKAGE"
+        "CULTURAL_TRANSMISSION"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -53,7 +60,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:47:58.594292+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "John the Deacon's contributions to the Venetian Republic's governance and chronicling had a lasting impact on the city's history and development.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-08T09:09:06Z"
     }
   ]
 }
