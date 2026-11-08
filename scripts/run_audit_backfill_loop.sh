@@ -13,13 +13,23 @@ SLEEP_MS="${ANNALS_AUDIT_BACKFILL_SLEEP_MS:-2}"
 PAUSE_S="${ANNALS_AUDIT_BACKFILL_PAUSE_S:-5}"
 
 # Exclusive lock — prevents launchd + nohup double-starts racing the cursor.
-exec 9>"$LOCKFILE"
-if ! flock -n 9; then
-  echo "[loop] already locked by another worker — exit" | tee -a "$LOG"
-  exit 0
+# Prefer mkdir (atomic, no flock(1) dependency on macOS).
+LOCKDIR="${LOCKFILE}.d"
+if ! mkdir "$LOCKDIR" 2>/dev/null; then
+  # Stale lock if holder pid is dead
+  old_pid="$(cat "$PIDFILE" 2>/dev/null || true)"
+  if [[ -n "${old_pid}" ]] && kill -0 "$old_pid" 2>/dev/null; then
+    echo "[loop] already locked by pid=$old_pid — exit" | tee -a "$LOG"
+    exit 0
+  fi
+  rmdir "$LOCKDIR" 2>/dev/null || true
+  if ! mkdir "$LOCKDIR" 2>/dev/null; then
+    echo "[loop] already locked by another worker — exit" | tee -a "$LOG"
+    exit 0
+  fi
 fi
 echo $$ > "$PIDFILE"
-trap 'rm -f "$PIDFILE"' EXIT
+trap 'rm -f "$PIDFILE"; rmdir "$LOCKDIR" 2>/dev/null || true' EXIT
 
 # Load local Appwrite env without printing secrets
 if [[ -f "$ROOT/.env" ]]; then

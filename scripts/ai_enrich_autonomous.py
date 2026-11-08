@@ -93,6 +93,7 @@ except ImportError:  # pragma: no cover
 
 BASE = "data/appwrite-export/entities"
 QUEUE_FILE = "data/enrichment/queue.json"
+CLAIM_DIR = Path(os.environ.get("ANNALS_ENRICH_CLAIM_DIR", "/tmp/annals-bot-locks/enrich-claims"))
 REPORT_FILE = "data/enrichment/last_run.json"
 POISON_FILE = "data/enrichment/poison_slugs.json"
 POISON_THRESHOLD = 3
@@ -736,13 +737,82 @@ def clear_poison(poison: dict, slug: str) -> None:
         save_poison(poison)
 
 
-def select_work_batch(queue, count: int, poison: dict):
-    """Walk queue past already-enriched / poison / missing slugs until we have work."""
+def _claim_path(slug: str) -> Path:
+    safe = "".join(c if c.isalnum() or c in "-_." else "_" for c in slug)[:180]
+    return CLAIM_DIR / f"{safe}.claim"
+
+
+def _pid_alive(pid: int) -> bool:
+    try:
+        os.kill(pid, 0)
+        return True
+    except OSError:
+        return False
+
+
+def try_claim_slug(slug: str) -> bool:
+    """Exclusive per-slug claim so parallel enrich workers do not double-work."""
+    if not slug:
+        return False
+    CLAIM_DIR.mkdir(parents=True, exist_ok=True)
+    path = _claim_path(slug)
+    if path.exists():
+        try:
+            data = json.loads(path.read_text())
+            pid = int(data.get("pid") or 0)
+            if pid and _pid_alive(pid):
+                return False
+            path.unlink(missing_ok=True)
+        except Exception:
+            try:
+                path.unlink(missing_ok=True)
+            except Exception:
+                return False
+    payload = {
+        "slug": slug,
+        "pid": os.getpid(),
+        "acquired": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+    }
+    try:
+        fd = os.open(str(path), os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o644)
+        with os.fdopen(fd, "w") as fh:
+            json.dump(payload, fh)
+        return True
+    except FileExistsError:
+        return False
+
+
+def release_claim_slug(slug: str) -> None:
+    path = _claim_path(slug)
+    try:
+        if not path.exists():
+            return
+        data = json.loads(path.read_text())
+        if data.get("pid") == os.getpid() or data.get("slug") == slug:
+            path.unlink(missing_ok=True)
+    except Exception:
+        try:
+            path.unlink(missing_ok=True)
+        except Exception:
+            pass
+
+
+def select_work_batch(queue, count: int, poison: dict, shard_index: int = 0, shard_count: int = 1):
+    """Walk queue past already-enriched / poison / missing / claimed slugs until we have work.
+
+    Optional --shard I/N keeps parallel workers on disjoint queue stripes; claims
+    still prevent races when stripes collide on the same slug.
+    """
     batch = []
     skipped_enriched = 0
     skipped_poison = 0
     skipped_missing = 0
+    skipped_claimed = 0
+    skipped_shard = 0
     scanned = 0
+    eligible_idx = 0
+    shard_count = max(1, int(shard_count or 1))
+    shard_index = int(shard_index or 0) % shard_count
     # Cap scan so a fully-stale head cannot burn the whole run scanning forever.
     # Aggressive batches need a deeper walk past already-enriched queue heads.
     scan_cap = max(count * 80, 500)
@@ -776,6 +846,15 @@ def select_work_batch(queue, count: int, poison: dict):
         if current_len >= ALREADY_ENRICHED_CHARS:
             skipped_enriched += 1
             continue
+        # Stripe eligible (not-yet-enriched) items across shards.
+        take = (eligible_idx % shard_count) == shard_index
+        eligible_idx += 1
+        if not take:
+            skipped_shard += 1
+            continue
+        if not try_claim_slug(slug):
+            skipped_claimed += 1
+            continue
         batch.append({
             "entry": entry,
             "entity": entity,
@@ -788,6 +867,9 @@ def select_work_batch(queue, count: int, poison: dict):
         "skipped_enriched": skipped_enriched,
         "skipped_poison": skipped_poison,
         "skipped_missing": skipped_missing,
+        "skipped_claimed": skipped_claimed,
+        "skipped_shard": skipped_shard,
+        "shard": f"{shard_index}/{shard_count}",
     }
 
 
@@ -878,6 +960,11 @@ def main():
         help="Minimum queue score to process (default: 0)",
     )
     parser.add_argument(
+        "--shard",
+        default="0/1",
+        help="Queue stripe I/N for parallel workers (default: 0/1 = whole queue)",
+    )
+    parser.add_argument(
         "--retry", type=int, default=1,
         help="Max retries per entity on LLM/validation failure (default: 1)",
     )
@@ -955,14 +1042,26 @@ def main():
         queue = [e for e in queue if e["score"] >= args.min_score]
 
     poison = load_poison()
-    work, scan_stats = select_work_batch(queue, args.count, poison)
+    shard_index, shard_count = 0, 1
+    if "/" in (args.shard or ""):
+        left, _, right = args.shard.partition("/")
+        try:
+            shard_index = int(left)
+            shard_count = max(1, int(right))
+        except ValueError:
+            shard_index, shard_count = 0, 1
+    work, scan_stats = select_work_batch(
+        queue, args.count, poison, shard_index=shard_index, shard_count=shard_count
+    )
     if not work:
         print("No entities to enrich (queue empty, all enriched, or all poisoned)")
         print(
             f"  scanned={scan_stats['scanned']} "
             f"skipped_enriched={scan_stats['skipped_enriched']} "
             f"skipped_poison={scan_stats['skipped_poison']} "
-            f"skipped_missing={scan_stats['skipped_missing']}"
+            f"skipped_missing={scan_stats['skipped_missing']} "
+            f"skipped_claimed={scan_stats.get('skipped_claimed', 0)} "
+            f"shard={scan_stats.get('shard')}"
         )
         sys.exit(0)
 
@@ -972,7 +1071,9 @@ def main():
     print(
         f"  (scanned {scan_stats['scanned']}, "
         f"skipped enriched={scan_stats['skipped_enriched']}, "
-        f"poison={scan_stats['skipped_poison']})"
+        f"poison={scan_stats['skipped_poison']}, "
+        f"claimed={scan_stats.get('skipped_claimed', 0)}, "
+        f"shard={scan_stats.get('shard')})"
     )
     print(f"{'=' * 60}")
     if args.dry_run:
@@ -982,117 +1083,125 @@ def main():
     failed = 0
     report = []
 
-    for i, item in enumerate(work):
-        entry = item["entry"]
-        entity = item["entity"]
-        filepath = item["filepath"]
-        current_len = item["current_len"]
-        slug = entry["slug"]
-        print(
-            f"\n[{i + 1}/{len(work)}] {slug} "
-            f"(score={entry.get('score', 0)}, {current_len}c)"
-        )
+    try:
+        for i, item in enumerate(work):
+            entry = item["entry"]
+            entity = item["entity"]
+            filepath = item["filepath"]
+            current_len = item["current_len"]
+            slug = entry["slug"]
+            print(
+                f"\n[{i + 1}/{len(work)}] {slug} "
+                f"(score={entry.get('score', 0)}, {current_len}c)"
+            )
 
-        # Build prompt
-        prompt = PROMPT_TEMPLATE.format(
-            name=entity.get("name", ""),
-            slug=slug,
-            label=entity.get("label", ""),
-            era=entity.get("era", "") or "unknown",
-            region=entity.get("region", "") or "unknown",
-            continent=entity.get("continent", "") or "unknown",
-            born=entity.get("born", "") or "unknown",
-            died=entity.get("died", "") or "unknown",
-            summary_len=current_len,
-            current_summary=(entity.get("summary", "") or "")[:500] or "(none)",
-            valid_verbs=", ".join(VALID_VERBS),
-            valid_frameworks=", ".join(VALID_FRAMEWORKS),
-        )
+            # Build prompt
+            prompt = PROMPT_TEMPLATE.format(
+                name=entity.get("name", ""),
+                slug=slug,
+                label=entity.get("label", ""),
+                era=entity.get("era", "") or "unknown",
+                region=entity.get("region", "") or "unknown",
+                continent=entity.get("continent", "") or "unknown",
+                born=entity.get("born", "") or "unknown",
+                died=entity.get("died", "") or "unknown",
+                summary_len=current_len,
+                current_summary=(entity.get("summary", "") or "")[:500] or "(none)",
+                valid_verbs=", ".join(VALID_VERBS),
+                valid_frameworks=", ".join(VALID_FRAMEWORKS),
+            )
 
-        if args.dry_run:
-            print(f"  DRY RUN — would call {args.model} with {len(prompt)} char prompt")
-            enriched += 1
-            report.append({"slug": slug, "status": "dry_run"})
-            continue
-
-        # Call LLM with retry
-        result = None
-        last_error = ""
-        for attempt in range(args.retry + 1):
             try:
-                if args.model == "gemini":
-                    result = call_gemini(prompt, api_key, args.gemini_model)
-                elif args.model == "ollama":
-                    result = call_ollama(prompt, args.ollama_model)
-                elif args.model == "grok":
-                    result = call_grok_json(
-                        prompt, api_key=api_key, model=args.grok_model
-                    )
-                elif args.model == "github":
-                    result = call_github_models(prompt, api_key, args.github_model)
-                else:
-                    result = call_openai(prompt, api_key, args.openai_model)
+                if args.dry_run:
+                    print(f"  DRY RUN — would call {args.model} with {len(prompt)} char prompt")
+                    enriched += 1
+                    report.append({"slug": slug, "status": "dry_run"})
+                    continue
 
-                # Validate
-                ok, reason = validate_enrichment(result, lenient=args.lenient)
-                if ok:
-                    break
-                else:
-                    last_error = reason
-                    result = None
-                    if attempt < args.retry:
-                        print(f"  RETRY ({attempt + 1}) — {reason}")
-                        time.sleep(2)
-            except Exception as ex:
-                last_error = str(ex)
+                # Call LLM with retry
                 result = None
-                if attempt < args.retry:
-                    print(f"  RETRY ({attempt + 1}) — {ex}")
-                    time.sleep(3)
+                last_error = ""
+                for attempt in range(args.retry + 1):
+                    try:
+                        if args.model == "gemini":
+                            result = call_gemini(prompt, api_key, args.gemini_model)
+                        elif args.model == "ollama":
+                            result = call_ollama(prompt, args.ollama_model)
+                        elif args.model == "grok":
+                            result = call_grok_json(
+                                prompt, api_key=api_key, model=args.grok_model
+                            )
+                        elif args.model == "github":
+                            result = call_github_models(prompt, api_key, args.github_model)
+                        else:
+                            result = call_openai(prompt, api_key, args.openai_model)
 
-        if result is None:
-            print(f"  FAILED — {last_error}")
-            failed += 1
-            nfail = mark_poison(poison, slug)
-            if nfail >= POISON_THRESHOLD:
-                print(f"  POISON — {slug} failed {nfail}x; skipping in future runs")
-            report.append({
-                "slug": slug,
-                "status": "failed",
-                "reason": last_error,
-                "poison_count": nfail,
-            })
-            time.sleep(2)
-            continue
+                        # Validate
+                        ok, reason = validate_enrichment(result, lenient=args.lenient)
+                        if ok:
+                            break
+                        else:
+                            last_error = reason
+                            result = None
+                            if attempt < args.retry:
+                                print(f"  RETRY ({attempt + 1}) — {reason}")
+                                time.sleep(2)
+                    except Exception as ex:
+                        last_error = str(ex)
+                        result = None
+                        if attempt < args.retry:
+                            print(f"  RETRY ({attempt + 1}) — {ex}")
+                            time.sleep(3)
 
-        new_len = len(result.get("summary", ""))
-        print(f"  ENRICHED — {current_len}c -> {new_len}c")
+                if result is None:
+                    print(f"  FAILED — {last_error}")
+                    failed += 1
+                    nfail = mark_poison(poison, slug)
+                    if nfail >= POISON_THRESHOLD:
+                        print(f"  POISON — {slug} failed {nfail}x; skipping in future runs")
+                    report.append({
+                        "slug": slug,
+                        "status": "failed",
+                        "reason": last_error,
+                        "poison_count": nfail,
+                    })
+                    time.sleep(2)
+                    continue
 
-        # Write to local JSON (sync_gateway will push to Appwrite later)
-        apply_enrichment(filepath, slug, result)
-        clear_poison(poison, slug)
+                new_len = len(result.get("summary", ""))
+                print(f"  ENRICHED — {current_len}c -> {new_len}c")
 
-        enriched += 1
-        report.append({
-            "slug": slug,
-            "status": "enriched",
-            "old_len": current_len,
-            "new_len": new_len,
-        })
+                # Write to local JSON (sync_gateway will push to Appwrite later)
+                apply_enrichment(filepath, slug, result)
+                clear_poison(poison, slug)
 
-        # Rate limiting: Gemini = 4.5s, OpenAI = 1.5s, GitHub = 5s, Grok ≈ 1.2s, Ollama = 0
-        if args.model == "gemini":
-            delay = 4.5
-        elif args.model == "ollama":
-            delay = 0  # local model — run as fast as the hardware allows
-        elif args.model == "grok":
-            delay = 1.2  # cloud — polite pacing; raise GROK_DELAY if rate-limited
-        elif args.model == "github":
-            delay = 5.0  # ~12 req/min — safe within free tier 15 req/min limit
-        else:
-            delay = 1.5
-        if delay > 0:
-            time.sleep(delay)
+                enriched += 1
+                report.append({
+                    "slug": slug,
+                    "status": "enriched",
+                    "old_len": current_len,
+                    "new_len": new_len,
+                })
+
+                # Rate limiting: Gemini = 4.5s, OpenAI = 1.5s, GitHub = 5s, Grok ≈ 1.2s, Ollama = 0
+                if args.model == "gemini":
+                    delay = 4.5
+                elif args.model == "ollama":
+                    delay = 0  # local model — run as fast as the hardware allows
+                elif args.model == "grok":
+                    delay = 1.2  # cloud — polite pacing; raise GROK_DELAY if rate-limited
+                elif args.model == "github":
+                    delay = 5.0  # ~12 req/min — safe within free tier 15 req/min limit
+                else:
+                    delay = 1.5
+                if delay > 0:
+                    time.sleep(delay)
+            finally:
+                release_claim_slug(slug)
+    finally:
+        # Belt: release any remaining claims if we aborted mid-batch
+        for item in work:
+            release_claim_slug((item.get("entry") or {}).get("slug") or "")
 
     # ── Summary ──
     print(f"\n{'=' * 60}")
@@ -1109,6 +1218,7 @@ def main():
         "failed": failed,
         "dry_run": args.dry_run,
         "entities": report,
+        "shard": f"{shard_index}/{shard_count}",
     }
     with open(REPORT_FILE, "w") as f:
         json.dump(run_data, f, indent=2)

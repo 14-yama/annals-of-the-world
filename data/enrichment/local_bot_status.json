@@ -3786,17 +3786,22 @@
   "git-push-1794126148": {
     "job_id": "git-push-1794126148",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-11-08T08:22:28Z",
-    "finished": null,
+    "finished": "2026-11-08T08:22:41Z",
     "log": [
       "Pending files: 37 entities, 1 edges (38 total)",
-      "git add data/ scripts/ ..."
+      "git add data/ scripts/ ...",
+      "git commit -m \"chore(sync): auto-commit after --local sync (200 max entities)\"",
+      "[scaffold/docs 9c37cf6e11a] chore(sync): auto-commit after --local sync (200 max entities)\n 54 files changed, 1479 insertions(+), 643 deletions(-)\n create mode 100644 data/governance/launchd-plists/com.annals.audit-backfill.plist\n mode change 100644 => 100755 scripts/backfill_local_audit_log.py\n create mode 100755 scripts/run_audit_backfill_loop.sh",
+      "git push ...",
+      "fatal: could not read Username for 'https://github.com': Device not configured",
+      "git push failed \u2014 check SSH/HTTPS credentials: fatal: could not read Username for 'https://github.com': Device not configured\n"
     ],
-    "exitCode": null
+    "exitCode": 128
   },
   "git-push-1794126150": {
     "job_id": "git-push-1794126150",
@@ -3817,11 +3822,92 @@
   "enrich-1794126151": {
     "job_id": "enrich-1794126151",
     "bot": "enrich",
-    "status": "running",
+    "status": "error",
     "model": "ollama",
     "count": 20,
     "pid": 17882,
     "started": "2026-11-08T08:22:31Z",
+    "finished": "2026-11-08T08:28:45Z",
+    "log": [
+      "[orphaned] process died with previous bot restart"
+    ],
+    "exitCode": null
+  },
+  "sync-1794126825": {
+    "job_id": "sync-1794126825",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 26675,
+    "started": "2026-11-08T08:33:45Z",
+    "finished": "2026-11-08T08:36:00Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  http://localhost:8080/v1",
+      "Database:  annals_world_db",
+      "Source:    /Users/jeltonmentore/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=2230/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "/bin/sh: rg: command not found",
+      "[diff] rg unavailable (Command failed: rg -l --glob '*.json' '_unsyncedEdits|_editLog' \"/Users/jeltonmentore/annals-of-the-world/data/appwrite-export/entities\"",
+      "/bin/sh: rg: command not found",
+      "); falling back to full walk",
+      "[diff] --local found 8 dirty files",
+      "[diff] 8 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 8,",
+      "  \"entitiesUpserted\": 8,",
+      "  \"auditRowsEmitted\": 56,",
+      "  \"writesPerformed\": 64,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 9c37cf6e"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1794126960": {
+    "job_id": "git-push-1794126960",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-11-08T08:36:00Z",
+    "finished": null,
+    "log": [
+      "Pending files: 17 entities, 1 edges (18 total)",
+      "git add data/ scripts/ ..."
+    ],
+    "exitCode": null
+  },
+  "git-push-1794126961": {
+    "job_id": "git-push-1794126961",
+    "bot": "git-push",
+    "status": "error",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-11-08T08:36:01Z",
+    "finished": "2026-11-08T08:36:06Z",
+    "log": [
+      "Pending files: 17 entities, 1 edges (18 total)",
+      "git add data/ scripts/ ...",
+      "git add failed: fatal: Unable to create '/Users/jeltonmentore/annals-of-the-world/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, or the lock file may be stale\n"
+    ],
+    "exitCode": 128
+  },
+  "enrich-1794126961": {
+    "job_id": "enrich-1794126961",
+    "bot": "enrich",
+    "status": "running",
+    "model": "ollama",
+    "count": 20,
+    "pid": 28021,
+    "started": "2026-11-08T08:36:01Z",
     "finished": null,
     "log": [],
     "exitCode": null

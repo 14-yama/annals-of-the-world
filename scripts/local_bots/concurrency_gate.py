@@ -153,75 +153,158 @@ def _is_python_script_cmd(cmd: str, script: str) -> bool:
     return "python" in head
 
 
-def llm_peer_live(bot: dict[str, Any]) -> tuple[bool, str]:
-    """Detect another Annals LLM bot already running (belt + suspenders vs file locks).
-
-    Ollama lane bots serialize against each other. Grok lane bots serialize against
-    other Grok LLM processes only — they may run concurrent with Ollama.
-    """
+def max_concurrent_llm(sot: dict[str, Any], bot: dict[str, Any]) -> int:
+    """Per-lane LLM concurrency cap from SoT (Ollama / Grok independently)."""
+    conc = sot.get("concurrency") or {}
     lane = bot.get("lane") or ""
-    if lane not in ("ollama", "grok"):
-        return False, ""
-    my_id = bot.get("id") or ""
-    # Script needles → logical peer family
+    if lane == "grok":
+        return max(1, int(conc.get("max_concurrent_grok") or 1))
     if lane == "ollama":
-        # Any local Ollama enrich/sig process blocks (enrich-b/c share the script)
-        peer_needles = [
-            ("enrich", "ai_enrich_autonomous.py"),
-            ("significance", "backfill_significance.py"),
-        ]
-        # Grok uses the same enrich script with --model grok — do not treat as Ollama peer
-        def _is_peer(line: str, peer_id: str, needle: str) -> bool:
-            if not _is_python_script_cmd(line, needle):
-                return False
-            if peer_id == "enrich" and "--model grok" in line:
-                return False
-            if peer_id.startswith("enrich") and my_id.startswith("enrich"):
-                # Same family: block unless this is our own dispatch wrapper line
-                return f"--bot-id {my_id}" not in line
-            if peer_id == my_id:
-                return False
-            return True
-    else:
-        # grok lane: only other grok LLM jobs
-        peer_needles = [
-            ("enrich-grok", "ai_enrich_autonomous.py"),
-            ("significance-grok", "backfill_significance.py"),
-            ("edges-grok", "ai_edge_bot.py"),
-        ]
+        return max(1, int(conc.get("max_concurrent_llm") or 1))
+    return 1
 
-        def _is_peer(line: str, peer_id: str, needle: str) -> bool:
-            if not _is_python_script_cmd(line, needle):
-                return False
-            if "ai_enrich_autonomous.py" in line and "--model grok" not in line:
-                return False
-            if "ai_edge_bot.py" in line and "--extract-only" in line:
-                return False
-            if "backfill_significance.py" in line and "--model grok" not in line:
-                return False
-            if peer_id == my_id:
-                return f"--bot-id {my_id}" not in line
-            return True
+
+def serialize_enrich_vs_significance(sot: dict[str, Any]) -> bool:
+    return bool((sot.get("concurrency") or {}).get("serialize_enrich_vs_significance", True))
+
+
+def _count_ollama_peers(my_id: str) -> tuple[int, str]:
+    """Count live Ollama-lane enrich/sig Python processes (excluding self)."""
+    peer_needles = [
+        ("enrich", "ai_enrich_autonomous.py"),
+        ("significance", "backfill_significance.py"),
+    ]
+
+    def _is_peer(line: str, peer_id: str, needle: str) -> bool:
+        if not _is_python_script_cmd(line, needle):
+            return False
+        if peer_id == "enrich" and "--model grok" in line:
+            return False
+        if peer_id == "significance" and "--model grok" in line:
+            return False
+        # Own dispatch wrapper / child may appear; ignore exact bot-id markers for self.
+        if f"--bot-id {my_id}" in line:
+            return False
+        return True
 
     my_pid = os.getpid()
+    count = 0
+    last = ""
     try:
-        out = subprocess.check_output(["ps", "-ax", "-o", "pid=,command="], text=True, stderr=subprocess.DEVNULL)
+        out = subprocess.check_output(
+            ["ps", "-ax", "-o", "pid=,command="], text=True, stderr=subprocess.DEVNULL
+        )
     except Exception as exc:
-        return False, f"ps-unavailable:{exc}"
+        return 0, f"ps-unavailable:{exc}"
+    seen_pids: set[int] = set()
     for line in out.splitlines():
         if "concurrency_gate.py" in line or "dispatch_bot.py" in line:
             continue
         try:
             pid_str, _, cmd = line.strip().partition(" ")
             pid = int(pid_str)
-            if pid == my_pid:
+            if pid == my_pid or pid in seen_pids:
                 continue
         except ValueError:
             cmd = line
+            pid = -1
         for peer_id, needle in peer_needles:
             if _is_peer(cmd, peer_id, needle):
-                return True, f"llm-peer-live:{peer_id}"
+                if pid > 0:
+                    seen_pids.add(pid)
+                count += 1
+                last = peer_id
+                break
+    return count, last
+
+
+def _count_grok_peers(my_id: str) -> tuple[int, str]:
+    peer_needles = [
+        ("enrich-grok", "ai_enrich_autonomous.py"),
+        ("significance-grok", "backfill_significance.py"),
+        ("edges-grok", "ai_edge_bot.py"),
+    ]
+
+    def _is_peer(line: str, peer_id: str, needle: str) -> bool:
+        if not _is_python_script_cmd(line, needle):
+            return False
+        if "ai_enrich_autonomous.py" in line and "--model grok" not in line:
+            return False
+        if "ai_edge_bot.py" in line and "--extract-only" in line:
+            return False
+        if "backfill_significance.py" in line and "--model grok" not in line:
+            return False
+        if f"--bot-id {my_id}" in line:
+            return False
+        return True
+
+    my_pid = os.getpid()
+    count = 0
+    last = ""
+    try:
+        out = subprocess.check_output(
+            ["ps", "-ax", "-o", "pid=,command="], text=True, stderr=subprocess.DEVNULL
+        )
+    except Exception as exc:
+        return 0, f"ps-unavailable:{exc}"
+    seen_pids: set[int] = set()
+    for line in out.splitlines():
+        if "concurrency_gate.py" in line or "dispatch_bot.py" in line:
+            continue
+        try:
+            pid_str, _, cmd = line.strip().partition(" ")
+            pid = int(pid_str)
+            if pid == my_pid or pid in seen_pids:
+                continue
+        except ValueError:
+            cmd = line
+            pid = -1
+        for peer_id, needle in peer_needles:
+            if _is_peer(cmd, peer_id, needle):
+                if pid > 0:
+                    seen_pids.add(pid)
+                count += 1
+                last = peer_id
+                break
+    return count, last
+
+
+def llm_peer_live(sot: dict[str, Any], bot: dict[str, Any]) -> tuple[bool, str]:
+    """True when lane already at max_concurrent_llm / max_concurrent_grok.
+
+    Ollama and Grok lanes are independent. When max_concurrent_llm>1, multiple
+    enrich waiters may run in parallel (slot locks still gate).
+    """
+    lane = bot.get("lane") or ""
+    if lane not in ("ollama", "grok"):
+        return False, ""
+    my_id = bot.get("id") or ""
+    cap = max_concurrent_llm(sot, bot)
+    if lane == "ollama":
+        count, last = _count_ollama_peers(my_id)
+        # Optional hard serialize enrich vs significance even when cap>1.
+        if serialize_enrich_vs_significance(sot) and count > 0:
+            if my_id.startswith("enrich") and last == "significance":
+                return True, f"llm-peer-live:significance (serialize)"
+            if my_id.startswith("significance") and last.startswith("enrich"):
+                return True, f"llm-peer-live:enrich (serialize)"
+    else:
+        count, last = _count_grok_peers(my_id)
+    if count >= cap:
+        return True, f"llm-peer-live:{last or 'peer'} ({count}/{cap})"
     return False, ""
+
+
+def _write_lock(path: Path, bot: dict[str, Any], holder: int) -> None:
+    payload = {
+        "bot_id": bot["id"],
+        "pid": holder,
+        "acquired": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "lane": bot.get("lane"),
+    }
+    fd = os.open(str(path), os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o644)
+    with os.fdopen(fd, "w") as fh:
+        json.dump(payload, fh)
 
 
 def acquire_locks(
@@ -231,19 +314,45 @@ def acquire_locks(
     holder_pid: int | None = None,
 ) -> tuple[bool, str]:
     locks = list(bot.get("locks") or [])
-    peer_busy, peer_reason = llm_peer_live(bot)
+    peer_busy, peer_reason = llm_peer_live(sot, bot)
     if peer_busy:
         return False, peer_reason
     if not locks:
         return True, "no-locks"
     # Prefer caller/dispatch PID — gate CLI PID dies immediately after acquire.
     holder = int(holder_pid or os.getpid())
+    cap = max_concurrent_llm(sot, bot)
     deadline = time.time() + max(0, wait_seconds)
     while True:
         held: list[Path] = []
+        acquired_names: list[str] = []
         busy_reason = ""
         try:
             for name in locks:
+                # Skip enrich_sig exclusive when SoT allows enrich∥sig within LLM cap.
+                if name == "enrich_sig" and not serialize_enrich_vs_significance(sot):
+                    continue
+                # Slot fan-out for the ollama lock when parallel LLM is enabled.
+                if name == "ollama" and cap > 1 and (bot.get("lane") or "") == "ollama":
+                    slot_taken = None
+                    for i in range(cap):
+                        slot_name = f"ollama_slot_{i}"
+                        path = lock_path(sot, slot_name)
+                        if read_lock(path):
+                            continue
+                        try:
+                            _write_lock(path, bot, holder)
+                        except FileExistsError:
+                            continue
+                        held.append(path)
+                        slot_taken = slot_name
+                        break
+                    if not slot_taken:
+                        busy_reason = f"lock-busy:ollama all {cap} slots full"
+                        raise RuntimeError(busy_reason)
+                    acquired_names.append(slot_taken)
+                    continue
+
                 path = lock_path(sot, name)
                 existing = read_lock(path)
                 if existing:
@@ -252,18 +361,10 @@ def acquire_locks(
                         f"pid={existing.get('pid')}"
                     )
                     raise RuntimeError(busy_reason)
-                payload = {
-                    "bot_id": bot["id"],
-                    "pid": holder,
-                    "acquired": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
-                    "lane": bot.get("lane"),
-                }
-                # Atomic-ish create
-                fd = os.open(str(path), os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o644)
-                with os.fdopen(fd, "w") as fh:
-                    json.dump(payload, fh)
+                _write_lock(path, bot, holder)
                 held.append(path)
-            return True, "acquired:" + ",".join(locks)
+                acquired_names.append(name)
+            return True, "acquired:" + ",".join(acquired_names)
         except FileExistsError:
             busy_reason = busy_reason or "lock-race"
         except RuntimeError as exc:
@@ -287,7 +388,12 @@ def release_locks(
     holder_pid: int | None = None,
 ) -> None:
     holder = int(holder_pid or os.getpid())
-    for name in bot.get("locks") or []:
+    names = list(bot.get("locks") or [])
+    # Also release any ollama_slot_* held by this bot/pid when parallel LLM is on.
+    cap = max_concurrent_llm(sot, bot)
+    if "ollama" in names and cap > 1:
+        names.extend(f"ollama_slot_{i}" for i in range(cap))
+    for name in names:
         path = lock_path(sot, name)
         data = read_lock(path)
         if not data:
@@ -323,11 +429,19 @@ def check_bot(sot: dict[str, Any], bot: dict[str, Any]) -> tuple[int, str]:
         live, live_reason = scraper_processes_live(sot)
         if live:
             return 11, live_reason
-    peer_busy, peer_reason = llm_peer_live(bot)
+    peer_busy, peer_reason = llm_peer_live(sot, bot)
     if peer_busy:
         return 12, peer_reason
     # Soft check locks without acquiring
+    cap = max_concurrent_llm(sot, bot)
     for name in bot.get("locks") or []:
+        if name == "enrich_sig" and not serialize_enrich_vs_significance(sot):
+            continue
+        if name == "ollama" and cap > 1 and lane == "ollama":
+            # Free if any slot is empty
+            if any(not read_lock(lock_path(sot, f"ollama_slot_{i}")) for i in range(cap)):
+                continue
+            return 12, f"lock-busy:ollama all {cap} slots full"
         existing = read_lock(lock_path(sot, name))
         if existing:
             return 12, f"lock-busy:{name} held_by={existing.get('bot_id')}"
