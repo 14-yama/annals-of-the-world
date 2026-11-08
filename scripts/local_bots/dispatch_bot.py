@@ -170,6 +170,24 @@ def main() -> int:
             return 0  # soft skip — not a launchd failure storm
 
     cmd = build_command(bot)
+    # Guard: corrupt stats_cache facet checkpoints (pre-$id-select bug) must not resume.
+    if args.bot_id == "stats-cache":
+        cp = REPO / "data" / "governance" / "stats_cache_progress.json"
+        if cp.exists():
+            try:
+                data = json.loads(cp.read_text())
+                seen = int(data.get("totalSeen") or 0)
+                known = int(data.get("knownTotal") or 0)
+                if seen > max(known * 2, 600_000) or (seen > 0 and not data.get("cursor")):
+                    cp.unlink()
+                    print(
+                        f"[dispatch] cleared corrupt stats_cache checkpoint "
+                        f"(seen={seen}, known={known})",
+                        flush=True,
+                    )
+            except Exception as exc:  # noqa: BLE001 — best-effort cleanup
+                print(f"[dispatch] stats_cache checkpoint check skipped: {exc}", flush=True)
+
     print(f"[dispatch] start {args.bot_id}: {shlex.join(cmd)}")
     if args.dry_run:
         if not args.force:

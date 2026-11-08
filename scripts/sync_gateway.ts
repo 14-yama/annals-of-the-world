@@ -154,9 +154,31 @@ function changedEntityFiles(lastCommit: string): string[] {
   // detailsJson. Used when local bots write to disk but haven't git-committed yet.
   if (LOCAL) {
     console.log('[diff] --local mode: scanning for _unsyncedEdits:true files')
+    // Fast path: ripgrep candidates (~seconds) then verify with JSON parse.
+    // Full walk+parse of ~392k files takes many minutes and starves audit_log catch-up.
+    let candidates: string[] = []
+    try {
+      // detailsJson is often a JSON string, so markers appear escaped as \"_unsyncedEdits\":
+      const raw = execSync(
+        `rg -l --glob '*.json' '_unsyncedEdits|_editLog' ${JSON.stringify(ENTITIES_DIR)}`,
+        { encoding: 'utf-8', maxBuffer: 64 * 1024 * 1024 },
+      )
+      candidates = raw.split('\n').map(s => s.trim()).filter(Boolean)
+      console.log(`[diff] rg candidates: ${candidates.length}`)
+    } catch (e) {
+      const msg = (e as { status?: number; message?: string }).message || ''
+      // rg exit 1 = no matches
+      if ((e as { status?: number }).status === 1) {
+        console.log('[diff] --local found 0 dirty files (rg)')
+        return []
+      }
+      console.warn(`[diff] rg unavailable (${msg}); falling back to full walk`)
+      candidates = []
+      walkDir(ENTITIES_DIR, p => { if (p.endsWith('.json')) candidates.push(p) })
+    }
+
     const dirty: string[] = []
-    walkDir(ENTITIES_DIR, filePath => {
-      if (!filePath.endsWith('.json')) return
+    for (const filePath of candidates) {
       try {
         const raw = JSON.parse(fs.readFileSync(filePath, 'utf-8')) as { entities?: Array<Record<string, unknown>> }
         const entities = raw.entities || []
@@ -168,11 +190,15 @@ function changedEntityFiles(lastCommit: string): string[] {
               return dj._unsyncedEdits === true || (Array.isArray(dj._editLog) && (dj._editLog as unknown[]).length > 0)
             } catch { return false }
           }
+          if (e.detailsJson && typeof e.detailsJson === 'object') {
+            const dj = e.detailsJson as Record<string, unknown>
+            return dj._unsyncedEdits === true || (Array.isArray(dj._editLog) && (dj._editLog as unknown[]).length > 0)
+          }
           return false
         })
         if (hasDirty) dirty.push(filePath)
       } catch { /* skip unparseable */ }
-    })
+    }
     console.log(`[diff] --local found ${dirty.length} dirty files`)
     return dirty
   }

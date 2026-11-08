@@ -297,12 +297,24 @@ async function countFacets(knownTotal: number): Promise<StatsPayload> {
   let cp = RESET_CHECKPOINT ? null : readCheckpoint()
   if (cp && cp.phase !== 'facets') cp = null
 
+  // Discard corrupt checkpoints from the pre-fix runaway (select omitted $id →
+  // cursorAfter never advanced, totalSeen climbed to millions).
+  const hardCap = Math.max(knownTotal > 0 ? knownTotal * 2 : 0, maxExpectedTotal())
+  if (cp && (cp.totalSeen > hardCap || (!cp.cursor && cp.totalSeen > (knownTotal || 0) + PAGE))) {
+    console.warn(
+      `[stats] discarding corrupt facet checkpoint (seen=${cp.totalSeen}, hardCap=${hardCap})`,
+    )
+    clearCheckpoint()
+    cp = null
+  }
+
   const byLabel: Bucket = { ...(cp?.byLabel || {}) }
   const byEra: Bucket = { ...(cp?.byEra || {}) }
   const byContinent: Bucket = { ...(cp?.byContinent || {}) }
   const byClass: Bucket = { ...(cp?.byClass || {}) }
   let totalSeen = cp?.totalSeen || 0
   let cursor: string | undefined = cp?.cursor || undefined
+  let prevCursor: string | undefined
   const facetStartedAt = cp?.startedAt || new Date().toISOString()
 
   if (cp) {
@@ -315,7 +327,12 @@ async function countFacets(knownTotal: number): Promise<StatsPayload> {
   let sinceMirror = 0
 
   while (!shuttingDown) {
-    const queries = [Query.limit(PAGE), Query.select(['label', 'era', 'continent', 'callNumber'])]
+    // MUST include $id — cursorAfter needs it. Omitting $id caused an infinite
+    // re-scan loop that starved MariaDB (~4M "seen" on a 392k corpus).
+    const queries = [
+      Query.limit(PAGE),
+      Query.select(['$id', 'label', 'era', 'continent', 'callNumber']),
+    ]
     if (cursor) queries.push(Query.cursorAfter(cursor))
     const page = await databases.listDocuments(DATABASE, ENTITIES, queries)
     const docs = page.documents || []
@@ -335,7 +352,18 @@ async function countFacets(knownTotal: number): Promise<StatsPayload> {
         byClass[cls] = (byClass[cls] || 0) + 1
       }
     }
+    prevCursor = cursor
     cursor = docs[docs.length - 1].$id
+    if (!cursor || cursor === prevCursor) {
+      console.error('[stats] facet cursor not advancing — aborting runaway facet pass')
+      break
+    }
+    if (totalSeen > hardCap) {
+      console.error(
+        `[stats] facets ${totalSeen} exceeded hardCap ${hardCap} — aborting runaway`,
+      )
+      throw new Error(`runaway facets ${totalSeen} > ${hardCap}`)
+    }
     sinceCheckpoint += docs.length
     sinceMirror += docs.length
 

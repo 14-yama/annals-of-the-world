@@ -20,7 +20,7 @@
       "idle_gap_max_seconds": 8,
       "sync_entities_per_run": 400,
       "kpi_refresh_minutes": 5,
-      "stats_cache_refresh_minutes": 5,
+      "stats_cache_refresh_minutes": 30,
       "queue_refresh_minutes": 3
     },
     "appwrite_cutover": {
@@ -640,13 +640,15 @@
       "script": "scripts/refresh_local_stats_cache.ts",
       "runner": "npx_tsx",
       "schedule": {
-        "cron": "*/5 * * * *",
+        "cron": "15,45 * * * *",
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "Every 5 min. Ensures stats_cache exists on local Docker Appwrite."
+        "note": "Twice hourly at :15/:45 AST — full facet scan is heavy on MariaDB; avoid overlapping enrich/sync. Was */5 and a missing-$id cursor bug starved UI reads."
       },
       "respect_blackout": false,
-      "locks": [],
+      "locks": [
+        "stats_cache"
+      ],
       "yield_on_scraper_process": false
     },
     {
@@ -682,10 +684,10 @@
         "--max=400"
       ],
       "schedule": {
-        "cron": "*/3 * * * *",
+        "cron": "*/5 * * * *",
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "Every 3 min; --max=400 so enrich backlog reaches audit_log fast."
+        "note": "Every 5 min (was */3); --max=400. Slightly slower to leave MariaDB headroom for UI reads while enrich runs."
       },
       "retry": {
         "on_failure": 2,

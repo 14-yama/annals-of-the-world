@@ -1,298 +1,130 @@
 {
-  "timestamp": "2026-11-07T22:54:15Z",
+  "timestamp": "2026-11-08T00:43:56Z",
   "model": "ollama",
-  "count_requested": 48,
-  "enriched": 41,
-  "failed": 7,
+  "count_requested": 20,
+  "enriched": 19,
+  "failed": 1,
   "dry_run": false,
   "entities": [
     {
-      "slug": "manius-rabuleius",
+      "slug": "hip-hop",
       "status": "enriched",
-      "old_len": 648,
-      "new_len": 1812
+      "old_len": 61,
+      "new_len": 1742
     },
     {
-      "slug": "gudrid-thorbjarnard\u00f3ttir",
+      "slug": "rhetoric",
       "status": "enriched",
-      "old_len": 97,
-      "new_len": 1304
+      "old_len": 61,
+      "new_len": 1831
     },
     {
-      "slug": "tommaso-docre",
-      "status": "failed",
-      "reason": "Unterminated string starting at: line 3 column 5 (char 20)",
-      "poison_count": 2
-    },
-    {
-      "slug": "antipater-of-bostra",
+      "slug": "richard-of-saint-victor",
       "status": "enriched",
-      "old_len": 194,
-      "new_len": 1164
+      "old_len": 301,
+      "new_len": 1464
     },
     {
-      "slug": "giacomo-colonna",
+      "slug": "idomeneus-of-lampsacus",
       "status": "enriched",
-      "old_len": 99,
-      "new_len": 1046
+      "old_len": 61,
+      "new_len": 534
     },
     {
-      "slug": "ludovico-prodocator",
+      "slug": "emilian-of-cogolla",
       "status": "enriched",
-      "old_len": 682,
-      "new_len": 1561
+      "old_len": 115,
+      "new_len": 1079
     },
     {
-      "slug": "nicol-da-ponte",
+      "slug": "cleopatra-selene-ii",
       "status": "enriched",
-      "old_len": 564,
-      "new_len": 1889
+      "old_len": 199,
+      "new_len": 1993
     },
     {
-      "slug": "basseterre",
+      "slug": "bademus",
       "status": "enriched",
-      "old_len": 179,
-      "new_len": 1163
+      "old_len": 199,
+      "new_len": 2294
     },
     {
-      "slug": "anthimus-of-nicomedia",
+      "slug": "caius",
       "status": "enriched",
-      "old_len": 195,
-      "new_len": 1360
+      "old_len": 199,
+      "new_len": 1145
     },
     {
-      "slug": "marcian-of-tortona",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 2)",
-      "poison_count": 1
-    },
-    {
-      "slug": "celestine-iv",
+      "slug": "eunomius-of-cyzicus",
       "status": "enriched",
-      "old_len": 195,
-      "new_len": 997
+      "old_len": 199,
+      "new_len": 1238
     },
     {
-      "slug": "ibn-abi-al-khisal",
+      "slug": "felix-iii",
       "status": "enriched",
-      "old_len": 297,
-      "new_len": 1383
+      "old_len": 199,
+      "new_len": 1322
     },
     {
-      "slug": "suomar",
+      "slug": "lucius-aemilius-mamercus",
       "status": "enriched",
-      "old_len": 57,
-      "new_len": 940
-    },
-    {
-      "slug": "philopoemen",
-      "status": "enriched",
-      "old_len": 100,
-      "new_len": 761
-    },
-    {
-      "slug": "w\u0142adys\u0142aw-of-legnica",
-      "status": "enriched",
-      "old_len": 100,
-      "new_len": 1319
-    },
-    {
-      "slug": "wadysaw-of-legnica",
-      "status": "enriched",
-      "old_len": 100,
-      "new_len": 1712
-    },
-    {
-      "slug": "ur-ninurta",
-      "status": "enriched",
-      "old_len": 180,
-      "new_len": 1655
-    },
-    {
-      "slug": "ferdinand-iv-of-castile",
-      "status": "enriched",
-      "old_len": 100,
-      "new_len": 1175
-    },
-    {
-      "slug": "muirchertach-mac-lochlainn",
-      "status": "enriched",
-      "old_len": 180,
-      "new_len": 1651
-    },
-    {
-      "slug": "agilbert",
-      "status": "enriched",
-      "old_len": 180,
-      "new_len": 1172
-    },
-    {
-      "slug": "mezamir",
-      "status": "enriched",
-      "old_len": 610,
-      "new_len": 1142
-    },
-    {
-      "slug": "merankhre-mentuhotep",
-      "status": "enriched",
-      "old_len": 180,
-      "new_len": 1887
-    },
-    {
-      "slug": "phocylides",
-      "status": "enriched",
-      "old_len": 100,
-      "new_len": 1393
-    },
-    {
-      "slug": "union-of-european-football-associations",
-      "status": "enriched",
-      "old_len": 100,
-      "new_len": 1916
-    },
-    {
-      "slug": "vushmgir",
-      "status": "failed",
-      "reason": "HTTP Error 500: Internal Server Error",
-      "poison_count": 1
-    },
-    {
-      "slug": "agapetus-i",
-      "status": "enriched",
-      "old_len": 196,
-      "new_len": 876
-    },
-    {
-      "slug": "jakob-finci",
-      "status": "failed",
-      "reason": "Unterminated string starting at: line 1 column 15924 (char 15923)",
-      "poison_count": 1
-    },
-    {
-      "slug": "mahendravarman",
-      "status": "enriched",
-      "old_len": 58,
-      "new_len": 1144
-    },
-    {
-      "slug": "fenestella",
-      "status": "enriched",
-      "old_len": 58,
-      "new_len": 1567
-    },
-    {
-      "slug": "the-hobbit",
-      "status": "enriched",
-      "old_len": 58,
-      "new_len": 1753
-    },
-    {
-      "slug": "abu-sufyan-ibn-harb",
-      "status": "enriched",
-      "old_len": 298,
-      "new_len": 1687
-    },
-    {
-      "slug": "lucius-calpurnius-piso-caesoninus",
-      "status": "enriched",
-      "old_len": 101,
-      "new_len": 896
-    },
-    {
-      "slug": "titus-genucius-augurinus",
-      "status": "enriched",
-      "old_len": 101,
+      "old_len": 104,
       "new_len": 931
     },
     {
-      "slug": "menes",
+      "slug": "lucius-calpurnius-bibulus",
       "status": "enriched",
-      "old_len": 181,
-      "new_len": 959
+      "old_len": 104,
+      "new_len": 1290
     },
     {
-      "slug": "hairan-i",
+      "slug": "artabazanes",
+      "status": "enriched",
+      "old_len": 184,
+      "new_len": 1634
+    },
+    {
+      "slug": "ibi",
+      "status": "enriched",
+      "old_len": 184,
+      "new_len": 1075
+    },
+    {
+      "slug": "federal-center-of-technological-education-celso-suckow-da-fonseca",
+      "status": "enriched",
+      "old_len": 104,
+      "new_len": 1431
+    },
+    {
+      "slug": "jehovahs-witnesses",
       "status": "failed",
-      "reason": "HTTP Error 500: Internal Server Error",
+      "reason": "Unterminated string starting at: line 3 column 1 (char 14)",
       "poison_count": 1
     },
     {
-      "slug": "vratislaus-i-duke-of-bohemia",
+      "slug": "monulph",
       "status": "enriched",
-      "old_len": 101,
-      "new_len": 1122
+      "old_len": 104,
+      "new_len": 1257
     },
     {
-      "slug": "anselm-duke-of-friuli",
-      "status": "failed",
-      "reason": "Unterminated string starting at: line 2 column 15109 (char 15110)",
-      "poison_count": 1
-    },
-    {
-      "slug": "eufrasia-burlamacchi",
+      "slug": "juan-de-borja-lanzol-de-roman\u00ed-el-menor",
       "status": "enriched",
-      "old_len": 101,
-      "new_len": 971
+      "old_len": 104,
+      "new_len": 1065
     },
     {
-      "slug": "bridget-of-york",
+      "slug": "juan-de-borja-lanzol-de-roman-el-menor",
       "status": "enriched",
-      "old_len": 101,
-      "new_len": 1153
+      "old_len": 104,
+      "new_len": 1695
     },
     {
-      "slug": "margarete-von-bayern",
+      "slug": "kagemni",
       "status": "enriched",
-      "old_len": 101,
-      "new_len": 1070
-    },
-    {
-      "slug": "anastasius-iii",
-      "status": "enriched",
-      "old_len": 101,
-      "new_len": 1213
-    },
-    {
-      "slug": "pierfrancesco-giambullari",
-      "status": "enriched",
-      "old_len": 101,
-      "new_len": 1817
-    },
-    {
-      "slug": "burgundofara",
-      "status": "enriched",
-      "old_len": 101,
-      "new_len": 1044
-    },
-    {
-      "slug": "marino-grimani",
-      "status": "enriched",
-      "old_len": 101,
-      "new_len": 864
-    },
-    {
-      "slug": "verrius-flaccus",
-      "status": "enriched",
-      "old_len": 101,
-      "new_len": 948
-    },
-    {
-      "slug": "heimskringla",
-      "status": "failed",
-      "reason": "Unterminated string starting at: line 1 column 13 (char 12)",
-      "poison_count": 1
-    },
-    {
-      "slug": "tokelau",
-      "status": "enriched",
-      "old_len": 181,
-      "new_len": 1583
-    },
-    {
-      "slug": "alcidas",
-      "status": "enriched",
-      "old_len": 59,
-      "new_len": 802
+      "old_len": 184,
+      "new_len": 781
     }
   ]
 }

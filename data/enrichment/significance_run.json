@@ -1,13 +1,26 @@
 {
-  "generatedAt": "2026-11-07T22:58:57Z",
+  "generatedAt": "2026-11-08T04:49:57Z",
   "model": "gemini-2.5-flash",
-  "count_requested": 16,
-  "enriched": 0,
+  "count_requested": 30,
+  "enriched": 2,
   "failed": 0,
   "dry_run": false,
-  "results": [],
+  "results": [
+    {
+      "slug": "geography",
+      "status": "ok",
+      "score": 8,
+      "category": "regional"
+    },
+    {
+      "slug": "john-ix",
+      "status": "ok",
+      "score": 5,
+      "category": "regional"
+    }
+  ],
   "summary": {
-    "entities_scored": 0,
+    "entities_scored": 2,
     "failed": 0
   }
 }
