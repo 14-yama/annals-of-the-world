@@ -122,24 +122,15 @@ async function countLive(): Promise<{
   let total = 0
   let cursor: string | undefined
 
-  // Prefer cheap totals when corpus is small; still page for breakdowns
-  const head = await databases.listDocuments(DATABASE, ENTITIES, [Query.limit(1)])
-  total = head.total || 0
-
-  if (total === 0) {
-    return { total: 0, byLabel, byEra, byContinent, byClass, computeTimeMs: Date.now() - started }
-  }
-
-  // Full scan for facet buckets (local Mini corpus during seed is small; scales with cursor)
-  let scanned = 0
-  while (scanned < total) {
+  // Appwrite list `.total` often caps at 5000 — always page until empty for truth.
+  while (true) {
     const queries = [Query.limit(PAGE), Query.select(['label', 'era', 'continent', 'callNumber'])]
     if (cursor) queries.push(Query.cursorAfter(cursor))
     const page = await databases.listDocuments(DATABASE, ENTITIES, queries)
     const docs = page.documents || []
     if (docs.length === 0) break
     for (const doc of docs) {
-      scanned++
+      total++
       const label = String((doc as { label?: string }).label || 'Unknown')
       const era = String((doc as { era?: string }).era || 'Unknown')
       const continent = String((doc as { continent?: string }).continent || 'Unknown')
@@ -154,13 +145,6 @@ async function countLive(): Promise<{
     }
     cursor = docs[docs.length - 1].$id
     if (docs.length < PAGE) break
-  }
-
-  // Prefer authoritative Appwrite total when pagination truncated
-  if (head.total && head.total > scanned) {
-    total = head.total
-  } else {
-    total = scanned
   }
 
   return { total, byLabel, byEra, byContinent, byClass, computeTimeMs: Date.now() - started }
@@ -231,28 +215,26 @@ async function appendStats(stats: {
     /* best-effort */
   }
 
-  const publicPath = path.join(ROOT, 'ui/public/governance/stats_cache.json')
-  fs.mkdirSync(path.dirname(publicPath), { recursive: true })
-  fs.writeFileSync(
-    publicPath,
-    JSON.stringify(
-      {
-        updatedAt,
-        source: FROM_GIT ? 'git-stats' : 'local-appwrite',
-        endpoint: ENDPOINT,
-        project: PROJECT,
-        database: DATABASE,
-        total: stats.total,
-        byLabel: stats.byLabel,
-        byEra: stats.byEra,
-        byContinent: stats.byContinent,
-        byClass: stats.byClass,
-        computeTimeMs: stats.computeTimeMs,
-      },
-      null,
-      2,
-    ) + '\n',
-  )
+  const snapshot = {
+    updatedAt,
+    source: FROM_GIT ? 'git-stats' : 'local-appwrite',
+    endpoint: ENDPOINT,
+    project: PROJECT,
+    database: DATABASE,
+    total: stats.total,
+    byLabel: stats.byLabel,
+    byEra: stats.byEra,
+    byContinent: stats.byContinent,
+    byClass: stats.byClass,
+    computeTimeMs: stats.computeTimeMs,
+  }
+  const body = JSON.stringify(snapshot, null, 2) + '\n'
+  // Canonical + UI mirror — KPI aggregator copies data/governance → ui/public.
+  for (const rel of ['data/governance/stats_cache.json', 'ui/public/governance/stats_cache.json']) {
+    const p = path.join(ROOT, rel)
+    fs.mkdirSync(path.dirname(p), { recursive: true })
+    fs.writeFileSync(p, body)
+  }
   return updatedAt
 }
 

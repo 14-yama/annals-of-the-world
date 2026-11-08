@@ -13,6 +13,11 @@
  *   --dry-run          Preview what would be imported without writing
  *   --collection=X     Import only the named collection
  *   --force            Overwrite existing entities (default: skip existing)
+ *   --max=N            Stop after N entity create/skip attempts (staged)
+ *   --source=DIR       Read from DIR instead of data/appwrite-export
+ *   --fast             Local bulk mode: create-first (409=skip), no audit, tiny delay
+ *   --cursor-file=PATH Persist scan progress so staged --max runs advance (default: data/governance/seed_local_cursor.json when --max set)
+ *   --reset-cursor     Ignore/reset cursor file
  */
 
 import * as fs from 'fs'
@@ -32,7 +37,119 @@ if (!API_KEY) {
 }
 
 const ROOT = path.resolve(__dirname, '..')
-const EXPORT_DIR = path.join(ROOT, 'data', 'appwrite-export')
+const argvEarly = process.argv.slice(2)
+const sourceFlag = argvEarly.find(a => a.startsWith('--source='))
+const EXPORT_DIR = sourceFlag
+  ? path.resolve(ROOT, sourceFlag.slice('--source='.length))
+  : path.join(ROOT, 'data', 'appwrite-export')
+
+type SeedCursor = {
+  source: string
+  classDir: string
+  file: string
+  entityOffset: number
+  scanned: number
+  created: number
+  skipped: number
+  failed: number
+  poisonSkipped?: number
+  lastRunAt?: string
+  lastPoison?: { path: string; reason: string; at: string }
+}
+
+const CONFLICT_MARKERS = ['<<<<<<<', '=======', '>>>>>>>'] as const
+
+function hasConflictMarkers(raw: string): boolean {
+  return CONFLICT_MARKERS.some((m) => raw.includes(m))
+}
+
+/** Newest side-path cloud backup under data/backups/cloud-* (if any). */
+function resolveBackupRoot(): string | null {
+  const envBackup = process.env.ANNALS_CLOUD_BACKUP_DIR
+  if (envBackup) {
+    const abs = path.resolve(ROOT, envBackup)
+    if (fs.existsSync(abs)) return abs
+  }
+  const backupsRoot = path.join(ROOT, 'data', 'backups')
+  if (!fs.existsSync(backupsRoot)) return null
+  const dirs = fs
+    .readdirSync(backupsRoot)
+    .filter((d) => d.startsWith('cloud-'))
+    .map((d) => path.join(backupsRoot, d))
+    .filter((d) => fs.statSync(d).isDirectory())
+    .sort()
+  return dirs.length ? dirs[dirs.length - 1] : null
+}
+
+function tryRecoverFromBackup(relFromExport: string): string | null {
+  const backupRoot = resolveBackupRoot()
+  if (!backupRoot) return null
+  // relFromExport like entities/205-Class-205/205nicander.json
+  const candidate = path.join(backupRoot, relFromExport)
+  if (!fs.existsSync(candidate)) return null
+  try {
+    const raw = fs.readFileSync(candidate, 'utf-8')
+    if (hasConflictMarkers(raw)) return null
+    JSON.parse(raw)
+    return candidate
+  } catch {
+    return null
+  }
+}
+
+type LoadJsonResult =
+  | { ok: true; data: { documents?: Record<string, unknown>[]; entities?: Record<string, unknown>[] }; recoveredFrom?: string }
+  | { ok: false; reason: string; recoveredAttempted?: boolean }
+
+function loadEntityExportFile(filePath: string): LoadJsonResult {
+  const rel = path.relative(EXPORT_DIR, filePath).split(path.sep).join('/')
+  let raw: string
+  try {
+    raw = fs.readFileSync(filePath, 'utf-8')
+  } catch (err) {
+    return { ok: false, reason: `unreadable: ${(err as Error).message}` }
+  }
+
+  const tryParse = (text: string, label: string): LoadJsonResult => {
+    if (hasConflictMarkers(text)) {
+      return { ok: false, reason: `git conflict markers (${label})` }
+    }
+    try {
+      const data = JSON.parse(text) as {
+        documents?: Record<string, unknown>[]
+        entities?: Record<string, unknown>[]
+      }
+      return { ok: true, data }
+    } catch (err) {
+      return { ok: false, reason: `invalid JSON (${label}): ${(err as Error).message}` }
+    }
+  }
+
+  const primary = tryParse(raw, 'export')
+  if (primary.ok) return primary
+
+  // Auto-recover from side-path backup when export is poisoned
+  const backupPath = tryRecoverFromBackup(rel)
+  if (backupPath) {
+    try {
+      const backupRaw = fs.readFileSync(backupPath, 'utf-8')
+      const recovered = tryParse(backupRaw, 'backup')
+      if (recovered.ok) {
+        fs.copyFileSync(backupPath, filePath)
+        console.warn(`  [recover] restored ${rel} from ${path.relative(ROOT, backupPath)}`)
+        return { ...recovered, recoveredFrom: backupPath }
+      }
+    } catch (err) {
+      return {
+        ok: false,
+        reason: `${primary.reason}; backup restore failed: ${(err as Error).message}`,
+        recoveredAttempted: true,
+      }
+    }
+  }
+
+  return { ...primary, recoveredAttempted: Boolean(resolveBackupRoot()) }
+}
 
 // ── REST API Helpers ──
 
@@ -64,6 +181,13 @@ function sanitizeEntityPayload(entity: Record<string, unknown>): Record<string, 
     if (v === undefined) continue
     payload[k] = v
   }
+  // Local schema requires label; fall back to name/slug for sparse export rows.
+  if (!payload.label) {
+    payload.label = payload.name || payload.slug || 'untitled'
+  }
+  if (!payload.name && payload.label) {
+    payload.name = payload.label
+  }
   return payload
 }
 
@@ -71,7 +195,7 @@ async function createDocument(
   collectionId: string,
   documentId: string,
   data: Record<string, unknown>,
-): Promise<{ success: boolean; error?: string }> {
+): Promise<{ success: boolean; conflict?: boolean; error?: string }> {
   const url = `${ENDPOINT}/databases/${DATABASE_ID}/collections/${collectionId}/documents`
   try {
     const res = await fetch(url, {
@@ -84,9 +208,17 @@ async function createDocument(
         permissions: ['read("any")', 'update("users")', 'delete("users")'],
       }),
     })
+    if (res.status === 409) {
+      return { success: false, conflict: true, error: 'Document already exists' }
+    }
     if (!res.ok) {
       const body = await res.json().catch(() => ({ message: res.statusText }))
-      return { success: false, error: body.message || `HTTP ${res.status}` }
+      const message = (body as { message?: string }).message || `HTTP ${res.status}`
+      // Some Appwrite builds return 409 text without status 409
+      if (res.status === 409 || /already exists|document_already_exists/i.test(message)) {
+        return { success: false, conflict: true, error: message }
+      }
+      return { success: false, error: message }
     }
     return { success: true }
   } catch (err) {
@@ -133,6 +265,9 @@ async function getDocument(
 
 function readJsonFile(filePath: string): { documents?: Record<string, unknown>[]; entities?: Record<string, unknown>[] } {
   const raw = fs.readFileSync(filePath, 'utf-8')
+  if (hasConflictMarkers(raw)) {
+    throw new Error(`git conflict markers in ${filePath}`)
+  }
   return JSON.parse(raw)
 }
 
@@ -175,10 +310,16 @@ async function main() {
   const args = process.argv.slice(2)
   const dryRun = args.includes('--dry-run')
   const force = args.includes('--force')
+  const fast = args.includes('--fast') || /localhost|127\.0\.0\.1/.test(ENDPOINT)
+  const resetCursor = args.includes('--reset-cursor')
   const collectionFlag = args.find(a => a.startsWith('--collection='))
   const singleCollection = collectionFlag?.split('=')[1]
   const maxFlag = args.find(a => a.startsWith('--max='))
   const maxDocs = maxFlag ? Math.max(1, parseInt(maxFlag.split('=')[1] || '0', 10)) : 0
+  const cursorFlag = args.find(a => a.startsWith('--cursor-file='))
+  const cursorPath = cursorFlag
+    ? path.resolve(ROOT, cursorFlag.slice('--cursor-file='.length))
+    : (maxDocs ? path.join(ROOT, 'data', 'governance', 'seed_local_cursor.json') : '')
 
   console.log('=== Repo → Appwrite Sync ===')
   console.log(`Endpoint:  ${ENDPOINT}`)
@@ -186,7 +327,9 @@ async function main() {
   console.log(`Source:    ${EXPORT_DIR}`)
   if (dryRun) console.log('MODE:      DRY RUN (no writes)')
   if (force) console.log('MODE:      FORCE (overwrite existing)')
+  if (fast) console.log('MODE:      FAST (create-first, no audit writes)')
   if (maxDocs) console.log(`MODE:      STAGED (max=${maxDocs} entity upserts)`)
+  if (cursorPath) console.log(`Cursor:    ${cursorPath}`)
   console.log()
 
   if (!fs.existsSync(EXPORT_DIR)) {
@@ -196,8 +339,55 @@ async function main() {
   }
 
   let created = 0, updated = 0, skipped = 0, failed = 0
+  let poisonSkipped = 0
   let processedEntities = 0
   let hitMax = false
+  let resumeClass = ''
+  let resumeFile = ''
+  let resumeEntityOffset = 0
+  let cursorBase: SeedCursor | null = null
+  let lastPoison: SeedCursor['lastPoison'] | undefined
+
+  const backupRoot = resolveBackupRoot()
+  if (backupRoot) {
+    console.log(`Backup:   ${path.relative(ROOT, backupRoot)} (auto-recover enabled)`)
+  }
+
+  if (cursorPath && !resetCursor && fs.existsSync(cursorPath)) {
+    try {
+      const raw = JSON.parse(fs.readFileSync(cursorPath, 'utf8')) as SeedCursor
+      if (raw.source === EXPORT_DIR) {
+        resumeClass = raw.classDir || ''
+        resumeFile = raw.file || ''
+        resumeEntityOffset = Math.max(0, raw.entityOffset || 0)
+        cursorBase = raw
+        console.log(`Resuming after ${resumeClass}/${resumeFile} entityOffset=${resumeEntityOffset} (scanned=${raw.scanned || 0})`)
+      } else {
+        console.log('Cursor source mismatch — starting from beginning')
+      }
+    } catch {
+      console.log('Cursor unreadable — starting from beginning')
+    }
+  }
+
+  const writeCursor = (classDir: string, file: string, entityOffset: number) => {
+    if (!cursorPath || dryRun) return
+    const payload: SeedCursor = {
+      source: EXPORT_DIR,
+      classDir,
+      file,
+      entityOffset,
+      scanned: (cursorBase?.scanned || 0) + processedEntities,
+      created: (cursorBase?.created || 0) + created,
+      skipped: (cursorBase?.skipped || 0) + skipped,
+      failed: (cursorBase?.failed || 0) + failed,
+      poisonSkipped: (cursorBase?.poisonSkipped || 0) + poisonSkipped,
+      lastRunAt: new Date().toISOString(),
+      ...(lastPoison ? { lastPoison } : {}),
+    }
+    fs.mkdirSync(path.dirname(cursorPath), { recursive: true })
+    fs.writeFileSync(cursorPath, JSON.stringify(payload, null, 2) + '\n')
+  }
 
   // ─── Import Entities ───
   if (!singleCollection || singleCollection === 'entities') {
@@ -207,28 +397,51 @@ async function main() {
 
       const classDirs = fs.readdirSync(entitiesDir).filter(d =>
         fs.statSync(path.join(entitiesDir, d)).isDirectory()
-      )
+      ).sort()
 
       for (const classDir of classDirs) {
         if (hitMax) break
+        if (resumeClass && classDir < resumeClass) continue
+
         const divFiles = fs.readdirSync(path.join(entitiesDir, classDir))
           .filter(f => f.endsWith('.json'))
+          .sort()
 
         for (const divFile of divFiles) {
           if (hitMax) break
-          const data = readJsonFile(path.join(entitiesDir, classDir, divFile))
-          const entities = data.entities || data.documents || []
+          if (resumeClass === classDir && resumeFile && divFile < resumeFile) continue
 
-          for (const entity of entities) {
+          const filePath = path.join(entitiesDir, classDir, divFile)
+          const loaded = loadEntityExportFile(filePath)
+          if (!loaded.ok) {
+            poisonSkipped++
+            lastPoison = {
+              path: path.relative(ROOT, filePath),
+              reason: loaded.reason,
+              at: new Date().toISOString(),
+            }
+            console.warn(`  [poison-skip] ${lastPoison.path}: ${loaded.reason}`)
+            // Advance cursor past this file so KeepAlive seed does not abort/loop forever
+            writeCursor(classDir, divFile, Number.MAX_SAFE_INTEGER)
+            processedEntities++
+            continue
+          }
+          const data = loaded.data
+          const entities = data.entities || data.documents || []
+          const startIdx =
+            resumeClass === classDir && resumeFile === divFile ? resumeEntityOffset : 0
+
+          for (let ei = startIdx; ei < entities.length; ei++) {
             if (maxDocs && processedEntities >= maxDocs) {
               hitMax = true
+              writeCursor(classDir, divFile, ei)
               break
             }
+            const entity = entities[ei]
             const slug = entity.slug as string
-            if (!slug) { failed++; continue }
+            if (!slug) { failed++; processedEntities++; continue }
 
             const docId = (entity.$id as string) || slugToId(slug)
-
             const payload = sanitizeEntityPayload(entity)
 
             processedEntities++
@@ -239,26 +452,49 @@ async function main() {
               continue
             }
 
-            // Check if exists
-            const existing = await getDocument('entities', docId)
-
-            if (existing) {
-              if (force) {
-                const result = await updateDocument('entities', docId, payload)
-                if (result.success) {
-                  updated++
-                  await writeAuditEntry('batch_update', { ...payload, $id: docId }, SYNC_EDITOR, `Repo→Appwrite sync (force overwrite)`)
-                } else { failed++ }
-              } else {
-                skipped++
-              }
-            } else {
-              // Guest-readable docs for Vite UI without login
+            if (fast && !force) {
               const result = await createDocument('entities', docId, payload)
               if (result.success) {
                 created++
-                await writeAuditEntry('create', { ...payload, $id: docId }, SYNC_EDITOR, `Repo→Appwrite sync (new entity)`)
-              } else { failed++ }
+              } else if (result.conflict) {
+                skipped++
+              } else {
+                // Fallback GET+create once on unexpected errors
+                const existing = await getDocument('entities', docId)
+                if (existing) {
+                  skipped++
+                } else {
+                  const retry = await createDocument('entities', docId, payload)
+                  if (retry.success) created++
+                  else if (retry.conflict) skipped++
+                  else failed++
+                }
+              }
+            } else {
+              const existing = await getDocument('entities', docId)
+              if (existing) {
+                if (force) {
+                  const result = await updateDocument('entities', docId, payload)
+                  if (result.success) {
+                    updated++
+                    if (!fast) {
+                      await writeAuditEntry('batch_update', { ...payload, $id: docId }, SYNC_EDITOR, `Repo→Appwrite sync (force overwrite)`)
+                    }
+                  } else { failed++ }
+                } else {
+                  skipped++
+                }
+              } else {
+                const result = await createDocument('entities', docId, payload)
+                if (result.success) {
+                  created++
+                  if (!fast) {
+                    await writeAuditEntry('create', { ...payload, $id: docId }, SYNC_EDITOR, `Repo→Appwrite sync (new entity)`)
+                  }
+                } else if (result.conflict) {
+                  skipped++
+                } else { failed++ }
+              }
             }
 
             const total = created + updated + skipped + failed
@@ -266,11 +502,16 @@ async function main() {
               process.stdout.write(`  Progress: ${total} (created=${created}, updated=${updated}, skipped=${skipped}, failed=${failed})\r`)
             }
 
-            // Rate limit: 50ms between writes
-            if (!dryRun && (created + updated) % 10 === 0) {
-              await new Promise(r => setTimeout(r, 200))
+            if (!dryRun && (created + updated) % 25 === 0) {
+              await new Promise(r => setTimeout(r, fast ? 20 : 200))
+            }
+
+            if (cursorPath && processedEntities % 250 === 0) {
+              writeCursor(classDir, divFile, ei + 1)
             }
           }
+
+          if (!hitMax) writeCursor(classDir, divFile, entities.length)
         }
 
         console.log(`  ${classDir}: done`)
@@ -289,7 +530,19 @@ async function main() {
     if (!fs.existsSync(filePath)) continue
 
     console.log(`Importing ${colId}...`)
-    const data = readJsonFile(filePath)
+    let data: { documents?: Record<string, unknown>[]; entities?: Record<string, unknown>[] }
+    try {
+      data = readJsonFile(filePath)
+    } catch (err) {
+      poisonSkipped++
+      lastPoison = {
+        path: path.relative(ROOT, filePath),
+        reason: (err as Error).message,
+        at: new Date().toISOString(),
+      }
+      console.warn(`  [poison-skip] ${lastPoison.path}: ${lastPoison.reason}`)
+      continue
+    }
     const docs = data.documents || []
 
     for (const doc of docs) {
@@ -339,9 +592,11 @@ async function main() {
   console.log(`Updated: ${updated}`)
   console.log(`Skipped: ${skipped}`)
   console.log(`Failed:  ${failed}`)
+  console.log(`Poison:  ${poisonSkipped} (conflict/invalid JSON files skipped)`)
 }
 
 main().catch((err) => {
+  // Unexpected fatal errors only — per-file poison is handled inline and must not kill seed
   console.error('Import failed:', err.message || err)
   process.exit(1)
 })

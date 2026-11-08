@@ -154,7 +154,7 @@ def plist_for_bot(bot: dict) -> dict:
     # ollama/light/network lanes tight for 24/7 continuous work.
     # Allow sub-minute via schedule.interval_seconds when set.
     parts = cron.split()
-    interval_lanes = {"always_on", "light", "ollama", "network_write"}
+    interval_lanes = {"always_on", "light", "ollama", "grok", "edges", "network_write"}
     if schedule.get("interval_seconds"):
         plist["StartInterval"] = max(15, int(schedule["interval_seconds"]))
         plist["RunAtLoad"] = True

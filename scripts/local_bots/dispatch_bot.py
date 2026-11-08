@@ -69,8 +69,18 @@ def load_shared_env() -> None:
 
 
 def gate(action: str, bot_id: str) -> tuple[int, str]:
+    # Pass this dispatch PID so locks survive the short-lived gate CLI process.
+    cmd = [
+        sys.executable,
+        str(GATE),
+        action,
+        "--bot-id",
+        bot_id,
+        "--holder-pid",
+        str(os.getpid()),
+    ]
     proc = subprocess.run(
-        [sys.executable, str(GATE), action, "--bot-id", bot_id],
+        cmd,
         cwd=str(REPO),
         capture_output=True,
         text=True,

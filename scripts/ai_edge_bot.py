@@ -355,21 +355,41 @@ def save_edges(edges: list[dict], dry_run: bool) -> str:
 def main():
     load_dotenv()
     parser = argparse.ArgumentParser(description="AI Edge Bot — generates entity relationship edges")
-    parser.add_argument("--count", type=int, default=40, help="Max Gemini-generated edge pairs to attempt")
-    parser.add_argument("--min-significance", type=int, default=5, help="Min significanceScore for Gemini pairs")
-    parser.add_argument("--extract-only", action="store_true", help="Only extract from detailsJson, skip Gemini")
+    parser.add_argument("--count", type=int, default=40, help="Max LLM-generated edge pairs to attempt")
+    parser.add_argument("--min-significance", type=int, default=5, help="Min significanceScore for LLM pairs")
+    parser.add_argument("--extract-only", action="store_true", help="Only extract from detailsJson, skip LLM")
     parser.add_argument("--dry-run", action="store_true", help="Preview — no file changes")
+    parser.add_argument(
+        "--model", choices=["gemini", "grok"], default="gemini",
+        help="LLM for Phase 2 discovery (ignored with --extract-only)",
+    )
+    parser.add_argument(
+        "--grok-model", default=os.environ.get("GROK_MODEL", "grok-4.7"),
+        help="xAI Grok model when --model grok",
+    )
     args = parser.parse_args()
 
-    api_key = os.environ.get("GEMINI_API_KEY", "")
-    if not api_key and not args.extract_only and not args.dry_run:
-        print("ERROR: GEMINI_API_KEY not set (pass --extract-only for no-LLM mode)", file=sys.stderr)
-        sys.exit(1)
+    api_key = ""
+    if not args.extract_only and not args.dry_run:
+        if args.model == "grok":
+            sys.path.insert(0, str(Path(__file__).resolve().parent))
+            from llm_grok import resolve_grok_api_key  # type: ignore
+            api_key = resolve_grok_api_key()
+            if not api_key:
+                print("SKIP — XAI_API_KEY / GROK_API_KEY not set. Add to ~/.config/annals/env then relaunch edges-grok.")
+                sys.exit(0)
+        else:
+            api_key = os.environ.get("GEMINI_API_KEY", "")
+            if not api_key:
+                print("ERROR: GEMINI_API_KEY not set (pass --extract-only or --model grok)", file=sys.stderr)
+                sys.exit(1)
 
+    global EDITOR_ID
+    EDITOR_ID = f"ai-edge-bot:{args.model}"
     print("=" * 60)
-    print(f"AI EDGE BOT — up to {args.count} pairs via Gemini")
+    print(f"AI EDGE BOT — up to {args.count} pairs via {args.model}")
     if args.extract_only:
-        print("  MODE: extract-only (no Gemini calls)")
+        print("  MODE: extract-only (no LLM calls)")
     if args.dry_run:
         print("  DRY RUN — no files written")
     print("=" * 60)
@@ -395,7 +415,7 @@ def main():
     gemini_failed = 0
 
     if not args.extract_only and api_key:
-        print(f"\n[Phase 2] Gemini cross-entity discovery (min_significance={args.min_significance})...")
+        print(f"\n[Phase 2] {args.model} cross-entity discovery (min_significance={args.min_significance})...")
         all_existing = existing_keys | edge_keys_this_run
         pairs = build_candidate_pairs(entity_index, all_existing, args.min_significance, args.count)
         print(f"  Candidate pairs: {len(pairs)}")
@@ -421,12 +441,22 @@ def main():
             )
 
             try:
-                raw_edges = call_gemini(prompt, api_key)
+                if args.model == "grok":
+                    sys.path.insert(0, str(Path(__file__).resolve().parent))
+                    from llm_grok import call_grok_json_list  # type: ignore
+                    raw_edges = call_grok_json_list(
+                        prompt, api_key=api_key, model=args.grok_model, temperature=0.4
+                    )
+                    src_tag = "grok"
+                    pace = 1.2
+                else:
+                    raw_edges = call_gemini(prompt, api_key)
+                    src_tag = "gemini"
+                    pace = 4
                 accepted = 0
                 for edge in raw_edges:
                     if not isinstance(edge, dict):
                         continue
-                    # Fill in entitySlug
                     src = edge.get("sourceSlug", slug_a)
                     verb = edge.get("verb", "")
                     tgt = edge.get("targetSlug", slug_b)
@@ -441,7 +471,7 @@ def main():
 
                     edge["$id"] = key
                     edge["entitySlug"] = src
-                    edge["_source"] = "gemini"
+                    edge["_source"] = src_tag
                     all_new_edges.append(edge)
                     edge_keys_this_run.add(key)
                     accepted += 1
@@ -453,9 +483,8 @@ def main():
                 print(f"    ERROR: {e}")
                 gemini_failed += 1
 
-            # Rate limit: 15 RPM free tier
             if i < len(pairs) - 1:
-                time.sleep(4)
+                time.sleep(pace)
 
     # Save
     if all_new_edges:

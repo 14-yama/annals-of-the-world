@@ -21,9 +21,14 @@ Usage:
     # Use OpenAI GPT-4o-mini instead
     python3 scripts/ai_enrich_autonomous.py --count 25 --model openai
 
+    # Use xAI Grok (cloud; can run concurrent with local Ollama)
+    python3 scripts/ai_enrich_autonomous.py --count 12 --model grok
+
 Environment Variables:
     GEMINI_API_KEY — Google Gemini API key (free tier: 1M tokens/day)
     OPENAI_API_KEY — OpenAI API key (paid fallback)
+    XAI_API_KEY / GROK_API_KEY — xAI Grok API key (console.x.ai)
+    GROK_MODEL — Grok model id (default: grok-4.7)
 """
 import json
 import os
@@ -33,25 +38,54 @@ import time
 import urllib.request
 import urllib.error
 import urllib.parse
+from pathlib import Path
 
 
 def load_dotenv():
-    """Load .env file if present (no dependency needed)."""
-    env_path = os.path.join(os.path.dirname(__file__), '..', '.env')
-    if os.path.exists(env_path):
+    """Load shared Annals env then repo .env (no dependency needed). Never prints values."""
+    candidates = [
+        Path.home() / ".config" / "annals" / "env",
+        Path(__file__).resolve().parent.parent / ".env",
+    ]
+    for env_path in candidates:
+        if not env_path.exists():
+            continue
         with open(env_path) as f:
             for line in f:
                 line = line.strip()
                 if not line or line.startswith('#') or '=' not in line:
                     continue
+                if line.startswith("export "):
+                    line = line[len("export "):]
                 key, _, value = line.partition('=')
                 key = key.strip()
-                value = value.strip()
+                value = value.strip().strip("'").strip('"')
                 if key and key not in os.environ:
                     os.environ[key] = value
 
 
 load_dotenv()
+
+# Shared Grok client (prefer scripts/llm_grok.py; keep local resolve fallback)
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+try:
+    from llm_grok import (  # type: ignore
+        call_grok_json,
+        resolve_grok_api_key,
+        DEFAULT_MODEL as GROK_DEFAULT_MODEL,
+    )
+except ImportError:  # pragma: no cover
+    GROK_DEFAULT_MODEL = os.environ.get("GROK_MODEL", "grok-4.7")
+
+    def resolve_grok_api_key() -> str:
+        """Prefer XAI_API_KEY, fall back to GROK_API_KEY. Never log the value."""
+        return (
+            os.environ.get("XAI_API_KEY", "").strip()
+            or os.environ.get("GROK_API_KEY", "").strip()
+        )
+
+    def call_grok_json(prompt, api_key=None, model=None, **_kwargs):  # type: ignore
+        raise RuntimeError("llm_grok module unavailable")
 
 # ═══════════════════════════════════════════════════════════
 # Configuration
@@ -710,7 +744,8 @@ def select_work_batch(queue, count: int, poison: dict):
     skipped_missing = 0
     scanned = 0
     # Cap scan so a fully-stale head cannot burn the whole run scanning forever.
-    scan_cap = max(count * 40, 200)
+    # Aggressive batches need a deeper walk past already-enriched queue heads.
+    scan_cap = max(count * 80, 500)
 
     for entry in queue:
         if len(batch) >= count or scanned >= scan_cap:
@@ -807,8 +842,8 @@ def main():
         help="Number of entities to enrich (default: 25)",
     )
     parser.add_argument(
-        "--model", choices=["gemini", "openai", "ollama", "github"], default="gemini",
-        help="LLM provider: gemini (free, 500 RPD), openai (paid), ollama (local, unlimited), github (free via Copilot/GH token)",
+        "--model", choices=["gemini", "openai", "ollama", "github", "grok"], default="gemini",
+        help="LLM provider: gemini, openai, ollama (local), github, grok (xAI cloud — parallel to Ollama)",
     )
     parser.add_argument(
         "--gemini-model", default="gemini-2.5-flash",
@@ -825,6 +860,10 @@ def main():
     parser.add_argument(
         "--github-model", default="gpt-4o-mini",
         help="GitHub Models model name (default: gpt-4o-mini — free with Copilot)",
+    )
+    parser.add_argument(
+        "--grok-model", default=os.environ.get("GROK_MODEL", GROK_DEFAULT_MODEL),
+        help="xAI Grok model (default: GROK_MODEL env or grok-4.7)",
     )
     parser.add_argument(
         "--dry-run", action="store_true",
@@ -864,6 +903,18 @@ def main():
         except Exception:
             print(f"ERROR: Ollama not running at {OLLAMA_BASE_ENRICH}. Start with: ollama serve")
             sys.exit(1)
+    elif args.model == "grok":
+        api_key = resolve_grok_api_key()
+        if not api_key:
+            # Soft skip — LaunchAgents KeepAlive must not crash-storm when key unset
+            print(
+                "SKIP — XAI_API_KEY / GROK_API_KEY not set. "
+                "Add to ~/.config/annals/env (or repo .env) then relaunch enrich-grok."
+            )
+            sys.exit(0)
+        if call_grok_json is None:
+            print("ERROR: llm_grok module unavailable", file=sys.stderr)
+            sys.exit(1)
     elif args.model == "github":
         import subprocess as _sp
         api_key = (os.environ.get("GITHUB_TOKEN") or
@@ -885,6 +936,7 @@ def main():
         "openai": args.openai_model,
         "ollama": args.ollama_model,
         "github": args.github_model,
+        "grok": args.grok_model,
     }.get(args.model, args.model)
     EDITOR_ID = build_editor_id(args.model, model_name)
     print(f"Editor ID: {EDITOR_ID}")
@@ -972,6 +1024,10 @@ def main():
                     result = call_gemini(prompt, api_key, args.gemini_model)
                 elif args.model == "ollama":
                     result = call_ollama(prompt, args.ollama_model)
+                elif args.model == "grok":
+                    result = call_grok_json(
+                        prompt, api_key=api_key, model=args.grok_model
+                    )
                 elif args.model == "github":
                     result = call_github_models(prompt, api_key, args.github_model)
                 else:
@@ -1024,11 +1080,13 @@ def main():
             "new_len": new_len,
         })
 
-        # Rate limiting: Gemini = 4.5s, OpenAI = 1.5s, GitHub Models = 5s, Ollama = 0
+        # Rate limiting: Gemini = 4.5s, OpenAI = 1.5s, GitHub = 5s, Grok ≈ 1.2s, Ollama = 0
         if args.model == "gemini":
             delay = 4.5
         elif args.model == "ollama":
             delay = 0  # local model — run as fast as the hardware allows
+        elif args.model == "grok":
+            delay = 1.2  # cloud — polite pacing; raise GROK_DELAY if rate-limited
         elif args.model == "github":
             delay = 5.0  # ~12 req/min — safe within free tier 15 req/min limit
         else:

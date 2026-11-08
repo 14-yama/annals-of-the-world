@@ -14,6 +14,7 @@
  * Flags:
  *   --entities-only   Only export entities (skip relationships, evidence, etc.)
  *   --collection=X    Export only the named collection
+ *   --out=DIR         Write under DIR instead of data/appwrite-export (use for side-path backups)
  */
 
 import * as fs from 'fs'
@@ -32,7 +33,10 @@ if (!API_KEY) {
 }
 
 const ROOT = path.resolve(__dirname, '..')
-const EXPORT_DIR = path.join(ROOT, 'data', 'appwrite-export')
+const outFlag = process.argv.slice(2).find(a => a.startsWith('--out='))
+const EXPORT_DIR = outFlag
+  ? path.resolve(ROOT, outFlag.slice('--out='.length))
+  : path.join(ROOT, 'data', 'appwrite-export')
 
 // ── Class name map (matching callNumbers.ts) ──
 const CLASS_NAMES: Record<string, string> = {

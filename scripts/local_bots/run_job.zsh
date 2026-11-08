@@ -8,6 +8,7 @@ repo_root="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$repo_root"
 
 export PATH="/opt/homebrew/bin:${HOME}/.local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${PATH:-}"
+export PYTHONUNBUFFERED=1
 
 bot_id=""
 if [[ "${1:-}" == "--bot-id" ]]; then

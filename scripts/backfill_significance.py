@@ -41,6 +41,9 @@ def build_editor_id(model: str, ollama_model: str = "llama3.2:3b") -> str:
     is_github = bool(os.environ.get("GITHUB_ACTIONS"))
     if model == "ollama":
         return f"ollama/{ollama_model}\u00b7local\u00b7{socket.gethostname()}"
+    if model == "grok":
+        gm = os.environ.get("GROK_MODEL", "grok-4.7")
+        return f"grok/{gm}\u00b7local\u00b7{socket.gethostname()}"
     elif is_github:
         run_id = os.environ.get("GITHUB_RUN_ID", "?")
         model_name = "gemini-2.5-flash" if model == "gemini" else "gpt-4o-mini"
@@ -161,10 +164,15 @@ def call_ollama(prompt: str, model: str = "llama3.2:3b") -> dict:
         raise RuntimeError(f"Ollama error: {e}") from e
 
 
-def call_llm(prompt: str, model_backend: str, api_key: str = "", ollama_model: str = "llama3.2:3b") -> dict:
-    """Unified LLM call — dispatches to Gemini or Ollama."""
+def call_llm(prompt: str, model_backend: str, api_key: str = "", ollama_model: str = "llama3.2:3b",
+             grok_model: str = "grok-4.7") -> dict:
+    """Unified LLM call — dispatches to Gemini, Ollama, or Grok."""
     if model_backend == "ollama":
         return call_ollama(prompt, ollama_model)
+    if model_backend == "grok":
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from llm_grok import call_grok_json  # type: ignore
+        return call_grok_json(prompt, api_key=api_key, model=grok_model, temperature=0.3)
     return call_gemini(prompt, api_key)
 
 
@@ -187,40 +195,59 @@ def iter_entity_files():
 
 
 def build_queue(limit: int) -> list[dict]:
-    """Find enriched entities missing historicalSignificance, ranked by importanceScore."""
-    queue = []
+    """Find enriched entities missing historicalSignificance, ranked by importanceScore.
+
+    Early-exits once we have `limit` high-importance candidates (score>=7) so KeepAlive
+    workers do not scan ~400k entities on every empty/full run when work is plentiful.
+    Still does a bounded scan; empty corpus remains a full walk (prefer lower cadence).
+    """
+    import heapq
+    heap: list[tuple[int, int, dict]] = []  # min-heap of (importance, seq, item)
+    seq = 0
+    high_count = 0
     for path in iter_entity_files():
         try:
             data = json.load(open(path))
         except Exception:
             continue
-        entities = data.get("entities", [])
-        for ent in entities:
+        for ent in data.get("entities", []):
             summary = ent.get("summary", "") or ""
             if len(summary) < 600:
-                continue  # skip stubs — not worth rating
+                continue
             dj = {}
             if ent.get("detailsJson"):
                 try:
                     dj = json.loads(ent["detailsJson"])
                 except Exception:
                     pass
-            # Skip if already has significance
             if ent.get("historicalSignificance") or dj.get("historicalSignificance"):
                 continue
-            queue.append({
+            importance = int(ent.get("importanceScore") or 0)
+            item = {
                 "slug": ent.get("slug", ""),
                 "name": ent.get("name", ent.get("slug", "")),
                 "label": ent.get("label", ""),
                 "era": ent.get("era", ""),
                 "region": ent.get("region", ""),
-                "importanceScore": int(ent.get("importanceScore") or 0),
+                "importanceScore": importance,
                 "summary": summary,
                 "filepath": str(path),
-            })
-    # Rank: highest importanceScore first
-    queue.sort(key=lambda x: -x["importanceScore"])
-    return queue[:limit]
+            }
+            seq += 1
+            if len(heap) < limit:
+                heapq.heappush(heap, (importance, seq, item))
+            elif importance > heap[0][0]:
+                heapq.heapreplace(heap, (importance, seq, item))
+            if importance >= 7:
+                high_count += 1
+                if high_count >= limit and len(heap) >= limit:
+                    # Enough strong candidates — stop scanning the corpus
+                    break
+        else:
+            continue
+        break
+    ranked = [t[2] for t in sorted(heap, key=lambda x: -x[0])]
+    return ranked[:limit]
 
 
 def apply_significance(entry: dict, result: dict, dry_run: bool) -> bool:
@@ -279,12 +306,16 @@ def main():
     parser.add_argument("--count", type=int, default=50, help="Max entities to process")
     parser.add_argument("--dry-run", action="store_true", help="Preview — no file changes")
     parser.add_argument(
-        "--model", choices=["gemini", "ollama"], default="gemini",
-        help="LLM backend: 'gemini' (cloud, 15 RPM limit) or 'ollama' (local, unlimited)",
+        "--model", choices=["gemini", "ollama", "grok"], default="gemini",
+        help="LLM backend: gemini | ollama (local) | grok (xAI cloud, parallel to Ollama)",
     )
     parser.add_argument(
         "--ollama-model", default="llama3.2:3b",
         help="Ollama model name (default: llama3.2:3b). Use llama3.1:8b for higher quality.",
+    )
+    parser.add_argument(
+        "--grok-model", default=os.environ.get("GROK_MODEL", "grok-4.7"),
+        help="xAI Grok model (default: GROK_MODEL or grok-4.7)",
     )
     args = parser.parse_args()
 
@@ -294,6 +325,13 @@ def main():
         if not api_key:
             print("ERROR: GEMINI_API_KEY not set (or use --model ollama for local AI)", file=sys.stderr)
             sys.exit(1)
+    elif args.model == "grok":
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from llm_grok import resolve_grok_api_key  # type: ignore
+        api_key = resolve_grok_api_key()
+        if not api_key:
+            print("SKIP — XAI_API_KEY / GROK_API_KEY not set. Add to ~/.config/annals/env then relaunch.")
+            sys.exit(0)
     elif args.model == "ollama":
         # Verify Ollama is running
         try:
@@ -337,7 +375,7 @@ def main():
         )
 
         try:
-            result = call_llm(prompt, args.model, api_key, args.ollama_model)
+            result = call_llm(prompt, args.model, api_key, args.ollama_model, getattr(args, "grok_model", "grok-4.7"))
             ok, reason = validate(result)
             if not ok:
                 print(f"  REJECTED — {reason}")

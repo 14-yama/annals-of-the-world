@@ -17,9 +17,18 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 export LD_LIBRARY_PATH="$HOME/.local/lib/ollama:${LD_LIBRARY_PATH:-}"
 
+# Shared Annals env first (counts + optional XAI_API_KEY), then repo .env
+SHARED_ENV="${HOME}/.config/annals/env"
+if [ -f "$SHARED_ENV" ]; then
+  set -a
+  # shellcheck disable=SC1090
+  source "$SHARED_ENV"
+  set +a
+fi
 ENV_FILE="$REPO_DIR/.env"
 if [ -f "$ENV_FILE" ]; then
   set -a
+  # shellcheck disable=SC1090
   source "$ENV_FILE"
   set +a
 fi

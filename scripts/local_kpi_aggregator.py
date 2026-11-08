@@ -8,9 +8,10 @@ platform-local-bots.json roster (com.annals.* LaunchAgents) and produces:
   data/governance/bot_kpi/combined_kpi.json
 and mirrors both (plus the SoT) into ui/public/governance for the Curator UI.
 
-Superstack-style processed-volume windows (1h / week / month / YTD) count
-varied processed entries (enrich, significance, sync, push, …) from the
-earliest activity timestamp available on disk.
+Superstack-style processed-volume windows (1h / week / month / YTD):
+headline cards count enrich + significance *successes* only (ENRICHED / scored).
+Sync / merge / queue are reported separately as opsProcessed so they cannot
+inflate entity throughput. Calendar month/YTD use America/Port_of_Spain.
 
 Usage:
     python3 scripts/local_kpi_aggregator.py
@@ -50,11 +51,15 @@ TASK_ALIASES = {
 }
 
 # Headline "Processed volume" = real LLM entity work only.
-ENRICHMENT_TASKS = frozenset({"enrich", "enrich-b", "significance"})
+ENRICHMENT_TASKS = frozenset({
+    "enrich", "enrich-b", "enrich-c", "significance",
+    "enrich-grok", "enrich-grok-b", "significance-grok",
+})
 # Infrastructure / ops — shown separately so sync/merge don't inflate enrich KPIs.
 OPS_TASKS = frozenset({
     "sync", "merge-cloud", "merge-cloud-audit", "seed-local", "push",
     "queue", "kpi", "stats-cache", "healthcheck", "bot-server",
+    "edges-extract", "edges-extract-b", "edges-grok",
 })
 
 # Audit report filename → bot task id
@@ -159,6 +164,7 @@ def roster_snapshot(sot: dict, jobs: list[dict]) -> list[dict]:
             "status": bot.get("status", "active"),
             "lane": bot.get("lane"),
             "usesOllama": bool(bot.get("uses_ollama")),
+            "usesGrok": bool(bot.get("uses_grok")),
             "cron": sched.get("cron") or sched.get("kind") or "",
             "scheduleEnabled": bool(sched.get("enabled", True)),
             "scheduleNote": sched.get("note"),
@@ -191,7 +197,7 @@ def job_processed_count(job: dict) -> int:
     task = normalize_task(job.get("bot"))
     text = _job_log_text(job)
 
-    if task in ("enrich", "enrich-b"):
+    if task in ("enrich", "enrich-b", "enrich-c", "enrich-grok", "enrich-grok-b"):
         m = re.search(r"RESULTS:\s*(\d+)\s+enriched", text)
         if m:
             return int(m.group(1))
@@ -203,7 +209,7 @@ def job_processed_count(job: dict) -> int:
             return 0
         return 0
 
-    if task == "significance":
+    if task in ("significance", "significance-grok"):
         m = re.search(r"RESULTS:\s*(\d+)\s+scored", text)
         if m:
             return int(m.group(1))
@@ -369,7 +375,13 @@ def collect_launchd_log_events(
     specs = (
         ("enrich", "enrich.log", r"RESULTS:\s*(\d+)\s+enriched"),
         ("enrich-b", "enrich-b.log", r"RESULTS:\s*(\d+)\s+enriched"),
+        ("enrich-c", "enrich-c.log", r"RESULTS:\s*(\d+)\s+enriched"),
+        ("enrich-grok", "enrich-grok.log", r"RESULTS:\s*(\d+)\s+enriched"),
+        ("enrich-grok-b", "enrich-grok-b.log", r"RESULTS:\s*(\d+)\s+enriched"),
         ("significance", "significance.log", r"RESULTS:\s*(\d+)\s+scored"),
+        ("significance-grok", "significance-grok.log", r"RESULTS:\s*(\d+)\s+scored"),
+        ("edges-extract", "edges-extract.log", r"(?:Wrote|saved|new edges)[^\d]*(\d+)"),
+        ("edges-grok", "edges-grok.log", r"(?:Wrote|saved|new edges|accepted)[^\d]*(\d+)"),
     )
     start_re = re.compile(
         r"\[annals-launchd\] start (\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}) "
@@ -868,7 +880,7 @@ def main() -> None:
         "updatedAt": now_iso(),
         "source": "local-mac-mini",
         "labelPrefix": (sot.get("meta") or {}).get("label_prefix", "com.annals."),
-        "llmProvider": "ollama",
+        "llmProvider": "ollama+grok",
         "totalJobsAllTime": len([j for j in jobs if j.get("status") in ("done", "error")]),
         "rosterCount": len(roster),
         "roster": roster,

@@ -1,9 +1,298 @@
 {
-  "timestamp": "2026-11-07T16:48:28Z",
+  "timestamp": "2026-11-07T22:54:15Z",
   "model": "ollama",
-  "count_requested": 8,
-  "enriched": 0,
-  "failed": 0,
+  "count_requested": 48,
+  "enriched": 41,
+  "failed": 7,
   "dry_run": false,
-  "entities": []
+  "entities": [
+    {
+      "slug": "manius-rabuleius",
+      "status": "enriched",
+      "old_len": 648,
+      "new_len": 1812
+    },
+    {
+      "slug": "gudrid-thorbjarnard\u00f3ttir",
+      "status": "enriched",
+      "old_len": 97,
+      "new_len": 1304
+    },
+    {
+      "slug": "tommaso-docre",
+      "status": "failed",
+      "reason": "Unterminated string starting at: line 3 column 5 (char 20)",
+      "poison_count": 2
+    },
+    {
+      "slug": "antipater-of-bostra",
+      "status": "enriched",
+      "old_len": 194,
+      "new_len": 1164
+    },
+    {
+      "slug": "giacomo-colonna",
+      "status": "enriched",
+      "old_len": 99,
+      "new_len": 1046
+    },
+    {
+      "slug": "ludovico-prodocator",
+      "status": "enriched",
+      "old_len": 682,
+      "new_len": 1561
+    },
+    {
+      "slug": "nicol-da-ponte",
+      "status": "enriched",
+      "old_len": 564,
+      "new_len": 1889
+    },
+    {
+      "slug": "basseterre",
+      "status": "enriched",
+      "old_len": 179,
+      "new_len": 1163
+    },
+    {
+      "slug": "anthimus-of-nicomedia",
+      "status": "enriched",
+      "old_len": 195,
+      "new_len": 1360
+    },
+    {
+      "slug": "marcian-of-tortona",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 2)",
+      "poison_count": 1
+    },
+    {
+      "slug": "celestine-iv",
+      "status": "enriched",
+      "old_len": 195,
+      "new_len": 997
+    },
+    {
+      "slug": "ibn-abi-al-khisal",
+      "status": "enriched",
+      "old_len": 297,
+      "new_len": 1383
+    },
+    {
+      "slug": "suomar",
+      "status": "enriched",
+      "old_len": 57,
+      "new_len": 940
+    },
+    {
+      "slug": "philopoemen",
+      "status": "enriched",
+      "old_len": 100,
+      "new_len": 761
+    },
+    {
+      "slug": "w\u0142adys\u0142aw-of-legnica",
+      "status": "enriched",
+      "old_len": 100,
+      "new_len": 1319
+    },
+    {
+      "slug": "wadysaw-of-legnica",
+      "status": "enriched",
+      "old_len": 100,
+      "new_len": 1712
+    },
+    {
+      "slug": "ur-ninurta",
+      "status": "enriched",
+      "old_len": 180,
+      "new_len": 1655
+    },
+    {
+      "slug": "ferdinand-iv-of-castile",
+      "status": "enriched",
+      "old_len": 100,
+      "new_len": 1175
+    },
+    {
+      "slug": "muirchertach-mac-lochlainn",
+      "status": "enriched",
+      "old_len": 180,
+      "new_len": 1651
+    },
+    {
+      "slug": "agilbert",
+      "status": "enriched",
+      "old_len": 180,
+      "new_len": 1172
+    },
+    {
+      "slug": "mezamir",
+      "status": "enriched",
+      "old_len": 610,
+      "new_len": 1142
+    },
+    {
+      "slug": "merankhre-mentuhotep",
+      "status": "enriched",
+      "old_len": 180,
+      "new_len": 1887
+    },
+    {
+      "slug": "phocylides",
+      "status": "enriched",
+      "old_len": 100,
+      "new_len": 1393
+    },
+    {
+      "slug": "union-of-european-football-associations",
+      "status": "enriched",
+      "old_len": 100,
+      "new_len": 1916
+    },
+    {
+      "slug": "vushmgir",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error",
+      "poison_count": 1
+    },
+    {
+      "slug": "agapetus-i",
+      "status": "enriched",
+      "old_len": 196,
+      "new_len": 876
+    },
+    {
+      "slug": "jakob-finci",
+      "status": "failed",
+      "reason": "Unterminated string starting at: line 1 column 15924 (char 15923)",
+      "poison_count": 1
+    },
+    {
+      "slug": "mahendravarman",
+      "status": "enriched",
+      "old_len": 58,
+      "new_len": 1144
+    },
+    {
+      "slug": "fenestella",
+      "status": "enriched",
+      "old_len": 58,
+      "new_len": 1567
+    },
+    {
+      "slug": "the-hobbit",
+      "status": "enriched",
+      "old_len": 58,
+      "new_len": 1753
+    },
+    {
+      "slug": "abu-sufyan-ibn-harb",
+      "status": "enriched",
+      "old_len": 298,
+      "new_len": 1687
+    },
+    {
+      "slug": "lucius-calpurnius-piso-caesoninus",
+      "status": "enriched",
+      "old_len": 101,
+      "new_len": 896
+    },
+    {
+      "slug": "titus-genucius-augurinus",
+      "status": "enriched",
+      "old_len": 101,
+      "new_len": 931
+    },
+    {
+      "slug": "menes",
+      "status": "enriched",
+      "old_len": 181,
+      "new_len": 959
+    },
+    {
+      "slug": "hairan-i",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error",
+      "poison_count": 1
+    },
+    {
+      "slug": "vratislaus-i-duke-of-bohemia",
+      "status": "enriched",
+      "old_len": 101,
+      "new_len": 1122
+    },
+    {
+      "slug": "anselm-duke-of-friuli",
+      "status": "failed",
+      "reason": "Unterminated string starting at: line 2 column 15109 (char 15110)",
+      "poison_count": 1
+    },
+    {
+      "slug": "eufrasia-burlamacchi",
+      "status": "enriched",
+      "old_len": 101,
+      "new_len": 971
+    },
+    {
+      "slug": "bridget-of-york",
+      "status": "enriched",
+      "old_len": 101,
+      "new_len": 1153
+    },
+    {
+      "slug": "margarete-von-bayern",
+      "status": "enriched",
+      "old_len": 101,
+      "new_len": 1070
+    },
+    {
+      "slug": "anastasius-iii",
+      "status": "enriched",
+      "old_len": 101,
+      "new_len": 1213
+    },
+    {
+      "slug": "pierfrancesco-giambullari",
+      "status": "enriched",
+      "old_len": 101,
+      "new_len": 1817
+    },
+    {
+      "slug": "burgundofara",
+      "status": "enriched",
+      "old_len": 101,
+      "new_len": 1044
+    },
+    {
+      "slug": "marino-grimani",
+      "status": "enriched",
+      "old_len": 101,
+      "new_len": 864
+    },
+    {
+      "slug": "verrius-flaccus",
+      "status": "enriched",
+      "old_len": 101,
+      "new_len": 948
+    },
+    {
+      "slug": "heimskringla",
+      "status": "failed",
+      "reason": "Unterminated string starting at: line 1 column 13 (char 12)",
+      "poison_count": 1
+    },
+    {
+      "slug": "tokelau",
+      "status": "enriched",
+      "old_len": 181,
+      "new_len": 1583
+    },
+    {
+      "slug": "alcidas",
+      "status": "enriched",
+      "old_len": 59,
+      "new_len": 802
+    }
+  ]
 }

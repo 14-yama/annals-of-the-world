@@ -143,47 +143,101 @@ def _pid_alive(pid: int) -> bool:
         return False
 
 
+def _is_python_script_cmd(cmd: str, script: str) -> bool:
+    """True only when a Python interpreter is executing ``script`` (not git/rg/diff noise)."""
+    if script not in cmd:
+        return False
+    # Require an interpreter token before the script name — rejects git/rg/editors
+    # whose argv merely lists the path.
+    head = cmd[: cmd.find(script)].lower()
+    return "python" in head
+
+
 def llm_peer_live(bot: dict[str, Any]) -> tuple[bool, str]:
-    """Detect another Annals Ollama bot already running (belt + suspenders vs file locks)."""
-    if bot.get("lane") != "ollama":
+    """Detect another Annals LLM bot already running (belt + suspenders vs file locks).
+
+    Ollama lane bots serialize against each other. Grok lane bots serialize against
+    other Grok LLM processes only — they may run concurrent with Ollama.
+    """
+    lane = bot.get("lane") or ""
+    if lane not in ("ollama", "grok"):
         return False, ""
     my_id = bot.get("id") or ""
-    needles = {
-        "enrich": "ai_enrich_autonomous.py",
-        "significance": "backfill_significance.py",
-    }
+    # Script needles → logical peer family
+    if lane == "ollama":
+        # Any local Ollama enrich/sig process blocks (enrich-b/c share the script)
+        peer_needles = [
+            ("enrich", "ai_enrich_autonomous.py"),
+            ("significance", "backfill_significance.py"),
+        ]
+        # Grok uses the same enrich script with --model grok — do not treat as Ollama peer
+        def _is_peer(line: str, peer_id: str, needle: str) -> bool:
+            if not _is_python_script_cmd(line, needle):
+                return False
+            if peer_id == "enrich" and "--model grok" in line:
+                return False
+            if peer_id.startswith("enrich") and my_id.startswith("enrich"):
+                # Same family: block unless this is our own dispatch wrapper line
+                return f"--bot-id {my_id}" not in line
+            if peer_id == my_id:
+                return False
+            return True
+    else:
+        # grok lane: only other grok LLM jobs
+        peer_needles = [
+            ("enrich-grok", "ai_enrich_autonomous.py"),
+            ("significance-grok", "backfill_significance.py"),
+            ("edges-grok", "ai_edge_bot.py"),
+        ]
+
+        def _is_peer(line: str, peer_id: str, needle: str) -> bool:
+            if not _is_python_script_cmd(line, needle):
+                return False
+            if "ai_enrich_autonomous.py" in line and "--model grok" not in line:
+                return False
+            if "ai_edge_bot.py" in line and "--extract-only" in line:
+                return False
+            if "backfill_significance.py" in line and "--model grok" not in line:
+                return False
+            if peer_id == my_id:
+                return f"--bot-id {my_id}" not in line
+            return True
+
+    my_pid = os.getpid()
     try:
         out = subprocess.check_output(["ps", "-ax", "-o", "pid=,command="], text=True, stderr=subprocess.DEVNULL)
     except Exception as exc:
         return False, f"ps-unavailable:{exc}"
     for line in out.splitlines():
-        if "concurrency_gate.py" in line:
+        if "concurrency_gate.py" in line or "dispatch_bot.py" in line:
             continue
-        for peer_id, needle in needles.items():
-            if peer_id == my_id:
+        try:
+            pid_str, _, cmd = line.strip().partition(" ")
+            pid = int(pid_str)
+            if pid == my_pid:
                 continue
-            if needle in line:
+        except ValueError:
+            cmd = line
+        for peer_id, needle in peer_needles:
+            if _is_peer(cmd, peer_id, needle):
                 return True, f"llm-peer-live:{peer_id}"
-        # Same bot already running (overlapping StartInterval)
-        mine = needles.get(my_id)
-        if mine and mine in line and f"--bot-id {my_id}" not in line:
-            # Child script of another dispatch for same bot
-            pid = line.strip().split(None, 1)[0]
-            try:
-                if int(pid) != os.getpid():
-                    return True, f"llm-self-live:{my_id}:pid={pid}"
-            except ValueError:
-                pass
     return False, ""
 
 
-def acquire_locks(sot: dict[str, Any], bot: dict[str, Any], wait_seconds: int = 0) -> tuple[bool, str]:
+def acquire_locks(
+    sot: dict[str, Any],
+    bot: dict[str, Any],
+    wait_seconds: int = 0,
+    holder_pid: int | None = None,
+) -> tuple[bool, str]:
     locks = list(bot.get("locks") or [])
     peer_busy, peer_reason = llm_peer_live(bot)
     if peer_busy:
         return False, peer_reason
     if not locks:
         return True, "no-locks"
+    # Prefer caller/dispatch PID — gate CLI PID dies immediately after acquire.
+    holder = int(holder_pid or os.getpid())
     deadline = time.time() + max(0, wait_seconds)
     while True:
         held: list[Path] = []
@@ -200,7 +254,7 @@ def acquire_locks(sot: dict[str, Any], bot: dict[str, Any], wait_seconds: int = 
                     raise RuntimeError(busy_reason)
                 payload = {
                     "bot_id": bot["id"],
-                    "pid": os.getpid(),
+                    "pid": holder,
                     "acquired": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
                     "lane": bot.get("lane"),
                 }
@@ -218,7 +272,7 @@ def acquire_locks(sot: dict[str, Any], bot: dict[str, Any], wait_seconds: int = 
         for path in held:
             try:
                 data = read_lock(path)
-                if data and data.get("pid") == os.getpid():
+                if data and data.get("pid") == holder:
                     path.unlink(missing_ok=True)
             except Exception:
                 pass
@@ -227,13 +281,18 @@ def acquire_locks(sot: dict[str, Any], bot: dict[str, Any], wait_seconds: int = 
         time.sleep(2)
 
 
-def release_locks(sot: dict[str, Any], bot: dict[str, Any]) -> None:
+def release_locks(
+    sot: dict[str, Any],
+    bot: dict[str, Any],
+    holder_pid: int | None = None,
+) -> None:
+    holder = int(holder_pid or os.getpid())
     for name in bot.get("locks") or []:
         path = lock_path(sot, name)
         data = read_lock(path)
         if not data:
             continue
-        if data.get("bot_id") == bot["id"] or data.get("pid") == os.getpid():
+        if data.get("bot_id") == bot["id"] or data.get("pid") == holder:
             try:
                 path.unlink(missing_ok=True)
             except Exception:
@@ -306,9 +365,16 @@ def main() -> int:
     parser.add_argument("action", choices=["check", "acquire", "release", "status"])
     parser.add_argument("--bot-id", default="")
     parser.add_argument("--wait-seconds", type=int, default=0)
+    parser.add_argument(
+        "--holder-pid",
+        type=int,
+        default=0,
+        help="PID of the long-lived dispatch holder (not this CLI process)",
+    )
     args = parser.parse_args()
 
     sot = load_sot()
+    holder_pid = args.holder_pid or None
 
     if args.action == "status":
         print(json.dumps(status_report(sot), indent=2))
@@ -333,12 +399,14 @@ def main() -> int:
         if code != 0:
             print(msg)
             return code
-        ok, msg = acquire_locks(sot, bot, wait_seconds=args.wait_seconds)
+        ok, msg = acquire_locks(
+            sot, bot, wait_seconds=args.wait_seconds, holder_pid=holder_pid
+        )
         print(msg)
         return 0 if ok else 12
 
     if args.action == "release":
-        release_locks(sot, bot)
+        release_locks(sot, bot, holder_pid=holder_pid)
         print("released")
         return 0
 

@@ -16,14 +16,21 @@ Model Assignments (by job quality requirements):
   audit bots   → No LLM needed (pure data analysis)
 
 Endpoints:
-  GET  /health                 — Health check + Ollama status
+  GET  /health                 — Health check + Ollama + Grok key presence (no secrets)
   GET  /bots/status            — All running jobs status
   GET  /bots/models            — Available Ollama models
-  POST /bots/enrich            — Run AI enrichment (body: {count, model})
-  POST /bots/significance      — Run significance backfill
+  GET  /bots/roster            — Active bot ids from platform-local-bots.json
+  POST /bots/enrich            — Ollama enrichment (body: {count})
+  POST /bots/enrich-b          — Alias → enrich waiter semantics (same script)
+  POST /bots/enrich-c          — Alias → enrich waiter
+  POST /bots/enrich-grok       — Grok enrichment (soft-skip if no XAI_API_KEY)
+  POST /bots/significance      — Significance backfill (ollama|grok via model)
+  POST /bots/significance-grok — Significance via Grok
+  POST /bots/edges-extract     — Extract-only edges (no LLM)
+  POST /bots/edges-grok        — Grok edge discovery
   POST /bots/queue             — Regenerate enrichment queue
   POST /bots/sync              — Run sync gateway
-  POST /bots/all               — Dispatch all bots concurrently
+  POST /bots/all               — Dispatch local Ollama + optional Grok concurrently
   POST /bots/stop              — Stop all running local bots
 
 Usage:
@@ -150,6 +157,59 @@ def ollama_ps() -> dict:
         return {"running": True, "models": data.get("models", [])}
     except Exception as e:
         return {"running": False, "models": [], "error": str(e)}
+
+
+def grok_health() -> dict:
+    """Report whether a Grok/xAI API key is configured — never returns the key."""
+    key = (
+        os.environ.get("XAI_API_KEY", "").strip()
+        or os.environ.get("GROK_API_KEY", "").strip()
+    )
+    return {
+        "configured": bool(key),
+        "model": os.environ.get("GROK_MODEL", "grok-4.7"),
+        "baseUrl": os.environ.get("XAI_BASE_URL", "https://api.x.ai/v1"),
+        "envKeysAccepted": ["XAI_API_KEY", "GROK_API_KEY"],
+    }
+
+
+def load_sot_roster() -> list[dict]:
+    sot_path = REPO_ROOT / "data" / "governance" / "platform-local-bots.json"
+    try:
+        sot = json.loads(sot_path.read_text())
+        return [
+            {
+                "id": b.get("id"),
+                "lane": b.get("lane"),
+                "uses_ollama": bool(b.get("uses_ollama")),
+                "uses_grok": bool(b.get("uses_grok")),
+                "status": b.get("status"),
+                "enabled": bool((b.get("schedule") or {}).get("enabled", True)),
+            }
+            for b in (sot.get("bots") or [])
+        ]
+    except Exception as e:
+        return [{"error": str(e)}]
+
+
+def _ollama_enrich_busy() -> bool:
+    with _lock:
+        return any(
+            j["status"] == "running" and j.get("bot") in (
+                "enrich", "enrich-b", "enrich-c", "significance"
+            )
+            for j in _jobs.values()
+        )
+
+
+def _grok_busy() -> bool:
+    with _lock:
+        return any(
+            j["status"] == "running" and j.get("bot") in (
+                "enrich-grok", "enrich-grok-b", "significance-grok", "edges-grok"
+            )
+            for j in _jobs.values()
+        )
 
 
 def sprint_stats() -> dict:
@@ -332,12 +392,17 @@ def _run_subprocess(job_id: str, cmd: list[str], env: dict | None = None):
 
 def dispatch_enrich(count: int = 20, model: str = "ollama",
                     queue: Optional[str] = None, lenient: bool = True,
-                    retry: int = 3) -> str:
-    """Dispatch AI enrichment bot locally."""
-    job_id = _new_job("enrich", count=count, model=model)
+                    retry: int = 3, bot_name: str = "enrich",
+                    grok_model: Optional[str] = None) -> str:
+    """Dispatch AI enrichment bot locally (ollama or grok)."""
+    job_id = _new_job(bot_name, count=count, model=model)
     cmd = [sys.executable, str(SCRIPTS / "ai_enrich_autonomous.py"),
            "--count", str(count), "--model", model,
            "--retry", str(retry)]
+    if model == "grok":
+        cmd += ["--grok-model", grok_model or os.environ.get("GROK_MODEL", "grok-4.7")]
+    elif model == "ollama":
+        cmd += ["--ollama-model", os.environ.get("OLLAMA_MODEL", "llama3.2:3b")]
     if queue:
         cmd += ["--queue", queue]
     if lenient:
@@ -347,31 +412,74 @@ def dispatch_enrich(count: int = 20, model: str = "ollama",
     return job_id
 
 
-def dispatch_significance(count: int = 50, model: str = "ollama") -> str:
-    """Dispatch significance backfill bot locally.
-    Waits for any running enrichment jobs first — Ollama can only handle
-    one LLM stream at a time; concurrent calls cause timeouts."""
-    job_id = _new_job("significance", count=count, model=model)
+def dispatch_enrich_grok(count: int = 12, lenient: bool = True) -> str:
+    return dispatch_enrich(
+        count=count, model="grok", lenient=lenient, bot_name="enrich-grok",
+        grok_model=os.environ.get("GROK_MODEL", "grok-4.7"),
+    )
 
-    def _run_after_enrich():
-        # Wait up to 1h for active enrichment to finish
+
+def dispatch_edges_extract(count: int = 120) -> str:
+    job_id = _new_job("edges-extract", count=count, model="none")
+    cmd = [sys.executable, str(SCRIPTS / "ai_edge_bot.py"),
+           "--extract-only", "--count", str(count)]
+    t = threading.Thread(target=_run_subprocess, args=(job_id, cmd), daemon=True)
+    t.start()
+    return job_id
+
+
+def dispatch_edges_grok(count: int = 20) -> str:
+    job_id = _new_job("edges-grok", count=count, model="grok")
+    cmd = [sys.executable, str(SCRIPTS / "ai_edge_bot.py"),
+           "--model", "grok",
+           "--grok-model", os.environ.get("GROK_MODEL", "grok-4.7"),
+           "--count", str(count)]
+    t = threading.Thread(target=_run_subprocess, args=(job_id, cmd), daemon=True)
+    t.start()
+    return job_id
+
+
+def dispatch_significance(count: int = 50, model: str = "ollama",
+                         bot_name: Optional[str] = None) -> str:
+    """Dispatch significance backfill. Ollama waits for local enrich; Grok waits for grok lane."""
+    bot_name = bot_name or ("significance-grok" if model == "grok" else "significance")
+    job_id = _new_job(bot_name, count=count, model=model)
+
+    def _run_after_peer():
         max_wait = 3600
         waited = 0
         while waited < max_wait:
+            busy = _grok_busy() if model == "grok" else _ollama_enrich_busy()
+            # Allow this job itself to be the only runner
+            if not busy:
+                break
+            # If only significance peers of other type, still ok — recheck names
             with _lock:
-                enrich_running = any(
-                    j["status"] == "running" and j["bot"] == "enrich"
-                    for j in _jobs.values()
-                )
-            if not enrich_running:
+                peers = [
+                    j for j in _jobs.values()
+                    if j["status"] == "running" and j["job_id"] != job_id
+                    and (
+                        (model == "grok" and j.get("bot") in (
+                            "enrich-grok", "enrich-grok-b", "significance-grok", "edges-grok"
+                        ))
+                        or (model != "grok" and j.get("bot") in (
+                            "enrich", "enrich-b", "enrich-c", "significance"
+                        ))
+                    )
+                ]
+            if not peers:
                 break
             time.sleep(15)
             waited += 15
         cmd = [sys.executable, str(SCRIPTS / "backfill_significance.py"),
                "--count", str(count), "--model", model]
+        if model == "grok":
+            cmd += ["--grok-model", os.environ.get("GROK_MODEL", "grok-4.7")]
+        elif model == "ollama":
+            cmd += ["--ollama-model", os.environ.get("OLLAMA_MODEL", "llama3.2:3b")]
         _run_subprocess(job_id, cmd)
 
-    t = threading.Thread(target=_run_after_enrich, daemon=True)
+    t = threading.Thread(target=_run_after_peer, daemon=True)
     t.start()
     return job_id
 
@@ -1038,6 +1146,7 @@ class BotHandler(BaseHTTPRequestHandler):
             self._send(200, {
                 "status": "ok",
                 "ollama": ollama,
+                "grok": grok_health(),
                 "activeJobs": sum(1 for j in _jobs.values() if j["status"] == "running"),
             })
 
@@ -1047,6 +1156,9 @@ class BotHandler(BaseHTTPRequestHandler):
         elif path == "/bots/models":
             info = ollama_health()
             self._send(200, {"models": info.get("models", []), "running": info.get("running", False)})
+
+        elif path == "/bots/roster":
+            self._send(200, {"bots": load_sot_roster(), "grok": grok_health()})
 
         elif path == "/ollama/ps":
             self._send(200, ollama_ps())
@@ -1070,29 +1182,66 @@ class BotHandler(BaseHTTPRequestHandler):
         path = self.path.split("?")[0]
         body = self._body()
 
-        if path == "/bots/enrich":
-            count = min(int(body.get("count", 20)), 100)   # cap at 100 — local only
-            # SAFETY: always "ollama" from the local server — never calls cloud APIs
-            model = "ollama"
-            queue = body.get("queue") or None   # e.g. "data/enrichment/queue_ollama_a.json"
+        if path in ("/bots/enrich", "/bots/enrich-b", "/bots/enrich-c"):
+            count = min(int(body.get("count", 24)), 100)
+            queue = body.get("queue") or None
             lenient = bool(body.get("lenient", True))
-            # Guard: do NOT start a second enrichment if one is already running.
-            # Two concurrent Ollama calls = connection refused errors.
-            with _lock:
-                enrich_running = any(j["status"] == "running" and j["bot"] == "enrich"
-                                     for j in _jobs.values())
-            if enrich_running:
-                self._send(409, {"error": "enrichment already running — only one Ollama call at a time",
-                                 "tip": "wait for current job to finish or call /bots/stop first"})
+            bot_name = path.rsplit("/", 1)[-1]
+            if _ollama_enrich_busy():
+                self._send(409, {"error": "Ollama lane busy — max 1 local LLM",
+                                 "tip": "wait or POST /bots/stop"})
                 return
-            job_id = dispatch_enrich(count=count, model=model, queue=queue, lenient=lenient)
-            self._send(202, {"jobId": job_id, "bot": "enrich", "count": count, "model": model, "queue": queue, "lenient": lenient})
+            job_id = dispatch_enrich(count=count, model="ollama", queue=queue,
+                                    lenient=lenient, bot_name=bot_name)
+            self._send(202, {"jobId": job_id, "bot": bot_name, "count": count, "model": "ollama"})
+
+        elif path == "/bots/enrich-grok":
+            count = min(int(body.get("count", 12)), 50)
+            if not grok_health()["configured"]:
+                self._send(503, {"error": "XAI_API_KEY / GROK_API_KEY not set",
+                                 "tip": "Add key to ~/.config/annals/env then restart bot-server"})
+                return
+            if _grok_busy():
+                self._send(409, {"error": "Grok lane busy — max 1 Grok generation"})
+                return
+            job_id = dispatch_enrich_grok(count=count)
+            self._send(202, {"jobId": job_id, "bot": "enrich-grok", "count": count, "model": "grok"})
 
         elif path == "/bots/significance":
-            count = min(int(body.get("count", 50)), 200)   # cap at 200 — local only
-            model = "ollama"
+            count = min(int(body.get("count", 16)), 200)
+            model = body.get("model") or "ollama"
+            if model not in ("ollama", "grok"):
+                model = "ollama"
+            if model == "grok" and not grok_health()["configured"]:
+                self._send(503, {"error": "XAI_API_KEY / GROK_API_KEY not set"})
+                return
             job_id = dispatch_significance(count=count, model=model)
-            self._send(202, {"jobId": job_id, "bot": "significance", "count": count, "model": model})
+            self._send(202, {"jobId": job_id, "bot": "significance" if model == "ollama" else "significance-grok",
+                             "count": count, "model": model})
+
+        elif path == "/bots/significance-grok":
+            count = min(int(body.get("count", 12)), 100)
+            if not grok_health()["configured"]:
+                self._send(503, {"error": "XAI_API_KEY / GROK_API_KEY not set"})
+                return
+            job_id = dispatch_significance(count=count, model="grok")
+            self._send(202, {"jobId": job_id, "bot": "significance-grok", "count": count, "model": "grok"})
+
+        elif path == "/bots/edges-extract":
+            count = min(int(body.get("count", 120)), 500)
+            job_id = dispatch_edges_extract(count=count)
+            self._send(202, {"jobId": job_id, "bot": "edges-extract", "count": count})
+
+        elif path == "/bots/edges-grok":
+            count = min(int(body.get("count", 20)), 80)
+            if not grok_health()["configured"]:
+                self._send(503, {"error": "XAI_API_KEY / GROK_API_KEY not set"})
+                return
+            if _grok_busy():
+                self._send(409, {"error": "Grok lane busy"})
+                return
+            job_id = dispatch_edges_grok(count=count)
+            self._send(202, {"jobId": job_id, "bot": "edges-grok", "count": count, "model": "grok"})
 
         elif path == "/bots/queue":
             job_id = dispatch_queue()
@@ -1138,15 +1287,18 @@ def main():
     # Restore historical job data from disk so 24h/7d/30d stats survive restarts
     _load_status()
 
-    # Load .env
-    env_file = REPO_ROOT / ".env"
-    if env_file.exists():
+    # Load shared + repo env (never print values)
+    for env_file in (Path.home() / ".config" / "annals" / "env", REPO_ROOT / ".env"):
+        if not env_file.exists():
+            continue
         for line in env_file.read_text().splitlines():
             line = line.strip()
             if not line or line.startswith("#") or "=" not in line:
                 continue
+            if line.startswith("export "):
+                line = line[len("export "):]
             k, _, v = line.partition("=")
-            k = k.strip(); v = v.strip()
+            k = k.strip(); v = v.strip().strip("'").strip('"')
             if k and k not in os.environ:
                 os.environ[k] = v
 
@@ -1159,7 +1311,9 @@ def main():
         print(f"  Models: {', '.join(ollama_info['models'])}")
     print(f"  Listening on http://localhost:{args.port}")
     print(f"  CORS: any http://localhost:* origin (works on any Vite port)")
-    print(f"  Endpoints: /health /bots/status /bots/enrich /bots/significance")
+    print(f"  Grok key: {'configured' if grok_health()['configured'] else 'MISSING (bots soft-skip)'}")
+    print(f"  Endpoints: /health /bots/status /bots/roster /bots/enrich{{,-b,-c,-grok}}")
+    print(f"             /bots/significance{{,-grok}} /bots/edges-extract /bots/edges-grok")
     print(f"             /bots/queue /bots/sync /bots/all /bots/stop")
     print(f"  Watchdog: AGGRESSIVE — 60s loop, zero idle, self-healing Ollama restart")
     print()
