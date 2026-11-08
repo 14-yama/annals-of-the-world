@@ -2516,7 +2516,8 @@
     "log": [
       "[orphaned] process died with previous bot restart"
     ],
-    "exitCode": null
+    "exitCode": null,
+    "acknowledged": true
   },
   "sync-1794108946": {
     "job_id": "sync-1794108946",
@@ -2779,7 +2780,8 @@
     "log": [
       "[orphaned] process died with previous bot restart"
     ],
-    "exitCode": null
+    "exitCode": null,
+    "acknowledged": true
   },
   "sync-1794109705": {
     "job_id": "sync-1794109705",
@@ -3831,7 +3833,8 @@
     "log": [
       "[orphaned] process died with previous bot restart"
     ],
-    "exitCode": null
+    "exitCode": null,
+    "acknowledged": true
   },
   "sync-1794126825": {
     "job_id": "sync-1794126825",
@@ -3872,17 +3875,22 @@
   "git-push-1794126960": {
     "job_id": "git-push-1794126960",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-11-08T08:36:00Z",
-    "finished": null,
+    "finished": "2026-11-08T08:36:44Z",
     "log": [
       "Pending files: 17 entities, 1 edges (18 total)",
-      "git add data/ scripts/ ..."
+      "git add data/ scripts/ ...",
+      "git commit -m \"chore(sync): auto-commit after --local sync (200 max entities)\"",
+      "[scaffold/docs 99b645923df] chore(sync): auto-commit after --local sync (200 max entities)\n 32 files changed, 1271 insertions(+), 586 deletions(-)",
+      "git push ...",
+      "fatal: unable to access 'https://github.com/14-yama/annals-of-the-world.git/': Could not resolve host: github.com",
+      "git push failed \u2014 check SSH/HTTPS credentials: fatal: unable to access 'https://github.com/14-yama/annals-of-the-world.git/': Could not resolve host: github.com\n"
     ],
-    "exitCode": null
+    "exitCode": 128
   },
   "git-push-1794126961": {
     "job_id": "git-push-1794126961",
@@ -3903,13 +3911,81 @@
   "enrich-1794126961": {
     "job_id": "enrich-1794126961",
     "bot": "enrich",
-    "status": "running",
+    "status": "error",
     "model": "ollama",
     "count": 20,
     "pid": 28021,
     "started": "2026-11-08T08:36:01Z",
-    "finished": null,
+    "finished": "2026-11-08T08:37:09Z",
     "log": [],
-    "exitCode": null
+    "exitCode": -15,
+    "acknowledged": true
+  },
+  "significance-1794127030": {
+    "job_id": "significance-1794127030",
+    "bot": "significance",
+    "status": "error",
+    "model": "ollama",
+    "count": 30,
+    "pid": 28752,
+    "started": "2026-11-08T08:37:10Z",
+    "finished": "2026-11-08T08:40:59Z",
+    "log": [
+      "[orphaned] process died with previous bot restart"
+    ],
+    "exitCode": null,
+    "acknowledged": true
+  },
+  "sync-1794127493": {
+    "job_id": "sync-1794127493",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 33057,
+    "started": "2026-11-08T08:44:53Z",
+    "finished": "2026-11-08T08:52:17Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  http://localhost:8080/v1",
+      "Database:  annals_world_db",
+      "Source:    /Users/jeltonmentore/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=2350/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "/bin/sh: rg: command not found",
+      "[diff] rg unavailable (Command failed: rg -l --glob '*.json' '_unsyncedEdits|_editLog' \"/Users/jeltonmentore/annals-of-the-world/data/appwrite-export/entities\"",
+      "/bin/sh: rg: command not found",
+      "); falling back to full walk",
+      "[diff] --local found 15 dirty files",
+      "[diff] 15 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 15,",
+      "  \"entitiesUpserted\": 15,",
+      "  \"auditRowsEmitted\": 105,",
+      "  \"writesPerformed\": 120,",
+      "  \"stoppedReason\": \"\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 99b64592"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1794127937": {
+    "job_id": "git-push-1794127937",
+    "bot": "git-push",
+    "status": "error",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-11-08T08:52:17Z",
+    "finished": "2026-11-08T08:52:23Z",
+    "log": [
+      "Pending files: 26 entities, 1 edges (27 total)",
+      "git add data/ scripts/ ...",
+      "git add failed: fatal: Unable to create '/Users/jeltonmentore/annals-of-the-world/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, or the lock file may be stale\n"
+    ],
+    "exitCode": 128
   }
 }

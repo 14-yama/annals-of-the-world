@@ -851,19 +851,43 @@ def dispatch_all(enrich_count: int = 20, sig_count: int = 50, auto_push: bool = 
 # This ensures bots are ALWAYS enriching — zero manual intervention required.
 
 _watchdog_running = False
-# AGGRESSIVE MODE: tight loop, zero idle tolerance.
-# The watchdog runs every 60s. Any time NO enrichment job is running, it
-# immediately dispatches a new one. There is no "idle window" — bots are
-# kept continuously busy because we have ~40,000 entities to enrich and there
-# is always work to do.
+# Watchdog keeps Ollama healthy + syncs dirty files. Enrich/significance dispatch
+# is DISABLED when discrete com.annals.enrich* LaunchAgents own the Ollama lane
+# (otherwise the HTTP server fights launchd workers and drops throughput).
 _WATCHDOG_INTERVAL_SECONDS = 60          # check every 60s (was 300)
-_WATCHDOG_ENRICH_COUNT = 20              # entities per autonomous batch (was 10)
-_WATCHDOG_SIG_COUNT = 30                 # significance batch size (was 15)
+_WATCHDOG_ENRICH_COUNT = 20              # only used if launchd enrich lane absent
+_WATCHDOG_SIG_COUNT = 30                 # only used if launchd enrich lane absent
+_WATCHDOG_DISPATCH_ENRICH = os.environ.get("ANNALS_WATCHDOG_DISPATCH_ENRICH", "auto")
 # After this many consecutive failures from the same bot, attempt Ollama restart
 _FAILURE_RESTART_THRESHOLD = 3
 # Track last seen-failure timestamps so we don't restart in a tight loop
 _LAST_OLLAMA_RESTART_AT = 0.0
 _OLLAMA_RESTART_COOLDOWN = 600  # 10 min between restart attempts
+
+
+def _launchd_enrich_lane_active() -> bool:
+    """True when com.annals.enrich KeepAlive agents are loaded (preferred path)."""
+    try:
+        uid = os.getuid()
+        printed = subprocess.check_output(
+            ["launchctl", "print", f"gui/{uid}/com.annals.enrich"],
+            text=True,
+            stderr=subprocess.DEVNULL,
+            timeout=5,
+        )
+        return "state = running" in printed or "state = spawn scheduled" in printed
+    except Exception:
+        return False
+
+
+def _watchdog_should_dispatch_enrich() -> bool:
+    mode = (_WATCHDOG_DISPATCH_ENRICH or "auto").strip().lower()
+    if mode in ("0", "false", "no", "off"):
+        return False
+    if mode in ("1", "true", "yes", "on"):
+        return True
+    # auto: defer to LaunchAgents when present
+    return not _launchd_enrich_lane_active()
 
 
 def _recent_enrich_failures(window_seconds: int = 900) -> int:
@@ -889,16 +913,41 @@ def _recent_enrich_failures(window_seconds: int = 900) -> int:
 
 
 def _restart_ollama() -> bool:
-    """Kill any stale Ollama process and start a fresh one — NO sudo, NO systemd.
-    Ollama runs as the current user via ~/.local/bin/ollama serve.
+    """Restart Ollama via LaunchAgent when present (preserves OLLAMA_NUM_PARALLEL).
+
+    Falls back to a bare user `ollama serve` only if sh.brew.ollama is unavailable.
     Returns True if Ollama responds within 15 s of startup."""
     global _LAST_OLLAMA_RESTART_AT
     if time.time() - _LAST_OLLAMA_RESTART_AT < _OLLAMA_RESTART_COOLDOWN:
         return False
     _LAST_OLLAMA_RESTART_AT = time.time()
-    print("[watchdog] Restarting Ollama (no sudo — direct user process)...")
+    uid = os.getuid()
+    label = "sh.brew.ollama"
+    target = f"gui/{uid}/{label}"
+    plist = Path.home() / "Library" / "LaunchAgents" / f"{label}.plist"
 
-    # 1. Kill any existing ollama serve process (same user, no sudo needed)
+    # Prefer LaunchAgent kickstart so OLLAMA_NUM_PARALLEL / MAX_LOADED_MODELS stick.
+    if plist.exists():
+        print(f"[watchdog] Restarting Ollama via launchctl kickstart {label}...")
+        try:
+            subprocess.run(["launchctl", "kickstart", "-k", target], capture_output=True, timeout=15)
+        except Exception as e:
+            print(f"[watchdog] launchctl kickstart failed: {e}")
+        for _ in range(15):
+            time.sleep(1)
+            try:
+                r = subprocess.run(
+                    ["curl", "-sf", "--max-time", "2", "http://localhost:11434/api/tags"],
+                    capture_output=True, timeout=5,
+                )
+                if r.returncode == 0:
+                    print(f"[watchdog] Ollama restarted via launchctl {label}")
+                    return True
+            except Exception:
+                pass
+        print("[watchdog] LaunchAgent Ollama did not respond within 15 s — trying bare serve")
+
+    print("[watchdog] Restarting Ollama (bare user process fallback)...")
     for kill_cmd in (
         ["pkill", "-u", os.environ.get("USER", ""), "-f", "ollama serve"],
         ["pkill", "-f", "ollama serve"],
@@ -909,9 +958,9 @@ def _restart_ollama() -> bool:
             pass
     time.sleep(2)
 
-    # 2. Locate the ollama binary — check known paths before falling back to PATH
     ollama_bin = None
     for candidate in (
+        "/opt/homebrew/opt/ollama/bin/ollama",
         os.path.expanduser("~/.local/bin/ollama"),
         "/usr/local/bin/ollama",
         "/usr/bin/ollama",
@@ -920,29 +969,29 @@ def _restart_ollama() -> bool:
             ollama_bin = candidate
             break
     if not ollama_bin:
-        # Last resort: ask the shell
         r = subprocess.run(["which", "ollama"], capture_output=True, text=True, timeout=5)
         if r.returncode == 0 and r.stdout.strip():
             ollama_bin = r.stdout.strip()
-
     if not ollama_bin:
         print("[watchdog] ollama binary not found — cannot restart")
         return False
 
-    # 3. Start Ollama as a background user process (no sudo, no systemd)
     try:
         log_fh = open("/tmp/ollama.log", "a")
+        env = os.environ.copy()
+        env.setdefault("OLLAMA_NUM_PARALLEL", "2")
+        env.setdefault("OLLAMA_MAX_LOADED_MODELS", "2")
         subprocess.Popen(
             [ollama_bin, "serve"],
             stdout=log_fh, stderr=log_fh,
             close_fds=True,
-            start_new_session=True,   # detach from our process group
+            start_new_session=True,
+            env=env,
         )
     except Exception as e:
         print(f"[watchdog] Failed to start ollama serve: {e}")
         return False
 
-    # 4. Wait up to 15 s for Ollama to respond
     for _ in range(15):
         time.sleep(1)
         try:
@@ -996,8 +1045,12 @@ def _watchdog_loop(interval_seconds: int = _WATCHDOG_INTERVAL_SECONDS):
     if orphaned:
         print(f"[watchdog] Cleaned {orphaned} orphaned jobs from previous bot process")
 
-    print(f"[watchdog] AGGRESSIVE MODE — interval={interval_seconds}s | "
-          f"batch={_WATCHDOG_ENRICH_COUNT} | zero idle tolerance")
+    dispatch_enrich_ok = _watchdog_should_dispatch_enrich()
+    print(
+        f"[watchdog] interval={interval_seconds}s | "
+        f"dispatch_enrich={'ON' if dispatch_enrich_ok else 'OFF (launchd owns ollama lane)'} | "
+        f"batch={_WATCHDOG_ENRICH_COUNT}"
+    )
     consecutive_no_ollama = 0
 
     while _watchdog_running:
@@ -1028,13 +1081,7 @@ def _watchdog_loop(interval_seconds: int = _WATCHDOG_INTERVAL_SECONDS):
                                 j["acknowledged"] = True
                 continue  # next iteration will dispatch fresh work
 
-            # ── 3. Continuous enrichment: dispatch immediately if idle ───────
-            with _lock:
-                enrich_busy = any(j["status"] == "running" and j["bot"] in ("enrich", "significance")
-                                  for j in _jobs.values())
-            if enrich_busy:
-                continue  # already working — nothing to do
-
+            # ── 3. Ollama health (always) ────────────────────────────────────
             ollama_ok = ollama_health().get("running", False)
             if not ollama_ok:
                 consecutive_no_ollama += 1
@@ -1045,11 +1092,19 @@ def _watchdog_loop(interval_seconds: int = _WATCHDOG_INTERVAL_SECONDS):
                 continue
             consecutive_no_ollama = 0
 
-            # Dispatch a new enrichment batch — keep bots busy!
+            # ── 4. Enrich dispatch — only when LaunchAgents are NOT the owners ─
+            if not _watchdog_should_dispatch_enrich():
+                continue
+
+            with _lock:
+                enrich_busy = any(j["status"] == "running" and j["bot"] in ("enrich", "significance")
+                                  for j in _jobs.values())
+            if enrich_busy:
+                continue  # already working — nothing to do
+
             print(f"[watchdog] No enrichment running — dispatching batch of {_WATCHDOG_ENRICH_COUNT}")
             enrich_jid = dispatch_enrich(count=_WATCHDOG_ENRICH_COUNT, model="ollama")
             _wait_for_job(enrich_jid)
-            # Chain a significance backfill on what was just enriched
             sig_jid = dispatch_significance(count=_WATCHDOG_SIG_COUNT, model="ollama")
             _wait_for_job(sig_jid)
 
@@ -1315,7 +1370,10 @@ def main():
     print(f"  Endpoints: /health /bots/status /bots/roster /bots/enrich{{,-b,-c,-grok}}")
     print(f"             /bots/significance{{,-grok}} /bots/edges-extract /bots/edges-grok")
     print(f"             /bots/queue /bots/sync /bots/all /bots/stop")
-    print(f"  Watchdog: AGGRESSIVE — 60s loop, zero idle, self-healing Ollama restart")
+    print(
+        "  Watchdog: health+sync; enrich dispatch "
+        f"{'ON' if _watchdog_should_dispatch_enrich() else 'OFF (launchd owns lane)'}"
+    )
     print()
 
     # Start autonomous watchdog — checks for dirty enrichments every 5 minutes
