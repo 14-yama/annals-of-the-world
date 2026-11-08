@@ -1,49 +1,57 @@
 {
-  "updatedAt": "2026-11-08T10:19:40.789Z",
+  "updatedAt": "2026-11-08T10:19:54.931Z",
   "source": "local-appwrite",
   "endpoint": "http://localhost:8080/v1",
   "project": "annals-local",
   "database": "annals_world_db",
   "total": 392033,
   "byLabel": {
-    "Idea": 20397,
-    "EventWindow": 232,
-    "Text": 19,
-    "Place": 2,
-    "Movement": 11,
+    "Idea": 20400,
+    "EventWindow": 17476,
+    "Text": 18214,
+    "Place": 17282,
+    "Movement": 5369,
     "Person": 273806,
-    "Institution": 5533
+    "Institution": 34272,
+    "Evidence": 4196,
+    "Timeframe": 1018
   },
   "byEra": {
-    "Modern": 128842,
-    "Medieval": 10650,
-    "Contemporary": 110422,
-    "Classical": 22937,
-    "Early Modern": 27113,
-    "Prehistoric": 36
+    "Modern": 148360,
+    "Medieval": 17628,
+    "Contemporary": 132180,
+    "Classical": 59197,
+    "Early Modern": 33946,
+    "Prehistoric": 722
   },
   "byContinent": {
-    "Europe": 97152,
-    "Americas": 73833,
-    "Global": 94461,
-    "Africa": 8277,
-    "Asia": 22488,
-    "Oceania": 3764,
-    "North America": 3,
-    "Cross-Regional": 17,
-    "Unknown": 5
+    "Europe": 131374,
+    "Americas": 85919,
+    "Global": 115995,
+    "Africa": 13565,
+    "Asia": 40276,
+    "Oceania": 4733,
+    "North America": 4,
+    "Cross-Regional": 157,
+    "Unknown": 8,
+    "Antarctica": 1,
+    "South America": 1
   },
   "byClass": {
     "0": 2302,
     "1": 18109,
     "2": 273806,
-    "3": 5533,
-    "5": 232,
-    "7": 18
+    "3": 34270,
+    "4": 17235,
+    "5": 17523,
+    "6": 5359,
+    "7": 18215,
+    "8": 4196,
+    "9": 1018
   },
-  "computeTimeMs": 119038,
-  "note": "facet pass in progress (resumable)",
-  "incomplete": true,
+  "computeTimeMs": 133180,
+  "note": "paged entity count + facets (ignores API total cap)",
+  "incomplete": false,
   "seedCursor": {
     "scanned": 392086,
     "created": 383371,
@@ -52,9 +60,5 @@
     "classDir": "963-Class-963",
     "file": "963third-industrial-revolution.json",
     "lastRunAt": "2026-11-08T03:28:39.834Z"
-  },
-  "facetProgress": {
-    "totalSeen": 300000,
-    "knownTotal": 392033
   }
 }
