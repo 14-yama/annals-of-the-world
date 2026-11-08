@@ -1,130 +1,203 @@
 {
-  "timestamp": "2026-11-08T04:02:04Z",
+  "timestamp": "2026-11-08T05:21:02Z",
   "model": "ollama",
-  "count_requested": 20,
-  "enriched": 20,
-  "failed": 0,
+  "count_requested": 32,
+  "enriched": 29,
+  "failed": 3,
   "dry_run": false,
   "entities": [
     {
-      "slug": "don-quixote",
+      "slug": "juliana-falconieri",
       "status": "enriched",
-      "old_len": 725,
-      "new_len": 1586
+      "old_len": 722,
+      "new_len": 1404
     },
     {
-      "slug": "ansovinus",
+      "slug": "yoga-sutras-of-patanjali",
       "status": "enriched",
-      "old_len": 715,
-      "new_len": 1671
+      "old_len": 110,
+      "new_len": 1994
     },
     {
-      "slug": "clement-iii",
+      "slug": "pieter-nanninck",
       "status": "enriched",
-      "old_len": 203,
-      "new_len": 992
+      "old_len": 309,
+      "new_len": 1227
     },
     {
-      "slug": "benedict-ix",
+      "slug": "evagrius-of-antioch",
       "status": "enriched",
-      "old_len": 203,
-      "new_len": 1701
+      "old_len": 205,
+      "new_len": 1201
     },
     {
-      "slug": "epiphanius-of-pavia",
+      "slug": "quintus-fabius-vibulanus-ambustus",
       "status": "enriched",
-      "old_len": 203,
-      "new_len": 1482
+      "old_len": 111,
+      "new_len": 1329
     },
     {
-      "slug": "boniface-vi",
+      "slug": "titus-geganius-macerinus",
       "status": "enriched",
-      "old_len": 203,
-      "new_len": 1467
+      "old_len": 111,
+      "new_len": 752
     },
     {
-      "slug": "trechn",
+      "slug": "mac-gr\u00e9ine",
       "status": "enriched",
-      "old_len": 123,
-      "new_len": 886
+      "old_len": 191,
+      "new_len": 797
     },
     {
-      "slug": "benedict-vi",
+      "slug": "alfonso-iv-of-le\u00f3n",
       "status": "enriched",
-      "old_len": 203,
-      "new_len": 866
+      "old_len": 111,
+      "new_len": 1391
     },
     {
-      "slug": "boniface-ii",
+      "slug": "vologases-i-of-parthia",
       "status": "enriched",
-      "old_len": 203,
-      "new_len": 1060
+      "old_len": 191,
+      "new_len": 1338
     },
     {
-      "slug": "lian-po",
-      "status": "enriched",
-      "old_len": 387,
-      "new_len": 1939
+      "slug": "jan-latalski",
+      "status": "failed",
+      "reason": "Unterminated string starting at: line 2 column 12 (char 13)",
+      "poison_count": 1
     },
     {
-      "slug": "sigisvultus",
+      "slug": "imyremeshaw",
       "status": "enriched",
-      "old_len": 67,
-      "new_len": 875
+      "old_len": 191,
+      "new_len": 1181
     },
     {
-      "slug": "hesychius-of-cazorla",
+      "slug": "wallada-bint-al-mustakfi",
       "status": "enriched",
-      "old_len": 67,
-      "new_len": 944
+      "old_len": 111,
+      "new_len": 1689
     },
     {
-      "slug": "prince-dimitrie-ghica",
+      "slug": "nibelungenlied",
       "status": "enriched",
-      "old_len": 147,
-      "new_len": 1091
+      "old_len": 281,
+      "new_len": 1584
     },
     {
-      "slug": "marcus-livius-denter",
+      "slug": "liborius-of-le-mans",
       "status": "enriched",
-      "old_len": 109,
-      "new_len": 1064
+      "old_len": 206,
+      "new_len": 940
     },
     {
-      "slug": "cin\u00e1ed-mac-\u00edrgalaig",
+      "slug": "swedish",
       "status": "enriched",
-      "old_len": 109,
-      "new_len": 1152
+      "old_len": 112,
+      "new_len": 1705
     },
     {
-      "slug": "cined-mac-rgalaig",
-      "status": "enriched",
-      "old_len": 109,
-      "new_len": 925
+      "slug": "king-xiao-of-zhou",
+      "status": "failed",
+      "reason": "insufficient subjects (2, need >= 3)",
+      "poison_count": 1
     },
     {
-      "slug": "ailill-molt",
+      "slug": "sberht-of-essex",
       "status": "enriched",
-      "old_len": 189,
-      "new_len": 1829
+      "old_len": 192,
+      "new_len": 844
     },
     {
-      "slug": "luethai",
+      "slug": "ibak-khan",
       "status": "enriched",
-      "old_len": 109,
-      "new_len": 1178
+      "old_len": 192,
+      "new_len": 1439
     },
     {
-      "slug": "al-hakam-i",
+      "slug": "mamun-ii",
       "status": "enriched",
-      "old_len": 109,
-      "new_len": 1239
+      "old_len": 192,
+      "new_len": 1920
     },
     {
-      "slug": "ahaz",
+      "slug": "refil-bj\u00f6rnsson",
       "status": "enriched",
-      "old_len": 189,
-      "new_len": 1199
+      "old_len": 192,
+      "new_len": 1750
+    },
+    {
+      "slug": "najib-ad-din-samarqandi",
+      "status": "enriched",
+      "old_len": 112,
+      "new_len": 1184
+    },
+    {
+      "slug": "diego-hurtado-de-mendoza-y-quiones",
+      "status": "enriched",
+      "old_len": 112,
+      "new_len": 1304
+    },
+    {
+      "slug": "arun\u0101sva",
+      "status": "enriched",
+      "old_len": 192,
+      "new_len": 1802
+    },
+    {
+      "slug": "piye",
+      "status": "enriched",
+      "old_len": 192,
+      "new_len": 1078
+    },
+    {
+      "slug": "visual-arts",
+      "status": "enriched",
+      "old_len": 71,
+      "new_len": 1854
+    },
+    {
+      "slug": "the-lord-of-the-rings",
+      "status": "enriched",
+      "old_len": 71,
+      "new_len": 1622
+    },
+    {
+      "slug": "yamnaya-culture",
+      "status": "enriched",
+      "old_len": 150,
+      "new_len": 1256
+    },
+    {
+      "slug": "alonso-snchez",
+      "status": "enriched",
+      "old_len": 127,
+      "new_len": 902
+    },
+    {
+      "slug": "bertrand-de-saint-martin",
+      "status": "failed",
+      "reason": "Unterminated string starting at: line 93 column 1 (char 16362)",
+      "poison_count": 1
+    },
+    {
+      "slug": "matthus-schiner",
+      "status": "enriched",
+      "old_len": 127,
+      "new_len": 1749
+    },
+    {
+      "slug": "zhang-ji",
+      "status": "enriched",
+      "old_len": 113,
+      "new_len": 744
+    },
+    {
+      "slug": "jehoram",
+      "status": "enriched",
+      "old_len": 193,
+      "new_len": 1211
     }
-  ]
+  ],
+  "shard": "0/2"
 }
