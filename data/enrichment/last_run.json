@@ -1,203 +1,203 @@
 {
-  "timestamp": "2026-11-08T08:10:47Z",
+  "timestamp": "2026-11-08T08:22:08Z",
   "model": "ollama",
   "count_requested": 32,
-  "enriched": 29,
-  "failed": 3,
+  "enriched": 25,
+  "failed": 7,
   "dry_run": false,
   "entities": [
     {
-      "slug": "second-epistle-to-the-corinthians",
+      "slug": "harald-grenske",
       "status": "enriched",
-      "old_len": 618,
-      "new_len": 1755
+      "old_len": 54,
+      "new_len": 1048
     },
     {
-      "slug": "notker-of-li\u00e8ge",
+      "slug": "dream-of-the-red-chamber",
       "status": "enriched",
-      "old_len": 119,
-      "new_len": 1224
+      "old_len": 82,
+      "new_len": 956
     },
     {
-      "slug": "thrasaric",
-      "status": "enriched",
-      "old_len": 201,
-      "new_len": 741
-    },
-    {
-      "slug": "fran\u00e7oise-damboise",
-      "status": "enriched",
-      "old_len": 55,
-      "new_len": 738
-    },
-    {
-      "slug": "wartislaw-vii-duke-of-pomerania",
+      "slug": "hydrology",
       "status": "enriched",
       "old_len": 83,
-      "new_len": 1107
+      "new_len": 1522
     },
     {
-      "slug": "conall-c\u00f3el",
+      "slug": "parsman-v-of-iberia",
+      "status": "enriched",
+      "old_len": 83,
+      "new_len": 1839
+    },
+    {
+      "slug": "conall-cel",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 2)",
+      "poison_count": 1
+    },
+    {
+      "slug": "marianus-ii-of-torres",
+      "status": "enriched",
+      "old_len": 123,
+      "new_len": 1205
+    },
+    {
+      "slug": "george-herbert",
+      "status": "enriched",
+      "old_len": 722,
+      "new_len": 467
+    },
+    {
+      "slug": "alessandro-mattei",
+      "status": "enriched",
+      "old_len": 164,
+      "new_len": 1088
+    },
+    {
+      "slug": "neferkare-ninth-dynasty",
       "status": "enriched",
       "old_len": 203,
-      "new_len": 992
+      "new_len": 1446
     },
     {
-      "slug": "dondup-tseten-dorje",
-      "status": "enriched",
-      "old_len": 203,
-      "new_len": 1320
-    },
-    {
-      "slug": "andouin-aubert",
-      "status": "enriched",
-      "old_len": 56,
-      "new_len": 920
-    },
-    {
-      "slug": "alexander-iv",
-      "status": "enriched",
-      "old_len": 123,
-      "new_len": 1118
-    },
-    {
-      "slug": "pietro-lippomano",
-      "status": "enriched",
-      "old_len": 123,
-      "new_len": 1006
-    },
-    {
-      "slug": "ambrose",
-      "status": "enriched",
-      "old_len": 123,
-      "new_len": 1297
-    },
-    {
-      "slug": "sextus-nonius-quinctilianus",
-      "status": "enriched",
-      "old_len": 84,
-      "new_len": 973
-    },
-    {
-      "slug": "hortensius",
-      "status": "enriched",
-      "old_len": 124,
-      "new_len": 1037
-    },
-    {
-      "slug": "marcus-pompeius-silvanus-staberius-flavianus",
-      "status": "enriched",
-      "old_len": 124,
-      "new_len": 895
-    },
-    {
-      "slug": "chlothar-iii",
-      "status": "enriched",
-      "old_len": 124,
-      "new_len": 1563
-    },
-    {
-      "slug": "martin-i-of-sicily",
-      "status": "enriched",
-      "old_len": 124,
-      "new_len": 1249
-    },
-    {
-      "slug": "menua",
-      "status": "enriched",
-      "old_len": 204,
-      "new_len": 939
-    },
-    {
-      "slug": "conaire-cem",
-      "status": "enriched",
-      "old_len": 204,
-      "new_len": 1840
-    },
-    {
-      "slug": "themison-of-laodicea",
-      "status": "enriched",
-      "old_len": 124,
-      "new_len": 1153
-    },
-    {
-      "slug": "conrad-of-piacenza",
-      "status": "enriched",
-      "old_len": 124,
-      "new_len": 1358
-    },
-    {
-      "slug": "calepodius",
-      "status": "enriched",
-      "old_len": 204,
-      "new_len": 1102
-    },
-    {
-      "slug": "clement-ii",
+      "slug": "zacharias-rhetor",
       "status": "failed",
-      "reason": "Unterminated string starting at: line 4 column 1 (char 2268)",
+      "reason": "HTTP Error 500: Internal Server Error",
       "poison_count": 1
     },
     {
-      "slug": "peter-of-blois",
-      "status": "enriched",
-      "old_len": 124,
-      "new_len": 821
-    },
-    {
-      "slug": "croesus",
+      "slug": "finnian-of-moville",
       "status": "failed",
-      "reason": "Unterminated string starting at: line 2 column 12 (char 13)",
+      "reason": "Unterminated string starting at: line 1 column 14981 (char 14980)",
       "poison_count": 1
     },
     {
-      "slug": "ali-al-qari",
-      "status": "enriched",
-      "old_len": 124,
-      "new_len": 1569
-    },
-    {
-      "slug": "po-saktiray-daputih",
-      "status": "enriched",
-      "old_len": 217,
-      "new_len": 1327
-    },
-    {
-      "slug": "hans-brask",
-      "status": "enriched",
-      "old_len": 57,
-      "new_len": 1418
-    },
-    {
-      "slug": "konstantinos-dalassenos",
-      "status": "enriched",
-      "old_len": 405,
-      "new_len": 1387
-    },
-    {
-      "slug": "surrealism",
-      "status": "enriched",
-      "old_len": 85,
-      "new_len": 901
-    },
-    {
-      "slug": "rhys-gryg",
-      "status": "enriched",
-      "old_len": 125,
-      "new_len": 1322
-    },
-    {
-      "slug": "ankh-ef-en-khonsu-i",
-      "status": "enriched",
-      "old_len": 205,
-      "new_len": 1360
-    },
-    {
-      "slug": "archelaus-i-of-macedon",
+      "slug": "future",
       "status": "failed",
-      "reason": "Unterminated string starting at: line 4 column 1 (char 4752)",
+      "reason": "insufficient causes (0, need >= 1)",
       "poison_count": 1
+    },
+    {
+      "slug": "book-of-revelation",
+      "status": "enriched",
+      "old_len": 402,
+      "new_len": 1927
+    },
+    {
+      "slug": "gnaeus-genucius-augurinus",
+      "status": "enriched",
+      "old_len": 655,
+      "new_len": 1949
+    },
+    {
+      "slug": "julian-of-le-mans",
+      "status": "failed",
+      "reason": "Unterminated string starting at: line 1 column 13 (char 12)",
+      "poison_count": 1
+    },
+    {
+      "slug": "fulcran",
+      "status": "failed",
+      "reason": "insufficient relationships (1, need >= 2)",
+      "poison_count": 1
+    },
+    {
+      "slug": "manuel-fernando-zurita",
+      "status": "enriched",
+      "old_len": 58,
+      "new_len": 1132
+    },
+    {
+      "slug": "haf\u0131z-mehmed-pa\u015fa",
+      "status": "enriched",
+      "old_len": 86,
+      "new_len": 1004
+    },
+    {
+      "slug": "diarmait-ua-briain",
+      "status": "enriched",
+      "old_len": 86,
+      "new_len": 1738
+    },
+    {
+      "slug": "will-steger",
+      "status": "enriched",
+      "old_len": 643,
+      "new_len": 1714
+    },
+    {
+      "slug": "fu-qian",
+      "status": "enriched",
+      "old_len": 126,
+      "new_len": 767
+    },
+    {
+      "slug": "j\u00f3zef-sawa-cali\u0144ski",
+      "status": "enriched",
+      "old_len": 168,
+      "new_len": 1779
+    },
+    {
+      "slug": "dorimachus",
+      "status": "enriched",
+      "old_len": 126,
+      "new_len": 1301
+    },
+    {
+      "slug": "saurmag-i-of-iberia",
+      "status": "enriched",
+      "old_len": 206,
+      "new_len": 1069
+    },
+    {
+      "slug": "kashtiliash-ii",
+      "status": "enriched",
+      "old_len": 206,
+      "new_len": 1189
+    },
+    {
+      "slug": "sline-mac-dela",
+      "status": "enriched",
+      "old_len": 206,
+      "new_len": 994
+    },
+    {
+      "slug": "nebfaure",
+      "status": "enriched",
+      "old_len": 206,
+      "new_len": 1163
+    },
+    {
+      "slug": "kh\u00e9ty-iv",
+      "status": "enriched",
+      "old_len": 206,
+      "new_len": 1555
+    },
+    {
+      "slug": "athanasius",
+      "status": "enriched",
+      "old_len": 206,
+      "new_len": 1510
+    },
+    {
+      "slug": "obez",
+      "status": "failed",
+      "reason": "HTTP Error 500: Internal Server Error",
+      "poison_count": 1
+    },
+    {
+      "slug": "achilleus",
+      "status": "enriched",
+      "old_len": 87,
+      "new_len": 843
+    },
+    {
+      "slug": "leo-i-prince-of-armenia",
+      "status": "enriched",
+      "old_len": 87,
+      "new_len": 1047
     }
   ],
-  "shard": "0/2"
+  "shard": "1/2"
 }
