@@ -1,394 +1,130 @@
 {
-  "timestamp": "2026-11-08T01:38:49Z",
+  "timestamp": "2026-11-08T02:25:51Z",
   "model": "ollama",
-  "count_requested": 64,
-  "enriched": 54,
-  "failed": 10,
+  "count_requested": 20,
+  "enriched": 16,
+  "failed": 4,
   "dry_run": false,
   "entities": [
     {
-      "slug": "theagenes-of-rhegium",
-      "status": "enriched",
-      "old_len": 638,
-      "new_len": 1313
-    },
-    {
-      "slug": "murat-beg-tardi",
-      "status": "enriched",
-      "old_len": 60,
-      "new_len": 1178
-    },
-    {
-      "slug": "john-iv-of-saxe-lauenburg",
-      "status": "enriched",
-      "old_len": 60,
-      "new_len": 902
-    },
-    {
-      "slug": "reginald-pecock",
-      "status": "enriched",
-      "old_len": 786,
-      "new_len": 1448
-    },
-    {
-      "slug": "mesh-ki-ang-gasher",
-      "status": "enriched",
-      "old_len": 501,
-      "new_len": 695
-    },
-    {
-      "slug": "papulus",
-      "status": "enriched",
-      "old_len": 183,
-      "new_len": 932
-    },
-    {
-      "slug": "john-ix",
-      "status": "enriched",
-      "old_len": 103,
-      "new_len": 1704
-    },
-    {
-      "slug": "sakir-har",
-      "status": "enriched",
-      "old_len": 183,
-      "new_len": 1101
-    },
-    {
-      "slug": "adi-ibn-zayd",
-      "status": "enriched",
-      "old_len": 103,
-      "new_len": 1229
-    },
-    {
-      "slug": "gobryas",
-      "status": "enriched",
-      "old_len": 61,
-      "new_len": 1191
-    },
-    {
-      "slug": "hierius",
-      "status": "enriched",
-      "old_len": 61,
-      "new_len": 1164
-    },
-    {
-      "slug": "hip-hop",
-      "status": "enriched",
-      "old_len": 61,
-      "new_len": 1732
-    },
-    {
-      "slug": "rhetoric",
-      "status": "enriched",
-      "old_len": 61,
-      "new_len": 1753
-    },
-    {
-      "slug": "richard-of-saint-victor",
-      "status": "enriched",
-      "old_len": 301,
-      "new_len": 1383
-    },
-    {
-      "slug": "idomeneus-of-lampsacus",
-      "status": "enriched",
-      "old_len": 61,
-      "new_len": 798
-    },
-    {
-      "slug": "emilian-of-cogolla",
+      "slug": "stabat-mater",
       "status": "failed",
-      "reason": "insufficient causes (0, need >= 1)",
+      "reason": "Unterminated string starting at: line 2 column 12 (char 13)",
       "poison_count": 1
     },
     {
-      "slug": "cleopatra-selene-ii",
-      "status": "failed",
-      "reason": "Unterminated string starting at: line 200 column 12 (char 10871)",
-      "poison_count": 1
-    },
-    {
-      "slug": "bademus",
-      "status": "enriched",
-      "old_len": 199,
-      "new_len": 788
-    },
-    {
-      "slug": "caius",
-      "status": "enriched",
-      "old_len": 199,
-      "new_len": 1812
-    },
-    {
-      "slug": "eunomius-of-cyzicus",
-      "status": "enriched",
-      "old_len": 199,
-      "new_len": 1140
-    },
-    {
-      "slug": "felix-iii",
-      "status": "enriched",
-      "old_len": 199,
-      "new_len": 1634
-    },
-    {
-      "slug": "lucius-aemilius-mamercus",
-      "status": "enriched",
-      "old_len": 104,
-      "new_len": 1534
-    },
-    {
-      "slug": "lucius-calpurnius-bibulus",
-      "status": "enriched",
-      "old_len": 104,
-      "new_len": 643
-    },
-    {
-      "slug": "artabazanes",
-      "status": "enriched",
-      "old_len": 184,
-      "new_len": 732
-    },
-    {
-      "slug": "ibi",
-      "status": "enriched",
-      "old_len": 184,
-      "new_len": 1008
-    },
-    {
-      "slug": "federal-center-of-technological-education-celso-suckow-da-fonseca",
-      "status": "enriched",
-      "old_len": 104,
-      "new_len": 2124
-    },
-    {
-      "slug": "jehovahs-witnesses",
-      "status": "enriched",
-      "old_len": 104,
-      "new_len": 1155
-    },
-    {
-      "slug": "monulph",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 2)",
-      "poison_count": 1
-    },
-    {
-      "slug": "juan-de-borja-lanzol-de-roman\u00ed-el-menor",
-      "status": "failed",
-      "reason": "summary too long (6448c, max 3000)",
-      "poison_count": 1
-    },
-    {
-      "slug": "juan-de-borja-lanzol-de-roman-el-menor",
-      "status": "enriched",
-      "old_len": 104,
-      "new_len": 1164
-    },
-    {
-      "slug": "kagemni",
-      "status": "enriched",
-      "old_len": 184,
-      "new_len": 1217
-    },
-    {
-      "slug": "peder-m\u00e5nsson",
-      "status": "enriched",
-      "old_len": 104,
-      "new_len": 1268
-    },
-    {
-      "slug": "peder-mnsson",
-      "status": "failed",
-      "reason": "Unterminated string starting at: line 1 column 15609 (char 15608)",
-      "poison_count": 1
-    },
-    {
-      "slug": "\u00e1ed-dub-mac-colm\u00e1in",
-      "status": "enriched",
-      "old_len": 184,
-      "new_len": 1890
-    },
-    {
-      "slug": "ed-dub-mac-colmin",
-      "status": "failed",
-      "reason": "insufficient causes (0, need >= 1)",
-      "poison_count": 1
-    },
-    {
-      "slug": "ottaviano-di-paoli",
-      "status": "enriched",
-      "old_len": 104,
-      "new_len": 1716
-    },
-    {
-      "slug": "seti-ii",
-      "status": "enriched",
-      "old_len": 612,
-      "new_len": 1650
-    },
-    {
-      "slug": "lorenzo-campeggio",
-      "status": "enriched",
-      "old_len": 104,
-      "new_len": 1243
-    },
-    {
-      "slug": "miko\u0142aj-kamieniecki",
-      "status": "enriched",
-      "old_len": 104,
-      "new_len": 618
-    },
-    {
-      "slug": "mikoaj-kamieniecki",
-      "status": "enriched",
-      "old_len": 104,
-      "new_len": 1781
-    },
-    {
-      "slug": "adrastus-of-aphrodisias",
-      "status": "enriched",
-      "old_len": 104,
-      "new_len": 1442
-    },
-    {
-      "slug": "argonautica",
-      "status": "failed",
-      "reason": "insufficient relationships (1, need >= 2)",
-      "poison_count": 1
-    },
-    {
-      "slug": "mani",
-      "status": "failed",
-      "reason": "Unterminated string starting at: line 1 column 15294 (char 15293)",
-      "poison_count": 1
-    },
-    {
-      "slug": "the-pillow-book",
-      "status": "enriched",
-      "old_len": 104,
-      "new_len": 600
-    },
-    {
-      "slug": "eardwulf-of-kent",
-      "status": "enriched",
-      "old_len": 62,
-      "new_len": 1241
-    },
-    {
-      "slug": "aelius-donatus",
-      "status": "enriched",
-      "old_len": 62,
-      "new_len": 1232
-    },
-    {
-      "slug": "shah-jalal",
-      "status": "enriched",
-      "old_len": 791,
-      "new_len": 777
-    },
-    {
-      "slug": "lucius-cornificius",
-      "status": "failed",
-      "reason": "insufficient subjects (1, need >= 3)",
-      "poison_count": 1
-    },
-    {
-      "slug": "ismenias",
-      "status": "enriched",
-      "old_len": 105,
-      "new_len": 1148
-    },
-    {
-      "slug": "mamercus-aemilius-lepidus-livianus",
-      "status": "enriched",
-      "old_len": 105,
-      "new_len": 1043
-    },
-    {
-      "slug": "euthymenes",
-      "status": "enriched",
-      "old_len": 200,
-      "new_len": 1141
-    },
-    {
-      "slug": "roberto-caracciolo",
-      "status": "enriched",
-      "old_len": 105,
-      "new_len": 1425
-    },
-    {
-      "slug": "thibaud-of-ostia",
-      "status": "enriched",
-      "old_len": 40,
-      "new_len": 812
-    },
-    {
-      "slug": "romulus-of-fiesole",
-      "status": "enriched",
-      "old_len": 200,
-      "new_len": 789
-    },
-    {
-      "slug": "girolamo-ghinucci",
-      "status": "enriched",
-      "old_len": 105,
-      "new_len": 1088
-    },
-    {
-      "slug": "bystr\u00edk",
-      "status": "enriched",
-      "old_len": 200,
-      "new_len": 1184
-    },
-    {
-      "slug": "bystrk",
-      "status": "enriched",
-      "old_len": 200,
-      "new_len": 1716
-    },
-    {
-      "slug": "andrea-da-segni",
-      "status": "enriched",
-      "old_len": 105,
-      "new_len": 959
-    },
-    {
-      "slug": "smendes",
-      "status": "enriched",
-      "old_len": 185,
-      "new_len": 1523
-    },
-    {
-      "slug": "askar-khan-afshar",
-      "status": "enriched",
-      "old_len": 200,
-      "new_len": 1230
-    },
-    {
-      "slug": "wadjkare",
+      "slug": "lucius-apronius",
       "status": "failed",
       "reason": "HTTP Error 500: Internal Server Error",
       "poison_count": 1
     },
     {
-      "slug": "theocritus",
+      "slug": "mul-of-kent",
       "status": "enriched",
-      "old_len": 105,
-      "new_len": 1493
+      "old_len": 63,
+      "new_len": 1923
     },
     {
-      "slug": "marcus-furius-bibaculus",
+      "slug": "thoros-i-prince-of-armenia",
       "status": "enriched",
-      "old_len": 105,
-      "new_len": 943
+      "old_len": 63,
+      "new_len": 1247
     },
     {
-      "slug": "gaius-sempronius-tuditanus",
+      "slug": "constitutional-monarchy",
       "status": "enriched",
-      "old_len": 105,
-      "new_len": 842
+      "old_len": 63,
+      "new_len": 2153
+    },
+    {
+      "slug": "book-of-mormon",
+      "status": "enriched",
+      "old_len": 63,
+      "new_len": 1482
+    },
+    {
+      "slug": "comet",
+      "status": "failed",
+      "reason": "insufficient causes (0, need >= 1)",
+      "poison_count": 1
+    },
+    {
+      "slug": "gomoarius",
+      "status": "enriched",
+      "old_len": 64,
+      "new_len": 1938
+    },
+    {
+      "slug": "mahinda-iv-of-anuradhapura",
+      "status": "enriched",
+      "old_len": 186,
+      "new_len": 732
+    },
+    {
+      "slug": "eystein-halfdansson",
+      "status": "enriched",
+      "old_len": 106,
+      "new_len": 1019
+    },
+    {
+      "slug": "nguanamthom",
+      "status": "enriched",
+      "old_len": 106,
+      "new_len": 1541
+    },
+    {
+      "slug": "al-fadl-ibn-abbas",
+      "status": "enriched",
+      "old_len": 304,
+      "new_len": 1838
+    },
+    {
+      "slug": "elements",
+      "status": "failed",
+      "reason": "insufficient causes (0, need >= 1)",
+      "poison_count": 1
+    },
+    {
+      "slug": "wilhelm-von-brandenburg",
+      "status": "enriched",
+      "old_len": 106,
+      "new_len": 1221
+    },
+    {
+      "slug": "ercole-rangoni",
+      "status": "enriched",
+      "old_len": 106,
+      "new_len": 1578
+    },
+    {
+      "slug": "teodorico-ranieri",
+      "status": "enriched",
+      "old_len": 106,
+      "new_len": 1770
+    },
+    {
+      "slug": "pami",
+      "status": "enriched",
+      "old_len": 186,
+      "new_len": 1562
+    },
+    {
+      "slug": "semeon-olshanski",
+      "status": "enriched",
+      "old_len": 106,
+      "new_len": 1604
+    },
+    {
+      "slug": "hermippus",
+      "status": "enriched",
+      "old_len": 106,
+      "new_len": 1481
+    },
+    {
+      "slug": "judges",
+      "status": "enriched",
+      "old_len": 64,
+      "new_len": 1372
     }
   ]
 }
