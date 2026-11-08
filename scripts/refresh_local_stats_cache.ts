@@ -5,20 +5,23 @@
  * Local Docker Appwrite KPI refresh for curator pages that read stats_cache
  * (/catalog, curator audit, ClassHub via useGlobalCounts).
  *
- * - Ensures stats_cache (+ optional enrichment_audit) collections exist
- * - Counts entities by label / era / continent / class (live local DB)
- * - Appends a new stats_cache row (UI reads latest by updatedAt)
- * - Mirrors a compact JSON snapshot under ui/public/governance/stats_cache.json
+ * Resumable / SIGTERM-safe:
+ *   1. Fast ID-only page count → write `total` immediately (empty facets OK)
+ *   2. Facet pass in chunks with checkpoint file; mirrors update incrementally
  *
  * Usage:
  *   npx tsx scripts/refresh_local_stats_cache.ts
- *   npx tsx scripts/refresh_local_stats_cache.ts --from-git   # use data/audit-reports/stats.json
+ *   npx tsx scripts/refresh_local_stats_cache.ts --total-only
+ *   npx tsx scripts/refresh_local_stats_cache.ts --facets
+ *   npx tsx scripts/refresh_local_stats_cache.ts --from-git
+ *   npx tsx scripts/refresh_local_stats_cache.ts --reset-checkpoint
  */
 import * as fs from 'fs'
 import * as path from 'path'
 import { Client, Databases, Query, ID, Permission, Role } from 'node-appwrite'
 
 const ROOT = path.resolve(__dirname, '..')
+const CHECKPOINT = path.join(ROOT, 'data/governance/stats_cache_progress.json')
 
 function loadDotEnvFile(filePath: string) {
   if (!fs.existsSync(filePath)) return
@@ -40,9 +43,16 @@ const PROJECT = process.env.LOCAL_APPWRITE_PROJECT_ID || process.env.VITE_APPWRI
 const DATABASE = process.env.LOCAL_APPWRITE_DATABASE_ID || process.env.VITE_APPWRITE_DATABASE_ID || 'annals_world_db'
 const KEY = process.env.LOCAL_APPWRITE_API_KEY || process.env.APPWRITE_API_KEY || ''
 const FROM_GIT = process.argv.includes('--from-git')
+const TOTAL_ONLY = process.argv.includes('--total-only')
+const FACETS_ONLY = process.argv.includes('--facets')
+const RESET_CHECKPOINT = process.argv.includes('--reset-checkpoint')
 const STATS_COLLECTION = 'stats_cache'
 const ENTITIES = 'entities'
+/** Appwrite listDocuments hard-caps page size; 100 is the portable max. */
 const PAGE = 100
+const PROGRESS_EVERY = 5000
+const CHECKPOINT_EVERY = 2000
+const MIRROR_EVERY = 25000
 
 if (!KEY) {
   console.error('ERROR: APPWRITE_API_KEY / LOCAL_APPWRITE_API_KEY missing')
@@ -51,6 +61,44 @@ if (!KEY) {
 
 const client = new Client().setEndpoint(ENDPOINT).setProject(PROJECT).setKey(KEY)
 const databases = new Databases(client)
+
+type Bucket = Record<string, number>
+
+interface Checkpoint {
+  phase: 'facets'
+  cursor: string | null
+  totalSeen: number
+  byLabel: Bucket
+  byEra: Bucket
+  byContinent: Bucket
+  byClass: Bucket
+  startedAt: string
+  updatedAt: string
+  knownTotal?: number
+}
+
+interface StatsPayload {
+  total: number
+  byLabel: Bucket
+  byEra: Bucket
+  byContinent: Bucket
+  byClass: Bucket
+  computeTimeMs: number
+  note?: string
+  incomplete?: boolean
+}
+
+let shuttingDown = false
+let lastCheckpoint: Checkpoint | null = null
+
+function onSignal(sig: string) {
+  shuttingDown = true
+  console.log(`[stats] received ${sig} — saving checkpoint and exiting…`)
+  if (lastCheckpoint) writeCheckpoint(lastCheckpoint)
+  process.exit(143)
+}
+process.on('SIGTERM', () => onSignal('SIGTERM'))
+process.on('SIGINT', () => onSignal('SIGINT'))
 
 async function ensureStatsCollection() {
   try {
@@ -85,13 +133,11 @@ async function ensureStatsCollection() {
     }
     await new Promise((r) => setTimeout(r, 250))
   }
-  // Attribute availability lag on fresh Appwrite
   await new Promise((r) => setTimeout(r, 4000))
   console.log('[stats] stats_cache ready')
 }
 
 async function ensureAuditNewValueAttr() {
-  // Local Docker schema may already include newValue (4000). Best-effort only.
   try {
     const res = await databases.listAttributes(DATABASE, 'audit_log')
     const attrs = (res as { attributes?: Array<{ key: string }> }).attributes || []
@@ -104,85 +150,37 @@ async function ensureAuditNewValueAttr() {
   }
 }
 
-type Bucket = Record<string, number>
-
-async function countLive(): Promise<{
-  total: number
-  byLabel: Bucket
-  byEra: Bucket
-  byContinent: Bucket
-  byClass: Bucket
-  computeTimeMs: number
-}> {
-  const started = Date.now()
-  const byLabel: Bucket = {}
-  const byEra: Bucket = {}
-  const byContinent: Bucket = {}
-  const byClass: Bucket = {}
-  let total = 0
-  let cursor: string | undefined
-
-  // Appwrite list `.total` often caps at 5000 — always page until empty for truth.
-  while (true) {
-    const queries = [Query.limit(PAGE), Query.select(['label', 'era', 'continent', 'callNumber'])]
-    if (cursor) queries.push(Query.cursorAfter(cursor))
-    const page = await databases.listDocuments(DATABASE, ENTITIES, queries)
-    const docs = page.documents || []
-    if (docs.length === 0) break
-    for (const doc of docs) {
-      total++
-      const label = String((doc as { label?: string }).label || 'Unknown')
-      const era = String((doc as { era?: string }).era || 'Unknown')
-      const continent = String((doc as { continent?: string }).continent || 'Unknown')
-      const cn = String((doc as { callNumber?: string }).callNumber || '')
-      byLabel[label] = (byLabel[label] || 0) + 1
-      byEra[era] = (byEra[era] || 0) + 1
-      byContinent[continent] = (byContinent[continent] || 0) + 1
-      if (cn && /^\d/.test(cn)) {
-        const cls = cn[0]
-        byClass[cls] = (byClass[cls] || 0) + 1
-      }
-    }
-    cursor = docs[docs.length - 1].$id
-    if (docs.length < PAGE) break
-  }
-
-  return { total, byLabel, byEra, byContinent, byClass, computeTimeMs: Date.now() - started }
-}
-
-function loadGitStats(): {
-  total: number
-  byLabel: Bucket
-  byEra: Bucket
-  byContinent: Bucket
-  byClass: Bucket
-  computeTimeMs: number
-} | null {
-  const p = path.join(ROOT, 'data/audit-reports/stats.json')
+function loadSeedCursor(): Record<string, unknown> | null {
+  const p = path.join(ROOT, 'data/governance/seed_local_cursor.json')
   if (!fs.existsSync(p)) return null
   try {
-    const raw = JSON.parse(fs.readFileSync(p, 'utf8'))
-    return {
-      total: Number(raw.total || 0),
-      byLabel: raw.byLabel || {},
-      byEra: raw.byEra || {},
-      byContinent: raw.byContinent || {},
-      byClass: raw.byClass || {},
-      computeTimeMs: 0,
-    }
+    return JSON.parse(fs.readFileSync(p, 'utf8'))
   } catch {
     return null
   }
 }
 
-async function appendStats(stats: {
-  total: number
-  byLabel: Bucket
-  byEra: Bucket
-  byContinent: Bucket
-  byClass: Bucket
-  computeTimeMs: number
-}) {
+function writeCheckpoint(cp: Checkpoint) {
+  fs.mkdirSync(path.dirname(CHECKPOINT), { recursive: true })
+  fs.writeFileSync(CHECKPOINT, JSON.stringify(cp, null, 2) + '\n')
+  lastCheckpoint = cp
+}
+
+function readCheckpoint(): Checkpoint | null {
+  if (!fs.existsSync(CHECKPOINT)) return null
+  try {
+    return JSON.parse(fs.readFileSync(CHECKPOINT, 'utf8')) as Checkpoint
+  } catch {
+    return null
+  }
+}
+
+function clearCheckpoint() {
+  if (fs.existsSync(CHECKPOINT)) fs.unlinkSync(CHECKPOINT)
+  lastCheckpoint = null
+}
+
+async function writeStats(stats: StatsPayload, extra?: Record<string, unknown>) {
   const updatedAt = new Date().toISOString()
   const payload = {
     total: stats.total,
@@ -201,7 +199,6 @@ async function appendStats(stats: {
     [Permission.read(Role.any())],
   )
 
-  // Prune old rows (keep 40)
   try {
     const old = await databases.listDocuments(DATABASE, STATS_COLLECTION, [
       Query.orderDesc('updatedAt'),
@@ -215,6 +212,7 @@ async function appendStats(stats: {
     /* best-effort */
   }
 
+  const seedCursor = loadSeedCursor()
   const snapshot = {
     updatedAt,
     source: FROM_GIT ? 'git-stats' : 'local-appwrite',
@@ -227,9 +225,24 @@ async function appendStats(stats: {
     byContinent: stats.byContinent,
     byClass: stats.byClass,
     computeTimeMs: stats.computeTimeMs,
+    note: stats.note || 'paged entity count (ignores API total cap)',
+    incomplete: stats.incomplete || false,
+    ...(seedCursor
+      ? {
+          seedCursor: {
+            scanned: seedCursor.scanned,
+            created: seedCursor.created,
+            skipped: seedCursor.skipped,
+            failed: seedCursor.failed,
+            classDir: seedCursor.classDir,
+            file: seedCursor.file,
+            lastRunAt: seedCursor.lastRunAt,
+          },
+        }
+      : {}),
+    ...extra,
   }
   const body = JSON.stringify(snapshot, null, 2) + '\n'
-  // Canonical + UI mirror — KPI aggregator copies data/governance → ui/public.
   for (const rel of ['data/governance/stats_cache.json', 'ui/public/governance/stats_cache.json']) {
     const p = path.join(ROOT, rel)
     fs.mkdirSync(path.dirname(p), { recursive: true })
@@ -238,22 +251,246 @@ async function appendStats(stats: {
   return updatedAt
 }
 
+function maxExpectedTotal(): number {
+  const seed = loadSeedCursor()
+  const scanned = Number(seed?.scanned || 0)
+  // Hard stop well above seed/export size — prevents SDK cursor loops (saw 1.9M+)
+  return Math.max(scanned * 2 || 0, 600_000)
+}
+
+/** Phase 1: ID-only page count — fast, writes total immediately. */
+async function countTotalOnly(): Promise<number> {
+  const started = Date.now()
+  const hardCap = maxExpectedTotal()
+  let total = 0
+  let cursor: string | undefined
+  let prevCursor: string | undefined
+  while (!shuttingDown) {
+    const queries = [Query.limit(PAGE), Query.select(['$id'])]
+    if (cursor) queries.push(Query.cursorAfter(cursor))
+    const page = await databases.listDocuments(DATABASE, ENTITIES, queries)
+    const docs = page.documents || []
+    if (docs.length === 0) break
+    total += docs.length
+    prevCursor = cursor
+    cursor = docs[docs.length - 1].$id
+    if (cursor === prevCursor) {
+      console.error('[stats] cursor not advancing — aborting runaway count')
+      break
+    }
+    if (total > hardCap) {
+      console.error(`[stats] count ${total} exceeded hardCap ${hardCap} — aborting runaway`)
+      throw new Error(`runaway count ${total} > ${hardCap}`)
+    }
+    if (total % PROGRESS_EVERY < PAGE) {
+      console.log(`[stats] counted ${total}… (${Date.now() - started}ms)`)
+    }
+    if (docs.length < PAGE) break
+  }
+  console.log(`[stats] ground-truth total=${total} (${Date.now() - started}ms)`)
+  return total
+}
+
+/** Phase 2: facet aggregation with checkpoint / resume. */
+async function countFacets(knownTotal: number): Promise<StatsPayload> {
+  const started = Date.now()
+  let cp = RESET_CHECKPOINT ? null : readCheckpoint()
+  if (cp && cp.phase !== 'facets') cp = null
+
+  const byLabel: Bucket = { ...(cp?.byLabel || {}) }
+  const byEra: Bucket = { ...(cp?.byEra || {}) }
+  const byContinent: Bucket = { ...(cp?.byContinent || {}) }
+  const byClass: Bucket = { ...(cp?.byClass || {}) }
+  let totalSeen = cp?.totalSeen || 0
+  let cursor: string | undefined = cp?.cursor || undefined
+  const facetStartedAt = cp?.startedAt || new Date().toISOString()
+
+  if (cp) {
+    console.log(`[stats] resuming facets from cursor @ ${totalSeen} seen`)
+  } else {
+    console.log('[stats] starting facet pass…')
+  }
+
+  let sinceCheckpoint = 0
+  let sinceMirror = 0
+
+  while (!shuttingDown) {
+    const queries = [Query.limit(PAGE), Query.select(['label', 'era', 'continent', 'callNumber'])]
+    if (cursor) queries.push(Query.cursorAfter(cursor))
+    const page = await databases.listDocuments(DATABASE, ENTITIES, queries)
+    const docs = page.documents || []
+    if (docs.length === 0) break
+
+    for (const doc of docs) {
+      totalSeen++
+      const label = String((doc as { label?: string }).label || 'Unknown')
+      const era = String((doc as { era?: string }).era || 'Unknown')
+      const continent = String((doc as { continent?: string }).continent || 'Unknown')
+      const cn = String((doc as { callNumber?: string }).callNumber || '')
+      byLabel[label] = (byLabel[label] || 0) + 1
+      byEra[era] = (byEra[era] || 0) + 1
+      byContinent[continent] = (byContinent[continent] || 0) + 1
+      if (cn && /^\d/.test(cn)) {
+        const cls = cn[0]
+        byClass[cls] = (byClass[cls] || 0) + 1
+      }
+    }
+    cursor = docs[docs.length - 1].$id
+    sinceCheckpoint += docs.length
+    sinceMirror += docs.length
+
+    if (totalSeen % PROGRESS_EVERY < PAGE) {
+      console.log(`[stats] facets ${totalSeen}/${knownTotal || '?'}… (${Date.now() - started}ms)`)
+    }
+
+    if (sinceCheckpoint >= CHECKPOINT_EVERY) {
+      const next: Checkpoint = {
+        phase: 'facets',
+        cursor: cursor || null,
+        totalSeen,
+        byLabel,
+        byEra,
+        byContinent,
+        byClass,
+        startedAt: facetStartedAt,
+        updatedAt: new Date().toISOString(),
+        knownTotal,
+      }
+      writeCheckpoint(next)
+      sinceCheckpoint = 0
+    }
+
+    if (sinceMirror >= MIRROR_EVERY) {
+      await writeStats(
+        {
+          total: knownTotal || totalSeen,
+          byLabel,
+          byEra,
+          byContinent,
+          byClass,
+          computeTimeMs: Date.now() - started,
+          note: 'facet pass in progress (resumable)',
+          incomplete: true,
+        },
+        { facetProgress: { totalSeen, knownTotal } },
+      )
+      console.log(`[stats] interim mirror @ ${totalSeen}`)
+      sinceMirror = 0
+    }
+
+    if (docs.length < PAGE) break
+  }
+
+  if (shuttingDown) {
+    writeCheckpoint({
+      phase: 'facets',
+      cursor: cursor || null,
+      totalSeen,
+      byLabel,
+      byEra,
+      byContinent,
+      byClass,
+      startedAt: facetStartedAt,
+      updatedAt: new Date().toISOString(),
+      knownTotal,
+    })
+    throw new Error('interrupted')
+  }
+
+  clearCheckpoint()
+  const total = knownTotal > 0 ? knownTotal : totalSeen
+  // Prefer facet-pass count if it exceeds a stale knownTotal
+  const finalTotal = Math.max(total, totalSeen)
+  return {
+    total: finalTotal,
+    byLabel,
+    byEra,
+    byContinent,
+    byClass,
+    computeTimeMs: Date.now() - started,
+    note: 'paged entity count + facets (ignores API total cap)',
+    incomplete: false,
+  }
+}
+
+function loadGitStats(): StatsPayload | null {
+  const p = path.join(ROOT, 'data/audit-reports/stats.json')
+  if (!fs.existsSync(p)) return null
+  try {
+    const raw = JSON.parse(fs.readFileSync(p, 'utf8'))
+    return {
+      total: Number(raw.total || 0),
+      byLabel: raw.byLabel || {},
+      byEra: raw.byEra || {},
+      byContinent: raw.byContinent || {},
+      byClass: raw.byClass || {},
+      computeTimeMs: 0,
+      note: 'from data/audit-reports/stats.json',
+    }
+  } catch {
+    return null
+  }
+}
+
 async function main() {
   console.log(`[stats] endpoint=${ENDPOINT} project=${PROJECT} db=${DATABASE}`)
+  if (RESET_CHECKPOINT) {
+    clearCheckpoint()
+    console.log('[stats] checkpoint cleared')
+  }
   await ensureStatsCollection()
   await ensureAuditNewValueAttr()
 
-  const stats = FROM_GIT ? loadGitStats() : await countLive()
-  if (!stats) {
-    console.error('[stats] no stats available')
-    process.exit(1)
+  if (FROM_GIT) {
+    const stats = loadGitStats()
+    if (!stats) {
+      console.error('[stats] no git stats available')
+      process.exit(1)
+    }
+    const updatedAt = await writeStats(stats)
+    console.log(`[stats] wrote stats_cache total=${stats.total} updatedAt=${updatedAt}`)
+    return
   }
 
-  const updatedAt = await appendStats(stats)
+  let knownTotal = 0
+  if (!FACETS_ONLY) {
+    knownTotal = await countTotalOnly()
+    // Write total first so UI/API consumers never sit on 5000 / stale interim.
+    const updatedAt = await writeStats({
+      total: knownTotal,
+      byLabel: {},
+      byEra: {},
+      byContinent: {},
+      byClass: {},
+      computeTimeMs: 0,
+      note: 'paged entity count (facets pending)',
+      incomplete: true,
+    })
+    console.log(`[stats] wrote TOTAL-FIRST total=${knownTotal} updatedAt=${updatedAt}`)
+    if (TOTAL_ONLY) return
+  } else {
+    const mirror = path.join(ROOT, 'data/governance/stats_cache.json')
+    if (fs.existsSync(mirror)) {
+      try {
+        knownTotal = Number(JSON.parse(fs.readFileSync(mirror, 'utf8')).total || 0)
+      } catch { /* ignore */ }
+    }
+    const cp = readCheckpoint()
+    if (cp?.knownTotal) knownTotal = cp.knownTotal
+  }
+
+  const stats = await countFacets(knownTotal)
+  const updatedAt = await writeStats(stats)
   console.log(`[stats] wrote stats_cache total=${stats.total} updatedAt=${updatedAt} (${stats.computeTimeMs}ms)`)
+  console.log(`[stats] facets labels=${Object.keys(stats.byLabel).length} eras=${Object.keys(stats.byEra).length}`)
 }
 
 main().catch((err) => {
-  console.error('[stats] failed:', err.message || err)
+  const msg = (err as Error).message || String(err)
+  if (msg === 'interrupted') {
+    console.error('[stats] interrupted — re-run to resume facets from checkpoint')
+    process.exit(143)
+  }
+  console.error('[stats] failed:', msg)
   process.exit(1)
 })

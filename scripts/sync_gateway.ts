@@ -244,7 +244,12 @@ async function postDoc(coll: string, docId: string, data: Record<string, unknown
   const url = `${ENDPOINT}/databases/${DATABASE_ID}/collections/${coll}/documents`
   const res = await fetch(url, {
     method: 'POST', headers: headers(),
-    body: JSON.stringify({ documentId: docId, data }),
+    // Guest-readable so Curator UI (/curator/audit/log) sees enrich events without a session
+    body: JSON.stringify({
+      documentId: docId,
+      data,
+      permissions: ['read("any")', 'update("users")', 'delete("users")'],
+    }),
   })
   if (!res.ok) {
     const body = await res.json().catch(() => ({}))
@@ -280,11 +285,14 @@ function entityToPayload(e: Entity): Record<string, unknown> {
   delete dj._unsyncedEdits
 
   const out: Record<string, unknown> = {}
+  // Local Docker schema (see sync_repo_to_appwrite / merge_cloud) — do NOT send
+  // eraDivision / eraDivisionCode (cloud-only attrs). They cause HTTP 400
+  // document_invalid_structure and block audit_log emission entirely.
   const allowed = [
-    'slug', 'name', 'label', 'callNumber', 'era', 'eraSlug', 'eraDivision',
-    'eraDivisionCode', 'region', 'continent', 'status', 'born', 'died',
-    'founded', 'period', 'wikidataQid', 'wikipediaUrl', 'imageUrl',
-    'subjectHeadings', 'subjects', 'frameworks', 'summary', 'importanceScore',
+    'slug', 'name', 'label', 'callNumber', 'summary', 'era', 'eraSlug', 'region',
+    'continent', 'status', 'born', 'died', 'founded', 'period', 'startDate', 'endDate',
+    'subjectHeadings', 'subjects', 'frameworks', 'altNames', 'wikidataQid', 'wikipediaUrl',
+    'imageUrl', 'importanceScore',
   ]
   for (const k of allowed) {
     if (e[k] === undefined) continue
@@ -295,6 +303,14 @@ function entityToPayload(e: Entity): Record<string, unknown> {
       out[k] = e[k]
     }
   }
+  // Preserve cloud-only era fields inside detailsJson for local UI / later migrate
+  if (e.eraDivision !== undefined && dj.eraDivision === undefined) dj.eraDivision = e.eraDivision
+  if (e.eraDivisionCode !== undefined && dj.eraDivisionCode === undefined) {
+    dj.eraDivisionCode = e.eraDivisionCode
+  }
+  // Local schema requires label
+  if (!out.label) out.label = out.name || out.slug || 'untitled'
+  if (!out.name && out.label) out.name = out.label
   out.detailsJson = JSON.stringify(dj)
   return out
 }

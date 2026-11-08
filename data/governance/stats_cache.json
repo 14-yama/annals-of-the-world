@@ -1,18 +1,45 @@
 {
-  "total": 100258,
-  "byLabel": {},
-  "byEra": {},
-  "byContinent": {},
-  "byClass": {},
-  "updatedAt": "2026-11-07T22:53:11Z",
-  "computeTimeMs": 43249,
-  "note": "paged entity count during bulk seed; facets deferred until seed quieter",
+  "updatedAt": "2026-11-08T03:57:33.065Z",
+  "source": "local-appwrite",
+  "endpoint": "http://localhost:8080/v1",
+  "project": "annals-local",
+  "database": "annals_world_db",
+  "total": 392033,
+  "byLabel": {
+    "Idea": 918750,
+    "EventWindow": 306250
+  },
+  "byEra": {
+    "Modern": 36750,
+    "Medieval": 318500,
+    "Contemporary": 159250,
+    "Classical": 710500
+  },
+  "byContinent": {
+    "Europe": 159250,
+    "Americas": 73500,
+    "Global": 906500,
+    "Africa": 12250,
+    "Asia": 73500
+  },
+  "byClass": {
+    "0": 918750,
+    "5": 306250
+  },
+  "computeTimeMs": 404947,
+  "note": "facet pass in progress (resumable)",
+  "incomplete": true,
   "seedCursor": {
-    "scanned": 99091,
-    "created": 90685,
-    "skipped": 8403,
-    "classDir": "203-Class-203",
-    "file": "203sune-bergman.json",
-    "lastRunAt": "2026-11-07T22:52:28.484Z"
+    "scanned": 392086,
+    "created": 383371,
+    "skipped": 8683,
+    "failed": 32,
+    "classDir": "963-Class-963",
+    "file": "963third-industrial-revolution.json",
+    "lastRunAt": "2026-11-08T03:28:39.834Z"
+  },
+  "facetProgress": {
+    "totalSeen": 1225000,
+    "knownTotal": 392033
   }
 }

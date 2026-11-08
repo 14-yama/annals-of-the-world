@@ -2750,26 +2750,108 @@
   "git-push-1794109107": {
     "job_id": "git-push-1794109107",
     "bot": "git-push",
-    "status": "running",
+    "status": "error",
     "model": "none",
     "count": 0,
     "pid": null,
     "started": "2026-11-08T03:38:27Z",
-    "finished": null,
+    "finished": "2026-11-08T03:38:42Z",
     "log": [
       "Pending files: 235 entities, 2 edges (237 total)",
-      "git add data/ scripts/ ..."
+      "git add data/ scripts/ ...",
+      "git commit -m \"feat(enrich): watchdog auto-push \u2014 239 local enrichments\"",
+      "[scaffold/docs 3d6cedb9860] feat(enrich): watchdog auto-push \u2014 239 local enrichments\n 267 files changed, 17698 insertions(+), 3014 deletions(-)\n create mode 100644 data/appwrite-export/edges/edges_2026-11-07.json\n create mode 100644 data/appwrite-export/edges/edges_2026-11-08.json\n create mode 100644 data/enrichment/poison_slugs.json\n create mode 100644 data/governance/seed_local_cursor.json\n create mode 100644 scripts/llm_grok.py\n create mode 100644 scripts/local_bots/scan_export_json.py",
+      "git push ...",
+      "fatal: could not read Username for 'https://github.com': Device not configured",
+      "git push failed \u2014 check SSH/HTTPS credentials: fatal: could not read Username for 'https://github.com': Device not configured\n"
     ],
-    "exitCode": null
+    "exitCode": 128
   },
   "enrich-1794109108": {
     "job_id": "enrich-1794109108",
     "bot": "enrich",
-    "status": "running",
+    "status": "error",
     "model": "ollama",
     "count": 20,
     "pid": 31242,
     "started": "2026-11-08T03:38:28Z",
+    "finished": "2026-11-08T03:41:26Z",
+    "log": [
+      "[orphaned] process died with previous bot restart"
+    ],
+    "exitCode": null
+  },
+  "sync-1794109705": {
+    "job_id": "sync-1794109705",
+    "bot": "sync",
+    "status": "done",
+    "model": "none",
+    "count": 200,
+    "pid": 39374,
+    "started": "2026-11-08T03:48:25Z",
+    "finished": "2026-11-08T03:57:24Z",
+    "log": [
+      "=== sync_gateway: git \u2192 Appwrite ===",
+      "Endpoint:  http://localhost:8080/v1",
+      "Database:  annals_world_db",
+      "Source:    /Users/jeltonmentore/annals-of-the-world/data/appwrite-export",
+      "MODE:      LOCAL (dirty-file scan \u2014 no git commit needed)",
+      "[budget] perRunWriteCap=200 writesUsed=400/300000 (hardStop=95%)",
+      "[diff] --local mode: scanning for _unsyncedEdits:true files",
+      "[diff] --local found 141 dirty files",
+      "[diff] 141 entity files to sync",
+      "",
+      "=== Summary ===",
+      "{",
+      "  \"filesChanged\": 141,",
+      "  \"entitiesUpserted\": 22,",
+      "  \"auditRowsEmitted\": 178,",
+      "  \"writesPerformed\": 200,",
+      "  \"stoppedReason\": \"perRunWriteCap=200 reached during audit emission\"",
+      "}",
+      "[state] last_sync.json updated \u2192 commit 3d6cedb9"
+    ],
+    "exitCode": 0
+  },
+  "git-push-1794110244": {
+    "job_id": "git-push-1794110244",
+    "bot": "git-push",
+    "status": "running",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-11-08T03:57:24Z",
+    "finished": null,
+    "log": [
+      "Pending files: 154 entities, 1 edges (155 total)",
+      "git add data/ scripts/ ..."
+    ],
+    "exitCode": null
+  },
+  "git-push-1794110246": {
+    "job_id": "git-push-1794110246",
+    "bot": "git-push",
+    "status": "error",
+    "model": "none",
+    "count": 0,
+    "pid": null,
+    "started": "2026-11-08T03:57:26Z",
+    "finished": "2026-11-08T03:57:32Z",
+    "log": [
+      "Pending files: 154 entities, 1 edges (155 total)",
+      "git add data/ scripts/ ...",
+      "git add failed: fatal: Unable to create '/Users/jeltonmentore/annals-of-the-world/.git/index.lock': File exists.\n\nAnother git process seems to be running in this repository, or the lock file may be stale\n"
+    ],
+    "exitCode": 128
+  },
+  "enrich-1794110246": {
+    "job_id": "enrich-1794110246",
+    "bot": "enrich",
+    "status": "running",
+    "model": "ollama",
+    "count": 20,
+    "pid": 46439,
+    "started": "2026-11-08T03:57:26Z",
     "finished": null,
     "log": [],
     "exitCode": null

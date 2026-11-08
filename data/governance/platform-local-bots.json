@@ -1,24 +1,24 @@
 {
   "meta": {
-    "version": "1.5.1",
+    "version": "1.5.2",
     "owner": "annals-local-infra",
-    "description": "Canonical roster of Annals local bots for the Mac Mini pool. Aggressive KeepAlive enrich + edges; Grok cloud lane runs concurrent with local Ollama. Max 1 Ollama generation; many non-LLM + Grok waiters.",
+    "description": "Canonical roster of Annals local bots for the Mac Mini pool. Aggressive KeepAlive Ollama enrich waiters + edges. Grok lane DISABLED. Max 1 Ollama generation.",
     "host": "24 GB unified memory Mac mini",
     "timezone": "America/Port_of_Spain",
     "label_prefix": "com.annals.",
     "docs_ref": "docs/governance/local_bots_mac_mini.md",
     "superstack_sot_ref": "/Users/jeltonmentore/Digital Economy/caricom-connects-superstack/packages/truth-registry/platform-local-bots.json",
     "throughput_targets": {
-      "note": "Ollama lane :11434 max 1 gen (enrich/enrich-b/c/significance serialize). Grok lane is separate cloud API — runs concurrent with Ollama. edges-extract is no-LLM and parallel. Scrapers ≠ 11434.",
-      "entities_per_hour_target": "120–250 combined Ollama+Grok when Mini quiet + key set",
-      "entities_per_hour_floor": "60 (Ollama-only if no XAI key)",
-      "enrich_batch": 48,
+      "note": "Ollama lane :11434 max 1 gen (enrich/enrich-b/c/d/e/significance serialize). Grok disabled. edges-extract is no-LLM and parallel.",
+      "entities_per_hour_target": "80\u2013180 Ollama when Mini quiet",
+      "entities_per_hour_floor": "50",
+      "enrich_batch": 64,
       "sig_batch": 16,
       "grok_batch": 12,
       "edges_extract_batch": 120,
-      "ollama_cadence": "KeepAlive worker (ThrottleInterval 5–8s)",
+      "ollama_cadence": "KeepAlive worker (ThrottleInterval 5\u20138s)",
       "idle_gap_max_seconds": 8,
-      "sync_entities_per_run": 200,
+      "sync_entities_per_run": 400,
       "kpi_refresh_minutes": 5,
       "stats_cache_refresh_minutes": 5,
       "queue_refresh_minutes": 3
@@ -41,21 +41,21 @@
       "model_default": "grok-4.7",
       "base_url_env": "XAI_BASE_URL",
       "base_url_default": "https://api.x.ai/v1",
-      "note": "Set XAI_API_KEY (or GROK_API_KEY) in ~/.config/annals/env or repo .env. Bots soft-skip (exit 0) when unset — no crash storms."
+      "note": "Set XAI_API_KEY (or GROK_API_KEY) in ~/.config/annals/env or repo .env. Bots soft-skip (exit 0) when unset \u2014 no crash storms."
     },
     "local_enrichment_mode": {
       "unrestricted": true,
-      "note": "Local Docker Appwrite — enrich/LLM/edges ignore Superstack scrap blackouts. Never modify com.caricom.*"
+      "note": "Local Docker Appwrite \u2014 enrich/LLM/edges ignore Superstack scrap blackouts. Never modify com.caricom.*"
     },
     "grok_lane": {
-      "enabled": true,
-      "note": "XAI_API_KEY present — Grok lane concurrent with Ollama"
+      "enabled": false,
+      "note": "DISABLED \u2014 local Ollama only (user request)"
     }
   },
   "concurrency": {
-    "principle": "Many bot definitions are fine; concurrent RAM/CPU/Ollama use must stay gated. Leave headroom for Cursor/OS and Superstack's two daily media-house scrapers. Grok is cloud — does not consume Mini GPU/NPU.",
+    "principle": "Many bot definitions are fine; concurrent RAM/CPU/Ollama use must stay gated. Leave headroom for Cursor/OS and Superstack's two daily media-house scrapers. Grok is cloud \u2014 does not consume Mini GPU/NPU.",
     "max_concurrent_llm": 1,
-    "max_concurrent_grok": 1,
+    "max_concurrent_grok": 0,
     "brief_burst_of_2_llm": false,
     "serialize_enrich_vs_significance": true,
     "max_concurrent_heavy_scan": 1,
@@ -63,10 +63,10 @@
       "always_on": "bot-server + healthcheck only; never blocked by scrap blackout",
       "ollama": "enrich + enrich-b + enrich-c + significance share exclusive ollama+enrich_sig locks; never overlap (max 1 local LLM)",
       "grok": "enrich-grok + enrich-grok-b + significance-grok + edges-grok share grok lock; may run concurrent with Ollama lane",
-      "edges": "edges-extract (+ waiter) — no LLM; may run beside Ollama/Grok; own lock so queue/audits do not block",
-      "light": "queue, kpi, stats-cache, push — may run beside light OS work; queue/kpi skip live-scraper yield",
-      "heavy_scan": "audits + orphan triage — one at a time; skip during scrap blackout and when scrapers are live",
-      "network_write": "sync / seed / merge — Appwrite writes; skip during scrap blackout"
+      "edges": "edges-extract (+ waiter) \u2014 no LLM; may run beside Ollama/Grok; own lock so queue/audits do not block",
+      "light": "queue, kpi, stats-cache, push \u2014 may run beside light OS work; queue/kpi skip live-scraper yield",
+      "heavy_scan": "audits + orphan triage \u2014 one at a time; skip during scrap blackout and when scrapers are live",
+      "network_write": "sync / seed / merge \u2014 Appwrite writes; skip during scrap blackout"
     },
     "lock_dir": "/tmp/annals-bot-locks",
     "ollama": {
@@ -104,16 +104,16 @@
       {
         "id": "daily-harvest",
         "protects": "media-daily-new-articles",
-        "start": "18:05",
-        "end": "18:50",
-        "note": "Narrow RAM/CPU buffer around 18:10 harvest. Scrapers do not use Ollama :11434; live process yield still pauses Annals if the LaunchAgent is running longer."
+        "start": "18:08",
+        "end": "18:25",
+        "note": "Minimal RAM buffer around 18:10 harvest. Ollama bots ignore via respect_blackout=false."
       },
       {
         "id": "listing-backfill",
         "protects": "media-archive-backfill-listing",
-        "start": "20:30",
-        "end": "21:05",
-        "note": "Narrow buffer around 20:35 listing backfill. Process yield covers overrun."
+        "start": "20:33",
+        "end": "20:50",
+        "note": "Minimal buffer around 20:35 listing. Ollama bots ignore via respect_blackout=false."
       }
     ],
     "also_yield_when_process_matches": [
@@ -131,7 +131,7 @@
       "name": "Local Bot HTTP Server",
       "status": "active",
       "lane": "always_on",
-      "role": "Curator command post on port 7474 — status, manual enrich/sig/queue/sync/push/edges/grok triggers, Ollama + Grok health.",
+      "role": "Curator command post on port 7474 \u2014 status, manual enrich/sig/queue/sync/push/edges/grok triggers, Ollama + Grok health.",
       "uses_ollama": false,
       "uses_grok": false,
       "script": "scripts/local_bot_server_start.sh",
@@ -166,12 +166,12 @@
       "name": "AI Enrichment (Ollama)",
       "status": "active",
       "lane": "ollama",
-      "role": "Bulk entity enrichment via local Ollama — fills Overview/Frameworks/Relationships/Places/Texts facets in detailsJson. Writes git-first; sync/push ship later.",
+      "role": "Bulk entity enrichment via local Ollama \u2014 fills Overview/Frameworks/Relationships/Places/Texts facets in detailsJson. Writes git-first; sync/push ship later.",
       "uses_ollama": true,
       "script": "scripts/ai_enrich_autonomous.py",
       "args": [
         "--count",
-        "48",
+        "64",
         "--model",
         "ollama",
         "--ollama-model",
@@ -185,7 +185,7 @@
         "throttle_seconds": 2,
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "KeepAlive — relaunches immediately after each batch. Soft-skips when peer holds ollama lock."
+        "note": "KeepAlive \u2014 relaunches immediately after each batch. Soft-skips when peer holds ollama lock."
       },
       "retry": {
         "on_failure": 3,
@@ -210,12 +210,12 @@
       "name": "AI Enrichment Waiter B (Ollama)",
       "status": "active",
       "lane": "ollama",
-      "role": "Second enrich waiter — grabs ollama lock the moment enrich/significance release. Same script; never concurrent LLM.",
+      "role": "Second enrich waiter \u2014 grabs ollama lock the moment enrich/significance release. Same script; never concurrent LLM.",
       "uses_ollama": true,
       "script": "scripts/ai_enrich_autonomous.py",
       "args": [
         "--count",
-        "48",
+        "64",
         "--model",
         "ollama",
         "--ollama-model",
@@ -229,7 +229,7 @@
         "throttle_seconds": 3,
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "KeepAlive waiter staggered vs enrich. Shares ollama+enrich_sig — max 1 LLM."
+        "note": "KeepAlive waiter staggered vs enrich. Shares ollama+enrich_sig \u2014 max 1 LLM."
       },
       "retry": {
         "on_failure": 3,
@@ -254,12 +254,12 @@
       "name": "AI Enrichment Waiter C (Ollama)",
       "status": "active",
       "lane": "ollama",
-      "role": "Third enrich waiter — only acquires lock when free. Increases aggression without parallel LLM.",
+      "role": "Third enrich waiter \u2014 only acquires lock when free. Increases aggression without parallel LLM.",
       "uses_ollama": true,
       "script": "scripts/ai_enrich_autonomous.py",
       "args": [
         "--count",
-        "48",
+        "64",
         "--model",
         "ollama",
         "--ollama-model",
@@ -273,7 +273,7 @@
         "throttle_seconds": 4,
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "KeepAlive waiter C — staggered soft-skip; never concurrent with enrich/b/sig."
+        "note": "KeepAlive waiter C \u2014 staggered soft-skip; never concurrent with enrich/b/sig."
       },
       "retry": {
         "on_failure": 3,
@@ -291,6 +291,94 @@
         "label": "com.annals.enrich-c",
         "KeepAlive": true,
         "ThrottleInterval": 4
+      }
+    },
+    {
+      "id": "enrich-d",
+      "name": "AI Enrichment Waiter D (Ollama)",
+      "status": "active",
+      "lane": "ollama",
+      "role": "enrich-d KeepAlive waiter \u2014 soft-skips when ollama lock held. Increases aggression without parallel LLM.",
+      "uses_ollama": true,
+      "script": "scripts/ai_enrich_autonomous.py",
+      "args": [
+        "--count",
+        "64",
+        "--model",
+        "ollama",
+        "--ollama-model",
+        "${OLLAMA_MODEL:-llama3.2:3b}",
+        "--lenient",
+        "--retry",
+        "2"
+      ],
+      "schedule": {
+        "kind": "worker",
+        "throttle_seconds": 5,
+        "timezone": "America/Port_of_Spain",
+        "enabled": true,
+        "note": "KeepAlive waiter D \u2014 staggered soft-skip."
+      },
+      "retry": {
+        "on_failure": 3,
+        "backoff_base_seconds": 2,
+        "backoff_cap_seconds": 45,
+        "soft_skip_sleep_seconds": 1
+      },
+      "respect_blackout": false,
+      "yield_on_scraper_process": false,
+      "locks": [
+        "ollama",
+        "enrich_sig"
+      ],
+      "launchd": {
+        "label": "com.annals.enrich-d",
+        "KeepAlive": true,
+        "ThrottleInterval": 5
+      }
+    },
+    {
+      "id": "enrich-e",
+      "name": "AI Enrichment Waiter E (Ollama)",
+      "status": "active",
+      "lane": "ollama",
+      "role": "enrich-e KeepAlive waiter \u2014 soft-skips when ollama lock held. Increases aggression without parallel LLM.",
+      "uses_ollama": true,
+      "script": "scripts/ai_enrich_autonomous.py",
+      "args": [
+        "--count",
+        "64",
+        "--model",
+        "ollama",
+        "--ollama-model",
+        "${OLLAMA_MODEL:-llama3.2:3b}",
+        "--lenient",
+        "--retry",
+        "2"
+      ],
+      "schedule": {
+        "kind": "worker",
+        "throttle_seconds": 6,
+        "timezone": "America/Port_of_Spain",
+        "enabled": true,
+        "note": "KeepAlive waiter E \u2014 staggered soft-skip."
+      },
+      "retry": {
+        "on_failure": 3,
+        "backoff_base_seconds": 2,
+        "backoff_cap_seconds": 45,
+        "soft_skip_sleep_seconds": 1
+      },
+      "respect_blackout": false,
+      "yield_on_scraper_process": false,
+      "locks": [
+        "ollama",
+        "enrich_sig"
+      ],
+      "launchd": {
+        "label": "com.annals.enrich-e",
+        "KeepAlive": true,
+        "ThrottleInterval": 6
       }
     },
     {
@@ -313,7 +401,7 @@
         "cron": "15 */2 * * *",
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "Every 2h — enrich owns the Ollama lane 24/7"
+        "note": "Every 2h \u2014 enrich owns the Ollama lane 24/7"
       },
       "retry": {
         "on_failure": 2,
@@ -331,9 +419,9 @@
     {
       "id": "enrich-grok",
       "name": "AI Enrichment (Grok / xAI)",
-      "status": "active",
+      "status": "disabled",
       "lane": "grok",
-      "role": "Cloud Grok enrichment — runs concurrent with local Ollama. Soft-skips when XAI_API_KEY unset. Fills same entity facets as Ollama enrich.",
+      "role": "Cloud Grok enrichment \u2014 runs concurrent with local Ollama. Soft-skips when XAI_API_KEY unset. Fills same entity facets as Ollama enrich.",
       "uses_ollama": false,
       "uses_grok": true,
       "script": "scripts/ai_enrich_autonomous.py",
@@ -352,8 +440,8 @@
         "kind": "worker",
         "throttle_seconds": 8,
         "timezone": "America/Port_of_Spain",
-        "enabled": true,
-        "note": "KeepAlive Grok worker. Separate grok lock — parallel to Ollama. Soft-skip if no API key."
+        "enabled": false,
+        "note": "DISABLED \u2014 Grok off; local Ollama only"
       },
       "retry": {
         "on_failure": 3,
@@ -375,9 +463,9 @@
     {
       "id": "enrich-grok-b",
       "name": "AI Enrichment Waiter B (Grok)",
-      "status": "active",
+      "status": "disabled",
       "lane": "grok",
-      "role": "Grok waiter — picks up when enrich-grok releases. Cap 1 Grok generation via grok lock.",
+      "role": "Grok waiter \u2014 picks up when enrich-grok releases. Cap 1 Grok generation via grok lock.",
       "uses_ollama": false,
       "uses_grok": true,
       "script": "scripts/ai_enrich_autonomous.py",
@@ -396,8 +484,8 @@
         "kind": "worker",
         "throttle_seconds": 10,
         "timezone": "America/Port_of_Spain",
-        "enabled": true,
-        "note": "KeepAlive Grok waiter. Soft-skip without key."
+        "enabled": false,
+        "note": "DISABLED \u2014 Grok off; local Ollama only"
       },
       "retry": {
         "on_failure": 3,
@@ -419,9 +507,9 @@
     {
       "id": "significance-grok",
       "name": "Significance Backfill (Grok)",
-      "status": "active",
+      "status": "disabled",
       "lane": "grok",
-      "role": "historicalSignificance via Grok. Shares grok lock with enrich-grok — not Ollama.",
+      "role": "historicalSignificance via Grok. Shares grok lock with enrich-grok \u2014 not Ollama.",
       "uses_ollama": false,
       "uses_grok": true,
       "script": "scripts/backfill_significance.py",
@@ -437,8 +525,8 @@
         "kind": "worker",
         "throttle_seconds": 60,
         "timezone": "America/Port_of_Spain",
-        "enabled": true,
-        "note": "Throttled vs enrich-grok so enrichment dominates Grok quota."
+        "enabled": false,
+        "note": "DISABLED \u2014 Grok off; local Ollama only"
       },
       "retry": {
         "on_failure": 2,
@@ -460,7 +548,7 @@
     {
       "id": "edges-grok",
       "name": "Edges Discovery (Grok)",
-      "status": "active",
+      "status": "disabled",
       "lane": "grok",
       "role": "LLM edge discovery via Grok (Relationships tab). Shares grok lock. Soft-skip without key.",
       "uses_ollama": false,
@@ -478,8 +566,8 @@
         "kind": "worker",
         "throttle_seconds": 120,
         "timezone": "America/Port_of_Spain",
-        "enabled": true,
-        "note": "KeepAlive but paced — Grok edge discovery after enrich-grok batches."
+        "enabled": false,
+        "note": "DISABLED \u2014 Grok off; local Ollama only"
       },
       "retry": {
         "on_failure": 2,
@@ -591,13 +679,13 @@
       "runner": "npx_tsx",
       "args": [
         "--local",
-        "--max=200"
+        "--max=400"
       ],
       "schedule": {
         "cron": "*/3 * * * *",
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "Every 3 min so enriched facets reach local Appwrite quickly."
+        "note": "Every 3 min; --max=400 so enrich backlog reaches audit_log fast."
       },
       "retry": {
         "on_failure": 2,
@@ -615,7 +703,7 @@
       "name": "Edges Extract (no LLM)",
       "status": "active",
       "lane": "edges",
-      "role": "Promote detailsJson.relationships into standalone edge records (--extract-only). Fills Relationships tab. No LLM — parallel to Ollama/Grok.",
+      "role": "Promote detailsJson.relationships into standalone edge records (--extract-only). Fills Relationships tab. No LLM \u2014 parallel to Ollama/Grok.",
       "uses_ollama": false,
       "script": "scripts/ai_edge_bot.py",
       "args": [
@@ -628,7 +716,7 @@
         "throttle_seconds": 20,
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "KeepAlive extract-only — continuous relationship promotion beside LLM lanes."
+        "note": "KeepAlive extract-only \u2014 continuous relationship promotion beside LLM lanes."
       },
       "retry": {
         "on_failure": 2,
@@ -652,7 +740,7 @@
       "name": "Edges Extract Waiter B",
       "status": "active",
       "lane": "edges",
-      "role": "Second extract-only waiter — grabs edges lock when free. No LLM.",
+      "role": "Second extract-only waiter \u2014 grabs edges lock when free. No LLM.",
       "uses_ollama": false,
       "script": "scripts/ai_edge_bot.py",
       "args": [
@@ -686,7 +774,7 @@
     },
     {
       "id": "seed-local",
-      "name": "Staged Git → Local Appwrite Seed",
+      "name": "Staged Git \u2192 Local Appwrite Seed",
       "status": "active",
       "lane": "network_write",
       "role": "Create-if-missing seed from data/appwrite-export into local Docker Appwrite (batched, cursor-advancing).",
@@ -715,7 +803,7 @@
     },
     {
       "id": "merge-cloud",
-      "name": "Cloud → Local Create-If-Missing Merge",
+      "name": "Cloud \u2192 Local Create-If-Missing Merge",
       "status": "active",
       "lane": "network_write",
       "role": "Delta-only catch-up: one-way merge cloud entity docs into local after bulk git seed. Never overwrites existing/local-only docs.",
@@ -730,7 +818,7 @@
         "cron": "15 */6 * * *",
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "Demoted to delta-only: every 6h ×100 after bulk git→local fill. Prefer cloud backup import for catch-up."
+        "note": "Demoted to delta-only: every 6h \u00d7100 after bulk git\u2192local fill. Prefer cloud backup import for catch-up."
       },
       "respect_blackout": true,
       "yield_on_scraper_process": false,
@@ -740,7 +828,7 @@
     },
     {
       "id": "merge-cloud-audit",
-      "name": "Cloud → Local Audit Log Merge",
+      "name": "Cloud \u2192 Local Audit Log Merge",
       "status": "active",
       "lane": "network_write",
       "role": "Delta-only create-if-missing merge of cloud audit_log into local.",
