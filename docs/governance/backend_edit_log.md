@@ -2017,3 +2017,1797 @@
 - **Model:** ollama
 - **Enriched:** 1 | **Failed:** 0
 - **Entities:** gaius-coelius-caldus
+
+### AI Enrichment — 2026-11-07T15:57:26Z
+
+- **Model:** ollama
+- **Enriched:** 6 | **Failed:** 2
+- **Entities:** bodh-gaya, quintus-servilius-structus-priscus, antigonus-i-monophthalmus, yadail-dharih-i, rufinus-of-byzantium, bertha-of-artois
+
+### AI Enrichment — 2026-11-07T16:02:11Z
+
+- **Model:** ollama
+- **Enriched:** 3 | **Failed:** 0
+- **Entities:** antigonus-i-monophthalmus, gaius-plautius-proculus, publius-servilius-priscus-structus
+
+### AI Enrichment — 2026-11-07T17:06:49Z
+
+- **Model:** ollama
+- **Enriched:** 7 | **Failed:** 1
+- **Entities:** annales-veteris-testamenti, philogonius-of-antioch, postumus-aebutius-helva-cornicen, socrates-chrestus, pamphilus-of-alexandria, enrique-de-cardona-y-enríquez, enrique-de-cardona-y-enrquez
+
+### AI Enrichment — 2026-11-07T17:07:31Z
+
+- **Model:** ollama
+- **Enriched:** 6 | **Failed:** 2
+- **Entities:** annales-veteris-testamenti, philogonius-of-antioch, postumus-aebutius-helva-cornicen, socrates-chrestus, pamphilus-of-alexandria, enrique-de-cardona-y-enríquez
+
+### AI Enrichment — 2026-11-07T17:14:21Z
+
+- **Model:** ollama
+- **Enriched:** 6 | **Failed:** 2
+- **Entities:** mirian-ii-of-iberia, pêro-da-covilhã, epistle-of-jude, quotations-from-chairman-mao-tse-tung, gitanjali, beli-ab-eiludd
+
+### AI Enrichment — 2026-11-07T17:25:13Z
+
+- **Model:** ollama
+- **Enriched:** 7 | **Failed:** 1
+- **Entities:** pro-da-covilh, beli-ab-eiludd, eletu-kekere, saint-servatius, lucius-saenius-balbinus, lucius-furius-medullinus, gurguit-barbtruc
+
+### AI Enrichment — 2026-11-07T19:20:35Z
+
+- **Model:** ollama
+- **Enriched:** 22 | **Failed:** 2
+- **Entities:** ishanavarman-ii, tudhaliya-ii, sin-iddinam, geography, pelagius-ii, haito, matteo-ii-visconti, giovanni-battista-consiglieri, pier-paolo-vergerio, paulinus-i-of-aquileia ... +12 more
+
+### AI Enrichment — 2026-11-07T19:41:07Z
+
+- **Model:** ollama
+- **Enriched:** 20 | **Failed:** 4
+- **Entities:** nashwn-ibn-sad-al-imyar, hori-ii, alessandro-cesarini, marino-caracciolo, john-of-gorze, mostar, newel-k-whitney, symmachus, fan-jian, publius-lucretius-tricipitinus ... +10 more
+
+### AI Enrichment — 2026-11-07T20:22:25Z
+
+- **Model:** ollama
+- **Enriched:** 6 | **Failed:** 2
+- **Entities:** jie-of-xia, marcus-valerius-volusus, orlando-furioso, falco-of-maastricht, guy-de-bourgogne, reniero-zeno
+
+### AI Enrichment — 2026-11-07T21:25:36Z
+
+- **Model:** ollama
+- **Enriched:** 41 | **Failed:** 7
+- **Entities:** herintsalama-rajaonarivelo, munju, helü, hel, kalinga-magha, ostrogota, andromachus-the-elder, methodius-of-olympus, ailbe-of-emly, simon-islip ... +31 more
+
+### AI Enrichment — 2026-11-07T22:13:30Z
+
+- **Model:** ollama
+- **Enriched:** 42 | **Failed:** 6
+- **Entities:** jarosław-duke-of-opole, odysseas-androutsos, andrea-vanni, antnio-martins-de-chaves, qiu-ying, lucius-verginius-tricostus-esquilinus, manius-rabuleius, conrad-i-of-salzburg, menkheperre, david-beaton ... +32 more
+
+### AI Enrichment — 2026-11-07T22:54:15Z
+
+- **Model:** ollama
+- **Enriched:** 41 | **Failed:** 7
+- **Entities:** manius-rabuleius, gudrid-thorbjarnardóttir, antipater-of-bostra, giacomo-colonna, ludovico-prodocator, nicol-da-ponte, basseterre, anthimus-of-nicomedia, celestine-iv, ibn-abi-al-khisal ... +31 more
+
+### AI Enrichment — 2026-11-08T00:43:56Z
+
+- **Model:** ollama
+- **Enriched:** 19 | **Failed:** 1
+- **Entities:** hip-hop, rhetoric, richard-of-saint-victor, idomeneus-of-lampsacus, emilian-of-cogolla, cleopatra-selene-ii, bademus, caius, eunomius-of-cyzicus, felix-iii ... +9 more
+
+### AI Enrichment — 2026-11-08T01:31:11Z
+
+- **Model:** ollama
+- **Enriched:** 18 | **Failed:** 2
+- **Entities:** peder-mnsson, ed-dub-mac-colmin, adrastus-of-aphrodisias, argonautica, mani, the-pillow-book, eardwulf-of-kent, aelius-donatus, shah-jalal, ismenias ... +8 more
+
+### AI Enrichment — 2026-11-08T01:38:49Z
+
+- **Model:** ollama
+- **Enriched:** 54 | **Failed:** 10
+- **Entities:** theagenes-of-rhegium, murat-beg-tardi, john-iv-of-saxe-lauenburg, reginald-pecock, mesh-ki-ang-gasher, papulus, john-ix, sakir-har, adi-ibn-zayd, gobryas ... +44 more
+
+### AI Enrichment — 2026-11-08T02:25:51Z
+
+- **Model:** ollama
+- **Enriched:** 16 | **Failed:** 4
+- **Entities:** mul-of-kent, thoros-i-prince-of-armenia, constitutional-monarchy, book-of-mormon, gomoarius, mahinda-iv-of-anuradhapura, eystein-halfdansson, nguanamthom, al-fadl-ibn-abbas, wilhelm-von-brandenburg ... +6 more
+
+### AI Enrichment — 2026-11-08T03:13:44Z
+
+- **Model:** ollama
+- **Enriched:** 55 | **Failed:** 9
+- **Entities:** lucius-cornificius, wadjkare, oenopides, stabat-mater, lucius-apronius, mul-of-kent, thoros-i-prince-of-armenia, constitutional-monarchy, book-of-mormon, gomoarius ... +45 more
+
+### AI Enrichment — 2026-11-08T03:14:14Z
+
+- **Model:** ollama
+- **Enriched:** 19 | **Failed:** 1
+- **Entities:** comet, yiran-qaghan, playboy, ichasagua, hippalus, sigismondo-gonzaga, joseph-of-freising, guillaume-fillastre, nostrianus, pero-fernandes-sardinha ... +9 more
+
+### AI Enrichment — 2026-11-08T04:02:04Z
+
+- **Model:** ollama
+- **Enriched:** 20 | **Failed:** 0
+- **Entities:** don-quixote, ansovinus, clement-iii, benedict-ix, epiphanius-of-pavia, boniface-vi, trechn, benedict-vi, boniface-ii, lian-po ... +10 more
+
+### AI Enrichment — 2026-11-08T05:15:12Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** a-portrait-of-the-artist-as-a-young-man, reinbern, felix-i, tiberius-aemilius-mamercinus, danish, mac-grine, alfonso-iv-of-len, giambattista-orsini, severus-of-trier, kheti-v ... +20 more
+
+### AI Enrichment — 2026-11-08T05:21:02Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** juliana-falconieri, yoga-sutras-of-patanjali, pieter-nanninck, evagrius-of-antioch, quintus-fabius-vibulanus-ambustus, titus-geganius-macerinus, mac-gréine, alfonso-iv-of-león, vologases-i-of-parthia, imyremeshaw ... +19 more
+
+### AI Enrichment — 2026-11-08T05:44:11Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** jan-latalski, bertrand-de-saint-martin, agnes-dharcourt, amico-agnifili, maximus-of-turin, john-i-sanudo, ecgberht-of-kent, french-southern-and-antarctic-lands, romen, baga ... +21 more
+
+### AI Enrichment — 2026-11-08T05:44:43Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** epistle-to-the-romans, pomponius-porphyrion, rhuddfedel-frych, ennio-filonardi, henut-taui, nicolas-rolin, hugh-of-poitiers, youtab, yaqub-ibn-ishaq-al-israili, justin ... +20 more
+
+### AI Enrichment — 2026-11-08T06:17:23Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** jn-arason, bülbül-hatun, publius-calvisius-tullus-ruso, sopater-of-apamea, wenceslaus-ii-of-bohemia, andrés-de-urdaneta, domenico-morosini, comita-of-gallura, givi-amilakhvari, head-of-state ... +18 more
+
+### AI Enrichment — 2026-11-08T06:17:36Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** jn-arason, archbishop-sisinnius-i-of-constantinople, bülbül-hatun, hallstatt-culture, bernold, marcus-aemilius-barbula, lou-jing, alpin-de-châlons, arnošt-of-pardubice, landolfo-brancaccio ... +18 more
+
+### AI Enrichment — 2026-11-08T06:39:24Z
+
+- **Model:** ollama
+- **Enriched:** 32 | **Failed:** 0
+- **Entities:** censorius, reggae, andronikos-doukas, niqmaddu-ii, robert-bylot, novatian, sergius-paulus, shō-sei, pelagio-galvani, university-of-cambridge ... +22 more
+
+### AI Enrichment — 2026-11-08T06:47:08Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** king-xiao-of-zhou, rhun-ab-arthgal, garca-lpez-de-crdenas, ottaviano-degli-ubaldini, arnot-of-pardubice, john-maffey-1st-baron-rugby, gindibu, gjon-buzuku, parnajom-of-iberia, titus-romilius-rocus-vaticanus ... +17 more
+
+### AI Enrichment — 2026-11-08T07:05:53Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** blbl-hatun, fastida, flavius-salia, maximianus-of-ravenna, hanalaa, giovanni-domenico-de-cupis, aure, bogumił, vindex, marcus-octavius ... +18 more
+
+### AI Enrichment — 2026-11-08T07:08:36Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** victor-maurus, second-epistle-to-the-corinthians, acesias, baldwin-of-alna, pesakh, michael-palaiologos, nicholas-of-šalčininkai, buldus, artabanus-iv-of-parthia, francisco-roldán ... +21 more
+
+### AI Enrichment — 2026-11-08T07:38:40Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** diana-degli-andalò, pietro-accolti, al-ashraf, lamprus-of-athens, hablum, breage, wang-san-ak, arnulf-of-chocques, mascezel, ciniod-ii ... +19 more
+
+### AI Enrichment — 2026-11-08T07:40:52Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** stanisław-kostka-czartoryski, jan-čapek-of-sány, ciniod-i, tobias-el-khazen, leo-phokas-the-younger, haka-of-oahu, cynddylan, paulo-da-gama, leonardo-dati, bucolus ... +17 more
+
+### AI Enrichment — 2026-11-08T08:10:47Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** second-epistle-to-the-corinthians, notker-of-liège, thrasaric, françoise-damboise, wartislaw-vii-duke-of-pomerania, conall-cóel, dondup-tseten-dorje, andouin-aubert, alexander-iv, pietro-lippomano ... +19 more
+
+### AI Enrichment — 2026-11-08T08:22:08Z
+
+- **Model:** ollama
+- **Enriched:** 25 | **Failed:** 7
+- **Entities:** harald-grenske, dream-of-the-red-chamber, hydrology, parsman-v-of-iberia, marianus-ii-of-torres, george-herbert, alessandro-mattei, neferkare-ninth-dynasty, book-of-revelation, gnaeus-genucius-augurinus ... +15 more
+
+### AI Enrichment — 2026-11-08T08:45:23Z
+
+- **Model:** ollama
+- **Enriched:** 32 | **Failed:** 0
+- **Entities:** finnian-of-moville, future, li-su, conaire-cóem, cecilia-of-normandy, croesus, julian-of-le-mans, fulcran, titus-verginius-tricostus-rutilus, flavius-caper ... +22 more
+
+### AI Enrichment — 2026-11-08T08:48:01Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** manuel-pessanha, zacharias-rhetor, kingdom-of-the-netherlands, publius-sestius-capitolinus-vaticanus, barom-reamea, duan-xingzhi, timocharis, giovanni-giacomo-sclafenati, clement-ii, lucas-watzenrode ... +18 more
+
+### AI Enrichment — 2026-11-08T09:15:53Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** spotify, sláine-mac-dela, osmund-of-sussex, vsishka, william-melton, memnon-of-rhodes, ceretic-of-elmet, gohard-of-nantes, paul-iii, hetepheres-i ... +20 more
+
+### AI Enrichment — 2026-11-08T09:19:21Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** conall-cel, lucius-quinctius-cincinnatus, alexander-vi, metrodorus-of-chios, halime-sultan, neanthes-of-cyzicus, piotr-i, hafz-mehmed-paa, sláine-mac-dela, obez ... +19 more
+
+### AI Enrichment — 2026-11-08T09:45:54Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** memnon-of-rhodes, vasos-mavrovouniotis, cybi, wigmund, psychoanalysis, publius-carisius, cathal-mac-edo, pekahiah, pahemnetjer, guglielmo-fieschi ... +20 more
+
+### AI Enrichment — 2026-11-08T09:51:59Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** aghatai-khan, quintus-claudius-quadrigarius, gonzalo-de-mendoza, albert-suerbeer, marcus-valerius-messalla-messallinus, vāsishka, aemilius-asper, dedumose-i, harkhuf, celestine-i ... +17 more
+
+### AI Enrichment — 2026-11-08T10:11:40Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** ashot-iii-of-armenia, hyginus, shahi-tegin, augustine-grimaldi, agathinus, conchobar-mac-tadg, werburgh, yin-mo, roman-danylovich, childebert-i ... +18 more
+
+### AI Enrichment — 2026-11-08T10:26:24Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** ceretic-guletic, virius-lupus, the-communist-manifesto, khasekhemwy, stefano-palosti-de-verayneris, frumar, dedumose-ii, ibrhm-al-fazr, european-free-trade-association, darius-ii ... +20 more
+
+### AI Enrichment — 2026-11-08T10:42:18Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** ceretic-guletic, mahipala-ii, barisone-iii-of-torres, benignus-of-todi, baal-i, yarlaganda, matteuccia-de-francesco, angelus-of-jerusalem, koskowola, valerius-gratus ... +17 more
+
+### AI Enrichment — 2026-11-08T11:06:25Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** hesiod, zoilus-i, jan-andruszewicz, sauve-damiens, mei-bo, george-i-of-imereti, colmn-of-dromore, miriam-altman, appius-claudius-caudex, blcaire-mac-gofrith ... +19 more
+
+### AI Enrichment — 2026-11-08T11:07:14Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** ateas, austromoine, wacław-wierzbicki, huni, pierre-thiam, fngen-mac-edo-duib, du-qiong, odo-arpin-of-bourges, philip-i-count-of-savoy, bardo ... +17 more
+
+### AI Enrichment — 2026-11-08T11:34:26Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** sneferka, hortar, latina, krzysztof-chodkiewicz, jános-forgách, claffone, pharasmanes-iii-of-iberia, argishti-i-of-urartu, ushshi, marone ... +20 more
+
+### AI Enrichment — 2026-11-08T11:37:20Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** asander, hymn, eutocius-of-ascalon, libon, ursula-of-mnsterberg, bongsang, agum-i, ponhea-yat, coel-hen, tatian ... +16 more
+
+### AI Enrichment — 2026-11-08T12:08:34Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** publius-volumnius-amintinus-gallus, obodas-iii, cunobeline, tróndur-í-gøtu, felix-of-como, ptahmose-son-of-menkheper, alberic-of-utrecht, napoleone-orsini-frangipani, lucius-annaeus-cornutus, mogadishu ... +16 more
+
+### AI Enrichment — 2026-11-08T12:11:18Z
+
+- **Model:** ollama
+- **Enriched:** 25 | **Failed:** 7
+- **Entities:** guillaume-court, jacopo-sadoleto, virtue, gaius-suetonius-paulinus, lollianus-mavortius, atlanersa, theudemeres, cellach-mac-máele-coba, hkun-law, aspacures-ii-of-iberia ... +15 more
+
+### AI Enrichment — 2026-11-08T13:09:11Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** titus-aurelius-fulvus, antiochis, theodora-komnene, matthäus-lang-von-wellenburg, astorgio-agnensi, vetranio, fei-yao, kunzang, pelopidas, lucius-antonius ... +20 more
+
+### AI Enrichment — 2026-11-08T13:09:22Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** tiptakzi, cellach-mac-mele-coba, juan-díaz-de-solís, hilary-of-arles, ibn-hibban, buddhamitra, traianus, alexander-neville, publius-cornelius-rutilus-cossus, báetán-mac-muirchertaig ... +19 more
+
+### AI Enrichment — 2026-11-08T17:13:41Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 21 | **Failed:** 0
+- **Entities:** marcus-manilius, pang-juan, quintus-sextius, sassetta, alexander-neville, darius-the-mede, crinagoras-of-mytilene, calimerius, marguerite-doingt, ulrich-of-zell ... +11 more
+
+### AI Enrichment — 2026-11-08T13:26:34Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** dafydd-gam, daduhepa, ariogaisus, great-britain, humbert-of-romans, crinagoras-of-mytilene, cardiology, social-media, hanno-the-elder, betn-mac-muirchertaig ... +18 more
+
+### AI Enrichment — 2026-11-08T13:42:30Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** caesar-of-dyrrhachium, castritian, republic-of-artsakh, dappula-i-of-anuradhapura, ptolemy-eupator, andries-bicker, paleolithic, ferenc-frangepán, lucius-lucretius-tricipitinus, constantine-iii-of-gallura ... +21 more
+
+### AI Enrichment — 2026-11-08T13:51:22Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** gerolamo-emiliani, caesar-of-dyrrhachium, castritian, manuele-zaccaria, republic-of-artsakh, ulrich-of-zell, sassetta, hans-putmans, henri-de-la-tour-dauvergne-duke-of-bouillon, kharbashikhu ... +19 more
+
+### AI Enrichment — 2026-11-08T14:16:27Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** coroebus-of-elis, kenneth-f-smith, urzigurumash, apollodorus-of-phaleron, henry-iii-of-brunswick-lüneburg, mirian-i-of-iberia, burnaburiash-i, albert-of-mainz, albino, merobaudes ... +18 more
+
+### AI Enrichment — 2026-11-08T14:31:32Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** bocchus-i, wang-dayuan, stanisaw-chodecki, sthryth, jima-of-silla, euphemia-of-racibrz, theodorus-of-asine, khosrau-iii, robert-i-count-of-hesbaye, 1918-1920-flu-pandemic ... +16 more
+
+### AI Enrichment — 2026-11-08T14:37:48Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** hans-putmans, rieul, rusa-i, raimondo-della-torre, antoine-bohier-du-prat, coirpre-cromm-mac-crimthainn, euphemia-of-racibórz, sankhenre-sewadjtu, joaqun-setant, womens-rights ... +16 more
+
+### AI Enrichment — 2026-11-08T15:05:49Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** spártokos-ii, publius-sempronius-tuditanus, cissa-of-sussex, niccolò-perotti, philippus-de-caserta, rajadhi-rajasinha-of-kandy, grattius, saint-aye, sextus-lucilius-bassus, zidanta-ii ... +17 more
+
+### AI Enrichment — 2026-11-08T15:25:35Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** avitus-of-vienne, henry-iii-of-england, francesco-chieregati, cynric-of-wessex, joaquín-setantí, zidanta-ii, gundekar-ii-of-eichsttt, zuo-si, metaphysics, diarmait-mac-nna-meic-murchada ... +18 more
+
+### AI Enrichment — 2026-11-08T15:27:14Z
+
+- **Model:** ollama
+- **Enriched:** 25 | **Failed:** 7
+- **Entities:** ireland, constantine-iii-of-abkhazia, anthemiolus, nineteen-eighty-four, eannatum-ii, computer-monitor, giovanni-salviati, anaxilas, cold-war, bentivenga-da-bentivengi ... +15 more
+
+### AI Enrichment — 2026-11-08T15:43:03Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** humban-haltash-ii, eleanor-of-anjou-queen-of-sicily, vercingetorix, tyrrhenian-sea, alexander-iii, lucius-afinius-gallus, jabi-of-silla, ashur-nirari-iii, oswald-von-wolkenstein, mutim-ibn-adi ... +20 more
+
+### AI Enrichment — 2026-11-08T16:05:58Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** giovanni-salviati, hildebold, gaius-servilius-geminus, anastasius-iv, asteroid-belt, demetrius-i-soter, henry-of-blois, so-tom, brendan-the-navigator, sebestyn-archbishop-of-esztergom ... +20 more
+
+### AI Enrichment — 2026-11-08T16:13:00Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** burnaburiash-i, tadc-mac-briain, gregory-i, bato-of-dardania, diuma, rudolf-i, kutir-nahhunte-iv, pepi-ii, southeast-asia, rené-de-prie ... +19 more
+
+### AI Enrichment — 2026-11-08T16:22:59Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** saint-alice, robert-pullen, myron-of-sicyon, georg-hesler, polycrates-of-ephesus, charles-of-provence, alexander-ypsilantis, arsaces-ii-of-parthia, dong-xi, macrian ... +20 more
+
+### AI Enrichment — 2026-11-08T16:40:31Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** humban-haltash-ii, artoces-of-iberia, cristina-daughter-of-edward-the-exile, pedro-fernández-manrique, quintus-petilius-secundus, rajyapala, zoticus-of-constantinople, st-ada, marcus-of-viterbo, manius-valerius-maximus-messalla ... +21 more
+
+### AI Enrichment — 2026-11-08T16:50:24Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** dong-xi, eulogius-of-córdoba, fot, ordoo-iv-of-len, muhammad-hayat-al-sindi, ramiro-iii-of-león, alusian-of-bulgaria, john-of-nepomuk, teles-of-megara, arsinoe-iii-of-egypt ... +18 more
+
+### AI Enrichment — 2026-11-08T17:02:54Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** dong-xi, narcissus-of-girona, polyaenus-of-lampsacus, the-city-of-god, artaxias-i-of-iberia, manius-valerius-maximus-messalla, bernat-calbó, gabriel-de-gramont, lacedaemonius, khosrau-the-usurper ... +18 more
+
+### AI Enrichment — 2026-11-08T17:18:24Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** philo-of-alexandria, sextus-quinctilius, loarn-mac-eirc, anna-of-kashin, sitriuc-mac-mair, jean-françois-de-la-trémoille, arsinoe-i, bernat-calb, alahis, parthenius-of-lampsacus ... +21 more
+
+### AI Enrichment — 2026-11-08T17:37:41Z
+
+- **Model:** ollama
+- **Enriched:** 23 | **Failed:** 9
+- **Entities:** enyego-dàvalos, sextus-quinctilius, daniel-the-stylite, docimus, jean-françois-de-la-trémoille, sunifred, mustafa-al-misbah, eugenius-of-carthage, titus-quinctius-atta, tiberius-julius-abdes-pantera ... +13 more
+
+### AI Enrichment — 2026-11-08T17:38:43Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** eugenius-of-carthage, ingvar-the-far-travelled, ealdwulf-of-sussex, herjólfur-bárðarson, odgar, perseus, apringius, soraya-hakuziyaremye, amara-dunqas, saint-pothinus ... +19 more
+
+### AI Enrichment — 2026-11-08T17:58:17Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** ardabur, geoffrey-ii-of-villehardouin, takamuko-no-kuromaro, neferka, gratus-of-aosta, ipuki, melchior-von-meckau, sigfred, ageladas, garcía-de-loaysa ... +19 more
+
+### AI Enrichment — 2026-11-08T18:18:36Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** ahmad-ibn-rustah, demetrius-of-thessaloniki, telecles, hugh-of-remiremont, anna-of-bulgaria, illus, ivan-dmitriev, śabara, publius-cornelius-lentulus-sura, urtak ... +19 more
+
+### AI Enrichment — 2026-11-08T18:27:51Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** ahmad-ibn-rustah, ptracu-cel-bun, titus-vinius, beatrice-of-ornacieux, tiberius-julius-theothorses, demetrius-of-thessaloniki, the-fox-and-the-grapes, angelo-sanudo, cassian-of-imola, maximilian-of-lorch ... +19 more
+
+### AI Enrichment — 2026-11-08T18:42:30Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** tiberius-julius-sauromates-i, gunther, maximus, aribert-archbishop-of-milan, himilco-fameas, gonario-i-of-lacon-gunale, ariobarzanes-i-of-cappadocia, messius-phoebus-severus, felix-ii, demophilus-of-thespiae ... +17 more
+
+### AI Enrichment — 2026-11-08T22:58:40Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 26 | **Failed:** 0
+- **Entities:** ulpius-marcellus, sextus-catius-clementinus-priscillianus, peter-kreimir-iv-of-croatia, arab-spring, ibn-al-dawadari, pierre-de-la-vergne, françois-joachim-de-pierre-de-bernis, acragas, ali-ibn-abi-bakr-al-harawi, giovanni-di-casali ... +16 more
+
+### AI Enrichment — 2026-11-08T19:02:13Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** ludvig-holberg, bartolomé-de-la-cueva-y-toledo, saint-ingrid-of-sknninge, ur-ningirsu-ii, izadgushasp, khaba, llywelyn-ap-merfyn, emperor-xian-of-han, sobekemsaf-i, quintus-fabius-memmius-symmachus ... +17 more
+
+### AI Enrichment — 2026-11-08T23:04:54Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 24 | **Failed:** 0
+- **Entities:** hélie-de-bourdeilles, malnutrition, eurasian-economic-union, alv-erlingsson, jerome, conakry, vettius-agorius-basilius-mavortius, spirituality, eochaid-mac-áeda-find, pasion ... +14 more
+
+### AI Enrichment — 2026-11-08T19:16:56Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** florian-geyer, ea-mukin-zeri, min-saw-mon, bala-i, gaius-antistius-reginus, zoilus, djedankhre-montemsaf, æthelstan-of-kent, ottaviano-riario, arno-of-salzburg ... +17 more
+
+### AI Enrichment — 2026-11-08T19:17:44Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** lucius-valerius-messalla-thrasea-priscus, nomus, john-stewart-1st-earl-of-atholl, han-fei, corentin-of-quimper, miltiades, bamako, appian, hovhannès-ier-mandakouni, marcus-junius-silanus-torquatus ... +21 more
+
+### AI Enrichment — 2026-11-08T19:42:46Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** so-tom-and-prncipe, mac-gréine, johann-gottfried-herder, lucius-furius-purpureo, jerome, umar-al-aqta, joseph-ben-ephraim-karo, first-epistle-to-timothy, easter-island, stephen-harding ... +18 more
+
+### AI Enrichment — 2026-11-08T19:54:18Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** nomus, bernard-of-vienne, dou-xian, imi, centwine-of-wessex, wenceslaus-ii-of-legnica, charles-i-de-croÿ, jan-gruszczyński, an-nasir-ahmad, diogenes-of-sinope ... +18 more
+
+### AI Enrichment — 2026-11-08T19:55:26Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** parthenius-of-lampsacus, ibn-hud, rabbi-ishmael, nuya, 3, pierre-desprès, wu-ban, conall-mac-áedáin, berthold-of-hanover, marcus-genucius-augurinus ... +19 more
+
+### AI Enrichment — 2026-11-08T20:26:54Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** lucius-manlius-torquatus, phylarchus, otto-i-of-olomouc, emperor-huan-of-han, francesco-francia, przemysaw-of-owicim, publius-aelius-ligus, hormizd-vi, jan-gruszczyski, caesaria-of-arles ... +17 more
+
+### AI Enrichment — 2026-11-08T20:38:18Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** anders-sunesen, marcus-minucius-rufus, rawn-ibn-muammad-al-st, kalokyros-delphinas, juvenal-of-narni, mamercus-aemilius-mamercinus, zdislava-from-lemberk, said-ibn-amir-al-jumahi, petar-hektorovi, erik-gnupsson ... +18 more
+
+### AI Enrichment — 2026-11-08T20:41:16Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** diego-gelmírez, shahabuddin-delawar, phayllos-of-croton, raḍwān-ibn-muḥammad-al-sāʻātī, antoninus-of-florence, orlkur-runlfsson, dafydd-ab-owain-gwynedd, charles-i-de-cro, agilulfus-of-cologne, hugoln-gavlovi ... +18 more
+
+### AI Enrichment — 2026-11-08T21:11:44Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** kalokyros-delphinas, agnes-of-bavaria, heinrich-isaac, sextus-of-chaeronea, henrique-dias, soffredo, caesarius-of-arles, mikoaj-iii-radziwi, neferkare-pepiseneb, gebhard-iii-of-constance ... +17 more
+
+### AI Enrichment — 2026-11-08T21:15:24Z
+
+- **Model:** ollama
+- **Enriched:** 19 | **Failed:** 1
+- **Entities:** rodrigo-de-bastidas, brard-de-got, netflix, volcatius-sedigitus, hugolín-gavlovič, eadberht-of-lindisfarne, cleopatra-ii-of-egypt, kamose, bartholomew-columbus, aerodynamics ... +9 more
+
+### AI Enrichment — 2026-11-08T21:23:47Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** bjarni-herjlfsson, yan-liang, amina-inloes, teutamus, jayapangus, abān-ibn-saʻīd, lanarote-de-freitas, mikołaj-iii-radziwiłł, pietro-capocci, information-technology ... +20 more
+
+### AI Enrichment — 2026-11-08T21:28:14Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** amina-inloes, leontios, edmund-abaka, zeno-of-citium, mellonius, popular-culture, gabriel-franchre, maximus-i-of-constantinople, am-thrse-joseph-masclet, messenger ... +18 more
+
+### AI Enrichment — 2026-11-08T21:57:21Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** emperor-xuan-of-han, maredudd-ab-owain-ab-edwin, smundr-fri, neurology, human-sexuality, skilurus, cybernetics, csar-gabriel-de-choiseul, gaius-memmius-regulus, marcus-gratidius ... +17 more
+
+### AI Enrichment — 2026-11-08T22:03:50Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** agrippinus-of-naples, colmán-of-lindisfarne, sabou-kem, neutron-star, johannes-soreth, andronicus-of-pannonia, geomorphology, creoda-of-wessex, visual-basic, pandolfo-masca-of-pisa ... +16 more
+
+### AI Enrichment — 2026-11-08T22:13:10Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** konrad-iii-the-old, rahotep, the-metamorphosis, kōtoku, celio-calcagnini, newaya-krestos, unitary-state, mahikeng, pertinax, fergus-mac-echdach ... +18 more
+
+### AI Enrichment — 2026-11-08T22:27:25Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** harivarman-ii, finan-of-lindisfarne, riccardo-petroni, julius-iii, tibullus, voice-over-ip, literacy, sigtrygg-gnupasson, bernhard-von-breydenbach, thales ... +20 more
+
+### AI Enrichment — 2026-11-08T22:41:02Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** lysimachus, aleksandr-bakunin, intellectual-property, sechnassach, dilmun, svatopluk-duke-of-bohemia, neferefre, niccolò-leoniceno, phaedrus, francis-of-brunswick-wolfenbüttel ... +20 more
+
+### AI Enrichment — 2026-11-08T23:03:38Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** nishandji-tadji-zade-djafer-elebi, durandus-of-saint-pourain, pierre-franois-hugues-dhancarville, purana-kassapa, marcus-livius-salinator, fyodor-minin, stanislaus-of-szczepanw, dracula, amalgaid-mac-éndai, hermogenian ... +17 more
+
+### AI Enrichment — 2026-11-08T23:15:43Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** king-zhaoxiang-of-qin, marcus-livius-salinator, nicols-de-cardona, astrometry, ulysses, ali-ibn-hammud-al-nasir, philip-i-of-croÿ-chimay, abu-shama-al-maqdiss, neferirkare-kakai, henry-iii-prince-of-anhalt-aschersleben ... +18 more
+
+### AI Enrichment — 2026-11-08T23:18:35Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** nicholas-of-ilok, niall-mac-eochada, gotthard-of-hildesheim, pride-and-prejudice, maximianus, talorgan-ii, glappo, leo-i-of-cava, gaspar-de-bracamonte-3rd-count-of-pearanda, rudolf-of-zhringen ... +19 more
+
+### AI Enrichment — 2026-11-08T23:47:25Z
+
+- **Model:** ollama
+- **Enriched:** 25 | **Failed:** 7
+- **Entities:** sextus-pompeius-festus, niccolò-de-niccoli, hipponicus-iii, jayasimha-siddharaja, asser-thorkilsson, r, ordoo-lvarez, lorenz, kapila, publius-postumius-albus-regillensis ... +15 more
+
+### AI Enrichment — 2026-11-08T23:56:22Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** johannes-ockeghem, hydrography, war-and-peace, mandane-of-media, franois-ducaud-bourget, 55, microeconomics, moby-dick, man-ibn-zaida-al-shaybani, domingo-martnez-de-irala ... +19 more
+
+### AI Enrichment — 2026-11-09T00:01:26Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** ilulu, gjin-gazulli, sambhaji, anna-of-hohenstaufen, marcus-herennius-picens, victor-of-solothurn, maha-sawa, amedi, mirim-elebi, juan-de-borja-lanzol-de-roman-el-mayor ... +16 more
+
+### AI Enrichment — 2026-11-09T00:21:45Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** heinrich-gro-von-trockau, louis-of-teck, william-worcester, 34, computer-programming, lucius-aemilius-paullus-macedonicus, nabarzanes, marcantonio-zimara, nanum, alonso-de-fonseca-y-ulloa ... +19 more
+
+### AI Enrichment — 2026-11-09T00:40:39Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** noman-bashir, gunderic, pamphilus-of-sulmona, isa-kelemechi, david-buchan, jakub-of-żnin, lucius-antistius-vetus, mallorca, robert-brionnet, linguistics ... +18 more
+
+### AI Enrichment — 2026-11-09T00:41:34Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** remmius-palaemon, the-adventures-of-pinocchio, lambert-iii, apion, netherlands, william-ii-of-athens, sanj, lubentius, philipp-von-neumann, libertarianism ... +17 more
+
+### AI Enrichment — 2026-11-09T01:00:15Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** lambert-iii, arnaud-de-pellegrue, theism, materials-science, paschal, arnail-franois-marquis-de-jaucourt, sicard-of-benevento, attilanus-of-zamora, adam-reiner, treaty-of-brest-litovsk ... +20 more
+
+### AI Enrichment — 2026-11-09T01:13:18Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** theodorus-priscianus, george-duke-of-brunswick-lneburg, leotychidas-ii, oliver-von-paderborn, emirate, diagonal, amsicora, john-of-segovia, gérard-du-puy, andalò-del-negro ... +18 more
+
+### AI Enrichment — 2026-11-09T01:23:25Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** oligarchy, bernardim-ribeiro, jon-kuvlung, gratian, nemesianus, lolita, andal-del-negro, g7, anund, wiching ... +21 more
+
+### AI Enrichment — 2026-11-09T01:25:47Z
+
+- **Model:** ollama
+- **Enriched:** 25 | **Failed:** 7
+- **Entities:** abu-shama-al-maqdiss, samuel-aba, juan-de-borja-lanzol-de-romaní-el-mayor, senn-mac-geirrcinn, gaius-antistius-vetus, althias, nuño-sánchez, epistle-to-the-colossians, kgyoku, theodore-of-mopsuestia ... +15 more
+
+### AI Enrichment — 2026-11-09T05:36:53Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 12 | **Failed:** 0
+- **Entities:** islamism, childrens-literature, lucius-aelius-stilo-praeconinus, physical-geography, soviet-afghan-war, heraclides-lembus, rajah-sulayman, donatus-magnus, john-of-wildeshausen, louis-gabriel-du-buat-nanay ... +2 more
+
+### AI Enrichment — 2026-11-09T05:43:28Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 22 | **Failed:** 0
+- **Entities:** echembrotus, patricia-may-urza, human-evolution, book-of-habakkuk, mahajanapada, nivard, infanta-philippa-of-coimbra, charles-erskine, gerard-geldenhouwer, cem-sultan ... +12 more
+
+### AI Enrichment — 2026-11-09T05:49:50Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 20 | **Failed:** 0
+- **Entities:** publius-petronius-turpilianus, loureno-de-almeida, ímar-ua-ímair, krešimir-i-of-croatia, pieter-nuyts, burchard-i, carlo-domenico-del-carretto, gil-de-torres, ferdinando-marescalchi, konstantinos-maliasenos ... +10 more
+
+### AI Enrichment — 2026-11-09T02:09:27Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** theodor-von-sitten, valerian-ii, mieszko-bolesławowic, johannes-martini, eleazar-of-worms, madame-bovary, sophia-of-bavaria, clovis-iv, scopas, reinald ... +17 more
+
+### AI Enrichment — 2026-11-09T02:11:10Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** basolus, john-raoul-petraliphas, herman-i-margrave-of-baden, narrative, software-engineering, jijeung-of-silla, lawrence-of-portugal, an-nasir-muhammad-ibn-qaitbay, heraclides-lembus, nicholas-iv ... +19 more
+
+### AI Enrichment — 2026-11-09T02:21:53Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** sosigenes-of-alexandria, spurius-carvilius-maximus, fei-yi, jayavarman-i, veterinary-medicine, albert-of-louvain, soviet-afghan-war, john-of-wildeshausen, neferkasokar, patricia-may-urza ... +17 more
+
+### AI Enrichment — 2026-11-09T02:42:14Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** berardo-dei-marsi, walter-of-palearia, bertrada-of-prm, federico-wanga, thomas-basin, mehmed-iv, parody, gnaeus-pinarius-cornelius-clemens, laodice-vii-thea, yarim-lim-of-alalakh ... +20 more
+
+### AI Enrichment — 2026-11-09T02:56:51Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** aulus-hirtius, cristbal-vaca-de-castro, donat-de-besanon, hermann-of-dorpat, fula, scythia, muammad-ibn-abb, goeric, jan-dymitr-solikowski, brian-urquhart ... +20 more
+
+### AI Enrichment — 2026-11-09T02:59:42Z
+
+- **Model:** ollama
+- **Enriched:** 25 | **Failed:** 7
+- **Entities:** owain-goch-ap-gruffydd, theodotus-of-antioch, ren-charles-de-maupeou, timor, paul-wolff-metternich, varese, roseline-de-villeneuve, paeonius-of-ephesus, domenico-grimani, cadwallon-ab-ieuaf ... +15 more
+
+### AI Enrichment — 2026-11-09T03:24:03Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** joão-gonçalves-zarco, tydfil, harry-potter-and-the-deathly-hallows, nepotian-of-asturias, senusret-iv, ricsige-of-northumbria, micha-jerzy-mniszech, musicology, theodwin-of-liège, andreas-van-cuijk ... +18 more
+
+### AI Enrichment — 2026-11-09T03:33:46Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** jakob-salomon-bartholdy, vsevolod-ii-of-kiev, slavomr, emperor-yuan-of-han, john-of-heinsberg, stanisaw-mateusz-rzewuski, johannes-von-baysen, uriel-grka, ithobaal-ii, albertanus-of-brescia ... +17 more
+
+### AI Enrichment — 2026-11-09T03:47:38Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** adl-lgnj, hermaeus, lucius-passienus-rufus, pausanias-of-orestis, loe-thai, othmar, simon-mepeham, numenius-of-apamea, geodesy, maría-a-balteira ... +18 more
+
+### AI Enrichment — 2026-11-09T04:14:43Z
+
+- **Model:** ollama
+- **Enriched:** 24 | **Failed:** 8
+- **Entities:** gaius-of-milan, adrianus-petit-coclico, willigis, árni-þorláksson, otbert-of-lige, manuc-bei-mirzoyan, berenguer-de-cruïlles, quakers, han-mynghoe, alessandro-leopardi ... +14 more
+
+### AI Enrichment — 2026-11-09T04:16:30Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** karibil-watar-i, commonwealth-of-independent-states, quintus-cloelius-siculus, wigbold-von-holte, pao-ching-yen, pomponius-of-naples, mara-a-balteira, grigorios-of-antioch, rolandino-of-padua, stephen-of-besançon ... +17 more
+
+### AI Enrichment — 2026-11-09T04:30:57Z
+
+- **Model:** ollama
+- **Enriched:** 24 | **Failed:** 8
+- **Entities:** willigis, basque, k-g-ambegaonkar, marcantonio-barbaro, delft, abū-kāmil-shujāʿ-ibn-aslam, shalmaneser-iv, stna-airt, radboud-of-utrecht, frederick-iv-of-baden ... +14 more
+
+### AI Enrichment — 2026-11-09T04:51:53Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** selbach-mac-ferchair, guy-du-faur-seigneur-de-pibrac, nechtan-morbet, fernando-snchez-de-tovar, guido-da-velate, ermengarde-of-burgundy, smund-kresson, íte-of-killeedy, marcus-valerius-messala-corvinus, jan-van-virneburg ... +17 more
+
+### AI Enrichment — 2026-11-09T04:53:46Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** decimus-haterius-agrippa, den, magnacar, nicanor-of-stageira, flavius-bauto, kiya-afrasiyab, gopala-iii, alypius, theoderich-von-wied, saint-modoald ... +19 more
+
+### AI Enrichment — 2026-11-09T05:09:35Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** fan-zhen, lucius-caecilius-metellus-denter, johann-iii-romka, one-hundred-years-of-solitude, billboard, quintus-pompeius-sosius-falco, leontius-of-caesarea, xenophanes, jericho, gaius-fonteius-capito ... +18 more
+
+### AI Enrichment — 2026-11-09T05:23:59Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** guido-da-velate, chrodobert, cadwgan-ap-bleddyn, francis-wogan-festing, semi-presidential-system, franois-savary-de-brves, lucius-caesonius-ovinius-manilius-rufinianus-bassus, agostino-giustiniani, musical, hamilcar-barca ... +21 more
+
+### AI Enrichment — 2026-11-09T05:38:10Z
+
+- **Model:** ollama
+- **Enriched:** 25 | **Failed:** 7
+- **Entities:** gaius-fonteius-capito, jonas-i-losovičius, diogo-soares, marcus-antonius-creticus, bartolom-torres-naharro, william-of-saliceto, shusha, priarius, gruffudd-fychan-i, bidoux-pregent ... +15 more
+
+### AI Enrichment — 2026-11-09T05:48:26Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** thomas-ebendorfer, guan-daosheng, solina-nyirahabimana, the-prince, salomea-of-poland, castries, bárid, zina-kalay-kleitman, polyperchon, urbice-of-metz ... +17 more
+
+### AI Enrichment — 2026-11-09T06:11:11Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** ivan-moskvitin, friedrich-von-zollern, skalla-grímr, senenmut, jaya-harivarman-i, james-lancaster, funmilade-akingbagbohun, blessed-beatrice-deste, byzantium, plechelm ... +16 more
+
+### AI Enrichment — 2026-11-09T06:12:16Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** gynaecology, jhalkaribai, giovanni-battista-del-tasso, yudra-nyingpo, violant-of-bar, gmundur-plsson, ustad-isa, ono-no-imoko, chaldea, tedald ... +19 more
+
+### AI Enrichment — 2026-11-09T06:25:42Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** merdjefare, hazard-analysis-and-critical-control-points, philippe-emmanuel-duke-of-mercœur, quintus-lucretius-vespillo, áurea-of-san-millán, rhodo, pll-jnsson, heinrich-xiii-prince-reuss-of-greiz, quintus-marcius-turbo, eochaid-son-of-rhun ... +19 more
+
+### AI Enrichment — 2026-11-09T06:50:28Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** lucius-caecilius-metellus-denter, alexander-de-brus, publius-silius-nerva, environmental-protection, destiny, regelinda, pierre-sylvain-rgis, beslan, onomacles, kabir ... +16 more
+
+### AI Enrichment — 2026-11-09T06:56:00Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** eochaid-son-of-rhun, sebestyn-tindi-lantos, crimean-khanate, antonio-cornazzano, south-china-sea, giorgio-valla, fadrique-lvarez-de-toledo, katyayana, ankara, wacaw-seweryn-rzewuski ... +16 more
+
+### AI Enrichment — 2026-11-09T07:04:25Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** plutocracy, acadmie-franaise, jacobus-de-teramo, yan-hui, jaromr, vtsyyana, aulus-plautius, john-dominici, al-rabi-ibn-yunus, juan-de-lava ... +17 more
+
+### AI Enrichment — 2026-11-09T07:30:33Z
+
+- **Model:** ollama
+- **Enriched:** 25 | **Failed:** 7
+- **Entities:** bai-renfu, franciszek-krasiski, bangla, tatadim, lucius-postumius-albinus-megellus, ed-alln, lund, robert-ii-of-capua, marianus-i-of-torres, edmund-burke ... +15 more
+
+### AI Enrichment — 2026-11-09T07:31:57Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** niketas-chalkoutzes, franciszek-krasiski, ulfilas, ernest-ii-of-saxony, irish-sea, yagbeu-seyon, maria-da-conceição-nobre-cabral, sewadjkare-iii, vmara-peres, palindrome ... +18 more
+
+### AI Enrichment — 2026-11-09T07:44:37Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** abul-fadl-al-balami, robert-of-nantes, tatadim, english, cosmic-microwave-background, gómez-manrique, anushirvan-ibn-khalid, james-of-baux, cassius-chaerea, konstantinos-laskaris ... +20 more
+
+### AI Enrichment — 2026-11-09T08:12:03Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** determinism, limit, khosrow-ii, sebastian-maggi, vedast, vezhan-buzmihr, hugo-van-lannoy, macedonian, civil-engineering, francisco-galcerán-de-lloris-y-de-borja ... +17 more
+
+### AI Enrichment — 2026-11-09T08:16:35Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** theodotus-of-byzantium, isidore-of-chios, physiology, ralph-montagu-1st-duke-of-montagu, haneefah-adam, graph-theory, muammad-b-ibrhm-b-sad-shams-al-dn-ab-abda-al-anr, elara, faustus-of-mileve, niccolò-dacciapaccio ... +17 more
+
+### AI Enrichment — 2026-11-09T08:23:09Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** gilles-i-aycelin-de-montaigut, william-the-hardy-lord-of-douglas, biometrics, nikolaos-of-otranto, francisco-galcern-de-lloris-y-de-borja, abdullah-ibn-hudhafah-as-sahmi, lydia-of-thyatira, orophernes-of-cappadocia, antiochus-of-ascalon, gustav-trolle ... +20 more
+
+### AI Enrichment — 2026-11-09T08:55:27Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** franchinus-gaffurius, engelberga, aron, international-labour-organization, appius-annius-trebonius-gallus, alessandro-della-spina, christian-günther-von-bernstorff, john-peckham, abd-al-wid-al-marrkush, aribo ... +19 more
+
+### AI Enrichment — 2026-11-09T08:56:27Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** landnmabk, heraldry, frothar-of-toul, alesso-baldovinetti, myspace, sebastianus, ivan-osterman, konstanty-ostrogski, juan-del-encina, jacob-of-mies ... +19 more
+
+### AI Enrichment — 2026-11-09T08:58:16Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** icelandic, zaradust-e-khuragen, fort-de-france, flavius-appalius-illus-trocundes, joo-fernandes, caspar-aquila, lucius-papirius-mugillanus, ʻabd-al-wāḥid-al-marrākushī, acts-of-the-apostles, ebremaro-di-thérouanne ... +16 more
+
+### AI Enrichment — 2026-11-09T09:31:27Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** jordi-dornós, eusebius-of-myndus, safiyyah-bint-abd-al-muttalib, amazasp-ii-of-iberia, andrzej-zebrzydowski, immunology, anthimos-gazis, csar-oudin, biophysics, dōjo-nyūdōshinnō ... +19 more
+
+### AI Enrichment — 2026-11-09T09:35:03Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** gorgonius, richard-foxe, zhang-xuan, raymond-nonnatus, piotr-dunin, henry-vii-of-england, albert-ii-duke-of-austria, odo-of-cambrai, book-of-tobit, ponç-hug-iv-count-of-empúries ... +19 more
+
+### AI Enrichment — 2026-11-09T09:42:45Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** richard-foxe, apostles-creed, seraphina-sforza, tryphiodorus, phaedrus-the-epicurean, csar-oudin, tang-jian, acharya-vamana, esteban-fernández-de-castro, jan-žižka ... +17 more
+
+### AI Enrichment — 2026-11-09T10:14:50Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** tamagnino, siena, constantine-lempereur-van-oppyck, pon-hug-iv-count-of-empries, pal-engjëlli, marcus-cluvius-rufus, theophiliscus, hugues-de-lionne, presbyterianism, diego-lopez-de-pacheco-2nd-duke-of-escalona ... +18 more
+
+### AI Enrichment — 2026-11-09T10:16:14Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** aelius-gallus, eudorus-of-alexandria, sneferu, gaius-silius, jan-ika, sigismund-albicus, venevisin, tielman-susato, cognition, rudolf-van-diepholt ... +17 more
+
+### AI Enrichment — 2026-11-09T10:28:20Z
+
+- **Model:** ollama
+- **Enriched:** 25 | **Failed:** 7
+- **Entities:** odo-of-cambrai, dominican-order, wuthering-heights, enhegal, hierocles, kingdom-of-prussia, gil-gonzález-dávila, panini, ida-of-toggenburg, joseph-roettiers ... +15 more
+
+### AI Enrichment — 2026-11-09T10:53:25Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** lithuanian, attala, joseph-bonomi-the-younger, william-of-tripoli, 1-maccabees, gaspare-del-fosso, synesius-of-cyrene, david-alopaeus, albert-pighius, second-book-of-kings ... +19 more
+
+### AI Enrichment — 2026-11-09T10:57:53Z
+
+- **Model:** ollama
+- **Enriched:** 18 | **Failed:** 2
+- **Entities:** thomas-elmham, hyecho, gandhara, christian-detlev-reventlow, jakov-lukarevi, federation, paul-of-burgos, priscus-of-epirus, bupalus, sharaf-al-zaman-al-marwazi ... +8 more
+
+### AI Enrichment — 2026-11-09T11:03:11Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** dang-hyang-nirartha, jan-joosten-van-lodensteijn, swithun, margaret-of-castello, pedro-rodrguez, john-doukas, sir-george-staunton-2nd-baronet, jørgen-sadolin, juan-boscán-almogáver, david-anhaght ... +16 more
+
+### AI Enrichment — 2026-11-09T11:28:13Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** wendjebauendjed, robert-i-of-burgundy, cockburn-town, giovanni-battista-zeno, philoxenus-of-mabbug, brochwel-ysgithrog, world-meteorological-organization, iberomaurusian, lucius-fulvius-curvus, benedictines ... +21 more
+
+### AI Enrichment — 2026-11-09T11:37:56Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** hud, giuseppe-archinto, matthäus-schiner, jean-i, philip-stanhope-4th-earl-of-chesterfield, the-washington-post, gaius-julius-erucius-clarus-vibianus, maurice-de-saxe, valentinian-iii, simon-kenton ... +20 more
+
+### AI Enrichment — 2026-11-09T11:47:57Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** quintus-caecilius-metellus-pius-scipio-nasica, theravda, spiridon-lusi, shedsu-nefertum, kingdom-of-naples, zong-ai, archias-of-thurii, john-chrysostom, reformed-christianity, gaspar-de-ávalos-de-la-cueva ... +18 more
+
+### AI Enrichment — 2026-11-09T12:08:42Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** gaius-julius-erucius-clarus-vibianus, shabbethai-donnolo, wegaf, gaius-fufius-geminus, yaroslav-ii-of-vladimir, pius-ix, resego-kgosidintsi, bamshad, joseph-hueber, mlada ... +19 more
+
+### AI Enrichment — 2026-11-09T12:11:29Z
+
+- **Model:** ollama
+- **Enriched:** 32 | **Failed:** 0
+- **Entities:** mithridates-iv-of-parthia, subset, euphemism, damarchus, zheng-guo, chrodobertus, innocenzo-di-pietro-francucci-da-imola, manuel-gmez-pedraza, homage-to-catalonia, mile-peynot ... +22 more
+
+### AI Enrichment — 2026-11-09T12:24:09Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** franois-marie-marquis-de-barthlemy, esen-taishi, christian-mauritius-of-königsegg-rothenfels, citizenship, christoph-rudolff, kanada, pawe-holszaski, zhao-mengjian, cora-richardson-hodge, edward-von-lngus ... +18 more
+
+### AI Enrichment — 2026-11-09T12:53:41Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** marcus-peducaeus-stloga-priscinus, jean-iv-de-beaumont, marcus-petreius, olivier-van-noort, lucius-postumius-albinus, lucius-verginius-rufus, micha-kazimierz-ogiski, lucius-aemilius-mamercinus, the-younger-lady, datis ... +17 more
+
+### AI Enrichment — 2026-11-09T12:55:37Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** mariehamn, john-ii-duke-of-lorraine, information-theory, śaunaka, alexander-of-jlich, leninism, kingston-upon-hull, publius-rutilius-lupus, henry-iv-of-england, lucrezia-buti ... +16 more
+
+### AI Enrichment — 2026-11-09T13:09:13Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** charles-archbishop-of-mainz, arignote, philip-ii-count-of-nevers, hanibal-luci, aibert, tauriskos-of-tralles, alfonso-enrquez, zakariya-al-qazwini, usama-ibn-zayd, bridei-v ... +17 more
+
+### AI Enrichment — 2026-11-09T13:31:32Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** palla-strozzi, alexander-callimachis, silseong-of-silla, teti, marinus-of-tyre, eudes-rigaud, gnaeus-fulvius-centumalus-maximus, telauges, sh-toku, aleksander-michał-sapieha ... +17 more
+
+### AI Enrichment — 2026-11-09T13:44:17Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** eudes-rigaud, north-america, mitanni, mikoaj-hlebowicz, douglas-clavering, polycrates-of-argos, hkan-the-red, philippe-mouskes, al-husayn-ibn-said, coptic ... +16 more
+
+### AI Enrichment — 2026-11-09T13:55:34Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** tauriskos-of-tralles, jean-iv-de-beaumont, krenites-arotras, niall-glúndub, dionysius-of-halicarnassus, abu-asim-muhammad-ben-ahmad, urology, manius-pomponius-matho, mikołaj-hlebowicz, charles-philippe-de-croÿ-marquis-dhavré ... +17 more
+
+### AI Enrichment — 2026-11-09T14:21:55Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** ottone-visconti, computer-security, hugh-of-fosses, kenneth-ii-of-scotland, ísleifur-gissurarson, ata-al-ayyubi, francesco-filelfo, hanno, gian-giacomo-adria, visigothic-kingdom ... +16 more
+
+### AI Enrichment — 2026-11-09T14:32:28Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** peter-nolasco, theodore, quintus-pompeius-senecio-sosius-priscus, adad-guppi, william-of-rosenberg, shurasena, pan-chakri-chao-phraya-kosathibodi, jrg-breu-the-elder, mtwara, joan-darag ... +18 more
+
+### AI Enrichment — 2026-11-09T14:38:41Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** ōtomo-no-satehiko, proculus, christian-tuxen-falbe, papinian, tiberius-claudius-candidus, švitrigaila, bonaventure, saint-wenceslaus-i-duke-of-bohemia, sigismund-kstutaitis, diether-of-nassau ... +17 more
+
+### AI Enrichment — 2026-11-09T15:01:35Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** hugh-of-fosses, polus, cesare-monti, lê-thái-tông, arnaud-du-ferrier, coriscus-of-scepsis, mussa-bin-bique, flix-varela, john-count-of-werdenberg-trochtelfingen, giovanni-da-milano ... +17 more
+
+### AI Enrichment — 2026-11-09T15:15:33Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** cesare-monti, judoc-ii-of-rožmberk, lagus, nicholas-carew, choricius-of-gaza, otomārs-oškalns, amon, flavius-sallustius, hrafna-flki-vilgerarson, eoban ... +17 more
+
+### AI Enrichment — 2026-11-09T15:22:49Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** coriscus-of-scepsis, eustathios-palatinos, university-of-glasgow, wezilo, felix-hemmerlin, gnaeus-octavius, yunmen-wenyan, bartolomeo-maranta, francisco-de-garay, óengus-mac-nad-froích ... +19 more
+
+### AI Enrichment — 2026-11-09T15:49:35Z
+
+- **Model:** ollama
+- **Enriched:** 24 | **Failed:** 8
+- **Entities:** saint-wenceslaus-i-duke-of-bohemia, carlo-gaetano-stampa, tribigild, angela-merici, lucius-sestius-albanianus-quirinalis, gómez-manrique, manuel-antonio-flrez, mary-theisen-lappen, şükrullah, alfonso-i-of-asturias ... +14 more
+
+### AI Enrichment — 2026-11-09T16:02:39Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** medardus, bedrettin-tebrizi, paolo-fregoso, publius-sulpicius-galba-maximus, pacificus-of-ceredano, kab-bin-zuhayr, engineering, giovanni-solari, gaius-antius-aulus-julius-quadratus, khabekhnet ... +17 more
+
+### AI Enrichment — 2026-11-09T16:03:14Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** juvencus, ferry-de-clugny, julie-zhuo, jonas-of-orléans, anton-woensam, angelo-decembrio, paul-de-thermes, marcus-roscius-coelius, gaius-ateius-capito, al-hasan-ibn-sahl ... +17 more
+
+### AI Enrichment — 2026-11-09T16:29:58Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** pharas-the-herulian, georgios-pachymeres, konrad-v-kantner, erazm-ciołek, kfc, muhammad-ibn-aslam-al-ghafiqi, foillan, abul-hasan-ali, igo-melchor-de-velasco-7th-duke-of-fras, engelbert-iii-of-the-marck-archbishop-of-cologne ... +21 more
+
+### AI Enrichment — 2026-11-09T16:57:46Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** al-jarīrī, eirene, rudolf-von-scherenberg, ukrainian, gaston-pierre-de-lvis, aristo-of-alexandria, januarius, remigius-de-fcamp, disney-channel, l-uy-mc ... +17 more
+
+### AI Enrichment — 2026-11-09T16:59:16Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** rené-de-birague, gaius-lucilius, quintus-sulpicius-longus, godelaib, bjørn-farmann, rupa-bai-furdoonji, hygeburg, j-hector-st-john-de-crvecur, irony, john-de-la-pole-1st-earl-of-lincoln ... +17 more
+
+### AI Enrichment — 2026-11-09T17:08:22Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** shams-tabrizi, ophthalmology, empress-zhao-feiyan, brenger-de-landore, alan-i-king-of-brittany, october-revolution, lê-uy-mục, charles-emil-lewenhaupt-the-elder, peter-hagendorf, ibn-ʿabd-rabbih ... +20 more
+
+### AI Enrichment — 2026-11-09T17:32:25Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** shuliang-he, mancio-it, christopher-gore, polygnotus-of-thasos, aloys-von-kaunitz-rietberg, publius-attius-varus, appius-claudius-caecus, musa-çelebi, thietmar-of-minden, gonçalo-velho ... +20 more
+
+### AI Enrichment — 2026-11-09T17:45:23Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** braunau-am-inn, peter, hua-xiong, blanche-of-france, first-book-of-kings, tathal-melgarb, william-of-macclesfield, bernardo-de-iriarte, cleanthes, calanus ... +17 more
+
+### AI Enrichment — 2026-11-09T17:49:27Z
+
+- **Model:** ollama
+- **Enriched:** 24 | **Failed:** 8
+- **Entities:** joseph-emmanuel-de-la-trémoille, stepanos-asoghik, lucius-marcius-philippus, crantor, stig-andersen-hvide, bjrn-farmann, hans-brggemann, ibn-abd-rabbih, sosibius-of-tarentum, aristokles ... +14 more
+
+### AI Enrichment — 2026-11-09T18:13:24Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** canachus, hannu, charles-de-montmorency, jean-i-de-grailly, giulio-gabrielli-the-younger, philemon, moldova, jamshd-al-ksh, olivia-rouamba, bolesław-i-of-masovia ... +19 more
+
+### AI Enrichment — 2026-11-09T18:23:53Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** catalo, kosovo, diego-colombos, georg-pencz, tommaso-rodari, angel-grimoard, amr-ibn-al-jamuh, vitellozzo-vitelli, bolesaw-i-of-masovia, johannes-brenz ... +18 more
+
+### AI Enrichment — 2026-11-09T18:29:37Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** hypatia, yahya-al-shirvani-al-bakubi, nikephoros-kallistos-xanthopoulos, ling-cao, mahyna, cædmon, croatia, zephyrinus, oswald-myconius, nikephoros-i-of-constantinople ... +19 more
+
+### AI Enrichment — 2026-11-09T18:59:00Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** emerik-derenin, albrecht-von-eyb, jamshīd-al-kāshī, sulayman-al-arabi, titus, andrzej-jastrzębiec, luscius-lanuvinus, munio-of-zamora, virtual-private-network, menelaus ... +17 more
+
+### AI Enrichment — 2026-11-09T19:00:28Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** brit-ecclesiarum-antiquitates, giacomo-rospigliosi, antn-de-alaminos, marcellus-of-tangier, pietro-ziani, abul-fazl-bayhaqi, chen-yu, criton, jindich-zdk, benedetto-buglioni ... +17 more
+
+### AI Enrichment — 2026-11-09T19:13:51Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** cynisca, chion-of-heraclea, pandulf-iv-of-benevento, sinanddin-fakih-yusuf-pasha, sextus-vettulenus-cerialis, nicetas-eugenianus, fulk-of-neuilly, lithuania, gulf-war, agnolo-firenzuola ... +19 more
+
+### AI Enrichment — 2026-11-09T23:14:25Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 25 | **Failed:** 0
+- **Entities:** lorenzo-marcello, rainiero-delci, niccolò-ridolfi, virginio-orsini, lodovico-calini, dragutin-lerman, pierre-cartellier, vincenzo-macchi, josé-maría-ruda, yoshinao-nakada ... +15 more
+
+### AI Enrichment — 2026-11-09T23:20:44Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 25 | **Failed:** 0
+- **Entities:** erik-prosperin, neal-zaslaw, andré-du-laurens, georges-rol, jean-antoine-roucher, pierre-antoine-lebrun, thomas-southerne, armand-gensonné, barthélemy-prieur, hans-michelsen ... +15 more
+
+### AI Enrichment — 2026-11-09T19:42:08Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** jordan, antonio-doria-pamphili, william-the-breton, jos-mara-calatrava-y-peinado, domenico-fattori, coluthus, cerinthus, henning-van-der-heide, pargal-ibrahim-pasha, amalric-i-of-jerusalem ... +19 more
+
+### AI Enrichment — 2026-11-09T19:43:15Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** mederich, poncello-orsini, israhel-van-meckenem, filippo-strozzi-the-elder, sibylla, godefroi-comte-destrades, jordan, agostino-di-duccio, antonio-doria-pamphili, connad-cerr ... +18 more
+
+### AI Enrichment — 2026-11-09T20:12:12Z
+
+- **Model:** ollama
+- **Enriched:** 21 | **Failed:** 11
+- **Entities:** roxana-moslehi, andrzej-jastrzbiec, azalas-de-porcairagues, pedro-de-soto, jacques-mahu, tegueste, galon, zhi-dun, joachim-vadian, konstantinos-phokas ... +11 more
+
+### AI Enrichment — 2026-11-09T20:13:07Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** bulgaria, robert-crispin, johan-van-horne, carneades, nicholas-trivet, xiao-chuo, william-v-prince-of-orange, veera-ballala-ii, humbeline-of-jully, agostino-casaroli ... +20 more
+
+### AI Enrichment — 2026-11-09T20:25:43Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** paullus-fabius-maximus, calrice-di-durisio, dnes-szcsi, alonso-iii-fonseca, teudebur-of-alt-clut, donald-mackenzie, nasir-khusraw, contardus-of-naples, ignacio-de-arteaga-y-bazán, cratippus-of-athens ... +18 more
+
+### AI Enrichment — 2026-11-09T20:51:27Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** attalus, henry-francis-of-mansfeld, veronica-gambara, dhimitër-frëngu, ludovik-crijević-tuberon, niccolò-antonio-colantonio, filippo-calendario, bodzanta, publius-valerius-laevinus, tlepolemus ... +18 more
+
+### AI Enrichment — 2026-11-09T20:53:31Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** the-old-man-and-the-sea, lucius-minicius-natalis-quadronius-verus, international-statistical-classification-of-diseases-and-related-health-problems, un-tourism, lucido-conti, aristion-of-paros, john-strong, glycon-of-athens, federated-states-of-micronesia, antonio-pallavicini-gentili ... +19 more
+
+### AI Enrichment — 2026-11-09T21:04:09Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** arshak-jamalyan, chariton, muhammad-ibn-mahmud-amuli, pedro-gmez-labrador-marquis-of-labrador, terminologia-anatomica, felix-anthony, atharvan, giovanni-giocondo, mummolus, fluid-mechanics ... +17 more
+
+### AI Enrichment — 2026-11-09T21:24:06Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** sylvester-i, novella-dandrea, manuel-the-armenian, abd-as-salam-ibn-mashish-al-alami, giuseppe-doria-pamphili, niccol-antonio-colantonio, lars-herminius-aquilinus, zbynk-zajc, hard-rock, universit-de-versailles-saint-quentin-en-yvelines ... +17 more
+
+### AI Enrichment — 2026-11-09T21:31:46Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** felipe-de-guevara, aladdevle-bozkurt-bey, daud-khan, edmund-bourke, chares-of-lindos, ruy-gmez-de-silva, olaf-haraldsson-geirstadalf, joaquín-suárez, crates, niccolò-fieschi ... +17 more
+
+### AI Enrichment — 2026-11-09T21:45:11Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** christopher-lekapenos, bardaisan, president-of-georgia, joaquín-suárez, story-of-sinuhe, alexander-ii-of-imereti, cavalcante-de-cavalcanti, yakov-bulgakov, alexandros-mavrokordatos, anvari ... +19 more
+
+### AI Enrichment — 2026-11-09T22:01:52Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** marino-bulcani, martin-cellarius, heinrich-faber, herennius-senecio, ibn-al-tiqtaqa, lucius-verginius, abu-said-al-afif, cadfan, caelestius, chaerephon ... +19 more
+
+### AI Enrichment — 2026-11-09T22:02:12Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** richard-hawkins, hroznata-von-ovenec, cormac-mac-cuilennáin, john-carmichael-3rd-earl-of-hyndford, titus-manlius-torquatus, cinci-hüseyin-efendi, martinho-de-zamora, isaac-manasses-de-pas-marquis-de-feuquieres, crimthann-nia-nir, philip-of-swabia ... +19 more
+
+### AI Enrichment — 2026-11-09T22:31:20Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** beatus-rhenanus, butades, godwin-earl-of-wessex, béroul, lucius-marcius-censorinus, laodice-of-cappadocia, roffredo-dellisola, miguel-moreno, damon-of-athens, al-ballanb ... +16 more
+
+### AI Enrichment — 2026-11-09T22:39:00Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** johann-von-bucka, thomas-murner, leptines-of-syracuse, rainerius, agasias-of-ephesus, simon-ben-boethos, matthew-of-aquasparta, natakamani, strachkvas, pavle-đurišić ... +20 more
+
+### AI Enrichment — 2026-11-09T22:43:31Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** bandello-bandelli, yaʿīsh-ibn-ibrāhīm-al-umawī, john-tornike, arion, franciszek-ksawery-lampi, anton-giulio-brignole-sale, jean-doutremeuse, conon, al-ballanūbī, apollonius-of-athens ... +20 more
+
+### AI Enrichment — 2026-11-09T23:08:45Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** giovanni-da-amelia, johan-verstolk-van-soelen, andr-seeldrayers, qara-iskander, pacific-ocean, giovanni-battagio, alexander-vorontsov, sanremo, ma-bufang, giovanni-battista-caporali ... +17 more
+
+### AI Enrichment — 2026-11-09T23:20:23Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** stefano-di-ceccano, chrysippus-of-soli, pavle-urii, stjepan-brodarić, john-zpolya, andreas-de-vega, pelbartus-ladislaus-of-temesvár, dorothy-ooko, cangjie, robert-sidney-1st-earl-of-leicester ... +20 more
+
+### AI Enrichment — 2026-11-09T23:21:45Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** adrian-iv, alonso-de-salazar, jnos-czetz, bek, arthur-paget, cylon-of-athens, fruela-of-cantabria, siger-of-brabant, ferdinand-tnnies, curiatius-maternus ... +16 more
+
+### AI Enrichment — 2026-11-09T23:51:55Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** bolus-of-mendes, ebony-flowers, theodoros-ii-palaiologos, mark-antony, étienne-de-poncher, cai-yan, cerball-mac-dnlainge, cleinias-of-tarentum, glniairn, cenfus ... +18 more
+
+### AI Enrichment — 2026-11-10T00:01:05Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** lippo-memmi, parsman-vi-of-iberia, marcus-antonius-primus, rené-de-voyer-de-paulmy-dargenson, sarah-belzoni, application-programming-interface, jorge-da-costa, vincent-conessao, gian-luca-pallavicini, jan-maachowski ... +17 more
+
+### AI Enrichment — 2026-11-10T00:06:37Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** sergiyev-posad, evaristus, guillaume-de-la-jugie, epicharmus-of-kos, peter-iii-of-arborea, tan-yunxian, asad-ibn-al-furat, jan-małachowski, roger, alfonso-sanches ... +20 more
+
+### AI Enrichment — 2026-11-10T00:27:47Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** cinci-hseyin-efendi, yahya-of-antioch, achille-le-tonnelier-de-breteuil, aristidis-of-athens, mel-din-mac-conaill, pascual-de-andagoya, barranquilla, constantine-gongyles, michalon-lituanus, spycimir-leliwita ... +19 more
+
+### AI Enrichment — 2026-11-10T00:38:31Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** bartolomeo-mezzavacca, harry-potter-and-the-philosophers-stone, dmitry-gerasimov, pelicar, abd-al-aziz-ibn-shuayb, prochorus-cydones, david-malan, agnaptus, yemelyan-ukraintsev, ablgharib-artsruni ... +19 more
+
+### AI Enrichment — 2026-11-10T00:50:11Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** harry-potter-and-the-philosophers-stone, basque-country, zhao-dezhao, wikivoyage, erzhu-tianguang, pagan-of-bulgaria, michele-pesenti, charles-colbert-marquis-de-croissy, olympiodorus-the-elder, an-nadhar-bin-syamil ... +16 more
+
+### AI Enrichment — 2026-11-10T01:10:13Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** marcus-arruntius-aquila, eadberht-iii-præn, aksapada-gautama, louis-jérôme-gohier, kamill-lendvay, dwarf-planet, ali-ibn-ridwan, gustaf-mauritz-armfelt, antónio-de-saldanha, richard-de-fournival ... +16 more
+
+### AI Enrichment — 2026-11-10T01:15:42Z
+
+- **Model:** ollama
+- **Enriched:** 32 | **Failed:** 0
+- **Entities:** aristidis-of-athens, cleomenes, marcian, callinicus, aksapada-gautama, claudian, calippus-of-syracuse, aloi-de-montbrai, sir-harford-jones-brydges-1st-baronet, vasily-popov ... +22 more
+
+### AI Enrichment — 2026-11-10T01:40:13Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** manuha, bonaire, francesco-della-penna, calippus-of-syracuse, aziz-ad-din-nasafi, herod-of-chalcis, hugh-of-lincoln, charondas, caspar-schoppe, philippe-néricault-destouches ... +17 more
+
+### AI Enrichment — 2026-11-10T02:05:24Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** damocrates, bernardus-papiensis, xu-you, peter-abelard, julian-of-emesa, choerilus-of-samos, arrian, gaius-prastina-messalinus, bhatta-narayana, bacurius-the-iberian ... +20 more
+
+### AI Enrichment — 2026-11-10T02:05:55Z
+
+- **Model:** ollama
+- **Enriched:** 24 | **Failed:** 8
+- **Entities:** andr-de-foix, polishlithuanian-commonwealth, sextius-niger, atika-bint-shuhda, mans-de-guzmn, ubaydallah-ibn-abdallah-ibn-tahir, charles-jean-baptiste-fleuriau, ban-biao, srei-reachea, claudine-uwera ... +14 more
+
+### AI Enrichment — 2026-11-10T02:20:52Z
+
+- **Model:** ollama
+- **Enriched:** 17 | **Failed:** 3
+- **Entities:** choerilus-of-samos, awana-ibn-al-hakam, enheduanna, vratko-nemanji, celsus, senorina-of-basto, merneptah, zheng-xuan, fati-abubakar, union-of-south-american-nations ... +7 more
+
+### AI Enrichment — 2026-11-10T02:27:52Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** charondas, interview, manius-curius-dentatus, philippe-canaye, sri-vijaya-rajasinha-of-kandy, saumur, jan-ii-van-wassenaer, cyprian, damià-forment, aulus-hostilius-mancinus ... +18 more
+
+### AI Enrichment — 2026-11-10T02:46:10Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** vratko-nemanji, elias, gaius-sulpicius-peticus, lorenzo-iv-suárez-de-figueroa-y-córdoba, ubertino-of-casale, lothar-i-von-stade, sohaemus-of-emesa, fernando-prez-calvillo, gregory-of-langres, avianus ... +18 more
+
+### AI Enrichment — 2026-11-10T03:05:55Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** choerilus-of-samos, kara-sea, arnulf-of-leuven, aziz-ul-rahman-usmani, jeongjong-of-joseon, brnjača, philip-louis-ii-count-of-hanau-mnzenberg, sasanian-empire, pawe-jan-sapieha, lê-nghi-dân ... +20 more
+
+### AI Enrichment — 2026-11-10T03:12:04Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** zheng-xuan, joachim-mrlin, aristocles-of-messene, brezno, imre-csky, vittore-trincavelli, stephen-kontostephanos, arnoald, florinus-of-rems, philippe-de-courcillon-de-dangeau ... +16 more
+
+### AI Enrichment — 2026-11-10T03:41:01Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** fernando-prez-calvillo, kara-sea, clitomachus-of-thebes, louis-douard-bout-willaumez, you-ruo, oliver-mbamara, zhu-shuzhen, shan-xiongxin, wilhelm-von-dörnberg, aulus-manlius-vulso ... +17 more
+
+### AI Enrichment — 2026-11-10T03:50:17Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** avianus, martín-de-zalba, gaius-julius-solinus, louise-allcock, luca-ridolfucci-gentili, planetary-nebula, michel-erhart, hans-georg-ngeli, charulata-mukherjee, emilio-dandolo ... +16 more
+
+### AI Enrichment — 2026-11-10T03:51:51Z
+
+- **Model:** ollama
+- **Enriched:** 25 | **Failed:** 7
+- **Entities:** guillem-de-copons, tulien, planetary-nebula, wilhelm-von-drnberg, johan-oxenstierna, gaius-quintius-atticus, jan-juriewicz-hlebowicz, l-nghi-dn, shapur-ibn-sahl, gonalo-de-amarante ... +15 more
+
+### AI Enrichment — 2026-11-10T04:14:48Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** maria-afonso, henry-of-the-palatinate, oppian, john-tiptoft-1st-earl-of-worcester, alois-paroubek, villarreal, gruffydd-maelor-i, canterbury, chen-wu, martianus-capella ... +20 more
+
+### AI Enrichment — 2026-11-10T04:31:19Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** sextus-erucius-clarus, robert-le-danois, mc-hin-tng, adam-of-łowicz, ala-al-din-al-bukhari, sebastián-de-ocampo, abd-al-dar-ibn-qusai, ferchar-fota, cleopatra-the-alchemist, chen-dao ... +21 more
+
+### AI Enrichment — 2026-11-10T04:42:14Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** john-stone, cato-the-elder, johann-albrecht-korff, austriahungary, jean-de-witte, joo-pessoa, medina, konstantinos-aspietes, cao-ren, bao-xun ... +16 more
+
+### AI Enrichment — 2026-11-10T04:57:04Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** salomon-king-of-brittany, alois-paroubek, elisabeth-valerio, charmadas, iwan-bohdanowicz-sapieha, francisco-gutiérrez-de-los-ríos, dinon, cadafael-cadomedd-ap-cynfeddw, john-of-moravia, buddhapālita ... +19 more
+
+### AI Enrichment — 2026-11-10T05:11:26Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** konrad-von-marburg, binnya-ran-ii, so-bernardo-do-campo, marcus-ummidius-quadratus-annianus, bernard-franois-marquis-de-chauvelin, mirza-muhammad-khan-i, bharadwaja, oranjestad, khālid-ibn-ʿabd-almalik-almarwarrūdhī, boško-palkovljević-pinki ... +19 more
+
+### AI Enrichment — 2026-11-10T05:20:27Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** bhatta-narayana, fakhr-un-nisa, john-palsgrave, jurij-slatkonja, gabrn-mac-domangairt, cao-zhi, saimaa, goalkeeper, saint-ovidius, büri ... +18 more
+
+### AI Enrichment — 2026-11-10T05:32:11Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** diadumenian, pseudo-marius, vasily-golovnin, gaius-oppius, khlid-ibn-abd-almalik-almarwarrdh, axel-otto-mrner, hundred-years-war, thekla, zvonimir-eparovi, gaius-claudius-glaber ... +18 more
+
+### AI Enrichment — 2026-11-10T05:59:58Z
+
+- **Model:** ollama
+- **Enriched:** 22 | **Failed:** 10
+- **Entities:** dinon, saimaa, haakon-ii-of-norway, bischr-ibn-al-mutamir, hafiz-tanish, joo-carlos-saldanha-de-oliveira-daun-1st-duke-of-saldanha, marcus-horatius-pulvillus, arnold-of-selenhofen, thailand, david-ii-catholicos-patriarch-of-georgia ... +12 more
+
+### AI Enrichment — 2026-11-10T06:09:37Z
+
+- **Model:** ollama
+- **Enriched:** 25 | **Failed:** 7
+- **Entities:** thalelaeus, clinomachus, mathematics, asterius, diego-de-losada, francesco-salviati, marie-melchior-joseph-théodose-de-lagrené, aratus-of-sicyon, peter-von-meyendorff, pir-muhammad ... +15 more
+
+### AI Enrichment — 2026-11-10T06:13:26Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** gar-trinring-tsendro, bao-xin, simon-van-limburg, arnoul-daudrehem, cicero-minor, caelius-aurelianus, manuel-rodrguez-erdoza, ban-zhao, ma-jun, khayran-as-saqlab ... +18 more
+
+### AI Enrichment — 2026-11-10T06:33:38Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** decimus-junius-pera, titus-ampius-balbus, funk, john-i-of-lubin, alexon, juan-ramón-balcarce, fabrizio-i-colonna, oshere, august-von-nostitz, democrates ... +17 more
+
+### AI Enrichment — 2026-11-10T06:52:50Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** tianjin, amyntas-ii-of-macedon, feng-yi, oscar-camilin, ivan-vyhovskyi, claudius-maximus, niccol-di-giovanni-fiorentino, nusaybah-bint-kaab, baltolu-sleyman-bey, charles-vi-of-france ... +18 more
+
+### AI Enrichment — 2026-11-10T06:55:55Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** francisco-ramn-vicua, commodian, critolaus-of-megalopolis, chen-lin, lucius-funisulanus-vettonianus, cui-bi, wojciech-radziwi, franz-georg-karl-von-metternich, abdul-khaliq-ghijduwani, john-geometres ... +16 more
+
+### AI Enrichment — 2026-11-10T11:07:50Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 50 | **Failed:** 0
+- **Entities:** gnaeus-pinarius-cornelius-severus, timur-khoja, domangart-rti, enetarzi, psammetichus-iv, zoology, septimius, international-labour-organization, confederation-of-african-football, university-of-glasgow ... +40 more
+
+### AI Enrichment — 2026-11-10T07:09:14Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** juan-ramón-balcarce, xenophon-of-ephesus, rodrigo-gil-de-hontañón, glaucias-of-aegina, mahmud-al-kashgari, jos-mara-rojas-garrido, theodore-mangaphas, diego-de-lepe, simon-grynaeus, stefan-dragutin ... +18 more
+
+### AI Enrichment — 2026-11-10T07:34:50Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** mikoaj-kurowski, thomas-of-celano, wang-ji, marcellinus-comes, defendens, philippa-mareri, sauromaces-ii-of-iberia, michele-bonelli, gaston-iii-count-of-foix, cotys-iv ... +18 more
+
+### AI Enrichment — 2026-11-10T07:42:55Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** sauromaces-ii-of-iberia, bakjur, bardas-phokas-the-younger, henry-viii-of-legnica, demetrios-palaiologos, jean-armand-de-maillé-brézé, michael-stryphnos, zhou-zhi, muhammad-ibn-buzurg-ummid, stanisaw-ciosek ... +19 more
+
+### AI Enrichment — 2026-11-10T07:46:05Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** caelius-aurelianus, the-threepenny-opera, franois-de-joyeuse, zimrilim, ivan-bezpaly, augustin-von-alveld, jean-baptiste-charles-bouvet-de-lozier, thomas-kantakouzenos, muhammad-aufi, cornelius-scipio-salvito ... +17 more
+
+### AI Enrichment — 2026-11-10T08:21:24Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** jaya-ananda, zamo, haki, carl-löwenhielm, callixenus-of-rhodes, crateuas, lokman-han, cincinnatus, antonn-brus-z-mohelnice, michał-jerzy-mniszech ... +20 more
+
+### AI Enrichment — 2026-11-10T08:25:48Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** saturninus, thomas-dagworth, alexander-akimetes, cecilia-johansdotter-of-sweden, ballomar, layla-zakaria-abdel-rahman, cornelius-nepos, somerled, jean-de-liège, cocceius-auctus ... +18 more
+
+### AI Enrichment — 2026-11-10T08:35:45Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** crates-of-athens, hans-burgkmair-the-elder, bonaventura-badoardo-de-peraga, giovannino-de-grassi, johann-wenzel-von-gallas, jean-de-lige, william-austin-burt, charles-dangennes-de-rambouillet, otto-iii-van-holland, fa-al-dn-amad-fa-khvf ... +17 more
+
+### AI Enrichment — 2026-11-10T09:01:06Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** ibn-funduq, john-of-gogw, eisenstadt, eligius, strasbourg, alan-basil-de-lastic, calvisia-domitia-lucilla, ceionius-proculus, alcibiades, juan-cobo ... +17 more
+
+### AI Enrichment — 2026-11-10T09:08:30Z
+
+- **Model:** ollama
+- **Enriched:** 25 | **Failed:** 7
+- **Entities:** cornificia, jean-baptiste-budes-comte-de-gubriant, wu-jianmin, coenus, pedro-alonso-nio, franois-arnaud, erasistratus, jános-kanizsai, alois-friedrich-von-brühl, bruno-of-bretten ... +15 more
+
+### AI Enrichment — 2026-11-10T09:11:19Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** sithu-kyawhtin, claudius-clavus, baltoğlu-süleyman-bey, matsui-keishir, aspasia-the-physician, count-karl-ferdinand-von-buol, titus-tarquinius, gabriel-franchère, wadysaw-the-white, john-of-la-rochelle ... +19 more
+
+### AI Enrichment — 2026-11-10T09:45:11Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** astyochus, pedro-fajardo-1st-marquis-of-los-vlez, cephisodotus-the-elder, finger-snail, abu-kelevi, zhou-tai, isidore-of-kyiv, cristbal-de-morales, henrik-lindstrm, olbram-iii-von-kvorec ... +19 more
+
+### AI Enrichment — 2026-11-10T09:50:35Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** francis-seymour-conway-1st-marquess-of-hertford, aulus-cornelius-palma-frontonianus, wolfgang-capito, aristogenes, willerich, yuri-nemyrych, piyale-pasha, george-kodinos, jan-roháč-of-dubá, władysław-anders ... +18 more
+
+### AI Enrichment — 2026-11-10T09:59:17Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** lazare-de-baf, matteo-i-visconti, fadrique-enrquez-de-velasco, władysław-the-white, shen-yue, l-hy-tng, gasparinus-de-bergamo, bartholomaeus-of-neocastro, damat-gürcü-halil-rifat-pasha, guiguzi ... +17 more
+
+### AI Enrichment — 2026-11-10T10:34:47Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** titus-tarquinius, byrhtnoth, isaac-doukas-vatatzes, seleucus, marcus-peducaeus-priscinus, asclepiodotus-of-alexandria, ferdinand-august-of-lobkowicz, arusianus-messius, kemalpaşazade, giovanni-arrivabene ... +18 more
+
+### AI Enrichment — 2026-11-10T10:35:38Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** kaspar-rist, vietnam-war, battle-of-issus, tribonian, maximilianus-transylvanus, jrme-souchier, francesco-daquino, bernardino-ochino, clearchus-of-heraclea, properzia-de-rossi ... +19 more
+
+### AI Enrichment — 2026-11-10T10:51:21Z
+
+- **Model:** ollama
+- **Enriched:** 24 | **Failed:** 8
+- **Entities:** indrajayavarman, saad-al-dawla, baldassare-estense, aristobulus-of-paneas, charidemus, ninurta-apla-x, charles-antoine-leclerc-de-la-bruère, jean-françois-georgel, andrea-pisano, johann-christoph-von-bartenstein ... +14 more
+
+### AI Enrichment — 2026-11-10T11:13:36Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** euthymus, andronicus-of-rhodes, giovanni-boccaccio, antão-gonçalves, shō-shishō, jan-stanisaw-sapieha, nicola-filotesio, cristóbal-de-olid, jean-de-thvenot, second-punic-war ... +18 more
+
+### AI Enrichment — 2026-11-10T11:19:54Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** olbram-iii-von-kvorec, aulus-postumius-albinus-luscus, theodore-of-raithu, hydarnes-ii, pandulf-ii-of-benevento, bonus, abu-madyan, basilides-the-epicurean, abul-hasan-ash-shadhili, aulus-vitellius ... +21 more
+
+### AI Enrichment — 2026-11-10T11:43:36Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** archdeacon-theophylact, jos-francisco-gana-lpez, hersekzade-ahmed-pasha, masud-ibn-muhammad-sijzi, karl-ernst-wilhelm-von-canitz-und-dallwitz, claudius-lysias, guillaume-bud, chares-of-athens, herman-i-count-of-salm, annius-of-viterbo ... +17 more
+
+### AI Enrichment — 2026-11-10T11:59:02Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** raimondo-guglielmo-des-fargues, eochaid-mac-domangairt, sh-shish, kemalpaazade, emperor-jing-of-northern-zhou, nicolaus-ragvaldi, paul-gssfeldt, caduceus, samba, adolph-ii-prince-of-anhalt-kthen ... +21 more
+
+### AI Enrichment — 2026-11-10T12:12:09Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** chares-of-athens, coelius-sedulius, henry-george-ward, gilbert-elliot-murray-kynynmound-2nd-earl-of-minto, avidius-cassius, umm-jamil, charon-of-lampsacus, karl-bttiger, franois-de-mailly, wratislav-von-frstenberg ... +17 more
+
+### AI Enrichment — 2026-11-10T12:16:38Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** marcus-peducaeus-priscinus, jan-ostrorg, tettius-julianus, mormonism, iraniraq-war, gabriel-marie-joseph-comte-dhédouville, mahmud-injir-al-faghnawi, simon-constable-of-jerusalem, lucius-roscius-aelianus-maecius-celer, ethirimana-cinkam ... +18 more
+
+### AI Enrichment — 2026-11-10T12:38:02Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** juan-de-ayala, alexander-ales, muḥammad-ibn-maʻn-ibn-sumādiḥ-al-muʻtaṣim, asclepiades, aulus-ofilius, aristonous-of-pella, eochaid-mac-domnaill, leonard-of-chios, nils-bielke, nicocles ... +18 more
+
+### AI Enrichment — 2026-11-10T12:53:06Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** þangbrandr, cronius-the-pythagorean, archangela-girlani, william-of-volpiano, padmini-murthy, giulio-alberoni, homs, daniel-czapliski, jacques-franois-lefranc, francesco-de-tatti ... +20 more
+
+### AI Enrichment — 2026-11-10T13:11:31Z
+
+- **Model:** ollama
+- **Enriched:** 24 | **Failed:** 8
+- **Entities:** andrea-alciato, andrea-doria, jacques-franois-lefranc, julius-pollux, batis, henri-de-mondeville, guillaume-arrufat, pedro-csar-dominici, jaime-torres-bodet, andrzej-hieronim-zamoyski ... +14 more
+
+### AI Enrichment — 2026-11-10T13:26:06Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** charles-cathcart-9th-lord-cathcart, jean-de-meun, asclepiades-of-bithynia, hipponicus-ii, cornelius-sabinus, dervish-ibrahim-pasha, bo-cai, þorlákur-runólfsson, fuzuli, claude-franois-bidal-dasfeld ... +18 more
+
+### AI Enrichment — 2026-11-10T13:35:34Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** horsa, isaac-albalag, dardanus-of-athens, daeso, francesco-di-simone-da-santacroce, eystein-orre, syrian-civil-war, charles-de-lorraine-de-vaudmont, mireya-agüero, tellos-agras ... +19 more
+
+### AI Enrichment — 2026-11-10T13:55:53Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** lantbert-von-lyon, sonchis-of-sais, cui-hao, jean-xavier-lefvre, wang-gen, gaius-volusenus, jorge-cabral, sancha-of-majorca, artemidorus-capito, paul-i ... +19 more
+
+### AI Enrichment — 2026-11-10T14:08:02Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** harthacanute, fortanerius-vassalli, reginhard-von-lttich, aufidius-bassus, angilbert, ptolemais-of-cyrene, philippe-de-cabassole, muhammad-salih, boiorix, muhmmad-ibn-ghniya ... +19 more
+
+### AI Enrichment — 2026-11-10T14:15:20Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** august-friedrich-ferdinand-von-der-goltz, sun-kai, zeno, kunda-culture, pasha-yiğit-bey, dong-min, cao-zhen, meng-ao, otto-ii-of-lippe, clement-ix ... +18 more
+
+### AI Enrichment — 2026-11-10T14:48:48Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** vincenzo-cartari, theodemar, nahariya, muhàmmad-ibn-ghàniya, pang-lin, count-karl-ludwig-von-ficquelmont, vladimr-clementis, abu-nasr-mansur, aulus-caecina-alienus, bangkok ... +18 more
+
+### AI Enrichment — 2026-11-10T14:51:18Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** monism, qara-yusuf, lobamba, caranus, william-à-court-1st-baron-heytesbury, arthur-p-bagby, lucius-aurunculeius-cotta, dagalaifus, capelianus, diego-lpez-iii-de-haro ... +21 more
+
+### AI Enrichment — 2026-11-10T15:04:11Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** cao-chun, second-sino-japanese-war, dacianus, sigebert-ii, catanzaro, metrodorus-of-lampsacus, paulina-oduro, miguel-gmez-damas, gedik-ahmed-pasha, yun-kwan ... +19 more
+
+### AI Enrichment — 2026-11-10T15:37:44Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** gervais-count-of-rethel, pasha-yiit-bey, pavel-tsitsianov, urnfield-culture, laurent-jean-franois-truguet, edward-clinton-1st-earl-of-lincoln, vinko-pribojević, marinus-ii, john-ponsonby-1st-viscount-ponsonby, dinah-musindarwezo ... +17 more
+
+### AI Enrichment — 2026-11-10T15:40:38Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** alfonso-de-cartagena, bomilkar, naukydes-of-argos, jan-carstenszoon, censorinus, richard-of-middleton, constantius, herv-de-portzmoguer, rurik, thomas-of-cana ... +17 more
+
+### AI Enrichment — 2026-11-10T15:42:14Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** diemoth, ibn-alhaim-alishbili, alinah-kelo-segobye, jan-carstenszoon, william-of-conches, king-nan-of-zhou, anthony-bacon, émile-peynot, bernardo-bandini, andronikos-lapardas ... +20 more
+
+### AI Enrichment — 2026-11-10T16:17:54Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** ansbert-of-rouen, william-sharp-macleay, francis-de-pressens, aulus-claudius-charax, demetrius-of-guria, lucius-cornelius-sulla, lucius-ceionius-commodus, carlo-andrea-pozzo-di-borgo, jean-franois-de-bette-marquis-of-lede, miss-fatima ... +21 more
+
+### AI Enrichment — 2026-11-10T16:29:52Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** guillaume-le-testu, vladimír-clementis, ibar-of-beggerin, leander-of-seville, mikhail-bestuzhev-ryumin, john-of-worcester, foggia, saint-martial, gaius-caecina-largus, kṣemā ... +20 more
+
+### AI Enrichment — 2026-11-10T16:31:19Z
+
+- **Model:** ollama
+- **Enriched:** 23 | **Failed:** 9
+- **Entities:** callixtus-iii, folk-music, arnegisclo, françois-annibal-destrées, william-sharp-macleay, kem, antanas-purnas, la-hire, jernimo-bcker, idomeneus-of-lampsacus ... +13 more
+
+### AI Enrichment — 2026-11-10T16:53:23Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** idomeneus-of-lampsacus, philibert-of-chalon, piero-di-cosimo-de-medici, first-chechen-war, erispoe, honor-gabriel-riqueti-comte-de-mirabeau, rimbert, philibert-of-jumiges, john-vii, john-of-antioch ... +19 more
+
+### AI Enrichment — 2026-11-10T17:18:59Z
+
+- **Model:** ollama
+- **Enriched:** 25 | **Failed:** 7
+- **Entities:** first-punic-war, francesco-di-marco-datini, lucius-rubellius-geminus, gaius-ateius-capito, lucius-apronius-caesianus, girim-of-silla, walter-of-st-victor, akash-khurana, gnaeus-pedanius-fuscus-salinator, nicolás-de-cardona ... +15 more
+
+### AI Enrichment — 2026-11-10T17:28:37Z
+
+- **Model:** ollama
+- **Enriched:** 25 | **Failed:** 7
+- **Entities:** muammad-b-ibrhm-b-sad-shams-al-dn-ab-abda-al-anr, stanisaw-of-skarbimierz, cellach-mac-dnchada, indabibi, clement-viii, abu-mikhnaf, domenico-gagini, niu-jin, hananchi, william-neville-earl-of-kent ... +15 more
+
+### AI Enrichment — 2026-11-10T17:33:18Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** friedrich-von-canitz, cleitus-the-black, asclepiades-pharmacion, alvise-cadamosto, john-mavrocordatos, ushuaia, saint-sarkis-the-warrior, mehmed-i-giray, claude-louis-de-la-chtre, master-ms ... +21 more
+
+### AI Enrichment — 2026-11-10T21:57:11Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** wang-chung-hui, al-mufaddal-ibn-abi-al-fadail, titus-aebutius-helva, moses-bar-kepha, constantine-akropolites, chiara-gambacorti, pedro-téllez-girón, aradius-rufinus, jen-zichy, mehou ... +19 more
+
+### AI Enrichment — 2026-11-10T22:05:40Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** piero-de-bonzi, sextus-calpurnius-agricola, thomas-the-slav, charles-ii-count-of-alenon, cecilia-cesarini, patricia-may-urzúa, alexandre-thodore-victor-comte-de-lameth, clement-x, gaero, gan-de ... +18 more
+
+### AI Enrichment — 2026-11-10T22:12:55Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** leukon-ii-of-bosporus, gomes-eanes-de-zurara, tadhg-mac-cárthaigh, cerrah-mehmed-paa, bouzes, idwal-foel, paul-thrse-david-dastros, harith-ibn-hilliza-ul-yashkuri, fernão-lopes, pietro-di-giovanni-tedesco ... +20 more
+
+### AI Enrichment — 2026-11-10T22:30:47Z
+
+- **Model:** ollama
+- **Enriched:** 31 | **Failed:** 1
+- **Entities:** george-elmacin, sargis-ii-jaqeli, agesidamus-of-locris, nguyn-nhc, thomas-elyot, robert-i-count-of-conversano, potitus-valerius-messalla, menander, shams-al-dīn-al-samarqandī, aurignacian ... +21 more
+
+### AI Enrichment — 2026-11-10T22:47:51Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 23 | **Failed:** 0
+- **Entities:** petrus-gyllius, li-zhengji, stanislaus-of-szczepanów, hugh-of-flavigny, tunisia, paulinus-of-york, french-invasion-of-russia, gnaeus-cornelius-lentulus-marcellinus, richard-iii-of-england, metrology ... +13 more
+
+### AI Enrichment — 2026-11-10T22:52:10Z
+
+- **Model:** ollama
+- **Enriched:** 27 | **Failed:** 5
+- **Entities:** ansbert-of-rouen, mahathammaracha-i, bernardo-de-velasco, giovanni-sercambi, lucius-aemilius-barbula, johannes-bonemilch, scouting, juan-de-aragón-y-de-jonqueras-2nd-count-of-ribagorza, joseph-von-hammer-purgstall, autocles ... +17 more
+
+### AI Enrichment — 2026-11-10T22:52:44Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 25 | **Failed:** 0
+- **Entities:** gaius-caelius-rufus, claudius-mamertinus, jayavarman-vi, berowulf, victoriano-salado-álvarez, johannes-murmellius, hong-mai, kiruna, ramat-gan, meno ... +15 more
+
+### AI Enrichment — 2026-11-10T22:56:26Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 27 | **Failed:** 0
+- **Entities:** alonso-de-covarrubias, franois-sverin-marceau, william-daubigny-3rd-earl-of-arundel, louis-the-stammerer, wang-l, ricardo-mir, redemptus-of-the-cross, bernardino-of-siena, maximus-the-confessor, li-jie ... +17 more
+
+### AI Enrichment — 2026-11-10T22:56:35Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 27 | **Failed:** 0
+- **Entities:** alonso-de-covarrubias, franois-sverin-marceau, william-daubigny-3rd-earl-of-arundel, louis-the-stammerer, wang-l, ricardo-mir, redemptus-of-the-cross, bernardino-of-siena, maximus-the-confessor, li-jie ... +17 more
+
+### AI Enrichment — 2026-11-10T22:58:46Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 25 | **Failed:** 0
+- **Entities:** thomas-grey-2nd-marquess-of-dorset, theodoret-of-antioch, john-digby-1st-earl-of-bristol, gnaeus-pedius-cascus, junius-veldumnianus, william-lithgow, motono-ichir, theodoros-prodromos, jeong-do-jeon, guy-of-anderlecht ... +15 more
+
+### AI Enrichment — 2026-11-10T22:59:11Z
+
+- **Model:** composer·local·Jeltons-Mac-Mini.local
+- **Enriched:** 25 | **Failed:** 0
+- **Entities:** thomas-grey-2nd-marquess-of-dorset, theodoret-of-antioch, john-digby-1st-earl-of-bristol, gnaeus-pedius-cascus, junius-veldumnianus, william-lithgow, motono-ichir, theodoros-prodromos, jeong-do-jeon, guy-of-anderlecht ... +15 more
+
+### AI Enrichment — 2026-11-10T23:26:11Z
+
+- **Model:** ollama
+- **Enriched:** 26 | **Failed:** 6
+- **Entities:** walter-of-winterburn, kab-ibn-al-ashraf, quintus-sertorius, ethan-allen-brown, ertuğrul, ferréol-de-vienne, yakareb, miyoshi-kiyotsura, puxian-wannu, julius-constantius ... +16 more
+
+### AI Enrichment — 2026-11-10T23:31:58Z
+
+- **Model:** ollama
+- **Enriched:** 30 | **Failed:** 2
+- **Entities:** hasanak-the-vizier, stephen-of-armenia, liu-hong, qarin-i, metrology, henryk-kietlicz, greek-war-of-independence, sultan-ahmed-mosque, berchtold-haller, talorc-ii ... +20 more
+
+### AI Enrichment — 2026-11-10T23:53:50Z
+
+- **Model:** ollama
+- **Enriched:** 29 | **Failed:** 3
+- **Entities:** french-invasion-of-russia, onomacritus, petronius-annianus, berchtold-haller, jayavarman-vi, johannes-murmellius, wen-zhengming, marino-sanuto-the-younger, ab-anfa-dnawar, yerevan ... +19 more
+
+### AI Enrichment — 2026-11-10T23:55:40Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** richard-iii-of-england, quintus-veranius, berowulf, ramat-gan, urraca-of-portugal, bhskara, jnos-vitz, ribeiro-preto, antonius-marcellinus, abu-al-hasan-al-tabari ... +18 more
+
+### AI Enrichment — 2026-11-10T23:59:45Z
+
+- **Model:** ollama
+- **Enriched:** 28 | **Failed:** 4
+- **Entities:** reginald-de-cobham-1st-baron-cobham, measurement, quintus-veranius, gaius-caelius-rufus, rufinus, king-xiang-of-wei, bhskara, adolfo-saldas, ssuke-uno, sulpicia ... +18 more

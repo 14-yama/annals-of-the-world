@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-08T14:50:10.868Z",
+  "updatedAt": "2026-11-10T22:22:35.567Z",
   "source": "local-appwrite",
   "endpoint": "http://localhost:8080/v1",
   "project": "annals-local",
@@ -49,7 +49,7 @@
     "8": 4196,
     "9": 1018
   },
-  "computeTimeMs": 178606,
+  "computeTimeMs": 276255,
   "note": "paged entity count + facets (ignores API total cap)",
   "incomplete": false,
   "seedCursor": {
@@ -60,5 +60,19 @@
     "classDir": "963-Class-963",
     "file": "963third-industrial-revolution.json",
     "lastRunAt": "2026-11-08T03:28:39.834Z"
+  },
+  "auditTotal": 331364,
+  "auditTotalUpdatedAt": "2026-11-11T00:32:38.486Z",
+  "auditTotalIncomplete": false,
+  "auditTotalNote": "paged cursor count restored (308058)",
+  "enrichmentProgress": {
+    "entitiesTotal": 392033,
+    "enrichedApprox": 11652,
+    "thinRemaining": 380434,
+    "pctEnriched": 2.97,
+    "ratePerHour": 124.0,
+    "auditTotal": 331364,
+    "updatedAt": "2026-11-11T00:33:29Z",
+    "note": "Enriched \u2248 entities with summary \u2265 800 chars. Thin remaining = summary < 800 (enrichment queue heuristic). auditTotal counts field-level audit_log rows (one enrich \u2248 5\u20137 rows), not unique entities. Queue file was truncated at --limit \u2014 thinRemaining is a lower bound and enriched\u2248 is an upper bound until the next full queue refresh writes needingEnrichment."
   }
 }

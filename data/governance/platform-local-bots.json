@@ -2,21 +2,21 @@
   "meta": {
     "version": "1.6.0",
     "owner": "annals-local-infra",
-    "description": "Canonical roster of Annals local bots for the Mac Mini pool. Aggressive KeepAlive Ollama enrich waiters (2 parallel LLM slots) + edges. Grok lane DISABLED.",
+    "description": "Canonical roster of Annals local bots for the Mac Mini pool. Aggressive KeepAlive Ollama enrich waiters (3 parallel LLM slots) + edges. Grok lane DISABLED.",
     "host": "24 GB unified memory Mac mini",
     "timezone": "America/Port_of_Spain",
     "label_prefix": "com.annals.",
     "docs_ref": "docs/governance/local_bots_mac_mini.md",
     "superstack_sot_ref": "/Users/jeltonmentore/Digital Economy/caricom-connects-superstack/packages/truth-registry/platform-local-bots.json",
     "throughput_targets": {
-      "note": "Ollama lane :11434 max 2 gens (enrich/enrich-b/c/d/e/significance share slots). Grok disabled. edges-extract is no-LLM and parallel.",
-      "entities_per_hour_target": "90–160 Ollama when Mini quiet (2× llama3.2:3b)",
-      "entities_per_hour_floor": "60",
+      "note": "Ollama lane :11434 max 3 gens (enrich/enrich-b/c/d/e/significance share slots). Grok disabled. edges-extract is no-LLM and parallel.",
+      "entities_per_hour_target": "140–220 Ollama when Mini quiet (3× llama3.2:3b)",
+      "entities_per_hour_floor": "80",
       "enrich_batch": 32,
       "sig_batch": 24,
       "grok_batch": 12,
       "edges_extract_batch": 120,
-      "ollama_cadence": "KeepAlive workers (ThrottleInterval 5–8s); max_concurrent_llm=2",
+      "ollama_cadence": "KeepAlive workers (ThrottleInterval 5–8s); max_concurrent_llm=3",
       "idle_gap_max_seconds": 8,
       "sync_entities_per_run": 400,
       "kpi_refresh_minutes": 5,
@@ -53,15 +53,15 @@
     }
   },
   "concurrency": {
-    "principle": "Many bot definitions are fine; concurrent RAM/CPU/Ollama use must stay gated. Two parallel llama3.2:3b generations OK on 24GB Mini when Cursor is idle. Leave headroom for OS and Superstack scrapers. Grok is cloud — does not consume Mini GPU/NPU.",
-    "max_concurrent_llm": 2,
+    "principle": "Many bot definitions are fine; concurrent RAM/CPU/Ollama use must stay gated. Three parallel llama3.2:3b generations OK on M5 Pro 24GB Mini (model ~2.6GB; leave headroom for Cursor/MariaDB/Appwrite). Grok is cloud — does not consume Mini GPU/NPU.",
+    "max_concurrent_llm": 3,
     "max_concurrent_grok": 0,
     "brief_burst_of_2_llm": true,
     "serialize_enrich_vs_significance": false,
     "max_concurrent_heavy_scan": 1,
     "lanes": {
       "always_on": "bot-server + healthcheck only; never blocked by scrap blackout",
-      "ollama": "enrich + enrich-b/c/d/e + significance share up to max_concurrent_llm=2 ollama_slot_* locks; waiters soft-skip when both slots full",
+      "ollama": "enrich + enrich-b/c/d/e + significance share up to max_concurrent_llm=3 ollama_slot_* locks; waiters soft-skip when all slots full",
       "grok": "enrich-grok + enrich-grok-b + significance-grok + edges-grok share grok lock; may run concurrent with Ollama lane",
       "edges": "edges-extract (+ waiter) — no LLM; may run beside Ollama/Grok; own lock so queue/audits do not block",
       "light": "queue, kpi, stats-cache, push — may run beside light OS work; queue/kpi skip live-scraper yield",
@@ -166,7 +166,7 @@
       "name": "AI Enrichment (Ollama)",
       "status": "active",
       "lane": "ollama",
-      "role": "Bulk entity enrichment via local Ollama (shard 0/2). Parallel with one peer under max_concurrent_llm=2.",
+      "role": "Bulk entity enrichment via local Ollama (shard 0/3). Parallel under max_concurrent_llm=3.",
       "uses_ollama": true,
       "script": "scripts/ai_enrich_autonomous.py",
       "args": [
@@ -180,14 +180,14 @@
         "--retry",
         "2",
         "--shard",
-        "0/2"
+        "0/3"
       ],
       "schedule": {
         "kind": "worker",
         "throttle_seconds": 5,
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "KeepAlive waiter shard 0/2 — up to 2 parallel Ollama gens; soft-skip when slots full."
+        "note": "KeepAlive waiter shard 0/3 — up to 3 parallel Ollama gens; soft-skip when slots full."
       },
       "retry": {
         "on_failure": 3,
@@ -211,7 +211,7 @@
       "name": "AI Enrichment Waiter B (Ollama)",
       "status": "active",
       "lane": "ollama",
-      "role": "Enrich waiter B (shard 1/2) — second parallel LLM slot when free.",
+      "role": "Enrich waiter B (shard 1/3) — second parallel LLM slot when free.",
       "uses_ollama": true,
       "script": "scripts/ai_enrich_autonomous.py",
       "args": [
@@ -225,14 +225,14 @@
         "--retry",
         "2",
         "--shard",
-        "1/2"
+        "1/3"
       ],
       "schedule": {
         "kind": "worker",
         "throttle_seconds": 5,
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "KeepAlive waiter shard 1/2 — up to 2 parallel Ollama gens; soft-skip when slots full."
+        "note": "KeepAlive waiter shard 1/3 — up to 3 parallel Ollama gens; soft-skip when slots full."
       },
       "retry": {
         "on_failure": 3,
@@ -256,7 +256,7 @@
       "name": "AI Enrichment Waiter C (Ollama)",
       "status": "active",
       "lane": "ollama",
-      "role": "Enrich waiter C (shard 0/2) — grabs free ollama slot; never exceeds max_concurrent_llm.",
+      "role": "Enrich waiter C (shard 2/3) — third parallel LLM slot when free.",
       "uses_ollama": true,
       "script": "scripts/ai_enrich_autonomous.py",
       "args": [
@@ -270,14 +270,14 @@
         "--retry",
         "2",
         "--shard",
-        "0/2"
+        "2/3"
       ],
       "schedule": {
         "kind": "worker",
         "throttle_seconds": 6,
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "KeepAlive waiter shard 0/2 — up to 2 parallel Ollama gens; soft-skip when slots full."
+        "note": "KeepAlive waiter shard 2/3 — up to 3 parallel Ollama gens; soft-skip when slots full."
       },
       "retry": {
         "on_failure": 3,
@@ -301,7 +301,7 @@
       "name": "AI Enrichment Waiter D (Ollama)",
       "status": "active",
       "lane": "ollama",
-      "role": "Enrich waiter D (shard 1/2) — grabs free ollama slot; never exceeds max_concurrent_llm.",
+      "role": "Enrich waiter D (shard 0/3) — spare for slot 0 when enrich busy; never exceeds max_concurrent_llm.",
       "uses_ollama": true,
       "script": "scripts/ai_enrich_autonomous.py",
       "args": [
@@ -315,14 +315,14 @@
         "--retry",
         "2",
         "--shard",
-        "1/2"
+        "0/3"
       ],
       "schedule": {
         "kind": "worker",
         "throttle_seconds": 7,
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "KeepAlive waiter shard 1/2 — up to 2 parallel Ollama gens; soft-skip when slots full."
+        "note": "KeepAlive waiter shard 0/3 — up to 3 parallel Ollama gens; soft-skip when slots full."
       },
       "retry": {
         "on_failure": 3,
@@ -346,7 +346,7 @@
       "name": "AI Enrichment Waiter E (Ollama)",
       "status": "active",
       "lane": "ollama",
-      "role": "Enrich waiter E (shard 0/2) — grabs free ollama slot; never exceeds max_concurrent_llm.",
+      "role": "Enrich waiter E (shard 1/3) — spare for slot 1; never exceeds max_concurrent_llm.",
       "uses_ollama": true,
       "script": "scripts/ai_enrich_autonomous.py",
       "args": [
@@ -360,14 +360,14 @@
         "--retry",
         "2",
         "--shard",
-        "0/2"
+        "1/3"
       ],
       "schedule": {
         "kind": "worker",
         "throttle_seconds": 8,
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "KeepAlive waiter shard 0/2 — up to 2 parallel Ollama gens; soft-skip when slots full."
+        "note": "KeepAlive waiter shard 1/3 — up to 3 parallel Ollama gens; soft-skip when slots full."
       },
       "retry": {
         "on_failure": 3,
@@ -391,7 +391,7 @@
       "name": "Significance Backfill (Ollama)",
       "status": "active",
       "lane": "ollama",
-      "role": "historicalSignificance backfill via Ollama. Shares LLM slots with enrich (max 2).",
+      "role": "historicalSignificance backfill via Ollama. Shares LLM slots with enrich (max 3).",
       "uses_ollama": true,
       "script": "scripts/backfill_significance.py",
       "args": [
@@ -407,7 +407,7 @@
         "throttle_seconds": 45,
         "timezone": "America/Port_of_Spain",
         "enabled": true,
-        "note": "KeepAlive significance — shares 2 Ollama slots with enrich; soft-skip when full."
+        "note": "KeepAlive significance — shares 3 Ollama slots with enrich; soft-skip when full."
       },
       "retry": {
         "on_failure": 2,
