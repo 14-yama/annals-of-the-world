@@ -14,6 +14,7 @@
  *   npx tsx scripts/refresh_local_stats_cache.ts --total-only
  *   npx tsx scripts/refresh_local_stats_cache.ts --facets
  *   npx tsx scripts/refresh_local_stats_cache.ts --from-git
+ *   npx tsx scripts/refresh_local_stats_cache.ts --audit-total
  *   npx tsx scripts/refresh_local_stats_cache.ts --reset-checkpoint
  */
 import * as fs from 'fs'
@@ -45,9 +46,11 @@ const KEY = process.env.LOCAL_APPWRITE_API_KEY || process.env.APPWRITE_API_KEY |
 const FROM_GIT = process.argv.includes('--from-git')
 const TOTAL_ONLY = process.argv.includes('--total-only')
 const FACETS_ONLY = process.argv.includes('--facets')
+const AUDIT_TOTAL_ONLY = process.argv.includes('--audit-total')
 const RESET_CHECKPOINT = process.argv.includes('--reset-checkpoint')
 const STATS_COLLECTION = 'stats_cache'
 const ENTITIES = 'entities'
+const AUDIT_LOG = 'audit_log'
 /** Appwrite listDocuments hard-caps page size; 100 is the portable max. */
 const PAGE = 100
 const PROGRESS_EVERY = 5000
@@ -242,11 +245,28 @@ async function writeStats(stats: StatsPayload, extra?: Record<string, unknown>) 
       : {}),
     ...extra,
   }
-  const body = JSON.stringify(snapshot, null, 2) + '\n'
+  // Preserve auditTotal* from prior mirrors — entity recount must not wipe the
+  // audit corpus count the curator Audit Log reads (Appwrite caps list total at 5k).
   for (const rel of ['data/governance/stats_cache.json', 'ui/public/governance/stats_cache.json']) {
     const p = path.join(ROOT, rel)
+    let prev: Record<string, unknown> = {}
+    if (fs.existsSync(p)) {
+      try {
+        prev = JSON.parse(fs.readFileSync(p, 'utf8')) as Record<string, unknown>
+      } catch { /* ignore */ }
+    }
+    const merged: Record<string, unknown> = { ...snapshot }
+    for (const k of [
+      'auditTotal',
+      'auditTotalUpdatedAt',
+      'auditTotalIncomplete',
+      'auditTotalNote',
+      'auditTotalMs',
+    ]) {
+      if (merged[k] === undefined && prev[k] !== undefined) merged[k] = prev[k]
+    }
     fs.mkdirSync(path.dirname(p), { recursive: true })
-    fs.writeFileSync(p, body)
+    fs.writeFileSync(p, JSON.stringify(merged, null, 2) + '\n')
   }
   return updatedAt
 }
@@ -256,6 +276,67 @@ function maxExpectedTotal(): number {
   const scanned = Number(seed?.scanned || 0)
   // Hard stop well above seed/export size — prevents SDK cursor loops (saw 1.9M+)
   return Math.max(scanned * 2 || 0, 600_000)
+}
+
+/** Merge fields into existing stats_cache mirror JSON without wiping entity totals. */
+function patchMirror(extra: Record<string, unknown>) {
+  for (const rel of ['data/governance/stats_cache.json', 'ui/public/governance/stats_cache.json']) {
+    const p = path.join(ROOT, rel)
+    let base: Record<string, unknown> = {}
+    if (fs.existsSync(p)) {
+      try {
+        base = JSON.parse(fs.readFileSync(p, 'utf8')) as Record<string, unknown>
+      } catch { /* start fresh */ }
+    }
+    const next = { ...base, ...extra, updatedAt: (extra.updatedAt as string) || new Date().toISOString() }
+    fs.mkdirSync(path.dirname(p), { recursive: true })
+    fs.writeFileSync(p, JSON.stringify(next, null, 2) + '\n')
+  }
+}
+
+/**
+ * Ground-truth audit_log count via cursor pages.
+ * Appwrite listDocuments.total caps at 5000 — curator Audit Log needs this.
+ */
+async function countAuditTotal(): Promise<number> {
+  const started = Date.now()
+  let total = 0
+  let cursor: string | undefined
+  let prevCursor: string | undefined
+  while (!shuttingDown) {
+    const queries = [Query.limit(PAGE), Query.select(['$id'])]
+    if (cursor) queries.push(Query.cursorAfter(cursor))
+    const page = await databases.listDocuments(DATABASE, AUDIT_LOG, queries)
+    const docs = page.documents || []
+    if (docs.length === 0) break
+    total += docs.length
+    prevCursor = cursor
+    cursor = docs[docs.length - 1].$id
+    if (cursor === prevCursor) {
+      console.error('[stats] audit cursor not advancing — aborting')
+      break
+    }
+    if (total % PROGRESS_EVERY < PAGE) {
+      console.log(`[stats] audit counted ${total}… (${Date.now() - started}ms)`)
+      // Progressive mirror so UI leaves the 5k cap while recount runs
+      patchMirror({
+        auditTotal: total,
+        auditTotalUpdatedAt: new Date().toISOString(),
+        auditTotalIncomplete: true,
+        note: `audit_log count in progress (${total})`,
+      })
+    }
+    if (docs.length < PAGE) break
+  }
+  const updatedAt = new Date().toISOString()
+  patchMirror({
+    auditTotal: total,
+    auditTotalUpdatedAt: updatedAt,
+    auditTotalIncomplete: false,
+    note: `audit_log paged count (${Date.now() - started}ms)`,
+  })
+  console.log(`[stats] audit ground-truth total=${total} (${Date.now() - started}ms)`)
+  return total
 }
 
 /** Phase 1: ID-only page count — fast, writes total immediately. */
@@ -468,6 +549,12 @@ async function main() {
   }
   await ensureStatsCollection()
   await ensureAuditNewValueAttr()
+
+  if (AUDIT_TOTAL_ONLY) {
+    const n = await countAuditTotal()
+    console.log(`[stats] wrote auditTotal=${n}`)
+    return
+  }
 
   if (FROM_GIT) {
     const stats = loadGitStats()

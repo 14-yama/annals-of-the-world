@@ -979,7 +979,7 @@ def _restart_ollama() -> bool:
     try:
         log_fh = open("/tmp/ollama.log", "a")
         env = os.environ.copy()
-        env.setdefault("OLLAMA_NUM_PARALLEL", "2")
+        env.setdefault("OLLAMA_NUM_PARALLEL", "3")
         env.setdefault("OLLAMA_MAX_LOADED_MODELS", "2")
         subprocess.Popen(
             [ollama_bin, "serve"],

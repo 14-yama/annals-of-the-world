@@ -16,6 +16,7 @@ import os
 import sys
 import argparse
 import time
+from datetime import datetime, timezone
 
 BASE = "data/appwrite-export/entities"
 
@@ -223,13 +224,29 @@ def main():
 
     # Write queue
     output = queue[:args.limit]
+    needing = len(queue)
+    enriched_approx = max(0, total - needing)
+    pct = round(100.0 * enriched_approx / total, 2) if total else 0.0
     os.makedirs(os.path.dirname(args.output), exist_ok=True)
     with open(args.output, "w") as f:
         json.dump(
             {
-                "generated": time.strftime("%Y-%m-%dT%H:%M:%SZ"),
+                "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "total_scanned": total,
                 "count": len(output),
+                # Full-corpus thin/enriched (summary < 800c heuristic) — not capped by --limit
+                "needingEnrichment": needing,
+                "thinRemaining": needing,
+                "enrichedApprox": enriched_approx,
+                "pctEnriched": pct,
+                "enrichHeuristic": "summary_len >= 800",
+                "queueCappedAt": args.limit,
+                "queueTruncated": needing > len(output),
+                "thinBreakdown": {
+                    "stubsUnder200": stubs,
+                    "partials200to600": partials,
+                    "weak600to800": weak,
+                },
                 "queue": output,
             },
             f,
@@ -237,6 +254,10 @@ def main():
         )
         f.write("\n")
     print(f"\nQueue written to {args.output} ({len(output):,} entities)")
+    print(
+        f"Corpus: enriched≈{enriched_approx:,} / {total:,} ({pct}%) · "
+        f"thin remaining {needing:,}"
+    )
 
 
 if __name__ == "__main__":

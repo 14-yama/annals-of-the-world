@@ -38,6 +38,7 @@ import time
 import urllib.request
 import urllib.error
 import urllib.parse
+from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -585,7 +586,8 @@ def apply_enrichment(filepath, slug, result):
     with open(filepath, "r") as f:
         data = json.load(f)
 
-    timestamp = time.strftime("%Y-%m-%dT%H:%M:%SZ")
+    # Must be real UTC. Local wall-clock + "Z" made AST look ~4h "stale" in the UI.
+    timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     for entity in data.get("entities", []):
         if entity.get("slug") != slug:
@@ -1211,7 +1213,7 @@ def main():
     # Save run report
     os.makedirs(os.path.dirname(REPORT_FILE), exist_ok=True)
     run_data = {
-        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "timestamp": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "model": args.model,
         "count_requested": args.count,
         "enriched": enriched,
