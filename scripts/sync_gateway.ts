@@ -158,21 +158,36 @@ function changedEntityFiles(lastCommit: string): string[] {
     // Full walk+parse of ~392k files takes many minutes and starves audit_log catch-up.
     let candidates: string[] = []
     try {
-      // detailsJson is often a JSON string, so markers appear escaped as \"_unsyncedEdits\":
-      const raw = execSync(
-        `rg -l --glob '*.json' '_unsyncedEdits|_editLog' ${JSON.stringify(ENTITIES_DIR)}`,
-        { encoding: 'utf-8', maxBuffer: 64 * 1024 * 1024 },
-      )
-      candidates = raw.split('\n').map(s => s.trim()).filter(Boolean)
-      console.log(`[diff] rg candidates: ${candidates.length}`)
-    } catch (e) {
-      const msg = (e as { status?: number; message?: string }).message || ''
-      // rg exit 1 = no matches
-      if ((e as { status?: number }).status === 1) {
-        console.log('[diff] --local found 0 dirty files (rg)')
-        return []
+      // ai_enrich writes `_unsyncedEdits: true` *inside* detailsJson, so on disk the
+      // bytes are the escaped form `_unsyncedEdits\": true`. A JS template `\"` eats
+      // the backslash and silently searches the unescaped form — missing all nested
+      // dirty flags (audit_log then freezes at the last successful sync).
+      // Use JSON.stringify so the literal backslash reaches rg/grep -F.
+      const nestedFlag = '_unsyncedEdits\\": true'
+      const topFlag = '"_unsyncedEdits": true'
+      let raw = ''
+      try {
+        raw = execSync(
+          `rg -l --glob '*.json' -F ${JSON.stringify(nestedFlag)} ${JSON.stringify(ENTITIES_DIR)} || rg -l --glob '*.json' -F ${JSON.stringify(topFlag)} ${JSON.stringify(ENTITIES_DIR)}`,
+          { encoding: 'utf-8', maxBuffer: 64 * 1024 * 1024, shell: '/bin/bash' },
+        )
+      } catch (rgErr) {
+        const status = (rgErr as { status?: number }).status
+        if (status === 1) {
+          console.log('[diff] --local found 0 dirty files (rg)')
+          return []
+        }
+        console.warn('[diff] rg unavailable; using grep -R candidate scan')
+        raw = execSync(
+          `grep -R -l --include='*.json' -F ${JSON.stringify(nestedFlag)} ${JSON.stringify(ENTITIES_DIR)} || grep -R -l --include='*.json' -F ${JSON.stringify(topFlag)} ${JSON.stringify(ENTITIES_DIR)} || true`,
+          { encoding: 'utf-8', maxBuffer: 64 * 1024 * 1024, shell: '/bin/bash' },
+        )
       }
-      console.warn(`[diff] rg unavailable (${msg}); falling back to full walk`)
+      candidates = raw.split('\n').map(s => s.trim()).filter(Boolean)
+      console.log(`[diff] scan candidates: ${candidates.length}`)
+    } catch (e) {
+      const msg = (e as { message?: string }).message || ''
+      console.warn(`[diff] candidate scan failed (${msg}); falling back to full walk`)
       candidates = []
       walkDir(ENTITIES_DIR, p => { if (p.endsWith('.json')) candidates.push(p) })
     }
@@ -341,6 +356,28 @@ function entityToPayload(e: Entity): Record<string, unknown> {
   return out
 }
 
+/** Bump stats_cache.auditTotal so curator UI tracks live enrichment past the 5k API cap. */
+function bumpAuditTotalMirror(delta: number) {
+  if (delta <= 0) return
+  for (const rel of ['data/governance/stats_cache.json', 'ui/public/governance/stats_cache.json']) {
+    const p = path.join(ROOT, rel)
+    try {
+      const data = fs.existsSync(p)
+        ? JSON.parse(fs.readFileSync(p, 'utf8')) as Record<string, unknown>
+        : {}
+      const prev = Number(data.auditTotal || 0)
+      // Only bump when we already have a real/seeded total (> API cap)
+      if (prev < 5000) continue
+      data.auditTotal = prev + delta
+      data.auditTotalUpdatedAt = new Date().toISOString()
+      fs.mkdirSync(path.dirname(p), { recursive: true })
+      fs.writeFileSync(p, JSON.stringify(data, null, 2) + '\n')
+    } catch {
+      /* non-fatal */
+    }
+  }
+}
+
 // ── Audit log emission ──
 async function emitAuditRow(entity: Entity, log: EditLogEntry): Promise<boolean> {
   const docId = crypto.randomUUID()
@@ -502,9 +539,10 @@ async function main(): Promise<void> {
         }
       }
 
-      // Clear _editLog and dirty flags from local file (real run only)
+      // Clear _editLog and dirty flags from local file (real run only).
+      // Delete keys entirely — leaving "_editLog":[] made rg match ~18k stale files.
       if (!DRY_RUN) {
-        dj._editLog = []
+        delete dj._editLog
         delete dj._unsyncedEdits
         ent.detailsJson = JSON.stringify(dj)
         // Also clear the top-level entity flag — without this the --local scanner
@@ -529,6 +567,10 @@ async function main(): Promise<void> {
   }
   console.log('\n=== Summary ===')
   console.log(JSON.stringify(stats, null, 2))
+
+  if (!DRY_RUN && auditRowsEmitted > 0) {
+    bumpAuditTotalMirror(auditRowsEmitted)
+  }
 
   if (!DRY_RUN) {
     budget.current.lastUpdated = new Date().toISOString()
