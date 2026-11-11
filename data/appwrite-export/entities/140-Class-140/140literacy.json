@@ -11,7 +11,7 @@
       "name": "literacy",
       "label": "Idea",
       "callNumber": "140.literacy",
-      "summary": "Ability to read for knowledge, write coherently, and think critically about the written word; ability to read, write, and use arithmetic",
+      "summary": "Literacy is the ability to read for knowledge, write coherently, and think critically about the written word; it enables individuals to read, write, and use arithmetic. This fundamental skill has been a cornerstone of human progress, allowing people to access knowledge, express themselves, and participate in the global economy. The development of literacy has been a gradual process, with ancient civilizations such as the Sumerians, Egyptians, and Greeks making significant contributions to its evolution. The spread of literacy has been facilitated by various factors, including the rise of trade, the growth of cities, and the invention of the printing press. As a result, literacy has played a crucial role in shaping the course of human history, influencing the development of education, literature, and science. Today, literacy remains a vital skill, essential for individuals to navigate the complexities of modern life, participate in the workforce, and engage with the world around them.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,21 @@
       "wikidataQid": "Q8236",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Literacy",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier philosophical traditions in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}, {\"title\": \"Empirical observations in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}, {\"title\": \"Cultural context in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Influenced later thought through literacy's historical significance\", \"type\": \"Idea\"}, {\"title\": \"Shaped institutions through literacy's historical significance\", \"type\": \"Idea\"}, {\"title\": \"Transformed practice through literacy's historical significance\", \"type\": \"Idea\"}], \"relationships\": [{\"sourceSlug\": \"literacy\", \"sourceName\": \"literacy\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"literacy is situated within the Classical (920)\"}, {\"sourceSlug\": \"literacy\", \"sourceName\": \"literacy\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"intellectual-tradition-classical\", \"targetName\": \"Intellectual Tradition (Classical)\", \"context\": \"literacy shaped intellectual tradition during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: literacy\", \"type\": \"Reference article\", \"slug\": \"literacy\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q8236\", \"https://en.wikipedia.org/wiki/Literacy\"], \"tags\": [\"concept\", \"Religious & Philosophical Concepts\", \"religious-studies\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"literacy left a notable mark on Classical history, documented across 128 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\"}",
+      "detailsJson": "{\"causes\":[\"The invention of the alphabet by the Sumerians around 3500 BCE allowed for the development of written language.\",\"The establishment of the ancient Library of Alexandria in the 3rd century BCE enabled scholars to access and preserve written knowledge.\",\"The invention of the printing press by Johannes Gutenberg in the 15th century CE facilitated the mass production of books and played a key role in spreading literacy throughout Europe.\"],\"effects\":[\"The spread of literacy led to significant improvements in education, literacy rates, and economic productivity.\",\"Literacy played a crucial role in the scientific revolution of the 16th and 17th centuries, as it enabled scholars to access and analyze scientific texts.\",\"The development of literacy has been essential for the growth of modern democracies, as it allows citizens to participate in the political process and access information.\"],\"relationships\":[{\"sourceSlug\":\"printing press\",\"sourceName\":\"Printing Press\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"literacy\",\"targetName\":\"Literacy\",\"context\":\"The invention of the printing press by Johannes Gutenberg in the 15th century CE facilitated the mass production of books and played a key role in spreading literacy throughout Europe.\"},{\"sourceSlug\":\"ancient Library of Alexandria\",\"sourceName\":\"Ancient Library of Alexandria\",\"verb\":\"CONTAINS\",\"targetSlug\":\"literacy\",\"targetName\":\"Literacy\",\"context\":\"The establishment of the ancient Library of Alexandria in the 3rd century BCE enabled scholars to access and preserve written knowledge.\"},{\"sourceSlug\":\"Sumerian civilization\",\"sourceName\":\"Sumerian Civilization\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"literacy\",\"targetName\":\"Literacy\",\"context\":\"The invention of the alphabet by the Sumerians around 3500 BCE allowed for the development of written language.\"}],\"places\":[{\"name\":\"Ancient Library of Alexandria\",\"role\":\"Repository\"}],\"texts\":[{\"title\":\"Wikipedia: literacy\",\"type\":\"Reference article\",\"slug\":\"literacy\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q8236\",\"https://en.wikipedia.org/wiki/Literacy\"],\"tags\":[\"concept\",\"Religious & Philosophical Concepts\",\"religious-studies\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"literacy left a notable mark on Classical history, documented across 128 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Literacy has played a crucial role in shaping the course of human history, influencing the development of education, literature, and science. It has enabled individuals to access knowledge, express themselves, and participate in the global economy.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Idea -- Religious & Philosophical Concepts -- Global -- Classical"
       ],
       "subjects": [
-        "concept",
-        "Religious & Philosophical Concepts"
+        "Global",
+        "Education",
+        "Literature",
+        "Science",
+        "Economics",
+        "Politics",
+        "History"
       ],
       "frameworks": [
-        "RELIGIOUS_STUDIES",
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "CULTURAL_TRANSMISSION"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -53,7 +56,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:48:23.315661+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Literacy has played a crucial role in shaping the course of human history, influencing the development of education, literature, and science. It has enabled individuals to access knowledge, express themselves, and participate in the global economy.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-08T22:03:04Z"
     }
   ]
 }

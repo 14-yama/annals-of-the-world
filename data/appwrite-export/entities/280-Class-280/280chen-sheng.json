@@ -11,7 +11,7 @@
       "name": "Chen Sheng",
       "label": "Person",
       "callNumber": "280.chen-sheng",
-      "summary": "Chen Sheng (b. 250 BCE, Fangcheng County) was a public servant or civil administrator of the Classical era, an age of empires, philosophical inquiry, and foundational civilizations, active in Fangcheng County. Known in the fields of military leaders & commanders.",
+      "summary": "Chen Sheng (d. 208 BCE) with Wu Guang launched the Dazexiang uprising, the first major rebellion against the Qin dynasty after Qin Shi Huang’s death. A former conscript officer, he declared a restored Chu kingship and briefly shook Qin’s successor regime before defeat and murder.\n\nThough his revolt failed, it cracked Qin legitimacy and opened the path to Liu Bang and Xiang Yu’s wars. Chinese tradition remembers him as the spark of anti-Qin popular war.\n\nChen Sheng inaugurates the narrative of Qin’s collapse.\n\nHis or its historical footprint survives in specialised scholarship, institutional memory, and the wider narrative structures through which later ages organised political, religious, and cultural experience across regions.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,17 +25,21 @@
       "wikidataQid": "Q699882",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Chen_Sheng",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"250 BCE, Fangcheng County\"}, {\"title\": \"Military conflicts and strategic necessities\", \"type\": \"Idea\", \"year\": \"250 BCE, Fangcheng County\"}], \"effects\": [{\"title\": \"Determined military outcomes shaping geopolitical boundaries\", \"type\": \"Idea\", \"year\": \"207 BCE\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"207 BCE\"}], \"relationships\": [{\"sourceSlug\": \"chen-sheng\", \"sourceName\": \"Chen Sheng\", \"verb\": \"COMMANDS\", \"targetSlug\": \"field-280\", \"targetName\": \"Military Leaders & Commanders\", \"context\": \"Chen Sheng: Military command in military leaders & commanders\"}, {\"sourceSlug\": \"chen-sheng\", \"sourceName\": \"Chen Sheng\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Chen Sheng was active during the Classical era\"}], \"places\": [{\"name\": \"Fangcheng County\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Chen Sheng\", \"type\": \"Reference article\", \"slug\": \"chen-sheng\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q699882\", \"https://en.wikipedia.org/wiki/Chen_Sheng\"], \"tags\": [\"Military Leaders & Commanders\", \"conflict-and-resolution\", \"geopolitical-linkage\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Qin conscription and harsh law provoked popular resistance.\",\"Imperial succession after Qin Shi Huang created a legitimacy vacuum.\",\"Chu regional identity offered a rebel royal banner.\"],\"effects\":[\"Qin authority fractured beyond recovery.\",\"Later rebels inherited the anti-Qin opening he created.\",\"Historiography cast him as the first hero of Qin’s fall.\"],\"relationships\":[{\"sourceSlug\":\"chen-sheng\",\"sourceName\":\"Chen Sheng\",\"verb\":\"CAUSES\",\"targetSlug\":\"fall-of-qin\",\"targetName\":\"fall of Qin\",\"context\":\"His uprising began the rebellions that toppled Qin.\"},{\"sourceSlug\":\"chen-sheng\",\"sourceName\":\"Chen Sheng\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"china\",\"targetName\":\"China\",\"context\":\"He rebelled in late Qin China.\"},{\"sourceSlug\":\"chen-sheng\",\"sourceName\":\"Chen Sheng\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"qin-dynasty\",\"targetName\":\"Qin dynasty\",\"context\":\"His revolt erupted at the Qin dynasty’s end.\"}],\"places\":[{\"name\":\"Dazexiang\",\"role\":\"Site associated with the uprising’s start\"},{\"name\":\"Chu\",\"role\":\"Regional identity of his rebel kingship\"},{\"name\":\"China\",\"role\":\"Empire in collapse\"}],\"texts\":[{\"title\":\"Wikipedia: Chen Sheng\",\"type\":\"Reference article\",\"slug\":\"chen-sheng\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q699882\",\"https://en.wikipedia.org/wiki/Chen_Sheng\"],\"tags\":[\"Military Leaders & Commanders\",\"conflict-and-resolution\",\"geopolitical-linkage\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":8,\"significanceNarrative\":\"Chen Sheng’s revolt opened the cascade that destroyed the Qin empire.\",\"significanceCategory\":\"national\"}}",
       "subjectHeadings": [
         "People — Military Leaders & Commanders — Global — Classical"
       ],
       "subjects": [
-        "Military Leaders & Commanders"
+        "Qin dynasty",
+        "Dazexiang uprising",
+        "Chen Sheng",
+        "Chu",
+        "Peasant revolt"
       ],
       "frameworks": [
-        "CONFLICT_AND_RESOLUTION",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "CAUSE_AND_EFFECT",
+        "STRUCTURAL_ANALYSIS",
+        "DIPLOMATIC_HISTORY"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -52,7 +56,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:25:57.881085+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "Chen Sheng’s revolt opened the cascade that destroyed the Qin empire.",
+        "significanceCategory": "national"
+      },
+      "enrichedAt": "2026-11-10T22:59:11Z"
     }
   ]
 }

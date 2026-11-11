@@ -11,7 +11,7 @@
       "name": "Venice",
       "label": "Text",
       "callNumber": "764.venice",
-      "summary": "Venice is a big city from Europe, dating to 421-03-26. It is considered a landmark work of historical and cultural significance. Recognized as a landmark figure with global significance (referenced in 226 Wikipedia editions). Relevant to cause-and-effect analysis.",
+      "summary": "Venice is a city in Southern Europe, founded in 421 AD on the marshy lagoon of the Adriatic Sea. Its strategic location at the head of the Adriatic made it a crucial hub for trade and cultural exchange between the Byzantine Empire and the Western Roman Empire. The city's unique architecture, known as Byzantine Gothic, blended Eastern and Western styles, reflecting its complex history as a melting pot of cultures. The Venetian Republic, which emerged in the 8th century, became a dominant power in the Mediterranean, controlling key trade routes and cities. This led to the rise of a powerful merchant class, which played a significant role in shaping European history. The city's legacy can be seen in its stunning St. Mark's Square, the Doge's Palace, and the grand basilica of St. Mark's, which showcase the blend of Byzantine, Gothic, and Renaissance styles. Venice's significance extends beyond its physical architecture, as it played a pivotal role in the development of humanism, the Renaissance, and the Baroque period. The city's downfall, caused by the Black Death, the rise of the Ottoman Empire, and the decline of the Venetian Republic, serves as a reminder of the transience of human achievements. Despite its decline, Venice continues to inspire artists, writers, and musicians, and its unique cultural heritage remains an integral part of European identity.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,22 @@
       "wikidataQid": "Q641",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Venice",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Venice%20Old%20Town%20Lagoon%20Aerial%20View.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier literary tradition in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Historical events in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}, {\"title\": \"Patron commission in the 3000 BCE – 500 CE\", \"type\": \"Text\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Preserved knowledge through Venice's historical significance\", \"type\": \"Text\"}, {\"title\": \"Influenced later works through Venice's historical significance\", \"type\": \"Text\"}, {\"title\": \"Defined canon through Venice's historical significance\", \"type\": \"Text\"}], \"relationships\": [{\"sourceSlug\": \"venice\", \"sourceName\": \"Venice\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Venice is situated within the Classical (920)\"}, {\"sourceSlug\": \"venice\", \"sourceName\": \"Venice\", \"verb\": \"TRANSMITS\", \"targetSlug\": \"literary-canon-classical\", \"targetName\": \"Literary Canon (Classical)\", \"context\": \"Venice contributed to the literary canon of the Classical era\"}], \"places\": [{\"name\": \"Italy\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Venice\", \"type\": \"Reference article\", \"slug\": \"venice\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q641\", \"https://en.wikipedia.org/wiki/Venice\"], \"tags\": [\"Italy\", \"big city\", \"Europe\", \"Architecture & Built Works\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Venice is remembered as a landmark text of the Classical era, referenced in 226 Wikipedia language editions. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\":[\"The Byzantine Empire's expansion into the Mediterranean created a need for a strong naval power to protect its interests.\",\"The Western Roman Empire's decline led to a power vacuum that Venice filled.\",\"The rise of the Ottoman Empire's expansion into the Eastern Mediterranean created a need for a strong alliance with European powers.\"],\"effects\":[\"The Venetian Republic's rise led to the development of a powerful merchant class that played a significant role in shaping European history.\",\"The city's unique architecture, known as Byzantine Gothic, influenced the development of European architecture.\",\"The city's cultural heritage, including its art, literature, and music, continues to inspire artists and writers today.\"],\"relationships\":[{\"sourceSlug\":\"byzantine-empire\",\"sourceName\":\"Byzantine Empire\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"venice\",\"targetName\":\"Venice\",\"context\":\"Venice emerged as a key ally of the Byzantine Empire to counter the rising power of the Western Roman Empire.\"},{\"sourceSlug\":\"western-roman-empire\",\"sourceName\":\"Western Roman Empire\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"venice\",\"targetName\":\"Venice\",\"context\":\"The Western Roman Empire's decline created a power vacuum that Venice filled.\"},{\"sourceSlug\":\"ottoman-empire\",\"sourceName\":\"Ottoman Empire\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"venice\",\"targetName\":\"Venice\",\"context\":\"The Ottoman Empire's expansion into the Eastern Mediterranean created a need for a strong alliance with European powers, including Venice.\"}],\"places\":[{\"name\":\"Venice, Italy\",\"role\":\"Founding Place\"}],\"texts\":[{\"title\":\"Wikipedia: Venice\",\"type\":\"Reference article\",\"slug\":\"venice\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q641\",\"https://en.wikipedia.org/wiki/Venice\"],\"tags\":[\"Italy\",\"big city\",\"Europe\",\"Architecture & Built Works\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Venice is remembered as a landmark text of the Classical era, referenced in 226 Wikipedia language editions. Key lasting impacts include: Contributed to cultural heritage and knowledge transmission. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Venice's unique blend of cultures and its strategic location made it a crucial hub for trade and cultural exchange between the Byzantine and Western Roman Empires.\",\"significanceCategory\":\"regional\"}}",
       "subjectHeadings": [
         "Artifacts & Texts -- Architecture & Built Works -- Italy -- Classical"
       ],
       "subjects": [
-        "Italy",
-        "big city",
         "Europe",
-        "Architecture & Built Works"
+        "Mediterranean Trade",
+        "Byzantine Culture",
+        "Venetian Republic",
+        "Merchant Class",
+        "European Architecture",
+        "Byzantine Gothic"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
+        "CULTURAL_TRANSMISSION",
+        "COMPARATIVE_CIVILIZATIONS",
         "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
@@ -54,7 +58,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:47:12.987582+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Venice's unique blend of cultures and its strategic location made it a crucial hub for trade and cultural exchange between the Byzantine and Western Roman Empires.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-11T00:13:47Z"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "name": "malnutrition",
       "label": "Idea",
       "callNumber": "130.malnutrition",
-      "summary": "malnutrition is a academic discipline. It fundamentally shaped intellectual and practical discourse across civilizations.",
+      "summary": "Malnutrition is the clinical and social condition of inadequate, excessive, or imbalanced nutrient intake and assimilation—encompassing undernutrition, micronutrient deficiency, and diet-related overweight. Across history it has shaped child mortality, military endurance, labour productivity, and the politics of famine, from ancient grain crises to twentieth-century relief science.\n\nAs a modern concept it crystallised with physiology, colonial medicine, and humanitarian statistics: kwashiorkor, scurvy, rickets, and calorie deficits became measurable objects of state and NGO intervention. Wars and depressions produced landmark nutrition surveys; Green Revolution yields and fortification campaigns redefined what societies counted as enough food.\n\nToday malnutrition remains a double burden—hunger beside obesity—tying public health to inequality, climate stress, and global food systems. Its history is inseparable from agriculture, empire, and welfare.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q12167",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Malnutrition",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Kwashiorkor%206180.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier philosophical traditions in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}, {\"title\": \"Empirical observations in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}, {\"title\": \"Cultural context in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Influenced later thought through malnutrition's historical significance\", \"type\": \"Idea\"}, {\"title\": \"Shaped institutions through malnutrition's historical significance\", \"type\": \"Idea\"}, {\"title\": \"Transformed practice through malnutrition's historical significance\", \"type\": \"Idea\"}], \"relationships\": [{\"sourceSlug\": \"malnutrition\", \"sourceName\": \"malnutrition\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"malnutrition is situated within the Classical (920)\"}, {\"sourceSlug\": \"malnutrition\", \"sourceName\": \"malnutrition\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"intellectual-tradition-classical\", \"targetName\": \"Intellectual Tradition (Classical)\", \"context\": \"malnutrition shaped intellectual tradition during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: malnutrition\", \"type\": \"Reference article\", \"slug\": \"malnutrition\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q12167\", \"https://en.wikipedia.org/wiki/Malnutrition\"], \"tags\": [\"academic discipline\", \"Technological Innovations\", \"scientific-paradigm\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"malnutrition left a notable mark on Classical history, documented across 119 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\"}",
+      "detailsJson": "{\"causes\":[\"Crop failure, war, and unequal food distribution repeatedly produced population-level nutrient deficits.\",\"Industrial and colonial economies often separated labouring populations from diverse traditional diets.\",\"Scientific medicine defined deficiency diseases, making malnutrition a target of policy intervention.\"],\"effects\":[\"High child mortality and stunting reshaped demography in many agrarian and colonial societies.\",\"Nutrition science and humanitarian aid became central tools of modern statecraft and NGOs.\",\"Food fortification, school meals, and famine codes emerged as institutional responses.\"],\"relationships\":[{\"sourceSlug\":\"malnutrition\",\"sourceName\":\"Malnutrition\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"human-history\",\"targetName\":\"Human agrarian and industrial history\",\"context\":\"Malnutrition has accompanied food systems from early agriculture through modern global markets.\"},{\"sourceSlug\":\"famine\",\"sourceName\":\"Famine\",\"verb\":\"CAUSES\",\"targetSlug\":\"malnutrition\",\"targetName\":\"Malnutrition\",\"context\":\"Acute food crises intensify undernutrition and micronutrient disease.\"},{\"sourceSlug\":\"malnutrition\",\"sourceName\":\"Malnutrition\",\"verb\":\"TRANSFORMS\",\"targetSlug\":\"public-health\",\"targetName\":\"Public health\",\"context\":\"Recognition of deficiency diseases reoriented medicine and welfare toward diet.\"}],\"places\":[{\"name\":\"Global\",\"role\":\"Worldwide occurrence across climates and economies\"},{\"name\":\"Humanitarian and clinical centres\",\"role\":\"Sites where modern nutrition science measured and treated deficits\"}],\"texts\":[{\"title\":\"Wikipedia: malnutrition\",\"type\":\"Reference article\",\"slug\":\"malnutrition\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q12167\",\"https://en.wikipedia.org/wiki/Malnutrition\"],\"tags\":[\"academic discipline\",\"Technological Innovations\",\"scientific-paradigm\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"malnutrition left a notable mark on Classical history, documented across 119 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\",\"historicalSignificance\":{\"significanceScore\":8,\"significanceNarrative\":\"Malnutrition has been a persistent biological–social constraint on societies, driving famine politics, public health, and modern food policy.\",\"significanceCategory\":\"world-changing\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Idea -- Technological Innovations -- Global -- Classical"
       ],
       "subjects": [
-        "academic discipline",
-        "Technological Innovations"
+        "Public health",
+        "Famine",
+        "Nutrition science",
+        "Poverty",
+        "Agriculture",
+        "Demography",
+        "Humanitarian aid"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "SCIENTIFIC_PARADIGM",
-        "CAUSE_AND_EFFECT"
+        "ENVIRONMENTAL_HISTORY",
+        "ECONOMIC_ANALYSIS",
+        "LONGUE_DUREE"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -53,7 +58,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:47:21.111525+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "Malnutrition has been a persistent biological–social constraint on societies, driving famine politics, public health, and modern food policy.",
+        "significanceCategory": "world-changing"
+      },
+      "enrichedAt": "2026-11-08T19:04:54Z"
     }
   ]
 }

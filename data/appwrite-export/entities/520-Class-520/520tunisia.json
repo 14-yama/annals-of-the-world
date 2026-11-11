@@ -11,7 +11,7 @@
       "name": "Tunisia",
       "label": "EventWindow",
       "callNumber": "520.tunisia",
-      "summary": "Tunisia, officially the Republic of Tunisia, is a country in the Maghreb region of North Africa. It is bordered by Algeria to the west and southwest, Libya to the southeast, and the Mediterranean Sea to the north and east. Tunisia also shares maritime borders with Italy through the islands of Sicily and Sardinia to the north and Malta to the east. It features the archaeological sites of Carthage dating back to the 9th century BC, as well as the Great Mosque of Kairouan. Known for its ancient architecture, souks, and blue coasts, it covers 163,610 km2 (63,170 sq mi), and has a population of 12.1 million.",
+      "summary": "Tunisia is a North African state on the central Maghreb coast, bounded by Algeria, Libya, and the Mediterranean, with a history that runs from Punic Carthage through Roman Africa, medieval Ifriqiya, Ottoman regency, French protectorate, and postcolonial republic. Its Cap Bon–Tunis–Sahel corridor and Saharan south made it a hinge between Mediterranean trade and trans-Saharan routes.\n\nKairouan’s early Islamic foundations, Hafsid and Ottoman urban cultures, and the 1956 independence under Habib Bourguiba shaped a compact, relatively centralized modern state. The 2010–11 uprising that began in Sidi Bouzid catalyzed the wider Arab Spring and a difficult democratic transition.\n\nTunisia’s archaeological landscape—Carthage, Dougga, El Djem—and its twentieth-century political experiments keep it central to Maghrebi and Mediterranean history.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,17 +25,24 @@
       "wikidataQid": "Q948",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\":[\"Historical forces and geopolitical developments\"],\"effects\":[\"Influenced subsequent historical developments\"],\"relationships\":[{\"sourceSlug\":\"tunisia\",\"sourceName\":\"Tunisia\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"era-classical\",\"targetName\":\"Classical\",\"context\":\"Tunisia is situated within the Classical (920)\"},{\"sourceSlug\":\"tunisia\",\"sourceName\":\"Tunisia\",\"verb\":\"RELATES_TO\",\"targetSlug\":\"republic\",\"targetName\":\"Republic\",\"context\":\"Tunisia engaged with republic during the Classical era\"}],\"places\":[{\"name\":\"Tunisia\",\"role\":\"Country\"}],\"texts\":[{\"title\":\"Wikipedia: Tunisia\",\"type\":\"Reference article\",\"slug\":\"tunisia\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q948\"],\"tags\":[\"Tunisia\",\"republic\",\"Revolutions & Uprisings\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Tunisia is remembered as a landmark eventwindow of the Classical era, referenced in 325 Wikipedia language editions. Key lasting impacts include: Influenced subsequent historical developments. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":5,\"significanceNarrative\":\"As a cradle of ancient civilizations, including Carthage and the Great Mosque of Kairouan, Tunisia has had significant regional impact on North African history and culture. Its strategic location has also facilitated trade and cultural exchange with Mediterranean nations.\",\"significanceCategory\":\"regional\"},\"_editLog\":[],\"_unsyncedEdits\":false}",
+      "detailsJson": "{\"causes\":[\"Mediterranean position linked Punic, Roman, and Islamic maritime economies.\",\"Ifriqiya’s urban and agricultural base supported successive Maghrebi states.\",\"Colonial and postcolonial politics concentrated power in a compact national territory.\"],\"effects\":[\"Carthage and Roman Africa became foundational layers of Maghrebi identity.\",\"Modern Tunisia pioneered an influential postcolonial republican model in the region.\",\"The 2011 uprising reshaped regional politics and Tunisia’s constitutional order.\"],\"relationships\":[{\"sourceSlug\":\"tunisia\",\"sourceName\":\"Tunisia\",\"verb\":\"CONTAINS\",\"targetSlug\":\"carthage\",\"targetName\":\"Carthage\",\"context\":\"Ancient Carthage lies within modern Tunisian territory.\"},{\"sourceSlug\":\"tunisia\",\"sourceName\":\"Tunisia\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"maghreb\",\"targetName\":\"Maghreb\",\"context\":\"Tunisia is a core Maghrebi state on the central North African coast.\"},{\"sourceSlug\":\"tunisia\",\"sourceName\":\"Tunisia\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"arab-spring\",\"targetName\":\"Arab Spring\",\"context\":\"The 2010–11 Tunisian uprising sparked the wider Arab Spring wave.\"}],\"places\":[{\"name\":\"Tunis\",\"role\":\"Capital and modern political centre\"},{\"name\":\"Carthage\",\"role\":\"Ancient Punic and Roman metropolis\"},{\"name\":\"Kairouan\",\"role\":\"Early Islamic and Aghlabid religious centre\"}],\"texts\":[{\"title\":\"Wikipedia: Tunisia\",\"type\":\"Reference article\",\"slug\":\"tunisia\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q948\"],\"tags\":[\"Tunisia\",\"republic\",\"Revolutions & Uprisings\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Tunisia is remembered as a landmark eventwindow of the Classical era, referenced in 325 Wikipedia language editions. Key lasting impacts include: Influenced subsequent historical developments. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":9,\"significanceNarrative\":\"Tunisia concentrates Punic–Roman–Islamic–colonial layers and catalyzed the 2011 Arab Spring.\",\"significanceCategory\":\"global\"}}",
       "subjectHeadings": [
         "Events -- Revolutions & Uprisings -- Tunisia -- Classical"
       ],
       "subjects": [
-        "Tunisia",
-        "republic",
-        "Revolutions & Uprisings"
+        "Maghreb",
+        "Carthage",
+        "Ifriqiya",
+        "Ottoman Regency",
+        "French protectorate",
+        "Arab Spring",
+        "Mediterranean",
+        "North Africa"
       ],
       "frameworks": [
-        "CAUSE_AND_EFFECT"
+        "LONGUE_DUREE",
+        "STRUCTURAL_ANALYSIS",
+        "WORLD_SYSTEMS"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -47,9 +54,9 @@
       "$createdAt": "2026-04-05T12:14:34.863+00:00",
       "$updatedAt": "2026-04-05T12:14:34.863+00:00",
       "historicalSignificance": {
-        "significanceScore": 5,
-        "significanceNarrative": "As a cradle of ancient civilizations, including Carthage and the Great Mosque of Kairouan, Tunisia has had significant regional impact on North African history and culture. Its strategic location has also facilitated trade and cultural exchange with Mediterranean nations.",
-        "significanceCategory": "regional"
+        "significanceScore": 9,
+        "significanceNarrative": "Tunisia concentrates Punic–Roman–Islamic–colonial layers and catalyzed the 2011 Arab Spring.",
+        "significanceCategory": "global"
       },
       "_pipelineState": {
         "state": "triaged",
@@ -57,7 +64,8 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:26:02.377901+00:00"
-      }
+      },
+      "enrichedAt": "2026-11-10T22:47:51Z"
     }
   ]
 }

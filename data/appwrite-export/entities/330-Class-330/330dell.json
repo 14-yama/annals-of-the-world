@@ -11,7 +11,7 @@
       "name": "Dell",
       "label": "Institution",
       "callNumber": "330.dell",
-      "summary": "American multinational computer technology corporation Headquartered in Round Rock. Founded 1984.",
+      "summary": "Dell is an American multinational computer technology company founded by Michael Dell in 1984 and long headquartered in Round Rock, Texas. Its direct-to-consumer PC model and build-to-order supply chain disrupted retail computer sales in the 1990s.\n\nThrough servers, storage, and later enterprise acquisitions (including EMC), Dell moved from dorm-room PCs to a full IT infrastructure vendor, navigating the post-PC era via privatisation and return to public markets. The brand became synonymous with scalable commodity computing.\n\nDell’s rise charts how American logistics and inventory innovation remade the personal-computer industry.",
       "era": "Contemporary",
       "eraSlug": "contemporary",
       "eraDivision": "Cold War Era",
@@ -25,19 +25,23 @@
       "wikidataQid": "Q30873",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Dell",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/RR1-%20Dell%20Campus.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Need for governance in the 1945 CE – present\", \"type\": \"Institution\", \"year\": \"1945 CE\"}, {\"title\": \"Popular demand in the 1945 CE – present\", \"type\": \"Institution\", \"year\": \"1945 CE\"}, {\"title\": \"Political authority in the 1945 CE – present\", \"type\": \"Institution\", \"year\": \"1945 CE\"}], \"effects\": [{\"title\": \"Standardized practices through Dell's historical significance\", \"type\": \"Institution\"}, {\"title\": \"Expanded influence through Dell's historical significance\", \"type\": \"Institution\"}, {\"title\": \"Created framework through Dell's historical significance\", \"type\": \"Institution\"}], \"relationships\": [{\"sourceSlug\": \"dell\", \"sourceName\": \"Dell\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-cold-war-era\", \"targetName\": \"Cold War Era\", \"context\": \"Dell is situated within the Cold War Era (961)\"}, {\"sourceSlug\": \"dell\", \"sourceName\": \"Dell\", \"verb\": \"GOVERNS\", \"targetSlug\": \"governance-contemporary\", \"targetName\": \"Governance (Contemporary)\", \"context\": \"Dell exercised governance during the Contemporary era\"}], \"places\": [{\"name\": \"Round Rock\", \"role\": \"Headquarters\"}, {\"name\": \"United States\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Dell\", \"type\": \"Reference article\", \"slug\": \"dell\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q30873\", \"https://en.wikipedia.org/wiki/Dell\"], \"tags\": [\"United States\", \"public company\", \"Americas\", \"Trade Guilds & Merchant Houses\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Dell left a notable mark on Contemporary history, documented across 78 Wikipedia editions worldwide. Key lasting impacts include: Shaped institutional landscape and community development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\":[\"Falling component costs enabled mail-order PC assembly.\",\"Corporate and consumer PC demand exploded in the 1980s–90s.\",\"Supply-chain software allowed mass customisation at low cost.\"],\"effects\":[\"Direct sales reshaped PC retail and pricing.\",\"Dell became a leading global PC and server vendor.\",\"Enterprise acquisitions expanded it beyond personal computers.\"],\"relationships\":[{\"sourceSlug\":\"dell\",\"sourceName\":\"Dell\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"united-states\",\"targetName\":\"United States\",\"context\":\"Dell is an American technology corporation.\"},{\"sourceSlug\":\"dell\",\"sourceName\":\"Dell\",\"verb\":\"CREATES\",\"targetSlug\":\"personal-computers\",\"targetName\":\"personal computers\",\"context\":\"It became a major PC manufacturer.\"},{\"sourceSlug\":\"dell\",\"sourceName\":\"Dell\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"information-technology\",\"targetName\":\"information technology\",\"context\":\"It supplies enterprise and consumer IT hardware.\"}],\"places\":[{\"name\":\"Round Rock\",\"role\":\"Headquarters\"},{\"name\":\"United States\",\"role\":\"Home country\"}],\"texts\":[{\"title\":\"Wikipedia: Dell\",\"type\":\"Reference article\",\"slug\":\"dell\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q30873\",\"https://en.wikipedia.org/wiki/Dell\"],\"tags\":[\"United States\",\"public company\",\"Americas\",\"Trade Guilds & Merchant Houses\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Dell left a notable mark on Contemporary history, documented across 78 Wikipedia editions worldwide. Key lasting impacts include: Shaped institutional landscape and community development. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":6,\"significanceNarrative\":\"Dell is an American multinational computer technology company founded by Michael Dell in 1984 and long headquartered in Round Rock, Texas. Its direct-to-consumer PC model and build-to-order supply chain disrupted retail computer sales in th\",\"significanceCategory\":\"global\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Institutions -- Economic Institutions -- Americas -- Contemporary"
       ],
       "subjects": [
+        "Computers",
         "United States",
-        "public company",
-        "Americas",
-        "Trade Guilds & Merchant Houses"
+        "Technology",
+        "PCs",
+        "Texas",
+        "Supply chains",
+        "Industry"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "TECHNOLOGICAL_DETERMINISM",
+        "ECONOMIC_ANALYSIS",
+        "STRUCTURAL_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -54,7 +58,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:47:32.856828+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 6,
+        "significanceNarrative": "Dell is an American multinational computer technology company founded by Michael Dell in 1984 and long headquartered in Round Rock, Texas. Its direct-to-consumer PC model and build-to-order supply chain disrupted retail computer sales in th",
+        "significanceCategory": "global"
+      },
+      "enrichedAt": "2026-11-10T07:07:50Z"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "name": "Alexander Neville",
       "label": "Person",
       "callNumber": "250.alexander-neville",
-      "summary": "Alexander Neville was a late medieval prelate who served as Archbishop of York from 1374 to 1388.",
+      "summary": "Alexander Neville (c. 1340–1392) was Archbishop of York from 1374 until his translation and fall in 1388, a leading northern English churchman whose career was entangled with the politics of Edward III’s last years and the reign of Richard II. A member of the powerful Neville family, he rose through royal and papal favour to the second see of England, administering a vast northern province and sitting among the realm’s great prelates. His archiepiscopate coincided with fiscal strain, court faction, and the rising assertiveness of the Commons.\n\nIn 1388 the Merciless Parliament and the Lords Appellant moved against Richard II’s favourites; Neville was impeached, deprived of York, and translated against his will to the titular see of St Andrews—effectively exile from English power—before fleeing abroad. He died in Louvain in 1392. Neville’s fall illustrates how late medieval English archbishops could be broken by aristocratic faction even when backed by kinship networks, and how York’s political weight made its incumbent a prize and a target in Ricardian politics.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q2833909",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Alexander_Neville_(bishop)",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1332\"}, {\"title\": \"Spiritual seeking and religious community formation\", \"type\": \"Idea\", \"year\": \"1332\"}], \"effects\": [{\"title\": \"Shaped religious practice and spiritual communities\", \"type\": \"Idea\", \"year\": \"1392\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1392\"}], \"relationships\": [{\"sourceSlug\": \"alexander-neville\", \"sourceName\": \"Alexander Neville\", \"verb\": \"PREACHES\", \"targetSlug\": \"field-250\", \"targetName\": \"Religious Figures\", \"context\": \"Alexander Neville: Religious teaching in religious figures\"}, {\"sourceSlug\": \"alexander-neville\", \"sourceName\": \"Alexander Neville\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Alexander Neville was active during the Medieval era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Alexander Neville\", \"type\": \"Reference article\", \"slug\": \"alexander-neville\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q2833909\", \"https://en.wikipedia.org/wiki/Alexander_Neville_(bishop)\"], \"tags\": [\"Religious Figures\", \"comparative-religion\", \"doctrine-development\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Neville kinship and royal patronage opened the path to York, one of England’s two archiepiscopal thrones.\",\"Richard II’s reliance on favoured clerics and the backlash of the Lords Appellant made politically exposed bishops vulnerable to impeachment.\",\"Northern ecclesiastical wealth and jurisdiction made the Archbishop of York a central player—and casualty—in late fourteenth-century factional struggle.\"],\"effects\":[\"Neville’s deprivation in 1388 demonstrated that parliamentary and magnate coalitions could unseat even an archbishop tied to a great family.\",\"The crisis reshaped the northern ecclesiastical hierarchy and warned subsequent York archbishops about court alignment.\",\"His exile and death abroad marked a sharp end to Neville influence at York until later generations of the family recovered political stature.\"],\"relationships\":[{\"sourceSlug\":\"alexander-neville\",\"sourceName\":\"Alexander Neville\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"archdiocese-of-york\",\"targetName\":\"Archdiocese of York\",\"context\":\"Neville served as Archbishop of York (1374–1388), head of England’s northern province.\"},{\"sourceSlug\":\"lords-appellant\",\"sourceName\":\"Lords Appellant / Merciless Parliament\",\"verb\":\"TRANSFORMS\",\"targetSlug\":\"alexander-neville\",\"targetName\":\"Alexander Neville\",\"context\":\"The 1388 proceedings impeached Neville and drove him from York into effective exile.\"},{\"sourceSlug\":\"alexander-neville\",\"sourceName\":\"Alexander Neville\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"reign-of-richard-ii\",\"targetName\":\"Reign of Richard II\",\"context\":\"His rise and catastrophic fall were bound to the factional politics of Richard II’s early reign.\"}],\"places\":[{\"name\":\"York, England\",\"role\":\"Seat of Neville’s archiepiscopal power\"},{\"name\":\"Louvain (Leuven)\",\"role\":\"Place of exile and death after his deprivation\"}],\"texts\":[{\"title\":\"Wikipedia: Alexander Neville\",\"type\":\"Reference article\",\"slug\":\"alexander-neville\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q2833909\",\"https://en.wikipedia.org/wiki/Alexander_Neville_(bishop)\"],\"tags\":[\"Religious Figures\",\"comparative-religion\",\"doctrine-development\",\"cultural-diffusion\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":5,\"significanceNarrative\":\"Alexander Neville’s archiepiscopate and 1388 fall show how Ricardian faction could destroy a Neville Archbishop of York, tying northern church power to national crisis.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Religious Figures — Global — Medieval"
       ],
       "subjects": [
-        "Religious Figures"
+        "Medieval England",
+        "Archbishops of York",
+        "Richard II",
+        "Merciless Parliament",
+        "Neville family",
+        "Church and state",
+        "14th century"
       ],
       "frameworks": [
-        "COMPARATIVE_RELIGION",
-        "DOCTRINE_DEVELOPMENT",
-        "CULTURAL_DIFFUSION",
-        "TEMPORAL_LINKAGE"
+        "DIPLOMATIC_HISTORY",
+        "STRUCTURAL_ANALYSIS",
+        "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -53,7 +58,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:26:05.340022+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "Alexander Neville’s archiepiscopate and 1388 fall show how Ricardian faction could destroy a Neville Archbishop of York, tying northern church power to national crisis.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-08T13:13:41Z"
     }
   ]
 }

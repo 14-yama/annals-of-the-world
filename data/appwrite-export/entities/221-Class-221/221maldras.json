@@ -11,7 +11,7 @@
       "name": "Maldras",
       "label": "Person",
       "callNumber": "221.maldras",
-      "summary": "Maldras was the Suevic king of Galicia from 456 until his death. After the execution of Rechiar by the victorious Visigoths, the Suevi are said to have established Maldras on the throne. During his reign the Suevic nation became fragmented.",
+      "summary": "Maldras (or Masdras) was king of the Suebi in Gallaecia (north-west Iberia) from 456 until his death in 460. He rose after the Visigothic defeat and execution of the Suevic king Rechiar, when the Suebic kingdom fractured among rival warlords amid the mid-fifth-century collapse of stable Roman order in Spain.\n\nChronicles depict a violent reign of raids and internal murder: Maldras seized power without clear dynastic legitimacy and was himself assassinated, emblematic of Suebic political fragmentation before later reunification under kings such as Remismund. His years show how Hydatius's Gallaecian chronicle recorded micro-kingships feeding on the ruins of imperial Hispania.\n\nMaldras thus marks the anarchic interlude of Suebic history between Rechiar's fall and renewed consolidation on the Atlantic fringe of the former Roman West.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q2292792",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Maldras",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"Classical\"}, {\"title\": \"Dynastic succession and sovereign authority traditions\", \"type\": \"Idea\", \"year\": \"\"}], \"effects\": [{\"title\": \"Established dynastic legacies and territorial boundaries\", \"type\": \"Idea\", \"year\": \"460-02-01\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"460-02-01\"}], \"relationships\": [{\"sourceSlug\": \"maldras\", \"sourceName\": \"Maldras\", \"verb\": \"RULES\", \"targetSlug\": \"field-221\", \"targetName\": \"Monarchs & Rulers\", \"context\": \"Maldras: Sovereign authority in monarchs & rulers\"}, {\"sourceSlug\": \"maldras\", \"sourceName\": \"Maldras\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Maldras was active during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Maldras\", \"type\": \"Reference article\", \"slug\": \"maldras\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q2292792\", \"https://en.wikipedia.org/wiki/Maldras\"], \"tags\": [\"Monarchs & Rulers\", \"political-systems\", \"empire-and-colonialism\", \"geopolitical-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Visigothic victory over Rechiar shattered Suebic central authority in Gallaecia.\",\"Collapse of effective Roman provincial control enabled rival Suebic warlords to claim kingship.\",\"Competition for plunder and local loyalty favoured short, violent reigns.\"],\"effects\":[\"Suebic power remained fragmented through the late 450s.\",\"Chroniclers recorded a model of usurpatory barbarian kingship in post-Roman Spain.\",\"Later Suebic reunification had to overcome the legacy of Maldras-era chaos.\"],\"relationships\":[{\"sourceSlug\":\"maldras\",\"sourceName\":\"Maldras\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"suebi-kingdom-gallaecia\",\"targetName\":\"Suebic Kingdom of Gallaecia\",\"context\":\"He ruled the Suebi in north-west Iberia from 456 to 460.\"},{\"sourceSlug\":\"rechiar\",\"sourceName\":\"Rechiar\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"maldras\",\"targetName\":\"Maldras\",\"context\":\"Rechiar's defeat and death opened the succession crisis that Maldras exploited.\"},{\"sourceSlug\":\"maldras\",\"sourceName\":\"Maldras\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"fall-of-roman-spain\",\"targetName\":\"Post-Roman Hispania\",\"context\":\"His reign belongs to the mid-fifth-century fragmentation of Roman Spain.\"}],\"places\":[{\"name\":\"Gallaecia (NW Iberia)\",\"role\":\"Heartland of Suebic kingship\"},{\"name\":\"Post-Roman Hispania\",\"role\":\"Wider theatre of Gothic–Suebic conflict\"}],\"texts\":[{\"title\":\"Wikipedia: Maldras\",\"type\":\"Reference article\",\"slug\":\"maldras\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q2292792\",\"https://en.wikipedia.org/wiki/Maldras\"],\"tags\":[\"Monarchs & Rulers\",\"political-systems\",\"empire-and-colonialism\",\"geopolitical-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":3,\"significanceNarrative\":\"Maldras's brief, violent Suebic kingship (456–460) exemplifies post-Rechiar fragmentation in Gallaecia.\",\"significanceCategory\":\"local\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Monarchs & Rulers — Global — Classical"
       ],
       "subjects": [
-        "Monarchs & Rulers"
+        "Suebi",
+        "Gallaecia",
+        "Post-Roman Spain",
+        "Barbarian kingdoms",
+        "5th century",
+        "Visigoths",
+        "Hydatius"
       ],
       "frameworks": [
-        "POLITICAL_SYSTEMS",
-        "EMPIRE_AND_COLONIALISM",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "CAUSE_AND_EFFECT",
+        "STRUCTURAL_ANALYSIS",
+        "DIPLOMATIC_HISTORY"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -53,7 +58,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:48:17.136076+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 3,
+        "significanceNarrative": "Maldras's brief, violent Suebic kingship (456–460) exemplifies post-Rechiar fragmentation in Gallaecia.",
+        "significanceCategory": "local"
+      },
+      "enrichedAt": "2026-11-08T19:04:54Z"
     }
   ]
 }

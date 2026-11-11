@@ -11,7 +11,7 @@
       "name": "Psamtik II",
       "label": "Person",
       "callNumber": "220.psamtik-ii",
-      "summary": "Psamtik II, known by the Graeco-Romans as Psammetichus or Psammeticus, was a king of the Saite-based Twenty-sixth Dynasty of Egypt. His prenomen, Nefer-Ib-Re, means \"Beautiful [is the] Heart [of] Re.\" He was the son of Necho II.",
+      "summary": "\n\nPsamtik II, known by the Graeco-Romans as Psammetichus or Psammeticus, was a king of the Saite-based Twenty-sixth Dynasty of Egypt.\n\nBorn to Necho II, he ascended to the throne around 610 BCE and reigned until his death in 588 BCE. During his reign, Psamtik II implemented significant administrative reforms, re-established trade with the Phoenicians, and expanded Egypt's borders through military campaigns.\n\nOne of Psamtik II's most notable achievements was the construction of a new capital city, Naucratis, which served as a major center for trade and commerce. His reign also saw a resurgence of Egyptian culture, as he promoted the worship of ancient Egyptian gods and encouraged the development of new artistic and literary works.\n\nPsamtik II's legacy extended beyond his own time, as he played a crucial role in shaping the course of Egyptian history and influencing the development of the Hellenistic period. His reign marked the beginning of a new era in Egyptian history, one that would be shaped by the interplay between Egyptian and Greek cultures.\n\nThe iconic inscription on the statue of Psamtik II, which boasts the phrase 'I am a god', underscores the king's ambitions to elevate Egypt to a divine status, and his vision for a unified and powerful Egypt that would transcend its geographical boundaries.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,22 @@
       "wikidataQid": "Q373521",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Psamtik_II",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"700 BCE\"}, {\"title\": \"Political crises and power transitions requiring new leadership\", \"type\": \"Idea\", \"year\": \"700 BCE\"}], \"effects\": [{\"title\": \"Shaped political institutions and governance practices\", \"type\": \"Idea\", \"year\": \"588 BCE\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"588 BCE\"}], \"relationships\": [{\"sourceSlug\": \"psamtik-ii\", \"sourceName\": \"Psamtik II\", \"verb\": \"GOVERNS\", \"targetSlug\": \"field-220\", \"targetName\": \"Political Leaders\", \"context\": \"Psamtik II: Political leadership in political leaders\"}, {\"sourceSlug\": \"psamtik-ii\", \"sourceName\": \"Psamtik II\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Psamtik II was active during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Psamtik II\", \"type\": \"Reference article\", \"slug\": \"psamtik-ii\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q373521\", \"https://en.wikipedia.org/wiki/Psamtik_II\"], \"tags\": [\"Political Leaders\", \"political-systems\", \"geopolitical-linkage\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Psamtik II's ascension to the throne was facilitated by his father Necho II's military campaigns against the Libyans and the Assyrians.\"],\"effects\":[\"The construction of Naucratis led to a significant increase in trade and commerce, as well as the spread of Greek culture throughout Egypt.\"],\"relationships\":[{\"sourceSlug\":\"necho-ii\",\"sourceName\":\"Necho II\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"psamtik-ii\",\"targetName\":\"Psamtik II\",\"context\":\"around 610 BCE\"},{\"sourceSlug\":\"phoenicians\",\"sourceName\":\"Phoenicians\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"psamtik-ii\",\"targetName\":\"Psamtik II\",\"context\":\"through the construction of Naucratis\"},{\"sourceSlug\":\"libyans\",\"sourceName\":\"Libyans\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"psamtik-ii\",\"targetName\":\"Psamtik II\",\"context\":\"by Necho II's father in 657 BCE\"},{\"sourceSlug\":\"assyrians\",\"sourceName\":\"Assyrians\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"psamtik-ii\",\"targetName\":\"Psamtik II\",\"context\":\"by Necho II's father in 657 BCE\"},{\"sourceSlug\":\"egyptian-gods\",\"sourceName\":\"Egyptian gods\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"psamtik-ii\",\"targetName\":\"Psamtik II\",\"context\":\"during his reign\"}],\"places\":[{\"name\":\"Naucratis, Egypt\",\"role\":\"Capital city\"},{\"name\":\"Egypt\",\"role\":\"Region\"},{\"name\":\"Cyprus\",\"role\":\"Major battle site\"}],\"texts\":[{\"title\":\"Wikipedia: Psamtik II\",\"type\":\"Reference article\",\"slug\":\"psamtik-ii\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q373521\",\"https://en.wikipedia.org/wiki/Psamtik_II\"],\"tags\":[\"Political Leaders\",\"political-systems\",\"geopolitical-linkage\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Psamtik II's reign marked the beginning of a new era in Egyptian history, shaped by the interplay between Egyptian and Greek cultures.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Political Leaders — Global — Classical"
       ],
       "subjects": [
-        "Political Leaders"
+        "Egyptian history",
+        "Greek culture in Egypt",
+        "Saite-based Twenty-sixth Dynasty",
+        "Necho II",
+        "Phoenician trade",
+        "Libyan campaigns",
+        "Assyrian influence",
+        "Egyptian art and literature"
       ],
       "frameworks": [
-        "POLITICAL_SYSTEMS",
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT",
-        "TEMPORAL_LINKAGE"
+        "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -53,7 +57,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:48:00.017156+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Psamtik II's reign marked the beginning of a new era in Egyptian history, shaped by the interplay between Egyptian and Greek cultures.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-08T16:17:29Z"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "name": "Richard III of England",
       "label": "Person",
       "callNumber": "221.richard-iii-of-england",
-      "summary": "Richard III was King of England from 26 June 1483 until his death in 1485. He was the last king of the Plantagenet dynasty and its cadet branch the House of York. His defeat and death at the Battle of Bosworth Field marked the end of the Middle Ages in England.",
+      "summary": "\n\nRichard III of England (1452–1485) was the last Plantagenet king of England, ruling from June 1483 until his death at Bosworth Field. He governed the North, then took the throne after the disappearance of Edward V and Richard of York—the Princes in the Tower—events that permanently stained his reputation.\n\nHis brief reign combined legal reform and northern affinity politics with a contested succession that invited Henry Tudor’s invasion. Defeat at Bosworth ended the Wars of the Roses’ \n\n\n",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,18 +25,22 @@
       "wikidataQid": "Q133028",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Richard_III_of_England",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1452-10-11, Fotheringhay Castle\"}, {\"title\": \"Dynastic succession and sovereign authority traditions\", \"type\": \"Idea\", \"year\": \"1452-10-11, Fotheringhay Castle\"}], \"effects\": [{\"title\": \"Established dynastic legacies and territorial boundaries\", \"type\": \"Idea\", \"year\": \"1485-08-31\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1485-08-31\"}], \"relationships\": [{\"sourceSlug\": \"richard-iii-of-england\", \"sourceName\": \"Richard III of England\", \"verb\": \"RULES\", \"targetSlug\": \"field-221\", \"targetName\": \"Monarchs & Rulers\", \"context\": \"Richard III of England: Sovereign authority in monarchs & rulers\"}, {\"sourceSlug\": \"richard-iii-of-england\", \"sourceName\": \"Richard III of England\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Richard III of England was active during the Medieval era\"}], \"places\": [{\"name\": \"Fotheringhay Castle\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Richard III of England\", \"type\": \"Reference article\", \"slug\": \"richard-iii-of-england\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q133028\", \"https://en.wikipedia.org/wiki/Richard_III_of_England\"], \"tags\": [\"Monarchs & Rulers\", \"political-systems\", \"empire-and-colonialism\", \"geopolitical-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Edward IV's death in 1483 led to Richard III's accession to the throne.\",\"The disappearance of Edward V and Richard of York—the Princes in the Tower—raised questions about the legitimacy of Richard III's rule.\",\"The power vacuum created by the Wars of the Roses’ \\n\\n\\n\"],\"effects\":[\"The loss of the Princes in the Tower led to a power struggle between Richard III and Henry Tudor.\",\"The failure of Richard III's northern affinity politics led to the loss of northern support.\",\"The contested succession led to the rise of the Tudor dynasty.\\n\\n\\n\"],\"relationships\":[{\"sourceSlug\":\"edward-iv-of-england\",\"sourceName\":\"Edward IV of England\",\"verb\":\"CAUSES\",\"targetSlug\":\"richard-iii-of-england\",\"targetName\":\"Richard III of England\",\"context\":\"Richard III's accession was a direct result of Edward IV's death.\"},{\"sourceSlug\":\"henry-v-of-england\",\"sourceName\":\"Henry V of England\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"wars-of-the-roses\",\"targetName\":\"Wars of the Roses\",\"context\":\"The Wars of the Roses took place during Richard III's reign.\"},{\"sourceSlug\":\"bosworth-field-battle\",\"sourceName\":\"Bosworth Field Battle\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"richard-iii-of-england\",\"targetName\":\"Richard III of England\",\"context\":\"Richard III's defeat at Bosworth Field led to his death and the end of the Wars of the Roses.\"},{\"sourceSlug\":\"edward-v-of-england\",\"sourceName\":\"Edward V of England\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"disappearance-of-the-princes-in-the-tower\",\"targetName\":\"Disappearance of the Princes in the Tower\",\"context\":\"The disappearance of Edward V and Richard of York—the Princes in the Tower—occurred during Richard III's reign.\"},{\"sourceSlug\":\"henry-tudor-of-england\",\"sourceName\":\"Henry Tudor of England\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"wars-of-the-roses\",\"targetName\":\"Wars of the Roses\",\"context\":\"Henry Tudor's invasion of England was a result of Richard III's contested succession.\"}],\"places\":[{\"name\":\"Bosworth Field, England\",\"role\":\"Battle\"},{\"name\":\"North, England\",\"role\":\"Territory\"},{\"name\":\"London, England\",\"role\":\"Capital\"}],\"texts\":[{\"title\":\"Wikipedia: Richard III of England\",\"type\":\"Reference article\",\"slug\":\"richard-iii-of-england\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q133028\",\"https://en.wikipedia.org/wiki/Richard_III_of_England\"],\"tags\":[\"Monarchs & Rulers\",\"political-systems\",\"empire-and-colonialism\",\"geopolitical-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Richard III's contested succession led to the rise of the Tudor dynasty and the end of the Wars of the Roses.\",\"significanceCategory\":\"regional\"}}",
       "subjectHeadings": [
         "People — Monarchs & Rulers — Global — Medieval"
       ],
       "subjects": [
-        "Monarchs & Rulers"
+        "England",
+        "Plantagenet dynasty",
+        "Wars of the Roses",
+        "Tudor dynasty",
+        "Northern England",
+        "English history",
+        "Medieval England",
+        "Bosworth Field Battle"
       ],
       "frameworks": [
-        "POLITICAL_SYSTEMS",
-        "EMPIRE_AND_COLONIALISM",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -53,7 +57,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:48:17.196148+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Richard III's contested succession led to the rise of the Tudor dynasty and the end of the Wars of the Roses.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-10T22:55:14Z"
     }
   ]
 }

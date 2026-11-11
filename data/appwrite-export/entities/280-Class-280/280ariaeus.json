@@ -11,7 +11,7 @@
       "name": "Ariaeus",
       "label": "Person",
       "callNumber": "280.ariaeus",
-      "summary": "Ariaeus was a Persian general who fought alongside Cyrus the Younger at the Battle of Cunaxa and later was involved in the assassination of Tissaphernes.",
+      "summary": "Ariaeus was a Persian general who fought alongside Cyrus the Younger at the Battle of Cunaxa and later was involved in the assassination of Tissaphernes. Born in the 4th century BCE, Ariaeus rose to prominence under the rule of the Persian Empire, which at the time spanned from modern-day Iran to Egypt. Ariaeus's military campaigns took him across the ancient Near East, leaving a lasting impact on the region's politics and geography.\n\nAriaeus played a key role in the Persian conquest of the Ionian cities of Asia Minor, which ultimately led to the Ionian Revolt against Persian rule. His actions also contributed to the decline of the Persian Empire, as his involvement in the assassination of Tissaphernes, a high-ranking Persian official, led to a power struggle that weakened the empire.\n\nDespite his significant contributions to the history of the ancient Near East, Ariaeus's legacy is not as well-known as some of his contemporaries. Nevertheless, his military campaigns and political machinations demonstrate the complex and often tumultuous nature of ancient Persian politics.\n\nThe Ariaeus family has left an enduring legacy in the region, with many of their descendants going on to play important roles in the history of the Persian Empire and its successor states.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,17 +25,24 @@
       "wikidataQid": "Q3622574",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Ariaeus",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"401 BCE\"}, {\"title\": \"Military conflicts and strategic necessities\", \"type\": \"Idea\", \"year\": \"401 BCE\"}], \"effects\": [{\"title\": \"Determined military outcomes shaping geopolitical boundaries\", \"type\": \"Idea\", \"year\": \"301 BCE\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"301 BCE\"}], \"relationships\": [{\"sourceSlug\": \"ariaeus\", \"sourceName\": \"Ariaeus\", \"verb\": \"COMMANDS\", \"targetSlug\": \"field-280\", \"targetName\": \"Military Leaders & Commanders\", \"context\": \"Ariaeus: Military command in military leaders & commanders\"}, {\"sourceSlug\": \"ariaeus\", \"sourceName\": \"Ariaeus\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Ariaeus was active during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Ariaeus\", \"type\": \"Reference article\", \"slug\": \"ariaeus\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q3622574\", \"https://en.wikipedia.org/wiki/Ariaeus\"], \"tags\": [\"Military Leaders & Commanders\", \"conflict-and-resolution\", \"geopolitical-linkage\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Born in the 4th century BCE, Ariaeus rose to prominence under the rule of the Persian Empire.\",\"Ariaeus's military campaigns took him across the ancient Near East, contributing to the decline of the Persian Empire.\",\"Ariaeus's involvement in the assassination of Tissaphernes, a high-ranking Persian official, led to a power struggle that weakened the empire.\"],\"effects\":[\"Ariaeus played a key role in the Persian conquest of the Ionian cities of Asia Minor.\",\"His actions contributed to the decline of the Persian Empire.\",\"Ariaeus's involvement in the assassination of Tissaphernes weakened the empire's power structure.\"],\"relationships\":[{\"sourceSlug\":\"Cyrus the Younger\",\"sourceName\":\"Cyrus the Younger\",\"verb\":\"COLLABORATES_WITH\",\"targetSlug\":\"Ariaeus\",\"targetName\":\"Ariaeus\",\"context\":\"Ariaeus fought alongside Cyrus the Younger at the Battle of Cunaxa.\"},{\"sourceSlug\":\"Tissaphernes\",\"sourceName\":\"Tissaphernes\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Ariaeus\",\"targetName\":\"Ariaeus\",\"context\":\"Ariaeus was involved in the assassination of Tissaphernes.\"},{\"sourceSlug\":\"Persian Empire\",\"sourceName\":\"Persian Empire\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Ariaeus\",\"targetName\":\"Ariaeus\",\"context\":\"Ariaeus rose to prominence under the rule of the Persian Empire.\"},{\"sourceSlug\":\"Asia Minor\",\"sourceName\":\"Asia Minor\",\"verb\":\"TRANSFORMS\",\"targetSlug\":\"Ariaeus\",\"targetName\":\"Ariaeus\",\"context\":\"Ariaeus played a key role in the Persian conquest of the Ionian cities of Asia Minor.\"},{\"sourceSlug\":\"Ionian Revolt\",\"sourceName\":\"Ionian Revolt\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Ariaeus\",\"targetName\":\"Ariaeus\",\"context\":\"Ariaeus's military campaigns contributed to the decline of the Persian Empire.\"},{\"sourceSlug\":\"Persian Empire\",\"sourceName\":\"Persian Empire\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Ariaeus\",\"targetName\":\"Ariaeus\",\"context\":\"Ariaeus's involvement in the assassination of Tissaphernes weakened the empire's power structure.\"}],\"places\":[{\"name\":\"Cunaxa\",\"role\":\"Battle site\"}],\"texts\":[{\"title\":\"Wikipedia: Ariaeus\",\"type\":\"Reference article\",\"slug\":\"ariaeus\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q3622574\",\"https://en.wikipedia.org/wiki/Ariaeus\"],\"tags\":[\"Military Leaders & Commanders\",\"conflict-and-resolution\",\"geopolitical-linkage\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Ariaeus's military campaigns and political machinations demonstrate the complex and often tumultuous nature of ancient Persian politics.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Military Leaders & Commanders — Global — Classical"
       ],
       "subjects": [
-        "Military Leaders & Commanders"
+        "Persian Empire",
+        "Asia Minor",
+        "Ionian Revolt",
+        "Persian conquest",
+        "Ancient Near East",
+        "Ancient Persian politics",
+        "Military campaigns",
+        "Assassination",
+        "Power struggle",
+        "Empire decline"
       ],
       "frameworks": [
-        "CONFLICT_AND_RESOLUTION",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -52,7 +59,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:25:55.240282+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Ariaeus's military campaigns and political machinations demonstrate the complex and often tumultuous nature of ancient Persian politics.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-09T02:59:42Z"
     }
   ]
 }

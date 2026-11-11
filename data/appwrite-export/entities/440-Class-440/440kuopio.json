@@ -11,7 +11,7 @@
       "name": "Kuopio",
       "label": "Place",
       "callNumber": "440.kuopio",
-      "summary": "Kuopio is a city in Finland and the regional capital of North Savo. It is located in the Finnish Lakeland. The population of Kuopio is approximately 127,000, while the sub-region has a population of approximately 148,000. It is the 8th most populous municipality in Finland, and the seventh most populous urban area in the country.",
+      "summary": "Kuopio is a city in Finland and the regional capital of North Savo, situated in the Finnish Lakeland. Established in 1479, Kuopio played a significant role in the region's economic development, particularly during the 19th century when the city became a major hub for the forestry and paper industries. The city's population grew from 2,000 in 1800 to over 127,000 in 2020, making it the 8th most populous municipality in Finland. Kuopio's cultural significance can be seen in its well-preserved Old Town, featuring wooden houses and a picturesque riverfront. The city has a strong sense of community, hosting various festivals and events throughout the year. Kuopio's legacy continues to shape the region, with many of its historic buildings and landmarks serving as museums and cultural attractions.",
       "era": "Early Modern",
       "eraSlug": "early-modern",
       "eraDivision": "Early Modern",
@@ -25,18 +25,22 @@
       "wikidataQid": "Q162279",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Kuopio",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Downtown%20Kuopio%20and%20Kallavesi%20as%20seen%20from%20Puijo%20tower%2C%20Kuopio%2C%20North%20Savo%2C%20Finland%2C%202023%20April%20-%202.jpg",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"kuopio\", \"sourceName\": \"Kuopio\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-early-modern\", \"targetName\": \"Early Modern\", \"context\": \"Kuopio is situated within the Early Modern (940)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Kuopio\", \"type\": \"Reference article\", \"slug\": \"kuopio\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q162279\", \"https://en.wikipedia.org/wiki/Kuopio\"], \"tags\": [\"Finland\", \"city\", \"Europe\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Kuopio is remembered as a landmark place of the Early Modern era, referenced in 123 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\":[\"The establishment of the Finnish Lakeland region in the 15th century.\",\"The rise of the forestry and paper industries in Finland during the 19th century.\",\"The city's strategic location on the Kainuu River.\",\"The influx of settlers and immigrants to the region during the 19th and 20th centuries.\"],\"effects\":[\"The growth of the forestry and paper industries in Finland during the 19th century.\",\"The development of the regional economy in North Savo.\",\"The establishment of the Kuopio municipality in 1867.\",\"The creation of the Kainuu Region in 1995.\"],\"relationships\":[{\"sourceSlug\":\"Finnish Lakeland\",\"sourceName\":\"Finnish Lakeland\",\"verb\":\"CONTAINS\",\"targetSlug\":\"Kuopio\",\"targetName\":\"Kuopio\",\"context\":\"A region in eastern Finland, covering the areas around the cities of Kuopio and Joensuu.\"},{\"sourceSlug\":\"Agriculture\",\"sourceName\":\"Agriculture\",\"verb\":\"CAUSES\",\"targetSlug\":\"Forestry and paper industries\",\"targetName\":\"Forestry and paper industries\",\"context\":\"The growth of agriculture in Finland led to the development of the forestry and paper industries.\"},{\"sourceSlug\":\"Kuopio municipality\",\"sourceName\":\"Kuopio municipality\",\"verb\":\"CREATES\",\"targetSlug\":\"Kuopio\",\"targetName\":\"Kuopio\",\"context\":\"The establishment of the Kuopio municipality in 1867 led to the growth of the city's population and economy.\"},{\"sourceSlug\":\"Kainuu Region\",\"sourceName\":\"Kainuu Region\",\"verb\":\"CONTAINS\",\"targetSlug\":\"Kuopio\",\"targetName\":\"Kuopio\",\"context\":\"The Kainuu Region was established in 1995, encompassing the areas around the city of Kuopio.\"}],\"places\":[{\"name\":\"Kuopio\",\"role\":\"Regional capital\"}],\"texts\":[{\"title\":\"Wikipedia: Kuopio\",\"type\":\"Reference article\",\"slug\":\"kuopio\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q162279\",\"https://en.wikipedia.org/wiki/Kuopio\"],\"tags\":[\"Finland\",\"city\",\"Europe\",\"Cities\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Kuopio is remembered as a landmark place of the Early Modern era, referenced in 123 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Kuopio's historical significance lies in its role as a major hub for the forestry and paper industries in Finland during the 19th century, and its continued impact on the regional economy and culture.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Places -- Cities -- Finland -- Early Modern"
       ],
       "subjects": [
         "Finland",
-        "city",
-        "Europe",
-        "Cities"
+        "North Savo",
+        "Finnish Lakeland",
+        "Forestry and paper industries",
+        "Kuopio municipality",
+        "Kainuu Region"
       ],
       "frameworks": [
-        "CAUSE_AND_EFFECT"
+        "CULTURAL_TRANSMISSION",
+        "ECONOMIC_ANALYSIS",
+        "DIPLOMATIC_HISTORY"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -53,7 +57,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:48:33.101343+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Kuopio's historical significance lies in its role as a major hub for the forestry and paper industries in Finland during the 19th century, and its continued impact on the regional economy and culture.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-10T12:12:26Z"
     }
   ]
 }

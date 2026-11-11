@@ -11,7 +11,7 @@
       "name": "Pheidippides",
       "label": "Person",
       "callNumber": "280.pheidippides",
-      "summary": "Pheidippides or Philippides (Φιλιππίδης) was a 5th-century-BC Athenian running courier who was the central figure in the story that inspired the marathon race.",
+      "summary": "Pheidippides (also Philippides) was a fifth-century BCE Athenian hēmerodromos—a professional long-distance running courier—central to the legends of the Battle of Marathon (490 BCE). In Herodotus he is sent to Sparta to request aid before the battle, covering the harsh mountain route in a feat of endurance; later tradition, especially via Plutarch and Lucian, conflates or adds the story of a run from Marathon to Athens to announce victory before death.\n\nModern marathon racing mythically commemorates that latter run, though historians distinguish Herodotus's Spartan mission from the post-classical victory-message tale. Either way, Pheidippides became a symbol of civic duty expressed through the body—Athens's survival narrated as speed and sacrifice.\n\nHis afterlife in sport and popular history far exceeds the thin archaic evidence, showing how classical anecdotes fuel modern invented traditions.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,17 +25,23 @@
       "wikidataQid": "Q313728",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Pheidippides",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"600 BCE, Classical Athens\"}, {\"title\": \"Military conflicts and strategic necessities\", \"type\": \"Idea\", \"year\": \"600 BCE, Classical Athens\"}], \"effects\": [{\"title\": \"Determined military outcomes shaping geopolitical boundaries\", \"type\": \"Idea\", \"year\": \"489 BCE\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"489 BCE\"}], \"relationships\": [{\"sourceSlug\": \"pheidippides\", \"sourceName\": \"Pheidippides\", \"verb\": \"COMMANDS\", \"targetSlug\": \"field-280\", \"targetName\": \"Military Leaders & Commanders\", \"context\": \"Pheidippides: Military command in military leaders & commanders\"}, {\"sourceSlug\": \"pheidippides\", \"sourceName\": \"Pheidippides\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Pheidippides was active during the Classical era\"}], \"places\": [{\"name\": \"Classical Athens\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Pheidippides\", \"type\": \"Reference article\", \"slug\": \"pheidippides\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q313728\", \"https://en.wikipedia.org/wiki/Pheidippides\"], \"tags\": [\"Military Leaders & Commanders\", \"conflict-and-resolution\", \"geopolitical-linkage\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Persian invasion of Attica in 490 BCE required urgent Athenian–Spartan military coordination.\",\"Greek city-states used trained runners to carry diplomatic and military messages across rough terrain.\",\"Later classical and modern storytellers amplified courier feats into patriotic legend.\"],\"effects\":[\"The Marathon–Athens running legend inspired the modern Olympic marathon event.\",\"Herodotus's account preserved evidence of archaic Greek long-distance messaging practice.\",\"Pheidippides became a global cultural emblem of endurance and civic urgency.\"],\"relationships\":[{\"sourceSlug\":\"pheidippides\",\"sourceName\":\"Pheidippides\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"battle-of-marathon\",\"targetName\":\"Battle of Marathon\",\"context\":\"He is the legendary courier linked to Athenian messaging around the 490 BCE battle.\"},{\"sourceSlug\":\"pheidippides\",\"sourceName\":\"Pheidippides\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"classical-athens\",\"targetName\":\"Classical Athens\",\"context\":\"He served as an Athenian long-distance runner-courier.\"},{\"sourceSlug\":\"herodotus\",\"sourceName\":\"Herodotus\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"pheidippides\",\"targetName\":\"Pheidippides\",\"context\":\"Herodotus provides the earliest narrative of his run to Sparta.\"}],\"places\":[{\"name\":\"Athens / Attica, Greece\",\"role\":\"Home polis and destination of legendary victory message\"},{\"name\":\"Sparta, Greece\",\"role\":\"Destination of the Herodotus-attested aid request run\"}],\"texts\":[{\"title\":\"Wikipedia: Pheidippides\",\"type\":\"Reference article\",\"slug\":\"pheidippides\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q313728\",\"https://en.wikipedia.org/wiki/Pheidippides\"],\"tags\":[\"Military Leaders & Commanders\",\"conflict-and-resolution\",\"geopolitical-linkage\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":5,\"significanceNarrative\":\"Pheidippides, the Marathon courier of Greek tradition, bridges Herodotus's Persian War narrative and the modern marathon myth.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Military Leaders & Commanders — Global — Classical"
       ],
       "subjects": [
-        "Military Leaders & Commanders"
+        "Marathon",
+        "Ancient Greece",
+        "Persian Wars",
+        "Athletics",
+        "Herodotus",
+        "Athens",
+        "Legend"
       ],
       "frameworks": [
-        "CONFLICT_AND_RESOLUTION",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "CULTURAL_TRANSMISSION",
+        "CAUSE_AND_EFFECT",
+        "STRUCTURAL_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -52,7 +58,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:25:53.134158+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "Pheidippides, the Marathon courier of Greek tradition, bridges Herodotus's Persian War narrative and the modern marathon myth.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-08T18:58:40Z"
     }
   ]
 }

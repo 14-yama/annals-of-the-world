@@ -11,7 +11,7 @@
       "name": "entomology",
       "label": "Idea",
       "callNumber": "130.entomology",
-      "summary": "entomology is a academic discipline in the field of 1. Originated in academic discipline. Emerged during the Classical era.",
+      "summary": "Entomology is the scientific study of insects, a biological discipline that emerged from classical natural history and early modern collecting into a specialised science in the eighteenth and nineteenth centuries. Insects—by species count the majority of described animals—became objects of taxonomy, morphology, behaviour, ecology, and economic control, from Linnaean cabinets to agricultural experiment stations.\n\nHistorically, entomology mattered far beyond museums: locusts, mosquitoes, boll weevils, and tsetse flies shaped harvests, empires, and public health. Colonial states funded insect surveys; Darwinian evolution found crucial evidence in insect mimicry and adaptation; geneticists later used Drosophila as a model organism that transformed biology.\n\nAs a discipline, entomology links field observation, microscopic anatomy, and applied campaigns against disease vectors and crop pests. It remains central to biodiversity assessment and to debates over pollinator decline, insecticide resistance, and planetary limits.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q39286",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Entomology",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Insekter.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier philosophical traditions in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}, {\"title\": \"Empirical observations in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}, {\"title\": \"Cultural context in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Influenced later thought through entomology's historical significance\", \"type\": \"Idea\"}, {\"title\": \"Shaped institutions through entomology's historical significance\", \"type\": \"Idea\"}, {\"title\": \"Transformed practice through entomology's historical significance\", \"type\": \"Idea\"}], \"relationships\": [{\"sourceSlug\": \"entomology\", \"sourceName\": \"entomology\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"entomology is situated within the Classical (920)\"}, {\"sourceSlug\": \"entomology\", \"sourceName\": \"entomology\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"intellectual-tradition-classical\", \"targetName\": \"Intellectual Tradition (Classical)\", \"context\": \"entomology shaped intellectual tradition during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: entomology\", \"type\": \"Reference article\", \"slug\": \"entomology\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q39286\", \"https://en.wikipedia.org/wiki/Entomology\"], \"tags\": [\"academic discipline\", \"Technological Innovations\", \"scientific-paradigm\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"entomology left a notable mark on Classical history, documented across 110 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\"}",
+      "detailsJson": "{\"causes\":[\"The vast diversity of insects demanded specialised taxonomic and morphological study beyond general zoology.\",\"Agricultural and medical crises caused by insect pests and vectors incentivised applied research.\",\"Linnaean systematics and cabinet collecting created institutional space for insect classification.\"],\"effects\":[\"Entomology underwrote modern pest control, medical entomology, and pollination science.\",\"Insect models (especially Drosophila) became engines of twentieth-century genetics.\",\"Insect surveys reshaped ecological knowledge and conservation priorities worldwide.\"],\"relationships\":[{\"sourceSlug\":\"entomology\",\"sourceName\":\"Entomology\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"scientific-revolution-legacy\",\"targetName\":\"Modern natural sciences\",\"context\":\"Entomology professionalised within the broader rise of specialised biological disciplines.\"},{\"sourceSlug\":\"carl-linnaeus\",\"sourceName\":\"Carl Linnaeus\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"entomology\",\"targetName\":\"Entomology\",\"context\":\"Linnaean taxonomy provided a framework for systematic insect classification.\"},{\"sourceSlug\":\"entomology\",\"sourceName\":\"Entomology\",\"verb\":\"TRANSFORMS\",\"targetSlug\":\"agriculture\",\"targetName\":\"Agriculture\",\"context\":\"Knowledge of insect pests and beneficial insects reshaped farming and quarantine practice.\"}],\"places\":[{\"name\":\"Global (field and laboratory)\",\"role\":\"Worldwide scope of insect study and application\"},{\"name\":\"European natural-history centres\",\"role\":\"Early institutional homes of insect cabinets and societies\"}],\"texts\":[{\"title\":\"Wikipedia: entomology\",\"type\":\"Reference article\",\"slug\":\"entomology\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q39286\",\"https://en.wikipedia.org/wiki/Entomology\"],\"tags\":[\"academic discipline\",\"Technological Innovations\",\"scientific-paradigm\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"entomology left a notable mark on Classical history, documented across 110 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Entomology turned the planet's most diverse animals into a science that remade agriculture, medicine, genetics, and ecology.\",\"significanceCategory\":\"world-changing\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Idea -- Technological Innovations -- Global -- Classical"
       ],
       "subjects": [
-        "academic discipline",
-        "Technological Innovations"
+        "Biology",
+        "Insects",
+        "Taxonomy",
+        "Agriculture",
+        "Public health",
+        "Genetics",
+        "Natural history"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "SCIENTIFIC_PARADIGM",
-        "CAUSE_AND_EFFECT"
+        "TECHNOLOGICAL_DETERMINISM",
+        "ENVIRONMENTAL_HISTORY",
+        "LONGUE_DUREE"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -53,7 +58,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:47:21.256499+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Entomology turned the planet's most diverse animals into a science that remade agriculture, medicine, genetics, and ecology.",
+        "significanceCategory": "world-changing"
+      },
+      "enrichedAt": "2026-11-08T18:58:40Z"
     }
   ]
 }

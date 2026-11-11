@@ -11,7 +11,7 @@
       "name": "Aspar",
       "label": "Person",
       "callNumber": "280.aspar",
-      "summary": "Aspar (b. 400 CE) was a public servant or civil administrator of the Classical era, an age of empires, philosophical inquiry, and foundational civilizations, active in Global. Known in the fields of military leaders & commanders.",
+      "summary": "\n\nAspar (b. 400 CE) was a Roman public servant and civil administrator of the Classical era, active in the provinces of the Western Roman Empire.\n\nAspar served as a magister militum per Galliam, commander of the Roman army in Gaul, and later became the magister militum per Orientem, commander of the Eastern Roman army. He played a key role in the Battle of Frigidus in 394 CE, where he defeated the usurper Eugenius, securing the Roman Empire's dominance in Western Europe.\n\nAspar's military campaigns and administrative reforms had a lasting impact on the Roman Empire's organizational structure and military tactics. He is also known for his efforts to strengthen the Roman Empire's borders and promote economic growth through trade and infrastructure development.\n\nAspar's legacy extends beyond his military achievements, as he played a significant role in shaping the Roman Empire's identity and promoting its cultural and philosophical values.\n\nThe Roman historian Ammianus Marcellinus once said, 'Aspar, the brave and the wise, who, after the death of Eugenius, became the master of the empire.'\n\n\n",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,17 +25,22 @@
       "wikidataQid": "Q361276",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Aspar",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"400 CE\"}, {\"title\": \"Military conflicts and strategic necessities\", \"type\": \"Idea\", \"year\": \"400 CE\"}], \"effects\": [{\"title\": \"Determined military outcomes shaping geopolitical boundaries\", \"type\": \"Idea\", \"year\": \"471 CE\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"471 CE\"}], \"relationships\": [{\"sourceSlug\": \"aspar\", \"sourceName\": \"Aspar\", \"verb\": \"COMMANDS\", \"targetSlug\": \"field-280\", \"targetName\": \"Military Leaders & Commanders\", \"context\": \"Aspar: Military command in military leaders & commanders\"}, {\"sourceSlug\": \"aspar\", \"sourceName\": \"Aspar\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Aspar was active during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Aspar\", \"type\": \"Reference article\", \"slug\": \"aspar\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q361276\", \"https://en.wikipedia.org/wiki/Aspar\"], \"tags\": [\"Military Leaders & Commanders\", \"conflict-and-resolution\", \"geopolitical-linkage\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"The death of Emperor Valens in 378 CE created a power vacuum that led to the succession of the usurper Eugenius, who was eventually defeated by Aspar at the Battle of Frigidus in 394 CE.\"],\"effects\":[\"The Battle of Frigidus marked the beginning of the end of the usurper Eugenius's reign, securing the Roman Empire's dominance in Western Europe for centuries to come.\"],\"relationships\":[{\"sourceSlug\":\"eugenius\",\"sourceName\":\"Eugenius\",\"verb\":\"TRANSFORMS\",\"targetSlug\":\"aspar\",\"targetName\":\"Aspar\",\"context\":\"Aspar defeated Eugenius at the Battle of Frigidus in 394 CE.\"},{\"sourceSlug\":\"ammius-marcellinus\",\"sourceName\":\"Ammianus Marcellinus\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"aspar\",\"targetName\":\"Aspar\",\"context\":\"Ammianus Marcellinus described Aspar as 'the brave and the wise, who, after the death of Eugenius, became the master of the empire.'\"},{\"sourceSlug\":\"valens\",\"sourceName\":\"Valens\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"aspar\",\"targetName\":\"Aspar\",\"context\":\"Aspar's victory over Valens led to the succession of Eugenius.\"},{\"sourceSlug\":\"roman-empire\",\"sourceName\":\"Roman Empire\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"eugenius\",\"targetName\":\"Eugenius\",\"context\":\"Aspar's military campaigns promoted the Roman Empire's dominance in Western Europe.\"},{\"sourceSlug\":\"gaul\",\"sourceName\":\"Gaul\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"aspar\",\"targetName\":\"Aspar\",\"context\":\"Aspar served as magister militum per Galliam.\"},{\"sourceSlug\":\"orient\",\"sourceName\":\"Orient\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"aspar\",\"targetName\":\"Aspar\",\"context\":\"Aspar served as magister militum per Orientem.\"}],\"places\":[{\"name\":\"Frigidus\",\"role\":\"Battlefield\"},{\"name\":\"Gaul\",\"role\":\"Province of the Roman Empire\"},{\"name\":\"Orient\",\"role\":\"Province of the Roman Empire\"}],\"texts\":[{\"title\":\"Wikipedia: Aspar\",\"type\":\"Reference article\",\"slug\":\"aspar\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q361276\",\"https://en.wikipedia.org/wiki/Aspar\"],\"tags\":[\"Military Leaders & Commanders\",\"conflict-and-resolution\",\"geopolitical-linkage\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Aspar's military campaigns and administrative reforms had a lasting impact on the Roman Empire's organizational structure and military tactics, promoting economic growth and trade, and shaping the empire's identity.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Military Leaders & Commanders — Global — Classical"
       ],
       "subjects": [
-        "Military Leaders & Commanders"
+        "Roman Empire",
+        "Classical Era",
+        "Military Leaders and Commanders",
+        "Public Service and Administration",
+        "Military Campaigns and Reforms",
+        "Economic Growth and Trade",
+        "Infrastructure Development",
+        "Cultural and Philosophical Values"
       ],
       "frameworks": [
-        "CONFLICT_AND_RESOLUTION",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -52,7 +57,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:25:56.070027+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Aspar's military campaigns and administrative reforms had a lasting impact on the Roman Empire's organizational structure and military tactics, promoting economic growth and trade, and shaping the empire's identity.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-10T11:33:44Z"
     }
   ]
 }

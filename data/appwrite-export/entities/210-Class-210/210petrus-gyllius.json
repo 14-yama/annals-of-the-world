@@ -11,7 +11,7 @@
       "name": "Petrus Gyllius",
       "label": "Person",
       "callNumber": "210.petrus-gyllius",
-      "summary": "Petrus Gyllius or Gillius (1490–1555) was a French natural scientist, topographer and translator.",
+      "summary": "Petrus Gyllius (Pierre Gilles, 1490–1555) was a French humanist, naturalist, and topographer whose travels and translations linked Renaissance philology to empirical description of the eastern Mediterranean. Best known for his Latin account of Constantinople and for editions and translations of classical zoological and geographical texts, he moved between French scholarly circles and Ottoman imperial space under Francis I’s diplomatic umbrella.\n\nGyllius combined antiquarian reading with on-the-ground observation: measuring monuments, recording Greek and Latin inscriptions, and comparing living fauna and urban topography with ancient authorities. His work on Byzantium and the Bosphorus became a reference for later Western knowledge of the city before modern archaeology.\n\nHe exemplifies the sixteenth-century scholar-traveller who treated the Ottoman capital as both living metropolis and archive of classical memory, feeding European chorography and natural history with eastern material.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,19 +25,22 @@
       "wikidataQid": "Q2292575",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Petrus_Gyllius",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1490, Albi\"}, {\"title\": \"Ongoing philosophical inquiry and intellectual debate\", \"type\": \"Idea\", \"year\": \"1490, Albi\"}], \"effects\": [{\"title\": \"Contributed philosophical ideas to ongoing intellectual discourse\", \"type\": \"Idea\", \"year\": \"1555\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1555\"}], \"relationships\": [{\"sourceSlug\": \"petrus-gyllius\", \"sourceName\": \"Petrus Gyllius\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"country-france\", \"targetName\": \"France\", \"context\": \"Petrus Gyllius associated with France\"}, {\"sourceSlug\": \"petrus-gyllius\", \"sourceName\": \"Petrus Gyllius\", \"verb\": \"THEORIZES\", \"targetSlug\": \"field-210\", \"targetName\": \"Philosophers & Thinkers\", \"context\": \"Petrus Gyllius: Philosophical contribution in philosophers & thinkers\"}, {\"sourceSlug\": \"petrus-gyllius\", \"sourceName\": \"Petrus Gyllius\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Petrus Gyllius was active during the Medieval era\"}], \"places\": [{\"name\": \"Albi\", \"role\": \"Birth place\"}, {\"name\": \"France\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Petrus Gyllius\", \"type\": \"Reference article\", \"slug\": \"petrus-gyllius\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q2292575\", \"https://en.wikipedia.org/wiki/Petrus_Gyllius\"], \"tags\": [\"France\", \"Philosophers & Thinkers\", \"Europe\", \"doctrine-development\", \"cause-and-effect\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Renaissance humanism prized classical texts and eye-witness chorography of the Greek East.\",\"Franco-Ottoman diplomacy under Francis I opened travel and observation for French scholars.\",\"Demand grew for Latin accounts that reconciled ancient geography with the living city of Constantinople.\"],\"effects\":[\"His Constantinople descriptions shaped early modern Western images of Byzantium and the Bosphorus.\",\"Translations and natural-history notes circulated classical zoology into vernacular scholarly networks.\",\"Later travellers and antiquaries used his measurements and inscriptions as baseline evidence.\"],\"relationships\":[{\"sourceSlug\":\"petrus-gyllius\",\"sourceName\":\"Petrus Gyllius\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"constantinople\",\"targetName\":\"Constantinople\",\"context\":\"He produced a major Latin chorography of the Ottoman capital.\"},{\"sourceSlug\":\"petrus-gyllius\",\"sourceName\":\"Petrus Gyllius\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"renaissance\",\"targetName\":\"Renaissance\",\"context\":\"His career belongs to sixteenth-century humanist travel and philology.\"},{\"sourceSlug\":\"petrus-gyllius\",\"sourceName\":\"Petrus Gyllius\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"ottoman-empire\",\"targetName\":\"Ottoman Empire\",\"context\":\"His writings mediated Ottoman urban space to European readers.\"}],\"places\":[{\"name\":\"Constantinople\",\"role\":\"Principal site of his chorography and observations\"},{\"name\":\"France\",\"role\":\"Homeland and humanist network\"},{\"name\":\"Bosphorus\",\"role\":\"Geographic focus of his topographical studies\"}],\"texts\":[{\"title\":\"Wikipedia: Petrus Gyllius\",\"type\":\"Reference article\",\"slug\":\"petrus-gyllius\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q2292575\",\"https://en.wikipedia.org/wiki/Petrus_Gyllius\"],\"tags\":[\"France\",\"Philosophers & Thinkers\",\"Europe\",\"doctrine-development\",\"cause-and-effect\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":6,\"significanceNarrative\":\"Gyllius made Ottoman Constantinople legible to Latin Europe through measured, classical-framed topography.\",\"significanceCategory\":\"regional\"}}",
       "subjectHeadings": [
         "People — Philosophers & Thinkers — France — Medieval"
       ],
       "subjects": [
-        "France",
-        "Philosophers & Thinkers",
-        "Europe"
+        "Renaissance humanism",
+        "Constantinople",
+        "Ottoman Empire",
+        "Natural history",
+        "Chorography",
+        "Translation",
+        "France"
       ],
       "frameworks": [
-        "DOCTRINE_DEVELOPMENT",
-        "CAUSE_AND_EFFECT",
-        "TEMPORAL_LINKAGE"
+        "CULTURAL_TRANSMISSION",
+        "LONGUE_DUREE"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -54,7 +57,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:47:19.961391+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 6,
+        "significanceNarrative": "Gyllius made Ottoman Constantinople legible to Latin Europe through measured, classical-framed topography.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-10T22:47:51Z"
     }
   ]
 }

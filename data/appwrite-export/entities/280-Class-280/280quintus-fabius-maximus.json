@@ -11,7 +11,7 @@
       "name": "Quintus Fabius Maximus",
       "label": "Person",
       "callNumber": "280.quintus-fabius-maximus",
-      "summary": "Quintus Fabius Maximus was a consul of the Roman Republic in 213 BC. He was the son of Quintus Fabius Maximus Verrucosus, the famous dictator who invented Fabian strategy, and served with his father during the Second Punic War.",
+      "summary": "Quintus Fabius Maximus was a Roman consul during the Second Punic War, serving from 213 BC to 211 BC, and playing a pivotal role in the conflict's outcome. As the son of Quintus Fabius Maximus Verrucosus, he was trained in the Fabian strategy, a defensive approach that emphasized holding enemy territory and awaiting a more opportune moment to strike. This approach proved effective against Hannibal's invasions of Italy, allowing Rome to maintain control of the region and ultimately leading to the war's defeat. Fabius's leadership and tactical acumen made him a celebrated figure in ancient Rome, with his strategy still studied by military leaders centuries later.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,17 +25,22 @@
       "wikidataQid": "Q1767765",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Quintus_Fabius_Maximus_(consul_213_BC)",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"248 BCE, Ancient Rome\"}, {\"title\": \"Military conflicts and strategic necessities\", \"type\": \"Idea\", \"year\": \"248 BCE, Ancient Rome\"}], \"effects\": [{\"title\": \"Determined military outcomes shaping geopolitical boundaries\", \"type\": \"Idea\", \"year\": \"\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"Classical\"}], \"relationships\": [{\"sourceSlug\": \"quintus-fabius-maximus\", \"sourceName\": \"Quintus Fabius Maximus\", \"verb\": \"COMMANDS\", \"targetSlug\": \"field-280\", \"targetName\": \"Military Leaders & Commanders\", \"context\": \"Quintus Fabius Maximus: Military command in military leaders & commanders\"}, {\"sourceSlug\": \"quintus-fabius-maximus\", \"sourceName\": \"Quintus Fabius Maximus\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Quintus Fabius Maximus was active during the Classical era\"}], \"places\": [{\"name\": \"Ancient Rome\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Quintus Fabius Maximus\", \"type\": \"Reference article\", \"slug\": \"quintus-fabius-maximus\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q1767765\", \"https://en.wikipedia.org/wiki/Quintus_Fabius_Maximus_(consul_213_BC)\"], \"tags\": [\"Military Leaders & Commanders\", \"conflict-and-resolution\", \"geopolitical-linkage\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Rome's decision to adopt the Fabian strategy in response to Hannibal's invasion of Italy in 218 BC\",\"Hannibal's decision to invade Italy in 218 BC\",\"The Roman Republic's need to counter the growing power of Carthage\"],\"effects\":[\"The defeat of Hannibal and the end of the Second Punic War in 201 BC\",\"The strengthening of Rome's position in the Mediterranean region\",\"The development of the Fabian strategy as a key component of Roman military doctrine\"],\"relationships\":[{\"sourceSlug\":\"hannibal\",\"sourceName\":\"Barthold Gesner Hannibal\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"italy\",\"targetName\":\"Italy\",\"context\":\"Hannibal's invasion of Italy in 218 BC led to Rome's adoption of the Fabian strategy\"},{\"sourceSlug\":\"quintus-fabius-maximus-verrucosus\",\"sourceName\":\"Quintus Fabius Maximus Verrucosus\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"quintus-fabius-maximus\",\"targetName\":\"Quintus Fabius Maximus\",\"context\":\"Quintus Fabius Maximus Verrucosus trained his son Quintus Fabius Maximus in the Fabian strategy\"},{\"sourceSlug\":\"rome\",\"sourceName\":\"Roman Republic\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"quintus-fabius-maximus\",\"targetName\":\"Quintus Fabius Maximus\",\"context\":\"Rome supported Quintus Fabius Maximus during the Second Punic War\"}],\"places\":[{\"name\":\"Italy\",\"role\":\"Major battle\"}],\"texts\":[{\"title\":\"Wikipedia: Quintus Fabius Maximus\",\"type\":\"Reference article\",\"slug\":\"quintus-fabius-maximus\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q1767765\",\"https://en.wikipedia.org/wiki/Quintus_Fabius_Maximus_(consul_213_BC)\"],\"tags\":[\"Military Leaders & Commanders\",\"conflict-and-resolution\",\"geopolitical-linkage\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Quintus Fabius Maximus's leadership and tactical acumen played a crucial role in Rome's defeat of Hannibal and the end of the Second Punic War.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Military Leaders & Commanders — Global — Classical"
       ],
       "subjects": [
-        "Military Leaders & Commanders"
+        "Rome",
+        "Fabian strategy",
+        "Hannibal",
+        "Second Punic War",
+        "Quintus Fabius Maximus Verrucosus",
+        "Quintus Fabius Maximus",
+        "Carthage",
+        "Mediterranean region"
       ],
       "frameworks": [
-        "CONFLICT_AND_RESOLUTION",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -52,7 +57,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:25:58.540531+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Quintus Fabius Maximus's leadership and tactical acumen played a crucial role in Rome's defeat of Hannibal and the end of the Second Punic War.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-09T21:47:28Z"
     }
   ]
 }

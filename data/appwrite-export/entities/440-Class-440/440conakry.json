@@ -11,7 +11,7 @@
       "name": "Conakry",
       "label": "Place",
       "callNumber": "440.conakry",
-      "summary": "Conakry is the capital and largest city of Guinea. A port city, it serves as the economic, financial and cultural centre of Guinea. Its population as of the 2025 Guinea census was 3,407,327, or around one-sixth of the country's population.",
+      "summary": "Conakry is the capital and largest city of Guinea, a Atlantic port on the Kaloum peninsula and adjoining islands that concentrates the country's political, financial, and cultural life. Developed under French colonial rule as the administrative centre of French Guinea, it became the capital of independent Guinea in 1958 under Ahmed Sékou Touré's break with the French Community.\n\nThe city's growth tracks bauxite-era economics, rural migration, and the infrastructure of a monocephalic African capital—port, airport, ministries, and markets packed onto a narrow coastal site with chronic congestion and flooding risks. Political crises and coups in Guinean history have repeatedly played out in Conakry's streets and barracks.\n\nAs Guinea's gateway to the Atlantic, Conakry links hinterland minerals and populations to global trade while embodying postcolonial urban challenges of service delivery and contested power.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q3733",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Conakry",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Un%20aper%C3%A7u%20de%20la%20ville%20de%20conakry.jpg",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"conakry\", \"sourceName\": \"Conakry\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Conakry is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Conakry\", \"type\": \"Reference article\", \"slug\": \"conakry\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q3733\", \"https://en.wikipedia.org/wiki/Conakry\"], \"tags\": [\"Guinea\", \"city\", \"Africa\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Conakry is remembered as a landmark place of the Classical era, referenced in 161 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\":[\"French colonial administration chose a Kaloum peninsula port as the capital of French Guinea.\",\"Independence in 1958 kept the colonial capital as the seat of the new republic.\",\"Mineral export economies and migration pulled population into the primate city.\"],\"effects\":[\"Guinea's political and economic life became highly centralised in Conakry.\",\"The port integrated Guinean hinterlands into Atlantic and global commodity circuits.\",\"Urban crowding shaped social protest and coup politics in the capital.\"],\"relationships\":[{\"sourceSlug\":\"conakry\",\"sourceName\":\"Conakry\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"guinea\",\"targetName\":\"Guinea\",\"context\":\"Conakry is the capital and principal city of Guinea.\"},{\"sourceSlug\":\"conakry\",\"sourceName\":\"Conakry\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"french-colonial-west-africa\",\"targetName\":\"French colonial West Africa\",\"context\":\"The city rose as the administrative centre of French Guinea.\"},{\"sourceSlug\":\"ahmed-sekou-toure\",\"sourceName\":\"Ahmed Sékou Touré\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"conakry\",\"targetName\":\"Conakry\",\"context\":\"Independence under Sékou Touré confirmed Conakry as capital of a sovereign Guinea.\"}],\"places\":[{\"name\":\"Kaloum Peninsula, Guinea\",\"role\":\"Historic core of the capital\"},{\"name\":\"Atlantic coast of West Africa\",\"role\":\"Maritime setting of the port city\"}],\"texts\":[{\"title\":\"Wikipedia: Conakry\",\"type\":\"Reference article\",\"slug\":\"conakry\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q3733\",\"https://en.wikipedia.org/wiki/Conakry\"],\"tags\":[\"Guinea\",\"city\",\"Africa\",\"Cities\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Conakry is remembered as a landmark place of the Classical era, referenced in 161 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":5,\"significanceNarrative\":\"Conakry, Guinea's colonial-founded Atlantic capital, concentrates the political and economic life of the independent republic.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Places -- Cities -- Guinea -- Classical"
       ],
       "subjects": [
         "Guinea",
-        "city",
-        "Africa",
-        "Cities"
+        "African capitals",
+        "Colonial cities",
+        "Ports",
+        "West Africa",
+        "Urbanisation",
+        "Postcolonialism"
       ],
       "frameworks": [
-        "CAUSE_AND_EFFECT"
+        "POSTCOLONIAL_ANALYSIS",
+        "ECONOMIC_ANALYSIS",
+        "STRUCTURAL_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -53,7 +58,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:48:33.235134+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "Conakry, Guinea's colonial-founded Atlantic capital, concentrates the political and economic life of the independent republic.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-08T19:04:54Z"
     }
   ]
 }

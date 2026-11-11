@@ -11,7 +11,7 @@
       "name": "spirituality",
       "label": "Idea",
       "callNumber": "130.spirituality",
-      "summary": "spirituality is a academic discipline in the field of 1. Originated in academic discipline. Emerged during the Classical era.",
+      "summary": "Spirituality denotes practices and orientations concerned with ultimate meaning, transcendence, and interior transformation—overlapping with, yet not identical to, organised religion. Historically the term's modern salience rose as Enlightenment and industrial societies differentiated private belief from church membership, allowing people to claim 'spiritual but not religious' identities while drawing on mystical, monastic, and philosophical traditions.\n\nAcross cultures, spiritual disciplines—prayer, meditation, asceticism, pilgrimage, ethical self-cultivation—have structured daily life from Buddhist monasteries to Sufi tariqas and Christian contemplatives. In the twentieth century, psychology, existentialism, and global religious encounter further psychologised and commodified spiritual seeking.\n\nAs a historical category, spirituality tracks how humans organise experience of the sacred beyond (and within) institutions—an enduring dimension of cultural history rather than a mere contemporary lifestyle label.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q168796",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Spirituality",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Earlier philosophical traditions in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}, {\"title\": \"Empirical observations in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}, {\"title\": \"Cultural context in the 3000 BCE – 500 CE\", \"type\": \"Idea\", \"year\": \"3000 BCE\"}], \"effects\": [{\"title\": \"Influenced later thought through spirituality's historical significance\", \"type\": \"Idea\"}, {\"title\": \"Shaped institutions through spirituality's historical significance\", \"type\": \"Idea\"}, {\"title\": \"Transformed practice through spirituality's historical significance\", \"type\": \"Idea\"}], \"relationships\": [{\"sourceSlug\": \"spirituality\", \"sourceName\": \"spirituality\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"spirituality is situated within the Classical (920)\"}, {\"sourceSlug\": \"spirituality\", \"sourceName\": \"spirituality\", \"verb\": \"INFLUENCES\", \"targetSlug\": \"intellectual-tradition-classical\", \"targetName\": \"Intellectual Tradition (Classical)\", \"context\": \"spirituality shaped intellectual tradition during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: spirituality\", \"type\": \"Reference article\", \"slug\": \"spirituality\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q168796\", \"https://en.wikipedia.org/wiki/Spirituality\"], \"tags\": [\"academic discipline\", \"Technological Innovations\", \"scientific-paradigm\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"spirituality left a notable mark on Classical history, documented across 100 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\"}",
+      "detailsJson": "{\"causes\":[\"Religious traditions developed interior disciplines aimed at communion with the sacred or ultimate reality.\",\"Modern differentiation of church and self made non-institutional sacred seeking newly speakable.\",\"Global encounters among faiths circulated meditation and mystical techniques across societies.\"],\"effects\":[\"Spiritual practices shaped art, ethics, and communal life across civilisations.\",\"Modern societies generated hybrid spiritual marketplaces alongside secularisation.\",\"Scholarship distinguished spirituality from institutional religion as an analytic category.\"],\"relationships\":[{\"sourceSlug\":\"spirituality\",\"sourceName\":\"Spirituality\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"human-cultural-history\",\"targetName\":\"Human cultural history\",\"context\":\"Spiritual disciplines appear across religious and philosophical traditions over millennia.\"},{\"sourceSlug\":\"religion\",\"sourceName\":\"Religion\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"spirituality\",\"targetName\":\"Spirituality\",\"context\":\"Organised religions supplied many of the practices later framed as spirituality.\"},{\"sourceSlug\":\"spirituality\",\"sourceName\":\"Spirituality\",\"verb\":\"TRANSFORMS\",\"targetSlug\":\"modern-selfhood\",\"targetName\":\"Modern selfhood\",\"context\":\"Spiritual seeking became a major idiom of personal identity in modern societies.\"}],\"places\":[{\"name\":\"Global\",\"role\":\"Cross-cultural scope of spiritual practices\"},{\"name\":\"Monasteries and retreat centres\",\"role\":\"Institutional homes of intensive spiritual discipline\"}],\"texts\":[{\"title\":\"Wikipedia: spirituality\",\"type\":\"Reference article\",\"slug\":\"spirituality\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q168796\",\"https://en.wikipedia.org/wiki/Spirituality\"],\"tags\":[\"academic discipline\",\"Technological Innovations\",\"scientific-paradigm\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"spirituality left a notable mark on Classical history, documented across 100 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Spirituality names the long human pursuit of transcendence and interior transformation within and beyond organised religion.\",\"significanceCategory\":\"world-changing\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Idea -- Technological Innovations -- Global -- Classical"
       ],
       "subjects": [
-        "academic discipline",
-        "Technological Innovations"
+        "Religion",
+        "Mysticism",
+        "Meditation",
+        "Philosophy",
+        "Secularisation",
+        "Culture",
+        "Psychology"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "SCIENTIFIC_PARADIGM",
-        "CAUSE_AND_EFFECT"
+        "RELIGIOUS_INTERPRETATION",
+        "CULTURAL_TRANSMISSION",
+        "PSYCHOLOGICAL_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -53,7 +58,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:47:21.091624+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Spirituality names the long human pursuit of transcendence and interior transformation within and beyond organised religion.",
+        "significanceCategory": "world-changing"
+      },
+      "enrichedAt": "2026-11-08T19:04:54Z"
     }
   ]
 }

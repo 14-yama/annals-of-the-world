@@ -11,7 +11,7 @@
       "name": "Chester",
       "label": "Place",
       "callNumber": "440.chester",
-      "summary": "Chester is a cathedral city in Cheshire, England, on the River Dee, close to the England–Wales border. It had a built-up area population of 92,760 in 2021, it is the most populous settlement in the borough of Cheshire West and Chester. It is the historic county town of Cheshire and the second-largest settlement in Cheshire after Warrington.",
+      "summary": "Chester is a cathedral city in Cheshire, England, on the River Dee, close to the England–Wales border. With a built-up area population of 92,760 in 2021, it is the most populous settlement in the borough of Cheshire West and Chester. Chester had a strategic importance during the Roman era, serving as a key military outpost and commercial center. The city's Roman walls, built in 79–82 AD, still stand today, and the Roman Amphitheatre, built in 70–80 AD, is a testament to the city's rich history. Chester was a major center of trade and commerce during the Middle Ages, with the city's location on the River Dee making it an ideal hub for the export of goods such as wool and textiles. The city's significance was further amplified by its role in the English Reformation, with the city's cathedral, St. George's, playing a key role in the development of the Church of England. Today, Chester is a thriving city with a rich cultural heritage, featuring numerous museums, galleries, and historical landmarks.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,20 @@
       "wikidataQid": "Q170263",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Chester",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Eastgate%20Street%20from%20the%20City%20Wall.JPG",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"chester\", \"sourceName\": \"Chester\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Chester is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Chester\", \"type\": \"Reference article\", \"slug\": \"chester\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q170263\", \"https://en.wikipedia.org/wiki/Chester\"], \"tags\": [\"United Kingdom\", \"city\", \"Europe\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Chester is remembered as a landmark place of the Classical era, referenced in 88 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\":[\"The construction of the Roman wall in 79–82 AD.\",\"The establishment of the Roman province of Britannia in 43 AD.\",\"The conquest of the region by the Romans in 55 BC.\"],\"effects\":[\"The creation of the Roman province of Britannia in 43 AD.\",\"The development of the Church of England during the English Reformation.\",\"The growth of trade and commerce in the region during the Middle Ages.\"],\"relationships\":[{\"sourceSlug\":\"Roman Empire\",\"sourceName\":\"Roman Empire\",\"verb\":\"CONTAINS\",\"targetSlug\":\"Chester\",\"targetName\":\"Chester\",\"context\":\"Chester was a key military outpost and commercial center within the Roman province of Britannia.\"},{\"sourceSlug\":\"Roman Empire\",\"sourceName\":\"Roman Empire\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"River Dee\",\"targetName\":\"River Dee\",\"context\":\"The River Dee played a crucial role in the Roman trade and commerce in Chester.\"},{\"sourceSlug\":\"King Offa of Mercia\",\"sourceName\":\"King Offa of Mercia\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Chester Cathedral\",\"targetName\":\"Chester Cathedral\",\"context\":\"King Offa of Mercia dedicated the construction of Chester Cathedral in the 9th century.\"},{\"sourceSlug\":\"King Offa of Mercia\",\"sourceName\":\"King Offa of Mercia\",\"verb\":\"CREATES\",\"targetSlug\":\"Church of England\",\"targetName\":\"Church of England\",\"context\":\"King Offa of Mercia played a key role in the development of the Church of England during the English Reformation.\"},{\"sourceSlug\":\"Norman Conquest\",\"sourceName\":\"Norman Conquest\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Chester\",\"targetName\":\"Chester\",\"context\":\"The Norman Conquest of England in 1066 AD contaminated the city's culture and language.\"},{\"sourceSlug\":\"Norman Conquest\",\"sourceName\":\"Norman Conquest\",\"verb\":\"TRANSFORMS\",\"targetSlug\":\"Chester Cathedral\",\"targetName\":\"Chester Cathedral\",\"context\":\"The Norman Conquest transformed the architecture and design of Chester Cathedral.\"},{\"sourceSlug\":\"English Reformation\",\"sourceName\":\"English Reformation\",\"verb\":\"COLLABORATES_WITH\",\"targetSlug\":\"Chester Cathedral\",\"targetName\":\"Chester Cathedral\",\"context\":\"Chester Cathedral collaborated with the English Reformation to develop the Church of England.\"},{\"sourceSlug\":\"English Reformation\",\"sourceName\":\"English Reformation\",\"verb\":\"OCCURS_DURING\",\"targetSlug\":\"Chester\",\"targetName\":\"Chester\",\"context\":\"The English Reformation occurred in Chester during the 16th century.\"}],\"places\":[{\"name\":\"Chester\",\"role\":\"cathedral city\"}],\"texts\":[{\"title\":\"Wikipedia: Chester\",\"type\":\"Reference article\",\"slug\":\"chester\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q170263\",\"https://en.wikipedia.org/wiki/Chester\"],\"tags\":[\"United Kingdom\",\"city\",\"Europe\",\"Cities\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Chester is remembered as a landmark place of the Classical era, referenced in 88 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Chester's historical significance lies in its role as a key military outpost, commercial center, and cultural hub during the Roman era and the English Reformation. The city's rich cultural heritage, featuring numerous museums, galleries, and historical landmarks, makes it a thriving city with a significant impact on the region.\",\"significanceCategory\":\"regional\"}}",
       "subjectHeadings": [
         "Places -- Cities -- United Kingdom -- Classical"
       ],
       "subjects": [
-        "United Kingdom",
-        "city",
-        "Europe",
-        "Cities"
+        "England",
+        "Roman Britain",
+        "Church of England",
+        "Medieval trade and commerce",
+        "Norman Conquest of England"
       ],
       "frameworks": [
-        "CAUSE_AND_EFFECT"
+        "COMPARATIVE_CIVILIZATIONS",
+        "CULTURAL_TRANSMISSION"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -53,7 +55,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:48:34.233752+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Chester's historical significance lies in its role as a key military outpost, commercial center, and cultural hub during the Roman era and the English Reformation. The city's rich cultural heritage, featuring numerous museums, galleries, and historical landmarks, makes it a thriving city with a significant impact on the region.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-10T22:48:13Z"
     }
   ]
 }

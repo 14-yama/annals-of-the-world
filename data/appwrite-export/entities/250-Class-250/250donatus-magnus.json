@@ -11,7 +11,7 @@
       "name": "Donatus Magnus",
       "label": "Person",
       "callNumber": "250.donatus-magnus",
-      "summary": "Donatus Magnus, also known as Donatus of Carthage, was a prophetic and charismatic leader who emerged in the early fourth century as the founder of the Donatist movement, a Christian sect that arose in North Africa as a result of the Diocletianic Persecution.",
+      "summary": "Donatus Magnus (Donatus of Carthage; early 4th century) was the charismatic leader whose name defines Donatism, the rigorist North African Christian movement that rejected bishops compromised during Diocletianic persecution. After the disputed consecration of Caecilian of Carthage, Donatus became the rival bishop of a parallel church that insisted clergy who had handed over scriptures (traditores) lacked valid sacramental authority.\n\nDonatism split African Christianity for centuries, drawing imperial interventions from Constantine onward and theological rebuttals culminating in Augustine of Hippo’s anti-Donatist writings. The controversy turned on purity, martyrdom prestige, and whether church holiness depends on the moral state of ministers.\n\nThough Donatus’s personal biography is sparse, as eponymous founder he stands at the origin of one of late antiquity’s most consequential schisms—shaping African Christian identity until Vandal and Byzantine upheavals remade the region.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q1268674",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Donatus_Magnus",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"250 CE\"}, {\"title\": \"Spiritual seeking and religious community formation\", \"type\": \"Idea\", \"year\": \"250 CE\"}], \"effects\": [{\"title\": \"Shaped religious practice and spiritual communities\", \"type\": \"Idea\", \"year\": \"355 CE\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"355 CE\"}], \"relationships\": [{\"sourceSlug\": \"donatus-magnus\", \"sourceName\": \"Donatus Magnus\", \"verb\": \"PREACHES\", \"targetSlug\": \"field-250\", \"targetName\": \"Religious Figures\", \"context\": \"Donatus Magnus: Religious teaching in religious figures\"}, {\"sourceSlug\": \"donatus-magnus\", \"sourceName\": \"Donatus Magnus\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Donatus Magnus was active during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Donatus Magnus\", \"type\": \"Reference article\", \"slug\": \"donatus-magnus\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q1268674\", \"https://en.wikipedia.org/wiki/Donatus_Magnus\"], \"tags\": [\"Religious Figures\", \"comparative-religion\", \"doctrine-development\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Diocletianic persecution created traditor controversies over clergy who surrendered scriptures.\",\"North African Christianity prized martyr purity, making compromise in episcopal elections intolerable to rigorists.\",\"Imperial preference for a single Catholic hierarchy after Constantine polarised the Caecilianist–Donatist divide.\"],\"effects\":[\"A durable parallel Donatist church structure competed with Catholics across Roman Africa.\",\"Augustine and others developed ecclesiology of sacramental validity independent of ministerial worthiness.\",\"Imperial coercion and councils repeatedly targeted Donatism, embedding church–state conflict in African late antiquity.\"],\"relationships\":[{\"sourceSlug\":\"donatus-magnus\",\"sourceName\":\"Donatus Magnus\",\"verb\":\"CREATES\",\"targetSlug\":\"donatism\",\"targetName\":\"Donatism\",\"context\":\"He became the defining leader and namesake of the Donatist schism.\"},{\"sourceSlug\":\"donatus-magnus\",\"sourceName\":\"Donatus Magnus\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"carthage\",\"targetName\":\"Carthage\",\"context\":\"He emerged as rival bishop in the Carthage succession crisis.\"},{\"sourceSlug\":\"augustine-of-hippo\",\"sourceName\":\"Augustine of Hippo\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"donatus-magnus\",\"targetName\":\"Donatist controversy\",\"context\":\"Augustine’s anti-Donatist theology answered the movement Donatus led.\"}],\"places\":[{\"name\":\"Carthage\",\"role\":\"Episcopal centre of the schism\"},{\"name\":\"Roman North Africa\",\"role\":\"Regional heartland of Donatist Christianity\"}],\"texts\":[{\"title\":\"Wikipedia: Donatus Magnus\",\"type\":\"Reference article\",\"slug\":\"donatus-magnus\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q1268674\",\"https://en.wikipedia.org/wiki/Donatus_Magnus\"],\"tags\":[\"Religious Figures\",\"comparative-religion\",\"doctrine-development\",\"cultural-diffusion\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Donatus Magnus founded the Donatist schism that divided North African Christianity throughout late antiquity.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Religious Figures — Global — Classical"
       ],
       "subjects": [
-        "Religious Figures"
+        "Donatism",
+        "Early Christianity",
+        "Schism",
+        "North Africa",
+        "Late antiquity",
+        "Augustine",
+        "Church history"
       ],
       "frameworks": [
-        "COMPARATIVE_RELIGION",
-        "DOCTRINE_DEVELOPMENT",
-        "CULTURAL_DIFFUSION",
-        "TEMPORAL_LINKAGE"
+        "RELIGIOUS_INTERPRETATION",
+        "STRUCTURAL_ANALYSIS",
+        "DIPLOMATIC_HISTORY"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -53,7 +58,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:26:08.028214+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Donatus Magnus founded the Donatist schism that divided North African Christianity throughout late antiquity.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-09T01:36:53Z"
     }
   ]
 }

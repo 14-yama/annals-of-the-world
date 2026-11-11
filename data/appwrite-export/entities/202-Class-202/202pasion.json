@@ -11,7 +11,7 @@
       "name": "Pasion",
       "label": "Person",
       "callNumber": "202.pasion",
-      "summary": "Pasion was a slave who rose to become a successful banker and Athenian citizen in Ancient Athens in the early 4th century BC.",
+      "summary": "Pasion (d. c. 370 BCE) was a slave in classical Athens who rose to become a wealthy banker and naturalised citizen—one of the best-documented cases of social mobility in the Greek polis. Starting in a money-changing operation, he gained trust managing deposits and loans, earned manumission, and eventually received citizenship for public services, founding a banking house continued by his son Apollodorus.\n\nSpeeches in the Demosthenic corpus, especially those involving Apollodorus, preserve vivid detail on Pasion's credit networks, shield factory, and liturgical contributions. His career shows how metic and freedman capital could underwrite Athenian military and civic finance even in a society ideologically jealous of citizen privilege.\n\nPasion remains a central exhibit in economic histories of Athens: slavery, banking, and citizenship intersecting in the fourth-century commercial city.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,17 +25,23 @@
       "wikidataQid": "Q1971130",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Pasion",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"429 BCE\"}, {\"title\": \"Expansion of trade networks and commercial exchange\", \"type\": \"Idea\", \"year\": \"429 BCE\"}], \"effects\": [{\"title\": \"Influenced economic patterns and commercial practices\", \"type\": \"Idea\", \"year\": \"369 BCE\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"369 BCE\"}], \"relationships\": [{\"sourceSlug\": \"pasion\", \"sourceName\": \"Pasion\", \"verb\": \"TRADES\", \"targetSlug\": \"field-202\", \"targetName\": \"Merchants & Economists\", \"context\": \"Pasion: Commercial activity in merchants & economists\"}, {\"sourceSlug\": \"pasion\", \"sourceName\": \"Pasion\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Pasion was active during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Pasion\", \"type\": \"Reference article\", \"slug\": \"pasion\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q1971130\", \"https://en.wikipedia.org/wiki/Pasion\"], \"tags\": [\"Merchants & Economists\", \"economic-systems\", \"geopolitical-linkage\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Athenian commercial growth created demand for reliable bankers handling coin and credit.\",\"Manumission and rare citizenship grants rewarded slaves who performed major public services.\",\"Trust networks in the port economy allowed a skilled slave to accumulate capital and clients.\"],\"effects\":[\"Pasion's bank became a major credit institution continued by his heirs.\",\"His citizenship case illustrated pathways—and limits—of outsider incorporation in Athens.\",\"Forensic speeches about his estate became prime evidence for Athenian economic history.\"],\"relationships\":[{\"sourceSlug\":\"pasion\",\"sourceName\":\"Pasion\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"classical-athens\",\"targetName\":\"Classical Athens\",\"context\":\"He lived and banked in fourth-century BCE Athens.\"},{\"sourceSlug\":\"pasion\",\"sourceName\":\"Pasion\",\"verb\":\"CREATES\",\"targetSlug\":\"pasion-bank\",\"targetName\":\"Pasion's banking house\",\"context\":\"He built a leading Athenian deposit-and-loan bank later run by his family.\"},{\"sourceSlug\":\"apollodorus-son-of-pasion\",\"sourceName\":\"Apollodorus (son of Pasion)\",\"verb\":\"SUCCEEDS\",\"targetSlug\":\"pasion\",\"targetName\":\"Pasion\",\"context\":\"Apollodorus inherited and litigated over aspects of Pasion's banking fortune.\"}],\"places\":[{\"name\":\"Athens, Greece\",\"role\":\"City of his banking career and citizenship\"},{\"name\":\"Piraeus / Athenian commercial sphere\",\"role\":\"Port-economy context of money-changing and credit\"}],\"texts\":[{\"title\":\"Wikipedia: Pasion\",\"type\":\"Reference article\",\"slug\":\"pasion\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q1971130\",\"https://en.wikipedia.org/wiki/Pasion\"],\"tags\":[\"Merchants & Economists\",\"economic-systems\",\"geopolitical-linkage\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":5,\"significanceNarrative\":\"Pasion's rise from slave to citizen-banker is a key case of economic mobility and credit institutions in classical Athens.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Merchants & Economists — Global — Classical"
       ],
       "subjects": [
-        "Merchants & Economists"
+        "Classical Athens",
+        "Banking",
+        "Slavery",
+        "Citizenship",
+        "Demosthenes",
+        "Economy",
+        "4th century BCE"
       ],
       "frameworks": [
-        "ECONOMIC_SYSTEMS",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "ECONOMIC_ANALYSIS",
+        "STRUCTURAL_ANALYSIS",
+        "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -52,7 +58,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:25:20.140881+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "Pasion's rise from slave to citizen-banker is a key case of economic mobility and credit institutions in classical Athens.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-08T19:04:54Z"
     }
   ]
 }

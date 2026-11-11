@@ -11,7 +11,7 @@
       "name": "Meno",
       "label": "Person",
       "callNumber": "280.meno",
-      "summary": "Meno was a military leaders & commanders in Thessaly (420 BCE, Thessaly – 399 BCE), recognized as a landmark figure in the Classical era. Their work intersected with geopolitical linkage and diplomacy. Determined military outcomes shaping geopolitical boundaries.",
+      "summary": "Meno (Menon) of Pharsalus (c. 423–400 BCE) was a Thessalian general who led a contingent in Cyrus the Younger’s expedition against Artaxerxes II, immortalised—and harshly judged—in Xenophon’s Anabasis. A pupil associated with Gorgias’s rhetorical circle, he also appears as interlocutor in Plato’s Meno, where his name titles a classic dialogue on virtue and learning.\n\nHistorically he was a mercenary dynast of Thessalian politics, caught between local rivalries and Persian imperial civil war. Xenophon depicts him as ambitious and treacherous; Plato uses the figure for philosophy. The double afterlife makes Meno rare: battlefield actor and philosophical namesake.\n\nHe links Thessalian military entrepreneurship to the literary memory of the Ten Thousand.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,17 +25,23 @@
       "wikidataQid": "Q940580",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Meno_(general)",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"420 BCE, Thessaly\"}, {\"title\": \"Military conflicts and strategic necessities\", \"type\": \"Idea\", \"year\": \"420 BCE, Thessaly\"}], \"effects\": [{\"title\": \"Determined military outcomes shaping geopolitical boundaries\", \"type\": \"Idea\", \"year\": \"399 BCE\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"399 BCE\"}], \"relationships\": [{\"sourceSlug\": \"meno\", \"sourceName\": \"Meno\", \"verb\": \"COMMANDS\", \"targetSlug\": \"field-280\", \"targetName\": \"Military Leaders & Commanders\", \"context\": \"Meno: Military command in military leaders & commanders\"}, {\"sourceSlug\": \"meno\", \"sourceName\": \"Meno\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Meno was active during the Classical era\"}], \"places\": [{\"name\": \"Thessaly\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Meno\", \"type\": \"Reference article\", \"slug\": \"meno\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q940580\", \"https://en.wikipedia.org/wiki/Meno_(general)\"], \"tags\": [\"Military Leaders & Commanders\", \"conflict-and-resolution\", \"geopolitical-linkage\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Thessalian aristocrats sold military leadership as mercenaries.\",\"Cyrus the Younger recruited Greek forces for his bid for the Persian throne.\",\"Socratic/Platonic circles used contemporary names as dialogue characters.\"],\"effects\":[\"Xenophon’s portrait shaped his reputation as a faithless captain.\",\"Plato’s Meno fixed his name in the history of philosophy.\",\"The Anabasis preserved Thessalian roles in the Ten Thousand’s march.\"],\"relationships\":[{\"sourceSlug\":\"meno\",\"sourceName\":\"Meno\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"anabasis-of-cyrus\",\"targetName\":\"Anabasis of Cyrus\",\"context\":\"He led Thessalian troops in Cyrus the Younger’s campaign.\"},{\"sourceSlug\":\"meno\",\"sourceName\":\"Meno\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"thessaly\",\"targetName\":\"Thessaly\",\"context\":\"He was a Thessalian dynast and general.\"},{\"sourceSlug\":\"meno\",\"sourceName\":\"Meno\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"plato\",\"targetName\":\"Plato\",\"context\":\"Plato named a major dialogue on virtue after him.\"}],\"places\":[{\"name\":\"Thessaly\",\"role\":\"Homeland and power base\"},{\"name\":\"Babylonia\",\"role\":\"Theatre of Cyrus’s failed revolt\"},{\"name\":\"Athens\",\"role\":\"Intellectual city that memorialised him in dialogue\"}],\"texts\":[{\"title\":\"Wikipedia: Meno\",\"type\":\"Reference article\",\"slug\":\"meno\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q940580\",\"https://en.wikipedia.org/wiki/Meno_(general)\"],\"tags\":[\"Military Leaders & Commanders\",\"conflict-and-resolution\",\"geopolitical-linkage\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Meno bridges the Anabasis’s mercenary war and Plato’s inquiry into virtue.\",\"significanceCategory\":\"regional\"}}",
       "subjectHeadings": [
         "People — Military Leaders & Commanders — Global — Classical"
       ],
       "subjects": [
-        "Military Leaders & Commanders"
+        "Anabasis",
+        "Thessaly",
+        "Xenophon",
+        "Plato",
+        "Mercenaries",
+        "Persian Empire",
+        "Socratic dialogue"
       ],
       "frameworks": [
-        "CONFLICT_AND_RESOLUTION",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "CAUSE_AND_EFFECT",
+        "CULTURAL_TRANSMISSION",
+        "STRUCTURAL_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -52,7 +58,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:25:53.976151+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Meno bridges the Anabasis’s mercenary war and Plato’s inquiry into virtue.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-10T22:52:45Z"
     }
   ]
 }

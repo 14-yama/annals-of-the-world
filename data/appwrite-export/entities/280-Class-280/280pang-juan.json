@@ -11,7 +11,7 @@
       "name": "Pang Juan",
       "label": "Person",
       "callNumber": "280.pang-juan",
-      "summary": "Pang Juan was an ancient Chinese military general of the Wei state during the Warring States period.",
+      "summary": "Pang Juan was a military general of the state of Wei during China's Warring States period (5th–3rd centuries BCE), remembered chiefly through the traditions surrounding Sun Bin, the strategist associated with the Sun Bin Bingfa. According to the well-known narrative preserved in later histories, Pang Juan and Sun Bin studied military arts together; Pang Juan later served Wei, grew jealous of Sun Bin's ability, and arranged for him to be mutilated and imprisoned. Sun Bin escaped to Qi, where he became a key adviser and repeatedly defeated Wei forces commanded by Pang Juan.\n\nThe climax of the tradition is the Battle of Maling (traditionally 342/341 BCE), where Sun Bin's deception—feigning dwindling campfires to lure Wei into a trap—led to Pang Juan's death or suicide after defeat. Whether every anecdotal detail is historical, Pang Juan functions in Chinese military memory as the foil to Sun Bin: a capable Wei commander undone by rivalry, overconfidence, and superior strategy. His story became a lasting exemplar in Chinese discussions of intelligence, deception, and the costs of envy within the competitive multi-state system of the Warring States.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,17 +25,23 @@
       "wikidataQid": "Q3773182",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Pang_Juan",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"384 BCE\"}, {\"title\": \"Military conflicts and strategic necessities\", \"type\": \"Idea\", \"year\": \"384 BCE\"}], \"effects\": [{\"title\": \"Determined military outcomes shaping geopolitical boundaries\", \"type\": \"Idea\", \"year\": \"341 BCE\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"341 BCE\"}], \"relationships\": [{\"sourceSlug\": \"pang-juan\", \"sourceName\": \"Pang Juan\", \"verb\": \"COMMANDS\", \"targetSlug\": \"field-280\", \"targetName\": \"Military Leaders & Commanders\", \"context\": \"Pang Juan: Military command in military leaders & commanders\"}, {\"sourceSlug\": \"pang-juan\", \"sourceName\": \"Pang Juan\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Pang Juan was active during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Pang Juan\", \"type\": \"Reference article\", \"slug\": \"pang-juan\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q3773182\", \"https://en.wikipedia.org/wiki/Pang_Juan\"], \"tags\": [\"Military Leaders & Commanders\", \"conflict-and-resolution\", \"geopolitical-linkage\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"The fragmented multi-state system of the Warring States created continuous warfare in which Wei, Qi, and their neighbours competed for survival and hegemony.\",\"Professional military specialists and written strategic traditions (associated with the Sun lineage) made personal rivalries between generals politically consequential.\",\"Wei’s need for aggressive field commanders against Qi and other rivals elevated Pang Juan into high command—and into conflict with Sun Bin after the latter joined Qi.\"],\"effects\":[\"Pang Juan’s defeats, culminating at Maling, weakened Wei’s military position relative to Qi and entered Chinese strategic lore as a classic case of deception warfare.\",\"The Pang Juan–Sun Bin narrative became a durable cultural template for warning against jealousy and underestimating an adversary’s intellect.\",\"Later Chinese military writing and popular history used the rivalry to illustrate principles later associated with the Sun Bin Bingfa tradition.\"],\"relationships\":[{\"sourceSlug\":\"pang-juan\",\"sourceName\":\"Pang Juan\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"battle-of-maling\",\"targetName\":\"Battle of Maling\",\"context\":\"Tradition holds that Pang Juan led Wei forces into Sun Bin’s trap at Maling and died after Wei’s defeat.\"},{\"sourceSlug\":\"sun-bin\",\"sourceName\":\"Sun Bin\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"pang-juan\",\"targetName\":\"Pang Juan\",\"context\":\"Sun Bin’s strategies in Qi repeatedly outmanoeuvred Pang Juan, defining the latter’s historical reputation.\"},{\"sourceSlug\":\"pang-juan\",\"sourceName\":\"Pang Juan\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"state-of-wei-warring-states\",\"targetName\":\"State of Wei (Warring States)\",\"context\":\"Pang Juan served as a Wei general in the interstate wars of eastern China during the Warring States period.\"}],\"places\":[{\"name\":\"State of Wei (north China plain)\",\"role\":\"Political–military home of Pang Juan’s career\"},{\"name\":\"Maling (traditional battlefield, Qi–Wei frontier)\",\"role\":\"Site of the decisive defeat associated with Pang Juan’s end\"}],\"texts\":[{\"title\":\"Wikipedia: Pang Juan\",\"type\":\"Reference article\",\"slug\":\"pang-juan\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q3773182\",\"https://en.wikipedia.org/wiki/Pang_Juan\"],\"tags\":[\"Military Leaders & Commanders\",\"conflict-and-resolution\",\"geopolitical-linkage\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":5,\"significanceNarrative\":\"Pang Juan is the Wei antagonist in the Sun Bin tradition; his defeat at Maling encapsulates Warring States deception warfare and remains a staple of Chinese strategic memory.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Military Leaders & Commanders — Global — Classical"
       ],
       "subjects": [
-        "Military Leaders & Commanders"
+        "Warring States",
+        "Chinese military history",
+        "Sun Bin",
+        "Wei",
+        "Qi",
+        "Strategy",
+        "Classical China"
       ],
       "frameworks": [
-        "CONFLICT_AND_RESOLUTION",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "CAUSE_AND_EFFECT",
+        "DIPLOMATIC_HISTORY",
+        "STRUCTURAL_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -52,7 +58,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:25:59.316602+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "Pang Juan is the Wei antagonist in the Sun Bin tradition; his defeat at Maling encapsulates Warring States deception warfare and remains a staple of Chinese strategic memory.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-08T13:13:41Z"
     }
   ]
 }

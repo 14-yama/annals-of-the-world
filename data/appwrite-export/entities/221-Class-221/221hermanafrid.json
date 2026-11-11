@@ -11,7 +11,7 @@
       "name": "Hermanafrid",
       "label": "Person",
       "callNumber": "221.hermanafrid",
-      "summary": "Hermanfrid was the last independent king of the Thuringii in present-day Germany. He was one of three sons of King Bisinus and his Lombard queen Menia. His siblings were Baderic; Raicunda, married to the Lombard king Wacho; and Bertachar.",
+      "summary": "Hermanfrid (Hermanafrid) was the last independent king of the Thuringii in early sixth-century central Germany, one of three sons of King Bisinus. Through marriage to Amalaberga, niece of the Ostrogothic king Theodoric the Great, he entered the web of post-Roman dynastic alliances that linked Thuringians, Ostrogoths, and Merovingian Franks.\n\nRivalry with his brothers and Frankish expansion under Theuderic I ended Thuringian autonomy: Frankish armies crushed Thuringian power (c. 531), and Hermanfrid was killed after defeat—tradition places his death near Zülpich. The kingdom was partitioned into Frankish domination, erasing Thuringia as an independent gentile monarchy.\n\nHermanfrid thus marks the terminus of Thuringian kingship and the Merovingian absorption of a major Elbe–Saale people into the Frankish sphere—a key step in the making of early medieval Germany.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q660336",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Hermanafrid",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"450 CE\"}, {\"title\": \"Dynastic succession and sovereign authority traditions\", \"type\": \"Idea\", \"year\": \"450 CE\"}], \"effects\": [{\"title\": \"Established dynastic legacies and territorial boundaries\", \"type\": \"Idea\", \"year\": \"534 CE\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"534 CE\"}], \"relationships\": [{\"sourceSlug\": \"hermanafrid\", \"sourceName\": \"Hermanafrid\", \"verb\": \"RULES\", \"targetSlug\": \"field-221\", \"targetName\": \"Monarchs & Rulers\", \"context\": \"Hermanafrid: Sovereign authority in monarchs & rulers\"}, {\"sourceSlug\": \"hermanafrid\", \"sourceName\": \"Hermanafrid\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Hermanafrid was active during the Classical era\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Hermanafrid\", \"type\": \"Reference article\", \"slug\": \"hermanafrid\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q660336\", \"https://en.wikipedia.org/wiki/Hermanafrid\"], \"tags\": [\"Monarchs & Rulers\", \"political-systems\", \"empire-and-colonialism\", \"geopolitical-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Merovingian expansion under Theuderic I sought to subdue neighbouring Germanic kingdoms east of the Rhine.\",\"Internal Thuringian fraternal conflict weakened resistance to Frankish attack.\",\"Ostrogothic marital ties could not offset the military imbalance with the Franks after Theodoric's era.\"],\"effects\":[\"Independent Thuringian kingship ended and the realm fell under Frankish control.\",\"Frankish power extended deeper into central Germany.\",\"Later medieval Thuringia remembered the fall as a foundational conquest narrative.\"],\"relationships\":[{\"sourceSlug\":\"hermanafrid\",\"sourceName\":\"Hermanafrid\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"thuringii\",\"targetName\":\"Thuringii\",\"context\":\"He was the last independent king of the Thuringian people.\"},{\"sourceSlug\":\"theuderic-i\",\"sourceName\":\"Theuderic I\",\"verb\":\"TRANSFORMS\",\"targetSlug\":\"hermanafrid\",\"targetName\":\"Hermanafrid\",\"context\":\"Frankish conquest under Theuderic destroyed Hermanfrid's independent kingship c. 531.\"},{\"sourceSlug\":\"theodoric-the-great\",\"sourceName\":\"Theodoric the Great\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"hermanafrid\",\"targetName\":\"Hermanafrid\",\"context\":\"Marriage to Theodoric's niece Amalaberga tied Hermanfrid into Ostrogothic alliance politics.\"}],\"places\":[{\"name\":\"Thuringia (central Germany)\",\"role\":\"Heartland of his kingdom\"},{\"name\":\"Zülpich (Tolbiac) region\",\"role\":\"Traditional area associated with his death after defeat\"}],\"texts\":[{\"title\":\"Wikipedia: Hermanafrid\",\"type\":\"Reference article\",\"slug\":\"hermanafrid\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q660336\",\"https://en.wikipedia.org/wiki/Hermanafrid\"],\"tags\":[\"Monarchs & Rulers\",\"political-systems\",\"empire-and-colonialism\",\"geopolitical-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":5,\"significanceNarrative\":\"Hermanfrid's fall ended independent Thuringian kingship and marked major Merovingian expansion into central Germany.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Monarchs & Rulers — Global — Classical"
       ],
       "subjects": [
-        "Monarchs & Rulers"
+        "Thuringii",
+        "Merovingians",
+        "Frankish expansion",
+        "Ostrogoths",
+        "Early Middle Ages",
+        "Germanic kingship",
+        "6th century"
       ],
       "frameworks": [
-        "POLITICAL_SYSTEMS",
-        "EMPIRE_AND_COLONIALISM",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "CAUSE_AND_EFFECT",
+        "DIPLOMATIC_HISTORY",
+        "STRUCTURAL_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -53,7 +58,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:48:18.177720+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 5,
+        "significanceNarrative": "Hermanfrid's fall ended independent Thuringian kingship and marked major Merovingian expansion into central Germany.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-08T18:58:40Z"
     }
   ]
 }

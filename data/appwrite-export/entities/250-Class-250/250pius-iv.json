@@ -11,7 +11,7 @@
       "name": "Pius IV",
       "label": "Person",
       "callNumber": "250.pius-iv",
-      "summary": "Pope Pius IV, born Giovanni Angelo Medici, was head of the Catholic Church and ruler of the Papal States from 25 December 1559 to his death, in December 1565.",
+      "summary": "Pope Pius IV (Giovanni Angelo Medici, r. 1559–1565) headed the Catholic Church and Papal States in the critical years that closed the Council of Trent. A Milanese Medici distinct from the Florentine ducal line, he steered the papal response to Protestantism by reconvening and concluding Trent (1562–63), then promulgating its decrees—foundational for the Catholic Reformation's doctrinal and disciplinary settlement.\n\nHis pontificate balanced reformist pressure with nepotism and Roman politics: he elevated relatives, including the future Saint Charles Borromeo, who became a model reforming cardinal-archbishop. Pius also navigated Habsburg–Valois conflict and the need to restore papal prestige after the turbulent mid-century.\n\nBy confirming Tridentine Catholicism, Pius IV fixed the confessional identity of early modern Rome: seminaries, episcopal residence, and defined dogma would shape Catholic life for centuries.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q161983",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Pope_Pius_IV",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1499-04-09, Milan\"}, {\"title\": \"Spiritual seeking and religious community formation\", \"type\": \"Idea\", \"year\": \"1499-04-09, Milan\"}], \"effects\": [{\"title\": \"Shaped religious practice and spiritual communities\", \"type\": \"Idea\", \"year\": \"1565-12-19\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1565-12-19\"}], \"relationships\": [{\"sourceSlug\": \"pius-iv\", \"sourceName\": \"Pius IV\", \"verb\": \"PREACHES\", \"targetSlug\": \"field-250\", \"targetName\": \"Religious Figures\", \"context\": \"Pius IV: Religious teaching in religious figures\"}, {\"sourceSlug\": \"pius-iv\", \"sourceName\": \"Pius IV\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Pius IV was active during the Medieval era\"}], \"places\": [{\"name\": \"Milan\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Pius IV\", \"type\": \"Reference article\", \"slug\": \"pius-iv\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q161983\", \"https://en.wikipedia.org/wiki/Pope_Pius_IV\"], \"tags\": [\"Religious Figures\", \"comparative-religion\", \"doctrine-development\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"The unfinished Council of Trent required a pope willing to reconvene and close the reforming assembly.\",\"Protestant expansion forced Rome to clarify doctrine and tighten clerical discipline.\",\"Milanese Medici curial networks positioned Giovanni Angelo Medici for election in 1559.\"],\"effects\":[\"Tridentine decrees were confirmed, anchoring Catholic Reformation orthodoxy and practice.\",\"Charles Borromeo's career as reforming bishop radiated from Pius's patronage.\",\"The post-Tridentine papacy gained a clearer confessional programme against Protestant Europe.\"],\"relationships\":[{\"sourceSlug\":\"pius-iv\",\"sourceName\":\"Pius IV\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"council-of-trent\",\"targetName\":\"Council of Trent\",\"context\":\"He reconvened and concluded the council, then confirmed its decrees.\"},{\"sourceSlug\":\"pius-iv\",\"sourceName\":\"Pius IV\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"charles-borromeo\",\"targetName\":\"Charles Borromeo\",\"context\":\"He elevated his nephew Charles Borromeo, a leading Catholic reforming bishop.\"},{\"sourceSlug\":\"catholic-reformation\",\"sourceName\":\"Catholic Reformation\",\"verb\":\"FRAMES\",\"targetSlug\":\"pius-iv\",\"targetName\":\"Pius IV\",\"context\":\"His pontificate implemented the Tridentine settlement central to Catholic reform.\"}],\"places\":[{\"name\":\"Rome, Papal States\",\"role\":\"Seat of his pontificate\"},{\"name\":\"Trent (Trento)\",\"role\":\"Site of the council he concluded\"}],\"texts\":[{\"title\":\"Wikipedia: Pius IV\",\"type\":\"Reference article\",\"slug\":\"pius-iv\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q161983\",\"https://en.wikipedia.org/wiki/Pope_Pius_IV\"],\"tags\":[\"Religious Figures\",\"comparative-religion\",\"doctrine-development\",\"cultural-diffusion\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Pius IV closed the Council of Trent and confirmed its decrees, locking in the Catholic Reformation's doctrinal framework.\",\"significanceCategory\":\"world-changing\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Religious Figures — Global — Medieval"
       ],
       "subjects": [
-        "Religious Figures"
+        "Papacy",
+        "Council of Trent",
+        "Catholic Reformation",
+        "Charles Borromeo",
+        "Counter-Reformation",
+        "16th century",
+        "Milan"
       ],
       "frameworks": [
-        "COMPARATIVE_RELIGION",
-        "DOCTRINE_DEVELOPMENT",
-        "CULTURAL_DIFFUSION",
-        "TEMPORAL_LINKAGE"
+        "RELIGIOUS_INTERPRETATION",
+        "DIPLOMATIC_HISTORY",
+        "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -53,7 +58,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:26:06.652314+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Pius IV closed the Council of Trent and confirmed its decrees, locking in the Catholic Reformation's doctrinal framework.",
+        "significanceCategory": "world-changing"
+      },
+      "enrichedAt": "2026-11-08T18:58:40Z"
     }
   ]
 }

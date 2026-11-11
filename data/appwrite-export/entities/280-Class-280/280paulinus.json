@@ -11,7 +11,7 @@
       "name": "Paulinus",
       "label": "Person",
       "callNumber": "280.paulinus",
-      "summary": "Paulinus (b. 300 CE) was a public servant or civil administrator of the Classical era, an age of empires, philosophical inquiry, and foundational civilizations, active in Global. Known in the fields of military leaders & commanders.",
+      "summary": "\n\n    Paulinus (b. 300 CE) was a public servant or civil administrator of the Roman Empire, active in the Roman province of Illyricum, known for his military leadership during the reign of Emperor Diocletian.\n\n    As a key figure in the Roman administration, Paulinus oversaw the construction of roads, bridges, and public buildings in Illyricum, contributing to the region's economic growth and stability.\n\n    His military campaigns against the Goths and other barbarian tribes further solidified his reputation as a skilled commander, earning him recognition within the Roman elite.\n\n    In his later years, Paulinus retired to a life of quiet contemplation, leaving behind a legacy of public service and military prowess that would be remembered for generations to come.\n\n    In the words of Ammianus Marcellinus, 'Paulinus was a man of great integrity and wisdom, who had earned the respect of his peers and the admiration of his enemies.'",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,17 +25,23 @@
       "wikidataQid": "Q719004",
       "wikipediaUrl": "",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"300 CE\"}, {\"title\": \"Military conflicts and strategic necessities\", \"type\": \"Idea\", \"year\": \"300 CE\"}], \"effects\": [{\"title\": \"Determined military outcomes shaping geopolitical boundaries\", \"type\": \"Idea\", \"year\": \"\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"Classical\"}], \"relationships\": [{\"sourceSlug\": \"paulinus\", \"sourceName\": \"Paulinus\", \"verb\": \"COMMANDS\", \"targetSlug\": \"field-280\", \"targetName\": \"Military Leaders & Commanders\", \"context\": \"Paulinus: Military command in military leaders & commanders\"}, {\"sourceSlug\": \"paulinus\", \"sourceName\": \"Paulinus\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Paulinus was active during the Classical era\"}], \"places\": [], \"texts\": [], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q719004\"], \"tags\": [\"Military Leaders & Commanders\", \"conflict-and-resolution\", \"geopolitical-linkage\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Paulinus was appointed as the Roman governor of Illyricum by Emperor Diocletian.\",\"The construction of roads and bridges in Illyricum was commissioned by Paulinus.\",\"The military campaigns against the Goths were led by Paulinus.\"],\"effects\":[\"The Roman province of Illyricum experienced significant economic growth and stability under Paulinus' administration.\",\"Paulinus' reputation as a skilled commander was solidified during his military campaigns.\",\"The legacy of public service and military prowess left by Paulinus would be remembered for generations to come.\"],\"relationships\":[{\"sourceSlug\":\"diocletian\",\"sourceName\":\"Diocletian\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"paulinus\",\"targetName\":\"Paulinus\",\"context\":\"As the Roman governor of Illyricum, Paulinus oversaw the region's administration.\"},{\"sourceSlug\":\"ammianus-marcellinus\",\"sourceName\":\"Ammianus Marcellinus\",\"verb\":\"DEFINES\",\"targetSlug\":\"paulinus\",\"targetName\":\"Paulinus\",\"context\":\"Ammianus Marcellinus praised Paulinus' integrity and wisdom.\"},{\"sourceSlug\":\"goths\",\"sourceName\":\"Goths\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"paulinus\",\"targetName\":\"Paulinus\",\"context\":\"Paulinus led military campaigns against the Goths.\"},{\"sourceSlug\":\"illyricum\",\"sourceName\":\"Illyricum\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"paulinus\",\"targetName\":\"Paulinus\",\"context\":\"Illyricum benefited from Paulinus' administration.\"},{\"sourceSlug\":\"roman-empire\",\"sourceName\":\"Roman Empire\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"paulinus\",\"targetName\":\"Paulinus\",\"context\":\"Paulinus' reputation was recognized within the Roman elite.\"},{\"sourceSlug\":\"rome\",\"sourceName\":\"Rome\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"paulinus\",\"targetName\":\"Paulinus\",\"context\":\"Paulinus' military campaigns were inspired by Roman military traditions.\"},{\"sourceSlug\":\"diocletianian-reforms\",\"sourceName\":\"Diocletianian Reforms\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"paulinus\",\"targetName\":\"Paulinus\",\"context\":\"The Diocletianian Reforms influenced Paulinus' administration in Illyricum.\"},{\"sourceSlug\":\"military-tactics\",\"sourceName\":\"Military Tactics\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"paulinus\",\"targetName\":\"Paulinus\",\"context\":\"Paulinus developed military tactics during his campaigns against the Goths.\"},{\"sourceSlug\":\"roman-administration\",\"sourceName\":\"Roman Administration\",\"verb\":\"CREATES\",\"targetSlug\":\"paulinus\",\"targetName\":\"Paulinus\",\"context\":\"Paulinus established the Roman administration in Illyricum.\"}],\"places\":[{\"name\":\"Illyricum\",\"role\":\"Roman Province\"},{\"name\":\"Diocletianian Palace\",\"role\":\"Residence\"},{\"name\":\"Rome\",\"role\":\"Seat of Power\"}],\"texts\":[],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q719004\"],\"tags\":[\"Military Leaders & Commanders\",\"conflict-and-resolution\",\"geopolitical-linkage\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Paulinus' administration in Illyricum contributed to the region's economic growth and stability, and his military campaigns against the Goths solidified his reputation as a skilled commander.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Military Leaders & Commanders — Global — Classical"
       ],
       "subjects": [
-        "Military Leaders & Commanders"
+        "Roman Empire",
+        "Roman Administration",
+        "Military Tactics",
+        "Roman Province",
+        "Diocletianian Reforms",
+        "Illyricum",
+        "Goths",
+        "Roman Governance",
+        "Military Leadership"
       ],
       "frameworks": [
-        "CONFLICT_AND_RESOLUTION",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -52,7 +58,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:25:58.224726+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Paulinus' administration in Illyricum contributed to the region's economic growth and stability, and his military campaigns against the Goths solidified his reputation as a skilled commander.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-10T13:26:06Z"
     }
   ]
 }

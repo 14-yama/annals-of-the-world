@@ -11,7 +11,7 @@
       "name": "machine learning",
       "label": "Idea",
       "callNumber": "136.machine-learning",
-      "summary": "Scientific study of algorithms and statistical models that computer systems use to perform tasks without explicit instructions",
+      "summary": "**Paragraph 1 — Identity & Significance**: Machine learning is a subset of artificial intelligence that utilizes statistical models and algorithms to enable computers to perform tasks without explicit instructions. This scientific study was first introduced by mathematician and computer scientist Arthur Samuel in 1956. The field gained widespread attention in the 1980s with the development of backpropagation algorithms and the introduction of the neural network. Today, machine learning is a fundamental component of modern computing, with applications in natural language processing, computer vision, and predictive analytics.\n\n\n    **Paragraph 2 — What Happened**: The development of machine learning was a gradual process that involved the contributions of many researchers and scientists. In the 1940s and 1950s, mathematicians like Alan Turing and Marvin Minsky began exploring the concept of artificial intelligence. The first machine learning algorithm, the perceptron, was developed in the 1950s. The 1960s and 1970s saw the introduction of decision trees and rule-based systems. The 1980s saw the emergence of backpropagation algorithms and the introduction of the neural network. The 1990s and 2000s saw the development of support vector machines and ensemble methods. Today, machine learning is used in a wide range of applications, from image recognition to speech recognition.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,16 +25,23 @@
       "wikidataQid": "Q2539",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Machine_learning",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Kernel%20Machine.svg",
-      "detailsJson": "{\"causes\": [\"Intellectual inquiry and cultural development\"], \"effects\": [\"Influenced intellectual traditions and cultural development\"], \"relationships\": [{\"sourceSlug\": \"machine-learning\", \"sourceName\": \"machine learning\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"machine learning is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: machine learning\", \"type\": \"Reference article\", \"slug\": \"machine-learning\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q2539\", \"https://en.wikipedia.org/wiki/Machine_learning\"], \"tags\": [\"academic discipline\", \"Computing & Digital Technology\", \"scientific-paradigm\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"machine learning left a notable mark on Classical history, documented across 93 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\"}",
+      "detailsJson": "{\"causes\":[\"The development of the digital computer and the need for efficient algorithms to process vast amounts of data.\"],\"effects\":[\"The creation of intelligent systems that can learn and adapt to new situations, enabling applications in natural language processing, computer vision, and predictive analytics.\"],\"relationships\":[{\"sourceSlug\":\"digital computer\",\"sourceName\":\"Digital Computer\",\"verb\":\"CONTAINS\",\"targetSlug\":\"machine learning\",\"targetName\":\"Machine Learning\",\"context\":\"The development of the digital computer enabled the creation of efficient algorithms to process vast amounts of data, laying the foundation for machine learning.\"},{\"sourceSlug\":\"Alan Turing\",\"sourceName\":\"Alan Turing\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"machine learning\",\"targetName\":\"Machine Learning\",\"context\":\"Turing's work on artificial intelligence and the development of the theoretical foundations of machine learning.\"},{\"sourceSlug\":\"Marvin Minsky\",\"sourceName\":\"Marvin Minsky\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"machine learning\",\"targetName\":\"Machine Learning\",\"context\":\"Minsky's work on the perceptron and the development of decision trees and rule-based systems.\"},{\"sourceSlug\":\"IBM\",\"sourceName\":\"IBM\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"machine learning\",\"targetName\":\"Machine Learning\",\"context\":\"The 1950s and 1960s saw significant funding for machine learning research at IBM, leading to the development of key algorithms and techniques.\"},{\"sourceSlug\":\"Andrew Ng\",\"sourceName\":\"Andrew Ng\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"machine learning\",\"targetName\":\"Machine Learning\",\"context\":\"Ng's statement about the potential of machine learning to transform many industries and create new opportunities for people.\"}],\"places\":[{\"name\":\"Stanford University\",\"role\":\"Birthplace\"}],\"texts\":[{\"title\":\"Wikipedia: machine learning\",\"type\":\"Reference article\",\"slug\":\"machine-learning\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q2539\",\"https://en.wikipedia.org/wiki/Machine_learning\"],\"tags\":[\"academic discipline\",\"Computing & Digital Technology\",\"scientific-paradigm\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"machine learning left a notable mark on Classical history, documented across 93 Wikipedia editions worldwide. Key lasting impacts include: Influenced intellectual traditions and cultural development.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Machine learning has had a significant impact on modern society, enabling computers to perform tasks that would previously have required human intelligence.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Idea -- Computing & Digital Technology -- Global -- Classical"
       ],
       "subjects": [
-        "academic discipline",
-        "Computing & Digital Technology"
+        "Machine Learning",
+        "Artificial Intelligence",
+        "Computer Science",
+        "Data Analysis",
+        "Machine-Based Intelligence",
+        "Data Mining",
+        "Deep Learning",
+        "Neural Networks",
+        "Predictive Analytics"
       ],
       "frameworks": [
-        "SCIENTIFIC_PARADIGM"
+        "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
       "importanceScore": 6,
@@ -51,7 +58,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:26:01.061846+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Machine learning has had a significant impact on modern society, enabling computers to perform tasks that would previously have required human intelligence.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-09T15:13:53Z"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "name": "Ctesias",
       "label": "Person",
       "callNumber": "205.ctesias",
-      "summary": "Ctesias (b. 500 BCE, Knidos) was a political leader or statesperson of the Classical era, an age of empires, philosophical inquiry, and foundational civilizations, active in Knidos. Known in the fields of journalists & chroniclers.",
+      "summary": "Ctesias (b. 500 BCE, Knidos) was a political leader or statesperson of the Classical era, an age of empires, philosophical inquiry, and foundational civilizations, active in Knidos. He served as a chronicler and historian for the Persian Empire, recording the accounts of Alexander the Great's conquests in his work “Histories”. Ctesias was a key figure in the transmission of Greek knowledge to the East, and his writings played a significant role in shaping the cultural and intellectual landscape of the ancient world. His work had a lasting impact on the development of Western historiography and the study of ancient civilizations. The historian Herodotus, who predated Ctesias, is also known to have influenced his work. Ctesias' own experiences as a diplomat and traveler in the Persian Empire and the Indus Valley contributed to his unique perspective on the cultures and peoples he encountered.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,17 +25,25 @@
       "wikidataQid": "Q296325",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Ctesias",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"500 BCE, Knidos\"}, {\"title\": \"Rise of print media and public discourse\", \"type\": \"Idea\", \"year\": \"500 BCE, Knidos\"}], \"effects\": [{\"title\": \"Shaped public opinion and historical record\", \"type\": \"Idea\", \"year\": \"400 BCE\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"400 BCE\"}], \"relationships\": [{\"sourceSlug\": \"ctesias\", \"sourceName\": \"Ctesias\", \"verb\": \"REPORTS\", \"targetSlug\": \"field-205\", \"targetName\": \"Journalists & Chroniclers\", \"context\": \"Ctesias: Journalistic coverage in journalists & chroniclers\"}, {\"sourceSlug\": \"ctesias\", \"sourceName\": \"Ctesias\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Ctesias was active during the Classical era\"}], \"places\": [{\"name\": \"Knidos\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Ctesias\", \"type\": \"Reference article\", \"slug\": \"ctesias\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q296325\", \"https://en.wikipedia.org/wiki/Ctesias\"], \"tags\": [\"Journalists & Chroniclers\", \"cause-and-effect\", \"cultural-diffusion\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Ctesias was born in Knidos, a Greek city in the ancient world.\",\"He was educated in the classical Greek tradition.\",\"He gained experience as a diplomat and traveler in the Persian Empire and the Indus Valley.\",\"He was influenced by the works of the Greek historian Herodotus.\"],\"effects\":[\"Ctesias' Histories played a significant role in shaping the cultural and intellectual landscape of the ancient world.\",\"His work contributed to the development of Western historiography.\",\"He helped to transmit Greek knowledge to the East.\",\"His writings had a lasting impact on the study of ancient civilizations.\"],\"relationships\":[{\"sourceSlug\":\"herodotus\",\"sourceName\":\"Herodotus\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"ctesias\",\"targetName\":\"Ctesias\",\"context\":\"Ctesias was influenced by Herodotus' works.\"},{\"sourceSlug\":\"Alexander the Great\",\"sourceName\":\"Alexander the Great\",\"verb\":\"TRANSFORMS\",\"targetSlug\":\"ctesias\",\"targetName\":\"Ctesias\",\"context\":\"Ctesias recorded Alexander's conquests in his Histories.\"},{\"sourceSlug\":\"Knidos\",\"sourceName\":\"Knidos\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"ctesias\",\"targetName\":\"Ctesias\",\"context\":\"Ctesias served as a chronicler and historian for the Persian Empire in Knidos.\"},{\"sourceSlug\":\"Persian Empire\",\"sourceName\":\"Persian Empire\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"ctesias\",\"targetName\":\"Ctesias\",\"context\":\"Ctesias served as a diplomat and traveler for the Persian Empire.\"},{\"sourceSlug\":\"Indus Valley\",\"sourceName\":\"Indus Valley\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"ctesias\",\"targetName\":\"Ctesias\",\"context\":\"Ctesias traveled to the Indus Valley as part of his diplomatic and travel experiences.\"}],\"places\":[{\"name\":\"Knidos\",\"role\":\"Birthplace\"},{\"name\":\"Persian Empire\",\"role\":\"Place of service\"},{\"name\":\"Indus Valley\",\"role\":\"Place of travel\"}],\"texts\":[{\"title\":\"Wikipedia: Ctesias\",\"type\":\"Reference article\",\"slug\":\"ctesias\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q296325\",\"https://en.wikipedia.org/wiki/Ctesias\"],\"tags\":[\"Journalists & Chroniclers\",\"cause-and-effect\",\"cultural-diffusion\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Ctesias' Histories played a significant role in shaping the cultural and intellectual landscape of the ancient world, contributing to the development of Western historiography and the study of ancient civilizations.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Journalists & Chroniclers — Global — Classical"
       ],
       "subjects": [
-        "Journalists & Chroniclers"
+        "Classical era",
+        "Greek knowledge",
+        "Western historiography",
+        "Ancient civilizations",
+        "Persian Empire",
+        "Indus Valley",
+        "Alexander the Great",
+        "Herodotus",
+        "Diplomacy",
+        "Travel"
       ],
       "frameworks": [
-        "CAUSE_AND_EFFECT",
-        "CULTURAL_DIFFUSION",
-        "TEMPORAL_LINKAGE"
+        "CULTURAL_TRANSMISSION",
+        "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -52,7 +60,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:26:19.621952+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Ctesias' Histories played a significant role in shaping the cultural and intellectual landscape of the ancient world, contributing to the development of Western historiography and the study of ancient civilizations.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-09T23:49:34Z"
     }
   ]
 }

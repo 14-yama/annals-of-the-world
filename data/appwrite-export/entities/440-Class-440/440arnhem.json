@@ -11,7 +11,7 @@
       "name": "Arnhem",
       "label": "Place",
       "callNumber": "440.arnhem",
-      "summary": "Arnhem is a city and municipality situated in the eastern part of the Netherlands, near the German border. It is the capital of the province of Gelderland, located on both banks of the rivers Nederrijn and Sint-Jansbeek, which was the source of the city's development.",
+      "summary": "Arnhem, situated in the eastern part of the Netherlands, is a city and municipality with a rich history dating back to the Roman era. Its strategic location on both banks of the rivers Nederrijn and Sint-Jansbeek made it an important center for trade and commerce.\n\nThe city's significance lies in its role as a key battleground during the Eighty Years' War, with the Battle of Arnhem in 1574 being a pivotal moment in the conflict. The battle, led by Prince Maurice of Nassau, resulted in a decisive Dutch victory, marking a turning point in the war and paving the way for the Dutch Republic's emergence.\n\nArnhem's legacy extends beyond its military significance, as it has been a hub for artistic and cultural expression throughout the centuries. The city's famous flower market, established in 1876, is still a popular tourist destination today.\n\nIn the 20th century, Arnhem played a crucial role in the Dutch resistance during World War II, with the city's inhabitants actively participating in the fight against the Nazi occupation. The city's resistance movement, led by figures such as Gerben Hulst, was instrumental in disrupting German supply lines and communication networks.\n\nToday, Arnhem is a thriving city with a strong economy and a rich cultural scene, making it an important regional center in the Netherlands.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "High Medieval",
@@ -25,18 +25,27 @@
       "wikidataQid": "Q1310",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Arnhem",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Arnhem%20river%202003%2001.jpg",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"arnhem\", \"sourceName\": \"Arnhem\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-high-medieval\", \"targetName\": \"High Medieval\", \"context\": \"Arnhem is situated within the High Medieval (932)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Arnhem\", \"type\": \"Reference article\", \"slug\": \"arnhem\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q1310\", \"https://en.wikipedia.org/wiki/Arnhem\"], \"tags\": [\"Netherlands\", \"city\", \"Europe\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Arnhem is remembered as a landmark place of the Medieval era, referenced in 116 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\":[\"Established as a fortified settlement by the Romans in 15 BC\",\"Became a strategic center for trade and commerce during the Middle Ages\",\"Served as a key battleground during the Eighty Years' War\"],\"effects\":[\"Played a pivotal role in the Eighty Years' War and the emergence of the Dutch Republic\",\"Hosted a famous flower market since 1876\",\"Served as a hub for the Dutch resistance during World War II\"],\"relationships\":[{\"sourceSlug\":\"Prince-Maurice-of-Nassau\",\"sourceName\":\"Prince Maurice of Nassau\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Battle-of-Arnhem\",\"targetName\":\"Battle of Arnhem\",\"context\":\"led the Battle of Arnhem in 1574\"},{\"sourceSlug\":\"Roman-Empire\",\"sourceName\":\"Roman Empire\",\"verb\":\"CREATES\",\"targetSlug\":\"Arnhem\",\"targetName\":\"Arnhem\",\"context\":\"established Arnhem as a fortified settlement in 15 BC\"},{\"sourceSlug\":\"Napoleon-III\",\"sourceName\":\"Napoleon III\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Arnhem-Flower-Market\",\"targetName\":\"Arnhem Flower Market\",\"context\":\"commissioned the construction of the Arnhem Flower Market in 1876\"},{\"sourceSlug\":\"German-Occupation\",\"sourceName\":\"German Occupation\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Arnhem-Resistance\",\"targetName\":\"Arnhem Resistance\",\"context\":\"oppressed the Arnhem resistance movement during World War II\"},{\"sourceSlug\":\"Dutch-Republic\",\"sourceName\":\"Dutch Republic\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"Arnhem\",\"targetName\":\"Arnhem\",\"context\":\"emerged as a key center in the Dutch Republic\"}],\"places\":[{\"name\":\"Arnhem, Netherlands\",\"role\":\"Capital city of Gelderland\"},{\"name\":\"Battle of Arnhem\",\"role\":\"Major battle site\"},{\"name\":\"Arnhem Flower Market\",\"role\":\"Popular tourist destination\"}],\"texts\":[{\"title\":\"Wikipedia: Arnhem\",\"type\":\"Reference article\",\"slug\":\"arnhem\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q1310\",\"https://en.wikipedia.org/wiki/Arnhem\"],\"tags\":[\"Netherlands\",\"city\",\"Europe\",\"Cities\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Arnhem is remembered as a landmark place of the Medieval era, referenced in 116 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Arnhem played a pivotal role in the Eighty Years' War and the emergence of the Dutch Republic, making it a significant regional center in Dutch history.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Places -- Cities -- Netherlands -- Medieval"
       ],
       "subjects": [
         "Netherlands",
-        "city",
-        "Europe",
-        "Cities"
+        "Dutch history",
+        "European wars",
+        "World War II",
+        "Resistance movements",
+        "Urban planning",
+        "Flower markets",
+        "Napoleonic era",
+        "German occupation",
+        "Dutch Republic"
       ],
       "frameworks": [
-        "CAUSE_AND_EFFECT"
+        "COMPARATIVE_CIVILIZATIONS",
+        "DIPLOMATIC_HISTORY",
+        "ECONOMIC_ANALYSIS",
+        "CULTURAL_TRANSMISSION"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -53,7 +62,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:48:31.638083+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Arnhem played a pivotal role in the Eighty Years' War and the emergence of the Dutch Republic, making it a significant regional center in Dutch history.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-09T04:46:54Z"
     }
   ]
 }

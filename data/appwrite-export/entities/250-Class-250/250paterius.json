@@ -11,7 +11,7 @@
       "name": "Paterius",
       "label": "Person",
       "callNumber": "250.paterius",
-      "summary": "Paterius was a bishop of Brescia. He is known as a compiler, in particular of works of Pope Gregory I, for whom he had worked as a notary.",
+      "summary": "Paterius was a sixth–seventh-century bishop of Brescia and a scholarly compiler best known for assembling excerpts from the works of Pope Gregory the Great. Having served in Gregory’s administrative circle in Rome before his episcopate, he produced florilegia that organised Gregorian teachings for pastoral and studious use—an early example of the excerpt culture that transmitted late antique papal theology into Lombard Italy and beyond.\n\nIn an age when full manuscript copies were scarce, Paterius’s compilations helped stabilise Gregory’s authority as a doctor of the Latin church. His career links Roman papal bureaucracy to northern Italian episcopal chairs during the Lombard period, showing how Gregorian thought travelled through trusted clerks turned bishops. Though not a major original theologian, he is significant as a vector of textual transmission in early medieval Italy.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q672439",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Paterius",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"501 CE, Brescia\"}, {\"title\": \"Spiritual seeking and religious community formation\", \"type\": \"Idea\", \"year\": \"501 CE, Brescia\"}], \"effects\": [{\"title\": \"Shaped religious practice and spiritual communities\", \"type\": \"Idea\", \"year\": \"606 CE\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"606 CE\"}], \"relationships\": [{\"sourceSlug\": \"paterius\", \"sourceName\": \"Paterius\", \"verb\": \"PREACHES\", \"targetSlug\": \"field-250\", \"targetName\": \"Religious Figures\", \"context\": \"Paterius: Religious teaching in religious figures\"}, {\"sourceSlug\": \"paterius\", \"sourceName\": \"Paterius\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Paterius was active during the Medieval era\"}], \"places\": [{\"name\": \"Brescia\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Paterius\", \"type\": \"Reference article\", \"slug\": \"paterius\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q672439\", \"https://en.wikipedia.org/wiki/Paterius\"], \"tags\": [\"Religious Figures\", \"comparative-religion\", \"doctrine-development\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Gregory the Great’s large corpus required condensation for bishops and monks who could not own complete sets of his works.\",\"Paterius’s prior service in Gregory’s household gave him access, motive, and competence to compile authoritative excerpts.\",\"Lombard-era Italian churches needed portable pastoral theology grounded in Roman papal prestige.\"],\"effects\":[\"Gregorian doctrine circulated more widely in excerpted form through Paterius’s compilations.\",\"Brescia’s episcopal tradition gained a link to Gregory’s Roman circle.\",\"Later medieval readers encountered Gregory partly through intermediary florilegia of the kind Paterius pioneered.\"],\"relationships\":[{\"sourceSlug\":\"paterius\",\"sourceName\":\"Paterius\",\"verb\":\"TRANSMITS\",\"targetSlug\":\"gregory-the-great\",\"targetName\":\"Pope Gregory the Great\",\"context\":\"Paterius compiled excerpts that spread Gregory’s teachings in manageable form.\"},{\"sourceSlug\":\"paterius\",\"sourceName\":\"Paterius\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"brescia\",\"targetName\":\"Brescia\",\"context\":\"He served as bishop of Brescia after working in Gregory’s Roman administration.\"},{\"sourceSlug\":\"gregory-the-great\",\"sourceName\":\"Pope Gregory the Great\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"paterius\",\"targetName\":\"Paterius\",\"context\":\"Paterius’s intellectual project was defined by loyalty to and curation of Gregory’s writings.\"}],\"places\":[{\"name\":\"Rome\",\"role\":\"Where Paterius served in Gregory the Great’s administrative circle\"},{\"name\":\"Brescia, northern Italy\",\"role\":\"See he governed as bishop and base for his compilatory legacy\"}],\"texts\":[{\"title\":\"Wikipedia: Paterius\",\"type\":\"Reference article\",\"slug\":\"paterius\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q672439\",\"https://en.wikipedia.org/wiki/Paterius\"],\"tags\":[\"Religious Figures\",\"comparative-religion\",\"doctrine-development\",\"cultural-diffusion\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":4,\"significanceNarrative\":\"Paterius, bishop of Brescia and former Gregorian clerk, was an important early compiler who transmitted Pope Gregory the Great’s works through excerpt collections.\",\"significanceCategory\":\"local\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Religious Figures — Global — Medieval"
       ],
       "subjects": [
-        "Religious Figures"
+        "Early Middle Ages",
+        "Gregorian theology",
+        "Florilegia",
+        "Brescia",
+        "Papacy",
+        "Textual transmission",
+        "Lombard Italy"
       ],
       "frameworks": [
-        "COMPARATIVE_RELIGION",
-        "DOCTRINE_DEVELOPMENT",
-        "CULTURAL_DIFFUSION",
-        "TEMPORAL_LINKAGE"
+        "CULTURAL_TRANSMISSION",
+        "RELIGIOUS_INTERPRETATION",
+        "CAUSE_AND_EFFECT"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -53,7 +58,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:26:09.687467+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 4,
+        "significanceNarrative": "Paterius, bishop of Brescia and former Gregorian clerk, was an important early compiler who transmitted Pope Gregory the Great’s works through excerpt collections.",
+        "significanceCategory": "local"
+      },
+      "enrichedAt": "2026-11-08T13:13:41Z"
     }
   ]
 }

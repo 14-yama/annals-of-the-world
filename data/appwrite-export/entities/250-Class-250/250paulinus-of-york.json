@@ -11,7 +11,7 @@
       "name": "Paulinus of York",
       "label": "Person",
       "callNumber": "250.paulinus-of-york",
-      "summary": "Paulinus was a Roman missionary and the first Bishop of York. A member of the Gregorian mission sent in 601 by Pope Gregory I to Christianize the Anglo-Saxons from their native Anglo-Saxon paganism, Paulinus arrived in England by 604 with the second missionary group. Little is known of Paulinus's activities in the following two decades.",
+      "summary": "Paulinus of York (d. 644) was a Roman missionary of the Gregorian mission and the first Bishop of York, central to the conversion of King Edwin of Northumbria and the early organisation of the northern English church. Sent from Rome in the second wave of Augustine’s mission, he worked in Kent before accompanying Æthelburh north and baptising Edwin around 627.\n\nHis episcopate tied Northumbria to Latin Christendom through stone churches, Roman liturgy, and metropolitan claims for York. After Edwin’s death in 633, political collapse forced Paulinus south again; he ended his career as Bishop of Rochester while the northern mission was rebuilt under Aidan and others.\n\nPaulinus marks the Roman strand of Northumbrian Christianisation later woven together with Irish-influenced Lindisfarne traditions.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q506645",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Paulinus_of_York",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"Classical\"}, {\"title\": \"Spiritual seeking and religious community formation\", \"type\": \"Idea\", \"year\": \"\"}], \"effects\": [{\"title\": \"Shaped religious practice and spiritual communities\", \"type\": \"Idea\", \"year\": \"644-10-13\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"644-10-13\"}], \"relationships\": [{\"sourceSlug\": \"paulinus-of-york\", \"sourceName\": \"Paulinus of York\", \"verb\": \"PREACHES\", \"targetSlug\": \"field-250\", \"targetName\": \"Religious Figures\", \"context\": \"Paulinus of York: Religious teaching in religious figures\"}, {\"sourceSlug\": \"paulinus-of-york\", \"sourceName\": \"Paulinus of York\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Paulinus of York was active during the Classical era\"}], \"places\": [{\"name\": \"Rome\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Paulinus of York\", \"type\": \"Reference article\", \"slug\": \"paulinus-of-york\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q506645\", \"https://en.wikipedia.org/wiki/Paulinus_of_York\"], \"tags\": [\"Religious Figures\", \"comparative-religion\", \"doctrine-development\", \"cultural-diffusion\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Pope Gregory I’s mission sought to convert the Anglo-Saxon kingdoms.\",\"Dynastic marriage linked Kentish Christianity to Northumbrian royal politics.\",\"Edwin’s hegemony created a window for mass baptism and episcopal foundation.\"],\"effects\":[\"York emerged as a northern episcopal centre of the English church.\",\"Roman missionary methods shaped early Northumbrian Christian institutions.\",\"His flight after 633 opened space for Irish monastic influence at Lindisfarne.\"],\"relationships\":[{\"sourceSlug\":\"paulinus-of-york\",\"sourceName\":\"Paulinus of York\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"gregorian-mission\",\"targetName\":\"Gregorian mission\",\"context\":\"He was sent in the Roman mission to convert the Anglo-Saxons.\"},{\"sourceSlug\":\"paulinus-of-york\",\"sourceName\":\"Paulinus of York\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"edwin-of-northumbria\",\"targetName\":\"Edwin of Northumbria\",\"context\":\"He baptised King Edwin and organised the Northumbrian church.\"},{\"sourceSlug\":\"paulinus-of-york\",\"sourceName\":\"Paulinus of York\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"york\",\"targetName\":\"York\",\"context\":\"He was the first Bishop of York.\"}],\"places\":[{\"name\":\"York\",\"role\":\"Seat of his bishopric\"},{\"name\":\"Northumbria\",\"role\":\"Kingdom he helped convert\"},{\"name\":\"Kent\",\"role\":\"Earlier base of the Gregorian mission\"}],\"texts\":[{\"title\":\"Wikipedia: Paulinus of York\",\"type\":\"Reference article\",\"slug\":\"paulinus-of-york\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q506645\",\"https://en.wikipedia.org/wiki/Paulinus_of_York\"],\"tags\":[\"Religious Figures\",\"comparative-religion\",\"doctrine-development\",\"cultural-diffusion\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Paulinus founded York’s bishopric and anchored Rome’s conversion of Northumbria under Edwin.\",\"significanceCategory\":\"national\"}}",
       "subjectHeadings": [
         "People — Religious Figures — Global — Classical"
       ],
       "subjects": [
-        "Religious Figures"
+        "Gregorian mission",
+        "Northumbria",
+        "Anglo-Saxon Christianity",
+        "York",
+        "Edwin of Northumbria",
+        "Roman mission",
+        "Conversion"
       ],
       "frameworks": [
-        "COMPARATIVE_RELIGION",
-        "DOCTRINE_DEVELOPMENT",
-        "CULTURAL_DIFFUSION",
-        "TEMPORAL_LINKAGE"
+        "RELIGIOUS_INTERPRETATION",
+        "STRUCTURAL_ANALYSIS",
+        "CULTURAL_TRANSMISSION"
       ],
       "altNames": [],
       "importanceScore": 9,
@@ -53,7 +58,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:26:06.764096+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Paulinus founded York’s bishopric and anchored Rome’s conversion of Northumbria under Edwin.",
+        "significanceCategory": "national"
+      },
+      "enrichedAt": "2026-11-10T22:47:51Z"
     }
   ]
 }

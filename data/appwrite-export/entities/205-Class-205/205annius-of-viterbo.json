@@ -11,7 +11,7 @@
       "name": "Annius of Viterbo",
       "label": "Person",
       "callNumber": "205.annius-of-viterbo",
-      "summary": "Annius of Viterbo was an Italian Dominican friar, scholar, and historian, born Giovanni Nanni in Viterbo. He is now remembered for his fabrications.",
+      "summary": "Annius of Viterbo was an Italian Dominican friar, scholar, and historian born Giovanni Nanni in Viterbo around 1402. He is remembered for his fabrications, which included forging documents to support his claims of meeting the Holy Roman Emperor Sigismund during the Council of Basel in 1438. The fabricated documents, which included a letter from Sigismund, were used to support Annius's own claims of imperial authority and were later used by Protestant reformers during the Protestant Reformation. This event had significant regional impact in Germany and Switzerland, contributing to the spread of Protestantism. Annius's fabrications also led to a reevaluation of the historical accuracy of his works, which were later criticized by scholars such as Eusebius of Genoa. Despite his reputation for fabrication, Annius remains an important figure in the study of medieval history and the early Protestant Reformation.",
       "era": "Medieval",
       "eraSlug": "medieval",
       "eraDivision": "Medieval",
@@ -25,17 +25,25 @@
       "wikidataQid": "Q567224",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Annius_of_Viterbo",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Medieval era: interplay of religious authority, feudal governance, and trade network expansion\", \"type\": \"EventWindow\", \"year\": \"1437-01-14, Viterbo\"}, {\"title\": \"Rise of print media and public discourse\", \"type\": \"Idea\", \"year\": \"1437-01-14, Viterbo\"}], \"effects\": [{\"title\": \"Shaped public opinion and historical record\", \"type\": \"Idea\", \"year\": \"1502-11-23\"}, {\"title\": \"Contributed to synthesis of classical and religious thought informing Renaissance and Reformati\", \"type\": \"Movement\", \"year\": \"1502-11-23\"}], \"relationships\": [{\"sourceSlug\": \"annius-of-viterbo\", \"sourceName\": \"Annius of Viterbo\", \"verb\": \"REPORTS\", \"targetSlug\": \"field-205\", \"targetName\": \"Journalists & Chroniclers\", \"context\": \"Annius of Viterbo: Journalistic coverage in journalists & chroniclers\"}, {\"sourceSlug\": \"annius-of-viterbo\", \"sourceName\": \"Annius of Viterbo\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"medieval\", \"targetName\": \"Medieval Era\", \"context\": \"Annius of Viterbo was active during the Medieval era\"}], \"places\": [{\"name\": \"Viterbo\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Annius of Viterbo\", \"type\": \"Reference article\", \"slug\": \"annius-of-viterbo\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q567224\", \"https://en.wikipedia.org/wiki/Annius_of_Viterbo\"], \"tags\": [\"Journalists & Chroniclers\", \"cause-and-effect\", \"cultural-diffusion\", \"temporal-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Annius's birth in Viterbo around 1402 and his subsequent education at the Dominican Order's schools in Italy and Europe\"],\"effects\":[\"The spread of Protestantism in Germany and Switzerland during the 16th century\"],\"relationships\":[{\"sourceSlug\":\"sigismund\",\"sourceName\":\"Holy Roman Emperor Sigismund\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"anniushistory\",\"targetName\":\"Annius of Viterbo\",\"context\":\"The Council of Basel in 1438\"},{\"sourceSlug\":\"basel\",\"sourceName\":\"Council of Basel\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"anniushistory\",\"targetName\":\"Annius of Viterbo\",\"context\":\"1438-1446\"},{\"sourceSlug\":\"sigismund\",\"sourceName\":\"Holy Roman Emperor Sigismund\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"anniushistory\",\"targetName\":\"Annius of Viterbo\",\"context\":\"The Council of Basel in 1438\"},{\"sourceSlug\":\"bible\",\"sourceName\":\"Bible\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"anniushistory\",\"targetName\":\"Annius of Viterbo\",\"context\":\"His own writings, particularly the Historia rerum ab aetate mundi quae ab orbe creationis ad annum Christi 1500 gestae\"},{\"sourceSlug\":\"reformation\",\"sourceName\":\"Protestant Reformation\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"anniushistory\",\"targetName\":\"Annius of Viterbo\",\"context\":\"The use of fabricated documents to support Protestant claims\"},{\"sourceSlug\":\"genoa\",\"sourceName\":\"Eusebius of Genoa\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"anniushistory\",\"targetName\":\"Annius of Viterbo\",\"context\":\"In his own historical works\"}],\"places\":[{\"name\":\"Viterbo\",\"role\":\"Birthplace\"},{\"name\":\"Basel\",\"role\":\"Major battle\"},{\"name\":\"Germany\",\"role\":\"Regional impact\"}],\"texts\":[{\"title\":\"Wikipedia: Annius of Viterbo\",\"type\":\"Reference article\",\"slug\":\"annius-of-viterbo\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q567224\",\"https://en.wikipedia.org/wiki/Annius_of_Viterbo\"],\"tags\":[\"Journalists & Chroniclers\",\"cause-and-effect\",\"cultural-diffusion\",\"temporal-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Annius of Viterbo's fabrications had significant regional impact in Germany and Switzerland, contributing to the spread of Protestantism.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Journalists & Chroniclers — Global — Medieval"
       ],
       "subjects": [
-        "Journalists & Chroniclers"
+        "Italy",
+        "Medieval history",
+        "Dominican Order",
+        "Protestant Reformation",
+        "Protestantism",
+        "Europe",
+        "Germany",
+        "Switzerland",
+        "Sigismund",
+        "Bible",
+        "Historia rerum ab aetate mundi quae ab orbe creationis ad annum Christi 1500 gestae"
       ],
       "frameworks": [
-        "CAUSE_AND_EFFECT",
-        "CULTURAL_DIFFUSION",
-        "TEMPORAL_LINKAGE"
+        "CULTURAL_TRANSMISSION"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -52,7 +60,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:26:21.749296+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Annius of Viterbo's fabrications had significant regional impact in Germany and Switzerland, contributing to the spread of Protestantism.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-10T11:02:59Z"
     }
   ]
 }

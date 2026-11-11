@@ -11,7 +11,7 @@
       "name": "Tiberias",
       "label": "Place",
       "callNumber": "440.tiberias",
-      "summary": "Tiberias is a city on the western shore of the Sea of Galilee in northern Israel. A major Jewish center during Late Antiquity, it has been considered since the 18th century one of Judaism's Four Holy Cities, along with Jerusalem, Hebron, and Safed. In 2024 it had a population of 52,123.",
+      "summary": "Tiberias is a city on the western shore of the Sea of Galilee in northern Israel, serving as a major Jewish center during Late Antiquity. Its strategic location made it a crucial hub for trade and commerce.\n\nFounded in the 3rd century BCE, Tiberias was a significant center of Jewish culture, learning, and spirituality, attracting scholars and religious leaders from across the ancient world. The city's proximity to the Sea of Galilee made it an ideal location for fishing and agriculture, contributing to its economic prosperity.\n\nTiberias' significance extended beyond its economic and cultural importance, as it played a key role in the development of early Christianity. The city was a major center of Jesus' ministry, and its Christian heritage can still be seen in the many churches and synagogues that dot its landscape.\n\nToday, Tiberias is a thriving city with a rich history, attracting visitors from around the world who come to explore its ancient ruins, visit its holy sites, and experience its unique blend of Jewish, Christian, and Islamic cultures.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,25 @@
       "wikidataQid": "Q151920",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Tiberias",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/TIBERIAS%20-%20GALILEE%20%287723477802%29.jpg",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"tiberias\", \"sourceName\": \"Tiberias\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Tiberias is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Tiberias\", \"type\": \"Reference article\", \"slug\": \"tiberias\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q151920\", \"https://en.wikipedia.org/wiki/Tiberias\"], \"tags\": [\"Israel\", \"city\", \"Asia\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Tiberias is remembered as a landmark place of the Classical era, referenced in 82 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\":[\"Founded by Herod Antipas in 20 BCE as a Roman city and a center for Jewish learning and culture.\",\"Strategically located on the western shore of the Sea of Galilee, facilitating trade and commerce.\",\"Established as a major center of early Christianity due to its proximity to Jesus' ministry sites.\"],\"effects\":[\"Become one of Judaism's Four Holy Cities, recognized for its spiritual and cultural significance.\",\"Influence the development of early Christian theology and practice.\",\"Shape the cultural and religious identity of the region for centuries to come.\"],\"relationships\":[{\"sourceSlug\":\"Herod Antipas\",\"sourceName\":\"Herod Antipas\",\"verb\":\"CREATES\",\"targetSlug\":\"tiberias\",\"targetName\":\"Tiberias\",\"context\":\"As a Roman client king, Herod Antipas established Tiberias as a center of Jewish learning and culture.\"},{\"sourceSlug\":\"Jesus\",\"sourceName\":\"Jesus\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"tiberias\",\"targetName\":\"Tiberias\",\"context\":\"Tiberias was a major center of Jesus' ministry, and its Christian heritage can still be seen in the many churches and synagogues that dot its landscape.\"},{\"sourceSlug\":\"Roman Empire\",\"sourceName\":\"Roman Empire\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"tiberias\",\"targetName\":\"Tiberias\",\"context\":\"Tiberias was a key city in the Roman Empire's network of trade routes and cities.\"},{\"sourceSlug\":\"Sea of Galilee\",\"sourceName\":\"Sea of Galilee\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"tiberias\",\"targetName\":\"Tiberias\",\"context\":\"Tiberias' proximity to the Sea of Galilee made it an ideal location for fishing and agriculture.\"}],\"places\":[{\"name\":\"Tiberias, Israel\",\"role\":\"Major Jewish center and center of early Christianity\"},{\"name\":\"Sea of Galilee\",\"role\":\"Fishing and agricultural hub\"},{\"name\":\"Roman Empire\",\"role\":\"Center of trade and commerce\"}],\"texts\":[{\"title\":\"Wikipedia: Tiberias\",\"type\":\"Reference article\",\"slug\":\"tiberias\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q151920\",\"https://en.wikipedia.org/wiki/Tiberias\"],\"tags\":[\"Israel\",\"city\",\"Asia\",\"Cities\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Tiberias is remembered as a landmark place of the Classical era, referenced in 82 Wikipedia language editions. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Tiberias played a significant role in the development of early Christianity and was a major center of Jewish culture and learning in Late Antiquity.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Places -- Cities -- Israel -- Classical"
       ],
       "subjects": [
         "Israel",
-        "city",
-        "Asia",
-        "Cities"
+        "Judaism",
+        "Christianity",
+        "Ancient Near East",
+        "Roman Empire",
+        "Sea of Galilee",
+        "Early Christianity",
+        "Jewish culture",
+        "Jewish learning"
       ],
       "frameworks": [
-        "CAUSE_AND_EFFECT"
+        "CULTURAL_TRANSMISSION",
+        "DIPLOMATIC_HISTORY",
+        "ECONOMIC_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -53,7 +60,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:48:32.046036+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Tiberias played a significant role in the development of early Christianity and was a major center of Jewish culture and learning in Late Antiquity.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-09T11:54:44Z"
     }
   ]
 }

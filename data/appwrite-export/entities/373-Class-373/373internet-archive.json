@@ -11,7 +11,7 @@
       "name": "Internet Archive",
       "label": "Institution",
       "callNumber": "373.internet-archive",
-      "summary": "American non-profit organization Headquartered in Fourth Church of Christ, Scientist. Founded 1996.",
+      "summary": "The Internet Archive is an American non-profit digital library founded in 1996 by Brewster Kahle to preserve web pages, books, audio, and video at planetary scale. Based in San Francisco, it is famous for the Wayback Machine’s snapshots of the changing web.\n\nOperating at the intersection of librarianship, copyright law, and open-access activism, the Archive became infrastructure for historians, journalists, and the public—while facing litigation over digital lending. Its mission treats cultural memory as a commons under threat from link rot and enclosure.\n\nThe Internet Archive is among the defining memory institutions of the digital age.",
       "era": "Contemporary",
       "eraSlug": "contemporary",
       "eraDivision": "Contemporary",
@@ -25,19 +25,23 @@
       "wikidataQid": "Q461",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Internet_Archive",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Christian%20science%20church122908%2002.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Need for governance in the 1945 CE – present\", \"type\": \"Institution\", \"year\": \"1945 CE\"}, {\"title\": \"Popular demand in the 1945 CE – present\", \"type\": \"Institution\", \"year\": \"1945 CE\"}, {\"title\": \"Political authority in the 1945 CE – present\", \"type\": \"Institution\", \"year\": \"1945 CE\"}], \"effects\": [{\"title\": \"Standardized practices through Internet Archive's historical significance\", \"type\": \"Institution\"}, {\"title\": \"Expanded influence through Internet Archive's historical significance\", \"type\": \"Institution\"}, {\"title\": \"Created framework through Internet Archive's historical significance\", \"type\": \"Institution\"}], \"relationships\": [{\"sourceSlug\": \"internet-archive\", \"sourceName\": \"Internet Archive\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-post-cold-war\", \"targetName\": \"Post-Cold War & Globalization\", \"context\": \"Internet Archive is situated within the Post-Cold War & Globalization (962)\"}, {\"sourceSlug\": \"internet-archive\", \"sourceName\": \"Internet Archive\", \"verb\": \"GOVERNS\", \"targetSlug\": \"governance-contemporary\", \"targetName\": \"Governance (Contemporary)\", \"context\": \"Internet Archive exercised governance during the Contemporary era\"}], \"places\": [{\"name\": \"Fourth Church of Christ, Scientist\", \"role\": \"Headquarters\"}, {\"name\": \"United States\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Internet Archive\", \"type\": \"Reference article\", \"slug\": \"internet-archive\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q461\", \"https://en.wikipedia.org/wiki/Internet_Archive\"], \"tags\": [\"United States\", \"nonprofit organization\", \"Americas\", \"Humanitarian & Relief Organizations\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Internet Archive left a notable mark on Contemporary history, documented across 85 Wikipedia editions worldwide. Key lasting impacts include: Shaped institutional landscape and community development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\":[\"The early web’s ephemerality created demand for systematic crawling and storage.\",\"Open-access ideals sought libraries beyond physical stacks.\",\"Falling storage costs made mass digital preservation feasible.\"],\"effects\":[\"The Wayback Machine became a default citation for vanished web content.\",\"Digital lending debates reshaped library–publisher conflicts.\",\"A non-profit model proved large-scale web archiving possible.\"],\"relationships\":[{\"sourceSlug\":\"internet-archive\",\"sourceName\":\"Internet Archive\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"united-states\",\"targetName\":\"United States\",\"context\":\"It is an American non-profit organisation.\"},{\"sourceSlug\":\"internet-archive\",\"sourceName\":\"Internet Archive\",\"verb\":\"CREATES\",\"targetSlug\":\"wayback-machine\",\"targetName\":\"Wayback Machine\",\"context\":\"It operates the Wayback Machine web archive.\"},{\"sourceSlug\":\"internet-archive\",\"sourceName\":\"Internet Archive\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"digital-preservation\",\"targetName\":\"digital preservation\",\"context\":\"Its mission is large-scale digital cultural preservation.\"}],\"places\":[{\"name\":\"San Francisco\",\"role\":\"Headquarters city\"},{\"name\":\"United States\",\"role\":\"Legal and organisational context\"}],\"texts\":[{\"title\":\"Wikipedia: Internet Archive\",\"type\":\"Reference article\",\"slug\":\"internet-archive\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q461\",\"https://en.wikipedia.org/wiki/Internet_Archive\"],\"tags\":[\"United States\",\"nonprofit organization\",\"Americas\",\"Humanitarian & Relief Organizations\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Internet Archive left a notable mark on Contemporary history, documented across 85 Wikipedia editions worldwide. Key lasting impacts include: Shaped institutional landscape and community development. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"The Internet Archive is an American non-profit digital library founded in 1996 by Brewster Kahle to preserve web pages, books, audio, and video at planetary scale. Based in San Francisco, it is famous for the Wayback Machine’s snapshots of \",\"significanceCategory\":\"global\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Institutions -- Humanitarian & Relief Organizations -- United States -- Contemporary"
       ],
       "subjects": [
-        "United States",
-        "nonprofit organization",
-        "Americas",
-        "Humanitarian & Relief Organizations"
+        "Digital libraries",
+        "Internet",
+        "Archives",
+        "San Francisco",
+        "Open access",
+        "Preservation",
+        "Technology"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "TECHNOLOGICAL_DETERMINISM",
+        "CULTURAL_TRANSMISSION",
+        "STRUCTURAL_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -54,7 +58,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:25:48.017168+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "The Internet Archive is an American non-profit digital library founded in 1996 by Brewster Kahle to preserve web pages, books, audio, and video at planetary scale. Based in San Francisco, it is famous for the Wayback Machine’s snapshots of ",
+        "significanceCategory": "global"
+      },
+      "enrichedAt": "2026-11-10T07:07:50Z"
     }
   ]
 }

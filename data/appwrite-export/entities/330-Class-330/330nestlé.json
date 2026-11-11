@@ -11,7 +11,7 @@
       "name": "Nestlé",
       "label": "Institution",
       "callNumber": "330.nestlé",
-      "summary": "Swiss multi-national food and beverage company Headquartered in Vevey. Founded 1866.",
+      "summary": "Nestlé is a Swiss multinational food and beverage company founded in 1866 in Vevey, growing from Henri Nestlé’s infant formula into the world’s largest food corporation by many measures. Through mergers (including with Anglo-Swiss Condensed Milk) it built global brands in coffee, confectionery, dairy, and bottled water.\n\nTwentieth-century expansion via colonial and postcolonial markets, aggressive acquisition, and scientific marketing made Nestlé a symbol of both nutritional modernity and corporate controversy—from baby-formula campaigns to water politics and cocoa supply chains.\n\nNestlé’s history is a primer on how Swiss industrial capitalism scaled into planetary consumer food systems.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,19 +25,23 @@
       "wikidataQid": "Q160746",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Nestl%C3%A9",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/NestleHQ.jpg",
-      "detailsJson": "{\"causes\": [{\"title\": \"Need for governance in the 1800 – 1945 CE\", \"type\": \"Institution\", \"year\": \"1800\"}, {\"title\": \"Popular demand in the 1800 – 1945 CE\", \"type\": \"Institution\", \"year\": \"1800\"}, {\"title\": \"Political authority in the 1800 – 1945 CE\", \"type\": \"Institution\", \"year\": \"1800\"}], \"effects\": [{\"title\": \"Standardized practices through Nestlé's historical significance\", \"type\": \"Institution\"}, {\"title\": \"Expanded influence through Nestlé's historical significance\", \"type\": \"Institution\"}, {\"title\": \"Created framework through Nestlé's historical significance\", \"type\": \"Institution\"}], \"relationships\": [{\"sourceSlug\": \"nestl\", \"sourceName\": \"Nestlé\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-modern\", \"targetName\": \"Modern\", \"context\": \"Nestlé is situated within the Modern (950)\"}, {\"sourceSlug\": \"nestl\", \"sourceName\": \"Nestlé\", \"verb\": \"GOVERNS\", \"targetSlug\": \"governance-modern\", \"targetName\": \"Governance (Modern)\", \"context\": \"Nestlé exercised governance during the Modern era\"}], \"places\": [{\"name\": \"Vevey\", \"role\": \"Headquarters\"}, {\"name\": \"Switzerland\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: Nestlé\", \"type\": \"Reference article\", \"slug\": \"nestlé\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q160746\", \"https://en.wikipedia.org/wiki/Nestl%C3%A9\"], \"tags\": [\"Switzerland\", \"public company\", \"Europe\", \"Trade Guilds & Merchant Houses\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Nestlé left a notable mark on Modern history, documented across 90 Wikipedia editions worldwide. Key lasting impacts include: Shaped institutional landscape and community development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\":[\"Industrial food processing created mass markets for preserved nutrition.\",\"Swiss chemical and commercial expertise funded brand globalisation.\",\"Acquisitions consolidated national food firms into multinationals.\"],\"effects\":[\"Nestlé brands became everyday staples across continents.\",\"Corporate food power shaped agricultural commodity chains.\",\"Public controversies redefined debates on corporate social responsibility.\"],\"relationships\":[{\"sourceSlug\":\"nestl\",\"sourceName\":\"Nestlé\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"switzerland\",\"targetName\":\"Switzerland\",\"context\":\"Nestlé is a Swiss multinational based in Vevey.\"},{\"sourceSlug\":\"nestl\",\"sourceName\":\"Nestlé\",\"verb\":\"CREATES\",\"targetSlug\":\"industrial-food-system\",\"targetName\":\"industrial food system\",\"context\":\"It helped build global packaged-food markets.\"},{\"sourceSlug\":\"nestl\",\"sourceName\":\"Nestlé\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"global-capitalism\",\"targetName\":\"global capitalism\",\"context\":\"It is a leading multinational consumer corporation.\"}],\"places\":[{\"name\":\"Vevey\",\"role\":\"Historic headquarters\"},{\"name\":\"Switzerland\",\"role\":\"Home country\"}],\"texts\":[{\"title\":\"Wikipedia: Nestlé\",\"type\":\"Reference article\",\"slug\":\"nestlé\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q160746\",\"https://en.wikipedia.org/wiki/Nestl%C3%A9\"],\"tags\":[\"Switzerland\",\"public company\",\"Europe\",\"Trade Guilds & Merchant Houses\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Nestlé left a notable mark on Modern history, documented across 90 Wikipedia editions worldwide. Key lasting impacts include: Shaped institutional landscape and community development. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":8,\"significanceNarrative\":\"Nestlé is a Swiss multinational food and beverage company founded in 1866 in Vevey, growing from Henri Nestlé’s infant formula into the world’s largest food corporation by many measures. Through mergers (including with Anglo-Swiss Condensed\",\"significanceCategory\":\"global\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Institutions -- Economic Institutions -- Europe -- Modern"
       ],
       "subjects": [
+        "Food industry",
         "Switzerland",
-        "public company",
-        "Europe",
-        "Trade Guilds & Merchant Houses"
+        "Multinationals",
+        "Coffee",
+        "Dairy",
+        "Consumer goods",
+        "Capitalism"
       ],
       "frameworks": [
-        "GEOPOLITICAL_LINKAGE",
-        "CAUSE_AND_EFFECT"
+        "ECONOMIC_ANALYSIS",
+        "WORLD_SYSTEMS",
+        "TECHNOLOGICAL_DETERMINISM"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -55,7 +59,13 @@
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:47:32.951177+00:00",
         "queuedAt": "2026-05-26T11:58:57.773157+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "Nestlé is a Swiss multinational food and beverage company founded in 1866 in Vevey, growing from Henri Nestlé’s infant formula into the world’s largest food corporation by many measures. Through mergers (including with Anglo-Swiss Condensed",
+        "significanceCategory": "global"
+      },
+      "enrichedAt": "2026-11-10T07:07:50Z"
     }
   ]
 }

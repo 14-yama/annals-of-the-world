@@ -11,7 +11,7 @@
       "name": "SpaceX",
       "label": "Institution",
       "callNumber": "333.spacex",
-      "summary": "American private aerospace company. SpaceX is a organization in Brownsville, established in 2002-03-14. Recognized as a landmark figure with global significance (referenced in 111 Wikipedia editions). Relevant to cause-and-effect analysis.",
+      "summary": "SpaceX (Space Exploration Technologies Corp.), founded by Elon Musk in 2002, is an American private aerospace company that made reusable orbital rocketry commercially viable. From Hawthorne engineering halls to Boca Chica/Starbase launch operations, it disrupted a launch market long dominated by government primes and legacy contractors.\n\nFalcon 9 landings, Crew Dragon NASA flights, and Starlink’s mega-constellation shifted expectations about cost-to-orbit, commercial crew, and satellite internet geopolitics. Critics highlight regulatory, environmental, and market-power concerns; supporters cite cadence and price as proof of a new space industrial model.\n\nSpaceX stands as the emblematic twenty-first-century private space firm—where venture ambition, U.S. civil/military contracts, and planetary-colonisation rhetoric meet operational rocketry.",
       "era": "Contemporary",
       "eraSlug": "contemporary",
       "eraDivision": "Digital Age",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q193701",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/SpaceX",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Entrance%20to%20SpaceX%20headquarters.jpg",
-      "detailsJson": "{\"causes\": [\"Organizational need and institutional development\"], \"effects\": [\"Shaped institutional landscape and community development\"], \"relationships\": [{\"sourceSlug\": \"spacex\", \"sourceName\": \"SpaceX\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-digital-age\", \"targetName\": \"Digital Age\", \"context\": \"SpaceX is situated within the Digital Age (963)\"}, {\"sourceSlug\": \"spacex\", \"sourceName\": \"SpaceX\", \"verb\": \"OCCURS_IN\", \"targetSlug\": \"brownsville\", \"targetName\": \"Brownsville\", \"context\": \"SpaceX is located in Brownsville\"}], \"places\": [{\"name\": \"Brownsville\", \"role\": \"Headquarters\"}, {\"name\": \"United States\", \"role\": \"Country\"}], \"texts\": [{\"title\": \"Wikipedia: SpaceX\", \"type\": \"Reference article\", \"slug\": \"spacex\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q193701\", \"https://en.wikipedia.org/wiki/SpaceX\"], \"tags\": [\"United States\", \"organization\", \"Americas\", \"Trade Guilds & Merchant Houses\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"SpaceX is remembered as a landmark institution of the Contemporary era, referenced in 111 Wikipedia language editions. Key lasting impacts include: Shaped institutional landscape and community development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\":[\"NASA commercial crew/cargo programmes opened markets to private launchers.\",\"Venture capital and internet wealth funded high-risk aerospace R&D.\",\"Reusable booster concepts promised steep cuts in launch cost.\"],\"effects\":[\"Reusable Falcon rockets reset commercial launch pricing expectations.\",\"Crew Dragon restored U.S. crewed orbital transport from American soil.\",\"Starlink became a strategic communications asset in conflict and development.\"],\"relationships\":[{\"sourceSlug\":\"spacex\",\"sourceName\":\"SpaceX\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"united-states\",\"targetName\":\"United States\",\"context\":\"SpaceX is based in / associated with United States.\"},{\"sourceSlug\":\"spacex\",\"sourceName\":\"SpaceX\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"brownsville\",\"targetName\":\"Brownsville\",\"context\":\"Key organisational presence in Brownsville.\"},{\"sourceSlug\":\"spacex\",\"sourceName\":\"SpaceX\",\"verb\":\"PARTICIPATES_IN\",\"targetSlug\":\"commercial-spaceflight\",\"targetName\":\"commercial spaceflight\",\"context\":\"SpaceX participates in commercial spaceflight.\"}],\"places\":[{\"name\":\"Brownsville\",\"role\":\"Headquarters / principal site\"},{\"name\":\"United States\",\"role\":\"National context\"}],\"texts\":[{\"title\":\"Wikipedia: SpaceX\",\"type\":\"Reference article\",\"slug\":\"spacex\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q193701\",\"https://en.wikipedia.org/wiki/SpaceX\"],\"tags\":[\"United States\",\"organization\",\"Americas\",\"Trade Guilds & Merchant Houses\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"SpaceX is remembered as a landmark institution of the Contemporary era, referenced in 111 Wikipedia language editions. Key lasting impacts include: Shaped institutional landscape and community development. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"SpaceX (Space Exploration Technologies Corp.), founded by Elon Musk in 2002, is an American private aerospace company that made reusable orbital rocketry commercially viable. From Hawthorne engineering halls to Boca Chica/Starbase launch op\",\"significanceCategory\":\"global\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Institutions -- Trade Guilds & Merchant Houses -- United States -- Contemporary"
       ],
       "subjects": [
         "United States",
-        "organization",
-        "Americas",
-        "Trade Guilds & Merchant Houses"
+        "Aerospace",
+        "Private spaceflight",
+        "Falcon 9",
+        "Starlink",
+        "NASA",
+        "Technology"
       ],
       "frameworks": [
-        "CAUSE_AND_EFFECT"
+        "CULTURAL_TRANSMISSION",
+        "ECONOMIC_ANALYSIS",
+        "STRUCTURAL_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 8,
@@ -53,7 +58,13 @@
         "lastGate": "triage",
         "lastReason": "",
         "updatedAt": "2026-05-26T16:26:02.713483+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "SpaceX (Space Exploration Technologies Corp.), founded by Elon Musk in 2002, is an American private aerospace company that made reusable orbital rocketry commercially viable. From Hawthorne engineering halls to Boca Chica/Starbase launch op",
+        "significanceCategory": "global"
+      },
+      "enrichedAt": "2026-11-10T07:07:50Z"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "name": "Kiruna",
       "label": "Place",
       "callNumber": "440.kiruna",
-      "summary": "Kiruna is the northernmost city in Sweden, situated in the province of Lapland. It had 17,002 inhabitants in 2016 and is the seat of Kiruna Municipality in Norrbotten County. The city was originally built in the 1890s to serve the Kiruna Mine.",
+      "summary": "Kiruna is Sweden’s northernmost city, founded in the 1890s in Lapland (Sápmi) to serve the great Kiruna iron mine and now the seat of Kiruna Municipality in Norrbotten County. Built as a company town in an Arctic landscape of Sámi reindeer pastoralism, it became a symbol of Swedish industrial modernity and state presence in the far north.\n\nTwentieth-century mining wealth shaped housing, railways, and geopolitics near the Norwegian border and Arctic ore routes. In the twenty-first century the city centre is being relocated because mining subsidence threatens the old urban core—an extraordinary case of an entire town moving for extraction.\n\nKiruna concentrates Arctic industrialisation, Indigenous land histories, and contemporary resource politics.",
       "era": "Modern",
       "eraSlug": "modern",
       "eraDivision": "Modern",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q83232",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Kiruna",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Kiruna%20montage.png",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"kiruna\", \"sourceName\": \"Kiruna\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-age-of-empire\", \"targetName\": \"Age of Empire / New Imperialism\", \"context\": \"Kiruna is situated within the Age of Empire / New Imperialism (952)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Kiruna\", \"type\": \"Reference article\", \"slug\": \"kiruna\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q83232\", \"https://en.wikipedia.org/wiki/Kiruna\"], \"tags\": [\"Sweden\", \"human settlement\", \"Europe\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Kiruna left a notable mark on Modern history, documented across 79 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\":[\"High-grade iron ore made large-scale Arctic mining profitable.\",\"Swedish state and capital sought northern resource integration via rail.\",\"Company-town planning was the era’s tool for remote industrial settlement.\"],\"effects\":[\"Kiruna became Sweden’s emblematic Arctic mining city.\",\"Sámi and settler histories intertwined under industrial pressure.\",\"Urban relocation for mining made Kiruna a global case study.\"],\"relationships\":[{\"sourceSlug\":\"kiruna\",\"sourceName\":\"Kiruna\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"sweden\",\"targetName\":\"Sweden\",\"context\":\"It is the northernmost city in Sweden.\"},{\"sourceSlug\":\"kiruna\",\"sourceName\":\"Kiruna\",\"verb\":\"OCCURS_IN\",\"targetSlug\":\"lapland\",\"targetName\":\"Lapland\",\"context\":\"It lies in Swedish Lapland / Sápmi.\"},{\"sourceSlug\":\"kiruna\",\"sourceName\":\"Kiruna\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"mining\",\"targetName\":\"mining\",\"context\":\"The city’s existence and form were driven by iron mining.\"}],\"places\":[{\"name\":\"Kiruna Mine\",\"role\":\"Economic reason for the city’s founding\"},{\"name\":\"Norrbotten\",\"role\":\"County setting\"},{\"name\":\"Sápmi\",\"role\":\"Indigenous cultural landscape\"}],\"texts\":[{\"title\":\"Wikipedia: Kiruna\",\"type\":\"Reference article\",\"slug\":\"kiruna\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q83232\",\"https://en.wikipedia.org/wiki/Kiruna\"],\"tags\":[\"Sweden\",\"human settlement\",\"Europe\",\"Cities\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Kiruna left a notable mark on Modern history, documented across 79 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Kiruna is the archetype of Arctic mining urbanism and today of a city moved for ore.\",\"significanceCategory\":\"national\"}}",
       "subjectHeadings": [
         "Places -- Cities -- Sweden -- Modern"
       ],
       "subjects": [
         "Sweden",
-        "human settlement",
-        "Europe",
-        "Cities"
+        "Iron mining",
+        "Arctic",
+        "Sámi",
+        "Company towns",
+        "Urban relocation",
+        "Norrbotten"
       ],
       "frameworks": [
-        "CAUSE_AND_EFFECT"
+        "ECONOMIC_ANALYSIS",
+        "ENVIRONMENTAL_HISTORY",
+        "WORLD_SYSTEMS"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -53,7 +58,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:48:31.818962+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Kiruna is the archetype of Arctic mining urbanism and today of a city moved for ore.",
+        "significanceCategory": "national"
+      },
+      "enrichedAt": "2026-11-10T22:52:45Z"
     }
   ]
 }

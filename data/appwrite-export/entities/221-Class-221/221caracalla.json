@@ -11,7 +11,7 @@
       "name": "Caracalla",
       "label": "Person",
       "callNumber": "221.caracalla",
-      "summary": "Caracalla (b. 188-04-03, Lugdunum) was a economist or social scientist of the Classical era, an age of empires, philosophical inquiry, and foundational civilizations, active in Lugdunum. Known in the fields of monarchs & rulers.",
+      "summary": "Caracalla (born Lucius Septimius Bassianus, later Marcus Aurelius Antoninus; 188–217 CE) was Roman emperor from 198 (as co-ruler) and sole emperor from 211 until his assassination in 217. Son of Septimius Severus and Julia Domna, he secured sole power by having his brother Geta murdered in 211 and then conducting a bloody purge of Geta’s supporters. His reign is remembered for military largesse, campaigns in Germany and against Parthia, the Baths of Caracalla in Rome, and above all the Constitutio Antoniniana (212 CE), which extended Roman citizenship to nearly all free inhabitants of the empire.\n\nAncient historians such as Cassius Dio and Herodian portray him as cruel and erratic; modern scholars also stress fiscal and military pressures that shaped Severan rule. The citizenship edict transformed the legal fabric of the empire, widening the tax base and remaking provincial identity even as Caracalla’s personal tyranny damaged dynastic legitimacy. He was murdered near Carrhae during the eastern campaign, and the Severan system staggered on under Macrinus and later Severan restorations.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,23 @@
       "wikidataQid": "Q1446",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Caracalla",
       "imageUrl": "",
-      "detailsJson": "{\"causes\": [{\"title\": \"Classical era: flourishing of philosophical inquiry, imperial expansion, and codification of la\", \"type\": \"EventWindow\", \"year\": \"188-04-03, Lugdunum\"}, {\"title\": \"Dynastic succession and sovereign authority traditions\", \"type\": \"Idea\", \"year\": \"188-04-03, Lugdunum\"}], \"effects\": [{\"title\": \"Established dynastic legacies and territorial boundaries\", \"type\": \"Idea\", \"year\": \"217-04-08\"}, {\"title\": \"Contributed to enduring intellectual and institutional frameworks shaping subsequent civilizati\", \"type\": \"Movement\", \"year\": \"217-04-08\"}], \"relationships\": [{\"sourceSlug\": \"caracalla\", \"sourceName\": \"Caracalla\", \"verb\": \"RULES\", \"targetSlug\": \"field-221\", \"targetName\": \"Monarchs & Rulers\", \"context\": \"Caracalla: Sovereign authority in monarchs & rulers\"}, {\"sourceSlug\": \"caracalla\", \"sourceName\": \"Caracalla\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"classical\", \"targetName\": \"Classical Era\", \"context\": \"Caracalla was active during the Classical era\"}], \"places\": [{\"name\": \"Lugdunum\", \"role\": \"Birth place\"}], \"texts\": [{\"title\": \"Wikipedia: Caracalla\", \"type\": \"Reference article\", \"slug\": \"caracalla\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q1446\", \"https://en.wikipedia.org/wiki/Caracalla\"], \"tags\": [\"Monarchs & Rulers\", \"political-systems\", \"empire-and-colonialism\", \"geopolitical-linkage\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"\"}",
+      "detailsJson": "{\"causes\":[\"Septimius Severus’s military monarchy and dynastic arrangements placed Caracalla and Geta in a unstable co-rule that invited fratricide.\",\"Fiscal demands of an enlarged, restive army pushed Severan emperors toward broader taxation and citizenship reforms.\",\"Frontier wars with Germanic peoples and Parthia structured Caracalla’s need for campaigns, donatives, and propaganda of conquest.\"],\"effects\":[\"The Constitutio Antoniniana universalised Roman citizenship for free people, a watershed in imperial legal and fiscal history.\",\"Geta’s murder and subsequent terror deepened the reputation of Severan court violence and alienated senatorial opinion.\",\"Major building (the Baths of Caracalla) and eastern war ambitions left monumental and military legacies that outlived his assassination in 217.\"],\"relationships\":[{\"sourceSlug\":\"caracalla\",\"sourceName\":\"Caracalla\",\"verb\":\"CREATES\",\"targetSlug\":\"constitutio-antoniniana\",\"targetName\":\"Constitutio Antoniniana\",\"context\":\"In 212 CE Caracalla enacted the edict granting Roman citizenship to most free inhabitants of the empire.\"},{\"sourceSlug\":\"caracalla\",\"sourceName\":\"Caracalla\",\"verb\":\"SUCCEEDS\",\"targetSlug\":\"septimius-severus\",\"targetName\":\"Septimius Severus\",\"context\":\"Caracalla succeeded his father Severus, first as co-emperor and then, after Geta’s death, as sole ruler.\"},{\"sourceSlug\":\"caracalla\",\"sourceName\":\"Caracalla\",\"verb\":\"CREATES\",\"targetSlug\":\"baths-of-caracalla\",\"targetName\":\"Baths of Caracalla\",\"context\":\"He built the vast Thermae Antoninianae in Rome, among the empire’s greatest public bath complexes.\"}],\"places\":[{\"name\":\"Rome\",\"role\":\"Imperial capital; site of Geta’s murder and the Baths of Caracalla\"},{\"name\":\"Eastern frontier (Syria / Mesopotamia)\",\"role\":\"Theatre of his Parthian campaign and assassination near Carrhae\"}],\"texts\":[{\"title\":\"Wikipedia: Caracalla\",\"type\":\"Reference article\",\"slug\":\"caracalla\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q1446\",\"https://en.wikipedia.org/wiki/Caracalla\"],\"tags\":[\"Monarchs & Rulers\",\"political-systems\",\"empire-and-colonialism\",\"geopolitical-linkage\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"\",\"historicalSignificance\":{\"significanceScore\":8,\"significanceNarrative\":\"Caracalla’s Constitutio Antoniniana remade Roman citizenship empire-wide; his fratricidal sole rule epitomises Severan military monarchy.\",\"significanceCategory\":\"world-changing\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "People — Monarchs & Rulers — Global — Classical"
       ],
       "subjects": [
-        "Monarchs & Rulers"
+        "Roman Empire",
+        "Severan dynasty",
+        "Roman citizenship",
+        "Constitutio Antoniniana",
+        "Imperial politics",
+        "3rd century",
+        "Military emperors"
       ],
       "frameworks": [
-        "POLITICAL_SYSTEMS",
-        "EMPIRE_AND_COLONIALISM",
-        "GEOPOLITICAL_LINKAGE",
-        "TEMPORAL_LINKAGE"
+        "STRUCTURAL_ANALYSIS",
+        "CAUSE_AND_EFFECT",
+        "ECONOMIC_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 9,
@@ -53,7 +58,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:48:17.610416+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 8,
+        "significanceNarrative": "Caracalla’s Constitutio Antoniniana remade Roman citizenship empire-wide; his fratricidal sole rule epitomises Severan military monarchy.",
+        "significanceCategory": "world-changing"
+      },
+      "enrichedAt": "2026-11-08T13:13:41Z"
     }
   ]
 }

@@ -11,7 +11,7 @@
       "name": "Canterbury",
       "label": "Place",
       "callNumber": "440.canterbury",
-      "summary": "Canterbury is a city and UNESCO World Heritage Site, in the Canterbury district, in the county of Kent, England; it was a county borough until 1974. It lies on the River Stour. The city has a mild oceanic climate.",
+      "summary": "Canterbury is a city and UNESCO World Heritage Site in the Canterbury district, Kent, England, founded by St. Augustine of Canterbury in 597 CE, and has played a significant role in the development of Christianity in England and the spread of Latin during the Roman Empire.\n\n\n\n\n\n\nCanterbury's importance lies in its early Christianization of the Anglo-Saxons, which influenced the development of the English language, culture, and politics. The city was a major center of learning and scholarship during the Middle Ages, attracting scholars such as Thomas Becket and Chaucer.\n\n\n\n\n\n\nThe city's legacy can be seen in its stunning cathedral, which was built in the 12th century and features stunning stained-glass windows and intricate stone carvings. Canterbury's influence on the English language is also evident in its many place names, such as 'Canterbury' itself, 'Canterbury Bay', and 'Canterbury Bridge'.\n\n\n\n\n\n\nIn conclusion, Canterbury's enduring legacy is a testament to the power of human ingenuity, cultural exchange, and religious conviction.",
       "era": "Classical",
       "eraSlug": "classical",
       "eraDivision": "Classical",
@@ -25,18 +25,25 @@
       "wikidataQid": "Q29303",
       "wikipediaUrl": "https://en.wikipedia.org/wiki/Canterbury",
       "imageUrl": "http://commons.wikimedia.org/wiki/Special:FilePath/Westgate%20Gardens%205.JPG",
-      "detailsJson": "{\"causes\": [\"Human settlement and community formation\"], \"effects\": [\"Served as a center of human activity and development\"], \"relationships\": [{\"sourceSlug\": \"canterbury\", \"sourceName\": \"Canterbury\", \"verb\": \"OCCURS_DURING\", \"targetSlug\": \"era-classical\", \"targetName\": \"Classical\", \"context\": \"Canterbury is situated within the Classical (920)\"}], \"places\": [], \"texts\": [{\"title\": \"Wikipedia: Canterbury\", \"type\": \"Reference article\", \"slug\": \"canterbury\"}], \"externalLinks\": [\"https://www.wikidata.org/wiki/Q29303\", \"https://en.wikipedia.org/wiki/Canterbury\"], \"tags\": [\"United Kingdom\", \"city\", \"Europe\", \"Cities\", \"cause-and-effect\"], \"thumbnailUrl\": \"\", \"quote\": \"\", \"legacySummary\": \"Canterbury left a notable mark on Classical history, documented across 100 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\"}",
+      "detailsJson": "{\"causes\":[\"Established by St. Augustine of Canterbury in 597 CE\",\"Influence of the Roman Empire\",\"Christianization of the Anglo-Saxons\"],\"effects\":[\"Spread of Christianity in England\",\"Development of the English language and culture\",\"Establishment of the Church of England\"],\"relationships\":[{\"sourceSlug\":\"st-augustine-of-canterbury\",\"sourceName\":\"St. Augustine of Canterbury\",\"verb\":\"CREATES\",\"targetSlug\":\"canterbury\",\"targetName\":\"Canterbury\",\"context\":\"Founded in 597 CE\"},{\"sourceSlug\":\"roman-empire\",\"sourceName\":\"Roman Empire\",\"verb\":\"INFLUENCES\",\"targetSlug\":\"canterbury\",\"targetName\":\"Canterbury\",\"context\":\"Spread of Latin\"},{\"sourceSlug\":\"christianity\",\"sourceName\":\"Christianity\",\"verb\":\"TRANSMITS\",\"targetSlug\":\"canterbury\",\"targetName\":\"Canterbury\",\"context\":\"Christianization of the Anglo-Saxons\"}],\"places\":[{\"name\":\"Canterbury\",\"role\":\"City\"}],\"texts\":[{\"title\":\"Wikipedia: Canterbury\",\"type\":\"Reference article\",\"slug\":\"canterbury\"}],\"externalLinks\":[\"https://www.wikidata.org/wiki/Q29303\",\"https://en.wikipedia.org/wiki/Canterbury\"],\"tags\":[\"United Kingdom\",\"city\",\"Europe\",\"Cities\",\"cause-and-effect\"],\"thumbnailUrl\":\"\",\"quote\":\"\",\"legacySummary\":\"Canterbury left a notable mark on Classical history, documented across 100 Wikipedia editions worldwide. Key lasting impacts include: Served as a center of human activity and development. Their legacy is studied through the lens of historical causation.\",\"historicalSignificance\":{\"significanceScore\":7,\"significanceNarrative\":\"Canterbury's early Christianization of the Anglo-Saxons and its influence on the development of the English language and culture have made it a significant site in the history of England.\",\"significanceCategory\":\"regional\"},\"_editLog\":[]}",
       "subjectHeadings": [
         "Places -- Cities -- United Kingdom -- Classical"
       ],
       "subjects": [
-        "United Kingdom",
-        "city",
-        "Europe",
-        "Cities"
+        "England",
+        "Christianity",
+        "Latin",
+        "Anglo-Saxon",
+        "English language",
+        "Culture",
+        "Politics",
+        "History",
+        "Medieval studies"
       ],
       "frameworks": [
-        "CAUSE_AND_EFFECT"
+        "CULTURAL_TRANSMISSION",
+        "RELIGIOUS_INTERPRETATION",
+        "STRUCTURAL_ANALYSIS"
       ],
       "altNames": [],
       "importanceScore": 7,
@@ -53,7 +60,13 @@
         "lastGate": "validate",
         "lastReason": "summary-too-short",
         "updatedAt": "2026-05-26T16:48:32.250241+00:00"
-      }
+      },
+      "historicalSignificance": {
+        "significanceScore": 7,
+        "significanceNarrative": "Canterbury's early Christianization of the Anglo-Saxons and its influence on the development of the English language and culture have made it a significant site in the history of England.",
+        "significanceCategory": "regional"
+      },
+      "enrichedAt": "2026-11-10T03:47:54Z"
     }
   ]
 }
