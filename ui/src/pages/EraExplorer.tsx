@@ -267,7 +267,7 @@ export default function EraExplorer() {
         <Text fontSize="sm" color="#524E44" mt={2} lineHeight={1.6}>
           Select a time period and optionally a region, then enter the portal to explore
           civilizations, timeline events, stock photos, and key facts from that era — drawn
-          from our Appwrite backend of {total ? total.toLocaleString() : '392,000+'} entities across 199 countries.
+          from our local Appwrite backend of {total ? total.toLocaleString() : '…'} entities across 199 countries.
         </Text>
       </Box>
     </Box>

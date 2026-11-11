@@ -92,7 +92,7 @@ const OLLAMA_TASKS = [
     script: 'ai_enrich_autonomous.py --model ollama',
     description: 'Generates full scholarly summaries (800–2,000 chars), 3 causes, 3 effects, 5 relationships, 3 places, 8–10 subjects, 3 interpretive frameworks per entity. Targets stubs and low-quality entries.',
     volume: '~20 entities/hr (CPU) · ~200/hr (GPU)',
-    quality: 'Good — llama3.2:3b handles structured JSON well; high-significance entities benefit from Gemini/Claude',
+    quality: 'Good — llama3.2:3b handles structured JSON well on the Mini; bump model size locally if needed',
     cost: '£0 — unlimited local inference',
   },
   {
@@ -254,8 +254,18 @@ export default function OllamaMonitor() {
             OLLAMA MONITOR
           </Text>
           <Text fontSize="sm" color="#787469">
-            Local AI Engine — unlimited inference, zero cost, 24/7 sprint
+            Local AI Engine — Ollama-only Mini track · zero cloud LLM · 24/7 sprint
           </Text>
+        </Box>
+        <Box as="button" onClick={() => navigate('/curator/bots/schedule')}
+          px={3} py={1.5} borderRadius="md" fontSize="11px" fontWeight={700}
+          bg="#6B3FA015" border="1px solid #6B3FA040" color="#6B3FA0" cursor="pointer">
+          Schedule
+        </Box>
+        <Box as="button" onClick={() => navigate('/curator/bots')}
+          px={3} py={1.5} borderRadius="md" fontSize="11px" fontWeight={700}
+          bg="#F5F4F0" border="1px solid #E4E2DC" color="#787469" cursor="pointer">
+          KPI
         </Box>
         {/* Live pulse */}
         <Flex align="center" gap={2} px={3} py={1.5} borderRadius="md"

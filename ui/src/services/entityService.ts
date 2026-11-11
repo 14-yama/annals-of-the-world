@@ -10,17 +10,59 @@ import type { Entity } from '../data/entityTypes'
 
 /* ─── Read helpers ─── */
 
-/** Fetch a single entity by slug from Appwrite */
-export async function fetchEntity(slug: string): Promise<Entity | undefined> {
-  try {
-    const res = await databases.listDocuments(
-      DATABASE_ID,
-      COLLECTIONS.ENTITIES,
-      [Query.equal('slug', slug), Query.limit(1)],
+/* ─── Short-lived entity cache (session) — instant back-nav ─── */
+const ENTITY_CACHE_TTL = 5 * 60 * 1000
+/** Soft revalidate window for open entity pages while bots enrich */
+const ENTITY_STALE_TTL = 20 * 1000
+const ENTITY_FETCH_TIMEOUT_MS = 12_000
+const _entityCache = new Map<string, { entity: Entity; ts: number }>()
+
+export function invalidateEntityCache(slug?: string) {
+  if (slug) _entityCache.delete(slug)
+  else _entityCache.clear()
+}
+
+function withTimeout<T>(promise: Promise<T>, ms: number, label: string): Promise<T> {
+  return new Promise<T>((resolve, reject) => {
+    const t = window.setTimeout(() => reject(new Error(`${label} timed out after ${ms}ms`)), ms)
+    promise.then(
+      (v) => { window.clearTimeout(t); resolve(v) },
+      (e) => { window.clearTimeout(t); reject(e) },
     )
-    if (res.documents.length > 0) return mapDocToEntity(res.documents[0])
-  } catch { /* no fallback */ }
+  })
+}
+
+/** Fetch a single entity by slug from Appwrite */
+export async function fetchEntity(
+  slug: string,
+  opts?: { force?: boolean },
+): Promise<Entity | undefined> {
+  const hit = _entityCache.get(slug)
+  if (!opts?.force && hit && Date.now() - hit.ts < ENTITY_CACHE_TTL) return hit.entity
+  try {
+    const res = await withTimeout(
+      databases.listDocuments(
+        DATABASE_ID,
+        COLLECTIONS.ENTITIES,
+        [Query.equal('slug', slug), Query.limit(1)],
+      ),
+      ENTITY_FETCH_TIMEOUT_MS,
+      `fetchEntity(${slug})`,
+    )
+    if (res.documents.length > 0) {
+      const entity = mapDocToEntity(res.documents[0])
+      _entityCache.set(slug, { entity, ts: Date.now() })
+      return entity
+    }
+  } catch { /* no fallback — caller may keep prior paint */ }
   return undefined
+}
+
+/** True when cached entity should be silently revalidated (bots may have written). */
+export function isEntityCacheStale(slug: string): boolean {
+  const hit = _entityCache.get(slug)
+  if (!hit) return true
+  return Date.now() - hit.ts >= ENTITY_STALE_TTL
 }
 
 /** Fetch entities — paginated from Appwrite */
@@ -140,18 +182,49 @@ function nameRelevance(name: string, queryLower: string): number {
   return 0                                             // matched via slug/callNumber only
 }
 
-/** Fetch shelf neighbors by callNumber prefix from Appwrite */
+/**
+ * Fetch shelf neighbors around a callNumber via indexed range seeks.
+ *
+ * Avoid Query.startsWith('callNumber', '440.') — with ~392k docs that prefix
+ * matches thousands of rows and Appwrite's COUNT(*) makes the request take
+ * 5–15s, which blocked EntityPage on "Loading Entity…".
+ *
+ * Bidirectional orderAsc/orderDesc seeks on the callNumber key index stay
+ * in the tens–hundreds of ms.
+ */
 export async function fetchShelfNeighbors(callNumber: string, range = 5): Promise<Entity[]> {
+  if (!callNumber) return []
+  // Neighbor rail only needs identity fields — skip detailsJson blob
+  const neighborSelect = Query.select([
+    'slug', 'name', 'label', 'callNumber', 'eraSlug', 'era',
+    'importanceScore', 'status', 'imageUrl', 'summary',
+  ])
   try {
-    // Extract division prefix (e.g., "220.06-julius-caesar" → "220")
-    const parts = callNumber.split('.')
-    const prefix = parts[0] || ''
-    if (!prefix) return []
-    const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
-      Query.startsWith('callNumber', prefix + '.'),
-      Query.limit(range * 2 + 1),
+    const [after, before] = await Promise.all([
+      databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
+        Query.greaterThanEqual('callNumber', callNumber),
+        Query.orderAsc('callNumber'),
+        Query.limit(range + 1),
+        neighborSelect,
+      ]),
+      databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [
+        Query.lessThan('callNumber', callNumber),
+        Query.orderDesc('callNumber'),
+        Query.limit(range),
+        neighborSelect,
+      ]),
     ])
-    return res.documents.map(mapDocToEntity)
+    const prev = before.documents.map(mapDocToEntity).reverse()
+    const next = after.documents.map(mapDocToEntity)
+    // Dedup current entity if it appears in both (shouldn't, but safe)
+    const seen = new Set<string>()
+    const merged: Entity[] = []
+    for (const e of [...prev, ...next]) {
+      if (seen.has(e.slug)) continue
+      seen.add(e.slug)
+      merged.push(e)
+    }
+    return merged
   } catch { return [] }
 }
 
@@ -160,10 +233,26 @@ const CACHE_TTL = 30 * 60 * 1000
 let _labelCache: { data: Record<string, number>; ts: number } | null = null
 let _totalCache: { data: number; ts: number } | null = null
 
-/** Fetch entity counts by label — cached (1 query via stats_cache or 8 fallback) */
+/** Prefer public stats_cache mirror — Appwrite listDocuments.total caps at 5000. */
+async function readStatsMirror(): Promise<{ total?: number; byLabel?: Record<string, number> } | null> {
+  try {
+    const r = await fetch('/governance/stats_cache.json', { cache: 'no-store' })
+    if (!r.ok) return null
+    return await r.json()
+  } catch {
+    return null
+  }
+}
+
+/** Fetch entity counts by label — prefer stats_cache mirror (API totals cap at 5000) */
 export async function fetchLabelCounts(): Promise<Record<string, number>> {
   if (_labelCache && Date.now() - _labelCache.ts < CACHE_TTL) return _labelCache.data
   try {
+    const mirrored = await readStatsMirror()
+    if (mirrored?.byLabel && Object.keys(mirrored.byLabel).length > 0) {
+      _labelCache = { data: mirrored.byLabel, ts: Date.now() }
+      return mirrored.byLabel
+    }
     const labels = ['EventWindow', 'Person', 'Movement', 'Institution', 'Text', 'Idea', 'Place', 'Evidence']
     const results = await Promise.all(
       labels.map(async (label) => {
@@ -179,13 +268,20 @@ export async function fetchLabelCounts(): Promise<Record<string, number>> {
   } catch { return _labelCache?.data ?? {} }
 }
 
-/** Fetch total entity count — cached */
+/** Fetch total entity count — prefer stats_cache mirror (API total caps at 5000) */
 export async function fetchTotalCount(): Promise<number> {
   if (_totalCache && Date.now() - _totalCache.ts < CACHE_TTL) return _totalCache.data
   try {
+    const mirrored = await readStatsMirror()
+    if (typeof mirrored?.total === 'number' && mirrored.total > 0) {
+      _totalCache = { data: mirrored.total, ts: Date.now() }
+      return mirrored.total
+    }
     const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, [Query.limit(1)])
-    _totalCache = { data: res.total, ts: Date.now() }
-    return res.total
+    // 5000 is Appwrite's hard cap — treat as unknown rather than truth
+    const n = res.total >= 5000 ? 0 : res.total
+    _totalCache = { data: n, ts: Date.now() }
+    return n
   } catch { return _totalCache?.data ?? 0 }
 }
 

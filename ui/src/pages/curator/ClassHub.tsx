@@ -10,6 +10,7 @@ import { databases, DATABASE_ID, COLLECTIONS } from '../../lib/appwrite'
 import { countAllDocuments } from '../../services/adminService'
 import { SectionHeading } from '../../components/DataCards'
 import { CLASSES, DIVISIONS } from '../../constants/callNumbers'
+import { useGlobalCounts } from '../../hooks/useGlobalCounts'
 
 /* ─── Class Icon Map ─── */
 
@@ -34,15 +35,33 @@ const CLASS_COLORS: Record<number, string> = {
 /* ─── All Classes Overview ─── */
 
 function AllClassesView() {
+  const global = useGlobalCounts()
   const [classCounts, setClassCounts] = useState<Record<number, number>>({})
   const [totalEntities, setTotalEntities] = useState(0)
   const [loading, setLoading] = useState(true)
   const cacheRef = useRef<Record<number, number> | null>(null)
 
-  useEffect(() => { loadCounts() }, [])
+  useEffect(() => { loadCounts() }, [global.total, global.byClass])
 
   async function loadCounts() {
-    // Use cache if available (avoid expensive re-counts on every mount)
+    // Prefer stats_cache / useGlobalCounts (refreshed by com.annals.stats-cache)
+    const fromGlobal: Record<number, number> = {}
+    let globalSum = 0
+    for (const cls of CLASSES) {
+      const n = Number(global.byClass?.[String(cls.code)] ?? 0)
+      if (n > 0) {
+        fromGlobal[cls.code] = n
+        globalSum += n
+      }
+    }
+    if (globalSum > 0 || global.total > 0) {
+      setClassCounts(fromGlobal)
+      setTotalEntities(global.total || globalSum)
+      cacheRef.current = fromGlobal
+      setLoading(global.loading && globalSum === 0)
+      if (globalSum > 0) return
+    }
+
     if (cacheRef.current) {
       setClassCounts(cacheRef.current)
       setTotalEntities(Object.values(cacheRef.current).reduce((a, b) => a + b, 0))
@@ -53,12 +72,10 @@ function AllClassesView() {
     setLoading(true)
     try {
       const counts: Record<number, number> = {}
-      // Count each class using cursor-based pagination (accurate beyond 5000)
       for (const cls of CLASSES) {
         try {
           const n = await countAllDocuments([Query.startsWith('callNumber', `${cls.code}`)])
           counts[cls.code] = n
-          // Progressive update: show counts as they come in
           setClassCounts((prev) => ({ ...prev, [cls.code]: n }))
         } catch { counts[cls.code] = 0 }
       }

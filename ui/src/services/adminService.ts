@@ -9,6 +9,16 @@ import { Query, type Models } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../lib/appwrite'
 import { adminUpdateDocument, adminBatchUpdate } from '../lib/adminClient'
 
+// Audit log page/total helpers (bypass Appwrite 5k listDocuments.total cap)
+export {
+  APPWRITE_TOTAL_CAP,
+  fetchAuditLogPage,
+  fetchAuditLogTotal,
+  fetchAuditTotalFromCache,
+  mapAuditDoc,
+} from './auditLogService'
+export type { AuditLogPage, AuditLogRow, AuditLogTotal } from './auditLogService'
+
 /* ─── Types ─── */
 
 export interface AuditStats {
@@ -82,11 +92,13 @@ export async function countAllDocuments(
 
   let count = res.total
 
-  // If total >= 5000, Appwrite may be capping — use cursor pagination
+  // If total >= 5000, Appwrite is capping — page with portable max (100)
   if (count >= 5000) {
-    const PAGE = 500
+    const PAGE = 100
     count = 0
     let cursor: string | undefined
+    let guard = 0
+    const MAX_PAGES = 50_000
 
     // eslint-disable-next-line no-constant-condition
     while (true) {
@@ -99,9 +111,13 @@ export async function countAllDocuments(
 
       const batch = await databases.listDocuments(DATABASE_ID, COLLECTIONS.ENTITIES, q)
       count += batch.documents.length
+      guard++
 
       if (batch.documents.length < PAGE) break
-      cursor = batch.documents[batch.documents.length - 1].$id
+      const next = batch.documents[batch.documents.length - 1].$id
+      if (next === cursor) break
+      cursor = next
+      if (guard >= MAX_PAGES) break
     }
   }
 

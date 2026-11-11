@@ -9,7 +9,9 @@ import {
 import {
   type Entity, type EntityRelationship, minEdgesForScore,
 } from '../data/entityTypes'
-import { fetchEntity, fetchShelfNeighbors, fetchEntities } from '../services/entityService'
+import {
+  fetchEntity, fetchShelfNeighbors, fetchEntities, invalidateEntityCache,
+} from '../services/entityService'
 import {
   parseCallNumber, getCallNumberBreadcrumbs, getCallNumberColor,
   getDivisionHeading, DIVISIONS,
@@ -591,29 +593,70 @@ export default function EntityPage() {
   useEffect(() => {
     let cancelled = false
     setLoading(true)
-    fetchEntity(entitySlug).then(async (e) => {
+    setNeighbors([])
+    setEraSiblings([])
+
+    const loadRails = (ent: Entity) => {
+      const siblingPromise = ent.eraSlug
+        ? fetchEntities({ era: ent.eraSlug, limit: 9 })
+        : Promise.resolve([])
+      Promise.all([
+        fetchShelfNeighbors(ent.callNumber, 5),
+        siblingPromise,
+      ]).then(([shelf, siblings]) => {
+        if (cancelled) return
+        setNeighbors(shelf)
+        setEraSiblings(siblings.filter(s => s.slug !== ent.slug).slice(0, 8))
+      })
+    }
+
+    // Paint as soon as slug lookup returns — do not wait for shelf/siblings
+    // (those used to block 5–15s on callNumber startsWith).
+    fetchEntity(entitySlug).then((e) => {
       if (cancelled) return
       const ent = e || null
       setEntity(ent)
-      if (ent) {
-        const siblingPromise = ent.eraSlug
-          ? fetchEntities({ era: ent.eraSlug, limit: 9 })
-          : Promise.resolve([])
-        const [shelf, siblings] = await Promise.all([
-          fetchShelfNeighbors(ent.callNumber, 5),
-          siblingPromise,
-        ])
-        if (!cancelled) {
-          setNeighbors(shelf)
-          setEraSiblings(siblings.filter(s => s.slug !== ent.slug).slice(0, 8))
-        }
-      } else {
-        setNeighbors([])
-        setEraSiblings([])
-      }
-      if (!cancelled) setLoading(false)
+      setLoading(false)
+      if (ent) loadRails(ent)
     })
-    return () => { cancelled = true }
+
+    // Soft revalidate while bots enrich — no loading flash; keep prior paint on miss.
+    const softRefresh = () => {
+      invalidateEntityCache(entitySlug)
+      fetchEntity(entitySlug, { force: true }).then((e) => {
+        if (cancelled || !e) return
+        setEntity((prev) => {
+          if (!prev) return e
+          // Skip setState when enrichment hasn't changed the visible fields
+          if (
+            prev.summary === e.summary &&
+            prev.importanceScore === e.importanceScore &&
+            prev.imageUrl === e.imageUrl &&
+            prev.status === e.status &&
+            JSON.stringify(prev.relationships) === JSON.stringify(e.relationships) &&
+            JSON.stringify(prev.causes) === JSON.stringify(e.causes) &&
+            JSON.stringify(prev.effects) === JSON.stringify(e.effects)
+          ) {
+            return prev
+          }
+          return e
+        })
+      })
+    }
+    const pollId = window.setInterval(softRefresh, 25_000)
+    const onFocus = () => softRefresh()
+    const onVis = () => {
+      if (document.visibilityState === 'visible') softRefresh()
+    }
+    window.addEventListener('focus', onFocus)
+    document.addEventListener('visibilitychange', onVis)
+
+    return () => {
+      cancelled = true
+      window.clearInterval(pollId)
+      window.removeEventListener('focus', onFocus)
+      document.removeEventListener('visibilitychange', onVis)
+    }
   }, [entitySlug])
 
   // Keyboard shelf navigation: ← / → within same division

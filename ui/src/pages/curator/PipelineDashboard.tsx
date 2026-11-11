@@ -6,6 +6,7 @@ import {
   Zap, Activity, TrendingUp, Database, ArrowRight, GitMerge,
 } from 'lucide-react'
 import { databases, DATABASE_ID } from '../../lib/appwrite'
+import { useGlobalCounts } from '../../hooks/useGlobalCounts'
 
 /* ─────────────────────────────────────────────────────────────────────────── */
 /*  Types                                                                       */
@@ -252,6 +253,7 @@ const POLL_MS = 30_000
 
 export default function PipelineDashboard() {
   const nav = useNavigate()
+  const { total: localTotal } = useGlobalCounts()
   const [status, setStatus] = useState<PipelineStatus | null>(null)
   const [triage, setTriage] = useState<TriageReport | null>(null)
   const [validate, setValidate] = useState<ValidateReport | null>(null)
@@ -287,7 +289,7 @@ export default function PipelineDashboard() {
     return new Date(iso).toLocaleString(undefined, { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })
   }
 
-  const total = triage?.scanned ?? 392078
+  const total = triage?.scanned ?? localTotal ?? 0
   const triaged = status?.triagedCount ?? 0
   const validated = status?.validatedCount ?? 0
   const clean = status?.cleanCount ?? 0
@@ -515,7 +517,7 @@ export default function PipelineDashboard() {
               </Text>
               {[
                 { cmd: 'python3 scripts/pipeline/run_pipeline.py status', desc: 'Print KPI snapshot' },
-                { cmd: 'python3 scripts/pipeline/run_pipeline.py full --count 25 --model gemini', desc: 'One full cycle (triage→enrich→validate)' },
+                { cmd: 'python3 scripts/pipeline/run_pipeline.py full --count 25 --model ollama', desc: 'One full cycle (triage→enrich→validate) via local Ollama' },
                 { cmd: 'python3 scripts/pipeline/run_pipeline.py loop --cycles 10 --count 50', desc: '10 repeated cycles, 50 entities each' },
                 { cmd: 'npx tsx scripts/push_pipeline_collections.ts', desc: 'Sync clean/rejected files → Appwrite' },
               ].map(row => (

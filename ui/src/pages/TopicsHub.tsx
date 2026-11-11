@@ -2,7 +2,7 @@
  * TopicsHub — landing page listing all civilization-shaping topics.
  * Each card links to its dedicated topic explorer page.
  */
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Link as RouterLink } from 'react-router-dom'
 import { Box, Flex, Text, SimpleGrid, Heading, Spinner } from '@chakra-ui/react'
 import {
@@ -11,7 +11,7 @@ import {
 } from 'lucide-react'
 import Breadcrumb from '../components/Breadcrumb'
 import { TOPIC_META } from '../constants/topicMeta'
-import { fetchTotalCount } from '../services/entityService'
+import { useGlobalCounts } from '../hooks/useGlobalCounts'
 
 const ICONS: Record<string, React.ElementType> = {
   Swords, Heart, Building2, Wheat, Compass, BookOpen,
@@ -19,11 +19,7 @@ const ICONS: Record<string, React.ElementType> = {
 }
 
 export default function TopicsHub() {
-  const [totalEntities, setTotalEntities] = useState(0)
-
-  useEffect(() => {
-    fetchTotalCount().then(setTotalEntities)
-  }, [])
+  const { total: totalEntities } = useGlobalCounts()
 
   return (
     <Box>

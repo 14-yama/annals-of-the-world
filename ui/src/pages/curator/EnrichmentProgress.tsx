@@ -416,11 +416,21 @@ export default function EnrichmentProgress() {
         }
       }
 
+      // Prefer first-entry date from local KPI aggregator (mirrors Superstack history note)
+      let oldestEntry: string | null = null
+      try {
+        const kpiRes = await fetch('/governance/bot_kpi/local_kpi.json', { cache: 'no-store' })
+        if (kpiRes.ok) {
+          const kpi = await kpiRes.json() as { firstEntryDate?: string; processedVolume?: { firstEntryDate?: string } }
+          oldestEntry = kpi.processedVolume?.firstEntryDate || kpi.firstEntryDate || null
+        }
+      } catch { /* optional */ }
+
       setVelocity({
         h24: { total: res24h.total, unique: unique24h },
         week: { total: res7d.total, atCap: res7d.total >= 5000 },
         month: { total: res30d.total, atCap: res30d.total >= 5000 },
-        oldestEntry: '2026-04-12T03:24:33.729Z',  // earliest known audit log entry
+        oldestEntry,
         fileScan,
       })
     } catch { /* non-critical — velocity stats are best-effort */ }
@@ -428,8 +438,9 @@ export default function EnrichmentProgress() {
   }, [])
 
   useEffect(() => { load(); loadBots(); loadVelocity() }, [load, loadBots, loadVelocity])
-  useEffect(() => { const id = setInterval(load, 120_000); return () => clearInterval(id) }, [load])
+  useEffect(() => { const id = setInterval(load, 30_000); return () => clearInterval(id) }, [load])
   useEffect(() => { const id = setInterval(loadBots, 5_000); return () => clearInterval(id) }, [loadBots])
+  useEffect(() => { const id = setInterval(loadVelocity, 30_000); return () => clearInterval(id) }, [loadVelocity])
 
   const enrichPct = audit ? parseFloat(pct(audit.enriched, audit.total)) : 0
   const totalLeft  = audit ? audit.stubs + audit.weak : 0
@@ -623,7 +634,7 @@ export default function EnrichmentProgress() {
                     border="1px solid rgba(255,255,255,0.06)">
                     <Text fontSize="11px" color={TEXT_DIM} lineHeight={1.6}>
                       <Text as="span" fontWeight={700} color={ORANGE}>Why only 3% enriched?</Text>
-                      {' '}The 392K dataset includes ~273K thin Wikidata Person stubs (no summary text).
+                      {' '}Local Appwrite seed is growing; thin stubs still need Ollama enrichment.
                       {' '}"Enriched" = summary ≥600c = {audit ? audit.enriched.toLocaleString() : '11,664'} entities.
                       {' '}"Pipeline clean" = all validation gates passed = 2,724 entities.
                       {' '}Entity counts come from a full file-scan (no cap) run at each audit.

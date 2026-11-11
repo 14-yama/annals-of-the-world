@@ -1,15 +1,9 @@
 /**
- * GeminiBotMonitor — Real-time dashboard for Gemini (and all cloud) bots.
+ * DEPRECATED — Cloud Gemini track retired on the Mac Mini / local SoT.
+ * Kept as a dormant module for historical reference only. Not mounted in App
+ * routes or Bot KPI. Use /curator/bots + /curator/bots/schedule + Ollama Monitor.
  *
- * Data sources (all proxied / symlinked via Vite dev server):
- *   /local-bots/github/status  → local_bot_server reads last_github_runs.json
- *   /governance/budget.json    → monthly write cap state
- *   /governance/last_sync.json → last sync gateway run
- *   /enrichment/last_run.json  → last AI enrichment run
- *   /enrichment/significance_run.json → last significance run
- *   Appwrite audit_log         → count cloud-tagged edits today / this week
- *
- * Shown on /curator/audit/log
+ * Do not re-wire this into the Curator UI without an explicit product decision.
  */
 import React, { useEffect, useState, useCallback, useRef } from 'react'
 import { Box, Flex, Text, Spinner, SimpleGrid } from '@chakra-ui/react'

@@ -1,15 +1,14 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react'
-import { Box, Flex, Text, Spinner, SimpleGrid } from '@chakra-ui/react'
+import { Box, Flex, Text, Spinner, SimpleGrid, VStack } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 import {
   ChevronLeft, Activity, GitBranch, AlertTriangle, CheckCircle2, Clock, Pause,
   Cpu, Swords, Zap, StopCircle, RefreshCw, Server, CloudOff, Cloud,
-  TrendingUp, Bot, Gauge, Layers, BarChart2, Calendar, Repeat,
+  TrendingUp, Bot, Gauge, BarChart2, Calendar, Repeat,
   ExternalLink, Users,
 } from 'lucide-react'
 import { Query } from 'appwrite'
 import { databases, DATABASE_ID, COLLECTIONS } from '../../lib/appwrite'
-import GeminiBotMonitor from '../../components/GeminiBotMonitor'
 
 /* ─────────────────────────────────────────────────────────────────────────────
    Types
@@ -106,13 +105,121 @@ interface CombinedDayRow {
   grandTotal?: number
 }
 
+interface ProcessedVolumeWindow {
+  id: string
+  label: string
+  kind?: string
+  recorded: boolean
+  processed: number
+  jobs: number
+  enrichmentProcessed?: number
+  enrichmentJobs?: number
+  opsProcessed?: number
+  opsJobs?: number
+  doneJobs?: number
+  errorJobs?: number
+  successRate?: number
+  byTask: Record<string, number>
+  jobsByTask?: Record<string, number>
+  byCategory?: Record<string, number>
+  metric?: string
+  metricNote?: string
+  windowStart?: string
+  windowEnd?: string
+  timezone?: string
+}
+
+interface ProcessedVolume {
+  firstEntryDate?: string | null
+  oldestEventAt?: string | null
+  historyNote?: string | null
+  metric?: string
+  totalProcessedAllTime?: number
+  totalOpsProcessedAllTime?: number
+  totalEvents?: number
+  windows?: ProcessedVolumeWindow[]
+}
+
+interface EnrichLiveBot {
+  id: string
+  label?: string
+  shard?: string | null
+  status?: string
+  inflightEnriched?: number
+  lastBatchEnriched?: number | null
+  lastBatchFailed?: number | null
+  lastBatchAt?: string | null
+  dispatchStartedAt?: string | null
+}
+
+interface EnrichLive {
+  updatedAtAst?: string
+  enrichBotsConfigured?: number
+  enrichBotsLive?: number
+  enrichBotsWaiting?: number
+  liveLabels?: string[]
+  waitingLabels?: string[]
+  live?: EnrichLiveBot[]
+  waiting?: EnrichLiveBot[]
+  ratePerHour?: number
+  rateLookbackMinutes?: number
+  rateFormula?: string
+  enrichedInLookback?: number
+  significanceStatus?: string
+  significanceInflight?: boolean
+  significanceLastAt?: string | null
+  queueBacklog?: number | null
+  shardsLive?: string[]
+  lastBatches?: Array<{ id: string; enriched?: number | null; failed?: number | null; at?: string | null; ok?: boolean }>
+}
+
+interface CorpusProgress {
+  entitiesTotal?: number | null
+  enrichedApprox?: number | null
+  enrichedIsUpperBound?: boolean
+  thinRemaining?: number | null
+  thinIsLowerBound?: boolean
+  pctEnriched?: number | null
+  queueBacklog?: number | null
+  queueTruncated?: boolean
+  ratePerHour?: number | null
+  auditTotal?: number | null
+  auditTotalNote?: string
+  enrichHeuristic?: string
+  note?: string
+  updatedAtAst?: string
+}
+
+interface ParallelCapacity {
+  maxConcurrentLlm?: number
+  maxConcurrentGrok?: number
+  ollamaNumParallel?: number | null
+  effectiveLlmParallel?: number
+  effectiveNote?: string
+  enrichWaitersConfigured?: number
+  enrichWaitersLive?: number
+  serializeEnrichVsSignificance?: boolean
+  maxConcurrentHeavyScan?: number
+  lanes?: Record<string, { description?: string; activeBots?: string[]; activeCount?: number; maxParallel?: number }>
+  laneNotes?: string[]
+}
+
 interface LocalKpi {
   updatedAt?: string
+  updatedAtAst?: string
   totalJobsAllTime?: number
-  last24h?: { totalJobs: number; doneJobs: number; errorJobs: number; successRate: number; byTask: Record<string, number> }
-  last7d?:  { totalJobs: number; doneJobs: number; errorJobs: number; successRate: number; byTask: Record<string, number> }
-  last30d?: { totalJobs: number; doneJobs: number; errorJobs: number; successRate: number; byTask: Record<string, number> }
-  days?: Array<{ date: string; totalJobs: number; doneJobs: number; errorJobs: number }>
+  rosterCount?: number
+  llmProvider?: string
+  firstEntryDate?: string | null
+  processedVolume?: ProcessedVolume
+  enrichLive?: EnrichLive
+  parallelCapacity?: ParallelCapacity
+  corpusProgress?: CorpusProgress
+  last24h?: { totalJobs: number; doneJobs: number; errorJobs: number; successRate: number; processed?: number; byTask: Record<string, number>; processedByTask?: Record<string, number> }
+  last7d?:  { totalJobs: number; doneJobs: number; errorJobs: number; successRate: number; processed?: number; byTask: Record<string, number>; processedByTask?: Record<string, number> }
+  last30d?: { totalJobs: number; doneJobs: number; errorJobs: number; successRate: number; processed?: number; byTask: Record<string, number>; processedByTask?: Record<string, number> }
+  days?: Array<{ date: string; totalJobs: number; doneJobs: number; errorJobs: number; processed?: number; byTask?: Record<string, number> }>
+  roster?: Array<{ id: string; name?: string; lane?: string; cron?: string; lastJobStatus?: string; lastLogAt?: string }>
 }
 
 interface EnrichmentLastRun {
@@ -191,114 +298,218 @@ interface BotEntry {
 }
 
 const BOT_ROSTER: BotEntry[] = [
-  // ── Online (cloud) enrichment bots ─────────────────────────────────────────
-  {
-    key: 'gemini', label: 'Gemini 2.5 Flash', channel: 'online', family: 'enrichment',
-    color: '#4285F4',
-    description: 'Free · 1,500 RPD · 60/run × 24 runs/day. All entity classes.',
-    editorMatch: /gemini/i,
-    dailyCap: 1500, cronIntervalS: 3600,
-  },
+  // ── Optional cloud GH Models (legacy; Mini track is Ollama-first) ───────────
   {
     key: 'github-models', label: 'GH Models · gpt-4o-mini', channel: 'online', family: 'enrichment',
     color: '#6B3FA0',
-    description: 'Free · 150 RPD (separate bucket) · Class 3 (Institutions) + Class 7 (Texts).',
+    description: 'Optional cloud · 150 RPD · Class 3 + Class 7. Not the Mac Mini SoT path.',
     editorMatch: /gpt-4o-mini/i,
     dailyCap: 150, cronIntervalS: 14400,
   },
   {
     key: 'gh-phi4', label: 'GH Models · Phi-4-mini', channel: 'online', family: 'enrichment',
     color: '#0078D4',
-    description: 'Free · 150 RPD (separate bucket) · Class 2 (People) stubs.',
+    description: 'Optional cloud · Class 2 stubs. Mini uses local Ollama instead.',
     editorMatch: /phi.?4/i,
     dailyCap: 150, cronIntervalS: 14400,
   },
   {
     key: 'gh-llama', label: 'GH Models · Llama-3.1-8B', channel: 'online', family: 'enrichment',
     color: '#4267B2',
-    description: 'Free · 150 RPD (separate bucket) · Class 5 (Places) stubs.',
-    editorMatch: /llama/i,
+    description: 'Optional cloud · Class 5 stubs.',
+    editorMatch: /llama.?3\.1|github.*llama/i,
     dailyCap: 150, cronIntervalS: 14400,
   },
   {
     key: 'gh-mistral', label: 'GH Models · Mistral-Nemo', channel: 'online', family: 'enrichment',
     color: '#F97316',
-    description: 'Free · 150 RPD (separate bucket) · Class 6 (Events). 12B — best GH Models quality.',
+    description: 'Optional cloud · Class 6 events.',
     editorMatch: /mistral/i,
     dailyCap: 150, cronIntervalS: 14400,
   },
   {
     key: 'openai', label: 'OpenAI GPT-4o-mini', channel: 'online', family: 'enrichment',
     color: '#10A37F',
-    description: 'Paid fallback ($0.15/1M tokens) · activates when Gemini exhausts quota.',
+    description: 'Paid cloud fallback only — not used on the local Mini track.',
     editorMatch: /openai/i,
     dailyCap: 0,
   },
-  // ── Local enrichment bots ──────────────────────────────────────────────────
+  // ── Local com.annals.* roster (Mac Mini SoT) ───────────────────────────────
   {
-    key: 'ollama-enrich', label: 'Ollama llama3.2:3b', channel: 'local', family: 'enrichment',
+    key: 'enrich', label: 'Enrich (Ollama)', channel: 'local', family: 'enrichment',
     color: '#27AE60',
-    description: 'Local CPU inference. Free, unlimited, on-device.',
-    localEndpoint: '/bots/enrich', defaultCount: 20, defaultModel: 'ollama',
-    editorMatch: /ollama/i,
+    description: 'com.annals.enrich · llama3.2:3b · KeepAlive · batch ENRICH_COUNT.',
+    localEndpoint: '/bots/enrich', defaultCount: 24, defaultModel: 'ollama',
+    editorMatch: /ollama\/llama/i,
+    cronIntervalS: 5,
   },
   {
-    key: 'ollama-significance', label: 'Ollama — Significance', channel: 'local', family: 'audit',
+    key: 'enrich-b', label: 'Enrich Waiter B', channel: 'local', family: 'enrichment',
+    color: '#2ECC71',
+    description: 'com.annals.enrich-b · Ollama lock waiter · near-zero idle.',
+    localEndpoint: '/bots/enrich-b', defaultCount: 24, defaultModel: 'ollama',
+    editorMatch: /ollama\/llama/i,
+    cronIntervalS: 6,
+  },
+  {
+    key: 'enrich-c', label: 'Enrich Waiter C', channel: 'local', family: 'enrichment',
+    color: '#58D68D',
+    description: 'com.annals.enrich-c · third Ollama waiter · max 1 LLM.',
+    localEndpoint: '/bots/enrich-c', defaultCount: 24, defaultModel: 'ollama',
+    cronIntervalS: 8,
+  },
+  {
+    key: 'enrich-grok', label: 'Enrich (Grok / xAI)', channel: 'local', family: 'enrichment',
+    color: '#111111',
+    description: 'com.annals.enrich-grok · cloud Grok · concurrent with Ollama · needs XAI_API_KEY.',
+    localEndpoint: '/bots/enrich-grok', defaultCount: 12, defaultModel: 'grok',
+    editorMatch: /grok\//i,
+    cronIntervalS: 8,
+  },
+  {
+    key: 'enrich-grok-b', label: 'Enrich Grok Waiter B', channel: 'local', family: 'enrichment',
+    color: '#333333',
+    description: 'com.annals.enrich-grok-b · Grok lock waiter.',
+    localEndpoint: '/bots/enrich-grok', defaultCount: 12, defaultModel: 'grok',
+    editorMatch: /grok\//i,
+    cronIntervalS: 10,
+  },
+  {
+    key: 'significance', label: 'Significance (Ollama)', channel: 'local', family: 'audit',
     color: '#8E44AD',
-    description: 'Local backfill of historicalSignificance ratings.',
-    localEndpoint: '/bots/significance', defaultCount: 50, defaultModel: 'ollama',
+    description: 'com.annals.significance · serialized vs enrich · throttled ~90s.',
+    localEndpoint: '/bots/significance', defaultCount: 16, defaultModel: 'ollama',
     reportFile: 'significance_run.json',
+    cronIntervalS: 90,
   },
   {
-    key: 'ollama-edges', label: 'Ollama — Edge Bot', channel: 'local', family: 'edge',
-    color: '#1ABC9C',
-    description: 'Generates relationship edges for under-connected entities.',
-    localEndpoint: '/bots/enrich', defaultCount: 20, defaultModel: 'ollama',
-    reportFile: 'edge_run.json',
-  },
-  // ── Cloud audit bots (Appwrite Functions) ──────────────────────────────────
-  {
-    key: 'completeness', label: 'Completeness Audit', channel: 'online', family: 'audit',
-    color: '#27AE60',
-    description: 'Scores entities on 9 quality dimensions (daily 02:00 UTC).',
-    reportFile: 'completeness.json',
+    key: 'significance-grok', label: 'Significance (Grok)', channel: 'local', family: 'audit',
+    color: '#5B2C6F',
+    description: 'com.annals.significance-grok · Grok lane · needs XAI_API_KEY.',
+    localEndpoint: '/bots/significance-grok', defaultCount: 12, defaultModel: 'grok',
+    reportFile: 'significance_run.json',
+    cronIntervalS: 60,
   },
   {
-    key: 'orphans', label: 'Orphan Detector', channel: 'online', family: 'audit',
+    key: 'queue', label: 'Enrichment Queue', channel: 'local', family: 'audit',
     color: '#E67E22',
-    description: 'Finds entities with zero relationships (daily 03:00 UTC).',
-    reportFile: 'orphans.json',
+    description: 'com.annals.queue · regenerate priority queue · every 3m.',
+    localEndpoint: '/bots/queue', defaultCount: 0,
+    cronIntervalS: 180,
   },
   {
-    key: 'consistency', label: 'Consistency Audit', channel: 'online', family: 'audit',
-    color: '#6B3FA0',
-    description: 'Validates era/division, callNumber, slugs (daily 05:00 UTC).',
-    reportFile: 'consistency.json',
-  },
-  {
-    key: 'duplicates', label: 'Duplicate Finder', channel: 'online', family: 'audit',
-    color: '#C0392B',
-    description: 'Levenshtein fuzzy duplicate detection (weekly).',
-    reportFile: 'duplicates.json',
-  },
-  {
-    key: 'classification', label: 'Classification Audit', channel: 'online', family: 'audit',
-    color: '#D4AF37',
-    description: 'Verifies Dewey call-number classifications.',
-    reportFile: 'classification.json',
-  },
-  {
-    key: 'stats', label: 'Stats Counter', channel: 'online', family: 'audit',
+    key: 'kpi', label: 'Local KPI Aggregator', channel: 'local', family: 'audit',
     color: '#4A90D9',
-    description: 'Recounts entity totals & dashboard metrics.',
-    reportFile: 'stats.json',
+    description: 'com.annals.kpi · rolls up local_bot_status + roster every 5m.',
+    cronIntervalS: 300,
   },
-  // ── Sync ───────────────────────────────────────────────────────────────────
   {
-    key: 'sync-gateway', label: 'Sync Gateway', channel: 'online', family: 'sync',
+    key: 'stats-cache', label: 'Stats Cache Refresh', channel: 'local', family: 'audit',
+    color: '#16A085',
+    description: 'com.annals.stats-cache · live entity counts → stats_cache every 5m.',
+    cronIntervalS: 300,
+  },
+  {
+    key: 'push', label: 'Git Push Pending', channel: 'local', family: 'sync',
+    color: '#C5963A',
+    description: 'com.annals.push · commit + push dirty enrichments hourly :55.',
+    cronIntervalS: 3600,
+  },
+  {
+    key: 'sync', label: 'Local Sync Gateway', channel: 'local', family: 'sync',
     color: '#9E9A90',
-    description: 'Single Appwrite writer — pushes enriched files to backend.',
-    editorMatch: /sync-gateway/i,
+    description: 'com.annals.sync · sync_gateway.ts --local → Docker Appwrite every 3m.',
+    localEndpoint: '/bots/sync', defaultCount: 200,
+    editorMatch: /sync-gateway|sync/i,
+    cronIntervalS: 180,
+  },
+  {
+    key: 'edges-extract', label: 'Edges Extract', channel: 'local', family: 'edge',
+    color: '#1ABC9C',
+    description: 'com.annals.edges-extract · KeepAlive extract-only · Relationships tab.',
+    localEndpoint: '/bots/edges-extract', defaultCount: 120,
+    reportFile: 'edge_run.json',
+    cronIntervalS: 20,
+  },
+  {
+    key: 'edges-extract-b', label: 'Edges Extract Waiter B', channel: 'local', family: 'edge',
+    color: '#48C9B0',
+    description: 'com.annals.edges-extract-b · edges lock waiter · no LLM.',
+    localEndpoint: '/bots/edges-extract', defaultCount: 80,
+    reportFile: 'edge_run.json',
+    cronIntervalS: 25,
+  },
+  {
+    key: 'edges-grok', label: 'Edges Discovery (Grok)', channel: 'local', family: 'edge',
+    color: '#1C2833',
+    description: 'com.annals.edges-grok · Grok LLM edges · needs XAI_API_KEY.',
+    localEndpoint: '/bots/edges-grok', defaultCount: 20, defaultModel: 'grok',
+    reportFile: 'edge_run.json',
+    cronIntervalS: 120,
+  },
+  {
+    key: 'seed-local', label: 'Seed Local Appwrite', channel: 'local', family: 'sync',
+    color: '#2471A3',
+    description: 'com.annals.seed-local · create-if-missing from git export every 20m.',
+    cronIntervalS: 1200,
+  },
+  {
+    key: 'merge-cloud', label: 'Cloud → Local Merge', channel: 'local', family: 'sync',
+    color: '#16A085',
+    description: 'com.annals.merge-cloud · entities create-if-missing every 25m.',
+    cronIntervalS: 1500,
+  },
+  {
+    key: 'merge-cloud-audit', label: 'Cloud Audit Merge', channel: 'local', family: 'sync',
+    color: '#2980B9',
+    description: 'com.annals.merge-cloud-audit · audit_log create-if-missing every 20m.',
+    cronIntervalS: 1200,
+  },
+  {
+    key: 'bot-server', label: 'Bot HTTP Server', channel: 'local', family: 'sync',
+    color: '#787469',
+    description: 'com.annals.bot-server · KeepAlive on :7474 for Curator assist.',
+  },
+  {
+    key: 'healthcheck', label: 'Healthcheck', channel: 'local', family: 'audit',
+    color: '#27AE60',
+    description: 'com.annals.healthcheck · Ollama + bot-server every 5m.',
+    cronIntervalS: 300,
+  },
+  {
+    key: 'audit-stats', label: 'Audit Stats', channel: 'local', family: 'audit',
+    color: '#4A90D9', description: 'com.annals.audit-stats · nightly corpus stats.',
+    reportFile: 'stats.json', cronIntervalS: 86400,
+  },
+  {
+    key: 'audit-completeness', label: 'Audit Completeness', channel: 'local', family: 'audit',
+    color: '#27AE60', description: 'com.annals.audit-completeness · quality dimensions.',
+    reportFile: 'completeness.json', cronIntervalS: 86400,
+  },
+  {
+    key: 'audit-orphans', label: 'Audit Orphans', channel: 'local', family: 'audit',
+    color: '#E67E22', description: 'com.annals.audit-orphans · zero-relationship entities.',
+    reportFile: 'orphans.json', cronIntervalS: 86400,
+  },
+  {
+    key: 'orphan-triage', label: 'Orphan Triage', channel: 'local', family: 'audit',
+    color: '#D35400', description: 'com.annals.orphan-triage · CSV/HTML helper after orphans.',
+    cronIntervalS: 86400,
+  },
+  {
+    key: 'audit-consistency', label: 'Audit Consistency', channel: 'local', family: 'audit',
+    color: '#6B3FA0', description: 'com.annals.audit-consistency · schema/era checks.',
+    reportFile: 'consistency.json', cronIntervalS: 86400,
+  },
+  {
+    key: 'audit-duplicates', label: 'Audit Duplicates', channel: 'local', family: 'audit',
+    color: '#C0392B', description: 'com.annals.audit-duplicates · weekly fuzzy scan.',
+    reportFile: 'duplicates.json', cronIntervalS: 604800,
+  },
+  {
+    key: 'audit-classification', label: 'Audit Classification', channel: 'local', family: 'audit',
+    color: '#D4AF37', description: 'com.annals.audit-classification · weekly Dewey check.',
+    reportFile: 'classification.json', cronIntervalS: 604800,
   },
 ]
 
@@ -507,10 +718,23 @@ export default function BotKpiDashboard() {
 
   const loadAuditActivity = useCallback(async () => {
     try {
-      // Total count (head)
-      const totalRes = await databases.listDocuments(DATABASE_ID, COLLECTIONS.AUDIT_LOG,
-        [Query.limit(1)])
-      setTotalAuditRows(totalRes.total)
+      // Prefer stats_cache.auditTotal — listDocuments.total hard-caps at 5000
+      let total = 0
+      try {
+        const r = await fetch(`/governance/stats_cache.json?t=${Date.now()}`, { cache: 'no-store' })
+        if (r.ok) {
+          const mirrored = await r.json() as { auditTotal?: number }
+          if (typeof mirrored.auditTotal === 'number' && mirrored.auditTotal > 5000) {
+            total = mirrored.auditTotal
+          }
+        }
+      } catch { /* optional */ }
+      if (!total) {
+        const totalRes = await databases.listDocuments(DATABASE_ID, COLLECTIONS.AUDIT_LOG,
+          [Query.limit(1)])
+        total = totalRes.total
+      }
+      setTotalAuditRows(total)
 
       // Last 24h sample for per-bot breakdown
       const dayAgo = new Date(Date.now() - 24 * 3600 * 1000).toISOString()
@@ -603,8 +827,17 @@ export default function BotKpiDashboard() {
             BOT KPI COMMAND POST
           </Text>
           <Text fontSize="sm" color="#787469">
-            Combined telemetry across online & local enrichment bots — see who is doing the heavy lifting
+            Local-first Mac Mini roster (com.annals.*) via Ollama · optional cloud GH Models kept for reference
           </Text>
+        </Box>
+        <Box
+          as="button" onClick={() => navigate('/curator/bots/schedule')}
+          px={3} py={2} borderRadius="md"
+          bg="#6B3FA015" color="#6B3FA0" border="1px solid #6B3FA040"
+          cursor="pointer" fontSize="xs" fontWeight={600}
+          display="flex" alignItems="center" gap={1}
+        >
+          <Calendar size={12} /> Schedule
         </Box>
         <Box
           as="button" onClick={() => setAutoRefresh(v => !v)}
@@ -906,13 +1139,13 @@ export default function BotKpiDashboard() {
           ONLINE BOTS — cloud enrichment
           ════════════════════════════════════════════════════════════════ */}
       <SectionHeader icon={<Cloud size={16} color="#2471A3" />}
-        title="Online Bots — Cloud" subtitle="5 enrichment bots · Gemini 1,440/day + 4× GH Models 120/day = ~1,920/day free tier · Appwrite audit Functions" />
+        title="Optional Cloud Bots" subtitle="GH Models / OpenAI — not the Mac Mini SoT. Local Ollama + com.annals.* LaunchAgents are primary." />
 
-      {/* Free-tier quota health strip */}
+      {/* Free-tier quota health strip (optional cloud only) */}
       <Box mb={4} p={3} bg="white" border="1px solid #E4E2DC" borderRadius="md">
         <Text fontSize="10px" fontWeight={700} color="#787469" mb={3}
           letterSpacing="0.08em" textTransform="uppercase">
-          Free Tier Quota — Today's Usage
+          Optional Cloud Quota — Today's Usage
         </Text>
         <Flex gap={3} flexWrap="wrap">
           {BOT_ROSTER.filter(b => (b.dailyCap ?? 0) > 0).map(b => {
@@ -920,10 +1153,7 @@ export default function BotKpiDashboard() {
             const cap  = b.dailyCap!
             const pct  = Math.min(100, Math.round(used / cap * 100))
             const col  = quotaPctColor(pct)
-            const runInfo = b.key === 'gemini'
-              ? { status: enrichRun ? 'success' : undefined, completedAt: enrichRun?.timestamp ?? enrichRun?.generatedAt }
-              : b.key === 'github-models' ? (ghRuns ?? {})
-              : (modelRuns[b.key] ?? {})
+            const runInfo = b.key === 'github-models' ? (ghRuns ?? {}) : (modelRuns[b.key] ?? {})
             const st = deriveBotState(runInfo.status, runInfo.completedAt, b.cronIntervalS)
             const sc = BOT_STATE_CFG[st]
             return (
@@ -950,22 +1180,11 @@ export default function BotKpiDashboard() {
             )
           })}
         </Flex>
-        <Flex gap={3} mt={2} pt={2} borderTop="1px solid #F5F4F0">
-          {([['#27AE60','< 50% — Safe'],['#D4AF37','50–74% — Moderate'],['#E67E22','75–89% — High'],['#C0392B','≥ 90% — Critical']] as const).map(([c,l]) => (
-            <Flex key={l} align="center" gap={1}>
-              <Box w={2} h={2} borderRadius="full" bg={c} />
-              <Text fontSize="9px" color="#787469">{l}</Text>
-            </Flex>
-          ))}
-        </Flex>
       </Box>
 
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={3} mb={6}>
         {BOT_ROSTER.filter(b => b.channel === 'online').map(b => {
-          const runInfo = b.key === 'gemini'
-            ? { status: enrichRun ? 'success' : undefined, completedAt: enrichRun?.timestamp ?? enrichRun?.generatedAt }
-            : b.key === 'github-models' ? (ghRuns ?? {})
-            : (modelRuns[b.key] ?? {})
+          const runInfo = b.key === 'github-models' ? (ghRuns ?? {}) : (modelRuns[b.key] ?? {})
           return (
             <BotCard key={b.key}
               bot={b}
@@ -982,7 +1201,9 @@ export default function BotKpiDashboard() {
           LOCAL BOTS — on-device
           ════════════════════════════════════════════════════════════════ */}
       <SectionHeader icon={<Cpu size={16} color="#27AE60" />}
-        title="Local Bots — On-Device" subtitle="Ollama llama3.2:3b · runs only while your machine is powered on" />
+        title="Local Bots — com.annals.*"
+        subtitle={`Ollama-first Mac Mini roster · ${localKpi?.rosterCount ?? BOT_ROSTER.filter(b => b.channel === 'local').length} definitions · see Schedule for Port of Spain clocks`}
+      />
 
       {/* Local control bar */}
       <Box mb={3} p={3} borderRadius="md"
@@ -1043,31 +1264,112 @@ export default function BotKpiDashboard() {
         )}
       </Box>
 
+      {/* Live enrich desk — parallel capacity + workers + rate */}
+      {localKpi?.enrichLive && (
+        <Box mb={4}>
+          <SectionHeader
+            icon={<Gauge size={16} color="#C5963A" />}
+            title="Enrichment desk"
+            subtitle={`Live Ollama waiters · mid-batch counted · refresh ${localKpi.updatedAtAst || localKpi.enrichLive.updatedAtAst || (localKpi.updatedAt ? relTime(localKpi.updatedAt) : '—')}`}
+          />
+          <EnrichmentDeskPanel
+            live={localKpi.enrichLive}
+            parallel={localKpi.parallelCapacity}
+            hourWindow={localKpi.processedVolume?.windows?.find((w) => w.id === '1h')}
+            corpus={localKpi.corpusProgress}
+          />
+        </Box>
+      )}
+
+      {/* Superstack-style processed volume: 1h / week / month / YTD — enrichment only */}
+      {localKpi?.processedVolume?.windows && localKpi.processedVolume.windows.length > 0 && (
+        <Box mb={4}>
+          <SectionHeader
+            icon={<BarChart2 size={16} color="#27AE60" />}
+            title="Processed volume"
+            subtitle={`Enrich + significance successes only · from first entry ${localKpi.processedVolume.firstEntryDate ? relTime(localKpi.processedVolume.firstEntryDate) : '—'} · sync/merge shown as ops`}
+          />
+          <Flex gap={3} wrap="wrap" mb={2}>
+            {localKpi.processedVolume.windows.map((window) => (
+              <ProcessedVolumeCard key={window.id} window={window} />
+            ))}
+          </Flex>
+          {localKpi.processedVolume.historyNote ? (
+            <Text fontSize="11px" color="#9E9A90" mb={2}>
+              {localKpi.processedVolume.historyNote}
+              {localKpi.processedVolume.firstEntryDate
+                ? ` First entry ${localKpi.processedVolume.firstEntryDate.slice(0, 10)}.`
+                : ''}
+            </Text>
+          ) : localKpi.processedVolume.firstEntryDate ? (
+            <Text fontSize="11px" color="#9E9A90" mb={2}>
+              First entry date {localKpi.processedVolume.firstEntryDate.slice(0, 10)} ·{' '}
+              {(localKpi.processedVolume.totalProcessedAllTime ?? 0).toLocaleString()} enrich/sig all-time
+              {typeof localKpi.processedVolume.totalOpsProcessedAllTime === 'number'
+                ? ` · ${localKpi.processedVolume.totalOpsProcessedAllTime.toLocaleString()} ops`
+                : ''}
+            </Text>
+          ) : null}
+        </Box>
+      )}
+
+      {/* Local KPI by-task strip from aggregator */}
+      {localKpi?.last24h?.byTask && (
+        <Box mb={3} p={3} bg="white" border="1px solid #E4E2DC" borderRadius="md">
+          <Text fontSize="10px" fontWeight={700} color="#787469" mb={2}
+            letterSpacing="0.08em" textTransform="uppercase">
+            Local jobs · last 24h · LLM = {localKpi.llmProvider ?? 'ollama'}
+          </Text>
+          <Flex gap={2} flexWrap="wrap">
+            {Object.entries(localKpi.last24h.byTask)
+              .filter(([, n]) => n > 0)
+              .sort((a, b) => b[1] - a[1])
+              .map(([task, n]) => (
+                <Box key={task} px={2} py={1} borderRadius="md" bg="#F5F4F0" border="1px solid #E4E2DC">
+                  <Text fontSize="10px" fontWeight={700} color="#2D2A24">{task}</Text>
+                  <Text fontSize="9px" color="#787469">
+                    {n} jobs
+                    {localKpi.last24h?.processedByTask?.[task]
+                      ? ` · ${localKpi.last24h.processedByTask[task]} processed`
+                      : ''}
+                  </Text>
+                </Box>
+              ))}
+          </Flex>
+        </Box>
+      )}
+
       <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap={3} mb={4}>
         {BOT_ROSTER.filter(b => b.channel === 'local').map(b => {
           const isAssisting = assistingBot[b.key]
+          const botAliases = b.key === 'push' ? ['push', 'git-push'] : [b.key]
+          const endpointBot = b.localEndpoint?.replace('/bots/', '')
+          const matchBot = (j: LocalJob) =>
+            botAliases.includes(j.bot) || (endpointBot ? j.bot === endpointBot : false)
           const activeJob = Object.values(localJobs).find(
-            j => j.bot === b.localEndpoint?.replace('/bots/', '') && j.status === 'running'
+            j => matchBot(j) && j.status === 'running'
           )
-          // Derive last run state from most recent completed local job
           const lastJob = Object.values(localJobs)
-            .filter(j => j.bot === b.localEndpoint?.replace('/bots/', '') && j.status !== 'running')
-            .sort((a, c) => (c.finished ?? '').localeCompare(a.finished ?? ''))
-            .at(0)
+            .filter(j => matchBot(j) && j.status !== 'running')
+            .sort((a, c) => (c.finished ?? '').localeCompare(a.finished ?? ''))[0]
+          const rosterRow = localKpi?.roster?.find(r => r.id === b.key)
           const lastRunStatus = lastJob
             ? (lastJob.status === 'done' ? 'success' : 'failure')
+            : rosterRow?.lastJobStatus === 'done' ? 'success'
+            : rosterRow?.lastJobStatus === 'error' ? 'failure'
             : undefined
+          const lastRunTime = lastJob?.finished ?? rosterRow?.lastLogAt ?? undefined
           return (
             <BotCard key={b.key}
               bot={b}
-              editsLast24h={editorCounts[b.key] ?? 0}
+              editsLast24h={(localKpi?.last24h?.byTask?.[b.key] ?? 0) || (editorCounts[b.key] ?? 0)}
               report={reports[b.key] ?? null}
               isAssisting={isAssisting}
               activeJob={activeJob}
-              onAssist={() => assistBot(b)}
+              onAssist={b.localEndpoint ? () => assistBot(b) : undefined}
               ollamaOnline={!!localHealth?.ollama.running}
               lastRunStatus={lastRunStatus}
-              lastRunTime={lastJob?.finished ?? undefined}
+              lastRunTime={lastRunTime}
             />
           )
         })}
@@ -1204,11 +1506,11 @@ export default function BotKpiDashboard() {
         <WindowCard period="30 days" localKpi={localKpi?.last30d} swarmDays={swarmDaily} windowDays={30} />
       </SimpleGrid>
 
-      {/* Gemini detailed monitor */}
-      <SectionHeader icon={<Layers size={16} color="#4285F4" />}
-        title="Gemini Detailed Monitor" subtitle="Cloud bot deep-dive · quota · request log" />
-      <Box mb={6}>
-        <GeminiBotMonitor cloudEditsToday={totals.onlineEnrichEdits} />
+      <Box mb={6} p={4} bg="white" border="1px solid #E4E2DC" borderRadius="md">
+        <Text fontSize="12px" color="#787469">
+          Cloud Gemini track is retired on this Mini. Use Schedule for Port of Spain clocks,
+          Ollama Monitor for local assist, and com.annals.* LaunchAgents for automated work.
+        </Text>
       </Box>
     </Box>
   )
@@ -1358,6 +1660,283 @@ function HistoricalChart({ days, period }: {
           peak: {maxTotal.toLocaleString()} items/day
         </Text>
       </Flex>
+    </Box>
+  )
+}
+
+const ENRICH_TASK_IDS = new Set([
+  'enrich', 'enrich-b', 'enrich-c', 'enrich-d', 'enrich-e',
+  'enrich-grok', 'enrich-grok-b', 'significance', 'significance-grok',
+])
+
+/* ─── Enrichment desk (live workers + parallel capacity) ─────────────── */
+function EnrichmentDeskPanel({
+  live,
+  parallel,
+  hourWindow,
+  corpus,
+}: {
+  live: EnrichLive
+  parallel?: ParallelCapacity | null
+  hourWindow?: ProcessedVolumeWindow
+  corpus?: CorpusProgress | null
+}) {
+  const workers = [...(live.live || []), ...(live.waiting || [])]
+    .sort((a, b) => a.id.localeCompare(b.id))
+  const eff = parallel?.effectiveLlmParallel ?? parallel?.maxConcurrentLlm ?? '—'
+  const gate = parallel?.maxConcurrentLlm
+  const ollamaN = parallel?.ollamaNumParallel
+  const thin = corpus?.thinRemaining ?? live.queueBacklog
+  const enriched = corpus?.enrichedApprox
+  const totalEnt = corpus?.entitiesTotal
+  const pct = corpus?.pctEnriched
+  const auditRows = corpus?.auditTotal
+
+  return (
+    <Box>
+      {(enriched != null || thin != null) && (
+        <Box mb={3} p={3} bg="white" border="1px solid #E4E2DC" borderRadius="md">
+          <Text fontSize="10px" fontWeight={700} color="#787469" letterSpacing="0.08em"
+            textTransform="uppercase" mb={2}>
+            Corpus · enriched vs thin remaining
+          </Text>
+          <Flex gap={3} wrap="wrap" mb={2}>
+            <DeskStat
+              label="Enriched (summary≥800)"
+              value={
+                enriched != null
+                  ? `${corpus?.enrichedIsUpperBound ? '≤' : ''}${enriched.toLocaleString()}`
+                  : '—'
+              }
+              hint={totalEnt != null ? `of ${totalEnt.toLocaleString()} entities` : 'entity corpus'}
+              accent="#27AE60"
+            />
+            <DeskStat
+              label="Thin remaining"
+              value={
+                thin != null
+                  ? `${corpus?.thinIsLowerBound || corpus?.queueTruncated ? '≥' : ''}${thin.toLocaleString()}`
+                  : '—'
+              }
+              hint={corpus?.enrichHeuristic || 'summary < 800 chars'}
+              accent="#E67E22"
+            />
+            <DeskStat
+              label="% complete"
+              value={pct != null ? `${corpus?.enrichedIsUpperBound ? '≤' : ''}${pct}%` : '—'}
+              hint={corpus?.queueTruncated ? 'bound until full queue refresh' : 'enriched / corpus'}
+              accent="#C5963A"
+            />
+            <DeskStat
+              label="Last-hour enrich rate"
+              value={`${(corpus?.ratePerHour ?? live.ratePerHour ?? 0).toLocaleString()}/hr`}
+              hint={live.rateFormula || 'live desk rate'}
+              accent="#4A90D9"
+            />
+            <DeskStat
+              label="Audit rows (all-time)"
+              value={auditRows != null ? auditRows.toLocaleString() : '—'}
+              hint="field-level audit_log docs — not unique entities"
+              accent="#6B3FA0"
+            />
+          </Flex>
+          {corpus?.note ? (
+            <Text fontSize="11px" color="#9E9A90">{corpus.note}</Text>
+          ) : null}
+        </Box>
+      )}
+
+      <Flex gap={3} wrap="wrap" mb={3}>
+        <DeskStat
+          label="Enrich workers"
+          value={`${live.enrichBotsLive ?? 0} / ${live.enrichBotsConfigured ?? 0}`}
+          hint={`${live.enrichBotsWaiting ?? 0} waiting (soft-skip)`}
+          accent="#E67E22"
+        />
+        <DeskStat
+          label="Max parallel LLM"
+          value={String(eff)}
+          hint={
+            ollamaN != null
+              ? `SoT gate ${gate} · OLLAMA_NUM_PARALLEL ${ollamaN}`
+              : `SoT max_concurrent_llm ${gate ?? '—'}`
+          }
+          accent="#C5963A"
+        />
+        <DeskStat
+          label="Enrich rate"
+          value={`${(live.ratePerHour ?? 0).toLocaleString()}/hr`}
+          hint={live.rateFormula || `last ${live.rateLookbackMinutes ?? 30}m × scale`}
+          accent="#27AE60"
+        />
+        <DeskStat
+          label="Last hour"
+          value={hourWindow?.recorded ? (hourWindow.processed ?? 0).toLocaleString() : '—'}
+          hint={
+            hourWindow?.recorded
+              ? `${hourWindow.jobs ?? 0} jobs · incl. mid-batch`
+              : 'No enrich/sig yet'
+          }
+          accent="#2D2A24"
+        />
+        <DeskStat
+          label="Queue backlog"
+          value={thin != null ? thin.toLocaleString() : '—'}
+          hint={`Significance: ${live.significanceStatus ?? '—'}${live.significanceInflight ? ' (live)' : ''}`}
+          accent="#4A90D9"
+        />
+      </Flex>
+
+      {parallel?.effectiveNote ? (
+        <Text fontSize="11px" color="#787469" mb={2}>{parallel.effectiveNote}</Text>
+      ) : null}
+
+      {parallel?.laneNotes && parallel.laneNotes.length > 0 ? (
+        <Box mb={3} p={3} bg="white" border="1px solid #E4E2DC" borderRadius="md">
+          <Text fontSize="10px" fontWeight={700} color="#787469" letterSpacing="0.08em"
+            textTransform="uppercase" mb={2}>
+            Parallel capacity by lane
+          </Text>
+          <Flex gap={2} wrap="wrap" mb={2}>
+            {Object.entries(parallel.lanes || {}).map(([lane, info]) => (
+              <Box key={lane} px={2} py={1.5} bg="#FAF9F6" border="1px solid #E4E2DC" borderRadius="md" minW="120px">
+                <Text fontSize="10px" fontWeight={700} color="#2D2A24">{lane}</Text>
+                <Text fontSize="16px" fontWeight={700} color="#C5963A" fontFamily='"Cormorant Garamond", serif'>
+                  ≤{info.maxParallel ?? '—'}
+                </Text>
+                <Text fontSize="9px" color="#9E9A90">
+                  {info.activeCount ?? 0} active defs
+                </Text>
+              </Box>
+            ))}
+          </Flex>
+          <VStack align="stretch" gap={1}>
+            {parallel.laneNotes.map((note) => (
+              <Text key={note} fontSize="11px" color="#787469">· {note}</Text>
+            ))}
+          </VStack>
+        </Box>
+      ) : null}
+
+      <Box bg="white" border="1px solid #E4E2DC" borderRadius="md" p={3} mb={2}>
+        <Text fontSize="10px" fontWeight={700} color="#787469" letterSpacing="0.08em"
+          textTransform="uppercase" mb={2}>
+          Enrich waiters · live / waiting
+          {live.shardsLive && live.shardsLive.length > 0
+            ? ` · shards ${live.shardsLive.join(', ')}`
+            : ''}
+        </Text>
+        <Flex gap={2} wrap="wrap">
+          {workers.map((bot) => {
+            const isLive = bot.status === 'live'
+            return (
+              <Box
+                key={bot.id}
+                px={2.5}
+                py={2}
+                minW="140px"
+                borderRadius="md"
+                border="1px solid"
+                borderColor={isLive ? '#E67E2260' : '#E4E2DC'}
+                bg={isLive ? '#FFF5EB' : '#FAF9F6'}
+              >
+                <Flex align="center" gap={1.5} mb={1}>
+                  <Box w="7px" h="7px" borderRadius="full" bg={isLive ? '#E67E22' : '#9E9A90'} />
+                  <Text fontSize="11px" fontWeight={700} color="#2D2A24">{bot.id}</Text>
+                </Flex>
+                <Text fontSize="10px" color="#787469">
+                  {isLive
+                    ? `running · ${bot.inflightEnriched ?? 0} enriched this batch`
+                    : 'waiting / soft-skip'}
+                </Text>
+                {bot.shard ? (
+                  <Text fontSize="9px" color="#9E9A90" mt={0.5}>shard {bot.shard}</Text>
+                ) : null}
+                {bot.lastBatchAt ? (
+                  <Text fontSize="9px" color="#9E9A90" mt={0.5}>
+                    last {bot.lastBatchEnriched ?? 0} ok / {bot.lastBatchFailed ?? 0} fail · {relTime(bot.lastBatchAt)}
+                  </Text>
+                ) : null}
+              </Box>
+            )
+          })}
+        </Flex>
+      </Box>
+
+      {live.lastBatches && live.lastBatches.length > 0 ? (
+        <Flex gap={1} wrap="wrap" mb={1}>
+          {live.lastBatches.slice(0, 6).map((b) => (
+            <Box key={`${b.id}-${b.at}`} px={1.5} py={0.5} bg={b.ok ? '#F0FFF4' : '#FFF5F5'}
+              border="1px solid" borderColor={b.ok ? '#27AE6030' : '#E74C3C30'} borderRadius="sm">
+              <Text fontSize="9px" color="#787469">
+                {b.id}: {b.enriched ?? 0} ok / {b.failed ?? 0} fail
+              </Text>
+            </Box>
+          ))}
+        </Flex>
+      ) : null}
+    </Box>
+  )
+}
+
+function DeskStat({
+  label, value, hint, accent,
+}: { label: string; value: string; hint?: string; accent: string }) {
+  return (
+    <Box bg="white" border="1px solid #E4E2DC" borderRadius="xl" p={4} minW="150px" flex="1">
+      <Text fontSize="10px" fontWeight={700} color="#787469"
+        letterSpacing="0.1em" textTransform="uppercase">{label}</Text>
+      <Text fontSize="28px" fontWeight={700} lineHeight="1.1" mt={2}
+        fontFamily='"Cormorant Garamond", serif' color={accent}>
+        {value}
+      </Text>
+      {hint ? <Text fontSize="11px" color="#9E9A90" mt={1}>{hint}</Text> : null}
+    </Box>
+  )
+}
+
+/* ─── ProcessedVolumeCard (Superstack LocalBotsKpi windows) ───────────── */
+function ProcessedVolumeCard({ window }: { window: ProcessedVolumeWindow }) {
+  const enrichTasks = Object.entries(window.byTask || {})
+    .filter(([task, n]) => n > 0 && ENRICH_TASK_IDS.has(task))
+    .sort((a, b) => b[1] - a[1])
+  const ops = window.opsProcessed ?? 0
+  const opsJobs = window.opsJobs ?? 0
+
+  return (
+    <Box bg="white" border="1px solid #E4E2DC" borderRadius="xl" p={4} minW="200px" flex="1">
+      <Text fontSize="10px" fontWeight={700} color="#787469"
+        letterSpacing="0.1em" textTransform="uppercase">{window.label}</Text>
+      <Text fontSize="32px" fontWeight={700} lineHeight="1.1" mt={2}
+        fontFamily='"Cormorant Garamond", serif' color="#2D2A24">
+        {window.recorded ? window.processed.toLocaleString() : '—'}
+      </Text>
+      <Text fontSize="12px" color="#9E9A90">enrich + significance</Text>
+      {window.recorded ? (
+        <Box mt={3}>
+          <Text fontSize="12px" color="#2D2A24">
+            {window.jobs} {window.jobs === 1 ? 'job' : 'jobs'}
+          </Text>
+          {ops > 0 || opsJobs > 0 ? (
+            <Text fontSize="11px" color="#787469" mt={1}>
+              ops {ops.toLocaleString()} · {opsJobs} {opsJobs === 1 ? 'job' : 'jobs'}
+              {' '}(sync/merge/queue)
+            </Text>
+          ) : null}
+          {enrichTasks.length > 0 && (
+            <Flex gap={1} flexWrap="wrap" mt={2}>
+              {enrichTasks.map(([task, n]) => (
+                <Box key={task} px={1.5} py={0.5} bg="#F0FFF4" borderRadius="sm" border="1px solid #27AE6030">
+                  <Text fontSize="9px" fontWeight={700} color="#27AE60">{task}</Text>
+                  <Text fontSize="8px" color="#787469">{n.toLocaleString()}</Text>
+                </Box>
+              ))}
+            </Flex>
+          )}
+        </Box>
+      ) : (
+        <Text fontSize="12px" color="#2D2A24" mt={3}>None recorded</Text>
+      )}
     </Box>
   )
 }

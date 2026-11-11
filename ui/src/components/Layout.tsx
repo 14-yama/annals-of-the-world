@@ -42,6 +42,7 @@ import {
   TrendingUp,
   Bot,
   GitBranch,
+  CalendarClock,
 } from 'lucide-react'
 
 /* ── Top-level domain navigation (horizontal) ── */
@@ -202,6 +203,7 @@ const NAV_SECTIONS: NavSection[] = [
       { path: '/curator',         label: 'The Curator',      icon: Scroll },
       { path: '/curator/audit',   label: 'Audit Dashboard',  icon: BarChart3 },
       { path: '/curator/bots',    label: 'Bot KPIs',         icon: Bot },
+      { path: '/curator/bots/schedule', label: 'Bot Schedule', icon: CalendarClock },
       { path: '/curator/audit/log', label: 'Audit Log',      icon: ClipboardList },
       { path: '/curator/triage',  label: 'Triage System',    icon: AlertTriangle },
       { path: '/curator/classes', label: 'Class Browser',    icon: Layers },

@@ -204,13 +204,27 @@ export default function CatalogPage() {
           })
         }
         setEntities(filtered)
-        setTotalCount(result.total)
+        // Appwrite caps listDocuments.total at 5000 — unfiltered catalog uses stats_cache total
+        const unfiltered =
+          !eraDivision &&
+          !filters.search.trim() &&
+          filters.eras.length === 0 &&
+          filters.labels.length === 0 &&
+          filters.continents.length === 0 &&
+          filters.frameworks.length === 0 &&
+          filters.classes.length === 0 &&
+          filters.divisions.length === 0
+        const nextTotal =
+          unfiltered && backendTotal > 0 && (result.total >= 5000 || result.total < backendTotal)
+            ? backendTotal
+            : result.total
+        setTotalCount(nextTotal)
         setLoading(false)
       }
     }
     loadEntities()
     return () => { cancelled = true }
-  }, [filters, eraDivision])
+  }, [filters, eraDivision, backendTotal])
 
   // Load more
   const loadMore = useCallback(async () => {

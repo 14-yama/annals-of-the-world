@@ -1,29 +1,21 @@
-import React, { useEffect, useState, useMemo } from 'react'
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { Box, Flex, Text, Input, Spinner, SimpleGrid } from '@chakra-ui/react'
 import { useNavigate } from 'react-router-dom'
 import {
-  ChevronLeft, History, Download, Filter, User, FileText, Bot,
+  ChevronLeft, ChevronRight, History, Download, Filter, User, FileText, Bot,
 } from 'lucide-react'
-import { Query, type Models } from 'appwrite'
-import client, { databases, DATABASE_ID, COLLECTIONS } from '../../lib/appwrite'
+import type { Models } from 'appwrite'
+import client, { DATABASE_ID, COLLECTIONS } from '../../lib/appwrite'
 import { StatCard } from '../../components/DataCards'
-
-/* ─── Types ─── */
-
-interface AuditRow {
-  $id: string
-  entityId: string
-  entitySlug: string
-  entityName: string
-  action: string
-  field: string
-  oldValue: string
-  newValue: string
-  editorId: string
-  editorNote: string
-  timestamp: string
-  sessionId: string
-}
+import { formatTrinidadDate, formatTrinidadTimestamp } from '../../lib/localBotsDesk'
+import {
+  APPWRITE_TOTAL_CAP,
+  fetchAuditLogPage,
+  fetchAuditLogTotal,
+  mapAuditDoc,
+  type AuditLogRow,
+  type AuditLogTotal,
+} from '../../services/auditLogService'
 
 const ACTION_COLORS: Record<string, string> = {
   update: '#4A90D9',
@@ -41,6 +33,7 @@ function EditorBadge({ editorId }: { editorId: string }) {
   const isLocal = editorId.includes('·local·') && !isOllama
   const isSync = editorId.includes('sync-gateway')
   const isLegacy = editorId.includes('ai-enrichment-bot') || editorId.includes('backfill-significance-bot')
+  const isComposer = editorId.startsWith('composer')
 
   const parts = editorId.split('·')
   const modelPart = parts[0] || editorId
@@ -56,6 +49,10 @@ function EditorBadge({ editorId }: { editorId: string }) {
     const model = modelPart.replace('ollama/', '')
     label = '🟢 LOCAL'
     detail = `${model}${ctxPart ? ` @ ${ctxPart}` : ''}`
+  } else if (isComposer) {
+    color = '#E67E22'; bg = 'rgba(230,126,34,0.12)'
+    label = '🟡 COMPOSER'
+    detail = `${modelPart}${ctxPart ? ` @ ${ctxPart}` : ''}`
   } else if (isCloud) {
     color = '#2471A3'; bg = 'rgba(36,113,163,0.12)'
     label = '☁️ CLOUD'
@@ -93,15 +90,27 @@ function EditorBadge({ editorId }: { editorId: string }) {
   )
 }
 
+function formatTotalLabel(info: AuditLogTotal): string {
+  const n = info.total.toLocaleString()
+  if (info.capped) return `${n}+`
+  if (!info.exact) return `≈${n}`
+  return n
+}
+
 /* ─── Main Component ─── */
 
 export default function AuditLogViewer() {
   const navigate = useNavigate()
-  const [logs, setLogs] = useState<AuditRow[]>([])
+  const [logs, setLogs] = useState<AuditLogRow[]>([])
   const [loading, setLoading] = useState(true)
-  const [total, setTotal] = useState(0)
-  const [page, setPage] = useState(0)
+  const [refreshing, setRefreshing] = useState(false)
+  const [totalInfo, setTotalInfo] = useState<AuditLogTotal>({
+    total: 0, exact: false, capped: false, source: 'unknown', updatedAt: null,
+  })
   const [autoRefresh, setAutoRefresh] = useState(true)
+  const [hasMore, setHasMore] = useState(false)
+  const [cursorStack, setCursorStack] = useState<(string | null)[]>([null])
+  const [pageIdx, setPageIdx] = useState(0)
 
   // Filters
   const [filterEntity, setFilterEntity] = useState('')
@@ -109,70 +118,121 @@ export default function AuditLogViewer() {
   const [filterAction, setFilterAction] = useState('')
 
   const PAGE_SIZE = 50
+  const seenIdsRef = useRef<Set<string>>(new Set())
+  const pageIdxRef = useRef(0)
+  pageIdxRef.current = pageIdx
 
-  useEffect(() => { loadLogs() }, [page, filterEntity, filterEditor, filterAction])
+  const filters = useMemo(() => ({
+    entitySlug: filterEntity.trim() || undefined,
+    editorId: filterEditor.trim() || undefined,
+    action: filterAction || undefined,
+  }), [filterEntity, filterEditor, filterAction])
 
-  // Appwrite Realtime — new rows appear instantly
+  const loadTotals = useCallback(async () => {
+    const info = await fetchAuditLogTotal(filters)
+    setTotalInfo(info)
+  }, [filters])
+
+  const loadPage = useCallback(async (opts?: { silent?: boolean; cursor?: string | null }) => {
+    const silent = opts?.silent ?? false
+    if (silent) setRefreshing(true)
+    else setLoading(true)
+    try {
+      const cursor = opts?.cursor ?? null
+      const page = await fetchAuditLogPage({
+        limit: PAGE_SIZE,
+        cursorAfter: cursor,
+        ...filters,
+      })
+      setLogs(page.rows)
+      setHasMore(!!page.nextCursor)
+      seenIdsRef.current = new Set(page.rows.map(r => r.$id))
+
+      // Filtered views: use query total when uncapped; otherwise keep corpus cache.
+      if (filters.entitySlug || filters.editorId || filters.action) {
+        setTotalInfo({
+          total: page.queryTotal,
+          exact: !page.queryCapped,
+          capped: page.queryCapped,
+          source: 'listDocuments',
+          updatedAt: null,
+        })
+      }
+    } catch (err) {
+      console.error('Audit log load failed:', err)
+      if (!silent) {
+        setLogs([])
+        setHasMore(false)
+      }
+    }
+    setLoading(false)
+    setRefreshing(false)
+  }, [filters])
+
+  // Reset cursor stack when filters change
+  useEffect(() => {
+    setCursorStack([null])
+    setPageIdx(0)
+    void loadTotals()
+    void loadPage({ cursor: null })
+  }, [filters, loadTotals, loadPage])
+
+  // Appwrite Realtime — new rows appear instantly on the newest page
   useEffect(() => {
     if (!autoRefresh) return
     const channel = `databases.${DATABASE_ID}.collections.${COLLECTIONS.AUDIT_LOG}.documents`
     const unsubscribe = client.subscribe(channel, (response) => {
       const isCreate = response.events.some((e: string) => e.endsWith('.create'))
-      if (isCreate) {
-        setLogs(prev => [mapToRow(response.payload as Models.Document), ...prev])
-        setTotal(t => t + 1)
-      }
+      if (!isCreate) return
+      const row = mapAuditDoc(response.payload as Models.Document)
+
+      // Respect active filters
+      if (filters.entitySlug && !row.entitySlug.toLowerCase().includes(filters.entitySlug.toLowerCase())) return
+      if (filters.editorId && row.editorId !== filters.editorId) return
+      if (filters.action && row.action !== filters.action) return
+
+      setTotalInfo(prev => ({
+        ...prev,
+        total: prev.total + 1,
+        source: prev.source === 'unknown' ? 'realtime' : prev.source,
+      }))
+
+      // Only prepend on the newest page (idx 0)
+      if (pageIdxRef.current !== 0) return
+      if (seenIdsRef.current.has(row.$id)) return
+      seenIdsRef.current.add(row.$id)
+      setLogs(prev => [row, ...prev].slice(0, PAGE_SIZE))
     })
     return () => unsubscribe()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [autoRefresh])
+  }, [autoRefresh, filters])
 
-  // Backup poll — catches dropped realtime connection
+  // Backup poll — catches dropped realtime; silent so UI doesn't flash spinner
   useEffect(() => {
     if (!autoRefresh) return
-    const id = setInterval(loadLogs, 30_000)
+    const id = setInterval(() => {
+      if (pageIdxRef.current !== 0) return
+      void loadPage({ silent: true, cursor: null })
+      void loadTotals()
+    }, 8_000)
     return () => clearInterval(id)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [autoRefresh])
+  }, [autoRefresh, loadPage, loadTotals])
 
-  async function loadLogs() {
-    setLoading(true)
-    try {
-      const queries: string[] = [
-        Query.orderDesc('timestamp'),
-        Query.limit(PAGE_SIZE),
-        Query.offset(page * PAGE_SIZE),
-      ]
-      if (filterEntity) queries.push(Query.search('entitySlug', filterEntity))
-      if (filterEditor) queries.push(Query.equal('editorId', filterEditor))
-      if (filterAction) queries.push(Query.equal('action', filterAction))
-
-      const res = await databases.listDocuments(DATABASE_ID, COLLECTIONS.AUDIT_LOG, queries)
-      setTotal(res.total)
-      setLogs(res.documents.map(mapToRow))
-    } catch (err) {
-      console.error('Audit log load failed:', err)
-      setLogs([])
-      setTotal(0)
-    }
-    setLoading(false)
+  function goNext() {
+    const last = logs[logs.length - 1]
+    if (!last || !hasMore) return
+    const nextCursor = last.$id
+    const nextStack = cursorStack.slice(0, pageIdx + 1).concat(nextCursor)
+    setCursorStack(nextStack)
+    setPageIdx(pageIdx + 1)
+    void loadPage({ cursor: nextCursor })
   }
 
-  function mapToRow(doc: Models.Document): AuditRow {
-    return {
-      $id: doc.$id,
-      entityId: (doc.entityId as string) ?? '',
-      entitySlug: (doc.entitySlug as string) ?? '',
-      entityName: (doc.entityName as string) ?? '',
-      action: (doc.action as string) ?? '',
-      field: (doc.field as string) ?? '',
-      oldValue: (doc.oldValue as string) ?? '',
-      newValue: (doc.newValue as string) ?? '',
-      editorId: (doc.editorId as string) ?? '',
-      editorNote: (doc.editorNote as string) ?? '',
-      timestamp: (doc.timestamp as string) ?? '',
-      sessionId: (doc.sessionId as string) ?? '',
-    }
+  function goPrev() {
+    if (pageIdx <= 0) return
+    const prevIdx = pageIdx - 1
+    const cursor = cursorStack[prevIdx] ?? null
+    setPageIdx(prevIdx)
+    void loadPage({ cursor })
   }
 
   const uniqueEditors = useMemo(
@@ -181,9 +241,9 @@ export default function AuditLogViewer() {
   )
 
   function exportCSV() {
-    const headers = ['Timestamp', 'Entity', 'Action', 'Field', 'Old Value', 'New Value', 'Editor', 'Note']
+    const headers = ['Timestamp (AST)', 'Entity', 'Action', 'Field', 'Old Value', 'New Value', 'Editor', 'Note']
     const rows = logs.map(l => [
-      l.timestamp, l.entitySlug, l.action, l.field,
+      formatTrinidadTimestamp(l.timestamp), l.entitySlug, l.action, l.field,
       `"${l.oldValue.replace(/"/g, '""')}"`,
       `"${l.newValue.replace(/"/g, '""')}"`,
       l.editorId, l.editorNote,
@@ -198,7 +258,14 @@ export default function AuditLogViewer() {
     URL.revokeObjectURL(url)
   }
 
-  const pageCount = Math.ceil(total / PAGE_SIZE)
+  const totalLabel = formatTotalLabel(totalInfo)
+  const totalHint = totalInfo.capped
+    ? `Appwrite listDocuments.total caps at ${APPWRITE_TOTAL_CAP.toLocaleString()} (server APP_LIMIT_COUNT) — stats_cache.auditTotal missing; run audit recount`
+    : totalInfo.source === 'stats_cache'
+      ? `stats_cache.auditTotal (cursor count of audit_log docs)${totalInfo.updatedAt ? ` · ${new Date(totalInfo.updatedAt).toLocaleString()}` : ''}`
+      : totalInfo.exact
+        ? 'exact filtered count'
+        : 'approximate'
 
   return (
     <Box maxW="1400px" mx="auto" p={6}>
@@ -218,7 +285,12 @@ export default function AuditLogViewer() {
             EDIT AUDIT LOG
           </Text>
           <Text fontSize="sm" color="#787469">
-            {total.toLocaleString()} audit entries — full history of all curator edits
+            {totalLabel} field-level audit rows — not unique entities · America/Port_of_Spain (AST)
+            {refreshing ? ' · refreshing…' : ''}
+          </Text>
+          <Text fontSize="xs" color="#9E9A90" mt={0.5}>
+            {totalHint}
+            {' · '}one enrich often writes ~5–7 rows (summary + details fields)
           </Text>
         </Box>
         <Box
@@ -251,9 +323,13 @@ export default function AuditLogViewer() {
         </Box>
       </Flex>
 
-      {/* Quick Stats — only about the audit log itself */}
+      {/* Quick Stats — audit_log rows (field-level), not unique entities */}
       <SimpleGrid columns={{ base: 2, md: 4 }} gap={4} mb={6}>
-        <StatCard value={total.toLocaleString()} label="Total Entries" color="#4A90D9" />
+        <StatCard
+          value={totalLabel}
+          label={totalInfo.capped ? 'Entries (capped)' : 'Audit rows (field-level)'}
+          color="#4A90D9"
+        />
         <StatCard
           value={logs.filter(l => l.action === 'update').length.toString()}
           label="Updates (page)" color="#E67E22"
@@ -263,8 +339,8 @@ export default function AuditLogViewer() {
           label="Active Editors (page)" color="#27AE60"
         />
         <StatCard
-          value={logs.length > 0 ? new Date(logs[0].timestamp).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : '—'}
-          label="Latest Edit" color="#6B3FA0"
+          value={logs.length > 0 ? formatTrinidadDate(logs[0].timestamp) : '—'}
+          label="Latest Edit (AST)" color="#6B3FA0"
         />
       </SimpleGrid>
 
@@ -273,7 +349,7 @@ export default function AuditLogViewer() {
         <Flex align="center" gap={2} flex={1} minW="200px">
           <Filter size={14} color="#787469" />
           <Input
-            value={filterEntity} onChange={(e) => { setFilterEntity(e.target.value); setPage(0) }}
+            value={filterEntity} onChange={(e) => setFilterEntity(e.target.value)}
             placeholder="Search entity slug…" size="sm"
             bg="white" borderColor="#E4E2DC" _focus={{ borderColor: '#D4AF37' }}
           />
@@ -281,7 +357,7 @@ export default function AuditLogViewer() {
         <Flex align="center" gap={2} minW="150px">
           <User size={14} color="#787469" />
           <Input
-            value={filterEditor} onChange={(e) => { setFilterEditor(e.target.value); setPage(0) }}
+            value={filterEditor} onChange={(e) => setFilterEditor(e.target.value)}
             placeholder="Editor…" size="sm"
             bg="white" borderColor="#E4E2DC" _focus={{ borderColor: '#D4AF37' }}
           />
@@ -290,7 +366,7 @@ export default function AuditLogViewer() {
           <FileText size={14} color="#787469" />
           <select
             value={filterAction}
-            onChange={(e) => { setFilterAction(e.target.value); setPage(0) }}
+            onChange={(e) => setFilterAction(e.target.value)}
             style={{
               padding: '4px 8px', fontSize: '13px', fontFamily: '"Inter", sans-serif',
               border: '1px solid #E4E2DC', borderRadius: '6px', background: 'white',
@@ -337,8 +413,8 @@ export default function AuditLogViewer() {
                 {logs.map((row, ri) => (
                   <tr key={row.$id} style={{ backgroundColor: ri % 2 === 0 ? '#FAFAF8' : '#F5F4F0' }}>
                     <td style={tdStyle}>
-                      <Text fontSize="xs" fontFamily='"JetBrains Mono", monospace' color="#787469">
-                        {new Date(row.timestamp).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: '2-digit', second: '2-digit' })}
+                      <Text fontSize="xs" fontFamily='"JetBrains Mono", monospace' color="#787469" title={row.timestamp}>
+                        {formatTrinidadTimestamp(row.timestamp)}
                       </Text>
                     </td>
                     <td style={{ ...tdStyle, maxWidth: '180px', overflow: 'hidden' }}>
@@ -380,24 +456,34 @@ export default function AuditLogViewer() {
             </table>
           </Box>
 
-          {/* Pagination */}
-          {pageCount > 1 && (
-            <Flex justify="center" gap={2} mt={4}>
-              {Array.from({ length: Math.min(pageCount, 10) }, (_, i) => (
-                <Box
-                  key={i} as="button" onClick={() => setPage(i)}
-                  px={3} py={1.5} borderRadius="md" fontSize="sm"
-                  fontWeight={page === i ? 700 : 400}
-                  bg={page === i ? '#2D2A24' : '#F5F4F0'}
-                  color={page === i ? '#D4AF37' : '#787469'}
-                  cursor="pointer"
-                >
-                  {i + 1}
-                </Box>
-              ))}
-              {pageCount > 10 && <Text color="#9E9A90" alignSelf="center">…{pageCount}</Text>}
-            </Flex>
-          )}
+          {/* Cursor pagination — avoids Appwrite offset/total 5k traps */}
+          <Flex justify="center" align="center" gap={3} mt={4}>
+            <Box
+              as="button" onClick={goPrev} disabled={pageIdx <= 0}
+              px={3} py={1.5} borderRadius="md" fontSize="sm"
+              bg={pageIdx <= 0 ? '#F5F4F0' : '#2D2A24'}
+              color={pageIdx <= 0 ? '#9E9A90' : '#D4AF37'}
+              cursor={pageIdx <= 0 ? 'default' : 'pointer'}
+              display="flex" alignItems="center" gap={1}
+              opacity={pageIdx <= 0 ? 0.5 : 1}
+            >
+              <ChevronLeft size={14} /> Prev
+            </Box>
+            <Text fontSize="sm" color="#787469">
+              Page {pageIdx + 1} · newest-first
+            </Text>
+            <Box
+              as="button" onClick={goNext} disabled={!hasMore}
+              px={3} py={1.5} borderRadius="md" fontSize="sm"
+              bg={!hasMore ? '#F5F4F0' : '#2D2A24'}
+              color={!hasMore ? '#9E9A90' : '#D4AF37'}
+              cursor={!hasMore ? 'default' : 'pointer'}
+              display="flex" alignItems="center" gap={1}
+              opacity={!hasMore ? 0.5 : 1}
+            >
+              Next <ChevronRight size={14} />
+            </Box>
+          </Flex>
         </>
       )}
     </Box>

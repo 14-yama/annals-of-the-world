@@ -45,6 +45,7 @@ import ClassHub from './pages/curator/ClassHub'
 import OllamaMonitor from './pages/curator/OllamaMonitor'
 import EnrichmentProgress from './pages/curator/EnrichmentProgress'
 import BotKpiDashboard from './pages/curator/BotKpiDashboard'
+import LocalBotsTimetable from './pages/curator/LocalBotsTimetable'
 import PipelineDashboard from './pages/curator/PipelineDashboard'
 
 /** Reset scroll to top on every route change */
@@ -91,6 +92,7 @@ export default function App() {
         <Route path="/curator/audit/guide" element={<AuditGuide />} />
         <Route path="/curator/audit/log" element={<AuditLogViewer />} />
         <Route path="/curator/bots" element={<BotKpiDashboard />} />
+        <Route path="/curator/bots/schedule" element={<LocalBotsTimetable />} />
         <Route path="/curator/ollama" element={<OllamaMonitor />} />
         <Route path="/curator/enrichment-progress" element={<EnrichmentProgress />} />
         <Route path="/curator/pipeline" element={<PipelineDashboard />} />
